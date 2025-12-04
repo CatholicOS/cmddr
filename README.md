@@ -2,7 +2,7 @@
 
 The home of the **Common Magisterial Document Data Repository** curated by the Catholic Open Source organization.
 
-## What is CLDDR?
+## What is CMDDR?
 
 The Catholic Open Source Common Magisterial Document Data Repository (CMDDR) provides a canonicalized list of identifiers
 for Magisterial documents or Papal documents, speeches, homilies, etc. of the Catholic Church, along with semantic
