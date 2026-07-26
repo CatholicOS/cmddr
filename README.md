@@ -1,12 +1,27 @@
 # Catholic Open Source CMDDR Project
 
-The home of the **Common Magisterial Document Data Repository** curated by the Catholic Open Source organization.
+The home of the **Common Magisterial Document Data Repository**, curated by the **Catholic Engineering Task Force** of the [Catholic Digital Commons Foundation](https://github.com/CatholicOS).
 
 ## What is CMDDR?
 
 The Catholic Open Source Common Magisterial Document Data Repository (CMDDR) provides a canonicalized list of identifiers
 for Magisterial documents or Papal documents, speeches, homilies, etc. of the Catholic Church, along with semantic
 distinctions between the types of documents / speeches.
+
+## The identifier scheme (draft)
+
+```
+id:      Rv9Ld3qXm7TkPb2Ns8Hf4c    # canonical, minted once (illustrative value: shape only)
+aliases: rerum-novarum · DS 3265 · hf_l-xiii_enc_15051891_rerum-novarum
+labels:  "Rerum novarum"@la · "Rerum Novarum"@en · "Rerum novarum"@it
+```
+
+CMDDR has not yet minted an identifier, so its canonical IDs can be machine-readable from the first one rather than migrated
+to later. Every human-readable citation form already in use for these documents — conventional short titles, Denzinger–Schönmetzer
+numbers, vatican.va document stems — is kept as a permanent resolvable alias, and every document carries multilingual labels;
+document type, issuer, magisterial weight and scope (the columns of the table below) are properties of the record, never
+segments of the identifier. The full proposal is in [docs/schema-proposal.md](docs/schema-proposal.md).
+**All IDs are drafts pending committee review.**
 
 ## The Magisterium
 
