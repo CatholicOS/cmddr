@@ -1,6 +1,6 @@
 # Catholic Open Source CMDDR Project
 
-The home of the **Common Magisterial Document Data Repository** curated by the Catholic Open Source organization.
+The home of the **Common Magisterial Document Data Repository** curated by the Catholic Engineering Task Force within the Catholic Digital Commons Foundation.
 
 ## What is CMDDR?
 
