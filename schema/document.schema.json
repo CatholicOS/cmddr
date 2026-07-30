@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/CatholicOS/cmddr/schema/document.schema.json",
+  "title": "CMDDR Document",
+  "description": "One concrete magisterial document / speech. References a Genre. May be fully described by its Genre alone (no Assessments) or carry one Assessment per notable passage.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "title", "genre", "issuer"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._-]+$",
+      "description": "Canonical short id used as the locus prefix, e.g. 'EV', 'LG', 'OS'."
+    },
+    "title": { "type": "string" },
+    "genre": {
+      "type": "string",
+      "description": "Foreign key -> genre.id."
+    },
+    "issuer": {
+      "type": "string",
+      "description": "The concrete issuer, e.g. 'john-paul-ii', 'second-vatican-council'."
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Promulgation date (ISO 8601)."
+    },
+    "scope": {
+      "enum": ["universal", "local"],
+      "description": "Overrides genre.defaultScope when the addressee differs."
+    },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Alternative identifiers / incipits."
+    }
+  }
+}

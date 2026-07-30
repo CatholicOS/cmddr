@@ -1,0 +1,93 @@
+{
+  "_comment": "Worked example for the two-table model. Shows one Genre, one Document that references it, and several Statement Assessments that reference the Document. Illustrates that a single Encyclical carries passages at different registers: most of the text at the genre default (authentic-ordinary), while three central moral judgments rise to the ordinary and universal magisterium. Editorial 'topic' fields are paraphrases, not quotations.",
+
+  "genre": {
+    "id": "encyclical",
+    "label": "Encyclical",
+    "issuer": ["pope"],
+    "defaultScope": "universal",
+    "defaultRegister": "authentic-ordinary",
+    "ceiling": "ordinary-universal",
+    "description": "Circular letter of the pope to the universal Church; can invoke the ordinary and universal magisterium."
+  },
+
+  "document": {
+    "id": "EV",
+    "title": "Evangelium Vitae",
+    "genre": "encyclical",
+    "issuer": "john-paul-ii",
+    "date": "1995-03-25",
+    "scope": "universal",
+    "aliases": ["The Gospel of Life"]
+  },
+
+  "assessments": [
+    {
+      "id": "EV-general",
+      "document": "EV",
+      "section": "*",
+      "topic": "The encyclical as a whole: exhortation and doctrinal synthesis on the value and inviolability of human life.",
+      "register": "authentic-ordinary",
+      "intent": "non-definitive",
+      "assent": "religiosum-obsequium",
+      "reformability": "reformable",
+      "provenance": {
+        "assessedBy": "CMDDR editors",
+        "sources": ["Sullivan, Creative Fidelity (1996), ch. 8"],
+        "status": "settled",
+        "note": "Default register inherited from the genre; the three moral judgments below are the exceptions."
+      }
+    },
+    {
+      "id": "EV-57",
+      "document": "EV",
+      "section": "57",
+      "topic": "The direct and voluntary killing of an innocent human being is always gravely immoral.",
+      "register": "ordinary-universal",
+      "intent": "definitive",
+      "object": "revealed",
+      "assent": "fides-divina-et-catholica",
+      "reformability": "irreformable",
+      "provenance": {
+        "assessedBy": "CMDDR editors",
+        "sources": ["Sullivan, Creative Fidelity (1996), ch. 8"],
+        "status": "contested",
+        "note": "Confirmed 'by the authority which Christ conferred upon Peter and his Successors, in communion with the Bishops' — i.e. by the ordinary and universal magisterium. Primary-vs-secondary object debated."
+      }
+    },
+    {
+      "id": "EV-62",
+      "document": "EV",
+      "section": "62",
+      "topic": "Direct abortion, as an end or a means, is always gravely immoral.",
+      "register": "ordinary-universal",
+      "intent": "definitive",
+      "object": "revealed",
+      "assent": "fides-divina-et-catholica",
+      "reformability": "irreformable",
+      "provenance": {
+        "assessedBy": "CMDDR editors",
+        "sources": ["Sullivan, Creative Fidelity (1996), ch. 8"],
+        "status": "contested",
+        "note": "Declared taught 'by the ordinary and universal Magisterium.'"
+      }
+    },
+    {
+      "id": "EV-65",
+      "document": "EV",
+      "section": "65",
+      "topic": "Euthanasia is a grave violation of the law of God.",
+      "register": "ordinary-universal",
+      "intent": "definitive",
+      "object": "secondary",
+      "assent": "fides-ecclesiastica",
+      "reformability": "irreformable",
+      "provenance": {
+        "assessedBy": "CMDDR editors",
+        "sources": ["Sullivan, Creative Fidelity (1996), ch. 8"],
+        "status": "contested",
+        "note": "Taught 'in harmony with the Magisterium of my Predecessors and in communion with the Bishops.' Object classification debated."
+      }
+    }
+  ]
+}
