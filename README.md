@@ -62,9 +62,7 @@ exercise through it. Neither fixes the authority of any particular passage — s
 
 | Genre | Issuer | Scope | Default register | Ceiling (issuer capacity) | Notes |
 |---|---|---|---|---|---|
-| Dogmatic Constitution | Ecumenical Council | universal | Authentic Ordinary | Extraordinary | Highest conciliar genre; still non-definitive unless a definition is manifest. |
-| Constitution | Ecumenical Council | universal | Authentic Ordinary | Extraordinary | Title deliberately weaker than *Dogmatic* Constitution. |
-| Pastoral Constitution | Ecumenical Council | universal | Authentic Ordinary | Ordinary Universal | “Pastoral” signals non-defining intent (e.g. *Gaudium et Spes*). |
+| Constitution | Ecumenical Council | universal | Authentic Ordinary | Extraordinary | The council’s most solemn genre. May bear an optional descriptive *title* (below); non-definitive unless a definition is manifest. |
 | Decree | Ecumenical Council | universal | Authentic Ordinary | Extraordinary | May carry canons/anathemas that *are* definitions (e.g. Trent); assess per canon. |
 | Declaration | Ecumenical Council | universal | Authentic Ordinary | Extraordinary | Lowest conciliar genre by presumptive weight. |
 | Papal Bull | Pope | universal | Authentic Ordinary | Extraordinary | The most solemn **sealed form** of papal document (lead/wax seal — Latin *bulla*). May bear one or more of the non-exclusive *characteristics* listed below the table. |
@@ -81,9 +79,20 @@ exercise through it. Neither fixes the authority of any particular passage — s
 | Episcopal / Pastoral Letter | Bishop | local | Authentic Ordinary | Authentic Ordinary | An individual bishop shares in the ordinary universal magisterium only collegially, not through a local act. |
 | Episcopal Homily | Bishop | local | Authentic Ordinary | Authentic Ordinary | |
 
-Among the conciliar genres, the titles themselves encode a **descending presumptive weight** — Dogmatic Constitution → Constitution
-→ Decree → Declaration (with Pastoral Constitution explicitly non-defining) — even though the council’s *capacity* to define
-(the ceiling) is the same for each.
+Among the conciliar genres, presumptive weight descends **Constitution → Decree → Declaration**, even though the council’s
+*capacity* to define (the ceiling) is the same for each.
+
+#### Constitution descriptive titles
+
+A conciliar **Constitution** may bear an optional, mutually-exclusive descriptive **title** indicating its purpose (or none). The
+title is *descriptive of purpose, not a claim of authority* — *Lumen Gentium* is titled a "Dogmatic Constitution" yet defined no new
+dogma. Any actual definition is recorded as a Table 2 assessment, never inferred from the title.
+
+| Descriptive title | Meaning | Example |
+|---|---|---|
+| `dogmatic` | Treats doctrine as its primary subject. | *Lumen Gentium*, *Dei Verbum* |
+| `pastoral` | Explicitly pastoral, signalling non-defining intent. | *Gaudium et Spes* |
+| *(none)* | A plain constitution on a solemn matter. | *Sacrosanctum Concilium* (liturgy) |
 
 #### Papal Bull characteristics
 
@@ -94,7 +103,7 @@ genre `papal-bull` stable, so it can be baked into a document’s canonical id w
 | Characteristic | Meaning | Bearing on authority |
 |---|---|---|
 | `apostolic-constitution` | The most solemn form of papal *legislation* — governance, laws, promulgations (e.g. *Pastor Bonus*, *Fidei Depositum*). | Formal solemnity; the register of any teaching is still assessed per statement. |
-| `dogmatic` | Contains an *ex cathedra* dogmatic definition (e.g. *Ineffabilis Deus*, 1854; *Munificentissimus Deus*, 1950). | Its defining statement is **Extraordinary / infallible** — recorded as a Table 2 assessment. |
+| `dogmatic-definition` | Contains an *ex cathedra* dogmatic definition (e.g. *Ineffabilis Deus*, 1854; *Munificentissimus Deus*, 1950). | Its defining statement is **Extraordinary / infallible** — recorded as a Table 2 assessment. |
 
 *Munificentissimus Deus* bears **both**: it is an apostolic constitution that also defines a dogma. A bull of canonization bears
 **neither**.

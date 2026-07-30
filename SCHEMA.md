@@ -24,7 +24,9 @@ one **Assessment** per notable passage.
 
 **`scope`** — `universal` · `local`
 
-**`characteristics`** (non-exclusive document metadata a papal bull may bear) — `apostolic-constitution` · `dogmatic`. A document may carry neither, either, or both (e.g. *Munificentissimus Deus* carries both).
+**`characteristics`** (non-exclusive document metadata a papal bull may bear) — `apostolic-constitution` · `dogmatic-definition`. A document may carry neither, either, or both (e.g. *Munificentissimus Deus* carries both).
+
+**`descriptiveTitle`** (optional, mutually-exclusive title of a conciliar Constitution) — `dogmatic` · `pastoral`. Descriptive of purpose only, never a claim of authority; omit for a plain constitution (e.g. *Sacrosanctum Concilium*).
 
 **`register`** (mode of teaching)
 | id | label |
@@ -85,9 +87,10 @@ These are the rules a linter/CI should enforce so the data can never re-collapse
 6. **Extraordinary must be manifest.** An assessment with `register = extraordinary` **must** have `intent = definitive` and carry a
    non-empty `provenance.note` justifying that the intent to define is manifest (canon-law standard), and **must not** be
    `status: draft`.
-7. **`dogmatic` characteristic must be backed (bundle-level).** If a document has the `dogmatic` characteristic, at least one of its
-   assessments must have `register = extraordinary` and `intent = definitive`. (Cross-resource; enforceable where a document and its
-   assessments are validated together, e.g. an example bundle.)
+7. **`dogmatic-definition` characteristic must be backed (bundle-level).** If a document has the `dogmatic-definition` characteristic,
+   at least one of its assessments must have `register = extraordinary` and `intent = definitive`. (Cross-resource; enforceable where
+   a document and its assessments are validated together, e.g. an example bundle.) A conciliar Constitution's `descriptiveTitle` of
+   `dogmatic` carries **no** such requirement — it is a title, not a definition.
 
 ---
 
