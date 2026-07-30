@@ -9,7 +9,7 @@ registry of              individual                 discerned authority of a
 document TYPES           documents                  passage within a document
 ```
 
-- **Genre** — a document / speech *type* (Encyclical, Decree, …). Carries the *default register* and the *ceiling*. → [`schema/genre.schema.json`](schema/genre.schema.json)
+- **Genre** — a document / speech *type* (Encyclical, Decree, …). Carries the *default register* and the *ceiling*. Sub-genres reference a parent via `parent` (e.g. `apostolic-constitution` and `dogmatic-bull` are children of `papal-bull`). → [`schema/genre.schema.json`](schema/genre.schema.json)
 - **Document** — one concrete document (e.g. *Evangelium Vitae*). References a `genre`. → [`schema/document.schema.json`](schema/document.schema.json)
 - **Assessment** — the authority actually exercised in a single passage, keyed by a `locus`. References a `document`. → [`schema/assessment.schema.json`](schema/assessment.schema.json)
 

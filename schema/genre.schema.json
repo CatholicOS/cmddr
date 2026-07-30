@@ -28,6 +28,10 @@
       "enum": ["extraordinary", "ordinary-universal", "authentic-ordinary"],
       "description": "Maximum register the issuer can exercise through this genre. No Assessment may exceed it."
     },
+    "parent": {
+      "type": "string",
+      "description": "Optional foreign key -> genre.id of a parent genre, for sub-genres (e.g. 'apostolic-constitution' and 'dogmatic-bull' are children of 'papal-bull')."
+    },
     "presumptiveWeight": {
       "type": "integer",
       "description": "Optional ordinal for ranking genres of equal issuer/ceiling by title (e.g. Dogmatic Constitution > Constitution > Decree > Declaration)."

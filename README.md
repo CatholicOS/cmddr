@@ -67,8 +67,9 @@ exercise through it. Neither fixes the authority of any particular passage — s
 | Pastoral Constitution | Ecumenical Council | universal | Authentic Ordinary | Ordinary Universal | “Pastoral” signals non-defining intent (e.g. *Gaudium et Spes*). |
 | Decree | Ecumenical Council | universal | Authentic Ordinary | Extraordinary | May carry canons/anathemas that *are* definitions (e.g. Trent); assess per canon. |
 | Declaration | Ecumenical Council | universal | Authentic Ordinary | Extraordinary | Lowest conciliar genre by presumptive weight. |
-| Apostolic Constitution | Pope | universal | Authentic Ordinary | Extraordinary | Solemn papal instrument; *Ineffabilis Deus*, *Munificentissimus Deus* defined *ex cathedra*. |
-| Bull | Pope | universal | Authentic Ordinary | Extraordinary | A **sealed form** (lead/wax seal — Latin *bulla*), not a level of authority; “dogmatic” is a property of the content, assessed in Table 2. |
+| Papal Bull | Pope | universal | Authentic Ordinary | Extraordinary | The most solemn **sealed form** of papal document (lead/wax seal — Latin *bulla*); parent form of the two sub-genres below. |
+| ↳ Apostolic Constitution | Pope | universal | Authentic Ordinary | Extraordinary | The most solemn form of papal *legislation*, issued as a bull — governance, laws, promulgations (e.g. *Fidei Depositum*, *Pastor Bonus*). |
+| ↳ Dogmatic Bull | Pope | universal | Extraordinary | Extraordinary | An apostolic constitution / bull defining a dogma *ex cathedra* (*Ineffabilis Deus*, 1854; *Munificentissimus Deus*, 1950). Classification into this genre *is* the manifest-*ex cathedra* judgment (canon-law standard), so its default register is Extraordinary. |
 | Encyclical | Pope | universal | Authentic Ordinary | Ordinary Universal | Can invoke the ordinary and universal magisterium (e.g. *Evangelium Vitae*). |
 | Apostolic Exhortation | Pope | universal | Authentic Ordinary | Authentic Ordinary | Typically post-synodal, hortatory. |
 | Apostolic Letter | Pope | universal | Authentic Ordinary | Ordinary Universal | Can reach definitive language (e.g. *Ordinatio Sacerdotalis*). |
