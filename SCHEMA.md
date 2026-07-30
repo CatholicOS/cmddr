@@ -20,7 +20,7 @@ one **Assessment** per notable passage.
 
 ## Controlled vocabularies
 
-**`issuerType`** (role/capacity) — `ecumenical-council` · `pope` · `bishop`. Used by `document.issuerType` (the role that issued it) and by `genre.issuerTypes` (the roles that may issue the genre). The issuer's *identity* (e.g. `john-paul-ii`) is carried separately in `document.issuerId`.
+**`issuerType`** (role/capacity) — `ecumenical-council` · `pope` · `bishop`. Used by `document.issuerType` (the role that issued it) and by `genre.issuerTypes` (the roles that may issue the genre). The issuer's *identity* (e.g. `john-paul-ii`) is carried separately in `document.issuerId`. When a pope promulgates a document issued by another authority — chiefly a conciliar constitution — the promulgating pope is recorded in the optional `document.promulgatedBy` (e.g. `paul-vi`), which does not change `issuerType`.
 
 **`scope`** — `universal` · `local`
 

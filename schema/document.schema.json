@@ -25,6 +25,10 @@
       "enum": ["ecumenical-council", "pope", "bishop"],
       "description": "Role/capacity of the issuer. Drives the computed-infallibility rule; must be one of the genre's issuerTypes."
     },
+    "promulgatedBy": {
+      "type": "string",
+      "description": "Optional identity of the pope who promulgated the document, when distinct from the issuer — chiefly for conciliar documents (e.g. 'paul-vi' promulgating a Second Vatican Council constitution). Does not change issuerType."
+    },
     "date": {
       "type": "string",
       "format": "date",
