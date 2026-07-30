@@ -9,7 +9,7 @@ registry of              individual                 discerned authority of a
 document TYPES           documents                  passage within a document
 ```
 
-- **Genre** — a document / speech *type* (Encyclical, Decree, …). Carries the *default register* and the *ceiling*. Sub-genres reference a parent via `parent` (e.g. `apostolic-constitution` and `dogmatic-bull` are children of `papal-bull`). → [`schema/genre.schema.json`](schema/genre.schema.json)
+- **Genre** — a document / speech *type* (Encyclical, Decree, …). Carries the *default register* and the *ceiling*. → [`schema/genre.schema.json`](schema/genre.schema.json)
 - **Document** — one concrete document (e.g. *Evangelium Vitae*). References a `genre`. → [`schema/document.schema.json`](schema/document.schema.json)
 - **Assessment** — the authority actually exercised in a single passage, keyed by a `locus`. References a `document`. → [`schema/assessment.schema.json`](schema/assessment.schema.json)
 
@@ -23,6 +23,8 @@ one **Assessment** per notable passage.
 **`issuerType`** (role/capacity) — `ecumenical-council` · `pope` · `bishop`. Used by `document.issuerType` (the role that issued it) and by `genre.issuerTypes` (the roles that may issue the genre). The issuer's *identity* (e.g. `john-paul-ii`) is carried separately in `document.issuerId`.
 
 **`scope`** — `universal` · `local`
+
+**`characteristics`** (non-exclusive document metadata a papal bull may bear) — `apostolic-constitution` · `dogmatic`. A document may carry neither, either, or both (e.g. *Munificentissimus Deus* carries both).
 
 **`register`** (mode of teaching)
 | id | label |
@@ -83,6 +85,9 @@ These are the rules a linter/CI should enforce so the data can never re-collapse
 6. **Extraordinary must be manifest.** An assessment with `register = extraordinary` **must** have `intent = definitive` and carry a
    non-empty `provenance.note` justifying that the intent to define is manifest (canon-law standard), and **must not** be
    `status: draft`.
+7. **`dogmatic` characteristic must be backed (bundle-level).** If a document has the `dogmatic` characteristic, at least one of its
+   assessments must have `register = extraordinary` and `intent = definitive`. (Cross-resource; enforceable where a document and its
+   assessments are validated together, e.g. an example bundle.)
 
 ---
 

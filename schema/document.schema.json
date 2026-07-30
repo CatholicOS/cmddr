@@ -34,6 +34,12 @@
       "enum": ["universal", "local"],
       "description": "Overrides genre.defaultScope when the addressee differs."
     },
+    "characteristics": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "enum": ["apostolic-constitution", "dogmatic"] },
+      "description": "Non-exclusive document-level metadata a papal bull may bear. 'dogmatic' asserts the document contains an ex cathedra definition and must be backed by a Table 2 assessment with register=extraordinary and intent=definitive."
+    },
     "aliases": {
       "type": "array",
       "items": { "type": "string" },

@@ -67,9 +67,7 @@ exercise through it. Neither fixes the authority of any particular passage — s
 | Pastoral Constitution | Ecumenical Council | universal | Authentic Ordinary | Ordinary Universal | “Pastoral” signals non-defining intent (e.g. *Gaudium et Spes*). |
 | Decree | Ecumenical Council | universal | Authentic Ordinary | Extraordinary | May carry canons/anathemas that *are* definitions (e.g. Trent); assess per canon. |
 | Declaration | Ecumenical Council | universal | Authentic Ordinary | Extraordinary | Lowest conciliar genre by presumptive weight. |
-| Papal Bull | Pope | universal | Authentic Ordinary | Extraordinary | The most solemn **sealed form** of papal document (lead/wax seal — Latin *bulla*); parent form of the two sub-genres below. |
-| ↳ Apostolic Constitution | Pope | universal | Authentic Ordinary | Extraordinary | The most solemn form of papal *legislation*, issued as a bull — governance, laws, promulgations (e.g. *Fidei Depositum*, *Pastor Bonus*). |
-| ↳ Dogmatic Bull | Pope | universal | Extraordinary | Extraordinary | An apostolic constitution / bull defining a dogma *ex cathedra* (*Ineffabilis Deus*, 1854; *Munificentissimus Deus*, 1950). Classification into this genre *is* the manifest-*ex cathedra* judgment (canon-law standard), so its default register is Extraordinary. |
+| Papal Bull | Pope | universal | Authentic Ordinary | Extraordinary | The most solemn **sealed form** of papal document (lead/wax seal — Latin *bulla*). May bear one or more of the non-exclusive *characteristics* listed below the table. |
 | Encyclical | Pope | universal | Authentic Ordinary | Ordinary Universal | Can invoke the ordinary and universal magisterium (e.g. *Evangelium Vitae*). |
 | Apostolic Exhortation | Pope | universal | Authentic Ordinary | Authentic Ordinary | Typically post-synodal, hortatory. |
 | Apostolic Letter | Pope | universal | Authentic Ordinary | Ordinary Universal | Can reach definitive language (e.g. *Ordinatio Sacerdotalis*). |
@@ -86,6 +84,20 @@ exercise through it. Neither fixes the authority of any particular passage — s
 Among the conciliar genres, the titles themselves encode a **descending presumptive weight** — Dogmatic Constitution → Constitution
 → Decree → Declaration (with Pastoral Constitution explicitly non-defining) — even though the council’s *capacity* to define
 (the ceiling) is the same for each.
+
+#### Papal Bull characteristics
+
+Rather than being sub-genres, **Apostolic Constitution** and **Dogmatic** are non-exclusive **characteristics** a Papal Bull can
+bear — a bull may carry neither, either, or both. Modeling them as document-level metadata (not separate genres) keeps the base
+genre `papal-bull` stable, so it can be baked into a document’s canonical id without forcing a mutually-exclusive choice.
+
+| Characteristic | Meaning | Bearing on authority |
+|---|---|---|
+| `apostolic-constitution` | The most solemn form of papal *legislation* — governance, laws, promulgations (e.g. *Pastor Bonus*, *Fidei Depositum*). | Formal solemnity; the register of any teaching is still assessed per statement. |
+| `dogmatic` | Contains an *ex cathedra* dogmatic definition (e.g. *Ineffabilis Deus*, 1854; *Munificentissimus Deus*, 1950). | Its defining statement is **Extraordinary / infallible** — recorded as a Table 2 assessment. |
+
+*Munificentissimus Deus* bears **both**: it is an apostolic constitution that also defines a dogma. A bull of canonization bears
+**neither**.
 
 ---
 
