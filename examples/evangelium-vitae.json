@@ -4,7 +4,7 @@
   "genre": {
     "id": "encyclical",
     "label": "Encyclical",
-    "issuer": ["pope"],
+    "issuerTypes": ["pope"],
     "defaultScope": "universal",
     "defaultRegister": "authentic-ordinary",
     "ceiling": "ordinary-universal",
@@ -15,7 +15,8 @@
     "id": "EV",
     "title": "Evangelium Vitae",
     "genre": "encyclical",
-    "issuer": "john-paul-ii",
+    "issuerId": "john-paul-ii",
+    "issuerType": "pope",
     "date": "1995-03-25",
     "scope": "universal",
     "aliases": ["The Gospel of Life"]

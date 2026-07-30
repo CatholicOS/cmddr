@@ -20,7 +20,7 @@ one **Assessment** per notable passage.
 
 ## Controlled vocabularies
 
-**`issuer`** — `ecumenical-council` · `pope` · `bishop`
+**`issuerType`** (role/capacity) — `ecumenical-council` · `pope` · `bishop`. Used by `document.issuerType` (the role that issued it) and by `genre.issuerTypes` (the roles that may issue the genre). The issuer's *identity* (e.g. `john-paul-ii`) is carried separately in `document.issuerId`.
 
 **`scope`** — `universal` · `local`
 
@@ -77,11 +77,12 @@ These are the rules a linter/CI should enforce so the data can never re-collapse
 4. **Assent ↔ intent/object consistency.**
    - `intent = non-definitive` ⇒ `assent ∈ {religiosum-obsequium, prudential}`.
    - `intent = definitive` ⇒ `assent = fides-divina-et-catholica` (if `object = revealed`) or `fides-ecclesiastica` (if `object = secondary`).
-5. **Computed infallibility.** Infallibility is **not stored**. It is `true` when `intent = definitive` **and** the document’s issuer
-   capacity is the supreme magisterium (`issuer ∈ {ecumenical-council, pope}` acting for the universal Church). Individual-bishop
-   loci are never infallible.
-6. **Extraordinary must be manifest.** An assessment with `register = extraordinary` must carry a `provenance.note` justifying that
-   the intent to define is manifest (canon-law standard), and should not be `status: draft`.
+5. **Computed infallibility.** Infallibility is **not stored**. It is `true` when `intent = definitive` **and** the document’s
+   `issuerType` is the supreme magisterium (`issuerType ∈ {ecumenical-council, pope}` acting for the universal Church).
+   Individual-bishop loci (`issuerType = bishop`) are never infallible.
+6. **Extraordinary must be manifest.** An assessment with `register = extraordinary` **must** have `intent = definitive` and carry a
+   non-empty `provenance.note` justifying that the intent to define is manifest (canon-law standard), and **must not** be
+   `status: draft`.
 
 ---
 
@@ -92,7 +93,7 @@ These are the rules a linter/CI should enforce so the data can never re-collapse
 {
   "id": "encyclical",
   "label": "Encyclical",
-  "issuer": ["pope"],
+  "issuerTypes": ["pope"],
   "defaultScope": "universal",
   "defaultRegister": "authentic-ordinary",
   "ceiling": "ordinary-universal",
@@ -106,7 +107,8 @@ These are the rules a linter/CI should enforce so the data can never re-collapse
   "id": "EV",
   "title": "Evangelium Vitae",
   "genre": "encyclical",
-  "issuer": "john-paul-ii",
+  "issuerId": "john-paul-ii",
+  "issuerType": "pope",
   "date": "1995-03-25",
   "scope": "universal"
 }
@@ -134,4 +136,6 @@ These are the rules a linter/CI should enforce so the data can never re-collapse
 ```
 
 A fuller worked example (the whole of *Evangelium Vitae* with several loci) is in
-[`examples/evangelium-vitae.json`](examples/evangelium-vitae.json).
+[`examples/evangelium-vitae.json`](examples/evangelium-vitae.json). It bundles a genre, a document, and its assessments in one
+file, validated as a unit by the envelope schema [`schema/example-bundle.schema.json`](schema/example-bundle.schema.json), which
+`$ref`s the three resource schemas so each nested resource is still checked strictly.

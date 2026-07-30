@@ -5,7 +5,7 @@
   "description": "A document / speech TYPE in the Genre Registry (Table 1). Carries the genre's default register and its ceiling (maximum authority the issuer can exercise through it). Never fixes the authority of a particular passage.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "label", "issuer", "defaultScope", "defaultRegister", "ceiling"],
+  "required": ["id", "label", "issuerTypes", "defaultScope", "defaultRegister", "ceiling"],
   "properties": {
     "id": {
       "type": "string",
@@ -13,11 +13,11 @@
       "description": "Stable slug, e.g. 'encyclical', 'dogmatic-constitution'."
     },
     "label": { "type": "string" },
-    "issuer": {
+    "issuerTypes": {
       "type": "array",
       "minItems": 1,
       "items": { "enum": ["ecumenical-council", "pope", "bishop"] },
-      "description": "Who can issue this genre."
+      "description": "Roles that can issue this genre. A document's issuerType must be one of these."
     },
     "defaultScope": { "enum": ["universal", "local"] },
     "defaultRegister": {
