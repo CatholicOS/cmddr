@@ -5,7 +5,7 @@
   "description": "The authority actually exercised in a single passage of a document (Table 2), discerned by prudential application to the text. Overrides the genre default at its locus; may never exceed the genre ceiling.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "document", "section", "register", "intent"],
+  "required": ["id", "document", "section", "register", "intent", "assent", "provenance"],
   "properties": {
     "id": {
       "type": "string",
@@ -67,13 +67,30 @@
       }
     },
     {
-      "description": "extraordinary register requires a justifying provenance note and cannot be draft",
+      "description": "definitive assent must be a faith-tier",
+      "if": { "properties": { "intent": { "const": "definitive" } } },
+      "then": {
+        "properties": { "assent": { "enum": ["fides-divina-et-catholica", "fides-ecclesiastica"] } }
+      }
+    },
+    {
+      "description": "reformability is derived from intent (definitive => irreformable; non-definitive => reformable)",
+      "if": { "properties": { "intent": { "const": "definitive" } } },
+      "then": { "properties": { "reformability": { "const": "irreformable" } } },
+      "else": { "properties": { "reformability": { "const": "reformable" } } }
+    },
+    {
+      "description": "extraordinary register is a solemn definition: it requires definitive intent and a justifying, non-empty provenance note and cannot be draft",
       "if": { "properties": { "register": { "const": "extraordinary" } } },
       "then": {
         "properties": {
+          "intent": { "const": "definitive" },
           "provenance": {
             "required": ["status", "note"],
-            "properties": { "status": { "enum": ["settled", "contested"] } }
+            "properties": {
+              "status": { "enum": ["settled", "contested"] },
+              "note": { "type": "string", "minLength": 1 }
+            }
           }
         },
         "required": ["provenance"]

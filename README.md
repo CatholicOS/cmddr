@@ -100,7 +100,7 @@ is the supreme magisterium).*
 | `LG` *(general)* | Authentic Ordinary | Non-definitive | — | *religiosum obsequium* | Reformable | Vatican II defined nothing “even in the two documents which it called ‘dogmatic constitutions’.” |
 | `EV-57` (murder) | Ordinary Universal | Definitive | Revealed | *fides divina et catholica* | Irreformable | Taught “by the ordinary and universal magisterium.” |
 | `EV-62` (abortion) | Ordinary Universal | Definitive | Revealed / connected | *fides divina et catholica* | Irreformable | idem; object primary-vs-secondary debated. |
-| `EV-65` (euthanasia) | Ordinary Universal | Definitive | Revealed / connected | *fides divina et catholica* | Irreformable | idem. |
+| `EV-65` (euthanasia) | Ordinary Universal | Definitive | Secondary / connected | firmly hold (*fides ecclesiastica*) | Irreformable | idem; secondary object — “in harmony with … my Predecessors”; classification debated. |
 | `OS-4` (*Ordinatio Sacerdotalis*) | Ordinary Universal | Definitive | Secondary / connected | firmly hold (*fides ecclesiastica*) | Irreformable | “to be definitively held”; not *ex cathedra* per Ratzinger — status debated. |
 
 Note the four-rung **Assent** scale used above and in the schema: *fides divina et catholica* (revealed dogma) → **firmly hold**
