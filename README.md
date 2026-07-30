@@ -19,13 +19,13 @@ The term *magisterium* is based on the Latin word for “teacher” (magister). 
 
 For the purposes of this data repository, we will be taking into account the third meaning, in reference to the **body of teachings**.
 
-| Type of Document / Speech | Issuer             | Magisterial Type | Infallability | Scope     | Description                                              |
+| Type of Document / Speech | Issuer             | Magisterial Type | Infallibility | Scope     | Description                                              |
 |---------------------------|--------------------|------------------|---------------|-----------|----------------------------------------------------------|
-| Dogmatic Constitution     | Ecumenical Council | Extraordinary    | Infallable    | universal |                                                          |
+| Dogmatic Constitution     | Ecumenical Council | Extraordinary    | Infallible    | universal |                                                          |
 | Decree                    | Ecumenical Council | Extraordinary    |       -       | universal |                                                          |
 | Declaration               | Ecumenical Council | Extraordinary    |       -       | universal |                                                          |
 | Apostolic Constitution    | *(see below)*      | *(see below)*    | *(see below)* |*(see below)*| *(see below)*                                          |
-| ↳ Dogmatic Bull           | Pope               | Extraordinary    | Infallable    | universal |                                                          |
+| ↳ Dogmatic Bull           | Pope               | Extraordinary    | Infallible    | universal |                                                          |
 | ↳ Pastoral Constitution   | Pope               | Ordinary         |       -       | universal |                                                          |
 | Encyclical                | Pope               | Ordinary         |       -       | universal |                                                          |
 | Motu Proprio              | Pope               | Ordinary         |       -       | universal | issued directly by the Pope on his own initiative        |
