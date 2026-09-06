@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/CatholicOS/cmddr/schema/document.schema.json",
+  "title": "CMDDR Document",
+  "description": "One concrete magisterial document / speech. References a Genre. May be fully described by its Genre alone (no Assessments) or carry one Assessment per notable passage.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "title", "genre", "issuerId", "issuerType"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._-]+$",
+      "description": "Canonical short id used as the locus prefix, e.g. 'EV', 'LG', 'OS'."
+    },
+    "title": { "type": "string" },
+    "genre": {
+      "type": "string",
+      "description": "Foreign key -> genre.id."
+    },
+    "issuerId": {
+      "type": "string",
+      "description": "Identity of the concrete issuer, e.g. 'john-paul-ii', 'second-vatican-council'."
+    },
+    "issuerType": {
+      "enum": ["ecumenical-council", "pope", "bishop"],
+      "description": "Role/capacity of the issuer. Drives the computed-infallibility rule; must be one of the genre's issuerTypes."
+    },
+    "promulgatedBy": {
+      "type": "string",
+      "description": "Optional identity of the pope who promulgated the document, when distinct from the issuer — chiefly for conciliar documents (e.g. 'paul-vi' promulgating a Second Vatican Council constitution). Does not change issuerType."
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Promulgation date (ISO 8601)."
+    },
+    "scope": {
+      "enum": ["universal", "local"],
+      "description": "Overrides genre.defaultScope when the addressee differs."
+    },
+    "characteristics": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "enum": ["apostolic-constitution", "dogmatic-definition"] },
+      "description": "Non-exclusive metadata a papal bull may bear. 'dogmatic-definition' asserts the document contains an ex cathedra definition and must be backed by a Table 2 assessment with register=extraordinary and intent=definitive."
+    },
+    "descriptiveTitle": {
+      "enum": ["dogmatic", "pastoral"],
+      "description": "Optional descriptive title of a conciliar Constitution (mutually exclusive; omit for a plain constitution such as Sacrosanctum Concilium). Descriptive of purpose only — NOT a claim of authority, and unlike 'dogmatic-definition' it is not backed by any assessment."
+    },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Alternative identifiers / incipits."
+    }
+  }
+}

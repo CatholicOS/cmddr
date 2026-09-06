@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/CatholicOS/cmddr/schema/assessment.schema.json",
+  "title": "CMDDR Statement Assessment",
+  "description": "The authority actually exercised in a single passage of a document (Table 2), discerned by prudential application to the text. Overrides the genre default at its locus; may never exceed the genre ceiling.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "document", "section", "register", "intent", "assent", "provenance"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Locus id: '{DOCUMENT_ID}-{SECTION}' (e.g. 'EV-62'), or '{DOCUMENT_ID}-general' for a document-wide assessment."
+    },
+    "document": {
+      "type": "string",
+      "description": "Foreign key -> document.id."
+    },
+    "section": {
+      "type": "string",
+      "description": "Citation unit as the document numbers it (paragraph, canon, chapter+n). Use '*' for a document-wide assessment. String so ranges ('57-66') and non-numeric units ('can.9') are expressible."
+    },
+    "topic": {
+      "type": "string",
+      "description": "Short editorial summary of what is taught at this locus."
+    },
+    "register": {
+      "enum": ["extraordinary", "ordinary-universal", "authentic-ordinary"]
+    },
+    "intent": {
+      "enum": ["definitive", "non-definitive"]
+    },
+    "object": {
+      "enum": ["revealed", "secondary"],
+      "description": "Set if and only if intent = 'definitive'."
+    },
+    "assent": {
+      "enum": ["fides-divina-et-catholica", "fides-ecclesiastica", "religiosum-obsequium", "prudential"]
+    },
+    "reformability": {
+      "enum": ["irreformable", "reformable"],
+      "description": "Derived: irreformable iff intent = 'definitive'. May be omitted and computed."
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "assessedBy": { "type": "string" },
+        "sources": { "type": "array", "items": { "type": "string" } },
+        "status": { "enum": ["settled", "contested", "draft"] },
+        "note": { "type": "string" }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "description": "object is present iff intent is definitive",
+      "if": { "properties": { "intent": { "const": "definitive" } } },
+      "then": { "required": ["object"] },
+      "else": { "not": { "required": ["object"] } }
+    },
+    {
+      "description": "non-definitive assent must be religiosum-obsequium or prudential",
+      "if": { "properties": { "intent": { "const": "non-definitive" } } },
+      "then": {
+        "properties": { "assent": { "enum": ["religiosum-obsequium", "prudential"] } }
+      }
+    },
+    {
+      "description": "definitive assent must be a faith-tier",
+      "if": { "properties": { "intent": { "const": "definitive" } } },
+      "then": {
+        "properties": { "assent": { "enum": ["fides-divina-et-catholica", "fides-ecclesiastica"] } }
+      }
+    },
+    {
+      "description": "reformability is derived from intent (definitive => irreformable; non-definitive => reformable)",
+      "if": { "properties": { "intent": { "const": "definitive" } } },
+      "then": { "properties": { "reformability": { "const": "irreformable" } } },
+      "else": { "properties": { "reformability": { "const": "reformable" } } }
+    },
+    {
+      "description": "extraordinary register is a solemn definition: it requires definitive intent and a justifying, non-empty provenance note and cannot be draft",
+      "if": { "properties": { "register": { "const": "extraordinary" } } },
+      "then": {
+        "properties": {
+          "intent": { "const": "definitive" },
+          "provenance": {
+            "required": ["status", "note"],
+            "properties": {
+              "status": { "enum": ["settled", "contested"] },
+              "note": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        "required": ["provenance"]
+      }
+    }
+  ]
+}

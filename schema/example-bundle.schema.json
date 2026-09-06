@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/CatholicOS/cmddr/schema/example-bundle.schema.json",
+  "title": "CMDDR Example Bundle",
+  "description": "Envelope for a worked example that bundles one genre, one document, and its assessments in a single file. Nested resources are validated strictly by their own schemas via $ref.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["genre", "document", "assessments"],
+  "properties": {
+    "_comment": { "type": "string" },
+    "genre": { "$ref": "https://github.com/CatholicOS/cmddr/schema/genre.schema.json" },
+    "document": { "$ref": "https://github.com/CatholicOS/cmddr/schema/document.schema.json" },
+    "assessments": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "https://github.com/CatholicOS/cmddr/schema/assessment.schema.json" }
+    }
+  }
+}
