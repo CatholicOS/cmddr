@@ -108,6 +108,25 @@ genre `papal-bull` stable, so it can be baked into a document’s canonical id w
 *Munificentissimus Deus* bears **both**: it is an apostolic constitution that also defines a dogma. A bull of canonization bears
 **neither**.
 
+#### On sources: chancery shelves are not a magisterial taxonomy
+
+The document categories on [vatican.va](https://www.vatican.va/) — *Encicliche*, *Lettere Apostoliche*, *Lettere*, *Motu Proprio*,
+*Bolle* and the rest — are a **chancery filing system**. They sort documents by the diplomatic form of the instrument used to issue
+them, which is not the same question as the authority the issuer exercised. They are first-rate evidence of what forms exist and of
+how the Holy See itself distinguishes them, and they should **inform** this registry; they do not **govern** it.
+
+Two features of those shelves make the point. First, they sort by *form*, not by weight or audience: *Ordinatio Sacerdotalis* and a
+letter erecting a diocese share the *Lettere Apostoliche* shelf, while the universally-addressed *Letter to Artists* (1999) sits
+under *Lettere*. Second, they are not disjoint — *Socialium Scientiarum* (1994) is filed **both** as an Apostolic Letter and as a
+*Motu Proprio*, because issuing a document *motu proprio* is a mode of acting rather than a genre standing beside the apostolic
+letter. This registry handles that kind of relation with **characteristics** rather than sub-genres (see *Papal Bull
+characteristics* above); whether `motu-proprio` should follow suit is [open](https://github.com/CatholicOS/cmddr/issues/10).
+
+Our own genre rows accordingly mix two axes: diplomatic **form** (Papal Bull, Apostolic Letter, Brief, Letter) and **content type**
+(Encyclical, Apostolic Exhortation) — an Encyclical being, formally, itself a species of letter (*Litterae Encyclicae*). That
+mixture is deliberate and follows ordinary usage, but it means the existence of a vatican.va shelf is never by itself an argument
+for a genre row, a default, or a ceiling. Each of those has to be argued from the act.
+
 ---
 
 ### Table 2 — Statement Assessments
