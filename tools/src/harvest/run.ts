@@ -2,6 +2,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from 'node
 import { parseFlatIndex } from './flat.js';
 import { parseShelfIndex } from './shelf.js';
 import { toDocument } from './toDocument.js';
+import { assignProvisionalOrdinals } from './ordinals.js';
 import { POPES, DATE_CORRECTIONS, DUPLICATE_MERGES, ADJUDICATED_DISTINCT } from '../mappings/index.js';
 import { issuerLocalPart, mintId } from '../ids.js';
 import { slugify } from '../slug.js';
@@ -182,21 +183,9 @@ for (const doc of allDocs) {
   byIssuer.set(key, [...(byIssuer.get(key) ?? []), doc]);
 }
 
-// A provisional id carries an ordinal only when more than one document of that genre
-// shares a date. Assigned here rather than in toDocument because only the orchestrator
-// can see the whole group. Sorted by title so the numbering is reproducible: without
-// that, every harvest would produce a different diff and the CI drift check would be
-// meaningless.
+// See ordinals.ts for the ordinal-assignment rules (dense, 1-based, sorted by title).
 for (const docs of byIssuer.values()) {
-  const groups = new Map<string, DocumentRecord[]>();
-  for (const d of docs.filter((d) => d.idStatus === 'provisional')) {
-    groups.set(d.id, [...(groups.get(d.id) ?? []), d]);
-  }
-  for (const [baseId, group] of groups) {
-    if (group.length < 2) continue;
-    group.sort((a, b) => a.title.localeCompare(b.title));
-    group.forEach((d, i) => { d.id = `${baseId}-${i + 1}`; });
-  }
+  assignProvisionalOrdinals(docs);
 }
 
 // A provisional id names a document the incipit rules could not name -- a curation
