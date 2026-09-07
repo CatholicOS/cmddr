@@ -107,6 +107,14 @@ export const GLOSS_CONNECTORS: readonly string[] = [
                                                                                // own transcription drops the space after the comma for the second
                                                                                // one, hence both literal variants) -- the genre phrase trails the
                                                                                // incipit here instead of leading it.
+  ' che istituisce',                                                          // Pius XI, motu_proprio (Task 8, coordinator review): 'Motu Proprio I
+                                                                               // primitivi cemeteri che istituisce il Pontificio Istituto di
+                                                                               // Archeologia Cristiana', docSlug primitivi-cemeteri -- confirming 'I
+                                                                               // primitivi cemeteri' is the genuine incipit, its leading article
+                                                                               // dropped in the slug exactly like the already-evidenced 'I Rapidi
+                                                                               // Progressi' (docSlug rapidi-progressi) and 'I felici sviluppi' (docSlug
+                                                                               // felici-sviluppi). Deliberately this one literal verb form, not bare
+                                                                               // ' che ' -- see the note above on why that stays deleted.
 ];
 
 // Deleted for lack of evidence (review finding, 2026-09-07): the comma-prefixed
@@ -136,6 +144,14 @@ export const GLOSS_CONNECTORS: readonly string[] = [
  */
 export const NARRATIVE_OPENERS: readonly string[] = [
   'Il Pontefice', 'Il Santo Padre', 'Il Sommo Pontefice',
+  // 'Di nostro' (Task 8, coordinator review): 'Motu Proprio Di nostro moto proprio che
+  // contiene la Legge Fondamentale della Città del Vaticano' (pius-xi/motu_proprio) echoes
+  // the genre word itself ('moto proprio') back at the reader instead of naming a subject
+  // -- a self-referential description of the act, not an incipit. Its own URL slug,
+  // moto-proprio, is as generic as the genre word itself and evidences no incipit at all
+  // (contrast the specific, incipit-derived slugs on every genuine bare incipit in this
+  // corpus). No other heading anywhere in the four-pontificate corpus opens this way.
+  'Di nostro',
 ];
 
 /**

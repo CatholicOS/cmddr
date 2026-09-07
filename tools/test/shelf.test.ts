@@ -98,3 +98,25 @@ describe('parseShelfIndex on Pius X', () => {
     }
   });
 });
+
+describe('parseShelfIndex falls back to the URL slug date (Task 8)', () => {
+  // Two real pius-xii/letters headings carry no printed date at all -- the date exists
+  // only in the URL slug. Before this fix, `open <= 0` on the missing '(' silently dropped
+  // both with no trace; the fix falls back to the slug date and warns rather than dropping.
+  const letters = parseShelfIndex(
+    readFileSync('tools/fixtures/pius-xii-letters.html', 'utf8'), 'pius-xii', 'letters',
+  );
+
+  it('recovers both undated headings using their URL slug date', () => {
+    const cinemaRadioTv = letters.find((d) => d.title === 'Pontificia Commissione per la Cinematografia, la Radio e la Televisione');
+    expect(cinemaRadioTv?.date).toBe('1954-12-16'); // hf_p-xii_lett_16121954_statute-cinema-radio-tv.html
+    const cinema = letters.find((d) => d.title === 'Pontificia Commissione per la Cinematografia');
+    expect(cinema?.date).toBe('1952-01-01'); // hf_p-xii_lett_01011952_cinematographic-commission.html
+  });
+
+  it('never silently drops an item: every div.item on the fixture yields a parsed item', () => {
+    const html = readFileSync('tools/fixtures/pius-xii-letters.html', 'utf8');
+    const divCount = (html.match(/class="item"/g) ?? []).length;
+    expect(letters).toHaveLength(divCount);
+  });
+});

@@ -36,4 +36,14 @@ export const DUPLICATE_MERGES: Record<string, { mergeIntoIncipit: string; note: 
       'transcriptions, ending with the same dating formula -- "Dal Vaticano, 20 settembre 1887" ' +
       'and "Dal Vaticano li 20 Sett. 1887" -- the second citing ASS vol. XX (1887), pp. 209-215.',
   },
+  'pius-xi|bulls|divini-cultus|1928-12-20': {
+    mergeIntoIncipit: 'Divini cultus sanctitatem',
+    note:
+      'The apost_constitutions record opens (Latin) "Divini cultus sanctitatem tuendi cum ' +
+      'Ecclesia a Conditore Christo munus acceperit..."; the bulls record is the Italian ' +
+      'translation of the very same opening, "Poiché la Chiesa ha ricevuto da Cristo, suo ' +
+      'Fondatore, il mandato di tutelare..." -- both on the same date, both on the same subject ' +
+      '(the restoration and regulation of Gregorian chant and sacred music), one act filed ' +
+      'twice under a fuller and a shortened form of its own incipit.',
+  },
 };

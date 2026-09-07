@@ -6,7 +6,7 @@ Identifiers follow `mag:{issuer}/{incipit-slug}-{year}`; the issuer segment is a
 part of `issuerId`, so conciliar documents namespace under their council and record the
 promulgating pope separately. See the design spec for the minting rules.
 
-**689 documents**, of which 12 carry a provisional identifier — the source prints no incipit for them, so their id is genre-and-date based and may be re-minted.
+**1100 documents**, of which 126 carry a provisional identifier — the source prints no incipit for them, so their id is genre-and-date based and may be re-minted.
 
 Every document appears in both views below; neither is a subset of the other.
 
@@ -19,20 +19,22 @@ Every document appears in both views below; neither is a subset of the other.
 | [`oec:vatican-i`](documents/by-issuer/vatican-i.md) | 2 | 1870-04-24 – 1870-07-18 | — (conciliar) |
 | [`rp:leo-xiii`](documents/by-issuer/leo-xiii.md) | 263 | 1878-03-28 – 1903-06-22 | apost_constitutions, apost_letters, briefs, bulls, encyclicals, letters, motu_proprio, speeches |
 | [`rp:pius-x`](documents/by-issuer/pius-x.md) | 306 | 1903-08-09 – 1914-01-20 | apost_constitutions, apost_exhortations, apost_letters, encyclicals, letters, motu_proprio |
+| [`rp:pius-xi`](documents/by-issuer/pius-xi.md) | 158 | 1922-03-01 – 1939-01-18 | apost_constitutions, apost_letters, briefs, bulls, encyclicals, letters, motu_proprio |
+| [`rp:pius-xii`](documents/by-issuer/pius-xii.md) | 253 | 1939-06-18 – 1958-09-29 | apost_constitutions, apost_exhortations, apost_letters, briefs, bulls, encyclicals, letters, motu_proprio |
 
 ## By genre
 
 | Genre | Documents | Dates |
 | --- | --- | --- |
-| [`apostolic-exhortation`](documents/by-genre/apostolic-exhortation.md) | 1 | 1908-08-04 – 1908-08-04 |
-| [`apostolic-letter`](documents/by-genre/apostolic-letter.md) | 84 | 1857-06-15 – 1913-10-25 |
-| [`brief`](documents/by-genre/brief.md) | 21 | 1741-05-30 – 1896-01-08 |
+| [`apostolic-exhortation`](documents/by-genre/apostolic-exhortation.md) | 9 | 1908-08-04 – 1955-06-21 |
+| [`apostolic-letter`](documents/by-genre/apostolic-letter.md) | 201 | 1857-06-15 – 1958-08-21 |
+| [`brief`](documents/by-genre/brief.md) | 23 | 1741-05-30 – 1950-09-08 |
 | [`constitution`](documents/by-genre/constitution.md) | 2 | 1870-04-24 – 1870-07-18 |
 | [`discourse-address`](documents/by-genre/discourse-address.md) | 30 | 1848-04-29 – 1903-06-22 |
-| [`encyclical`](documents/by-genre/encyclical.md) | 173 | 1740-12-03 – 1912-09-24 |
-| [`letter`](documents/by-genre/letter.md) | 301 | 1863-12-21 – 1914-01-20 |
-| [`motu-proprio`](documents/by-genre/motu-proprio.md) | 48 | 1880-01-18 – 1914-01-16 |
-| [`papal-bull`](documents/by-genre/papal-bull.md) | 24 | 1749-03-15 – 1913-06-29 |
+| [`encyclical`](documents/by-genre/encyclical.md) | 244 | 1740-12-03 – 1958-07-14 |
+| [`letter`](documents/by-genre/letter.md) | 428 | 1863-12-21 – 1958-09-29 |
+| [`motu-proprio`](documents/by-genre/motu-proprio.md) | 73 | 1880-01-18 – 1957-06-02 |
+| [`papal-bull`](documents/by-genre/papal-bull.md) | 85 | 1749-03-15 – 1958-06-03 |
 | [`unmapped`](documents/by-genre/unmapped.md) | 5 | 1846-07-16 – 1849-02-14 |
 
 ## Coverage

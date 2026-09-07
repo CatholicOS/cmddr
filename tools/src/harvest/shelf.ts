@@ -21,6 +21,14 @@ function slugDateReadings(url: string | null): string[] {
   return [ddmmyyyy, yyyymmdd];
 }
 
+/** Whether an `ISO YYYY-MM-DD` string names a real calendar month/day (year unchecked). */
+function isPlausibleIsoDate(iso: string | undefined): iso is string {
+  const m = iso?.match(/^\d{4}-(\d{2})-(\d{2})$/);
+  if (!m) return false;
+  const [, mo, d] = m.map(Number);
+  return mo! >= 1 && mo! <= 12 && d! >= 1 && d! <= 31;
+}
+
 /**
  * Shelf-era index pages (Leo XIII onward). Items are `<h2>{Incipit} ({date})</h2>`,
  * sometimes wrapped in an <a> and sometimes not — 21 of Leo XIII's 86 encyclicals
@@ -40,27 +48,58 @@ export function parseShelfIndex(html: string, pageSlug: string, shelf: string): 
     if ($h2.length === 0) return;
 
     const full = $h2.text().replace(/\s+/g, ' ').trim();
-    const open = full.lastIndexOf('(');
-    if (open <= 0) return;
-
-    const { title, incipit } = extractIncipit(full.slice(0, open));
-    const date = parseSourceDate(full.slice(open));
-    if (!title || !date) return;
-
     const url = resolveItemUrl($item, $h2);
+    const slugDates = slugDateReadings(url);
+    // This shelf's own convention (see the module doc) is the reading worth trusting as a
+    // fallback or for a mismatch comparison; the other reading is still returned above in
+    // case a shelf breaks the pattern.
+    const [ddmmyyyy, yyyymmdd] = slugDates;
+    const preferredSlugDate = shelf === 'encyclicals' ? ddmmyyyy : yyyymmdd;
+
+    const open = full.lastIndexOf('(');
+    let headingText = open > 0 ? full.slice(0, open) : full;
+    let date = open > 0 ? parseSourceDate(full.slice(open)) : null;
+
+    if (!date) {
+      // No printed date at all (two real pius-xii/letters headings, e.g. 'Pontificia
+      // Commissione per la Cinematografia', hf_p-xii_lett_01011952_...), or a printed one
+      // that fails to parse (e.g. Pius X's 'augusto' transcription typo, tools/dates.ts):
+      // either way, a silent `return` here used to drop the item with no trace at all --
+      // the worst failure mode in this pipeline, worse than a wrong incipit, since nothing
+      // ever surfaces it. Fall back to the URL slug's own date instead, loudly, and only
+      // drop -- still with a warning naming the item -- when even that is unavailable.
+      // Prefer this shelf's conventional reading, but only when it actually names a real
+      // calendar date: both real fallback cases on record (pius-xii/letters) break the
+      // shelf's usual YYYYMMDD convention and are only valid read the other way around
+      // (e.g. '16121954' is 16 Dec 1954 read as DDMMYYYY; read as YYYYMMDD it is the
+      // nonsensical year 1612, month 19).
+      const fallbackDate = isPlausibleIsoDate(preferredSlugDate)
+        ? preferredSlugDate
+        : (slugDates.find(isPlausibleIsoDate) ?? null);
+      if (fallbackDate) {
+        console.warn(
+          `No parseable printed date for '${full}' (${pageSlug}/${shelf}): `
+          + `falling back to URL slug date ${fallbackDate}`,
+        );
+        date = fallbackDate;
+        headingText = full; // no parenthetical was found/trusted, so nothing to strip
+      } else {
+        console.warn(`Dropping '${full}' (${pageSlug}/${shelf}): no printed date and no URL slug date`);
+        return;
+      }
+    }
+
+    const { title, incipit } = extractIncipit(headingText);
+    if (!title) return;
+
     const languages = extractLanguages($, $item);
 
-    const slugDates = slugDateReadings(url);
     if (slugDates.length > 0 && !slugDates.includes(date)) {
       const correctionKey = `${pageSlug}|${shelf}|${slugify(incipit ?? title)}|${date}`;
       if (!DATE_CORRECTIONS[correctionKey]) {
-        // This shelf's own convention (see the module doc) is the reading worth showing;
-        // the other reading was still checked above in case a shelf breaks the pattern.
-        const [ddmmyyyy, yyyymmdd] = slugDates;
-        const slugDate = shelf === 'encyclicals' ? ddmmyyyy : yyyymmdd;
         console.warn(
           `Printed/slug date mismatch for '${title}' (${pageSlug}/${shelf}): `
-          + `printed ${date}, slug ${slugDate}`,
+          + `printed ${date}, slug ${preferredSlugDate}`,
         );
       }
     }

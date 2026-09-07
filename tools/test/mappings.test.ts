@@ -33,7 +33,7 @@ describe('pontiff slug mapping', () => {
 describe('the POPES table', () => {
   it('describes each pope page, its era and its own shelf list', () => {
     expect(POPES.map((p) => p.pageSlug))
-      .toEqual(['benedictus-xiv', 'pius-ix', 'leo-xiii', 'pius-x']);
+      .toEqual(['benedictus-xiv', 'pius-ix', 'leo-xiii', 'pius-x', 'pius-xi', 'pius-xii']);
     expect(POPES.find((p) => p.pageSlug === 'leo-xiii')!.era).toBe('shelf');
     expect(POPES.find((p) => p.pageSlug === 'pius-ix')!.era).toBe('flat');
     expect(POPES.find((p) => p.pageSlug === 'pius-x')!.era).toBe('shelf');
@@ -55,6 +55,20 @@ describe('the POPES table', () => {
   it("keeps Pius X's six shelves, without bulls, briefs or speeches", () => {
     expect(shelvesFor('pius-x')).toEqual([
       'apost_constitutions', 'apost_exhortations', 'apost_letters',
+      'encyclicals', 'letters', 'motu_proprio',
+    ]);
+  });
+
+  it("keeps Pius XI's seven shelves, without apost_exhortations or speeches", () => {
+    expect(shelvesFor('pius-xi')).toEqual([
+      'apost_constitutions', 'apost_letters', 'briefs', 'bulls',
+      'encyclicals', 'letters', 'motu_proprio',
+    ]);
+  });
+
+  it("keeps Pius XII's eight shelves, without speeches (year-partitioned, spec §2.7)", () => {
+    expect(shelvesFor('pius-xii')).toEqual([
+      'apost_constitutions', 'apost_exhortations', 'apost_letters', 'briefs', 'bulls',
       'encyclicals', 'letters', 'motu_proprio',
     ]);
   });

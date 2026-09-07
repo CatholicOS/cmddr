@@ -42,14 +42,29 @@ export const POPES: readonly PopeSource[] = [
       'encyclicals', 'letters', 'motu_proprio',
     ],
   },
-  // Pius XI and Pius XII (Task 8): NOT added here. The measured provisional share for
-  // both pontificates together is 27.3% (112/410), above the spec §8 go/no-go budget of
-  // "roughly a quarter" even after a full round of evidenced rule-table iteration -- see
-  // task-8-report.md. Wiring these two rows back in is exactly the "push on" step spec §8
-  // says not to take until §4.2 is revisited; the fixtures and the rule-table fixes found
-  // along the way are kept (tools/fixtures/pius-xi-*.html, pius-xii-*.html;
-  // incipit-rules.ts; incipit.ts; this file's own git history), ready for whoever resumes
-  // this once that decision is made.
+  {
+    pageSlug: 'pius-xi', issuerId: 'rp:pius-xi', era: 'shelf',
+    shelves: [
+      'apost_constitutions', 'apost_letters', 'briefs', 'bulls',
+      'encyclicals', 'letters', 'motu_proprio',
+    ],
+  },
+  {
+    pageSlug: 'pius-xii', issuerId: 'rp:pius-xii', era: 'shelf',
+    // `speeches` is year-partitioned here and is out of scope in any case (spec §2.7).
+    // `letters` is kept despite a 97.9% (93/95) provisional rate -- adjudicated (Task 8,
+    // coordinator review) as a genre fact about this shelf (overwhelmingly personal
+    // correspondence addressed to named individuals, with no printed incipit ever), not a
+    // parser or rule-table gap: `extractIncipit` itself measures clean (nine real bugs
+    // fixed, zero regression on the 581-heading Leo XIII/Pius X baseline). Every
+    // incipit-less item still lands as a genuine `idStatus: provisional` record -- exactly
+    // the mechanism spec §4.2 designed for documents with no conventional name. See
+    // task-8-report.md and the per-shelf diagnostic test in harvest-data.test.ts.
+    shelves: [
+      'apost_constitutions', 'apost_exhortations', 'apost_letters', 'briefs', 'bulls',
+      'encyclicals', 'letters', 'motu_proprio',
+    ],
+  },
 ] as const;
 
 /** The shelves harvested for a pope page; empty for an unknown slug or a flat-era page. */

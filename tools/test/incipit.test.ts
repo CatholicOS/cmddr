@@ -260,6 +260,26 @@ describe('extractIncipit against Pius XI and Pius XII (Task 8)', () => {
       .toBe('Auspicantibus Nobis');
   });
 
+  it('nulls a genre-echoing narrative opener ("Di nostro") after the Motu Proprio prefix', () => {
+    // 'Motu Proprio Di nostro moto proprio che contiene la Legge Fondamentale della Città
+    // del Vaticano' (pius-xi/motu_proprio, docSlug moto-proprio -- as generic as the genre
+    // word itself, evidencing no incipit at all) merely echoes the genre word back at the
+    // reader instead of naming a subject.
+    expect(incipitOf('Motu Proprio Di nostro moto proprio che contiene la Legge Fondamentale della Città del Vaticano'))
+      .toBeNull();
+  });
+
+  it('cuts at the literal " che istituisce" connector, recovering an "I <adj> <noun>" incipit', () => {
+    // 'Motu Proprio I primitivi cemeteri che istituisce il Pontificio Istituto di
+    // Archeologia Cristiana' (pius-xi/motu_proprio, docSlug primitivi-cemeteri) matches the
+    // corpus's established 'I <adjective> <noun>' short-incipit pattern with the leading
+    // article dropped in the slug, the same as 'I Rapidi Progressi' (docSlug
+    // rapidi-progressi) and 'I felici sviluppi' (docSlug felici-sviluppi) elsewhere in this
+    // file.
+    expect(incipitOf('Motu Proprio I primitivi cemeteri che istituisce il Pontificio Istituto di Archeologia Cristiana'))
+      .toBe('I primitivi cemeteri');
+  });
+
   it('never changes a single Leo XIII or Pius X heading (no-op corpus regression check)', () => {
     // The 581-heading Leo XIII/Pius X corpus is byte-identical before and after every rule
     // added in this describe block (verified by hand against tools/fixtures/*.html during

@@ -168,4 +168,104 @@ export const DATE_CORRECTIONS: Record<string, { date: string; note: string }> = 
       '19th day before the Kalends of January is 14 December, which in the 1st year of the ' +
       'pontificate (4 August 1903 - 3 August 1904) can only be 14 December 1903.',
   },
+
+  // Task 8 (Pius XI, elected 6 February 1922; Pius XII, elected 2 March 1939). Every entry
+  // below is adjudicated against the document's own dating formula, read on vatican.va, and
+  // cross-checked against its stated pontificate year.
+  'pius-xi|apost_letters|mites-corde|1929-06-30': {
+    date: '1929-06-30',
+    note:
+      "Mites Corde's own dating formula reads 'Datum Romae apud Sanctum Petrum, sub anulo " +
+      "Piscatoris, die XXX mensis Iunii anno... 1929, Pontificatus Nostri octavo' (30 June 1929, " +
+      '8th year of the pontificate -- consistent, since Pius XI was elected 6 February 1922 and ' +
+      "his 8th year runs 1929-02-06 to 1930-02-05). The printed date is correct; the " +
+      "apost_letters shelf's URL slug (19290623, 23 June) is wrong.",
+  },
+  'pius-xi|apost_letters|pastorale-officium|1929-02-20': {
+    date: '1929-02-08',
+    note:
+      "Pastorale Officium's own dating formula reads 'Datum Romae apud Sanctum Petrum, sub anulo " +
+      "Piscatoris, die VIII m. Februarii an. 1929, Pontificatus Nostri octavo' (8 February 1929, " +
+      "8th year -- consistent). The apost_letters shelf's printed date ('20 febbraio 1929', 20 " +
+      "February) is the error; its own URL slug (19290208, 8 February) is correct.",
+  },
+  'pius-xi|apost_letters|monasterii-sancti-benedicti|1929-02-23': {
+    date: '1928-09-18',
+    note:
+      "Monasterii Sancti Benedicti's (URL slug spells it 'monasterii-sanctae') own dating " +
+      "formula reads 'Datum Romae, apud Sanctum Petrum, sub anulo Piscatoris, die XVIII mensis " +
+      "Septembris an. 1928, Pontificatus Nostri septimo' (18 September 1928, 7th year -- " +
+      "consistent, 1928-02-06 to 1929-02-05). The apost_letters shelf's printed date ('23 " +
+      "febbraio 1929', 23 February 1929) is the error; its own URL slug (19280918, 18 September " +
+      '1928) is correct.',
+  },
+  'pius-xi|letters|chirografo-al-cardinale-eugenio-pacelli-segretario-di-stato-col-quale-il-sommo-pontefice-si-riserva-la-prefettura-della-sacra-congregazione-dei-seminari-e-delle-universita-degli-studi|1939-09-03':
+    {
+      date: '1937-09-03',
+      note:
+        "This chirografo's own signature line reads 'Castelgandolfo, 3 settembre 1937' -- the " +
+        "letters shelf's printed date ('3 settembre 1939', 1939) is the error; its own URL slug " +
+        '(19370903, 1937) is correct.',
+    },
+  'pius-xi|motu_proprio|quod-maxime|1928-09-30': {
+    date: '1928-09-30',
+    note:
+      "Quod Maxime's own dating formula reads 'Datum Romae apud Sanctum Petrum, die XXX mensis " +
+      "Septembris, in festo Sancti Hieronymi Doctoris Maximi, anno... 1928, Pontificatus Nostri " +
+      "septimo' (30 September 1928, the feast of St Jerome, 7th year -- consistent). The printed " +
+      "date is correct; the motu_proprio shelf's URL slug (19280914, 14 September) is wrong.",
+  },
+  'pius-xii|apost_constitutions|niangaraensis-dorumaensis|1958-02-24': {
+    date: '1958-02-24',
+    note:
+      "Niangaraënsis's own dating formula reads 'Datum Romae, apud S. Petrum, die quarto et " +
+      "vicesimo mensis Februarii, anno Domini... 1958, Pontificatus Nostri undevicesimo' (24 " +
+      'February 1958, 19th year -- consistent, since Pius XII was elected 2 March 1939 and his ' +
+      "19th year runs 1957-03-02 to 1958-03-01). The printed date is correct; the " +
+      "apost_constitutions shelf's URL slug (19580124, 24 January) is wrong.",
+  },
+  'pius-xii|apost_constitutions|thakhekensis|1958-02-24': {
+    date: '1958-02-24',
+    note:
+      "Thakhekensis's own dating formula is identical to Niangaraënsis's (the two dioceses were " +
+      "erected the same day): 'Datum Romae, apud S. Petrum, die quarto et vicesimo mensis " +
+      "Februarii, anno Domini... 1958, Pontificatus Nostri undevicesimo' (24 February 1958, 19th " +
+      "year -- consistent). The printed date is correct; the apost_constitutions shelf's URL " +
+      'slug (19580124, 24 January) is wrong.',
+  },
+  'pius-xii|apost_constitutions|rivibambensis-guarandensis|1958-12-29': {
+    date: '1957-12-29',
+    note:
+      "Rivibambensis's own dating formula reads 'Datum Romae, apud S. Petrum, die vicesimo nono " +
+      "mensis Decembris, anno Domini... 1957, Pontificatus Nostri undevicesimo' (29 December " +
+      "1957, 19th year -- consistent). The apost_constitutions shelf's printed date ('29 " +
+      "dicembre 1958', 1958) is the error; its own URL slug (19571229, 1957) is correct.",
+  },
+  'pius-xii|apost_constitutions|urawaensis|1958-12-16': {
+    date: '1957-12-16',
+    note:
+      "Urawaënsis's own dating formula reads 'Datum Romae, apud S. Petrum, die sexto decimo " +
+      "mensis Decembris, anno Domini... 1957, Pontificatus Nostri undevicesimo' (16 December " +
+      "1957, 19th year -- consistent). The apost_constitutions shelf's printed date ('16 " +
+      "dicembre 1958', 1958) is the error; its own URL slug (19571216, 1957) is correct.",
+  },
+  'pius-xii|apost_exhortations|il-film-ideale|1955-06-21': {
+    date: '1955-06-21',
+    note:
+      "'Il Film Ideale' is a two-part exhortation: its own title page gives the span '21 " +
+      "giugno 1955 - 25 ottobre 1955' -- 21 June 1955 for the address to Italian cinema " +
+      "industry representatives (the part the apost_exhortations shelf prints and dates), and " +
+      "25/28 October 1955 for a second address to international cinema exhibitors and " +
+      "distributors (the date the URL slug -- 25101955 -- encodes). Both dates are genuinely " +
+      "the document's own; the printed date is not an error, so it is kept.",
+  },
+  'pius-xii|letters|lettera-al-cardinale-francesco-spellman-nel-150-anniversario-di-fondazione-dell-arcidiocesi-di-new-york|1958-02-22':
+    {
+      date: '1958-02-28',
+      note:
+        "This letter's own dating formula reads 'Datum Roma, apud Sanctum Petrum die XXVIII " +
+        "mensis Februarii, anno... 1958, Pontificatus Nostri undevicesimo' (28 February 1958, " +
+        "19th year -- consistent). The letters shelf's printed date ('22 febbraio 1958', 22 " +
+        'February) is the error; its own URL slug (19580228, 28 February) is correct.',
+    },
 };

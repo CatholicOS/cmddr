@@ -233,3 +233,133 @@ describe('the Pius X corpus', () => {
     expect(all).toHaveLength(383);
   });
 });
+
+describe('the Pius XI and Pius XII corpora', () => {
+  const pxi = load('pius-xi');
+  const pxii = load('pius-xii');
+
+  it('holds every formal-shelf document', () => {
+    // Pius XI: 161 raw items across seven shelves (30 encyclicals + 2 bulls + 1 brief +
+    // 11 apostolic constitutions + 70 apostolic letters + 14 motu proprio + 33 letters).
+    // Three merge away: 'Divini cultus sanctitatem' (apost_constitutions) and 'Divini
+    // Cultus' (bulls) are the same constitution on Gregorian chant, proven by comparing
+    // the Latin opening against its Italian translation (DUPLICATE_MERGES); the letters
+    // shelf lists 'Chirografo al Cardinale Pietro Gasparri...sulla firma dei Trattati
+    // Lateranensi' twice, under two different URL slugs (_domandato and _lateranensi),
+    // both opening with the identical text 'Ci si è domandato se le relazioni...' --
+    // confirmed the same letter, merged automatically (pass 1, same shelf+incipit+date);
+    // 'Mirabilis Deus' is filed on both apost_letters and briefs (pass 1). 161 - 3 = 158.
+    //
+    // Pius XII: 254 raw items across eight shelves (41 encyclicals + 1 bull + 2 briefs +
+    // 49 apostolic constitutions + 47 apostolic letters + 8 apostolic exhortations + 11
+    // motu proprio + 95 letters). Two of the 95 letters carry no printed date at all and
+    // are recovered only via their URL slug date (parseShelfIndex's fallback, Task 8;
+    // tools/test/shelf.test.ts covers this directly), so all 254 parse. One merges away:
+    // 'Iubilaeum maximum. - Indizione del grande Giubileo' is filed on both apost_letters
+    // and bulls (pass 1, automatic). 254 - 1 = 253.
+    expect(pxi).toHaveLength(158);
+    expect(pxii).toHaveLength(253);
+  });
+
+  it('recovers an incipit from a glossed heading', () => {
+    const an = pxi.find((d) => d.incipit === 'Auspicantibus Nobis')!;
+    expect(an.title).toMatch(/^Auspicantibus Nobis in occasione/);
+    expect(an.idStatus).toBe('minted');
+  });
+
+  it('keeps the more specific shelf for a document filed twice, aliasing the dropped gloss only when the incipit itself differs', () => {
+    // 'Mirabilis Deus' is filed bare on apost_letters and glossed ('Mirabilis Deus, col
+    // quale il Pontefice attribuisce a Don Giovanni Bosco il titolo di Beato') on briefs.
+    // Both extract to the same incipit, so apost_letters (more specific than briefs) wins
+    // outright and no alias is recorded -- the seven-way pass-1 pattern from the pilot
+    // corpus, not a new mechanism.
+    const md = pxi.find((d) => d.incipit === 'Mirabilis Deus')!;
+    expect(md.title).toBe('Mirabilis Deus');
+    expect(md.idStatus).toBe('minted');
+    expect(md.source!.shelf).toBe('apost_letters');
+    expect(md.source!.alsoShelvedAs).toEqual(['briefs']);
+    expect(md.aliases).toBeUndefined();
+  });
+
+  it('leaves genuinely incipit-less headings provisional, with their title intact', () => {
+    const prov = [...pxi, ...pxii].filter((d) => d.idStatus === 'provisional');
+    expect(prov.length).toBeGreaterThan(0);
+    for (const d of prov) {
+      expect(d.title.length, d.id).toBeGreaterThan(0);
+      expect('incipit' in d, d.id).toBe(false);
+      expect(d.id, d.id).toMatch(/-\d{4}-\d{2}-\d{2}(-\d+)?$/);
+    }
+  });
+
+  it('records each pontificate\'s provisional share as a diagnostic budget', () => {
+    // Measured, not asserted against a target: extractIncipit itself is clean here (nine
+    // real rule-table bugs fixed in Task 8, zero regression against the 581-heading Leo
+    // XIII/Pius X baseline) -- these numbers are almost entirely a genre fact about which
+    // shelves this pontificate's `letters` catalog holds, not a parser or rule-table
+    // signal. See the per-shelf test below for the actual go/no-go diagnostic.
+    const shareOf = (docs: typeof pxi) =>
+      docs.filter((d) => d.idStatus === 'provisional').length / docs.length;
+    expect(shareOf(pxi)).toBeCloseTo(15 / 158, 5); // 9.5%
+    expect(shareOf(pxii)).toBeCloseTo(99 / 253, 5); // 39.1%
+  });
+
+  it('flags exactly the shelves that are almost entirely incipit-less, by name', () => {
+    // The spec §8 go/no-go diagnostic, replacing a single blended threshold (Task 8,
+    // coordinator review): a combined 25% budget conflated "does extractIncipit work?"
+    // with "does this shelf hold formal, incipit-bearing documents at all?" A shelf whose
+    // provisional rate exceeds ~90% is a scope fact, not a rule-table gap -- Pius XII's
+    // `letters` shelf is 94/95 (98.9%) provisional, with zero minted documents, because it
+    // is overwhelmingly personal correspondence addressed to named cardinals, bishops,
+    // priests and heads of state (`'Lettera al Presidente degli Stati Uniti, Harry S.
+    // Truman'`, etc.), never printing a conventional incipit. Every such incipit-less item
+    // still lands as a genuine `idStatus: provisional` record -- exactly the mechanism
+    // spec §4.2 designed for documents with no conventional name; the shelf is kept (not
+    // excluded), and this test exists so a new near-total shelf in a later pontificate
+    // fails loudly, as a scope question, instead of hiding inside a blended average.
+    const NEAR_TOTAL_THRESHOLD = 0.9;
+    const byShelf = new Map<string, { total: number; provisional: number }>();
+    for (const d of [...pxi, ...pxii]) {
+      const key = `${d.issuerId} ${d.source?.shelf ?? 'flat'}`;
+      const entry = byShelf.get(key) ?? { total: 0, provisional: 0 };
+      entry.total++;
+      if (d.idStatus === 'provisional') entry.provisional++;
+      byShelf.set(key, entry);
+    }
+    const nearTotal = [...byShelf.entries()]
+      .filter(([, v]) => v.provisional / v.total > NEAR_TOTAL_THRESHOLD)
+      .map(([key]) => key);
+    expect(nearTotal).toEqual(['rp:pius-xii letters']);
+  });
+
+  it('files them all under the right pope', () => {
+    expect(pxi.every((d) => d.issuerId === 'rp:pius-xi')).toBe(true);
+    expect(pxi.every((d) => d.id.startsWith('mag:pius-xi/'))).toBe(true);
+    expect(pxii.every((d) => d.issuerId === 'rp:pius-xii')).toBe(true);
+    expect(pxii.every((d) => d.id.startsWith('mag:pius-xii/'))).toBe(true);
+  });
+
+  it('gives every document a non-empty title that contains its incipit, where one is printed', () => {
+    // Unlike the pilot corpus (bare incipits almost everywhere, one genuine gloss) and
+    // Pius X (bare incipits, no gloss at all), most Pius XI/XII headings genuinely are
+    // genre phrase + incipit + descriptive gloss (spec §4.2) -- title keeps the full
+    // heading, incipit keeps only the opening words, so title === incipit is the
+    // exception here, not the rule (only 101 of 143 pxi, 102 of 154 pxii titled documents
+    // match exactly). A leading genre phrase (e.g. 'Motu Proprio Cum Proxime, sulle
+    // nuove...') also means the title does not always *start with* the incipit either --
+    // what must always hold is that the title contains it somewhere.
+    for (const docs of [pxi, pxii]) {
+      expect(docs.every((d) => typeof d.title === 'string' && d.title.length > 0)).toBe(true);
+      const withIncipit = docs.filter((d) => 'incipit' in d);
+      expect(withIncipit.every((d) => d.title.includes(d.incipit!))).toBe(true);
+    }
+  });
+
+  it('satisfies every invariant', () => {
+    expect(checkDocuments([...pxi, ...pxii], genres)).toEqual([]);
+  });
+
+  it('leaves the 383 pilot and 306 Pius X records untouched', () => {
+    expect(all).toHaveLength(383);
+    expect(load('pius-x')).toHaveLength(306);
+  });
+});

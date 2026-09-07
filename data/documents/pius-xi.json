@@ -1,0 +1,3112 @@
+[
+  {
+    "id": "mag:pius-xi/cum-proxime-sulle-nuove-norme-a-proposito-delle-riunioni-dei-cardinali-chiamati-ad-eleggere-il-nuovo-papa-1922",
+    "title": "Motu Proprio Cum Proxime, sulle nuove norme a proposito delle riunioni dei cardinali chiamati ad eleggere il nuovo Papa",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-03-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/motu_proprio/documents/hf_p-xi_motu-proprio_19220301_cum-proxime.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum Proxime, sulle nuove norme a proposito delle riunioni dei cardinali chiamati ad eleggere il nuovo Papa",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xi/letter-1922-03-08",
+    "title": "Lettera al Principe Camillo Francesco Massimo in occasione del terzo centenario della canonizzazione di san Filippo Neri",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-03-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/letters/documents/hf_p-xi_lett_19220308_a-codesto.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/romani-pontificis-1922",
+    "title": "Motu Proprio Romani Pontificis, sui privilegi concessi ai Conclavisti",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-03-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/motu_proprio/documents/hf_p-xi_motu-proprio_19220312_romani-pontificis.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Romani Pontificis",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xi/letter-1922-04-07",
+    "title": "Lettera al Reverendo Padre Giosuè Signori, Arcivescovo di Genova",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-04-07",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/letters/documents/hf_p-xi_lett_19220407_vivo-piacere.html",
+      "shelf": "letters",
+      "languages": [
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/letter-1922-04-22",
+    "title": "Lettera al Reverendo Padre Agostino Gemelli, fondatore dell'Università Cattolica del Sacro Cuore, di Milano",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-04-22",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/letters/documents/hf_p-xi_lett_19220422_vivo-compiacimento.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/romanorum-pontificum-1922",
+    "title": "Motu Proprio Romanorum Pontificum, sulla Pontificia Opera della Propagazione della fede",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-05-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/motu_proprio/documents/hf_p-xi_motu-proprio_19220503_romanorum-pontificum.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Romanorum Pontificum",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xi/annus-fere-1922",
+    "title": "Annus Fere: ai Vescovi di tutto il mondo cattolico affinché si adoperino per far fronte alle esigenze dei popoli russi travolti dalla fame e dalla pestilenza",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-07-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/apost_letters/documents/hf_p-xi_apl_19220710_annus-fere.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Annus Fere",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/summorum-pontificum-1922",
+    "title": "Summorum Pontificum",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-07-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_constitutions/documents/hf_p-xi_apc_19220725_summorum-pontificum.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Summorum Pontificum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xi/officiorum-omnium-1922",
+    "title": "Officiorum omnium: al Cardinale Gaetano Bisleti, riguardo i seminari e gli studi del clero",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-08-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19220801_officiorum-omnium.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Officiorum omnium",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/i-disordini-1922",
+    "title": "I disordini: ai Vescovi italiani affinché venga ristabilita la pace",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-08-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/apost_letters/documents/hf_p-xi_apl_19220806_i-disordini.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "I disordini",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/decessor-noster-1922",
+    "title": "Decessor Noster",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-09-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/letters/documents/hf_p-xi_lett_19220914_lettera-decessor-noster.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Decessor Noster",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/ora-sono-pochi-1922",
+    "title": "Ora sono pochi: nel giorno della «Marcia su Roma»",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-10-28",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/apost_letters/documents/hf_p-xi_apl_19221028_sono-pochi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ora sono pochi",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/ad-musicae-sacrae-sul-consalidamento-del-pontificio-instituto-di-musica-sacra-1922",
+    "title": "Motu Proprio Ad Musicae Sacrae, sul consalidamento del Pontificio Instituto di Musica Sacra",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-11-22",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/motu_proprio/documents/hf_p-xi_motu-proprio_19221122_ad-musicae-sacrae.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad Musicae Sacrae, sul consalidamento del Pontificio Instituto di Musica Sacra",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xi/de-tulancingo-1922",
+    "title": "De Tulancingo",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-11-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_constitutions/documents/hf_p-xi_apc_19221124_de-tulancingo.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "De Tulancingo",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xi/verae-crucis-1922",
+    "title": "Verae crucis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-11-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_constitutions/documents/hf_p-xi_apc_19221124_verae-crucis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Verae crucis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xi/meditantibus-nobis-1922",
+    "title": "Meditantibus Nobis: in ricordo di Ignazio di Loyola e Francesco Saverio nel terzo centenario della loro canonizzazione",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-12-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/apost_letters/documents/hf_p-xi_apl_19221203_meditantibus-nobis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Meditantibus Nobis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/ubi-arcano-dei-consilio-1922",
+    "title": "Ubi Arcano Dei Consilio",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-12-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19221223_ubi-arcano-dei-consilio.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ubi Arcano Dei Consilio",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/rerum-omnium-perturbationem-1923",
+    "title": "Rerum Omnium Perturbationem",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-01-26",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_26011923_rerum-omnium-perturbationem.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Rerum Omnium Perturbationem",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/ex-hac-excelsa-1923",
+    "title": "Ex hac excelsa",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-03-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19230315_ex-hac-excelsa.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ex hac excelsa",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/quae-catholico-1923-03-15",
+    "title": "Quae catholico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-03-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19230315_quae-catholico.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quae catholico",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/romani-pontifices-1923",
+    "title": "Romani Pontifices",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-03-17",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19230317_romani-pontifices.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Romani Pontifices",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/monasterium-speinshartense-1923",
+    "title": "Monasterium Speinshartense",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-03-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19230324_monasterium-speinshartense.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Monasterium Speinshartense",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/romanorum-pontificum-1923",
+    "title": "Romanorum Pontificum",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-04-13",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19230413_romanorum-pontificum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Romanorum Pontificum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/quae-catholico-1923-04-19",
+    "title": "Quae catholico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-04-19",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19230419_quae-catholico.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quae catholico",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/post-datam-sulle-facolta-quinquennali-degli-ordinari-1923",
+    "title": "Motu Proprio Post datam, sulle facoltà quinquennali degli Ordinari",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-04-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/motu_proprio/documents/hf_p-xi_motu-proprio_19230420_post-datam.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Post datam, sulle facoltà quinquennali degli Ordinari",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xi/quod-ioannes-1923",
+    "title": "Quod Ioannes",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-04-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19230429_quod-ioannes.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod Ioannes",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/cum-ex-apostolico-1923",
+    "title": "Cum ex apostolico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-05-04",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19230504_cum-ex-apostolico.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum ex apostolico",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/ex-hac-sublimi-1923",
+    "title": "Ex hac sublimi",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-05-04",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19230504_ex-hac-sublimi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ex hac sublimi",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/perlibenti-sane-1923",
+    "title": "Lettera Perlibenti sane al Cardinale Antonio Mendes Bello, Patriarca di Lisbona",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-05-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/letters/documents/hf_p-xi_lett_19230514_perlibenti-sane.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Perlibenti sane",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/quod-annum-1923",
+    "title": "Lettera Quod annum al Reverendo Padre Carlo Gibier, in occasione del 50° anniversario di sacerdozio",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-05-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/letters/documents/hf_p-xi_lett_19230515_quod-annum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod annum",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/conditum-annum-1923",
+    "title": "Lettera Conditum annum al Reverendo Padre Jerome Hennessy, in occasione del 100° anniversario della sua confermazione allo stato canonico",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-05-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/letters/documents/hf_p-xi_lett_19230523_conditum-annum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Conditum annum",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/quod-die-1923",
+    "title": "Lettera Quod die al Cardinale Dubois, in occasione del 50° anniversario dalla consacrazione al Sacro Cuore di Gesù della Chiesa di Montmartre a Parigi",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-05-26",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/letters/documents/hf_p-xi_lett_19230526_quod-die.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod die",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/quinquagesimo-propediem-1923",
+    "title": "Lettera Quinquagesimo propediem al Reverendo Padre Thomas Esser, in occasione del 50° anniversario di sacerdozio",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-05-27",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/letters/documents/hf_p-xi_lett_19230527_quinquagesimo-propediem.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quinquagesimo propediem",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/cum-in-vallem-1923",
+    "title": "Lettera Cum in Vallem al Reverendissimo Padre Carlo Gregorio Maria Grasso, Arcivescovo della città di Salerno",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-05-28",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/letters/documents/hf_p-xi_lett_19230528_cum-in-vallem.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum in Vallem",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/non-sine-animi-1923",
+    "title": "Lettera Non sine animi al Reverendo Padre Jean Baptiste Ollitraut De Keryvallan, abate generale dell'ordine dei Cistercensi",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-05-28",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/letters/documents/hf_p-xi_lett_19230528_non-sine-animi.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Non sine animi",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/quam-neapoli-1923",
+    "title": "Lettera Quam, Neapoli al Reverendo Padre Gennaro Cosenza, arcivescovo di Capua",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-05-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/letters/documents/hf_p-xi_lett_19230529_quam-neapoli.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quam, Neapoli",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/dolendum-profecto-1923",
+    "title": "Lettera Dolendum profecto al Cardinale Basilio Pompili, in merito alla promozione delle vocazioni sacerdotali",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-06-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/letters/documents/hf_p-xi_lett_19230608_dolendum-profecto.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Dolendum profecto",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/bellum-post-1923",
+    "title": "Lettera Bellum post al Cardinal Friedrich Gustav Piffl, in merito alla diffusione della fede cattolica in Austria",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-06-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/letters/documents/hf_p-xi_lett_19230610_bellum-post.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Bellum post",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/quam-ante-1923",
+    "title": "Lettera Quam ante al Cardinal Dèsirè Joseph Mercier, Arcivescovo di Malines",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-06-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/letters/documents/hf_p-xi_lett_19230610_quam-ante.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quam ante",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/ceteriores-nos-1923",
+    "title": "Lettera Ceteriores nos al Reverendo Padre Paolo Jacuzio, in occasione del 50° anniversario della consacrazione pubblica dell'arcidiocesi di Sorrento al Santissimo Cuore di Gesù",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-06-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/letters/documents/hf_p-xi_lett_19230611_certiores-nos.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ceteriores nos",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/iam-inde-1923",
+    "title": "Iam inde",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-06-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19230611_iam-inde.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Iam inde",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/venerabilis-frater-1923",
+    "title": "Venerabilis frater",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-06-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19230611_venerabilis-frater.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Venerabilis frater",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/quando-nel-principio-1923",
+    "title": "Lettera Quando nel principio al Cardinal Pietro Gasparri, in merito ai rapporti internazionali tra le nazioni europee",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-06-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/letters/documents/hf_p-xi_lett_19230624_quando-nel-principio.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quando nel principio",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/orbem-catholicum-1923",
+    "title": "Motu Proprio Orbem catholicum, sulla sistemazione della dottrina cattolica per tutta la comunità cristiana",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/motu_proprio/documents/hf_p-xi_motu-proprio_19230629_orbem-catholicum.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Orbem catholicum",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xi/studiorum-ducem-1923",
+    "title": "Studiorum Ducem",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19230629_studiorum-ducem.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Studiorum Ducem",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/quod-sancti-1923",
+    "title": "Lettera Quod Sancti al Vescovo di Annecy, Fiorenzo Du Bois De La Villerabel",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-08-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/letters/documents/hf_p-xi_lett_19230820_quod-sancti.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod Sancti",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/ecclesiam-dei-1923",
+    "title": "Ecclesiam Dei",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-11-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19231112_ecclesiam-dei.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ecclesiam Dei",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/maximam-gravissimamque-1924",
+    "title": "Maximam Gravissimamque",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-01-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19240118_maximam-gravissimamque.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Maximam Gravissimamque",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/unigenitus-dei-1924",
+    "title": "Unigenitus Dei: sui criteri cui deve ispirarsi la formazione del clero regolare",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-03-19",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/apost_letters/documents/hf_p-xi_apl_19240319_unigenitus-dei.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Unigenitus Dei",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/infinita-dei-misericordia-1924",
+    "title": "Infinita Dei Misericordia",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-05-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/bulls/documents/hf_p-xi_bulls_19240529_dei-misericordia.html",
+      "shelf": "bulls",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Infinita Dei Misericordia",
+    "sourceGenreLabel": "bulls"
+  },
+  {
+    "id": "mag:pius-xi/umbratilem-1924",
+    "title": "Umbratilem",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-07-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_constitutions/documents/hf_p-xi_apc_19240708_umbratilem.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Umbratilem",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xi/latinarum-litterarum-1924",
+    "title": "Motu Proprio Latinarum litterarum",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-10-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/motu_proprio/documents/hf_p-xi_motu-proprio_19241020_litterarum-latinarum.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Latinarum litterarum",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xi/christi-nomen-1925",
+    "title": "Christi nomen, Lettera Decretale",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1925-05-31",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19250531_beatus-vianney.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Christi nomen",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/i-primitivi-cemeteri-1925",
+    "title": "Motu Proprio I primitivi cemeteri che istituisce il Pontificio Istituto di Archeologia Cristiana",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1925-12-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/motu_proprio/documents/hf_p-xi_motu-proprio_19251211_primitivi-cemeteri.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "I primitivi cemeteri",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xi/quas-primas-1925",
+    "title": "Quas Primas",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1925-12-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_11121925_quas-primas.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quas Primas",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/paterna-sane-1926",
+    "title": "Paterna Sane: ai Vescovi, al clero e ai fedeli messicani affinché rivendichino i diritti civili e i doveri comuni senza l'intervento dei partiti politici",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1926-02-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/apost_letters/documents/hf_p-xi_apl_19260202_paterna-sane.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Paterna Sane",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/letter-1926-02-18-1",
+    "title": "Chirografo al Cardinale Gasparri, sulle proposte formulate dalla Commissione Ministeriale circa la legislazione ecclesiastica in Italia",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1926-02-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/letters/documents/hf_p-xi_lett_19260218_legislaz-ecclesiastica.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/letter-1926-02-18-2",
+    "title": "Chirografo al Cardinale Pietro Gasparri, Segretario di Stato, sulla riforma della legislazione ecclesiastica",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1926-02-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/letters/documents/hf_p-xi_lett_19260218_annunciato.html",
+      "shelf": "letters",
+      "languages": [
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/rerum-ecclesiae-1926",
+    "title": "Rerum Ecclesiae",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1926-02-28",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19260228_rerum-ecclesiae.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "ES",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Rerum Ecclesiae",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/rite-expiatis-1926",
+    "title": "Rite Expiatis",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1926-04-30",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19260430_rite-expiatis.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Rite Expiatis",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/singulare-illud-1926",
+    "title": "Singulare Illud: sulla figura di Luigi Gonzaga, patrono della gioventù cattolica",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1926-06-13",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/apost_letters/documents/hf_p-xi_apl_19260613_singulare-illud.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Singulare Illud",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/iniquis-afflictisque-1926",
+    "title": "Iniquis Afflictisque",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1926-11-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19261118_iniquis-afflictisque.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Iniquis Afflictisque",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/quod-s-cyrrillum-1927",
+    "title": "Lettera Quod S. Cyrrillum agli Arcivescovi e Vescovi del Regno dei Serbi-Croati-Sloveni e delle Repubblica Ceco-Slovacca",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1927-02-13",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/letters/documents/hf_p-xi_lett_19270213_quod-s-cyrillum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod S. Cyrrillum",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/mortalium-animos-1928",
+    "title": "Mortalium Animos",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19280106_mortalium-animos.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Mortalium Animos",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/apostolici-officii-1928",
+    "title": "Apostolici officii",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-01-19",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_constitutions/documents/hf_p-xi_apc_19280119_apostolici-officii.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Apostolici officii",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xi/miserentissimus-redemptor-1928",
+    "title": "Miserentissimus Redemptor",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-05-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19280508_miserentissimus-redemptor.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Miserentissimus Redemptor",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/decessor-noster-1928",
+    "title": "Decessor Noster",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-07-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19280711_decessor-noster.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Decessor Noster",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/dilectusfilius-1928",
+    "title": "Dilectusfilius",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-07-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19280711_dilectus-filius.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Dilectusfilius",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/friburgensis-archidioecesis-1928",
+    "title": "Friburgensis archidioecesis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-07-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19280711_friburgensis-archidioecesis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Friburgensis archidioecesis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/cum-tu-1928",
+    "title": "Cum tu",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-07-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19280712_cum-tu.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum tu",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/per-similes-1928",
+    "title": "Per similes",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-07-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19280718_per-similes.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Per similes",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/quum-ex-apostolico-1928",
+    "title": "Quum ex Apostolico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-07-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19280718_quum-ex.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quum ex Apostolico",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/ex-hac-1928",
+    "title": "Ex hac",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-07-19",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19280719_ex-hac.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ex hac",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/inter-praestantiores-1928",
+    "title": "Inter praestantiores",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-08-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19280802_inter-praestantiores.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Inter praestantiores",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/providentia-opportuna-1928",
+    "title": "Providentia opportuna",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-08-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19280815_providentia-opportuna.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Providentia opportuna",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/leodiensis-dioecesis-1928",
+    "title": "Leodiensis dioecesis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-08-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19280824_leodiensis-dioecesis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Leodiensis dioecesis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/sagiensis-dioecesis-1928",
+    "title": "Sagiensis dioecesis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-08-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19280829_sagiensis-dioecesis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sagiensis dioecesis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/rerum-orientalium-1928",
+    "title": "Rerum Orientalium",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-09-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19280908_rerum-orientalium.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Rerum Orientalium",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/monasterii-sancti-benedicti-1928",
+    "title": "Monasterii Sancti Benedicti",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-09-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19280918_monasterii-sanctae.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Monasterii Sancti Benedicti",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/quod-maxime-1928",
+    "title": "Motu Proprio Quod Maxime",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-09-30",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/motu_proprio/documents/hf_p-xi_motu-proprio_19280914_motuproprio-quod-maxime.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod Maxime",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xi/commissum-nobis-1928",
+    "title": "Commissum nobis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-10-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19281015_commissum-nobis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Commissum nobis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/praedecessor-noster-1928",
+    "title": "Praedecessor noster",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-10-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19281015_praedecessor-noster.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Praedecessor noster",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/divini-cultus-sanctitatem-1928",
+    "title": "Divini cultus sanctitatem",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-12-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_constitutions/documents/hf_p-xi_apc_19281220_divini-cultus-sanctitatem.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "bulls"
+      ]
+    },
+    "incipit": "Divini cultus sanctitatem",
+    "aliases": [
+      "Divini Cultus"
+    ],
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xi/auspicantibus-nobis-1929",
+    "title": "Auspicantibus Nobis in occasione del Giubileo Straordinario del 1929",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/apost_constitutions/documents/hf_p-xi_apc_19290106_auspicantibus-nobis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Auspicantibus Nobis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xi/litteris-apostolicis-1929-01-25",
+    "title": "Litteris Apostolicis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-01-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290125_litteris-apostolicis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Litteris Apostolicis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/missionariorum-filiorum-1929",
+    "title": "Missionariorum filiorum",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-02-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290206_missionariorum-filiorum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Missionariorum filiorum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/ex-apostolico-munere-1929",
+    "title": "Ex Apostolico munere",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-02-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290208_ex-apostolico-munere.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ex Apostolico munere",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/pastorale-officium-1929",
+    "title": "Pastorale officium",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-02-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290208_pastorale-officium.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Pastorale officium",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/peruvianis-in-finibus-1929",
+    "title": "Peruvianis in finibus",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-02-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290211_peruvianis-in-finibus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Peruvianis in finibus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/in-longinquis-latisque-1929",
+    "title": "In longinquis latisque",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-02-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290215_in-longinquis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "In longinquis latisque",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/faesulanae-dioecesis-1929",
+    "title": "Faesulanae dioecesis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-02-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290220_faesulanae-dioecesis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Faesulanae dioecesis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/ut-evangelium-1929",
+    "title": "Ut evangelium",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-02-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290220_ut-evangelium.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ut evangelium",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/ea-quae-catholicae-1929",
+    "title": "Ea, quae catholicae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-02-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290221_ea-quae.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ea, quae catholicae",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/ut-aucto-1929",
+    "title": "Ut, aucto",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-02-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290221_ut-aucto.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ut, aucto",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/caritatem-docet-1929",
+    "title": "Caritatem docet",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-03-04",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290304_caritatem-docet.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Caritatem docet",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/archiepiscopali-in-urbe-1929",
+    "title": "Archiepiscopali in urbe",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-03-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290310_archiepiscopali-in-urbe.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Archiepiscopali in urbe",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/litteris-apostolicis-nostris-1929",
+    "title": "Litteris Apostolicis nostris",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-03-17",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290317_litteris-apostolicis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Litteris Apostolicis nostris",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/cum-vicarius-apostolicus-1929",
+    "title": "Cum vicarius apostolicus",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-03-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290318_cum-vicarius.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum vicarius apostolicus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/ad-animorum-bonum-1929",
+    "title": "Ad animorum bonum",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-03-30",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290330_ad-animorum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad animorum bonum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/ad-fidem-catholicam-1929",
+    "title": "Ad fidem catholicam",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-04-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290408_ad-fidem.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad fidem catholicam",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/quod-christiani-1929",
+    "title": "Quod christiani",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-04-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290415_quod-christiani.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod christiani",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/ut-aucto-pastorum-1929",
+    "title": "Ut, aucto pastorum",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-04-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290416_ut-aucto.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ut, aucto pastorum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/anno-iubilari-1929",
+    "title": "Anno Iubilari",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-04-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290423_anno-iubilari.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Anno Iubilari",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/litteris-apostolicis-1929-04-30",
+    "title": "Litteris Apostolicis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-04-30",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290430_litteris-apostolicis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Litteris Apostolicis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/quantopere-nobis-1929",
+    "title": "Quantopere nobis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-05-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290508_quantopere-nobis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quantopere nobis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/quae-catholicae-1929",
+    "title": "Quae catholicae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-05-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290524_quae-catholicae.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quae catholicae",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/quod-nobis-1929",
+    "title": "Quod nobis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-05-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290524_quod-nobis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod nobis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/cum-venerabilis-frater-1929",
+    "title": "Cum venerabilis frater",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-05-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290525_cum-venerabilis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum venerabilis frater",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/nobis-ex-alto-1929",
+    "title": "Nobis ex alto",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-05-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290525_nobis-ex.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Nobis ex alto",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/letter-1929-05-30",
+    "title": "Chirografo al Cardinale Pietro Gasparri, Segretario di Stato, sulla firma dei Trattati Lateranensi",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-05-30",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/letters/documents/hf_p-xi_lett_19290530_domandato.html",
+      "shelf": "letters",
+      "languages": [
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "letters"
+      ]
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/mirabilis-deus-1929",
+    "title": "Mirabilis Deus",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-06-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290602_mirabilis-deus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "briefs"
+      ]
+    },
+    "incipit": "Mirabilis Deus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/cum-ex-apostolico-1929",
+    "title": "Cum ex apostolico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-06-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290606_cum-ex.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum ex apostolico",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/letter-1929-06-07",
+    "title": "Lettera al Cardinale Pietro Gasparri, Segretario di Stato, sulla ratifica dei Patti Lateranensi",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-06-07",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/letters/documents/hf_p-xi_lett_19290607_patti-lateranensi.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/motu-proprio-1929-06-07",
+    "title": "Motu Proprio Di nostro moto proprio che contiene la Legge Fondamentale della Città del Vaticano",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-06-07",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/motu_proprio/documents/hf_p-xi_motu-proprio_19290607_moto-proprio.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xi/edocet-nos-1929-06-08",
+    "title": "Edocet Nos",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-06-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290608_edocet-nos.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Edocet Nos",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/decor-carmeli-1929",
+    "title": "Decor Carmeli",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-06-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290609_decor-carmeli.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Decor Carmeli",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/edocet-nos-1929-06-14",
+    "title": "Edocet Nos",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-06-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290614_edocet-nos.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Edocet Nos",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/ardenti-amore-1929",
+    "title": "Ardenti amore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-06-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290616_ardenti-amore.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ardenti amore",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/buscoducensi-1929",
+    "title": "Buscoducensi",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-06-19",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290619_buscoducensi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Buscoducensi",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/martyrum-corona-1929",
+    "title": "Martyrum corona",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-06-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290623_martyrum-corona.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Martyrum corona",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/decessor-noster-1929",
+    "title": "Motu Proprio Decessor Noster",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-06-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/motu_proprio/documents/hf_p-xi_motu-proprio_19290624_decessor-noster.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Decessor Noster",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xi/vix-ad-summi-pontificatus-1929",
+    "title": "Motu Proprio Vix ad summi Pontificatus",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-06-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/motu_proprio/documents/hf_p-xi_motu-proprio_19290624_vix-ad-summi.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Vix ad summi Pontificatus",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xi/mites-corde-1929",
+    "title": "Mites corde",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-06-30",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19290623_mites-corde.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Mites corde",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/quam-curam-1929",
+    "title": "Quam curam",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-08-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_constitutions/documents/hf_p-xi_apc_19290815_quam-curam.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quam curam",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xi/mens-nostra-1929",
+    "title": "Mens Nostra",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-12-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19291220_mens-nostra.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Mens Nostra",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/quinquagesimo-ante-anno-1929",
+    "title": "Quinquagesimo Ante Anno",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-12-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19291223_quinquagesimo-ante-anno.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quinquagesimo Ante Anno",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/divini-illius-magistri-1929",
+    "title": "Divini Illius Magistri",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-12-31",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_31121929_divini-illius-magistri.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Divini Illius Magistri",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/letter-1930-02-02",
+    "title": "Chirografo al Cardinale Basilio Pompili, Vicario di Roma, sulle violenze compiute in Russia",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-02-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/letters/documents/hf_p-xi_lett_19300202_ci-commuovono.html",
+      "shelf": "letters",
+      "languages": [
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/gia-da-qualche-tempo-1930",
+    "title": "Motu Proprio Già da qualche tempo con il quale viene istituita la «Sezione storica» della Sacra Congregazione dei Riti",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-02-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/motu_proprio/documents/hf_p-xi_motu-proprio_19300206_sezione-storica.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Già da qualche tempo",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xi/letter-1930-02-06",
+    "title": "Lettera Con grande Nostra, al Card. Bisleti circa l'istituzione di una Commissione per il conferimento dei gradi accademici nelle discipline sacre",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-02-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/letters/documents/hf_p-xi_lett_19300206_card-bisleti.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/letter-1930-02-07-1",
+    "title": "Lettera Avendo Noi creduto, al Card. Eugenio Pacelli, nominato Segretario di Stato del Santo Padre",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-02-07",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/letters/documents/hf_p-xi_lett_19300207_card-pacelli.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/letter-1930-02-07-2",
+    "title": "Lettera Si compie oggi, al Card. Pietro Gasparri, in occasione della presentazione delle dimissioni da Segretario di Stato del Santo Padre",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-02-07",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/letters/documents/hf_p-xi_lett_19300207_dimissioni-gasparri.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/ad-salutem-humani-1930",
+    "title": "Ad Salutem Humani",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-04-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19300420_ad-salutem-humani.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad Salutem Humani",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/casti-connubii-1930",
+    "title": "Casti Connubii",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-12-31",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19301231_casti-connubii.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Casti Connubii",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/letter-1931-04-26",
+    "title": "Chirografo al Cardinale Presbitero Alfredo Ildefonso Schuster, Arcivescovo di Milano, in difesa dell'Azione Cattolica Italiana",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-04-26",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/letters/documents/hf_p-xi_lett_19310426_dobbiamo-intrattenerla.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/quadragesimo-anno-1931",
+    "title": "Quadragesimo Anno",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-05-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19310515_quadragesimo-anno.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quadragesimo Anno",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/deus-scientiarum-dominus-1931",
+    "title": "Deus scientiarum Dominus",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-05-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_constitutions/documents/hf_p-xi_apc_19310524_deus-scientiarum-dominus.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Deus scientiarum Dominus",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xi/non-abbiamo-bisogno-1931",
+    "title": "Non Abbiamo Bisogno",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19310629_non-abbiamo-bisogno.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "ES",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Non Abbiamo Bisogno",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/nova-impendet-1931",
+    "title": "Nova Impendet",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-10-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19311002_nova-impendet.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Nova Impendet",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/lux-veritatis-1931",
+    "title": "Lux Veritatis",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19311225_lux-veritatis.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Lux Veritatis",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/caritate-christi-compulsi-1932",
+    "title": "Caritate Christi Compulsi",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1932-05-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19320503_caritate-christi-compulsi.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Caritate Christi Compulsi",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/acerba-animi-1932",
+    "title": "Acerba Animi",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1932-09-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19320929_acerba-animi.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Acerba Animi",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/quod-nuper-1933",
+    "title": "Quod nuper",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1933-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_constitutions/documents/hf_p-xi_apc_19330106_quod-nuper.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod nuper",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xi/nullo-non-tempore-1933",
+    "title": "Nullo non tempore",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1933-01-30",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_constitutions/documents/hf_p-xi_apc_19330130_nullo-non-tempore.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Nullo non tempore",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xi/dilectissima-nobis-1933",
+    "title": "Dilectissima Nobis",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1933-06-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19330603_dilectissima-nobis.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "ES",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Dilectissima Nobis",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/geminata-laetitia-1934",
+    "title": "Lettera Decretale Geminata Laetitia, per la Canonizzazione di Don Giovanni Bosco",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1934-04-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/letters/documents/hf_p-xi_lett_19340401_geminata-laetitia.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Geminata Laetitia",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/suavis-agitata-1935",
+    "title": "Suavis agitata,Lettera Decretale",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1935-05-19",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/la/apost_letters/documents/hf_p-xi_apl_19350519_saevis-agitata.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Suavis agitata",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/quamvis-nostra-1935",
+    "title": "Lettera Quamvis Nostra al Cardinale Presbitero Sebastiano Leme de Silveira Cintra, Arcivescovo di San Sebastiano di Rio de Janeiro, sulla carenza di sacerdoti in Brasile",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1935-10-27",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/letters/documents/hf_p-xi_lett_19351027_quamvis-nostra.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quamvis Nostra",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/ad-catholici-sacerdotii-1935",
+    "title": "Ad Catholici Sacerdotii",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1935-12-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19351220_ad-catholici-sacerdotii.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad Catholici Sacerdotii",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/vigilanti-cura-1936",
+    "title": "Vigilanti Cura",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1936-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_29061936_vigilanti-cura.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "DE",
+        "EN",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Vigilanti Cura",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/in-multis-solaciis-1936",
+    "title": "Motu proprio In multis solaciis con il quale conferisce il nome di «Pontificia Academia Scientiarum» all'«Accademia dei Lincei Filosofi»",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1936-10-28",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/motu_proprio/documents/hf_p-xi_motu-proprio_19361028_multis-solaciis.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "In multis solaciis",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xi/mit-brennender-sorge-1937",
+    "title": "Mit Brennender Sorge",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1937-03-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_14031937_mit-brennender-sorge.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Mit Brennender Sorge",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/divini-redemptoris-1937",
+    "title": "Divini Redemptoris",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1937-03-19",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19370319_divini-redemptoris.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Divini Redemptoris",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/firmissimam-constantiam-1937",
+    "title": "Firmissimam Constantiam",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1937-03-28",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19370328_firmissimam-constantiam.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Firmissimam Constantiam",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/letter-1937-09-03",
+    "title": "Chirografo al Cardinale Eugenio Pacelli, Segretario di Stato, col quale il Sommo Pontefice si riserva la Prefettura della Sacra Congregazione dei Seminari e delle Università degli Studi",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1937-09-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/letters/documents/hf_p-xi_lett_19370903_prefettura.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/letter-1937-09-08",
+    "title": "Chirografo al Cardinale Eugenio Pacelli, affidando al Cardinale Segretario di Stato pro tempore la Protettoria della Pontificia Accademia dei Nobili ecclesiastici",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1937-09-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/letters/documents/hf_p-xi_lett_19370908_acc-nobili-ecclesiastici.html",
+      "shelf": "letters",
+      "languages": [
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/ingravescentibus-malis-1937",
+    "title": "Ingravescentibus Malis",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1937-09-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/encyclicals/documents/hf_p-xi_enc_19370929_ingravescentibus-malis.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ingravescentibus Malis",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/con-singular-complacencia-1939",
+    "title": "Con singular complacencia: all'Episcopato filippino sull'importanza dell'Azione Cattolica",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1939-01-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/es/apost_letters/documents/hf_p-xi_apl_19390118_vescovi-filippini.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Con singular complacencia",
+    "sourceGenreLabel": "apost_letters"
+  }
+]
