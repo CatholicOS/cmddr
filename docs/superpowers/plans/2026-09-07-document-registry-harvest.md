@@ -1133,8 +1133,9 @@ describe('parseFlatIndex', () => {
     expect(pix).toHaveLength(77);
   });
 
-  it('falls back to the genre label when the incipit is not wrapped in <i>', () => {
-    // Exactly one Pius IX entry prints as `Epistola Ecclesia Dei (2 marzo 1871)` with no <i>.
+  it('parses an incipit wrapped in an uppercase <I> tag', () => {
+    // `Epistola <I>Ecclesia Dei</I> (2 marzo 1871)` is the only uppercase-tagged entry;
+    // cheerio lowercases tag names on parse, so the ordinary italic path handles it.
     const ed = pix.find((d) => d.date === '1871-03-02')!;
     expect(ed.incipit).toBe('Ecclesia Dei');
     expect(ed.sourceGenreLabel).toBe('Epistola');
@@ -1195,9 +1196,11 @@ const BASE = 'https://www.vatican.va';
 const LABELS = Object.keys(SOURCE_GENRE_TO_GENRE).sort((a, b) => b.length - a.length);
 
 /**
- * Fallback for the one entry whose incipit carries no <i> wrapper
- * ('Epistola Ecclesia Dei (2 marzo 1871)'): strip the trailing (date), then the
- * longest matching known genre label; what remains is the incipit.
+ * Defense-in-depth for a heading with no italic tag at all. Every entry in the
+ * currently checked-in fixtures carries one -- 'Ecclesia Dei' uses an uppercase
+ * <I>, which cheerio normalises -- so this does not fire against them. It guards
+ * flat-era pages not yet harvested. Strip the trailing (date), then the longest
+ * matching known genre label; what remains is the incipit.
  */
 function splitGenreAndIncipit(full: string): { genre: string; incipit: string } {
   const body = full.replace(/\s*\([^)]*\)\s*$/, '').trim();
