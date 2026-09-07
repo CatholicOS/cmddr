@@ -11,11 +11,28 @@ describe('parseFlatIndex', () => {
     expect(pix).toHaveLength(77);
   });
 
-  it('falls back to the genre label when the incipit is not wrapped in <i>', () => {
-    // Exactly one Pius IX entry prints as `Epistola Ecclesia Dei (2 marzo 1871)` with no <i>.
+  it('parses an incipit wrapped in an uppercase <I> tag', () => {
+    // The Pius IX entry `Epistola Ecclesia Dei (2 marzo 1871)` uses `<I>Ecclesia Dei</I>`
+    // (uppercase). Cheerio normalises tag names on parse, so `$h2.find('i')` matches it
+    // like every other entry — this does not exercise splitGenreAndIncipit's fallback.
     const ed = pix.find((d) => d.date === '1871-03-02')!;
     expect(ed.incipit).toBe('Ecclesia Dei');
     expect(ed.sourceGenreLabel).toBe('Epistola');
+  });
+
+  it('splits genre from incipit when a heading has no italic tag at all', () => {
+    // Synthetic: no fixture entry is shaped this way. Guards the fallback branch for
+    // flat-era pages not yet harvested.
+    const html = `<div class="item"><h2><a href="/content/pius-ix/it/documents/x.html">
+      Epistola Ecclesia Dei (2 marzo 1871) </a></h2></div>`;
+    const [item] = parseFlatIndex(html, 'pius-ix');
+    expect(item!.incipit).toBe('Ecclesia Dei');
+    expect(item!.sourceGenreLabel).toBe('Epistola');
+  });
+
+  it('skips a heading with no date parenthetical rather than mis-slicing', () => {
+    const html = `<div class="item"><h2><a href="/x.html">Enciclica <i>Sine Data</i></a></h2></div>`;
+    expect(parseFlatIndex(html, 'pius-ix')).toEqual([]);
   });
 
   it('takes the incipit from <i>, not the truncated slug', () => {

@@ -9,9 +9,13 @@ const BASE = 'https://www.vatican.va';
 const LABELS = Object.keys(SOURCE_GENRE_TO_GENRE).sort((a, b) => b.length - a.length);
 
 /**
- * Fallback for the one entry whose incipit carries no <i> wrapper
- * ('Epistola Ecclesia Dei (2 marzo 1871)'): strip the trailing (date), then the
- * longest matching known genre label; what remains is the incipit.
+ * Fallback for a heading with no italic tag at all. Every heading in the currently
+ * checked-in fixtures carries an italic tag — including 'Epistola Ecclesia Dei
+ * (2 marzo 1871)', which uses an uppercase `<I>` that cheerio normalises to lowercase
+ * on parse, so `$h2.find('i')` matches it like any other entry — so this branch does
+ * not fire against them. It exists as defense-in-depth for a genuinely untagged
+ * heading on a flat-era pope page not yet harvested: strip the trailing (date), then
+ * the longest matching known genre label; what remains is the incipit.
  */
 function splitGenreAndIncipit(full: string): { genre: string; incipit: string } {
   const body = full.replace(/\s*\([^)]*\)\s*$/, '').trim();
@@ -39,7 +43,9 @@ export function parseFlatIndex(html: string, pageSlug: string): HarvestItem[] {
     if ($h2.length === 0) return;
 
     const full = $h2.text().replace(/\s+/g, ' ').trim();
-    const date = parseSourceDate(full.slice(full.lastIndexOf('(')));
+    const parenIdx = full.lastIndexOf('(');
+    if (parenIdx === -1) return;
+    const date = parseSourceDate(full.slice(parenIdx));
     if (!date) return;
 
     const italic = $h2.find('i').first().text().replace(/\s+/g, ' ').trim();
