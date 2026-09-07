@@ -1,8 +1,7 @@
 import * as cheerio from 'cheerio';
 import { parseSourceDate } from '../dates.js';
+import { resolveItemUrl, extractLanguages } from './dom.js';
 import type { HarvestItem } from '../types.js';
-
-const BASE = 'https://www.vatican.va';
 
 /**
  * Shelf-era index pages (Leo XIII onward). Items are `<h2>{Incipit} ({date})</h2>`,
@@ -30,18 +29,14 @@ export function parseShelfIndex(html: string, pageSlug: string, shelf: string): 
     const date = parseSourceDate(full.slice(open));
     if (!incipit || !date) return;
 
-    const href = $h2.find('a').first().attr('href')
-      ?? $item.find('.translation-field a').first().attr('href')
-      ?? null;
-
-    const languages = $item.find('.translation-field a')
-      .map((_i, a) => $(a).text().trim()).get().filter(Boolean);
+    const url = resolveItemUrl($item, $h2);
+    const languages = extractLanguages($, $item);
 
     items.push({
       incipit,
       date,
       sourceGenreLabel: shelf,
-      url: href ? (href.startsWith('http') ? href : BASE + href) : null,
+      url,
       languages,
       shelf,
       pageSlug,

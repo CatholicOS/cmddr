@@ -1,9 +1,8 @@
 import * as cheerio from 'cheerio';
 import { parseSourceDate } from '../dates.js';
 import { SOURCE_GENRE_TO_GENRE } from '../mappings/index.js';
+import { resolveItemUrl, extractLanguages } from './dom.js';
 import type { HarvestItem } from '../types.js';
-
-const BASE = 'https://www.vatican.va';
 
 // Longest first, so 'costituzione apostolica' wins over a hypothetical 'costituzione'.
 const LABELS = Object.keys(SOURCE_GENRE_TO_GENRE).sort((a, b) => b.length - a.length);
@@ -56,18 +55,14 @@ export function parseFlatIndex(html: string, pageSlug: string): HarvestItem[] {
     const cut = italic ? full.indexOf(italic) : -1;
     const sourceGenreLabel = (italic && cut > 0 ? full.slice(0, cut) : split.genre).trim();
 
-    const href = $h2.find('a').first().attr('href')
-      ?? $item.find('.translation-field a').first().attr('href')
-      ?? null;
-
-    const languages = $item.find('.translation-field a')
-      .map((_i, a) => $(a).text().trim()).get().filter(Boolean);
+    const url = resolveItemUrl($item, $h2);
+    const languages = extractLanguages($, $item);
 
     items.push({
       incipit,
       date,
       sourceGenreLabel,
-      url: href ? (href.startsWith('http') ? href : BASE + href) : null,
+      url,
       languages,
       shelf: null,
       pageSlug,
