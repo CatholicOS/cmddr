@@ -43,7 +43,7 @@ describe('parseFlatIndex', () => {
   });
 
   it('parses Italian dates', () => {
-    const up = pix.filter((d) => d.incipit.toLowerCase() === 'ubi primum');
+    const up = pix.filter((d) => d.incipit?.toLowerCase() === 'ubi primum');
     expect(up.map((d) => d.date).sort()).toEqual(['1847-06-17', '1849-02-02']);
     expect(up.every((d) => d.sourceGenreLabel === 'Enciclica')).toBe(true);
   });

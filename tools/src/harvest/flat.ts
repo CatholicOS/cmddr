@@ -59,6 +59,7 @@ export function parseFlatIndex(html: string, pageSlug: string): HarvestItem[] {
     const languages = extractLanguages($, $item);
 
     items.push({
+      title: incipit,
       incipit,
       date,
       sourceGenreLabel,

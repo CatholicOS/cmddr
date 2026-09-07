@@ -23,9 +23,9 @@ describe('parseShelfIndex', () => {
     // The encyclicals shelf slugs DDMMYYYY (…_enc_15041902_…) while the other seven slug
     // YYYYMMDD (…_let_19020415_…). Both entries below are the same date.
     const letters = load('letters');
-    expect(letters.find((d) => d.incipit.toLowerCase() === 'in amplissimo')!.date).toBe('1902-04-15');
-    expect(enc.find((d) => d.incipit.toLowerCase() === 'in amplissimo')!.date).toBe('1902-04-15');
-    expect(load('speeches').find((d) => d.incipit.toLowerCase() === 'ubi primum')!.date)
+    expect(letters.find((d) => d.incipit?.toLowerCase() === 'in amplissimo')!.date).toBe('1902-04-15');
+    expect(enc.find((d) => d.incipit?.toLowerCase() === 'in amplissimo')!.date).toBe('1902-04-15');
+    expect(load('speeches').find((d) => d.incipit?.toLowerCase() === 'ubi primum')!.date)
       .toBe('1878-03-28');
   });
 

@@ -40,7 +40,7 @@ export function checkDocuments(docs: DocumentRecord[], genres: GenreLike[]): Vio
     if (parts.year !== d.date.slice(0, 4)) {
       out.push({ rule: 10, id: d.id, message: `id year ${parts.year} != date ${d.date}` });
     }
-    if (d.idStatus === 'minted' && parts.slug !== slugify(d.incipit)) {
+    if (d.idStatus === 'minted' && parts.slug !== slugify(d.incipit ?? d.title)) {
       out.push({ rule: 12, id: d.id, message: `slug '${parts.slug}' != slugify('${d.incipit}')` });
     }
 
@@ -84,7 +84,7 @@ export function checkDocuments(docs: DocumentRecord[], genres: GenreLike[]): Vio
     }
 
     if (d.idStatus === 'minted' && local !== null) {
-      const k = `${local}|${slugify(d.incipit)}|${d.date.slice(0, 4)}`;
+      const k = `${local}|${slugify(d.incipit ?? d.title)}|${d.date.slice(0, 4)}`;
       byCollision.set(k, [...(byCollision.get(k) ?? []), d]);
     }
   }

@@ -21,9 +21,9 @@ const conciliar: DocumentRecord = {
 
 const provisional: DocumentRecord = {
   id: 'mag:pius-xii/apostolic-letter-1958-08-11', title: 'Lettera Apostolica che proclama…',
-  // incipit is still a required string on DocumentRecord as of this task; a provisional
-  // record has none, represented here as '' (falsy, same as the future optional-undefined case).
-  incipit: '', idStatus: 'provisional', genre: 'apostolic-letter', issuerId: 'rp:pius-xii',
+  // incipit is optional on DocumentRecord and is omitted entirely for a provisional
+  // record -- this is the shape the harvest actually emits (see toDocument.ts).
+  idStatus: 'provisional', genre: 'apostolic-letter', issuerId: 'rp:pius-xii',
   issuerType: 'pope', date: '1958-08-11',
 };
 

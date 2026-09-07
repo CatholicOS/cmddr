@@ -28,7 +28,7 @@ describe('the harvested pilot corpus', () => {
   it('deduplicates the twelve twice-shelved Leo XIII documents', () => {
     const twice = all.filter((d) => (d.source?.alsoShelvedAs?.length ?? 0) > 0);
     expect(twice).toHaveLength(12);
-    expect(twice.map((d) => d.incipit.toLowerCase()).sort()).toEqual([
+    expect(twice.map((d) => d.incipit!.toLowerCase()).sort()).toEqual([
       'in amplissimo', 'in plurimis', 'magni nobis', 'non mediocri', 'omnibus compertum',
       'permoti nos', 'quam aerumnosa', 'quod anniversarius', 'quum diuturnum',
       'reputantibus', 'urbanitatis veteris', 'vi è ben noto',
@@ -69,7 +69,7 @@ describe('the harvested pilot corpus', () => {
   });
 
   it('distinguishes the five Ubi Primum documents', () => {
-    const ids = all.filter((d) => d.incipit.toLowerCase().startsWith('ubi primum')).map((d) => d.id);
+    const ids = all.filter((d) => d.incipit?.toLowerCase().startsWith('ubi primum')).map((d) => d.id);
     expect(ids.sort()).toEqual([
       'mag:leo-xiii/ubi-primum-1898',
       'mag:leo-xiii/ubi-primum-1878',
@@ -91,6 +91,17 @@ describe('the harvested pilot corpus', () => {
 
   it('leaves the TBD shelf empty', () => {
     expect(all.filter((d) => d.idStatus === 'provisional')).toEqual([]);
+  });
+
+  it('gives every document a title, equal to the incipit except one genuine gloss', () => {
+    expect(all.every((d) => typeof d.title === 'string' && d.title.length > 0)).toBe(true);
+    // Every pilot-corpus heading carries an incipit (asserted above). Title equals it
+    // for all but one: 'Ad universam: viene eretta la diocesi di Lugano' prints a
+    // colon-introduced gloss after its true incipit, 'Ad universam' -- title keeps the
+    // full heading, incipit keeps only the opening words (spec §4.2).
+    const differing = all.filter((d) => d.title !== d.incipit);
+    expect(differing.map((d) => d.title)).toEqual(['Ad universam: viene eretta la diocesi di Lugano']);
+    expect(differing[0]!.incipit).toBe('Ad universam');
   });
 
   it('preserves unmapped genres rather than inventing rows', () => {
@@ -177,13 +188,41 @@ describe('the Pius X corpus', () => {
     expect(px).toHaveLength(306);
   });
 
-  it('mints every id, since Pius X prints bare incipits', () => {
-    expect(px.filter((d) => d.idStatus === 'provisional')).toEqual([]);
+  it('mints most Pius X ids, since it usually prints a bare incipit', () => {
+    // Twelve headings (all letters/motu_proprio) are genuine addressee salutations or
+    // third-person descriptions -- 'Al Card. Pietro Respighi', 'Il Pontefice prescrive
+    // alle Diocesi...' -- with no incipit for extractIncipit to recover. Those, and only
+    // those, become provisional.
+    const provisional = px.filter((d) => d.idStatus === 'provisional');
+    expect(provisional).toHaveLength(12);
+    expect(provisional.map((d) => d.title).sort()).toEqual([
+      "A Mons. Francesco Saverio Haberl, Prelato domestico di S.S. e Presidente generale dell'Associazione \"Santa Cecilia\" di Germania, Ratisbona (Baviera)",
+      'Ai componenti la direzione provvisoria dell\' Unione economico sociale per i cattolici italiani',
+      "Ai membri del comitato generale dell'Associazione Cattolica della gioventù francese",
+      'Al Card. Pietro Respighi',
+      'Al Cardinale Ferrari, Arcivescovo di Milano',
+      'Al Cardinale Pietro Respighi, sui sacerdoti di altre Diocesi che dimorano a Roma',
+      'Al Cardinale Rampolla del Tindaro, Arciprete della Basilica Vaticana',
+      'Alla Principessa del Belgio, Enrichetta, Duchessa di Vendôme',
+      'Il Pontefice prescrive alle Diocesi della Provincia di Roma il nuovo Compendio del Catechismo',
+      'La protesta del Papa contro il Congresso del libero pensiero',
+      "Sull'edificazione di un nuovo Santuario nel territorio di Nettuno come assistenza spirituale della popolazione",
+      "Sull'edizione vaticana dei libri liturgici contenenti le melodie gregoriane",
+    ].sort());
+    expect(provisional.every((d) => 'incipit' in d === false)).toBe(true);
+    expect(new Set(provisional.map((d) => d.id)).size).toBe(12);
   });
 
   it('files them all under Pius X', () => {
     expect(px.every((d) => d.issuerId === 'rp:pius-x')).toBe(true);
     expect(px.every((d) => d.id.startsWith('mag:pius-x/'))).toBe(true);
+  });
+
+  it('gives every document a title, equal to the incipit wherever one is printed', () => {
+    expect(px.every((d) => typeof d.title === 'string' && d.title.length > 0)).toBe(true);
+    const withIncipit = px.filter((d) => 'incipit' in d);
+    expect(withIncipit).toHaveLength(306 - 12);
+    expect(withIncipit.every((d) => d.title === d.incipit)).toBe(true);
   });
 
   it('satisfies every invariant', () => {

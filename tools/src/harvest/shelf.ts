@@ -3,6 +3,7 @@ import { parseSourceDate } from '../dates.js';
 import { resolveItemUrl, extractLanguages } from './dom.js';
 import { slugify } from '../slug.js';
 import { DATE_CORRECTIONS } from '../mappings/index.js';
+import { extractIncipit } from './incipit.js';
 import type { HarvestItem } from '../types.js';
 
 /**
@@ -42,29 +43,30 @@ export function parseShelfIndex(html: string, pageSlug: string, shelf: string): 
     const open = full.lastIndexOf('(');
     if (open <= 0) return;
 
-    const incipit = full.slice(0, open).trim();
+    const { title, incipit } = extractIncipit(full.slice(0, open));
     const date = parseSourceDate(full.slice(open));
-    if (!incipit || !date) return;
+    if (!title || !date) return;
 
     const url = resolveItemUrl($item, $h2);
     const languages = extractLanguages($, $item);
 
     const slugDates = slugDateReadings(url);
     if (slugDates.length > 0 && !slugDates.includes(date)) {
-      const correctionKey = `${pageSlug}|${shelf}|${slugify(incipit)}|${date}`;
+      const correctionKey = `${pageSlug}|${shelf}|${slugify(incipit ?? title)}|${date}`;
       if (!DATE_CORRECTIONS[correctionKey]) {
         // This shelf's own convention (see the module doc) is the reading worth showing;
         // the other reading was still checked above in case a shelf breaks the pattern.
         const [ddmmyyyy, yyyymmdd] = slugDates;
         const slugDate = shelf === 'encyclicals' ? ddmmyyyy : yyyymmdd;
         console.warn(
-          `Printed/slug date mismatch for '${incipit}' (${pageSlug}/${shelf}): `
+          `Printed/slug date mismatch for '${title}' (${pageSlug}/${shelf}): `
           + `printed ${date}, slug ${slugDate}`,
         );
       }
     }
 
     items.push({
+      title,
       incipit,
       date,
       sourceGenreLabel: shelf,

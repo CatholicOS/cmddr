@@ -2,7 +2,6 @@
   {
     "id": "mag:vatican-i/dei-filius-1870",
     "title": "Dei Filius",
-    "incipit": "Dei Filius",
     "idStatus": "minted",
     "genre": "constitution",
     "issuerId": "oec:vatican-i",
@@ -17,6 +16,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Dei Filius",
     "promulgatedBy": "rp:pius-ix",
     "descriptiveTitle": "dogmatic",
     "sourceGenreLabel": "Costituzione dogmatica"
@@ -24,7 +24,6 @@
   {
     "id": "mag:vatican-i/pastor-aeternus-1870",
     "title": "Pastor Aeternus",
-    "incipit": "Pastor Aeternus",
     "idStatus": "minted",
     "genre": "constitution",
     "issuerId": "oec:vatican-i",
@@ -39,6 +38,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Pastor Aeternus",
     "promulgatedBy": "rp:pius-ix",
     "descriptiveTitle": "dogmatic",
     "sourceGenreLabel": "Costituzione dogmatica"

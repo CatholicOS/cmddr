@@ -6,7 +6,7 @@ Identifiers follow `mag:{issuer}/{incipit-slug}-{year}`; the issuer segment is a
 part of `issuerId`, so conciliar documents namespace under their council and record the
 promulgating pope separately. See the design spec for the minting rules.
 
-**689 documents**, none of which carry a provisional identifier.
+**689 documents**, of which 12 carry a provisional identifier — the source prints no incipit for them, so their id is genre-and-date based and may be re-minted.
 
 Every document appears in both views below; neither is a subset of the other.
 
