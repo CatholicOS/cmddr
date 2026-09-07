@@ -985,29 +985,15 @@
         "IT",
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "letters"
+      ]
     },
+    "aliases": [
+      "Vi è noto"
+    ],
     "sourceGenreLabel": "encyclicals"
-  },
-  {
-    "id": "mag:leo-xiii/vi-e-noto-1887",
-    "title": "Vi è noto",
-    "incipit": "Vi è noto",
-    "idStatus": "minted",
-    "genre": "letter",
-    "issuerId": "rp:leo-xiii",
-    "issuerType": "pope",
-    "date": "1887-09-20",
-    "source": {
-      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18880920_vos-probe-nostis.html",
-      "shelf": "letters",
-      "languages": [
-        "EN",
-        "IT"
-      ],
-      "retrieved": "2026-09-07"
-    },
-    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/quod-primo-1887",
@@ -1189,6 +1175,9 @@
         "letters"
       ]
     },
+    "aliases": [
+      "In plurimis maximisque"
+    ],
     "sourceGenreLabel": "encyclicals"
   },
   {
@@ -2716,6 +2705,9 @@
         "letters"
       ]
     },
+    "aliases": [
+      "Non mediocri cura"
+    ],
     "sourceGenreLabel": "encyclicals"
   },
   {
@@ -3196,6 +3188,26 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:leo-xiii/provida-matris-1895",
+    "title": "Provida Matris",
+    "incipit": "Provida Matris",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1895-05-05",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/briefs/documents/hf_l-xiii_brief_18950505_provida-matris.html",
+      "shelf": "briefs",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "briefs"
+  },
+  {
     "id": "mag:leo-xiii/quale-debba-1895",
     "title": "Quale debba",
     "incipit": "Quale debba",
@@ -3214,26 +3226,6 @@
       "retrieved": "2026-09-07"
     },
     "sourceGenreLabel": "letters"
-  },
-  {
-    "id": "mag:leo-xiii/provida-matris-1895",
-    "title": "Provida Matris",
-    "incipit": "Provida Matris",
-    "idStatus": "minted",
-    "genre": "brief",
-    "issuerId": "rp:leo-xiii",
-    "issuerType": "pope",
-    "date": "1895-05-15",
-    "source": {
-      "url": "https://www.vatican.va/content/leo-xiii/it/briefs/documents/hf_l-xiii_brief_18950505_provida-matris.html",
-      "shelf": "briefs",
-      "languages": [
-        "IT",
-        "LA"
-      ],
-      "retrieved": "2026-09-07"
-    },
-    "sourceGenreLabel": "briefs"
   },
   {
     "id": "mag:leo-xiii/quod-plurimorum-1895",
@@ -4150,25 +4142,6 @@
     "sourceGenreLabel": "letters"
   },
   {
-    "id": "mag:leo-xiii/cum-diuturnum-1898",
-    "title": "Cum diuturnum",
-    "incipit": "Cum diuturnum",
-    "idStatus": "minted",
-    "genre": "letter",
-    "issuerId": "rp:leo-xiii",
-    "issuerType": "pope",
-    "date": "1898-12-25",
-    "source": {
-      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18981225_cum-diuturnum.html",
-      "shelf": "letters",
-      "languages": [
-        "LA"
-      ],
-      "retrieved": "2026-09-07"
-    },
-    "sourceGenreLabel": "letters"
-  },
-  {
     "id": "mag:leo-xiii/quum-diuturnum-1898",
     "title": "Quum Diuturnum",
     "incipit": "Quum Diuturnum",
@@ -4183,8 +4156,14 @@
       "languages": [
         "EN"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "letters"
+      ]
     },
+    "aliases": [
+      "Cum diuturnum"
+    ],
     "sourceGenreLabel": "encyclicals"
   },
   {
@@ -4883,28 +4862,15 @@
       "languages": [
         "EN"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "letters"
+      ]
     },
+    "aliases": [
+      "Reputantibus saepe"
+    ],
     "sourceGenreLabel": "encyclicals"
-  },
-  {
-    "id": "mag:leo-xiii/reputantibus-saepe-1901",
-    "title": "Reputantibus saepe",
-    "incipit": "Reputantibus saepe",
-    "idStatus": "minted",
-    "genre": "letter",
-    "issuerId": "rp:leo-xiii",
-    "issuerType": "pope",
-    "date": "1901-08-20",
-    "source": {
-      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_19010820_reputantibus-saepe.html",
-      "shelf": "letters",
-      "languages": [
-        "LA"
-      ],
-      "retrieved": "2026-09-07"
-    },
-    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/parta-humano-generi-1901",

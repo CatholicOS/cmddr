@@ -10,6 +10,7 @@ export interface HarvestItem {
   languages: string[];
   shelf: string | null;
   alsoShelvedAs?: string[];     // other shelves the same document is filed under
+  aliases?: string[];           // incipits of merged-away duplicate records
   pageSlug: string;             // the vatican.va pope slug the page belonged to
 }
 

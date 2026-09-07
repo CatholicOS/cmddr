@@ -6,7 +6,7 @@ Identifiers follow `mag:{issuer}/{incipit-slug}-{year}`; the issuer segment is a
 part of `issuerId`, so conciliar documents namespace under their council and record the
 promulgating pope separately. See the design spec for the minting rules.
 
-386 documents.
+383 documents.
 
 | ID | Incipit | Genre | Issuer | Date | Promulgated by |
 | --- | --- | --- | --- | --- | --- |
@@ -178,7 +178,6 @@ promulgating pope separately. See the design spec for the minting rules.
 | `mag:leo-xiii/quantunque-le-siano-1887` | Quantunque le siano | letter | `rp:leo-xiii` | 1887-06-15 |  |
 | `mag:leo-xiii/egregii-tui-1887` | Egregii tui | letter | `rp:leo-xiii` | 1887-07-30 |  |
 | `mag:leo-xiii/vi-e-ben-noto-1887` | Vi è ben noto | encyclical | `rp:leo-xiii` | 1887-09-20 |  |
-| `mag:leo-xiii/vi-e-noto-1887` | Vi è noto | letter | `rp:leo-xiii` | 1887-09-20 |  |
 | `mag:leo-xiii/quod-primo-1887` | Quod primo | letter | `rp:leo-xiii` | 1887-10-01 |  |
 | `mag:leo-xiii/merito-existimasti-1887` | Merito existimasti | letter | `rp:leo-xiii` | 1887-10-05 |  |
 | `mag:leo-xiii/tanto-nobis-1887` | Tanto Nobis | letter | `rp:leo-xiii` | 1887-10-06 |  |
@@ -288,8 +287,8 @@ promulgating pope separately. See the design spec for the minting rules.
 | `mag:leo-xiii/longinqua-oceani-1895` | Longinqua oceani | encyclical | `rp:leo-xiii` | 1895-01-06 |  |
 | `mag:leo-xiii/dum-multorum-1895` | Dum multorum | letter | `rp:leo-xiii` | 1895-01-26 |  |
 | `mag:leo-xiii/amantissimae-voluntatis-1895` | Amantissimae Voluntatis | apostolic-letter | `rp:leo-xiii` | 1895-04-14 |  |
+| `mag:leo-xiii/provida-matris-1895` | Provida Matris | brief | `rp:leo-xiii` | 1895-05-05 |  |
 | `mag:leo-xiii/quale-debba-1895` | Quale debba | letter | `rp:leo-xiii` | 1895-05-14 |  |
-| `mag:leo-xiii/provida-matris-1895` | Provida Matris | brief | `rp:leo-xiii` | 1895-05-15 |  |
 | `mag:leo-xiii/quod-plurimorum-1895` | Quod plurimorum | letter | `rp:leo-xiii` | 1895-05-25 |  |
 | `mag:leo-xiii/unitatis-christianae-1895` | Unitatis christianae | apostolic-letter | `rp:leo-xiii` | 1895-06-11 |  |
 | `mag:leo-xiii/benevolentiae-testandae-1895` | Benevolentiae testandae | letter | `rp:leo-xiii` | 1895-06-29 |  |
@@ -336,7 +335,6 @@ promulgating pope separately. See the design spec for the minting rules.
 | `mag:leo-xiii/diuturni-temporis-1898` | Diuturni Temporis | encyclical | `rp:leo-xiii` | 1898-09-05 |  |
 | `mag:leo-xiii/ubi-primum-1898` | Ubi primum | papal-bull | `rp:leo-xiii` | 1898-10-02 |  |
 | `mag:leo-xiii/nostra-erga-1898` | Nostra erga | letter | `rp:leo-xiii` | 1898-11-25 |  |
-| `mag:leo-xiii/cum-diuturnum-1898` | Cum diuturnum | letter | `rp:leo-xiii` | 1898-12-25 |  |
 | `mag:leo-xiii/quum-diuturnum-1898` | Quum Diuturnum | encyclical | `rp:leo-xiii` | 1898-12-25 |  |
 | `mag:leo-xiii/testem-benevolentiae-1899` | Testem benevolentiae | letter | `rp:leo-xiii` | 1899-01-22 |  |
 | `mag:leo-xiii/ex-epistola-1899` | Ex epistola | letter | `rp:leo-xiii` | 1899-04-08 |  |
@@ -374,7 +372,6 @@ promulgating pope separately. See the design spec for the minting rules.
 | `mag:leo-xiii/en-tout-temps-1901` | En tout temps | letter | `rp:leo-xiii` | 1901-06-29 |  |
 | `mag:leo-xiii/slavorum-gentem-1901` | Slavorum gentem | apostolic-letter | `rp:leo-xiii` | 1901-08-01 |  |
 | `mag:leo-xiii/reputantibus-1901` | Reputantibus | encyclical | `rp:leo-xiii` | 1901-08-20 |  |
-| `mag:leo-xiii/reputantibus-saepe-1901` | Reputantibus saepe | letter | `rp:leo-xiii` | 1901-08-20 |  |
 | `mag:leo-xiii/parta-humano-generi-1901` | Parta humano generi | apostolic-letter | `rp:leo-xiii` | 1901-09-08 |  |
 | `mag:leo-xiii/urbanitatis-veteris-1901` | Urbanitatis Veteris | encyclical | `rp:leo-xiii` | 1901-11-20 |  |
 | `mag:leo-xiii/vigesimo-quinto-anno-1902` | Vigesimo quinto anno | apostolic-letter | `rp:leo-xiii` | 1902-03-19 |  |

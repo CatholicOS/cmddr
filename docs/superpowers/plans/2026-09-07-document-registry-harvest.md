@@ -1981,17 +1981,20 @@ for (const [key, docs] of byIssuer) {
 ```bash
 RETRIEVED=2026-09-07 npx tsx tools/src/harvest/run.ts
 ```
-Expected: `388 documents after cross-shelf dedupe and date corrections`, then four files —
-`benedict-xiv: 43`, `pius-ix: 75`, `leo-xiii: 268`, `vatican-i: 2`.
+Expected (post fix-wave, after the hand-curated `DUPLICATE_MERGES` pass): `383 documents after
+cross-shelf dedupe and date corrections`, then four files —
+`benedict-xiv: 43`, `pius-ix: 75`, `leo-xiii: 263`, `vatican-i: 2`.
 Pius IX yields 75, not 77, because *Dei Filius* and *Pastor Aeternus* are reassigned to Vatican I.
-Leo XIII yields 268, not 275, because seven documents are filed on two shelves each.
+Leo XIII yields 263, not 275, because twelve documents are filed on two shelves each: seven share
+incipit and date, two more share only their URL document-slug, and three more — proven identical
+only by comparing full texts against vatican.va — share neither.
 
 - [ ] **Step 3: Run the validator**
 
 ```bash
 npx tsx tools/src/validate/run.ts
 ```
-Expected: `388 documents and 4 assessments checked, 4 failure(s)`, exit 1.
+Expected (post fix-wave): `383 documents and 4 assessments checked, 4 failure(s)`, exit 1.
 
 The four failures are all rule 14, from `examples/evangelium-vitae.json`, which still carries its
 legacy `EV-…` loci until Task 13. Zero document-level failures is the bar here. Re-run after
@@ -2017,15 +2020,18 @@ const all = [...load('benedict-xiv'), ...load('pius-ix'), ...load('leo-xiii'), .
 
 describe('the harvested pilot corpus', () => {
   it('holds the whole pilot corpus', () => {
-    expect(all).toHaveLength(388);
+    // Post fix-wave, once the hand-curated DUPLICATE_MERGES pass is in place: see
+    // `tools/test/harvest-data.test.ts` for the up-to-date version of this test.
+    expect(all).toHaveLength(383);
   });
 
-  it('deduplicates the five twice-shelved Leo XIII documents', () => {
+  it('deduplicates the twelve twice-shelved Leo XIII documents', () => {
     const twice = all.filter((d) => (d.source?.alsoShelvedAs?.length ?? 0) > 0);
-    expect(twice).toHaveLength(5);
+    expect(twice).toHaveLength(12);
     expect(twice.map((d) => d.incipit.toLowerCase()).sort()).toEqual([
-      'in amplissimo', 'omnibus compertum', 'permoti nos',
-      'quam aerumnosa', 'urbanitatis veteris',
+      'in amplissimo', 'in plurimis', 'magni nobis', 'non mediocri', 'omnibus compertum',
+      'permoti nos', 'quam aerumnosa', 'quod anniversarius', 'quum diuturnum',
+      'reputantibus', 'urbanitatis veteris', 'vi è ben noto',
     ]);
     for (const d of twice) {
       expect(d.source!.shelf).toBe('encyclicals');
@@ -2191,7 +2197,7 @@ Run: `npx vitest run tools/test/render.test.ts`
 Expected: PASS, 4 tests.
 
 Run: `npx tsx tools/src/render/run.ts`
-Expected: `registry/documents.md: 388 documents`.
+Expected: `registry/documents.md: 383 documents (post fix-wave)`.
 
 - [ ] **Step 5: Commit**
 
@@ -2342,7 +2348,7 @@ Concrete documents live in [`data/documents/`](data/documents/), rendered as
 - [ ] **Step 6: Run the full suite**
 
 Run: `npx vitest run && npx tsx tools/src/validate/run.ts`
-Expected: every test green; `388 documents and 4 assessments checked, 0 failure(s)`.
+Expected: every test green; `383 documents (post fix-wave) and 4 assessments checked, 0 failure(s)`.
 
 - [ ] **Step 7: Commit**
 
@@ -2359,7 +2365,7 @@ After Task 13, the following must all hold:
 
 ```bash
 npx vitest run                      # all suites green
-npx tsx tools/src/validate/run.ts   # 388 documents and 4 assessments checked, 0 failure(s)
+npx tsx tools/src/validate/run.ts   # 383 documents (post fix-wave) and 4 assessments checked, 0 failure(s)
 npx tsc --noEmit                    # no type errors
 ```
 

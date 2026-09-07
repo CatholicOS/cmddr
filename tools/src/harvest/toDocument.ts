@@ -33,6 +33,7 @@ export function toDocument(item: HarvestItem, retrieved: string): DocumentRecord
   };
 
   if (reassigned) record.promulgatedBy = reassigned.promulgatedBy;
+  if (item.aliases?.length) record.aliases = [...item.aliases];
   if (mapping.characteristics) record.characteristics = [...mapping.characteristics];
   if (mapping.descriptiveTitle) record.descriptiveTitle = mapping.descriptiveTitle;
   // The genre label exactly as vatican.va prints it (spec §4.1), preserved unconditionally
