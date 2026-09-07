@@ -4,3 +4,4 @@ export * from './conciliar.js';
 export * from './corrections.js';
 export * from './duplicates.js';
 export * from './adjudicated-distinct.js';
+export * from './incipit-rules.js';
