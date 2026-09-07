@@ -1,0 +1,5098 @@
+[
+  {
+    "id": "mag:leo-xiii/ubi-primum-1878",
+    "title": "Ubi primum",
+    "incipit": "Ubi primum",
+    "idStatus": "minted",
+    "genre": "discourse-address",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1878-03-28",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/speeches/documents/hf_l-xiii_speeches_18780328_ubi-primum.html",
+      "shelf": "speeches",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/inscrutabili-dei-consilio-1878",
+    "title": "Inscrutabili Dei Consilio",
+    "incipit": "Inscrutabili Dei Consilio",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1878-04-21",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_21041878_inscrutabili-dei-consilio.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/da-grave-sventura-1878",
+    "title": "Da grave sventura",
+    "incipit": "Da grave sventura",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1878-08-27",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18780827_da-grave-sventura.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quod-apostolici-muneris-1878",
+    "title": "Quod Apostolici Muneris",
+    "incipit": "Quod Apostolici Muneris",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1878-12-28",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_28121878_quod-apostolici-muneris.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/pontifices-maximi-1879",
+    "title": "Pontifices maximi",
+    "incipit": "Pontifices maximi",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1879-02-15",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/briefs/documents/hf_l-xiii_brief_18790215_pontifices-maximi.html",
+      "shelf": "briefs",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/ci-siamo-grandemente-1879",
+    "title": "Ci siamo grandemente",
+    "incipit": "Ci siamo grandemente",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1879-06-01",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18790601_ci-siamo-grandemente.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/aeterni-patris-1879",
+    "title": "Aeterni Patris",
+    "incipit": "Aeterni Patris",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1879-08-04",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_04081879_aeterni-patris.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/iampridem-considerando-1879",
+    "title": "Iampridem considerando",
+    "incipit": "Iampridem considerando",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1879-10-15",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18791015_iampridem.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/placere-nobis-1880",
+    "title": "Placere nobis",
+    "incipit": "Placere nobis",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1880-01-18",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/motu_proprio/documents/hf_l-xiii_motu-proprio_18800118_placere-nobis.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/arcanum-divinae-1880",
+    "title": "Arcanum Divinae",
+    "incipit": "Arcanum Divinae",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1880-02-10",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_10021880_arcanum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/cum-hoc-sit-1880",
+    "title": "Cum hoc sit",
+    "incipit": "Cum hoc sit",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1880-08-04",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/briefs/documents/hf_l-xiii_brief_18800804_cum-hoc-sit.html",
+      "shelf": "briefs",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/grande-munus-1880",
+    "title": "Grande Munus",
+    "incipit": "Grande Munus",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1880-09-30",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_30091880_grande-munus.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/sancta-dei-civitas-1880",
+    "title": "Sancta Dei Civitas",
+    "incipit": "Sancta Dei Civitas",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1880-12-03",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_03121880_sancta-dei-civitas.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/pro-religione-et-pro-ecclesia-1881",
+    "title": "Pro religione et pro Ecclesia",
+    "incipit": "Pro religione et pro Ecclesia",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1881-01-02",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18810102_pergite-alacriter.html",
+      "shelf": "letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/militans-iesu-1881",
+    "title": "Militans Iesu",
+    "incipit": "Militans Iesu",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1881-03-12",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/briefs/documents/hf_l-xiii_brief_18810312_militans-iesu.html",
+      "shelf": "briefs",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/romanos-pontifices-1881",
+    "title": "Romanos Pontifices",
+    "incipit": "Romanos Pontifices",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1881-05-13",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_constitutions/documents/hf_l-xiii_apc_18810513_romanos-pontifices.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ]
+  },
+  {
+    "id": "mag:leo-xiii/diuturnum-1881",
+    "title": "Diuturnum",
+    "incipit": "Diuturnum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1881-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_29061881_diuturnum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/licet-multa-1881",
+    "title": "Licet Multa",
+    "incipit": "Licet Multa",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1881-08-03",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_03081881_licet-multa.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/cognita-nobis-1882",
+    "title": "Cognita Nobis",
+    "incipit": "Cognita Nobis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1882-01-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18820125_cognita-nobis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/etsi-nos-1882",
+    "title": "Etsi Nos",
+    "incipit": "Etsi Nos",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1882-02-15",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_15021882_etsi-nos.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/auspicato-concessum-1882",
+    "title": "Auspicato Concessum",
+    "incipit": "Auspicato Concessum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1882-09-17",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_17091882_auspicato-concessum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/cum-multa-sint-1882",
+    "title": "Cum Multa Sint",
+    "incipit": "Cum Multa Sint",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1882-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_08121882_cum-multa.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/misericors-dei-filius-1883",
+    "title": "Misericors Dei Filius",
+    "incipit": "Misericors Dei Filius",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1883-05-30",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/apost_constitutions/documents/hf_l-xiii_apc_18830530_misericors-dei-filius.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ]
+  },
+  {
+    "id": "mag:leo-xiii/saepenumero-considerantes-1883",
+    "title": "Saepenumero considerantes",
+    "incipit": "Saepenumero considerantes",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1883-08-18",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18830818_saepenumero-considerantes.html",
+      "shelf": "letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/supremi-apostolatus-officio-1883",
+    "title": "Supremi Apostolatus Officio",
+    "incipit": "Supremi Apostolatus Officio",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1883-09-01",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_01091883_supremi-apostolatus-officio.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/nobilissima-gallorum-gens-1884",
+    "title": "Nobilissima Gallorum Gens",
+    "incipit": "Nobilissima Gallorum Gens",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1884-02-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_08021884_nobilissima-gallorum-gens.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/humanum-genus-1884",
+    "title": "Humanum Genus",
+    "incipit": "Humanum Genus",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1884-04-20",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_18840420_humanum-genus.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/superiore-anno-1884",
+    "title": "Superiore Anno",
+    "incipit": "Superiore Anno",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1884-08-30",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_30081884_superiore-anno.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/materna-ecclesiae-caritas-1884",
+    "title": "Materna Ecclesiae caritas",
+    "incipit": "Materna Ecclesiae caritas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1884-11-10",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/apost_letters/documents/hf_l-xiii_apl_18841110_materna-ecclesiae-caritas.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/la-vostra-lettera-1885",
+    "title": "La vostra lettera",
+    "incipit": "La vostra lettera",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1885-06-17",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18850617_la-vostra-lettera.html",
+      "shelf": "letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/immortale-dei-1885",
+    "title": "Immortale Dei",
+    "incipit": "Immortale Dei",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1885-11-01",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_01111885_immortale-dei.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/spectata-fides-1885",
+    "title": "Spectata Fides",
+    "incipit": "Spectata Fides",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1885-11-27",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_27111885_spectata-fides.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quod-auctoritate-1885",
+    "title": "Quod Auctoritate",
+    "incipit": "Quod Auctoritate",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1885-12-22",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_22121885_quod-auctoritate.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/cum-de-carolinis-1885",
+    "title": "Cum de Carolinis",
+    "incipit": "Cum de Carolinis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1885-12-31",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18851231_cum-de-carolinis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/iampridem-1886",
+    "title": "Iampridem",
+    "incipit": "Iampridem",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1886-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_06011886_iampridem.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/non-senza-1886",
+    "title": "Non senza",
+    "incipit": "Non senza",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1886-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18860106_non-senza.html",
+      "shelf": "letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/dolemus-inter-1886",
+    "title": "Dolemus Inter",
+    "incipit": "Dolemus Inter",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1886-07-13",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/briefs/documents/hf_l-xiii_brief_18860713_dolemus-inter.html",
+      "shelf": "briefs",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quod-multum-1886",
+    "title": "Quod Multum",
+    "incipit": "Quod Multum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1886-08-22",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_22081886_quod-multum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/pergrata-nobis-1886",
+    "title": "Pergrata Nobis",
+    "incipit": "Pergrata Nobis",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1886-09-14",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_14091886_pergrata.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/volumen-tertium-1886",
+    "title": "Volumen tertium",
+    "incipit": "Volumen tertium",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1886-10-02",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18861002_volumen-tertium.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/piu-volte-1886",
+    "title": "Più volte",
+    "incipit": "Più volte",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1886-10-31",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18861031_piu-volte.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quae-diligenter-1887",
+    "title": "Quae diligenter",
+    "incipit": "Quae diligenter",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1887-01-04",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18870104_quae-diligenter.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/ex-litteris-tuis-1887",
+    "title": "Ex litteris tuis",
+    "incipit": "Ex litteris tuis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1887-04-07",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18870407_ex-litteris-tuis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quod-iampridem-1887",
+    "title": "Quod iampridem",
+    "incipit": "Quod iampridem",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1887-05-20",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18870520_quod-iampridem.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/episcoporum-ordinem-1887",
+    "title": "Episcoporum Ordinem",
+    "incipit": "Episcoporum Ordinem",
+    "idStatus": "minted",
+    "genre": "discourse-address",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1887-05-23",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/speeches/documents/hf_l-xiii_speeches_18870523_episcoporum-ordinem.html",
+      "shelf": "speeches",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quantunque-le-siano-1887",
+    "title": "Quantunque le siano",
+    "incipit": "Quantunque le siano",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1887-06-15",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18870615_quantunque-le-siano.html",
+      "shelf": "letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/egregii-tui-1887",
+    "title": "Egregii tui",
+    "incipit": "Egregii tui",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1887-07-30",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18870730_egregii-tui.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/vi-e-ben-noto-1887",
+    "title": "Vi è ben noto",
+    "incipit": "Vi è ben noto",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1887-09-20",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_20091887_vi-e-ben-noto.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/vi-e-noto-1887",
+    "title": "Vi è noto",
+    "incipit": "Vi è noto",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1887-09-20",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18880920_vos-probe-nostis.html",
+      "shelf": "letters",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quod-primo-1887",
+    "title": "Quod primo",
+    "incipit": "Quod primo",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1887-10-01",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18871001_quod-primo.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/merito-existimasti-1887",
+    "title": "Merito existimasti",
+    "incipit": "Merito existimasti",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1887-10-05",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18871005_merito-existimasti.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/tanto-nobis-1887",
+    "title": "Tanto Nobis",
+    "incipit": "Tanto Nobis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1887-10-06",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18871006_tanto-nobis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/libenter-agnovimus-1887",
+    "title": "Libenter agnovimus",
+    "incipit": "Libenter agnovimus",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1887-11-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18871125_libenter-agnovimus.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/officio-sanctissimo-1887",
+    "title": "Officio Sanctissimo",
+    "incipit": "Officio Sanctissimo",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1887-12-22",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_22121887_officio-sanctissimo.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/vicario-sulla-terra-1887",
+    "title": "Vicario sulla terra",
+    "incipit": "Vicario sulla terra",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1887-12-26",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18871226_vicario-sulla-terra.html",
+      "shelf": "letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/praeclaro-divinae-1888",
+    "title": "Praeclaro divinae",
+    "incipit": "Praeclaro divinae",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1888-02-03",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18880203_praeclaro-divinae.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quod-anniversarius-1888",
+    "title": "Quod Anniversarius",
+    "incipit": "Quod Anniversarius",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1888-04-01",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_01041888_quod-anniversarius.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "letters"
+      ]
+    }
+  },
+  {
+    "id": "mag:leo-xiii/in-plurimis-1888",
+    "title": "In Plurimis",
+    "incipit": "In Plurimis",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1888-05-05",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_05051888_in-plurimis.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/in-plurimis-maximisque-1888",
+    "title": "In plurimis maximisque",
+    "incipit": "In plurimis maximisque",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1888-05-05",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18880505_in-plurimis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/libertas-1888",
+    "title": "Libertas",
+    "incipit": "Libertas",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1888-06-20",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_20061888_libertas.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/saepe-nos-1888",
+    "title": "Saepe Nos",
+    "incipit": "Saepe Nos",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1888-06-24",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_24061888_saepe-nos.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/paterna-caritas-1888",
+    "title": "Paterna Caritas",
+    "incipit": "Paterna Caritas",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1888-07-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_25071888_paterna-caritas.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/summi-pontificatus-1888",
+    "title": "Summi Pontificatus",
+    "incipit": "Summi Pontificatus",
+    "idStatus": "minted",
+    "genre": "discourse-address",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1888-08-20",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/speeches/documents/hf_l-xiii_speeches_18880820_summi-pontificatus.html",
+      "shelf": "speeches",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/ad-universam-viene-eretta-la-diocesi-di-lugano-1888",
+    "title": "Ad universam: viene eretta la diocesi di Lugano",
+    "incipit": "Ad universam: viene eretta la diocesi di Lugano",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1888-09-07",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/bulls/documents/hf_l-xiii_bulls_18880907_ad-universam.html",
+      "shelf": "bulls",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/augustum-sanctissimumque-1888",
+    "title": "Augustum sanctissimumque",
+    "incipit": "Augustum sanctissimumque",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1888-10-01",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/motu_proprio/documents/hf_l-xiii_motu-proprio_18881001_augustum-sanctissimumque.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/opus-tibi-1888",
+    "title": "Opus tibi",
+    "incipit": "Opus tibi",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1888-10-27",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18881027_opus-tibi.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/etsi-nec-dubia-1888",
+    "title": "Etsi nec dubia",
+    "incipit": "Etsi nec dubia",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1888-11-16",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18881116_etsi-nec-dubia.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quam-aerumnosa-1888",
+    "title": "Quam Aerumnosa",
+    "incipit": "Quam Aerumnosa",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1888-12-10",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_10121888_quam-aerumnosa.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "letters"
+      ]
+    }
+  },
+  {
+    "id": "mag:leo-xiii/est-sane-molestum-1888",
+    "title": "Est sane molestum",
+    "incipit": "Est sane molestum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1888-12-17",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18881217_et-sane-molestum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/etsi-cunctas-1888",
+    "title": "Etsi Cunctas",
+    "incipit": "Etsi Cunctas",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1888-12-21",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_21121888_etsi-cunctas.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/exeunte-iam-anno-1888",
+    "title": "Exeunte Iam Anno",
+    "incipit": "Exeunte Iam Anno",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1888-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_25121888_exeunte-iam-anno.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/eximia-pietas-1889",
+    "title": "Eximia pietas",
+    "incipit": "Eximia pietas",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1889-01-30",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18890130_eximia-pietas.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/iamdudum-pars-1889",
+    "title": "Iamdudum pars",
+    "incipit": "Iamdudum pars",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1889-02-02",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_constitutions/documents/hf_l-xiii_apc_18890202_iamdudum-pars.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ]
+  },
+  {
+    "id": "mag:leo-xiii/nostis-errorem-1889",
+    "title": "Nostis errorem",
+    "incipit": "Nostis errorem",
+    "idStatus": "minted",
+    "genre": "discourse-address",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1889-02-11",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/speeches/documents/hf_l-xiii_speeches_18890211_nostis-errorem.html",
+      "shelf": "speeches",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/la-devozione-1889",
+    "title": "La devozione",
+    "incipit": "La devozione",
+    "idStatus": "minted",
+    "genre": "discourse-address",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1889-03-02",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/speeches/documents/hf_l-xiii_speeches_18890302_la-devozione.html",
+      "shelf": "speeches",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/magni-nobis-1889-03-07",
+    "title": "Magni Nobis",
+    "incipit": "Magni Nobis",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1889-03-07",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_07031889_magni-nobis.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/grata-ci-e-riuscita-1889",
+    "title": "Grata ci è riuscita",
+    "incipit": "Grata ci è riuscita",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1889-03-31",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18890331_gratam-scito.html",
+      "shelf": "letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/libentes-intelleximus-1889",
+    "title": "Libentes intelleximus",
+    "incipit": "Libentes intelleximus",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1889-04-19",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18890419_libentes-intelleximus.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/magni-nobis-1889-05-07",
+    "title": "Magni Nobis",
+    "incipit": "Magni Nobis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1889-05-07",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18890307_magni-nobis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/amplissimum-collegium-1889",
+    "title": "Amplissimum Collegium",
+    "incipit": "Amplissimum Collegium",
+    "idStatus": "minted",
+    "genre": "discourse-address",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1889-05-24",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/speeches/documents/hf_l-xiii_speeches_18890524_amplissimum-collegium.html",
+      "shelf": "speeches",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/litteris-ad-te-1889",
+    "title": "Litteris ad te",
+    "incipit": "Litteris ad te",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1889-06-01",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18890601_litteris-ad-te.html",
+      "shelf": "letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quod-nuper-1889",
+    "title": "Quod Nuper",
+    "incipit": "Quod Nuper",
+    "idStatus": "minted",
+    "genre": "discourse-address",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1889-06-30",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/speeches/documents/hf_l-xiii_speeches_18890630_quod-nuper.html",
+      "shelf": "speeches",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/e-giunto-1889",
+    "title": "È giunto",
+    "incipit": "È giunto",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1889-07-19",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18890719_e-giunto.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quamquam-pluries-1889",
+    "title": "Quamquam Pluries",
+    "incipit": "Quamquam Pluries",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1889-08-15",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_15081889_quamquam-pluries.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/fra-le-molteplici-1889",
+    "title": "Fra le molteplici",
+    "incipit": "Fra le molteplici",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1889-12-18",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18891218_fra-le-molteplici.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/colle-espressioni-1889",
+    "title": "Colle espressioni",
+    "incipit": "Colle espressioni",
+    "idStatus": "minted",
+    "genre": "discourse-address",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1889-12-24",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/speeches/documents/hf_l-xiii_speeches_18891224_colle-espressioni.html",
+      "shelf": "speeches",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/tempestivum-quoddam-1889",
+    "title": "Tempestivum Quoddam",
+    "incipit": "Tempestivum Quoddam",
+    "idStatus": "minted",
+    "genre": "discourse-address",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1889-12-30",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/speeches/documents/hf_l-xiii_speeches_18891230_tempestivum-quoddam.html",
+      "shelf": "speeches",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/sapientiae-christianae-1890",
+    "title": "Sapientiae Christianae",
+    "incipit": "Sapientiae Christianae",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1890-01-10",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_10011890_sapientiae-christianae.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quod-paucis-1890",
+    "title": "Quod paucis",
+    "incipit": "Quod paucis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1890-01-28",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18900128_quod-paucis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/cum-apostolica-sedes-1890",
+    "title": "Cum Apostolica Sedes",
+    "incipit": "Cum Apostolica Sedes",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1890-02-05",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18900205_cum-apostolica-sede.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/noi-rendiamo-grazie-1890",
+    "title": "Noi rendiamo grazie",
+    "incipit": "Noi rendiamo grazie",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1890-03-14",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18900314_noi-rendiamo-grazie.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/rem-magni-1890",
+    "title": "Rem Magni",
+    "incipit": "Rem Magni",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1890-04-20",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18900420_rem-magni.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/graviter-molesteque-1890",
+    "title": "Graviter molesteque",
+    "incipit": "Graviter molesteque",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1890-06-13",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18900613_graviter-molesteque.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/mirifice-delectati-sumus-1890",
+    "title": "Mirifice delectati sumus",
+    "incipit": "Mirifice delectati sumus",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1890-07-17",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18900717_mirifice-delectati.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/graviter-admodum-1890",
+    "title": "Graviter admodum",
+    "incipit": "Graviter admodum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1890-07-27",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18900727_graviter-admodum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/dall-alto-dell-apostolico-seggio-1890",
+    "title": "Dall'alto dell'Apostolico Seggio",
+    "incipit": "Dall'alto dell'Apostolico Seggio",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1890-10-15",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_18901015_apostolico-seggio.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/catholicae-ecclesiae-1890",
+    "title": "Catholicae Ecclesiae",
+    "incipit": "Catholicae Ecclesiae",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1890-11-20",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_20111890_catholicae-ecclesiae.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/novum-argumentum-1890",
+    "title": "Novum argumentum",
+    "incipit": "Novum argumentum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1890-11-20",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18901120_novum-argumentum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/in-supremo-1890",
+    "title": "In supremo",
+    "incipit": "In supremo",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1890-12-15",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/briefs/documents/hf_l-xiii_brief_18901215_in-supremo.html",
+      "shelf": "briefs",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/opportune-quidem-1891",
+    "title": "Opportune quidem",
+    "incipit": "Opportune quidem",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1891-01-01",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18910101_opportune-quidem.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/praeclarum-studium-1891",
+    "title": "Praeclarum studium",
+    "incipit": "Praeclarum studium",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1891-02-10",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18910210_praeclarum-studium.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/in-ipso-1891",
+    "title": "In Ipso",
+    "incipit": "In Ipso",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1891-03-03",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_03031891_in-ipso.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quod-erat-maxime-1891",
+    "title": "Quod erat maxime",
+    "incipit": "Quod erat maxime",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1891-03-03",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18910303_quod-erat-maxime.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/rerum-novarum-1891",
+    "title": "Rerum Novarum",
+    "incipit": "Rerum Novarum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1891-05-15",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_15051891_rerum-novarum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/non-maius-1891",
+    "title": "Non maius",
+    "incipit": "Non maius",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1891-06-15",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_letters/documents/hf_l-xiii_apl_18950615_non-maius.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/pastoralis-vigilantiae-1891",
+    "title": "Pastoralis vigilantiae",
+    "incipit": "Pastoralis vigilantiae",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1891-06-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_18910625_pastoralis.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/optimae-quidem-1891",
+    "title": "Optimae quidem",
+    "incipit": "Optimae quidem",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1891-07-21",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_letters/documents/hf_l-xiii_apl_18910721_optimae-quidem.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/pastoralis-officii-1891",
+    "title": "Pastoralis officii",
+    "incipit": "Pastoralis officii",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1891-09-12",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_12091891_pastoralis-officii.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/grande-est-1891",
+    "title": "Grande est",
+    "incipit": "Grande est",
+    "idStatus": "minted",
+    "genre": "discourse-address",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1891-09-20",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/speeches/documents/hf_l-xiii_speeches_18910920_grande-est.html",
+      "shelf": "speeches",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/octobri-mense-1891",
+    "title": "Octobri mense",
+    "incipit": "Octobri mense",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1891-09-22",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_22091891_octobri-mense.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/sapienter-olim-1891",
+    "title": "Sapienter olim",
+    "incipit": "Sapienter olim",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1891-11-30",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_letters/documents/hf_l-xiii_apl_18911130_sapienter-olim.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/non-est-opus-1891",
+    "title": "Non est opus",
+    "incipit": "Non est opus",
+    "idStatus": "minted",
+    "genre": "discourse-address",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1891-12-14",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/speeches/documents/hf_l-xiii_speeches_18911214_non-est-opus.html",
+      "shelf": "speeches",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/au-milieu-des-sollicitudes-1892",
+    "title": "Au milieu des sollicitudes",
+    "incipit": "Au milieu des sollicitudes",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1892-02-16",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_16021892_au-milieu-des-sollicitudes.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/notre-consolation-1892",
+    "title": "Notre consolation",
+    "incipit": "Notre consolation",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1892-05-03",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/fr/letters/documents/hf_l-xiii_let_18920503_notre-consolation.html",
+      "shelf": "letters",
+      "languages": [
+        "FR",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quo-magis-1892",
+    "title": "Quo magis",
+    "incipit": "Quo magis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1892-05-16",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18920516_quo-magis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quae-coniunctim-1892",
+    "title": "Quae coniunctim",
+    "incipit": "Quae coniunctim",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1892-05-23",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18920523_quae-coniunctim.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quam-gratae-1892",
+    "title": "Quam gratae",
+    "incipit": "Quam gratae",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1892-06-22",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18920622_nous-ne-voulons.html",
+      "shelf": "letters",
+      "languages": [
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quarto-abeunte-saeculo-1892",
+    "title": "Quarto Abeunte Saeculo",
+    "incipit": "Quarto Abeunte Saeculo",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1892-07-16",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_16071892_quarto-abeunte-saeculo.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/alumnis-seminarii-vaticani-1892",
+    "title": "Alumnis Seminarii Vaticani",
+    "incipit": "Alumnis Seminarii Vaticani",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1892-07-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/motu_proprio/documents/hf_l-xiii_motu-proprio_18920725_alumnis-seminarii.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/magnae-dei-matris-1892",
+    "title": "Magnae Dei Matris",
+    "incipit": "Magnae Dei Matris",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1892-09-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_08091892_magnae-dei-matris.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/suffragatione-patrum-1892",
+    "title": "Suffragatione patrum",
+    "incipit": "Suffragatione patrum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1892-10-12",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18921012_suffragatione-patrum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/literae-tuae-1892",
+    "title": "Literae tuae",
+    "incipit": "Literae tuae",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1892-10-31",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/fr/letters/documents/hf_l-xiii_let_18921031_vos-lettres.html",
+      "shelf": "letters",
+      "languages": [
+        "FR",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/agnovimus-libenter-1892",
+    "title": "Agnovimus libenter",
+    "incipit": "Agnovimus libenter",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1892-11-03",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18921103_agnovimus-libenter.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/custodi-di-quella-fede-1892",
+    "title": "Custodi di quella Fede",
+    "incipit": "Custodi di quella Fede",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1892-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_08121892_custodi-di-quella-fede.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/inimica-vis-1892",
+    "title": "Inimica Vis",
+    "incipit": "Inimica Vis",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1892-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_08121892_inimica-vis.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/insignis-ecclesia-1892",
+    "title": "Insignis ecclesia",
+    "incipit": "Insignis ecclesia",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1892-12-10",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18921210_insignis-ecclesia.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/prossimi-come-siamo-1892",
+    "title": "Prossimi come siamo",
+    "incipit": "Prossimi come siamo",
+    "idStatus": "minted",
+    "genre": "discourse-address",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1892-12-23",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/speeches/documents/hf_l-xiii_speeches_18921223_prossimi-come.html",
+      "shelf": "speeches",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quod-scribis-1893",
+    "title": "Quod scribis",
+    "incipit": "Quod scribis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1893-02-01",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18930201_quod-scribis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/il-divisamento-1893",
+    "title": "Il divisamento",
+    "incipit": "Il divisamento",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1893-02-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/apost_letters/documents/hf_l-xiii_apl_18930208_il-divisamento.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/clara-saepenumero-1893",
+    "title": "Clara saepenumero",
+    "incipit": "Clara saepenumero",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1893-05-31",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18930531_clara-saepenumero.html",
+      "shelf": "letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/ad-extremas-1893",
+    "title": "Ad extremas",
+    "incipit": "Ad extremas",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1893-06-24",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_24061893_ad-extremas.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/gratae-vehementer-1893",
+    "title": "Gratae vehementer",
+    "incipit": "Gratae vehementer",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1893-08-03",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18930803_gratae-vehementer.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/nihil-nobis-1893",
+    "title": "Nihil Nobis",
+    "incipit": "Nihil Nobis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1893-08-06",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18930806_nihil-nobis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/constanti-hungarorum-1893",
+    "title": "Constanti Hungarorum",
+    "incipit": "Constanti Hungarorum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1893-09-02",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_02091893_constanti-hungarorum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/laetitiae-sanctae-1893",
+    "title": "Laetitiae sanctae",
+    "incipit": "Laetitiae sanctae",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1893-09-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_08091893_laetitiae-sanctae.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/non-mediocri-1893",
+    "title": "Non mediocri",
+    "incipit": "Non mediocri",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1893-10-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_25101893_non-mediocri.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/non-mediocri-cura-1893",
+    "title": "Non mediocri cura",
+    "incipit": "Non mediocri cura",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1893-10-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18931025_non-mediocri.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/providentissimus-deus-1893",
+    "title": "Providentissimus Deus",
+    "incipit": "Providentissimus Deus",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1893-11-18",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_18111893_providentissimus-deus.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/felix-nazarethana-1894",
+    "title": "Felix Nazarethana",
+    "incipit": "Felix Nazarethana",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1894-01-23",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/briefs/documents/hf_l-xiii_brief_18940123_felix-nazarethana.html",
+      "shelf": "briefs",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/sullo-scorcio-1894",
+    "title": "Sullo scorcio",
+    "incipit": "Sullo scorcio",
+    "idStatus": "minted",
+    "genre": "discourse-address",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1894-01-28",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/speeches/documents/hf_l-xiii_speeches_18940128_sullo-scorcio.html",
+      "shelf": "speeches",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/illud-est-1894",
+    "title": "Illud est",
+    "incipit": "Illud est",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1894-01-29",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18940129_illud-est.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/non-levis-1894",
+    "title": "Non levis",
+    "incipit": "Non levis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1894-02-26",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18940226_non-levis.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/susceptum-a-nobis-1894",
+    "title": "Susceptum a Nobis",
+    "incipit": "Susceptum a Nobis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1894-03-07",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18940307_susceptum-a-nobis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/caritatis-providentiaeque-1894",
+    "title": "Caritatis providentiaeque",
+    "incipit": "Caritatis providentiaeque",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1894-03-19",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_19031894_caritatis.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/grande-e-1894",
+    "title": "Grande è",
+    "incipit": "Grande è",
+    "idStatus": "minted",
+    "genre": "discourse-address",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1894-04-18",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/speeches/documents/hf_l-xiii_speeches_18940418_grande-e.html",
+      "shelf": "speeches",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/inter-graves-1894",
+    "title": "Inter graves",
+    "incipit": "Inter graves",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1894-05-01",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_01051894_inter-graves.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quum-quaestioni-1894",
+    "title": "Quum quaestioni",
+    "incipit": "Quum quaestioni",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1894-06-19",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18940619_quum-quaestioni.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/praeclara-gratulationis-1894",
+    "title": "Praeclara gratulationis",
+    "incipit": "Praeclara gratulationis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1894-06-20",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/apost_letters/documents/hf_l-xiii_apl_18940620_praeclara-gratulationis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/litteras-a-vobis-1894",
+    "title": "Litteras a vobis",
+    "incipit": "Litteras a vobis",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1894-07-02",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_02071894_litteras-a-vobis.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/plane-congruit-1894",
+    "title": "Plane congruit",
+    "incipit": "Plane congruit",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1894-07-12",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18940712_plane-congruit.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/rem-tu-amplam-1894",
+    "title": "Rem tu amplam",
+    "incipit": "Rem tu amplam",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1894-07-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18940725_rem-tu-amplam.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/perlibenti-quidem-1894",
+    "title": "Perlibenti Quidem",
+    "incipit": "Perlibenti Quidem",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1894-08-02",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18940802_perlibenti-quidem.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/iucunda-semper-expectatione-1894",
+    "title": "Iucunda semper expectatione",
+    "incipit": "Iucunda semper expectatione",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1894-09-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_08091894_iucunda-semper-expectatione.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/fra-le-principali-1894",
+    "title": "Fra le principali",
+    "incipit": "Fra le principali",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1894-11-27",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18941127_fra-le-principali.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/orientalium-dignitas-ecclesiarum-1894",
+    "title": "Orientalium dignitas Ecclesiarum",
+    "incipit": "Orientalium dignitas Ecclesiarum",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1894-11-30",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/apost_letters/documents/hf_l-xiii_apl_18941130_orientalium-dignitas.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/moerore-sapientium-1894",
+    "title": "Moerore sapientium",
+    "incipit": "Moerore sapientium",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1894-12-04",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18941204_moerore-sapientium.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/postquam-catholici-1894",
+    "title": "Postquam Catholici",
+    "incipit": "Postquam Catholici",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1894-12-10",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18941210_postquam-catholici.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/christi-nomen-1894",
+    "title": "Christi nomen",
+    "incipit": "Christi nomen",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1894-12-24",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_24121894_christi-nomen.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/longinqua-oceani-1895",
+    "title": "Longinqua oceani",
+    "incipit": "Longinqua oceani",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1895-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_06011895_longinqua.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/dum-multorum-1895",
+    "title": "Dum multorum",
+    "incipit": "Dum multorum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1895-01-26",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18950126_dum-multorum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/amantissimae-voluntatis-1895",
+    "title": "Amantissimae Voluntatis",
+    "incipit": "Amantissimae Voluntatis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1895-04-14",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/apost_letters/documents/hf_l-xiii_apl_18950414_amantissime-voluntatis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quale-debba-1895",
+    "title": "Quale debba",
+    "incipit": "Quale debba",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1895-05-14",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18950514_quale-debba.html",
+      "shelf": "letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/provida-matris-1895",
+    "title": "Provida Matris",
+    "incipit": "Provida Matris",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1895-05-15",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/briefs/documents/hf_l-xiii_brief_18950505_provida-matris.html",
+      "shelf": "briefs",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quod-plurimorum-1895",
+    "title": "Quod plurimorum",
+    "incipit": "Quod plurimorum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1895-05-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18950525_quod-plurimorum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/unitatis-christianae-1895",
+    "title": "Unitatis christianae",
+    "incipit": "Unitatis christianae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1895-06-11",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_letters/documents/hf_l-xiii_apl_18950611_unitatis-christianae.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/benevolentiae-testandae-1895",
+    "title": "Benevolentiae testandae",
+    "incipit": "Benevolentiae testandae",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1895-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18950629_benevolentiae-testandae.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/adnitentibus-nobis-1895",
+    "title": "Adnitentibus Nobis",
+    "incipit": "Adnitentibus Nobis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1895-07-02",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18960702_adnitentibus-nobis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/permoti-nos-1895",
+    "title": "Permoti Nos",
+    "incipit": "Permoti Nos",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1895-07-10",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_10071895_permoti-nos.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "letters"
+      ]
+    }
+  },
+  {
+    "id": "mag:leo-xiii/consiliorum-quae-1895",
+    "title": "Consiliorum quae",
+    "incipit": "Consiliorum quae",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1895-07-31",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18930731_consiliorum-quae.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/adiutricem-populi-1895",
+    "title": "Adiutricem populi",
+    "incipit": "Adiutricem populi",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1895-09-05",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_05091895_adiutricem.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/universis-christi-1895",
+    "title": "Universis Christi",
+    "incipit": "Universis Christi",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1895-09-24",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18950924_universi-christi.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/le-insolite-1895",
+    "title": "Le Insolite",
+    "incipit": "Le Insolite",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1895-10-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18951008_le-insolite.html",
+      "shelf": "letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/christi-domini-1895",
+    "title": "Christi Domini",
+    "incipit": "Christi Domini",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1895-11-26",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_letters/documents/hf_l-xiii_apl_18951126_christi-domini.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/egregium-sane-1895",
+    "title": "Egregium sane",
+    "incipit": "Egregium sane",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1895-12-15",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18951215_egregium-sane.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/magni-commemoratio-1896",
+    "title": "Magni commemoratio",
+    "incipit": "Magni commemoratio",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1896-01-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/briefs/documents/hf_l-xiii_brief_18960108_magni-commemoratio.html",
+      "shelf": "briefs",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quod-romani-pontifices-1896",
+    "title": "Quod Romani Pontifices",
+    "incipit": "Quod Romani Pontifices",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1896-01-18",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_letters/documents/hf_l-xiii_apl_18960118_quod-romani-pontifices.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/con-vivissima-1896",
+    "title": "Con vivissima",
+    "incipit": "Con vivissima",
+    "idStatus": "minted",
+    "genre": "discourse-address",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1896-03-02",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/speeches/documents/hf_l-xiii_speeches_18960302_con-vivissima.html",
+      "shelf": "speeches",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/auspicia-rerum-1896",
+    "title": "Auspicia rerum",
+    "incipit": "Auspicia rerum",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1896-03-19",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/motu_proprio/documents/hf_l-xiii_motu-proprio_18960319_auspicia-rerum.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/insignes-deo-1896",
+    "title": "Insignes Deo",
+    "incipit": "Insignes Deo",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1896-05-01",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_01051896_insignes.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/placuit-tibi-1896",
+    "title": "Placuit tibi",
+    "incipit": "Placuit tibi",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1896-05-20",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18960520_placuit-tibi.html",
+      "shelf": "letters",
+      "languages": [
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/satis-cognitum-1896",
+    "title": "Satis Cognitum",
+    "incipit": "Satis Cognitum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1896-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_29061896_satis-cognitum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/catholicos-homines-1896",
+    "title": "Catholicos homines",
+    "incipit": "Catholicos homines",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1896-09-02",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18960902_catholicos-homines.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/apostolicae-curae-1896",
+    "title": "Apostolicae curae",
+    "incipit": "Apostolicae curae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1896-09-13",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_letters/documents/litterae-apostolicae-apostolicae-curae-13-septembris-1896.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/fidentem-piumque-animum-1896",
+    "title": "Fidentem piumque animum",
+    "incipit": "Fidentem piumque animum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1896-09-20",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_20091896_fidentem-piumque-animum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/religioni-apud-anglos-1896",
+    "title": "Religioni apud Anglos",
+    "incipit": "Religioni apud Anglos",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1896-11-05",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18961105_religioni-apud-anglos.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/la-tarda-eta-1896",
+    "title": "La tarda età",
+    "incipit": "La tarda età",
+    "idStatus": "minted",
+    "genre": "discourse-address",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1896-12-23",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/speeches/documents/hf_l-xiii_speeches_18961223_la-tarda-eta.html",
+      "shelf": "speeches",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/officiorum-ac-munerum-1897",
+    "title": "Officiorum ac munerum",
+    "incipit": "Officiorum ac munerum",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1897-01-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/apost_constitutions/documents/hf_l-xiii_apc_18970125_officiorum-ac-munerum.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ]
+  },
+  {
+    "id": "mag:leo-xiii/trans-oceanum-1897",
+    "title": "Trans oceanum",
+    "incipit": "Trans oceanum",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1897-04-18",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/apost_letters/documents/hf_l-xiii_apl_18970418_trans-oceanum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/divinum-illud-munus-1897",
+    "title": "Divinum illud munus",
+    "incipit": "Divinum illud munus",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1897-05-09",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_09051897_divinum-illud-munus.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/dilectus-domini-nostri-1897",
+    "title": "Dilectus Domini Nostri",
+    "incipit": "Dilectus Domini Nostri",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1897-05-27",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_letters/documents/hf_l-xiii_apl_18970527_dilectus-domini.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/hoc-mandatum-1897",
+    "title": "Hoc mandatum",
+    "incipit": "Hoc mandatum",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1897-06-27",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_letters/documents/hf_l-xiii_apl_18970627_hoc-mandatum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/libet-quidem-1897",
+    "title": "Libet quidem",
+    "incipit": "Libet quidem",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1897-07-05",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18970705_libet-quidem.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/militantis-ecclesiae-1897",
+    "title": "Militantis Ecclesiae",
+    "incipit": "Militantis Ecclesiae",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1897-08-01",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_01081897_militantis-ecclesiae.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/etsi-paternam-1897",
+    "title": "Etsi paternam",
+    "incipit": "Etsi paternam",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1897-08-22",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18970822_etsi-paternam.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/augustissimae-virginis-mariae-1897",
+    "title": "Augustissimae Virginis Mariae",
+    "incipit": "Augustissimae Virginis Mariae",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1897-09-12",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_12091897_augustissimae-virginis-mariae.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/felicitate-quadam-1897",
+    "title": "Felicitate quadam",
+    "incipit": "Felicitate quadam",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1897-10-04",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_constitutions/documents/hf_l-xiii_apc_18971004_felicitate-quadam.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ]
+  },
+  {
+    "id": "mag:leo-xiii/affari-vos-1897",
+    "title": "Affari vos",
+    "incipit": "Affari vos",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1897-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_08121897_affari-vos.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/sodalium-benedictinorum-ordinem-1897",
+    "title": "Sodalium Benedictinorum Ordinem",
+    "incipit": "Sodalium Benedictinorum Ordinem",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1897-12-15",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/motu_proprio/documents/hf_l-xiii_motu-proprio_18971215_sodalium-benedictinorum-ordinem.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quum-adeo-1898",
+    "title": "Quum adeo",
+    "incipit": "Quum adeo",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1898-05-22",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18980522_quum-adeo.html",
+      "shelf": "letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/ea-animi-sollicitudo-1898",
+    "title": "Ea animi sollicitudo",
+    "incipit": "Ea animi sollicitudo",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1898-07-04",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/motu_proprio/documents/hf_l-xiii_motu-proprio_18980704_ea-animi-sollicitudo.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/cum-plura-nobis-1898",
+    "title": "Cum plura Nobis",
+    "incipit": "Cum plura Nobis",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1898-07-10",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/motu_proprio/documents/hf_l-xiii_motu-proprio_18980710_cum-plura-nobis.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quum-nonnullorum-1898",
+    "title": "Quum nonnullorum",
+    "incipit": "Quum nonnullorum",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1898-07-20",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/motu_proprio/documents/hf_l-xiii_motu-proprio_18980720_quum-nonnullorum.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/caritatis-studium-1898",
+    "title": "Caritatis Studium",
+    "incipit": "Caritatis Studium",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1898-07-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_25071898_caritatis-studium.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/spesse-volte-1898",
+    "title": "Spesse Volte",
+    "incipit": "Spesse Volte",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1898-08-05",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_05081898_spesse-volte.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quam-religiosa-1898",
+    "title": "Quam Religiosa",
+    "incipit": "Quam Religiosa",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1898-08-16",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_16081898_quam-religiosa.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/maximo-cum-animi-1898",
+    "title": "Maximo cum animi",
+    "incipit": "Maximo cum animi",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1898-08-20",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18980820_maximo-cum-animi.html",
+      "shelf": "letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/diuturni-temporis-1898",
+    "title": "Diuturni Temporis",
+    "incipit": "Diuturni Temporis",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1898-09-05",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_05091898_diuturni-temporis.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/ubi-primum-1898",
+    "title": "Ubi primum",
+    "incipit": "Ubi primum",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1898-10-02",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_constitutions/documents/hf_l-xiii_apc_18981002_ubi-primum.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ]
+  },
+  {
+    "id": "mag:leo-xiii/nostra-erga-1898",
+    "title": "Nostra erga",
+    "incipit": "Nostra erga",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1898-11-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18981125_nostra-erga.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/cum-diuturnum-1898",
+    "title": "Cum diuturnum",
+    "incipit": "Cum diuturnum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1898-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18981225_cum-diuturnum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quum-diuturnum-1898",
+    "title": "Quum Diuturnum",
+    "incipit": "Quum Diuturnum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1898-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_25121898_quum-diuturnum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/testem-benevolentiae-1899",
+    "title": "Testem benevolentiae",
+    "incipit": "Testem benevolentiae",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1899-01-22",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18990122_testem-benevolentiae.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/ex-epistola-1899",
+    "title": "Ex epistola",
+    "incipit": "Ex epistola",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1899-04-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18990408_ex-epistola.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/properante-ad-exitum-1899",
+    "title": "Properante ad exitum",
+    "incipit": "Properante ad exitum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1899-05-11",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18990511_properante-ad-exitum.html",
+      "shelf": "letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/annum-sacrum-1899",
+    "title": "Annum Sacrum",
+    "incipit": "Annum Sacrum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1899-05-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_25051899_annum-sacrum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/nous-ne-pouvons-1899",
+    "title": "Nous ne pouvons",
+    "incipit": "Nous ne pouvons",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1899-05-29",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/fr/letters/documents/hf_l-xiii_let_18990529_nous-ne-pouvons.html",
+      "shelf": "letters",
+      "languages": [
+        "FR",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/depuis-le-jour-1899",
+    "title": "Depuis le Jour",
+    "incipit": "Depuis le Jour",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1899-09-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_08091899_depuis-le-jour.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/paternae-1899",
+    "title": "Paternae",
+    "incipit": "Paternae",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1899-09-18",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_18091899_paternae.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quoniam-divinae-1899",
+    "title": "Quoniam divinae",
+    "incipit": "Quoniam divinae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1899-10-21",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_letters/documents/hf_l-xiii_apl_18991021_quoniam-divinae.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/aeterni-pastoris-1899",
+    "title": "Aeterni Pastoris",
+    "incipit": "Aeterni Pastoris",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1899-10-24",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_constitutions/documents/hf_l-xiii_apc_18991024_aeterni-pastoris.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ]
+  },
+  {
+    "id": "mag:leo-xiii/auspicandae-celebritatis-sacrae-1899",
+    "title": "Auspicandae celebritatis sacrae",
+    "incipit": "Auspicandae celebritatis sacrae",
+    "idStatus": "minted",
+    "genre": "discourse-address",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1899-12-14",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/speeches/documents/hf_l-xiii_speeches_18991214_auspicandae.html",
+      "shelf": "speeches",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quas-tu-1900",
+    "title": "Quas Tu",
+    "incipit": "Quas Tu",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1900-06-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_19000608_quas-tu.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/i-luttuosi-avvenimenti-1900",
+    "title": "I luttuosi avvenimenti",
+    "incipit": "I luttuosi avvenimenti",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1900-07-16",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_19000716_i-luttuosi-avvenimenti.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/omnibus-compertum-1900",
+    "title": "Omnibus Compertum",
+    "incipit": "Omnibus Compertum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1900-07-21",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_21071900_omnibus-compertum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "letters"
+      ]
+    }
+  },
+  {
+    "id": "mag:leo-xiii/praestantiam-assisiensis-1900",
+    "title": "Praestantiam Assisiensis",
+    "incipit": "Praestantiam Assisiensis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1900-08-02",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_19000802_praestantiam-assisiensis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/gia-fin-dagli-esordii-1900",
+    "title": "Già fin dagli esordii",
+    "incipit": "Già fin dagli esordii",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1900-08-19",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_19000819_gia-fin-dagli-esordii.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/ad-catholicorum-conventum-1900",
+    "title": "Ad Catholicorum conventum",
+    "incipit": "Ad Catholicorum conventum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1900-08-31",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_19000831_ad-catholicorum-conventum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/venerabilis-frater-augustinus-1900",
+    "title": "Venerabilis Frater Augustinus",
+    "incipit": "Venerabilis Frater Augustinus",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1900-09-14",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_19000914_venerabilis-frater-augustinus.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/qua-mente-1900",
+    "title": "Qua mente",
+    "incipit": "Qua mente",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1900-10-04",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_19001004_qua-mente.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/rei-catholicae-1900",
+    "title": "Rei catholicae",
+    "incipit": "Rei catholicae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1900-10-20",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_letters/documents/hf_l-xiii_apl_19001020_rei-catholicae.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/tametsi-futura-prospicientibus-1900",
+    "title": "Tametsi Futura Prospicientibus",
+    "incipit": "Tametsi Futura Prospicientibus",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1900-11-01",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_01111900_tametsi-futura-prospicientibus.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/conditae-a-christo-1900",
+    "title": "Conditae a Christo",
+    "incipit": "Conditae a Christo",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1900-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_constitutions/documents/hf_l-xiii_apc_19001208_conditae-a-christo.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ]
+  },
+  {
+    "id": "mag:leo-xiii/alias-iam-1900",
+    "title": "Alias iam",
+    "incipit": "Alias iam",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1900-12-19",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_19001219_alias-iam.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/au-milieu-des-consolations-1900",
+    "title": "Au milieu des consolations",
+    "incipit": "Au milieu des consolations",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1900-12-23",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/fr/letters/documents/hf_l-xiii_let_19001223_au-milieu-des-consolations.html",
+      "shelf": "letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/temporis-quidem-1900",
+    "title": "Temporis quidem",
+    "incipit": "Temporis quidem",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1900-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_19001225_temporis-quidem.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/graves-de-communi-re-1901",
+    "title": "Graves de Communi Re",
+    "incipit": "Graves de Communi Re",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1901-01-18",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_18011901_graves-de-communi-re.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/in-maximis-occupationibus-1901",
+    "title": "In maximis occupationibus",
+    "incipit": "In maximis occupationibus",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1901-02-11",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_19010211_in-maximis-occupationibus.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/de-ingenii-1901",
+    "title": "De ingenii",
+    "incipit": "De ingenii",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1901-02-20",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_19010220_de-ingenii.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/le-nostre-ferme-speranze-1901",
+    "title": "Le nostre ferme speranze",
+    "incipit": "Le nostre ferme speranze",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1901-03-28",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_19010228_le-nostre-ferme-speranze.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/saecularis-eventus-1901",
+    "title": "Saecularis eventus",
+    "incipit": "Saecularis eventus",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1901-05-11",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_19010511_saecularis-eventus.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/gravissimas-1901",
+    "title": "Gravissimas",
+    "incipit": "Gravissimas",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1901-05-16",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_16051901_gravissimas.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/nos-quidem-1901",
+    "title": "Nos quidem",
+    "incipit": "Nos quidem",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1901-05-17",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_19010517_nos-quidem.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/iucundas-scito-1901",
+    "title": "Iucundas scito",
+    "incipit": "Iucundas scito",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1901-06-09",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_19010609_iucundas-scito.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/al-compimento-delle-riforme-1901",
+    "title": "Al compimento delle riforme",
+    "incipit": "Al compimento delle riforme",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1901-06-11",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/letters/documents/hf_l-xiii_let_19010611_chirografo.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/en-tout-temps-1901",
+    "title": "En tout temps",
+    "incipit": "En tout temps",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1901-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/fr/letters/documents/hf_l-xiii_let_19010629_en-tout-temps.html",
+      "shelf": "letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/slavorum-gentem-1901",
+    "title": "Slavorum gentem",
+    "incipit": "Slavorum gentem",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1901-08-01",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_letters/documents/hf_l-xiii_apl_19010801_slavorum-gentem.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/reputantibus-1901",
+    "title": "Reputantibus",
+    "incipit": "Reputantibus",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1901-08-20",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_20081901_reputantibus.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/reputantibus-saepe-1901",
+    "title": "Reputantibus saepe",
+    "incipit": "Reputantibus saepe",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1901-08-20",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_19010820_reputantibus-saepe.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/parta-humano-generi-1901",
+    "title": "Parta humano generi",
+    "incipit": "Parta humano generi",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1901-09-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_letters/documents/hf_l-xiii_apl_19010908_parta-humano-generi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/urbanitatis-veteris-1901",
+    "title": "Urbanitatis Veteris",
+    "incipit": "Urbanitatis Veteris",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1901-11-20",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_20111901_urbanitatis-veteris.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "letters"
+      ]
+    }
+  },
+  {
+    "id": "mag:leo-xiii/vigesimo-quinto-anno-1902",
+    "title": "Vigesimo quinto anno",
+    "incipit": "Vigesimo quinto anno",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1902-03-19",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/apost_letters/documents/hf_l-xiii_apl_19020319_vigesimo-quinto-anno.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/ad-pastoralem-1902",
+    "title": "Ad pastoralem",
+    "incipit": "Ad pastoralem",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1902-04-05",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/motu_proprio/documents/hf_l-xiii_motu-proprio_19020405_ad-pastoralem.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/in-amplissimo-1902",
+    "title": "In Amplissimo",
+    "incipit": "In Amplissimo",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1902-04-15",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_15041902_in-amplissimo.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "letters"
+      ]
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quod-votis-1902",
+    "title": "Quod Votis",
+    "incipit": "Quod Votis",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1902-04-30",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_30041902_quod-votis.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/mirae-caritatis-1902",
+    "title": "Mirae caritatis",
+    "incipit": "Mirae caritatis",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1902-05-28",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_28051902_mirae-caritatis.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/non-mediocri-1902",
+    "title": "Non mediocri",
+    "incipit": "Non mediocri",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1902-07-30",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_letters/documents/hf_l-xiii_apl_19020730_non-mediocri.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/ex-tuis-litteris-1902",
+    "title": "Ex tuis litteris",
+    "incipit": "Ex tuis litteris",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1902-09-09",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_19020909_ex-tuis-litteris.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/vigilantiae-studiique-1902",
+    "title": "Vigilantiae studiique",
+    "incipit": "Vigilantiae studiique",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1902-10-30",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/apost_letters/documents/hf_l-xiii_apl_19021030_vigilantiae-studiique.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quae-ad-nos-1902",
+    "title": "Quae Ad Nos",
+    "incipit": "Quae Ad Nos",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1902-11-22",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_22111902_quae-ad-nos.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/litteras-ante-annos-1902",
+    "title": "Litteras ante annos",
+    "incipit": "Litteras ante annos",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1902-11-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/motu_proprio/documents/hf_l-xiii_motu-proprio_19021125_litteras-ante-annos.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/fin-dal-principio-1902",
+    "title": "Fin dal principio",
+    "incipit": "Fin dal principio",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1902-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_08121902_fin-dal-principio.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/dum-multa-1902",
+    "title": "Dum Multa",
+    "incipit": "Dum Multa",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1902-12-24",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_24121902_dum-multa.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quos-nuper-1903",
+    "title": "Quos nuper",
+    "incipit": "Quos nuper",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1903-04-22",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/apost_letters/documents/hf_l-xiii_apl_19030422_quos-nuper.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/cogendum-proxime-1903",
+    "title": "Cogendum proxime",
+    "incipit": "Cogendum proxime",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1903-05-12",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_19030512_cogendum-proxime.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/quod-iubilaei-1903",
+    "title": "Quod Iubilaei",
+    "incipit": "Quod Iubilaei",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1903-05-16",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_19030516_quod-iubilaei.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/da-molte-parti-1903",
+    "title": "Da molte parti",
+    "incipit": "Da molte parti",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1903-05-26",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/it/apost_letters/documents/hf_l-xiii_apl_19030526_da-molte-parti.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/communes-litteras-1903",
+    "title": "Communes litteras",
+    "incipit": "Communes litteras",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1903-06-03",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_19030603_communes-litteras.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/praestans-fidei-1903",
+    "title": "Praestans fidei",
+    "incipit": "Praestans fidei",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1903-06-10",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/fr/letters/documents/hf_p-x_let_19030610_praestans-fidei.html",
+      "shelf": "letters",
+      "languages": [
+        "FR",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  },
+  {
+    "id": "mag:leo-xiii/nobis-quidem-1903",
+    "title": "Nobis quidem",
+    "incipit": "Nobis quidem",
+    "idStatus": "minted",
+    "genre": "discourse-address",
+    "issuerId": "rp:leo-xiii",
+    "issuerType": "pope",
+    "date": "1903-06-22",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiii/la/speeches/documents/hf_l-xiii_speeches_19030622_nobis-quidem.html",
+      "shelf": "speeches",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    }
+  }
+]
