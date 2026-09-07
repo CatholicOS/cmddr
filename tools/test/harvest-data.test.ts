@@ -12,16 +12,16 @@ const all = [...load('benedict-xiv'), ...load('pius-ix'), ...load('leo-xiii'), .
 
 describe('the harvested pilot corpus', () => {
   it('holds the whole pilot corpus', () => {
-    // 395 raw items in; six Leo XIII documents are filed on both the encyclicals
-    // and letters shelves and merge into one record each, leaving 389.
-    expect(all).toHaveLength(389);
+    // 395 raw items in; seven Leo XIII documents are filed on both the encyclicals
+    // and letters shelves and merge into one record each, leaving 388.
+    expect(all).toHaveLength(388);
   });
 
-  it('deduplicates the six twice-shelved Leo XIII documents', () => {
+  it('deduplicates the seven twice-shelved Leo XIII documents', () => {
     const twice = all.filter((d) => (d.source?.alsoShelvedAs?.length ?? 0) > 0);
-    expect(twice).toHaveLength(6);
+    expect(twice).toHaveLength(7);
     expect(twice.map((d) => d.incipit.toLowerCase()).sort()).toEqual([
-      'in amplissimo', 'omnibus compertum', 'permoti nos',
+      'in amplissimo', 'magni nobis', 'omnibus compertum', 'permoti nos',
       'quam aerumnosa', 'quod anniversarius', 'urbanitatis veteris',
     ]);
     for (const d of twice) {
@@ -53,11 +53,13 @@ describe('the harvested pilot corpus', () => {
     expect(new Set(ids).size).toBe(ids.length);
   });
 
-  it('disambiguates the two same-year Magni Nobis documents by full date', () => {
-    const ids = all.filter((d) => d.incipit === 'Magni Nobis').map((d) => d.id).sort();
-    expect(ids).toEqual([
-      'mag:leo-xiii/magni-nobis-1889-03-07', 'mag:leo-xiii/magni-nobis-1889-05-07',
-    ]);
+  it('corrects the letters shelf transcription typo and merges Magni Nobis into one document', () => {
+    const mn = all.filter((d) => d.incipit === 'Magni Nobis');
+    expect(mn).toHaveLength(1);
+    expect(mn[0]!.id).toBe('mag:leo-xiii/magni-nobis-1889');
+    expect(mn[0]!.date).toBe('1889-03-07');
+    expect(mn[0]!.source!.shelf).toBe('encyclicals');
+    expect(mn[0]!.source!.alsoShelvedAs).toEqual(['letters']);
   });
 
   it('leaves the TBD shelf empty', () => {

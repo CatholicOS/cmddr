@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { parseFlatIndex } from './flat.js';
 import { parseShelfIndex } from './shelf.js';
 import { toDocument } from './toDocument.js';
-import { PILOT_POPES, SHELVES } from '../mappings/index.js';
+import { PILOT_POPES, SHELVES, DATE_CORRECTIONS } from '../mappings/index.js';
 import { issuerLocalPart } from '../ids.js';
 import { slugify } from '../slug.js';
 import type { DocumentRecord, HarvestItem } from '../types.js';
@@ -31,7 +31,16 @@ for (const pope of PILOT_POPES) {
   }
 }
 
-// The vatican.va shelves are not disjoint: five Leo XIII documents sit on both the
+// Hand-curated corrections to demonstrable transcription errors on the source pages
+// (spec §5.2, mapping tables). Applied before dedupe so the corrected date participates
+// in the merge key; the adapters themselves stay pure readers of what the page prints.
+for (const item of items) {
+  const correctionKey = `${item.pageSlug}|${item.shelf}|${slugify(item.incipit)}|${item.date}`;
+  const correction = DATE_CORRECTIONS[correctionKey];
+  if (correction) item.date = correction.date;
+}
+
+// The vatican.va shelves are not disjoint: seven Leo XIII documents sit on both the
 // encyclicals and the letters shelf. Keep the most specific shelf and remember the rest.
 const merged = new Map<string, HarvestItem>();
 for (const item of items) {

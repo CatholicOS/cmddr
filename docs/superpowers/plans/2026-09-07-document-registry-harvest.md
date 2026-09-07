@@ -1980,17 +1980,17 @@ for (const [key, docs] of byIssuer) {
 ```bash
 RETRIEVED=2026-09-07 npx tsx tools/src/harvest/run.ts
 ```
-Expected: `395 items -> 390 documents after cross-shelf dedupe`, then four files —
-`benedict-xiv: 43`, `pius-ix: 75`, `leo-xiii: 270`, `vatican-i: 2`.
+Expected: `388 documents after cross-shelf dedupe and date corrections`, then four files —
+`benedict-xiv: 43`, `pius-ix: 75`, `leo-xiii: 268`, `vatican-i: 2`.
 Pius IX yields 75, not 77, because *Dei Filius* and *Pastor Aeternus* are reassigned to Vatican I.
-Leo XIII yields 270, not 275, because five documents are filed on two shelves each.
+Leo XIII yields 268, not 275, because seven documents are filed on two shelves each.
 
 - [ ] **Step 3: Run the validator**
 
 ```bash
 npx tsx tools/src/validate/run.ts
 ```
-Expected: `390 documents and 4 assessments checked, 4 failure(s)`, exit 1.
+Expected: `388 documents and 4 assessments checked, 4 failure(s)`, exit 1.
 
 The four failures are all rule 14, from `examples/evangelium-vitae.json`, which still carries its
 legacy `EV-…` loci until Task 13. Zero document-level failures is the bar here. Re-run after
@@ -2016,7 +2016,7 @@ const all = [...load('benedict-xiv'), ...load('pius-ix'), ...load('leo-xiii'), .
 
 describe('the harvested pilot corpus', () => {
   it('holds the whole pilot corpus', () => {
-    expect(all).toHaveLength(390);
+    expect(all).toHaveLength(388);
   });
 
   it('deduplicates the five twice-shelved Leo XIII documents', () => {
@@ -2190,7 +2190,7 @@ Run: `npx vitest run tools/test/render.test.ts`
 Expected: PASS, 4 tests.
 
 Run: `npx tsx tools/src/render/run.ts`
-Expected: `registry/documents.md: 390 documents`.
+Expected: `registry/documents.md: 388 documents`.
 
 - [ ] **Step 5: Commit**
 
@@ -2341,7 +2341,7 @@ Concrete documents live in [`data/documents/`](data/documents/), rendered as
 - [ ] **Step 6: Run the full suite**
 
 Run: `npx vitest run && npx tsx tools/src/validate/run.ts`
-Expected: every test green; `390 documents and 4 assessments checked, 0 failure(s)`.
+Expected: every test green; `388 documents and 4 assessments checked, 0 failure(s)`.
 
 - [ ] **Step 7: Commit**
 
@@ -2358,7 +2358,7 @@ After Task 13, the following must all hold:
 
 ```bash
 npx vitest run                      # all suites green
-npx tsx tools/src/validate/run.ts   # 390 documents and 4 assessments checked, 0 failure(s)
+npx tsx tools/src/validate/run.ts   # 388 documents and 4 assessments checked, 0 failure(s)
 npx tsc --noEmit                    # no type errors
 ```
 

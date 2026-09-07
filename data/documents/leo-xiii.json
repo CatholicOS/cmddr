@@ -1458,7 +1458,7 @@
     }
   },
   {
-    "id": "mag:leo-xiii/magni-nobis-1889-03-07",
+    "id": "mag:leo-xiii/magni-nobis-1889",
     "title": "Magni Nobis",
     "incipit": "Magni Nobis",
     "idStatus": "minted",
@@ -1473,7 +1473,10 @@
         "EN",
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "letters"
+      ]
     }
   },
   {
@@ -1506,24 +1509,6 @@
     "date": "1889-04-19",
     "source": {
       "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18890419_libentes-intelleximus.html",
-      "shelf": "letters",
-      "languages": [
-        "LA"
-      ],
-      "retrieved": "2026-09-07"
-    }
-  },
-  {
-    "id": "mag:leo-xiii/magni-nobis-1889-05-07",
-    "title": "Magni Nobis",
-    "incipit": "Magni Nobis",
-    "idStatus": "minted",
-    "genre": "letter",
-    "issuerId": "rp:leo-xiii",
-    "issuerType": "pope",
-    "date": "1889-05-07",
-    "source": {
-      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18890307_magni-nobis.html",
       "shelf": "letters",
       "languages": [
         "LA"
