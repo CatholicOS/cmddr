@@ -33,8 +33,13 @@ export function mintProvisionalId(
 }
 
 export function parseId(id: string): { issuer: string; slug: string; year: string } | null {
-  if (!MINTED_ID_RE.test(id)) return null;
-  const m = id.match(/^mag:([a-z0-9-]+)\/(.+)-(\d{4})(?:-\d{2}-\d{2})?$/);
-  if (!m) return null;
-  return { issuer: m[1]!, slug: m[2]!, year: m[3]! };
+  const provisional = id.match(/^mag:([a-z0-9-]+)\/(.+?)-(\d{4})-\d{2}-\d{2}(?:-\d+)?$/);
+  if (PROVISIONAL_ID_RE.test(id) && provisional) {
+    return { issuer: provisional[1]!, slug: provisional[2]!, year: provisional[3]! };
+  }
+  const minted = id.match(/^mag:([a-z0-9-]+)\/(.+)-(\d{4})(?:-\d{2}-\d{2})?$/);
+  if (MINTED_ID_RE.test(id) && minted) {
+    return { issuer: minted[1]!, slug: minted[2]!, year: minted[3]! };
+  }
+  return null;
 }

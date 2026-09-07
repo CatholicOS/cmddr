@@ -69,4 +69,19 @@ describe('parseId', () => {
     expect(parseId('md:leo-xiii/rerum-novarum-1891')).toBeNull();
     expect(parseId('mag:leo-xiii/rerum-novarum')).toBeNull();
   });
+
+  it('parses an ordinal-free provisional id', () => {
+    expect(parseId('mag:francis-i/angelus-2015-03-22'))
+      .toEqual({ issuer: 'francis-i', slug: 'angelus', year: '2015' });
+  });
+
+  it('parses an ordinal-suffixed provisional id', () => {
+    expect(parseId('mag:francis-i/angelus-2015-03-22-2'))
+      .toEqual({ issuer: 'francis-i', slug: 'angelus', year: '2015' });
+  });
+
+  it('parses a collision-resolved minted id to its year', () => {
+    expect(parseId('mag:pius-ix/ubi-primum-1849-02-02'))
+      .toEqual({ issuer: 'pius-ix', slug: 'ubi-primum', year: '1849' });
+  });
 });

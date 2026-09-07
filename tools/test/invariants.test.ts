@@ -56,6 +56,22 @@ describe('checkDocuments', () => {
     expect(rules([{ ...good, genre: null, sourceGenreLabel: 'Protesta' }])).not.toContain(15);
   });
 
+  it('accepts a well-formed provisional record', () => {
+    expect(checkDocuments([{
+      ...good, id: 'mag:francis-i/angelus-2015-03-22', idStatus: 'provisional',
+      issuerId: 'rp:francis-i', date: '2015-03-22',
+    }], GENRES)).toEqual([]);
+  });
+
+  it('13: an unresolvable issuer does not suppress rules 10, 12 and 15', () => {
+    const result = rules([{
+      ...good, issuerId: 'leo-xiii', date: '1892-05-15', genre: 'sonnet',
+    }]);
+    expect(result).toContain(13);
+    expect(result).toContain(10);
+    expect(result).toContain(15);
+  });
+
   it('accepts a conciliar record namespaced under its council', () => {
     expect(checkDocuments([{
       id: 'mag:vatican-i/pastor-aeternus-1870', title: 'Pastor Aeternus',

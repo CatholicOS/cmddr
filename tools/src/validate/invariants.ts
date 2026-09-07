@@ -22,11 +22,14 @@ export function checkDocuments(docs: DocumentRecord[], genreIds: Set<string>): V
     const parts = parseId(d.id);
     if (!parts) { out.push({ rule: 8, id: d.id, message: 'id is unparseable' }); continue; }
 
-    let local: string;
+    // A failed issuerLocalPart is reported as rule 13, but must not suppress the
+    // independent checks (10, 12, 15) below — only rule 9 and the collision
+    // grouping actually depend on `local`.
+    let local: string | null = null;
     try { local = issuerLocalPart(d.issuerId); }
-    catch (e) { out.push({ rule: 13, id: d.id, message: String(e) }); continue; }
+    catch (e) { out.push({ rule: 13, id: d.id, message: String(e) }); }
 
-    if (parts.issuer !== local) {
+    if (local !== null && parts.issuer !== local) {
       out.push({ rule: 9, id: d.id, message: `namespace '${parts.issuer}' != issuerId '${d.issuerId}'` });
     }
     if (parts.year !== d.date.slice(0, 4)) {
@@ -36,9 +39,11 @@ export function checkDocuments(docs: DocumentRecord[], genreIds: Set<string>): V
       out.push({ rule: 12, id: d.id, message: `slug '${parts.slug}' != slugify('${d.incipit}')` });
     }
 
-    const known = d.issuerId.startsWith('oec:') ? KNOWN_COUNCIL_IDS : KNOWN_PONTIFF_IDS;
-    if (!known.has(d.issuerId)) {
-      out.push({ rule: 13, id: d.id, message: `issuerId not in the vendored registry: ${d.issuerId}` });
+    if (local !== null) {
+      const known = d.issuerId.startsWith('oec:') ? KNOWN_COUNCIL_IDS : KNOWN_PONTIFF_IDS;
+      if (!known.has(d.issuerId)) {
+        out.push({ rule: 13, id: d.id, message: `issuerId not in the vendored registry: ${d.issuerId}` });
+      }
     }
     if (d.promulgatedBy && !KNOWN_PONTIFF_IDS.has(d.promulgatedBy)) {
       out.push({ rule: 13, id: d.id, message: `promulgatedBy not in CRPDR: ${d.promulgatedBy}` });
@@ -52,7 +57,7 @@ export function checkDocuments(docs: DocumentRecord[], genreIds: Set<string>): V
       out.push({ rule: 15, id: d.id, message: `unknown genre: ${d.genre}` });
     }
 
-    if (d.idStatus === 'minted') {
+    if (d.idStatus === 'minted' && local !== null) {
       const k = `${local}|${slugify(d.incipit)}|${d.date.slice(0, 4)}`;
       byCollision.set(k, [...(byCollision.get(k) ?? []), d]);
     }
