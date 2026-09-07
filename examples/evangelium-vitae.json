@@ -12,20 +12,24 @@
   },
 
   "document": {
-    "id": "EV",
+    "id": "mag:john-paul-ii/evangelium-vitae-1995",
     "title": "Evangelium Vitae",
     "genre": "encyclical",
-    "issuerId": "john-paul-ii",
+    "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1995-03-25",
     "scope": "universal",
+    "incipit": "Evangelium Vitae",
+    "incipitLang": "la",
+    "idStatus": "minted",
+    "sigla": "EV",
     "aliases": ["The Gospel of Life"]
   },
 
   "assessments": [
     {
-      "id": "EV-general",
-      "document": "EV",
+      "id": "mag:john-paul-ii/evangelium-vitae-1995#*",
+      "document": "mag:john-paul-ii/evangelium-vitae-1995",
       "section": "*",
       "topic": "The encyclical as a whole: exhortation and doctrinal synthesis on the value and inviolability of human life.",
       "register": "authentic-ordinary",
@@ -40,8 +44,8 @@
       }
     },
     {
-      "id": "EV-57",
-      "document": "EV",
+      "id": "mag:john-paul-ii/evangelium-vitae-1995#57",
+      "document": "mag:john-paul-ii/evangelium-vitae-1995",
       "section": "57",
       "topic": "The direct and voluntary killing of an innocent human being is always gravely immoral.",
       "register": "ordinary-universal",
@@ -57,8 +61,8 @@
       }
     },
     {
-      "id": "EV-62",
-      "document": "EV",
+      "id": "mag:john-paul-ii/evangelium-vitae-1995#62",
+      "document": "mag:john-paul-ii/evangelium-vitae-1995",
       "section": "62",
       "topic": "Direct abortion, as an end or a means, is always gravely immoral.",
       "register": "ordinary-universal",
@@ -74,8 +78,8 @@
       }
     },
     {
-      "id": "EV-65",
-      "document": "EV",
+      "id": "mag:john-paul-ii/evangelium-vitae-1995#65",
+      "document": "mag:john-paul-ii/evangelium-vitae-1995",
       "section": "65",
       "topic": "Euthanasia is a grave violation of the law of God.",
       "register": "ordinary-universal",

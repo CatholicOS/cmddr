@@ -9,10 +9,12 @@
   "properties": {
     "id": {
       "type": "string",
-      "description": "Locus id: '{DOCUMENT_ID}-{SECTION}' (e.g. 'EV-62'), or '{DOCUMENT_ID}-general' for a document-wide assessment."
+      "pattern": "^mag:[a-z0-9-]+/[^#]+#(\\*|[^#]+)$",
+      "description": "Locus id: '{document.id}#{section}' (e.g. 'mag:john-paul-ii/evangelium-vitae-1995#62'), or '{document.id}#*' for a document-wide assessment."
     },
     "document": {
       "type": "string",
+      "pattern": "^mag:[a-z0-9-]+/.+$",
       "description": "Foreign key -> document.id."
     },
     "section": {

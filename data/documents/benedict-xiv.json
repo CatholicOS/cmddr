@@ -1,0 +1,819 @@
+[
+  {
+    "id": "mag:benedict-xiv/ubi-primum-1740",
+    "title": "Ubi primum",
+    "incipit": "Ubi primum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1740-12-03",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-ubi-primum--i---3-dicembre-1740--nell--8217-ambito-.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/non-ambigimus-1741",
+    "title": "Non Ambigimus",
+    "incipit": "Non Ambigimus",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1741-05-30",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/breve--i-non-ambigimus--i---30-maggio-1741--il-pontefice-ricorda.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Breve"
+  },
+  {
+    "id": "mag:benedict-xiv/pro-eximia-tua-1741",
+    "title": "Pro Eximia Tua",
+    "incipit": "Pro Eximia Tua",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1741-06-30",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/breve-enciclica--i-pro-eximia-tua---i--30-giugno-1741--il-presen.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Breve Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/quanta-cura-1741",
+    "title": "Quanta Cura",
+    "incipit": "Quanta Cura",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1741-06-30",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/breve--i-quanta-cura--i---30-giugno-1741--sdegnata-condanna-cont.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Breve"
+  },
+  {
+    "id": "mag:benedict-xiv/in-suprema-universalis-1741",
+    "title": "In Suprema Universalis",
+    "incipit": "In Suprema Universalis",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1741-08-22",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/breve--i-in-suprema-universalis---i--22-agosto-1741--nei-giorni-.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Breve"
+  },
+  {
+    "id": "mag:benedict-xiv/quamvis-paternae-1741",
+    "title": "Quamvis Paternae",
+    "incipit": "Quamvis Paternae",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1741-08-26",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-quamvis-paternae---i--26-agosto-1741--richiamate-le.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/satis-vobis-compertum-1741",
+    "title": "Satis Vobis Compertum",
+    "incipit": "Satis Vobis Compertum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1741-11-17",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-satis-vobis-compertum--i--17-novembre-1741--il-pont.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/etsi-minime-1742",
+    "title": "Etsi Minime",
+    "incipit": "Etsi Minime",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1742-02-07",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-etsi-minime--i---7-febbraio-1742--affermata-la-prim.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/certiores-effecti-1742",
+    "title": "Certiores Effecti",
+    "incipit": "Certiores Effecti",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1742-11-13",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-certiores-effecti--i---13-novembre-1742--i-sacerdot.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/cum-illud-semper-1742",
+    "title": "Cum Illud Semper",
+    "incipit": "Cum Illud Semper",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1742-12-14",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-cum-illud-semper--i---14-dicembre-1742--desiderando.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/quemadmodum-preces-1743",
+    "title": "Quemadmodum Preces",
+    "incipit": "Quemadmodum Preces",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1743-03-23",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-quemadmodum-preces--i---23-marzo-1743--spetta-alla-.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/nimiam-licentiam-1743",
+    "title": "Nimiam Licentiam",
+    "incipit": "Nimiam Licentiam",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1743-05-18",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/breve--i-nimiam-licentiam--i---18-maggio-1743--constatato-che-in.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Breve"
+  },
+  {
+    "id": "mag:benedict-xiv/inter-omnigenas-1744",
+    "title": "Inter Omnigenas",
+    "incipit": "Inter Omnigenas",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1744-02-02",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-inter-omnigenas---i--2-febbraio-1744--il-pontefice-.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/cum-semper-oblatas-1744",
+    "title": "Cum Semper Oblatas",
+    "incipit": "Cum Semper Oblatas",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1744-08-19",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-cum-semper-oblatas--i---19-agosto-1744--il-pontefic.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/in-suprema-catholicae-1744",
+    "title": "In Suprema Catholicae",
+    "incipit": "In Suprema Catholicae",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1744-11-20",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/breve--i-in-suprema-catholicae--i---20-novembre-1744--viene-conc.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Breve"
+  },
+  {
+    "id": "mag:benedict-xiv/cum-multorum-charitate-1745",
+    "title": "Cum Multorum Charitate",
+    "incipit": "Cum Multorum Charitate",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1745-02-18",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/breve--i-cum-multorum-charitate--i---18-febbraio-1745--il-giubil.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Breve"
+  },
+  {
+    "id": "mag:benedict-xiv/libentissime-quidem-1745",
+    "title": "Libentissime Quidem",
+    "incipit": "Libentissime Quidem",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1745-06-10",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-libentissime-quidem--i---10-giugno-1745--richiamati.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/gravissimum-supremi-1745",
+    "title": "Gravissimum Supremi",
+    "incipit": "Gravissimum Supremi",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1745-09-08",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-gravissimum-supremi---i--8-settembre-1745--il-ponte.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/vix-pervenit-1745",
+    "title": "Vix Pervenit",
+    "incipit": "Vix Pervenit",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1745-11-01",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-vix-pervenit--i---1-novembre-1745--poiche-e-venuto-.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/accepimus-praestantium-1746",
+    "title": "Accepimus Praestantium",
+    "incipit": "Accepimus Praestantium",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1746-07-16",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-accepimus-praestantium--i---16-luglio-1746--sui-cri.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/quemadmodum-nihil-1746",
+    "title": "Quemadmodum Nihil",
+    "incipit": "Quemadmodum Nihil",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1746-12-16",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/breve--i-quemadmodum-nihil--i---16-dicembre-1746--il-pontefice-c.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Breve"
+  },
+  {
+    "id": "mag:benedict-xiv/inter-caetera-1748",
+    "title": "Inter Caetera",
+    "incipit": "Inter Caetera",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1748-01-01",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-inter-caetera--i---1-gennaio-1748--il-pontefice-esp.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/magnae-nobis-1748",
+    "title": "Magnae Nobis",
+    "incipit": "Magnae Nobis",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1748-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-magnae-nobis--i---29-giugno-1748--il-pontefice-reag.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/annus-qui-hunc-1749",
+    "title": "Annus Qui Hunc",
+    "incipit": "Annus Qui Hunc",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1749-02-19",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-annus-qui-hunc--i---19-febbraio-1749--nell--8217-im.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/officii-nostri-1749",
+    "title": "Officii Nostri",
+    "incipit": "Officii Nostri",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1749-03-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/bolla--i-officii-nostri--i---15-marzo-1749--poiche-sono-sorti-di.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Bolla"
+  },
+  {
+    "id": "mag:benedict-xiv/peregrinantes-a-domino-1749",
+    "title": "Peregrinantes a Domino",
+    "incipit": "Peregrinantes a Domino",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1749-05-05",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/bolla--i-peregrinantes-a-domino--i---5-maggio-1749-il-pontefice-.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Bolla"
+  },
+  {
+    "id": "mag:benedict-xiv/apostolica-constitutio-1749",
+    "title": "Apostolica Constitutio",
+    "incipit": "Apostolica Constitutio",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1749-06-26",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-apostolica-constitutio--i---26-giugno-1749--richiam.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/gravissimo-animi-1749",
+    "title": "Gravissimo Animi",
+    "incipit": "Gravissimo Animi",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1749-10-31",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-gravissimo-animi--i---31-ottobre-1749--il-pontefice.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/inter-praeteritos-1749",
+    "title": "Inter praeteritos",
+    "incipit": "Inter praeteritos",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1749-12-03",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-inter-praeteritos--i---3-dicembre-1749--allo-scopo-.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/benedictus-deus-1750",
+    "title": "Benedictus Deus",
+    "incipit": "Benedictus Deus",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1750-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/bolla--i-benedictus-deus--i---25-dicembre-1750--estensione-a-tut.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Bolla"
+  },
+  {
+    "id": "mag:benedict-xiv/celebrationem-magni-1751",
+    "title": "Celebrationem Magni",
+    "incipit": "Celebrationem Magni",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1751-01-01",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-celebrationem-magni--i---1-gennaio-1751--dopo-aver-.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/prodiit-jamdudum-1751",
+    "title": "Prodiit Jamdudum",
+    "incipit": "Prodiit Jamdudum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1751-01-30",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-prodiit-jamdudum--i---30-gennaio-1751--poiche-quest.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/elapso-proxime-anno-1751",
+    "title": "Elapso Proxime Anno",
+    "incipit": "Elapso Proxime Anno",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1751-02-20",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-elapso-proxime-anno--i---20-febbraio-1751--il-ponte.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/providas-romanorum-1751",
+    "title": "Providas Romanorum",
+    "incipit": "Providas Romanorum",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1751-03-18",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/bolla--i-providas-romanorum--i---18-marzo-1751--il-pontefice-con.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Bolla"
+  },
+  {
+    "id": "mag:benedict-xiv/magno-cum-animi-1751",
+    "title": "Magno Cum Animi",
+    "incipit": "Magno Cum Animi",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1751-06-02",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-magno-cum-animi--i---2-giugno-1751--sugli-abusi-da-.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/a-quo-primum-1751",
+    "title": "A Quo Primum",
+    "incipit": "A Quo Primum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1751-06-14",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-a-quo-primum---i--14-giugno-1751--il-pontefice-indi.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/cum-religiosi-aeque-1754",
+    "title": "Cum Religiosi Aeque",
+    "incipit": "Cum Religiosi Aeque",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1754-06-26",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-cum-religiosi-aeque--i---26-giugno-1754--il-pontefi.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/quod-provinciale-1754",
+    "title": "Quod Provinciale",
+    "incipit": "Quod Provinciale",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1754-08-01",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-quod-provinciale--i---1-agosto-1754--cristiani-che-.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/allatae-sunt-1755",
+    "title": "Allatae Sunt",
+    "incipit": "Allatae Sunt",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1755-07-26",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-allatae-sunt--i---26-luglio-1755--in-questa-encicli.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/quam-ex-sublimi-1755",
+    "title": "Quam Ex Sublimi",
+    "incipit": "Quam Ex Sublimi",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1755-08-08",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/breve--i-quam-ex-sublimi--i---8-agosto-1755--il-pontefice-estend.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Breve"
+  },
+  {
+    "id": "mag:benedict-xiv/ex-quo-primum-1756",
+    "title": "Ex Quo Primum",
+    "incipit": "Ex Quo Primum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1756-03-01",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-ex-quo-primum--i---1-marzo-1756--il-pontefice-invit.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/ex-omnibus-christiani-1756",
+    "title": "Ex Omnibus Christiani",
+    "incipit": "Ex Omnibus Christiani",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1756-10-16",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-ex-omnibus-christiani--i---16-ottobre-1756--lettera.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  },
+  {
+    "id": "mag:benedict-xiv/quam-grave-1757",
+    "title": "Quam Grave",
+    "incipit": "Quam Grave",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xiv",
+    "issuerType": "pope",
+    "date": "1757-08-02",
+    "source": {
+      "url": "https://www.vatican.va/content/benedictus-xiv/it/documents/enciclica--i-quam-grave--i---2-agosto-1757--il-pontefice-segnala.html",
+      "shelf": null,
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "Enciclica"
+  }
+]

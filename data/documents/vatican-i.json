@@ -1,0 +1,46 @@
+[
+  {
+    "id": "mag:vatican-i/dei-filius-1870",
+    "title": "Dei Filius",
+    "incipit": "Dei Filius",
+    "idStatus": "minted",
+    "genre": "constitution",
+    "issuerId": "oec:vatican-i",
+    "issuerType": "ecumenical-council",
+    "date": "1870-04-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-ix/it/documents/constitutio-dogmatica-dei-filius-24-aprilis-1870.html",
+      "shelf": null,
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "promulgatedBy": "rp:pius-ix",
+    "descriptiveTitle": "dogmatic",
+    "sourceGenreLabel": "Costituzione dogmatica"
+  },
+  {
+    "id": "mag:vatican-i/pastor-aeternus-1870",
+    "title": "Pastor Aeternus",
+    "incipit": "Pastor Aeternus",
+    "idStatus": "minted",
+    "genre": "constitution",
+    "issuerId": "oec:vatican-i",
+    "issuerType": "ecumenical-council",
+    "date": "1870-07-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-ix/it/documents/constitutio-dogmatica-pastor-aeternus-18-iulii-1870.html",
+      "shelf": null,
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "promulgatedBy": "rp:pius-ix",
+    "descriptiveTitle": "dogmatic",
+    "sourceGenreLabel": "Costituzione dogmatica"
+  }
+]

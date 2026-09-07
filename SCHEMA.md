@@ -20,7 +20,7 @@ one **Assessment** per notable passage.
 
 ## Controlled vocabularies
 
-**`issuerType`** (role/capacity) — `ecumenical-council` · `pope` · `bishop`. Used by `document.issuerType` (the role that issued it) and by `genre.issuerTypes` (the roles that may issue the genre). The issuer's *identity* (e.g. `john-paul-ii`) is carried separately in `document.issuerId`. When a pope promulgates a document issued by another authority — chiefly a conciliar constitution — the promulgating pope is recorded in the optional `document.promulgatedBy` (e.g. `paul-vi`), which does not change `issuerType`.
+**`issuerType`** (role/capacity) — `ecumenical-council` · `pope` · `bishop`. Used by `document.issuerType` (the role that issued it) and by `genre.issuerTypes` (the roles that may issue the genre). The issuer's *identity* (e.g. `rp:john-paul-ii`) is carried separately in `document.issuerId`. When a pope promulgates a document issued by another authority — chiefly a conciliar constitution — the promulgating pope is recorded in the optional `document.promulgatedBy` (e.g. `rp:paul-vi`), which does not change `issuerType`.
 
 **`scope`** — `universal` · `local`
 
@@ -61,11 +61,28 @@ one **Assessment** per notable passage.
 
 An assessment is keyed to a passage by `document` + `section`:
 
-- `id` = `{DOCUMENT_ID}-{SECTION}` (e.g. `EV-62`, `OS-4`, `LG-25`).
+- `id` = `{document.id}#{section}` (e.g. `mag:john-paul-ii/evangelium-vitae-1995#62`).
 - `document` = the parent Document `id` (foreign key).
-- `section` = the citation unit *as the document itself numbers it* (paragraph number, canon number, chapter+number). Store it as a
-  string so ranges (`57-66`) and non-numeric units (`can.9`) are expressible.
-- A document-wide assessment (e.g. “LG defined nothing”) uses `section: "*"` and `id` `{DOCUMENT_ID}-general`.
+- `section` = the citation unit *as the document itself numbers it* (paragraph number, canon number,
+  chapter+number). Store it as a string so ranges (`57-66`) and non-numeric units (`can.9`) are
+  expressible.
+- A document-wide assessment uses `section: "*"` and id `{document.id}#*`.
+
+The separator is `#`, not `-`, because a document id already ends in a year: `…-1995-62` cannot be
+parsed. The scholarly sigla (`EV`, `LG`) survives as the optional, display-only `document.sigla`, so
+`EV 62` remains available as a human citation without being a key.
+
+## Identifier minting
+
+Document identifiers take the form `mag:{issuer}/{incipit-slug}-{year}`. The `{issuer}` segment is
+the local part of `issuerId` and is always the **issuer**, never the promulgator — so a conciliar
+constitution is `mag:vatican-ii/gaudium-et-spes-1965`, with the promulgating pope in
+`promulgatedBy`. The year is unconditional: incipits collide even within one pontificate (Pius IX
+issued two encyclicals titled *Ubi Primum*, in 1847 and 1849), and a discriminator added only on
+collision would force existing identifiers to change. Documents with no conventional incipit take a
+`provisional` id of the form `mag:{issuer}/{genre-slug}-{YYYY}-{MM}-{DD}[-{n}]`, marked by
+`idStatus`. Full rules are in
+[the design spec](docs/superpowers/specs/2026-09-07-document-registry-identifiers-design.md).
 
 ---
 
@@ -91,6 +108,18 @@ These are the rules a linter/CI should enforce so the data can never re-collapse
    at least one of its assessments must have `register = extraordinary` and `intent = definitive`. (Cross-resource; enforceable where
    a document and its assessments are validated together, e.g. an example bundle.) A conciliar Constitution's `descriptiveTitle` of
    `dogmatic` carries **no** such requirement — it is a title, not a definition.
+8. **Id form and uniqueness.** `id` matches the form required by its `idStatus` (minted or provisional), and is globally unique.
+9. **Namespace matches issuer.** The id's namespace segment equals the local part of `issuerId`.
+10. **Year matches date.** The id's year equals the year of `date`.
+11. **Collision requires the full-date form.** No two documents share (issuer, incipit-slug, year) unless **both** carry the
+    full-date form.
+12. **Slug round-trips.** `slugify(incipit)` equals the id's slug segment.
+13. **Issuer ids resolve.** `issuerId` and `promulgatedBy` resolve against vendored copies of the CRPDR and COECDR id lists.
+14. **Assessment id and document reference.** An assessment's `id` is `{document}#{section}`, and `document` names an existing
+    document.
+15. **Genre reference.** `genre`, when non-null, resolves to an id in `data/genres.json`; when null, `sourceGenreLabel` is present.
+16. **Issuer namespace matches issuer type.** `issuerId` begins with `oec:` **iff** `issuerType = ecumenical-council`.
+17. **Issuer type is valid for the genre.** `issuerType`, when `genre` is non-null, is one of that genre's `issuerTypes` in `data/genres.json`.
 
 ---
 
@@ -109,24 +138,28 @@ These are the rules a linter/CI should enforce so the data can never re-collapse
 }
 ```
 
-**Document** (`EV`)
+**Document** (`mag:john-paul-ii/evangelium-vitae-1995`)
 ```json
 {
-  "id": "EV",
+  "id": "mag:john-paul-ii/evangelium-vitae-1995",
   "title": "Evangelium Vitae",
   "genre": "encyclical",
-  "issuerId": "john-paul-ii",
+  "issuerId": "rp:john-paul-ii",
   "issuerType": "pope",
   "date": "1995-03-25",
-  "scope": "universal"
+  "scope": "universal",
+  "incipit": "Evangelium Vitae",
+  "incipitLang": "la",
+  "idStatus": "minted",
+  "sigla": "EV"
 }
 ```
 
-**Assessment** (`EV-62`)
+**Assessment** (`mag:john-paul-ii/evangelium-vitae-1995#62`)
 ```json
 {
-  "id": "EV-62",
-  "document": "EV",
+  "id": "mag:john-paul-ii/evangelium-vitae-1995#62",
+  "document": "mag:john-paul-ii/evangelium-vitae-1995",
   "section": "62",
   "topic": "The direct abortion of an innocent human being is gravely immoral.",
   "register": "ordinary-universal",
