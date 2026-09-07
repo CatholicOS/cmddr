@@ -77,26 +77,53 @@ export const GLOSS_CONNECTORS: readonly string[] = [
 // Italian; only its comma-prefixed form (', che ', evidenced above) is kept.
 
 /**
- * Address-salutation and third-person-narration openers (spec §4.2 review finding,
- * 2026-09-07). A residue beginning with one of these, at a word boundary and
- * case-insensitively, is never an incipit -- it is either an addressee heading (a letter to
- * a named cardinal or bishop) or a narrative description of the pontifical act. Checked
- * before any gloss-connector cut, because a short cut alone cannot catch these: cutting
- * 'Al Cardinale Pietro Respighi, sui sacerdoti...' at ', sui ' still leaves four words
- * ('Al Cardinale Pietro Respighi'), clearing MIN_WORDS_BEFORE_CUT.
+ * Third-person-narration openers (spec §4.2 review finding, 2026-09-07). A residue
+ * beginning with one of these, at a word boundary and case-insensitively, is never an
+ * incipit -- it is a narrative description of the pontifical act, unconditionally: unlike
+ * the article + honorific construction below, there is no common Italian incipit that opens
+ * 'Il Pontefice...' or 'Il Santo/Sommo Pontefice...'.
  *
- * 'Al' and 'Il Pontefice' are each evidenced by a real Pius X letters-shelf heading (see
- * incipit.test.ts: 'Al Cardinale Rampolla del Tindaro...' and 'Il Pontefice prescrive alle
- * Diocesi...'); 'Ai' by two ('Ai membri del comitato...', 'Ai componenti la direzione
- * provvisoria...'). 'Alla', 'Agli', 'Il Santo Padre' and 'Il Sommo Pontefice' have no
- * matching heading in the current corpus but are the grammatical siblings of the evidenced
- * forms (definite-article variants of the same address construction, and the synonyms for
- * 'Il Pontefice' already carried elsewhere in GLOSS_CONNECTORS) and were specified by the
- * review finding that introduced this guard.
+ * 'Il Pontefice' is evidenced by a real Pius X letters-shelf heading (incipit.test.ts:
+ * 'Il Pontefice prescrive alle Diocesi...'). 'Il Santo Padre' and 'Il Sommo Pontefice' have
+ * no matching heading in the current corpus but are the synonyms for 'Il Pontefice' already
+ * carried elsewhere in GLOSS_CONNECTORS, and were specified by the review finding that
+ * introduced this guard.
  */
-export const ADDRESS_OR_NARRATIVE_OPENERS: readonly string[] = [
-  'Al', 'Alla', 'Ai', 'Agli', 'Il Pontefice', 'Il Santo Padre', 'Il Sommo Pontefice',
+export const NARRATIVE_OPENERS: readonly string[] = [
+  'Il Pontefice', 'Il Santo Padre', 'Il Sommo Pontefice',
 ];
+
+/**
+ * Address-salutation articles (spec §4.2 review finding, 2026-09-07, round 2). A bare
+ * article is NOT on its own evidence of an addressee heading -- 'Al compimento delle
+ * riforme' (leo-xiii/letters; incipit.test.ts) is a genuine published incipit, article +
+ * common noun, whose id is already live in main. Round 1 nulled it wrongly by treating any
+ * 'Al'/'Ai'/'Alla'/'Agli' opener as an address, which is over-broad.
+ *
+ * An article is address-salutation evidence only when immediately followed by one of
+ * ADDRESS_HONORIFICS (see there). The article itself still needs listing, since the guard
+ * must match 'Al Cardinale...', 'Ai membri...'-shaped strings at the true start of the
+ * residue, not just anywhere the honorific appears.
+ */
+export const ADDRESS_ARTICLES: readonly string[] = ['Al', 'Alla', 'Ai', 'Agli'];
+
+/**
+ * Honorifics that turn a leading article into address-salutation evidence, per
+ * ADDRESS_ARTICLES. Deliberately exactly three tokens, each independently evidenced by a
+ * real Pius X letters-shelf heading (incipit.test.ts): 'Card.' by 'Al Card. Pietro
+ * Respighi', 'Cardinale' by both 'Al Cardinale Rampolla del Tindaro...' and 'Al Cardinale
+ * Pietro Respighi, sui sacerdoti...', 'Principessa' by 'Alla Principessa del Belgio,
+ * Enrichetta...'.
+ *
+ * A longer list was proposed and rejected (round 2 re-review) against the full 581-heading
+ * corpus: 'Mons.', 'Monsignor', 'Vescovo', 'Arcivescovo', 'Principe', 'Em.', 'Ecc.', 'S.E.'
+ * never occur as the word immediately following an article anywhere in the corpus.
+ * 'Arcivescovo' in particular occurs only mid-heading after a comma, in 'Al Cardinale
+ * Ferrari, Arcivescovo di Milano', where the trigger is already 'Cardinale'. Do not add
+ * tokens here without a heading that needs one -- that is the unevidenced-rule mistake round
+ * 1 fixed elsewhere in this file.
+ */
+export const ADDRESS_HONORIFICS: readonly string[] = ['Card.', 'Cardinale', 'Principessa'];
 
 /**
  * A gloss-connector cut is discarded, and the heading falls through to the

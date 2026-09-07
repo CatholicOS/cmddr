@@ -1,7 +1,7 @@
 import { slugify } from '../slug.js';
 import {
   GENRE_PREFIXES, GLOSS_CONNECTORS, BARE_GENRE_SLUGS, MAX_INCIPIT_WORDS,
-  ADDRESS_OR_NARRATIVE_OPENERS, MIN_WORDS_BEFORE_CUT,
+  NARRATIVE_OPENERS, ADDRESS_ARTICLES, ADDRESS_HONORIFICS, MIN_WORDS_BEFORE_CUT,
 } from '../mappings/incipit-rules.js';
 
 export interface HeadingParts {
@@ -18,14 +18,25 @@ const QUOTES: ReadonlyArray<[string, string]> = [
   ['«', '»'], ['“', '”'], ['‘', '’'], ['"', '"'], ["'", "'"],
 ];
 
+const escapeRe = (w: string): string => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
 /**
- * Matches an address salutation or third-person-narration opener at the start of a string,
- * at a word boundary, case-insensitively. Built from ADDRESS_OR_NARRATIVE_OPENERS so the
- * word list stays curated in incipit-rules.ts alongside its evidence.
+ * Matches, at the start of a string and case-insensitively, either a third-person-narration
+ * opener (unconditional -- see NARRATIVE_OPENERS) or an address article immediately followed
+ * by an attested honorific (see ADDRESS_ARTICLES / ADDRESS_HONORIFICS). A bare article alone
+ * does NOT match: 'Al compimento delle riforme' is a genuine incipit, article + common noun,
+ * not an address (round 2 review finding, 2026-09-07). The honorific boundary is a
+ * lookahead for 'not a letter' rather than \b, since 'Card.' ends in a period and \b would
+ * misbehave there.
  */
 const OPENER_PATTERN = new RegExp(
-  `^(?:${ADDRESS_OR_NARRATIVE_OPENERS.map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`,
-  'i',
+  '^(?:'
+    + NARRATIVE_OPENERS.map(escapeRe).join('|')
+    + ')\\b'
+    + '|'
+    + `^(?:${ADDRESS_ARTICLES.map(escapeRe).join('|')})`
+    + `\\s+(?:${ADDRESS_HONORIFICS.map(escapeRe).join('|')})(?!\\p{L})`,
+  'iu',
 );
 
 /**

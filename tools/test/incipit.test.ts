@@ -99,9 +99,11 @@ describe('extractIncipit', () => {
   // this function truncated wrongly. Two guards fix them (review finding, 2026-09-07):
   //   Guard A -- a gloss-connector cut that would leave fewer than two words before it is
   //   discarded, so the heading falls through to the untouched/word-ceiling path instead.
-  //   Guard B -- a residue opening with an address salutation ('Al', 'Ai', ...) or a
-  //   third-person narration opener ('Il Pontefice', ...) is never an incipit, regardless of
-  //   any connector further along.
+  //   Guard B -- a residue opening with an article immediately followed by an attested
+  //   honorific ('Al Cardinale...', 'Alla Principessa...') or with a third-person narration
+  //   opener ('Il Pontefice', ...) is never an incipit, regardless of any connector further
+  //   along. A bare article alone ('Al compimento delle riforme') is not enough -- see round
+  //   2 below.
   it('does not cut a short residue at a bare prepositional connector (Guard A)', () => {
     // Guard A: cutting at ' sulla ' would leave only 'Vicario' (one word), so the cut is
     // discarded and the whole bare incipit is kept, exactly like the flat/Leo XIII vectors.
@@ -116,6 +118,18 @@ describe('extractIncipit', () => {
       .toBeNull();
     expect(incipitOf('Il Pontefice prescrive alle Diocesi della Provincia di Roma il nuovo Compendio del Catechismo'))
       .toBeNull();
+  });
+
+  it('does not treat a bare article as an address salutation on its own (Guard B, round 2)', () => {
+    // 'Al compimento delle riforme' (leo-xiii/letters) is a genuine published incipit --
+    // article + common noun, not an addressee heading. Round 1 nulled it wrongly by treating
+    // any 'Al'/'Ai'/'Alla'/'Agli' opener as an address; the article now only counts as
+    // address-salutation evidence when immediately followed by an attested honorific
+    // ('Card.', 'Cardinale', 'Principessa'). This is the case that proves the guard is
+    // narrow enough -- a future widening of ADDRESS_HONORIFICS that swallowed it again
+    // would fail here first.
+    expect(extractIncipit('Al compimento delle riforme'))
+      .toEqual({ title: 'Al compimento delle riforme', incipit: 'Al compimento delle riforme' });
   });
 
   it('returns null for real addressee and narrative shelf-era headings with no incipit', () => {
@@ -135,16 +149,17 @@ describe('extractIncipit', () => {
     }
   });
 
-  it('catches four more real addressee/narrative headings that were silently wrong before Guard B', () => {
+  it('catches three more real addressee headings that were silently wrong before Guard B', () => {
     // Guard B also fixes latent false "successes": before it existed, these short headings
     // never triggered any rule (no genre prefix, no cut, under the word ceiling) and were
     // silently returned as if they were bare incipits. Each is confirmed non-incipit by its
     // own URL slug on vatican.va, which is descriptive rather than incipit-derived
-    // (hf_..._catechismo, _cardinale-ferrari, _principessa-belgio, _chirografo) -- unlike a
-    // genuine bare incipit's slug, which always abbreviates the incipit itself (e.g.
-    // _adiutricem for 'Adiutricem populi').
+    // (hf_..._catechismo, _cardinale-ferrari, _principessa-belgio) -- unlike a genuine bare
+    // incipit's slug, which always abbreviates the incipit itself (e.g. _adiutricem for
+    // 'Adiutricem populi'). Each also carries the honorific ('Card.', 'Cardinale',
+    // 'Principessa') that distinguishes a real address from 'Al compimento delle riforme'
+    // above.
     for (const h of [
-      'Al compimento delle riforme',                                  // hf_l-xiii_let_..._chirografo
       'Al Card. Pietro Respighi',                                     // hf_p-x_let_..._catechismo
       'Al Cardinale Ferrari, Arcivescovo di Milano',                  // hf_p-x_let_..._cardinale-ferrari
       "Alla Principessa del Belgio, Enrichetta, Duchessa di Vendôme", // hf_p-x_let_..._principessa-belgio
