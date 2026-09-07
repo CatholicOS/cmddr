@@ -5,21 +5,22 @@
   "description": "One concrete magisterial document / speech. References a Genre. May be fully described by its Genre alone (no Assessments) or carry one Assessment per notable passage.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "title", "genre", "issuerId", "issuerType"],
+  "required": ["id", "title", "genre", "issuerId", "issuerType", "idStatus"],
   "properties": {
     "id": {
       "type": "string",
-      "pattern": "^[A-Za-z0-9._-]+$",
-      "description": "Canonical short id used as the locus prefix, e.g. 'EV', 'LG', 'OS'."
+      "pattern": "^mag:[a-z0-9-]+/[a-z0-9]+(-[a-z0-9]+)*-[0-9]{4}(-[0-9]{2}-[0-9]{2})?(-[0-9]+)?$",
+      "description": "Canonical identifier: 'mag:{issuer}/{incipit-slug}-{year}'. The issuer segment is the local part of issuerId. See the design spec §3."
     },
     "title": { "type": "string" },
     "genre": {
-      "type": "string",
-      "description": "Foreign key -> genre.id."
+      "type": ["string", "null"],
+      "description": "Foreign key -> genre.id in data/genres.json. Null when the source genre has no Genre Registry row yet; sourceGenreLabel then records the raw label."
     },
     "issuerId": {
       "type": "string",
-      "description": "Identity of the concrete issuer, e.g. 'john-paul-ii', 'second-vatican-council'."
+      "pattern": "^(rp|oec):[a-z0-9-]+$",
+      "description": "Prefixed registry id of the concrete issuer, e.g. 'rp:john-paul-ii', 'oec:vatican-ii'."
     },
     "issuerType": {
       "enum": ["ecumenical-council", "pope", "bishop"],
@@ -27,7 +28,25 @@
     },
     "promulgatedBy": {
       "type": "string",
-      "description": "Optional identity of the pope who promulgated the document, when distinct from the issuer — chiefly for conciliar documents (e.g. 'paul-vi' promulgating a Second Vatican Council constitution). Does not change issuerType."
+      "pattern": "^rp:[a-z0-9-]+$",
+      "description": "Optional prefixed id of the pope who promulgated the document, when distinct from the issuer. Does not change issuerType."
+    },
+    "incipit": { "type": "string", "description": "The incipit as printed by the source, unnormalised (e.g. 'Adiutricem populi')." },
+    "incipitLang": { "type": "string", "pattern": "^[a-z]{2}$", "description": "ISO 639-1 language of the incipit; vernacular incipits are first-class." },
+    "idStatus": { "enum": ["minted", "provisional"], "default": "minted", "description": "'minted' ids are permanent; 'provisional' ids may be re-minted." },
+    "sigla": { "type": "string", "pattern": "^[A-Z][A-Za-z]{0,7}$", "description": "Conventional scholarly abbreviation (EV, LG, GS). Display only, never a key." },
+    "sourceGenreLabel": { "type": "string", "description": "Genre label exactly as the source prints it (e.g. 'Enciclica', 'Protesta')." },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "url": { "type": ["string", "null"] },
+        "shelf": { "type": ["string", "null"] },
+        "alsoShelvedAs": { "type": "array", "items": { "type": "string" },
+          "description": "Other vatican.va shelves the same document is filed under; the shelves are not disjoint." },
+        "languages": { "type": "array", "items": { "type": "string" } },
+        "retrieved": { "type": "string", "format": "date" }
+      }
     },
     "date": {
       "type": "string",
@@ -51,7 +70,18 @@
     "aliases": {
       "type": "array",
       "items": { "type": "string" },
-      "description": "Alternative identifiers / incipits."
+      "description": "Alternative titles (e.g. 'The Gospel of Life'). Incipits live in the incipit field."
     }
-  }
+  },
+  "allOf": [
+    {
+      "description": "a minted id requires an incipit; a null genre requires the raw source label",
+      "if": { "properties": { "idStatus": { "const": "minted" } }, "required": ["idStatus"] },
+      "then": { "required": ["incipit"] }
+    },
+    {
+      "if": { "properties": { "genre": { "type": "null" } }, "required": ["genre"] },
+      "then": { "required": ["sourceGenreLabel"] }
+    }
+  ]
 }
