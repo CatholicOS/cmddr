@@ -42,6 +42,14 @@ export const POPES: readonly PopeSource[] = [
       'encyclicals', 'letters', 'motu_proprio',
     ],
   },
+  // Pius XI and Pius XII (Task 8): NOT added here. The measured provisional share for
+  // both pontificates together is 27.3% (112/410), above the spec §8 go/no-go budget of
+  // "roughly a quarter" even after a full round of evidenced rule-table iteration -- see
+  // task-8-report.md. Wiring these two rows back in is exactly the "push on" step spec §8
+  // says not to take until §4.2 is revisited; the fixtures and the rule-table fixes found
+  // along the way are kept (tools/fixtures/pius-xi-*.html, pius-xii-*.html;
+  // incipit-rules.ts; incipit.ts; this file's own git history), ready for whoever resumes
+  // this once that decision is made.
 ] as const;
 
 /** The shelves harvested for a pope page; empty for an unknown slug or a flat-era page. */

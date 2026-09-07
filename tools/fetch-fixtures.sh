@@ -44,3 +44,16 @@ if [ -z "$POPE" ] || [ "$POPE" = pius-x ]; then
     shelf pius-x "$s"
   done
 fi
+
+if [ -z "$POPE" ] || [ "$POPE" = pius-xi ]; then
+  for s in encyclicals bulls briefs apost_constitutions apost_letters motu_proprio letters; do
+    shelf pius-xi "$s"
+  done
+fi
+
+if [ -z "$POPE" ] || [ "$POPE" = pius-xii ]; then
+  for s in encyclicals bulls briefs apost_constitutions apost_letters \
+           apost_exhortations motu_proprio letters; do
+    shelf pius-xii "$s"
+  done
+fi

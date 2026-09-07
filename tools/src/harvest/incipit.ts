@@ -40,6 +40,33 @@ const OPENER_PATTERN = new RegExp(
 );
 
 /**
+ * Task 8: the same address-article + honorific evidence as OPENER_PATTERN, but matched
+ * anywhere in the residue (not anchored at the start) and requiring a comma immediately
+ * before the article. A comma there is the tell that whatever precedes it is a narrative
+ * phrase, not an incipit -- see ADDRESS_HONORIFICS's doc comment, "Mid-string address
+ * salutation", for the evidence.
+ */
+const MID_ADDRESS_PATTERN = new RegExp(
+  `,\\s*(?:${ADDRESS_ARTICLES.map(escapeRe).join('|')})`
+    + `\\s+(?:${ADDRESS_HONORIFICS.map(escapeRe).join('|')})(?!\\p{L})`,
+  'iu',
+);
+
+/**
+ * Task 8: whether the residue opens with a bare ADDRESS_ARTICLE (no honorific required) and
+ * is, in full, longer than MAX_INCIPIT_WORDS -- see ADDRESS_HONORIFICS's doc comment, "Long
+ * address opener", for the evidence and for why this is scoped to long residues only.
+ */
+const LONG_ADDRESS_OPENER = new RegExp(
+  `^(?:${ADDRESS_ARTICLES.map(escapeRe).join('|')})\\b`,
+  'iu',
+);
+function isLongAddressOpener(rest: string): boolean {
+  return LONG_ADDRESS_OPENER.test(rest)
+    && rest.split(/\s+/).filter(Boolean).length > MAX_INCIPIT_WORDS;
+}
+
+/**
  * Strip a leading genre phrase, longest first. The phrase must be followed by end-of-string
  * or a non-letter, so 'Lettera' cannot eat the start of a word that merely begins with it.
  */
@@ -98,6 +125,18 @@ export function extractIncipit(heading: string): HeadingParts {
   // regardless of any connector further along -- checked first so a coincidental gloss
   // connector deep in the sentence never gets the chance to mint a false truncation.
   if (OPENER_PATTERN.test(rest)) return { title, incipit: null };
+
+  // Task 8: a narrative phrase followed by a comma-introduced address ('Avendo Noi
+  // creduto, al Card. Eugenio Pacelli...') is the same non-incipit shape as OPENER_PATTERN,
+  // just not at the very start of the residue -- see ADDRESS_HONORIFICS's doc comment.
+  if (MID_ADDRESS_PATTERN.test(rest)) return { title, incipit: null };
+
+  // Task 8: a long residue opening with a bare address article ('Ai Religiosi del
+  // Portogallo che hanno partecipato...') is an addressee heading even without a listed
+  // honorific -- checked before glossCut so a stray downstream connector cannot bypass the
+  // word ceiling that would otherwise catch it. See ADDRESS_HONORIFICS's doc comment,
+  // "Long address opener".
+  if (isLongAddressOpener(rest)) return { title, incipit: null };
 
   const quoted = quotedOpening(rest);
   if (quoted !== null) {

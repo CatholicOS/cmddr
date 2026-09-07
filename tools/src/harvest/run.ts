@@ -8,10 +8,20 @@ import { issuerLocalPart, mintId } from '../ids.js';
 import { slugify } from '../slug.js';
 import type { DocumentRecord, HarvestItem } from '../types.js';
 
-/** Most specific shelf first: a document filed twice keeps the more specific genre. */
+/**
+ * Most specific shelf first: a document filed twice keeps the more specific genre.
+ * `apost_exhortations` (Task 8 carried item): ranked here, after `motu_proprio` and before
+ * the generic `letters` catch-all. It is a distinct, named formal genre like the six shelves
+ * ahead of it -- not a generic bucket -- but pastoral exhortations carry no juridical force of
+ * their own, unlike the acts above (constitutions, apostolic letters, bulls, briefs, motu
+ * proprio), so it sits just below them. Previously absent, it fell through to the
+ * least-specific rank (tied with `speeches` and any unknown shelf); harmless while Pius X
+ * carried only one exhortation, but Pius XII carries eight, so an arbitrary tie-break here
+ * could pick a same-date cross-shelf collision's winner arbitrarily in `keepMoreSpecific`.
+ */
 const SHELF_SPECIFICITY = [
   'encyclicals', 'apost_constitutions', 'apost_letters', 'bulls',
-  'briefs', 'motu_proprio', 'letters', 'speeches',
+  'briefs', 'motu_proprio', 'apost_exhortations', 'letters', 'speeches',
 ];
 const rank = (shelf: string | null) => {
   // A flat-era (null) shelf and an unrecognised one both fall through to the same

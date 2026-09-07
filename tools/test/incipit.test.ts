@@ -175,3 +175,100 @@ describe('extractIncipit', () => {
       .toBe('Ad universam');
   });
 });
+
+describe('extractIncipit against Pius XI and Pius XII (Task 8)', () => {
+  it('recovers a genre-suffixed incipit ("Lettera Decretale" trailing the incipit)', () => {
+    // 'Christi nomen, Lettera Decretale (...)' (pius-xi/apost_letters, docSlug beatus-vianney
+    // for the whole document but confirming 'Christi nomen' is the genuine incipit, not the
+    // suffix) and the same page's own transcription typo dropping the space after the comma:
+    // 'Suavis agitata,Lettera Decretale' (docSlug saevis-agitata).
+    expect(incipitOf('Christi nomen, Lettera Decretale')).toBe('Christi nomen');
+    expect(incipitOf('Suavis agitata,Lettera Decretale')).toBe('Suavis agitata');
+  });
+
+  it('strips a leading "Lettera Decretale" genre prefix and cuts at ", per "', () => {
+    // 'Lettera Decretale Geminata Laetitia, per la Canonizzazione di Don Giovanni Bosco'
+    // (pius-xi/letters, docSlug geminata-laetitia).
+    expect(incipitOf('Lettera Decretale Geminata Laetitia, per la Canonizzazione di Don Giovanni Bosco'))
+      .toBe('Geminata Laetitia');
+  });
+
+  it('cuts at a bare " al " the same way as the four other address prepositions', () => {
+    // Thirteen real Pius XI letters-shelf headings share the shape 'Lettera <Incipit> al
+    // <addressee>...' with no connector between the incipit and the address at all -- each
+    // confirmed genuine by its own URL slug matching the words before 'al'.
+    expect(incipitOf('Lettera Quamvis Nostra al Cardinale Presbitero Sebastiano Leme de Silveira Cintra'))
+      .toBe('Quamvis Nostra');                                            // docSlug quamvis-nostra
+    expect(incipitOf('Lettera Ceteriores nos al Reverendo Padre Paolo Jacuzio, in occasione del 50°'))
+      .toBe('Ceteriores nos');                                            // docSlug certiores-nos
+    expect(incipitOf('Lettera Quando nel principio al Cardinal Pietro Gasparri, in merito ai rapporti'))
+      .toBe('Quando nel principio');                                      // docSlug quando-nel-principio
+  });
+
+  it('nulls a narrative phrase followed by a comma-introduced address, even though it has the same shape as a genuine "al" heading', () => {
+    // Three real Pius XI letters-shelf headings look identical in shape to the 'al'
+    // vectors above, but each one's own URL slug is addressee-based rather than
+    // incipit-based, proving the words before the comma are narration, not an incipit.
+    expect(incipitOf('Lettera Avendo Noi creduto, al Card. Eugenio Pacelli, nominato Segretario di Stato'))
+      .toBeNull();                                                        // docSlug card-pacelli
+    expect(incipitOf('Lettera Si compie oggi, al Card. Pietro Gasparri, in occasione della presentazione'))
+      .toBeNull();                                                        // docSlug dimissioni-gasparri
+    expect(incipitOf("Lettera Con grande Nostra, al Card. Bisleti circa l'istituzione di una Commissione"))
+      .toBeNull();                                                        // docSlug card-bisleti
+  });
+
+  it('nulls a long residue that opens with a bare address article, even with no listed honorific', () => {
+    // 'Ai Religiosi del Portogallo che hanno partecipato a Lisbona ad un Convegno sugli
+    // stati religiosi di perfezione' (pius-xii/letters, docSlug religiosi-portogallo) has no
+    // incipit at all; without this guard a stray ' sugli ' cut would otherwise truncate it to
+    // a false twelve-word "incipit" instead of nulling it.
+    expect(incipitOf(
+      'Ai Religiosi del Portogallo che hanno partecipato a Lisbona ad un Convegno sugli stati religiosi di perfezione',
+    )).toBeNull();
+  });
+
+  it('does not treat a short bare-article opening as a long address opener', () => {
+    // Regression guard: 'Al compimento delle riforme' (four words) must stay a genuine
+    // incipit -- the long-address-opener guard above must not fire below the word ceiling.
+    expect(incipitOf('Al compimento delle riforme')).toBe('Al compimento delle riforme');
+  });
+
+  it('strips "Epistola Apostolica" and "Breve Pontificio" as bare genre prefixes', () => {
+    // Both re-added with new evidence (Task 5's review deleted 'Epistola Apostolica' for
+    // lack of any at the time): 'Epistola Apostolica all'Episcopato della Bolivia circa lo
+    // sviluppo dei Seminari...' (pius-xii/apost_letters, docSlug episcopato-bolivia) and
+    // 'Breve Pontificio con il quale San Francesco d'Assisi e Santa Caterina da Siena
+    // vengono proclamati Patroni Primari d'Italia' (pius-xii/briefs, docSlug patroni-italia)
+    // both have no incipit at all.
+    expect(incipitOf("Epistola Apostolica all'Episcopato della Bolivia circa lo sviluppo dei Seminari"))
+      .toBeNull();
+    expect(incipitOf("Breve Pontificio con il quale San Francesco d'Assisi e Santa Caterina da Siena"))
+      .toBeNull();
+  });
+
+  it('strips a leading "Messaggio" the same way as other bare genre words', () => {
+    // 'Messaggio al Presidente della Polonia' (pius-xii/letters, docSlug presidente-pologna)
+    // has no incipit at all.
+    expect(incipitOf('Messaggio al Presidente della Polonia')).toBeNull();
+  });
+
+  it('recovers an incipit from a bare " in occasione" connector with no comma', () => {
+    // 'Auspicantibus Nobis in occasione del Giubileo Straordinario del 1929'
+    // (pius-xi/apost_constitutions): confirmed genuine by both its own <i>-italicised
+    // heading span and its URL slug (auspicantibus-nobis) on vatican.va.
+    expect(incipitOf('Auspicantibus Nobis in occasione del Giubileo Straordinario del 1929'))
+      .toBe('Auspicantibus Nobis');
+  });
+
+  it('never changes a single Leo XIII or Pius X heading (no-op corpus regression check)', () => {
+    // The 581-heading Leo XIII/Pius X corpus is byte-identical before and after every rule
+    // added in this describe block (verified by hand against tools/fixtures/*.html during
+    // Task 8; see task-8-report.md). A representative sample is re-asserted here so a future
+    // change to these rules that regresses the pilot corpus fails a fast, local test rather
+    // than only being caught by the full harvest.
+    for (const h of ['Quanta semper cura', "Dall'alto dell'Apostolico Seggio", 'Al compimento delle riforme']) {
+      expect(extractIncipit(h)).toEqual({ title: h, incipit: h });
+    }
+    expect(incipitOf('Al Card. Pietro Respighi')).toBeNull();
+  });
+});

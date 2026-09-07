@@ -30,8 +30,26 @@ export const GENRE_PREFIXES: readonly string[] = [
   // headings, exercised in incipit.test.ts).
   'Lettera Apostolica',
   'Lettera Enciclica',                               // Leo XIV, encyclicals
+  'Lettera Decretale',                               // Pius XI, letters: 'Lettera Decretale
+                                                      // Geminata Laetitia, per la Canonizzazione di
+                                                      // Don Giovanni Bosco' (docSlug geminata-laetitia,
+                                                      // Task 8)
   'Motu proprio',                                    // Pius XI, motu_proprio
   'Chirografo',                                      // Pius XI, letters
+  'Breve Pontificio',                                // Pius XII, briefs: 'Breve Pontificio con il
+                                                      // quale San Francesco d'Assisi e Santa Caterina
+                                                      // da Siena vengono proclamati Patroni Primari
+                                                      // d'Italia' (docSlug patroni-italia, Task 8) --
+                                                      // a bare genre phrase with no incipit at all,
+                                                      // reached via the lowercase-residue rule.
+  // Re-added (Task 8, with evidence -- Finding 3 in Task 5's review deleted the same phrase
+  // for lack of any): 'Epistola Apostolica all'Episcopato della Bolivia circa lo sviluppo dei
+  // Seminari...' (pius-xii/apost_letters, docSlug episcopato-bolivia) has no incipit at all.
+  'Epistola Apostolica',
+  // 'Messaggio al Presidente della Polonia' (pius-xii/letters, docSlug presidente-pologna,
+  // Task 8): a bare genre word, not an incipit, with no gloss connector of its own -- needs
+  // stripping as a prefix (not just BARE_GENRE_SLUGS) so the lowercase-residue rule can null it.
+  'Messaggio',
   // Bare genre word with nothing following: exercised directly by incipit.test.ts
   // ('Bolla' -> null). No real heading in the corpus prints an incipit straight after
   // an unadorned 'Bolla'; kept only for the bare-word case.
@@ -65,16 +83,43 @@ export const GLOSS_CONNECTORS: readonly string[] = [
                                                                                // (incipit.test.ts), which must NOT cut here
   ' ai ', ' agli ', ' alle ', ' alla ', " all'",                               // Benedict XV; ' ai ' confirmed against
                                                                                // 'Dès le début ai Capi dei popoli belligeranti...' (incipit.test.ts)
+  ' al ',                                                                      // Pius XI, letters (Task 8): the masculine-singular sibling of the
+                                                                               // four address prepositions above, missing until now. Confirmed
+                                                                               // against thirteen real 'Lettera <Incipit> al <addressee>...' headings
+                                                                               // whose own URL slug matches the pre-'al' words, e.g. 'Lettera Quamvis
+                                                                               // Nostra al Cardinale Presbitero...' (docSlug quamvis-nostra) and
+                                                                               // 'Lettera Ceteriores nos al Reverendo Padre...' (docSlug certiores-nos).
+                                                                               // Guarded by MIN_WORDS_BEFORE_CUT and by MID_ADDRESS_PATTERN in
+                                                                               // incipit.ts (see there) against the three headings shaped the same
+                                                                               // way but with NO incipit before the comma-introduced address.
+  ' in occasione',                                                            // Pius XI, apost_constitutions (Task 8): 'Auspicantibus Nobis in
+                                                                               // occasione del Giubileo Straordinario del 1929' -- confirmed genuine
+                                                                               // by both its own <i>-italicised heading span and its URL slug
+                                                                               // (auspicantibus-nobis). The comma-prefixed sibling ', in occasione'
+                                                                               // was deleted for lack of evidence in Task 5's review; this bare form
+                                                                               // is a distinct, now-evidenced entry.
+  ', per ',                                                                   // Pius XI, letters (Task 8): 'Lettera Decretale Geminata Laetitia, per
+                                                                               // la Canonizzazione di Don Giovanni Bosco' (docSlug geminata-laetitia).
+                                                                               // Deleted for lack of evidence in Task 5's review; now evidenced.
+  ', Lettera Decretale', ',Lettera Decretale',                                // Pius XI, apost_letters (Task 8): 'Christi nomen, Lettera Decretale
+                                                                               // («Beatus Ioannes Baptista Maria Vianney» - 31 maggio 1925)' and
+                                                                               // 'Suavis agitata,Lettera Decretale (19 maggio 1935)' (the source page's
+                                                                               // own transcription drops the space after the comma for the second
+                                                                               // one, hence both literal variants) -- the genre phrase trails the
+                                                                               // incipit here instead of leading it.
 ];
 
 // Deleted for lack of evidence (review finding, 2026-09-07): the comma-prefixed
 // ', con il quale' / ', con la quale' / ', colla quale' / ', con cui' variants, the
-// comma-prefixed ', il quale' / ', nel ' / ', per ' / ', in occasione' variants, the
+// comma-prefixed ', il quale' / ', nel ' / ', in occasione' variants, the
 // comma-prefixed ', sull'' / ', sulla ' / ', sui ' / ', sugli ' / ', sopra ' line, and the
 // bare (no-comma) ' che '. None was exercised by any test vector or by any heading in the
 // 581-record shelf-era corpus. The bare ' che ' in particular is the shape that would have
 // made Finding 1's false positives worse, since 'che' is one of the commonest words in
 // Italian; only its comma-prefixed form (', che ', evidenced above) is kept.
+// (Task 8 re-added ', per ' and the bare, non-comma ' in occasione' against real Pius XI
+// headings -- see GLOSS_CONNECTORS above. The other deletions above still stand: no
+// heading anywhere in the four-pontificate corpus has needed them.)
 
 /**
  * Third-person-narration openers (spec §4.2 review finding, 2026-09-07). A residue
@@ -124,6 +169,39 @@ export const ADDRESS_ARTICLES: readonly string[] = ['Al', 'Alla', 'Ai', 'Agli'];
  * 1 fixed elsewhere in this file.
  */
 export const ADDRESS_HONORIFICS: readonly string[] = ['Card.', 'Cardinale', 'Principessa'];
+
+/**
+ * Two more uses of ADDRESS_ARTICLES / ADDRESS_HONORIFICS, added in Task 8 against the
+ * Pius XI/XII corpus, both implemented in incipit.ts rather than as new curated lists here
+ * (no new tokens were needed -- only new positions to check them in):
+ *
+ * 1. **Mid-string address salutation.** A genre-prefix-stripped residue that opens with a
+ *    short narrative phrase before addressing a cardinal reads exactly like a genuine
+ *    "<Incipit> al <addressee>" heading (see ' al ' in GLOSS_CONNECTORS) UNLESS a comma
+ *    sits between the phrase and the address -- the comma is the tell that the phrase is
+ *    narrative, not an incipit. Evidenced by three real Pius XI letters-shelf headings whose
+ *    own URL slug is addressee-based, not incipit-based: 'Lettera Avendo Noi creduto, al
+ *    Card. Eugenio Pacelli...' (docSlug card-pacelli, not avendo-noi-creduto), 'Lettera Si
+ *    compie oggi, al Card. Pietro Gasparri...' (docSlug dimissioni-gasparri), 'Lettera Con
+ *    grande Nostra, al Card. Bisleti...' (docSlug card-bisleti) -- contrasted with thirteen
+ *    siblings with the identical shape but NO comma, whose slug confirms a genuine incipit
+ *    (e.g. 'Lettera Quamvis Nostra al Cardinale...', docSlug quamvis-nostra). incipit.ts's
+ *    `MID_ADDRESS_PATTERN` matches ', ' + an ADDRESS_ARTICLE + an ADDRESS_HONORIFIC anywhere
+ *    in the residue (not anchored at the start, unlike OPENER_PATTERN) and returns null.
+ *
+ * 2. **Long address opener.** A residue that opens with a bare ADDRESS_ARTICLE and no
+ *    honorific is not, on its own, address-salutation evidence (see ADDRESS_ARTICLES's own
+ *    doc comment and 'Al compimento delle riforme'). But when the *whole* residue also runs
+ *    longer than MAX_INCIPIT_WORDS, a stray downstream GLOSS_CONNECTORS match can otherwise
+ *    produce a false truncation that escapes the word ceiling entirely (the ceiling normally
+ *    catches an over-long address sentence, but only when nothing was cut at all). Evidenced
+ *    by 'Ai Religiosi del Portogallo che hanno partecipato a Lisbona ad un Convegno sugli
+ *    stati religiosi di perfezione' (pius-xii/letters, docSlug religiosi-portogallo, no
+ *    incipit at all) -- seventeen words, which a stray ' sugli ' cut would otherwise truncate
+ *    to a twelve-word non-incipit instead of correctly nulling. Does not affect 'Al
+ *    compimento delle riforme' (four words, under the ceiling) or 'Sancti Vladimiri Magni...:
+ *    eretta' (does not open with an address article).
+ */
 
 /**
  * A gloss-connector cut is discarded, and the heading falls through to the
