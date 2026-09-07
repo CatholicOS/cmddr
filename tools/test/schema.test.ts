@@ -108,6 +108,10 @@ describe('document.schema.json', () => {
     }))).toBe(true);
   });
 
+  it('rejects a document omitting idStatus, even one with an otherwise-loose id', () => {
+    expect(validate(strip({ ...baseDoc, id: 'mag:leo-xiii/rerum-novarum', idStatus: undefined }))).toBe(false);
+  });
+
   it('records harvest provenance', () => {
     expect(validate({
       ...baseDoc,

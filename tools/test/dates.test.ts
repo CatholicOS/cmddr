@@ -32,4 +32,20 @@ describe('parseSourceDate', () => {
     expect(parseSourceDate('Dum Multa')).toBeNull();
     expect(parseSourceDate('12 brumaio 1799')).toBeNull();
   });
+
+  it('parses 29 February in a leap year', () => {
+    expect(parseSourceDate('29 febbraio 1896')).toBe('1896-02-29');
+  });
+
+  it('rejects 29 February in a non-leap year', () => {
+    expect(parseSourceDate('29 febbraio 1895')).toBeNull();
+  });
+
+  it('rejects 31 April', () => {
+    expect(parseSourceDate('31 aprile 1895')).toBeNull();
+  });
+
+  it('still parses 31 January', () => {
+    expect(parseSourceDate('31 gennaio 1895')).toBe('1895-01-31');
+  });
 });

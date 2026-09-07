@@ -20,7 +20,13 @@ const docFiles = existsSync('data/documents')
   ? readdirSync('data/documents').filter((f) => f.endsWith('.json'))
   : [];
 for (const f of docFiles) {
-  for (const d of JSON.parse(readFileSync(`data/documents/${f}`, 'utf8')) as DocumentRecord[]) {
+  const parsed: unknown = JSON.parse(readFileSync(`data/documents/${f}`, 'utf8'));
+  if (!Array.isArray(parsed)) {
+    failures++;
+    console.error(`schema  data/documents/${f}: expected the file's JSON root to be an array, got ${typeof parsed}`);
+    continue;
+  }
+  for (const d of parsed as DocumentRecord[]) {
     docs.push(d);
     const valid: boolean = validateDoc(d);
     if (!valid) {

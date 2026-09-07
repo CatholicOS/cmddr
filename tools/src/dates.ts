@@ -7,6 +7,15 @@ const MONTHS: Record<string, number> = {
 
 const PAT = /(\d{1,2})\s*°?\s+([A-Za-zÀ-ÿ]+)\s+(\d{4})/;
 
+function isLeapYear(year: number): boolean {
+  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+}
+
+function daysInMonth(month: number, year: number): number {
+  const lengths = [31, isLeapYear(year) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  return lengths[month - 1]!;
+}
+
 /** Parse a printed vatican.va date (Italian or Latin) to ISO YYYY-MM-DD. */
 export function parseSourceDate(text: string): string | null {
   const m = text.match(PAT);
@@ -14,7 +23,8 @@ export function parseSourceDate(text: string): string | null {
   const month = MONTHS[m[2]!.toLowerCase()];
   if (month === undefined) return null;
   const day = Number(m[1]);
-  if (day < 1 || day > 31) return null;
+  const year = Number(m[3]);
+  if (day < 1 || day > daysInMonth(month, year)) return null;
   const pad = (n: number) => String(n).padStart(2, '0');
   return `${m[3]}-${pad(month)}-${pad(day)}`;
 }

@@ -230,7 +230,7 @@ genres needs no schema change.
 | `genre` | Becomes nullable. `null` means the source genre has no Genre Registry row yet (§2.6); `sourceGenreLabel` preserves the raw label. |
 | `incipit` | **New, required for `idStatus: minted`.** The incipit as printed, unnormalised: `"Rerum Novarum"`, `"Depuis Le Jour"`. |
 | `incipitLang` | **New, optional.** ISO 639-1: `la`, `it`, `fr`, … Records that vernacular incipits are first-class. |
-| `idStatus` | **New.** `minted` \| `provisional`, default `minted`. |
+| `idStatus` | **New, required.** `minted` \| `provisional`. |
 | `sigla` | **New, optional.** `EV`, `LG`, `GS` — display and human citation only, never a key. Most documents have none, so it cannot be required. |
 | `sourceGenreLabel` | **New, optional.** The genre label exactly as vatican.va prints it (`Enciclica`, `Protesta`, `Costituzione dogmatica`). |
 | `source` | **New, optional.** `{ url, shelf, languages[], retrieved }` — harvest provenance, so every row traces to a page. |

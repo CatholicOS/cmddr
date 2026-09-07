@@ -4,11 +4,16 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - uses: actions/setup-node@v4
         with:
@@ -20,5 +25,6 @@ jobs:
 
       - name: Regeneration drift
         run: |
+          npm run harvest
           npm run render
-          git diff --exit-code registry/
+          git diff --exit-code data/ registry/

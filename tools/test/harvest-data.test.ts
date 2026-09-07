@@ -112,14 +112,16 @@ describe('the harvested pilot corpus', () => {
 
   it('emits no printed/slug date-mismatch warnings once every conflict is adjudicated', () => {
     const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    let calls: unknown[][];
     try {
       for (const shelf of SHELVES) {
         parseShelfIndex(readFileSync(`tools/fixtures/leo-xiii-${shelf}.html`, 'utf8'), 'leo-xiii', shelf);
       }
     } finally {
+      calls = warnSpy.mock.calls;
       warnSpy.mockRestore();
     }
-    const mismatches = warnSpy.mock.calls.filter(([msg]) => String(msg).includes('date mismatch'));
+    const mismatches = calls.filter(([msg]) => String(msg).includes('date mismatch'));
     expect(mismatches).toEqual([]);
   });
 

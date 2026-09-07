@@ -5,7 +5,7 @@
   "description": "One concrete magisterial document / speech. References a Genre. May be fully described by its Genre alone (no Assessments) or carry one Assessment per notable passage.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "title", "genre", "issuerId", "issuerType"],
+  "required": ["id", "title", "genre", "issuerId", "issuerType", "idStatus"],
   "properties": {
     "id": {
       "type": "string",
@@ -33,7 +33,7 @@
     },
     "incipit": { "type": "string", "description": "The incipit as printed by the source, unnormalised (e.g. 'Adiutricem populi')." },
     "incipitLang": { "type": "string", "pattern": "^[a-z]{2}$", "description": "ISO 639-1 language of the incipit; vernacular incipits are first-class." },
-    "idStatus": { "enum": ["minted", "provisional"], "default": "minted", "description": "'minted' ids are permanent; 'provisional' ids may be re-minted." },
+    "idStatus": { "enum": ["minted", "provisional"], "description": "'minted' ids are permanent; 'provisional' ids may be re-minted." },
     "sigla": { "type": "string", "pattern": "^[A-Z][A-Za-z]{0,7}$", "description": "Conventional scholarly abbreviation (EV, LG, GS). Display only, never a key." },
     "sourceGenreLabel": { "type": "string", "description": "Genre label exactly as the source prints it (e.g. 'Enciclica', 'Protesta')." },
     "source": {
