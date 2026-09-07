@@ -18,7 +18,11 @@
 - The id namespace segment is always the **issuer**, never the promulgator.
 - `issuerId` and `promulgatedBy` always carry a registry prefix: `rp:` or `oec:`.
 - Assessment locus separator is `#`, never `-`.
-- Incipits are taken from **DOM text, never URL slugs** (shelf slugs abbreviate: `_adiutricem` is *Adiutricem populi*).
+- Incipits AND dates are taken from **DOM text, never URL slugs**. Shelf slugs abbreviate the
+  incipit (`_adiutricem` is *Adiutricem populi*) and their date format is not uniform: the
+  encyclicals shelf uses `DDMMYYYY`, the other seven use `YYYYMMDD`.
+- A document may be shelved twice. Deduplicate by `(issuerId, incipit-slug, date)`, keeping the
+  most specific shelf and recording the others in `source.alsoShelvedAs`.
 - `slugify(document.incipit)` must equal the id's slug segment (invariant 12).
 - Pilot corpus is exactly three pontificates: Benedict XIV, Pius IX, Leo XIII.
 - Never fetch vatican.va from a test. Tests read `tools/fixtures/*.html`.
@@ -590,6 +594,7 @@ export interface HarvestItem {
   url: string | null;
   languages: string[];
   shelf: string | null;
+  alsoShelvedAs?: string[];     // other shelves the same document is filed under
   pageSlug: string;             // the vatican.va pope slug the page belonged to
 }
 
@@ -610,7 +615,10 @@ export interface DocumentRecord {
   descriptiveTitle?: 'dogmatic' | 'pastoral';
   sigla?: string;
   aliases?: string[];
-  source?: { url: string | null; shelf: string | null; languages: string[]; retrieved: string };
+  source?: {
+    url: string | null; shelf: string | null; alsoShelvedAs?: string[];
+    languages: string[]; retrieved: string;
+  };
 }
 ```
 
@@ -948,7 +956,7 @@ describe('document.schema.json', () => {
       ...baseDoc,
       source: {
         url: 'https://www.vatican.va/content/leo-xiii/it/encyclicals/documents/x.html',
-        shelf: 'encyclicals', languages: ['IT', 'LA'], retrieved: '2026-09-07',
+        shelf: 'encyclicals', alsoShelvedAs: ['letters'], languages: ['IT', 'LA'], retrieved: '2026-09-07',
       },
     })).toBe(true);
   });
@@ -1035,6 +1043,8 @@ In `schema/document.schema.json`:
   "properties": {
     "url": { "type": ["string", "null"] },
     "shelf": { "type": ["string", "null"] },
+    "alsoShelvedAs": { "type": "array", "items": { "type": "string" },
+      "description": "Other vatican.va shelves the same document is filed under; the shelves are not disjoint." },
     "languages": { "type": "array", "items": { "type": "string" } },
     "retrieved": { "type": "string", "format": "date" }
   }
@@ -1123,6 +1133,13 @@ describe('parseFlatIndex', () => {
     expect(pix).toHaveLength(77);
   });
 
+  it('falls back to the genre label when the incipit is not wrapped in <i>', () => {
+    // Exactly one Pius IX entry prints as `Epistola Ecclesia Dei (2 marzo 1871)` with no <i>.
+    const ed = pix.find((d) => d.date === '1871-03-02')!;
+    expect(ed.incipit).toBe('Ecclesia Dei');
+    expect(ed.sourceGenreLabel).toBe('Epistola');
+  });
+
   it('takes the incipit from <i>, not the truncated slug', () => {
     const bd = bxiv.find((d) => d.date === '1750-12-25')!;
     expect(bd.incipit).toBe('Benedictus Deus');
@@ -1169,9 +1186,29 @@ Expected: FAIL — cannot resolve `../src/harvest/flat.js`.
 ```ts
 import * as cheerio from 'cheerio';
 import { parseSourceDate } from '../dates.js';
+import { SOURCE_GENRE_TO_GENRE } from '../mappings/index.js';
 import type { HarvestItem } from '../types.js';
 
 const BASE = 'https://www.vatican.va';
+
+// Longest first, so 'costituzione apostolica' wins over a hypothetical 'costituzione'.
+const LABELS = Object.keys(SOURCE_GENRE_TO_GENRE).sort((a, b) => b.length - a.length);
+
+/**
+ * Fallback for the one entry whose incipit carries no <i> wrapper
+ * ('Epistola Ecclesia Dei (2 marzo 1871)'): strip the trailing (date), then the
+ * longest matching known genre label; what remains is the incipit.
+ */
+function splitGenreAndIncipit(full: string): { genre: string; incipit: string } {
+  const body = full.replace(/\s*\([^)]*\)\s*$/, '').trim();
+  const lower = body.toLowerCase();
+  for (const label of LABELS) {
+    if (lower.startsWith(label + ' ')) {
+      return { genre: body.slice(0, label.length).trim(), incipit: body.slice(label.length).trim() };
+    }
+  }
+  return { genre: '', incipit: body };
+}
 
 /**
  * Flat-era pope landing pages (Benedict XIV .. Pius IX): one reverse-chronological
@@ -1187,15 +1224,17 @@ export function parseFlatIndex(html: string, pageSlug: string): HarvestItem[] {
     const $h2 = $item.find('h2').first();
     if ($h2.length === 0) return;
 
-    const incipit = $h2.find('i').first().text().replace(/\s+/g, ' ').trim();
-    if (!incipit) return;
-
     const full = $h2.text().replace(/\s+/g, ' ').trim();
     const date = parseSourceDate(full.slice(full.lastIndexOf('(')));
     if (!date) return;
 
-    const cut = full.indexOf(incipit);
-    const sourceGenreLabel = (cut > 0 ? full.slice(0, cut) : '').trim();
+    const italic = $h2.find('i').first().text().replace(/\s+/g, ' ').trim();
+    const split = splitGenreAndIncipit(full);
+    const incipit = italic || split.incipit;
+    if (!incipit) return;
+
+    const cut = italic ? full.indexOf(italic) : -1;
+    const sourceGenreLabel = (italic && cut > 0 ? full.slice(0, cut) : split.genre).trim();
 
     const href = $h2.find('a').first().attr('href')
       ?? $item.find('.translation-field a').first().attr('href')
@@ -1222,9 +1261,10 @@ export function parseFlatIndex(html: string, pageSlug: string): HarvestItem[] {
 - [ ] **Step 5: Run test to verify it passes**
 
 Run: `npx vitest run tools/test/flat.test.ts`
-Expected: PASS, 6 tests.
+Expected: PASS, 7 tests.
 
-If the counts differ from 43 and 77, print `items.length` and inspect: the landing page may include a stray `div.item` outside the document list. Filter by requiring the href to contain `/documents/`.
+Both pages carry exactly one `div.item` per document (43 and 77 respectively), so no filtering is
+needed. If a count comes up short, the `<i>` fallback is not firing — check `splitGenreAndIncipit`.
 
 - [ ] **Step 6: Commit**
 
@@ -1276,7 +1316,18 @@ describe('parseShelfIndex', () => {
   });
 
   it('finds the whole Leo XIII corpus across the eight shelves', () => {
-    expect(all).toHaveLength(273);
+    // Raw item count, before the orchestrator's cross-shelf dedupe in Task 11.
+    expect(all).toHaveLength(275);
+  });
+
+  it('takes the date from the printed text, because slug formats differ by shelf', () => {
+    // The encyclicals shelf slugs DDMMYYYY (…_enc_15041902_…) while the other seven slug
+    // YYYYMMDD (…_let_19020415_…). Both entries below are the same date.
+    const letters = load('letters');
+    expect(letters.find((d) => d.incipit.toLowerCase() === 'in amplissimo')!.date).toBe('1902-04-15');
+    expect(enc.find((d) => d.incipit.toLowerCase() === 'in amplissimo')!.date).toBe('1902-04-15');
+    expect(load('speeches').find((d) => d.incipit.toLowerCase() === 'ubi primum')!.date)
+      .toBe('1878-03-28');
   });
 
   it('takes the incipit from the heading text, never the abbreviated slug', () => {
@@ -1337,14 +1388,15 @@ import { parseSourceDate } from '../dates.js';
 import type { HarvestItem } from '../types.js';
 
 const BASE = 'https://www.vatican.va';
-const SLUG_DATE = /_(\d{2})(\d{2})(\d{4})_/;
 
 /**
  * Shelf-era index pages (Leo XIII onward). Items are `<h2>{Incipit} ({date})</h2>`,
  * sometimes wrapped in an <a> and sometimes not — 21 of Leo XIII's 86 encyclicals
  * link only from .translation-field. There is no <i> element here, and the URL slug
  * abbreviates the incipit (_adiutricem for 'Adiutricem populi'), so the incipit is
- * always taken from the heading text.
+ * always taken from the heading text. The slug's date is likewise never parsed: the
+ * encyclicals shelf formats it DDMMYYYY and the other seven YYYYMMDD, so the printed
+ * parenthetical is the only uniform source.
  */
 export function parseShelfIndex(html: string, pageSlug: string, shelf: string): HarvestItem[] {
   const $ = cheerio.load(html);
@@ -1360,17 +1412,12 @@ export function parseShelfIndex(html: string, pageSlug: string, shelf: string): 
     if (open <= 0) return;
 
     const incipit = full.slice(0, open).trim();
-    const printed = parseSourceDate(full.slice(open));
-    if (!incipit || !printed) return;
+    const date = parseSourceDate(full.slice(open));
+    if (!incipit || !date) return;
 
     const href = $h2.find('a').first().attr('href')
       ?? $item.find('.translation-field a').first().attr('href')
       ?? null;
-
-    // Prefer the slug's DDMMYYYY when present; fall back to the printed date.
-    let date = printed;
-    const m = href?.match(SLUG_DATE);
-    if (m) date = `${m[3]}-${m[2]}-${m[1]}`;
 
     const languages = $item.find('.translation-field a')
       .map((_i, a) => $(a).text().trim()).get().filter(Boolean);
@@ -1393,9 +1440,10 @@ export function parseShelfIndex(html: string, pageSlug: string, shelf: string): 
 - [ ] **Step 5: Run test to verify it passes**
 
 Run: `npx vitest run tools/test/shelf.test.ts`
-Expected: PASS, 8 tests.
+Expected: PASS, 9 tests.
 
-If a count is off by one or two, the page header's own `<h2>` may sit inside a `div.item`; exclude headings whose text contains `Leone XIII`.
+The eight shelves carry 8 + 24 + 8 + 1 + 86 + 120 + 10 + 18 = 275 `div.item`s. Five of those are
+the same documents filed on two shelves; Task 11 deduplicates them.
 
 - [ ] **Step 6: Commit**
 
@@ -1524,6 +1572,7 @@ export function toDocument(item: HarvestItem, retrieved: string): DocumentRecord
     date: item.date,
     source: {
       url: item.url, shelf: item.shelf, languages: item.languages, retrieved,
+      ...(item.alsoShelvedAs?.length ? { alsoShelvedAs: item.alsoShelvedAs } : {}),
     },
   };
 
@@ -1784,7 +1833,7 @@ export function checkAssessments(
 
 `tools/src/validate/run.ts`:
 ```ts
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import Ajv2020 from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { checkDocuments, checkAssessments, type AssessmentLike } from './invariants.js';
@@ -1801,7 +1850,10 @@ const validateDoc = ajv.compile(documentSchema);
 const docs: DocumentRecord[] = [];
 let failures = 0;
 
-for (const f of readdirSync('data/documents').filter((f) => f.endsWith('.json'))) {
+const docFiles = existsSync('data/documents')
+  ? readdirSync('data/documents').filter((f) => f.endsWith('.json'))
+  : [];
+for (const f of docFiles) {
   for (const d of JSON.parse(readFileSync(`data/documents/${f}`, 'utf8')) as DocumentRecord[]) {
     docs.push(d);
     if (!validateDoc(d)) {
@@ -1864,7 +1916,18 @@ import { parseShelfIndex } from './shelf.js';
 import { toDocument } from './toDocument.js';
 import { PILOT_POPES, SHELVES } from '../mappings/index.js';
 import { issuerLocalPart } from '../ids.js';
+import { slugify } from '../slug.js';
 import type { DocumentRecord, HarvestItem } from '../types.js';
+
+/** Most specific shelf first: a document filed twice keeps the more specific genre. */
+const SHELF_SPECIFICITY = [
+  'encyclicals', 'apost_constitutions', 'apost_letters', 'bulls',
+  'briefs', 'motu_proprio', 'letters', 'speeches',
+];
+const rank = (shelf: string | null) => {
+  const i = shelf === null ? -1 : SHELF_SPECIFICITY.indexOf(shelf);
+  return i === -1 ? SHELF_SPECIFICITY.length : i;
+};
 
 const RETRIEVED = process.env.RETRIEVED ?? new Date().toISOString().slice(0, 10);
 const fixture = (n: string) => readFileSync(`tools/fixtures/${n}.html`, 'utf8');
@@ -1880,8 +1943,22 @@ for (const pope of PILOT_POPES) {
   }
 }
 
-const byIssuer = new Map<string, DocumentRecord[]>();
+// The vatican.va shelves are not disjoint: five Leo XIII documents sit on both the
+// encyclicals and the letters shelf. Keep the most specific shelf and remember the rest.
+const merged = new Map<string, HarvestItem>();
 for (const item of items) {
+  const key = `${item.pageSlug}|${slugify(item.incipit)}|${item.date}`;
+  const held = merged.get(key);
+  if (!held) { merged.set(key, item); continue; }
+  const [keep, drop] = rank(item.shelf) < rank(held.shelf) ? [item, held] : [held, item];
+  const seen = new Set([...(keep.alsoShelvedAs ?? []), ...(drop.alsoShelvedAs ?? [])]);
+  if (drop.shelf) seen.add(drop.shelf);
+  merged.set(key, { ...keep, alsoShelvedAs: [...seen].sort() });
+}
+console.log(`${items.length} items -> ${merged.size} documents after cross-shelf dedupe`);
+
+const byIssuer = new Map<string, DocumentRecord[]>();
+for (const item of merged.values()) {
   const doc = toDocument(item, RETRIEVED);
   const key = issuerLocalPart(doc.issuerId);
   byIssuer.set(key, [...(byIssuer.get(key) ?? []), doc]);
@@ -1900,17 +1977,21 @@ for (const [key, docs] of byIssuer) {
 ```bash
 RETRIEVED=2026-09-07 npx tsx tools/src/harvest/run.ts
 ```
-Expected output, four files: `benedict-xiv: 43`, `pius-ix: 75`, `leo-xiii: 273`, `vatican-i: 2`.
-(Pius IX yields 75, not 77, because *Dei Filius* and *Pastor Aeternus* are reassigned to Vatican I.)
+Expected: `395 items -> 390 documents after cross-shelf dedupe`, then four files —
+`benedict-xiv: 43`, `pius-ix: 75`, `leo-xiii: 270`, `vatican-i: 2`.
+Pius IX yields 75, not 77, because *Dei Filius* and *Pastor Aeternus* are reassigned to Vatican I.
+Leo XIII yields 270, not 275, because five documents are filed on two shelves each.
 
 - [ ] **Step 3: Run the validator**
 
 ```bash
 npx tsx tools/src/validate/run.ts
 ```
-Expected: `393 documents and 4 assessments checked, 0 failure(s)`, exit 0.
-(The 4 assessments come from `examples/evangelium-vitae.json`; they still carry the old `EV-…`
-loci until Task 13, so rule 14 will fire here until then. That is expected — re-run after Task 13.)
+Expected: `390 documents and 4 assessments checked, 4 failure(s)`, exit 1.
+
+The four failures are all rule 14, from `examples/evangelium-vitae.json`, which still carries its
+legacy `EV-…` loci until Task 13. Zero document-level failures is the bar here. Re-run after
+Task 13 and it must report `0 failure(s)`.
 
 If rule 11 fires, a genuine same-issuer/incipit/year collision exists. Resolve it by adding both documents to a `FULL_DATE_IDS` set consulted by `toDocument`, which passes `{ fullDate: true }` to `mintId` — do not hand-edit the generated JSON.
 
@@ -1932,7 +2013,20 @@ const all = [...load('benedict-xiv'), ...load('pius-ix'), ...load('leo-xiii'), .
 
 describe('the harvested pilot corpus', () => {
   it('holds the whole pilot corpus', () => {
-    expect(all).toHaveLength(393);
+    expect(all).toHaveLength(390);
+  });
+
+  it('deduplicates the five twice-shelved Leo XIII documents', () => {
+    const twice = all.filter((d) => (d.source?.alsoShelvedAs?.length ?? 0) > 0);
+    expect(twice).toHaveLength(5);
+    expect(twice.map((d) => d.incipit.toLowerCase()).sort()).toEqual([
+      'in amplissimo', 'omnibus compertum', 'permoti nos',
+      'quam aerumnosa', 'urbanitatis veteris',
+    ]);
+    for (const d of twice) {
+      expect(d.source!.shelf).toBe('encyclicals');
+      expect(d.source!.alsoShelvedAs).toEqual(['letters']);
+    }
   });
 
   it('satisfies every invariant', () => {
@@ -2093,7 +2187,7 @@ Run: `npx vitest run tools/test/render.test.ts`
 Expected: PASS, 4 tests.
 
 Run: `npx tsx tools/src/render/run.ts`
-Expected: `registry/documents.md: 393 documents`.
+Expected: `registry/documents.md: 390 documents`.
 
 - [ ] **Step 5: Commit**
 
@@ -2244,7 +2338,7 @@ Concrete documents live in [`data/documents/`](data/documents/), rendered as
 - [ ] **Step 6: Run the full suite**
 
 Run: `npx vitest run && npx tsx tools/src/validate/run.ts`
-Expected: every test green; `393 documents and 4 assessments checked, 0 failure(s)`.
+Expected: every test green; `390 documents and 4 assessments checked, 0 failure(s)`.
 
 - [ ] **Step 7: Commit**
 
@@ -2261,7 +2355,7 @@ After Task 13, the following must all hold:
 
 ```bash
 npx vitest run                      # all suites green
-npx tsx tools/src/validate/run.ts   # 393 documents and 4 assessments checked, 0 failure(s)
+npx tsx tools/src/validate/run.ts   # 390 documents and 4 assessments checked, 0 failure(s)
 npx tsc --noEmit                    # no type errors
 ```
 
