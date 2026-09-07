@@ -15,6 +15,10 @@ and the three things that expansion breaks:
 2. **headings that are no longer bare incipits**, which the pilot's parser would slugify whole;
 3. a **registry file** that is already inconvenient at 383 rows and unusable at ~2,800.
 
+It also adds a `keywords` field (§4.5), so that the ~1,100 erections of ecclesiastical
+circumscriptions which dominate the apostolic-constitution shelves can be separated out of a view
+later, without conflating subject matter with the authority-bearing `characteristics` field.
+
 Scope is the **formal document shelves** only — encyclicals, bulls, briefs, apostolic
 constitutions, apostolic letters, apostolic exhortations, motu proprio, and (conditionally, §2.6)
 letters. The occasional-act shelves — speeches, homilies, audiences, angelus, messages, prayers,
@@ -97,10 +101,33 @@ John XXIII `apost_letters` (6), John Paul II `apost_letters` (28). Roughly 40 ye
 
 Two observations that matter for expectations, not for the design:
 
-- Paul VI's 354 and John Paul II's 613 apostolic constitutions are overwhelmingly **diocese
-  erections**, titled by Latin place-name (`Avkaënsis`, `Usbekistaniae`, `Gambomensis`). They are
-  genuine documents of that genre and are harvested as such, but they are ~1,100 of the ~2,800 and
-  will dominate any per-genre view.
+- Paul VI's 354, John Paul II's 613 and Benedict XVI's 126 apostolic constitutions are
+  overwhelmingly **erections of ecclesiastical circumscriptions** — dioceses, archdioceses,
+  ecclesiastical provinces. They are genuine documents of that genre and are harvested as such, but
+  they are ~1,100 of the ~2,800 and would dominate any per-genre view. §4.5 gives them a keyword so
+  a future view can separate them.
+
+  How they are *recognisable* differs by era, and the difference is the whole reason §4.5 is shaped
+  as it is. Francis and Leo XIV say so in the heading — 0 of Francis's 49 are bare:
+
+  ```
+  "Incomparabilis Magister". Il Santo Padre ha eretto la Provincia Ecclesiastica di Calicut (India)
+  "Spei accensa lucerna". Il Santo Padre ha eretto la nuova Diocesi di Caazapá (Paraguay)
+  "Quod Manifestatum". Il Santo Padre ha istituito in Cina la Diocesi di Lüliang
+  ```
+
+  Paul VI, John Paul II and Benedict XVI print a bare Latin toponym and nothing else:
+
+  ```
+  Avkaënsis · Boacensis · Usbekistaniae · Gambomensis · Katsinensis-Alensis · Tiranensis-Dyrracena
+  ```
+
+  There is no textual marker, and the documents one would most want separated *out* sit unmarked on
+  the same shelf: `Sapientia Christiana`, `Ex Corde Ecclesiae`, `Indulgentiarum Doctrina`,
+  `Romano Pontifici Eligendo`, `Vicariae potestatis in urbe`, `Constans nobis`. A heading-length
+  heuristic was tried and rejected: it tags 590 of John Paul II's 613, but misfires in both
+  directions — it would tag `Constans nobis` and miss
+  `Sancti Vladimiri Magni in urbe Parisiensi pro Ucrainis ritus Byzantini`, which is an erection.
 - Benedict XV's `letters` shelf, and every `letters` shelf from Paul VI on, is year-partitioned and
   therefore excluded by §2.6.
 
@@ -290,11 +317,70 @@ This is the same mechanism the date conflicts used and it is the point of the de
 are the work list, and a document leaves it by having its incipit established and recorded in a
 mapping table, not by the parser guessing harder.
 
+### 4.5 Keywords: descriptive subject tags
+
+Documents carry a new **`keywords`** array — a controlled vocabulary of descriptive subject tags.
+
+It is deliberately *not* `characteristics`. That field is enum-constrained to
+`apostolic-constitution` and `dogmatic-definition` and is **authority-bearing**: per the README a
+characteristic describes the solemn form or claim of the act, and `dogmatic-definition` must be
+backed by a Table 2 assessment with `register: extraordinary`. A circumscription erection is
+subject matter, not register. Recording it as a characteristic would break that field's meaning.
+
+`keywords` therefore makes **no claim about authority**, and no invariant other than vocabulary
+membership (invariant 21) reads it. It resolves against a new `data/keywords.json`, structured like
+`data/genres.json`, giving each term an id, a gloss and an evidence note. This spec adds one term:
+
+| id | Meaning |
+|---|---|
+| `circumscription-erection` | The act erects an ecclesiastical circumscription — a diocese, archdiocese, ecclesiastical province, eparchy, ordinariate or prelature. Elevations, mergers and boundary changes are *not* covered; they get their own terms when evidence for them appears. |
+
+A controlled vocabulary rather than free text, for the same reason `genre` is one: a view can only
+be built on a term that means the same thing in every row.
+
+**Population has two paths, and only one of them is automatic.**
+
+*Textual, in the harvest.* Where the heading states the act — `ha eretto` / `ha istituito` followed
+by `la Diocesi` / `l'Arcidiocesi` / `la Provincia Ecclesiastica` / `l'Eparchia` and their variants —
+the keyword is applied by rule, from a checked-in pattern list beside the §4.2 rules. This covers
+Francis and Leo XIV. It reads the same heading §4.2 rule 2 does, taking the keyword from the gloss
+where the incipit rule takes the quoted opening; the two are independent passes over one string.
+
+*Flagged, then curated.* For Paul VI, John Paul II and Benedict XVI the harvest applies **no**
+keyword. It instead warns for each `apost_constitutions` heading whose title matches Latin
+toponymic morphology (`-ensis`, `-iensis`, `-aniae`, and hyphenated compounds of them):
+
+```
+Circumscription-erection candidate rp:john-paul-ii apost_constitutions 2005-04-01: 'Usbekistaniae'
+```
+
+A human confirms, and the decision is recorded in `CIRCUMSCRIPTION_ERECTIONS` in
+`tools/src/mappings/keywords.ts`, keyed like every other curated table and carrying an evidence
+note. **The morphological rule never writes to data.** It is a search aid, in exactly the sense the
+pilot spec's §5.3 uses one to flag *Dei Filius* and *Pastor Aeternus* for conciliar reassignment
+without inferring it at run time.
+
+Until that pass is done, the by-keyword population is Francis and Leo XIV only, which §6.3's
+coverage statement must say.
+
 ## 5. Schema and type changes
 
-`schema/document.schema.json` needs **no change**. It already declares `incipit` optional and
-requires it only under `idStatus: minted`, and `title` is already required. The pilot spec provided
-for exactly this case.
+`schema/document.schema.json` needs no change for the incipit: it already declares `incipit`
+optional and requires it only under `idStatus: minted`, and `title` is already required. The pilot
+spec provided for exactly this case.
+
+It gains one property, for §4.5:
+
+```json
+"keywords": {
+  "type": "array",
+  "uniqueItems": true,
+  "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+  "description": "Descriptive subject tags -> keyword.id in data/keywords.json. Never authority-bearing: unlike characteristics, a keyword makes no claim about the document's register or definitiveness."
+}
+```
+
+and `DocumentRecord` gains `keywords?: string[]`, omitted when empty.
 
 `tools/src/types.ts`:
 
@@ -332,6 +418,11 @@ belongs. The by-genre view answers the question the by-issuer split structurally
 encyclical from Benedict XIV to Leo XIV in one table* — which is the query the registry exists to
 serve.
 
+A third, **by-keyword** view is deliberately not built here. §4.5 puts the tags in the data, which
+makes that view another pass of the same renderer loop; building it before the curation pass of
+§4.5 would ship a page showing ~50 of ~1,150 erections, which is worse than no page. It is added
+when the tags are complete enough to be worth reading.
+
 ### 6.2 Row and column shape
 
 Six columns in each view. Against today's single table, `Title` is added and the column each view
@@ -353,8 +444,8 @@ consulting `idStatus`.
 - a per-issuer table — issuer, document count, date range, link, and **which shelves were
   harvested** for that pope;
 - a per-genre table — genre, count, link;
-- an explicit **Coverage** section naming what is *not* here: the occasional-act shelves, and the
-  year-partitioned `letters` shelves of §2.7.
+- an explicit **Coverage** section naming what is *not* here: the occasional-act shelves, the
+  year-partitioned `letters` shelves of §2.7, and how far the §4.5 keyword curation has got.
 
 The coverage statement is generated from the `POPES` table, so it cannot drift from what was
 actually harvested.
@@ -368,8 +459,11 @@ Invariants 8–17 are unchanged and all continue to apply. Three are added:
 | 18 | `title` is present and non-empty on every document. |
 | 19 | A `provisional` id's genre segment equals `slugify(genre)` — or `slugify(sourceGenreLabel)` when `genre` is null — so a provisional id is derivable from the record, exactly as invariant 12 requires of a minted one. |
 | 20 | Provisional ordinals within an `(issuer, genre-slug, date)` group are dense and 1-based: a group of *n* carries exactly `-1 … -n`, and a group of 1 carries no ordinal. |
+| 21 | Every entry of `keywords` resolves to a `keyword.id` in `data/keywords.json`. |
 
-Invariant 20 is what makes §4.3's determinism checkable rather than merely intended.
+Invariant 20 is what makes §4.3's determinism checkable rather than merely intended. Invariant 21
+is the parallel of invariant 15 for genre, and is the only invariant that reads `keywords` — a
+keyword is never an input to any authority computation.
 
 ## 8. Phasing
 
@@ -382,11 +476,17 @@ regeneration, and is independently reviewable.
 | 2 | Registry split (§6) | Both views and the index, while the corpus is still small enough to read end to end. |
 | 3 | `extractIncipit`, provisional minting, invariants 18–20; Pius XI and Pius XII | ~440 documents. Lands the hard parsing change against the two pontificates where gloss headings first appear, with the previous 725 records asserting it is a no-op for them. |
 | 4 | `resolveShelfPages` year traversal | The three shelves of §2.4. |
-| 5 | Benedict XV, John XXIII, Paul VI, John Paul I, John Paul II, Benedict XVI, Francis, Leo XIV | ~2,000 documents, worked pope by pope through the warning queue. |
+| 5 | `keywords` mechanism: schema property, `data/keywords.json`, invariant 21, the §4.5 textual rule | No new documents. Ships the field and its vocabulary with nothing yet to tag — the textual rule fires first in phase 6. |
+| 6 | Benedict XV, John XXIII, Paul VI, John Paul I, John Paul II, Benedict XVI, Francis, Leo XIV | ~2,000 documents, worked pope by pope through the warning queue. Francis and Leo XIV acquire `circumscription-erection` from the textual rule as they land. |
+| 7 | Circumscription curation pass | The morphological flagging of §4.5 over Paul VI, John Paul II and Benedict XVI; ~1,100 confirmations into `CIRCUMSCRIPTION_ERECTIONS`. Ends with the by-keyword view of §6.1. |
 
 Phase 3 is the one that can fail interestingly. If the rule table cannot get provisional records
 below a workable fraction of Pius XI and Pius XII, that is the signal to stop and revisit §4.2
-before phases 4 and 5 multiply the problem by eight pontificates.
+before phases 4 and 6 multiply the problem by eight pontificates.
+
+Phase 7 is the largest hand-curation load in the plan and is deliberately last: it is additive,
+touches no identifier, and can be paused or done in instalments without leaving the corpus in an
+inconsistent state.
 
 ## 9. Out of scope
 
