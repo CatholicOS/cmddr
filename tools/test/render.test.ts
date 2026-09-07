@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { renderIssuerMd } from '../src/render/issuerMd.js';
 import { renderGenreMd } from '../src/render/genreMd.js';
+import { renderIndexMd } from '../src/render/indexMd.js';
 import type { DocumentRecord } from '../src/types.js';
 
 const docs: DocumentRecord[] = [
@@ -85,5 +86,34 @@ describe('both views', () => {
   it('escapes a pipe in scraped text so it cannot break the table', () => {
     const piped = { ...docs[0]!, title: 'A | B', incipit: 'A | B' };
     expect(renderIssuerMd('leo-xiii', [piped])).toContain('A \\| B');
+  });
+});
+
+describe('renderIndexMd', () => {
+  const md = renderIndexMd([...docs, conciliar, provisional]);
+
+  it('counts documents per issuer and links the view', () => {
+    expect(md).toContain('[`rp:leo-xiii`](documents/by-issuer/leo-xiii.md)');
+    expect(md).toContain('[`oec:vatican-i`](documents/by-issuer/vatican-i.md)');
+    expect(md).toMatch(/rp:leo-xiii.*\| 2 \|/);
+  });
+
+  it('gives each issuer its date range', () => {
+    expect(md).toContain('1885-11-01 – 1891-05-15');
+  });
+
+  it('counts documents per genre and links the view', () => {
+    expect(md).toContain('[`encyclical`](documents/by-genre/encyclical.md)');
+    expect(md).toContain('[`constitution`](documents/by-genre/constitution.md)');
+  });
+
+  it('reports the total and the provisional share', () => {
+    expect(md).toContain('4 documents');
+    expect(md).toMatch(/1 .*provisional/i);
+  });
+
+  it('states coverage, naming what is deliberately absent', () => {
+    expect(md).toMatch(/## Coverage/);
+    expect(md).toMatch(/speeches|occasional/i);
   });
 });
