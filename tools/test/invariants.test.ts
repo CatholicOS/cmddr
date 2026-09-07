@@ -64,6 +64,7 @@ describe('checkDocuments', () => {
     expect(checkDocuments([{
       ...good, id: 'mag:francis-i/angelus-2015-03-22', idStatus: 'provisional',
       issuerId: 'rp:francis-i', date: '2015-03-22',
+      genre: null, sourceGenreLabel: 'Angelus',
     }], GENRES)).toEqual([]);
   });
 
@@ -100,6 +101,84 @@ describe('checkDocuments', () => {
 
   it('17: flags an issuerType not among the genre\'s issuerTypes', () => {
     expect(rules([{ ...good, issuerType: 'bishop' }])).toContain(17);
+  });
+});
+
+const expansionBase = {
+  title: 'Rerum Novarum', incipit: 'Rerum Novarum', idStatus: 'minted' as const,
+  genre: 'encyclical', issuerId: 'rp:leo-xiii', issuerType: 'pope' as const,
+  date: '1891-05-15',
+};
+
+describe('invariant 18: every document has a title', () => {
+  it('rejects an empty title', () => {
+    const v = checkDocuments(
+      [{ ...expansionBase, id: 'mag:leo-xiii/rerum-novarum-1891', title: '' }],
+      GENRES,
+    );
+    expect(v.map((x) => x.rule)).toContain(18);
+  });
+});
+
+describe('invariant 19: a provisional id is derivable from its record', () => {
+  const prov = {
+    ...expansionBase, incipit: undefined, idStatus: 'provisional' as const,
+    genre: 'apostolic-letter', issuerId: 'rp:pius-xii', date: '1958-02-14',
+    title: 'Lettera Apostolica che proclama…',
+  };
+
+  it('accepts an id whose genre segment is the genre id', () => {
+    const v = checkDocuments([{ ...prov, id: 'mag:pius-xii/apostolic-letter-1958-02-14' }], GENRES);
+    expect(v.map((x) => x.rule)).not.toContain(19);
+  });
+
+  it('rejects an id whose genre segment is something else', () => {
+    const v = checkDocuments([{ ...prov, id: 'mag:pius-xii/letter-1958-02-14' }], GENRES);
+    expect(v.map((x) => x.rule)).toContain(19);
+  });
+
+  it('uses the source label when the genre is null', () => {
+    const v = checkDocuments([{
+      ...prov, genre: null, sourceGenreLabel: 'Proclama',
+      id: 'mag:pius-xii/proclama-1958-02-14',
+    }], GENRES);
+    expect(v.map((x) => x.rule)).not.toContain(19);
+  });
+});
+
+describe('invariant 20: provisional ordinals are dense and 1-based', () => {
+  const mk = (id: string, title: string) => ({
+    ...expansionBase, id, title, incipit: undefined, idStatus: 'provisional' as const,
+    genre: 'apostolic-letter', issuerId: 'rp:pius-xii', date: '1958-02-14',
+  });
+
+  it('accepts a lone record with no ordinal', () => {
+    const v = checkDocuments([mk('mag:pius-xii/apostolic-letter-1958-02-14', 'A')], GENRES);
+    expect(v.map((x) => x.rule)).not.toContain(20);
+  });
+
+  it('accepts a pair numbered 1 and 2', () => {
+    const v = checkDocuments([
+      mk('mag:pius-xii/apostolic-letter-1958-02-14-1', 'A'),
+      mk('mag:pius-xii/apostolic-letter-1958-02-14-2', 'B'),
+    ], GENRES);
+    expect(v.map((x) => x.rule)).not.toContain(20);
+  });
+
+  it('rejects a gap in the numbering', () => {
+    const v = checkDocuments([
+      mk('mag:pius-xii/apostolic-letter-1958-02-14-1', 'A'),
+      mk('mag:pius-xii/apostolic-letter-1958-02-14-3', 'B'),
+    ], GENRES);
+    expect(v.map((x) => x.rule)).toContain(20);
+  });
+
+  it('rejects an unordinalled record sharing a group with an ordinalled one', () => {
+    const v = checkDocuments([
+      mk('mag:pius-xii/apostolic-letter-1958-02-14', 'A'),
+      mk('mag:pius-xii/apostolic-letter-1958-02-14-2', 'B'),
+    ], GENRES);
+    expect(v.map((x) => x.rule)).toContain(20);
   });
 });
 
