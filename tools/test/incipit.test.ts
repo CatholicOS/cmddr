@@ -93,4 +93,70 @@ describe('extractIncipit', () => {
     expect(incipitOf('Sancti Vladimiri Magni in urbe Parisiensi pro Ucrainis ritus Byzantini: eretta'))
       .toBe('Sancti Vladimiri Magni in urbe Parisiensi pro Ucrainis ritus Byzantini');
   });
+
+  // The four headings below are real Leo XIII/Pius X shelf-era headings (found by running
+  // extractIncipit over all 581 already-harvested shelf-era headings) that a first version of
+  // this function truncated wrongly. Two guards fix them (review finding, 2026-09-07):
+  //   Guard A -- a gloss-connector cut that would leave fewer than two words before it is
+  //   discarded, so the heading falls through to the untouched/word-ceiling path instead.
+  //   Guard B -- a residue opening with an address salutation ('Al', 'Ai', ...) or a
+  //   third-person narration opener ('Il Pontefice', ...) is never an incipit, regardless of
+  //   any connector further along.
+  it('does not cut a short residue at a bare prepositional connector (Guard A)', () => {
+    // Guard A: cutting at ' sulla ' would leave only 'Vicario' (one word), so the cut is
+    // discarded and the whole bare incipit is kept, exactly like the flat/Leo XIII vectors.
+    expect(extractIncipit('Vicario sulla terra'))
+      .toEqual({ title: 'Vicario sulla terra', incipit: 'Vicario sulla terra' });
+  });
+
+  it('treats an address salutation or narrative opener as having no incipit (Guard B)', () => {
+    // Guard A alone cannot catch these: three and four words precede their would-be cuts,
+    // clearing MIN_WORDS_BEFORE_CUT. Guard B checks the opener itself instead.
+    expect(incipitOf('Al Cardinale Pietro Respighi, sui sacerdoti di altre Diocesi che dimorano a Roma'))
+      .toBeNull();
+    expect(incipitOf('Il Pontefice prescrive alle Diocesi della Provincia di Roma il nuovo Compendio del Catechismo'))
+      .toBeNull();
+  });
+
+  it('returns null for real addressee and narrative shelf-era headings with no incipit', () => {
+    // Real Pius X letters/motu_proprio-shelf headings with no incipit at all -- confirmed by
+    // running extractIncipit over the full 581-heading Leo XIII/Pius X corpus.
+    for (const h of [
+      'A Mons. Francesco Saverio Haberl, Prelato domestico di S.S. e Presidente generale '
+        + 'dell\'Associazione "Santa Cecilia" di Germania, Ratisbona (Baviera)',
+      "Ai membri del comitato generale dell'Associazione Cattolica della gioventù francese",
+      "Ai componenti la direzione provvisoria dell' Unione economico sociale per i cattolici italiani",
+      'Al Cardinale Rampolla del Tindaro, Arciprete della Basilica Vaticana',
+      'La protesta del Papa contro il Congresso del libero pensiero',
+      "Sull'edificazione di un nuovo Santuario nel territorio di Nettuno come assistenza spirituale della popolazione",
+      "Sull'edizione vaticana dei libri liturgici contenenti le melodie gregoriane",
+    ]) {
+      expect(incipitOf(h), h).toBeNull();
+    }
+  });
+
+  it('catches four more real addressee/narrative headings that were silently wrong before Guard B', () => {
+    // Guard B also fixes latent false "successes": before it existed, these short headings
+    // never triggered any rule (no genre prefix, no cut, under the word ceiling) and were
+    // silently returned as if they were bare incipits. Each is confirmed non-incipit by its
+    // own URL slug on vatican.va, which is descriptive rather than incipit-derived
+    // (hf_..._catechismo, _cardinale-ferrari, _principessa-belgio, _chirografo) -- unlike a
+    // genuine bare incipit's slug, which always abbreviates the incipit itself (e.g.
+    // _adiutricem for 'Adiutricem populi').
+    for (const h of [
+      'Al compimento delle riforme',                                  // hf_l-xiii_let_..._chirografo
+      'Al Card. Pietro Respighi',                                     // hf_p-x_let_..._catechismo
+      'Al Cardinale Ferrari, Arcivescovo di Milano',                  // hf_p-x_let_..._cardinale-ferrari
+      "Alla Principessa del Belgio, Enrichetta, Duchessa di Vendôme", // hf_p-x_let_..._principessa-belgio
+    ]) {
+      expect(incipitOf(h), h).toBeNull();
+    }
+  });
+
+  it('is a no-op on the one real shelf-era heading that a gloss-shaped cut would truncate', () => {
+    // 'Ad universam' is genuinely the whole incipit; the trailing ': viene eretta...' is a
+    // gloss and the ': ' connector correctly cuts it off -- confirmed against the corpus.
+    expect(incipitOf('Ad universam: viene eretta la diocesi di Lugano'))
+      .toBe('Ad universam');
+  });
 });

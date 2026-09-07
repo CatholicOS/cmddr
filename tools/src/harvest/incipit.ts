@@ -1,6 +1,7 @@
 import { slugify } from '../slug.js';
 import {
   GENRE_PREFIXES, GLOSS_CONNECTORS, BARE_GENRE_SLUGS, MAX_INCIPIT_WORDS,
+  ADDRESS_OR_NARRATIVE_OPENERS, MIN_WORDS_BEFORE_CUT,
 } from '../mappings/incipit-rules.js';
 
 export interface HeadingParts {
@@ -16,6 +17,16 @@ const BY_LENGTH = [...GENRE_PREFIXES].sort((a, b) => b.length - a.length);
 const QUOTES: ReadonlyArray<[string, string]> = [
   ['«', '»'], ['“', '”'], ['‘', '’'], ['"', '"'], ["'", "'"],
 ];
+
+/**
+ * Matches an address salutation or third-person-narration opener at the start of a string,
+ * at a word boundary, case-insensitively. Built from ADDRESS_OR_NARRATIVE_OPENERS so the
+ * word list stays curated in incipit-rules.ts alongside its evidence.
+ */
+const OPENER_PATTERN = new RegExp(
+  `^(?:${ADDRESS_OR_NARRATIVE_OPENERS.map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`,
+  'i',
+);
 
 /**
  * Strip a leading genre phrase, longest first. The phrase must be followed by end-of-string
@@ -42,14 +53,22 @@ function quotedOpening(s: string): string | null {
   return null;
 }
 
-/** The earliest gloss-connector index in the string, or -1. */
+/**
+ * The earliest gloss-connector index in the string, or -1. A cut that would leave fewer
+ * than MIN_WORDS_BEFORE_CUT words before it is discarded (-1 is returned instead): a short
+ * residue is treated as if no connector had fired at all, so it falls through to the
+ * untouched/word-ceiling path rather than being trusted at any length (see
+ * MIN_WORDS_BEFORE_CUT's evidence in incipit-rules.ts).
+ */
 function glossCut(s: string): number {
   let best = -1;
   for (const c of GLOSS_CONNECTORS) {
     const i = s.indexOf(c);
     if (i > 0 && (best === -1 || i < best)) best = i;
   }
-  return best;
+  if (best === -1) return -1;
+  const wordsBefore = s.slice(0, best).trim().split(/\s+/).filter(Boolean).length;
+  return wordsBefore < MIN_WORDS_BEFORE_CUT ? -1 : best;
 }
 
 /**
@@ -62,6 +81,12 @@ export function extractIncipit(heading: string): HeadingParts {
 
   const { rest, stripped } = stripGenrePrefix(title);
   if (rest === '') return { title, incipit: null };
+
+  // An addressee salutation ('Al Cardinale...') or third-person narration
+  // ('Il Pontefice prescrive...') is never an incipit, however many words follow it and
+  // regardless of any connector further along -- checked first so a coincidental gloss
+  // connector deep in the sentence never gets the chance to mint a false truncation.
+  if (OPENER_PATTERN.test(rest)) return { title, incipit: null };
 
   const quoted = quotedOpening(rest);
   if (quoted !== null) {
