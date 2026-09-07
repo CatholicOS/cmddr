@@ -52,7 +52,7 @@ The Holy See's own slugs solve this with a date: `hf_l-xiii_enc_`**`04081879`**`
 
 ### 2.3 Every pilot document has an incipit; not every incipit is Latin
 
-All 393 pilot documents carry an incipit — there are **zero** date-only or nameless entries, including
+All 395 raw pilot items carry an incipit — there are **zero** date-only or nameless entries, including
 Leo XIII's 18 recorded speeches. But incipits occur in the vernacular at every level of solemnity:
 Leo XIII's encyclicals *Depuis Le Jour* (fr) and *Spesse Volte* (it); Pius IX's *La Serie*;
 Leo XIII's allocution *Colle Espressioni*.
