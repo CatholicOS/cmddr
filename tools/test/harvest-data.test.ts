@@ -157,3 +157,40 @@ describe('the harvested pilot corpus', () => {
     expect(mismatched).toEqual([]);
   });
 });
+
+describe('the Pius X corpus', () => {
+  const px = load('pius-x');
+
+  it('holds every formal-shelf document', () => {
+    // 306 raw items across six shelves (16 encyclicals + 8 apostolic constitutions +
+    // 54 apostolic letters + 1 exhortation + 38 motu proprio + 189 letters).
+    // Eleven printed/slug date mismatches were adjudicated from each document's own
+    // dating formula (DATE_CORRECTIONS) -- none of them merges, since none collided
+    // with another item once corrected. A twelfth date correction (Caritatis opera,
+    // wrongly dated 9 May 1910 on both the shelf and its own URL slug, actually dated
+    // 28 May 1910 per its own title and closing formula) was discovered only because
+    // the wrong date collided with four unrelated 9 May 1910 letters in the same-date
+    // cross-shelf check; correcting it removed those four collisions rather than
+    // creating a merge. The remaining six same-date cross-shelf collisions were each
+    // adjudicated as genuinely distinct acts (ADJUDICATED_DISTINCT) by comparing full
+    // texts, so none of them merges either. 306 raw items in, zero merged away: 306.
+    expect(px).toHaveLength(306);
+  });
+
+  it('mints every id, since Pius X prints bare incipits', () => {
+    expect(px.filter((d) => d.idStatus === 'provisional')).toEqual([]);
+  });
+
+  it('files them all under Pius X', () => {
+    expect(px.every((d) => d.issuerId === 'rp:pius-x')).toBe(true);
+    expect(px.every((d) => d.id.startsWith('mag:pius-x/'))).toBe(true);
+  });
+
+  it('satisfies every invariant', () => {
+    expect(checkDocuments(px, genres)).toEqual([]);
+  });
+
+  it('leaves the 383 pilot records untouched', () => {
+    expect(all).toHaveLength(383);
+  });
+});

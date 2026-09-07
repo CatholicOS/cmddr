@@ -31,6 +31,8 @@ export const SOURCE_GENRE_TO_GENRE: Record<string, GenreMapping> = {
   'apost_constitutions': { genre: 'papal-bull', characteristics: ['apostolic-constitution'] },
   'motu proprio': { genre: 'motu-proprio' },
   'motu_proprio': { genre: 'motu-proprio' },
+  'apost_exhortations': { genre: 'apostolic-exhortation' },
+  'esortazione apostolica': { genre: 'apostolic-exhortation' },
   'allocuzione': { genre: 'discourse-address' },
   'allocutio': { genre: 'discourse-address' },
   'discorso': { genre: 'discourse-address' },

@@ -48,4 +48,11 @@ describe('parseSourceDate', () => {
   it('still parses 31 January', () => {
     expect(parseSourceDate('31 gennaio 1895')).toBe('1895-01-31');
   });
+
+  it("tolerates vatican.va's own 'augusto' typo for August", () => {
+    // Printed verbatim on the Pius X letters shelf as "Si consentanea (17 augusto
+    // 1904)"; the item's own URL slug (..._19040817_si-consentanea.html) confirms
+    // 17 August 1904.
+    expect(parseSourceDate('17 augusto 1904')).toBe('1904-08-17');
+  });
 });

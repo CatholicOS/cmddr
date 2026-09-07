@@ -3,6 +3,11 @@ const MONTHS: Record<string, number> = {
   luglio: 7, agosto: 8, settembre: 9, ottobre: 10, novembre: 11, dicembre: 12,
   ianuarii: 1, februarii: 2, martii: 3, aprilis: 4, maii: 5, iunii: 6,
   iulii: 7, augusti: 8, septembris: 9, octobris: 10, novembris: 11, decembris: 12,
+  // 'augusto' is neither the Italian 'agosto' nor the Latin 'augusti': it is vatican.va's
+  // own typo, printed verbatim as "Si consentanea (17 augusto 1904)" on the Pius X letters
+  // shelf. The URL slug for that same item -- .../hf_p-x_let_19040817_si-consentanea.html --
+  // confirms 17 August 1904, so the intended month is unambiguous.
+  augusto: 8,
 };
 
 const PAT = /(\d{1,2})\s*°?\s+([A-Za-zÀ-ÿ]+)\s+(\d{4})/;

@@ -3,7 +3,7 @@ import { parseFlatIndex } from './flat.js';
 import { parseShelfIndex } from './shelf.js';
 import { toDocument } from './toDocument.js';
 import { POPES, DATE_CORRECTIONS, DUPLICATE_MERGES, ADJUDICATED_DISTINCT } from '../mappings/index.js';
-import { issuerLocalPart } from '../ids.js';
+import { issuerLocalPart, mintId } from '../ids.js';
 import { slugify } from '../slug.js';
 import type { DocumentRecord, HarvestItem } from '../types.js';
 
@@ -149,9 +149,28 @@ for (const group of byPageDate.values()) {
   }
 }
 
+const allDocs = [...mergedByDuplicateTable.values()].map((item) => toDocument(item, RETRIEVED));
+
+// Two distinct documents from the same issuer can share both an incipit slug and a year
+// without being duplicates -- e.g. Pius X's two unrelated "Constat apprime" apostolic
+// letters of 1910 (4 May, granting a domestic-prelate title; 21 June, raising Lviv
+// cathedral to a minor basilica). mintId's default year-only suffix then collides; the
+// resolution (spec invariant 11) is to re-mint every id in the colliding group with its
+// full date, which is always unique since pass 1's merge key already includes it.
+const collisionGroups = new Map<string, DocumentRecord[]>();
+for (const doc of allDocs) {
+  const key = `${issuerLocalPart(doc.issuerId)}|${slugify(doc.incipit)}|${doc.date.slice(0, 4)}`;
+  collisionGroups.set(key, [...(collisionGroups.get(key) ?? []), doc]);
+}
+for (const group of collisionGroups.values()) {
+  if (group.length < 2) continue;
+  for (const doc of group) {
+    doc.id = mintId(doc.issuerId, doc.incipit, doc.date, { fullDate: true });
+  }
+}
+
 const byIssuer = new Map<string, DocumentRecord[]>();
-for (const item of mergedByDuplicateTable.values()) {
-  const doc = toDocument(item, RETRIEVED);
+for (const doc of allDocs) {
   const key = issuerLocalPart(doc.issuerId);
   byIssuer.set(key, [...(byIssuer.get(key) ?? []), doc]);
 }

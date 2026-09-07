@@ -31,6 +31,17 @@ export const POPES: readonly PopeSource[] = [
       'encyclicals', 'letters', 'motu_proprio', 'speeches',
     ],
   },
+  {
+    pageSlug: 'pius-x', issuerId: 'rp:pius-x', era: 'shelf',
+    // No bulls or briefs shelf exists for Pius X. `speeches` is excluded here and for
+    // every later pope (spec §2.7): from Pius XI on it holds occasional acts with
+    // descriptive titles rather than incipits. Leo XIII keeps its speeches, which are
+    // genuine Latin allocutions.
+    shelves: [
+      'apost_constitutions', 'apost_exhortations', 'apost_letters',
+      'encyclicals', 'letters', 'motu_proprio',
+    ],
+  },
 ] as const;
 
 /** The shelves harvested for a pope page; empty for an unknown slug or a flat-era page. */

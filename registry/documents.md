@@ -6,7 +6,7 @@ Identifiers follow `mag:{issuer}/{incipit-slug}-{year}`; the issuer segment is a
 part of `issuerId`, so conciliar documents namespace under their council and record the
 promulgating pope separately. See the design spec for the minting rules.
 
-383 documents.
+689 documents.
 
 | ID | Incipit | Genre | Issuer | Date | Promulgated by |
 | --- | --- | --- | --- | --- | --- |
@@ -393,3 +393,309 @@ promulgating pope separately. See the design spec for the minting rules.
 | `mag:leo-xiii/communes-litteras-1903` | Communes litteras | letter | `rp:leo-xiii` | 1903-06-03 |  |
 | `mag:leo-xiii/praestans-fidei-1903` | Praestans fidei | letter | `rp:leo-xiii` | 1903-06-10 |  |
 | `mag:leo-xiii/nobis-quidem-1903` | Nobis quidem | discourse-address | `rp:leo-xiii` | 1903-06-22 |  |
+| `mag:pius-x/praedecessoris-nostri-1903` | Praedecessoris Nostri | apostolic-letter | `rp:pius-x` | 1903-08-09 |  |
+| `mag:pius-x/e-supremi-1903` | E Supremi | encyclical | `rp:pius-x` | 1903-10-04 |  |
+| `mag:pius-x/sanctorum-parentis-1903` | Sanctorum parentis | letter | `rp:pius-x` | 1903-10-12 |  |
+| `mag:pius-x/tra-le-sollecitudini-1903` | Tra le sollecitudini | motu-proprio | `rp:pius-x` | 1903-11-22 |  |
+| `mag:pius-x/quas-nuper-1903` | Quas nuper | letter | `rp:pius-x` | 1903-12-03 |  |
+| `mag:pius-x/opus-a-catechismis-1903` | Opus a catechismis | letter | `rp:pius-x` | 1903-12-08 |  |
+| `mag:pius-x/quas-e-1903` | Quas e | letter | `rp:pius-x` | 1903-12-08 |  |
+| `mag:pius-x/peculiaria-quaedam-1903` | Peculiaria quaedam | motu-proprio | `rp:pius-x` | 1903-12-14 |  |
+| `mag:pius-x/alla-principessa-del-belgio-enrichetta-duchessa-di-vendome-1903` | Alla Principessa del Belgio, Enrichetta, Duchessa di Vendôme | letter | `rp:pius-x` | 1903-12-16 |  |
+| `mag:pius-x/romanis-pontificibus-1903` | Romanis Pontificibus | motu-proprio | `rp:pius-x` | 1903-12-17 |  |
+| `mag:pius-x/fin-dalla-prima-1903` | Fin dalla prima | motu-proprio | `rp:pius-x` | 1903-12-18 |  |
+| `mag:pius-x/la-premiere-fois-1904` | La première fois | letter | `rp:pius-x` | 1904-01-21 |  |
+| `mag:pius-x/decessor-noster-1904` | Decessor Noster | motu-proprio | `rp:pius-x` | 1904-01-31 |  |
+| `mag:pius-x/ad-diem-illum-laetissimum-1904` | Ad diem illum laetissimum | encyclical | `rp:pius-x` | 1904-02-02 |  |
+| `mag:pius-x/quum-arcano-1904` | Quum, arcano | apostolic-letter | `rp:pius-x` | 1904-02-11 |  |
+| `mag:pius-x/litteras-accepimus-1904` | Litteras accepimus | letter | `rp:pius-x` | 1904-02-14 |  |
+| `mag:pius-x/scripturae-sanctae-1904` | Scripturae Sanctae | apostolic-letter | `rp:pius-x` | 1904-02-23 |  |
+| `mag:pius-x/haud-ita-1904` | Haud ita | letter | `rp:pius-x` | 1904-02-26 |  |
+| `mag:pius-x/quae-nostra-1904` | Quae Nostra | apostolic-letter | `rp:pius-x` | 1904-03-03 |  |
+| `mag:pius-x/iucunda-sane-1904` | Iucunda Sane | encyclical | `rp:pius-x` | 1904-03-12 |  |
+| `mag:pius-x/arduum-sane-munus-1904` | Arduum sane munus | motu-proprio | `rp:pius-x` | 1904-03-19 |  |
+| `mag:pius-x/in-apostolicum-1904` | In Apostolicum | apostolic-letter | `rp:pius-x` | 1904-03-25 |  |
+| `mag:pius-x/cuius-moderator-1904` | Cuius moderator | letter | `rp:pius-x` | 1904-04-08 |  |
+| `mag:pius-x/exemplar-libentissime-1904` | Exemplar libentissime | letter | `rp:pius-x` | 1904-04-08 |  |
+| `mag:pius-x/quod-tibi-vehementer-1904` | Quod tibi vehementer | letter | `rp:pius-x` | 1904-04-21 |  |
+| `mag:pius-x/navitas-egregia-1904` | Navitas egregia | letter | `rp:pius-x` | 1904-04-25 |  |
+| `mag:pius-x/sull-edizione-vaticana-dei-libri-liturgici-contenenti-le-melodie-gregoriane-1904` | Sull'edizione vaticana dei libri liturgici contenenti le melodie gregoriane | motu-proprio | `rp:pius-x` | 1904-04-25 |  |
+| `mag:pius-x/non-ignota-1904` | Non ignota | letter | `rp:pius-x` | 1904-05-01 |  |
+| `mag:pius-x/vehementer-nos-1904` | Vehementer Nos | letter | `rp:pius-x` | 1904-05-02 |  |
+| `mag:pius-x/missale-a-te-1904` | Missale a te | letter | `rp:pius-x` | 1904-05-05 |  |
+| `mag:pius-x/quum-optimo-1904` | Quum optimo | letter | `rp:pius-x` | 1904-05-05 |  |
+| `mag:pius-x/edita-typis-1904` | Edita typis | letter | `rp:pius-x` | 1904-05-06 |  |
+| `mag:pius-x/ex-opere-1904` | Ex opere | letter | `rp:pius-x` | 1904-05-09 |  |
+| `mag:pius-x/magnam-equidem-1904` | Magnam equidem | letter | `rp:pius-x` | 1904-05-09 |  |
+| `mag:pius-x/primum-operis-1904` | Primum operis | letter | `rp:pius-x` | 1904-05-09 |  |
+| `mag:pius-x/primum-1904` | Primum | letter | `rp:pius-x` | 1904-05-11 |  |
+| `mag:pius-x/seminarium-vaticanum-1904` | Seminarium Vaticanum | motu-proprio | `rp:pius-x` | 1904-05-12 |  |
+| `mag:pius-x/ex-quo-tempore-1904` | Ex quo tempore | letter | `rp:pius-x` | 1904-05-22 |  |
+| `mag:pius-x/sodalitatem-sacerdotum-1904` | Sodalitatem sacerdotum | letter | `rp:pius-x` | 1904-05-23 |  |
+| `mag:pius-x/americae-regionem-1904` | Americae regionem | letter | `rp:pius-x` | 1904-06-13 |  |
+| `mag:pius-x/librum-1904` | Librum | letter | `rp:pius-x` | 1904-06-28 |  |
+| `mag:pius-x/singularitas-regiminis-1904` | Singularitas regiminis | motu-proprio | `rp:pius-x` | 1904-06-29 |  |
+| `mag:pius-x/nunciatum-est-1904` | Nunciatum est | letter | `rp:pius-x` | 1904-07-06 |  |
+| `mag:pius-x/sacrarum-scripturarum-1904` | Sacrarum Scripturarum | letter | `rp:pius-x` | 1904-07-06 |  |
+| `mag:pius-x/conventui-apparando-1904` | Conventui apparando | letter | `rp:pius-x` | 1904-07-25 |  |
+| `mag:pius-x/oblatum-dono-1904` | Oblatum dono | letter | `rp:pius-x` | 1904-07-28 |  |
+| `mag:pius-x/quod-publicus-1904` | Quod publicus | letter | `rp:pius-x` | 1904-08-09 |  |
+| `mag:pius-x/exposuisti-nobis-1904` | Exposuisti Nobis | letter | `rp:pius-x` | 1904-08-15 |  |
+| `mag:pius-x/si-consentanea-1904` | Si consentanea | letter | `rp:pius-x` | 1904-08-17 |  |
+| `mag:pius-x/nuncium-sane-1904` | Nuncium sane | letter | `rp:pius-x` | 1904-09-02 |  |
+| `mag:pius-x/la-protesta-del-papa-contro-il-congresso-del-libero-pensiero-1904` | La protesta del Papa contro il Congresso del libero pensiero | letter | `rp:pius-x` | 1904-09-21 |  |
+| `mag:pius-x/novies-saecularia-1904` | Novies saecularia | letter | `rp:pius-x` | 1904-09-21 |  |
+| `mag:pius-x/e-peractis-1904` | E peractis | letter | `rp:pius-x` | 1904-10-17 |  |
+| `mag:pius-x/libenti-omnino-1904` | Libenti omnino | letter | `rp:pius-x` | 1904-10-17 |  |
+| `mag:pius-x/barcinonem-conventuris-1904` | Barcinonem conventuris | letter | `rp:pius-x` | 1904-11-11 |  |
+| `mag:pius-x/ad-omnium-instaurationem-1904` | Ad omnium instaurationem | letter | `rp:pius-x` | 1904-11-21 |  |
+| `mag:pius-x/quae-de-istius-1904` | Quae de istius | letter | `rp:pius-x` | 1904-11-22 |  |
+| `mag:pius-x/nobile-profecto-1904` | Nobile profecto | letter | `rp:pius-x` | 1904-11-23 |  |
+| `mag:pius-x/exercitiorum-spiritualium-1904` | Exercitiorum Spiritualium | letter | `rp:pius-x` | 1904-12-08 |  |
+| `mag:pius-x/gratiam-tibi-1904` | Gratiam tibi | letter | `rp:pius-x` | 1904-12-08 |  |
+| `mag:pius-x/haud-tenui-1904` | Haud tenui | apostolic-letter | `rp:pius-x` | 1904-12-11 |  |
+| `mag:pius-x/ad-suppetias-1904` | Ad suppetias | letter | `rp:pius-x` | 1904-12-12 |  |
+| `mag:pius-x/descriptum-ornatumque-1904` | Descriptum ornatumque | letter | `rp:pius-x` | 1904-12-12 |  |
+| `mag:pius-x/habitum-a-vobis-1904` | Habitum a vobis | letter | `rp:pius-x` | 1904-12-20 |  |
+| `mag:pius-x/si-progressione-1904` | Si progressione | letter | `rp:pius-x` | 1904-12-20 |  |
+| `mag:pius-x/experiendo-plus-1904` | Experiendo plus | letter | `rp:pius-x` | 1904-12-27 |  |
+| `mag:pius-x/quod-nuper-1905` | Quod nuper | letter | `rp:pius-x` | 1905-01-01 |  |
+| `mag:pius-x/quinquagesimo-redeunte-anno-1905` | Quinquagesimo redeunte anno | letter | `rp:pius-x` | 1905-01-05 |  |
+| `mag:pius-x/fra-i-molti-e-gravi-uffici-1905` | Fra i molti e gravi uffici | letter | `rp:pius-x` | 1905-01-12 |  |
+| `mag:pius-x/quum-nos-1905` | Quum Nos | letter | `rp:pius-x` | 1905-01-21 |  |
+| `mag:pius-x/quemadmodum-servari-1905` | Quemadmodum servari | letter | `rp:pius-x` | 1905-01-23 |  |
+| `mag:pius-x/epistolam-a-te-1905` | Epistolam a te | letter | `rp:pius-x` | 1905-01-31 |  |
+| `mag:pius-x/quae-afferuntur-1905` | Quae afferuntur | letter | `rp:pius-x` | 1905-02-05 |  |
+| `mag:pius-x/a-vincenzo-sardi-1905` | A Vincenzo Sardi | letter | `rp:pius-x` | 1905-02-06 |  |
+| `mag:pius-x/consilium-illud-1905` | Consilium illud | letter | `rp:pius-x` | 1905-02-08 |  |
+| `mag:pius-x/qua-pontifex-1905` | Qua Pontifex | letter | `rp:pius-x` | 1905-02-09 |  |
+| `mag:pius-x/sane-nuper-volumina-1905` | Sane nuper volumina | letter | `rp:pius-x` | 1905-02-20 |  |
+| `mag:pius-x/inter-multiplices-curas-1905` | Inter multiplices curas | motu-proprio | `rp:pius-x` | 1905-02-21 |  |
+| `mag:pius-x/solemne-illud-1905` | Solemne illud | letter | `rp:pius-x` | 1905-02-22 |  |
+| `mag:pius-x/proximi-ut-accepimus-1905` | Proximi, ut accepimus | letter | `rp:pius-x` | 1905-02-26 |  |
+| `mag:pius-x/quum-haud-1905` | Quum, haud | letter | `rp:pius-x` | 1905-02-27 |  |
+| `mag:pius-x/contro-i-democratici-cristiani-autonomi-1905` | Contro i Democratici cristiani autonomi | letter | `rp:pius-x` | 1905-03-01 |  |
+| `mag:pius-x/austriam-catholico-1905` | Austriam catholico | letter | `rp:pius-x` | 1905-03-06 |  |
+| `mag:pius-x/sedis-apostolicae-1905` | Sedis Apostolicae | apostolic-letter | `rp:pius-x` | 1905-03-09 |  |
+| `mag:pius-x/acerbo-nimis-1905` | Acerbo Nimis | encyclical | `rp:pius-x` | 1905-04-15 |  |
+| `mag:pius-x/peculiari-in-nos-1905` | Peculiari in Nos | letter | `rp:pius-x` | 1905-04-22 |  |
+| `mag:pius-x/quum-propediem-1905` | Quum propediem | letter | `rp:pius-x` | 1905-04-23 |  |
+| `mag:pius-x/sollicito-vehementer-1905` | Sollicito vehementer | letter | `rp:pius-x` | 1905-05-05 |  |
+| `mag:pius-x/apostolicae-sedi-1905` | Apostolicae Sedi | motu-proprio | `rp:pius-x` | 1905-05-08 |  |
+| `mag:pius-x/aere-nefariumque-1905` | Aere nefariumque | letter | `rp:pius-x` | 1905-05-14 |  |
+| `mag:pius-x/crux-pectoralis-1905` | Crux pectoralis | motu-proprio | `rp:pius-x` | 1905-05-24 |  |
+| `mag:pius-x/inter-plura-1905` | Inter plura | letter | `rp:pius-x` | 1905-05-31 |  |
+| `mag:pius-x/almae-urbis-nostrae-1905` | Almae Urbis Nostrae | apostolic-letter | `rp:pius-x` | 1905-06-01 |  |
+| `mag:pius-x/quibus-nos-1905` | Quibus Nos | letter | `rp:pius-x` | 1905-06-08 |  |
+| `mag:pius-x/qui-eucharisticum-1905` | Qui eucharisticum | letter | `rp:pius-x` | 1905-06-09 |  |
+| `mag:pius-x/il-fermo-proposito-1905` | Il fermo proposito | encyclical | `rp:pius-x` | 1905-06-11 |  |
+| `mag:pius-x/sancti-doctoris-1905` | Sancti doctoris | letter | `rp:pius-x` | 1905-06-12 |  |
+| `mag:pius-x/il-pontefice-prescrive-alle-diocesi-della-provincia-di-roma-il-nuovo-compendio-del-catechismo-1905` | Il Pontefice prescrive alle Diocesi della Provincia di Roma il nuovo Compendio del Catechismo | letter | `rp:pius-x` | 1905-06-14 |  |
+| `mag:pius-x/vestras-e-fuldensi-1905` | Vestras e Fuldensi | letter | `rp:pius-x` | 1905-06-15 |  |
+| `mag:pius-x/quae-bona-1905` | Quae bona | letter | `rp:pius-x` | 1905-06-19 |  |
+| `mag:pius-x/tutte-le-istituzioni-1905` | Tutte le istituzioni | motu-proprio | `rp:pius-x` | 1905-06-20 |  |
+| `mag:pius-x/al-cardinale-rampolla-del-tindaro-arciprete-della-basilica-vaticana-1905` | Al Cardinale Rampolla del Tindaro, Arciprete della Basilica Vaticana | letter | `rp:pius-x` | 1905-06-23 |  |
+| `mag:pius-x/quem-burgensem-1905` | Quem Burgensem | letter | `rp:pius-x` | 1905-06-25 |  |
+| `mag:pius-x/sacrosancta-tridentina-synodus-1905` | Sacrosancta Tridentina Synodus | motu-proprio | `rp:pius-x` | 1905-07-16 |  |
+| `mag:pius-x/sull-azione-cattolica-1905` | Sull'Azione Cattolica | letter | `rp:pius-x` | 1905-08-01 |  |
+| `mag:pius-x/al-cardinale-pietro-respighi-sui-sacerdoti-di-altre-diocesi-che-dimorano-a-roma-1905` | Al Cardinale Pietro Respighi, sui sacerdoti di altre Diocesi che dimorano a Roma | letter | `rp:pius-x` | 1905-08-06 |  |
+| `mag:pius-x/habiti-quotannis-1905` | Habiti quotannis | letter | `rp:pius-x` | 1905-08-14 |  |
+| `mag:pius-x/qui-apparando-1905` | Qui apparando | letter | `rp:pius-x` | 1905-09-04 |  |
+| `mag:pius-x/magnopere-nos-1905` | Magnopere Nos | letter | `rp:pius-x` | 1905-09-24 |  |
+| `mag:pius-x/les-graves-evenements-1905` | Les graves événements | letter | `rp:pius-x` | 1905-10-04 |  |
+| `mag:pius-x/summo-sane-1905` | Summo sane | motu-proprio | `rp:pius-x` | 1905-11-18 |  |
+| `mag:pius-x/poloniae-populum-1905` | Poloniae populum | letter | `rp:pius-x` | 1905-12-03 |  |
+| `mag:pius-x/dilectus-filius-1905` | Dilectus Filius | letter | `rp:pius-x` | 1905-12-20 |  |
+| `mag:pius-x/romanas-aequabilius-1906` | Romanas aequabilius | apostolic-letter | `rp:pius-x` | 1906-01-06 |  |
+| `mag:pius-x/opportunum-valde-1906` | Opportunum valde | letter | `rp:pius-x` | 1906-01-11 |  |
+| `mag:pius-x/provida-sapientique-cura-1906` | Provida sapientique cura | papal-bull | `rp:pius-x` | 1906-01-18 |  |
+| `mag:pius-x/novum-1906` | Novum | letter | `rp:pius-x` | 1906-02-06 |  |
+| `mag:pius-x/vehementer-nos-1906` | Vehementer Nos | encyclical | `rp:pius-x` | 1906-02-11 |  |
+| `mag:pius-x/inter-catholicos-1906` | Inter catholicos | letter | `rp:pius-x` | 1906-02-20 |  |
+| `mag:pius-x/al-cardinale-ferrari-arcivescovo-di-milano-1906` | Al Cardinale Ferrari, Arcivescovo di Milano | letter | `rp:pius-x` | 1906-02-27 |  |
+| `mag:pius-x/quum-centum-1906` | Quum centum | letter | `rp:pius-x` | 1906-03-02 |  |
+| `mag:pius-x/religiosorum-ordinum-1906` | Religiosorum Ordinum | motu-proprio | `rp:pius-x` | 1906-03-19 |  |
+| `mag:pius-x/quoniam-in-re-1906` | Quoniam in re | apostolic-letter | `rp:pius-x` | 1906-03-27 |  |
+| `mag:pius-x/tribus-circiter-1906` | Tribus Circiter | encyclical | `rp:pius-x` | 1906-04-05 |  |
+| `mag:pius-x/vigere-1906` | Vigere | letter | `rp:pius-x` | 1906-04-10 |  |
+| `mag:pius-x/exeunte-1906` | Exeunte | letter | `rp:pius-x` | 1906-04-18 |  |
+| `mag:pius-x/praestito-nobis-1906` | Praestito Nobis | letter | `rp:pius-x` | 1906-04-26 |  |
+| `mag:pius-x/tuos-de-morali-1906` | Tuos de morali | letter | `rp:pius-x` | 1906-05-02 |  |
+| `mag:pius-x/quotquot-ex-universis-1906` | Quotquot ex universis | letter | `rp:pius-x` | 1906-05-22 |  |
+| `mag:pius-x/de-sacris-congregationibus-1906` | De Sacris Congregationibus | motu-proprio | `rp:pius-x` | 1906-05-26 |  |
+| `mag:pius-x/quum-tu-1906` | Quum tu | letter | `rp:pius-x` | 1906-05-31 |  |
+| `mag:pius-x/illustria-atque-explorata-1906` | Illustria atque explorata | letter | `rp:pius-x` | 1906-06-08 |  |
+| `mag:pius-x/pergratus-nobis-1906` | Pergratus Nobis | letter | `rp:pius-x` | 1906-06-08 |  |
+| `mag:pius-x/exacto-societatis-1906` | Exacto societatis | letter | `rp:pius-x` | 1906-06-30 |  |
+| `mag:pius-x/dei-providentis-benignitatem-1906` | Dei providentis benignitatem | motu-proprio | `rp:pius-x` | 1906-07-16 |  |
+| `mag:pius-x/pieni-l-animo-1906` | Pieni L'Animo | encyclical | `rp:pius-x` | 1906-07-28 |  |
+| `mag:pius-x/legimus-laeto-1906` | Legimus laeto | letter | `rp:pius-x` | 1906-08-02 |  |
+| `mag:pius-x/propositum-urgentes-1906` | Propositum urgentes | motu-proprio | `rp:pius-x` | 1906-08-05 |  |
+| `mag:pius-x/gravissimo-officii-munere-1906` | Gravissimo Officii Munere | encyclical | `rp:pius-x` | 1906-08-10 |  |
+| `mag:pius-x/quod-te-1906` | Quod te | letter | `rp:pius-x` | 1906-08-13 |  |
+| `mag:pius-x/provinciale-antistitum-1906` | Provinciale Antistitum | letter | `rp:pius-x` | 1906-09-17 |  |
+| `mag:pius-x/susceptum-deo-1906` | Susceptum, Deo | apostolic-letter | `rp:pius-x` | 1906-10-24 |  |
+| `mag:pius-x/quod-felices-1906` | Quod felices | letter | `rp:pius-x` | 1906-10-30 |  |
+| `mag:pius-x/absolutis-ut-accepimus-1906` | Absolutis, ut accepimus | letter | `rp:pius-x` | 1906-11-09 |  |
+| `mag:pius-x/le-condizioni-dolorose-1906` | Le condizioni dolorose | letter | `rp:pius-x` | 1906-11-10 |  |
+| `mag:pius-x/de-vita-1906` | De vita | letter | `rp:pius-x` | 1906-11-22 |  |
+| `mag:pius-x/afflictum-propioribus-1906` | Afflictum propioribus | apostolic-letter | `rp:pius-x` | 1906-11-24 |  |
+| `mag:pius-x/litteras-quas-1907` | Litteras, quas | letter | `rp:pius-x` | 1907-01-04 |  |
+| `mag:pius-x/une-fois-encore-1907` | Une Fois Encore | encyclical | `rp:pius-x` | 1907-01-06 |  |
+| `mag:pius-x/ai-componenti-la-direzione-provvisoria-dell-unione-economico-sociale-per-i-cattolici-italiani-1907` | Ai componenti la direzione provvisoria dell' Unione economico sociale per i cattolici italiani | letter | `rp:pius-x` | 1907-01-20 |  |
+| `mag:pius-x/qui-piam-1907` | Qui piam | letter | `rp:pius-x` | 1907-01-21 |  |
+| `mag:pius-x/ai-membri-del-comitato-generale-dell-associazione-cattolica-della-gioventu-francese-1907` | Ai membri del comitato generale dell'Associazione Cattolica della gioventù francese | letter | `rp:pius-x` | 1907-02-22 |  |
+| `mag:pius-x/editum-nuper-1907` | Editum nuper | letter | `rp:pius-x` | 1907-03-04 |  |
+| `mag:pius-x/quam-multa-1907` | Quam multa | letter | `rp:pius-x` | 1907-05-03 |  |
+| `mag:pius-x/sub-exitum-1907` | Sub exitum | letter | `rp:pius-x` | 1907-05-06 |  |
+| `mag:pius-x/qua-tu-prudentia-1907` | Qua tu prudentia | letter | `rp:pius-x` | 1907-05-27 |  |
+| `mag:pius-x/communis-epistola-1907` | Communis epistola | letter | `rp:pius-x` | 1907-06-12 |  |
+| `mag:pius-x/ea-semper-fuit-1907` | Ea semper fuit | apostolic-letter | `rp:pius-x` | 1907-06-14 |  |
+| `mag:pius-x/summa-nos-1907` | Summa Nos | letter | `rp:pius-x` | 1907-06-14 |  |
+| `mag:pius-x/solemnis-catholicorum-1907` | Solemnis catholicorum | letter | `rp:pius-x` | 1907-07-16 |  |
+| `mag:pius-x/prope-est-1907` | Prope est | letter | `rp:pius-x` | 1907-07-22 |  |
+| `mag:pius-x/quum-ante-annos-1907` | Quum ante annos | letter | `rp:pius-x` | 1907-08-12 |  |
+| `mag:pius-x/pascendi-dominici-gregis-1907` | Pascendi Dominici Gregis | encyclical | `rp:pius-x` | 1907-09-08 |  |
+| `mag:pius-x/in-domibus-1907` | In domibus | motu-proprio | `rp:pius-x` | 1907-09-17 |  |
+| `mag:pius-x/singulari-curare-1907` | Singulari curare | motu-proprio | `rp:pius-x` | 1907-09-17 |  |
+| `mag:pius-x/tempus-propediem-1907` | Tempus propediem | letter | `rp:pius-x` | 1907-09-28 |  |
+| `mag:pius-x/habitus-1907` | Habitus | letter | `rp:pius-x` | 1907-10-08 |  |
+| `mag:pius-x/praestantia-scripturae-1907` | Praestantia Scripturae | motu-proprio | `rp:pius-x` | 1907-11-18 |  |
+| `mag:pius-x/delatum-sodalibus-1907` | Delatum sodalibus | letter | `rp:pius-x` | 1907-12-03 |  |
+| `mag:pius-x/progredientem-aetatis-1908` | Progredientem aetatis | letter | `rp:pius-x` | 1908-01-10 |  |
+| `mag:pius-x/hagnae-virginis-1908` | Hagnae virginis | letter | `rp:pius-x` | 1908-01-19 |  |
+| `mag:pius-x/laeti-libentesque-1908` | Laeti libentesque | letter | `rp:pius-x` | 1908-02-19 |  |
+| `mag:pius-x/tuum-illud-1908` | Tuum illud | letter | `rp:pius-x` | 1908-03-10 |  |
+| `mag:pius-x/nunciasti-nobis-1908` | Nunciasti nobis | letter | `rp:pius-x` | 1908-03-23 |  |
+| `mag:pius-x/immortalia-promerita-1908` | Immortalia promerita | letter | `rp:pius-x` | 1908-03-31 |  |
+| `mag:pius-x/iucunda-valde-1908` | Iucunda valde | letter | `rp:pius-x` | 1908-04-03 |  |
+| `mag:pius-x/si-vota-semper-1908` | Si vota semper | letter | `rp:pius-x` | 1908-04-09 |  |
+| `mag:pius-x/saecularis-ab-ortu-1908` | Saecularis ab ortu | letter | `rp:pius-x` | 1908-04-16 |  |
+| `mag:pius-x/studiosa-erga-1908` | Studiosa erga | letter | `rp:pius-x` | 1908-04-24 |  |
+| `mag:pius-x/le-moment-1908` | Le moment | letter | `rp:pius-x` | 1908-05-17 |  |
+| `mag:pius-x/sapienti-consilio-1908` | Sapienti consilio | papal-bull | `rp:pius-x` | 1908-06-29 |  |
+| `mag:pius-x/me-taedet-1908` | Me taedet | letter | `rp:pius-x` | 1908-07-09 |  |
+| `mag:pius-x/haerent-animo-1908` | Haerent Animo | apostolic-exhortation | `rp:pius-x` | 1908-08-04 |  |
+| `mag:pius-x/pias-fidelium-1908` | Pias fidelium | apostolic-letter | `rp:pius-x` | 1908-09-11 |  |
+| `mag:pius-x/sanctos-inter-1908` | Sanctos inter | apostolic-letter | `rp:pius-x` | 1908-09-18 |  |
+| `mag:pius-x/in-sublimi-1908` | In sublimi | apostolic-letter | `rp:pius-x` | 1908-09-19 |  |
+| `mag:pius-x/romanorum-pontificum-1908` | Romanorum Pontificum | apostolic-letter | `rp:pius-x` | 1908-09-22 |  |
+| `mag:pius-x/quae-rei-1908` | Quae rei | apostolic-letter | `rp:pius-x` | 1908-09-27 |  |
+| `mag:pius-x/promulgandi-1908` | Promulgandi | papal-bull | `rp:pius-x` | 1908-09-29 |  |
+| `mag:pius-x/solatium-nos-1908` | Solatium Nos | letter | `rp:pius-x` | 1908-10-15 |  |
+| `mag:pius-x/satis-constat-1908` | Satis constat | apostolic-letter | `rp:pius-x` | 1908-10-16 |  |
+| `mag:pius-x/retulit-ad-nos-1908` | Retulit ad Nos | apostolic-letter | `rp:pius-x` | 1908-10-31 |  |
+| `mag:pius-x/domum-delectis-1908` | Domum delectis | letter | `rp:pius-x` | 1908-11-08 |  |
+| `mag:pius-x/haud-sane-1908` | Haud sane | letter | `rp:pius-x` | 1908-11-23 |  |
+| `mag:pius-x/quam-tu-1908` | Quam tu | letter | `rp:pius-x` | 1908-12-08 |  |
+| `mag:pius-x/is-tuus-1908` | Is tuus | letter | `rp:pius-x` | 1908-12-13 |  |
+| `mag:pius-x/quum-certiores-1908` | Quum certiores | letter | `rp:pius-x` | 1908-12-14 |  |
+| `mag:pius-x/vestra-erga-1908` | Vestra erga | letter | `rp:pius-x` | 1908-12-19 |  |
+| `mag:pius-x/sacra-solemnia-1908` | Sacra solemnia | letter | `rp:pius-x` | 1908-12-23 |  |
+| `mag:pius-x/solemnia-sacra-1908` | Solemnia sacra | letter | `rp:pius-x` | 1908-12-24 |  |
+| `mag:pius-x/conspicua-templa-1909` | Conspicua templa | apostolic-letter | `rp:pius-x` | 1909-02-05 |  |
+| `mag:pius-x/communium-rerum-1909` | Communium Rerum | encyclical | `rp:pius-x` | 1909-04-21 |  |
+| `mag:pius-x/vinea-electa-1909` | Vinea electa | apostolic-letter | `rp:pius-x` | 1909-05-07 |  |
+| `mag:pius-x/ineffabili-dei-1909` | Ineffabili Dei | apostolic-letter | `rp:pius-x` | 1909-06-13 |  |
+| `mag:pius-x/e-lapurdensi-basilica-1909` | E Lapurdensi Basilica | apostolic-letter | `rp:pius-x` | 1909-07-05 |  |
+| `mag:pius-x/septimo-iam-1909` | Septimo iam | apostolic-letter | `rp:pius-x` | 1909-07-09 |  |
+| `mag:pius-x/quae-de-coloniensi-1909` | Quae de Coloniensi | letter | `rp:pius-x` | 1909-08-22 |  |
+| `mag:pius-x/sodalitium-1909` | Sodalitium | apostolic-letter | `rp:pius-x` | 1909-08-24 |  |
+| `mag:pius-x/paucis-ante-diebus-1909` | Paucis ante diebus | apostolic-letter | `rp:pius-x` | 1909-11-01 |  |
+| `mag:pius-x/decessor-noster-1909` | Decessor Noster | apostolic-letter | `rp:pius-x` | 1909-12-09 |  |
+| `mag:pius-x/grate-accepimus-1909` | Grate accepimus | letter | `rp:pius-x` | 1909-12-11 |  |
+| `mag:pius-x/catholicos-1909` | Catholicos | letter | `rp:pius-x` | 1909-12-12 |  |
+| `mag:pius-x/diarium-terrae-sanctae-1909` | Diarium Terrae Sanctae | letter | `rp:pius-x` | 1909-12-12 |  |
+| `mag:pius-x/placuit-tibi-1909` | Placuit tibi | letter | `rp:pius-x` | 1909-12-12 |  |
+| `mag:pius-x/reddite-sunt-nobis-1909` | Reddite sunt Nobis | letter | `rp:pius-x` | 1909-12-12 |  |
+| `mag:pius-x/communis-vobiscum-1909` | Communis vobiscum | letter | `rp:pius-x` | 1909-12-13 |  |
+| `mag:pius-x/delectavit-1909` | Delectavit | letter | `rp:pius-x` | 1909-12-17 |  |
+| `mag:pius-x/pontificium-institutum-1909` | Pontificium institutum | letter | `rp:pius-x` | 1909-12-25 |  |
+| `mag:pius-x/dilecti-filii-1910` | Dilecti filii | apostolic-letter | `rp:pius-x` | 1910-01-05 |  |
+| `mag:pius-x/grate-cognovimus-1910` | Grate cognovimus | letter | `rp:pius-x` | 1910-01-10 |  |
+| `mag:pius-x/gratias-tibi-1910` | Gratias tibi | letter | `rp:pius-x` | 1910-01-10 |  |
+| `mag:pius-x/libentissime-legimus-1910` | Libentissime legimus | letter | `rp:pius-x` | 1910-01-10 |  |
+| `mag:pius-x/venerabilem-fratrem-1910` | Venerabilem fratrem | letter | `rp:pius-x` | 1910-01-10 |  |
+| `mag:pius-x/annum-proximo-1910` | Annum proximo | letter | `rp:pius-x` | 1910-01-24 |  |
+| `mag:pius-x/et-petrianam-1910` | Et Petrianam | letter | `rp:pius-x` | 1910-01-24 |  |
+| `mag:pius-x/ex-annalibus-1910` | Ex annalibus | letter | `rp:pius-x` | 1910-01-24 |  |
+| `mag:pius-x/gratias-primum-1910` | Gratias primum | letter | `rp:pius-x` | 1910-01-24 |  |
+| `mag:pius-x/quem-ex-perspecta-1910` | Quem ex perspecta | letter | `rp:pius-x` | 1910-02-13 |  |
+| `mag:pius-x/inter-viros-1910` | Inter viros | letter | `rp:pius-x` | 1910-02-14 |  |
+| `mag:pius-x/nobis-in-sublimi-1910` | Nobis in sublimi | apostolic-letter | `rp:pius-x` | 1910-02-14 |  |
+| `mag:pius-x/quod-cognovimus-1910` | Quod cognovimus | letter | `rp:pius-x` | 1910-02-17 |  |
+| `mag:pius-x/a-mons-francesco-saverio-haberl-prelato-domestico-di-s-s-e-presidente-generale-dell-associazione-santa-cecilia-di-germania-ratisbona-baviera-1910` | A Mons. Francesco Saverio Haberl, Prelato domestico di S.S. e Presidente generale dell'Associazione "Santa Cecilia" di Germania, Ratisbona (Baviera) | letter | `rp:pius-x` | 1910-02-18 |  |
+| `mag:pius-x/per-solemnia-saecularia-1910` | Per solemnia saecularia | letter | `rp:pius-x` | 1910-02-23 |  |
+| `mag:pius-x/quem-datis-1910` | Quem datis | letter | `rp:pius-x` | 1910-02-23 |  |
+| `mag:pius-x/quae-ad-spirituale-1910` | Quae ad spirituale | apostolic-letter | `rp:pius-x` | 1910-02-24 |  |
+| `mag:pius-x/exeunte-anno-1910` | Exeunte anno | letter | `rp:pius-x` | 1910-02-27 |  |
+| `mag:pius-x/quae-nuper-1910` | Quae nuper | letter | `rp:pius-x` | 1910-03-14 |  |
+| `mag:pius-x/novimus-1910` | Novimus | letter | `rp:pius-x` | 1910-03-15 |  |
+| `mag:pius-x/est-profecto-1910` | Est profecto | letter | `rp:pius-x` | 1910-04-02 |  |
+| `mag:pius-x/refert-ad-nos-1910` | Refert ad Nos | apostolic-letter | `rp:pius-x` | 1910-04-06 |  |
+| `mag:pius-x/cum-per-apostolicas-1910` | Cum per apostolicas | motu-proprio | `rp:pius-x` | 1910-04-07 |  |
+| `mag:pius-x/laeto-accepimus-1910` | Laeto accepimus | apostolic-letter | `rp:pius-x` | 1910-04-09 |  |
+| `mag:pius-x/cum-disciplinae-1910` | Cum disciplinae | motu-proprio | `rp:pius-x` | 1910-04-10 |  |
+| `mag:pius-x/quod-ex-tuis-1910` | Quod ex tuis | letter | `rp:pius-x` | 1910-04-11 |  |
+| `mag:pius-x/conspicua-templa-1910` | Conspicua templa | apostolic-letter | `rp:pius-x` | 1910-04-13 |  |
+| `mag:pius-x/inter-gravissimas-1910` | Inter gravissimas | apostolic-letter | `rp:pius-x` | 1910-04-13 |  |
+| `mag:pius-x/apostolicae-1910` | Apostolicae | papal-bull | `rp:pius-x` | 1910-04-15 |  |
+| `mag:pius-x/ioannis-bonae-1910` | Ioannis Bonae | letter | `rp:pius-x` | 1910-04-25 |  |
+| `mag:pius-x/in-hac-beatissimi-petri-1910` | In hac Beatissimi Petri | motu-proprio | `rp:pius-x` | 1910-05-03 |  |
+| `mag:pius-x/paternam-curam-1910` | Paternam curam | letter | `rp:pius-x` | 1910-05-03 |  |
+| `mag:pius-x/vide-quae-sit-1910` | Vide quae sit | letter | `rp:pius-x` | 1910-05-03 |  |
+| `mag:pius-x/constat-apprime-1910-05-04` | Constat apprime | apostolic-letter | `rp:pius-x` | 1910-05-04 |  |
+| `mag:pius-x/delectarum-1910` | Delectarum | letter | `rp:pius-x` | 1910-05-09 |  |
+| `mag:pius-x/non-satis-1910` | Non satis | letter | `rp:pius-x` | 1910-05-09 |  |
+| `mag:pius-x/quod-nobis-1910` | Quod nobis | letter | `rp:pius-x` | 1910-05-09 |  |
+| `mag:pius-x/studium-quo-tenemur-1910` | Studium quo tenemur | letter | `rp:pius-x` | 1910-05-09 |  |
+| `mag:pius-x/litteras-istinc-1910` | Litteras istinc | letter | `rp:pius-x` | 1910-05-20 |  |
+| `mag:pius-x/optimum-sane-1910` | Optimum sane | letter | `rp:pius-x` | 1910-05-21 |  |
+| `mag:pius-x/etsi-pro-tua-modestia-1910` | Etsi pro tua modestia | letter | `rp:pius-x` | 1910-05-23 |  |
+| `mag:pius-x/qui-tristia-saepius-1910` | Qui tristia saepius | letter | `rp:pius-x` | 1910-05-23 |  |
+| `mag:pius-x/tuam-pastoralis-officii-1910` | Tuam pastoralis officii | letter | `rp:pius-x` | 1910-05-23 |  |
+| `mag:pius-x/dari-operam-1910` | Dari operam | letter | `rp:pius-x` | 1910-05-24 |  |
+| `mag:pius-x/editae-saepe-1910` | Editae Saepe | encyclical | `rp:pius-x` | 1910-05-26 |  |
+| `mag:pius-x/ex-quo-1910` | Ex quo | motu-proprio | `rp:pius-x` | 1910-05-26 |  |
+| `mag:pius-x/caritatis-opera-1910` | Caritatis opera | apostolic-letter | `rp:pius-x` | 1910-05-28 |  |
+| `mag:pius-x/sacris-solemniis-1910` | Sacris solemniis | motu-proprio | `rp:pius-x` | 1910-06-09 |  |
+| `mag:pius-x/anno-quinquagesimo-1910` | Anno quinquagesimo | letter | `rp:pius-x` | 1910-06-10 |  |
+| `mag:pius-x/perillustrem-fratrum-1910` | Perillustrem Fratrum | apostolic-letter | `rp:pius-x` | 1910-06-14 |  |
+| `mag:pius-x/gratiae-quae-1910` | Gratiae, quae | apostolic-letter | `rp:pius-x` | 1910-06-16 |  |
+| `mag:pius-x/constat-apprime-1910-06-21` | Constat apprime | apostolic-letter | `rp:pius-x` | 1910-06-21 |  |
+| `mag:pius-x/nobis-exponendum-1910` | Nobis exponendum | apostolic-letter | `rp:pius-x` | 1910-06-21 |  |
+| `mag:pius-x/illibatae-custodiendae-1910` | Illibatae custodiendae | motu-proprio | `rp:pius-x` | 1910-06-29 |  |
+| `mag:pius-x/cathedralis-plocensis-1910` | Cathedralis Plocensis | apostolic-letter | `rp:pius-x` | 1910-07-01 |  |
+| `mag:pius-x/romanum-decet-1910` | Romanum decet | apostolic-letter | `rp:pius-x` | 1910-07-06 |  |
+| `mag:pius-x/seraphici-patriarchae-1910` | Seraphici Patriarchae | apostolic-letter | `rp:pius-x` | 1910-08-15 |  |
+| `mag:pius-x/manilensium-archiepiscopus-1910` | Manilensium Archiepiscopus | apostolic-letter | `rp:pius-x` | 1910-08-27 |  |
+| `mag:pius-x/sacrorum-antistitum-1910` | Sacrorum antistitum | motu-proprio | `rp:pius-x` | 1910-09-01 |  |
+| `mag:pius-x/fuldensem-1910` | Fuldensem | apostolic-letter | `rp:pius-x` | 1910-09-02 |  |
+| `mag:pius-x/decessorum-nostrorum-1910` | Decessorum Nostrorum | apostolic-letter | `rp:pius-x` | 1910-09-07 |  |
+| `mag:pius-x/ob-singularem-1910` | Ob singularem | motu-proprio | `rp:pius-x` | 1910-09-08 |  |
+| `mag:pius-x/in-romanae-curiae-1910` | In Romanae Curiae | motu-proprio | `rp:pius-x` | 1910-12-08 |  |
+| `mag:pius-x/quo-uberiores-1911` | Quo uberiores | apostolic-letter | `rp:pius-x` | 1911-04-08 |  |
+| `mag:pius-x/non-sine-magno-1911` | Non sine magno | apostolic-letter | `rp:pius-x` | 1911-04-12 |  |
+| `mag:pius-x/cum-summa-1911` | Cum summa | apostolic-letter | `rp:pius-x` | 1911-05-02 |  |
+| `mag:pius-x/pia-consociatio-1911` | Pia Consociatio | apostolic-letter | `rp:pius-x` | 1911-05-02 |  |
+| `mag:pius-x/iamdudum-1911` | Iamdudum | encyclical | `rp:pius-x` | 1911-05-24 |  |
+| `mag:pius-x/sull-edificazione-di-un-nuovo-santuario-nel-territorio-di-nettuno-come-assistenza-spirituale-della-popolazione-1911` | Sull'edificazione di un nuovo Santuario nel territorio di Nettuno come assistenza spirituale della popolazione | motu-proprio | `rp:pius-x` | 1911-06-28 |  |
+| `mag:pius-x/divino-afflatu-1911` | Divino afflatu | papal-bull | `rp:pius-x` | 1911-11-01 |  |
+| `mag:pius-x/etsi-nos-1912` | Etsi nos | papal-bull | `rp:pius-x` | 1912-01-01 |  |
+| `mag:pius-x/lacrimabili-statu-1912` | Lacrimabili Statu | encyclical | `rp:pius-x` | 1912-06-07 |  |
+| `mag:pius-x/tradita-ab-antiquis-1912` | Tradita ab antiquis | papal-bull | `rp:pius-x` | 1912-09-14 |  |
+| `mag:pius-x/religiosas-familias-1912` | Religiosas familias | apostolic-letter | `rp:pius-x` | 1912-09-16 |  |
+| `mag:pius-x/singulari-quadam-1912` | Singulari quadam | encyclical | `rp:pius-x` | 1912-09-24 |  |
+| `mag:pius-x/al-card-pietro-respighi-1912` | Al Card. Pietro Respighi | letter | `rp:pius-x` | 1912-10-18 |  |
+| `mag:pius-x/supremum-officium-1912` | Supremum officium | motu-proprio | `rp:pius-x` | 1912-12-17 |  |
+| `mag:pius-x/litteris-apostolicis-1913` | Litteris Apostolicis | motu-proprio | `rp:pius-x` | 1913-01-25 |  |
+| `mag:pius-x/refert-ad-nos-1913` | Refert ad Nos | apostolic-letter | `rp:pius-x` | 1913-04-28 |  |
+| `mag:pius-x/in-praecipuis-1913` | In praecipuis | papal-bull | `rp:pius-x` | 1913-06-29 |  |
+| `mag:pius-x/abhinc-duos-annos-1913` | Abhinc duos annos | motu-proprio | `rp:pius-x` | 1913-10-23 |  |
+| `mag:pius-x/consistoriali-decreto-1913` | Consistoriali decreto | apostolic-letter | `rp:pius-x` | 1913-10-25 |  |
+| `mag:pius-x/te-sane-1913` | Te sane | letter | `rp:pius-x` | 1913-12-13 |  |
+| `mag:pius-x/in-litteris-nostris-1913` | In litteris Nostris | motu-proprio | `rp:pius-x` | 1913-12-23 |  |
+| `mag:pius-x/ubi-primum-1914` | Ubi primum | motu-proprio | `rp:pius-x` | 1914-01-06 |  |
+| `mag:pius-x/impertiendi-tibi-1914` | Impertiendi tibi | letter | `rp:pius-x` | 1914-01-15 |  |
+| `mag:pius-x/quanta-semper-cura-1914` | Quanta semper cura | motu-proprio | `rp:pius-x` | 1914-01-16 |  |
+| `mag:pius-x/iucunda-equidem-1914` | Iucunda equidem | letter | `rp:pius-x` | 1914-01-20 |  |

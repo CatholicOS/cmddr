@@ -71,3 +71,30 @@ describe('parseShelfIndex', () => {
     }
   });
 });
+
+describe('parseShelfIndex on Pius X', () => {
+  const loadPiusX = (shelf: string) =>
+    parseShelfIndex(readFileSync(`tools/fixtures/pius-x-${shelf}.html`, 'utf8'), 'pius-x', shelf);
+  const allPiusX = shelvesFor('pius-x').flatMap((s) => loadPiusX(s));
+
+  it('reads the same markup as the Leo XIII shelves', () => {
+    expect(loadPiusX('encyclicals')).toHaveLength(16);
+    expect(loadPiusX('apost_exhortations')).toHaveLength(1);
+    expect(loadPiusX('letters')).toHaveLength(189);
+  });
+
+  it('reads bare incipits, which is why Pius X needs no new parsing', () => {
+    const mp = loadPiusX('motu_proprio');
+    expect(mp.find((d) => d.date === '1914-01-16')!.incipit).toBe('Quanta semper cura');
+    expect(loadPiusX('letters').find((d) => d.date === '1914-01-20')!.incipit)
+      .toBe('Iucunda equidem');
+    expect(loadPiusX('apost_exhortations')[0]!.incipit).toBe('Haerent Animo');
+  });
+
+  it('yields a usable date and incipit for every item', () => {
+    for (const d of allPiusX) {
+      expect(d.incipit, JSON.stringify(d)).not.toBe('');
+      expect(d.date, JSON.stringify(d)).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+    }
+  });
+});

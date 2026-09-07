@@ -19,6 +19,7 @@ describe('pontiff slug mapping', () => {
     expect(VATICAN_SLUG_TO_ISSUER['benedictus-xiv']).toBe('rp:benedict-xiv');
     expect(VATICAN_SLUG_TO_ISSUER['pius-ix']).toBe('rp:pius-ix');
     expect(VATICAN_SLUG_TO_ISSUER['leo-xiii']).toBe('rp:leo-xiii');
+    expect(VATICAN_SLUG_TO_ISSUER['pius-x']).toBe('rp:pius-x');
   });
 
   it('maps every mapped slug onto a real pontiff id', () => {
@@ -32,9 +33,10 @@ describe('pontiff slug mapping', () => {
 describe('the POPES table', () => {
   it('describes each pope page, its era and its own shelf list', () => {
     expect(POPES.map((p) => p.pageSlug))
-      .toEqual(['benedictus-xiv', 'pius-ix', 'leo-xiii']);
+      .toEqual(['benedictus-xiv', 'pius-ix', 'leo-xiii', 'pius-x']);
     expect(POPES.find((p) => p.pageSlug === 'leo-xiii')!.era).toBe('shelf');
     expect(POPES.find((p) => p.pageSlug === 'pius-ix')!.era).toBe('flat');
+    expect(POPES.find((p) => p.pageSlug === 'pius-x')!.era).toBe('shelf');
   });
 
   it('gives the flat-era popes no shelves', () => {
@@ -47,6 +49,13 @@ describe('the POPES table', () => {
     expect(shelvesFor('leo-xiii')).toEqual([
       'apost_constitutions', 'apost_letters', 'briefs', 'bulls',
       'encyclicals', 'letters', 'motu_proprio', 'speeches',
+    ]);
+  });
+
+  it("keeps Pius X's six shelves, without bulls, briefs or speeches", () => {
+    expect(shelvesFor('pius-x')).toEqual([
+      'apost_constitutions', 'apost_exhortations', 'apost_letters',
+      'encyclicals', 'letters', 'motu_proprio',
     ]);
   });
 
