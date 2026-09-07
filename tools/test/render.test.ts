@@ -105,6 +105,7 @@ describe('renderIndexMd', () => {
   it('counts documents per genre and links the view', () => {
     expect(md).toContain('[`encyclical`](documents/by-genre/encyclical.md)');
     expect(md).toContain('[`constitution`](documents/by-genre/constitution.md)');
+    expect(md).toMatch(/encyclical.*\| 2 \|/);
   });
 
   it('reports the total and the provisional share', () => {
@@ -112,8 +113,32 @@ describe('renderIndexMd', () => {
     expect(md).toMatch(/1 .*provisional/i);
   });
 
+  it('states the provisional count plainly when there are none, instead of explaining a mechanism for zero', () => {
+    const none = renderIndexMd(docs);
+    expect(none).toContain('2 documents');
+    expect(none).toMatch(/none of which carry a provisional identifier/i);
+    expect(none).not.toMatch(/genre-and-date based/);
+  });
+
   it('states coverage, naming what is deliberately absent', () => {
     expect(md).toMatch(/## Coverage/);
     expect(md).toMatch(/speeches|occasional/i);
+  });
+
+  it('groups by the issuer local part shared with the file tree, not the full issuerId, ' +
+    'so two issuers filing under the same local part collapse into one row for one file', () => {
+    const sharedLocalA: DocumentRecord = {
+      ...docs[0]!, id: 'mag:shared-local/doc-a-1900', issuerId: 'rp:shared-local',
+      issuerType: 'pope', date: '1900-01-01',
+    };
+    const sharedLocalB: DocumentRecord = {
+      ...docs[0]!, id: 'mag:shared-local/doc-b-1901', issuerId: 'oec:shared-local',
+      issuerType: 'ecumenical-council', date: '1901-01-01',
+    };
+    const merged = renderIndexMd([sharedLocalA, sharedLocalB]);
+    const rows = merged.split('\n')
+      .filter((l) => l.includes('documents/by-issuer/shared-local.md'));
+    expect(rows).toHaveLength(1);
+    expect(rows[0]).toMatch(/\| 2 \|/);
   });
 });

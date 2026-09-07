@@ -17,7 +17,9 @@ const range = (docs: DocumentRecord[]): string => {
 export const genreFile = (genre: string | null): string => genre ?? 'unmapped';
 
 export function renderIndexMd(docs: DocumentRecord[]): string {
-  const byIssuer = [...group(docs, (d) => d.issuerId)].sort(
+  // Grouped by the same key run.ts uses to name the file (issuerLocalPart), not the full
+  // issuerId, so a row's count and date range can never diverge from the file it links to.
+  const byIssuer = [...group(docs, (d) => issuerLocalPart(d.issuerId))].sort(
     (a, b) => range(a[1]).localeCompare(range(b[1])));
   const byGenre = [...group(docs, (d) => d.genre)].sort(
     (a, b) => genreFile(a[0]).localeCompare(genreFile(b[0])));
@@ -29,15 +31,25 @@ export function renderIndexMd(docs: DocumentRecord[]): string {
     return pope.era === 'flat' ? 'whole-pontificate index' : pope.shelves.join(', ');
   };
 
-  const issuerRows = byIssuer.map(([issuerId, ds]) => {
-    const local = issuerLocalPart(issuerId);
-    return `| [\`${issuerId}\`](documents/by-issuer/${local}.md) | ${ds.length} `
-      + `| ${range(ds)} | ${shelvesOf(issuerId)} |`;
+  const issuerRows = byIssuer.map(([local, ds]) => {
+    // The local part is shared by construction; the full issuerId(s) that produced it are
+    // read back off the documents themselves rather than assumed from a prefix.
+    const issuerIds = [...new Set(ds.map((d) => d.issuerId))].sort();
+    const label = issuerIds.map((id) => `\`${id}\``).join(', ');
+    const shelves = issuerIds.map(shelvesOf).join('; ');
+    return `| [${label}](documents/by-issuer/${local}.md) | ${ds.length} `
+      + `| ${range(ds)} | ${shelves} |`;
   });
 
   const genreRows = byGenre.map(([genre, ds]) =>
     `| [\`${genre ?? 'unmapped'}\`](documents/by-genre/${genreFile(genre)}.md) `
     + `| ${ds.length} | ${range(ds)} |`);
+
+  const provisionalLine = provisional === 0
+    ? `**${docs.length} documents**, none of which carry a provisional identifier.`
+    : `**${docs.length} documents**, of which ${provisional} carry a provisional identifier — `
+      + 'the source prints no incipit for them, so their id is genre-and-date based and may '
+      + 'be re-minted.';
 
   return `# Magisterial Documents
 
@@ -47,8 +59,7 @@ Identifiers follow \`mag:{issuer}/{incipit-slug}-{year}\`; the issuer segment is
 part of \`issuerId\`, so conciliar documents namespace under their council and record the
 promulgating pope separately. See the design spec for the minting rules.
 
-**${docs.length} documents**, of which ${provisional} carry a provisional identifier — the source
-prints no incipit for them, so their id is genre-and-date based and may be re-minted.
+${provisionalLine}
 
 Every document appears in both views below; neither is a subset of the other.
 
