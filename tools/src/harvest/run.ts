@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from 'node
 import { parseFlatIndex } from './flat.js';
 import { parseShelfIndex } from './shelf.js';
 import { toDocument } from './toDocument.js';
-import { PILOT_POPES, SHELVES, DATE_CORRECTIONS, DUPLICATE_MERGES } from '../mappings/index.js';
+import { PILOT_POPES, SHELVES, DATE_CORRECTIONS, DUPLICATE_MERGES, ADJUDICATED_DISTINCT } from '../mappings/index.js';
 import { issuerLocalPart } from '../ids.js';
 import { slugify } from '../slug.js';
 import type { DocumentRecord, HarvestItem } from '../types.js';
@@ -118,7 +118,8 @@ console.log(`${items.length} items -> ${mergedByDuplicateTable.size} documents a
 // three merge passes above: neither the printed incipit, the URL slug, nor the
 // hand-curated duplicate table accounted for it. That does not mean they are the same
 // document -- it means a human must look. Surface every such pair loudly rather than
-// silently keeping (or silently dropping) either one.
+// silently keeping (or silently dropping) either one, unless the pair has been adjudicated
+// as genuinely distinct and should not warn.
 const byPageDate = new Map<string, HarvestItem[]>();
 for (const item of mergedByDuplicateTable.values()) {
   const key = `${item.pageSlug}|${item.date}`;
@@ -129,6 +130,13 @@ for (const group of byPageDate.values()) {
     for (let j = i + 1; j < group.length; j++) {
       const a = group[i]!, b = group[j]!;
       if (a.shelf === b.shelf) continue;
+      // Check if this pair is adjudicated as genuinely distinct (and should not warn)
+      const slugA = slugify(a.incipit);
+      const slugB = slugify(b.incipit);
+      // Key uses sorted order of incipits to ensure consistent lookup
+      const [slug1, slug2] = slugA < slugB ? [slugA, slugB] : [slugB, slugA];
+      const adjudicatedKey = `${a.pageSlug}|${a.date}|${slug1}|${slug2}`;
+      if (ADJUDICATED_DISTINCT[adjudicatedKey]) continue;
       console.warn(
         `Unmerged same-date cross-shelf pair on ${a.pageSlug} (${a.date}): `
         + `'${a.incipit}' (${a.shelf}) vs '${b.incipit}' (${b.shelf})`,

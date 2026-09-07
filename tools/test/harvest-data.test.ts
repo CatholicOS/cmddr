@@ -122,4 +122,27 @@ describe('the harvested pilot corpus', () => {
     const mismatches = warnSpy.mock.calls.filter(([msg]) => String(msg).includes('date mismatch'));
     expect(mismatches).toEqual([]);
   });
+
+  it('preserves the three adjudicated-distinct same-date pairs as separate documents', () => {
+    // 1886-01-06: Iampridem (encyclicals) vs Non senza (letters) are distinct
+    const pair1886 = all.filter((d) => d.date === '1886-01-06');
+    expect(pair1886).toHaveLength(2);
+    expect(pair1886.map((d) => d.incipit).sort()).toEqual(['Iampridem', 'Non senza']);
+    expect(pair1886[0]!.id).toBe('mag:leo-xiii/iampridem-1886');
+    expect(pair1886[1]!.id).toBe('mag:leo-xiii/non-senza-1886');
+
+    // 1890-11-20: Catholicae Ecclesiae (encyclicals) vs Novum argumentum (letters) are distinct
+    const pair1890 = all.filter((d) => d.date === '1890-11-20');
+    expect(pair1890).toHaveLength(2);
+    expect(pair1890.map((d) => d.incipit).sort()).toEqual(['Catholicae Ecclesiae', 'Novum argumentum']);
+    expect(pair1890[0]!.id).toBe('mag:leo-xiii/catholicae-ecclesiae-1890');
+    expect(pair1890[1]!.id).toBe('mag:leo-xiii/novum-argumentum-1890');
+
+    // 1891-03-03: In Ipso (encyclicals) vs Quod erat maxime (letters) are distinct
+    const pair1891 = all.filter((d) => d.date === '1891-03-03');
+    expect(pair1891).toHaveLength(2);
+    expect(pair1891.map((d) => d.incipit).sort()).toEqual(['In Ipso', 'Quod erat maxime']);
+    expect(pair1891[0]!.id).toBe('mag:leo-xiii/in-ipso-1891');
+    expect(pair1891[1]!.id).toBe('mag:leo-xiii/quod-erat-maxime-1891');
+  });
 });
