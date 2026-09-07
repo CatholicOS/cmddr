@@ -4,20 +4,43 @@ import councils from '../../../vendor/coecdr-councils.json' with { type: 'json' 
 export const KNOWN_PONTIFF_IDS = new Set<string>(pontiffs as string[]);
 export const KNOWN_COUNCIL_IDS = new Set<string>(councils as string[]);
 
-/** vatican.va URL slugs do not match CRPDR ids; this is the bridge. */
-export const VATICAN_SLUG_TO_ISSUER: Record<string, string> = {
-  'benedictus-xiv': 'rp:benedict-xiv',
-  'pius-ix': 'rp:pius-ix',
-  'leo-xiii': 'rp:leo-xiii',
-};
+export interface PopeSource {
+  /** The vatican.va URL slug, e.g. 'benedictus-xiv'. Not the CRPDR id. */
+  pageSlug: string;
+  /** The CRPDR id, e.g. 'rp:benedict-xiv'. */
+  issuerId: string;
+  /** 'flat' pages carry one reverse-chronological list; 'shelf' pages carry per-genre indexes. */
+  era: 'flat' | 'shelf';
+  /**
+   * The shelves harvested for this pope. Curated per pope, never inferred from the page's
+   * links: shelf membership varies (no `bulls` for Pius X), spelling varies (Benedict XV
+   * hyphenates `apost-constitutions`), and several linked indexes -- `biography`,
+   * `biografia`, `books`, `jubilee`, `elezione` -- are not document shelves at all.
+   * Empty for the flat era, which has no shelves.
+   */
+  shelves: readonly string[];
+}
 
-export const PILOT_POPES = [
-  { pageSlug: 'benedictus-xiv', issuerId: 'rp:benedict-xiv', era: 'flat' },
-  { pageSlug: 'pius-ix', issuerId: 'rp:pius-ix', era: 'flat' },
-  { pageSlug: 'leo-xiii', issuerId: 'rp:leo-xiii', era: 'shelf' },
+export const POPES: readonly PopeSource[] = [
+  { pageSlug: 'benedictus-xiv', issuerId: 'rp:benedict-xiv', era: 'flat', shelves: [] },
+  { pageSlug: 'pius-ix', issuerId: 'rp:pius-ix', era: 'flat', shelves: [] },
+  {
+    pageSlug: 'leo-xiii', issuerId: 'rp:leo-xiii', era: 'shelf',
+    shelves: [
+      'apost_constitutions', 'apost_letters', 'briefs', 'bulls',
+      'encyclicals', 'letters', 'motu_proprio', 'speeches',
+    ],
+  },
 ] as const;
 
-export const SHELVES = [
-  'apost_constitutions', 'apost_letters', 'briefs', 'bulls',
-  'encyclicals', 'letters', 'motu_proprio', 'speeches',
-] as const;
+/** The shelves harvested for a pope page; empty for an unknown slug or a flat-era page. */
+export function shelvesFor(pageSlug: string): readonly string[] {
+  return POPES.find((p) => p.pageSlug === pageSlug)?.shelves ?? [];
+}
+
+/**
+ * vatican.va URL slugs do not match CRPDR ids; this is the bridge. Derived from POPES
+ * rather than maintained beside it, so the two can never disagree.
+ */
+export const VATICAN_SLUG_TO_ISSUER: Record<string, string> =
+  Object.fromEntries(POPES.map((p) => [p.pageSlug, p.issuerId]));

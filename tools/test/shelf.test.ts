@@ -1,13 +1,13 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { parseShelfIndex } from '../src/harvest/shelf.js';
-import { SHELVES } from '../src/mappings/index.js';
+import { shelvesFor } from '../src/mappings/index.js';
 
 const load = (shelf: string) =>
   parseShelfIndex(readFileSync(`tools/fixtures/leo-xiii-${shelf}.html`, 'utf8'), 'leo-xiii', shelf);
 
 const enc = load('encyclicals');
-const all = SHELVES.flatMap((s) => load(s));
+const all = shelvesFor('leo-xiii').flatMap((s) => load(s));
 
 describe('parseShelfIndex', () => {
   it('finds every encyclical, linked or not', () => {

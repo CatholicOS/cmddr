@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from 'node
 import { parseFlatIndex } from './flat.js';
 import { parseShelfIndex } from './shelf.js';
 import { toDocument } from './toDocument.js';
-import { PILOT_POPES, SHELVES, DATE_CORRECTIONS, DUPLICATE_MERGES, ADJUDICATED_DISTINCT } from '../mappings/index.js';
+import { POPES, DATE_CORRECTIONS, DUPLICATE_MERGES, ADJUDICATED_DISTINCT } from '../mappings/index.js';
 import { issuerLocalPart } from '../ids.js';
 import { slugify } from '../slug.js';
 import type { DocumentRecord, HarvestItem } from '../types.js';
@@ -54,11 +54,11 @@ const RETRIEVED = process.env.RETRIEVED ?? FIXTURES_RETRIEVED;
 const fixture = (n: string) => readFileSync(`tools/fixtures/${n}.html`, 'utf8');
 
 const items: HarvestItem[] = [];
-for (const pope of PILOT_POPES) {
+for (const pope of POPES) {
   if (pope.era === 'flat') {
     items.push(...parseFlatIndex(fixture(pope.pageSlug), pope.pageSlug));
   } else {
-    for (const shelf of SHELVES) {
+    for (const shelf of pope.shelves) {
       items.push(...parseShelfIndex(fixture(`${pope.pageSlug}-${shelf}`), pope.pageSlug, shelf));
     }
   }

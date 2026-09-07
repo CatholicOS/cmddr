@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import {
-  VATICAN_SLUG_TO_ISSUER, PILOT_POPES, SHELVES,
+  VATICAN_SLUG_TO_ISSUER, POPES, shelvesFor,
   SOURCE_GENRE_TO_GENRE, CONCILIAR_REASSIGNMENTS,
   KNOWN_PONTIFF_IDS, KNOWN_COUNCIL_IDS,
 } from '../src/mappings/index.js';
@@ -27,12 +27,36 @@ describe('pontiff slug mapping', () => {
     }
   });
 
-  it('describes the pilot corpus and its eras', () => {
-    expect(PILOT_POPES.map((p) => p.pageSlug))
+});
+
+describe('the POPES table', () => {
+  it('describes each pope page, its era and its own shelf list', () => {
+    expect(POPES.map((p) => p.pageSlug))
       .toEqual(['benedictus-xiv', 'pius-ix', 'leo-xiii']);
-    expect(PILOT_POPES.find((p) => p.pageSlug === 'leo-xiii')!.era).toBe('shelf');
-    expect(PILOT_POPES.find((p) => p.pageSlug === 'pius-ix')!.era).toBe('flat');
-    expect(SHELVES).toHaveLength(8);
+    expect(POPES.find((p) => p.pageSlug === 'leo-xiii')!.era).toBe('shelf');
+    expect(POPES.find((p) => p.pageSlug === 'pius-ix')!.era).toBe('flat');
+  });
+
+  it('gives the flat-era popes no shelves', () => {
+    for (const slug of ['benedictus-xiv', 'pius-ix']) {
+      expect(shelvesFor(slug)).toEqual([]);
+    }
+  });
+
+  it("keeps Leo XIII's eight shelves exactly as harvested", () => {
+    expect(shelvesFor('leo-xiii')).toEqual([
+      'apost_constitutions', 'apost_letters', 'briefs', 'bulls',
+      'encyclicals', 'letters', 'motu_proprio', 'speeches',
+    ]);
+  });
+
+  it('derives the slug->issuer map from the table, so the two cannot disagree', () => {
+    expect(Object.keys(VATICAN_SLUG_TO_ISSUER).sort()).toEqual(POPES.map((p) => p.pageSlug).sort());
+    for (const p of POPES) expect(VATICAN_SLUG_TO_ISSUER[p.pageSlug]).toBe(p.issuerId);
+  });
+
+  it('returns an empty shelf list for an unknown slug rather than throwing', () => {
+    expect(shelvesFor('not-a-pope')).toEqual([]);
   });
 });
 

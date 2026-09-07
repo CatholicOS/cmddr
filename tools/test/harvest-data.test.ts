@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { checkDocuments } from '../src/validate/invariants.js';
 import { parseShelfIndex } from '../src/harvest/shelf.js';
-import { SHELVES } from '../src/mappings/index.js';
+import { shelvesFor } from '../src/mappings/index.js';
 import type { DocumentRecord } from '../src/types.js';
 
 const load = (n: string) =>
@@ -114,7 +114,7 @@ describe('the harvested pilot corpus', () => {
     const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
     let calls: unknown[][];
     try {
-      for (const shelf of SHELVES) {
+      for (const shelf of shelvesFor('leo-xiii')) {
         parseShelfIndex(readFileSync(`tools/fixtures/leo-xiii-${shelf}.html`, 'utf8'), 'leo-xiii', shelf);
       }
     } finally {
