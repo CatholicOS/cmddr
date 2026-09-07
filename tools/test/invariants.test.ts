@@ -1,8 +1,12 @@
 import { describe, it, expect } from 'vitest';
-import { checkDocuments, checkAssessments } from '../src/validate/invariants.js';
+import { checkDocuments, checkAssessments, type GenreLike } from '../src/validate/invariants.js';
 import type { DocumentRecord } from '../src/types.js';
 
-const GENRES = new Set(['encyclical', 'constitution', 'papal-bull']);
+const GENRES: GenreLike[] = [
+  { id: 'encyclical', issuerTypes: ['pope'] },
+  { id: 'constitution', issuerTypes: ['ecumenical-council'] },
+  { id: 'papal-bull', issuerTypes: ['pope'] },
+];
 
 const good: DocumentRecord = {
   id: 'mag:leo-xiii/rerum-novarum-1891', title: 'Rerum Novarum', incipit: 'Rerum Novarum',
@@ -79,6 +83,23 @@ describe('checkDocuments', () => {
       issuerId: 'oec:vatican-i', issuerType: 'ecumenical-council',
       promulgatedBy: 'rp:pius-ix', date: '1870-07-18',
     }], GENRES)).toEqual([]);
+  });
+
+  it('16: flags an oec: issuerId whose issuerType is not ecumenical-council', () => {
+    expect(rules([{ ...good, issuerId: 'oec:vatican-i', id: 'mag:vatican-i/rerum-novarum-1891' }]))
+      .toContain(16);
+  });
+
+  it('16: flags an ecumenical-council issuerType whose issuerId is not oec:', () => {
+    expect(rules([{ ...good, issuerType: 'ecumenical-council' }])).toContain(16);
+  });
+
+  it('17: passes when issuerType is one of the genre\'s issuerTypes', () => {
+    expect(rules([good])).not.toContain(17);
+  });
+
+  it('17: flags an issuerType not among the genre\'s issuerTypes', () => {
+    expect(rules([{ ...good, issuerType: 'bishop' }])).toContain(17);
   });
 });
 

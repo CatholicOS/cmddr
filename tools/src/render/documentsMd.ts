@@ -1,5 +1,8 @@
 import type { DocumentRecord } from '../types.js';
 
+/** Escape a Markdown table cell's own column separator; the source is scraped text. */
+const cell = (s: string): string => s.replace(/\|/g, '\\|');
+
 export function renderDocumentsMd(docs: DocumentRecord[]): string {
   const rows = [...docs].sort((a, b) =>
     a.date === b.date ? a.id.localeCompare(b.id) : a.date.localeCompare(b.date));
@@ -18,7 +21,7 @@ ${rows.length} documents.
 | --- | --- | --- | --- | --- | --- |`;
 
   const body = rows.map((d) =>
-    `| \`${d.id}\` | ${d.title} | ${d.genre ?? `— (${d.sourceGenreLabel ?? 'unmapped'})`} `
+    `| \`${d.id}\` | ${cell(d.title)} | ${d.genre ?? `— (${cell(d.sourceGenreLabel ?? 'unmapped')})`} `
     + `| \`${d.issuerId}\` | ${d.date} | ${d.promulgatedBy ? `\`${d.promulgatedBy}\`` : ''} |`);
 
   return `${head}\n${body.join('\n')}\n`;

@@ -40,7 +40,7 @@
 | `tools/src/harvest/{flat,shelf,toDocument,run}.ts` | Adapters, record builder, CLI |
 | `tools/src/validate/{invariants,run}.ts` | Invariants 8–15, CLI |
 | `tools/src/render/{documentsMd,run}.ts` | `registry/documents.md` generator |
-| `tools/fixtures/*.html` | 11 saved pages |
+| `tools/fixtures/*.html` | 10 saved pages |
 | `vendor/{crpdr-pontiffs,coecdr-councils}.json` | Vendored id lists |
 | `data/genres.json`, `data/documents/*.json` | Registry data |
 
@@ -1445,8 +1445,9 @@ export function parseShelfIndex(html: string, pageSlug: string, shelf: string): 
 Run: `npx vitest run tools/test/shelf.test.ts`
 Expected: PASS, 9 tests.
 
-The eight shelves carry 8 + 24 + 8 + 1 + 86 + 120 + 10 + 18 = 275 `div.item`s. Five of those are
-the same documents filed on two shelves; Task 11 deduplicates them.
+The eight shelves carry 8 + 24 + 8 + 1 + 86 + 120 + 10 + 18 = 275 `div.item`s. Nine of those are
+the same documents filed on two shelves (seven sharing incipit and date, two more sharing only the
+URL document-slug); a later fix-wave dedupe pass catches the last two.
 
 - [ ] **Step 6: Commit**
 

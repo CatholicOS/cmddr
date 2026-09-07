@@ -35,7 +35,9 @@ export function toDocument(item: HarvestItem, retrieved: string): DocumentRecord
   if (reassigned) record.promulgatedBy = reassigned.promulgatedBy;
   if (mapping.characteristics) record.characteristics = [...mapping.characteristics];
   if (mapping.descriptiveTitle) record.descriptiveTitle = mapping.descriptiveTitle;
-  if (mapping.genre === null) record.sourceGenreLabel = item.sourceGenreLabel;
+  // The genre label exactly as vatican.va prints it (spec §4.1), preserved unconditionally
+  // so the genre mapping stays auditable from the data, not only when genre is null.
+  record.sourceGenreLabel = item.sourceGenreLabel;
 
   return record;
 }

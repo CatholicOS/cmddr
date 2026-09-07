@@ -26,9 +26,10 @@ scheme takes the shape it does.
 | Benedict XIV → Pius IX | One flat, reverse-chronological list on the pope's landing page; the genre is a word in the link text | `pius-ix/it/documents/enciclica-ubi-primum-2-febbraio-1849.html` |
 | Leo XIII → present | Per-genre *shelves* (`encyclicals.index.html`, `bulls.index.html`, …), and for modern popes further per-year sub-indexes | `leo-xiii/it/encyclicals/documents/hf_l-xiii_enc_04081879_aeterni-patris.html` |
 
-Document counts: Benedict XIV 43, Pius IX 77, Leo XIII 273 across 8 shelves. **Pilot corpus: 393
-documents.** By contrast Francis's landing page alone fronts 298 index pages over several thousand
-items, which is why the pilot stops where it does.
+Document counts: Benedict XIV 43, Pius IX 77, Leo XIII 275 across 8 shelves. **Pilot corpus: 395
+raw items**, several of which are the same document filed on two shelves (§5.1, §6) — the harvested
+corpus after dedupe is smaller. By contrast Francis's landing page alone fronts 298 index pages over
+several thousand items, which is why the pilot stops where it does.
 
 ### 2.2 Incipits collide, including within a single pontificate
 
@@ -343,10 +344,12 @@ CI enforces the following, in addition to SCHEMA.md's existing invariants 1–7.
 | 13 | `issuerId` and `promulgatedBy` resolve against vendored copies of the CRPDR and COECDR id lists. |
 | 14 | An assessment's `id` is `{document}#{section}`, and `document` names an existing document. |
 | 15 | `genre`, when non-null, resolves to an id in `data/genres.json`; when null, `sourceGenreLabel` is present. |
+| 16 | `issuerId` begins with `oec:` **iff** `issuerType = ecumenical-council`. |
+| 17 | `issuerType`, when `genre` is non-null, is one of that genre's `issuerTypes` in `data/genres.json`. |
 
 Parser tests run against checked-in HTML fixtures, so they are offline and deterministic: a
-vatican.va redesign fails a test rather than silently corrupting a harvest. Fixtures are the eleven
-pages already retrieved: the three pontiff landing pages and the eight Leo XIII shelf indexes.
+vatican.va redesign fails a test rather than silently corrupting a harvest. Fixtures are the ten
+pages already retrieved: the two flat-era pontiff landing pages and the eight Leo XIII shelf indexes.
 
 ## 7. Toolchain
 

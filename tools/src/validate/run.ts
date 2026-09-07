@@ -5,8 +5,9 @@ import { checkDocuments, checkAssessments, type AssessmentLike } from './invaria
 import type { DocumentRecord } from '../types.js';
 
 const documentSchema = JSON.parse(readFileSync('schema/document.schema.json', 'utf8'));
-const genres = JSON.parse(readFileSync('data/genres.json', 'utf8')) as Array<{ id: string }>;
-const genreIds = new Set(genres.map((g) => g.id));
+const genres = JSON.parse(readFileSync('data/genres.json', 'utf8')) as Array<
+  { id: string; issuerTypes?: string[] }
+>;
 
 const ajv = new Ajv2020({ strict: false });
 addFormats(ajv);
@@ -38,7 +39,7 @@ for (const f of readdirSync('examples').filter((f) => f.endsWith('.json'))) {
   if (Array.isArray(bundle.assessments)) assessments.push(...bundle.assessments);
 }
 
-for (const v of [...checkDocuments(docs, genreIds), ...checkAssessments(assessments, documentIds)]) {
+for (const v of [...checkDocuments(docs, genres), ...checkAssessments(assessments, documentIds)]) {
   failures++;
   console.error(`rule ${v.rule}  ${v.id}: ${v.message}`);
 }

@@ -1,7 +1,24 @@
 import * as cheerio from 'cheerio';
 import { parseSourceDate } from '../dates.js';
 import { resolveItemUrl, extractLanguages } from './dom.js';
+import { slugify } from '../slug.js';
+import { DATE_CORRECTIONS } from '../mappings/index.js';
 import type { HarvestItem } from '../types.js';
+
+/**
+ * The printed date is always the value we keep (see module doc above), but it can still
+ * be cross-checked against the slug's own date, which the encyclicals shelf formats
+ * `DDMMYYYY` and the other seven `YYYYMMDD`. Returns both readings of the `_{8 digits}_`
+ * group in the resolved URL, or `[]` when the URL carries no such group.
+ */
+function slugDateReadings(url: string | null): string[] {
+  const m = url?.match(/_(\d{8})_/);
+  if (!m) return [];
+  const g = m[1]!;
+  const ddmmyyyy = `${g.slice(4, 8)}-${g.slice(2, 4)}-${g.slice(0, 2)}`;
+  const yyyymmdd = `${g.slice(0, 4)}-${g.slice(4, 6)}-${g.slice(6, 8)}`;
+  return [ddmmyyyy, yyyymmdd];
+}
 
 /**
  * Shelf-era index pages (Leo XIII onward). Items are `<h2>{Incipit} ({date})</h2>`,
@@ -31,6 +48,21 @@ export function parseShelfIndex(html: string, pageSlug: string, shelf: string): 
 
     const url = resolveItemUrl($item, $h2);
     const languages = extractLanguages($, $item);
+
+    const slugDates = slugDateReadings(url);
+    if (slugDates.length > 0 && !slugDates.includes(date)) {
+      const correctionKey = `${pageSlug}|${shelf}|${slugify(incipit)}|${date}`;
+      if (!DATE_CORRECTIONS[correctionKey]) {
+        // This shelf's own convention (see the module doc) is the reading worth showing;
+        // the other reading was still checked above in case a shelf breaks the pattern.
+        const [ddmmyyyy, yyyymmdd] = slugDates;
+        const slugDate = shelf === 'encyclicals' ? ddmmyyyy : yyyymmdd;
+        console.warn(
+          `Printed/slug date mismatch for '${incipit}' (${pageSlug}/${shelf}): `
+          + `printed ${date}, slug ${slugDate}`,
+        );
+      }
+    }
 
     items.push({
       incipit,

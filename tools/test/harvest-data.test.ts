@@ -5,24 +5,27 @@ import type { DocumentRecord } from '../src/types.js';
 
 const load = (n: string) =>
   JSON.parse(readFileSync(`data/documents/${n}.json`, 'utf8')) as DocumentRecord[];
-const genreIds = new Set(
-  (JSON.parse(readFileSync('data/genres.json', 'utf8')) as Array<{ id: string }>).map((g) => g.id));
+const genres = JSON.parse(readFileSync('data/genres.json', 'utf8')) as
+  Array<{ id: string; issuerTypes?: string[] }>;
 
 const all = [...load('benedict-xiv'), ...load('pius-ix'), ...load('leo-xiii'), ...load('vatican-i')];
 
 describe('the harvested pilot corpus', () => {
   it('holds the whole pilot corpus', () => {
-    // 395 raw items in; seven Leo XIII documents are filed on both the encyclicals
-    // and letters shelves and merge into one record each, leaving 388.
-    expect(all).toHaveLength(388);
+    // 395 raw items in. Nine Leo XIII documents are filed on both the encyclicals and
+    // letters shelves and merge into one record each: seven share incipit and date
+    // (pass 1), and two more -- In Plurimis/In plurimis maximisque and Non mediocri/
+    // Non mediocri cura -- are proven identical only by their shared URL document-slug
+    // (pass 2), since the two shelves print different incipits for them. 395 - 9 = 386.
+    expect(all).toHaveLength(386);
   });
 
-  it('deduplicates the seven twice-shelved Leo XIII documents', () => {
+  it('deduplicates the nine twice-shelved Leo XIII documents', () => {
     const twice = all.filter((d) => (d.source?.alsoShelvedAs?.length ?? 0) > 0);
-    expect(twice).toHaveLength(7);
+    expect(twice).toHaveLength(9);
     expect(twice.map((d) => d.incipit.toLowerCase()).sort()).toEqual([
-      'in amplissimo', 'magni nobis', 'omnibus compertum', 'permoti nos',
-      'quam aerumnosa', 'quod anniversarius', 'urbanitatis veteris',
+      'in amplissimo', 'in plurimis', 'magni nobis', 'non mediocri', 'omnibus compertum',
+      'permoti nos', 'quam aerumnosa', 'quod anniversarius', 'urbanitatis veteris',
     ]);
     for (const d of twice) {
       expect(d.source!.shelf).toBe('encyclicals');
@@ -31,7 +34,7 @@ describe('the harvested pilot corpus', () => {
   });
 
   it('satisfies every invariant', () => {
-    expect(checkDocuments(all, genreIds)).toEqual([]);
+    expect(checkDocuments(all, genres)).toEqual([]);
   });
 
   it('files the two Vatican I constitutions under the council', () => {
@@ -43,13 +46,15 @@ describe('the harvested pilot corpus', () => {
     expect(load('pius-ix').some((d) => d.incipit === 'Pastor Aeternus')).toBe(false);
   });
 
-  it('distinguishes the four Ubi Primum documents', () => {
+  it('distinguishes the five Ubi Primum documents', () => {
     const ids = all.filter((d) => d.incipit.toLowerCase().startsWith('ubi primum')).map((d) => d.id);
-    expect(ids).toEqual(expect.arrayContaining([
+    expect(ids.sort()).toEqual([
+      'mag:leo-xiii/ubi-primum-1898',
+      'mag:leo-xiii/ubi-primum-1878',
       'mag:benedict-xiv/ubi-primum-1740',
       'mag:pius-ix/ubi-primum-1847',
       'mag:pius-ix/ubi-primum-1849',
-    ]));
+    ].sort());
     expect(new Set(ids).size).toBe(ids.length);
   });
 

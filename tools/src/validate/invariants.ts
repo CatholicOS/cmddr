@@ -5,8 +5,13 @@ import type { DocumentRecord } from '../types.js';
 
 export interface Violation { rule: number; id: string; message: string }
 
-/** Invariants 8-13 and 15 of the design spec §6. (14 lives in the assessment checker.) */
-export function checkDocuments(docs: DocumentRecord[], genreIds: Set<string>): Violation[] {
+/** The genre rows this module needs from `data/genres.json`: id plus its allowed issuerTypes. */
+export interface GenreLike { id: string; issuerTypes?: string[] }
+
+/** Invariants 8-13, 15-17 of the design spec §6. (14 lives in the assessment checker.) */
+export function checkDocuments(docs: DocumentRecord[], genres: GenreLike[]): Violation[] {
+  const genreIds = new Set(genres.map((g) => g.id));
+  const issuerTypesByGenre = new Map(genres.map((g) => [g.id, g.issuerTypes]));
   const out: Violation[] = [];
   const seen = new Map<string, number>();
   const byCollision = new Map<string, DocumentRecord[]>();
@@ -40,6 +45,9 @@ export function checkDocuments(docs: DocumentRecord[], genreIds: Set<string>): V
     }
 
     if (local !== null) {
+      // `local` is non-null here, so d.issuerId is already known to carry a registered
+      // prefix (oec: or rp:) - this checks it resolves to a *known* issuer of that kind,
+      // not merely that it is prefixed (an unprefixed issuerId was already reported above).
       const known = d.issuerId.startsWith('oec:') ? KNOWN_COUNCIL_IDS : KNOWN_PONTIFF_IDS;
       if (!known.has(d.issuerId)) {
         out.push({ rule: 13, id: d.id, message: `issuerId not in the vendored registry: ${d.issuerId}` });
@@ -55,6 +63,24 @@ export function checkDocuments(docs: DocumentRecord[], genreIds: Set<string>): V
       }
     } else if (!genreIds.has(d.genre)) {
       out.push({ rule: 15, id: d.id, message: `unknown genre: ${d.genre}` });
+    }
+
+    const isCouncilIssuer = d.issuerId.startsWith('oec:');
+    if (isCouncilIssuer !== (d.issuerType === 'ecumenical-council')) {
+      out.push({
+        rule: 16, id: d.id,
+        message: `issuerId '${d.issuerId}' and issuerType '${d.issuerType}' disagree on ecumenical-council`,
+      });
+    }
+
+    if (d.genre !== null) {
+      const allowed = issuerTypesByGenre.get(d.genre);
+      if (allowed && !allowed.includes(d.issuerType)) {
+        out.push({
+          rule: 17, id: d.id,
+          message: `issuerType '${d.issuerType}' not among ${d.genre}'s issuerTypes (${allowed.join(', ')})`,
+        });
+      }
     }
 
     if (d.idStatus === 'minted' && local !== null) {

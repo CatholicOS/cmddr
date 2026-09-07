@@ -5,7 +5,7 @@
   "description": "One concrete magisterial document / speech. References a Genre. May be fully described by its Genre alone (no Assessments) or carry one Assessment per notable passage.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "title", "genre", "issuerId", "issuerType", "idStatus"],
+  "required": ["id", "title", "genre", "issuerId", "issuerType"],
   "properties": {
     "id": {
       "type": "string",

@@ -5,9 +5,10 @@
   "engines": { "node": ">=20" },
   "scripts": {
     "test": "vitest run",
-    "harvest": "tsx tools/src/harvest/run.ts",
+    "harvest": "RETRIEVED=2026-09-07 tsx tools/src/harvest/run.ts",
     "validate": "tsx tools/src/validate/run.ts",
-    "render": "tsx tools/src/render/run.ts"
+    "render": "tsx tools/src/render/run.ts",
+    "check": "vitest run && tsc --noEmit && tsx tools/src/validate/run.ts"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

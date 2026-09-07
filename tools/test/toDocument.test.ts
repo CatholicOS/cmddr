@@ -18,6 +18,8 @@ describe('toDocument', () => {
     expect(d.idStatus).toBe('minted');
     expect(d.incipit).toBe('Rerum Novarum');
     expect(d.source!.retrieved).toBe('2026-09-07');
+    // sourceGenreLabel is preserved even when genre is non-null (spec §4.1).
+    expect(d.sourceGenreLabel).toBe('encyclicals');
   });
 
   it('reassigns conciliar documents to their council', () => {

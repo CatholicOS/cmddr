@@ -118,6 +118,8 @@ These are the rules a linter/CI should enforce so the data can never re-collapse
 14. **Assessment id and document reference.** An assessment's `id` is `{document}#{section}`, and `document` names an existing
     document.
 15. **Genre reference.** `genre`, when non-null, resolves to an id in `data/genres.json`; when null, `sourceGenreLabel` is present.
+16. **Issuer namespace matches issuer type.** `issuerId` begins with `oec:` **iff** `issuerType = ecumenical-council`.
+17. **Issuer type is valid for the genre.** `issuerType`, when `genre` is non-null, is one of that genre's `issuerTypes` in `data/genres.json`.
 
 ---
 

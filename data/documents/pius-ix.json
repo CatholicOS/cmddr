@@ -34,7 +34,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/praedecessores-nostros-1847",
@@ -52,7 +53,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/ubi-primum-1847",
@@ -70,7 +72,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/nelle-istituzioni-1848",
@@ -126,7 +129,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Allocuzione"
   },
   {
     "id": "mag:pius-ix/da-questa-pacifica-1849",
@@ -163,7 +167,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/la-serie-1849",
@@ -200,7 +205,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Allocuzione"
   },
   {
     "id": "mag:pius-ix/nostis-et-nobiscum-1849",
@@ -218,7 +224,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/si-semper-antea-1850",
@@ -236,7 +243,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Allocuzione"
   },
   {
     "id": "mag:pius-ix/ex-aliis-nostris-1851",
@@ -254,7 +262,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/exultavit-cor-nostrum-1851",
@@ -272,7 +281,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/nemo-certe-ignorat-1852",
@@ -290,7 +300,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/inter-multiplices-1853",
@@ -308,7 +319,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/neminem-vestrum-1854",
@@ -326,7 +338,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/optime-noscitis-1854",
@@ -344,7 +357,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/ineffabilis-deus-1854",
@@ -365,7 +379,8 @@
     },
     "characteristics": [
       "apostolic-constitution"
-    ]
+    ],
+    "sourceGenreLabel": "Costituzione Apostolica"
   },
   {
     "id": "mag:pius-ix/singulari-quidem-1856",
@@ -383,7 +398,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/eximiam-tuam-1857",
@@ -401,7 +417,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Litterae Apostolicae"
   },
   {
     "id": "mag:pius-ix/cum-nuper-1858",
@@ -419,7 +436,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/amantissimi-redemptoris-1858",
@@ -437,7 +455,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/cum-sancta-mater-1859",
@@ -455,7 +474,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/qui-nuper-1859",
@@ -473,7 +493,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/ad-gravissimum-1859",
@@ -491,7 +512,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Allocuzione"
   },
   {
     "id": "mag:pius-ix/maximo-animi-1859",
@@ -509,7 +531,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Allocuzione"
   },
   {
     "id": "mag:pius-ix/nullis-certe-1860",
@@ -527,7 +550,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/cum-catholica-ecclesia-1860",
@@ -545,7 +569,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Breve"
   },
   {
     "id": "mag:pius-ix/dolore-haud-mediocri-1860",
@@ -563,7 +588,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Litterae Apostolicae"
   },
   {
     "id": "mag:pius-ix/novos-et-ante-1860",
@@ -581,7 +607,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Allocuzione"
   },
   {
     "id": "mag:pius-ix/multis-gravibusque-1860",
@@ -599,7 +626,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Allocuzione"
   },
   {
     "id": "mag:pius-ix/iamdudum-cernimus-1861",
@@ -617,7 +645,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Allocuzione"
   },
   {
     "id": "mag:pius-ix/amantissimus-humani-1862",
@@ -635,7 +664,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/maxima-quidem-1862",
@@ -653,7 +683,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Allocuzione"
   },
   {
     "id": "mag:pius-ix/gravissimas-inter-1862",
@@ -671,7 +702,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Litterae Apostolicae"
   },
   {
     "id": "mag:pius-ix/quanto-conficiamur-1863",
@@ -689,7 +721,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/incredibili-afflictamur-1863",
@@ -707,7 +740,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/tuas-libenter-1863",
@@ -726,7 +760,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Epistola"
   },
   {
     "id": "mag:pius-ix/multis-gravissimis-1864",
@@ -744,7 +779,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Breve"
   },
   {
     "id": "mag:pius-ix/ubi-urbaniano-1864",
@@ -762,7 +798,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/maximae-quidem-1864",
@@ -780,7 +817,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/quanta-cura-1864",
@@ -799,7 +837,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/multiplices-inter-1865",
@@ -818,7 +857,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Allocuzione"
   },
   {
     "id": "mag:pius-ix/meridionali-americae-1865",
@@ -836,7 +876,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Epistola"
   },
   {
     "id": "mag:pius-ix/singulari-quidem-1867",
@@ -854,7 +895,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Allocuzione"
   },
   {
     "id": "mag:pius-ix/levate-1867",
@@ -873,7 +915,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/ex-quo-infensissimi-1867",
@@ -891,7 +934,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Breve"
   },
   {
     "id": "mag:pius-ix/aeterni-patris-1868",
@@ -910,7 +954,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Bolla"
   },
   {
     "id": "mag:pius-ix/arcano-divinae-1868",
@@ -929,7 +974,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/iam-vos-omnes-1868",
@@ -948,7 +994,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/religiosas-regularium-1870",
@@ -967,7 +1014,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Lettera Apostolica"
   },
   {
     "id": "mag:pius-ix/non-sine-gravissimo-1870",
@@ -986,7 +1034,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Lettera Apostolica"
   },
   {
     "id": "mag:pius-ix/multiplices-inter-1870",
@@ -1004,7 +1053,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Bolla"
   },
   {
     "id": "mag:pius-ix/apostolici-ministerii-1870",
@@ -1023,7 +1073,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Breve"
   },
   {
     "id": "mag:pius-ix/quo-impensiore-1870",
@@ -1042,7 +1093,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/respicientes-ea-1870",
@@ -1061,7 +1113,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/ecclesia-dei-1871",
@@ -1080,7 +1133,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Epistola"
   },
   {
     "id": "mag:pius-ix/ubi-prima-1871",
@@ -1099,7 +1153,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/ubi-nos-1871",
@@ -1118,7 +1173,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/beneficia-dei-1871",
@@ -1137,7 +1193,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/saepe-venerabiles-1871",
@@ -1156,7 +1213,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/ordinem-vestrum-1871",
@@ -1175,7 +1233,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Allocuzione"
   },
   {
     "id": "mag:pius-ix/in-luctuosissimis-1872",
@@ -1194,7 +1253,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Epistola"
   },
   {
     "id": "mag:pius-ix/quartus-supra-1873",
@@ -1213,7 +1273,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/etsi-multa-1873",
@@ -1231,7 +1292,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/in-magnis-illis-1873",
@@ -1249,7 +1311,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/vix-dum-a-nobis-1874",
@@ -1267,7 +1330,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/omnem-sollicitudinem-1874",
@@ -1285,7 +1349,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/gravibus-ecclesiae-1874",
@@ -1304,7 +1369,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/quod-nunquam-1875",
@@ -1322,7 +1388,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/graves-ac-diuturnae-1875",
@@ -1341,7 +1408,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Lettera Apostolica"
   },
   {
     "id": "mag:pius-ix/quae-in-patriarchatu-1876",
@@ -1359,7 +1427,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:pius-ix/dives-in-misericordia-1877",
@@ -1377,6 +1446,7 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "Breve"
   }
 ]

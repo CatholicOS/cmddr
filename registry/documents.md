@@ -6,7 +6,7 @@ Identifiers follow `mag:{issuer}/{incipit-slug}-{year}`; the issuer segment is a
 part of `issuerId`, so conciliar documents namespace under their council and record the
 promulgating pope separately. See the design spec for the minting rules.
 
-388 documents.
+386 documents.
 
 | ID | Incipit | Genre | Issuer | Date | Promulgated by |
 | --- | --- | --- | --- | --- | --- |
@@ -188,7 +188,6 @@ promulgating pope separately. See the design spec for the minting rules.
 | `mag:leo-xiii/praeclaro-divinae-1888` | Praeclaro divinae | letter | `rp:leo-xiii` | 1888-02-03 |  |
 | `mag:leo-xiii/quod-anniversarius-1888` | Quod Anniversarius | encyclical | `rp:leo-xiii` | 1888-04-01 |  |
 | `mag:leo-xiii/in-plurimis-1888` | In Plurimis | encyclical | `rp:leo-xiii` | 1888-05-05 |  |
-| `mag:leo-xiii/in-plurimis-maximisque-1888` | In plurimis maximisque | letter | `rp:leo-xiii` | 1888-05-05 |  |
 | `mag:leo-xiii/libertas-1888` | Libertas | encyclical | `rp:leo-xiii` | 1888-06-20 |  |
 | `mag:leo-xiii/saepe-nos-1888` | Saepe Nos | encyclical | `rp:leo-xiii` | 1888-06-24 |  |
 | `mag:leo-xiii/paterna-caritas-1888` | Paterna Caritas | encyclical | `rp:leo-xiii` | 1888-07-25 |  |
@@ -265,7 +264,6 @@ promulgating pope separately. See the design spec for the minting rules.
 | `mag:leo-xiii/constanti-hungarorum-1893` | Constanti Hungarorum | encyclical | `rp:leo-xiii` | 1893-09-02 |  |
 | `mag:leo-xiii/laetitiae-sanctae-1893` | Laetitiae sanctae | encyclical | `rp:leo-xiii` | 1893-09-08 |  |
 | `mag:leo-xiii/non-mediocri-1893` | Non mediocri | encyclical | `rp:leo-xiii` | 1893-10-25 |  |
-| `mag:leo-xiii/non-mediocri-cura-1893` | Non mediocri cura | letter | `rp:leo-xiii` | 1893-10-25 |  |
 | `mag:leo-xiii/providentissimus-deus-1893` | Providentissimus Deus | encyclical | `rp:leo-xiii` | 1893-11-18 |  |
 | `mag:leo-xiii/felix-nazarethana-1894` | Felix Nazarethana | brief | `rp:leo-xiii` | 1894-01-23 |  |
 | `mag:leo-xiii/sullo-scorcio-1894` | Sullo scorcio | discourse-address | `rp:leo-xiii` | 1894-01-28 |  |

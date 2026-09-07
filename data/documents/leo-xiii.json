@@ -16,7 +16,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "speeches"
   },
   {
     "id": "mag:leo-xiii/inscrutabili-dei-consilio-1878",
@@ -37,7 +38,8 @@
         "PT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/da-grave-sventura-1878",
@@ -55,7 +57,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/quod-apostolici-muneris-1878",
@@ -76,7 +79,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/pontifices-maximi-1879",
@@ -95,7 +99,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "briefs"
   },
   {
     "id": "mag:leo-xiii/ci-siamo-grandemente-1879",
@@ -113,7 +118,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/aeterni-patris-1879",
@@ -135,7 +141,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/iampridem-considerando-1879",
@@ -153,7 +160,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/placere-nobis-1880",
@@ -172,7 +180,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:leo-xiii/arcanum-divinae-1880",
@@ -195,7 +204,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/cum-hoc-sit-1880",
@@ -214,7 +224,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "briefs"
   },
   {
     "id": "mag:leo-xiii/grande-munus-1880",
@@ -234,7 +245,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/sancta-dei-civitas-1880",
@@ -254,7 +266,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/pro-religione-et-pro-ecclesia-1881",
@@ -273,7 +286,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/militans-iesu-1881",
@@ -292,7 +306,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "briefs"
   },
   {
     "id": "mag:leo-xiii/romanos-pontifices-1881",
@@ -313,7 +328,8 @@
     },
     "characteristics": [
       "apostolic-constitution"
-    ]
+    ],
+    "sourceGenreLabel": "apost_constitutions"
   },
   {
     "id": "mag:leo-xiii/diuturnum-1881",
@@ -335,7 +351,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/licet-multa-1881",
@@ -355,7 +372,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/cognita-nobis-1882",
@@ -373,7 +391,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/etsi-nos-1882",
@@ -392,7 +411,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/auspicato-concessum-1882",
@@ -411,7 +431,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/cum-multa-sint-1882",
@@ -430,7 +451,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/misericors-dei-filius-1883",
@@ -452,7 +474,8 @@
     },
     "characteristics": [
       "apostolic-constitution"
-    ]
+    ],
+    "sourceGenreLabel": "apost_constitutions"
   },
   {
     "id": "mag:leo-xiii/saepenumero-considerantes-1883",
@@ -471,7 +494,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/supremi-apostolatus-officio-1883",
@@ -493,7 +517,8 @@
         "PT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/nobilissima-gallorum-gens-1884",
@@ -512,7 +537,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/humanum-genus-1884",
@@ -534,7 +560,8 @@
         "PT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/superiore-anno-1884",
@@ -556,7 +583,8 @@
         "PT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/materna-ecclesiae-caritas-1884",
@@ -575,7 +603,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/la-vostra-lettera-1885",
@@ -594,7 +623,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/immortale-dei-1885",
@@ -617,7 +647,8 @@
         "PT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/spectata-fides-1885",
@@ -637,7 +668,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/quod-auctoritate-1885",
@@ -657,7 +689,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/cum-de-carolinis-1885",
@@ -675,7 +708,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/iampridem-1886",
@@ -695,7 +729,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/non-senza-1886",
@@ -714,7 +749,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/dolemus-inter-1886",
@@ -733,7 +769,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "briefs"
   },
   {
     "id": "mag:leo-xiii/quod-multum-1886",
@@ -753,7 +790,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/pergrata-nobis-1886",
@@ -773,7 +811,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/volumen-tertium-1886",
@@ -791,7 +830,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/piu-volte-1886",
@@ -809,7 +849,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/quae-diligenter-1887",
@@ -827,7 +868,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/ex-litteris-tuis-1887",
@@ -845,7 +887,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/quod-iampridem-1887",
@@ -863,7 +906,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/episcoporum-ordinem-1887",
@@ -882,7 +926,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "speeches"
   },
   {
     "id": "mag:leo-xiii/quantunque-le-siano-1887",
@@ -901,7 +946,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/egregii-tui-1887",
@@ -919,7 +965,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/vi-e-ben-noto-1887",
@@ -939,7 +986,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/vi-e-noto-1887",
@@ -958,7 +1006,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/quod-primo-1887",
@@ -976,7 +1025,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/merito-existimasti-1887",
@@ -994,7 +1044,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/tanto-nobis-1887",
@@ -1012,7 +1063,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/libenter-agnovimus-1887",
@@ -1030,7 +1082,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/officio-sanctissimo-1887",
@@ -1050,7 +1103,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/vicario-sulla-terra-1887",
@@ -1069,7 +1123,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/praeclaro-divinae-1888",
@@ -1087,7 +1142,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/quod-anniversarius-1888",
@@ -1109,7 +1165,8 @@
       "alsoShelvedAs": [
         "letters"
       ]
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/in-plurimis-1888",
@@ -1127,26 +1184,12 @@
         "EN",
         "IT"
       ],
-      "retrieved": "2026-09-07"
-    }
-  },
-  {
-    "id": "mag:leo-xiii/in-plurimis-maximisque-1888",
-    "title": "In plurimis maximisque",
-    "incipit": "In plurimis maximisque",
-    "idStatus": "minted",
-    "genre": "letter",
-    "issuerId": "rp:leo-xiii",
-    "issuerType": "pope",
-    "date": "1888-05-05",
-    "source": {
-      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18880505_in-plurimis.html",
-      "shelf": "letters",
-      "languages": [
-        "LA"
-      ],
-      "retrieved": "2026-09-07"
-    }
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "letters"
+      ]
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/libertas-1888",
@@ -1168,7 +1211,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/saepe-nos-1888",
@@ -1188,7 +1232,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/paterna-caritas-1888",
@@ -1208,7 +1253,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/summi-pontificatus-1888",
@@ -1226,7 +1272,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "speeches"
   },
   {
     "id": "mag:leo-xiii/ad-universam-viene-eretta-la-diocesi-di-lugano-1888",
@@ -1244,7 +1291,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "bulls"
   },
   {
     "id": "mag:leo-xiii/augustum-sanctissimumque-1888",
@@ -1263,7 +1311,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:leo-xiii/opus-tibi-1888",
@@ -1281,7 +1330,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/etsi-nec-dubia-1888",
@@ -1299,7 +1349,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/quam-aerumnosa-1888",
@@ -1322,7 +1373,8 @@
       "alsoShelvedAs": [
         "letters"
       ]
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/est-sane-molestum-1888",
@@ -1340,7 +1392,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/etsi-cunctas-1888",
@@ -1359,7 +1412,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/exeunte-iam-anno-1888",
@@ -1379,7 +1433,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/eximia-pietas-1889",
@@ -1397,7 +1452,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/iamdudum-pars-1889",
@@ -1418,7 +1474,8 @@
     },
     "characteristics": [
       "apostolic-constitution"
-    ]
+    ],
+    "sourceGenreLabel": "apost_constitutions"
   },
   {
     "id": "mag:leo-xiii/nostis-errorem-1889",
@@ -1437,7 +1494,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "speeches"
   },
   {
     "id": "mag:leo-xiii/la-devozione-1889",
@@ -1455,7 +1513,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "speeches"
   },
   {
     "id": "mag:leo-xiii/magni-nobis-1889",
@@ -1477,7 +1536,8 @@
       "alsoShelvedAs": [
         "letters"
       ]
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/grata-ci-e-riuscita-1889",
@@ -1496,7 +1556,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/libentes-intelleximus-1889",
@@ -1514,7 +1575,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/amplissimum-collegium-1889",
@@ -1533,7 +1595,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "speeches"
   },
   {
     "id": "mag:leo-xiii/litteris-ad-te-1889",
@@ -1552,7 +1615,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/quod-nuper-1889",
@@ -1571,7 +1635,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "speeches"
   },
   {
     "id": "mag:leo-xiii/e-giunto-1889",
@@ -1589,7 +1654,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/quamquam-pluries-1889",
@@ -1610,7 +1676,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/fra-le-molteplici-1889",
@@ -1628,7 +1695,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/colle-espressioni-1889",
@@ -1646,7 +1714,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "speeches"
   },
   {
     "id": "mag:leo-xiii/tempestivum-quoddam-1889",
@@ -1665,7 +1734,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "speeches"
   },
   {
     "id": "mag:leo-xiii/sapientiae-christianae-1890",
@@ -1686,7 +1756,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/quod-paucis-1890",
@@ -1704,7 +1775,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/cum-apostolica-sedes-1890",
@@ -1722,7 +1794,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/noi-rendiamo-grazie-1890",
@@ -1740,7 +1813,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/rem-magni-1890",
@@ -1758,7 +1832,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/graviter-molesteque-1890",
@@ -1776,7 +1851,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/mirifice-delectati-sumus-1890",
@@ -1794,7 +1870,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/graviter-admodum-1890",
@@ -1812,7 +1889,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/dall-alto-dell-apostolico-seggio-1890",
@@ -1832,7 +1910,8 @@
         "PT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/catholicae-ecclesiae-1890",
@@ -1852,7 +1931,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/novum-argumentum-1890",
@@ -1870,7 +1950,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/in-supremo-1890",
@@ -1888,7 +1969,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "briefs"
   },
   {
     "id": "mag:leo-xiii/opportune-quidem-1891",
@@ -1906,7 +1988,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/praeclarum-studium-1891",
@@ -1924,7 +2007,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/in-ipso-1891",
@@ -1944,7 +2028,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/quod-erat-maxime-1891",
@@ -1962,7 +2047,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/rerum-novarum-1891",
@@ -1986,7 +2072,8 @@
         "PT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/non-maius-1891",
@@ -2004,7 +2091,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/pastoralis-vigilantiae-1891",
@@ -2024,7 +2112,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/optimae-quidem-1891",
@@ -2042,7 +2131,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/pastoralis-officii-1891",
@@ -2062,7 +2152,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/grande-est-1891",
@@ -2080,7 +2171,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "speeches"
   },
   {
     "id": "mag:leo-xiii/octobri-mense-1891",
@@ -2101,7 +2193,8 @@
         "PT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/sapienter-olim-1891",
@@ -2119,7 +2212,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/non-est-opus-1891",
@@ -2138,7 +2232,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "speeches"
   },
   {
     "id": "mag:leo-xiii/au-milieu-des-sollicitudes-1892",
@@ -2158,7 +2253,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/notre-consolation-1892",
@@ -2177,7 +2273,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/quo-magis-1892",
@@ -2195,7 +2292,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/quae-coniunctim-1892",
@@ -2213,7 +2311,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/quam-gratae-1892",
@@ -2233,7 +2332,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/quarto-abeunte-saeculo-1892",
@@ -2253,7 +2353,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/alumnis-seminarii-vaticani-1892",
@@ -2271,7 +2372,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:leo-xiii/magnae-dei-matris-1892",
@@ -2292,7 +2394,8 @@
         "PT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/suffragatione-patrum-1892",
@@ -2310,7 +2413,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/literae-tuae-1892",
@@ -2329,7 +2433,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/agnovimus-libenter-1892",
@@ -2347,7 +2452,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/custodi-di-quella-fede-1892",
@@ -2366,7 +2472,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/inimica-vis-1892",
@@ -2386,7 +2493,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/insignis-ecclesia-1892",
@@ -2404,7 +2512,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/prossimi-come-siamo-1892",
@@ -2422,7 +2531,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "speeches"
   },
   {
     "id": "mag:leo-xiii/quod-scribis-1893",
@@ -2440,7 +2550,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/il-divisamento-1893",
@@ -2459,7 +2570,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/clara-saepenumero-1893",
@@ -2478,7 +2590,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/ad-extremas-1893",
@@ -2498,7 +2611,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/gratae-vehementer-1893",
@@ -2516,7 +2630,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/nihil-nobis-1893",
@@ -2534,7 +2649,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/constanti-hungarorum-1893",
@@ -2554,7 +2670,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/laetitiae-sanctae-1893",
@@ -2575,7 +2692,8 @@
         "PT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/non-mediocri-1893",
@@ -2593,26 +2711,12 @@
         "EN",
         "IT"
       ],
-      "retrieved": "2026-09-07"
-    }
-  },
-  {
-    "id": "mag:leo-xiii/non-mediocri-cura-1893",
-    "title": "Non mediocri cura",
-    "incipit": "Non mediocri cura",
-    "idStatus": "minted",
-    "genre": "letter",
-    "issuerId": "rp:leo-xiii",
-    "issuerType": "pope",
-    "date": "1893-10-25",
-    "source": {
-      "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18931025_non-mediocri.html",
-      "shelf": "letters",
-      "languages": [
-        "LA"
-      ],
-      "retrieved": "2026-09-07"
-    }
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "letters"
+      ]
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/providentissimus-deus-1893",
@@ -2634,7 +2738,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/felix-nazarethana-1894",
@@ -2653,7 +2758,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "briefs"
   },
   {
     "id": "mag:leo-xiii/sullo-scorcio-1894",
@@ -2671,7 +2777,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "speeches"
   },
   {
     "id": "mag:leo-xiii/illud-est-1894",
@@ -2689,7 +2796,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/non-levis-1894",
@@ -2707,7 +2815,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/susceptum-a-nobis-1894",
@@ -2725,7 +2834,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/caritatis-providentiaeque-1894",
@@ -2745,7 +2855,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/grande-e-1894",
@@ -2763,7 +2874,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "speeches"
   },
   {
     "id": "mag:leo-xiii/inter-graves-1894",
@@ -2783,7 +2895,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/quum-quaestioni-1894",
@@ -2801,7 +2914,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/praeclara-gratulationis-1894",
@@ -2820,7 +2934,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/litteras-a-vobis-1894",
@@ -2840,7 +2955,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/plane-congruit-1894",
@@ -2858,7 +2974,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/rem-tu-amplam-1894",
@@ -2876,7 +2993,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/perlibenti-quidem-1894",
@@ -2894,7 +3012,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/iucunda-semper-expectatione-1894",
@@ -2915,7 +3034,8 @@
         "PT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/fra-le-principali-1894",
@@ -2933,7 +3053,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/orientalium-dignitas-ecclesiarum-1894",
@@ -2952,7 +3073,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/moerore-sapientium-1894",
@@ -2970,7 +3092,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/postquam-catholici-1894",
@@ -2988,7 +3111,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/christi-nomen-1894",
@@ -3008,7 +3132,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/longinqua-oceani-1895",
@@ -3028,7 +3153,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/dum-multorum-1895",
@@ -3046,7 +3172,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/amantissimae-voluntatis-1895",
@@ -3065,7 +3192,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/quale-debba-1895",
@@ -3084,7 +3212,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/provida-matris-1895",
@@ -3103,7 +3232,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "briefs"
   },
   {
     "id": "mag:leo-xiii/quod-plurimorum-1895",
@@ -3121,7 +3251,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/unitatis-christianae-1895",
@@ -3139,7 +3270,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/benevolentiae-testandae-1895",
@@ -3157,7 +3289,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/adnitentibus-nobis-1895",
@@ -3175,7 +3308,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/permoti-nos-1895",
@@ -3196,7 +3330,8 @@
       "alsoShelvedAs": [
         "letters"
       ]
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/consiliorum-quae-1895",
@@ -3214,7 +3349,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/adiutricem-populi-1895",
@@ -3234,7 +3370,8 @@
         "PT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/universis-christi-1895",
@@ -3252,7 +3389,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/le-insolite-1895",
@@ -3271,7 +3409,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/christi-domini-1895",
@@ -3289,7 +3428,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/egregium-sane-1895",
@@ -3307,7 +3447,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/magni-commemoratio-1896",
@@ -3325,7 +3466,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "briefs"
   },
   {
     "id": "mag:leo-xiii/quod-romani-pontifices-1896",
@@ -3343,7 +3485,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/con-vivissima-1896",
@@ -3361,7 +3504,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "speeches"
   },
   {
     "id": "mag:leo-xiii/auspicia-rerum-1896",
@@ -3379,7 +3523,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:leo-xiii/insignes-deo-1896",
@@ -3399,7 +3544,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/placuit-tibi-1896",
@@ -3419,7 +3565,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/satis-cognitum-1896",
@@ -3439,7 +3586,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/catholicos-homines-1896",
@@ -3457,7 +3605,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/apostolicae-curae-1896",
@@ -3475,7 +3624,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/fidentem-piumque-animum-1896",
@@ -3496,7 +3646,8 @@
         "PT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/religioni-apud-anglos-1896",
@@ -3514,7 +3665,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/la-tarda-eta-1896",
@@ -3532,7 +3684,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "speeches"
   },
   {
     "id": "mag:leo-xiii/officiorum-ac-munerum-1897",
@@ -3554,7 +3707,8 @@
     },
     "characteristics": [
       "apostolic-constitution"
-    ]
+    ],
+    "sourceGenreLabel": "apost_constitutions"
   },
   {
     "id": "mag:leo-xiii/trans-oceanum-1897",
@@ -3573,7 +3727,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/divinum-illud-munus-1897",
@@ -3593,7 +3748,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/dilectus-domini-nostri-1897",
@@ -3611,7 +3767,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/hoc-mandatum-1897",
@@ -3629,7 +3786,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/libet-quidem-1897",
@@ -3647,7 +3805,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/militantis-ecclesiae-1897",
@@ -3666,7 +3825,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/etsi-paternam-1897",
@@ -3684,7 +3844,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/augustissimae-virginis-mariae-1897",
@@ -3704,7 +3865,8 @@
         "PT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/felicitate-quadam-1897",
@@ -3725,7 +3887,8 @@
     },
     "characteristics": [
       "apostolic-constitution"
-    ]
+    ],
+    "sourceGenreLabel": "apost_constitutions"
   },
   {
     "id": "mag:leo-xiii/affari-vos-1897",
@@ -3745,7 +3908,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/sodalium-benedictinorum-ordinem-1897",
@@ -3763,7 +3927,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:leo-xiii/quum-adeo-1898",
@@ -3782,7 +3947,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/ea-animi-sollicitudo-1898",
@@ -3801,7 +3967,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:leo-xiii/cum-plura-nobis-1898",
@@ -3819,7 +3986,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:leo-xiii/quum-nonnullorum-1898",
@@ -3837,7 +4005,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:leo-xiii/caritatis-studium-1898",
@@ -3856,7 +4025,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/spesse-volte-1898",
@@ -3875,7 +4045,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/quam-religiosa-1898",
@@ -3893,7 +4064,8 @@
         "EN"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/maximo-cum-animi-1898",
@@ -3912,7 +4084,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/diuturni-temporis-1898",
@@ -3932,7 +4105,8 @@
         "PT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/ubi-primum-1898",
@@ -3953,7 +4127,8 @@
     },
     "characteristics": [
       "apostolic-constitution"
-    ]
+    ],
+    "sourceGenreLabel": "apost_constitutions"
   },
   {
     "id": "mag:leo-xiii/nostra-erga-1898",
@@ -3971,7 +4146,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/cum-diuturnum-1898",
@@ -3989,7 +4165,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/quum-diuturnum-1898",
@@ -4007,7 +4184,8 @@
         "EN"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/testem-benevolentiae-1899",
@@ -4025,7 +4203,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/ex-epistola-1899",
@@ -4043,7 +4222,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/properante-ad-exitum-1899",
@@ -4062,7 +4242,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/annum-sacrum-1899",
@@ -4081,7 +4262,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/nous-ne-pouvons-1899",
@@ -4100,7 +4282,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/depuis-le-jour-1899",
@@ -4119,7 +4302,8 @@
         "FR"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/paternae-1899",
@@ -4138,7 +4322,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/quoniam-divinae-1899",
@@ -4156,7 +4341,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/aeterni-pastoris-1899",
@@ -4177,7 +4363,8 @@
     },
     "characteristics": [
       "apostolic-constitution"
-    ]
+    ],
+    "sourceGenreLabel": "apost_constitutions"
   },
   {
     "id": "mag:leo-xiii/auspicandae-celebritatis-sacrae-1899",
@@ -4195,7 +4382,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "speeches"
   },
   {
     "id": "mag:leo-xiii/quas-tu-1900",
@@ -4213,7 +4401,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/i-luttuosi-avvenimenti-1900",
@@ -4231,7 +4420,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/omnibus-compertum-1900",
@@ -4252,7 +4442,8 @@
       "alsoShelvedAs": [
         "letters"
       ]
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/praestantiam-assisiensis-1900",
@@ -4270,7 +4461,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/gia-fin-dagli-esordii-1900",
@@ -4288,7 +4480,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/ad-catholicorum-conventum-1900",
@@ -4306,7 +4499,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/venerabilis-frater-augustinus-1900",
@@ -4324,7 +4518,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/qua-mente-1900",
@@ -4342,7 +4537,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/rei-catholicae-1900",
@@ -4360,7 +4556,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/tametsi-futura-prospicientibus-1900",
@@ -4379,7 +4576,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/conditae-a-christo-1900",
@@ -4400,7 +4598,8 @@
     },
     "characteristics": [
       "apostolic-constitution"
-    ]
+    ],
+    "sourceGenreLabel": "apost_constitutions"
   },
   {
     "id": "mag:leo-xiii/alias-iam-1900",
@@ -4418,7 +4617,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/au-milieu-des-consolations-1900",
@@ -4436,7 +4636,8 @@
         "FR"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/temporis-quidem-1900",
@@ -4454,7 +4655,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/graves-de-communi-re-1901",
@@ -4473,7 +4675,8 @@
         "FR"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/in-maximis-occupationibus-1901",
@@ -4491,7 +4694,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/de-ingenii-1901",
@@ -4509,7 +4713,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/le-nostre-ferme-speranze-1901",
@@ -4527,7 +4732,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/saecularis-eventus-1901",
@@ -4545,7 +4751,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/gravissimas-1901",
@@ -4563,7 +4770,8 @@
         "EN"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/nos-quidem-1901",
@@ -4581,7 +4789,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/iucundas-scito-1901",
@@ -4599,7 +4808,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/al-compimento-delle-riforme-1901",
@@ -4617,7 +4827,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/en-tout-temps-1901",
@@ -4635,7 +4846,8 @@
         "FR"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/slavorum-gentem-1901",
@@ -4653,7 +4865,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/reputantibus-1901",
@@ -4671,7 +4884,8 @@
         "EN"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/reputantibus-saepe-1901",
@@ -4689,7 +4903,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/parta-humano-generi-1901",
@@ -4707,7 +4922,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/urbanitatis-veteris-1901",
@@ -4728,7 +4944,8 @@
       "alsoShelvedAs": [
         "letters"
       ]
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/vigesimo-quinto-anno-1902",
@@ -4746,7 +4963,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/ad-pastoralem-1902",
@@ -4764,7 +4982,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:leo-xiii/in-amplissimo-1902",
@@ -4785,7 +5004,8 @@
       "alsoShelvedAs": [
         "letters"
       ]
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/quod-votis-1902",
@@ -4803,7 +5023,8 @@
         "EN"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/mirae-caritatis-1902",
@@ -4823,7 +5044,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/non-mediocri-1902",
@@ -4841,7 +5063,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/ex-tuis-litteris-1902",
@@ -4859,7 +5082,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/vigilantiae-studiique-1902",
@@ -4878,7 +5102,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/quae-ad-nos-1902",
@@ -4896,7 +5121,8 @@
         "EN"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/litteras-ante-annos-1902",
@@ -4914,7 +5140,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:leo-xiii/fin-dal-principio-1902",
@@ -4933,7 +5160,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/dum-multa-1902",
@@ -4951,7 +5179,8 @@
         "EN"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "encyclicals"
   },
   {
     "id": "mag:leo-xiii/quos-nuper-1903",
@@ -4969,7 +5198,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/cogendum-proxime-1903",
@@ -4987,7 +5217,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/quod-iubilaei-1903",
@@ -5005,7 +5236,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/da-molte-parti-1903",
@@ -5023,7 +5255,8 @@
         "IT"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:leo-xiii/communes-litteras-1903",
@@ -5041,7 +5274,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/praestans-fidei-1903",
@@ -5060,7 +5294,8 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "letters"
   },
   {
     "id": "mag:leo-xiii/nobis-quidem-1903",
@@ -5078,6 +5313,7 @@
         "LA"
       ],
       "retrieved": "2026-09-07"
-    }
+    },
+    "sourceGenreLabel": "speeches"
   }
 ]

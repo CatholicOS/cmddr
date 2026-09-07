@@ -18,7 +18,8 @@
       "retrieved": "2026-09-07"
     },
     "promulgatedBy": "rp:pius-ix",
-    "descriptiveTitle": "dogmatic"
+    "descriptiveTitle": "dogmatic",
+    "sourceGenreLabel": "Costituzione dogmatica"
   },
   {
     "id": "mag:vatican-i/pastor-aeternus-1870",
@@ -39,6 +40,7 @@
       "retrieved": "2026-09-07"
     },
     "promulgatedBy": "rp:pius-ix",
-    "descriptiveTitle": "dogmatic"
+    "descriptiveTitle": "dogmatic",
+    "sourceGenreLabel": "Costituzione dogmatica"
   }
 ]
