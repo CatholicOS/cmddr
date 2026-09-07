@@ -147,4 +147,13 @@ describe('the harvested pilot corpus', () => {
     expect(pair1891[0]!.id).toBe('mag:leo-xiii/in-ipso-1891');
     expect(pair1891[1]!.id).toBe('mag:leo-xiii/quod-erat-maxime-1891');
   });
+
+  it('records the fixture retrieval date, not the current clock, for every document', () => {
+    // Every document's source.retrieved must match the constant FIXTURES_RETRIEVED,
+    // ensuring the harvest is timestamp-independent and does not rewrite data/
+    // when run without an explicit env var override.
+    expect(all.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
+    const mismatched = all.filter((d) => d.source?.retrieved !== '2026-09-07');
+    expect(mismatched).toEqual([]);
+  });
 });

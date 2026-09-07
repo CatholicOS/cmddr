@@ -46,7 +46,11 @@ function urlDocSlug(url: string | null): string | null {
   return m ? m[1]! : null;
 }
 
-const RETRIEVED = process.env.RETRIEVED ?? new Date().toISOString().slice(0, 10);
+/** The date the checked-in fixtures in tools/fixtures/ were fetched from vatican.va.
+ *  This is the source-of-truth default; must be updated whenever those fixtures are refreshed.
+ *  Can be overridden with the RETRIEVED env var for testing or when refreshing fixtures. */
+const FIXTURES_RETRIEVED = '2026-09-07';
+const RETRIEVED = process.env.RETRIEVED ?? FIXTURES_RETRIEVED;
 const fixture = (n: string) => readFileSync(`tools/fixtures/${n}.html`, 'utf8');
 
 const items: HarvestItem[] = [];
