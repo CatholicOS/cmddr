@@ -81,6 +81,33 @@ describe('document.schema.json', () => {
     expect(validate(strip({ ...baseDoc, incipit: undefined }))).toBe(false);
   });
 
+  it('accepts a minted id extended to the full date to resolve a collision', () => {
+    expect(validate(strip({
+      ...baseDoc, id: 'mag:pius-ix/ubi-primum-1849-02-02', title: 'Ubi Primum', incipit: 'Ubi Primum',
+      issuerId: 'rp:pius-ix', date: '1849-02-02', sigla: undefined,
+    }))).toBe(true);
+  });
+
+  it('rejects a minted id with a stray ordinal suffix', () => {
+    expect(validate({ ...baseDoc, id: 'mag:john-paul-ii/evangelium-vitae-1995-3', idStatus: 'minted' })).toBe(false);
+  });
+
+  it('rejects a provisional id with a bare year', () => {
+    expect(validate(strip({
+      ...baseDoc, id: 'mag:francis-i/angelus-2015', idStatus: 'provisional',
+      title: 'Angelus', genre: 'audience-catechesis', issuerId: 'rp:francis-i', date: '2015-03-22',
+      sigla: undefined, incipit: undefined, incipitLang: undefined,
+    }))).toBe(false);
+  });
+
+  it('accepts a provisional id with an optional ordinal', () => {
+    expect(validate(strip({
+      ...baseDoc, id: 'mag:francis-i/angelus-2015-03-22-2', idStatus: 'provisional',
+      title: 'Angelus, 22 March 2015', genre: 'audience-catechesis', issuerId: 'rp:francis-i', date: '2015-03-22',
+      sigla: undefined, incipit: undefined, incipitLang: undefined,
+    }))).toBe(true);
+  });
+
   it('records harvest provenance', () => {
     expect(validate({
       ...baseDoc,
