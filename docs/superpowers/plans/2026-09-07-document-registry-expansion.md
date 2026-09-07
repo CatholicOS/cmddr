@@ -18,7 +18,9 @@
 - **Every curated mapping-table entry carries a `note`** quoting the textual evidence for it. Nothing in a mapping table is ever inferred mechanically; heuristics may *warn*, never *write*.
 - **`npm run check`** = `vitest run && tsc --noEmit && tsx tools/src/validate/run.ts`. Every task ends with it green.
 - **CI enforces regeneration drift**: after `npm run harvest && npm run render`, `git diff --exit-code data/ registry/` must be clean. A harvest that is not reproducible is a failure.
-- **Identifiers already minted are permanent.** No task may change an existing `mag:` id of an `idStatus: minted` document. The 383 pilot records are a regression fixture for every change.
+- **Identifier changes must be explained, not prevented.** Nothing in this repository is published: the registry and every identifier in it are under community and peer review, so the spec's "minted ids are permanent" guarantee describes the scheme's contract *after* publication and is not yet in force. A task may therefore re-mint an existing id when the evidence says the old one was wrong.
+
+  What does **not** relax is the accounting. An id that changes without a stated reason is a bug signal, so every task that touches the harvest must diff `data/` and account for **each** changed `"id"` line — the same standard the document-count procedure applies to a raw-to-deduped delta. An unexplained id change is a stop condition. The 383 pilot records remain the regression fixture in exactly that sense: not "these ids may not move", but "if one moves, say why."
 - **`keywords` is never authority-bearing.** No invariant other than vocabulary membership (21) may read it, and it may never influence `genre`, `characteristics`, `register` or any Table 2 assessment.
 
 ---
