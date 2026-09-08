@@ -33,6 +33,10 @@ years() {
   for y in $(seq "$3" "$4"); do year "$1" "$2" "$y"; done
 }
 
+# council <pageSlug> -- the archive-era council index. Note this is NOT under /content/,
+# unlike every pope page, and its filename is index_it.htm rather than it.html.
+council() { get "$1" "https://www.vatican.va/archive/hist_councils/$1/index_it.htm"; }
+
 want() { [ -z "$POPE" ] || [ "${1:-}" = "$POPE" ]; }
 POPE="${1:-}"
 
@@ -122,3 +126,5 @@ if [ -z "$POPE" ] || [ "$POPE" = leo-xiv ]; then
     shelf leo-xiv "$s"
   done
 fi
+
+if [ -z "$POPE" ] || [ "$POPE" = ii_vatican_council ]; then council ii_vatican_council; fi
