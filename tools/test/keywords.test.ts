@@ -1,5 +1,6 @@
-import { describe, it, expect } from 'vitest';
-import { keywordsFor, isErectionCandidate } from '../src/mappings/keywords.js';
+import { describe, it, expect, afterEach } from 'vitest';
+import { keywordsFor, isErectionCandidate, CIRCUMSCRIPTION_ERECTIONS } from '../src/mappings/keywords.js';
+import { slugify } from '../src/slug.js';
 import type { HarvestItem } from '../src/types.js';
 
 const item = (over: Partial<HarvestItem>): HarvestItem => ({
@@ -86,5 +87,59 @@ describe('isErectionCandidate', () => {
       expect(isErectionCandidate(item({ pageSlug: 'pius-xii', title, incipit: title })), title)
         .toBe(false);
     }
+  });
+
+  // Carried finding from Task 11's review: Benedict XV is the reason
+  // APOST_CONSTITUTIONS_SHELVES lists the hyphenated spelling ('apost-constitutions') beside
+  // the underscored one, but nothing exercised it directly until now. Real headings from the
+  // benedict-xv apost-constitutions fixture (Task 12): 'Catamarcensis-Saltensis' and
+  // 'Treiensis' both flag true there.
+  it('flags a toponym-shaped heading on the hyphenated apost-constitutions shelf', () => {
+    expect(isErectionCandidate(item({
+      pageSlug: 'benedict-xv', shelf: 'apost-constitutions',
+      title: 'Catamarcensis-Saltensis', incipit: 'Catamarcensis-Saltensis',
+    }))).toBe(true);
+  });
+
+  it('does not flag the same heading when it sits on a non-constitutions shelf', () => {
+    expect(isErectionCandidate(item({
+      pageSlug: 'benedict-xv', shelf: 'encyclicals',
+      title: 'Catamarcensis-Saltensis', incipit: 'Catamarcensis-Saltensis',
+    }))).toBe(false);
+  });
+});
+
+describe('the CIRCUMSCRIPTION_ERECTIONS lookup path', () => {
+  // Carried finding from Task 11's review: every existing test above runs against the
+  // always-empty table, so a bug in how the lookup key is constructed (pageSlug, incipit
+  // slug, date -- see keywordsFor's and isErectionCandidate's shared `curatedKey`) would stay
+  // hidden until the curation task that populates it for real, where roughly 1,100
+  // confirmations are keyed exactly this way. These tests inject a locally-populated entry
+  // and exercise both directions, then remove it so the table stays empty for every other
+  // test in this file and for the harvest itself.
+  const pageSlug = 'pius-xii';
+  const title = 'Bikoroënsis';
+  const date = '1957-06-24';
+  const key = `${pageSlug}|${slugify(title)}|${date}`;
+
+  afterEach(() => {
+    delete CIRCUMSCRIPTION_ERECTIONS[key];
+  });
+
+  it('keywordsFor tags a document whose key is present in the curated table', () => {
+    expect(keywordsFor(item({ pageSlug, title, incipit: title, date }))).toEqual([]);
+    CIRCUMSCRIPTION_ERECTIONS[key] = { note: 'test evidence: confirmed circumscription erection' };
+    expect(keywordsFor(item({ pageSlug, title, incipit: title, date })))
+      .toEqual(['circumscription-erection']);
+  });
+
+  it('isErectionCandidate does not re-flag a document already confirmed in the curated table', () => {
+    const candidate = item({
+      pageSlug, title, incipit: title, date, shelf: 'apost_constitutions',
+    });
+    // Unconfirmed, the toponym shape alone would flag it (as the earlier tests establish).
+    expect(isErectionCandidate(candidate)).toBe(true);
+    CIRCUMSCRIPTION_ERECTIONS[key] = { note: 'test evidence: confirmed circumscription erection' };
+    expect(isErectionCandidate(candidate)).toBe(false);
   });
 });

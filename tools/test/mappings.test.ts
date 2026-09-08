@@ -33,7 +33,9 @@ describe('pontiff slug mapping', () => {
 describe('the POPES table', () => {
   it('describes each pope page, its era and its own shelf list', () => {
     expect(POPES.map((p) => p.pageSlug))
-      .toEqual(['benedictus-xiv', 'pius-ix', 'leo-xiii', 'pius-x', 'pius-xi', 'pius-xii']);
+      .toEqual([
+        'benedictus-xiv', 'pius-ix', 'leo-xiii', 'pius-x', 'pius-xi', 'pius-xii', 'benedict-xv',
+      ]);
     expect(POPES.find((p) => p.pageSlug === 'leo-xiii')!.era).toBe('shelf');
     expect(POPES.find((p) => p.pageSlug === 'pius-ix')!.era).toBe('flat');
     expect(POPES.find((p) => p.pageSlug === 'pius-x')!.era).toBe('shelf');

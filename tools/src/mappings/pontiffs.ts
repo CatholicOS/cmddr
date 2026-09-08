@@ -65,6 +65,16 @@ export const POPES: readonly PopeSource[] = [
       'encyclicals', 'letters', 'motu_proprio',
     ],
   },
+  {
+    pageSlug: 'benedict-xv', issuerId: 'rp:benedict-xv', era: 'shelf',
+    // Note the hyphen: Benedict XV is the only pope who spells this shelf
+    // 'apost-constitutions' rather than 'apost_constitutions' (spec §2.5).
+    // `letters` is year-partitioned here and so is out of scope (spec §2.7).
+    shelves: [
+      'apost-constitutions', 'apost_exhortations', 'apost_letters', 'briefs',
+      'bulls', 'encyclicals', 'motu_proprio',
+    ],
+  },
 ] as const;
 
 /** The shelves harvested for a pope page; empty for an unknown slug or a flat-era page. */

@@ -353,4 +353,59 @@ export const ADJUDICATED_DISTINCT: Record<
         "celebrandam decrevistis') -- two different saints' centenaries, coincidentally dated the " +
         'same day.',
     },
+
+  // Task 12 (Benedict XV, elected 3 September 1914). Every entry below is verified by
+  // fetching both records' full text from vatican.va and comparing subject matter.
+  'benedict-xv|1920-02-20|ordo-a-divo|treiensis': {
+    incipit1: 'Ordo a divo',
+    shelf1: 'apost_letters',
+    incipit2: 'Treiensis',
+    shelf2: 'apost-constitutions',
+    note:
+      "Ordo a divo establishes a new Benedictine congregation (the Congregation of the " +
+      'Annunciation of the Blessed Virgin Mary), separating and uniting the abbeys of ' +
+      "Maretiolo, Regina Caeli (from the Beuron Congregation) and St Andrew of Zevenkerken " +
+      '(from the Brazilian Congregation). Treiensis permanently unites the diocese of Treia ' +
+      'with the diocese of San Severino under one bishop, Adam Borghini -- an unrelated ' +
+      'diocesan reorganisation on the same day.',
+  },
+  'benedict-xv|1919-05-14|in-hac-tanta|sedis-huius': {
+    incipit1: 'In Hac Tanta',
+    shelf1: 'encyclicals',
+    incipit2: 'Sedis huius',
+    shelf2: 'bulls',
+    note:
+      "In Hac Tanta commemorates the twelve-hundredth anniversary of St Boniface's mission to " +
+      'Germany, addressed to Cardinal Félix von Hartmann, Archbishop of Cologne, and the ' +
+      'German bishops. Sedis huius (merged with its apost-constitutions twin Bracarensis -- ' +
+      'see DUPLICATE_MERGES) approves a revised Breviary for the Archdiocese of Braga, ' +
+      'Portugal -- an unrelated liturgical act in an unrelated country, coincidentally dated ' +
+      'the same day.',
+  },
+  'benedict-xv|1920-09-15|cum-in-honorem|spiritus-paraclitus': {
+    incipit1: 'Cum in honorem',
+    shelf1: 'apost_letters',
+    incipit2: 'Spiritus Paraclitus',
+    shelf2: 'encyclicals',
+    note:
+      'Both mark the fifteenth centenary of the death of St Jerome, issued together the same ' +
+      "day: Cum in honorem decrees a specific three-day liturgical triduum at the Basilica of " +
+      "St Mary Major (17-19 December 1920) with plenary indulgences for those who attend and " +
+      'confess. Spiritus Paraclitus is the doctrinal encyclical proper -- it reaffirms ' +
+      "biblical inspiration and inerrancy against modernist criticism and endorses the " +
+      'Pontifical Biblical Institute, but (per its own text) decrees no liturgical ' +
+      'celebration itself. Two distinct acts for one occasion, not one act filed twice.',
+  },
+  'benedict-xv|1920-05-23|ex-quo-ecclesia|pacem-dei-munus-pulcherrimum': {
+    incipit1: 'Ex quo Ecclesia',
+    shelf1: 'apost_letters',
+    incipit2: 'Pacem, Dei Munus Pulcherrimum',
+    shelf2: 'encyclicals',
+    note:
+      'Ex quo Ecclesia declares Oliver Plunkett, Archbishop of Armagh and Primate of Ireland, ' +
+      'Blessed, recounting his 17th-century martyrdom in England. Pacem, Dei Munus ' +
+      'Pulcherrimum is the peace encyclical on restoring Christian peace after the First ' +
+      'World War, addressed to the whole Church -- an unrelated act, coincidentally dated the ' +
+      'same day.',
+  },
 };

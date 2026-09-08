@@ -364,3 +364,117 @@ describe('the Pius XI and Pius XII corpora', () => {
     expect(load('pius-x')).toHaveLength(306);
   });
 });
+
+describe('the Benedict XV corpus', () => {
+  const bxv = load('benedict-xv');
+
+  it('holds every formal-shelf document', () => {
+    // 68 raw items across seven shelves (12 encyclicals + 4 bulls + 9 briefs + 5
+    // apost-constitutions [hyphenated -- the only pope who spells this shelf that way,
+    // spec §2.5] + 24 apost_letters + 3 apost_exhortations + 11 motu_proprio). The
+    // year-partitioned `letters` shelf is out of scope (spec §2.7). Five merge away:
+    //   - 'Incruentum Altaris' (bulls + apost-constitutions, same incipit and date --
+    //     pass 1, automatic);
+    //   - 'Divina disponente' (apost_letters + bulls, same incipit and date -- pass 1,
+    //     automatic);
+    //   - 'Quod nobis' / 'Quod nobis in condendo' (briefs + apost_letters, proven by the
+    //     shared vatican.va document-slug 'quod-nobis' -- pass 2, automatic);
+    //   - 'Bracarensis' (apost-constitutions) into 'Sedis huius' (bulls): proven by
+    //     comparing full texts -- both approve the same revised Bracarense Breviary for
+    //     the Archdiocese of Braga, addressed to the same archbishop, closing with the
+    //     same dating formula in Latin and Italian (DUPLICATE_MERGES);
+    //   - 'In Africam quisnam, sul martirio subito in Uganda...' (briefs) into 'In
+    //     Africam' (apost_letters): proven by comparing full texts -- both beatify the
+    //     same twenty-two Ugandan martyrs, closing with the same dating formula
+    //     (DUPLICATE_MERGES).
+    // 68 - 5 = 63.
+    expect(bxv).toHaveLength(63);
+  });
+
+  it('files them all under the right issuer', () => {
+    expect(bxv.every((d) => d.issuerId === 'rp:benedict-xv')).toBe(true);
+    expect(bxv.every((d) => d.id.startsWith('mag:benedict-xv/'))).toBe(true);
+  });
+
+  it('gives every document a title', () => {
+    expect(bxv.every((d) => typeof d.title === 'string' && d.title.length > 0)).toBe(true);
+  });
+
+  it('omits the incipit exactly when the id is provisional', () => {
+    // Every Benedict XV heading in scope prints a bare incipit (unlike Pius XI/XII):
+    // zero provisional ids once the two genuine duplicates above are merged away rather
+    // than minted as their own incipit-less records.
+    for (const d of bxv) {
+      expect('incipit' in d, d.id).toBe(d.idStatus === 'minted');
+    }
+    expect(bxv.filter((d) => d.idStatus === 'provisional')).toHaveLength(0);
+  });
+
+  it('adjudicates two printed/slug date mismatches from each document\'s own dating formula', () => {
+    // 'Ad Christifidelium Bonum' (apost-constitutions) reads 'Datum Romae apud Sanctum
+    // Petrum, anno Domini millesimo nongentesimo vigesimo primo, die trigesima mensis
+    // septembris, Pontificatus Nostri anno octavo' -- 30 September 1921, 8th year of the
+    // pontificate (Benedict XV was elected 3 September 1914, so his 8th year runs
+    // 1921-09-03 to 1922-09-02; the shelf's printed year, 1922, falls after his death on
+    // 22 January 1922 and cannot be right). The apost-constitutions shelf's printed date
+    // (30 September 1922) is the error; the URL slug (1921) is correct.
+    const acb = bxv.find((d) => d.incipit === 'Ad christifidelium bonum')!;
+    expect(acb.date).toBe('1921-09-30');
+
+    // 'Supremi Apostolatus' (apost_letters) reads 'Datum Romae apud sanctum Petrum sub
+    // annulo Piscatoris, die XVII aprilis MCMXX, Pontificatus Nostri anno sexto' -- 17
+    // April 1920, 6th year of the pontificate (1919-09-03 to 1920-09-02, consistent).
+    // The apost_letters shelf's printed date (16 April) is the error; the URL slug (17
+    // April) is correct.
+    const sa = bxv.find((d) => d.incipit === 'Supremi Apostolatus')!;
+    expect(sa.date).toBe('1920-04-17');
+  });
+
+  it('preserves four adjudicated-distinct same-date pairs as separate documents', () => {
+    const byDate = (date: string) => bxv.filter((d) => d.date === date);
+
+    // 1920-02-20: Ordo a divo (apost_letters, a new Benedictine congregation) vs
+    // Treiensis (apost-constitutions, uniting the dioceses of Treia and San Severino).
+    expect(byDate('1920-02-20').map((d) => d.incipit).sort())
+      .toEqual(['Ordo a divo', 'Treiensis']);
+
+    // 1919-05-14: In Hac Tanta (encyclicals, the St Boniface centenary) vs Sedis huius
+    // (bulls, the Braga Breviary -- already carrying its apost-constitutions twin
+    // Bracarensis as alsoShelvedAs, per DUPLICATE_MERGES above).
+    const g1919 = byDate('1919-05-14');
+    expect(g1919.map((d) => d.incipit).sort()).toEqual(['In Hac Tanta', 'Sedis huius']);
+    const sedisHuius = g1919.find((d) => d.incipit === 'Sedis huius')!;
+    expect(sedisHuius.aliases).toEqual(['Bracarensis']);
+    expect(sedisHuius.source!.alsoShelvedAs).toEqual(['apost-constitutions']);
+
+    // 1920-09-15: Cum in honorem (apost_letters, a specific liturgical triduum for the
+    // St Jerome centenary) vs Spiritus Paraclitus (encyclicals, the doctrinal encyclical
+    // on Scripture for the same centenary) -- two distinct acts for one occasion.
+    expect(byDate('1920-09-15').map((d) => d.incipit).sort())
+      .toEqual(['Cum in honorem', 'Spiritus Paraclitus']);
+
+    // 1920-05-23: Ex quo Ecclesia (apost_letters, beatifying Oliver Plunkett) vs Pacem,
+    // Dei Munus Pulcherrimum (encyclicals, the post-WWI peace encyclical).
+    expect(byDate('1920-05-23').map((d) => d.incipit).sort())
+      .toEqual(['Ex quo Ecclesia', 'Pacem, Dei Munus Pulcherrimum']);
+  });
+
+  it("hyphenates the apost-constitutions shelf, uniquely to this pope, and maps it to the same genre", () => {
+    const constitutions = bxv.filter((d) => d.source?.shelf === 'apost-constitutions');
+    expect(constitutions.length).toBeGreaterThan(0);
+    expect(constitutions.every((d) => d.genre === 'papal-bull')).toBe(true);
+    expect(constitutions.every((d) => d.characteristics?.includes('apostolic-constitution')))
+      .toBe(true);
+  });
+
+  it('satisfies every invariant', () => {
+    expect(checkDocuments(bxv, genres, keywords)).toEqual([]);
+  });
+
+  it('leaves the 383 pilot, 306 Pius X, and 158/253 Pius XI/XII records untouched', () => {
+    expect(all).toHaveLength(383);
+    expect(load('pius-x')).toHaveLength(306);
+    expect(load('pius-xi')).toHaveLength(158);
+    expect(load('pius-xii')).toHaveLength(253);
+  });
+});

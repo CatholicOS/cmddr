@@ -268,4 +268,28 @@ export const DATE_CORRECTIONS: Record<string, { date: string; note: string }> = 
         "19th year -- consistent). The letters shelf's printed date ('22 febbraio 1958', 22 " +
         'February) is the error; its own URL slug (19580228, 28 February) is correct.',
     },
+
+  // Task 12 (Benedict XV, elected 3 September 1914). Every entry below is adjudicated
+  // against the document's own dating formula, read on vatican.va, and cross-checked
+  // against its stated pontificate year.
+  'benedict-xv|apost-constitutions|ad-christifidelium-bonum|1922-09-30': {
+    date: '1921-09-30',
+    note:
+      "Ad Christifidelium Bonum's own dating formula reads 'Datum Romae apud Sanctum Petrum, " +
+      'anno Domini millesimo nongentesimo vigesimo primo, die trigesima mensis septembris, ' +
+      "Pontificatus Nostri anno octavo' (30 September 1921, 8th year of the pontificate -- " +
+      'consistent, since Benedict XV was elected 3 September 1914 and his 8th year runs ' +
+      "1921-09-03 to 1922-09-02; the printed year, 1922, falls after his death on 22 January " +
+      "1922 and cannot be right). The apost-constitutions shelf's printed date ('30 settembre " +
+      "1922', 1922) is the error; its own URL slug (19210930, 1921) is correct.",
+  },
+  'benedict-xv|apost_letters|supremi-apostolatus|1920-04-16': {
+    date: '1920-04-17',
+    note:
+      "Supremi Apostolatus's own dating formula reads 'Datum Romae apud sanctum Petrum sub " +
+      "annulo Piscatoris, die XVII aprilis MCMXX, Pontificatus Nostri anno sexto' (17 April " +
+      '1920, 6th year of the pontificate -- consistent, 1919-09-03 to 1920-09-02). The ' +
+      "apost_letters shelf's printed date ('16 aprile 1920', 16 April) is the error; its own " +
+      'URL slug (19200417, 17 April) is correct.',
+  },
 };
