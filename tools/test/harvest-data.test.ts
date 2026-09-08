@@ -792,15 +792,15 @@ describe('the Paul VI corpus', () => {
     ]);
   });
 
-  it("adjudicates thirteen of fifteen printed/slug date mismatches from each document's own dating formula", () => {
-    // A representative sample; the full set of thirteen resolved entries is in
-    // DATE_CORRECTIONS (corrections.ts). Two of the fifteen mismatches found --
-    // 'Merito celebratur' and 'Amor dulcissimus' -- are deliberately left unresolved: each
-    // one's own vatican.va link (as printed on the shelf index) resolves to a *different*,
-    // unrelated document (verified by fetching both), so no DATE_CORRECTIONS entry can
-    // quote a genuine dating formula for either heading itself. Their warnings still fire
-    // on every harvest; see the comment above DATE_CORRECTIONS's closing brace and
-    // task-14-report.md.
+  it("adjudicates all fifteen printed/slug date mismatches from each document's own dating formula", () => {
+    // A representative sample; the full set of fifteen resolved entries is in
+    // DATE_CORRECTIONS (corrections.ts). Two of the fifteen -- 'Merito celebratur' and
+    // 'Amor dulcissimus' -- needed an extra step: the shelf index's own <a> for each row
+    // is mislinked to an unrelated document (an Iraq-nunciature letter; a beatification
+    // letter), so the printed/slug mismatch itself is a broken-href artifact, not either
+    // document's own error. Both documents' real pages were found by guessing this
+    // shelf's own naming convention rather than following the broken link, and confirmed
+    // by fetching them directly -- see corrections.ts and task-14-report.md.
     const bySlugDate = (incipit: string) => docs.find((d) => d.incipit === incipit)!;
     expect(bySlugDate('Insularum Sancti Petri et Miquelonensis').date).toBe('1970-11-16');
     expect(bySlugDate('Gruardensis et aliarum').date).toBe('1967-07-13');

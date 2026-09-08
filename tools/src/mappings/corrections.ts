@@ -447,21 +447,45 @@ export const DATE_CORRECTIONS: Record<string, { date: string; note: string }> = 
       "('15 aprile 1965', year 1965) is the error, off by exactly one year; its own URL " +
       'slug (19660415, 1966) is correct.',
   },
+  'paul-vi|apost_letters|merito-celebratur|1966-10-10': {
+    date: '1966-10-10',
+    note:
+      "The shelf index's own <a> for this row is mislinked to an unrelated document " +
+      "(hf_p-vi_apl_19661014_quantum-utilitatis.html, an Iraq-nunciature letter -- " +
+      "confirmed by fetching it directly), so `source.url` on this record inherits " +
+      "vatican.va's own broken href; fixing `source.url` itself is out of scope (no " +
+      "correction mechanism exists for it). The real document, found by guessing this " +
+      "shelf's own naming convention rather than following the broken link and confirmed " +
+      "by fetching it directly (hf_p-vi_apl_19661010_merito-celebratur.html), opens " +
+      "'Merito celebratur, Litterae Apostolicae, Titulus ac privilegia Basilicae Minoris " +
+      "ecclesiae cathedrali dioecesis Sancti Michaëlis, in Republica Salvatoriana, " +
+      "conferuntur' (minor-basilica status for the cathedral of San Miguel, El Salvador) " +
+      "and its own dating formula reads 'Datum Romae, apud Sanctum Petrum, sub anulo " +
+      "Piscatoris, die X mensis Octobris, anno MCMLXVI, Pontificatus Nostri quarto' (10 " +
+      'October 1966, 4th year of the pontificate -- consistent, 1966-06-21 to 1967-06-20). ' +
+      "The apost_letters shelf's printed date is correct and needs no change; the apparent " +
+      "slug mismatch (14 October) belongs to the unrelated document the broken href " +
+      'points at, not to Merito celebratur itself.',
+  },
+  'paul-vi|apost_letters|amor-dulcissimus|1965-10-23': {
+    date: '1965-10-23',
+    note:
+      "The shelf index's own <a> for this row is mislinked to an unrelated document " +
+      "(hf_p-vi_apl_19651017_inter-persecutiones.html, a beatification letter for Fr. " +
+      "Jacques Berthieu SJ closing '...die XVII mensis Octobris... anno MCMLXV, " +
+      "Pontificatus Nostri tertio', 17 October 1965 -- confirmed by fetching it directly), " +
+      "so `source.url` on this record inherits vatican.va's own broken href; fixing " +
+      "`source.url` itself is out of scope. The real document, found the same way as " +
+      "Merito celebratur above and confirmed by fetching it directly " +
+      "(hf_p-vi_apl_19651023_amor-dulcissimus.html), opens 'Amor dulcissimus, Litterae " +
+      "Apostolicae, Beata Maria Virgo, «de Vallevenaria» volgo appellata, praecipua " +
+      "Patrona totius dioecesis Calaguritanae et Calceatensis-Logrognensis renuntiatur' " +
+      "(Our Lady of Vallevenaria declared patroness of the dioceses of Calahorra and " +
+      "Calzada-Logroño) and its own dating formula reads 'Datum Romae, apud Sanctum " +
+      "Petrum, sub anulo Piscatoris, die XXIII mensis Octobris, anno MCMLXV, Pontificatus " +
+      "Nostri tertio' (23 October 1965, 3rd year of the pontificate -- consistent, " +
+      "1965-06-21 to 1966-06-20). The apost_letters shelf's printed date is correct and " +
+      'needs no change; the apparent slug mismatch (17 October) belongs to the unrelated ' +
+      'document the broken href points at, not to Amor dulcissimus itself.',
+  },
 };
-
-/**
- * Two Paul VI apost_letters "Printed/slug date mismatch" warnings -- 'Merito celebratur'
- * (printed 10 ottobre 1966, slug 19661014) and 'Amor dulcissimus' (printed 23 ottobre
- * 1965, slug 19651017) -- are left deliberately unresolved, not for lack of trying.
- * Fetching each one's own vatican.va link (as printed in the shelf index) returns a
- * *different, unrelated* document: 'Merito celebratur' resolves to
- * hf_p-vi_apl_19661014_quantum-utilitatis.html, whose own heading and dating formula
- * concern the Apostolic Nunciature in Iraq ("Datum Romae... die XIV mensis Octobris, anno
- * MCMLXVI, Pontificatus Nostri quarto", 14 October 1966); 'Amor dulcissimus' resolves to
- * hf_p-vi_apl_19651017_inter-persecutiones.html, a beatification letter for Fr. Jacques
- * Berthieu SJ ("...die XVII mensis Octobris... anno MCMLXV, Pontificatus Nostri tertio",
- * 17 October 1965). Both are mislinked hrefs on vatican.va's own index page, not
- * transcription errors in either heading's own text -- no DATE_CORRECTIONS entry can
- * quote a genuine dating formula for 'Merito celebratur' or 'Amor dulcissimus' themselves,
- * since neither is reachable at its own printed link. See task-14-report.md.
- */
