@@ -19,6 +19,9 @@
     "characteristics": [
       "apostolic-constitution"
     ],
+    "keywords": [
+      "circumscription-elevation"
+    ],
     "sourceGenreLabel": "apost_constitutions"
   },
   {
@@ -40,6 +43,9 @@
     "incipit": "Sinensium Dominici gregis",
     "characteristics": [
       "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
     ],
     "sourceGenreLabel": "apost_constitutions"
   },
@@ -63,6 +69,9 @@
     "characteristics": [
       "apostolic-constitution"
     ],
+    "keywords": [
+      "circumscription-erection"
+    ],
     "sourceGenreLabel": "apost_constitutions"
   },
   {
@@ -84,6 +93,9 @@
     "incipit": "Libenter ac sedula",
     "characteristics": [
       "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
     ],
     "sourceGenreLabel": "apost_constitutions"
   },

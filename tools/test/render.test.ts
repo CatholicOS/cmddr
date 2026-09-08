@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { renderIssuerMd } from '../src/render/issuerMd.js';
 import { renderGenreMd } from '../src/render/genreMd.js';
 import { renderIndexMd } from '../src/render/indexMd.js';
+import { renderKeywordMd } from '../src/render/keywordMd.js';
 import type { DocumentRecord } from '../src/types.js';
 
 const docs: DocumentRecord[] = [
@@ -69,6 +70,37 @@ describe('renderGenreMd', () => {
   });
 });
 
+describe('renderKeywordMd', () => {
+  const tagged: DocumentRecord = {
+    id: 'mag:john-paul-ii/usbekistaniae-2005', title: 'Usbekistaniae', incipit: 'Usbekistaniae',
+    idStatus: 'minted', genre: 'papal-bull', issuerId: 'rp:john-paul-ii', issuerType: 'pope',
+    date: '2005-04-01', keywords: ['circumscription-erection'],
+  };
+  const md = renderKeywordMd('circumscription-erection', [tagged]);
+
+  it('shows issuer and genre, both of which vary in this view', () => {
+    expect(md).toContain('| ID | Title | Incipit | Genre | Issuer | Date |');
+  });
+
+  it('names the keyword and marks the file as generated', () => {
+    expect(md).toContain('circumscription-erection');
+    expect(md).toMatch(/generated/i);
+  });
+
+  it('carries the same authority disclaimer the schema gives the keyword field', () => {
+    expect(md).toMatch(/makes no claim about.*authority/i);
+  });
+
+  it('emits one row per document, sorted chronologically', () => {
+    const other: DocumentRecord = {
+      ...tagged, id: 'mag:john-paul-ii/gambomensis-2000', incipit: 'Gambomensis',
+      date: '2000-01-01',
+    };
+    const two = renderKeywordMd('circumscription-erection', [tagged, other]);
+    expect(two.indexOf('gambomensis')).toBeLessThan(two.indexOf('usbekistaniae'));
+  });
+});
+
 describe('both views', () => {
   it('marks a provisional id with a dagger and footnotes it', () => {
     for (const md of [renderIssuerMd('pius-xii', [provisional]), renderGenreMd('apostolic-letter', [provisional])]) {
@@ -123,6 +155,37 @@ describe('renderIndexMd', () => {
   it('states coverage, naming what is deliberately absent', () => {
     expect(md).toMatch(/## Coverage/);
     expect(md).toMatch(/speeches|occasional/i);
+  });
+
+  it('omits the By keyword section entirely when no document carries a keyword', () => {
+    expect(md).not.toMatch(/## By keyword/);
+  });
+
+  it('adds a By keyword section, linking the view, only when a document carries one', () => {
+    const keyworded: DocumentRecord = {
+      ...docs[0]!, id: 'mag:john-paul-ii/usbekistaniae-2005', issuerId: 'rp:john-paul-ii',
+      date: '2005-04-01', keywords: ['circumscription-erection'],
+    };
+    const withKw = renderIndexMd([...docs, keyworded]);
+    expect(withKw).toMatch(/## By keyword/);
+    expect(withKw).toContain('[`circumscription-erection`](documents/by-keyword/circumscription-erection.md)');
+    expect(withKw).toMatch(/circumscription-erection.*\| 1 \|/);
+  });
+
+  it('reports the remaining candidate count in Coverage, generated from the data', () => {
+    // A toponym-shaped apostolic constitution of a pope whose headings are not textually
+    // tagged, and which carries no keyword yet, is exactly what the harvest itself flags
+    // as an unconfirmed candidate (keywords.ts, isErectionCandidate) -- the same shape here.
+    const candidate: DocumentRecord = {
+      ...docs[0]!, id: 'mag:john-paul-ii/gambomensis-2000', title: 'Gambomensis',
+      incipit: 'Gambomensis', issuerId: 'rp:john-paul-ii', date: '2000-01-01',
+      characteristics: ['apostolic-constitution'],
+      source: { url: null, shelf: 'apost_constitutions', languages: [], retrieved: '2026-09-07' },
+    };
+    const withCandidate = renderIndexMd([...docs, candidate]);
+    expect(withCandidate).toMatch(/1 apostolic constitution.*not yet been confirmed/is);
+    const none = renderIndexMd(docs);
+    expect(none).toMatch(/0 apostolic constitution.*not yet been confirmed/is);
   });
 
   it('groups by the issuer local part shared with the file tree, not the full issuerId, ' +

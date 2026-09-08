@@ -1,4 +1,4 @@
-import { POPES } from '../mappings/index.js';
+import { POPES, isUnconfirmedCandidate } from '../mappings/index.js';
 import { issuerLocalPart } from '../ids.js';
 import type { DocumentRecord } from '../types.js';
 
@@ -23,7 +23,12 @@ export function renderIndexMd(docs: DocumentRecord[]): string {
     (a, b) => range(a[1]).localeCompare(range(b[1])));
   const byGenre = [...group(docs, (d) => d.genre)].sort(
     (a, b) => genreFile(a[0]).localeCompare(genreFile(b[0])));
+  const byKeyword = new Map<string, DocumentRecord[]>();
+  for (const d of docs) {
+    for (const k of d.keywords ?? []) byKeyword.set(k, [...(byKeyword.get(k) ?? []), d]);
+  }
   const provisional = docs.filter((d) => d.idStatus === 'provisional').length;
+  const candidates = docs.filter(isUnconfirmedCandidate).length;
 
   const shelvesOf = (issuerId: string): string => {
     const pope = POPES.find((p) => p.issuerId === issuerId);
@@ -44,6 +49,17 @@ export function renderIndexMd(docs: DocumentRecord[]): string {
   const genreRows = byGenre.map(([genre, ds]) =>
     `| [\`${genre ?? 'unmapped'}\`](documents/by-genre/${genreFile(genre)}.md) `
     + `| ${ds.length} | ${range(ds)} |`);
+
+  const keywordSection = byKeyword.size === 0 ? '' : `
+## By keyword
+
+A keyword is a descriptive subject tag and carries no claim about authority.
+
+| Keyword | Documents |
+| --- | --- |
+${[...byKeyword].sort(([a], [b]) => a.localeCompare(b)).map(([k, ds]) =>
+    `| [\`${k}\`](documents/by-keyword/${k}.md) | ${ds.length} |`).join('\n')}
+`;
 
   const provisionalLine = provisional === 0
     ? `**${docs.length} documents**, none of which carry a provisional identifier.`
@@ -74,7 +90,7 @@ ${issuerRows.join('\n')}
 | Genre | Documents | Dates |
 | --- | --- | --- |
 ${genreRows.join('\n')}
-
+${keywordSection}
 ## Coverage
 
 This registry covers the **formal document shelves** of vatican.va. Deliberately absent:
@@ -86,6 +102,9 @@ This registry covers the **formal document shelves** of vatican.va. Deliberately
 - **Year-partitioned \`letters\` shelves** — Benedict XV, and Paul VI onward. The \`letters\` shelf is
   harvested only where the aggregate index carries its items.
 - **Bishops' conferences and dicasterial documents**, which remain outside the repository's scope.
+- **Keyword curation is incomplete.** ${candidates} apostolic constitutions have not yet been confirmed
+  as circumscription erections. Their headings print a bare Latin toponym with no marker, so each
+  is confirmed by hand against the document's own text.
 
 The Shelves harvested column above is generated from the harvest configuration itself, so it cannot
 drift from what was actually read.

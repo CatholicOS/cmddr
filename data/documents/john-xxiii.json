@@ -1021,6 +1021,9 @@
     "characteristics": [
       "apostolic-constitution"
     ],
+    "keywords": [
+      "circumscription-elevation"
+    ],
     "sourceGenreLabel": "apost_constitutions"
   },
   {
@@ -1140,6 +1143,9 @@
     "incipit": "Nagasakiensis (Qui cotidie)",
     "characteristics": [
       "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-elevation"
     ],
     "sourceGenreLabel": "apost_constitutions"
   },

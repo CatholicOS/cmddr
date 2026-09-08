@@ -28,7 +28,7 @@ one **Assessment** per notable passage.
 
 **`descriptiveTitle`** (optional, mutually-exclusive title of a conciliar Constitution) — `dogmatic` · `pastoral`. Descriptive of purpose only, never a claim of authority; omit for a plain constitution (e.g. *Sacrosanctum Concilium*).
 
-**`keywords`** (optional, non-exclusive descriptive subject tags, resolving against `data/keywords.json`) — currently just `circumscription-erection`. Unlike `characteristics`, a keyword is **never authority-bearing**: it makes no claim about the document's register, definitiveness, or solemn form, and no invariant other than vocabulary membership (invariant 21) ever reads it.
+**`keywords`** (optional, non-exclusive descriptive subject tags, resolving against `data/keywords.json`) — currently `circumscription-erection` and `circumscription-elevation`. Unlike `characteristics`, a keyword is **never authority-bearing**: it makes no claim about the document's register, definitiveness, or solemn form, and no invariant other than vocabulary membership (invariant 21) ever reads it.
 
 **`register`** (mode of teaching)
 | id | label |

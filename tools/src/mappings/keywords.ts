@@ -1,5 +1,5 @@
 import { slugify } from '../slug.js';
-import type { HarvestItem } from '../types.js';
+import type { DocumentRecord, HarvestItem } from '../types.js';
 
 /**
  * Circumscription erections whose heading does not say so, confirmed by hand (spec §4.5).
@@ -21,14 +21,46 @@ import type { HarvestItem } from '../types.js';
 export const CIRCUMSCRIPTION_ERECTIONS: Record<string, { note: string }> = {};
 
 /**
+ * The circumscription nouns that guard a bare verb ('erige', 'eleva') against firing on an
+ * unrelated document that merely happens to use the same verb -- e.g. a church or cathedral
+ * raised 'al rango di Basilica Minore' is an elevation of a building, not a circumscription.
+ * Covers the ranks actually seen in the corpus: diocese/archdiocese, eparchy/archeparchy
+ * (the Eastern-rite equivalents), exarchate, prefecture and vicariate (the two ranks a
+ * mission territory passes through before becoming a diocese or eparchy).
+ */
+const CIRCUMSCRIPTION_NOUN = '(diocesi|arcidiocesi|eparchia|arcieparchia|esarcato|prefettura|vicariato)';
+
+/**
  * Headings that state the act. Francis and Leo XIV print it in full -- 'Il Santo Padre ha
  * eretto la nuova Diocesi di Caazapá (Paraguay)' -- so the keyword is read from the text
  * rather than guessed. Matched case-insensitively against the whole title.
+ *
+ * 'erige' alone is guarded by a nearby circumscription noun, the same way 'ha elevato' below
+ * is: unguarded, it also fires on non-circumscription acts (Pius XII's chirografo erecting
+ * the Istituto per le Opere di Religione; John XXIII's motu proprio erecting the Pontificia
+ * Commissione per la Cinematografia).
  */
 const ERECTION_PHRASES: readonly RegExp[] = [
   /\bha eretto\b/i,
   /\bha istituito\b/i,
-  /\bha elevato\b.{0,40}\b(diocesi|arcidiocesi|eparchia)\b/i,
+  new RegExp(`\\berige\\b.{0,40}\\b${CIRCUMSCRIPTION_NOUN}\\b`, 'i'),
+];
+
+/**
+ * Headings that state a rise in rank rather than a new erection -- 'ha elevato l'Eparchia di
+ * … ad Arcieparchia Metropolitana', 'che eleva la prefettura apostolica di … al grado di
+ * diocesi'. Guarded the same way 'erige' is above: unguarded, both verbs fire just as often
+ * on a church or cathedral raised 'al rango di Basilica Minore', which is not a
+ * circumscription at all. The guard's 40-character window is deliberately tight -- it passes
+ * John XXIII's 'Nzerekoreensis' and 'Nagasakiensis (Qui cotidie)', where the circumscription
+ * noun sits right beside the verb, but excludes 'Caeruleum mare' ('che eleva la Cattedrale di
+ * San Carlo Borromeo nella diocesi di Monterey in California, al rango di Basilica Minore'),
+ * where 'diocesi' names the cathedral's location, forty-plus characters from the verb, not
+ * what is being elevated.
+ */
+const ELEVATION_PHRASES: readonly RegExp[] = [
+  new RegExp(`\\bha elevato\\b.{0,40}\\b${CIRCUMSCRIPTION_NOUN}\\b`, 'i'),
+  new RegExp(`\\beleva\\b.{0,40}\\b${CIRCUMSCRIPTION_NOUN}\\b`, 'i'),
 ];
 
 /**
@@ -70,6 +102,9 @@ export function keywordsFor(item: HarvestItem): string[] {
       || CIRCUMSCRIPTION_ERECTIONS[curatedKey]) {
     out.push('circumscription-erection');
   }
+  if (ELEVATION_PHRASES.some((re) => re.test(item.title))) {
+    out.push('circumscription-elevation');
+  }
   return out;
 }
 
@@ -83,5 +118,31 @@ export function isErectionCandidate(item: HarvestItem): boolean {
   if (TEXTUALLY_TAGGED.has(item.pageSlug)) return false;
   const curatedKey = `${item.pageSlug}|${slugify(item.incipit ?? item.title)}|${item.date}`;
   if (CIRCUMSCRIPTION_ERECTIONS[curatedKey]) return false;
+  // A toponym-shaped heading that already states an elevation (not an erection) is explained
+  // by the text, not merely guessed at from its shape -- textual tagging supersedes the
+  // morphological flag rather than sitting alongside it.
+  if (ELEVATION_PHRASES.some((re) => re.test(item.title))) return false;
   return TOPONYM.test(fold(item.title.trim()));
+}
+
+/** The `issuerId`s of the popes whose headings are read textually rather than flagged. */
+const TEXTUALLY_TAGGED_ISSUERS = new Set(['rp:francis-i', 'rp:leo-xiv']);
+
+/**
+ * The post-harvest counterpart of `isErectionCandidate`, applied to an already-minted
+ * `DocumentRecord` instead of a raw `HarvestItem` (the renderer never sees the latter). A
+ * `DocumentRecord` has already gone through `keywordsFor`, so it carries whatever keyword
+ * the heading or the curated table earned it -- a document is a candidate only if it earned
+ * neither, which is a strictly cheaper check than re-deriving `isErectionCandidate`'s
+ * curated-key lookup (a `DocumentRecord` does not carry `pageSlug`, so it could not rebuild
+ * that key anyway). Used only to report how many candidates remain unconfirmed (spec §6),
+ * never to decide anything about the document itself.
+ */
+export function isUnconfirmedCandidate(d: DocumentRecord): boolean {
+  const shelf = d.source?.shelf;
+  if (!shelf || !APOST_CONSTITUTIONS_SHELVES.has(shelf)) return false;
+  if (TEXTUALLY_TAGGED_ISSUERS.has(d.issuerId)) return false;
+  if (d.keywords?.includes('circumscription-erection')) return false;
+  if (d.keywords?.includes('circumscription-elevation')) return false;
+  return TOPONYM.test(fold(d.title.trim()));
 }

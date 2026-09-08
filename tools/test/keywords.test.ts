@@ -36,6 +36,67 @@ describe('keywordsFor', () => {
       date: '2005-04-01',
     }))).toEqual([]);
   });
+
+  it('tags an elevation the heading states outright (real Francis, John XXIII, Leo XIV headings)', () => {
+    for (const title of [
+      '"Attenta deliberatione". Il Santo Padre ha elevato l’Eparchia di São João Batista in '
+        + 'Curitiba degli Ucraini (Brasile) ad Arcieparchia Metropolitana',
+      '"Undecim abhinc annos". Il Santo Padre ha elevato la Prefettura Apostolica di Makokou in '
+        + 'Gabon al rango di Vicariato Apostolico',
+      'Nzerekoreensis, che eleva la prefettura apostolica di Nzerekore in Guinea al grado di diocesi',
+      'Nagasakiensis (Qui cotidie), che eleva al rango di arcidiocesi metropolitana, la diocesi di '
+        + 'Nagasaki in Giappone',
+      'Verba Christi: Costituzione Apostolica con la quale il Santo Padre eleva la Diocesi di '
+        + 'São José do Rio Preto al rango di Arcidiocesi Metropolitana',
+    ]) {
+      expect(keywordsFor(item({ title, incipit: 'X' })), title)
+        .toEqual(['circumscription-elevation']);
+    }
+  });
+
+  it('does not tag a bare eleva/ha elevato mention with no circumscription noun near enough '
+    + '(a church or cathedral raised to Basilica Minore, not the circumscription itself)', () => {
+    for (const title of [
+      // The diocese named here is the church's location, not what is being elevated -- and it
+      // sits well past the guard's window, unlike the genuine elevations above.
+      'Caeruleum mare, che eleva la Cattedrale di San Carlo Borromeo nella diocesi di Monterey in '
+        + 'California, al rango di Basilica Minore',
+      'Meritis laudibus, che eleva la Cattedrale di Ayacapo in Perù, al rango di Basilica Minore',
+      'Mirabili nexu, che eleva agli onori di Basilica Minore, la Cattedrale di San Giorgio Martire '
+        + 'di Ferrara',
+    ]) {
+      expect(keywordsFor(item({ title, incipit: 'X' })), title).toEqual([]);
+    }
+  });
+
+  it('never earns both circumscription-erection and circumscription-elevation for the same '
+    + 'real heading -- ERECTION_PHRASES and ELEVATION_PHRASES are disjoint over the corpus '
+    + 'shapes exercised elsewhere in this file, so a future phrase change that broke that '
+    + 'would surface here rather than silently double-tagging', () => {
+    const erectionTitles = [
+      '"Spei accensa lucerna". Il Santo Padre ha eretto la nuova Diocesi di Caazapá (Paraguay)',
+      '"Incomparabilis Magister". Il Santo Padre ha eretto la Provincia Ecclesiastica di Calicut',
+      '"Quod Manifestatum". Il Santo Padre ha istituito in Cina la Diocesi di Lüliang',
+      'Sinensium Dominici gregis: papa Leone XIV erige in Cina la Diocesi di Zhangjiakou',
+    ];
+    const elevationTitles = [
+      '"Attenta deliberatione". Il Santo Padre ha elevato l’Eparchia di São João Batista '
+        + 'ad Arcieparchia Metropolitana',
+      '"Undecim abhinc annos". Il Santo Padre ha elevato la Prefettura Apostolica di Makokou in '
+        + 'Gabon al rango di Vicariato Apostolico',
+      'Nzerekoreensis, che eleva la prefettura apostolica di Nzerekore in Guinea al grado di diocesi',
+      'Nagasakiensis (Qui cotidie), che eleva al rango di arcidiocesi metropolitana, la diocesi di '
+        + 'Nagasaki in Giappone',
+      'Verba Christi: Costituzione Apostolica con la quale il Santo Padre eleva la Diocesi di '
+        + 'São José do Rio Preto al rango di Arcidiocesi Metropolitana',
+    ];
+    for (const title of erectionTitles) {
+      expect(keywordsFor(item({ title, incipit: 'X' })), title).toEqual(['circumscription-erection']);
+    }
+    for (const title of elevationTitles) {
+      expect(keywordsFor(item({ title, incipit: 'X' })), title).toEqual(['circumscription-elevation']);
+    }
+  });
 });
 
 describe('isErectionCandidate', () => {
@@ -62,6 +123,18 @@ describe('isErectionCandidate', () => {
   it('does not flag a pope whose headings state the act outright', () => {
     // Francis and Leo XIV are tagged textually; flagging them too would double-count.
     expect(isErectionCandidate(item({ pageSlug: 'francesco', title: 'Avkaënsis' }))).toBe(false);
+  });
+
+  it('does not flag a toponym-shaped heading that textually earns circumscription-elevation '
+    + 'instead -- a morphological guess is superseded once the text explains the document', () => {
+    // Real John XXIII shape: 'Nzerekoreensis' is toponym-shaped and on the apostolic
+    // constitutions shelf, so the morphology alone would flag it, but its own heading
+    // already states an elevation, not an erection.
+    expect(isErectionCandidate(item({
+      pageSlug: 'john-xxiii',
+      title: 'Nzerekoreensis, che eleva la prefettura apostolica di Nzerekore in Guinea al grado di diocesi',
+      incipit: 'Nzerekoreensis',
+    }))).toBe(false);
   });
 
   it('flags a bare toponym even when a parenthetical alternate name or hyphenated twin see follows', () => {

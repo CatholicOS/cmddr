@@ -45,6 +45,15 @@ Every document appears in both views below; neither is a subset of the other.
 | [`papal-bull`](documents/by-genre/papal-bull.md) | 1292 | 1749-03-15 – 2026-01-08 |
 | [`unmapped`](documents/by-genre/unmapped.md) | 5 | 1846-07-16 – 1849-02-14 |
 
+## By keyword
+
+A keyword is a descriptive subject tag and carries no claim about authority.
+
+| Keyword | Documents |
+| --- | --- |
+| [`circumscription-elevation`](documents/by-keyword/circumscription-elevation.md) | 7 |
+| [`circumscription-erection`](documents/by-keyword/circumscription-erection.md) | 40 |
+
 ## Coverage
 
 This registry covers the **formal document shelves** of vatican.va. Deliberately absent:
@@ -56,6 +65,9 @@ This registry covers the **formal document shelves** of vatican.va. Deliberately
 - **Year-partitioned `letters` shelves** — Benedict XV, and Paul VI onward. The `letters` shelf is
   harvested only where the aggregate index carries its items.
 - **Bishops' conferences and dicasterial documents**, which remain outside the repository's scope.
+- **Keyword curation is incomplete.** 761 apostolic constitutions have not yet been confirmed
+  as circumscription erections. Their headings print a bare Latin toponym with no marker, so each
+  is confirmed by hand against the document's own text.
 
 The Shelves harvested column above is generated from the harvest configuration itself, so it cannot
 drift from what was actually read.

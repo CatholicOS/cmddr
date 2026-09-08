@@ -24,6 +24,13 @@ describe('data/keywords.json', () => {
     expect(ce!.gloss).toMatch(/diocese|circumscription/i);
   });
 
+  it('defines circumscription-elevation, distinct from circumscription-erection', () => {
+    const cv = keywords.find((k) => k.id === 'circumscription-elevation');
+    expect(cv).toBeDefined();
+    expect(cv!.gloss).toMatch(/rank|circumscription/i);
+    expect(cv!.note).toMatch(/erection/i);
+  });
+
   it('has unique ids', () => {
     expect(new Set(keywords.map((k) => k.id)).size).toBe(keywords.length);
   });

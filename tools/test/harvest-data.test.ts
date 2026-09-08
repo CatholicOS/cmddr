@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from 'vitest';
 import { readFileSync, readdirSync } from 'node:fs';
 import { checkDocuments } from '../src/validate/invariants.js';
 import { parseShelfIndex } from '../src/harvest/shelf.js';
-import { shelvesFor, isErectionCandidate } from '../src/mappings/index.js';
+import { shelvesFor, isErectionCandidate, CIRCUMSCRIPTION_ERECTIONS } from '../src/mappings/index.js';
 import type { DocumentRecord } from '../src/types.js';
 
 const load = (n: string) =>
@@ -1341,13 +1341,23 @@ describe('the Francis corpus', () => {
   it('tags the erections the headings state outright', () => {
     // The first pontificate whose circumscription erections are tagged from the heading
     // text rather than flagged for curation (keywords.ts, ERECTION_PHRASES): headings
-    // read 'Il Santo Padre ha eretto...' / 'Il Santo Padre ha istituito...' / '...ha
-    // elevato...' outright. All 36 tagged documents are on apost_constitutions.
+    // read 'Il Santo Padre ha eretto...' / 'Il Santo Padre ha istituito...' outright. All
+    // 34 tagged documents are on apost_constitutions. (Task 20 moved the four 'ha elevato'
+    // headings to circumscription-elevation instead -- see the next test.)
     const tagged = docs.filter((d) => d.keywords?.includes('circumscription-erection'));
     expect(tagged.length).toBeGreaterThan(20);
-    expect(tagged).toHaveLength(36);
-    expect(tagged.every((d) => /ha eretto|ha istituito|ha elevato/i.test(d.title))).toBe(true);
+    expect(tagged).toHaveLength(34);
+    expect(tagged.every((d) => /ha eretto|ha istituito/i.test(d.title))).toBe(true);
     expect(tagged.every((d) => d.source?.shelf === 'apost_constitutions')).toBe(true);
+  });
+
+  it('tags the elevations its headings state outright, as circumscription-elevation rather '
+    + 'than circumscription-erection (Task 20)', () => {
+    const elevated = docs.filter((d) => d.keywords?.includes('circumscription-elevation'));
+    expect(elevated).toHaveLength(4);
+    expect(elevated.every((d) => /ha elevato/i.test(d.title))).toBe(true);
+    expect(elevated.every((d) => !d.keywords?.includes('circumscription-erection'))).toBe(true);
+    expect(elevated.every((d) => d.source?.shelf === 'apost_constitutions')).toBe(true);
   });
 
   it('does not tag a document that merely sits on the same shelf', () => {
@@ -1509,14 +1519,25 @@ describe('the Leo XIV corpus', () => {
   it('tags the erections the headings state outright', () => {
     // Like Francis, Leo XIV's own TEXTUALLY_TAGGED membership (keywords.ts) reads the
     // erection from the heading text rather than flagging it for curation. Three
-    // headings read 'il Santo Padre ha eretto...' outright; all three are on
-    // apost_constitutions. (Four more apost_constitutions headings state an erection in
-    // the present tense -- 'erige'/'eleva' rather than 'ha eretto'/'ha elevato' -- which
-    // ERECTION_PHRASES does not match; see task-19-report.md's deferred finding.)
+    // headings read 'il Santo Padre ha eretto...' outright; three more use the present
+    // tense 'erige' (task-19-report.md's deferred finding -- ERECTION_PHRASES now
+    // matches it too, guarded by a nearby circumscription noun, Task 20). All six are on
+    // apost_constitutions.
     const tagged = docs.filter((d) => d.keywords?.includes('circumscription-erection'));
-    expect(tagged).toHaveLength(3);
-    expect(tagged.every((d) => /ha eretto|ha istituito|ha elevato/i.test(d.title))).toBe(true);
+    expect(tagged).toHaveLength(6);
+    expect(tagged.every((d) => /ha eretto|ha istituito|erige/i.test(d.title))).toBe(true);
     expect(tagged.every((d) => d.source?.shelf === 'apost_constitutions')).toBe(true);
+  });
+
+  it('tags the one elevation its heading states outright, as circumscription-elevation '
+    + 'rather than circumscription-erection (Task 20)', () => {
+    // The fourth present-tense heading from task-19-report.md's deferred finding --
+    // 'eleva' rather than 'erige' -- is an elevation, not an erection.
+    const elevated = docs.filter((d) => d.keywords?.includes('circumscription-elevation'));
+    expect(elevated).toHaveLength(1);
+    expect(elevated[0]!.title).toMatch(/\beleva\b/i);
+    expect(elevated[0]!.keywords).not.toContain('circumscription-erection');
+    expect(elevated[0]!.source?.shelf).toBe('apost_constitutions');
   });
 
   it('does not flag any Leo XIV document as an erection candidate', () => {
@@ -1612,5 +1633,45 @@ describe('the whole corpus', () => {
     const pilot = [...load('benedict-xiv'), ...load('pius-ix'),
                    ...load('leo-xiii'), ...load('vatican-i')];
     expect(pilot).toHaveLength(383);
+  });
+
+  it('tags no document that was neither stated in its heading nor confirmed by hand', () => {
+    const tagged = everything.filter((d) => d.keywords?.includes('circumscription-erection'));
+    const textual = tagged.filter((d) => /ha eretto|ha istituito|erige/i.test(d.title));
+    const untextual = tagged.length - textual.length;
+    // Every tag that is not textual must come from the curated table, and the table
+    // contains nothing else -- so the two counts are equal. A tag appearing from
+    // anywhere else (a morphological rule leaking into the data, say) breaks this.
+    expect(untextual).toBe(Object.keys(CIRCUMSCRIPTION_ERECTIONS).length);
+  });
+
+  it('keeps the keyword out of every authority-bearing field', () => {
+    for (const d of everything) {
+      expect(d.characteristics ?? [], d.id).not.toContain('circumscription-erection');
+      expect(d.characteristics ?? [], d.id).not.toContain('circumscription-elevation');
+    }
+  });
+
+  it('never tags a document as both a circumscription erection and a circumscription '
+    + 'elevation -- ERECTION_PHRASES and ELEVATION_PHRASES (keywords.ts) are disjoint over '
+    + 'the whole harvested corpus, not merely over the synthetic titles exercised in '
+    + 'keywords.test.ts', () => {
+    const both = everything.filter((d) => d.keywords?.includes('circumscription-erection')
+      && d.keywords?.includes('circumscription-elevation'));
+    expect(both.map((d) => d.id)).toEqual([]);
+  });
+
+  it('tags exactly the circumscription-elevation documents measured for Task 20, enumerated '
+    + 'here so a future change to ELEVATION_PHRASES surfaces its effect on the real corpus', () => {
+    const elevated = everything.filter((d) => d.keywords?.includes('circumscription-elevation'));
+    expect(elevated.map((d) => d.id).sort()).toEqual([
+      'mag:francis-i/attenta-deliberatione-2014',
+      'mag:francis-i/de-spiritali-itinere-2015',
+      'mag:francis-i/qui-successimus-2015',
+      'mag:francis-i/undecim-abhinc-annos-2014',
+      'mag:john-xxiii/nagasakiensis-qui-cotidie-1959',
+      'mag:john-xxiii/nzerekoreensis-1959',
+      'mag:leo-xiv/verba-christi-2025',
+    ].sort());
   });
 });
