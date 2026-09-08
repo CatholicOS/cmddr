@@ -63,6 +63,12 @@
       "items": { "enum": ["apostolic-constitution", "dogmatic-definition"] },
       "description": "Non-exclusive metadata a papal bull may bear. 'dogmatic-definition' asserts the document contains an ex cathedra definition and must be backed by a Table 2 assessment with register=extraordinary and intent=definitive."
     },
+    "keywords": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+      "description": "Descriptive subject tags -> keyword.id in data/keywords.json. Never authority-bearing: unlike characteristics, a keyword makes no claim about the document's register or definitiveness, and no invariant other than vocabulary membership reads it."
+    },
     "descriptiveTitle": {
       "enum": ["dogmatic", "pastoral"],
       "description": "Optional descriptive title of a conciliar Constitution (mutually exclusive; omit for a plain constitution such as Sacrosanctum Concilium). Descriptive of purpose only — NOT a claim of authority, and unlike 'dogmatic-definition' it is not backed by any assessment."

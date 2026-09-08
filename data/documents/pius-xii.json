@@ -1,0 +1,5098 @@
+[
+  {
+    "id": "mag:pius-xii/brief-1939-06-18",
+    "title": "Breve Pontificio con il quale San Francesco d'Assisi e Santa Caterina da Siena vengono proclamati Patroni Primari d'Italia",
+    "idStatus": "provisional",
+    "genre": "brief",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1939-06-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/briefs/documents/hf_p-xii_brief_19390618_patroni-italia.html",
+      "shelf": "briefs",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "briefs"
+  },
+  {
+    "id": "mag:pius-xii/summi-pontificatus-1939",
+    "title": "Summi Pontificatus",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1939-10-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_20101939_summi-pontificatus.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Summi Pontificatus",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/sertum-laetitiae-1939",
+    "title": "Sertum Laetitiae",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1939-11-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_01111939_sertum-laetitiae.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sertum Laetitiae",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/asperis-commoti-1939",
+    "title": "Asperis Commoti",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1939-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/apost_exhortations/documents/hf_p-xii_exh_19391208_asperis-commoti.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Asperis Commoti",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:pius-xii/letter-1940-01-07",
+    "title": "Lettera al Presidente Franklin Delano Roosevelt in occasione della nomina di un Ambasciatore straordinario degli Stati Uniti d'America presso la Santa Sede",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1940-01-07",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/letters/documents/hf_p-xii_lett_19400107_memorable-message.html",
+      "shelf": "letters",
+      "languages": [
+        "EN",
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1940-03-16",
+    "title": "Lettera al Presidente degli Stati Uniti d'America, Franklin Delano Roosevelt",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1940-03-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/en/letters/documents/hf_p-xii_lett_19400316_presidente-usa.html",
+      "shelf": "letters",
+      "languages": [
+        "EN"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/saeculo-exeunte-octavo-1940",
+    "title": "Saeculo Exeunte Octavo",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1940-06-13",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_13061940_saeculo-exeunte-octavo.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Saeculo Exeunte Octavo",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/nosti-profecto-1940",
+    "title": "Nosti profecto. - Nel IV centenario della fondazione della Compagnia di Gesù",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1940-07-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/apost_letters/documents/hf_p-xii_apl_19400706_nosti-profecto.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Nosti profecto",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1940-08-22",
+    "title": "Lettera al Presidente degli Stati Uniti d'America, Franklin Delano Roosevelt",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1940-08-22",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/en/letters/documents/hf_p-xii_lett_19400822_presidente-usa.html",
+      "shelf": "letters",
+      "languages": [
+        "EN"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/norunt-profecto-1940",
+    "title": "Norunt profecto",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1940-10-27",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/motu_proprio/documents/hf_p-xii_motu-proprio_19401027_norunt-profecto.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "ES",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Norunt profecto",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xii/letter-1941-06-29",
+    "title": "Lettera ai Cardinali, ai Vescovi e agli Arcivescovi della Spagna in merito alla riorganizzazione delle Università Ecclesiastiche e dei Seminari",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1941-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19410629_card-vescovi-spagna.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1941-07-12",
+    "title": "Lettera al Consiglio Federale Svizzero",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1941-07-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/fr/letters/documents/hf_p-xii_lett_19410712_cons-fed-svizzero.html",
+      "shelf": "letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1941-09-20",
+    "title": "Lettera al Presidente degli Stati Uniti d'America, Franklin Delano Roosevelt",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1941-09-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/en/letters/documents/hf_p-xii_lett_19410920_presidente-usa.html",
+      "shelf": "letters",
+      "languages": [
+        "EN"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/cum-nobis-1941",
+    "title": "Cum nobis",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1941-11-04",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/motu_proprio/documents/hf_p-xii_motu-proprio_19411104_cum-nobis.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum nobis",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xii/apostolic-letter-1941-11-23",
+    "title": "Epistola Apostolica all'Episcopato della Bolivia circa lo sviluppo dei Seminari e la sempre più efficiente formazione del clero",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1941-11-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19411123_episcopato-bolivia.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1942-03-07",
+    "title": "Lettera al Maestro Generale dei Frati Predicatori, Rev.mo Padre Martino Stanislao Gillet, nella festività di San Tommaso d'Aquino",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1942-03-07",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19420307_padre-gillet.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1942-04-15",
+    "title": "Lettera all'E. mo Cardinale Luigi Maglione, Segretario di Stato: nuove suppliche alla Vergine per ottenere la pace nel mondo",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1942-04-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19420415_luigi-maglione.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/de-dahomey-et-aliorum-niameyexsis-1942",
+    "title": "De Dahomey et aliorum (Niameyexsis)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1942-04-28",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19420428_de-dahomey.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "De Dahomey et aliorum (Niameyexsis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/letter-1942-05-05",
+    "title": "Lettera al Preposito Generale della Compagnia di Gesù, Rev.mo Padre Wlodimiro Ledóchowski, in occasione del 50° dalla fondazione della Pontificia Università di Comillas",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1942-05-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19420505_wlodimiro-ledochowski.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1942-06-27",
+    "title": "Chirografo con il quale il Pontefice erige l’Istituto per le Opere di Religione",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1942-06-27",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/letters/documents/hf_p-xii_lett_19420627_chirografo-ior.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1942-06-29",
+    "title": "Lettera al Cardinale Arcivescovo di Westminster e agli altri Arcivescovi e Vescovi dell'Inghilterra e del Galles",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1942-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19420629_arciv-westminster.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1942-11-16",
+    "title": "Lettera al Cardinale Arcivescovo di Genova, Pietro Boetto",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1942-11-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/letters/documents/hf_p-xii_lett_19421116_cardinale-genova.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1942-11-18",
+    "title": "Lettera all'Abate Generale dei Benedettini Confederati, Rev.mo Padre D. Fedele De Stotzigen, in occasione del millenario di S. Oddone di Cluny",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1942-11-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19421118_fedele-de-stotzingen.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1942-11-30",
+    "title": "Lettera al Cardinale Arcivescovo di Torino, Maurilio Fossati",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1942-11-30",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/letters/documents/hf_p-xii_lett_19421130_cardinale-torino.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1942-12-02",
+    "title": "Lettera al Cardinale Arcivescovo di Milano, Alfredo Ildefonso Schuster",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1942-12-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/letters/documents/hf_p-xii_lett_19421202_cardinale-milano.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1942-12-08",
+    "title": "Lettera al Cardinale Arcivescovo di Napoli, Alessio Ascalesi",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1942-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/letters/documents/hf_p-xii_lett_19421208_cardinale-napoli.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1943-01-25",
+    "title": "Lettera al Cardinale Arcivescovo di Palermo, Luigi Lavitrano",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1943-01-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/letters/documents/hf_p-xii_lett_19430125_cardinale-palermo.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1943-03-25",
+    "title": "Lettera nel V centenario della morte di San Bernardino da Siena",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1943-03-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19430325_centenario-bernardino-da-siena.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1943-04-15",
+    "title": "Lettera al Cardinale Luigi Maglione: speciali suppliche indette per il ritorno della pace - I",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1943-04-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19430415_card-luigi-maglione.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1943-04-20",
+    "title": "Lettera al Presidente della Cina, Lin San, in occasione dell'invio di un Ministro presso la Santa Sede",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1943-04-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19430420_presidente-cina.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/mystici-corporis-christi-1943",
+    "title": "Mystici Corporis Christi",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1943-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_29061943_mystici-corporis-christi.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Mystici Corporis Christi",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/letter-1943-07-20",
+    "title": "Lettera al Cardinale Francesco Marchetti-Selvaggiani, dopo il primo bombardamento aereo di Roma",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1943-07-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/letters/documents/hf_p-xii_lett_19430720_cardinale-marchetti-selvaggiani.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1943-08-05",
+    "title": "Lettera al Cardinale Luigi Maglione: speciali suppliche indette per il ritorno della pace - II",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1943-08-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19430805_card-luigi-maglione.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/inter-gravissimas-1943",
+    "title": "Inter gravissimas. - Lettera Apostolica in forma di Breve: Santa Caterina da Siena e Santa Caterina da Genova, vengono proclamate Patrone secondarie delle infermiere e degli ospedali d'Italia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1943-09-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19430915_santa-caterina.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Inter gravissimas",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/divino-afflante-spiritu-1943",
+    "title": "Divino Afflante Spiritu",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1943-09-30",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_30091943_divino-afflante-spiritu.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Divino Afflante Spiritu",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/letter-1943-11-25",
+    "title": "Lettera al Cardinale Luigi Maglione: speciali suppliche indette per il ritorno della pace - III",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1943-11-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19431125_card-luigi-maglione.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1944-01-24",
+    "title": "Chirografo con il quale il Pontefice stabilisce nuove norme per l’Istituto per le Opere di Religione",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1944-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/letters/documents/hf_p-xii_lett_19440124_chirografo-ior.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1944-02-10",
+    "title": "Lettera a Padre Pietro Leturia, preside della Facoltà di Storia Ecclesiastica nella Pontificia Università Gregoriana: sul valore delle memorie ecclesiastiche",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1944-02-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19440210_padre-leturia.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1944-03-20",
+    "title": "Lettera a Monsignor Oscar Joliet, Rettore del Pontificio Collegio belga, nel primo centenario di fondazione dell'Istituto",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1944-03-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19440320_monsignor-joliet.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/orientalis-ecclesiae-1944",
+    "title": "Orientalis Ecclesiae",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1944-04-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_09041944_orientalis-ecclesiae.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Orientalis Ecclesiae",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/letter-1944-04-24",
+    "title": "Lettera al Cardinale Luigi Maglione: speciali suppliche indette per il ritorno della pace nel mondo",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1944-04-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19440424_card-luigi-maglione.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/sanctae-romanae-ecclesiae-1944",
+    "title": "Sanctae Romanae Ecclesiae. - Lettera Apostolica in forma di Breve: Santa Teresa del Bambino Gesù viene proclamata Patrona secondaria della Francia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1944-05-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19440503_santa-teresa-bambino-gesu.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sanctae Romanae Ecclesiae",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1944-06-15",
+    "title": "Lettera al Generale De Gaulle",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1944-06-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/fr/letters/documents/hf_p-xii_lett_19440615_de-gaulle.html",
+      "shelf": "letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/cum-proxime-1944",
+    "title": "Cum proxime. - Lettera Apostolica al Vicario Generale della Compagnia di Gesù, Padre Norberto Boynes, in occasione del primo centenario dell'Apostolato della Preghiera",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1944-06-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19440616_apostolato-preghiera.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum proxime",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1944-09-14",
+    "title": "Messaggio al Presidente della Polonia",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1944-09-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/fr/letters/documents/hf_p-xii_lett_19440914_presidente-pologna.html",
+      "shelf": "letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1944-10-18",
+    "title": "Lettera al Reggente d'Ungheria",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1944-10-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/fr/letters/documents/hf_p-xii_lett_19441018_reggente-ungheria.html",
+      "shelf": "letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1944-10-24",
+    "title": "Lettera al Cardinale Francesco Marchetti-Selvaggiani, vicario Generale di Sua Santità",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1944-10-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/letters/documents/hf_p-xii_lett_19441024_card-marchetti-selvaggiani.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1944-10-29",
+    "title": "Lettera al Reggente della Thailandia",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1944-10-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/fr/letters/documents/hf_p-xii_lett_19441029_reggente-tailandia.html",
+      "shelf": "letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/episcopali-consecrationis-1944",
+    "title": "Episcopali Consecrationis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1944-11-30",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19441130_episcopali-consecrationis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Episcopali Consecrationis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/letter-1945-01-15",
+    "title": "Lettera a Monsignor Ildebrando Vannucci, Abate ordinario di San Paolo fuori le Mura, e a Padre D. Edmondo Bernardini, Abate Generale dei Cistercensi, nell'ottavo centenario dell' elezione del beato Eugenio III alla cattedra di Pietro",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1945-01-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19450115_cardinali-vannucci-bernardini.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/communium-interpretes-dolorum-1945",
+    "title": "Communium Interpretes Dolorum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1945-04-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_15041945_communium-interpretes-dolorum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Communium Interpretes Dolorum",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/sancti-leonis-de-amazones-s-ioseph-de-amazones-1945",
+    "title": "Sancti Leonis de Amazones (S. Ioseph de Amazones)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1945-07-13",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19450713_sancti-leonis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sancti Leonis de Amazones (S. Ioseph de Amazones)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/vacantis-apostolicae-sedis-1945",
+    "title": "Vacantis Apostolicae Sedis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1945-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19451208_vacantis-apostolicae-sedis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Vacantis Apostolicae Sedis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/orientales-omnes-ecclesias-1945",
+    "title": "Orientales Omnes Ecclesias",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1945-12-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_23121945_orientales-omnes-ecclesias.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Orientales Omnes Ecclesias",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/quemadmodum-1946",
+    "title": "Quemadmodum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1946-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_06011946_quemadmodum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quemadmodum",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/exulta-lusitania-felix-1946",
+    "title": "Exulta, Lusitania felix. - Lettera Apostolica con la quale S. Antonio di Padova viene proclamato Dottore della Chiesa",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1946-01-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19460116_antonio-di-padova.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Exulta, Lusitania felix",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1946-01-17",
+    "title": "Lettera al Cardinale Augusto Hlond e all'Episcopato di Polonia",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1946-01-17",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19460117_cardinale-hlond.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1946-03-21",
+    "title": "Lettera a Padre Pier Damiani Buffadini, Priore Generale della Congregazione dei Monaci Eremiti Camaldolesi, per il centenario della morte di Gregorio XVI",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1946-03-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19460321_padre-buffadini.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/deiparae-virginis-mariae-1946",
+    "title": "Deiparae Virginis Mariae",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1946-05-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_01051946_deiparae-virginis-mariae.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Deiparae Virginis Mariae",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/letter-1946-05-12",
+    "title": "Lettera al Prefetto Generale dei Ministri degli Infermi, Rev. Padre Florindo Rubini, nel secondo centenario della canonizzazione di S. Camillo de Lellis",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1946-05-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19460512_padre-rubini.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1946-05-17",
+    "title": "Lettera all'Arcivescovo di Tokio e all'Episcopato del Giappone",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1946-05-17",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/fr/letters/documents/hf_p-xii_lett_19460517_arcivescovo-tokio.html",
+      "shelf": "letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1946-06-05",
+    "title": "Lettera al Rev. Padre Carlo Pasquini, Priore Generale degli Eremitani di S. Agostino, nel quinto centenario della canonizzazione di San Nicola da Tolentino",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1946-06-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19460605_padre-pasquini.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1946-06-13",
+    "title": "Lettera a Monsignor Umberto Ravetta, Vescovo di Senigallia, all'inizio delle celebrazioni del primo centenario dell'elevazione al Soglio Pontificio di Pio IX",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1946-06-13",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19460613_monsignor-ravetta.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/spiritus-domini-1946",
+    "title": "Spiritus Domini. - Lettera Decretale",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1946-07-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19460703_spiritus-domini.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Spiritus Domini",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1946-07-10",
+    "title": "Lettera al Signor Carlo Flory, per la XXXIII Settimana Sociale di Francia",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1946-07-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/fr/letters/documents/hf_p-xii_lett_19460710_settimana-sociale-francia.html",
+      "shelf": "letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1946-07-27",
+    "title": "Lettera al Rev. Padre Giuseppe Archambault, per la XXIII Sessione delle Settimane Sociali del Canada",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1946-07-27",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/fr/letters/documents/hf_p-xii_lett_19460727_settimana-sociale-canada.html",
+      "shelf": "letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1946-10-11",
+    "title": "Lettera al Cardinale Adeodato Giovanni Piazza, Patriarca di Venezia: approvazione del nuovo Statuto dell'Azione Cattolica Italiana",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1946-10-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/letters/documents/hf_p-xii_lett_19461011_cardinale-piazza.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1946-12-23",
+    "title": "Lettera all'Episcopato della Polonia",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1946-12-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19461223_episcopato-polonia.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/provida-mater-ecclesia-1947",
+    "title": "Provida Mater Ecclesia",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1947-02-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/apost_constitutions/documents/hf_p-xii_apc_19470202_provida-mater-ecclesia.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "ZH"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Provida Mater Ecclesia",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/fulgens-radiatur-1947",
+    "title": "Fulgens Radiatur",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1947-03-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_21031947_fulgens-radiatur.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Fulgens Radiatur",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/letter-1947-03-21",
+    "title": "Lettera all'Episcopato della Cecoslovacchia, ricorrendo il 950° anniversario della morte di S. Adalberto, Vescovo di Praga e Martire",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1947-03-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19470321_episcopato-cecoslovacchia.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/apostolico-hispaniarum-1947",
+    "title": "Apostolico Hispaniarum",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1947-04-07",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/motu_proprio/documents/hf_p-xii_motu-proprio_19470407_apostolico-hispaniarum.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Apostolico Hispaniarum",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xii/apostolic-letter-1947-04-23",
+    "title": "Lettera Apostolica all'Opera Vocazioni Sacerdotali in Brasile",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1947-04-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/pt/apost_letters/documents/hf_p-xii_apl_19470423_vocazioni-brasile.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1947-05-24",
+    "title": "Lettera all'Arcivescovo di Montreal in occasione del Congresso dedicato alla Gioventù Operaia Cristiana del Canada",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1947-05-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/fr/letters/documents/hf_p-xii_lett_19470524_jocistes-canada.html",
+      "shelf": "letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1947-07-18",
+    "title": "Lettera al Signor Carlo Flory, per la XXXIV Settimana Sociale di Francia",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1947-07-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/fr/letters/documents/hf_p-xii_lett_19470718_xxxiv-semaines-sociales.html",
+      "shelf": "letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1947-08-07",
+    "title": "Lettera a Padre Giovanni Llabrés, in occasione del IV centenario della morte di San Gaetano Thiene",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1947-08-07",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19470807_san-gaetano-thiene.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1947-08-26",
+    "title": "Chirografo all’Ecc.mo Harry S. Truman, Presidente degli Stati Uniti d’America",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1947-08-26",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/letters/documents/hf_p-xii_lett_19470826_have-just.html",
+      "shelf": "letters",
+      "languages": [
+        "EN",
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1947-08-31",
+    "title": "Lettera per la XXIV Settimana Sociale del Canada",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1947-08-31",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/fr/letters/documents/hf_p-xii_lett_19470831_xxiv-settimana-soc-canada.html",
+      "shelf": "letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/mediator-dei-1947",
+    "title": "Mediator Dei",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1947-11-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_20111947_mediator-dei.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Mediator Dei",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/sacramentum-ordinis-1947",
+    "title": "Sacramentum Ordinis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1947-11-30",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19471130_sacramentum-ordinis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sacramentum Ordinis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/letter-1947-12-01",
+    "title": "Lettera all'Episcopato tedesco",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1947-12-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19471201_episcopato-germania.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/animarum-studio-1947",
+    "title": "Animarum studio",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1947-12-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/motu_proprio/documents/hf_p-xii_motu-proprio_19471216_animarum-studio.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Animarum studio",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xii/optatissima-pax-1947",
+    "title": "Optatissima Pax",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1947-12-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_18121947_optatissima-pax.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Optatissima Pax",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/letter-1948-01-18",
+    "title": "Lettera all'Episcopato della Polonia",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1948-01-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19480118_episcopato-polonia.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1948-01-30",
+    "title": "Istituzione \"ad experimentum\" della Commissione di Consulenza e di Revisione Ecclesiastica dei films a soggetto religioso o morale",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1948-01-30",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/letters/documents/hf_p-xii_lett_30011948_consulting-ecclesiastical-commission.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/primo-feliciter-1948",
+    "title": "Primo feliciter",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1948-03-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/motu_proprio/documents/hf_p-xii_motu-proprio_19480312_primo-feliciter.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Primo feliciter",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xii/auspicia-quaedam-1948",
+    "title": "Auspicia Quaedam",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1948-05-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_01051948_auspicia-quaedam.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Auspicia Quaedam",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/in-auspicando-super-1948",
+    "title": "In Auspicando Super",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1948-06-28",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/apost_exhortations/documents/hf_p-xii_exh_19480628_in-auspicando-super.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "In Auspicando Super",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:pius-xii/letter-1948-07-25",
+    "title": "Lettera al Cardinale Clemente Micara, in occasione del settimo centenario del Duomo di Colonia",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1948-07-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19480725_centenario-duomo-colonia.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1948-09-17",
+    "title": "Statuto della Pontificia Commissione per la Cinematografia didattica e religiosa",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1948-09-17",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/letters/documents/hf_p-xii_lett_17091948_religious-cinematographie.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1948-09-19",
+    "title": "Lettera in occasione del Congresso Internazionale dell’Associazione dell’«Apostolato della Preghiera»",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1948-09-19",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/letters/documents/hf_p-xii_lett_19480919_quod-sodales.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/bis-saeculari-die-1948",
+    "title": "Bis Saeculari Die",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1948-09-27",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19480927_bis-saeculari.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Bis Saeculari Die",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/in-multiplicibus-curis-1948",
+    "title": "In Multiplicibus Curis",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1948-10-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_24101948_in-multiplicibus-curis.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "In Multiplicibus Curis",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/letter-1948-12-20",
+    "title": "Lettera all'Episcopato di Germania",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1948-12-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19481220_episcopato-germania.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1949-01-02",
+    "title": "Lettera agli Arcivescovi e Vescovi dell'Ungheria in occasione dell'arresto del Cardinale Mindszenty, Arcivescovo di Strigonia, da parte delle autorità ungheresi",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1949-01-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/letters/documents/hf_p-xii_lett_19490102_acerrimo-moerore.html",
+      "shelf": "letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/conflictatio-bonorum-1949",
+    "title": "Conflictatio Bonorum",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1949-02-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/apost_exhortations/documents/hf_p-xii_exh_19490211_conflictatio-bonorum.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Conflictatio Bonorum",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:pius-xii/crebrae-allatae-sunt-1949",
+    "title": "Crebrae allatae sunt",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1949-02-22",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/motu_proprio/documents/hf_p-xii_motu-proprio_19490222_crebrae-allatae.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Crebrae allatae sunt",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xii/quandoquidem-templum-1949",
+    "title": "Quandoquidem templum - Sul Pontificio istituto S. Eugenio per i giovani sacerdoti",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1949-04-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/motu_proprio/documents/hf_p-xii_motu-proprio_19490402_quandoquidem-templum.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quandoquidem templum",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xii/redemptoris-nostri-cruciatus-1949",
+    "title": "Redemptoris Nostri Cruciatus",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1949-04-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_15041949_redemptoris-nostri-cruciatus.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Redemptoris Nostri Cruciatus",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/iubilaeum-maximum-1949",
+    "title": "Iubilaeum maximum. - Indizione del grande Giubileo",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1949-05-26",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19490526_iubilaeum-maximum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "bulls"
+      ]
+    },
+    "incipit": "Iubilaeum maximum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/catholicas-studiorum-universitates-1949",
+    "title": "Catholicas Studiorum Universitates",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1949-07-27",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/19490727-letteraap-catholicas-studiorum-universitates.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Catholicas Studiorum Universitates",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1949-09-01",
+    "title": "Lettera all'Episcopato di Polonia",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1949-09-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19490901_episcopato-polonia.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1949-10-18",
+    "title": "Lettera all'Episcopato di Germania",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1949-10-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19491018_episcopato-germania.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/sollemnibus-documentis-1949",
+    "title": "Sollemnibus Documentis",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1949-11-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/apost_exhortations/documents/hf_p-xii_exh_19491108_sollemnibus-documentis.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sollemnibus Documentis",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:pius-xii/letter-1949-12-20",
+    "title": "Lettera al Presidente degli Stati Uniti, Harry S. Truman",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1949-12-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/fr/letters/documents/hf_p-xii_lett_19491220_presidente-usa.html",
+      "shelf": "letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/sollicitudinem-nostram-1950",
+    "title": "Sollicitudinem Nostram",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1950-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/motu_proprio/documents/hf_p-xii_motu-proprio_19500106_sollicitudinem-nostram.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sollicitudinem Nostram",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xii/i-felici-sviluppi-1950",
+    "title": "I felici sviluppi - All'Episcopato d'Italia a favore della diffusione dell' «Azione Cattolica Italiana»",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1950-01-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/apost_exhortations/documents/hf_p-xii_exh_19500125_felici-sviluppi.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "I felici sviluppi",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:pius-xii/anni-sacri-1950",
+    "title": "Anni Sacri",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1950-03-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_12031950_anni-sacri.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Anni Sacri",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/letter-1950-03-12",
+    "title": "Lettera ai Rev. Padri della «Compagnia di Gesù», redattori del periodico «La Civiltà Cattolica»",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1950-03-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/letters/documents/hf_p-xii_lett_19500312_vix-undecimus.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1950-04-15",
+    "title": "Lettera a Padre Giovanni Battista Janssens, Preposito generale della Compagnia di Gesù, per lo sviluppo delle Congregazioni Mariane",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1950-04-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19500415_padre-janssens.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/quo-ait-1950",
+    "title": "Quo ait: Papa Pio XII proclama San Giovanni Battista de La Salle Patrono celeste di tutti gli educatori",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1950-05-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/19500515-quo-ait.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quo ait",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/summi-maeroris-1950",
+    "title": "Summi Maeroris",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1950-07-19",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_19071950_summi-maeroris.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Summi Maeroris",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/humani-generis-1950",
+    "title": "Humani Generis",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1950-08-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_12081950_humani-generis.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Humani Generis",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/superiore-iam-aetate-1950",
+    "title": "Superiore iam aetate - Breve Apostolico con il quale Santa Francesca Saverio Cabrini viene proclamata \"Patrona degli Emigranti\"",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1950-09-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/briefs/documents/hf_p-xii_apl_19500908_superiore-iam-aetate.html",
+      "shelf": "briefs",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Superiore iam aetate",
+    "sourceGenreLabel": "briefs"
+  },
+  {
+    "id": "mag:pius-xii/menti-nostrae-1950",
+    "title": "Menti Nostrae",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1950-09-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/apost_exhortations/documents/hf_p-xii_exh_19500923_menti-nostrae.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "DE",
+        "ES",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Menti Nostrae",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:pius-xii/munificentissimus-deus-1950",
+    "title": "Munificentissimus Deus - Bolla dogmatica per la definizione dell'Assunzione in corpo ed anima di Maria SS.ma in cielo",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1950-11-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/apost_constitutions/documents/hf_p-xii_apc_19501101_munificentissimus-deus.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "EN",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Munificentissimus Deus",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/sponsa-christi-1950",
+    "title": "Sponsa Christi",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1950-11-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/apost_constitutions/documents/hf_p-xii_apc_19501121_sponsa-christi.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "ES",
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sponsa Christi",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/mirabile-illud-1950",
+    "title": "Mirabile Illud",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1950-12-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_06121950_mirabile-illud.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Mirabile Illud",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/evangelii-praecones-1951",
+    "title": "Evangelii Praecones",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1951-06-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_02061951_evangelii-praecones.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Evangelii Praecones",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/cum-iam-1951",
+    "title": "Cum iam. - All'Episcopato della Polonia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1951-09-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19510901_cum-iam.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum iam",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/sempiternus-rex-christus-1951",
+    "title": "Sempiternus Rex Christus",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1951-09-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_08091951_sempiternus-rex-christus.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sempiternus Rex Christus",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/ingruentium-malorum-1951",
+    "title": "Ingruentium Malorum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1951-09-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_15091951_ingruentium-malorum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ingruentium Malorum",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/impensiore-caritate-1951",
+    "title": "Impensiore caritate. - All'Episcopato, al clero e ai fedeli della Cecoslovacchia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1951-10-28",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/apost_letters/documents/hf_p-xii_apl_19511028_impensiore-caritate.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Impensiore caritate",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/pontificia-commissione-per-la-cinematografia-1952",
+    "title": "Pontificia Commissione per la Cinematografia",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1952-01-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/letters/documents/hf_p-xii_lett_01011952_cinematographic-commission.html",
+      "shelf": "letters",
+      "languages": [
+        "DE",
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Pontificia Commissione per la Cinematografia",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/cupimus-imprimis-1952",
+    "title": "Cupimus imprimis. - All'Episcopato, al clero e ai fedeli della Cina",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1952-01-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/apost_letters/documents/hf_p-xii_apl_19520118_cupimus-imprimis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cupimus imprimis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/postquam-apostolicis-1952",
+    "title": "Postquam Apostolicis - Canoni per le Chiese Orientali",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1952-02-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/motu_proprio/documents/hf_p-xii_motu-proprio_19520209_postquam-apostolicis.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Postquam Apostolicis",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xii/veritatem-facientes-1952",
+    "title": "Veritatem facientes. - All'Episcopato, al clero e ai fedeli della Romania",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1952-03-27",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/apost_letters/documents/hf_p-xii_apl_19520327_veritatem-facientes.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Veritatem facientes",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/sacro-vergente-anno-1952",
+    "title": "Sacro vergente anno. - Consacrazione della Russia al Cuore immacolato di Maria",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1952-07-07",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/apost_letters/documents/hf_p-xii_apl_19520707_sacro-vergente-anno.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sacro vergente anno",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/exsul-familia-1952",
+    "title": "Exsul Familia",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1952-08-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19520801_exsul-familia.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Exsul Familia",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/valde-solliciti-1952",
+    "title": "Valde solliciti - Nuove disposizioni sulle vesti cardinalizie",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1952-11-30",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/motu_proprio/documents/hf_p-xii_motu-proprio_19521130_valde-solliciti.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Valde solliciti",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xii/orientales-ecclesias-1952",
+    "title": "Orientales Ecclesias",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1952-12-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_15121952_orientales.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Orientales Ecclesias",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/christus-dominus-1953",
+    "title": "Christus Dominus - Della disciplina da osservare circa il digiuno eucaristico",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1953-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/apost_constitutions/documents/hf_p-xii_apc_19530106_christus-dominus.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Christus Dominus",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/doctor-mellifluus-1953",
+    "title": "Doctor Mellifluus",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1953-05-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_24051953_doctor-mellifluus.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Doctor Mellifluus",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/letter-1953-05-25",
+    "title": "Lettera al Vescovo di Assisi, Monsignor Giuseppe Placido Nicolini, per il VII centenario di Santa Chiara",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1953-05-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19530525_santa-chiara.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1953-06-27",
+    "title": "Lettera a Monsignor Giuseppe Da Costa Nunes, in occasione del conferimento della «Rosa D'Oro» alla sede metropolitana di Goa",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1953-06-27",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19530627_rosa-aurea.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1953-07-02",
+    "title": "Lettera al Rev. mo Padre Ludovico Paulussen S.I., Presidente del Segretariato Centrale delle Congregazioni Mariane",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1953-07-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19530702_padre-paulussen.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1953-07-16",
+    "title": "Lettera al Cardinale Stefano Wyszynski per il VII centenario della canonizzazione di S. Stanislao Martire, Vescovo di Cracovia",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1953-07-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19530716_san-stanislao.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1953-07-25",
+    "title": "Lettera a Monsignor Giovanni R. Mac Donald, per il centenario della Università «San Francesco Saverio» di Antigonish",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1953-07-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19530725_univ-s-francesco-saverio.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1953-08-12",
+    "title": "Lettera a Padre Pietro Abellán, nel IV centenario della Pontificia Università Gregoriana",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1953-08-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19530812_centenario-univ-gregoriana.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/fulgens-corona-1953",
+    "title": "Fulgens Corona",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1953-09-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_08091953_fulgens-corona.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Fulgens Corona",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/letter-1953-09-13",
+    "title": "Lettera a Monsignor Martino Giovanni O'Connor, per la nuova sede del Pontificio Collegio Americano del Nord",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1953-09-13",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19530913_collegio-americano-nord.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1953-11-16",
+    "title": "Lettera al Presidente della Repubblica di Haiti",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1953-11-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/fr/letters/documents/hf_p-xii_lett_19531116_presidente-haiti.html",
+      "shelf": "letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/i-rapidi-progressi-1954",
+    "title": "I Rapidi Progressi: Esortazione agli Em.mi o Ecc.mi Vescovi d'Italia in occasione del primo giorno di trasmissioni della Televisione Italiana",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1954-01-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/apost_exhortations/documents/hf_p-xii_exh_19540101_rapidi-progressi.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "I Rapidi Progressi",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:pius-xii/letter-1954-02-11",
+    "title": "Lettera al Capo dello Stato Italiano Luigi Einaudi, nel XXV° dei Patti Lateranensi",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1954-02-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/es/letters/documents/hf_p-xii_lett_19540211_xxv-patti-lateranensi.html",
+      "shelf": "letters",
+      "languages": [
+        "ES",
+        "FR",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/sacra-virginitas-1954",
+    "title": "Sacra Virginitas",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1954-03-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_25031954_sacra-virginitas.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sacra Virginitas",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/letter-1954-03-31",
+    "title": "Lettera al Cardinale Valerio Valeri, Prefetto della Sacra Congregazione dei Religiosi, per promuovere l'educazione cristiana della gioventù",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1954-03-31",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19540331_procuratores-generales.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/ecclesiae-fastos-1954",
+    "title": "Ecclesiae Fastos",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1954-06-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_05061954_ecclesiae-fastos.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ecclesiae Fastos",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/apostolic-letter-1954-07-25",
+    "title": "Quamquam. - Epistola Apostolica per il XVI centenario della nascita di S. Agostino",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1954-07-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19540725_quamquam.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1954-08-13",
+    "title": "Lettera a S.E. Mons. José Clemente Maurer, Arcivescovo di Sucre, in occasione del II Congresso Mariano Nazionale della Bolivia",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1954-08-13",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/es/letters/documents/hf_p-xii_lett_19540813_arzobispo-sucre.html",
+      "shelf": "letters",
+      "languages": [
+        "ES"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/ad-sinarum-gentem-1954",
+    "title": "Ad Sinarum Gentem",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1954-10-07",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_07101954_ad-sinarum-gentem.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad Sinarum Gentem",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/ad-caeli-reginam-1954",
+    "title": "Ad Caeli Reginam",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1954-10-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_11101954_ad-caeli-reginam.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad Caeli Reginam",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/letter-1954-11-28",
+    "title": "Lettera al Cardinale Clemente Micara, per i felici risultati dell'Anno Mariano",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1954-11-28",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19541128_anno-mariano.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1954-12-16",
+    "title": "Pontificia Commissione per la Cinematografia, la Radio e la Televisione",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1954-12-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/letters/documents/hf_p-xii_lett_16121954_statute-cinema-radio-tv.html",
+      "shelf": "letters",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/venusta-quidem-1955",
+    "title": "Venusta quidem. - La chiesa parrocchiale della Beata Vergine Maria nella città di Costanza, arcidiocesi di Friburgo, viene elevata al grado e alla dignità di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1955-05-30",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19550530_venusta-quidem.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Venusta quidem",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/cum-quintum-1955",
+    "title": "Cum quintum. - Nel V centenario della canonizzazione di S. Vincenzo Ferreri",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1955-06-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19550616_cum-quintum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum quintum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/il-film-ideale-1955",
+    "title": "Il Film Ideale - Esortazioni ai rappresentanti del mondo cinematografico",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1955-06-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/apost_exhortations/documents/hf_p-xii_exh_25101955_ideal-film.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "EN",
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Il Film Ideale",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:pius-xii/ad-ecclesiam-christi-1955",
+    "title": "Ad Ecclesiam Christi. - Per il Convegno dei presuli dell'America Latina a Rio de Janeiro",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1955-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/es/apost_letters/documents/hf_p-xii_apl_19550629_ad-ecclesiam-christi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad Ecclesiam Christi",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/alacre-studium-1955",
+    "title": "Alacre studium. - Nel IX centenario del transito di San Bartolomeo",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1955-06-30",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19550630_alacre-studium.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Alacre studium",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/magna-cum-iucunditate-1955",
+    "title": "Magna cum iucunditate. - Per il V centenario del transito di S. Ignazio di Loyola",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1955-07-31",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19550731_magna-cum-iucunditate.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Magna cum iucunditate",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/quo-asperioribus-fluctibus-1955",
+    "title": "Quo asperioribus fluctibus. - Nel V centenario della morte di S. Giovanni da Capistrano",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1955-10-04",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19551004_quo-asperioribus-fluctibus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quo asperioribus fluctibus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/christianae-fidei-1955",
+    "title": "Christianae fidei. - Nel XII centenario del martirio del pontefice S. Martino I",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1955-10-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19551020_christianae-fidei.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Christianae fidei",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/musicae-sacrae-1955",
+    "title": "Musicae Sacrae",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1955-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_25121955_musicae-sacrae.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Musicae Sacrae",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/haurietis-aquas-1956",
+    "title": "Haurietis Aquas",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1956-05-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_15051956_haurietis-aquas.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Haurietis Aquas",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/sedes-sapientiae-1956",
+    "title": "Sedes Sapientiae",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1956-05-31",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19560531_sedes-sapientiae.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sedes Sapientiae",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/dum-maerenti-animo-1956",
+    "title": "Dum maerenti animo. - La chiesa perseguitata nell'Europa dell'Est",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1956-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/apost_letters/documents/hf_p-xii_apl_19560629_dum-maerenti-animo.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Dum maerenti animo",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/luctuosissimi-eventus-1956",
+    "title": "Luctuosissimi Eventus",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1956-10-28",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_28101956_luctuosissimi-eventus.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "HU",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Luctuosissimi Eventus",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/laetamur-admodum-1956",
+    "title": "Laetamur Admodum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1956-11-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_01111956_laetamur-admodum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "HU",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Laetamur Admodum",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/datis-nuperrime-1956",
+    "title": "Datis Nuperrime",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1956-11-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_05111956_datis-nuperrime.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "HU",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Datis Nuperrime",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/salutari-fonti-1957",
+    "title": "Salutari fonti. - La Vergine, invocata con il nome di «Nuestra Señora De Agua Santa De Baños», viene eletta Patrona delle sacre missioni rivolte alle regioni orientali dell'Ecuador",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-03-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570303_salutari-fonti.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Salutari fonti",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/quod-de-beatissima-1957",
+    "title": "Quod de Beatissima. - La Beata Vergine del Rosario di Fatima viene eletta Patrona della diocesi di Zacapa, in Guatemala",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-03-30",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570330_quod-de-beatissima.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod de Beatissima",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/santaremensis-obidensis-1957",
+    "title": "Santaremensis (Obidensis)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-04-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19570410_santaremensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Santaremensis (Obidensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/fidei-donum-1957",
+    "title": "Fidei Donum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-04-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_21041957_fidei-donum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Fidei Donum",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/frondentium-silvarum-1957",
+    "title": "Frondentium silvarum. - San Giovanni Gualberto viene nominato Patrono dei Forestali del Brasile",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-04-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570424_frondentium-silvarum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Frondentium silvarum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/novos-caelos-1957",
+    "title": "Novos caelos. - Alla chiesa cattedrale di San Giuseppe, nella diocesi di San José de Mayo in Uruguay, viene conferito il titolo e la dignità di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-04-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570424_novos-caelos.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Novos caelos",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/brivatensis-civitas-1957",
+    "title": "Brivatensis civitas. - La Chiesa parrocchiale di San Giuliano Martire, a Brioude, nella diocesi di Le Puy-en-Velay, viene elevata alla dignità di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-04-26",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570426_brivatensis-civitas.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Brivatensis civitas",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/deo-in-honorem-1957",
+    "title": "Deo in honorem. - La Chiesa di Nostra Signora della Buona Speranza ad Hainaut, nella diocesi di Tournai, riceve il titolo e i privilegi di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-04-26",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570426_deo-in-honorem.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Deo in honorem",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/templa-dei-1957",
+    "title": "Templa Dei. - La Chiesa della Beata Maria Vergine detta «del Rimedio», nell'Arcidiocesi di Oristano, ottiene i privilegi e gli onori di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-04-26",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570426_templa-dei.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Templa Dei",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/praeclaros-inter-christi-1957",
+    "title": "Praeclaros inter Christi. - San Sebastiano Martire viene eletto Patrono dei Vigili Urbani",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-05-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570503_praeclaros-inter-christi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Praeclaros inter Christi",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/invicti-athletae-christi-1957",
+    "title": "Invicti Athletae Christi",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-05-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_16051957_invicti-athletae.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Invicti Athletae Christi",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/cleri-sanctitate-1957",
+    "title": "Lettera Apostolica in forma di Motu Proprio Cleri sanctitate, sui riti orientali",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-06-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/motu_proprio/documents/hf_p-xii_motu-proprio_19570602_cleri-sanctitati.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cleri sanctitate",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xii/amore-subigens-populos-1957",
+    "title": "Amore subigens populos. - La Beata Vergine Maria, chiamata «Nossa Senhora Conquistadora», viene eletta Patrona, con San Michele Arcangelo, della diocesi di Uruguaiana in Brasile",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-06-07",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570607_amore-subigens-populos.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Amore subigens populos",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/pietatis-clarissimae-1957",
+    "title": "Pietatis clarissimae. - La chiesa della Beata Maria Vergine delle Grazie, a Benevento, viene elevata al grado di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-06-07",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570607_pietatis-clarissimae.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Pietatis clarissimae",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/de-britannia-1957",
+    "title": "De Britannia",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-06-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19570610_de-britannia.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "De Britannia",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/quae-in-ecclesia-1957",
+    "title": "Quae in Ecclesia. - La Vergine Maria del Monte Carmelo viene eletta Patrona per l'intera diocesi di Jaboticabal in Brasile",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-06-13",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570613_quae-in-ecclesia.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quae in Ecclesia",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/antiquitate-artificiosis-1957",
+    "title": "Antiquitate artificiosis. - All'abbazia di Casamari viene conferito il titolo e la dignità di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-06-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570614_antiquitate-artificiosi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Antiquitate artificiosis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/de-more-1957",
+    "title": "De more. - La chiesa parrocchiale di Sant'Antonio nell'arcidiocesi di Managua, ottiene gli onori e i privilegi di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-06-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570614_de-more.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "De more",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/corumbensis-registrensis-campi-grandis-auratopolitanae-1957",
+    "title": "Corumbensis - Registrensis (Campi Grandis - Auratopolitanae)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-06-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19570615_corumbensis-registrensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Corumbensis - Registrensis (Campi Grandis - Auratopolitanae)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/montisclari-paracatuensis-ianuariensis-1957",
+    "title": "Montisclari - Paracatuensis (Ianuariensis)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-06-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19570615_montisclari-paracatuensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Montisclari - Paracatuensis (Ianuariensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/chiapasensis-tapacolensis-1957",
+    "title": "Chiapasensis (Tapacolensis)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-06-19",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19570619_chiapasensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Chiapasensis (Tapacolensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/saltillensis-torreonensis-1957",
+    "title": "Saltillensis (Torreonensis)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-06-19",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19570619_saltillensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Saltillensis (Torreonensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/bathurstensis-in-gambia-1957",
+    "title": "Bathurstensis in Gambia",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-06-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19570624_bathurstensis-in-gambia.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Bathurstensis in Gambia",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/bikoroensis-1957",
+    "title": "Bikoroënsis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-06-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19570624_bikoroensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Bikoroënsis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/le-pelerinage-de-lourdes-1957",
+    "title": "Le Pèlerinage de Lourdes",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-07-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_02071957_le-pelerinage-de-lourdes.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Le Pèlerinage de Lourdes",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/aleppensis-chaldaeorum-1957",
+    "title": "Aleppensis Chaldaeorum",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-07-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19570703_aleppensis-chaldaeorum.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Aleppensis Chaldaeorum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/berytensis-chaldaeorum-1957",
+    "title": "Berytensis Chaldaeorum",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-07-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19570703_berytensis-chaldaeorum.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Berytensis Chaldaeorum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/ad-peculiari-1957",
+    "title": "Ad peculiari. - La Beata Maria Vergine Immacolata, detta «de San Juan de Los Lagos», viene eletta Patrona dell'arcidiocesi di Guadalajara, in Messico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-07-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570705_ad-peculiari.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad peculiari",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/kikuitensis-kisantuensis-kengen-1957",
+    "title": "Kikuitensis - Kisantuensis (Kengen.)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-07-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19570705_kikuitensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Kikuitensis - Kisantuensis (Kengen.)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/musomensis-1957",
+    "title": "Musomensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-07-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19570705_musomensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Musomensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/quinhonensis-saigonensis-nhatrangensis-1957",
+    "title": "Quinhonensis - Saigonensis (Nhatrangensis)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-07-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19570705_quinhonensis-saigonensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quinhonensis - Saigonensis (Nhatrangensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/rabaulensis-kaviengensis-1957",
+    "title": "Rabaulensis (Kaviengensis)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-07-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19570705_rabaulensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Rabaulensis (Kaviengensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/religionis-sedes-1957",
+    "title": "Religionis sedes. - La chiesa dedicata ai Santi Wirone, Plechelmo e Odgero a «Sint-Odiliënberg», nella diocesi di Ruremonde, riceve il titolo e la dignità di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-07-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570705_religionis-sedes.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Religionis sedes",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/confinioris-californiae-pacensis-in-california-inferiore-1957",
+    "title": "Confinioris Californiae (Pacensis in California Inferiore)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-07-13",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19570713_confinioris-californiae.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Confinioris Californiae (Pacensis in California Inferiore)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/spinensis-1957",
+    "title": "Spinensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-07-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19570715_spinensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Spinensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/novissimae-dioeceses-1957",
+    "title": "Novissimae dioeceses. - La Beata Vergine, invocata con il nome di «Nostra Signora della Carità», insieme a San Patrizio, sono nominati Patroni della diocesi di Fort William, in Canada",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-07-19",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570719_novissimae-dioeceses.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Novissimae dioeceses",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/sacra-loca-1957",
+    "title": "Sacra loca. - La chiesa della Dormizione della Beata Vergine Maria sul Monte Sion a Gerusalmme viene elevata alla dignità di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-07-19",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570719_sacra-loca.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sacra loca",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/pietatis-artisque-1957",
+    "title": "Pietatis artisque. - Il titolo e i privilegi di Basilica Minore vengono concessi alla chiesa «Do Senhor Bom Jesus» nella città di «Congonhas do Campo», nell'arcidiocesi di Mariana, in Brasile",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-07-26",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570726_pietatis-artisque.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Pietatis artisque",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/sanctorum-terra-1957",
+    "title": "Sanctorum terra. - La chiesa della Santissima Trinità a Cracovia riceve il titolo di Basilica minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-07-26",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570726_sanctorum-terra.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sanctorum terra",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/amargosensis-victoriensis-de-conquista-1957",
+    "title": "Amargosensis (Victoriensis de Conquista)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-07-27",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19570727_amargosensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Amargosensis (Victoriensis de Conquista)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/ecclesiae-filii-1957",
+    "title": "Ecclesiae Filii. - La Beata Vergine Maria del Rosario e San Serapione sono eletti Patroni della diocesi di Azul, in Argentina",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-08-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570802_ecclesiae-filii.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ecclesiae Filii",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/puniensis-iuliensis-1957",
+    "title": "Puniensis (Iuliensis)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-08-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19570803_puniensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Puniensis (Iuliensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/oenipontis-gloria-1957",
+    "title": "Oenipontis gloria. - La chiesa parrocchiale di Wilten, dedicata alla Vergine Immacolata, nel territorio dell'Amministrazione Apostolica di Innsbruck, ottiene il titolo e i privilegi di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-08-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_letters/documents/hf_p-xii_apl_19570806_oenipontis-gloria.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Oenipontis gloria",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/miranda-prorsus-1957",
+    "title": "Miranda Prorsus",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-09-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_08091957_miranda-prorsus.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Miranda Prorsus",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/copiapoensis-1957",
+    "title": "Copiapoënsis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-10-31",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19571031_copiapoensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Copiapoënsis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/esmeraldensis-1957",
+    "title": "Esmeraldensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-11-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19571114_esmeraldensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Esmeraldensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/s-pauli-de-minnesota-novae-ulmae-1957",
+    "title": "S. Pauli de Minnesota (Novae Ulmae)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-11-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19571118_s-pauli-de-minnesota.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "S. Pauli de Minnesota (Novae Ulmae)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/arequipensis-ayacuquensis-caraveliens-1957",
+    "title": "Arequipensis - Ayacuquensis (Caraveliens)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-11-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19571121_arequipensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Arequipensis - Ayacuquensis (Caraveliens)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/luandensis-silvae-portuensis-malaniensis-1957",
+    "title": "Luandensis - Silvae Portuensis (Malaniensis)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-11-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19571125_luandensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Luandensis - Silvae Portuensis (Malaniensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/letter-1957-12-08",
+    "title": "Lettera al Rev. Padre Agostino Gemelli",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19571208_agostino-gemelli.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1957-12-12",
+    "title": "Lettera al Cardinale Valerio Valeri, Prefetto della Sacra Congregazione dei Religiosi, nel 50° dell'ordinazione sacerdotale",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-12-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19571212_cardinale-valeri.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/urawaensis-1957",
+    "title": "Urawaënsis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-12-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19571216_urawaensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Urawaënsis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/rivibambensis-guarandensis-1957",
+    "title": "Rivibambensis (Guarandensis)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-12-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19571229_rivibambensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Rivibambensis (Guarandensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/palmensis-lagensis-palmensis-et-xapecoensis-1958",
+    "title": "Palmensis - Lagensis (Palmensis et Xapecoënsis)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-01-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19580114_palmensis-lagensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Palmensis - Lagensis (Palmensis et Xapecoënsis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/s-iosephi-de-grajau-carolinensis-in-brasilia-1958",
+    "title": "S. Iosephi de Grajaú (Carolinensis in Brasilia)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-01-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19580114_s-iosephi-de-grajau.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "S. Iosephi de Grajaú (Carolinensis in Brasilia)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/civitatis-victoriae-matamorensis-1958",
+    "title": "Civitatis Victoriae (Matamorensis)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-02-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19580216_civitatis-victoriae.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Civitatis Victoriae (Matamorensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/spiritus-sancti-victoriensis-spiritus-sancti-1958",
+    "title": "Spiritus Sancti (Victoriensis Spiritus Sancti)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-02-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19580216_spiritus-sancti.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Spiritus Sancti (Victoriensis Spiritus Sancti)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/letter-1958-02-22",
+    "title": "Lettera a Padre Riccardo Cushing, Arcivescovo di Boston, nel 150° anniversario di fondazione di questa Arcidiocesi",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-02-22",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19580222_cardinale-cushing.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/niangaraensis-dorumaensis-1958",
+    "title": "Niangaraënsis (Dorumaënsis)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-02-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19580124_niangaraensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Niangaraënsis (Dorumaënsis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/tangaensis-1958",
+    "title": "Tangaënsis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-02-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19580224_tangaensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Tangaënsis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/thakhekensis-1958",
+    "title": "Thakhekensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-02-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19580124_thakhekensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Thakhekensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/letter-1958-02-28",
+    "title": "Lettera al Cardinale Francesco Spellman, nel 150° anniversario di fondazione dell'Arcidiocesi di New York",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-02-28",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19580228_cardinale-spellman.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1958-03-04-1",
+    "title": "Lettera a Monsignor Elia Dalla Costa, Arcivescovo di Firenze, in occasione del 25° anniversario dell'elevazione al rango cardinalizio",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-03-04",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19580304_cardinale-dalla-costa.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1958-03-04-2",
+    "title": "Lettera a Monsignor Pietro Fumasoni Biondi, in occasione del 25° anniversario dell'elevazione al rango cardinalizio di Santa Croce in Gerusalemme e della carica di Prefetto della Sacra Congregazione «De Propaganda Fide»",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-03-04",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19580304_cardinale-fumasone-biondi.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1958-03-04-3",
+    "title": "Lettera al Cardinale Maurilio Fossati, Arcivescovo di Torino, nel 25° anniversario dell'elevazione al rango cardinalizio",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-03-04",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19580304_cardinale-fossati.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1958-03-10",
+    "title": "Lettera al Cardinale John Alexander Floersh, Arcivescovo di Louisville, per il 150° anniversario di fondazione di questa Arcidiocesi",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-03-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19580310_cardinale-floersh.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1958-03-12-1",
+    "title": "Al Cardinale John Francis O'Hara, Arcivescovo di Filadelfia, per il 150° anniversario di fondazione di questa Arcidiocesi",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-03-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19580312_cardinale-o-hara.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1958-03-12-2",
+    "title": "Lettera al Cardinale Federico Tedeschini, Arciprete della Basilica Vaticana, nel 25° anniversario dell'elevazione al rango cardinalizio",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-03-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19580312_cardinale-tedeschini.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/chilapensis-acapulcanae-1958",
+    "title": "Chilapensis (Acapulcanae)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-03-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19580318_chilapensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Chilapensis (Acapulcanae)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/leonensis-1958",
+    "title": "Leonensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-03-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19580325_leonensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Leonensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/letter-1958-04-03",
+    "title": "Ai Religiosi del Portogallo che hanno partecipato a Lisbona ad un Convegno sugli stati religiosi di perfezione",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-04-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19580403_religiosi-portogallo.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1958-04-10",
+    "title": "Lettera al Cardinale Amleto Giovanni Cicognani, per il 25° anniversario dell'ordinazione episcopale",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-04-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19580410_cardinale-cicognani.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/huanucensis-huancayensis-tarmensis-1958",
+    "title": "Huanucensis-Huancayensis (Tarmensis)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-05-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19580515_huanucensis-huancayensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Huanucensis-Huancayensis (Tarmensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/huanucensis-huarazensis-huariensis-1958",
+    "title": "Huanucensis-Huarazensis (Huariensis)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-05-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19580515_huanucensis-huarazensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Huanucensis-Huarazensis (Huariensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/letter-1958-05-15",
+    "title": "Lettera al Cardinale Georges F. X. Marie Grente, Arcivescovo di Le Mans, per il 40° anniversario della sua ordinazione episcopale",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-05-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19580515_cardinale-grente.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/ad-uberrima-vitae-1958",
+    "title": "Ad uberrima vitae",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-06-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/apost_constitutions/documents/hf_p-xii_apc_19580603_pont-instit-pastorale.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad uberrima vitae",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-xii/letter-1958-06-24",
+    "title": "Lettera al Cardinale Paul-Émile Léger, Arcivescovo di Montréal, Inviato alle celebrazioni per il III centenario del Santuario di Saint-Anne-de-Beaupré, in Canada",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-06-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19580624_cardinale-leger.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/ad-apostolorum-principis-1958",
+    "title": "Ad Apostolorum Principis",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_29061958_ad-apostolorum-principis.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad Apostolorum Principis",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/meminisse-iuvat-1958",
+    "title": "Meminisse Iuvat",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-07-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/encyclicals/documents/hf_p-xii_enc_14071958_meminisse-iuvat.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Meminisse Iuvat",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xii/letter-1958-07-24",
+    "title": "Lettera al Cardinale Giuseppe Siri, Arcivescovo di Genova, Inviato alle celebrazioni per l'inaugurazione dell'Esposizione Universale a Bruxelles",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-07-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19580724_cardinale-siri.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1958-08-02",
+    "title": "Lettera al Cardinale Eugenio Tisserant, Vescovo di Ostia, Inviato al duplice Convegno mariano di Lourdes",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-08-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19580802_cardinale-tisserant.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/apostolic-letter-1958-08-21",
+    "title": "Lettera Apostolica (breve) che proclama Santa Chiara Patrona Celeste della Televisione",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-08-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/fr/apost_letters/documents/hf_p-xii_apl_21081958_st-claire.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1958-08-26",
+    "title": "Lettera a Rev. Padre Riccardo Lombardi, promotore del movimento \"Per un mondo migliore\"",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-08-26",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/it/letters/documents/hf_p-xii_lett_19580826_padre-riccardo-lombardi.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1958-08-28",
+    "title": "Lettera al Cardinale Carlo María Javier de la Torre, Arcivescovo di Quito, Inviato al Congresso Eucaristico ecuadoriano di Guayaquil",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-08-28",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19580828_cardinale-de-la-torre.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xii/letter-1958-09-29",
+    "title": "Lettera a S. E. Monsignor Luigi Agostino Marmottin, in occasione della riapertura al culto della Basilica di Reims",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-09-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xii/la/letters/documents/hf_p-xii_lett_19580929_marmottin-reims.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  }
+]

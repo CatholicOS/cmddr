@@ -8,13 +8,20 @@ export interface Violation { rule: number; id: string; message: string }
 /** The genre rows this module needs from `data/genres.json`: id plus its allowed issuerTypes. */
 export interface GenreLike { id: string; issuerTypes?: string[] }
 
-/** Invariants 8-13, 15-17 of the design spec §6. (14 lives in the assessment checker.) */
-export function checkDocuments(docs: DocumentRecord[], genres: GenreLike[]): Violation[] {
+/** The keyword rows this module needs from `data/keywords.json`. */
+export interface KeywordLike { id: string }
+
+/** Invariants 8-13, 15-21 of the design spec. (14 lives in the assessment checker.) */
+export function checkDocuments(
+  docs: DocumentRecord[], genres: GenreLike[], keywords: KeywordLike[] = [],
+): Violation[] {
   const genreIds = new Set(genres.map((g) => g.id));
+  const keywordIds = new Set(keywords.map((k) => k.id));
   const issuerTypesByGenre = new Map(genres.map((g) => [g.id, g.issuerTypes]));
   const out: Violation[] = [];
   const seen = new Map<string, number>();
   const byCollision = new Map<string, DocumentRecord[]>();
+  const byProvisionalGroup = new Map<string, DocumentRecord[]>();
 
   for (const d of docs) {
     const re = d.idStatus === 'provisional' ? PROVISIONAL_ID_RE : MINTED_ID_RE;
@@ -40,8 +47,40 @@ export function checkDocuments(docs: DocumentRecord[], genres: GenreLike[]): Vio
     if (parts.year !== d.date.slice(0, 4)) {
       out.push({ rule: 10, id: d.id, message: `id year ${parts.year} != date ${d.date}` });
     }
-    if (d.idStatus === 'minted' && parts.slug !== slugify(d.incipit)) {
+    // Rule 18 runs before rule 12 (review finding, 2026-09-08): rule 12 falls back to
+    // d.title when d.incipit is absent, and slugify() throws on a non-string argument
+    // rather than returning a mismatch. A record with neither a usable incipit nor a
+    // string title must be reported by rule 18 and skip rule 12's slug check, rather than
+    // crashing the validator on malformed input.
+    const hasTitle = typeof d.title === 'string' && d.title.trim() !== '';
+    if (!hasTitle) {
+      out.push({ rule: 18, id: d.id, message: 'title is missing or empty' });
+    }
+
+    if (
+      d.idStatus === 'minted'
+      && (typeof d.incipit === 'string' || hasTitle)
+      && parts.slug !== slugify(d.incipit ?? d.title)
+    ) {
       out.push({ rule: 12, id: d.id, message: `slug '${parts.slug}' != slugify('${d.incipit}')` });
+    }
+
+    if (d.idStatus === 'provisional') {
+      // The parallel of rule 12 for a provisional id: its genre segment must be derivable
+      // from the record, so the id can be recomputed rather than trusted.
+      const expected = slugify(d.genre ?? d.sourceGenreLabel ?? '');
+      if (expected === '' || parts.slug !== expected) {
+        out.push({
+          rule: 19, id: d.id,
+          message: `provisional genre segment '${parts.slug}' != '${expected}'`,
+        });
+      }
+    }
+
+    for (const k of d.keywords ?? []) {
+      if (!keywordIds.has(k)) {
+        out.push({ rule: 21, id: d.id, message: `unknown keyword: ${k}` });
+      }
     }
 
     if (local !== null) {
@@ -83,9 +122,18 @@ export function checkDocuments(docs: DocumentRecord[], genres: GenreLike[]): Vio
       }
     }
 
-    if (d.idStatus === 'minted' && local !== null) {
-      const k = `${local}|${slugify(d.incipit)}|${d.date.slice(0, 4)}`;
+    // Guarded the same way as rule 12 above (review finding, 2026-09-08): slugify()
+    // throws on a non-string argument, so this collision key must not be built from a
+    // record with neither a usable incipit nor a string title -- such a record is
+    // already reported via rule 18 above and simply takes no part in collision grouping.
+    if (d.idStatus === 'minted' && local !== null && (typeof d.incipit === 'string' || hasTitle)) {
+      const k = `${local}|${slugify(d.incipit ?? d.title)}|${d.date.slice(0, 4)}`;
       byCollision.set(k, [...(byCollision.get(k) ?? []), d]);
+    }
+
+    if (d.idStatus === 'provisional' && local !== null) {
+      const k = `${local}|${slugify(d.genre ?? d.sourceGenreLabel ?? '')}|${d.date}`;
+      byProvisionalGroup.set(k, [...(byProvisionalGroup.get(k) ?? []), d]);
     }
   }
 
@@ -98,6 +146,34 @@ export function checkDocuments(docs: DocumentRecord[], genres: GenreLike[]): Vio
     for (const d of group) {
       if (!/-\d{4}-\d{2}-\d{2}$/.test(d.id)) {
         out.push({ rule: 11, id: d.id, message: `collision on ${k}: both ids must use the full date` });
+      }
+    }
+  }
+
+  for (const [k, group] of byProvisionalGroup) {
+    // Only a suffix trailing the full `-YYYY-MM-DD` date is an ordinal; a naive
+    // `/-(\d+)$/` would misread the date's own day-of-month segment as one.
+    const ordinals = group.map((d) => {
+      const m = d.id.match(/-\d{4}-\d{2}-\d{2}(?:-(\d+))?$/);
+      return m?.[1] ? Number(m[1]) : null;
+    });
+    if (group.length === 1) {
+      if (ordinals[0] !== null) {
+        out.push({
+          rule: 20, id: group[0]!.id,
+          message: `sole provisional document of ${k} must carry no ordinal`,
+        });
+      }
+      continue;
+    }
+    const expected = group.map((_, i) => i + 1);
+    const found = [...ordinals].sort((a, b) => (a ?? 0) - (b ?? 0));
+    if (ordinals.includes(null) || found.join(',') !== expected.join(',')) {
+      for (const d of group) {
+        out.push({
+          rule: 20, id: d.id,
+          message: `provisional ordinals for ${k} must be exactly 1..${group.length}`,
+        });
       }
     }
   }

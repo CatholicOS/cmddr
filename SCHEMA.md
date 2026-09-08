@@ -28,6 +28,8 @@ one **Assessment** per notable passage.
 
 **`descriptiveTitle`** (optional, mutually-exclusive title of a conciliar Constitution) — `dogmatic` · `pastoral`. Descriptive of purpose only, never a claim of authority; omit for a plain constitution (e.g. *Sacrosanctum Concilium*).
 
+**`keywords`** (optional, non-exclusive descriptive subject tags, resolving against `data/keywords.json`) — currently `circumscription-erection` and `circumscription-elevation`. Unlike `characteristics`, a keyword is **never authority-bearing**: it makes no claim about the document's register, definitiveness, or solemn form, and no invariant other than vocabulary membership (invariant 21) ever reads it.
+
 **`register`** (mode of teaching)
 | id | label |
 |---|---|
@@ -120,6 +122,13 @@ These are the rules a linter/CI should enforce so the data can never re-collapse
 15. **Genre reference.** `genre`, when non-null, resolves to an id in `data/genres.json`; when null, `sourceGenreLabel` is present.
 16. **Issuer namespace matches issuer type.** `issuerId` begins with `oec:` **iff** `issuerType = ecumenical-council`.
 17. **Issuer type is valid for the genre.** `issuerType`, when `genre` is non-null, is one of that genre's `issuerTypes` in `data/genres.json`.
+18. **Title is present.** `title` is present and non-empty on every document.
+19. **Provisional slug round-trips.** A `provisional` id's genre segment equals `slugify(genre)` — or `slugify(sourceGenreLabel)` when
+    `genre` is null — so a provisional id is derivable from the record, exactly as invariant 12 requires of a minted one.
+20. **Provisional ordinals are dense.** Provisional ordinals within an `(issuer, genre-slug, date)` group are dense and 1-based: a
+    group of *n* carries exactly `-1 … -n`, and a group of 1 carries no ordinal.
+21. **Keyword reference.** Every entry of `keywords`, when present, resolves to an id in `data/keywords.json`. This is the only
+    invariant that reads `keywords` — the field carries no authority claim, unlike `characteristics`.
 
 ---
 

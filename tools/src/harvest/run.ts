@@ -1,22 +1,49 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from 'node:fs';
 import { parseFlatIndex } from './flat.js';
 import { parseShelfIndex } from './shelf.js';
+import { resolveShelfPages } from './shelfPages.js';
 import { toDocument } from './toDocument.js';
-import { PILOT_POPES, SHELVES, DATE_CORRECTIONS, DUPLICATE_MERGES, ADJUDICATED_DISTINCT } from '../mappings/index.js';
-import { issuerLocalPart } from '../ids.js';
+import { assignProvisionalOrdinals } from './ordinals.js';
+import {
+  POPES, DATE_CORRECTIONS, DUPLICATE_MERGES, ADJUDICATED_DISTINCT, isErectionCandidate,
+} from '../mappings/index.js';
+import { issuerLocalPart, mintId } from '../ids.js';
 import { slugify } from '../slug.js';
 import type { DocumentRecord, HarvestItem } from '../types.js';
 
-/** Most specific shelf first: a document filed twice keeps the more specific genre. */
+/**
+ * Most specific shelf first: a document filed twice keeps the more specific genre.
+ * `apost_exhortations` (Task 8 carried item): ranked here, after `motu_proprio` and before
+ * the generic `letters` catch-all. It is a distinct, named formal genre like the six shelves
+ * ahead of it -- not a generic bucket -- but pastoral exhortations carry no juridical force of
+ * their own, unlike the acts above (constitutions, apostolic letters, bulls, briefs, motu
+ * proprio), so it sits just below them. Previously absent, it fell through to the
+ * least-specific rank (tied with `speeches` and any unknown shelf); harmless while Pius X
+ * carried only one exhortation, but Pius XII carries eight, so an arbitrary tie-break here
+ * could pick a same-date cross-shelf collision's winner arbitrarily in `keepMoreSpecific`.
+ */
 const SHELF_SPECIFICITY = [
   'encyclicals', 'apost_constitutions', 'apost_letters', 'bulls',
-  'briefs', 'motu_proprio', 'letters', 'speeches',
+  'briefs', 'motu_proprio', 'apost_exhortations', 'letters', 'speeches',
 ];
+/**
+ * Benedict XV hyphenates 'apost-constitutions' (spec §2.5) -- the same genre as
+ * 'apost_constitutions' (see genres.ts), so it must rank identically, not fall through to
+ * the least-specific default. Task 12 review: before this alias existed, the hyphenated
+ * shelf ranked as unrecognised (tied with `speeches`), so `bulls` silently outranked it in
+ * both of Benedict XV's apost-constitutions/bulls same-incipit-or-duplicate merges
+ * ('Incruentum Altaris' and 'Bracarensis'/'Sedis huius') -- losing
+ * `characteristics: ['apostolic-constitution']` on the surviving record even though the
+ * underlying act genuinely is an apostolic constitution. See the merged-record
+ * characteristic test in harvest-data.test.ts.
+ */
+const SHELF_ALIASES: Record<string, string> = { 'apost-constitutions': 'apost_constitutions' };
 const rank = (shelf: string | null) => {
   // A flat-era (null) shelf and an unrecognised one both fall through to the same
   // least-specific rank; indexOf's own -1-for-not-found already covers a null shelf
   // once it is fed the empty string, so no separate branch is needed for it.
-  const i = SHELF_SPECIFICITY.indexOf(shelf ?? '');
+  const canonical = SHELF_ALIASES[shelf ?? ''] ?? (shelf ?? '');
+  const i = SHELF_SPECIFICITY.indexOf(canonical);
   return i === -1 ? SHELF_SPECIFICITY.length : i;
 };
 
@@ -31,7 +58,9 @@ function keepMoreSpecific(a: HarvestItem, b: HarvestItem): HarvestItem {
   const seen = new Set([...(keep.alsoShelvedAs ?? []), ...(drop.alsoShelvedAs ?? [])]);
   if (drop.shelf) seen.add(drop.shelf);
   const aliases = new Set([...(keep.aliases ?? []), ...(drop.aliases ?? [])]);
-  if (slugify(drop.incipit) !== slugify(keep.incipit)) aliases.add(drop.incipit);
+  if (slugify(drop.incipit ?? drop.title) !== slugify(keep.incipit ?? keep.title)) {
+    aliases.add(drop.incipit ?? drop.title);
+  }
   return {
     ...keep,
     alsoShelvedAs: [...seen].sort(),
@@ -54,12 +83,21 @@ const RETRIEVED = process.env.RETRIEVED ?? FIXTURES_RETRIEVED;
 const fixture = (n: string) => readFileSync(`tools/fixtures/${n}.html`, 'utf8');
 
 const items: HarvestItem[] = [];
-for (const pope of PILOT_POPES) {
+for (const pope of POPES) {
   if (pope.era === 'flat') {
     items.push(...parseFlatIndex(fixture(pope.pageSlug), pope.pageSlug));
   } else {
-    for (const shelf of SHELVES) {
-      items.push(...parseShelfIndex(fixture(`${pope.pageSlug}-${shelf}`), pope.pageSlug, shelf));
+    for (const shelf of pope.shelves) {
+      const index = fixture(`${pope.pageSlug}-${shelf}`);
+      const pages = resolveShelfPages(index, shelf);
+      if (pages.kind === 'aggregate') {
+        items.push(...parseShelfIndex(index, pope.pageSlug, shelf));
+      } else {
+        for (const year of pages.years) {
+          items.push(...parseShelfIndex(
+            fixture(`${pope.pageSlug}-${shelf}-${year}`), pope.pageSlug, shelf));
+        }
+      }
     }
   }
 }
@@ -70,7 +108,7 @@ for (const pope of PILOT_POPES) {
 // DATE_CORRECTIONS keys on the *printed* date (what the adapters emit above);
 // CONCILIAR_REASSIGNMENTS (applied later, in toDocument) keys on the *corrected* one.
 for (const [i, item] of items.entries()) {
-  const correctionKey = `${item.pageSlug}|${item.shelf}|${slugify(item.incipit)}|${item.date}`;
+  const correctionKey = `${item.pageSlug}|${item.shelf}|${slugify(item.incipit ?? item.title)}|${item.date}`;
   const correction = DATE_CORRECTIONS[correctionKey];
   if (correction) items[i] = { ...item, date: correction.date };
 }
@@ -78,10 +116,27 @@ for (const [i, item] of items.entries()) {
 // The vatican.va shelves are not disjoint. Pass 1: a document filed under the same
 // incipit and date on two shelves (seven Leo XIII cases) merges on (pageSlug, incipit-slug,
 // date). Keep the most specific shelf and remember the rest.
+//
+// The merge key deliberately omits shelf, since its whole purpose is to catch the same
+// act filed twice *across* shelves. But that means two genuinely distinct documents
+// sharing (pageSlug, incipit-slug, date) on the *same* shelf collide here too -- and
+// keepMoreSpecific, seeing equal shelf rank, silently keeps whichever was seen first in
+// iteration order and drops the other with no trace (review finding, 2026-09-07; this is
+// the mechanism the BARE_GENRE_SLUGS 'sub-plumbo' entry patches around for the three
+// "sub plumbo" cardinalatial-title erections that would otherwise all collide on this
+// same key). Warn whenever the two colliding items share a shelf, so a same-shelf
+// collision is never mistaken for the intentional cross-shelf case this pass exists for.
 const merged = new Map<string, HarvestItem>();
 for (const item of items) {
-  const key = `${item.pageSlug}|${slugify(item.incipit)}|${item.date}`;
+  const key = `${item.pageSlug}|${slugify(item.incipit ?? item.title)}|${item.date}`;
   const held = merged.get(key);
+  if (held && held.shelf === item.shelf) {
+    console.warn(
+      `Same-shelf merge collision on ${item.pageSlug}/${item.shelf ?? 'flat'} (${item.date}): `
+      + `'${held.incipit ?? held.title}' and '${item.incipit ?? item.title}' share a merge `
+      + 'key -- one is being silently dropped unless genuinely a duplicate',
+    );
+  }
   merged.set(key, held ? keepMoreSpecific(item, held) : item);
 }
 
@@ -109,9 +164,9 @@ for (const [key1, item] of merged) {
 // between a dup-table hit and its untouched merge partner.
 const mergedByDuplicateTable = new Map<string, HarvestItem>();
 for (const item of mergedByUrlSlug.values()) {
-  const dupKey = `${item.pageSlug}|${item.shelf}|${slugify(item.incipit)}|${item.date}`;
+  const dupKey = `${item.pageSlug}|${item.shelf}|${slugify(item.incipit ?? item.title)}|${item.date}`;
   const dup = DUPLICATE_MERGES[dupKey];
-  const canonicalIncipit = dup ? dup.mergeIntoIncipit : item.incipit;
+  const canonicalIncipit = dup ? dup.mergeIntoIncipit : (item.incipit ?? item.title);
   const key3 = `${item.pageSlug}|${slugify(canonicalIncipit)}|${item.date}`;
   const held = mergedByDuplicateTable.get(key3);
   mergedByDuplicateTable.set(key3, held ? keepMoreSpecific(item, held) : item);
@@ -135,25 +190,83 @@ for (const group of byPageDate.values()) {
       const a = group[i]!, b = group[j]!;
       if (a.shelf === b.shelf) continue;
       // Check if this pair is adjudicated as genuinely distinct (and should not warn)
-      const slugA = slugify(a.incipit);
-      const slugB = slugify(b.incipit);
+      const slugA = slugify(a.incipit ?? a.title);
+      const slugB = slugify(b.incipit ?? b.title);
       // Key uses sorted order of incipits to ensure consistent lookup
       const [slug1, slug2] = slugA < slugB ? [slugA, slugB] : [slugB, slugA];
       const adjudicatedKey = `${a.pageSlug}|${a.date}|${slug1}|${slug2}`;
       if (ADJUDICATED_DISTINCT[adjudicatedKey]) continue;
       console.warn(
         `Unmerged same-date cross-shelf pair on ${a.pageSlug} (${a.date}): `
-        + `'${a.incipit}' (${a.shelf}) vs '${b.incipit}' (${b.shelf})`,
+        + `'${a.incipit ?? a.title}' (${a.shelf}) vs '${b.incipit ?? b.title}' (${b.shelf})`,
       );
     }
   }
 }
 
+// Circumscription erections filed under a bare Latin toponym with no textual marker
+// (Paul VI, John Paul II, Benedict XVI, Pius XII) cannot be tagged from the index page --
+// only flagged for a human to confirm into CIRCUMSCRIPTION_ERECTIONS (spec §4.5). This
+// warns; it never writes a keyword itself (that happens, if at all, in toDocument via
+// keywordsFor, driven only by the heading text or the curated table).
+const candidates = [...mergedByDuplicateTable.values()].filter(isErectionCandidate);
+for (const c of candidates) {
+  console.warn(
+    `Circumscription-erection candidate ${c.pageSlug} ${c.shelf} ${c.date}: '${c.title}'`,
+  );
+}
+if (candidates.length) {
+  console.warn(`  ${candidates.length} candidates await confirmation into CIRCUMSCRIPTION_ERECTIONS`);
+}
+
+const allDocs = [...mergedByDuplicateTable.values()].map((item) => toDocument(item, RETRIEVED));
+
+// Two distinct documents from the same issuer can share both an incipit slug and a year
+// without being duplicates -- e.g. Pius X's two unrelated "Constat apprime" apostolic
+// letters of 1910 (4 May, granting a domestic-prelate title; 21 June, raising Lviv
+// cathedral to a minor basilica). mintId's default year-only suffix then collides; the
+// resolution (spec invariant 11) is to re-mint every id in the colliding group with its
+// full date, which is always unique since pass 1's merge key already includes it.
+// A provisional id already carries its own full date and is never name-based, so it
+// cannot collide the way two minted ids can (its own ordinal pass, below, handles its
+// one collision mode: two of the same genre on the same date). Only minted records
+// participate here.
+const collisionGroups = new Map<string, DocumentRecord[]>();
+for (const doc of allDocs) {
+  if (doc.idStatus !== 'minted') continue;
+  const key = `${issuerLocalPart(doc.issuerId)}|${slugify(doc.incipit ?? doc.title)}|${doc.date.slice(0, 4)}`;
+  collisionGroups.set(key, [...(collisionGroups.get(key) ?? []), doc]);
+}
+for (const group of collisionGroups.values()) {
+  if (group.length < 2) continue;
+  for (const doc of group) {
+    doc.id = mintId(doc.issuerId, doc.incipit ?? doc.title, doc.date, { fullDate: true });
+  }
+}
+
 const byIssuer = new Map<string, DocumentRecord[]>();
-for (const item of mergedByDuplicateTable.values()) {
-  const doc = toDocument(item, RETRIEVED);
+for (const doc of allDocs) {
   const key = issuerLocalPart(doc.issuerId);
   byIssuer.set(key, [...(byIssuer.get(key) ?? []), doc]);
+}
+
+// See ordinals.ts for the ordinal-assignment rules (dense, 1-based, sorted by title).
+for (const docs of byIssuer.values()) {
+  assignProvisionalOrdinals(docs);
+}
+
+// A provisional id names a document the incipit rules could not name -- a curation
+// queue, surfaced loudly rather than silently, one warning per record plus a per-issuer
+// tally.
+for (const [issuer, docs] of byIssuer) {
+  for (const d of docs.filter((d) => d.idStatus === 'provisional')) {
+    console.warn(
+      `Provisional id (no incipit recoverable) ${d.issuerId} `
+      + `${d.source?.shelf ?? 'flat'} ${d.date}: '${d.title}'`,
+    );
+  }
+  const n = docs.filter((d) => d.idStatus === 'provisional').length;
+  if (n > 0) console.warn(`  ${issuer}: ${n} of ${docs.length} provisional`);
 }
 
 // Regenerate from scratch so a stale file from a removed reassignment cannot linger
@@ -161,7 +274,13 @@ for (const item of mergedByDuplicateTable.values()) {
 if (existsSync('data/documents')) rmSync('data/documents', { recursive: true });
 mkdirSync('data/documents', { recursive: true });
 for (const [key, docs] of byIssuer) {
-  docs.sort((a, b) => (a.date === b.date ? a.id.localeCompare(b.id) : a.date.localeCompare(b.date)));
+  // Codepoint order, not locale collation -- see ordinals.ts for why: this sort determines
+  // the byte order of a checked-in data/documents/*.json file, so it must be identical on
+  // every machine and CI runner regardless of ICU data or LANG. `date` (ISO) and `id` are
+  // both plain ASCII, so `<`/`>` is a correct, locale-independent stand-in.
+  docs.sort((a, b) => (a.date === b.date
+    ? (a.id < b.id ? -1 : a.id > b.id ? 1 : 0)
+    : (a.date < b.date ? -1 : a.date > b.date ? 1 : 0)));
   writeFileSync(`data/documents/${key}.json`, JSON.stringify(docs, null, 2) + '\n');
   console.log(`${key}: ${docs.length}`);
 }

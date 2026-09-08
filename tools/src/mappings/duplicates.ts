@@ -36,4 +36,47 @@ export const DUPLICATE_MERGES: Record<string, { mergeIntoIncipit: string; note: 
       'transcriptions, ending with the same dating formula -- "Dal Vaticano, 20 settembre 1887" ' +
       'and "Dal Vaticano li 20 Sett. 1887" -- the second citing ASS vol. XX (1887), pp. 209-215.',
   },
+  'pius-xi|bulls|divini-cultus|1928-12-20': {
+    mergeIntoIncipit: 'Divini cultus sanctitatem',
+    note:
+      'The apost_constitutions record opens (Latin) "Divini cultus sanctitatem tuendi cum ' +
+      'Ecclesia a Conditore Christo munus acceperit..."; the bulls record is the Italian ' +
+      'translation of the very same opening, "Poiché la Chiesa ha ricevuto da Cristo, suo ' +
+      'Fondatore, il mandato di tutelare..." -- both on the same date, both on the same subject ' +
+      '(the restoration and regulation of Gregorian chant and sacred music), one act filed ' +
+      'twice under a fuller and a shortened form of its own incipit.',
+  },
+
+  // Task 12 (Benedict XV). Verified by fetching both records' full text from vatican.va.
+  // Keyed on the bulls record (the less specific shelf, once SHELF_SPECIFICITY correctly
+  // ranks the hyphenated 'apost-constitutions' shelf beside 'apost_constitutions' -- Task
+  // 12 review, run.ts): apost-constitutions now wins keepMoreSpecific, so the surviving
+  // incipit is 'Bracarensis', not 'Sedis huius' as in the original Task 12 harvest.
+  'benedict-xv|bulls|sedis-huius|1919-05-14': {
+    mergeIntoIncipit: 'Bracarensis',
+    note:
+      "The bulls record (Italian, 'Sedis huius') and the apost-constitutions record " +
+      "(Latin, 'Bracarensis') are the same act: both approve the same revised edition of " +
+      'the Bracarense Breviary for the Archdiocese of Braga, addressed to the same ' +
+      "Archbishop (Emmanuele Vieira de Mattos), and close with the same dating formula in " +
+      "each language -- Italian 'Dato a Roma, presso San Pietro, l'anno dell'Incarnazione " +
+      "del Signore 1919, il 14 maggio, Ottava della Solennità di San Giuseppe...anno quinto " +
+      "del Nostro Pontificato' and Latin 'Datum Romae apud sanctum Petrum, anno " +
+      "Incarnationis Dominicae millesimo nongentesimo decimo nono, pridie Idus Maii, die " +
+      "Octava Solemnitatis sancti Ioseph...Pontificatus Nostri anno quinto' -- one act filed " +
+      'twice under its Italian and Latin titles.',
+  },
+  'benedict-xv|briefs|in-africam-quisnam|1920-06-06': {
+    mergeIntoIncipit: 'In Africam',
+    note:
+      "The briefs record ('In Africam quisnam', its own incipit -- see the ', sul ' " +
+      "gloss-connector added in the Task 12 review, incipit-rules.ts) and the apost_letters " +
+      "record ('In Africam') are the same act: both beatify the twenty-two Ugandan martyrs " +
+      '(Charles Lwanga, Matthew Kalemba Murumba and their companions, executed 1885-1887 ' +
+      "under King Muanga), both close 'Datum Romae apud sanctum Petrum sub annulo " +
+      "Piscatoris, die VI mensis iunii anno MCMXX, Pontificatus Nostri sexto' / 'Dato a Roma, " +
+      "presso San Pietro, sotto l'anello del Pescatore, il 6 giugno 1920, anno sesto del " +
+      "Nostro Pontificato' -- one act filed twice under the bare incipit and its fuller " +
+      'printed form.',
+  },
 };

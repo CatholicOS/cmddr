@@ -2,7 +2,6 @@
   {
     "id": "mag:benedict-xiv/ubi-primum-1740",
     "title": "Ubi primum",
-    "incipit": "Ubi primum",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -16,12 +15,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Ubi primum",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/non-ambigimus-1741",
     "title": "Non Ambigimus",
-    "incipit": "Non Ambigimus",
     "idStatus": "minted",
     "genre": "brief",
     "issuerId": "rp:benedict-xiv",
@@ -35,12 +34,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Non Ambigimus",
     "sourceGenreLabel": "Breve"
   },
   {
     "id": "mag:benedict-xiv/pro-eximia-tua-1741",
     "title": "Pro Eximia Tua",
-    "incipit": "Pro Eximia Tua",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -54,12 +53,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Pro Eximia Tua",
     "sourceGenreLabel": "Breve Enciclica"
   },
   {
     "id": "mag:benedict-xiv/quanta-cura-1741",
     "title": "Quanta Cura",
-    "incipit": "Quanta Cura",
     "idStatus": "minted",
     "genre": "brief",
     "issuerId": "rp:benedict-xiv",
@@ -73,12 +72,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Quanta Cura",
     "sourceGenreLabel": "Breve"
   },
   {
     "id": "mag:benedict-xiv/in-suprema-universalis-1741",
     "title": "In Suprema Universalis",
-    "incipit": "In Suprema Universalis",
     "idStatus": "minted",
     "genre": "brief",
     "issuerId": "rp:benedict-xiv",
@@ -92,12 +91,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "In Suprema Universalis",
     "sourceGenreLabel": "Breve"
   },
   {
     "id": "mag:benedict-xiv/quamvis-paternae-1741",
     "title": "Quamvis Paternae",
-    "incipit": "Quamvis Paternae",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -111,12 +110,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Quamvis Paternae",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/satis-vobis-compertum-1741",
     "title": "Satis Vobis Compertum",
-    "incipit": "Satis Vobis Compertum",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -130,12 +129,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Satis Vobis Compertum",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/etsi-minime-1742",
     "title": "Etsi Minime",
-    "incipit": "Etsi Minime",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -149,12 +148,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Etsi Minime",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/certiores-effecti-1742",
     "title": "Certiores Effecti",
-    "incipit": "Certiores Effecti",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -168,12 +167,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Certiores Effecti",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/cum-illud-semper-1742",
     "title": "Cum Illud Semper",
-    "incipit": "Cum Illud Semper",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -187,12 +186,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Cum Illud Semper",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/quemadmodum-preces-1743",
     "title": "Quemadmodum Preces",
-    "incipit": "Quemadmodum Preces",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -206,12 +205,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Quemadmodum Preces",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/nimiam-licentiam-1743",
     "title": "Nimiam Licentiam",
-    "incipit": "Nimiam Licentiam",
     "idStatus": "minted",
     "genre": "brief",
     "issuerId": "rp:benedict-xiv",
@@ -225,12 +224,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Nimiam Licentiam",
     "sourceGenreLabel": "Breve"
   },
   {
     "id": "mag:benedict-xiv/inter-omnigenas-1744",
     "title": "Inter Omnigenas",
-    "incipit": "Inter Omnigenas",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -244,12 +243,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Inter Omnigenas",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/cum-semper-oblatas-1744",
     "title": "Cum Semper Oblatas",
-    "incipit": "Cum Semper Oblatas",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -263,12 +262,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Cum Semper Oblatas",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/in-suprema-catholicae-1744",
     "title": "In Suprema Catholicae",
-    "incipit": "In Suprema Catholicae",
     "idStatus": "minted",
     "genre": "brief",
     "issuerId": "rp:benedict-xiv",
@@ -282,12 +281,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "In Suprema Catholicae",
     "sourceGenreLabel": "Breve"
   },
   {
     "id": "mag:benedict-xiv/cum-multorum-charitate-1745",
     "title": "Cum Multorum Charitate",
-    "incipit": "Cum Multorum Charitate",
     "idStatus": "minted",
     "genre": "brief",
     "issuerId": "rp:benedict-xiv",
@@ -301,12 +300,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Cum Multorum Charitate",
     "sourceGenreLabel": "Breve"
   },
   {
     "id": "mag:benedict-xiv/libentissime-quidem-1745",
     "title": "Libentissime Quidem",
-    "incipit": "Libentissime Quidem",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -320,12 +319,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Libentissime Quidem",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/gravissimum-supremi-1745",
     "title": "Gravissimum Supremi",
-    "incipit": "Gravissimum Supremi",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -339,12 +338,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Gravissimum Supremi",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/vix-pervenit-1745",
     "title": "Vix Pervenit",
-    "incipit": "Vix Pervenit",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -358,12 +357,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Vix Pervenit",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/accepimus-praestantium-1746",
     "title": "Accepimus Praestantium",
-    "incipit": "Accepimus Praestantium",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -377,12 +376,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Accepimus Praestantium",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/quemadmodum-nihil-1746",
     "title": "Quemadmodum Nihil",
-    "incipit": "Quemadmodum Nihil",
     "idStatus": "minted",
     "genre": "brief",
     "issuerId": "rp:benedict-xiv",
@@ -396,12 +395,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Quemadmodum Nihil",
     "sourceGenreLabel": "Breve"
   },
   {
     "id": "mag:benedict-xiv/inter-caetera-1748",
     "title": "Inter Caetera",
-    "incipit": "Inter Caetera",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -415,12 +414,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Inter Caetera",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/magnae-nobis-1748",
     "title": "Magnae Nobis",
-    "incipit": "Magnae Nobis",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -434,12 +433,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Magnae Nobis",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/annus-qui-hunc-1749",
     "title": "Annus Qui Hunc",
-    "incipit": "Annus Qui Hunc",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -453,12 +452,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Annus Qui Hunc",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/officii-nostri-1749",
     "title": "Officii Nostri",
-    "incipit": "Officii Nostri",
     "idStatus": "minted",
     "genre": "papal-bull",
     "issuerId": "rp:benedict-xiv",
@@ -472,12 +471,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Officii Nostri",
     "sourceGenreLabel": "Bolla"
   },
   {
     "id": "mag:benedict-xiv/peregrinantes-a-domino-1749",
     "title": "Peregrinantes a Domino",
-    "incipit": "Peregrinantes a Domino",
     "idStatus": "minted",
     "genre": "papal-bull",
     "issuerId": "rp:benedict-xiv",
@@ -491,12 +490,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Peregrinantes a Domino",
     "sourceGenreLabel": "Bolla"
   },
   {
     "id": "mag:benedict-xiv/apostolica-constitutio-1749",
     "title": "Apostolica Constitutio",
-    "incipit": "Apostolica Constitutio",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -510,12 +509,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Apostolica Constitutio",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/gravissimo-animi-1749",
     "title": "Gravissimo Animi",
-    "incipit": "Gravissimo Animi",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -529,12 +528,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Gravissimo Animi",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/inter-praeteritos-1749",
     "title": "Inter praeteritos",
-    "incipit": "Inter praeteritos",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -548,12 +547,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Inter praeteritos",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/benedictus-deus-1750",
     "title": "Benedictus Deus",
-    "incipit": "Benedictus Deus",
     "idStatus": "minted",
     "genre": "papal-bull",
     "issuerId": "rp:benedict-xiv",
@@ -567,12 +566,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Benedictus Deus",
     "sourceGenreLabel": "Bolla"
   },
   {
     "id": "mag:benedict-xiv/celebrationem-magni-1751",
     "title": "Celebrationem Magni",
-    "incipit": "Celebrationem Magni",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -586,12 +585,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Celebrationem Magni",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/prodiit-jamdudum-1751",
     "title": "Prodiit Jamdudum",
-    "incipit": "Prodiit Jamdudum",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -605,12 +604,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Prodiit Jamdudum",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/elapso-proxime-anno-1751",
     "title": "Elapso Proxime Anno",
-    "incipit": "Elapso Proxime Anno",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -624,12 +623,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Elapso Proxime Anno",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/providas-romanorum-1751",
     "title": "Providas Romanorum",
-    "incipit": "Providas Romanorum",
     "idStatus": "minted",
     "genre": "papal-bull",
     "issuerId": "rp:benedict-xiv",
@@ -643,12 +642,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Providas Romanorum",
     "sourceGenreLabel": "Bolla"
   },
   {
     "id": "mag:benedict-xiv/magno-cum-animi-1751",
     "title": "Magno Cum Animi",
-    "incipit": "Magno Cum Animi",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -662,12 +661,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Magno Cum Animi",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/a-quo-primum-1751",
     "title": "A Quo Primum",
-    "incipit": "A Quo Primum",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -681,12 +680,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "A Quo Primum",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/cum-religiosi-aeque-1754",
     "title": "Cum Religiosi Aeque",
-    "incipit": "Cum Religiosi Aeque",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -700,12 +699,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Cum Religiosi Aeque",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/quod-provinciale-1754",
     "title": "Quod Provinciale",
-    "incipit": "Quod Provinciale",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -719,12 +718,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Quod Provinciale",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/allatae-sunt-1755",
     "title": "Allatae Sunt",
-    "incipit": "Allatae Sunt",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -738,12 +737,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Allatae Sunt",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/quam-ex-sublimi-1755",
     "title": "Quam Ex Sublimi",
-    "incipit": "Quam Ex Sublimi",
     "idStatus": "minted",
     "genre": "brief",
     "issuerId": "rp:benedict-xiv",
@@ -757,12 +756,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Quam Ex Sublimi",
     "sourceGenreLabel": "Breve"
   },
   {
     "id": "mag:benedict-xiv/ex-quo-primum-1756",
     "title": "Ex Quo Primum",
-    "incipit": "Ex Quo Primum",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -776,12 +775,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Ex Quo Primum",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/ex-omnibus-christiani-1756",
     "title": "Ex Omnibus Christiani",
-    "incipit": "Ex Omnibus Christiani",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -795,12 +794,12 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Ex Omnibus Christiani",
     "sourceGenreLabel": "Enciclica"
   },
   {
     "id": "mag:benedict-xiv/quam-grave-1757",
     "title": "Quam Grave",
-    "incipit": "Quam Grave",
     "idStatus": "minted",
     "genre": "encyclical",
     "issuerId": "rp:benedict-xiv",
@@ -814,6 +813,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Quam Grave",
     "sourceGenreLabel": "Enciclica"
   }
 ]

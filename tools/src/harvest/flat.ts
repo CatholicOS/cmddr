@@ -43,14 +43,27 @@ export function parseFlatIndex(html: string, pageSlug: string): HarvestItem[] {
 
     const full = $h2.text().replace(/\s+/g, ' ').trim();
     const parenIdx = full.lastIndexOf('(');
-    if (parenIdx === -1) return;
+    if (parenIdx === -1) {
+      // Silent loss is this pipeline's worst failure mode (see shelf.ts's equivalent
+      // drop warnings, review finding 2026-09-08): a heading with no parenthetical at all
+      // has no date to parse, so it cannot be harvested, but a human should see it rather
+      // than the item vanishing with no trace.
+      console.warn(`Dropping '${full}' (${pageSlug}): no '(' found, so no date to parse`);
+      return;
+    }
     const date = parseSourceDate(full.slice(parenIdx));
-    if (!date) return;
+    if (!date) {
+      console.warn(`Dropping '${full}' (${pageSlug}): no parseable printed date`);
+      return;
+    }
 
     const italic = $h2.find('i').first().text().replace(/\s+/g, ' ').trim();
     const split = splitGenreAndIncipit(full);
     const incipit = italic || split.incipit;
-    if (!incipit) return;
+    if (!incipit) {
+      console.warn(`Dropping '${full}' (${pageSlug}): no incipit recovered`);
+      return;
+    }
 
     const cut = italic ? full.indexOf(italic) : -1;
     const sourceGenreLabel = (italic && cut > 0 ? full.slice(0, cut) : split.genre).trim();
@@ -59,6 +72,7 @@ export function parseFlatIndex(html: string, pageSlug: string): HarvestItem[] {
     const languages = extractLanguages($, $item);
 
     items.push({
+      title: incipit,
       incipit,
       date,
       sourceGenreLabel,

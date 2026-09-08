@@ -1,0 +1,508 @@
+[
+  {
+    "id": "mag:leo-xiv/verba-christi-2025",
+    "title": "Verba Christi: Costituzione Apostolica con la quale il Santo Padre eleva la Diocesi di São José do Rio Preto al rango di Arcidiocesi Metropolitana",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-05-22",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/la/apost_constitutions/documents/20250522-verba-christi.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Verba Christi",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-elevation"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:leo-xiv/sinensium-dominici-gregis-2025",
+    "title": "Sinensium Dominici gregis: papa Leone XIV erige in Cina la Diocesi di Zhangjiakou",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-07-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/la/apost_constitutions/documents/20250708-sinensium-dominici-gregis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sinensium Dominici gregis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:leo-xiv/illa-sectanda-caritas-2025",
+    "title": "Illa sectanda caritas: papa Leone XIV erige la Diocesi di Kapsabet in Kenya",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-07-10",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/la/apost_constitutions/documents/20250710-illa-sectanda-caritas.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Illa sectanda caritas",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:leo-xiv/libenter-ac-sedula-2025",
+    "title": "Libenter ac sedula: papa Leone XIV erige la Diocesi di Stella Maris (Santo Domingo)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-08-27",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/la/apost_constitutions/documents/20250827-libenter-ac-sedula.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Libenter ac sedula",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:leo-xiv/coniuncta-cura-2025",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» \"Coniuncta cura\" del Sommo Pontefice Leone XIV",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-09-29",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/apost_letters/documents/20250929-coniuncta-cura.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Coniuncta cura",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:leo-xiv/norme-applicabili-2025",
+    "title": "Norme applicabili alla Fabbrica di San Pietro e al Capitolo della Basilica Papale di Santa Maria Maggiore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-09-29",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/apost_letters/documents/20250929-la-riforma-economica.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Norme applicabili",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:leo-xiv/dilexi-te-2025",
+    "title": "Esortazione Apostolica Dilexi te del Santo Padre Leone XIV, sull’amore verso i poveri",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-10-04",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/apost_exhortations/documents/20251004-dilexi-te.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Dilexi te",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:leo-xiv/disegnare-nuove-mappe-di-speranza-2025",
+    "title": "Lettera Apostolica \"Disegnare nuove mappe di speranza\" in occasione del LX anniversario della Dichiarazione conciliare \"Gravissimum educationis\"",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-10-27",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/apost_letters/documents/20251027-disegnare-nuove-mappe.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "BE",
+        "EN",
+        "ES",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Disegnare nuove mappe di speranza",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:leo-xiv/immota-manet-2025",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» Immota manet, sul Settore Centro della Diocesi di Roma",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-11-11",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/apost_letters/documents/20251111-immota-manet.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Immota manet",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:leo-xiv/apostolic-letter-2025-11-19",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» del Sommo Pontefice Leone XIV sulla composizione e Presidenza della Pontificia Commissione per lo Stato della Città del Vaticano",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-11-19",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/apost_letters/documents/20251119-il-governatorato.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "ES",
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:leo-xiv/in-unitate-fidei-2025",
+    "title": "Lettera Apostolica \"In unitate fidei\" nel 1700° anniversario del Concilio di Nicea",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-11-23",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/apost_letters/documents/20251123-in-unitate-fidei.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "In unitate fidei",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:leo-xiv/regolamento-del-personale-della-curia-romana-2025",
+    "title": "Regolamento del Personale della Curia Romana",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-11-23",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/motu_proprio/documents/20251123-regolamento-personale-curia-romana.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Regolamento del Personale della Curia Romana",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:leo-xiv/regolamento-generale-della-curia-romana-2025",
+    "title": "Regolamento Generale della Curia Romana",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-11-23",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/motu_proprio/documents/20251123-regolamento-generale-curia-romana.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Regolamento Generale della Curia Romana",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:leo-xiv/una-fedelta-che-genera-futuro-2025",
+    "title": "Lettera Apostolica Una fedeltà che genera futuro, in occasione del LX Anniversario dei Decreti Conciliari Optatam Totius e Presbyterorum Ordinis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/apost_letters/documents/20251208-una-fedelta.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Una fedeltà che genera futuro",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:leo-xiv/apostolic-letter-2025-12-11",
+    "title": "Lettera Apostolica del Santo Padre sull'importanza dell'Archeologia in occasione del Centenario del Pontificio Istituto di Archeologia Cristiana",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-12-11",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/apost_letters/documents/20251211-nel-centenario-piac.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:leo-xiv/mandatum-christi-2025",
+    "title": "Mandatum Christi: il Santo Padre ha eretto in Mozambico la Diocesi di Caia",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-12-23",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/la/apost_constitutions/documents/20251223-mandatum-christi.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Mandatum Christi",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:leo-xiv/ad-quem-diligere-2026",
+    "title": "Ad quem diligere: il Santo Padre ha eretto la Diocesi di Baturité in Brasile",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2026-01-01",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/la/apost_constitutions/documents/20260101-ad-quem-diligere.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad quem diligere",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:leo-xiv/suavis-nutrix-animarum-2026",
+    "title": "Suavis Nutrix animarum: Il Santo Padre ha eretto la Diocesi di Bariadi in Tanzania",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2026-01-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/la/apost_constitutions/documents/20260108-suavis-nutrix.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Suavis Nutrix animarum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:leo-xiv/magnifica-humanitas-2026",
+    "title": "Lettera Enciclica \"Magnifica Humanitas\" di Papa Leone XIV sulla custodia della persona umana nel tempo dell’intelligenza artificiale",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2026-05-15",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/encyclicals/documents/20260515-magnifica-humanitas.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "RU"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Magnifica Humanitas",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:leo-xiv/apostolic-letter-2026-06-24",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» sulla revisione della Costituzione Apostolica In Ecclesiarum Communione",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2026-06-24",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/apost_letters/documents/20260624-confirma-fratres-tuos.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:leo-xiv/mutua-concordia-2026",
+    "title": "Lettera Apostolica in forma di “Motu Proprio” Mutua Concordia del Sommo Pontefice Leone XIV con la quale vengono modificati i Canoni 106 e 126 del Codex Canonum Ecclesiarum Orientalium",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2026-08-29",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/apost_letters/documents/20260829-mutua-concordia.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Mutua Concordia",
+    "sourceGenreLabel": "apost_letters"
+  }
+]

@@ -1,8 +1,9 @@
 import { describe, it, expect } from 'vitest';
 import {
-  VATICAN_SLUG_TO_ISSUER, PILOT_POPES, SHELVES,
+  VATICAN_SLUG_TO_ISSUER, POPES, shelvesFor,
   SOURCE_GENRE_TO_GENRE, CONCILIAR_REASSIGNMENTS,
   KNOWN_PONTIFF_IDS, KNOWN_COUNCIL_IDS,
+  DATE_CORRECTIONS, DUPLICATE_MERGES, ADJUDICATED_DISTINCT, CIRCUMSCRIPTION_ERECTIONS,
 } from '../src/mappings/index.js';
 
 describe('vendored registries', () => {
@@ -19,6 +20,7 @@ describe('pontiff slug mapping', () => {
     expect(VATICAN_SLUG_TO_ISSUER['benedictus-xiv']).toBe('rp:benedict-xiv');
     expect(VATICAN_SLUG_TO_ISSUER['pius-ix']).toBe('rp:pius-ix');
     expect(VATICAN_SLUG_TO_ISSUER['leo-xiii']).toBe('rp:leo-xiii');
+    expect(VATICAN_SLUG_TO_ISSUER['pius-x']).toBe('rp:pius-x');
   });
 
   it('maps every mapped slug onto a real pontiff id', () => {
@@ -27,12 +29,62 @@ describe('pontiff slug mapping', () => {
     }
   });
 
-  it('describes the pilot corpus and its eras', () => {
-    expect(PILOT_POPES.map((p) => p.pageSlug))
-      .toEqual(['benedictus-xiv', 'pius-ix', 'leo-xiii']);
-    expect(PILOT_POPES.find((p) => p.pageSlug === 'leo-xiii')!.era).toBe('shelf');
-    expect(PILOT_POPES.find((p) => p.pageSlug === 'pius-ix')!.era).toBe('flat');
-    expect(SHELVES).toHaveLength(8);
+});
+
+describe('the POPES table', () => {
+  it('describes each pope page, its era and its own shelf list', () => {
+    expect(POPES.map((p) => p.pageSlug))
+      .toEqual([
+        'benedictus-xiv', 'pius-ix', 'leo-xiii', 'pius-x', 'pius-xi', 'pius-xii', 'benedict-xv',
+        'john-xxiii', 'paul-vi', 'john-paul-i', 'john-paul-ii', 'benedict-xvi', 'francesco',
+        'leo-xiv',
+      ]);
+    expect(POPES.find((p) => p.pageSlug === 'leo-xiii')!.era).toBe('shelf');
+    expect(POPES.find((p) => p.pageSlug === 'pius-ix')!.era).toBe('flat');
+    expect(POPES.find((p) => p.pageSlug === 'pius-x')!.era).toBe('shelf');
+  });
+
+  it('gives the flat-era popes no shelves', () => {
+    for (const slug of ['benedictus-xiv', 'pius-ix']) {
+      expect(shelvesFor(slug)).toEqual([]);
+    }
+  });
+
+  it("keeps Leo XIII's eight shelves exactly as harvested", () => {
+    expect(shelvesFor('leo-xiii')).toEqual([
+      'apost_constitutions', 'apost_letters', 'briefs', 'bulls',
+      'encyclicals', 'letters', 'motu_proprio', 'speeches',
+    ]);
+  });
+
+  it("keeps Pius X's six shelves, without bulls, briefs or speeches", () => {
+    expect(shelvesFor('pius-x')).toEqual([
+      'apost_constitutions', 'apost_exhortations', 'apost_letters',
+      'encyclicals', 'letters', 'motu_proprio',
+    ]);
+  });
+
+  it("keeps Pius XI's seven shelves, without apost_exhortations or speeches", () => {
+    expect(shelvesFor('pius-xi')).toEqual([
+      'apost_constitutions', 'apost_letters', 'briefs', 'bulls',
+      'encyclicals', 'letters', 'motu_proprio',
+    ]);
+  });
+
+  it("keeps Pius XII's eight shelves, without speeches (year-partitioned, spec §2.7)", () => {
+    expect(shelvesFor('pius-xii')).toEqual([
+      'apost_constitutions', 'apost_exhortations', 'apost_letters', 'briefs', 'bulls',
+      'encyclicals', 'letters', 'motu_proprio',
+    ]);
+  });
+
+  it('derives the slug->issuer map from the table, so the two cannot disagree', () => {
+    expect(Object.keys(VATICAN_SLUG_TO_ISSUER).sort()).toEqual(POPES.map((p) => p.pageSlug).sort());
+    for (const p of POPES) expect(VATICAN_SLUG_TO_ISSUER[p.pageSlug]).toBe(p.issuerId);
+  });
+
+  it('returns an empty shelf list for an unknown slug rather than throwing', () => {
+    expect(shelvesFor('not-a-pope')).toEqual([]);
   });
 });
 
@@ -71,5 +123,39 @@ describe('conciliar reassignments', () => {
       .toEqual({ issuerId: 'oec:vatican-i', promulgatedBy: 'rp:pius-ix' });
     expect(CONCILIAR_REASSIGNMENTS['pius-ix|pastor-aeternus|1870-07-18'])
       .toEqual({ issuerId: 'oec:vatican-i', promulgatedBy: 'rp:pius-ix' });
+  });
+});
+
+/**
+ * The cardinal rule of every curated table in this project: an entry is evidence, cited in
+ * its own note, or it does not exist (spec's standing rule; see incipit-rules.ts's own
+ * deletion notes for the discipline this enforces). data/keywords.json already has this
+ * check (keywords-data.test.ts); this is its counterpart for every hand-curated TypeScript
+ * table that carries a `note` field, so a future entry cannot be added without one slipping
+ * past review (review finding, 2026-09-07).
+ */
+describe('every curated table entry carries a non-empty note', () => {
+  it('DATE_CORRECTIONS', () => {
+    for (const [key, entry] of Object.entries(DATE_CORRECTIONS)) {
+      expect(entry.note, key).toBeTruthy();
+    }
+  });
+
+  it('DUPLICATE_MERGES', () => {
+    for (const [key, entry] of Object.entries(DUPLICATE_MERGES)) {
+      expect(entry.note, key).toBeTruthy();
+    }
+  });
+
+  it('ADJUDICATED_DISTINCT', () => {
+    for (const [key, entry] of Object.entries(ADJUDICATED_DISTINCT)) {
+      expect(entry.note, key).toBeTruthy();
+    }
+  });
+
+  it('CIRCUMSCRIPTION_ERECTIONS', () => {
+    for (const [key, entry] of Object.entries(CIRCUMSCRIPTION_ERECTIONS)) {
+      expect(entry.note, key).toBeTruthy();
+    }
   });
 });

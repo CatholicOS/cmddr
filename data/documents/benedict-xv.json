@@ -1,0 +1,1289 @@
+[
+  {
+    "id": "mag:benedict-xv/ubi-primum-1914",
+    "title": "Ubi Primum a tutti i cattolici del mondo",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1914-09-08",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/apost_exhortations/documents/hf_ben-xv_exh_19140908_ubi-primum.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ubi Primum",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:benedict-xv/ad-beatissimi-apostolorum-1914",
+    "title": "Ad Beatissimi Apostolorum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1914-11-01",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/encyclicals/documents/hf_ben-xv_enc_01111914_ad-beatissimi-apostolorum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad Beatissimi Apostolorum",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:benedict-xv/consilium-a-decessore-1914",
+    "title": "Consilium a Decessore con il quale la Commissione per la revisione della versione «Vulgata » dei Libri Sacri viene onorata del titolo di « Pontificia »",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1914-11-23",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/motu_proprio/documents/hf_ben-xv_motu-proprio_19141123_consilium-a-decessore.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Consilium a Decessore",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xv/non-multo-post-1914",
+    "title": "Non multo post con il quale vengono impartite nuove regole relative agli studi ed agli esami di dottrina che gli alunni dovranno sostenere per conseguire la laurea di dottore e l’iscrizione fra i membri dell’Accademia romana di San Tommaso d’Aquino",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1914-12-31",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/motu_proprio/documents/hf_ben-xv_motu-proprio_19141231_non-multo-post.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Non multo post",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xv/allorche-fummo-chiamati-1915",
+    "title": "Allorché fummo chiamati, ai popoli belligeranti e ai loro reggitori nel primo anniversario dello scoppio della guerra",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1915-07-28",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/apost_exhortations/documents/hf_ben-xv_exh_19150728_fummo-chiamati.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "DE",
+        "EN",
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Allorché fummo chiamati",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:benedict-xv/incruentum-altaris-1915",
+    "title": "Incruentum Altaris",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1915-08-10",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/apost-constitutions/documents/hf_ben-xv_bulls_19150810_incruentum-altaris.html",
+      "shelf": "apost-constitutions",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "bulls"
+      ]
+    },
+    "incipit": "Incruentum Altaris",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost-constitutions"
+  },
+  {
+    "id": "mag:benedict-xv/quandoquidem-in-iis-1915",
+    "title": "Quandoquidem in iis con il quale si ribadisce che dovranno essere sottoposti all’esame della Suprema Congregazione del Santo Ufficio soltanto i documenti relativi alle Indulgenze che siano concesse ai fedeli di tutto il mondo cattolico",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1915-09-16",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/motu_proprio/documents/hf_ben-xv_motu-proprio_19150916_quandoquidem-in-iis.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quandoquidem in iis",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xv/seminaria-clericorum-1915",
+    "title": "Seminaria Clericorum con il quale si dispone la nascita della Sacra Congregazione dei Seminari e delle Università degli studi",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1915-11-04",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/motu_proprio/documents/hf_ben-xv_motu-proprio_19151104_seminaria-clericorum.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Seminaria Clericorum",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xv/divinum-praeceptum-1915",
+    "title": "Divinum Praeceptum con il quale si concede al Seminario Arcivescovile di Buenos Aires il potere di conferire titoli accademici in Filosofia e Sacra Teologia",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1915-12-23",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/briefs/documents/hf_ben-xv_briefs_19151223_divinum-praeceptum.html",
+      "shelf": "briefs",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Divinum Praeceptum",
+    "sourceGenreLabel": "briefs"
+  },
+  {
+    "id": "mag:benedict-xv/romanorum-pontificum-1916",
+    "title": "Romanorum Pontificum con il quale vengono concesse particolari indulgenze ai fedeli che, nell’ambito di specifiche pratiche di pietà, invocheranno da Dio la concordia dei Governanti Cristiani, l’estirpazione delle eresie e la conversione dei peccatori",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1916-02-25",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/briefs/documents/hf_ben-xv_briefs_19160225_romanorum-pontificum.html",
+      "shelf": "briefs",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Romanorum Pontificum",
+    "sourceGenreLabel": "briefs"
+  },
+  {
+    "id": "mag:benedict-xv/cum-catholicae-ecclesiae-1916",
+    "title": "Cum Catholicae Ecclesiae con il quale si intende agevolare l’unione dei Cristiani d’Oriente alla Chiesa di Roma",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1916-04-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/briefs/documents/hf_ben-xv_briefs_19160415_catholicae-ecclesiae.html",
+      "shelf": "briefs",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum Catholicae Ecclesiae",
+    "sourceGenreLabel": "briefs"
+  },
+  {
+    "id": "mag:benedict-xv/cum-biblia-sacra-1916",
+    "title": "Cum Biblia Sacra con il quale vengono promulgate le norme che debbono regolare il funzionamento dei tre Istituti di studi biblici operanti in Roma, e i rapporti fra loro intercorrenti",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1916-08-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/briefs/documents/hf_ben-xv_briefs_19160815_biblia-sacra.html",
+      "shelf": "briefs",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum Biblia Sacra",
+    "sourceGenreLabel": "briefs"
+  },
+  {
+    "id": "mag:benedict-xv/centesimo-hodie-1916",
+    "title": "Centesimo Hodie in occasione del primo centenario della fondazione della Milizia Pontificia con il quale il Pontefice onora il vessillo del Corpo decorandolo di due medaglie d’oro",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1916-10-22",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/briefs/documents/hf_ben-xv_briefs_19161022_centesimo-hodie.html",
+      "shelf": "briefs",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Centesimo Hodie",
+    "sourceGenreLabel": "briefs"
+  },
+  {
+    "id": "mag:benedict-xv/cum-centesimus-1916",
+    "title": "Cum Centesimus in occasione del primo centenario della fondazione della Milizia Pontificia",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1916-10-22",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/briefs/documents/hf_ben-xv_briefs_19161022_cum-centesimus.html",
+      "shelf": "briefs",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum Centesimus",
+    "sourceGenreLabel": "briefs"
+  },
+  {
+    "id": "mag:benedict-xv/alloquentes-proxime-1917",
+    "title": "Alloquentes Proxime con il quale si decide la fusione delle Sacre Congregazioni dell’Indice e del Sant’Uffizio e affidata alla Penitenzieria Apostolica la materia riguardante le Indulgenze",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-03-25",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/motu_proprio/documents/hf_ben-xv_motu-proprio_19170325_alloquentes-proxime.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Alloquentes Proxime",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xv/nobilissimam-sacrarum-1917",
+    "title": "Nobilissimam Sacrarum con il quale si dispone l’assegnazione dell’Almo Collegio Capranicense di Roma alla Patriarcale Basilica Liberiana",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-04-08",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/motu_proprio/documents/hf_ben-xv_motu-proprio_19170408_nobilissimam-sacrarum.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Nobilissimam Sacrarum",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xv/quod-ioannes-1917",
+    "title": "Quod Ioannes con il quale viene dichiarata Beata la venerabile serva di Dio Anna di San Bartolomeo",
+    "idStatus": "minted",
+    "genre": "brief",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-04-10",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/briefs/documents/hf_ben-xv_briefs_19170410_quod-ioannes.html",
+      "shelf": "briefs",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod Ioannes",
+    "sourceGenreLabel": "briefs"
+  },
+  {
+    "id": "mag:benedict-xv/dei-providentis-1917",
+    "title": "Dei Providentis con il quale viene istituita la Sacra Congregazione per la Chiesa Orientale",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-05-01",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/motu_proprio/documents/hf_ben-xv_motu-proprio_19170501_dei-providentis.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Dei Providentis",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xv/providentissima-mater-1917",
+    "title": "Providentissima Mater",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-05-27",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/bulls/documents/hf_ben-xv_bulls_19170527_providentissima-mater.html",
+      "shelf": "bulls",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Providentissima Mater",
+    "sourceGenreLabel": "bulls"
+  },
+  {
+    "id": "mag:benedict-xv/humani-generis-redemptionem-1917",
+    "title": "Humani Generis Redemptionem",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-06-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/encyclicals/documents/hf_ben-xv_enc_15061917_humani-generis-redemptionem.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Humani Generis Redemptionem",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:benedict-xv/des-le-debut-1917",
+    "title": "Dès le début ai Capi dei popoli belligeranti invitandoli a trovare la via per una pace «giusta e duratura»",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-08-01",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/apost_exhortations/documents/hf_ben-xv_exh_19170801_des-le-debut.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Dès le début",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:benedict-xv/cum-iuris-canonici-1917",
+    "title": "Cum Iuris Canonici con il quale viene istituita una Commissione di Cardinali alla quale spetta il diritto di pronunciarsi sull’interpretazione autentica dei canoni",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-09-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/motu_proprio/documents/hf_ben-xv_motu-proprio_19170915_cum-iuris-canonici.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum Iuris Canonici",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xv/orientis-catholici-1917",
+    "title": "Orientis Catholici con il quale viene istituito in Roma un Istituto culturale pontificio per l’approfondimento e lo sviluppo degli studi orientali",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-10-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/motu_proprio/documents/hf_ben-xv_motu-proprio_19171015_orientis-catholici.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Orientis Catholici",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xv/quartus-iam-annus-1918",
+    "title": "Quartus Iam Annus con il quale viene disposto che in tutto il mondo il 29 giugno 1918, festa dei Santi Pietro e Paolo, i sacerdoti celebrino la Messa chiedendo espressamente la pace",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1918-05-09",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/motu_proprio/documents/hf_ben-xv_motu-proprio_19180509_quartus-iam-annus.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quartus Iam Annus",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xv/molis-amplitudine-1918",
+    "title": "Molis amplitudine",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1918-08-19",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19180819_molis-amplitudine.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Molis amplitudine",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/affert-ad-nos-1918",
+    "title": "Affert ad Nos",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1918-10-02",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19181002_affert-ad-nos.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Affert ad Nos",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/quod-iam-diu-1918",
+    "title": "Quod Iam Diu",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1918-12-01",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/encyclicals/documents/hf_ben-xv_enc_01121918_quod-iam-diu.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod Iam Diu",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:benedict-xv/bracarensis-1919",
+    "title": "Bracarensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1919-05-14",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost-constitutions/documents/hf_ben-xv_apc_19190514_bracarensis.html",
+      "shelf": "apost-constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "bulls"
+      ]
+    },
+    "incipit": "Bracarensis",
+    "aliases": [
+      "Sedis huius"
+    ],
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost-constitutions"
+  },
+  {
+    "id": "mag:benedict-xv/in-hac-tanta-1919",
+    "title": "In Hac Tanta",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1919-05-14",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/encyclicals/documents/hf_ben-xv_enc_14051919_in-hac-tanta.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "In Hac Tanta",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:benedict-xv/inter-potiores-1919",
+    "title": "Inter potiores",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1919-11-10",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19191110_inter-potiores.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Inter potiores",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/nobis-supremum-1919",
+    "title": "Nobis supremum",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1919-11-19",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19191119_nobis-supremum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Nobis supremum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/paterno-iam-diu-1919",
+    "title": "Paterno Iam Diu",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1919-11-24",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/encyclicals/documents/hf_ben-xv_enc_24111919_paterno-iam-diu.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Paterno Iam Diu",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:benedict-xv/quae-catholico-1919",
+    "title": "Quae catholico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1919-11-26",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19191126_quae-catholico.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quae catholico",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/maximum-illud-1919",
+    "title": "Maximum illud",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1919-11-30",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/apost_letters/documents/hf_ben-xv_apl_19191130_maximum-illud.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Maximum illud",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/ordo-a-divo-1920",
+    "title": "Ordo a divo",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-02-20",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19200220_ordo-a-divo.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ordo a divo",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/treiensis-1920",
+    "title": "Treiensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-02-20",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost-constitutions/documents/hf_ben-xv_apc_19200220_treiensis.html",
+      "shelf": "apost-constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Treiensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost-constitutions"
+  },
+  {
+    "id": "mag:benedict-xv/cracoviae-in-polonia-1920",
+    "title": "Cracoviae in Polonia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-02-23",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19200223_cracoviae-in-polonia.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cracoviae in Polonia",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/inter-potiora-1920",
+    "title": "Inter potiora",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-02-24",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19200224_inter-potiora.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Inter potiora",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/exstat-in-civitate-1920",
+    "title": "Exstat in civitate",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-03-20",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19200320_exstat-in-civitate.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Exstat in civitate",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/quae-catholico-1920",
+    "title": "Quae catholico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-04-16",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19200416_quae-catholico.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quae catholico",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/supremi-apostolatus-1920",
+    "title": "Supremi Apostolatus",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-04-17",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19200417_supremi-apostolatus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Supremi Apostolatus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/religiosas-inter-familias-1920",
+    "title": "Religiosas inter familias",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-05-09",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19200509_religiosas-inter.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Religiosas inter familias",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/divina-disponente-1920",
+    "title": "Divina disponente",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-05-16",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/apost_letters/documents/hf_ben-xv_apl_19200516_divina-disponente.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "bulls"
+      ]
+    },
+    "incipit": "Divina disponente",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/catamarcensis-saltensis-1920",
+    "title": "Catamarcensis-Saltensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-05-22",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost-constitutions/documents/hf_ben-xv_apc_19200522_catamarcensis.html",
+      "shelf": "apost-constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Catamarcensis-Saltensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost-constitutions"
+  },
+  {
+    "id": "mag:benedict-xv/ex-quo-ecclesia-1920",
+    "title": "Ex quo Ecclesia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-05-23",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19200523_ex-quo-ecclesia.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ex quo Ecclesia",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/pacem-dei-munus-pulcherrimum-1920",
+    "title": "Pacem, Dei Munus Pulcherrimum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-05-23",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/encyclicals/documents/hf_ben-xv_enc_23051920_pacem-dei-munus-pulcherrimum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Pacem, Dei Munus Pulcherrimum",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:benedict-xv/quod-habetur-1920",
+    "title": "Quod habetur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-05-30",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19200530_quod-habitur.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod habetur",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/in-africam-1920",
+    "title": "In Africam",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-06-06",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19200606_in-africam.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "briefs"
+      ]
+    },
+    "incipit": "In Africam",
+    "aliases": [
+      "In Africam quisnam"
+    ],
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/martyrum-rigata-1920",
+    "title": "Martyrum rigata",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-06-13",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19200613_martyrum-rigata.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Martyrum rigata",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/inter-americae-1920",
+    "title": "Inter Americae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-06-14",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19200614_inter-americae.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Inter Americae",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/inter-suebiae-1920",
+    "title": "Inter Suebiae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-06-14",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19200614_inter-suebiae.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Inter Suebiae",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/titulum-sancti-1920",
+    "title": "Titulum sancti",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-07-20",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19200720_titulum-sancti.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Titulum sancti",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/bonum-sane-1920",
+    "title": "Bonum Sane, sulla devozione a San Giuseppe da mezzo secolo Patrono della Chiesa cattolica",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-07-25",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/motu_proprio/documents/hf_ben-xv_motu-proprio_19200725_bonum-sane.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Bonum Sane",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xv/tot-inter-1920",
+    "title": "Tot inter",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-08-05",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19200805_tot-inter.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Tot inter",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/cum-in-honorem-1920",
+    "title": "Cum in honorem",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-09-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19200915_cum-in-honorem.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum in honorem",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/spiritus-paraclitus-1920",
+    "title": "Spiritus Paraclitus",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-09-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/encyclicals/documents/hf_ben-xv_enc_15091920_spiritus-paraclitus.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Spiritus Paraclitus",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:benedict-xv/quod-nobis-1920",
+    "title": "Quod nobis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-09-25",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost_letters/documents/hf_ben-xv_apl_19200925_quod-nobis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "briefs"
+      ]
+    },
+    "incipit": "Quod nobis",
+    "aliases": [
+      "Quod nobis in condendo"
+    ],
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/principi-apostolorum-petro-1920",
+    "title": "Principi Apostolorum Petro",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-10-05",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/encyclicals/documents/hf_ben-xv_enc_05101920_principi-apostolorum-petro.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Principi Apostolorum Petro",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:benedict-xv/annus-iam-plenus-1920",
+    "title": "Annus Iam Plenus",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-12-01",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/encyclicals/documents/hf_ben-xv_enc_01121920_annus-iam-plenus.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Annus Iam Plenus",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:benedict-xv/sacra-propediem-1921",
+    "title": "Sacra Propediem",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/encyclicals/documents/hf_ben-xv_enc_06011921_sacra-propediem.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sacra Propediem",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:benedict-xv/in-praeclara-summorum-1921",
+    "title": "In Praeclara Summorum, Lettera Enciclica in occasione del VI centenario della morte di Dante Alighieri",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-04-30",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/encyclicals/documents/hf_ben-xv_enc_30041921_in-praeclara-summorum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "In Praeclara Summorum",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:benedict-xv/fausto-appetente-die-1921",
+    "title": "Fausto Appetente Die",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/it/encyclicals/documents/hf_ben-xv_enc_29061921_fausto-appetente-die.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Fausto Appetente Die",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:benedict-xv/ad-christifidelium-bonum-1921",
+    "title": "Ad christifidelium bonum",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-09-30",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost-constitutions/documents/hf_ben-xv_apc_19210930_ad-christifidelium-bonum.html",
+      "shelf": "apost-constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad christifidelium bonum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost-constitutions"
+  }
+]

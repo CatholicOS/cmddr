@@ -1,0 +1,4627 @@
+[
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-04-13",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di don Luca Passi, Fondatore dell'Istituto delle Suore Maestre di Santa Dorotea",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-04-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20130413_beato-luca-passi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-04-19",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di Padre Nicolò Rusca",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-04-19",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20130419_beato-nicolo-rusca.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/quo-firmiores-2013",
+    "title": "\"Quo firmiores\". Nella Repubblica del Sudan del Sud viene istituita la Nunziatura Apostolica",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-05-01",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20130501_republica-sudaniae-autralis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quo firmiores",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-05-04",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di Francisca de Paula de Jesus, detta « Nhá Chica »",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-05-04",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20130504_beata-nha-chica.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-05-11",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di Mons. Luigi Novarese",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-05-11",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20130511_beato-luigi-novarese.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-05-12-1",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Antonio Primaldo e i Martiri di Otranto",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-05-12",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20130512_santi-martiri-di-otranto.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-05-12-2",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Laura di Santa Caterina da Siena Montoya y Upeguí",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-05-12",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20130512_santa-laura-montoya-y-upegui.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-05-12-3",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi la Beata María Guadalupe",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-05-12",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20130512_santa-maria-guadalupe.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-05-25",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di Don Giuseppe Puglisi",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-05-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20130525_beato-giuseppe-puglisi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-06-09-1",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di Suor Sofia Czeska-Maciejowska",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-06-09",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20130609_beata-suor-sofia-czeska-maciejowska.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-06-09-2",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di Margherita Lucia Szewczyk, Fondatrice della Congregazione delle Figlie della Beata Maria Vergine Addolorata",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-06-09",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20130609_beata-lucia-szewczyk.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-06-15",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di Odoardo Focherini",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-06-15",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20130615_beato-odoardo-focherini.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/lumen-fidei-2013",
+    "title": "Lumen fidei",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/encyclicals/documents/papa-francesco_20130629_enciclica-lumen-fidei.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "JA",
+        "LA",
+        "PL",
+        "PT",
+        "RU",
+        "SL",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Lumen fidei",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-07-11",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» sulla giurisdizione degli organi giudiziari dello Stato della Città del Vaticano in materia penale",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-07-11",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio_20130711_organi-giudiziari.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/motu-proprio-2013-08-08",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» per la prevenzione ed il contrasto del riciclaggio, del finanziamento del terrorismo e della proliferazione di armi di distruzione di massa",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-08-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio_20130808_prevenzione-contrasto.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-08-31",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di Padre Vladimir Ghika",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-08-31",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20130831_beato-vladimir-ghika.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-09-02",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di Mons. Antonio Franco",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-09-02",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20130902_beato-antonio-franco.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-09-07",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di Maria Bolognesi",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-09-07",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20130907_beata-maria-bolognesi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-10-05",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di Rolando Rivi",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-10-05",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20131005_beato-rolando-rivi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-10-13-1",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di Mons. Manuel Basulto Jiménez, vescovo di Jaén e di cinque compagni martiri",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-10-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20131013_beato-manuel-basulto-jimenez.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-10-13-2",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di Alberto Maria Marco y Alemán e 8 Compagni, dell'ordine dei Carmelitani dell'Antica Osservanza, nonché di Agostino Maria García Tribaldos e 15 Compagni, dell'Istituto dei Fratelli delle Scuole Cristiane",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-10-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20131013_beato-marco-y-aleman.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-10-13-3",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di Aurelia (al secolo:Clementina) Arambarri Fuente e altre 3 Compagne, Suore Professe delle Serve di Maria Ministre degli Infermi",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-10-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20131013_beata-aurelia-arambarri-fuente.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-10-13-4",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di Don Giuseppe Massimo Moro Briz e 4 Compagni",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-10-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20131013_beato-massimo-briz.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-10-13-5",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di Don Jaime Puig Mirosa e 18 Compagni della Congregazione dei Figli della Sacra Famiglia, nonché di Sebastiàn Llorens Telarroja",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-10-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20131013_beati-puig-mirosa-llorens-telarroja.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-10-13-6",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di Mons. Emmanuel Borrás Ferré, Agapito Pamplona Falguera e 145 Compagni",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-10-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20131013_beato-emmanuel-borras-ferre.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-10-13-7",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati martiri di Andrea da Palazuelo e di 31 compagni dell'Ordine dei Frati Minori Cappuccini",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-10-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20131013_beato-andreas-a-palazuelo.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-10-19",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di Stefano Sándor",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-10-19",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20131019_beato-stefano-sandor.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-11-15",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» con la quale è approvato il nuovo Statuto dell'Autorità di Informazione Finanziaria",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-11-15",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio_20131115_statuto-aif.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/evangelii-gaudium-2013",
+    "title": "\"Evangelii gaudium\": Esortazione Apostolica sull'annuncio del Vangelo nel mondo attuale",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-11-24",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_exhortations/documents/papa-francesco_esortazione-ap_20131124_evangelii-gaudium.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "NL",
+        "PL",
+        "PT",
+        "RU",
+        "SL",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Evangelii gaudium",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2013-12-17",
+    "title": "Lettera Decretale per la canonizzazione equipollente del Beato Pietro Favre",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-12-17",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20131217_san-pietro-favre.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/patrimonium-ecclesiarum-2013",
+    "title": "\"Patrimonium Ecclesiarum\". Il Santo Padre ha eretto l’Esarcato Apostolico per i fedeli maroniti residenti nell’Africa Occidentale e Centrale, con sede ad Ibadan in Nigeria",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-12-23",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20131223_in-africa-occidentali-et-centrali.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Patrimonium Ecclesiarum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/quo-aptius-spirituali-2013",
+    "title": "\"Quo aptius spirituali\". Il Santo Padre ha eretto l’Eparchia di St. Thomas the Apostle of Melbourne dei Siro-Malabaresi in Australia",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-12-23",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20131223_sancti-thomae-melburnensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quo aptius spirituali",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/cum-ad-aeternam-2013",
+    "title": "\"Cum ad aeternam\". Il Santo Padre ha eretto la Diocesi di Sultanpet in India",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-12-28",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20131228_sultanpentensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum ad aeternam",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2014-02-22-1",
+    "title": "Lettera Apostolica \"sub plumbo\" con la quale la Chiesa dei Santi Simone e Giuda Taddeo a Torre Angela diventa titolo cardinalizio",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-02-22",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20140222_chiesa-santi-simone-giuda-taddeo.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2014-02-22-2",
+    "title": "Lettera Apostolica \"sub plumbo\" con la quale la Chiesa di San Giacomo in Augusta diventa titolo cardinalizio",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-02-22",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20140222_chiesa-san-giacomo-in-augusta.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2014-02-22-3",
+    "title": "Lettera Apostolica \"sub plumbo\" con la quale la Chiesa di Sant'Angela Merici diventa titolo cardinalizio",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-02-22",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20140222_chiesa-sant-angela-merici.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/fidelis-dispensator-et-prudens-2014",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» Fidelis dispensator et prudens per la costituzione di una nuova struttura di coordinamento degli affari economici e amministrativi della Santa Sede e dello Stato della Città del Vaticano",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-02-24",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio_20140224_fidelis-dispensator-et-prudens.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Fidelis dispensator et prudens",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/cum-ad-aeternam-2014",
+    "title": "\"Cum ad aeternam\". Il Santo Padre ha eretto la nuova diocesi di Pankshin, in Nigeria",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-03-18",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20140318_pankshinensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum ad aeternam",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2014-04-03",
+    "title": "Lettera Decretale per la canonizzazione equipollente della Beata Maria dell'Incarnazione",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-04-03",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20140403_santa-maria-incarnazione.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2014-04-27",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi il Beato Giovanni XXIII",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-04-27",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20140427_san-giovanni-xxiii.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/attenta-deliberatione-2014",
+    "title": "\"Attenta deliberatione\". Il Santo Padre ha elevato l’Eparchia di São João Batista in Curitiba degli Ucraini (Brasile) ad Arcieparchia Metropolitana",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-05-12",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20140512_s-ioannis-baptistae-curitibensis-ucrainorum.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Attenta deliberatione",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-elevation"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/quo-aptius-2014",
+    "title": "\"Quo aptius\". Il Papa ha eretto l’Eparchia dell’Imaculada Conceição in Prudentópolis degli Ucraini (Brasile)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-05-12",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20140512_immaculatae-conceptionis-prudentopolitanae-ucrainorum.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quo aptius",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/ad-totius-dominici-gregis-2014",
+    "title": "\"Ad totius dominici gregis\". Il Santo Padre ha ristrutturato la Provincia Ecclesiastica di Cuiabá in Brasile",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-06-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20140625_ecclesiasticae-circumscriptiones-cuiaba.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad totius dominici gregis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/trasferimento-della-sezione-ordinaria-dell-amministrazione-del-patrimonio-della-sede-apostolica-2014",
+    "title": "Lettera Apostolica in forma di Motu Proprio - Trasferimento della Sezione Ordinaria dell’Amministrazione del Patrimonio della Sede Apostolica alla Segreteria per l’Economia",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-07-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio_20140708_trasferimento-apsa.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Trasferimento della Sezione Ordinaria dell’Amministrazione del Patrimonio della Sede Apostolica",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/christi-voluntate-2014",
+    "title": "\"Christi voluntate\". Il Santo Padre ha eretto la diocesi di Izcalli in Messico",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-07-09",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20140709_izcalliensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Christi voluntate",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/undecim-abhinc-annos-2014",
+    "title": "\"Undecim abhinc annos\". Il Santo Padre ha elevato la Prefettura Apostolica di Makokou in Gabon al rango di Vicariato Apostolico",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-07-11",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20140711_makokouensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Undecim abhinc annos",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-elevation"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/contemplationi-faventes-2014",
+    "title": "\"Contemplationi faventes\". Nuova configurazione territoriale della circoscrizione ecclesiastica \"Abbazia territoriale di Montecassino\" e della diocesi di Sora-Aquino-Pontecorvo",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-10-23",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20141023_abbatia-montis-cassini.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Contemplationi faventes",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/inter-eximias-2014",
+    "title": "\"Inter eximias\". Il Papa ha eretto la Provincia Ecclesiastica di Dodoma in Tanzania",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-11-06",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20141106_dodomaensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Inter eximias",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2014-11-21",
+    "title": "Lettera Apostolica a tutti i consacrati in occasione dell'Anno della Vita Consacrata",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-11-21",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/papa-francesco_lettera-ap_20141121_lettera-consacrati.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2014-11-23-1",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Madre Eufrasia del Sacro Cuore di Gesù [al secolo Rosa Eluvathingal]",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-11-23",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-dec_20141123_santa-eufrasia-delsacrocuoredigesu.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2014-11-23-2",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi il Beato Nicola da Longobardi",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-11-23",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20141123_san-nicola-da-longobardi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/cum-ad-provehendam-2014",
+    "title": "\"Cum ad provehendam\". Il Santo Padre ha eretto la nuova diocesi di Kuzhithurai in India",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-12-22",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20141222_kuzhithuraiensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum ad provehendam",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/multum-fructum-2015",
+    "title": "\"Multum fructum\". Il Santo Padre ha eretto la Chiesa Metropolitana \"sui iuris\" eritrea",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-01-19",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20150119_ecclesia-metropolitana-asmarensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Multum fructum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/quae-maiori-2015",
+    "title": "\"Quae maiori\". Il Santo Padre ha eretto l’Eparchia di Bahir Dar-Dessie in Etiopia",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-01-19",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20150119_bahir-dar-dessie.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quae maiori",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/quo-flagranti-2015",
+    "title": "\"Quo flagranti\". Il Santo Padre ha disposto l'unione formale della sede metropolitana di Cashel con l'antica diocesi di Emly, nella nuova Arcidiocesi Metropolitana denominata \"Arcidiocesi di Cashel and Emly\" in Irlanda",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-01-26",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20150126_casheliensis-et-emeliensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quo flagranti",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/statuti-dei-nuovi-organismi-economici-2015",
+    "title": "Statuti dei nuovi Organismi Economici",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-02-22",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco_20150222_statuti-segreteria-per-economia.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Statuti dei nuovi Organismi Economici",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/ad-aptius-2015",
+    "title": "\"Ad aptius\". Papa Francesco ha eretto l’Eparchia di Nyíregyháza per i cattolici di rito bizantino",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-03-19",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20150319_nyiregyhazana.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad aptius",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/de-spiritali-itinere-2015",
+    "title": "\"De spiritali itinere\". Il Santo Padre ha elevato l’Eparchia di Hajdúdorog per i cattolici di rito bizantino a Metropolia, con sede a Debrecen in Ungheria",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-03-19",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20150319_haidudoroghensis-ritus-byzantini.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "De spiritali itinere",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-elevation"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/in-hac-suprema-2015",
+    "title": "\"In hac suprema\". Il Santo Padre ha riorganizzato la Chiesa Greco-Cattolica Ungherese e l’ha elevata a Chiesa Metropolitana \"sui iuris\"",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-03-19",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20150319_hungariae-prochristifidelibus-byzantiniritus.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "In hac suprema",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/qui-successimus-2015",
+    "title": "\"Qui successimus\". Papa Francesco ha elevato l’Esarcato Apostolico di Miskolc per i cattolici di rito bizantino ad Eparchia",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-03-19",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20150319_miskolcensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Qui successimus",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-elevation"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/quo-satius-2015",
+    "title": "\"Quo satius\". Papa Francesco ha eretto la diocesi di Nogales in Messico",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-03-19",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20150319_quo-satius.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quo satius",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/nos-qui-2015",
+    "title": "\"Nos, qui\". Il Papa ha eretto il nuovo Esarcato Apostolico di St Ephrem of Khadki dei Siro-Malankaresi in India",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-03-26",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20150326_sancti-ephraimi-khadkiensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Nos, qui",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/quo-aptius-2015",
+    "title": "\"Quo aptius\". Il Santo Padre ha eretto la nuova Eparchia di St John Chrysostom of Gurgaon dei Siro-Malankaresi in India",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-03-26",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20150326_sancti-ioannis-chrysostomi-gurgaonensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quo aptius",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/misericordiae-vultus-2015",
+    "title": "Misericordiae Vultus - Bolla di indizione del Giubileo Straordinario della Misericordia",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-04-11",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/bulls/documents/papa-francesco_bolla_20150411_misericordiae-vultus.html",
+      "shelf": "bulls",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PL",
+        "PT",
+        "SL",
+        "SW",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Misericordiae Vultus",
+    "sourceGenreLabel": "bulls"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2015-04-12",
+    "title": "Lettera Apostolica per la proclamazione di San Gregorio di Narek a Dottore della Chiesa",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-04-12",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_2015412_gregorius-narecensis-doctor-ecclesiae.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2015-05-17",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Giovanna Emilia de Villeneuve, Fondatrice della Congregazione delle Suore dell'Immacolata Concezione di Castres",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-05-17",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco-lettera-ap_20150517_santa-giovanna-devilleneuve.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/laudato-si-2015",
+    "title": "Laudato si'",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-05-24",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/encyclicals/documents/papa-francesco_20150524_enciclica-laudato-si.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "JA",
+        "LA",
+        "LV",
+        "PL",
+        "PT",
+        "RU",
+        "SL",
+        "UK",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Laudato si'",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2015-05-28",
+    "title": "Lettera Apostolica in forma di “Motu Proprio” sulla Revisione dello Statuto del Fondo Pensioni Vaticano",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-05-28",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/papa-francesco_lettera-ap_20150528_revisione-statuto-fondo-pensioni.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/l-attuale-contesto-comunicativo-2015",
+    "title": "Lettera Apostolica in forma di 'Motu Proprio' «L'attuale contesto comunicativo», per l'Istituzione della Segreteria per la Comunicazione",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-06-27",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/papa-francesco_lettera-ap_20150627_segreteria-comunicazione.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "L'attuale contesto comunicativo",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/spiritualem-ubertatem-2015",
+    "title": "\"Spiritualem ubertatem\". Il Santo Padre ha eretto l’Esarcato Apostolico per i Siro-Malabaresi residenti in Canada",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-08-06",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20150806_spiritualem-ubertatem.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Spiritualem ubertatem",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/mitis-et-misericors-iesus-2015",
+    "title": "Lettera Apostolica in forma di 'Motu Proprio' Mitis et misericors Iesus, sulla riforma del processo canonico per le cause di dichiarazione di nullità del matrimonio nel Codice dei Canoni delle Chiese Orientali",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-08-15",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio_20150815_mitis-et-misericors-iesus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "AR",
+        "EN",
+        "IT",
+        "LA",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Mitis et misericors Iesus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/mitis-iudex-dominus-iesus-2015",
+    "title": "Lettera Apostolica in forma di 'Motu Proprio' Mitis Iudex Dominus Iesus, sulla riforma del processo canonico per le cause di dichiarazione di nullità del matrimonio nel Codice di Diritto Canonico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-08-15",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio_20150815_mitis-iudex-dominus-iesus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "LA",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Mitis Iudex Dominus Iesus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2015-09-13",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di Tshimangadzo Samuele Benedetto Daswa",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-09-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_2015915_beato-benedict-daswa.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/ad-aptius-consulendum-2015-12-03",
+    "title": "\"Ad aptius consulendum\". Il Santo Padre ha eretto la nuova diocesi di Guasdualito (Venezuela)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-12-03",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20151203_ad-aptius-consulendum.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad aptius consulendum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/ad-aptius-consulendum-2015-12-18",
+    "title": "\"Ad aptius consulendum\". Il Santo Padre ha eretto l’Eparchia di St. Mary, Queen of Peace, of the United States of America and Canada dei Siro-Malankaresi",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-12-18",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20151218_ad-aptius-consulendum.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad aptius consulendum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/conscii-omnino-2015",
+    "title": "\"Conscii omnino\". Il Santo Padre ha eretto l’Esarcato Apostolico per i fedeli Siro-cattolici residenti nel Canada",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-12-18",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20151218_conscii-omnino.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Conscii omnino",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/saeculorum-decursu-2015",
+    "title": "\"Saeculorum decursu\". Il Santo Padre ha eretto l’Esarcato Apostolico per i fedeli maroniti residenti in Colombia",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-12-18",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20151218_saeculorum-decursu.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Saeculorum decursu",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/cum-ad-aptius-2015",
+    "title": "\"Cum ad aptius\". Il Santo Padre Francesco ha eretto la nuova diocesi di Barisal in Bangladesh",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-12-29",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20151229_cum-ad-aptius.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum ad aptius",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/ab-domino-ipso-2016",
+    "title": "\"Ab Domino ipso\". Il Santo Padre Francesco ha eretto la diocesi di San Francisco de Asís de Jutiapa (Guatemala)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-01-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20160125_ab-domino-ipso.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ab Domino ipso",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/qui-consiliis-2016",
+    "title": "\"Qui consiliis\". Il Santo Padre ha eretto la nuova diocesi di Kumba in Camerun",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-03-15",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20160315_qui-consiliis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Qui consiliis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/amoris-laetitia-2016",
+    "title": "\"Amoris laetitia\": Esortazione Apostolica sull'amore nella famiglia",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-03-19",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_exhortations/documents/papa-francesco_esortazione-ap_20160319_amoris-laetitia.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PL",
+        "PT",
+        "RU",
+        "SL",
+        "SW",
+        "VI",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Amoris laetitia",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:francis-i/cum-ad-aeternam-2016",
+    "title": "\"Cum ad aeternam\". Il Santo Padre Francesco ha eretto la nuova diocesi di Rayagada in India",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-04-11",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20160411_cum-ad-aeternam.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum ad aeternam",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/de-concordia-inter-codices-2016",
+    "title": "Lettera Apostolica “De concordia inter Codices” in forma di 'Motu Proprio' con la quale vengono mutate alcune norme del Codice di Diritto Canonico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-05-31",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/papa-francesco-lettera-ap_20160531_de-concordia-inter-codices.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "De concordia inter Codices",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/come-una-madre-amorevole-2016",
+    "title": "Lettera Apostolica in forma di 'Motu Proprio' Come una madre amorevole",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-06-04",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/papa-francesco_lettera-ap_20160604_come-una-madre-amorevole.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Come una madre amorevole",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/motu-proprio-2016-06-04",
+    "title": "Statuto del Dicastero per i Laici, la Famiglia e la Vita",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-06-04",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco_20160604_statuto-dicastero-famiglia-laici-vita.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/vultum-dei-quaerere-2016",
+    "title": "Vultum Dei quaerere, sulla vita contemplativa femminile",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_constitutions/documents/papa-francesco_costituzione-ap_20160629_vultum-dei-quaerere.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Vultum Dei quaerere",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/i-beni-temporali-2016",
+    "title": "Lettera Apostolica in forma di 'Motu Proprio' I beni temporali, circa alcune competenze in materia economica-finanziaria",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-07-04",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/papa-francesco_lettera-ap_20160704_i-beni-temporali.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "I beni temporali",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/in-apostolorum-2016",
+    "title": "\"In Apostolorum\". Il Santo Padre ha eretto l’Eparchia di Gran Bretagna dei Siro-Malabaresi",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-07-16",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/papa-francesco_costituzione-ap_20160716_in-apostolorum.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "In Apostolorum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2016-08-15",
+    "title": "Lettera Apostolica in forma di 'Motu Proprio' con cui si istituisce il Dicastero per i Laici, la Famiglia e la Vita",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-08-15",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/papa-francesco-lettera-ap_20160815_sedula-mater.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2016-08-17",
+    "title": "Lettera Apostolica in forma di 'Motu Proprio' con la quale si istituisce il Dicastero per il Servizio dello Sviluppo Umano Integrale",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-08-17",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/papa-francesco-lettera-ap_20160817_humanam-progressionem.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/motu-proprio-2016-08-17",
+    "title": "Statuto del Dicastero per il Servizio dello Sviluppo Umano Integrale",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-08-17",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco_20160817_statuto-dicastero-servizio-sviluppo-umano-integrale.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2016-08-27",
+    "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all'albo dei Beati la Venerabile Suor Maria Antonia di San Giuseppe (al secolo María Antonia de Paz y Figueroa)",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-08-27",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20160827_beata-mariantonia-depazyfigueroa.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/statuto-della-segreteria-per-la-comunicazione-2016",
+    "title": "Statuto della Segreteria per la Comunicazione",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-09-06",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco_20160906_statuto-segreteria-comunicazione.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Statuto della Segreteria per la Comunicazione",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/statuto-della-pontificia-accademia-per-la-vita-2016",
+    "title": "Statuto della Pontificia Accademia per la Vita",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-10-18",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco_20161018_statuto-accademia-vita.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Statuto della Pontificia Accademia per la Vita",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/misericordia-et-misera-2016",
+    "title": "Lettera Apostolica Misericordia et misera",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-11-20",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/papa-francesco-lettera-ap_20161120_misericordia-et-misera.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PL",
+        "PT",
+        "SW",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Misericordia et misera",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/sanctuarium-in-ecclesia-2017",
+    "title": "Lettera Apostolica in forma di Motu Proprio Sanctuarium in Ecclesia con la quale si trasferiscono le competenze sui Santuari al Pontificio Consiglio per la Promozione della Nuova Evangelizzazione",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-02-11",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/papa-francesco-lettera-ap_20170211_sanctuarium-in-ecclesia.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Sanctuarium in Ecclesia",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/maiorem-hac-dilectionem-sull-offerta-della-vita-2017",
+    "title": "Lettera Apostolica in forma di Motu Proprio Maiorem hac dilectionem sull’offerta della vita",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-07-11",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/papa-francesco-lettera-ap_20170711_maiorem-hac-dilectionem.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Maiorem hac dilectionem sull’offerta della vita",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/magnum-principium-2017",
+    "title": "Lettera Apostolica in forma di Motu Proprio Magnum Principium con la quale viene modificato il can. 838 del Codice di Diritto Canonico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-09-03",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio_20170903_magnum-principium.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Magnum Principium",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/summa-familiae-cura-2017",
+    "title": "Lettera Apostolica in forma di Motu Proprio Summa familiae cura, che istituisce il Pontificio Istituto Teologico Giovanni Paolo II per le Scienze del Matrimonio e della Famiglia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-09-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio_20170908_summa-familiae-cura.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Summa familiae cura",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/veritatis-gaudium-2017",
+    "title": "Veritatis gaudium, circa le Università e le Facoltà ecclesiastiche",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_constitutions/documents/papa-francesco_costituzione-ap_20171208_veritatis-gaudium.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "LV",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Veritatis gaudium",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/imparare-a-congedarsi-2018",
+    "title": "Lettera Apostolica in forma di Motu Proprio Imparare a congedarsi con cui si regola la rinuncia, a motivo dell’età, dei titolari di alcuni uffici di nomina pontificia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-02-12",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20180212_imparare-a-congedarsi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "IT",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Imparare a congedarsi",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/gaudete-et-exsultate-2018",
+    "title": "\"Gaudete et exsultate\": Esortazione Apostolica sulla chiamata alla santità nel mondo contemporaneo",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-03-19",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_exhortations/documents/papa-francesco_esortazione-ap_20180319_gaudete-et-exsultate.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "LV",
+        "PL",
+        "PT",
+        "SL",
+        "VI",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Gaudete et exsultate",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:francis-i/episcopalis-communio-2018",
+    "title": "Episcopalis communio, sul Sinodo dei Vescovi",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-09-15",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_constitutions/documents/papa-francesco_costituzione-ap_20180915_episcopalis-communio.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Episcopalis communio",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/motu-proprio-2018-11-25",
+    "title": "Legge sul Governo dello Stato della Città del Vaticano",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-11-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-20181125_leggegoverno-cittadelvaticano.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2019-01-17-1",
+    "title": "Lettera Apostolica in forma di Motu Proprio circa la Cappella Musicale Pontificia",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-01-17",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20190117_cappella-musicale-pontificia.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2019-01-17-2",
+    "title": "Lettera Apostolica in forma di “Motu proprio” circa la Pontificia Commissione \"Ecclesia Dei\"",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-01-17",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20190117_ecclesia-dei.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/statuto-dell-ufficio-del-revisore-generale-2019",
+    "title": "Statuto dell'Ufficio del Revisore Generale",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-01-21",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco_20190121_statuto-ufficio-revisore-generale.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Statuto dell'Ufficio del Revisore Generale",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/communis-vita-2019",
+    "title": "Lettera Apostolica in forma di “Motu proprio” Communis vita, con la quale vengono mutate alcune norme del codice di diritto canonico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-03-19",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20190319_communis-vita.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Communis vita",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/christus-vivit-2019",
+    "title": "\"Christus vivit\": Esortazione Apostolica post-sinodale ai Giovani e a tutto il Popolo di Dio",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-03-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_exhortations/documents/papa-francesco_esortazione-ap_20190325_christus-vivit.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "VI",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Christus vivit",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2019-03-26",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» sulla protezione dei minori e delle persone vulnerabili",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-03-26",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20190326_latutela-deiminori.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2019-05-07",
+    "title": "Lettera Apostolica in forma di «Motu proprio» del Sommo Pontefice Francesco “Vos estis lux mundi”",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-05-07",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20190507_vos-estis-lux-mundi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/aperuit-illis-2019",
+    "title": "Lettera Apostolica in forma di Motu proprio \"Aperuit illis\" con la quale viene istituita la \"Domenica della Parola di Dio\"",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-09-30",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20190930_aperuit-illis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "SW",
+        "VI",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Aperuit illis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2019-10-22",
+    "title": "Lettera Apostolica in forma di Motu Proprio per il cambiamento della denominazione da Archivio Segreto Vaticano ad Archivio Apostolico Vaticano",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-10-22",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20191022_archivio-apostolico-vaticano.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/admirabile-signum-2019",
+    "title": "Lettera Apostolica \"Admirabile signum\" sul significato e il valore del presepe",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-12-01",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/papa-francesco-lettera-ap_20191201_admirabile-signum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PL",
+        "PT",
+        "SW",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Admirabile signum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2019-12-07",
+    "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all'albo dei Beati James Alfred Miller",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-12-07",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/de/apost_letters/documents/20191207-beato-james-alfred-miller.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2019-12-21",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» riguardante l’Ufficio del Decano del Collegio Cardinalizio",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-12-21",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20191221_decano-collegio-cardinalizio.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/querida-amazonia-2020",
+    "title": "“Querida Amazonia”: Esortazione Apostolica post-sinodale al popolo di Dio e a tutte le persone di buona volontà",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-02-02",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_exhortations/documents/papa-francesco_esortazione-ap_20200202_querida-amazonia.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "VI",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Querida Amazonia",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:francis-i/motu-proprio-2020-03-16",
+    "title": "Promulgazione della Legge N. CCCLI sull’ordinamento giudiziario dello Stato della Città del Vaticano",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-03-16",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20200313_legge-cccli-ordinamentogiudiziario.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2020-05-19",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» sulla trasparenza, il controllo e la concorrenza nelle procedure di aggiudicazione dei contratti pubblici della Santa Sede e dello Stato della Città del Vaticano",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-05-19",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20200519_procedure-aggiudicazione-contrattipubblici.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/norme-e-tutela-giurisdizionale-2020",
+    "title": "Norme e Tutela giurisdizionale sulla trasparenza, il controllo e la concorrenza nelle procedure di aggiudicazione dei contratti pubblici della Santa Sede e dello Stato della Città del Vaticano",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-05-19",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-20200519_procedure-aggiudicazione-contrattipubblici.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Norme e Tutela giurisdizionale",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/scripturae-sacrae-affectus-2020",
+    "title": "Lettera Apostolica Scripturae Sacrae affectus nel XVI centenario della morte di San Girolamo",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-09-30",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/papa-francesco-lettera-ap_20200930_scripturae-sacrae-affectus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "LA",
+        "PL",
+        "PT",
+        "VI"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Scripturae Sacrae affectus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/fratelli-tutti-2020",
+    "title": "Fratelli tutti",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-10-03",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/encyclicals/documents/papa-francesco_20201003_enciclica-fratelli-tutti.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "JA",
+        "LA",
+        "MN",
+        "NL",
+        "PL",
+        "PT",
+        "SL",
+        "UK",
+        "VI",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Fratelli tutti",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2020-10-04",
+    "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all'albo dei Beati il Venerabile don Olinto Marella",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-10-04",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/20201004-beato-olinto-marella.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/authenticum-charismatis-2020",
+    "title": "Lettera Apostolica in forma di Motu proprio \"Authenticum charismatis\" con la quale si modifica il can. 579 del Codice di Diritto Canonico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-11-01",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20201101_authenticum-charismatis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Authenticum charismatis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/ab-initio-2020",
+    "title": "Lettera Apostolica in forma di Motu proprio \"Ab initio\", sulla modifica dei cann. 435 §1 e 506 §1 del Codice dei Canoni delle Chiese Orientali",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-11-21",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20201121_ab-initio.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "ES",
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Ab initio",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/patris-corde-2020",
+    "title": "Lettera Apostolica Patris corde nel 150° anniversario della dichiarazione di San Giuseppe quale Patrono della Chiesa universale",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/papa-francesco-lettera-ap_20201208_patris-corde.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PL",
+        "PT",
+        "VI",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Patris corde",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2020-12-26",
+    "title": "Lettera Apostolica in forma di “Motu Proprio” del Sommo Pontefice Francesco circa alcune competenze in materia economico-finanziaria",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-12-26",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20201226_una-migliore-organizzazione.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2021-01-10",
+    "title": "Lettera Apostolica in forma di Motu proprio, sulla modifica del can. 230 § 1 del Codice di Diritto Canonico circa l’accesso delle persone di sesso femminile al ministero istituito del Lettorato e dell’Accolitato",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-01-10",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20210110_spiritus-domini.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "AR",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "LA",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2021-02-08",
+    "title": "Lettera Apostolica in forma di “Motu Proprio” del Sommo Pontefice Francesco recante modifiche in materia di giustizia",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-02-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20210208_giustiziapenale.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2021-03-23",
+    "title": "Lettera Apostolica in forma di “Motu Proprio” del Sommo Pontefice Francesco circa il contenimento della spesa per il personale della Santa Sede, del Governatorato dello Stato della Città del Vaticano e di altri Enti collegati",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-03-23",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20210323_decreto-retribuzioni.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/candor-lucis-aeternae-2021",
+    "title": "Lettera apostolica “Candor lucis aeternae” in occasione del settimo centenario della morte di Dante Alighieri",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-03-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/papa-francesco-lettera-ap_20210325_centenario-dante.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Candor lucis aeternae",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2021-04-26",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» del Sommo Pontefice Francesco recante disposizioni sulla trasparenza nella gestione della finanza pubblica",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-04-26",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20210426_trasparenza-finanzapubblica.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2021-04-30-1",
+    "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all'albo dei Beati il Venerabile Servo di Dio José Gregorio Hernández Cisneros",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-04-30",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/20210430-beato-hernandez-cisneros.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2021-04-30-2",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» del Sommo Pontefice Francesco recante modifiche in tema di competenza degli organi giudiziari dello Stato della Città del Vaticano",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-04-30",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20210430_competenza-organigiudiziari.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "ES",
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2021-05-10",
+    "title": "Lettera Apostolica in forma di “Motu proprio” di Papa Francesco \"Antiquum ministerium\" con la quale si istituisce il ministero di catechista",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-05-10",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20210510_antiquum-ministerium.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "RO",
+        "VI",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/costituzione-apostolica-pascite-gregem-dei-2021",
+    "title": "Costituzione Apostolica Pascite Gregem Dei con cui viene riformato il libro VI del Codice di Diritto Canonico",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-05-23",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_constitutions/documents/papa-francesco_costituzione-ap_20210523_pascite-gregem-dei.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "CS",
+        "DE",
+        "EN",
+        "ES",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Costituzione Apostolica Pascite Gregem Dei",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2021-07-16",
+    "title": "Lettera Apostolica in forma di “Motu proprio” di Papa Francesco “Traditionis custodes” sull'uso della Liturgia Romana anteriore alla Riforma del 1970",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-07-16",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20210716-motu-proprio-traditionis-custodes.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "HR",
+        "IT",
+        "LA",
+        "VI"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2021-10-23",
+    "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all'albo dei Beati la Venerabile Serva di Dio Lucia dell’Immacolata (al secolo: Maria Ripamonti)",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-10-23",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/20211023-beata-suor-lucia-immacolata.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2021-11-17",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» con la quale il Santo Padre istituisce la Commissione Pontificia di verifica e applicazione del M. P. Mitis Iudex nelle Chiese d’Italia",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-11-17",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20211117-motu-proprio-comm-mitis-iudex.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2022-01-21",
+    "title": "Lettera Apostolica per la proclamazione di Sant'Ireneo di Lione a Dottore della Chiesa con il titolo di «Doctoris unitatis»",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-01-21",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/fr/apost_letters/documents/20220121-santireneo-dottoredellachiesa.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "FR",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/competentias-quasdam-decernere-2022",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» Competentias quasdam decernere, con la quale vengono mutate alcune norme del Codice di Diritto Canonico e del Codice dei Canoni delle Chiese Orientali",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-02-11",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20220211-motu-proprio-assegnare-alcune-competenze.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Competentias quasdam decernere",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/fidem-servare-2022",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» Fidem servare, con la quale viene modificata la struttura interna della Congregazione per la Dottrina della Fede",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-02-11",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20220211-motu-proprio-fidem-servare.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Fidem servare",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/praedicate-evangelium-2022",
+    "title": "Praedicate Evangelium, sulla Curia Romana e il suo servizio alla Chiesa nel Mondo",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-03-19",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_constitutions/documents/20220319-costituzione-ap-praedicate-evangelium.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "AR",
+        "CS",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Praedicate Evangelium",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/recognitum-librum-vi-2022",
+    "title": "Lettera Apostolica in forma di \"Motu Proprio\" Recognitum Librum VI con la quale si modifica il can. 695 §1, del Codice di Diritto Canonico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-04-26",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20220426-motu-proprio-recognitum-librum-vi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Recognitum Librum VI",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2022-04-30",
+    "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all'albo dei Beati la Venerabile Serva di Dio Armida Barelli",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-04-30",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/20220430-beata-armida-barelli.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2022-05-15",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi la Beata Suor Marie Rivier",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-05-15",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/20220515-marie-rivier.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/desiderio-desideravi-2022",
+    "title": "Lettera Apostolica \"Desiderio desideravi\" sulla formazione liturgica del popolo di Dio",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/20220629-lettera-ap-desiderio-desideravi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT",
+        "VI"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Desiderio desideravi",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/ad-charisma-tuendum-2022",
+    "title": "Lettera Apostolica in forma di “Motu proprio” Ad charisma tuendum",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-07-14",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20220714-motu-proprio-ad-charisma-tuendum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Ad charisma tuendum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/motu-proprio-2022-08-01",
+    "title": "Decreto circa la rappresentanza legale piena della II Sezione del Dicastero per l'Evangelizzazione",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-08-01",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20220801-decreto-dicastero-evangelizzazione.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/motu-proprio-2022-09-03",
+    "title": "Decreto per il Sovrano Militare Ordine Ospedaliero di San Giovanni di Gerusalemme, di Rodi e di Malta (S.M.O.M.)",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-09-03",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20220903-decreto-smom.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/rescriptum-ex-audientia-ss-mi-2022",
+    "title": "RESCRIPTUM EX AUDIENTIA SS.MI sul passaggio di competenza della pastorale del turismo",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-09-30",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20220930-rescriptum-pastoraleturismo.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "RESCRIPTUM EX AUDIENTIA SS.MI",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2022-10-22",
+    "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all'albo dei Beati i Venerabili Servi di Dio Vincenzo Nicasio Renuncio Toribio e undici compagni, membri della Congregazione del Santissimo Redentore e martiri",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-10-22",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/20221022-toribio-compagni-cssr.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/decreto-relativo-a-caritas-internationalis-2022",
+    "title": "Decreto relativo a Caritas Internationalis",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-11-21",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20221121-decreto-caritas-internationalis.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Decreto relativo a Caritas Internationalis",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2022-12-05",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» del Sommo Pontefice Francesco sulle persone giuridiche strumentali della Curia Romana",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-12-05",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20221205-motu-proprio-curia-romana.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2022-12-10",
+    "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all'albo dei Beati Isabel Cristina Mrad Campos",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-12-10",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/de/apost_letters/documents/20221210-isabella-mrad-campos.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/cum-mirabilia-2022",
+    "title": "\"Cum mirabilia\". Il Santo Padre ha eretto la nuova Diocesi di Wukari (Nigeria)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-12-14",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/20221214-cum-mirabilia.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum mirabilia",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/totum-amoris-est-2022",
+    "title": "Lettera Apostolica Totum amoris est nel IV centenario della morte di San Francesco di Sales",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-12-28",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/20221228-totum-amoris-est.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Totum amoris est",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/costituzione-apostolica-in-ecclesiarum-communione-2023",
+    "title": "Costituzione Apostolica In Ecclesiarum Communione circa l’ordinamento del Vicariato di Roma",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_constitutions/documents/20230106-in-ecclesiarum-communione.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Costituzione Apostolica In Ecclesiarum Communione",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/motu-proprio-2023-01-06",
+    "title": "Decreto del Santo Padre Francesco per l’assegnazione dei settori, degli ambiti e servizi pastorali ai Vescovi Ausiliari della Diocesi di Roma",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20230106-decreto-vescovi-ausiliari.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/regolamento-della-commissione-indipendente-di-vigilanza-del-vicariato-2023",
+    "title": "Regolamento della Commissione Indipendente di Vigilanza del Vicariato",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-02-14",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20230214-regolamento-commvigilanza-vicariato.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Regolamento della Commissione Indipendente di Vigilanza del Vicariato",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/il-diritto-nativo-2023",
+    "title": "Lettera Apostolica in forma di Motu Proprio \"Il Diritto Nativo\" circa il patrimonio della Sede Apostolica",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-02-20",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20230220-il-diritto-nativo.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Il Diritto Nativo",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/vocare-peccatores-2023",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» \"Vocare peccatores\", sulla Riforma del Diritto Penale delle Chiese Orientali",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-03-20",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/motu_proprio/documents/20230320-motu-proprio-vocare-peccatores.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Vocare peccatores",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2023-03-25",
+    "title": "Lettera Apostolica in forma di «Motu proprio» del Sommo Pontefice Francesco “Vos estis lux mundi” (Aggiornato)",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-03-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20230325-motu-proprio-vos-estis-lux-mundi-aggiornato.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "AR",
+        "CS",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2023-04-02",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» con la quale vengono modificati i termini di ricorso del membro dimesso da un istituto di vita consacrata",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-04-02",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20230402-motu-proprio-expedit-ut-iura.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2023-04-12",
+    "title": "Lettera Apostolica in forma di “Motu Proprio” recante modifiche alla normativa penale e all’ordinamento giudiziario dello Stato della Città del Vaticano",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-04-12",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20230412-motu-proprio-leesigenze.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/iam-pridem-2023",
+    "title": "Lettera Apostolica in forma di Motu Proprio Iam Pridem, Con la quale vengono mutate alcune norme del Codice dei Canoni delle Chiese Orientali relative ai Vescovi che hanno raggiunto gli ottanta anni di età nel Sinodo dei Vescovi delle rispettive Chiese sui iuris",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-04-16",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20230416-motu-proprio-iam-pridem.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Iam Pridem",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/legge-fondamentale-dello-stato-della-citta-del-vaticano-2023",
+    "title": "Legge Fondamentale dello Stato della Città del Vaticano",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-05-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20230513-legge-fond-scv.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Legge Fondamentale dello Stato della Città del Vaticano",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/sublimitas-et-miseria-hominis-2023",
+    "title": "Lettera Apostolica \"Sublimitas et miseria hominis\" nel IV centenario della nascita di Blaise Pascal",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-06-19",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/20230619-sublimitas-et-miseria-hominis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sublimitas et miseria hominis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/motu-proprio-2023-07-04",
+    "title": "Decreto del Santo Padre Francesco circa le realtà di formazione al Sacerdozio nel territorio della Diocesi di Roma e nomina del Rettore del Pontificio Seminario Romano Maggiore",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-07-04",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20230704-decreto-formazione-sacerdozio.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/motu-proprio-2023-08-01",
+    "title": "Decreto di Nomina dei membri del Consiglio Superiore di Coordinamento della Pontificia Università Lateranense",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-08-01",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20230801-decreto-univlateranense.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2023-08-08",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» con la quale vengono modificati i cann. 295-296 relativi alle Prelature personali",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-08-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20230808-motu-proprio-prelature-personali.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/motu-proprio-2023-09-14",
+    "title": "Decreto di nomina del Delegato Pontificio presso la Pontificia Università Urbaniana in Roma",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-09-14",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20230914-decreto-nomina-delegato-pont-urbaniana.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/laudate-deum-2023",
+    "title": "\"Laudate Deum\": Esortazione Apostolica a tutte le persone di buona volontà sulla crisi climatica",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-10-04",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_exhortations/documents/20231004-laudate-deum.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "AR",
+        "BE",
+        "CS",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PL",
+        "PT",
+        "SL",
+        "UK",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Laudate Deum",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:francis-i/c-est-la-confiance-2023",
+    "title": "“C’est la confiance”: Esortazione Apostolica sulla fiducia nell'amore misericordioso di Dio in occasione del 150° anniversario della nascita di Santa Teresa di Gesù Bambino e del Volto Santo",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-10-15",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_exhortations/documents/20231015-santateresa-delbambinogesu.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PL",
+        "PT",
+        "SL"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "C’est la confiance",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:francis-i/ad-theologiam-promovendam-2023",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» \"Ad theologiam promovendam\", con la quale vengono approvati nuovi statuti della Pontificia Accademia di Teologia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-11-01",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20231101-motu-proprio-ad-theologiam-promovendam.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Ad theologiam promovendam",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2023-11-27",
+    "title": "Lettera Apostolica, in forma di Motu Proprio, con la quale vengono modificati e integrati il Motu Proprio \"sulla trasparenza, il controllo e la concorrenza nelle procedure di aggiudicazione dei contratti pubblici della Santa Sede e dello Stato della Città del Vaticano\", del 19 maggio 2020, e le relative \"Norme\" e \"Tutela giurisdizionale\"",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-11-27",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/20231127-lettera-apostolica.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/primum-quidem-gratias-ago-deo-2023",
+    "title": "Lettera Apostolica \"Primum quidem gratias ago Deo\" in occasione del 350° anniversario della Diocesi di Québec",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/fr/apost_letters/documents/20231208-primum-quidem-gratias-ago-deo.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Primum quidem gratias ago Deo",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/peculiari-gaudio-2023",
+    "title": "\"Peculiari gaudio\". Il Santo Padre ha eretto la diocesi di Mafinga in Tanzania",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-12-22",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/20231222-peculiari-gaudio.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Peculiari gaudio",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2024-01-16",
+    "title": "Lettera Apostolica in forma di Motu Proprio circa i limiti e le modalità dell'ordinaria amministrazione",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-01-16",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/20240116-lettera-ap-amministrazione.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "ES",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/motu-proprio-2024-01-16",
+    "title": "Decreto del Sommo Pontefice Francesco relativo alla pubblicazione di provvedimenti normativi nello Stato della Città del Vaticano",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-01-16",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20240116-decreto-provvedim-normativi.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/alteri-alterius-2024",
+    "title": "\"Alteri alterius\": Il Santo Padre ha eretto la diocesi di Canindeyú in Paraguay",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-02-10",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/20240210-alteri-alterius.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Alteri alterius",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/pastoralis-sollicitudinis-2024",
+    "title": "\"Pastoralis sollicitudinis\": Il Santo Padre ha eretto la diocesi di Boké (Guinea)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-02-22",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/20240222-pastoralis-sollicitudinis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Pastoralis sollicitudinis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/munus-tribunalis-2024",
+    "title": "Lettera Apostolica in forma di «Motu proprio» Munus Tribunalis con la quale viene modificata la Lex propria Supremi Tribunalis Signaturae Apostolicae del 21 giugno 2008",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-02-28",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20240228-motu-proprio-munus-tribunalis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Munus Tribunalis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2024-03-27",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» su alcune modifiche relative all'ordinamento giudiziario del Vaticano",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-03-27",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20240327-motu-proprio.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/spes-non-confundit-2024",
+    "title": "Spes non confundit - Bolla di indizione del Giubileo Ordinario dell'Anno 2025",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-05-09",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/bulls/documents/20240509_spes-non-confundit_bolla-giubileo2025.html",
+      "shelf": "bulls",
+      "languages": [
+        "AR",
+        "CS",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "LA",
+        "MT",
+        "PL",
+        "PT",
+        "SK",
+        "SL",
+        "UK",
+        "VI",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Spes non confundit",
+    "sourceGenreLabel": "bulls"
+  },
+  {
+    "id": "mag:francis-i/fide-incensus-2024",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» Fide incensus, con la quale viene concesso a tutti gli Ordini, alle Congregazioni e alle Comunità che si ispirano al carisma di Santo Spirito in Sassia, il culto liturgico di Fratel Guido di Montpellier, con il titolo di Beato",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-05-18",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20240518-fide-incensus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "HR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Fide incensus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2024-05-26",
+    "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all'albo dei Beati il Servo di Dio Giuseppe Rossi",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-05-26",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/20240526-beato-giuseppe-rossi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/fratello-sole-2024",
+    "title": "Lettera Apostolica in forma di Motu proprio \"Fratello Sole\" del Sommo Pontefice Francesco",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-06-21",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20240621-fratello-sole.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "ES",
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "Fratello Sole",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2024-06-29",
+    "title": "Lettera Apostolica in forma di Motu Proprio circa l'interpretazione delle norme applicabili alla Fabbrica di San Pietro",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/apost_letters/documents/20240629-norme-fabbrica-san-pietro.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/motu-proprio-2024-07-01",
+    "title": "Statuto della Fondazione Vaticana \"Rete Mondiale di Preghiera del Papa\"",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-07-01",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20240701-statuto-rete-mondiale-preghiera.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/la-vera-bellezza-2024",
+    "title": "Lettera Apostolica in forma di «Motu Proprio» La vera bellezza sulla ripartizione del territorio della diocesi di Roma",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-10-01",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20241001-lavera-bellezza.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "motu_proprio"
+      ]
+    },
+    "incipit": "La vera bellezza",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/dilexit-nos-2024",
+    "title": "Dilexit nos",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-10-24",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/encyclicals/documents/20241024-enciclica-dilexit-nos.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Dilexit nos",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:francis-i/quod-manifestatum-2024",
+    "title": "\"Quod Manifestatum\". Il Santo Padre ha istituito in Cina la Diocesi di Lüliang",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-10-29",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/20241029-quod-manifestatum.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod Manifestatum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/in-christo-2025",
+    "title": "\"In Christo\". Il Santo Padre ha eretto la nuova Diocesi di Alto Molócuè in Mozambico",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2025-01-23",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/20250123-in-christo.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "In Christo",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/caritate-christi-2025",
+    "title": "\"Caritate Christi\". Il Santo Padre ha eretto la nuova Diocesi di Mindat (Myanmar)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2025-01-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/20250125-caritate-christi.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Caritate Christi",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/fidelium-vitae-2025",
+    "title": "\"Fidelium vitae\". Il Santo Padre ha eretto la nuova Diocesi di Bagamoyo (Tanzania)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2025-03-07",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/20250307-fidelium-vitae.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Fidelium vitae",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/spei-accensa-lucerna-2025",
+    "title": "\"Spei accensa lucerna\". Il Santo Padre ha eretto la nuova Diocesi di Caazapá (Paraguay)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2025-03-22",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/20250322-spei-accensa.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Spei accensa lucerna",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/incomparabilis-magister-2025",
+    "title": "\"Incomparabilis Magister\". Il Santo Padre ha eretto la Provincia Ecclesiastica di Calicut (India)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2025-04-12",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/la/apost_constitutions/documents/20250412-incomparabilis-magister.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Incomparabilis Magister",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-erection"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  }
+]

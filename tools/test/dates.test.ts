@@ -48,4 +48,15 @@ describe('parseSourceDate', () => {
   it('still parses 31 January', () => {
     expect(parseSourceDate('31 gennaio 1895')).toBe('1895-01-31');
   });
+
+  it("no longer treats vatican.va's own 'augusto'/'giungo' typos as month names", () => {
+    // These two typos (Pius X's "Si consentanea (17 augusto 1904)"; Benedict XV's "Inter
+    // Suebiae (14 giungo 1920)") were once aliased to month numbers here (see dates.ts).
+    // Removed (review finding, 2026-09-08): harvest/shelf.ts's slug-date fallback now
+    // strips the date parenthetical before falling back to the URL slug's own date even
+    // when the printed date fails to parse, so parseSourceDate itself no longer needs to
+    // recognise either typo for the two affected ids to resolve correctly.
+    expect(parseSourceDate('17 augusto 1904')).toBeNull();
+    expect(parseSourceDate('14 giungo 1920')).toBeNull();
+  });
 });

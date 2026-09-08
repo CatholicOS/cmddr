@@ -1,0 +1,5872 @@
+[
+  {
+    "id": "mag:pius-x/praedecessoris-nostri-1903",
+    "title": "Praedecessoris Nostri",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1903-08-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19030809_praedecessoris-nostri.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Praedecessoris Nostri",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/e-supremi-1903",
+    "title": "E Supremi",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1903-10-04",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/encyclicals/documents/hf_p-x_enc_04101903_e-supremi.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "E Supremi",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-x/sanctorum-parentis-1903",
+    "title": "Sanctorum parentis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1903-10-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19031012_sanctorum-parentis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sanctorum parentis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/tra-le-sollecitudini-1903",
+    "title": "Tra le sollecitudini",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1903-11-22",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/motu_proprio/documents/hf_p-x_motu-proprio_19031122_sollecitudini.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "ES",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Tra le sollecitudini",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/quas-nuper-1903",
+    "title": "Quas nuper",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1903-12-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19031203_quas-nuper.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quas nuper",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/opus-a-catechismis-1903",
+    "title": "Opus a catechismis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1903-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19031208_opus-a-catechismis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Opus a catechismis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quas-e-1903",
+    "title": "Quas e",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1903-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19031208_quas-e.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quas e",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/peculiaria-quaedam-1903",
+    "title": "Peculiaria quaedam",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1903-12-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19030119_peculiaria-quaedam.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Peculiaria quaedam",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/letter-1903-12-16",
+    "title": "Alla Principessa del Belgio, Enrichetta, Duchessa di Vendôme",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1903-12-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/letters/documents/hf_p-x_let_19031216_principessa-belgio.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/romanis-pontificibus-1903",
+    "title": "Romanis Pontificibus",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1903-12-17",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19031217_romanis-pontificibus.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Romanis Pontificibus",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/fin-dalla-prima-1903",
+    "title": "Fin dalla prima",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1903-12-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/motu_proprio/documents/hf_p-x_motu-proprio_19031218_fin-dalla-prima.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Fin dalla prima",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/la-premiere-fois-1904",
+    "title": "La première fois",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-01-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/fr/letters/documents/hf_p-x_let_19040121_la-premiere-fois.html",
+      "shelf": "letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "La première fois",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/decessor-noster-1904",
+    "title": "Decessor Noster",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-01-31",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19040131_decessor-noster.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Decessor Noster",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/ad-diem-illum-laetissimum-1904",
+    "title": "Ad diem illum laetissimum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-02-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/encyclicals/documents/hf_p-x_enc_02021904_ad-diem-illum-laetissimum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad diem illum laetissimum",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-x/quum-arcano-1904",
+    "title": "Quum, arcano",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-02-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19040211_quum-arcano.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quum, arcano",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/litteras-accepimus-1904",
+    "title": "Litteras accepimus",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-02-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040214_litteras-accepimus.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Litteras accepimus",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/scripturae-sanctae-1904",
+    "title": "Scripturae Sanctae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-02-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/apost_letters/documents/hf_p-x_apl_19040223_scripturae-sanctae.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Scripturae Sanctae",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/haud-ita-1904",
+    "title": "Haud ita",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-02-26",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040226_haud-ita-pridem.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Haud ita",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quae-nostra-1904",
+    "title": "Quae Nostra",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-03-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19040303_quae-nostra.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quae Nostra",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/iucunda-sane-1904",
+    "title": "Iucunda Sane",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-03-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/encyclicals/documents/hf_p-x_enc_12031904_iucunda-sane.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Iucunda Sane",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-x/arduum-sane-munus-1904",
+    "title": "Arduum sane munus",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-03-19",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19040414_arduum-sane.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Arduum sane munus",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/in-apostolicum-1904",
+    "title": "In Apostolicum",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-03-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19040325_in-apostolicum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "In Apostolicum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/cuius-moderator-1904",
+    "title": "Cuius moderator",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-04-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040408_cuius-moderator.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cuius moderator",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/exemplar-libentissime-1904",
+    "title": "Exemplar libentissime",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-04-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040408_exemplar-libentissime.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Exemplar libentissime",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quod-tibi-vehementer-1904",
+    "title": "Quod tibi vehementer",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-04-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040421_quod-tibi-vehementer.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod tibi vehementer",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/motu-proprio-1904-04-25",
+    "title": "Sull'edizione vaticana dei libri liturgici contenenti le melodie gregoriane",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-04-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/motu_proprio/documents/hf_p-x_motu-proprio_19040425_libri-liturgici-gregoriani.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/navitas-egregia-1904",
+    "title": "Navitas egregia",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-04-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040425_navitas-egregia.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Navitas egregia",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/non-ignota-1904",
+    "title": "Non ignota",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-05-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040501_non-ignota.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Non ignota",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/vehementer-nos-1904",
+    "title": "Vehementer Nos",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-05-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040502_vehementer-nos.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Vehementer Nos",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/missale-a-te-1904",
+    "title": "Missale a te",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-05-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050505_missale-a-te.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Missale a te",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quum-optimo-1904",
+    "title": "Quum optimo",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-05-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040505_quum-optimo.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quum optimo",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/edita-typis-1904",
+    "title": "Edita typis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-05-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050506_edita-typis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Edita typis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/ex-opere-1904",
+    "title": "Ex opere",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-05-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040509_ex-opere.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ex opere",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/magnam-equidem-1904",
+    "title": "Magnam equidem",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-05-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040509_magnam-equidem.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Magnam equidem",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/primum-operis-1904",
+    "title": "Primum operis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-05-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040509_primum-operis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Primum operis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/primum-1904",
+    "title": "Primum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-05-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040511_primum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Primum",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/seminarium-vaticanum-1904",
+    "title": "Seminarium Vaticanum",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-05-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19040512_seminarium-vaticanum.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Seminarium Vaticanum",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/ex-quo-tempore-1904",
+    "title": "Ex quo tempore",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-05-22",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040522_ex-quo-tempore.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ex quo tempore",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/sodalitatem-sacerdotum-1904",
+    "title": "Sodalitatem sacerdotum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-05-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040523_sodalitatem-sacerdotum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sodalitatem sacerdotum",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/americae-regionem-1904",
+    "title": "Americae regionem",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-06-13",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040613_americae-regionem.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Americae regionem",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/librum-1904",
+    "title": "Librum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-06-28",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040628_librum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Librum",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/singularitas-regiminis-1904",
+    "title": "Singularitas regiminis",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19040629_singularitas-regiminis.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Singularitas regiminis",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/nunciatum-est-1904",
+    "title": "Nunciatum est",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-07-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040706_nunciatum-est.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Nunciatum est",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/sacrarum-scripturarum-1904",
+    "title": "Sacrarum Scripturarum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-07-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040706_sacrarum-scripturarum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sacrarum Scripturarum",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/conventui-apparando-1904",
+    "title": "Conventui apparando",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-07-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040725_conventui-apparando.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Conventui apparando",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/oblatum-dono-1904",
+    "title": "Oblatum dono",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-07-28",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040728_oblatum-dono.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Oblatum dono",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quod-publicus-1904",
+    "title": "Quod publicus",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-08-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040809_quod-publicus.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod publicus",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/exposuisti-nobis-1904",
+    "title": "Exposuisti Nobis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-08-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040815_exposuisti-nobis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Exposuisti Nobis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/si-consentanea-1904",
+    "title": "Si consentanea",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-08-17",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040817_si-consentanea.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Si consentanea",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/nuncium-sane-1904",
+    "title": "Nuncium sane",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-09-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040902_nuncium-sane.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Nuncium sane",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/letter-1904-09-21",
+    "title": "La protesta del Papa contro il Congresso del libero pensiero",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-09-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/letters/documents/hf_p-x_let_19040921_libero-pensiero.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/novies-saecularia-1904",
+    "title": "Novies saecularia",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-09-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19040921_novies-saecularia.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Novies saecularia",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/e-peractis-1904",
+    "title": "E peractis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-10-17",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19041017_e-peractis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "E peractis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/libenti-omnino-1904",
+    "title": "Libenti omnino",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-10-17",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19041017_libenti-omnino.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Libenti omnino",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/barcinonem-conventuris-1904",
+    "title": "Barcinonem conventuris",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-11-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19041111_barcinonem-conventuris.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Barcinonem conventuris",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/ad-omnium-instaurationem-1904",
+    "title": "Ad omnium instaurationem",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-11-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19041121_ad-omnium.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad omnium instaurationem",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quae-de-istius-1904",
+    "title": "Quae de istius",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-11-22",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19041122_quae-de-istius.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quae de istius",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/nobile-profecto-1904",
+    "title": "Nobile profecto",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-11-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19041123_nobile-profecto.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Nobile profecto",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/exercitiorum-spiritualium-1904",
+    "title": "Exercitiorum Spiritualium",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19041208_exercitiorum-spiritualium.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Exercitiorum Spiritualium",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/gratiam-tibi-1904",
+    "title": "Gratiam tibi",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19041208_gratiam-tibi.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Gratiam tibi",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/haud-tenui-1904",
+    "title": "Haud tenui",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-12-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19041211_haud-tenui.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Haud tenui",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/ad-suppetias-1904",
+    "title": "Ad suppetias",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-12-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19041212_ad-suppetias.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad suppetias",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/descriptum-ornatumque-1904",
+    "title": "Descriptum ornatumque",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-12-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19041212_descriptum-ornatumque.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Descriptum ornatumque",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/habitum-a-vobis-1904",
+    "title": "Habitum a vobis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-12-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19041220_habitum-a-vobis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Habitum a vobis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/si-progressione-1904",
+    "title": "Si progressione",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-12-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19041220_si-progressione.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Si progressione",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/experiendo-plus-1904",
+    "title": "Experiendo plus",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1904-12-27",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19041227_experiendo-plus.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Experiendo plus",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quod-nuper-1905",
+    "title": "Quod nuper",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-01-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050101_quod-nuper.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod nuper",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quinquagesimo-redeunte-anno-1905",
+    "title": "Quinquagesimo redeunte anno",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-01-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050105_quinquagesimo-redeunte-anno.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quinquagesimo redeunte anno",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/fra-i-molti-e-gravi-uffici-1905",
+    "title": "Fra i molti e gravi uffici",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-01-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/letters/documents/hf_p-x_let_19050112_istruzione-cristiana.html",
+      "shelf": "letters",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Fra i molti e gravi uffici",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quum-nos-1905",
+    "title": "Quum Nos",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-01-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050121_quum-nos.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quum Nos",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quemadmodum-servari-1905",
+    "title": "Quemadmodum servari",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-01-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050123_quemadmodum-servari.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quemadmodum servari",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/epistolam-a-te-1905",
+    "title": "Epistolam a te",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-01-31",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050131_epistolam-a-te.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Epistolam a te",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quae-afferuntur-1905",
+    "title": "Quae afferuntur",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-02-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050205_quae-afferuntur.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quae afferuntur",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/a-vincenzo-sardi-1905",
+    "title": "A Vincenzo Sardi",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-02-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/letters/documents/hf_p-x_let_19050206_vincenzo-sardi.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "A Vincenzo Sardi",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/consilium-illud-1905",
+    "title": "Consilium illud",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-02-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050208_consilium-illud.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Consilium illud",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/qua-pontifex-1905",
+    "title": "Qua Pontifex",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-02-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050209_qua-pontifex.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Qua Pontifex",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/sane-nuper-volumina-1905",
+    "title": "Sane nuper volumina",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-02-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050220_sane-nuper.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sane nuper volumina",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/inter-multiplices-curas-1905",
+    "title": "Inter multiplices curas",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-02-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19050221_inter-multiplices-curas.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Inter multiplices curas",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/solemne-illud-1905",
+    "title": "Solemne illud",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-02-22",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050222_solemne-illud.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Solemne illud",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/proximi-ut-accepimus-1905",
+    "title": "Proximi, ut accepimus",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-02-26",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050226_proximi-ut-accepimus.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Proximi, ut accepimus",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quum-haud-1905",
+    "title": "Quum, haud",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-02-27",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050227_quum-haud.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quum, haud",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/contro-i-democratici-cristiani-autonomi-1905",
+    "title": "Contro i Democratici cristiani autonomi",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-03-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/letters/documents/hf_p-x_let_19050301_democratici-cristiani-autonomi.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Contro i Democratici cristiani autonomi",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/austriam-catholico-1905",
+    "title": "Austriam catholico",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-03-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050306_austriam-catholico.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Austriam catholico",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/sedis-apostolicae-1905",
+    "title": "Sedis Apostolicae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-03-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19050309_sedis-apostolicae.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sedis Apostolicae",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/acerbo-nimis-1905",
+    "title": "Acerbo Nimis",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-04-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/encyclicals/documents/hf_p-x_enc_15041905_acerbo-nimis.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Acerbo Nimis",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-x/peculiari-in-nos-1905",
+    "title": "Peculiari in Nos",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-04-22",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050422_peculiari-in-nos.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Peculiari in Nos",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quum-propediem-1905",
+    "title": "Quum propediem",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-04-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050423_quum-propediem.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quum propediem",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/sollicito-vehementer-1905",
+    "title": "Sollicito vehementer",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-05-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050505_sollicito-vehementer.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sollicito vehementer",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/apostolicae-sedi-1905",
+    "title": "Apostolicae Sedi",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-05-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19050508_apostolicae-sedi.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Apostolicae Sedi",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/aere-nefariumque-1905",
+    "title": "Aere nefariumque",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-05-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050514_aere-nefariumque.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Aere nefariumque",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/crux-pectoralis-1905",
+    "title": "Crux pectoralis",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-05-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/motu_proprio/documents/hf_p-x_motu-proprio_19040524_crux-pectoralis.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Crux pectoralis",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/inter-plura-1905",
+    "title": "Inter plura",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-05-31",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050531_inter-plura.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Inter plura",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/almae-urbis-nostrae-1905",
+    "title": "Almae Urbis Nostrae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-06-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19050601_almae-urbis-nostrae.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Almae Urbis Nostrae",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/quibus-nos-1905",
+    "title": "Quibus Nos",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-06-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050608_quibus-nos.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quibus Nos",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/qui-eucharisticum-1905",
+    "title": "Qui eucharisticum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-06-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050609_qui-eucharisticum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Qui eucharisticum",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/il-fermo-proposito-1905",
+    "title": "Il fermo proposito",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-06-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/encyclicals/documents/hf_p-x_enc_11061905_il-fermo-proposito.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Il fermo proposito",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-x/sancti-doctoris-1905",
+    "title": "Sancti doctoris",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-06-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050612_sancti-doctoris.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sancti doctoris",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/letter-1905-06-14",
+    "title": "Il Pontefice prescrive alle Diocesi della Provincia di Roma il nuovo Compendio del Catechismo",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-06-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/letters/documents/hf_p-x_let_19050614_compendio-catechismo.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/vestras-e-fuldensi-1905",
+    "title": "Vestras e Fuldensi",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-06-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050615_vestras-e-fuldensi.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Vestras e Fuldensi",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quae-bona-1905",
+    "title": "Quae bona",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-06-19",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050619_quae-bona.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quae bona",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/tutte-le-istituzioni-1905",
+    "title": "Tutte le istituzioni",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-06-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/motu_proprio/documents/hf_p-x_motu-proprio_19050620_tutte-le-istituzioni.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Tutte le istituzioni",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/letter-1905-06-23",
+    "title": "Al Cardinale Rampolla del Tindaro, Arciprete della Basilica Vaticana",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-06-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/letters/documents/hf_p-x_let_19050623_cardinale-rampolla.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quem-burgensem-1905",
+    "title": "Quem Burgensem",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-06-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050625_quem-burgensem.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quem Burgensem",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/sacrosancta-tridentina-synodus-1905",
+    "title": "Sacrosancta Tridentina Synodus",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-07-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19050716_sacrosancta-tridentina-synodus.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sacrosancta Tridentina Synodus",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/sull-azione-cattolica-1905",
+    "title": "Sull'Azione Cattolica",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-08-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/letters/documents/hf_p-x_let_19050801_azione-cattolica.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sull'Azione Cattolica",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/letter-1905-08-06",
+    "title": "Al Cardinale Pietro Respighi, sui sacerdoti di altre Diocesi che dimorano a Roma",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-08-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/letters/documents/hf_p-x_let_19050806_il-vivissimo-desiderio.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/habiti-quotannis-1905",
+    "title": "Habiti quotannis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-08-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050814_habiti-quotannis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Habiti quotannis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/qui-apparando-1905",
+    "title": "Qui apparando",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-09-04",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050904_qui-apparando.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Qui apparando",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/magnopere-nos-1905",
+    "title": "Magnopere Nos",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-09-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19050924_magnopere-nos.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Magnopere Nos",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/les-graves-evenements-1905",
+    "title": "Les graves événements",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-10-04",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/fr/letters/documents/hf_p-x_let_19051004_les-graves-evenements.html",
+      "shelf": "letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Les graves événements",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/summo-sane-1905",
+    "title": "Summo sane",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-11-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19051118_summo-sane.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Summo sane",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/poloniae-populum-1905",
+    "title": "Poloniae populum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-12-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19051203_poloniae-populum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Poloniae populum",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/dilectus-filius-1905",
+    "title": "Dilectus Filius",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1905-12-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19051220_dilectus-filius.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Dilectus Filius",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/romanas-aequabilius-1906",
+    "title": "Romanas aequabilius",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19060106_romanas-aequabilius.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Romanas aequabilius",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/opportunum-valde-1906",
+    "title": "Opportunum valde",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-01-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19060111_opportunum-valde.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Opportunum valde",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/provida-sapientique-cura-1906",
+    "title": "Provida sapientique cura",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-01-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_constitutions/documents/hf_p-x_apc_19060118_provida-sapientique-cura.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Provida sapientique cura",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-x/novum-1906",
+    "title": "Novum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-02-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19060206_novum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Novum",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/vehementer-nos-1906",
+    "title": "Vehementer Nos",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-02-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/encyclicals/documents/hf_p-x_enc_11021906_vehementer-nos.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "FR",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Vehementer Nos",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-x/inter-catholicos-1906",
+    "title": "Inter catholicos",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-02-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19060220_inter-catholicos.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Inter catholicos",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/letter-1906-02-27",
+    "title": "Al Cardinale Ferrari, Arcivescovo di Milano",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-02-27",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/letters/documents/hf_p-x_let_19060227_cardinale-ferrari.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quum-centum-1906",
+    "title": "Quum centum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-03-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19060302_quum-centum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quum centum",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/religiosorum-ordinum-1906",
+    "title": "Religiosorum Ordinum",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-03-19",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19060319_religiosorum-ordinum.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Religiosorum Ordinum",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/quoniam-in-re-1906",
+    "title": "Quoniam in re",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-03-27",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19060327_quoniam-in-re.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quoniam in re",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/tribus-circiter-1906",
+    "title": "Tribus Circiter",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-04-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/en/encyclicals/documents/hf_p-x_enc_05041906_tribus-circiter.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Tribus Circiter",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-x/vigere-1906",
+    "title": "Vigere",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-04-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19060410_vigere.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Vigere",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/exeunte-1906",
+    "title": "Exeunte",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-04-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19060418_exeunte.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Exeunte",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/praestito-nobis-1906",
+    "title": "Praestito Nobis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-04-26",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19060426_praestito-nobis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Praestito Nobis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/tuos-de-morali-1906",
+    "title": "Tuos de morali",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-05-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19060502_tuos-de-morali.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Tuos de morali",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quotquot-ex-universis-1906",
+    "title": "Quotquot ex universis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-05-22",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19060522_quotquot-ex-universis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quotquot ex universis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/de-sacris-congregationibus-1906",
+    "title": "De Sacris Congregationibus",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-05-26",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19060526_sacrae-congregationi.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "De Sacris Congregationibus",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/quum-tu-1906",
+    "title": "Quum tu",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-05-31",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19060531_quum-tu-magisterium.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quum tu",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/illustria-atque-explorata-1906",
+    "title": "Illustria atque explorata",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-06-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19060608_illustria.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Illustria atque explorata",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/pergratus-nobis-1906",
+    "title": "Pergratus Nobis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-06-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19060608_pergratus-nobis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Pergratus Nobis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/exacto-societatis-1906",
+    "title": "Exacto societatis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-06-30",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19060630_exacto-societatis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Exacto societatis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/dei-providentis-benignitatem-1906",
+    "title": "Dei providentis benignitatem",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-07-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19060716_dei-providentis-benignitatem.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Dei providentis benignitatem",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/pieni-l-animo-1906",
+    "title": "Pieni L'Animo",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-07-28",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/encyclicals/documents/hf_p-x_enc_28071906_pieni-l-animo.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Pieni L'Animo",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-x/legimus-laeto-1906",
+    "title": "Legimus laeto",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-08-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19060802_legimus-laeto.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Legimus laeto",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/propositum-urgentes-1906",
+    "title": "Propositum urgentes",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-08-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19060805_propositum-urgentes.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Propositum urgentes",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/gravissimo-officii-munere-1906",
+    "title": "Gravissimo Officii Munere",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-08-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/encyclicals/documents/hf_p-x_enc_10081906_gravissimo-officii-munere.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Gravissimo Officii Munere",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-x/quod-te-1906",
+    "title": "Quod te",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-08-13",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19060813_quod-te.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod te",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/provinciale-antistitum-1906",
+    "title": "Provinciale Antistitum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-09-17",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19060917_provinciale-antistitum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Provinciale Antistitum",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/susceptum-deo-1906",
+    "title": "Susceptum, Deo",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-10-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19061024_susceptum-deo.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Susceptum, Deo",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/quod-felices-1906",
+    "title": "Quod felices",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-10-30",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19061030_quod-felices.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod felices",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/absolutis-ut-accepimus-1906",
+    "title": "Absolutis, ut accepimus",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-11-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19061109_absolutis-ut-accepimus.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Absolutis, ut accepimus",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/le-condizioni-dolorose-1906",
+    "title": "Le condizioni dolorose",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-11-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/letters/documents/hf_p-x_let_19061110_le-condizioni-dolorose.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Le condizioni dolorose",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/de-vita-1906",
+    "title": "De vita",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-11-22",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19061122_de-vita.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "De vita",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/afflictum-propioribus-1906",
+    "title": "Afflictum propioribus",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1906-11-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19061124_afflictum-propioribus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Afflictum propioribus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/litteras-quas-1907",
+    "title": "Litteras, quas",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-01-04",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19070104_litteras-quas.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Litteras, quas",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/une-fois-encore-1907",
+    "title": "Une Fois Encore",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/en/encyclicals/documents/hf_p-x_enc_06011907_une-fois-encore.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Une Fois Encore",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-x/letter-1907-01-20",
+    "title": "Ai componenti la direzione provvisoria dell' Unione economico sociale per i cattolici italiani",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-01-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/letters/documents/hf_p-x_let_19070120_unione-economico-sociale-cattolici.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/qui-piam-1907",
+    "title": "Qui piam",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-01-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19070121_qui-piam.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Qui piam",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/letter-1907-02-22",
+    "title": "Ai membri del comitato generale dell'Associazione Cattolica della gioventù francese",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-02-22",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/fr/letters/documents/hf_p-x_let_19070222_jeunesse-francaise.html",
+      "shelf": "letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/editum-nuper-1907",
+    "title": "Editum nuper",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-03-04",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19070304_editum-nuper.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Editum nuper",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quam-multa-1907",
+    "title": "Quam multa",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-05-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19070503_quam-multa.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quam multa",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/sub-exitum-1907",
+    "title": "Sub exitum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-05-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19070506_sub-exitum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sub exitum",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/qua-tu-prudentia-1907",
+    "title": "Qua tu prudentia",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-05-27",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19070527_qua-tu-prudentia.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Qua tu prudentia",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/communis-epistola-1907",
+    "title": "Communis epistola",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-06-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19070612_communis-epistola.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Communis epistola",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/ea-semper-fuit-1907",
+    "title": "Ea semper fuit",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-06-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19070614_ea-semper-fuit.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ea semper fuit",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/summa-nos-1907",
+    "title": "Summa Nos",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-06-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19070614_summa-nos.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Summa Nos",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/solemnis-catholicorum-1907",
+    "title": "Solemnis catholicorum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-07-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19070716_solemnis-catholicorum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Solemnis catholicorum",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/prope-est-1907",
+    "title": "Prope est",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-07-22",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19070722_prope-est.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Prope est",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quum-ante-annos-1907",
+    "title": "Quum ante annos",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-08-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19070812_quum-ante.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quum ante annos",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/pascendi-dominici-gregis-1907",
+    "title": "Pascendi Dominici Gregis",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-09-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/encyclicals/documents/hf_p-x_enc_19070908_pascendi-dominici-gregis.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Pascendi Dominici Gregis",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-x/in-domibus-1907",
+    "title": "In domibus",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-09-17",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19070917_in-domibus.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "In domibus",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/singulari-curare-1907",
+    "title": "Singulari curare",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-09-17",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19070917_singulari-curare.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Singulari curare",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/tempus-propediem-1907",
+    "title": "Tempus propediem",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-09-28",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19070928_tempus-propediem.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Tempus propediem",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/habitus-1907",
+    "title": "Habitus",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-10-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19071008_habitus.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Habitus",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/praestantia-scripturae-1907",
+    "title": "Praestantia Scripturae",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-11-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/motu_proprio/documents/hf_p-x_motu-proprio_19071118_praestantia-scripturae.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Praestantia Scripturae",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/delatum-sodalibus-1907",
+    "title": "Delatum sodalibus",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1907-12-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19071203_delatum-sodalibus.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Delatum sodalibus",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/progredientem-aetatis-1908",
+    "title": "Progredientem aetatis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-01-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19080110_progredientem-aetatis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Progredientem aetatis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/hagnae-virginis-1908",
+    "title": "Hagnae virginis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-01-19",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19080119_hagnae-virginis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Hagnae virginis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/laeti-libentesque-1908",
+    "title": "Laeti libentesque",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-02-19",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19080219_laeti-libentesque.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Laeti libentesque",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/tuum-illud-1908",
+    "title": "Tuum illud",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-03-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19080310_tuum-illud.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Tuum illud",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/nunciasti-nobis-1908",
+    "title": "Nunciasti nobis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-03-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19080323_nunciasti-nobis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Nunciasti nobis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/immortalia-promerita-1908",
+    "title": "Immortalia promerita",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-03-31",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19080331_immortalia-promerita.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Immortalia promerita",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/iucunda-valde-1908",
+    "title": "Iucunda valde",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-04-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19080403_iucunda-valde.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Iucunda valde",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/si-vota-semper-1908",
+    "title": "Si vota semper",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-04-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19080409_si-vota-semper.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Si vota semper",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/saecularis-ab-ortu-1908",
+    "title": "Saecularis ab ortu",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-04-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19080416_secularis-ab-ortu.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Saecularis ab ortu",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/studiosa-erga-1908",
+    "title": "Studiosa erga",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-04-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19080424_studiosa-erga.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Studiosa erga",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/le-moment-1908",
+    "title": "Le moment",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-05-17",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/fr/letters/documents/hf_p-x_let_19080517_le-moment.html",
+      "shelf": "letters",
+      "languages": [
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Le moment",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/sapienti-consilio-1908",
+    "title": "Sapienti consilio",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_constitutions/documents/hf_p-x_apc_19080629_sapienti-consilio-index.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sapienti consilio",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-x/me-taedet-1908",
+    "title": "Me taedet",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-07-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19080709_me-tedet.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Me taedet",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/haerent-animo-1908",
+    "title": "Haerent Animo",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-08-04",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/apost_exhortations/documents/hf_p-x_exh_19080804_haerent-animo.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Haerent Animo",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:pius-x/pias-fidelium-1908",
+    "title": "Pias fidelium",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-09-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19080911_pias-fidelium.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Pias fidelium",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/sanctos-inter-1908",
+    "title": "Sanctos inter",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-09-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19080918_sanctos-inter.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sanctos inter",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/in-sublimi-1908",
+    "title": "In sublimi",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-09-19",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19080919_in-sublimi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "In sublimi",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/romanorum-pontificum-1908",
+    "title": "Romanorum Pontificum",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-09-22",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19080922_romanorum-pontificum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Romanorum Pontificum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/quae-rei-1908",
+    "title": "Quae rei",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-09-27",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19080927_quae-rei.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quae rei",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/promulgandi-1908",
+    "title": "Promulgandi",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-09-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_constitutions/documents/hf_p-x_apc_19080929_de-promulgatione-legum.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Promulgandi",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-x/solatium-nos-1908",
+    "title": "Solatium Nos",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-10-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19081015_solatium-nos.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Solatium Nos",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/satis-constat-1908",
+    "title": "Satis constat",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-10-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19081016_satis-constat.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Satis constat",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/retulit-ad-nos-1908",
+    "title": "Retulit ad Nos",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-10-31",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19081031_retulit-ad-nos.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Retulit ad Nos",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/domum-delectis-1908",
+    "title": "Domum delectis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-11-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19081108_domum-delectis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Domum delectis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/haud-sane-1908",
+    "title": "Haud sane",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-11-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19081123_haud-sane.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Haud sane",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quam-tu-1908",
+    "title": "Quam tu",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19081208_quam-tu.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quam tu",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/is-tuus-1908",
+    "title": "Is tuus",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-12-13",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19081213_is-tuus.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Is tuus",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quum-certiores-1908",
+    "title": "Quum certiores",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-12-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19081214_quum-certiores.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quum certiores",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/vestra-erga-1908",
+    "title": "Vestra erga",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-12-19",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19081219_vestra-erga.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Vestra erga",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/sacra-solemnia-1908",
+    "title": "Sacra solemnia",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-12-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19081223_sacra-solemnia.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sacra solemnia",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/solemnia-sacra-1908",
+    "title": "Solemnia sacra",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1908-12-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19081224_solemnia-sacra.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Solemnia sacra",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/conspicua-templa-1909",
+    "title": "Conspicua templa",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-02-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19090205_conspicua-templa.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Conspicua templa",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/communium-rerum-1909",
+    "title": "Communium Rerum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-04-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/encyclicals/documents/hf_p-x_enc_21041909_communium-rerum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Communium Rerum",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-x/vinea-electa-1909",
+    "title": "Vinea electa",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-05-07",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19090507_vinea-electa.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Vinea electa",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/ineffabili-dei-1909",
+    "title": "Ineffabili Dei",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-06-13",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19090613_ineffabili-dei.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ineffabili Dei",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/e-lapurdensi-basilica-1909",
+    "title": "E Lapurdensi Basilica",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-07-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19090705_e-lapurdensi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "E Lapurdensi Basilica",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/septimo-iam-1909",
+    "title": "Septimo iam",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-07-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19090709_septimo-iam.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Septimo iam",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/quae-de-coloniensi-1909",
+    "title": "Quae de Coloniensi",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-08-22",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19090822_quae-de.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quae de Coloniensi",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/sodalitium-1909",
+    "title": "Sodalitium",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-08-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19090824_sodalitium.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sodalitium",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/paucis-ante-diebus-1909",
+    "title": "Paucis ante diebus",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-11-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19091101_paucis-ante.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Paucis ante diebus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/decessor-noster-1909",
+    "title": "Decessor Noster",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-12-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19091209_decessor-noster.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Decessor Noster",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/grate-accepimus-1909",
+    "title": "Grate accepimus",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-12-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19091211_grate-accepimus.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Grate accepimus",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/catholicos-1909",
+    "title": "Catholicos",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-12-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19091212_catholicos.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Catholicos",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/diarium-terrae-sanctae-1909",
+    "title": "Diarium Terrae Sanctae",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-12-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19091212_diarium-terrae.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Diarium Terrae Sanctae",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/placuit-tibi-1909",
+    "title": "Placuit tibi",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-12-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19091212_placuit-tibi.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Placuit tibi",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/reddite-sunt-nobis-1909",
+    "title": "Reddite sunt Nobis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-12-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19091212_redditae-sunt.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Reddite sunt Nobis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/communis-vobiscum-1909",
+    "title": "Communis vobiscum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-12-13",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19091213_communis-vobiscum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Communis vobiscum",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/delectavit-1909",
+    "title": "Delectavit",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-12-17",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19091217_delectavit-nos.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Delectavit",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/pontificium-institutum-1909",
+    "title": "Pontificium institutum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19091225_pontificium-institutum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Pontificium institutum",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/dilecti-filii-1910",
+    "title": "Dilecti filii",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-01-05",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19100105_dilecti-filii.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Dilecti filii",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/grate-cognovimus-1910",
+    "title": "Grate cognovimus",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-01-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100110_grate-cognovimus.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Grate cognovimus",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/gratias-tibi-1910",
+    "title": "Gratias tibi",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-01-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100110_gratias-tibi.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Gratias tibi",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/libentissime-legimus-1910",
+    "title": "Libentissime legimus",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-01-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100110_libentissime-legimus.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Libentissime legimus",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/venerabilem-fratrem-1910",
+    "title": "Venerabilem fratrem",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-01-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100110_venerabilem-fratrem.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Venerabilem fratrem",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/annum-proximo-1910",
+    "title": "Annum proximo",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100124_annum-proximo.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Annum proximo",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/et-petrianam-1910",
+    "title": "Et Petrianam",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100124_et-petrianam.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Et Petrianam",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/ex-annalibus-1910",
+    "title": "Ex annalibus",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100124_ex-annalibus.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ex annalibus",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/gratias-primum-1910",
+    "title": "Gratias primum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100124_gratias-primum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Gratias primum",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quem-ex-perspecta-1910",
+    "title": "Quem ex perspecta",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-02-13",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100213_quem-ex-perspecta.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quem ex perspecta",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/inter-viros-1910",
+    "title": "Inter viros",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-02-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100214_inter-viros.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Inter viros",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/nobis-in-sublimi-1910",
+    "title": "Nobis in sublimi",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-02-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19100214_nobis-in.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Nobis in sublimi",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/quod-cognovimus-1910",
+    "title": "Quod cognovimus",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-02-17",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100217_quod-cognovimus.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod cognovimus",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/letter-1910-02-18",
+    "title": "A Mons. Francesco Saverio Haberl, Prelato domestico di S.S. e Presidente generale dell'Associazione \"Santa Cecilia\" di Germania, Ratisbona (Baviera)",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-02-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/letters/documents/hf_p-x_let_19100218_francesco-saverio-haberl.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/per-solemnia-saecularia-1910",
+    "title": "Per solemnia saecularia",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-02-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100223_per-solemnia-saecularia.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Per solemnia saecularia",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quem-datis-1910",
+    "title": "Quem datis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-02-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100223_quem-datis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quem datis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quae-ad-spirituale-1910",
+    "title": "Quae ad spirituale",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-02-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19100224_quae-ad.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quae ad spirituale",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/exeunte-anno-1910",
+    "title": "Exeunte anno",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-02-27",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100227_exeunte-anno.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Exeunte anno",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quae-nuper-1910",
+    "title": "Quae nuper",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-03-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100314_quae-nuper.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quae nuper",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/novimus-1910",
+    "title": "Novimus",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-03-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100315_novimus.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Novimus",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/est-profecto-1910",
+    "title": "Est profecto",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-04-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100402_est-profecto.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Est profecto",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/refert-ad-nos-1910",
+    "title": "Refert ad Nos",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-04-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19100406_refert-ad-nos.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Refert ad Nos",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/cum-per-apostolicas-1910",
+    "title": "Cum per apostolicas",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-04-07",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19100407_cum-per-apostolicas.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum per apostolicas",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/laeto-accepimus-1910",
+    "title": "Laeto accepimus",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-04-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19090405_laeto-accepimus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Laeto accepimus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/cum-disciplinae-1910",
+    "title": "Cum disciplinae",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-04-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19100410_cum-disciplinae.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum disciplinae",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/quod-ex-tuis-1910",
+    "title": "Quod ex tuis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-04-11",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100411_quod-ex-tuis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod ex tuis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/conspicua-templa-1910",
+    "title": "Conspicua templa",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-04-13",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19100413_conspicua-templa.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Conspicua templa",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/inter-gravissimas-1910",
+    "title": "Inter gravissimas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-04-13",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19100413_inter-gravissimas.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Inter gravissimas",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/apostolicae-1910",
+    "title": "Apostolicae",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-04-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_constitutions/documents/hf_p-x_apc_19100415_apostolicae.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Apostolicae",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-x/ioannis-bonae-1910",
+    "title": "Ioannis Bonae",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-04-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100425_ioannis-bonae.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ioannis Bonae",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/in-hac-beatissimi-petri-1910",
+    "title": "In hac Beatissimi Petri",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-05-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19100503_in-hac.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "In hac Beatissimi Petri",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/paternam-curam-1910",
+    "title": "Paternam curam",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-05-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100503_paternam-curam.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Paternam curam",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/vide-quae-sit-1910",
+    "title": "Vide quae sit",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-05-03",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100503_vide-quae-sit.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Vide quae sit",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/constat-apprime-1910-05-04",
+    "title": "Constat apprime",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-05-04",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19100504_constat-apprime.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Constat apprime",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/delectarum-1910",
+    "title": "Delectarum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-05-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100509_delectarum.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Delectarum",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/non-satis-1910",
+    "title": "Non satis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-05-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100509_non-satis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Non satis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quod-nobis-1910",
+    "title": "Quod nobis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-05-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100509_quod-nobis.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quod nobis",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/studium-quo-tenemur-1910",
+    "title": "Studium quo tenemur",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-05-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100509_studium-quo-tenemur.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Studium quo tenemur",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/litteras-istinc-1910",
+    "title": "Litteras istinc",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-05-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100520_litteras-istinc.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Litteras istinc",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/optimum-sane-1910",
+    "title": "Optimum sane",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-05-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100521_optimum-sane.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Optimum sane",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/etsi-pro-tua-modestia-1910",
+    "title": "Etsi pro tua modestia",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-05-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100523_etsi-pro-tua-modestia.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Etsi pro tua modestia",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/qui-tristia-saepius-1910",
+    "title": "Qui tristia saepius",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-05-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100523_qui-tristia-saepius.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Qui tristia saepius",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/tuam-pastoralis-officii-1910",
+    "title": "Tuam pastoralis officii",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-05-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100523_tuam-pastoralis-officii.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Tuam pastoralis officii",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/dari-operam-1910",
+    "title": "Dari operam",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-05-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19100524_dari-operam.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Dari operam",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/editae-saepe-1910",
+    "title": "Editae Saepe",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-05-26",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/encyclicals/documents/hf_p-x_enc_26051910_editae-saepe.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Editae Saepe",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-x/ex-quo-1910",
+    "title": "Ex quo",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-05-26",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19100526_ex-quo.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ex quo",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/caritatis-opera-1910",
+    "title": "Caritatis opera",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-05-28",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19100509_caritatis-opera.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Caritatis opera",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/sacris-solemniis-1910",
+    "title": "Sacris solemniis",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-06-09",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19100609_sacris-solemniis.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sacris solemniis",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/anno-quinquagesimo-1910",
+    "title": "Anno quinquagesimo",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-06-10",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/letters/documents/hf_p-x_let_19100610_50-oss-rom.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Anno quinquagesimo",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/perillustrem-fratrum-1910",
+    "title": "Perillustrem Fratrum",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-06-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19100614_perillustrem.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Perillustrem Fratrum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/gratiae-quae-1910",
+    "title": "Gratiae, quae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-06-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19100616_gratiae-quae.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Gratiae, quae",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/constat-apprime-1910-06-21",
+    "title": "Constat apprime",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-06-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19100621_constat-apprime.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Constat apprime",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/nobis-exponendum-1910",
+    "title": "Nobis exponendum",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-06-21",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19100621_nobis-exponendum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Nobis exponendum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/illibatae-custodiendae-1910",
+    "title": "Illibatae custodiendae",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19100629_illibatae-custodiendae.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Illibatae custodiendae",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/cathedralis-plocensis-1910",
+    "title": "Cathedralis Plocensis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-07-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19100701_cathedralis-plocensis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cathedralis Plocensis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/romanum-decet-1910",
+    "title": "Romanum decet",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-07-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19100706_romanum-decet.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Romanum decet",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/seraphici-patriarchae-1910",
+    "title": "Seraphici Patriarchae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-08-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19100815_seraphici.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Seraphici Patriarchae",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/manilensium-archiepiscopus-1910",
+    "title": "Manilensium Archiepiscopus",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-08-27",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19100827_manilensium.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Manilensium Archiepiscopus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/sacrorum-antistitum-1910",
+    "title": "Sacrorum antistitum",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-09-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19100901_sacrorum-antistitum.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sacrorum antistitum",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/fuldensem-1910",
+    "title": "Fuldensem",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-09-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19100902_fuldensem.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Fuldensem",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/decessorum-nostrorum-1910",
+    "title": "Decessorum Nostrorum",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-09-07",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19100907_decessorum-nostrorum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Decessorum Nostrorum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/ob-singularem-1910",
+    "title": "Ob singularem",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-09-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19100908_ob-singularem.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ob singularem",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/in-romanae-curiae-1910",
+    "title": "In Romanae Curiae",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19101208_in-romanae-curiae.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "In Romanae Curiae",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/quo-uberiores-1911",
+    "title": "Quo uberiores",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1911-04-08",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19110408_quo-uberiores.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quo uberiores",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/non-sine-magno-1911",
+    "title": "Non sine magno",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1911-04-12",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19110412_non-sine-magno.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Non sine magno",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/cum-summa-1911",
+    "title": "Cum summa",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1911-05-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19110502_cum-summa.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum summa",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/pia-consociatio-1911",
+    "title": "Pia Consociatio",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1911-05-02",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19110511_pia-consociatio.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Pia Consociatio",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/iamdudum-1911",
+    "title": "Iamdudum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1911-05-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/encyclicals/documents/hf_p-x_enc_24051911_iamdudum.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Iamdudum",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-x/motu-proprio-1911-06-28",
+    "title": "Sull'edificazione di un nuovo Santuario nel territorio di Nettuno come assistenza spirituale della popolazione",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1911-06-28",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/motu_proprio/documents/hf_p-x_motu-proprio_19110628_santuario-nettuno.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/divino-afflatu-1911",
+    "title": "Divino afflatu",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1911-11-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_constitutions/documents/hf_p-x_apc_19111101_divino-afflatu.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Divino afflatu",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-x/etsi-nos-1912",
+    "title": "Etsi nos",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1912-01-01",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_constitutions/documents/hf_p-x_apc_19120101_etsi-nos.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Etsi nos",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-x/lacrimabili-statu-1912",
+    "title": "Lacrimabili Statu",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1912-06-07",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/encyclicals/documents/hf_p-x_enc_07061912_lacrimabili-statu.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Lacrimabili Statu",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-x/tradita-ab-antiquis-1912",
+    "title": "Tradita ab antiquis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1912-09-14",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_constitutions/documents/hf_p-x_apc_19120914_tradita-ab-antiquis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Tradita ab antiquis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-x/religiosas-familias-1912",
+    "title": "Religiosas familias",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1912-09-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19120916_religiosas-familias.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Religiosas familias",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/singulari-quadam-1912",
+    "title": "Singulari quadam",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1912-09-24",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/encyclicals/documents/hf_p-x_enc_24091912_singulari-quadam.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "IT",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Singulari quadam",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-x/letter-1912-10-18",
+    "title": "Al Card. Pietro Respighi",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1912-10-18",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/it/letters/documents/hf_p-x_let_19121018_catechismo.html",
+      "shelf": "letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/supremum-officium-1912",
+    "title": "Supremum officium",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1912-12-17",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19121217_supremum-officium.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Supremum officium",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/litteris-apostolicis-1913",
+    "title": "Litteris Apostolicis",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1913-01-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19130125_litteris-apostolicis.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Litteris Apostolicis",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/refert-ad-nos-1913",
+    "title": "Refert ad Nos",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1913-04-28",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19130428_refert-ad-nos.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Refert ad Nos",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/in-praecipuis-1913",
+    "title": "In praecipuis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1913-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_constitutions/documents/hf_p-x_apc_19130628_in-praecipuis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "In praecipuis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:pius-x/abhinc-duos-annos-1913",
+    "title": "Abhinc duos annos",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1913-10-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19131023_abhinc-duos-annos.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Abhinc duos annos",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/consistoriali-decreto-1913",
+    "title": "Consistoriali decreto",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1913-10-25",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/apost_letters/documents/hf_p-x_apl_19131025_consistoriali-decreto.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Consistoriali decreto",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/te-sane-1913",
+    "title": "Te sane",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1913-12-13",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19131213_te-sane.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Te sane",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/in-litteris-nostris-1913",
+    "title": "In litteris Nostris",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1913-12-23",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19131223_in-litteris-nostris.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "In litteris Nostris",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/ubi-primum-1914",
+    "title": "Ubi primum",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1914-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19140106_ubi-primum.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ubi primum",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/impertiendi-tibi-1914",
+    "title": "Impertiendi tibi",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1914-01-15",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19130115_impertiendi-tibi.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Impertiendi tibi",
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/quanta-semper-cura-1914",
+    "title": "Quanta semper cura",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1914-01-16",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/motu_proprio/documents/hf_p-x_motu-proprio_19140116_quanta-semper-cura.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quanta semper cura",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/iucunda-equidem-1914",
+    "title": "Iucunda equidem",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1914-01-20",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-x/la/letters/documents/hf_p-x_let_19140120_iucunda-equidem.html",
+      "shelf": "letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Iucunda equidem",
+    "sourceGenreLabel": "letters"
+  }
+]

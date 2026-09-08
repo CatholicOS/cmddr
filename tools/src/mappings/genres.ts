@@ -29,8 +29,12 @@ export const SOURCE_GENRE_TO_GENRE: Record<string, GenreMapping> = {
   'costituzione apostolica': { genre: 'papal-bull', characteristics: ['apostolic-constitution'] },
   'constitutio apostolica': { genre: 'papal-bull', characteristics: ['apostolic-constitution'] },
   'apost_constitutions': { genre: 'papal-bull', characteristics: ['apostolic-constitution'] },
+  // Benedict XV's page spells this shelf with a hyphen; same genre either way.
+  'apost-constitutions': { genre: 'papal-bull', characteristics: ['apostolic-constitution'] },
   'motu proprio': { genre: 'motu-proprio' },
   'motu_proprio': { genre: 'motu-proprio' },
+  'apost_exhortations': { genre: 'apostolic-exhortation' },
+  'esortazione apostolica': { genre: 'apostolic-exhortation' },
   'allocuzione': { genre: 'discourse-address' },
   'allocutio': { genre: 'discourse-address' },
   'discorso': { genre: 'discourse-address' },
