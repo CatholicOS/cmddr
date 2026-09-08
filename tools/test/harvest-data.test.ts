@@ -168,6 +168,15 @@ describe('the harvested pilot corpus', () => {
     const mismatched = all.filter((d) => d.source?.retrieved !== '2026-09-07');
     expect(mismatched).toEqual([]);
   });
+
+  it("keeps 'Vicario sulla terra' immune to the bare ' sul ' GLOSS_CONNECTORS entry (Task 17 review)", () => {
+    // ' sul ' (no trailing 'la') was added to GLOSS_CONNECTORS in Task 17 review to
+    // recover John Paul II's 'Rosarium Virginis Mariae'. 'Vicario sulla terra' is
+    // structurally immune: the connector's own trailing space means it can only match
+    // ' sul ' followed by a non-'la' word, never the substring inside 'sulla '.
+    const vst = all.find((d) => d.incipit === 'Vicario sulla terra');
+    expect(vst?.id).toBe('mag:leo-xiii/vicario-sulla-terra-1887');
+  });
 });
 
 describe('the Pius X corpus', () => {
@@ -973,6 +982,40 @@ describe('the John Paul II corpus', () => {
     expect(docs.every((d) => typeof d.title === 'string' && d.title.length > 0)).toBe(true);
   });
 
+  it('cleans up two ids Task 17 review authorised, sourced from Benedict XVI review', () => {
+    // Task 17 (Benedict XVI) found, but did not apply unauthorised, two rule-table gaps
+    // that would move existing John Paul II ids. Task 17 review measured both across
+    // every heading in every fixture and authorised them:
+    //
+    // 1. dates.ts's month/year separator relaxed from `\s+` to `\s*`, fixing
+    //    'Kumboënsis (18 marzo1982)' (own URL slug: hf_jp-ii_apc_19820318_kumboensis.html
+    //    confirms 18 March 1982) -- previously minted with the unparsed parenthetical
+    //    baked into the id (kumboensis-18-marzo1982-1982), now clean. The same fix also
+    //    corrects the *title* of the unrelated provisional record 'Nuovo ordinamento
+    //    giuridico della Basilica di San Nicola di Bari (8 maggio1989)' (its id was
+    //    already date-based, not incipit-based, so it is unaffected).
+    // 2. A bare ' sul ' GLOSS_CONNECTORS entry, fixing 'Rosarium Virginis Mariae sul
+    //    Santo Rosario' -- confirmed the genuine incipit of this 2002 apostolic letter --
+    //    previously minted with the gloss baked in
+    //    (rosarium-virginis-mariae-sul-santo-rosario-2002).
+    //
+    // Measured to change nothing else: every other ' sul '-bearing heading in the corpus
+    // is already resolved earlier by ' - ', a comma-prefixed connector, or a narrative-
+    // opener rule, and 'Vicario sulla terra' (Leo XIII) is structurally immune since
+    // ' sul ' with a trailing space is not a substring of 'sulla '.
+    const kumbo = docs.find((d) => d.incipit === 'Kumboënsis');
+    expect(kumbo?.id).toBe('mag:john-paul-ii/kumboensis-1982');
+
+    const sanNicola = docs.find((d) => d.id === 'mag:john-paul-ii/papal-bull-1989-05-08');
+    expect(sanNicola?.title).toBe(
+      'Nuovo ordinamento giuridico della Basilica di San Nicola di Bari',
+    );
+    expect(sanNicola?.idStatus).toBe('provisional');
+
+    const rosarium = docs.find((d) => d.incipit === 'Rosarium Virginis Mariae');
+    expect(rosarium?.id).toBe('mag:john-paul-ii/rosarium-virginis-mariae-2002');
+  });
+
   it('reads the 28 year pages of the apostolic letters shelf', () => {
     // apost_letters is year-partitioned 1978-2005 (spec §2.3); resolveShelfPages reads the
     // aggregate page's own year links rather than any items on it (it carries none).
@@ -1148,21 +1191,32 @@ describe('the Benedict XVI corpus', () => {
 
   it('does not bake a trailing gloss into a minted incipit', () => {
     // Sampled by cross-checking minted incipits against their own URL slugs (task
-    // instruction): three genuine gaps found and fixed with narrowly-evidenced
-    // GLOSS_CONNECTORS entries, each confirmed against the document's own text --
-    // 'Anglicanorum coetibus' (' circa ', the item's own URL slug), 'Totius orbis'
-    // (' contenente', the document's own printed title), and 'Cum pium' (', Lettera
-    // Apostolica', both the URL slug and the document's own opening words). A fourth,
-    // 'Intima Ecclesiae natura' (motu proprio, its own printed title 'MOTU PROPRIO ...
-    // SUL SERVIZIO DELLA CARITÀ'), was fixed with a literal full-phrase connector rather
-    // than a general ' sul ' connector, since the general form would also cut the
-    // already-committed John Paul II record 'Rosarium Virginis Mariae sul Santo Rosario'
-    // -- an existing-id change out of this task's authority; see task-17-report.md.
+    // instruction): four genuine gaps found and fixed with evidenced GLOSS_CONNECTORS
+    // entries, each confirmed against the document's own text -- 'Anglicanorum coetibus'
+    // (' circa ', the item's own URL slug), 'Totius orbis' (' contenente', the document's
+    // own printed title), 'Cum pium' (', Lettera Apostolica', both the URL slug and the
+    // document's own opening words), and 'Intima Ecclesiae natura' (a bare ' sul '
+    // connector, coordinator-authorised after review measured it changes exactly one
+    // more record corpus-wide: the already-committed John Paul II 'Rosarium Virginis
+    // Mariae' -- see the id-drift test below).
     for (const incipit of ['Anglicanorum coetibus', 'Totius orbis', 'Cum pium', 'Intima Ecclesiae natura']) {
       const d = docs.find((x) => x.incipit === incipit);
       expect(d, incipit).toBeDefined();
       expect(d!.idStatus).toBe('minted');
     }
+  });
+
+  it('recovers a clean incipit from a missing-space month/year typo', () => {
+    // 'Kayangana (14 agosto2008)' -- vatican.va's own typo drops the space between month
+    // and year. Before Task 17 review authorised relaxing dates.ts's month/year
+    // separator to `\s*`, the date still resolved (via the URL-slug fallback in
+    // shelf.ts), but the unparsed parenthetical rode along into the incipit/id
+    // (kayangana-14-agosto2008-2008). Confirmed genuine by the item's own URL slug,
+    // hf_ben-xvi_apc_20080814_kayangana.html.
+    const d = docs.find((x) => x.incipit === 'Kayangana');
+    expect(d).toBeDefined();
+    expect(d!.idStatus).toBe('minted');
+    expect(d!.id).toBe('mag:benedict-xvi/kayangana-2008');
   });
 
   it('carries no compact date-range shape in any heading parenthetical', () => {

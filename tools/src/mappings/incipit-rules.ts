@@ -81,6 +81,21 @@ export const GLOSS_CONNECTORS: readonly string[] = [
                                                                                // 'Oecumenicum Concilium sulla recita del Rosario...' (incipit.test.ts) and, via the
                                                                                // two-word guard, against the real Leo XIII heading 'Vicario sulla terra'
                                                                                // (incipit.test.ts), which must NOT cut here
+  ' sul ',                                                                    // Benedict XVI, motu_proprio (Task 17 review, coordinator-authorised):
+                                                                               // 'Intima Ecclesiae natura sul servizio della carità' -- the document's
+                                                                               // own printed title reads 'MOTU PROPRIO ... SUL SERVIZIO DELLA
+                                                                               // CARITÀ' with its proemio opening 'L'intima natura della Chiesa...',
+                                                                               // and every sibling minted motu_proprio incipit on this shelf is a
+                                                                               // bare 2-3-word Latin phrase with no such trailing gloss. Measured
+                                                                               // across all ten corpus headings containing ' sul ': this recovers
+                                                                               // exactly one more, the already-committed John Paul II record
+                                                                               // 'Rosarium Virginis Mariae sul Santo Rosario' -> 'Rosarium Virginis
+                                                                               // Mariae' (confirmed the genuine incipit of that 2002 apostolic
+                                                                               // letter), and changes nothing else -- the other eight are already
+                                                                               // resolved earlier by ' - ', a comma-prefixed connector, or a
+                                                                               // narrative-opener rule. 'Vicario sulla terra' (Leo XIII) is
+                                                                               // structurally immune: ' sul ' with a trailing space is not a
+                                                                               // substring of 'sulla '.
   // Deleted (Task 12 round-2 review): " sull'", ' sugli ', ' sopra '. A corpus-wide
   // removal test found each changes zero headings when removed. " sull'"'s only citation
   // was a synthetic test string ("Dilexi te...sull'amore ai poveri") that matches no real
@@ -243,24 +258,6 @@ export const GLOSS_CONNECTORS: readonly string[] = [
                                                                                // incipits against their own URL slugs, not by any warning. A
                                                                                // corpus-wide check found ', Lettera Apostolica' nowhere else, at any
                                                                                // word count, in the whole corpus.
-  ' sul servizio della carità',                                               // Benedict XVI, motu_proprio (Task 17): 'Intima Ecclesiae natura sul
-                                                                               // servizio della carità' -- confirmed genuine by the document's own
-                                                                               // Italian body text, whose own printed title reads 'MOTU PROPRIO DEL
-                                                                               // SOMMO PONTEFICE BENEDETTO XVI SUL SERVIZIO DELLA CARITÀ' with its
-                                                                               // proemio opening 'L'intima natura della Chiesa si esprime...' -- the
-                                                                               // Latin incipit 'Intima Ecclesiae natura' is a direct rendering of
-                                                                               // that opening phrase, and every other minted motu_proprio incipit on
-                                                                               // this same shelf is a bare 2-3-word Latin phrase with no such
-                                                                               // trailing gloss (Summorum Pontificum, Quaerit semper, Porta fidei,
-                                                                               // Pulchritudinis fidei, Latina Lingua, Fides per doctrinam, Ministrorum
-                                                                               // institutio). Deliberately this one literal phrase, not a bare ' sul
-                                                                               // ' connector: a corpus-wide check found bare ' sul ' in ten headings
-                                                                               // across the corpus, including the already-minted, already-committed
-                                                                               // John Paul II record 'Rosarium Virginis Mariae sul Santo Rosario'
-                                                                               // (data/documents/john-paul-ii.json) -- adding a general ' sul '
-                                                                               // connector would move that existing id, which is this task's own
-                                                                               // stop condition; flagged in task-17-report.md for the controller to
-                                                                               // decide rather than changed here.
   ' contenente',                                                              // Benedict XVI, apost_letters (Task 17): 'Lettera Apostolica in forma
                                                                                // di "Motu Proprio" Totius orbis contenente nuove disposizioni circa
                                                                                // le Basiliche di San Francesco e di Santa Maria degli Angeli in

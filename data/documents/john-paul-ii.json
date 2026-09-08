@@ -4437,8 +4437,8 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:john-paul-ii/kumboensis-18-marzo1982-1982",
-    "title": "Kumboënsis (18 marzo1982)",
+    "id": "mag:john-paul-ii/kumboensis-1982",
+    "title": "Kumboënsis",
     "idStatus": "minted",
     "genre": "papal-bull",
     "issuerId": "rp:john-paul-ii",
@@ -4452,7 +4452,7 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Kumboënsis (18 marzo1982)",
+    "incipit": "Kumboënsis",
     "characteristics": [
       "apostolic-constitution"
     ],
@@ -14261,7 +14261,7 @@
   },
   {
     "id": "mag:john-paul-ii/papal-bull-1989-05-08",
-    "title": "Nuovo ordinamento giuridico della Basilica di San Nicola di Bari (8 maggio1989)",
+    "title": "Nuovo ordinamento giuridico della Basilica di San Nicola di Bari",
     "idStatus": "provisional",
     "genre": "papal-bull",
     "issuerId": "rp:john-paul-ii",
@@ -34142,7 +34142,7 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:john-paul-ii/rosarium-virginis-mariae-sul-santo-rosario-2002",
+    "id": "mag:john-paul-ii/rosarium-virginis-mariae-2002",
     "title": "Rosarium Virginis Mariae sul Santo Rosario",
     "idStatus": "minted",
     "genre": "apostolic-letter",
@@ -34166,7 +34166,7 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Rosarium Virginis Mariae sul Santo Rosario",
+    "incipit": "Rosarium Virginis Mariae",
     "sourceGenreLabel": "apost_letters"
   },
   {

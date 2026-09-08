@@ -2028,8 +2028,8 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:benedict-xvi/kayangana-14-agosto2008-2008",
-    "title": "Kayangana (14 agosto2008)",
+    "id": "mag:benedict-xvi/kayangana-2008",
+    "title": "Kayangana",
     "idStatus": "minted",
     "genre": "papal-bull",
     "issuerId": "rp:benedict-xvi",
@@ -2043,7 +2043,7 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Kayangana (14 agosto2008)",
+    "incipit": "Kayangana",
     "characteristics": [
       "apostolic-constitution"
     ],
