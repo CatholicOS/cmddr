@@ -31,6 +31,7 @@ export interface DocumentRecord {
   date: string;
   scope?: 'universal' | 'local';
   characteristics?: string[];
+  keywords?: string[];
   descriptiveTitle?: 'dogmatic' | 'pastoral';
   sigla?: string;
   aliases?: string[];

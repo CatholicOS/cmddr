@@ -9,6 +9,7 @@ const load = (n: string) =>
   JSON.parse(readFileSync(`data/documents/${n}.json`, 'utf8')) as DocumentRecord[];
 const genres = JSON.parse(readFileSync('data/genres.json', 'utf8')) as
   Array<{ id: string; issuerTypes?: string[] }>;
+const keywords = JSON.parse(readFileSync('data/keywords.json', 'utf8')) as Array<{ id: string }>;
 
 const all = [...load('benedict-xiv'), ...load('pius-ix'), ...load('leo-xiii'), ...load('vatican-i')];
 
@@ -56,7 +57,7 @@ describe('the harvested pilot corpus', () => {
   });
 
   it('satisfies every invariant', () => {
-    expect(checkDocuments(all, genres)).toEqual([]);
+    expect(checkDocuments(all, genres, keywords)).toEqual([]);
   });
 
   it('files the two Vatican I constitutions under the council', () => {
@@ -226,7 +227,7 @@ describe('the Pius X corpus', () => {
   });
 
   it('satisfies every invariant', () => {
-    expect(checkDocuments(px, genres)).toEqual([]);
+    expect(checkDocuments(px, genres, keywords)).toEqual([]);
   });
 
   it('leaves the 383 pilot records untouched', () => {
@@ -355,7 +356,7 @@ describe('the Pius XI and Pius XII corpora', () => {
   });
 
   it('satisfies every invariant', () => {
-    expect(checkDocuments([...pxi, ...pxii], genres)).toEqual([]);
+    expect(checkDocuments([...pxi, ...pxii], genres, keywords)).toEqual([]);
   });
 
   it('leaves the 383 pilot and 306 Pius X records untouched', () => {

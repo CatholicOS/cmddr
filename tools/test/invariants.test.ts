@@ -220,3 +220,23 @@ describe('checkAssessments', () => {
     }], DOCS).map((v) => v.rule)).toContain(14);
   });
 });
+
+const keywords = [{ id: 'circumscription-erection' }];
+
+describe('invariant 21: keywords resolve against the vocabulary', () => {
+  const d = { ...expansionBase, id: 'mag:leo-xiii/rerum-novarum-1891' };
+
+  it('accepts a known keyword', () => {
+    const v = checkDocuments([{ ...d, keywords: ['circumscription-erection'] }], GENRES, keywords);
+    expect(v.map((x) => x.rule)).not.toContain(21);
+  });
+
+  it('rejects an unknown keyword', () => {
+    const v = checkDocuments([{ ...d, keywords: ['diocese-erection'] }], GENRES, keywords);
+    expect(v.map((x) => x.rule)).toContain(21);
+  });
+
+  it('accepts a document with no keywords at all', () => {
+    expect(checkDocuments([d], GENRES, keywords).map((x) => x.rule)).not.toContain(21);
+  });
+});

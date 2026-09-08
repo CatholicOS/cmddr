@@ -8,9 +8,15 @@ export interface Violation { rule: number; id: string; message: string }
 /** The genre rows this module needs from `data/genres.json`: id plus its allowed issuerTypes. */
 export interface GenreLike { id: string; issuerTypes?: string[] }
 
-/** Invariants 8-13, 15-20 of the design spec. (14 lives in the assessment checker.) */
-export function checkDocuments(docs: DocumentRecord[], genres: GenreLike[]): Violation[] {
+/** The keyword rows this module needs from `data/keywords.json`. */
+export interface KeywordLike { id: string }
+
+/** Invariants 8-13, 15-21 of the design spec. (14 lives in the assessment checker.) */
+export function checkDocuments(
+  docs: DocumentRecord[], genres: GenreLike[], keywords: KeywordLike[] = [],
+): Violation[] {
   const genreIds = new Set(genres.map((g) => g.id));
+  const keywordIds = new Set(keywords.map((k) => k.id));
   const issuerTypesByGenre = new Map(genres.map((g) => [g.id, g.issuerTypes]));
   const out: Violation[] = [];
   const seen = new Map<string, number>();
@@ -58,6 +64,12 @@ export function checkDocuments(docs: DocumentRecord[], genres: GenreLike[]): Vio
           rule: 19, id: d.id,
           message: `provisional genre segment '${parts.slug}' != '${expected}'`,
         });
+      }
+    }
+
+    for (const k of d.keywords ?? []) {
+      if (!keywordIds.has(k)) {
+        out.push({ rule: 21, id: d.id, message: `unknown keyword: ${k}` });
       }
     }
 
