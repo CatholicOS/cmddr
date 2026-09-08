@@ -107,9 +107,12 @@ This registry covers the **formal document shelves** of vatican.va. Deliberately
   general audiences, Angelus addresses, messages, prayers, travels and *cotidie*. They are roughly
   99% of the archive by volume and need an identifier rule for documents whose heading is a bare
   date, which this registry does not yet have.
-- **Year-partitioned \`letters\` shelves** — Benedict XV, and Paul VI onward. The \`letters\` shelf is
-  harvested only where the aggregate index carries its items.
+- **Year-partitioned \`letters\` shelves** — John XXIII, Benedict XV, and Paul VI onward. The
+  \`letters\` shelf is harvested only where the aggregate index carries its items.
 - **Bishops' conferences and dicasterial documents**, which remain outside the repository's scope.
+- **Councils before 1870.** vatican.va's council archive publishes only Vatican I and Vatican II;
+  the other nineteen ecumenical councils have no source there, so a registry holding two councils
+  is not a registry of the councils.
 - **Keyword curation is incomplete.** ${candidates} apostolic constitutions have not yet been confirmed
   as circumscription erections. Their headings print a bare Latin toponym with no marker, so each
   is confirmed by hand against the document's own text.

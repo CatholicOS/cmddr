@@ -1620,6 +1620,83 @@ describe('the Leo XIV corpus', () => {
   });
 });
 
+describe('the Second Vatican Council', () => {
+  const vaticanII = load('vatican-ii');
+
+  it('holds all sixteen documents', () => {
+    expect(vaticanII).toHaveLength(16);
+  });
+
+  it('mints every identifier -- none is provisional', () => {
+    // A conciliar title is its own incipit, so the provisional shelf is never reached.
+    expect(vaticanII.every((d) => d.idStatus === 'minted')).toBe(true);
+  });
+
+  it('mints the identifiers the spec and SCHEMA.md already cite', () => {
+    const ids = vaticanII.map((d) => d.id).sort();
+    expect(ids).toEqual([
+      'mag:vatican-ii/ad-gentes-1965',
+      'mag:vatican-ii/apostolicam-actuositatem-1965',
+      'mag:vatican-ii/christus-dominus-1965',
+      'mag:vatican-ii/dei-verbum-1965',
+      'mag:vatican-ii/dignitatis-humanae-1965',
+      'mag:vatican-ii/gaudium-et-spes-1965',
+      'mag:vatican-ii/gravissimum-educationis-1965',
+      'mag:vatican-ii/inter-mirifica-1963',
+      'mag:vatican-ii/lumen-gentium-1964',
+      'mag:vatican-ii/nostra-aetate-1965',
+      'mag:vatican-ii/optatam-totius-1965',
+      'mag:vatican-ii/orientalium-ecclesiarum-1964',
+      'mag:vatican-ii/perfectae-caritatis-1965',
+      'mag:vatican-ii/presbyterorum-ordinis-1965',
+      'mag:vatican-ii/sacrosanctum-concilium-1963',
+      'mag:vatican-ii/unitatis-redintegratio-1964',
+    ]);
+  });
+
+  it('files every document under the council, promulgated by Paul VI', () => {
+    for (const d of vaticanII) {
+      expect(d.issuerId).toBe('oec:vatican-ii');
+      expect(d.issuerType).toBe('ecumenical-council');
+      expect(d.promulgatedBy).toBe('rp:paul-vi');
+      expect(d.source!.shelf).toBeNull();
+    }
+  });
+
+  it('splits four constitutions, three declarations and nine decrees', () => {
+    const count = (g: string) => vaticanII.filter((d) => d.genre === g).length;
+    expect(count('constitution')).toBe(4);
+    expect(count('declaration')).toBe(3);
+    expect(count('decree')).toBe(9);
+  });
+
+  it('qualifies only the three constitutions that print a qualifier', () => {
+    const qualified = vaticanII.filter((d) => d.descriptiveTitle !== undefined)
+      .map((d) => [d.incipit, d.descriptiveTitle]).sort();
+    expect(qualified).toEqual([
+      ['Dei Verbum', 'dogmatic'],
+      ['Gaudium et Spes', 'pastoral'],
+      ['Lumen Gentium', 'dogmatic'],
+    ]);
+  });
+
+  it('carries no keyword: the circumscription vocabulary is papal', () => {
+    for (const d of vaticanII) expect(d.keywords).toBeUndefined();
+  });
+
+  it('records Latin among the languages of every document', () => {
+    for (const d of vaticanII) expect(d.source!.languages).toContain('LA');
+  });
+
+  it('adds no unmapped genre to the corpus', () => {
+    for (const d of vaticanII) expect(d.genre).not.toBeNull();
+  });
+
+  it('records its own fixture retrieval date, not the pope fixtures\' date', () => {
+    for (const d of vaticanII) expect(d.source!.retrieved).toBe('2026-09-08');
+  });
+});
+
 describe('the whole corpus', () => {
   const everything = readdirSync('data/documents')
     .filter((f) => f.endsWith('.json'))

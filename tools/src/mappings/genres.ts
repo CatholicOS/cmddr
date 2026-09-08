@@ -51,3 +51,27 @@ export const SOURCE_GENRE_TO_GENRE: Record<string, GenreMapping> = {
   'protesta': { genre: null },
   'editto': { genre: null },
 };
+
+/**
+ * Genre labels as read from a *council's* documents. Consulted by toDocument ahead of
+ * SOURCE_GENRE_TO_GENRE when the issuer is a council, and never otherwise.
+ *
+ * It exists because the two vocabularies genuinely collide. SOURCE_GENRE_TO_GENRE maps
+ * 'decreto' to `genre: null` -- correctly, for the papal decrees Pius IX's flat page
+ * prints, which the Genre Registry has no row for. The Genre Registry's `decree` row is
+ * `issuerTypes: ['ecumenical-council']`, so pointing the shared key at it would make
+ * every papal decree fail invariant 17. A conciliar decree, filed under the same word,
+ * genuinely is that row.
+ *
+ * 'costituzione dogmatica' is deliberately present in both maps: Pius IX's page prints
+ * it for the two Vatican I constitutions, and Vatican II's own documents print it for
+ * Lumen Gentium and Dei Verbum. Duplicating five words is preferable to either map
+ * reaching into the other.
+ */
+export const CONCILIAR_SOURCE_GENRE_TO_GENRE: Record<string, GenreMapping> = {
+  'costituzione': { genre: 'constitution' },
+  'costituzione dogmatica': { genre: 'constitution', descriptiveTitle: 'dogmatic' },
+  'costituzione pastorale': { genre: 'constitution', descriptiveTitle: 'pastoral' },
+  'dichiarazione': { genre: 'declaration' },
+  'decreto': { genre: 'decree' },
+};

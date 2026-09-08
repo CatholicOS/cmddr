@@ -1,5 +1,6 @@
 import pontiffs from '../../../vendor/crpdr-pontiffs.json' with { type: 'json' };
 import councils from '../../../vendor/coecdr-councils.json' with { type: 'json' };
+import { COUNCILS } from './councils.js';
 
 export const KNOWN_PONTIFF_IDS = new Set<string>(pontiffs as string[]);
 export const KNOWN_COUNCIL_IDS = new Set<string>(councils as string[]);
@@ -170,8 +171,12 @@ export function shelvesFor(pageSlug: string): readonly string[] {
 }
 
 /**
- * vatican.va URL slugs do not match CRPDR ids; this is the bridge. Derived from POPES
- * rather than maintained beside it, so the two can never disagree.
+ * vatican.va URL slugs do not match CRPDR/COECDR ids; this is the bridge. Derived from
+ * POPES and COUNCILS rather than maintained beside them, so the three can never
+ * disagree. A council's slug is its archive path segment ('ii_vatican_council'), not a
+ * `/content/` slug.
  */
-export const VATICAN_SLUG_TO_ISSUER: Record<string, string> =
-  Object.fromEntries(POPES.map((p) => [p.pageSlug, p.issuerId]));
+export const VATICAN_SLUG_TO_ISSUER: Record<string, string> = Object.fromEntries([
+  ...POPES.map((p) => [p.pageSlug, p.issuerId]),
+  ...COUNCILS.map((c) => [c.pageSlug, c.issuerId]),
+]);

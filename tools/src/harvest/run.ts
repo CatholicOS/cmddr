@@ -3,9 +3,10 @@ import { parseFlatIndex } from './flat.js';
 import { parseShelfIndex } from './shelf.js';
 import { resolveShelfPages } from './shelfPages.js';
 import { toDocument } from './toDocument.js';
+import { parseCouncilIndex } from './council.js';
 import { assignProvisionalOrdinals } from './ordinals.js';
 import {
-  POPES, DATE_CORRECTIONS, DUPLICATE_MERGES, ADJUDICATED_DISTINCT, isErectionCandidate,
+  POPES, COUNCILS, DATE_CORRECTIONS, DUPLICATE_MERGES, ADJUDICATED_DISTINCT, isErectionCandidate,
 } from '../mappings/index.js';
 import { issuerLocalPart, mintId } from '../ids.js';
 import { slugify } from '../slug.js';
@@ -75,11 +76,23 @@ function urlDocSlug(url: string | null): string | null {
   return m ? m[1]! : null;
 }
 
-/** The date the checked-in fixtures in tools/fixtures/ were fetched from vatican.va.
- *  This is the source-of-truth default; must be updated whenever those fixtures are refreshed.
+/** The date the checked-in *pope* fixtures in tools/fixtures/ were fetched from vatican.va.
+ *  This is the source-of-truth default for pope fixtures; must be updated whenever those
+ *  fixtures are refreshed. A council fixture's retrieval date lives on its own COUNCILS row
+ *  (tools/src/mappings/councils.ts) instead and must be updated there -- see retrievedFor
+ *  below, which never restamps this value onto a council's records.
  *  Can be overridden with the RETRIEVED env var for testing or when refreshing fixtures. */
 const FIXTURES_RETRIEVED = '2026-09-07';
-const RETRIEVED = process.env.RETRIEVED ?? FIXTURES_RETRIEVED;
+/**
+ * The fetch date to stamp on one item's record. A council is fetched separately from the
+ * pope pages and carries its own date, so FIXTURES_RETRIEVED is not restamped onto it and
+ * it is not stamped with a date a day before its own fixture was fetched. An explicit
+ * RETRIEVED override still wins over both, for a whole-corpus refresh.
+ */
+const retrievedFor = (item: HarvestItem): string =>
+  process.env.RETRIEVED
+  ?? COUNCILS.find((c) => c.pageSlug === item.pageSlug)?.retrieved
+  ?? FIXTURES_RETRIEVED;
 const fixture = (n: string) => readFileSync(`tools/fixtures/${n}.html`, 'utf8');
 
 const items: HarvestItem[] = [];
@@ -100,6 +113,13 @@ for (const pope of POPES) {
       }
     }
   }
+}
+
+// Councils are read from their own archive index, not from a pope's page. Their items
+// carry `shelf: null` and a council pageSlug, so the three dedupe passes below -- all
+// keyed on pageSlug -- can never merge a conciliar act with a papal one.
+for (const council of COUNCILS) {
+  items.push(...parseCouncilIndex(fixture(council.pageSlug), council));
 }
 
 // Hand-curated corrections to demonstrable transcription errors on the source pages
@@ -219,7 +239,8 @@ if (candidates.length) {
   console.warn(`  ${candidates.length} candidates await confirmation into CIRCUMSCRIPTION_ERECTIONS`);
 }
 
-const allDocs = [...mergedByDuplicateTable.values()].map((item) => toDocument(item, RETRIEVED));
+const allDocs = [...mergedByDuplicateTable.values()]
+  .map((item) => toDocument(item, retrievedFor(item)));
 
 // Two distinct documents from the same issuer can share both an incipit slug and a year
 // without being duplicates -- e.g. Pius X's two unrelated "Constat apprime" apostolic

@@ -4,7 +4,10 @@
 # Fixtures are checked in so the test suite is offline and deterministic: a
 # vatican.va redesign then fails a test instead of silently corrupting a harvest.
 # After running this, update FIXTURES_RETRIEVED in tools/src/harvest/run.ts to
-# today's date and re-run `npm run harvest && npm run render`.
+# today's date -- this covers the *pope* fixtures only -- and re-run
+# `npm run harvest && npm run render`. A council fixture's retrieval date lives on
+# its own COUNCILS row (tools/src/mappings/councils.ts) and must be updated there
+# instead; FIXTURES_RETRIEVED is never restamped onto a council's records.
 #
 # Usage: tools/fetch-fixtures.sh                 # every fixture
 #        tools/fetch-fixtures.sh pius-x          # one pope's fixtures
@@ -32,6 +35,10 @@ year() { # year <pageSlug> <shelfName> <YYYY>
 years() {
   for y in $(seq "$3" "$4"); do year "$1" "$2" "$y"; done
 }
+
+# council <pageSlug> -- the archive-era council index. Note this is NOT under /content/,
+# unlike every pope page, and its filename is index_it.htm rather than it.html.
+council() { get "$1" "https://www.vatican.va/archive/hist_councils/$1/index_it.htm"; }
 
 want() { [ -z "$POPE" ] || [ "${1:-}" = "$POPE" ]; }
 POPE="${1:-}"
@@ -122,3 +129,5 @@ if [ -z "$POPE" ] || [ "$POPE" = leo-xiv ]; then
     shelf leo-xiv "$s"
   done
 fi
+
+if [ -z "$POPE" ] || [ "$POPE" = ii_vatican_council ]; then council ii_vatican_council; fi

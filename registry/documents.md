@@ -6,7 +6,7 @@ Identifiers follow `mag:{issuer}/{incipit-slug}-{year}`; the issuer segment is a
 part of `issuerId`, so conciliar documents namespace under their council and record the
 promulgating pope separately. See the design spec for the minting rules.
 
-**4269 documents**, of which 316 carry a provisional identifier — the source prints no incipit for them, so their id is genre-and-date based and may be re-minted.
+**4285 documents**, of which 316 carry a provisional identifier — the source prints no incipit for them, so their id is genre-and-date based and may be re-minted.
 
 Every document appears in both views below; neither is a subset of the other.
 
@@ -24,6 +24,7 @@ Every document appears in both views below; neither is a subset of the other.
 | [`rp:pius-xii`](documents/by-issuer/pius-xii.md) | 253 | 1939-06-18 – 1958-09-29 | apost_constitutions, apost_exhortations, apost_letters, briefs, bulls, encyclicals, letters, motu_proprio |
 | [`rp:john-xxiii`](documents/by-issuer/john-xxiii.md) | 177 | 1958-11-07 – 1963-05-20 | apost_constitutions, apost_exhortations, apost_letters, encyclicals, motu_proprio |
 | [`rp:paul-vi`](documents/by-issuer/paul-vi.md) | 688 | 1963-06-25 – 1978-08-05 | apost_constitutions, apost_exhortations, apost_letters, encyclicals, motu_proprio |
+| [`oec:vatican-ii`](documents/by-issuer/vatican-ii.md) | 16 | 1963-12-04 – 1965-12-07 | — (conciliar) |
 | [`rp:john-paul-i`](documents/by-issuer/john-paul-i.md) | 7 | 1978-09-01 – 1978-09-28 | apost_letters, letters |
 | [`rp:john-paul-ii`](documents/by-issuer/john-paul-ii.md) | 1801 | 1978-10-28 – 2005-04-01 | apost_constitutions, apost_exhortations, apost_letters, bulls, encyclicals, motu_proprio |
 | [`rp:benedict-xvi`](documents/by-issuer/benedict-xvi.md) | 214 | 2005-05-14 – 2013-02-22 | apost_constitutions, apost_exhortations, apost_letters, encyclicals, motu_proprio |
@@ -37,7 +38,9 @@ Every document appears in both views below; neither is a subset of the other.
 | [`apostolic-exhortation`](documents/by-genre/apostolic-exhortation.md) | 54 | 1908-08-04 – 2025-10-04 |
 | [`apostolic-letter`](documents/by-genre/apostolic-letter.md) | 1921 | 1857-06-15 – 2026-08-29 |
 | [`brief`](documents/by-genre/brief.md) | 30 | 1741-05-30 – 1950-09-08 |
-| [`constitution`](documents/by-genre/constitution.md) | 2 | 1870-04-24 – 1870-07-18 |
+| [`constitution`](documents/by-genre/constitution.md) | 6 | 1870-04-24 – 1965-12-07 |
+| [`declaration`](documents/by-genre/declaration.md) | 3 | 1965-10-28 – 1965-12-07 |
+| [`decree`](documents/by-genre/decree.md) | 9 | 1963-12-04 – 1965-12-07 |
 | [`discourse-address`](documents/by-genre/discourse-address.md) | 30 | 1848-04-29 – 1903-06-22 |
 | [`encyclical`](documents/by-genre/encyclical.md) | 293 | 1740-12-03 – 2026-05-15 |
 | [`letter`](documents/by-genre/letter.md) | 432 | 1863-12-21 – 1978-09-28 |
@@ -62,9 +65,12 @@ This registry covers the **formal document shelves** of vatican.va. Deliberately
   general audiences, Angelus addresses, messages, prayers, travels and *cotidie*. They are roughly
   99% of the archive by volume and need an identifier rule for documents whose heading is a bare
   date, which this registry does not yet have.
-- **Year-partitioned `letters` shelves** — Benedict XV, and Paul VI onward. The `letters` shelf is
-  harvested only where the aggregate index carries its items.
+- **Year-partitioned `letters` shelves** — John XXIII, Benedict XV, and Paul VI onward. The
+  `letters` shelf is harvested only where the aggregate index carries its items.
 - **Bishops' conferences and dicasterial documents**, which remain outside the repository's scope.
+- **Councils before 1870.** vatican.va's council archive publishes only Vatican I and Vatican II;
+  the other nineteen ecumenical councils have no source there, so a registry holding two councils
+  is not a registry of the councils.
 - **Keyword curation is incomplete.** 742 apostolic constitutions have not yet been confirmed
   as circumscription erections. Their headings print a bare Latin toponym with no marker, so each
   is confirmed by hand against the document's own text.

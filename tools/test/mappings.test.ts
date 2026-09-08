@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import {
-  VATICAN_SLUG_TO_ISSUER, POPES, shelvesFor,
+  VATICAN_SLUG_TO_ISSUER, POPES, COUNCILS, shelvesFor,
   SOURCE_GENRE_TO_GENRE, CONCILIAR_REASSIGNMENTS,
   KNOWN_PONTIFF_IDS, KNOWN_COUNCIL_IDS,
   DATE_CORRECTIONS, DUPLICATE_MERGES, ADJUDICATED_DISTINCT, CIRCUMSCRIPTION_ERECTIONS,
@@ -23,9 +23,11 @@ describe('pontiff slug mapping', () => {
     expect(VATICAN_SLUG_TO_ISSUER['pius-x']).toBe('rp:pius-x');
   });
 
-  it('maps every mapped slug onto a real pontiff id', () => {
+  it('maps every mapped slug onto a real pontiff or council id', () => {
+    // VATICAN_SLUG_TO_ISSUER is derived from both POPES and COUNCILS (see the POPES
+    // table describe block below), so its values now span both id vocabularies.
     for (const id of Object.values(VATICAN_SLUG_TO_ISSUER)) {
-      expect(KNOWN_PONTIFF_IDS.has(id)).toBe(true);
+      expect(KNOWN_PONTIFF_IDS.has(id) || KNOWN_COUNCIL_IDS.has(id)).toBe(true);
     }
   });
 
@@ -78,9 +80,11 @@ describe('the POPES table', () => {
     ]);
   });
 
-  it('derives the slug->issuer map from the table, so the two cannot disagree', () => {
-    expect(Object.keys(VATICAN_SLUG_TO_ISSUER).sort()).toEqual(POPES.map((p) => p.pageSlug).sort());
+  it('derives the slug->issuer map from POPES and COUNCILS, so none can disagree', () => {
+    const expectedSlugs = [...POPES.map((p) => p.pageSlug), ...COUNCILS.map((c) => c.pageSlug)];
+    expect(Object.keys(VATICAN_SLUG_TO_ISSUER).sort()).toEqual(expectedSlugs.sort());
     for (const p of POPES) expect(VATICAN_SLUG_TO_ISSUER[p.pageSlug]).toBe(p.issuerId);
+    for (const c of COUNCILS) expect(VATICAN_SLUG_TO_ISSUER[c.pageSlug]).toBe(c.issuerId);
   });
 
   it('returns an empty shelf list for an unknown slug rather than throwing', () => {

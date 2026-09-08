@@ -1,7 +1,8 @@
 import { slugify } from '../slug.js';
 import { mintId, mintProvisionalId } from '../ids.js';
 import {
-  VATICAN_SLUG_TO_ISSUER, SOURCE_GENRE_TO_GENRE, CONCILIAR_REASSIGNMENTS, keywordsFor,
+  VATICAN_SLUG_TO_ISSUER, SOURCE_GENRE_TO_GENRE, CONCILIAR_SOURCE_GENRE_TO_GENRE,
+  CONCILIAR_REASSIGNMENTS, COUNCILS, keywordsFor,
 } from '../mappings/index.js';
 import type { DocumentRecord, HarvestItem } from '../types.js';
 
@@ -13,7 +14,14 @@ export function toDocument(item: HarvestItem, retrieved: string): DocumentRecord
   const reassigned = CONCILIAR_REASSIGNMENTS[key];
 
   const issuerId = reassigned?.issuerId ?? pageIssuer;
-  const mapping = SOURCE_GENRE_TO_GENRE[item.sourceGenreLabel.toLowerCase()] ?? { genre: null };
+  // A council's vocabulary is read first and only for a council: 'decreto' means the
+  // Genre Registry's council-only `decree` row here, and a papal decree with no row at
+  // all in the shared map. Falling through to the shared map keeps every label the two
+  // sources share -- 'costituzione dogmatica' among them -- working from one place.
+  const label = item.sourceGenreLabel.toLowerCase();
+  const mapping = (issuerId.startsWith('oec:')
+    ? CONCILIAR_SOURCE_GENRE_TO_GENRE[label]
+    : undefined) ?? SOURCE_GENRE_TO_GENRE[label] ?? { genre: null };
   const issuerType = mapping.issuerType
     ?? (issuerId.startsWith('oec:') ? 'ecumenical-council' : 'pope');
 
@@ -41,7 +49,13 @@ export function toDocument(item: HarvestItem, retrieved: string): DocumentRecord
   // see the latter.
   if (item.incipit !== null) record.incipit = item.incipit;
 
-  if (reassigned) record.promulgatedBy = reassigned.promulgatedBy;
+  // A document harvested from a pope's page and reassigned to a council carries its
+  // promulgator in the reassignment row (Vatican I); one harvested from the council's
+  // own index takes it from the council, which is one uniformly evidenced fact about
+  // that council rather than sixteen repeated ones (spec §4.1).
+  const council = COUNCILS.find((c) => c.pageSlug === item.pageSlug);
+  const promulgatedBy = reassigned?.promulgatedBy ?? council?.promulgatedBy;
+  if (promulgatedBy) record.promulgatedBy = promulgatedBy;
   if (item.aliases?.length) record.aliases = [...item.aliases];
   if (mapping.characteristics) record.characteristics = [...mapping.characteristics];
   if (mapping.descriptiveTitle) record.descriptiveTitle = mapping.descriptiveTitle;
