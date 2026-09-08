@@ -33,7 +33,7 @@ years() {
   for y in $(seq "$3" "$4"); do year "$1" "$2" "$y"; done
 }
 
-want() { [ $# -eq 0 ] || [ "${1:-}" = "$POPE" ]; }
+want() { [ -z "$POPE" ] || [ "${1:-}" = "$POPE" ]; }
 POPE="${1:-}"
 
 if want benedictus-xiv; then flat benedictus-xiv; fi
