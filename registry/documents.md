@@ -6,7 +6,7 @@ Identifiers follow `mag:{issuer}/{incipit-slug}-{year}`; the issuer segment is a
 part of `issuerId`, so conciliar documents namespace under their council and record the
 promulgating pope separately. See the design spec for the minting rules.
 
-**4050 documents**, of which 225 carry a provisional identifier — the source prints no incipit for them, so their id is genre-and-date based and may be re-minted.
+**4248 documents**, of which 314 carry a provisional identifier — the source prints no incipit for them, so their id is genre-and-date based and may be re-minted.
 
 Every document appears in both views below; neither is a subset of the other.
 
@@ -27,20 +27,21 @@ Every document appears in both views below; neither is a subset of the other.
 | [`rp:john-paul-i`](documents/by-issuer/john-paul-i.md) | 7 | 1978-09-01 – 1978-09-28 | apost_letters, letters |
 | [`rp:john-paul-ii`](documents/by-issuer/john-paul-ii.md) | 1801 | 1978-10-28 – 2005-04-01 | apost_constitutions, apost_exhortations, apost_letters, bulls, encyclicals, motu_proprio |
 | [`rp:benedict-xvi`](documents/by-issuer/benedict-xvi.md) | 214 | 2005-05-14 – 2013-02-22 | apost_constitutions, apost_exhortations, apost_letters, encyclicals, motu_proprio |
+| [`rp:francis-i`](documents/by-issuer/francis-i.md) | 198 | 2013-04-13 – 2025-04-12 | apost_constitutions, apost_exhortations, apost_letters, bulls, encyclicals, motu_proprio |
 
 ## By genre
 
 | Genre | Documents | Dates |
 | --- | --- | --- |
-| [`apostolic-exhortation`](documents/by-genre/apostolic-exhortation.md) | 46 | 1908-08-04 – 2012-09-14 |
-| [`apostolic-letter`](documents/by-genre/apostolic-letter.md) | 1797 | 1857-06-15 – 2012-12-02 |
+| [`apostolic-exhortation`](documents/by-genre/apostolic-exhortation.md) | 53 | 1908-08-04 – 2023-10-15 |
+| [`apostolic-letter`](documents/by-genre/apostolic-letter.md) | 1911 | 1857-06-15 – 2024-10-01 |
 | [`brief`](documents/by-genre/brief.md) | 30 | 1741-05-30 – 1950-09-08 |
 | [`constitution`](documents/by-genre/constitution.md) | 2 | 1870-04-24 – 1870-07-18 |
 | [`discourse-address`](documents/by-genre/discourse-address.md) | 30 | 1848-04-29 – 1903-06-22 |
-| [`encyclical`](documents/by-genre/encyclical.md) | 288 | 1740-12-03 – 2009-06-29 |
+| [`encyclical`](documents/by-genre/encyclical.md) | 292 | 1740-12-03 – 2024-10-24 |
 | [`letter`](documents/by-genre/letter.md) | 432 | 1863-12-21 – 1978-09-28 |
-| [`motu-proprio`](documents/by-genre/motu-proprio.md) | 186 | 1880-01-18 – 2013-02-22 |
-| [`papal-bull`](documents/by-genre/papal-bull.md) | 1234 | 1749-03-15 – 2013-02-22 |
+| [`motu-proprio`](documents/by-genre/motu-proprio.md) | 208 | 1880-01-18 – 2024-07-01 |
+| [`papal-bull`](documents/by-genre/papal-bull.md) | 1285 | 1749-03-15 – 2025-04-12 |
 | [`unmapped`](documents/by-genre/unmapped.md) | 5 | 1846-07-16 – 1849-02-14 |
 
 ## Coverage

@@ -797,4 +797,18 @@ export const DATE_CORRECTIONS: Record<string, { date: string; note: string }> = 
       '-- 3rd year -- consistent, 2007-04-19 to 2008-04-18). The printed date is ' +
       "correct; the apost_letters shelf's URL slug (20070506, 6 May) is wrong.",
   },
+
+  // Task 18 (Francis, elected 13 March 2013).
+  'francesco|apost_constitutions|christi-voluntate|2014-06-09': {
+    date: '2014-07-09',
+    note:
+      "Christi voluntate's own closing dating formula reads 'Datum Romae, apud Sanctum " +
+      "Petrum, die nono mensis Iulii, anno Domini bis millesimo quarto decimo, " +
+      "Pontificatus Nostri secundo' (9 July 2014, 2nd year of the pontificate -- " +
+      'consistent, 2013-03-13 to 2015-03-12 spans both candidate dates so the pontifical ' +
+      "year does not itself disambiguate, but the document's own dating formula is " +
+      "decisive). Even the document's own page-heading subtitle prints 'die nono mensis " +
+      "Iunii' (9 June), matching the apost_constitutions shelf's printed '9 giugno 2014' " +
+      "-- both wrong; the URL slug (20140709, 9 July) agrees with the closing formula.",
+  },
 };

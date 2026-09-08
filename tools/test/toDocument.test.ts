@@ -62,7 +62,10 @@ describe('toDocument', () => {
   });
 
   it('throws on an unknown pope slug rather than guessing', () => {
-    expect(() => toDocument(item({ pageSlug: 'francesco' }), '2026-09-07')).toThrow(/francesco/);
+    // 'francesco' (Francis, Task 18) is now a real, mapped pope slug -- a genuinely
+    // unmapped one is needed to exercise this guard.
+    expect(() => toDocument(item({ pageSlug: 'nonexistent-pope' }), '2026-09-07'))
+      .toThrow(/nonexistent-pope/);
   });
 });
 

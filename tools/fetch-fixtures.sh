@@ -107,3 +107,9 @@ if [ -z "$POPE" ] || [ "$POPE" = benedict-xvi ]; then
     shelf benedict-xvi "$s"
   done
 fi
+
+if [ -z "$POPE" ] || [ "$POPE" = francesco ]; then
+  for s in encyclicals bulls apost_constitutions apost_letters apost_exhortations motu_proprio; do
+    shelf francesco "$s"
+  done
+fi

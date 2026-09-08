@@ -475,6 +475,23 @@ export const BARE_GENRE_SLUGS: ReadonlySet<string> = new Set([
   'breve-apostolico', 'decreto', 'epistola', 'discorso', 'allocuzione',
   'chirografo', 'messaggio', 'omelia', 'costituzione', 'costituzione-apostolica',
   'esortazione', 'esortazione-apostolica', 'motu-proprio',
+  // Task 18 (Francis): three headings on apost_letters -- 'Lettera Apostolica "sub
+  // plumbo" con la quale la Chiesa di San Giacomo in Augusta/dei Santi Simone e Giuda
+  // Taddeo a Torre Angela/di Sant'Angela Merici diventa titolo cardinalizio' -- all date
+  // 22 febbraio 2014, so without this entry all three collide on the pass-1 merge key
+  // (pageSlug|slugify(incipit)|date) and two of the three genuine, distinct erections of
+  // a cardinalatial title silently vanish. Fetched all three documents from vatican.va:
+  // each opens 'FRANCISCUS EPISCOPUS SERVUS SERVORUM DEI AD PERPETUAM REI MEMORIAM' /
+  // 'LITTERAE APOSTOLICAE SUB PLUMBO DATAE' (the genre/seal-type descriptor -- 'issued
+  // under lead', i.e. with a leaden bulla, as opposed to a brief sealed under the
+  // Fisherman's Ring) followed by the document-specific title, with the substantive text
+  // itself opening 'Purpuratis Patribus...'; 'sub plumbo' names no document's own
+  // opening words. Checked against every other fixture: the only other file containing
+  // the phrase is benedict-xvi-apost_letters.html ('Cum pium, Lettera Apostolica sub
+  // plumbo datae'), an unquoted mid-sentence occurrence cut by the GLOSS_CONNECTORS
+  // ', Lettera Apostolica' entry to the unrelated incipit 'Cum pium' -- never reaching
+  // quotedOpening/BARE_GENRE_SLUGS at all, so unaffected by this entry.
+  'sub-plumbo',
 ]);
 
 /**

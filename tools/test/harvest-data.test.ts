@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { checkDocuments } from '../src/validate/invariants.js';
 import { parseShelfIndex } from '../src/harvest/shelf.js';
-import { shelvesFor } from '../src/mappings/index.js';
+import { shelvesFor, isErectionCandidate } from '../src/mappings/index.js';
 import type { DocumentRecord } from '../src/types.js';
 
 const load = (n: string) =>
@@ -1299,5 +1299,176 @@ describe('the Benedict XVI corpus', () => {
     expect(load('paul-vi')).toHaveLength(688);
     expect(load('john-paul-i')).toHaveLength(7);
     expect(load('john-paul-ii')).toHaveLength(1801);
+  });
+});
+
+describe('the Francis corpus', () => {
+  const docs = load('francis-i');
+
+  it('holds every formal-shelf document', () => {
+    // 4 encyclicals + 2 bulls + 49 apost_constitutions + 114 apost_letters
+    // + 7 apost_exhortations + 77 motu_proprio = 253 raw items, matching the task
+    // brief's expected counts on every shelf exactly. apost_letters and motu_proprio
+    // overlap heavily for this pope (many acts are a "Lettera Apostolica in forma di
+    // «Motu Proprio»" filed on both shelves): 55 documents merge on shared incipit and
+    // date, each dropping exactly one duplicate item (verified: zero records carry more
+    // than one alsoShelvedAs entry). 253 - 55 = 198.
+    expect(docs).toHaveLength(198);
+  });
+
+  it('files them all under the right issuer', () => {
+    expect(docs.every((d) => d.issuerId === 'rp:francis-i')).toBe(true);
+  });
+
+  it('namespaces ids under the CRPDR id, not the vatican.va slug', () => {
+    // The vatican.va page slug is Italian ('francesco'); the CRPDR id is 'rp:francis-i'
+    // (see pontiffs.ts). Every minted id must bridge through issuerId, never the slug.
+    expect(docs.every((d) => d.id.startsWith('mag:francis-i/'))).toBe(true);
+    expect(docs.some((d) => d.id.startsWith('mag:francesco/'))).toBe(false);
+  });
+
+  it('gives every document a title', () => {
+    expect(docs.every((d) => typeof d.title === 'string' && d.title.length > 0)).toBe(true);
+  });
+
+  it('has no year-partitioned shelf (every fixture is an aggregate page)', () => {
+    for (const shelf of shelvesFor('francesco')) {
+      const index = readFileSync(`tools/fixtures/francesco-${shelf}.html`, 'utf8');
+      expect(index.includes('div class="item"'), shelf).toBe(true);
+    }
+  });
+
+  it('tags the erections the headings state outright', () => {
+    // The first pontificate whose circumscription erections are tagged from the heading
+    // text rather than flagged for curation (keywords.ts, ERECTION_PHRASES): headings
+    // read 'Il Santo Padre ha eretto...' / 'Il Santo Padre ha istituito...' / '...ha
+    // elevato...' outright. All 36 tagged documents are on apost_constitutions.
+    const tagged = docs.filter((d) => d.keywords?.includes('circumscription-erection'));
+    expect(tagged.length).toBeGreaterThan(20);
+    expect(tagged).toHaveLength(36);
+    expect(tagged.every((d) => /ha eretto|ha istituito|ha elevato/i.test(d.title))).toBe(true);
+    expect(tagged.every((d) => d.source?.shelf === 'apost_constitutions')).toBe(true);
+  });
+
+  it('does not tag a document that merely sits on the same shelf', () => {
+    const pe = docs.find((d) => d.incipit === 'Praedicate Evangelium');
+    expect(pe).toBeDefined();
+    expect(pe!.keywords).toBeUndefined();
+  });
+
+  it('does not flag any Francis document as an erection candidate', () => {
+    // keywords.ts's TEXTUALLY_TAGGED set excludes 'francesco' from isErectionCandidate
+    // precisely so a textually-tagged erection is never also double-counted as a
+    // candidate awaiting curation. Confirmed against the actual harvested items, not
+    // just the exclusion set's presence.
+    for (const shelf of shelvesFor('francesco')) {
+      const index = readFileSync(`tools/fixtures/francesco-${shelf}.html`, 'utf8');
+      const items = parseShelfIndex(index, 'francesco', shelf);
+      expect(items.every((i) => !isErectionCandidate(i)), shelf).toBe(true);
+    }
+  });
+
+  it('keeps well-known acts minted and distinct from the erection candidates', () => {
+    for (const incipit of [
+      "Laudato si'", 'Evangelii gaudium', 'Amoris laetitia', 'Fratelli tutti',
+      'Praedicate Evangelium', 'Gaudete et exsultate',
+    ]) {
+      const d = docs.find((x) => x.incipit === incipit);
+      expect(d, incipit).toBeDefined();
+      expect(d!.idStatus).toBe('minted');
+    }
+  });
+
+  it('resolves the sub plumbo collision into three distinct records', () => {
+    // Three genuinely distinct apost_letters acts of 22 February 2014 -- each raising a
+    // different Roman church to a cardinalatial title (San Giacomo in Augusta; Santi
+    // Simone e Giuda Taddeo a Torre Angela; Sant'Angela Merici) -- all open 'Lettera
+    // Apostolica "sub plumbo" con la quale...'. Before 'sub-plumbo' was added to
+    // BARE_GENRE_SLUGS (incipit-rules.ts), all three collided on the pass-1 merge key
+    // (pageSlug|slugify(incipit)|date) and two of the three silently vanished. Fetched
+    // all three documents from vatican.va: each opens 'FRANCISCUS EPISCOPUS SERVUS
+    // SERVORUM DEI...LITTERAE APOSTOLICAE SUB PLUMBO DATAE' (the seal-type genre
+    // descriptor -- 'issued under lead' -- not any document's own opening words), with
+    // the substantive text itself opening 'Purpuratis Patribus...'.
+    const subPlumbo = docs.filter((d) => d.title.includes('sub plumbo'));
+    expect(subPlumbo).toHaveLength(3);
+    expect(subPlumbo.every((d) => d.idStatus === 'provisional')).toBe(true);
+    expect(new Set(subPlumbo.map((d) => d.id)).size).toBe(3);
+  });
+
+  it('corrects the Izcalliensis erection date to its own dating formula', () => {
+    // The apost_constitutions shelf and the document's own page-heading subtitle both
+    // print '9 giugno 2014' (9 June), but the document's own closing dating formula
+    // reads 'die nono mensis Iulii...anno Domini bis millesimo quarto decimo,
+    // Pontificatus Nostri secundo' (9 July 2014) -- matching the URL slug (20140709).
+    const d = docs.find((x) => x.incipit === 'Christi voluntate');
+    expect(d).toBeDefined();
+    expect(d!.date).toBe('2014-07-09');
+  });
+
+  it('adjudicates the four same-date cross-shelf pairs as genuinely distinct', () => {
+    // Each pair verified by fetching both documents from vatican.va and comparing
+    // subject matter -- see ADJUDICATED_DISTINCT (Task 18 entries) for the full evidence.
+    const byTitle = (s: string) => docs.find((d) => d.title.includes(s));
+    expect(byTitle('Costituzione Apostolica In Ecclesiarum Communione')).toBeDefined();
+    expect(byTitle('Decreto del Santo Padre Francesco per l’assegnazione')).toBeDefined();
+    expect(byTitle("circa i limiti e le modalità dell'ordinaria amministrazione")).toBeDefined();
+    expect(byTitle('Decreto del Sommo Pontefice Francesco relativo alla pubblicazione')).toBeDefined();
+    expect(byTitle('si istituisce il Dicastero per il Servizio dello Sviluppo Umano Integrale')).toBeDefined();
+    expect(byTitle('Statuto del Dicastero per il Servizio dello Sviluppo Umano Integrale')).toBeDefined();
+    expect(byTitle('Come una madre amorevole')).toBeDefined();
+    expect(byTitle('Statuto del Dicastero per i Laici, la Famiglia e la Vita')).toBeDefined();
+  });
+
+  it('omits the incipit exactly when the id is provisional', () => {
+    for (const d of docs) {
+      expect('incipit' in d, d.id).toBe(d.idStatus === 'minted');
+    }
+    // 89 of 198 (44.9%) carry no recoverable incipit -- reviewed against their own
+    // heading text. The two dominant genres are the same shape already established for
+    // Benedict XVI: beatification/canonization announcements naming only the honoree
+    // (many sent in the Pope's name by the Secretary of State), and narrative
+    // 'Lettera Apostolica'/'Motu Proprio'/'Decreto' openers describing an administrative
+    // or juridical act in the third person with no Latin incipit at all -- Francis's
+    // pontificate carries an unusually large volume of the latter (Curia and financial
+    // reform decrees), which is why this rate runs well above Benedict XVI's 15.9%.
+    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(89);
+  });
+
+  it('satisfies every invariant', () => {
+    expect(checkDocuments(docs, genres, keywords)).toEqual([]);
+  });
+
+  it('emits no unadjudicated printed/slug date-mismatch or unmerged same-date warnings', () => {
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    let calls: unknown[][];
+    try {
+      for (const shelf of shelvesFor('francesco')) {
+        const index = readFileSync(`tools/fixtures/francesco-${shelf}.html`, 'utf8');
+        parseShelfIndex(index, 'francesco', shelf);
+      }
+    } finally {
+      calls = warnSpy.mock.calls;
+      warnSpy.mockRestore();
+    }
+    const mismatches = calls.filter(([msg]) => String(msg).includes('date mismatch'));
+    expect(mismatches).toEqual([]);
+  });
+
+  it('records the fixture retrieval date for every document', () => {
+    expect(docs.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
+  });
+
+  it('leaves every prior pontificate untouched', () => {
+    expect(all).toHaveLength(383);
+    expect(load('pius-x')).toHaveLength(306);
+    expect(load('pius-xi')).toHaveLength(158);
+    expect(load('pius-xii')).toHaveLength(253);
+    expect(load('benedict-xv')).toHaveLength(63);
+    expect(load('john-xxiii')).toHaveLength(177);
+    expect(load('paul-vi')).toHaveLength(688);
+    expect(load('john-paul-i')).toHaveLength(7);
+    expect(load('john-paul-ii')).toHaveLength(1801);
+    expect(load('benedict-xvi')).toHaveLength(214);
   });
 });

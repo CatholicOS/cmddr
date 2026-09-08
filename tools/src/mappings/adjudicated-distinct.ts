@@ -1787,6 +1787,80 @@ export const ADJUDICATED_DISTINCT: Record<
         'coincidentally dated the same day -- six days before Benedict XVI announced his ' +
         'resignation.',
     },
+
+  // Task 18 (Francis, elected 13 March 2013). Each pair verified by fetching both
+  // documents from vatican.va and comparing subject matter.
+  'francesco|2023-01-06|costituzione-apostolica-in-ecclesiarum-communione|decreto-del-santo-padre-francesco-per-l-assegnazione-dei-settori-degli-ambiti-e-servizi-pastorali-ai-vescovi-ausiliari-della-diocesi-di-roma':
+    {
+      incipit1: 'Costituzione Apostolica In Ecclesiarum Communione',
+      shelf1: 'apost_constitutions',
+      incipit2:
+        'Decreto del Santo Padre Francesco per l’assegnazione dei settori, degli ambiti e '
+        + 'servizi pastorali ai Vescovi Ausiliari della Diocesi di Roma',
+      shelf2: 'motu_proprio',
+      note:
+        'In Ecclesiarum Communione (its own URL slug: in-ecclesiarum-communione) is the ' +
+        'apostolic constitution reorganizing the structure of the Vicariate of Rome. The ' +
+        'Decreto (its own URL slug: decreto-vescovi-ausiliari) is a separate personnel act ' +
+        '("che ai Vescovi Ausiliari siano affidati i seguenti settori, ambiti e servizi ' +
+        'pastorali...Inoltre, nomino Vicegerente S.E. Mons. Baldassare Reina") assigning ' +
+        'pastoral sectors to the named auxiliary bishops and appointing the Vicegerent -- ' +
+        'an implementing personnel decree, not the constitution itself, issued the same day.',
+    },
+  'francesco|2024-01-16|decreto-del-sommo-pontefice-francesco-relativo-alla-pubblicazione-di-provvedimenti-normativi-nello-stato-della-citta-del-vaticano|lettera-apostolica-in-forma-di-motu-proprio-circa-i-limiti-e-le-modalita-dell-ordinaria-amministrazione':
+    {
+      incipit1: 'Decreto del Sommo Pontefice Francesco relativo alla pubblicazione di '
+        + 'provvedimenti normativi nello Stato della Città del Vaticano',
+      shelf1: 'motu_proprio',
+      incipit2:
+        "Lettera Apostolica in forma di Motu Proprio circa i limiti e le modalità "
+        + "dell'ordinaria amministrazione",
+      shelf2: 'apost_letters',
+      note:
+        'The apost_letters motu proprio (its own URL slug: lettera-ap-amministrazione) sets ' +
+        'financial thresholds for the ordinary administration of curial entities ("I limiti ' +
+        'e le modalità (finis et modus) dell’ordinaria amministrazione ' +
+        'rappresentano un criterio oggettivo di applicazione del principio di ' +
+        'sussidiarietà nella gestione dei beni temporali della Sede Apostolica"). The ' +
+        'motu_proprio-shelf Decreto (its own URL slug: decreto-provvedim-normativi) instead ' +
+        'governs how and when Vatican City State normative acts are deemed published ' +
+        '("tutti i provvedimenti normativi...devono ritenersi pubblicati al momento della ' +
+        'loro affissione presso il Cortile di San Damaso..."). Unrelated subjects, ' +
+        'coincidentally dated the same day.',
+    },
+  'francesco|2016-08-17|lettera-apostolica-in-forma-di-motu-proprio-con-la-quale-si-istituisce-il-dicastero-per-il-servizio-dello-sviluppo-umano-integrale|statuto-del-dicastero-per-il-servizio-dello-sviluppo-umano-integrale':
+    {
+      incipit1: "Lettera Apostolica in forma di 'Motu Proprio' con la quale si istituisce il "
+        + 'Dicastero per il Servizio dello Sviluppo Umano Integrale',
+      shelf1: 'apost_letters',
+      incipit2: 'Statuto del Dicastero per il Servizio dello Sviluppo Umano Integrale',
+      shelf2: 'motu_proprio',
+      note:
+        'The apost_letters item (its own URL slug: humanam-progressionem) is the motu ' +
+        'proprio Humanam Progressionem establishing the Dicastery for Promoting Integral ' +
+        'Human Development. The motu_proprio-shelf item (its own URL slug: ' +
+        'statuto-dicastero-servizio-sviluppo-umano-integrale) is that dicastery’s own ' +
+        'statute regulating its competences and structure -- a separate legal text issued ' +
+        'the same day as the establishing act, not the establishing act itself.',
+    },
+  'francesco|2016-06-04|come-una-madre-amorevole|statuto-del-dicastero-per-i-laici-la-famiglia-e-la-vita':
+    {
+      incipit1: 'Come una madre amorevole',
+      shelf1: 'apost_letters',
+      incipit2: 'Statuto del Dicastero per i Laici, la Famiglia e la Vita',
+      shelf2: 'motu_proprio',
+      note:
+        'Come una madre amorevole (its own URL slug: come-una-madre-amorevole) lays down ' +
+        'procedure for removing diocesan bishops or eparchs for negligence, particularly ' +
+        'in cases of sexual abuse ("tra le dette “cause gravi” è compresa la ' +
+        'negligenza dei Vescovi nell’esercizio del loro ufficio, in particolare ' +
+        'relativamente ai casi di abusi sessuali"). The motu_proprio-shelf Statuto (its ' +
+        'own URL slug: statuto-dicastero-famiglia-laici-vita) instead defines the ' +
+        'competences and structure of the Dicastery for Laity, Family and Life ("Il ' +
+        'Dicastero è competente in quelle materie che sono di pertinenza della Sede ' +
+        'Apostolica per la promozione della vita e dell’apostolato dei fedeli ' +
+        'laici..."). Unrelated subjects, coincidentally dated the same day.',
+    },
   'benedict-xvi|2012-11-11|intima-ecclesiae-natura|lettera-apostolica-inviata-a-nome-del-santo-padre-dal-segretario-di-stato-in-occasione-dell-iscrizione-all-albo-dei-beati-di-madre-maria-luisa-prosperi-al-secolo-gertrude':
     {
       // Keyed on the resolved incipit 'Intima Ecclesiae natura' (not the full printed

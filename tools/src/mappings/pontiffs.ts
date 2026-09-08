@@ -133,6 +133,22 @@ export const POPES: readonly PopeSource[] = [
       'encyclicals', 'motu_proprio',
     ],
   },
+  {
+    // The vatican.va slug is Italian ('francesco'); the CRPDR id is 'rp:francis-i'. Elected
+    // 13 March 2013. The first pontificate whose circumscription erections are tagged
+    // textually rather than flagged for curation -- the heading itself states the act
+    // ('Il Santo Padre ha eretto...', 'Il Santo Padre ha istituito...'), so `francesco` sits
+    // in keywords.ts's TEXTUALLY_TAGGED set rather than being scanned for toponym shape.
+    // `letters` and `speeches` are year-partitioned and out of scope (spec §2.7).
+    // apost_letters and motu_proprio overlap heavily: many acts are a "Lettera Apostolica
+    // in forma di «Motu Proprio»" and are filed on both shelves, so pass 1's same-incipit/
+    // same-date merge does real work here.
+    pageSlug: 'francesco', issuerId: 'rp:francis-i', era: 'shelf',
+    shelves: [
+      'apost_constitutions', 'apost_exhortations', 'apost_letters',
+      'bulls', 'encyclicals', 'motu_proprio',
+    ],
+  },
 ] as const;
 
 /** The shelves harvested for a pope page; empty for an unknown slug or a flat-era page. */
