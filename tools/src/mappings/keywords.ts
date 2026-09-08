@@ -13,8 +13,11 @@ import type { DocumentRecord, HarvestItem } from '../types.js';
  * this table with its evidence -- it never writes a keyword itself.
  *
  * Starts empty. Populated by hand in a later curation task, one entry per confirmed
- * erection, each carrying the evidence (the vatican.va document text, or a secondary
- * source) that justifies the tag -- never merely because the title has toponym shape.
+ * erection, each carrying the evidence (the vatican.va document text) that justifies the
+ * tag -- never merely because the title has toponym shape, and never a secondary source in
+ * place of the vatican.va text (review finding, 2026-09-08: the exception this comment used
+ * to carry contradicted the project's cardinal evidence rule and describes nothing any of
+ * the 19 entries below actually does -- every one of them cites vatican.va Latin text).
  *
  * Key: `${pageSlug}|${slugify(incipit ?? title)}|${isoDate}`.
  */
