@@ -1,5 +1,5 @@
 import * as cheerio from 'cheerio';
-import { parseSourceDate } from '../dates.js';
+import { parseSourceDate, daysInMonth } from '../dates.js';
 import { resolveItemUrl, extractLanguages } from './dom.js';
 import { slugify } from '../slug.js';
 import { DATE_CORRECTIONS } from '../mappings/index.js';
@@ -21,12 +21,12 @@ function slugDateReadings(url: string | null): string[] {
   return [ddmmyyyy, yyyymmdd];
 }
 
-/** Whether an `ISO YYYY-MM-DD` string names a real calendar month/day (year unchecked). */
+/** Whether an `ISO YYYY-MM-DD` string names a real calendar date (leap years included). */
 function isPlausibleIsoDate(iso: string | undefined): iso is string {
-  const m = iso?.match(/^\d{4}-(\d{2})-(\d{2})$/);
+  const m = iso?.match(/^(\d{4})-(\d{2})-(\d{2})$/);
   if (!m) return false;
-  const [, mo, d] = m.map(Number);
-  return mo! >= 1 && mo! <= 12 && d! >= 1 && d! <= 31;
+  const [, y, mo, d] = m.map(Number);
+  return mo! >= 1 && mo! <= 12 && d! >= 1 && d! <= daysInMonth(mo!, y!);
 }
 
 /**
@@ -133,7 +133,13 @@ export function parseShelfIndex(html: string, pageSlug: string, shelf: string): 
           + `falling back to URL slug date ${fallbackDate}`,
         );
         date = fallbackDate;
-        headingText = full; // no parenthetical was found/trusted, so nothing to strip
+        // The parenthetical still gets stripped here even though its contents failed to
+        // parse as a date (review finding, 2026-09-08): headingText was already set to
+        // full.slice(0, open) above when a trailing '(' was found, and re-widening it back
+        // to `full` re-attached the unparsed date text, which then rode into
+        // extractIncipit and got baked into the minted id (ten ids fixed by this change;
+        // see dates.ts's now-removed 'augusto'/'giungo' aliases for the same defect's
+        // earlier, narrower patches).
       } else {
         console.warn(`Dropping '${full}' (${pageSlug}/${shelf}): no printed date and no URL slug date`);
         return;

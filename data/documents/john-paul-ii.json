@@ -8264,8 +8264,8 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:john-paul-ii/pius-atque-castus-7-decembre-1984-1984",
-    "title": "Pius atque castus (7 decembre 1984)",
+    "id": "mag:john-paul-ii/pius-atque-castus-1984",
+    "title": "Pius atque castus",
     "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
@@ -8279,7 +8279,7 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Pius atque castus (7 decembre 1984)",
+    "incipit": "Pius atque castus",
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -9433,8 +9433,8 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:john-paul-ii/fluminis-albi-superioris-15-febbaio-1986-1986",
-    "title": "Fluminis Albi Superioris (15 febbaio 1986)",
+    "id": "mag:john-paul-ii/fluminis-albi-superioris-1986",
+    "title": "Fluminis Albi Superioris",
     "idStatus": "minted",
     "genre": "papal-bull",
     "issuerId": "rp:john-paul-ii",
@@ -9448,7 +9448,7 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Fluminis Albi Superioris (15 febbaio 1986)",
+    "incipit": "Fluminis Albi Superioris",
     "characteristics": [
       "apostolic-constitution"
     ],
@@ -15181,8 +15181,8 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:john-paul-ii/cunctis-perspicuum-10-decembre-1989-1989",
-    "title": "Cunctis perspicuum (10 decembre 1989)",
+    "id": "mag:john-paul-ii/cunctis-perspicuum-1989",
+    "title": "Cunctis perspicuum",
     "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
@@ -15196,7 +15196,7 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Cunctis perspicuum (10 decembre 1989)",
+    "incipit": "Cunctis perspicuum",
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -30727,8 +30727,8 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:john-paul-ii/item-laude-5marzo-2000-2000",
-    "title": "Item laude (5marzo 2000)",
+    "id": "mag:john-paul-ii/item-laude-2000",
+    "title": "Item laude",
     "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
@@ -30742,7 +30742,7 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Item laude (5marzo 2000)",
+    "incipit": "Item laude",
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -34003,8 +34003,8 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:john-paul-ii/bonum-mihi-18-august-2002-2002",
-    "title": "Bonum mihi (18. August 2002)",
+    "id": "mag:john-paul-ii/bonum-mihi-2002",
+    "title": "Bonum mihi",
     "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
@@ -34018,12 +34018,12 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Bonum mihi (18. August 2002)",
+    "incipit": "Bonum mihi",
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:john-paul-ii/et-si-distribuero-18-august-2002-2002",
-    "title": "Et si distribuero (18. August 2002)",
+    "id": "mag:john-paul-ii/et-si-distribuero-2002",
+    "title": "Et si distribuero",
     "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
@@ -34037,12 +34037,12 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Et si distribuero (18. August 2002)",
+    "incipit": "Et si distribuero",
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:john-paul-ii/nam-si-evangelizavero-18-august-2002-2002",
-    "title": "Nam si evangelizavero (18. August 2002)",
+    "id": "mag:john-paul-ii/nam-si-evangelizavero-2002",
+    "title": "Nam si evangelizavero",
     "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
@@ -34056,12 +34056,12 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Nam si evangelizavero (18. August 2002)",
+    "incipit": "Nam si evangelizavero",
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:john-paul-ii/spe-gaudentes-18-august-2002-2002",
-    "title": "Spe gaudentes (18. August 2002)",
+    "id": "mag:john-paul-ii/spe-gaudentes-2002",
+    "title": "Spe gaudentes",
     "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
@@ -34075,7 +34075,7 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Spe gaudentes (18. August 2002)",
+    "incipit": "Spe gaudentes",
     "sourceGenreLabel": "apost_letters"
   },
   {

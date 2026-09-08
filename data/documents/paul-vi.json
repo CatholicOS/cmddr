@@ -211,8 +211,8 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:paul-vi/hermosillensis-july-13-1963-1963",
-    "title": "Hermosillensis (July 13, 1963)",
+    "id": "mag:paul-vi/hermosillensis-1963",
+    "title": "Hermosillensis",
     "idStatus": "minted",
     "genre": "papal-bull",
     "issuerId": "rp:paul-vi",
@@ -226,7 +226,7 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Hermosillensis (July 13, 1963)",
+    "incipit": "Hermosillensis",
     "characteristics": [
       "apostolic-constitution"
     ],
@@ -362,8 +362,8 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:paul-vi/resistenciae-12-gosto-1963-1963",
-    "title": "Resistenciae (12 gosto 1963)",
+    "id": "mag:paul-vi/resistenciae-1963",
+    "title": "Resistenciae",
     "idStatus": "minted",
     "genre": "papal-bull",
     "issuerId": "rp:paul-vi",
@@ -377,7 +377,7 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Resistenciae (12 gosto 1963)",
+    "incipit": "Resistenciae",
     "characteristics": [
       "apostolic-constitution"
     ],

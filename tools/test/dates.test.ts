@@ -49,17 +49,14 @@ describe('parseSourceDate', () => {
     expect(parseSourceDate('31 gennaio 1895')).toBe('1895-01-31');
   });
 
-  it("tolerates vatican.va's own 'augusto' typo for August", () => {
-    // Printed verbatim on the Pius X letters shelf as "Si consentanea (17 augusto
-    // 1904)"; the item's own URL slug (..._19040817_si-consentanea.html) confirms
-    // 17 August 1904.
-    expect(parseSourceDate('17 augusto 1904')).toBe('1904-08-17');
-  });
-
-  it("tolerates vatican.va's own 'giungo' typo for giugno (June)", () => {
-    // Printed verbatim on the Benedict XV apost_letters shelf as "Inter Suebiae (14
-    // giungo 1920)"; the item's own URL slug (..._19200614_inter-suebiae.html) confirms
-    // 14 June 1920.
-    expect(parseSourceDate('14 giungo 1920')).toBe('1920-06-14');
+  it("no longer treats vatican.va's own 'augusto'/'giungo' typos as month names", () => {
+    // These two typos (Pius X's "Si consentanea (17 augusto 1904)"; Benedict XV's "Inter
+    // Suebiae (14 giungo 1920)") were once aliased to month numbers here (see dates.ts).
+    // Removed (review finding, 2026-09-08): harvest/shelf.ts's slug-date fallback now
+    // strips the date parenthetical before falling back to the URL slug's own date even
+    // when the printed date fails to parse, so parseSourceDate itself no longer needs to
+    // recognise either typo for the two affected ids to resolve correctly.
+    expect(parseSourceDate('17 augusto 1904')).toBeNull();
+    expect(parseSourceDate('14 giungo 1920')).toBeNull();
   });
 });

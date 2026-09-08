@@ -390,10 +390,11 @@ describe('extractIncipit against Benedict XV (Task 12 review)', () => {
   });
 
   it("tolerates vatican.va's own 'giungo' date typo without baking the parenthetical into the incipit", () => {
-    // 'Inter Suebiae (14 giungo 1920)' (benedict-xv/apost_letters) -- the trailing-date
-    // strip in parseShelfIndex depends on parseSourceDate succeeding; once dates.ts
-    // recognises 'giungo' (see dates.test.ts), the heading text handed to extractIncipit
-    // is just 'Inter Suebiae', not the full string with the date parenthetical attached.
+    // 'Inter Suebiae (14 giungo 1920)' (benedict-xv/apost_letters) -- parseSourceDate no
+    // longer recognises the 'giungo' typo (dates.test.ts), but parseShelfIndex's
+    // parenthetical strip runs unconditionally on the printed heading, before the date
+    // itself is parsed, so the text handed to extractIncipit is still just 'Inter
+    // Suebiae', not the full string with the unparsed date parenthetical attached.
     expect(incipitOf('Inter Suebiae')).toBe('Inter Suebiae');
   });
 });

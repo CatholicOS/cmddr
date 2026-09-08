@@ -3,17 +3,15 @@ const MONTHS: Record<string, number> = {
   luglio: 7, agosto: 8, settembre: 9, ottobre: 10, novembre: 11, dicembre: 12,
   ianuarii: 1, februarii: 2, martii: 3, aprilis: 4, maii: 5, iunii: 6,
   iulii: 7, augusti: 8, septembris: 9, octobris: 10, novembris: 11, decembris: 12,
-  // 'augusto' is neither the Italian 'agosto' nor the Latin 'augusti': it is vatican.va's
-  // own typo, printed verbatim as "Si consentanea (17 augusto 1904)" on the Pius X letters
-  // shelf. The URL slug for that same item -- .../hf_p-x_let_19040817_si-consentanea.html --
-  // confirms 17 August 1904, so the intended month is unambiguous.
-  augusto: 8,
-  // 'giungo' is not a real Italian word (the month is 'giugno'): it is vatican.va's own
-  // typo, printed verbatim as "Inter Suebiae (14 giungo 1920)" on the Benedict XV
-  // apost_letters shelf. The item's own URL slug --
-  // .../hf_ben-xv_apl_19200614_inter-suebiae.html -- confirms 14 June 1920, so the intended
-  // month is unambiguous.
-  giungo: 6,
+  // 'augusto' (Pius X letters, "Si consentanea (17 augusto 1904)") and 'giungo' (Benedict
+  // XV apost_letters, "Inter Suebiae (14 giungo 1920)") are vatican.va's own transcription
+  // typos and were once aliased to month numbers here. Removed (review finding, 2026-09-08):
+  // the two headings no longer need month recognition to resolve correctly, because the
+  // slug-date fallback in harvest/shelf.ts now strips the (unparsed) date parenthetical
+  // from the heading before falling back to the URL slug's own date, instead of
+  // re-attaching it to the text handed to extractIncipit. Both ids -- inter-suebiae and
+  // si-consentanea -- were measured unchanged by removing these aliases once that fix was
+  // in place; if either had moved, the aliases would have stayed and this note would say so.
 };
 
 // The month/year separator is `\s*` (zero or more spaces), not `\s+`: vatican.va's own
@@ -38,7 +36,7 @@ function isLeapYear(year: number): boolean {
   return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 }
 
-function daysInMonth(month: number, year: number): number {
+export function daysInMonth(month: number, year: number): number {
   const lengths = [31, isLeapYear(year) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
   return lengths[month - 1]!;
 }
