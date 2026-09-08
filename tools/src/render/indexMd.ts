@@ -24,8 +24,11 @@ const cmp = (a: string, b: string): number => (a < b ? -1 : a > b ? 1 : 0);
 export function renderIndexMd(docs: DocumentRecord[]): string {
   // Grouped by the same key run.ts uses to name the file (issuerLocalPart), not the full
   // issuerId, so a row's count and date range can never diverge from the file it links to.
+  // Tie-broken on the issuer key itself (review finding, 2026-09-08): two issuers with
+  // identical date ranges would otherwise fall back to Map/group insertion order, which is
+  // readdirSync order -- filesystem-dependent, in a file this project checks in.
   const byIssuer = [...group(docs, (d) => issuerLocalPart(d.issuerId))].sort(
-    (a, b) => cmp(range(a[1]), range(b[1])));
+    (a, b) => cmp(range(a[1]), range(b[1])) || cmp(a[0], b[0]));
   const byGenre = [...group(docs, (d) => d.genre)].sort(
     (a, b) => cmp(genreFile(a[0]), genreFile(b[0])));
   const byKeyword = new Map<string, DocumentRecord[]>();
