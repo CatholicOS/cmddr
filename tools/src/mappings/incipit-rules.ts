@@ -77,10 +77,22 @@ export const GLOSS_CONNECTORS: readonly string[] = [
   '. Il Santo Padre', '. Il Sommo Pontefice',                                  // Francis
   ' del Santo Padre', ' del Sommo Pontefice', ' di Papa ',                     // Leo XIV
   ": ", ' - ', ' – ', ' — ',                                                   // Pius XII, B XVI
-  " sull'", ' sulla ', ' sui ', ' sugli ', ' sopra ',                          // John XXIII; ' sulla ' also confirmed against
+  ' sulla ', ' sui ',                                                         // John XXIII; ' sulla ' also confirmed against
                                                                                // 'Oecumenicum Concilium sulla recita del Rosario...' (incipit.test.ts) and, via the
                                                                                // two-word guard, against the real Leo XIII heading 'Vicario sulla terra'
                                                                                // (incipit.test.ts), which must NOT cut here
+  // Deleted (Task 12 round-2 review): " sull'", ' sugli ', ' sopra '. A corpus-wide
+  // removal test found each changes zero headings when removed. " sull'"'s only citation
+  // was a synthetic test string ("Dilexi te...sull'amore ai poveri") that matches no real
+  // fixture heading; the one real fixture heading containing " sull'" ('Con singular
+  // complacencia: all'Episcopato filippino sull'importanza dell'Azione Cattolica') is
+  // already cut earlier by ': '. ' sugli ' was cited only as a *negative* example (a
+  // heading it must NOT fire on, already caught by the address-opener guard -- see
+  // MAX_INCIPIT_WORDS's doc comment, "Long address opener"); no fixture heading needs it
+  // to cut correctly. ' sopra ' had no citation anywhere and no matching heading in any
+  // fixture at all. Per this repository's standing rule, an unevidenced rule is deleted
+  // rather than retro-justified -- the same discipline that removed eleven speculative
+  // rules earlier in this project (see the deletion note above, and Task 5's review).
   ' ai ', ' agli ', ' alle ', ' alla ', " all'",                               // Benedict XV; ' ai ' confirmed against
                                                                                // 'Dès le début ai Capi dei popoli belligeranti...' (incipit.test.ts)
   ' al ',                                                                      // Pius XI, letters (Task 8): the masculine-singular sibling of the
@@ -130,6 +142,20 @@ export const GLOSS_CONNECTORS: readonly string[] = [
                                                                                // by ' - ' and ': ' respectively, so the comma-anchored form here is
                                                                                // the tighter, sufficient, and correct choice -- adding the bare form
                                                                                // too would be unevidenced by any heading it would actually change.
+  ', sulle ',                                                                 // Task 12 round-2 review: the feminine-plural sibling of ', sul '.
+                                                                               // Matches exactly two headings in the whole corpus, both Pius XI
+                                                                               // motu_proprio: 'Motu Proprio Post datam, sulle facoltà quinquennali
+                                                                               // degli Ordinari' (docSlug post-datam) and 'Motu Proprio Cum Proxime,
+                                                                               // sulle nuove norme a proposito delle riunioni dei cardinali chiamati
+                                                                               // ad eleggere il nuovo Papa' (docSlug cum-proxime) -- both previously
+                                                                               // minted with the whole gloss baked into the id, the same bug class as
+                                                                               // ', sul '/Ad Musicae Sacrae, flagged but left unfixed in the original
+                                                                               // Task 12 review pending authorization. Two more real headings contain
+                                                                               // ', sulle ' ('Chirografo al Cardinale Basilio Pompili...sulle violenze
+                                                                               // compiute in Russia' and 'Chirografo al Cardinale Gasparri...sulle
+                                                                               // proposte formulate...'), but both are already nulled earlier by the
+                                                                               // address-opener guard (OPENER_PATTERN: 'al Cardinale' after the
+                                                                               // 'Chirografo' genre prefix), so this connector never reaches them.
   ', Lettera Decretale', ',Lettera Decretale',                                // Pius XI, apost_letters (Task 8): 'Christi nomen, Lettera Decretale
                                                                                // («Beatus Ioannes Baptista Maria Vianney» - 31 maggio 1925)' and
                                                                                // 'Suavis agitata,Lettera Decretale (19 maggio 1935)' (the source page's

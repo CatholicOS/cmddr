@@ -291,6 +291,28 @@ describe('extractIncipit against Pius XI and Pius XII (Task 8)', () => {
       .toBe('Ad Musicae Sacrae');
   });
 
+  it('cuts at a comma-anchored ", sulle " connector, the feminine-plural sibling of ", sul " (Task 12 round-2 review)', () => {
+    // 'Motu Proprio Post datam, sulle facoltà quinquennali degli Ordinari'
+    // (pius-xi/motu_proprio, docSlug post-datam) and 'Motu Proprio Cum Proxime, sulle
+    // nuove norme a proposito delle riunioni dei cardinali chiamati ad eleggere il nuovo
+    // Papa' (pius-xi/motu_proprio, docSlug cum-proxime) -- both previously minted with
+    // the whole gloss baked into the id, re-minted to mag:pius-xi/post-datam-1923 and
+    // mag:pius-xi/cum-proxime-1922 once this connector was added.
+    expect(incipitOf('Motu Proprio Post datam, sulle facoltà quinquennali degli Ordinari'))
+      .toBe('Post datam');
+    expect(incipitOf('Motu Proprio Cum Proxime, sulle nuove norme a proposito delle riunioni dei cardinali chiamati ad eleggere il nuovo Papa'))
+      .toBe('Cum Proxime');
+  });
+
+  it('leaves two other real ", sulle "-bearing headings null, unaffected by the new connector', () => {
+    // Both are 'Chirografo al Cardinale...' addressee headings, already nulled earlier by
+    // the address-opener guard (OPENER_PATTERN) regardless of any gloss connector.
+    expect(incipitOf('Chirografo al Cardinale Basilio Pompili, Vicario di Roma, sulle violenze compiute in Russia'))
+      .toBeNull();
+    expect(incipitOf("Chirografo al Cardinale Gasparri, sulle proposte formulate dalla Commissione Ministeriale circa la legislazione ecclesiastica in Italia"))
+      .toBeNull();
+  });
+
   it('never changes a single Leo XIII or Pius X heading (no-op corpus regression check)', () => {
     // The 581-heading Leo XIII/Pius X corpus is byte-identical before and after every rule
     // added in this describe block (verified by hand against tools/fixtures/*.html during

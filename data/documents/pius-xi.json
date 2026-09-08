@@ -1,6 +1,6 @@
 [
   {
-    "id": "mag:pius-xi/cum-proxime-sulle-nuove-norme-a-proposito-delle-riunioni-dei-cardinali-chiamati-ad-eleggere-il-nuovo-papa-1922",
+    "id": "mag:pius-xi/cum-proxime-1922",
     "title": "Motu Proprio Cum Proxime, sulle nuove norme a proposito delle riunioni dei cardinali chiamati ad eleggere il nuovo Papa",
     "idStatus": "minted",
     "genre": "motu-proprio",
@@ -15,7 +15,7 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Cum Proxime, sulle nuove norme a proposito delle riunioni dei cardinali chiamati ad eleggere il nuovo Papa",
+    "incipit": "Cum Proxime",
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -469,7 +469,7 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:pius-xi/post-datam-sulle-facolta-quinquennali-degli-ordinari-1923",
+    "id": "mag:pius-xi/post-datam-1923",
     "title": "Motu Proprio Post datam, sulle facoltà quinquennali degli Ordinari",
     "idStatus": "minted",
     "genre": "motu-proprio",
@@ -484,7 +484,7 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Post datam, sulle facoltà quinquennali degli Ordinari",
+    "incipit": "Post datam",
     "sourceGenreLabel": "motu_proprio"
   },
   {
