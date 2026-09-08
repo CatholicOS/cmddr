@@ -118,6 +118,20 @@ describe('invariant 18: every document has a title', () => {
     );
     expect(v.map((x) => x.rule)).toContain(18);
   });
+
+  it('reports a rule-18 violation, rather than throwing, for a record with neither ' +
+    'incipit nor a string title (review finding, 2026-09-08)', () => {
+    // Rule 12 used to run before rule 18 and fall back to slugify(d.title) when d.incipit
+    // was absent; slugify() throws on a non-string argument, so a malformed record with a
+    // missing/non-string title crashed the validator instead of being reported.
+    const malformed = {
+      ...expansionBase, id: 'mag:leo-xiii/rerum-novarum-1891', incipit: undefined,
+      title: undefined,
+    } as unknown as DocumentRecord;
+    expect(() => checkDocuments([malformed], GENRES)).not.toThrow();
+    const v = checkDocuments([malformed], GENRES);
+    expect(v.map((x) => x.rule)).toContain(18);
+  });
 });
 
 describe('invariant 19: a provisional id is derivable from its record', () => {

@@ -47,12 +47,22 @@ export function checkDocuments(
     if (parts.year !== d.date.slice(0, 4)) {
       out.push({ rule: 10, id: d.id, message: `id year ${parts.year} != date ${d.date}` });
     }
-    if (d.idStatus === 'minted' && parts.slug !== slugify(d.incipit ?? d.title)) {
-      out.push({ rule: 12, id: d.id, message: `slug '${parts.slug}' != slugify('${d.incipit}')` });
+    // Rule 18 runs before rule 12 (review finding, 2026-09-08): rule 12 falls back to
+    // d.title when d.incipit is absent, and slugify() throws on a non-string argument
+    // rather than returning a mismatch. A record with neither a usable incipit nor a
+    // string title must be reported by rule 18 and skip rule 12's slug check, rather than
+    // crashing the validator on malformed input.
+    const hasTitle = typeof d.title === 'string' && d.title.trim() !== '';
+    if (!hasTitle) {
+      out.push({ rule: 18, id: d.id, message: 'title is missing or empty' });
     }
 
-    if (typeof d.title !== 'string' || d.title.trim() === '') {
-      out.push({ rule: 18, id: d.id, message: 'title is missing or empty' });
+    if (
+      d.idStatus === 'minted'
+      && (typeof d.incipit === 'string' || hasTitle)
+      && parts.slug !== slugify(d.incipit ?? d.title)
+    ) {
+      out.push({ rule: 12, id: d.id, message: `slug '${parts.slug}' != slugify('${d.incipit}')` });
     }
 
     if (d.idStatus === 'provisional') {
@@ -112,7 +122,11 @@ export function checkDocuments(
       }
     }
 
-    if (d.idStatus === 'minted' && local !== null) {
+    // Guarded the same way as rule 12 above (review finding, 2026-09-08): slugify()
+    // throws on a non-string argument, so this collision key must not be built from a
+    // record with neither a usable incipit nor a string title -- such a record is
+    // already reported via rule 18 above and simply takes no part in collision grouping.
+    if (d.idStatus === 'minted' && local !== null && (typeof d.incipit === 'string' || hasTitle)) {
       const k = `${local}|${slugify(d.incipit ?? d.title)}|${d.date.slice(0, 4)}`;
       byCollision.set(k, [...(byCollision.get(k) ?? []), d]);
     }
