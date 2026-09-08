@@ -3,6 +3,7 @@ import {
   VATICAN_SLUG_TO_ISSUER, POPES, shelvesFor,
   SOURCE_GENRE_TO_GENRE, CONCILIAR_REASSIGNMENTS,
   KNOWN_PONTIFF_IDS, KNOWN_COUNCIL_IDS,
+  DATE_CORRECTIONS, DUPLICATE_MERGES, ADJUDICATED_DISTINCT, CIRCUMSCRIPTION_ERECTIONS,
 } from '../src/mappings/index.js';
 
 describe('vendored registries', () => {
@@ -122,5 +123,39 @@ describe('conciliar reassignments', () => {
       .toEqual({ issuerId: 'oec:vatican-i', promulgatedBy: 'rp:pius-ix' });
     expect(CONCILIAR_REASSIGNMENTS['pius-ix|pastor-aeternus|1870-07-18'])
       .toEqual({ issuerId: 'oec:vatican-i', promulgatedBy: 'rp:pius-ix' });
+  });
+});
+
+/**
+ * The cardinal rule of every curated table in this project: an entry is evidence, cited in
+ * its own note, or it does not exist (spec's standing rule; see incipit-rules.ts's own
+ * deletion notes for the discipline this enforces). data/keywords.json already has this
+ * check (keywords-data.test.ts); this is its counterpart for every hand-curated TypeScript
+ * table that carries a `note` field, so a future entry cannot be added without one slipping
+ * past review (review finding, 2026-09-07).
+ */
+describe('every curated table entry carries a non-empty note', () => {
+  it('DATE_CORRECTIONS', () => {
+    for (const [key, entry] of Object.entries(DATE_CORRECTIONS)) {
+      expect(entry.note, key).toBeTruthy();
+    }
+  });
+
+  it('DUPLICATE_MERGES', () => {
+    for (const [key, entry] of Object.entries(DUPLICATE_MERGES)) {
+      expect(entry.note, key).toBeTruthy();
+    }
+  });
+
+  it('ADJUDICATED_DISTINCT', () => {
+    for (const [key, entry] of Object.entries(ADJUDICATED_DISTINCT)) {
+      expect(entry.note, key).toBeTruthy();
+    }
+  });
+
+  it('CIRCUMSCRIPTION_ERECTIONS', () => {
+    for (const [key, entry] of Object.entries(CIRCUMSCRIPTION_ERECTIONS)) {
+      expect(entry.note, key).toBeTruthy();
+    }
   });
 });
