@@ -373,13 +373,18 @@ export const GLOSS_CONNECTORS: readonly string[] = [
  * 'Il Pontefice...' or 'Il Santo/Sommo Pontefice...'.
  *
  * 'Il Pontefice' is evidenced by a real Pius X letters-shelf heading (incipit.test.ts:
- * 'Il Pontefice prescrive alle Diocesi...'). 'Il Santo Padre' and 'Il Sommo Pontefice' have
- * no matching heading in the current corpus but are the synonyms for 'Il Pontefice' already
- * carried elsewhere in GLOSS_CONNECTORS, and were specified by the review finding that
- * introduced this guard.
+ * 'Il Pontefice prescrive alle Diocesi...').
+ *
+ * Deleted (review finding, 2026-09-08): 'Il Santo Padre', 'Il Sommo Pontefice'. Neither had
+ * a matching heading in the corpus, and the doc comment that carried them cited them as
+ * "already carried elsewhere in GLOSS_CONNECTORS" -- but that sibling pair (', Il Santo
+ * Padre' / ', Il Sommo Pontefice') was itself already deleted from GLOSS_CONNECTORS above
+ * (final review, 2026-09-07) for the same reason: no citing heading ever existed. So there
+ * was no actual evidenced family backing these two, only a linguistic guess. Measured:
+ * removing both and keeping 'Il Pontefice' alone changes zero ids.
  */
 export const NARRATIVE_OPENERS: readonly string[] = [
-  'Il Pontefice', 'Il Santo Padre', 'Il Sommo Pontefice',
+  'Il Pontefice',
   // 'Di nostro' (Task 8, coordinator review): 'Motu Proprio Di nostro moto proprio che
   // contiene la Legge Fondamentale della Città del Vaticano' (pius-xi/motu_proprio) echoes
   // the genre word itself ('moto proprio') back at the reader instead of naming a subject
