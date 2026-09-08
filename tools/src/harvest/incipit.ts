@@ -2,6 +2,7 @@ import { slugify } from '../slug.js';
 import {
   GENRE_PREFIXES, GLOSS_CONNECTORS, BARE_GENRE_SLUGS, MAX_INCIPIT_WORDS,
   NARRATIVE_OPENERS, ADDRESS_ARTICLES, ADDRESS_HONORIFICS, MIN_WORDS_BEFORE_CUT,
+  CUT_GUARD_EXEMPT, MID_ADDRESS_MIN_WORDS,
 } from '../mappings/incipit-rules.js';
 
 export interface HeadingParts {
@@ -53,6 +54,19 @@ const MID_ADDRESS_PATTERN = new RegExp(
 );
 
 /**
+ * Whether `rest` matches MID_ADDRESS_PATTERN with at least MID_ADDRESS_MIN_WORDS words
+ * before the matched comma -- see MID_ADDRESS_MIN_WORDS's evidence in incipit-rules.ts. A
+ * match with fewer words is not treated as an address salutation at all (falls through to
+ * the rest of extractIncipit, same as no match).
+ */
+function matchesMidAddress(rest: string): boolean {
+  const m = MID_ADDRESS_PATTERN.exec(rest);
+  if (!m) return false;
+  const wordsBefore = rest.slice(0, m.index).trim().split(/\s+/).filter(Boolean).length;
+  return wordsBefore >= MID_ADDRESS_MIN_WORDS;
+}
+
+/**
  * Task 8: whether the residue opens with a bare ADDRESS_ARTICLE (no honorific required) and
  * is, in full, longer than MAX_INCIPIT_WORDS -- see ADDRESS_HONORIFICS's doc comment, "Long
  * address opener", for the evidence and for why this is scoped to long residues only.
@@ -96,15 +110,19 @@ function quotedOpening(s: string): string | null {
  * than MIN_WORDS_BEFORE_CUT words before it is discarded (-1 is returned instead): a short
  * residue is treated as if no connector had fired at all, so it falls through to the
  * untouched/word-ceiling path rather than being trusted at any length (see
- * MIN_WORDS_BEFORE_CUT's evidence in incipit-rules.ts).
+ * MIN_WORDS_BEFORE_CUT's evidence in incipit-rules.ts) -- unless the earliest connector is
+ * one of CUT_GUARD_EXEMPT, in which case the cut is trusted regardless of word count (see
+ * CUT_GUARD_EXEMPT's own evidence).
  */
 function glossCut(s: string): number {
   let best = -1;
+  let bestConnector: string | null = null;
   for (const c of GLOSS_CONNECTORS) {
     const i = s.indexOf(c);
-    if (i > 0 && (best === -1 || i < best)) best = i;
+    if (i > 0 && (best === -1 || i < best)) { best = i; bestConnector = c; }
   }
   if (best === -1) return -1;
+  if (bestConnector !== null && CUT_GUARD_EXEMPT.has(bestConnector)) return best;
   const wordsBefore = s.slice(0, best).trim().split(/\s+/).filter(Boolean).length;
   return wordsBefore < MIN_WORDS_BEFORE_CUT ? -1 : best;
 }
@@ -129,7 +147,7 @@ export function extractIncipit(heading: string): HeadingParts {
   // Task 8: a narrative phrase followed by a comma-introduced address ('Avendo Noi
   // creduto, al Card. Eugenio Pacelli...') is the same non-incipit shape as OPENER_PATTERN,
   // just not at the very start of the residue -- see ADDRESS_HONORIFICS's doc comment.
-  if (MID_ADDRESS_PATTERN.test(rest)) return { title, incipit: null };
+  if (matchesMidAddress(rest)) return { title, incipit: null };
 
   // Task 8: a long residue opening with a bare address article ('Ai Religiosi del
   // Portogallo che hanno partecipato...') is an addressee heading even without a listed

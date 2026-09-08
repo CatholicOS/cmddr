@@ -203,6 +203,28 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:john-xxiii/liberopolitanae-1958",
+    "title": "Liberopolitanae, con la quale la diocesi di Libreville nella Repubblica Gabonese in Africa Centrale, viene eletta al rango di Arcidiocesi Metropolitana",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1958-12-11",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1958/documents/hf_j-xxiii_apc_19581211_liberopolitana.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Liberopolitanae",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
     "id": "mag:john-xxiii/liberopolitanae-muilaensis-1958",
     "title": "Liberopolitanae (Muilaënsis), con la quale viene eretta la Diocesi di Mouila, una sede della Chiesa cattolica suffraganea dell'arcidiocesi di Libreville nella Repubblica Gabonese in Africa Centrale",
     "idStatus": "minted",
@@ -219,27 +241,6 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Liberopolitanae (Muilaënsis)",
-    "characteristics": [
-      "apostolic-constitution"
-    ],
-    "sourceGenreLabel": "apost_constitutions"
-  },
-  {
-    "id": "mag:john-xxiii/papal-bull-1958-12-11",
-    "title": "Liberopolitanae, con la quale la diocesi di Libreville nella Repubblica Gabonese in Africa Centrale, viene eletta al rango di Arcidiocesi Metropolitana",
-    "idStatus": "provisional",
-    "genre": "papal-bull",
-    "issuerId": "rp:john-xxiii",
-    "issuerType": "pope",
-    "date": "1958-12-11",
-    "source": {
-      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1958/documents/hf_j-xxiii_apc_19581211_liberopolitana.html",
-      "shelf": "apost_constitutions",
-      "languages": [
-        "LA"
-      ],
-      "retrieved": "2026-09-07"
-    },
     "characteristics": [
       "apostolic-constitution"
     ],
@@ -268,9 +269,9 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:john-xxiii/papal-bull-1959-01-08",
+    "id": "mag:john-xxiii/chihuahuensis-1959",
     "title": "Chihuahuensis, con la quale viene istituito ilCapitolo dei Canonici nella cattedrale di Chihuahua in Messico",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "papal-bull",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
@@ -283,6 +284,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Chihuahuensis",
     "characteristics": [
       "apostolic-constitution"
     ],
@@ -497,9 +499,9 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:john-xxiii/papal-bull-1959-02-19",
+    "id": "mag:john-xxiii/munduensis-1959",
     "title": "Munduensis, con la quale viene elevata a Diocesi la Prefettura Apostolica di Moundou nella Repubblica del Ciad, in Africa Centrale",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "papal-bull",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
@@ -512,6 +514,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Munduensis",
     "characteristics": [
       "apostolic-constitution"
     ],
@@ -561,9 +564,9 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:john-xxiii/papal-bull-1959-03-07",
+    "id": "mag:john-xxiii/botucatuensis-1959",
     "title": "Botucatuensis, con la quale viene istituito il Capitolo dei Canonici nella cattedrale di Botucatu",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "papal-bull",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
@@ -576,6 +579,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Botucatuensis",
     "characteristics": [
       "apostolic-constitution"
     ],
@@ -796,9 +800,9 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:john-xxiii/papal-bull-1959-04-02",
+    "id": "mag:john-xxiii/oturkpoensis-1959",
     "title": "Oturkpoënsis, con la quale la prefettura apostolica di Oturkpo in Nigeria, viene elevata al rango di diocesi",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "papal-bull",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
@@ -811,15 +815,16 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Oturkpoënsis",
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:john-xxiii/papal-bull-1959-04-06",
+    "id": "mag:john-xxiii/culiacanensis-1959",
     "title": "Culiacanensis, con la quale viene istituito il Capitolo dei Canonici nella cattedrale di Culiacán in Messico",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "papal-bull",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
@@ -832,6 +837,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Culiacanensis",
     "characteristics": [
       "apostolic-constitution"
     ],
@@ -996,9 +1002,9 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:john-xxiii/papal-bull-1959-04-25",
+    "id": "mag:john-xxiii/nzerekoreensis-1959",
     "title": "Nzerekoreensis, che eleva la prefettura apostolica di Nzerekore in Guinea al grado di diocesi",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "papal-bull",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
@@ -1011,6 +1017,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Nzerekoreensis",
     "characteristics": [
       "apostolic-constitution"
     ],
@@ -1489,9 +1496,9 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:john-xxiii/papal-bull-1959-06-30",
+    "id": "mag:john-xxiii/hiroshimaensis-1959",
     "title": "Hiroshimaënsis con la quale il vicariato apostolico di Hiroshima viene elevato a diocesi",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "papal-bull",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
@@ -1504,6 +1511,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Hiroshimaënsis",
     "characteristics": [
       "apostolic-constitution"
     ],
@@ -1649,9 +1657,9 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:john-xxiii/apostolic-letter-1959-07-30",
+    "id": "mag:john-xxiii/praecipuo-1959",
     "title": "Praecipuo, con la quale la Nostra Signora di Caravaggio viene dichiarata Patrona della diocesi di Duque de Caxias in Brasile",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
@@ -1664,6 +1672,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Praecipuo",
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2195,24 +2204,6 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:john-xxiii/apostolic-letter-1960-04-07",
-    "title": "Praeclarissimum, con la quale la chiesa parrocchiale di San Domenico ad Arezzo viene elevata al rango di Basilica Minore",
-    "idStatus": "provisional",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:john-xxiii",
-    "issuerType": "pope",
-    "date": "1960-04-07",
-    "source": {
-      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600407_praeclarissimum.html",
-      "shelf": "apost_letters",
-      "languages": [
-        "LA"
-      ],
-      "retrieved": "2026-09-07"
-    },
-    "sourceGenreLabel": "apost_letters"
-  },
-  {
     "id": "mag:john-xxiii/beatum-ioseph-1960",
     "title": "Beatum Ioseph, con la quale San Giuseppe viene eletto Patrono della diocesi di Cúcuta in Colombia",
     "idStatus": "minted",
@@ -2229,6 +2220,25 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Beatum Ioseph",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/praeclarissimum-1960",
+    "title": "Praeclarissimum, con la quale la chiesa parrocchiale di San Domenico ad Arezzo viene elevata al rango di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-04-07",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600407_praeclarissimum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Praeclarissimum",
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2581,24 +2591,6 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:john-xxiii/apostolic-letter-1960-07-01",
-    "title": "Quemadmodum, con la quale San Patrizio viene eletto Patrono della diocesi di Ibadan in Nigeria",
-    "idStatus": "provisional",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:john-xxiii",
-    "issuerType": "pope",
-    "date": "1960-07-01",
-    "source": {
-      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600701_quemadmodum.html",
-      "shelf": "apost_letters",
-      "languages": [
-        "LA"
-      ],
-      "retrieved": "2026-09-07"
-    },
-    "sourceGenreLabel": "apost_letters"
-  },
-  {
     "id": "mag:john-xxiii/ignem-veni-1960",
     "title": "Ignem veni, che eleva al rango di Basilica Minore la Chiesa del Sacro Cuore di Gesù a Cracovia",
     "idStatus": "minted",
@@ -2653,6 +2645,25 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Praecipuo pietatis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/quemadmodum-1960",
+    "title": "Quemadmodum, con la quale San Patrizio viene eletto Patrono della diocesi di Ibadan in Nigeria",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-07-01",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600701_quemadmodum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quemadmodum",
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2751,9 +2762,9 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:john-xxiii/apostolic-letter-1960-08-20",
+    "id": "mag:john-xxiii/quod-dilectum-1960",
     "title": "Quod Dilectum, al Card. V. Gracias in occasione dell'adunanza quinquennale dell'Episcopato dell'India",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
@@ -2767,6 +2778,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Quod Dilectum",
     "sourceGenreLabel": "apost_letters"
   },
   {

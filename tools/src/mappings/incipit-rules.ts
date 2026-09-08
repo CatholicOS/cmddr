@@ -305,8 +305,18 @@ export const ADDRESS_HONORIFICS: readonly string[] = ['Card.', 'Cardinale', 'Pri
  *    siblings with the identical shape but NO comma, whose slug confirms a genuine incipit
  *    (e.g. 'Lettera Quamvis Nostra al Cardinale...', docSlug quamvis-nostra). incipit.ts's
  *    `MID_ADDRESS_PATTERN` matches ', ' + an ADDRESS_ARTICLE + an ADDRESS_HONORIFIC anywhere
- *    in the residue (not anchored at the start, unlike OPENER_PATTERN) and returns null.
+ *    in the residue (not anchored at the start, unlike OPENER_PATTERN) and returns null --
+ *    but only when at least MID_ADDRESS_MIN_WORDS words precede the comma (Task 13 review):
+ *    John XXIII's 'Quod Dilectum, al Card. V. Gracias in occasione dell'adunanza
+ *    quinquennale dell'Episcopato dell'India' matches the same shape with only two words
+ *    ('Quod Dilectum') before the comma, but its own URL slug is `quod-dilectum` --
+ *    incipit-based, the opposite of the three Pius XI precedents' addressee-based slugs,
+ *    proving 'Quod Dilectum' genuinely is the incipit. All three Pius XI precedents have
+ *    three words before their comma ('Avendo Noi creduto', 'Si compie oggi', 'Con grande
+ *    Nostra'); exactly these four headings in the whole corpus match the pattern at all, so
+ *    a three-word minimum separates them cleanly with no other corpus-wide effect.
  *
+
  * 2. **Long address opener.** A residue that opens with a bare ADDRESS_ARTICLE and no
  *    honorific is not, on its own, address-salutation evidence (see ADDRESS_ARTICLES's own
  *    doc comment and 'Al compimento delle riforme'). But when the *whole* residue also runs
@@ -327,8 +337,54 @@ export const ADDRESS_HONORIFICS: readonly string[] = ['Card.', 'Cardinale', 'Pri
  * by the real Leo XIII heading 'Vicario sulla terra' (incipit.test.ts): cutting at ' sulla '
  * would leave only 'Vicario' (one word), but the phrase is the whole incipit. Two words
  * still lets 'Oecumenicum Concilium sulla recita del Rosario...' cut correctly.
+ *
+ * Exempted for the specific connectors in CUT_GUARD_EXEMPT below (Task 13 review): those
+ * are multi-word relative-clause markers ('con la quale', 'che istituisce', ...) that
+ * cannot themselves continue an incipit, unlike a single preposition ('sulla', '-', ':')
+ * which is ambiguous at one word (see CUT_GUARD_EXEMPT's own doc comment for the measured
+ * evidence, both for and against widening this exemption further).
  */
 export const MIN_WORDS_BEFORE_CUT = 2;
+
+/**
+ * Gloss connectors exempt from MIN_WORDS_BEFORE_CUT: a cut at one of these is trusted
+ * however few words precede it, because each is a multi-word relative-clause marker (a
+ * document-describing formula, not a word an incipit could plausibly end with) rather than
+ * a single ambiguous preposition.
+ *
+ * Task 13 review: John XXIII's own headings supply the first real one-word-before boundary
+ * cases. 'Liberopolitanae, con la quale la diocesi di Libreville...' (docSlug
+ * liberopolitanae) was wrongly held to provisional because 'Liberopolitanae' alone is one
+ * word before ' con la quale' -- but the whole marker phrase can never itself be part of an
+ * incipit, so the guard was never protecting anything genuine here (unlike ' sulla '/' - '/
+ * ': ', which really can be one word away from a genuine short incipit -- 'Vicario sulla
+ * terra' above, or 'Palmensis - Lagensis (Palmensis et Xapecoënsis)', a genuinely ambiguous
+ * hyphenated two-toponym heading with no incipit to recover, which a broader exemption
+ * covering ' - '/': ' was measured to wrongly mint as 'Palmensis' -- rejected). 'Nzerekoreensis,
+ * che eleva la prefettura apostolica di Nzerekore...' (docSlug nzerekoreensis) is the same
+ * one-word boundary case for ', che '. ' con il quale' / ' col quale' / ' con cui' /
+ * ', col quale' are the Pius XI/Benedict XV siblings of ' con la quale' (Task 8; e.g.
+ * 'Seminaria Clericorum con il quale si dispone...', 'Mirabilis Deus, col quale il
+ * Pontefice attribuisce...') -- grouped in for the same reason, though no corpus heading
+ * yet needs the exemption itself for them. ' che istituisce' (Task 8, 'Motu Proprio I
+ * primitivi cemeteri che istituisce...') is the same family, one specific verb form.
+ *
+ * Measured across the full corpus (all 1362 harvested-item headings, all eight
+ * pontificates): this exemption recovers exactly eleven John XXIII records
+ * (Liberopolitanae, Culiacanensis, Oturkpoënsis, Botucatuensis, Munduensis,
+ * Chihuahuensis, Hiroshimaënsis, Nzerekoreensis, Praecipuo, Quemadmodum,
+ * Praeclarissimum) and changes zero pre-existing ids anywhere. A broader version --
+ * exempting every connector, or specifically the single-character/short prepositions
+ * (' - ', ': ', ' – ', ' — ') -- was measured and rejected: it recovers four more (the
+ * hyphenated two-toponym John XXIII headings already investigated and left alone in
+ * task-13-report.md) but regresses seven pre-existing Pius XII ids, because those
+ * connectors are genuinely ambiguous at one word (e.g. 'Palmensis - Lagensis (Palmensis
+ * et Xapecoënsis)' would wrongly mint as bare 'Palmensis').
+ */
+export const CUT_GUARD_EXEMPT: ReadonlySet<string> = new Set([
+  ' con il quale', ' con la quale', ' col quale', ' con cui',
+  ', col quale', ', che ', ' che istituisce',
+]);
 
 /**
  * A residue that slugifies to one of these is a genre word standing alone, not an incipit.
@@ -354,3 +410,14 @@ export const BARE_GENRE_SLUGS: ReadonlySet<string> = new Set([
  * wrong minted id is permanent.
  */
 export const MAX_INCIPIT_WORDS = 8;
+
+/**
+ * MID_ADDRESS_PATTERN (incipit.ts) only nulls an incipit when at least this many words
+ * precede the comma-introduced address. See ADDRESS_HONORIFICS's "Mid-string address
+ * salutation" doc comment above for the full evidence: the three genuine Pius XI
+ * narrative-address precedents all have three words before their comma, while John
+ * XXIII's 'Quod Dilectum, al Card. V. Gracias...' -- a real incipit, per its own
+ * incipit-based URL slug `quod-dilectum` -- has only two. Three cleanly separates the two
+ * groups (exactly four headings in the whole corpus match MID_ADDRESS_PATTERN at all).
+ */
+export const MID_ADDRESS_MIN_WORDS = 3;

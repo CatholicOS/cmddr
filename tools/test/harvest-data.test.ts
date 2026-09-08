@@ -531,17 +531,22 @@ describe('the John XXIII corpus', () => {
     for (const d of docs) {
       expect('incipit' in d, d.id).toBe(d.idStatus === 'minted');
     }
-    // 33 of 177 (18.6%) carry no recoverable incipit -- overwhelmingly circumscription
+    // 21 of 177 (11.9%) carry no recoverable incipit -- overwhelmingly circumscription
     // acts (new dioceses/prefectures/vicariates named only by a bare Latin toponym with
     // no printed incipit) and motu proprio/apost_letters items whose heading opens with
     // a restated genre phrase ('Lettera Apostolica «Motu Proprio» ...') followed
     // directly by a gloss, with nothing capitalised in between. Each was checked by hand
-    // against its own vatican.va heading. Three were genuine rule-table gaps, fixed here
-    // (see the two tests below and task-13-report.md); one further gap ('Quod Dilectum,
-    // al Card. V. Gracias...', docSlug quod-dilectum -- a real counter-example to the
-    // MID_ADDRESS_PATTERN evidence base) is identified but deliberately left unfixed,
-    // reported rather than patched, per task-13-report.md.
-    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(33);
+    // against its own vatican.va heading. Started at 35 (of 178 raw items, before the
+    // Piccolo saggio/Il religioso convegno merge below). Two flipped to minted in the
+    // original pass (Iam in Pontificatus, Quotiescumque Nobis -- see the ', la Sacra
+    // Gerarchia' test below; Cum inde was already minted, just with the wrong incipit,
+    // so fixing it did not change this count): 35 -> 33. The Task 13 review then
+    // authorised two further, measured rule-table fixes: eleven more via
+    // CUT_GUARD_EXEMPT (see below) and one via MID_ADDRESS_MIN_WORDS (Quod Dilectum, see
+    // below): 33 - 11 - 1 = 21. The remaining 21 are correct: each heading genuinely
+    // prints no incipit (see task-13-report.md for the ones investigated and
+    // deliberately left this way, e.g. the hyphenated two-toponym shape).
+    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(21);
   });
 
   it('reads the year-partitioned shelves, whose aggregate index carries no items', () => {
@@ -647,6 +652,45 @@ describe('the John XXIII corpus', () => {
     const qn = docs.find((doc) => doc.incipit === 'Quotiescumque nobis')!;
     expect(qn).toBeDefined();
     expect(qn.id).toBe('mag:john-xxiii/quotiescumque-nobis-1961');
+  });
+
+  it('recovers eleven one-word-before-the-comma incipits via CUT_GUARD_EXEMPT (Task 13 review)', () => {
+    // Each of these headings has exactly one word before its earliest gloss connector
+    // (' con la quale' or ', che '), which MIN_WORDS_BEFORE_CUT would otherwise reject
+    // wholesale -- but that connector is itself a multi-word relative-clause marker that
+    // can never continue an incipit, so the guard was never protecting anything genuine
+    // here (unlike ' sulla '/' - '/': ', which really can be ambiguous at one word --
+    // see task-13-report.md for the measured, rejected broader exemption).
+    const recovered = [
+      'Liberopolitanae', 'Culiacanensis', 'Oturkpoënsis', 'Botucatuensis', 'Munduensis',
+      'Chihuahuensis', 'Hiroshimaënsis', 'Nzerekoreensis', 'Praecipuo', 'Quemadmodum',
+      'Praeclarissimum',
+    ];
+    for (const incipit of recovered) {
+      const d = docs.find((doc) => doc.incipit === incipit);
+      expect(d, incipit).toBeDefined();
+      expect(d!.idStatus, incipit).toBe('minted');
+    }
+  });
+
+  it('recovers Quod Dilectum via MID_ADDRESS_MIN_WORDS, while a Pius XI address salutation stays null (Task 13 review)', () => {
+    // 'Quod Dilectum, al Card. V. Gracias in occasione dell'adunanza quinquennale
+    // dell'Episcopato dell'India' has only two words ('Quod Dilectum') before its comma-
+    // introduced address, unlike the three genuine Pius XI narrative-address precedents
+    // (three words each). Its own URL slug quod-dilectum -- incipit-based, not
+    // addressee-based -- proves it is a real incipit.
+    const qd = docs.find((doc) => doc.incipit === 'Quod Dilectum');
+    expect(qd).toBeDefined();
+    expect(qd!.id).toBe('mag:john-xxiii/quod-dilectum-1960');
+
+    // Pin the boundary in the other direction too: Pius XI's 'Lettera Avendo Noi
+    // creduto, al Card. Eugenio Pacelli...' (docSlug card-pacelli, addressee-based --
+    // three words before the comma) must stay provisional; MID_ADDRESS_MIN_WORDS must
+    // not have widened far enough to also recover it.
+    const pxi = load('pius-xi');
+    const avendo = pxi.find((doc) => doc.title.startsWith('Lettera Avendo Noi creduto'));
+    expect(avendo).toBeDefined();
+    expect(avendo!.idStatus).toBe('provisional');
   });
 
   it('satisfies every invariant', () => {

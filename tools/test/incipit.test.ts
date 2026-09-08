@@ -111,6 +111,30 @@ describe('extractIncipit', () => {
       .toEqual({ title: 'Vicario sulla terra', incipit: 'Vicario sulla terra' });
   });
 
+  it('does not apply Guard A to a hyphen/colon connector even at one word (Task 13 review)', () => {
+    // Pius XII's real 'Palmensis - Lagensis (Palmensis et Xapecoënsis)' has one word
+    // ('Palmensis') before its ' - '. Guard A must still discard that cut -- ' - ' is
+    // genuinely ambiguous at one word, unlike the CUT_GUARD_EXEMPT connectors below -- so
+    // the whole heading (no trailing gloss here) is kept as the untouched-path incipit.
+    expect(extractIncipit('Palmensis - Lagensis (Palmensis et Xapecoënsis)'))
+      .toEqual({
+        title: 'Palmensis - Lagensis (Palmensis et Xapecoënsis)',
+        incipit: 'Palmensis - Lagensis (Palmensis et Xapecoënsis)',
+      });
+  });
+
+  it('exempts specific multi-word relative-clause connectors from Guard A (Task 13 review)', () => {
+    // 'Liberopolitanae, con la quale...' and 'Nzerekoreensis, che eleva...' (both real
+    // John XXIII apost_constitutions headings) have exactly one word before their
+    // earliest connector -- but ' con la quale' and ', che ' are multi-word relative-
+    // clause markers that can never themselves continue an incipit, unlike a single
+    // ambiguous preposition (see the previous test), so the cut is trusted regardless.
+    expect(incipitOf('Liberopolitanae, con la quale la diocesi di Libreville nella Repubblica Gabonese in Africa Centrale, viene eletta al rango di Arcidiocesi Metropolitana'))
+      .toBe('Liberopolitanae');                                           // docSlug liberopolitanae
+    expect(incipitOf('Nzerekoreensis, che eleva la prefettura apostolica di Nzerekore in Guinea al grado di diocesi'))
+      .toBe('Nzerekoreensis');                                            // docSlug nzerekoreensis
+  });
+
   it('treats an address salutation or narrative opener as having no incipit (Guard B)', () => {
     // Guard A alone cannot catch these: three and four words precede their would-be cuts,
     // clearing MIN_WORDS_BEFORE_CUT. Guard B checks the opener itself instead.
@@ -215,6 +239,18 @@ describe('extractIncipit against Pius XI and Pius XII (Task 8)', () => {
       .toBeNull();                                                        // docSlug dimissioni-gasparri
     expect(incipitOf("Lettera Con grande Nostra, al Card. Bisleti circa l'istituzione di una Commissione"))
       .toBeNull();                                                        // docSlug card-bisleti
+  });
+
+  it('does not null a comma-introduced address when fewer than three words precede the comma (Task 13 review)', () => {
+    // 'Quod Dilectum, al Card. V. Gracias in occasione dell'adunanza quinquennale
+    // dell'Episcopato dell'India' (john-xxiii/apost_letters) has the identical shape to
+    // the three Pius XI nulls above, but only two words ('Quod Dilectum') precede the
+    // comma -- and its own URL slug is quod-dilectum, incipit-based rather than
+    // addressee-based, proving 'Quod Dilectum' genuinely is the incipit. All three Pius
+    // XI precedents above have three words before their comma; MID_ADDRESS_MIN_WORDS = 3
+    // separates the two groups cleanly.
+    expect(incipitOf("Quod Dilectum, al Card. V. Gracias in occasione dell'adunanza quinquennale dell'Episcopato dell'India"))
+      .toBe('Quod Dilectum');                                             // docSlug quod-dilectum
   });
 
   it('nulls a long residue that opens with a bare address article, even with no listed honorific', () => {

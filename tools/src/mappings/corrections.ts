@@ -300,12 +300,13 @@ export const DATE_CORRECTIONS: Record<string, { date: string; note: string }> = 
     {
       date: '1959-06-18',
       note:
-        "Portus Alexii et Vevakensis's own dating formula reads 'Datum Romae, apud S. Petrum, " +
+        "Portus Alexii et Vevakensis's own dating formula reads 'Datunt Roma, apud S. Petrum, " +
         "die duodevicesimo mensis Iunii, anno Domini millesimo nongentesimo quinquagesimo nono, " +
-        "Pontificatus Nostri primo' (18 June 1959, 1st year of the pontificate -- consistent, " +
-        'since John XXIII was elected 28 October 1958 and his 1st year runs 1958-10-28 to ' +
-        "1959-10-27). The printed date is correct; the apost_constitutions shelf's own URL " +
-        'slug (19590612, 12 June) is wrong.',
+        "Pontificatus Nostri primo' (sic -- 'Datunt Roma' is vatican.va's own OCR artifact for " +
+        "the standard 'Datum Romae'; the date, '18 June 1959, 1st year of the pontificate', is " +
+        'unaffected and consistent, since John XXIII was elected 28 October 1958 and his 1st ' +
+        "year runs 1958-10-28 to 1959-10-27). The printed date is correct; the " +
+        "apost_constitutions shelf's own URL slug (19590612, 12 June) is wrong.",
     },
   'john-xxiii|apost_letters|haud-raro|2008-10-24': {
     date: '1959-10-24',
