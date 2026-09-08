@@ -113,14 +113,14 @@
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-05-12-2",
-    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi la Beata María Guadalupe",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Laura di Santa Caterina da Siena Montoya y Upeguí",
     "idStatus": "provisional",
     "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2013-05-12",
     "source": {
-      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20130512_santa-maria-guadalupe.html",
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20130512_santa-laura-montoya-y-upegui.html",
       "shelf": "apost_letters",
       "languages": [
         "LA"
@@ -131,14 +131,14 @@
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-05-12-3",
-    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Laura di Santa Caterina da Siena Montoya y Upeguí",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi la Beata María Guadalupe",
     "idStatus": "provisional",
     "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2013-05-12",
     "source": {
-      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20130512_santa-laura-montoya-y-upegui.html",
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20130512_santa-maria-guadalupe.html",
       "shelf": "apost_letters",
       "languages": [
         "LA"
@@ -1025,14 +1025,14 @@
   },
   {
     "id": "mag:francis-i/apostolic-letter-2014-11-23-1",
-    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi il Beato Nicola da Longobardi",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Madre Eufrasia del Sacro Cuore di Gesù [al secolo Rosa Eluvathingal]",
     "idStatus": "provisional",
     "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2014-11-23",
     "source": {
-      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20141123_san-nicola-da-longobardi.html",
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-dec_20141123_santa-eufrasia-delsacrocuoredigesu.html",
       "shelf": "apost_letters",
       "languages": [
         "LA"
@@ -1043,14 +1043,14 @@
   },
   {
     "id": "mag:francis-i/apostolic-letter-2014-11-23-2",
-    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Madre Eufrasia del Sacro Cuore di Gesù [al secolo Rosa Eluvathingal]",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi il Beato Nicola da Longobardi",
     "idStatus": "provisional",
     "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2014-11-23",
     "source": {
-      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-dec_20141123_santa-eufrasia-delsacrocuoredigesu.html",
+      "url": "https://www.vatican.va/content/francesco/la/apost_letters/documents/papa-francesco_lettera-ap_20141123_san-nicola-da-longobardi.html",
       "shelf": "apost_letters",
       "languages": [
         "LA"
@@ -2386,18 +2386,16 @@
   },
   {
     "id": "mag:francis-i/apostolic-letter-2019-01-17-1",
-    "title": "Lettera Apostolica in forma di “Motu proprio” circa la Pontificia Commissione \"Ecclesia Dei\"",
+    "title": "Lettera Apostolica in forma di Motu Proprio circa la Cappella Musicale Pontificia",
     "idStatus": "provisional",
     "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2019-01-17",
     "source": {
-      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20190117_ecclesia-dei.html",
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20190117_cappella-musicale-pontificia.html",
       "shelf": "apost_letters",
       "languages": [
-        "EN",
-        "ES",
         "IT",
         "PT"
       ],
@@ -2410,16 +2408,18 @@
   },
   {
     "id": "mag:francis-i/apostolic-letter-2019-01-17-2",
-    "title": "Lettera Apostolica in forma di Motu Proprio circa la Cappella Musicale Pontificia",
+    "title": "Lettera Apostolica in forma di “Motu proprio” circa la Pontificia Commissione \"Ecclesia Dei\"",
     "idStatus": "provisional",
     "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2019-01-17",
     "source": {
-      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20190117_cappella-musicale-pontificia.html",
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20190117_ecclesia-dei.html",
       "shelf": "apost_letters",
       "languages": [
+        "EN",
+        "ES",
         "IT",
         "PT"
       ],

@@ -257,7 +257,13 @@ for (const [issuer, docs] of byIssuer) {
 if (existsSync('data/documents')) rmSync('data/documents', { recursive: true });
 mkdirSync('data/documents', { recursive: true });
 for (const [key, docs] of byIssuer) {
-  docs.sort((a, b) => (a.date === b.date ? a.id.localeCompare(b.id) : a.date.localeCompare(b.date)));
+  // Codepoint order, not locale collation -- see ordinals.ts for why: this sort determines
+  // the byte order of a checked-in data/documents/*.json file, so it must be identical on
+  // every machine and CI runner regardless of ICU data or LANG. `date` (ISO) and `id` are
+  // both plain ASCII, so `<`/`>` is a correct, locale-independent stand-in.
+  docs.sort((a, b) => (a.date === b.date
+    ? (a.id < b.id ? -1 : a.id > b.id ? 1 : 0)
+    : (a.date < b.date ? -1 : a.date > b.date ? 1 : 0)));
   writeFileSync(`data/documents/${key}.json`, JSON.stringify(docs, null, 2) + '\n');
   console.log(`${key}: ${docs.length}`);
 }

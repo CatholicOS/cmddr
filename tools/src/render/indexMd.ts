@@ -16,13 +16,18 @@ const range = (docs: DocumentRecord[]): string => {
 /** The genre view's filename; a null genre files under `unmapped`. */
 export const genreFile = (genre: string | null): string => genre ?? 'unmapped';
 
+// Codepoint order, not locale collation -- see harvest/ordinals.ts for why: these sorts
+// determine the byte order of the checked-in registry/documents.md file, so they must be
+// identical on every machine and CI runner regardless of ICU data or LANG.
+const cmp = (a: string, b: string): number => (a < b ? -1 : a > b ? 1 : 0);
+
 export function renderIndexMd(docs: DocumentRecord[]): string {
   // Grouped by the same key run.ts uses to name the file (issuerLocalPart), not the full
   // issuerId, so a row's count and date range can never diverge from the file it links to.
   const byIssuer = [...group(docs, (d) => issuerLocalPart(d.issuerId))].sort(
-    (a, b) => range(a[1]).localeCompare(range(b[1])));
+    (a, b) => cmp(range(a[1]), range(b[1])));
   const byGenre = [...group(docs, (d) => d.genre)].sort(
-    (a, b) => genreFile(a[0]).localeCompare(genreFile(b[0])));
+    (a, b) => cmp(genreFile(a[0]), genreFile(b[0])));
   const byKeyword = new Map<string, DocumentRecord[]>();
   for (const d of docs) {
     for (const k of d.keywords ?? []) byKeyword.set(k, [...(byKeyword.get(k) ?? []), d]);
@@ -57,7 +62,7 @@ A keyword is a descriptive subject tag and carries no claim about authority.
 
 | Keyword | Documents |
 | --- | --- |
-${[...byKeyword].sort(([a], [b]) => a.localeCompare(b)).map(([k, ds]) =>
+${[...byKeyword].sort(([a], [b]) => cmp(a, b)).map(([k, ds]) =>
     `| [\`${k}\`](documents/by-keyword/${k}.md) | ${ds.length} |`).join('\n')}
 `;
 
