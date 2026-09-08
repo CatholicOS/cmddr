@@ -1093,3 +1093,157 @@ describe('the John Paul II corpus', () => {
     expect(load('john-paul-i')).toHaveLength(7);
   });
 });
+
+describe('the Benedict XVI corpus', () => {
+  const docs = load('benedict-xvi');
+
+  it('holds every formal-shelf document', () => {
+    // 3 encyclicals + 126 apost_constitutions + 68 apost_letters + 4 apost_exhortations
+    // + 13 motu_proprio = 214 raw items, matching the task brief's expected counts on
+    // every shelf exactly. All five aggregate pages carry every item directly (div.item
+    // > 0 on each fixture), so none is year-partitioned. Zero items merge away: the two
+    // same-date cross-shelf pairs found (Gambomensis/Normas Nonnullas, 2013-02-22;
+    // the Maria Luisa Prosperi beatification letter/Intima Ecclesiae natura, 2012-11-11)
+    // are adjudicated genuinely distinct (ADJUDICATED_DISTINCT), not merged. 214 - 0 = 214.
+    expect(docs).toHaveLength(214);
+  });
+
+  it('files them all under the right issuer', () => {
+    expect(docs.every((d) => d.issuerId === 'rp:benedict-xvi')).toBe(true);
+    expect(docs.every((d) => d.id.startsWith('mag:benedict-xvi/'))).toBe(true);
+  });
+
+  it('gives every document a title', () => {
+    expect(docs.every((d) => typeof d.title === 'string' && d.title.length > 0)).toBe(true);
+  });
+
+  it('has no year-partitioned shelf (every fixture is an aggregate page)', () => {
+    for (const shelf of shelvesFor('benedict-xvi')) {
+      const index = readFileSync(`tools/fixtures/benedict-xvi-${shelf}.html`, 'utf8');
+      expect(index.includes('div class="item"'), shelf).toBe(true);
+    }
+  });
+
+  it('keeps well-known acts minted and distinct from the erection candidates', () => {
+    for (const incipit of ['Anglicanorum coetibus', 'Deus caritas est', 'Summorum Pontificum']) {
+      const d = docs.find((x) => x.incipit === incipit);
+      expect(d, incipit).toBeDefined();
+      expect(d!.idStatus).toBe('minted');
+    }
+  });
+
+  it('recovers one-word incipits before a trailing genre-restatement connector', () => {
+    // 'Quaerebam, Lettera Decretale con la quale...' and 'Sapientia, Lettera Decretale
+    // con la quale...' each have only one word before ', Lettera Decretale' -- fewer than
+    // MIN_WORDS_BEFORE_CUT (2) -- so the cut was discarded and both fell to provisional
+    // until ', Lettera Decretale' was added to CUT_GUARD_EXEMPT (Task 17). Both incipits
+    // are confirmed genuine by fetching the documents themselves: each opens with its own
+    // one-word incipit verbatim ('«Quaerebam excellentissimum...»'; 'Sapientia «in se
+    // permanens omnia innovat...»').
+    const q = docs.find((d) => d.incipit === 'Quaerebam');
+    expect(q?.idStatus).toBe('minted');
+    const s = docs.find((d) => d.incipit === 'Sapientia');
+    expect(s?.idStatus).toBe('minted');
+  });
+
+  it('does not bake a trailing gloss into a minted incipit', () => {
+    // Sampled by cross-checking minted incipits against their own URL slugs (task
+    // instruction): three genuine gaps found and fixed with narrowly-evidenced
+    // GLOSS_CONNECTORS entries, each confirmed against the document's own text --
+    // 'Anglicanorum coetibus' (' circa ', the item's own URL slug), 'Totius orbis'
+    // (' contenente', the document's own printed title), and 'Cum pium' (', Lettera
+    // Apostolica', both the URL slug and the document's own opening words). A fourth,
+    // 'Intima Ecclesiae natura' (motu proprio, its own printed title 'MOTU PROPRIO ...
+    // SUL SERVIZIO DELLA CARITÀ'), was fixed with a literal full-phrase connector rather
+    // than a general ' sul ' connector, since the general form would also cut the
+    // already-committed John Paul II record 'Rosarium Virginis Mariae sul Santo Rosario'
+    // -- an existing-id change out of this task's authority; see task-17-report.md.
+    for (const incipit of ['Anglicanorum coetibus', 'Totius orbis', 'Cum pium', 'Intima Ecclesiae natura']) {
+      const d = docs.find((x) => x.incipit === incipit);
+      expect(d, incipit).toBeDefined();
+      expect(d!.idStatus).toBe('minted');
+    }
+  });
+
+  it('carries no compact date-range shape in any heading parenthetical', () => {
+    // Watch item carried from Task 16's review of the gloss-recovery branch in shelf.ts
+    // (headings whose date parenthetical also carries gloss text, e.g. Christi nomen,
+    // Lettera Decretale («Beatus Ioannes Baptista Maria Vianney» - 31 maggio 1925)): its
+    // guard does not distinguish a bare day-number fragment of a compact date range, e.g.
+    // a hypothetical (12-13 gennaio 1994). No heading of that shape existed in any
+    // fixture as of Task 16; this fixture set was checked for it too and none exists --
+    // every heading's parenthetical is either a single plain date or the already-handled
+    // dash-gloss shape.
+    for (const shelf of shelvesFor('benedict-xvi')) {
+      const html = readFileSync(`tools/fixtures/benedict-xvi-${shelf}.html`, 'utf8');
+      const h2s = [...html.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/g)].map((m) => m[1]!);
+      for (const h2 of h2s) {
+        const text = h2.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+        const paren = text.match(/\(([^()]*)\)\s*$/);
+        if (!paren) continue;
+        expect(paren[1], text).not.toMatch(/^\s*\d{1,2}\s*-\s*\d{1,2}\s+[A-Za-zÀ-ÿ]/);
+      }
+    }
+  });
+
+  it('flags the diocese erections as candidates without tagging any of them', () => {
+    // 126 apost_constitutions items, the large majority filed under a bare Latin toponym
+    // with no textual marker -- confirming CIRCUMSCRIPTION_ERECTIONS entries for them is
+    // Task 20's work, not this one's (see pontiffs.ts).
+    expect(docs.every((d) => d.keywords === undefined)).toBe(true);
+  });
+
+  it('omits the incipit exactly when the id is provisional', () => {
+    for (const d of docs) {
+      expect('incipit' in d, d.id).toBe(d.idStatus === 'minted');
+    }
+    // 34 of 214 (15.9%) carry no recoverable incipit -- every one reviewed against its own
+    // heading text. All fall into two already-established genres with no Latin incipit at
+    // all: 'Lettera Apostolica/Decretale con la quale il Sommo Pontefice ha iscritto
+    // all'albo dei Beati/Santi <name>' (beatification/canonization announcements naming
+    // only the honoree, 25 records) and narrative 'Lettera Apostolica'/'Motu Proprio'
+    // openers describing the act in the third person (9 records, e.g. 'Motu Proprio per
+    // l'approvazione e la pubblicazione del Compendio del Catechismo della Chiesa
+    // Cattolica'). One further apost_constitutions heading, 'Sancti Vladimiri Magni in
+    // urbe Parisiensi pro Ucrainis ritus Byzantini', is a bare descriptive name of the
+    // erected exarchate with no separable incipit, the same shape as John Paul II's
+    // 'Nuovo ordinamento giuridico della Basilica di San Nicola di Bari'.
+    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(34);
+  });
+
+  it('satisfies every invariant', () => {
+    expect(checkDocuments(docs, genres, keywords)).toEqual([]);
+  });
+
+  it('emits no unadjudicated printed/slug date-mismatch or unmerged same-date warnings', () => {
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    let calls: unknown[][];
+    try {
+      for (const shelf of shelvesFor('benedict-xvi')) {
+        const index = readFileSync(`tools/fixtures/benedict-xvi-${shelf}.html`, 'utf8');
+        parseShelfIndex(index, 'benedict-xvi', shelf);
+      }
+    } finally {
+      calls = warnSpy.mock.calls;
+      warnSpy.mockRestore();
+    }
+    const mismatches = calls.filter(([msg]) => String(msg).includes('date mismatch'));
+    expect(mismatches).toEqual([]);
+  });
+
+  it('records the fixture retrieval date for every document', () => {
+    expect(docs.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
+  });
+
+  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 177 John XXIII, 688 Paul VI, 7 John Paul I, and 1801 John Paul II records untouched', () => {
+    expect(all).toHaveLength(383);
+    expect(load('pius-x')).toHaveLength(306);
+    expect(load('pius-xi')).toHaveLength(158);
+    expect(load('pius-xii')).toHaveLength(253);
+    expect(load('benedict-xv')).toHaveLength(63);
+    expect(load('john-xxiii')).toHaveLength(177);
+    expect(load('paul-vi')).toHaveLength(688);
+    expect(load('john-paul-i')).toHaveLength(7);
+    expect(load('john-paul-ii')).toHaveLength(1801);
+  });
+});

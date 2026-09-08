@@ -120,6 +120,19 @@ export const POPES: readonly PopeSource[] = [
       'bulls', 'encyclicals', 'motu_proprio',
     ],
   },
+  {
+    pageSlug: 'benedict-xvi', issuerId: 'rp:benedict-xvi', era: 'shelf',
+    // Elected 19 April 2005. `elezione` is linked from the landing page but is not a
+    // document shelf (spec §2.5). `letters` and `speeches` are year-partitioned and out of
+    // scope (spec §2.7). apost_constitutions (126) is dominated by circumscription
+    // erections filed under a bare Latin toponym -- see the erection-candidate test in
+    // harvest-data.test.ts; confirming them into CIRCUMSCRIPTION_ERECTIONS is Task 20's
+    // work, not this one's.
+    shelves: [
+      'apost_constitutions', 'apost_exhortations', 'apost_letters',
+      'encyclicals', 'motu_proprio',
+    ],
+  },
 ] as const;
 
 /** The shelves harvested for a pope page; empty for an unknown slug or a flat-era page. */

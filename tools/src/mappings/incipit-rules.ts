@@ -217,6 +217,66 @@ export const GLOSS_CONNECTORS: readonly string[] = [
                                                                                // seven-pontificate corpus (Pius XII's 'Lettera Apostolica in forma di
                                                                                // Motu Proprio Cleri sanctitate...'), already handled by the
                                                                                // GENRE_PREFIXES entry of the same name and unaffected by this one.
+  ' circa ',                                                                  // Benedict XVI, apost_constitutions (Task 17): 'Anglicanorum coetibus
+                                                                               // circa l'istituzione di Ordinariati Personali per Anglicani che
+                                                                               // entrano nella piena comunione con la Chiesa Cattolica' -- confirmed
+                                                                               // genuine by the item's own URL slug, anglicanorum-coetibus. Without
+                                                                               // this, the residue is untouched (nothing stripped, no cut) and its
+                                                                               // 19 words sail past MAX_INCIPIT_WORDS, wrongly landing the document
+                                                                               // -- one of Benedict XVI's best-known acts -- as provisional. A
+                                                                               // corpus-wide check found ' circa ' in nine other headings across the
+                                                                               // whole eleven-pontificate-plus-council corpus, all already resolved
+                                                                               // before reaching this connector by an earlier cut (' - ', four
+                                                                               // headings) or an earlier null (a genre-prefix-stripped narrative
+                                                                               // opener or address salutation, five headings), so none of them is
+                                                                               // newly affected.
+  ', Lettera Apostolica',                                                     // Benedict XVI, apost_letters (Task 17): 'Cum pium, Lettera Apostolica
+                                                                               // sub plumbo datae' -- confirmed genuine by both the item's own URL
+                                                                               // slug, cum-pium, and the document's own body text, which opens 'Cum
+                                                                               // pium per obitum Cardinalis Alfonsi López Trujillo...'. The same
+                                                                               // trailing genre-restatement shape as ', Lettera Decretale' / ',
+                                                                               // Lettera Enciclica' above, just naming the genre 'Lettera Apostolica'
+                                                                               // itself (a letter given 'sub plumbo', under a lead bull seal) rather
+                                                                               // than a specific act type. Without this, 'Cum pium' sailed under
+                                                                               // MAX_INCIPIT_WORDS (six words total) and silently minted with the
+                                                                               // whole gloss baked into its id -- caught only by sampling minted
+                                                                               // incipits against their own URL slugs, not by any warning. A
+                                                                               // corpus-wide check found ', Lettera Apostolica' nowhere else, at any
+                                                                               // word count, in the whole corpus.
+  ' sul servizio della carità',                                               // Benedict XVI, motu_proprio (Task 17): 'Intima Ecclesiae natura sul
+                                                                               // servizio della carità' -- confirmed genuine by the document's own
+                                                                               // Italian body text, whose own printed title reads 'MOTU PROPRIO DEL
+                                                                               // SOMMO PONTEFICE BENEDETTO XVI SUL SERVIZIO DELLA CARITÀ' with its
+                                                                               // proemio opening 'L'intima natura della Chiesa si esprime...' -- the
+                                                                               // Latin incipit 'Intima Ecclesiae natura' is a direct rendering of
+                                                                               // that opening phrase, and every other minted motu_proprio incipit on
+                                                                               // this same shelf is a bare 2-3-word Latin phrase with no such
+                                                                               // trailing gloss (Summorum Pontificum, Quaerit semper, Porta fidei,
+                                                                               // Pulchritudinis fidei, Latina Lingua, Fides per doctrinam, Ministrorum
+                                                                               // institutio). Deliberately this one literal phrase, not a bare ' sul
+                                                                               // ' connector: a corpus-wide check found bare ' sul ' in ten headings
+                                                                               // across the corpus, including the already-minted, already-committed
+                                                                               // John Paul II record 'Rosarium Virginis Mariae sul Santo Rosario'
+                                                                               // (data/documents/john-paul-ii.json) -- adding a general ' sul '
+                                                                               // connector would move that existing id, which is this task's own
+                                                                               // stop condition; flagged in task-17-report.md for the controller to
+                                                                               // decide rather than changed here.
+  ' contenente',                                                              // Benedict XVI, apost_letters (Task 17): 'Lettera Apostolica in forma
+                                                                               // di "Motu Proprio" Totius orbis contenente nuove disposizioni circa
+                                                                               // le Basiliche di San Francesco e di Santa Maria degli Angeli in
+                                                                               // Assisi' -- confirmed genuine by fetching the document itself: its
+                                                                               // own printed title reads 'LETTERA APOSTOLICA "MOTU PROPRIO" TOTIUS
+                                                                               // ORBIS DI SUA SANTITÀ BENEDETTO XVI CONTENENTE NUOVE DISPOSIZIONI
+                                                                               // CIRCA LE BASILICHE...', so the incipit proper is the two Latin
+                                                                               // words 'Totius orbis' alone. Without this, the genre prefix strips
+                                                                               // but nothing else does, so the whole gloss ('contenente nuove
+                                                                               // disposizioni circa le Basiliche...') was silently baked into the
+                                                                               // minted id -- the same failure mode ', la Sacra Gerarchia' above
+                                                                               // was added to fix, just undetected here because it never surfaces a
+                                                                               // warning (the id still mints, just wrongly long). Cuts before
+                                                                               // ' circa ' above since it occurs earlier in the string. A
+                                                                               // corpus-wide check found ' contenente' nowhere else in the whole
+                                                                               // corpus.
 ];
 
 // Deleted for lack of evidence (review finding, 2026-09-07): the comma-prefixed
@@ -397,6 +457,17 @@ export const MIN_WORDS_BEFORE_CUT = 2;
 export const CUT_GUARD_EXEMPT: ReadonlySet<string> = new Set([
   ' con il quale', ' con la quale', ' col quale', ' con cui',
   ', col quale', ', che ', ' che istituisce',
+  // Benedict XVI, apost_letters (Task 17): ', Lettera Decretale' is the same
+  // genre-restatement marker as ', Lettera Decretale' above (already in GLOSS_CONNECTORS),
+  // but two of this shelf's own canonization decretal letters have a genuinely one-word
+  // incipit before it -- 'Quaerebam, Lettera Decretale con la quale...' (its own body text
+  // opens '«Quaerebam excellentissimum Guidonem Mariam Conforti...»') and 'Sapientia,
+  // Lettera Decretale con la quale...' (its own body text opens 'Sapientia «in se permanens
+  // omnia innovat...»'). A corpus-wide check of every ', Lettera Decretale'/',Lettera
+  // Decretale' heading in all eleven pontificates plus the council found these are the
+  // only two with fewer than two words before the connector; every other occurrence
+  // already has two or more and is unaffected by this exemption either way.
+  ', Lettera Decretale', ',Lettera Decretale',
 ]);
 
 /**

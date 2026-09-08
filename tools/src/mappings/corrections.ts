@@ -724,4 +724,77 @@ export const DATE_CORRECTIONS: Record<string, { date: string; note: string }> = 
       "date is correct; the motu_proprio shelf's URL slug (17031999, 17 March 1999, its " +
       'later AAS-publication date) is wrong for the signing date this pipeline records.',
   },
+
+  // Task 17 (Benedict XVI, elected 19 April 2005). Every entry below is adjudicated
+  // against the document's own dating formula, read on vatican.va (fetching the
+  // document itself, not the index page, since these acts carry no textual content on
+  // the shelf), and cross-checked against its stated pontificate year (year N runs
+  // 19 April of calendar year 2004+N to 18 April of 2005+N).
+  'benedict-xvi|apost_constitutions|sanctae-familiae-londiniensis|2013-01-18': {
+    date: '2013-01-18',
+    note:
+      "Sanctae Familiae Londiniensis's own dating formula reads 'Datum Romae, apud S. " +
+      "Petrum, die duodevicesimo mensis Ianuarii, anno Domini... Pontificatus Nostri " +
+      "octavo' -- 'duodevicesimo' is unambiguously the 18th (not the 28th), and 8th year " +
+      '(2012-04-19 to 2013-04-18) is consistent with either reading of January 2013. The ' +
+      "printed date is correct; the apost_constitutions shelf's URL slug (20130128, 28 " +
+      'January) is wrong.',
+  },
+  'benedict-xvi|apost_constitutions|bafangensis|2012-05-12': {
+    date: '2012-05-26',
+    note:
+      "Bafangensis's own dating formula reads 'Datum Romae, apud S. Petrum, die vicesimo " +
+      "sexto mensis Maii, anno Domini bis millesimo duodecimo, Pontificatus Nostri " +
+      "octavo' (26 May 2012, 8th year of the pontificate -- consistent, 2012-04-19 to " +
+      "2013-04-18). The apost_constitutions shelf's printed date ('12 maggio 2012', 12 " +
+      'May) is the error; its own URL slug (20120526, 26 May) is correct.',
+  },
+  'benedict-xvi|apost_constitutions|hyacinthi-de-yaguachi|2009-11-06': {
+    date: '2009-11-04',
+    note:
+      "Hyacinthi de Yaguachi's own dating formula reads 'Datum Romae, apud S. Petrum, " +
+      "die quarto mensis Novembris, anno Domini bismillesimo nono, Pontificatus Nostri " +
+      "quinto' (4 November 2009, 5th year of the pontificate -- consistent, 2009-04-19 " +
+      "to 2010-04-18). The apost_constitutions shelf's printed date ('6 novembre 2009', " +
+      '6 November) is the error; its own URL slug (20091104, 4 November) is correct.',
+  },
+  'benedict-xvi|apost_letters|beata-narcissa|2008-10-12': {
+    date: '2008-10-12',
+    note:
+      "Beata Narcissa's own dating formula reads 'Datum Romae apud S. Petrum, die " +
+      "duodecimo mensis Octobris, anno Domini bis millesimo octavo, Pontificatus Nostri " +
+      "quarto' (12 October 2008, 4th year -- consistent, 2008-04-19 to 2009-04-18; this " +
+      "is one of a batch of canonizations celebrated together on 12 October 2008, along " +
+      "with Nihil aliud below, each with its own separately dated decretal letter " +
+      'sharing the same signing date). The printed date is correct; the apost_letters ' +
+      "shelf's URL slug (20091012, 2009) is wrong.",
+  },
+  'benedict-xvi|apost_letters|nihil-aliud|2010-10-12': {
+    date: '2008-10-12',
+    note:
+      "Nihil aliud's own dating formula reads 'Datum Romae apud S.Petrum, die duodecimo " +
+      "mensis Octobris, anno Domini bis millesimo octavo, Pontificatus Nostri quarto' " +
+      '(12 October 2008, 4th year -- consistent, 2008-04-19 to 2009-04-18; the same 12 ' +
+      "October 2008 canonization batch as Beata Narcissa above). The apost_letters " +
+      "shelf's printed date ('12 ottobre 2010', 2010) is the error; its own URL slug " +
+      '(20081012, 2008) is correct.',
+  },
+  'benedict-xvi|apost_constitutions|huariensis|2008-04-04': {
+    date: '2008-04-02',
+    note:
+      "Huariensis's own dating formula reads 'Datum Romae, apud S. Petrum, die secundo " +
+      "mensis Aprilis, anno Domini bis millesimo octavo, Pontificatus Nostri tertio' (2 " +
+      'April 2008, 3rd year of the pontificate -- consistent, 2007-04-19 to 2008-04-18). ' +
+      "The apost_constitutions shelf's printed date ('4 aprile 2008', 4 April) is the " +
+      'error; its own URL slug (20080402, 2 April) is correct.',
+  },
+  'benedict-xvi|apost_letters|salutis-omnia|2007-06-03': {
+    date: '2007-06-03',
+    note:
+      "Salutis omnia's own dating formula reads 'Datum Romae, apud Sanctum Petrum, in " +
+      "sollemnitate Sanctissimae Trinitatis, die tertio mensis Iunii, anno Domini " +
+      "bismillesimo septimo, Pontificatus Nostri tertio' (3 June 2007 -- Trinity Sunday " +
+      '-- 3rd year -- consistent, 2007-04-19 to 2008-04-18). The printed date is ' +
+      "correct; the apost_letters shelf's URL slug (20070506, 6 May) is wrong.",
+  },
 };

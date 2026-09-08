@@ -1,0 +1,4637 @@
+[
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2005-05-14",
+    "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all’albo dei Beati le Serve di Dio: Ascensión Nicol Goñi e Marianne Cope",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-05-14",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/apost_letters/documents/hf_ben-xvi_apl_20050514_beatifications-goni-cope.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/carthaginensis-2005",
+    "title": "Carthaginensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-05-24",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20050524_carthaginensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Carthaginensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/l-antica-e-venerabile-basilica-2005",
+    "title": "Motu Proprio «L'antica e venerabile Basilica» per la Basilica di San Paolo fuori le Mura e per il suo Complesso extraterritoriale",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-05-31",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/motu_proprio/documents/hf_ben-xvi_motu-proprio_20050531_antica-venerabile-basilica.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "L'antica e venerabile Basilica",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2005-06-04",
+    "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all’albo dei Beati i Servi di Dio: Ladislao Findysz, Bronislao Markiewicz e Ignazio Kłopotwoski",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-06-04",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/es/apost_letters/documents/hf_ben-xvi_apl_20050604_beatifications-warsaw.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/gulbargensis-2005",
+    "title": "Gulbargensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-06-24",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20050624_gulbargensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Gulbargensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/motu-proprio-2005-06-28",
+    "title": "Motu Proprio per l’approvazione e la pubblicazione del Compendio del Catechismo della Chiesa Cattolica",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-06-28",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/motu_proprio/documents/hf_ben-xvi_motu-proprio_20050628_compendio-catechismo.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IN",
+        "IT",
+        "PT",
+        "RO",
+        "SL",
+        "SV"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xvi/sindhudurgiensis-2005",
+    "title": "Sindhudurgiensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-07-05",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20050705_sindhudurgiensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sindhudurgiensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/auguensis-2005",
+    "title": "Auguensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-07-08",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20050708_auguensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Auguensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/iaipurensis-2005",
+    "title": "Iaipurensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-07-20",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20050720_iaipurensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Iaipurensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/dominae-nostrae-naregensis-2005",
+    "title": "Dominae Nostrae Naregensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-09-12",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20050912_dominae-nostrae-naregensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Dominae Nostrae Naregensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/yorensis-2005",
+    "title": "Yorensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-09-19",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20050919_yorensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Yorensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/serrignensis-2005",
+    "title": "Serrignensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-09-21",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20050921_serrignensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Serrignensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2005-10-09",
+    "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all’albo dei Beati il Servo di Dio Clemens August Graf von Galen",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-10-09",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/apost_letters/documents/hf_ben-xvi_apl_20051009_beatification-von-galen.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/ad-dei-2005",
+    "title": "Ad Dei, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Felice di Nicosia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-10-23",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20051023_santo-nicosia.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad Dei",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/est-autem-2005",
+    "title": "Est autem, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Józef Bilczewski",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-10-23",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20051023_santo-bilczewski.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Est autem",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/iustus-dominus-2005",
+    "title": "Iustus Dominus, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all’albo dei Santi il Servo di Dio Gaetano Catanoso",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-10-23",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20051023_beato-catanoso.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Iustus Dominus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/omnibus-omnia-2005",
+    "title": "Omnibus omnia, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Zygmunt Gorazdowsky",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-10-23",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20051023_santo-gorazdowsky.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Omnibus omnia",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/qui-manet-2005",
+    "title": "Qui manet, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Alberto Hurtado Cruchaga",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-10-23",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20051023_beato-cruchaga.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Qui manet",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2005-10-29",
+    "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all’albo dei Beati i Servi di Dio: Josep Tàpies e sei Compagni e María de los Ángeles Ginard Martí",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-10-29",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/apost_letters/documents/hf_ben-xvi_apl_20051029_beatification-tapies-ginard.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2005-11-04",
+    "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto aell’albo dei Beati la Serva di Dio Eurosia Fabris",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-11-04",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20051104_eurosia-fabris.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/totius-orbis-2005",
+    "title": "Lettera Apostolica in forma di \"Motu Proprio\" Totius orbis contenente nuove disposizioni circa le Basiliche di San Francesco e di Santa Maria degli Angeli in Assisi",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-11-09",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/apost_letters/documents/hf_ben-xvi_apl_20051109_assisi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Totius orbis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2005-11-13",
+    "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all’albo dei Beati i Servi di Dio: Charles de Foucauld, Maria Pia Mastena, Maria Crocifissa Curcio",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-11-13",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/apost_letters/documents/hf_ben-xvi_apl_20051113_beatification.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2005-11-15",
+    "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all’albo dei Beati 13 Martiri Messicani: Anacleto González Flores e 8 Compagni, José Trinidad Rangel, Andrés Solá Molist, Leonardo Pérez, Darío Acosta Zurita",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-11-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/en/apost_letters/documents/hf_ben-xvi_apl_20051115_beatification-messico.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "EN",
+        "ES",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/barianensis-2005",
+    "title": "Barianensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-11-22",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20051122_barianensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Barianensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/itanagariensis-2005",
+    "title": "Itanagariensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-12-07",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20051207_itanagariensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Itanagariensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/miaoensis-2005",
+    "title": "Miaoensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-12-07",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20051207_miaoensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Miaoensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/buxarensis-2005",
+    "title": "Buxarensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-12-12",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20051212_buxarensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Buxarensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/fagarasiensis-2005",
+    "title": "Fagarasiensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-12-14",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20051214_fagarasiensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Fagarasiensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/maumerensis-2005",
+    "title": "Maumerensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-12-14",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20051214_maumerensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Maumerensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/uromiensis-2005",
+    "title": "Uromiensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-12-14",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20051214_uromiensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Uromiensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/pekhonensis-2005",
+    "title": "Pekhonensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-12-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20051215_pekhonensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Pekhonensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/deus-caritas-est-2005",
+    "title": "Deus caritas est",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/encyclicals/documents/hf_ben-xvi_enc_20051225_deus-caritas-est.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "HU",
+        "IT",
+        "LA",
+        "NL",
+        "PL",
+        "PT",
+        "RU",
+        "VI",
+        "ZH"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Deus caritas est",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:benedict-xvi/bancoensis-2006",
+    "title": "Bancoënsis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-01-17",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20060117_bancoensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Bancoënsis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/iovaiensis-2006",
+    "title": "Iovaiensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-01-28",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20060128_iovaiensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Iovaiensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/nongstoinensis-2006",
+    "title": "Nongstoinensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-01-28",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20060128_nongstoinensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Nongstoinensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2006-03-14",
+    "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all’albo dei Beati la Serva di Dio Suor Elia di san Clemente",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-03-14",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/apost_letters/documents/hf_ben-xvi_apl_20060314_beatification-bari.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/kyrgyzstaniae-2006",
+    "title": "Kyrgyzstaniae",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-03-18",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20060318_kyrgyzstaniae.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Kyrgyzstaniae",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/iashpuriensis-2006",
+    "title": "Iashpuriensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-03-23",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20060323_iashpuriensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Iashpuriensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/celeiensis-2006",
+    "title": "Celeiensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-04-07",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20060407_celeiensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Celeiensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/mariborensis-2006",
+    "title": "Mariborensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-04-07",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20060407_mariborensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Mariborensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/novae-urbis-2006",
+    "title": "Novae Urbis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-04-07",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20060407_novae-urbis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Novae Urbis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/sombotiensis-2006",
+    "title": "Sombotiensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-04-07",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20060407_sombotiensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sombotiensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/moramangana-2006",
+    "title": "Moramangana",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-05-13",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20060513_moramangana.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Moramangana",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2006-05-14",
+    "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all'albo dei Beati la Serva di Dio Suor Maria della Passione",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-05-14",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/es/apost_letters/documents/hf_ben-xvi_apl_20060514_beatification-napoli.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2006-05-28",
+    "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all'albo dei Beati la Serva di Dio Rita Amata di Gesù",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-05-28",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/es/apost_letters/documents/hf_ben-xvi_apl_20060528_beatification-viseu.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/banmavensis-2006",
+    "title": "Banmavensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-08-28",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20060828_banmavensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Banmavensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/agbovillensis-2006",
+    "title": "Agbovillensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-10-14",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20061014_agbovillensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Agbovillensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/bene-omnia-2006",
+    "title": "Bene omnia, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei santi Filippo Smaldone",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-10-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20061015_beato-smaldone.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Bene omnia",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/cum-mortuus-2006",
+    "title": "Cum mortuus, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei santi Raffaele Guízar Valencia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-10-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20061015_beato-valencia.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum mortuus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/id-enim-2006",
+    "title": "Id enim, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei santi Teodora Guérin",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-10-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20061015_beata-guerin.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Id enim",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/me-in-2006",
+    "title": "Me in, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei santi Rosa Venerini",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-10-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20061015_beata-venerini.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Me in",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/sydneyensis-2006",
+    "title": "Sydneyensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-10-21",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20061021_sydneyensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sydneyensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/buiumburaensis-2006",
+    "title": "Buiumburaënsis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-11-25",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20061125_buiumburaensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Buiumburaënsis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/goana-et-damanensis-2006",
+    "title": "Goana et Damanensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-11-25",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20061125_goana.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Goana et Damanensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/tigiuanaensis-et-aliarum-2006",
+    "title": "Tigiuanaënsis et aliarum",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-11-25",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20061125_tigiuanaensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Tigiuanaënsis et aliarum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/sancti-ioseph-pinealensis-2006",
+    "title": "Sancti Ioseph Pinealensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-12-06",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20061206_sancti-joseph.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sancti Ioseph Pinealensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/sinuensis-2007",
+    "title": "Sinuensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-01-26",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20070126_sinuensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sinuensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/nepalianus-2007",
+    "title": "Nepalianus",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-02-10",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20070210_nepalianus.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Nepalianus",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/sacramentum-caritatis-2007",
+    "title": "Sacramentum Caritatis: Esortazione Apostolica Postsinodale sull’Eucaristia fonte e culmine della vita e della missione della Chiesa",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-02-22",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/apost_exhortations/documents/hf_ben-xvi_exh_20070222_sacramentum-caritatis.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "LA",
+        "NL",
+        "PL",
+        "PT",
+        "RU"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sacramentum Caritatis",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:benedict-xvi/vir-pacis-2007",
+    "title": "Vir pacis, Lettera Decretale con la quale il Sommo Pontefice ha iscritto nell'albo dei Santi Antonio Galvão de França",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-05-11",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20070511_beato-franca.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Vir pacis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/riviangulanensi-labradorensi-2007",
+    "title": "Riviangulanensi-Labradorensi",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-05-31",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20070531_riviangulanensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Riviangulanensi-Labradorensi",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/shendamensis-2007",
+    "title": "Shendamensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-06-02",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20070602_shendamensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Shendamensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/omnia-quaecumque-2007",
+    "title": "Omnia, quaecumque, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi beato Giorgio Preca",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-06-03",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20070603_sancto-preca.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Omnia, quaecumque",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/salutis-omnia-2007",
+    "title": "Salutis omnia, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi beato Simone da Lipnica",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-06-03",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20070506_salutis-omnium.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Salutis omnia",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/sapientia-2007",
+    "title": "Sapientia, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Madre Maria Eugenia di Gesù",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-06-03",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20070603_beata-eugeniae.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sapientia",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/ioannesburgensis-2007",
+    "title": "Ioannesburgensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-06-05",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20070605_ioannesburgensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ioannesburgensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/caxitonensis-2007",
+    "title": "Caxitonensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-06-06",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20070606_caxitonensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Caxitonensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/viananensis-2007",
+    "title": "Viananensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-06-06",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20070606_viananensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Viananensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/motu-proprio-2007-06-11",
+    "title": "Motu Proprio con cui il Santo Padre Benedetto XVI ripristina la norma tradizionale circa la maggioranza richiesta nell’elezione del Sommo Pontefice",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-06-11",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/de/motu_proprio/documents/hf_ben-xvi_motu-proprio_20070611_de-electione.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "DE",
+        "FR",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xvi/burkinae-fasanae-et-nigris-2007",
+    "title": "Burkinae Fasanae et Nigris",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-06-12",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20070612_burkinae.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Burkinae Fasanae et Nigris",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/donkorkromensis-2007",
+    "title": "Donkorkromensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-06-12",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20070612_donkorkromensiis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Donkorkromensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/niameyensis-2007",
+    "title": "Niameyensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-06-25",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20070625_niameyensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Niameyensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/summorum-pontificum-2007",
+    "title": "Motu Proprio Summorum Pontificum sulla \"Liturgia romana anteriore alla riforma del 1970\"",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-07-07",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/motu_proprio/documents/hf_ben-xvi_motu-proprio_20070707_summorum-pontificum.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Summorum Pontificum",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xvi/sandakanensis-2007",
+    "title": "Sandakanensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-07-16",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20070716_sandakanensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sandakanensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2007-10-26",
+    "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all'albo dei Beati 498 Servi di Dio, martiri in Spagna",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-26",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/es/apost_letters/documents/hf_ben-xvi_apl_20071026_beatification-martyrs-spain.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2007-11-18",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Signor Cardinale Segretario di Stato in occasione dell'iscrizione all'albo dei Beati di Antonio Rosmini",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-11-18",
+    "source": {
+      "url": null,
+      "shelf": "apost_letters",
+      "languages": [],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/spe-salvi-2007",
+    "title": "Spe salvi",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-11-30",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/encyclicals/documents/hf_ben-xvi_enc_20071130_spe-salvi.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "LA",
+        "NL",
+        "PL",
+        "PT",
+        "RU",
+        "VI",
+        "ZH"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Spe salvi",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:benedict-xvi/techimanensis-2007",
+    "title": "Techimanensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-12-28",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20071228_techimanensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Techimanensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/cassoviensis-2008",
+    "title": "Cassoviensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-01-30",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20080130_cassoviensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cassoviensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/slovachia-2008",
+    "title": "Slovachia",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-02-14",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20080214_slovachia.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Slovachia",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/florianensis-2008",
+    "title": "Florianensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-02-27",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20080227_florianensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Florianensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/faiardensis-humacaensis-2008",
+    "title": "Faiardensis-Humacaensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-03-11",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20080311_faiardensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Faiardensis-Humacaensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/insulensem-2008",
+    "title": "Insulensem",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-03-30",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20080330_insulensem.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Insulensem",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/huariensis-2008",
+    "title": "Huariensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-04-02",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20080402_huariensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Huariensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/cum-pium-2008",
+    "title": "Cum pium, Lettera Apostolica sub plumbo datae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-05-10",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20080510_cum-pium.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum pium",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/kotakina-baluensis-2008",
+    "title": "Kotakina-Baluensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-05-23",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20080523_kotakina.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Kotakina-Baluensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/diacovensis-osijekensis-2008",
+    "title": "Diacovensis-Osijekensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-06-18",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20080618_diacovensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Diacovensis-Osijekensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/sirmiensis-2008",
+    "title": "Sirmiensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-06-18",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20080618_sirmiensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sirmiensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/kribensis-2008",
+    "title": "Kribensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-06-19",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20080619_kribensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Kribensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/antiqua-ordinatione-2008",
+    "title": "Lettera Apostolica in forma di \"Motu Proprio\" Antiqua ordinatione, con la quale è stata promulgata la Lex propria del Supremo Tribunale della Segnatura Apostolica",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-06-21",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/apost_letters/documents/hf_ben-xvi_apl_20080621_antiqua-ordinatione.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Antiqua ordinatione",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/nigromontana-2008",
+    "title": "Nigromontana",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-07-02",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20080702_nigromentana.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Nigromontana",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/sinuvitullensis-miragoanensis-2008",
+    "title": "Sinuvitullensis-Miragoanensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-07-13",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20080713_sinuvitullensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sinuvitullensis-Miragoanensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/galapagensis-2008",
+    "title": "Galapagensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-07-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20080715_galapagensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Galapagensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/kayangana-14-agosto2008-2008",
+    "title": "Kayangana (14 agosto2008)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-08-14",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20080814_kayangana.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Kayangana (14 agosto2008)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/animadverto-me-2008",
+    "title": "Animadverto me, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Anna Mutthahupadathu",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-10-12",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20081012_santa-muttahupadathu.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Animadverto me",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/beata-narcissa-2008",
+    "title": "Beata Narcissa, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Narcisa di Gesù Martillo y Moràn",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-10-12",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20091012_santa-moran.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Beata Narcissa",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/nihil-aliud-2008",
+    "title": "Nihil aliud, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Maria Bernarda Bütler",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-10-12",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20081012_beata-butler.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Nihil aliud",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/venit-enim-filius-2008",
+    "title": "Venit enim Filius, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Gaetano Errico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-10-12",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20081012_venit-enim-filius.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Venit enim Filius",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2008-10-28",
+    "title": "Lettera Apostolica al Card. Joachim Meisner in occasione del VII Centenario della morte del beato Giovanni Duns Scoto",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-10-28",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/apost_letters/documents/hf_ben-xvi_apl_20081028_duns-scoto.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/gomez-palaciensis-2008",
+    "title": "Gomez-Palaciensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-11-25",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20081125_gomez-palaciensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Gomez-Palaciensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/teotihuacana-2008",
+    "title": "Teotihuacana",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-12-03",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20081203_teotihuacana.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Teotihuacana",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/rutana-2009",
+    "title": "Rutana",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-01-17",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20090117_rutana.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Rutana",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/hpaanensis-2009",
+    "title": "Hpaanensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20090124_hpaanensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Hpaanensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/esquelensis-2009",
+    "title": "Esquelensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-03-14",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20090314_esquelensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Esquelensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/namibensis-2009",
+    "title": "Namibensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-03-21",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20090321_namibensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Namibensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/libmanana-2009",
+    "title": "Libmanana",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-03-25",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20090325_libmanana.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Libmanana",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/accipite-armaturam-2009",
+    "title": "Accipite armaturam, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Nonio Alvarez Pereira",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-04-26",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20090426_accipite-armaturam.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Accipite armaturam",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/ancillae-operantur-2009",
+    "title": "Ancillae operantur, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Caterina Volpicelli",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-04-26",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20090426_santa-caterina-volpicelli.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ancillae operantur",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/haec-verba-scripturae-2009",
+    "title": "Haec verba Scripturae, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Arcangelo Tadini",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-04-26",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20090426_santo-tadini.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Haec verba Scripturae",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/hoc-est-verbum-2009",
+    "title": "Hoc est verbum, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Gertrude Comensoli",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-04-26",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20090426_santa-camensoli.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Hoc est verbum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/maiorem-hac-2009",
+    "title": "Maiorem hac, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Bernardo Tolomei",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-04-26",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20090426_maiorem-hac.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Maiorem hac",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/mongensis-2009",
+    "title": "Mongensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-06-03",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20090603_mongensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Mongensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/oberensis-2009",
+    "title": "Oberensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-06-13",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20090613_oberensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Oberensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/caritas-in-veritate-2009",
+    "title": "Caritas in veritate",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/encyclicals/documents/hf_ben-xvi_enc_20090629_caritas-in-veritate.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "AR",
+        "BE",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "LA",
+        "NL",
+        "PL",
+        "PT",
+        "RU",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Caritas in veritate",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:benedict-xvi/ecclesiae-unitatem-2009",
+    "title": "Lettera Apostolica in forma di \"Motu Proprio\" Ecclesiae unitatem",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-07-02",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/apost_letters/documents/hf_ben-xvi_apl_20090702_ecclesiae-unitatem.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ecclesiae unitatem",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2009-07-07",
+    "title": "Lettera Apostolica in forma di \"Motu Proprio\" con la quale viene approvato il nuovo statuto dell'Ufficio del Lavoro della Sede Apostolica (ULSA)",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-07-07",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/apost_letters/documents/hf_ben-xvi_apl_20090707_statuto-ulsa.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2009-10-11",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Padre Damiano de Veuster",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-10-11",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20091011_damiano-de-veuster.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/et-quicumque-2009",
+    "title": "Et, quicumque, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Maria della Croce",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-10-11",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20091011_maria-a-cruce.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Et, quicumque",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/in-convertendo-dominus-2009",
+    "title": "In convertendo Dominus, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Sigismondo Felice Feliński",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-10-11",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20091011_sigismondo-felice-felinski.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "In convertendo Dominus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/iustorum-autem-2009",
+    "title": "Iustorum autem, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Raphaeli Arnáiz Barón",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-10-11",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20091011_arnaiz-baron.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Iustorum autem",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/praedicationem-christianae-2009",
+    "title": "Praedicationem christianae, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Francesco Coll y Guitart",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-10-11",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20091011_praedicationem-christianae.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Praedicationem christianae",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/omnium-in-mentem-2009",
+    "title": "Lettera Apostolica in forma di \"Motu Proprio\" Omnium in mentem, con la quale vengono mutate alcune norme del Codice di Diritto Canonico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-10-26",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/apost_letters/documents/hf_ben-xvi_apl_20091026_codex-iuris-canonici.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Omnium in mentem",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/anglicanorum-coetibus-2009",
+    "title": "Anglicanorum coetibus circa l'istituzione di Ordinariati Personali per Anglicani che entrano nella piena comunione con la Chiesa Cattolica",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-11-04",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/apost_constitutions/documents/hf_ben-xvi_apc_20091104_anglicanorum-coetibus.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Anglicanorum coetibus",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/hyacinthi-de-yaguachi-2009",
+    "title": "Hyacinthi de Yaguachi",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-11-04",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20091104_hyacinthi-de-yaguachi.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Hyacinthi de Yaguachi",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/tenancingana-2009",
+    "title": "Tenancingana",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-11-26",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20091126_tenancingana.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Tenancingana",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/bellovariensis-crisiensis-2009",
+    "title": "Bellovariensis-Crisiensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-12-05",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20091205_bellovariensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Bellovariensis-Crisiensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/gambellensis-2009",
+    "title": "Gambellensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-12-05",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20091205_gambellensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Gambellensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/gimaensis-bongana-2009",
+    "title": "Gimaënsis-Bongana",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-12-05",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20091205_gimmaensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Gimaënsis-Bongana",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/sisciensis-2009",
+    "title": "Sisciensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-12-05",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20091205_sisciensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sisciensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/russiae-2009",
+    "title": "Russiae",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-12-09",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20091209_russiae.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Russiae",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/donkorkromensis-2010",
+    "title": "Donkorkromensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-01-19",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20100119_donkorkromensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Donkorkromensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/hosannensis-2010",
+    "title": "Hosannensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-01-20",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20100120_hosannensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Hosannensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/malianensis-2010",
+    "title": "Malianensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-01-30",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20100130_malianensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Malianensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/sancti-ioannis-baptistae-de-calama-2010",
+    "title": "Sancti Ioannis Baptistae De Calama",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-02-20",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20100220_sancti-ioannis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sancti Ioannis Baptistae De Calama",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/tunetana-2010",
+    "title": "Tunetana",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-02-22",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20100222_tunetana.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Tunetana",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/toamasinensis-2010",
+    "title": "Toamasinensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-02-26",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20100226_toamasinensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Toamasinensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/quettensis-2010",
+    "title": "Quettensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-04-29",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20100429_quettensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quettensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/insularum-comorensium-2010",
+    "title": "Insularum Comorensium",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-05-01",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20100501_insularum.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Insularum Comorensium",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/ipilensis-2010",
+    "title": "Ipilensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-05-01",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20100501_ipilensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ipilensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/salicensis-2010",
+    "title": "Salicensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-06-16",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20100616_salicensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Salicensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/foederatae-civitates-americae-septentrionalis-2010",
+    "title": "Foederatae Civitates Americae Septentrionalis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-07-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20100715_foederate.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Foederatae Civitates Americae Septentrionalis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/karogana-2010",
+    "title": "Karogana",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-07-21",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20100721_karongana.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Karogana",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/ubicumque-et-semper-2010",
+    "title": "Lettera Apostolica in forma di \"Motu Proprio\" Ubicumque et semper, con la quale si istituisce il Pontificio Consiglio per la Promozione della Nuova Evangelizzazione",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-09-21",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/apost_letters/documents/hf_ben-xvi_apl_20100921_ubicumque-et-semper.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ubicumque et semper",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/verbum-domini-2010",
+    "title": "Verbum Domini: Esortazione Apostolica Postsinodale sulla Parola di Dio nella vita e nella missione della Chiesa",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-09-30",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/apost_exhortations/documents/hf_ben-xvi_exh_20100930_verbum-domini.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT",
+        "RU"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Verbum Domini",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2010-10-17",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Padre Stanislao Kazimierczyk",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-10-17",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20101017_beato-stanislao-kazimierczyk.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/beata-illa-creatura-2010",
+    "title": "Beata illa creatura, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Camilla Battista Varano",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-10-17",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20101017_camilla-varano.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Beata illa creatura",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/dedit-quoque-2010",
+    "title": "Dedit quoque, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Giulia Salzano",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-10-17",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20101017_santa-giulia-salzano.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Dedit quoque",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/quae-stulta-2010",
+    "title": "Quae stulta, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi André Bessette",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-10-17",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20101017_andrea-bessette.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quae stulta",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/quicumque-quaesierit-2010",
+    "title": "Quicumque quaesierit, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Cándida Maria de Jesús",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-10-17",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20101017_candida-maria-de-jesus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quicumque quaesierit",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/voluntas-dei-2010",
+    "title": "Voluntas Dei, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Mary MacKillop",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-10-17",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20101017_mary-mackillop.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Voluntas Dei",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/purpuratis-patribus-2010",
+    "title": "Purpuratis Patribus",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-11-20",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20101120_purpuratis-patribus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Purpuratis Patribus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/bundana-2010",
+    "title": "Bundana",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-11-27",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20101127_bundana.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Bundana",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/camassariensis-2010",
+    "title": "Camassariensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-12-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20101215_camassariensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Camassariensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/motu-proprio-2010-12-30",
+    "title": "Lettera Apostolica in forma di \"Motu Proprio\" per la prevenzione ed il contrasto delle attività illegali in campo finanziario e monetario",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-12-30",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/motu_proprio/documents/hf_ben-xvi_motu-proprio_20101230_attivita-illegali.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xvi/boensis-2011",
+    "title": "Boënsis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-01-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20110115_boensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Boënsis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/ordinariatus-militaris-in-bosnia-et-herzegovia-2011",
+    "title": "Ordinariatus Militaris in Bosnia et Herzegovia",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-02-01",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20110201_ordinariatus-militaris.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ordinariatus Militaris in Bosnia et Herzegovia",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/lilongvensis-2011",
+    "title": "Lilongvensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-02-09",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20110209_lilongvensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Lilongvensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/impfondensis-2011",
+    "title": "Impfondensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-02-11",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20110211_ipfondensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Impfondensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/kondoaensis-2011",
+    "title": "Kondoaënsis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-03-12",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20110312_konduaensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Kondoaënsis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/machiquesensis-2011",
+    "title": "Machiquesensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-04-09",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20110409_machiquesensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Machiquesensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/malaniensis-2011",
+    "title": "Malaniensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-04-12",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20110412_malaniensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Malaniensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/saurimoensis-2011",
+    "title": "Saurimoënsis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-04-12",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20110412_saurimoensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Saurimoënsis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/passofundensis-2011",
+    "title": "Passofundensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-04-13",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20110413_passofundensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Passofundensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/pelotensis-2011",
+    "title": "Pelotensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-04-13",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20110413_pelotensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Pelotensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/sanctae-mariae-2011",
+    "title": "Sanctae-Mariae",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-04-13",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20110413_sanctae-mariae.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sanctae-Mariae",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2011-05-01",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato in occasione dell'iscrizione all'albo dei Beati di Papa Giovanni Paolo II",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-05-01",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20110501_beato-giovanni-paolo-ii.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/naviraiensis-2011",
+    "title": "Naviraiensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-06-01",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20110601_naviraiensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Naviraiensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/torontina-2011",
+    "title": "Torontina",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-06-14",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20110614_torontina.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Torontina",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/sylethensis-2011",
+    "title": "Sylethensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-07-08",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20110708_sylhetensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sylethensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/malaesia-2011",
+    "title": "Malaesia",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-07-27",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20110727_malaesia.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Malaesia",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/azerbaigianiensis-2011",
+    "title": "Azerbaigianiensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-08-04",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20110804_azerbaigiainiesis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Azerbaigianiensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/quaerit-semper-2011",
+    "title": "Quaerit semper",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-08-30",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/motu_proprio/documents/hf_ben-xvi_motu-proprio_20110830_quaerit-semper.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quaerit semper",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xvi/porta-fidei-2011",
+    "title": "Lettera Apostolica in forma di \"Motu Proprio\" Porta fidei con la quale si indice l'Anno della fede",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-10-11",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/motu_proprio/documents/hf_ben-xvi_motu-proprio_20111011_porta-fidei.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Porta fidei",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2011-10-23",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Bonifacia Rodríguez Castro",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-10-23",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20111023_bonifacia-rodriguez-castro.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/quaerebam-2011",
+    "title": "Quaerebam, Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Guido Maria Conforti",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-10-23",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20111023_guido-conforti.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quaerebam",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/kabvensis-2011",
+    "title": "Kabvensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-10-29",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20111029_kabvensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Kabvensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/obidensis-2011",
+    "title": "Obidensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-11-09",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20111109_obidensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Obidensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/africae-munus-2011",
+    "title": "Africae munus: Esortazione Apostolica Postsinodale sulla Chiesa in Africa al servizio della riconciliazione, della giustizia e della pace",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-11-19",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/apost_exhortations/documents/hf_ben-xvi_exh_20111119_africae-munus.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "SW"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Africae munus",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:benedict-xvi/gauana-2011",
+    "title": "Gauana",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-11-30",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20111130_gauana.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Gauana",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/ceibensis-2011",
+    "title": "Ceibensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-12-30",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20111230_ceibensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ceibensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/ifakarensis-2012",
+    "title": "Ifakarensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-01-14",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20120114_ifakarensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ifakarensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/robensis-2012",
+    "title": "Robensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-02-11",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20120211_robensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Robensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/tenkodogoensis-2012",
+    "title": "Tenkodogoënsis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-02-11",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20120211_tenkodogoensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Tenkodogoënsis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/segheneitensis-2012",
+    "title": "Segheneitensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-02-13",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20120213_segheneitensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Segheneitensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/faridabadensis-syro-malabarensium-2012",
+    "title": "Faridabadensis Syro-Malabarensium",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-03-06",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20120306_faridabadensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Faridabadensis Syro-Malabarensium",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/bafangensis-2012",
+    "title": "Bafangensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-05-26",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20120526_bafangesis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Bafangensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/batticaloaensis-2012",
+    "title": "Batticaloaënsis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-07-03",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20120703_batticaloaensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Batticaloaënsis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/udupiensis-2012",
+    "title": "Udupiensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-07-16",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20120716_udupiensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Udupiensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/eparchia-dominae-nostrae-libanensis-parisiensis-maronitarum-2012",
+    "title": "Eparchia Dominae Nostrae Libanensis Parisiensis Maronitarum",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-07-21",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20120721_dominae-nostrae-libanensis-parisiensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Eparchia Dominae Nostrae Libanensis Parisiensis Maronitarum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/pulchritudinis-fidei-2012",
+    "title": "Lettera Apostolica in forma di \"Motu Proprio\" Pulchritudinis fidei con la quale la Pontificia Commissione per i Beni Culturali della Chiesa viene unita al Pontificio Consiglio della Cultura",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-07-30",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/motu_proprio/documents/hf_ben-xvi_motu-proprio_20120730_pulchritudinis-fidei.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Pulchritudinis fidei",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xvi/ecclesia-in-medio-oriente-2012",
+    "title": "Ecclesia in Medio Oriente: Esortazione Apostolica Postsinodale sulla Chiesa in Medio Oriente, comunione e testimonianza",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-09-14",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/apost_exhortations/documents/hf_ben-xvi_exh_20120914_ecclesia-in-medio-oriente.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "IW",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ecclesia in Medio Oriente",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2012-10-07-1",
+    "title": "Lettera Apostolica per la proclamazione di Giovanni d’Ávila a Dottore della Chiesa",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-10-07",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/apost_letters/documents/hf_ben-xvi_apl_20121007_giovanni-avila.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2012-10-07-2",
+    "title": "Lettera Apostolica per la proclamazione di Ildegarda di Bingen a Dottore della Chiesa",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-10-07",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/apost_letters/documents/hf_ben-xvi_apl_20121007_ildegarda-bingen.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2012-10-21-1",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Anna Schäffer",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-10-21",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20121021_anna-schaffer.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2012-10-21-2",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Caterina Tekakwitha",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-10-21",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20121021_caterina-tekakwitha.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2012-10-21-3",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Madre Maria del Monte Carmelo",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-10-21",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20121021_maria-salles-y-barangueras.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2012-10-21-4",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Padre Giovanni Battista Piamarta",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-10-21",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20121021_giovanni-battista-piamarta.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2012-10-21-5",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Padre Jacques Berthieu",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-10-21",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20121021_jacques-berthieu.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2012-10-21-6",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Pietro Calungsod",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-10-21",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20121021_pietro-calungsod.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2012-10-21-7",
+    "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Suor Marianna Cope",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-10-21",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20121021_marianna-cope.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/latina-lingua-2012",
+    "title": "Lettera Apostolica in forma di \"Motu Proprio\" Latina Lingua, con la quale viene istituita la Pontificia Accademia di Latinità",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-11-10",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/motu_proprio/documents/hf_ben-xvi_motu-proprio_20121110_latina-lingua.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Latina Lingua",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2012-11-11",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato in occasione dell'iscrizione all'albo dei Beati di Madre Maria Luisa Prosperi (al secolo: Gertrude)",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-11-11",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20121111_beata-maria-luisa-prosperi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/intima-ecclesiae-natura-2012",
+    "title": "Lettera Apostolica in forma di \"Motu Proprio\" Intima Ecclesiae natura sul servizio della carità",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-11-11",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/motu_proprio/documents/hf_ben-xvi_motu-proprio_20121111_caritas.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Intima Ecclesiae natura",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2012-12-02",
+    "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato in occasione dell'iscrizione all'albo dei Beati di Lazaro Devasahayam Pillai",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-12-02",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_letters/documents/hf_ben-xvi_apl_20121202_beato-devasahayam-pillai.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/gbokensis-2012",
+    "title": "Gbokensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-12-29",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20121229_gbokensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Gbokensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/katsinensis-alensis-2012",
+    "title": "Katsinensis-Alensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-12-29",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20121229_katsinensis-alensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Katsinensis-Alensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/fides-per-doctrinam-2013",
+    "title": "Lettera Apostolica in forma di \"Motu Proprio\" Fides per doctrinam con la quale si modifica la Costituzione apostolica Pastor bonus e si trasferisce la competenza sulla Catechesi dalla Congregazione per il Clero al Pontificio Consiglio per la Promozione della Nuova Evangelizzazione",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2013-01-16",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/motu_proprio/documents/hf_ben-xvi_motu-proprio_20130116_fides-per-doctrinam.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Fides per doctrinam",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xvi/ministrorum-institutio-2013",
+    "title": "Lettera Apostolica in forma di \"Motu Proprio\" Ministrorum institutio con la quale è modificata la Costituzione apostolica Pastor bonus e si trasferisce la competenza sui seminari dalla “Congregazione per l’Educazione Cattolica” alla “Congregazione per il Clero”",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2013-01-16",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/motu_proprio/documents/hf_ben-xvi_motu-proprio_20130116_ministrorum-institutio.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ministrorum institutio",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xvi/sanctae-familiae-londiniensis-2013",
+    "title": "Sanctae Familiae Londiniensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2013-01-18",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20130128_sanctae-familiae-londiniensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sanctae Familiae Londiniensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/papal-bull-2013-01-19",
+    "title": "Sancti Vladimiri Magni in urbe Parisiensi pro Ucrainis ritus Byzantini",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2013-01-19",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20130119_sancti-vladimiri-in-urbe-parisiensi.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/cametanensis-2013",
+    "title": "Cametanensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2013-02-06",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20130206_cametanensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cametanensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/portus-leguizamensis-solanensis-2013",
+    "title": "Portus Leguizamensis-Solanensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2013-02-21",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20130221_portus-leguizamensis-solanensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Portus Leguizamensis-Solanensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/gambomensis-2013",
+    "title": "Gambomensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2013-02-22",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/la/apost_constitutions/documents/hf_ben-xvi_apc_20130222_gambomensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Gambomensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/motu-proprio-2013-02-22",
+    "title": "Lettera Apostolica data Motu Proprio su alcune modifiche alle norme relative all’elezione del Romano Pontefice",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2013-02-22",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/motu_proprio/documents/hf_ben-xvi_motu-proprio_20130222_normas-nonnullas.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  }
+]

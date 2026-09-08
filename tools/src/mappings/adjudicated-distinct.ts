@@ -1767,4 +1767,47 @@ export const ADJUDICATED_DISTINCT: Record<
     shelf2: 'apost_letters',
     note:
       'Europae Orientalis reorganizes the Pontifical Commission for Russia ("LETTERA APOSTOLICA \\"MOTU PROPRIO\\" EUROPAE ORIENTALIS ... consideriamo che non sono più validi i motivi per i quali fu eretta la Commissione per la Russia"). Mexicopoli in celebri raises a parish church in Mexico City to minor basilica ("TEMPLUM PAROECIALE SANCTI IOSEPH ET DOMINAE NOSTRAE A SACRO CORDE IESU, QUOD IN URBE MEXICOPOLI EXSTAT, AD BASILICAE MINORIS GRADUM DIGNITATEMQUE EVEHITUR"). Unrelated acts, coincidentally dated the same day.',
-  },};
+  },
+
+  // Task 17 (Benedict XVI, elected 19 April 2005). Verified by fetching both documents
+  // from vatican.va and comparing their subject matter.
+  'benedict-xvi|2013-02-22|gambomensis|lettera-apostolica-data-motu-proprio-su-alcune-modifiche-alle-norme-relative-all-elezione-del-romano-pontefice':
+    {
+      incipit1: 'Gambomensis',
+      shelf1: 'apost_constitutions',
+      incipit2:
+        'Lettera Apostolica data Motu Proprio su alcune modifiche alle norme relative all’elezione del Romano Pontefice',
+      shelf2: 'motu_proprio',
+      note:
+        'Gambomensis erects a new diocese in Congo, detached from the diocese of Ouando ' +
+        '("DETRACTO A DIOECESI OUANDOËNSI DISTRICTU CIVILI VULGO «PLATEAUX» NOVA DIOECESIS ' +
+        'IN CONGO CONSTITUITUR, GAMBOMENSIS APPELLANDA"). The motu proprio (its own URL ' +
+        'slug: normas-nonnullas) amends the norms governing a papal conclave, notably the ' +
+        'unanimity/two-thirds majority and start-of-conclave timing rules. Unrelated acts, ' +
+        'coincidentally dated the same day -- six days before Benedict XVI announced his ' +
+        'resignation.',
+    },
+  'benedict-xvi|2012-11-11|intima-ecclesiae-natura|lettera-apostolica-inviata-a-nome-del-santo-padre-dal-segretario-di-stato-in-occasione-dell-iscrizione-all-albo-dei-beati-di-madre-maria-luisa-prosperi-al-secolo-gertrude':
+    {
+      // Keyed on the resolved incipit 'Intima Ecclesiae natura' (not the full printed
+      // heading, which also carries the subtitle 'sul servizio della carità'): after
+      // Task 17's ' sul servizio della carità' GLOSS_CONNECTORS entry was added, this
+      // record's own incipit shortened to just the Latin phrase, so the key must match
+      // that resolved value (this pipeline keys ADJUDICATED_DISTINCT on item.incipit,
+      // not item.title -- see run.ts).
+      incipit1: 'Intima Ecclesiae natura',
+      shelf1: 'motu_proprio',
+      incipit2:
+        "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato in " +
+        "occasione dell'iscrizione all'albo dei Beati di Madre Maria Luisa Prosperi (al " +
+        'secolo: Gertrude)',
+      shelf2: 'apost_letters',
+      note:
+        'Intima Ecclesiae natura (its own URL slug: caritas) is the motu proprio laying ' +
+        'down norms for the Church\'s organized charitable activity ("Lettera Apostolica ' +
+        'in forma di \\"Motu Proprio\\" ... sul servizio della carità"). The apost_letters ' +
+        'item (its own URL slug: beata-maria-luisa-prosperi) is a letter sent in the ' +
+        "Pope's name by the Secretary of State announcing the beatification of Maria " +
+        'Luisa Prosperi. Unrelated acts, coincidentally dated the same day.',
+    },
+};
