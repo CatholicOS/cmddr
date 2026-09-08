@@ -55,4 +55,11 @@ describe('parseSourceDate', () => {
     // 17 August 1904.
     expect(parseSourceDate('17 augusto 1904')).toBe('1904-08-17');
   });
+
+  it("tolerates vatican.va's own 'giungo' typo for giugno (June)", () => {
+    // Printed verbatim on the Benedict XV apost_letters shelf as "Inter Suebiae (14
+    // giungo 1920)"; the item's own URL slug (..._19200614_inter-suebiae.html) confirms
+    // 14 June 1920.
+    expect(parseSourceDate('14 giungo 1920')).toBe('1920-06-14');
+  });
 });

@@ -8,6 +8,12 @@ const MONTHS: Record<string, number> = {
   // shelf. The URL slug for that same item -- .../hf_p-x_let_19040817_si-consentanea.html --
   // confirms 17 August 1904, so the intended month is unambiguous.
   augusto: 8,
+  // 'giungo' is not a real Italian word (the month is 'giugno'): it is vatican.va's own
+  // typo, printed verbatim as "Inter Suebiae (14 giungo 1920)" on the Benedict XV
+  // apost_letters shelf. The item's own URL slug --
+  // .../hf_ben-xv_apl_19200614_inter-suebiae.html -- confirms 14 June 1920, so the intended
+  // month is unambiguous.
+  giungo: 6,
 };
 
 const PAT = /(\d{1,2})\s*°?\s+([A-Za-zÀ-ÿ]+)\s+(\d{4})/;

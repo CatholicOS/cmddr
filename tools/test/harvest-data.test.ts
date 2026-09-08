@@ -379,14 +379,16 @@ describe('the Benedict XV corpus', () => {
     //     automatic);
     //   - 'Quod nobis' / 'Quod nobis in condendo' (briefs + apost_letters, proven by the
     //     shared vatican.va document-slug 'quod-nobis' -- pass 2, automatic);
-    //   - 'Bracarensis' (apost-constitutions) into 'Sedis huius' (bulls): proven by
-    //     comparing full texts -- both approve the same revised Bracarense Breviary for
-    //     the Archdiocese of Braga, addressed to the same archbishop, closing with the
-    //     same dating formula in Latin and Italian (DUPLICATE_MERGES);
-    //   - 'In Africam quisnam, sul martirio subito in Uganda...' (briefs) into 'In
-    //     Africam' (apost_letters): proven by comparing full texts -- both beatify the
-    //     same twenty-two Ugandan martyrs, closing with the same dating formula
-    //     (DUPLICATE_MERGES).
+    //   - 'Sedis huius' (bulls) into 'Bracarensis' (apost-constitutions, which wins
+    //     keepMoreSpecific once SHELF_SPECIFICITY ranks the hyphenated shelf beside
+    //     apost_constitutions -- Task 12 review): proven by comparing full texts -- both
+    //     approve the same revised Bracarense Breviary for the Archdiocese of Braga,
+    //     addressed to the same archbishop, closing with the same dating formula in Latin
+    //     and Italian (DUPLICATE_MERGES);
+    //   - 'In Africam quisnam' (briefs, its own incipit once the ', sul ' gloss connector
+    //     was added -- Task 12 review) into 'In Africam' (apost_letters): proven by
+    //     comparing full texts -- both beatify the same twenty-two Ugandan martyrs,
+    //     closing with the same dating formula (DUPLICATE_MERGES).
     // 68 - 5 = 63.
     expect(bxv).toHaveLength(63);
   });
@@ -438,14 +440,14 @@ describe('the Benedict XV corpus', () => {
     expect(byDate('1920-02-20').map((d) => d.incipit).sort())
       .toEqual(['Ordo a divo', 'Treiensis']);
 
-    // 1919-05-14: In Hac Tanta (encyclicals, the St Boniface centenary) vs Sedis huius
-    // (bulls, the Braga Breviary -- already carrying its apost-constitutions twin
-    // Bracarensis as alsoShelvedAs, per DUPLICATE_MERGES above).
+    // 1919-05-14: In Hac Tanta (encyclicals, the St Boniface centenary) vs Bracarensis
+    // (apost-constitutions, the Braga Breviary -- already carrying its bulls twin Sedis
+    // huius as alsoShelvedAs, per DUPLICATE_MERGES above).
     const g1919 = byDate('1919-05-14');
-    expect(g1919.map((d) => d.incipit).sort()).toEqual(['In Hac Tanta', 'Sedis huius']);
-    const sedisHuius = g1919.find((d) => d.incipit === 'Sedis huius')!;
-    expect(sedisHuius.aliases).toEqual(['Bracarensis']);
-    expect(sedisHuius.source!.alsoShelvedAs).toEqual(['apost-constitutions']);
+    expect(g1919.map((d) => d.incipit).sort()).toEqual(['Bracarensis', 'In Hac Tanta']);
+    const bracarensis = g1919.find((d) => d.incipit === 'Bracarensis')!;
+    expect(bracarensis.aliases).toEqual(['Sedis huius']);
+    expect(bracarensis.source!.alsoShelvedAs).toEqual(['bulls']);
 
     // 1920-09-15: Cum in honorem (apost_letters, a specific liturgical triduum for the
     // St Jerome centenary) vs Spiritus Paraclitus (encyclicals, the doctrinal encyclical
@@ -465,6 +467,25 @@ describe('the Benedict XV corpus', () => {
     expect(constitutions.every((d) => d.genre === 'papal-bull')).toBe(true);
     expect(constitutions.every((d) => d.characteristics?.includes('apostolic-constitution')))
       .toBe(true);
+  });
+
+  it('keeps the apostolic-constitution characteristic on a document merged across apost-constitutions and bulls (Task 12 review)', () => {
+    // A filter on source.shelf === 'apost-constitutions' (the test above) cannot see a
+    // regression here on its own: SHELF_SPECIFICITY must rank the hyphenated shelf beside
+    // 'apost_constitutions' (run.ts) for these two merged documents to keep
+    // characteristics: ['apostolic-constitution'] at all, since 'bulls' alone maps to no
+    // characteristics (genres.ts). Checked directly by incipit, independent of which
+    // shelf wins the merge.
+    for (const incipit of ['Incruentum Altaris', 'Bracarensis']) {
+      const d = bxv.find((doc) => doc.incipit === incipit)!;
+      expect(d, incipit).toBeDefined();
+      expect(d.genre, incipit).toBe('papal-bull');
+      expect(d.characteristics, incipit).toContain('apostolic-constitution');
+      expect(
+        [d.source!.shelf, ...(d.source!.alsoShelvedAs ?? [])].sort(),
+        incipit,
+      ).toEqual(['apost-constitutions', 'bulls']);
+    }
   });
 
   it('satisfies every invariant', () => {

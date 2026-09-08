@@ -48,35 +48,35 @@ export const DUPLICATE_MERGES: Record<string, { mergeIntoIncipit: string; note: 
   },
 
   // Task 12 (Benedict XV). Verified by fetching both records' full text from vatican.va.
-  'benedict-xv|apost-constitutions|bracarensis|1919-05-14': {
-    mergeIntoIncipit: 'Sedis huius',
+  // Keyed on the bulls record (the less specific shelf, once SHELF_SPECIFICITY correctly
+  // ranks the hyphenated 'apost-constitutions' shelf beside 'apost_constitutions' -- Task
+  // 12 review, run.ts): apost-constitutions now wins keepMoreSpecific, so the surviving
+  // incipit is 'Bracarensis', not 'Sedis huius' as in the original Task 12 harvest.
+  'benedict-xv|bulls|sedis-huius|1919-05-14': {
+    mergeIntoIncipit: 'Bracarensis',
     note:
-      "The apost-constitutions record (Latin, 'Bracarensis') and the bulls record " +
-      "(Italian, 'Sedis huius') are the same act: both approve the same revised edition of " +
+      "The bulls record (Italian, 'Sedis huius') and the apost-constitutions record " +
+      "(Latin, 'Bracarensis') are the same act: both approve the same revised edition of " +
       'the Bracarense Breviary for the Archdiocese of Braga, addressed to the same ' +
       "Archbishop (Emmanuele Vieira de Mattos), and close with the same dating formula in " +
-      "each language -- Latin 'Datum Romae apud sanctum Petrum, anno Incarnationis Dominicae " +
-      "millesimo nongentesimo decimo nono, pridie Idus Maii, die Octava Solemnitatis sancti " +
-      "Ioseph...Pontificatus Nostri anno quinto' and Italian 'Dato a Roma, presso San Pietro, " +
-      "l'anno dell'Incarnazione del Signore 1919, il 14 maggio, Ottava della Solennità di San " +
-      "Giuseppe...anno quinto del Nostro Pontificato' -- one act filed twice under its Latin " +
-      'and Italian titles.',
+      "each language -- Italian 'Dato a Roma, presso San Pietro, l'anno dell'Incarnazione " +
+      "del Signore 1919, il 14 maggio, Ottava della Solennità di San Giuseppe...anno quinto " +
+      "del Nostro Pontificato' and Latin 'Datum Romae apud sanctum Petrum, anno " +
+      "Incarnationis Dominicae millesimo nongentesimo decimo nono, pridie Idus Maii, die " +
+      "Octava Solemnitatis sancti Ioseph...Pontificatus Nostri anno quinto' -- one act filed " +
+      'twice under its Italian and Latin titles.',
   },
-  'benedict-xv|briefs|in-africam-quisnam-sul-martirio-subito-in-uganda-fra-il-1885-e-il-1887-dai-ventidue-negri-torturati-e-condannati-a-morte-in-quanto-cattolici|1920-06-06':
-    {
-      mergeIntoIncipit: 'In Africam',
-      note:
-        "The briefs record ('In Africam quisnam', full title continuing with the Italian " +
-        "gloss) and the apost_letters record ('In Africam') are the same act: both beatify " +
-        'the twenty-two Ugandan martyrs (Charles Lwanga, Matthew Kalemba Murumba and their ' +
-        "companions, executed 1885-1887 under King Muanga), both close 'Datum Romae apud " +
-        "sanctum Petrum sub annulo Piscatoris, die VI mensis iunii anno MCMXX, Pontificatus " +
-        "Nostri sexto' / 'Dato a Roma, presso San Pietro, sotto l'anello del Pescatore, il 6 " +
-        "giugno 1920, anno sesto del Nostro Pontificato' -- one act filed twice under the bare " +
-        "incipit and its fuller printed form. (The briefs record's own printed heading has no " +
-        "connector this parser's rule table recognises before the gloss ('In Africam quisnam, " +
-        "sul martirio...'), so it would otherwise be provisional; recording it here as a " +
-        "confirmed duplicate resolves it without adding a new gloss-connector rule that would " +
-        "also touch an already-minted id elsewhere in the corpus -- see task-12-report.md.)",
-    },
+  'benedict-xv|briefs|in-africam-quisnam|1920-06-06': {
+    mergeIntoIncipit: 'In Africam',
+    note:
+      "The briefs record ('In Africam quisnam', its own incipit -- see the ', sul ' " +
+      "gloss-connector added in the Task 12 review, incipit-rules.ts) and the apost_letters " +
+      "record ('In Africam') are the same act: both beatify the twenty-two Ugandan martyrs " +
+      '(Charles Lwanga, Matthew Kalemba Murumba and their companions, executed 1885-1887 ' +
+      "under King Muanga), both close 'Datum Romae apud sanctum Petrum sub annulo " +
+      "Piscatoris, die VI mensis iunii anno MCMXX, Pontificatus Nostri sexto' / 'Dato a Roma, " +
+      "presso San Pietro, sotto l'anello del Pescatore, il 6 giugno 1920, anno sesto del " +
+      "Nostro Pontificato' -- one act filed twice under the bare incipit and its fuller " +
+      'printed form.',
+  },
 };

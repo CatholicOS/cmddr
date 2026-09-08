@@ -26,11 +26,24 @@ const SHELF_SPECIFICITY = [
   'encyclicals', 'apost_constitutions', 'apost_letters', 'bulls',
   'briefs', 'motu_proprio', 'apost_exhortations', 'letters', 'speeches',
 ];
+/**
+ * Benedict XV hyphenates 'apost-constitutions' (spec §2.5) -- the same genre as
+ * 'apost_constitutions' (see genres.ts), so it must rank identically, not fall through to
+ * the least-specific default. Task 12 review: before this alias existed, the hyphenated
+ * shelf ranked as unrecognised (tied with `speeches`), so `bulls` silently outranked it in
+ * both of Benedict XV's apost-constitutions/bulls same-incipit-or-duplicate merges
+ * ('Incruentum Altaris' and 'Bracarensis'/'Sedis huius') -- losing
+ * `characteristics: ['apostolic-constitution']` on the surviving record even though the
+ * underlying act genuinely is an apostolic constitution. See the merged-record
+ * characteristic test in harvest-data.test.ts.
+ */
+const SHELF_ALIASES: Record<string, string> = { 'apost-constitutions': 'apost_constitutions' };
 const rank = (shelf: string | null) => {
   // A flat-era (null) shelf and an unrecognised one both fall through to the same
   // least-specific rank; indexOf's own -1-for-not-found already covers a null shelf
   // once it is fed the empty string, so no separate branch is needed for it.
-  const i = SHELF_SPECIFICITY.indexOf(shelf ?? '');
+  const canonical = SHELF_ALIASES[shelf ?? ''] ?? (shelf ?? '');
+  const i = SHELF_SPECIFICITY.indexOf(canonical);
   return i === -1 ? SHELF_SPECIFICITY.length : i;
 };
 

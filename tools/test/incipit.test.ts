@@ -280,6 +280,17 @@ describe('extractIncipit against Pius XI and Pius XII (Task 8)', () => {
       .toBe('I primitivi cemeteri');
   });
 
+  it('cuts at a comma-anchored ", sul " connector, recovering the bare incipit (Task 12 review)', () => {
+    // 'Motu Proprio Ad Musicae Sacrae, sul consalidamento del Pontificio Instituto di
+    // Musica Sacra' (pius-xi/motu_proprio, docSlug ad-musicae-sacrae) -- missed in Task 8,
+    // this previously minted the whole gloss into the id
+    // (mag:pius-xi/ad-musicae-sacrae-sul-consalidamento-del-pontificio-instituto-di-musica-sacra-1922).
+    // Re-minted to mag:pius-xi/ad-musicae-sacrae-1922 once this connector was added
+    // (task-12-report.md's identifier accounting).
+    expect(incipitOf('Motu Proprio Ad Musicae Sacrae, sul consalidamento del Pontificio Instituto di Musica Sacra'))
+      .toBe('Ad Musicae Sacrae');
+  });
+
   it('never changes a single Leo XIII or Pius X heading (no-op corpus regression check)', () => {
     // The 581-heading Leo XIII/Pius X corpus is byte-identical before and after every rule
     // added in this describe block (verified by hand against tools/fixtures/*.html during
@@ -290,5 +301,41 @@ describe('extractIncipit against Pius XI and Pius XII (Task 8)', () => {
       expect(extractIncipit(h)).toEqual({ title: h, incipit: h });
     }
     expect(incipitOf('Al Card. Pietro Respighi')).toBeNull();
+  });
+});
+
+describe('extractIncipit against Benedict XV (Task 12 review)', () => {
+  it('cuts at a bare " a tutti " address introduction with no comma or preposition-article', () => {
+    // 'Ubi Primum a tutti i cattolici del mondo' (benedict-xv/apost_exhortations,
+    // docSlug ubi-primum) -- confirmed genuine by the heading's own <i>Ubi Primum</i>
+    // markup. Without this connector, the whole gloss was wrongly kept as the incipit.
+    expect(incipitOf('Ubi Primum a tutti i cattolici del mondo')).toBe('Ubi Primum');
+  });
+
+  it('cuts at a trailing ", Lettera Enciclica" genre restatement the same way as ", Lettera Decretale"', () => {
+    // 'In Praeclara Summorum, Lettera Enciclica in occasione del VI centenario della morte
+    // di Dante Alighieri' (benedict-xv/encyclicals, docSlug in-praeclara-summorum) -- the
+    // Dante encyclical. Without this connector, the bare ' in occasione' connector already
+    // in the rule table still cuts, just later, wrongly keeping 'Lettera Enciclica' in the
+    // incipit.
+    expect(incipitOf('In Praeclara Summorum, Lettera Enciclica in occasione del VI centenario della morte di Dante Alighieri'))
+      .toBe('In Praeclara Summorum');
+  });
+
+  it('cuts at a comma-anchored ", sul " connector', () => {
+    // 'In Africam quisnam, sul martirio subito in Uganda fra il 1885 e il 1887 dai
+    // ventidue negri torturati e condannati a morte in quanto cattolici'
+    // (benedict-xv/briefs, docSlug africam-quisnam) -- confirmed genuine by fetching the
+    // document (task-12-report.md): its own text opens 'In Africam quisnam'.
+    expect(incipitOf('In Africam quisnam, sul martirio subito in Uganda fra il 1885 e il 1887 dai ventidue negri torturati e condannati a morte in quanto cattolici'))
+      .toBe('In Africam quisnam');
+  });
+
+  it("tolerates vatican.va's own 'giungo' date typo without baking the parenthetical into the incipit", () => {
+    // 'Inter Suebiae (14 giungo 1920)' (benedict-xv/apost_letters) -- the trailing-date
+    // strip in parseShelfIndex depends on parseSourceDate succeeding; once dates.ts
+    // recognises 'giungo' (see dates.test.ts), the heading text handed to extractIncipit
+    // is just 'Inter Suebiae', not the full string with the date parenthetical attached.
+    expect(incipitOf('Inter Suebiae')).toBe('Inter Suebiae');
   });
 });

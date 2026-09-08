@@ -369,17 +369,22 @@ export const ADJUDICATED_DISTINCT: Record<
       'with the diocese of San Severino under one bishop, Adam Borghini -- an unrelated ' +
       'diocesan reorganisation on the same day.',
   },
-  'benedict-xv|1919-05-14|in-hac-tanta|sedis-huius': {
-    incipit1: 'In Hac Tanta',
-    shelf1: 'encyclicals',
-    incipit2: 'Sedis huius',
-    shelf2: 'bulls',
+  'benedict-xv|1919-05-14|bracarensis|in-hac-tanta': {
+    // Keyed on 'Bracarensis', not 'Sedis huius' as in the original Task 12 harvest: once
+    // SHELF_SPECIFICITY ranks the hyphenated apost-constitutions shelf beside
+    // apost_constitutions (Task 12 review, run.ts), apost-constitutions correctly wins
+    // keepMoreSpecific over bulls, so the surviving merged record's own incipit is
+    // 'Bracarensis' (see DUPLICATE_MERGES).
+    incipit1: 'Bracarensis',
+    shelf1: 'apost-constitutions',
+    incipit2: 'In Hac Tanta',
+    shelf2: 'encyclicals',
     note:
-      "In Hac Tanta commemorates the twelve-hundredth anniversary of St Boniface's mission to " +
-      'Germany, addressed to Cardinal Félix von Hartmann, Archbishop of Cologne, and the ' +
-      'German bishops. Sedis huius (merged with its apost-constitutions twin Bracarensis -- ' +
-      'see DUPLICATE_MERGES) approves a revised Breviary for the Archdiocese of Braga, ' +
-      'Portugal -- an unrelated liturgical act in an unrelated country, coincidentally dated ' +
+      "Bracarensis (merged with its bulls twin Sedis huius -- see DUPLICATE_MERGES) " +
+      'approves a revised Breviary for the Archdiocese of Braga, Portugal. In Hac Tanta ' +
+      "commemorates the twelve-hundredth anniversary of St Boniface's mission to Germany, " +
+      'addressed to Cardinal Félix von Hartmann, Archbishop of Cologne, and the German ' +
+      'bishops -- an unrelated liturgical act in an unrelated country, coincidentally dated ' +
       'the same day.',
   },
   'benedict-xv|1920-09-15|cum-in-honorem|spiritus-paraclitus': {

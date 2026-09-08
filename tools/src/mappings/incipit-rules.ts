@@ -92,6 +92,23 @@ export const GLOSS_CONNECTORS: readonly string[] = [
                                                                                // Guarded by MIN_WORDS_BEFORE_CUT and by MID_ADDRESS_PATTERN in
                                                                                // incipit.ts (see there) against the three headings shaped the same
                                                                                // way but with NO incipit before the comma-introduced address.
+  ' a tutti ',                                                                // Benedict XV, apost_exhortations (Task 12 review): 'Ubi Primum a
+                                                                               // tutti i cattolici del mondo' -- no comma or preposition-with-article
+                                                                               // separates the incipit from its address, unlike every sibling above.
+                                                                               // Confirmed genuine by the heading's own <i>Ubi Primum</i> markup (the
+                                                                               // same typographic incipit signal tools/harvest/flat.ts already reads
+                                                                               // for the flat era) and by the URL slug (hf_ben-xv_exh_..._ubi-primum,
+                                                                               // not a slug of the full address). Kept as this specific two-word
+                                                                               // phrase rather than adopting <i> as a general shelf-era signal: a
+                                                                               // corpus-wide measurement (Task 12 review) found 57 headings across the
+                                                                               // fixtures carry an <i> span, and naively preferring it would silently
+                                                                               // overturn four already-evidenced null results (the MID_ADDRESS_PATTERN
+                                                                               // and NARRATIVE_OPENERS guards on 'Lettera Avendo Noi creduto, al Card.
+                                                                               // ...', 'Lettera Si compie oggi, al Card. ...', 'Lettera Con grande
+                                                                               // Nostra, al Card. ...', and 'Motu Proprio Di nostro moto proprio...')
+                                                                               // whose own URL slugs are addressee- or genre-based, proving those
+                                                                               // italicised spans are not incipits at all -- a real regression risk,
+                                                                               // not a hypothetical one.
   ' in occasione',                                                            // Pius XI, apost_constitutions (Task 8): 'Auspicantibus Nobis in
                                                                                // occasione del Giubileo Straordinario del 1929' -- confirmed genuine
                                                                                // by both its own <i>-italicised heading span and its URL slug
@@ -101,12 +118,31 @@ export const GLOSS_CONNECTORS: readonly string[] = [
   ', per ',                                                                   // Pius XI, letters (Task 8): 'Lettera Decretale Geminata Laetitia, per
                                                                                // la Canonizzazione di Don Giovanni Bosco' (docSlug geminata-laetitia).
                                                                                // Deleted for lack of evidence in Task 5's review; now evidenced.
+  ', sul ',                                                                   // Task 12 review: matches exactly two headings in the whole corpus --
+                                                                               // Benedict XV's 'In Africam quisnam, sul martirio subito in Uganda...'
+                                                                               // (docSlug africam-quisnam) and Pius XI's 'Motu Proprio Ad Musicae
+                                                                               // Sacrae, sul consalidamento del Pontificio Instituto di Musica Sacra'
+                                                                               // (docSlug ad-musicae-sacrae) -- both already re-minted on this
+                                                                               // evidence (see task-12-report.md's identifier accounting). The bare,
+                                                                               // comma-less ' sul ' also occurs twice more in the corpus (Pius XII's
+                                                                               // 'Sacra loca. - La chiesa...sul Monte Sion...' and 'Lettera a Padre
+                                                                               // Pietro Leturia...: sul valore...'), but both are already cut earlier
+                                                                               // by ' - ' and ': ' respectively, so the comma-anchored form here is
+                                                                               // the tighter, sufficient, and correct choice -- adding the bare form
+                                                                               // too would be unevidenced by any heading it would actually change.
   ', Lettera Decretale', ',Lettera Decretale',                                // Pius XI, apost_letters (Task 8): 'Christi nomen, Lettera Decretale
                                                                                // («Beatus Ioannes Baptista Maria Vianney» - 31 maggio 1925)' and
                                                                                // 'Suavis agitata,Lettera Decretale (19 maggio 1935)' (the source page's
                                                                                // own transcription drops the space after the comma for the second
                                                                                // one, hence both literal variants) -- the genre phrase trails the
                                                                                // incipit here instead of leading it.
+  ', Lettera Enciclica',                                                      // Benedict XV, encyclicals (Task 12 review): 'In Praeclara Summorum,
+                                                                               // Lettera Enciclica in occasione del VI centenario della morte di
+                                                                               // Dante Alighieri' (docSlug in-praeclara-summorum) -- the same trailing
+                                                                               // genre-restatement shape as ', Lettera Decretale' above, just a
+                                                                               // different genre word. Without this, the bare ' in occasione'
+                                                                               // connector already in this list still cuts, just later, wrongly
+                                                                               // keeping 'Lettera Enciclica' inside the incipit.
   ' che istituisce',                                                          // Pius XI, motu_proprio (Task 8, coordinator review): 'Motu Proprio I
                                                                                // primitivi cemeteri che istituisce il Pontificio Istituto di
                                                                                // Archeologia Cristiana', docSlug primitivi-cemeteri -- confirming 'I

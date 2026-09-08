@@ -1,6 +1,6 @@
 [
   {
-    "id": "mag:benedict-xv/ubi-primum-a-tutti-i-cattolici-del-mondo-1914",
+    "id": "mag:benedict-xv/ubi-primum-1914",
     "title": "Ubi Primum a tutti i cattolici del mondo",
     "idStatus": "minted",
     "genre": "apostolic-exhortation",
@@ -15,7 +15,7 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Ubi Primum a tutti i cattolici del mondo",
+    "incipit": "Ubi Primum",
     "sourceGenreLabel": "apost_exhortations"
   },
   {
@@ -111,19 +111,21 @@
     "issuerType": "pope",
     "date": "1915-08-10",
     "source": {
-      "url": "https://www.vatican.va/content/benedict-xv/it/bulls/documents/hf_ben-xv_bulls_19150810_incruentum-altaris.html",
-      "shelf": "bulls",
+      "url": "https://www.vatican.va/content/benedict-xv/it/apost-constitutions/documents/hf_ben-xv_bulls_19150810_incruentum-altaris.html",
+      "shelf": "apost-constitutions",
       "languages": [
-        "IT",
-        "LA"
+        "IT"
       ],
       "retrieved": "2026-09-07",
       "alsoShelvedAs": [
-        "apost-constitutions"
+        "bulls"
       ]
     },
     "incipit": "Incruentum Altaris",
-    "sourceGenreLabel": "bulls"
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost-constitutions"
   },
   {
     "id": "mag:benedict-xv/quandoquidem-in-iis-1915",
@@ -540,6 +542,34 @@
     "sourceGenreLabel": "encyclicals"
   },
   {
+    "id": "mag:benedict-xv/bracarensis-1919",
+    "title": "Bracarensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1919-05-14",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xv/la/apost-constitutions/documents/hf_ben-xv_apc_19190514_bracarensis.html",
+      "shelf": "apost-constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "bulls"
+      ]
+    },
+    "incipit": "Bracarensis",
+    "aliases": [
+      "Sedis huius"
+    ],
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost-constitutions"
+  },
+  {
     "id": "mag:benedict-xv/in-hac-tanta-1919",
     "title": "In Hac Tanta",
     "idStatus": "minted",
@@ -559,31 +589,6 @@
     },
     "incipit": "In Hac Tanta",
     "sourceGenreLabel": "encyclicals"
-  },
-  {
-    "id": "mag:benedict-xv/sedis-huius-1919",
-    "title": "Sedis huius",
-    "idStatus": "minted",
-    "genre": "papal-bull",
-    "issuerId": "rp:benedict-xv",
-    "issuerType": "pope",
-    "date": "1919-05-14",
-    "source": {
-      "url": "https://www.vatican.va/content/benedict-xv/it/bulls/documents/hf_ben-xv_bulls_19190514_sedis-huius.html",
-      "shelf": "bulls",
-      "languages": [
-        "IT"
-      ],
-      "retrieved": "2026-09-07",
-      "alsoShelvedAs": [
-        "apost-constitutions"
-      ]
-    },
-    "incipit": "Sedis huius",
-    "aliases": [
-      "Bracarensis"
-    ],
-    "sourceGenreLabel": "bulls"
   },
   {
     "id": "mag:benedict-xv/inter-potiores-1919",
@@ -969,7 +974,7 @@
     },
     "incipit": "In Africam",
     "aliases": [
-      "In Africam quisnam, sul martirio subito in Uganda fra il 1885 e il 1887 dai ventidue negri torturati e condannati a morte in quanto cattolici"
+      "In Africam quisnam"
     ],
     "sourceGenreLabel": "apost_letters"
   },
@@ -1012,8 +1017,8 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:benedict-xv/inter-suebiae-14-giungo-1920-1920",
-    "title": "Inter Suebiae (14 giungo 1920)",
+    "id": "mag:benedict-xv/inter-suebiae-1920",
+    "title": "Inter Suebiae",
     "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xv",
@@ -1027,7 +1032,7 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Inter Suebiae (14 giungo 1920)",
+    "incipit": "Inter Suebiae",
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -1217,7 +1222,7 @@
     "sourceGenreLabel": "encyclicals"
   },
   {
-    "id": "mag:benedict-xv/in-praeclara-summorum-lettera-enciclica-1921",
+    "id": "mag:benedict-xv/in-praeclara-summorum-1921",
     "title": "In Praeclara Summorum, Lettera Enciclica in occasione del VI centenario della morte di Dante Alighieri",
     "idStatus": "minted",
     "genre": "encyclical",
@@ -1235,7 +1240,7 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "In Praeclara Summorum, Lettera Enciclica",
+    "incipit": "In Praeclara Summorum",
     "sourceGenreLabel": "encyclicals"
   },
   {

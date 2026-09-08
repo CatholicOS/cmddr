@@ -229,7 +229,7 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:pius-xi/ad-musicae-sacrae-sul-consalidamento-del-pontificio-instituto-di-musica-sacra-1922",
+    "id": "mag:pius-xi/ad-musicae-sacrae-1922",
     "title": "Motu Proprio Ad Musicae Sacrae, sul consalidamento del Pontificio Instituto di Musica Sacra",
     "idStatus": "minted",
     "genre": "motu-proprio",
@@ -244,7 +244,7 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Ad Musicae Sacrae, sul consalidamento del Pontificio Instituto di Musica Sacra",
+    "incipit": "Ad Musicae Sacrae",
     "sourceGenreLabel": "motu_proprio"
   },
   {
