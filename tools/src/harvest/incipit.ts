@@ -176,9 +176,29 @@ export function extractIncipit(heading: string): HeadingParts {
 
   // The word ceiling catches a gloss the rules did not recognise. It applies only when
   // nothing was stripped and nothing was cut -- a result the rules did act on is trusted.
+  //
+  // That trust is unconditional: once a genre prefix strips OR any connector cuts, the
+  // ceiling never re-applies to what remains, even when the cut was only partial (a
+  // connector fired but left a still-long gloss behind). Review finding, 2026-09-07:
+  // four live headings mint this way with a genuinely over-long, gloss-contaminated
+  // incipit baked into their id (e.g. 'trasferimento-della-sezione-ordinaria-...', ten
+  // words). Narrowing `untouched` to `cut === -1` (dropping the `!stripped` half) was
+  // measured and rejected: it also nulls six documents with genuine short incipits whose
+  // heading happens to strip a genre prefix and nothing else (Patris corde, Misericordia
+  // Dei, Scripturae Sacrae affectus, Totum amoris est, Maestro della fede, Fidelis
+  // dispensator et prudens) into anonymous provisional ids -- a worse outcome than a long
+  // minted id, since those six lose their real incipit outright. So the ceiling stays
+  // exactly as scoped; instead, every minted incipit that would have failed the ceiling
+  // had it applied is surfaced below so it joins the curation queue instead of hiding.
   const untouched = !stripped && cut === -1;
   if (untouched && candidate.split(/\s+/).length > MAX_INCIPIT_WORDS) {
     return { title, incipit: null };
+  }
+  if (!untouched && candidate.split(/\s+/).length > MAX_INCIPIT_WORDS) {
+    console.warn(
+      `Minted incipit exceeds MAX_INCIPIT_WORDS (${MAX_INCIPIT_WORDS}) after a partial `
+      + `strip/cut: '${candidate}' from heading '${title}'`,
+    );
   }
 
   return { title, incipit: candidate };
