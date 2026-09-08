@@ -2135,6 +2135,25 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:john-xxiii/de-pontificio-consilio-ecclesiasticis-italiae-tabularis-curandis-1960",
+    "title": "De Pontificio Consilio Ecclesiasticis Italiae Tabularis curandis Motu proprio che stabilisce il riordinamento degli Archivi Ecclesiastici in Italia ed emana il nuovo Statuto",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-02-29",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/it/motu_proprio/documents/hf_j-xxiii_motu-proprio_19600229_pontificio-consilio.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "De Pontificio Consilio Ecclesiasticis Italiae Tabularis curandis",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
     "id": "mag:john-xxiii/diuturno-usu-1960",
     "title": "Diuturno usu, che costituisce l'Internunziatura Apostolica in Turchia",
     "idStatus": "minted",
@@ -2152,24 +2171,6 @@
     },
     "incipit": "Diuturno usu",
     "sourceGenreLabel": "apost_letters"
-  },
-  {
-    "id": "mag:john-xxiii/motu-proprio-1960-02-29",
-    "title": "De Pontificio Consilio Ecclesiasticis Italiae Tabularis curandis Motu proprio che stabilisce il riordinamento degli Archivi Ecclesiastici in Italia ed emana il nuovo Statuto",
-    "idStatus": "provisional",
-    "genre": "motu-proprio",
-    "issuerId": "rp:john-xxiii",
-    "issuerType": "pope",
-    "date": "1960-02-29",
-    "source": {
-      "url": "https://www.vatican.va/content/john-xxiii/it/motu_proprio/documents/hf_j-xxiii_motu-proprio_19600229_pontificio-consilio.html",
-      "shelf": "motu_proprio",
-      "languages": [
-        "IT"
-      ],
-      "retrieved": "2026-09-07"
-    },
-    "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:john-xxiii/apostolici-muneris-1960",

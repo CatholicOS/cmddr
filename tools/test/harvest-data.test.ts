@@ -552,10 +552,16 @@ describe('the John XXIII corpus', () => {
     // so fixing it did not change this count): 35 -> 33. The Task 13 review then
     // authorised two further, measured rule-table fixes: eleven more via
     // CUT_GUARD_EXEMPT (see below) and one via MID_ADDRESS_MIN_WORDS (Quod Dilectum, see
-    // below): 33 - 11 - 1 = 21. The remaining 21 are correct: each heading genuinely
-    // prints no incipit (see task-13-report.md for the ones investigated and
+    // below): 33 - 11 - 1 = 21. Final review (2026-09-07): making GLOSS_CONNECTORS
+    // case-insensitive (see incipit.ts's glossCut) rescued one more -- 'De Pontificio
+    // Consilio Ecclesiasticis Italiae Tabularis curandis' was left fully provisional
+    // (no incipit at all) because the listed connector ' Motu Proprio che ' only matched
+    // its own capitalisation, not this heading's lower-case 'Motu proprio che'; fixing
+    // the asymmetry now cuts it correctly, confirmed genuine by its own URL slug
+    // 'pontificio-consilio': 21 -> 20. The remaining 20 are correct: each heading
+    // genuinely prints no incipit (see task-13-report.md for the ones investigated and
     // deliberately left this way, e.g. the hyphenated two-toponym shape).
-    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(21);
+    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(20);
   });
 
   it('reads the year-partitioned shelves, whose aggregate index carries no items', () => {
@@ -618,9 +624,7 @@ describe('the John XXIII corpus', () => {
       'Qui servatorem',
     ]);
     expect(byDate('1960-02-29').map((d) => d.incipit ?? d.title).sort()).toEqual([
-      'De Pontificio Consilio Ecclesiasticis Italiae Tabularis curandis Motu proprio che '
-        + 'stabilisce il riordinamento degli Archivi Ecclesiastici in Italia ed emana il '
-        + 'nuovo Statuto',
+      'De Pontificio Consilio Ecclesiasticis Italiae Tabularis curandis',
       'Diuturno usu',
     ]);
   });

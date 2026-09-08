@@ -113,12 +113,23 @@ function quotedOpening(s: string): string | null {
  * MIN_WORDS_BEFORE_CUT's evidence in incipit-rules.ts) -- unless the earliest connector is
  * one of CUT_GUARD_EXEMPT, in which case the cut is trusted regardless of word count (see
  * CUT_GUARD_EXEMPT's own evidence).
+ *
+ * Matched case-insensitively (review finding, 2026-09-07): GENRE_PREFIXES was always
+ * matched case-insensitively, but GLOSS_CONNECTORS was matched via plain `s.indexOf(c)`
+ * -- an undocumented asymmetry that cost one live id ('Iam Pridem, Con la quale...',
+ * capital C after the comma, missed ', con la quale'). Measured across the full corpus
+ * before adopting: 14 headings contain a case-variant of a listed connector, 13 of which
+ * are already rescued by an earlier-firing cut and so are unaffected either way; only
+ * 'Iam Pridem' changes id. `bestConnector` is still recorded in its original
+ * GLOSS_CONNECTORS casing (not lower-cased) so the CUT_GUARD_EXEMPT set lookup below
+ * still matches by identity.
  */
 function glossCut(s: string): number {
+  const lower = s.toLowerCase();
   let best = -1;
   let bestConnector: string | null = null;
   for (const c of GLOSS_CONNECTORS) {
-    const i = s.indexOf(c);
+    const i = lower.indexOf(c.toLowerCase());
     if (i > 0 && (best === -1 || i < best)) { best = i; bestConnector = c; }
   }
   if (best === -1) return -1;
