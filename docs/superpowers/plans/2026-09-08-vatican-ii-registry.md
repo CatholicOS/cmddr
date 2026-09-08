@@ -37,7 +37,11 @@ Pure data plus one map. No parsing, no I/O.
 **Interfaces:**
 - Consumes: `GenreMapping` from `tools/src/mappings/genres.ts`.
 - Produces:
-  - `interface CouncilSource { pageSlug: string; issuerId: string; promulgatedBy: string; documents: Record<string, CouncilDocument> }`
+  - `interface CouncilSource { pageSlug: string; issuerId: string; promulgatedBy: string; retrieved: string; documents: Record<string, CouncilDocument> }`
+    - `retrieved` (`'2026-09-08'`) was added during execution, not planned here: `harvest/run.ts`
+      stamps one `FIXTURES_RETRIEVED` constant recording when the *pope* fixtures were fetched
+      (2026-09-07), and this council's fixture is fetched a day later. See spec §4.1. Task 4
+      consumes it through `retrievedFor(item)`; Tasks 2 and 3 ignore it.
   - `interface CouncilDocument { section: CouncilSection; sourceGenreLabel: string; descriptiveTitle?: 'dogmatic' | 'pastoral'; heading: string; printedDate: string }`
   - `type CouncilSection = 'Costituzioni' | 'Dichiarazioni' | 'Decreti'`
   - `const COUNCILS: readonly CouncilSource[]`
@@ -349,6 +353,8 @@ export const COUNCILS: readonly CouncilSource[] = [
     pageSlug: 'ii_vatican_council',
     issuerId: 'oec:vatican-ii',
     promulgatedBy: 'rp:paul-vi',
+    // Added during execution — see the Task 1 interface note above and spec §4.1.
+    retrieved: '2026-09-08',
     documents: VATICAN_II_DOCUMENTS,
   },
 ];
@@ -1087,21 +1093,21 @@ for (const council of COUNCILS) {
 
 In `tools/src/render/indexMd.ts`, in the template literal's Coverage list, replace this bullet:
 
-```
+```text
 - **Year-partitioned \`letters\` shelves** — Benedict XV, and Paul VI onward. The \`letters\` shelf is
   harvested only where the aggregate index carries its items.
 ```
 
 with:
 
-```
+```text
 - **Year-partitioned \`letters\` shelves** — John XXIII, Benedict XV, and Paul VI onward. The
   \`letters\` shelf is harvested only where the aggregate index carries its items.
 ```
 
 And add this bullet immediately after the bishops'-conferences bullet:
 
-```
+```text
 - **Councils before 1870.** vatican.va's council archive publishes only Vatican I and Vatican II;
   the other nineteen ecumenical councils have no source there, so a registry holding two councils
   is not a registry of the councils.

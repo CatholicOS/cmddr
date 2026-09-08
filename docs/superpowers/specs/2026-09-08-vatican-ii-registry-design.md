@@ -84,7 +84,7 @@ The index's three section headings are plural bucket names. The label the regist
 `sourceGenreLabel` is the one the document itself prints, after
 `PAOLO VESCOVO SERVO DEI SERVI DI DIO / UNITAMENTE AI PADRI DEL SACRO CONCILIO / A PERPETUA MEMORIA`:
 
-```
+```text
 COSTITUZIONE DOGMATICA SULLA CHIESA                        LUMEN GENTIUM
 COSTITUZIONE PASTORALE SULLA CHIESA NEL MONDO CONTEMPORANEO GAUDIUM ET SPES
 COSTITUZIONE SULLA SACRA LITURGIA                           SACROSANCTUM CONCILIUM
@@ -183,12 +183,31 @@ export interface CouncilSource {
   issuerId: string;
   /** The pope who promulgated every document of this council (§2.5). */
   promulgatedBy: string;
+  /** The date this council's own fixture was fetched from vatican.va. */
+  retrieved: string;
+  /** The council's closed document set, keyed by incipit slug (§4.2). */
+  documents: Record<string, CouncilDocument>;
 }
 
 export const COUNCILS: readonly CouncilSource[] = [
-  { pageSlug: 'ii_vatican_council', issuerId: 'oec:vatican-ii', promulgatedBy: 'rp:paul-vi' },
+  {
+    pageSlug: 'ii_vatican_council',
+    issuerId: 'oec:vatican-ii',
+    promulgatedBy: 'rp:paul-vi',
+    retrieved: '2026-09-08',
+    documents: VATICAN_II_DOCUMENTS,
+  },
 ];
 ```
+
+`retrieved` exists because `harvest/run.ts` stamps every record with one `FIXTURES_RETRIEVED`
+constant, recording when the *pope* fixtures were fetched — 2026-09-07. This council's fixture is
+fetched a day later. Bumping the constant would restamp all 4269 existing records with a date they
+were not refetched on; leaving it alone would stamp these sixteen with a date before their own
+fixture existed. Both are false provenance, in a registry whose whole discipline is provenance. So
+the date is resolved per item: `retrievedFor(item)` returns `process.env.RETRIEVED` ??
+this council's `retrieved` ?? `FIXTURES_RETRIEVED`, and `fetch-fixtures.sh` says at the point of
+use that a council's date lives on its `COUNCILS` row, not in the constant.
 
 `VATICAN_SLUG_TO_ISSUER` gains `'ii_vatican_council': 'oec:vatican-ii'`, so `toDocument`'s
 existing `pageIssuer` lookup resolves without a special case.
@@ -318,7 +337,7 @@ Existing invariants that these records must satisfy, and which the tests assert:
 Sixteen minted identifiers, no provisionals, no collisions — no two share an incipit slug within a
 year, so every one takes the year-only suffix:
 
-```
+```text
 mag:vatican-ii/sacrosanctum-concilium-1963   mag:vatican-ii/inter-mirifica-1963
 mag:vatican-ii/lumen-gentium-1964            mag:vatican-ii/orientalium-ecclesiarum-1964
 mag:vatican-ii/unitatis-redintegratio-1964   mag:vatican-ii/christus-dominus-1965
