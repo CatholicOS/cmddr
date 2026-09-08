@@ -944,3 +944,152 @@ describe('the John Paul I corpus', () => {
     expect(load('paul-vi')).toHaveLength(688);
   });
 });
+
+describe('the John Paul II corpus', () => {
+  const docs = load('john-paul-ii');
+
+  it('holds every formal-shelf document', () => {
+    // 1804 raw items across six shelves: 14 encyclicals + 2 bulls + 613 apost_constitutions
+    // + 15 apost_exhortations + 31 motu_proprio (five aggregate-page fixtures, each
+    // matching the task brief's expected count exactly) + 1129 apost_letters items read
+    // through the 28 year pages 1978-2005 (the aggregate apost_letters page itself carries
+    // no items of its own -- resolveShelfPages confirms it is year-partitioned). Three
+    // merge away: two same-shelf duplicate listings ('Messaggio in occasione del 50°
+    // anniversario dell'inizio della II Guerra Mondiale', 1989-08-27; 'Messaggio ai
+    // Vescovi sulla situazione civile e politica del Libano', 1989-09-07 -- each printed
+    // twice on its own year's apost_letters page under the same incipit and date, pass 1
+    // automatic) and one genuine cross-shelf duplicate ('Socialium Scientiarum',
+    // 1994-01-01, filed on both apost_letters and motu_proprio, pass 1 automatic).
+    // 1804 - 3 = 1801.
+    expect(docs).toHaveLength(1801);
+  });
+
+  it('files them all under the right issuer', () => {
+    expect(docs.every((d) => d.issuerId === 'rp:john-paul-ii')).toBe(true);
+    expect(docs.every((d) => d.id.startsWith('mag:john-paul-ii/'))).toBe(true);
+  });
+
+  it('gives every document a title', () => {
+    expect(docs.every((d) => typeof d.title === 'string' && d.title.length > 0)).toBe(true);
+  });
+
+  it('reads the 28 year pages of the apostolic letters shelf', () => {
+    // apost_letters is year-partitioned 1978-2005 (spec §2.3); resolveShelfPages reads the
+    // aggregate page's own year links rather than any items on it (it carries none).
+    const apl = docs.filter((d) => d.source?.shelf === 'apost_letters');
+    expect(apl.length).toBeGreaterThan(100);
+    expect(apl.some((d) => d.date.startsWith('1994'))).toBe(true);
+    // Every one of the 28 years is actually represented, not merely the first and last.
+    const years = new Set(apl.map((d) => d.date.slice(0, 4)));
+    for (let y = 1978; y <= 2005; y++) expect(years.has(String(y)), String(y)).toBe(true);
+  });
+
+  it('keeps the named apostolic constitutions minted and distinct from the erections', () => {
+    for (const incipit of ['Sapientia Christiana', 'Ex Corde Ecclesiae']) {
+      const d = docs.find((x) => x.incipit === incipit);
+      expect(d, incipit).toBeDefined();
+      expect(d!.idStatus).toBe('minted');
+    }
+  });
+
+  it('recovers a same-date gloss folded into the same parenthetical as the date, distinguishing a batch of same-incipit letters', () => {
+    // 'Christifideles dioecesis (Sancta Victoria - 7 ottobre 1993)' is one of seven
+    // apost_letters headings sharing the bare incipit 'Christifideles dioecesis' and the
+    // date 7 October 1993, each crowning or confirming a different Marian image or patron
+    // saint for a different Polish diocese, distinguished only by a gloss packed into the
+    // SAME parenthetical as the date (unlike the two-separate-parens shape already handled
+    // for Pius XII's 'Niangaraensis (Dorumaensis)(24 febbraio 1958)'). Before the shelf.ts
+    // fix, the gloss was discarded along with the rest of the date parenthetical, and all
+    // seven collapsed into one record under the pass-1 merge key; 'Fideles ecclesialis'
+    // (six letters, same date) and 'Sancta Christi' (two letters, 4 August 1997) are the
+    // same shape. All three groups now survive as fully distinct records.
+    const cd = docs.filter(
+      (d) => (d.incipit ?? '').startsWith('Christifideles dioecesis') && d.date === '1993-10-07',
+    );
+    expect(cd).toHaveLength(7);
+    expect(new Set(cd.map((d) => d.id)).size).toBe(7);
+    const fe = docs.filter(
+      (d) => (d.incipit ?? '').startsWith('Fideles ecclesialis') && d.date === '1993-10-07',
+    );
+    expect(fe).toHaveLength(6);
+    const sc = docs.filter((d) => (d.incipit ?? '').startsWith('Sancta Christi'));
+    expect(sc).toHaveLength(2);
+    // An eighth, unrelated 'Christifideles dioecesis' letter (28 January 1995), and two
+    // more unrelated 'Fideles ecclesialis' letters (17 March and 21 September 1994), are
+    // separate acts correctly kept distinct by date alone -- not part of either batch.
+    expect(docs.filter((d) => (d.incipit ?? '').startsWith('Christifideles dioecesis')))
+      .toHaveLength(8);
+    expect(docs.filter((d) => (d.incipit ?? '').startsWith('Fideles ecclesialis')))
+      .toHaveLength(8);
+  });
+
+  it('flags the diocese erections as candidates without tagging any of them', () => {
+    // 613 apost_constitutions items, the large majority filed under a bare Latin toponym
+    // with no textual marker -- confirming CIRCUMSCRIPTION_ERECTIONS entries for them is
+    // Task 20's work, not this one's (see pontiffs.ts). Documents with real names must not
+    // be flagged.
+    expect(docs.every((d) => d.keywords === undefined)).toBe(true);
+  });
+
+  it('omits the incipit exactly when the id is provisional', () => {
+    for (const d of docs) {
+      expect('incipit' in d, d.id).toBe(d.idStatus === 'minted');
+    }
+    // 29 of 1801 (1.6%) carry no recoverable incipit -- every one checked individually
+    // (not sampled) against its own fetched vatican.va page: five are Latin canonization/
+    // beatification decrees whose entire printed heading ('Beato Crispino a Viterbio,
+    // Laico professo O.F.M. Capuccinorum, Sanctorum honores decernuntur') is itself the
+    // formal proclamation clause, with the document's own prose opening on an unrelated
+    // scriptural quotation rather than repeating the heading -- genuinely no incipit to
+    // recover, not a parser gap. The rest are Italian narrative titles correctly caught by
+    // GENRE_PREFIXES ('Lettera Apostolica', 'Messaggio', 'Epistola Apostolica', 'Motu
+    // proprio') stripping to a lower-case residue, or by the MAX_INCIPIT_WORDS ceiling once
+    // a disambiguating gloss is folded in (see the previous test) and pushes a heading
+    // over eight words. See task-16-report.md for the full per-item review.
+    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(29);
+  });
+
+  it('satisfies every invariant', () => {
+    expect(checkDocuments(docs, genres, keywords)).toEqual([]);
+  });
+
+  it('emits no unadjudicated printed/slug date-mismatch or unmerged same-date warnings', () => {
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    let calls: unknown[][];
+    try {
+      for (const shelf of shelvesFor('john-paul-ii')) {
+        const index = readFileSync(`tools/fixtures/john-paul-ii-${shelf}.html`, 'utf8');
+        if (shelf === 'apost_letters') {
+          for (let y = 1978; y <= 2005; y++) {
+            parseShelfIndex(
+              readFileSync(`tools/fixtures/john-paul-ii-apost_letters-${y}.html`, 'utf8'),
+              'john-paul-ii', shelf,
+            );
+          }
+        } else {
+          parseShelfIndex(index, 'john-paul-ii', shelf);
+        }
+      }
+    } finally {
+      calls = warnSpy.mock.calls;
+      warnSpy.mockRestore();
+    }
+    const mismatches = calls.filter(([msg]) => String(msg).includes('date mismatch'));
+    expect(mismatches).toEqual([]);
+  });
+
+  it('records the fixture retrieval date for every document', () => {
+    expect(docs.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
+  });
+
+  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 177 John XXIII, 688 Paul VI, and 7 John Paul I records untouched', () => {
+    expect(all).toHaveLength(383);
+    expect(load('pius-x')).toHaveLength(306);
+    expect(load('pius-xi')).toHaveLength(158);
+    expect(load('pius-xii')).toHaveLength(253);
+    expect(load('benedict-xv')).toHaveLength(63);
+    expect(load('john-xxiii')).toHaveLength(177);
+    expect(load('paul-vi')).toHaveLength(688);
+    expect(load('john-paul-i')).toHaveLength(7);
+  });
+});

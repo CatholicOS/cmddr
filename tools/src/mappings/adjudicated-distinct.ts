@@ -1247,4 +1247,524 @@ export const ADJUDICATED_DISTINCT: Record<
       'basilica. Unrelated acts (a legation to Ecuador vs. a basilica elevation in Piacenza), ' +
       'coincidentally dated the same day.',
   },
-};
+
+  // Task 16 (John Paul II, elected 16 October 1978). The volume of diocese erections
+  // filed under a bare Latin toponym on the apost_constitutions shelf (613 items) means
+  // this pontificate's own routine business -- an erection, a basilica-minor grant, a
+  // beatification, a patron confirmation -- was frequently signed the same day as an
+  // unrelated act on another shelf. Every entry below is verified against the actual
+  // document fetched from vatican.va (Latin apost_constitutions/apost_letters text, or
+  // Italian for apost_exhortations/motu_proprio), quoting its own heading/subtitle clause,
+  // which already names the distinct territory, dedication or subject of each act.
+  'john-paul-ii|2003-06-28|ecclesia-in-europa|pasigina': {
+    incipit1: 'Ecclesia in Europa',
+    shelf1: 'apost_exhortations',
+    incipit2: 'Pasigina',
+    shelf2: 'apost_constitutions',
+    note:
+      'Ecclesia in Europa is the post-synodal exhortation on the Church in Europe ("ESORTAZIONE APOSTOLICA POST-SINODALE ECCLESIA IN EUROPA ... SU GESÙ CRISTO, VIVENTE NELLA SUA CHIESA, SORGENTE DI SPERANZA PER L\'EUROPA"). Pasigina erects the diocese of Pasig, Philippines ("IN PHILIPPINIS NOVA DIOECESIS PASIGINA APPELLANDA ERIGITUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|2003-06-28|ecclesia-in-europa|kalookana': {
+    incipit1: 'Ecclesia in Europa',
+    shelf1: 'apost_exhortations',
+    incipit2: 'Kalookana',
+    shelf2: 'apost_constitutions',
+    note:
+      'Ecclesia in Europa is the post-synodal exhortation on the Church in Europe ("ESORTAZIONE APOSTOLICA POST-SINODALE ECCLESIA IN EUROPA ... SU GESÙ CRISTO, VIVENTE NELLA SUA CHIESA, SORGENTE DI SPERANZA PER L\'EUROPA"). Kalookana erects the diocese of Caloocan, Philippines ("IN PHILIPPINIS NOVA CONDITUR DIOECESIS KALOOKANA"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|2003-06-28|cubaoensis|ecclesia-in-europa': {
+    incipit1: 'Cubaoënsis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Ecclesia in Europa',
+    shelf2: 'apost_exhortations',
+    note:
+      'Cubaoënsis erects the diocese of Cubao, Philippines ("IN PHILIPPINIS NOVA CONDITUR DIOECESIS CUBAOËNSIS"). Ecclesia in Europa is the post-synodal exhortation on the Church in Europe ("ESORTAZIONE APOSTOLICA POST-SINODALE ECCLESIA IN EUROPA ... SU GESÙ CRISTO, VIVENTE NELLA SUA CHIESA, SORGENTE DI SPERANZA PER L\'EUROPA"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1998-12-30|inter-sacras-sanctae-mariae-a-victoria|parvauratana': {
+    incipit1: 'Inter sacras («Sanctae Mariae a Victoria»)',
+    shelf1: 'apost_letters',
+    incipit2: 'Parvauratana',
+    shelf2: 'apost_constitutions',
+    note:
+      'Inter sacras raises the parish church of Santa Maria a Victoria in San Vito dei Normanni (archdiocese of Brindisi-Ostuni) to minor basilica ("TEMPLUM PAROECIALE SANCTAE MARIAE A VICTORIA ... AD BASILICAE MINORIS GRADUM DIGNITATEMQUE EVEHITUR"). Parvauratana erects a new diocese in Brazil ("IN BRASILIA NOVA CONDITUR DIOECESIS PARVAURATANA"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1998-01-24|guantanamen-baracoen|praeclarum-hoc': {
+    incipit1: 'Guantanamen. - Baracoën',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Praeclarum hoc',
+    shelf2: 'apost_letters',
+    note:
+      'Guantanamen. - Baracoën erects the diocese of Guantánamo-Baracoa, Cuba ("IN CUBA NOVA CONDITUR DIOECESIS GUANTANAMENSIS-BARACOËNSIS"). Praeclarum hoc raises St Joseph\'s parish church in the archdiocese of Rosario, Argentina, to minor basilica ("PAROECIALE TEMPLUM SANCTO IOSEPH DICATUM ... AD DIGNITATEM BASILICAE MINORIS ATTOLLITUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1996-07-05|bauchianus|silesiae-antiquissima': {
+    incipit1: 'Bauchianus',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Silesiae antiquissima',
+    shelf2: 'apost_letters',
+    note:
+      'Bauchianus erects the Apostolic Vicariate of Bauchi, Nigeria ("VICARIATUS APOSTOLICUS CONDITUR IN NIGERIAE FINIBUS, BAUCHIANUS APPELLANDUS"). Silesiae antiquissima crowns the Marian image venerated at the shrine of Krzeszów, Poland ("IMAGO BEATAE MARIAE VIRGINIS GRATIARUM ... IN SANCTUARIO LOCI V.D. KRZESZÓW PIE COLITUR, PRETIOSO DIADEMATE REDIMIRI SINITUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1996-03-27|gaudio-exultamus|palmensis-in-brasilia': {
+    incipit1: 'Gaudio exultamus',
+    shelf1: 'apost_letters',
+    incipit2: 'Palmensis in Brasilia',
+    shelf2: 'apost_constitutions',
+    note:
+      'Gaudio exultamus records the pope\'s own 1995 crowning of the Marian image of Svatý Kopeček in the archdiocese of Olomouc, Czech Republic ("MEMORIAE PRODITUR SUMMUM PONTIFICEM ... CORONAVISSE BEATAE MARIAE VIRGINIS ... IMAGINEM"). Palmensis in Brasilia erects the metropolitan archdiocese and ecclesiastical province of Palmas, Brazil ("NOVA CONDITUR ARCHIDIOECESIS METROPOLITANA PALMENSIS IN BRASILIA SIMULQUE NOVA CONSTITUITUR PROVINCIA ECCLESIASTICA"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1996-02-02|caeci-abulensis|maternum-deiparae': {
+    incipit1: 'Caeci Abulensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Maternum Deiparae',
+    shelf2: 'apost_letters',
+    note:
+      'Caeci Abulensis erects the diocese of Ciego de Ávila, Cuba, from the territory of Camagüey ("A DIOECESI CAMAGUEYENSI QUODAM DISTRACTO TERRITORIO, NOVA CONDITUR CAECI ABULENSIS APPELLANDA"). Maternum Deiparae raises the cathedral of the Assumption of the diocese of Pinsk, Belarus, to minor basilica ("ECCLESIAE CATHEDRALI ASSUMPTIONIS BEATAE VIRGINIS MARIAE IN DIOECESI PINSKENSI LATINORUM BASILICAE MINORIS DIGNITAS TRIBUITUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1994-10-24|hamburgensis|imago-illa-loco-myszkow-mrzyglod': {
+    incipit1: 'Hamburgensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Imago illa (Loco Myszkòw-Mrzygłòd)',
+    shelf2: 'apost_letters',
+    note:
+      'Hamburgensis establishes the new ecclesiastical province of Hamburg, Germany ("NOVA PROVINCIA ECCLESIASTICA HAMBURGENSIS CONSTITUITUR"). Imago illa crowns the Marian image at Myszków-Mrzygłód in the archdiocese of Częstochowa, Poland ("IMAGO BEATAE MARIAE VIRGINIS ... LOCO MYSZKÒW-MRZYGŁÒD IN ARCHIDIOECESI CZESTOCHOVIENSI, PRETIOSO DIADEMATE REDIMIRI SINITUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1994-06-20|altana|hoc-anno': {
+    incipit1: 'Altana',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Hoc anno',
+    shelf2: 'apost_letters',
+    note:
+      'Altana erects the diocese of Alta, Bolivia ("IN BOLIVIA NOVA CONDITUR DIOECESIS ALTANA"). Hoc anno raises St Patrick\'s church, Fremantle, in the archdiocese of Perth, Australia, to minor basilica ("TEMPLUM SANCTO PATRICIO EPISCOPO DICATUM, QUOD INTRA FINES ARCHIDIOECESIS PERTHENSIS EXSTAT, AD GRADUM BASILICAE MINORIS EVEHITUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1994-03-26|calabarensis|sanctus-stanislaus': {
+    incipit1: 'Calabarensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Sanctus Stanislaus',
+    shelf2: 'apost_letters',
+    note:
+      'Calabarensis establishes the ecclesiastical province of Calabar, Nigeria ("IN NIGERIA NOVA PROVINCIA ECCLESIASTICA CALABARENSIS CONSTITUITUR"). Sanctus Stanislaus confirms St Stanislaus, bishop and martyr, as heavenly patron of the city of Siedlce, Poland ("SANCTUS STANISLAUS, EPISCOPUS ET MARTYR, PATRONUS CAELESTIS URBIS SIEDLECENSIS CONFIRMATUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1994-03-26|overriensis|sanctus-stanislaus': {
+    incipit1: 'Overriensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Sanctus Stanislaus',
+    shelf2: 'apost_letters',
+    note:
+      'Overriensis establishes a new ecclesiastical province in Nigeria ("OVERRIENSIS * IN NIGERIAE FINIBUS NOVA PROVINCIA ECCLESIASTICA"). Sanctus Stanislaus confirms St Stanislaus, bishop and martyr, as heavenly patron of the city of Siedlce, Poland ("SANCTUS STANISLAUS, EPISCOPUS ET MARTYR, PATRONUS CAELESTIS URBIS SIEDLECENSIS CONFIRMATUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1994-03-26|sanctus-stanislaus|urbis-beninensis': {
+    incipit1: 'Sanctus Stanislaus',
+    shelf1: 'apost_letters',
+    incipit2: 'Urbis Beninensis',
+    shelf2: 'apost_constitutions',
+    note:
+      'Sanctus Stanislaus confirms St Stanislaus, bishop and martyr, as heavenly patron of the city of Siedlce, Poland ("SANCTUS STANISLAUS, EPISCOPUS ET MARTYR, PATRONUS CAELESTIS URBIS SIEDLECENSIS CONFIRMATUR"). Urbis Beninensis establishes the ecclesiastical province of Benin City, Nigeria ("PROVINCIA ECCLESIATICA IN NIGERIA CONDITUR URBIS BENINENSIS"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1994-03-26|iosensis|sanctus-stanislaus': {
+    incipit1: 'Iosensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Sanctus Stanislaus',
+    shelf2: 'apost_letters',
+    note:
+      'Iosensis establishes the ecclesiastical province of Jos, Nigeria ("NOVA CONSTITUITUR PROVINCIA ECCLESIASTICA IN NIGERIA, IOSENSIS APPELLANDA"). Sanctus Stanislaus confirms St Stanislaus, bishop and martyr, as heavenly patron of the city of Siedlce, Poland ("SANCTUS STANISLAUS, EPISCOPUS ET MARTYR, PATRONUS CAELESTIS URBIS SIEDLECENSIS CONFIRMATUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1994-03-26|abugensis|sanctus-stanislaus': {
+    incipit1: 'Abugensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Sanctus Stanislaus',
+    shelf2: 'apost_letters',
+    note:
+      'Abugensis establishes the ecclesiastical province of Abuja, Nigeria ("IN NIGERIA NOVA PROVINCIA ECCLESIASTICA ABUGENSIS CONSTITUITUR"). Sanctus Stanislaus confirms St Stanislaus, bishop and martyr, as heavenly patron of the city of Siedlce, Poland ("SANCTUS STANISLAUS, EPISCOPUS ET MARTYR, PATRONUS CAELESTIS URBIS SIEDLECENSIS CONFIRMATUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1993-10-18|cordubae-in-antiqua|portus-bergensis': {
+    incipit1: 'Cordubae in antiqua',
+    shelf1: 'apost_letters',
+    incipit2: 'Portus Bergensis',
+    shelf2: 'apost_constitutions',
+    note:
+      'Cordubae in antiqua crowns the Marian image "Nuestra Señora de la Fuensanta" venerated in Córdoba, Spain ("IMAGO BEATAE MARIAE VIRGINIS TITULO «NUESTRA SEÑORA DE LA FUENSANTA» ... PRETIOSI DIADEMATE REDIMIRI SINITUR"). Portus Bergensis erects the diocese of Port-Bergé, Madagascar ("IN MADAGASCARIA NOVA CONDITUR DIOECESIS PORTUS BERGENSIS"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1992-10-11|christus-dominus-semper|fidei-depositum': {
+    incipit1: 'Christus Dominus semper',
+    shelf1: 'apost_letters',
+    incipit2: 'Fidei Depositum',
+    shelf2: 'apost_constitutions',
+    note:
+      'Christus Dominus semper canonizes Blessed Ezequiel Moreno Díaz, Augustinian Recollect bishop of Pasto, Colombia ("LITTERAE DECRETALES ... BEATUM EZECHIELEM MORENO DÍAZ ... PASTOPOLITARUM EPISCOPUM SANCTUM ESSE DECERNITUR"). Fidei Depositum promulgates the Catechism of the Catholic Church ("PER LA PUBBLICAZIONE DEL CATECHISMO DELLA CHIESA CATTOLICA REDATTO DOPO IL CONCILIO ECUMENICO VATICANO II"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1992-07-06|baghiopolitanus|praestantiae-alicuius': {
+    incipit1: 'Baghiopolitanus',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Praestantiae alicuius',
+    shelf2: 'apost_letters',
+    note:
+      'Baghiopolitanus erects a new Apostolic Vicariate in the Philippines ("IN INSULIS PHILIPPINIS CONDITUR NOVUS VICARIATUS APOSTOLICUS BAGHIOPOLITANUS"). Praestantiae alicuius raises the Marian parish church of Lausanne, Switzerland, to minor basilica ("PAROECIALE TEMPLUM LAUSANNENSE BEATAE MARIAE VIRGINI DICATUM IN CATALOGUM BASILICARUM MINORUM REFERTUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1992-07-06|koforiduana|praestantiae-alicuius': {
+    incipit1: 'Koforiduana',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Praestantiae alicuius',
+    shelf2: 'apost_letters',
+    note:
+      'Koforiduana erects the diocese of Koforidua, Ghana, from the territory of Accra ("DE DIOECESI ACCRAËNSI ... NOVA DIOECESIS CONDITUR NOMINE KOFORIDUANA"). Praestantiae alicuius raises the Marian parish church of Lausanne, Switzerland, to minor basilica ("PAROECIALE TEMPLUM LAUSANNENSE BEATAE MARIAE VIRGINI DICATUM IN CATALOGUM BASILICARUM MINORUM REFERTUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1992-03-30|guvahatina|obversatur-saepe': {
+    incipit1: 'Guvahatina',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Obversatur saepe',
+    shelf2: 'apost_letters',
+    note:
+      'Guvahatina erects the diocese of Guwahati, India ("NOVA DIOECESIS CONDITUR, GUVAHATINA SCILICET INTER INDIAE FINES"). Obversatur saepe crowns a Fatima image venerated in the Nowa Huta-Bieńczyce district of Kraków, Poland ("IMAGO DEIPARAE VIRGINIS DE FATIMA ... PRETIOSO DIADEMATE REDIMIRI SINITUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1992-03-30|cum-nos-sollicito|guvahatina': {
+    incipit1: 'Cum nos sollicito',
+    shelf1: 'apost_letters',
+    incipit2: 'Guvahatina',
+    shelf2: 'apost_constitutions',
+    note:
+      'Cum nos sollicito crowns a Fatima image at Wadowice, Poland, the pope\'s own hometown ("BEATAE MARIAE VIRGINIS DE FATIMA SIMULACRUM ... IN URBE QUAM WADOWICE VOCANT DIADEMATE REDIMITUR"). Guvahatina erects the diocese of Guwahati, India ("NOVA DIOECESIS CONDITUR, GUVAHATINA SCILICET INTER INDIAE FINES"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1991-12-21|mekiensis|uritanum-templum': {
+    incipit1: 'Mekiensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Uritanum templum',
+    shelf2: 'apost_letters',
+    note:
+      'Mekiensis raises the Apostolic Prefecture of Mekele, Ethiopia, to an Apostolic Vicariate ("PRAEFECTURA APOSTOLICA MEKIENSIS AD GRADUM VICARIATUS APOSTOLICI ATTOLLITUR"). Uritanum templum raises the cathedral of Uruaçu, Brazil, to minor basilica ("CATHEDRALIS AEDES BEATAE MARIAE VIRGINI IN CAELUM ASSUMPTA DICATA ... IN DIOECESI URITANA SITA AD DIGNITATEM BASILICAE MINORIS ATTOLLITUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1990-05-20|kotidoensis|simile-est': {
+    incipit1: 'Kotidoensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Simile est',
+    shelf2: 'apost_letters',
+    note:
+      'Kotidoensis erects the diocese of Kotido, Uganda ("IN UGANDA NOVA DIOECESIS CONDITUR"). Simile est beatifies Pier Giorgio Frassati ("VENERABILI SERVO DEI PETRO GEORGIO FRASSATI BEATORUM HONORES DECERNUNTUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1990-05-20|ebolouana-kribensis|simile-est': {
+    incipit1: 'Ebolouana Kribensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Simile est',
+    shelf2: 'apost_letters',
+    note:
+      'Ebolouana Kribensis erects the diocese of Kribi, Cameroon ("IN CAMMARUNIA CONDITUR DIOECESIS EBOLOUANA-KRIBENSIS"). Simile est beatifies Pier Giorgio Frassati ("VENERABILI SERVO DEI PETRO GEORGIO FRASSATI BEATORUM HONORES DECERNUNTUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1990-05-20|simile-est|yokadumana': {
+    incipit1: 'Simile est',
+    shelf1: 'apost_letters',
+    incipit2: 'Yokadumana',
+    shelf2: 'apost_constitutions',
+    note:
+      'Simile est beatifies Pier Giorgio Frassati ("VENERABILI SERVO DEI PETRO GEORGIO FRASSATI BEATORUM HONORES DECERNUNTUR"). Yokadumana erects the diocese of Yokadouma, Cameroon ("IN CAMMARUNIA ECCLESIA CONDITUR YOKADUMANA"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1989-10-31|gatinensis-hullensis|presbyteri-sive': {
+    incipit1: 'Gatinensis-Hullensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Presbyteri sive',
+    shelf2: 'apost_letters',
+    note:
+      'Gatinensis-Hullensis establishes the ecclesiastical province of Gatineau-Hull, Canada ("NOVA PROVINCIA ECCLESIASTICA CONSTITUITUR GATINENSIS-HULLENSIS NOMINE"). Presbyteri sive beatifies Fr Giuseppe Baldo ("VENERABILI SERVO DEI IOSEPHO BALDO BEATORUM HONORES DECERNUNTUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1988-06-28|iusti-iudicis|riviascianensis': {
+    incipit1: 'Iusti Iudicis',
+    shelf1: 'motu_proprio',
+    incipit2: 'Riviascianensis',
+    shelf2: 'apost_constitutions',
+    note:
+      'Iusti Iudicis reorganizes the office of proctors and advocates before the dicasteries of the Roman Curia ("LETTERA APOSTOLICA IN FORMA DI MOTU PROPRIO IUSTI IUDICIS CON CUI SI RIORDINA INTEGRALMENTE LA MATERIA RIGUARDANTE L\'ESERCIZIO DELLA FUNZIONE DEI PATRONI E DEGLI AVVOCATI"). Riviascianensis raises the Apostolic Vicariate of Riohacha, Colombia, to a diocese renamed Riviascianensis ("VICARIATUS APOSTOLICUS RIOHACHAËNSIS EVEHITUR AD GRADUM DIOECESIS, QUAE RIVIASCIANENSIS VOCABITUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1988-06-28|apartadoensis|iusti-iudicis': {
+    incipit1: 'Apartadoënsis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Iusti Iudicis',
+    shelf2: 'motu_proprio',
+    note:
+      'Apartadoënsis erects the diocese of Apartadó, Colombia ("IN COLUMBIA NOVA CONDITUR DIOECESIS APARTADOËNSIS"). Iusti Iudicis reorganizes the office of proctors and advocates before the dicasteries of the Roman Curia ("LETTERA APOSTOLICA IN FORMA DI MOTU PROPRIO IUSTI IUDICIS CON CUI SI RIORDINA INTEGRALMENTE LA MATERIA RIGUARDANTE L\'ESERCIZIO DELLA FUNZIONE DEI PATRONI E DEGLI AVVOCATI"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1988-06-28|caldensis|iusti-iudicis': {
+    incipit1: 'Caldensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Iusti Iudicis',
+    shelf2: 'motu_proprio',
+    note:
+      'Caldensis erects the diocese of Caldas, Colombia ("IN COLUMBIA NOVA CONDITUR DIOECESIS CALDENSIS"). Iusti Iudicis reorganizes the office of proctors and advocates before the dicasteries of the Roman Curia ("LETTERA APOSTOLICA IN FORMA DI MOTU PROPRIO IUSTI IUDICIS CON CUI SI RIORDINA INTEGRALMENTE LA MATERIA RIGUARDANTE L\'ESERCIZIO DELLA FUNZIONE DEI PATRONI E DEGLI AVVOCATI"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1988-06-28|girardotanensis|iusti-iudicis': {
+    incipit1: 'Girardotanensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Iusti Iudicis',
+    shelf2: 'motu_proprio',
+    note:
+      'Girardotanensis erects the diocese of Girardota, Colombia ("NOVA CONDITUR DIOECESIS QUAE GIRARDOTANENSIS APPELLATUR"). Iusti Iudicis reorganizes the office of proctors and advocates before the dicasteries of the Roman Curia ("LETTERA APOSTOLICA IN FORMA DI MOTU PROPRIO IUSTI IUDICIS CON CUI SI RIORDINA INTEGRALMENTE LA MATERIA RIGUARDANTE L\'ESERCIZIO DELLA FUNZIONE DEI PATRONI E DEGLI AVVOCATI"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1988-06-28|iusti-iudicis|pastor-bonus': {
+    incipit1: 'Iusti Iudicis',
+    shelf1: 'motu_proprio',
+    incipit2: 'Pastor Bonus',
+    shelf2: 'apost_constitutions',
+    note:
+      'Iusti Iudicis reorganizes the office of proctors and advocates before the dicasteries of the Roman Curia ("LETTERA APOSTOLICA IN FORMA DI MOTU PROPRIO IUSTI IUDICIS CON CUI SI RIORDINA INTEGRALMENTE LA MATERIA RIGUARDANTE L\'ESERCIZIO DELLA FUNZIONE DEI PATRONI E DEGLI AVVOCATI"). Pastor Bonus reorganizes the Roman Curia ("COSTITUZIONE APOSTOLICA PASTOR BONUS SULLA CURIA ROMANA"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1988-06-18|antioquiensis|decessores-nostri': {
+    incipit1: 'Antioquiensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Decessores Nostri',
+    shelf2: 'motu_proprio',
+    note:
+      'Antioquiensis raises the diocese of Antioquia, Colombia, to metropolitan rank and creates a new ecclesiastical province ("AD METROPOLITANAE ORDINEM ANTIOQUIENSIS EVEHITUR DIOECESIS ... NOVAQUE EI COGNOMINA PROVINCIA CONDITUR ECCLESIASTICA"). Decessores Nostri reorganizes the Pontifical Commission for Latin America ("LETTERA APOSTOLICA IN FORMA DI MOTU PROPRIO DECESSORES NOSTRI CON LA QUALE SI RIORGANIZZA LA PONTIFICIA COMMISSIONE PER L\'AMERICA LATINA"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1988-03-12|izabalensis|manifesta-iam': {
+    incipit1: 'Izabalensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Manifesta iam',
+    shelf2: 'apost_letters',
+    note:
+      'Izabalensis raises the Apostolic Administration of Izabal, Guatemala, to an Apostolic Vicariate ("ADMINISTRATIO APOSTOLICA IZABALENSIS AD CANONICUM GRADUM VICARIATUS APOSTOLICI TOLLITUR"). Manifesta iam proclaims Our Lady of the Immaculate Conception patroness of the newly erected Apostolic Vicariate of Izabal, Guatemala ("DEIPARA VIRGO MARIA «IMMACULATAE CONCEPTIONIS» TITULO ORNATA PRINCEPS RENUNTIATUR APOSTOLICI VICARIATUS IZABALENSIS APUD DEUM PATRONA"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1988-03-12|croton-urbs|izabalensis': {
+    incipit1: 'Croton urbs',
+    shelf1: 'apost_letters',
+    incipit2: 'Izabalensis',
+    shelf2: 'apost_constitutions',
+    note:
+      'Croton urbs confirms Our Lady "di Capocolonna" as principal patroness of the archdiocese of Crotone-Santa Severina, Italy ("BEATA MARIA VIRGO TITULO «DI CAPOCOLONNA» ... PRINCIPALIS APUD DEUM PATRONA ARCHIDIOECESIS CROTONENSI-SANCTAE SEVERINAE CONFIRMATUR"). Izabalensis raises the Apostolic Administration of Izabal, Guatemala, to an Apostolic Vicariate ("ADMINISTRATIO APOSTOLICA IZABALENSIS AD CANONICUM GRADUM VICARIATUS APOSTOLICI TOLLITUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1987-03-26|nostri-pontificatus|sancti-michaelis-in-sydneyensi': {
+    incipit1: 'Nostri Pontificatus',
+    shelf1: 'apost_letters',
+    incipit2: 'Sancti Michaëlis in Sydneyensi',
+    shelf2: 'apost_constitutions',
+    note:
+      'Nostri Pontificatus crowns a Marian image kept at Gliwice, Poland ("IMAGO B. M. V. QUAE IN ECCLESIA SANCTISSIMAE TRINITATIS IN OPPIDO «GLIWICE» ASSERVATUR, PRETIOSO DIADEMATE REDIMIRI SINITUR"). Sancti Michaëlis in Sydneyensi erects the Melkite Greek-Catholic eparchy of St Michael\'s in Sydney, Australia ("CONDITUR IN AUSTRALIA NOVA EPARCHIA «SANCTI MICHAËLIS IN SYDNEYENSI» PRO FIDELIBUS ... RITUS BYZANTINI GRAECORUM MELKITARUM CATHOLICORUM"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1987-03-26|saepe-nos|sancti-michaelis-in-sydneyensi': {
+    incipit1: 'Saepe Nos',
+    shelf1: 'apost_letters',
+    incipit2: 'Sancti Michaëlis in Sydneyensi',
+    shelf2: 'apost_constitutions',
+    note:
+      'Saepe Nos crowns the image of Our Lady of Consolation venerated at Włodawa-Orchówek, Poland ("B. M. V. DE CONSOLATIONE IMAGO QUAE IN ECCLESIA PAROECIALI VULGO «WŁODAWA-ORCHÓWEK» ... COLITUR ... DIADEMATE REDIMITUR"). Sancti Michaëlis in Sydneyensi erects the Melkite Greek-Catholic eparchy of St Michael\'s in Sydney, Australia ("CONDITUR IN AUSTRALIA NOVA EPARCHIA «SANCTI MICHAËLIS IN SYDNEYENSI» PRO FIDELIBUS ... RITUS BYZANTINI GRAECORUM MELKITARUM CATHOLICORUM"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1987-03-26|nostri-pontificatus|s-georgii-martyris-romenorum': {
+    incipit1: 'Nostri Pontificatus',
+    shelf1: 'apost_letters',
+    incipit2: 'S. Georgii Martyris Romenorum',
+    shelf2: 'apost_constitutions',
+    note:
+      'Nostri Pontificatus crowns a Marian image kept at Gliwice, Poland ("IMAGO B. M. V. QUAE IN ECCLESIA SANCTISSIMAE TRINITATIS IN OPPIDO «GLIWICE» ASSERVATUR, PRETIOSO DIADEMATE REDIMIRI SINITUR"). S. Georgii Martyris Romenorum raises the Romanian Byzantine-rite Apostolic Exarchate of St George Martyr in Canton, Ohio (USA), to an eparchy immediately subject to the Holy See ("EXARCHATUS APOSTOLICUS TITULO S. GEORGII MARTYRIS IN LOCO VULGO CANTON (OHIO), AD EPARCHIAE DIGNITATEM ... EVEHITUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1987-03-26|s-georgii-martyris-romenorum|saepe-nos': {
+    incipit1: 'S. Georgii Martyris Romenorum',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Saepe Nos',
+    shelf2: 'apost_letters',
+    note:
+      'S. Georgii Martyris Romenorum raises the Romanian Byzantine-rite Apostolic Exarchate of St George Martyr in Canton, Ohio (USA), to an eparchy immediately subject to the Holy See ("EXARCHATUS APOSTOLICUS TITULO S. GEORGII MARTYRIS IN LOCO VULGO CANTON (OHIO), AD EPARCHIAE DIGNITATEM ... EVEHITUR"). Saepe Nos crowns the image of Our Lady of Consolation venerated at Włodawa-Orchówek, Poland ("B. M. V. DE CONSOLATIONE IMAGO QUAE IN ECCLESIA PAROECIALI VULGO «WŁODAWA-ORCHÓWEK» ... COLITUR ... DIADEMATE REDIMITUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1987-01-05|coloratensis|frequentissimae': {
+    incipit1: 'Coloratensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Frequentissimae',
+    shelf2: 'apost_letters',
+    note:
+      'Coloratensis establishes the territorial prelature of Colorado, Ecuador ("PRAELATURA TERRITORIALIS COLORATENSIS CONSTITUITUR"). Frequentissimae raises the church of Our Lady Mediatrix of All Graces in the diocese of Santa Maria, Brazil, to minor basilica ("TEMPLUM DOMINAE NOSTRAE MEDIATRICIS OMNIUM GRATIARUM, QUOD EST IN DIOECESI S. MARIAE, IN BRASILIA, AD HONOREM BASILICAE MINORIS EVEHITUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1984-11-08|geitaensis|tot-tantaeque': {
+    incipit1: 'Geitaënsis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Tot tantaeque',
+    shelf2: 'apost_letters',
+    note:
+      'Geitaënsis erects the diocese of Geita, Tanzania, from the territory of Mwanza ("DISTRACTIS NONNULLIS TERRITORIIS A DIOECESI MWANZAËNSI NOVA DIOECESIS GEITAËNSIS CONSTITUITUR"). Tot tantaeque confirms the Immaculate Virgin as patroness of Tanzania ("BEATA VIRGO IMMACULATA PATRONA CONFIRMATUR REI PUBLICAE TANZANIENSIS"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1984-11-08|geitaensis|merito-christifideles': {
+    incipit1: 'Geitaënsis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Merito Christifideles',
+    shelf2: 'apost_letters',
+    note:
+      'Geitaënsis erects the diocese of Geita, Tanzania, from the territory of Mwanza ("DISTRACTIS NONNULLIS TERRITORIIS A DIOECESI MWANZAËNSI NOVA DIOECESIS GEITAËNSIS CONSTITUITUR"). Merito Christifideles confirms St Charles Borromeo as patron of the diocese of São Carlos, Brazil ("SANCTUS CAROLUS BORROMEO EPISCOPUS CONFIRMATUR DIOECESIS SANCTI CAROLI IN BRASILIA"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1984-11-08|tot-tantaeque|vialembensis': {
+    incipit1: 'Tot tantaeque',
+    shelf1: 'apost_letters',
+    incipit2: 'Vialembensis',
+    shelf2: 'apost_constitutions',
+    note:
+      'Tot tantaeque confirms the Immaculate Virgin as patroness of Tanzania ("BEATA VIRGO IMMACULATA PATRONA CONFIRMATUR REI PUBLICAE TANZANIENSIS"). Vialembensis erects a diocese carved from the territory of the church of Agan ("DISTRACTO TERRITORIO AB ECCLESIA AGANIENSI, NOVA DIOECESIS CONDITUR NOMINE VIALEMBENSIS"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1984-11-08|merito-christifideles|vialembensis': {
+    incipit1: 'Merito Christifideles',
+    shelf1: 'apost_letters',
+    incipit2: 'Vialembensis',
+    shelf2: 'apost_constitutions',
+    note:
+      'Merito Christifideles confirms St Charles Borromeo as patron of the diocese of São Carlos, Brazil ("SANCTUS CAROLUS BORROMEO EPISCOPUS CONFIRMATUR DIOECESIS SANCTI CAROLI IN BRASILIA"). Vialembensis erects a diocese carved from the territory of the church of Agan ("DISTRACTO TERRITORIO AB ECCLESIA AGANIENSI, NOVA DIOECESIS CONDITUR NOMINE VIALEMBENSIS"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1984-09-01|qui-divino-in-civitate-sanctae-luciae|sanctissimi-salvatoris-marianopolitanae': {
+    incipit1: 'Qui divino (In Civitate Sanctae Luciae)',
+    shelf1: 'apost_letters',
+    incipit2: 'Sanctissimi Salvatoris Marianopolitanae',
+    shelf2: 'apost_constitutions',
+    note:
+      'Qui divino establishes the Apostolic Nunciature in Saint Lucia ("IN CIVITATE SANCTAE LUCIAE NUNTIATURA APOSTOLICA INSTITUITUR"). Sanctissimi Salvatoris Marianopolitanae raises the Apostolic Exarchate for Melkite Greek Catholics in Canada to an eparchy titled Most Holy Saviour of Montreal ("EXARCHATUS APOSTOLICUS PRO FIDELIBUS GRAECIS MELKITIS CATHOLICIS IN CANADA COMMORANTIBUS AD GRADUM ET DIGNITATEM EPARCHIAE ... PROVEHITUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1983-05-02|christifideles-nucerini|toritensis': {
+    incipit1: 'Christifideles Nucerini',
+    shelf1: 'apost_letters',
+    incipit2: 'Toritensis',
+    shelf2: 'apost_constitutions',
+    note:
+      'Christifideles Nucerini crowns the Marian image "Santa Maria della Purità" venerated at Nocera dei Pagani, Italy ("IMAGO BEATAE MARIAE VIRGINIS, QUAM POPULUS «SANTA MARIA DELLA PURITÀ» NUNCUPAT ... PRETIOSO DIADEMATE REDIMIRI SINITUR"). Toritensis erects the diocese of Torit, Sudan, from the territory of Juba ("DETRACTIS NONNULLIS TERRITORIIS A METROPOLITANA ECCLESIA IUBAËNSI, NOVA CONDITUR DIOECESIS TORITENSIS"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1983-01-25|divinus-perfectionis-magister|meminerint-omnes': {
+    incipit1: 'Divinus Perfectionis Magister',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Meminerint omnes',
+    shelf2: 'apost_letters',
+    note:
+      'Divinus Perfectionis Magister promulgates new legislation for the causes of saints ("COSTITUZIONE APOSTOLICA DIVINUS PERFECTIONIS MAGISTER CIRCA LA NUOVA LEGISLAZIONE PER LE CAUSE DEI SANTI"). Meminerint omnes beatifies Sister Maria Gabriella Sagheddu ("VENERABILI SERVAE DEI MARIAE GABRIELAE SAGHEDDU BEATORUM HONORES DECERNUNTUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1983-01-25|meminerint-omnes|sacrae-disciplinae-leges': {
+    incipit1: 'Meminerint omnes',
+    shelf1: 'apost_letters',
+    incipit2: 'Sacrae Disciplinae Leges',
+    shelf2: 'apost_constitutions',
+    note:
+      'Meminerint omnes beatifies Sister Maria Gabriella Sagheddu ("VENERABILI SERVAE DEI MARIAE GABRIELAE SAGHEDDU BEATORUM HONORES DECERNUNTUR"). Sacrae Disciplinae Leges promulgates the 1983 Code of Canon Law ("COSTITUZIONE APOSTOLICA SACRAE DISCIPLINAE LEGES PER LA PROMULGAZIONE DEL NUOVO CODICE DI DIRITTO CANONICO"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1982-06-24|australia-nova-zelandia-et-oceania|quandoquidem-clerus': {
+    incipit1: 'Australia, Nova Zelandia et Oceania',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Quandoquidem clerus',
+    shelf2: 'apost_letters',
+    note:
+      'Australia, Nova Zelandia et Oceania raises the Ukrainian Byzantine-rite Apostolic Exarchate for Australia, New Zealand and Oceania to an eparchy ("EXARCHATUS APOSTOLICUS PRO FIDELIBUS RITUS BYZANTINI UCRAINORUM IN AUSTRALIA, NOVA ZELANDIA ET OCEANIA COMMORANTIBUS AD GRADUM EPARCHIAE EXTOLLITUR"). Quandoquidem clerus confirms Our Lady of Mercy and St John the Baptist as patrons of the diocese of Chascomús, Argentina ("B. M. V. A MERCEDE, ATQUE S. IOANNES BAPTISTA CONFIRMATUR ... PATRONA PRINCIPALIS, HIC SECUNDARIUS DIOECESIS CHASCOMUSENSIS"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1982-06-20|beato-crispino-a-viterbio-laico-professo-o-f-m-capuccinorum-sanctorum-honores-decernuntur|xinotegana': {
+    incipit1: 'Beato Crispino a Viterbio, Laico professo O.F.M. Capuccinorum, Sanctorum honores decernuntur',
+    shelf1: 'apost_letters',
+    incipit2: 'Xinotegana',
+    shelf2: 'apost_constitutions',
+    note:
+      'Beato Crispino a Viterbio, Laico professo O.F.M. Capuccinorum, Sanctorum honores decernuntur canonizes Blessed Crispin of Viterbo, Capuchin lay brother ("BEATO CRISPINO A VITERBIO, LAICO PROFESSO O.F.M. CAPUCCINORUM, SANCTORUM HONORES DECERNUNTUR"). Xinotegana erects the territorial prelature of Jinotega, Nicaragua, from the diocese of Matagalpa ("CIVILI REGIONE VULGO JINOTEGA NUNCUPATA A DIOECESI MATAGALPENSI DISTRACTA NOVA PRAELATURA CONDITUR XINOTEGANA APPELLANDA"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1981-03-25|a-concilio-constantinopolitano-i|ss-vincentii-et-anastasii-ad-aquas-salvias': {
+    incipit1: 'A Concilio Constantinopolitano I',
+    shelf1: 'apost_letters',
+    incipit2: 'SS. Vincentii et Anastasii ad Aquas Salvias',
+    shelf2: 'apost_constitutions',
+    note:
+      'A Concilio Constantinopolitano I is a pastoral/theological letter for the 1600th anniversary of the First Council of Constantinople and the 1550th of Ephesus ("PER IL 1600° ANNIVERSARIO DEL I CONCILIO DI COSTANTINOPOLI E PER IL 1550° ANNIVERSARIO DEL CONCILIO DI EFESO"). SS. Vincentii et Anastasii ad Aquas Salvias reorganizes the juridical form of the territory of the abbey of Sts Vincent and Anastasius at Tre Fontane, Rome ("TERRITORII ABBATIAE SS. VINCENTII ET ANASTASII AD AQUAS SALVIAS NOVA EADEMQUE APTIOR IURIDICA FIT ORDINATIO"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1980-10-13|cultus-s-ioannis|torontina-slovachorum-byzantini-ritus': {
+    incipit1: 'Cultus S. Ioannis',
+    shelf1: 'apost_letters',
+    incipit2: 'Torontina Slovachorum Byzantini Ritus',
+    shelf2: 'apost_constitutions',
+    note:
+      'Cultus S. Ioannis confirms St John the Baptist as principal patron of the archdiocese of Trnava, Slovakia ("S. IOANNES BAPTISTAE CONFIRMATUR PATRONUS PRINCIPALIS ARCHIDIOECESIS TIRNAVIENSIS"). Torontina Slovachorum Byzantini Ritus erects the Slovak Byzantine-rite Eparchy of Ss Cyril and Methodius of Toronto, Canada ("PRO SLOVACHIS FIDELIBUS RITUS BYZANTINI IN CANADIA COMMORANTIBUS EPARCHIA SANCTORUM CYRILLI ET METHODII CONSTITUITUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1980-10-13|cultus-s-ioannis|marianopolitana-grecorum-melkitarum-catholicorum': {
+    incipit1: 'Cultus S. Ioannis',
+    shelf1: 'apost_letters',
+    incipit2: 'Marianopolitana Grecorum Melkitarum Catholicorum',
+    shelf2: 'apost_constitutions',
+    note:
+      'Cultus S. Ioannis confirms St John the Baptist as principal patron of the archdiocese of Trnava, Slovakia ("S. IOANNES BAPTISTAE CONFIRMATUR PATRONUS PRINCIPALIS ARCHIDIOECESIS TIRNAVIENSIS"). Marianopolitana Grecorum Melkitarum Catholicorum erects an Apostolic Exarchate for Melkite Greek Catholics in Canada ("IN CANADA EXARCHATUS APOSTOLICUS CONDITUR PRO OMNIBUS FIDELIBUS CATHOLICIS BYZANTINI RITUS MELKITARUM"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1980-03-06|cum-rheginensis|mekiensis': {
+    incipit1: 'Cum Rheginensis',
+    shelf1: 'apost_letters',
+    incipit2: 'Mekiensis',
+    shelf2: 'apost_constitutions',
+    note:
+      'Cum Rheginensis confirms St Paul the Apostle and St Stephen of Nicaea as patrons of the archdiocese of Reggio Calabria, Italy ("SANCTUS PAULUS APOSTOLUS ET SANCTUS STEPHANUS NICAENUS PATRONI ... RHEGINENSIS DIOECESIS CONFIRMATUR"). Mekiensis erects the Apostolic Prefecture of Mekele, Ethiopia ("IN AETHIOPIA NOVA CONSTITUITUR PRAEFECTURA APOSTOLICA NOMINE MEKIENSIS"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1980-03-06|cum-rheginensis|hamiltonensis-in-nova-zelandia': {
+    incipit1: 'Cum Rheginensis',
+    shelf1: 'apost_letters',
+    incipit2: 'Hamiltonensis in Nova Zelandia',
+    shelf2: 'apost_constitutions',
+    note:
+      'Cum Rheginensis confirms St Paul the Apostle and St Stephen of Nicaea as patrons of the archdiocese of Reggio Calabria, Italy ("SANCTUS PAULUS APOSTOLUS ET SANCTUS STEPHANUS NICAENUS PATRONI ... RHEGINENSIS DIOECESIS CONFIRMATUR"). Hamiltonensis in Nova Zelandia erects the diocese of Hamilton, New Zealand ("IN NOVA ZELANDIA DIOECESIS CONDITUR HAMILTONENSIS IN NOVA ZELANDIA COGNOMINE"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1980-03-06|cum-rheginensis|palmerstonaquiloniana': {
+    incipit1: 'Cum Rheginensis',
+    shelf1: 'apost_letters',
+    incipit2: 'Palmerstonaquiloniana',
+    shelf2: 'apost_constitutions',
+    note:
+      'Cum Rheginensis confirms St Paul the Apostle and St Stephen of Nicaea as patrons of the archdiocese of Reggio Calabria, Italy ("SANCTUS PAULUS APOSTOLUS ET SANCTUS STEPHANUS NICAENUS PATRONI ... RHEGINENSIS DIOECESIS CONFIRMATUR"). Palmerstonaquiloniana erects the diocese of Palmerston North, New Zealand ("IN NOVA ZELANDIA DIOECESIS CONDITUR PALMERSTONAQUILONIANA"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1980-03-06|cum-rheginensis|muzaffarpurensis': {
+    incipit1: 'Cum Rheginensis',
+    shelf1: 'apost_letters',
+    incipit2: 'Muzaffarpurensis',
+    shelf2: 'apost_constitutions',
+    note:
+      'Cum Rheginensis confirms St Paul the Apostle and St Stephen of Nicaea as patrons of the archdiocese of Reggio Calabria, Italy ("SANCTUS PAULUS APOSTOLUS ET SANCTUS STEPHANUS NICAENUS PATRONI ... RHEGINENSIS DIOECESIS CONFIRMATUR"). Muzaffarpurensis erects the diocese of Muzaffarpur, India, from the territory of Patna ("EX INTEGRO NOVA DIOECESI MUZAFFARPURENSIS EXCITATUR IN INDIA LOCIS QUIBUSDAM DETRACTIS A DIOECESI PATNENSI"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1979-11-03|belfortiensis-montis-beligardi|historicum-ob-suum': {
+    incipit1: 'Belfortiensis-Montis Beligardi',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Historicum ob suum',
+    shelf2: 'apost_letters',
+    note:
+      'Belfortiensis-Montis Beligardi erects the diocese of Belfort-Montbéliard, France, from the archdiocese of Besançon ("NONNULLIS DETRACTIS TERRITORIIS AB ARCHIDIOECESI BISUNTINA, NOVA DIOECESIS CONDITUR, BELFORTIENSIS-MONTIS BELIGARDI NOMINE"). Historicum ob suum raises the cathedral of the Immaculate Conception, Denver, USA, to minor basilica ("CATHEDRALE TEMPLUM ARCHIDIOECESIS DENVERIENSIS «AB IMMACULATAE CONCEPTIONE» AD BASILICAE MINORIS TOLLITUR GRADUM"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1979-10-16|catechesi-tradendae|guamensis': {
+    incipit1: 'Catechesi Tradendae',
+    shelf1: 'apost_exhortations',
+    incipit2: 'Guamensis',
+    shelf2: 'apost_constitutions',
+    note:
+      'Catechesi Tradendae is the post-synodal exhortation on catechesis ("ESORTAZIONE APOSTOLICA CATECHESI TRADENDAE ... CIRCA LA CATECHESI NEL NOSTRO TEMPO"). Guamensis raises the prelature of Guamá, Brazil, to a diocese ("PRAELATURA GUAMENSIS IN BRASILIA AD GRADUM DIOECESIS EVEHITUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1979-10-16|catechesi-tradendae|santaremensis-et-aliae': {
+    incipit1: 'Catechesi Tradendae',
+    shelf1: 'apost_exhortations',
+    incipit2: 'Santaremensis et Aliae',
+    shelf2: 'apost_constitutions',
+    note:
+      'Catechesi Tradendae is the post-synodal exhortation on catechesis ("ESORTAZIONE APOSTOLICA CATECHESI TRADENDAE ... CIRCA LA CATECHESI NEL NOSTRO TEMPO"). Santaremensis et Aliae raises the prelature of Santarém and eleven other Brazilian prelatures to dioceses ("PRAELATURA SANTAREMENSIS ET QUAEDAM ALIAE AD GRADUM ET DIGNITATEM DIOECESIS EVEHUNTUR"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1979-10-16|cascavellensis|catechesi-tradendae': {
+    incipit1: 'Cascavellensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Catechesi Tradendae',
+    shelf2: 'apost_exhortations',
+    note:
+      'Cascavellensis establishes the ecclesiastical province of Cascavel, Brazil ("NOVA ECCLESIASTICA PROVINCIA «CASCAVELLENSIS» CONSTITUITUR"). Catechesi Tradendae is the post-synodal exhortation on catechesis ("ESORTAZIONE APOSTOLICA CATECHESI TRADENDAE ... CIRCA LA CATECHESI NEL NOSTRO TEMPO"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1979-10-16|catechesi-tradendae|maringaensis': {
+    incipit1: 'Catechesi Tradendae',
+    shelf1: 'apost_exhortations',
+    incipit2: 'Maringaënsis',
+    shelf2: 'apost_constitutions',
+    note:
+      'Catechesi Tradendae is the post-synodal exhortation on catechesis ("ESORTAZIONE APOSTOLICA CATECHESI TRADENDAE ... CIRCA LA CATECHESI NEL NOSTRO TEMPO"). Maringaënsis establishes the ecclesiastical province of Maringá, Brazil ("IN BRASILIA NOVA PROVINCIA ECCLESIASTICA CONDITUR, MARINGAËNSIS COGNOMINANDA"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1996-03-25|devotio-sancti|vita-consecrata': {
+    incipit1: 'Devotio sancti',
+    shelf1: 'apost_letters',
+    incipit2: 'Vita Consecrata',
+    shelf2: 'apost_exhortations',
+    note:
+      'Devotio sancti raises the church of St Paschal Baylón at Villarreal, diocese of Segorbe-Castellón, Spain, to minor basilica ("ECCLESIAE SANCTO PASCHALI BAYLON DICATAE IN LOCO V.D. VILLAREAL, IN DIOECESI SEGOBRICENSI-CASTELLIONENSI, BASILICAE MINORIS DIGNITAS TRIBUITUR"). Vita Consecrata is the post-synodal exhortation on consecrated life ("ESORTAZIONE APOSTOLICA POST-SINODALE VITA CONSECRATA ... CIRCA LA VITA CONSACRATA E LA SUA MISSIONE"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1992-03-25|lettera-apostolica-in-occasione-della-ristrutturazione-delle-circoscrizioni-ecclesiastiche-della-polonia|pastores-dabo-vobis': {
+    incipit1: 'Lettera Apostolica in occasione della ristrutturazione delle circoscrizioni ecclesiastiche della Polonia',
+    shelf1: 'apost_letters',
+    incipit2: 'Pastores Dabo Vobis',
+    shelf2: 'apost_exhortations',
+    note:
+      'Lettera Apostolica in occasione della ristrutturazione delle circoscrizioni ecclesiastiche della Polonia is a letter to the Church in Poland on the restructuring of its ecclesiastical circumscriptions ("IN OCCASIONE DELLA RISTRUTTURAZIONE DELLE CIRCOSCRIZIONI ECCLESIASTICHE DELLA POLONIA"). Pastores Dabo Vobis is the post-synodal exhortation on priestly formation ("ESORTAZIONE APOSTOLICA POST-SINODALE PASTORES DABO VOBIS ... CIRCA LA FORMAZIONE DEI SACERDOTI"). Unrelated acts, coincidentally dated the same day.',
+  },
+  'john-paul-ii|1993-01-15|europae-orientalis|mexicopoli-in-celebri': {
+    incipit1: 'Europae Orientalis',
+    shelf1: 'motu_proprio',
+    incipit2: 'Mexicopoli in celebri',
+    shelf2: 'apost_letters',
+    note:
+      'Europae Orientalis reorganizes the Pontifical Commission for Russia ("LETTERA APOSTOLICA \\"MOTU PROPRIO\\" EUROPAE ORIENTALIS ... consideriamo che non sono più validi i motivi per i quali fu eretta la Commissione per la Russia"). Mexicopoli in celebri raises a parish church in Mexico City to minor basilica ("TEMPLUM PAROECIALE SANCTI IOSEPH ET DOMINAE NOSTRAE A SACRO CORDE IESU, QUOD IN URBE MEXICOPOLI EXSTAT, AD BASILICAE MINORIS GRADUM DIGNITATEMQUE EVEHITUR"). Unrelated acts, coincidentally dated the same day.',
+  },};

@@ -488,4 +488,240 @@ export const DATE_CORRECTIONS: Record<string, { date: string; note: string }> = 
       'needs no change; the apparent slug mismatch (17 October) belongs to the unrelated ' +
       'document the broken href points at, not to Amor dulcissimus itself.',
   },
+
+  // Task 16 (John Paul II, elected 16 October 1978). Every entry below is adjudicated
+  // against the document's own dating formula, read on vatican.va, and cross-checked
+  // against its stated pontificate year (year N runs 16 October of calendar year
+  // 1977+N to 15 October of 1978+N). Several entries resolve to the printed date itself
+  // (the URL slug is the error) -- kept to document the adjudication and suppress the
+  // warning, per the Provida Matris precedent above.
+  'john-paul-ii|apost_constitutions|hamburgensis|1994-10-24': {
+    date: '1994-10-24',
+    note:
+      "Hamburgensis's own dating formula reads 'Datum Romae, apud Sanctum Petrum, die " +
+      "vicesimo quarto mensis Octobris, anno Domini millesimo nongentesimo nonagesimo " +
+      "quarto, Pontificatus Nostri septimo decimo' (24 October 1994, 17th year of the " +
+      'pontificate -- consistent, 1994-10-16 to 1995-10-15). The printed date is correct; ' +
+      "the apost_constitutions shelf's URL slug (19941014, 14 October) is wrong.",
+  },
+  'john-paul-ii|apost_constitutions|pietersburgensis|1988-12-15': {
+    date: '1988-12-15',
+    note:
+      "Pietersburgensis's own dating formula reads 'Datum Romae, apud S. Petrum, die " +
+      "quinto decimo mensis Decembris, anno Domini millesimo nongentesimo octogesimo " +
+      "octavo, Pontificatus Nostri undecimo' (15 December 1988, 11th year -- consistent, " +
+      "1988-10-16 to 1989-10-15). The printed date is correct; the URL slug (19881115, " +
+      "15 November) is wrong.",
+  },
+  'john-paul-ii|apost_constitutions|canada|1982-08-27': {
+    date: '1982-08-27',
+    note:
+      "Canada's own dating formula reads 'Datum Romae, apud S. Petrum, die septimo et " +
+      "vicesimo mensis Augusti, anno Domini millesimo nongentesimo octogesimo altero, " +
+      "Pontificatus Nostri quarto' (27 August 1982, 4th year -- consistent, 1981-10-16 to " +
+      "1982-10-15). The printed date is correct; the URL slug (19850827, 1985) is wrong.",
+  },
+  'john-paul-ii|apost_constitutions|cruciensis|1982-08-17': {
+    date: '1982-08-17',
+    note:
+      "Cruciensis's own dating formula reads 'Datum Romae, apud S. Petrum, die septimo " +
+      "decimo mensis Augusti, anno Domini millesimo nongentesimo octogesimo secundo, " +
+      "Pontificatus Nostri quarto' (17 August 1982, 4th year -- consistent). The printed " +
+      "date is correct; the URL slug (19850817, 1985) is wrong.",
+  },
+  'john-paul-ii|apost_letters|inter-sanctos|1979-12-29': {
+    date: '1979-11-29',
+    note:
+      "Inter sanctos's own dating formula reads 'Datum Roma, apud Sanctum Petrum, sub " +
+      "anulo Piscatoris, die undetricesimo mensis Novembris, anno Domini millesimo " +
+      "nongentesimo septuagesimo nono, Pontificatus Nostri secundo' (29 November 1979, " +
+      "2nd year of the pontificate -- consistent, 1979-10-16 to 1980-10-15). The " +
+      "apost_letters shelf's printed date ('29 dicembre 1979', December) is the error; " +
+      'its own URL slug (19791129, 29 November) is correct.',
+  },
+  'john-paul-ii|apost_letters|quandoquidem-publicae|1980-07-27': {
+    date: '1980-06-27',
+    note:
+      "Quandoquidem publicae's own dating formula reads 'Datum Romae, apud Sanctum " +
+      "Petrum, sub anulo Piscatoris, die XXVII mensis Iunii anno MDMLXXX, Pontificatus " +
+      "Nostri secundo' (27 June 1980, 2nd year -- consistent, 1979-10-16 to 1980-10-15). " +
+      "The apost_letters shelf's printed date ('27 luglio 1980', July) is the error; its " +
+      'own URL slug (19800627, 27 June) is correct.',
+  },
+  'john-paul-ii|apost_letters|augustinum-hipponensem|1986-08-28': {
+    date: '1986-08-28',
+    note:
+      "Augustinum Hipponensem's own dating formula reads 'Datum Romae, apud Sanctum " +
+      "Petrum, die XXVIII mensis Augusti, in memoria Sancti Augustini, episcopi et " +
+      "Ecclesiae doctoris, anno MCMLXXXVI, Pontificatus Nostri octavo' (28 August 1986 -- " +
+      "the feast of St Augustine himself, fittingly -- 8th year -- consistent, 1985-10-16 " +
+      'to 1986-10-15). The printed date is correct; the URL slug (26081986) reads as 26 ' +
+      'August under either digit-group convention, which is wrong.',
+  },
+  'john-paul-ii|apost_letters|ut-memoriae|1988-06-06': {
+    date: '1988-06-11',
+    note:
+      "Ut memoriae's own dating formula reads 'Datum Romae, apud Sanctum Petrum, sub " +
+      "anulo Piscatoris, die XI mensis Iunii, anno MCMLXXXVIII, Pontificatus Nostri " +
+      "decimo' (11 June 1988, 10th year -- consistent, 1987-10-16 to 1988-10-15). The " +
+      "apost_letters shelf's printed date ('6 giugno 1988', 6 June) is the error; its own " +
+      'URL slug (19880611, 11 June) is correct.',
+  },
+  'john-paul-ii|apost_letters|cum-dilexisset|1992-07-21': {
+    date: '1992-06-21',
+    note:
+      "Cum dilexisset's own dating formula reads 'Datum apud aedem sacram Beatae " +
+      "Virginis a Fonte Caravagii, sub anulo Piscatoris, die XXI mensis Iunii, anno " +
+      "MCMXCII, Pontificatus Nostri quarto decimo' (21 June 1992, 14th year -- " +
+      "consistent, 1991-10-16 to 1992-10-15; the beatification itself, of Fr Francesco " +
+      "Spinelli, was celebrated that same day during the pope's pastoral visit to the " +
+      "diocese of Cremona). The apost_letters shelf's printed date ('21 luglio 1992', " +
+      'July) is the error; its own URL slug (19920621, 21 June) is correct.',
+  },
+  'john-paul-ii|apost_letters|maternum-deiparae|1996-02-02': {
+    date: '1996-02-06',
+    note:
+      "Maternum Deiparae's own dating formula reads 'Datum Romae, apud Sanctum Petrum, " +
+      "sub anulo Piscatoris, die VI mensis Februarii, anno MCMXCVI, Pontificatus Nostri " +
+      "duodevicesimo' (6 February 1996, 18th year -- consistent, 1995-10-16 to " +
+      "1996-10-15). The apost_letters shelf's printed date ('2 febbraio 1996', 2 " +
+      "February) is the error; its own URL slug (19960206, 6 February) is correct.",
+  },
+  'john-paul-ii|apost_letters|in-omnibus|1997-01-29': {
+    date: '1997-10-12',
+    note:
+      "In omnibus's own dating formula reads 'Datum Romae, apud Sanctum Petrum, sub " +
+      "anulo Piscatoris, die XII Octobris mensis, anno MCMXCVII, Pontificatus Nostri " +
+      "undevicesimo' (12 October 1997, 19th year -- consistent, 1996-10-16 to " +
+      "1997-10-15; its own footnote cites AAS vol. XCII (2000), consistent with a delayed " +
+      "official publication some years after signing). The apost_letters shelf's printed " +
+      "date ('29 gennaio 1997', January) is the error; its own URL slug (19971012, 12 " +
+      'October) is correct.',
+  },
+  'john-paul-ii|apost_letters|inter-sacras-sanctae-mariae-a-victoria|1998-12-30': {
+    date: '1998-12-30',
+    note:
+      "Inter sacras («Sanctae Mariae a Victoria»)'s own dating formula reads 'Datum " +
+      "Romae, apud Sanctum Petrum, sub anulo Piscatoris, die XXX mensis Decembris, anno " +
+      "MCMXCVIII, Pontificatus Nostri vicesimo primo' (30 December 1998, 21st year -- " +
+      "consistent, 1998-10-16 to 1999-10-15). The printed date is correct; the " +
+      "apost_letters shelf's URL slug (19981130, 30 November) is wrong. (Keyed on the " +
+      "full gloss-bearing incipit: this shelf prints four distinct 'Inter sacras' " +
+      "basilica-minor grants across 1998 alone -- 12 March, 7 May, 23 June and this one, " +
+      "30 December -- each distinguished only by its own parenthetical dedication; see " +
+      "the gloss-recovery fix in shelf.ts.)",
+  },
+  'john-paul-ii|apost_letters|in-antiquo-oppido|1998-12-07': {
+    date: '1998-12-07',
+    note:
+      "In antiquo oppido's own dating formula reads 'Datum Romae, apud Sanctum Petrum, " +
+      "sub anulo Piscatoris, die VII mensis Decembris, anno MCMXCVIII, Pontificatus " +
+      "Nostri vicesimo primo' (7 December 1998, 21st year -- consistent). The printed " +
+      "date is correct; the apost_letters shelf's URL slug (19981107, 7 November) is " +
+      'wrong.',
+  },
+  'john-paul-ii|apost_letters|caritate-viva|1998-10-24': {
+    date: '1998-10-24',
+    note:
+      "Caritate viva's own dating formula reads 'Datum Romae, apud Sanctum Petrum, sub " +
+      "anulo Piscatoris, die XXIV mensis Octobris, anno MCMXCVIII, Pontificatus Nostri " +
+      "vicesimo primo' (24 October 1998, 21st year -- consistent, just after the " +
+      "1998-10-16 anniversary). The printed date is correct; the apost_letters shelf's " +
+      'URL slug (19981003, 3 October) is wrong.',
+  },
+  'john-paul-ii|apost_letters|dies-domini|1998-05-31': {
+    date: '1998-05-31',
+    note:
+      "Dies Domini's own dating formula reads 'Datum Romae, apud Sanctum Petrum, die " +
+      "XXXI mensis Maii, in Pentecostes sollemnitate, anno MCMXCVIII, Pontificatus " +
+      "Nostri vicesimo' (31 May 1998 -- Pentecost Sunday, fittingly -- 20th year -- " +
+      "consistent, 1997-10-16 to 1998-10-15). The printed date is correct; the " +
+      "apost_letters shelf's URL slug (05071998) reads as 5 July 1998 under either " +
+      'digit-group convention, which is wrong (likely the press-release date).',
+  },
+  'john-paul-ii|apost_letters|ad-christi-crucem|1999-05-02': {
+    date: '1999-05-02',
+    note:
+      "Ad Christi crucem's own dating formula reads 'Datum Romae, apud Sanctum Petrum, " +
+      "sub anulo Piscatoris, die II mensis Maii, anno MCMXCIX, Pontificatus Nostri " +
+      "vicesimo primo' (2 May 1999, 21st year -- consistent, 1998-10-16 to 1999-10-15). " +
+      "The printed date is correct; the apost_letters shelf's URL slug (19990205, 5 " +
+      'February) is wrong.',
+  },
+  'john-paul-ii|apost_letters|perutile-nobis|2000-02-11': {
+    date: '2000-02-18',
+    note:
+      "Perutile Nobis's own dating formula reads 'Datum Romae, apud Sanctum Petrum, sub " +
+      "anulo Piscatoris, die XVIII mensis Februarii, anno MM, Pontificatus Nostri altero " +
+      "et vicesimo' (18 February 2000, 22nd year -- consistent, 1999-10-16 to " +
+      "2000-10-15). The apost_letters shelf's printed date ('11 febbraio 2000', 11 " +
+      'February) is the error; its own URL slug (20000218, 18 February) is correct.',
+  },
+  'john-paul-ii|apost_letters|ego-praecipio-tibi|2001-06-26': {
+    date: '2001-06-26',
+    note:
+      "Ego praecipio tibi's own dating formula reads 'Datum Leopoli, sub anulo " +
+      "Piscatoris, die XXVI mensis Iunii, anno MMI, Pontificatus Nostri tertio et " +
+      "vicesimo' (26 June 2001 -- signed at Lviv, Ukraine, during the pope's pastoral " +
+      "visit, the beatification itself having been celebrated there that day -- 23rd " +
+      "year -- consistent, 2000-10-16 to 2001-10-15). The printed date is correct; the " +
+      'apost_letters shelf\'s URL slug (20010622, 22 June) is wrong.',
+  },
+  'john-paul-ii|apost_letters|mane-nobiscum-domine|2004-10-07': {
+    date: '2004-10-07',
+    note:
+      "Mane nobiscum Domine's own closing formula reads 'Dal Vaticano, il 7 ottobre, " +
+      "memoria della B. Maria Vergine del Rosario, dell'anno 2004, ventiseiesimo di " +
+      "Pontificato' (7 October 2004 -- the feast of Our Lady of the Rosary -- 26th year " +
+      "-- consistent, 2003-10-16 to 2004-10-15). The printed date is correct; the " +
+      'apost_letters shelf\'s URL slug (20041008, 8 October) is wrong.',
+  },
+  'john-paul-ii|motu_proprio|misericordia-dei-su-alcuni-aspetti-della-celebrazione-del-sacramento-della-penitenza|2002-04-07': {
+    date: '2002-04-07',
+    note:
+      "Misericordia Dei's own dating formula reads 'Datum Romae, apud Sanctum Petrum, " +
+      "die septima mensis Aprilis, Dominica in octava Paschae seu de Divina " +
+      "Misericordia, anno Domini bismillesimo altero, Pontificatus Nostri vicesimo " +
+      "quarto' (7 April 2002 -- Divine Mercy Sunday, fittingly -- 24th year -- " +
+      "consistent, 2001-10-16 to 2002-10-15). The printed date is correct; the " +
+      'motu_proprio shelf\'s URL slug (20020502, 2 May) is wrong.',
+  },
+  'john-paul-ii|motu_proprio|sacramentorum-sanctitatis-tutela|2001-04-30': {
+    date: '2001-04-30',
+    note:
+      "Sacramentorum sanctitatis tutela's own dating formula reads 'Datum Romae, apud " +
+      "Sanctum Petrum, die XXX mensis Aprilis, in memoria Sancti Pii V Papae, anno MMI, " +
+      "Pontificatus Nostri vicesimo tertio' (30 April 2001 -- the feast of St Pius V -- " +
+      "23rd year -- consistent, 2000-10-16 to 2001-10-15). The printed date is correct; " +
+      'the motu_proprio shelf\'s URL slug (20020110, 10 January 2002, its promulgation ' +
+      'date) is wrong for the signing date this pipeline records.',
+  },
+  'john-paul-ii|motu_proprio|apostolos-suos|1998-05-21': {
+    date: '1998-05-21',
+    note:
+      "Apostolos Suos's own dating formula reads 'Datum Romae, apud Sanctum Petrum, die " +
+      "XXI mensis Maii, in sollemnitate Ascensionis Domini Nostri Iesu Christi, anno " +
+      "MCMXCVIII, Pontificatus Nostri vicesimo' (21 May 1998 -- the Solemnity of the " +
+      "Ascension -- 20th year -- consistent, 1997-10-16 to 1998-10-15). The printed " +
+      'date is correct; the motu_proprio shelf\'s URL slug (19980722, 22 July, its ' +
+      'publication date) is wrong for the signing date this pipeline records.',
+  },
+  'john-paul-ii|motu_proprio|ad-tuendam-fidem|1998-05-18': {
+    date: '1998-05-18',
+    note:
+      "Ad Tuendam Fidem's own dating formula reads 'Datum Romae, apud Sanctum Petrum, " +
+      "die XVIII mensis Maii, anno MCMXCVIII, Pontificatus Nostri vicesimo' (18 May " +
+      "1998, 20th year -- consistent). The printed date is correct; the motu_proprio " +
+      'shelf\'s URL slug (19980630, 30 June, its publication date) is wrong for the ' +
+      'signing date this pipeline records.',
+  },
+  'john-paul-ii|motu_proprio|stella-maris|1997-01-31': {
+    date: '1997-01-31',
+    note:
+      "Stella Maris's own dating formula reads 'Datum Romae, apud Sanctum Petrum, die " +
+      "XXXI mensis Ianuarii, anno MCMXCVII, Pontificatus Nostri undevicesimo' (31 " +
+      "January 1997, 19th year -- consistent, 1996-10-16 to 1997-10-15). The printed " +
+      "date is correct; the motu_proprio shelf's URL slug (17031999, 17 March 1999, its " +
+      'later AAS-publication date) is wrong for the signing date this pipeline records.',
+  },
 };

@@ -60,6 +60,38 @@ export function parseShelfIndex(html: string, pageSlug: string, shelf: string): 
     let headingText = open > 0 ? full.slice(0, open) : full;
     let date = open > 0 ? parseSourceDate(full.slice(open)) : null;
 
+    // Task 16 (John Paul II): a large batch of apost_letters headings -- almost all
+    // Marian-image-crowning or beatification/patronage letters -- pack a disambiguating
+    // gloss into the SAME parenthetical as the date, dash-separated: 'Christifideles
+    // dioecesis (Sancta Victoria - 7 ottobre 1993)'. Recovered here into headingText
+    // (mirroring the two-separate-parens gloss shape already handled elsewhere, e.g. Pius
+    // XII's 'Niangaraensis (Dorumaensis)(24 febbraio 1958)') rather than being silently
+    // discarded with the rest of the date parenthetical. Confirmed against the fetched
+    // fixtures: seven such headings share the incipit 'Christifideles dioecesis' and the
+    // date 7 October 1993 alone, distinguished only by this gloss (each crowns/confirms a
+    // different Marian image or patron saint for a different Polish diocese); six more
+    // share 'Fideles ecclesialis' the same day, and two share 'Sancta Christi' on 4 August
+    // 1997 -- without recovering the gloss, each batch collapses into a single record
+    // under the pass-1 merge key (incipit+date), silently losing the rest. Guarded to fire
+    // only when the pre-dash segment does not itself parse as a date, so a genuine date
+    // RANGE (Pius XII's 'Il Film Ideale (21 giugno 1955 - 25 ottobre 1955)', its own
+    // DATE_CORRECTIONS entry) is untouched -- there both sides of the dash are dates, so
+    // the guard fails and the original single-date reading is kept.
+    if (open > 0) {
+      const close = full.lastIndexOf(')');
+      const paren = close > open ? full.slice(open + 1, close) : full.slice(open + 1);
+      const dashed = paren.match(/^(.*?)\s*-\s*(\d.*)$/);
+      if (dashed) {
+        const pre = dashed[1]!.trim();
+        const post = dashed[2]!.trim();
+        const postDate = parseSourceDate(post);
+        if (pre !== '' && postDate !== null && parseSourceDate(pre) === null) {
+          headingText = `${full.slice(0, open).trimEnd()} (${pre})`;
+          date = postDate;
+        }
+      }
+    }
+
     // Not every printed date is wrapped in parens: two Paul VI apost_letters headings
     // ('Multiformis Sapientia Dei, 27 settembre 1970'; 'Mirabilis in Ecclesia Deus, 4
     // ottobre 1970') print it as a bare trailing ', <day> <month> <year>' instead --

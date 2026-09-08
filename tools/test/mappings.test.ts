@@ -35,7 +35,7 @@ describe('the POPES table', () => {
     expect(POPES.map((p) => p.pageSlug))
       .toEqual([
         'benedictus-xiv', 'pius-ix', 'leo-xiii', 'pius-x', 'pius-xi', 'pius-xii', 'benedict-xv',
-        'john-xxiii', 'paul-vi', 'john-paul-i',
+        'john-xxiii', 'paul-vi', 'john-paul-i', 'john-paul-ii',
       ]);
     expect(POPES.find((p) => p.pageSlug === 'leo-xiii')!.era).toBe('shelf');
     expect(POPES.find((p) => p.pageSlug === 'pius-ix')!.era).toBe('flat');

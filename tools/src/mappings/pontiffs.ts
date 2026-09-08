@@ -105,6 +105,21 @@ export const POPES: readonly PopeSource[] = [
     // `speeches` is out of scope for every pope from Pius XI on (see the Pius X entry above).
     shelves: ['apost_letters', 'letters'],
   },
+  {
+    pageSlug: 'john-paul-ii', issuerId: 'rp:john-paul-ii', era: 'shelf',
+    // The largest pontificate in scope (elected 16 October 1978). apost_letters is
+    // year-partitioned across 1978-2005 and is read through resolveShelfPages; the shelf
+    // list does not distinguish it from the five aggregate shelves. `books` and `jubilee`
+    // are linked from the landing page but are not document shelves (spec §2.5). `letters`
+    // and `speeches` are out of scope (spec §2.7). apost_constitutions (613) is dominated
+    // by circumscription erections filed under a bare Latin toponym -- see the
+    // erection-candidate test in harvest-data.test.ts; confirming them into
+    // CIRCUMSCRIPTION_ERECTIONS is Task 20's work, not this one's.
+    shelves: [
+      'apost_constitutions', 'apost_exhortations', 'apost_letters',
+      'bulls', 'encyclicals', 'motu_proprio',
+    ],
+  },
 ] as const;
 
 /** The shelves harvested for a pope page; empty for an unknown slug or a flat-era page. */

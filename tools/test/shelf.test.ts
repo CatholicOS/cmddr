@@ -148,3 +148,45 @@ describe('parseShelfIndex strips a bare trailing date with no enclosing parens (
     expect(causas?.date).toBe('1971-03-28'); // URL-slug fallback, unaffected by this change
   });
 });
+
+describe('parseShelfIndex recovers a same-parenthetical gloss (Task 16)', () => {
+  // A large batch of John Paul II apost_letters headings pack a disambiguating gloss into
+  // the SAME parenthetical as the date, dash-separated: 'Christifideles dioecesis (Sancta
+  // Victoria - 7 ottobre 1993)'. Before this fix, `full.slice(0, open)` discarded
+  // everything from the opening '(' onward, losing the gloss along with the date -- and
+  // since seven such headings share the bare incipit 'Christifideles dioecesis' and the
+  // date 7 October 1993, all seven collapsed into one record under the pass-1 merge key.
+  const apl1993 = parseShelfIndex(
+    readFileSync('tools/fixtures/john-paul-ii-apost_letters-1993.html', 'utf8'),
+    'john-paul-ii', 'apost_letters',
+  );
+
+  it('splits the gloss into the title and the date out of the same parenthetical', () => {
+    const items = apl1993.filter((d) => d.title.startsWith('Christifideles dioecesis'));
+    expect(items).toHaveLength(7);
+    expect(new Set(items.map((d) => d.title)).size).toBe(7); // each title now distinct
+    expect(items.every((d) => d.date === '1993-10-07')).toBe(true);
+    const sanctaVictoria = items.find((d) => d.title.includes('Sancta Victoria'));
+    expect(sanctaVictoria?.title).toBe('Christifideles dioecesis (Sancta Victoria)');
+    expect(sanctaVictoria?.incipit).toBe('Christifideles dioecesis (Sancta Victoria)');
+  });
+
+  it('does not touch a genuine date range, where both sides of the dash are dates', () => {
+    // Pius XII's 'Il Film Ideale (21 giugno 1955 - 25 ottobre 1955)' is a two-part
+    // exhortation whose own title page spans both dates (DATE_CORRECTIONS) -- the pre-dash
+    // segment '21 giugno 1955' itself parses as a date, so the gloss-recovery guard must
+    // not fire, and the original single-date reading (the first match) must be kept.
+    const exh = parseShelfIndex(
+      readFileSync('tools/fixtures/pius-xii-apost_exhortations.html', 'utf8'),
+      'pius-xii', 'apost_exhortations',
+    );
+    const filmIdeale = exh.find((d) => d.incipit === 'Il Film Ideale');
+    expect(filmIdeale?.date).toBe('1955-06-21');
+  });
+
+  it('never silently drops an item: every div.item on the fixture yields a parsed item', () => {
+    const html = readFileSync('tools/fixtures/john-paul-ii-apost_letters-1993.html', 'utf8');
+    const divCount = (html.match(/class="item"/g) ?? []).length;
+    expect(apl1993).toHaveLength(divCount);
+  });
+});
