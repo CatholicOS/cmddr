@@ -157,6 +157,17 @@ describe('renderIndexMd', () => {
     expect(md).toMatch(/speeches|occasional/i);
   });
 
+  it('names the councils vatican.va does not publish', () => {
+    expect(md).toMatch(/nineteen/);
+    expect(md).toMatch(/Councils before 1870/);
+  });
+
+  it('counts John XXIII among the year-partitioned letters shelves', () => {
+    // His letters shelf is year-partitioned (1958-1963) and unharvested, like Benedict
+    // XV's and Paul VI's onward; the note used to begin at Benedict XV.
+    expect(md).toMatch(/John XXIII, Benedict XV, and Paul VI onward/);
+  });
+
   it('omits the By keyword section entirely when no document carries a keyword', () => {
     expect(md).not.toMatch(/## By keyword/);
   });
