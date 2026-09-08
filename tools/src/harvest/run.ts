@@ -116,10 +116,27 @@ for (const [i, item] of items.entries()) {
 // The vatican.va shelves are not disjoint. Pass 1: a document filed under the same
 // incipit and date on two shelves (seven Leo XIII cases) merges on (pageSlug, incipit-slug,
 // date). Keep the most specific shelf and remember the rest.
+//
+// The merge key deliberately omits shelf, since its whole purpose is to catch the same
+// act filed twice *across* shelves. But that means two genuinely distinct documents
+// sharing (pageSlug, incipit-slug, date) on the *same* shelf collide here too -- and
+// keepMoreSpecific, seeing equal shelf rank, silently keeps whichever was seen first in
+// iteration order and drops the other with no trace (review finding, 2026-09-07; this is
+// the mechanism the BARE_GENRE_SLUGS 'sub-plumbo' entry patches around for the three
+// "sub plumbo" cardinalatial-title erections that would otherwise all collide on this
+// same key). Warn whenever the two colliding items share a shelf, so a same-shelf
+// collision is never mistaken for the intentional cross-shelf case this pass exists for.
 const merged = new Map<string, HarvestItem>();
 for (const item of items) {
   const key = `${item.pageSlug}|${slugify(item.incipit ?? item.title)}|${item.date}`;
   const held = merged.get(key);
+  if (held && held.shelf === item.shelf) {
+    console.warn(
+      `Same-shelf merge collision on ${item.pageSlug}/${item.shelf ?? 'flat'} (${item.date}): `
+      + `'${held.incipit ?? held.title}' and '${item.incipit ?? item.title}' share a merge `
+      + 'key -- one is being silently dropped unless genuinely a duplicate',
+    );
+  }
   merged.set(key, held ? keepMoreSpecific(item, held) : item);
 }
 

@@ -159,23 +159,39 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, { note: string }> = {
  * raised 'al rango di Basilica Minore' is an elevation of a building, not a circumscription.
  * Covers the ranks actually seen in the corpus: diocese/archdiocese, eparchy/archeparchy
  * (the Eastern-rite equivalents), exarchate, prefecture and vicariate (the two ranks a
- * mission territory passes through before becoming a diocese or eparchy).
+ * mission territory passes through before becoming a diocese or eparchy), plus ecclesiastical
+ * province and metropolitan sui iuris church (the two grouping-of-sees ranks, added final
+ * review 2026-09-07 -- see ERECTION_PHRASES's own doc comment for why).
  */
-const CIRCUMSCRIPTION_NOUN = '(diocesi|arcidiocesi|eparchia|arcieparchia|esarcato|prefettura|vicariato)';
+const CIRCUMSCRIPTION_NOUN =
+  '(diocesi|arcidiocesi|eparchia|arcieparchia|esarcato|prefettura|vicariato'
+  + '|provincia ecclesiastica|chiesa metropolitana)';
 
 /**
  * Headings that state the act. Francis and Leo XIV print it in full -- 'Il Santo Padre ha
  * eretto la nuova Diocesi di Caazapá (Paraguay)' -- so the keyword is read from the text
  * rather than guessed. Matched case-insensitively against the whole title.
  *
- * 'erige' alone is guarded by a nearby circumscription noun, the same way 'ha elevato' below
- * is: unguarded, it also fires on non-circumscription acts (Pius XII's chirografo erecting
- * the Istituto per le Opere di Religione; John XXIII's motu proprio erecting the Pontificia
- * Commissione per la Cinematografia).
+ * 'ha eretto' / 'ha istituito' are guarded by a nearby circumscription noun too (final
+ * review, 2026-09-07), for consistency with 'erige' below and 'ha elevato'/'eleva' further
+ * down -- both bare verbs are guarded because, unguarded, they also fire on non-
+ * circumscription acts (Pius XII's chirografo erecting the Istituto per le Opere di
+ * Religione; John XXIII's motu proprio erecting the Pontificia Commissione per la
+ * Cinematografia). Measured before adding: across the full corpus 'ha eretto'/'ha
+ * istituito' match 36 + 1 headings, every one of them a genuine circumscription-erection
+ * apostolic constitution, so the guard is a no-op today -- but three of those 36
+ * ('Il Santo Padre ha eretto la Provincia Ecclesiastica di Calicut...', '...la Chiesa
+ * Metropolitana "sui iuris" eritrea...', '...la Provincia Ecclesiastica di Dodoma...')
+ * would have been wrongly *un*-tagged by the base CIRCUMSCRIPTION_NOUN list, which had no
+ * term for an ecclesiastical province or a metropolitan sui iuris church -- both are
+ * themselves a rank of circumscription, just a grouping-of-sees rank the corpus had not
+ * needed to name before Francis's headings started stating the act in full. Widened
+ * CIRCUMSCRIPTION_NOUN with those two evidenced terms (above) so the guard adds
+ * consistency without regressing recall: still exactly 36 + 1 after widening.
  */
 const ERECTION_PHRASES: readonly RegExp[] = [
-  /\bha eretto\b/i,
-  /\bha istituito\b/i,
+  new RegExp(`\\bha eretto\\b.{0,40}\\b${CIRCUMSCRIPTION_NOUN}\\b`, 'i'),
+  new RegExp(`\\bha istituito\\b.{0,40}\\b${CIRCUMSCRIPTION_NOUN}\\b`, 'i'),
   new RegExp(`\\berige\\b.{0,40}\\b${CIRCUMSCRIPTION_NOUN}\\b`, 'i'),
 ];
 

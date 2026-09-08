@@ -141,7 +141,15 @@ export function parseShelfIndex(html: string, pageSlug: string, shelf: string): 
     }
 
     const { title, incipit } = extractIncipit(headingText);
-    if (!title) return;
+    if (!title) {
+      // Silent loss is this pipeline's worst failure mode (see the date-fallback warning
+      // above, and run.ts's provisional-id tally): an empty title after stripping the
+      // date means the heading printed nothing else at all, or a date-extraction rule
+      // mis-split it down to nothing -- either way, a human should see it rather than the
+      // item vanishing with no trace (review finding, 2026-09-07).
+      console.warn(`Dropping empty-title item '${full}' (${pageSlug}/${shelf})`);
+      return;
+    }
 
     const languages = extractLanguages($, $item);
 
