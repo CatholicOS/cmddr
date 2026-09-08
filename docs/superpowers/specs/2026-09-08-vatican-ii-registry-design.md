@@ -339,12 +339,12 @@ provisional count is unchanged at 316.
 `data/documents/vatican-ii.json` is written by the existing per-issuer loop and picked up by the
 renderer without change; `issuerMd` already branches on the `oec:` prefix.
 
-Two edits to generated prose:
+The by-issuer table's **Shelves harvested** column needs no change either: `renderIndexMd`'s
+`shelvesOf` already returns `— (conciliar)` for any issuer with no `POPES` row, which is how
+Vatican I's cell is produced today. Vatican II gets the same cell by the same fall-through.
 
-- The by-issuer table's **Shelves harvested** column is generated from the harvest configuration.
-  It must read `— (conciliar)` for Vatican II, as it already does for Vatican I, which means the
-  generator has to see `COUNCILS` as well as `POPES` rather than treating a missing pope entry as
-  an error.
+One edit to generated prose:
+
 - **Coverage** gains a sentence naming the nineteen pre-1870 councils as absent for want of a
   vatican.va source, so that a registry now holding two councils cannot be read as claiming
   conciliar completeness.
