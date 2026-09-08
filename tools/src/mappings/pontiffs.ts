@@ -75,6 +75,15 @@ export const POPES: readonly PopeSource[] = [
       'bulls', 'encyclicals', 'motu_proprio',
     ],
   },
+  {
+    pageSlug: 'john-xxiii', issuerId: 'rp:john-xxiii', era: 'shelf',
+    // apost_constitutions and apost_letters are year-partitioned (1958-1963) and are
+    // read through resolveShelfPages; the shelf list does not distinguish them.
+    shelves: [
+      'apost_constitutions', 'apost_exhortations', 'apost_letters',
+      'encyclicals', 'motu_proprio',
+    ],
+  },
 ] as const;
 
 /** The shelves harvested for a pope page; empty for an unknown slug or a flat-era page. */

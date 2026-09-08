@@ -292,4 +292,37 @@ export const DATE_CORRECTIONS: Record<string, { date: string; note: string }> = 
       "apost_letters shelf's printed date ('16 aprile 1920', 16 April) is the error; its own " +
       'URL slug (19200417, 17 April) is correct.',
   },
+
+  // Task 13 (John XXIII, elected 28 October 1958). Every entry below is adjudicated
+  // against the document's own dating formula, read on vatican.va, and cross-checked
+  // against its stated pontificate year.
+  'john-xxiii|apost_constitutions|portus-alexii-et-vevakensis-gorokaensis-montis-hagensis-laensis|1959-06-18':
+    {
+      date: '1959-06-18',
+      note:
+        "Portus Alexii et Vevakensis's own dating formula reads 'Datum Romae, apud S. Petrum, " +
+        "die duodevicesimo mensis Iunii, anno Domini millesimo nongentesimo quinquagesimo nono, " +
+        "Pontificatus Nostri primo' (18 June 1959, 1st year of the pontificate -- consistent, " +
+        'since John XXIII was elected 28 October 1958 and his 1st year runs 1958-10-28 to ' +
+        "1959-10-27). The printed date is correct; the apost_constitutions shelf's own URL " +
+        'slug (19590612, 12 June) is wrong.',
+    },
+  'john-xxiii|apost_letters|haud-raro|2008-10-24': {
+    date: '1959-10-24',
+    note:
+      "The apost_letters shelf prints '(24 ottobre 2008)' -- a manifest transcription typo " +
+      "(2008 for 1959): Haud raro's own dating formula reads 'Datum Roma, apud Sanctum " +
+      "Petrum, sub anulo Piscatoris, die XXIV mensis Octobris, anno MCMLIX, Pontificatus " +
+      "Nostri primo' (24 October 1959, 1st year of the pontificate -- consistent, 1958-10-28 " +
+      "to 1959-10-27). The shelf's own URL slug (19591024, 24 October 1959) is correct.",
+  },
+  'john-xxiii|apost_letters|luce-collustrans|1960-12-22': {
+    date: '1960-12-22',
+    note:
+      "Luce collustrans's own dating formula reads 'Datum Romae, apud Sanctum Petrum, sub " +
+      "anulo Piscatoris, die XXII mensis Decembris, anno MCMLX, Pontificatus Nostri tertio' " +
+      '(22 December 1960, 3rd year of the pontificate -- consistent, 1960-10-28 to ' +
+      "1961-10-27). The printed date is correct; the apost_letters shelf's own URL slug " +
+      '(19601216, 16 December) is wrong.',
+  },
 };

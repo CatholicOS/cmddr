@@ -499,3 +499,165 @@ describe('the Benedict XV corpus', () => {
     expect(load('pius-xii')).toHaveLength(253);
   });
 });
+
+describe('the John XXIII corpus', () => {
+  const docs = load('john-xxiii');
+
+  it('holds every formal-shelf document, including the year-partitioned shelves', () => {
+    // 178 raw items across five shelves: 8 encyclicals + 3 apost_exhortations +
+    // 14 motu_proprio (all three aggregate pages) + 48 apost_constitutions (year pages
+    // 1958-1962: 8+36+2+1+1) + 105 apost_letters (year pages 1958-1963: 4+40+50+9+1+1).
+    // apost_constitutions and apost_letters are the first shelves in this whole corpus
+    // whose own aggregate index carries no div.item at all (resolveShelfPages falls
+    // through to their year pages -- see the traversal test below). One merges away:
+    //   - a devotional pamphlet ('Piccolo saggio di devoti pensieri...') filed on
+    //     apost_letters as a formal supplement to 'Il religioso convegno' (also
+    //     apost_letters), proven by the shared vatican.va document slug 'religioso-
+    //     convegno' -- pass 2, automatic/mechanical, no hand curation needed.
+    // 178 - 1 = 177.
+    expect(docs).toHaveLength(177);
+  });
+
+  it('files them all under the right issuer', () => {
+    expect(docs.every((d) => d.issuerId === 'rp:john-xxiii')).toBe(true);
+    expect(docs.every((d) => d.id.startsWith('mag:john-xxiii/'))).toBe(true);
+  });
+
+  it('gives every document a title', () => {
+    expect(docs.every((d) => typeof d.title === 'string' && d.title.length > 0)).toBe(true);
+  });
+
+  it('omits the incipit exactly when the id is provisional', () => {
+    for (const d of docs) {
+      expect('incipit' in d, d.id).toBe(d.idStatus === 'minted');
+    }
+    // 33 of 177 (18.6%) carry no recoverable incipit -- overwhelmingly circumscription
+    // acts (new dioceses/prefectures/vicariates named only by a bare Latin toponym with
+    // no printed incipit) and motu proprio/apost_letters items whose heading opens with
+    // a restated genre phrase ('Lettera Apostolica «Motu Proprio» ...') followed
+    // directly by a gloss, with nothing capitalised in between. Each was checked by hand
+    // against its own vatican.va heading. Three were genuine rule-table gaps, fixed here
+    // (see the two tests below and task-13-report.md); one further gap ('Quod Dilectum,
+    // al Card. V. Gracias...', docSlug quod-dilectum -- a real counter-example to the
+    // MID_ADDRESS_PATTERN evidence base) is identified but deliberately left unfixed,
+    // reported rather than patched, per task-13-report.md.
+    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(33);
+  });
+
+  it('reads the year-partitioned shelves, whose aggregate index carries no items', () => {
+    const apc = docs.filter((d) => d.source?.shelf === 'apost_constitutions');
+    expect(apc.length).toBeGreaterThan(0);
+    expect(docs.some((d) => d.incipit === 'Veterum Sapientia')).toBe(true);
+  });
+
+  it('adjudicates three printed/slug date mismatches from each document\'s own dating formula', () => {
+    // 'Portus Alexii et Vevakensis' reads 'Datum Romae, apud S. Petrum, die duodevicesimo
+    // mensis Iunii, anno Domini millesimo nongentesimo quinquagesimo nono, Pontificatus
+    // Nostri primo' -- 18 June 1959, 1st year of the pontificate (John XXIII was elected
+    // 28 October 1958, so his 1st year runs 1958-10-28 to 1959-10-27). The printed date
+    // is correct; the apost_constitutions shelf's URL slug (19590612, 12 June) is wrong.
+    const pa = docs.find((d) => d.incipit === 'Portus Alexii et Vevakensis (Gorokaensis, Montis Hagensis, Laensis)')!;
+    expect(pa.date).toBe('1959-06-18');
+
+    // 'Haud raro' prints '(24 ottobre 2008)' -- a manifest transcription typo (2008 for
+    // 1959): its own dating formula reads 'die XXIV mensis Octobris, anno MCMLIX,
+    // Pontificatus Nostri primo' (24 October 1959, 1st year -- consistent). The
+    // apost_letters shelf's URL slug (19591024) is correct.
+    const hr = docs.find((d) => d.incipit === 'Haud raro')!;
+    expect(hr.date).toBe('1959-10-24');
+
+    // 'Luce collustrans' reads 'die XXII mensis Decembris, anno MCMLX, Pontificatus
+    // Nostri tertio' -- 22 December 1960, 3rd year of the pontificate (1960-10-28 to
+    // 1961-10-27, consistent). The printed date is correct; the apost_letters shelf's
+    // URL slug (19601216, 16 December) is wrong.
+    const lc = docs.find((d) => d.incipit === 'Luce collustrans')!;
+    expect(lc.date).toBe('1960-12-22');
+  });
+
+  it('preserves thirteen adjudicated-distinct same-date cross-shelf pairs as separate documents', () => {
+    // This pontificate's apost_constitutions and apost_letters shelves routinely batch
+    // several unrelated circumscription/patronage acts on one day; each pair below is
+    // proven distinct by its own printed descriptive clause (see adjudicated-distinct.ts).
+    const byDate = (date: string) => docs.filter((d) => d.date === date);
+
+    // 1959-05-23: a five-document batch (two apost_constitutions erections, three
+    // apost_letters patronage/basilica grants) -- all ten cross-shelf pairs adjudicated.
+    const g0523 = byDate('1959-05-23');
+    expect(g0523).toHaveLength(5);
+    expect(g0523.map((d) => d.incipit ?? d.title).sort()).toEqual([
+      'Angelorum - Mexicanae (Tlaxcalensis), con la quale viene eretta la diocesi di '
+        + "Tlaxcala in Messico, ricavandone il territorio dalle arcidiocesi di Città del "
+        + 'Messico e di Puebla de los Ángeles',
+      'Augustae Virgini', 'Potiora inter', 'Urbs Roma', 'Verae Crucis',
+    ]);
+
+    expect(byDate('1959-05-21').map((d) => d.incipit).sort())
+      .toEqual(['De Diego Suarez', 'Plantaria Novella']);
+    expect(byDate('1959-05-04').map((d) => d.incipit).sort())
+      .toEqual(['Caritatis Unitas', 'Nagasakiensis (Qui cotidie)']);
+    expect(byDate('1959-01-10').map((d) => d.incipit).sort())
+      .toEqual(['Changanacherrensis et aliarum', 'Cuschensis (Sicuanensi)', 'Gaudii nuntia']);
+    expect(byDate('1960-07-25').map((d) => d.incipit ?? d.title).sort()).toEqual([
+      'Expedit sane',
+      'Lettera Apostolica «Motu Proprio» Rubricarum Instructum con la quale si approva il '
+        + 'nuovo Codice delle Rubriche del Breviario e del Messale Romano',
+      'Qui servatorem',
+    ]);
+    expect(byDate('1960-02-29').map((d) => d.incipit ?? d.title).sort()).toEqual([
+      'De Pontificio Consilio Ecclesiasticis Italiae Tabularis curandis Motu proprio che '
+        + 'stabilisce il riordinamento degli Archivi Ecclesiastici in Italia ed emana il '
+        + 'nuovo Statuto',
+      'Diuturno usu',
+    ]);
+  });
+
+  it('recovers an incipit trailed by a bare genre restatement (Task 13 review)', () => {
+    // 'Cum inde Motu Proprio che conferisce al Pontificio Ateneo Lateranense il titolo di
+    // "Universitas"' (docSlug cum-inde): without the ' Motu Proprio che ' connector, the
+    // bare ' al ' connector already in GLOSS_CONNECTORS still cut, but much later --
+    // wrongly minting 'Cum inde Motu Proprio che conferisce' as if 'al Pontificio
+    // Ateneo...' were an address salutation, which it is not.
+    const d = docs.find((doc) => doc.incipit === 'Cum inde')!;
+    expect(d).toBeDefined();
+    expect(d.id).toBe('mag:john-xxiii/cum-inde-1959');
+  });
+
+  it('recovers a genuine incipit that would otherwise be silently minted with its gloss baked in, or wrongly nulled (Task 13 review)', () => {
+    // 'Sacrarum Expeditionum, la Sacra Gerarchia istituita nell'Indonesia' (docSlug
+    // sacrarum-expeditionum, confirmed against the document's own printed title): at only
+    // seven words, this heading sneaks under MAX_INCIPIT_WORDS on the untouched path
+    // without the ', la Sacra Gerarchia' connector, so it was silently minted with the
+    // whole gloss baked into its id -- the dangerous failure mode, not merely a missed
+    // incipit.
+    const se = docs.find((doc) => doc.incipit === 'Sacrarum expeditionum')!;
+    expect(se).toBeDefined();
+    expect(se.id).toBe('mag:john-xxiii/sacrarum-expeditionum-1961');
+
+    // 'Iam in Pontificatus, la Sacra Gerarchia istituita nel Vietnam' (docSlug
+    // iam-in-pontificatus): the same connector, nine words, correctly provisional before
+    // the fix but minted correctly after it.
+    const ip = docs.find((doc) => doc.incipit === 'Iam in Pontificatus')!;
+    expect(ip).toBeDefined();
+    expect(ip.id).toBe('mag:john-xxiii/iam-in-pontificatus-1961');
+
+    // 'Quotiescumque Nobis, lo sviluppo della Sacra Gerarchia nell'Isola di Formosa'
+    // (docSlug quotiescumque, confirmed against the document's own printed title
+    // 'Quotiescumque Nobis, Epistula Apostolica ob tres dioeceses in Insula Formosa
+    // noviter erectas'): the sibling ', lo sviluppo della Sacra Gerarchia' connector.
+    const qn = docs.find((doc) => doc.incipit === 'Quotiescumque nobis')!;
+    expect(qn).toBeDefined();
+    expect(qn.id).toBe('mag:john-xxiii/quotiescumque-nobis-1961');
+  });
+
+  it('satisfies every invariant', () => {
+    expect(checkDocuments(docs, genres, keywords)).toEqual([]);
+  });
+
+  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, and 63 Benedict XV records untouched', () => {
+    expect(all).toHaveLength(383);
+    expect(load('pius-x')).toHaveLength(306);
+    expect(load('pius-xi')).toHaveLength(158);
+    expect(load('pius-xii')).toHaveLength(253);
+    expect(load('benedict-xv')).toHaveLength(63);
+  });
+});

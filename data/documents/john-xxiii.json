@@ -1,0 +1,3561 @@
+[
+  {
+    "id": "mag:john-xxiii/pacensis-in-bolivia-coroicensis-1958",
+    "title": "Pacensis in Bolivia (Coroicensis), con la quale viene costituita la Diocesi di Coroico, una sede della Chiesa cattolica suffraganea dell'Arcidiocesi di La Paz in Bolivia",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1958-11-07",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1958/documents/hf_j-xxiii_apc_19581107_coroicensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Pacensis in Bolivia (Coroicensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/papal-bull-1958-11-09",
+    "title": "Torontinae - Hamiltonensis (S. Catharinae in Ontario), con la quale viene costituita la Diocesi di Saint Catharines, una sede della Chiesa cattolica suffraganea dell'arcidiocesi di Toronto appartenente alla regione ecclesiastica Ontario, in Canada",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1958-11-09",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1958/documents/hf_j-xxiii_apc_19581109_catharinae.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/divini-pastoris-ecclesiasticis-1958",
+    "title": "Divini Pastoris Ecclesiasticis",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1958-11-12",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/motu_proprio/documents/hf_j-xxiii_motu-proprio_19581112_divini-pastoris.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Divini Pastoris Ecclesiasticis",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:john-xxiii/portus-moresby-mendiensis-1958",
+    "title": "Portus Moresby (Mendiensis) con la quale viene costituita la Diocesi di Mendi in Papua Nuova Guinea",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1958-11-13",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1958/documents/hf_j-xxiii_apc_19581113_mendiensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Portus Moresby (Mendiensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/haeret-animis-1958",
+    "title": "Haeret animis, con la quale viene dichiarata la Beata Vergine Maria «Nossa Senhora da Piedade» patrona di Mina Gerais in Brasile",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1958-11-20",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1958/documents/hf_jxxiii_apl_19581120_haeret-animis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Haeret animis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/durangensis-chihuahuensis-1958",
+    "title": "Durangensis (Chihuahuensis), con la quale viene costituita la Diocesi di Chihuahua, una sede della Chiesa cattolica suffraganea dell'arcidiocesi di Durango in Messico",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1958-11-22",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1958/documents/hf_j-xxiii_apc_19581122_chihuahuensi.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Durangensis (Chihuahuensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/papal-bull-1958-11-22",
+    "title": "Durangensis - Sinaloensis (Mazatlanensis), con la quale viene costituita la Diocesi di Mazatlán, una sede della Chiesa cattolica suffraganea dell'arcidiocesi di Durango in Messico",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1958-11-22",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1958/documents/hf_j-xxiii_apc_19581122_mazatlanensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/inclitam-dei-genetricem-1958",
+    "title": "Inclitam Dei genetricem, con la quale la Beata Maria Vergine «De Arma» viene dichiarata patrona della diocesi di Sonsón-Rionegro in Colombia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1958-11-28",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1958/documents/hf_jxxiii_apl_19581128_dei-genetricem.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Inclitam Dei genetricem",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/bergomensem-inter-1958",
+    "title": "Bergomensem Inter con la quale la Chiesa Parrocchiale dei SS. Bartolomeo e Girolamo Emiliani della diocesi di Bergamo viene dichiarata Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1958-12-10",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1958/documents/hf_jxxiii_apl_19581210_bergomensem-inter.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Bergomensem Inter",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/fortiter-suaviterque-1958",
+    "title": "Fortiter suaviterque con la quale il Santuario della «Madonna del Bosco», nell'Arcidiocesi di Milano, viene dichiarato Basilica Romana",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1958-12-10",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1958/documents/hf_jxxiii_apl_19581210_madonna-bosco.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Fortiter suaviterque",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/liberopolitanae-muilaensis-1958",
+    "title": "Liberopolitanae (Muilaënsis), con la quale viene eretta la Diocesi di Mouila, una sede della Chiesa cattolica suffraganea dell'arcidiocesi di Libreville nella Repubblica Gabonese in Africa Centrale",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1958-12-11",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1958/documents/hf_j-xxiii_apc_19581211_muilaensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Liberopolitanae (Muilaënsis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/papal-bull-1958-12-11",
+    "title": "Liberopolitanae, con la quale la diocesi di Libreville nella Repubblica Gabonese in Africa Centrale, viene eletta al rango di Arcidiocesi Metropolitana",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1958-12-11",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1958/documents/hf_j-xxiii_apc_19581211_liberopolitana.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/tananarivensis-de-diego-suarez-et-aliarum-1958",
+    "title": "Tananarivensis (De Diego Suarez et Aliarum), con la quale vengono elevate al rango di Arcidiocesi Metropolitane le diocesi di Diego Suarez e Fianarantsoa e viene elevata al rango di Diocesi la prefettura di Tsiroanomandidy",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1958-12-11",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1958/documents/hf_j-xxiii_apc_19581211_tananarivensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Tananarivensis (De Diego Suarez et Aliarum)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/papal-bull-1959-01-08",
+    "title": "Chihuahuensis, con la quale viene istituito ilCapitolo dei Canonici nella cattedrale di Chihuahua in Messico",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-01-08",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590108_chihuahuensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/changanacherrensis-et-aliarum-1959",
+    "title": "Changanacherrensis et aliarum, con la quale viene conferito il titolo di Arcidiocesi alla Diocesi di Changanacherry in India",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-01-10",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590110_changanacherrensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Changanacherrensis et aliarum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/cuschensis-sicuanensi-1959",
+    "title": "Cuschensis (Sicuanensi), con la quale viene creata la prelatura territoriale di Sicuani, una sede della Chiesa cattolica suffraganea dell'arcidiocesi di Cuzco in Perù",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-01-10",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590110_sicuanensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cuschensis (Sicuanensi)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/gaudii-nuntia-1959",
+    "title": "Gaudii nuntia, con la quale la chiesa parrocchiale di Notre Dame de Joie, nella diocesi di Vannes, viene dichiarata Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-01-10",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590110_gaudii-nuntia.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Gaudii nuntia",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/opere-nobilissimo-1959",
+    "title": "Opere Nobilissimo, con la quale viene concessa l'Indulgenza Plenaria e Parziale presso la Basilica di San Marco a Venezia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-01-14",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590114_opere-nobilissimo.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Opere Nobilissimo",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/pientissima-virgo-1959",
+    "title": "Pientissima Virgo, con la quale viene conferito il titolo di Basilica Minore al Santuario della Madonna dei Sette Dolori a Pescara",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-01-16",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590116_pientissima-virgo.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Pientissima Virgo",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/urbis-fori-livii-1959",
+    "title": "Urbis Fori Livii, con la quale viene attribuito il titolo di Basilica Minore all'Abbazia di San Mercuriale a Forlì",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-01-16",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590116_fori-livii.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Urbis Fori Livii",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/caiazeirasensis-campinensis-grandis-patosensis-1959",
+    "title": "Caiazeirasensis-Campinensis Grandis (Patosensis), con la quale viene costituita la Diocesi di Patos sede della Chiesa cattolica suffraganea dell'arcidiocesi di Paraíba in Brasile",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-01-17",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590117_patosensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Caiazeirasensis-Campinensis Grandis (Patosensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/berberatensis-bossangoaensis-1959",
+    "title": "Berberatensis (Bossangoaënsis), con la quale viene eretta la Prefettura Apostolica di Bossangoa, ricavandone il territorio dalla diocesi di Berbérati",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-02-09",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590209_bossangoaensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Berberatensis (Bossangoaënsis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/niameyensis-fadangurmaensis-1959",
+    "title": "Niameyensis (Fadangurmaënsis), con la quale viene eretta la Prefettura Apostolica di Fada N'Gourma ricavandone il territorio dall'Arcidiocesi di Niamey",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-02-12",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590212_fadangurmaensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Niameyensis (Fadangurmaënsis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/iquiquensis-aricensis-1959",
+    "title": "Iquiquensis (Aricensis), con la quale viene creata la Prelatura Nullius di Arica con territorio dismembrato dalla diocesi di Iquique in Cile",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-02-17",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590217_aricensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Iquiquensis (Aricensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/papal-bull-1959-02-19",
+    "title": "Munduensis, con la quale viene elevata a Diocesi la Prefettura Apostolica di Moundou nella Repubblica del Ciad, in Africa Centrale",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-02-19",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590219_munduensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/motu-proprio-1959-02-22",
+    "title": "Lettera Apostolica «Motu proprio» Boni Pastoris che erige la Pontificia Commissione per la Cinematografia, la Radio e la Televisione come stabile Ufficio della Santa Sede",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-02-22",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/it/motu_proprio/documents/hf_j-xxiii_motu-proprio_22021959_boni-pastoris.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:john-xxiii/agnes-sepulchrum-1959",
+    "title": "Agnes Sepulchrum, con la quale viene conferito il titolo di «Stazionale» alla Basilica di S. Agnese fuori le Mura",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-02-27",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590227_agnes-sepulchrum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Agnes Sepulchrum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/papal-bull-1959-03-07",
+    "title": "Botucatuensis, con la quale viene istituito il Capitolo dei Canonici nella cattedrale di Botucatu",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-03-07",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590307_botucatuensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/calaguritanae-et-calceatensis-logrognesis-1959",
+    "title": "Calaguritanae et Calceatensis (Logrognesis) con la quale la diocesi di Calahorra e La Calzada in Spagna, assume il nome di diocesi di Calahorra e La Calzada-Logroño e la chiesa Santa María de la Redonda di Logroño, viene elevata al rango di concattedrale",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-03-09",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590309_logrognensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Calaguritanae et Calceatensis (Logrognesis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/mindoniensis-ferrolensis-1959",
+    "title": "Mindoniensis (Ferrolensis) con la quale la diocesi di Mondoñedo assume il nome di diocesi di Mondoñedo–Ferrol, sede della Chiesa cattolica in Spagna, suffraganea dell'arcidiocesi di Santiago di Compostela",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-03-09",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590309_ferrolensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Mindoniensis (Ferrolensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/oriolensis-lucentinae-1959",
+    "title": "Oriolensis (Lucentinae) con la quale la diocesi di Orihuela in Spagna viene denominata diocesi di Orihuela-Alicante e nella stessa viene istituita la concattedrale",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-03-09",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590309_oriolensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Oriolensis (Lucentinae)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/oxomensis-sorianae-1959",
+    "title": "Oxomensis (Sorianae) con la quale la diocesi di Osma in Spagna, assume la denominazione di diocesi di Osma-Soria e la chiesa di San Pietro, viene elevata al rango di concattedrale",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-03-09",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590309_oxomensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Oxomensis (Sorianae)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/seguntinae-guadalajarensis-1959",
+    "title": "Seguntinae (Guadalajarensis) con la quale la diocesi di Sigüenza in Spagna, assume la denominazione di diocesi di Sigüenza-Guadalajara e la chiesa di Santa Maria di Guadalajara viene elevata al rango di concattedrale",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-03-09",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590309_seguntinae.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Seguntinae (Guadalajarensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/tudensis-vicensis-1959",
+    "title": "Tudensis (Vicensis) con la quale la Chiesa di Tui assume la denominazione di Tui-Vigo e la chiesa dell'Assunzione di Maria Vergine (La Asunción de Santa María) di Vigo, viene elevata alla dignità di concattedrale",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-03-09",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590309_tudensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Tudensis (Vicensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/celsitudo-ex-humiltate-1959",
+    "title": "Celsitudo ex humiltate, con la quale San Lorenzo da Brindisi viene dichiarato Dottore della Chiesa Universale",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-03-19",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590319_celsitudo-humilitate.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Celsitudo ex humiltate",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/qui-huius-saeculi-1959",
+    "title": "Qui huius saeculi, con la quale la Beata Vergine Maria di Fatima viene dichiarata insieme a San Domenico Confessore, Patrona della diocesi di Nueve de Julio in Argentina",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-03-23",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590323_qui-huius.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Qui huius saeculi",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/sancti-dominici-a-domina-nostra-vulgo-de-la-altagracia-in-higuey-seu-higueyensis-1959",
+    "title": "Sancti Dominici (a Domina Nostra vulgo De La Altagracia in Higüey seu Higueyensis) con la quale viene eretta la diocesi di Nuestra Señora de la Altagracia en Higüey nella Repubblica Dominicana, ricavandone il territorio dalla diocesi di Santo Domingo",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-04-01",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590401_sancti-dominici.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sancti Dominici (a Domina Nostra vulgo De La Altagracia in Higüey seu Higueyensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/kimberleyensis-et-aliarum-bechuanalandensis-1959",
+    "title": "Kimberleyensis et aliarum (Bechuanalandensis) con la quale la diocesi di Kimberley in Sudafrica, ha ceduto parte del suo territorio per l'erezione della prefettura apostolica del Bechuanaland",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-04-02",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590402_kimberleyensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Kimberleyensis et aliarum (Bechuanalandensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/papal-bull-1959-04-02",
+    "title": "Oturkpoënsis, con la quale la prefettura apostolica di Oturkpo in Nigeria, viene elevata al rango di diocesi",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-04-02",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590402_oturkpoensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/papal-bull-1959-04-06",
+    "title": "Culiacanensis, con la quale viene istituito il Capitolo dei Canonici nella cattedrale di Culiacán in Messico",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-04-06",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590406_culiacanensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/quantum-dilectionis-1959",
+    "title": "Quantum dilectionis, con la quale San Gabriele dell'Addolorata viene dichiarato Patrono d'Abruzzo",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-04-10",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590410_quantum-dilectionis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quantum dilectionis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/materna-caritas-1959",
+    "title": "Materna Caritas, Lettera Decretale con la quale viene proclamata Santa la Beata Joaquina De Vedruna De Mas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-04-12",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590412_materna-caritas.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Materna Caritas",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/mirabilis-tot-1959",
+    "title": "Mirabilis Tot, Lettera Decretale con la quale viene proclamato Santo il Beato Carlo Da Sezze",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-04-12",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590412_mirabilis-tot.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Mirabilis Tot",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/cui-datum-1959",
+    "title": "Cui Datum, con la quale San Giuseppe viene eletto Patrono della Diocesi di Tapachula in Messico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-04-14",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590414_cui-datum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cui Datum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/quae-festo-1959",
+    "title": "Quae festo, che conferma la Beata Vergine Maria Immacolata, Patrona della diocesi di Morón in Argentina",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-04-15",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590415_quae-festo.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quae festo",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/exarchia-in-germania-1959",
+    "title": "Exarchia in Germania, con la quale viene eretto l'esarcato apostolico di Germania e Scandinavia per i fedeli ruteni di rito bizantino",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-04-17",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590417_exarchia.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Exarchia in Germania",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/a-quarantacinque-anni-1959",
+    "title": "A quarantacinque anni",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-04-21",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/it/apost_exhortations/documents/hf_j-xxiii_exh_19590421_spoglie-piox.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "A quarantacinque anni",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:john-xxiii/luluaburgensis-lueboensis-1959",
+    "title": "Luluaburgensis (Lueboënsis), con la quale viene eretto il vicariato apostolico di Luebo nella Repubblica Democratica del Congo, ricavandone il territorio dal vicariato apostolico di Luluabourg",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-04-25",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590425_luluaburgensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Luluaburgensis (Lueboënsis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/papal-bull-1959-04-25",
+    "title": "Nzerekoreensis, che eleva la prefettura apostolica di Nzerekore in Guinea al grado di diocesi",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-04-25",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590425_nzerekoreensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/rhodesiae-septemtrionalis-et-nyassaland-1959",
+    "title": "Rhodesiae Septemtrionalis et Nyassaland, con la quale vengono costituite le province ecclesiastiche di Rhodesia settentrionale e Nyassaland",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-04-25",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590425_rhodesiae.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Rhodesiae Septemtrionalis et Nyassaland",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/renovans-faciem-1959",
+    "title": "Renovans faciem, con la quale viene dichiarata Beata Elena Guerra fondatrice Istituto Santa Zita Suore Oblate dello Spirito Santo",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-04-26",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590426_renovans-faciem.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Renovans faciem",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/mariani-cultus-1959",
+    "title": "Mariani Cultus, con la quale viene conferito il titolo di Basilica Minore alla chiesa della Beata Maria Vergine «Del Quinche» nell'Arcidiocesi di Quito in Ecuador",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-05-02",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590502_mariani-cultus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Mariani Cultus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/caritatis-praeconium-1959",
+    "title": "Caritatis Praeconium, con la quale viene proclamata Beata, Marie Marguerite d'Youville fondatrice della Congregazione delle Suore della Carità",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-05-03",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590503_caritatis-praeconium.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Caritatis Praeconium",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/caritatis-unitas-1959",
+    "title": "Caritatis Unitas, con la quale viene istituita la federazione dei Canonici Regolari di Sant'Agostino Confederati",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-05-04",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590504_caritatis-unitas.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Caritatis Unitas",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/nagasakiensis-qui-cotidie-1959",
+    "title": "Nagasakiensis (Qui cotidie), che eleva al rango di arcidiocesi metropolitana, la diocesi di Nagasaki in Giappone",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-05-04",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590504_qui-cotidie.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Nagasakiensis (Qui cotidie)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/cum-inde-1959",
+    "title": "Cum inde Motu Proprio che conferisce al Pontificio Ateneo Lateranense il titolo di \"Universitas\"",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-05-17",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/motu_proprio/documents/hf_j-xxiii_motu-proprio_19590517_cum-inde.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Cum inde",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:john-xxiii/de-diego-suarez-1959",
+    "title": "De Diego Suarez - Tananarivensis (Ambatondrazakaënsis), con la quale è stata eretta la diocesi di Ambatondrazaka, in Madagascar, ricavandone il territorio dalle arcidiocesi di Diégo Suarez e Tananarive",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-05-21",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590521_ambatondrazakaensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "De Diego Suarez",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/plantaria-novella-1959",
+    "title": "Plantaria Novella, con la quale Sant'Isidoro l'Agricoltore viene dichiarato Patrono della Diocesi di San Isidro in Argentina",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-05-21",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590521_plantaria-novella.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Plantaria Novella",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/augustae-virgini-1959",
+    "title": "Augustae Virgini, con la quale viene conferito il titolo di Basilica Minore alla Chiesa di Nostra Signora di Lourdes a Rio de Janeiro in Brasile",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-05-23",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590523_augustae-virginis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Augustae Virgini",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/papal-bull-1959-05-23",
+    "title": "Angelorum - Mexicanae (Tlaxcalensis), con la quale viene eretta la diocesi di Tlaxcala in Messico, ricavandone il territorio dalle arcidiocesi di Città del Messico e di Puebla de los Ángeles",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-05-23",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590523_tlancalensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/potiora-inter-1959",
+    "title": "Potiora inter, con la quale la Beata Maria Vergine « Nuestra Señora del El Soto », viene dichiarata Patrona della Valle del Toranzo in Cantabria",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-05-23",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590523_potiora-inter.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Potiora inter",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/urbs-roma-1959",
+    "title": "Urbs Roma, con la quale viene conferito il titolo di Basilica Minore alla Chiesa del Sacro Cuore Immacolato di Maria",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-05-23",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590523_urbs-roma.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Urbs Roma",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/verae-crucis-1959",
+    "title": "Verae Crucis — Tehuantepecensis (S. Andreae De Tuxtla), con la quale viene eretta la diocesi di San Andrés Tuxtla, in Messico, ricavandone il territorio dalla diocesi di Tehuantepec e dalla diocesi di Veracruz-Jalapa",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-05-23",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590523_verae-crucis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Verae Crucis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/delhiensis-et-simlensis-simlensis-1959",
+    "title": "Delhiensis et Simlensis (Simlensis), con la quale viene eretta la diocesi di Simla, in India, ricavandone il territorio dall'Arcidiocesi di Delhi",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-06-04",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590604_simlensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Delhiensis et Simlensis (Simlensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/ecclesiae-filii-1959",
+    "title": "Ecclesiae Filii, con la quale la Beata Vergine Maria dal Cuore Immacolato, viene dichiarata Patrona della Diocesi di Wollongong in Australia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-06-06",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590606_ecclesia-filii.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ecclesiae Filii",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/salutare-sidus-1959",
+    "title": "Salutare sidus, con la quale viene eletta L'immacolata Vergine Maria come Patrona dell'Arcidiocesi de La Plata in Argentina",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-06-10",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590610_salutare-sidus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Salutare sidus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/insularum-salomonicarum-insularum-salomonicarum-occidental-1959",
+    "title": "Insularum Salomonicarum (Insularum Salomonicarum Occidental.)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-06-11",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590611_insularum-salomonicarum.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Insularum Salomonicarum (Insularum Salomonicarum Occidental.)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/papal-bull-1959-06-11",
+    "title": "Ngoziensis - Kitegaënsis (Usumburaënsis) con la quale viere eretto il vicariato apostolico di Usumbura in Burundi ricavandone il territorio dai vicariati apostolici di Kitega e di Ngozi",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-06-11",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590611_usumburaensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/portus-alexii-et-vevakensis-gorokaensis-montis-hagensis-laensis-1959",
+    "title": "Portus Alexii et Vevakensis (Gorokaensis, Montis Hagensis, Laensis), con la quale vengono eretti i vicariati apostolici di Goroka, Mount Hagen e Lae, in Papua Nuova Guinea, ricavandone il territorio dal vicariato apostolico di Alexishafen",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-06-18",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590612_portus-alexii.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Portus Alexii et Vevakensis (Gorokaensis, Montis Hagensis, Laensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/portalegrensis-in-brasilia-s-crucis-in-brasilia-1959",
+    "title": "Portalegrensis in Brasilia (S. Crucis in Brasilia) con la quale viene costituita la diocesi di Santa Cruz do Sul, sede della Chiesa cattolica suffraganea dell'arcidiocesi di Porto Alegre in Brasile",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-06-20",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590620_scrucis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Portalegrensis in Brasilia (S. Crucis in Brasilia)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/ad-petri-cathedram-1959",
+    "title": "Ad Petri Cathedram",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/it/encyclicals/documents/hf_j-xxiii_enc_29061959_ad-petri.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad Petri Cathedram",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:john-xxiii/bugavuensis-gomaensis-1959",
+    "title": "Bugavuënsis (Gomaënsis) con la quale viene eretto il vicariato apostolico di Goma, ricavandone il territorio dal vicariato apostolico di Bukavu",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-06-30",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590630_bukavuensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Bugavuënsis (Gomaënsis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/papal-bull-1959-06-30",
+    "title": "Hiroshimaënsis con la quale il vicariato apostolico di Hiroshima viene elevato a diocesi",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-06-30",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590630_hiroshimaensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/salutiferos-cruciatos-1959",
+    "title": "Salutiferos cruciatos, con la quale viene approvato l'ordinamento della Congregazione dei Chierici Scalzi della Santissima Croce e Passione di Nostro Signore Gesù Cristo",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-07-01",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590701_salutiferos-cruciatus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Salutiferos cruciatos",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/essendiae-in-urbe-1959",
+    "title": "Essendiae in urbe, con la quale Maria Madre del Buon Consiglio, la «Madonna Dorata» viene elette Patrona della diocesi di Essen in Germania",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-07-08",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590708_essendiae-urbe.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Essendiae in urbe",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/lagosensis-kadunaensis-1959",
+    "title": "Lagosensis (Kadunaënsis) con la quale la diocesi di Kaduna in Nigeria, viene elevata al rango di Arcidiocesi",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-07-16",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590716_lagosensis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Lagosensis (Kadunaënsis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/portus-moresby-insulae-yule-et-daruensis-1959",
+    "title": "Portus Moresby (Insulae Yule et Daruensis)",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-07-16",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1959/documents/hf_j-xxiii_apc_19590716_portus-moresby.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Portus Moresby (Insulae Yule et Daruensis)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/meritis-celebratur-1959",
+    "title": "Meritis celebratur, con la quale la cattedrale dell'Assunzione di Maria Vergine di Zacatecas in Messico viene elevata al rango di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-07-17",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590717_meritis-celebratur.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Meritis celebratur",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/religionis-domicilium-1959",
+    "title": "Religionis domicilium, con la quale la chiesa «de Nuestra Señora de la Soledad » di Oaxaca de Juárez, nell'Arcidiocesi di Antequara in Messico, viene elevata al rango di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-07-17",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590717_religionis-domicilium.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Religionis domicilium",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/rosas-caelitus-1959",
+    "title": "Rosas Caelitus, con la quale il Santuario di Santa Teresa del Bambin Gesù ad Anzio, nella diocesi di Albano, viene elevato al rango di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-07-23",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590723_rosas-caelitus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Rosas Caelitus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/apostolic-letter-1959-07-30",
+    "title": "Praecipuo, con la quale la Nostra Signora di Caravaggio viene dichiarata Patrona della diocesi di Duque de Caxias in Brasile",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-07-30",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590730_praecipuo.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/quasi-arx-1959",
+    "title": "Quasi arx, con la quale viene conferito il titolo di Basilica Minore alla Chiesa Cattedrale di Sherbrooke in Canada",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-07-31",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590731_quasi-arx.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quasi arx",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/sacerdotii-nostri-primordia-1959",
+    "title": "Sacerdotii Nostri Primordia",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-08-01",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/it/encyclicals/documents/hf_j-xxiii_enc_19590801_sacerdotii.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sacerdotii Nostri Primordia",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:john-xxiii/respice-stellam-1959",
+    "title": "« Respice Stellam », con la quale la B. M.V. di Guadalupe viene dichiarata patrona della diocesi di Basse-Terre e Pointe-à-Pitre in Francia a titolare della Basilica istituita nella medesima diocesi",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-09-09",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19590909_respice-stellam.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Respice Stellam",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/grata-recordatio-1959",
+    "title": "Grata Recordatio",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-09-26",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/it/encyclicals/documents/hf_j-xxiii_enc_26091959_grata-recordatio.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Grata Recordatio",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:john-xxiii/iuventutis-praeceptorem-1959",
+    "title": "Iuventutis praeceptorem, con la quale San Giovanni Bosco viene dichiarato Patrono dei giovani apprendisti colombiani",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-10-16",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19591016_iuventutis-praeceptorem.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Iuventutis praeceptorem",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/beatam-mariam-virginem-1959",
+    "title": "Beatam Mariam Virginem, con la quale la Beata Vergine del Buon Consiglio e San Benedetto Abate, vengono dichiarati Patroni della diocesi di Nuova Norcia in Australia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-10-21",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19591021_beatam-mariam.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Beatam Mariam Virginem",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/solacium-ac-levantionem-1959",
+    "title": "Solacium ac levantionem, che eleva al rango di Basilica Minore, la chiesa di Nuestra Señora de la Consolación di Tariba nella diocesi di San Cristóbal de Venezuela",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-10-23",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19591023_solacium-levationem.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Solacium ac levantionem",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/haud-raro-1959",
+    "title": "Haud raro, con la quale San Venerio viene eletto patrono della diocesi della Spezia-Sarzana-Brugnato",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-10-24",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19591024_haud-raro.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Haud raro",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/caelesti-coruscans-1959",
+    "title": "Caelesti coruscans, che elegge la Beata Vergine Maria Immacolata, Patrona principale delle diocesi di Lafayette in Louisinana e San Giovanni Maria Vianney, Patrono minore della stessa diocesi",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-10-30",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19591030_caelesti-coruscans.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Caelesti coruscans",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/michael-salutis-signifer-1959",
+    "title": "«Michaël salutis signifer», con la quale San Michele Arcangelo viene dichiarato Patrono delle Autorità Militari",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-10-31",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19591031_michael-salutis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Michaël salutis signifer",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/mirabili-nexu-1959",
+    "title": "Mirabili nexu, che eleva agli onori di Basilica Minore, la Cattedrale di San Giorgio Martire di Ferrara",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-11-13",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19591113_mirabili-nexu.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Mirabili nexu",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/luctifera-bella-1959",
+    "title": "Luctifera bella, con la quale la Beata Vergine Maria, Regina della Pace, viene eletta Patrona dell'Associazione Nazionale Vittime Civili di Guerra",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-11-25",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19591125_luctifera-bella.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Luctifera bella",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/studium-et-cultus-1959",
+    "title": "Studium et cultus, che proclama la Beata Maria \"Virgen de la Cabeza\" e san't'Eufrasio, Patroni della diocesi di Jaén in Andalusia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-11-27",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1959/documents/hf_j-xxiii_apl_19591127_studium-cultus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Studium et cultus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/princeps-pastorum-1959",
+    "title": "Princeps Pastorum",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-11-28",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/it/encyclicals/documents/hf_j-xxiii_enc_28111959_princeps.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Princeps Pastorum",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:john-xxiii/apostolic-letter-1959-12-08",
+    "title": "Lettera Apostolica «Motu Proprio» Maiora in Dies che attribuisce il titolo di \"Pontificia\" all'Accademia Mariana Internazionale",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1959-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/apost_letters/1959/documents/hf_j-xxiii_apl_19591208_maiora-in-dies.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/romanorum-pontificum-1960",
+    "title": "Romanorum Pontificum, con la quale la Cattedrale di Przemyśl in Polonia, viene elevata al rango di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-01-09",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600109_romanorum-pontificum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Romanorum Pontificum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/aligera-cymba-1960",
+    "title": "Aligera cymba, con la quale «Nossa Senhora do Ar» viene eletta patrona dell'Aeronautica della Lusitania",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-01-15",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600115_aligera-cymba.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Aligera cymba",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/meritis-laudibus-1960",
+    "title": "Meritis laudibus, che eleva la Cattedrale di Ayacucho in Perù, al rango di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-01-15",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600115_meritis-laudibus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Meritis laudibus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/rivi-nigri-s-ioannis-in-brasilia-1960",
+    "title": "Rivi Nigri (S. Ioannis In Brasilia), con la quale viene costituita la diocesi di São João da Boa Vista a San Paolo del Brasile",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-01-16",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_constitutions/1960/documents/hf_j-xxiii_apc_19600116_rivi-nigri.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Rivi Nigri (S. Ioannis In Brasilia)",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/caeruleum-mare-1960",
+    "title": "Caeruleum mare, che eleva la Cattedrale di San Carlo Borromeo nella diocesi di Monterey in California, al rango di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-02-05",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600205_caeruleum-mare.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Caeruleum mare",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/omnibus-mater-1960",
+    "title": "« Omnibus mater », con la quale Santa Luisa de Marillac viene dichiarata patrona delle Assistenti Sociali",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-02-10",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600210_omnibus-mater.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Omnibus mater",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/expedit-sane-1960-02-12",
+    "title": "Expedit sane, che proclama San Giovanni Bosco, Patrono della diocesi di Comodoro Rivadavia in Argentina",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-02-12",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600212_expedit-sane.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Expedit sane",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/urbi-valentiae-1960",
+    "title": "Urbi Valentiae, con la quale la Cattedrale di Nostra Signora del Soccorso, nell'arcidiocesi di Valencia in Venezuela, viene elevata al rango di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-02-12",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600212_urbi-valentiae.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Urbi Valentiae",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/diuturno-usu-1960",
+    "title": "Diuturno usu, che costituisce l'Internunziatura Apostolica in Turchia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-02-29",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600229_diuturno-uso.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Diuturno usu",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/motu-proprio-1960-02-29",
+    "title": "De Pontificio Consilio Ecclesiasticis Italiae Tabularis curandis Motu proprio che stabilisce il riordinamento degli Archivi Ecclesiastici in Italia ed emana il nuovo Statuto",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-02-29",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/it/motu_proprio/documents/hf_j-xxiii_motu-proprio_19600229_pontificio-consilio.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:john-xxiii/apostolici-muneris-1960",
+    "title": "Apostolici muneris, con la quale viene eretta la Delegazione Apostolica in Scandinavia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-03-01",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600301_apostolici-muneris.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Apostolici muneris",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/religio-bonaeque-1960",
+    "title": "Religio bonaeque, che conferisce il titolo di Patrono della Biblioteca Ambrosiana, all'Arcivescovo \"pro tempore\" di Milano",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-03-16",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600316_religio-bonaeque.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Religio bonaeque",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/apostolic-letter-1960-04-07",
+    "title": "Praeclarissimum, con la quale la chiesa parrocchiale di San Domenico ad Arezzo viene elevata al rango di Basilica Minore",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-04-07",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600407_praeclarissimum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/beatum-ioseph-1960",
+    "title": "Beatum Ioseph, con la quale San Giuseppe viene eletto Patrono della diocesi di Cúcuta in Colombia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-04-07",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600407_beatum-ioseph.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Beatum Ioseph",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/salutiferae-crucis-1960",
+    "title": "Salutiferae Crucis, con la quale viene conferito il titolo di Basilica Minore alla chiesa di Santa Cruz del Valle de los Caídos a Madrid",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-04-07",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/apost_letters/1960/documents/hf_j-xxiii_apl_19600407_salutiferae-crucis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Salutiferae Crucis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/studio-inflammatus-1960",
+    "title": "Studio inflammatus, che proclama San Vincenzo de' Paoli Patrono della diocesi di Fort-Dauphin in Madagascar",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-04-07",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600407_studio-inflammatus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Studio inflammatus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/auxiliatricem-virginem-1960",
+    "title": "Auxiliatricem Virginem, con la quale Maria Ausiliatrice viene dichiarata Patrona della diocesi di Viedma in Argentina",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-04-19",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600419_auxiliatricem-virginem.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Auxiliatricem Virginem",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/decus-eximium-1960",
+    "title": "Decus eximium, con la quale viene conferito il titolo di Basilica Minore alla chiesa di S. Wendelinus nella diocesi di Treviri in Germania",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-04-22",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600422_decus-eximium.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Decus eximium",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/peculiare-studium-1960",
+    "title": "Peculiare studium, che conferisce a San Giovanni Bosco il titolo di Patrono dei Giovani Apprendisti Spagnoli",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-04-22",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/apost_letters/1960/documents/hf_j-xxiii_apl_19600422_peculiare-studium.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Peculiare studium",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/beati-caelites-1960",
+    "title": "Beati Caelites, che conferisce a San Lorenzo e a San Adalberto il titolo di Patroni principali e a San Giorgio, il titolo di Patrono secondario, della Diocesi di Chełmno, nonché a San Bernardo, il titolo di Patrono principale della Diocesi di Pelplin in Polonia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-04-28",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600428_beati-caelites.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Beati Caelites",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/monumentum-pietatis-1960",
+    "title": "Monumentum pietatis, che conferisce alla Cattedrale di Trani il titolo di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-04-29",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600429_monumentum-pietatis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Monumentum pietatis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/ad-universae-ecclesiae-1960",
+    "title": "Ad universae Ecclesiae, che costituisce la delegazione apostolica dell'Africa centrale",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-05-03",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600503_universae-ecclesiae.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ad universae Ecclesiae",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/decet-nos-1960",
+    "title": "Decet Nos, con la quale la delegazione apostolica di Dakar, assume il titolo di \"delegazione apostolica dell'Africa Occidentale\"",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-05-03",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600503_decet-nos.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Decet Nos",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/eo-intendentes-1960",
+    "title": "Eo intendentes",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-05-03",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600503_eo-intendentes.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Eo intendentes",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/quemadmodum-apostolici-1960",
+    "title": "Quemadmodum Apostolici, con la quale viene costituita la delegazione apostolica del Madagascar",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-05-03",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600503_quemadmodum-apostolici.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quemadmodum Apostolici",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/tot-inter-angustias-1960",
+    "title": "Tot inter angustias, con la quale la Beata Vergine Maria Regina della Pace viene dichiarata Patrona della Diocesi di Trujillo in Venezuela",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-05-18",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600518_inter-angustias.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Tot inter angustias",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/catholica-polonia-1960",
+    "title": "Catholica Polonia, con la quale la Chiesa Cattedrale della Natività della Beata Vergine Maria a Sandomierz in Polonia, viene elevata al rango di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-05-20",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600520_catholica-polonia.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Catholica Polonia",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/peculiari-studio-1960",
+    "title": "Peculiari studio, con la quale la Beata Vergine Maria del Monte Carmelo, viene dichiarata Patrona della Diocesi di Papantla in Messico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-05-20",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600520_peculiari-studio.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Peculiari studio",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/iuvat-nos-1960",
+    "title": "Iuvat Nos, con la quale la Beata Maria Vergine del Santo Rosario viene dichiarata Patrona della diocesi di Morón e dell'intera Repubblica Argentina",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-06-02",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600602_iuvat-nos.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Iuvat Nos",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/apostolic-letter-1960-06-05",
+    "title": "Lettera Apostolica «Motu Proprio» Superno Dei che istituisce le Commissioni preparatorie del Concilio Vaticano II",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-06-05",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/apost_letters/1960/documents/hf_j-xxiii_apl_19600605_superno-dei.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/sollicitudo-omnium-ecclesiarum-1960",
+    "title": "Sollicitudo Omnium Ecclesiarum",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/apost_constitutions/1960/documents/hf_j-xxiii_apc_19600629_sollicitudo.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "ES"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sollicitudo Omnium Ecclesiarum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/inde-a-primis-1960",
+    "title": "Inde a Primis, che promuove il culto del Preziosissimo Sangue di Nostro Signore Gesù Cristo",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-06-30",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/apost_letters/1960/documents/hf_j-xxiii_apl_19600630_indeaprimis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Inde a Primis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/apostolic-letter-1960-07-01",
+    "title": "Quemadmodum, con la quale San Patrizio viene eletto Patrono della diocesi di Ibadan in Nigeria",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-07-01",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600701_quemadmodum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/ignem-veni-1960",
+    "title": "Ignem veni, che eleva al rango di Basilica Minore la Chiesa del Sacro Cuore di Gesù a Cracovia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-07-01",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600701_ignem-veni.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Ignem veni",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/merito-praedicatur-1960",
+    "title": "Merito praedicatur, con la quale la Cattedrale di Cesena viene elevata al rango di Basilica Minore",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-07-01",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600701_merito-praedicatur.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Merito praedicatur",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/praecipuo-pietatis-1960",
+    "title": "Praecipuo pietatis, con la quale la Beata Vergine Maria denominata \"Nossa Senhora da Ponte\" viene eletta Patrona della diocesi di Sorocaba in Brasile",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-07-01",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600701_praecipuo-pietatis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Praecipuo pietatis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/singulari-studio-1960",
+    "title": "Singulari studio",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-07-01",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600701_singulari-studio.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Singulari studio",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/expedit-sane-1960-07-25",
+    "title": "Expedit sane, con la quale vengono eletti San Raffaele, Patrono principale, e San Giovanni Maria Vianney, Patrono secondario, della diocesi di Dubuque in Iowa",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-07-25",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600725_expedit-sane.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Expedit sane",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/motu-proprio-1960-07-25",
+    "title": "Lettera Apostolica «Motu Proprio» Rubricarum Instructum con la quale si approva il nuovo Codice delle Rubriche del Breviario e del Messale Romano",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-07-25",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/motu_proprio/documents/hf_j-xxiii_motu-proprio_19600725_rubricarum-instructum.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "ES",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:john-xxiii/qui-servatorem-1960",
+    "title": "Qui servatorem, con la quale San Vincenzo de' Paoli viene eletto Patrono della diocesi di Cuttack in India",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-07-25",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600725_qui-servatorem.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Qui servatorem",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/christiani-populi-1960",
+    "title": "Christiani populi",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-08-18",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600818_christiani-populi.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Christiani populi",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/apostolic-letter-1960-08-20",
+    "title": "Quod Dilectum, al Card. V. Gracias in occasione dell'adunanza quinquennale dell'Episcopato dell'India",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-08-20",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/apost_letters/1960/documents/hf_j-xxiii_apl_19600820_quod-dilectum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/probatum-studium-1960",
+    "title": "Probatum studium, con la quale le spoglie di San Venerio vennero trasferite definitivamente da Reggio Emilia al Vescovado di La Spezia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-09-03",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600903_probatum-studium.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Probatum studium",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/virginis-immaculatae-1960",
+    "title": "Virginis Immaculatae, che conferisce il Titolo di Patrona della diocesi di Divinópolis in Brasile, alla Beata Maria Vergine Immacolata",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-09-05",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600905_virginis-immaculatae.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Virginis Immaculatae",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/salubri-ducti-1960",
+    "title": "Salubri ducti, con la quale vengono eletti San Giuseppe e San Michele Arcangelo, Patroni principali, San Giovanni Maria Vianney e San Isidoro Agricola, Patroni secondari della diocesi di Toluca a Città del Messico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-09-28",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19600928_salubri-ducti.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Salubri ducti",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/pietatis-marialis-1960",
+    "title": "Pietatis marialis, con la quale viene conferito il titolo di Basilica Minore alla Chiesa Santa Maria del Carmine di Padova",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-10-07",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19601007_pietatis-marialis.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Pietatis marialis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/religione-1960",
+    "title": "Religione",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-10-07",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19601007_religione.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Religione",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/virgo-intaminata-1960",
+    "title": "Virgo intaminata, con la quale la Beata Vergine Maria Immacolata viene eletta Patrona della diocesi di Kisii in Kenia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-10-21",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19601021_virgo-intaminata.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Virgo intaminata",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/vel-in-repositarum-1960",
+    "title": "Vel in repositarum, con la quale San Giuseppe viene eletto Patrono della diocesi di Maracay in Venezuela",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-11-21",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19601121_vel-repositarum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Vel in repositarum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/praefervidum-erga-1960",
+    "title": "Praefervidum erga, con la quale la Beata Maria Vergine \"Nostra Signora D'Africa\", viene proclamata Patrona dell'Arcidiocesi di Algeri",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-11-23",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19601123_praefervidum-erga.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Praefervidum erga",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/agri-culturam-1960",
+    "title": "Agri culturam, con la quale San Isidoro l'Agricoltore viene eletto Patrono degli agricoltori e dei contadini spagnoli",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-12-16",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/apost_letters/1960/documents/hf_j-xxiii_apl_19601216_agri-culturam.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Agri culturam",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/eo-contendente-1960",
+    "title": "Eo contendente, con la quale la Beata Vergine Maria dal Cuore Immacolato viene eletta Patrona della diocesi di Oudtshoorn in Sudafrica",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-12-16",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19601216_eo-contendentes.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Eo contendente",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/qui-catholico-1960",
+    "title": "Qui catholico, con la quale la Beata Vergine Maria Assunta in cielo viene eletta Patrona della diocesi di Greensburg in Pennsylvania",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-12-16",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19601216_qui-catholico.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Qui catholico",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/luce-collustrans-1960",
+    "title": "Luce collustrans, con la quale Nostra Signora di Izamal viene eletta Patrona dell'arcidiocesi di Yucatán",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-12-22",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/apost_letters/1960/documents/hf_j-xxiii_apl_19601216_luce-collustrans.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Luce collustrans",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/iam-in-pontificatus-1961",
+    "title": "Iam in Pontificatus, la Sacra Gerarchia istituita nel Vietnam",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1961-01-14",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/apost_letters/1961/documents/hf_j-xxiii_apl_19610114_iam-in-pontificatus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Iam in Pontificatus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/motu-proprio-1961-03-10",
+    "title": "Lettera Apostolica «Motu Proprio» Ad Suburbicarias Dioeceses con la quale è abrogata l'opzione per la scelta delle Sedi vescovili suburbicarie e viene messa la nomina a libera disposizione del Papa",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1961-03-10",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/motu_proprio/documents/hf_j-xxiii_motu-proprio_19610310_ad-suburbicarias.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:john-xxiii/apostolic-letter-1961-03-19",
+    "title": "Le voci, la protezione di S. Giuseppe per il Concilio ecumenico Vaticano II",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1961-03-19",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/it/apost_letters/1961/documents/hf_j-xxiii_apl_19610319_s-giuseppe.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/sacrarum-expeditionum-1961",
+    "title": "Sacrarum expeditionum, la Sacra Gerarchia istituita nell'Indonesia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1961-03-20",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/apost_letters/1961/documents/hf_j-xxiii_apl_19610320_sacrarum-expeditionum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sacrarum expeditionum",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/apostolic-letter-1961-04-11",
+    "title": "Celebrandi Concilii Oecumenici, speciale supplicazione nella solennità di Pentecoste per il Concilio Ecumenico",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1961-04-11",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/apost_letters/1961/documents/hf_j-xxiii_apl_19610411_celebrandi-concilii.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/mater-et-magistra-1961",
+    "title": "Mater et Magistra",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1961-05-15",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/it/encyclicals/documents/hf_j-xxiii_enc_15051961_mater.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Mater et Magistra",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:john-xxiii/quotiescumque-nobis-1961",
+    "title": "Quotiescumque nobis, lo sviluppo della Sacra Gerarchia nell'Isola di Formosa",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1961-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/apost_letters/1961/documents/hf_j-xxiii_apl_19610629_quotiescumque.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Quotiescumque nobis",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/apostolic-letter-1961-08-10",
+    "title": "Centesimo vertente anno, nel centenario della morte di Mons Angelo Ramazzotti, fondatore del Pontificio Istituto delle Missioni Estere",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1961-08-10",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/apost_letters/1961/documents/hf_j-xxiii_apl_19610810_pime.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/apostolic-letter-1961-09-29",
+    "title": "Il religioso convegno, la recita del Santo Rosario per la giusta pace tra le Nazioni",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1961-09-29",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/it/apost_letters/1961/documents/hf_j-xxiii_apl_19610929_religioso-convegno.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-07",
+      "alsoShelvedAs": [
+        "apost_letters"
+      ]
+    },
+    "aliases": [
+      "Piccolo saggio di devoti pensieri distribuiti per ogni decina del Rosario, come a complemento della Lettera Apostolica Il religioso convegno"
+    ],
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/in-colle-1961",
+    "title": "In colle, con la quale si concede il titolo di Basílica minore al Santuario del Monte Tibidabo di Barcellona",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1961-09-29",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/apost_letters/1961/documents/hf_j-xxiii_apl_19610929_tibidabo.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "In colle",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/aeterna-dei-sapientia-1961",
+    "title": "Aeterna Dei Sapientia",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1961-11-11",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/it/encyclicals/documents/hf_j-xxiii_enc_11111961_aeterna-dei.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Aeterna Dei Sapientia",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:john-xxiii/humanae-salutis-1961",
+    "title": "Humanae Salutis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1961-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/it/apost_constitutions/1961/documents/hf_j-xxiii_apc_19611225_humanae-salutis.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "ES",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Humanae Salutis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/sacrae-laudis-1962",
+    "title": "Sacrae Laudis",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1962-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/apost_exhortations/documents/hf_j-xxiii_exh_19620106_sacrae-laudis.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "ES",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Sacrae Laudis",
+    "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:john-xxiii/motu-proprio-1962-02-02",
+    "title": "Lettera Apostolica «Motu Proprio» Consilium che definisce il giorno di apertura del Concilio Ecumenico Vaticano II",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1962-02-02",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/it/motu_proprio/documents/hf_j-xxiii_motu-proprio_19620202_concilium.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "ES",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:john-xxiii/veterum-sapientia-1962",
+    "title": "Veterum Sapientia",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1962-02-22",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/apost_constitutions/1962/documents/hf_j-xxiii_apc_19620222_veterum-sapientia.html",
+      "shelf": "apost_constitutions",
+      "languages": [
+        "ES",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Veterum Sapientia",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:john-xxiii/motu-proprio-1962-04-11",
+    "title": "Lettera Apostolica «Motu Proprio» Suburbicariis sedibus, sul nuovo ordinamento delle sedi suburbicarie",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1962-04-11",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/motu_proprio/documents/hf_j-xxiii_motu-proprio_19620411_suburbicariis-sedibus.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:john-xxiii/motu-proprio-1962-04-15",
+    "title": "Lettera Apostolica «Motu Proprio» Cum gravissima, sulla dignità episcopale da conferirsi a tutti i cardinali",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1962-04-15",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/motu_proprio/documents/hf_j-xxiii_motu-proprio_19620415_cum-gravissima.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "ES",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:john-xxiii/oecumenicum-concilium-1962",
+    "title": "Oecumenicum Concilium sulla recita del Rosario per la riuscita del Concilio Ecumenico Vaticano II",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1962-04-28",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/apost_letters/1962/documents/hf_j-xxiii_apl_19620428_oecumenicum.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Oecumenicum Concilium",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/paenitentiam-agere-1962",
+    "title": "Paenitentiam Agere",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1962-07-01",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/it/encyclicals/documents/hf_j-xxiii_enc_01071962_paenitentiam.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Paenitentiam Agere",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:john-xxiii/motu-proprio-1962-08-06",
+    "title": "Lettera Apostolica «Motu Proprio» Appropinquante Concilio, con la quale si approva il Regolamento del Concilio Ecumenico Vaticano II",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1962-08-06",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/motu_proprio/documents/hf_j-xxiii_motu-proprio_19620806_appropinquante-concilio.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "ES",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:john-xxiii/motu-proprio-1962-09-05",
+    "title": "Lettera Apostolica «Motu Proprio» Summi Pontificis electio, che contiene le norme riguardanti la Sede Apostolica vacante",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1962-09-05",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/motu_proprio/documents/hf_j-xxiii_motu-proprio_19620905_summi-pontificis-electio.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "ES",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:john-xxiii/motu-proprio-1962-09-11",
+    "title": "Lettera Apostolica «Motu Proprio» Templorum Decus, per l'istituzione dei Canonici Onorari per le Basiliche Patriarcali",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1962-09-11",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/motu_proprio/documents/hf_j-xxiii_motu-proprio_19620911_templorum-decus.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:john-xxiii/motu-proprio-1962-10-01",
+    "title": "Lettera Apostolica «Motu Proprio» Fidei propagandae, con la quale il Pontificio Ateneo Urbaniano de Propaganda Fide è decorato del titolo di Università",
+    "idStatus": "provisional",
+    "genre": "motu-proprio",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1962-10-01",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/la/motu_proprio/documents/hf_j-xxiii_motu-proprio_19621001_fidei-propagandae.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:john-xxiii/dominicianus-ordo-1963",
+    "title": "Lettera Apostolica in forma di 'Motu Proprio' Dominicianus Ordo con la quale l'Angelicum di Roma viene elevato al rango di Università Pontificia",
+    "idStatus": "minted",
+    "genre": "motu-proprio",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1963-03-07",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/motu_proprio/documents/hf_j-xxiii_motu-proprio_19630307_dominicianus-ordo.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "ES"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Dominicianus Ordo",
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:john-xxiii/pacem-in-terris-1963",
+    "title": "Pacem in Terris",
+    "idStatus": "minted",
+    "genre": "encyclical",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1963-04-11",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/it/encyclicals/documents/hf_j-xxiii_enc_11041963_pacem.html",
+      "shelf": "encyclicals",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "LA",
+        "PT",
+        "SW"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Pacem in Terris",
+    "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:john-xxiii/magnifici-eventus-1963",
+    "title": "Magnifici eventus, in occasione dell'XI centenario dell'arrivo dei Santi Cirillo e Metodio in Moravia",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1963-05-11",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/apost_letters/1963/documents/hf_j-xxiii_apl_19630511_magnifici-eventus.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Magnifici eventus",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/novem-per-dies-1963",
+    "title": "Novem Per Dies",
+    "idStatus": "minted",
+    "genre": "apostolic-exhortation",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1963-05-20",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/apost_exhortations/documents/hf_j-xxiii_exh_19630520_novem-per-dies.html",
+      "shelf": "apost_exhortations",
+      "languages": [
+        "ES",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Novem Per Dies",
+    "sourceGenreLabel": "apost_exhortations"
+  }
+]

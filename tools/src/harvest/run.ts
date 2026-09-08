@@ -89,7 +89,7 @@ for (const pope of POPES) {
   } else {
     for (const shelf of pope.shelves) {
       const index = fixture(`${pope.pageSlug}-${shelf}`);
-      const pages = resolveShelfPages(index);
+      const pages = resolveShelfPages(index, shelf);
       if (pages.kind === 'aggregate') {
         items.push(...parseShelfIndex(index, pope.pageSlug, shelf));
       } else {

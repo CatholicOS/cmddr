@@ -13,14 +13,24 @@ export type ShelfPages =
  *
  * A page with neither is not an empty shelf; it means vatican.va has changed shape, and
  * CI should say so rather than silently harvesting nothing.
+ *
+ * `shelf` scopes the year-link scan to this shelf's own links: a year-partitioned shelf's
+ * page (e.g. John XXIII's apost_constitutions) carries a sidebar of cross-navigation links
+ * to *other* shelves' year pages too (letters, speeches, apost_letters, messages,
+ * homilies…), all matching the bare `/YYYY.index.html` suffix. Without the `/${shelf}/`
+ * prefix check, those sidebar links leak into this shelf's year set -- e.g. picking up
+ * apost_letters' 1963 for apost_constitutions, whose own aggregate page links only
+ * 1958-1962. First caught on real data in Task 13 (John XXIII).
  */
-export function resolveShelfPages(html: string): ShelfPages {
+export function resolveShelfPages(html: string, shelf: string): ShelfPages {
   const $ = cheerio.load(html);
   if ($('div.item').length > 0) return { kind: 'aggregate' };
 
+  const escapedShelf = shelf.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const yearLink = new RegExp(`/${escapedShelf}/((?:18|19|20)\\d{2})\\.index\\.html$`);
   const years = new Set<string>();
   $('a[href]').each((_i, a) => {
-    const m = $(a).attr('href')?.match(/\/((?:18|19|20)\d{2})\.index\.html$/);
+    const m = $(a).attr('href')?.match(yearLink);
     if (m) years.add(m[1]!);
   });
   if (years.size === 0) {

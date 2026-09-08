@@ -177,6 +177,46 @@ export const GLOSS_CONNECTORS: readonly string[] = [
                                                                                // Progressi' (docSlug rapidi-progressi) and 'I felici sviluppi' (docSlug
                                                                                // felici-sviluppi). Deliberately this one literal verb form, not bare
                                                                                // ' che ' -- see the note above on why that stays deleted.
+  ', la Sacra Gerarchia',                                                     // John XXIII, apost_letters (Task 13): 'Sacrarum Expeditionum, la
+                                                                               // Sacra Gerarchia istituita nell'Indonesia' (docSlug sacrarum-
+                                                                               // expeditionum -- confirmed genuine by fetching the document itself:
+                                                                               // its own printed title reads 'Sacrarum Expeditionum, Epistula
+                                                                               // Apostolica ad...Indonesianae Reipublicae, post Sacrum in ea
+                                                                               // regione constitutam Hierarchiam') and 'Iam in Pontificatus, la
+                                                                               // Sacra Gerarchia istituita nel Vietnam' (docSlug iam-in-pontificatus,
+                                                                               // likewise confirmed against its own printed title). Without this,
+                                                                               // both fall through to the untouched/word-ceiling path: the first
+                                                                               // (seven words) sneaks under MAX_INCIPIT_WORDS and was silently
+                                                                               // minted with the whole gloss baked into its id -- the exact 'wrong
+                                                                               // minted id' failure mode this pipeline is built to avoid -- while the
+                                                                               // second (nine words) correctly falls to provisional, but for the
+                                                                               // wrong reason. A corpus-wide check found 'Sacra Gerarchia' nowhere
+                                                                               // else in the whole seven-pontificate corpus.
+  ', lo sviluppo della Sacra Gerarchia',                                      // John XXIII, apost_letters (Task 13): 'Quotiescumque nobis, lo
+                                                                               // sviluppo della Sacra Gerarchia nell'Isola di Formosa' (docSlug
+                                                                               // quotiescumque) -- confirmed genuine by fetching the document
+                                                                               // itself: its own printed title reads 'Quotiescumque Nobis, Epistula
+                                                                               // Apostolica ob tres dioeceses in Insula Formosa noviter erectas'.
+                                                                               // The same shape as ', la Sacra Gerarchia' above (a hierarchy-
+                                                                               // establishment letter's gloss opens by naming the Sacra Gerarchia),
+                                                                               // but phrased as 'lo sviluppo della' rather than 'la...istituita', so
+                                                                               // kept as its own literal entry rather than widening the one above to
+                                                                               // a bare, unevidenced 'Sacra Gerarchia' (which would also match mid-
+                                                                               // word, stranding the intervening article inside the incipit).
+  ' Motu Proprio che ',                                                       // John XXIII, motu_proprio (Task 13): 'Cum inde Motu Proprio che
+                                                                               // conferisce al Pontificio Ateneo Lateranense il titolo di
+                                                                               // "Universitas"', docSlug cum-inde -- the genre word trails the
+                                                                               // incipit here, the same shape as ', Lettera Decretale' / ', Lettera
+                                                                               // Enciclica' above, but with no comma before it. Without this, the
+                                                                               // bare ' al ' connector already in this list still cuts, but much
+                                                                               // later -- wrongly keeping 'Motu Proprio che conferisce' inside the
+                                                                               // incipit as if 'al Pontificio Ateneo...' were an address salutation,
+                                                                               // which it is not (it is the direct object of 'conferisce'). This
+                                                                               // literal phrase only: a corpus-wide check found exactly one other
+                                                                               // heading containing ' Motu Proprio' outside position 0 in the whole
+                                                                               // seven-pontificate corpus (Pius XII's 'Lettera Apostolica in forma di
+                                                                               // Motu Proprio Cleri sanctitate...'), already handled by the
+                                                                               // GENRE_PREFIXES entry of the same name and unaffected by this one.
 ];
 
 // Deleted for lack of evidence (review finding, 2026-09-07): the comma-prefixed

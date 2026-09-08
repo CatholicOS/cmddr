@@ -413,4 +413,167 @@ export const ADJUDICATED_DISTINCT: Record<
       'World War, addressed to the whole Church -- an unrelated act, coincidentally dated the ' +
       'same day.',
   },
+
+  // Task 13 (John XXIII, elected 28 October 1958). Every entry below is verified against
+  // each item's own printed descriptive clause on its vatican.va shelf index (the text
+  // following the incipit, read directly off the fetched fixture), which already names the
+  // distinct territory, dedication or subject of each act -- these are batches of unrelated
+  // circumscription/patronage/liturgical acts issued the same day, a routine pattern
+  // throughout this pontificate's apost_constitutions and apost_letters shelves.
+  'john-xxiii|1959-05-23|angelorum-mexicanae-tlaxcalensis-con-la-quale-viene-eretta-la-diocesi-di-tlaxcala-in-messico-ricavandone-il-territorio-dalle-arcidiocesi-di-citta-del-messico-e-di-puebla-de-los-angeles|urbs-roma':
+    {
+      // No incipit of its own; this is the item's full title (idStatus: provisional).
+      incipit1: 'Angelorum - Mexicanae (Tlaxcalensis), con la quale viene eretta la diocesi di '
+        + "Tlaxcala in Messico, ricavandone il territorio dalle arcidiocesi di Città del "
+        + 'Messico e di Puebla de los Ángeles',
+      shelf1: 'apost_constitutions',
+      incipit2: 'Urbs Roma',
+      shelf2: 'apost_letters',
+      note:
+        'Angelorum - Mexicanae erects the diocese of Tlaxcala in Mexico, carving its ' +
+        "territory from the archdioceses of Mexico City and Puebla de los Ángeles. Urbs Roma " +
+        'confers the title of Minor Basilica on the Church of the Sacro Cuore Immacolato di ' +
+        "Maria -- an unrelated act, one of this pontificate's routine same-day batches of " +
+        'circumscription and patronage grants.',
+    },
+  'john-xxiii|1959-05-23|angelorum-mexicanae-tlaxcalensis-con-la-quale-viene-eretta-la-diocesi-di-tlaxcala-in-messico-ricavandone-il-territorio-dalle-arcidiocesi-di-citta-del-messico-e-di-puebla-de-los-angeles|potiora-inter':
+    {
+      incipit1: 'Angelorum - Mexicanae (Tlaxcalensis), con la quale viene eretta la diocesi di '
+        + "Tlaxcala in Messico, ricavandone il territorio dalle arcidiocesi di Città del "
+        + 'Messico e di Puebla de los Ángeles',
+      shelf1: 'apost_constitutions',
+      incipit2: 'Potiora inter',
+      shelf2: 'apost_letters',
+      note:
+        'Angelorum - Mexicanae (see the previous entry) erects the diocese of Tlaxcala in ' +
+        "Mexico. Potiora inter declares the Blessed Virgin Mary, under the title 'Nuestra " +
+        "Señora del El Soto', Patroness of the Valle del Toranzo in Cantabria, Spain -- an " +
+        'unrelated act.',
+    },
+  'john-xxiii|1959-05-23|angelorum-mexicanae-tlaxcalensis-con-la-quale-viene-eretta-la-diocesi-di-tlaxcala-in-messico-ricavandone-il-territorio-dalle-arcidiocesi-di-citta-del-messico-e-di-puebla-de-los-angeles|augustae-virgini':
+    {
+      incipit1: 'Angelorum - Mexicanae (Tlaxcalensis), con la quale viene eretta la diocesi di '
+        + "Tlaxcala in Messico, ricavandone il territorio dalle arcidiocesi di Città del "
+        + 'Messico e di Puebla de los Ángeles',
+      shelf1: 'apost_constitutions',
+      incipit2: 'Augustae Virgini',
+      shelf2: 'apost_letters',
+      note:
+        'Angelorum - Mexicanae (see above) erects the diocese of Tlaxcala in Mexico. Augustae ' +
+        'Virgini confers the title of Minor Basilica on the Church of Nostra Signora di ' +
+        'Lourdes in Rio de Janeiro, Brazil -- an unrelated act in an unrelated country.',
+    },
+  'john-xxiii|1959-05-23|urbs-roma|verae-crucis': {
+    incipit1: 'Urbs Roma',
+    shelf1: 'apost_letters',
+    incipit2: 'Verae Crucis',
+    shelf2: 'apost_constitutions',
+    note:
+      'Urbs Roma (see above) grants Minor Basilica status to a Roman church. Verae Crucis -- ' +
+      'Tehuantepecensis erects the diocese of San Andrés Tuxtla in Mexico, carving its ' +
+      'territory from the dioceses of Tehuantepec and Veracruz-Jalapa -- an unrelated act, ' +
+      "another of this day's batch.",
+  },
+  'john-xxiii|1959-05-23|potiora-inter|verae-crucis': {
+    incipit1: 'Potiora inter',
+    shelf1: 'apost_letters',
+    incipit2: 'Verae Crucis',
+    shelf2: 'apost_constitutions',
+    note:
+      'Potiora inter (see above) is the Cantabrian Marian-patronage letter. Verae Crucis (see ' +
+      'above) erects the San Andrés Tuxtla diocese in Mexico -- unrelated acts.',
+  },
+  'john-xxiii|1959-05-23|augustae-virgini|verae-crucis': {
+    incipit1: 'Augustae Virgini',
+    shelf1: 'apost_letters',
+    incipit2: 'Verae Crucis',
+    shelf2: 'apost_constitutions',
+    note:
+      'Augustae Virgini (see above) is the Rio de Janeiro Minor Basilica grant. Verae Crucis ' +
+      '(see above) erects the San Andrés Tuxtla diocese in Mexico -- unrelated acts.',
+  },
+  'john-xxiii|1959-05-21|de-diego-suarez|plantaria-novella': {
+    incipit1: 'De Diego Suarez',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Plantaria Novella',
+    shelf2: 'apost_letters',
+    note:
+      'De Diego Suarez - Tananarivensis erects the diocese of Ambatondrazaka in Madagascar, ' +
+      'carving its territory from the archdioceses of Diégo Suarez and Tananarive. Plantaria ' +
+      "Novella declares St Isidore the Farmer Patron of the diocese of San Isidro in " +
+      'Argentina -- an unrelated act in an unrelated country, coincidentally dated the same day.',
+  },
+  'john-xxiii|1959-05-04|caritatis-unitas|nagasakiensis-qui-cotidie': {
+    incipit1: 'Caritatis Unitas',
+    shelf1: 'apost_letters',
+    incipit2: 'Nagasakiensis (Qui cotidie)',
+    shelf2: 'apost_constitutions',
+    note:
+      'Caritatis Unitas establishes the federation of the Canonici Regolari di Sant\'Agostino ' +
+      'Confederati. Nagasakiensis (Qui cotidie) raises the diocese of Nagasaki in Japan to ' +
+      'metropolitan-archdiocese rank -- an unrelated act, coincidentally dated the same day.',
+  },
+  'john-xxiii|1959-01-10|changanacherrensis-et-aliarum|gaudii-nuntia': {
+    incipit1: 'Changanacherrensis et aliarum',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Gaudii nuntia',
+    shelf2: 'apost_letters',
+    note:
+      'Changanacherrensis et aliarum confers the title of Archdiocese on the diocese of ' +
+      "Changanacherry in India. Gaudii nuntia declares the parish church of Notre Dame de " +
+      "Joie, in the diocese of Vannes (France), a Minor Basilica -- an unrelated act in an " +
+      "unrelated country, one of this day's batch.",
+  },
+  'john-xxiii|1959-01-10|cuschensis-sicuanensi|gaudii-nuntia': {
+    incipit1: 'Cuschensis (Sicuanensi)',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Gaudii nuntia',
+    shelf2: 'apost_letters',
+    note:
+      'Cuschensis (Sicuanensi) creates the territorial prelature of Sicuani, a see suffragan ' +
+      "to the archdiocese of Cuzco in Peru. Gaudii nuntia (see above) is the unrelated Vannes " +
+      'Minor Basilica grant in France.',
+  },
+  'john-xxiii|1960-07-25|expedit-sane|lettera-apostolica-motu-proprio-rubricarum-instructum-con-la-quale-si-approva-il-nuovo-codice-delle-rubriche-del-breviario-e-del-messale-romano':
+    {
+      incipit1: 'Expedit sane',
+      shelf1: 'apost_letters',
+      // No incipit of its own; this is the item's full title (idStatus: provisional).
+      incipit2: 'Lettera Apostolica «Motu Proprio» Rubricarum Instructum con la quale si '
+        + 'approva il nuovo Codice delle Rubriche del Breviario e del Messale Romano',
+      shelf2: 'motu_proprio',
+      note:
+        'Expedit sane elects St Raphael as principal Patron and St John Mary Vianney as ' +
+        'secondary Patron of the diocese of Dubuque, Iowa. The motu proprio Rubricarum ' +
+        'Instructum approves the new Code of Rubrics of the Roman Breviary and Missal -- an ' +
+        'unrelated, universal liturgical act coincidentally dated the same day.',
+    },
+  'john-xxiii|1960-07-25|lettera-apostolica-motu-proprio-rubricarum-instructum-con-la-quale-si-approva-il-nuovo-codice-delle-rubriche-del-breviario-e-del-messale-romano|qui-servatorem':
+    {
+      // No incipit of its own; this is the item's full title (idStatus: provisional).
+      incipit1: 'Lettera Apostolica «Motu Proprio» Rubricarum Instructum con la quale si '
+        + 'approva il nuovo Codice delle Rubriche del Breviario e del Messale Romano',
+      shelf1: 'motu_proprio',
+      incipit2: 'Qui servatorem',
+      shelf2: 'apost_letters',
+      note:
+        'Rubricarum Instructum (see the previous entry) approves the new Code of Rubrics. Qui ' +
+        'servatorem elects St Vincent de Paul Patron of the diocese of Cuttack, India -- an ' +
+        'unrelated act.',
+    },
+  'john-xxiii|1960-02-29|de-pontificio-consilio-ecclesiasticis-italiae-tabularis-curandis-motu-proprio-che-stabilisce-il-riordinamento-degli-archivi-ecclesiastici-in-italia-ed-emana-il-nuovo-statuto|diuturno-usu':
+    {
+      // No incipit of its own; this is the item's full title (idStatus: provisional).
+      incipit1: 'De Pontificio Consilio Ecclesiasticis Italiae Tabularis curandis Motu proprio '
+        + "che stabilisce il riordinamento degli Archivi Ecclesiastici in Italia ed emana il "
+        + 'nuovo Statuto',
+      shelf1: 'motu_proprio',
+      incipit2: 'Diuturno usu',
+      shelf2: 'apost_letters',
+      note:
+        "This motu proprio reorganises the Ecclesiastical Archives in Italy and gives the " +
+        "Pontifical Council for their care a new Statute. Diuturno usu constitutes the " +
+        'Apostolic Internunciature in Turkey -- an unrelated act, coincidentally dated the ' +
+        'same day.',
+    },
 };

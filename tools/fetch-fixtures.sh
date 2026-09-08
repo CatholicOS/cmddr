@@ -70,3 +70,16 @@ if [ -z "$POPE" ] || [ "$POPE" = benedict-xv ]; then
     shelf benedict-xv "$s"
   done
 fi
+
+if [ -z "$POPE" ] || [ "$POPE" = john-xxiii ]; then
+  for s in encyclicals apost_exhortations motu_proprio; do shelf john-xxiii "$s"; done
+  # These two carry no items of their own; the aggregate page is still fetched so
+  # resolveShelfPages can read its year links. John XXIII reigned 1958-1963 (died 3
+  # June 1963), but apost_constitutions' own aggregate page links only 1958-1962 (no
+  # apostolic constitution is indexed for 1963) while apost_letters links 1958-1963 --
+  # confirmed against the fetched aggregate pages, not assumed from the reign span.
+  shelf john-xxiii apost_constitutions
+  years john-xxiii apost_constitutions 1958 1962
+  shelf john-xxiii apost_letters
+  years john-xxiii apost_letters 1958 1963
+fi
