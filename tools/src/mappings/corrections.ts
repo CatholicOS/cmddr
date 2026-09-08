@@ -809,7 +809,7 @@ export const DATE_CORRECTIONS: Record<string, { date: string; note: string }> = 
       "Christi voluntate's own closing dating formula reads 'Datum Romae, apud Sanctum " +
       "Petrum, die nono mensis Iulii, anno Domini bis millesimo quarto decimo, " +
       "Pontificatus Nostri secundo' (9 July 2014, 2nd year of the pontificate -- " +
-      'consistent, 2013-03-13 to 2015-03-12 spans both candidate dates so the pontifical ' +
+      'consistent, 2014-03-13 to 2015-03-12 spans both candidate dates so the pontifical ' +
       "year does not itself disambiguate, but the document's own dating formula is " +
       "decisive). Even the document's own page-heading subtitle prints 'die nono mensis " +
       "Iunii' (9 June), matching the apost_constitutions shelf's printed '9 giugno 2014' " +
