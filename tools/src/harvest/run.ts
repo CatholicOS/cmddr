@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from 'node:fs';
 import { parseFlatIndex } from './flat.js';
 import { parseShelfIndex } from './shelf.js';
+import { resolveShelfPages } from './shelfPages.js';
 import { toDocument } from './toDocument.js';
 import { assignProvisionalOrdinals } from './ordinals.js';
 import { POPES, DATE_CORRECTIONS, DUPLICATE_MERGES, ADJUDICATED_DISTINCT } from '../mappings/index.js';
@@ -72,7 +73,16 @@ for (const pope of POPES) {
     items.push(...parseFlatIndex(fixture(pope.pageSlug), pope.pageSlug));
   } else {
     for (const shelf of pope.shelves) {
-      items.push(...parseShelfIndex(fixture(`${pope.pageSlug}-${shelf}`), pope.pageSlug, shelf));
+      const index = fixture(`${pope.pageSlug}-${shelf}`);
+      const pages = resolveShelfPages(index);
+      if (pages.kind === 'aggregate') {
+        items.push(...parseShelfIndex(index, pope.pageSlug, shelf));
+      } else {
+        for (const year of pages.years) {
+          items.push(...parseShelfIndex(
+            fixture(`${pope.pageSlug}-${shelf}-${year}`), pope.pageSlug, shelf));
+        }
+      }
     }
   }
 }

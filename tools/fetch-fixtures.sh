@@ -27,6 +27,12 @@ year() { # year <pageSlug> <shelfName> <YYYY>
   get "$1-$2-$3" "https://www.vatican.va/content/$1/it/$2/$3.index.html"
 }
 
+# years <pageSlug> <shelfName> <first> <last>  -- for a shelf whose aggregate index
+# carries no items of its own (see resolveShelfPages).
+years() {
+  for y in $(seq "$3" "$4"); do year "$1" "$2" "$y"; done
+}
+
 want() { [ $# -eq 0 ] || [ "${1:-}" = "$POPE" ]; }
 POPE="${1:-}"
 
