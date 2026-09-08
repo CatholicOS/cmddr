@@ -52,7 +52,7 @@ export const POPES: readonly PopeSource[] = [
   {
     pageSlug: 'pius-xii', issuerId: 'rp:pius-xii', era: 'shelf',
     // `speeches` is year-partitioned here and is out of scope in any case (spec §2.7).
-    // `letters` is kept despite a 97.9% (93/95) provisional rate -- adjudicated (Task 8,
+    // `letters` is kept despite a 98.9% (94/95) provisional rate -- adjudicated (Task 8,
     // coordinator review) as a genre fact about this shelf (overwhelmingly personal
     // correspondence addressed to named individuals, with no printed incipit ever), not a
     // parser or rule-table gap: `extractIncipit` itself measures clean (nine real bugs

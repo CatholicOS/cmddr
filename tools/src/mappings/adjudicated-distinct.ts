@@ -971,7 +971,14 @@ export const ADJUDICATED_DISTINCT: Record<
       "atque Kupelaënsi separato territorio civilis provinciae Kayanae, nova dioecesis " +
       "efficitur, «Kayana» nomine'). Sollicitudo omnium Ecclesiarum is the motu proprio on " +
       "the office of papal representatives ('riguardante l'Ufficio dei rappresentanti del " +
-      "Pontefice Romano'). Unrelated acts, coincidentally dated the same day.",
+      "Pontefice Romano'). Unrelated acts, coincidentally dated the same day. The stored " +
+      "date, 24 June, is the shelf heading's own parenthetical and the URL slug's date " +
+      "(.../19690624_kayanae.html), both agreeing; but the document's own closing dating " +
+      "formula reads 'Datum Romae... die sexto et vicesimo mensis iunii... 1969' -- the " +
+      "twenty-sixth of June, not the twenty-fourth. An internal vatican.va inconsistency " +
+      "within this one document, the same pattern as Osakaënsis below (there the <title> " +
+      "tag misprints the date; here the closing formula does), not a harvest error, since " +
+      "both the shelf index and the URL slug already agree with each other on 24 June.",
   },
   'paul-vi|1969-06-24|osakaensis|sollicitudo-omnium-ecclesiarum': {
     incipit1: 'Osakaënsis',
