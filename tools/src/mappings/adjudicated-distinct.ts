@@ -1207,4 +1207,44 @@ export const ADJUDICATED_DISTINCT: Record<
       "ordinatio ad horum dierum necessitates aptius accommodatur'). Unrelated acts " +
       '(Syria vs. the Diocese of Rome), coincidentally dated the same day.',
   },
+  'john-paul-i|1978-09-01|lettera-al-card-joseph-ratzinger-legato-pontificio-al-congresso-mariano-dell-ecuador|lettera-apostolica-in-occasione-della-proclamazione-di-nostra-signora-del-buon-viaggio-a-patrona-di-itabirito-brasile': {
+    incipit1: 'Lettera al Card. Joseph Ratzinger, Legato Pontificio al Congresso Mariano '
+      + "dell'Ecuador",
+    shelf1: 'letters',
+    incipit2: 'Lettera Apostolica in occasione della proclamazione di Nostra Signora del '
+      + 'Buon Viaggio a patrona di Itabirito, Brasile',
+    shelf2: 'apost_letters',
+    note:
+      "The letter to Cardinal Ratzinger (fetched directly, hf_jp-i_let_19780901_ratzinger.html) " +
+      'names him "our Legate Extraordinary" to preside at the Marian Congress in Guayaquil, ' +
+      "Ecuador, and closes 'Given at St Peter's, Rome, on the first day of September, in the " +
+      "year 1978, the first of our Pontificate'. The apostolic letter (fetched directly, " +
+      'hf_jp-i_apl_19780901_propterea-maxime.html) opens \'IOANNES PAULUS PP. I LITTERAE ' +
+      "APOSTOLICAE BEATA VIRGO MARIA ... IURE NUNCUPATUR CAELESTIS APUD DEUM PATRONA OPPIDI " +
+      "AC MUNICIPII ITABIRITO' and closes 'Datum Romae, apud Sanctum Petrum, sub Anulo " +
+      "Piscatoris, die I mensis Septembris, anno MCMLXXVIII, Pontificatus Nostri primo' -- " +
+      'declaring Our Lady of the Prosperous Journey patroness of Itabirito, Brazil. Unrelated ' +
+      'acts (a legation to Ecuador vs. a Marian patronage for a Brazilian town), ' +
+      'coincidentally dated the same day.',
+  },
+  'john-paul-i|1978-09-01|lettera-al-card-joseph-ratzinger-legato-pontificio-al-congresso-mariano-dell-ecuador|lettera-apostolica-in-occasione-dell-elevazione-del-santuario-di-nostra-signora-della-consolazione-al-titolo-di-basilica-minore-piacenza': {
+    incipit1: 'Lettera al Card. Joseph Ratzinger, Legato Pontificio al Congresso Mariano '
+      + "dell'Ecuador",
+    shelf1: 'letters',
+    incipit2: "Lettera Apostolica in occasione dell'elevazione del Santuario di Nostra "
+      + 'Signora della Consolazione al titolo di Basilica Minore, Piacenza',
+    shelf2: 'apost_letters',
+    note:
+      "The letter to Cardinal Ratzinger (fetched directly, hf_jp-i_let_19780901_ratzinger.html) " +
+      'names him "our Legate Extraordinary" to preside at the Marian Congress in Guayaquil, ' +
+      "Ecuador, and closes 'Given at St Peter's, Rome, on the first day of September, in the " +
+      "year 1978, the first of our Pontificate'. The apostolic letter (fetched directly, " +
+      'hf_jp-i_apl_19780901_progredientibus-iam.html) opens \'IOANNES PAULUS PP. I LITTERAE ' +
+      "APOSTOLICAE SACRA DIOECESIS PLACENTINAE AEDES ... LEGITIME ATTOLLITUR AD CONDICIONEM " +
+      "DIGNITATEMQUE BASILICAE MINORIS' and closes 'Datum Romae, apud Sanctum Petrum, sub " +
+      "Anulo Piscatoris, die I mensis Septembris, anno MCMLXXVIII, Pontificatus Nostri primo' " +
+      '-- raising the shrine of Our Lady of Consolation in Piacenza to the rank of minor ' +
+      'basilica. Unrelated acts (a legation to Ecuador vs. a basilica elevation in Piacenza), ' +
+      'coincidentally dated the same day.',
+  },
 };

@@ -97,6 +97,14 @@ export const POPES: readonly PopeSource[] = [
       'encyclicals', 'motu_proprio',
     ],
   },
+  {
+    pageSlug: 'john-paul-i', issuerId: 'rp:john-paul-i', era: 'shelf',
+    // The shortest pontificate (26 August - 28 September 1978, 33 days). Unlike Benedict
+    // XV and Paul VI, this pope's `letters` shelf is an aggregate page carrying its own
+    // four items directly (not year-partitioned), so it is in scope here (spec §2.7).
+    // `speeches` is out of scope for every pope from Pius XI on (see the Pius X entry above).
+    shelves: ['apost_letters', 'letters'],
+  },
 ] as const;
 
 /** The shelves harvested for a pope page; empty for an unknown slug or a flat-era page. */

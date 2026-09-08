@@ -851,3 +851,96 @@ describe('the Paul VI corpus', () => {
     expect(load('john-xxiii')).toHaveLength(177);
   });
 });
+
+describe('the John Paul I corpus', () => {
+  const docs = load('john-paul-i');
+
+  it('holds every formal-shelf document', () => {
+    // 7 raw items across two shelves (3 apost_letters + 4 letters -- both fixtures'
+    // div.item counts match the task brief's expected aggregate exactly). Every heading
+    // on both shelves is a narrative Italian description ('Lettera Apostolica per la
+    // costituzione...', 'Lettera a Mons. Hugo Aufderbeck...'), never an incipit, so
+    // nothing shares an incipit-slug-and-date key and none of the three merge passes
+    // fires. The only same-date collisions are three items sharing 1978-09-01 across
+    // apost_letters and letters, each adjudicated as a genuinely distinct act (see
+    // below) rather than merged. 7 raw items in, zero merged away: 7.
+    expect(docs).toHaveLength(7);
+  });
+
+  it('files them all under the right issuer', () => {
+    expect(docs.every((d) => d.issuerId === 'rp:john-paul-i')).toBe(true);
+    expect(docs.every((d) => d.id.startsWith('mag:john-paul-i/'))).toBe(true);
+  });
+
+  it('gives every document a title', () => {
+    expect(docs.every((d) => typeof d.title === 'string' && d.title.length > 0)).toBe(true);
+  });
+
+  it('mints no incipit at all -- every heading is a narrative description, not the shortest pontificate hiding a silent-mint bug', () => {
+    // All 7 of 7 (100%) are provisional -- the opposite extreme from a suspiciously low
+    // rate, and checked individually rather than sampled (only 7 documents). Every
+    // heading on both shelves opens with the genre word ('Lettera'/'Lettera Apostolica')
+    // followed by a lower-case narrative continuation ('per la costituzione...', 'in
+    // occasione...', 'a Mons. ...', 'ai Vescovi...', 'al Card. ...') -- extractIncipit's
+    // own lower-case-residue rule (incipit.ts) correctly declines to mint from any of
+    // them. This is a genre fact confirmed by fetching all 7 documents directly from
+    // vatican.va: three of them (Cum probe, Propterea maxime, Progredientibus iam) do
+    // open with a genuine Latin incipit in their own body text, printed nowhere on the
+    // index page -- consistent with how extractIncipit works everywhere else in this
+    // pipeline (heading text only, never the URL slug or the document body), so this is
+    // not a parser gap.
+    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(7);
+    expect(docs.every((d) => 'incipit' in d === false)).toBe(true);
+    expect(new Set(docs.map((d) => d.id)).size).toBe(7);
+  });
+
+  it('emits no printed/slug date-mismatch warnings for either shelf', () => {
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    let calls: unknown[][];
+    try {
+      for (const shelf of shelvesFor('john-paul-i')) {
+        parseShelfIndex(
+          readFileSync(`tools/fixtures/john-paul-i-${shelf}.html`, 'utf8'), 'john-paul-i', shelf);
+      }
+    } finally {
+      calls = warnSpy.mock.calls;
+      warnSpy.mockRestore();
+    }
+    const mismatches = calls.filter(([msg]) => String(msg).includes('date mismatch'));
+    expect(mismatches).toEqual([]);
+    // Confirmed by fetching all 7 documents directly: every printed date in the shelf
+    // index agrees with its own URL slug's date reading, so DATE_CORRECTIONS needs no
+    // entry for this pontificate.
+  });
+
+  it('preserves the three same-date (1978-09-01) documents as distinct, not merged', () => {
+    // Two apost_letters items (Propterea maxime, Itabirito/Brasile; Progredientibus iam,
+    // Piacenza) and one letters item (the Ratzinger legation letter) all fall on 1
+    // September 1978, the first day of the pontificate. Each was fetched directly and
+    // is a genuinely unrelated act (see ADJUDICATED_DISTINCT for the full evidence).
+    const sameDate = docs.filter((d) => d.date === '1978-09-01');
+    expect(sameDate).toHaveLength(3);
+    expect(sameDate.map((d) => d.source!.shelf).sort()).toEqual([
+      'apost_letters', 'apost_letters', 'letters',
+    ]);
+    expect(new Set(sameDate.map((d) => d.id)).size).toBe(3);
+  });
+
+  it('satisfies every invariant', () => {
+    expect(checkDocuments(docs, genres, keywords)).toEqual([]);
+  });
+
+  it('records the fixture retrieval date for every document', () => {
+    expect(docs.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
+  });
+
+  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 177 John XXIII, and 688 Paul VI records untouched', () => {
+    expect(all).toHaveLength(383);
+    expect(load('pius-x')).toHaveLength(306);
+    expect(load('pius-xi')).toHaveLength(158);
+    expect(load('pius-xii')).toHaveLength(253);
+    expect(load('benedict-xv')).toHaveLength(63);
+    expect(load('john-xxiii')).toHaveLength(177);
+    expect(load('paul-vi')).toHaveLength(688);
+  });
+});

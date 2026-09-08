@@ -89,3 +89,7 @@ if [ -z "$POPE" ] || [ "$POPE" = paul-vi ]; then
     shelf paul-vi "$s"
   done
 fi
+
+if [ -z "$POPE" ] || [ "$POPE" = john-paul-i ]; then
+  for s in apost_letters letters; do shelf john-paul-i "$s"; done
+fi

@@ -1,0 +1,139 @@
+[
+  {
+    "id": "mag:john-paul-i/apostolic-letter-1978-09-01-1",
+    "title": "Lettera Apostolica in occasione dell'elevazione del Santuario di Nostra Signora della Consolazione al titolo di Basilica Minore, Piacenza",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-paul-i",
+    "issuerType": "pope",
+    "date": "1978-09-01",
+    "source": {
+      "url": "https://www.vatican.va/content/john-paul-i/la/apost_letters/documents/hf_jp-i_apl_19780901_progredientibus-iam.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-paul-i/apostolic-letter-1978-09-01-2",
+    "title": "Lettera Apostolica in occasione della proclamazione di Nostra Signora del Buon Viaggio a patrona di Itabirito, Brasile",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-paul-i",
+    "issuerType": "pope",
+    "date": "1978-09-01",
+    "source": {
+      "url": "https://www.vatican.va/content/john-paul-i/la/apost_letters/documents/hf_jp-i_apl_19780901_propterea-maxime.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-paul-i/letter-1978-09-01",
+    "title": "Lettera al Card. Joseph Ratzinger, Legato Pontificio al Congresso Mariano dell'Ecuador",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:john-paul-i",
+    "issuerType": "pope",
+    "date": "1978-09-01",
+    "source": {
+      "url": "https://www.vatican.va/content/john-paul-i/en/letters/documents/hf_jp-i_let_19780901_ratzinger.html",
+      "shelf": "letters",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:john-paul-i/apostolic-letter-1978-09-12",
+    "title": "Lettera Apostolica per la costituzione della Nunziatura Apostolica nelle Isole Fiji",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-paul-i",
+    "issuerType": "pope",
+    "date": "1978-09-12",
+    "source": {
+      "url": "https://www.vatican.va/content/john-paul-i/la/apost_letters/documents/hf_jp-i_apl_19780912_cum-probe.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-paul-i/letter-1978-09-17",
+    "title": "Lettera in occasione dell' 85° Katholikentag tedesco",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:john-paul-i",
+    "issuerType": "pope",
+    "date": "1978-09-17",
+    "source": {
+      "url": "https://www.vatican.va/content/john-paul-i/es/letters/documents/hf_jp-i_let_19780917_katholikentag.html",
+      "shelf": "letters",
+      "languages": [
+        "ES",
+        "FR",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:john-paul-i/letter-1978-09-20",
+    "title": "Lettera ai Vescovi della Conferenza Episcopale di Argentina e Cile",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:john-paul-i",
+    "issuerType": "pope",
+    "date": "1978-09-20",
+    "source": {
+      "url": "https://www.vatican.va/content/john-paul-i/es/letters/documents/hf_jp-i_let_19780920_argentina-cile.html",
+      "shelf": "letters",
+      "languages": [
+        "ES",
+        "FR"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:john-paul-i/letter-1978-09-28",
+    "title": "Lettera a Mons. Hugo Aufderbeck nel VII centenario della Chiesa di S. Severo",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:john-paul-i",
+    "issuerType": "pope",
+    "date": "1978-09-28",
+    "source": {
+      "url": "https://www.vatican.va/content/john-paul-i/en/letters/documents/hf_jp-i_let_28091978_mons-aufderbeck.html",
+      "shelf": "letters",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "sourceGenreLabel": "letters"
+  }
+]
