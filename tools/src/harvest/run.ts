@@ -76,8 +76,11 @@ function urlDocSlug(url: string | null): string | null {
   return m ? m[1]! : null;
 }
 
-/** The date the checked-in fixtures in tools/fixtures/ were fetched from vatican.va.
- *  This is the source-of-truth default; must be updated whenever those fixtures are refreshed.
+/** The date the checked-in *pope* fixtures in tools/fixtures/ were fetched from vatican.va.
+ *  This is the source-of-truth default for pope fixtures; must be updated whenever those
+ *  fixtures are refreshed. A council fixture's retrieval date lives on its own COUNCILS row
+ *  (tools/src/mappings/councils.ts) instead and must be updated there -- see retrievedFor
+ *  below, which never restamps this value onto a council's records.
  *  Can be overridden with the RETRIEVED env var for testing or when refreshing fixtures. */
 const FIXTURES_RETRIEVED = '2026-09-07';
 /**

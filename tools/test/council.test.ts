@@ -78,6 +78,28 @@ describe('parseCouncilIndex', () => {
     }
   });
 
+  it('throws on a duplicate language code in the bar rather than silently deduping', () => {
+    // Change one Lumen Gentium bar suffix (Arabo, _ar) to another already present in
+    // that same bar (Bielorusso, _be), producing a duplicate BE without touching IT.
+    const duped = html.replace(
+      'vat-ii_const_19641121_lumen-gentium_ar.html',
+      'vat-ii_const_19641121_lumen-gentium_be.html');
+    expect(duped).not.toBe(html);
+    expect(() => parseCouncilIndex(duped, vaticanII)).toThrow(/duplicate language/i);
+  });
+
+  it('throws when the language bar carries no Italian link', () => {
+    // Remove only the bar's Italiano entry, leaving the bold anchor to the Italian
+    // text (and its href) untouched -- so source.url would otherwise still point at
+    // the Italian text while source.languages silently lost IT.
+    const noItalian = html.replace(
+      ', <a href="documents/vat-ii_const_19641121_lumen-gentium_it.html">Italiano</a>',
+      '');
+    expect(noItalian).not.toBe(html);
+    expect(() => parseCouncilIndex(noItalian, vaticanII))
+      .toThrow(/no italian link/i);
+  });
+
   it('throws when the index carries a document the curated table does not name', () => {
     const stray = html.replace(
       'vat-ii_const_19641121_lumen-gentium_it.html',

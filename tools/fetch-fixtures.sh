@@ -4,7 +4,10 @@
 # Fixtures are checked in so the test suite is offline and deterministic: a
 # vatican.va redesign then fails a test instead of silently corrupting a harvest.
 # After running this, update FIXTURES_RETRIEVED in tools/src/harvest/run.ts to
-# today's date and re-run `npm run harvest && npm run render`.
+# today's date -- this covers the *pope* fixtures only -- and re-run
+# `npm run harvest && npm run render`. A council fixture's retrieval date lives on
+# its own COUNCILS row (tools/src/mappings/councils.ts) and must be updated there
+# instead; FIXTURES_RETRIEVED is never restamped onto a council's records.
 #
 # Usage: tools/fetch-fixtures.sh                 # every fixture
 #        tools/fetch-fixtures.sh pius-x          # one pope's fixtures

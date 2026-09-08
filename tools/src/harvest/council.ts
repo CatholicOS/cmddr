@@ -99,6 +99,22 @@ export function parseCouncilIndex(html: string, council: CouncilSource): Harvest
       return languageOf(lang);
     }).get();
 
+    // The bar is expected to list Italiano alongside every other translation (see above);
+    // if vatican.va ever drops it as redundant with the bold anchor, the record would
+    // otherwise silently lose IT from source.languages while source.url still points at
+    // the Italian text -- a record contradicting itself with no throw.
+    if (!languages.includes('IT')) {
+      throw new Error(`No Italian link in the language bar for '${incipit}'`);
+    }
+
+    const seenLanguages = new Set<string>();
+    for (const lang of languages) {
+      if (seenLanguages.has(lang)) {
+        throw new Error(`Duplicate language code '${lang}' in the language bar for '${incipit}'`);
+      }
+      seenLanguages.add(lang);
+    }
+
     items.push({
       title: incipit,
       incipit,
@@ -107,7 +123,7 @@ export function parseCouncilIndex(html: string, council: CouncilSource): Harvest
       url: href.startsWith('http') ? href
         : href.startsWith('/') ? `https://www.vatican.va${href}`
         : `${ARCHIVE_BASE}/${council.pageSlug}/${href}`,
-      languages: [...new Set(languages)],
+      languages,
       shelf: null,
       pageSlug: council.pageSlug,
     });

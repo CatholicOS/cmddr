@@ -120,8 +120,9 @@ Lithuanian.**
 | `hu` | `HU` | | `it` | `IT` | | `sw` | `SW` |
 
 Chinese is not a `documents/` link at all but a PDF elsewhere on the site
-(`/chinese/concilio/vat-ii_{name}_zh-t.pdf`) and maps to `ZH`. Hebrew (`_he.pdf`) is a PDF under
-`documents/`. Both count as available languages.
+(`/chinese/concilio/vat-ii_{name}_zh-t.pdf`) and maps to `ZH`. Hebrew (`_he`) is a PDF under
+`documents/` on Dei Verbum and HTML under `documents/` on Nostra Aetate. Both count as available
+languages.
 
 This table was verified, not assumed: each document page prints its own code bar
 (`[ AR - BE - CS - DE - EN - ES - FR - IT - HU - LA - LV - PT - SW - ZH ]`), and the set derived

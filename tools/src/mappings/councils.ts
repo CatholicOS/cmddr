@@ -190,9 +190,9 @@ export const COUNCILS: readonly CouncilSource[] = [
  *
  * Verified for all sixteen documents by comparing the set derived from the index's
  * link suffixes against the code bar each document prints (spec §2.6). `hr` occurs
- * once, on Nostra Aetate alone; `he` occurs on Dei Verbum and Nostra Aetate, as a
- * PDF. Chinese is not a `documents/` link at all and is handled separately by the
- * adapter.
+ * once, on Nostra Aetate alone; `he` occurs on Dei Verbum as a PDF and on Nostra
+ * Aetate as HTML. Chinese is not a `documents/` link at all and is handled
+ * separately by the adapter.
  */
 export const ARCHIVE_LANGUAGE_SUFFIXES: Record<string, string> = {
   ar: 'AR', be: 'BE', cs: 'CS', en: 'EN', fr: 'FR', ge: 'DE', he: 'HE', hr: 'HR',

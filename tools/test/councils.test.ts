@@ -105,6 +105,13 @@ describe('CONCILIAR_SOURCE_GENRE_TO_GENRE', () => {
     expect(CONCILIAR_SOURCE_GENRE_TO_GENRE['decreto']!.genre).toBe('decree');
     expect(SOURCE_GENRE_TO_GENRE['decreto']!.genre).toBeNull();
   });
+
+  it('agrees with the conciliar genre map on every descriptiveTitle', () => {
+    for (const [key, r] of Object.entries(VATICAN_II_DOCUMENTS)) {
+      const mapped = CONCILIAR_SOURCE_GENRE_TO_GENRE[r.sourceGenreLabel.toLowerCase()]!;
+      expect(mapped.descriptiveTitle, key).toBe(r.descriptiveTitle);
+    }
+  });
 });
 
 describe('ARCHIVE_LANGUAGE_SUFFIXES', () => {
