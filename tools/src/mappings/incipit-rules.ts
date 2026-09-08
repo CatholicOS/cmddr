@@ -23,7 +23,14 @@ export const GENRE_PREFIXES: readonly string[] = [
   'Lettera Apostolica in forma di Motu Proprio',     // John Paul II, motu_proprio
   'Lettera Apostolica data Motu Proprio',            // Benedict XVI, motu_proprio
   'Lettera Apostolica (breve)',                      // Pius XII, apost_letters
-  'Esortazione Apostolica Postsinodale',             // Benedict XVI, apost_exhortations
+  // Deleted, dead and mis-cited (final review, 2026-09-07): 'Esortazione Apostolica
+  // Postsinodale', formerly listed here for Benedict XVI, apost_exhortations. Single-entry
+  // removal over all 4,359 fixture headings changes zero incipits. Worse than merely
+  // unused: all four Benedict XVI headings on that shelf print the incipit *first*
+  // ('Verbum Domini: Esortazione Apostolica Postsinodale...'), so this phrase never
+  // occurs at position 0, where GENRE_PREFIXES matches -- it could not have fired even in
+  // principle. 'Esortazione Apostolica' (below) already strips the Leo XIV headings that
+  // need a genre prefix on this shelf.
   'Esortazione Apostolica',                          // Leo XIV, apost_exhortations
   // 'Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato' and
   // 'Lettera Apostolica per la costituzione della Nunziatura Apostolica...' (both real
@@ -71,12 +78,29 @@ export const GENRE_PREFIXES: readonly string[] = [
  * implementation takes the minimum index across all of them.
  */
 export const GLOSS_CONNECTORS: readonly string[] = [
-  ', col quale',                                                              // 'Mirabilis Deus, col quale il Pontefice attribuisce...' (incipit.test.ts)
-  ' con il quale', ' con la quale', ' col quale', ' con cui',                  // Pius XI
+  // Deleted (final review, 2026-09-07): ', col quale' (the comma-anchored sibling of
+  // ' col quale' below). Single-entry removal changes zero headings -- including its own
+  // citing example, 'Mirabilis Deus, col quale il Pontefice attribuisce...'
+  // (incipit.test.ts): the comma is always followed by a space, so ' col quale' (no
+  // comma required) already matches one character later at the same effective cut point,
+  // the trailing comma being trimmed by the same punctuation strip either way. The two
+  // were mutually redundant; kept the more general, comma-independent form and deleted
+  // the strictly narrower one.
+  ' con il quale', ' con la quale', ' col quale', ' con cui',                  // Pius XI; ' col quale' also
+                                                                               // confirmed against 'Mirabilis Deus, col quale il Pontefice attribuisce...' (incipit.test.ts)
   ', che ',                                                                   // 'Quod nobis in condendo, che attribuisce al Pontificio Istituto...' (incipit.test.ts)
-  '. Il Santo Padre', '. Il Sommo Pontefice',                                  // Francis
-  ' del Santo Padre', ' del Sommo Pontefice', ' di Papa ',                     // Leo XIV
-  ": ", ' - ', ' – ', ' — ',                                                   // Pius XII, B XVI
+  // Deleted (final review, 2026-09-07): '. Il Santo Padre', '. Il Sommo Pontefice'
+  // (cited "Francis"). Single-entry removal changes zero headings; neither string occurs
+  // in any fixture heading at all -- the citation named no real heading when the entries
+  // were added and none has appeared since.
+  ' del Santo Padre', ' del Sommo Pontefice',                                 // Leo XIV
+  // Deleted (final review, 2026-09-07): ' di Papa ' (cited "Leo XIV"). Single-entry
+  // removal changes zero headings; no fixture heading contains the phrase.
+  // Deleted (final review, 2026-09-07): ' – ' (en-dash, cited "Pius XII, B XVI"). Single-
+  // entry removal changes zero headings; no fixture heading contains an en-dash at all --
+  // every real dash-gloss separator in the corpus is the plain hyphen ' - ', already
+  // listed below.
+  ": ", ' - ', ' — ',                                                         // Pius XII, B XVI
   ' sulla ', ' sui ',                                                         // John XXIII; ' sulla ' also confirmed against
                                                                                // 'Oecumenicum Concilium sulla recita del Rosario...' (incipit.test.ts) and, via the
                                                                                // two-word guard, against the real Leo XIII heading 'Vicario sulla terra'
@@ -108,7 +132,10 @@ export const GLOSS_CONNECTORS: readonly string[] = [
   // fixture at all. Per this repository's standing rule, an unevidenced rule is deleted
   // rather than retro-justified -- the same discipline that removed eleven speculative
   // rules earlier in this project (see the deletion note above, and Task 5's review).
-  ' ai ', ' agli ', ' alle ', ' alla ', " all'",                               // Benedict XV; ' ai ' confirmed against
+  // Deleted (final review, 2026-09-07): ' alle ' and " all'" (both cited "Benedict XV",
+  // siblings of ' ai '/' agli '/' alla ' below). Single-entry removal changes zero
+  // headings for either: no fixture heading needs either form to cut correctly.
+  ' ai ', ' agli ', ' alla ',                                                 // Benedict XV; ' ai ' confirmed against
                                                                                // 'Dès le début ai Capi dei popoli belligeranti...' (incipit.test.ts)
   ' al ',                                                                      // Pius XI, letters (Task 8): the masculine-singular sibling of the
                                                                                // four address prepositions above, missing until now. Confirmed
@@ -145,18 +172,20 @@ export const GLOSS_CONNECTORS: readonly string[] = [
   ', per ',                                                                   // Pius XI, letters (Task 8): 'Lettera Decretale Geminata Laetitia, per
                                                                                // la Canonizzazione di Don Giovanni Bosco' (docSlug geminata-laetitia).
                                                                                // Deleted for lack of evidence in Task 5's review; now evidenced.
-  ', sul ',                                                                   // Task 12 review: matches exactly two headings in the whole corpus --
-                                                                               // Benedict XV's 'In Africam quisnam, sul martirio subito in Uganda...'
-                                                                               // (docSlug africam-quisnam) and Pius XI's 'Motu Proprio Ad Musicae
-                                                                               // Sacrae, sul consalidamento del Pontificio Instituto di Musica Sacra'
-                                                                               // (docSlug ad-musicae-sacrae) -- both already re-minted on this
-                                                                               // evidence (see task-12-report.md's identifier accounting). The bare,
-                                                                               // comma-less ' sul ' also occurs twice more in the corpus (Pius XII's
-                                                                               // 'Sacra loca. - La chiesa...sul Monte Sion...' and 'Lettera a Padre
-                                                                               // Pietro Leturia...: sul valore...'), but both are already cut earlier
-                                                                               // by ' - ' and ': ' respectively, so the comma-anchored form here is
-                                                                               // the tighter, sufficient, and correct choice -- adding the bare form
-                                                                               // too would be unevidenced by any heading it would actually change.
+  // Deleted (final review, 2026-09-07): ', sul ', formerly evidenced (Task 12 review) by
+  // exactly two headings -- Benedict XV's 'In Africam quisnam, sul martirio subito in
+  // Uganda...' (docSlug africam-quisnam) and Pius XI's 'Motu Proprio Ad Musicae Sacrae,
+  // sul consalidamento del Pontificio Instituto di Musica Sacra' (docSlug
+  // ad-musicae-sacrae) -- with the note explaining it was kept narrower than the bare,
+  // comma-less ' sul ' because that broader form was "unevidenced by any heading it would
+  // actually change." That was true when written, but the bare ' sul ' entry was later
+  // added on its own, separate evidence (Task 17 review, 'Intima Ecclesiae natura sul
+  // servizio della carità' / 'Rosarium Virginis Mariae sul Santo Rosario' -- see below)
+  // and now subsumes both of this entry's headings too, making the comma-anchored form
+  // redundant. Single-entry removal confirms it: changes zero headings. The note stood
+  // uncorrected for several tasks after the bare form made it redundant, silently
+  // misleading about which entry was doing the work -- worth naming as a discipline
+  // failure, not just a dead rule.
   ', sulle ',                                                                 // Task 12 round-2 review: the feminine-plural sibling of ', sul '.
                                                                                // Matches exactly two headings in the whole corpus, both Pius XI
                                                                                // motu_proprio: 'Motu Proprio Post datam, sulle facoltà quinquennali
@@ -499,6 +528,19 @@ export const MIN_WORDS_BEFORE_CUT = 2;
  * connectors are genuinely ambiguous at one word (e.g. 'Palmensis - Lagensis (Palmensis
  * et Xapecoënsis)' would wrongly mint as bare 'Palmensis').
  */
+// Speculative-by-family (final review, 2026-09-07): single-member removal from this Set
+// (leaving the connector itself in GLOSS_CONNECTORS, so only the MIN_WORDS_BEFORE_CUT
+// guard is restored for it) shows six of these nine members are individually inert --
+// ' con il quale', ' col quale', ' con cui', ', col quale', ' che istituisce', and the
+// no-space ',Lettera Decretale' -- every heading where each actually fires already has
+// >=2 words before it, so the guard would not have rejected it anyway. Only three are
+// individually load-bearing: ' con la quale' (10 headings), ', che ' (Nzerekoreensis,
+// 1 heading), and the spaced ', Lettera Decretale' (Quaerebam/Sapientia, 2 headings).
+// The six inert members are NOT deleted: as the doc comment below explains, this
+// exemption was adopted as a *family* of same-shape relative-clause markers on measured
+// evidence that the family as a whole is safe (unlike a bare single-character/short
+// preposition), not because each member individually needed exempting. Marked here so
+// that fact -- family-evidenced, not individually-evidenced -- is not lost.
 export const CUT_GUARD_EXEMPT: ReadonlySet<string> = new Set([
   ' con il quale', ' con la quale', ' col quale', ' con cui',
   ', col quale', ', che ', ' che istituisce',
