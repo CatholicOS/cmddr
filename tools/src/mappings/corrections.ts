@@ -326,4 +326,142 @@ export const DATE_CORRECTIONS: Record<string, { date: string; note: string }> = 
       "1961-10-27). The printed date is correct; the apost_letters shelf's own URL slug " +
       '(19601216, 16 December) is wrong.',
   },
+
+  // Task 14 (Paul VI, elected 21 June 1963). Every entry below is adjudicated against the
+  // document's own dating formula, read on vatican.va, and cross-checked against its
+  // stated pontificate year (year N runs 21 June of calendar year 1962+N to 20 June of
+  // 1963+N).
+  'paul-vi|apost_constitutions|avkaensis|1977-11-10': {
+    date: '1977-11-10',
+    note:
+      "Avkaënsis's own dating formula reads 'Datum Romae... die decimo mensis Novembris... " +
+      "1977, Pontificatus Nostri quinto decimo' (10 November 1977, 15th year of the " +
+      'pontificate -- consistent, 1977-06-21 to 1978-06-20). The printed date is correct; ' +
+      "the apost_constitutions shelf's own URL slug (19771103, 3 November) is wrong (its " +
+      "own document slug is even misspelled 'avkaensiis').",
+  },
+  'paul-vi|apost_constitutions|iullundurensis|1971-12-06': {
+    date: '1971-12-06',
+    note:
+      "Iullundurensis's own dating formula reads 'die sexto mensis Decembris... 1971... " +
+      "Pontificatus Nostri nono' (6 December 1971, 9th year of the pontificate -- " +
+      'consistent, 1971-06-21 to 1972-06-20). The printed date is correct; the ' +
+      "apost_constitutions shelf's own URL slug (19711129, 29 November) is wrong.",
+  },
+  'paul-vi|apost_constitutions|insularum-sancti-petri-et-miquelonensis|1970-11-11': {
+    date: '1970-11-16',
+    note:
+      "Insularum Sancti Petri et Miquelonensis's own dating formula reads 'die sextodecimo " +
+      "mensis novembris... 1970... Pontificatus Nostri octavo' (16 November 1970, 8th year " +
+      'of the pontificate -- consistent, 1970-06-21 to 1971-06-20). The ' +
+      "apost_constitutions shelf's printed date ('11 novembre 1970', 11 November) is the " +
+      'error; its own URL slug (19701116, 16 November) is correct.',
+  },
+  'paul-vi|apost_constitutions|chetumaliensis|1970-05-23': {
+    date: '1970-05-23',
+    note:
+      "Chetumaliensis's own dating formula reads 'die vicesimo tertio mensis maii... " +
+      "1970... Pontificatus Nostri septimo' (23 May 1970, 7th year of the pontificate -- " +
+      'consistent, 1969-06-21 to 1970-06-20). The printed date is correct; the ' +
+      "apost_constitutions shelf's own URL slug (19700521, 21 May) is wrong.",
+  },
+  'paul-vi|apost_constitutions|campitemplensis|1968-12-08': {
+    date: '1968-12-08',
+    note:
+      "Campitemplensis's own dating formula reads 'die octavo mensis decembris... 1968... " +
+      "Pontificatus Nostri sexto' (8 December 1968, 6th year of the pontificate -- " +
+      'consistent, 1968-06-21 to 1969-06-20). The printed date is correct; the ' +
+      "apost_constitutions shelf's own URL slug (19681123, 23 November) is wrong.",
+  },
+  'paul-vi|apost_constitutions|gruardensis-et-aliarum|1967-07-17': {
+    date: '1967-07-13',
+    note:
+      "Gruardensis et aliarum's own dating formula reads 'die tertiodecimo mensis iulii... " +
+      "1967... Pontificatus Nostri quinto' (13 July 1967, 5th year of the pontificate -- " +
+      "consistent, 1967-06-21 to 1968-06-20). The apost_constitutions shelf's printed date " +
+      "('17 luglio 1967', 17 July) is the error; its own URL slug (19670713, 13 July) is " +
+      'correct.',
+  },
+  'paul-vi|apost_constitutions|arundelliensis-brichtelmestunensis|1967-06-10': {
+    date: '1967-07-10',
+    note:
+      "This (the second of two same-named Arundelliensis - Brichtelmestunensis acts on this " +
+      "shelf, dated separately in 1965 and 1967) has its own dating formula reading 'die " +
+      "decimo mensis Iulii... 1967... Pontificatus Nostri quinto' (10 July 1967, 5th year " +
+      'of the pontificate -- consistent, 1967-06-21 to 1968-06-20). The ' +
+      "apost_constitutions shelf's printed date ('10 giugno 1967', 10 June) is the error; " +
+      "its own URL slug (19670710, 10 July) is correct.",
+  },
+  'paul-vi|apost_constitutions|bauropolitanae|1964-02-11': {
+    date: '1964-02-15',
+    note:
+      "Bauropolitanae's own dating formula reads 'die quintodecimo mensis Februarii... " +
+      "1964... Pontificatus Nostri primo' (15 February 1964, 1st year of the pontificate -- " +
+      'consistent, 1963-06-21 to 1964-06-20). The apost_constitutions shelf\'s printed date ' +
+      "('11 febbraio 1964', 11 February) is the error; its own URL slug (19640215, 15 " +
+      'February) is correct.',
+  },
+  'paul-vi|apost_letters|quam-recte|1977-10-10': {
+    date: '1977-10-25',
+    note:
+      "Quam recte's own dating formula reads 'sub anulo Piscatoris die XXV mensis Octobris " +
+      "anno MCMLXXVII, Pontificatus Nostri quinto decimo' (25 October 1977, 15th year of " +
+      'the pontificate -- consistent, 1977-06-21 to 1978-06-20). The apost_letters shelf\'s ' +
+      "printed date ('10 ottobre 1977', 10 October) is the error; its own URL slug " +
+      '(19771025, 25 October) is correct.',
+  },
+  'paul-vi|apost_letters|antiquae-nobilitatis|1969-02-02': {
+    date: '1969-02-02',
+    note:
+      "Antiquae nobilitatis's own dating formula reads 'die II mensis Februarii, in festo " +
+      "Purificationis B.M.V.... 1969, Pontificatus Nostri sexto' (2 February 1969, the " +
+      'feast of the Purification, 6th year of the pontificate -- consistent, 1968-06-21 to ' +
+      "1969-06-20). The printed date is correct; the apost_letters shelf's own URL slug " +
+      '(19690214, 14 February) is wrong.',
+  },
+  'paul-vi|apost_letters|opera-bona|1967-01-27': {
+    date: '1968-01-27',
+    note:
+      "Opera bona's own dating formula reads 'die XXVII mensis Ianuarii... MCMLXVIII, " +
+      "Pontificatus Nostri quinto' (27 January 1968, 5th year of the pontificate -- " +
+      "consistent, 1967-06-21 to 1968-06-20). The apost_letters shelf's printed date " +
+      "('27 gennaio 1967', year 1967) is the error, off by exactly one year; its own URL " +
+      'slug (19680127, 1968) is correct.',
+  },
+  'paul-vi|apost_letters|quantum-utilitatis|1967-08-19': {
+    date: '1967-08-19',
+    note:
+      "This is one of five distinct 'Quantum utilitatis' letters on this shelf (an " +
+      'unremarkable homonym, not a duplicate -- each carries its own date and its own URL ' +
+      "document slug). This instance's own dating formula reads 'die XIX mensis Augusti, " +
+      "anno MCMLXVII, Pontificatus Nostri quinto' (19 August 1967, 5th year of the " +
+      'pontificate -- consistent, 1967-06-21 to 1968-06-20). The printed date is correct; ' +
+      'this URL slug (19670818, 18 August) is wrong.',
+  },
+  'paul-vi|motu_proprio|equestres-ordines|1965-04-15': {
+    date: '1966-04-15',
+    note:
+      "Equestres Ordines's own dating formula reads 'die XV mensis Aprilis, anno MCMLXVI, " +
+      "Pontificatus Nostri tertio' (15 April 1966, 3rd year of the pontificate -- " +
+      "consistent, 1965-06-21 to 1966-06-20). The motu_proprio shelf's printed date " +
+      "('15 aprile 1965', year 1965) is the error, off by exactly one year; its own URL " +
+      'slug (19660415, 1966) is correct.',
+  },
 };
+
+/**
+ * Two Paul VI apost_letters "Printed/slug date mismatch" warnings -- 'Merito celebratur'
+ * (printed 10 ottobre 1966, slug 19661014) and 'Amor dulcissimus' (printed 23 ottobre
+ * 1965, slug 19651017) -- are left deliberately unresolved, not for lack of trying.
+ * Fetching each one's own vatican.va link (as printed in the shelf index) returns a
+ * *different, unrelated* document: 'Merito celebratur' resolves to
+ * hf_p-vi_apl_19661014_quantum-utilitatis.html, whose own heading and dating formula
+ * concern the Apostolic Nunciature in Iraq ("Datum Romae... die XIV mensis Octobris, anno
+ * MCMLXVI, Pontificatus Nostri quarto", 14 October 1966); 'Amor dulcissimus' resolves to
+ * hf_p-vi_apl_19651017_inter-persecutiones.html, a beatification letter for Fr. Jacques
+ * Berthieu SJ ("...die XVII mensis Octobris... anno MCMLXV, Pontificatus Nostri tertio",
+ * 17 October 1965). Both are mislinked hrefs on vatican.va's own index page, not
+ * transcription errors in either heading's own text -- no DATE_CORRECTIONS entry can
+ * quote a genuine dating formula for 'Merito celebratur' or 'Amor dulcissimus' themselves,
+ * since neither is reachable at its own printed link. See task-14-report.md.
+ */

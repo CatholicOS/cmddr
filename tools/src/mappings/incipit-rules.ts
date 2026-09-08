@@ -254,6 +254,19 @@ export const NARRATIVE_OPENERS: readonly string[] = [
   // (contrast the specific, incipit-derived slugs on every genuine bare incipit in this
   // corpus). No other heading anywhere in the four-pontificate corpus opens this way.
   'Di nostro',
+  // 'Nomina del' (Task 14, Paul VI review): 'Nomina del Card. Ugo Poletti a Vicario
+  // Generale' (paul-vi/apost_letters) narrates a personnel appointment rather than opening
+  // a document -- 'the appointment of Cardinal X as Y', not an incipit. Its own URL slug,
+  // nomina-vicario-generale, is as generic as the phrase itself (contrast the
+  // incipit-derived slugs on every genuine bare incipit in this corpus), the same
+  // evidentiary shape as 'Di nostro' above. Found only after stripping this heading's
+  // trailing ', 6 marzo 1973' date (shelf.ts): with the date still attached the residue ran
+  // to 11 words and was already (correctly) rejected by MAX_INCIPIT_WORDS; stripped down to
+  // its true heading it is exactly 8 words, sneaking under the ceiling and being wrongly
+  // minted -- the same silent-mint failure mode as 'Iam in Pontificatus' (see the
+  // GLOSS_CONNECTORS ', la Sacra Gerarchia' entry above). No other heading anywhere in the
+  // corpus opens this way.
+  'Nomina del',
 ];
 
 /**

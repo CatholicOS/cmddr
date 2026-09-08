@@ -84,6 +84,19 @@ export const POPES: readonly PopeSource[] = [
       'encyclicals', 'motu_proprio',
     ],
   },
+  {
+    pageSlug: 'paul-vi', issuerId: 'rp:paul-vi', era: 'shelf',
+    // `letters` and `speeches` are year-partitioned and out of scope (spec §2.7). The
+    // remaining five aggregate pages carry every item directly, unlike John XXIII's
+    // year-partitioned apost_constitutions/apost_letters. apost_constitutions (354) is
+    // dominated by circumscription erections filed under a bare Latin toponym -- see the
+    // erection-candidate test in harvest-data.test.ts; confirming them into
+    // CIRCUMSCRIPTION_ERECTIONS is Task 20's work, not this one's.
+    shelves: [
+      'apost_constitutions', 'apost_exhortations', 'apost_letters',
+      'encyclicals', 'motu_proprio',
+    ],
+  },
 ] as const;
 
 /** The shelves harvested for a pope page; empty for an unknown slug or a flat-era page. */

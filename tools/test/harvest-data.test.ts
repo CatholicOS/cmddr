@@ -705,3 +705,149 @@ describe('the John XXIII corpus', () => {
     expect(load('benedict-xv')).toHaveLength(63);
   });
 });
+
+describe('the Paul VI corpus', () => {
+  const docs = load('paul-vi');
+
+  it('holds every formal-shelf document', () => {
+    // 692 raw items across five shelves: 7 encyclicals + 354 apost_constitutions +
+    // 270 apost_letters + 12 apost_exhortations + 49 motu_proprio (every fixture's own
+    // div.item count matches the task brief's expected aggregate exactly -- no
+    // year-partitioning here, unlike John XXIII). Four merge away: Africae terrarum
+    // (1967-10-29), Causas matrimoniales (1971-03-28), Apostolatus peragendi
+    // (1976-12-10) and Iustitiam et pacem (1976-12-10) are each filed on both
+    // apost_letters and motu_proprio under the same incipit and date (pass 1,
+    // automatic/mechanical -- apost_letters, the more specific shelf, wins
+    // keepMoreSpecific and the motu_proprio filing is recorded as alsoShelvedAs).
+    // 692 - 4 = 688.
+    expect(docs).toHaveLength(688);
+  });
+
+  it('files them all under the right issuer', () => {
+    expect(docs.every((d) => d.issuerId === 'rp:paul-vi')).toBe(true);
+    expect(docs.every((d) => d.id.startsWith('mag:paul-vi/'))).toBe(true);
+  });
+
+  it('gives every document a title', () => {
+    expect(docs.every((d) => typeof d.title === 'string' && d.title.length > 0)).toBe(true);
+  });
+
+  it('omits the incipit exactly when the id is provisional', () => {
+    for (const d of docs) {
+      expect('incipit' in d, d.id).toBe(d.idStatus === 'minted');
+    }
+    // Only 8 of 688 (1.2%) carry no recoverable incipit -- a low rate given the volume,
+    // but not the silent-mint trap a low rate can otherwise hide (Task 14 review): every
+    // one of the 680 minted incipits was checked for gloss contamination (any minted
+    // incipit six words or longer, or containing a known gloss-connector substring) and
+    // none were found -- the apparent "long incipit" hits are all genuine multi-word
+    // Roman titular-church designations ('Urbis (Templum ...)') or genuine multi-word
+    // Latin toponym lists, not truncated glosses. Two real gloss-contamination bugs were
+    // caught and fixed instead of silently landing in this count: a bare trailing
+    // ', <day> <month> <year>' date with no enclosing parens (shelf.ts) previously rode
+    // into the incipit uncut ('Multiformis Sapientia Dei, 27 settembre 1970'; 'Mirabilis
+    // in Ecclesia Deus, 4 ottobre 1970' -- both now correctly minted as their bare
+    // incipits), and stripping that date off a third heading ('Nomina del Card. Ugo
+    // Poletti a Vicario Generale, 6 marzo 1973') incidentally left an 8-word residue that
+    // sneaked under MAX_INCIPIT_WORDS and was wrongly minted -- fixed by adding 'Nomina
+    // del' to NARRATIVE_OPENERS (incipit-rules.ts), the same failure shape as 'Iam in
+    // Pontificatus' in the John XXIII corpus. The remaining 8 are correct: each heading
+    // genuinely prints no incipit (see task-14-report.md).
+    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(8);
+  });
+
+  it('flags the diocese erections as candidates without tagging any of them', () => {
+    // The headings print a bare Latin toponym with no marker, so nothing is tagged
+    // until the curation pass. Documents with real names must not be flagged.
+    expect(docs.every((d) => d.keywords === undefined)).toBe(true);
+    expect(docs.some((d) => d.incipit === 'Indulgentiarum Doctrina')).toBe(true);
+    expect(docs.some((d) => d.incipit === 'Romano Pontifici Eligendo')).toBe(true);
+  });
+
+  it('deduplicates the four twice-shelved apost_letters/motu_proprio documents', () => {
+    const twice = docs.filter((d) => (d.source?.alsoShelvedAs?.length ?? 0) > 0);
+    expect(twice).toHaveLength(4);
+    expect(twice.map((d) => d.incipit).sort()).toEqual([
+      'Africae terrarum', 'Apostolatus peragendi', 'Causas matrimoniales', 'Iustitiam et pacem',
+    ]);
+    for (const d of twice) {
+      expect(d.source!.shelf).toBe('apost_letters');
+      expect(d.source!.alsoShelvedAs).toEqual(['motu_proprio']);
+    }
+  });
+
+  it('re-mints with a full date when two same-year documents share an incipit', () => {
+    // Five distinct 'Quantum utilitatis' letters share this pontificate; two of them
+    // (1967-07-27 and 1967-08-19) also share a year, so mintId's default year-only
+    // suffix would collide -- resolved (invariant 11) by re-minting every id in the
+    // colliding group with its full date.
+    const qu = docs.filter((d) => d.incipit === 'Quantum utilitatis');
+    expect(qu).toHaveLength(5);
+    expect(qu.map((d) => d.id).sort()).toEqual([
+      'mag:paul-vi/quantum-utilitatis-1966',
+      'mag:paul-vi/quantum-utilitatis-1967-07-27',
+      'mag:paul-vi/quantum-utilitatis-1967-08-19',
+      'mag:paul-vi/quantum-utilitatis-1967-10-31',
+      'mag:paul-vi/quantum-utilitatis-1971',
+    ]);
+  });
+
+  it("adjudicates thirteen of fifteen printed/slug date mismatches from each document's own dating formula", () => {
+    // A representative sample; the full set of thirteen resolved entries is in
+    // DATE_CORRECTIONS (corrections.ts). Two of the fifteen mismatches found --
+    // 'Merito celebratur' and 'Amor dulcissimus' -- are deliberately left unresolved: each
+    // one's own vatican.va link (as printed on the shelf index) resolves to a *different*,
+    // unrelated document (verified by fetching both), so no DATE_CORRECTIONS entry can
+    // quote a genuine dating formula for either heading itself. Their warnings still fire
+    // on every harvest; see the comment above DATE_CORRECTIONS's closing brace and
+    // task-14-report.md.
+    const bySlugDate = (incipit: string) => docs.find((d) => d.incipit === incipit)!;
+    expect(bySlugDate('Insularum Sancti Petri et Miquelonensis').date).toBe('1970-11-16');
+    expect(bySlugDate('Gruardensis et aliarum').date).toBe('1967-07-13');
+    expect(bySlugDate('Bauropolitanae').date).toBe('1964-02-15');
+    expect(bySlugDate('Quam recte').date).toBe('1977-10-25');
+    expect(bySlugDate('Opera bona').date).toBe('1968-01-27');
+    expect(bySlugDate('Merito celebratur').date).toBe('1966-10-10');
+    expect(bySlugDate('Amor dulcissimus').date).toBe('1965-10-23');
+    expect(bySlugDate('Equestres Ordines').date).toBe('1966-04-15');
+  });
+
+  it('strips a bare trailing date with no enclosing parens instead of baking it into the incipit', () => {
+    // Task 14 review: these two headings print their date directly after a comma, with
+    // no parentheses at all -- the shape every other shelf in the corpus wraps in
+    // '(...)'. Confirmed against each item's own URL slug (19700927; 19701004).
+    const ms = docs.find((d) => d.incipit === 'Multiformis Sapientia Dei')!;
+    expect(ms.date).toBe('1970-09-27');
+    expect(ms.title).toBe('Multiformis Sapientia Dei');
+    const me = docs.find((d) => d.incipit === 'Mirabilis in Ecclesia Deus')!;
+    expect(me.date).toBe('1970-10-04');
+    expect(me.title).toBe('Mirabilis in Ecclesia Deus');
+  });
+
+  it('recognises a personnel-appointment narrative title as carrying no incipit', () => {
+    // 'Nomina del Card. Ugo Poletti a Vicario Generale' ('the appointment of Cardinal
+    // Ugo Poletti as Vicar General') is a narration of a personnel act, not an incipit --
+    // its own URL slug, nomina-vicario-generale, is as generic as the phrase itself.
+    // Once its trailing date is correctly stripped (see the test above), the ten-word
+    // heading falls to exactly eight words -- sneaking under MAX_INCIPIT_WORDS -- so
+    // without the NARRATIVE_OPENERS entry added in the Task 14 review, this would have
+    // been silently minted instead of correctly landing as provisional.
+    const d = docs.find((doc) => doc.title.startsWith('Nomina del Card. Ugo Poletti'))!;
+    expect(d).toBeDefined();
+    expect(d.idStatus).toBe('provisional');
+    expect('incipit' in d).toBe(false);
+  });
+
+  it('satisfies every invariant', () => {
+    expect(checkDocuments(docs, genres, keywords)).toEqual([]);
+  });
+
+  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, and 177 John XXIII records untouched', () => {
+    expect(all).toHaveLength(383);
+    expect(load('pius-x')).toHaveLength(306);
+    expect(load('pius-xi')).toHaveLength(158);
+    expect(load('pius-xii')).toHaveLength(253);
+    expect(load('benedict-xv')).toHaveLength(63);
+    expect(load('john-xxiii')).toHaveLength(177);
+  });
+});

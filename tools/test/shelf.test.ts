@@ -120,3 +120,31 @@ describe('parseShelfIndex falls back to the URL slug date (Task 8)', () => {
     expect(letters).toHaveLength(divCount);
   });
 });
+
+describe('parseShelfIndex strips a bare trailing date with no enclosing parens (Task 14)', () => {
+  // Two real paul-vi/apost_letters headings print their date directly after a comma, with
+  // no wrapping parens at all -- a shape no earlier pontificate's fixtures exercise. Before
+  // this fix, `open <= 0` meant the date was never split off headingText, so it rode into
+  // extractIncipit and was baked into the incipit/id verbatim.
+  const apl = parseShelfIndex(
+    readFileSync('tools/fixtures/paul-vi-apost_letters.html', 'utf8'), 'paul-vi', 'apost_letters',
+  );
+
+  it('parses the date and leaves it out of the title', () => {
+    const ms = apl.find((d) => d.title === 'Multiformis Sapientia Dei');
+    expect(ms?.date).toBe('1970-09-27'); // hf_p-vi_apl_19700927_multiformis-sapientia.html
+    expect(ms?.incipit).toBe('Multiformis Sapientia Dei');
+
+    const me = apl.find((d) => d.title === 'Mirabilis in Ecclesia Deus');
+    expect(me?.date).toBe('1970-10-04'); // hf_p-vi_apl_19701004_mirabilis-in-ecclesia.html
+    expect(me?.incipit).toBe('Mirabilis in Ecclesia Deus');
+  });
+
+  it('does not touch a heading with no trailing date at all', () => {
+    // 'Nomina del Card. Ugo Poletti a Vicario Generale, 6 marzo 1973' has the same bare
+    // trailing-date shape and is stripped the same way, but a heading with no such
+    // trailing date must fall through unchanged to the ordinary URL-slug fallback.
+    const causas = apl.find((d) => d.title === 'Lettera Apostolica Causas matrimoniales');
+    expect(causas?.date).toBe('1971-03-28'); // URL-slug fallback, unaffected by this change
+  });
+});

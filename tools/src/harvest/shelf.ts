@@ -60,6 +60,25 @@ export function parseShelfIndex(html: string, pageSlug: string, shelf: string): 
     let headingText = open > 0 ? full.slice(0, open) : full;
     let date = open > 0 ? parseSourceDate(full.slice(open)) : null;
 
+    // Not every printed date is wrapped in parens: two Paul VI apost_letters headings
+    // ('Multiformis Sapientia Dei, 27 settembre 1970'; 'Mirabilis in Ecclesia Deus, 4
+    // ottobre 1970') print it as a bare trailing ', <day> <month> <year>' instead --
+    // confirmed against each item's own URL slug (19700927; 19701004, both agreeing with
+    // the parsed date). Without this, the date text would never be split off headingText
+    // and would ride along into extractIncipit, baking itself into the incipit/id (the
+    // dangerous silent-mint failure mode, not merely a missed incipit -- Task 14 review).
+    // Scoped to only the unparenthesized case and only when the match reaches the very end
+    // of the string, so it can never fire on a parenthetical date (already handled above)
+    // or on an unrelated comma earlier in a gloss.
+    if (!date && open <= 0) {
+      const trailing = full.match(/,\s*(\d{1,2}\s*°?\s+[A-Za-zÀ-ÿ]+\s+\d{4})\s*$/);
+      const parsed = trailing ? parseSourceDate(trailing[1]!) : null;
+      if (parsed) {
+        date = parsed;
+        headingText = full.slice(0, trailing!.index).trimEnd();
+      }
+    }
+
     if (!date) {
       // No printed date at all (two real pius-xii/letters headings, e.g. 'Pontificia
       // Commissione per la Cinematografia', hf_p-xii_lett_01011952_...), or a printed one

@@ -83,3 +83,9 @@ if [ -z "$POPE" ] || [ "$POPE" = john-xxiii ]; then
   shelf john-xxiii apost_letters
   years john-xxiii apost_letters 1958 1963
 fi
+
+if [ -z "$POPE" ] || [ "$POPE" = paul-vi ]; then
+  for s in encyclicals apost_constitutions apost_letters apost_exhortations motu_proprio; do
+    shelf paul-vi "$s"
+  done
+fi

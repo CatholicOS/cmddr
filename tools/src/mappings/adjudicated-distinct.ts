@@ -576,4 +576,635 @@ export const ADJUDICATED_DISTINCT: Record<
         'Apostolic Internunciature in Turkey -- an unrelated act, coincidentally dated the ' +
         'same day.',
     },
+
+  // Task 14 (Paul VI, elected 21 June 1963). Verified by fetching every record's full
+  // text from vatican.va. The apost_constitutions shelf for this pontificate is
+  // dominated by circumscription erections filed under a bare Latin toponym (Task 20's
+  // curation queue, not this one's); every such item below is confirmed distinct from
+  // its same-date partner simply because a diocese/territory act can never be the
+  // subject-matter of a differently-shelved patronage grant, basilica elevation,
+  // encyclical or motu proprio -- and vice-versa.
+  'paul-vi|1966-01-03|amidensis-chaldaeorum|motu-proprio-per-le-altre-commissioni-post-conciliari': {
+    incipit1: 'Amidensis Chaldaeorum',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Motu proprio per le altre Commissioni post-Conciliari',
+    shelf2: 'motu_proprio',
+    note:
+      'Amidensis Chaldaeorum elevates the Chaldean see of Amida (Diyarbekir) to an ' +
+      "archbishopric. The motu proprio ('LITTERAE APOSTOLICAE MOTU PROPRIO DATAE... FINIS " +
+      "CONCILIO OECUMENICO VATICANO II') creates five post-conciliar commissions to carry " +
+      'forward the work of Vatican II -- an unrelated act, coincidentally dated the same day.',
+  },
+  'paul-vi|1966-01-03|ahwaz-chaldaeorum|motu-proprio-per-le-altre-commissioni-post-conciliari': {
+    incipit1: 'Ahwaz Chaldaeorum',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Motu proprio per le altre Commissioni post-Conciliari',
+    shelf2: 'motu_proprio',
+    note:
+      'Ahwaz Chaldaeorum erects a new Chaldean archdiocese (Ahwaz) from the territory of ' +
+      'the see of Sehna. The motu proprio (see the previous entry) is the same unrelated ' +
+      'act, coincidentally dated the same day.',
+  },
+  'paul-vi|1965-12-18|maria-virgo|nouakchottensis': {
+    incipit1: 'Maria Virgo',
+    shelf1: 'apost_letters',
+    incipit2: 'Nouakchottensis',
+    shelf2: 'apost_constitutions',
+    note:
+      'Maria Virgo grants patronage of Mary "Mater Ecclesiae" together with St Pius X over ' +
+      'the diocese of Montes Claros, Brazil. Nouakchottensis erects the diocese of ' +
+      'Nouakchott, Mauritania -- two unrelated dioceses on two different continents, ' +
+      'coincidentally dated the same day.',
+  },
+  'paul-vi|1965-12-18|de-thailandia|maria-virgo': {
+    incipit1: 'De Thailandia',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Maria Virgo',
+    shelf2: 'apost_letters',
+    note:
+      'De Thailandia erects the Thai ecclesiastical hierarchy (two provinces and several ' +
+      'sees). Maria Virgo (see the previous entry) concerns Montes Claros, Brazil -- an ' +
+      'unrelated act, coincidentally dated the same day.',
+  },
+  'paul-vi|1965-12-18|bambaritanae|maria-virgo': {
+    incipit1: 'Bambaritanae',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Maria Virgo',
+    shelf2: 'apost_letters',
+    note:
+      'Bambaritanae erects the diocese of Bambari, Central African Republic. Maria Virgo ' +
+      '(see above) concerns Montes Claros, Brazil -- an unrelated act, coincidentally ' +
+      'dated the same day.',
+  },
+  'paul-vi|1965-12-07|ambulate-in-dilectione|mirificus-eventus': {
+    incipit1: 'Ambulate in dilectione',
+    shelf1: 'apost_letters',
+    incipit2: 'Mirificus eventus',
+    shelf2: 'apost_constitutions',
+    note:
+      'Mirificus eventus -- despite its shelf, not itself a circumscription act -- ' +
+      'proclaims an extraordinary universal Jubilee (1 January - 29 May 1966) to mark the ' +
+      'close of Vatican II. Ambulate in dilectione lifts the mutual excommunications of ' +
+      '1054 between Rome and Constantinople (the joint declaration with Patriarch ' +
+      'Athenagoras I) -- an unrelated act, coincidentally dated the same day (the closing ' +
+      'day of the Council).',
+  },
+  'paul-vi|1965-12-07|mirificus-eventus|quo-firmiores': {
+    incipit1: 'Mirificus eventus',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Quo firmiores',
+    shelf2: 'apost_letters',
+    note:
+      'Mirificus eventus (see the previous entry) proclaims the Jubilee marking the close ' +
+      'of Vatican II. Quo firmiores elevates the Apostolic Internunciature in Indonesia to ' +
+      'a full Nunciature -- an unrelated act, coincidentally dated the same day.',
+  },
+  'paul-vi|1965-12-07|altissimi-cantus|mirificus-eventus': {
+    incipit1: 'Altissimi cantus',
+    shelf1: 'motu_proprio',
+    incipit2: 'Mirificus eventus',
+    shelf2: 'apost_constitutions',
+    note:
+      'Altissimi cantus commemorates the seventh centenary of the birth of Dante Alighieri ' +
+      'and establishes a Chair of Dante Studies in Milan. Mirificus eventus (see above) ' +
+      'proclaims the Vatican II closing Jubilee -- an unrelated act, coincidentally dated ' +
+      'the same day.',
+  },
+  'paul-vi|1965-12-07|integrae-servandae|mirificus-eventus': {
+    incipit1: 'Integrae servandae',
+    shelf1: 'motu_proprio',
+    incipit2: 'Mirificus eventus',
+    shelf2: 'apost_constitutions',
+    note:
+      "Integrae servandae renames the Holy Office to the Congregation for the Doctrine of " +
+      'the Faith and reforms its procedure. Mirificus eventus (see above) proclaims the ' +
+      'Vatican II closing Jubilee -- an unrelated act, coincidentally dated the same day ' +
+      '(both, along with the entries above and below, are among the raft of acts Paul VI ' +
+      'promulgated on the Council\'s own closing day).',
+  },
+  'paul-vi|1965-12-07|altissimi-cantus|ambulate-in-dilectione': {
+    incipit1: 'Altissimi cantus',
+    shelf1: 'motu_proprio',
+    incipit2: 'Ambulate in dilectione',
+    shelf2: 'apost_letters',
+    note:
+      'Altissimi cantus (Dante centenary, see above) and Ambulate in dilectione (lifting ' +
+      'the 1054 excommunications, see above) are unrelated acts, coincidentally dated the ' +
+      "same day -- the Council's closing day.",
+  },
+  'paul-vi|1965-12-07|ambulate-in-dilectione|integrae-servandae': {
+    incipit1: 'Ambulate in dilectione',
+    shelf1: 'apost_letters',
+    incipit2: 'Integrae servandae',
+    shelf2: 'motu_proprio',
+    note:
+      'Ambulate in dilectione (lifting the 1054 excommunications, see above) and Integrae ' +
+      'servandae (renaming the Holy Office, see above) are unrelated acts, coincidentally ' +
+      "dated the same day -- the Council's closing day.",
+  },
+  'paul-vi|1965-12-07|altissimi-cantus|quo-firmiores': {
+    incipit1: 'Altissimi cantus',
+    shelf1: 'motu_proprio',
+    incipit2: 'Quo firmiores',
+    shelf2: 'apost_letters',
+    note:
+      'Altissimi cantus (Dante centenary, see above) and Quo firmiores (elevating the ' +
+      'Indonesian Internunciature, see above) are unrelated acts, coincidentally dated the ' +
+      "same day -- the Council's closing day.",
+  },
+  'paul-vi|1965-12-07|integrae-servandae|quo-firmiores': {
+    incipit1: 'Integrae servandae',
+    shelf1: 'motu_proprio',
+    incipit2: 'Quo firmiores',
+    shelf2: 'apost_letters',
+    note:
+      'Integrae servandae (renaming the Holy Office, see above) and Quo firmiores ' +
+      '(elevating the Indonesian Internunciature, see above) are unrelated acts, ' +
+      "coincidentally dated the same day -- the Council's closing day.",
+  },
+  'paul-vi|1965-04-29|flos-multiplici|mense-maio': {
+    incipit1: 'Flos multiplici',
+    shelf1: 'apost_letters',
+    incipit2: 'Mense Maio',
+    shelf2: 'encyclicals',
+    note:
+      'Flos multiplici grants patronage of St Rose of Lima over the Peruvian Guardia ' +
+      "Civil. Mense Maio is the encyclical urging May Marian devotions for the Council's " +
+      'success and world peace -- an unrelated act, coincidentally dated the same day.',
+  },
+  'paul-vi|1964-11-04|caguensis|ex-quo-servus': {
+    incipit1: 'Caguensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Ex quo Servus',
+    shelf2: 'apost_letters',
+    note:
+      'Caguensis erects the diocese of Caguas, Puerto Rico. Ex quo Servus grants Minor ' +
+      'Basilica status to the shrine of Our Lady of Sameiro, Braga, Portugal -- an ' +
+      'unrelated act, coincidentally dated the same day.',
+  },
+  'paul-vi|1964-08-06|ecclesiam-suam|tridentinae': {
+    incipit1: 'Ecclesiam Suam',
+    shelf1: 'encyclicals',
+    incipit2: 'Tridentinae',
+    shelf2: 'apost_constitutions',
+    note:
+      "Ecclesiam Suam is Paul VI's first encyclical, on the Church's self-awareness, " +
+      'renewal and dialogue with the world. Tridentinae erects the ecclesiastical province ' +
+      'of Trent -- an unrelated act, coincidentally dated the same day.',
+  },
+  'paul-vi|1964-08-06|ecclesiam-suam|oenipontanae': {
+    incipit1: 'Ecclesiam Suam',
+    shelf1: 'encyclicals',
+    incipit2: 'Oenipontanae',
+    shelf2: 'apost_constitutions',
+    note:
+      'Ecclesiam Suam (see the previous entry) is unrelated to Oenipontanae, which raises ' +
+      'Innsbruck-Feldkirch to a diocese -- coincidentally dated the same day (both fall ' +
+      'within the same batch of acts promulgated alongside the encyclical).',
+  },
+  'paul-vi|1964-03-25|barcinonensis|pastoralem-curam': {
+    incipit1: 'Barcinonensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Pastoralem curam',
+    shelf2: 'apost_letters',
+    note:
+      'Barcinonensis elevates Barcelona to an archdiocese exempt from Tarragona. ' +
+      'Pastoralem curam grants patronage of St Matthew over the Portuguese Guarda Fiscal ' +
+      '-- an unrelated act, coincidentally dated the same day.',
+  },
+  'paul-vi|1964-03-25|matritensis|pastoralem-curam': {
+    incipit1: 'Matritensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Pastoralem curam',
+    shelf2: 'apost_letters',
+    note:
+      'Matritensis elevates Madrid to an archdiocese exempt from Toledo. Pastoralem curam ' +
+      '(see the previous entry) is unrelated, coincidentally dated the same day.',
+  },
+  'paul-vi|1964-03-04|adorate-in-monte|chulucanensis': {
+    incipit1: 'Adorate in monte',
+    shelf1: 'apost_letters',
+    incipit2: 'Chulucanensis',
+    shelf2: 'apost_constitutions',
+    note:
+      'Adorate in monte grants Minor Basilica status to the shrine church of Sonntagberg, ' +
+      'Austria. Chulucanensis erects the prelature of Chulucanas, Peru -- an unrelated ' +
+      'act, coincidentally dated the same day.',
+  },
+  'paul-vi|1964-02-25|garzonensis-neivensis|ordinis-dominiciani': {
+    incipit1: 'Garzonensis-Neivensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Ordinis Dominiciani',
+    shelf2: 'apost_letters',
+    note:
+      'Garzonensis-Neivensis restructures/renames the diocese of Garzón, Colombia, to ' +
+      'Garzón-Neiva. Ordinis Dominiciani grants patronage of St Albert the Great over a US ' +
+      'Dominican province -- an unrelated act, coincidentally dated the same day.',
+  },
+  'paul-vi|1963-07-01|hospes-eram|silvae-portuensis': {
+    incipit1: 'Hospes eram',
+    shelf1: 'apost_letters',
+    incipit2: 'Silvae Portuensis',
+    shelf2: 'apost_constitutions',
+    note:
+      'Hospes eram grants patronage of St Martha over Italian hoteliers and restaurant ' +
+      'workers. Silvae Portuensis erects the diocese of Lusitânia/Silva Porto (now Kuito), ' +
+      'Angola -- an unrelated act, coincidentally dated the same day.',
+  },
+  'paul-vi|1963-06-25|belemensis-de-para|memoratu-digna': {
+    incipit1: 'Belemensis de Parà',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Memoratu digna',
+    shelf2: 'apost_letters',
+    note:
+      'Belemensis de Parà erects the prelature of Marajó, Brazil (from the territory of ' +
+      'Belém do Pará). Memoratu digna grants patronage of St Rose of Lima over the diocese ' +
+      'of Santa Rosa, California -- an unrelated act, coincidentally dated the same day.',
+  },
+  'paul-vi|1966-05-03|mbuji-mayensis|summi-dei-beneficio': {
+    incipit1: 'Mbuji-Mayensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Summi Dei beneficio',
+    shelf2: 'motu_proprio',
+    note:
+      'Mbuji-Mayensis erects the diocese of Mbuji-Mayi, Congo. Summi Dei beneficio ' +
+      "extends the Mirificus eventus Jubilee (see above) to 8 December 1966 -- an " +
+      'unrelated act, coincidentally dated the same day.',
+  },
+
+  // This particular collision only arises after DATE_CORRECTIONS moves Arundelliensis -
+  // Brichtelmestunensis (the 1967 instance) from its printed 10 June 1967 to its own
+  // dating formula's 10 July 1967 -- which happens to land on the same day as an
+  // unrelated apost_letters act.
+  'paul-vi|1967-07-10|arundelliensis-brichtelmestunensis|propugnaculum-fidei': {
+    incipit1: 'Arundelliensis - Brichtelmestunensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Propugnaculum fidei',
+    shelf2: 'apost_letters',
+    note:
+      "Arundelliensis - Brichtelmestunensis opens 'IN ECCLESIA ARUNDELLIENSI-" +
+      "BRICHTELMESTUNENSI CATHEDRALE COLLEGIUM CANONICORUM CONSTITUITUR' -- it establishes " +
+      "a cathedral chapter of canons for the diocese of Arundel and Brighton (England). " +
+      "Propugnaculum fidei opens 'Propugnaculum fidei artisque opus egregium praedicatur " +
+      "templum paroeciale Cervenense... intra fines Plocensis dioecesis positum' -- it " +
+      'raises the parish church of Czerwińsk, in the diocese of Płock (Poland), to the ' +
+      'status of a minor basilica. Two unrelated acts for two unrelated countries, ' +
+      'coincidentally dated the same day.',
+  },
+
+  // Task 14 review (Paul VI), remaining batch. Verified by fetching each record's own
+  // vatican.va page and reading its own heading/dating text.
+  'paul-vi|1972-08-15|ad-pascendum|perusinae': {
+    incipit1: 'Ad Pascendum',
+    shelf1: 'motu_proprio',
+    incipit2: 'Perusinae',
+    shelf2: 'apost_constitutions',
+    note:
+      "Ad Pascendum is the motu proprio establishing norms on the diaconate ('con la quale " +
+      "vengono stabilite alcune norme sul diaconato'). Perusinae erects the ecclesiastical " +
+      "province of Perugia, Italy ('Provincia ecclesiastica Perusina in Italia conditur'). " +
+      'Unrelated acts, coincidentally both dated 15 August 1972 (the Assumption, and the ' +
+      "10th year of the pontificate -- three Italian provinces (Perusinae, Aquilanae, " +
+      'Anconitanae) and two universal disciplinary motu proprios were all issued this same ' +
+      'feast day).',
+  },
+  'paul-vi|1972-08-15|ministeria-quaedam|perusinae': {
+    incipit1: 'Ministeria quaedam',
+    shelf1: 'motu_proprio',
+    incipit2: 'Perusinae',
+    shelf2: 'apost_constitutions',
+    note:
+      "Ministeria quaedam renews the discipline of first tonsure, minor orders and the " +
+      "subdiaconate in the Latin Church ('viene rinnovata la disciplina riguardante la " +
+      "prima tonsura, gli ordini minori e il suddiaconato'). Perusinae (see above) is " +
+      'unrelated, coincidentally dated the same day.',
+  },
+  'paul-vi|1972-08-15|ad-pascendum|aquilanae': {
+    incipit1: 'Ad Pascendum',
+    shelf1: 'motu_proprio',
+    incipit2: 'Aquilanae',
+    shelf2: 'apost_constitutions',
+    note:
+      "Ad Pascendum (see above) is unrelated to Aquilanae, which erects the ecclesiastical " +
+      "province of L'Aquila, Italy ('Provincia ecciesiastica Aquilana Italia conditur') -- " +
+      'coincidentally dated the same day.',
+  },
+  'paul-vi|1972-08-15|aquilanae|ministeria-quaedam': {
+    incipit1: 'Aquilanae',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Ministeria quaedam',
+    shelf2: 'motu_proprio',
+    note:
+      'Aquilanae (see above) is unrelated to Ministeria quaedam (see above), coincidentally ' +
+      'dated the same day.',
+  },
+  'paul-vi|1972-08-15|ad-pascendum|anconitanae': {
+    incipit1: 'Ad Pascendum',
+    shelf1: 'motu_proprio',
+    incipit2: 'Anconitanae',
+    shelf2: 'apost_constitutions',
+    note:
+      "Ad Pascendum (see above) is unrelated to Anconitanae, which erects the ecclesiastical " +
+      "province of Ancona, Italy ('Provincia ecclesiastica Anconitana in Italia conditur') " +
+      '-- coincidentally dated the same day.',
+  },
+  'paul-vi|1972-08-15|anconitanae|ministeria-quaedam': {
+    incipit1: 'Anconitanae',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Ministeria quaedam',
+    shelf2: 'motu_proprio',
+    note:
+      'Anconitanae (see above) is unrelated to Ministeria quaedam (see above), coincidentally ' +
+      'dated the same day.',
+  },
+  'paul-vi|1972-03-25|singidaensis|sollemne-semper': {
+    incipit1: 'Singidaënsis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Sollemne semper',
+    shelf2: 'apost_letters',
+    note:
+      "Singidaënsis (own heading 'Taboraënsis et aliarum (Singidaënsis)') erects the diocese " +
+      "of Singida, Tanzania, from Tabora and other dioceses ('Detractis nonnullis " +
+      "territoriis a Taboraënsi aliisque dioecesibus, nova conditur dioecesis Singidaënsis " +
+      "appellanda'). Sollemne semper declares St Thomas the Apostle 'Apostle of India' and " +
+      "raises his feast to a solemnity there ('S. Thomas apostolus «Indiae apostoli» titulo " +
+      "decoratur cuius festum datur gradu sollemnitatis celebrari in ea dicione'). Unrelated " +
+      'acts (Tanzania vs. India), coincidentally dated the same day.',
+  },
+  'paul-vi|1972-03-25|ioannopolitanae-a-lacubus-et-gusmanopolitanae|sollemne-semper': {
+    incipit1: 'Ioannopolitanae a Lacubus et Gusmanopolitanae',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Sollemne semper',
+    shelf2: 'apost_letters',
+    note:
+      "This constitution (own heading 'Guadalaiarensis-Colimensi (Ioannopolitanae a Lacubus " +
+      "et Gusmanopolitanae)') erects two new Mexican dioceses from the territory of " +
+      "Guadalajara and Colima ('Detractis quibusdam territoriis ab Ecclesiis Guadalaiarensi " +
+      "et Colimensi duae dioeceses constituuntur, nomine «Ioannopolitana a Lacubus» et " +
+      "«Gusmanopolitana»'). Sollemne semper (see above) is unrelated (Mexico vs. India), " +
+      'coincidentally dated the same day.',
+  },
+  'paul-vi|1969-11-19|s-ioannis-portoricensis|sancti-ioannis-maguanensis': {
+    incipit1: 'S. Ioannis Portoricensis',
+    shelf1: 'apost_letters',
+    incipit2: 'Sancti Ioannis Maguanensis',
+    shelf2: 'apost_constitutions',
+    note:
+      'The two incipits both contain "Ioannis" and could look like the same underlying ' +
+      'toponym at a glance, but they name two unrelated places in two different countries: ' +
+      "Sancti Ioannis Maguanensis raises the prelature of San Juan de la Maguana, Dominican " +
+      "Republic, to a diocese, keeping its existing name and boundaries ('Praelatura Sancti " +
+      "Ioannis Maguanensis ad dioecesis gradum attollitur, eodem servato nomine iisdemque " +
+      "finibus'). S. Ioannis Portoricensis declares Our Lady of Divine Providence principal " +
+      "patroness of the whole nation of Puerto Rico ('Beata Maria Virgo a Divina " +
+      "Providentia... cunctae Nationis Portoricensis Patrona principalis constituitur ac " +
+      "declaratur'). Distinct countries, distinct subjects, coincidentally dated the same day.",
+  },
+  'paul-vi|1969-06-24|kayanae|sollicitudo-omnium-ecclesiarum': {
+    incipit1: 'Kayanae',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Sollicitudo omnium Ecclesiarum',
+    shelf2: 'motu_proprio',
+    note:
+      "Kayanae (own heading 'Uagaduguensis-Kupelaënsis (Kayanae)') erects the diocese of " +
+      "Kaya, Burkina Faso, from Ouagadougou/Koupéla territory ('Ab Ecclesiis Uagaduguensi " +
+      "atque Kupelaënsi separato territorio civilis provinciae Kayanae, nova dioecesis " +
+      "efficitur, «Kayana» nomine'). Sollicitudo omnium Ecclesiarum is the motu proprio on " +
+      "the office of papal representatives ('riguardante l'Ufficio dei rappresentanti del " +
+      "Pontefice Romano'). Unrelated acts, coincidentally dated the same day.",
+  },
+  'paul-vi|1969-06-24|osakaensis|sollicitudo-omnium-ecclesiarum': {
+    incipit1: 'Osakaënsis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Sollicitudo omnium Ecclesiarum',
+    shelf2: 'motu_proprio',
+    note:
+      "Osakaënsis erects the ecclesiastical province of Osaka, Japan ('Provincia " +
+      "ecclesiastica Osakaënsis constituitur'; its own dating formula, 'Datum Romae... die " +
+      "quarto et vicesimo mensis iunii... 1969... Pontificatus Nostri septimo', confirms 24 " +
+      "June 1969 despite the page's own <title> tag misprinting '29 m. Maii' -- an internal " +
+      "vatican.va inconsistency within this one document, not a harvest error, since the " +
+      "shelf index and URL slug both already agree with the body's own dating formula). " +
+      'Sollicitudo omnium Ecclesiarum (see above) is unrelated, coincidentally dated the ' +
+      'same day.',
+  },
+  'paul-vi|1969-04-25|instans-illa|maganguensis': {
+    incipit1: 'Instans illa',
+    shelf1: 'apost_letters',
+    incipit2: 'Maganguënsis',
+    shelf2: 'apost_constitutions',
+    note:
+      "Instans illa erects the Apostolic Nunciature in Thailand ('In Thailandia Nnntiatura " +
+      "Apostolica conditur, nomine Thailandensis'). Maganguënsis (own heading " +
+      "'Carthaginensis in Columbia-Sancti Georgii (Maganguënsis)') erects a new Colombian " +
+      "diocese from Cartagena and the Vicariate of San Jorge ('Quibusdam detractis " +
+      "territoriis ab archidioecesi Carthaginensi in Columbia et ab apostolico vicariatu " +
+      "Sancti Georgii, nova dioecesis conditur, nomine «Maganguënsis»'). Unrelated acts " +
+      '(Thailand vs. Colombia), coincidentally dated the same day -- one of a six-document ' +
+      "batch of unrelated Colombian/Philippine circumscription acts all issued 25 April " +
+      '1969 alongside this one Thai nunciature letter.',
+  },
+  'paul-vi|1969-04-25|instans-illa|monteriensis-s-georgii': {
+    incipit1: 'Instans illa',
+    shelf1: 'apost_letters',
+    incipit2: 'Monteriensis-S. Georgii',
+    shelf2: 'apost_constitutions',
+    note:
+      "Instans illa (see above) is unrelated to Monteriensis-S. Georgii (own heading " +
+      "'Monteriensis-Sancti Georgii (Sinuensis Superioris)'), which erects a new prelature " +
+      "from the territory of Montería and San Jorge, Colombia ('Detractis quibusdam " +
+      "territoriis ab Ecclesiis Monteriensi et S. Georgii, nova praelatura conditur, " +
+      "«Sinuensis Superioris» cognominanda') -- coincidentally dated the same day.",
+  },
+  'paul-vi|1969-04-25|instans-illa|sincelejensis': {
+    incipit1: 'Instans illa',
+    shelf1: 'apost_letters',
+    incipit2: 'Sincelejensis',
+    shelf2: 'apost_constitutions',
+    note:
+      "Instans illa (see above) is unrelated to Sincelejensis (own heading 'Carthaginensis " +
+      "in Columbia-Sancti Georgii (Sincelejensis)'), a second new Colombian diocese carved " +
+      "from Cartagena and San Jorge that same day ('Detractis quibusdam territoriis ab " +
+      "archidioecesi Carthaginensi in Columbia et a vicariatu apostolico Sancti Georgii, " +
+      "nova conditur dioecesis, «Sincelejensis» appellanda') -- coincidentally dated the " +
+      'same day.',
+  },
+  'paul-vi|1969-04-25|barranquillensis|instans-illa': {
+    incipit1: 'Barranquillensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Instans illa',
+    shelf2: 'apost_letters',
+    note:
+      "Barranquillensis erects the ecclesiastical province of Barranquilla, Colombia " +
+      "('Nova provincia ecclesiastica conditur, «Barranquillensis» nomine, cuius erit " +
+      "metropolitana Sedes ipsa Barranquillensis'). Instans illa (see above) is unrelated, " +
+      'coincidentally dated the same day.',
+  },
+  'paul-vi|1969-04-25|instans-illa|malaibalaiensis': {
+    incipit1: 'Instans illa',
+    shelf1: 'apost_letters',
+    incipit2: 'Malaibalaiensis',
+    shelf2: 'apost_constitutions',
+    note:
+      "Instans illa (see above) is unrelated to Malaibalaiensis (own heading 'Cagayanae " +
+      "(Malaibalaiensis)'), a new Philippine prelature carved from the archdiocese of " +
+      "Cagayan de Oro ('Detractis quibusdam territoriis ab archidioecesi Cagayana, nova " +
+      "conditur praelatura, nomine «Malaibalaiensis»') -- coincidentally dated the same day.",
+  },
+  'paul-vi|1969-04-25|instans-illa|valleduparensis': {
+    incipit1: 'Instans illa',
+    shelf1: 'apost_letters',
+    incipit2: 'Valleduparensis',
+    shelf2: 'apost_constitutions',
+    note:
+      "Instans illa (see above) is unrelated to Valleduparensis, which raises the Colombian " +
+      "vicariate apostolic of Valledupar to a diocese ('Vicariatus apostolicus " +
+      "Valleduparensis ad dignitatem dioecesis evehitur') -- coincidentally dated the same day.",
+  },
+  'paul-vi|1967-06-28|antofagastensis|nullis-maculis': {
+    incipit1: 'Antofagastensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Nullis maculis',
+    shelf2: 'apost_letters',
+    note:
+      "Antofagastensis erects the ecclesiastical province of Antofagasta, Chile ('In " +
+      "Chilensi Republica nova constituitur provincia ecclesiastica, «Antofagastensis» " +
+      "appellanda'). Nullis maculis declares Our Lady Immaculate and Sts Peter and Paul " +
+      "patrons of the diocese of Mazatlán, Mexico ('Beata Maria Virgo Immacolata et Sancti " +
+      "Apostoli Petrus et Paulus Patroni caelestes dioecesis Mazatlanensis eliguntur'). " +
+      'Unrelated acts (Chile vs. Mexico), coincidentally dated the same day.',
+  },
+  'paul-vi|1967-06-28|actuose-pietatis|antofagastensis': {
+    incipit1: 'Actuose pietatis',
+    shelf1: 'apost_letters',
+    incipit2: 'Antofagastensis',
+    shelf2: 'apost_constitutions',
+    note:
+      "Actuose pietatis grants minor-basilica status to a Carmelite conventual church in " +
+      "Jerez, Spain ('Titulus ac privilegia Basilicae Minoris ecclesiae conventuali, B. " +
+      "Mariae Virgini de Monte Carmelo in urbe Xeretio dicatae, attribuuntur'). " +
+      'Antofagastensis (see above) is unrelated (Spain vs. Chile), coincidentally dated the ' +
+      'same day.',
+  },
+  'paul-vi|1966-06-25|bellomontensis|praenobile-templum': {
+    incipit1: 'Bellomontensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Praenobile templum',
+    shelf2: 'apost_letters',
+    note:
+      "Bellomontensis (own heading 'Galvestoniensis-Houstoniensis (Bellomontensis)') erects " +
+      "the diocese of Beaumont, Texas, by dividing Galveston-Houston ('Divisa dioecesi " +
+      "Galvestoniensi-Houstoniensi, nova inde efficitur dioecesis «Bellomontensis» " +
+      "appellanda'). Praenobile templum grants minor-basilica status to a parish church in " +
+      "Elorrio, Spain ('Titulus ac privilegia Basilicae Minoris tribuuntur ecclesiae " +
+      "paroeciali... in oppido «Elorrio» exstanti, Flaviobrigensis dioecesis'). Unrelated " +
+      'acts (Texas vs. Spain), coincidentally dated the same day -- one of a four-document ' +
+      'batch (this pair plus the next two) all issued 25 June 1966.',
+  },
+  'paul-vi|1966-06-25|bellomontensis|nursia-amoena': {
+    incipit1: 'Bellomontensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Nursia, amoena',
+    shelf2: 'apost_letters',
+    note:
+      "Bellomontensis (see above) is unrelated to Nursia amoena, which grants minor-basilica " +
+      "status to the church of St Benedict, patron of Europe, in Norcia, Italy ('Titulus ac " +
+      "privilegia Basilicae Minoris Nursinae ecclesiae Sancti Benedicti Abbatis, Europae " +
+      "Patroni, conferuntur') -- coincidentally dated the same day.",
+  },
+  'paul-vi|1966-06-25|bellomontensis|lutetiae-parisiorum': {
+    incipit1: 'Bellomontensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Lutetiae Parisiorum',
+    shelf2: 'apost_letters',
+    note:
+      "Bellomontensis (see above) is unrelated to Lutetiae Parisiorum, which grants " +
+      "minor-basilica status to Notre-Dame du Perpétuel Secours in Paris ('Titulo ac " +
+      "privilegiis Basilicae Minoris Parisiense templum Beatae Mariae Virginis a Perpetuo " +
+      "Succursu... decoratur') -- coincidentally dated the same day.",
+  },
+  'paul-vi|1966-04-30|barquisimetensis|humilis-religiosi': {
+    incipit1: 'Barquisimetensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Humilis religiosi',
+    shelf2: 'apost_letters',
+    note:
+      "Barquisimetensis erects the ecclesiastical province of Barquisimeto, Venezuela " +
+      "('Nova constituitur in Venetiolana Republica provincia ecclesiastica, cuius caput " +
+      "est Ecclesia metropolitana «Barquisimetensis»'). Humilis religiosi (its own heading " +
+      "prints 'Humilis religionis') grants minor-basilica status to a church in Curvelo, " +
+      "Brazil ('Titulo ac privilegiis Basilicae Minoris ecclesia Sancti Gerardi Majella in " +
+      "oppido «Curvelo», intra fines archidioecesis Adamantinae posita, decoratur'). " +
+      'Unrelated acts (Venezuela vs. Brazil), coincidentally dated the same day -- one of a ' +
+      'four-document batch (this pair plus the next three) all issued 30 April 1966.',
+  },
+  'paul-vi|1966-04-30|barquisimetensis|populus-haitianus': {
+    incipit1: 'Barquisimetensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Populus Haitianus',
+    shelf2: 'apost_letters',
+    note:
+      "Barquisimetensis (see above) is unrelated to Populus Haitianus, which declares Our " +
+      "Lady of Perpetual Help principal patroness of the ecclesiastical province of Haiti " +
+      "('Beata Virgo Maria, quae vulgo «Notre-Dame du Perpétuel Secours» appellatur, " +
+      "praecipua ecclesiasticae Haitianae provinciae Patrona eligitur') -- coincidentally " +
+      'dated the same day.',
+  },
+  'paul-vi|1966-04-30|humilis-religiosi|maracaibensis': {
+    incipit1: 'Humilis religiosi',
+    shelf1: 'apost_letters',
+    incipit2: 'Maracaibensis',
+    shelf2: 'apost_constitutions',
+    note:
+      "Humilis religiosi (see above, Brazil) is unrelated to Maracaibensis, which erects " +
+      "the ecclesiastical province of Maracaibo, Venezuela ('Nova provincia ecclesiastica " +
+      "in Venetiola conditur, cuius metropolitana Sedes «Maracaibensis» erit') -- " +
+      'coincidentally dated the same day. (Barquisimeto and Maracaibo are two distinct new ' +
+      'Venezuelan provinces erected the same day, each with its own metropolitan see.)',
+  },
+  'paul-vi|1966-04-30|maracaibensis|populus-haitianus': {
+    incipit1: 'Maracaibensis',
+    shelf1: 'apost_constitutions',
+    incipit2: 'Populus Haitianus',
+    shelf2: 'apost_letters',
+    note:
+      'Maracaibensis (see above) is unrelated to Populus Haitianus (see above), ' +
+      'coincidentally dated the same day.',
+  },
+  'paul-vi|1971-06-29|evangelica-testificatio|magnum-semper': {
+    incipit1: 'Evangelica Testificatio',
+    shelf1: 'apost_exhortations',
+    incipit2: 'Magnum semper',
+    shelf2: 'apost_letters',
+    note:
+      "Evangelica Testificatio is the apostolic exhortation on the renewal of religious " +
+      "life. Magnum semper erects the Apostolic Nunciature to Dahomey, seated in Dakar " +
+      "('In Republica Dahomeyana Apostolica Nuntiatura constituitur, cuius sedes in urbe " +
+      "Dakar collocabitur'). Unrelated acts, coincidentally both dated the feast of Sts " +
+      'Peter and Paul, 29 June 1971.',
+  },
+  'paul-vi|1970-03-19|apostolicae-caritatis|sanctus-ioseph': {
+    incipit1: 'Apostolicae caritatis',
+    shelf1: 'motu_proprio',
+    incipit2: 'Sanctus Ioseph',
+    shelf2: 'apost_letters',
+    note:
+      "Apostolicae caritatis is the motu proprio establishing the Pontifical Commission for " +
+      "the Pastoral Care of Migration and Tourism. Sanctus Ioseph raises the church of St " +
+      "Joseph on the Via Trionfale, Rome, to a minor basilica ('Templum S. Ioseph ad Viam " +
+      "Triumphalem, in Urbe, ad Basilicae Minoris gradum evehitur'). Unrelated acts, " +
+      "coincidentally both dated the feast of St Joseph, 19 March 1970.",
+  },
+  'paul-vi|1966-02-02|quam-sedem|romanae-urbis': {
+    incipit1: 'Quam sedem',
+    shelf1: 'apost_letters',
+    incipit2: 'Romanae Urbis',
+    shelf2: 'motu_proprio',
+    note:
+      "Quam sedem erects the Apostolic Nunciature to Syria ('Apostolica Nuntiatura apud " +
+      "Rempublicam Arabicam Syriacam constituitur'). Romanae Urbis is the motu proprio " +
+      "reorganising the government of the Diocese of Rome itself ('Romanae dioecesis " +
+      "ordinatio ad horum dierum necessitates aptius accommodatur'). Unrelated acts " +
+      '(Syria vs. the Diocese of Rome), coincidentally dated the same day.',
+  },
 };
