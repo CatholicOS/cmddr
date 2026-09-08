@@ -274,6 +274,54 @@ export const GLOSS_CONNECTORS: readonly string[] = [
                                                                                // ' circa ' above since it occurs earlier in the string. A
                                                                                // corpus-wide check found ' contenente' nowhere else in the whole
                                                                                // corpus.
+  // Task 19 (coordinator-authorised, measured across all 4248 documents before this task):
+  // five literal anniversary/subtitle connectors that were baking their trailing gloss into
+  // an otherwise-genuine minted incipit for six documents, none of which are a false
+  // positive elsewhere in the corpus. Each is deliberately its own literal entry (not a
+  // bare ' nel ', which Task 18's review measured and rejected -- it regresses an
+  // already-correct Pius XI record, 'Quando nel principio', by cutting inside the incipit
+  // itself). A future 'nel 200° anniversario' needs its own entry; that is the accepted
+  // trade-off of this narrow approach.
+  ' nel 150° anniversario',                                                   // Francis, apost_letters: 'Lettera Apostolica Patris corde nel 150°
+                                                                               // anniversario della dichiarazione di San Giuseppe quale Patrono
+                                                                               // della Chiesa universale' -- confirmed genuine by fetching the
+                                                                               // document itself (own URL slug: patris-corde): its own printed
+                                                                               // title reads 'LETTERA APOSTOLICA PATRIS CORDE DEL SANTO PADRE
+                                                                               // FRANCESCO IN OCCASIONE DEL 150° ANNIVERSARIO DELLA DICHIARAZIONE DI
+                                                                               // SAN GIUSEPPE...'.
+  ' nel XVI centenario',                                                      // Francis, apost_letters: 'Lettera Apostolica Scripturae Sacrae
+                                                                               // affectus nel XVI centenario della morte di San Girolamo' --
+                                                                               // confirmed genuine by fetching the document itself (own URL slug:
+                                                                               // scripturae-sacrae-affectus): its own printed title reads 'LETTERA
+                                                                               // APOSTOLICA SCRIPTURAE SACRAE AFFECTUS DEL SANTO PADRE FRANCESCO NEL
+                                                                               // XVI CENTENARIO DELLA MORTE DI SAN GIROLAMO'.
+  ' nel IV centenario',                                                       // Francis, apost_letters: 'Lettera Apostolica Totum amoris est nel IV
+                                                                               // centenario della morte di San Francesco di Sales' -- confirmed
+                                                                               // genuine by fetching the document itself (own URL slug: totum-
+                                                                               // amoris-est): its own printed title reads 'LETTERA APOSTOLICA TOTUM
+                                                                               // AMORIS EST DEL SANTO PADRE FRANCESCO NEL IV CENTENARIO DELLA MORTE
+                                                                               // DI SAN FRANCESCO DI SALES'. Also recovers John Paul II, apost_
+                                                                               // letters: 'Lettera Apostolica Maestro della Fede nel IV centenario
+                                                                               // della morte di San Giovanni della Croce' -- the shelf's own
+                                                                               // <i>Maestro della Fede</i> italics already mark it, and the fetched
+                                                                               // document's own printed title reads 'LETTERA APOSTOLICA MAESTRO
+                                                                               // DELLA FEDE DEL SANTO PADRE GIOVANNI PAOLO II'.
+  ' per la costituzione',                                                     // Francis, motu_proprio: 'Lettera Apostolica in forma di «Motu
+                                                                               // Proprio» Fidelis dispensator et prudens per la costituzione di una
+                                                                               // nuova struttura di coordinamento degli affari economici e
+                                                                               // amministrativi della Santa Sede e dello Stato della Città del
+                                                                               // Vaticano' -- confirmed genuine by fetching the document itself
+                                                                               // (own URL slug: fidelis-dispensator-et-prudens): its own printed
+                                                                               // title reads 'LETTERA APOSTOLICA IN FORMA DI «MOTU PROPRIO» FIDELIS
+                                                                               // DISPENSATOR ET PRUDENS DEL SOMMO PONTEFICE FRANCESCO PER LA
+                                                                               // COSTITUZIONE DI...'.
+  ' su alcuni aspetti',                                                       // John Paul II, motu_proprio: 'Lettera Apostolica in forma di Motu
+                                                                               // proprio Misericordia Dei su alcuni aspetti della celebrazione del
+                                                                               // Sacramento della Penitenza' -- confirmed genuine by fetching the
+                                                                               // document itself (own URL slug: misericordia-dei): its own printed
+                                                                               // title reads 'GIOVANNI PAOLO II LETTERA APOSTOLICA IN FORMA DI
+                                                                               // «MOTU PROPRIO» MISERICORDIA DEI SU ALCUNI ASPETTI DELLA
+                                                                               // CELEBRAZIONE DEL SACRAMENTO DELLA PENITENZA'.
 ];
 
 // Deleted for lack of evidence (review finding, 2026-09-07): the comma-prefixed

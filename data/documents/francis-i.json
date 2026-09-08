@@ -719,7 +719,7 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:francis-i/fidelis-dispensator-et-prudens-per-la-costituzione-di-una-nuova-struttura-di-coordinamento-degli-affari-economici-e-amministrativi-della-santa-sede-e-dello-stato-della-citta-del-vaticano-2014",
+    "id": "mag:francis-i/fidelis-dispensator-et-prudens-2014",
     "title": "Lettera Apostolica in forma di «Motu Proprio» Fidelis dispensator et prudens per la costituzione di una nuova struttura di coordinamento degli affari economici e amministrativi della Santa Sede e dello Stato della Città del Vaticano",
     "idStatus": "minted",
     "genre": "apostolic-letter",
@@ -742,7 +742,7 @@
         "motu_proprio"
       ]
     },
-    "incipit": "Fidelis dispensator et prudens per la costituzione di una nuova struttura di coordinamento degli affari economici e amministrativi della Santa Sede e dello Stato della Città del Vaticano",
+    "incipit": "Fidelis dispensator et prudens",
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2781,7 +2781,7 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:francis-i/scripturae-sacrae-affectus-nel-xvi-centenario-della-morte-di-san-girolamo-2020",
+    "id": "mag:francis-i/scripturae-sacrae-affectus-2020",
     "title": "Lettera Apostolica Scripturae Sacrae affectus nel XVI centenario della morte di San Girolamo",
     "idStatus": "minted",
     "genre": "apostolic-letter",
@@ -2807,7 +2807,7 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Scripturae Sacrae affectus nel XVI centenario della morte di San Girolamo",
+    "incipit": "Scripturae Sacrae affectus",
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2918,7 +2918,7 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:francis-i/patris-corde-nel-150-anniversario-della-dichiarazione-di-san-giuseppe-quale-patrono-della-chiesa-universale-2020",
+    "id": "mag:francis-i/patris-corde-2020",
     "title": "Lettera Apostolica Patris corde nel 150° anniversario della dichiarazione di San Giuseppe quale Patrono della Chiesa universale",
     "idStatus": "minted",
     "genre": "apostolic-letter",
@@ -2945,7 +2945,7 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Patris corde nel 150° anniversario della dichiarazione di San Giuseppe quale Patrono della Chiesa universale",
+    "incipit": "Patris corde",
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3646,7 +3646,7 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:francis-i/totum-amoris-est-nel-iv-centenario-della-morte-di-san-francesco-di-sales-2022",
+    "id": "mag:francis-i/totum-amoris-est-2022",
     "title": "Lettera Apostolica Totum amoris est nel IV centenario della morte di San Francesco di Sales",
     "idStatus": "minted",
     "genre": "apostolic-letter",
@@ -3669,7 +3669,7 @@
       ],
       "retrieved": "2026-09-07"
     },
-    "incipit": "Totum amoris est nel IV centenario della morte di San Francesco di Sales",
+    "incipit": "Totum amoris est",
     "sourceGenreLabel": "apost_letters"
   },
   {

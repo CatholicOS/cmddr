@@ -113,3 +113,12 @@ if [ -z "$POPE" ] || [ "$POPE" = francesco ]; then
     shelf francesco "$s"
   done
 fi
+
+if [ -z "$POPE" ] || [ "$POPE" = leo-xiv ]; then
+  # Leo XIV is the reigning pontiff: these fixtures go stale as documents are published.
+  # Refresh them, update FIXTURES_RETRIEVED, and re-harvest whenever the registry is
+  # brought up to date. The counts in tools/test/harvest-data.test.ts move with them.
+  for s in encyclicals apost_constitutions apost_letters apost_exhortations motu_proprio; do
+    shelf leo-xiv "$s"
+  done
+fi

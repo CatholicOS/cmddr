@@ -149,6 +149,19 @@ export const POPES: readonly PopeSource[] = [
       'bulls', 'encyclicals', 'motu_proprio',
     ],
   },
+  {
+    // Elected 8 May 2025; the reigning pontiff, and the last pontificate in this
+    // expansion. Like Francis, Leo XIV's apost_constitutions headings may state a
+    // circumscription erection outright ('ha eretto...' / 'ha istituito...'), so
+    // 'leo-xiv' also sits in keywords.ts's TEXTUALLY_TAGGED set rather than being
+    // scanned for toponym shape. `letters` and `speeches` are year-partitioned and out
+    // of scope (spec §2.7).
+    pageSlug: 'leo-xiv', issuerId: 'rp:leo-xiv', era: 'shelf',
+    shelves: [
+      'apost_constitutions', 'apost_exhortations', 'apost_letters',
+      'encyclicals', 'motu_proprio',
+    ],
+  },
 ] as const;
 
 /** The shelves harvested for a pope page; empty for an unknown slug or a flat-era page. */

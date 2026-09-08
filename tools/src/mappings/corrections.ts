@@ -676,7 +676,11 @@ export const DATE_CORRECTIONS: Record<string, { date: string; note: string }> = 
       "-- consistent, 2003-10-16 to 2004-10-15). The printed date is correct; the " +
       'apost_letters shelf\'s URL slug (20041008, 8 October) is wrong.',
   },
-  'john-paul-ii|motu_proprio|misericordia-dei-su-alcuni-aspetti-della-celebrazione-del-sacramento-della-penitenza|2002-04-07': {
+  // Task 19: rekeyed from 'misericordia-dei-su-alcuni-aspetti-della-celebrazione-del-
+  // sacramento-della-penitenza' after the ' su alcuni aspetti' GLOSS_CONNECTORS entry
+  // shortened this record's own resolved incipit to 'Misericordia Dei' -- this table keys
+  // on item.incipit, not item.title (see run.ts), so the key must track the resolved value.
+  'john-paul-ii|motu_proprio|misericordia-dei|2002-04-07': {
     date: '2002-04-07',
     note:
       "Misericordia Dei's own dating formula reads 'Datum Romae, apud Sanctum Petrum, " +

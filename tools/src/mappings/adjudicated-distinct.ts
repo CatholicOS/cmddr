@@ -1884,4 +1884,36 @@ export const ADJUDICATED_DISTINCT: Record<
         "Pope's name by the Secretary of State announcing the beatification of Maria " +
         'Luisa Prosperi. Unrelated acts, coincidentally dated the same day.',
     },
+  'leo-xiv|2025-11-23|in-unitate-fidei|regolamento-del-personale-della-curia-romana': {
+    incipit1: 'In unitate fidei',
+    shelf1: 'apost_letters',
+    incipit2: 'Regolamento del Personale della Curia Romana',
+    shelf2: 'motu_proprio',
+    note:
+      'In unitate fidei (its own URL slug: in-unitate-fidei) is the apostolic letter for ' +
+      "the 1700th anniversary of the Council of Nicaea, written ahead of the Pope's " +
+      'Apostolic Journey to Türkiye, urging renewed commitment to the shared profession ' +
+      "of faith (\"Nell'unità della fede...i cristiani sono chiamati a camminare " +
+      'concordi..."). The Regolamento del Personale (its own URL slug: ' +
+      'regolamento-personale-curia-romana) instead lays down the organizational, ' +
+      'disciplinary and economic norms governing the employment of Curia personnel ' +
+      '("Il presente Regolamento contiene le norme di carattere organizzativo, ' +
+      'disciplinare ed economico inerenti il rapporto di lavoro del personale..."). ' +
+      'Unrelated subjects, coincidentally dated the same day.',
+  },
+  'leo-xiv|2025-11-23|in-unitate-fidei|regolamento-generale-della-curia-romana': {
+    incipit1: 'In unitate fidei',
+    shelf1: 'apost_letters',
+    incipit2: 'Regolamento Generale della Curia Romana',
+    shelf2: 'motu_proprio',
+    note:
+      'In unitate fidei (its own URL slug: in-unitate-fidei) is the apostolic letter for ' +
+      "the 1700th anniversary of the Council of Nicaea, written ahead of the Pope's " +
+      'Apostolic Journey to Türkiye (see the entry above). The Regolamento Generale (its ' +
+      "own URL slug: regolamento-generale-curia-romana) instead governs the organization " +
+      "of the Curia's own institutions and offices (\"Il presente Regolamento si applica " +
+      'alle Istituzioni curiali e agli Uffici che compongono la Curia Romana..."), a ' +
+      'separate text from the Regolamento del Personale issued the same day. Unrelated ' +
+      'subjects, coincidentally dated the same day.',
+  },
 };

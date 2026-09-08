@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { checkDocuments } from '../src/validate/invariants.js';
 import { parseShelfIndex } from '../src/harvest/shelf.js';
 import { shelvesFor, isErectionCandidate } from '../src/mappings/index.js';
@@ -1470,5 +1470,147 @@ describe('the Francis corpus', () => {
     expect(load('john-paul-i')).toHaveLength(7);
     expect(load('john-paul-ii')).toHaveLength(1801);
     expect(load('benedict-xvi')).toHaveLength(214);
+  });
+});
+
+describe('the Leo XIV corpus', () => {
+  const docs = load('leo-xiv');
+
+  it('holds every formal-shelf document', () => {
+    // 1 encyclical + 7 apost_constitutions + 10 apost_letters + 1 apost_exhortations
+    // + 8 motu_proprio = 27 raw items, matching the task brief's expected counts on
+    // every shelf exactly. apost_letters and motu_proprio overlap (the same
+    // "Lettera Apostolica in forma di «Motu Proprio»" shape as Francis): 6 documents
+    // merge on shared incipit and date, each dropping exactly one duplicate item
+    // (verified: every one carries exactly one alsoShelvedAs entry, 'motu_proprio', and
+    // is kept on the more specific apost_letters shelf). 27 - 6 = 21.
+    expect(docs).toHaveLength(21);
+  });
+
+  it('files them all under the right issuer', () => {
+    expect(docs.every((d) => d.issuerId === 'rp:leo-xiv')).toBe(true);
+  });
+
+  it('namespaces ids under the CRPDR id, which happens to match the vatican.va slug here', () => {
+    expect(docs.every((d) => d.id.startsWith('mag:leo-xiv/'))).toBe(true);
+  });
+
+  it('gives every document a title', () => {
+    expect(docs.every((d) => typeof d.title === 'string' && d.title.length > 0)).toBe(true);
+  });
+
+  it('has no year-partitioned shelf (every fixture is an aggregate page)', () => {
+    for (const shelf of shelvesFor('leo-xiv')) {
+      const index = readFileSync(`tools/fixtures/leo-xiv-${shelf}.html`, 'utf8');
+      expect(index.includes('div class="item"'), shelf).toBe(true);
+    }
+  });
+
+  it('tags the erections the headings state outright', () => {
+    // Like Francis, Leo XIV's own TEXTUALLY_TAGGED membership (keywords.ts) reads the
+    // erection from the heading text rather than flagging it for curation. Three
+    // headings read 'il Santo Padre ha eretto...' outright; all three are on
+    // apost_constitutions. (Four more apost_constitutions headings state an erection in
+    // the present tense -- 'erige'/'eleva' rather than 'ha eretto'/'ha elevato' -- which
+    // ERECTION_PHRASES does not match; see task-19-report.md's deferred finding.)
+    const tagged = docs.filter((d) => d.keywords?.includes('circumscription-erection'));
+    expect(tagged).toHaveLength(3);
+    expect(tagged.every((d) => /ha eretto|ha istituito|ha elevato/i.test(d.title))).toBe(true);
+    expect(tagged.every((d) => d.source?.shelf === 'apost_constitutions')).toBe(true);
+  });
+
+  it('does not flag any Leo XIV document as an erection candidate', () => {
+    // keywords.ts's TEXTUALLY_TAGGED set excludes 'leo-xiv' from isErectionCandidate
+    // precisely so a textually-tagged erection is never also double-counted as a
+    // candidate awaiting curation. Confirmed against the actual harvested items, not
+    // just the exclusion set's presence.
+    for (const shelf of shelvesFor('leo-xiv')) {
+      const index = readFileSync(`tools/fixtures/leo-xiv-${shelf}.html`, 'utf8');
+      const items = parseShelfIndex(index, 'leo-xiv', shelf);
+      expect(items.every((i) => !isErectionCandidate(i)), shelf).toBe(true);
+    }
+  });
+
+  it('adjudicates the two same-date cross-shelf pairs as genuinely distinct', () => {
+    // Both fetched and read in full: 'In unitate fidei' (the apostolic letter for the
+    // 1700th anniversary of the Council of Nicaea) is unrelated in subject to either of
+    // the two Curia regolamenti, which are themselves two separate texts (personnel
+    // rules vs. general organization) issued the same day -- see ADJUDICATED_DISTINCT
+    // (Task 19 entries) for the full evidence.
+    const byIncipit = (s: string) => docs.find((d) => d.incipit === s);
+    expect(byIncipit('In unitate fidei')).toBeDefined();
+    expect(byIncipit('Regolamento del Personale della Curia Romana')).toBeDefined();
+    expect(byIncipit('Regolamento Generale della Curia Romana')).toBeDefined();
+  });
+
+  it('omits the incipit exactly when the id is provisional', () => {
+    for (const d of docs) {
+      expect('incipit' in d, d.id).toBe(d.idStatus === 'minted');
+    }
+    // 3 of 21 (14.3%) carry no recoverable incipit from the printed shelf heading. Two
+    // are genuinely narrative headings with no incipit anywhere in the document itself
+    // (fetched and confirmed). The third, 'confirma-fratres-tuos' (24 giugno 2026, own
+    // URL slug), does have a real quoted incipit printed on the document's own page --
+    // but the shelf-index heading never prints it at all, unlike every other minted
+    // record here, so no rule table can recover text the source heading omits entirely.
+    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(3);
+  });
+
+  it('satisfies every invariant', () => {
+    expect(checkDocuments(docs, genres, keywords)).toEqual([]);
+  });
+
+  it('emits no unadjudicated printed/slug date-mismatch or unmerged same-date warnings', () => {
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    let calls: unknown[][];
+    try {
+      for (const shelf of shelvesFor('leo-xiv')) {
+        const index = readFileSync(`tools/fixtures/leo-xiv-${shelf}.html`, 'utf8');
+        parseShelfIndex(index, 'leo-xiv', shelf);
+      }
+    } finally {
+      calls = warnSpy.mock.calls;
+      warnSpy.mockRestore();
+    }
+    const mismatches = calls.filter(([msg]) => String(msg).includes('date mismatch'));
+    expect(mismatches).toEqual([]);
+  });
+
+  it('records the fixture retrieval date for every document', () => {
+    expect(docs.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
+  });
+
+  it('leaves every prior pontificate untouched', () => {
+    expect(all).toHaveLength(383);
+    expect(load('pius-x')).toHaveLength(306);
+    expect(load('pius-xi')).toHaveLength(158);
+    expect(load('pius-xii')).toHaveLength(253);
+    expect(load('benedict-xv')).toHaveLength(63);
+    expect(load('john-xxiii')).toHaveLength(177);
+    expect(load('paul-vi')).toHaveLength(688);
+    expect(load('john-paul-i')).toHaveLength(7);
+    expect(load('john-paul-ii')).toHaveLength(1801);
+    expect(load('benedict-xvi')).toHaveLength(214);
+    expect(load('francis-i')).toHaveLength(198);
+  });
+});
+
+describe('the whole corpus', () => {
+  const everything = readdirSync('data/documents')
+    .filter((f) => f.endsWith('.json'))
+    .flatMap((f) => JSON.parse(readFileSync(`data/documents/${f}`, 'utf8')) as DocumentRecord[]);
+
+  it('has globally unique identifiers', () => {
+    expect(new Set(everything.map((d) => d.id)).size).toBe(everything.length);
+  });
+
+  it('satisfies every invariant across every issuer at once', () => {
+    expect(checkDocuments(everything, genres, keywords)).toEqual([]);
+  });
+
+  it('keeps the 383 pilot identifiers exactly as first minted', () => {
+    const pilot = [...load('benedict-xiv'), ...load('pius-ix'),
+                   ...load('leo-xiii'), ...load('vatican-i')];
+    expect(pilot).toHaveLength(383);
   });
 });
