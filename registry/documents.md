@@ -52,7 +52,7 @@ A keyword is a descriptive subject tag and carries no claim about authority.
 | Keyword | Documents |
 | --- | --- |
 | [`circumscription-elevation`](documents/by-keyword/circumscription-elevation.md) | 7 |
-| [`circumscription-erection`](documents/by-keyword/circumscription-erection.md) | 40 |
+| [`circumscription-erection`](documents/by-keyword/circumscription-erection.md) | 59 |
 
 ## Coverage
 
@@ -65,7 +65,7 @@ This registry covers the **formal document shelves** of vatican.va. Deliberately
 - **Year-partitioned `letters` shelves** — Benedict XV, and Paul VI onward. The `letters` shelf is
   harvested only where the aggregate index carries its items.
 - **Bishops' conferences and dicasterial documents**, which remain outside the repository's scope.
-- **Keyword curation is incomplete.** 761 apostolic constitutions have not yet been confirmed
+- **Keyword curation is incomplete.** 742 apostolic constitutions have not yet been confirmed
   as circumscription erections. Their headings print a bare Latin toponym with no marker, so each
   is confirmed by hand against the document's own text.
 

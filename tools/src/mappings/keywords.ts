@@ -18,7 +18,140 @@ import type { DocumentRecord, HarvestItem } from '../types.js';
  *
  * Key: `${pageSlug}|${slugify(incipit ?? title)}|${isoDate}`.
  */
-export const CIRCUMSCRIPTION_ERECTIONS: Record<string, { note: string }> = {};
+export const CIRCUMSCRIPTION_ERECTIONS: Record<string, { note: string }> = {
+  // Task 20's first curation instalment: the entire Pius XII apostolic-constitutions
+  // candidate queue (29 candidates, 1957-04-10 through 1958-05-15) read by hand against
+  // its own Latin text on vatican.va. 19 confirmed below as erections. The other 10 are
+  // deliberately left unconfirmed here, not overlooked: nine are elevations of an
+  // existing circumscription's rank ('...ad gradum et dignitatem dioecesis evehimus...',
+  // 'Bathurstensis in Gambia', 'Bikoroënsis', 'Musomensis', 'Spinensis', 'Copiapoënsis',
+  // 'Esmeraldensis', 'Urawaënsis', 'Tangaënsis', 'Thakhekensis') and one ('Leonensis') is
+  // not a circumscription document at all -- it raises a parish church to collegiate-church
+  // status. A bare Latin toponym cannot be told apart from either of these on the index
+  // page, which is exactly why each was read individually rather than confirmed by pattern.
+  'pius-xii|santaremensis-obidensis|1957-04-10': {
+    note:
+      'Detaches territory from the Prelature Nullius of Santarém and erects the new '
+      + 'Prelature Nullius of Óbidos: "...ex eoque novam praelaturam «nullius» condimus, '
+      + 'Obidensem appellandam...". The heading prints only the twin toponym.',
+  },
+  'pius-xii|corumbensis-registrensis-campi-grandis-auratopolitanae|1957-06-15': {
+    note:
+      'Detaches territory from the Diocese of Corumbá and the Prelature Nullius of Registro '
+      + 'and erects two new dioceses: "...ex iisque omnibus territoriis dioecesim '
+      + 'constituimus, Campi Grandis nuncupandam..." and "...ex eorumque territorio alteram '
+      + 'condimus dioecesim, Auratopolitanam appellandam...".',
+  },
+  'pius-xii|chiapasensis-tapacolensis|1957-06-19': {
+    note:
+      'Detaches territory from the Diocese of Chiapas and erects the new Diocese of '
+      + 'Tapachula: "...Quam regionem in novae formam redigimus dioecesis, Tapacolensis '
+      + 'appellandae...".',
+  },
+  'pius-xii|saltillensis-torreonensis|1957-06-19': {
+    note:
+      'Detaches territory from the Diocese of Saltillo and erects the new Diocese of '
+      + 'Torreón: "...quae omnia in novae dioecesis formam redigimus, Torreonensis '
+      + 'appellandae...".',
+  },
+  'pius-xii|aleppensis-chaldaeorum|1957-07-03': {
+    note:
+      'Suppresses the Apostolic Administration of Upper Gazira of the Chaldeans and, for its '
+      + 'Syrian portion, erects the new Diocese of Aleppo of the Chaldeans: "...Apostolicam '
+      + 'administrationem de Gazira superiore Chaldaeorum omnino exstinguimus...in novae '
+      + 'formam redigimus dioecesis, Aleppensis Chaldaeorum nuncupandae...".',
+  },
+  'pius-xii|berytensis-chaldaeorum|1957-07-03': {
+    note:
+      'The companion constitution to Aleppensis Chaldaeorum, issued the same day: for the '
+      + 'Lebanese portion of the same suppressed administration, erects the new Diocese of '
+      + 'Beirut of the Chaldeans: "...Libani territorium...in novae dioecesis formam '
+      + 'redigimus, Berytensis Chaldaeorum appellandam...".',
+  },
+  'pius-xii|kikuitensis-kisantuensis-kengen|1957-07-05': {
+    note:
+      'Detaches territory from the Apostolic Vicariates of Kikwit and Kisantu and erects the '
+      + 'new Apostolic Prefecture of Kenge: "...ex iisque novam condi praefecturam '
+      + 'apostolicam...eaque in novae formam redigimus apostolicae praefecturae, Kengensis '
+      + 'appellandae...".',
+  },
+  'pius-xii|quinhonensis-saigonensis-nhatrangensis|1957-07-05': {
+    note:
+      'Detaches territory from the Apostolic Vicariates of Qui Nhon and Saigon and erects '
+      + 'the new Apostolic Vicariate of Nha Trang: "...Ex quibus terris novum vicariatum '
+      + 'condimus, qui ab urbe Nhatrang...Nhatrangensis appellabitur...".',
+  },
+  'pius-xii|rabaulensis-kaviengensis|1957-07-05': {
+    note:
+      'Detaches territory from the Apostolic Vicariate of Rabaul and erects the new '
+      + 'Apostolic Vicariate of Kavieng: "...ex eaque novum vicariatum condimus, cui nomen '
+      + 'erit ab urbe principe Kaviengensis...".',
+  },
+  'pius-xii|amargosensis-victoriensis-de-conquista|1957-07-27': {
+    note:
+      'Detaches territory from the Diocese of Amargosa and erects the new Diocese of '
+      + 'Vitória da Conquista: "...quibus ex municipiis...novam constituimus dioecesim '
+      + 'Victoriensem de Conquista appellandam.".',
+  },
+  'pius-xii|puniensis-iuliensis|1957-08-03': {
+    note:
+      'Detaches territory from the Diocese of Puno and erects the new Prelature Nullius of '
+      + 'Juli: "...quibus terris novam praelaturam «nullius» efficimus, Iuliensem '
+      + 'appellandam...".',
+  },
+  'pius-xii|arequipensis-ayacuquensis-caraveliens|1957-11-21': {
+    note:
+      'Detaches territory from the Archdiocese of Arequipa and the Diocese of Ayacucho and '
+      + 'erects the new Prelature Nullius of Caravelí: "...ex quibus ita disiunctis terris '
+      + 'novam condimus Praelaturam «nullius», Garaveliensem [Caraveliensem] '
+      + 'nuncupandam...". The heading omits the trailing period the harvested candidate '
+      + 'list carries after "Caraveliens".',
+  },
+  'pius-xii|luandensis-silvae-portuensis-malaniensis|1957-11-25': {
+    note:
+      'Detaches territory from the Archdiocese of Luanda and the Diocese of Silva Porto '
+      + '(Angola) and erects the new Diocese of Malanje: "...quibus terris novam dioecesim '
+      + 'condimus Malaniensem appellandam.".',
+  },
+  'pius-xii|rivibambensis-guarandensis|1957-12-29': {
+    note:
+      'Detaches the province of Bolívar from the Diocese of Riobamba and erects the new '
+      + 'Diocese of Guaranda: "...idque in novae dioecesis formam redigimus, Guarandensis '
+      + 'appellandae...".',
+  },
+  'pius-xii|palmensis-lagensis-palmensis-et-xapecoensis|1958-01-14': {
+    note:
+      'Suppresses the Prelature Nullius of Palmas and, from its territory plus territory '
+      + 'detached from the Diocese of Lages, erects two new dioceses: "...ex quibus novam '
+      + 'dioecesim condimus Palmensem nominandam..." and "...novam dioecesim condimus '
+      + 'Xapecoënsem appellandam...".',
+  },
+  'pius-xii|niangaraensis-dorumaensis|1958-02-24': {
+    note:
+      'Detaches territory from the Apostolic Vicariate of Niangara and erects the new '
+      + 'Apostolic Prefecture of Doruma: "...Quo territorio novam praefecturam apostolicam '
+      + 'condimus, Dorumaënsem appellandam...".',
+  },
+  'pius-xii|chilapensis-acapulcanae|1958-03-18': {
+    note:
+      'Detaches territory from the Diocese of Chilapa and erects the new Diocese of '
+      + 'Acapulco: "...ex quo distracto territorio novam efficimus dioecesim, Acapulcanam '
+      + 'nuncupandam.".',
+  },
+  'pius-xii|huanucensis-huancayensis-tarmensis|1958-05-15': {
+    note:
+      'Detaches territory from the Dioceses of Huánuco and Huancayo and erects the new '
+      + 'Prelature Nullius of Tarma: "...Quibus terris novam praelaturam «nullius» '
+      + 'constituimus Tarmensem appellandam.".',
+  },
+  'pius-xii|huanucensis-huarazensis-huariensis|1958-05-15': {
+    note:
+      'The companion constitution to Huanucensis-Huancayensis, issued the same day: '
+      + 'detaches further territory from the Diocese of Huánuco and from the Diocese of '
+      + 'Huaraz and erects the new Prelature Nullius of Huari: "...quibus ex terris novam '
+      + 'praelaturam «nullius» efficimus Huariensem appellandam...".',
+  },
+};
 
 /**
  * The circumscription nouns that guard a bare verb ('erige', 'eleva') against firing on an
