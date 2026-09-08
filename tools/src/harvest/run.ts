@@ -4,7 +4,9 @@ import { parseShelfIndex } from './shelf.js';
 import { resolveShelfPages } from './shelfPages.js';
 import { toDocument } from './toDocument.js';
 import { assignProvisionalOrdinals } from './ordinals.js';
-import { POPES, DATE_CORRECTIONS, DUPLICATE_MERGES, ADJUDICATED_DISTINCT } from '../mappings/index.js';
+import {
+  POPES, DATE_CORRECTIONS, DUPLICATE_MERGES, ADJUDICATED_DISTINCT, isErectionCandidate,
+} from '../mappings/index.js';
 import { issuerLocalPart, mintId } from '../ids.js';
 import { slugify } from '../slug.js';
 import type { DocumentRecord, HarvestItem } from '../types.js';
@@ -170,6 +172,21 @@ for (const group of byPageDate.values()) {
       );
     }
   }
+}
+
+// Circumscription erections filed under a bare Latin toponym with no textual marker
+// (Paul VI, John Paul II, Benedict XVI, Pius XII) cannot be tagged from the index page --
+// only flagged for a human to confirm into CIRCUMSCRIPTION_ERECTIONS (spec §4.5). This
+// warns; it never writes a keyword itself (that happens, if at all, in toDocument via
+// keywordsFor, driven only by the heading text or the curated table).
+const candidates = [...mergedByDuplicateTable.values()].filter(isErectionCandidate);
+for (const c of candidates) {
+  console.warn(
+    `Circumscription-erection candidate ${c.pageSlug} ${c.shelf} ${c.date}: '${c.title}'`,
+  );
+}
+if (candidates.length) {
+  console.warn(`  ${candidates.length} candidates await confirmation into CIRCUMSCRIPTION_ERECTIONS`);
 }
 
 const allDocs = [...mergedByDuplicateTable.values()].map((item) => toDocument(item, RETRIEVED));
