@@ -2105,6 +2105,17 @@ describe('the 1961 Rosary letter and the meditation published with it', () => {
     expect(meditation.source!.url).toContain('_meditation_19610929_religioso-convegno');
   });
 
+  it('files the meditation as a prayer, the genre the Genre Registry has for it', () => {
+    // Its shelf says apost_letters, but the text is a set of Rosary meditations, not an
+    // apostolic letter. `prayer` is the Genre Registry row that fits, and it is papal-issued,
+    // so invariant 17 is satisfied. The provisional id follows the genre, as it does everywhere.
+    const meditation = sameDay.find((d) => d.title.startsWith('Piccolo saggio'))!;
+    expect(meditation.genre).toBe('prayer');
+    expect(meditation.id).toBe('mag:john-xxiii/prayer-1961-09-29');
+    // The shelf label is still recorded verbatim, so the override stays auditable.
+    expect(meditation.sourceGenreLabel).toBe('apost_letters');
+  });
+
   it('no longer records the meditation as a mere alias of the letter', () => {
     const letter = sameDay.find((d) => d.incipit === 'Il religioso convegno')!;
     expect(letter.aliases ?? []).not.toContain(

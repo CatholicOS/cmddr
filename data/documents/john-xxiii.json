@@ -3183,25 +3183,6 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:john-xxiii/apostolic-letter-1961-09-29",
-    "title": "Piccolo saggio di devoti pensieri distribuiti per ogni decina del Rosario, come a complemento della Lettera Apostolica Il religioso convegno",
-    "idStatus": "provisional",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:john-xxiii",
-    "issuerType": "pope",
-    "date": "1961-09-29",
-    "source": {
-      "url": "https://www.vatican.va/content/john-xxiii/it/apost_letters/1961/documents/hf_j-xxiii_meditation_19610929_religioso-convegno.html",
-      "shelf": "apost_letters",
-      "languages": [
-        "ES",
-        "IT"
-      ],
-      "retrieved": "2026-09-07"
-    },
-    "sourceGenreLabel": "apost_letters"
-  },
-  {
     "id": "mag:john-xxiii/il-religioso-convegno-1961",
     "title": "Il religioso convegno, la recita del Santo Rosario per la giusta pace tra le Nazioni",
     "idStatus": "minted",
@@ -3239,6 +3220,25 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "In colle",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/prayer-1961-09-29",
+    "title": "Piccolo saggio di devoti pensieri distribuiti per ogni decina del Rosario, come a complemento della Lettera Apostolica Il religioso convegno",
+    "idStatus": "provisional",
+    "genre": "prayer",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1961-09-29",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/it/apost_letters/1961/documents/hf_j-xxiii_meditation_19610929_religioso-convegno.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
     "sourceGenreLabel": "apost_letters"
   },
   {

@@ -36,7 +36,7 @@ Every document appears in both views below; neither is a subset of the other.
 | Genre | Documents | Dates |
 | --- | --- | --- |
 | [`apostolic-exhortation`](documents/by-genre/apostolic-exhortation.md) | 54 | 1908-08-04 – 2025-10-04 |
-| [`apostolic-letter`](documents/by-genre/apostolic-letter.md) | 1921 | 1857-06-15 – 2026-08-29 |
+| [`apostolic-letter`](documents/by-genre/apostolic-letter.md) | 1920 | 1857-06-15 – 2026-08-29 |
 | [`brief`](documents/by-genre/brief.md) | 30 | 1741-05-30 – 1950-09-08 |
 | [`constitution`](documents/by-genre/constitution.md) | 6 | 1870-04-24 – 1965-12-07 |
 | [`declaration`](documents/by-genre/declaration.md) | 3 | 1965-10-28 – 1965-12-07 |
@@ -46,6 +46,7 @@ Every document appears in both views below; neither is a subset of the other.
 | [`letter`](documents/by-genre/letter.md) | 432 | 1863-12-21 – 1978-09-28 |
 | [`motu-proprio`](documents/by-genre/motu-proprio.md) | 210 | 1880-01-18 – 2025-11-23 |
 | [`papal-bull`](documents/by-genre/papal-bull.md) | 1292 | 1749-03-15 – 2026-01-08 |
+| [`prayer`](documents/by-genre/prayer.md) | 1 | 1961-09-29 – 1961-09-29 |
 | [`unmapped`](documents/by-genre/unmapped.md) | 5 | 1846-07-16 – 1849-02-14 |
 
 ## By keyword
