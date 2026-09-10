@@ -745,7 +745,7 @@ describe('the Paul VI corpus', () => {
     // automatic/mechanical -- apost_letters, the more specific shelf, wins
     // keepMoreSpecific and the motu_proprio filing is recorded as alsoShelvedAs).
     // 692 - 4 = 688.
-    expect(docs).toHaveLength(688);
+    expect(docs).toHaveLength(687);
   });
 
   it('files them all under the right issuer', () => {
@@ -761,7 +761,7 @@ describe('the Paul VI corpus', () => {
     for (const d of docs) {
       expect('incipit' in d, d.id).toBe(d.idStatus === 'minted');
     }
-    // Only 8 of 688 (1.2%) carry no recoverable incipit -- a low rate given the volume,
+    // Only 5 of 687 (0.7%) carry no recoverable incipit -- a low rate given the volume,
     // but not the silent-mint trap a low rate can otherwise hide (Task 14 review): every
     // one of the 680 minted incipits was checked for gloss contamination (any minted
     // incipit six words or longer, or containing a known gloss-connector substring) and
@@ -778,9 +778,10 @@ describe('the Paul VI corpus', () => {
     // del' to NARRATIVE_OPENERS (incipit-rules.ts), the same failure shape as 'Iam in
     // Pontificatus' in the John XXIII corpus. The remaining 8 are correct: each heading
     // genuinely prints no incipit (see task-14-report.md).
-    // Two were recovered into RECOVERED_INCIPITS on AAS evidence -- In Spiritu Sancto
-    // (AAS 58) and Positum est (AAS 65) -- so the count is two lower than described above.
-    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(6);
+    // Two were recovered into RECOVERED_INCIPITS on AAS evidence -- In Spiritu Sancto (AAS 58)
+    // and Positum est (AAS 65) -- and a third left the shelf entirely when the twice-published
+    // 1968 beatification letter merged into mag:paul-vi/quem-ad-modum-1968 (see its own tests).
+    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(5);
   });
 
   it('flags the diocese erections as candidates without tagging any of them', () => {
@@ -971,14 +972,14 @@ describe('the John Paul I corpus', () => {
     expect(docs.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
   });
 
-  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 177 John XXIII, and 688 Paul VI records untouched', () => {
+  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 177 John XXIII, and 687 Paul VI records untouched', () => {
     expect(all).toHaveLength(383);
     expect(load('pius-x')).toHaveLength(306);
     expect(load('pius-xi')).toHaveLength(158);
     expect(load('pius-xii')).toHaveLength(253);
     expect(load('benedict-xv')).toHaveLength(63);
     expect(load('john-xxiii')).toHaveLength(177);
-    expect(load('paul-vi')).toHaveLength(688);
+    expect(load('paul-vi')).toHaveLength(687);
   });
 });
 
@@ -1153,14 +1154,14 @@ describe('the John Paul II corpus', () => {
     expect(docs.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
   });
 
-  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 177 John XXIII, 688 Paul VI, and 7 John Paul I records untouched', () => {
+  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 177 John XXIII, 687 Paul VI, and 7 John Paul I records untouched', () => {
     expect(all).toHaveLength(383);
     expect(load('pius-x')).toHaveLength(306);
     expect(load('pius-xi')).toHaveLength(158);
     expect(load('pius-xii')).toHaveLength(253);
     expect(load('benedict-xv')).toHaveLength(63);
     expect(load('john-xxiii')).toHaveLength(177);
-    expect(load('paul-vi')).toHaveLength(688);
+    expect(load('paul-vi')).toHaveLength(687);
     expect(load('john-paul-i')).toHaveLength(7);
   });
 });
@@ -1317,14 +1318,14 @@ describe('the Benedict XVI corpus', () => {
     expect(docs.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
   });
 
-  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 177 John XXIII, 688 Paul VI, 7 John Paul I, and 1801 John Paul II records untouched', () => {
+  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 177 John XXIII, 687 Paul VI, 7 John Paul I, and 1801 John Paul II records untouched', () => {
     expect(all).toHaveLength(383);
     expect(load('pius-x')).toHaveLength(306);
     expect(load('pius-xi')).toHaveLength(158);
     expect(load('pius-xii')).toHaveLength(253);
     expect(load('benedict-xv')).toHaveLength(63);
     expect(load('john-xxiii')).toHaveLength(177);
-    expect(load('paul-vi')).toHaveLength(688);
+    expect(load('paul-vi')).toHaveLength(687);
     expect(load('john-paul-i')).toHaveLength(7);
     expect(load('john-paul-ii')).toHaveLength(1801);
   });
@@ -1504,7 +1505,7 @@ describe('the Francis corpus', () => {
     expect(load('pius-xii')).toHaveLength(253);
     expect(load('benedict-xv')).toHaveLength(63);
     expect(load('john-xxiii')).toHaveLength(177);
-    expect(load('paul-vi')).toHaveLength(688);
+    expect(load('paul-vi')).toHaveLength(687);
     expect(load('john-paul-i')).toHaveLength(7);
     expect(load('john-paul-ii')).toHaveLength(1801);
     expect(load('benedict-xvi')).toHaveLength(214);
@@ -1641,7 +1642,7 @@ describe('the Leo XIV corpus', () => {
     expect(load('pius-xii')).toHaveLength(253);
     expect(load('benedict-xv')).toHaveLength(63);
     expect(load('john-xxiii')).toHaveLength(177);
-    expect(load('paul-vi')).toHaveLength(688);
+    expect(load('paul-vi')).toHaveLength(687);
     expect(load('john-paul-i')).toHaveLength(7);
     expect(load('john-paul-ii')).toHaveLength(1801);
     expect(load('benedict-xvi')).toHaveLength(214);
@@ -2039,8 +2040,8 @@ describe('the recovered-incipit shelf', () => {
     ]);
   });
 
-  it('leaves the provisional shelf smaller by exactly those sixteen', () => {
-    expect(everything.filter((d) => d.idStatus === 'provisional')).toHaveLength(300);
+  it('leaves the provisional shelf at 299 -- sixteen recovered, one merged away', () => {
+    expect(everything.filter((d) => d.idStatus === 'provisional')).toHaveLength(299);
   });
 
   it('keeps the two Leo XIV 2025 letters provisional, which AAS confirms have no incipit', () => {
@@ -2048,5 +2049,32 @@ describe('the recovered-incipit shelf', () => {
       && (d.date === '2025-11-19' || d.date === '2025-12-11'));
     expect(stay).toHaveLength(2);
     for (const d of stay) expect(d.idStatus, d.id).toBe('provisional');
+  });
+});
+
+describe('the twice-published 1968 beatification letter', () => {
+  const pvi = load('paul-vi');
+
+  it('holds the act once, not twice', () => {
+    // vatican.va publishes one act on two pages: _19681013_quem-ad-modum (which prints the
+    // incipit and the AAS footnote) and _19681030_famulae-mariae (which prints neither).
+    // Their texts are identical down to the signatories.
+    expect(pvi.filter((d) => d.incipit === 'Quem ad modum')).toHaveLength(1);
+  });
+
+  it('dates it as the document dates itself, not as the index heading does', () => {
+    // BOTH pages print 'Datum Romae, apud S. Petrum, sub anulo Piscatoris, die tertio decimo
+    // mensis Octobris, anno MCMLXVIII' -- 13 October. The 30 October date exists only in the
+    // shelf-index heading, contradicted by the very document it points at, and AAS 60's index
+    // agrees with the document (Oct. 13, pp. 673-680).
+    const d = pvi.find((r) => r.incipit === 'Quem ad modum')!;
+    expect(d.date).toBe('1968-10-13');
+    expect(d.id).toBe('mag:paul-vi/quem-ad-modum-1968');
+    expect(pvi.filter((r) => r.date === '1968-10-30')).toHaveLength(0);
+  });
+
+  it('keeps the dropped page\'s heading rather than losing it', () => {
+    const d = pvi.find((r) => r.incipit === 'Quem ad modum')!;
+    expect(d.aliases).toContain('Venerabili Dei Famulae Mariae ab Apostolis Beatorum honores decernuntur');
   });
 });

@@ -13,6 +13,18 @@
  * the pass-1 merge key of the kept (encyclicals-shelf) record.
  */
 export const DUPLICATE_MERGES: Record<string, { mergeIntoIncipit: string; note: string }> = {
+  'paul-vi|apost_letters|venerabili-dei-famulae-mariae-ab-apostolis-beatorum-honores-decernuntur|1968-10-13': {
+    mergeIntoIncipit: 'Quem ad modum',
+    note:
+      'One act on two vatican.va pages: _19681030_famulae-mariae (dropped here) and ' +
+      '_19681013_quem-ad-modum (kept). The texts are identical from "Quem ad modum in caelis ' +
+      'unaquaeque stellarum a ceteris omnibus claritudine differt (cf. 1 Cor. 15, 41)" through ' +
+      'to the same signatories (Tinello, Rossi, Del Ton), and both carry the same 13 October ' +
+      'dating clause. They differ only in that the kept page prints the incipit as its heading ' +
+      'and cites A.A.S. LX (1968) pp. 673-680, where AAS carries a single entry for the act. ' +
+      'The date of the dropped record is corrected to 1968-10-13 first (DATE_CORRECTIONS), ' +
+      'without which the two could not meet: every merge pass keys on date.',
+  },
   'leo-xiii|letters|cum-diuturnum|1898-12-25': {
     mergeIntoIncipit: 'Quum Diuturnum',
     note:

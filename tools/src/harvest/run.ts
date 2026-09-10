@@ -55,9 +55,23 @@ const rank = (shelf: string | null) => {
  * this), the dropped incipit is preserved as an alias rather than lost outright.
  */
 function keepMoreSpecific(a: HarvestItem, b: HarvestItem): HarvestItem {
-  const [keep, drop] = rank(a.shelf) < rank(b.shelf) ? [a, b] : [b, a];
+  // Shelf specificity decides first. When two items tie on shelf rank -- which pass 3's
+  // hand-curated merges routinely do, since both records usually sit on the same shelf --
+  // the previous tie-break was insertion order, i.e. whichever the fixture happened to list
+  // first. That is not a reason to prefer one record over another, and it silently discarded
+  // the better one: the 1968 beatification letter is published twice on apost_letters, and
+  // only one of the two pages prints its incipit. A printed incipit is strictly more
+  // information than none, so it wins the tie; everything else keeps the previous ordering.
+  const [keep, drop] = rank(a.shelf) < rank(b.shelf) ? [a, b]
+    : rank(b.shelf) < rank(a.shelf) ? [b, a]
+    : (a.incipit !== null && b.incipit === null) ? [a, b] : [b, a];
   const seen = new Set([...(keep.alsoShelvedAs ?? []), ...(drop.alsoShelvedAs ?? [])]);
   if (drop.shelf) seen.add(drop.shelf);
+  // `alsoShelvedAs` means "the other shelves this act is also filed under". A same-shelf
+  // merge -- the shape pass 3's curated duplicates usually take, since both pages sit on
+  // one shelf -- would otherwise record the surviving record's own shelf as an "other"
+  // shelf, which states nothing and reads as a second filing that does not exist.
+  if (keep.shelf) seen.delete(keep.shelf);
   const aliases = new Set([...(keep.aliases ?? []), ...(drop.aliases ?? [])]);
   if (slugify(drop.incipit ?? drop.title) !== slugify(keep.incipit ?? keep.title)) {
     aliases.add(drop.incipit ?? drop.title);
