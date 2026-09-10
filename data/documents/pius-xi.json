@@ -2122,9 +2122,9 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:pius-xi/letter-1929-05-30",
+    "id": "mag:pius-xi/ci-si-e-domandato-1929",
     "title": "Chirografo al Cardinale Pietro Gasparri, Segretario di Stato, sulla firma dei Trattati Lateranensi",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "letter",
     "issuerId": "rp:pius-xi",
     "issuerType": "pope",
@@ -2138,6 +2138,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Ci si è domandato",
     "sourceGenreLabel": "letters"
   },
   {

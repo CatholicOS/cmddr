@@ -51,8 +51,8 @@ describe('toDocument with a recovered incipit', () => {
 describe('RECOVERED_INCIPITS', () => {
   const rows = Object.entries(RECOVERED_INCIPITS);
 
-  it('holds the sixteen recovered incipits', () => {
-    expect(rows).toHaveLength(16);
+  it('holds the seventeen recovered incipits', () => {
+    expect(rows).toHaveLength(17);
   });
 
   it('keys every row as pageSlug|title-slug|ISO-date, the shape the other curated tables use', () => {

@@ -27,6 +27,18 @@ export interface RecoveredIncipit {
 
 export const RECOVERED_INCIPITS: Record<string, RecoveredIncipit> = {
 
+  // -- pius-xi ----------------------------------------------------------------
+  'pius-xi|chirografo-al-cardinale-pietro-gasparri-segretario-di-stato-sulla-firma-dei-trattati-lateranensi|1929-05-30': {
+    incipit: 'Ci si è domandato',
+    source: 'aas',
+    evidence: 'AAS 21 (1929) index p. 780: "IV. - CHIROGRAPHI / 1929 Maii 30  Ci si è domandato. '
+      + '- Ad Emum P. D. Petrum, tit. S. Laurentii in Lucina, S. R. E. Presb. Card. Gasparri, a '
+      + 'Secretis Status: de Conventionibus inter Sanctam Sedem et Italiae Regnum initis". The '
+      + 'text is at p. 297, opening "Signor Cardinale, Ci si è domandato se le relazioni...". '
+      + 'vatican.va publishes the chirograph at two URLs; only _domandato prints the incipit in '
+      + 'its heading, and the two merge on shelf and date.',
+  },
+
   // -- pius-xii ----------------------------------------------------------------
   'pius-xii|epistola-apostolica-all-episcopato-della-bolivia-circa-lo-sviluppo-dei-seminari-e-la-sempre-piu-efficiente-formazione-del-clero|1941-11-23': {
     incipit: 'Haud mediocrem',

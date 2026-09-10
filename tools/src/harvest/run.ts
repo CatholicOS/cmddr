@@ -90,6 +90,16 @@ function urlDocSlug(url: string | null): string | null {
   return m ? m[1]! : null;
 }
 
+/** The document-type marker of a resolved vatican.va URL -- the segment immediately before the
+ *  date, e.g. `hf_j-xxiii_apl_19610929_religioso-convegno.html` -> `apl`. Across shelves this
+ *  merely restates the shelf (`enc` on encyclicals, `lett` on letters), which is why it cannot
+ *  be part of pass 2's key; within one shelf it is the only thing separating a letter from a
+ *  different text published alongside it (`apl` against `meditation`). */
+function urlDocType(url: string | null): string | null {
+  const m = url?.match(/_([a-z-]+)_\d{8}_[a-z0-9-]+\.html/);
+  return m ? m[1]! : null;
+}
+
 /** The date the checked-in *pope* fixtures in tools/fixtures/ were fetched from vatican.va.
  *  This is the source-of-truth default for pope fixtures; must be updated whenever those
  *  fixtures are refreshed. A council fixture's retrieval date lives on its own COUNCILS row
@@ -179,12 +189,42 @@ for (const item of items) {
 // In plurimis maximisque; Non mediocri / Non mediocri cura), so pass 1's incipit key
 // misses them. Proven instead by the shared trailing slug of their vatican.va document
 // URL. Falls back to the pass-1 key (already unique) when no URL slug is available.
-const mergedByUrlSlug = new Map<string, HarvestItem>();
+const byUrlSlug = new Map<string, HarvestItem[]>();
 for (const [key1, item] of merged) {
   const docSlug = urlDocSlug(item.url);
   const key2 = docSlug ? `${item.pageSlug}|${item.date}|${docSlug}` : key1;
-  const held = mergedByUrlSlug.get(key2);
-  mergedByUrlSlug.set(key2, held ? keepMoreSpecific(item, held) : item);
+  byUrlSlug.set(key2, [...(byUrlSlug.get(key2) ?? []), item]);
+}
+const mergedByUrlSlug = new Map<string, HarvestItem>();
+for (const [key2, group] of byUrlSlug) {
+  // Two items sharing a shelf *and* a URL document slug are separated only by the URL's
+  // document-type marker. John XXIII's Rosary letter and the meditations published to
+  // accompany it are both on apost_letters and both end in `religioso-convegno`, differing
+  // only as `apl` against `meditation` -- two genuinely different texts, 15.9k and 25.4k
+  // characters, which pass 2 silently collapsed into one. John Paul II's 1989 pairs share a
+  // shelf too, but also share their type marker, and are byte-identical pages published under
+  // two date spellings: those are the duplicates this pass exists to remove.
+  const conflict = group.some((a) => group.some((b) =>
+    a !== b && a.shelf === b.shelf && urlDocType(a.url) !== urlDocType(b.url)));
+  if (!conflict) {
+    // reduce as (newcomer, held) to preserve the original sequential merge order exactly:
+    // this pass's winner must not change as a side effect of restructuring it.
+    mergedByUrlSlug.set(key2, group.reduce((held, item) => keepMoreSpecific(item, held)));
+    continue;
+  }
+  const byType = new Map<string | null, HarvestItem[]>();
+  for (const item of group) {
+    const type = urlDocType(item.url);
+    byType.set(type, [...(byType.get(type) ?? []), item]);
+  }
+  console.warn(
+    `Same-shelf URL-slug collision on ${group[0]!.pageSlug} (${group[0]!.date}): `
+    + [...byType.keys()].map((t) => `${t}`).join(' vs ')
+    + ' -- kept apart, since only the URL document-type marker distinguishes them',
+  );
+  for (const [type, items] of byType) {
+    mergedByUrlSlug.set(`${key2}|${type}`, items.reduce((held, item) => keepMoreSpecific(item, held)));
+  }
 }
 
 // Pass 3 (hand-curated): three more Leo XIII documents are the same act filed under

@@ -311,7 +311,7 @@ describe('the Pius XI and Pius XII corpora', () => {
     // signal. See the per-shelf test below for the actual go/no-go diagnostic.
     const shareOf = (docs: typeof pxi) =>
       docs.filter((d) => d.idStatus === 'provisional').length / docs.length;
-    expect(shareOf(pxi)).toBeCloseTo(15 / 158, 5); // 9.5%
+    expect(shareOf(pxi)).toBeCloseTo(14 / 158, 5); // 8.9% (Ci si è domandato recovered)
     expect(shareOf(pxii)).toBeCloseTo(95 / 253, 5); // 37.5% (four recovered, see below)
   });
 
@@ -532,7 +532,7 @@ describe('the John XXIII corpus', () => {
     //     apost_letters), proven by the shared vatican.va document slug 'religioso-
     //     convegno' -- pass 2, automatic/mechanical, no hand curation needed.
     // 178 - 1 = 177.
-    expect(docs).toHaveLength(177);
+    expect(docs).toHaveLength(178);
   });
 
   it('files them all under the right issuer', () => {
@@ -571,9 +571,11 @@ describe('the John XXIII corpus', () => {
     // deliberately left this way, e.g. the hyphenated two-toponym shape).
     // Six of these were recovered into RECOVERED_INCIPITS after being confirmed in AAS
     // (Maiora in dies, Superno Dei, Le voci, Celebrandi Concilii Oecumenici, Il religioso
-    // convegno) or in the document itself (Centesimo vertente anno), so the count below is
-    // six lower than the hand-check described above found.
-    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(14);
+    // convegno) or in the document itself (Centesimo vertente anno). One arrived in the other
+    // direction: the Rosary meditations, previously absorbed into the letter by pass 2, are now
+    // their own provisional record. 21 - 6 + 1 = 16... minus the pass-1 merge already counted
+    // above leaves 15.
+    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(15);
   });
 
   it('reads the year-partitioned shelves, whose aggregate index carries no items', () => {
@@ -876,13 +878,13 @@ describe('the Paul VI corpus', () => {
     expect(checkDocuments(docs, genres, keywords)).toEqual([]);
   });
 
-  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, and 177 John XXIII records untouched', () => {
+  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, and 178 John XXIII records untouched', () => {
     expect(all).toHaveLength(383);
     expect(load('pius-x')).toHaveLength(306);
     expect(load('pius-xi')).toHaveLength(158);
     expect(load('pius-xii')).toHaveLength(253);
     expect(load('benedict-xv')).toHaveLength(63);
-    expect(load('john-xxiii')).toHaveLength(177);
+    expect(load('john-xxiii')).toHaveLength(178);
   });
 });
 
@@ -972,13 +974,13 @@ describe('the John Paul I corpus', () => {
     expect(docs.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
   });
 
-  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 177 John XXIII, and 687 Paul VI records untouched', () => {
+  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 178 John XXIII, and 687 Paul VI records untouched', () => {
     expect(all).toHaveLength(383);
     expect(load('pius-x')).toHaveLength(306);
     expect(load('pius-xi')).toHaveLength(158);
     expect(load('pius-xii')).toHaveLength(253);
     expect(load('benedict-xv')).toHaveLength(63);
-    expect(load('john-xxiii')).toHaveLength(177);
+    expect(load('john-xxiii')).toHaveLength(178);
     expect(load('paul-vi')).toHaveLength(687);
   });
 });
@@ -1154,13 +1156,13 @@ describe('the John Paul II corpus', () => {
     expect(docs.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
   });
 
-  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 177 John XXIII, 687 Paul VI, and 7 John Paul I records untouched', () => {
+  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 178 John XXIII, 687 Paul VI, and 7 John Paul I records untouched', () => {
     expect(all).toHaveLength(383);
     expect(load('pius-x')).toHaveLength(306);
     expect(load('pius-xi')).toHaveLength(158);
     expect(load('pius-xii')).toHaveLength(253);
     expect(load('benedict-xv')).toHaveLength(63);
-    expect(load('john-xxiii')).toHaveLength(177);
+    expect(load('john-xxiii')).toHaveLength(178);
     expect(load('paul-vi')).toHaveLength(687);
     expect(load('john-paul-i')).toHaveLength(7);
   });
@@ -1318,13 +1320,13 @@ describe('the Benedict XVI corpus', () => {
     expect(docs.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
   });
 
-  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 177 John XXIII, 687 Paul VI, 7 John Paul I, and 1801 John Paul II records untouched', () => {
+  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 178 John XXIII, 687 Paul VI, 7 John Paul I, and 1801 John Paul II records untouched', () => {
     expect(all).toHaveLength(383);
     expect(load('pius-x')).toHaveLength(306);
     expect(load('pius-xi')).toHaveLength(158);
     expect(load('pius-xii')).toHaveLength(253);
     expect(load('benedict-xv')).toHaveLength(63);
-    expect(load('john-xxiii')).toHaveLength(177);
+    expect(load('john-xxiii')).toHaveLength(178);
     expect(load('paul-vi')).toHaveLength(687);
     expect(load('john-paul-i')).toHaveLength(7);
     expect(load('john-paul-ii')).toHaveLength(1801);
@@ -1504,7 +1506,7 @@ describe('the Francis corpus', () => {
     expect(load('pius-xi')).toHaveLength(158);
     expect(load('pius-xii')).toHaveLength(253);
     expect(load('benedict-xv')).toHaveLength(63);
-    expect(load('john-xxiii')).toHaveLength(177);
+    expect(load('john-xxiii')).toHaveLength(178);
     expect(load('paul-vi')).toHaveLength(687);
     expect(load('john-paul-i')).toHaveLength(7);
     expect(load('john-paul-ii')).toHaveLength(1801);
@@ -1641,7 +1643,7 @@ describe('the Leo XIV corpus', () => {
     expect(load('pius-xi')).toHaveLength(158);
     expect(load('pius-xii')).toHaveLength(253);
     expect(load('benedict-xv')).toHaveLength(63);
-    expect(load('john-xxiii')).toHaveLength(177);
+    expect(load('john-xxiii')).toHaveLength(178);
     expect(load('paul-vi')).toHaveLength(687);
     expect(load('john-paul-i')).toHaveLength(7);
     expect(load('john-paul-ii')).toHaveLength(1801);
@@ -2004,7 +2006,7 @@ describe('the recovered-incipit shelf', () => {
     }
   });
 
-  it('mints the sixteen identifiers the curation approved', () => {
+  it('mints the seventeen identifiers the curation approved', () => {
     const ids = Object.values(RECOVERED_INCIPITS)
       .map((row) => everything.find((d) => d.incipit === row.incipit)!.id)
       .sort();
@@ -2021,6 +2023,7 @@ describe('the recovered-incipit shelf', () => {
       'mag:leo-xiv/confirma-fratres-tuos-2026',
       'mag:paul-vi/in-spiritu-sancto-1965',
       'mag:paul-vi/positum-est-1973',
+      'mag:pius-xi/ci-si-e-domandato-1929',
       'mag:pius-xii/clarius-explendescit-1958',
       'mag:pius-xii/haud-mediocrem-1941',
       'mag:pius-xii/quamquam-1954',
@@ -2076,5 +2079,36 @@ describe('the twice-published 1968 beatification letter', () => {
   it('keeps the dropped page\'s heading rather than losing it', () => {
     const d = pvi.find((r) => r.incipit === 'Quem ad modum')!;
     expect(d.aliases).toContain('Venerabili Dei Famulae Mariae ab Apostolis Beatorum honores decernuntur');
+  });
+});
+
+describe('the 1961 Rosary letter and the meditation published with it', () => {
+  const jx = load('john-xxiii');
+  // Three documents share 29 September 1961; the third, 'In colle' for the Tibidabo
+  // sanctuary, is unrelated to this pair and untouched by the pass-2 change.
+  const sameDay = jx.filter((d) => d.date === '1961-09-29'
+    && (d.source?.url ?? '').includes('religioso-convegno'));
+
+  it('keeps the meditation as its own record rather than folding it into the letter', () => {
+    // Two genuinely different texts share a URL document slug: the apostolic letter
+    // (hf_j-xxiii_apl_19610929_religioso-convegno, 15.9k chars) and a complementary set of
+    // Rosary meditations (hf_j-xxiii_meditation_19610929_religioso-convegno, 25.4k chars,
+    // 'Piccolo saggio di devoti pensieri dei misteri del Rosario'). Only the segment before
+    // the date distinguishes them -- apl against meditation -- so a pass-2 key built from the
+    // trailing slug alone silently absorbed the second into the first.
+    expect(sameDay).toHaveLength(2);
+    const letter = sameDay.find((d) => d.incipit === 'Il religioso convegno')!;
+    const meditation = sameDay.find((d) => d.title.startsWith('Piccolo saggio'))!;
+    expect(letter).toBeDefined();
+    expect(meditation).toBeDefined();
+    expect(letter.source!.url).toContain('_apl_19610929_religioso-convegno');
+    expect(meditation.source!.url).toContain('_meditation_19610929_religioso-convegno');
+  });
+
+  it('no longer records the meditation as a mere alias of the letter', () => {
+    const letter = sameDay.find((d) => d.incipit === 'Il religioso convegno')!;
+    expect(letter.aliases ?? []).not.toContain(
+      'Piccolo saggio di devoti pensieri distribuiti per ogni decina del Rosario, '
+      + 'come a complemento della Lettera Apostolica Il religioso convegno');
   });
 });
