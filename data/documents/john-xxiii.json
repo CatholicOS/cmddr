@@ -1961,9 +1961,9 @@
     "sourceGenreLabel": "encyclicals"
   },
   {
-    "id": "mag:john-xxiii/apostolic-letter-1959-12-08",
+    "id": "mag:john-xxiii/maiora-in-dies-1959",
     "title": "Lettera Apostolica «Motu Proprio» Maiora in Dies che attribuisce il titolo di \"Pontificia\" all'Accademia Mariana Internazionale",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
@@ -1977,6 +1977,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Maiora in dies",
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2536,9 +2537,9 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:john-xxiii/apostolic-letter-1960-06-05",
+    "id": "mag:john-xxiii/superno-dei-1960",
     "title": "Lettera Apostolica «Motu Proprio» Superno Dei che istituisce le Commissioni preparatorie del Concilio Vaticano II",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
@@ -2552,6 +2553,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Superno Dei",
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3056,9 +3058,9 @@
     "sourceGenreLabel": "motu_proprio"
   },
   {
-    "id": "mag:john-xxiii/apostolic-letter-1961-03-19",
+    "id": "mag:john-xxiii/le-voci-1961",
     "title": "Le voci, la protezione di S. Giuseppe per il Concilio ecumenico Vaticano II",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
@@ -3073,6 +3075,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Le voci",
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3096,9 +3099,9 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:john-xxiii/apostolic-letter-1961-04-11",
+    "id": "mag:john-xxiii/celebrandi-concilii-oecumenici-1961",
     "title": "Celebrandi Concilii Oecumenici, speciale supplicazione nella solennità di Pentecoste per il Concilio Ecumenico",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
@@ -3112,6 +3115,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Celebrandi Concilii Oecumenici",
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3160,9 +3164,9 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:john-xxiii/apostolic-letter-1961-08-10",
+    "id": "mag:john-xxiii/centesimo-vertente-anno-1961",
     "title": "Centesimo vertente anno, nel centenario della morte di Mons Angelo Ramazzotti, fondatore del Pontificio Istituto delle Missioni Estere",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
@@ -3175,12 +3179,13 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Centesimo vertente anno",
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:john-xxiii/apostolic-letter-1961-09-29",
+    "id": "mag:john-xxiii/il-religioso-convegno-1961",
     "title": "Il religioso convegno, la recita del Santo Rosario per la giusta pace tra le Nazioni",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
@@ -3193,14 +3198,9 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07",
-      "alsoShelvedAs": [
-        "apost_letters"
-      ]
+      "retrieved": "2026-09-07"
     },
-    "aliases": [
-      "Piccolo saggio di devoti pensieri distribuiti per ogni decina del Rosario, come a complemento della Lettera Apostolica Il religioso convegno"
-    ],
+    "incipit": "Il religioso convegno",
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3220,6 +3220,25 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "In colle",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-xxiii/prayer-1961-09-29",
+    "title": "Piccolo saggio di devoti pensieri distribuiti per ogni decina del Rosario, come a complemento della Lettera Apostolica Il religioso convegno",
+    "idStatus": "provisional",
+    "genre": "prayer",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1961-09-29",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/it/apost_letters/1961/documents/hf_j-xxiii_meditation_19610929_religioso-convegno.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "ES",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
     "sourceGenreLabel": "apost_letters"
   },
   {

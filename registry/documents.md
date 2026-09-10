@@ -6,7 +6,7 @@ Identifiers follow `mag:{issuer}/{incipit-slug}-{year}`; the issuer segment is a
 part of `issuerId`, so conciliar documents namespace under their council and record the
 promulgating pope separately. See the design spec for the minting rules.
 
-**4285 documents**, of which 316 carry a provisional identifier — the source prints no incipit for them, so their id is genre-and-date based and may be re-minted.
+**4285 documents**, of which 299 carry a provisional identifier — the source prints no incipit for them, so their id is genre-and-date based and may be re-minted.
 
 Every document appears in both views below; neither is a subset of the other.
 
@@ -22,8 +22,8 @@ Every document appears in both views below; neither is a subset of the other.
 | [`rp:benedict-xv`](documents/by-issuer/benedict-xv.md) | 63 | 1914-09-08 – 1921-09-30 | apost-constitutions, apost_exhortations, apost_letters, briefs, bulls, encyclicals, motu_proprio |
 | [`rp:pius-xi`](documents/by-issuer/pius-xi.md) | 158 | 1922-03-01 – 1939-01-18 | apost_constitutions, apost_letters, briefs, bulls, encyclicals, letters, motu_proprio |
 | [`rp:pius-xii`](documents/by-issuer/pius-xii.md) | 253 | 1939-06-18 – 1958-09-29 | apost_constitutions, apost_exhortations, apost_letters, briefs, bulls, encyclicals, letters, motu_proprio |
-| [`rp:john-xxiii`](documents/by-issuer/john-xxiii.md) | 177 | 1958-11-07 – 1963-05-20 | apost_constitutions, apost_exhortations, apost_letters, encyclicals, motu_proprio |
-| [`rp:paul-vi`](documents/by-issuer/paul-vi.md) | 688 | 1963-06-25 – 1978-08-05 | apost_constitutions, apost_exhortations, apost_letters, encyclicals, motu_proprio |
+| [`rp:john-xxiii`](documents/by-issuer/john-xxiii.md) | 178 | 1958-11-07 – 1963-05-20 | apost_constitutions, apost_exhortations, apost_letters, encyclicals, motu_proprio |
+| [`rp:paul-vi`](documents/by-issuer/paul-vi.md) | 687 | 1963-06-25 – 1978-08-05 | apost_constitutions, apost_exhortations, apost_letters, encyclicals, motu_proprio |
 | [`oec:vatican-ii`](documents/by-issuer/vatican-ii.md) | 16 | 1963-12-04 – 1965-12-07 | — (conciliar) |
 | [`rp:john-paul-i`](documents/by-issuer/john-paul-i.md) | 7 | 1978-09-01 – 1978-09-28 | apost_letters, letters |
 | [`rp:john-paul-ii`](documents/by-issuer/john-paul-ii.md) | 1801 | 1978-10-28 – 2005-04-01 | apost_constitutions, apost_exhortations, apost_letters, bulls, encyclicals, motu_proprio |
@@ -36,7 +36,7 @@ Every document appears in both views below; neither is a subset of the other.
 | Genre | Documents | Dates |
 | --- | --- | --- |
 | [`apostolic-exhortation`](documents/by-genre/apostolic-exhortation.md) | 54 | 1908-08-04 – 2025-10-04 |
-| [`apostolic-letter`](documents/by-genre/apostolic-letter.md) | 1921 | 1857-06-15 – 2026-08-29 |
+| [`apostolic-letter`](documents/by-genre/apostolic-letter.md) | 1920 | 1857-06-15 – 2026-08-29 |
 | [`brief`](documents/by-genre/brief.md) | 30 | 1741-05-30 – 1950-09-08 |
 | [`constitution`](documents/by-genre/constitution.md) | 6 | 1870-04-24 – 1965-12-07 |
 | [`declaration`](documents/by-genre/declaration.md) | 3 | 1965-10-28 – 1965-12-07 |
@@ -46,6 +46,7 @@ Every document appears in both views below; neither is a subset of the other.
 | [`letter`](documents/by-genre/letter.md) | 432 | 1863-12-21 – 1978-09-28 |
 | [`motu-proprio`](documents/by-genre/motu-proprio.md) | 210 | 1880-01-18 – 2025-11-23 |
 | [`papal-bull`](documents/by-genre/papal-bull.md) | 1292 | 1749-03-15 – 2026-01-08 |
+| [`prayer`](documents/by-genre/prayer.md) | 1 | 1961-09-29 – 1961-09-29 |
 | [`unmapped`](documents/by-genre/unmapped.md) | 5 | 1846-07-16 – 1849-02-14 |
 
 ## By keyword

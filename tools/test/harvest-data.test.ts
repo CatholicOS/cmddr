@@ -2,7 +2,9 @@ import { describe, it, expect, vi } from 'vitest';
 import { readFileSync, readdirSync } from 'node:fs';
 import { checkDocuments } from '../src/validate/invariants.js';
 import { parseShelfIndex } from '../src/harvest/shelf.js';
-import { shelvesFor, isErectionCandidate, CIRCUMSCRIPTION_ERECTIONS } from '../src/mappings/index.js';
+import {
+  shelvesFor, isErectionCandidate, CIRCUMSCRIPTION_ERECTIONS, RECOVERED_INCIPITS,
+} from '../src/mappings/index.js';
 import type { DocumentRecord } from '../src/types.js';
 
 const load = (n: string) =>
@@ -309,8 +311,8 @@ describe('the Pius XI and Pius XII corpora', () => {
     // signal. See the per-shelf test below for the actual go/no-go diagnostic.
     const shareOf = (docs: typeof pxi) =>
       docs.filter((d) => d.idStatus === 'provisional').length / docs.length;
-    expect(shareOf(pxi)).toBeCloseTo(15 / 158, 5); // 9.5%
-    expect(shareOf(pxii)).toBeCloseTo(99 / 253, 5); // 39.1%
+    expect(shareOf(pxi)).toBeCloseTo(14 / 158, 5); // 8.9% (Ci si è domandato recovered)
+    expect(shareOf(pxii)).toBeCloseTo(95 / 253, 5); // 37.5% (four recovered, see below)
   });
 
   it('flags exactly the shelves that are almost entirely incipit-less, by name', () => {
@@ -360,7 +362,13 @@ describe('the Pius XI and Pius XII corpora', () => {
     for (const docs of [pxi, pxii]) {
       expect(docs.every((d) => typeof d.title === 'string' && d.title.length > 0)).toBe(true);
       const withIncipit = docs.filter((d) => 'incipit' in d);
-      expect(withIncipit.every((d) => d.title.includes(d.incipit!))).toBe(true);
+      // A recovered incipit is by definition NOT in the heading -- that is precisely why it
+      // had to be recovered, from AAS or from the document's own text (recovered-incipits.ts).
+      // This invariant is about incipits *extracted from the heading*, so recovered records
+      // are exempt here and are pinned instead by the recovered-incipit shelf's own tests.
+      const recovered = new Set(Object.values(RECOVERED_INCIPITS).map((r) => r.incipit));
+      const fromHeading = withIncipit.filter((d) => !recovered.has(d.incipit!));
+      expect(fromHeading.every((d) => d.title.includes(d.incipit!))).toBe(true);
     }
   });
 
@@ -524,7 +532,7 @@ describe('the John XXIII corpus', () => {
     //     apost_letters), proven by the shared vatican.va document slug 'religioso-
     //     convegno' -- pass 2, automatic/mechanical, no hand curation needed.
     // 178 - 1 = 177.
-    expect(docs).toHaveLength(177);
+    expect(docs).toHaveLength(178);
   });
 
   it('files them all under the right issuer', () => {
@@ -561,7 +569,13 @@ describe('the John XXIII corpus', () => {
     // 'pontificio-consilio': 21 -> 20. The remaining 20 are correct: each heading
     // genuinely prints no incipit (see task-13-report.md for the ones investigated and
     // deliberately left this way, e.g. the hyphenated two-toponym shape).
-    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(20);
+    // Six of these were recovered into RECOVERED_INCIPITS after being confirmed in AAS
+    // (Maiora in dies, Superno Dei, Le voci, Celebrandi Concilii Oecumenici, Il religioso
+    // convegno) or in the document itself (Centesimo vertente anno). One arrived in the other
+    // direction: the Rosary meditations, previously absorbed into the letter by pass 2, are now
+    // their own provisional record. 21 - 6 + 1 = 16... minus the pass-1 merge already counted
+    // above leaves 15.
+    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(15);
   });
 
   it('reads the year-partitioned shelves, whose aggregate index carries no items', () => {
@@ -733,7 +747,7 @@ describe('the Paul VI corpus', () => {
     // automatic/mechanical -- apost_letters, the more specific shelf, wins
     // keepMoreSpecific and the motu_proprio filing is recorded as alsoShelvedAs).
     // 692 - 4 = 688.
-    expect(docs).toHaveLength(688);
+    expect(docs).toHaveLength(687);
   });
 
   it('files them all under the right issuer', () => {
@@ -749,7 +763,7 @@ describe('the Paul VI corpus', () => {
     for (const d of docs) {
       expect('incipit' in d, d.id).toBe(d.idStatus === 'minted');
     }
-    // Only 8 of 688 (1.2%) carry no recoverable incipit -- a low rate given the volume,
+    // Only 5 of 687 (0.7%) carry no recoverable incipit -- a low rate given the volume,
     // but not the silent-mint trap a low rate can otherwise hide (Task 14 review): every
     // one of the 680 minted incipits was checked for gloss contamination (any minted
     // incipit six words or longer, or containing a known gloss-connector substring) and
@@ -766,7 +780,10 @@ describe('the Paul VI corpus', () => {
     // del' to NARRATIVE_OPENERS (incipit-rules.ts), the same failure shape as 'Iam in
     // Pontificatus' in the John XXIII corpus. The remaining 8 are correct: each heading
     // genuinely prints no incipit (see task-14-report.md).
-    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(8);
+    // Two were recovered into RECOVERED_INCIPITS on AAS evidence -- In Spiritu Sancto (AAS 58)
+    // and Positum est (AAS 65) -- and a third left the shelf entirely when the twice-published
+    // 1968 beatification letter merged into mag:paul-vi/quem-ad-modum-1968 (see its own tests).
+    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(5);
   });
 
   it('flags the diocese erections as candidates without tagging any of them', () => {
@@ -847,21 +864,27 @@ describe('the Paul VI corpus', () => {
     // been silently minted instead of correctly landing as provisional.
     const d = docs.find((doc) => doc.title.startsWith('Nomina del Card. Ugo Poletti'))!;
     expect(d).toBeDefined();
-    expect(d.idStatus).toBe('provisional');
-    expect('incipit' in d).toBe(false);
+    // The heading still yields nothing -- NARRATIVE_OPENERS correctly refuses to mint from
+    // it, and the incipit below is nowhere in the title. What changed is the evidence: AAS 65
+    // (1973) prints the Latin original opening 'Positum est in Romanorum Pontificum
+    // instituto' and cites the act by it, so the name comes from RECOVERED_INCIPITS rather
+    // than from the heading this test was written to distrust.
+    expect(d.title.includes('Positum est')).toBe(false);
+    expect(d.incipit).toBe('Positum est');
+    expect(d.id).toBe('mag:paul-vi/positum-est-1973');
   });
 
   it('satisfies every invariant', () => {
     expect(checkDocuments(docs, genres, keywords)).toEqual([]);
   });
 
-  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, and 177 John XXIII records untouched', () => {
+  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, and 178 John XXIII records untouched', () => {
     expect(all).toHaveLength(383);
     expect(load('pius-x')).toHaveLength(306);
     expect(load('pius-xi')).toHaveLength(158);
     expect(load('pius-xii')).toHaveLength(253);
     expect(load('benedict-xv')).toHaveLength(63);
-    expect(load('john-xxiii')).toHaveLength(177);
+    expect(load('john-xxiii')).toHaveLength(178);
   });
 });
 
@@ -889,21 +912,25 @@ describe('the John Paul I corpus', () => {
     expect(docs.every((d) => typeof d.title === 'string' && d.title.length > 0)).toBe(true);
   });
 
-  it('mints no incipit at all -- every heading is a narrative description, not the shortest pontificate hiding a silent-mint bug', () => {
-    // All 7 of 7 (100%) are provisional -- the opposite extreme from a suspiciously low
-    // rate, and checked individually rather than sampled (only 7 documents). Every
-    // heading on both shelves opens with the genre word ('Lettera'/'Lettera Apostolica')
-    // followed by a lower-case narrative continuation ('per la costituzione...', 'in
-    // occasione...', 'a Mons. ...', 'ai Vescovi...', 'al Card. ...') -- extractIncipit's
-    // own lower-case-residue rule (incipit.ts) correctly declines to mint from any of
-    // them. This is a genre fact confirmed by fetching all 7 documents directly from
-    // vatican.va: three of them (Cum probe, Propterea maxime, Progredientibus iam) do
-    // open with a genuine Latin incipit in their own body text, printed nowhere on the
-    // index page -- consistent with how extractIncipit works everywhere else in this
-    // pipeline (heading text only, never the URL slug or the document body), so this is
-    // not a parser gap.
-    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(7);
-    expect(docs.every((d) => 'incipit' in d === false)).toBe(true);
+  it('mints from no heading -- the three real incipits come from curation, not the parser', () => {
+    // Every heading on both shelves opens with the genre word ('Lettera'/'Lettera
+    // Apostolica') followed by a lower-case narrative continuation ('per la costituzione...',
+    // 'in occasione...', 'a Mons. ...') -- extractIncipit's own lower-case-residue rule
+    // (incipit.ts) correctly declines to mint from any of them, and still does.
+    //
+    // What changed is where the three real names come from. This test's earlier comment
+    // already recorded the finding: 'three of them (Cum probe, Propterea maxime,
+    // Progredientibus iam) do open with a genuine Latin incipit in their own body text,
+    // printed nowhere on the index page'. All three are cited by those incipits in AAS 70
+    // (1978)'s chronological index, so they are now named from RECOVERED_INCIPITS. The
+    // parser still reads headings only; the curated table is the only thing that knows
+    // what the body says.
+    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(4);
+    const named = docs.filter((d) => 'incipit' in d);
+    expect(named.map((d) => d.incipit).sort())
+      .toEqual(['Cum probe', 'Progredientibus iam', 'Propterea maxime']);
+    // None of the three is in its own heading -- which is why the parser could not find them.
+    for (const d of named) expect(d.title.includes(d.incipit!), d.id).toBe(false);
     expect(new Set(docs.map((d) => d.id)).size).toBe(7);
   });
 
@@ -947,14 +974,14 @@ describe('the John Paul I corpus', () => {
     expect(docs.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
   });
 
-  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 177 John XXIII, and 688 Paul VI records untouched', () => {
+  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 178 John XXIII, and 687 Paul VI records untouched', () => {
     expect(all).toHaveLength(383);
     expect(load('pius-x')).toHaveLength(306);
     expect(load('pius-xi')).toHaveLength(158);
     expect(load('pius-xii')).toHaveLength(253);
     expect(load('benedict-xv')).toHaveLength(63);
-    expect(load('john-xxiii')).toHaveLength(177);
-    expect(load('paul-vi')).toHaveLength(688);
+    expect(load('john-xxiii')).toHaveLength(178);
+    expect(load('paul-vi')).toHaveLength(687);
   });
 });
 
@@ -1129,14 +1156,14 @@ describe('the John Paul II corpus', () => {
     expect(docs.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
   });
 
-  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 177 John XXIII, 688 Paul VI, and 7 John Paul I records untouched', () => {
+  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 178 John XXIII, 687 Paul VI, and 7 John Paul I records untouched', () => {
     expect(all).toHaveLength(383);
     expect(load('pius-x')).toHaveLength(306);
     expect(load('pius-xi')).toHaveLength(158);
     expect(load('pius-xii')).toHaveLength(253);
     expect(load('benedict-xv')).toHaveLength(63);
-    expect(load('john-xxiii')).toHaveLength(177);
-    expect(load('paul-vi')).toHaveLength(688);
+    expect(load('john-xxiii')).toHaveLength(178);
+    expect(load('paul-vi')).toHaveLength(687);
     expect(load('john-paul-i')).toHaveLength(7);
   });
 });
@@ -1293,14 +1320,14 @@ describe('the Benedict XVI corpus', () => {
     expect(docs.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
   });
 
-  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 177 John XXIII, 688 Paul VI, 7 John Paul I, and 1801 John Paul II records untouched', () => {
+  it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 178 John XXIII, 687 Paul VI, 7 John Paul I, and 1801 John Paul II records untouched', () => {
     expect(all).toHaveLength(383);
     expect(load('pius-x')).toHaveLength(306);
     expect(load('pius-xi')).toHaveLength(158);
     expect(load('pius-xii')).toHaveLength(253);
     expect(load('benedict-xv')).toHaveLength(63);
-    expect(load('john-xxiii')).toHaveLength(177);
-    expect(load('paul-vi')).toHaveLength(688);
+    expect(load('john-xxiii')).toHaveLength(178);
+    expect(load('paul-vi')).toHaveLength(687);
     expect(load('john-paul-i')).toHaveLength(7);
     expect(load('john-paul-ii')).toHaveLength(1801);
   });
@@ -1479,8 +1506,8 @@ describe('the Francis corpus', () => {
     expect(load('pius-xi')).toHaveLength(158);
     expect(load('pius-xii')).toHaveLength(253);
     expect(load('benedict-xv')).toHaveLength(63);
-    expect(load('john-xxiii')).toHaveLength(177);
-    expect(load('paul-vi')).toHaveLength(688);
+    expect(load('john-xxiii')).toHaveLength(178);
+    expect(load('paul-vi')).toHaveLength(687);
     expect(load('john-paul-i')).toHaveLength(7);
     expect(load('john-paul-ii')).toHaveLength(1801);
     expect(load('benedict-xvi')).toHaveLength(214);
@@ -1578,7 +1605,12 @@ describe('the Leo XIV corpus', () => {
     // URL slug), does have a real quoted incipit printed on the document's own page --
     // but the shelf-index heading never prints it at all, unlike every other minted
     // record here, so no rule table can recover text the source heading omits entirely.
-    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(3);
+    // Confirma fratres tuos is now recovered into RECOVERED_INCIPITS from the document
+    // page's own quoted heading -- the curated table is exactly the mechanism this comment
+    // said no rule table could provide, since it does not try to parse the shelf heading at
+    // all. The two genuinely narrative headings remain provisional, and AAS confirms both:
+    // it titles them descriptively (De ordine et moderatione..., de pondere archaeologiae).
+    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(2);
   });
 
   it('satisfies every invariant', () => {
@@ -1611,8 +1643,8 @@ describe('the Leo XIV corpus', () => {
     expect(load('pius-xi')).toHaveLength(158);
     expect(load('pius-xii')).toHaveLength(253);
     expect(load('benedict-xv')).toHaveLength(63);
-    expect(load('john-xxiii')).toHaveLength(177);
-    expect(load('paul-vi')).toHaveLength(688);
+    expect(load('john-xxiii')).toHaveLength(178);
+    expect(load('paul-vi')).toHaveLength(687);
     expect(load('john-paul-i')).toHaveLength(7);
     expect(load('john-paul-ii')).toHaveLength(1801);
     expect(load('benedict-xvi')).toHaveLength(214);
@@ -1954,5 +1986,140 @@ describe('the whole corpus', () => {
       'mag:john-xxiii/nzerekoreensis-1959',
       'mag:leo-xiv/verba-christi-2025',
     ].sort());
+  });
+});
+
+describe('the recovered-incipit shelf', () => {
+  const everything = readdirSync('data/documents')
+    .filter((f) => f.endsWith('.json'))
+    .flatMap((f) => JSON.parse(readFileSync(`data/documents/${f}`, 'utf8')) as DocumentRecord[]);
+
+  it('lands every curated row on exactly one minted record', () => {
+    // The closed-set rule: a row that matches nothing is a curation error -- a title that
+    // changed on vatican.va, or a key typed by hand -- and must fail loudly rather than
+    // sit unnoticed while the record it meant to name stays provisional.
+    for (const [key, row] of Object.entries(RECOVERED_INCIPITS)) {
+      const date = key.split('|')[2]!;
+      const hits = everything.filter((d) => d.date === date && d.incipit === row.incipit);
+      expect(hits, key).toHaveLength(1);
+      expect(hits[0]!.idStatus, key).toBe('minted');
+    }
+  });
+
+  it('mints the seventeen identifiers the curation approved', () => {
+    const ids = Object.values(RECOVERED_INCIPITS)
+      .map((row) => everything.find((d) => d.incipit === row.incipit)!.id)
+      .sort();
+    expect(ids).toEqual([
+      'mag:john-paul-i/cum-probe-1978',
+      'mag:john-paul-i/progredientibus-iam-1978',
+      'mag:john-paul-i/propterea-maxime-1978',
+      'mag:john-xxiii/celebrandi-concilii-oecumenici-1961',
+      'mag:john-xxiii/centesimo-vertente-anno-1961',
+      'mag:john-xxiii/il-religioso-convegno-1961',
+      'mag:john-xxiii/le-voci-1961',
+      'mag:john-xxiii/maiora-in-dies-1959',
+      'mag:john-xxiii/superno-dei-1960',
+      'mag:leo-xiv/confirma-fratres-tuos-2026',
+      'mag:paul-vi/in-spiritu-sancto-1965',
+      'mag:paul-vi/positum-est-1973',
+      'mag:pius-xi/ci-si-e-domandato-1929',
+      'mag:pius-xii/clarius-explendescit-1958',
+      'mag:pius-xii/haud-mediocrem-1941',
+      'mag:pius-xii/quamquam-1954',
+      'mag:pius-xii/volvidos-cinco-anos-1947',
+    ]);
+  });
+
+  it('retires the two John Paul I ordinals, which shared 1978-09-01', () => {
+    // Both were provisional on the same date and so carried -1/-2 suffixes; distinct
+    // incipits remove the collision that made the ordinals necessary.
+    // Filtered to apostolic letters: a plain `letter` to Cardinal Ratzinger shares the date
+    // and is untouched by this work.
+    const jpi = everything.filter((d) => d.issuerId === 'rp:john-paul-i'
+      && d.date === '1978-09-01' && d.genre === 'apostolic-letter');
+    expect(jpi.map((d) => d.id).sort()).toEqual([
+      'mag:john-paul-i/progredientibus-iam-1978', 'mag:john-paul-i/propterea-maxime-1978',
+    ]);
+  });
+
+  it('leaves the provisional shelf at 299 -- sixteen recovered, one merged away', () => {
+    expect(everything.filter((d) => d.idStatus === 'provisional')).toHaveLength(299);
+  });
+
+  it('keeps the two Leo XIV 2025 letters provisional, which AAS confirms have no incipit', () => {
+    const stay = everything.filter((d) => d.issuerId === 'rp:leo-xiv'
+      && (d.date === '2025-11-19' || d.date === '2025-12-11'));
+    expect(stay).toHaveLength(2);
+    for (const d of stay) expect(d.idStatus, d.id).toBe('provisional');
+  });
+});
+
+describe('the twice-published 1968 beatification letter', () => {
+  const pvi = load('paul-vi');
+
+  it('holds the act once, not twice', () => {
+    // vatican.va publishes one act on two pages: _19681013_quem-ad-modum (which prints the
+    // incipit and the AAS footnote) and _19681030_famulae-mariae (which prints neither).
+    // Their texts are identical down to the signatories.
+    expect(pvi.filter((d) => d.incipit === 'Quem ad modum')).toHaveLength(1);
+  });
+
+  it('dates it as the document dates itself, not as the index heading does', () => {
+    // BOTH pages print 'Datum Romae, apud S. Petrum, sub anulo Piscatoris, die tertio decimo
+    // mensis Octobris, anno MCMLXVIII' -- 13 October. The 30 October date exists only in the
+    // shelf-index heading, contradicted by the very document it points at, and AAS 60's index
+    // agrees with the document (Oct. 13, pp. 673-680).
+    const d = pvi.find((r) => r.incipit === 'Quem ad modum')!;
+    expect(d.date).toBe('1968-10-13');
+    expect(d.id).toBe('mag:paul-vi/quem-ad-modum-1968');
+    expect(pvi.filter((r) => r.date === '1968-10-30')).toHaveLength(0);
+  });
+
+  it('keeps the dropped page\'s heading rather than losing it', () => {
+    const d = pvi.find((r) => r.incipit === 'Quem ad modum')!;
+    expect(d.aliases).toContain('Venerabili Dei Famulae Mariae ab Apostolis Beatorum honores decernuntur');
+  });
+});
+
+describe('the 1961 Rosary letter and the meditation published with it', () => {
+  const jx = load('john-xxiii');
+  // Three documents share 29 September 1961; the third, 'In colle' for the Tibidabo
+  // sanctuary, is unrelated to this pair and untouched by the pass-2 change.
+  const sameDay = jx.filter((d) => d.date === '1961-09-29'
+    && (d.source?.url ?? '').includes('religioso-convegno'));
+
+  it('keeps the meditation as its own record rather than folding it into the letter', () => {
+    // Two genuinely different texts share a URL document slug: the apostolic letter
+    // (hf_j-xxiii_apl_19610929_religioso-convegno, 15.9k chars) and a complementary set of
+    // Rosary meditations (hf_j-xxiii_meditation_19610929_religioso-convegno, 25.4k chars,
+    // 'Piccolo saggio di devoti pensieri dei misteri del Rosario'). Only the segment before
+    // the date distinguishes them -- apl against meditation -- so a pass-2 key built from the
+    // trailing slug alone silently absorbed the second into the first.
+    expect(sameDay).toHaveLength(2);
+    const letter = sameDay.find((d) => d.incipit === 'Il religioso convegno')!;
+    const meditation = sameDay.find((d) => d.title.startsWith('Piccolo saggio'))!;
+    expect(letter).toBeDefined();
+    expect(meditation).toBeDefined();
+    expect(letter.source!.url).toContain('_apl_19610929_religioso-convegno');
+    expect(meditation.source!.url).toContain('_meditation_19610929_religioso-convegno');
+  });
+
+  it('files the meditation as a prayer, the genre the Genre Registry has for it', () => {
+    // Its shelf says apost_letters, but the text is a set of Rosary meditations, not an
+    // apostolic letter. `prayer` is the Genre Registry row that fits, and it is papal-issued,
+    // so invariant 17 is satisfied. The provisional id follows the genre, as it does everywhere.
+    const meditation = sameDay.find((d) => d.title.startsWith('Piccolo saggio'))!;
+    expect(meditation.genre).toBe('prayer');
+    expect(meditation.id).toBe('mag:john-xxiii/prayer-1961-09-29');
+    // The shelf label is still recorded verbatim, so the override stays auditable.
+    expect(meditation.sourceGenreLabel).toBe('apost_letters');
+  });
+
+  it('no longer records the meditation as a mere alias of the letter', () => {
+    const letter = sameDay.find((d) => d.incipit === 'Il religioso convegno')!;
+    expect(letter.aliases ?? []).not.toContain(
+      'Piccolo saggio di devoti pensieri distribuiti per ogni decina del Rosario, '
+      + 'come a complemento della Lettera Apostolica Il religioso convegno');
   });
 });

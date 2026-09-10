@@ -1,41 +1,5 @@
 [
   {
-    "id": "mag:john-paul-i/apostolic-letter-1978-09-01-1",
-    "title": "Lettera Apostolica in occasione dell'elevazione del Santuario di Nostra Signora della Consolazione al titolo di Basilica Minore, Piacenza",
-    "idStatus": "provisional",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:john-paul-i",
-    "issuerType": "pope",
-    "date": "1978-09-01",
-    "source": {
-      "url": "https://www.vatican.va/content/john-paul-i/la/apost_letters/documents/hf_jp-i_apl_19780901_progredientibus-iam.html",
-      "shelf": "apost_letters",
-      "languages": [
-        "LA"
-      ],
-      "retrieved": "2026-09-07"
-    },
-    "sourceGenreLabel": "apost_letters"
-  },
-  {
-    "id": "mag:john-paul-i/apostolic-letter-1978-09-01-2",
-    "title": "Lettera Apostolica in occasione della proclamazione di Nostra Signora del Buon Viaggio a patrona di Itabirito, Brasile",
-    "idStatus": "provisional",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:john-paul-i",
-    "issuerType": "pope",
-    "date": "1978-09-01",
-    "source": {
-      "url": "https://www.vatican.va/content/john-paul-i/la/apost_letters/documents/hf_jp-i_apl_19780901_propterea-maxime.html",
-      "shelf": "apost_letters",
-      "languages": [
-        "LA"
-      ],
-      "retrieved": "2026-09-07"
-    },
-    "sourceGenreLabel": "apost_letters"
-  },
-  {
     "id": "mag:john-paul-i/letter-1978-09-01",
     "title": "Lettera al Card. Joseph Ratzinger, Legato Pontificio al Congresso Mariano dell'Ecuador",
     "idStatus": "provisional",
@@ -58,9 +22,47 @@
     "sourceGenreLabel": "letters"
   },
   {
-    "id": "mag:john-paul-i/apostolic-letter-1978-09-12",
+    "id": "mag:john-paul-i/progredientibus-iam-1978",
+    "title": "Lettera Apostolica in occasione dell'elevazione del Santuario di Nostra Signora della Consolazione al titolo di Basilica Minore, Piacenza",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-paul-i",
+    "issuerType": "pope",
+    "date": "1978-09-01",
+    "source": {
+      "url": "https://www.vatican.va/content/john-paul-i/la/apost_letters/documents/hf_jp-i_apl_19780901_progredientibus-iam.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Progredientibus iam",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-paul-i/propterea-maxime-1978",
+    "title": "Lettera Apostolica in occasione della proclamazione di Nostra Signora del Buon Viaggio a patrona di Itabirito, Brasile",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-paul-i",
+    "issuerType": "pope",
+    "date": "1978-09-01",
+    "source": {
+      "url": "https://www.vatican.va/content/john-paul-i/la/apost_letters/documents/hf_jp-i_apl_19780901_propterea-maxime.html",
+      "shelf": "apost_letters",
+      "languages": [
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "incipit": "Propterea maxime",
+    "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-paul-i/cum-probe-1978",
     "title": "Lettera Apostolica per la costituzione della Nunziatura Apostolica nelle Isole Fiji",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-i",
     "issuerType": "pope",
@@ -73,6 +75,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Cum probe",
     "sourceGenreLabel": "apost_letters"
   },
   {
