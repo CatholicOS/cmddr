@@ -2,7 +2,9 @@ import { describe, it, expect, vi } from 'vitest';
 import { readFileSync, readdirSync } from 'node:fs';
 import { checkDocuments } from '../src/validate/invariants.js';
 import { parseShelfIndex } from '../src/harvest/shelf.js';
-import { shelvesFor, isErectionCandidate, CIRCUMSCRIPTION_ERECTIONS } from '../src/mappings/index.js';
+import {
+  shelvesFor, isErectionCandidate, CIRCUMSCRIPTION_ERECTIONS, RECOVERED_INCIPITS,
+} from '../src/mappings/index.js';
 import type { DocumentRecord } from '../src/types.js';
 
 const load = (n: string) =>
@@ -310,7 +312,7 @@ describe('the Pius XI and Pius XII corpora', () => {
     const shareOf = (docs: typeof pxi) =>
       docs.filter((d) => d.idStatus === 'provisional').length / docs.length;
     expect(shareOf(pxi)).toBeCloseTo(15 / 158, 5); // 9.5%
-    expect(shareOf(pxii)).toBeCloseTo(99 / 253, 5); // 39.1%
+    expect(shareOf(pxii)).toBeCloseTo(95 / 253, 5); // 37.5% (four recovered, see below)
   });
 
   it('flags exactly the shelves that are almost entirely incipit-less, by name', () => {
@@ -360,7 +362,13 @@ describe('the Pius XI and Pius XII corpora', () => {
     for (const docs of [pxi, pxii]) {
       expect(docs.every((d) => typeof d.title === 'string' && d.title.length > 0)).toBe(true);
       const withIncipit = docs.filter((d) => 'incipit' in d);
-      expect(withIncipit.every((d) => d.title.includes(d.incipit!))).toBe(true);
+      // A recovered incipit is by definition NOT in the heading -- that is precisely why it
+      // had to be recovered, from AAS or from the document's own text (recovered-incipits.ts).
+      // This invariant is about incipits *extracted from the heading*, so recovered records
+      // are exempt here and are pinned instead by the recovered-incipit shelf's own tests.
+      const recovered = new Set(Object.values(RECOVERED_INCIPITS).map((r) => r.incipit));
+      const fromHeading = withIncipit.filter((d) => !recovered.has(d.incipit!));
+      expect(fromHeading.every((d) => d.title.includes(d.incipit!))).toBe(true);
     }
   });
 
@@ -561,7 +569,11 @@ describe('the John XXIII corpus', () => {
     // 'pontificio-consilio': 21 -> 20. The remaining 20 are correct: each heading
     // genuinely prints no incipit (see task-13-report.md for the ones investigated and
     // deliberately left this way, e.g. the hyphenated two-toponym shape).
-    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(20);
+    // Six of these were recovered into RECOVERED_INCIPITS after being confirmed in AAS
+    // (Maiora in dies, Superno Dei, Le voci, Celebrandi Concilii Oecumenici, Il religioso
+    // convegno) or in the document itself (Centesimo vertente anno), so the count below is
+    // six lower than the hand-check described above found.
+    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(14);
   });
 
   it('reads the year-partitioned shelves, whose aggregate index carries no items', () => {
@@ -766,7 +778,9 @@ describe('the Paul VI corpus', () => {
     // del' to NARRATIVE_OPENERS (incipit-rules.ts), the same failure shape as 'Iam in
     // Pontificatus' in the John XXIII corpus. The remaining 8 are correct: each heading
     // genuinely prints no incipit (see task-14-report.md).
-    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(8);
+    // Two were recovered into RECOVERED_INCIPITS on AAS evidence -- In Spiritu Sancto
+    // (AAS 58) and Positum est (AAS 65) -- so the count is two lower than described above.
+    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(6);
   });
 
   it('flags the diocese erections as candidates without tagging any of them', () => {
@@ -847,8 +861,14 @@ describe('the Paul VI corpus', () => {
     // been silently minted instead of correctly landing as provisional.
     const d = docs.find((doc) => doc.title.startsWith('Nomina del Card. Ugo Poletti'))!;
     expect(d).toBeDefined();
-    expect(d.idStatus).toBe('provisional');
-    expect('incipit' in d).toBe(false);
+    // The heading still yields nothing -- NARRATIVE_OPENERS correctly refuses to mint from
+    // it, and the incipit below is nowhere in the title. What changed is the evidence: AAS 65
+    // (1973) prints the Latin original opening 'Positum est in Romanorum Pontificum
+    // instituto' and cites the act by it, so the name comes from RECOVERED_INCIPITS rather
+    // than from the heading this test was written to distrust.
+    expect(d.title.includes('Positum est')).toBe(false);
+    expect(d.incipit).toBe('Positum est');
+    expect(d.id).toBe('mag:paul-vi/positum-est-1973');
   });
 
   it('satisfies every invariant', () => {
@@ -889,21 +909,25 @@ describe('the John Paul I corpus', () => {
     expect(docs.every((d) => typeof d.title === 'string' && d.title.length > 0)).toBe(true);
   });
 
-  it('mints no incipit at all -- every heading is a narrative description, not the shortest pontificate hiding a silent-mint bug', () => {
-    // All 7 of 7 (100%) are provisional -- the opposite extreme from a suspiciously low
-    // rate, and checked individually rather than sampled (only 7 documents). Every
-    // heading on both shelves opens with the genre word ('Lettera'/'Lettera Apostolica')
-    // followed by a lower-case narrative continuation ('per la costituzione...', 'in
-    // occasione...', 'a Mons. ...', 'ai Vescovi...', 'al Card. ...') -- extractIncipit's
-    // own lower-case-residue rule (incipit.ts) correctly declines to mint from any of
-    // them. This is a genre fact confirmed by fetching all 7 documents directly from
-    // vatican.va: three of them (Cum probe, Propterea maxime, Progredientibus iam) do
-    // open with a genuine Latin incipit in their own body text, printed nowhere on the
-    // index page -- consistent with how extractIncipit works everywhere else in this
-    // pipeline (heading text only, never the URL slug or the document body), so this is
-    // not a parser gap.
-    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(7);
-    expect(docs.every((d) => 'incipit' in d === false)).toBe(true);
+  it('mints from no heading -- the three real incipits come from curation, not the parser', () => {
+    // Every heading on both shelves opens with the genre word ('Lettera'/'Lettera
+    // Apostolica') followed by a lower-case narrative continuation ('per la costituzione...',
+    // 'in occasione...', 'a Mons. ...') -- extractIncipit's own lower-case-residue rule
+    // (incipit.ts) correctly declines to mint from any of them, and still does.
+    //
+    // What changed is where the three real names come from. This test's earlier comment
+    // already recorded the finding: 'three of them (Cum probe, Propterea maxime,
+    // Progredientibus iam) do open with a genuine Latin incipit in their own body text,
+    // printed nowhere on the index page'. All three are cited by those incipits in AAS 70
+    // (1978)'s chronological index, so they are now named from RECOVERED_INCIPITS. The
+    // parser still reads headings only; the curated table is the only thing that knows
+    // what the body says.
+    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(4);
+    const named = docs.filter((d) => 'incipit' in d);
+    expect(named.map((d) => d.incipit).sort())
+      .toEqual(['Cum probe', 'Progredientibus iam', 'Propterea maxime']);
+    // None of the three is in its own heading -- which is why the parser could not find them.
+    for (const d of named) expect(d.title.includes(d.incipit!), d.id).toBe(false);
     expect(new Set(docs.map((d) => d.id)).size).toBe(7);
   });
 
@@ -1578,7 +1602,12 @@ describe('the Leo XIV corpus', () => {
     // URL slug), does have a real quoted incipit printed on the document's own page --
     // but the shelf-index heading never prints it at all, unlike every other minted
     // record here, so no rule table can recover text the source heading omits entirely.
-    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(3);
+    // Confirma fratres tuos is now recovered into RECOVERED_INCIPITS from the document
+    // page's own quoted heading -- the curated table is exactly the mechanism this comment
+    // said no rule table could provide, since it does not try to parse the shelf heading at
+    // all. The two genuinely narrative headings remain provisional, and AAS confirms both:
+    // it titles them descriptively (De ordine et moderatione..., de pondere archaeologiae).
+    expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(2);
   });
 
   it('satisfies every invariant', () => {
@@ -1954,5 +1983,70 @@ describe('the whole corpus', () => {
       'mag:john-xxiii/nzerekoreensis-1959',
       'mag:leo-xiv/verba-christi-2025',
     ].sort());
+  });
+});
+
+describe('the recovered-incipit shelf', () => {
+  const everything = readdirSync('data/documents')
+    .filter((f) => f.endsWith('.json'))
+    .flatMap((f) => JSON.parse(readFileSync(`data/documents/${f}`, 'utf8')) as DocumentRecord[]);
+
+  it('lands every curated row on exactly one minted record', () => {
+    // The closed-set rule: a row that matches nothing is a curation error -- a title that
+    // changed on vatican.va, or a key typed by hand -- and must fail loudly rather than
+    // sit unnoticed while the record it meant to name stays provisional.
+    for (const [key, row] of Object.entries(RECOVERED_INCIPITS)) {
+      const date = key.split('|')[2]!;
+      const hits = everything.filter((d) => d.date === date && d.incipit === row.incipit);
+      expect(hits, key).toHaveLength(1);
+      expect(hits[0]!.idStatus, key).toBe('minted');
+    }
+  });
+
+  it('mints the sixteen identifiers the curation approved', () => {
+    const ids = Object.values(RECOVERED_INCIPITS)
+      .map((row) => everything.find((d) => d.incipit === row.incipit)!.id)
+      .sort();
+    expect(ids).toEqual([
+      'mag:john-paul-i/cum-probe-1978',
+      'mag:john-paul-i/progredientibus-iam-1978',
+      'mag:john-paul-i/propterea-maxime-1978',
+      'mag:john-xxiii/celebrandi-concilii-oecumenici-1961',
+      'mag:john-xxiii/centesimo-vertente-anno-1961',
+      'mag:john-xxiii/il-religioso-convegno-1961',
+      'mag:john-xxiii/le-voci-1961',
+      'mag:john-xxiii/maiora-in-dies-1959',
+      'mag:john-xxiii/superno-dei-1960',
+      'mag:leo-xiv/confirma-fratres-tuos-2026',
+      'mag:paul-vi/in-spiritu-sancto-1965',
+      'mag:paul-vi/positum-est-1973',
+      'mag:pius-xii/clarius-explendescit-1958',
+      'mag:pius-xii/haud-mediocrem-1941',
+      'mag:pius-xii/quamquam-1954',
+      'mag:pius-xii/volvidos-cinco-anos-1947',
+    ]);
+  });
+
+  it('retires the two John Paul I ordinals, which shared 1978-09-01', () => {
+    // Both were provisional on the same date and so carried -1/-2 suffixes; distinct
+    // incipits remove the collision that made the ordinals necessary.
+    // Filtered to apostolic letters: a plain `letter` to Cardinal Ratzinger shares the date
+    // and is untouched by this work.
+    const jpi = everything.filter((d) => d.issuerId === 'rp:john-paul-i'
+      && d.date === '1978-09-01' && d.genre === 'apostolic-letter');
+    expect(jpi.map((d) => d.id).sort()).toEqual([
+      'mag:john-paul-i/progredientibus-iam-1978', 'mag:john-paul-i/propterea-maxime-1978',
+    ]);
+  });
+
+  it('leaves the provisional shelf smaller by exactly those sixteen', () => {
+    expect(everything.filter((d) => d.idStatus === 'provisional')).toHaveLength(300);
+  });
+
+  it('keeps the two Leo XIV 2025 letters provisional, which AAS confirms have no incipit', () => {
+    const stay = everything.filter((d) => d.issuerId === 'rp:leo-xiv'
+      && (d.date === '2025-11-19' || d.date === '2025-12-11'));
+    expect(stay).toHaveLength(2);
+    for (const d of stay) expect(d.idStatus, d.id).toBe('provisional');
   });
 });

@@ -275,9 +275,9 @@
     "sourceGenreLabel": "motu_proprio"
   },
   {
-    "id": "mag:pius-xii/apostolic-letter-1941-11-23",
+    "id": "mag:pius-xii/haud-mediocrem-1941",
     "title": "Epistola Apostolica all'Episcopato della Bolivia circa lo sviluppo dei Seminari e la sempre più efficiente formazione del clero",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:pius-xii",
     "issuerType": "pope",
@@ -290,6 +290,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Haud mediocrem",
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -1388,9 +1389,9 @@
     "sourceGenreLabel": "motu_proprio"
   },
   {
-    "id": "mag:pius-xii/apostolic-letter-1947-04-23",
+    "id": "mag:pius-xii/volvidos-cinco-anos-1947",
     "title": "Lettera Apostolica all'Opera Vocazioni Sacerdotali in Brasile",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:pius-xii",
     "issuerType": "pope",
@@ -1403,6 +1404,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Volvidos cinco anos",
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2882,9 +2884,9 @@
     "sourceGenreLabel": "encyclicals"
   },
   {
-    "id": "mag:pius-xii/apostolic-letter-1954-07-25",
+    "id": "mag:pius-xii/quamquam-1954",
     "title": "Quamquam. - Epistola Apostolica per il XVI centenario della nascita di S. Agostino",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:pius-xii",
     "issuerType": "pope",
@@ -2897,6 +2899,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Quamquam",
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -5024,9 +5027,9 @@
     "sourceGenreLabel": "letters"
   },
   {
-    "id": "mag:pius-xii/apostolic-letter-1958-08-21",
+    "id": "mag:pius-xii/clarius-explendescit-1958",
     "title": "Lettera Apostolica (breve) che proclama Santa Chiara Patrona Celeste della Televisione",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:pius-xii",
     "issuerType": "pope",
@@ -5039,6 +5042,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Clarius explendescit",
     "sourceGenreLabel": "apost_letters"
   },
   {

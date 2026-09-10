@@ -6,4 +6,5 @@ export * from './corrections.js';
 export * from './duplicates.js';
 export * from './adjudicated-distinct.js';
 export * from './incipit-rules.js';
+export * from './recovered-incipits.js';
 export * from './keywords.js';

@@ -4567,9 +4567,9 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:paul-vi/apostolic-letter-1965-12-08",
+    "id": "mag:paul-vi/in-spiritu-sancto-1965",
     "title": "Decreto di chiusura \"In Spiritu Sancto\" del Concilio Ecumenico Vaticano II",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:paul-vi",
     "issuerType": "pope",
@@ -4586,6 +4586,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "In Spiritu Sancto",
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -13535,9 +13536,9 @@
     "sourceGenreLabel": "motu_proprio"
   },
   {
-    "id": "mag:paul-vi/apostolic-letter-1973-03-06",
+    "id": "mag:paul-vi/positum-est-1973",
     "title": "Nomina del Card. Ugo Poletti a Vicario Generale",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:paul-vi",
     "issuerType": "pope",
@@ -13550,6 +13551,7 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "incipit": "Positum est",
     "sourceGenreLabel": "apost_letters"
   },
   {
