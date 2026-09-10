@@ -112,7 +112,7 @@ for (const item of items) {
       + 'key -- one is being silently dropped unless genuinely a duplicate',
     );
   }
-  merged.set(key, held ? keepMoreSpecific(item, held, console.warn) : item);
+  merged.set(key, held ? keepMoreSpecific(item, held) : item);
 }
 
 // Pass 2 (mechanical): two more Leo XIII documents are the same act filed under
@@ -140,8 +140,7 @@ for (const [key2, group] of byUrlSlug) {
   if (!conflict) {
     // reduce as (newcomer, held) to preserve the original sequential merge order exactly:
     // this pass's winner must not change as a side effect of restructuring it.
-    mergedByUrlSlug.set(key2,
-      group.reduce((held, item) => keepMoreSpecific(item, held, console.warn)));
+    mergedByUrlSlug.set(key2, group.reduce((held, item) => keepMoreSpecific(item, held)));
     continue;
   }
   const byType = new Map<string | null, HarvestItem[]>();
@@ -155,8 +154,7 @@ for (const [key2, group] of byUrlSlug) {
     + ' -- kept apart, since only the URL document-type marker distinguishes them',
   );
   for (const [type, items] of byType) {
-    mergedByUrlSlug.set(`${key2}|${type}`,
-      items.reduce((held, item) => keepMoreSpecific(item, held, console.warn)));
+    mergedByUrlSlug.set(`${key2}|${type}`, items.reduce((held, item) => keepMoreSpecific(item, held)));
   }
 }
 
@@ -176,7 +174,7 @@ for (const item of mergedByUrlSlug.values()) {
   const canonicalIncipit = dup ? dup.mergeIntoIncipit : (item.incipit ?? item.title);
   const key3 = `${item.pageSlug}|${slugify(canonicalIncipit)}|${item.date}`;
   const held = mergedByDuplicateTable.get(key3);
-  mergedByDuplicateTable.set(key3, held ? keepMoreSpecific(item, held, console.warn) : item);
+  mergedByDuplicateTable.set(key3, held ? keepMoreSpecific(item, held) : item);
 }
 console.log(`${items.length} items -> ${mergedByDuplicateTable.size} documents after cross-shelf dedupe`);
 

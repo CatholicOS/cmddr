@@ -46,7 +46,9 @@ const rank = (shelf: string | null) => {
 export function keepMoreSpecific(
   a: HarvestItem,
   b: HarvestItem,
-  onDiscard?: (message: string) => void,
+  // Defaulted on, not optional: a caller that omits it still reports its discard. Passing
+  // a no-op is how a caller opts out, which makes silence a deliberate, visible choice.
+  onDiscard: (message: string) => void = console.warn,
 ): HarvestItem {
   // Shelf specificity decides first. When two items tie on shelf rank -- which pass 3's
   // hand-curated merges routinely do, since both records usually sit on the same shelf --
@@ -73,7 +75,7 @@ export function keepMoreSpecific(
   // Rosary meditations were absorbed into the letter they accompany and nothing said so, which
   // is how the loss went unnoticed. Naming both URLs and the reason makes each discard
   // auditable from the harvest log, whichever pass performed it.
-  onDiscard?.(
+  onDiscard(
     `Merged and discarded ${drop.url ?? `'${drop.incipit ?? drop.title}'`} into `
     + `${keep.url ?? `'${keep.incipit ?? keep.title}'`} `
     + `(${rank(keep.shelf) === rank(drop.shelf)

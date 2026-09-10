@@ -12,7 +12,7 @@ describe('keepMoreSpecific', () => {
   it('keeps the more specific shelf and remembers the other', () => {
     const enc = item({ shelf: 'encyclicals' });
     const lett = item({ shelf: 'letters' });
-    const kept = keepMoreSpecific(lett, enc);
+    const kept = keepMoreSpecific(lett, enc, () => {});
     expect(kept.shelf).toBe('encyclicals');
     expect(kept.alsoShelvedAs).toEqual(['letters']);
   });
@@ -21,14 +21,14 @@ describe('keepMoreSpecific', () => {
     const named = item({ shelf: 'apost_letters', incipit: 'Quem ad modum', title: 'Quem ad modum' });
     const unnamed = item({ shelf: 'apost_letters', incipit: null, title: 'Venerabili Dei Famulae' });
     // Either argument order must reach the same answer -- insertion order is not evidence.
-    expect(keepMoreSpecific(named, unnamed).incipit).toBe('Quem ad modum');
-    expect(keepMoreSpecific(unnamed, named).incipit).toBe('Quem ad modum');
+    expect(keepMoreSpecific(named, unnamed, () => {}).incipit).toBe('Quem ad modum');
+    expect(keepMoreSpecific(unnamed, named, () => {}).incipit).toBe('Quem ad modum');
   });
 
   it('never records the surviving record\'s own shelf as another shelf', () => {
     const a = item({ shelf: 'apost_letters', incipit: null, title: 'A' });
     const b = item({ shelf: 'apost_letters', incipit: null, title: 'B' });
-    expect(keepMoreSpecific(a, b).alsoShelvedAs ?? []).not.toContain('apost_letters');
+    expect(keepMoreSpecific(a, b, () => {}).alsoShelvedAs ?? []).not.toContain('apost_letters');
   });
 
   it('announces the discarded record, naming both URLs and why one was kept', () => {
@@ -45,7 +45,16 @@ describe('keepMoreSpecific', () => {
     expect(message).toMatch(/shelf|incipit/);
   });
 
-  it('does not announce anything when no caller is listening', () => {
-    expect(() => keepMoreSpecific(item({ shelf: 'letters' }), item({}))).not.toThrow();
+  it('announces through console.warn when a caller passes no handler', () => {
+    // The notice defaults on rather than off: a caller that forgets the handler still gets it,
+    // which is the whole reason this lives in keepMoreSpecific instead of at each call site.
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    try {
+      keepMoreSpecific(item({ shelf: 'letters' }), item({ shelf: 'encyclicals' }));
+      expect(warnSpy).toHaveBeenCalledTimes(1);
+      expect(String(warnSpy.mock.calls[0]![0])).toContain('Merged and discarded');
+    } finally {
+      warnSpy.mockRestore();
+    }
   });
 });
