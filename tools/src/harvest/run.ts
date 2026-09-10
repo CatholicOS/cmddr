@@ -3,6 +3,7 @@ import { parseFlatIndex } from './flat.js';
 import { parseShelfIndex } from './shelf.js';
 import { resolveShelfPages } from './shelfPages.js';
 import { toDocument } from './toDocument.js';
+import { keepMoreSpecific } from './merge.js';
 import { parseCouncilIndex } from './council.js';
 import { assignProvisionalOrdinals } from './ordinals.js';
 import {
@@ -12,76 +13,6 @@ import { issuerLocalPart, mintId } from '../ids.js';
 import { slugify } from '../slug.js';
 import type { DocumentRecord, HarvestItem } from '../types.js';
 
-/**
- * Most specific shelf first: a document filed twice keeps the more specific genre.
- * `apost_exhortations` (Task 8 carried item): ranked here, after `motu_proprio` and before
- * the generic `letters` catch-all. It is a distinct, named formal genre like the six shelves
- * ahead of it -- not a generic bucket -- but pastoral exhortations carry no juridical force of
- * their own, unlike the acts above (constitutions, apostolic letters, bulls, briefs, motu
- * proprio), so it sits just below them. Previously absent, it fell through to the
- * least-specific rank (tied with `speeches` and any unknown shelf); harmless while Pius X
- * carried only one exhortation, but Pius XII carries eight, so an arbitrary tie-break here
- * could pick a same-date cross-shelf collision's winner arbitrarily in `keepMoreSpecific`.
- */
-const SHELF_SPECIFICITY = [
-  'encyclicals', 'apost_constitutions', 'apost_letters', 'bulls',
-  'briefs', 'motu_proprio', 'apost_exhortations', 'letters', 'speeches',
-];
-/**
- * Benedict XV hyphenates 'apost-constitutions' (spec §2.5) -- the same genre as
- * 'apost_constitutions' (see genres.ts), so it must rank identically, not fall through to
- * the least-specific default. Task 12 review: before this alias existed, the hyphenated
- * shelf ranked as unrecognised (tied with `speeches`), so `bulls` silently outranked it in
- * both of Benedict XV's apost-constitutions/bulls same-incipit-or-duplicate merges
- * ('Incruentum Altaris' and 'Bracarensis'/'Sedis huius') -- losing
- * `characteristics: ['apostolic-constitution']` on the surviving record even though the
- * underlying act genuinely is an apostolic constitution. See the merged-record
- * characteristic test in harvest-data.test.ts.
- */
-const SHELF_ALIASES: Record<string, string> = { 'apost-constitutions': 'apost_constitutions' };
-const rank = (shelf: string | null) => {
-  // A flat-era (null) shelf and an unrecognised one both fall through to the same
-  // least-specific rank; indexOf's own -1-for-not-found already covers a null shelf
-  // once it is fed the empty string, so no separate branch is needed for it.
-  const canonical = SHELF_ALIASES[shelf ?? ''] ?? (shelf ?? '');
-  const i = SHELF_SPECIFICITY.indexOf(canonical);
-  return i === -1 ? SHELF_SPECIFICITY.length : i;
-};
-
-/**
- * Keep the more specific shelf, folding the other's shelf into alsoShelvedAs. When the
- * dropped record's printed incipit is not merely a case/accent variant of the kept
- * one's (compared via slugify, so the seven same-spelling pass-1 merges never trigger
- * this), the dropped incipit is preserved as an alias rather than lost outright.
- */
-function keepMoreSpecific(a: HarvestItem, b: HarvestItem): HarvestItem {
-  // Shelf specificity decides first. When two items tie on shelf rank -- which pass 3's
-  // hand-curated merges routinely do, since both records usually sit on the same shelf --
-  // the previous tie-break was insertion order, i.e. whichever the fixture happened to list
-  // first. That is not a reason to prefer one record over another, and it silently discarded
-  // the better one: the 1968 beatification letter is published twice on apost_letters, and
-  // only one of the two pages prints its incipit. A printed incipit is strictly more
-  // information than none, so it wins the tie; everything else keeps the previous ordering.
-  const [keep, drop] = rank(a.shelf) < rank(b.shelf) ? [a, b]
-    : rank(b.shelf) < rank(a.shelf) ? [b, a]
-    : (a.incipit !== null && b.incipit === null) ? [a, b] : [b, a];
-  const seen = new Set([...(keep.alsoShelvedAs ?? []), ...(drop.alsoShelvedAs ?? [])]);
-  if (drop.shelf) seen.add(drop.shelf);
-  // `alsoShelvedAs` means "the other shelves this act is also filed under". A same-shelf
-  // merge -- the shape pass 3's curated duplicates usually take, since both pages sit on
-  // one shelf -- would otherwise record the surviving record's own shelf as an "other"
-  // shelf, which states nothing and reads as a second filing that does not exist.
-  if (keep.shelf) seen.delete(keep.shelf);
-  const aliases = new Set([...(keep.aliases ?? []), ...(drop.aliases ?? [])]);
-  if (slugify(drop.incipit ?? drop.title) !== slugify(keep.incipit ?? keep.title)) {
-    aliases.add(drop.incipit ?? drop.title);
-  }
-  return {
-    ...keep,
-    alsoShelvedAs: [...seen].sort(),
-    ...(aliases.size ? { aliases: [...aliases].sort() } : {}),
-  };
-}
 
 /** The trailing document slug of a resolved vatican.va URL, e.g. `hf_..._05051888_in-plurimis.html`
  *  -> `in-plurimis`. Null when the URL is absent or does not carry the `_{DDMMYYYY|YYYYMMDD}_` shape. */
@@ -181,7 +112,7 @@ for (const item of items) {
       + 'key -- one is being silently dropped unless genuinely a duplicate',
     );
   }
-  merged.set(key, held ? keepMoreSpecific(item, held) : item);
+  merged.set(key, held ? keepMoreSpecific(item, held, console.warn) : item);
 }
 
 // Pass 2 (mechanical): two more Leo XIII documents are the same act filed under
@@ -209,7 +140,8 @@ for (const [key2, group] of byUrlSlug) {
   if (!conflict) {
     // reduce as (newcomer, held) to preserve the original sequential merge order exactly:
     // this pass's winner must not change as a side effect of restructuring it.
-    mergedByUrlSlug.set(key2, group.reduce((held, item) => keepMoreSpecific(item, held)));
+    mergedByUrlSlug.set(key2,
+      group.reduce((held, item) => keepMoreSpecific(item, held, console.warn)));
     continue;
   }
   const byType = new Map<string | null, HarvestItem[]>();
@@ -223,7 +155,8 @@ for (const [key2, group] of byUrlSlug) {
     + ' -- kept apart, since only the URL document-type marker distinguishes them',
   );
   for (const [type, items] of byType) {
-    mergedByUrlSlug.set(`${key2}|${type}`, items.reduce((held, item) => keepMoreSpecific(item, held)));
+    mergedByUrlSlug.set(`${key2}|${type}`,
+      items.reduce((held, item) => keepMoreSpecific(item, held, console.warn)));
   }
 }
 
@@ -243,7 +176,7 @@ for (const item of mergedByUrlSlug.values()) {
   const canonicalIncipit = dup ? dup.mergeIntoIncipit : (item.incipit ?? item.title);
   const key3 = `${item.pageSlug}|${slugify(canonicalIncipit)}|${item.date}`;
   const held = mergedByDuplicateTable.get(key3);
-  mergedByDuplicateTable.set(key3, held ? keepMoreSpecific(item, held) : item);
+  mergedByDuplicateTable.set(key3, held ? keepMoreSpecific(item, held, console.warn) : item);
 }
 console.log(`${items.length} items -> ${mergedByDuplicateTable.size} documents after cross-shelf dedupe`);
 
