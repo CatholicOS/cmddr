@@ -2,7 +2,7 @@ import { slugify } from '../slug.js';
 import { mintId, mintProvisionalId } from '../ids.js';
 import {
   VATICAN_SLUG_TO_ISSUER, SOURCE_GENRE_TO_GENRE, CONCILIAR_SOURCE_GENRE_TO_GENRE,
-  CONCILIAR_REASSIGNMENTS, COUNCILS, keywordsFor,
+  CONCILIAR_REASSIGNMENTS, COUNCILS, RECOVERED_INCIPITS, GENRE_OVERRIDES, keywordsFor,
 } from '../mappings/index.js';
 import type { DocumentRecord, HarvestItem } from '../types.js';
 
@@ -25,16 +25,32 @@ export function toDocument(item: HarvestItem, retrieved: string): DocumentRecord
   const issuerType = mapping.issuerType
     ?? (issuerId.startsWith('oec:') ? 'ecumenical-council' : 'pope');
 
+  // A shelf can misfile a document -- vatican.va lists John XXIII's Rosary meditations on
+  // apost_letters, beside the letter they accompany. The override replaces the genre only;
+  // `sourceGenreLabel` below still records the shelf verbatim, so what the source said is
+  // never hidden, and the provisional id follows the corrected genre as it does everywhere.
+  const genre = GENRE_OVERRIDES[`${item.pageSlug}|${slugify(item.title)}|${item.date}`]?.genre
+    ?? mapping.genre;
+
+  // An incipit the source itself printed always wins. The curated table is consulted only
+  // where the heading printed none -- the provisional shelf -- so a recovered row can never
+  // shadow a printed incipit, and the act's own name is restored where the index page
+  // simply did not carry it (see recovered-incipits.ts for the evidence behind each row).
+  const recovered = item.incipit === null
+    ? RECOVERED_INCIPITS[`${item.pageSlug}|${slugify(item.title)}|${item.date}`]
+    : undefined;
+  const incipit = item.incipit ?? recovered?.incipit ?? null;
+
   const record: DocumentRecord = {
-    id: item.incipit !== null
-      ? mintId(issuerId, item.incipit, item.date)
-      // No incipit is printed, so the id cannot be name-based. The genre slug plus the
-      // full date is the provisional form (spec §3.5); the ordinal, where two share a
-      // date, is assigned by the orchestrator, which alone can see the whole group.
-      : mintProvisionalId(issuerId, mapping.genre ?? slugify(item.sourceGenreLabel), item.date),
+    id: incipit !== null
+      ? mintId(issuerId, incipit, item.date)
+      // No incipit is printed and none has been recovered, so the id cannot be name-based.
+      // The genre slug plus the full date is the provisional form (spec §3.5); the ordinal,
+      // where two share a date, is assigned by the orchestrator, which alone sees the group.
+      : mintProvisionalId(issuerId, genre ?? slugify(item.sourceGenreLabel), item.date),
     title: item.title,
-    idStatus: item.incipit !== null ? 'minted' : 'provisional',
-    genre: mapping.genre,
+    idStatus: incipit !== null ? 'minted' : 'provisional',
+    genre,
     issuerId,
     issuerType,
     date: item.date,
@@ -47,7 +63,7 @@ export function toDocument(item: HarvestItem, retrieved: string): DocumentRecord
   // Assigned after the literal so a missing incipit is omitted rather than set to
   // undefined -- JSON.stringify would drop either, but `'incipit' in d` would still
   // see the latter.
-  if (item.incipit !== null) record.incipit = item.incipit;
+  if (incipit !== null) record.incipit = incipit;
 
   // A document harvested from a pope's page and reassigned to a council carries its
   // promulgator in the reassignment row (Vatican I); one harvested from the council's

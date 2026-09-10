@@ -11,6 +11,17 @@
  * Key: `${pageSlug}|${shelf}|${slugify(incipit)}|${printedIsoDate}`.
  */
 export const DATE_CORRECTIONS: Record<string, { date: string; note: string }> = {
+  'paul-vi|apost_letters|venerabili-dei-famulae-mariae-ab-apostolis-beatorum-honores-decernuntur|1968-10-30': {
+    date: '1968-10-13',
+    note:
+      "The document's own dating formula reads 'Datum Romae, apud S. Petrum, sub anulo " +
+      "Piscatoris, die tertio decimo mensis Octobris, anno MCMLXVIII, Pontificatus Nostri " +
+      "sexto' -- 13 October 1968 -- so the shelf heading's '30 ottobre 1968' is contradicted " +
+      'by the very page it links to. vatican.va publishes this act twice, and the other page ' +
+      '(_19681013_quem-ad-modum) prints the same clause, the same signatories and the AAS ' +
+      'footnote A.A.S. LX (1968) pp. 673-680; AAS 60\'s index likewise dates it Oct. 13. ' +
+      'Treated as a transcription error in the apost_letters heading.',
+  },
   'leo-xiii|letters|magni-nobis|1889-05-07': {
     date: '1889-03-07',
     note:

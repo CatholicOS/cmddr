@@ -462,9 +462,9 @@
     "sourceGenreLabel": "encyclicals"
   },
   {
-    "id": "mag:leo-xiv/apostolic-letter-2026-06-24",
+    "id": "mag:leo-xiv/confirma-fratres-tuos-2026",
     "title": "Lettera Apostolica in forma di «Motu Proprio» sulla revisione della Costituzione Apostolica In Ecclesiarum Communione",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:leo-xiv",
     "issuerType": "pope",
@@ -480,6 +480,7 @@
         "motu_proprio"
       ]
     },
+    "incipit": "Confirma fratres tuos",
     "sourceGenreLabel": "apost_letters"
   },
   {
