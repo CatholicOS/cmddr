@@ -1150,9 +1150,9 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
   // title, and the note quotes the mis-pasted heading. Every other argumentum is verbatim
   // as extracted, the page's own misprints kept and named in the note ('DOVA DIOECESIS',
   // 'PIUSBURGENSI', 'ARCHIDIOECCSI'...); two of them break the verb itself ('Tulcanensis'
-  // COOSTITUITUR, 'Balasorensis' CONSTI. TUITUR), so those rows fail the idiom audit as
-  // quoted and are left for the controller's ruling rather than the regex widened here or
-  // the quote repaired. The curation script abstained on
+  // COOSTITUITUR, 'Balasorensis' CONSTI. TUITUR), which the audit regex now lists as
+  // misprints (Ruling 10) rather than the quote being repaired. The curation script
+  // abstained on
   // thirteen: two print a lower-case l inside the capitalised toponym ('SHlKOKUENSIS',
   // 'CZĘSTOCHOVlENSlS'), so the case-delimited reader stopped at its first word and each is
   // quoted by hand as printed; the other eleven state their act with no listed idiom
@@ -2886,13 +2886,28 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
  * The audit is case-insensitive (Ruling 8) because nine Benedict XVI pages print the
  * argumentum in sentence case in its usual place under the toponym ('In Indonesia nova
  * conditur dioecesis Maumerensis appellanda.'), and the quote stays verbatim.
+ *
+ * `COOSTITUITUR` and `CONSTI\. TUITUR` (Ruling 10) are two page misprints of CONSTITUITUR
+ * -- Paul VI's 'Tulcanensis' of 1965 and 'Balasorensis' of 1968 -- kept verbatim in their
+ * rows, so the audit learns the misprint rather than the row being corrected.
+ *
+ * `DIOECESIUM ORDINEM`, `IN FORMAM DIOECESIS` and `AD DIOECESIS DIGNITATEM` (Ruling 10)
+ * are the word orders four Paul VI elevations use ('Hamiltonensis' and 'Banarensis' IN/AD
+ * DIOECESIUM ORDINEM REDIGITUR, 'Sanensis' IN FORMAM DIOECESIS REDIGITUR, 'Machalensis' AD
+ * DIOECESIS DIGNITATEM TOLLITUR); each hits only elevation rows across all four tables,
+ * whereas bare TOLLITUR was rejected because it also hits two province erections
+ * ('Tananarivensis', 'Tunquensis').
+ *
+ * `IUNGITUR` (Ruling 10) is the verb Paul VI's 'Spalatensis-Macarscensis' union leads
+ * with; it also appears in three John XXIII title-change adjudications ('APPELLATIO
+ * IUNGITUR'), which this regex does not audit.
  */
 export const ERECTION_IDIOMS =
-  /CONDITUR|CONDUNTUR|ERIGITUR|ERIGUNTUR|CONSTITUITUR|CONSTITUUNTUR|EXCITATUR|EFFICITUR|CREATUR|NOVA FIT|FORMAM REDIG|FORMATUR|FORMANTUR/i;
+  /CONDITUR|CONDUNTUR|ERIGITUR|ERIGUNTUR|CONSTITUITUR|CONSTITUUNTUR|EXCITATUR|EFFICITUR|CREATUR|NOVA FIT|FORMAM REDIG|FORMATUR|FORMANTUR|COOSTITUITUR|CONSTI\. TUITUR/i;
 export const ELEVATION_IDIOMS =
-  /EVEHITUR|EVEHUNTUR|ELEVATUR|PERDUCITUR|ATTOLLITUR|ATTOLITUR|EXTOLLITUR|AD (?:GRADUM|DIGNITATEM|EPARCHIAE|APOSTOLICI)|IN ORDINEM (?:ARCHI)?DIOECESIUM/i;
+  /EVEHITUR|EVEHUNTUR|ELEVATUR|PERDUCITUR|ATTOLLITUR|ATTOLITUR|EXTOLLITUR|AD (?:GRADUM|DIGNITATEM|EPARCHIAE|APOSTOLICI)|IN ORDINEM (?:ARCHI)?DIOECESIUM|DIOECESIUM ORDINEM|IN FORMAM DIOECESIS|AD DIOECESIS DIGNITATEM/i;
 export const UNION_IDIOMS =
-  /DE UNIONE|UNIONE|UNIUNTUR|UNITUR|CONIUNG|AEQUE PRINCIPALITER|DISMEMBRATIONE/i;
+  /DE UNIONE|UNIONE|UNIUNTUR|UNITUR|CONIUNG|AEQUE PRINCIPALITER|DISMEMBRATIONE|IUNGITUR/i;
 
 export interface CircumscriptionRow {
   /** The document's own argumentum, verbatim: the act in its own words. */
@@ -3191,8 +3206,7 @@ export const CIRCUMSCRIPTION_ELEVATIONS: Record<string, CircumscriptionRow> = {
   // are elevations. Four state the act in a form the elevation idioms do not list
   // ('Sanensis' IN FORMAM DIOECESIS REDIGITUR, 'Hamiltonensis' IN DIOECESIUM ORDINEM
   // REDIGITUR, 'Banarensis' AD DIOECESIUM ORDINEM REDIGITUR, 'Machalensis' AD DIOECESIS
-  // DIGNITATEM TOLLITUR) and are left for the controller's ruling rather than the audit
-  // regex widened here.
+  // DIGNITATEM TOLLITUR); the audit regex lists those word orders under Ruling 10.
   'paul-vi|kayensis|1963-07-06': {
     argumentum:
       'KAYENSIS* PRAEFECTURA APOSTOLICA KAYENSIS AD GRADUM ET DIGNITATEM DIOECESIS '
@@ -3696,8 +3710,7 @@ export const CIRCUMSCRIPTION_UNIONS: Record<string, CircumscriptionRow> = {
   // Savoy dioceses aeque principaliter to Chambery; 'Spalatensis-Macarscensis' merges
   // Makarska into Split by extinctive union and raises the merged see to metropolitan rank
   // -- the union is what its argumentum leads with (IUNGITUR) and the vehicle of the
-  // elevation, so it sits here although IUNGITUR is not among the union idioms; left for
-  // the controller's ruling rather than the regex widened.
+  // elevation, so it sits here, and IUNGITUR joined the union idioms under Ruling 10.
   'paul-vi|chamberiensis-et-aliarum|1966-04-26': {
     argumentum:
       'CHAMBERIENSIS ET ALIARUM* DIOECESES MAURIANENSIS ET TARANTASIENSIS, IN SABAUDIAE '
