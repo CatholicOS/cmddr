@@ -3,7 +3,8 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { checkDocuments } from '../src/validate/invariants.js';
 import { parseShelfIndex } from '../src/harvest/shelf.js';
 import {
-  shelvesFor, isErectionCandidate, CIRCUMSCRIPTION_ERECTIONS, RECOVERED_INCIPITS,
+  shelvesFor, isErectionCandidate, isUnconfirmedCandidate, CIRCUMSCRIPTION_ERECTIONS,
+  RECOVERED_INCIPITS,
 } from '../src/mappings/index.js';
 import type { DocumentRecord } from '../src/types.js';
 
@@ -786,12 +787,20 @@ describe('the Paul VI corpus', () => {
     expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(5);
   });
 
-  it('flags the diocese erections as candidates without tagging any of them', () => {
-    // The headings print a bare Latin toponym with no marker, so nothing is tagged
-    // until the curation pass. Documents with real names must not be flagged.
-    expect(docs.every((d) => d.keywords === undefined)).toBe(true);
-    expect(docs.some((d) => d.incipit === 'Indulgentiarum Doctrina')).toBe(true);
-    expect(docs.some((d) => d.incipit === 'Romano Pontifici Eligendo')).toBe(true);
+  it('tags the diocese erections only through the curated tables', () => {
+    // The headings print a bare Latin toponym with no marker, so nothing was tagged until
+    // the curation pass. The Paul VI instalment of the circumscription adjudication (Task 5)
+    // read all 222 candidates and filed 161 erections, 48 elevations and 2 unions by key in
+    // circumscriptions.ts; its other 11 rows sit in CANDIDATE_ADJUDICATIONS and carry no
+    // keyword. Nothing else is tagged, and a document with a real name never is.
+    const tagged = docs.filter((d) => d.keywords !== undefined);
+    expect(tagged.filter((d) => d.keywords?.includes('circumscription-erection'))).toHaveLength(161);
+    expect(tagged.filter((d) => d.keywords?.includes('circumscription-elevation'))).toHaveLength(48);
+    expect(tagged.filter((d) => d.keywords?.includes('circumscription-union'))).toHaveLength(2);
+    expect(tagged).toHaveLength(211);
+    expect(tagged.every((d) => d.source?.shelf === 'apost_constitutions')).toBe(true);
+    expect(docs.find((d) => d.incipit === 'Indulgentiarum Doctrina')?.keywords).toBeUndefined();
+    expect(docs.find((d) => d.incipit === 'Romano Pontifici Eligendo')?.keywords).toBeUndefined();
   });
 
   it('deduplicates the four twice-shelved apost_letters/motu_proprio documents', () => {
@@ -1097,12 +1106,21 @@ describe('the John Paul II corpus', () => {
       .toHaveLength(8);
   });
 
-  it('flags the diocese erections as candidates without tagging any of them', () => {
+  it('tags the diocese erections only through the curated tables', () => {
     // 613 apost_constitutions items, the large majority filed under a bare Latin toponym
-    // with no textual marker -- confirming CIRCUMSCRIPTION_ERECTIONS entries for them is
-    // Task 20's work, not this one's (see pontiffs.ts). Documents with real names must not
-    // be flagged.
-    expect(docs.every((d) => d.keywords === undefined)).toBe(true);
+    // with no textual marker, so nothing was tagged until the curation pass. The John Paul
+    // II instalment of the circumscription adjudication (Task 6) read all 390 candidates
+    // and filed 317 erections, 59 elevations and 5 unions by key in circumscriptions.ts; its
+    // other 9 rows sit in CANDIDATE_ADJUDICATIONS and carry no keyword. Nothing else is
+    // tagged, and a document with a real name never is.
+    const tagged = docs.filter((d) => d.keywords !== undefined);
+    expect(tagged.filter((d) => d.keywords?.includes('circumscription-erection'))).toHaveLength(317);
+    expect(tagged.filter((d) => d.keywords?.includes('circumscription-elevation'))).toHaveLength(59);
+    expect(tagged.filter((d) => d.keywords?.includes('circumscription-union'))).toHaveLength(5);
+    expect(tagged).toHaveLength(381);
+    expect(tagged.every((d) => d.source?.shelf === 'apost_constitutions')).toBe(true);
+    expect(docs.find((d) => d.incipit === 'Sapientia Christiana')?.keywords).toBeUndefined();
+    expect(docs.find((d) => d.incipit === 'Ex Corde Ecclesiae')?.keywords).toBeUndefined();
   });
 
   it('omits the incipit exactly when the id is provisional', () => {
@@ -1271,11 +1289,19 @@ describe('the Benedict XVI corpus', () => {
     }
   });
 
-  it('flags the diocese erections as candidates without tagging any of them', () => {
+  it('tags the diocese erections only through the curated tables', () => {
     // 126 apost_constitutions items, the large majority filed under a bare Latin toponym
-    // with no textual marker -- confirming CIRCUMSCRIPTION_ERECTIONS entries for them is
-    // Task 20's work, not this one's (see pontiffs.ts).
-    expect(docs.every((d) => d.keywords === undefined)).toBe(true);
+    // with no textual marker, so nothing was tagged until the curation pass. The Benedict
+    // XVI instalment of the circumscription adjudication (Task 4) read all 90 candidates
+    // and filed 77 erections and 11 elevations by key in circumscriptions.ts; its other
+    // two rows sit in CANDIDATE_ADJUDICATIONS and carry no keyword. Nothing else is
+    // tagged, and a document with a real name never is.
+    const tagged = docs.filter((d) => d.keywords !== undefined);
+    expect(tagged.filter((d) => d.keywords?.includes('circumscription-erection'))).toHaveLength(77);
+    expect(tagged.filter((d) => d.keywords?.includes('circumscription-elevation'))).toHaveLength(11);
+    expect(tagged).toHaveLength(88);
+    expect(tagged.every((d) => d.source?.shelf === 'apost_constitutions')).toBe(true);
+    expect(docs.find((d) => d.incipit === 'Anglicanorum coetibus')?.keywords).toBeUndefined();
   });
 
   it('omits the incipit exactly when the id is provisional', () => {
@@ -1976,15 +2002,151 @@ describe('the whole corpus', () => {
 
   it('tags exactly the circumscription-elevation documents measured for Task 20, enumerated '
     + 'here so a future change to ELEVATION_PHRASES surfaces its effect on the real corpus', () => {
+    // Seven earned the keyword from their heading (ELEVATION_PHRASES); the other hundred
+    // and thirty-two are the hand-curated CIRCUMSCRIPTION_ELEVATIONS rows of the Pius XII,
+    // John XXIII, Benedict XVI, Paul VI and John Paul II instalments, which tag by key
+    // rather than by heading.
     const elevated = everything.filter((d) => d.keywords?.includes('circumscription-elevation'));
     expect(elevated.map((d) => d.id).sort()).toEqual([
+      'mag:benedict-xvi/cassoviensis-2008',
+      'mag:benedict-xvi/galapagensis-2008',
+      'mag:benedict-xvi/gimaensis-bongana-2009',
+      'mag:benedict-xvi/huariensis-2008',
+      'mag:benedict-xvi/impfondensis-2011',
+      'mag:benedict-xvi/ipilensis-2010',
+      'mag:benedict-xvi/kyrgyzstaniae-2006',
+      'mag:benedict-xvi/machiquesensis-2011',
+      'mag:benedict-xvi/mongensis-2009',
+      'mag:benedict-xvi/obidensis-2011',
+      'mag:benedict-xvi/quettensis-2010',
       'mag:francis-i/attenta-deliberatione-2014',
       'mag:francis-i/de-spiritali-itinere-2015',
       'mag:francis-i/qui-successimus-2015',
       'mag:francis-i/undecim-abhinc-annos-2014',
+      'mag:john-paul-ii/abaetiensis-ad-tocantinsum-et-aliarum-1981',
+      'mag:john-paul-ii/abuiensis-1989',
+      'mag:john-paul-ii/aguaricoensis-1984',
+      'mag:john-paul-ii/antioquiensis-1988',
+      'mag:john-paul-ii/anuradhapurensis-1982',
+      'mag:john-paul-ii/araucensis-1984',
+      'mag:john-paul-ii/argentoratensis-1988',
+      'mag:john-paul-ii/ariariensis-1987',
+      'mag:john-paul-ii/aricensis-1986',
+      'mag:john-paul-ii/balasorensis-1989',
+      'mag:john-paul-ii/bomadiensis-1995',
+      'mag:john-paul-ii/candimendensis-1983',
+      'mag:john-paul-ii/chinhoyiensis-1985',
+      'mag:john-paul-ii/chiquitosensis-seu-sancti-ignatii-velascani-1994',
+      'mag:john-paul-ii/chisinauensis-2001',
+      'mag:john-paul-ii/cholutecensis-1979',
+      'mag:john-paul-ii/chulucanensis-1988',
+      'mag:john-paul-ii/coloratensis-1996',
+      'mag:john-paul-ii/coroicensis-1983',
+      'mag:john-paul-ii/coxinensis-2002',
+      'mag:john-paul-ii/cuauhtemocensis-materiensis-1995',
+      'mag:john-paul-ii/escuintlensis-in-guatimala-1994',
+      'mag:john-paul-ii/garissaensis-1984',
+      'mag:john-paul-ii/guaiaramirensis-1979',
+      'mag:john-paul-ii/guamensis-1979',
+      'mag:john-paul-ii/guapiensis-2001',
+      'mag:john-paul-ii/guiratingensis-et-aliarum-1981',
+      'mag:john-paul-ii/iammuensis-srinagarensis-1986',
+      'mag:john-paul-ii/ingvavumensis-1989',
+      'mag:john-paul-ii/iuigalpensis-1990',
+      'mag:john-paul-ii/iuticalpensis-1987',
+      'mag:john-paul-ii/izabalensis-1988',
+      'mag:john-paul-ii/kanensis-1995',
+      'mag:john-paul-ii/kankanensis-1993',
+      'mag:john-paul-ii/keetmanshoopensis-1994',
+      'mag:john-paul-ii/limonensis-1994',
+      'mag:john-paul-ii/luxemburgensis-1988',
+      'mag:john-paul-ii/lyciensis-1980',
+      'mag:john-paul-ii/mandevillensis-1997',
+      'mag:john-paul-ii/mekiensis-1991',
+      'mag:john-paul-ii/mercedensis-luianensis-1997',
+      'mag:john-paul-ii/mituensis-1989',
+      'mag:john-paul-ii/monoecensis-1981',
+      'mag:john-paul-ii/mvanzaensis-1987',
+      'mag:john-paul-ii/neograndicasensis-2000',
+      'mag:john-paul-ii/paciensis-in-california-infer-merid-1988',
+      'mag:john-paul-ii/pietersburgensis-1988',
+      'mag:john-paul-ii/pinnensis-piscariensis-1982',
+      'mag:john-paul-ii/premisliensis-varsaviensis-1996',
+      'mag:john-paul-ii/riviascianensis-1988',
+      'mag:john-paul-ii/rustenburgensis-1987',
+      'mag:john-paul-ii/santaremensis-et-aliae-1979',
+      'mag:john-paul-ii/sibolgaensis-1980',
+      'mag:john-paul-ii/tarahumarensis-1993',
+      'mag:john-paul-ii/tarmensis-1985',
+      'mag:john-paul-ii/tiranensis-dyrracena-2005',
+      'mag:john-paul-ii/trudensis-1979',
+      'mag:john-paul-ii/villaricensis-2002',
+      'mag:john-paul-ii/zanzibarensis-1980',
+      'mag:john-xxiii/changanacherrensis-et-aliarum-1959',
+      'mag:john-xxiii/hiroshimaensis-1959',
+      'mag:john-xxiii/lagosensis-kadunaensis-1959',
+      'mag:john-xxiii/munduensis-1959',
       'mag:john-xxiii/nagasakiensis-qui-cotidie-1959',
       'mag:john-xxiii/nzerekoreensis-1959',
+      'mag:john-xxiii/oturkpoensis-1959',
       'mag:leo-xiv/verba-christi-2025',
+      'mag:paul-vi/aganensis-1965',
+      'mag:paul-vi/amidensis-chaldaeorum-1966',
+      'mag:paul-vi/araucensis-1970',
+      'mag:paul-vi/banarensis-1970',
+      'mag:paul-vi/bangassuensis-1964',
+      'mag:paul-vi/barcinonensis-1964',
+      'mag:paul-vi/bataensis-1966',
+      'mag:paul-vi/bhagalpurensis-1965',
+      'mag:paul-vi/bossangoaensis-1964',
+      'mag:paul-vi/broomensis-1966',
+      'mag:paul-vi/caacupensis-1967',
+      'mag:paul-vi/canelosensis-1964',
+      'mag:paul-vi/dapagoensis-1965',
+      'mag:paul-vi/davaensis-1966',
+      'mag:paul-vi/deaarensis-1967',
+      'mag:paul-vi/dorumaensis-1967',
+      'mag:paul-vi/gaberonensis-1966',
+      'mag:paul-vi/hamiltonensis-1967',
+      'mag:paul-vi/hermosillensis-1963',
+      'mag:paul-vi/ilorinensis-1969',
+      'mag:paul-vi/iullundurensis-1971',
+      'mag:paul-vi/kabbaensis-1964',
+      'mag:paul-vi/kaolackensis-1965',
+      'mag:paul-vi/kasamaensis-et-aliarum-1967',
+      'mag:paul-vi/kayensis-1963',
+      'mag:paul-vi/kengensis-1963',
+      'mag:paul-vi/kituiensis-1963',
+      'mag:paul-vi/kolensis-1967',
+      'mag:paul-vi/machalensis-1969',
+      'mag:paul-vi/maidugurensis-1966',
+      'mag:paul-vi/matritensis-1964',
+      'mag:paul-vi/mendiensis-1965',
+      'mag:paul-vi/moptiensis-1964',
+      'mag:paul-vi/mvekaensis-1964',
+      'mag:paul-vi/palaensis-1964',
+      'mag:paul-vi/parakuensis-1964',
+      'mag:paul-vi/piurensis-et-aliarum-1966',
+      'mag:paul-vi/ptolemaidensis-melchitarum-1964',
+      'mag:paul-vi/reykjavikensis-1968',
+      'mag:paul-vi/rosariensis-1963',
+      'mag:paul-vi/sanensis-1964',
+      'mag:paul-vi/shikokuensis-1963',
+      'mag:paul-vi/sikassensis-1963',
+      'mag:paul-vi/sokotoensis-1964',
+      'mag:paul-vi/tigiuanaensis-1963',
+      'mag:paul-vi/valleduparensis-1969',
+      'mag:paul-vi/villavicentiensis-1964',
+      'mag:paul-vi/weetebulaensis-1969',
+      'mag:pius-xii/bathurstensis-in-gambia-1957',
+      'mag:pius-xii/bikoroensis-1957',
+      'mag:pius-xii/copiapoensis-1957',
+      'mag:pius-xii/esmeraldensis-1957',
+      'mag:pius-xii/musomensis-1957',
+      'mag:pius-xii/spinensis-1957',
+      'mag:pius-xii/tangaensis-1958',
+      'mag:pius-xii/thakhekensis-1958',
+      'mag:pius-xii/urawaensis-1957',
     ].sort());
   });
 });
@@ -2121,5 +2283,23 @@ describe('the 1961 Rosary letter and the meditation published with it', () => {
     expect(letter.aliases ?? []).not.toContain(
       'Piccolo saggio di devoti pensieri distribuiti per ogni decina del Rosario, '
       + 'come a complemento della Lettera Apostolica Il religioso convegno');
+  });
+});
+
+describe('the circumscription queue', () => {
+  const everything = readdirSync('data/documents')
+    .filter((f) => f.endsWith('.json'))
+    .flatMap((f) => JSON.parse(readFileSync(`data/documents/${f}`, 'utf8')) as DocumentRecord[]);
+  const remaining = everything.filter(isUnconfirmedCandidate);
+
+  it('has adjudicated every candidate in the corpus', () => {
+    expect(remaining).toEqual([]);
+  });
+
+  it('awards Pius XII nine elevations, none of them erections', () => {
+    // The first instalment confirmed 19 erections here and rejected these nine by hand.
+    const pxii = everything.filter((d) => d.issuerId === 'rp:pius-xii');
+    expect(pxii.filter((d) => d.keywords?.includes('circumscription-elevation'))).toHaveLength(9);
+    expect(pxii.filter((d) => d.keywords?.includes('circumscription-erection'))).toHaveLength(19);
   });
 });

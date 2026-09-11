@@ -1,160 +1,10 @@
 import { slugify } from '../slug.js';
 import type { DocumentRecord, HarvestItem } from '../types.js';
-
-/**
- * Circumscription erections whose heading does not say so, confirmed by hand (spec §4.5).
- *
- * Paul VI, John Paul II, Benedict XVI -- and Pius XII -- file these under a bare Latin
- * toponym -- 'Avkaënsis', 'Usbekistaniae', 'Gambomensis' -- with no textual marker at all,
- * and the documents one would most want separated out ('Vacantis Apostolicae Sedis',
- * 'Provida Mater Ecclesia', 'Sacramentum Ordinis', 'Episcopali Consecrationis') sit
- * unmarked on the same shelf. There is therefore no rule that can decide this from the
- * index page: `isErectionCandidate` below only *flags* them for a human to confirm into
- * this table with its evidence -- it never writes a keyword itself.
- *
- * Starts empty. Populated by hand in a later curation task, one entry per confirmed
- * erection, each carrying the evidence (the vatican.va document text) that justifies the
- * tag -- never merely because the title has toponym shape, and never a secondary source in
- * place of the vatican.va text (review finding, 2026-09-08: the exception this comment used
- * to carry contradicted the project's cardinal evidence rule and describes nothing any of
- * the 19 entries below actually does -- every one of them cites vatican.va Latin text).
- *
- * Key: `${pageSlug}|${slugify(incipit ?? title)}|${isoDate}`.
- */
-export const CIRCUMSCRIPTION_ERECTIONS: Record<string, { note: string }> = {
-  // Task 20's first curation instalment: the entire Pius XII apostolic-constitutions
-  // candidate queue (29 candidates, 1957-04-10 through 1958-05-15) read by hand against
-  // its own Latin text on vatican.va. 19 confirmed below as erections. The other 10 are
-  // deliberately left unconfirmed here, not overlooked: nine are elevations of an
-  // existing circumscription's rank ('...ad gradum et dignitatem dioecesis evehimus...',
-  // 'Bathurstensis in Gambia', 'Bikoroënsis', 'Musomensis', 'Spinensis', 'Copiapoënsis',
-  // 'Esmeraldensis', 'Urawaënsis', 'Tangaënsis', 'Thakhekensis') and one ('Leonensis') is
-  // not a circumscription document at all -- it raises a parish church to collegiate-church
-  // status. A bare Latin toponym cannot be told apart from either of these on the index
-  // page, which is exactly why each was read individually rather than confirmed by pattern.
-  'pius-xii|santaremensis-obidensis|1957-04-10': {
-    note:
-      'Detaches territory from the Prelature Nullius of Santarém and erects the new '
-      + 'Prelature Nullius of Óbidos: "...ex eoque novam praelaturam «nullius» condimus, '
-      + 'Obidensem appellandam...". The heading prints only the twin toponym.',
-  },
-  'pius-xii|corumbensis-registrensis-campi-grandis-auratopolitanae|1957-06-15': {
-    note:
-      'Detaches territory from the Diocese of Corumbá and the Prelature Nullius of Registro '
-      + 'and erects two new dioceses: "...ex iisque omnibus territoriis dioecesim '
-      + 'constituimus, Campi Grandis nuncupandam..." and "...ex eorumque territorio alteram '
-      + 'condimus dioecesim, Auratopolitanam appellandam...".',
-  },
-  'pius-xii|chiapasensis-tapacolensis|1957-06-19': {
-    note:
-      'Detaches territory from the Diocese of Chiapas and erects the new Diocese of '
-      + 'Tapachula: "...Quam regionem in novae formam redigimus dioecesis, Tapacolensis '
-      + 'appellandae...".',
-  },
-  'pius-xii|saltillensis-torreonensis|1957-06-19': {
-    note:
-      'Detaches territory from the Diocese of Saltillo and erects the new Diocese of '
-      + 'Torreón: "...quae omnia in novae dioecesis formam redigimus, Torreonensis '
-      + 'appellandae...".',
-  },
-  'pius-xii|aleppensis-chaldaeorum|1957-07-03': {
-    note:
-      'Suppresses the Apostolic Administration of Upper Gazira of the Chaldeans and, for its '
-      + 'Syrian portion, erects the new Diocese of Aleppo of the Chaldeans: "...Apostolicam '
-      + 'administrationem de Gazira superiore Chaldaeorum omnino exstinguimus...in novae '
-      + 'formam redigimus dioecesis, Aleppensis Chaldaeorum nuncupandae...".',
-  },
-  'pius-xii|berytensis-chaldaeorum|1957-07-03': {
-    note:
-      'The companion constitution to Aleppensis Chaldaeorum, issued the same day: for the '
-      + 'Lebanese portion of the same suppressed administration, erects the new Diocese of '
-      + 'Beirut of the Chaldeans: "...Libani territorium...in novae dioecesis formam '
-      + 'redigimus, Berytensis Chaldaeorum appellandam...".',
-  },
-  'pius-xii|kikuitensis-kisantuensis-kengen|1957-07-05': {
-    note:
-      'Detaches territory from the Apostolic Vicariates of Kikwit and Kisantu and erects the '
-      + 'new Apostolic Prefecture of Kenge: "...ex iisque novam condi praefecturam '
-      + 'apostolicam...eaque in novae formam redigimus apostolicae praefecturae, Kengensis '
-      + 'appellandae...".',
-  },
-  'pius-xii|quinhonensis-saigonensis-nhatrangensis|1957-07-05': {
-    note:
-      'Detaches territory from the Apostolic Vicariates of Qui Nhon and Saigon and erects '
-      + 'the new Apostolic Vicariate of Nha Trang: "...Ex quibus terris novum vicariatum '
-      + 'condimus, qui ab urbe Nhatrang...Nhatrangensis appellabitur...".',
-  },
-  'pius-xii|rabaulensis-kaviengensis|1957-07-05': {
-    note:
-      'Detaches territory from the Apostolic Vicariate of Rabaul and erects the new '
-      + 'Apostolic Vicariate of Kavieng: "...ex eaque novum vicariatum condimus, cui nomen '
-      + 'erit ab urbe principe Kaviengensis...".',
-  },
-  'pius-xii|amargosensis-victoriensis-de-conquista|1957-07-27': {
-    note:
-      'Detaches territory from the Diocese of Amargosa and erects the new Diocese of '
-      + 'Vitória da Conquista: "...quibus ex municipiis...novam constituimus dioecesim '
-      + 'Victoriensem de Conquista appellandam.".',
-  },
-  'pius-xii|puniensis-iuliensis|1957-08-03': {
-    note:
-      'Detaches territory from the Diocese of Puno and erects the new Prelature Nullius of '
-      + 'Juli: "...quibus terris novam praelaturam «nullius» efficimus, Iuliensem '
-      + 'appellandam...".',
-  },
-  'pius-xii|arequipensis-ayacuquensis-caraveliens|1957-11-21': {
-    note:
-      'Detaches territory from the Archdiocese of Arequipa and the Diocese of Ayacucho and '
-      + 'erects the new Prelature Nullius of Caravelí: "...ex quibus ita disiunctis terris '
-      + 'novam condimus Praelaturam «nullius», Garaveliensem [Caraveliensem] '
-      + 'nuncupandam...". The heading omits the trailing period the harvested candidate '
-      + 'list carries after "Caraveliens".',
-  },
-  'pius-xii|luandensis-silvae-portuensis-malaniensis|1957-11-25': {
-    note:
-      'Detaches territory from the Archdiocese of Luanda and the Diocese of Silva Porto '
-      + '(Angola) and erects the new Diocese of Malanje: "...quibus terris novam dioecesim '
-      + 'condimus Malaniensem appellandam.".',
-  },
-  'pius-xii|rivibambensis-guarandensis|1957-12-29': {
-    note:
-      'Detaches the province of Bolívar from the Diocese of Riobamba and erects the new '
-      + 'Diocese of Guaranda: "...idque in novae dioecesis formam redigimus, Guarandensis '
-      + 'appellandae...".',
-  },
-  'pius-xii|palmensis-lagensis-palmensis-et-xapecoensis|1958-01-14': {
-    note:
-      'Suppresses the Prelature Nullius of Palmas and, from its territory plus territory '
-      + 'detached from the Diocese of Lages, erects two new dioceses: "...ex quibus novam '
-      + 'dioecesim condimus Palmensem nominandam..." and "...novam dioecesim condimus '
-      + 'Xapecoënsem appellandam...".',
-  },
-  'pius-xii|niangaraensis-dorumaensis|1958-02-24': {
-    note:
-      'Detaches territory from the Apostolic Vicariate of Niangara and erects the new '
-      + 'Apostolic Prefecture of Doruma: "...Quo territorio novam praefecturam apostolicam '
-      + 'condimus, Dorumaënsem appellandam...".',
-  },
-  'pius-xii|chilapensis-acapulcanae|1958-03-18': {
-    note:
-      'Detaches territory from the Diocese of Chilapa and erects the new Diocese of '
-      + 'Acapulco: "...ex quo distracto territorio novam efficimus dioecesim, Acapulcanam '
-      + 'nuncupandam.".',
-  },
-  'pius-xii|huanucensis-huancayensis-tarmensis|1958-05-15': {
-    note:
-      'Detaches territory from the Dioceses of Huánuco and Huancayo and erects the new '
-      + 'Prelature Nullius of Tarma: "...Quibus terris novam praelaturam «nullius» '
-      + 'constituimus Tarmensem appellandam.".',
-  },
-  'pius-xii|huanucensis-huarazensis-huariensis|1958-05-15': {
-    note:
-      'The companion constitution to Huanucensis-Huancayensis, issued the same day: '
-      + 'detaches further territory from the Diocese of Huánuco and from the Diocese of '
-      + 'Huaraz and erects the new Prelature Nullius of Huari: "...quibus ex terris novam '
-      + 'praelaturam «nullius» efficimus Huariensem appellandam...".',
-  },
-};
+import {
+  CIRCUMSCRIPTION_ERECTIONS, CIRCUMSCRIPTION_ELEVATIONS, CIRCUMSCRIPTION_UNIONS,
+  CANDIDATE_ADJUDICATIONS,
+} from './circumscriptions.js';
+import { POPES } from './pontiffs.js';
 
 /**
  * The circumscription nouns that guard a bare verb ('erige', 'eleva') against firing on an
@@ -254,22 +104,28 @@ export function keywordsFor(item: HarvestItem): string[] {
       || CIRCUMSCRIPTION_ERECTIONS[curatedKey]) {
     out.push('circumscription-erection');
   }
-  if (ELEVATION_PHRASES.some((re) => re.test(item.title))) {
+  if (ELEVATION_PHRASES.some((re) => re.test(item.title))
+      || CIRCUMSCRIPTION_ELEVATIONS[curatedKey]) {
     out.push('circumscription-elevation');
   }
+  if (CIRCUMSCRIPTION_UNIONS[curatedKey]) out.push('circumscription-union');
   return out;
 }
 
 /**
  * Whether this item looks like an unmarked circumscription erection and should be surfaced
  * for a human to confirm. A search aid, in the sense the design spec's conciliar
- * reassignment flagging is one: it warns, it never writes.
+ * reassignment flagging is one: it warns, it never writes. Returns false once the document
+ * has been adjudicated into any of the four curated tables -- an erection, an elevation, a
+ * union, or a read-and-rejected candidate -- since a document already judged is no longer
+ * awaiting confirmation, whichever way the judgment went.
  */
 export function isErectionCandidate(item: HarvestItem): boolean {
   if (!item.shelf || !APOST_CONSTITUTIONS_SHELVES.has(item.shelf)) return false;
   if (TEXTUALLY_TAGGED.has(item.pageSlug)) return false;
   const curatedKey = `${item.pageSlug}|${slugify(item.incipit ?? item.title)}|${item.date}`;
-  if (CIRCUMSCRIPTION_ERECTIONS[curatedKey]) return false;
+  if (CIRCUMSCRIPTION_ERECTIONS[curatedKey] || CIRCUMSCRIPTION_ELEVATIONS[curatedKey]
+      || CIRCUMSCRIPTION_UNIONS[curatedKey] || CANDIDATE_ADJUDICATIONS[curatedKey]) return false;
   // A toponym-shaped heading that already states an elevation (not an erection) is explained
   // by the text, not merely guessed at from its shape -- textual tagging supersedes the
   // morphological flag rather than sitting alongside it.
@@ -280,21 +136,43 @@ export function isErectionCandidate(item: HarvestItem): boolean {
 /** The `issuerId`s of the popes whose headings are read textually rather than flagged. */
 const TEXTUALLY_TAGGED_ISSUERS = new Set(['rp:francis-i', 'rp:leo-xiv']);
 
+/** vatican.va page slug for an issuer -- the inverse of VATICAN_SLUG_TO_ISSUER, derived from
+ *  the same table so the two cannot disagree. A DocumentRecord carries no pageSlug, so this
+ *  is how a curated key is rebuilt from a harvested record. */
+const ISSUER_TO_VATICAN_SLUG: Record<string, string> =
+  Object.fromEntries(POPES.map((p) => [p.issuerId, p.pageSlug]));
+
+/**
+ * The three keywords the circumscription tables award, and the only ones that retire a
+ * candidate (spec §5). Named rather than matched by prefix so that a keyword this module
+ * does not know -- one minted later, or one a hand-edited record carries by mistake --
+ * cannot silently drop a document from the count without an adjudication row.
+ */
+const CIRCUMSCRIPTION_KEYWORDS = new Set([
+  'circumscription-erection', 'circumscription-elevation', 'circumscription-union',
+]);
+
 /**
  * The post-harvest counterpart of `isErectionCandidate`, applied to an already-minted
  * `DocumentRecord` instead of a raw `HarvestItem` (the renderer never sees the latter). A
  * `DocumentRecord` has already gone through `keywordsFor`, so it carries whatever keyword
- * the heading or the curated table earned it -- a document is a candidate only if it earned
- * neither, which is a strictly cheaper check than re-deriving `isErectionCandidate`'s
- * curated-key lookup (a `DocumentRecord` does not carry `pageSlug`, so it could not rebuild
- * that key anyway). Used only to report how many candidates remain unconfirmed (spec §6),
- * never to decide anything about the document itself.
+ * the heading or the curated tables earned it -- a document that earned one is not a
+ * candidate. One that earned none may still have been read and rejected, and a rejection
+ * leaves no keyword behind, so the function rebuilds the curated key (`pageSlug` via
+ * `ISSUER_TO_VATICAN_SLUG`, since a `DocumentRecord` carries only the `issuerId`) and looks
+ * it up in `CANDIDATE_ADJUDICATIONS`. Used only to report how many candidates remain
+ * unconfirmed (spec §6), never to decide anything about the document itself.
  */
 export function isUnconfirmedCandidate(d: DocumentRecord): boolean {
   const shelf = d.source?.shelf;
   if (!shelf || !APOST_CONSTITUTIONS_SHELVES.has(shelf)) return false;
   if (TEXTUALLY_TAGGED_ISSUERS.has(d.issuerId)) return false;
-  if (d.keywords?.includes('circumscription-erection')) return false;
-  if (d.keywords?.includes('circumscription-elevation')) return false;
+  if (d.keywords?.some((k) => CIRCUMSCRIPTION_KEYWORDS.has(k))) return false;
+  // A document read and judged to be none of the three is no longer awaiting confirmation.
+  // Without this the adjudicated records stay in the count for ever, which is exactly the
+  // defect this work exists to fix (spec §1, §5).
+  const pageSlug = ISSUER_TO_VATICAN_SLUG[d.issuerId];
+  const key = `${pageSlug}|${slugify(d.incipit ?? d.title)}|${d.date}`;
+  if (pageSlug && CANDIDATE_ADJUDICATIONS[key]) return false;
   return TOPONYM.test(fold(d.title.trim()));
 }

@@ -1,5 +1,6 @@
 import { describe, it, expect, afterEach } from 'vitest';
-import { keywordsFor, isErectionCandidate, CIRCUMSCRIPTION_ERECTIONS } from '../src/mappings/keywords.js';
+import { keywordsFor, isErectionCandidate } from '../src/mappings/keywords.js';
+import { CIRCUMSCRIPTION_ERECTIONS, CANDIDATE_ADJUDICATIONS } from '../src/mappings/circumscriptions.js';
 import { slugify } from '../src/slug.js';
 import type { HarvestItem } from '../src/types.js';
 
@@ -29,12 +30,14 @@ describe('keywordsFor', () => {
   });
 
   it('tags a curated older erection from the table, not from its shape', () => {
-    // Seeded by Task 20's curation pass; empty until then, so this asserts the mechanism
-    // via a synthetic key rather than a real document.
+    // Written before Task 20's curation pass, when this key was in no table and the
+    // expectation was []. The John Paul II instalment (Task 6) filed 'Usbekistaniae' as an
+    // erection, so the same synthetic item now exercises the mechanism the other way: the
+    // keyword comes from the table's key, the toponym shape alone still tags nothing.
     expect(keywordsFor(item({
       pageSlug: 'john-paul-ii', title: 'Usbekistaniae', incipit: 'Usbekistaniae',
       date: '2005-04-01',
-    }))).toEqual([]);
+    }))).toEqual(['circumscription-erection']);
   });
 
   it('tags an elevation the heading states outright (real Francis, John XXIII, Leo XIV headings)', () => {
@@ -180,18 +183,30 @@ describe('isErectionCandidate', () => {
       title: 'Catamarcensis-Saltensis', incipit: 'Catamarcensis-Saltensis',
     }))).toBe(false);
   });
+
+  it('does not flag a document already adjudicated in CANDIDATE_ADJUDICATIONS -- a document '
+    + 'read and judged not to be a circumscription act is no longer awaiting confirmation '
+    + '(carried decision, Task 1)', () => {
+    const key = 'benedict-xv|bracarensis|1919-05-14';
+    expect(CANDIDATE_ADJUDICATIONS[key], 'fixture assumption').toBeDefined();
+    expect(isErectionCandidate(item({
+      pageSlug: 'benedict-xv', shelf: 'apost-constitutions',
+      title: 'Bracarensis', incipit: 'Bracarensis', date: '1919-05-14',
+    }))).toBe(false);
+  });
 });
 
 describe('the CIRCUMSCRIPTION_ERECTIONS lookup path', () => {
-  // Carried finding from Task 11's review: every existing test above runs against the
-  // always-empty table, so a bug in how the lookup key is constructed (pageSlug, incipit
-  // slug, date -- see keywordsFor's and isErectionCandidate's shared `curatedKey`) would stay
-  // hidden until the curation task that populates it for real, where roughly 1,100
-  // confirmations are keyed exactly this way. These tests inject a locally-populated entry
-  // and exercise both directions, then remove it so the table stays empty for every other
-  // test in this file and for the harvest itself.
+  // Every test above uses a fixture that sits in none of the curated tables, so a bug in how
+  // the lookup key is constructed (pageSlug, incipit slug, date -- see keywordsFor's and
+  // isErectionCandidate's shared `curatedKey`) would stay hidden: the real table's rows are
+  // keyed exactly this way. These tests inject a locally-populated entry and exercise both
+  // directions, then remove it so the table holds only its curated rows for every other test
+  // in this file and for the harvest itself. The toponym is invented: a real one
+  // ('Bikoroënsis', which this fixture once used) stops being unconfirmed the day its
+  // curation instalment files it, and the second instalment filed that one as an elevation.
   const pageSlug = 'pius-xii';
-  const title = 'Bikoroënsis';
+  const title = 'Nullibiensis';
   const date = '1957-06-24';
   const key = `${pageSlug}|${slugify(title)}|${date}`;
 
@@ -201,7 +216,10 @@ describe('the CIRCUMSCRIPTION_ERECTIONS lookup path', () => {
 
   it('keywordsFor tags a document whose key is present in the curated table', () => {
     expect(keywordsFor(item({ pageSlug, title, incipit: title, date }))).toEqual([]);
-    CIRCUMSCRIPTION_ERECTIONS[key] = { note: 'test evidence: confirmed circumscription erection' };
+    CIRCUMSCRIPTION_ERECTIONS[key] = {
+      argumentum: 'NULLIBIENSIS * TEST EVIDENCE: CONFIRMED CIRCUMSCRIPTION ERECTION, NOVA CONDITUR DIOECESIS.',
+      note: 'test evidence: confirmed circumscription erection',
+    };
     expect(keywordsFor(item({ pageSlug, title, incipit: title, date })))
       .toEqual(['circumscription-erection']);
   });
@@ -212,7 +230,10 @@ describe('the CIRCUMSCRIPTION_ERECTIONS lookup path', () => {
     });
     // Unconfirmed, the toponym shape alone would flag it (as the earlier tests establish).
     expect(isErectionCandidate(candidate)).toBe(true);
-    CIRCUMSCRIPTION_ERECTIONS[key] = { note: 'test evidence: confirmed circumscription erection' };
+    CIRCUMSCRIPTION_ERECTIONS[key] = {
+      argumentum: 'NULLIBIENSIS * TEST EVIDENCE: CONFIRMED CIRCUMSCRIPTION ERECTION, NOVA CONDITUR DIOECESIS.',
+      note: 'test evidence: confirmed circumscription erection',
+    };
     expect(isErectionCandidate(candidate)).toBe(false);
   });
 });

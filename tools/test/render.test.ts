@@ -194,9 +194,19 @@ describe('renderIndexMd', () => {
       source: { url: null, shelf: 'apost_constitutions', languages: [], retrieved: '2026-09-07' },
     };
     const withCandidate = renderIndexMd([...docs, candidate]);
-    expect(withCandidate).toMatch(/1 apostolic constitution.*not yet been confirmed/is);
+    expect(withCandidate).toMatch(/1 apostolic constitution.*still await adjudication/is);
+    // The bold lead is generated with the count, so the bullet cannot contradict itself.
+    expect(withCandidate).toContain('**Circumscription curation is incomplete.**');
+    expect(withCandidate).not.toContain('curation is complete');
     const none = renderIndexMd(docs);
-    expect(none).toMatch(/0 apostolic constitution.*not yet been confirmed/is);
+    expect(none).toMatch(/every candidate has been adjudicated/i);
+    expect(none).toContain('**Circumscription curation is complete.**');
+    expect(none).not.toContain('incomplete');
+  });
+
+  it('reports the circumscription queue as finished rather than naming a number', () => {
+    expect(md).toMatch(/every candidate has been adjudicated/i);
+    expect(md).not.toMatch(/have not yet been confirmed/);
   });
 
   it('groups by the issuer local part shared with the file tree, not the full issuerId, ' +
