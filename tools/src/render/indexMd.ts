@@ -113,7 +113,9 @@ This registry covers the **formal document shelves** of vatican.va. Deliberately
 - **Councils before 1870.** vatican.va's council archive publishes only Vatican I and Vatican II;
   the other nineteen ecumenical councils have no source there, so a registry holding two councils
   is not a registry of the councils.
-- **Circumscription curation is complete.** ${candidates === 0 ? 'Every candidate has been adjudicated' : `${candidates} apostolic constitutions still await adjudication`} — each apostolic constitution whose heading
+- ${candidates === 0
+    ? '**Circumscription curation is complete.** Every candidate has been adjudicated'
+    : `**Circumscription curation is incomplete.** ${candidates} apostolic constitutions still await adjudication`} — each apostolic constitution whose heading
   prints a bare Latin toponym was read against its own text and recorded as an erection, an
   elevation, a union, or an act of another kind named in the adjudication table.
 

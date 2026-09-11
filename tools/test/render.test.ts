@@ -195,8 +195,13 @@ describe('renderIndexMd', () => {
     };
     const withCandidate = renderIndexMd([...docs, candidate]);
     expect(withCandidate).toMatch(/1 apostolic constitution.*still await adjudication/is);
+    // The bold lead is generated with the count, so the bullet cannot contradict itself.
+    expect(withCandidate).toContain('**Circumscription curation is incomplete.**');
+    expect(withCandidate).not.toContain('curation is complete');
     const none = renderIndexMd(docs);
     expect(none).toMatch(/every candidate has been adjudicated/i);
+    expect(none).toContain('**Circumscription curation is complete.**');
+    expect(none).not.toContain('incomplete');
   });
 
   it('reports the circumscription queue as finished rather than naming a number', () => {

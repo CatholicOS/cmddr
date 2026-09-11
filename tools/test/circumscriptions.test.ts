@@ -4,7 +4,7 @@ import { slugify } from '../src/slug.js';
 import {
   CIRCUMSCRIPTION_ERECTIONS, CIRCUMSCRIPTION_ELEVATIONS, CIRCUMSCRIPTION_UNIONS,
   CANDIDATE_ADJUDICATIONS, ERECTION_IDIOMS, ELEVATION_IDIOMS, UNION_IDIOMS,
-  ARGUMENTUM_AUDIT_EXEMPTIONS, keywordsFor, isUnconfirmedCandidate,
+  ARGUMENTUM_AUDIT_EXEMPTIONS, POPES, keywordsFor, isUnconfirmedCandidate,
 } from '../src/mappings/index.js';
 import type { DocumentRecord, HarvestItem } from '../src/types.js';
 
@@ -38,7 +38,7 @@ describe('the circumscription tables', () => {
     for (const [name, table, idioms] of tables) {
       for (const [key, row] of Object.entries(table)) {
         expect(row.argumentum.trim(), `${name} ${key}`).not.toBe('');
-        // A page that prints no act at all (Ruling 14) is exempt from the regex, never from
+        // A page that prints no act at all (filing rule 5) is exempt from the regex, never from
         // being quoted: the row's note carries the body's operative clause instead.
         if (ARGUMENTUM_AUDIT_EXEMPTIONS.has(key)) continue;
         expect(row.argumentum, `${name} ${key}`).toMatch(idioms);
@@ -78,22 +78,27 @@ describe('the circumscription tables', () => {
     }
   });
 
-  it('matches every row to a harvested record, in both directions', () => {
+  it('matches every row to a harvested record by its full key, and leaves no record unread', () => {
     // The closed-set rule the Vatican II and recovered-incipit tables already use: a row that
     // matches nothing is a curation error -- a title that changed on vatican.va, or a key typed
     // by hand -- and must fail loudly rather than sit unnoticed while its document stays in the
-    // queue. Reconstructs each record's key the way isUnconfirmedCandidate does.
+    // queue. Reconstructs each record's full pageSlug|slug|date key the way
+    // isUnconfirmedCandidate does (issuerId -> pageSlug through POPES), so a row filed under
+    // the wrong pontiff fails too. The other direction: no harvested record is still a
+    // candidate, which is what the queue being closed means.
     const all = readdirSync('data/documents').filter((f) => f.endsWith('.json'))
       .flatMap((f) => JSON.parse(readFileSync(`data/documents/${f}`, 'utf8')) as DocumentRecord[]);
-    const bySlugDate = new Set(all.map((d) => `${slugify(d.incipit ?? d.title)}|${d.date}`));
+    const pageSlugOf = new Map(POPES.map((p) => [p.issuerId, p.pageSlug]));
+    const byKey = new Set(all.map((d) =>
+      `${pageSlugOf.get(d.issuerId)}|${slugify(d.incipit ?? d.title)}|${d.date}`));
     for (const [name, table] of [...tables.map(([n, t]) => [n, t] as const),
       ['adjudications', CANDIDATE_ADJUDICATIONS] as const]) {
       for (const key of Object.keys(table)) {
-        const [, slug, date] = key.split('|');
-        expect(bySlugDate.has(`${slug}|${date}`), `${name} row matches no record: ${key}`)
-          .toBe(true);
+        expect(byKey.has(key), `${name} row matches no record: ${key}`).toBe(true);
       }
     }
+    const unread = all.filter(isUnconfirmedCandidate).map((d) => d.id);
+    expect(unread, 'records still awaiting adjudication').toEqual([]);
   });
 
   it('names the act and quotes the document for every adjudication', () => {
