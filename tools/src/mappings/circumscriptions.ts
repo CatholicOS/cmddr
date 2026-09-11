@@ -2896,7 +2896,9 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
   // or no verb at all where the page drops or cuts a line of its heading) and were read from
   // the body. Every argumentum is verbatim as extracted, the page's own misprints kept and
   // named in the note ('ARCHIIODECESI', 'VOCTORIENSIS', 'BYZANTIBI', 'BELLOMONTESI',
-  // 'CONSTITUTITUR', 'CONTITUITUR', 'CONSTITUIITUR'...); one row ('Vratislaviensis-
+  // 'CONSTITUTITUR', 'CONTITUITUR', 'CONSTITUIITUR'...), the audit regex learning the
+  // misprinted and verbless wordings under Ruling 13 and exempting 'Sreveportuensis', whose
+  // page drops the clause naming the act, under Ruling 14; one row ('Vratislaviensis-
   // Gedanensis') drops the body's opening quotation mark the reader carried into the
   // heading, and its note says so.
   'john-paul-ii|batteriensis|1978-10-28': {
@@ -6333,16 +6335,56 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
  * whereas bare TOLLITUR was rejected because it also hits two province erections
  * ('Tananarivensis', 'Tunquensis').
  *
- * `IUNGITUR` (Ruling 10) is the verb Paul VI's 'Spalatensis-Macarscensis' union leads
+ * `\bIUNGITUR` (Ruling 10) is the verb Paul VI's 'Spalatensis-Macarscensis' union leads
  * with; it also appears in three John XXIII title-change adjudications ('APPELLATIO
- * IUNGITUR'), which this regex does not audit.
+ * IUNGITUR'), which this regex does not audit. The word boundary was added (Ruling 13)
+ * because bare IUNGITUR also matched inside SEIUNGITUR -- a false hit on John Paul II's
+ * 'Mobilensis' province erection and Paul VI's 'Nuakchottensis' adjudication.
+ *
+ * `CONSTITUTITUR`, `CONTITUITUR` and `CONSTITUIITUR` (Ruling 13) are three more page
+ * misprints of CONSTITUITUR -- John Paul II's 'Shimogaënsis' of 1988, 'Asansolensis' of
+ * 1997 and 'Samarindaënsis' of 2003 -- kept verbatim in their rows, each hitting only its
+ * own row across all four tables.
+ *
+ * `INSTITUITUR`, `NOVA ECCLESIA\b`, `NOVA PROVINCIA ECCLESIASTICA` and `ARCHIEPISCOPATUS
+ * MAIOR` (Ruling 13) are the wordings of four John Paul II erections stated with another
+ * verb or with no verb at all ('Bontocensis-Lavagensis' NOVUS INSTITUITUR VICARIATUS,
+ * 'Tunduruensis-Masasiensis' NOVA ECCLESIA, 'Overriensis' NOVA PROVINCIA ECCLESIASTICA,
+ * 'Ernakulamensis-Angamaliensis' ARCHIEPISCOPATUS MAIOR); every hit measured across all
+ * four tables is an erection row (NOVA ECCLESIA five, NOVA PROVINCIA ECCLESIASTICA
+ * forty-five, ARCHIEPISCOPATUS MAIOR also Benedict XVI's 'Fagarasiensis', filed as an
+ * erection under Ruling 9), the one exception being INSTITUITUR in the Jerez chapter
+ * adjudication, which this regex does not audit.
+ *
+ * `ATTOLLUNTUR`, `FORMA DIOECESIS IMPONITUR` and `AD CANONICUM GRADUM` (Ruling 13) are the
+ * word orders three John Paul II elevations use ('Guiratingensis et aliarum' AD DIOECESIUM
+ * ATTOLLUNTUR GRADUM, 'Iammuensis-Srinagarensis' IURIDICIALIS FORMA DIOECESIS IMPONITUR,
+ * 'Izabalensis' AD CANONICUM GRADUM VICARIATUS APOSTOLICI TOLLITUR); each hits only its own
+ * row, and bare TOLLITUR stays rejected.
+ *
+ * `IN UNAM .{0,20}DIOECESIM REDIGUNTUR` (Ruling 13) is how John Paul II's 'Viterbiensis'
+ * states the extinctive union of five sees into one; it hits only that row.
  */
 export const ERECTION_IDIOMS =
-  /CONDITUR|CONDUNTUR|ERIGITUR|ERIGUNTUR|CONSTITUITUR|CONSTITUUNTUR|EXCITATUR|EFFICITUR|CREATUR|NOVA FIT|FORMAM REDIG|FORMATUR|FORMANTUR|COOSTITUITUR|CONSTI\. TUITUR/i;
+  /CONDITUR|CONDUNTUR|ERIGITUR|ERIGUNTUR|CONSTITUITUR|CONSTITUUNTUR|EXCITATUR|EFFICITUR|CREATUR|NOVA FIT|FORMAM REDIG|FORMATUR|FORMANTUR|COOSTITUITUR|CONSTI\. TUITUR|CONSTITUTITUR|CONTITUITUR|CONSTITUIITUR|INSTITUITUR|NOVA ECCLESIA\b|NOVA PROVINCIA ECCLESIASTICA|ARCHIEPISCOPATUS MAIOR/i;
 export const ELEVATION_IDIOMS =
-  /EVEHITUR|EVEHUNTUR|ELEVATUR|PERDUCITUR|ATTOLLITUR|ATTOLITUR|EXTOLLITUR|AD (?:GRADUM|DIGNITATEM|EPARCHIAE|APOSTOLICI)|IN ORDINEM (?:ARCHI)?DIOECESIUM|DIOECESIUM ORDINEM|IN FORMAM DIOECESIS|AD DIOECESIS DIGNITATEM/i;
+  /EVEHITUR|EVEHUNTUR|ELEVATUR|PERDUCITUR|ATTOLLITUR|ATTOLITUR|EXTOLLITUR|AD (?:GRADUM|DIGNITATEM|EPARCHIAE|APOSTOLICI)|IN ORDINEM (?:ARCHI)?DIOECESIUM|DIOECESIUM ORDINEM|IN FORMAM DIOECESIS|AD DIOECESIS DIGNITATEM|ATTOLLUNTUR|FORMA DIOECESIS IMPONITUR|AD CANONICUM GRADUM/i;
 export const UNION_IDIOMS =
-  /DE UNIONE|UNIONE|UNIUNTUR|UNITUR|CONIUNG|AEQUE PRINCIPALITER|DISMEMBRATIONE|IUNGITUR/i;
+  /DE UNIONE|UNIONE|UNIUNTUR|UNITUR|CONIUNG|AEQUE PRINCIPALITER|DISMEMBRATIONE|\bIUNGITUR|IN UNAM .{0,20}DIOECESIM REDIGUNTUR/i;
+
+/**
+ * Rows the idiom audit may not hold to a regex, because the page itself prints no act. One
+ * key (Ruling 14): John Paul II's 'Sreveportuensis' of 1986-06-16, whose vatican.va page
+ * drops the line of its heading that names the act, printing only 'NONNULLIS DISTRACTIS
+ * TERRITORIIS A DIOECESI' and 'ALEXANDRINA-SREVEPORTUENSIS APPELLANDA' around the gap (the
+ * cached HTML confirms it). The row keeps the argumentum verbatim as printed, and its note
+ * quotes the body's erecting clause ('...novam dioecesim Sreveportuensem appellandam
+ * condimus...'). The audit still requires the argumentum to be non-empty, and a key listed
+ * here must exist in one of the four tables, so a stale exemption fails loudly.
+ */
+export const ARGUMENTUM_AUDIT_EXEMPTIONS: ReadonlySet<string> = new Set([
+  'john-paul-ii|sreveportuensis|1986-06-16',
+]);
 
 export interface CircumscriptionRow {
   /** The document's own argumentum, verbatim: the act in its own words. */
@@ -7129,7 +7171,7 @@ export const CIRCUMSCRIPTION_ELEVATIONS: Record<string, CircumscriptionRow> = {
   // toponym stopped the reader. Three state the act in a form the elevation idioms do not
   // list ('Guiratingensis et aliarum' AD DIOECESIUM ATTOLLUNTUR GRADUM, 'Iammuensis-
   // Srinagarensis' IURIDICIALIS FORMA DIOECESIS IMPONITUR, 'Izabalensis' AD CANONICUM GRADUM
-  // VICARIATUS APOSTOLICI TOLLITUR) and are left for the controller's ruling.
+  // VICARIATUS APOSTOLICI TOLLITUR); the audit regex lists those word orders under Ruling 13.
   'john-paul-ii|trudensis|1979-03-28': {
     argumentum:
       'TRUDENSIS* VICARIATUS APOSTOLICUS NORVEGIAE CENTRALIS AD GRADUM PRAELATURAE ERIGITUR, '
@@ -7813,9 +7855,9 @@ export const CIRCUMSCRIPTION_UNIONS: Record<string, CircumscriptionRow> = {
   // unite existing sees (1983-09-13 through 1991-12-24). Three join sees aeque principaliter
   // under one bishop ('Interamnensis-Narniensis et Amerina', 'Pampilonensis-Tudelensis',
   // 'Terulensis-Albarraciensis'); 'Viterbiensis' merges four dioceses and an abbey into
-  // Viterbo by extinctive union, stated as IN UNAM DIOECESIM REDIGUNTUR, which no union idiom
-  // lists and is left for the controller's ruling; 'Telsensis' merges the Prelature of
-  // Klaipeda into Telsiai by extinctive union.
+  // Viterbo by extinctive union, stated as IN UNAM DIOECESIM REDIGUNTUR, which joined the
+  // union idioms under Ruling 13; 'Telsensis' merges the Prelature of Klaipeda into Telsiai
+  // by extinctive union.
   'john-paul-ii|interamnensis-narniensis-et-amerina|1983-09-13': {
     argumentum:
       'INTERAMNENSIS - NARNIENSIS ET AMERINA* DIOECESES INTERAMNENSIS NARNIENSIS ET AMERINA '

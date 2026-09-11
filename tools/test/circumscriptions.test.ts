@@ -4,7 +4,7 @@ import { slugify } from '../src/slug.js';
 import {
   CIRCUMSCRIPTION_ERECTIONS, CIRCUMSCRIPTION_ELEVATIONS, CIRCUMSCRIPTION_UNIONS,
   CANDIDATE_ADJUDICATIONS, ERECTION_IDIOMS, ELEVATION_IDIOMS, UNION_IDIOMS,
-  keywordsFor, isUnconfirmedCandidate,
+  ARGUMENTUM_AUDIT_EXEMPTIONS, keywordsFor, isUnconfirmedCandidate,
 } from '../src/mappings/index.js';
 import type { DocumentRecord, HarvestItem } from '../src/types.js';
 
@@ -38,8 +38,21 @@ describe('the circumscription tables', () => {
     for (const [name, table, idioms] of tables) {
       for (const [key, row] of Object.entries(table)) {
         expect(row.argumentum.trim(), `${name} ${key}`).not.toBe('');
+        // A page that prints no act at all (Ruling 14) is exempt from the regex, never from
+        // being quoted: the row's note carries the body's operative clause instead.
+        if (ARGUMENTUM_AUDIT_EXEMPTIONS.has(key)) continue;
         expect(row.argumentum, `${name} ${key}`).toMatch(idioms);
       }
+    }
+  });
+
+  it('exempts from the idiom audit only keys that sit in one of the four tables', () => {
+    // A stale exemption -- a key retyped, or a row moved or removed -- must fail loudly
+    // rather than silently exempt nothing.
+    const all = new Set([...tables.map(([, t]) => t), CANDIDATE_ADJUDICATIONS]
+      .flatMap((t) => Object.keys(t)));
+    for (const key of ARGUMENTUM_AUDIT_EXEMPTIONS) {
+      expect(all.has(key), `exempted key matches no row: ${key}`).toBe(true);
     }
   });
 
