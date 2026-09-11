@@ -44,7 +44,7 @@
     "id": "mag:benedict-xv/consilium-a-decessore-1914",
     "title": "Consilium a Decessore con il quale la Commissione per la revisione della versione «Vulgata » dei Libri Sacri viene onorata del titolo di « Pontificia »",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xv",
     "issuerType": "pope",
     "date": "1914-11-23",
@@ -58,13 +58,16 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Consilium a Decessore",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:benedict-xv/non-multo-post-1914",
     "title": "Non multo post con il quale vengono impartite nuove regole relative agli studi ed agli esami di dottrina che gli alunni dovranno sostenere per conseguire la laurea di dottore e l’iscrizione fra i membri dell’Accademia romana di San Tommaso d’Aquino",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xv",
     "issuerType": "pope",
     "date": "1914-12-31",
@@ -78,6 +81,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Non multo post",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -131,7 +137,7 @@
     "id": "mag:benedict-xv/quandoquidem-in-iis-1915",
     "title": "Quandoquidem in iis con il quale si ribadisce che dovranno essere sottoposti all’esame della Suprema Congregazione del Santo Ufficio soltanto i documenti relativi alle Indulgenze che siano concesse ai fedeli di tutto il mondo cattolico",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xv",
     "issuerType": "pope",
     "date": "1915-09-16",
@@ -145,13 +151,16 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Quandoquidem in iis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:benedict-xv/seminaria-clericorum-1915",
     "title": "Seminaria Clericorum con il quale si dispone la nascita della Sacra Congregazione dei Seminari e delle Università degli studi",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xv",
     "issuerType": "pope",
     "date": "1915-11-04",
@@ -165,6 +174,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Seminaria Clericorum",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -285,7 +297,7 @@
     "id": "mag:benedict-xv/alloquentes-proxime-1917",
     "title": "Alloquentes Proxime con il quale si decide la fusione delle Sacre Congregazioni dell’Indice e del Sant’Uffizio e affidata alla Penitenzieria Apostolica la materia riguardante le Indulgenze",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xv",
     "issuerType": "pope",
     "date": "1917-03-25",
@@ -299,13 +311,16 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Alloquentes Proxime",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:benedict-xv/nobilissimam-sacrarum-1917",
     "title": "Nobilissimam Sacrarum con il quale si dispone l’assegnazione dell’Almo Collegio Capranicense di Roma alla Patriarcale Basilica Liberiana",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xv",
     "issuerType": "pope",
     "date": "1917-04-08",
@@ -319,6 +334,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Nobilissimam Sacrarum",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -344,7 +362,7 @@
     "id": "mag:benedict-xv/dei-providentis-1917",
     "title": "Dei Providentis con il quale viene istituita la Sacra Congregazione per la Chiesa Orientale",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xv",
     "issuerType": "pope",
     "date": "1917-05-01",
@@ -358,6 +376,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Dei Providentis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -425,7 +446,7 @@
     "id": "mag:benedict-xv/cum-iuris-canonici-1917",
     "title": "Cum Iuris Canonici con il quale viene istituita una Commissione di Cardinali alla quale spetta il diritto di pronunciarsi sull’interpretazione autentica dei canoni",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xv",
     "issuerType": "pope",
     "date": "1917-09-15",
@@ -439,13 +460,16 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Cum Iuris Canonici",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:benedict-xv/orientis-catholici-1917",
     "title": "Orientis Catholici con il quale viene istituito in Roma un Istituto culturale pontificio per l’approfondimento e lo sviluppo degli studi orientali",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xv",
     "issuerType": "pope",
     "date": "1917-10-15",
@@ -459,13 +483,16 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Orientis Catholici",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:benedict-xv/quartus-iam-annus-1918",
     "title": "Quartus Iam Annus con il quale viene disposto che in tutto il mondo il 29 giugno 1918, festa dei Santi Pietro e Paolo, i sacerdoti celebrino la Messa chiedendo espressamente la pace",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xv",
     "issuerType": "pope",
     "date": "1918-05-09",
@@ -479,6 +506,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Quartus Iam Annus",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -1064,7 +1094,7 @@
     "id": "mag:benedict-xv/bonum-sane-1920",
     "title": "Bonum Sane, sulla devozione a San Giuseppe da mezzo secolo Patrono della Chiesa cattolica",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xv",
     "issuerType": "pope",
     "date": "1920-07-25",
@@ -1078,6 +1108,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Bonum Sane",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {

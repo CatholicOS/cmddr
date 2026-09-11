@@ -3,7 +3,7 @@
     "id": "mag:pius-xi/cum-proxime-1922",
     "title": "Motu Proprio Cum Proxime, sulle nuove norme a proposito delle riunioni dei cardinali chiamati ad eleggere il nuovo Papa",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xi",
     "issuerType": "pope",
     "date": "1922-03-01",
@@ -16,6 +16,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Cum Proxime",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -40,7 +43,7 @@
     "id": "mag:pius-xi/romani-pontificis-1922",
     "title": "Motu Proprio Romani Pontificis, sui privilegi concessi ai Conclavisti",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xi",
     "issuerType": "pope",
     "date": "1922-03-12",
@@ -53,6 +56,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Romani Pontificis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -96,7 +102,7 @@
     "id": "mag:pius-xi/romanorum-pontificum-1922",
     "title": "Motu Proprio Romanorum Pontificum, sulla Pontificia Opera della Propagazione della fede",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xi",
     "issuerType": "pope",
     "date": "1922-05-03",
@@ -109,6 +115,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Romanorum Pontificum",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -232,7 +241,7 @@
     "id": "mag:pius-xi/ad-musicae-sacrae-1922",
     "title": "Motu Proprio Ad Musicae Sacrae, sul consalidamento del Pontificio Instituto di Musica Sacra",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xi",
     "issuerType": "pope",
     "date": "1922-11-22",
@@ -245,6 +254,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Ad Musicae Sacrae",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -472,7 +484,7 @@
     "id": "mag:pius-xi/post-datam-1923",
     "title": "Motu Proprio Post datam, sulle facoltà quinquennali degli Ordinari",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xi",
     "issuerType": "pope",
     "date": "1923-04-20",
@@ -485,6 +497,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Post datam",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -833,7 +848,7 @@
     "id": "mag:pius-xi/orbem-catholicum-1923",
     "title": "Motu Proprio Orbem catholicum, sulla sistemazione della dottrina cattolica per tutta la comunità cristiana",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xi",
     "issuerType": "pope",
     "date": "1923-06-29",
@@ -846,6 +861,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Orbem catholicum",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -991,7 +1009,7 @@
     "id": "mag:pius-xi/latinarum-litterarum-1924",
     "title": "Motu Proprio Latinarum litterarum",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xi",
     "issuerType": "pope",
     "date": "1924-10-20",
@@ -1004,6 +1022,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Latinarum litterarum",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -1029,7 +1050,7 @@
     "id": "mag:pius-xi/i-primitivi-cemeteri-1925",
     "title": "Motu Proprio I primitivi cemeteri che istituisce il Pontificio Istituto di Archeologia Cristiana",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xi",
     "issuerType": "pope",
     "date": "1925-12-11",
@@ -1042,6 +1063,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "I primitivi cemeteri",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -1542,7 +1566,7 @@
     "id": "mag:pius-xi/quod-maxime-1928",
     "title": "Motu Proprio Quod Maxime",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xi",
     "issuerType": "pope",
     "date": "1928-09-30",
@@ -1555,6 +1579,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Quod Maxime",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -2183,6 +2210,27 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:pius-xi/apostolic-letter-1929-06-07",
+    "title": "Motu Proprio Di nostro moto proprio che contiene la Legge Fondamentale della Città del Vaticano",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-06-07",
+    "source": {
+      "url": "https://www.vatican.va/content/pius-xi/it/motu_proprio/documents/hf_p-xi_motu-proprio_19290607_moto-proprio.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "motu-proprio"
+    ],
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
     "id": "mag:pius-xi/letter-1929-06-07",
     "title": "Lettera al Cardinale Pietro Gasparri, Segretario di Stato, sulla ratifica dei Patti Lateranensi",
     "idStatus": "provisional",
@@ -2199,24 +2247,6 @@
       "retrieved": "2026-09-07"
     },
     "sourceGenreLabel": "letters"
-  },
-  {
-    "id": "mag:pius-xi/motu-proprio-1929-06-07",
-    "title": "Motu Proprio Di nostro moto proprio che contiene la Legge Fondamentale della Città del Vaticano",
-    "idStatus": "provisional",
-    "genre": "motu-proprio",
-    "issuerId": "rp:pius-xi",
-    "issuerType": "pope",
-    "date": "1929-06-07",
-    "source": {
-      "url": "https://www.vatican.va/content/pius-xi/it/motu_proprio/documents/hf_p-xi_motu-proprio_19290607_moto-proprio.html",
-      "shelf": "motu_proprio",
-      "languages": [
-        "IT"
-      ],
-      "retrieved": "2026-09-07"
-    },
-    "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:pius-xi/edocet-nos-1929-06-08",
@@ -2336,7 +2366,7 @@
     "id": "mag:pius-xi/decessor-noster-1929",
     "title": "Motu Proprio Decessor Noster",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xi",
     "issuerType": "pope",
     "date": "1929-06-24",
@@ -2349,13 +2379,16 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Decessor Noster",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:pius-xi/vix-ad-summi-pontificatus-1929",
     "title": "Motu Proprio Vix ad summi Pontificatus",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xi",
     "issuerType": "pope",
     "date": "1929-06-24",
@@ -2368,6 +2401,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Vix ad summi Pontificatus",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -2500,7 +2536,7 @@
     "id": "mag:pius-xi/gia-da-qualche-tempo-1930",
     "title": "Motu Proprio Già da qualche tempo con il quale viene istituita la «Sezione storica» della Sacra Congregazione dei Riti",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xi",
     "issuerType": "pope",
     "date": "1930-02-06",
@@ -2513,6 +2549,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Già da qualche tempo",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -2948,7 +2987,7 @@
     "id": "mag:pius-xi/in-multis-solaciis-1936",
     "title": "Motu proprio In multis solaciis con il quale conferisce il nome di «Pontificia Academia Scientiarum» all'«Accademia dei Lincei Filosofi»",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xi",
     "issuerType": "pope",
     "date": "1936-10-28",
@@ -2962,6 +3001,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "In multis solaciis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {

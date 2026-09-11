@@ -160,10 +160,10 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:john-paul-ii/motu-proprio-1978-12-13",
+    "id": "mag:john-paul-ii/apostolic-letter-1978-12-13",
     "title": "Lettera Apostolica « Motu Proprio » con la quale il Santo Padre decreta l'erezione del « Notre Dame of Jerusalem Center »",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1978-12-13",
@@ -175,6 +175,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -3518,7 +3521,7 @@
     "id": "mag:john-paul-ii/familia-a-deo-instituta-1981",
     "title": "Familia a Deo Instituta",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1981-05-09",
@@ -3534,6 +3537,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Familia a Deo Instituta",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -4158,7 +4164,7 @@
     "id": "mag:john-paul-ii/beata-hedvigis-1981",
     "title": "Beata Hedvigis",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1981-12-08",
@@ -4171,6 +4177,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Beata Hedvigis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -5362,7 +5371,7 @@
     "id": "mag:john-paul-ii/tredecim-anni-1982",
     "title": "Tredecim Anni",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1982-08-06",
@@ -5384,6 +5393,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Tredecim Anni",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -6958,7 +6970,7 @@
     "id": "mag:john-paul-ii/recognito-iuris-canonici-codice-1984",
     "title": "Recognito Iuris Canonici Codice",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1984-01-02",
@@ -6973,6 +6985,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Recognito Iuris Canonici Codice",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -8747,7 +8762,7 @@
     "id": "mag:john-paul-ii/dolentium-hominum-1985",
     "title": "Dolentium Hominum",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1985-02-11",
@@ -8764,6 +8779,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Dolentium Hominum",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -12206,7 +12224,7 @@
     "id": "mag:john-paul-ii/quo-civium-iura-1987",
     "title": "Quo Civium Iura",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1987-11-21",
@@ -12220,6 +12238,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Quo Civium Iura",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -12332,7 +12353,7 @@
     "id": "mag:john-paul-ii/sollicita-cura-motu-proprio-1987",
     "title": "Sollicita Cura Motu Proprio",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1987-12-26",
@@ -12346,6 +12367,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Sollicita Cura Motu Proprio",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -13165,7 +13189,7 @@
     "id": "mag:john-paul-ii/decessores-nostri-1988",
     "title": "Decessores Nostri",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1988-06-18",
@@ -13181,6 +13205,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Decessores Nostri",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -13300,7 +13327,7 @@
     "id": "mag:john-paul-ii/iusti-iudicis-1988",
     "title": "Iusti Iudicis",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1988-06-28",
@@ -13314,6 +13341,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Iusti Iudicis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -13372,7 +13402,7 @@
     "id": "mag:john-paul-ii/ecclesia-dei-1988",
     "title": "Ecclesia Dei",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1988-07-02",
@@ -13391,6 +13421,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Ecclesia Dei",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -14374,10 +14407,10 @@
     "sourceGenreLabel": "apost_exhortations"
   },
   {
-    "id": "mag:john-paul-ii/motu-proprio-1989-01-01",
+    "id": "mag:john-paul-ii/apostolic-letter-1989-01-01",
     "title": "Lettera apostolica in forma di «Motu Proprio» con la quale viene istituito l'Ufficio del Lavoro della Sede Apostolica (ULSA)",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1989-01-01",
@@ -14389,6 +14422,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -14884,10 +14920,10 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:john-paul-ii/motu-proprio-1989-07-01",
+    "id": "mag:john-paul-ii/apostolic-letter-1989-07-01",
     "title": "Lettera apostolica in forma di «Motu Proprio» con la quale si dà nuovo nome e nuova configurazione alla «Pontificia Opera per la preservazione della Fede e per la provvista di nuove Chiese in Roma»",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1989-07-01",
@@ -14899,6 +14935,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -19224,7 +19263,7 @@
     "id": "mag:john-paul-ii/la-preoccupazione-1992",
     "title": "La preoccupazione - Lettera apostolica in forma di «Motu Proprio» sulla nuova regolamentazione del sistema pensionistico",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1992-09-08",
@@ -19237,6 +19276,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "La preoccupazione",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -19739,7 +19781,7 @@
     "id": "mag:john-paul-ii/europae-orientalis-1993",
     "title": "Europae Orientalis",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1993-01-15",
@@ -19754,6 +19796,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Europae Orientalis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -19965,7 +20010,7 @@
     "id": "mag:john-paul-ii/inde-a-pontificatus-1993",
     "title": "Inde a Pontificatus",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1993-03-25",
@@ -19983,6 +20028,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Inde a Pontificatus",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -21361,6 +21409,9 @@
       ]
     },
     "incipit": "Socialium Scientiarum",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -21449,7 +21500,7 @@
     "id": "mag:john-paul-ii/vitae-mysterium-1994",
     "title": "Vitae Mysterium",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1994-02-11",
@@ -21464,6 +21515,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Vitae Mysterium",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -22640,7 +22694,7 @@
     "id": "mag:john-paul-ii/la-sollecitudine-1994",
     "title": "La sollecitudine - Lettera Apostolica 'Motu Proprio' con la quale viene promulgato lo Statuto definitivo dell'Ufficio del Lavoro della Sede Apostolica",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1994-09-30",
@@ -22653,6 +22707,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "La sollecitudine",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -26963,7 +27020,7 @@
     "id": "mag:john-paul-ii/stella-maris-1997",
     "title": "Stella Maris",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1997-01-31",
@@ -26982,6 +27039,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Stella Maris",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -29123,7 +29183,7 @@
     "id": "mag:john-paul-ii/ad-tuendam-fidem-1998",
     "title": "Ad Tuendam Fidem",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1998-05-18",
@@ -29143,13 +29203,16 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Ad Tuendam Fidem",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:john-paul-ii/apostolos-suos-1998",
     "title": "Apostolos Suos",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1998-05-21",
@@ -29169,6 +29232,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Apostolos Suos",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -30697,7 +30763,7 @@
     "id": "mag:john-paul-ii/sacra-liturgia-1999",
     "title": "Sacra liturgia - Lettera Apostolica in forma di Motu Proprio",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1999-05-23",
@@ -30710,6 +30776,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Sacra liturgia",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -31022,7 +31091,7 @@
     "id": "mag:john-paul-ii/spes-aedificandi-1999",
     "title": "Spes Aedificandi - Proclamazione delle Compatrone d'Europa",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1999-10-01",
@@ -31041,13 +31110,16 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Spes Aedificandi",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:john-paul-ii/nuntiaturae-apostolicae-1999",
     "title": "Nuntiaturae apostolicae - Lettera Apostolica in forma di Motu Proprio",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "1999-10-02",
@@ -31060,6 +31132,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Nuntiaturae apostolicae",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -32484,7 +32559,7 @@
     "id": "mag:john-paul-ii/e-sancti-thomae-mori-2000",
     "title": "E sancti Thomae Mori - Lettera Apostolica in forma di Motu Proprio",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "2000-10-31",
@@ -32503,6 +32578,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "E sancti Thomae Mori",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -32613,10 +32691,10 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:john-paul-ii/motu-proprio-2000-11-26",
+    "id": "mag:john-paul-ii/apostolic-letter-2000-11-26",
     "title": "La nuova Legge fondamentale dello Stato della Città del Vaticano",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "2000-11-26",
@@ -32630,6 +32708,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -33393,7 +33474,7 @@
     "id": "mag:john-paul-ii/sacramentorum-sanctitatis-tutela-2001",
     "title": "Sacramentorum sanctitatis tutela - Lettera Apostolica in forma di Motu Proprio con la quale vengono promulgate le norme circa i delitti più gravi riservati alla Congregazione per la Dottrina della Fede",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "2001-04-30",
@@ -33410,6 +33491,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Sacramentorum sanctitatis tutela",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -34575,7 +34659,7 @@
     "id": "mag:john-paul-ii/misericordia-dei-2002",
     "title": "Lettera Apostolica in forma di Motu proprio Misericordia Dei su alcuni aspetti della celebrazione del Sacramento della Penitenza",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "2002-04-07",
@@ -34597,6 +34681,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Misericordia Dei",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -36876,10 +36963,10 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:john-paul-ii/motu-proprio-2003-12-15",
+    "id": "mag:john-paul-ii/apostolic-letter-2003-12-15",
     "title": "Motu Proprio sulla nuova regolamentazione del Sistema pensionistico",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "2003-12-15",
@@ -36891,6 +36978,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -37592,10 +37682,10 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:john-paul-ii/motu-proprio-2004-11-26",
+    "id": "mag:john-paul-ii/apostolic-letter-2004-11-26",
     "title": "Lettera apostolica in forma di Motu Proprio con la quale si affida alla Congregazione dei Legionari di Cristo la cura e gestione del Pontificio Istituto Notre Dame of Jerusalem Center, presso la città di Gerusalemme",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-paul-ii",
     "issuerType": "pope",
     "date": "2004-11-26",
@@ -37611,6 +37701,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {

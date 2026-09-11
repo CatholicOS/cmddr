@@ -274,13 +274,16 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:francis-i/motu-proprio-2013-08-08",
+    "id": "mag:francis-i/apostolic-letter-2013-08-08",
     "title": "Lettera Apostolica in forma di «Motu Proprio» per la prevenzione ed il contrasto del riciclaggio, del finanziamento del terrorismo e della proliferazione di armi di distruzione di massa",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2013-08-08",
@@ -295,6 +298,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -536,6 +542,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -743,6 +752,9 @@
       ]
     },
     "incipit": "Fidelis dispensator et prudens",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -882,7 +894,7 @@
     "id": "mag:francis-i/trasferimento-della-sezione-ordinaria-dell-amministrazione-del-patrimonio-della-sede-apostolica-2014",
     "title": "Lettera Apostolica in forma di Motu Proprio - Trasferimento della Sezione Ordinaria dell’Amministrazione del Patrimonio della Sede Apostolica alla Segreteria per l’Economia",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2014-07-08",
@@ -899,6 +911,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Trasferimento della Sezione Ordinaria dell’Amministrazione del Patrimonio della Sede Apostolica",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -1160,7 +1175,7 @@
     "id": "mag:francis-i/statuti-dei-nuovi-organismi-economici-2015",
     "title": "Statuti dei nuovi Organismi Economici",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2015-02-22",
@@ -1173,6 +1188,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Statuti dei nuovi Organismi Economici",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -1492,6 +1510,9 @@
       ]
     },
     "incipit": "L'attuale contesto comunicativo",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -1544,6 +1565,9 @@
       ]
     },
     "incipit": "Mitis et misericors Iesus",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -1576,6 +1600,9 @@
       ]
     },
     "incipit": "Mitis Iudex Dominus Iesus",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -1852,7 +1879,33 @@
       ]
     },
     "incipit": "De concordia inter Codices",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2016-06-04",
+    "title": "Statuto del Dicastero per i Laici, la Famiglia e la Vita",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-06-04",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco_20160604_statuto-dicastero-famiglia-laici-vita.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "FR",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "motu-proprio"
+    ],
+    "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:francis-i/come-una-madre-amorevole-2016",
@@ -1876,27 +1929,10 @@
       ]
     },
     "incipit": "Come una madre amorevole",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
-  },
-  {
-    "id": "mag:francis-i/motu-proprio-2016-06-04",
-    "title": "Statuto del Dicastero per i Laici, la Famiglia e la Vita",
-    "idStatus": "provisional",
-    "genre": "motu-proprio",
-    "issuerId": "rp:francis-i",
-    "issuerType": "pope",
-    "date": "2016-06-04",
-    "source": {
-      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco_20160604_statuto-dicastero-famiglia-laici-vita.html",
-      "shelf": "motu_proprio",
-      "languages": [
-        "EN",
-        "FR",
-        "IT"
-      ],
-      "retrieved": "2026-09-07"
-    },
-    "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:francis-i/vultum-dei-quaerere-2016",
@@ -1949,6 +1985,9 @@
       ]
     },
     "incipit": "I beni temporali",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -1999,10 +2038,13 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:francis-i/apostolic-letter-2016-08-17",
+    "id": "mag:francis-i/apostolic-letter-2016-08-17-1",
     "title": "Lettera Apostolica in forma di 'Motu Proprio' con la quale si istituisce il Dicastero per il Servizio dello Sviluppo Umano Integrale",
     "idStatus": "provisional",
     "genre": "apostolic-letter",
@@ -2027,13 +2069,16 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:francis-i/motu-proprio-2016-08-17",
+    "id": "mag:francis-i/apostolic-letter-2016-08-17-2",
     "title": "Statuto del Dicastero per il Servizio dello Sviluppo Umano Integrale",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2016-08-17",
@@ -2047,6 +2092,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -2071,7 +2119,7 @@
     "id": "mag:francis-i/statuto-della-segreteria-per-la-comunicazione-2016",
     "title": "Statuto della Segreteria per la Comunicazione",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2016-09-06",
@@ -2088,13 +2136,16 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Statuto della Segreteria per la Comunicazione",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:francis-i/statuto-della-pontificia-accademia-per-la-vita-2016",
     "title": "Statuto della Pontificia Accademia per la Vita",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2016-10-18",
@@ -2109,6 +2160,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Statuto della Pontificia Accademia per la Vita",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -2165,6 +2219,9 @@
       ]
     },
     "incipit": "Sanctuarium in Ecclesia",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2192,6 +2249,9 @@
       ]
     },
     "incipit": "Maiorem hac dilectionem sull’offerta della vita",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2218,6 +2278,9 @@
       ]
     },
     "incipit": "Magnum Principium",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2245,6 +2308,9 @@
       ]
     },
     "incipit": "Summa familiae cura",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2303,6 +2369,9 @@
       ]
     },
     "incipit": "Imparare a congedarsi",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2367,10 +2436,10 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:francis-i/motu-proprio-2018-11-25",
+    "id": "mag:francis-i/apostolic-letter-2018-11-25",
     "title": "Legge sul Governo dello Stato della Città del Vaticano",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2018-11-25",
@@ -2382,6 +2451,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -2404,6 +2476,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2428,13 +2503,16 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:francis-i/statuto-dell-ufficio-del-revisore-generale-2019",
     "title": "Statuto dell'Ufficio del Revisore Generale",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2019-01-21",
@@ -2447,6 +2525,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Statuto dell'Ufficio del Revisore Generale",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -2475,6 +2556,9 @@
       ]
     },
     "incipit": "Communis vita",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2528,6 +2612,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2558,6 +2645,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2592,6 +2682,9 @@
       ]
     },
     "incipit": "Aperuit illis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2615,6 +2708,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2691,6 +2787,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2723,10 +2822,10 @@
     "sourceGenreLabel": "apost_exhortations"
   },
   {
-    "id": "mag:francis-i/motu-proprio-2020-03-16",
+    "id": "mag:francis-i/apostolic-letter-2020-03-16",
     "title": "Promulgazione della Legge N. CCCLI sull’ordinamento giudiziario dello Stato della Città del Vaticano",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2020-03-16",
@@ -2738,6 +2837,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -2762,6 +2864,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2784,6 +2889,9 @@
       ]
     },
     "incipit": "Norme e Tutela giurisdizionale",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2897,6 +3005,9 @@
       ]
     },
     "incipit": "Authenticum charismatis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2921,6 +3032,9 @@
       ]
     },
     "incipit": "Ab initio",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -2976,6 +3090,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3005,6 +3122,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3027,6 +3147,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3051,6 +3174,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3101,6 +3227,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3142,6 +3271,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3176,6 +3308,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3230,6 +3365,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3270,6 +3408,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3319,6 +3460,9 @@
       ]
     },
     "incipit": "Competentias quasdam decernere",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3343,6 +3487,9 @@
       ]
     },
     "incipit": "Fidem servare",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3397,6 +3544,9 @@
       ]
     },
     "incipit": "Recognitum Librum VI",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3483,13 +3633,16 @@
       ]
     },
     "incipit": "Ad charisma tuendum",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:francis-i/motu-proprio-2022-08-01",
+    "id": "mag:francis-i/apostolic-letter-2022-08-01",
     "title": "Decreto circa la rappresentanza legale piena della II Sezione del Dicastero per l'Evangelizzazione",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2022-08-01",
@@ -3502,13 +3655,16 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
-    "id": "mag:francis-i/motu-proprio-2022-09-03",
+    "id": "mag:francis-i/apostolic-letter-2022-09-03",
     "title": "Decreto per il Sovrano Militare Ordine Ospedaliero di San Giovanni di Gerusalemme, di Rodi e di Malta (S.M.O.M.)",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2022-09-03",
@@ -3522,13 +3678,16 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:francis-i/rescriptum-ex-audientia-ss-mi-2022",
     "title": "RESCRIPTUM EX AUDIENTIA SS.MI sul passaggio di competenza della pastorale del turismo",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2022-09-30",
@@ -3543,6 +3702,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "RESCRIPTUM EX AUDIENTIA SS.MI",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -3567,7 +3729,7 @@
     "id": "mag:francis-i/decreto-relativo-a-caritas-internationalis-2022",
     "title": "Decreto relativo a Caritas Internationalis",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2022-11-21",
@@ -3583,6 +3745,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Decreto relativo a Caritas Internationalis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -3604,6 +3769,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3679,6 +3847,28 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:francis-i/apostolic-letter-2023-01-06",
+    "title": "Decreto del Santo Padre Francesco per l’assegnazione dei settori, degli ambiti e servizi pastorali ai Vescovi Ausiliari della Diocesi di Roma",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20230106-decreto-vescovi-ausiliari.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "motu-proprio"
+    ],
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
     "id": "mag:francis-i/costituzione-apostolica-in-ecclesiarum-communione-2023",
     "title": "Costituzione Apostolica In Ecclesiarum Communione circa l’ordinamento del Vicariato di Roma",
     "idStatus": "minted",
@@ -3701,29 +3891,10 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:francis-i/motu-proprio-2023-01-06",
-    "title": "Decreto del Santo Padre Francesco per l’assegnazione dei settori, degli ambiti e servizi pastorali ai Vescovi Ausiliari della Diocesi di Roma",
-    "idStatus": "provisional",
-    "genre": "motu-proprio",
-    "issuerId": "rp:francis-i",
-    "issuerType": "pope",
-    "date": "2023-01-06",
-    "source": {
-      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20230106-decreto-vescovi-ausiliari.html",
-      "shelf": "motu_proprio",
-      "languages": [
-        "EN",
-        "IT"
-      ],
-      "retrieved": "2026-09-07"
-    },
-    "sourceGenreLabel": "motu_proprio"
-  },
-  {
     "id": "mag:francis-i/regolamento-della-commissione-indipendente-di-vigilanza-del-vicariato-2023",
     "title": "Regolamento della Commissione Indipendente di Vigilanza del Vicariato",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2023-02-14",
@@ -3737,6 +3908,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Regolamento della Commissione Indipendente di Vigilanza del Vicariato",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -3759,6 +3933,9 @@
       ]
     },
     "incipit": "Il Diritto Nativo",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3781,6 +3958,9 @@
       ]
     },
     "incipit": "Vocare peccatores",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3811,6 +3991,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3833,6 +4016,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3854,6 +4040,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -3877,13 +4066,16 @@
       ]
     },
     "incipit": "Iam Pridem",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
     "id": "mag:francis-i/legge-fondamentale-dello-stato-della-citta-del-vaticano-2023",
     "title": "Legge Fondamentale dello Stato della Città del Vaticano",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2023-05-13",
@@ -3896,6 +4088,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Legge Fondamentale dello Stato della Città del Vaticano",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -3926,10 +4121,10 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:francis-i/motu-proprio-2023-07-04",
+    "id": "mag:francis-i/apostolic-letter-2023-07-04",
     "title": "Decreto del Santo Padre Francesco circa le realtà di formazione al Sacerdozio nel territorio della Diocesi di Roma e nomina del Rettore del Pontificio Seminario Romano Maggiore",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2023-07-04",
@@ -3942,13 +4137,16 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
-    "id": "mag:francis-i/motu-proprio-2023-08-01",
+    "id": "mag:francis-i/apostolic-letter-2023-08-01",
     "title": "Decreto di Nomina dei membri del Consiglio Superiore di Coordinamento della Pontificia Università Lateranense",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2023-08-01",
@@ -3961,6 +4159,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -3982,13 +4183,16 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:francis-i/motu-proprio-2023-09-14",
+    "id": "mag:francis-i/apostolic-letter-2023-09-14",
     "title": "Decreto di nomina del Delegato Pontificio presso la Pontificia Università Urbaniana in Roma",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2023-09-14",
@@ -4001,6 +4205,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -4086,6 +4293,9 @@
       ]
     },
     "incipit": "Ad theologiam promovendam",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -4151,7 +4361,29 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:francis-i/apostolic-letter-2024-01-16",
+    "id": "mag:francis-i/apostolic-letter-2024-01-16-1",
+    "title": "Decreto del Sommo Pontefice Francesco relativo alla pubblicazione di provvedimenti normativi nello Stato della Città del Vaticano",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-01-16",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20240116-decreto-provvedim-normativi.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "EN",
+        "IT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "motu-proprio"
+    ],
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/apostolic-letter-2024-01-16-2",
     "title": "Lettera Apostolica in forma di Motu Proprio circa i limiti e le modalità dell'ordinaria amministrazione",
     "idStatus": "provisional",
     "genre": "apostolic-letter",
@@ -4169,25 +4401,6 @@
       "retrieved": "2026-09-07"
     },
     "sourceGenreLabel": "apost_letters"
-  },
-  {
-    "id": "mag:francis-i/motu-proprio-2024-01-16",
-    "title": "Decreto del Sommo Pontefice Francesco relativo alla pubblicazione di provvedimenti normativi nello Stato della Città del Vaticano",
-    "idStatus": "provisional",
-    "genre": "motu-proprio",
-    "issuerId": "rp:francis-i",
-    "issuerType": "pope",
-    "date": "2024-01-16",
-    "source": {
-      "url": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/20240116-decreto-provvedim-normativi.html",
-      "shelf": "motu_proprio",
-      "languages": [
-        "EN",
-        "IT"
-      ],
-      "retrieved": "2026-09-07"
-    },
-    "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:francis-i/alteri-alterius-2024",
@@ -4259,6 +4472,9 @@
       ]
     },
     "incipit": "Munus Tribunalis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -4280,6 +4496,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -4341,6 +4560,9 @@
       ]
     },
     "incipit": "Fide incensus",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -4383,6 +4605,9 @@
       ]
     },
     "incipit": "Fratello Sole",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -4404,10 +4629,10 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:francis-i/motu-proprio-2024-07-01",
+    "id": "mag:francis-i/apostolic-letter-2024-07-01",
     "title": "Statuto della Fondazione Vaticana \"Rete Mondiale di Preghiera del Papa\"",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:francis-i",
     "issuerType": "pope",
     "date": "2024-07-01",
@@ -4420,6 +4645,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -4442,6 +4670,9 @@
       ]
     },
     "incipit": "La vera bellezza",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {

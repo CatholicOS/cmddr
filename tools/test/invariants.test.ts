@@ -5,7 +5,8 @@ import type { DocumentRecord } from '../src/types.js';
 const GENRES: GenreLike[] = [
   { id: 'encyclical', issuerTypes: ['pope'] },
   { id: 'constitution', issuerTypes: ['ecumenical-council'] },
-  { id: 'papal-bull', issuerTypes: ['pope'] },
+  { id: 'papal-bull', issuerTypes: ['pope'], allowedCharacteristics: ['apostolic-constitution', 'dogmatic-definition'] },
+  { id: 'apostolic-letter', issuerTypes: ['pope'], allowedCharacteristics: ['motu-proprio'] },
 ];
 
 const good: DocumentRecord = {
@@ -252,5 +253,63 @@ describe('invariant 21: keywords resolve against the vocabulary', () => {
 
   it('accepts a document with no keywords at all', () => {
     expect(checkDocuments([d], GENRES, keywords).map((x) => x.rule)).not.toContain(21);
+  });
+});
+
+describe('invariant 22: characteristics are allowed by the genre', () => {
+  const d = { ...expansionBase, id: 'mag:leo-xiii/rerum-novarum-1891' };
+  const r = (doc: DocumentRecord) => checkDocuments([doc], GENRES).map((x) => x.rule);
+
+  it('accepts a characteristic the genre row allows', () => {
+    expect(r({ ...d, genre: 'papal-bull', characteristics: ['apostolic-constitution'] }))
+      .not.toContain(22);
+    expect(r({ ...d, genre: 'apostolic-letter', characteristics: ['motu-proprio'] }))
+      .not.toContain(22);
+  });
+
+  it('accepts every allowed characteristic at once', () => {
+    expect(r({
+      ...d, genre: 'papal-bull', characteristics: ['apostolic-constitution', 'dogmatic-definition'],
+    })).not.toContain(22);
+  });
+
+  it('rejects a characteristic another genre allows', () => {
+    // A bull is not issued motu proprio and an apostolic letter is not an apostolic constitution.
+    expect(r({ ...d, genre: 'papal-bull', characteristics: ['motu-proprio'] })).toContain(22);
+    expect(r({ ...d, genre: 'apostolic-letter', characteristics: ['apostolic-constitution'] }))
+      .toContain(22);
+  });
+
+  it('rejects any characteristic on a genre whose row lists none', () => {
+    // A genre row without allowedCharacteristics allows none, as a document with no
+    // characteristics field bears none.
+    expect(r({ ...d, characteristics: ['motu-proprio'] })).toContain(22);
+  });
+
+  it('names the offending characteristic and the genre\'s allow-list in the message', () => {
+    const v = checkDocuments([{ ...d, characteristics: ['motu-proprio'] }], GENRES)
+      .filter((x) => x.rule === 22);
+    expect(v).toHaveLength(1);
+    expect(v[0]!.message).toContain("'motu-proprio'");
+    expect(v[0]!.message).toContain('none');
+  });
+
+  it('accepts a document with no characteristics at all', () => {
+    expect(r(d)).not.toContain(22);
+    expect(r({ ...d, genre: 'papal-bull' })).not.toContain(22);
+  });
+
+  it('does not fire for an unknown genre, which rule 15 already reports', () => {
+    const rules = r({ ...d, genre: 'no-such-genre', characteristics: ['motu-proprio'] });
+    expect(rules).toContain(15);
+    expect(rules).not.toContain(22);
+  });
+
+  it('does not fire for a null genre, which has no row to consult', () => {
+    const rules = r({
+      ...d, id: 'mag:leo-xiii/rerum-novarum-1891', genre: null, sourceGenreLabel: 'Protesta',
+      characteristics: ['motu-proprio'],
+    });
+    expect(rules).not.toContain(22);
   });
 });

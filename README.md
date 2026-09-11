@@ -84,8 +84,7 @@ binds — not who it is addressed to: *Ordinatio Sacerdotalis* is addressed to t
 | Papal Bull | Pope | universal | Authentic Ordinary | Extraordinary | The most solemn **sealed form** of papal document (lead/wax seal — Latin *bulla*). May bear one or more of the non-exclusive *characteristics* listed below the table. |
 | Encyclical | Pope | universal | Authentic Ordinary | Ordinary Universal | Can invoke the ordinary and universal magisterium (e.g. *Evangelium Vitae*). |
 | Apostolic Exhortation | Pope | universal | Authentic Ordinary | Authentic Ordinary | Typically post-synodal, hortatory. |
-| Apostolic Letter | Pope | universal | Authentic Ordinary | Ordinary Universal | Formal papal act in the pope’s own name (*Litterae Apostolicae*; vatican.va’s *Lettere Apostoliche* shelf): Latin incipit, entered in the acts, juridical effect. Spans universal teaching (*Ordinatio Sacerdotalis*, *Tertio Millennio Adveniente*) and local governance — erecting dioceses, proclaiming patrons (*Regionis Capitanatae*) — so `document.scope` is expected per document. *Ordinatio Sacerdotalis* is the exception within the genre, not the type. |
-| Motu Proprio | Pope | universal | Authentic Ordinary | Authentic Ordinary | Issued on the Pope’s own initiative; often legislative/administrative. |
+| Apostolic Letter | Pope | universal | Authentic Ordinary | Ordinary Universal | Formal papal act in the pope’s own name (*Litterae Apostolicae*; vatican.va’s *Lettere Apostoliche* shelf): Latin incipit, entered in the acts, juridical effect. Spans universal teaching (*Ordinatio Sacerdotalis*, *Tertio Millennio Adveniente*) and local governance — erecting dioceses, proclaiming patrons (*Regionis Capitanatae*) — so `document.scope` is expected per document. *Ordinatio Sacerdotalis* is the exception within the genre, not the type. May bear the `motu-proprio` *characteristic* listed below the table. |
 | Brief | Pope | universal | Authentic Ordinary | Authentic Ordinary | Less formal papal letter. |
 | Letter | Pope | local | Authentic Ordinary | Authentic Ordinary | Ordinary papal correspondence (*Epistula*; vatican.va’s *Lettere* shelf): someone is written to, on an occasion, usually in a vernacular, with no formal instrument behind it; titled by addressee and occasion, never by incipit. What separates it from the Apostolic Letter is form, not audience or weight — the *Letter to Artists* (1999) addresses the whole world and is still a letter. Weight is per statement, not per addressee. |
 | Discourse / Address | Pope | universal | Authentic Ordinary | Authentic Ordinary | Pastoral vehicle; cannot host a definition. |
@@ -110,19 +109,24 @@ dogma. Any actual definition is recorded as a Table 2 assessment, never inferred
 | `pastoral` | Explicitly pastoral, signalling non-defining intent. | *Gaudium et Spes* |
 | *(none)* | A plain constitution on a solemn matter. | *Sacrosanctum Concilium* (liturgy) |
 
-#### Papal Bull characteristics
+#### Characteristics
 
-Rather than being sub-genres, **Apostolic Constitution** and **Dogmatic** are non-exclusive **characteristics** a Papal Bull can
-bear — a bull may carry neither, either, or both. Modeling them as document-level metadata (not separate genres) keeps the base
-genre `papal-bull` stable, so it can be baked into a document’s canonical id without forcing a mutually-exclusive choice.
+Some distinctions the sources draw are not genres but qualities a document of a given genre may have. Rather than being
+sub-genres, these are non-exclusive, document-level **characteristics** that a genre row *allows*: a document may carry none,
+one, or several of the characteristics its genre allows, and none that it does not (invariant 22 in [SCHEMA.md](SCHEMA.md)).
+Modeling them as document-level metadata (not separate genres) keeps the base genre stable, so it can be baked into a document’s
+canonical id without forcing a mutually-exclusive choice. Two genres currently allow characteristics: **Papal Bull** allows
+`apostolic-constitution` and `dogmatic-definition`; **Apostolic Letter** allows `motu-proprio`.
 
-| Characteristic | Meaning | Bearing on authority |
-|---|---|---|
-| `apostolic-constitution` | The most solemn form of papal *legislation* — governance, laws, promulgations (e.g. *Pastor Bonus*, *Fidei Depositum*). | Formal solemnity; the register of any teaching is still assessed per statement. |
-| `dogmatic-definition` | Contains an *ex cathedra* dogmatic definition (e.g. *Ineffabilis Deus*, 1854; *Munificentissimus Deus*, 1950). | Its defining statement is **Extraordinary / infallible** — recorded as a Table 2 assessment. |
+| Characteristic | Allowed by | Meaning | Bearing on authority |
+|---|---|---|---|
+| `apostolic-constitution` | Papal Bull | The most solemn form of papal *legislation* — governance, laws, promulgations (e.g. *Pastor Bonus*, *Fidei Depositum*). | Formal solemnity; the register of any teaching is still assessed per statement. |
+| `dogmatic-definition` | Papal Bull | Contains an *ex cathedra* dogmatic definition (e.g. *Ineffabilis Deus*, 1854; *Munificentissimus Deus*, 1950). | Its defining statement is **Extraordinary / infallible** — recorded as a Table 2 assessment. |
+| `motu-proprio` | Apostolic Letter | Issued on the pope’s own initiative — a mode of issuance, not a genre; *Litterae Apostolicae motu proprio datae* (e.g. *Summorum Pontificum*, *Traditionis Custodes*, *Ad Tuendam Fidem*). | None; the register of any statement is assessed per statement in Table 2. |
 
-*Munificentissimus Deus* bears **both**: it is an apostolic constitution that also defines a dogma. A bull of canonization bears
-**neither**.
+*Munificentissimus Deus* bears **both** bull characteristics: it is an apostolic constitution that also defines a dogma. A bull
+of canonization bears **neither**. *Socialium Scientiarum* (1994) is an apostolic letter that bears `motu-proprio`; *Ordinatio
+Sacerdotalis* is one that does not.
 
 #### On sources: chancery shelves are not a magisterial taxonomy
 
@@ -135,8 +139,9 @@ Two features of those shelves make the point. First, they sort by *form*, not by
 letter erecting a diocese share the *Lettere Apostoliche* shelf, while the universally-addressed *Letter to Artists* (1999) sits
 under *Lettere*. Second, they are not disjoint — *Socialium Scientiarum* (1994) is filed **both** as an Apostolic Letter and as a
 *Motu Proprio*, because issuing a document *motu proprio* is a mode of acting rather than a genre standing beside the apostolic
-letter. This registry handles that kind of relation with **characteristics** rather than sub-genres (see *Papal Bull
-characteristics* above); whether `motu-proprio` should follow suit is [open](https://github.com/CatholicOS/cmddr/issues/10).
+letter. This registry handles that kind of relation with **characteristics** rather than sub-genres (see *Characteristics*
+above), and `motu-proprio` is one: a document filed on the *Motu Proprio* shelf, or on that shelf as well as another, is an
+`apostolic-letter` bearing the `motu-proprio` characteristic, and the shelf it came from is still recorded on the document.
 
 Our own genre rows accordingly mix two axes: diplomatic **form** (Papal Bull, Apostolic Letter, Brief, Letter) and **content type**
 (Encyclical, Apostolic Exhortation) — an Encyclical being, formally, itself a species of letter (*Litterae Encyclicae*). That

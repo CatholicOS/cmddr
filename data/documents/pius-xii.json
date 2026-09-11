@@ -185,7 +185,7 @@
     "id": "mag:pius-xii/norunt-profecto-1940",
     "title": "Norunt profecto",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xii",
     "issuerType": "pope",
     "date": "1940-10-27",
@@ -199,6 +199,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Norunt profecto",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -259,7 +262,7 @@
     "id": "mag:pius-xii/cum-nobis-1941",
     "title": "Cum nobis",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xii",
     "issuerType": "pope",
     "date": "1941-11-04",
@@ -272,6 +275,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Cum nobis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -1373,7 +1379,7 @@
     "id": "mag:pius-xii/apostolico-hispaniarum-1947",
     "title": "Apostolico Hispaniarum",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xii",
     "issuerType": "pope",
     "date": "1947-04-07",
@@ -1386,6 +1392,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Apostolico Hispaniarum",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -1566,7 +1575,7 @@
     "id": "mag:pius-xii/animarum-studio-1947",
     "title": "Animarum studio",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xii",
     "issuerType": "pope",
     "date": "1947-12-16",
@@ -1579,6 +1588,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Animarum studio",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -1643,7 +1655,7 @@
     "id": "mag:pius-xii/primo-feliciter-1948",
     "title": "Primo feliciter",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xii",
     "issuerType": "pope",
     "date": "1948-03-12",
@@ -1659,6 +1671,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Primo feliciter",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -1861,7 +1876,7 @@
     "id": "mag:pius-xii/crebrae-allatae-sunt-1949",
     "title": "Crebrae allatae sunt",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xii",
     "issuerType": "pope",
     "date": "1949-02-22",
@@ -1874,13 +1889,16 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Crebrae allatae sunt",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:pius-xii/quandoquidem-templum-1949",
     "title": "Quandoquidem templum - Sul Pontificio istituto S. Eugenio per i giovani sacerdoti",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xii",
     "issuerType": "pope",
     "date": "1949-04-02",
@@ -1893,6 +1911,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Quandoquidem templum",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -2034,7 +2055,7 @@
     "id": "mag:pius-xii/sollicitudinem-nostram-1950",
     "title": "Sollicitudinem Nostram",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xii",
     "issuerType": "pope",
     "date": "1950-01-06",
@@ -2047,6 +2068,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Sollicitudinem Nostram",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -2455,7 +2479,7 @@
     "id": "mag:pius-xii/postquam-apostolicis-1952",
     "title": "Postquam Apostolicis - Canoni per le Chiese Orientali",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xii",
     "issuerType": "pope",
     "date": "1952-02-09",
@@ -2468,6 +2492,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Postquam Apostolicis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -2536,7 +2563,7 @@
     "id": "mag:pius-xii/valde-solliciti-1952",
     "title": "Valde solliciti - Nuove disposizioni sulle vesti cardinalizie",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xii",
     "issuerType": "pope",
     "date": "1952-11-30",
@@ -2549,6 +2576,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Valde solliciti",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -3539,7 +3569,7 @@
     "id": "mag:pius-xii/cleri-sanctitate-1957",
     "title": "Lettera Apostolica in forma di Motu Proprio Cleri sanctitate, sui riti orientali",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xii",
     "issuerType": "pope",
     "date": "1957-06-02",
@@ -3552,6 +3582,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Cleri sanctitate",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {

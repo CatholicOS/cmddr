@@ -16,14 +16,34 @@ describe('data/genres.json', () => {
     }
   });
 
-  it('transcribes all sixteen rows of README Table 1', () => {
-    expect(genres).toHaveLength(16);
+  it('transcribes all fifteen rows of README Table 1', () => {
+    // #10: motu proprio is a characteristic of apostolic-letter, not a sixteenth row.
+    expect(genres).toHaveLength(15);
     expect(genres.map((g) => g.id)).toEqual([
       'constitution', 'decree', 'declaration', 'papal-bull', 'encyclical',
-      'apostolic-exhortation', 'apostolic-letter', 'motu-proprio', 'brief', 'letter',
+      'apostolic-exhortation', 'apostolic-letter', 'brief', 'letter',
       'discourse-address', 'homily', 'prayer', 'audience-catechesis',
       'episcopal-pastoral-letter', 'episcopal-homily',
     ]);
+  });
+
+  it('allows characteristics only where README lists them', () => {
+    const by = Object.fromEntries(genres.map((g) => [g.id as string, g]));
+    expect(by['papal-bull']!.allowedCharacteristics)
+      .toEqual(['apostolic-constitution', 'dogmatic-definition']);
+    expect(by['apostolic-letter']!.allowedCharacteristics).toEqual(['motu-proprio']);
+    for (const g of genres) {
+      if (g.id === 'papal-bull' || g.id === 'apostolic-letter') continue;
+      expect(g.allowedCharacteristics, g.id as string).toBeUndefined();
+    }
+  });
+
+  it('rejects an allowedCharacteristics entry outside the characteristics vocabulary', () => {
+    const ajv = new Ajv2020({ strict: false });
+    const validate = ajv.compile(genreSchema);
+    const row = genres.find((g) => g.id === 'apostolic-letter')!;
+    expect(validate({ ...row, allowedCharacteristics: ['motu-proprio', 'encyclical'] })).toBe(false);
+    expect(validate({ ...row, allowedCharacteristics: ['motu-proprio', 'motu-proprio'] })).toBe(false);
   });
 
   it('has unique ids', () => {

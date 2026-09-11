@@ -32,6 +32,12 @@
       "type": "integer",
       "description": "Optional ordinal for ranking genres of equal issuer/ceiling by title (e.g. Dogmatic Constitution > Constitution > Decree > Declaration)."
     },
+    "allowedCharacteristics": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "enum": ["apostolic-constitution", "dogmatic-definition", "motu-proprio"] },
+      "description": "Characteristics a document of this genre may bear (document.characteristics). A genre without this field allows none. Mirrors how issuerTypes constrains document.issuerType."
+    },
     "description": { "type": "string" }
   },
   "allOf": [

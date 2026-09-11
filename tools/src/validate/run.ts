@@ -6,7 +6,7 @@ import type { DocumentRecord } from '../types.js';
 
 const documentSchema = JSON.parse(readFileSync('schema/document.schema.json', 'utf8'));
 const genres = JSON.parse(readFileSync('data/genres.json', 'utf8')) as Array<
-  { id: string; issuerTypes?: string[] }
+  { id: string; issuerTypes?: string[]; allowedCharacteristics?: string[] }
 >;
 const keywords = JSON.parse(readFileSync('data/keywords.json', 'utf8')) as Array<{ id: string }>;
 

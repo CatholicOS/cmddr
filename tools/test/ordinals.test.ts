@@ -58,10 +58,10 @@ describe('assignProvisionalOrdinals', () => {
   it('groups only within the same base id, leaving an unrelated provisional group of one alone', () => {
     const a = provisional({ title: 'Beta document' });
     const b = provisional({ title: 'Alpha document' });
-    const other = provisional({ id: 'mag:pius-x/motu-proprio-1911-06-28', date: '1911-06-28', title: 'Solo document' });
+    const other = provisional({ id: 'mag:pius-x/brief-1911-06-28', date: '1911-06-28', title: 'Solo document' });
     assignProvisionalOrdinals([a, b, other]);
     expect(a.id).toBe('mag:pius-x/letter-1905-06-14-2');
     expect(b.id).toBe('mag:pius-x/letter-1905-06-14-1');
-    expect(other.id).toBe('mag:pius-x/motu-proprio-1911-06-28');
+    expect(other.id).toBe('mag:pius-x/brief-1911-06-28');
   });
 });
