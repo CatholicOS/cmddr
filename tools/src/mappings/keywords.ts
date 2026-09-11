@@ -146,11 +146,12 @@ const ISSUER_TO_VATICAN_SLUG: Record<string, string> =
  * The post-harvest counterpart of `isErectionCandidate`, applied to an already-minted
  * `DocumentRecord` instead of a raw `HarvestItem` (the renderer never sees the latter). A
  * `DocumentRecord` has already gone through `keywordsFor`, so it carries whatever keyword
- * the heading or the curated table earned it -- a document is a candidate only if it earned
- * none of them, which is a strictly cheaper check than re-deriving `isErectionCandidate`'s
- * curated-key lookup (a `DocumentRecord` does not carry `pageSlug`, so it could not rebuild
- * that key anyway). Used only to report how many candidates remain unconfirmed (spec §6),
- * never to decide anything about the document itself.
+ * the heading or the curated tables earned it -- a document that earned one is not a
+ * candidate. One that earned none may still have been read and rejected, and a rejection
+ * leaves no keyword behind, so the function rebuilds the curated key (`pageSlug` via
+ * `ISSUER_TO_VATICAN_SLUG`, since a `DocumentRecord` carries only the `issuerId`) and looks
+ * it up in `CANDIDATE_ADJUDICATIONS`. Used only to report how many candidates remain
+ * unconfirmed (spec §6), never to decide anything about the document itself.
  */
 export function isUnconfirmedCandidate(d: DocumentRecord): boolean {
   const shelf = d.source?.shelf;

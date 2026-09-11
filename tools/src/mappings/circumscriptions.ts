@@ -825,7 +825,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
   'benedict-xvi|viananensis|2007-06-06': {
     argumentum: 'VIANENSIS* NOVA DIOECESIS CONSTITUITUR IN ANGOLIA, VIANANENSIS APPELLANDA.',
     note:
-      'Detaches thirteen localities from the Archdiocese of Luanda and erects the new Diocese '
+      'Detaches twelve localities from the Archdiocese of Luanda and erects the new Diocese '
       + 'of Viana, suffragan to Luanda: "...Novam dioecesim condimus Viananensem '
       + 'appellandam...ab archidioecesi Luandensi seiungenda...". The companion of '
       + 'Caxitonensis, issued the same day. The heading prints the toponym "VIANENSIS", as '
@@ -877,9 +877,9 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       'Detaches 23 municipalities from the Diocese of Oeiras-Floriano and erects the new '
       + 'Diocese of Floriano, suffragan to Teresina: "...ex ita distracto territorio novam '
       + 'dioecesim Florianensem appellandam...erigimus ac constituimus.". The secondary act '
-      + '(ATQUE) leaves the remainder as the Diocese of Oeiras and moves municipalities '
-      + 'between it, the Archdiocese of Teresina and the Diocese of São Raimundo Nonato; the '
-      + 'erection is the act the argumentum leads with.',
+      + '(ATQUE) leaves the remainder as the Diocese of Oeiras and moves municipalities to it '
+      + 'from the Archdiocese of Teresina (four) and the Diocese of São Raimundo Nonato (two); '
+      + 'the erection is the act the argumentum leads with.',
   },
   'benedict-xvi|faiardensis-humacaensis|2008-03-11': {
     argumentum:
@@ -935,7 +935,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
   'benedict-xvi|esquelensis|2009-03-14': {
     argumentum: 'ESQUELENSIS* IN ARGENTINA NOVA CONDITUR PRAELATURA TERRITORIALIS ESQUELENSIS',
     note:
-      'Detaches seven parishes and two quasi-parishes from the Diocese of Comodoro Rivadavia '
+      'Detaches six parishes and two quasi-parishes from the Diocese of Comodoro Rivadavia '
       + 'and erects the new Territorial Prelature of Esquel, suffragan to Bahía Blanca: "...ex '
       + 'ita distracto territorio iisdemque circumscriptam finibus novam constituimus '
       + 'praelaturam territorialem Esquelensem...".',
@@ -1012,8 +1012,9 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       'MALIANENSIS* IN TIMORIA ORIENTALI NOVA CONDITUR DIOECESIS MALIANENSIS APPELLANDA.',
     note:
       'Detaches the western part of the Diocese of Díli (the civil districts of Liquiçá, '
-      + 'Bobonaro and Cova Lima) and erects the new Diocese of Maliana, immediately subject to '
-      + 'the Holy See: "...ex qua novam dioecesim erigimus Malianensem appellandam.".',
+      + 'Bobonaro and Cova Lima) and erects the new Diocese of Maliana, placed under the '
+      + 'Congregation for the Evangelization of Peoples: "...ex qua novam dioecesim erigimus '
+      + 'Malianensem appellandam.".',
   },
   'benedict-xvi|toamasinensis|2010-02-26': {
     argumentum:
@@ -4493,7 +4494,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'Vicariatum Apostolicum constituimus Bontocensem-Lavagensem positura vero intra '
       + 'Provinciae ecclesiasticae Novae Segobiae terminos...". The heading abbreviates the '
       + 'toponym and prints "BONTONCENSIS", as quoted; the curation script abstained because '
-      + 'INSTITUITUR matches no idiom.',
+      + 'INSTITUITUR matched no idiom it then knew, so the act was read from the body.',
   },
   'john-paul-ii|carorensis|1992-07-25': {
     argumentum:
@@ -6938,7 +6939,8 @@ export const CIRCUMSCRIPTION_ELEVATIONS: Record<string, CircumscriptionRow> = {
       + '"...Missionem sui iuris Sanensem, sequentibus territoriis auctam...in ordinem '
       + 'dioecesium redigimus, eodem nomine Sanensi servato.". The argumentum names the '
       + 'existing mission as the subject turned into a diocese (IN FORMAM DIOECESIS '
-      + 'REDIGITUR), which matches no idiom of any table, so the curation script abstained.',
+      + 'REDIGITUR), which matched no idiom the curation script then knew, so it abstained '
+      + 'and the act was read from the body.',
   },
   'paul-vi|ptolemaidensis-melchitarum|1964-11-13': {
     argumentum:
@@ -7101,7 +7103,8 @@ export const CIRCUMSCRIPTION_ELEVATIONS: Record<string, CircumscriptionRow> = {
       + 'under the new name Hamilton in Bermuda: "...Vicariatum apostolicum Insularum '
       + 'Bermudarum in dioecesibus annumeramus, nomine Hamiltonensi in Bermuda...". The '
       + 'argumentum states the elevation as IN DIOECESIUM ORDINEM REDIGITUR, a word order '
-      + 'the elevation idioms do not list, so the curation script abstained.',
+      + 'the elevation idioms did not then list, so the curation script abstained and the act '
+      + 'was read from the body.',
   },
   'paul-vi|kasamaensis-et-aliarum|1967-06-12': {
     argumentum:
@@ -7147,8 +7150,8 @@ export const CIRCUMSCRIPTION_ELEVATIONS: Record<string, CircumscriptionRow> = {
       'Raises the Prelature of El Oro (Ecuador) to the rank of a diocese under the name '
       + 'Machala, suffragan to Cuenca: "...Praelaturam de El Oro ad gradum dioecesis '
       + 'tollimus, cui nomen erit Machalensis...". The argumentum states the elevation with '
-      + 'TOLLITUR and AD DIOECESIS DIGNITATEM, forms the elevation idioms do not list, so '
-      + 'the curation script abstained.',
+      + 'TOLLITUR and AD DIOECESIS DIGNITATEM, forms the elevation idioms did not then list, '
+      + 'so the curation script abstained and the act was read from the body.',
   },
   'paul-vi|weetebulaensis|1969-02-06': {
     argumentum:
@@ -7188,7 +7191,8 @@ export const CIRCUMSCRIPTION_ELEVATIONS: Record<string, CircumscriptionRow> = {
       + 'diocese under the name Varanasi (Banarensis), suffragan to Agra: "...Apostolicam '
       + 'Praefecturam de Benares-Gorakhpur ad gradum dioecesis tollimus, Banarensis '
       + 'nomine.". The argumentum states the elevation as AD DIOECESIUM ORDINEM REDIGITUR, a '
-      + 'word order the elevation idioms do not list, so the curation script abstained.',
+      + 'word order the elevation idioms did not then list, so the curation script abstained '
+      + 'and the act was read from the body.',
   },
   'paul-vi|araucensis|1970-11-11': {
     argumentum:
@@ -7339,8 +7343,9 @@ export const CIRCUMSCRIPTION_ELEVATIONS: Record<string, CircumscriptionRow> = {
       + 'dioceses, keeping their boundaries and metropolitans: "...praedictas supra praelaturas '
       + 'ad gradum provehimus et dignitatem dioecesium dioecesesque constituimus, servatis earum '
       + 'nominibus, dummodo excipiantur praelaturae Boni Iesu de Piaui et Sancti Antonii de '
-      + 'Balsas...". The curation script abstained because AD DIOECESIUM ATTOLLUNTUR GRADUM is '
-      + 'an elevation stated in a word order the idioms do not list.',
+      + 'Balsas...". The curation script abstained because AD DIOECESIUM ATTOLLUNTUR GRADUM '
+      + 'was an elevation stated in a word order the idioms did not then list; the act was '
+      + 'read from the body.',
   },
   'john-paul-ii|pinnensis-piscariensis|1982-03-02': {
     argumentum:
@@ -7439,7 +7444,8 @@ export const CIRCUMSCRIPTION_ELEVATIONS: Record<string, CircumscriptionRow> = {
       + 'Apostolicam Iammuensem et Kashmirensem in dioecesis redigimus figuram, commutato '
       + 'scilicet superiore ipsius nomine in ecclesiam Iammuensem-Srinagarensem, iisdem tamen '
       + 'dicionis manentibus finibus...". The curation script abstained because IURIDICIALIS '
-      + 'FORMA DIOECESIS IMPONITUR is an elevation stated in words the idioms do not list.',
+      + 'FORMA DIOECESIS IMPONITUR was an elevation stated in words the idioms did not then '
+      + 'list; the act was read from the body.',
   },
   'john-paul-ii|aricensis|1986-08-29': {
     argumentum:
@@ -7500,7 +7506,8 @@ export const CIRCUMSCRIPTION_ELEVATIONS: Record<string, CircumscriptionRow> = {
       + 'erection, to an apostolic vicariate, keeping its name and boundaries: "...tollimus '
       + 'Administrationem Apostolicam Izabalensem canonicum ad gradum Vicariatus Apostolici...". '
       + 'The curation script abstained because AD CANONICUM GRADUM VICARIATUS APOSTOLICI '
-      + 'TOLLITUR is an elevation stated in a word order the idioms do not list.',
+      + 'TOLLITUR was an elevation stated in a word order the idioms did not then list; the '
+      + 'act was read from the body.',
   },
   'john-paul-ii|paciensis-in-california-infer-merid|1988-03-21': {
     argumentum:
@@ -7898,8 +7905,8 @@ export const CIRCUMSCRIPTION_UNIONS: Record<string, CircumscriptionRow> = {
       + 'cum Spalatensi ita ut haec in posterum Spalatensis-Macarscensis appelletur, eamque '
       + 'ad gradum et dignitatem metropolitanae attollimus...". The union is what the '
       + 'argumentum leads with (IUNGITUR) and the vehicle of the elevation, so this is a '
-      + 'union; the curation script proposed an elevation because IUNGITUR is not among the '
-      + 'union idioms.',
+      + 'union; the curation script proposed an elevation because IUNGITUR was not then among '
+      + 'the union idioms.',
   },
   // The fifth curation instalment, John Paul II: the five of the 390 candidates that
   // unite existing sees (1983-09-13 through 1991-12-24). Three join sees aeque principaliter
@@ -7953,8 +7960,8 @@ export const CIRCUMSCRIPTION_UNIONS: Record<string, CircumscriptionRow> = {
       + '; quae proinde adquiret atque comprehendet in suo territorio uniuscuiusque harum '
       + 'Ecclesiarum territorium. Sic ampliata dioecesis Viterbiensis vocabitur.". A union of '
       + 'existing sees; the curation script abstained because IN UNAM DUMTAXAT DIOECESIM '
-      + 'REDIGUNTUR matches no idiom, and the heading prints "BALNEOREGIENSIS,FALISCODUNENSIS" '
-      + 'without a space, as quoted.',
+      + 'REDIGUNTUR matched no idiom it then knew, and the heading prints '
+      + '"BALNEOREGIENSIS,FALISCODUNENSIS" without a space, as quoted.',
   },
   'john-paul-ii|telsensis|1991-12-24': {
     argumentum:
@@ -8372,8 +8379,9 @@ export const CANDIDATE_ADJUDICATIONS: Record<string, AdjudicationRow> = {
       + '1980, and erects in its place a cathedral chapter of twelve canons: "...Capitulum '
       + 'Collegiale memorati templi dissolvimus simul atque Capitulum Cathedrale ibidem condimus '
       + 'duodecim ex Canonicis constans.". The diocese named in the heading keeps its rank and '
-      + 'boundaries; the curation script abstained because DISSOLVITUR and INSTITUITUR match no '
-      + 'idiom.',
+      + 'boundaries; the curation script abstained because DISSOLVITUR and INSTITUITUR matched '
+      + 'no idiom it then knew (INSTITUITUR has since joined the erection idioms, which do not '
+      + 'audit this table).',
   },
   'john-paul-ii|adriensis-rhodigiensis|1987-05-20': {
     act: 'a collegiate chapter dissolved and a concathedral chapter erected',

@@ -197,15 +197,14 @@ describe('isErectionCandidate', () => {
 });
 
 describe('the CIRCUMSCRIPTION_ERECTIONS lookup path', () => {
-  // Carried finding from Task 11's review: every existing test above runs against the
-  // always-empty table, so a bug in how the lookup key is constructed (pageSlug, incipit
-  // slug, date -- see keywordsFor's and isErectionCandidate's shared `curatedKey`) would stay
-  // hidden until the curation task that populates it for real, where roughly 1,100
-  // confirmations are keyed exactly this way. These tests inject a locally-populated entry
-  // and exercise both directions, then remove it so the table stays empty for every other
-  // test in this file and for the harvest itself. The toponym is invented: a real one
+  // Every test above uses a fixture that sits in none of the curated tables, so a bug in how
+  // the lookup key is constructed (pageSlug, incipit slug, date -- see keywordsFor's and
+  // isErectionCandidate's shared `curatedKey`) would stay hidden: the real table's rows are
+  // keyed exactly this way. These tests inject a locally-populated entry and exercise both
+  // directions, then remove it so the table holds only its curated rows for every other test
+  // in this file and for the harvest itself. The toponym is invented: a real one
   // ('Bikoroënsis', which this fixture once used) stops being unconfirmed the day its
-  // curation instalment files it, and Task 3 filed that one as an elevation.
+  // curation instalment files it, and the second instalment filed that one as an elevation.
   const pageSlug = 'pius-xii';
   const title = 'Nullibiensis';
   const date = '1957-06-24';

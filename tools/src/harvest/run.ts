@@ -221,7 +221,7 @@ for (const c of candidates) {
   );
 }
 if (candidates.length) {
-  console.warn(`  ${candidates.length} candidates await confirmation into CIRCUMSCRIPTION_ERECTIONS`);
+  console.warn(`  ${candidates.length} candidates await confirmation into the circumscription tables`);
 }
 
 const allDocs = [...mergedByDuplicateTable.values()]
