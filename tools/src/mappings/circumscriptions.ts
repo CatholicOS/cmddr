@@ -1344,7 +1344,8 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
     note:
       'Detaches districts north of the Brahmaputra from the Dioceses of Shillong and '
       + 'Dibrugarh and erects the new Diocese of Tezpur (India): "...ex iisque omnibus novam '
-      + 'dioecesim constituimus, ex urbe Tezpurensem appellandam...".',
+      + 'dioecesim constituimus, ex urbe Tezpurensern appellandam...". The body prints '
+      + '"Tezpurensern", as quoted.',
   },
   'paul-vi|villavicentiensis-ariariensis|1964-01-16': {
     argumentum:
@@ -2346,9 +2347,10 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'States), formed of the Eparchies of Pittsburgh (raised to metropolitan rank under '
       + 'the new name Munhall), Passaic and Parma: "...Eparchiis Pittsburgensi, Passaicensi '
       + 'atque Parmensi provinciam ecclesiasticam efficimus...ut Ecclesia Pittsburgensis ad '
-      + 'gradum atque dignitatem metropolitanae Sedis evehatur, novo indito nomine '
-      + 'Munhallensi Ruthenorum...". The province is what the argumentum states, so this is '
-      + 'an erection under the John XXIII rule.',
+      + 'gradum atque dignitatem metropolitana e Sedis evehatur, novo indito nomine '
+      + 'Munhallensi Ruthenorum...". The body prints "metropolitana e Sedis", as quoted. The '
+      + 'province is what the argumentum states, so this is an erection under the John XXIII '
+      + 'rule.',
   },
   'paul-vi|parmensis-ruthenorum|1969-02-21': {
     argumentum:
@@ -2815,7 +2817,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       'Reorganises the Church in western and northern Poland: erects four new dioceses, '
       + 'Opole, Gorzow, Szczecin-Kamien and Koszalin-Kolobrzeg, from territory of the '
       + 'Archdiocese of Wroclaw, the Diocese of Berlin, the Prelature of Schneidemuhl and '
-      + 'others: "...Quattuor in regione quam diximir dioeceses condimus, Opoliensem, '
+      + 'others: "...Quattuor in regione quam diximus dioeceses condimus, Opoliensem, '
       + 'Gorzoviensem, Sedinensem-Caminensem et Coslinensem-Colubreganam appellandas...".',
   },
   'paul-vi|neivensis|1972-07-24': {
