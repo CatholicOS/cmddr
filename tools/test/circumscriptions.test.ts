@@ -125,9 +125,19 @@ describe('circumscription-union', () => {
 });
 
 describe('isUnconfirmedCandidate', () => {
-  it('retires a candidate that carries any circumscription keyword', () => {
-    expect(isUnconfirmedCandidate(record({ keywords: ['circumscription-union'] }))).toBe(false);
+  it('retires a candidate that carries any of the three circumscription keywords', () => {
+    expect(isUnconfirmedCandidate(record({ keywords: ['circumscription-erection'] }))).toBe(false);
     expect(isUnconfirmedCandidate(record({ keywords: ['circumscription-elevation'] }))).toBe(false);
+    expect(isUnconfirmedCandidate(record({ keywords: ['circumscription-union'] }))).toBe(false);
+  });
+
+  it('does not let an unknown circumscription-* keyword retire a candidate', () => {
+    // Only the three terms the tables award count as a verdict. A keyword this module does
+    // not know must leave the document in the queue rather than silently drop it.
+    expect(isUnconfirmedCandidate(record({
+      id: 'mag:benedict-xv/nullibiensis-1920', title: 'Nullibiensis', incipit: 'Nullibiensis',
+      date: '1920-01-01', keywords: ['circumscription-suppression'],
+    }))).toBe(true);
   });
 
   it('retires a candidate recorded in CANDIDATE_ADJUDICATIONS', () => {

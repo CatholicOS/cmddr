@@ -137,7 +137,7 @@ of them turn up.
 
 ## 4. The four tables
 
-All four key on `${pageSlug}|${slugify(title)}|${isoDate}`, the shape `DATE_CORRECTIONS`,
+All four key on `${pageSlug}|${slugify(incipit ?? title)}|${isoDate}`, the shape `DATE_CORRECTIONS`,
 `CIRCUMSCRIPTION_ERECTIONS` and `RECOVERED_INCIPITS` already use, and every row quotes the
 document's own argumentum verbatim.
 

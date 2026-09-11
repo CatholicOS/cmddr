@@ -143,6 +143,16 @@ const ISSUER_TO_VATICAN_SLUG: Record<string, string> =
   Object.fromEntries(POPES.map((p) => [p.issuerId, p.pageSlug]));
 
 /**
+ * The three keywords the circumscription tables award, and the only ones that retire a
+ * candidate (spec §5). Named rather than matched by prefix so that a keyword this module
+ * does not know -- one minted later, or one a hand-edited record carries by mistake --
+ * cannot silently drop a document from the count without an adjudication row.
+ */
+const CIRCUMSCRIPTION_KEYWORDS = new Set([
+  'circumscription-erection', 'circumscription-elevation', 'circumscription-union',
+]);
+
+/**
  * The post-harvest counterpart of `isErectionCandidate`, applied to an already-minted
  * `DocumentRecord` instead of a raw `HarvestItem` (the renderer never sees the latter). A
  * `DocumentRecord` has already gone through `keywordsFor`, so it carries whatever keyword
@@ -157,7 +167,7 @@ export function isUnconfirmedCandidate(d: DocumentRecord): boolean {
   const shelf = d.source?.shelf;
   if (!shelf || !APOST_CONSTITUTIONS_SHELVES.has(shelf)) return false;
   if (TEXTUALLY_TAGGED_ISSUERS.has(d.issuerId)) return false;
-  if (d.keywords?.some((k) => k.startsWith('circumscription-'))) return false;
+  if (d.keywords?.some((k) => CIRCUMSCRIPTION_KEYWORDS.has(k))) return false;
   // A document read and judged to be none of the three is no longer awaiting confirmation.
   // Without this the adjudicated records stay in the count for ever, which is exactly the
   // defect this work exists to fix (spec §1, §5).

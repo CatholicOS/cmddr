@@ -26,10 +26,19 @@ const candidates = all.filter(isUnconfirmedCandidate).filter((d) => d.issuerId =
 
 for (const d of candidates) {
   const file = `${outDir}/${d.id.replace(/[^a-z0-9]/gi, '_')}.html`;
+  // A candidate the harvest could not give a URL, or one vatican.va will not serve, is
+  // reported and skipped so that one bad record does not end the whole issuer's run.
+  const url = d.source?.url;
+  if (!url) { console.log(`NO-URL ${d.id}`); continue; }
   if (!existsSync(file)) {
-    const res = await fetch(d.source!.url!);
-    if (!res.ok) { console.log(`FETCH-FAILED ${d.id} ${res.status}`); continue; }
-    writeFileSync(file, await res.text());
+    try {
+      const res = await fetch(url);
+      if (!res.ok) { console.log(`FETCH-FAILED ${d.id} ${res.status}`); continue; }
+      writeFileSync(file, await res.text());
+    } catch (err) {
+      console.log(`FETCH-FAILED ${d.id} ${err instanceof Error ? err.message : String(err)}`);
+      continue;
+    }
   }
   const argumentum = extractArgumentum(readFileSync(file, 'utf8'));
   const verdict = argumentum.length < 20 ? 'ABSTAIN(no argumentum)'
@@ -38,6 +47,6 @@ for (const d of candidates) {
     : ERECTION_IDIOMS.test(argumentum) ? 'erections'
     : 'ABSTAIN(unclassified)';
   console.log(JSON.stringify({ verdict, key: `${d.id.split('/')[0]!.replace('mag:', '')}`
-    + `|${slugify(d.incipit ?? d.title)}|${d.date}`, argumentum, url: d.source!.url }));
+    + `|${slugify(d.incipit ?? d.title)}|${d.date}`, argumentum, url }));
 }
 console.log(`# ${candidates.length} candidates for ${issuerId}`);
