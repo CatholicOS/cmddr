@@ -146,9 +146,12 @@ const ISSUER_TO_VATICAN_SLUG: Record<string, string> =
  * The three keywords the circumscription tables award, and the only ones that retire a
  * candidate (spec §5). Named rather than matched by prefix so that a keyword this module
  * does not know -- one minted later, or one a hand-edited record carries by mistake --
- * cannot silently drop a document from the count without an adjudication row.
+ * cannot silently drop a document from the count without an adjudication row. Exported
+ * because `toDocument` reads the same set to derive `actKind: 'governance'` (#15): every
+ * one of the three names an act of governance, and a keyword minted later for a teaching
+ * subject must not join it by accident.
  */
-const CIRCUMSCRIPTION_KEYWORDS = new Set([
+export const CIRCUMSCRIPTION_KEYWORDS: ReadonlySet<string> = new Set([
   'circumscription-erection', 'circumscription-elevation', 'circumscription-union',
 ]);
 

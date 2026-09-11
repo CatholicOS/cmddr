@@ -32,6 +32,10 @@ export interface DocumentRecord {
   scope?: 'universal' | 'local';
   characteristics?: string[];
   keywords?: string[];
+  /** Absent means teaching. Never authority-bearing; see document.schema.json. */
+  actKind?: 'teaching' | 'governance' | 'liturgical';
+  /** Membership in an annual series; `id` resolves against data/series.json (invariant 23). */
+  series?: { id: string; ordinal?: number };
   descriptiveTitle?: 'dogmatic' | 'pastoral';
   sigla?: string;
   aliases?: string[];

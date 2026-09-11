@@ -86,6 +86,22 @@ describe('toDocument', () => {
     expect(twice.characteristics).toEqual(['motu-proprio']);
   });
 
+  it('marks a circumscription-keyworded item as a governance act, derived from the keyword (#15)', () => {
+    const d = toDocument(item({
+      title: '"Spei accensa lucerna". Il Santo Padre ha eretto la nuova Diocesi di Caazapá (Paraguay)',
+      incipit: 'Spei accensa lucerna', date: '2025-03-22',
+      sourceGenreLabel: 'apost_constitutions', shelf: 'apost_constitutions', pageSlug: 'francesco',
+    }), '2026-09-07');
+    expect(d.keywords).toEqual(['circumscription-erection']);
+    expect(d.actKind).toBe('governance');
+  });
+
+  it('gives a plain item no actKind at all: absent means teaching', () => {
+    const d = toDocument(item({}), '2026-09-07');
+    expect(d.keywords).toBeUndefined();
+    expect('actKind' in d).toBe(false);
+  });
+
   it('keeps an unmapped genre null and preserves the raw label', () => {
     const d = toDocument(item({
       title: 'La Serie', incipit: 'La Serie', date: '1849-02-14', sourceGenreLabel: 'Protesta',

@@ -16,13 +16,13 @@ describe('data/genres.json', () => {
     }
   });
 
-  it('transcribes all fifteen rows of README Table 1', () => {
-    // #10: motu proprio is a characteristic of apostolic-letter, not a sixteenth row.
-    expect(genres).toHaveLength(15);
+  it('transcribes all sixteen rows of README Table 1', () => {
+    // #10: motu proprio is a characteristic of apostolic-letter, not a row; #15 adds urbi-et-orbi.
+    expect(genres).toHaveLength(16);
     expect(genres.map((g) => g.id)).toEqual([
       'constitution', 'decree', 'declaration', 'papal-bull', 'encyclical',
       'apostolic-exhortation', 'apostolic-letter', 'brief', 'letter',
-      'discourse-address', 'homily', 'prayer', 'audience-catechesis',
+      'discourse-address', 'homily', 'prayer', 'audience-catechesis', 'urbi-et-orbi',
       'episcopal-pastoral-letter', 'episcopal-homily',
     ]);
   });
@@ -44,6 +44,17 @@ describe('data/genres.json', () => {
     const row = genres.find((g) => g.id === 'apostolic-letter')!;
     expect(validate({ ...row, allowedCharacteristics: ['motu-proprio', 'encyclical'] })).toBe(false);
     expect(validate({ ...row, allowedCharacteristics: ['motu-proprio', 'motu-proprio'] })).toBe(false);
+  });
+
+  it('caps Urbi et Orbi at authentic-ordinary: the blessing is the act, the address is assessed per statement (#15)', () => {
+    const row = genres.find((g) => g.id === 'urbi-et-orbi')!;
+    expect(row).toBeDefined();
+    expect(row.issuerTypes).toEqual(['pope']);
+    expect(row.defaultScope).toBe('universal');
+    expect(row.defaultRegister).toBe('authentic-ordinary');
+    expect(row.ceiling).toBe('authentic-ordinary');
+    expect(row.description).toMatch(/blessing/i);
+    expect(row.description).toMatch(/indulgence/i);
   });
 
   it('has unique ids', () => {

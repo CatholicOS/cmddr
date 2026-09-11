@@ -14,7 +14,8 @@ document TYPES           documents                  passage within a document
 - **Assessment** — the authority actually exercised in a single passage, keyed by a `locus`. References a `document`. → [`schema/assessment.schema.json`](schema/assessment.schema.json)
 
 A **Genre** row alone fully describes documents that contain no definitive teaching. Doctrinally weighty documents additionally get
-one **Assessment** per notable passage.
+one **Assessment** per notable passage. A document that does not teach at all — a blessing, an act of governance — says so with
+`actKind`, and then has nothing for an Assessment to assess and no use for the genre's default register or ceiling.
 
 ---
 
@@ -29,6 +30,10 @@ one **Assessment** per notable passage.
 **`descriptiveTitle`** (optional, mutually-exclusive title of a conciliar Constitution) — `dogmatic` · `pastoral`. Descriptive of purpose only, never a claim of authority; omit for a plain constitution (e.g. *Sacrosanctum Concilium*).
 
 **`keywords`** (optional, non-exclusive descriptive subject tags, resolving against `data/keywords.json`) — currently `circumscription-erection`, `circumscription-elevation` and `circumscription-union`. Unlike `characteristics`, a keyword is **never authority-bearing**: it makes no claim about the document's register, definitiveness, or solemn form, and no invariant other than vocabulary membership (invariant 21) ever reads it.
+
+**`actKind`** (optional) — `teaching` · `governance` · `liturgical`. What kind of act the document is; absent means `teaching`. A `governance` act erects a diocese, proclaims a patron or approves statutes; a `liturgical` act is a rite or blessing (an Urbi et Orbi). A non-teaching act has nothing for Table 2 to assess, and the genre's default register and ceiling do not apply to it. Like `keywords`, `actKind` is **never authority-bearing**: it makes no claim about register or definitiveness, and no invariant reads it — the schema enum is its only check, and no rule couples it to a genre or a ceiling (a sanity note, deliberately not an invariant). The harvester derives it from the keyword pipeline, the single evidenced source: every document carrying a circumscription keyword is `governance`. See [#15](https://github.com/CatholicOS/cmddr/issues/15).
+
+**`series`** (optional object `{ "id", "ordinal"? }`, with `id` resolving against `data/series.json`) — membership in a numbered or dated annual series: the World Day of Peace, World Communications Day, the Lent message. `id` is the occasion, taken from vatican.va's own message sub-shelf slugs (`peace`, `lent`, `communications`, …); `ordinal` (integer ≥ 1) is the document's number within the series as the source prints it, omitted for a series that is dated but not numbered. Each vocabulary row records whether the series is `numbered` and the shelf evidence for saying so. `series` is discovery metadata with **no bearing on register, ceiling or assent**, and no invariant other than vocabulary membership (invariant 23) reads it. See [#16](https://github.com/CatholicOS/cmddr/issues/16).
 
 **`register`** (mode of teaching)
 | id | label |
@@ -132,6 +137,12 @@ These are the rules a linter/CI should enforce so the data can never re-collapse
 22. **Characteristics allowed by genre.** Every entry of `characteristics`, when `genre` is non-null, is one of that genre's
     `allowedCharacteristics` in `data/genres.json`; a genre row without the field allows none. The characteristic parallel of
     invariant 17.
+23. **Series reference.** `series.id`, when present, resolves to an id in `data/series.json`. This is the only invariant that reads
+    `series` — the field is discovery metadata with no bearing on register, ceiling or assent.
+
+There is deliberately no invariant on `actKind`: the schema enum is its only check, and nothing couples it to a genre or a
+ceiling. A rule that, say, forbade `governance` on an `encyclical` would be re-deriving the act from the genre — the very
+inference the two-table model exists to refuse.
 
 ---
 

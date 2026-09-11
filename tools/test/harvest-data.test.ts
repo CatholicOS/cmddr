@@ -13,6 +13,7 @@ const load = (n: string) =>
 const genres = JSON.parse(readFileSync('data/genres.json', 'utf8')) as
   Array<{ id: string; issuerTypes?: string[]; allowedCharacteristics?: string[] }>;
 const keywords = JSON.parse(readFileSync('data/keywords.json', 'utf8')) as Array<{ id: string }>;
+const series = JSON.parse(readFileSync('data/series.json', 'utf8')) as Array<{ id: string }>;
 
 const all = [...load('benedict-xiv'), ...load('pius-ix'), ...load('leo-xiii'), ...load('vatican-i')];
 
@@ -1765,7 +1766,7 @@ describe('the whole corpus', () => {
   });
 
   it('satisfies every invariant across every issuer at once', () => {
-    expect(checkDocuments(everything, genres, keywords)).toEqual([]);
+    expect(checkDocuments(everything, genres, keywords, series)).toEqual([]);
   });
 
   it('files no document under a motu-proprio genre (#10)', () => {
@@ -2014,6 +2015,27 @@ describe('the whole corpus', () => {
     // contains nothing else -- so the two counts are equal. A tag appearing from
     // anywhere else (a morphological rule leaking into the data, say) breaks this.
     expect(untextual).toBe(Object.keys(CIRCUMSCRIPTION_ERECTIONS).length);
+  });
+
+  it('marks every circumscription-keyworded document, and no other, as a governance act (#15)', () => {
+    // actKind is derived from the keyword pipeline in toDocument, so today the two sets
+    // coincide exactly: 777 documents at the time of writing. A document carrying actKind
+    // without a circumscription keyword would mean a second, unevidenced source had crept in.
+    const circumscription = new Set([
+      'circumscription-erection', 'circumscription-elevation', 'circumscription-union',
+    ]);
+    const keyworded = everything.filter((d) => d.keywords?.some((k) => circumscription.has(k)));
+    const governance = everything.filter((d) => d.actKind === 'governance');
+    expect(keyworded.length).toBeGreaterThan(0);
+    for (const d of keyworded) expect(d.actKind, d.id).toBe('governance');
+    expect(governance.map((d) => d.id).sort()).toEqual(keyworded.map((d) => d.id).sort());
+    for (const d of everything) {
+      if (!keyworded.includes(d)) expect(d.actKind, d.id).toBeUndefined();
+    }
+  });
+
+  it('populates no series yet: the messages shelves are not harvested until #4', () => {
+    for (const d of everything) expect(d.series, d.id).toBeUndefined();
   });
 
   it('keeps the keyword out of every authority-bearing field', () => {

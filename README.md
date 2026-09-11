@@ -93,6 +93,7 @@ addressee, and a possible `regional` value are all deferred to [#4](https://gith
 | Homily | Pope | universal | Authentic Ordinary | Authentic Ordinary | |
 | Prayer | Pope | universal | Authentic Ordinary | Authentic Ordinary | |
 | Audience / Catechesis | Pope | universal | Authentic Ordinary | Authentic Ordinary | |
+| Urbi et Orbi | Pope | universal | Authentic Ordinary | Authentic Ordinary | A solemn papal **blessing** to the City and the World (vatican.va’s *Urbi et Orbi* shelf under *Messaggi*), with a plenary indulgence attached under the usual conditions — extended by the Apostolic Penitentiary to those who receive it by radio, television or internet. The blessing is the act; only the accompanying address carries teaching, assessed per statement. See *Acts that do not teach* below. |
 | Episcopal / Pastoral Letter | Bishop | local | Authentic Ordinary | Authentic Ordinary | An individual bishop shares in the ordinary universal magisterium only collegially, not through a local act. |
 | Episcopal Homily | Bishop | local | Authentic Ordinary | Authentic Ordinary | |
 
@@ -149,6 +150,47 @@ Our own genre rows accordingly mix two axes: diplomatic **form** (Papal Bull, Ap
 (Encyclical, Apostolic Exhortation) — an Encyclical being, formally, itself a species of letter (*Litterae Encyclicae*). That
 mixture is deliberate and follows ordinary usage, but it means the existence of a vatican.va shelf is never by itself an argument
 for a genre row, a default, or a ceiling. Each of those has to be argued from the act.
+
+#### Acts that do not teach
+
+Every row in Table 1 is a vehicle of **teaching**, and its default register and ceiling answer one question: how much authority
+does the teaching carry? A good deal of what the popes issue never asks it. An Urbi et Orbi is a solemn blessing with an
+indulgence attached, preceded by an address — vatican.va files it under *Messaggi*, and the
+[Francis shelf](https://www.vatican.va/content/francesco/it/messages/urbi.index.html) also holds the extraordinary *Momento
+straordinario di preghiera* of 27 March 2020, plainly a liturgical event. A bull of canonization pronounces a formula. And the
+Latin-incipit tail of the *Lettere Apostoliche* shelf — *Regionis Capitanatae*, *Sanctus Adalbertus*, *Ad aptius fovendas* — and
+the toponym-headed apostolic constitutions beside it are acts of **governance**: erecting and reorganising dioceses, proclaiming
+patrons, approving statutes. For these a default register of Authentic Ordinary is not so much wrong as beside the point. A
+decree that erects a diocese teaches nothing that could be assessed.
+
+The registry therefore carries an optional document-level flag, **`actKind`** — `teaching` · `governance` · `liturgical` — with
+absence meaning `teaching`. A non-teaching act has nothing for Table 2 to assess, and its genre’s default register and ceiling do
+not apply to it. The flag is **never authority-bearing**: like `keywords`, it makes no claim about register or definitiveness, and
+no invariant couples it to a genre or a ceiling. It is populated today from one evidenced source only: the **777** apostolic
+constitutions whose circumscription keyword (an erection, elevation or union of sees, read from the heading or from the
+hand-curated adjudication tables) carry `actKind: governance`; the flag is derived from the keyword in the harvester, so the two
+cannot disagree. The *Lettere Apostoliche* tail is not yet flagged, because no keyword yet evidences it. Urbi et Orbi keeps its
+own Table 1 row so that a reader finds it where they expect to: the row’s ceiling describes the address, and once the *Messaggi*
+shelves are harvested ([#4](https://github.com/CatholicOS/cmddr/issues/4)) the flag (`liturgical`) will describe the act. The discussion is in [#15](https://github.com/CatholicOS/cmddr/issues/15).
+
+#### Numbered annual series
+
+A large body of papal messages belongs to **annual series** that run for decades and across pontificates. The World Day of
+Peace message opens with Paul VI’s *I Giornata Mondiale della Pace 1968* and continues through John Paul II, Benedict XVI,
+Francis and Leo XIV; World Communications Day opens in 1967. vatican.va carries the ordinal in the title as a Roman numeral —
+*LI Giornata Mondiale della Pace 2018*, *LII Giornata Mondiale delle Comunicazioni Sociali, 2018* — while the Lent messages are
+dated only (*Quaresima 2015: Rinfrancate i vostri cuori*). A series is an entity that outlives its issuer, and tracing a theme
+across one — how fifty-odd messages treat migration, or communications — is exactly the kind of traversal this data should
+support.
+
+The registry records this with an optional **`series`** object on the document, `{ "id": "peace", "ordinal": 51 }`, the ordinal
+optional; `id` resolves against [`data/series.json`](data/series.json), one row per occasion using vatican.va’s own message
+sub-shelf slugs (`peace`, `lent`, `communications`, `migration`, …), each row recording whether the series is numbered and the
+shelf evidence for saying so. Consistent with the chancery-shelves note above, these are a vocabulary of **occasions**, not of
+genres: a World Day of Peace message is a message whichever day it is for, and `series` says only where it stands in a sequence.
+It is discovery metadata with **no bearing on register, ceiling or assent**. No document populates it yet, because the
+*Messaggi* shelves are not harvested until [#4](https://github.com/CatholicOS/cmddr/issues/4). The discussion is in
+[#16](https://github.com/CatholicOS/cmddr/issues/16).
 
 ### The document registry
 
