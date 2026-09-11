@@ -787,12 +787,20 @@ describe('the Paul VI corpus', () => {
     expect(docs.filter((d) => d.idStatus === 'provisional')).toHaveLength(5);
   });
 
-  it('flags the diocese erections as candidates without tagging any of them', () => {
-    // The headings print a bare Latin toponym with no marker, so nothing is tagged
-    // until the curation pass. Documents with real names must not be flagged.
-    expect(docs.every((d) => d.keywords === undefined)).toBe(true);
-    expect(docs.some((d) => d.incipit === 'Indulgentiarum Doctrina')).toBe(true);
-    expect(docs.some((d) => d.incipit === 'Romano Pontifici Eligendo')).toBe(true);
+  it('tags the diocese erections only through the curated tables', () => {
+    // The headings print a bare Latin toponym with no marker, so nothing was tagged until
+    // the curation pass. The Paul VI instalment of the circumscription adjudication (Task 5)
+    // read all 222 candidates and filed 161 erections, 48 elevations and 2 unions by key in
+    // circumscriptions.ts; its other 11 rows sit in CANDIDATE_ADJUDICATIONS and carry no
+    // keyword. Nothing else is tagged, and a document with a real name never is.
+    const tagged = docs.filter((d) => d.keywords !== undefined);
+    expect(tagged.filter((d) => d.keywords?.includes('circumscription-erection'))).toHaveLength(161);
+    expect(tagged.filter((d) => d.keywords?.includes('circumscription-elevation'))).toHaveLength(48);
+    expect(tagged.filter((d) => d.keywords?.includes('circumscription-union'))).toHaveLength(2);
+    expect(tagged).toHaveLength(211);
+    expect(tagged.every((d) => d.source?.shelf === 'apost_constitutions')).toBe(true);
+    expect(docs.find((d) => d.incipit === 'Indulgentiarum Doctrina')?.keywords).toBeUndefined();
+    expect(docs.find((d) => d.incipit === 'Romano Pontifici Eligendo')?.keywords).toBeUndefined();
   });
 
   it('deduplicates the four twice-shelved apost_letters/motu_proprio documents', () => {
@@ -1986,8 +1994,9 @@ describe('the whole corpus', () => {
   it('tags exactly the circumscription-elevation documents measured for Task 20, enumerated '
     + 'here so a future change to ELEVATION_PHRASES surfaces its effect on the real corpus', () => {
     // Seven earned the keyword from their heading (ELEVATION_PHRASES); the other
-    // twenty-five are the hand-curated CIRCUMSCRIPTION_ELEVATIONS rows of the Pius XII,
-    // John XXIII and Benedict XVI instalments, which tag by key rather than by heading.
+    // seventy-three are the hand-curated CIRCUMSCRIPTION_ELEVATIONS rows of the Pius XII,
+    // John XXIII, Benedict XVI and Paul VI instalments, which tag by key rather than by
+    // heading.
     const elevated = everything.filter((d) => d.keywords?.includes('circumscription-elevation'));
     expect(elevated.map((d) => d.id).sort()).toEqual([
       'mag:benedict-xvi/cassoviensis-2008',
@@ -2013,6 +2022,54 @@ describe('the whole corpus', () => {
       'mag:john-xxiii/nzerekoreensis-1959',
       'mag:john-xxiii/oturkpoensis-1959',
       'mag:leo-xiv/verba-christi-2025',
+      'mag:paul-vi/aganensis-1965',
+      'mag:paul-vi/amidensis-chaldaeorum-1966',
+      'mag:paul-vi/araucensis-1970',
+      'mag:paul-vi/banarensis-1970',
+      'mag:paul-vi/bangassuensis-1964',
+      'mag:paul-vi/barcinonensis-1964',
+      'mag:paul-vi/bataensis-1966',
+      'mag:paul-vi/bhagalpurensis-1965',
+      'mag:paul-vi/bossangoaensis-1964',
+      'mag:paul-vi/broomensis-1966',
+      'mag:paul-vi/caacupensis-1967',
+      'mag:paul-vi/canelosensis-1964',
+      'mag:paul-vi/dapagoensis-1965',
+      'mag:paul-vi/davaensis-1966',
+      'mag:paul-vi/deaarensis-1967',
+      'mag:paul-vi/dorumaensis-1967',
+      'mag:paul-vi/gaberonensis-1966',
+      'mag:paul-vi/hamiltonensis-1967',
+      'mag:paul-vi/hermosillensis-1963',
+      'mag:paul-vi/ilorinensis-1969',
+      'mag:paul-vi/iullundurensis-1971',
+      'mag:paul-vi/kabbaensis-1964',
+      'mag:paul-vi/kaolackensis-1965',
+      'mag:paul-vi/kasamaensis-et-aliarum-1967',
+      'mag:paul-vi/kayensis-1963',
+      'mag:paul-vi/kengensis-1963',
+      'mag:paul-vi/kituiensis-1963',
+      'mag:paul-vi/kolensis-1967',
+      'mag:paul-vi/machalensis-1969',
+      'mag:paul-vi/maidugurensis-1966',
+      'mag:paul-vi/matritensis-1964',
+      'mag:paul-vi/mendiensis-1965',
+      'mag:paul-vi/moptiensis-1964',
+      'mag:paul-vi/mvekaensis-1964',
+      'mag:paul-vi/palaensis-1964',
+      'mag:paul-vi/parakuensis-1964',
+      'mag:paul-vi/piurensis-et-aliarum-1966',
+      'mag:paul-vi/ptolemaidensis-melchitarum-1964',
+      'mag:paul-vi/reykjavikensis-1968',
+      'mag:paul-vi/rosariensis-1963',
+      'mag:paul-vi/sanensis-1964',
+      'mag:paul-vi/shikokuensis-1963',
+      'mag:paul-vi/sikassensis-1963',
+      'mag:paul-vi/sokotoensis-1964',
+      'mag:paul-vi/tigiuanaensis-1963',
+      'mag:paul-vi/valleduparensis-1969',
+      'mag:paul-vi/villavicentiensis-1964',
+      'mag:paul-vi/weetebulaensis-1969',
       'mag:pius-xii/bathurstensis-in-gambia-1957',
       'mag:pius-xii/bikoroensis-1957',
       'mag:pius-xii/copiapoensis-1957',
@@ -2167,14 +2224,14 @@ describe('the circumscription queue', () => {
     .flatMap((f) => JSON.parse(readFileSync(`data/documents/${f}`, 'utf8')) as DocumentRecord[]);
   const remaining = everything.filter(isUnconfirmedCandidate);
 
-  it('has retired every Benedict XV, Pius XII, John XXIII and Benedict XVI candidate', () => {
-    const done = ['rp:benedict-xv', 'rp:pius-xii', 'rp:john-xxiii', 'rp:benedict-xvi'];
+  it('has retired every Benedict XV, Pius XII, John XXIII, Benedict XVI and Paul VI candidate', () => {
+    const done = ['rp:benedict-xv', 'rp:pius-xii', 'rp:john-xxiii', 'rp:benedict-xvi',
+      'rp:paul-vi'];
     expect(remaining.filter((d) => done.includes(d.issuerId))).toEqual([]);
   });
 
-  it('leaves only the two pontificates not yet curated', () => {
-    expect(new Set(remaining.map((d) => d.issuerId)))
-      .toEqual(new Set(['rp:john-paul-ii', 'rp:paul-vi']));
+  it('leaves only the one pontificate not yet curated', () => {
+    expect(new Set(remaining.map((d) => d.issuerId))).toEqual(new Set(['rp:john-paul-ii']));
   });
 
   it('awards Pius XII nine elevations, none of them erections', () => {
