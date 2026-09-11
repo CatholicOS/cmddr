@@ -18,7 +18,7 @@ A keyword is a descriptive subject tag. It makes no claim about the document's a
 | `mag:pius-xii/urawaensis-1957` | Urawaënsis | Urawaënsis | papal-bull | `rp:pius-xii` | 1957-12-16 |
 | `mag:pius-xii/tangaensis-1958` | Tangaënsis | Tangaënsis | papal-bull | `rp:pius-xii` | 1958-02-24 |
 | `mag:pius-xii/thakhekensis-1958` | Thakhekensis | Thakhekensis | papal-bull | `rp:pius-xii` | 1958-02-24 |
-| `mag:john-xxiii/tananarivensis-de-diego-suarez-et-aliarum-1958` | Tananarivensis (De Diego Suarez et Aliarum), con la quale vengono elevate al rango di Arcidiocesi Metropolitane le diocesi di Diego Suarez e Fianarantsoa e viene elevata al rango di Diocesi la prefettura di Tsiroanomandidy | Tananarivensis (De Diego Suarez et Aliarum) | papal-bull | `rp:john-xxiii` | 1958-12-11 |
+| `mag:john-xxiii/changanacherrensis-et-aliarum-1959` | Changanacherrensis et aliarum, con la quale viene conferito il titolo di Arcidiocesi alla Diocesi di Changanacherry in India | Changanacherrensis et aliarum | papal-bull | `rp:john-xxiii` | 1959-01-10 |
 | `mag:john-xxiii/munduensis-1959` | Munduensis, con la quale viene elevata a Diocesi la Prefettura Apostolica di Moundou nella Repubblica del Ciad, in Africa Centrale | Munduensis | papal-bull | `rp:john-xxiii` | 1959-02-19 |
 | `mag:john-xxiii/oturkpoensis-1959` | Oturkpoënsis, con la quale la prefettura apostolica di Oturkpo in Nigeria, viene elevata al rango di diocesi | Oturkpoënsis | papal-bull | `rp:john-xxiii` | 1959-04-02 |
 | `mag:john-xxiii/nzerekoreensis-1959` | Nzerekoreensis, che eleva la prefettura apostolica di Nzerekore in Guinea al grado di diocesi | Nzerekoreensis | papal-bull | `rp:john-xxiii` | 1959-04-25 |

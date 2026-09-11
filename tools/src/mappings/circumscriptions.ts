@@ -225,12 +225,13 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
   // own Latin text on vatican.va. 15 confirmed below as erections; the other 12 sit in the
   // tables below -- 5 elevations, 0 unions, and 7 adjudications (three chapters of canons
   // and four Spanish sees given a second title and a concathedral). Two of the fifteen
-  // erect an ecclesiastical province rather than a see: 'Durangensis (Chihuahuensis)',
-  // whose argumentum states only the province, and 'Changanacherrensis et aliarum', whose
-  // argumentum states the elevation of the see to an archdiocese first and the province
-  // second -- it is filed here with the province it constitutes, pending the controller's
-  // ruling, because the elevation is stated in an idiom ('IN ORDINEM ARCHIDIOECESIUM
-  // REDIGITUR') the elevations audit does not recognise.
+  // erect an ecclesiastical province rather than a see ('Durangensis (Chihuahuensis)',
+  // 'Tananarivensis'). Rule for an argumentum that states two acts: the act it leads with
+  // is the principal act and decides the table, and PRAETEREA / INSUPER introduces the
+  // secondary one -- so 'Tananarivensis' (provinces constituted, INSUPER a prefecture
+  // raised) is an erection and 'Changanacherrensis' (a see raised, PRAETEREA a province
+  // constituted) an elevation; union-before-elevation-before-erection applies only where
+  // one act is the vehicle of the other, as when a union's merged see 'constituitur'.
   'john-xxiii|pacensis-in-bolivia-coroicensis|1958-11-07': {
     argumentum:
       'PACENSIS IN BOLIVIA* (COROICENSIS) E PACENSI IN BOLIVIA ARCHIDIOECESI QUIBUSDAM '
@@ -263,20 +264,20 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'Mazatlanensem appellandam...". The record carries no incipit, so its key slugs the '
       + 'harvested Italian title.',
   },
-  'john-xxiii|changanacherrensis-et-aliarum|1959-01-10': {
+  'john-xxiii|tananarivensis-de-diego-suarez-et-aliarum|1958-12-11': {
     argumentum:
-      'CHANGANACHERRENSIS ET ALIARUM* DIOECESIS « CHANGANACHERRENSIS » IN ORDINEM '
-      + 'ARCHIDIOECESIUM REDIGITUR. NOVA PRAETEREA PROVINCIA ECCLESIASTICA CONSTITUITUR, '
-      + 'EIUSDEM NOMINIS.',
+      'TANANARIVENSIS* (DE DIEGO SUAREZ ET ALIARUM) IN INSULA MADAGASCARIA DUAE NOVAE '
+      + 'PROVINCIAE ECCLESIASTICAE CONSTITUUNTUR, QUARUM EST APPELLATIO: « DE DIEGO SUAREZ » '
+      + 'ET « FIANARANTSOAËNSIS »; APOSTOLICA INSUPER PRAEFECTURA TSIROANOMANDIDYENSIS AD '
+      + 'GRADUM DIOECESIS TOLLITUR.',
     note:
-      'Raises the Diocese of Changanacherry, of the Chaldean-Malabar rite, to an archdiocese '
-      + 'and erects the new ecclesiastical province of the same name, with Palai and '
-      + 'Kottayam as its suffragans: "...Dioecesim Changanacherrensem in ordinem '
-      + 'archidioecesium redigimus...simul novam provinciam ecclesiasticam constituimus, '
-      + 'cuius caput erit ipsa Changanacherrensis Sedes, suffraganeae vero Palaiensis et '
-      + 'Kottajamensis dioeceses.". The argumentum states both acts and leads with the '
-      + 'elevation; filed with the erection of the province, as Durangensis (Chihuahuensis) '
-      + 'is (see the instalment comment above).',
+      'Divides the ecclesiastical province of Tananarive, which until now took in every '
+      + 'diocese of Madagascar, and erects two new provinces, Diégo-Suarez and Fianarantsoa, '
+      + 'their sees made metropolitan: "...Ecclesiasticam provinciam Tananarivensem...'
+      + 'dividimus, ita ut tres omnino in eadem Insula ecclesiasticae provinciae '
+      + 'exsistant...". The secondary act (INSUPER) raises the Apostolic Prefecture of '
+      + 'Tsiroanomandidy to a diocese, keeping its name and boundaries. The erection of the '
+      + 'provinces is the act the argumentum leads with, and the one filed here.',
   },
   'john-xxiii|cuschensis-sicuanensi|1959-01-10': {
     argumentum:
@@ -404,11 +405,15 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
  * state the act with this passive idiom rather than any verb already listed here; the
  * pattern also matches `EFFORMATUR`/`EFFORMANTUR` as a substring, the form the second of
  * those two actually uses (spec §2.3).
+ *
+ * `IN ORDINEM (?:ARCHI)?DIOECESIUM` is the "placed in the rank of (arch)dioceses" idiom
+ * John XXIII's 'Changanacherrensis et aliarum' uses for an elevation ('IN ORDINEM
+ * ARCHIDIOECESIUM REDIGITUR'), stated with no verb the elevations pattern already listed.
  */
 export const ERECTION_IDIOMS =
   /CONDITUR|CONDUNTUR|ERIGITUR|ERIGUNTUR|CONSTITUITUR|CONSTITUUNTUR|EXCITATUR|EFFICITUR|CREATUR|NOVA FIT|FORMAM REDIG|FORMATUR|FORMANTUR/;
 export const ELEVATION_IDIOMS =
-  /EVEHITUR|EVEHUNTUR|ELEVATUR|PERDUCITUR|ATTOLLITUR|ATTOLITUR|EXTOLLITUR|AD (?:GRADUM|DIGNITATEM|EPARCHIAE|APOSTOLICI)/;
+  /EVEHITUR|EVEHUNTUR|ELEVATUR|PERDUCITUR|ATTOLLITUR|ATTOLITUR|EXTOLLITUR|AD (?:GRADUM|DIGNITATEM|EPARCHIAE|APOSTOLICI)|IN ORDINEM (?:ARCHI)?DIOECESIUM/;
 export const UNION_IDIOMS =
   /DE UNIONE|UNIONE|UNIUNTUR|UNITUR|CONIUNG|AEQUE PRINCIPALITER|DISMEMBRATIONE/;
 
@@ -509,24 +514,24 @@ export const CIRCUMSCRIPTION_ELEVATIONS: Record<string, CircumscriptionRow> = {
       + 'gradum et dignitatem evehimus, eodem nomine iisdemque finibus servatis...".',
   },
   // The second curation instalment (Task 3), John XXIII: the five of the 27 candidates that
-  // raise an existing circumscription in rank (1958-12-11 through 1959-07-16). Two of them
-  // ('Tananarivensis', 'Lagosensis (Kadunaënsis)') also erect an ecclesiastical province;
-  // an argumentum stating both acts files with the elevation.
-  'john-xxiii|tananarivensis-de-diego-suarez-et-aliarum|1958-12-11': {
+  // raise an existing circumscription in rank (1959-01-10 through 1959-07-16). Two of them
+  // ('Changanacherrensis', 'Lagosensis (Kadunaënsis)') raise a see to a metropolitan
+  // archdiocese and, as the secondary act, constitute the province it heads; the elevation
+  // is what each argumentum leads with (see the rule in the erections table's John XXIII
+  // comment).
+  'john-xxiii|changanacherrensis-et-aliarum|1959-01-10': {
     argumentum:
-      'TANANARIVENSIS* (DE DIEGO SUAREZ ET ALIARUM) IN INSULA MADAGASCARIA DUAE NOVAE '
-      + 'PROVINCIAE ECCLESIASTICAE CONSTITUUNTUR, QUARUM EST APPELLATIO: « DE DIEGO SUAREZ » '
-      + 'ET « FIANARANTSOAËNSIS »; APOSTOLICA INSUPER PRAEFECTURA TSIROANOMANDIDYENSIS AD '
-      + 'GRADUM DIOECESIS TOLLITUR.',
+      'CHANGANACHERRENSIS ET ALIARUM* DIOECESIS « CHANGANACHERRENSIS » IN ORDINEM '
+      + 'ARCHIDIOECESIUM REDIGITUR. NOVA PRAETEREA PROVINCIA ECCLESIASTICA CONSTITUITUR, '
+      + 'EIUSDEM NOMINIS.',
     note:
-      'Divides the ecclesiastical province of Tananarive, which until now took in every '
-      + 'diocese of Madagascar, into three -- Tananarive, Fianarantsoa and Diégo-Suarez, the '
-      + 'last two newly constituted with their sees made metropolitan -- and raises the '
-      + 'Apostolic Prefecture of Tsiroanomandidy to a diocese: "...Ecclesiasticam provinciam '
-      + 'Tananarivensem...dividimus, ita ut tres omnino in eadem Insula ecclesiasticae '
-      + 'provinciae exsistant...insuper apostolicam praefecturam Tsiroanomandidyensem ad '
-      + 'gradum dioecesis evehimus, immutato nomine et finibus...". The argumentum states an '
-      + 'erection and an elevation; filed with the elevation.',
+      'Raises the Diocese of Changanacherry, of the Chaldean-Malabar rite, to the rank of an '
+      + 'archdiocese: "...Dioecesim Changanacherrensem in ordinem archidioecesium '
+      + 'redigimus, cum iuribus et honoribus, oneribus atque obligationibus...". As its '
+      + 'consequence (PRAETEREA) a new ecclesiastical '
+      + 'province of the same name is constituted with the new archdiocese at its head and '
+      + 'Palai and Kottayam as suffragans. The elevation is the principal act; the '
+      + 'argumentum states it in the "placed in the rank of archdioceses" idiom.',
   },
   'john-xxiii|munduensis|1959-02-19': {
     argumentum:
