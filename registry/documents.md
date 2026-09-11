@@ -55,8 +55,8 @@ A keyword is a descriptive subject tag and carries no claim about authority.
 
 | Keyword | Documents |
 | --- | --- |
-| [`circumscription-elevation`](documents/by-keyword/circumscription-elevation.md) | 35 |
-| [`circumscription-erection`](documents/by-keyword/circumscription-erection.md) | 148 |
+| [`circumscription-elevation`](documents/by-keyword/circumscription-elevation.md) | 32 |
+| [`circumscription-erection`](documents/by-keyword/circumscription-erection.md) | 151 |
 | [`circumscription-union`](documents/by-keyword/circumscription-union.md) | 2 |
 
 ## Coverage

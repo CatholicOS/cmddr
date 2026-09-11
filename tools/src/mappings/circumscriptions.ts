@@ -393,15 +393,20 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
   },
   // The third curation instalment (Task 4): the entire Benedict XVI apostolic-constitutions
   // candidate queue (90 candidates, 2005-05-24 through 2013-02-22), each read against its
-  // own Latin text on vatican.va. 74 confirmed below as erections; the other 16 sit in the
-  // tables below -- 14 elevations, 0 unions, and 2 adjudications (a restored see and a
-  // reorganisation of Mexico's provinces). Eleven of the 74 erect an ecclesiastical
+  // own Latin text on vatican.va. 77 confirmed below as erections; the other 13 sit in the
+  // tables below -- 11 elevations, 0 unions, and 2 adjudications (a restored see and a
+  // reorganisation of Mexico's provinces). Eleven of the 77 erect an ecclesiastical
   // province rather than a see ('Mariborensis', 'Buiumburaënsis', 'Ioannesburgensis',
   // 'Niameyensis', 'Diacovensis-Osijekensis', 'Toamasinensis', 'Lilongvensis',
   // 'Malaniensis', 'Saurimoënsis', 'Passofundensis', 'Pelotensis'), most of them raising
   // the see at its head in the same breath: the province is what each argumentum leads
-  // with, so each is an erection under the John XXIII rule above. The curation script
-  // abstained on ten. Nine of those print no all-capitals argumentum because the page sets
+  // with, so each is an erection under the John XXIII rule above. Where the argumentum and
+  // the body describe the act differently, the argumentum governs the table and the note
+  // records the body's operative clause (Ruling 9): so 'Fagarasiensis' (ARCHIEPISCOPATUS
+  // MAIOR ... CONSTITUITUR, the body raising the existing metropolitan see),
+  // 'Azerbaigianiensis' (CONDITUR, the body raising a mission sui iuris) and 'Cametanensis'
+  // (NOVA CONDITUR DIOECESIS, the body raising a territorial prelature) are erections. The
+  // curation script abstained on ten. Nine of those print no all-capitals argumentum because the page sets
   // the argumentum in sentence case, in its usual paragraph under the toponym ('In
   // Indonesia nova conditur dioecesis Maumerensis appellanda.'), so the case-delimited
   // reader stops at its first word -- one shape shared by all nine, a difference in how
@@ -494,6 +499,21 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'of Patna and erects the new Diocese of Buxar, suffragan to Patna: "...ab '
       + 'Archidioecesi Patnensi abstrahimus et novam dioecesim Buxarensem nuncupandam '
       + 'constituimus.".',
+  },
+  'benedict-xvi|fagarasiensis|2005-12-14': {
+    argumentum:
+      'FAGARASIENSIS ET ALBAE IULIENSIS ROMENORUM* ARCHIEPISCOPATUS MAIOR FAGARASIENSIS ET '
+      + 'ALBAE IULIENSIS ROMENORUM CONSTITUITUR.',
+    note:
+      'Constitutes the Major Archiepiscopal Church of Făgăraş and Alba Iulia of the '
+      + 'Romanians, seated at Blaj. The body raises the existing metropolitan see within its '
+      + 'own boundaries to that rank, on the petition "ut Ecclesia haec ad statum '
+      + 'dignitatemque Archiepiscopatus Maioris attolleretur": "...memoratam Sedem in '
+      + 'Ecclesiam Archiepiscopalem Maiorem titulo Fagarasiensem et Albae Iuliensis Romenorum '
+      + 'erigimus, quae iisdem finibus circumscribitur, quibus antiqua Ecclesia '
+      + 'Metropolitana...". The argumentum names the act constituted, and governs the table '
+      + '(Ruling 9). The heading names the see in full where the harvested index (and so the '
+      + 'key) has only "Fagarasiensis".',
   },
   'benedict-xvi|maumerensis|2005-12-14': {
     argumentum: 'MAUMERENSIS* In Indonesia nova conditur dioecesis Maumerensis appellanda.',
@@ -978,6 +998,17 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'The heading spells the see "Sylhetensis" where the harvested index (and so the key) '
       + 'has "Sylethensis".',
   },
+  'benedict-xvi|azerbaigianiensis|2011-08-04': {
+    argumentum:
+      'AZERBAIGIANIENSIS* IN AZERBAIGIANIA PRAEFECTURA APOSTOLICA CONDITUR AZERBAIGIANIENSIS '
+      + 'APPELLANDA',
+    note:
+      'Founds the Apostolic Prefecture of Azerbaijan, entrusted to the Salesians. The body '
+      + 'states the act as raising the existing Mission sui iuris of Baku to that rank: '
+      + '"...Missionem « sui iuris » Bacuensem ad gradum Praefecturae Apostolicae '
+      + 'Azerbaigianiensis appellandae elevamus...". The argumentum names a prefecture '
+      + 'founded (CONDITUR), and governs the table (Ruling 9).',
+  },
   'benedict-xvi|kabvensis|2011-10-29': {
     argumentum: 'KABVENSIS* IN ZAMBIA NOVA CONDITUR DIOECESIS KABVENSIS',
     note:
@@ -1070,6 +1101,17 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'distracto territorio novam dioecesim constituimus Katsinensem-Alensem '
       + 'appellandam...".',
   },
+  'benedict-xvi|cametanensis|2013-02-06': {
+    argumentum: 'CAMETANENSIS* IN BRASILIA NOVA CONDITUR DIOECESIS CAMETANENSIS',
+    note:
+      'Founds the Diocese of Cametá, suffragan to Belém do Pará, its prelate confirmed as '
+      + 'first bishop. The body states the act as raising the existing Territorial Prelature '
+      + 'of Cametá, keeping its name and territory: "...praelaturam territorialem '
+      + 'Cametanensem evehimus ad gradum dioecesis, eodem servato nomine ac territorio.", the '
+      + 'words the Huariensis and Obidensis constitutions use under an EVEHITUR argumentum. '
+      + 'The argumentum names a diocese founded (NOVA CONDITUR DIOECESIS), and governs the '
+      + 'table (Ruling 9).',
+  },
   'benedict-xvi|gambomensis|2013-02-22': {
     argumentum:
       'GAMBOMENSIS* DETRACTO A DIOECESI OUANDOËNSI DISTRICTU CIVILI VULGO « PLATEAUX » NOVA '
@@ -1097,13 +1139,17 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
  * `IN ORDINEM (?:ARCHI)?DIOECESIUM` is the "placed in the rank of (arch)dioceses" idiom
  * John XXIII's 'Changanacherrensis et aliarum' uses for an elevation ('IN ORDINEM
  * ARCHIDIOECESIUM REDIGITUR'), stated with no verb the elevations pattern already listed.
+ *
+ * The audit is case-insensitive (Ruling 8) because nine Benedict XVI pages print the
+ * argumentum in sentence case in its usual place under the toponym ('In Indonesia nova
+ * conditur dioecesis Maumerensis appellanda.'), and the quote stays verbatim.
  */
 export const ERECTION_IDIOMS =
-  /CONDITUR|CONDUNTUR|ERIGITUR|ERIGUNTUR|CONSTITUITUR|CONSTITUUNTUR|EXCITATUR|EFFICITUR|CREATUR|NOVA FIT|FORMAM REDIG|FORMATUR|FORMANTUR/;
+  /CONDITUR|CONDUNTUR|ERIGITUR|ERIGUNTUR|CONSTITUITUR|CONSTITUUNTUR|EXCITATUR|EFFICITUR|CREATUR|NOVA FIT|FORMAM REDIG|FORMATUR|FORMANTUR/i;
 export const ELEVATION_IDIOMS =
-  /EVEHITUR|EVEHUNTUR|ELEVATUR|PERDUCITUR|ATTOLLITUR|ATTOLITUR|EXTOLLITUR|AD (?:GRADUM|DIGNITATEM|EPARCHIAE|APOSTOLICI)|IN ORDINEM (?:ARCHI)?DIOECESIUM/;
+  /EVEHITUR|EVEHUNTUR|ELEVATUR|PERDUCITUR|ATTOLLITUR|ATTOLITUR|EXTOLLITUR|AD (?:GRADUM|DIGNITATEM|EPARCHIAE|APOSTOLICI)|IN ORDINEM (?:ARCHI)?DIOECESIUM/i;
 export const UNION_IDIOMS =
-  /DE UNIONE|UNIONE|UNIUNTUR|UNITUR|CONIUNG|AEQUE PRINCIPALITER|DISMEMBRATIONE/;
+  /DE UNIONE|UNIONE|UNIUNTUR|UNITUR|CONIUNG|AEQUE PRINCIPALITER|DISMEMBRATIONE/i;
 
 export interface CircumscriptionRow {
   /** The document's own argumentum, verbatim: the act in its own words. */
@@ -1265,29 +1311,12 @@ export const CIRCUMSCRIPTION_ELEVATIONS: Record<string, CircumscriptionRow> = {
       + 'gradum et dignitatem archidioecesis metropolitanae evehimus...". The argumentum '
       + 'states both acts and leads with the elevation; filed with the elevation.',
   },
-  // The third curation instalment (Task 4), Benedict XVI: the 14 of the 90 candidates that
-  // raise an existing circumscription in rank (2005-12-14 through 2013-02-06). Four state
-  // the act with no idiom the elevations pattern lists: 'Fagarasiensis' (a metropolitan see
-  // made a Major Archiepiscopal Church, ARCHIEPISCOPATUS MAIOR ... CONSTITUITUR),
-  // 'Azerbaigianiensis' and 'Cametanensis' (whose argumentum says CONDITUR while the body
-  // raises the existing mission or prelature: each is filed on what the body does), and
-  // 'Kyrgyzstaniae' (its argumentum in sentence case, like the eight above). Each is
-  // reported for the controller's ruling rather than the pattern widened here.
-  'benedict-xvi|fagarasiensis|2005-12-14': {
-    argumentum:
-      'FAGARASIENSIS ET ALBAE IULIENSIS ROMENORUM* ARCHIEPISCOPATUS MAIOR FAGARASIENSIS ET '
-      + 'ALBAE IULIENSIS ROMENORUM CONSTITUITUR.',
-    note:
-      'Raises the metropolitan see of Făgăraş and Alba Iulia of the Romanians, within its '
-      + 'existing boundaries, to a Major Archiepiscopal Church, seated at Blaj: "...memoratam '
-      + 'Sedem in Ecclesiam Archiepiscopalem Maiorem titulo Fagarasiensem et Albae Iuliensis '
-      + 'Romenorum erigimus, quae iisdem finibus circumscribitur, quibus antiqua Ecclesia '
-      + 'Metropolitana...". A change of rank for an existing see, granted on the petition that '
-      + 'it be raised ("ad statum dignitatemque Archiepiscopatus Maioris attolleretur"), not '
-      + 'the erection of a new one; the argumentum states it with CONSTITUITUR. The heading '
-      + 'names the see in full where the harvested index (and so the key) has only '
-      + '"Fagarasiensis".',
-  },
+  // The third curation instalment (Task 4), Benedict XVI: the 11 of the 90 candidates that
+  // raise an existing circumscription in rank (2006-03-18 through 2011-11-09). Three more
+  // whose body raises an existing see under an argumentum that says CONDITUR or
+  // CONSTITUITUR ('Fagarasiensis', 'Azerbaigianiensis', 'Cametanensis') sit in the
+  // erections table under Ruling 9: the argumentum governs the table. 'Kyrgyzstaniae' is
+  // quoted by hand in the sentence case its page prints.
   'benedict-xvi|kyrgyzstaniae|2006-03-18': {
     argumentum:
       'KYRGYZSTANIAE* Missio sui iuris in Republica Kyrgyzstaniae ad gradum Administrationis '
@@ -1396,18 +1425,6 @@ export const CIRCUMSCRIPTION_ELEVATIONS: Record<string, CircumscriptionRow> = {
       + 'attollimus, iisdem servatis finibus...et nominibus sive de Curia sive in lingua loci '
       + 'propria.".',
   },
-  'benedict-xvi|azerbaigianiensis|2011-08-04': {
-    argumentum:
-      'AZERBAIGIANIENSIS* IN AZERBAIGIANIA PRAEFECTURA APOSTOLICA CONDITUR AZERBAIGIANIENSIS '
-      + 'APPELLANDA',
-    note:
-      'Raises the Mission sui iuris of Baku to the rank of an apostolic prefecture, to be '
-      + 'called the Apostolic Prefecture of Azerbaijan and entrusted to the Salesians: '
-      + '"...Missionem « sui iuris » Bacuensem ad gradum Praefecturae Apostolicae '
-      + 'Azerbaigianiensis appellandae elevamus...". The argumentum states the act as a '
-      + 'prefecture founded (CONDITUR); the body raises the existing mission, and the row is '
-      + 'filed on what the body does.',
-  },
   'benedict-xvi|obidensis|2011-11-09': {
     argumentum:
       'OBIDENSIS* IN BRASILIA PRAELATURA TERRITORIALIS OBIDENSIS AD GRADUM AC DIGNITATEM '
@@ -1418,17 +1435,6 @@ export const CIRCUMSCRIPTION_ELEVATIONS: Record<string, CircumscriptionRow> = {
       + 'confirming it suffragan to Belém do Pará: "...praelaturam territorialem Obidensem ad '
       + 'gradum ac dignitatem dioecesis attollimus, servatis iisdem finibus, quibus nunc ipsa '
       + 'terminatur, et nomine.".',
-  },
-  'benedict-xvi|cametanensis|2013-02-06': {
-    argumentum: 'CAMETANENSIS* IN BRASILIA NOVA CONDITUR DIOECESIS CAMETANENSIS',
-    note:
-      'Raises the Territorial Prelature of Cametá to the rank of a diocese, keeping its name '
-      + 'and territory, suffragan to Belém do Pará, its prelate confirmed as first bishop: '
-      + '"...praelaturam territorialem Cametanensem evehimus ad gradum dioecesis, eodem '
-      + 'servato nomine ac territorio.". The argumentum states the act as a diocese founded '
-      + '(NOVA CONDITUR DIOECESIS); the body raises the existing prelature, as the Huariensis '
-      + 'and Obidensis constitutions do in the same words, and the row is filed on what the '
-      + 'body does.',
   },
 };
 
