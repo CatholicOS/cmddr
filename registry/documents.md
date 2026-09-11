@@ -55,8 +55,8 @@ A keyword is a descriptive subject tag and carries no claim about authority.
 
 | Keyword | Documents |
 | --- | --- |
-| [`circumscription-elevation`](documents/by-keyword/circumscription-elevation.md) | 7 |
-| [`circumscription-erection`](documents/by-keyword/circumscription-erection.md) | 59 |
+| [`circumscription-elevation`](documents/by-keyword/circumscription-elevation.md) | 21 |
+| [`circumscription-erection`](documents/by-keyword/circumscription-erection.md) | 74 |
 | [`circumscription-union`](documents/by-keyword/circumscription-union.md) | 2 |
 
 ## Coverage
@@ -73,7 +73,7 @@ This registry covers the **formal document shelves** of vatican.va. Deliberately
 - **Councils before 1870.** vatican.va's council archive publishes only Vatican I and Vatican II;
   the other nineteen ecumenical councils have no source there, so a registry holding two councils
   is not a registry of the councils.
-- **Keyword curation is incomplete.** 739 apostolic constitutions have not yet been confirmed
+- **Keyword curation is incomplete.** 702 apostolic constitutions have not yet been confirmed
   as circumscription erections. Their headings print a bare Latin toponym with no marker, so each
   is confirmed by hand against the document's own text.
 

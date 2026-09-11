@@ -201,9 +201,11 @@ describe('the CIRCUMSCRIPTION_ERECTIONS lookup path', () => {
   // hidden until the curation task that populates it for real, where roughly 1,100
   // confirmations are keyed exactly this way. These tests inject a locally-populated entry
   // and exercise both directions, then remove it so the table stays empty for every other
-  // test in this file and for the harvest itself.
+  // test in this file and for the harvest itself. The toponym is invented: a real one
+  // ('Bikoroënsis', which this fixture once used) stops being unconfirmed the day its
+  // curation instalment files it, and Task 3 filed that one as an elevation.
   const pageSlug = 'pius-xii';
-  const title = 'Bikoroënsis';
+  const title = 'Nullibiensis';
   const date = '1957-06-24';
   const key = `${pageSlug}|${slugify(title)}|${date}`;
 
@@ -214,7 +216,7 @@ describe('the CIRCUMSCRIPTION_ERECTIONS lookup path', () => {
   it('keywordsFor tags a document whose key is present in the curated table', () => {
     expect(keywordsFor(item({ pageSlug, title, incipit: title, date }))).toEqual([]);
     CIRCUMSCRIPTION_ERECTIONS[key] = {
-      argumentum: 'BIKOROËNSIS * TEST EVIDENCE: CONFIRMED CIRCUMSCRIPTION ERECTION, NOVA CONDITUR DIOECESIS.',
+      argumentum: 'NULLIBIENSIS * TEST EVIDENCE: CONFIRMED CIRCUMSCRIPTION ERECTION, NOVA CONDITUR DIOECESIS.',
       note: 'test evidence: confirmed circumscription erection',
     };
     expect(keywordsFor(item({ pageSlug, title, incipit: title, date })))
@@ -228,7 +230,7 @@ describe('the CIRCUMSCRIPTION_ERECTIONS lookup path', () => {
     // Unconfirmed, the toponym shape alone would flag it (as the earlier tests establish).
     expect(isErectionCandidate(candidate)).toBe(true);
     CIRCUMSCRIPTION_ERECTIONS[key] = {
-      argumentum: 'BIKOROËNSIS * TEST EVIDENCE: CONFIRMED CIRCUMSCRIPTION ERECTION, NOVA CONDITUR DIOECESIS.',
+      argumentum: 'NULLIBIENSIS * TEST EVIDENCE: CONFIRMED CIRCUMSCRIPTION ERECTION, NOVA CONDITUR DIOECESIS.',
       note: 'test evidence: confirmed circumscription erection',
     };
     expect(isErectionCandidate(candidate)).toBe(false);

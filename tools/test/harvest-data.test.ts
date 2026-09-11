@@ -3,7 +3,8 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { checkDocuments } from '../src/validate/invariants.js';
 import { parseShelfIndex } from '../src/harvest/shelf.js';
 import {
-  shelvesFor, isErectionCandidate, CIRCUMSCRIPTION_ERECTIONS, RECOVERED_INCIPITS,
+  shelvesFor, isErectionCandidate, isUnconfirmedCandidate, CIRCUMSCRIPTION_ERECTIONS,
+  RECOVERED_INCIPITS,
 } from '../src/mappings/index.js';
 import type { DocumentRecord } from '../src/types.js';
 
@@ -1976,15 +1977,32 @@ describe('the whole corpus', () => {
 
   it('tags exactly the circumscription-elevation documents measured for Task 20, enumerated '
     + 'here so a future change to ELEVATION_PHRASES surfaces its effect on the real corpus', () => {
+    // Seven earned the keyword from their heading (ELEVATION_PHRASES); the other fourteen
+    // are the hand-curated CIRCUMSCRIPTION_ELEVATIONS rows of the Pius XII and John XXIII
+    // instalments, which tag by key rather than by heading.
     const elevated = everything.filter((d) => d.keywords?.includes('circumscription-elevation'));
     expect(elevated.map((d) => d.id).sort()).toEqual([
       'mag:francis-i/attenta-deliberatione-2014',
       'mag:francis-i/de-spiritali-itinere-2015',
       'mag:francis-i/qui-successimus-2015',
       'mag:francis-i/undecim-abhinc-annos-2014',
+      'mag:john-xxiii/hiroshimaensis-1959',
+      'mag:john-xxiii/lagosensis-kadunaensis-1959',
+      'mag:john-xxiii/munduensis-1959',
       'mag:john-xxiii/nagasakiensis-qui-cotidie-1959',
       'mag:john-xxiii/nzerekoreensis-1959',
+      'mag:john-xxiii/oturkpoensis-1959',
+      'mag:john-xxiii/tananarivensis-de-diego-suarez-et-aliarum-1958',
       'mag:leo-xiv/verba-christi-2025',
+      'mag:pius-xii/bathurstensis-in-gambia-1957',
+      'mag:pius-xii/bikoroensis-1957',
+      'mag:pius-xii/copiapoensis-1957',
+      'mag:pius-xii/esmeraldensis-1957',
+      'mag:pius-xii/musomensis-1957',
+      'mag:pius-xii/spinensis-1957',
+      'mag:pius-xii/tangaensis-1958',
+      'mag:pius-xii/thakhekensis-1958',
+      'mag:pius-xii/urawaensis-1957',
     ].sort());
   });
 });
@@ -2121,5 +2139,29 @@ describe('the 1961 Rosary letter and the meditation published with it', () => {
     expect(letter.aliases ?? []).not.toContain(
       'Piccolo saggio di devoti pensieri distribuiti per ogni decina del Rosario, '
       + 'come a complemento della Lettera Apostolica Il religioso convegno');
+  });
+});
+
+describe('the circumscription queue', () => {
+  const everything = readdirSync('data/documents')
+    .filter((f) => f.endsWith('.json'))
+    .flatMap((f) => JSON.parse(readFileSync(`data/documents/${f}`, 'utf8')) as DocumentRecord[]);
+  const remaining = everything.filter(isUnconfirmedCandidate);
+
+  it('has retired every Benedict XV, Pius XII and John XXIII candidate', () => {
+    const done = ['rp:benedict-xv', 'rp:pius-xii', 'rp:john-xxiii'];
+    expect(remaining.filter((d) => done.includes(d.issuerId))).toEqual([]);
+  });
+
+  it('leaves only the three pontificates not yet curated', () => {
+    expect(new Set(remaining.map((d) => d.issuerId)))
+      .toEqual(new Set(['rp:john-paul-ii', 'rp:paul-vi', 'rp:benedict-xvi']));
+  });
+
+  it('awards Pius XII nine elevations, none of them erections', () => {
+    // The first instalment confirmed 19 erections here and rejected these nine by hand.
+    const pxii = everything.filter((d) => d.issuerId === 'rp:pius-xii');
+    expect(pxii.filter((d) => d.keywords?.includes('circumscription-elevation'))).toHaveLength(9);
+    expect(pxii.filter((d) => d.keywords?.includes('circumscription-erection'))).toHaveLength(19);
   });
 });
