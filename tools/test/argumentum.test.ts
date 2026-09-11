@@ -28,4 +28,14 @@ describe('extractArgumentum', () => {
     const html = '<div>CONSTITUTIO APOSTOLICA MAUMERENSIS * In Indonesia archidioecesis</div>';
     expect(extractArgumentum(html)).toBe('MAUMERENSIS *');
   });
+
+  it('decodes HTML entities in the argumentum instead of tripping the case test on them', () => {
+    // Older apostolic-constitution pages markup diacritics and guillemets as named
+    // entities -- 'Bikoro&Euml;nsis', '&laquo;Nullius&raquo;'. Left undecoded, '&Euml;'
+    // reads as the mixed-case letters 'Euml' and breaks the loop on the very first word.
+    const html = '<div>CONSTITUTIO APOSTOLICA BIKORO&Euml;NSIS * APOSTOLICA PRAEFECTURA '
+      + '&laquo;NULLIUS&raquo; BIKORO&Euml;NSIS AD GRADUM EVEHITUR Cum noverimus apostolicam</div>';
+    expect(extractArgumentum(html))
+      .toBe('BIKOROËNSIS * APOSTOLICA PRAEFECTURA «NULLIUS» BIKOROËNSIS AD GRADUM EVEHITUR');
+  });
 });
