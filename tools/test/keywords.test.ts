@@ -30,12 +30,14 @@ describe('keywordsFor', () => {
   });
 
   it('tags a curated older erection from the table, not from its shape', () => {
-    // Seeded by Task 20's curation pass; empty until then, so this asserts the mechanism
-    // via a synthetic key rather than a real document.
+    // Written before Task 20's curation pass, when this key was in no table and the
+    // expectation was []. The John Paul II instalment (Task 6) filed 'Usbekistaniae' as an
+    // erection, so the same synthetic item now exercises the mechanism the other way: the
+    // keyword comes from the table's key, the toponym shape alone still tags nothing.
     expect(keywordsFor(item({
       pageSlug: 'john-paul-ii', title: 'Usbekistaniae', incipit: 'Usbekistaniae',
       date: '2005-04-01',
-    }))).toEqual([]);
+    }))).toEqual(['circumscription-erection']);
   });
 
   it('tags an elevation the heading states outright (real Francis, John XXIII, Leo XIV headings)', () => {

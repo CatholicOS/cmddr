@@ -2866,6 +2866,3439 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'suffragan to Onitsha: "...iisque novam dioecesim condimus, quae ab urbe principe '
       + 'regionis, Avhaënsis cognominabitur...".',
   },
+  // The fifth curation instalment (Task 6), and the last: the entire John Paul II
+  // apostolic-constitutions candidate queue (390 candidates, 1978-10-28 through 2005-04-01),
+  // each read against its own Latin text on vatican.va. 317 confirmed below as erections; the
+  // other 73 sit in the tables below -- 59 elevations, 5 unions, and 9 adjudications (two
+  // chapters of canons and one restored, a second title added to Leiria, an eparchy's
+  // jurisdiction extended over a whole country, Bari's province recognised and Trani's
+  // suppressed, Pinsk's boundaries redrawn, and one transfer of suffragans between Kaunas
+  // and Vilnius decreed twice, once from each side). Sixty-one of the 317 erect an
+  // ecclesiastical province rather than a see, most raising the see at their head in the
+  // same breath: the province is what each argumentum leads with, so each is an erection
+  // under the John XXIII rule above, which also files fourteen rows the curation script
+  // proposed as elevations or unions ('Cascavellensis', 'Mobilensis' -- whose SEIUNGITUR the
+  // union idiom IUNGITUR matches inside -- 'Belogradensis', 'Matritensis', 'Lahorensis',
+  // 'Emeritensis Augustana-Pacensis', 'Cassoviensis', 'Corensis', 'Bobodiulassensis',
+  // 'Kupelaënsis', 'Kumasiensis', 'Barcinonensis', 'Villavicentiensis', and 'Sanggauensis',
+  // where the extinctive union of a prefecture with a deanery is the vehicle of the new
+  // diocese and no existing see survives it). Ten rows state a diocese, vicariate,
+  // administration or province CONDITUR or CONSTITUITUR while their body raises an existing
+  // circumscription ('Monroviensis', 'Kisumuensis', 'Berolinensis', 'Gorlicensis',
+  // 'Bonaventurensis', 'Tibuensis', 'Tumacoënsis', 'Moscoviensis Matris Dei', 'Bruneiensis'
+  // of 2004, 'Usbekistaniae'): the argumentum governs the table (Ruling 9) and each note
+  // records the body's clause. The curation script abstained on twenty-two. Two print a
+  // lower-case letter inside the capitalised toponym ('IANAUBENSlS', 'PREMISLIENSIS-
+  // VARSAVIENSIS ritus BYZANTINI UCRAINORUM'), so the case-delimited reader stopped, and each
+  // is quoted by hand as printed; the other twenty state their act with no listed idiom
+  // (RESTITUITUR, ADDITUR, DISSOLVITUR, REDIGUNTUR, RECOGNITIO, DEFINITUR, SEIUNGUNTUR,
+  // AMPLIFICATUR, INSTITUITUR, a misprinted verb, an elevation in an unlisted word order,
+  // or no verb at all where the page drops or cuts a line of its heading) and were read from
+  // the body. Every argumentum is verbatim as extracted, the page's own misprints kept and
+  // named in the note ('ARCHIIODECESI', 'VOCTORIENSIS', 'BYZANTIBI', 'BELLOMONTESI',
+  // 'CONSTITUTITUR', 'CONTITUITUR', 'CONSTITUIITUR'...); one row ('Vratislaviensis-
+  // Gedanensis') drops the body's opening quotation mark the reader carried into the
+  // heading, and its note says so.
+  'john-paul-ii|batteriensis|1978-10-28': {
+    argumentum:
+      'BATTERIENSIS* QUIBUSDAM LOCIS AB EPARCHIA TIRUVALLENSI DETRACTIS NOVA CONDITUR EPARCHIA '
+      + 'NOMINE BATTERIENSIS, IN INDIA',
+    note:
+      'Detaches the civil districts of Malappuram, Kozhikode, Cannanore, Nilgiris, Mysore, '
+      + 'Coorg, Mandya, Hassan, South Canara, Chikmagalur and Shimoga from the Syro-Malankara '
+      + 'Eparchy of Tiruvalla and erects the new Eparchy of Bathery (India), suffragan to '
+      + 'Trivandrum, confirming what Paul VI had decided and John Paul I confirmed: "...dehinc '
+      + 'ab Eparchia Tiruvallensi seiunctis, condatur nova Eparchia Batteriensis nuncupanda, '
+      + 'cuius sedes erit in ipsa urbe Battery...".',
+  },
+  'john-paul-ii|itabunensis|1978-11-07': {
+    argumentum:
+      'ITABUNENSIS* IN BRASILIAE FINIBUS NOVA DIOECESIS CONDITUR ITABUNENSIS NOMINE, DETRACTIS '
+      + 'NONNULLIS TERRITORIIS AB ECCLESIA ILHEOSENSI',
+    note:
+      'Detaches eighteen municipalities (Itabuna, Ibicarai, Floresta Azul, Santa Cruz da '
+      + 'Vitoria, Firmino Alves, Itororo, Itape, Buerarema, Itaju do Colonia, Una, Camaca, Pau '
+      + 'Brasil, Mascote, Canavieras, Potiragua, Itapebi, Itagimirim, Belmonte) from the Diocese '
+      + 'of Ilheus (Brazil) and erects the new Diocese of Itabuna, suffragan to Sao Salvador da '
+      + 'Bahia: "...quibus profecto novam dioecesim condimus, cuius templum cathedrale illud '
+      + 'erit quod est S. Ioseph dicatum in urbe Itabuna...".',
+  },
+  'john-paul-ii|tandagensis|1978-12-09': {
+    argumentum:
+      'TANDAGENSIS* QUIBUSDAM DETRACTIS TERRITORIIS A DIOECESI SURIGENSI, DIOECESIS '
+      + 'TANDAGENSIS IN INSULIS PHILIPPINIS CONDITUR',
+    note:
+      'Ratifies the erection Paul VI had decreed on 16 June 1978 but died before promulgating: '
+      + 'detaches the civil province of Surigao del Sur from the Diocese of Surigao '
+      + '(Philippines) and erects the new Diocese of Tandag, suffragan to Cagayan de Oro: "...a '
+      + 'dioecesi Surigensi territorium separavit civilis regionis vulgo « Surigao del Sur» '
+      + 'nuncupatae eoque novam constituit dioecesim Tandagensem appellandam...".',
+  },
+  'john-paul-ii|holguinensis|1979-01-08': {
+    argumentum:
+      'HOLGUINENSIS* DETRACTIS QUIBUSDAM TERRITORIIS AB ARCHIDIOECESI S. IACOBI IN CUBA, NOVA '
+      + 'CONDITUR DIOECESIS, «HOLGUINENSIS» APPELLANDA',
+    note:
+      'Detaches the civil province of Holguin and six municipalities of Las Tunas (Jobabo, '
+      + 'Majibacoa, Manati, Menendez, Puerto Padre, Tunas) from the Archdiocese of Santiago de '
+      + 'Cuba and erects the new Diocese of Holguin, suffragan to Santiago de Cuba: "...quibus '
+      + 'novam dioecesim condimus, Holguinensem appellandam...".',
+  },
+  'john-paul-ii|tuxtepecensis|1979-01-08': {
+    argumentum:
+      'TUXTEPECENSIS* QUIBUSDAM LOCIS AB ARCHIDIOECESI ANTEQUERENSI DISTRACTIS, NOVA CONDITUR '
+      + 'IN MEXICO DIOECESIS NOMINE «TUXTEPECENSIS»',
+    note:
+      'Detaches the fourteen municipalities of the civil district of Tuxtepec and two of the '
+      + 'district of Cuicatlan (Sochiapan, Tlacoatzintepec) from the Archdiocese of Antequera '
+      + '(Oaxaca) and erects the new Diocese of Tuxtepec (Mexico), suffragan to Antequera: '
+      + '"...sedecim omnino municipiis lege civili circumscriptis novam condimus dioecesim '
+      + 'Tuxtepecensem cognominandam et archidioecesi Antequerensi suffraganeam...".',
+  },
+  'john-paul-ii|cuautitlanensis|1979-02-05': {
+    argumentum:
+      'CUAUTITLANENSIS* QUIBUSDAM LOCIS A TLALNEPANTLENSI ALIISQUE A TEXCOCENSI DIOECESI '
+      + 'DISTRACTIS, NOVA CONDITUR DIOECESIS NOMINE CUAUTITLANENSIS, IN MEXICO',
+    note:
+      'Detaches eleven municipalities from the Diocese of Tlalnepantla and eight from the '
+      + 'Diocese of Texcoco and erects the new Diocese of Cuautitlan (Mexico), suffragan to '
+      + 'Mexico City: "...undeviginti omnino municipiis nominatim descriptis legeque civili '
+      + 'definitis novam condimus dioecesim Cuautitlanensem nuncupandam et archidioecesi '
+      + 'Mexicanae suffraganeam...".',
+  },
+  'john-paul-ii|netzahualcoyotlensis|1979-02-05': {
+    argumentum:
+      'NETZAHUALCOYOTLENSIS* QUIBUSDAM LOCIS A TEXCOCENSI DIOECESI DISTRACTIS, NOVA ERIGITUR '
+      + 'DIOECESIS NETZAHUALCOYOTLENSIS, IN MEXICO',
+    note:
+      'Detaches fifteen municipalities (Amecameca, Chalco, Ixtapaluca, Netzahualcoyotl and '
+      + 'others) from the Diocese of Texcoco and erects the new Diocese of Netzahualcoyotl '
+      + '(Mexico), suffragan to Mexico City: "...novam condimus dioecesim Netzahualcoyotlensem '
+      + 'nuncupandam et Archidioecesi Mexicanae suffraganeam...".',
+  },
+  'john-paul-ii|irecensis|1979-04-28': {
+    argumentum:
+      'IRECENSIS* DETRACTIS QUIBUSDAM TERRITORIIS A DIOECESIBUS RUIBARBOSENSI ET BARRENSI, IN '
+      + 'BRASILIA DIOECESIS IRECENSIS CONSTITUITUR',
+    note:
+      'Detaches ten municipalities from the Diocese of Rui Barbosa and five from the Diocese '
+      + 'of Barra (Brazil) and erects the new Diocese of Irece, suffragan to Sao Salvador da '
+      + 'Bahia: "...quibus omnibus terris novam dioecesim condimus, Irecensem appellandam...".',
+  },
+  'john-paul-ii|barreriensis|1979-05-21': {
+    argumentum:
+      'BARRERIENSIS* NONNULLIS TERRITORIIS A DIOECESI BARRENSI DETRACTIS NOVA ECCLESIA '
+      + 'CONDITUR, NOMINE BARRERIENSIS',
+    note:
+      'Detaches twelve municipalities (Angical, Baianopolis, Barreiras, Brejolandia, '
+      + 'Catolandia, Cotegipe, Cristopolis, Formosa do Rio Preto, Riachao das Neves, Santa Rita '
+      + 'de Cassia, Sao Desiderio, Tabocas do Brejo Velho) from the Diocese of Barra (Brazil) '
+      + 'and erects the new Diocese of Barreiras, suffragan to Sao Salvador da Bahia: "...atque '
+      + 'ex iis dioecesim condimus Barreriensem appellandam...".',
+  },
+  'john-paul-ii|rurkelaensis|1979-07-04': {
+    argumentum:
+      'RURKELAËNSIS* CIVILI REGIONE VULGO «SUNDARGARH» A DIOECESI SAMBALPURENSI DISTRACTA, '
+      + 'NOVA CONDITUR IN INDIA DIOECESIS NOMINE «RURKELAËNSIS»',
+    note:
+      'Detaches the civil district of Sundargarh from the Diocese of Sambalpur and erects the '
+      + 'new Diocese of Rourkela (India), suffragan to Cuttack-Bhubaneswar: "...A dioecesi '
+      + 'Sambalpurensi civilem regionem « Sundargarh » seiungimus eademque novam erigimus '
+      + 'dioecesim nomine Rurkelaënsem...".',
+  },
+  'john-paul-ii|cascavellensis|1979-10-16': {
+    argumentum:
+      'CASCAVELLENSIS* QUIBUSDAM TERRITORIIS E PROVINCIA ECCLESIASTICA CURITIBENSI DETRACTIS '
+      + 'NOVA ECCLESIASTICA PROVINCIA«CASCAVELLENSIS» CONSTITUITUR CUIUS SEDES EODEM NOMINE '
+      + 'VOCATA AD METROPOLITANAE DIGNITATEM EVEHITUR',
+    note:
+      'Separates the Diocese of Cascavel and the Dioceses of Foz do Iguacu, Palmas and Toledo '
+      + '(Brazil) from the province of Curitiba and erects the new ecclesiastical province of '
+      + 'Cascavel, raising Cascavel to a metropolitan see at its head: "...Cascavellensem '
+      + 'dioecesim ab ecclesiastica provincia Curitibensi seiungimus et ad dignitatem '
+      + 'metropolitanae Sedis evehimus...Modo conditam provinciam archidioecesis ipsa '
+      + 'Cascavellensis tamquam Sedes metropolitana constituet...". The province constituted is '
+      + 'what the argumentum leads with, so this is an erection; the curation script proposed an '
+      + 'elevation on the EVEHITUR of its second clause. The heading prints '
+      + '"PROVINCIA«CASCAVELLENSIS»" without a space, as quoted.',
+  },
+  'john-paul-ii|maringaensis|1979-10-16': {
+    argumentum:
+      'MARINGAËNSIS* IN BRASILIA NOVA PROVINCIA ECCLESIASTICA CONDITUR, MARINGAËNSIS '
+      + 'COGNOMINANDA',
+    note:
+      'Separates the Diocese of Maringa from the province of Londrina (Brazil), raises it to a '
+      + 'metropolitan see and erects the new ecclesiastical province of Maringa with Campo '
+      + 'Mourao, Paranavai and Umuarama as suffragans: "...Maringaënsem dioecesim a Provincia '
+      + 'ecclesiastica Londrinensi separamus, eamque in metropolitanis Ecclesiis '
+      + 'annumeramus...Novam autem Provinciam constituent : ipsa Sedes Maringaënsis, atque '
+      + 'dioeceses Campi Moranensis, Paranavaiensis et Umuaramensis...".',
+  },
+  'john-paul-ii|belfortiensis-montis-beligardi|1979-11-03': {
+    argumentum:
+      'BELFORTIENSIS-MONTIS BELIGARDI* NONNULLIS DETRACTIS TERRITORIIS AB ARCHIIODECESI '
+      + 'BISUNTINA, NOVA DIOECESIS CONDITUR, BELFORTIENSIS-MONTIS BELIGARDI NOMINE',
+    note:
+      'Detaches the Territoire de Belfort, the Pays de Montbeliard (part of the Doubs) and the '
+      + 'canton of Hericourt with the commune of Chalonvillars from the Archdiocese of Besancon '
+      + 'and erects the new Diocese of Belfort-Montbeliard (France), suffragan to Besancon: '
+      + '"...quibus terris simul sumptis novam dioecesim constituimus, Belfortiensem-Montis '
+      + 'Beligardi cognominandam, cuius sedem in urbe Belfort ponimus...". The heading prints '
+      + '"ARCHIIODECESI", as quoted.',
+  },
+  'john-paul-ii|cotabatensis|1979-11-05': {
+    argumentum:
+      'COTABATENSIS* NOVA PROVINCIA ECCLESIASTICA IN INSULIS PHILIPPINIS CONDITUR, NOMINE '
+      + 'COTABATENSIS',
+    note:
+      'Separates the Diocese of Cotabato and the Prelatures of Marbel and Kidapawan from the '
+      + 'province of Davao (Philippines), raises Cotabato to a metropolitan see and erects the '
+      + 'new ecclesiastical province of Cotabato: "...Cotabatensem dioecesim a provincia '
+      + 'ecclesiastica Davaënsi seiungimus atque ad dignitatem metropolitanae Ecclesiae '
+      + 'tollimus...Nova ergo ecclesiastica provincia hisce circumscriptionibus constabit : '
+      + 'Cotabatensi tamquam metropolitana sede, tamquam vero suffraganeis praelaturis '
+      + 'Marbeliana et Kidapavanensi...".',
+  },
+  'john-paul-ii|digosensis|1979-11-05': {
+    argumentum:
+      'DIGOSENSIS* CIVILI REGIONE VULGO «DAVAO DEL SUR» AB ARCHIDIOECESI DAVAËNSI DISTRACTA '
+      + 'CONDITUR NOVA DIOECESIS NOMINE «DIGOSENSIS»',
+    note:
+      'Detaches the civil province of Davao del Sur from the Archdiocese of Davao '
+      + '(Philippines) and erects the new Diocese of Digos, suffragan to Davao: "...iisdemque '
+      + 'ita seiunctis novam condimus dioecesim Digosensem cognominandam ipsique Ecclesiae '
+      + 'Davaënsi suffraganeam...".',
+  },
+  'john-paul-ii|assidonensis-jerezensis|1980-03-03': {
+    argumentum:
+      'ASSIDONENSIS-JEREZENSIS* QUIBUSDAM LOCIS AB ECCLESIA HISPALENSI ALIISQUE A DIOECESI '
+      + 'GADICENSI SEPARATIS NOVA CONDITUR DIOECESIS NOMINE ASSIDONENSIS-JEREZENSIS',
+    note:
+      'Detaches twenty-five municipalities (Jerez de la Frontera, Arcos de la Frontera, '
+      + 'Sanlucar de Barrameda, Puerto de Santa Maria, Rota, Chipiona, Olvera and others) from '
+      + 'the Archdiocese of Seville and the villages of La Ina and Torrecera with the southern '
+      + 'part of Arcos from the Diocese of Cadiz, and erects the new Diocese of Asidonia-Jerez '
+      + '(Spain), suffragan to Seville: "...ex omnibusque simul sumptis locis, quae diximus, '
+      + 'novam dioecesim Assidonensem-Jerezensem appellandam...condimus.".',
+  },
+  'john-paul-ii|hamiltonensis-in-nova-zelandia|1980-03-06': {
+    argumentum:
+      'HAMILTONENSIS IN NOVA ZELANDIA* IN NOVA ZELANDIA DIOECESIS CONDITUR HAMILTONENSIS IN '
+      + 'NOVA ZELANDIA COGNOMINE',
+    note:
+      'Detaches fifteen counties (Raglan, Waipa, Otorohanga, Taumarunui, Ohinemuri, Piako, '
+      + 'Matamata, Tauranga, Rotorua, Taupo, Opotiki, Waiapu, Waikohu, Cook, most of Waikato) '
+      + 'and the districts of Whakatane and Waitomo from the Diocese of Auckland and erects the '
+      + 'new Diocese of Hamilton in New Zealand, suffragan to Wellington: "...a dioecesi '
+      + 'Aucopolitana separamus, quibns novam dioecesim condimus, ab nomine Hamilton '
+      + 'Hamiltonensem in Nova Zelandia cognominandam...".',
+  },
+  'john-paul-ii|mekiensis|1980-03-06': {
+    argumentum:
+      'MEKIENSIS* IN AETHIOPIA NOVA CONSTITUITUR PRAEFECTURA APOSTOLICA NOMINE MEKIENSIS',
+    note:
+      'Detaches the regions of Arssi and Bale and the sub-province of Butajira-Haigotch from '
+      + 'the Apostolic Vicariate of Harar and erects the new Apostolic Prefecture of Meki '
+      + '(Ethiopia), entrusted to the Consolata Missionaries: "...iisque Praefecturam '
+      + 'Apostolicam condimus Mekiensem appellandam.".',
+  },
+  'john-paul-ii|muzaffarpurensis|1980-03-06': {
+    argumentum:
+      'MUZAFFARPURENSIS* EX INTEGRO NOVA DIOECESI MUZAFFARPURENSIS EXCITATUR IN INDIA LOCIS '
+      + 'QUIBUSDAMDETRACTIS A DIOECESI PATNENSI',
+    note:
+      'Detaches thirteen civil districts (West and East Champaran, Gopalganj, Siwan, Saran, '
+      + 'Vaishali, Muzaffarpur, Sitamarhi, Madhubani, Darbhanga, Samastipur, Saharsa, Begusarai) '
+      + 'from the Diocese of Patna and erects the new Diocese of Muzaffarpur (India), suffragan '
+      + 'to Ranchi: "...proindeque coniungantur in novam dioecesim deinceps nuncupandam '
+      + 'Muzaffarpurensem...". The heading prints "QUIBUSDAMDETRACTIS" without a space, as '
+      + 'quoted.',
+  },
+  'john-paul-ii|platensis-et-maris-platensis-chascomusensis|1980-03-07': {
+    argumentum:
+      'PLATENSIS ET MARIS PLATENSIS (CHASCOMUSENSIS)* IN ARGENTINA, NONNULLIS DETRACTIS AB '
+      + 'ECCLESIIS PLATENSI ET MARIS PLATENSIS TERRITORIIS, NOVA CONDITUR DIOECESIS '
+      + 'CHASCOMUSENSIS',
+    note:
+      'Detaches nine partidos (Chascomus, Coronel Brandsen, Castelli, Dolores, General '
+      + 'Belgrano, General Guido, General Paz, Monte, Pila) from the Archdiocese of La Plata and '
+      + 'three (General Conesa, General Lavalle, Maipu) from the Diocese of Mar del Plata and '
+      + 'erects the new Diocese of Chascomus (Argentina), suffragan to La Plata: "...e quibus '
+      + 'omnibus terris novam condimus dioecesim Chascomusensem appellandam...".',
+  },
+  'john-paul-ii|imphalensis|1980-03-13': {
+    argumentum:
+      'IMPHALENSIS* DIOECESIS KOHIMAENSIS-IMPHALENSIS DIVIDITUR ET NOVA ERIGITUR DIOECESIS '
+      + 'IMPHALENSIS',
+    note:
+      'Detaches the State of Manipur from the Diocese of Kohima-Imphal (India) and erects the '
+      + 'new Diocese of Imphal, suffragan to Shillong-Gauhati; the mother see becomes simply '
+      + 'Kohima, seated at Kohima instead of Dimapur: "...civile territorium, vulgo « Manipur» '
+      + 'appellatum, a finibus dioecesis Kohimaensis-Imphalensis distrahimus et in novam '
+      + 'dioecesim Imphalensem denominatam...erigimus...".',
+  },
+  'john-paul-ii|hallamensis|1980-05-30': {
+    argumentum:
+      'HALLAMENSIS* DETRACTIS NONNULLIS TERRITORIIS AB ECCLESIIS LOIDENSI ET NOTTINGHAMENSI '
+      + 'QUAE SUNT IN MAGNA BRITANNIA, NOVA DIOECESIS CONDITUR HALLAMENSIS COGNOMINANDA',
+    note:
+      'Detaches the metropolitan county of South Yorkshire from the Diocese of Leeds and, from '
+      + 'the Diocese of Nottingham, two Sheffield parishes, the district of Bassetlaw and seven '
+      + 'Derbyshire places (Bamford, Chesterfield, Clowne, Dronfield, Eckington, Hathersage, '
+      + 'Staveley), and erects the new Diocese of Hallam (England), seated at Sheffield and '
+      + 'suffragan to Liverpool: "...Quibus terris novam dioecesim constituimus, Hallamensem '
+      + 'appellandam.". The page prints the county as "Metropolitan County of Smith Yorkshire".',
+  },
+  'john-paul-ii|beniaminacevalensis|1980-06-12': {
+    argumentum:
+      'BENIAMINACEVALENSIS* QUIBUSDAM LOCIS A VICARIATU APOSTOLICO CIACHENSI IN PARAQUARIA '
+      + 'NATIONE ALIISQUE A PILCOMAYOENSI DISTRACTIS NOVA CONDITUR DIOECESIS NOMINE '
+      + 'BENIAMINACEVALENSIS',
+    note:
+      'Detaches territory bounded by the Pilcomayo, Paraguay and Verde rivers from the '
+      + 'Apostolic Vicariates of Chaco Paraguayo and Pilcomayo and erects the new Diocese of '
+      + 'Benjamin Aceval (Paraguay), suffragan to Asuncion: "...novam constituimus dioecesim '
+      + 'Beniaminacevalensem appellandam, eamdemque suffraganeam Ecclesiae Sanctissimae '
+      + 'Assumptionis...".',
+  },
+  'john-paul-ii|mobilensis|1980-07-13': {
+    argumentum:
+      'MOBILENSIS* NOVA PROVINCIA ECCLESIASTICA NOMINE MOBILENSIS CONSTITUITUR UNOQUE TEMPORE '
+      + 'ECCLESIA MOBILENSIS ET A PROVINCIA ECCLESIASTICA NOVAE AURELIAE SEIUNGITUR ET AD GRADUM '
+      + 'ARCHIEPISCOPALIS SEDIS METROPOLITANAE EVEHITUR',
+    note:
+      'Separates the Diocese of Mobile and the Dioceses of Biloxi, Birmingham and Jackson from '
+      + 'the province of New Orleans, raises Mobile to a metropolitan see and erects the new '
+      + 'ecclesiastical province of Mobile (United States): "...Dioecesim Mobilensem a Provincia '
+      + 'Ecclesiastica Novae Aureliae seiungimus et ad dignitatem Metropolitanae Ecclesiae '
+      + 'attollimus...Novam praeterea ecclesiasticam Provinciam istic condimus « Mobilensem » '
+      + 'cognominandam...". The province constituted is what the argumentum leads with, so this '
+      + 'is an erection; the curation script proposed a union only because the union idiom '
+      + 'IUNGITUR matches inside SEIUNGITUR.',
+  },
+  'john-paul-ii|caxiensis|1980-10-11': {
+    argumentum:
+      'CAXIENSIS* IN BRASILIA NOVA DIOECESIS CAXIENSIS CONSTITUITUR',
+    note:
+      'Detaches the municipality of Duque de Caxias from the Diocese of Petropolis and Sao '
+      + 'Joao de Meriti from the Diocese of Nova Iguacu (Brazil) and erects the new Diocese of '
+      + 'Duque de Caxias, suffragan to Sao Sebastiao do Rio de Janeiro: "...ex iisque novam '
+      + 'dioecesim creamus : cuius sedem ponimus in urbe Duque de Caxias...Ceterum Sedes '
+      + 'Caxiensis appellabitur.".',
+  },
+  'john-paul-ii|guarabirensis|1980-10-11': {
+    argumentum:
+      'GUARABIREN* QUIBUSDAM DEMPTIS TERRITORIIS A DIOECESI PARAHYBENSI, NOVA IN BRASILIA '
+      + 'DIOECESIS CONDITUR NOMINE GUARABIRENSIS',
+    note:
+      'Detaches twenty-three municipalities (Guarabira, Alagoinha, Aracagi, Arara, Araruna, '
+      + 'Bananeiras, Belem and others) from the Archdiocese of Paraiba and erects the new '
+      + 'Diocese of Guarabira (Brazil), suffragan to Paraiba: "...ex quibus ita seiunctis novam '
+      + 'iure condimus dicionem ecclesiasticam posthac nempe Guarabirensem nuncupandam '
+      + 'habendamque suffraganeam Metropolitanae Ecclesiae Parahybensi...". The heading '
+      + 'abbreviates the toponym to "GUARABIREN", as quoted.',
+  },
+  'john-paul-ii|sorotiensis|1980-11-13': {
+    argumentum:
+      'SOROTIENSIS* QUIBUSDAM TERRITORIIS AB ECCLESIA TOROROËNSI IN UGANDA DETRACTIS, NOVA '
+      + 'CONDITUR DIOECESIS SOROTIENSIS NOMINE',
+    note:
+      'Detaches the civil districts of Soroti and Kumi from the Diocese of Tororo and erects '
+      + 'the new Diocese of Soroti (Uganda), suffragan to Kampala: "...separamus hisque novam '
+      + 'condimus dioecesim Sorotiensem appellandam...".',
+  },
+  'john-paul-ii|ipilensis|1980-12-24': {
+    argumentum:
+      'IPILENSIS* IN INSULIS PHILIPPINIS NOVA CONDITUR PRAELATURA COGNOMINE IPILENSIS',
+    note:
+      'Detaches nine parishes (Alicia, Buug, Ipil, Kabasalan, Mabuhay, Malangas, Margosatubig, '
+      + 'Siay, Subanipa) from the Archdiocese of Zamboanga and erects the new Prelature of Ipil '
+      + '(Philippines), suffragan to Zamboanga: "...quibus terris novam Praelaturam condimus, '
+      + 'Ipilensem nomine, cuius Sedem in urbe Ipil collocamus...".',
+  },
+  'john-paul-ii|mannarensis|1981-01-03': {
+    argumentum:
+      'MANNARENSIS* NONNULLIS DETRACTIS TERRITORIIS A DIOECESI IAFFNENSI IN TAPROBANE NOVA '
+      + 'CONDITUR DIOECESIS «MANNARENSIS» NOMINE',
+    note:
+      'Detaches the civil districts of Mannar and Vavuniya from the Diocese of Jaffna and '
+      + 'erects the new Diocese of Mannar (Sri Lanka), suffragan to Colombo: "...a dioecesi '
+      + 'Iaffnensi distrahimus, eosque in novae dioecesis formam redigimus, « Mannarensis » '
+      + 'cognominandae...".',
+  },
+  'john-paul-ii|okiguensis|1981-01-03': {
+    argumentum:
+      'OKIGUENSIS* IN NIGERIA NOVA CONSTITUITUR DIOECESIS, OKIGUENSIS NOMINE',
+    note:
+      'Detaches the local government areas of Etiti, Mbano, Okigwe and Isuikwuato from the '
+      + 'Diocese of Umuahia and erects the new Diocese of Okigwe (Nigeria), suffragan to '
+      + 'Onitsha: "...a dioecesi Umuahiaënsi distrahimus, in novamque dioecesis formam redigimus '
+      + 'nomine Okiguensis...". The page prints the first district as "Ekiti".',
+  },
+  'john-paul-ii|guaruliensis|1981-01-30': {
+    argumentum:
+      'GUARULIENSIS* QUADAM PLAGA A DIOECESI CRUCISMOGIENSI DETRACTA NOVA CONDITUR DIOECESIS '
+      + 'NOMINE GUARULIENSIS',
+    note:
+      'Detaches the municipality of Guarulhos from the Diocese of Mogi das Cruzes and erects '
+      + 'the new Diocese of Guarulhos (Brazil), suffragan to Sao Paulo: "...ex iisque novam '
+      + 'dioecesim Guaruliensem appellandam condimus iisdemque finibus circumscribimus talis '
+      + 'municipii propriis...".',
+  },
+  'john-paul-ii|viridariensis|1981-01-30': {
+    argumentum:
+      'VIRIDARIENSIS* QUIBUSDAM DEMPTIS E CORUMBENSI DIOECESI IN BRASILIA LOCIS EX INTEGRO '
+      + 'NOVA CONDITUR IBIDEM DIOECESIS VIRIDARIENSIS POSTHAC NUNCUPANDA',
+    note:
+      'Detaches ten municipalities (Jardim, Anastacio, Aquidauana, Bela Vista, Bonito, '
+      + 'Caracol, Guia Lopes da Laguna, Miranda, Nioaque, Porto Murtinho) from the Diocese of '
+      + 'Corumba and erects the new Diocese of Jardim (Brazil), suffragan to Campo Grande: '
+      + '"...quibus ex sic locis seiunctis dioecesim condimus posthac scilicet Viridariensem '
+      + 'appellandam...".',
+  },
+  'john-paul-ii|almenarensis|1981-03-13': {
+    argumentum:
+      'ALMENAREN* QUIBUSDAM LOCIS A DIOECESI ARASSUAHYENSI ALIISQUE AB ECCLESIA OTONIPOLITANA '
+      + 'DISTRACTIS NOVA CONDITUR DIOECESIS NOMINE ALMENARENSIS',
+    note:
+      'Detaches twelve municipalities (Almenara, Bandeira, Felisburgo, Jacinto, Jequitinhonha, '
+      + 'Joaima, Jordania, Rio do Prado, Rubim, Salto da Divisa, Santa Maria do Salto, Santo '
+      + 'Antonio do Jacinto) from the Diocese of Aracuai and Fronteira dos Vales from the '
+      + 'Diocese of Teofilo Otoni and erects the new Diocese of Almenara (Brazil), suffragan to '
+      + 'Diamantina: "...Quibus locis ita distractis simul sumpti novam condimus dioecesim '
+      + 'Almenarensem appellandam...". The heading abbreviates the toponym to "ALMENAREN", as '
+      + 'quoted.',
+  },
+  'john-paul-ii|cyanguguensis|1981-11-05': {
+    argumentum:
+      'CYANGUGUENSIS* QUADAM PLAGA A DIOECESI NYUNDOËNSI NOVA IN RUANDA DIOECESIS CONDITUR '
+      + 'NOMINE CYANGUGUENSIS',
+    note:
+      'Detaches the southern region, bounded by the civil prefecture of Cyangugu, from the '
+      + 'Diocese of Nyundo and erects the new Diocese of Cyangugu (Rwanda), suffragan to Kigali: '
+      + '"...A dioecesi Nyundoensi distrahimus australem regionem ex eaque novam dioecesim '
+      + 'Cyanguguensem appellandam condimus...".',
+  },
+  'john-paul-ii|metuchensis|1981-11-21': {
+    argumentum:
+      'METUCHENSIS* DETRACTIS NONNULLIS TERRITORIIS E DIOECESI TRENTONENSI, NOVA CONDITUR '
+      + 'DIOECESIS METUCHENSIS APPELLANDA',
+    note:
+      'Detaches the counties of Hunterdon, Middlesex, Somerset and Warren from the Diocese of '
+      + 'Trenton and erects the new Diocese of Metuchen (New Jersey), suffragan to Newark: '
+      + '"...quibus novam dioecesim constituimus Metuchensem appellandam, cuius sedes '
+      + 'episcopalis ponetur in urbe Metuchen...".',
+  },
+  'john-paul-ii|vannaisensis-ritus-byzantini|1981-12-03': {
+    argumentum:
+      'VANNAISENSIS RITUS BYZANTINI* DETRACTIS QUIBUSDAM TERRITORIIS AB EPARCHIA PARMENSI '
+      + 'RUTHENORUM, IN STATIBUS FOEDERATIS AMERICAE SEPTEMTRIONALIS EPARCHIA VANNAISENSIS RITUS '
+      + 'BYZANTIBI CONSTITUITUR',
+    note:
+      'Detaches thirteen western states (Montana, Wyoming, Nevada, Colorado, New Mexico, '
+      + 'Arizona, Utah, Idaho, Washington, Oregon, California, Hawaii, Alaska) from the '
+      + 'Ruthenian Eparchy of Parma and erects the new Byzantine Eparchy of Van Nuys, suffragan '
+      + 'to the Metropolitan Eparchy of Pittsburgh: "...ex quibus proinde locis et terris '
+      + 'Eparchiam creamus ritus Byzantini novam ab urbe vulgaris nominis Van Nuys Vannaisensem '
+      + 'in posterum nuncupandam.". The heading prints "BYZANTIBI", as quoted.',
+  },
+  'john-paul-ii|monroviensis|1981-12-21': {
+    argumentum:
+      'MONROVIENSIS* PROVINCIA ECCLESIASTICA IN LIBERIA CONSTITUITUR, EX ARCHIEPISCOPALI '
+      + 'METROPOLITANA ECCLESIA MONROVIENSI ATQUE DIOECESI SUFFRAGANEA RESIDENTIALI CAPITIS '
+      + 'PALMENSIS CONSTANTE',
+    note:
+      'Constitutes the ecclesiastical province of Liberia by raising the Apostolic Vicariate '
+      + 'of Monrovia to a metropolitan archdiocese and the Apostolic Vicariate of Cape Palmas to '
+      + 'a diocese, its suffragan: "...Vicariatum Apostolicum Monroviensem ad dignitatem '
+      + 'evehimus Ecclesiae Archiepiscopalis-Metropolitanae, atque Vicariatum Apostolicum '
+      + 'Capitis Palmensis ad dignitatem dioecesis, Monroviensi suffraganeae.". The province '
+      + 'constituted is what the argumentum states (CONSTITUITUR), so this is an erection; the '
+      + 'body works it by raising the two vicariates (Ruling 9).',
+  },
+  'john-paul-ii|sinopensis|1982-02-06': {
+    argumentum:
+      'SINOPENSIS* IN BRASILIA QUIBUSDAM DETRACTIS A DIOECESI ADAMANTAE LOCIS, NOVA CONDITUR '
+      + 'SINOPENSIS NOMINE',
+    note:
+      'Detaches the parishes of Sinop, Alta Floresta, Colider, Paranatinga, Porto dos Gauchos '
+      + 'and Vera from the Diocese of Diamantino and erects the new Diocese of Sinop (Brazil), '
+      + 'suffragan to Cuiaba: "...atque ex ita detractis locis novam dioecesim condimus '
+      + 'Sinopensem appellandam...".',
+  },
+  'john-paul-ii|barragartiensis|1982-02-27': {
+    argumentum:
+      'BARRAGARTIENSIS* QUIBUSDAM LOCIS A DIOECESI GUIRATINGENSI DETRACTIS NOVA CONDITUR',
+    note:
+      'Detaches the municipalities of Barra do Garcas, Agua Boa, Canarana, General Carneiro '
+      + 'and Nova Xavantina from the Diocese of Guiratinga and erects the new Diocese of Barra '
+      + 'do Garcas (Brazil), suffragan to Cuiaba: "...novam condimus dioecesim Barragartiensem '
+      + 'appellandam, quae ipsa suffraganea erit Ecclesiae Cuiabensi...". The heading names no '
+      + 'new see, as quoted.',
+  },
+  'john-paul-ii|yaundensis-et-aliarum|1982-03-12': {
+    argumentum:
+      'YAUNDENSIS ET ALIARUM* QUATTUOR PROVINCIAE ECCLESIASTICAE CONSTITUUNTUR IN REPUBLICA '
+      + 'CAMMARUNIENSI',
+    note:
+      'Constitutes four ecclesiastical provinces in Cameroon -- Yaounde (with Doume, Mbalmayo, '
+      + 'Sangmelima, Bafia), Douala (Nkongsamba, Bafoussam), Garoua (Maroua-Mokolo, Yagoua) and '
+      + 'Bamenda (Buea, and Kumbo erected the same day) -- raising the bishops of the four '
+      + 'metropolitan sees to archbishops: "...Quattuor erunt deinceps in Republica '
+      + 'Cammaruniensi ecclesiasticae provinciae...Qui hactenus autem Ecclesiis praeerant, quae '
+      + 'sunt metropolitanae hasce per Litteras Apostolicas constitutae, eos ad archiepiscopalem '
+      + 'dignitatem evehimus.".',
+  },
+  'john-paul-ii|kumboensis|1982-03-18': {
+    argumentum:
+      'KUMBOËNSIS* DETRACTA PARTE SEPTEMTRIONALI TERRITORII DIOECESIS BAMENDANAE IN '
+      + 'CAMMARUNIENSI REPUBLICA, NOVA CONSTITUITUR CATHEDRALIS SEDES, NOMINE «KUMBOËNSIS»',
+    note:
+      'Detaches the northern part of the Diocese of Bamenda (the civil divisions of '
+      + 'Donga-Mantung and Bui) and erects the new Diocese of Kumbo (Cameroon), suffragan to '
+      + 'Bamenda, raised to metropolitan rank the same week: "...A dioecesi Bamendana partem '
+      + 'septemtrionalem distrahimus eaque novam constituimus dioecesim a civitate eiusdem '
+      + 'regionis principe vulgo « Kumbo » Kumboënsem appellandam...".',
+  },
+  'john-paul-ii|victoriensis-in-texia|1982-04-13': {
+    argumentum:
+      'VICTORIENSIS IN TEXIA* QUIBUSDAM LOCIS AB ARCHIDIOECESI S. ANTONII ALIISQUE A '
+      + 'GALVESTONIENSI-HOUSTONIENSI ECCLESIA NECNON A DIOECESI CORPORIS CHRISTI RELIQUIS '
+      + 'DETRACTIS NOVA CONDITUR ECCLESIA NOMINE VOCTORIENSIS IN TEXIA',
+    note:
+      'Detaches the counties of Calhoun, Colorado, DeWitt, Fayette, Jackson, Lavaca, Victoria '
+      + 'and the western parts of Matagorda and Wharton from the Archdiocese of San Antonio, the '
+      + 'eastern parts of Matagorda and Wharton from Galveston-Houston, and Goliad county from '
+      + 'Corpus Christi, and erects the new Diocese of Victoria in Texas, suffragan to San '
+      + 'Antonio: "...Quibus ipsis ita descriptis locis simul sumptis novam constituimus '
+      + 'dioecesim nomine Victoriensis in Texia...". The heading prints "VOCTORIENSIS", as '
+      + 'quoted.',
+  },
+  'john-paul-ii|sanggauensis|1982-06-08': {
+    argumentum:
+      'SANGGAUENSIS* SEKADAUENSI HUCUSQUE PRAEFECTURA APOSTOLICA «UNIONE EXSTINCTIVA» DEHINC '
+      + 'CONIUNCTA CUM SANGGAUENSI VICARIATU FORANEO I.E. DECANATU AB ARCHIDIOECESI '
+      + 'PONTIANAKENSI DISTRACTO NOVA IN INDONESIA CONDITUR DIOECESIS NOMINE SANGGAUENSIS',
+    note:
+      'Suppresses the Apostolic Prefecture of Sekadau (Indonesia), erected by Paul VI in 1968, '
+      + 'detaches the deanery of Sanggau (the civil regency of Sanggau) from the Archdiocese of '
+      + 'Pontianak and, from both together, erects the new Diocese of Sanggau, suffragan to '
+      + 'Pontianak: "...Sekadauensis exstinguatur Praefectura Apostolica ut talis...Quibus '
+      + 'omnibus una cum Sekadauensi olim Praefectura Apostolica simul sumptis novam condimus '
+      + 'Ecclesiam Sanggauensem appellandam...". The act the argumentum states is the new '
+      + 'diocese CONDITUR; the extinctive union of the prefecture with a deanery is its vehicle '
+      + 'and no existing see survives it, so this is an erection, not a union of sees -- the '
+      + 'curation script proposed a union on UNIONE and CONIUNCTA.',
+  },
+  'john-paul-ii|yopugonensis|1982-06-08': {
+    argumentum:
+      'YOPUGONEN.* QUIBUSDAM DETRACTIS AB ARCHIDIOECESI ABIDIANENSI NOVA CONDITUR DIOECESIS '
+      + 'NOMINE YOPUGONENSIS',
+    note:
+      'Detaches the western and northern districts of the Archdiocese of Abidjan (the city of '
+      + 'Yopougon and the civil regions of Agboville, Adzope, Tiassale, Sikensi, Dabou and '
+      + 'Jacqueville) and erects the new Diocese of Yopougon (Ivory Coast), suffragan to '
+      + 'Abidjan: "...quibus novam dioecesim condimus Yopugonensem nomine...". The heading '
+      + 'abbreviates the toponym to "YOPUGONEN.", as quoted.',
+  },
+  'john-paul-ii|cruciensis|1982-08-17': {
+    argumentum:
+      'CRUCIENSIS* DETRACTIS NONNULLIS TERRITORIIS AB ARCHIDIOECESI S.FIDEI IN AMERICA '
+      + 'SEPTEMTRIONALI ET A DIOECESI ELPASENSI, MUTATISQUE FINIBUS, NOVA CONSTITUITUR DIOECESIS '
+      + 'CRUCIENSIS',
+    note:
+      'Detaches the counties of Chaves, Lincoln and Sierra from the Archdiocese of Santa Fe '
+      + 'and Dona Ana, Eddy, Grant, Hidalgo, Lea, Luna and Otero from the Diocese of El Paso and '
+      + 'erects the new Diocese of Las Cruces (New Mexico), suffragan to Santa Fe: "...atque his '
+      + 'distractis territoriis novam condimus dioecesim Cruciensem appellandam, quae iisdem '
+      + 'limitabitur finibus, quibus decem nuper memorati « Comitatus »...".',
+  },
+  'john-paul-ii|toritensis|1983-05-02': {
+    argumentum:
+      'TORITENSIS* DETRACTIS NONNULLIS TERRITORIIS A METROPOLITANA ECCLESIA IUBAËNSI, NOVA '
+      + 'CONDITUR DIOECESIS TORITENSIS APPELLANDA',
+    note:
+      'Detaches the civil districts of Torit and Kapoeta from the Archdiocese of Juba and '
+      + 'erects the new Diocese of Torit (Sudan), suffragan to Juba: "...ex iisque novam '
+      + 'condimus dioecesim Toritensem appellandam, quam metropolitanae Ecclesiae Iubaënsi '
+      + 'subicimus...".',
+  },
+  'john-paul-ii|kahamaensis|1983-11-11': {
+    argumentum:
+      'KAHAMAËNSIS* IN TANZANIA CONSTITUITUR NOVA DIOECESIS NOMINE KAHAMAËNSIS',
+    note:
+      'Detaches the region of Kahama from the Archdiocese of Tabora and erects the new Diocese '
+      + 'of Kahama (Tanzania), suffragan to Tabora: "...ab archidioecesi Taboraënsi plagam vulgo '
+      + '« Kahama » nuncupatam seiungimus ex eademque condimus novam dioecesim Kahamaënsem '
+      + 'appellandam...".',
+  },
+  'john-paul-ii|diphuensis|1983-12-05': {
+    argumentum:
+      'DIPHUËNSIS* IN INDIA NOVA CONDITUR DIOECESIS NOMINE DIPHUËNSIS',
+    note:
+      'Detaches the civil district of Karbi Anglong from the Archdiocese of Shillong-Gauhati '
+      + 'and North Cachar Hills from the Diocese of Silchar and erects the new Diocese of Diphu '
+      + '(India), suffragan to Shillong-Gauhati: "...iisque novam dioecesim nomine Diphuënsem '
+      + 'condimus eamque archidioecesi Shillongensi-Gauhatinae suffraganeam subicimus.".',
+  },
+  'john-paul-ii|nkayiensis|1983-12-05': {
+    argumentum:
+      'NKAYENSIS* NONNULLIS TERRITORIIS DETRACTIS A DIOECESI DE POINTE NOIRE, NOVA '
+      + 'CONSTITUITUR DIOECESIS NOMINE NKAYENSIS',
+    note:
+      'Detaches the eastern part of the Diocese of Pointe-Noire (the civil regions of Niari, '
+      + 'Lekoumou and Bouenza) and erects the new Diocese of Nkayi (Congo), suffragan to '
+      + 'Brazzaville: "...eamque in novae dioecesis formam redigimus, quae ab urbe principe '
+      + 'regionis, Nkayiensis cognominabitur, atque archidioecesi Brazzapolitanae suffraganea '
+      + 'erit.".',
+  },
+  'john-paul-ii|matiensis|1984-02-16': {
+    argumentum:
+      'MATIENSIS* IN INSULIS PHILIPPINIS CIVILI PROVINCIA «DAVAO ORIENTAL» A DIOECESI TAGAMNA '
+      + 'DISTRACTA, NOVA CONDITUR DIOECESIS NOMINE MATIENSIS',
+    note:
+      'Detaches the civil province of Davao Oriental from the Diocese of Tagum and erects the '
+      + 'new Diocese of Mati (Philippines), suffragan to Davao: "...ex itaque seiuncta regione '
+      + 'novam condimus iure dioecesim Matiensem in posterum appellandam...".',
+  },
+  'john-paul-ii|aganiensis|1984-03-08': {
+    argumentum:
+      'AGANIENSIS* IN INSULIS OCEANI PACIFICI NOVA CONDITUR PROVINCIA ECCLESIASTICA NOMINE '
+      + 'AGANIENSIS',
+    note:
+      'Separates the Diocese of Agana (Guam) from the province of San Francisco, raises it to '
+      + 'a metropolitan archdiocese and erects the new ecclesiastical province of Agana with the '
+      + 'Diocese of the Caroline and Marshall Islands, withdrawn from the province of Suva, as '
+      + 'its suffragan: "...Novam provinciam ecclesiasticam, secundum ea omnia ipsa quae supra '
+      + 'particulatim descripta sunt, condimus Aganiensem appellandam...et Aganiensem hucusque '
+      + 'dioecesim nunc archidioecesis Metropolitanae dignitate insignimus...".',
+  },
+  'john-paul-ii|aureatensis-guaduensis|1984-03-13': {
+    argumentum:
+      'AUREATENSIS - GUADUENSIS* NON NULLIS LOCIS AD ARCHIDIOECESI MANIZALENSI ALIISQUE AUT A '
+      + 'FACATATIVENSI ECCLESIA AUT A BARRANCABERMEJENSI SEIUNCTIS NOVA CONDITUR DIOECESIS '
+      + 'NOMINE AUREATENSIS-GUADUENSIS',
+    note:
+      'Detaches fourteen municipalities (Puerto Boyaca, Puerto Triunfo, La Dorada, Puerto '
+      + 'Salgar, Guaduas, Caparrapi, Chaguani, Samana, Victoria, La Palma, Yacopi, Marquetalia, '
+      + 'Pensilvania, Manzanares) and two smaller districts from the Archdiocese of Manizales '
+      + 'and the Dioceses of Facatativa and Barrancabermeja and erects the new Diocese of La '
+      + 'Dorada-Guaduas (Colombia), suffragan to Manizales, with a concathedral at Guaduas: '
+      + '"...iisque ex locis simul sumptis novam dioecesim condimus Aureatensem-Guaduensem '
+      + 'appellandam...". The heading prints "AD ARCHIDIOECESI", as quoted.',
+  },
+  'john-paul-ii|coatzacoalsensis|1984-03-14': {
+    argumentum:
+      'COATZACOALSENSIS* QUIBUSDAM LOCIS A DIOECESI SANCTI ANDREAE DE TUXTLA DISTRACTIS NOVA '
+      + 'CONDITUR DIOECESIS NOMINE COATZACOALSENSIS',
+    note:
+      'Detaches nine municipalities (Coatzacoalcos, Cosoleacaque, Ixhuatlan del Sureste, '
+      + 'Hidalgotitlan, Minatitlan, Moloacan, Las Choapas, Pajapan, Zaragoza) from the Diocese '
+      + 'of San Andres Tuxtla and erects the new Diocese of Coatzacoalcos (Mexico), suffragan to '
+      + 'Jalapa: "...ex iisque simul sumptis legeque civili circumscriptis ac definitis novam '
+      + 'dioecesim condimus Coatzacoalsensem appellandam.".',
+  },
+  'john-paul-ii|maputensis-et-aliarum-in-mozambico|1984-06-04': {
+    argumentum:
+      'MAPUTENSIS ET ALIARUM IN MOZAMBICO* NOVAE PROVINCIAE ECCLESIASTICAE IN DICIONE '
+      + 'MOZAMBICANA DUAE CONSTITUUNTUR, NOMINE BEIRENSIS UNA ET NAMPULENSIS ALTERA, MAPUTENSIS '
+      + 'VERO VELUTI EX INTEGRO CONSTITUITUR',
+    note:
+      'Reorders Mozambique into three ecclesiastical provinces: erects the new provinces of '
+      + 'Beira (with Quelimane and Tete) and Nampula (with Lichinga and Pemba), raising both '
+      + 'sees to metropolitan rank, and reconstitutes the province of Maputo with Inhambane and '
+      + 'Xai-Xai: "...Provincias Ecclesiasticas ibi condimus Beirensem et Nampulensem '
+      + 'cognominandas, cuius utriusque propriam Sedem hucusque episcopalem ad dignitatem '
+      + 'metropolitanam nunc evehimus...".',
+  },
+  'john-paul-ii|gorakhpurensis|1984-06-21': {
+    argumentum:
+      'GORAKHPURENSIS* DETRACTIS NONNULLIS TERRITORIIS A DIOECESI VARANASIENSI, IN INDIA, NOVA '
+      + 'EPARCHIA RITUS SYRO-MALABARENSIS CONDITUR, NOMINE GORAKHPURENSIS',
+    note:
+      'Detaches the districts of Gorakhpur, Basti and Deoria from the Diocese of Varanasi and '
+      + 'erects the new Syro-Malabar Eparchy of Gorakhpur (India), entrusted to the Congregation '
+      + 'of St Teresa (Little Flower): "...Ab Ecclesia Varanasiensi Districtus, quos dicunt, '
+      + 'Gorakhpur, Basti ac Deoria distrahimus, eosque in novae Eparchiae formam redigimus, '
+      + 'Ritus Syro-Malabarensis...".',
+  },
+  'john-paul-ii|mbanzacongensis|1984-11-07': {
+    argumentum:
+      'MBANZACONGENSIS* IN ANGOLA NOVA DIOECESIS CONDITUR NOMINE MBANZACONGENSIS AB URBE '
+      + 'REGIONIS PRINCIPE',
+    note:
+      'Detaches the civil province of Zaire from the Diocese of Uije and erects the new '
+      + 'Diocese of Mbanza Congo (Angola), suffragan to Luanda: "...A dioecesi Uiiensi '
+      + 'territorium Zairensis provinciae, ut est lege civili circumscripta separamus, in '
+      + 'novaeque dioecesis formam redigimus, quae ab urbe vulgo « Mbanza Congo » principe '
+      + 'regionis Mbanzacongensis cognominabitur...".',
+  },
+  'john-paul-ii|geitaensis|1984-11-08': {
+    argumentum:
+      'GEITAËNSIS* DISTRACTIS NONNULLIS TERRITORIIS A DIOECESI MWANZAËNSI NOVA DIOECESIS '
+      + 'GEITAËNSIS CONSTITUITUR',
+    note:
+      'Detaches the civil districts of Geita and Sengerema from the Diocese of Mwanza and '
+      + 'erects the new Diocese of Geita (Tanzania), suffragan to Tabora: "...distrahimus et ex '
+      + 'his novam dioecesim Geitaënsem constituimus, Metropolitanae Ecclesiae Taboraënsi '
+      + 'subiectam...".',
+  },
+  'john-paul-ii|vialembensis|1984-11-08': {
+    argumentum:
+      'VIALEMBENSIS* DISTRACTO TERRITORIO AB ECCLESIA AGANIENSI, NOVA DIOECESIS CONDITUR '
+      + 'NOMINE VIALEMBENSIS',
+    note:
+      'Detaches the Commonwealth of the Northern Mariana Islands from the Archdiocese of Agana '
+      + 'and erects the new Diocese of Chalan Kanoa, within the province of Agana erected '
+      + 'earlier that year: "...atque ex eo novam constituimus dioecesim nomine Vialembensem, '
+      + 'cuius fines iidem erunt ac fines territorii de quo diximus.".',
+  },
+  'john-paul-ii|udaipurensis|1984-12-03': {
+    argumentum:
+      'UDAIPURENSIS* QUIBUSDAM LOCIS AB ECCLESIA AIMERENSI ET IAIPURENSI DISTRACTIS NOVA '
+      + 'CONDITUR DIOECESIS NOMINE UDAIPURENSIS',
+    note:
+      'Detaches the civil districts of Bhilwara, Udaipur, Chittorgarh, Dungarpur and Banswara '
+      + '(Rajasthan) and the tehsil of Thandla (Madhya Pradesh) from the Dioceses of Ajmer and '
+      + 'Jaipur and erects the new Diocese of Udaipur (India), suffragan to Agra: "...Iis ipsis '
+      + 'locis simul sumptis novam dioecesim condimus nomine Udaipurensem, quam archidioecesi '
+      + 'Agraensi suffraganeam subicimus.". The page prints the fifth district as "Manswara".',
+  },
+  'john-paul-ii|alaminensis|1985-01-12': {
+    argumentum:
+      'ALAMINENSIS* DISTRACTIS NONNULLIS TERRITORIIS AB ECCLESIA LINGAYEN-DAGUPANEN., NOVA '
+      + 'DIOECESIS ALAMINESIS CONDITUR',
+    note:
+      'Detaches eighteen parishes and a quasi-parish in western Pangasinan (Agno, Aguilar, '
+      + 'Alaminos, Anda, Bani, Bolinao, Bugallon, Burgos, Dasol, Infanta, Labrador, Mabini, '
+      + 'Mangatarem, Sual and others) from the Archdiocese of Lingayen-Dagupan and erects the '
+      + 'new Diocese of Alaminos (Philippines), suffragan to Lingayen-Dagupan: "...iisque '
+      + 'dioecesim condimus Alaminensem appellandam iisdemque finibus circumscribendam quibus '
+      + 'paroeciae ac quasi paroecia de quibus diximus terminantur.". The heading prints '
+      + '"ALAMINESIS" and abbreviates the mother see, as quoted.',
+  },
+  'john-paul-ii|urdanetensis|1985-01-12': {
+    argumentum:
+      'URDANETENSIS* DISTRACTO TERRITORIO AB ARCHIDIOECESI LINGAYENSI-DAGUPANENSI NOVA '
+      + 'CONSTITUITUR DIOECESIS URDANETENSIS',
+    note:
+      'Detaches eighteen parishes and three quasi-parishes in eastern Pangasinan (Alcala, '
+      + 'Asingan, Balungao, Binalonan, Natividad, Pozorrubio, Rosales, San Manuel, Santa Maria, '
+      + 'San Nicolas, San Quintin, Santo Tomas, Sison, Tayug, Umingan, Urdaneta, Villasis and '
+      + 'others) from the Archdiocese of Lingayen-Dagupan and erects the new Diocese of Urdaneta '
+      + '(Philippines), suffragan to Lingayen-Dagupan: "...et ex ita deducto utroque territorio '
+      + 'novam constituimus dioecesim Urdanetensem...".',
+  },
+  'john-paul-ii|punalurensis|1985-12-21': {
+    argumentum:
+      'PUNALURENSIS* IN INDICA NATIONE NOVA DIOECESIS CONSTITUITUR, NOMINE «PUNALURENSIS»',
+    note:
+      'Detaches the taluks of Pathanamthitta and Pathanapuram and parts of Kottarakara, '
+      + 'Kunnathur, Mavelikara and Chengannur -- the territory east of the Main Central Road -- '
+      + 'from the Diocese of Quilon and erects the new Diocese of Punalur (India), suffragan to '
+      + 'Verapoly: "...a dioecesi Quilonensi, in novae dioecesis formam redigimus Punalurensis '
+      + 'appellandae, a nomine scilicet urbis Punalur.".',
+  },
+  'john-paul-ii|talibonensis|1986-01-09': {
+    argumentum:
+      'TALIBONENSIS* QUIBUSDAM LOCIS A DIOECESI TAGBILARANA DISTRACTIS NOVA CONDITUR DIOECESIS '
+      + 'NOMINE TALIBONENSIS',
+    note:
+      'Detaches twenty-three parishes in northern Bohol (Anda, Bien-Unido, Clarin, Duero, '
+      + 'Jetafe, President Garcia, San Miguel, Sierra Bullones, Ubay, Talibon and others) from '
+      + 'the Diocese of Tagbilaran and erects the new Diocese of Talibon (Philippines), '
+      + 'suffragan to Cebu: "...ex iisque simul sumptis locis seu paroeciis novam dioecesim '
+      + 'condimus nomine Talibonensem...".',
+  },
+  'john-paul-ii|yeiensis|1986-03-21': {
+    argumentum:
+      'YEIENSIS* IN SUDANIA NOVA DIOECESIS CONDITUR NOMINE YEIENSIS',
+    note:
+      'Detaches the civil districts of Yei and Mundri (Eastern Equatoria) from the Diocese of '
+      + 'Rumbek and erects the new Diocese of Yei (Sudan), suffragan to Juba: "...a memorata '
+      + 'sede disiuncti, novam dioecesim, Yeiensem vocatam conficient, quae Archidioecesis '
+      + 'Iubaënsis suffraganea erit...".',
+  },
+  'john-paul-ii|parramattensis|1986-04-08': {
+    argumentum:
+      'PARRAMATTENSIS* DETRACTIS NONNULLIS TERRITORIIS AB ARCHIDIOECESI SYDNEYENSI NOVA '
+      + 'CONDITUR DIOECESIS «PARRAMATTENSIS» APPELLANDA',
+    note:
+      'Detaches the municipalities of Parramatta, Baulkham Hills, Blacktown, Holroyd, Penrith, '
+      + 'Blue Mountains and Hawkesbury from the Archdiocese of Sydney and erects the new Diocese '
+      + 'of Parramatta (Australia), suffragan to Sydney: "...quibus novam dioecesim constituimus '
+      + 'Parramattensem appellandam, cuius nempe fines iidem erunt, quibus municipia simul '
+      + 'sumpta circumscribuntur.".',
+  },
+  'john-paul-ii|thamarasserrensis|1986-04-28': {
+    argumentum:
+      'THAMARASSERRENSIS* QUIBUSDAM LOCIS AB EPARCHIA TELLICHERRIENSI SEIUNCTIS NOVA CONDITUR '
+      + 'EPARCHIA NOMINE THAMARASSERRENSIS',
+    note:
+      'Detaches the regions of Calicut and Malappuram from the Syro-Malabar Eparchy of '
+      + 'Tellicherry and erects the new Eparchy of Thamarasserry (India), suffragan to '
+      + 'Ernakulam: "...regiones Calicutensem ac Malappuramensem distrahimus novamque ex iisdem '
+      + 'Eparchiam condimus nomine Thamarasserrensem...".',
+  },
+  'john-paul-ii|sonsonatensis|1986-05-31': {
+    argumentum:
+      'SONSONATENSIS* DISTRACTIS NONNULLIS TERRITORIIS A DIOECESI SANCTAE ANNAE, NOVA '
+      + 'DIOECESIS ERIGITUR QUAE SONSONATENSIS APPELLATUR',
+    note:
+      'Detaches the civil department of Sonsonate from the Diocese of Santa Ana and erects the '
+      + 'new Diocese of Sonsonate (El Salvador), suffragan to San Salvador: "...ex quo distratto '
+      + 'territorio novam dioecesim Sonsonatensem appellandam condimus, cuius videlicet fines '
+      + 'iidem erunt atque provinciae civilis.".',
+  },
+  'john-paul-ii|embuensis|1986-06-09': {
+    argumentum:
+      'EMBUENSIS* DISTRACTO TERRITORIO A DIOECESI MERUENSI NOVA CONSTITUITUR DIOECESIS '
+      + 'EMBUENSIS APPELLANDA',
+    note:
+      'Detaches the civil district of Embu from the Diocese of Meru and erects the new Diocese '
+      + 'of Embu (Kenya), suffragan to Nairobi: "...territorium districtus civilis, vulgo « Embu '
+      + '» dicti, distrahimus idemque dioecesim constituimus, Embuensem appellandam.".',
+  },
+  'john-paul-ii|sreveportuensis|1986-06-16': {
+    argumentum:
+      'SREVEPORTUENSIS* NONNULLIS DISTRACTIS TERRITORIIS A DIOECESI '
+      + 'ALEXANDRINA-SREVEPORTUENSIS APPELLANDA',
+    note:
+      'Detaches fifteen parishes (Caddo, Bossier, Webster, Claiborne, Lincoln, Union, '
+      + 'Morehouse, West Carroll, De Soto, Bienville, Jackson, Ouachita, Richland, Red River, '
+      + 'Sabine) from the Diocese of Alexandria-Shreveport and erects the new Diocese of '
+      + 'Shreveport (Louisiana), suffragan to New Orleans, the mother see becoming simply '
+      + 'Alexandria: "...quibus novam dioecesim Sreveportuensem appellandam condimus, cuius '
+      + 'scilicet fines erunt iidem, quibus memorati Comitatus simul sumpti circumscribuntur.". '
+      + 'The page prints only two lines of its heading, dropping the clause that names the act '
+      + 'between "A DIOECESI" and "ALEXANDRINA-SREVEPORTUENSIS APPELLANDA" (the cached HTML '
+      + 'confirms it), so the argumentum is quoted as printed and the curation script abstained; '
+      + 'the act is read from the body.',
+  },
+  'john-paul-ii|tundurensis-masasiensis|1986-10-17': {
+    argumentum:
+      'TUNDURUENSIS-MASASIENSIS* QUIBUSDAM LOCIS A DIOECESI NACHINGVEAËNSI DISTRACTIS NOVA '
+      + 'ECCLESIA TUNDURUENSIS-MASASIENSIS',
+    note:
+      'Detaches the civil region of Tunduru and, except the parishes of Ndanda and Chigugu, '
+      + 'the region of Masasi from the Diocese of Nachingwea and erects the new Diocese of '
+      + 'Tunduru-Masasi (Tanzania), suffragan to Dar-es-Salaam: "...iisque simul sumptis novam '
+      + 'dioecesim condimus nomine Tunduruensem-Masasiensem eamque tum Ecclesiae '
+      + 'Dar-es-Salaamensi suffraganeam constituimus...". The heading states no verb at all '
+      + '("NOVA ECCLESIA TUNDURUENSIS-MASASIENSIS"), so the curation script abstained and the '
+      + 'act is read from the body.',
+  },
+  'john-paul-ii|baniensis|1986-11-08': {
+    argumentum:
+      'BANIENSIS* SEIUNCTIS QUIBUSDAM TERRITORIIS AB ARCHIDIOECESI SANCTI DOMINICI, NOVA '
+      + 'DIOECESIS BANIENSIS NUNCUPATA ERIGITUR',
+    note:
+      'Detaches the civil provinces of Peravia and San Cristobal from the Archdiocese of Santo '
+      + 'Domingo and erects the new Diocese of Bani (Dominican Republic), suffragan to Santo '
+      + 'Domingo: "...ex qua novam efficimus dioecesim in posterum tempus Baniensem '
+      + 'nuncupandam...".',
+  },
+  'john-paul-ii|tylerensis|1986-12-12': {
+    argumentum:
+      'TYLERENSIS* DETRACTIS NONNULLIS TERRITORIIS AB ECCLESIIS GALVESTONIENSI-HOUSTONIENSI, '
+      + 'BELLOMONTESI, DALLASENSI, NOVA DIOECESIS CONDITUR «TYLERENSIS» COGNOMINANDA',
+    note:
+      'Detaches five counties from the Diocese of Galveston-Houston, six from Beaumont and '
+      + 'twenty-one from Dallas and erects the new Diocese of Tyler (Texas), suffragan to San '
+      + 'Antonio: "...quibus omnibus terris novam dioecesim condimus, Tylerensem cognominandam, '
+      + 'scilicet iisdem finibus conterminandam atque comitatus.". The heading prints '
+      + '"BELLOMONTESI", as quoted.',
+  },
+  'john-paul-ii|belogradensis|1986-12-16': {
+    argumentum:
+      'BELOGRADENSIS* ECCLESIASTICA PROVINCIA CONDITUR BELOGRADENSIS ET ARCHIDIOECESIS EI '
+      + 'COGNOMINE AD GRADUM METROPOLITANAE EVEHITUR',
+    note:
+      'Raises the Archdiocese of Belgrade to a metropolitan see and erects the new '
+      + 'ecclesiastical province of Belgrade with Subotica (until now immediately subject to the '
+      + 'Holy See) and Zrenjanin as suffragans: "...Novam ita provinciam ecclesiasticam nomine '
+      + 'Belogradensem condimus, quae et Ecclesia ei cognomine nunc Metropolitana facta '
+      + 'constabit et Ecclesia Suboticana...et Zrenianinensi...". The province is what the '
+      + 'argumentum leads with (CONDITUR), so this is an erection; the curation script proposed '
+      + 'an elevation on the EVEHITUR of its second clause.',
+  },
+  'john-paul-ii|mbingensis|1986-12-21': {
+    argumentum:
+      'MBINGENSIS* DETRACTIS NONNULLIS TERRITORIIS A DIOECESI SONGEANA, IN TANZANIA, NOVA '
+      + 'CONSTITUITUR DIOECESIS «MBINGENSIS» APPELLANDA',
+    note:
+      'Detaches the civil district of Mbinga from the Diocese of Songea and erects the new '
+      + 'Diocese of Mbinga (Tanzania), suffragan to Dar-es-Salaam: "...territorium civilis '
+      + 'districtus « Mbinga » separamus, quo novam dioecesim condimus Mbingensem nomine, '
+      + 'archidioecesi metropolitanae Dar-es-Salaamensi suffraganeam...".',
+  },
+  'john-paul-ii|sibuensis|1986-12-21': {
+    argumentum:
+      'SIBUENSIS* DETRACTIS NONNULLIS TERRITORIIS AB ECCLESIAE KUCHINGENSI ET MIRIENSI, NOVA '
+      + 'QUAEDAM DIOECESIS CONDITUR, SIBUENSIS APPELLANDA',
+    note:
+      'Detaches the eastern part of the Archdiocese of Kuching and the southern part of the '
+      + 'Diocese of Miri (the Third, Sixth and Seventh Divisions of Sarawak) and erects the new '
+      + 'Diocese of Sibu (Malaysia), suffragan to Kuching: "...Quibus terris novam dioecesim '
+      + 'condimus, ab eius urbe principe Sibuensem cognominandam...".',
+  },
+  'john-paul-ii|coloratensis|1987-01-05': {
+    argumentum:
+      'COLORATENSIS* PRAELATURA TERRITORIALIS COLORATENSIS CONSTITUITUR',
+    note:
+      'Detaches the region of Santo Domingo de los Colorados, bounded as the text describes in '
+      + 'Spanish, from the Archdiocese of Quito and erects the new Territorial Prelature of Los '
+      + 'Colorados (Ecuador), suffragan to Quito: "...Ex hoc autem territorio novam Praelaturam '
+      + 'territorialem constituimus, Coloratensem appellandam...".',
+  },
+  'john-paul-ii|gurecsamiensis|1987-02-12': {
+    argumentum:
+      'GURECSAMIENSIS* DETRACTIS NONNULLIS TERRITORIIS AB ECCLESIA MENEVENSI, NOVA QUAEDAM '
+      + 'DIOECESIS CONDITUR, «GURECSAMIENSIS» APPELLANDA; DIOECESI VERO MENEVENSI NOVUM '
+      + 'TERRITORIUM ACCEDIT',
+    note:
+      'Detaches the counties of Gwynedd and Clwyd and the district of Montgomery from the '
+      + 'Diocese of Menevia and erects the new Diocese of Wrexham (Wales), suffragan to Cardiff, '
+      + 'keeping the former Menevia cathedral; Menevia gains West Glamorgan from Cardiff and '
+      + 'moves its seat to Swansea: "...quibus novam dioecesim constituimus, Gurecsamiensem '
+      + 'appellandam. Huius sedem in urbe vulgo Wrexham statuimus...".',
+  },
+  'john-paul-ii|cabancalensis|1987-03-30': {
+    argumentum:
+      'CABANCALENSIS* IN INSULIS PHILIPPINIS NOVA DIOECESIS CONDITUR CABANCALENSIS APPELLANDA',
+    note:
+      'Detaches fifteen parishes in southern Negros Occidental (La Castellana, Moises Padilla, '
+      + 'Isabela, Binalbagan, Himamaylan, Kabankalan, Candoni, Ilog, Sipalay, Cauayan, Hinobaan '
+      + 'and others) from the Diocese of Bacolod and erects the new Diocese of Kabankalan '
+      + '(Philippines), suffragan to Jaro: "...quibus territoriis novam dioecesim constituimus '
+      + 'Cabancalensem appellandam, nempe iisdem finibus terminandam, quibus paroeciae e quibus '
+      + 'coalescit.".',
+  },
+  'john-paul-ii|bungomaensis|1987-04-27': {
+    argumentum:
+      'BUNGOMAENSIS* IN KENIA NOVA DIOECESIS CREATUR BUNGOMAËNSIS',
+    note:
+      'Detaches the civil districts of Bungoma and Busia and the parish of Tongaren from the '
+      + 'Diocese of Kakamega and erects the new Diocese of Bungoma (Kenya), suffragan to '
+      + 'Nairobi: "...quibus nempe ex coniunctis iam plagis novensilem creamus dioecesim '
+      + 'Bungomaënsem posterum in tempus nuncupandam quam suffraganeam simul subdimus '
+      + 'Metropolitanae Ecclesiae Nairobiensi...".',
+  },
+  'john-paul-ii|kurunegalaensis|1987-05-15': {
+    argumentum:
+      'KURUNEGALAENSIS* IN TAPROBANE INSULA NOVA DIOECESIS KURUNEGALENSIS ERIGITUR',
+    note:
+      'Detaches the Kurunegala District from the Diocese of Chilaw and erects the new Diocese '
+      + 'of Kurunegala (Sri Lanka), suffragan to Colombo: "...Territorium vulgo « Kurunegala '
+      + 'District » a dioecesi Chilavensi distrahimus atque in dioecesis formam redigimus '
+      + 'Kurunegalaënsis cognominandae...".',
+  },
+  'john-paul-ii|mymensinghensis|1987-05-15': {
+    argumentum:
+      'MYMENSINGHENSIS* QUIBUSDAM LOCIS AB ECCLESIA DACCHENSI DISTRACTIS NOVA CONDITUR '
+      + 'DIOECESIS NOMINE MYMENSINGHENSIS',
+    note:
+      'Detaches the civil districts of Mymensingh, Tangail, Kishoreganj, Netrakona, Jamalpur '
+      + 'and Sherpur from the Archdiocese of Dhaka and erects the new Diocese of Mymensingh '
+      + '(Bangladesh), suffragan to Dhaka: "...et ex his novam dioecesim Mymensinghensem '
+      + 'constituimus, Metropolitanae Ecclesiae Dacchensi subiectam...".',
+  },
+  'john-paul-ii|bondukuensis|1987-07-03': {
+    argumentum:
+      'BONDUKUENSIS* DIVISA DIOECESI ABENGURUENSI, NOVA DIOECESIS CONDITUR IN RE PUBLICA '
+      + 'LITORIS EBURNEI «BONDUKUENSIS» APPELLANDA',
+    note:
+      'Detaches the civil divisions of Bouna, Tehini, Nassian, Bondoukou, Sandegue and Tanda '
+      + '(except the parishes of Assuefry and Transua) from the Diocese of Abengourou and erects '
+      + 'the new Diocese of Bondoukou (Ivory Coast): "...iisque novam dioecesim condimus '
+      + 'Bondukuensem appellandam.".',
+  },
+  'john-paul-ii|kottapuramensis|1987-07-03': {
+    argumentum:
+      'KOTTAPURAMENSIS* IN INDIAE STATU CUI NOMEN «KERALA» NOVA CONDITUR DIOECESIS '
+      + 'KOTTAPURAMENSIS',
+    note:
+      'Detaches the northern part of the Archdiocese of Verapoly (its sixth and seventh '
+      + 'deaneries, less the parishes of Manjally and Kottuvally) and erects the new Diocese of '
+      + 'Kottapuram (Kerala, India), suffragan to Verapoly: "...Ab archidioecesi Verapolitana '
+      + 'partem septentrionalem distrahimus eaque novam Ecclesiam condimus Kattapuramensem '
+      + 'appellandam ab urbe principe eiusdem regionis...". The body prints "Kattapuramensem" '
+      + 'where the heading has KOTTAPURAMENSIS.',
+  },
+  'john-paul-ii|sivangaiensis|1987-07-03': {
+    argumentum:
+      'SIVAGANGAIENSIS* IN INDIAE FINIBUS NOVA CONDITUR DIOECESIS NOMINE SIVAGANGAIENSIS',
+    note:
+      'Detaches six taluks (Sivagangai, Tirupathur, Tiruvadanai, Ramnad, Paramakudi, '
+      + 'Mudukulathur) and the island of Rameswaram from the Archdiocese of Madurai and erects '
+      + 'the new Diocese of Sivagangai (India), suffragan to Madurai: "...atque ex iis ita '
+      + 'detractis locis novam condimus dioecesim Sivagangaiensem appellandam, quam '
+      + 'metropolitanae Sedi Madhuraiensi subicimus...".',
+  },
+  'john-paul-ii|truxillensis|1987-07-03': {
+    argumentum:
+      'TRUXILLENSIS IN HONDURIA* IN HONDURIA NOVA CONDITUR DIOECESIS NOMINE TRUXILLENSIS IN '
+      + 'HONDURIA',
+    note:
+      'Detaches the civil departments of Colon and Gracias a Dios from the Diocese of San '
+      + 'Pedro Sula and erects the new Diocese of Trujillo (Honduras), suffragan to Tegucigalpa: '
+      + '"...ex iisque novam condimus dioecesim Truxillensem in Honduria, appellandam, quam '
+      + 'metropolitanae Sedi Tegucigalpensi subicimus...".',
+  },
+  'john-paul-ii|malangensis-soatensis|1987-07-07': {
+    argumentum:
+      'MALANGENSIS-SOATENSIS* IN COLUMBIA NOVA CONDITUR DIOECESIS MALANGENSIS-SOATENSIS',
+    note:
+      'Detaches thirteen municipalities of the province of Garcia Rovira from the Archdiocese '
+      + 'of Bucaramanga and thirteen of the provinces of Norte and Gutierrez from the Diocese of '
+      + 'Duitama and erects the new Diocese of Malaga-Soata (Colombia), suffragan to '
+      + 'Bucaramanga, with a concathedral at Soata: "...atque ex ita distractis territoriis '
+      + 'novam condimus dioecesim Malangensem-Soatensem appellandam...".',
+  },
+  'john-paul-ii|chalatenangensis|1987-12-13': {
+    argumentum:
+      'CHALATENANGENSIS* SANCTI SALVATORIS IN AMERICA IN CIVITATE NOVA DIOECESIS CONDITUR '
+      + 'CHALATENANGENSIS APPELLANDA',
+    note:
+      'Detaches the civil department of Chalatenango from the Archdiocese of San Salvador and '
+      + 'erects the new Diocese of Chalatenango (El Salvador), suffragan to San Salvador: "...ex '
+      + 'quo seiuncto territorio novam condimus dioecesim Chalatenangensem appellandam, cuius '
+      + 'scilicet fines iidem erunt atque civilis provinciae seu « departamento ».".',
+  },
+  'john-paul-ii|lexingtonensis|1988-01-14': {
+    argumentum:
+      'LEXINGTONENSIS* IN CIVITATIBUS FOEDERATIS AMERICAE SEPTEMTRIONALI NOVA CONDITUR '
+      + 'DIOECESIS LEXINGTONENSIS APPELLATA',
+    note:
+      'Detaches seven counties from the Archdiocese of Louisville and forty-three from the '
+      + 'Diocese of Covington and erects the new Diocese of Lexington (Kentucky), suffragan to '
+      + 'Louisville: "...Quibus de ita seiunctis in unumque conglobatis locis novam ex integro '
+      + 'condimus dioecesim posthac videlicet Lexingtonensem vocitandam...".',
+  },
+  'john-paul-ii|khammamensis|1988-01-18': {
+    argumentum:
+      'KHAMMAMENSIS* DISTRACTIS QUIBUSDAM TERRITORIIS A DIOECESI VARANGALENSI NOVA DIOECESIS '
+      + 'KHAMMAMENSIS CONDITUR',
+    note:
+      'Detaches the civil district of Khammam from the Diocese of Warangal and erects the new '
+      + 'Diocese of Khammam (India), suffragan to Hyderabad: "...civili nominatim regione « '
+      + 'Khammam », quam propterea dioecesim Khammamensem nomine condimus suffraganeamque simul '
+      + 'Sedi Metropolitanae Hyderabadensi subdimus.".',
+  },
+  'john-paul-ii|iacmeliensis|1988-02-25': {
+    argumentum:
+      'IACMELIENSIS* NONNULLIS SEIUNCTIS TERRITORIIS AB ECCLESIA PORTUS PRINCIPIS, NOVA '
+      + 'CONSTITUITUR DIOECESIS IACMELIENSIS APPELLANDA',
+    note:
+      'Detaches the departement du Sud-Est from the Archdiocese of Port-au-Prince and erects '
+      + 'the new Diocese of Jacmel (Haiti), suffragan to Port-au-Prince: "...quo novam condimus '
+      + 'dioecesim, Iacmeliensem appellandam, cuius scilicet finps iidem erunt atque civilis '
+      + 'regionis seu «département ».".',
+  },
+  'john-paul-ii|knoxvillensis|1988-03-27': {
+    argumentum:
+      'KNOXVILLENSIS* EX DISTRACTO TERRITORIO A DICIONE NASHVILLENSI, NOVA CONDITUR DIOECESIS '
+      + 'KNOXVILLENSIS APPELLANDA',
+    note:
+      'Detaches thirty-six counties of East Tennessee from the Diocese of Nashville and erects '
+      + 'the new Diocese of Knoxville, suffragan to Louisville: "...ex eoque territorio novam '
+      + 'condimus dioecesim, Knoxvillensem appellandam, cuius videlicet fines a triginta sex '
+      + 'supra memoratis terminantur comitatibus.".',
+  },
+  'john-paul-ii|callianensis|1988-04-30': {
+    argumentum:
+      'CALLIANENSIS* NOVA EPARCHIA CALLIANENSIS PRO FIDELIBUS RITUS SYRO-MALABARENSIS IN '
+      + 'REGIONE BOMBAYENSI-POONENSI-NASHIKENSI DEGENTIBUS CONDITUR',
+    note:
+      'Erects the new Syro-Malabar Eparchy of Kalyan for the faithful of that rite in the '
+      + 'region of Bombay, Poona and Nashik (India), as announced in the letter to the Indian '
+      + 'bishops of 28 May 1987: "...novam in regione quam diximus pro Christifidelibus ritus '
+      + 'syro-malabarensis Eparchiam nomine Callianensem condimus eiusque constitutionem lege '
+      + 'sancimus, cuius ipsius sedes, una cum Ecclesia Cathedrali, ipsa in urbe « Kalyan » '
+      + 'erit.".',
+  },
+  'john-paul-ii|nashikensis|1988-05-15': {
+    argumentum:
+      'NASHIKENSIS* DISTRACTIS TERRITORIIS A DIOECESI POONENSI NOVA DIOECESIS NASHIKENSIS '
+      + 'CONDITUR',
+    note:
+      'Detaches the civil districts of Dhulia, Jalgaon, Nashik and Ahmednagar -- the northern '
+      + 'part -- from the Diocese of Poona and erects the new Diocese of Nashik (India), '
+      + 'suffragan to Bombay: "...unde dioecesim constitui censemus ex provinciae illius urbe '
+      + 'principi « Nashikensem » appellandam...".',
+  },
+  'john-paul-ii|apartadoensis|1988-06-28': {
+    argumentum:
+      'APARTADOËNSIS* IN COLUMBIA NOVA CONDITUR DIOECESIS APARTADOËNSIS',
+    note:
+      'Detaches the region of Uraba antioqueno from the Diocese of Antioquia and Uraba '
+      + 'chocoano from the Apostolic Vicariate of Quibdo and erects the new Diocese of Apartado '
+      + '(Colombia), suffragan to Santa Fe de Antioquia, raised to metropolitan rank ten days '
+      + 'earlier: "...atque ex ita distractis territoriis novam condimus dioecesim Apartadoënsem '
+      + 'appellandam, iisdem circumscriptam finibus quibus memoratae regiones terminantur.".',
+  },
+  'john-paul-ii|caldensis|1988-06-28': {
+    argumentum:
+      'CALDENSIS* IN COLUMBIA NOVA CONDITUR DIOECESIS CALDENSIS',
+    note:
+      'Detaches ten municipalities (Amaga, Angelopolis, Armenia, Caldas, Fredonia, Heliconia, '
+      + 'Montebello, Santa Barbara, Titiribi, Venecia) and the parish of Santa Isabel de la '
+      + 'Tablaza from the Archdiocese of Medellin and erects the new Diocese of Caldas '
+      + '(Colombia), suffragan to Medellin: "...atque ex ita distractis locis novam condimus '
+      + 'dioecesim Caldensem appellandam...".',
+  },
+  'john-paul-ii|girardotanensis|1988-06-28': {
+    argumentum:
+      'GIRARDOTANENSIS* NONNULLIS DISIUNCTIS TERRITORIIS A SEDIBUS MEDELLENSI, SONSONENSI RIVI '
+      + 'NIGRI ET BARRANCABERMEIENSI NOVA CONDITUR DIOECESIS QUAE GIRARDOTANENSIS APPELLATUR',
+    note:
+      'Detaches ten municipalities (Girardota, Barbosa, Santo Domingo, Concepcion, Alejandria, '
+      + 'San Roque, Caracoli, Maceo, Yolombo, Cisneros) from the Archdiocese of Medellin, two '
+      + 'parishes from the Diocese of Sonson-Rionegro and one from Barrancabermeja, and erects '
+      + 'the new Diocese of Girardota (Colombia), suffragan to Medellin: "...ex quibus '
+      + 'distractis territoriis novam condimus dioecesim Girardotanensem appellandam...".',
+  },
+  'john-paul-ii|itaitubaensis|1988-08-08': {
+    argumentum:
+      'ITAITUBAËNSIS* QUADAM PLAGA DE DIOECESI SANTAREMENSI DECUCTA PRAELATURA ITAITUBAËNSIS '
+      + 'CONDITUR',
+    note:
+      'Detaches the municipality of Itaituba from the Diocese of Santarem and erects the new '
+      + 'Prelature of Itaituba (Brazil), suffragan to Belem do Para: "...quo ipso novam nunc '
+      + 'Praelaturam Itaitubaënsem civilibus eiusdem municipii finibus definitam condimus, eam '
+      + 'ipsam Ecclesiae Belemensi de Pará suffraganeam constituentes...". The heading prints '
+      + '"DECUCTA", as quoted.',
+  },
+  'john-paul-ii|loikavensis|1988-11-14': {
+    argumentum:
+      'LOIKAVENSIS* TERRITORIO SEIUNCTO CIVILIS REGIONIS QUAM KAYAH VOCANT A DIOECESI '
+      + 'TAUNGGYIENSI NOVA DIOECESIS CONSTITUITUR LOIKAVENSIS APPELLANDA',
+    note:
+      'Detaches the Kayah State from the Diocese of Taunggyi and erects the new Diocese of '
+      + 'Loikaw (Burma), suffragan to Rangoon: "...quod territorium deinceps novam constituet '
+      + 'dioecesim Loikavensem cognominandam, iisdem quidem servatis finibus ipsius regionis '
+      + 'quam supra memoravimus.".',
+  },
+  'john-paul-ii|shimogaensis|1988-11-14': {
+    argumentum:
+      'SHIMOGAËNSIS* DISTRACTIS QUIBUSDAM TERRITORIIS AB ARCHIDIOECESI BANGALORENSI ET A '
+      + 'DIOECESI CHIKMAGALURENSI NOVA CONSTITUTITUR DIOECESIS SHIMOGAËNSIS APPELLANDA',
+    note:
+      'Detaches the district of Chitradurga from the Archdiocese of Bangalore and the district '
+      + 'of Shimoga from the Diocese of Chikmagalur and erects the new Diocese of Shimoga '
+      + '(India), suffragan to Bangalore: "...exque his separatis territoriis novam condimus '
+      + 'dioecesim « Shimogaënsem » vocandam, archidioecesi Bangalorensi suffraganeam...". The '
+      + 'heading misprints the verb as "CONSTITUTITUR", kept as quoted, which is why the '
+      + 'curation script abstained.',
+  },
+  'john-paul-ii|navaliensis|1988-11-29': {
+    argumentum:
+      'NAVALIENSIS* DISIUNCTIS NONNULLIS TERRITORIIS A PALENSI ARCHIDIOECESI, NOVA ERIGITUR '
+      + 'DIOECESIS NAVALIENSIS APPELLANDA',
+    note:
+      'Detaches twelve parishes on Biliran and northern Leyte (Naval, Almeria, Bawayan, '
+      + 'Caibiran, Biliran, Cabucgayan, Culaba, Calubian, San Isidro, Tabango, Leyte, Tucdao) '
+      + 'from the Archdiocese of Palo and erects the new Diocese of Naval (Philippines), '
+      + 'suffragan to Palo: "...Ex his ergo paroeciarum distractis territoriis novam condimus '
+      + 'dioecesim Navaliensem appellandam...".',
+  },
+  'john-paul-ii|colonensis|1988-12-15': {
+    argumentum:
+      'COLONENSIS* NOVA CONDITUR DIOECESIS NOMINE COLONENSIS',
+    note:
+      'Detaches the province of Colon and the Comarca de San Blas from the Apostolic Vicariate '
+      + 'of Darien and erects the new Diocese of Colon (Panama), suffragan to Panama: "...quibus '
+      + 'conglobatis novam condimus dioecesim ita circumscriptam nomineque Colonensem '
+      + 'appellandam necnon praeclarae Ecclesiae Metropolitanae Panamensi suffraganeam...".',
+  },
+  'john-paul-ii|uyoensis|1989-07-04': {
+    argumentum:
+      'UYOËNSIS* A DIOECESI CALABARENSI QUIBUSDAM DISTRACTIS LOCIS NOVA CONDITUR DIOECESIS '
+      + 'UYOËNSIS NOMINE APPELLANDA',
+    note:
+      'Detaches part of the civil state of Akwa Ibom from the Diocese of Calabar and erects '
+      + 'the new Diocese of Uyo (Nigeria), suffragan to Onitsha: "...Memoratae civilis '
+      + 'provinciae « Akwa Ibom » portionem ab Ecclesia Calabarensi separamus novamque dioecesim '
+      + 'Uyoënsem...condimus et Metropolitanae Ecclesiae Onitshaënsi suffraganeam subicimus...".',
+  },
+  'john-paul-ii|kupangensis-et-aliarum|1989-10-23': {
+    argumentum:
+      'KUPANGENSIS ET ALIARUM* IN INDONESIA NOVA PROVINCIA ECCLESIASTICA CONSTITUITUR '
+      + 'KUPANGENSIS NOMINE',
+    note:
+      'Erects the new ecclesiastical province of Kupang (Indonesia): Kupang becomes a '
+      + 'metropolitan see with Atambua and Weetebula, withdrawn from the province of Ende, as '
+      + 'suffragans; the islands of Alor and Pantar pass to Kupang and Sumbawa to Denpasar: '
+      + '"...Novam provinciam ecclesiasticam in Indonesia condimus Kupangensem nomine, quae '
+      + 'coalescet Ecclesiis Kupangensi et Atambuensi...necnon Ecclesia Veetebulaënsi...".',
+  },
+  'john-paul-ii|gatinensis-hullensis|1989-10-31': {
+    argumentum:
+      'GATINENSIS-HULLENSIS* IN CANADA NOVA PROVINCIA ECCLESIASTICACONSTITUITUR '
+      + 'GATINENSIS-HULLENSIS NOMINE, CUIUS METROPOLITANA ECCLESIA ERIT EADEM SEDES '
+      + 'GATINENSIS-HULLENSIS',
+    note:
+      'Separates the Diocese of Gatineau-Hull from the province of Ottawa, raises it to a '
+      + 'metropolitan see and erects the new ecclesiastical province of Gatineau-Hull (Canada) '
+      + 'with Mont-Laurier and Rouyn-Noranda (from Ottawa) and Amos (from Quebec) as suffragans: '
+      + '"...Gatinensem-Hullensem episcopalem Sedem, seiunctam rite a metropolitana Ecclesia '
+      + 'Ottaviensi, ad gradum archiepiscopalis metropolitanae Sedis evehimus...Nova exin '
+      + 'constituta Provincia Ecclesiastica Gatinensis-Hullensis constet quidem ex Ecclesia '
+      + 'eiusdem nominis et ex iis, quae sequuntur, dioecesibus...". The province is what the '
+      + 'argumentum leads with; the heading prints "ECCLESIASTICACONSTITUITUR" without a space, '
+      + 'as quoted.',
+  },
+  'john-paul-ii|novolaredensis|1989-11-06': {
+    argumentum:
+      'NOVOLAREDENSIS* QUIBUSDAM AB ARCHIDIOECESI MONTERREYENSI ET A DIOECESI METAMORENSI '
+      + 'DISTRACTIS TERRITORIIS NOVA CONSTITUITUR DIOECESIS NOVOLAREDENSIS',
+    note:
+      'Detaches seven municipalities of Nuevo Leon (Anahuac, Bustamante, Lampazos, Paras, '
+      + 'Sabinas Hidalgo, Vallecillo, Villaldama) from the Archdiocese of Monterrey and four of '
+      + 'Tamaulipas (Nuevo Laredo, Miguel Aleman, Mier, Guerrero) from the Diocese of Matamoros '
+      + 'and erects the new Diocese of Nuevo Laredo (Mexico), suffragan to Monterrey: "...et ex '
+      + 'ista distractis territoriis novam condimus dioecesim Novolaredensem appellandam...".',
+  },
+  'john-paul-ii|caracensis-graecorum-melkitarum-catholicorum|1990-02-19': {
+    argumentum:
+      'CARACENSIS GRECORUM MELKITARUM CATHOLICORUM* APOSTOLICUS EXARCHATUS PRO '
+      + 'CHRISTIFIDELIBUS RITUS BYZANTINI GRAECIS MELKITIS IN VENETIOLA DEGENTIBUS CONSTITUITUR',
+    note:
+      'Erects an apostolic exarchate for the Greek-Melkite faithful of Venezuela, seated at '
+      + 'Caracas, at the petition of Patriarch Maximos V Hakim and his synod: "...Apostolicum '
+      + 'constituamus Exarchatum pro Christifidelibus ritus byzantini Graecis Melkitis in '
+      + 'Venetiola degentibus secundum iuris orientalis praescripta. Iubemus deinde Exarchatus '
+      + 'huius sedem in urbe Caracensi collocari...". The heading prints "GRECORUM", as quoted.',
+  },
+  'john-paul-ii|melipillensis|1990-04-04': {
+    argumentum:
+      'MELIPILLENSIS* IN CHILIA NOVA DIOECESIS CONDITUR MELIPILLENSIS',
+    note:
+      'Detaches thirteen municipalities (Melipilla, Maria Pinto, San Pedro, Alhue, Curacavi, '
+      + 'San Antonio, El Tabo, Cartagena, Rocas de Santo Domingo, Navidad, Talagante, Penaflor, '
+      + 'El Monte) from the Archdiocese of Santiago de Chile and erects the new Diocese of '
+      + 'Melipilla, suffragan to Santiago: "...atque ex ita distracto territorio novam condimus '
+      + 'dioecesim Melipillensem appellandam...".',
+  },
+  'john-paul-ii|grodnensis-latinorum|1990-04-13': {
+    argumentum:
+      'GRODNENSIS LATINORUM* GRODNENSIS CONDITUR LATINORUM DIOECESIS',
+    note:
+      'Erects the new Latin Diocese of Grodno (Byelorussia, then in the Soviet Union) on the '
+      + 'whole territory of the Grodno oblast, suffragan to Minsk-Mohilev, erected the same day: '
+      + '"...Cunctis simul sumptis locis, quibus civilis Grodnensis constat regio seu « Oblast '
+      + '», dioecesim condimus Grodnensem Latinorum appellandam...".',
+  },
+  'john-paul-ii|karagandensis-latinorum|1990-04-13': {
+    argumentum:
+      'KARAGANDENSIS LATINORUM* ADMINISTRATIO APOSTOLICA KARAGANDENSIS LATINORUM CONSTITUITUR',
+    note:
+      'Erects the Apostolic Administration of Karaganda for Latin-rite Catholics on the whole '
+      + 'territory of the Kazakh republic, its administrator also given ad tempus the care of '
+      + 'the Catholics of Tajikistan, Kirghizia, Uzbekistan and Turkmenistan: "...territorium '
+      + 'Reipublicae Kazakistaniae in Administrationem Apostolicam erigimus Karagandensem '
+      + 'appellandam, iisdem circumscriptam finibus, quibus in praesens eadem Respublica '
+      + 'terminatur...".',
+  },
+  'john-paul-ii|minscensis-mohiloviensis-latinorum|1990-04-13': {
+    argumentum:
+      'MINSCENSIS-MOHILOVIENSIS LATINORUM* MINSCENSIS-MOHILOVIENSIS LATINORUM CONDITUR '
+      + 'ARCHIDIOECESIS',
+    note:
+      'Erects the new Latin metropolitan Archdiocese of Minsk-Mohilev on the oblasts of Minsk, '
+      + 'Mohilev and Vitebsk, joining the ancient see of Mohilev to the church of Minsk: '
+      + '"...Regiones civiles seu « Oblasti », ut ibidem incolae aiunt, Minsk. Mohilev et '
+      + 'Vitebsk Archidioecesim constituent Metropolitanam, Minscensem- Mohiloviensem Latinorum '
+      + 'appellandam...".',
+  },
+  'john-paul-ii|moscoviensis-latinorum|1990-04-13': {
+    argumentum:
+      'MOSCOVIENSIS LATINORUM* ADMINISTRATIO APOSTOLICA MOSCOVIENSIS LATINORUM CONSTITUITUR',
+    note:
+      'Separates European Russia from the Archdiocese of Mohilev and erects it as the '
+      + 'Apostolic Administration of Moscow for Latin-rite Catholics, seated at Moscow: '
+      + '"...omnia loca quae communiter dieta « Russia Europaea » complectitur ab archidioecesi '
+      + 'Mohiloviensi seiungi atque in Apostolicam Administrationem converti cui deinceps '
+      + 'titulus sit Moscoviensis Latinorum...".',
+  },
+  'john-paul-ii|novosibirskensis-latinorum|1990-04-13': {
+    argumentum:
+      'NOVOSIBIRSKENSIS LATINORUM* IN FOEDERATIS CIVITATIBUS SOVIETICIS ADMINISTRATIO '
+      + 'APOSTOLICA NOVOSIBIRSKENSIS LATINORUM CONDITUR',
+    note:
+      'Erects the Apostolic Administration of Novosibirsk for Latin-rite Catholics on the '
+      + 'territory of Siberia, formerly part of the Archdiocese of Mohilev, its jurisdiction '
+      + 'extending for now to the territory of the Diocese of Vladivostok: "...Territorium '
+      + 'regionis Siberiae, quod olim ad Mohiloviensem Archidioecesim pertinebat, in '
+      + 'Administrationem Apostolicam erigimus Novosibirskensem Latinorum appellandam...".',
+  },
+  'john-paul-ii|mandevillensis|1990-04-15': {
+    argumentum:
+      'MANDEVILLENSIS* VICARIATUS APOSTOLICUS MANDEVILLENSIS INTRA IAMAICANAE NATIONIS FINES '
+      + 'CONSTITUITUR',
+    note:
+      'Erects the new Apostolic Vicariate of Mandeville (Jamaica) on the county of Middlesex '
+      + '(the civil parishes of Manchester, Clarendon and St Elizabeth), within the province of '
+      + 'Kingston and entrusted to the Passionists: "...In comitatu igitur quem Middlesex '
+      + 'vocant, cum antea nulla fuerit, circumscriptionem missionalem constituimus, Vicariatum '
+      + 'nempe Apostolicum Mandevillensem appellandum...".',
+  },
+  'john-paul-ii|colatinensis|1990-04-23': {
+    argumentum:
+      'COLATINENSIS* DISTRACTIS QUIBUSDAM TERRITORIIS AB ARCHIDIOECESI VICTORIENSI SPIRITUS '
+      + 'SANCTI NOVA CONDITUR DIOECESIS COLATINENSIS NOMINE',
+    note:
+      'Detaches thirteen municipalities (Colatina, Aracruz, Baixo Guandu, Ibiracu, Itaguacu, '
+      + 'Itarana, Joao Neiva, Laranja da Terra, Linhares, Marilandia, Pancas, Rio Bananal, Santa '
+      + 'Teresa) from the Archdiocese of Vitoria do Espirito Santo and erects the new Diocese of '
+      + 'Colatina (Brazil), suffragan to Vitoria: "...ex quibus sic seiunctis inter seque '
+      + 'coniunctis dioecesim sui iuris efficimus in posterum tempus COLATINENSEM '
+      + 'nuncupandam...".',
+  },
+  'john-paul-ii|mombasaensis|1990-05-19': {
+    argumentum:
+      'MOMBASAËNSIS* NOVA PROVINCIA ECCLESIASTICA IN KENIA CONSTITUITUR MOMBASAËNSIS NOMINE',
+    note:
+      'Erects the new ecclesiastical province of Mombasa (Kenya), raising the Diocese of '
+      + 'Mombasa to a metropolitan archdiocese with Garissa, withdrawn from Nairobi, as its '
+      + 'suffragan: "...novam, praeter alias, Provinciam ecclesiasticam Mombasaënsem ita '
+      + 'instituimus, ut cognominis dioecesis ad gradum evehatur archidioecesis metropolitanae '
+      + 'eique tamquam suffraganea dioecesis subiciatur Garissaënsis...".',
+  },
+  'john-paul-ii|raishahiensis|1990-05-19': {
+    argumentum:
+      'RAISHAHIENSIS* IN BANGLADESA NOVA CONDITUR DIOECESIS RAISHAHIENSIS NOMINE',
+    note:
+      'Detaches the civil regions of Rajshahi, Pabna and Bogra (except the Panchbibi upazila) '
+      + 'from the Diocese of Dinajpur and erects the new Diocese of Rajshahi (Bangladesh), '
+      + 'suffragan to Dhaka: "...In Bangladesa novam dioecesim condimus Raishahiensem nomine, '
+      + 'quae constet territorio civilium Regionum vulgo « Rajshahi », « Pabna » et « Bogra » a '
+      + 'Dinaipurensi detracto dioecesi...".',
+  },
+  'john-paul-ii|kotidoensis|1990-05-20': {
+    argumentum:
+      'KOTIDOENSIS* IN UGANDA NOVA DIOECESIS CONDITUR',
+    note:
+      'Detaches the civil district of Kotido from the Diocese of Moroto and erects the new '
+      + 'Diocese of Kotido (Uganda), suffragan to Kampala, with its cathedral at Kanawat: "...ut '
+      + 'civilis regio Kotido nomine ab illa seiuncta efficiatur nova dioecesis in posterum '
+      + 'tempus Kotidoensis quae dicetur...".',
+  },
+  'john-paul-ii|kisumuensis|1990-05-21': {
+    argumentum:
+      'KISUMUENSIS* IN KENIAE FINIBUS NOVA CONSTITUITUR PROVINCIA ECCLESIASTICA, VIDELICET '
+      + 'KISUMUENSIS',
+    note:
+      'Erects the new ecclesiastical province of Kisumu (Kenya), raising the Diocese of Kisumu '
+      + 'to a metropolitan archdiocese with Bungoma, Eldoret, Kakamega, Kisii and Lodwar, '
+      + 'withdrawn from Nairobi, as suffragans: "...Dioecesim Kisumuensem attollimus ad '
+      + 'dignitatem et statum Archidioecesis Metropolitanae, quae posthac suffraganeas '
+      + 'complectetur dioeceses Bungomaënsem, Eldoretensem, Kakamegaënsem, Kisiianam et '
+      + 'Loduarinam...". The province constituted is what the argumentum states (Ruling 9).',
+  },
+  'john-paul-ii|nyeriensis|1990-05-21': {
+    argumentum:
+      'NYERIENSIS* IN KENIA NOVA PROVINCIA ECCLESIASTICA CONSTITUITUR NYERIENSIS NOMINE',
+    note:
+      'Detaches the Dioceses of Nyeri, Embu, Marsabit, Meru and Murang\'a from the province of '
+      + 'Nairobi and erects the new ecclesiastical province of Nyeri (Kenya), Nyeri becoming its '
+      + 'metropolitan see: "...atque ex iis, novam provinciam ecclesiasticam condimus Nyeriensem '
+      + 'nomine; quarum quidem Ecclesiarum prima erit metropolitana eodem servato Nyeriensi '
+      + 'nomine...".',
+  },
+  'john-paul-ii|cachoeirensis-australis|1990-06-17': {
+    argumentum:
+      'CACHOEIRENSIS AUSTRALIS* NONNULLIS DISIUNCTIS TERRITORIIS A SEDE SANCTAE MARIAE NOVA '
+      + 'CONDITUR DIOECESIS CACHOEIRENSIS AUSTRALIS COGNOMINANDA',
+    note:
+      'Detaches ten municipalities (Agudo, Arroio do Tigre, Cacapava do Sul, Cachoeira do Sul, '
+      + 'Cerro Branco, Ibarama, Paraiso do Sul, Santana da Boa Vista, Segredo, Sobradinho) from '
+      + 'the Diocese of Santa Maria and erects the new Diocese of Cachoeira do Sul (Brazil), '
+      + 'suffragan to Porto Alegre: "...Ex hoc territorio distracto dioecesim condimus '
+      + 'Cachoeirensem Australem appellandam, iisdem terminata finibus quibus municipia quae '
+      + 'diximus.".',
+  },
+  'john-paul-ii|gokwensis|1990-06-17': {
+    argumentum:
+      'GOKWENSIS* GOKWENSIS DIOECESIS IN ZIMBABUAE FINIBUS CONDITUR',
+    note:
+      'Detaches the civil districts of Gokwe and Omay and the part of Nkayi north of the '
+      + 'Shangani river from the Diocese of Hwange and erects the new Diocese of Gokwe '
+      + '(Zimbabwe), suffragan to Harare: "...Ex quibus distractis agris novam dioecesim '
+      + 'condimus Gokwensem cognominandam, quae Metropolitanae Ecclesiae Hararensi in Zimbabua '
+      + 'suffraganea erit...".',
+  },
+  'john-paul-ii|complutensis|1990-07-23': {
+    argumentum:
+      'COMPLUTENSIS* IN HISPANIA NOVA CONDITUR DIOECESIS COMPLUTENSIS NOMINE',
+    note:
+      'Detaches fifty-three municipalities east of Madrid (Alcala de Henares, Torrejon de '
+      + 'Ardoz, Coslada, Arganda del Rey and others) from the Archdiocese of Madrid and erects '
+      + 'the new Diocese of Alcala de Henares (Spain), suffragan to Madrid, which loses its '
+      + 'Complutensis title: "...atque ex ita distractis locis novam condimus dioecesim '
+      + 'Complutensem appellandam...mandantes ut Complutensis titulus, archidioecesi Matritensi '
+      + 'adnexus, nunc et in posterum ab eadem auferatur.".',
+  },
+  'john-paul-ii|matritensis|1990-07-23': {
+    argumentum:
+      'MATRITENSIS* NONNULLIS DIVISIS TERRITORIIS MATRITENSIS ARCHIDIOECESIS, PROVINCIA '
+      + 'ECCLESIASTICA MATRITENSIS CONSTITUITUR ET MATRITENSIS SEDES AD DIGNITATEM ECCLESIAE '
+      + 'METROPOLITANAE EVEHITUR',
+    note:
+      'Constitutes the new ecclesiastical province of Madrid, raising the Archdiocese of '
+      + 'Madrid, until now immediately subject to the Holy See, to a metropolitan see with the '
+      + 'Dioceses of Alcala de Henares and Getafe, erected the same day, as suffragans: '
+      + '"...Matritensem Sedem, ad hoc usque tempus Sanctae Sedi immediate subiectam, ad '
+      + 'dignitatem evehimus Metropolitanae Ecclesiae...Novam constitutam Ecclesiasticam '
+      + 'Provinciam Matritensem constare volumus ex Ecclesia cognomini atque noviter conditis '
+      + 'dioecesibus Complutensi et Xetafensi...". The province constituted is what the '
+      + 'argumentum leads with, so this is an erection; the curation script proposed an '
+      + 'elevation on the EVEHITUR of its second clause.',
+  },
+  'john-paul-ii|xatafensis|1990-07-23': {
+    argumentum:
+      'XETAFENSIS* IN HISPANIA NOVA ERIGITUR DIOECESIS XATAFENSIS NOMINE',
+    note:
+      'Detaches forty-eight municipalities south and west of Madrid (Getafe, Leganes, '
+      + 'Alcorcon, Mostoles, Fuenlabrada, Parla, Aranjuez and others) from the Archdiocese of '
+      + 'Madrid and erects the new Diocese of Getafe (Spain), suffragan to Madrid: "...Ex his '
+      + 'distractis territoriis novam condimus dioecesim Xetafensem appellandam, iisdem '
+      + 'conclusam finibus quibus praedicta municipia terminantur.". The heading spells the see '
+      + '"XATAFENSIS" against the body\'s Xetafensem, as quoted.',
+  },
+  'john-paul-ii|accraensis|1991-07-06': {
+    argumentum:
+      'ACCRAËNSIS* IN GANAE FINIBUS NOVA PROVINCIA ECCLESIASTICA CONSTITUITUR ACCRAËNSIS NOMINE',
+    note:
+      'Erects the new ecclesiastical province of Accra, Ghana\'s third, raising the Diocese of '
+      + 'Accra (erected by Pius XII in 1950) to a metropolitan archdiocese with Keta-Ho, '
+      + 'withdrawn from Cape Coast, and Koforidua, erected the same day, as suffragans: '
+      + '"...Accraënsem dioecesim...metropolitanam facimus archidioecesim eodem servato '
+      + 'nomine...novam provinciam ecclesiasticam Accraënsem nomine constituimus.".',
+  },
+  'john-paul-ii|tabukensis|1991-07-06': {
+    argumentum:
+      'TABUKENSIS* NOVUS CONSTITUITUR VICARIATUS APOSTOLICUS TABUKENSIS APPELLANDUS',
+    note:
+      'Detaches the civil provinces of Kalinga-Apayao from the Apostolic Vicariate of the '
+      + 'Mountain Provinces and erects the new Apostolic Vicariate of Tabuk (Philippines), '
+      + 'within the province of Tuguegarao and entrusted to the CICM missionaries: "...a '
+      + 'Vicariatu Apostolico Montano distrahimus, idque deinde novum Vicariatum Apostolicum '
+      + 'constituet Tabukensem...".',
+  },
+  'john-paul-ii|tlapensis|1992-01-04': {
+    argumentum:
+      'TLAPENSIS* DISTRACTIS TERRITORIIS A DIOECESI CHILPANCINGENSI-CHILAPENSI NOVA DIOECESIS '
+      + 'ERIGITUR TLAPENSIS',
+    note:
+      'Detaches sixteen municipalities of the Montana region (Tlapa, Alcozauca, Alpoyeca, '
+      + 'Atlamajalcingo del Monte, Atlixtac, Copanatoyac, Cualac, Huamuxtitlan, Malinaltepec, '
+      + 'Metlatonoc, Olinala, Tlacoapa, Tlalixtaquilla, Xalpatlahuac, Xochihuehuetlan, '
+      + 'Zapotitlan Tablas) from the Diocese of Chilpancingo-Chilapa and erects the new Diocese '
+      + 'of Tlapa (Mexico), suffragan to Acapulco: "...quorum ex summa novam efficimus '
+      + 'constituimusque dioecesim posterum in tempus Tlapensem nuncupandam...".',
+  },
+  'john-paul-ii|ghikongoroensis|1992-03-06': {
+    argumentum:
+      'GHIKONGOROËNSIS* IN RUANDA NOVA DIOECESIS CONDITUR GHIKONGOROËNSIS',
+    note:
+      'Detaches the civil prefecture of Gikongoro from the Diocese of Butare and erects the '
+      + 'new Diocese of Gikongoro (Rwanda), suffragan to Kigali: "...civilem provinciam, cui '
+      + 'vulgare nomen Ghikongoro, totam seiungi atque in sui iuris dioecesim novam, posthac '
+      + 'Ghikongoroënsem nuncupandam, converti...".',
+  },
+  'john-paul-ii|yamussukroensis|1992-03-06': {
+    argumentum:
+      'YAMUSSUKROËNSIS* IN LITORE EBURNEO NOVA CONDITUR DIOECESIS YAMUSSUKROËNSIS NOMINE',
+    note:
+      'Detaches the civil district of Yamoussoukro from the Diocese of Bouake and erects the '
+      + 'new Diocese of Yamoussoukro (Ivory Coast), suffragan to Abidjan: "...ex eoque novam '
+      + 'condimus dioecesim Yamussukroënsem appellandam, quam metropolitanae Sedi Abidianensi '
+      + 'suffraganeam facimus...".',
+  },
+  'john-paul-ii|parralensis|1992-05-11': {
+    argumentum:
+      'PARRALENSIS* LOCIS NONNULLIS DE ARCHIDIOECESI CHIHUAHUENSI ALIISQUE DE VICARIATU '
+      + 'TARAHUMARENSI DETRACTIS NOVA CONDITUR DIOECESIS PARRALENSIS',
+    note:
+      'Detaches thirteen municipalities (Allende, Balleza, Coronado, El Tule, Hidalgo del '
+      + 'Parral, Huejotitan, Jimenez, Lopez, Matamoros, Rosario, San Francisco del Oro, Santa '
+      + 'Barbara, Valle de Zaragoza) from the Archdiocese of Chihuahua and the parishes of '
+      + 'Guadalupe y Calvo and Atascaderos from the Apostolic Vicariate of Tarahumara and erects '
+      + 'the new Diocese of Parral (Mexico), suffragan to Chihuahua: "...quibus quindecim locis '
+      + 'ita distractis coniuncteque sumptis novam Ecclesiam particularem condimus nomine '
+      + 'Parralensem...".',
+  },
+  'john-paul-ii|cumanensis|1992-05-16': {
+    argumentum:
+      'CUMANENSIS* IN BOLIVIA PROVINCIA ECCLESIASTICA CONDITUR CUMANENSIS',
+    note:
+      'Withdraws the Diocese of Cumana from the province of Ciudad Bolivar, raises it to a '
+      + 'metropolitan archdiocese and erects the new ecclesiastical province of Cumana '
+      + '(Venezuela) with Barcelona and Margarita as suffragans: "...Cumanensem Ecclesiam a '
+      + 'Metropolitana archidioecesi Civitatis Bolivarensis deducimus eandemque ad gradum '
+      + 'archiepiscopalis Ecclesiae Metropolitanae evehimus...ita ut nunc condita Provincia '
+      + 'Ecclesiastica Cumanensis ex ipsa constet Cumanensi Ecclesia ac dioecesibus Barcinonensi '
+      + 'in Venetiola atque Margaritensi...". The province is what the argumentum states '
+      + '(CONDITUR).',
+  },
+  'john-paul-ii|bontocensis-lavagensis|1992-07-25': {
+    argumentum:
+      'BONTOCEN.-LAVAGEN.* EX DISTRACTO TERRITORIO A VICARIATU APOSTOLICO MONTANO NOVUS '
+      + 'INSTITUITUR VICARIATUS APOSTOLICUS BONTONCENSIS-LAVAGENSIS',
+    note:
+      'Detaches the civil provinces of Mountain Province and Ifugao from the Apostolic '
+      + 'Vicariate of the Mountain Provinces and erects the new Apostolic Vicariate of '
+      + 'Bontoc-Lagawe (Philippines), within the province of Nueva Segovia: "...illudque '
+      + 'Vicariatum Apostolicum constituimus Bontocensem-Lavagensem positura vero intra '
+      + 'Provinciae ecclesiasticae Novae Segobiae terminos...". The heading abbreviates the '
+      + 'toponym and prints "BONTONCENSIS", as quoted; the curation script abstained because '
+      + 'INSTITUITUR matches no idiom.',
+  },
+  'john-paul-ii|carorensis|1992-07-25': {
+    argumentum:
+      'CARORENSIS* IN VENETIOLA NOVA DIOECESIS CONDITUR CARORENSIS NOMINE',
+    note:
+      'Detaches the civil districts of Torres and Urdaneta (Lara) from the Archdiocese of '
+      + 'Barquisimeto and erects the new Diocese of Carora (Venezuela), suffragan to '
+      + 'Barquisimeto: "...ex quibus ita submotis locis novam dioecesim Carorensem in posterum '
+      + 'appellandam constituimus...".',
+  },
+  'john-paul-ii|vallispaschalensis|1992-07-25': {
+    argumentum:
+      'VALLISPASCHALENSIS* DIOECESIS CALABOCENSIS DIVIDITUR ET NOVA CONSTITUITUR DIOECESIS '
+      + 'VALLISPASCHALENSIS',
+    note:
+      'Detaches the civil districts of Monagas, Ribas, Infante and Zaraza (Guarico) from the '
+      + 'Diocese of Calabozo and erects the new Diocese of Valle de la Pascua (Venezuela), '
+      + 'suffragan to Cumana: "...ex iisque novam condimus dioecesim Vallispaschalensem '
+      + 'denominandam, iisdem circumscriptam finibus, quibus ipsi districtus, simul sumpti, lege '
+      + 'civili ad prresens terminantur.".',
+  },
+  'john-paul-ii|ernakulamensis-angamaliensis|1992-12-16': {
+    argumentum:
+      'ERNAKULAMENSIS - ANGAMALIENSIS* ARCHIEPISCOPATUS MAIOR ERNAKULAMENSIS-ANGAMALIENSIS',
+    note:
+      'Constitutes the Syro-Malabar Church as a major archiepiscopal Church named '
+      + 'Ernakulam-Angamaly, its territory the provinces of Ernakulam and Changanacherry and its '
+      + 'major archbishop seated at Ernakulam: "...Ecclesiam Syro-Malabarensem constituimus '
+      + 'Ecclesiam archiepiscopalem maiorem Ernakulamensem-Angamaliensem nomine appellandam...". '
+      + 'The heading states no verb ("ARCHIEPISCOPATUS MAIOR ERNAKULAMENSIS-ANGAMALIENSIS"), so '
+      + 'the curation script abstained; filed on the body\'s constituimus as \'Fagarasiensis\' '
+      + 'of 2005 is, its argumentum saying ARCHIEPISCOPATUS MAIOR ... CONSTITUITUR.',
+  },
+  'john-paul-ii|keningauensis|1992-12-17': {
+    argumentum:
+      'KENINGAUENSIS* NOVA DIOECESIS CONDITUR,KENINGAUENSIS SCILICET IN MALAYSIA ORIENTALI',
+    note:
+      'Detaches the Interior Division (Bahagian Pendalaman) from the Diocese of Kota Kinabalu '
+      + 'and erects the new Diocese of Keningau (Sabah, Malaysia), suffragan to Kuching: "...a '
+      + 'dioecesi Kotakinabaluensi separamus, quod efficiet posthac novam dioecesim '
+      + 'Keningauensem appellandam a principe huius regionis urbe.". The heading prints '
+      + '"CONDITUR,KENINGAUENSIS" without a space, as quoted.',
+  },
+  'john-paul-ii|esekanensis|1993-03-22': {
+    argumentum:
+      'ESEKANENSIS* IN CAMMARUNIA NOVA CONDITUR DIOECESIS NOMINE ESEKANENSIS',
+    note:
+      'Detaches the Departement de Nyong-et-Kelle from the Archdiocese of Douala and erects '
+      + 'the new Diocese of Eseka (Cameroon), suffragan to Douala: "...ex eaque novam condimus '
+      + 'dioecesim Esekanensem appellandam, quam metropolitanae Sedi Dualaënsi suffraganeam '
+      + 'facimus...".',
+  },
+  'john-paul-ii|maulamyinensis|1993-03-22': {
+    argumentum:
+      'MAULAMYINENSIS* IN MYANMAR NOVA CONDITUR DIOECESIS MAULAMYINENSIS',
+    note:
+      'Detaches the southern half of Mon State and the whole Tenasserim Division from the '
+      + 'Archdiocese of Yangon and erects the new Diocese of Mawlamyine (Myanmar), suffragan to '
+      + 'Yangon: "...ex iisque novam condimus dioecesim nomine Maulamyinensem, quam '
+      + 'metropolitanae Sedi Yangonensi suffraganeam facimus...".',
+  },
+  'john-paul-ii|palangkaraiensis|1993-04-05': {
+    argumentum:
+      'PALANGKARAIEN.* IN INDONESIA NOVA CONDITUR DIOECESIS PALANGKARAIENSIS',
+    note:
+      'Detaches the civil province of Central Kalimantan (Kalimantan Tengah) from the Diocese '
+      + 'of Banjarmasin and erects the new Diocese of Palangkaraya (Indonesia), suffragan to '
+      + 'Pontianak: "...ex eaque novam constituimus dioecesim ab urbe principe eiusdem regionis '
+      + 'Palangkaraiensem appellandam...". The heading abbreviates the toponym to '
+      + '"PALANGKARAIEN.", as quoted.',
+  },
+  'john-paul-ii|gumlaensis|1993-05-28': {
+    argumentum:
+      'GUMLAËNSIS* IN INDIA NOVA CONDITUR DIOECESIS GUMLAËNSIS NOMINE',
+    note:
+      'Detaches the northern part of the civil district of Gumla from the Archdiocese of '
+      + 'Ranchi and erects the new Diocese of Gumla (India), suffragan to Ranchi: "...ex eaque '
+      + 'novam constituimus dioecesim ab urbe principe eiusdem regionis Gumlaënsem appellandam, '
+      + 'quam suffraganeam metropolitanae Sedi Ranchiensi facimus...".',
+  },
+  'john-paul-ii|pilznensis|1993-05-28': {
+    argumentum:
+      'PILZNENSIS* NOVA DIOECESIS IN BOHEMIA PILZNENSIS ERIGITUR',
+    note:
+      'Detaches eight deaneries from the Archdiocese of Prague, three from the Diocese of '
+      + 'Ceske Budejovice and two from Litomerice and erects the new Diocese of Plzen (Czech '
+      + 'Republic), suffragan to Prague: "...ex iisque novam condimus dioecesim Pilznensem '
+      + 'appellandam, quam metropolitanae Sedi Fragensi subicimus...". The body prints '
+      + '"Fragensi" for Pragensi.',
+  },
+  'john-paul-ii|simdegaensis|1993-05-28': {
+    argumentum:
+      'SIMDEGAËNSIS* IN INDIA NOVA CONDITUR DIOECESIS SIMDEGAËNSIS',
+    note:
+      'Detaches the southern part of the civil district of Gumla (the Simdega sub-division) '
+      + 'from the Archdiocese of Ranchi and erects the new Diocese of Simdega (India), suffragan '
+      + 'to Ranchi: "...ex eaque novam condimus dioecesim ab urbe principe eiusdem regionis '
+      + 'Simdegaënsem appellandam, quam suffraganeam metropolitanae Sedi Ranchiensi facimus...".',
+  },
+  'john-paul-ii|srikakulamensis|1993-07-01': {
+    argumentum:
+      'SRIKAKULAMENSIS* IN INDIA NOVA CONDITUR DIOECESIS SRIKAKULAMENSIS',
+    note:
+      'Detaches the civil district of Srikakulam and the taluks of Parvathipuram, Kurupam and '
+      + 'Cheepurupalli (Vizianagaram district) from the Diocese of Visakhapatnam and erects the '
+      + 'new Diocese of Srikakulam (India), suffragan to Hyderabad, with its cathedral at '
+      + 'Palakonda: "...ex iisque novam constituimus dioecesim ab urbe principe eiusdem regionis '
+      + 'Srikakulamensem appellandam, quam metropolitanae Sedi Hyderabadensi suffraganeam '
+      + 'facimus...".',
+  },
+  'john-paul-ii|guruensis|1993-12-06': {
+    argumentum:
+      'GURUENSIS* IN MOZAMBICO NOVA CONDITUR DIOECESIS GURUENSIS',
+    note:
+      'Detaches the civil districts of Gurue, Namarroi, Ile, Alto Molocue, Gile and Pebane and '
+      + 'the Molumbo part of Milange from the Diocese of Quelimane and erects the new Diocese of '
+      + 'Gurue (Mozambique), suffragan to Beira: "...ex iisque novam constituimus dioecesim '
+      + 'Guruensem, quam metropolitanae Sedi Beirensi suffraganeam facimus...".',
+  },
+  'john-paul-ii|poenonomensis|1993-12-18': {
+    argumentum:
+      'POENONOMENSIS* IN PANAMA NOVA CONDITUR DIOECESIS POENONOMENSIS',
+    note:
+      'Detaches the civil province of Cocle from the Archdiocese of Panama and erects the new '
+      + 'Diocese of Penonome (Panama), suffragan to Panama: "...atque ex ita distracto '
+      + 'territorio novam constituimus doecesim Poenonomensem appellandam...".',
+  },
+  'john-paul-ii|baturiensis|1994-02-03': {
+    argumentum:
+      'BATURIENSIS* INT RA CAMMARUNIAE FINES NOVA CONDITUR DIOECESIS BATURIENSIS',
+    note:
+      'Detaches the Departement de Kadei from the Diocese of Bertoua and erects the new '
+      + 'Diocese of Batouri (Cameroon), suffragan to Yaounde: "...ex eaque novam constituimus '
+      + 'dioecesim ab urbe principe eiusdem regionis Baturiensem appellandam, quam '
+      + 'metropolitanae Sedi Yaundensi suffraganeam facimus...". The heading prints "INT RA" '
+      + 'with a space, as quoted.',
+  },
+  'john-paul-ii|runduensis|1994-03-14': {
+    argumentum:
+      'RUNDUENSIS* VICARIATUS APOSTOLICUS CONDITUR IN NAMIBIAE FINIBUS, RUNDUENSIS APPELLANDUS',
+    note:
+      'Detaches the regions of Okavango and Caprivi and parts of Otjozondjupa and Otjikoto '
+      + 'from the Apostolic Vicariate of Windhoek and erects the new Apostolic Vicariate of '
+      + 'Rundu (Namibia): "...Novum Vicariatum Apostolicum condimus Runduensem appellandum, qui '
+      + 'territorium vel regionem civilem populari loquela Okavango et Caprivi...complectitur, '
+      + 'quodque a Vicariatu Apostolico Vindhoekensi distrahitur.".',
+  },
+  'john-paul-ii|vindhoekensis|1994-03-14': {
+    argumentum:
+      'VINDHOEKENSIS* PROVINCIA ECCLESIASTICA IN NAMIBIA CONSTITUITUR, VINDHOEKENSIS APPELLANDA',
+    note:
+      'Erects the ecclesiastical province of Windhoek (Namibia), formed of the Apostolic '
+      + 'Vicariate of Windhoek, raised to a metropolitan archdiocese, the Diocese of '
+      + 'Keetmanshoop and the Apostolic Vicariate of Rundu, both constituted the same day: '
+      + '"...Provinciam Ecclesiasticam condimus Vindhoekensem, quam efformant Vicariatus '
+      + 'Apostolicus eiusdem nominis, qui posthac ad Archidioecesim Metropolitanam evehetur...".',
+  },
+  'john-paul-ii|ibadanensis|1994-03-16': {
+    argumentum:
+      'IBADANENSIS* IN NIGERIAE FINIBUS NOVA A PROVINCIA ECCLESIASTICA CONSTITUITUR '
+      + 'IBADANENSIS NOMINE',
+    note:
+      'Detaches the Dioceses of Ibadan, Ado-Ekiti, Ondo and Oyo from the province of Lagos and '
+      + 'erects the new ecclesiastical province of Ibadan (Nigeria), raising Ibadan to a '
+      + 'metropolitan archdiocese: "...atque ex his efficimus Provinciam Ecclesiasticam '
+      + 'Ibadanensem, cuius Sedes princeps erit Ecclesia Ibadanensis, quam ad gradum et '
+      + 'dignitatem archidioecesis metropolitanae evehimus...". The heading prints "NOVA A '
+      + 'PROVINCIA", as quoted.',
+  },
+  'john-paul-ii|arassatubensis|1994-03-23': {
+    argumentum:
+      'ARASSATUBENSIS* IN BRASILIA NOVA CONDITUR DIOECESIS ARASSATUBENSIS',
+    note:
+      'Detaches eighteen municipalities (Aracatuba, Andradina, Bento de Abreu, Bilac, Birigui, '
+      + 'Castilho, Coroados, Gabriel Monteiro, Guaracai, Guararapes, Lavinia, Mirandopolis, '
+      + 'Murutinga do Sul, Nova Independencia, Piacatu, Rubiacea, Santopolis do Aguapei, '
+      + 'Valparaiso) from the Diocese of Lins and erects the new Diocese of Aracatuba (Brazil), '
+      + 'suffragan to Botucatu: "...quibus subductis locis dioecesim Arassatubensem posthac '
+      + 'appellandam erigimus et constituimus...".',
+  },
+  'john-paul-ii|abugensis|1994-03-26': {
+    argumentum:
+      'ABUGENSIS* IN NIGERIA NOVA PROVINCIA ECCLESIASTICA ABUGENSIS CONSTITUITUR',
+    note:
+      'Detaches the Dioceses of Abuja, Idah, Lokoja and Makurdi from the province of Kaduna '
+      + 'and erects the new ecclesiastical province of Abuja (Nigeria), raising Abuja to a '
+      + 'metropolitan archdiocese: "...atque ex his efficimus Provinciam Ecclesiasticam '
+      + 'Abugensem...cuius Sedes princeps erit Ecclesia Abugensis, quam ad gradum et dignitatem '
+      + 'archidioecesis metropolitanae evehimus...".',
+  },
+  'john-paul-ii|calabarensis|1994-03-26': {
+    argumentum:
+      'CALABARENSIS* IN NIGERIA NOVA PROVINCIA ECCLESIASTICA CALABARENSIS CONSTITUITUR',
+    note:
+      'Detaches the Dioceses of Calabar, Ikot Ekpene, Port Harcourt, Ogoja and Uyo from the '
+      + 'province of Onitsha and erects the new ecclesiastical province of Calabar (Nigeria), '
+      + 'raising Calabar to a metropolitan archdiocese: "...atque ex his efficimus Provinciam '
+      + 'ecclesiasticam nomine Calabarensem, cuius Sedes princeps erit Ecclesia Calabarensis, '
+      + 'quam ad gradum et dignitatem archidioecesis metropolitanae evehimus...".',
+  },
+  'john-paul-ii|iosensis|1994-03-26': {
+    argumentum:
+      'IOSENSIS* NOVA CONSTITUITUR PROVINCIA ECCLESIASTICA IN NIGERIA, IOSENSIS APPELLANDA',
+    note:
+      'Detaches the Dioceses of Jos, Maiduguri and Yola from the province of Kaduna and erects '
+      + 'the new ecclesiastical province of Jos (Nigeria), raising Jos to a metropolitan '
+      + 'archdiocese: "...novam condimus Provinciam Ecclesiasticam, Iosensem appellandam, in '
+      + 'ipsa Sede Iosensi, quam ad Archidioecesis Metropolitanae dignitatem attollimus...".',
+  },
+  'john-paul-ii|overriensis|1994-03-26': {
+    argumentum:
+      'OVERRIENSIS* IN NIGERIAE FINIBUS NOVA PROVINCIA ECCLESIASTICA',
+    note:
+      'Detaches the Dioceses of Owerri, Aba, Ahiara, Okigwe, Orlu and Umuahia from the '
+      + 'province of Onitsha and erects the new ecclesiastical province of Owerri (Nigeria), '
+      + 'raising Owerri to a metropolitan archdiocese: "...atque ex his constituimus Provinciam '
+      + 'Ecclesiasticam Overriensem, quarum dioecesium primam, scilicet Overriensem, ad gradum '
+      + 'et dignitatem archidioecesis metropolitanae attollimus...". The heading states no verb '
+      + '("NOVA PROVINCIA ECCLESIASTICA"), so the curation script abstained and the act is read '
+      + 'from the body.',
+  },
+  'john-paul-ii|lahorensis|1994-04-23': {
+    argumentum:
+      'LAHORENSIS* PROVINCIA ECCLESIASTICA LAHORENSIS CONDITUR ATQUE DIOECESIS EIUSDEM NOMINIS '
+      + 'AD ARCHIDIOECESIS STATUM ATTOLLITUR',
+    note:
+      'Erects the new ecclesiastical province of Lahore (Pakistan), separating the Diocese of '
+      + 'Lahore from the province of Karachi, raising it to a metropolitan archdiocese and '
+      + 'giving it Faisalabad, Islamabad-Rawalpindi and Multan as suffragans: "...Provinciam '
+      + 'ecclesiasticam condimus Lahorensem, quam adhuc dioecesis eiusdem nominis constituet, '
+      + 'quae, a metropolitico iure Karachiensis Ecclesiae separata, posthac ad Archidioecesim '
+      + 'Metropolitanam evehetur...". The province is what the argumentum leads with (CONDITUR), '
+      + 'ATQUE introducing the elevation, so this is an erection; the curation script proposed '
+      + 'an elevation on ATTOLLITUR.',
+  },
+  'john-paul-ii|bulauaiensis|1994-06-10': {
+    argumentum:
+      'BULAUAIENSIS* NOVA PROVINCIA ECCLESIASTICA IN ZIMBABUANA CIVITATE CONDITUR BULAUAIENSIS '
+      + 'COGNOMINANDA',
+    note:
+      'Erects the new ecclesiastical province of Bulawayo (Zimbabwe), raising Bulawayo to a '
+      + 'metropolitan archdiocese with Gweru and Hwange as suffragans: "...Novam Provinciam '
+      + 'ecclesiasticam in Zimbabua condimus scilicet Bulauaiensem, quam ad gradum '
+      + 'archidioecesis metropolitanae attollimus, cui videlicet veluti suffraganeae nectantur '
+      + 'et subiciantur dioeceses Gueruensis et Huangensis.".',
+  },
+  'john-paul-ii|berolinensis|1994-06-27': {
+    argumentum:
+      'BEROLINENSIS* PROVINCIA ECCLESIASTICA BEROLINENSIS CONSTITUITUR',
+    note:
+      'Constitutes the ecclesiastical province of Berlin, raising the Diocese of Berlin to a '
+      + 'metropolitan see with Dresden-Meissen and the Diocese of Gorlitz, erected the same day '
+      + 'from the apostolic administration, as suffragans, under the concordat: "...Berolinensem '
+      + 'sedem episcopalem ad condicionem attollimus metropolitanae ecclesiae...Commemorata '
+      + 'autem provincia quam novam fieri iubemus Berolinensis constabit ex ecclesia eiusdem '
+      + 'nominis necnon Dresdensi-Misnensi dicione tunc etiam ab integro excitata dioecesi '
+      + 'Gorlicensi.". The province constituted is what the argumentum states (Ruling 9).',
+  },
+  'john-paul-ii|erfordiensis|1994-06-27': {
+    argumentum:
+      'ERFORDIENSIS* IN REPUBLICA FOEDERATA GERMANIAE NOVA CONSTITUITUR DIOECESIS ERFORDIENSIS '
+      + 'NOMINE',
+    note:
+      'Detaches the fifteen deaneries of the Bischofliches Amt Erfurt-Meiningen from the '
+      + 'Dioceses of Fulda and Wurzburg, with boundary adjustments against Magdeburg, '
+      + 'Dresden-Meissen, Paderborn and Hildesheim, and erects the new Diocese of Erfurt '
+      + '(Germany), suffragan to Paderborn, under the convention with Thuringia of 14 June 1994: '
+      + '"...a dioecesi Fuldensi et a dioecesi Herbipolensi separamus atque ex ita distracto '
+      + 'territorio, cum mutationibus, quae infra describuntur, novam dioecesim Erfordiensem '
+      + 'appellandam constituimus.".',
+  },
+  'john-paul-ii|gorlicensis|1994-06-27': {
+    argumentum:
+      'GORLICENSIS* IN REPUBLICA FOEDERATA GERMANIAE GORLICENSIS DIOECESIS CONDITUR',
+    note:
+      'Constitutes the Apostolic Administration of Gorlitz (the deaneries of Cottbus, '
+      + 'Finsterwalde-Lubben, Gorlitz, Neuzelle and Senftenberg, with boundary adjustments) as '
+      + 'the new Diocese of Gorlitz (Germany), suffragan to Berlin, raised to metropolitan rank '
+      + 'the same day, under the convention with Brandenburg and Saxony of 4 May 1994: "...ut '
+      + 'memorata Administratio Apostolica Gorlicensis...ad gradum et dignitatem dioecesis, '
+      + 'Gorlicensis appellandae, constituatur ac erigatur.". Stated by the argumentum as a '
+      + 'diocese CONDITUR and filed on those words, the body working it by raising the '
+      + 'administration (Ruling 9).',
+  },
+  'john-paul-ii|magdeburgensis|1994-06-27': {
+    argumentum:
+      'MAGDEBURGENSIS* IN REPUBLICA FOEDERATA GERMANIAE NOVA DIOECESIS ERIGITUR MAGDEBURGENSIS '
+      + 'APPELLANDA',
+    note:
+      'Detaches the thirteen deaneries of the Bischofliches Amt Magdeburg from the Archdiocese '
+      + 'of Paderborn and the Diocese of Hildesheim, with boundary adjustments against '
+      + 'Hildesheim, Gorlitz, Dresden-Meissen, Erfurt and Fulda, and erects the new Diocese of '
+      + 'Magdeburg (Germany), suffragan to Paderborn, under the convention of 13 April 1994: '
+      + '"...ab archidioecesi Paderbornensi et a dioecesi Hildesiensi separetur atque ex ita '
+      + 'distracto territorio, cum mutationibus quae infra describuntur, nova dioecesis, '
+      + 'Magdeburgensis appellanda, constituatur ac erigatur.".',
+  },
+  'john-paul-ii|anehensis|1994-07-01': {
+    argumentum:
+      'ANEHENSIS* NOVA DIOECESIS CONDITUR IN TOGO, ANEHENSIS APPELLANDA',
+    note:
+      'Detaches the civil districts of Lacs, Vo, Yoto and Afagnan from the Diocese of Lome and '
+      + 'erects the new Diocese of Aneho (Togo), suffragan to Lome: "...Novam dioecesim condimus '
+      + 'Anehensem appellandam, quae territorium districtuum civilium populari sermone « Lacs », '
+      + '« Vo », « Yoto » et « Afagnan » complectetur, a dioecesi Lomensi distractum.".',
+  },
+  'john-paul-ii|emeritensis-augustana-pacensis|1994-07-28': {
+    argumentum:
+      'EMERITENSIS AUGUSTANA-PACENSIS* NOVA CONSTITUITUR IN HISPANIA PROVINCIA ECCLESIASTICA '
+      + 'EMERITENSIS AUGUSTANA-PACENSIS ET SEDES AD METROPOLITANAE ECCLESIAE STATUM ATTOLLITUR',
+    note:
+      'Erects the new ecclesiastical province of Merida-Badajoz (Extremadura, Spain): the '
+      + 'Diocese of Badajoz, renamed Merida-Badajoz, is withdrawn from Seville and raised to a '
+      + 'metropolitan see, with Coria-Caceres and Plasencia (from Seville and Toledo) as '
+      + 'suffragans and a concathedral at Merida: "...Condimus Provinciam Ecclesiasticam, '
+      + 'Emeritensem Augustanam — Pacensem appellandam, ac Pacensem Sedem episcopalem, cuius '
+      + 'nomen hoc ipso actu in Emeritensem Augustanam — Pacensem mutatur a Metropolitana '
+      + 'Ecclesia Hispalensi seiungitur, atque ad Metropolitanae Ecclesiae gradum evehimus.". '
+      + 'The province constituted is what the argumentum leads with, so this is an erection; the '
+      + 'curation script proposed an elevation on the ATTOLLITUR of its second clause.',
+  },
+  'john-paul-ii|hamburgensis|1994-10-24': {
+    argumentum:
+      'HAMBURGENSIS* NOVA PROVINCIA ECCLESIASTICA HAMBURGENSIS CONSTITUITUR',
+    note:
+      'Constitutes the new ecclesiastical province of Hamburg (Germany): from the Hamburg and '
+      + 'Schleswig-Holstein parts of the Dioceses of Osnabruck and Hildesheim and the '
+      + 'Bischofliches Amt Schwerin erects the new metropolitan Archdiocese of Hamburg, with '
+      + 'Osnabruck (from Cologne) and Hildesheim (from Paderborn) as suffragans, under the '
+      + 'convention of 22 September 1994: "...novam sedem Metropolitanam Hamburgensem '
+      + 'appellandam condere eidemque conferre iura et privilegia quibus ceterae metropolitanae '
+      + 'sedes, ad normam iuris communis, gaudent. Nova Provincia Hamburgensis constituetur ex '
+      + 'Ecclesia Metropolitana noviter constituta...".',
+  },
+  'john-paul-ii|buakensis|1994-12-19': {
+    argumentum:
+      'BUAKENSIS* IN LITORE EBURNEO CONSTITUITUR NOVA PROVINCIA ECCLESIASTICA BUAKENSIS, CUIUS '
+      + 'METROPOLITANA ECCLESIA ERIT SEDES EIUSDEM NOMINIS',
+    note:
+      'Detaches the Dioceses of Bouake, Abengourou, Bondoukou and Yamoussoukro from the '
+      + 'province of Abidjan and erects the new ecclesiastical province of Bouake (Ivory Coast), '
+      + 'raising Bouake to a metropolitan archdiocese: "...atque ex his efficimus Provinciam '
+      + 'ecclesiasticam Buakensem, cuius Sedes princeps erit Ecclesia Buakensis, quam ad gradum '
+      + 'et dignitatem archidioecesis metropolitanae evehimus...".',
+  },
+  'john-paul-ii|gagnoaensis|1994-12-19': {
+    argumentum:
+      'GAGNOAËNSIS* IN LITORIS EBURNEI FINIBUS NOVA PROVINCIA ECCLESIASTICA CONSTITUITUR '
+      + 'GAGNOAËNSIS, CUIUS METROPOLITANA ECCLESIA ERIT SEDES EIUSDEM NOMINIS',
+    note:
+      'Detaches the Dioceses of Gagnoa, Daloa, Man and San Pedro from the province of Abidjan '
+      + 'and erects the new ecclesiastical province of Gagnoa (Ivory Coast), raising Gagnoa to a '
+      + 'metropolitan archdiocese: "...atque ex his efficimus Provinciam ecclesiasticam '
+      + 'Gagnoaënsem, cuius Sedes princeps erit Eccelesia Gagnoaënsis, quam ad gradum et '
+      + 'dignitatem archidioecesis metropolitanae evehimus...".',
+  },
+  'john-paul-ii|iasikanensis|1994-12-19': {
+    argumentum:
+      'IASIKANENSIS* NOVA IN GANACONDITUR DIOECESIS',
+    note:
+      'Detaches the northern part of the Diocese of Keta-Ho (the towns of Jasikan, Kadjebi, '
+      + 'Kete-Krachi and Nkwanta) and erects the new Diocese of Jasikan (Ghana), suffragan to '
+      + 'Accra: "...abducimus inde in novamque convertimus dioecesim posthac Iasikanensem rite '
+      + 'nuncupandam, quam simul suffraganeam subdimus metropolitanae Ecclesiae Accraënsi...". '
+      + 'The heading prints "GANACONDITUR" without a space, as quoted.',
+  },
+  'john-paul-ii|ketaensis-akatsienis|1994-12-19': {
+    argumentum:
+      'KETAËNSIS-AKATSIENSIS* IN GANA NOVA CONDITUR DIOECESIS KETAËNSIS-AKATSIENSIS',
+    note:
+      'Detaches the southern civil districts of Adidome, Akatsi, Anlo, Ketu and Sogakope from '
+      + 'the Diocese of Keta-Ho and erects the new Diocese of Keta-Akatsi (Ghana), suffragan to '
+      + 'Accra, seated at Akatsi with a concathedral at Keta: "...ex eoque novam condimus '
+      + 'dioecesim Ketaënsem-Akatsiensem, quam metropolitanae Ecclesiae Accraensi suffraganeam '
+      + 'facimus...".',
+  },
+  'john-paul-ii|korhogoensis|1994-12-19': {
+    argumentum:
+      'KORHOGOËNSIS* IN LITORE EBURNEO CONSTITUITUR NOVA PROVINCIA ECCLESIASTICAKOROGHOËNSIS, '
+      + 'CUIUS METROPOLITANA ECCLESIA ERIT SEDES EIUSDEM NOMINIS',
+    note:
+      'Detaches the Dioceses of Korhogo and Katiola from the province of Abidjan and, with '
+      + 'Odienne erected the same day, erects the new ecclesiastical province of Korhogo (Ivory '
+      + 'Coast), raising Korhogo to a metropolitan archdiocese: "...atque ex his, adiuncta '
+      + 'quoque dioecesi Odiennensi hoc ipso die condita, efficimus Provinciam ecclesiasticam '
+      + 'Korhogoënsem, cuius Sedes princeps erit Ecclesia Korhogoënsis, quam ad gradum et '
+      + 'dignitatem archidioecesis metropolitanae evehimus...". The heading prints '
+      + '"ECCLESIASTICAKOROGHOËNSIS", as quoted.',
+  },
+  'john-paul-ii|odiennensis|1994-12-19': {
+    argumentum:
+      'ODIENNENSIS* IN LITORE EBURNEO NOVA CONDITUR DIOECESIS ODIENNENSIS',
+    note:
+      'Detaches the civil district of Odienne from the Diocese of Korhogo, Touba from Man and '
+      + 'Seguela and Mankono from Daloa and erects the new Diocese of Odienne (Ivory Coast), '
+      + 'suffragan to Korhogo: "...ex iisque novam condimus dioecesim Odiennensem, quam hoc ipso '
+      + 'die constitutae metropolitanae Ecclesiae Korhogoënsi suffraganeam facimus...".',
+  },
+  'john-paul-ii|damongoensis|1995-02-03': {
+    argumentum:
+      'DAMONGOËNSIS* IN GANA NOVA CONDITUR DIOECESIS DAMONGOËNSIS',
+    note:
+      'Detaches the civil districts of Western Gonja and Bole from the Archdiocese of Tamale '
+      + 'and erects the new Diocese of Damongo (Ghana), suffragan to Tamale: "...ex eoque novam '
+      + 'condimus dioecesim Damongoënsem, quam memoratae metropolitanae Ecclesiae Tamalensi '
+      + 'suffraganeam facimus...".',
+  },
+  'john-paul-ii|ialingoensis|1995-02-03': {
+    argumentum:
+      'IALINGÖENSIS* IN NIGERIA NOVA CONDITUR DIOECESIS IALINGÖENSIS',
+    note:
+      'Detaches the civil state of Taraba from the Diocese of Yola and erects the new Diocese '
+      + 'of Jalingo (Nigeria), suffragan to Jos: "...ex eoque novam condimus dioecesim '
+      + 'Ialingoënsem, quam metropolitanae Ecclesiae Iosensi suffraganeam facimus...".',
+  },
+  'john-paul-ii|konongensis-mampongana|1995-03-03': {
+    argumentum:
+      'KONONGENSIS-MAMPONGANA* QUIBUSDAM DISTRACTIS TERRITORIIS A DIOECESIBUS KUMASIENSI ET '
+      + 'SUNYANIENSI, NOVA IN GANA CONSTITUITUR DIOECESIS, NOMINE KONONGENSIS-MAMPONGANA',
+    note:
+      'Detaches eight northern civil districts (Afigya-Sekyere, Asante-Akim North and South, '
+      + 'Ejisu-Juabeng, Ejura-Sekyedumasi, Kwabre, Sekyere East and West) from the Diocese of '
+      + 'Kumasi and Sene and Atebubu from the Diocese of Sunyani and erects the new Diocese of '
+      + 'Konongo-Mampong (Ghana), seated at Mampong and suffragan to Cape Coast: "...ex iis '
+      + 'omnibus novam condimus dioecesim Konongensem-Mamponganam appellandam.".',
+  },
+  'john-paul-ii|obuasiensis|1995-03-03': {
+    argumentum:
+      'OBUASIENSIS* NOVA DIOECESIS CONDITUR IN GANA, OBUASIENSIS APPELLANDA',
+    note:
+      'Detaches the southern civil districts of Adansi East and West, Amansie East and West '
+      + 'and Bosomtwe-Kwanwoma from the Diocese of Kumasi and erects the new Diocese of Obuasi '
+      + '(Ghana), suffragan to Cape Coast: "...Novam dioecesim condimus Obuasiensem appellandam, '
+      + 'meridiana parte Sedis Kumasiensis distracta...".',
+  },
+  'john-paul-ii|campensis|1995-03-21': {
+    argumentum:
+      'CAMPENSIS* IN FOEDERATIS CIVITATIBUS AMERICAE SEPTEMTRIONALIS NOVA CONDITUR DIOECESIS '
+      + 'CAMPENSIS',
+    note:
+      'Detaches the counties of Clark, Lincoln, White Pine, Nye and Esmeralda from the Diocese '
+      + 'of Reno-Las Vegas and erects the new Diocese of Las Vegas (Nevada), suffragan to San '
+      + 'Francisco, the mother see becoming simply Reno: "...atque ex ita distracto territorio '
+      + 'novam constituimus dioecesim Campensem, iisdem circumscriptam finibus, quibus praefata '
+      + 'municipia, simul sumpta, nunc terminantur.".',
+  },
+  'john-paul-ii|cassoviensis|1995-03-31': {
+    argumentum:
+      'CASSOVIENSIS* INTRA SLOVAKIAE FINES CONDITUR NOVA PROVINCIA ECCLESIASTICA, CASSOVIENSIS '
+      + 'SCILICET, QUAE AD DIGNITATEM ECCLESIAE METROPOLITANAE ATTOLLITUR',
+    note:
+      'Detaches the Dioceses of Kosice, Spis and Roznava from the province of '
+      + 'Bratislava-Trnava and erects the new ecclesiastical province of Kosice (Slovakia), '
+      + 'raising Kosice to a metropolitan see: "...Novam Provinciam ecclesiasticam condimus '
+      + 'Cassoviensem appellandam et eam archiepiscopalis metropolitanae sedis fruentem '
+      + 'dignitate iuribus privilegiisque, quae complectetur Ecclesiam eiusdem nominis et '
+      + 'dioeceses Scepusiensem et Rosnaviensem.". The province is what the argumentum leads '
+      + 'with (CONDITUR), so this is an erection; the curation script proposed an elevation on '
+      + 'the ATTOLLITUR of its relative clause.',
+  },
+  'john-paul-ii|khuntiensis|1995-04-01': {
+    argumentum:
+      'KHUNTIENSIS* IN INDIA NOVA CONDITUR DIOECESIS KHUNTIENSIS',
+    note:
+      'Detaches the deaneries of Khunti and Torpa from the Archdiocese of Ranchi and erects '
+      + 'the new Diocese of Khunti (India), suffragan to Ranchi: "...Novam in India condimus '
+      + 'dioecesim nomine ipso Khuntiensem quae duobus videlicet Decanatibus constet « Khunti » '
+      + 'et « Torpa »...".',
+  },
+  'john-paul-ii|tellicherriensis|1995-05-18': {
+    argumentum:
+      'TELLICHERRIENSIS* NOVA PROVINCIA ECCLESIASTICA TELLICHERRIENSIS CONSTITUITUR, CUIUS '
+      + 'METROPOLITANA SEDES ERIT ECCLESIA EIUSDEM NOMINIS',
+    note:
+      'Constitutes the Syro-Malabar ecclesiastical province of Tellicherry (India), raising '
+      + 'the Eparchy of Tellicherry to a metropolitan see with the Eparchies of Mananthavady and '
+      + 'Thamarasserry, both carved from it, as suffragans: "...Provinciam ecclesiasticam '
+      + 'Tellicherriensem constituimus, cuius Ecclesia princeps erit Eparchia hucusque '
+      + 'Tellicherriensis, quam ad gradum et dignitatem Metropolitanae Sedis evehimus...".',
+  },
+  'john-paul-ii|trichuriensis|1995-05-18': {
+    argumentum:
+      'TRICHURIENSIS* NOVA PROVINCIA ECCLESIASTICA TRICHURIENSIS CONSTITUITUR, CUIUS '
+      + 'METROPOLITANA SEDES ERIT ECCLESIA EIUSDEM NOMINIS',
+    note:
+      'Constitutes the Syro-Malabar ecclesiastical province of Trichur (India), raising the '
+      + 'Eparchy of Trichur to a metropolitan see with the Eparchies of Palghat and '
+      + 'Irinjalakuda, both carved from it, as suffragans: "...Provinciam ecclesiasticam '
+      + 'Trichuriensem constituimus, cuius Ecclesia princeps erit Eparchia hucusque '
+      + 'Trichuriensis, quam ad gradum et dignitatem Metropolitanae Sedis evehimus...".',
+  },
+  'john-paul-ii|diuguensis|1995-06-10': {
+    argumentum:
+      'DIUGUENSIS* IN BENINO NOVA CONDITUR DIOECESIS DIUGUENSIS',
+    note:
+      'Detaches the civil districts of Djougou, Bassila, Copargo and Ouake from the Diocese of '
+      + 'Natitingou and erects the new Diocese of Djougou (Benin), suffragan to Cotonou: "...ex '
+      + 'eoque novam condimus dioecesim Diuguensem, quam metropolitanae Ecclesiae Cotonuensi '
+      + 'suffraganeam facimus...".',
+  },
+  'john-paul-ii|mbaikensis|1995-06-10': {
+    argumentum:
+      'MBAIKENSIS* IN REPUBLICA AFRICAE MEDIAE NOVA CONDITUR DIOECESIS MBAIKENSIS',
+    note:
+      'Detaches the civil prefecture of Mbaiki from the Archdiocese of Bangui and erects the '
+      + 'new Diocese of Mbaiki (Central African Republic), suffragan to Bangui: "...ex eoque '
+      + 'novam condimus dioecesim Mbaikensem, quam metropolitanae Ecclesiae Banguensi '
+      + 'suffraganeam facimus...".',
+  },
+  'john-paul-ii|calabocensis|1995-06-17': {
+    argumentum:
+      'CALABOCENSIS* IN VENETIOLA CONSTITUITUR NOVA PROVINCIA ECCLESIASTICA CALABOCENSIS, '
+      + 'CUIUS METROPOLITANA ECCLESIA ERIT SEDES EIUSDEM NOMINIS',
+    note:
+      'Withdraws the Diocese of Calabozo from the province of Caracas, raises it to a '
+      + 'metropolitan archdiocese and erects the new ecclesiastical province of Calabozo '
+      + '(Venezuela) with Valle de la Pascua (from Ciudad Bolivar) and San Fernando de Apure '
+      + '(from Caracas) as suffragans: "...Sedem episcopalem Calabocensem a metropolitico iure '
+      + 'Ecclesiae Caracensis seiungimus et ad gradum archiepiscopalis metropolitanae Sedis '
+      + 'attollimus...Nova condita Provincia ecclesiastica Calabocensis constabit ex '
+      + 'metropolitana Ecclesia eiusdem nominis...". The province is what the argumentum states '
+      + '(CONSTITUITUR).',
+  },
+  'john-paul-ii|ecatepecensis|1995-06-28': {
+    argumentum:
+      'ECATEPECENSIS* IN MEXICO NOVA CONDITUR DIOECESIS ECATEPECENSIS',
+    note:
+      'Detaches the municipality of Ecatepec de Morelos from the Diocese of Texcoco and the '
+      + 'Isla Municipal de Ixhuatepec from the Archdiocese of Tlalnepantla and erects the new '
+      + 'Diocese of Ecatepec (Mexico), suffragan to Tlalnepantla: "...atque ex ita distractis '
+      + 'territoriis novam constituimus dioecesim Ecatepecensem...".',
+  },
+  'john-paul-ii|imphalensis|1995-07-10': {
+    argumentum:
+      'IMPHALENSIS* IN INDIAE FINIBUS CONSTITUITUR NOVA PROVINCIA ECCLESIASTICA IMPHALENSIS, '
+      + 'CUIUS METROPOLITANA',
+    note:
+      'Detaches the Dioceses of Imphal and Kohima from the province of Shillong and erects the '
+      + 'new ecclesiastical province of Imphal (India), raising Imphal to a metropolitan '
+      + 'archdiocese with Kohima as suffragan: "...atque ex his efficimus novam Provinciam '
+      + 'ecclesiasticam Imphalensem, cuius Sedes princeps erit Ecclesia Imphalensis, quam ad '
+      + 'gradum et dignitatem archidioecesis metropolitanae evehimus...". The page prints its '
+      + 'heading cut off after "CUIUS METROPOLITANA" (the cached HTML confirms it), so the '
+      + 'argumentum is quoted as printed.',
+  },
+  'john-paul-ii|ratnapurensis|1995-11-02': {
+    argumentum:
+      'RATNAPURENSIS* INTRA SRILANKAE FINES NOVA CONDITUR DIOECESIS RATNAPURENSIS',
+    note:
+      'Detaches the northern part of the Diocese of Galle (the civil province of Sabaragamuwa) '
+      + 'and erects the new Diocese of Ratnapura (Sri Lanka), suffragan to Colombo: "...ex eaque '
+      + 'novam constituimus dioecesim ab urbe principe eiusdem regionis Ratnapurensem '
+      + 'appellandam, quam metropolitanae Sedi Columbensi in Taprobane suffraganeam facimus...".',
+  },
+  'john-paul-ii|ielgavensis|1995-12-02': {
+    argumentum:
+      'IELGAVENSIS* NOVA DIOECESIS CONDITUR IN LETTONIA, IELGAVENSIS APPELLANDA',
+    note:
+      'Detaches the deaneries of Griva, Ilukste, Jekabpils, Skaistkalne and Jelgava from the '
+      + 'Diocese of Liepaja and erects the new Diocese of Jelgava (Latvia), suffragan to Riga: '
+      + '"...quibus nova dioecesis constituitur Ielgavensis appellanda, quae iisdem teminatur '
+      + 'finibus quibus supra memorati decanatus simul sumpti.".',
+  },
+  'john-paul-ii|rezeknensis-aglonensis|1995-12-02': {
+    argumentum:
+      'REZEKNENSIS-AGLONENSIS* IN LETTONIA NOVA CONDITUR DIOECESIS REZEKNENSIS-AGLONENSIS',
+    note:
+      'Detaches eleven deaneries of Latgale (Daugavpils, Kraslava, Dagda, Aglona, Preili, '
+      + 'Livani, Varaklani, Rezekne, Ludza, Nautreni, Vilaka) from the Archdiocese of Riga and '
+      + 'erects the new Diocese of Rezekne-Aglona (Latvia), suffragan to Riga, with the shrine '
+      + 'of Aglona as concathedral: "...atque ex ita distractis territoriis novam constituimus '
+      + 'dioecesim Rezeknensem-Aglonensem, quae iisdem limitatur finibus, quibus praedicti '
+      + 'decanatus, simul sumpti, in praesens terminantur.".',
+  },
+  'john-paul-ii|kerichoensis|1995-12-06': {
+    argumentum:
+      'KERICHOËNSIS* IN KENIA NOVA CONDITUR DIOECESIS KERICHOËNSIS',
+    note:
+      'Detaches the civil district of Kericho from the Diocese of Nakuru and erects the new '
+      + 'Diocese of Kericho (Kenya), suffragan to Nairobi: "...ex eoque novam constituimus '
+      + 'dioecesim Kerichoënsem, quam metropolitanae Ecclesiae Nairobiensi suffraganeam '
+      + 'facimus...".',
+  },
+  'john-paul-ii|kerensis|1995-12-21': {
+    argumentum:
+      'KERENSIS* NOVA EPARCHIA IN ERYTHRAEA CONSTITUITUR KERENSIS APPELLANDA',
+    note:
+      'Detaches the regions of Sahel and Senhit from the Eparchy of Asmara and erects the new '
+      + 'Eparchy of Keren (Eritrea), suffragan to the Metropolitan Eparchy of Addis Ababa: '
+      + '"...novam Eparchiam constituimus ab urbe Keren Kerensis appellanda, ubi eparchialis '
+      + 'sedes locatur, quae deinceps regiones quas Sahel et Senhit appellant complectetur...".',
+  },
+  'john-paul-ii|altensis-quetzaltenanguensis-totonicapensis|1996-02-13': {
+    argumentum:
+      'ALTENSIS QUETZALTENANGUENSIS-TOTONICAPENSIS* IN GUATIMALA NOVA PROVINCIA ECCLESIASTICA '
+      + 'CONSTITUITUR ALTENSIS, QUETZALTENANGUENSIS-TOTONICAPENSIS, CUIUS METROPOLITANA '
+      + 'ECCLESSIA ERIT SEDES EIUSDEM NOMINIS',
+    note:
+      'Withdraws the Diocese of Los Altos from the province of Guatemala, raises it to a '
+      + 'metropolitan archdiocese under the name Los Altos, Quetzaltenango-Totonicapan and '
+      + 'erects the new ecclesiastical province of that name with San Marcos, Solola, Quiche and '
+      + 'Huehuetenango as suffragans: "...Altensem episcopalem Sedem a metropolitico iure '
+      + 'Ecclesiae Guatimalensis seiungimus et ad gradum archiepiscopalis metropolitanae '
+      + 'Ecclesiae evehimus nomine Altensis, Quetzaltenanguensis-Totonicapensis...Nova exinde '
+      + 'Provincia Ecclesiastica constabit sane ex metropolitana Ecclesia eiusdem nominis...". '
+      + 'The province is what the argumentum states; the heading prints "ECCLESSIA", as quoted.',
+  },
+  'john-paul-ii|nebbensis|1996-02-13': {
+    argumentum:
+      'NEBBENSIS* NOVA IN UGANDA CONSTITUITUR DIOECESIS, NEBBENSIS APPELLANDA',
+    note:
+      'Detaches the civil district of Nebbi and the Madi-Okollo part of Arua district up to '
+      + 'the river Anyau from the Diocese of Arua and erects the new Diocese of Nebbi (Uganda), '
+      + 'suffragan to Kampala: "...ex iisque novam constituimus dioecesim Nebbensem appellandam, '
+      + 'quam metropolitanae Ecclesiae Kampalaësi suffraganeam facimus...".',
+  },
+  'john-paul-ii|palmensis-in-brasilia|1996-03-27': {
+    argumentum:
+      'PALMENSIS IN BRASILIA* NOVA CONDITUR ARCHIDIOECESIS METROPOLITANA PALMENSIS IN BRASILIA '
+      + 'SIMULQUE NOVA CONSTITUITUR PROVINCIA ECCLESIASTICA EIUSDEM NOMINIS',
+    note:
+      'Detaches six municipalities from the Diocese of Porto Nacional and five from Miracema '
+      + 'do Tocantins and erects the new metropolitan Archdiocese of Palmas (Tocantins, Brazil), '
+      + 'and with it the new province of Palmas with Porto Nacional, Miracema do Tocantins, '
+      + 'Tocantinopolis and the Prelature of Cristalandia, withdrawn from Goiania, as '
+      + 'suffragans: "...atque ex ita distractis territoriis novam constituimus archidioecesim '
+      + 'metropolitanam Palmensem in Brasilia...Itemque constituimus novam Provinciam '
+      + 'ecclesiasticam eiusdem nominis...".',
+  },
+  'john-paul-ii|ostraviensis-opaviensis|1996-05-30': {
+    argumentum:
+      'OSTRAVIENSIS-OPAVIENSIS* QUIBUSDAM AB ARCHIDIOECESI OLOMUCENSI DSTRACTIS TERRITORIIS '
+      + 'NOVA CONSTITUITUR DIOECESIS OSTRAVIENSIS-OPAVIENSIS APPELLANDA',
+    note:
+      'Detaches eleven deaneries (Bilovec, Bruntal, Frydek, Hlucin, Jesenik, Karvina, Krnov, '
+      + 'Mistek, Novy Jicin, Opava, Ostrava) from the Archdiocese of Olomouc and erects the new '
+      + 'Diocese of Ostrava-Opava (Czech Republic), suffragan to Olomouc, with a concathedral at '
+      + 'Opava: "...atque ex ita distractis territoriis novam dioecesim Ostraviensem-Opaviensem '
+      + 'appellandam iisdem circumscriptam finibus quibus praefati decanatus simul sumpti in '
+      + 'praesens terminantur, constituimus et erigimus.". The heading prints "DSTRACTIS", as '
+      + 'quoted.',
+  },
+  'john-paul-ii|vratislaviensis-gedanensis|1996-06-01': {
+    argumentum:
+      'VRATISLAVIENSIS-GEDANENSIS* NOVA CONSTITUITUR EPARCHIA VRATISLAVIENSIS-GEDANENSIS RITUS '
+      + 'BYZANTINI UCRAINORUM',
+    note:
+      'Detaches the deaneries of Wroclaw, Koszalin and Zielona Gora and the parishes of '
+      + 'Gliwice, Katowice and Gdansk from the Ukrainian Byzantine Eparchy of Przemysl and '
+      + 'erects the new Eparchy of Wroclaw-Gdansk (Poland), seated at Wroclaw and suffragan to '
+      + 'Przemysl-Warsaw: "...novam condimus Eparchiam Vratislaviensem-Gedanensem ritus '
+      + 'Byzantini Ucrainorum appellandam, cuius Sedem in urbe Vratislavia ponimus...". The '
+      + 'reader carried the opening quotation mark of the body\'s first sentence into the '
+      + 'extracted argumentum; the cached HTML places it in the next paragraph, so it is dropped '
+      + 'here.',
+  },
+  'john-paul-ii|neyyattinkaraensis|1996-06-14': {
+    argumentum:
+      'NEYYATTINKARAËNSIS IN INDIA MERIDIONALI NOVA CONDITUR DIOECESIS NEYYATTINKARAËNSIS',
+    note:
+      'Detaches the taluks of Nedumangad and Neyyattinkara (except the Padroado coast) from '
+      + 'the Latin Diocese of Trivandrum and erects the new Diocese of Neyyattinkara (India), '
+      + 'suffragan to Verapoly: "...ex iisque novam constituimus dioecesim Neyyattinkaraënsem, '
+      + 'quam metropolitanae Ecclesiae Verapolitanae suffraganeam facimus...". The heading '
+      + 'prints no asterisk after the toponym, as quoted.',
+  },
+  'john-paul-ii|thuckalayensis|1996-11-11': {
+    argumentum:
+      'THUCKALAYENSIS* NOVA EPARCHIA IN INDIA CONSTITUITUR THUCKALAYENSIS APPELLANDA',
+    note:
+      'Detaches the district of Kanyakumari and the taluk of Shenkottai from the Syro-Malabar '
+      + 'Archeparchy of Changanacherry and erects the new Eparchy of Thuckalay (India), its '
+      + 'suffragan: "...novam Eparchiam constituimus Thuckalayensem appellandam, eparchialem '
+      + 'sedem in oppido «Thuckalay» locantes...".',
+  },
+  'john-paul-ii|bonaventurensis|1996-11-30': {
+    argumentum:
+      'BONAVENTURENSIS* NOVA DIOECESIS CONDITUR IN COLUMBIA EX VICARIATU APOSTOLICO '
+      + 'BONAVENTURENSI',
+    note:
+      'Raises the Apostolic Vicariate of Buenaventura (Colombia), entrusted to the Yarumal '
+      + 'missionaries, to a diocese of the same name, suffragan to Cali: "...Vicariatum '
+      + 'Apostolicum Bonaventurensem ad dioecesis dignitatem attollimus, eodem servato nomine, '
+      + 'quam Ecclesiam deinde suffraganeam facimus Metropolitanae Ecclesiae Caliensi...". '
+      + 'Stated by the argumentum as a new diocese CONDITUR out of the vicariate and filed on '
+      + 'those words; the body works it as an elevation (Ruling 9).',
+  },
+  'john-paul-ii|guarenensis|1996-11-30': {
+    argumentum:
+      'GUARENENSIS* IN VENETIOLA NOVA CONDITUR DIOECESIS GUARENENSIS',
+    note:
+      'Detaches eight municipalities (Acevedo, Andres Bello, Brion, Buroz, Paez, Plaza, Pedro '
+      + 'Gual, Zamora), until now the episcopal vicariates of Guarenas and Barlovento, from the '
+      + 'Diocese of Los Teques and erects the new Diocese of Guarenas (Venezuela), suffragan to '
+      + 'Caracas: "...atque ex ita distracto territorio novam constituimus dioecesim Guarenensem '
+      + 'appellandam...".',
+  },
+  'john-paul-ii|lugasiensis|1996-11-30': {
+    argumentum:
+      'LUGASIENSIS* IN UGANDA NOVA CONDITUR DIOECESIS LUGASIENSIS APPELLANDA',
+    note:
+      'Detaches the civil district of Mukono from the Archdiocese of Kampala and erects the '
+      + 'new Diocese of Lugazi (Uganda), suffragan to Kampala: "...Praedictam regionem nationis '
+      + 'Ugandensis ab archidioecesi Kampalaënsi submoveri volumus novamque constitui '
+      + 'dioecesanam circumscriptionem « Lugasiensem » in posterum tempus appellandam.".',
+  },
+  'john-paul-ii|rresheniensis|1996-12-07': {
+    argumentum:
+      'RRHËSHENIENSIS* NOVA IN ALBANIA CONSTITUITUR DIOECESIS RRHËSHENIENSIS',
+    note:
+      'Detaches part of the Archdiocese of Durres-Tirana and the whole Territorial Abbey of '
+      + 'Sant\'Alessandro di Orosh (the civil regions of Rreshen, Burrel, Bulqize and Peshkopi) '
+      + 'and erects the new Diocese of Rreshen (Albania), suffragan to Shkoder: "...e parte '
+      + 'territorii quadam archidioecesis Dyrracensis-Tiranensis atque ex abbatia territoriali '
+      + 'S. Alexandri de Orosci novam condimus dioecesim Rrësheniensem appellandam...".',
+  },
+  'john-paul-ii|lurinensis|1996-12-14': {
+    argumentum:
+      'LURINENSIS* QUODAM AB ARCHIDIOECESI LIMANA DISTRACTO TERRITORIO NOVA CONSTITUITUR '
+      + 'DIOECESIS LURINENSIS APPELLANDA',
+    note:
+      'Detaches twenty-two parishes of the southern suburbs from the Archdiocese of Lima and '
+      + 'erects the new Diocese of Lurin (Peru), suffragan to Lima: "...Ex ita distracto '
+      + 'territorio novam condimus dioecesim Lurinensem appellandam, iisdem circumscriptam '
+      + 'finibus quibus praefatae paroeciae in territoriali Limanae Ecclesiae ordinatione in '
+      + 'praesens terminantur.".',
+  },
+  'john-paul-ii|trivandrensis-syrorum-malankarensium|1996-12-16': {
+    argumentum:
+      'TRIVANDRENSIS SYRORUM MALANKARENSIUM* METROPOLITANA EXCITATUR EPARCHIA TRIVANDRENSIS '
+      + 'SYRORUM MALANKARENSIUM IN INDIA',
+    note:
+      'Detaches the civil district of Kanyakumari from the Syro-Malankara Archeparchy of '
+      + 'Trivandrum and erects it as the new Eparchy of Marthandom, its suffragan: "...civilem '
+      + 'regionem, cui vulgare est nomen Kanyakumari, abscindimus ab memorata Archieparchia '
+      + 'Trivandrensi quam in Eparchiam convertimus Marthandomensem...". The heading names only '
+      + 'the mother see ("METROPOLITANA EXCITATUR EPARCHIA TRIVANDRENSIS"), as quoted; the new '
+      + 'see is named in the body alone.',
+  },
+  'john-paul-ii|suchitepequensis-retalhulensis|1996-12-31': {
+    argumentum:
+      'SUCHITEPEQUENSIS-RETALHULENSIS* IN GUATIMALA NOVA CONDITUR DIOECESIS '
+      + 'SUCHITEPEQUENSIS-RETALHULENSIS',
+    note:
+      'Detaches the department of Retalhuleu from the Archdiocese of Los Altos, '
+      + 'Quetzaltenango-Totonicapan and the department of Suchitepequez from the Diocese of '
+      + 'Solola and erects the new Diocese of Suchitepequez-Retalhuleu (Guatemala), seated at '
+      + 'Mazatenango and suffragan to Guatemala: "...atque ex ita distractis territoriis novam '
+      + 'constituimus dioecesim Suchitepequensem-Retalhulensem...".',
+  },
+  'john-paul-ii|dharmapuriensis|1997-01-24': {
+    argumentum:
+      'DHARMAPURIENSIS* NOVA DIOECESIS CONDITUR IN INDIA, DHARMAPURIENSIS APPELLANDA',
+    note:
+      'Detaches the northern district of Dharmapuri from the Diocese of Salem and erects the '
+      + 'new Diocese of Dharmapuri (India), suffragan to Pondicherry and Cuddalore: "...Novam '
+      + 'dioecesim condimus Dharmapuriensem a principi urbe eiusdem regionis Dharmapuriensis '
+      + 'appellandam, septentrionali districtu, quem « Dharmapuri » appellant, a Sede Salemensi '
+      + 'distracto.".',
+  },
+  'john-paul-ii|kosiciensis|1997-02-21': {
+    argumentum:
+      'KOŠICIENSIS* NOVA EXARCHIA APOSTOLICA PRO FIDELIBUS BYZANTINI RITUS IN SLOVACCHIA '
+      + 'CONSTITUITUR KOŠICIENSIS APPELLANDA',
+    note:
+      'Detaches the civil region of Kosice from the jurisdiction of the Byzantine Eparchy of '
+      + 'Presov and erects the new Apostolic Exarchate of Kosice for the faithful of the '
+      + 'Byzantine rite in Slovakia, immediately subject to the Holy See: "...novam Exarchiam '
+      + 'pro fidelibus ritus Byzantini constituimus, Košiciensem appellandam, cuius sedes in '
+      + 'urbe Cassovia locabitur...".',
+  },
+  'john-paul-ii|merlensis-moronensis|1997-05-13': {
+    argumentum:
+      'MERLENSIS-MORENENSIS* NOVA DIOECESIS CONDITUR IN ARGENTINA, MERLENSIS-MORENSIS '
+      + 'APPELLANDA',
+    note:
+      'Detaches the partidos of Merlo and Moreno from the Diocese of Moron and erects the new '
+      + 'Diocese of Merlo-Moreno (Argentina), seated at Moreno and suffragan to Buenos Aires: '
+      + '"...quibus nova dioecesis constituitur, Merlensis-Morenensis appellanda, quae iisdem '
+      + 'teminatur finibus quibus supra memorati districtus simul sumpti circumscribuntur.". The '
+      + 'heading prints "MERLENSIS-MORENSIS" in its second clause, as quoted.',
+  },
+  'john-paul-ii|matehualensis|1997-05-28': {
+    argumentum:
+      'MATEHUALENSIS* NOVA DIOECESIS CONDITUR MEXICANA IN NATIONE, MATEHUALENSIS APPELLANDA',
+    note:
+      'Detaches the municipality of Ciudad del Maiz from the Diocese of Ciudad Valles and '
+      + 'eleven municipalities (Matehuala, Catorce, Cedral, Charcas, Guadalcazar, Santo Domingo, '
+      + 'Vanegas, Venado, Villa de Guadalupe, Villa de la Paz, Villa de Arista) from the '
+      + 'Archdiocese of San Luis Potosi and erects the new Diocese of Matehuala (Mexico), '
+      + 'suffragan to San Luis Potosi: "...quibus nova dioecesis constituitur, Matehualensis '
+      + 'appellanda, quae iisdem terminatur finibus quibus supra memorata municipia simul sumpta '
+      + 'circumscribuntur.".',
+  },
+  'john-paul-ii|monguensis|1997-06-14': {
+    argumentum:
+      'MONGUENSIS* A DIOECESI LIVINGSTONENSI IN ZAMBIA QUIBUSDAM DISTRACTIS TERRITORIIS, NOVA '
+      + 'CONDITUR MONGUENSIS DIOECESIS',
+    note:
+      'Detaches the civil districts of Kalabo, Kaoma, Lukulu, Mongu and Senanga from the '
+      + 'Diocese of Livingstone and erects the new Diocese of Mongu (Zambia), suffragan to '
+      + 'Lusaka: "...a dioecesi Livingstonensi seiungimus atque novam condimus dioecesim, '
+      + 'Monguensem appellandam.". The page prints the fifth district as "Sanga".',
+  },
+  'john-paul-ii|kagiensis-bandorensis|1997-06-28': {
+    argumentum:
+      'KAGIENSIS-BANDORENSIS* IN AFRICA MEDIA NOVA CONDITUR DIOECESIS KAGIENSIS-BANDORENSIS',
+    note:
+      'Detaches the civil prefectures of Ouham-Economique (printed "Ibingui-Economique"), '
+      + 'Bamingui-Bangoran and Gribingui-Economique from the Archdiocese of Bangui and erects '
+      + 'the new Diocese of Kaga-Bandoro (Central African Republic), suffragan to Bangui: "...ex '
+      + 'eoque novam constituimus dioecesim Kagiensem-Bandorensem, quam ipsi metropolitanae '
+      + 'Ecclesiae Banguensi suffraganeam facimus...".',
+  },
+  'john-paul-ii|varasdensis|1997-07-05': {
+    argumentum:
+      'VARASDENSIS* NOVA DIOECESIS CONDITUR CROATIAE IN NATIONE, VARASDENSIS APPELLANDA',
+    note:
+      'Detaches nine deaneries (Varazdin lower and upper, Varazdinske Toplice, Bednja, '
+      + 'Medjimurje lower and upper, Djurdjevac, Koprivnica, Virje) from the Archdiocese of '
+      + 'Zagreb and erects the new Diocese of Varazdin (Croatia), suffragan to Zagreb: '
+      + '"...quibus nova dioecesis constituitur, Varasdensis appellanda, quae iisdem terminatur '
+      + 'finibus quibus supra memorati decanatus simul sumpti eircumscribuntur.".',
+  },
+  'john-paul-ii|punctifixensis|1997-07-12': {
+    argumentum:
+      'PUNCTIFIXENSIS* QUODAM DETRACTO TERRITORIO A DIOECESI CORENSI, NOVA IN REPUBLICA '
+      + 'VENETIOLANA DIOECESIS CONSTITUITUR, PUNCTIFIXENSIS APPELLANDA',
+    note:
+      'Detaches the Paraguana peninsula (the municipalities of Carirubana, Los Taques and '
+      + 'Falcon) from the Diocese of Coro and erects the new Diocese of Punto Fijo (Venezuela), '
+      + 'suffragan to Maracaibo: "...ex eoque novam condimus dioecesim Punctifixensem '
+      + 'appellandam, iisdem circumscriptam finibus quibus praefatum territorium in praesens '
+      + 'terminatur.".',
+  },
+  'john-paul-ii|parakuensis|1997-10-16': {
+    argumentum:
+      'PARAKUENSIS* NOVA CONSTITUITUR PROVINCIA ECCLESIASTICA IN BENINO, PARAKUENSIS NONCUPATA',
+    note:
+      'Erects the new ecclesiastical province of Parakou (Benin) from the Dioceses of Parakou, '
+      + 'Kandi, Natitingou and Djougou, raising Parakou to a metropolitan archdiocese: "...novam '
+      + 'Provinciam ecclesiasticam Parakuensem constituimus ex dioecesibus Parakuensi, Kandina, '
+      + 'Natitinguensi et Diuguensi, cuius sedes princeps Parakuensis erit deinceps, quae hisce '
+      + 'quoque litteris archidioecesis metropolitana efficitur...". The heading prints '
+      + '"NONCUPATA", as quoted.',
+  },
+  'john-paul-ii|asansolensis|1997-10-24': {
+    argumentum:
+      'ASANSOLENSIS* NOVA DIOECESIS CONTITUITUR IN INDIA, ASANSOLENSIS APPELLANDA',
+    note:
+      'Detaches the northern part of Burdwan district and nineteen police stations (thanas) of '
+      + 'the Bankura and Birbhum districts from the Archdiocese of Calcutta and erects the new '
+      + 'Diocese of Asansol (India), suffragan to Calcutta: "...Novam dioecesim condimus '
+      + 'Asansolensem appellandam, quae partem aliquam archidioecesis Calcuttensis, scilicet '
+      + 'territorium septentrionale districtus « Burdwan »...complectetur.". The heading '
+      + 'misprints the verb as "CONTITUITUR", kept as quoted, which is why the curation script '
+      + 'abstained.',
+  },
+  'john-paul-ii|goasoensis|1997-10-24': {
+    argumentum:
+      'GOASOËNSIS* IN GANA NOVA CONDITUR DIOECESIS GOASOËNSIS',
+    note:
+      'Detaches the civil districts of Asunafo, Asutifi, Tano and Ahafo Area from the Diocese '
+      + 'of Sunyani and erects the new Diocese of Goaso (Ghana), suffragan to Kumasi: "...ex '
+      + 'eoque novam condimus dioecesim Goasoënsem, quam metropolitanae Ecclesiae A litore aureo '
+      + 'suffraganeam facimus...".',
+  },
+  'john-paul-ii|bruneiensis|1997-11-21': {
+    argumentum:
+      'BRUNEIENSIS* PRAEFECTURA APOSTOLICA BRUNEIENSIS CONSTITUITUR',
+    note:
+      'Detaches the state of Brunei Darussalam from the Diocese of Miri and erects the new '
+      + 'Apostolic Prefecture of Brunei, within the province of Kuching: "...segregamus a '
+      + 'dioecesi Miriensi illam civilem provinciam quae vulgari nomine « Negara Brunei '
+      + 'Darussalam » nuncupatur, ex qua novam propterea constituimus Apostolicam Praefecturam '
+      + 'Bruneiensem...".',
+  },
+  'john-paul-ii|amparensis|1997-12-02': {
+    argumentum:
+      'AMPARENSIS* AB ECCLESIIS CAMPINENSI ET LIMEIRENSI QUODAM DISCTRACTO TERRITORIO, NOVA '
+      + 'CONDITUR DIOECESIS AMPARENSIS APPELLADNA',
+    note:
+      'Detaches eleven municipalities (Amparo, Aguas de Lindoia, Holambra, Itapira, '
+      + 'Jaguariuna, Lindoia, Mogi Mirim, Monte Alegre do Sul, Pedreira, Santo Antonio de Posse, '
+      + 'Serra Negra) from the Archdiocese of Campinas and the Diocese of Limeira and erects the '
+      + 'new Diocese of Amparo (Brazil), suffragan to Campinas: "...Inde novam dioecesim '
+      + 'constituimus, Amparensem appellandam, quae iisdem terminatur finibus quibus supra '
+      + 'memorata municipia.". The heading prints "DISCTRACTO" and "APPELLADNA", as quoted.',
+  },
+  'john-paul-ii|iuinensis|1997-12-02': {
+    argumentum:
+      'IUINENSIS* IN BRASILIA NOVA CONDITUR DIOECESIS IUINENSIS',
+    note:
+      'Detaches the municipalities of Juina, Castanheira, Juruena, Cotriguacu, Aripuana and '
+      + 'Brasnorte from the Dioceses of Ji-Parana and Diamantino and erects the new Diocese of '
+      + 'Juina (Brazil), suffragan to Cuiaba: "...atque ex ita distracto territorio novam '
+      + 'constituimus dioecesim Iuinensem appellandam...".',
+  },
+  'john-paul-ii|paranatinguensis|1997-12-02': {
+    argumentum:
+      'PARANATINGUENSIS* IN BRASILIA NOVA CONDITUR PRAELATURA TERRITORIALIS PARANATINGUENSIS',
+    note:
+      'Detaches the municipalities of Paranatinga, Nova Brasilandia, Planalto da Serra, '
+      + 'Campinapolis, Novo Sao Joaquim and Gaucha do Norte from the Dioceses of Sinop, Barra do '
+      + 'Garcas and Rondonopolis and erects the new Territorial Prelature of Paranatinga '
+      + '(Brazil), suffragan to Cuiaba: "...quibus ex ita detractis locia novam Praelaturam '
+      + 'territorialem deinceps Paranatinguensem nominandam...erigimus atque constituimus.".',
+  },
+  'john-paul-ii|vadutiensis|1997-12-02': {
+    argumentum:
+      'VADUTIENSIS* IN LICHTENSTENO ARCHIDIOECESIS VADUTIENSIS APPELLANDA ERIGITUR',
+    note:
+      'Detaches the deanery of Liechtenstein from the Diocese of Chur and erects the new '
+      + 'Archdiocese of Vaduz, immediately subject to the Holy See: "...territorium decanatus '
+      + 'Lichtensteni a dioecesi Curiensi distrahere atque novam ibidem archidioecesim erigere, '
+      + 'quam Vadutiensem appellandam decrevimus, finibus praefati decanatus circumscriptam et '
+      + 'Nobis immediate subiectam.".',
+  },
+  'john-paul-ii|taunggyiensis|1998-01-17': {
+    argumentum:
+      'TAUNGGYIENSISIS* IN MYANMARA ECCLESIASTICA PROVINCIA TAUNGGYENSIS CONDITUR',
+    note:
+      'Erects the new ecclesiastical province of Taunggyi (Myanmar), raising Taunggyi to a '
+      + 'metropolitan archdiocese with Taungngu, Kengtung and Loikaw as suffragans: "...Novam '
+      + 'Provinciam ecclesiasticam in Myanmara condimus scilicet Taunggyiensem, quam '
+      + 'particularem ecclesiam ad gradum archidioecesis metropolitanae attollimus...". The '
+      + 'heading prints "TAUNGGYIENSISIS" and "TAUNGGYENSIS", as quoted.',
+  },
+  'john-paul-ii|kitalensis|1998-04-03': {
+    argumentum:
+      'KITALENSISIS* IN KENIA DIOECESIS KITALENSIS CONDITUR',
+    note:
+      'Detaches the civil districts of Trans Nzoia and West Pokot from the Diocese of Eldoret '
+      + 'and erects the new Diocese of Kitale (Kenya), suffragan to Kisumu: "...ex quibus '
+      + 'circumscriptionem novam ecclesiasticam constituimus Kitalensem nomine, quam '
+      + 'Metropolitanae ecclesiae Kisumuensi suffraganeam esse censemus...". The heading prints '
+      + '"KITALENSISIS", as quoted.',
+  },
+  'john-paul-ii|itapetiningensis|1998-04-15': {
+    argumentum:
+      'ITAPETININGENSIS* NOVA DIOECESIS CONDITUR IN BRASILIA, ITAPETININGENSIS APPELLANDA',
+    note:
+      'Detaches fourteen municipalities (Itapetininga, Tatui, Sao Miguel Arcanjo, Pilar do '
+      + 'Sul, Angatuba, Paranapanema, Alambari, Campina do Monte Alegre, Cesario Lange, Capela '
+      + 'do Alto, Guarei, Sarapui, Porangaba, Torre de Pedra) from the Archdiocese of Sorocaba '
+      + 'and the Diocese of Itapeva and erects the new Diocese of Itapetininga (Brazil), '
+      + 'suffragan to Sorocaba: "...quibus nova dioecesis constituitur, Itapetiningensis '
+      + 'appellanda, quae iisdem teminatur finibus quibus supra memorata municipia simul sumpta '
+      + 'circumscribuntur.".',
+  },
+  'john-paul-ii|puntarenensis|1998-04-17': {
+    argumentum:
+      'PUNTARENENSIS* IN COSTARICA NOVA CONDITUR DIOECESIS PUNTARENENSIS',
+    note:
+      'Detaches the cantons of Puntarenas, Montes de Oro, Esparza and Garabito from the '
+      + 'Diocese of Tilaran and Parrita and Aguirre from the Diocese of San Isidro de El General '
+      + 'and erects the new Diocese of Puntarenas (Costa Rica), suffragan to San Jose: "...atque '
+      + 'ex ita distractis territoriis novam constituimus dioecesim Puntarenensem '
+      + 'appellandam...".',
+  },
+  'john-paul-ii|vasaiensis|1998-05-22': {
+    argumentum:
+      'VASAIENSIS* IN INDIA NOVA CONDITUR DIOECESIS VASAIENSIS',
+    note:
+      'Detaches nine taluks of northern Thane district (Vasai, Bhiwandi, Shahapur, Wada, '
+      + 'Jawhar, Palghar, Mokhada, Dahanu, Talasari) from the Archdiocese of Bombay and erects '
+      + 'the new Diocese of Vasai (India), suffragan to Bombay: "...ex eoque novam constituimus '
+      + 'dioecesim Vasaiensem, quam metropolitanae Ecclesiae Bombayensi suffraganeam facimus...".',
+  },
+  'john-paul-ii|criciumensis|1998-05-27': {
+    argumentum:
+      'CRICIUMENSIS* IN BRASILIA NOVA CONDITUR DIOECESIS CRICIUMENSIS',
+    note:
+      'Detaches twenty-five municipalities (Criciuma, Ararangua, Icara, Urussanga, Sombrio, '
+      + 'Nova Veneza and others) from the Diocese of Tubarao and erects the new Diocese of '
+      + 'Criciuma (Brazil), suffragan to Florianopolis: "...atque ex ita distracto territorio '
+      + 'novam constituimus dioecesim Criciumensem, quae iisdem limitabitur finibus, quibus '
+      + 'praedicta municipia simul sumpta, prout in civili lege exstant, nunc terminantur.".',
+  },
+  'john-paul-ii|banforensis|1998-06-27': {
+    argumentum:
+      'BANFORENSIS* IN BURKINA FAO NOVA CONDITUR DIOECESIS BANFORENSIS',
+    note:
+      'Detaches the civil provinces of Comoe and Leraba from the Diocese of Bobo-Dioulasso and '
+      + 'erects the new Diocese of Banfora (Burkina Faso), suffragan to Ouagadougou: '
+      + '"...Superiora loca memorata abstrahimus a dicione Bobodiulassensi ex quibus novam '
+      + 'condimus laetantes diocesim Banforensem, metropolitanae scilicet ecclesiae Uagaduguensi '
+      + 'suffraganeam...". The heading prints "BURKINA FAO", as quoted.',
+  },
+  'john-paul-ii|bettiahensis|1998-06-27': {
+    argumentum:
+      'BETTIAHENSIS* IN INDIA NOVA CONDITUR DIOECESIS BETTIAHENSIS',
+    note:
+      'Detaches the western civil districts of West and East Champaran, Gopalganj, Saran and '
+      + 'Siwan from the Diocese of Muzaffarpur and erects the new Diocese of Bettiah (India), '
+      + 'suffragan to Ranchi: "...ex iisque novam condimus dioecesim Bettiahensem, quam '
+      + 'metropolitanae Ecclesiae Ranchiensi suffraganeam facimus...".',
+  },
+  'john-paul-ii|francistaunensis|1998-06-27': {
+    argumentum:
+      'FRANCISTAUNENSIS* IN BOTSUANA NOVUS CONDITUR VICARIATUS APOSTOLICUS FRANCISTAUNENSIS',
+    note:
+      'Detaches the civil districts of Central, Chobe, Gantsi, Ngamiland and North-East from '
+      + 'the Diocese of Gaborone and erects the new Apostolic Vicariate of Francistown '
+      + '(Botswana), entrusted to the Divine Word Missionaries: "...atque eo constituimus '
+      + 'Vicariatum Apostolicum Francistaunensem, quem sollicitis curis Societatis Verbi Divini '
+      + 'concredimus.".',
+  },
+  'john-paul-ii|purneaensis|1998-06-27': {
+    argumentum:
+      'PURNEAËNSIS* QUODAM DETRACTO TERRITORIO A DIOECESI DUMKAËNSI, NOVA IN INDIAE FINIBUS '
+      + 'DIOECESIS CONSTITUITUR PURNEÄENSIS APPELLANDA',
+    note:
+      'Detaches the northern civil districts of Purnea, Katihar, Araria and Kishanganj from '
+      + 'the Diocese of Dumka and erects the new Diocese of Purnea (India), suffragan to Ranchi: '
+      + '"...ab eadem dioecesi Dumkaënsi abstrahimus eoque novam condimus dioecesim Purneaënsem '
+      + 'appellandam.". The heading prints "PURNEÄENSIS" in its second clause, as quoted.',
+  },
+  'john-paul-ii|kannurensis|1998-11-05': {
+    argumentum:
+      'KANNURENSIS* IN INDIA NOVA CONDITUR DIOECESIS KANNURENSIS',
+    note:
+      'Detaches the northern civil districts of Kannur and Kasaragod from the Diocese of '
+      + 'Calicut and erects the new Diocese of Kannur (India), suffragan to Verapoly: "...ex '
+      + 'eoque novam condimus dioecesim Kannurensem, quam metropolitanae Ecclesiae Verapolitanae '
+      + 'suffraganeam facimus...".',
+  },
+  'john-paul-ii|corensis|1998-11-23': {
+    argumentum:
+      'CORENSIS* INTRA VENETIOLAE FINES CONDITUR NOVA PROVINCIA ECCLESIASTICA, CORENSIS '
+      + 'SCILICET, QUAE AD DIGNITATEM ECCLESIAE METROPOLITANAE ATTOLLITUR',
+    note:
+      'Erects the new ecclesiastical province of Coro (Venezuela), raising Coro to a '
+      + 'metropolitan see with Punto Fijo, withdrawn from Maracaibo, as its suffragan: "...Novam '
+      + 'Provinciam Ecclesiasticam condimus Corensem appellandam et eam archiepiscopalis '
+      + 'metropolitanae sedis fruentem dignitate, iuribus privilegiisque, quae complectetur '
+      + 'Ecclesiam eiusdem nominis et dioecesim Punctifixensem...". The province is what the '
+      + 'argumentum leads with (CONDITUR), so this is an erection; the curation script proposed '
+      + 'an elevation on the ATTOLLITUR of its relative clause.',
+  },
+  'john-paul-ii|gorensis|1998-11-28': {
+    argumentum:
+      'GORENSIS* NOVA DIOECESIS CONDITUR IN CIADIA, GORENSIS APPELLANDA',
+    note:
+      'Detaches the southern sub-prefectures of Gore and Baibokoum from the Dioceses of '
+      + 'Moundou and Doba and erects the new Diocese of Gore (Chad), suffragan to N\'Djamena: '
+      + '"...Novam dioecesim condimus Gorensem appellandam, quae meridianum territorium '
+      + 'Subpraefecturarum civilium, vulgo Goré et Baïbokoum, ipsumque ab Ecclesiis Munduensi et '
+      + 'Dobana seiunctum, complectetur.".',
+  },
+  'john-paul-ii|laiensis|1998-11-28': {
+    argumentum:
+      'LAIENSIS* IN CIADIA DIOECESIS LAIENSIS CONDITUR',
+    note:
+      'Detaches the civil province of Tandjile from the Dioceses of Moundou and Doba and '
+      + 'erects the new Diocese of Lai (Chad), suffragan to N\'Djamena: "...ex qua novam omnino '
+      + 'condimus dioecesim posthac Laiensem nuncupandam, quam simul metropolitanae Ecclesiae '
+      + 'Ndiamenanae suffraganeam subicimus...".',
+  },
+  'john-paul-ii|tibuensis|1998-12-29': {
+    argumentum:
+      'TIBUENSIS* IN COLUMBIA NOVA CONDITUR DIOECESIS TIBUENSIS',
+    note:
+      'Raises the Territorial Prelature of Tibu (Colombia) to a diocese, keeping its name and '
+      + 'boundaries: "...Commemoratam Praelaturam Tibuensem territorialem ad gradum promovemus '
+      + 'ac iuridicialem dioecesis dignitatem, iisdem nimirum finibus adservatis quibus in '
+      + 'praesentia circumscribitur...". Stated by the argumentum as a new diocese CONDITUR and '
+      + 'filed on those words; the body works it as an elevation (Ruling 9).',
+  },
+  'john-paul-ii|guluensis|1999-01-02': {
+    argumentum:
+      'GULUENSIS* IN UGANDA CONSTITUITUR NOVA PROVINCIA ECCLESIASTICA GULUENSIS, CUIUS '
+      + 'METROPOLITANA ECCLESIA ERIT SEDES EIUSDEM NOMINIS',
+    note:
+      'Detaches the Dioceses of Arua, Gulu, Lira and Nebbi from the province of Kampala and '
+      + 'erects the new ecclesiastical province of Gulu (Uganda), raising Gulu to a metropolitan '
+      + 'archdiocese: "...atque ex his efficimus Provinciam ecclesiasticam Guluensem, cuius '
+      + 'Sedes princeps erit Ecclesia Guluensis, quam ad gradum et dignitatem archidioecesis '
+      + 'metropolitanae evehimus...".',
+  },
+  'john-paul-ii|mbararaensis|1999-01-02': {
+    argumentum:
+      'MBARARAËNSIS* NOVA PROVINCIA ECCLESIASTICA MBARARAËNSIS APPELLATA INTRA FINES UGANDAE '
+      + 'CONDITUR',
+    note:
+      'Separates Mbarara from the province of Kampala, raises it to a metropolitan archdiocese '
+      + 'and erects the new ecclesiastical province of Mbarara (Uganda) with Fort Portal, Hoima, '
+      + 'Kabale and Kasese as suffragans: "...A metropolitana Ecclesia Kampalaënsi Mbararaënsem '
+      + 'sedem separamus quam ad dignitatem archiepiscopalis metropolitanae Ecclesiae '
+      + 'evehimus...Novam Provinciam ecclesiasticam constituunt, veluti suffraganeae sedes, '
+      + 'dioeceses Arcis Portal, Hoimana, Kabalena et Kasesensis...".',
+  },
+  'john-paul-ii|tororoensis|1999-01-02': {
+    argumentum:
+      'TOROROËNSIS* IN UGANDA CONSTITUITUR NOVA PROVINCIA ECCLESIASTICA TOROROËNSIS, CUIUS '
+      + 'METROPOLITANA ERIT SEDES EIUDEM NOMINIS',
+    note:
+      'Detaches the Dioceses of Jinja, Kotido, Moroto, Soroti and Tororo from the province of '
+      + 'Kampala and erects the new ecclesiastical province of Tororo (Uganda), raising Tororo '
+      + 'to a metropolitan archdiocese: "...atque ex his efficimus Provinciam ecclesiasticam '
+      + 'Tororoënsem, cuius Sedes princeps erit Ecclesia Tororoënsis, quam ad gradum et '
+      + 'dignitatem archidioecesis metropolitanae evehimus...". The heading prints "EIUDEM", as '
+      + 'quoted.',
+  },
+  'john-paul-ii|gwaliorensis|1999-02-09': {
+    argumentum:
+      'GWALIORENSIS* IN INDIA NOVA CONDITUR DIOECESIS GWALIORENSIS',
+    note:
+      'Detaches the western civil districts of Gwalior, Bhind, Morena, Shivpuri, Datia and '
+      + 'Sheopur from the Diocese of Jhansi and erects the new Diocese of Gwalior (India), '
+      + 'suffragan to Bhopal: "...ex eoque novam condimus dioecesim Gwaliorensem, quam '
+      + 'metropolitanae Ecclesiae Bhopalensi suffraganeam facimus...".',
+  },
+  'john-paul-ii|mamfensis|1999-02-09': {
+    argumentum:
+      'MAMFENSIS* NOVA DIOECESIS CONDITUR IN CAMARUNIA, MAMFENSIS APPELLANDA',
+    note:
+      'Detaches the civil divisions of Manyu, Lebialem and Kupe-Manenguba from the Diocese of '
+      + 'Buea and erects the new Diocese of Mamfe (Cameroon), suffragan to Bamenda: "...Novam '
+      + 'dioecesim condimus Mamfensem appellandam, quae territorium districtuum civilium '
+      + 'populari sermone Manyu, Lebialem et Kupe-Manenguba complectetur, a dioecesi Bueaënsi '
+      + 'distractum.".',
+  },
+  'john-paul-ii|masvingensis|1999-02-09': {
+    argumentum:
+      'MASVINGENSIS* IN ZIMBABUA NOVA CONDITUR DIOECESIS MASVINGENSIS',
+    note:
+      'Detaches the civil districts of Bikita, Chiredzi, Chivi, Gutu, Masvingo, Mwenezi and '
+      + 'Ndanga and parts of Gwanda and Beitbridge from the Diocese of Gweru and erects the new '
+      + 'Diocese of Masvingo (Zimbabwe), suffragan to Bulawayo: "...ex iisque novam condimus '
+      + 'dioecesim Masvingensem, quam metropolitanae Ecclesiae Bulauaiensi suffraganeam '
+      + 'facimus...".',
+  },
+  'john-paul-ii|caraguatatubensis|1999-03-03': {
+    argumentum:
+      'CARAGUATATUBENSIS* IN BRASILIA NOVA CONDITUR DIOECESIS CARAGUATATUBENSIS',
+    note:
+      'Detaches the municipalities of Caraguatatuba, Ilhabela, Sao Sebastiao and Ubatuba from '
+      + 'the Diocese of Santos and erects the new Diocese of Caraguatatuba (Brazil), suffragan '
+      + 'to Sao Paulo: "...atque ex ita distracto territorio novam constituimus dioecesim '
+      + 'Caraguatatubensem...".',
+  },
+  'john-paul-ii|patnensis|1999-03-16': {
+    argumentum:
+      'PATNENSIS* PROVINCIA ECCLESIASTICA PATNENSIS IN INDIA CONDITUR',
+    note:
+      'Detaches the Dioceses of Patna, Bettiah, Bhagalpur, Muzaffarpur and Purnea from the '
+      + 'province of Ranchi and erects the new ecclesiastical province of Patna (India), raising '
+      + 'Patna to a metropolitan archdiocese: "...novam Provinciam ecclesiasticam ex distractis '
+      + 'dioecesibus Patnensi, Bettiahensi, Bhagalpurensi, Muzaffarpurensi et Purneaënsi a '
+      + 'metropolitana Sede Ranchiensi, condimus Patnensem appellandam atque pristinam eiusdem '
+      + 'nominis dioecesim ad archidioecesis metropolitanae gradum evehimus...".',
+  },
+  'john-paul-ii|yendensis|1999-03-16': {
+    argumentum:
+      'YENDENSIS* NOVA DIOECESIS CONDITUR IN GANA, YENDENSIS APPELLANDA',
+    note:
+      'Detaches the eastern civil districts of Yendi, Gushiegu-Karaga, Bimbilla, '
+      + 'Saboba-Chereponi and Zabzugu-Tatale from the Archdiocese of Tamale and erects the new '
+      + 'Diocese of Yendi (Ghana), suffragan to Tamale: "...novam dioecesim condimus Yendensem '
+      + 'appellandam, quae territorium districtuum civilium Yendi, Gushiegu-Karaga, Bimbilla, '
+      + 'Saboba-Chereponi, Zabzugu-Tatale, ab orientali parte distractorum archidioecesis '
+      + 'Tamalensis, complectetur.".',
+  },
+  'john-paul-ii|karagandensis|1999-07-07': {
+    argumentum:
+      'KARAGANDEN* IN KAZAKISTANIA NOVA CONDITUR DIOECESIS KARAGANDENSIS APOSTOLICAE SEDI '
+      + 'IMMEDIATE SUBIECTA',
+    note:
+      'Suppresses the Apostolic Administration of Kazakhstan for Latins and erects in its '
+      + 'place the Diocese of Karaganda, immediately subject to the Holy See, on the regions of '
+      + 'East Kazakhstan and central Karaganda, three apostolic administrations being erected by '
+      + 'decree alongside: "...Administrationem Apostolicam Kazakistaniae Latinorum supprimimus '
+      + 'inque eiusdem locum condimus etiam dioecesim Karagandensem, quam immediate subiectam '
+      + 'Apostolicae Sedi facimus...". The heading abbreviates the toponym to "KARAGANDEN", as '
+      + 'quoted.',
+  },
+  'john-paul-ii|adilabadensis|1999-07-23': {
+    argumentum:
+      'ADILABADEN* IN INDIA NOVA EPARCHIA CONDITUR NOMINE ADILABADENSIS',
+    note:
+      'Detaches the civil district of Adilabad from the Syro-Malabar Eparchy of Chanda and '
+      + 'erects the new Eparchy of Adilabad (India), suffragan to Hyderabad: "...quodam detracto '
+      + 'territorio ab Eparchia Chandaënsi, novam condimus Eparchiam Adilabadensem, cuius sedem '
+      + 'eparchialem in oppido « Adilabad » poni iubemus...". The heading abbreviates the '
+      + 'toponym to "ADILABADEN", as quoted.',
+  },
+  'john-paul-ii|vitebscensis|1999-10-13': {
+    argumentum:
+      'VITEBSCEN* IN BIELORUSSIA NOVA CONDITUR DIOECESIS VITEBSCENSIS',
+    note:
+      'Detaches the Vitebsk region from the Archdiocese of Minsk-Mohilev and erects the new '
+      + 'Diocese of Vitebsk (Belarus), suffragan to Minsk-Mohilev: "...separamus Regionem « '
+      + 'Vitebsk » atque ex ita distracto territorio novam constituimus dioecesim Vitebscensem, '
+      + 'cuius sedem ponimus in urbe « Vitebsk »...". The heading abbreviates the toponym to '
+      + '"VITEBSCEN", as quoted.',
+  },
+  'john-paul-ii|tumacoensis|1999-10-29': {
+    argumentum:
+      'TUMACOËNSIS * NOVA CONSTITUITUR DIOECESIS IN COLUMBIA, « TUMACOËNSIS » APPELLANDA.',
+    note:
+      'Makes the Apostolic Vicariate of Tumaco (Colombia), entrusted to the Discalced '
+      + 'Carmelites for thirty-eight years, a diocese, suffragan to Popayan, the municipality of '
+      + 'Iscuande passing to the Apostolic Prefecture of Guapi: "...ut superius memoratus '
+      + 'Vicariatus Apostolicus Tumacoënsis in posterum adnumeretur inter Ecclesiae Catholicae '
+      + 'dioeceses...". Stated by the argumentum as a new diocese CONSTITUITUR and filed on '
+      + 'those words; the body works it as an elevation (Ruling 9).',
+  },
+  'john-paul-ii|yopalensis|1999-10-29': {
+    argumentum:
+      'YOPALENSIS* NOVA DIOECESIS CONDITUR IN COLOMBIA, YOPALENSIS APPELLANDA.',
+    note:
+      'Detaches twelve municipalities and parts of three others from the Apostolic Vicariate '
+      + 'of Casanare, with part of Morcote from the Diocese of Duitama-Sogamoso, and erects the '
+      + 'new Diocese of Yopal (Colombia), suffragan to Tunja: "...novam dioecesim Yopalensem '
+      + 'appellandam condimus quae territorium, a Vicariatu Apostolico Casanarensi '
+      + 'auferendum...complectetur.".',
+  },
+  'john-paul-ii|osoriensis|1999-11-10': {
+    argumentum:
+      'OSORIENSIS * NOVA DIOECESIS CONDITUR IN BRASILIA, OSORIENSIS APPELLANDA.',
+    note:
+      'Detaches twenty-one coastal municipalities (Osorio, Torres, Tramandai, Capao da Canoa, '
+      + 'Cidreira, Santo Antonio da Patrulha and others) from the Archdiocese of Porto Alegre '
+      + 'and the Diocese of Caxias do Sul and erects the new Diocese of Osorio (Brazil), '
+      + 'suffragan to Porto Alegre: "...quibus nova dioecesis constituitur, Osoriensis '
+      + 'appellanda, quae iisdem terminatur finibus quibus supra memorata municipia simul sumpta '
+      + 'circumscribuntur.".',
+  },
+  'john-paul-ii|koldaensis|1999-12-22': {
+    argumentum:
+      'KOLDAËNSIS * IN SENEGALIA NOVA CONDITUR DIOECESIS KOLDAËNSIS.',
+    note:
+      'Detaches the civil departments of Kolda, Sedhiou and Velingara from the Diocese of '
+      + 'Ziguinchor and erects the new Diocese of Kolda (Senegal), suffragan to Dakar: "...ex '
+      + 'eoque novam condimus dioecesim Koldaënsem, quam metropolitanae Ecclesiae Dakarensi '
+      + 'suffraganeam facimus...".',
+  },
+  'john-paul-ii|ndaliensis|1999-12-22': {
+    argumentum:
+      'NDALIENSIS* IN BENINO NOVA DIOECESIS NDALIENSIS APPELLANDA ERIGITUR.',
+    note:
+      'Detaches the civil districts of N\'Dali, Bembereke, Kalale, Nikki, Perere and Sinende '
+      + 'from the Archdiocese of Parakou and erects the new Diocese of N\'Dali (Benin), '
+      + 'suffragan to Parakou: "...in supra dicto territorio constituimus dioecesim Ndaliensem '
+      + 'nuncupandam, eamque Metropolitanae Ecclesiae Parakuensi suffraganeam...facimus.".',
+  },
+  'john-paul-ii|viavsensis|1999-12-22': {
+    argumentum:
+      'VIAVSENSIS* IN GANA NOVA CONDITUR DIOECESIS VIAVSENSIS.',
+    note:
+      'Detaches the northern civil districts of Juabeso-Bia, Sefwi Wiawso, '
+      + 'Bibiani-Anhwiaso-Bekwai and Aowin Suaman from the Diocese of Sekondi-Takoradi and '
+      + 'erects the new Diocese of Wiawso (Ghana), suffragan to Cape Coast: "...ex eoque novam '
+      + 'condimus dioecesim Viavsensem, quam metropolitanae Sedi A Litore Aureo suffraganeam '
+      + 'facimus...".',
+  },
+  'john-paul-ii|nunensis|2000-04-14': {
+    argumentum:
+      'NUNENSIS IN BURKINA FASANA NOVA CONDITUR DIOECESIS NUNENSIS APPELLANDA',
+    note:
+      'Detaches the region of Kossi from the Diocese of Nouna-Dedougou and erects the new '
+      + 'Diocese of Nouna (Burkina Faso), suffragan to Ouagadougou: "...a dioecesi '
+      + 'Nunensi-Deduguensi regionem vulgo dictam « Kossì » abstrahimus qua nova dioecesis '
+      + 'constituatur Nunensis appellanda.". The heading prints no asterisk after the toponym, '
+      + 'as quoted.',
+  },
+  'john-paul-ii|bongaigaonensis|2000-05-10': {
+    argumentum:
+      'BONGAIGAONENSIS* IN INDIA NOVA CONDITUR DIOECESIS BONGAIGAONENSIS APPELLANDA ERIGITUR',
+    note:
+      'Detaches the northern civil districts of Bongaigaon, Barpeta, Dhubri, Kokrajhar and '
+      + 'Nalbari (except the parish of Kumarikatta) from the Archdiocese of Guwahati and erects '
+      + 'the new Diocese of Bongaigaon (India), suffragan to Guwahati: "...atque ex ita '
+      + 'distracto territorio nova erigatur dioecesis, Bongaigaonensis appellanda, quam '
+      + 'metropolitanae Ecclesiae Guvahatinae suffraganeam...facimus.".',
+  },
+  'john-paul-ii|prisrianensis|2000-05-24': {
+    argumentum:
+      'PRISRIANENSIS* ADMINISTRATIO APOSTOLICA PRISRIANENSIS APPELLANDA CONDITUR',
+    note:
+      'Detaches the part of the Diocese of Skopje-Prizren lying in Yugoslavia (Kosovo) and '
+      + 'erects it as the Apostolic Administration of Prizren: "...statuimus et decernimus ut '
+      + 'Administratio Apostolica Prisrianensis condatur, quae complectetur, ut supra diximus, '
+      + 'territorium quod nunc ad Iugoslaviam pertinet eaque sedem locabit in urbe '
+      + 'Prisrianensi.".',
+  },
+  'john-paul-ii|malindiensis|2000-06-02': {
+    argumentum:
+      'MALINDIENSIS* IN KENIA NOVA CONDITUR DIOECESIS MALINDIENSIS',
+    note:
+      'Detaches the civil districts of Lamu and Lower Tana River from the Diocese of Garissa '
+      + 'and the district of Malindi from the Archdiocese of Mombasa and erects the new Diocese '
+      + 'of Malindi (Kenya), suffragan to Mombasa: "...ex iisque novam condimus dioecesim '
+      + 'Malindiensem, quam metropolitanae Sedi Mombasaënsi suffraganeam facimus...".',
+  },
+  'john-paul-ii|ianaubensis|2000-07-05': {
+    argumentum:
+      'IANAUBENSlS * IN BRASILIA NOVA CONDITUR DIOECESIS IANAUBENSIS',
+    note:
+      'Detaches sixteen municipalities from the Diocese of Montes Claros and eight from the '
+      + 'Diocese of Januaria and erects the new Diocese of Janauba (Brazil), suffragan to '
+      + 'Diamantina: "...atque ex ita distractis locis novam constituimus dioecesim Ianaubensem, '
+      + 'quae iisdem limitabitur finibus, quibus praedicta municipia simul sumpta, prout in '
+      + 'civili lege exstant, ad praesens terminantur.". The page prints the toponym as '
+      + '"IANAUBENSlS", with a lower-case l for the I, so the case-delimited reader stopped at '
+      + 'its first word and the curation script abstained; the argumentum is quoted here by hand '
+      + 'as the page prints it.',
+  },
+  'john-paul-ii|likualensis|2000-10-30': {
+    argumentum:
+      'LIKUALENSIS * NOVA IN CONGO PRAEFECTURA APOSTOLICA CONDITUR LIKUALENSIS APPELLANDA',
+    note:
+      'Detaches the civil region of Likouala from the Diocese of Ouesso and erects the new '
+      + 'Apostolic Prefecture of Likouala (Congo), entrusted to the Spiritans: "...Praefecturam '
+      + 'Apostolicam Likualensem condimus, quae in regione civili « Likouala » locatur eaque a '
+      + 'dioecesi Uessitana distrahenda...".',
+  },
+  'john-paul-ii|gambellensis|2000-11-16': {
+    argumentum:
+      'GAMBELLENSIS* IN AETHIOPIA CONSTITUITUR NOVA PRAEFECTURA APOSTOLICA GAMBELLENSIS',
+    note:
+      'Detaches the civil district of Gambella and part of Ilubabor from the Apostolic '
+      + 'Prefecture of Jimma-Bonga and erects the new Apostolic Prefecture of Gambella '
+      + '(Ethiopia), within the province of Addis Ababa and entrusted to the Salesians: '
+      + '"...atque ex iis locis constituimus novam Praefecturam Apostolicam Gambellensem, quam '
+      + 'metropolitanae Ecclesiae Neanthopolitanae aggregamus...".',
+  },
+  'john-paul-ii|bobodiulassensis|2000-12-05': {
+    argumentum:
+      'BOBODIULASSENSIS * NOVA IN BURKINA FASO PROVINCIA ECCLESIASTICA CONDITUR, '
+      + 'BOBODIULASSENSIS APPELLANDA, QUAE AD DIGNITATEM ARCHIEPISCOPALEM ET METROPOLITANAM '
+      + 'EVEHITUR',
+    note:
+      'Detaches the Dioceses of Bobo-Dioulasso, Banfora, Dedougou, Diebougou and Nouna from '
+      + 'the province of Ouagadougou and erects the new ecclesiastical province of '
+      + 'Bobo-Dioulasso (Burkina Faso), raising Bobo-Dioulasso to a metropolitan archdiocese: '
+      + '"...novam Provinciam ecclesiasticam condimus Bobodiulassensem appellandam eamque in '
+      + 'principali Sede Bobodiulassensi locandam. Ipsa denique ad Archidioecesis metropolitanae '
+      + 'dignitatem evehetur...". The province is what the argumentum leads with (CONDITUR), so '
+      + 'this is an erection; the curation script proposed an elevation on the EVEHITUR of its '
+      + 'relative clause.',
+  },
+  'john-paul-ii|kupelaensis|2000-12-05': {
+    argumentum:
+      'KUPELAËNSIS* IN BURKINA FASO NOVA CONDITUR PROVINCIA ECCLESIASTICA, KUPELAËNSIS '
+      + 'APPELLANDA, QUAE AD DIGNITATEM ARCHIEPISCOPALEM ET METROPOLITANAM ATTOLLITUR',
+    note:
+      'Detaches the Dioceses of Koupela, Fada N\'Gourma and Kaya from the province of '
+      + 'Ouagadougou and erects the new ecclesiastical province of Koupela (Burkina Faso), '
+      + 'raising Koupela to a metropolitan archdiocese: "...novam ex iis Provinciam '
+      + 'ecclesiasticam condimus Kupelaënsem appellandam, eiusdem vocabuli obtinentem Sedem, '
+      + 'quam ad archidioecesis metropolitanae gradum attollimus...". The province is what the '
+      + 'argumentum leads with (CONDITUR), so this is an erection; the curation script proposed '
+      + 'an elevation on the ATTOLLITUR of its relative clause.',
+  },
+  'john-paul-ii|lafiensis|2000-12-05': {
+    argumentum:
+      'LAFIENSIS* IN NIGERIA NOVA CONDITUR DIOECESIS LAFIENSIS',
+    note:
+      'Detaches Nasarawa State (ten local government areas) from the Diocese of Makurdi and '
+      + 'three local government areas from the Archdiocese of Jos and erects the new Diocese of '
+      + 'Lafia (Nigeria), suffragan to Abuja: "...ex iisque novam condimus dioecesim Lafiensem, '
+      + 'quam metropolitanae Sedi Abugensi suffraganeam facimus...".',
+  },
+  'john-paul-ii|zariensis|2000-12-05': {
+    argumentum:
+      'ZARIENSIS * IN NIGERIA NOVA CONDITUR DIOECESIS ZARIENSIS APPELLANDA',
+    note:
+      'Detaches ten local government areas of Kaduna State (Zaria, Sabon Gari, Soba, Ikara, '
+      + 'Makarfi, Kubau, Kudan, Giwa, Birnin Gwari, Igabi, less the districts of Rigasa and '
+      + 'Rigachikun) from the Archdiocese of Kaduna and erects the new Diocese of Zaria '
+      + '(Nigeria), suffragan to Kaduna: "...abstrahimus quibus nova dioecesis constituitur '
+      + 'Zariensis appellanda.".',
+  },
+  'john-paul-ii|maradiensis|2001-03-13': {
+    argumentum:
+      'MARADIENSIS* IN REPUBLICA NIGRITANA NOVA CONDITUR DIOECESIS MARADIENSIS APPELLANDA',
+    note:
+      'Detaches the civil departments of Maradi, Tahoua, Agadez, Bilma, Diffa and Zinder from '
+      + 'the Diocese of Niamey and erects the new Diocese of Maradi (Niger), immediately subject '
+      + 'to the Holy See: "...abstrahimus novamque dioecesim constituimus Maradiensem '
+      + 'appellandam...Dioecesim Maradiensem Sanctae Sedi immediate subiectam efficimus...".',
+  },
+  'john-paul-ii|montisclarensis|2001-04-25': {
+    argumentum:
+      'MONTISCLARENSIS* PROVINCIA ECCLESIASTICA MONTISCLARENSIS CONDITUR',
+    note:
+      'Withdraws the Diocese of Montes Claros from the province of Diamantina, raises it to a '
+      + 'metropolitan archdiocese and erects the new ecclesiastical province of Montes Claros '
+      + '(Brazil) with Paracatu (from Brasilia), Janauba and Januaria (from Diamantina) as '
+      + 'suffragans: "...Montisclarensem sedem episcopalem a Metropolitico iure Ecclesiae '
+      + 'Adamantinae seiungimus ad fastigiumque Archiepiscopalis Metropolitanae Ecclesiae '
+      + 'evehimus...Novam hinc conformamus Provinciam ecclesiasticam Montisclarensem...". The '
+      + 'province is what the argumentum states (CONDITUR).',
+  },
+  'john-paul-ii|maralalensis|2001-06-15': {
+    argumentum:
+      'MARALALENSIS* IN KENIA NOVA CONDITUR DIOECESIS MARALALENSIS',
+    note:
+      'Detaches the civil district of Maralal (Samburu) from the Diocese of Marsabit and '
+      + 'erects the new Diocese of Maralal (Kenya), suffragan to Nyeri: "...ex eoque novam '
+      + 'condimus dioecesim Maralalensem, quam metropolitanae Sedi Nyeriensi suffraganeam '
+      + 'facimus...".',
+  },
+  'john-paul-ii|dundensis|2001-11-09': {
+    argumentum:
+      'DUNDENSIS* NOVA IN ANGOLIA EXCITATUR ECCLESIASTICA DICIO «DUNDENSIS» RITE APPELLATA',
+    note:
+      'Detaches the civil province of Lunda Norte from the Diocese of Saurimo and erects the '
+      + 'new Diocese of Dundo (Angola), suffragan to Luanda: "...in provincia inibi civili vulgo '
+      + '« Lunda Norte » novam condimus circumscriptionem ecclesiasticam, cui posthac titulus '
+      + 'erit Dundensis...quam propterea a dioecesi Saurimoensi legitime seiungimus.".',
+  },
+  'john-paul-ii|nneviensis|2001-11-09': {
+    argumentum:
+      'NNEVIENSIS* NOVA DIOECESIS CONDITUR IN NIGERIA, NNEVIENSIS APPELLANDA',
+    note:
+      'Detaches the Nnewi region (the local government areas of Nnewi North, Nnewi South, '
+      + 'Ekwusigo and Ihiala, less Uli) from the Archdiocese of Onitsha and erects the new '
+      + 'Diocese of Nnewi (Nigeria), suffragan to Onitsha: "...Novam dioecesim condimus '
+      + 'Nneviensem appellandam, quae territorium regionis civilis, vulgo Nnewi...ab '
+      + 'archidioecesi Onitshana seiungendum, complectetur.".',
+  },
+  'john-paul-ii|quettensis|2001-11-09': {
+    argumentum:
+      'QUETTENSIS* PRAEFECTURA APOSTOLICA QUETTENSIS CONDITUR',
+    note:
+      'Detaches the province of Balochistan from the Archdiocese of Karachi and the Diocese of '
+      + 'Hyderabad in Pakistan and erects the new Apostolic Prefecture of Quetta, entrusted to '
+      + 'the Oblates of Mary Immaculate, Karachi being confined to the city and Hyderabad to '
+      + 'Sindh: "...seiungimus indeque Praefecturam Apostolicam excitamus postmodum Quettensem '
+      + 'nominandam, cum ea praecipua eius sit civitas.".',
+  },
+  'john-paul-ii|mongensis|2001-12-01': {
+    argumentum:
+      'MONGENSIS* PRAEFECTURA APOSTOLICA MONGENSIS APPELLANDA IN CIADIAE FINIBUS CONSTITUITUR',
+    note:
+      'Detaches the civil prefectures of Batha, Biltine, Guera, Ouaddai and Salamat and the '
+      + 'sub-prefecture of Ennedi from the Archdiocese of N\'Djamena and the Diocese of Sarh and '
+      + 'erects the new Apostolic Prefecture of Mongo (Chad), entrusted to the care of '
+      + 'N\'Djamena: "...novam condimus Praefecturam Apostolicam Mongensem appellandam, atque '
+      + 'sollicitis archidioecesis Ndiamenanae curis commisimus.".',
+  },
+  'john-paul-ii|kumasiensis|2001-12-22': {
+    argumentum:
+      'KUMASIENSIS* KUMASIENSIS INTRA GANAE FINES CONDITUR NOVA PROVINCIA ECCLESIASTICA, CUIUS '
+      + 'SEDES PRINCIPALIS EODEM NOMINE AD DIGNITATEM ARCHIEPISCOPALEM ET METROPOLITANAM '
+      + 'ATTOLLITUR',
+    note:
+      'Detaches the Dioceses of Obuasi, Goaso, Sunyani and Konongo-Mampong from the province '
+      + 'of Cape Coast and erects the new ecclesiastical province of Kumasi (Ghana), raising '
+      + 'Kumasi to a metropolitan archdiocese: "...omnibus ex iis dicionibus novam Provinciam '
+      + 'Ecclesiasticam condimus Kumasiensem appellandam, cuius Sedes principalis Kumasiensis '
+      + 'erit. Ipsa insuper ad archidioecesis metropolitanae gradum attollitur...". The province '
+      + 'is what the argumentum leads with (CONDITUR), so this is an erection; the curation '
+      + 'script proposed an elevation on the ATTOLLITUR of its relative clause.',
+  },
+  'john-paul-ii|tanjungselorensis|2001-12-22': {
+    argumentum:
+      'TANJUNGSELORENSIS* IN INDONESIA NOVA CONDITUR DIOECESIS TANJUNGSELORENSIS',
+    note:
+      'Detaches the eastern part of the Diocese of Samarinda (the civil districts of Bulungan '
+      + 'and Berau) and erects the new Diocese of Tanjung Selor (Indonesia), suffragan to '
+      + 'Pontianak: "...A Samarindaënsi dioecesi separamus partem orientalis territorii ex eaque '
+      + 'novam condimus dioecesim Tanjungselorensem, quam metropolitanae Sedi Pontianakensi '
+      + 'suffraganeam facimus...".',
+  },
+  'john-paul-ii|victoriensis-de-conquista|2002-01-16': {
+    argumentum:
+      'VICTORIENSIS DE CONQUISTA* IN BRASILIA CONSTITUITUR NOVA PROVINCIA ECCLESIASTICA '
+      + 'VICTORIENSIS DE CONQUISTA, CUIUS METROPOLITANA ECCLESIA ERIT SEDES EIUSDEM NOMINIS',
+    note:
+      'Withdraws the Diocese of Vitoria da Conquista from the province of Sao Salvador da '
+      + 'Bahia, raises it to a metropolitan archdiocese and erects the new ecclesiastical '
+      + 'province of Vitoria da Conquista (Brazil) with Bom Jesus da Lapa, Caetite, Jequie and '
+      + 'Livramento de Nossa Senhora as suffragans: "...Victoriensem de Conquista episcopalem '
+      + 'Sedem a metropolitico iure Ecclesiae Sancti Salvatoris in Brasilia seiungimus et ad '
+      + 'gradum archiepiscopalis metropolitanae Sedis evehimus...Nova condita provincia '
+      + 'ecclesiastica Victoriensis de Conquista efformabitur metropolitana Ecclesia eiusdem '
+      + 'nominis...". The province is what the argumentum states (CONSTITUITUR).',
+  },
+  'john-paul-ii|moscoviensis-matris-dei|2002-02-11': {
+    argumentum:
+      'MOSCOVIENSIS MATRIS DEI* PROVINCIA ECCLESIASTICA MOSCOVIENSIS MATRIS DEI APPELLANDA IN '
+      + 'RUSSIA CONDITUR',
+    note:
+      'Raises the Apostolic Administration of Northern European Russia for Latins to the '
+      + 'Archdiocese of the Mother of God at Moscow and erects the new ecclesiastical province '
+      + 'of that name with the Dioceses of St Clement at Saratov, the Transfiguration at '
+      + 'Novosibirsk and St Joseph at Irkutsk, all erected the same day, as suffragans: '
+      + '"...Administrationem Apostolicam Russiae Europaeae Septemtrionalis Latinorum ad gradum '
+      + 'et dignitatem archidioecesis evehimus, Moscoviensis Matris Dei appellandae, atque ex '
+      + 'territorio quattuor communitatum ecclesialium noviter erectarum...novam constituimus '
+      + 'Provinciam ecclesiasticam Moscoviensem Matris Dei appellandam.". The province is what '
+      + 'the argumentum states (CONDITUR); the body works it by raising the administration '
+      + '(Ruling 9).',
+  },
+  'john-paul-ii|saratoviensis-sancti-clementis|2002-02-11': {
+    argumentum:
+      'SARATOVIENSIS SANCTI CLEMENTIS* IN RUSSIA NOVA DIOECESIS SARATOVIENSIS SANCTI CLEMENTIS '
+      + 'APPELLANDA ERIGITUR',
+    note:
+      'Erects the new Diocese of St Clement at Saratov on the territory of the Apostolic '
+      + 'Administration of Southern European Russia for Latins, suffragan to the Mother of God '
+      + 'at Moscow: "...in territorio memoratae Administrationis Apostolicae novam erigimus '
+      + 'dioecesim Saratoviensem Sancti Clementis nuncupandam, eamque metropolitanae Ecclesiae '
+      + 'Moscoviensi Matris Dei suffraganeam...facimus.".',
+  },
+  'john-paul-ii|jhabuensis|2002-03-01': {
+    argumentum:
+      'JHABUENSIS* AB ECCLESIIS INDORENSI ET UDAIPURENSI QUODAM DISTRACTO TERRITORIO NOVA '
+      + 'CONDITUR DIOECESIS JHABUENSIS APPELLANDA',
+    note:
+      'Detaches the civil districts of Jhabua, Ratlam, Mandsaur and Neemuch and the tehsil of '
+      + 'Sardarpur from the Diocese of Indore and the tehsil of Thandla with four parishes from '
+      + 'the Diocese of Udaipur and erects the new Diocese of Jhabua (India), seated at '
+      + 'Meghnagar and suffragan to Bhopal: "...Inde novam dioecesim constituimus, quae '
+      + 'Jhabuensis appellabitur seu populari loquela Jhabua.".',
+  },
+  'john-paul-ii|taytayensis|2002-03-26': {
+    argumentum:
+      'TAYTAYENSIS* VICARIATUS APOSTOLICUS TAYTAYENSIS CONDITUR',
+    note:
+      'Detaches the northern part of the Apostolic Vicariate of Palawan and erects it as the '
+      + 'new Apostolic Vicariate of Taytay (Philippines), entrusted to the Augustinian '
+      + 'Recollects: "...Septentrionalem partem Vicariatus Apostolici, qui Palavanensis adhuc '
+      + 'nominatur, seiungimus atque in Vicariatum Apostolicum posthac Taytayensem nuncupandum '
+      + 'convertimus...".',
+  },
+  'john-paul-ii|munkacsiensis-latinorum|2002-03-27': {
+    argumentum:
+      'MUNKACSIENSIS LATINORUM* IN UCRAINA NOVA DIOECESIS MUNKACSIENSIS LATINORUM APPELLANDA '
+      + 'ERIGITUR',
+    note:
+      'Erects the new Latin Diocese of Mukachevo (Ukraine) on the territory of the Apostolic '
+      + 'Administration of Transcarpathia for Latins, suffragan to Lviv of the Latins: "...in '
+      + 'supra dicto territorio constituimus dioecesim Munkacsiensem Latinorum nuncupandam, '
+      + 'eamque facimus metropolitanae Ecclesiae Leopolitanae Latinorum suffraganeam...".',
+  },
+  'john-paul-ii|ulaanbaatarensis|2002-04-30': {
+    argumentum:
+      'ULAANBAATARENSIS* NOVA IN MONGOLIA PRAEFECTURA APOSTOLICA CONDITUR ULAANBAATARENSIS '
+      + 'APPELLANDA',
+    note:
+      'Erects the Apostolic Prefecture of Ulaanbaatar (Mongolia) in place of the Mission sui '
+      + 'iuris of Urga, entrusted to the CICM missionaries: "...Praefecturam Apostolicam '
+      + 'Ulaanbaatarensem condimus, et eam curis demandamus Congregationis Immaculati Cordis '
+      + 'Mariae.".',
+  },
+  'john-paul-ii|kharkiviensis-zaporizhiensis|2002-05-04': {
+    argumentum:
+      'KHARKIVIENSIS-ZAPORIZHIENSIS* IN UCRAINA ORIENTALI NOVA CONDITUR DIOECESIS '
+      + 'KHARKIVIENSIS-ZAPORIZHIENSIS',
+    note:
+      'Detaches the regions of Kharkiv, Luhansk, Poltava and Sumy from the Diocese of '
+      + 'Kyiv-Zhytomyr and Donetsk, Dnipropetrovsk and Zaporizhia from the Latin Diocese of '
+      + 'Kamyanets-Podilskyi and erects the new Diocese of Kharkiv-Zaporizhia (Ukraine), '
+      + 'suffragan to Lviv of the Latins: "...quibus ex ita seiunctis locis novam dicionem '
+      + 'Kharkiviensem-Zaporizhiensem nominandam iisdem profecto definitam finibus...".',
+  },
+  'john-paul-ii|odesensis-sympheropolitana|2002-05-04': {
+    argumentum:
+      'ODESENSIS-SYMPHEROPOLITANA* IN UCRAINA NOVA CONDITUR DIOECESIS '
+      + 'ODESENSIS-SYMPHEROPOLITANA APPELLANDA',
+    note:
+      'Detaches the regions of Kherson, Kirovohrad, Mykolaiv and Odessa and the Autonomous '
+      + 'Republic of Crimea from the Latin Diocese of Kamyanets-Podilskyi and erects the new '
+      + 'Diocese of Odessa-Simferopol (Ukraine), suffragan to Lviv of the Latins: "...atque ex '
+      + 'his distractis territoriis novam dioecesim constituimus Odesensem-Sympheropolitanam '
+      + 'appellandam.".',
+  },
+  'john-paul-ii|chingleputensis|2002-06-28': {
+    argumentum:
+      'CHINGLEPUTENSIS* IN INDIA NOVA CONDITUR DIOECESIS CHINGLEPUTENSIS',
+    note:
+      'Detaches the civil district of Kancheepuram (less the parish of St Thomas) from the '
+      + 'Archdiocese of Madras and Mylapore and erects the new Diocese of Chingleput (India), '
+      + 'its suffragan: "...ex eoque novam condimus dioecesim Chingleputensem, seu vulgo '
+      + 'Chingleput, quam metropolitanae sedi Madraspolitanae et Meliaporensi suffraganeam '
+      + 'facimus...".',
+  },
+  'john-paul-ii|gandhinagarensis|2002-10-11': {
+    argumentum:
+      'GANDHINAGARENSIS* PROVINCIA ECCLESIASTICA GANDHINAGARENSIS APPELLANDA IN INDIA CONDITUR',
+    note:
+      'Detaches the civil districts of Gandhinagar, Mehsana, Patan, Banaskantha and '
+      + 'Sabarkantha from the Diocese of Ahmedabad, erects on them the new metropolitan '
+      + 'Archdiocese of Gandhinagar (India) and constitutes the province of Gandhinagar with '
+      + 'Ahmedabad, Baroda and Rajkot, withdrawn from Bombay, as suffragans: "...atque ex iis '
+      + 'archidioecesim metropolitanam condimus...novamque provinciam ecclesiasticam '
+      + 'Gandhinagarensem appellandam...".',
+  },
+  'john-paul-ii|rodriguensis|2002-10-11': {
+    argumentum:
+      'RODRIGUENSIS* IN MAURITIO NOVUS CONDITUR VICARIATUS APOSTOLICUS RODRIGUENSIS',
+    note:
+      'Separates the island of Rodrigues from the Diocese of Port-Louis and erects it as the '
+      + 'new Apostolic Vicariate of Rodrigues (Mauritius), entrusted to the care of Port-Louis: '
+      + '"...novum constituimus Vicariatum Apostolicum Rodriguensem, quem, separatum a dioecesi '
+      + 'Portus Ludovici, ipsius Sedis concredimus curae...".',
+  },
+  'john-paul-ii|nyahururensis|2002-12-05': {
+    argumentum:
+      'NYAHURURENSIS* IN KENIA NOVA CONDITUR DIOECESIS NYAHURURENSIS',
+    note:
+      'Detaches the civil district of Nyandarua and the western part of Laikipia from the '
+      + 'Archdiocese of Nyeri and erects the new Diocese of Nyahururu (Kenya), suffragan to '
+      + 'Nyeri: "...ex iisque locis novam condimus dioecesim Nyahururensem, quam memoratae '
+      + 'metropolitanae Ecclesiae Nyeriensi suffraganeam facimus...".',
+  },
+  'john-paul-ii|paranaquensis|2002-12-07': {
+    argumentum:
+      'PARANAQUENSIS* IN PHILIPPINIS NOVA CONDITUR DIOECESIS PARANAQUENSIS',
+    note:
+      'Detaches the cities of Paranaque, Las Pinas and Muntinlupa from the Archdiocese of '
+      + 'Manila and erects the new Diocese of Paranaque (Philippines), suffragan to Manila: '
+      + '"...atque ex ita distracto territorio novam constituimus dioecesim Paranaquensem '
+      + 'appellandam.".',
+  },
+  'john-paul-ii|idukkensis|2002-12-19': {
+    argumentum:
+      'IDUKKENSIS* NOVA CONSTITUITUR IN INDIA EPARCHIA SYRORUM-MALABARENSIUM NOMINATA '
+      + '«IDUKKENSIS»',
+    note:
+      'Detaches the taluks of Udumbanchola, Thodupuzha and Devikulam from the Syro-Malabar '
+      + 'Eparchy of Kothamangalam and erects the new Eparchy of Idukki (India), suffragan to '
+      + 'Ernakulam-Angamaly: "...unde apud urbem Idukki novam condimus eparchiam, in posterum '
+      + 'Idukkensem vocandam quam volumus veluti suffraganeam subdi archieparchiae '
+      + 'metropolitanae Ernakulamensi-Angamaliensi...".',
+  },
+  'john-paul-ii|muvattupuzhensis|2002-12-19': {
+    argumentum:
+      'MUVATTUPUZHENSIS* NOVA EPARCHIA IN INDIA CONSTITUITUR MUVATTUPUZHENSIS APPELLANDA',
+    note:
+      'Detaches the Syro-Malankara faithful of the districts of Ernakulam, Thrissur and '
+      + 'Palakkad (Kerala) and Coimbatore and Tiruchirappalli from the Eparchy of Tiruvalla and '
+      + 'erects the new Eparchy of Muvattupuzha (India), suffragan to the Archeparchy of '
+      + 'Trivandrum: "...novam eparchiam constituimus ab urbe «Muvattupuzha» Muvattupuzhensis '
+      + 'appellandam, ubi eparchialis sedes locatur...".',
+  },
+  'john-paul-ii|acariguaraurensis|2002-12-27': {
+    argumentum:
+      'ACARIGUARAURENSIS* IN VENETIOLA NOVA CONDITUR DIOECESIS ACARIGUARAURENSIS',
+    note:
+      'Detaches the municipalities of Agua Blanca, Araure, Esteller, Paez, San Rafael de '
+      + 'Onoto, Santa Rosalia and Turen from the Diocese of Guanare and erects the new Diocese '
+      + 'of Acarigua-Araure (Venezuela), suffragan to Barquisimeto: "...atque ex ita distracto '
+      + 'territorio novam constituimus dioecesim Acariguaraurensem, quae iisdem limitabitur '
+      + 'finibus, quibus memorata municipia simul sumpta terminantur.".',
+  },
+  'john-paul-ii|saxanigrensis|2003-01-08': {
+    argumentum:
+      'SAXANIGRENSIS* IN MEXICO NOVA CONDITUR DIOECESIS SAXANIGRENSIS',
+    note:
+      'Detaches fifteen municipalities (Acuna, Allende, Guerrero, Hidalgo, Jimenez, Juarez, '
+      + 'Morelos, Muzquiz, Nava, Piedras Negras, Progreso, Sabinas, San Juan de Sabinas, Villa '
+      + 'Union, Zaragoza) and the northern part of Ocampo from the Diocese of Saltillo and '
+      + 'erects the new Diocese of Piedras Negras (Mexico), suffragan to Monterrey: "...atque ex '
+      + 'ita distractis locis novam constituimus dioecesim Saxanigrensem...".',
+  },
+  'john-paul-ii|samarindaensis|2003-01-14': {
+    argumentum:
+      'SAMARINDAËNSIS* IN INDONESIA CONSTITUIITUR NOVA PROVINCIA ECCLESIASTICA SAMARINDAËNSIS, '
+      + 'CUIUS METROPOLITANA ECCLESIA ERIT SEDES EIUSDEM',
+    note:
+      'Detaches the Dioceses of Tanjung Selor, Banjarmasin, Palangkaraya and Samarinda from '
+      + 'the province of Pontianak and erects the new ecclesiastical province of Samarinda '
+      + '(Indonesia), raising Samarinda to a metropolitan archdiocese: "...ex iisque '
+      + 'constituimus novam Provinciam eeclesiasticam Samarindaënsem atque dioecesim eiusdem '
+      + 'nominis ad gradum archidioecesis metropolitanae evehimus...". The heading misprints the '
+      + 'verb as "CONSTITUIITUR", kept as quoted, which is why the curation script abstained; '
+      + 'the page also cuts its heading off after "SEDES EIUSDEM".',
+  },
+  'john-paul-ii|makokuensis|2003-03-07': {
+    argumentum:
+      'MAKOKUENSIS* NOVA IN GABONE PRAEFECTURA APOSTOLICA CONDITUR MAKOKUENSIS APPELLANDA',
+    note:
+      'Detaches the civil province of Ogooue-Ivindo from the Diocese of Oyem and erects the '
+      + 'new Apostolic Prefecture of Makokou (Gabon), entrusted to the care of Oyem: "...a '
+      + 'dioecesi Oyemensi distrahimus atque ex ista regione Praefecturam Apostolicam '
+      + 'Makokuensem condimus eamque sollicitis curis dioecesis Oyemensis committimus.".',
+  },
+  'john-paul-ii|kimbensis|2003-06-12': {
+    argumentum:
+      'KIMBENSIS* IN PAPUA NOVA GUINEA NOVA CONDITUR DIOECESIS KIMBENSIS',
+    note:
+      'Detaches the civil district of New Britain (East and West) from the Archdiocese of '
+      + 'Rabaul and erects the new Diocese of Kimbe (Papua New Guinea), suffragan to Rabaul: '
+      + '"...ex eoque novam condimus dioecesim Kimbensem seu vulgo Kimbe, quam metropolitanae '
+      + 'Sedi Rabaulensi suffraganeam facimus...".',
+  },
+  'john-paul-ii|palembangensis|2003-06-12': {
+    argumentum:
+      'PALEMBANGENSIS* IN INDONESIA CONSTITUITUR NOVA PROVINCIA ECCLESIASTICA PALEMBANGENSIS '
+      + 'CUIUS METROPOLITANA ECCLESIA ERIT SEDES NOMINIS',
+    note:
+      'Detaches the Dioceses of Palembang, Pangkalpinang and Tanjungkarang from the province '
+      + 'of Medan and erects the new ecclesiastical province of Palembang (Indonesia), raising '
+      + 'Palembang to a metropolitan archdiocese: "...ex iisque constituimus novam Provinciam '
+      + 'ecclesiasticam Palembangensem atque dioecesim eiusdem nominis ad gradum archidioecesis '
+      + 'metropolitanae evehimus...".',
+  },
+  'john-paul-ii|cubaoensis|2003-06-28': {
+    argumentum:
+      'CUBAOËNSIS* IN PHILIPPINIS NOVA CONDITUR DIOECESIS CUBAOËNSIS',
+    note:
+      'Detaches the part of Quezon City south of Tandang Sora and Mactan streets from the '
+      + 'Archdiocese of Manila and erects the new Diocese of Cubao (Philippines), suffragan to '
+      + 'Manila: "...atque ex ita distracto territorio novam constituimus dioecesim Cubaoënsem.".',
+  },
+  'john-paul-ii|engativensis|2003-08-06': {
+    argumentum:
+      'ENGATIVENSIS* IN COLUMBIA NOVA CONDITUR DIOECESIS ENGATIVENSIS',
+    note:
+      'Detaches fifty-one parishes of north-western Bogota from the Archdiocese of Bogota and '
+      + 'erects the new Diocese of Engativa (Colombia), suffragan to Bogota: "...atque ex ita '
+      + 'distracto territorio novam constituimus dioecesim Engativensem, iisdem limitatam '
+      + 'finibus, quibus praedictae paroeciae simul sumptae nunc terminantur.".',
+  },
+  'john-paul-ii|fontibonensis|2003-08-06': {
+    argumentum:
+      'FONTIBONENSIS* IN COLUMBIA NOVA DIOECESIS FONTIBONENSIS APPELLANDA ERIGITUR',
+    note:
+      'Detaches forty-four parishes of western Bogota from the Archdiocese of Bogota and '
+      + 'erects the new Diocese of Fontibon (Colombia), suffragan to Bogota: "...Ex ita definito '
+      + 'territorio novam dioecesim Fontibonensem appellandam constituimus, cuius sedem in loco '
+      + 'vulgo dicto Fontibón ponimus...".',
+  },
+  'john-paul-ii|soachaensis|2003-08-06': {
+    argumentum:
+      'SOACHAËNSIS* EX ARCHIDIOECESI BOGOTENSI IN COLUMBIA QUODAM DISTRACTO TERRITORIO, NOVA '
+      + 'DIOECESIS SOACHAËNSIS APPELLANDA ERIGITUR',
+    note:
+      'Detaches twenty-nine parishes of Soacha, Sibate and southern Bogota from the '
+      + 'Archdiocese of Bogota and erects the new Diocese of Soacha (Colombia), suffragan to '
+      + 'Bogota: "...atque ex ita distracto territorio novam dioecesim, Soachaënsem appellandam, '
+      + 'iisdemque circumscriptam finibus quibus praefatae paroeciae simul sumptae terminantur, '
+      + 'erigimus ac constituimus...".',
+  },
+  'john-paul-ii|dindigulensis|2003-10-30': {
+    argumentum:
+      'DINDIGULENSIS* IN INDIA NOVA CONDITUR DIOECESIS DINDIGULENSIS.',
+    note:
+      'Detaches the taluks of Dindigul, Vedasandur, Oddanchatram, Palani and Natham from the '
+      + 'Diocese of Tiruchirapalli and six parishes of Dindigul district from the Archdiocese of '
+      + 'Madurai and erects the new Diocese of Dindigul (India), suffragan to Madurai: "...ex '
+      + 'iisque novam dioecesim Dindigulensem condimus, quam metropolitanae Ecclesiae '
+      + 'Madhuraiensi suffraganeam facimus...".',
+  },
+  'john-paul-ii|mindelensis|2003-11-14': {
+    argumentum:
+      'MINDELENSIS * IN CAPITE VIRIDI NOVA CONDITUR DIOECESIS MINDELENSIS APPELLANDA.',
+    note:
+      'Detaches the Barlavento islands (Santo Antao, Sao Vicente, Santa Luzia, Sao Nicolau, '
+      + 'Boa Vista, Sal) from the Diocese of Santiago de Cabo Verde and erects the new Diocese '
+      + 'of Mindelo (Cape Verde), immediately subject to the Holy See: "...atque ex iis novam '
+      + 'dioecesim Mindelensem appellandam erigimus ac constituimus.".',
+  },
+  'john-paul-ii|emdeberensis|2003-11-25': {
+    argumentum:
+      'EMDEBERENSIS * IN AETHIOPIA NOVA EPARCHIA CONSTITUITUR NOMINE EMDEBERENSIS.',
+    note:
+      'Detaches the Gurage Zone and the Wolliso Zone from the Archeparchy of Addis Ababa and '
+      + 'erects the new Eparchy of Emdeber (Ethiopia), its suffragan: "...Quodam detracto '
+      + 'territorio a memorata archieparchia, novam constituimus eparchiam Emdeberensem, cuius '
+      + 'sedem in urbe «Emdeber» poni iubemus...".',
+  },
+  'john-paul-ii|timikaensis|2003-12-19': {
+    argumentum:
+      'TIMIKAËNSIS * IN INDONESIA NOVA DIOECESIS ERIGITUR NOMINE TIMIKAËNSIS.',
+    note:
+      'Detaches the western part of the Diocese of Jayapura (Biak-Numfor, Yapen-Waropen, '
+      + 'Nabire, Paniai, Puncak Jaya and Mimika) and erects the new Diocese of Timika '
+      + '(Indonesia), suffragan to Merauke: "...Detracta parte occidentali territorii dioecesis '
+      + 'Iayapuraënsis, novam dioecesim Timikaënsem erigimus...".',
+  },
+  'john-paul-ii|irapuatensis|2004-01-03': {
+    argumentum:
+      'IRAPUATENSIS* IN MEXICO NOVA CONDITUR DIOECESIS IRAPUATENSIS.',
+    note:
+      'Detaches six municipalities and six parishes of Penjamo from the Archdiocese of Morelia '
+      + 'and the municipalities of Irapuato and Pueblo Nuevo from the Diocese of Leon and erects '
+      + 'the new Diocese of Irapuato (Mexico), suffragan to San Luis Potosi: "...atque ex ita '
+      + 'distractis locis novam constituimus dioecesim Irapuatensem.".',
+  },
+  'john-paul-ii|bydgostiensis|2004-02-24': {
+    argumentum:
+      'BYDGOSTIENSIS * IN POLONIA NOVA CONDITUR DIOECESIS «BYDGOSTIENSIS» APPELLANDA.',
+    note:
+      'Detaches twelve deaneries from the Archdiocese of Gniezno, eighteen parishes from the '
+      + 'Diocese of Pelplin and the deanery of Zlotow from Koszalin-Kolobrzeg and erects the new '
+      + 'Diocese of Bydgoszcz (Poland), suffragan to Gniezno: "...atque ex ita distractis '
+      + 'territoriis novam consituimus dioecesim Bydgostiensem appellandam iisdem circumscriptam '
+      + 'finibus quibus praefati decanatus et paroeciae simul sumpti in praesens terminantur.".',
+  },
+  'john-paul-ii|lodziensis|2004-02-24': {
+    argumentum:
+      'LODZIENSIS* PROVINCIA ECCLESIASTICA LODZIENSIS APPELLANDA IN POLONIA CONDITUR.',
+    note:
+      'Raises the Archdiocese of Lodz, until now immediately subject to the Holy See, to a '
+      + 'metropolitan see and erects the new ecclesiastical province of Lodz (Poland) with '
+      + 'Lowicz as suffragan: "...Lodziensem sedem archiepiscopalem Sanctae Sedi adhuc immediate '
+      + 'subiectam ad fastigium metropolitanae Ecclesiae evehimus...Ex territorio porro duarum '
+      + 'communitatum ecclesialium, Lodziensis scilicet et Lovicensis, novam constituimus '
+      + 'Provinciam ecclesiasticam Lodziensem appellandam.". The province is what the argumentum '
+      + 'states (CONDITUR).',
+  },
+  'john-paul-ii|raipurensis|2004-02-24': {
+    argumentum:
+      'RAIPURENSIS* IN INDIA CONSTITUITUR NOVA PROVINCIA ECCLESIASTICA RAIPURENSIS, CUIUS '
+      + 'METROPOLITANA ECCLESIA ERIT SEDES EIUSDEM NOMINIS.',
+    note:
+      'Detaches the Dioceses of Ambikapur, Jagdalpur (Syro-Malabar), Raigarh and Raipur from '
+      + 'the province of Bhopal and erects the new ecclesiastical province of Raipur (India), '
+      + 'raising Raipur to a metropolitan archdiocese: "...ex iisque constituimus novam '
+      + 'Provinciam ecclesiasticam Raipurensem atque dioecesim eiusdem nominis ad gradum '
+      + 'archidioecesis metropolitanae evehimus...".',
+  },
+  'john-paul-ii|suidniciensis|2004-02-24': {
+    argumentum:
+      'SUIDNICIENSIS * IN POLONIA NOVA CONDITUR DIOECESIS SUIDNICIENSIS.',
+    note:
+      'Detaches thirteen deaneries from the Archdiocese of Wroclaw and nine from the Diocese '
+      + 'of Legnica and erects the new Diocese of Swidnica (Poland), suffragan to Wroclaw: '
+      + '"...atque ex ita distracto territorio novam dioecesim constituimus Suidniciensem '
+      + 'nuncupandam.".',
+  },
+  'john-paul-ii|trivandrensis-latinorum|2004-06-03': {
+    argumentum:
+      'TRIVANDRENSIS LATINORUM* IN INDIA NOVA CONSTITUITUR PROVINCIA ECCLESIASTICA '
+      + 'TRIVANDRENSIS LATINORUM.',
+    note:
+      'Detaches the Dioceses of Alleppey, Neyyattinkara, Punalur, Quilon and Trivandrum of the '
+      + 'Latins from the province of Verapoly and erects the new Latin ecclesiastical province '
+      + 'of Trivandrum (India), Trivandrum becoming a metropolitan archdiocese: "...ex iis novam '
+      + 'ecclesiasticam Provinciam Trivandrensem Latinorum constituimus, cuius sedes princeps '
+      + 'eri t deinceps, his Litteris constituta, archidioecesis Trivandrensis Latinorum...".',
+  },
+  'john-paul-ii|barcinonensis|2004-06-15': {
+    argumentum:
+      'BARCINONENSIS* NOVA CONDITUR PROVINCIA ECCLESIASTICA SCILICET BARCINONENSIS, QUAE SEDES '
+      + 'AD DIGNITATEM ECCLESIAE METROPOLITANAE ATTOLLITUR.',
+    note:
+      'Erects the new ecclesiastical province of Barcelona (Spain), raising the Archdiocese of '
+      + 'Barcelona to a metropolitan see with the Dioceses of Terrassa and Sant Feliu de '
+      + 'Llobregat, erected the same day, as suffragans: "...Provinciam ecclesiasticam '
+      + 'Barcinonensem condimus ac sedem archiepiscopalem Barcinonensem ad metropolitanam '
+      + 'Ecclesiam evehimus...". The province is what the argumentum leads with (CONDITUR), so '
+      + 'this is an erection; the curation script proposed an elevation on the ATTOLLITUR of its '
+      + 'relative clause.',
+  },
+  'john-paul-ii|terrassensis|2004-06-15': {
+    argumentum:
+      'TERRASSENSIS * IN HISPANIA NOVA DIOECESIS ERIGITUR NOMINE TERRASSENSIS.',
+    note:
+      'Detaches twelve deaneries (Montcada, Sant Cugat-Les Planes, Terrassa, Rubi, Sabadell '
+      + 'Centre, Nord and Sud, Granollers, Puiggracios, Mollet, Montseny, Montbui) from the '
+      + 'Archdiocese of Barcelona and erects the new Diocese of Terrassa (Spain), suffragan to '
+      + 'Barcelona: "...ex iis erigimus ac constituimus novam dioecesim Terrassensem. '
+      + 'Archiepiscopali item Sedi Barcinonensi eandem suffraganeam constituimus...".',
+  },
+  'john-paul-ii|uijongbuensis|2004-06-24': {
+    argumentum:
+      'UIJONGBUENSIS * IN COREA NOVA CONDITUR DIOECESIS UIJONGBUENSIS APPELLANDA.',
+    note:
+      'Detaches northern Gyeonggi (Uijongbu, Goyang, Guri, Namyangju, Paju, '
+      + 'Dongducheon-Yangju, Yeoncheon) from the Archdiocese of Seoul and erects the new Diocese '
+      + 'of Uijongbu (Korea), suffragan to Seoul: "...ab archidioecesi quam diximus abstrahimus '
+      + 'et ex iis novam dioecesim Uijongbuensem appellandam erigimus ac constituimus.".',
+  },
+  'john-paul-ii|villavicentiensis|2004-07-03': {
+    argumentum:
+      'VILLAVICENTIENSIS * NOVA CONDITUR PROVINCIA ECCLESIASTICA SCILICET VILLAVICENTIENSIS, '
+      + 'QUAE SEDES AD DIGNITATEM ECCLESIAE METROPOLITANAE ATTOLLITUR.',
+    note:
+      'Erects the new ecclesiastical province of Villavicencio (Colombia), raising '
+      + 'Villavicencio to a metropolitan see with San Jose del Guaviare and Granada, withdrawn '
+      + 'from Bogota, as suffragans: "...Provinciam ecclesiasticam Villavicentiensem condimus '
+      + 'atque sedem episcopalem Villavicentiensem ad dignitatem metropolitanae Ecclesiae '
+      + 'attollimus...". The province is what the argumentum leads with (CONDITUR), so this is '
+      + 'an erection; the curation script proposed an elevation on the ATTOLLITUR of its '
+      + 'relative clause.',
+  },
+  'john-paul-ii|bruneiensis|2004-10-20': {
+    argumentum:
+      'BRUNEIENSIS* IN BRUNEIO DARUSSALAM NOVUS CONDITUR VICARIATUS APOSTOLICUM BRUNEIENSIS',
+    note:
+      'Raises the Apostolic Prefecture of Brunei, erected in 1997, to an apostolic vicariate '
+      + 'of the same name, entrusted to the Mill Hill Missionaries: "...memoratam Praefecturam '
+      + 'Apostolicam Bruneiensem ad gradum Vicariatus Apostolici evehimus eodem servato nomine '
+      + 'Bruneiensi...". Stated by the argumentum as a new vicariate CONDITUR and filed on those '
+      + 'words; the body works it as an elevation (Ruling 9). The heading prints "VICARIATUS '
+      + 'APOSTOLICUM", as quoted.',
+  },
+  'john-paul-ii|doriensis|2004-11-20': {
+    argumentum:
+      'DORIENSIS* IN REPUBLICA BURKINA FASANA NOVA CONDITUR DIOECESIS DORIENSIS',
+    note:
+      'Detaches the civil provinces of Seno, Oudalan, Yagha and Soum (Sahel region) from the '
+      + 'Dioceses of Fada N\'Gourma and Ouahigouya and erects the new Diocese of Dori (Burkina '
+      + 'Faso), suffragan to Koupela: "...ex eoque novam constituimus diocesim Doriensem, quam '
+      + 'metropolitanae Ecclesiae Kupelaënsi suffraganeam facimus...".',
+  },
+  'john-paul-ii|alindaoensis|2004-12-18': {
+    argumentum:
+      'ALINDAOËNSIS* IN AFRICA MEDIA NOVA CONDITUR DIOECESIS ALINDAOËNSIS APPELLANDA',
+    note:
+      'Detaches the civil prefecture of Basse-Kotto from the Diocese of Bangassou and erects '
+      + 'the new Diocese of Alindao (Central African Republic), suffragan to Bangui: "...atque '
+      + 'ex ita distracto territorio novam dioecesim constituimus Alindaoënsem nuncupandam.".',
+  },
+  'john-paul-ii|castagnalensis-de-para|2004-12-29': {
+    argumentum:
+      'CASTAGNALENSIS DE PARÁ* IN BRASILIA NOVA CONDITUR DIOECESIS CASTAGNALENSIS DE PARÁ',
+    note:
+      'Detaches twenty-four municipalities from the Archdiocese of Belem do Para and Sao '
+      + 'Domingos do Capim from the Diocese of Braganca do Para and erects the new Diocese of '
+      + 'Castanhal (Brazil), suffragan to Belem do Para: "...atque ex ita distractis locis novam '
+      + 'constituimus dioecesim Castagnalensem de Pará...".',
+  },
+  'john-paul-ii|galvestoniensis-houstoniensis|2004-12-29': {
+    argumentum:
+      'GALVESTONIENSIS-HOUSTONIENSIS* IN FOEDERATIS CIVITATIBUS AMERICAE SEPTEMTRIONALIS NOVA '
+      + 'CONSTITUITUR PROVINCIA ECCLESIASTICA GALVESTONIENSIS-HOUSTONIENSIS',
+    note:
+      'Detaches the Dioceses of Austin, Beaumont, Brownsville, Corpus Christi, '
+      + 'Galveston-Houston, Tyler and Victoria in Texas from the province of San Antonio and '
+      + 'erects the new ecclesiastical province of Galveston-Houston, its see becoming a '
+      + 'metropolitan archdiocese: "...atque summa Nostra apostolica potestate ex iis novam '
+      + 'ecclesiasticam provinciam Galvestoniensem-Houstoniensem constituimus, cuius sedes '
+      + 'princeps erit deinceps, his Litteris constituta, archidioecesis '
+      + 'Galvestoniensis-Houstoniensis...".',
+  },
+  'john-paul-ii|usbekistaniae|2005-04-01': {
+    argumentum:
+      'USBEKISTANIAE* ADMINISTRATIO APOSTOLICA CONDITUR IN USBEKISTANIA',
+    note:
+      'Raises the Mission sui iuris of Uzbekistan to an apostolic administration, entrusted to '
+      + 'the Conventual Franciscans: "...Missionem sui iuris in Republica Usbekistaniae ad '
+      + 'gradum dignitatemque Administrationis Apostolicae evehimus et eam pariter curis ac '
+      + 'pastoralibus sollicitudinibus sodalium Ordinis Fratrum Minorum Conventualium '
+      + 'committimus.". Stated by the argumentum as an administration CONDITUR and filed on '
+      + 'those words; the body works it as an elevation (Ruling 9).',
+  },
 };
 
 /**
@@ -3685,6 +7118,644 @@ export const CIRCUMSCRIPTION_ELEVATIONS: Record<string, CircumscriptionRow> = {
       + 'suffragan to Delhi: "...Apostolicam Praefecturam de Iullundur ad dignitatem '
       + 'dioecesis evehimus, Jullundurensis nomine...".',
   },
+  // The fifth curation instalment (Task 6), John Paul II: the 59 of the 390 candidates that
+  // raise an existing circumscription in rank (1979-03-28 through 2005-01-25). Most raise a
+  // prelature, prefecture, vicariate, administration or mission sui iuris to a diocese or
+  // vicariate; nine raise a see to metropolitan or archiepiscopal rank ('Lyciensis',
+  // 'Monoecensis', 'Pinnensis-Piscariensis', 'Mvanzaënsis', 'Luxemburgensis',
+  // 'Argentoratensis', 'Antioquiensis', 'Mercedensis-Luianensis', 'Tiranensis-Dyrracena'),
+  // and where a new province follows, the elevation is what the argumentum leads with.
+  // 'Premisliensis-Varsaviensis' is quoted by hand because a lower-case 'ritus' in its
+  // toponym stopped the reader. Three state the act in a form the elevation idioms do not
+  // list ('Guiratingensis et aliarum' AD DIOECESIUM ATTOLLUNTUR GRADUM, 'Iammuensis-
+  // Srinagarensis' IURIDICIALIS FORMA DIOECESIS IMPONITUR, 'Izabalensis' AD CANONICUM GRADUM
+  // VICARIATUS APOSTOLICI TOLLITUR) and are left for the controller's ruling.
+  'john-paul-ii|trudensis|1979-03-28': {
+    argumentum:
+      'TRUDENSIS* VICARIATUS APOSTOLICUS NORVEGIAE CENTRALIS AD GRADUM PRAELATURAE ERIGITUR, '
+      + 'NOMINE TRUDENSIS',
+    note:
+      'Raises the Apostolic Vicariate of Central Norway to a prelature named Trondheim, '
+      + 'immediately subject to the Holy See, with St Olav\'s in Trondheim as its prelatial '
+      + 'church: "...Vicariatum Apostolicum Norvegiae Centralis ad dignitatem Praelaturae '
+      + 'Apostolicae, Trudensis appellandae, erigimus...". The ERIGITUR of the argumentum raises '
+      + 'an existing vicariate in rank; nothing new is carved out.',
+  },
+  'john-paul-ii|cholutecensis|1979-08-29': {
+    argumentum:
+      'CHOLUTECENSIS* PRAELATURA CHOLUTECENSIS IN HONDURIA AD GRADUM DIOECESIS ERIGITUR, NOVO '
+      + 'INDITO NOMINE CHOLUTECENSIS',
+    note:
+      'Raises the Prelature of Choluteca (Honduras), erected by Paul VI in 1964, to a diocese '
+      + 'under the new Latin name Cholutecensis, keeping its boundaries, suffragan to '
+      + 'Tegucigalpa: "...Praelaturam Cholutensem in dioecesium attollimus numerum, novo indito '
+      + 'nomine Cholutecensis iisdemque circumscriptam finibus...".',
+  },
+  'john-paul-ii|guaiaramirensis|1979-10-06': {
+    argumentum:
+      'GUAIARAMIRENSIS* PRAELATURA GUAIARAMIRENSIS IN BRASILIA AD GRADUM DIOECESIS ATTOLLITUR '
+      + 'NOMINE IMMUTATO',
+    note:
+      'Raises the Prelature of Guajara-Mirim (Brazil) to a diocese, keeping its name and '
+      + 'boundaries, suffragan to Cuiaba: "...Praelaturam Guaiaramirensem in dioecesium numero '
+      + 'recensemus, immutata appellatione finibusque.".',
+  },
+  'john-paul-ii|guamensis|1979-10-16': {
+    argumentum:
+      'GUAMENSIS* PRAELATURA GUAMENSIS IN BRASILIA AD GRADUM DIOECESIS EVEHITUR',
+    note:
+      'Raises the Prelature of Guama (Brazil) to a diocese, keeping its name and boundaries, '
+      + 'suffragan to Belem do Para: "...Praelaturam Guamensem ad gradum et dignitatem dioecesis '
+      + 'extollimus in eoque constituimus, servatis eodem nomine iisdemque finibus quibus nunc '
+      + 'terminatur.".',
+  },
+  'john-paul-ii|santaremensis-et-aliae|1979-10-16': {
+    argumentum:
+      'SANTAREMENSIS ET ALIAE* PRAELATURA SANTAREMENSIS ET QUAEDAM ALIAEAD GRADUM ET '
+      + 'DIGNITATEM DIOECESIS EVEHUNTUR NOMINIBUS AC FINIBUS AB UNAQUAQUE SERVATIS',
+    note:
+      'Raises twelve Brazilian prelatures -- Santarem, Maraba, Porto Velho, Diamantino, '
+      + 'Pinheiro, Roraima, Formosa, Carolina, Humaita, Ponta de Pedras (Petrosi Culminis), '
+      + 'Rubiataba and Conceicao do Araguaia -- to dioceses, each keeping its name, boundaries '
+      + 'and metropolitan: "...praelaturas, quas diximus, ad gradum et dignitatem dioecesis '
+      + 'attollimus, eadem servantes nomina iisdemque circumscriptas finibus quibus nunc '
+      + 'terminantur.". The heading prints "ALIAEAD" without a space, as quoted.',
+  },
+  'john-paul-ii|zanzibarensis|1980-03-12': {
+    argumentum:
+      'ZANZIBARENSIS* ADMINISTRATIO APOSTOLICA ZANZIBARENSIS ET PEMBAENSIS AD GRADUM DIOECESIS '
+      + 'EVEHITUR',
+    note:
+      'Raises the Apostolic Administration of Zanzibar and Pemba (Tanzania) to a diocese, '
+      + 'henceforth called simply Zanzibar, suffragan to Dar-es-Salaam: "...Administrationem '
+      + 'Apostolicam Zanzibarensem et Pembaensem ad gradum dioecesis provehimus, quae posthac '
+      + 'tantum Zanzibarensis appellabitur...".',
+  },
+  'john-paul-ii|lyciensis|1980-10-20': {
+    argumentum:
+      'LYCIENSIS* IN ITALIA ECCLESIA LYCIENSIS AD DIGNITATEM METROPOLITANAE SEDIS EVEHITUR '
+      + 'NOVAQUE ECCLESIASTICA PROVINCIA CONSTITUITUR EODEM NOMINE',
+    note:
+      'Raises the Diocese of Lecce (Italy), until now immediately subject to the Holy See, to '
+      + 'a metropolitan see and constitutes the new province of Lecce with Brindisi and Otranto '
+      + '(which lose their metropolitan office but keep the archiepiscopal title), Gallipoli, '
+      + 'Nardo, Ostuni and Ugento-Santa Maria di Leuca as suffragans: "...Cathedralem Ecclesiam '
+      + 'Lyciensem, nunc Apostolicae Sedi immediate subiectam, ad gradum metropolitanae Sedis '
+      + 'attollimus...". The elevation is what the argumentum leads with; the province is its '
+      + 'consequence.',
+  },
+  'john-paul-ii|sibolgaensis|1980-10-24': {
+    argumentum:
+      'SIBOLGAËNSIS* PRAEFECTURA APOSTOLICA SIBOLGAËNSIS IN INDONESIA AD DIOECESIS GRADUM ET '
+      + 'DIGNITATEM EVEHITUR',
+    note:
+      'Raises the Apostolic Prefecture of Sibolga (Indonesia) to a diocese, keeping its name '
+      + 'and boundaries, suffragan to Medan: "...Praefecturam Sibolgaënsem in dioecesium numerum '
+      + 'recensemus, immutata appellatione finibusque.".',
+  },
+  'john-paul-ii|monoecensis|1981-07-30': {
+    argumentum:
+      'MONOECENSIS* MONOECENSIS DIOECESIS AD GRADUM ARCHIDIOECESIS EVEHITUR ADHUC ROMANAE SEDI '
+      + 'IMMEDIATE SUBIECTA',
+    note:
+      'Raises the Diocese of Monaco to an archdiocese, still immediately subject to the Holy '
+      + 'See and with no suffragans, in execution of article I of the convention of 25 July 1981 '
+      + 'between the Holy See and the Principality: "...cathedralem Ecclesiam Monoecensem ad '
+      + 'gradum et dignitatem archidioecesis tollimus...quae tamen et Sanctae Sedi perget esse '
+      + 'subiecta, nec sedibus suffraganeis praeerit ullis.".',
+  },
+  'john-paul-ii|abaetiensis-ad-tocantinsum-et-aliarum|1981-08-04': {
+    argumentum:
+      'ABAETIENSIS AD TOCANTINSUM ET ALIARUM* PRAELATURAE ABAETIENSIS AD TOCANTINSUM, '
+      + 'MIRACEMANA SUPERIOR, S. LUDOVICI DE MONTES BELOS ET S. IOSEPH DE GRAIU AD GRADUM ET '
+      + 'DIGNITATEM DIOECESIUM EVEHUNTUR',
+    note:
+      'Raises four Brazilian prelatures -- Abaete do Tocantins (renamed Abaetetuba), Alto '
+      + 'Miracema (Miracema do Norte), Sao Luis de Montes Belos and Sao Jose de Grajau -- to '
+      + 'dioceses, keeping their boundaries and metropolitans: "...Praelaturas quas supra '
+      + 'recensuimus ad dignitatem dioecesium evehimus omnium servato nomine, praeterquam '
+      + 'Abaetiensis ad Tocantinsum, quam Abaetetubensem in posterum appellari censemus...".',
+  },
+  'john-paul-ii|guiratingensis-et-aliarum|1981-10-03': {
+    argumentum:
+      'GUIRATINGENSIS ET ALIARUM* PRAELATURAE GUIRATINGENSIS, BONI IESU DE PIAUI, MUTATO '
+      + 'NOMINE BONI IESU A GURGUEIA, RAYMUNDIANA ET SANCTI ANTONII DE BALSAS, POSTHAC BALSENSIS '
+      + 'DICENDA, IN BRASILIA, AD DIOECESIUM ATTOLLUNTUR GRADUM',
+    note:
+      'Raises four Brazilian prelatures -- Guiratinga, Bom Jesus do Piaui (renamed Bom Jesus '
+      + 'do Gurgueia), Sao Raimundo Nonato and Santo Antonio de Balsas (renamed Balsas) -- to '
+      + 'dioceses, keeping their boundaries and metropolitans: "...praedictas supra praelaturas '
+      + 'ad gradum provehimus et dignitatem dioecesium dioecesesque constituimus, servatis earum '
+      + 'nominibus, dummodo excipiantur praelaturae Boni Iesu de Piaui et Sancti Antonii de '
+      + 'Balsas...". The curation script abstained because AD DIOECESIUM ATTOLLUNTUR GRADUM is '
+      + 'an elevation stated in a word order the idioms do not list.',
+  },
+  'john-paul-ii|pinnensis-piscariensis|1982-03-02': {
+    argumentum:
+      'PINNENSIS-PISCARIENSIS* CATHEDRALIS ECCLESIA PINNENSIS-PISCARIENSIS AD HONOREM SEDIS '
+      + 'METROPOLITANAE CUI NOMEN PISCARIENSIS-PINNESIS EVEHITUR SIMULQUE ECCLESIASTICA '
+      + 'PROVINCIA NOMINE ITA MUTATO IAM NUNC ET IN POSTERUM APPELLANDA EX INTEGRO ILLIC '
+      + 'CONSTITUITUR',
+    note:
+      'Raises the Diocese of Penne-Pescara (Italy), until now immediately subject to the Holy '
+      + 'See, to a metropolitan see under the reversed name Pescara-Penne and constitutes the '
+      + 'province of Pescara-Penne with Teramo and Atri (united aeque principaliter) as '
+      + 'suffragan: "...Cathedralem Ecclesiam, quam diximus, Pinnensem-Piscariensem, hucusque '
+      + 'Apostolicae Sedi immediate subiectam, nunc ad Ecclesiae metropolitanae dignitatem '
+      + 'extollimus eique et nomen mutamus in Piscariensem-Pinnensem...". The elevation is what '
+      + 'the argumentum leads with; the heading prints "PISCARIENSIS-PINNESIS", as quoted.',
+  },
+  'john-paul-ii|anuradhapurensis|1982-03-12': {
+    argumentum:
+      'ANURADHAPURENSIS* PRAEFECTURA APOSTOLICA ANURADHAPURENSIS AD DIGNITATEM DIOECESIS '
+      + 'EVEHITUR',
+    note:
+      'Raises the Apostolic Prefecture of Anuradhapura (Sri Lanka) to a diocese, suffragan to '
+      + 'Colombo: "...Praefecturam Apostolicam Anuradhapurensem ad gradum et dignitatem '
+      + 'dioecesis evehimus, factis nempe iuribus atque oneribus quae dioecesium sunt propria.".',
+  },
+  'john-paul-ii|coroicensis|1983-07-13': {
+    argumentum:
+      'COROICENSIS* IN BOLIVIA AD DIOECESIS GRADUM PRAELATURA ATTOLLITUR NOMINE COROICENSIS',
+    note:
+      'Raises the Prelature of Coroico (Bolivia) to a diocese, keeping its name and '
+      + 'boundaries, suffragan to La Paz: "...praelaturam Coroicensem, quam diximus, ad gradum '
+      + 'honoremque evehimus dioecesis proprium, non mutato nomine iisdemque servatis '
+      + 'finibus...".',
+  },
+  'john-paul-ii|candimendensis|1983-10-13': {
+    argumentum:
+      'CANDIMENDENSIS* PRAELATURA CANDIMENDENSIS AD GRADUM DIOECESIS TOLLITUR NOMINE IMMUTATO',
+    note:
+      'Raises the Prelature of Candido Mendes (Brazil) to a diocese, keeping its name and '
+      + 'boundaries, suffragan to Sao Luis do Maranhao: "...Memoratam praelaturam Candimendensem '
+      + 'tollimus ad gradum dioecesis atque constituimus talem ecclesiasticam dicionem, servatis '
+      + 'iisdem quos adhuc habuit finibus necnon nomine ipso.".',
+  },
+  'john-paul-ii|garissaensis|1984-02-03': {
+    argumentum:
+      'GARISSAËNSIS* PRAEFECTURA APOSTOLICA GARISSAËNSIS, IN KENYA, AD GRADUM DIOECESIS '
+      + 'TOLLITUR',
+    note:
+      'Raises the Apostolic Prefecture of Garissa (Kenya) to a diocese, keeping its name and '
+      + 'boundaries, suffragan to Nairobi: "...Apostolicam Praefecturam Garissaënsem ad gradum '
+      + 'et dignitatem dioecesis evehimus, eodem nomine iisdemque limitibus.".',
+  },
+  'john-paul-ii|aguaricoensis|1984-07-02': {
+    argumentum:
+      'AGUARICOËNSIS* PRAEFECTURA APOSTOLICA AGUARICOËNSIS AD GRADUM VICARIATUS APOSTOLICI '
+      + 'ATTOLLITUR, NOMINE HAUD MUTATO',
+    note:
+      'Raises the Apostolic Prefecture of Aguarico (Ecuador), entrusted to the Capuchins, to '
+      + 'an apostolic vicariate, keeping its name and boundaries: "...Praefecturam Apostolicam '
+      + 'Aguaricoënsem ad gradum honoremque Vicariatus Apostolici evehimus, eodem nomine '
+      + 'appellandi iisdemque finibus continendi...".',
+  },
+  'john-paul-ii|araucensis|1984-07-11': {
+    argumentum:
+      'ARAUCENSIS* VICARIATUS APOSTOLICUS ARAUCENSIS AD GRADUM DIOECESIS ATTOLLITUR',
+    note:
+      'Raises the Apostolic Vicariate of Arauca (Colombia) to a diocese, keeping its name and '
+      + 'boundaries, suffragan to Nueva Pamplona: "...Vicariatum Apostolicum Araucensem '
+      + 'dioecesim constituimus, Ecclesiae Neopampilonensi suffraganeam, eodem nomine iisdemque '
+      + 'finibus servatis...".',
+  },
+  'john-paul-ii|chinhoyiensis|1985-05-28': {
+    argumentum:
+      'CHINHOYIENSIS* PRAEFECTURA CHINHOIYENSIS AD DIOECESIS GRADUM ATTOLLITUR',
+    note:
+      'Raises the Apostolic Prefecture of Chinhoyi (Zimbabwe) to a diocese, suffragan to '
+      + 'Harare: "...Praefecturam Chinhoyiensem ad dioecesis gradum et dignitatem evehimus, cum '
+      + 'iuribus talium Ecclesiarum propriis.". The heading prints "CHINHOIYENSIS", as quoted.',
+  },
+  'john-paul-ii|tarmensis|1985-12-21': {
+    argumentum:
+      'TARMENSIS* PRAELATURA TARMENSIS EVEHITUR AD DIGNITATEM DIOECESIS',
+    note:
+      'Raises the Prelature of Tarma (Peru), erected in 1959, to a diocese, keeping its name '
+      + 'and boundaries, suffragan to Huancayo: "...memoratam Praelaturam evehimus ad gradum '
+      + 'dioecesis haud mutato tamen nomine seu Tarmensis appellandae iisdemque finibus '
+      + 'definitae...".',
+  },
+  'john-paul-ii|iammuensis-srinagarensis|1986-03-10': {
+    argumentum:
+      'IAMMUENSIS-SRINAGARENSIS* APOSTOLICAE PRAEFECTURAE IAMMUENSI ET KASHMIRENSI IAM '
+      + 'IURIDICIALIS FORMA DIOECESIS IMPONITUR, AC NOMEN INDITUR IAMMUENSIS-SRINAGARENSIS',
+    note:
+      'Raises the Apostolic Prefecture of Jammu and Kashmir (India) to a diocese under the new '
+      + 'name Jammu-Srinagar, keeping its boundaries, suffragan to Delhi: "...Praefecturam '
+      + 'Apostolicam Iammuensem et Kashmirensem in dioecesis redigimus figuram, commutato '
+      + 'scilicet superiore ipsius nomine in ecclesiam Iammuensem-Srinagarensem, iisdem tamen '
+      + 'dicionis manentibus finibus...". The curation script abstained because IURIDICIALIS '
+      + 'FORMA DIOECESIS IMPONITUR is an elevation stated in words the idioms do not list.',
+  },
+  'john-paul-ii|aricensis|1986-08-29': {
+    argumentum:
+      'ARICENSIS* PRAELATURA ARICENSIS AD GRADUM DIOECESIS ATTOLLITUR',
+    note:
+      'Raises the Territorial Prelature of Arica (Chile), erected in 1959, to a diocese, '
+      + 'keeping its boundaries, suffragan to Antofagasta: "...Praelaturam territorialem '
+      + 'Aricensem ad gradum et honorem dioecesis tollimus atque constituimus iisdem nempe '
+      + 'circumscriptam finibus quibus in praesentia terminatur.".',
+  },
+  'john-paul-ii|ariariensis|1987-10-03': {
+    argumentum:
+      'ARIARIENSIS* PRAEFECTURA APOSTOLICA ARIARIENSIS, IN COLUMBIANA REPUBLICA, AD GRADUM '
+      + 'ATTOLLITUR VICARIATUS APOSTOLICI',
+    note:
+      'Raises the Apostolic Prefecture of Ariari (Colombia), entrusted to the Salesians, to an '
+      + 'apostolic vicariate, keeping its name and boundaries: "...Praefecturam Apostolicam '
+      + 'Ariariensem ad dignitatem evehimus Vicariatus Apostolici, eodem nomine appellandi...".',
+  },
+  'john-paul-ii|iuticalpensis|1987-10-31': {
+    argumentum:
+      'IUTICALPENSIS* IMMACULATAE CONCEPTIONIS B.M.V. IN OLANCHO PRAELATURA TERRITORIALIS AD '
+      + 'GRADUM DIOECESIS EVEHITUR QUAE DEINCEPS IUTICALPENSIS ERIT COGNOMINANDA',
+    note:
+      'Raises the Territorial Prelature of the Immaculate Conception of the BVM in Olancho '
+      + '(Honduras), entrusted to the Franciscans, to a diocese under the new name Juticalpa, '
+      + 'keeping its boundaries, suffragan to Tegucigalpa: "...Praelaturam quam supra diximus ad '
+      + 'gradum et dignitatem dioecesis evehimus et constituimus, servatis nempe iisdem finibus '
+      + 'quibus nunc eadem terminatur.".',
+  },
+  'john-paul-ii|mvanzaensis|1987-11-18': {
+    argumentum:
+      'MVANZAËNSIS* ECCLESIA MVANZAËNSIS EVEHITUR AD DIGNITATEM ARCHIDIOECESIS METROPOLITANAE '
+      + 'EODEMQUE NOMINE NOVA CONDITUR PROVINCIA ECCLESIASTICA',
+    note:
+      'Raises the Diocese of Mwanza (Tanzania) to a metropolitan archdiocese and constitutes '
+      + 'the new province of Mwanza with Bukoba, Geita, Musoma, Rulenge and Shinyanga as '
+      + 'suffragans: "...Dioecesim Mvanzaënsem evehimus ad gradum archidioecesis Metropolitanae '
+      + 'novamque eodem nomine provinciam ecclesiasticam condimus...". The elevation is what the '
+      + 'argumentum leads with; the province is its consequence.',
+  },
+  'john-paul-ii|rustenburgensis|1987-11-18': {
+    argumentum:
+      'RUSTENBURGENSIS* PRAEFECTURA APOSTOLICA RUSTENBURGENSIS AD DIGNITATEM DIOECESIS EVEHITUR',
+    note:
+      'Raises the Apostolic Prefecture of Rustenburg (South Africa), entrusted to the '
+      + 'Redemptorists, to a diocese, keeping its name and boundaries, suffragan to Pretoria: '
+      + '"...Praefecturam Apostolicam Rustenburgensem ad dignitatem dioecesis elevamus, iisdem '
+      + 'servatis finibus ac nomine atque antea, eandemque archidioecesis metropolitanae '
+      + 'Praetoriensis suffraganeam facimus.".',
+  },
+  'john-paul-ii|izabalensis|1988-03-12': {
+    argumentum:
+      'IZABALENSIS* ADMINISTRATIO APOSTOLICA IZABALENSIS AD CANONICUM GRADUM VICARIATUS '
+      + 'APOSTOLICI TOLLITUR',
+    note:
+      'Raises the Apostolic Administration of Izabal (Guatemala), twenty years after its '
+      + 'erection, to an apostolic vicariate, keeping its name and boundaries: "...tollimus '
+      + 'Administrationem Apostolicam Izabalensem canonicum ad gradum Vicariatus Apostolici...". '
+      + 'The curation script abstained because AD CANONICUM GRADUM VICARIATUS APOSTOLICI '
+      + 'TOLLITUR is an elevation stated in a word order the idioms do not list.',
+  },
+  'john-paul-ii|paciensis-in-california-infer-merid|1988-03-21': {
+    argumentum:
+      'PACIENSIS IN CALIFORNIA INFERIORI MERIDIONALI* PACIENSIS IN CALIFORNIA INFERIORI '
+      + 'MERIDIONALI VICARIATUS APOSTOLICUS AD GRADUM EVEHITUR DIOECESIS',
+    note:
+      'Raises the Apostolic Vicariate of La Paz en la Baja California Sur (Mexico), entrusted '
+      + 'to the Comboni Missionaries, to a diocese, keeping its name and boundaries, suffragan '
+      + 'to Hermosillo: "...Paciensem in California Inferiori Meridionali Vicariatum Apostolicum '
+      + 'in dioecesis redigimus formam, servatis nempe eodem nomine iisdemque finibus quibus '
+      + 'usque adhuc terminatur.".',
+  },
+  'john-paul-ii|luxemburgensis|1988-04-23': {
+    argumentum:
+      'LUXEMBURGENSIS* DIOECESIS LUXEMBURGENSIS AD GRADUM ARCHIDIOECESIS EVEHITUR',
+    note:
+      'Raises the Diocese of Luxembourg to an archdiocese, still immediately subject to the '
+      + 'Holy See and with no suffragans: "...Ecclesiam Cathedralem Luxemburgensem ad gradum et '
+      + 'dignitatem archidioecesis promovemus, quae Nobis immediate subiecta manebit, sedium '
+      + 'suffraganearum expers.".',
+  },
+  'john-paul-ii|argentoratensis|1988-06-01': {
+    argumentum:
+      'ARGENTORATENSIS* DIOECESIS ARGENTORATENSIS AD GRADUM ARCHIDIOECESIS EVEHITUR',
+    note:
+      'Raises the Diocese of Strasbourg, immediately subject to the Holy See, to an '
+      + 'archdiocese with no suffragans, the concordat of 1801 still applying to Alsace and '
+      + 'Lorraine: "...Ecclesiam dioecesanam Argentoratensem Nobis diretto subiectam ad gradum '
+      + 'archidioecesis legitime evehimus, demptis tamen suffraganeis ullis ei dioecesibus.".',
+  },
+  'john-paul-ii|antioquiensis|1988-06-18': {
+    argumentum:
+      'ANTIOQUIENSIS* AD METROPOLITANAE ORDINEM ANTIOQUIENSIS EVEHITUR DIOECESIS, QUAE '
+      + 'ECCLESIA SANCTAE FIDEI DE ANTIOQUIA POSTHAC VOCABITUR,NOVAQUE EI COGNOMINA PROVINCIA '
+      + 'CONDITUR ECCLESIASTICA',
+    note:
+      'Withdraws the Diocese of Antioquia (Colombia) from the province of Medellin, raises it '
+      + 'to a metropolitan archdiocese under the name Santa Fe de Antioquia and constitutes the '
+      + 'new province of that name with Santa Rosa de Osos, Apartado (erected days later) and '
+      + 'the Apostolic Vicariates of Quibdo and Istmina as suffragans: "...Ecclesiam '
+      + 'Antioquiensem metropolitano subtrahimus iuri Ecclesiae Medellensis attollimusque ad '
+      + 'metropolitanae archidioecesis gradum...ipsaque vocabitur Ecclesia Sanctae Fidei de '
+      + 'Antioquia...". The elevation is what the argumentum leads with; the heading prints '
+      + '"VOCABITUR,NOVAQUE" without a space, as quoted.',
+  },
+  'john-paul-ii|riviascianensis|1988-06-28': {
+    argumentum:
+      'RIVIASCIANENSIS* VICARIATUS APOSTOLICUS RIOHACHAËNSIS EVEHITUR AD GRADUM DIOECESIS, '
+      + 'QUAE RIVIASCIANENSIS VOCABITUR',
+    note:
+      'Raises the Apostolic Vicariate of Riohacha (Colombia), entrusted to the Capuchins, to a '
+      + 'diocese under the Latin name Riviascianensis, keeping its boundaries and seat, '
+      + 'suffragan to Barranquilla: "...Vicariatum Apostolicum Riohachaënsem in dignitate '
+      + 'dioecesis constituimus nomine Riviascianensis appellandae, iisdem servatis finibus '
+      + 'quibus hucusque Riohachaënsis continebatur Vicariatus Apostolicus...".',
+  },
+  'john-paul-ii|chulucanensis|1988-12-12': {
+    argumentum:
+      'CHULUCANENSIS* PRAELATURA CHULUCANENSIS AD DIOECESIS DIGNITATEM ATTOLLITUR',
+    note:
+      'Raises the Territorial Prelature of Chulucanas (Peru), erected in 1964, to a diocese, '
+      + 'keeping its name, boundaries and seat, suffragan to Piura: "...memoratam Praelaturam ad '
+      + 'dignitatem dioecesis evehimus, haud mutato nomine seu Chulucanensis appellandae et iis '
+      + 'finibus circumscribendae, quibus ad hunc usque diem praelaticia ipsa continebatur '
+      + 'Ecclesia...".',
+  },
+  'john-paul-ii|pietersburgensis|1988-12-15': {
+    argumentum:
+      'PIETERSBURGENSIS* ABBATIA TERRITORIALIS PIETERSBURGENSIS AD GRADUM DIOECESIS EVEHITUR',
+    note:
+      'Raises the Territorial Abbey of Pietersburg (South Africa), a mission since 1910, to a '
+      + 'diocese, keeping its name and boundaries, suffragan to Pretoria: "...commemoratam '
+      + 'Abbatiam territorialem Pietersburgensem ad gradum evehimus iuridicialemque dioecesis '
+      + 'statum, iisdem nimirum servatis eius finibus qui adhuc fuerunt eodemque publico '
+      + 'nomine.".',
+  },
+  'john-paul-ii|abuiensis|1989-06-19': {
+    argumentum:
+      'ABUIENSIS* MISSIO SUI IUSRIS ABUIENSIS AD GRADUM DIOECESIS EVEHITUR',
+    note:
+      'Raises the Mission sui iuris of Abuja (Nigeria), erected eight years earlier and '
+      + 'covering the Federal Capital Territory, to a diocese, suffragan to Kaduna: "...Missio « '
+      + 'sui iuris » adhuc Abuiensis in Nigeria, Districtum Foederalem Nigeriae complectens, '
+      + 'legitime iureque provehatur ad gradum dioecesis in posterum videlicet nuncupanda '
+      + 'Dioecesis Abuiensis...". The heading prints "IUSRIS", as quoted.',
+  },
+  'john-paul-ii|mituensis|1989-06-19': {
+    argumentum:
+      'MITUENSIS* PRAEFECTURA APOSTOLICA MITUENSIS, IN COLUMBIE FINIBUS, AD DIGNITATEM '
+      + 'EVEHITUR VICARIATUS APOSTOLICI, QUI DEINCEPS MITUENSIS-PORTUS INIRIDENSIS APPELLABITUR',
+    note:
+      'Raises the Apostolic Prefecture of Mitu (Colombia), entrusted to the Yarumal '
+      + 'missionaries, to an apostolic vicariate under the new name Mitu-Puerto Inirida, keeping '
+      + 'its boundaries: "...Praefecturam Apostolicam Mituensem, iisdem finibus servatis, ad '
+      + 'statum attollimus Vicariatus Apostolici, qui subinde Mituensis-Portus Iniridensis '
+      + 'appellabitur...". The heading prints "COLUMBIE", as quoted.',
+  },
+  'john-paul-ii|ingvavumensis|1989-11-19': {
+    argumentum:
+      'INGVAVUMENSIS* PRAEFECTURA APOSTOLICA INGVAVUMENSIS ATTOLLITUR AD DIGNITATEM VICARIATUS '
+      + 'APOSTOLICI',
+    note:
+      'Raises the Apostolic Prefecture of Ingwavuma (South Africa), entrusted to the Servites, '
+      + 'to an apostolic vicariate, keeping its boundaries, within the province of Durban: '
+      + '"...Ingvavumensem quam diximus Praefecturam Apostolicam ad gradum honoremque Vicariatus '
+      + 'Apostolici evehimus, iisdem finibus servatis...".',
+  },
+  'john-paul-ii|balasorensis|1989-12-18': {
+    argumentum:
+      'BALASORENSIS* PRAEFECTURA APOSTOLICA BALASORENSIS AD GRADUM DIOECESIS EVEHITUR',
+    note:
+      'Raises the Apostolic Prefecture of Balasore (India) to a diocese, suffragan to '
+      + 'Cuttack-Bhubaneswar: "...Praefecturam Apostolicam Balasorensem ad gradum extollimus '
+      + 'Dioecesis. Eam autem Metropolitanae Ecclesiae Cuttackensi-Bhubanesvarensi subicimus...".',
+  },
+  'john-paul-ii|iuigalpensis|1990-04-30': {
+    argumentum:
+      'IUIGALPENSIS* IUIGALPENSIS PRAELATURA TERRITORIALIS AD STATUM ATTOLLITUR DIOECESIS',
+    note:
+      'Raises the Territorial Prelature of Juigalpa (Nicaragua) to a diocese, keeping its '
+      + 'boundaries, suffragan to Managua: "...Praelaturam territorialem Iuigalpensem ad gradum '
+      + 'statumque dioecesis evehimus, quae iisdem scilicet terminatur finibus quibus antea ipsa '
+      + 'praelatura.".',
+  },
+  'john-paul-ii|mekiensis|1991-12-21': {
+    argumentum:
+      'MEKIENSIS* PRAEFECTURA APOSTOLICA MEKIENSIS AD GRADUM VICARIATUS APOSTOLICI ATTOLLITUR '
+      + 'NOMINE NIHIL MUTATO',
+    note:
+      'Raises the Apostolic Prefecture of Meki (Ethiopia), erected in 1980 and entrusted to '
+      + 'the Consolata Missionaries, to an apostolic vicariate, keeping its name and boundaries: '
+      + '"...Praefecturam Apostolicam Mekiensem ad ordinem gradumque ipsum Vicariatus Apostolici '
+      + 'evehentes attollimus...".',
+  },
+  'john-paul-ii|kankanensis|1993-11-17': {
+    argumentum:
+      'KANKANENSIS* IN GUINEA PRAEFECTURA APOSTOLICA KANKANENSIS AD GRADUM ET DIGNITATEM '
+      + 'DIOECESIS ATTOLLITUR IMMUTATIS FINIBUS ET NOMINE',
+    note:
+      'Raises the Apostolic Prefecture of Kankan (Guinea) to a diocese, keeping its name and '
+      + 'boundaries, suffragan to Conakry: "...memoratam Praefecturam Apostolicam Kankanensem ad '
+      + 'gradum et dignitatem dioecesis attollimus immutatis finibus et nomine.".',
+  },
+  'john-paul-ii|tarahumarensis|1993-12-20': {
+    argumentum:
+      'TARAHUMARENSIS* IN MEXICO VICARIATUS APOSTOLICUS TARAHUMARENSIS AD GRADUM ET DIGNITATEM '
+      + 'DIOECESIS ATTOLLITUR IMMUTATIS FINIBUS ET NOMINE',
+    note:
+      'Raises the Apostolic Vicariate of Tarahumara (Mexico), entrusted to the Jesuits, to a '
+      + 'diocese, keeping its name and boundaries, seated at Guachochi and suffragan to '
+      + 'Chihuahua: "...memoratum Vicariatum Apostolicum Tarahumarensem ad gradum et dignitatem '
+      + 'dioecesis attollimus immutatis finibus et nomine.".',
+  },
+  'john-paul-ii|keetmanshoopensis|1994-03-14': {
+    argumentum:
+      'KEETMANSHOOPENSIS* VICARIATUS APOSTOLICUS KEETMANSHOOPENSIS AD DIGNITATEM ET '
+      + 'CONDICIONEM DIOECESIS ATTOLLITUR',
+    note:
+      'Raises the Apostolic Vicariate of Keetmanshoop (Namibia), forty-five years old, to a '
+      + 'diocese, suffragan to Windhoek, raised to metropolitan rank the same day: '
+      + '"...commemoratum Vicariatum Apostolicum Keetmanshoopensem promoveri volumus atque hisce '
+      + 'Litteris revera edicimus ad dioecesis condicionem...".',
+  },
+  'john-paul-ii|escuintlensis-in-guatimala|1994-07-28': {
+    argumentum:
+      'ESCUINTLENSIS IN GUATIMALA* PRAELATURA TERRITORIALIS ESCUINTLENSIS IN GUATIMALA AD '
+      + 'GRADUM AC DIGNITATEM DIOECESIS EVEHITUR SERVATIS IISDEM FINIBUS ET NOMINE',
+    note:
+      'Raises the Territorial Prelature of Escuintla (Guatemala) to a diocese, keeping its '
+      + 'name and boundaries, suffragan to Guatemala: "...praelaturam territorialem '
+      + 'Escuintlensem ad gradum et dignitatem dioecesis attollimus, servatis iisdem finibus, '
+      + 'quibus nunc ipsa terminatur, et nomine.".',
+  },
+  'john-paul-ii|chiquitosensis-seu-sancti-ignatii-velascani|1994-11-03': {
+    argumentum:
+      'CHIQUITOSENSIS SEU SANCTI IGNATII VELASCANI* VICARIATUS APOSTOLICUS CHIQUITOSENSIS AD '
+      + 'DIOECESIS DIGNITATEM ELEVATUR',
+    note:
+      'Raises the Apostolic Vicariate of Chiquitos (Bolivia) to a diocese under the new name '
+      + 'San Ignacio de Velasco, keeping its boundaries, suffragan to Santa Cruz de la Sierra: '
+      + '"...ut memoratus Vicariatus Apostolicus ad gradum dioecesis evehatur, iisdem servatis '
+      + 'finibus quibus antea is terminabatur, cui posthac nomen Curiae erit Sancti Ignatii '
+      + 'Velascani.".',
+  },
+  'john-paul-ii|limonensis|1994-12-13': {
+    argumentum:
+      'LIMONENSIS* VICARIATUS APOSTOLICUS LIMONENSIS IN COSTARICA AD GRADUM AC DIGNITATEM '
+      + 'DIOECESIS EVEHITUR SERVATIS IISDEM FINIBUS ET NOMINIBUS SIVE DE CURIA SIVE IN LINGUA '
+      + 'LOCI POPRIA',
+    note:
+      'Raises the Apostolic Vicariate of Limon (Costa Rica) to a diocese, keeping its name and '
+      + 'boundaries, suffragan to San Jose de Costa Rica: "...Vicariatum Apostolicum Limonensem '
+      + 'ad gradum et dignitatem dioecesis attollimus, iisdem servatis finibus, quibus nunc ipse '
+      + 'terminatur, et nominibus sive de Curia sive in lingua loci propria.". The heading '
+      + 'prints "POPRIA", as quoted.',
+  },
+  'john-paul-ii|cuauhtemocensis-materiensis|1995-11-17': {
+    argumentum:
+      'CUAUHTEMOCENSIS-MATERIENSIS* PRAELATURA TERRITORIALIS MATERIENSIS IN MEXICO AD GRADUM '
+      + 'AC DIGNITATEM DIOECESIS EVEHITUR MUTATIS FINIBUS, SEDE ET NOMINE',
+    note:
+      'Raises the Territorial Prelature of Madera (Mexico) to a diocese under the name '
+      + 'Cuauhtemoc-Madera, adding the municipalities of Cuauhtemoc, Riva Palacio and '
+      + 'Cusihuiriachi detached from the Archdiocese of Chihuahua, seated at Cuauhtemoc with a '
+      + 'concathedral at Madera, suffragan to Chihuahua: "...praelaturam territorialem '
+      + 'Materiensem attollimus ad gradum et dignitatem dioecesis Cuauhtemocensis-Materiensis '
+      + 'nomine, quae constabit integro territorio eiusdem hucusque praelaturae necnon '
+      + 'territoriis, ab archidioecesi Chihuahuensi seiunctis...".',
+  },
+  'john-paul-ii|bomadiensis|1995-12-15': {
+    argumentum:
+      'BOMADIENSIS* MISSIO SUI IURIS BOMADIENSIS AD VICARIATUS APOSTOLICI DIGNITATEM EVEHITUR',
+    note:
+      'Raises the Mission sui iuris of Bomadi (Nigeria), erected six years earlier and '
+      + 'entrusted to the St Patrick\'s Missionary Society, to an apostolic vicariate within the '
+      + 'province of Benin City: "...Missionem sui iuris Bomadiensem ad gradum evehimus '
+      + 'statumque Vicariatus Apostolici cui posthac erit nomen Bomadiensis, quem simul nimirum '
+      + 'provinciae ecclesiasticae Urbis Beninensis adiungimus...".',
+  },
+  'john-paul-ii|kanensis|1995-12-15': {
+    argumentum:
+      'KANENSIS* IN NIGERIA MISSIO SUI IURIS KANENSIS AD GRADUM ET DIGNITATEM VICARIATUS '
+      + 'APOSTOLICI ATTOLLITUR IMMUTATIS FINIBUS ET NOMINE',
+    note:
+      'Raises the Mission sui iuris of Kano (Nigeria), entrusted to the Society of African '
+      + 'Missions, to an apostolic vicariate, keeping its name and boundaries, within the '
+      + 'province of Kaduna: "...Missionem sui iuris Kanensem ad gradum et dignitatem Vicariatus '
+      + 'Apostolici attollimus immutatis finibus et nomine; quem quidem Provinciae '
+      + 'ecclesiasticae Kadunaënsi aggregatum facimus...".',
+  },
+  'john-paul-ii|premisliensis-varsaviensis|1996-06-01': {
+    argumentum:
+      'PREMISLIENSIS-VARSAVIENSIS ritus BYZANTINI UCRAINORUM* IN POLONIA EPARCHIA '
+      + 'PREMISLIENSIS RITUS BYZANTINI UCRAINORUM AD GRADUM ET DIGNITATEM ARCHIEPARCHIAE '
+      + 'METROPOLITANAE PREMISLIENSIS-VARSAVIENSIS RITUS BYZANTINI UCRAINORUM EVEHITUR ITEMQUE '
+      + 'PROVINCIA ECCLESIASTICA CONDITUR EIUSDEM NOMINIS AC RITUS QUIBUS MEMORATA NOVA '
+      + 'ARCHIEPARCHIA METROPOLITANA',
+    note:
+      'Raises the Ukrainian Byzantine Eparchy of Przemysl (Poland) to the metropolitan '
+      + 'Archeparchy of Przemysl-Warsaw and constitutes the province of that name with the '
+      + 'Eparchy of Wroclaw-Gdansk, erected the same day, as its suffragan: "...Eparchiam '
+      + 'Premisliensem ritus Byzantini Ucrainorum ad gradum et dignitatem Archieparchiae '
+      + 'Metropolitanae Premisliensis-Varsaviensis ritus Byzantini Ucrainorum evehimus itemque '
+      + 'Provinciam ecclesiasticam condimus eiusdem nominis ac ritus...". The elevation is what '
+      + 'the argumentum leads with, ITEMQUE introducing the province. The page prints "ritus" in '
+      + 'lower case inside the capitalised toponym, so the case-delimited reader stopped there '
+      + 'and the curation script abstained; the argumentum is quoted here by hand as the page '
+      + 'prints it.',
+  },
+  'john-paul-ii|coloratensis|1996-08-08': {
+    argumentum:
+      'COLORATENSIS* IN AEQUATORIANA NATIONE PRAELATURA TERRITORIALIS COLORATENSIS AD GRADUM '
+      + 'AC DIGNITATEM EVEHITUR SERVATIS IISDEM FINIBUS ET NOMINE',
+    note:
+      'Raises the Territorial Prelature of Los Colorados (Ecuador), erected in 1987, to a '
+      + 'diocese, keeping its name and boundaries, suffragan to Portoviejo: "...Praelaturam '
+      + 'territorialem Coloratensem ad gradum et dignitatem dioecesis attollimus, servatis '
+      + 'iisdem finibus, quibus nunc ipsa terminatur, et eodem Curiae nomine Coloratensi.".',
+  },
+  'john-paul-ii|mandevillensis|1997-11-21': {
+    argumentum:
+      'MANDEVILLENSIS* VICARIATUS APOSTOLICUS MANDEVILLENSIS AD GRADUM ET DIGNITATEM DIOECESIS '
+      + 'EVEHITUR',
+    note:
+      'Raises the Apostolic Vicariate of Mandeville (Jamaica), erected in 1990, to a diocese '
+      + 'of the same name, suffragan to Kingston: "...praelaudatum Vicariatum Apostolicum ad '
+      + 'dioecesim eodem nomine Mandevillensem appellandam evehimus, quam pariter Metropolitanae '
+      + 'Ecclesiae Regiopolitanae in Iamaica suffraganeam facimus...".',
+  },
+  'john-paul-ii|mercedensis-luianensis|1997-11-21': {
+    argumentum:
+      'MERCEDENSIS - LUIANENSIS* DIOECESIS MERCEDENSIS-LUIANENSIS AD GRADUM ARCHIDIOECESIS '
+      + 'EVEHITUR',
+    note:
+      'Raises the Diocese of Mercedes-Lujan (Argentina), home of the national shrine of Lujan, '
+      + 'to an archdiocese without suffragans, immediately subject to the Holy See: '
+      + '"...memoratam dioecesim Mercedensem-Luianensem ad gradum et dignitatem archidioecesis '
+      + 'evehimus, quin suffraganeis polleat dioecesibus, statuentes ut ea dehinc huic Sedi '
+      + 'Apostolicae immediate substet...".',
+  },
+  'john-paul-ii|neograndicasensis|2000-06-02': {
+    argumentum:
+      'NEOGRANDICASENSIS* IN MEXICO PRAELATURA TERRITORIALIS NEOGRANDICASENSIS AD GRADUM AC '
+      + 'DIGNITATEM DIOECESIS EVEHITUR IISDEM SERVATIS FINIBUS ET NOMINIBUS SIVE DE CURIA SIVE '
+      + 'IN LINGUA LOCI PROPRIA',
+    note:
+      'Raises the Territorial Prelature of Nuevo Casas Grandes (Mexico) to a diocese, keeping '
+      + 'its name and boundaries, suffragan to Chihuahua: "...praelaturam territorialem '
+      + 'Neograndicasensem ad gradum et dignitatem dioecesis attollimus, iisdem servatis '
+      + 'finibus, quibus nunc ipsa terminatur, et nominibus sive de Curia sive in lingua loci '
+      + 'propria.".',
+  },
+  'john-paul-ii|guapiensis|2001-01-23': {
+    argumentum:
+      'GUAPIENSIS* PRAEFECTURA APOSTOLICA GUAPIENSIS IN COLUMBIA AD GRADUM VICARIATUS '
+      + 'APOSTOLICI ATTOLLITUR IMMUTATIS FINIBUS ET NOMINE',
+    note:
+      'Raises the Apostolic Prefecture of Guapi (Colombia), entrusted to the Franciscans, to '
+      + 'an apostolic vicariate, keeping its name and boundaries: "...Praefecturam Apostolicam '
+      + 'Guapiensem ad gradum Vicariatus Apostolici attollimus, immutatis finibus et nomine, '
+      + 'atque Ordinis Fratrum Minorum assiduis curis committimus.".',
+  },
+  'john-paul-ii|chisinauensis|2001-10-27': {
+    argumentum:
+      'CHISINAUENSIS* ADMINISTRATIO APOSTOLICA MOLDOVENSIS AD GRADUM ATQUE DIGNITATEM '
+      + 'DIOECESIS EVEHITUR NOMINE CHISINAUENSIS NONCUPATAE ET APOSTOLICAE SEDI IMMEDIATE '
+      + 'SUBIECTAE',
+    note:
+      'Raises the Apostolic Administration of Moldova to a diocese named Chisinau, immediately '
+      + 'subject to the Holy See: "...Territorium Administrationis Apostolicae Moldovensis '
+      + 'evehimus ad gradum et dignitatem dioecesis nomine Chisinauensis, quam huic Apostolicae '
+      + 'Sedi immediate subiectam facimus.". The heading prints "NONCUPATAE", as quoted.',
+  },
+  'john-paul-ii|villaricensis|2002-01-05': {
+    argumentum:
+      'VILLARICENSIS* VICARIATUS APOSTOLICUS ARAUCANIENSIS AD GRADUM DIGNITATEMQUE DIOECESIS '
+      + 'EVEHITUR QUAE VILLARICENSIS APPELLABITUR',
+    note:
+      'Raises the Apostolic Vicariate of Araucania (Chile), less Easter Island which passes to '
+      + 'Valparaiso, to a diocese named Villarrica, suffragan to Concepcion: "...Prae laudatum '
+      + 'Vicariatum Apostolicum, praeter Insulam Paschalem dioecesi Vallis Paradisi adnexam, '
+      + 'Apostolica Nostra potestate ad gradum dignitatemque dioecesis evehimus appellandae '
+      + 'Villaricensis...".',
+  },
+  'john-paul-ii|coxinensis|2002-11-13': {
+    argumentum:
+      'COXINENSIS* IN BRASILIENSI NATIONE PRAELATURA TERRITORIALIS COXINENSIS AD GRADUM AC '
+      + 'DIGNITATEM DIOECESIS EVEHITUR SERVATIS IISDEM FINIBUS ET NOMINIBUS SIVE DE CURIA SIVE '
+      + 'LINGUAE LOCI PROPRIIS',
+    note:
+      'Raises the Territorial Prelature of Coxim (Brazil) to a diocese, keeping its name and '
+      + 'boundaries: "...praelaturam territorialem Coxinensem attollimus ad gradum et dignitatem '
+      + 'dioecesis, servatis iisdem finibus, quibus nunc ipsa terminatur, atque iisdem nominibus '
+      + 'de Curia et linguae loci propriis...".',
+  },
+  'john-paul-ii|tiranensis-dyrracena|2005-01-25': {
+    argumentum:
+      'TIRANENSIS-DYRRACENA* IN ALBANIA SEDES CATHEDRALIS TIRANENSIS-DYRRACENA AD '
+      + 'METROPOLITANAE GRADUM EVEHITUR NOVAQUE PROVINCIA ECCLESIASTICA CONSTITUITUR',
+    note:
+      'Renames the Archdiocese of Durres-Tirana as Tirana-Durres, raises it to a metropolitan '
+      + 'see and constitutes the new province with the Diocese of Rreshen and the Apostolic '
+      + 'Administration of Southern Albania as suffragans: "...eandem item ad gradum '
+      + 'dignitatemque metropolitanae Ecclesiae attollimus, omnia iura ac privilegia tribuentes '
+      + 'quae huiusmodi Ecclesiis iure communi debentur.". The elevation is what the argumentum '
+      + 'leads with; NOVAQUE introduces the province.',
+  },
 };
 
 /**
@@ -3737,6 +7808,71 @@ export const CIRCUMSCRIPTION_UNIONS: Record<string, CircumscriptionRow> = {
       + 'argumentum leads with (IUNGITUR) and the vehicle of the elevation, so this is a '
       + 'union; the curation script proposed an elevation because IUNGITUR is not among the '
       + 'union idioms.',
+  },
+  // The fifth curation instalment (Task 6), John Paul II: the five of the 390 candidates that
+  // unite existing sees (1983-09-13 through 1991-12-24). Three join sees aeque principaliter
+  // under one bishop ('Interamnensis-Narniensis et Amerina', 'Pampilonensis-Tudelensis',
+  // 'Terulensis-Albarraciensis'); 'Viterbiensis' merges four dioceses and an abbey into
+  // Viterbo by extinctive union, stated as IN UNAM DIOECESIM REDIGUNTUR, which no union idiom
+  // lists and is left for the controller's ruling; 'Telsensis' merges the Prelature of
+  // Klaipeda into Telsiai by extinctive union.
+  'john-paul-ii|interamnensis-narniensis-et-amerina|1983-09-13': {
+    argumentum:
+      'INTERAMNENSIS - NARNIENSIS ET AMERINA* DIOECESES INTERAMNENSIS NARNIENSIS ET AMERINA '
+      + 'AEQUE PRINCIPALITER CONIUNGUNTUR',
+    note:
+      'Unites the Dioceses of Terni, Narni and Amelia (Umbria) aeque principaliter under one '
+      + 'bishop, Terni and Narni having already been so joined and Amelia administered by their '
+      + 'bishop: "...sic inter se cathedrales ecclesias Interamnensem, Narniensem et Amerinam '
+      + 'aeque principaliter devincimus ut unus idemque sacrorum Antistes cuique communitati '
+      + 'praesit...".',
+  },
+  'john-paul-ii|pampilonensis-tudelensis|1984-08-11': {
+    argumentum:
+      'PAMPILONENSIS - TUDELENSIS* DIOECESIS TUDELENSIS AEQUE PRINCIPALITER CUM ECCLESIA '
+      + 'PAMPILONENSI CONIUNGITUR',
+    note:
+      'Unites the Diocese of Tudela aeque principaliter with the Archdiocese of Pamplona '
+      + '(Spain), one prelate being Archbishop of Pamplona and Bishop of Tudela: "...Dioecesim '
+      + 'Tudelensem cum archidioecesi Pampilonensi aeque principaliter coniungimus legeque '
+      + 'sancimus ut unus dehinc Archiepiscopus Metropolita sit Pampilonensis idemque Episcopus '
+      + 'Tudelensis...".',
+  },
+  'john-paul-ii|terulensis-albarraciensis|1984-08-11': {
+    argumentum:
+      'TERULENSIS - ALBARRACIENSIS* ECCLESIA ALBARRACIENSIS AEQUE PRINCIPALITER CUM ECCLESIA '
+      + 'TERULENSI CONIUNGITUR',
+    note:
+      'Unites the Diocese of Albarracin aeque principaliter with the Diocese of Teruel '
+      + '(Spain), one bishop for both: "...Ecclesiam Albarraciensem cum Ecclesia Terulensi aeque '
+      + 'principaliter coniungimus legeque sancimus ut unus dehinc idemque sit Episcopus '
+      + 'Terulensis et Albarraciensis...".',
+  },
+  'john-paul-ii|viterbiensis|1986-03-27': {
+    argumentum:
+      'VITERBIENSIS* DIOECESES VITERBIENSIS, AQUIPENDIENSIS, BALNEOREGIENSIS,FALISCODUNENSIS, '
+      + 'TUSCANENSIS, ET ABBATIA S. MARTINI AD MONTEM CIMINUM, IN UNAM DUMTAXAT DIOECESIM '
+      + 'REDIGUNTUR, «VITERBIENSIS» COGNOMINANDAM',
+    note:
+      'Unites the Dioceses of Acquapendente, Bagnoregio, Montefiascone and Tuscania and the '
+      + 'Abbey of San Martino al Monte Cimino to the Diocese of Viterbo by extinctive union, the '
+      + 'enlarged see keeping the name Viterbo and the suppressed cathedrals becoming '
+      + 'concathedrals: "...dioecesi Viterbiensi perpetuo unimus, unione, ut dicunt, exstinctiva '
+      + '; quae proinde adquiret atque comprehendet in suo territorio uniuscuiusque harum '
+      + 'Ecclesiarum territorium. Sic ampliata dioecesis Viterbiensis vocabitur.". A union of '
+      + 'existing sees; the curation script abstained because IN UNAM DUMTAXAT DIOECESIM '
+      + 'REDIGUNTUR matches no idiom, and the heading prints "BALNEOREGIENSIS,FALISCODUNENSIS" '
+      + 'without a space, as quoted.',
+  },
+  'john-paul-ii|telsensis|1991-12-24': {
+    argumentum:
+      'TELSENSIS * PRAELATURA KLAIPEDENSIS UNIONE EXSTINCTIVA DIOECESI TELSENSI CONIUNGITUR',
+    note:
+      'Unites the Territorial Prelature of Klaipeda to the Diocese of Telsiai (Lithuania) by '
+      + 'extinctive union, the enlarged see keeping the name Telsiai: "...ut Praelatura '
+      + 'territorialis Klaipedensis coniungatur dioecesi Telsensi unione quam appellant '
+      + 'exstinctivam, quae idcirco accipiet in se comprehendetque fines ac loca prioris '
+      + 'Praelaturae Klaipedensis.".',
   },
 };
 
@@ -4074,5 +8210,144 @@ export const CANDIDATE_ADJUDICATIONS: Record<string, AdjudicationRow> = {
       + 'Metropolitanae Vrhbosnensis seu Serajensis constituimus...". No see is erected or '
       + 'raised; the CONSTITUITUR of the argumentum makes a suffragan, which is why the '
       + 'curation script proposed an erection.',
+  },
+  // The fifth curation instalment (Task 6), John Paul II: the nine of the 390 candidates that
+  // are neither an erection, an elevation nor a union (1980-07-07 through 1991-12-24). Three
+  // are not circumscription acts at all: a cathedral chapter restored at Ostia, and a
+  // collegiate chapter dissolved for a cathedral chapter at Jerez and a concathedral chapter
+  // at Rovigo. Six are circumscription acts this registry mints no term for: the Eparchy of
+  // Hajdudorog's jurisdiction extended over all Byzantine-rite faithful in Hungary, the
+  // province of Bari recognised and Trani's suppressed, the title of Fatima added to Leiria,
+  // Pinsk's boundaries redrawn and its metropolitan changed, and the Dioceses of Kaisiadorys
+  // and Panevezys moved from the province of Kaunas to Vilnius, decreed twice on one day.
+  'john-paul-ii|haidudoroghensis|1980-07-07': {
+    act: 'the jurisdiction of an eparchy extended to every Byzantine-rite faithful in Hungary',
+    argumentum:
+      'HAIDUDOROGHENSIS* IN IURISDICTIONEM EPARCHIAE HAIDUDOROGHENSIS OMNES PERPETUO ATQUE '
+      + 'STABILITER REDIGUNTUR CHRISTIFIDELIBUS RITUS BYZANTINI IN UNIVERSA HUNGARIA COMMORANTES',
+    note:
+      'A change of jurisdiction, for which this registry mints no term: places all faithful of '
+      + 'the Byzantine rite living anywhere in Hungary permanently under the Eparchy of '
+      + 'Hajdudorog (until now only ad tempus, since 1968), the rights of the Apostolic '
+      + 'Exarchate of Miskolc untouched: "...Christifideles ipsius Byzantini ritus in universa '
+      + 'Hungaria degentes in ius et iurisdictionem Eparchiae Haidudoroghensis perpetuo atque '
+      + 'stabiliter omnes redigimus, firmis tamen iuribus Exarchatus Apostolici Miskolcensis '
+      + 'propriis.". No see is erected, raised or united; the curation script abstained because '
+      + 'REDIGUNTUR matches no idiom.',
+  },
+  'john-paul-ii|barensis|1980-10-20': {
+    act: 'an ecclesiastical province reorganised and another suppressed',
+    argumentum:
+      'BARENSIS* NOVA PROVINCIAE ECCLESIASTICAE BARENSIS RECOGNITIO',
+    note:
+      'A reorganisation of provinces, for which this registry mints no term: aggregates to the '
+      + 'province of Bari every circumscription within the civil province of Bari until now '
+      + 'immediately subject to the Holy See, and suppresses the province of Trani, so that Bari '
+      + 'has as suffragans Conversano, Ruvo and Bitonto, Trani and Barletta (keeping their '
+      + 'archiepiscopal dignity), Bisceglie, Andria, Gravina, Molfetta, Giovinazzo, Terlizzi, '
+      + 'Monopoli and the Prelatures of Altamura and Acquaviva: "...Provinciae ecclesiasticae '
+      + 'Barensi aggregamus, cuius archiepiscopo Metropolitae ad iuris normam subicientur; '
+      + 'Provinciam vero Tranensem exstinguimus.". No see is erected or raised; the curation '
+      + 'script abstained because RECOGNITIO matches no idiom.',
+  },
+  'john-paul-ii|ostiensis|1984-02-20': {
+    act: 'a cathedral chapter of canons restored',
+    argumentum:
+      'OSTIENSIS* IN OSTIENSI DIOECESI CATHEDRALE COLLEGIUM RESTITUITUR',
+    note:
+      'Not a circumscription act. Restores the cathedral chapter of Ostia, which had lapsed, '
+      + 'with an archpriest, eleven canons and six mansionaries, on the petition of Cardinal '
+      + 'Poletti as apostolic administrator after the restoration of the church of Sant\'Aurea: '
+      + '"...Cathedrale collegium Canonicorum Ostiense qui vario casu perierat, in pristinum '
+      + 'restituimus ; quod Archipresbytero constabit atque undecim Canonicis.". The diocese '
+      + 'named in the heading keeps its rank and boundaries; the curation script abstained '
+      + 'because RESTITUITUR matches no idiom.',
+  },
+  'john-paul-ii|leiriensis-fatimensis|1984-05-13': {
+    act: 'a second title added to a diocese',
+    argumentum:
+      'LEIRIENSIS - FATIMENSIS* PRIMAEVO TITULO DIOECESIS LEIRIENSIS ADDITUR TITULUS FATIMENSIS',
+    note:
+      'A change of title, for which this registry mints no term: adds the title of Fatima in '
+      + 'perpetuity to the Diocese of Leiria (Portugal), henceforth Leiria-Fatima, at the '
+      + 'bishop\'s petition on account of the Marian shrine: "...placet veteri titulo Leiriensis '
+      + 'dioecesis etiam « Fatimensem » apponi, sane in perpetuum, ut posthac ea Sedes '
+      + 'Leiriensis-Fatimensis cognominetur.". The see keeps its rank and boundaries; the '
+      + 'curation script abstained because ADDITUR matches no idiom.',
+  },
+  'john-paul-ii|assidonensis-jerezensis|1984-05-26': {
+    act: 'a collegiate chapter dissolved and a cathedral chapter erected',
+    argumentum:
+      'ASSIDONENSIS - JEREZENSIS* IN CATHEDRALI DIOECESIS ASSIDONENSIS-JEREZENSIS TEMPLO, QUOD '
+      + 'HONORI SANCTISSIMI SALVATORIS DICATUM IN URBE «JEREZ DE LA FRONTERA» EXSTAT, COLLEGIALE '
+      + 'DISSOLVITUR ET CATHEDRALE INSTITUITUR CAPITULUM',
+    note:
+      'Not a circumscription act. Dissolves the collegiate chapter of the church of the Holy '
+      + 'Saviour in Jerez de la Frontera, cathedral of the Diocese of Asidonia-Jerez erected in '
+      + '1980, and erects in its place a cathedral chapter of twelve canons: "...Capitulum '
+      + 'Collegiale memorati templi dissolvimus simul atque Capitulum Cathedrale ibidem condimus '
+      + 'duodecim ex Canonicis constans.". The diocese named in the heading keeps its rank and '
+      + 'boundaries; the curation script abstained because DISSOLVITUR and INSTITUITUR match no '
+      + 'idiom.',
+  },
+  'john-paul-ii|adriensis-rhodigiensis|1987-05-20': {
+    act: 'a collegiate chapter dissolved and a concathedral chapter erected',
+    argumentum:
+      'ADRIENSIS-RHODIGIENSIS* RHODIGII, IN BASILICA SANCTI STEPHANI, CAPITULUM CONCATHEDRALE '
+      + 'DIOECESIS ADRIENSIS-RHODIGIENSIS APOSTOLICA AUCTORITATE CONDITUR',
+    note:
+      'Not a circumscription act. Dissolves the collegiate chapter of the basilica of Santo '
+      + 'Stefano in Rovigo, lately raised to concathedral of the Diocese of Adria-Rovigo, and '
+      + 'erects in its place a concathedral chapter under canon 504: "...Capitulum collegiale '
+      + 'commemoratae Basilicae Sancti Stephani in urbe Rhodigio dissolvimus iure atque ad '
+      + 'normam canonis quingentesimi quarti Codicis Iuris Canonici inibi legitime condimus '
+      + 'Capitulum concathedrale dioecesis Adriensis-Rhodigiensis.". The CONDITUR of the '
+      + 'argumentum erects a chapter, not a circumscription, which is why the curation script '
+      + 'proposed an erection.',
+  },
+  'john-paul-ii|pinskensis|1990-04-13': {
+    act:
+      'the boundaries of a diocese redefined and the see made suffragan of a new metropolitan',
+    argumentum:
+      'PINSKENSIS* TERRITORIUM APTIUS DEFINITUR SIMULQUE DIOECESIS PINSKENSIS SUFFRAGANEA '
+      + 'ARCHIDIOECESIS MINSCENSIS-MOHILOVIENSIS DECLARATUR',
+    note:
+      'A boundary revision and a change of metropolitan, for which this registry mints no '
+      + 'term: redraws the Latin Diocese of Pinsk (Byelorussia), whose territory the post-war '
+      + 'frontier had cut, to coincide with the oblasts of Brest and Gomel, the seat staying at '
+      + 'Pinsk, and makes it suffragan to the newly erected Minsk-Mohilev: "...fines dioecesis '
+      + 'Pinskensis Latinorum ita immutamus, ut iidem cum limitibus civilium regionum seu « '
+      + 'Oblasti » Brest et Gomel conveniant, sede tamen manente in urbe vulgo Pinsk.". No see '
+      + 'is erected, raised or united; the curation script abstained because DEFINITUR and '
+      + 'DECLARATUR match no idiom.',
+  },
+  'john-paul-ii|kaunensis-et-aliarum|1991-12-24': {
+    act: 'two suffragan dioceses transferred from one ecclesiastical province to another',
+    argumentum:
+      'KAUNENSIS ET ALIARUM* DIOECESES KAIŠIADORENSIS AC PANEVEŽENSIS AB ECCLESIASTICA '
+      + 'PROVINCIA KAUNENSI SEIUNGUNTUR ET AD VILNENSEM AGGREGANTUR',
+    note:
+      'A reassignment of suffragans, for which this registry mints no term: withdraws the '
+      + 'Dioceses of Kaisiadorys and Panevezys from the province of Kaunas and attaches them to '
+      + 'the province of Vilnius, leaving Kaunas with Telsiai and Vilkaviskis: "...Ecclesias '
+      + 'Kaišiadorensem et Panevėžensem a Kaunensi Provincia ecclesiastica distrahimus '
+      + 'Provinciaeque Vilnensi adiungimus, ita ut Provincia Kaunensis ex cognomini '
+      + 'archidioecesi Ecclesiisque Telsensi et Vilkaviskensi iam constet.". No see is erected, '
+      + 'raised or united; the curation script abstained because SEIUNGUNTUR and AGGREGANTUR '
+      + 'match no idiom. The same transfer is decreed from the Vilnius side by \'Vilnensis\' of '
+      + 'the same day.',
+  },
+  'john-paul-ii|vilnensis-et-aliarum|1991-12-24': {
+    act: 'an ecclesiastical province enlarged by two dioceses transferred from another',
+    argumentum:
+      'VILNENSIS* ECCLESIASTICA PROVINCIA VILNENSIS COMPARATUR ET AMPLIFICATUR',
+    note:
+      'A reassignment of suffragans, for which this registry mints no term: attaches the '
+      + 'Dioceses of Kaisiadorys and Panevezys, withdrawn from the province of Kaunas, to the '
+      + 'province of Vilnius, which henceforth consists of the archdiocese and these two: '
+      + '"...Sedes Kaišiadorensis aeque ac Panevėžensis coniungantur posthac ad provinciam '
+      + 'ecclesiasticam Vilnensem.". The companion of \'Kaunensis et aliarum\' of the same day; '
+      + 'no see is erected, raised or united, and the curation script abstained because '
+      + 'COMPARATUR and AMPLIFICATUR match no idiom.',
   },
 };

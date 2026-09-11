@@ -55,9 +55,9 @@ A keyword is a descriptive subject tag and carries no claim about authority.
 
 | Keyword | Documents |
 | --- | --- |
-| [`circumscription-elevation`](documents/by-keyword/circumscription-elevation.md) | 80 |
-| [`circumscription-erection`](documents/by-keyword/circumscription-erection.md) | 312 |
-| [`circumscription-union`](documents/by-keyword/circumscription-union.md) | 4 |
+| [`circumscription-elevation`](documents/by-keyword/circumscription-elevation.md) | 139 |
+| [`circumscription-erection`](documents/by-keyword/circumscription-erection.md) | 629 |
+| [`circumscription-union`](documents/by-keyword/circumscription-union.md) | 9 |
 
 ## Coverage
 
@@ -73,9 +73,9 @@ This registry covers the **formal document shelves** of vatican.va. Deliberately
 - **Councils before 1870.** vatican.va's council archive publishes only Vatican I and Vatican II;
   the other nineteen ecumenical councils have no source there, so a registry holding two councils
   is not a registry of the councils.
-- **Keyword curation is incomplete.** 390 apostolic constitutions have not yet been confirmed
-  as circumscription erections. Their headings print a bare Latin toponym with no marker, so each
-  is confirmed by hand against the document's own text.
+- **Circumscription curation is complete.** Every candidate has been adjudicated — each apostolic constitution whose heading
+  prints a bare Latin toponym was read against its own text and recorded as an erection, an
+  elevation, a union, or an act of another kind named in the adjudication table.
 
 The Shelves harvested column above is generated from the harvest configuration itself, so it cannot
 drift from what was actually read.
