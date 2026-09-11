@@ -1,25 +1,163 @@
 /**
- * Circumscription erections whose heading does not say so, confirmed by hand (spec §4.5).
+ * The circumscription tables: apostolic constitutions whose heading is a bare Latin toponym,
+ * read by hand and filed by what each one does.
  *
- * Paul VI, John Paul II, Benedict XVI -- and Pius XII -- file these under a bare Latin
- * toponym -- 'Avkaënsis', 'Usbekistaniae', 'Gambomensis' -- with no textual marker at all,
- * and the documents one would most want separated out ('Vacantis Apostolicae Sedis',
- * 'Provida Mater Ecclesia', 'Sacramentum Ordinis', 'Episcopali Consecrationis') sit
- * unmarked on the same shelf. There is therefore no rule that can decide this from the
- * index page: `isErectionCandidate` in keywords.ts only *flags* them for a human to confirm
- * into this table with its evidence -- it never writes a keyword itself.
+ * Pius XII, John XXIII, Paul VI, John Paul II and Benedict XVI (and Benedict XV, for the
+ * unions) publish the founding of a diocese, the raising of a vicariate or the joining of two
+ * sees under nothing but the toponym -- 'Avkaënsis', 'Usbekistaniae', 'Gambomensis' -- with no
+ * textual marker of the act, and the documents one would most want separated out ('Vacantis
+ * Apostolicae Sedis', 'Provida Mater Ecclesia', 'Sacramentum Ordinis') sit unmarked on the
+ * same shelf. No rule can decide this from the index page: `isErectionCandidate` in
+ * keywords.ts only *flags* such a page for a human, and every row in the four tables below is
+ * a page that was read against its own Latin text on vatican.va (spec §4.5). The tables:
  *
- * Populated by hand, one entry per confirmed erection, each carrying the evidence (the
- * vatican.va document text) that justifies the tag -- never merely because the title has
- * toponym shape, and never a secondary source in place of the vatican.va text (review
- * finding, 2026-09-08: the exception this comment used to carry contradicted the project's
- * cardinal evidence rule and describes nothing any of the 19 entries below actually does --
- * every one of them cites vatican.va Latin text).
+ * - `CIRCUMSCRIPTION_ERECTIONS`  -- a new circumscription is founded (`circumscription-erection`);
+ * - `CIRCUMSCRIPTION_ELEVATIONS` -- an existing one is raised in rank (`circumscription-elevation`);
+ * - `CIRCUMSCRIPTION_UNIONS`     -- existing ones are merged or joined (`circumscription-union`);
+ * - `CANDIDATE_ADJUDICATIONS`    -- read and found to be none of these; no term is minted.
  *
- * Key: `${pageSlug}|${slugify(incipit ?? title)}|${isoDate}`.
+ * Key, in every table: `${pageSlug}|${slugify(incipit ?? title)}|${isoDate}` -- the pontiff's
+ * vatican.va page slug, the slug of the heading as harvested, and the document's date. A key
+ * sits in exactly one table, must match a harvested record, and is how `isErectionCandidate`
+ * and `isUnconfirmedCandidate` in keywords.ts tell a page that has been read from one that
+ * still awaits reading.
+ *
+ * Filing rules
+ *
+ * 1. Every row quotes the document's argumentum -- the all-capitals line printed under the
+ *    toponym, the document's own statement of its act -- verbatim, page misprints included
+ *    and named in the note. Sentence-case argumenta are quoted as printed; the audit is
+ *    case-insensitive. Body quotations in notes are likewise as printed; a few earlier ones
+ *    normalised OCR noise (a stray space, a swapped letter) without saying so.
+ * 2. Lead act: when an argumentum states two acts, the one it leads with is the principal
+ *    act and decides the table; PRAETEREA, INSUPER, ITEM and ATQUE introduce the secondary.
+ *    Union before elevation before erection applies only where one act is the vehicle of
+ *    the other -- a union whose merged see 'constituitur', boundary changes 'ex iis' from
+ *    which new dioceses are constituted.
+ * 3. Argumentum governs: where the argumentum and the body describe the act differently,
+ *    the argumentum decides the table and the note records the body's operative clause.
+ * 4. The idiom regexes below audit the tables; they never classify. Each alternation was
+ *    added only after measuring its hits over all four tables, and the regex doc comment
+ *    records why.
+ * 5. A page whose argumentum omits the act ('Sreveportuensis') is exempted from the idiom
+ *    audit by key in `ARGUMENTUM_AUDIT_EXEMPTIONS`; a stale key fails the build.
+ *
+ * Order of this file: the two row interfaces; the three idiom regexes; the audit exemptions;
+ * then the four tables -- erections, elevations, unions, adjudications -- each grouped by
+ * pontificate in the order its instalments were curated.
+ */
+
+export interface CircumscriptionRow {
+  /** The document's own argumentum, verbatim: the act in its own words. */
+  argumentum: string;
+  /** What the act does, and anything the argumentum alone does not settle. */
+  note: string;
+}
+
+export interface AdjudicationRow {
+  /** What the document actually does, in plain words. Free text, not a controlled term. */
+  act: string;
+  argumentum: string;
+  note: string;
+}
+
+/**
+ * The Latin each table's argumentum must contain. An apostolic constitution states its own
+ * act in the all-capitals line printed under its toponym, and these are the verbs it uses.
+ * Used only by the tests, to audit that a row sits in the right table -- never to classify:
+ * classification is done by reading, because an erection decree also contains elevation and
+ * division clauses and cannot be told apart by verb alone (spec §2.2).
+ *
+ * `FORMATUR`/`FORMANTUR` was added because two of the 19 hand-confirmed Pius XII erections
+ * ('Corumbensis-Registrensis', 'Palmensis-Lagensis' -- each erecting two dioceses at once)
+ * state the act with this passive idiom rather than any verb already listed here; the
+ * pattern also matches `EFFORMATUR`/`EFFORMANTUR` as a substring, the form the second of
+ * those two actually uses (spec §2.3).
+ *
+ * `IN ORDINEM (?:ARCHI)?DIOECESIUM` is the "placed in the rank of (arch)dioceses" idiom
+ * John XXIII's 'Changanacherrensis et aliarum' uses for an elevation ('IN ORDINEM
+ * ARCHIDIOECESIUM REDIGITUR'), stated with no verb the elevations pattern already listed.
+ *
+ * The audit is case-insensitive (filing rule 1) because nine Benedict XVI pages print the
+ * argumentum in sentence case in its usual place under the toponym ('In Indonesia nova
+ * conditur dioecesis Maumerensis appellanda.'), and the quote stays verbatim.
+ *
+ * `COOSTITUITUR` and `CONSTI\. TUITUR` are two page misprints of CONSTITUITUR -- Paul VI's
+ * 'Tulcanensis' of 1965 and 'Balasorensis' of 1968 -- kept verbatim in their rows (filing
+ * rule 1), so the audit learns the misprint rather than the row being corrected.
+ *
+ * `DIOECESIUM ORDINEM`, `IN FORMAM DIOECESIS` and `AD DIOECESIS DIGNITATEM` are the word
+ * orders four Paul VI elevations use ('Hamiltonensis' and 'Banarensis' IN/AD
+ * DIOECESIUM ORDINEM REDIGITUR, 'Sanensis' IN FORMAM DIOECESIS REDIGITUR, 'Machalensis' AD
+ * DIOECESIS DIGNITATEM TOLLITUR); each hits only elevation rows across all four tables,
+ * whereas bare TOLLITUR was rejected because it also hits two province erections
+ * ('Tananarivensis', 'Tunquensis').
+ *
+ * `\bIUNGITUR` is the verb Paul VI's 'Spalatensis-Macarscensis' union leads with; it also
+ * appears in three John XXIII title-change adjudications ('APPELLATIO IUNGITUR'), which
+ * this regex does not audit. The word boundary was added because bare IUNGITUR also
+ * matched inside SEIUNGITUR -- a false hit on John Paul II's
+ * 'Mobilensis' province erection and Paul VI's 'Nuakchottensis' adjudication.
+ *
+ * `CONSTITUTITUR`, `CONTITUITUR` and `CONSTITUIITUR` are three more page misprints of
+ * CONSTITUITUR -- John Paul II's 'Shimogaënsis' of 1988, 'Asansolensis' of 1997 and
+ * 'Samarindaënsis' of 2003 -- kept verbatim in their rows (filing rule 1), each hitting
+ * only its own row across all four tables.
+ *
+ * `INSTITUITUR`, `NOVA ECCLESIA\b`, `NOVA PROVINCIA ECCLESIASTICA` and `ARCHIEPISCOPATUS
+ * MAIOR` are the wordings of four John Paul II erections stated with another
+ * verb or with no verb at all ('Bontocensis-Lavagensis' NOVUS INSTITUITUR VICARIATUS,
+ * 'Tunduruensis-Masasiensis' NOVA ECCLESIA, 'Overriensis' NOVA PROVINCIA ECCLESIASTICA,
+ * 'Ernakulamensis-Angamaliensis' ARCHIEPISCOPATUS MAIOR); every hit measured across all
+ * four tables is an erection row (NOVA ECCLESIA five, NOVA PROVINCIA ECCLESIASTICA
+ * forty-five, ARCHIEPISCOPATUS MAIOR also Benedict XVI's 'Fagarasiensis', filed as an
+ * erection under filing rule 3), the one exception being INSTITUITUR in the Jerez chapter
+ * adjudication, which this regex does not audit.
+ *
+ * `ATTOLLUNTUR`, `FORMA DIOECESIS IMPONITUR` and `AD CANONICUM GRADUM` are the word orders
+ * three John Paul II elevations use ('Guiratingensis et aliarum' AD DIOECESIUM
+ * ATTOLLUNTUR GRADUM, 'Iammuensis-Srinagarensis' IURIDICIALIS FORMA DIOECESIS IMPONITUR,
+ * 'Izabalensis' AD CANONICUM GRADUM VICARIATUS APOSTOLICI TOLLITUR); each hits only its own
+ * row, and bare TOLLITUR stays rejected.
+ *
+ * `IN UNAM .{0,20}DIOECESIM REDIGUNTUR` is how John Paul II's 'Viterbiensis'
+ * states the extinctive union of five sees into one; it hits only that row.
+ */
+export const ERECTION_IDIOMS =
+  /CONDITUR|CONDUNTUR|ERIGITUR|ERIGUNTUR|CONSTITUITUR|CONSTITUUNTUR|EXCITATUR|EFFICITUR|CREATUR|NOVA FIT|FORMAM REDIG|FORMATUR|FORMANTUR|COOSTITUITUR|CONSTI\. TUITUR|CONSTITUTITUR|CONTITUITUR|CONSTITUIITUR|INSTITUITUR|NOVA ECCLESIA\b|NOVA PROVINCIA ECCLESIASTICA|ARCHIEPISCOPATUS MAIOR/i;
+export const ELEVATION_IDIOMS =
+  /EVEHITUR|EVEHUNTUR|ELEVATUR|PERDUCITUR|ATTOLLITUR|ATTOLITUR|EXTOLLITUR|AD (?:GRADUM|DIGNITATEM|EPARCHIAE|APOSTOLICI)|IN ORDINEM (?:ARCHI)?DIOECESIUM|DIOECESIUM ORDINEM|IN FORMAM DIOECESIS|AD DIOECESIS DIGNITATEM|ATTOLLUNTUR|FORMA DIOECESIS IMPONITUR|AD CANONICUM GRADUM/i;
+export const UNION_IDIOMS =
+  /DE UNIONE|UNIONE|UNIUNTUR|UNITUR|CONIUNG|AEQUE PRINCIPALITER|DISMEMBRATIONE|\bIUNGITUR|IN UNAM .{0,20}DIOECESIM REDIGUNTUR/i;
+
+/**
+ * Rows the idiom audit may not hold to a regex, because the page itself prints no act. One
+ * key (filing rule 5): John Paul II's 'Sreveportuensis' of 1986-06-16, whose vatican.va page
+ * drops the line of its heading that names the act, printing only 'NONNULLIS DISTRACTIS
+ * TERRITORIIS A DIOECESI' and 'ALEXANDRINA-SREVEPORTUENSIS APPELLANDA' around the gap (the
+ * cached HTML confirms it). The row keeps the argumentum verbatim as printed, and its note
+ * quotes the body's erecting clause ('...novam dioecesim Sreveportuensem appellandam
+ * condimus...'). The audit still requires the argumentum to be non-empty, and a key listed
+ * here must exist in one of the four tables, so a stale exemption fails loudly.
+ */
+export const ARGUMENTUM_AUDIT_EXEMPTIONS: ReadonlySet<string> = new Set([
+  'john-paul-ii|sreveportuensis|1986-06-16',
+]);
+
+/**
+ * Circumscription erections whose heading does not say so, confirmed by hand (spec §4.5):
+ * Pius XII, John XXIII, Paul VI, John Paul II and Benedict XVI, one row per document read.
+ *
+ * Populated by hand, each row carrying the evidence (the vatican.va document text) that
+ * justifies the tag -- never merely because the title has toponym shape, and never a
+ * secondary source in place of the vatican.va text (review finding, 2026-09-08: the
+ * exception this comment used to carry contradicted the project's cardinal evidence rule
+ * and described nothing any row of this table actually does -- every one of them cites
+ * vatican.va Latin text). `isErectionCandidate` in keywords.ts never writes a keyword
+ * itself; a document earns `circumscription-erection` only by a row here.
  */
 export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
-  // Task 20's first curation instalment: the entire Pius XII apostolic-constitutions
+  // The first curation instalment: the entire Pius XII apostolic-constitutions
   // candidate queue (29 candidates, 1957-04-10 through 1958-05-15) read by hand against
   // its own Latin text on vatican.va. 19 confirmed below as erections. The other 10 are
   // not erections and now sit in the tables below: nine are elevations of an existing
@@ -220,7 +358,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'Huaraz and erects the new Prelature Nullius of Huari: "...quibus ex terris novam '
       + 'praelaturam «nullius» efficimus Huariensem appellandam...".',
   },
-  // The second curation instalment (Task 3): the entire John XXIII apostolic-constitutions
+  // The second curation instalment: the entire John XXIII apostolic-constitutions
   // candidate queue (27 candidates, 1958-11-07 through 1959-07-16), each read against its
   // own Latin text on vatican.va. 15 confirmed below as erections; the other 12 sit in the
   // tables below -- 5 elevations, 0 unions, and 7 adjudications (three chapters of canons
@@ -391,7 +529,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'the argumentum and is omitted here. The heading spells the see "Bukavuensis" where '
       + 'the harvested index (and so the key) has "Bugavuensis".',
   },
-  // The third curation instalment (Task 4): the entire Benedict XVI apostolic-constitutions
+  // The third curation instalment: the entire Benedict XVI apostolic-constitutions
   // candidate queue (90 candidates, 2005-05-24 through 2013-02-22), each read against its
   // own Latin text on vatican.va. 77 confirmed below as erections; the other 13 sit in the
   // tables below -- 11 elevations, 0 unions, and 2 adjudications (a restored see and a
@@ -402,7 +540,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
   // the see at its head in the same breath: the province is what each argumentum leads
   // with, so each is an erection under the John XXIII rule above. Where the argumentum and
   // the body describe the act differently, the argumentum governs the table and the note
-  // records the body's operative clause (Ruling 9): so 'Fagarasiensis' (ARCHIEPISCOPATUS
+  // records the body's operative clause (filing rule 3): so 'Fagarasiensis' (ARCHIEPISCOPATUS
   // MAIOR ... CONSTITUITUR, the body raising the existing metropolitan see),
   // 'Azerbaigianiensis' (CONDITUR, the body raising a mission sui iuris) and 'Cametanensis'
   // (NOVA CONDITUR DIOECESIS, the body raising a territorial prelature) are erections. The
@@ -512,7 +650,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'Ecclesiam Archiepiscopalem Maiorem titulo Fagarasiensem et Albae Iuliensis Romenorum '
       + 'erigimus, quae iisdem finibus circumscribitur, quibus antiqua Ecclesia '
       + 'Metropolitana...". The argumentum names the act constituted, and governs the table '
-      + '(Ruling 9). The heading names the see in full where the harvested index (and so the '
+      + '(filing rule 3). The heading names the see in full where the harvested index (and so the '
       + 'key) has only "Fagarasiensis".',
   },
   'benedict-xvi|maumerensis|2005-12-14': {
@@ -1007,7 +1145,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'states the act as raising the existing Mission sui iuris of Baku to that rank: '
       + '"...Missionem « sui iuris » Bacuensem ad gradum Praefecturae Apostolicae '
       + 'Azerbaigianiensis appellandae elevamus...". The argumentum names a prefecture '
-      + 'founded (CONDITUR), and governs the table (Ruling 9).',
+      + 'founded (CONDITUR), and governs the table (filing rule 3).',
   },
   'benedict-xvi|kabvensis|2011-10-29': {
     argumentum: 'KABVENSIS* IN ZAMBIA NOVA CONDITUR DIOECESIS KABVENSIS',
@@ -1110,7 +1248,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'Cametanensem evehimus ad gradum dioecesis, eodem servato nomine ac territorio.", the '
       + 'words the Huariensis and Obidensis constitutions use under an EVEHITUR argumentum. '
       + 'The argumentum names a diocese founded (NOVA CONDITUR DIOECESIS), and governs the '
-      + 'table (Ruling 9).',
+      + 'table (filing rule 3).',
   },
   'benedict-xvi|gambomensis|2013-02-22': {
     argumentum:
@@ -1121,7 +1259,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'Diocese of Gamboma, suffragan to Brazzaville: "...e quo novam dioecesim constituimus, '
       + 'quae Gambomensis appellabitur a nomine urbis Gamboma.".',
   },
-  // The fourth curation instalment (Task 5): the entire Paul VI apostolic-constitutions
+  // The fourth curation instalment: the entire Paul VI apostolic-constitutions
   // candidate queue (222 candidates, 1963-06-25 through 1977-11-10), each read against its
   // own Latin text on vatican.va. 161 confirmed below as erections; the other 61 sit in the
   // tables below -- 48 elevations, 2 unions, and 11 adjudications (five chapters of canons,
@@ -1143,7 +1281,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
   // here because the changes are the vehicle of the erections (EX IIS...CONSTITUUNTUR), on
   // the reading the Pius XII 'Catamarcensis-Saltensis' union row records, and its note says
   // so. 'Fluminensis-Seniensis' names only a province constituted while its body unites two
-  // sees with Rijeka and raises the result: the argumentum governs the table (Ruling 9).
+  // sees with Rijeka and raises the result: the argumentum governs the table (filing rule 3).
   // 'Mahengensis' is the one page whose all-capitals heading is not its own -- vatican.va
   // pasted the Barcelona elevation of a month earlier over a body that erects Mahenge -- so
   // its argumentum is quoted by hand from the sentence-case line the page prints as its
@@ -1151,7 +1289,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
   // as extracted, the page's own misprints kept and named in the note ('DOVA DIOECESIS',
   // 'PIUSBURGENSI', 'ARCHIDIOECCSI'...); two of them break the verb itself ('Tulcanensis'
   // COOSTITUITUR, 'Balasorensis' CONSTI. TUITUR), which the audit regex now lists as
-  // misprints (Ruling 10) rather than the quote being repaired. The curation script
+  // misprints (filing rule 1) rather than the quote being repaired. The curation script
   // abstained on
   // thirteen: two print a lower-case l inside the capitalised toponym ('SHlKOKUENSIS',
   // 'CZĘSTOCHOVlENSlS'), so the case-delimited reader stopped at its first word and each is
@@ -2522,7 +2660,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'unione exstinctiva et dioecesim Seniensem unione aeque principali cum dioecesi '
       + 'Fluminensi coniungimus...eamque ad gradum metropolitanae archiepiscopalis Ecclesiae '
       + 'attollimus...". The argumentum names only the province constituted and governs the '
-      + 'table (Ruling 9); the union and elevation are the body of the act.',
+      + 'table (filing rule 3); the union and elevation are the body of the act.',
   },
   'paul-vi|cafayatensis|1969-09-08': {
     argumentum:
@@ -2866,7 +3004,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'suffragan to Onitsha: "...iisque novam dioecesim condimus, quae ab urbe principe '
       + 'regionis, Avhaënsis cognominabitur...".',
   },
-  // The fifth curation instalment (Task 6), and the last: the entire John Paul II
+  // The fifth curation instalment, and the last: the entire John Paul II
   // apostolic-constitutions candidate queue (390 candidates, 1978-10-28 through 2005-04-01),
   // each read against its own Latin text on vatican.va. 317 confirmed below as erections; the
   // other 73 sit in the tables below -- 59 elevations, 5 unions, and 9 adjudications (two
@@ -2886,7 +3024,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
   // administration or province CONDITUR or CONSTITUITUR while their body raises an existing
   // circumscription ('Monroviensis', 'Kisumuensis', 'Berolinensis', 'Gorlicensis',
   // 'Bonaventurensis', 'Tibuensis', 'Tumacoënsis', 'Moscoviensis Matris Dei', 'Bruneiensis'
-  // of 2004, 'Usbekistaniae'): the argumentum governs the table (Ruling 9) and each note
+  // of 2004, 'Usbekistaniae'): the argumentum governs the table (filing rule 3) and each note
   // records the body's clause. The curation script abstained on twenty-two. Two print a
   // lower-case letter inside the capitalised toponym ('IANAUBENSlS', 'PREMISLIENSIS-
   // VARSAVIENSIS ritus BYZANTINI UCRAINORUM'), so the case-delimited reader stopped, and each
@@ -2897,8 +3035,8 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
   // the body. Every argumentum is verbatim as extracted, the page's own misprints kept and
   // named in the note ('ARCHIIODECESI', 'VOCTORIENSIS', 'BYZANTIBI', 'BELLOMONTESI',
   // 'CONSTITUTITUR', 'CONTITUITUR', 'CONSTITUIITUR'...), the audit regex learning the
-  // misprinted and verbless wordings under Ruling 13 and exempting 'Sreveportuensis', whose
-  // page drops the clause naming the act, under Ruling 14; one row ('Vratislaviensis-
+  // misprinted and verbless wordings (filing rule 4) and exempting 'Sreveportuensis', whose
+  // page drops the clause naming the act (filing rule 5); one row ('Vratislaviensis-
   // Gedanensis') drops the body's opening quotation mark the reader carried into the
   // heading, and its note says so.
   'john-paul-ii|batteriensis|1978-10-28': {
@@ -3316,7 +3454,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'evehimus Ecclesiae Archiepiscopalis-Metropolitanae, atque Vicariatum Apostolicum '
       + 'Capitis Palmensis ad dignitatem dioecesis, Monroviensi suffraganeae.". The province '
       + 'constituted is what the argumentum states (CONSTITUITUR), so this is an erection; the '
-      + 'body works it by raising the two vicariates (Ruling 9).',
+      + 'body works it by raising the two vicariates (filing rule 3).',
   },
   'john-paul-ii|sinopensis|1982-02-06': {
     argumentum:
@@ -4196,7 +4334,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'withdrawn from Nairobi, as suffragans: "...Dioecesim Kisumuensem attollimus ad '
       + 'dignitatem et statum Archidioecesis Metropolitanae, quae posthac suffraganeas '
       + 'complectetur dioeceses Bungomaënsem, Eldoretensem, Kakamegaënsem, Kisiianam et '
-      + 'Loduarinam...". The province constituted is what the argumentum states (Ruling 9).',
+      + 'Loduarinam...". The province constituted is what the argumentum states (filing rule 3).',
   },
   'john-paul-ii|nyeriensis|1990-05-21': {
     argumentum:
@@ -4612,7 +4750,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'sedem episcopalem ad condicionem attollimus metropolitanae ecclesiae...Commemorata '
       + 'autem provincia quam novam fieri iubemus Berolinensis constabit ex ecclesia eiusdem '
       + 'nominis necnon Dresdensi-Misnensi dicione tunc etiam ab integro excitata dioecesi '
-      + 'Gorlicensi.". The province constituted is what the argumentum states (Ruling 9).',
+      + 'Gorlicensi.". The province constituted is what the argumentum states (filing rule 3).',
   },
   'john-paul-ii|erfordiensis|1994-06-27': {
     argumentum:
@@ -4638,7 +4776,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'memorata Administratio Apostolica Gorlicensis...ad gradum et dignitatem dioecesis, '
       + 'Gorlicensis appellandae, constituatur ac erigatur.". Stated by the argumentum as a '
       + 'diocese CONDITUR and filed on those words, the body working it by raising the '
-      + 'administration (Ruling 9).',
+      + 'administration (filing rule 3).',
   },
   'john-paul-ii|magdeburgensis|1994-06-27': {
     argumentum:
@@ -5041,7 +5179,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'Apostolicum Bonaventurensem ad dioecesis dignitatem attollimus, eodem servato nomine, '
       + 'quam Ecclesiam deinde suffraganeam facimus Metropolitanae Ecclesiae Caliensi...". '
       + 'Stated by the argumentum as a new diocese CONDITUR out of the vicariate and filed on '
-      + 'those words; the body works it as an elevation (Ruling 9).',
+      + 'those words; the body works it as an elevation (filing rule 3).',
   },
   'john-paul-ii|guarenensis|1996-11-30': {
     argumentum:
@@ -5423,7 +5561,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'boundaries: "...Commemoratam Praelaturam Tibuensem territorialem ad gradum promovemus '
       + 'ac iuridicialem dioecesis dignitatem, iisdem nimirum finibus adservatis quibus in '
       + 'praesentia circumscribitur...". Stated by the argumentum as a new diocese CONDITUR and '
-      + 'filed on those words; the body works it as an elevation (Ruling 9).',
+      + 'filed on those words; the body works it as an elevation (filing rule 3).',
   },
   'john-paul-ii|guluensis|1999-01-02': {
     argumentum:
@@ -5562,7 +5700,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'Iscuande passing to the Apostolic Prefecture of Guapi: "...ut superius memoratus '
       + 'Vicariatus Apostolicus Tumacoënsis in posterum adnumeretur inter Ecclesiae Catholicae '
       + 'dioeceses...". Stated by the argumentum as a new diocese CONSTITUITUR and filed on '
-      + 'those words; the body works it as an elevation (Ruling 9).',
+      + 'those words; the body works it as an elevation (filing rule 3).',
   },
   'john-paul-ii|yopalensis|1999-10-29': {
     argumentum:
@@ -5852,7 +5990,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'territorio quattuor communitatum ecclesialium noviter erectarum...novam constituimus '
       + 'Provinciam ecclesiasticam Moscoviensem Matris Dei appellandam.". The province is what '
       + 'the argumentum states (CONDITUR); the body works it by raising the administration '
-      + '(Ruling 9).',
+      + '(filing rule 3).',
   },
   'john-paul-ii|saratoviensis-sancti-clementis|2002-02-11': {
     argumentum:
@@ -6248,7 +6386,7 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'of the same name, entrusted to the Mill Hill Missionaries: "...memoratam Praefecturam '
       + 'Apostolicam Bruneiensem ad gradum Vicariatus Apostolici evehimus eodem servato nomine '
       + 'Bruneiensi...". Stated by the argumentum as a new vicariate CONDITUR and filed on those '
-      + 'words; the body works it as an elevation (Ruling 9). The heading prints "VICARIATUS '
+      + 'words; the body works it as an elevation (filing rule 3). The heading prints "VICARIATUS '
       + 'APOSTOLICUM", as quoted.',
   },
   'john-paul-ii|doriensis|2004-11-20': {
@@ -6299,106 +6437,16 @@ export const CIRCUMSCRIPTION_ERECTIONS: Record<string, CircumscriptionRow> = {
       + 'gradum dignitatemque Administrationis Apostolicae evehimus et eam pariter curis ac '
       + 'pastoralibus sollicitudinibus sodalium Ordinis Fratrum Minorum Conventualium '
       + 'committimus.". Stated by the argumentum as an administration CONDITUR and filed on '
-      + 'those words; the body works it as an elevation (Ruling 9).',
+      + 'those words; the body works it as an elevation (filing rule 3).',
   },
 };
-
-/**
- * The Latin each table's argumentum must contain. An apostolic constitution states its own
- * act in the all-capitals line printed under its toponym, and these are the verbs it uses.
- * Used only by the tests, to audit that a row sits in the right table -- never to classify:
- * classification is done by reading, because an erection decree also contains elevation and
- * division clauses and cannot be told apart by verb alone (spec §2.2).
- *
- * `FORMATUR`/`FORMANTUR` was added because two of the 19 hand-confirmed Pius XII erections
- * ('Corumbensis-Registrensis', 'Palmensis-Lagensis' -- each erecting two dioceses at once)
- * state the act with this passive idiom rather than any verb already listed here; the
- * pattern also matches `EFFORMATUR`/`EFFORMANTUR` as a substring, the form the second of
- * those two actually uses (spec §2.3).
- *
- * `IN ORDINEM (?:ARCHI)?DIOECESIUM` is the "placed in the rank of (arch)dioceses" idiom
- * John XXIII's 'Changanacherrensis et aliarum' uses for an elevation ('IN ORDINEM
- * ARCHIDIOECESIUM REDIGITUR'), stated with no verb the elevations pattern already listed.
- *
- * The audit is case-insensitive (Ruling 8) because nine Benedict XVI pages print the
- * argumentum in sentence case in its usual place under the toponym ('In Indonesia nova
- * conditur dioecesis Maumerensis appellanda.'), and the quote stays verbatim.
- *
- * `COOSTITUITUR` and `CONSTI\. TUITUR` (Ruling 10) are two page misprints of CONSTITUITUR
- * -- Paul VI's 'Tulcanensis' of 1965 and 'Balasorensis' of 1968 -- kept verbatim in their
- * rows, so the audit learns the misprint rather than the row being corrected.
- *
- * `DIOECESIUM ORDINEM`, `IN FORMAM DIOECESIS` and `AD DIOECESIS DIGNITATEM` (Ruling 10)
- * are the word orders four Paul VI elevations use ('Hamiltonensis' and 'Banarensis' IN/AD
- * DIOECESIUM ORDINEM REDIGITUR, 'Sanensis' IN FORMAM DIOECESIS REDIGITUR, 'Machalensis' AD
- * DIOECESIS DIGNITATEM TOLLITUR); each hits only elevation rows across all four tables,
- * whereas bare TOLLITUR was rejected because it also hits two province erections
- * ('Tananarivensis', 'Tunquensis').
- *
- * `\bIUNGITUR` (Ruling 10) is the verb Paul VI's 'Spalatensis-Macarscensis' union leads
- * with; it also appears in three John XXIII title-change adjudications ('APPELLATIO
- * IUNGITUR'), which this regex does not audit. The word boundary was added (Ruling 13)
- * because bare IUNGITUR also matched inside SEIUNGITUR -- a false hit on John Paul II's
- * 'Mobilensis' province erection and Paul VI's 'Nuakchottensis' adjudication.
- *
- * `CONSTITUTITUR`, `CONTITUITUR` and `CONSTITUIITUR` (Ruling 13) are three more page
- * misprints of CONSTITUITUR -- John Paul II's 'Shimogaënsis' of 1988, 'Asansolensis' of
- * 1997 and 'Samarindaënsis' of 2003 -- kept verbatim in their rows, each hitting only its
- * own row across all four tables.
- *
- * `INSTITUITUR`, `NOVA ECCLESIA\b`, `NOVA PROVINCIA ECCLESIASTICA` and `ARCHIEPISCOPATUS
- * MAIOR` (Ruling 13) are the wordings of four John Paul II erections stated with another
- * verb or with no verb at all ('Bontocensis-Lavagensis' NOVUS INSTITUITUR VICARIATUS,
- * 'Tunduruensis-Masasiensis' NOVA ECCLESIA, 'Overriensis' NOVA PROVINCIA ECCLESIASTICA,
- * 'Ernakulamensis-Angamaliensis' ARCHIEPISCOPATUS MAIOR); every hit measured across all
- * four tables is an erection row (NOVA ECCLESIA five, NOVA PROVINCIA ECCLESIASTICA
- * forty-five, ARCHIEPISCOPATUS MAIOR also Benedict XVI's 'Fagarasiensis', filed as an
- * erection under Ruling 9), the one exception being INSTITUITUR in the Jerez chapter
- * adjudication, which this regex does not audit.
- *
- * `ATTOLLUNTUR`, `FORMA DIOECESIS IMPONITUR` and `AD CANONICUM GRADUM` (Ruling 13) are the
- * word orders three John Paul II elevations use ('Guiratingensis et aliarum' AD DIOECESIUM
- * ATTOLLUNTUR GRADUM, 'Iammuensis-Srinagarensis' IURIDICIALIS FORMA DIOECESIS IMPONITUR,
- * 'Izabalensis' AD CANONICUM GRADUM VICARIATUS APOSTOLICI TOLLITUR); each hits only its own
- * row, and bare TOLLITUR stays rejected.
- *
- * `IN UNAM .{0,20}DIOECESIM REDIGUNTUR` (Ruling 13) is how John Paul II's 'Viterbiensis'
- * states the extinctive union of five sees into one; it hits only that row.
- */
-export const ERECTION_IDIOMS =
-  /CONDITUR|CONDUNTUR|ERIGITUR|ERIGUNTUR|CONSTITUITUR|CONSTITUUNTUR|EXCITATUR|EFFICITUR|CREATUR|NOVA FIT|FORMAM REDIG|FORMATUR|FORMANTUR|COOSTITUITUR|CONSTI\. TUITUR|CONSTITUTITUR|CONTITUITUR|CONSTITUIITUR|INSTITUITUR|NOVA ECCLESIA\b|NOVA PROVINCIA ECCLESIASTICA|ARCHIEPISCOPATUS MAIOR/i;
-export const ELEVATION_IDIOMS =
-  /EVEHITUR|EVEHUNTUR|ELEVATUR|PERDUCITUR|ATTOLLITUR|ATTOLITUR|EXTOLLITUR|AD (?:GRADUM|DIGNITATEM|EPARCHIAE|APOSTOLICI)|IN ORDINEM (?:ARCHI)?DIOECESIUM|DIOECESIUM ORDINEM|IN FORMAM DIOECESIS|AD DIOECESIS DIGNITATEM|ATTOLLUNTUR|FORMA DIOECESIS IMPONITUR|AD CANONICUM GRADUM/i;
-export const UNION_IDIOMS =
-  /DE UNIONE|UNIONE|UNIUNTUR|UNITUR|CONIUNG|AEQUE PRINCIPALITER|DISMEMBRATIONE|\bIUNGITUR|IN UNAM .{0,20}DIOECESIM REDIGUNTUR/i;
-
-/**
- * Rows the idiom audit may not hold to a regex, because the page itself prints no act. One
- * key (Ruling 14): John Paul II's 'Sreveportuensis' of 1986-06-16, whose vatican.va page
- * drops the line of its heading that names the act, printing only 'NONNULLIS DISTRACTIS
- * TERRITORIIS A DIOECESI' and 'ALEXANDRINA-SREVEPORTUENSIS APPELLANDA' around the gap (the
- * cached HTML confirms it). The row keeps the argumentum verbatim as printed, and its note
- * quotes the body's erecting clause ('...novam dioecesim Sreveportuensem appellandam
- * condimus...'). The audit still requires the argumentum to be non-empty, and a key listed
- * here must exist in one of the four tables, so a stale exemption fails loudly.
- */
-export const ARGUMENTUM_AUDIT_EXEMPTIONS: ReadonlySet<string> = new Set([
-  'john-paul-ii|sreveportuensis|1986-06-16',
-]);
-
-export interface CircumscriptionRow {
-  /** The document's own argumentum, verbatim: the act in its own words. */
-  argumentum: string;
-  /** What the act does, and anything the argumentum alone does not settle. */
-  note: string;
-}
 
 /**
  * Candidates raising an existing circumscription in rank. Same evidence rule as the
  * erections table: each row quotes the document's argumentum.
  */
 export const CIRCUMSCRIPTION_ELEVATIONS: Record<string, CircumscriptionRow> = {
-  // The second curation instalment (Task 3), Pius XII: the nine of the ten candidates the
+  // The second curation instalment, Pius XII: the nine of the ten candidates the
   // first instalment read and rejected as erections that raise an existing circumscription
   // in rank (1957-06-24 through 1958-02-24). The tenth, 'Leonensis', raises a parish church
   // to collegiate rank and sits in CANDIDATE_ADJUDICATIONS.
@@ -6482,7 +6530,7 @@ export const CIRCUMSCRIPTION_ELEVATIONS: Record<string, CircumscriptionRow> = {
       + 'apostolic vicariate, keeping its name and boundaries: "...ad apostolici vicariatus '
       + 'gradum et dignitatem evehimus, eodem nomine iisdemque finibus servatis...".',
   },
-  // The second curation instalment (Task 3), John XXIII: the five of the 27 candidates that
+  // The second curation instalment, John XXIII: the five of the 27 candidates that
   // raise an existing circumscription in rank (1959-01-10 through 1959-07-16). Two of them
   // ('Changanacherrensis', 'Lagosensis (Kadunaënsis)') raise a see to a metropolitan
   // archdiocese and, as the secondary act, constitute the province it heads; the elevation
@@ -6546,11 +6594,11 @@ export const CIRCUMSCRIPTION_ELEVATIONS: Record<string, CircumscriptionRow> = {
       + 'gradum et dignitatem archidioecesis metropolitanae evehimus...". The argumentum '
       + 'states both acts and leads with the elevation; filed with the elevation.',
   },
-  // The third curation instalment (Task 4), Benedict XVI: the 11 of the 90 candidates that
+  // The third curation instalment, Benedict XVI: the 11 of the 90 candidates that
   // raise an existing circumscription in rank (2006-03-18 through 2011-11-09). Three more
   // whose body raises an existing see under an argumentum that says CONDITUR or
   // CONSTITUITUR ('Fagarasiensis', 'Azerbaigianiensis', 'Cametanensis') sit in the
-  // erections table under Ruling 9: the argumentum governs the table. 'Kyrgyzstaniae' is
+  // erections table under filing rule 3: the argumentum governs the table. 'Kyrgyzstaniae' is
   // quoted by hand in the sentence case its page prints.
   'benedict-xvi|kyrgyzstaniae|2006-03-18': {
     argumentum:
@@ -6671,7 +6719,7 @@ export const CIRCUMSCRIPTION_ELEVATIONS: Record<string, CircumscriptionRow> = {
       + 'gradum ac dignitatem dioecesis attollimus, servatis iisdem finibus, quibus nunc ipsa '
       + 'terminatur, et nomine.".',
   },
-  // The fourth curation instalment (Task 5), Paul VI: the 48 of the 222 candidates that
+  // The fourth curation instalment, Paul VI: the 48 of the 222 candidates that
   // raise an existing circumscription in rank (1963-07-06 through 1971-12-06). Most raise an
   // apostolic prefecture or vicariate, a prelature or a mission sui iuris to a diocese;
   // eight raise a see to metropolitan or archiepiscopal rank ('Hermosillensis',
@@ -6680,10 +6728,11 @@ export const CIRCUMSCRIPTION_ELEVATIONS: Record<string, CircumscriptionRow> = {
   // province follows, the elevation is what the argumentum leads with. 'Shikokuensis' is
   // quoted by hand because a lower-case l in its toponym stopped the reader. 'Dapagoënsis'
   // carries, verbatim, the Mendi argumentum its page mis-pastes over the Dapango body; both
-  // are elevations. Four state the act in a form the elevation idioms do not list
-  // ('Sanensis' IN FORMAM DIOECESIS REDIGITUR, 'Hamiltonensis' IN DIOECESIUM ORDINEM
+  // are elevations. Four state the act in a word order the elevation idioms did not then
+  // list ('Sanensis' IN FORMAM DIOECESIS REDIGITUR, 'Hamiltonensis' IN DIOECESIUM ORDINEM
   // REDIGITUR, 'Banarensis' AD DIOECESIUM ORDINEM REDIGITUR, 'Machalensis' AD DIOECESIS
-  // DIGNITATEM TOLLITUR); the audit regex lists those word orders under Ruling 10.
+  // DIGNITATEM TOLLITUR), so they were read from the body; the audit regex has since
+  // learned those word orders (filing rule 4).
   'paul-vi|kayensis|1963-07-06': {
     argumentum:
       'KAYENSIS* PRAEFECTURA APOSTOLICA KAYENSIS AD GRADUM ET DIGNITATEM DIOECESIS '
@@ -7160,18 +7209,19 @@ export const CIRCUMSCRIPTION_ELEVATIONS: Record<string, CircumscriptionRow> = {
       + 'suffragan to Delhi: "...Apostolicam Praefecturam de Iullundur ad dignitatem '
       + 'dioecesis evehimus, Jullundurensis nomine...".',
   },
-  // The fifth curation instalment (Task 6), John Paul II: the 59 of the 390 candidates that
+  // The fifth curation instalment, John Paul II: the 59 of the 390 candidates that
   // raise an existing circumscription in rank (1979-03-28 through 2005-01-25). Most raise a
   // prelature, prefecture, vicariate, administration or mission sui iuris to a diocese or
-  // vicariate; nine raise a see to metropolitan or archiepiscopal rank ('Lyciensis',
+  // vicariate; ten raise a see to metropolitan or archiepiscopal rank ('Lyciensis',
   // 'Monoecensis', 'Pinnensis-Piscariensis', 'Mvanzaënsis', 'Luxemburgensis',
-  // 'Argentoratensis', 'Antioquiensis', 'Mercedensis-Luianensis', 'Tiranensis-Dyrracena'),
-  // and where a new province follows, the elevation is what the argumentum leads with.
-  // 'Premisliensis-Varsaviensis' is quoted by hand because a lower-case 'ritus' in its
-  // toponym stopped the reader. Three state the act in a form the elevation idioms do not
-  // list ('Guiratingensis et aliarum' AD DIOECESIUM ATTOLLUNTUR GRADUM, 'Iammuensis-
-  // Srinagarensis' IURIDICIALIS FORMA DIOECESIS IMPONITUR, 'Izabalensis' AD CANONICUM GRADUM
-  // VICARIATUS APOSTOLICI TOLLITUR); the audit regex lists those word orders under Ruling 13.
+  // 'Argentoratensis', 'Antioquiensis', 'Mercedensis-Luianensis', 'Tiranensis-Dyrracena',
+  // 'Premisliensis-Varsaviensis'), and where a new province follows, the elevation is what
+  // the argumentum leads with. 'Premisliensis-Varsaviensis' is quoted by hand because a
+  // lower-case 'ritus' in its toponym stopped the reader. Three state the act in a word
+  // order the elevation idioms did not then list ('Guiratingensis et aliarum' AD DIOECESIUM
+  // ATTOLLUNTUR GRADUM, 'Iammuensis-Srinagarensis' IURIDICIALIS FORMA DIOECESIS IMPONITUR,
+  // 'Izabalensis' AD CANONICUM GRADUM VICARIATUS APOSTOLICI TOLLITUR), so they were read
+  // from the body; the audit regex has since learned those word orders (filing rule 4).
   'john-paul-ii|trudensis|1979-03-28': {
     argumentum:
       'TRUDENSIS* VICARIATUS APOSTOLICUS NORVEGIAE CENTRALIS AD GRADUM PRAELATURAE ERIGITUR, '
@@ -7820,12 +7870,12 @@ export const CIRCUMSCRIPTION_UNIONS: Record<string, CircumscriptionRow> = {
       + 'Diocese of Salta. The dismemberment serves the union; no new circumscription is '
       + 'erected, so this is a union rather than an erection.',
   },
-  // The fourth curation instalment (Task 5), Paul VI: the two of the 222 candidates that
+  // The fourth curation instalment, Paul VI: the two of the 222 candidates that
   // unite existing sees (1966-04-26 and 1969-07-27). 'Chamberiensis et aliarum' joins two
   // Savoy dioceses aeque principaliter to Chambery; 'Spalatensis-Macarscensis' merges
   // Makarska into Split by extinctive union and raises the merged see to metropolitan rank
   // -- the union is what its argumentum leads with (IUNGITUR) and the vehicle of the
-  // elevation, so it sits here, and IUNGITUR joined the union idioms under Ruling 10.
+  // elevation, so it sits here, and IUNGITUR joined the union idioms (filing rule 4).
   'paul-vi|chamberiensis-et-aliarum|1966-04-26': {
     argumentum:
       'CHAMBERIENSIS ET ALIARUM* DIOECESES MAURIANENSIS ET TARANTASIENSIS, IN SABAUDIAE '
@@ -7851,12 +7901,12 @@ export const CIRCUMSCRIPTION_UNIONS: Record<string, CircumscriptionRow> = {
       + 'union; the curation script proposed an elevation because IUNGITUR is not among the '
       + 'union idioms.',
   },
-  // The fifth curation instalment (Task 6), John Paul II: the five of the 390 candidates that
+  // The fifth curation instalment, John Paul II: the five of the 390 candidates that
   // unite existing sees (1983-09-13 through 1991-12-24). Three join sees aeque principaliter
   // under one bishop ('Interamnensis-Narniensis et Amerina', 'Pampilonensis-Tudelensis',
   // 'Terulensis-Albarraciensis'); 'Viterbiensis' merges four dioceses and an abbey into
   // Viterbo by extinctive union, stated as IN UNAM DIOECESIM REDIGUNTUR, which joined the
-  // union idioms under Ruling 13; 'Telsensis' merges the Prelature of Klaipeda into Telsiai
+  // union idioms (filing rule 4); 'Telsensis' merges the Prelature of Klaipeda into Telsiai
   // by extinctive union.
   'john-paul-ii|interamnensis-narniensis-et-amerina|1983-09-13': {
     argumentum:
@@ -7918,13 +7968,6 @@ export const CIRCUMSCRIPTION_UNIONS: Record<string, CircumscriptionRow> = {
   },
 };
 
-export interface AdjudicationRow {
-  /** What the document actually does, in plain words. Free text, not a controlled term. */
-  act: string;
-  argumentum: string;
-  note: string;
-}
-
 /**
  * Candidates read and judged to be neither an erection, an elevation nor a union.
  *
@@ -7947,7 +7990,7 @@ export const CANDIDATE_ADJUDICATIONS: Record<string, AdjudicationRow> = {
       + 'Breviary this revises and approves; the heading names the see because the see owns '
       + 'the Breviary, not because the act touches its boundaries or rank.',
   },
-  // The second curation instalment (Task 3), Pius XII: the one of the ten rejected
+  // The second curation instalment, Pius XII: the one of the ten rejected
   // candidates that is not a circumscription act (1958-03-25).
   'pius-xii|leonensis|1958-03-25': {
     act: 'a parish church raised to collegiate rank',
@@ -7960,7 +8003,7 @@ export const CANDIDATE_ADJUDICATIONS: Record<string, AdjudicationRow> = {
       + "curation instalment identified this one by hand and recorded it in that table's "
       + 'comment, where it could not retire the candidate.',
   },
-  // The second curation instalment (Task 3), John XXIII: the seven of the 27 candidates
+  // The second curation instalment, John XXIII: the seven of the 27 candidates
   // that are neither an erection, an elevation nor a union (1959-01-08 through
   // 1959-04-06). Three erect a chapter of canons; four give a Spanish see a second title
   // and raise a church in the newly named city to concathedral -- a change of a
@@ -8051,7 +8094,7 @@ export const CANDIDATE_ADJUDICATIONS: Record<string, AdjudicationRow> = {
       + 'condimus, quod sex constabit canonicis et duobus praebendatis...". The CONSTITUITUR '
       + 'of the argumentum erects the chapter, not a circumscription.',
   },
-  // The third curation instalment (Task 4), Benedict XVI: the two of the 90 candidates that
+  // The third curation instalment, Benedict XVI: the two of the 90 candidates that
   // are circumscription acts this registry mints no term for (2006-11-25 and 2008-06-18):
   // a reorganisation of every ecclesiastical province of Mexico, and the restoration of
   // the Diocese of Srijem by separating it from the see it was united to.
@@ -8084,7 +8127,7 @@ export const CANDIDATE_ADJUDICATIONS: Record<string, AdjudicationRow> = {
       + 'restitution (RESTITUITUR), for which this registry mints no term: neither a see '
       + 'erected new nor one raised in rank.',
   },
-  // The fourth curation instalment (Task 5), Paul VI: the eleven of the 222 candidates that
+  // The fourth curation instalment, Paul VI: the eleven of the 222 candidates that
   // are neither an erection, an elevation nor a union (1964-02-25 through 1969-10-02). Seven
   // are not circumscription acts at all: five chapters of canons (two of them collegiate
   // chapters restored in a parish church), the title of Abbot of Pomposa granted to the
@@ -8253,7 +8296,7 @@ export const CANDIDATE_ADJUDICATIONS: Record<string, AdjudicationRow> = {
       + 'raised; the CONSTITUITUR of the argumentum makes a suffragan, which is why the '
       + 'curation script proposed an erection.',
   },
-  // The fifth curation instalment (Task 6), John Paul II: the nine of the 390 candidates that
+  // The fifth curation instalment, John Paul II: the nine of the 390 candidates that
   // are neither an erection, an elevation nor a union (1980-07-07 through 1991-12-24). Three
   // are not circumscription acts at all: a cathedral chapter restored at Ostia, and a
   // collegiate chapter dissolved for a cathedral chapter at Jerez and a concathedral chapter
