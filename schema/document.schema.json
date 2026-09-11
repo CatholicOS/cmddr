@@ -55,7 +55,7 @@
     },
     "scope": {
       "enum": ["universal", "local"],
-      "description": "Overrides genre.defaultScope when the addressee differs."
+      "description": "Overrides genre.defaultScope. Juridical reach of the act (whom it binds), not its addressee; for an apostolic-letter, whose genre spans universal teaching and local governance, expected to be set per document rather than inherited."
     },
     "characteristics": {
       "type": "array",

@@ -22,7 +22,7 @@ one **Assessment** per notable passage.
 
 **`issuerType`** (role/capacity) — `ecumenical-council` · `pope` · `bishop`. Used by `document.issuerType` (the role that issued it) and by `genre.issuerTypes` (the roles that may issue the genre). The issuer's *identity* (e.g. `rp:john-paul-ii`) is carried separately in `document.issuerId`. When a pope promulgates a document issued by another authority — chiefly a conciliar constitution — the promulgating pope is recorded in the optional `document.promulgatedBy` (e.g. `rp:paul-vi`), which does not change `issuerType`.
 
-**`scope`** — `universal` · `local`
+**`scope`** — `universal` · `local`. Juridical reach of the act (whom it binds), not its addressee: *Ordinatio Sacerdotalis* is addressed to the bishops and universal in scope, while the *Letter to Artists* is addressed to everyone and has no juridical scope at all. `document.scope` overrides `genre.defaultScope`; for an `apostolic-letter`, whose genre spans universal teaching and local governance, it is expected to be set per document rather than inherited. Recording the addressee is deferred to [#4](https://github.com/CatholicOS/cmddr/issues/4), together with a possible `regional` value.
 
 **`characteristics`** (non-exclusive document metadata a papal bull may bear) — `apostolic-constitution` · `dogmatic-definition`. A document may carry neither, either, or both (e.g. *Munificentissimus Deus* carries both).
 
