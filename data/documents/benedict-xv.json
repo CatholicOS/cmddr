@@ -732,6 +732,9 @@
     "characteristics": [
       "apostolic-constitution"
     ],
+    "keywords": [
+      "circumscription-union"
+    ],
     "sourceGenreLabel": "apost-constitutions"
   },
   {
@@ -890,6 +893,9 @@
     "incipit": "Catamarcensis-Saltensis",
     "characteristics": [
       "apostolic-constitution"
+    ],
+    "keywords": [
+      "circumscription-union"
     ],
     "sourceGenreLabel": "apost-constitutions"
   },

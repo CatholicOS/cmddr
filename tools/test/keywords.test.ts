@@ -1,5 +1,6 @@
 import { describe, it, expect, afterEach } from 'vitest';
-import { keywordsFor, isErectionCandidate, CIRCUMSCRIPTION_ERECTIONS } from '../src/mappings/keywords.js';
+import { keywordsFor, isErectionCandidate } from '../src/mappings/keywords.js';
+import { CIRCUMSCRIPTION_ERECTIONS, CANDIDATE_ADJUDICATIONS } from '../src/mappings/circumscriptions.js';
 import { slugify } from '../src/slug.js';
 import type { HarvestItem } from '../src/types.js';
 
@@ -180,6 +181,17 @@ describe('isErectionCandidate', () => {
       title: 'Catamarcensis-Saltensis', incipit: 'Catamarcensis-Saltensis',
     }))).toBe(false);
   });
+
+  it('does not flag a document already adjudicated in CANDIDATE_ADJUDICATIONS -- a document '
+    + 'read and judged not to be a circumscription act is no longer awaiting confirmation '
+    + '(carried decision, Task 1)', () => {
+    const key = 'benedict-xv|bracarensis|1919-05-14';
+    expect(CANDIDATE_ADJUDICATIONS[key], 'fixture assumption').toBeDefined();
+    expect(isErectionCandidate(item({
+      pageSlug: 'benedict-xv', shelf: 'apost-constitutions',
+      title: 'Bracarensis', incipit: 'Bracarensis', date: '1919-05-14',
+    }))).toBe(false);
+  });
 });
 
 describe('the CIRCUMSCRIPTION_ERECTIONS lookup path', () => {
@@ -201,7 +213,10 @@ describe('the CIRCUMSCRIPTION_ERECTIONS lookup path', () => {
 
   it('keywordsFor tags a document whose key is present in the curated table', () => {
     expect(keywordsFor(item({ pageSlug, title, incipit: title, date }))).toEqual([]);
-    CIRCUMSCRIPTION_ERECTIONS[key] = { note: 'test evidence: confirmed circumscription erection' };
+    CIRCUMSCRIPTION_ERECTIONS[key] = {
+      argumentum: 'BIKOROËNSIS * TEST EVIDENCE: CONFIRMED CIRCUMSCRIPTION ERECTION, NOVA CONDITUR DIOECESIS.',
+      note: 'test evidence: confirmed circumscription erection',
+    };
     expect(keywordsFor(item({ pageSlug, title, incipit: title, date })))
       .toEqual(['circumscription-erection']);
   });
@@ -212,7 +227,10 @@ describe('the CIRCUMSCRIPTION_ERECTIONS lookup path', () => {
     });
     // Unconfirmed, the toponym shape alone would flag it (as the earlier tests establish).
     expect(isErectionCandidate(candidate)).toBe(true);
-    CIRCUMSCRIPTION_ERECTIONS[key] = { note: 'test evidence: confirmed circumscription erection' };
+    CIRCUMSCRIPTION_ERECTIONS[key] = {
+      argumentum: 'BIKOROËNSIS * TEST EVIDENCE: CONFIRMED CIRCUMSCRIPTION ERECTION, NOVA CONDITUR DIOECESIS.',
+      note: 'test evidence: confirmed circumscription erection',
+    };
     expect(isErectionCandidate(candidate)).toBe(false);
   });
 });
