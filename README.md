@@ -137,7 +137,9 @@ Sacerdotalis* is one that does not.
 The document categories on [vatican.va](https://www.vatican.va/) — *Encicliche*, *Lettere Apostoliche*, *Lettere*, *Motu Proprio*,
 *Bolle* and the rest — are a **chancery filing system**. They sort documents by the diplomatic form of the instrument used to issue
 them, which is not the same question as the authority the issuer exercised. They are first-rate evidence of what forms exist and of
-how the Holy See itself distinguishes them, and they should **inform** this registry; they do not **govern** it.
+how the Holy See itself distinguishes them, and they should **inform** this registry; they do not **govern** it. Nor are they the
+record: the *Acta Apostolicae Sedis*, unlike the shelves, are the promulgating instrument, and the registry records where an act
+stands in them (*The Acta Apostolicae Sedis reference*, below).
 
 Three features of those shelves make the point. First, they sort by *form*, not by weight or audience: *Ordinatio Sacerdotalis* and a
 letter erecting a diocese share the *Lettere Apostoliche* shelf, while the universally-addressed *Letter to Artists* (1999) sits
@@ -231,6 +233,28 @@ together with the **145** Urbi et Orbi, of which the Christmas and Easter ones f
 the one item whose heading names the feast while the act bears another date (John XXIII’s *Santo Natale* of 22 December 1962,
 the shelf’s only Christmas 1962 item), by a curated row. The occasional messages on the year-partitioned
 `pont-messages` shelf are not yet harvested ([#4](https://github.com/CatholicOS/cmddr/issues/4)).
+
+#### The Acta Apostolicae Sedis reference
+
+The *Acta Apostolicae Sedis* (AAS, 1909–), and before them the *Acta Sanctae Sedis* (ASS, 1865–1908), are the Holy See's
+official gazette. Unlike the shelves, the AAS are the **promulgating instrument**: publication there is what promulgates a
+universal law, unless another manner of promulgation has been prescribed in a particular case (CIC can. 8 §1), and an AAS citation — *AAS 87 (1995) 401* for *Evangelium Vitae*, *AAS 115 (2023) 1041* for
+*Laudate Deum* — is the citation of record in every scholarly apparatus. The registry records it in an optional
+**`acta`** object, `{ "series": "AAS", "volume": 115, "year": 2023, "page": 1041 }`: the series, the volume as the index
+prints it, the volume year (a December act is published in the next year's volume) and the **first page**. It is purely
+bibliographic — like `keywords` and `series` it has **no bearing on register, ceiling or assent** — and the only invariant
+that reads it is 25 in [SCHEMA.md](SCHEMA.md): one page opens one act.
+
+The reference is **joined to** the shelf harvest, not substituted for it. vatican.va publishes a separate annual *Index
+generalis* PDF for 2015–2024; the harvest parses the *Acta Summi Pontificis* part of each year's chronological index
+(checked in as text under `tools/fixtures/acta/`) and matches every entry in a harvested category to a document by issuer,
+date and incipit, writing `acta` only where one candidate is evidenced. The join is reported before it is trusted: **222**
+Francis documents carry a reference from the ten volumes, and every ambiguous entry, every act the shelves lack and every
+document two entries claim is listed, classified, in the [join report](docs/superpowers/reports/2026-09-12-acta-join-2015-2024.md)
+— whose headline is that vatican.va's Francis shelves for constitutions and apostolic letters are selections (49 and 59
+against the index's 117 and 206), while the *Acta* are the record. Phase 2 ([#25](https://github.com/CatholicOS/cmddr/issues/25))
+is the in-volume indexes of 1909–2014, hand-curated from OCR of uneven quality, and the AAS-only documents for the acts
+the shelves omit; the ASS, whose volumes end in a subject index rather than a chronological one, are out of scope.
 
 ### The document registry
 

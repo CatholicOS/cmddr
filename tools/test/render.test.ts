@@ -32,7 +32,7 @@ describe('renderIssuerMd', () => {
   const md = renderIssuerMd('leo-xiii', docs);
 
   it('omits the issuer column, which is constant in this view', () => {
-    expect(md).toContain('| ID | Title | Incipit | Genre | Date | Promulgated by |');
+    expect(md).toContain('| ID | Title | Incipit | Genre | Date | Promulgated by | AAS |');
     expect(md).not.toContain('| Issuer |');
   });
 
@@ -49,13 +49,25 @@ describe('renderIssuerMd', () => {
   it('shows the promulgator for a conciliar document', () => {
     expect(renderIssuerMd('vatican-i', [conciliar])).toContain('`rp:pius-ix`');
   });
+
+  it('prints the AAS reference as the conventional short citation, and nothing without one', () => {
+    const cited: DocumentRecord = {
+      ...docs[0]!, id: 'mag:francis-i/laudate-deum-2023', title: 'Laudate Deum', incipit: 'Laudate Deum',
+      genre: 'apostolic-exhortation', issuerId: 'rp:francis-i', date: '2023-10-04',
+      acta: { series: 'AAS', volume: 115, year: 2023, page: 1041 },
+    };
+    const out = renderIssuerMd('francis-i', [cited]);
+    expect(out).toContain('| 2023-10-04 |  | AAS 115 (2023) 1041 |');
+    expect(renderGenreMd('apostolic-exhortation', [cited])).toContain('| AAS 115 (2023) 1041 |');
+    expect(md.split('\n').filter((l) => l.startsWith('| `mag:')).every((l) => l.endsWith('|  |'))).toBe(true);
+  });
 });
 
 describe('renderGenreMd', () => {
   const md = renderGenreMd('encyclical', docs);
 
   it('omits the genre column, which is constant in this view', () => {
-    expect(md).toContain('| ID | Title | Incipit | Issuer | Date | Promulgated by |');
+    expect(md).toContain('| ID | Title | Incipit | Issuer | Date | Promulgated by | AAS |');
     expect(md).not.toContain('| Genre |');
   });
 

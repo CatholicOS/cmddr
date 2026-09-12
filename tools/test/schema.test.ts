@@ -208,6 +208,31 @@ describe('document.schema.json', () => {
     });
   });
 
+  describe('acta (#25)', () => {
+    const acta = { series: 'AAS', volume: 115, year: 2023, page: 1041 };
+
+    it('accepts the four-field reference, and the reserved part', () => {
+      expect(validate({ ...baseDoc, acta })).toBe(true);
+      expect(validate({ ...baseDoc, acta: { ...acta, part: 'I' } })).toBe(true);
+      expect(validate({ ...baseDoc, acta: { series: 'ASS', volume: 23, year: 1890, page: 1 } })).toBe(true);
+    });
+
+    it('requires every one of series, volume, year and page', () => {
+      for (const key of Object.keys(acta)) {
+        const { [key]: _omitted, ...rest } = acta as Record<string, unknown>;
+        expect(validate({ ...baseDoc, acta: rest }), key).toBe(false);
+      }
+    });
+
+    it('rejects a series outside AAS/ASS, a page below 1, a page range and a stray property', () => {
+      expect(validate({ ...baseDoc, acta: { ...acta, series: 'AAS ' } })).toBe(false);
+      expect(validate({ ...baseDoc, acta: { ...acta, page: 0 } })).toBe(false);
+      expect(validate({ ...baseDoc, acta: { ...acta, page: '401-522' } })).toBe(false);
+      expect(validate({ ...baseDoc, acta: { ...acta, part: 'III' } })).toBe(false);
+      expect(validate({ ...baseDoc, acta: { ...acta, fascicle: 10 } })).toBe(false);
+    });
+  });
+
   it('records harvest provenance', () => {
     expect(validate({
       ...baseDoc,

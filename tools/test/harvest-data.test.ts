@@ -2683,3 +2683,75 @@ describe('the Messaggi shelves (messages spec)', () => {
     expect(messages.every((d) => d.source?.retrieved === POPE_FIXTURES_RETRIEVED)).toBe(true);
   });
 });
+
+describe('the AAS reference (acta reference spec)', () => {
+  const everything = readdirSync('data/documents').filter((f) => f.endsWith('.json'))
+    .flatMap((f) => loadAll(f.replace(/\.json$/, '')));
+  const cited = everything.filter((d) => d.acta !== undefined);
+
+  it('pins the matched count per volume year, so a silent drop fails loudly', () => {
+    // 2,399 entries parsed from the ten annual indexes, 867 in a harvested category; 222
+    // matched on 2026-09-12 (the join report in docs/superpowers/reports/ lists the rest).
+    // A change to a fixture, the parser, the matcher or a shelf harvest moves these.
+    const byYear = new Map<number, number>();
+    for (const d of cited) byYear.set(d.acta!.year, (byYear.get(d.acta!.year) ?? 0) + 1);
+    expect(Object.fromEntries([...byYear].sort())).toEqual({
+      2015: 38, 2016: 24, 2017: 14, 2018: 14, 2019: 17, 2020: 18, 2021: 24, 2022: 18, 2023: 29, 2024: 26,
+    });
+    expect(cited).toHaveLength(222);
+    // By class: the index's *Nuntii* carry the twenty Christmas and Easter Urbi et Orbi.
+    const byClass = new Map<string, number>();
+    for (const d of cited) {
+      const k = `${d.genre}${d.characteristics?.length ? '+' + d.characteristics.join('+') : ''}`;
+      byClass.set(k, (byClass.get(k) ?? 0) + 1);
+    }
+    expect(Object.fromEntries([...byClass].sort())).toEqual({
+      'apostolic-exhortation': 6, 'apostolic-letter': 23, 'apostolic-letter+motu-proprio': 47, encyclical: 3,
+      message: 93, 'papal-bull': 2, 'papal-bull+apostolic-constitution': 28, 'urbi-et-orbi': 20,
+    });
+  });
+
+  it('writes a reference only on a Francis document, in the AAS, with the volume the year implies', () => {
+    for (const d of cited) {
+      expect(d.issuerId, d.id).toBe('rp:francis-i');
+      expect(d.acta!.series, d.id).toBe('AAS');
+      expect(d.acta!.volume, d.id).toBe(d.acta!.year - 1908);
+      expect(d.acta!.year, d.id).toBeGreaterThanOrEqual(2015);
+      expect(d.acta!.year, d.id).toBeLessThanOrEqual(2024);
+      expect(d.acta!.page, d.id).toBeGreaterThanOrEqual(1);
+      expect(d.acta!.part, d.id).toBeUndefined();
+    }
+  });
+
+  it('cites every Francis encyclical and exhortation the ten volumes carry', () => {
+    const by = Object.fromEntries(cited.map((d) => [d.id, d.acta!]));
+    expect(by['mag:francis-i/laudato-si-2015']).toEqual({ series: 'AAS', volume: 107, year: 2015, page: 847 });
+    expect(by['mag:francis-i/fratelli-tutti-2020']).toEqual({ series: 'AAS', volume: 112, year: 2020, page: 969 });
+    expect(by['mag:francis-i/dilexit-nos-2024']).toEqual({ series: 'AAS', volume: 116, year: 2024, page: 1369 });
+    expect(by['mag:francis-i/laudate-deum-2023']).toEqual({ series: 'AAS', volume: 115, year: 2023, page: 1041 });
+    expect(by['mag:francis-i/amoris-laetitia-2016']!.page).toBe(351);
+    expect(by['mag:francis-i/christus-vivit-2019']!.page).toBe(391);
+    expect(by['mag:francis-i/querida-amazonia-2020']!.page).toBe(231);
+    expect(by['mag:francis-i/gaudete-et-exsultate-2018']!.page).toBe(1111);
+    expect(by['mag:francis-i/c-est-la-confiance-2023']!.page).toBe(1191);
+    // A December act is published in the next year's volume: the volume year is not the year of date.
+    expect(by['mag:francis-i/world-day-of-peace-2023']).toEqual({ series: 'AAS', volume: 115, year: 2023, page: 90 });
+    expect(by['mag:francis-i/urbi-et-orbi-christmas-2022']).toEqual({ series: 'AAS', volume: 115, year: 2023, page: 95 });
+    expect(by['mag:francis-i/urbi-et-orbi-easter-2023']).toEqual({ series: 'AAS', volume: 115, year: 2023, page: 515 });
+  });
+
+  it('writes no reference on a document the join reports rather than evidences', () => {
+    // Ambiguous: the Tarragona beatification letters of 13 October 2013 print no incipit on
+    // vatican.va, so the index's incipits cannot tell them apart. Claimed twice: two Nuntii
+    // on the date of one series message. Class mismatch: an act the index files as Motu
+    // proprio datae that the shelf did not file on motu_proprio.
+    const ids = new Set(cited.map((d) => d.id));
+    expect([...ids].filter((id) => id.startsWith('mag:francis-i/apostolic-letter-2013-10-13'))).toEqual([]);
+    expect(ids.has('mag:francis-i/world-communications-day-2016')).toBe(false);
+    expect(ids.has('mag:francis-i/apostolic-letter-2023-11-27')).toBe(false);
+  });
+
+  it('satisfies invariant 25 across the whole corpus', () => {
+    expect(checkDocuments(everything, genres, keywords, series).filter((v) => v.rule === 25)).toEqual([]);
+  });
+});

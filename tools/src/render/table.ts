@@ -21,6 +21,10 @@ export const idCell = (d: DocumentRecord): string =>
 export const genreCell = (d: DocumentRecord): string =>
   d.genre ?? `— (${cell(d.sourceGenreLabel ?? 'unmapped')})`;
 
+/** The conventional short citation, `AAS 115 (2023) 1041`; empty when no reference is recorded. */
+export const actaCell = (d: DocumentRecord): string =>
+  d.acta ? `${d.acta.series} ${d.acta.volume}${d.acta.part ? `/${d.acta.part}` : ''} (${d.acta.year}) ${d.acta.page}` : '';
+
 export const FOOTNOTE =
   '† A provisional identifier: the source prints no incipit for this document, '
   + 'so the id is genre-and-date based and may be re-minted if a conventional name '
