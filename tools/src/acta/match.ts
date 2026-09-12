@@ -11,10 +11,14 @@
  * The matcher never loosens itself to absorb a disagreement between the index and the
  * shelves: a class mismatch (an act the index files as *Motu proprio datae* that the
  * shelf did not file on motu_proprio), a date a day off, a category the shelves do not
- * carry -- each is a finding for the report, not a rule to add here.
+ * carry -- each is a finding for the report, not a rule to add here. The one reading it
+ * takes on trust is a curated index correction (curation.ts): an entry whose printed
+ * date the act's own dating formula contradicts is matched by the corrected date, with
+ * the evidence quoted beside the row.
  */
 import { slugify } from '../slug.js';
 import { categoryForHeading, type GenreClass } from './categories.js';
+import { ACTA_INDEX_CORRECTIONS, curationKey } from './curation.js';
 import type { ActaEntry } from './index.js';
 import type { DocumentRecord } from '../types.js';
 
@@ -86,7 +90,20 @@ const titleHasToponym = (title: string, toponym: string): boolean => {
   return toponymStems(toponym).some((stem) => words.includes(`-${stem}`));
 };
 
-export function matchActa(entries: ActaEntry[], docs: DocumentRecord[]): ActaMatchResult {
+/**
+ * The entry with its curated index correction applied (curation.ts), or the entry itself.
+ * A row applies only while the parser still reads the printed date the row records, so a
+ * fixture or parser change that alters the printed date surfaces as a row that no longer
+ * fires (the data tests assert every row does) rather than as a silent second correction.
+ * `raw` is untouched: the report quotes the line as printed.
+ */
+export function correctedEntry(entry: ActaEntry): ActaEntry {
+  const row = ACTA_INDEX_CORRECTIONS[curationKey(entry)];
+  return row !== undefined && row.printed === entry.date ? { ...entry, date: row.date } : entry;
+}
+
+export function matchActa(rawEntries: ActaEntry[], docs: DocumentRecord[]): ActaMatchResult {
+  const entries = rawEntries.map(correctedEntry);
   const byIssuerDate = new Map<string, DocumentRecord[]>();
   for (const d of docs) {
     const k = `${d.issuerId}|${d.date}`;
