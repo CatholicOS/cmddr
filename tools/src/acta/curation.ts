@@ -4,11 +4,13 @@
  * line it applies to and the evidence for the reading, and a row that matches no parsed
  * entry fails the data tests rather than sitting unnoticed.
  *
- * Both tables are keyed `${volume year}:${page}` -- the reference the index itself gives
- * an act, unique by invariant 25 (one page opens one act) -- and both are read by the
- * matcher (match.ts) and the creator (create.ts): a corrected entry matches its shelf
- * record by the corrected date instead of being held or created under the printed one,
- * and a held entry is never created whatever the rules would otherwise do.
+ * The corrections and holds are keyed `${volume year}:${page}`, the overrides
+ * `AAS:${volume}:${page}` -- both the reference the index itself gives an act, unique by
+ * invariant 25 (one page opens one act). The matcher (match.ts) reads the corrections and
+ * the overrides, the creator (create.ts) the corrections and the holds: a corrected entry
+ * matches its shelf record by the corrected date instead of being held or created under
+ * the printed one, an overridden entry is the citation of the document the row names, and
+ * a held entry is never created whatever the rules would otherwise do.
  */
 
 export interface IndexCorrection {
@@ -58,6 +60,46 @@ export const ACTA_INDEX_CORRECTIONS: Readonly<Record<string, IndexCorrection>> =
       + 'shelf record is `mag:francis-i/vultum-dei-quaerere-2016`, dated 2016-06-29.',
   },
 };
+
+export interface MatchOverride {
+  /** The document the entry is the citation of. */
+  documentId: string;
+  /** The index line, quoted as extracted. */
+  indexLine: string;
+  /** The headings of the document chosen and of the one the class rule chose, and why the rule picked wrong. */
+  evidence: string;
+}
+
+/**
+ * Entries the matcher's class rule sends to the wrong document, keyed by the reference
+ * the index gives the act (`AAS:{volume}:{page}`) and consulted before the class rule
+ * (match.ts): the override names the document outright and does not require it to
+ * satisfy the class rule, since the class rule is what was wrong. Each row is a measured
+ * harm of the discussion #30 question -- the shelf and the *Acta* disagree about the class
+ * -- and quotes the index line and both headings.
+ */
+export const ACTA_MATCH_OVERRIDES: Readonly<Record<string, MatchOverride>> = {
+  'AAS:116:189': {
+    documentId: 'mag:francis-i/apostolic-letter-2024-01-16-2',
+    indexLine: ' 16 Ian. 2024 « Finis et modus ». De limitibus et de rationibus administratio- / '
+      + 'nis ordinariae.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  189',
+    evidence: "The act is vatican.va's 'Lettera Apostolica in forma di Motu Proprio circa i limiti e le "
+      + "modalità dell'ordinaria amministrazione' (apost_letters, 16 January 2024, "
+      + '`mag:francis-i/apostolic-letter-2024-01-16-2`): the same subject as the index\'s *De limitibus '
+      + 'et de rationibus administrationis ordinariae*, and the heading itself says motu proprio. The '
+      + 'shelf files it on apost_letters alone, so the record carries no `motu-proprio` characteristic '
+      + "(discussion #30), and the class rule found one candidate of the class on the date instead -- the "
+      + "'Decreto del Sommo Pontefice Francesco relativo alla pubblicazione di provvedimenti normativi "
+      + "nello Stato della Città del Vaticano' (motu_proprio, `mag:francis-i/apostolic-letter-2024-01-16-1`), "
+      + 'which the index lists separately under *Decreta* (AAS 116 (2024) 194, *Res quae pertinent ad '
+      + 'promulgationem provisionum normarum Status Civitatis Vaticanae*). Phase 1 wrote the reference on '
+      + 'the decree; this row sends it to the letter.',
+  },
+};
+
+/** The override key of an entry: the index's own reference, series, volume and first page. */
+export const overrideKey = (e: { series: string; volume: number; page: number }): string =>
+  `${e.series}:${e.volume}:${e.page}`;
 
 export interface ActaHold {
   /** The index line, quoted as extracted. */

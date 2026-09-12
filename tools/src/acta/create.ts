@@ -240,12 +240,15 @@ export function toActaDocument(entry: ActaEntry, issuerId: string, cls: GenreCla
     date: entry.date,
     source: { url: null, shelf: actaShelf(entry.year), retrieved },
   };
-  if (entry.incipit !== null) {
-    record.incipit = entry.incipit;
-    // A bare incipit is Latin; a guillemet one is vernacular by the index's convention,
-    // and its language is not evidenced by the index (spec §4) -- never guessed.
-    if (!entry.quoted) record.incipitLang = 'la';
-  }
+  // No `incipitLang`, whether the incipit is bare or in guillemets. The spec's first
+  // draft read a bare incipit as Latin and a guillemet one as vernacular; measured on
+  // the fixtures (PR #32), the index's guillemets mark a quotation, not a language --
+  // « Venite benedicti », « Nolite sperare », the beatification letters' Latin incipits,
+  // are wrapped exactly as « Chi è fedele » is -- so the mark evidences nothing about the
+  // language. And the shelf harvest sets `incipitLang` on 0 of its 4,663 minted records:
+  // set here, the field would have the AAS-only records as its only source in the
+  // registry, inconsistent with everything else. Spec §4 was corrected accordingly.
+  if (entry.incipit !== null) record.incipit = entry.incipit;
   if (cls.requires !== undefined) record.characteristics = [cls.requires];
   record.sourceGenreLabel = category.id;
   record.acta = { series: entry.series, volume: entry.volume, year: entry.year, page: entry.page };

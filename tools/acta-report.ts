@@ -213,7 +213,7 @@ p('*Matched*, to *In harvested categories* (a document claimed twice holds both 
 p('entry* counts the harvested shelf documents dated in the volume year that carry no `acta` (§11); the December ones belong to the next');
 p('volume, and 2024\'s December acts to the 2025 index, which does not exist yet.');
 p();
-const byHow = { unique: 0, incipit: 0, toponym: 0 };
+const byHow = { unique: 0, incipit: 0, toponym: 0, curated: 0 };
 for (const m of result.matches) byHow[m.by]++;
 const decretals = result.unmatched.filter((u) => catId(u.entry) === 'Litterae Decretales').length;
 const nuntiiTotal = entries.filter((e) => catId(e).startsWith('Nuntii')).length;
@@ -221,8 +221,10 @@ const matchedMessages = result.matches.filter((m) => catId(m.entry).startsWith('
 p('### The reading');
 p();
 p(`1. **Where the join fires it is evidenced.** ${result.matches.length} matches: ${byHow.unique} the only candidate of the class on the`);
-p(`   date, ${byHow.incipit} told apart by the incipit slug, ${byHow.toponym} by the toponym (no two constitutions of one date needed it). Every`);
-p('   one rests on an index line quoted in §12,');
+p(`   date, ${byHow.incipit} told apart by the incipit slug, ${byHow.toponym} by the toponym (no two constitutions of one date needed it), and`);
+p(`   ${byHow.curated} by a curated override (\`curation.ts\`: *Finis et modus*, AAS 116 (2024) 189, which the class rule had sent to the`);
+p('   decree of the same date because the letter it names is on apost_letters alone — a measured harm of the discussion #30');
+p('   question). Every one rests on an index line quoted in §12,');
 p('   and every Francis encyclical and exhortation of the ten volumes is among them. Nothing was written that the rules could not');
 p('   evidence: the 40 ambiguous entries (§4) and the 12 documents two entries claim (§5) stay without a reference.');
 p('2. **The Francis shelves are selections, and the index is the record.** The index names 117 apostolic constitutions and 206');
@@ -264,14 +266,15 @@ p('   (a page split `76 4`, ditto marks read `? ?`, a page glued to a footnote d
     byClass.set(k, (byClass.get(k) ?? 0) + 1);
   }
   const provisional = born.filter((c) => c.record.idStatus === 'provisional').length;
-  const quoted = born.filter((c) => c.record.incipit !== undefined && c.record.incipitLang === undefined).length;
+  const quoted = born.filter((c) => c.entry.quoted).length;
   const minted = born.length - provisional;
   const guard = creation.held.filter((h) => ['class-mismatch', 'possible-identity', 'near-miss', 'same-incipit-elsewhere', 'id-collision'].includes(h.reason)).length;
   p(`8. **The shelves\' gaps are now documents, and the guard held ${guard}.** ${born.length} AAS-only documents (§8): `
     + [...byClass].sort().map(([k, n]) => `${n} ${k}`).join(', ') + `; ${provisional} provisional (a constitution the index names`);
-  p('   by toponym only), and the rest minted from the index\'s incipit exactly as a shelf incipit mints. The index wraps the');
-  p(`   beatification letters\' Latin incipits in guillemets as it does vernacular ones, so ${quoted} of the ${minted} minted records carry no`);
-  p('   `incipitLang` (spec §4: a guillemet incipit\'s language is not evidenced) — a rule the owner may wish to revisit with this count.');
+  p('   by toponym only), and the rest minted from the index\'s incipit exactly as a shelf incipit mints. None carries `incipitLang`:');
+  p(`   the index wraps the beatification letters\' Latin incipits in guillemets as it does vernacular ones (${quoted} of the ${minted} minted`);
+  p('   records are quoted), so the guillemets mark a quotation, not a language, and the shelf harvest sets the field nowhere (spec §4,');
+  p('   corrected in PR #32).');
   const decretalHolds = creation.held.filter((h) => h.reason === 'possible-identity' && catId(h.entry) === 'Litterae Decretales');
   const decretalDates = new Set(decretalHolds.map((h) => h.entry.date)).size;
   p('   The guard is wider than the matcher on purpose: vatican.va files canonisation decretals on apost_letters as *Lettera');

@@ -12,7 +12,7 @@ import { readOrdinal, readOccasionYear } from '../src/harvest/seriesTitle.js';
 import { easterSunday } from '../src/dates.js';
 import { slugify } from '../src/slug.js';
 import { isActaShelf, CREATED_CATEGORIES, PONTIFICATE_BEGAN } from '../src/acta/create.js';
-import { ACTA_INDEX_CORRECTIONS, ACTA_HOLDS } from '../src/acta/curation.js';
+import { ACTA_INDEX_CORRECTIONS, ACTA_HOLDS, ACTA_MATCH_OVERRIDES } from '../src/acta/curation.js';
 import { loadActaIndexes } from '../src/acta/join.js';
 import { bareProvisionalId } from '../src/harvest/ordinals.js';
 import type { DocumentRecord } from '../src/types.js';
@@ -2720,7 +2720,9 @@ describe('the AAS reference (acta reference spec)', () => {
       byClass.set(k, (byClass.get(k) ?? 0) + 1);
     }
     expect(Object.fromEntries([...byClass].sort())).toEqual({
-      'apostolic-exhortation': 6, 'apostolic-letter': 23, 'apostolic-letter+motu-proprio': 48, encyclical: 3,
+      // Finis et modus moves from the motu_proprio decree to the apost_letters letter by
+      // the curated override (curation.ts), hence 24 plain letters and 47 motu proprio.
+      'apostolic-exhortation': 6, 'apostolic-letter': 24, 'apostolic-letter+motu-proprio': 47, encyclical: 3,
       message: 93, 'papal-bull': 2, 'papal-bull+apostolic-constitution': 30, 'urbi-et-orbi': 20,
     });
   });
@@ -2733,6 +2735,22 @@ describe('the AAS reference (acta reference spec)', () => {
     // Not a misprint but a day-less date line the parser skipped (index.ts): read from the
     // fixture as printed, the ditto months after `Sept. » Chengden.:` are September.
     expect(by['mag:francis-i/episcopalis-communio-2018']).toEqual({ series: 'AAS', volume: 110, year: 2018, page: 1359 });
+  });
+
+  it('writes Finis et modus on the letter it names, by the curated override, not on the decree of the date', () => {
+    const by = Object.fromEntries(cited.map((d) => [d.id, d.acta!]));
+    expect(by['mag:francis-i/apostolic-letter-2024-01-16-2']).toEqual({ series: 'AAS', volume: 116, year: 2024, page: 189 });
+    expect(by['mag:francis-i/apostolic-letter-2024-01-16-1']).toBeUndefined();
+  });
+
+  it('keeps every curated match override live: each row names a parsed entry and an existing shelf document', () => {
+    const entries = [...loadActaIndexes().parsed.values()].flatMap((p) => p.entries);
+    const ids = new Set(everything.filter((d) => !isActaShelf(d.source?.shelf)).map((d) => d.id));
+    for (const [key, row] of Object.entries(ACTA_MATCH_OVERRIDES)) {
+      const [series, volume, page] = key.split(':');
+      expect(entries.some((e) => e.series === series && e.volume === Number(volume) && e.page === Number(page)), key).toBe(true);
+      expect(ids.has(row.documentId), key).toBe(true);
+    }
   });
 
   it('keeps every curated index correction live: each row names an entry the parser reads with the printed date', () => {
@@ -2836,14 +2854,13 @@ describe('the AAS-only documents (AAS-only documents spec, phase 2a)', () => {
       expect(d.aliases, d.id).toBeUndefined();
       expect(d.sourceGenreLabel !== undefined && d.sourceGenreLabel in CREATED_CATEGORIES, d.id).toBe(true);
       expect('incipit' in d, d.id).toBe(d.idStatus === 'minted');
-      // A bare incipit is Latin; a guillemet one carries no language (spec §4). The index
-      // wraps the beatification letters' Latin incipits in guillemets too, so all but one
-      // of the 191 minted records carry none -- reported, not guessed.
-      if (d.incipitLang !== undefined) expect(d.incipitLang, d.id).toBe('la');
+      // No incipitLang (spec §4 as corrected in PR #32): the index's guillemets mark a
+      // quotation, not a language, and the shelf harvest sets the field nowhere.
+      expect(d.incipitLang, d.id).toBeUndefined();
       // The title is the index entry: the incipit as printed, then the description.
       if (d.incipit !== undefined) expect(d.title, d.id).toContain(d.incipit);
     }
-    expect(born.filter((d) => d.incipitLang === 'la')).toHaveLength(1);
+    expect(everything.filter((d) => d.incipitLang !== undefined)).toEqual([]);
     expect(born.filter((d) => d.idStatus === 'provisional')).toHaveLength(75);
   });
 

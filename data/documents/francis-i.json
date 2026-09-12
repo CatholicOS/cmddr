@@ -3273,7 +3273,6 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "La vicinanza del Giubileo",
-    "incipitLang": "la",
     "sourceGenreLabel": "Litterae Apostolicae",
     "acta": {
       "series": "AAS",
@@ -15851,13 +15850,7 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio",
-    "acta": {
-      "series": "AAS",
-      "volume": 116,
-      "year": 2024,
-      "page": 189
-    }
+    "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2024-01-16-2",
@@ -15877,7 +15870,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 189
+    }
   },
   {
     "id": "mag:francis-i/world-communications-day-2024",

@@ -5,7 +5,7 @@ import {
 } from '../src/acta/create.js';
 import { matchActa } from '../src/acta/match.js';
 import { categoryForHeading, ACTA_CATEGORIES } from '../src/acta/categories.js';
-import { ACTA_INDEX_CORRECTIONS } from '../src/acta/curation.js';
+import { ACTA_INDEX_CORRECTIONS, ACTA_MATCH_OVERRIDES } from '../src/acta/curation.js';
 import type { ActaEntry } from '../src/acta/index.js';
 import type { DocumentRecord } from '../src/types.js';
 
@@ -37,13 +37,12 @@ describe('createFromActa: what is created (spec §2, §4)', () => {
       date: '2023-02-20',
       source: { url: null, shelf: 'aas/2023', retrieved: '2026-09-12' },
       incipit: 'Ius nativum',
-      incipitLang: 'la',
       sourceGenreLabel: 'Litterae Apostolicae',
       acta: { series: 'AAS', volume: 115, year: 2023, page: 263 },
     });
   });
 
-  it('gives a motu proprio its characteristic and a guillemet incipit no language', () => {
+  it('gives a motu proprio its characteristic, and no incipitLang whether the incipit is bare or in guillemets', () => {
     const r = run([entry({
       category: 'LITTERAE APOSTOLICAE MOTU PROPRIO DATAE', incipit: 'Chi è fedele', quoted: true,
       description: 'De personis iuridicis instrumentalibus Curiae Romanae', date: '2022-12-05',
@@ -52,6 +51,7 @@ describe('createFromActa: what is created (spec §2, §4)', () => {
     expect(d.id).toBe('mag:francis-i/chi-e-fedele-2022');
     expect(d.characteristics).toEqual(['motu-proprio']);
     expect(d.incipitLang).toBeUndefined();
+    expect(run([entry({})], []).created[0]!.record.incipitLang).toBeUndefined();
     expect(d.title).toBe('« Chi è fedele ». De personis iuridicis instrumentalibus Curiae Romanae');
     expect(d.source!.shelf).toBe('aas/2023');
     expect(d.date).toBe('2022-12-05');
@@ -245,6 +245,34 @@ describe('createFromActa: what is held (spec §2, §3, §5)', () => {
     // A row applies only to the printed date it records: another date on the same page is left alone.
     const m2 = matchActa([{ ...e, date: '2016-04-30' }], [shelf]);
     expect(m2.matches).toEqual([]);
+  });
+});
+
+describe('the curated match override', () => {
+  const key = 'AAS:116:189';
+  const row = ACTA_MATCH_OVERRIDES[key]!;
+  const finis = entry({ category: 'LITTERAE APOSTOLICAE MOTU PROPRIO DATAE', incipit: 'Finis et modus', quoted: true,
+    description: 'De limitibus et de rationibus administrationis ordinariae', date: '2024-01-16', year: 2024, volume: 116, page: 189 });
+  const decree = doc({ id: 'mag:francis-i/apostolic-letter-2024-01-16-1', idStatus: 'provisional', date: '2024-01-16',
+    characteristics: ['motu-proprio'], title: 'Decreto del Sommo Pontefice Francesco relativo alla pubblicazione di provvedimenti normativi' });
+  const letter = doc({ id: 'mag:francis-i/apostolic-letter-2024-01-16-2', idStatus: 'provisional', date: '2024-01-16',
+    title: "Lettera Apostolica in forma di Motu Proprio circa i limiti e le modalità dell'ordinaria amministrazione" });
+
+  it('sends the entry to the document the row names, before and without the class rule', () => {
+    expect(row.documentId).toBe(letter.id);
+    const m = matchActa([finis], [decree, letter]);
+    expect(m.matches.map((x) => [x.documentId, x.by])).toEqual([[letter.id, 'curated']]);
+    expect(m.unmatched).toEqual([]);
+    // Without the row the class rule picks the decree, the only candidate of the class.
+    const plain = matchActa([{ ...finis, page: 190 }], [decree, letter]);
+    expect(plain.matches.map((x) => [x.documentId, x.by])).toEqual([[decree.id, 'unique']]);
+    // And the creator has nothing to make of an overridden entry.
+    expect(createFromActa(m, [decree, letter], '2026-09-12').created).toEqual([]);
+  });
+
+  it('is ignored when the named document is not among the shelf records', () => {
+    const m = matchActa([finis], [decree]);
+    expect(m.matches.map((x) => [x.documentId, x.by])).toEqual([[decree.id, 'unique']]);
   });
 });
 

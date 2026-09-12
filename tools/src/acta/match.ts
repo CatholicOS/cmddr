@@ -11,14 +11,15 @@
  * The matcher never loosens itself to absorb a disagreement between the index and the
  * shelves: a class mismatch (an act the index files as *Motu proprio datae* that the
  * shelf did not file on motu_proprio), a date a day off, a category the shelves do not
- * carry -- each is a finding for the report, not a rule to add here. The one reading it
- * takes on trust is a curated index correction (curation.ts): an entry whose printed
- * date the act's own dating formula contradicts is matched by the corrected date, with
- * the evidence quoted beside the row.
+ * carry -- each is a finding for the report, not a rule to add here. What it takes on
+ * trust is curated (curation.ts), with the evidence quoted beside each row: an index
+ * correction, for an entry whose printed date the act's own dating formula contradicts,
+ * matched by the corrected date; and a match override, for an entry the class rule sends
+ * to the wrong act, matched to the document the row names before the class rule runs.
  */
 import { slugify } from '../slug.js';
 import { categoryForHeading, type GenreClass } from './categories.js';
-import { ACTA_INDEX_CORRECTIONS, curationKey } from './curation.js';
+import { ACTA_INDEX_CORRECTIONS, ACTA_MATCH_OVERRIDES, curationKey, overrideKey } from './curation.js';
 import type { ActaEntry } from './index.js';
 import type { DocumentRecord } from '../types.js';
 
@@ -33,8 +34,8 @@ export const POPE_ISSUERS: Readonly<Record<string, string>> = {
 export interface ActaMatch {
   entry: ActaEntry;
   documentId: string;
-  /** What decided the match: the only candidate, the incipit slug, or the toponym. */
-  by: 'unique' | 'incipit' | 'toponym';
+  /** What decided the match: the only candidate, the incipit slug, the toponym, or a curated override. */
+  by: 'unique' | 'incipit' | 'toponym' | 'curated';
 }
 export interface ActaCandidate { id: string; date: string; genre: string | null; characteristics: string[]; title: string; incipit?: string }
 export interface ActaAmbiguity { entry: ActaEntry; candidates: ActaCandidate[] }
@@ -110,6 +111,7 @@ export function matchActa(rawEntries: ActaEntry[], docs: DocumentRecord[]): Acta
     byIssuerDate.set(k, [...(byIssuerDate.get(k) ?? []), d]);
   }
   const on = (issuer: string, date: string) => byIssuerDate.get(`${issuer}|${date}`) ?? [];
+  const byId = new Map(docs.map((d) => [d.id, d]));
 
   const result: ActaMatchResult = {
     matches: [], ambiguous: [], unmatched: [], skipped: [], unknownPope: [], conflicts: [],
@@ -123,6 +125,16 @@ export function matchActa(rawEntries: ActaEntry[], docs: DocumentRecord[]): Acta
     }
     const issuer = POPE_ISSUERS[entry.pope];
     if (issuer === undefined) { result.unknownPope.push(entry); continue; }
+
+    // A curated override (curation.ts) names the document outright, before and without the
+    // class rule: it exists precisely where the class rule picked the wrong act. A row
+    // whose document is not in `docs` is ignored here and caught by the data tests.
+    const override = ACTA_MATCH_OVERRIDES[overrideKey(entry)];
+    const overridden = override === undefined ? undefined : byId.get(override.documentId);
+    if (overridden !== undefined) {
+      result.matches.push({ entry, documentId: overridden.id, by: 'curated' });
+      continue;
+    }
 
     const sameDate = on(issuer, entry.date);
     const inClasses = (d: DocumentRecord) => category.classes.some((c) => inClass(d, c));
