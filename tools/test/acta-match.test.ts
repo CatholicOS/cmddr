@@ -6,7 +6,7 @@ import type { DocumentRecord } from '../src/types.js';
 const entry = (over: Partial<ActaEntry>): ActaEntry => ({
   series: 'AAS', volume: 115, year: 2023, page: 1, pope: 'Franciscus',
   category: 'LITTERAE APOSTOLICAE MOTU PROPRIO DATAE', date: '2023-02-20',
-  incipit: null, toponym: null, description: '', raw: '', ...over,
+  incipit: null, quoted: false, toponym: null, description: '', raw: '', ...over,
 });
 const doc = (over: Partial<DocumentRecord> & { id: string }): DocumentRecord => ({
   title: over.id, idStatus: 'minted', genre: 'apostolic-letter', issuerId: 'rp:francis-i',

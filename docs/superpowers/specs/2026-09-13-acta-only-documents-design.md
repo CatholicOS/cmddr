@@ -77,7 +77,6 @@ Each hold is a row of the report with the entry's `raw` text and the candidate's
   "issuerType": "pope",
   "date": "2023-02-20",
   "incipit": "Ius nativum",
-  "incipitLang": "la",
   "sourceGenreLabel": "Litterae Apostolicae Motu proprio datae",
   "source": { "url": null, "shelf": "aas/2023", "retrieved": "2026-09-12" },
   "acta": { "series": "AAS", "volume": 115, "year": 2023, "page": 263 }
@@ -94,9 +93,15 @@ Each hold is a row of the report with the entry's `raw` text and the candidate's
   the *Acta*'s own naming, as a shelf record's title is the shelf's own heading. For a
   toponym entry: `Vucarien.: In Nigeria, dismembrato territorio …`, toponym case as
   printed, OCR mixed case repaired only by the small-caps rule the parser already applies.
-- **incipit / incipitLang**: the incipit as the index prints it, guillemets stripped.
-  A bare incipit is Latin (`la`); a guillemet incipit is vernacular and its language is
-  **not** evidenced by the index, so `incipitLang` is omitted for it — never guessed.
+- **incipit**: the incipit as the index prints it, guillemets stripped. No `incipitLang`.
+  *(Corrected in PR #32: this bullet first read a bare incipit as Latin, `la`, and a
+  guillemet incipit as vernacular with its language unevidenced. Measured on the fixtures,
+  the index's guillemets mark a quotation, not a vernacular — « Venite benedicti »,
+  « Nolite sperare », the beatification letters' Latin incipits, are wrapped exactly as
+  « Chi è fedele » is; 190 of the 191 minted AAS-only records would have carried no
+  language and one `la`. And the shelf harvest sets `incipitLang` on none of its 4,663
+  minted records, so an AAS-born record setting it would be the field's only source in
+  the registry. The field is therefore omitted on every AAS-born record.)*
 - **sourceGenreLabel**: the category heading as printed, in the index's own case.
 - **source**: `shelf: "aas/{volume-year}"`; `url` is the whole-volume PDF for years that
   have one (`…/AAS-{vol}-{year}-ocr.pdf`, ≤ 2002 — none in this phase) and **`null`** for

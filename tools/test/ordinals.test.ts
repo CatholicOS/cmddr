@@ -64,4 +64,23 @@ describe('assignProvisionalOrdinals', () => {
     expect(b.id).toBe('mag:pius-x/letter-1905-06-14-1');
     expect(other.id).toBe('mag:pius-x/brief-1911-06-28');
   });
+
+  it('is idempotent, and renumbers a group that has grown or shrunk since the last pass', () => {
+    // The orchestrator runs the pass over the shelf records, then again after the
+    // AAS-only records are appended: a record that already carries an ordinal is grouped
+    // by its bare id, so the merged group is numbered densely and a record left alone
+    // loses the ordinal it no longer needs.
+    const beta = provisional({ title: 'Beta document' });
+    const alpha = provisional({ title: 'Alpha document' });
+    assignProvisionalOrdinals([beta, alpha]);
+    assignProvisionalOrdinals([beta, alpha]);
+    expect([alpha.id, beta.id]).toEqual(['mag:pius-x/letter-1905-06-14-1', 'mag:pius-x/letter-1905-06-14-2']);
+    const aleph = provisional({ title: 'Aleph document' });
+    assignProvisionalOrdinals([beta, alpha, aleph]);
+    expect([aleph.id, alpha.id, beta.id]).toEqual([
+      'mag:pius-x/letter-1905-06-14-1', 'mag:pius-x/letter-1905-06-14-2', 'mag:pius-x/letter-1905-06-14-3',
+    ]);
+    assignProvisionalOrdinals([beta]);
+    expect(beta.id).toBe('mag:pius-x/letter-1905-06-14');
+  });
 });

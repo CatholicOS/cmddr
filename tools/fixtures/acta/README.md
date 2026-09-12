@@ -75,8 +75,19 @@ whitespace and normalising the leaders:
   toponym instead, which the text layer renders in mixed case (`VuCArien.:`,
   `de sAnCto petro sulA:`, `Cuneen. – fossAnen.:`, `tigren.`).
 - **Source defects** the text cannot repair, reported by the parser and listed in the join
-  report: a 2018 constitution with no day printed (`  Sept. » Chengden.:`), a 2024
-  constitution with no page (`ioinVillen.`), an OCR-split page (`76 4`), ditto marks read as
-  `? ?`, a page glued to a footnote digit (`14206`), and three acts entered under the wrong
-  month by a ditto mark (*Vultum Dei quaerere*, *Episcopalis communio*, *De concordia inter
-  Codices*).
+  report: a 2018 constitution with no day printed (`  Sept. » Chengden.:` — the line is a
+  defect, but its month still governs the ditto marks of the entries after it, which are
+  September, not May), a 2024 constitution with no page (`ioinVillen.`), an OCR-split page
+  (`76 4`), ditto marks read as `? ?`, a page glued to a footnote digit (`14206`), and two
+  acts entered under the wrong month (*Vultum Dei quaerere* by a ditto mark, *De concordia
+  inter Codices* by `Mart.` for `Maii`), corrected by `tools/src/acta/curation.ts` with the
+  acts' own dating formulae quoted.
+- **Earlier pontificates.** An act of Benedict XVI printed in these volumes carries its
+  own date, and usually its pope, in brackets before the incipit, in two layouts:
+  `[Benedictus XVI: 2010 Apr. 25]` (2018) and `[Benedictus PP. XVI: 6 Iun. 2010]` (2020,
+  2021); `[2010 Sept. 19]` (2018, Newman) names no pope and stays under Francis's part,
+  where the creator holds it by its date.
+
+The RETRIEVED date above is also stamped as `source.retrieved` on every document created
+from these fixtures (`ACTA_FIXTURES_RETRIEVED` in `tools/src/acta/join.ts`): update both
+together when the fixtures are refreshed.

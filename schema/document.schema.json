@@ -39,13 +39,19 @@
     "source": {
       "type": "object",
       "additionalProperties": false,
+      "required": ["url", "shelf", "retrieved"],
+      "description": "Harvest provenance. Every harvested record carries all three of url, shelf and retrieved; url and shelf may be null (a flat-era page; the fascicle-era Acta), never absent.",
       "properties": {
-        "url": { "type": ["string", "null"] },
-        "shelf": { "type": ["string", "null"] },
+        "url": { "type": ["string", "null"],
+          "description": "The vatican.va page the record was read from; null for a flat-era item without a page and for a document created from the Acta Apostolicae Sedis index in the fascicle era (2003-), where the monthly fascicle holding a page is not derivable from the index." },
+        "shelf": { "type": ["string", "null"],
+          "description": "The vatican.va shelf the record was read from ('apost_letters', 'messages/peace'), null for a flat-era page, or 'aas/{volume-year}' for a document created from the annual AAS index because the shelves lack the act (AAS-only documents spec); the acta reference is then the source as well as the citation." },
         "alsoShelvedAs": { "type": "array", "items": { "type": "string" },
           "description": "Other vatican.va shelves the same document is filed under; the shelves are not disjoint." },
-        "languages": { "type": "array", "items": { "type": "string" } },
-        "retrieved": { "type": "string", "format": "date" }
+        "languages": { "type": "array", "items": { "type": "string" },
+          "description": "The languages the vatican.va page offers; omitted for a document created from the AAS index, which evidences none." },
+        "retrieved": { "type": "string", "format": "date",
+          "description": "The date the source fixture was fetched: the pope or council page, or the AAS index (tools/fixtures/acta/README.md)." }
       }
     },
     "date": {
@@ -131,7 +137,7 @@
           "description": "Reserved for the two-part volumes of 1917 and 1983; not used in phase 1."
         }
       },
-      "description": "Where the act stands in the Acta Apostolicae Sedis (or Acta Sanctae Sedis): the citation of record, 'AAS 115 (2023) 1041' being { series: 'AAS', volume: 115, year: 2023, page: 1041 }. A reference joined to the shelf harvest, not a substitute for it: written by the harvest for the documents an annual AAS index entry matches by issuer, date and incipit (2015-2024 in phase 1). Purely bibliographic and never authority-bearing, like keywords, series and actKind; the only invariant is 25, uniqueness of (series, volume, page), since one page opens one act. See #25."
+      "description": "Where the act stands in the Acta Apostolicae Sedis (or Acta Sanctae Sedis): the citation of record, 'AAS 115 (2023) 1041' being { series: 'AAS', volume: 115, year: 2023, page: 1041 }. A reference joined to the shelf harvest, not a substitute for it: written by the harvest for the documents an annual AAS index entry matches by issuer, date and incipit (2015-2024 in phase 1), and carried by the documents created from the index itself for the acts the shelves lack (source.shelf 'aas/{year}', phase 2a), for which the reference is also the source. Purely bibliographic and never authority-bearing, like keywords, series and actKind; the only invariant is 25, uniqueness of (series, volume, page), since one page opens one act. See #25."
     },
     "descriptiveTitle": {
       "enum": ["dogmatic", "pastoral"],

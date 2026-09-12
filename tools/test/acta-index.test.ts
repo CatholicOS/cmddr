@@ -194,6 +194,58 @@ Dei Servo Iosepho Tous y Soler Beatorum honores decernuntur  .  1795`, '(An. 201
     expect(r.entries[0]!.raw).toContain('11 Maii 2018 [2010 Sept. 19]');
   });
 
+  it('reads the day-first bracket with the pope\'s PP. of the 2020 and 2021 indexes', () => {
+    const r = parseActaIndex(index(`VI – LITTERAE APOSTOLICAE
+ 17 Iul. 2020 [Benedictus PP. XVI: 6 Iun. 2010] « Testes christianae  ».
+Venerabili Servo Dei Georgio Popiełuszko Beatorum honores decernuntur  .  673
+ 21 » » « Sanctitas ». Venerabili Dei Servo caelitum Beatorum tribuitur dignitas  .  680`, '(An. 2020 et vol. CXII)'), { year: 2020 });
+    expect(r.entries.map((e) => [e.pope, e.date, e.incipit, e.quoted])).toEqual([
+      ['Benedictus XVI', '2010-06-06', 'Testes christianae', true],
+      ['Franciscus', '2020-07-21', 'Sanctitas', true],
+    ]);
+    expect(r.entries[0]!.description).toBe('Venerabili Servo Dei Georgio Popiełuszko Beatorum honores decernuntur');
+  });
+
+  it('reports a date line with no day, and lets its month govern the ditto marks after it', () => {
+    // AAS 2018 p. 689: `Sept. » Chengden.:` prints no day. Read as May (the entry before
+    // it), the two `» »` entries after it would be May too; the index means September --
+    // Prizren-Pristina became a diocese on 5 September 2018, Episcopalis communio is of
+    // 15 September 2018 -- and the parser must not date them by the wrong ditto.
+    const r = parseActaIndex(index(`V – CONSTITUTIONES APOSTOLICAE
+31 Maii 2018 tigren. In Venetiola nova conditur dioecesis Trigrensis.  .  .  1162
+  Sept. » Chengden.: In Sinis nova conditur dioecesis Chengdensis  .  .  689
+ 5 » » Prisrensis-Priscensis: Administratio Apostolica Prisrianen -
+sis ad gradum et dignitatem dioecesis evehitur  .  .  .  .  1708
+15 » » « Episcopalis Communio ». De Synodo Episcoporum   .  .  .  .  1359
+ » » » « Alia ». De alia re   .  .  .  .  1400`, '(An. 2018 et vol. CX)'), { year: 2018 });
+    expect(r.entries.map((e) => [e.date, e.incipit ?? e.toponym])).toEqual([
+      ['2018-05-31', 'tigren.'],
+      ['2018-09-05', 'Prisrensis-Priscensis'],
+      ['2018-09-15', 'Episcopalis Communio'],
+      ['2018-09-15', 'Alia'],
+    ]);
+    expect(r.defects).toEqual([{ category: 'CONSTITUTIONES APOSTOLICAE', message: 'entry without a day: Sept. » Chengden.: In Sinis nova conditur dioecesis Chengdensis  .  .  689' }]);
+  });
+
+  it('reports a ditto day after a day-less line as unreadable rather than inheriting an older day', () => {
+    const r = parseActaIndex(index(`V – CONSTITUTIONES APOSTOLICAE
+31 Maii 2018 tigren. In Venetiola nova conditur dioecesis Trigrensis.  .  .  1162
+  Sept. » Chengden.: In Sinis nova conditur dioecesis Chengdensis  .  .  689
+ » » » Alia.: De alia re   .  .  .  .  1400`, '(An. 2018 et vol. CX)'), { year: 2018 });
+    expect(r.entries.map((e) => e.date)).toEqual(['2018-05-31']);
+    expect(r.defects.map((d) => d.message.split(':')[0])).toEqual(['entry without a day', 'unreadable date']);
+  });
+
+  it('reads the incipit a 2017 constitution prints in guillemets after its toponym', () => {
+    const r = parseActaIndex(index(`V – CONSTITUTIONES APOSTOLICAE
+  2 Ian. 2017 DAnlIensIs. « Insita humanae naturae ». In Honduria, dismembratis
+quibusdam territoriis, dioecesis Danliensis conditur   .  .  .  207`, '(An. 2017 et vol. CIX)'), { year: 2017 });
+    expect(r.entries[0]).toMatchObject({
+      toponym: 'DAnlIensIs.', incipit: 'Insita humanae naturae', quoted: true,
+      description: 'In Honduria, dismembratis quibusdam territoriis, dioecesis Danliensis conditur',
+    });
+  });
+
   it('joins a two-line heading and reports a heading the category table has never seen', () => {
     const r = parseActaIndex(index(`XV – ITINERA APOSTOLICA, VISITATIONES PASTORALES,
 VISITATIONES, PEREGRINATIONES, ITINERA
@@ -217,10 +269,10 @@ XVI – LITTERAE INAUDITAE
 
 describe('splitEntryText', () => {
   it('strips guillemets and takes the rest as description, whatever follows the closing one', () => {
-    expect(splitEntryText('« Venite benedicti  ». - Venerabili Dei Servo')).toEqual({ incipit: 'Venite benedicti', toponym: null, description: 'Venerabili Dei Servo' });
-    expect(splitEntryText('« Fondo Pensioni »: De statutorum recognitione')).toEqual({ incipit: 'Fondo Pensioni', toponym: null, description: 'De statutorum recognitione' });
-    expect(splitEntryText('« Hoc est praeceptum » Venerabilibus Dei Servis')).toEqual({ incipit: 'Hoc est praeceptum', toponym: null, description: 'Venerabilibus Dei Servis' });
-    expect(splitEntryText('« Vos estis lux mundi »')).toEqual({ incipit: 'Vos estis lux mundi', toponym: null, description: '' });
+    expect(splitEntryText('« Venite benedicti  ». - Venerabili Dei Servo')).toEqual({ incipit: 'Venite benedicti', quoted: true, toponym: null, description: 'Venerabili Dei Servo' });
+    expect(splitEntryText('« Fondo Pensioni »: De statutorum recognitione')).toEqual({ incipit: 'Fondo Pensioni', quoted: true, toponym: null, description: 'De statutorum recognitione' });
+    expect(splitEntryText('« Hoc est praeceptum » Venerabilibus Dei Servis')).toEqual({ incipit: 'Hoc est praeceptum', quoted: true, toponym: null, description: 'Venerabilibus Dei Servis' });
+    expect(splitEntryText('« Vos estis lux mundi »')).toEqual({ incipit: 'Vos estis lux mundi', quoted: true, toponym: null, description: '' });
   });
 
   it('ends a bare incipit at a full stop, a colon or a double space, but not at an abbreviation', () => {
@@ -234,7 +286,7 @@ describe('splitEntryText', () => {
   });
 
   it('takes prose with no terminator, or too long for an incipit, as description only', () => {
-    expect(splitEntryText('Pro LVI Die Mundiali Pacis')).toEqual({ incipit: null, toponym: null, description: 'Pro LVI Die Mundiali Pacis' });
+    expect(splitEntryText('Pro LVI Die Mundiali Pacis')).toEqual({ incipit: null, quoted: false, toponym: null, description: 'Pro LVI Die Mundiali Pacis' });
     expect(splitEntryText('Misericordiae Vultus').incipit).toBeNull();
     expect(splitEntryText('Consistorium annuntiatur die XXX mensis Septembris celebrandum pro novis Cardinalibus creandis. Et cetera').incipit).toBeNull();
   });

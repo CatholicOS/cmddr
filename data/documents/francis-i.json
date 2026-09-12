@@ -31,6 +31,28 @@
     "sourceGenreLabel": "messages/urbi"
   },
   {
+    "id": "mag:francis-i/venite-benedicti-2013-04-07",
+    "title": "« Venite benedicti ». Venerabili Dei Servo Christophoro a Sancta Catharina (in saeculo Christophoro Fernández Valladolid) Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-04-07",
+    "source": {
+      "url": null,
+      "shelf": "aas/2015",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Venite benedicti",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 1246
+    }
+  },
+  {
     "id": "mag:francis-i/apostolic-letter-2013-04-13",
     "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di don Luca Passi, Fondatore dell'Istituto delle Suore Maestre di Santa Dorotea",
     "idStatus": "provisional",
@@ -490,6 +512,72 @@
     }
   },
   {
+    "id": "mag:francis-i/nolite-sperare-2013",
+    "title": "« Nolite sperare ». Venerabili Dei Servo Iosepho Gabrieli del Rosario Brochero presbytero caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-09-14",
+    "source": {
+      "url": null,
+      "shelf": "aas/2015",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Nolite sperare",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 732
+    }
+  },
+  {
+    "id": "mag:francis-i/hic-amor-2013",
+    "title": "« Hic amor ». Venerabili Dei Servo Thomae de Olera caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-09-21",
+    "source": {
+      "url": null,
+      "shelf": "aas/2015",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Hic amor",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 520
+    }
+  },
+  {
+    "id": "mag:francis-i/et-eritis-odio-2013",
+    "title": "« Et eritis odio ». Venerabili Servo Dei Miroslao Bulešić Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-09-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2016",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Et eritis odio",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 607
+    }
+  },
+  {
     "id": "mag:francis-i/apostolic-letter-2013-10-05",
     "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di Rolando Rivi",
     "idStatus": "provisional",
@@ -511,6 +599,28 @@
       "volume": 107,
       "year": 2015,
       "page": 6
+    }
+  },
+  {
+    "id": "mag:francis-i/cum-sanctus-2013",
+    "title": "« Cum sanctus ». De peracta Canonizatione aequipollenti beatae Angelae de Fulginio",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-10-09",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Cum sanctus",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 477
     }
   },
   {
@@ -688,6 +798,28 @@
       "volume": 107,
       "year": 2015,
       "page": 253
+    }
+  },
+  {
+    "id": "mag:francis-i/venite-benedicti-2013-11-10",
+    "title": "« Venite, benedicti ». Venerabili Dei Servae Mariae Teresiae Bonzel Fundatrici Instituti sororum Pauperum Franciscalium ab Adoratione Perpetua de Olpe caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-11-10",
+    "source": {
+      "url": null,
+      "shelf": "aas/2015",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Venite, benedicti",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 747
     }
   },
   {
@@ -1067,6 +1199,28 @@
     "sourceGenreLabel": "messages/communications"
   },
   {
+    "id": "mag:francis-i/credo-in-deum-2014",
+    "title": "« Credo in Deum ». Venerabili Servae Dei Mariae Christinae a Sabaudia Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-01-25",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Credo in Deum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 339
+    }
+  },
+  {
     "id": "mag:francis-i/world-day-for-consecrated-life-2014",
     "title": "XVIII Giornata Mondiale della Vita Consacrata - Festa della Presentazione del Signore",
     "idStatus": "minted",
@@ -1254,6 +1408,28 @@
     "sourceGenreLabel": "messages/urbi"
   },
   {
+    "id": "mag:francis-i/hoc-est-praeceptum-2014",
+    "title": "« Hoc est praeceptum ». Servo Dei Iosepho Girotti Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-04-26",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Hoc est praeceptum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 439
+    }
+  },
+  {
     "id": "mag:francis-i/apostolic-letter-2014-04-27",
     "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi il Beato Giovanni XXIII",
     "idStatus": "provisional",
@@ -1322,6 +1498,72 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/beatus-populus-2014",
+    "title": "« Beatus populus ». Venerabili Dei Servo Antonio Durcovici Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-05-17",
+    "source": {
+      "url": null,
+      "shelf": "aas/2016",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Beatus populus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 975
+    }
+  },
+  {
+    "id": "mag:francis-i/accipietis-virtutem-2014",
+    "title": "« Accipietis virtutem ». Venerabilibus Servis Dei Mario Vergara et Isidoro Ngei Ko Lat Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-05-24",
+    "source": {
+      "url": null,
+      "shelf": "aas/2016",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Accipietis virtutem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 104
+    }
+  },
+  {
+    "id": "mag:francis-i/euntes-autem-2014",
+    "title": "« Euntes autem ». Venerabili Dei Servae Spei a Iesu (in saeculo Mariae Iosephae Alhama Valera) Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-05-31",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Euntes autem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 671
+    }
   },
   {
     "id": "mag:francis-i/world-mission-day-2014",
@@ -1453,6 +1695,28 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
+    "id": "mag:francis-i/dico-autem-vobis-2014",
+    "title": "« Dico autem vobis ». Servis Dei Paulo Yun Ji-chung et CXXIII Sociis beatorum martyrum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-08-16",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Dico autem vobis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 563
+    }
+  },
+  {
     "id": "mag:francis-i/world-day-of-migrants-and-refugees-2015",
     "title": "Messaggio per la 101ª Giornata Mondiale del Migrante e del Rifugiato 2015",
     "idStatus": "minted",
@@ -1481,6 +1745,50 @@
       "ordinal": 101
     },
     "sourceGenreLabel": "messages/migration"
+  },
+  {
+    "id": "mag:francis-i/bonum-autem-2014",
+    "title": "« Bonum autem ». Venerabili Dei Servae Ioannulae Franchi Fundatrici Congregationis Sororum Hospitalariarum a Virgine Perdolente Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-09-20",
+    "source": {
+      "url": null,
+      "shelf": "aas/2015",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Bonum autem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 1115
+    }
+  },
+  {
+    "id": "mag:francis-i/regnare-christum-2014",
+    "title": "« Regnare Christum ». Venerabili Dei Servo Álvaro del Portillo y Diez de Sollano Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-09-27",
+    "source": {
+      "url": null,
+      "shelf": "aas/2015",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Regnare Christum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 999
+    }
   },
   {
     "id": "mag:francis-i/lent-2015",
@@ -1519,6 +1827,28 @@
     }
   },
   {
+    "id": "mag:francis-i/christianus-ac-religiosus-2014",
+    "title": "« Christianus ac religiosus ». Venerabili Servo Dei Francisco Zirano Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-10-12",
+    "source": {
+      "url": null,
+      "shelf": "aas/2016",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Christianus ac religiosus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 472
+    }
+  },
+  {
     "id": "mag:francis-i/world-food-day-2014",
     "title": "Messaggio per la Giornata Mondiale dell'Alimentazione 2014",
     "idStatus": "minted",
@@ -1546,6 +1876,28 @@
     "sourceGenreLabel": "messages/food"
   },
   {
+    "id": "mag:francis-i/omne-conspicimus-2014",
+    "title": "« Omne conspicimus ». Venerabili Servo Dei Paulo VI (in saeculo: Ioanni Baptistae Montini), papae, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-10-19",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Omne conspicimus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 4
+    }
+  },
+  {
     "id": "mag:francis-i/contemplationi-faventes-2014",
     "title": "\"Contemplationi faventes\". Nuova configurazione territoriale della circoscrizione ecclesiastica \"Abbazia territoriale di Montecassino\" e della diocesi di Sora-Aquino-Pontecorvo",
     "idStatus": "minted",
@@ -1571,6 +1923,50 @@
       "volume": 107,
       "year": 2015,
       "page": 122
+    }
+  },
+  {
+    "id": "mag:francis-i/esurivi-enim-2014",
+    "title": "« Esurivi enim ». Venerabili Servae Dei Assumptae Marchetti Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-10-25",
+    "source": {
+      "url": null,
+      "shelf": "aas/2016",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Esurivi enim",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 1328
+    }
+  },
+  {
+    "id": "mag:francis-i/nisi-dominus-2014",
+    "title": "« Nisi Dominus ». Venerabili Servo Dei Petro Asúa Mendía Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-11-01",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Nisi Dominus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 837
     }
   },
   {
@@ -1806,6 +2202,28 @@
       "volume": 107,
       "year": 2015,
       "page": 80
+    }
+  },
+  {
+    "id": "mag:francis-i/dabo-te-2015",
+    "title": "« Dabo te ». Quibus Beato Iosepho Vaz Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-01-14",
+    "source": {
+      "url": null,
+      "shelf": "aas/2016",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Dabo te",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 711
     }
   },
   {
@@ -2362,6 +2780,72 @@
     }
   },
   {
+    "id": "mag:francis-i/meus-cibus-2015",
+    "title": "« Meus cibus ». Venerabili Servae Dei Mariae Elisabethae Turgeon Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-04-26",
+    "source": {
+      "url": null,
+      "shelf": "aas/2016",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Meus cibus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 1332
+    }
+  },
+  {
+    "id": "mag:francis-i/tunc-dicet-rex-2015-05-02",
+    "title": "« Tunc dicet Rex ». Venerabili Servo Dei Aloisio a Maria Consolata Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-05-02",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Tunc dicet Rex",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1031
+    }
+  },
+  {
+    "id": "mag:francis-i/et-dabo-vobis-2015",
+    "title": "« Et dabo vobis ». Venerabili Servo Dei Aloisio Caburlotto Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-05-16",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Et dabo vobis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 264
+    }
+  },
+  {
     "id": "mag:francis-i/apostolic-letter-2015-05-17",
     "title": "Lettera Decretale con la quale il Sommo Pontefice ha iscritto all'albo dei Santi Giovanna Emilia de Villeneuve, Fondatrice della Congregazione delle Suore dell'Immacolata Concezione di Castres",
     "idStatus": "provisional",
@@ -2378,6 +2862,50 @@
       "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/ei-qui-diligit-2015",
+    "title": "« Ei qui diligit ». Venerabili Servo Dei Ansgario Arnolfo Romero Galdámez Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-05-23",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Ei qui diligit",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1710
+    }
+  },
+  {
+    "id": "mag:francis-i/tunc-dicet-rex-2015-05-23",
+    "title": "« Tunc dicet Rex ». Venerabili Servae Dei Irenae Stefani Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-05-23",
+    "source": {
+      "url": null,
+      "shelf": "aas/2016",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Tunc dicet Rex",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 1195
+    }
   },
   {
     "id": "mag:francis-i/laudato-si-2015",
@@ -2472,6 +3000,28 @@
       "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/venite-benedicti-2015",
+    "title": "« Venite, benedicti ». Venerabili Servo Dei Ludovico Eduardo Cestac Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-05-31",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Venite, benedicti",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1034
+    }
   },
   {
     "id": "mag:francis-i/l-attuale-contesto-comunicativo-2015",
@@ -2688,6 +3238,72 @@
     }
   },
   {
+    "id": "mag:francis-i/sed-venit-hora-2015",
+    "title": "« Sed venit hora ». Venerabili Servo Dei Flaviano Michaëli (in saec.: Iacobo) Melki Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-08-29",
+    "source": {
+      "url": null,
+      "shelf": "aas/2016",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Sed venit hora",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 1198
+    }
+  },
+  {
+    "id": "mag:francis-i/la-vicinanza-del-giubileo-2015",
+    "title": "La vicinanza del Giubileo. Iubilaeo Extraordinario Misericordiae Adveniente, ad Venerabilem Fratrem Salvatorem Fisichella, Praesidem Pontificii Consilii de Nova Evangelizatione Promovenda",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-09-01",
+    "source": {
+      "url": null,
+      "shelf": "aas/2015",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "La vicinanza del Giubileo",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 974
+    }
+  },
+  {
+    "id": "mag:francis-i/qui-enim-voluerit-2015",
+    "title": "« Qui enim voluerit ». Venerabilibus Servis Dei Fideliae Oller Angelats et II sociis, religiosis professis ex Instituto Religiosarum Sancti Iosephi Gerundae, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-09-05",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Qui enim voluerit",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1037
+    }
+  },
+  {
     "id": "mag:francis-i/world-day-of-migrants-and-refugees-2016",
     "title": "Messaggio per la 102ª Giornata Mondiale del Migrante e del Rifugiato 2016",
     "idStatus": "minted",
@@ -2786,6 +3402,94 @@
     }
   },
   {
+    "id": "mag:francis-i/labia-enim-2015",
+    "title": "« Labia enim ». Venerabili Servo Dei Pio Alberto Del Corona Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-09-19",
+    "source": {
+      "url": null,
+      "shelf": "aas/2016",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Labia enim",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 1336
+    }
+  },
+  {
+    "id": "mag:francis-i/dixit-ergo-eis-2015",
+    "title": "« Dixit ergo eis ». Quibus Beato Iunipero Serra Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-09-23",
+    "source": {
+      "url": null,
+      "shelf": "aas/2016",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Dixit ergo eis",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 599
+    }
+  },
+  {
+    "id": "mag:francis-i/beati-qui-non-viderunt-2015",
+    "title": "« Beati, qui non viderunt ». Venerabili Servae Dei Clarae Szcz ˛ esna Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-09-27",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Beati, qui non viderunt",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 210
+    }
+  },
+  {
+    "id": "mag:francis-i/accipietis-virtutem-2015",
+    "title": "« Accipietis virtutem ». Venerabilibus Servis Dei Pio Heredia et XVII Sociis Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-10-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2016",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Accipietis virtutem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 1201
+    }
+  },
+  {
     "id": "mag:francis-i/lent-2016",
     "title": "Quaresima 2016: \"Misericordia io voglio e non sacrifici\" (Mt 9,13). Le opere di misericordia nel cammino giubilare",
     "idStatus": "minted",
@@ -2856,6 +3560,138 @@
     }
   },
   {
+    "id": "mag:francis-i/coniuges-christiani-2015",
+    "title": "« Coniuges christiani ». Quibus beatis Ludovico Martin et Mariae Azeliae Guérin Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-10-18",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Coniuges christiani",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 689
+    }
+  },
+  {
+    "id": "mag:francis-i/fili-mi-2015",
+    "title": "« Fili mi ». Quibus beatae Mariae ab Immaculata Conceptione Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-10-18",
+    "source": {
+      "url": null,
+      "shelf": "aas/2016",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Fili mi",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 447
+    }
+  },
+  {
+    "id": "mag:francis-i/non-vos-me-elegistis-2015",
+    "title": "« Non vos me elegistis ». Quibus Beato Vincentio Grossi Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-10-18",
+    "source": {
+      "url": null,
+      "shelf": "aas/2016",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Non vos me elegistis",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 203
+    }
+  },
+  {
+    "id": "mag:francis-i/obsecro-itaque-vos-2015",
+    "title": "« Obsecro itaque vos ». Venerabili Servae Dei Mariae Teresiae Casini Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-10-31",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Obsecro itaque vos",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 844
+    }
+  },
+  {
+    "id": "mag:francis-i/et-ego-2015",
+    "title": "« Et ego ». Venerabili Servo Dei Francisco de Paula Victor, presbytero, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-11-14",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Et ego",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1256
+    }
+  },
+  {
+    "id": "mag:francis-i/id-enim-quod-2015",
+    "title": "« Id enim, quod ». Venerabilibus Servis Dei Friderico de Berga et XXV Sociis, martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-11-21",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Id enim, quod",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 342
+    }
+  },
+  {
     "id": "mag:francis-i/world-day-of-prayer-for-vocations-2016",
     "title": "Messaggio per la 53ª Giornata Mondiale di Preghiera per le Vocazioni 2016",
     "idStatus": "minted",
@@ -2923,6 +3759,28 @@
       "volume": 108,
       "year": 2016,
       "page": 206
+    }
+  },
+  {
+    "id": "mag:francis-i/dico-autem-vobis-2015",
+    "title": "« Dico autem vobis ». Venerabilibus Servis Dei Michaëli Tomaszek et Sbigneo Strzałkowski, presbyteris ex Ordine Fratrum Minorum Conventualium, et Alexandro Dordi, presbytero e dioecesi Bergomensi, martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-12-05",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Dico autem vobis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1260
     }
   },
   {
@@ -3357,6 +4215,28 @@
     }
   },
   {
+    "id": "mag:francis-i/calicem-quidem-2016",
+    "title": "« Calicem quidem ». Venerabilibus Servis Dei Valentino Palencia Marquina et IV sociis, martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-04-23",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Calicem quidem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1264
+    }
+  },
+  {
     "id": "mag:francis-i/world-mission-day-2016",
     "title": "Messaggio per la Giornata Missionaria Mondiale 2016",
     "idStatus": "minted",
@@ -3393,6 +4273,28 @@
     }
   },
   {
+    "id": "mag:francis-i/age-quod-agis-2016",
+    "title": "« Age quod agis ». Venerabili Dei Servo Francisco Mariae Greco Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-05-21",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Age quod agis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1267
+    }
+  },
+  {
     "id": "mag:francis-i/de-concordia-inter-codices-2016",
     "title": "Lettera Apostolica “De concordia inter Codices” in forma di 'Motu Proprio' con la quale vengono mutate alcune norme del Codice di Diritto Canonico",
     "idStatus": "minted",
@@ -3417,7 +4319,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 602
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2016-06-04",
@@ -3476,6 +4384,116 @@
     }
   },
   {
+    "id": "mag:francis-i/ecce-tibi-recta-2016",
+    "title": "« Ecce tibi recta ». Quibus beato Stanislao a Iesu Maria Papczyn ´ski Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-06-05",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Ecce tibi recta",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 553
+    }
+  },
+  {
+    "id": "mag:francis-i/et-alias-oves-2016",
+    "title": "« Et alias oves ». Quibus Beatae Mariae Elisabeth Hesselblad, religiosae, Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-06-05",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Et alias oves",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 431
+    }
+  },
+  {
+    "id": "mag:francis-i/sacratissime-cor-iesu-2016",
+    "title": "« Sacratissime Cor Iesu ». Venerabili Dei Servo Iacobo Abbondo Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-06-11",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Sacratissime Cor Iesu",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 560
+    }
+  },
+  {
+    "id": "mag:francis-i/qui-recipit-vos-2016",
+    "title": "« Qui recipit vos ». Venerabili Servae Dei Mariae a Iesu Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-06-12",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Qui recipit vos",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1270
+    }
+  },
+  {
+    "id": "mag:francis-i/ego-sum-via-et-veritas-2016",
+    "title": "« Ego sum via et veritas ». Venerabili Dei Servae Mariae Caelestis Crostarosa Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-06-18",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Ego sum via et veritas",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 1275
+    }
+  },
+  {
     "id": "mag:francis-i/vultum-dei-quaerere-2016",
     "title": "Vultum Dei quaerere, sulla vita contemplativa femminile",
     "idStatus": "minted",
@@ -3502,7 +4520,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 835
+    }
   },
   {
     "id": "mag:francis-i/i-beni-temporali-2016",
@@ -3567,6 +4591,31 @@
       "volume": 108,
       "year": 2016,
       "page": 524
+    }
+  },
+  {
+    "id": "mag:francis-i/brasiliensium-fidelium-2016",
+    "title": "« Brasiliensium fidelium ». In Brasilia, dismembratis quibusdam territoriis ecclesialium communitatum Sancti Josephi Riopretensis et Ialespolitanae, Dioecesis Votuporangensis conditur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-07-20",
+    "source": {
+      "url": null,
+      "shelf": "aas/2016",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Brasiliensium fidelium",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 973
     }
   },
   {
@@ -3710,6 +4759,28 @@
     }
   },
   {
+    "id": "mag:francis-i/et-quicumque-potum-2016",
+    "title": "« Et, quicumque potum ». Quibus beatae Teresiae de Calcutta Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-09-04",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Et, quicumque potum",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 827
+    }
+  },
+  {
     "id": "mag:francis-i/statuto-della-segreteria-per-la-comunicazione-2016",
     "title": "Statuto della Segreteria per la Comunicazione",
     "idStatus": "minted",
@@ -3778,6 +4849,94 @@
     }
   },
   {
+    "id": "mag:francis-i/ideo-dico-vobis-2016",
+    "title": "« Ideo dico vobis ». Venerabili Servo Dei Ladislao Bukowin´ski, presbytero, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-09-11",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Ideo dico vobis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 572
+    }
+  },
+  {
+    "id": "mag:francis-i/quamdiu-fecistis-2016",
+    "title": "« Quamdiu fecistis ». Venerabili Servae Dei Elisabethae Sanna Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-09-17",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Quamdiu fecistis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 899
+    }
+  },
+  {
+    "id": "mag:francis-i/quis-nos-separabit-2016",
+    "title": "« Quis nos separabit ». Venerabili Servo Dei Engelmaro (in saeculo: Huberto) Unzeitig, presbytero et martyri, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-09-24",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Quis nos separabit",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 903
+    }
+  },
+  {
+    "id": "mag:francis-i/omnis-ergo-2016",
+    "title": "« Omnis ergo ». Venerabilibus Servis Dei Ianuario Fueyo Casta-ñón et III Sociis, martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-10-08",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Omnis ergo",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1277
+    }
+  },
+  {
     "id": "mag:francis-i/world-food-day-2016",
     "title": "Messaggio per la Giornata Mondiale dell'Alimentazione 2016",
     "idStatus": "minted",
@@ -3808,6 +4967,160 @@
       "volume": 108,
       "year": 2016,
       "page": 1245
+    }
+  },
+  {
+    "id": "mag:francis-i/dabo-vobis-pastores-2016",
+    "title": "« Dabo vobis pastores ». Quibus beato Iosepho Gabrieli a Rosario Brochero Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-10-16",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Dabo vobis pastores",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 175
+    }
+  },
+  {
+    "id": "mag:francis-i/dico-autem-vobis-2016-10-16",
+    "title": "« Dico autem vobis ». Quibus Salomoni Leclercq Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-10-16",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Dico autem vobis",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 375
+    }
+  },
+  {
+    "id": "mag:francis-i/in-te-proiectus-2016",
+    "title": "« In te proiectus ». Quibus beato Iosepho Sánchez del Rio Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-10-16",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "In te proiectus",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 694
+    }
+  },
+  {
+    "id": "mag:francis-i/meum-caelum-2016",
+    "title": "« Meum caelum ». Quibus Elisabethae a Sanctissima Trinitate Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-10-16",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Meum caelum",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 583
+    }
+  },
+  {
+    "id": "mag:francis-i/scripsi-vobis-2016",
+    "title": "« Scripsi vobis ». Quibus beato Ludovico Pavoni Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-10-16",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Scripsi vobis",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 556
+    }
+  },
+  {
+    "id": "mag:francis-i/unum-ambulans-2016",
+    "title": "« Unum ambulans ». Quibus beato Emmanueli González García Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-10-16",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Unum ambulans",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 823
+    }
+  },
+  {
+    "id": "mag:francis-i/velim-etiam-2016",
+    "title": "« Velim etiam ». Quibus beato Alfonso Mariae Fusco Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-10-16",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Velim etiam",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 587
     }
   },
   {
@@ -3871,6 +5184,72 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/dico-autem-vobis-2016-10-29",
+    "title": "« Dico autem vobis ». Venerabilibus Dei Servis Iosepho Antón Gómez ac tribus Sociis caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-10-29",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Dico autem vobis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1273
+    }
+  },
+  {
+    "id": "mag:francis-i/et-multi-in-israel-2016",
+    "title": "« Et multi in Israel ». Venerabilibus Servis Dei Vincentio Prennushi, ex Ordine Fratrum Minorum, Archiepiscopo Dyrrachiensi, et XXVIII Sociis, martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-11-05",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Et multi in Israel",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1164
+    }
+  },
+  {
+    "id": "mag:francis-i/non-enim-accepistis-2016",
+    "title": "« Non enim accepistis ». Venerabili Servo Dei Mariae Eugenio a Iesu infante (in saec.: Henrico Grialou), Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-11-19",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Non enim accepistis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1379
+    }
   },
   {
     "id": "mag:francis-i/misericordia-et-misera-2016",
@@ -4009,6 +5388,75 @@
     "sourceGenreLabel": "messages/sick"
   },
   {
+    "id": "mag:francis-i/neminem-latet-2016",
+    "title": "« Neminem latet ». In Republica Islamica Mauritaniae Nuntiatura Apostolica conditur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-12-09",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Neminem latet",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 837
+    }
+  },
+  {
+    "id": "mag:francis-i/ego-enim-2016",
+    "title": "« Ego enim ». Venerabilibus Servis Dei Mario Borzaga, O.M.I., presbytero, et Paulo Thoj Xyooj, laico, martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-12-11",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Ego enim",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1361
+    }
+  },
+  {
+    "id": "mag:francis-i/ego-sum-pastor-2016",
+    "title": "« Ego sum pastor ». Venerabilibus Servis Dei Iosepho Thao Tien, presbytero, et XIV Sociis, martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-12-11",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Ego sum pastor",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 932
+    }
+  },
+  {
     "id": "mag:francis-i/urbi-et-orbi-christmas-2016",
     "title": "\"Urbi et Orbi\" - Natale 2016",
     "idStatus": "minted",
@@ -4043,6 +5491,53 @@
       "volume": 109,
       "year": 2017,
       "page": 68
+    }
+  },
+  {
+    "id": "mag:francis-i/insita-humanae-naturae-2017",
+    "title": "Danliensis. « Insita humanae naturae ». In Honduria, dismembratis quibusdam territoriis ecclesiasticae circumscriptionis Tegucigalpensis, dioecesis Danliensis conditur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-01-02",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Insita humanae naturae",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 207
+    }
+  },
+  {
+    "id": "mag:francis-i/iustus-ut-palma-2017",
+    "title": "« Iustus ut palma ». Venerabili Servo Dei Iusto Takayama Ukon, martyri, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-01-07",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Iustus ut palma",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 907
     }
   },
   {
@@ -4188,6 +5683,100 @@
     }
   },
   {
+    "id": "mag:francis-i/omnia-possum-2017",
+    "title": "« Omnia possum ». Venerabili Dei Servo Iosepho Mayr-Nusser Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-03-18",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Omnia possum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1364
+    }
+  },
+  {
+    "id": "mag:francis-i/si-quis-vult-2017",
+    "title": "« Si quis vult ». Venerabilibus Servis Dei Iosepho Álvarez-Benavides y de la Torre, presbytero et Capituli Cathedralis Decano, et CXIV Sociis, martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-03-25",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Si quis vult",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1255
+    }
+  },
+  {
+    "id": "mag:francis-i/ad-augendam-2017",
+    "title": "Evinayongensis. « Ad augendam ». In Guinea Aequinoctialis, dismembrato territorio dioecesis Bataënsis, dioecesis Evinayongensis conditur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-04-01",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Ad augendam",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 435
+    }
+  },
+  {
+    "id": "mag:francis-i/onerosa-pastoralis-cura-2017",
+    "title": "Mongomensis. « Onerosa pastoralis cura ». In Guinea Aequinoctialis, dismembrato territorio dioecesis Ebebiyinensis, dioecesis Mongomensis conditur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-04-01",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Onerosa pastoralis cura",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 437
+    }
+  },
+  {
     "id": "mag:francis-i/urbi-et-orbi-easter-2017",
     "title": "\"Urbi et Orbi\" - Pasqua 2017",
     "idStatus": "minted",
@@ -4221,6 +5810,116 @@
       "volume": 109,
       "year": 2017,
       "page": 479
+    }
+  },
+  {
+    "id": "mag:francis-i/unicuique-autem-datur-2017",
+    "title": "« Unicuique autem datur ». Venerabili Servo Dei Aloisio Antonio Rosa Ormières, presbytero, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-04-22",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Unicuique autem datur",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1382
+    }
+  },
+  {
+    "id": "mag:francis-i/ego-sum-2017-04-29",
+    "title": "« Ego sum ». Venerabili Dei Servae Leopoldinae Naudet caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-04-29",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Ego sum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 267
+    }
+  },
+  {
+    "id": "mag:francis-i/domine-iesu-2017",
+    "title": "« Domine Iesu ». Venerabilibus Servis Dei Antonio Arribas Hortigüela, presbytero, et VI sociis, martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-05-06",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Domine Iesu",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 270
+    }
+  },
+  {
+    "id": "mag:francis-i/resplendebat-cutis-2017",
+    "title": "« Resplendebat cutis ». Quibus beatis Francisco et Hyacinthae Marto Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-05-13",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Resplendebat cutis",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 895
+    }
+  },
+  {
+    "id": "mag:francis-i/ut-omnes-unum-2017",
+    "title": "« Ut omnes unum ». Venerabili Dei Servo Ioanni Sullivan caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-05-13",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Ut omnes unum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1527
     }
   },
   {
@@ -4261,6 +5960,28 @@
     }
   },
   {
+    "id": "mag:francis-i/iubilate-domino-2017",
+    "title": "« Iubilate Domino ». Venerabili Dei Servae Italae Mela caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-06-10",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Iubilate Domino",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1
+    }
+  },
+  {
     "id": "mag:francis-i/world-day-of-the-poor-2017",
     "title": "I Giornata Mondiale dei Poveri, 2017: Non amiamo a parole ma con i fatti",
     "idStatus": "minted",
@@ -4296,6 +6017,28 @@
       "volume": 109,
       "year": 2017,
       "page": 768
+    }
+  },
+  {
+    "id": "mag:francis-i/per-crucem-2017",
+    "title": "« Per crucem ». Venerabili Servo Dei Theophilo Matulionis Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-06-25",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Per crucem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 478
     }
   },
   {
@@ -4443,6 +6186,50 @@
     }
   },
   {
+    "id": "mag:francis-i/mea-ex-parte-2017",
+    "title": "« Mea ex parte ». Venerabili Dei Servo Petro Mariae Ramírez Ramos caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-09-08",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Mea ex parte",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1371
+    }
+  },
+  {
+    "id": "mag:francis-i/semper-enim-2017",
+    "title": "« Semper enim ». Venerabili Dei Servo Iesu Aemilio Jaramillo Monsalve caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-09-08",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Semper enim",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1368
+    }
+  },
+  {
     "id": "mag:francis-i/summa-familiae-cura-2017",
     "title": "Lettera Apostolica in forma di Motu Proprio Summa familiae cura, che istituisce il Pontificio Istituto Teologico Giovanni Paolo II per le Scienze del Matrimonio e della Famiglia",
     "idStatus": "minted",
@@ -4479,6 +6266,279 @@
     }
   },
   {
+    "id": "mag:francis-i/quam-indefatigabilis-2017",
+    "title": "Bomadiensis. « Quam indefatigabilis ». Vicariatus Apostolicus Bomadiensis in Nigeria ad Dioecesis gradum dignitatemque attollitur immutatis finibus et nomine",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-09-21",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Quam indefatigabilis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 975
+    }
+  },
+  {
+    "id": "mag:francis-i/quis-nos-separabit-2017",
+    "title": "« Quis nos separabit ». Venerabili Dei Servo Stanislao Francisco Rother caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-09-23",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Quis nos separabit",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1515
+    }
+  },
+  {
+    "id": "mag:francis-i/in-hoc-novimus-2017",
+    "title": "« In hoc novimus ». Venerabili Dei Servo Tito Zeman caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-09-30",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "In hoc novimus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 691
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2017-10-02",
+    "title": "Francistaunen.: Vicariatus Apostolicus Francistaunensis ad gradum et dignitatem dioecesis evehitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-10-02",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 179
+    }
+  },
+  {
+    "id": "mag:francis-i/dabo-vobis-pastores-2017",
+    "title": "« Dabo vobis pastores ». Venerabili Servo Dei Arsenio a Trigolo Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-10-07",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Dabo vobis pastores",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 273
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2017-10-09-1",
+    "title": "Hosuren.: In India, ex quibusdam territoriis civitatis Tamil Nadu atque Unionis Puducherry, nova eparchia Hosurensis conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-10-09",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 382
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2017-10-09-2",
+    "title": "Shamshabaden.: In India, ex omnibus territoriis nulli hucusque eparchiali iurisdictioni pro christifidelibus ritus Syro-Malabarensis subiectis, nova eparchia Shamshabadensis conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-10-09",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 384
+    }
+  },
+  {
+    "id": "mag:francis-i/the-remarkable-varietas-ecclesiarum-2017",
+    "title": "« The remarkable varietas Ecclesiarum ». Ad Episcopos Indiae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-10-09",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "The remarkable varietas Ecclesiarum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 1171
+    }
+  },
+  {
+    "id": "mag:francis-i/nos-autem-debemus-2017",
+    "title": "« Nos autem debemus ». Quibus beatis martyribus Christophoro, Antonio et Ioanni Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-10-15",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Nos autem debemus",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 1271
+    }
+  },
+  {
+    "id": "mag:francis-i/praedicator-pulcherrimum-habet-2017",
+    "title": "« Praedicator pulcherrimum habet ». Quibus beato Angelo ab Acrio Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-10-15",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Praedicator pulcherrimum habet",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 1167
+    }
+  },
+  {
+    "id": "mag:francis-i/qui-autem-2017",
+    "title": "« Qui autem ». Quibus Faustino Miguez Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-10-15",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Qui autem",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 247
+    }
+  },
+  {
+    "id": "mag:francis-i/vobis-hoc-2017",
+    "title": "« Vobis hoc ». Quibus beatis martyribus Andreae de Soveral, Ambrosio Francisco Ferro, Matthaeo Moreira et viginti septem Sociis Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-10-15",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Vobis hoc",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 250
+    }
+  },
+  {
     "id": "mag:francis-i/world-food-day-2017",
     "title": "Visita del Santo Padre alla sede della FAO a Roma",
     "idStatus": "minted",
@@ -4504,6 +6564,72 @@
       "year": 2017
     },
     "sourceGenreLabel": "messages/food"
+  },
+  {
+    "id": "mag:francis-i/hi-sunt-2017",
+    "title": "« Hi sunt ». Venerabilibus Servis Dei Matthaeo Casals, presbytero, Theophilo Casajús, Ferdinando Saperas et CVI Sociis, martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-10-21",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Hi sunt",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 488
+    }
+  },
+  {
+    "id": "mag:francis-i/il-30-novembre-2019-2017",
+    "title": "« Il 30 novembre 2019 ». In occasione centesimae anniversariae memoriae promulgationis Epistolae Apostolicae « Maximum illud » de fide catholica per terrarum orbem propaganda",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-10-22",
+    "source": {
+      "url": null,
+      "shelf": "aas/2017",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Il 30 novembre 2019",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 1177
+    }
+  },
+  {
+    "id": "mag:francis-i/pater-semper-2017",
+    "title": "« Pater, semper ». Venerabili Dei Servo Ioanni Schiavo caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-10-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Pater, semper",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1281
+    }
   },
   {
     "id": "mag:francis-i/lent-2018",
@@ -4544,6 +6670,72 @@
     }
   },
   {
+    "id": "mag:francis-i/beati-qui-esuriunt-2017",
+    "title": "« Beati, qui esuriunt ». Venerabili Servae Dei Reginae Mariae Vattalil Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-11-04",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Beati, qui esuriunt",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1518
+    }
+  },
+  {
+    "id": "mag:francis-i/et-effundam-2017",
+    "title": "« Et effundam ». Venerabilibus Servis Dei Iosepho Mariae Fernández Sánchez, presbytero, et XXXVIII Sociis, martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-11-11",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Et effundam",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1530
+    }
+  },
+  {
+    "id": "mag:francis-i/quemadmodum-communicatis-2017",
+    "title": "« Quemadmodum communicatis ». Venerabilibus Servis Dei Vincentio Queralt Lloret, ex Congregatione Missionis, presbytero, et XX Sociis, martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-11-11",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Quemadmodum communicatis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1521
+    }
+  },
+  {
     "id": "mag:francis-i/world-day-of-peace-2018",
     "title": "LI Giornata Mondiale della Pace 2018 - Migranti e rifugiati: uomini e donne in cerca di pace",
     "idStatus": "minted",
@@ -4578,6 +6770,74 @@
       "volume": 109,
       "year": 2017,
       "page": 1327
+    }
+  },
+  {
+    "id": "mag:francis-i/filius-hominis-2017",
+    "title": "« Filius hominis ». Venerabili Dei Servo Francisco Solano Casey Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-11-18",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Filius hominis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1714
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2017-11-22",
+    "title": "Crucis Animarum: In Brasilia, dismembratis quibusdam territoriis archidioecesis Sancti Salvatoris in Brasilia, dioecesis Crucis Animarum conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-11-22",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 475
+    }
+  },
+  {
+    "id": "mag:francis-i/ego-sum-2017-11-25",
+    "title": "« Ego sum ». Venerabili Servae Dei Catharinae a Maria, in saeculo Iosephae Saturninae Rodríguez, viduae de Zavalía et Fundatrici Congregationis Sororum Servarum SS.mi Cordis Iesu, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-11-25",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Ego sum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1854
     }
   },
   {
@@ -4616,6 +6876,54 @@
       "volume": 110,
       "year": 2018,
       "page": 91
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2017-11-30-1",
+    "title": "Bluefielden.: Vicariatus Apostolicus Bluefieldensis ad gradum dioecesis attollitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-11-30",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 471
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2017-11-30-2",
+    "title": "Siunaën.: Nova dioecesis in Nicaragua, a Bluefieldensi Sede quibusdam detractis territoriis, constituitur, Siunaënsis appellanda",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-11-30",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 473
     }
   },
   {
@@ -4798,6 +7106,28 @@
     "sourceGenreLabel": "messages/consecrated_life"
   },
   {
+    "id": "mag:francis-i/ne-terreamini-2018",
+    "title": "« Ne terreamini ». Venerabili Servo Dei Teresio Olivelli, Christifideli laico, martyri, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-02-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Ne terreamini",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 506
+    }
+  },
+  {
     "id": "mag:francis-i/world-youth-day-2018",
     "title": "XXXIII Giornata Mondiale della Gioventù, 2018: «Non temere, Maria, perché hai trovato grazia presso Dio» (Lc 1,30)",
     "idStatus": "minted",
@@ -4951,6 +7281,163 @@
     }
   },
   {
+    "id": "mag:francis-i/apostolic-letter-2018-04-10",
+    "title": "Statutum Dicasterii pro Laicis, Familia et Vita",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-04-10",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 695
+    }
+  },
+  {
+    "id": "mag:francis-i/accipietis-virtutem-2018",
+    "title": "« Accipietis virtutem ». Venerabili Dei Servo Luciano Botovasoa Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-04-15",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Accipietis virtutem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 509
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2018-04-25",
+    "title": "Chiangraien. In Thailandia nova conditur dioecesis Chiangraiensis",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-04-25",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 928
+    }
+  },
+  {
+    "id": "mag:francis-i/venite-benedicti-2018-04-28",
+    "title": "« Venite, benedicti ». Venerabili Servae Dei Hannae Chrzanowska laicae, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-04-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Venite, benedicti",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 512
+    }
+  },
+  {
+    "id": "mag:francis-i/mihi-autem-2018",
+    "title": "« Mihi autem ». Venerabili Dei Servo Ioanni Brenner caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-05-01",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Mihi autem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 3
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2018-05-01",
+    "title": "Macedoniae. Exarchia Apostolica Macedoniae in Eparchiam sub titulo Beatae Mariae Virginis in Caelum Assumptae Strumnitzensem-Scopiensem extollitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-05-01",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 930
+    }
+  },
+  {
+    "id": "mag:francis-i/venite-benedicti-2018-05-05",
+    "title": "« Venite, benedicti ». Venerabili Servae Dei Clarae Fey, virgini, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-05-05",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Venite, benedicti",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 6
+    }
+  },
+  {
     "id": "mag:francis-i/world-mission-day-2018",
     "title": "Messaggio per la Giornata Missionaria Mondiale 2018",
     "idStatus": "minted",
@@ -4982,6 +7469,96 @@
     "sourceGenreLabel": "messages/missions"
   },
   {
+    "id": "mag:francis-i/mea-profectio-2018",
+    "title": "« Mea profectio ». Venerabili Servae Dei Leonillae Sgorbati, M.C., Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-05-26",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Mea profectio",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1169
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2018-05-31",
+    "title": "Tigren. In Venetiola nova conditur dioecesis Trigrensis",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-05-31",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1162
+    }
+  },
+  {
+    "id": "mag:francis-i/omnia-possum-2018",
+    "title": "« Omnia possum ». Venerabili Dei Servae Mariae Crucifixae ab Amore Divino (in saeculo: Mariae Gargani) caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-06-02",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Omnia possum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1690
+    }
+  },
+  {
+    "id": "mag:francis-i/hosanna-filio-david-2018",
+    "title": "« Hosanna Filio David! ». Venerabili Servae Dei Mariae a Conceptione (in saeculo: Adelaidi de Batz de Trenquelléon) Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-06-10",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Hosanna Filio David!",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1694
+    }
+  },
+  {
     "id": "mag:francis-i/world-day-of-the-poor-2018",
     "title": "II Giornata Mondiale dei Poveri, 2018: Questo povero grida e il Signore lo ascolta",
     "idStatus": "minted",
@@ -5011,6 +7588,50 @@
       "ordinal": 2
     },
     "sourceGenreLabel": "messages/poveri"
+  },
+  {
+    "id": "mag:francis-i/iesus-hostia-2018",
+    "title": "« Iesus Hostia ». Venerabili Servae Dei Mariae de Monte Carmelo caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-06-16",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Iesus Hostia",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 783
+    }
+  },
+  {
+    "id": "mag:francis-i/deus-caritas-est-2018",
+    "title": "« Deus caritas est ». Venerabili Servae Dei Mariae Feliciae a Iesu Sacramentato Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-06-23",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Deus caritas est",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1698
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-prayer-for-the-care-of-creation-2018",
@@ -5048,6 +7669,52 @@
     }
   },
   {
+    "id": "mag:francis-i/papal-bull-2018-09-05",
+    "title": "Prisrensis-Priscensis: Administratio Apostolica Prisrianensis ad gradum et dignitatem dioecesis evehitur Prisrensis-Priscensis appellandae et ipsius novae Ecclesiae nominatur Episcopus",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-09-05",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1708
+    }
+  },
+  {
+    "id": "mag:francis-i/audite-fratres-2018",
+    "title": "« Audite, fratres ». Venerabili Dei Servae Alfonsae Mariae Eppinger caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-09-09",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Audite, fratres",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1701
+    }
+  },
+  {
     "id": "mag:francis-i/episcopalis-communio-2018",
     "title": "Episcopalis communio, sul Sinodo dei Vescovi",
     "idStatus": "minted",
@@ -5073,7 +7740,57 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1359
+    }
+  },
+  {
+    "id": "mag:francis-i/quis-nos-separabit-2018",
+    "title": "« Quis nos separabit ». Venerabili Servae Dei Veronicae Antal, virgini et martyri, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-09-22",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Quis nos separabit",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 677
+    }
+  },
+  {
+    "id": "mag:francis-i/deus-meus-2018",
+    "title": "« Deus meus ». Venerabili Servo Dei Ioanni Baptistae Fouque, presbytero dioecesano, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-09-30",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Deus meus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1857
+    }
   },
   {
     "id": "mag:francis-i/lent-2019",
@@ -5108,6 +7825,160 @@
     "sourceGenreLabel": "messages/lent"
   },
   {
+    "id": "mag:francis-i/dicebat-autem-2018",
+    "title": "« Dicebat autem ». Quibus beato Nuntio Sulprizio Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-10-14",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Dicebat autem",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 664
+    }
+  },
+  {
+    "id": "mag:francis-i/faciem-tuam-2018",
+    "title": "« Faciem tuam ». Quibus beato Francisco Spinelli Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-10-14",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Faciem tuam",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 659
+    }
+  },
+  {
+    "id": "mag:francis-i/in-nomine-domini-2018",
+    "title": "« In nomine Domini ». Quibus beato Paulo VI Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-10-14",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "In nomine Domini",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1703
+    }
+  },
+  {
+    "id": "mag:francis-i/infirma-mundi-2018",
+    "title": "« Infirma mundi ». Quibus beatae Mariae Catharinae Kasper Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-10-14",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Infirma mundi",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 655
+    }
+  },
+  {
+    "id": "mag:francis-i/maiorem-hac-dilectionem-2018",
+    "title": "« Maiorem hac dilectionem ». Quibus beato Ansgario Arnolfo Romero Galdámez Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-10-14",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Maiorem hac dilectionem",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1239
+    }
+  },
+  {
+    "id": "mag:francis-i/sacerdotes-tui-induantur-2018",
+    "title": "« Sacerdotes tui induantur ». Quibus beato Vincentio Romano Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-10-14",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Sacerdotes tui induantur",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1243
+    }
+  },
+  {
+    "id": "mag:francis-i/spiritus-domini-2018",
+    "title": "« Spiritus Domini ». Quibus beatae Nazariae Ignatiae a Sancta Teresia a Iesu Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-10-14",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Spiritus Domini",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 668
+    }
+  },
+  {
     "id": "mag:francis-i/world-food-day-2018",
     "title": "Messaggio per la Giornata Mondiale dell'Alimentazione 2018",
     "idStatus": "minted",
@@ -5139,6 +8010,94 @@
       "volume": 110,
       "year": 2018,
       "page": 1572
+    }
+  },
+  {
+    "id": "mag:francis-i/et-dabo-vobis-2018",
+    "title": "« Et dabo vobis ». Venerabili Dei Servo Tiburtio Arnáiz Muñoz caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-10-20",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Et dabo vobis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 1156
+    }
+  },
+  {
+    "id": "mag:francis-i/hereditas-quam-omnes-2018",
+    "title": "« Hereditas quam omnes ». Venerabilibus Dei Servis Tullio Maruzzo et Aloisio Obdulio Arroyo Navarro caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-10-27",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Hereditas quam omnes",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1860
+    }
+  },
+  {
+    "id": "mag:francis-i/discite-a-me-2018",
+    "title": "« Discite a me ». Venerabili Dei Servae Cloeliae Merloni caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-11-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Discite a me",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1863
+    }
+  },
+  {
+    "id": "mag:francis-i/amen-amen-dico-2018",
+    "title": "« Amen, amen dico ». Venerabilibus Servis Dei Theodoro Illera del Olmo, S.P. ad V., sacerdoti, et XV Sociis, religiosis viris et mulieribus ac laicis, martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-11-10",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Amen, amen dico",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 680
     }
   },
   {
@@ -5176,6 +8135,30 @@
       "volume": 110,
       "year": 2018,
       "page": 1750
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2018-11-23",
+    "title": "Sancti Ephraimi K Hadkien.: Exarchia Apostolica Sancti Ephraimi Khadkiensis in Eparchiam eodem titulo extollitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-11-23",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 254
     }
   },
   {
@@ -5238,6 +8221,54 @@
     }
   },
   {
+    "id": "mag:francis-i/papal-bull-2018-12-03",
+    "title": "Hearsten. Ac M Usonitanae: Hearstensis ac Musonitanae dioeceses iunguntur et ipsius novae Ecclesiae nominatur Episcopus",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-12-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 116
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2018-12-06",
+    "title": "Sancti Nicolai De Ruski Krstur: Exarchia Apostolica Serbiae in Eparchiam sub titulo Sancti Nicolai de Ruski Krstur extollitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-12-06",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 256
+    }
+  },
+  {
     "id": "mag:francis-i/world-day-of-peace-2019",
     "title": "LII Giornata Mondiale della Pace 2019 - La buona politica è al servizio della pace",
     "idStatus": "minted",
@@ -5273,6 +8304,78 @@
       "volume": 111,
       "year": 2019,
       "page": 45
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2018-12-21",
+    "title": "Mbeyaën.: Nova in Tanzania erigitur Provincia Ecclesiastica, cuius sedes erit Ecclesia Mbeyaënsis, quae, hanc ob rem, ad Metropolitanae Ecclesiae gradum et dignitatem evehitur et suffraganeae eius erunt Cathedrales Ecclesiae Iringaënsis et Sumbavangensis",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-12-21",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 258
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2018-12-22-1",
+    "title": "Hatinhen.: In Vietnamia, dismembrato territorio dioecesis Vinhensis, dioecesis Hatinhensis conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-12-22",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 260
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2018-12-22-2",
+    "title": "Mississaugen.: Exarchia Apostolica Canadae in Eparchiam sub titulo Mississaugensi extollitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-12-22",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 262
     }
   },
   {
@@ -5494,6 +8597,28 @@
     "sourceGenreLabel": "messages/consecrated_life"
   },
   {
+    "id": "mag:francis-i/rex-mundi-2019-03-09",
+    "title": "« Rex mundi ». Venerabili Dei Servo Angelo Cuartas Cristóbal et VIII Sociis Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-03-09",
+    "source": {
+      "url": null,
+      "shelf": "aas/2021",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Rex mundi",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 6
+    }
+  },
+  {
     "id": "mag:francis-i/communis-vita-2019",
     "title": "Lettera Apostolica in forma di “Motu proprio” Communis vita, con la quale vengono mutate alcune norme del codice di diritto canonico",
     "idStatus": "minted",
@@ -5528,6 +8653,28 @@
       "volume": 111,
       "year": 2019,
       "page": 483
+    }
+  },
+  {
+    "id": "mag:francis-i/pater-in-manus-tuas-2019",
+    "title": "« Pater, in manus tuas ». Venerabili Servo Dei Mariano Mullerat i Soldevila, patri familias et martyri, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-03-23",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Pater, in manus tuas",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 787
     }
   },
   {
@@ -5599,6 +8746,30 @@
     }
   },
   {
+    "id": "mag:francis-i/papal-bull-2019-04-03",
+    "title": "Huancané: In Peruvia, dismembratis quibusdam territoriis praelaturarum territorialium Ayavirensis et Iuliensis, nova praelatura territorialis Sancti Iacobi de Huancané conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-04-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 118
+    }
+  },
+  {
     "id": "mag:francis-i/urbi-et-orbi-easter-2019",
     "title": "\"Urbi et Orbi\" - Pasqua 2019",
     "idStatus": "minted",
@@ -5636,6 +8807,50 @@
       "volume": 111,
       "year": 2019,
       "page": 731
+    }
+  },
+  {
+    "id": "mag:francis-i/quis-nos-2019",
+    "title": "« Quis nos ». Venerabilibus Servis Dei Henrico Angelo Angelelli Carletti, episcopo, et III Sociis, martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-04-27",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Quis nos",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 431
+    }
+  },
+  {
+    "id": "mag:francis-i/si-quis-vult-2019",
+    "title": "« Si quis vult ». Venerabili Servae Dei Mariae a Conceptione Cabrera, viduae Armida, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-05-04",
+    "source": {
+      "url": null,
+      "shelf": "aas/2021",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Si quis vult",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 10
     }
   },
   {
@@ -5678,6 +8893,28 @@
     }
   },
   {
+    "id": "mag:francis-i/spe-gaudentes-2019",
+    "title": "« Spe gaudentes ». Venerabili Dei Servae Mariae Guadalupe Ortiz de Landázuri y Fernández de Heredia caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-05-18",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Spe gaudentes",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 127
+    }
+  },
+  {
     "id": "mag:francis-i/world-day-of-migrants-and-refugees-2019",
     "title": "Messaggio per la 105ª Giornata Mondiale del Migrante e del Rifugiato 2019",
     "idStatus": "minted",
@@ -5715,6 +8952,54 @@
       "volume": 111,
       "year": 2019,
       "page": 908
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2019-05-30",
+    "title": "Sancti Vincentii De Caguan: In Columbia, Vicariatus Apostolicus Sancti Vincentii de Caguan in dioecesim eodem titulo extollitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-05-30",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 833
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2019-06-06",
+    "title": "Cazastaniae Et Asiae Centralis: Administratio Apostolica Cazastaniae et Asiae Centralis pro fidelibus ritus byzantini erigitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-06-06",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 835
     }
   },
   {
@@ -5787,6 +9072,166 @@
     "sourceGenreLabel": "messages/poveri"
   },
   {
+    "id": "mag:francis-i/nunc-gaudeo-2019-06-15",
+    "title": "« Nunc gaudeo ». Venerabili Dei Servae Hedvigi Carboni caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-06-15",
+    "source": {
+      "url": null,
+      "shelf": "aas/2021",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Nunc gaudeo",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 556
+    }
+  },
+  {
+    "id": "mag:francis-i/iesus-recordatur-2019",
+    "title": "« Iesus recordatur ». Venerabilibus Servis Dei Mariae Carmelitidi (in saec.: Isabellae) Lacaba Andía et XIII Sociis, religiosis professis, martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-06-22",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Iesus recordatur",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 130
+    }
+  },
+  {
+    "id": "mag:francis-i/et-dabo-vobis-pastores-2019",
+    "title": "« Et dabo vobis pastores ». De peracta Canonizatione aequipollente Bartholomaei a Martyribus",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-07-05",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Et dabo vobis pastores",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1247
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2019-07-10",
+    "title": "Cristalandiensis: In Brasilia Praelatura territorialis Cristalandiensis in dioecesim eodem nomine extollitur, mutatis finibus eiusdem ac dioecesis Miracemanae Tocantinensis, atque primus Episcopus nominatur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-07-10",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1251
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2019-07-11",
+    "title": "Italiae: Exarchia Apostolica Italiae conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-07-11",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 121
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2019-07-13",
+    "title": "Florentiae: In Columbia nova Provincia Ecclesiastica Florentiae appellanda conditur eademque Sedes ad dignitatem Ecclesiae Metropolitanae elevatur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-07-13",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1254
+    }
+  },
+  {
+    "id": "mag:francis-i/rex-mundi-2019-08-20",
+    "title": "« Rex mundi ». Venerabili Servo Dei Richardo Henkes, presbytero professo Societatis Apostolatus Catholici, martyri, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-08-20",
+    "source": {
+      "url": null,
+      "shelf": "aas/2021",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Rex mundi",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 171
+    }
+  },
+  {
     "id": "mag:francis-i/world-day-of-prayer-for-the-care-of-creation-2019",
     "title": "Messaggio del Santo Padre per la celebrazione della Giornata mondiale di preghiera per la cura del creato",
     "idStatus": "minted",
@@ -5820,6 +9265,148 @@
       "volume": 111,
       "year": 2019,
       "page": 1412
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2019-09-09",
+    "title": "Diliensis: Dioecesis Diliensis ad gradum archidioecesis metropolitanae attollitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-09-09",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1505
+    }
+  },
+  {
+    "id": "mag:francis-i/licet-is-2019",
+    "title": "« Licet is ». Venerabili Dei Servae Benedictae Bianchi Porro caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-09-14",
+    "source": {
+      "url": null,
+      "shelf": "aas/2021",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Licet is",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 174
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2019-09-28-1",
+    "title": "Azcapotzalcensis: In Mexico, dismembratis quibusdam territoriis Archidioecesis Metropolitanae Mexicanae, dioecesis Azcapotzalcensis conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-09-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1509
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2019-09-28-2",
+    "title": "Iztapalapana: In Mexico, dismembratis quibusdam territoriis Archidioecesis Metropolitanae Mexicanae, dioecesis Iztapalapana conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-09-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1507
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2019-09-28-3",
+    "title": "Tolucensis: In Mexico nova Provincia Ecclesiastica Tolucensis appellanda conditur eademque Sedes ad dignitatem Ecclesiae Metropolitanae evehitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-09-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1513
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2019-09-28-4",
+    "title": "Xochimilcensis: In Mexico, dismembratis quibusdam territoriis Archidioecesis Metropolitanae Mexicanae, dioecesis Xochimilcensis conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-09-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1511
     }
   },
   {
@@ -5866,6 +9453,54 @@
     }
   },
   {
+    "id": "mag:francis-i/papal-bull-2019-10-04",
+    "title": "Mercedensis – Luianensis: In Argentina nova Provincia Ecclesiastica Mercedensis – Luianensis appellanda conditur eademque Sedes ad dignitatem Ecclesiae Metropolitanae evehitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-10-04",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1684
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2019-10-05",
+    "title": "Urbis: Templum S. Aegidii trans Tiberim ad dignitatem Tituli Presbyteralis evehitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-10-05",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1686
+    }
+  },
+  {
     "id": "mag:francis-i/lent-2020",
     "title": "Quaresima 2020: «Vi supplichiamo in nome di Cristo: lasciatevi riconciliare con Dio» (2Cor 5,20)",
     "idStatus": "minted",
@@ -5904,6 +9539,96 @@
     }
   },
   {
+    "id": "mag:francis-i/papal-bull-2019-10-11",
+    "title": "Sancti Ioannis Xxiii Sophiae: Exarchia Apostolica Sophiae in Eparchiam sub titulo Sancti Ioannis XXIII Sophiae pro fidelibus ritus byzantini extollitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-10-11",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1688
+    }
+  },
+  {
+    "id": "mag:francis-i/ex-umbris-2019",
+    "title": "« Ex umbris ». Quibus beato Ioanni Henrico Newman Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-10-13",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Ex umbris",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1668
+    }
+  },
+  {
+    "id": "mag:francis-i/infirmus-eram-2019",
+    "title": "« Infirmus eram ». Quibus beatae Iosephinae Vannini Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-10-13",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Infirmus eram",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1678
+    }
+  },
+  {
+    "id": "mag:francis-i/summe-gloriose-deus-2019",
+    "title": "« Summe, gloriose Deus ». Quibus beatae Margaritae Bays Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-10-13",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Summe, gloriose Deus",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1664
+    }
+  },
+  {
     "id": "mag:francis-i/world-food-day-2019",
     "title": "Messaggio per la Giornata Mondiale dell'Alimentazione 2019",
     "idStatus": "minted",
@@ -5936,6 +9661,28 @@
     }
   },
   {
+    "id": "mag:francis-i/in-quacumque-die-2019",
+    "title": "« In quacumque die ». Venerabili Dei Servo Alfredo Cremonesi caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-10-19",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "In quacumque die",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 790
+    }
+  },
+  {
     "id": "mag:francis-i/apostolic-letter-2019-10-22",
     "title": "Lettera Apostolica in forma di Motu Proprio per il cambiamento della denominazione da Archivio Segreto Vaticano ad Archivio Apostolico Vaticano",
     "idStatus": "provisional",
@@ -5965,6 +9712,144 @@
       "volume": 111,
       "year": 2019,
       "page": 1681
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2019-11-06-1",
+    "title": "Santaremensis: Nova in Brasilia erigitur Provincia Ecclesiastica, cuius sedes erit Ecclesia Santaremensis, quae, hanc ob rem, ad Metropolitanae Ecclesiae gradum et dignitatem evehitur et suffraganeae eius erunt Cathedrales Ecclesiae Obidensis et Xinguensis – Altamirensis atque Praelaturae territoriales Itaitubaënsis et Xinguensis Superior – Tucumanensis in Brasilia",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-11-06",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1852
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2019-11-06-2",
+    "title": "Xinguensis Superior – Tucumanensis In Brasilia: In Brasilia, exstincta Praelatura territoriali Xinguensi eiusdemque dismembrato territorio, nova Praelatura territorialis Xinguensis Superior – Tucumanensis in Brasilia conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-11-06",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1849
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2019-11-06-3",
+    "title": "Xinguensis – A Ltamirensis: In Brasilia, exstincta Praelatura territoriali Xinguensi eiusdemque bipe rtito territorio, dioecesis Xinguensis – Altamirensis conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-11-06",
+    "source": {
+      "url": null,
+      "shelf": "aas/2019",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1846
+    }
+  },
+  {
+    "id": "mag:francis-i/nunc-gaudeo-2019-11-09",
+    "title": "« Nunc gaudeo ». Venerabili Servae Dei Mariae Aemiliae Riquelme Zayas Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-11-09",
+    "source": {
+      "url": null,
+      "shelf": "aas/2021",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Nunc gaudeo",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 559
+    }
+  },
+  {
+    "id": "mag:francis-i/nisi-granum-2019",
+    "title": "« Nisi granum ». Venerabili Servo Dei Salvatori Victori Aemilio Moscoso Cárdenas Beatorum honores tribuuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-11-16",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Nisi granum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 794
+    }
+  },
+  {
+    "id": "mag:francis-i/dabo-vobis-2019",
+    "title": "« Dabo vobis ». Venerabili Dei Servo Donizetti Tavares de Lima caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-11-23",
+    "source": {
+      "url": null,
+      "shelf": "aas/2021",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Dabo vobis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 633
     }
   },
   {
@@ -6314,6 +10199,78 @@
     }
   },
   {
+    "id": "mag:francis-i/papal-bull-2020-02-15",
+    "title": "Cancunen. – Chetumalien.: In Mexico nova conditur dioecesis Cancunensis-Chetumaliensis",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-02-15",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 274
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2020-03-02",
+    "title": "Maldonaden. – Orientalis Orae – Fodinen.: In Uruquaria dioeceses Maldonadensis - Orientalis Orae et Fodinensis in unam ac novam circumscriptionem ecclesiasticam uniuntur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-03-02",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 355
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2020-03-05",
+    "title": "Ekvulobiana: In Nigeria, dismembrato territorio dioecesis Avkaënsis, dioecesis Ekvulobiana conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-03-05",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 423
+    }
+  },
+  {
     "id": "mag:francis-i/world-day-of-prayer-for-vocations-2020",
     "title": "Messaggio per la 57a Giornata Mondiale di Preghiera per le Vocazioni 2020",
     "idStatus": "minted",
@@ -6399,6 +10356,30 @@
     "sourceGenreLabel": "messages/urbi"
   },
   {
+    "id": "mag:francis-i/papal-bull-2020-04-02",
+    "title": "Kontagorana: In Nigeria nova dioecesis Kontagorana appellanda conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-04-02",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 426
+    }
+  },
+  {
     "id": "mag:francis-i/urbi-et-orbi-easter-2020",
     "title": "\"Urbi et Orbi\" - Pasqua 2020",
     "idStatus": "minted",
@@ -6433,6 +10414,30 @@
       "volume": 112,
       "year": 2020,
       "page": 451
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2020-05-06",
+    "title": "Ottavien. – Cornubien.: In Canada archidioecesis Ottaviensis ac dioecesis Alexandrina - Cornubiensis in unam ac novam circumscriptionem ecclesiasticam uniuntur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-05-06",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 607
     }
   },
   {
@@ -6633,6 +10638,52 @@
     }
   },
   {
+    "id": "mag:francis-i/quae-sursum-2020",
+    "title": "« Quae sursum ». Venerabili Dei Servae Mariae Aloisiae a Sanctissimo Sacramento caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-09-26",
+    "source": {
+      "url": null,
+      "shelf": "aas/2021",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Quae sursum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 797
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2020-09-29",
+    "title": "Sicuanen.: In Peruvia praelatura territorialis Sicuanensis in dioecesim eodem nomine extollitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-09-29",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 873
+    }
+  },
+  {
     "id": "mag:francis-i/scripturae-sacrae-affectus-2020",
     "title": "Lettera Apostolica Scripturae Sacrae affectus nel XVI centenario della morte di San Girolamo",
     "idStatus": "minted",
@@ -6729,6 +10780,50 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:francis-i/quae-nos-2020",
+    "title": "« Quae nos ». Venerabili Dei Servi Carolo Acutis caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-10-10",
+    "source": {
+      "url": null,
+      "shelf": "aas/2021",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Quae nos",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 636
+    }
+  },
+  {
+    "id": "mag:francis-i/quae-nos-venustos-2020",
+    "title": "« Quae nos venustos ». Venerabili Dei Servi Carolo Acutis caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-10-10",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Quae nos venustos",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 1348
+    }
+  },
+  {
     "id": "mag:francis-i/world-food-day-2020",
     "title": "Messaggio per la Giornata Mondiale dell'Alimentazione 2020",
     "idStatus": "minted",
@@ -6759,6 +10854,28 @@
       "volume": 112,
       "year": 2020,
       "page": 1110
+    }
+  },
+  {
+    "id": "mag:francis-i/qua-ratione-2020",
+    "title": "« Qua ratione ». Venerabili Dei Servo Michaëli McGivney caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-10-31",
+    "source": {
+      "url": null,
+      "shelf": "aas/2022",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Qua ratione",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 203
     }
   },
   {
@@ -6797,6 +10914,28 @@
       "volume": 112,
       "year": 2020,
       "page": 1075
+    }
+  },
+  {
+    "id": "mag:francis-i/rex-mundi-2020",
+    "title": "« Rex mundi ». Venerabili Dei Servo Ioanni Roig i Diggle caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-11-07",
+    "source": {
+      "url": null,
+      "shelf": "aas/2022",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Rex mundi",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 207
     }
   },
   {
@@ -6869,6 +11008,114 @@
       "volume": 112,
       "year": 2020,
       "page": 1152
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2020-11-26",
+    "title": "Varmien. – Gedanen.: Nova conditur eparchia Varmiensis - Gedanensis pro christifidelibus ritus byzantini ucraini in Polonia",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-11-26",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 1154
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2020-11-28-1",
+    "title": "Templum B. Mariae Virginis Boni Consilii fit Titulus Cardinalicius Presbyteralis",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-11-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "sourceGenreLabel": "Litterae Apostolicae sub plumbo datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 1144
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2020-11-28-2",
+    "title": "Templum B. Mariae Virginis Divini Amoris ad Castrum Leonis fit Diaconia Cardinalicia",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-11-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "sourceGenreLabel": "Litterae Apostolicae sub plumbo datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 1150
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2020-11-28-3",
+    "title": "Templum S. Iudae Thaddaei Apostoli fit Titulus Cardinalicius Presbyteralis",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-11-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "sourceGenreLabel": "Litterae Apostolicae sub plumbo datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 1146
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2020-11-28-4",
+    "title": "Templum S. Vigilii fit Titulus Cardinalicius Presbyteralis",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-11-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "sourceGenreLabel": "Litterae Apostolicae sub plumbo datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 1148
     }
   },
   {
@@ -7230,6 +11477,30 @@
     }
   },
   {
+    "id": "mag:francis-i/papal-bull-2021-02-11",
+    "title": "Sucren.: Sucrensis Metropolitana Sedes in Bolivia Primatis titulo honestatur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-02-11",
+    "source": {
+      "url": null,
+      "shelf": "aas/2021",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 269
+    }
+  },
+  {
     "id": "mag:francis-i/world-day-of-prayer-for-vocations-2021",
     "title": "Messaggio per la 58a Giornata Mondiale di Preghiera per le Vocazioni 2021",
     "idStatus": "minted",
@@ -7364,6 +11635,72 @@
     }
   },
   {
+    "id": "mag:francis-i/non-pertimescat-2021",
+    "title": "« Non pertimescat ». Venerabilibus Dei Servis Simeoni Cardon ac quinque Sociis caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-04-17",
+    "source": {
+      "url": null,
+      "shelf": "aas/2022",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Non pertimescat",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 296
+    }
+  },
+  {
+    "id": "mag:francis-i/beati-qui-persecutionem-2021",
+    "title": "« Beati, qui persecutionem ». Venerabilibus Servis Dei Iosepho Mariae Gran Cirera et IX Sociis Beatorum honores decernentur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-04-23",
+    "source": {
+      "url": null,
+      "shelf": "aas/2021",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Beati, qui persecutionem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 865
+    }
+  },
+  {
+    "id": "mag:francis-i/beata-margarita-2021",
+    "title": "« Beata Margarita ». De peracta Canonizatione aequipollente beatae Margaritae de Tiferno Tiberino",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-04-24",
+    "source": {
+      "url": null,
+      "shelf": "aas/2021",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Beata Margarita",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 521
+    }
+  },
+  {
     "id": "mag:francis-i/apostolic-letter-2021-04-26",
     "title": "Lettera Apostolica in forma di «Motu Proprio» del Sommo Pontefice Francesco recante disposizioni sulla trasparenza nella gestione della finanza pubblica",
     "idStatus": "provisional",
@@ -7394,6 +11731,30 @@
       "volume": 113,
       "year": 2021,
       "page": 441
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2021-04-27",
+    "title": "Gratiarum: In Honduria, dismembratis quibusdam territoriis dioecesis Sanctae Rosae de Copán, dioecesis Gratiarum erigitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-04-27",
+    "source": {
+      "url": null,
+      "shelf": "aas/2021",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 447
     }
   },
   {
@@ -7528,6 +11889,28 @@
     }
   },
   {
+    "id": "mag:francis-i/haec-est-2021",
+    "title": "« Haec est ». Venerabili Dei Servo Francisco Mariae a Cruce caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-05-15",
+    "source": {
+      "url": null,
+      "shelf": "aas/2022",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Haec est",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 458
+    }
+  },
+  {
     "id": "mag:francis-i/costituzione-apostolica-pascite-gregem-dei-2021",
     "title": "Costituzione Apostolica Pascite Gregem Dei con cui viene riformato il libro VI del Codice di Diritto Canonico",
     "idStatus": "minted",
@@ -7558,6 +11941,28 @@
       "volume": 113,
       "year": 2021,
       "page": 534
+    }
+  },
+  {
+    "id": "mag:francis-i/si-quis-vult-2021-05-29",
+    "title": "« Si quis vult ». Venerabilibus Dei Servis Mariae a Columna Gullón Yturriaga ac duabus Sociis caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-05-29",
+    "source": {
+      "url": null,
+      "shelf": "aas/2021",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Si quis vult",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 870
     }
   },
   {
@@ -7596,6 +12001,50 @@
       "volume": 113,
       "year": 2021,
       "page": 679
+    }
+  },
+  {
+    "id": "mag:francis-i/si-quis-vult-2021-06-02",
+    "title": "« Si quis vult ». Venerabilibus Servis Dei Valerio Traiano Frenţiu et VI Sociis, Episcopis et Martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-06-02",
+    "source": {
+      "url": null,
+      "shelf": "aas/2021",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Si quis vult",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 1073
+    }
+  },
+  {
+    "id": "mag:francis-i/christo-confixus-2021",
+    "title": "« Christo confixus ». Venerabili Dei Servae Mariae Laurae Mainetti caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-06-06",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Christo confixus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 132
     }
   },
   {
@@ -7706,6 +12155,50 @@
     }
   },
   {
+    "id": "mag:francis-i/nos-ad-omnes-2021",
+    "title": "« Nos ad omnes ». Venerabili Servo Dei Mamerto Esquiú Beatorum honores tribuuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-09-04",
+    "source": {
+      "url": null,
+      "shelf": "aas/2021",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Nos ad omnes",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 1222
+    }
+  },
+  {
+    "id": "mag:francis-i/maius-peccatum-2021",
+    "title": "« Maius peccatum ». Venerabili Servo Dei Stephano S.R.E. Card. Wyszyn ´ski Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-09-12",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Maius peccatum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 135
+    }
+  },
+  {
     "id": "mag:francis-i/world-youth-day-2021",
     "title": "XXXVI Giornata Mondiale della Gioventù, 2021: “Alzati! Ti costituisco testimone di quel che hai visto!” (cfr. At 26,16)",
     "idStatus": "minted",
@@ -7745,6 +12238,116 @@
     }
   },
   {
+    "id": "mag:francis-i/si-mundus-2021",
+    "title": "« Si mundus ». Venerabili Servo Dei Ioanni Fornasini Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-09-26",
+    "source": {
+      "url": null,
+      "shelf": "aas/2022",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Si mundus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 692
+    }
+  },
+  {
+    "id": "mag:francis-i/confiteor-tibi-2021",
+    "title": "« Confiteor tibi ». Venerabili Dei Servae Mariae Antoniae Samà caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-10-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2022",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Confiteor tibi",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 696
+    }
+  },
+  {
+    "id": "mag:francis-i/quae-infirma-mundi-2021",
+    "title": "« Quae infirma mundi ». Venerabili Dei Servae Caietanae (Nucciae) Tolomeo caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-10-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2022",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Quae infirma mundi",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 1191
+    }
+  },
+  {
+    "id": "mag:francis-i/sic-luceat-lux-2021",
+    "title": "« Sic luceat lux ». Venerabili Dei Servae Mariae Laurentiae Longo caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-10-09",
+    "source": {
+      "url": null,
+      "shelf": "aas/2022",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Sic luceat lux",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 988
+    }
+  },
+  {
+    "id": "mag:francis-i/ego-sum-2021",
+    "title": "« Ego sum ». Venerabili Servo Dei Francisco Mottola, presbytero, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-10-10",
+    "source": {
+      "url": null,
+      "shelf": "aas/2022",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Ego sum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 992
+    }
+  },
+  {
     "id": "mag:francis-i/world-food-day-2021",
     "title": "Messaggio per la Giornata Mondiale dell'Alimentazione 2021",
     "idStatus": "minted",
@@ -7770,6 +12373,28 @@
     "sourceGenreLabel": "messages/food"
   },
   {
+    "id": "mag:francis-i/post-haec-vidi-2021",
+    "title": "« Post haec vidi ». Venerabilibus Dei Servis Ioanni Eliae Medina ac CXXVI Sociis caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-10-16",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Post haec vidi",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 627
+    }
+  },
+  {
     "id": "mag:francis-i/apostolic-letter-2021-10-23",
     "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all'albo dei Beati la Venerabile Serva di Dio Lucia dell’Immacolata (al secolo: Maria Ripamonti)",
     "idStatus": "provisional",
@@ -7786,6 +12411,72 @@
       "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/cum-vere-amavi-2021",
+    "title": "« Cum vere amavi ». Venerabili Servae Dei Sandrae Sabattini Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-10-24",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Cum vere amavi",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 409
+    }
+  },
+  {
+    "id": "mag:francis-i/dico-autem-vobis-2021",
+    "title": "« Dico autem vobis ». Venerabilibus Dei Servis Francisco Castori Sojo López ac tribus Sociis caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-10-30",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Dico autem vobis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 488
+    }
+  },
+  {
+    "id": "mag:francis-i/si-exprobramini-2021",
+    "title": "« Si exprobramini ». Venerabilibus Dei Servis Benedicto de Sancta Coloma De Gramenet ac duobus Sociis caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-11-06",
+    "source": {
+      "url": null,
+      "shelf": "aas/2022",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Si exprobramini",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 1111
+    }
   },
   {
     "id": "mag:francis-i/lent-2022",
@@ -7827,6 +12518,30 @@
     "sourceGenreLabel": "messages/lent"
   },
   {
+    "id": "mag:francis-i/papal-bull-2021-11-16",
+    "title": "Petaren.: In Venetiola, dismembratis quibusdam territoriis Archidioecesis Metropolitanae Caracensis, dioecesis Petarensis conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-11-16",
+    "source": {
+      "url": null,
+      "shelf": "aas/2021",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 1220
+    }
+  },
+  {
     "id": "mag:francis-i/apostolic-letter-2021-11-17",
     "title": "Lettera Apostolica in forma di «Motu Proprio» con la quale il Santo Padre istituisce la Commissione Pontificia di verifica e applicazione del M. P. Mitis Iudex nelle Chiese d’Italia",
     "idStatus": "provisional",
@@ -7855,6 +12570,28 @@
       "volume": 113,
       "year": 2021,
       "page": 1217
+    }
+  },
+  {
+    "id": "mag:francis-i/domine-deus-2021",
+    "title": "« Domine Deus ». Venerabili Dei Servo Ioanni Francisco Macha caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-11-20",
+    "source": {
+      "url": null,
+      "shelf": "aas/2022",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Domine Deus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 1115
     }
   },
   {
@@ -8029,6 +12766,50 @@
       "volume": 114,
       "year": 2022,
       "page": 196
+    }
+  },
+  {
+    "id": "mag:francis-i/calicem-quidem-2022",
+    "title": "« Calicem quidem ». Venerabili Servo Dei Cosmae Spessotto, O.F.M., Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-01-22",
+    "source": {
+      "url": null,
+      "shelf": "aas/2022",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Calicem quidem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 1195
+    }
+  },
+  {
+    "id": "mag:francis-i/in-caritatis-ratione-2022",
+    "title": "« In caritatis ratione ». Venerabili Servo Dei Rutilio Grande García, presbytero, et II sociis, martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-01-22",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "In caritatis ratione",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 737
     }
   },
   {
@@ -8210,6 +12991,30 @@
     }
   },
   {
+    "id": "mag:francis-i/papal-bull-2022-03-25",
+    "title": "Tshilombana: In Republica Democratica Congensi, dismembratis quibusdam territoriis dioecesis Ludovicanae, dioecesis Tshilombana conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-03-25",
+    "source": {
+      "url": null,
+      "shelf": "aas/2022",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 456
+    }
+  },
+  {
     "id": "mag:francis-i/urbi-et-orbi-easter-2022",
     "title": "\"Urbi et Orbi\" - Pasqua 2022",
     "idStatus": "minted",
@@ -8341,6 +13146,28 @@
     }
   },
   {
+    "id": "mag:francis-i/dorsum-meum-dedi-2022",
+    "title": "« Dorsum meum dedi ». Venerabili Servae Dei Mariae Augustinae Rivas López, martyri, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-05-07",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Dorsum meum dedi",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 843
+    }
+  },
+  {
     "id": "mag:francis-i/world-day-of-prayer-for-vocations-2022",
     "title": "Messaggio per la 59a Giornata Mondiale di Preghiera per le Vocazioni 2022",
     "idStatus": "minted",
@@ -8435,6 +13262,96 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:francis-i/deus-superbi-insurrexerunt-2022",
+    "title": "« Deus, superbi insurrexerunt ». Venerabili Dei Servo Aloisio Lenzini caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-05-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2022",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Deus, superbi insurrexerunt",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 1331
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2022-06-01",
+    "title": "Sancti Hieronymi Terraebonae – Montis Laurei: In Canada dioeceses Sancti Hieronymi Terraebonae et Montis Laurei in unam ac novam circumscriptionem ecclesiasticam uniuntur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-06-01",
+    "source": {
+      "url": null,
+      "shelf": "aas/2022",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 689
+    }
+  },
+  {
+    "id": "mag:francis-i/hoc-est-praeceptum-2022",
+    "title": "« Hoc est praeceptum ». Venerabilibus Dei Servis Leonardo Melki et Thomae Saleh caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-06-04",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Hoc est praeceptum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 846
+    }
+  },
+  {
+    "id": "mag:francis-i/beati-martyres-2022",
+    "title": "« Beati martyres ». Venerabilibus Servis Dei Paschalinae Jahn et IX Sociis, Martyribus, Beatarum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-06-11",
+    "source": {
+      "url": null,
+      "shelf": "aas/2022",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Beati martyres",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 1466
+    }
+  },
+  {
     "id": "mag:francis-i/world-day-of-the-poor-2022",
     "title": "VI Giornata Mondiale dei Poveri, 2022: Gesù Cristo si è fatto povero per voi (cfr 2 Cor 8,9)",
     "idStatus": "minted",
@@ -8470,6 +13387,72 @@
       "volume": 114,
       "year": 2022,
       "page": 876
+    }
+  },
+  {
+    "id": "mag:francis-i/et-eritis-odio-2022",
+    "title": "« Et eritis odio ». Venerabilibus Servis Dei Angelo Marina Álvarez, presbytero, et XIX Sociis, martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-06-18",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Et eritis odio",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 962
+    }
+  },
+  {
+    "id": "mag:francis-i/hi-sunt-2022",
+    "title": "« Hi sunt ». Venerabili Servo Dei Ioanni Aguilar Donis, presbytero, et V sociis, martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-06-18",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Hi sunt",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 959
+    }
+  },
+  {
+    "id": "mag:francis-i/sed-et-capilli-2022",
+    "title": "« Sed et capilli ». Venerabili Servae Dei Ascensioni a Sancto Ioseph caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-06-18",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Sed et capilli",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 967
     }
   },
   {
@@ -8657,6 +13640,28 @@
     "sourceGenreLabel": "motu_proprio"
   },
   {
+    "id": "mag:francis-i/dominus-potissime-2022",
+    "title": "« Dominus potissime ». Venerabili Servo Dei Ioanni Paulo I, Papae, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-09-04",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Dominus potissime",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 1223
+    }
+  },
+  {
     "id": "mag:francis-i/rescriptum-ex-audientia-ss-mi-2022",
     "title": "RESCRIPTUM EX AUDIENTIA SS.MI sul passaggio di competenza della pastorale del turismo",
     "idStatus": "minted",
@@ -8679,6 +13684,72 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/omnibus-omnia-2022",
+    "title": "« Omnibus omnia ». Quibus beato Ioanni Baptistae Scalabrini Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-10-09",
+    "source": {
+      "url": null,
+      "shelf": "aas/2024",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Omnibus omnia",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 1007
+    }
+  },
+  {
+    "id": "mag:francis-i/quod-novimus-2022",
+    "title": "« Quod novimus ». Venerabili Dei Servae Mariae Constantiae a Divino Magistro caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-10-09",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Quod novimus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 1227
+    }
+  },
+  {
+    "id": "mag:francis-i/samaritanus-autem-2022",
+    "title": "« Samaritanus autem ». Quibus beato Artemidi Zatti Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-10-09",
+    "source": {
+      "url": null,
+      "shelf": "aas/2022",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Samaritanus autem",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 1327
+    }
   },
   {
     "id": "mag:francis-i/world-food-day-2022",
@@ -8729,6 +13800,118 @@
       "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/in-quo-mundabit-2022",
+    "title": "« In quo mundabit ». Venerabili Servae Dei Benignae Cardoso da Silva, iuveni laicae, martyri, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-10-24",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "In quo mundabit",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 1231
+    }
+  },
+  {
+    "id": "mag:francis-i/diligere-pati-atque-silere-2022",
+    "title": "« Diligere, pati atque silere ». Venerabili Servae Dei Mariae Berenicae Duque Hencker caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-10-29",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Diligere, pati atque silere",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 1352
+    }
+  },
+  {
+    "id": "mag:francis-i/amen-amen-dico-vobis-2022",
+    "title": "« Amen, amen dico vobis ». Venerabili Servae Dei Mariae Carolae Cecchin, religiosae professae, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-11-05",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Amen, amen dico vobis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 1356
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2022-11-18",
+    "title": "Borben.: In Brasilia Praelatura territorialis Borbensis in dioecesim eodem nomine extollitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-11-18",
+    "source": {
+      "url": null,
+      "shelf": "aas/2022",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 1463
+    }
+  },
+  {
+    "id": "mag:francis-i/utinam-in-me-2022",
+    "title": "« Utinam in me ». Venerabili Servo Dei Iosepho Ambrosoli, presbytero, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-11-20",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Utinam in me",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 1360
+    }
   },
   {
     "id": "mag:francis-i/decreto-relativo-a-caritas-internationalis-2022",
@@ -9161,6 +14344,54 @@
     }
   },
   {
+    "id": "mag:francis-i/papal-bull-2023-01-26",
+    "title": "De Sancto Petro Sula: In Honduria nova Provincia Ecclesiastica « De Sancto Petro Sula » appellanda conditur eademque Sedes ad dignitatem Metropolitanae Ecclesiae extollitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-01-26",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 127
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2023-01-31",
+    "title": "Araguainen.: In Brasilia, dismembratis territoriis Ecclesiarum Tocantinopolitanae et Miracemanae Tocantinensis, nova dioecesis Araguainensis conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-01-31",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 129
+    }
+  },
+  {
     "id": "mag:francis-i/world-day-for-consecrated-life-2023",
     "title": "Messaggio del Santo Padre ai consacrati riuniti nella Basilica di S. Maria Maggiore in occasione della Giornata Mondiale della Vita Consacrata",
     "idStatus": "minted",
@@ -9193,6 +14424,30 @@
     }
   },
   {
+    "id": "mag:francis-i/papal-bull-2023-02-12",
+    "title": "Agulerien.: In Nigeria, dismembrato territorio archidioecesis metropolitanae Onitshanae, dioecesis Aguleriensis conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-02-12",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 267
+    }
+  },
+  {
     "id": "mag:francis-i/regolamento-della-commissione-indipendente-di-vigilanza-del-vicariato-2023",
     "title": "Regolamento della Commissione Indipendente di Vigilanza del Vicariato",
     "idStatus": "minted",
@@ -9214,6 +14469,30 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2023-02-15",
+    "title": "Isiolanus: In Kenia Vicariatus Apostolicus Isiolanus in dioecesim eodem titulo extollitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-02-15",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 269
+    }
   },
   {
     "id": "mag:francis-i/il-diritto-nativo-2023",
@@ -9244,6 +14523,30 @@
       "volume": 115,
       "year": 2023,
       "page": 263
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2023-02-23",
+    "title": "Oman: In Oman Nuntiatura Apostolica conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-02-23",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 271
     }
   },
   {
@@ -9314,6 +14617,30 @@
       "volume": 115,
       "year": 2023,
       "page": 394
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2023-03-30",
+    "title": "Bielorussiae: Administratio Apostolica Bielorussiae pro fidelibus catholicis ritus byzantini erigitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-03-30",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 407
     }
   },
   {
@@ -9447,6 +14774,52 @@
     }
   },
   {
+    "id": "mag:francis-i/papal-bull-2023-04-20",
+    "title": "Veifangen.: In Sinis, dismembrato territorio supprimendae Praefecturae Apostolicae Induhsienensis, dioecesis Veifangensis conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-04-20",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 486
+    }
+  },
+  {
+    "id": "mag:francis-i/laetatus-sum-2023",
+    "title": "« Laetatus sum ». Venerabilibus Servis Dei Henrico Planchat ac Ladislao Radigue et III Sociis, Martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-04-22",
+    "source": {
+      "url": null,
+      "shelf": "aas/2024",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Laetatus sum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 1016
+    }
+  },
+  {
     "id": "mag:francis-i/world-day-of-prayer-for-vocations-2023",
     "title": "Messaggio per la 60a Giornata Mondiale di Preghiera per le Vocazioni 2023",
     "idStatus": "minted",
@@ -9484,6 +14857,50 @@
       "volume": 115,
       "year": 2023,
       "page": 518
+    }
+  },
+  {
+    "id": "mag:francis-i/ego-sum-2023-05-06",
+    "title": "« Ego sum ». Venerabili Servo Dei Hyacintho Vera caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-05-06",
+    "source": {
+      "url": null,
+      "shelf": "aas/2024",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Ego sum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 316
+    }
+  },
+  {
+    "id": "mag:francis-i/manete-in-me-2023",
+    "title": "« Manete in me ». Venerabili Servae Dei Mariae Conceptae Barrecheguren Garcia (Conchita) Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-05-06",
+    "source": {
+      "url": null,
+      "shelf": "aas/2024",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Manete in me",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 1020
     }
   },
   {
@@ -9574,6 +14991,30 @@
     "sourceGenreLabel": "messages/cura-creato"
   },
   {
+    "id": "mag:francis-i/papal-bull-2023-05-30",
+    "title": "Campen.: In Foederatis Civitatibus Americae Septentrionalis nova Provincia Ecclesiastica Campensis appellanda conditur eademque Sedes ad dignitatem Ecclesiae Metropolitanae evehitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-05-30",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 623
+    }
+  },
+  {
     "id": "mag:francis-i/world-day-of-grandparents-and-the-elderly-2023",
     "title": "III Giornata Mondiale dei Nonni e degli Anziani, 2023: \"Di generazione in generazione la sua misericordia\" (Lc 1,50)",
     "idStatus": "minted",
@@ -9610,6 +15051,30 @@
       "volume": 115,
       "year": 2023,
       "page": 776
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2023-06-01",
+    "title": "Cuneen. – Fossanen.: Cuneensis et Fossanensis dioeceses plene iunguntur et ipsius novae Ecclesiae nominatur Episcopus",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-06-01",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 625
     }
   },
   {
@@ -9686,6 +15151,52 @@
     }
   },
   {
+    "id": "mag:francis-i/quamdiu-fecistis-2023",
+    "title": "« Quamdiu fecistis ». Venerabili Servae Dei Elisabethae Martinez caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-06-25",
+    "source": {
+      "url": null,
+      "shelf": "aas/2024",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Quamdiu fecistis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 540
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2023-06-29",
+    "title": "Gueckedouen.: In Guinea, dismembratis quibusdam territoriis dioecesium Kankanensis et Nzerekorensis, dioecesis Gueckedouensis conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-06-29",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 719
+    }
+  },
+  {
     "id": "mag:francis-i/apostolic-letter-2023-07-04",
     "title": "Decreto del Santo Padre Francesco circa le realtà di formazione al Sacerdozio nel territorio della Diocesi di Roma e nomina del Rettore del Pontificio Seminario Romano Maggiore",
     "idStatus": "provisional",
@@ -9706,6 +15217,30 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2023-07-22",
+    "title": "Voten.: In Kenia, dismembrato territorio dioecesis Machakosensis, dioecesis Votensis conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-07-22",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 841
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2023-08-01",
@@ -9760,6 +15295,54 @@
     }
   },
   {
+    "id": "mag:francis-i/papal-bull-2023-08-12",
+    "title": "Coumranen.: In Tzadia, dismembrato territorio dioecesis Sarhensis, dioecesis Coumranensis conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-08-12",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 954
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2023-08-15",
+    "title": "Osaken. – Takamatsuen.: In Iaponia archidioecesis Osakensis et dioecesis Takamatsuensis in unam ac novam circumscriptionem ecclesiasticam uniuntur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-08-15",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 956
+    }
+  },
+  {
     "id": "mag:francis-i/apostolic-letter-2023-09-14",
     "title": "Decreto di nomina del Delegato Pontificio presso la Pontificia Università Urbaniana in Roma",
     "idStatus": "provisional",
@@ -9780,6 +15363,28 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/ego-sum-2023-09-30",
+    "title": "« Ego sum ». Venerabili Servo Dei Iosepho Beotti, presbytero ac martyri, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-09-30",
+    "source": {
+      "url": null,
+      "shelf": "aas/2024",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Ego sum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 1095
+    }
   },
   {
     "id": "mag:francis-i/laudate-deum-2023",
@@ -9888,6 +15493,30 @@
     }
   },
   {
+    "id": "mag:francis-i/papal-bull-2023-10-19",
+    "title": "Rausonopolitana: In Argentina, dismembratis quibusdam territoriis ecclesiasticae circumscriptionis Rivadaviae, dioecesis Rausonopolitana conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-10-19",
+    "source": {
+      "url": null,
+      "shelf": "aas/2023",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 1220
+    }
+  },
+  {
     "id": "mag:francis-i/ad-theologiam-promovendam-2023",
     "title": "Lettera Apostolica in forma di «Motu Proprio» \"Ad theologiam promovendam\", con la quale vengono approvati nuovi statuti della Pontificia Accademia di Teologia",
     "idStatus": "minted",
@@ -9958,6 +15587,28 @@
       "volume": 115,
       "year": 2023,
       "page": 1402
+    }
+  },
+  {
+    "id": "mag:francis-i/eritis-odio-2023",
+    "title": "« Eritis odio ». Venerabilibus Servis Dei Emmanueli González-Serna Rodríguez et XIX Sociis, Martyribus, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-11-18",
+    "source": {
+      "url": null,
+      "shelf": "aas/2024",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Eritis odio",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 1099
     }
   },
   {
@@ -10199,13 +15850,7 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio",
-    "acta": {
-      "series": "AAS",
-      "volume": 116,
-      "year": 2024,
-      "page": 189
-    }
+    "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2024-01-16-2",
@@ -10225,7 +15870,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 189
+    }
   },
   {
     "id": "mag:francis-i/world-communications-day-2024",
@@ -10737,6 +16388,30 @@
     }
   },
   {
+    "id": "mag:francis-i/papal-bull-2024-05-25",
+    "title": "Sancti Iacobi De Estero: In Argentina dioecesis Sancti Iacobi de Estero ad gradum et dignitatem archidioecesis evehitur eiusque Archiepiscopo titulus Primatis Argentinae transfertur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-05-25",
+    "source": {
+      "url": null,
+      "shelf": "aas/2024",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 1012
+    }
+  },
+  {
     "id": "mag:francis-i/apostolic-letter-2024-05-26",
     "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all'albo dei Beati il Servo di Dio Giuseppe Rossi",
     "idStatus": "provisional",
@@ -10794,6 +16469,30 @@
     }
   },
   {
+    "id": "mag:francis-i/papal-bull-2024-06-18",
+    "title": "Ndolaën.: In Zambia nova Provincia Ecclesiastica Ndolaënsis appellanda conditur eademque Sedes ad dignitatem Ecclesiae metropolitanae evehitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-06-18",
+    "source": {
+      "url": null,
+      "shelf": "aas/2024",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 821
+    }
+  },
+  {
     "id": "mag:francis-i/fratello-sole-2024",
     "title": "Lettera Apostolica in forma di Motu proprio \"Fratello Sole\" del Sommo Pontefice Francesco",
     "idStatus": "minted",
@@ -10824,6 +16523,54 @@
       "volume": 116,
       "year": 2024,
       "page": 815
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2024-06-21",
+    "title": "Labuanbaien.: Nova dioecesis constituitur in Indonesia, Labuanbaiensis appellanda",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-06-21",
+    "source": {
+      "url": null,
+      "shelf": "aas/2024",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 823
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2024-06-26",
+    "title": "Iauen.: Nova dioecesis constituitur in Brasilia, Iauensis appellanda",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-06-26",
+    "source": {
+      "url": null,
+      "shelf": "aas/2024",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 825
     }
   },
   {
@@ -10904,6 +16651,54 @@
     "sourceGenreLabel": "motu_proprio"
   },
   {
+    "id": "mag:francis-i/papal-bull-2024-07-03",
+    "title": "Bentiuen.: In Sudania Australi, dismembratis quibusdam territoriis dioecesis Malakalensis, dioecesis Bentiuensis conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-07-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2024",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 827
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2024-08-01",
+    "title": "Gandana: In Angolia, dismembrato territorio Ecclesiae Benguelensis, nova dioecesis Gandana appellanda conditur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-08-01",
+    "source": {
+      "url": null,
+      "shelf": "aas/2024",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 1014
+    }
+  },
+  {
     "id": "mag:francis-i/world-youth-day-2024",
     "title": "XXXIX Giornata Mondiale della Gioventù, 2024: «Quanti sperano nel Signore camminano senza stancarsi» (cfr Is 40,31)",
     "idStatus": "minted",
@@ -10943,6 +16738,54 @@
     }
   },
   {
+    "id": "mag:francis-i/papal-bull-2024-09-12",
+    "title": "Cardiffen. – Meneven.: In Magna Britannia archidioecesis Cardiffensis ac dioecesis Menevensis in unam ac novam circumscriptionem ecclesiasticam uniuntur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-09-12",
+    "source": {
+      "url": null,
+      "shelf": "aas/2024",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 1200
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2024-09-26",
+    "title": "Tallinnen.: In Estonia Administratio Apostolica Estoniensis ad gradum et dignitatem dioecesis Tallinnensis appellandae evehitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-09-26",
+    "source": {
+      "url": null,
+      "shelf": "aas/2024",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 1203
+    }
+  },
+  {
     "id": "mag:francis-i/la-vera-bellezza-2024",
     "title": "Lettera Apostolica in forma di «Motu Proprio» La vera bellezza sulla ripartizione del territorio della diocesi di Roma",
     "idStatus": "minted",
@@ -10971,6 +16814,30 @@
       "volume": 116,
       "year": 2024,
       "page": 1191
+    }
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2024-10-15",
+    "title": "Prosperitaten.: Nova dioecesis constituitur in Philippinis, Prosperitatensis appellanda",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-10-15",
+    "source": {
+      "url": null,
+      "shelf": "aas/2024",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 1439
     }
   },
   {
@@ -11066,6 +16933,30 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/papal-bull-2024-11-05",
+    "title": "Xapecoën.: In Brasilia nova Provincia Ecclesiastica Xapecoënsis appellanda conditur eademque Sedes ad dignitatem Ecclesiae metropolitanae evehitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-11-05",
+    "source": {
+      "url": null,
+      "shelf": "aas/2024",
+      "retrieved": "2026-09-12"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 1569
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-peace-2025",

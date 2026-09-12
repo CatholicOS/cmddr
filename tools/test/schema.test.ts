@@ -243,6 +243,14 @@ describe('document.schema.json', () => {
     })).toBe(true);
   });
 
+  it('requires url, shelf and retrieved on source, nullable url and shelf included', () => {
+    const src = { url: null, shelf: null, retrieved: '2026-09-07' };
+    expect(validate({ ...baseDoc, source: src })).toBe(true);
+    expect(validate({ ...baseDoc, source: { url: null, shelf: 'aas/2023', retrieved: '2026-09-12' } })).toBe(true);
+    expect(validate({ ...baseDoc, source: { url: null, shelf: null } })).toBe(false);
+    expect(validate({ ...baseDoc, source: { shelf: 'encyclicals', retrieved: '2026-09-07' } })).toBe(false);
+  });
+
   it('accepts the three characteristics and rejects any other', () => {
     // The vocabulary is flat; which genre may bear which is invariant 22, not the schema.
     for (const c of ['apostolic-constitution', 'dogmatic-definition', 'motu-proprio']) {

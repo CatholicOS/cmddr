@@ -139,7 +139,10 @@ The document categories on [vatican.va](https://www.vatican.va/) — *Encicliche
 them, which is not the same question as the authority the issuer exercised. They are first-rate evidence of what forms exist and of
 how the Holy See itself distinguishes them, and they should **inform** this registry; they do not **govern** it. Nor are they the
 record: the *Acta Apostolicae Sedis*, unlike the shelves, are the promulgating instrument, and the registry records where an act
-stands in them (*The Acta Apostolicae Sedis reference*, below).
+stands in them (*The Acta Apostolicae Sedis reference*, below). Nor are they complete, even for the current pontificate: over
+2015–2024 the AAS index names **117** apostolic constitutions and **206** apostolic letters of Francis where the
+`apost_constitutions` and `apost_letters` shelves carry **49** and **59** — the shelves are selections, and the acts they omit
+(most circumscription erections, most beatification letters, every canonisation decretal) are registered from the *Acta* instead.
 
 Three features of those shelves make the point. First, they sort by *form*, not by weight or audience: *Ordinatio Sacerdotalis* and a
 letter erecting a diocese share the *Lettere Apostoliche* shelf, while the universally-addressed *Letter to Artists* (1999) sits
@@ -252,9 +255,27 @@ date and incipit, writing `acta` only where one candidate is evidenced. The join
 Francis documents carry a reference from the ten volumes, and every ambiguous entry, every act the shelves lack and every
 document two entries claim is listed, classified, in the [join report](docs/superpowers/reports/2026-09-12-acta-join-2015-2024.md)
 — whose headline is that vatican.va's Francis shelves for constitutions and apostolic letters are selections (49 and 59
-against the index's 117 and 206), while the *Acta* are the record. Phase 2 ([#25](https://github.com/CatholicOS/cmddr/issues/25))
-is the in-volume indexes of 1909–2014, hand-curated from OCR of uneven quality, and the AAS-only documents for the acts
-the shelves omit; the ASS, whose volumes end in a subject index rather than a chronological one, are out of scope.
+against the index's 117 and 206), while the *Acta* are the record.
+
+The *Acta* are therefore also a **second source**. An index entry the join leaves unmatched becomes a document of its own
+(phase 2a, `tools/src/acta/create.ts`) when its category is one the registry creates from the *Acta* — encyclicals,
+exhortations, constitutions, motu proprio, apostolic letters, and the bull class of canonisation decretals and *sub plumbo*
+letters — **and** the vatican.va shelf that carries that class is harvested for the pope, so that the fuller shelves (`letters`,
+`speeches`, `homilies`, the occasional `pont-messages`), which bring a URL and a vernacular title, are harvested first and the
+*Acta* fill their residue afterwards. The record is minted from the index's incipit exactly as a shelf incipit mints (provisional
+where the index names a constitution by toponym alone), titled with the index's own entry, and carries `source.shelf` of the form
+`aas/{year}` with `url: null` and its `acta` reference as source and citation both; it carries no `keywords` or `actKind`, since an
+index line evidences neither. A **duplicate guard** holds, rather than creates, anything the shelf may already have: a same-date
+record carrying the entry's incipit or toponym under another class (the shelf and the *Acta* disagree about class, discussion
+[#30](https://github.com/CatholicOS/cmddr/discussions/30)), a same-date record with no incipit (vatican.va files canonisation
+decretals on `apost_letters` without one; the Tarragona letters of [#31](https://github.com/CatholicOS/cmddr/issues/31)), a
+same-incipit record a day off or anywhere in the pontificate, and two entries of one date with one incipit, which no form of the
+id tells apart. Measured on 2026-09-12: **266** AAS-only documents created (260 of Francis, 6 of Benedict XVI; 151 apostolic letters,
+76 constitutions, 39 bulls), **376** entries held with a reason — 266 in categories that wait for their shelf, 45 by the guard, 40
+ambiguous, 24 claimed twice, 1 dated before the pontificate — and no shelf id changed. The [join report](docs/superpowers/reports/2026-09-12-acta-join-2015-2024.md)
+lists every creation with the index line it rests on and every hold with its candidates. Phases 2b and 2c
+([#25](https://github.com/CatholicOS/cmddr/issues/25)) are the in-volume indexes of AAS 1909–2014, read by the same parser and
+creator, and the *Acta Sanctae Sedis* of 1865–1908, whose indexes carry no date or incipit and are confirmed by hand.
 
 ### The document registry
 

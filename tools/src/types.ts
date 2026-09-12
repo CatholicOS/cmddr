@@ -59,8 +59,15 @@ export interface DocumentRecord {
   descriptiveTitle?: 'dogmatic' | 'pastoral';
   sigla?: string;
   aliases?: string[];
+  /**
+   * Where the record was read from: a vatican.va shelf (`shelf`, `url`, the page's
+   * `languages`), or -- for a document created from the *Acta Apostolicae Sedis* index
+   * because the shelves lack the act (AAS-only documents spec §4) -- `shelf: "aas/{year}"`
+   * with `url: null` in the fascicle era and no `languages`, the `acta` reference then
+   * being the source as well as the citation.
+   */
   source?: {
     url: string | null; shelf: string | null; alsoShelvedAs?: string[];
-    languages: string[]; retrieved: string;
+    languages?: string[]; retrieved: string;
   };
 }

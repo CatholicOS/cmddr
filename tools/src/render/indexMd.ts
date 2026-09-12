@@ -1,4 +1,5 @@
 import { POPES, isUnconfirmedCandidate } from '../mappings/index.js';
+import { isActaShelf } from '../acta/create.js';
 import { issuerLocalPart } from '../ids.js';
 import type { DocumentRecord } from '../types.js';
 
@@ -43,16 +44,26 @@ export function renderIndexMd(docs: DocumentRecord[]): string {
     if (!pope) return '— (conciliar)';
     return pope.era === 'flat' ? 'whole-pontificate index' : pope.shelves.join(', ');
   };
+  // The second source, read off the documents themselves: an issuer with documents created
+  // from the AAS index (source.shelf `aas/{year}`) says so beside his shelves, with the
+  // count and the volume years, so the column cannot drift from the data.
+  const actaSourceOf = (ds: DocumentRecord[]): string => {
+    const born = ds.filter((d) => isActaShelf(d.source?.shelf));
+    if (born.length === 0) return '';
+    const years = [...new Set(born.map((d) => d.source!.shelf!.slice('aas/'.length)))].sort();
+    return `; AAS index ${years[0]}–${years[years.length - 1]} (${born.length} AAS-only)`;
+  };
 
   const issuerRows = byIssuer.map(([local, ds]) => {
     // The local part is shared by construction; the full issuerId(s) that produced it are
     // read back off the documents themselves rather than assumed from a prefix.
     const issuerIds = [...new Set(ds.map((d) => d.issuerId))].sort();
     const label = issuerIds.map((id) => `\`${id}\``).join(', ');
-    const shelves = issuerIds.map(shelvesOf).join('; ');
+    const shelves = issuerIds.map(shelvesOf).join('; ') + actaSourceOf(ds);
     return `| [${label}](documents/by-issuer/${local}.md) | ${ds.length} `
       + `| ${range(ds)} | ${shelves} |`;
   });
+  const actaBorn = docs.filter((d) => isActaShelf(d.source?.shelf)).length;
 
   const genreRows = byGenre.map(([genre, ds]) =>
     `| [\`${genre ?? 'unmapped'}\`](documents/by-genre/${genreFile(genre)}.md) `
@@ -114,6 +125,13 @@ This registry covers the **formal document shelves** of vatican.va. Deliberately
   harvested; the occasional residue is not yet.
 - **Year-partitioned \`letters\` shelves** — John XXIII, Benedict XV, and Paul VI onward. The
   \`letters\` shelf is harvested only where the aggregate index carries its items.
+- **The shelves are selections, and the *Acta* fill them only where a shelf is harvested.** ${actaBorn === 0
+    ? 'No document is yet created from the *Acta Apostolicae Sedis* index.'
+    : `${actaBorn} documents are created from the annual *Acta Apostolicae Sedis* index (2015–2024) for acts the
+  harvested shelves lack — constitutions, apostolic letters, canonisation decretals; \`source.shelf\` is
+  \`aas/{year}\`, the AAS column is their source as well as their citation, and their titles are the index's
+  Latin entries.`} An act in a category whose shelf is not harvested (letters, homilies, speeches, occasional
+  messages) waits for that harvest; the join report lists every entry held and why.
 - **Bishops' conferences and dicasterial documents**, which remain outside the repository's scope.
 - **Councils before 1870.** vatican.va's council archive publishes only Vatican I and Vatican II;
   the other nineteen ecumenical councils have no source there, so a registry holding two councils
@@ -124,7 +142,7 @@ This registry covers the **formal document shelves** of vatican.va. Deliberately
   prints a bare Latin toponym was read against its own text and recorded as an erection, an
   elevation, a union, or an act of another kind named in the adjudication table.
 
-The Shelves harvested column above is generated from the harvest configuration itself, so it cannot
-drift from what was actually read.
+The Shelves harvested column above is generated from the harvest configuration itself, and its AAS
+note from the documents, so neither can drift from what was actually read.
 `;
 }
