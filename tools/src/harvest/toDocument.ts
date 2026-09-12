@@ -5,7 +5,7 @@ import {
   VATICAN_SLUG_TO_ISSUER, SOURCE_GENRE_TO_GENRE, CONCILIAR_SOURCE_GENRE_TO_GENRE,
   CONCILIAR_REASSIGNMENTS, COUNCILS, RECOVERED_INCIPITS, GENRE_OVERRIDES, keywordsFor,
   CIRCUMSCRIPTION_KEYWORDS, seriesForShelf, SERIES_OCCASION_YEARS, SERIES_ORDINALS,
-  SERIES_EXCLUSIONS,
+  SERIES_EXCLUSIONS, SERIES_URBI_OCCASIONS,
 } from '../mappings/index.js';
 import { readOrdinal, readOccasionYear } from './seriesTitle.js';
 import type { DocumentRecord, HarvestItem } from '../types.js';
@@ -35,15 +35,33 @@ function seriesStep(item: HarvestItem, issuerId: string): Pick<
 > | null {
   const shelfSeries = seriesForShelf(item.shelf);
   if (shelfSeries === null) return null;
+  const key = curationKey(item);
+
+  // An item filed on a series sub-shelf that is not a member of the series -- Paul VI's
+  // 'Giornata Mondiale del Malato - 1975', a Holy Year day, not the annual day of 1993 on;
+  // John XXIII's radio messages to the world, filed on his urbi_et_orbi shelf beside the
+  // feast-day messages -- is a message and takes the provisional form, exactly as a
+  // pont-messages item will: no occasion, no series-form id, and on the Urbi et Orbi shelf
+  // no `actKind`, because a radio message is not a blessing (SERIES_EXCLUSIONS).
+  if (SERIES_EXCLUSIONS[key]) {
+    return {
+      id: mintProvisionalId(issuerId, 'message', item.date), idStatus: 'provisional', genre: 'message',
+    };
+  }
 
   if (shelfSeries.kind === 'urbi') {
     // Two dated series, assigned by date (§2.4, §3.2.7): the shelf's titles are
-    // inconsistent ('Messaggio Urbi et Orbi - 1975'), the date is not. Every other item on
-    // the shelf -- a first blessing after election, a Jubilee closing, the Momento
-    // straordinario di preghiera of 27 March 2020 -- is an Urbi et Orbi with no series and
-    // takes the provisional form; the orchestrator adds an ordinal where two share a date.
-    const year = Number(item.date.slice(0, 4));
-    const row = item.date.endsWith('-12-25') ? shelfSeries.christmas
+    // inconsistent ('Messaggio Urbi et Orbi - 1975'), the date is not. A curated row
+    // (SERIES_URBI_OCCASIONS) is consulted first, for an item the heading names as the
+    // feast's message although the act bears another date and the shelf holds no
+    // feast-day item for that year. Every other item on the shelf -- a first blessing
+    // after election, a Jubilee closing, the Momento straordinario di preghiera of 27
+    // March 2020 -- is an Urbi et Orbi with no series and takes the provisional form; the
+    // orchestrator adds an ordinal where two share a date.
+    const curated = SERIES_URBI_OCCASIONS[key];
+    const year = curated?.year ?? Number(item.date.slice(0, 4));
+    const row = curated ? (curated.series === 'urbi-et-orbi-christmas' ? shelfSeries.christmas : shelfSeries.easter)
+      : item.date.endsWith('-12-25') ? shelfSeries.christmas
       : item.date === easterSunday(year) ? shelfSeries.easter
       : null;
     return row === null
@@ -55,17 +73,6 @@ function seriesStep(item: HarvestItem, issuerId: string): Pick<
         id: mintSeriesId(issuerId, row.id, year), idStatus: 'minted',
         genre: 'urbi-et-orbi', series: { id: row.id, year }, actKind: 'liturgical',
       };
-  }
-
-  // An item filed on a series sub-shelf that is not a member of the series (Paul VI's
-  // 'Giornata Mondiale del Malato - 1975', a Holy Year day, not the annual day of 1993 on)
-  // keeps the shelf's genre and takes the provisional form, exactly as a pont-messages
-  // item will: no occasion, no series-form id (SERIES_EXCLUSIONS, one row so far).
-  const key = curationKey(item);
-  if (SERIES_EXCLUSIONS[key]) {
-    return {
-      id: mintProvisionalId(issuerId, 'message', item.date), idStatus: 'provisional', genre: 'message',
-    };
   }
 
   // A curated row is consulted first and wins where it exists, so that a heading which

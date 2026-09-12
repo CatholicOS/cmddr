@@ -176,8 +176,10 @@ constitutions whose circumscription keyword (an erection, elevation or union of 
 hand-curated adjudication tables) carry `actKind: governance`; the flag is derived from the keyword in the harvester, so the two
 cannot disagree. The *Lettere Apostoliche* tail is not yet flagged, because no keyword yet evidences it. Urbi et Orbi keeps its
 own Table 1 row so that a reader finds it where they expect to: the row’s ceiling describes the address, and the flag
-(`liturgical`) describes the act — every one of the **152** Urbi et Orbi harvested from the *Messaggi* shelves carries it, whether
-or not the item belongs to the Christmas or Easter series. The discussion is in [#15](https://github.com/CatholicOS/cmddr/issues/15).
+(`liturgical`) describes the act — every one of the **145** Urbi et Orbi harvested from the *Messaggi* shelves carries it, whether
+or not the item belongs to the Christmas or Easter series. Seven items on John XXIII’s *Urbi et Orbi* shelf do not carry it,
+because they are not blessings: the radio messages this pope broadcast to the world before Christmas and Easter and on other
+occasions, which vatican.va files beside the feast-day messages, are harvested as `message` on curated rows quoting each heading. The discussion is in [#15](https://github.com/CatholicOS/cmddr/issues/15).
 
 #### Numbered annual series
 
@@ -214,7 +216,9 @@ matched the tenth anniversary of *Laudato si'* in the Jubilee year, and 2026 is 
 reset (`renumberings`) rather than the registry re-computing numbers. **537** series documents across sixteen series and five
 pontificates (Paul VI → Leo XIV) are harvested this way — 526 messages and the 11 homilies Francis gave on the World Day for
 Consecrated Life, which vatican.va files on the series shelf and which are members of the series whatever their genre —
-together with the **152** Urbi et Orbi, of which the Christmas and Easter ones form two dated series assigned by date. The occasional messages on the year-partitioned
+together with the **145** Urbi et Orbi, of which the Christmas and Easter ones form two dated series assigned by date — or, for
+the one item whose heading names the feast while the act bears another date (John XXIII’s *Santo Natale* of 22 December 1962,
+the shelf’s only Christmas 1962 item), by a curated row. The occasional messages on the year-partitioned
 `pont-messages` shelf are not yet harvested ([#4](https://github.com/CatholicOS/cmddr/issues/4)).
 
 ### The document registry

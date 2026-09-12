@@ -7,7 +7,7 @@ for a document in an annual series (`series.id` and `series.year`; the occasion 
 signed). The issuer segment is always the local part of `issuerId`, so conciliar documents namespace under
 their council and record the promulgating pope separately. See the design specs for the minting rules.
 
-**4975 documents**, of which 313 carry a provisional identifier — the source prints no incipit for them, so their id is genre-and-date based and may be re-minted.
+**4975 documents**, of which 312 carry a provisional identifier — the source prints no incipit for them, so their id is genre-and-date based and may be re-minted.
 
 Every document appears in both views below; neither is a subset of the other.
 
@@ -46,11 +46,11 @@ Every document appears in both views below; neither is a subset of the other.
 | [`encyclical`](documents/by-genre/encyclical.md) | 293 | 1740-12-03 – 2026-05-15 |
 | [`homily`](documents/by-genre/homily.md) | 11 | 2014-02-02 – 2025-02-01 |
 | [`letter`](documents/by-genre/letter.md) | 432 | 1863-12-21 – 1978-09-28 |
-| [`message`](documents/by-genre/message.md) | 527 | 1963-10-19 – 2026-08-15 |
+| [`message`](documents/by-genre/message.md) | 534 | 1960-12-22 – 2026-08-15 |
 | [`papal-bull`](documents/by-genre/papal-bull.md) | 1292 | 1749-03-15 – 2026-01-08 |
 | [`prayer`](documents/by-genre/prayer.md) | 1 | 1961-09-29 – 1961-09-29 |
 | [`unmapped`](documents/by-genre/unmapped.md) | 5 | 1846-07-16 – 1849-02-14 |
-| [`urbi-et-orbi`](documents/by-genre/urbi-et-orbi.md) | 152 | 1952-04-13 – 2026-04-05 |
+| [`urbi-et-orbi`](documents/by-genre/urbi-et-orbi.md) | 145 | 1952-04-13 – 2026-04-05 |
 
 ## By keyword
 

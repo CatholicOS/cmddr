@@ -416,6 +416,33 @@ describe('toDocument on the Urbi et Orbi shelf (messages spec §2.4, §3.2.7)', 
     expect(d.actKind).toBe('liturgical');
   });
 
+  it('lets a curated row name the occasion where the act bears another date (SERIES_URBI_OCCASIONS)', () => {
+    // John XXIII's 'Santo Natale (25 dicembre 1962)' is the radio message of Saturday 22
+    // December; the shelf holds no 25 December item for 1962, so it is the Christmas 1962 entry.
+    const d = toDocument(urbi({
+      title: 'Santo Natale', date: '1962-12-22', pageSlug: 'john-xxiii',
+      sourceGenreLabel: 'messages/urbi_et_orbi', shelf: 'messages/urbi_et_orbi',
+    }), '2026-09-12');
+    expect(d.id).toBe('mag:john-xxiii/urbi-et-orbi-christmas-1962');
+    expect(d.idStatus).toBe('minted');
+    expect(d.date).toBe('1962-12-22');
+    expect(d.series).toEqual({ id: 'urbi-et-orbi-christmas', year: 1962 });
+    expect(d.actKind).toBe('liturgical');
+  });
+
+  it('files an excluded item on the urbi shelf as a message, not a blessing (SERIES_EXCLUSIONS)', () => {
+    const d = toDocument(urbi({
+      title: 'Radiomessaggio ai fedeli e ai popoli del mondo intero, 22 dicembre 1960', date: '1960-12-22',
+      pageSlug: 'john-xxiii', sourceGenreLabel: 'messages/urbi_et_orbi', shelf: 'messages/urbi_et_orbi',
+    }), '2026-09-12');
+    expect(d.id).toBe('mag:john-xxiii/message-1960-12-22');
+    expect(d.idStatus).toBe('provisional');
+    expect(d.genre).toBe('message');
+    expect(d.series).toBeUndefined();
+    expect(d.actKind).toBeUndefined();
+    expect(d.sourceGenreLabel).toBe('messages/urbi_et_orbi');
+  });
+
   it('reads the urbi_et_orbi spelling of the older pages the same way', () => {
     const d = toDocument(urbi({
       title: 'Urbi et Orbi - Pasqua 1978', date: '1978-03-26', pageSlug: 'paul-vi',

@@ -3165,10 +3165,10 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:john-xxiii/urbi-et-orbi-1960-12-22",
+    "id": "mag:john-xxiii/message-1960-12-22",
     "title": "Radiomessaggio ai fedeli e ai popoli del mondo intero, 22 dicembre 1960",
     "idStatus": "provisional",
-    "genre": "urbi-et-orbi",
+    "genre": "message",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
     "date": "1960-12-22",
@@ -3180,7 +3180,6 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "actKind": "liturgical",
     "sourceGenreLabel": "messages/urbi_et_orbi"
   },
   {
@@ -3398,10 +3397,10 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:john-xxiii/urbi-et-orbi-1961-09-10",
+    "id": "mag:john-xxiii/message-1961-09-10",
     "title": "Radiomessaggio a tutto il mondo per la concordia tra le genti, 10 settembre 1961",
     "idStatus": "provisional",
-    "genre": "urbi-et-orbi",
+    "genre": "message",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
     "date": "1961-09-10",
@@ -3413,7 +3412,6 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "actKind": "liturgical",
     "sourceGenreLabel": "messages/urbi_et_orbi"
   },
   {
@@ -3499,10 +3497,10 @@
     "sourceGenreLabel": "encyclicals"
   },
   {
-    "id": "mag:john-xxiii/urbi-et-orbi-1961-12-21",
+    "id": "mag:john-xxiii/message-1961-12-21",
     "title": "Radiomessaggio ai fedeli e ai popoli di tutto il mondo in occasione del Natale, 21 dicembre 1961",
     "idStatus": "provisional",
-    "genre": "urbi-et-orbi",
+    "genre": "message",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
     "date": "1961-12-21",
@@ -3514,7 +3512,6 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "actKind": "liturgical",
     "sourceGenreLabel": "messages/urbi_et_orbi"
   },
   {
@@ -3678,10 +3675,10 @@
     "sourceGenreLabel": "motu_proprio"
   },
   {
-    "id": "mag:john-xxiii/urbi-et-orbi-1962-04-21",
+    "id": "mag:john-xxiii/message-1962-04-21",
     "title": "Ai fedeli di tutto il mondo nel giorno della Solennità di Pasqua",
     "idStatus": "provisional",
-    "genre": "urbi-et-orbi",
+    "genre": "message",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
     "date": "1962-04-21",
@@ -3693,7 +3690,6 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "actKind": "liturgical",
     "sourceGenreLabel": "messages/urbi_et_orbi"
   },
   {
@@ -3787,10 +3783,10 @@
     "sourceGenreLabel": "motu_proprio"
   },
   {
-    "id": "mag:john-xxiii/urbi-et-orbi-1962-08-12",
+    "id": "mag:john-xxiii/message-1962-08-12",
     "title": "Radiomessaggio ai fedeli di tutto il mondo in occasione delle imprese di navigazione spaziale, 12 agosto 1962, Giovanni XXIII",
     "idStatus": "provisional",
-    "genre": "urbi-et-orbi",
+    "genre": "message",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
     "date": "1962-08-12",
@@ -3802,7 +3798,6 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "actKind": "liturgical",
     "sourceGenreLabel": "messages/urbi_et_orbi"
   },
   {
@@ -3870,9 +3865,9 @@
     "sourceGenreLabel": "motu_proprio"
   },
   {
-    "id": "mag:john-xxiii/urbi-et-orbi-1962-12-22",
+    "id": "mag:john-xxiii/urbi-et-orbi-christmas-1962",
     "title": "Santo Natale",
-    "idStatus": "provisional",
+    "idStatus": "minted",
     "genre": "urbi-et-orbi",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
@@ -3885,14 +3880,18 @@
       ],
       "retrieved": "2026-09-12"
     },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 1962
+    },
     "actKind": "liturgical",
     "sourceGenreLabel": "messages/urbi_et_orbi"
   },
   {
-    "id": "mag:john-xxiii/urbi-et-orbi-1963-02-27",
+    "id": "mag:john-xxiii/message-1963-02-27",
     "title": "Inizio della Quaresima, Radiomessaggio di Giovanni XXIII, 27 febbraio 1963",
     "idStatus": "provisional",
-    "genre": "urbi-et-orbi",
+    "genre": "message",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
     "date": "1963-02-27",
@@ -3904,7 +3903,6 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "actKind": "liturgical",
     "sourceGenreLabel": "messages/urbi_et_orbi"
   },
   {
@@ -3957,10 +3955,10 @@
     "sourceGenreLabel": "encyclicals"
   },
   {
-    "id": "mag:john-xxiii/urbi-et-orbi-1963-04-13",
+    "id": "mag:john-xxiii/message-1963-04-13",
     "title": "Radiomessaggio ai fedeli e al mondo intero in occasione della Solennità della Resurrezione, 13 aprile 1963, Giovanni XXIII",
     "idStatus": "provisional",
-    "genre": "urbi-et-orbi",
+    "genre": "message",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
     "date": "1963-04-13",
@@ -3972,7 +3970,6 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "actKind": "liturgical",
     "sourceGenreLabel": "messages/urbi_et_orbi"
   },
   {

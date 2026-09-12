@@ -145,7 +145,13 @@ mag:john-paul-ii/urbi-et-orbi-easter-2005
    assigned by `date` (§2.4), with `series.year` = the year of `date`. Every other item on
    the `urbi` shelf is `genre: urbi-et-orbi` with no series and a provisional id
    (`mag:francis-i/urbi-et-orbi-2020-03-27`). All Urbi et Orbi records carry
-   `actKind: liturgical`.
+   `actKind: liturgical`. Two curated exceptions, adjudicated on PR #26: an item whose
+   heading names the feast while the act bears another date, and for whose year the shelf
+   holds no feast-day item, is placed in the series by a curated row quoting the heading
+   (John XXIII's *Santo Natale* of 22 December 1962); and an item on the shelf that is not
+   a blessing at all — John XXIII's radio messages to the world, broadcast before the feasts
+   and on other occasions beside the feast-day messages — is excluded by a curated row and
+   harvested as a provisional `message` with no `actKind`, as §5.3's exclusions provide.
 
 ### 3.3 Invariants
 

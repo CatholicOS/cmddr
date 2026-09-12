@@ -5,7 +5,7 @@ import { parseShelfIndex } from '../src/harvest/shelf.js';
 import {
   shelvesFor, isErectionCandidate, isUnconfirmedCandidate, CIRCUMSCRIPTION_ERECTIONS,
   RECOVERED_INCIPITS, isMessagesShelf, seriesForShelf, SERIES_OCCASION_YEARS, SERIES_ORDINALS,
-  SERIES_EXCLUSIONS, SERIES, POPES,
+  SERIES_EXCLUSIONS, SERIES_URBI_OCCASIONS, SERIES, POPES,
 } from '../src/mappings/index.js';
 import { fixtureName } from '../src/harvest/fixtures.js';
 import { readOrdinal, readOccasionYear } from '../src/harvest/seriesTitle.js';
@@ -2282,12 +2282,13 @@ describe('the recovered-incipit shelf', () => {
   });
 
   it('leaves the provisional shelf at 299 on the formal shelves -- sixteen recovered, one merged away', () => {
-    // Plus the thirteen Urbi et Orbi dated neither 25 December nor Easter Sunday, which
-    // take the provisional form by design (messages spec §3.2.7); counted in their own block.
-    // Plus the one series-shelf item excluded from its series (Paul VI's 1975 day of the sick).
+    // Plus the five Urbi et Orbi dated neither 25 December nor Easter Sunday, which take
+    // the provisional form by design (messages spec §3.2.7); counted in their own block.
+    // Plus the eight series-shelf items excluded from their series (Paul VI's 1975 day of
+    // the sick and John XXIII's seven radio messages), which are provisional messages.
     const formal = everything.filter((d) => !isMessagesShelf(d.source?.shelf ?? null));
     expect(formal.filter((d) => d.idStatus === 'provisional')).toHaveLength(299);
-    expect(everything.filter((d) => d.idStatus === 'provisional')).toHaveLength(299 + 13 + 1);
+    expect(everything.filter((d) => d.idStatus === 'provisional')).toHaveLength(299 + 5 + 8);
   });
 
   it('keeps the two Leo XIV 2025 letters provisional, which AAS confirms have no incipit', () => {
@@ -2416,7 +2417,7 @@ describe('the Messaggi shelves (messages spec)', () => {
       .map((id) => [id, seriesDocs.filter((d) => d.series!.id === id).length]));
     expect(perSeries).toEqual({
       'lent': 54,
-      'urbi-et-orbi-christmas': 66,
+      'urbi-et-orbi-christmas': 67,
       'urbi-et-orbi-easter': 73,
       'world-childrens-day': 1,
       'world-communications-day': 60,
@@ -2434,8 +2435,8 @@ describe('the Messaggi shelves (messages spec)', () => {
       'world-tourism-day': 6,
       'world-youth-day': 38,
     });
-    // 13 Urbi et Orbi with no series, and the one excluded series-shelf item.
-    expect(seriesDocs).toHaveLength(690 - 13 - 1);
+    // 5 Urbi et Orbi with no series, and the eight excluded series-shelf items.
+    expect(seriesDocs).toHaveLength(690 - 5 - 8);
   });
 
   it('files every series sub-shelf item as a message -- or a homily, where the URL says so -- and every urbi item as an Urbi et Orbi', () => {
@@ -2448,7 +2449,9 @@ describe('the Messaggi shelves (messages spec)', () => {
     for (const d of messages) {
       const shelf = seriesForShelf(d.source!.shelf);
       expect(shelf, d.id).not.toBeNull();
-      expect(d.genre, d.id).toBe(shelf!.kind === 'urbi' ? 'urbi-et-orbi'
+      // An excluded item on the urbi shelf is a radio message, not a blessing (SERIES_EXCLUSIONS).
+      const excluded = SERIES_EXCLUSIONS[curationKey(d)] !== undefined;
+      expect(d.genre, d.id).toBe(excluded ? 'message' : shelf!.kind === 'urbi' ? 'urbi-et-orbi'
         : homilies.includes(d) ? 'homily' : 'message');
       expect(d.sourceGenreLabel, d.id).toBe(d.source!.shelf);
       expect(d.characteristics, d.id).toBeUndefined();
@@ -2458,16 +2461,25 @@ describe('the Messaggi shelves (messages spec)', () => {
     for (const d of homilies) expect(d.series?.id, d.id).toBe('world-day-for-consecrated-life');
   });
 
-  it('gives every message a series in this PR -- the occasional pont-messages shelf is out of scope -- except the one evidenced exclusion', () => {
+  it('gives every message a series in this PR -- the occasional pont-messages shelf is out of scope -- except the evidenced exclusions', () => {
     // Paul VI's 'Giornata Mondiale del Malato - 1975' is a Holy Year day, not the annual
-    // World Day of the Sick of 1993 on (SERIES_EXCLUSIONS); it keeps the shelf's genre and
-    // takes the provisional form, as every pont-messages item will.
+    // World Day of the Sick of 1993 on; John XXIII's seven radio messages to the world are
+    // filed on his urbi_et_orbi shelf but are messages, not blessings (SERIES_EXCLUSIONS).
+    // Each takes the provisional form, as every pont-messages item will.
     const plain = everything.filter((d) => d.genre === 'message');
-    expect(plain).toHaveLength(538 - 11);
+    expect(plain).toHaveLength(538 - 11 + 7);
     const excluded = plain.filter((d) => !d.series);
-    expect(excluded.map((d) => d.id)).toEqual(['mag:paul-vi/message-1975-09-16']);
-    expect(excluded[0]!.idStatus).toBe('provisional');
-    expect(excluded[0]!.source!.shelf).toBe('messages/sick');
+    expect(excluded.map((d) => d.id).sort()).toEqual([
+      'mag:john-xxiii/message-1960-12-22', 'mag:john-xxiii/message-1961-09-10',
+      'mag:john-xxiii/message-1961-12-21', 'mag:john-xxiii/message-1962-04-21',
+      'mag:john-xxiii/message-1962-08-12', 'mag:john-xxiii/message-1963-02-27',
+      'mag:john-xxiii/message-1963-04-13', 'mag:paul-vi/message-1975-09-16',
+    ]);
+    for (const d of excluded) {
+      expect(d.idStatus, d.id).toBe('provisional');
+      expect(d.actKind, d.id).toBeUndefined();
+    }
+    expect(excluded.find((d) => d.id === 'mag:paul-vi/message-1975-09-16')!.source!.shelf).toBe('messages/sick');
     for (const d of plain) {
       if (excluded.includes(d)) continue;
       expect(d.series, d.id).toBeDefined();
@@ -2485,17 +2497,20 @@ describe('the Messaggi shelves (messages spec)', () => {
   });
 
   it('marks every Urbi et Orbi as a liturgical act, in a dated series or not', () => {
-    expect(urbi).toHaveLength(152);
+    expect(urbi).toHaveLength(152 - 7);
     for (const d of urbi) expect(d.actKind, d.id).toBe('liturgical');
   });
 
-  it('classifies the Urbi et Orbi by date alone: 25 December, Easter Sunday, or neither', () => {
+  it('classifies the Urbi et Orbi by date -- 25 December, Easter Sunday, or neither -- unless a curated row names the occasion', () => {
     const neither: string[] = [];
     for (const d of urbi) {
       const year = Number(d.date.slice(0, 4));
-      const expected = d.date.endsWith('-12-25') ? 'urbi-et-orbi-christmas'
+      const curated = SERIES_URBI_OCCASIONS[curationKey(d)];
+      const expected = curated ? curated.series
+        : d.date.endsWith('-12-25') ? 'urbi-et-orbi-christmas'
         : d.date === easterSunday(year) ? 'urbi-et-orbi-easter' : null;
       expect(d.series?.id ?? null, d.id).toBe(expected);
+      if (curated) expect(d.series!.year, d.id).toBe(curated.year);
       if (expected === null) {
         neither.push(d.id);
         expect(d.idStatus, d.id).toBe('provisional');
@@ -2507,16 +2522,14 @@ describe('the Messaggi shelves (messages spec)', () => {
       'mag:francis-i/urbi-et-orbi-2020-03-27',
       'mag:john-paul-ii/urbi-et-orbi-1999-12-31',
       'mag:john-paul-ii/urbi-et-orbi-2000-12-31',
-      'mag:john-xxiii/urbi-et-orbi-1960-12-22',
-      'mag:john-xxiii/urbi-et-orbi-1961-09-10',
-      'mag:john-xxiii/urbi-et-orbi-1961-12-21',
-      'mag:john-xxiii/urbi-et-orbi-1962-04-21',
-      'mag:john-xxiii/urbi-et-orbi-1962-08-12',
-      'mag:john-xxiii/urbi-et-orbi-1962-12-22',
-      'mag:john-xxiii/urbi-et-orbi-1963-02-27',
-      'mag:john-xxiii/urbi-et-orbi-1963-04-13',
       'mag:leo-xiv/urbi-et-orbi-2025-05-08',
     ]);
+    // The one curated occasion: the shelf's only Christmas 1962 item, headed 'Santo Natale
+    // (25 dicembre 1962)' but dated 22 December by the document (SERIES_URBI_OCCASIONS).
+    expect(Object.keys(SERIES_URBI_OCCASIONS)).toEqual(['john-xxiii|messages/urbi_et_orbi|santo-natale|1962-12-22']);
+    const natale = urbi.find((d) => d.id === 'mag:john-xxiii/urbi-et-orbi-christmas-1962')!;
+    expect(natale.date).toBe('1962-12-22');
+    expect(natale.idStatus).toBe('minted');
   });
 
   it('records an ordinal exactly where the title prints one or a curated row supplies it', () => {
@@ -2584,11 +2597,19 @@ describe('the Messaggi shelves (messages spec)', () => {
       const hit = keys.get(key);
       expect(hit, key).toBeDefined();
       expect(hit!.series, key).toBeUndefined();
+      expect(hit!.genre, key).toBe('message');
+      expect(row.evidence, key).toBeTruthy();
+    }
+    for (const [key, row] of Object.entries(SERIES_URBI_OCCASIONS)) {
+      const hit = keys.get(key);
+      expect(hit, key).toBeDefined();
+      expect(hit!.series, key).toEqual({ id: row.series, year: row.year });
       expect(row.evidence, key).toBeTruthy();
     }
     expect(Object.keys(SERIES_OCCASION_YEARS)).toHaveLength(32);
     expect(Object.keys(SERIES_ORDINALS)).toHaveLength(5);
-    expect(Object.keys(SERIES_EXCLUSIONS)).toHaveLength(1);
+    expect(Object.keys(SERIES_EXCLUSIONS)).toHaveLength(8);
+    expect(Object.keys(SERIES_URBI_OCCASIONS)).toHaveLength(1);
   });
 
   it('checks the printed ordinal against firstYear on 276 documents and finds no disagreement', () => {

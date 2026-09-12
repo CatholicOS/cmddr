@@ -45,9 +45,10 @@ export interface SeriesExclusion {
 
 /**
  * Items filed on a series sub-shelf that are not members of the series. An excluded item
- * keeps the shelf's genre (`message`) but gets no `series`, and so takes the provisional
- * form `mag:{issuer}/message-YYYY-MM-DD` rather than the series-form id. One row so far,
- * adjudicated by the repository owner on PR #26.
+ * is a `message` -- on the Urbi et Orbi shelf too, where an excluded item is a radio
+ * message and not a blessing, so it carries no `actKind` -- gets no `series`, and takes
+ * the provisional form `mag:{issuer}/message-YYYY-MM-DD` rather than the series-form id.
+ * Adjudicated by the repository owner on PR #26.
  */
 export const SERIES_EXCLUSIONS: Record<string, SeriesExclusion> = {
 
@@ -63,6 +64,57 @@ export const SERIES_EXCLUSIONS: Record<string, SeriesExclusion> = {
       + 'World Day of the Sick John Paul II instituted in 1992 (first kept in 1993, the '
       + "series' verified firstYear); vatican.va files it on the same sub-shelf. Excluded so "
       + 'that the series holds only the annual day.',
+  },
+
+  // -- john-xxiii --------------------------------------------------------------
+  // John XXIII's urbi_et_orbi shelf files, beside the feast-day Urbi et Orbi messages, the
+  // radio messages this pope broadcast to the world on other occasions and in the days
+  // before Christmas and Easter -- the Christmas-eve radio message being a tradition Pius
+  // XII began, whose own are filed under speeches. In 1960, 1961, 1962 (Easter) and 1963
+  // the shelf holds both the pre-feast broadcast and the feast-day message: the feast-day
+  // one is the Urbi et Orbi proper and holds the series slot; the broadcast is a message.
+  // The three remaining broadcasts are not Christmas or Easter acts at all.
+  'john-xxiii|messages/urbi_et_orbi|radiomessaggio-ai-fedeli-e-ai-popoli-del-mondo-intero-22-dicembre-1960|1960-12-22': {
+    evidence: "Heading: 'Radiomessaggio ai fedeli e ai popoli del mondo intero, 22 dicembre 1960' "
+      + '(hf_j-xxiii_mes_19601222_urbi.html). The pre-Christmas radio message; the shelf holds '
+      + "'Messaggio Urbi et Orbi in occasione del Natale (25 dicembre 1960)' for the feast itself, "
+      + 'which is the Christmas 1960 entry of the series. A radio message, not a blessing.',
+  },
+  'john-xxiii|messages/urbi_et_orbi|radiomessaggio-a-tutto-il-mondo-per-la-concordia-tra-le-genti-10-settembre-1961|1961-09-10': {
+    evidence: "Heading: 'Radiomessaggio a tutto il mondo per la concordia tra le genti, 10 settembre "
+      + "1961' (hf_j-xxiii_mes_19610910_urbi-concordia.html). A radio message on the crisis of "
+      + 'September 1961; neither Christmas nor Easter, and not a blessing.',
+  },
+  'john-xxiii|messages/urbi_et_orbi|radiomessaggio-ai-fedeli-e-ai-popoli-di-tutto-il-mondo-in-occasione-del-natale-21-dicembre-1961|1961-12-21': {
+    evidence: "Heading: 'Radiomessaggio ai fedeli e ai popoli di tutto il mondo in occasione del "
+      + "Natale, 21 dicembre 1961' (hf_j-xxiii_mes_19611221_urbi-natale.html). The pre-Christmas "
+      + "radio message; the shelf holds 'Radiomessaggio a tutti i fedeli del mondo e di Roma, in "
+      + "occasione del Natale, 25 dicembre 1961' for the feast itself, which is the Christmas "
+      + '1961 entry of the series. A radio message, not a blessing.',
+  },
+  'john-xxiii|messages/urbi_et_orbi|ai-fedeli-di-tutto-il-mondo-nel-giorno-della-solennita-di-pasqua|1962-04-21': {
+    evidence: "Heading: 'Ai fedeli di tutto il mondo nel giorno della Solennità di Pasqua (21 aprile "
+      + "1962)' (hf_j-xxiii_mes_19620421_urbi-resurrezione.html) -- Holy Saturday. The shelf holds "
+      + 'the same heading dated 22 April 1962, Easter Sunday (hf_j-xxiii_mes_19620422_urbi-pasqua), '
+      + 'which is the Easter 1962 entry of the series. The eve broadcast is a message, not a blessing.',
+  },
+  'john-xxiii|messages/urbi_et_orbi|radiomessaggio-ai-fedeli-di-tutto-il-mondo-in-occasione-delle-imprese-di-navigazione-spaziale-12-agosto-1962-giovanni-xxiii|1962-08-12': {
+    evidence: "Heading: 'Radiomessaggio ai fedeli di tutto il mondo in occasione delle imprese di "
+      + "navigazione spaziale, 12 agosto 1962, Giovanni XXIII' "
+      + '(hf_j-xxiii_mes_19620812_navigazione-spaziale.html). A radio message on the space '
+      + 'flights of August 1962; neither Christmas nor Easter, and not a blessing.',
+  },
+  'john-xxiii|messages/urbi_et_orbi|inizio-della-quaresima-radiomessaggio-di-giovanni-xxiii-27-febbraio-1963|1963-02-27': {
+    evidence: "Heading: 'Inizio della Quaresima, Radiomessaggio di Giovanni XXIII, 27 febbraio 1963' "
+      + '(hf_j-xxiii_mes_19630227_inizio-quaresima.html). A radio message for Ash Wednesday; '
+      + 'neither Christmas nor Easter, and not a blessing.',
+  },
+  'john-xxiii|messages/urbi_et_orbi|radiomessaggio-ai-fedeli-e-al-mondo-intero-in-occasione-della-solennita-della-resurrezione-13-aprile-1963-giovanni-xxiii|1963-04-13': {
+    evidence: "Heading: 'Radiomessaggio ai fedeli e al mondo intero in occasione della Solennità "
+      + "della Resurrezione, 13 aprile 1963, Giovanni XXIII' "
+      + '(hf_j-xxiii_mes_19630413_messaggio-resurrezione.html) -- Holy Saturday. The shelf holds '
+      + "'Messaggio nella Solennità di Pasqua (14 aprile 1963)', Easter Sunday, which is the "
+      + 'Easter 1963 entry of the series. The eve broadcast is a message, not a blessing.',
   },
 };
 
@@ -320,5 +372,33 @@ export const SERIES_ORDINALS: Record<string, CuratedOrdinal> = {
       + "document is headed 'Messaggio del Santo Padre Francesco in occasione della XXXIII "
       + "Giornata Mondiale del Malato, 11 febbraio 2025' and opens 'Celebriamo la XXXIII "
       + "Giornata Mondiale del Malato nell’Anno Giubilare 2025'; 2025 - 1993 + 1 = 33.",
+  },
+};
+
+export interface UrbiOccasion {
+  /** The series the item belongs to, by the occasion the heading names. */
+  series: 'urbi-et-orbi-christmas' | 'urbi-et-orbi-easter';
+  /** The occasion year. */
+  year: number;
+  /** The heading, quoted, and the evidence that the item is the feast's Urbi et Orbi. */
+  evidence: string;
+}
+
+/**
+ * Urbi et Orbi items whose `date` is neither 25 December nor Easter Sunday but which are
+ * the feast's Urbi et Orbi message all the same, by the heading's own word and because the
+ * shelf holds no feast-day item for that year. Consulted ahead of the date rule (spec
+ * §2.4, §3.2.7), which stays the rule for every uncurated item. Adjudicated by the
+ * repository owner on PR #26.
+ */
+export const SERIES_URBI_OCCASIONS: Record<string, UrbiOccasion> = {
+  // Keyed on the adjudicated date (DATE_CORRECTIONS), not the heading's 25 December.
+  'john-xxiii|messages/urbi_et_orbi|santo-natale|1962-12-22': {
+    series: 'urbi-et-orbi-christmas', year: 1962,
+    evidence: "Heading: 'Santo Natale (25 dicembre 1962)' (hf_j-xxiii_mes_19621222_urbi-natale.html). "
+      + 'vatican.va names the feast in the heading; the document is the radio message of '
+      + "Saturday 22 December 1962 (see DATE_CORRECTIONS). Unlike 1960 and 1961, the shelf holds "
+      + 'no 25 December item for 1962, so this is the Christmas 1962 message of the series, '
+      + 'keyed by the occasion year as every series-form id is.',
   },
 };
