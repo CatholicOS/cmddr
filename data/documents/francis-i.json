@@ -64,7 +64,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 18
+    }
   },
   {
     "id": "mag:francis-i/quo-firmiores-2013",
@@ -104,7 +110,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 15
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-05-11",
@@ -223,7 +235,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 3
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-06-09-1",
@@ -277,7 +295,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 247
+    }
   },
   {
     "id": "mag:francis-i/lumen-fidei-2013",
@@ -409,7 +433,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 250
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-09-02",
@@ -427,7 +457,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 319
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-09-07",
@@ -445,7 +481,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 322
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-10-05",
@@ -463,7 +505,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 6
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-10-13-1",
@@ -634,7 +682,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 253
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-11-15",
@@ -1456,7 +1510,13 @@
       "id": "lent",
       "year": 2015
     },
-    "sourceGenreLabel": "messages/lent"
+    "sourceGenreLabel": "messages/lent",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 194
+    }
   },
   {
     "id": "mag:francis-i/world-food-day-2014",
@@ -1505,7 +1565,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 122
+    }
   },
   {
     "id": "mag:francis-i/inter-eximias-2014",
@@ -1531,7 +1597,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 1
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2014-11-21",
@@ -1622,7 +1694,13 @@
       "year": 2015,
       "ordinal": 23
     },
-    "sourceGenreLabel": "messages/sick"
+    "sourceGenreLabel": "messages/sick",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 59
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-peace-2015",
@@ -1653,7 +1731,13 @@
       "year": 2015,
       "ordinal": 48
     },
-    "sourceGenreLabel": "messages/peace"
+    "sourceGenreLabel": "messages/peace",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 66
+    }
   },
   {
     "id": "mag:francis-i/cum-ad-provehendam-2014",
@@ -1679,7 +1763,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 242
+    }
   },
   {
     "id": "mag:francis-i/urbi-et-orbi-christmas-2014",
@@ -1710,7 +1800,13 @@
       "year": 2014
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 80
+    }
   },
   {
     "id": "mag:francis-i/multum-fructum-2015",
@@ -1736,7 +1832,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 246
+    }
   },
   {
     "id": "mag:francis-i/quae-maiori-2015",
@@ -1762,7 +1864,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 244
+    }
   },
   {
     "id": "mag:francis-i/world-communications-day-2015",
@@ -1814,7 +1922,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 500
+    }
   },
   {
     "id": "mag:francis-i/world-youth-day-2015",
@@ -1954,7 +2068,13 @@
       "circumscription-elevation"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 504
+    }
   },
   {
     "id": "mag:francis-i/in-hac-suprema-2015",
@@ -1976,7 +2096,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 505
+    }
   },
   {
     "id": "mag:francis-i/qui-successimus-2015",
@@ -2002,7 +2128,13 @@
       "circumscription-elevation"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 507
+    }
   },
   {
     "id": "mag:francis-i/quo-satius-2015",
@@ -2028,7 +2160,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 723
+    }
   },
   {
     "id": "mag:francis-i/nos-qui-2015",
@@ -2080,7 +2218,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 508
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-prayer-for-vocations-2015",
@@ -2110,7 +2254,13 @@
       "year": 2015,
       "ordinal": 52
     },
-    "sourceGenreLabel": "messages/vocations"
+    "sourceGenreLabel": "messages/vocations",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 465
+    }
   },
   {
     "id": "mag:francis-i/urbi-et-orbi-easter-2015",
@@ -2141,7 +2291,13 @@
       "year": 2015
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 469
+    }
   },
   {
     "id": "mag:francis-i/misericordiae-vultus-2015",
@@ -2173,7 +2329,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Misericordiae Vultus",
-    "sourceGenreLabel": "bulls"
+    "sourceGenreLabel": "bulls",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 399
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2015-04-12",
@@ -2191,7 +2353,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 421
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2015-05-17",
@@ -2244,7 +2412,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Laudato si'",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 847
+    }
   },
   {
     "id": "mag:francis-i/world-mission-day-2015",
@@ -2273,7 +2447,13 @@
       "id": "world-mission-day",
       "year": 2015
     },
-    "sourceGenreLabel": "messages/missions"
+    "sourceGenreLabel": "messages/missions",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 558
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2015-05-28",
@@ -2320,7 +2500,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 591
+    }
   },
   {
     "id": "mag:francis-i/spiritualem-ubertatem-2015",
@@ -2346,7 +2532,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 971
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-prayer-for-the-care-of-creation-2015",
@@ -2403,7 +2595,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 946
+    }
   },
   {
     "id": "mag:francis-i/mitis-iudex-dominus-iesus-2015",
@@ -2438,7 +2636,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 958
+    }
   },
   {
     "id": "mag:francis-i/world-youth-day-2016",
@@ -2475,7 +2679,13 @@
       "year": 2016,
       "ordinal": 31
     },
-    "sourceGenreLabel": "messages/youth"
+    "sourceGenreLabel": "messages/youth",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 1060
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-migrants-and-refugees-2016",
@@ -2504,7 +2714,13 @@
       "year": 2016,
       "ordinal": 102
     },
-    "sourceGenreLabel": "messages/migration"
+    "sourceGenreLabel": "messages/migration",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 1068
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2015-09-13",
@@ -2522,7 +2738,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 866
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-the-sick-2016",
@@ -2555,7 +2777,13 @@
       "year": 2016,
       "ordinal": 24
     },
-    "sourceGenreLabel": "messages/sick"
+    "sourceGenreLabel": "messages/sick",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 1056
+    }
   },
   {
     "id": "mag:francis-i/lent-2016",
@@ -2587,7 +2815,13 @@
       "id": "lent",
       "year": 2016
     },
-    "sourceGenreLabel": "messages/lent"
+    "sourceGenreLabel": "messages/lent",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 161
+    }
   },
   {
     "id": "mag:francis-i/world-food-day-2015",
@@ -2613,7 +2847,13 @@
       "id": "world-food-day",
       "year": 2015
     },
-    "sourceGenreLabel": "messages/food"
+    "sourceGenreLabel": "messages/food",
+    "acta": {
+      "series": "AAS",
+      "volume": 107,
+      "year": 2015,
+      "page": 1156
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-prayer-for-vocations-2016",
@@ -2645,7 +2885,13 @@
       "year": 2016,
       "ordinal": 53
     },
-    "sourceGenreLabel": "messages/vocations"
+    "sourceGenreLabel": "messages/vocations",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 45
+    }
   },
   {
     "id": "mag:francis-i/ad-aptius-consulendum-2015-12-03",
@@ -2671,7 +2917,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 206
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-peace-2016",
@@ -2704,7 +2956,13 @@
       "year": 2016,
       "ordinal": 49
     },
-    "sourceGenreLabel": "messages/peace"
+    "sourceGenreLabel": "messages/peace",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 49
+    }
   },
   {
     "id": "mag:francis-i/ad-aptius-consulendum-2015-12-18",
@@ -2756,7 +3014,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 3
+    }
   },
   {
     "id": "mag:francis-i/saeculorum-decursu-2015",
@@ -2782,7 +3046,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 4
+    }
   },
   {
     "id": "mag:francis-i/urbi-et-orbi-christmas-2015",
@@ -2813,7 +3083,13 @@
       "year": 2015
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 62
+    }
   },
   {
     "id": "mag:francis-i/cum-ad-aptius-2015",
@@ -2839,7 +3115,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 208
+    }
   },
   {
     "id": "mag:francis-i/world-communications-day-2016",
@@ -2898,7 +3180,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 102
+    }
   },
   {
     "id": "mag:francis-i/world-day-for-consecrated-life-2016",
@@ -2952,7 +3240,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 452
+    }
   },
   {
     "id": "mag:francis-i/amoris-laetitia-2016",
@@ -2986,7 +3280,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Amoris laetitia",
-    "sourceGenreLabel": "apost_exhortations"
+    "sourceGenreLabel": "apost_exhortations",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 351
+    }
   },
   {
     "id": "mag:francis-i/urbi-et-orbi-easter-2016",
@@ -3016,7 +3316,13 @@
       "year": 2016
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 491
+    }
   },
   {
     "id": "mag:francis-i/cum-ad-aeternam-2016",
@@ -3042,7 +3348,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 451
+    }
   },
   {
     "id": "mag:francis-i/world-mission-day-2016",
@@ -3072,7 +3384,13 @@
       "id": "world-mission-day",
       "year": 2016
     },
-    "sourceGenreLabel": "messages/missions"
+    "sourceGenreLabel": "messages/missions",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 689
+    }
   },
   {
     "id": "mag:francis-i/de-concordia-inter-codices-2016",
@@ -3149,7 +3467,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 715
+    }
   },
   {
     "id": "mag:francis-i/vultum-dei-quaerere-2016",
@@ -3205,7 +3529,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 862
+    }
   },
   {
     "id": "mag:francis-i/in-apostolorum-2016",
@@ -3231,7 +3561,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 524
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2016-08-15",
@@ -3331,7 +3667,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 42
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-prayer-for-the-care-of-creation-2016",
@@ -3359,7 +3701,13 @@
       "id": "world-day-of-prayer-for-the-care-of-creation",
       "year": 2016
     },
-    "sourceGenreLabel": "messages/cura-creato"
+    "sourceGenreLabel": "messages/cura-creato",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 989
+    }
   },
   {
     "id": "mag:francis-i/statuto-della-segreteria-per-la-comunicazione-2016",
@@ -3385,7 +3733,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 1051
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-migrants-and-refugees-2017",
@@ -3415,7 +3769,13 @@
       "year": 2017,
       "ordinal": 103
     },
-    "sourceGenreLabel": "messages/migration"
+    "sourceGenreLabel": "messages/migration",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 1240
+    }
   },
   {
     "id": "mag:francis-i/world-food-day-2016",
@@ -3442,7 +3802,13 @@
       "id": "world-food-day",
       "year": 2016
     },
-    "sourceGenreLabel": "messages/food"
+    "sourceGenreLabel": "messages/food",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 1245
+    }
   },
   {
     "id": "mag:francis-i/lent-2017",
@@ -3474,7 +3840,13 @@
       "id": "lent",
       "year": 2017
     },
-    "sourceGenreLabel": "messages/lent"
+    "sourceGenreLabel": "messages/lent",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 284
+    }
   },
   {
     "id": "mag:francis-i/statuto-della-pontificia-accademia-per-la-vita-2016",
@@ -3529,7 +3901,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Misericordia et misera",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 1311
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-prayer-for-vocations-2017",
@@ -3559,7 +3937,13 @@
       "year": 2017,
       "ordinal": 54
     },
-    "sourceGenreLabel": "messages/vocations"
+    "sourceGenreLabel": "messages/vocations",
+    "acta": {
+      "series": "AAS",
+      "volume": 108,
+      "year": 2016,
+      "page": 1413
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-peace-2017",
@@ -3653,7 +4037,13 @@
       "year": 2016
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 68
+    }
   },
   {
     "id": "mag:francis-i/world-communications-day-2017",
@@ -3686,7 +4076,13 @@
       "year": 2017,
       "ordinal": 51
     },
-    "sourceGenreLabel": "messages/communications"
+    "sourceGenreLabel": "messages/communications",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 163
+    }
   },
   {
     "id": "mag:francis-i/world-day-for-consecrated-life-2017",
@@ -3743,7 +4139,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 335
+    }
   },
   {
     "id": "mag:francis-i/world-youth-day-2017",
@@ -3777,7 +4179,13 @@
       "year": 2017,
       "ordinal": 32
     },
-    "sourceGenreLabel": "messages/youth"
+    "sourceGenreLabel": "messages/youth",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 387
+    }
   },
   {
     "id": "mag:francis-i/urbi-et-orbi-easter-2017",
@@ -3807,7 +4215,13 @@
       "year": 2017
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 479
+    }
   },
   {
     "id": "mag:francis-i/world-mission-day-2017",
@@ -3838,7 +4252,13 @@
       "id": "world-mission-day",
       "year": 2017
     },
-    "sourceGenreLabel": "messages/missions"
+    "sourceGenreLabel": "messages/missions",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 761
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-the-poor-2017",
@@ -3870,7 +4290,13 @@
       "year": 2017,
       "ordinal": 1
     },
-    "sourceGenreLabel": "messages/poveri"
+    "sourceGenreLabel": "messages/poveri",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 768
+    }
   },
   {
     "id": "mag:francis-i/maiorem-hac-dilectionem-sull-offerta-della-vita-2017",
@@ -3900,7 +4326,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 831
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-migrants-and-refugees-2018",
@@ -3932,7 +4364,13 @@
       "year": 2018,
       "ordinal": 104
     },
-    "sourceGenreLabel": "messages/migration"
+    "sourceGenreLabel": "messages/migration",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 918
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-prayer-for-the-care-of-creation-2017",
@@ -3961,7 +4399,13 @@
       "id": "world-day-of-prayer-for-the-care-of-creation",
       "year": 2017
     },
-    "sourceGenreLabel": "messages/cura-creato"
+    "sourceGenreLabel": "messages/cura-creato",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 924
+    }
   },
   {
     "id": "mag:francis-i/magnum-principium-2017",
@@ -3990,7 +4434,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 967
+    }
   },
   {
     "id": "mag:francis-i/summa-familiae-cura-2017",
@@ -4020,7 +4470,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 971
+    }
   },
   {
     "id": "mag:francis-i/world-food-day-2017",
@@ -4079,7 +4535,13 @@
       "id": "lent",
       "year": 2018
     },
-    "sourceGenreLabel": "messages/lent"
+    "sourceGenreLabel": "messages/lent",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 415
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-peace-2018",
@@ -4110,7 +4572,13 @@
       "year": 2018,
       "ordinal": 51
     },
-    "sourceGenreLabel": "messages/peace"
+    "sourceGenreLabel": "messages/peace",
+    "acta": {
+      "series": "AAS",
+      "volume": 109,
+      "year": 2017,
+      "page": 1327
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-the-sick-2018",
@@ -4142,7 +4610,13 @@
       "year": 2018,
       "ordinal": 26
     },
-    "sourceGenreLabel": "messages/sick"
+    "sourceGenreLabel": "messages/sick",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 91
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-prayer-for-vocations-2018",
@@ -4174,7 +4648,13 @@
       "year": 2018,
       "ordinal": 55
     },
-    "sourceGenreLabel": "messages/vocations"
+    "sourceGenreLabel": "messages/vocations",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 83
+    }
   },
   {
     "id": "mag:francis-i/veritatis-gaudium-2017",
@@ -4204,7 +4684,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1
+    }
   },
   {
     "id": "mag:francis-i/urbi-et-orbi-christmas-2017",
@@ -4235,7 +4721,13 @@
       "year": 2017
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 97
+    }
   },
   {
     "id": "mag:francis-i/world-communications-day-2018",
@@ -4267,7 +4759,13 @@
       "year": 2018,
       "ordinal": 52
     },
-    "sourceGenreLabel": "messages/communications"
+    "sourceGenreLabel": "messages/communications",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 249
+    }
   },
   {
     "id": "mag:francis-i/world-day-for-consecrated-life-2018",
@@ -4331,7 +4829,13 @@
       "year": 2018,
       "ordinal": 33
     },
-    "sourceGenreLabel": "messages/youth"
+    "sourceGenreLabel": "messages/youth",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 419
+    }
   },
   {
     "id": "mag:francis-i/imparare-a-congedarsi-2018",
@@ -4362,7 +4866,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 379
+    }
   },
   {
     "id": "mag:francis-i/gaudete-et-exsultate-2018",
@@ -4395,7 +4905,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Gaudete et exsultate",
-    "sourceGenreLabel": "apost_exhortations"
+    "sourceGenreLabel": "apost_exhortations",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1111
+    }
   },
   {
     "id": "mag:francis-i/urbi-et-orbi-easter-2018",
@@ -4426,7 +4942,13 @@
       "year": 2018
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 546
+    }
   },
   {
     "id": "mag:francis-i/world-mission-day-2018",
@@ -4517,7 +5039,13 @@
       "id": "world-day-of-prayer-for-the-care-of-creation",
       "year": 2018
     },
-    "sourceGenreLabel": "messages/cura-creato"
+    "sourceGenreLabel": "messages/cura-creato",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1305
+    }
   },
   {
     "id": "mag:francis-i/episcopalis-communio-2018",
@@ -4605,7 +5133,13 @@
       "id": "world-food-day",
       "year": 2018
     },
-    "sourceGenreLabel": "messages/food"
+    "sourceGenreLabel": "messages/food",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1572
+    }
   },
   {
     "id": "mag:francis-i/world-youth-day-2019",
@@ -4635,7 +5169,13 @@
       "year": 2019,
       "ordinal": 34
     },
-    "sourceGenreLabel": "messages/youth"
+    "sourceGenreLabel": "messages/youth",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1750
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2018-11-25",
@@ -4688,7 +5228,13 @@
       "year": 2019,
       "ordinal": 27
     },
-    "sourceGenreLabel": "messages/sick"
+    "sourceGenreLabel": "messages/sick",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 158
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-peace-2019",
@@ -4720,7 +5266,13 @@
       "year": 2019,
       "ordinal": 52
     },
-    "sourceGenreLabel": "messages/peace"
+    "sourceGenreLabel": "messages/peace",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 45
+    }
   },
   {
     "id": "mag:francis-i/urbi-et-orbi-christmas-2018",
@@ -4751,7 +5303,13 @@
       "year": 2018
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 56
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2019-01-17-1",
@@ -4858,7 +5416,13 @@
       "year": 2019,
       "ordinal": 53
     },
-    "sourceGenreLabel": "messages/communications"
+    "sourceGenreLabel": "messages/communications",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 162
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-prayer-for-vocations-2019",
@@ -4890,7 +5454,13 @@
       "year": 2019,
       "ordinal": 56
     },
-    "sourceGenreLabel": "messages/vocations"
+    "sourceGenreLabel": "messages/vocations",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 571
+    }
   },
   {
     "id": "mag:francis-i/world-day-for-consecrated-life-2019",
@@ -4951,7 +5521,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 483
+    }
   },
   {
     "id": "mag:francis-i/christus-vivit-2019",
@@ -4981,7 +5557,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Christus vivit",
-    "sourceGenreLabel": "apost_exhortations"
+    "sourceGenreLabel": "apost_exhortations",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 391
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2019-03-26",
@@ -5007,7 +5589,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 485
+    }
   },
   {
     "id": "mag:francis-i/urbi-et-orbi-easter-2019",
@@ -5041,7 +5629,13 @@
       "year": 2019
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 731
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2019-05-07",
@@ -5074,7 +5668,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 823
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-migrants-and-refugees-2019",
@@ -5108,7 +5708,13 @@
       "year": 2019,
       "ordinal": 105
     },
-    "sourceGenreLabel": "messages/migration"
+    "sourceGenreLabel": "messages/migration",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 908
+    }
   },
   {
     "id": "mag:francis-i/world-mission-day-2019",
@@ -5139,7 +5745,13 @@
       "id": "world-mission-day",
       "year": 2019
     },
-    "sourceGenreLabel": "messages/missions"
+    "sourceGenreLabel": "messages/missions",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1130
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-the-poor-2019",
@@ -5201,7 +5813,13 @@
       "id": "world-day-of-prayer-for-the-care-of-creation",
       "year": 2019
     },
-    "sourceGenreLabel": "messages/cura-creato"
+    "sourceGenreLabel": "messages/cura-creato",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1412
+    }
   },
   {
     "id": "mag:francis-i/aperuit-illis-2019",
@@ -5238,7 +5856,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1495
+    }
   },
   {
     "id": "mag:francis-i/lent-2020",
@@ -5270,7 +5894,13 @@
       "id": "lent",
       "year": 2020
     },
-    "sourceGenreLabel": "messages/lent"
+    "sourceGenreLabel": "messages/lent",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 311
+    }
   },
   {
     "id": "mag:francis-i/world-food-day-2019",
@@ -5296,7 +5926,13 @@
       "id": "world-food-day",
       "year": 2019
     },
-    "sourceGenreLabel": "messages/food"
+    "sourceGenreLabel": "messages/food",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1737
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2019-10-22",
@@ -5322,7 +5958,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1681
+    }
   },
   {
     "id": "mag:francis-i/admirabile-signum-2019",
@@ -5353,7 +5995,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Admirabile signum",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 111,
+      "year": 2019,
+      "page": 1839
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2019-12-07",
@@ -5405,7 +6053,13 @@
       "year": 2020,
       "ordinal": 53
     },
-    "sourceGenreLabel": "messages/peace"
+    "sourceGenreLabel": "messages/peace",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 54
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2019-12-21",
@@ -5433,7 +6087,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 1
+    }
   },
   {
     "id": "mag:francis-i/urbi-et-orbi-christmas-2019",
@@ -5464,7 +6124,13 @@
       "year": 2019
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 62
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-the-sick-2020",
@@ -5496,7 +6162,13 @@
       "year": 2020,
       "ordinal": 28
     },
-    "sourceGenreLabel": "messages/sick"
+    "sourceGenreLabel": "messages/sick",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 66
+    }
   },
   {
     "id": "mag:francis-i/world-communications-day-2020",
@@ -5529,7 +6201,13 @@
       "year": 2020,
       "ordinal": 54
     },
-    "sourceGenreLabel": "messages/communications"
+    "sourceGenreLabel": "messages/communications",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 182
+    }
   },
   {
     "id": "mag:francis-i/world-day-for-consecrated-life-2020",
@@ -5588,7 +6266,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Querida Amazonia",
-    "sourceGenreLabel": "apost_exhortations"
+    "sourceGenreLabel": "apost_exhortations",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 231
+    }
   },
   {
     "id": "mag:francis-i/world-youth-day-2020",
@@ -5620,7 +6304,13 @@
       "year": 2020,
       "ordinal": 35
     },
-    "sourceGenreLabel": "messages/youth"
+    "sourceGenreLabel": "messages/youth",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 314
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-prayer-for-vocations-2020",
@@ -5652,7 +6342,13 @@
       "year": 2020,
       "ordinal": 57
     },
-    "sourceGenreLabel": "messages/vocations"
+    "sourceGenreLabel": "messages/vocations",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 362
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2020-03-16",
@@ -5730,7 +6426,13 @@
       "year": 2020
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 451
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-migrants-and-refugees-2020",
@@ -5763,7 +6465,13 @@
       "year": 2020,
       "ordinal": 106
     },
-    "sourceGenreLabel": "messages/migration"
+    "sourceGenreLabel": "messages/migration",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 559
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2020-05-19",
@@ -5877,7 +6585,13 @@
       "year": 2020,
       "ordinal": 4
     },
-    "sourceGenreLabel": "messages/poveri"
+    "sourceGenreLabel": "messages/poveri",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 626
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-prayer-for-the-care-of-creation-2020",
@@ -5909,7 +6623,13 @@
       "year": 2020,
       "ordinal": 6
     },
-    "sourceGenreLabel": "messages/cura-creato"
+    "sourceGenreLabel": "messages/cura-creato",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 812
+    }
   },
   {
     "id": "mag:francis-i/scripturae-sacrae-affectus-2020",
@@ -5939,7 +6659,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Scripturae Sacrae affectus",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 855
+    }
   },
   {
     "id": "mag:francis-i/fratelli-tutti-2020",
@@ -5975,7 +6701,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Fratelli tutti",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 969
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2020-10-04",
@@ -6020,7 +6752,13 @@
       "id": "world-food-day",
       "year": 2020
     },
-    "sourceGenreLabel": "messages/food"
+    "sourceGenreLabel": "messages/food",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 1110
+    }
   },
   {
     "id": "mag:francis-i/authenticum-charismatis-2020",
@@ -6052,7 +6790,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 1075
+    }
   },
   {
     "id": "mag:francis-i/lent-2021",
@@ -6085,7 +6829,13 @@
       "id": "lent",
       "year": 2021
     },
-    "sourceGenreLabel": "messages/lent"
+    "sourceGenreLabel": "messages/lent",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 295
+    }
   },
   {
     "id": "mag:francis-i/ab-initio-2020",
@@ -6112,7 +6862,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 1152
+    }
   },
   {
     "id": "mag:francis-i/patris-corde-2020",
@@ -6143,7 +6899,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Patris corde",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 13
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-peace-2021",
@@ -6175,7 +6937,13 @@
       "year": 2021,
       "ordinal": 54
     },
-    "sourceGenreLabel": "messages/peace"
+    "sourceGenreLabel": "messages/peace",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 66
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-the-sick-2021",
@@ -6207,7 +6975,13 @@
       "year": 2021,
       "ordinal": 29
     },
-    "sourceGenreLabel": "messages/sick"
+    "sourceGenreLabel": "messages/sick",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 208
+    }
   },
   {
     "id": "mag:francis-i/urbi-et-orbi-christmas-2020",
@@ -6240,7 +7014,13 @@
       "year": 2020
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 77
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2020-12-26",
@@ -6267,7 +7047,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 1
+    }
   },
   {
     "id": "mag:francis-i/world-mission-day-2021",
@@ -6296,7 +7082,13 @@
       "id": "world-mission-day",
       "year": 2021
     },
-    "sourceGenreLabel": "messages/missions"
+    "sourceGenreLabel": "messages/missions",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 218
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2021-01-10",
@@ -6328,7 +7120,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 169
+    }
   },
   {
     "id": "mag:francis-i/world-communications-day-2021",
@@ -6361,7 +7159,13 @@
       "year": 2021,
       "ordinal": 55
     },
-    "sourceGenreLabel": "messages/communications"
+    "sourceGenreLabel": "messages/communications",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 212
+    }
   },
   {
     "id": "mag:francis-i/world-day-for-consecrated-life-2021",
@@ -6416,7 +7220,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 265
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-prayer-for-vocations-2021",
@@ -6475,7 +7285,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 345
+    }
   },
   {
     "id": "mag:francis-i/candor-lucis-aeternae-2021",
@@ -6501,7 +7317,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Candor lucis aeternae",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 348
+    }
   },
   {
     "id": "mag:francis-i/urbi-et-orbi-easter-2021",
@@ -6532,7 +7354,13 @@
       "year": 2021
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 472
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2021-04-26",
@@ -6559,7 +7387,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 441
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2021-04-30-1",
@@ -6603,7 +7437,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 445
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-migrants-and-refugees-2021",
@@ -6635,7 +7475,13 @@
       "year": 2021,
       "ordinal": 107
     },
-    "sourceGenreLabel": "messages/migration"
+    "sourceGenreLabel": "messages/migration",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 476
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2021-05-10",
@@ -6672,7 +7518,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 527
+    }
   },
   {
     "id": "mag:francis-i/costituzione-apostolica-pascite-gregem-dei-2021",
@@ -6699,7 +7551,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 534
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-grandparents-and-the-elderly-2021",
@@ -6731,7 +7589,13 @@
       "year": 2021,
       "ordinal": 1
     },
-    "sourceGenreLabel": "messages/nonni"
+    "sourceGenreLabel": "messages/nonni",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 679
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-the-poor-2021",
@@ -6763,7 +7627,13 @@
       "year": 2021,
       "ordinal": 5
     },
-    "sourceGenreLabel": "messages/poveri"
+    "sourceGenreLabel": "messages/poveri",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 689
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2021-07-16",
@@ -6793,7 +7663,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 793
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-prayer-for-the-care-of-creation-2021",
@@ -6820,7 +7696,13 @@
       "id": "world-day-of-prayer-for-the-care-of-creation",
       "year": 2021
     },
-    "sourceGenreLabel": "messages/cura-creato"
+    "sourceGenreLabel": "messages/cura-creato",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 970
+    }
   },
   {
     "id": "mag:francis-i/world-youth-day-2021",
@@ -6853,7 +7735,13 @@
       "year": 2021,
       "ordinal": 36
     },
-    "sourceGenreLabel": "messages/youth"
+    "sourceGenreLabel": "messages/youth",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 979
+    }
   },
   {
     "id": "mag:francis-i/world-food-day-2021",
@@ -6960,7 +7848,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 1217
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-peace-2022",
@@ -6993,7 +7887,13 @@
       "year": 2022,
       "ordinal": 55
     },
-    "sourceGenreLabel": "messages/peace"
+    "sourceGenreLabel": "messages/peace",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 42
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-the-sick-2022",
@@ -7027,7 +7927,13 @@
       "year": 2022,
       "ordinal": 30
     },
-    "sourceGenreLabel": "messages/sick"
+    "sourceGenreLabel": "messages/sick",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 49
+    }
   },
   {
     "id": "mag:francis-i/urbi-et-orbi-christmas-2021",
@@ -7060,7 +7966,13 @@
       "year": 2021
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 54
+    }
   },
   {
     "id": "mag:francis-i/world-mission-day-2022",
@@ -7110,7 +8022,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 196
+    }
   },
   {
     "id": "mag:francis-i/world-communications-day-2022",
@@ -7143,7 +8061,13 @@
       "year": 2022,
       "ordinal": 56
     },
-    "sourceGenreLabel": "messages/communications"
+    "sourceGenreLabel": "messages/communications",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 259
+    }
   },
   {
     "id": "mag:francis-i/world-day-for-consecrated-life-2022",
@@ -7206,7 +8130,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 290
+    }
   },
   {
     "id": "mag:francis-i/fidem-servare-2022",
@@ -7233,7 +8163,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 287
+    }
   },
   {
     "id": "mag:francis-i/praedicate-evangelium-2022",
@@ -7264,7 +8200,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 375
+    }
   },
   {
     "id": "mag:francis-i/urbi-et-orbi-easter-2022",
@@ -7295,7 +8237,13 @@
       "year": 2022
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 609
+    }
   },
   {
     "id": "mag:francis-i/recognitum-librum-vi-2022",
@@ -7321,7 +8269,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 551
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2022-04-30",
@@ -7339,7 +8293,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 741
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-grandparents-and-the-elderly-2022",
@@ -7371,7 +8331,13 @@
       "year": 2022,
       "ordinal": 2
     },
-    "sourceGenreLabel": "messages/nonni"
+    "sourceGenreLabel": "messages/nonni",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 728
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-prayer-for-vocations-2022",
@@ -7403,7 +8369,13 @@
       "year": 2022,
       "ordinal": 59
     },
-    "sourceGenreLabel": "messages/vocations"
+    "sourceGenreLabel": "messages/vocations",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 617
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-migrants-and-refugees-2022",
@@ -7435,7 +8407,13 @@
       "year": 2022,
       "ordinal": 108
     },
-    "sourceGenreLabel": "messages/migration"
+    "sourceGenreLabel": "messages/migration",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 734
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2022-05-15",
@@ -7485,7 +8463,13 @@
       "year": 2022,
       "ordinal": 6
     },
-    "sourceGenreLabel": "messages/poveri"
+    "sourceGenreLabel": "messages/poveri",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 876
+    }
   },
   {
     "id": "mag:francis-i/desiderio-desideravi-2022",
@@ -7512,7 +8496,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Desiderio desideravi",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 799
+    }
   },
   {
     "id": "mag:francis-i/ad-charisma-tuendum-2022",
@@ -7538,7 +8528,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 985
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-prayer-for-the-care-of-creation-2022",
@@ -7569,7 +8565,13 @@
       "id": "world-day-of-prayer-for-the-care-of-creation",
       "year": 2022
     },
-    "sourceGenreLabel": "messages/cura-creato"
+    "sourceGenreLabel": "messages/cura-creato",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 1005
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2022-08-01",
@@ -7701,7 +8703,13 @@
       "id": "world-food-day",
       "year": 2022
     },
-    "sourceGenreLabel": "messages/food"
+    "sourceGenreLabel": "messages/food",
+    "acta": {
+      "series": "AAS",
+      "volume": 114,
+      "year": 2022,
+      "page": 1388
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2022-10-22",
@@ -7768,7 +8776,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 1
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-peace-2023",
@@ -7802,7 +8816,13 @@
       "year": 2023,
       "ordinal": 56
     },
-    "sourceGenreLabel": "messages/peace"
+    "sourceGenreLabel": "messages/peace",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 90
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2022-12-10",
@@ -7822,7 +8842,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 191
+    }
   },
   {
     "id": "mag:francis-i/cum-mirabilia-2022",
@@ -7848,7 +8874,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 265
+    }
   },
   {
     "id": "mag:francis-i/urbi-et-orbi-christmas-2022",
@@ -7879,7 +8911,13 @@
       "year": 2022
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 95
+    }
   },
   {
     "id": "mag:francis-i/totum-amoris-est-2022",
@@ -7906,7 +8944,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Totum amoris est",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 32
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2023-01-06",
@@ -7950,7 +8994,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 7
+    }
   },
   {
     "id": "mag:francis-i/world-mission-day-2023",
@@ -7981,7 +9031,13 @@
       "id": "world-mission-day",
       "year": 2023
     },
-    "sourceGenreLabel": "messages/missions"
+    "sourceGenreLabel": "messages/missions",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 194
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-the-sick-2023",
@@ -8015,7 +9071,13 @@
       "year": 2023,
       "ordinal": 31
     },
-    "sourceGenreLabel": "messages/sick"
+    "sourceGenreLabel": "messages/sick",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 182
+    }
   },
   {
     "id": "mag:francis-i/world-communications-day-2023",
@@ -8049,7 +9111,13 @@
       "year": 2023,
       "ordinal": 57
     },
-    "sourceGenreLabel": "messages/communications"
+    "sourceGenreLabel": "messages/communications",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 188
+    }
   },
   {
     "id": "mag:francis-i/lent-2023",
@@ -8083,7 +9151,13 @@
       "id": "lent",
       "year": 2023
     },
-    "sourceGenreLabel": "messages/lent"
+    "sourceGenreLabel": "messages/lent",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 320
+    }
   },
   {
     "id": "mag:francis-i/world-day-for-consecrated-life-2023",
@@ -8109,7 +9183,13 @@
       "id": "world-day-for-consecrated-life",
       "year": 2023
     },
-    "sourceGenreLabel": "messages/consecrated_life"
+    "sourceGenreLabel": "messages/consecrated_life",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 199
+    }
   },
   {
     "id": "mag:francis-i/regolamento-della-commissione-indipendente-di-vigilanza-del-vicariato-2023",
@@ -8157,7 +9237,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 263
+    }
   },
   {
     "id": "mag:francis-i/vocare-peccatores-2023",
@@ -8182,7 +9268,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 383
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2023-03-25",
@@ -8215,7 +9307,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 394
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2023-04-02",
@@ -8240,7 +9338,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 405
+    }
   },
   {
     "id": "mag:francis-i/urbi-et-orbi-easter-2023",
@@ -8271,7 +9375,13 @@
       "year": 2023
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 515
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2023-04-12",
@@ -8295,7 +9405,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 479
+    }
   },
   {
     "id": "mag:francis-i/iam-pridem-2023",
@@ -8321,7 +9437,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 484
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-prayer-for-vocations-2023",
@@ -8355,7 +9477,13 @@
       "year": 2023,
       "ordinal": 60
     },
-    "sourceGenreLabel": "messages/vocations"
+    "sourceGenreLabel": "messages/vocations",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 518
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-migrants-and-refugees-2023",
@@ -8475,7 +9603,13 @@
       "year": 2023,
       "ordinal": 3
     },
-    "sourceGenreLabel": "messages/nonni"
+    "sourceGenreLabel": "messages/nonni",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 776
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-the-poor-2023",
@@ -8509,7 +9643,13 @@
       "year": 2023,
       "ordinal": 7
     },
-    "sourceGenreLabel": "messages/poveri"
+    "sourceGenreLabel": "messages/poveri",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 782
+    }
   },
   {
     "id": "mag:francis-i/sublimitas-et-miseria-hominis-2023",
@@ -8536,7 +9676,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Sublimitas et miseria hominis",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 722
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2023-07-04",
@@ -8604,7 +9750,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 951
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2023-09-14",
@@ -8659,7 +9811,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Laudate Deum",
-    "sourceGenreLabel": "apost_exhortations"
+    "sourceGenreLabel": "apost_exhortations",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 1041
+    }
   },
   {
     "id": "mag:francis-i/c-est-la-confiance-2023",
@@ -8688,7 +9846,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "C’est la confiance",
-    "sourceGenreLabel": "apost_exhortations"
+    "sourceGenreLabel": "apost_exhortations",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 1191
+    }
   },
   {
     "id": "mag:francis-i/world-food-day-2023",
@@ -8714,7 +9878,13 @@
       "id": "world-food-day",
       "year": 2023
     },
-    "sourceGenreLabel": "messages/food"
+    "sourceGenreLabel": "messages/food",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 1249
+    }
   },
   {
     "id": "mag:francis-i/ad-theologiam-promovendam-2023",
@@ -8740,7 +9910,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 1209
+    }
   },
   {
     "id": "mag:francis-i/world-youth-day-2023",
@@ -8775,7 +9951,13 @@
       "year": 2023,
       "ordinal": 38
     },
-    "sourceGenreLabel": "messages/youth"
+    "sourceGenreLabel": "messages/youth",
+    "acta": {
+      "series": "AAS",
+      "volume": 115,
+      "year": 2023,
+      "page": 1402
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2023-11-27",
@@ -8880,7 +10062,13 @@
       "year": 2024,
       "ordinal": 57
     },
-    "sourceGenreLabel": "messages/peace"
+    "sourceGenreLabel": "messages/peace",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 54
+    }
   },
   {
     "id": "mag:francis-i/peculiari-gaudio-2023",
@@ -8906,7 +10094,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 6
+    }
   },
   {
     "id": "mag:francis-i/urbi-et-orbi-christmas-2023",
@@ -8937,7 +10131,13 @@
       "year": 2023
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 68
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-the-sick-2024",
@@ -8970,7 +10170,13 @@
       "year": 2024,
       "ordinal": 32
     },
-    "sourceGenreLabel": "messages/sick"
+    "sourceGenreLabel": "messages/sick",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 253
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2024-01-16-1",
@@ -8992,7 +10198,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 189
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2024-01-16-2",
@@ -9046,7 +10258,13 @@
       "year": 2024,
       "ordinal": 58
     },
-    "sourceGenreLabel": "messages/communications"
+    "sourceGenreLabel": "messages/communications",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 261
+    }
   },
   {
     "id": "mag:francis-i/world-mission-day-2024",
@@ -9078,7 +10296,13 @@
       "id": "world-mission-day",
       "year": 2024
     },
-    "sourceGenreLabel": "messages/missions"
+    "sourceGenreLabel": "messages/missions",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 267
+    }
   },
   {
     "id": "mag:francis-i/world-day-for-consecrated-life-2024",
@@ -9135,7 +10359,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 311
+    }
   },
   {
     "id": "mag:francis-i/pastoralis-sollicitudinis-2024",
@@ -9161,7 +10391,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 314
+    }
   },
   {
     "id": "mag:francis-i/munus-tribunalis-2024",
@@ -9186,7 +10422,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 407
+    }
   },
   {
     "id": "mag:francis-i/world-childrens-day-2024",
@@ -9219,7 +10461,13 @@
       "year": 2024,
       "ordinal": 1
     },
-    "sourceGenreLabel": "messages/bambini"
+    "sourceGenreLabel": "messages/bambini",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 502
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2024-03-27",
@@ -9243,7 +10491,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 535
+    }
   },
   {
     "id": "mag:francis-i/urbi-et-orbi-easter-2024",
@@ -9274,7 +10528,13 @@
       "year": 2024
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 513
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-prayer-for-vocations-2024",
@@ -9307,7 +10567,13 @@
       "year": 2024,
       "ordinal": 61
     },
-    "sourceGenreLabel": "messages/vocations"
+    "sourceGenreLabel": "messages/vocations",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 517
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-grandparents-and-the-elderly-2024",
@@ -9341,7 +10607,13 @@
       "year": 2024,
       "ordinal": 4
     },
-    "sourceGenreLabel": "messages/nonni"
+    "sourceGenreLabel": "messages/nonni",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 728
+    }
   },
   {
     "id": "mag:francis-i/spes-non-confundit-2024",
@@ -9377,7 +10649,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Spes non confundit",
-    "sourceGenreLabel": "bulls"
+    "sourceGenreLabel": "bulls",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 647
+    }
   },
   {
     "id": "mag:francis-i/fide-incensus-2024",
@@ -9405,7 +10683,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 666
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-migrants-and-refugees-2024",
@@ -9443,7 +10727,13 @@
       "year": 2024,
       "ordinal": 110
     },
-    "sourceGenreLabel": "messages/migration"
+    "sourceGenreLabel": "messages/migration",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 735
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2024-05-26",
@@ -9494,7 +10784,13 @@
       "year": 2024,
       "ordinal": 8
     },
-    "sourceGenreLabel": "messages/poveri"
+    "sourceGenreLabel": "messages/poveri",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 892
+    }
   },
   {
     "id": "mag:francis-i/fratello-sole-2024",
@@ -9521,7 +10817,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 815
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-prayer-for-the-care-of-creation-2024",
@@ -9552,7 +10854,13 @@
       "id": "world-day-of-prayer-for-the-care-of-creation",
       "year": 2024
     },
-    "sourceGenreLabel": "messages/cura-creato"
+    "sourceGenreLabel": "messages/cura-creato",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 898
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2024-06-29",
@@ -9625,7 +10933,13 @@
       "year": 2024,
       "ordinal": 39
     },
-    "sourceGenreLabel": "messages/youth"
+    "sourceGenreLabel": "messages/youth",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 1242
+    }
   },
   {
     "id": "mag:francis-i/la-vera-bellezza-2024",
@@ -9650,7 +10964,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 1191
+    }
   },
   {
     "id": "mag:francis-i/world-food-day-2024",
@@ -9676,7 +10996,13 @@
       "id": "world-food-day",
       "year": 2024
     },
-    "sourceGenreLabel": "messages/food"
+    "sourceGenreLabel": "messages/food",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 1475
+    }
   },
   {
     "id": "mag:francis-i/dilexit-nos-2024",
@@ -9706,7 +11032,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Dilexit nos",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 116,
+      "year": 2024,
+      "page": 1369
+    }
   },
   {
     "id": "mag:francis-i/quod-manifestatum-2024",

@@ -41,6 +41,15 @@ export interface DocumentRecord {
    * `ordinal` is recorded only where the source prints one (invariant 24).
    */
   series?: { id: string; year: number; ordinal?: number };
+  /**
+   * Where the act stands in the *Acta Apostolicae Sedis* (or, before 1909, the *Acta
+   * Sanctae Sedis*): the conventional short citation `AAS 115 (2023) 1041` is
+   * `{ series: 'AAS', volume: 115, year: 2023, page: 1041 }`, `page` the first page as
+   * the index cites it. Purely bibliographic, never authority-bearing; invariant 25 keeps
+   * `(series, volume, page)` unique. Written by the harvest from the AAS index fixtures
+   * (tools/src/acta/). `part` is reserved for the 1917 and 1983 double volumes and unused.
+   */
+  acta?: { series: 'AAS' | 'ASS'; volume: number; year: number; page: number; part?: 'I' | 'II' };
   descriptiveTitle?: 'dogmatic' | 'pastoral';
   sigla?: string;
   aliases?: string[];

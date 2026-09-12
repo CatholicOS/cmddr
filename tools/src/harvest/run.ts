@@ -13,6 +13,8 @@ import {
 } from '../mappings/index.js';
 import { issuerLocalPart, mintId } from '../ids.js';
 import { slugify } from '../slug.js';
+import { applyActa } from '../acta/join.js';
+import { categoryForHeading } from '../acta/categories.js';
 import type { DocumentRecord, HarvestItem } from '../types.js';
 
 
@@ -333,6 +335,38 @@ for (const [issuer, docs] of byIssuer) {
   }
   const n = docs.filter((d) => d.idStatus === 'provisional').length;
   if (n > 0) console.warn(`  ${issuer}: ${n} of ${docs.length} provisional`);
+}
+
+// The AAS reference (acta reference spec §4.3): every entry of the ten annual *Index
+// generalis* fixtures (tools/fixtures/acta/) in a harvested category is matched to a
+// document by issuer, date and incipit, and the match writes `acta` on it. The join runs
+// after every id is final, so the summary below names the ids the report will name. It
+// never writes what it cannot evidence: an ambiguous entry, an entry the shelves lack, a
+// document two entries claim -- each is counted here and listed in the join report
+// (docs/superpowers/reports/), not resolved by loosening the matcher.
+const acta = applyActa(allDocs);
+if (acta.missing.length) console.warn(`AAS index fixture missing for ${acta.missing.join(', ')}`);
+for (const [year, parsed] of acta.parsed) {
+  for (const heading of parsed.unseenHeadings) {
+    console.warn(`AAS ${year}: unseen category heading '${heading}' -- add it to tools/src/acta/categories.ts`);
+  }
+}
+{
+  const r = acta.result;
+  const harvested = (e: { category: string }) => categoryForHeading(e.category)?.harvested !== 'no';
+  const attempted = acta.entries.filter(harvested).length;
+  console.log(
+    `AAS ${[...acta.parsed.keys()].join(', ')}: ${acta.entries.length} index entries, ${attempted} in harvested `
+    + `categories -> ${r.matches.length} matched, ${r.ambiguous.length} ambiguous, `
+    + `${r.unmatched.length} unmatched, ${r.conflicts.length} document(s) claimed twice`,
+  );
+  for (const c of r.conflicts) {
+    console.warn(
+      `AAS entries ${c.entries.map((e) => `${e.year}:${e.page}`).join(' and ')} both match ${c.documentId}; `
+      + 'neither is written',
+    );
+  }
+  for (const e of r.unknownPope) console.warn(`AAS ${e.year}:${e.page}: no issuer for pope heading '${e.pope}'`);
 }
 
 // Regenerate from scratch so a stale file from a removed reassignment cannot linger

@@ -364,6 +364,31 @@ describe('invariant 23: series.id resolves against the vocabulary', () => {
   });
 });
 
+describe('invariant 25: one page of the Acta opens one act', () => {
+  const cited = (id: string, page: number, date = '2023-10-04'): DocumentRecord => ({
+    ...good, id, title: id, incipit: id.split('/')[1]!.replace(/-\d{4}$/, '').replace(/-/g, ' '),
+    issuerId: 'rp:francis-i', date, acta: { series: 'AAS', volume: 115, year: 2023, page },
+  });
+
+  it('accepts distinct pages, and the same page in another volume or series', () => {
+    expect(rules([cited('mag:francis-i/laudate-deum-2023', 1041), cited('mag:francis-i/c-est-la-confiance-2023', 1191)])).toEqual([]);
+    const other: DocumentRecord = { ...cited('mag:francis-i/ius-nativum-2023', 1041), acta: { series: 'AAS', volume: 114, year: 2022, page: 1041 } };
+    expect(rules([cited('mag:francis-i/laudate-deum-2023', 1041), other])).toEqual([]);
+  });
+
+  it('rejects two documents sharing (series, volume, page), naming both', () => {
+    const out = checkDocuments([
+      cited('mag:francis-i/laudate-deum-2023', 1041), cited('mag:francis-i/c-est-la-confiance-2023', 1041),
+    ], GENRES);
+    expect(out.map((v) => v.rule)).toEqual([25, 25]);
+    expect(out[0]!.message).toContain('AAS 115 1041');
+  });
+
+  it('reads nothing else off acta: a reference on a document of any genre or issuer passes', () => {
+    expect(rules([{ ...good, acta: { series: 'ASS', volume: 23, year: 1890, page: 705 } }])).toEqual([]);
+  });
+});
+
 describe('the series form of a minted id (messages spec §3)', () => {
   it('passes a minted series-form record with no incipit', () => {
     expect(checkDocuments([peace], MESSAGE_GENRES, keywords, series)).toEqual([]);

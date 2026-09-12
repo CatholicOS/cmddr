@@ -6,12 +6,12 @@ The source genre has no Genre Registry row yet; the raw label is preserved in th
 
 5 documents.
 
-| ID | Title | Incipit | Issuer | Date | Promulgated by | Source label |
-| --- | --- | --- | --- | --- | --- | --- |
-| `mag:pius-ix/nei-giorni-1846` | Nei giorni | Nei giorni | `rp:pius-ix` | 1846-07-16 |  | Editto |
-| `mag:pius-ix/nelle-istituzioni-1848` | Nelle istituzioni | Nelle istituzioni | `rp:pius-ix` | 1848-03-14 |  | Decreto |
-| `mag:pius-ix/romani-e-quanti-1848` | Romani, e quanti | Romani, e quanti | `rp:pius-ix` | 1848-03-14 |  | Proclama |
-| `mag:pius-ix/da-questa-pacifica-1849` | Da questa pacifica | Da questa pacifica | `rp:pius-ix` | 1849-01-01 |  | Proclama |
-| `mag:pius-ix/la-serie-1849` | La serie | La serie | `rp:pius-ix` | 1849-02-14 |  | Protesta |
+| ID | Title | Incipit | Issuer | Date | Promulgated by | AAS | Source label |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `mag:pius-ix/nei-giorni-1846` | Nei giorni | Nei giorni | `rp:pius-ix` | 1846-07-16 |  |  | Editto |
+| `mag:pius-ix/nelle-istituzioni-1848` | Nelle istituzioni | Nelle istituzioni | `rp:pius-ix` | 1848-03-14 |  |  | Decreto |
+| `mag:pius-ix/romani-e-quanti-1848` | Romani, e quanti | Romani, e quanti | `rp:pius-ix` | 1848-03-14 |  |  | Proclama |
+| `mag:pius-ix/da-questa-pacifica-1849` | Da questa pacifica | Da questa pacifica | `rp:pius-ix` | 1849-01-01 |  |  | Proclama |
+| `mag:pius-ix/la-serie-1849` | La serie | La serie | `rp:pius-ix` | 1849-02-14 |  |  | Protesta |
 
 † A provisional identifier: the source prints no incipit for this document, so the id is genre-and-date based and may be re-minted if a conventional name is established. See the design spec §3.5.

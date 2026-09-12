@@ -1,4 +1,4 @@
-import { cell, byDateThenId, idCell, genreCell, FOOTNOTE } from './table.js';
+import { cell, byDateThenId, idCell, genreCell, actaCell, FOOTNOTE } from './table.js';
 import type { DocumentRecord } from '../types.js';
 
 const GENERATED =
@@ -13,12 +13,12 @@ ${GENERATED}
 
 ${rows.length} documents.
 
-| ID | Title | Incipit | Genre | Date | Promulgated by |
-| --- | --- | --- | --- | --- | --- |`;
+| ID | Title | Incipit | Genre | Date | Promulgated by | AAS |
+| --- | --- | --- | --- | --- | --- | --- |`;
 
   const body = rows.map((d) =>
     `| ${idCell(d)} | ${cell(d.title)} | ${d.incipit ? cell(d.incipit) : ''} `
-    + `| ${genreCell(d)} | ${d.date} | ${d.promulgatedBy ? `\`${d.promulgatedBy}\`` : ''} |`);
+    + `| ${genreCell(d)} | ${d.date} | ${d.promulgatedBy ? `\`${d.promulgatedBy}\`` : ''} | ${actaCell(d)} |`);
 
   return `${head}\n${body.join('\n')}\n\n${FOOTNOTE}\n`;
 }

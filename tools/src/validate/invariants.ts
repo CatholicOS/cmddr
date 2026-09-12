@@ -36,7 +36,7 @@ export function expectedOrdinal(row: SeriesLike, year: number): number {
     + (row.renumberings ?? []).filter((r) => r.fromYear <= year).reduce((sum, r) => sum + r.offset, 0);
 }
 
-/** Invariants 8-13, 15-24 of the design specs. (14 lives in the assessment checker.) */
+/** Invariants 8-13, 15-25 of the design specs. (14 lives in the assessment checker.) */
 export function checkDocuments(
   docs: DocumentRecord[], genres: GenreLike[], keywords: KeywordLike[] = [],
   series: SeriesLike[] = [],
@@ -53,6 +53,7 @@ export function checkDocuments(
   const byCollision = new Map<string, DocumentRecord[]>();
   const byProvisionalGroup = new Map<string, DocumentRecord[]>();
   const bySeriesOccasion = new Map<string, DocumentRecord[]>();
+  const byActaPage = new Map<string, DocumentRecord[]>();
 
   for (const d of docs) {
     const re = d.idStatus === 'provisional' ? PROVISIONAL_ID_RE : MINTED_ID_RE;
@@ -236,6 +237,14 @@ export function checkDocuments(
       const k = `${local}|${slugify(d.genre ?? d.sourceGenreLabel ?? '')}|${d.date}`;
       byProvisionalGroup.set(k, [...(byProvisionalGroup.get(k) ?? []), d]);
     }
+
+    // Rule 25 (acta reference spec §3): one page of the Acta opens one act, so no two
+    // documents share (series, volume, page). Well-formedness is the schema's; this is
+    // the only invariant that reads `acta`, which bears on nothing but the citation.
+    if (d.acta) {
+      const k = `${d.acta.series}|${d.acta.volume}|${d.acta.page}`;
+      byActaPage.set(k, [...(byActaPage.get(k) ?? []), d]);
+    }
   }
 
   for (const [id, n] of seen) {
@@ -289,6 +298,16 @@ export function checkDocuments(
           message: `provisional ordinals for ${k} must be exactly 1..${group.length}`,
         });
       }
+    }
+  }
+
+  for (const [k, group] of byActaPage) {
+    if (group.length < 2) continue;
+    for (const d of group) {
+      out.push({
+        rule: 25, id: d.id,
+        message: `acta reference ${k.replace(/\|/g, ' ')} is shared by ${group.length} documents`,
+      });
     }
   }
 
