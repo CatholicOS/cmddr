@@ -53,12 +53,30 @@ We therefore split the model into **two tables**:
 | **Ordinary Universal** | The bishops dispersed throughout the world, in union with the pope, concurring that a teaching is to be **held definitively**. This mode is itself capable of infallibility without a solemn definition. |
 | **Authentic Ordinary** | The day-to-day, *non-definitive* teaching of the pope or bishops. Authoritative and calls for *religiosum obsequium*, but reformable. Admits many internal degrees. |
 
+**Why a ceiling can sit below its issuer’s capacity.** A pope can define, yet most papal genres are capped at Authentic
+Ordinary, and two genres of the same diplomatic family split — Apostolic Letter reaches Ordinary Universal while Letter
+and Brief do not. The gap is a claim about the *instrument*, not about the issuer. A papal document does not itself
+exercise the ordinary and universal magisterium, which belongs to the bishops dispersed throughout the world in union with
+the pope; what it does is **attest** that such teaching exists and is to be held definitively (*Evangelium Vitae* 62:
+taught “by the ordinary and universal Magisterium”). An attestation of definitive teaching is a solemn act, and the Holy
+See does not make it through unsealed occasional correspondence: the formality of the instrument is what earns the higher
+ceiling. This is a defended editorial position, not a record of what popes have so far happened to do. Should a plain
+letter ever be found attesting definitive teaching, the answer is to **raise that genre’s ceiling** — a reviewable change
+to Table 1 — rather than to absorb the document as an exception; invariant 1 (ceiling bound) then keeps doing real work.
+The same reasoning applies to every genre capped below its issuer’s capacity; the discussion is recorded in
+[#13](https://github.com/CatholicOS/cmddr/issues/13).
+
 ---
 
 ### Table 1 — Genre Registry
 
 *Registry of document / speech **types**. `Default register` is the genre’s presumption; `Ceiling` is the maximum its issuer can
-exercise through it. Neither fixes the authority of any particular passage — see Table 2.*
+exercise through it. Neither fixes the authority of any particular passage — see Table 2. `Scope` is juridical — whom the act
+binds — not who it is addressed to: *Ordinatio Sacerdotalis* is addressed to the bishops and universal in scope, while the
+*Letter to Artists* is addressed to everyone and binds no one. An omitted `document.scope` inherits the genre's default, so a
+letter is presumed `local`; a non-juridical scope is not representable — both vocabularies allow only `universal` and `local` —
+and the *Letter to Artists* therefore currently reads as `local`, a known limitation. Representing that case, recording the
+addressee, and a possible `regional` value are all deferred to [#4](https://github.com/CatholicOS/cmddr/issues/4).*
 
 | Genre | Issuer | Scope | Default register | Ceiling (issuer capacity) | Notes |
 |---|---|---|---|---|---|
@@ -68,10 +86,10 @@ exercise through it. Neither fixes the authority of any particular passage — s
 | Papal Bull | Pope | universal | Authentic Ordinary | Extraordinary | The most solemn **sealed form** of papal document (lead/wax seal — Latin *bulla*). May bear one or more of the non-exclusive *characteristics* listed below the table. |
 | Encyclical | Pope | universal | Authentic Ordinary | Ordinary Universal | Can invoke the ordinary and universal magisterium (e.g. *Evangelium Vitae*). |
 | Apostolic Exhortation | Pope | universal | Authentic Ordinary | Authentic Ordinary | Typically post-synodal, hortatory. |
-| Apostolic Letter | Pope | universal | Authentic Ordinary | Ordinary Universal | Can reach definitive language (e.g. *Ordinatio Sacerdotalis*). |
+| Apostolic Letter | Pope | universal | Authentic Ordinary | Ordinary Universal | Formal papal act in the pope’s own name (*Litterae Apostolicae*; vatican.va’s *Lettere Apostoliche* shelf): Latin incipit, entered in the acts, juridical effect. Spans universal teaching (*Ordinatio Sacerdotalis*, *Tertio Millennio Adveniente*) and local governance — erecting dioceses, proclaiming patrons (*Regionis Capitanatae*) — so `document.scope` is expected per document. *Ordinatio Sacerdotalis* is the exception within the genre, not the type. |
 | Motu Proprio | Pope | universal | Authentic Ordinary | Authentic Ordinary | Issued on the Pope’s own initiative; often legislative/administrative. |
 | Brief | Pope | universal | Authentic Ordinary | Authentic Ordinary | Less formal papal letter. |
-| Letter | Pope | universal | Authentic Ordinary | Authentic Ordinary | |
+| Letter | Pope | local | Authentic Ordinary | Authentic Ordinary | Ordinary papal correspondence (*Epistula*; vatican.va’s *Lettere* shelf): someone is written to, on an occasion, usually in a vernacular, with no formal instrument behind it; titled by addressee and occasion, never by incipit. What separates it from the Apostolic Letter is form, not audience or weight — the *Letter to Artists* (1999) addresses the whole world and is still a letter. Weight is per statement, not per addressee. |
 | Discourse / Address | Pope | universal | Authentic Ordinary | Authentic Ordinary | Pastoral vehicle; cannot host a definition. |
 | Homily | Pope | universal | Authentic Ordinary | Authentic Ordinary | |
 | Prayer | Pope | universal | Authentic Ordinary | Authentic Ordinary | |

@@ -53,4 +53,14 @@ describe('data/genres.json', () => {
       if ((g.issuerTypes as string[]).includes('bishop')) expect(g.defaultScope).toBe('local');
     }
   });
+
+  it('presumes local scope for the papal letter and universal scope for every other papal genre', () => {
+    // #11: on vatican.va's *Lettere* shelves the universally-addressed letter is the visible
+    // minority, so `letter` alone among the papal genres leans local. `apostolic-letter` keeps
+    // the universal presumption even though the genre spans local governance too.
+    for (const g of genres) {
+      if (!(g.issuerTypes as string[]).includes('pope')) continue;
+      expect(g.defaultScope, g.id as string).toBe(g.id === 'letter' ? 'local' : 'universal');
+    }
+  });
 });
