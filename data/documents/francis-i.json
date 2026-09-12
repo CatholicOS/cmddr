@@ -1,5 +1,36 @@
 [
   {
+    "id": "mag:francis-i/urbi-et-orbi-easter-2013",
+    "title": "\"Urbi et Orbi\" - Pasqua 2013",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-03-31",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/papa-francesco_20130331_urbi-et-orbi-pasqua.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2013
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
+  },
+  {
     "id": "mag:francis-i/apostolic-letter-2013-04-13",
     "title": "Lettera Apostolica inviata a nome del Santo Padre dal Segretario di Stato, S.E. Mons. Pietro Parolin, in occasione dell'iscrizione all'albo dei Beati di don Luca Passi, Fondatore dell'Istituto delle Suore Maestre di Santa Dorotea",
     "idStatus": "provisional",
@@ -13,7 +44,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -31,7 +62,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -49,7 +80,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Quo firmiores",
     "characteristics": [
@@ -71,7 +102,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -89,7 +120,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -107,7 +138,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -125,7 +156,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -143,9 +174,38 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-mission-day-2013",
+    "title": "Messaggio per la Giornata Missionaria Mondiale 2013",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-05-19",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/missions/documents/papa-francesco_20130519_giornata-missionaria2013.html",
+      "shelf": "messages/missions",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2013
+    },
+    "sourceGenreLabel": "messages/missions"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-05-25",
@@ -161,7 +221,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -179,7 +239,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -197,7 +257,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -215,7 +275,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -247,7 +307,7 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Lumen fidei",
     "sourceGenreLabel": "encyclicals"
@@ -269,7 +329,7 @@
         "FR",
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -278,6 +338,36 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-migrants-and-refugees-2014",
+    "title": "Messaggio per la 100ª Giornata Mondiale del Migrante e del Rifugiato 2014",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-08-05",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/migration/documents/papa-francesco_20130805_world-migrants-day.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2014,
+      "ordinal": 100
+    },
+    "sourceGenreLabel": "messages/migration"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-08-08",
@@ -296,7 +386,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "characteristics": [
       "motu-proprio"
@@ -317,7 +407,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -335,7 +425,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -353,7 +443,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -371,7 +461,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -389,7 +479,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -407,7 +497,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -425,7 +515,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -443,7 +533,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -461,7 +551,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -479,7 +569,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -497,9 +587,36 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-food-day-2013",
+    "title": "Messaggio per la Giornata Mondiale dell'Alimentazione 2013",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-10-16",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/food/documents/papa-francesco_20131016_messaggio-giornata-alimentazione.html",
+      "shelf": "messages/food",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-food-day",
+      "year": 2013
+    },
+    "sourceGenreLabel": "messages/food"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-10-19",
@@ -515,7 +632,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -537,7 +654,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -575,10 +692,71 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Evangelii gaudium",
     "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-the-sick-2014",
+    "title": "XXII Giornata Mondiale del Malato, 2014",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-12-06",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/sick/documents/papa-francesco_20131206_giornata-malato.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2014,
+      "ordinal": 22
+    },
+    "sourceGenreLabel": "messages/sick"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-peace-2014",
+    "title": "XLVII Giornata Mondiale della Pace 2014 - Fraternità, fondamento e via per la pace",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/peace/documents/papa-francesco_20131208_messaggio-xlvii-giornata-mondiale-pace-2014.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "RU"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2014,
+      "ordinal": 47
+    },
+    "sourceGenreLabel": "messages/peace"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-12-17",
@@ -594,7 +772,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -612,7 +790,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Patrimonium Ecclesiarum",
     "characteristics": [
@@ -638,7 +816,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Quo aptius spirituali",
     "characteristics": [
@@ -649,6 +827,69 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-christmas-2013",
+    "title": "\"Urbi et Orbi\" - Natale 2013",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/papa-francesco_20131225_urbi-et-orbi-natale.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2013
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
+  },
+  {
+    "id": "mag:francis-i/lent-2014",
+    "title": "Quaresima 2014: Si è fatto povero per arricchirci con la sua povertà (cfr 2 Cor 8,9)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2013-12-26",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/lent/documents/papa-francesco_20131226_messaggio-quaresima2014.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "SQ",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2014
+    },
+    "sourceGenreLabel": "messages/lent"
   },
   {
     "id": "mag:francis-i/cum-ad-aeternam-2013",
@@ -664,7 +905,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Cum ad aeternam",
     "characteristics": [
@@ -675,6 +916,130 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-vocations-2014",
+    "title": "Messaggio per la 51ª Giornata Mondiale di Preghiera per le Vocazioni 2014",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-01-15",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/vocations/documents/papa-francesco_20140115_51-messaggio-giornata-mondiale-vocazioni.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "SQ"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2014,
+      "ordinal": 51
+    },
+    "sourceGenreLabel": "messages/vocations"
+  },
+  {
+    "id": "mag:francis-i/world-youth-day-2014",
+    "title": "XXIX Giornata Mondiale della Gioventù, 2014: «Beati i poveri in spirito, perché di essi è il regno dei cieli» (Mt 5, 3)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-01-21",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/youth/documents/papa-francesco_20140121_messaggio-giovani_2014.html",
+      "shelf": "messages/youth",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "SK",
+        "SQ",
+        "UK",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-youth-day",
+      "year": 2014,
+      "ordinal": 29
+    },
+    "sourceGenreLabel": "messages/youth"
+  },
+  {
+    "id": "mag:francis-i/world-communications-day-2014",
+    "title": "XLVIII Giornata Mondiale delle Comunicazioni Sociali, 2014 - Comunicazione al servizio di un'autentica cultura dell'incontro",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/communications/documents/papa-francesco_20140124_messaggio-comunicazioni-sociali.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2014,
+      "ordinal": 48
+    },
+    "sourceGenreLabel": "messages/communications"
+  },
+  {
+    "id": "mag:francis-i/world-day-for-consecrated-life-2014",
+    "title": "XVIII Giornata Mondiale della Vita Consacrata - Festa della Presentazione del Signore",
+    "idStatus": "minted",
+    "genre": "homily",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-02-02",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/consecrated_life/documents/papa-francesco_20140202_omelia-vita-consacrata.html",
+      "shelf": "messages/consecrated_life",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-for-consecrated-life",
+      "year": 2014,
+      "ordinal": 18
+    },
+    "sourceGenreLabel": "messages/consecrated_life"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2014-02-22-1",
@@ -690,7 +1055,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -708,7 +1073,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -726,7 +1091,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -749,7 +1114,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -774,7 +1139,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Cum ad aeternam",
     "characteristics": [
@@ -800,9 +1165,39 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-easter-2014",
+    "title": "\"Urbi et Orbi\" - Pasqua 2014",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-04-20",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/papa-francesco_20140420_urbi-et-orbi-pasqua.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2014
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2014-04-27",
@@ -818,7 +1213,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -836,7 +1231,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Attenta deliberatione",
     "characteristics": [
@@ -862,7 +1257,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Quo aptius",
     "characteristics": [
@@ -873,6 +1268,35 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/world-mission-day-2014",
+    "title": "Messaggio per la Giornata Missionaria Mondiale 2014",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-06-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/missions/documents/papa-francesco_20140608_giornata-missionaria2014.html",
+      "shelf": "messages/missions",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT",
+        "ZH_CN"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2014
+    },
+    "sourceGenreLabel": "messages/missions"
   },
   {
     "id": "mag:francis-i/ad-totius-dominici-gregis-2014",
@@ -888,7 +1312,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Ad totius dominici gregis",
     "characteristics": [
@@ -914,7 +1338,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Trasferimento della Sezione Ordinaria dell’Amministrazione del Patrimonio della Sede Apostolica",
     "characteristics": [
@@ -936,7 +1360,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Christi voluntate",
     "characteristics": [
@@ -962,7 +1386,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Undecim abhinc annos",
     "characteristics": [
@@ -973,6 +1397,93 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-migrants-and-refugees-2015",
+    "title": "Messaggio per la 101ª Giornata Mondiale del Migrante e del Rifugiato 2015",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-09-03",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/migration/documents/papa-francesco_20140903_world-migrants-day-2015.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2015,
+      "ordinal": 101
+    },
+    "sourceGenreLabel": "messages/migration"
+  },
+  {
+    "id": "mag:francis-i/lent-2015",
+    "title": "Quaresima 2015: Rinfrancate i vostri cuori (Gc 5,8)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-10-04",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/lent/documents/papa-francesco_20141004_messaggio-quaresima2015.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2015
+    },
+    "sourceGenreLabel": "messages/lent"
+  },
+  {
+    "id": "mag:francis-i/world-food-day-2014",
+    "title": "Messaggio per la Giornata Mondiale dell'Alimentazione 2014",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-10-16",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/food/documents/papa-francesco_20141016_messaggio-giornata-alimentazione.html",
+      "shelf": "messages/food",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-food-day",
+      "year": 2014
+    },
+    "sourceGenreLabel": "messages/food"
   },
   {
     "id": "mag:francis-i/contemplationi-faventes-2014",
@@ -988,7 +1499,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Contemplationi faventes",
     "characteristics": [
@@ -1010,7 +1521,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Inter eximias",
     "characteristics": [
@@ -1043,7 +1554,7 @@
         "PT",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -1061,7 +1572,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -1079,9 +1590,70 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-the-sick-2015",
+    "title": "XXIII Giornata Mondiale del Malato, 2015",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-12-03",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/sick/documents/papa-francesco_20141203_giornata-malato.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2015,
+      "ordinal": 23
+    },
+    "sourceGenreLabel": "messages/sick"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-peace-2015",
+    "title": "XLVIII Giornata Mondiale della Pace 2015 - Non più schiavi, ma fratelli",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/peace/documents/papa-francesco_20141208_messaggio-xlviii-giornata-mondiale-pace-2015.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "RU"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2015,
+      "ordinal": 48
+    },
+    "sourceGenreLabel": "messages/peace"
   },
   {
     "id": "mag:francis-i/cum-ad-provehendam-2014",
@@ -1097,7 +1669,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Cum ad provehendam",
     "characteristics": [
@@ -1108,6 +1680,37 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-christmas-2014",
+    "title": "\"Urbi et Orbi\" - Natale 2014",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2014-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/papa-francesco_20141225_urbi-et-orbi-natale.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2014
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:francis-i/multum-fructum-2015",
@@ -1123,7 +1726,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Multum fructum",
     "characteristics": [
@@ -1149,7 +1752,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Quae maiori",
     "characteristics": [
@@ -1160,6 +1763,36 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/world-communications-day-2015",
+    "title": "XLIX Giornata Mondiale delle Comunicazioni Sociali, 2015 - Comunicare la famiglia: ambiente privilegiato dell’incontro nella gratuità dell’amore",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-01-23",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/communications/documents/papa-francesco_20150123_messaggio-comunicazioni-sociali.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2015,
+      "ordinal": 49
+    },
+    "sourceGenreLabel": "messages/communications"
   },
   {
     "id": "mag:francis-i/quo-flagranti-2015",
@@ -1175,13 +1808,79 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Quo flagranti",
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/world-youth-day-2015",
+    "title": "XXX Giornata Mondiale della Gioventù, 2015: «Beati i puri di cuore, perché vedranno Dio» (Mt 5,8)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-01-31",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/youth/documents/papa-francesco_20150131_messaggio-giovani_2015.html",
+      "shelf": "messages/youth",
+      "languages": [
+        "AR",
+        "CS",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "JA",
+        "PL",
+        "PT",
+        "RU",
+        "SL",
+        "SQ",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-youth-day",
+      "year": 2015,
+      "ordinal": 30
+    },
+    "sourceGenreLabel": "messages/youth"
+  },
+  {
+    "id": "mag:francis-i/world-day-for-consecrated-life-2015",
+    "title": "XIX Giornata Mondiale della Vita Consacrata - Festa della Presentazione del Signore",
+    "idStatus": "minted",
+    "genre": "homily",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-02-02",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/consecrated_life/documents/papa-francesco_20150202_omelia-vita-consacrata.html",
+      "shelf": "messages/consecrated_life",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-for-consecrated-life",
+      "year": 2015,
+      "ordinal": 19
+    },
+    "sourceGenreLabel": "messages/consecrated_life"
   },
   {
     "id": "mag:francis-i/statuti-dei-nuovi-organismi-economici-2015",
@@ -1197,7 +1896,7 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Statuti dei nuovi Organismi Economici",
     "characteristics": [
@@ -1219,7 +1918,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Ad aptius",
     "characteristics": [
@@ -1245,7 +1944,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "De spiritali itinere",
     "characteristics": [
@@ -1271,7 +1970,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "In hac suprema",
     "characteristics": [
@@ -1293,7 +1992,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Qui successimus",
     "characteristics": [
@@ -1319,7 +2018,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Quo satius",
     "characteristics": [
@@ -1345,7 +2044,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Nos, qui",
     "characteristics": [
@@ -1371,7 +2070,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Quo aptius",
     "characteristics": [
@@ -1382,6 +2081,67 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-vocations-2015",
+    "title": "Messaggio per la 52ª Giornata Mondiale di Preghiera per le Vocazioni 2015",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-03-29",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/vocations/documents/papa-francesco_20150329_52-messaggio-giornata-mondiale-vocazioni.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "SQ"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2015,
+      "ordinal": 52
+    },
+    "sourceGenreLabel": "messages/vocations"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-easter-2015",
+    "title": "\"Urbi et Orbi\" - Pasqua 2015",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-04-05",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/papa-francesco_20150405_urbi-et-orbi-pasqua.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2015
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:francis-i/misericordiae-vultus-2015",
@@ -1410,7 +2170,7 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Misericordiae Vultus",
     "sourceGenreLabel": "bulls"
@@ -1429,7 +2189,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -1447,7 +2207,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -1481,10 +2241,39 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Laudato si'",
     "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:francis-i/world-mission-day-2015",
+    "title": "Messaggio per la Giornata Missionaria Mondiale 2015",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-05-24",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/missions/documents/papa-francesco_20150524_giornata-missionaria2015.html",
+      "shelf": "messages/missions",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2015
+    },
+    "sourceGenreLabel": "messages/missions"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2015-05-28",
@@ -1500,7 +2289,7 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -1522,7 +2311,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -1547,7 +2336,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Spiritualem ubertatem",
     "characteristics": [
@@ -1558,6 +2347,33 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-the-care-of-creation-2015",
+    "title": "Lettera del Santo Padre per l’istituzione della “Giornata Mondiale di Preghiera per la Cura del Creato” [1° settembre]",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-08-06",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/cura-creato/documents/papa-francesco_20150806_lettera-giornata-cura-creato.html",
+      "shelf": "messages/cura-creato",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-the-care-of-creation",
+      "year": 2015
+    },
+    "sourceGenreLabel": "messages/cura-creato"
   },
   {
     "id": "mag:francis-i/mitis-et-misericors-iesus-2015",
@@ -1578,7 +2394,7 @@
         "PL",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -1613,7 +2429,7 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -1623,6 +2439,72 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-youth-day-2016",
+    "title": "XXXI Giornata Mondiale della Gioventù, 2016: «Beati i misericordiosi, perché troveranno misericordia» (Mt 5,7)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-08-15",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/youth/documents/papa-francesco_20150815_messaggio-giovani_2016.html",
+      "shelf": "messages/youth",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "RU",
+        "SL",
+        "SQ",
+        "UK",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-youth-day",
+      "year": 2016,
+      "ordinal": 31
+    },
+    "sourceGenreLabel": "messages/youth"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-migrants-and-refugees-2016",
+    "title": "Messaggio per la 102ª Giornata Mondiale del Migrante e del Rifugiato 2016",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-09-12",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/migration/documents/papa-francesco_20150912_world-migrants-day-2016.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2016,
+      "ordinal": 102
+    },
+    "sourceGenreLabel": "messages/migration"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2015-09-13",
@@ -1638,9 +2520,132 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-the-sick-2016",
+    "title": "XXIV Giornata Mondiale del Malato, 2016",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-09-15",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/sick/documents/papa-francesco_20150915_giornata-malato.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2016,
+      "ordinal": 24
+    },
+    "sourceGenreLabel": "messages/sick"
+  },
+  {
+    "id": "mag:francis-i/lent-2016",
+    "title": "Quaresima 2016: \"Misericordia io voglio e non sacrifici\" (Mt 9,13). Le opere di misericordia nel cammino giubilare",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-10-04",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/lent/documents/papa-francesco_20151004_messaggio-quaresima2016.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2016
+    },
+    "sourceGenreLabel": "messages/lent"
+  },
+  {
+    "id": "mag:francis-i/world-food-day-2015",
+    "title": "Messaggio per la Giornata Mondiale dell'Alimentazione 2015",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-10-16",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/food/documents/papa-francesco_20151016_messaggio-giornata-alimentazione.html",
+      "shelf": "messages/food",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-food-day",
+      "year": 2015
+    },
+    "sourceGenreLabel": "messages/food"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-vocations-2016",
+    "title": "Messaggio per la 53ª Giornata Mondiale di Preghiera per le Vocazioni 2016",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-11-29",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/vocations/documents/papa-francesco_20151129_53-messaggio-giornata-mondiale-vocazioni.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2016,
+      "ordinal": 53
+    },
+    "sourceGenreLabel": "messages/vocations"
   },
   {
     "id": "mag:francis-i/ad-aptius-consulendum-2015-12-03",
@@ -1656,7 +2661,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Ad aptius consulendum",
     "characteristics": [
@@ -1667,6 +2672,39 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-peace-2016",
+    "title": "XLIX Giornata Mondiale della Pace 2016 - Vinci l’indifferenza e conquista la pace",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/peace/documents/papa-francesco_20151208_messaggio-xlix-giornata-mondiale-pace-2016.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "RU",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2016,
+      "ordinal": 49
+    },
+    "sourceGenreLabel": "messages/peace"
   },
   {
     "id": "mag:francis-i/ad-aptius-consulendum-2015-12-18",
@@ -1682,7 +2720,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Ad aptius consulendum",
     "characteristics": [
@@ -1708,7 +2746,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Conscii omnino",
     "characteristics": [
@@ -1734,7 +2772,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Saeculorum decursu",
     "characteristics": [
@@ -1745,6 +2783,37 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-christmas-2015",
+    "title": "\"Urbi et Orbi\" - Natale 2015",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2015-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/papa-francesco_20151225_urbi-et-orbi-natale.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2015
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:francis-i/cum-ad-aptius-2015",
@@ -1760,7 +2829,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Cum ad aptius",
     "characteristics": [
@@ -1771,6 +2840,39 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/world-communications-day-2016",
+    "title": "L Giornata Mondiale delle Comunicazioni Sociali, 2016 - Comunicazione e Misericordia: un incontro fecondo",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/communications/documents/papa-francesco_20160124_messaggio-comunicazioni-sociali.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2016,
+      "ordinal": 50
+    },
+    "sourceGenreLabel": "messages/communications"
   },
   {
     "id": "mag:francis-i/ab-domino-ipso-2016",
@@ -1786,7 +2888,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Ab Domino ipso",
     "characteristics": [
@@ -1797,6 +2899,34 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/world-day-for-consecrated-life-2016",
+    "title": "XX Giornata Mondiale della Vita Consacrata - Giubileo Straordinario della Misericordia: Giubileo della Vita Consacrata e Chiusura dell’Anno della Vita Consacrata",
+    "idStatus": "minted",
+    "genre": "homily",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-02-02",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/consecrated_life/documents/papa-francesco_20160202_omelia-vita-consacrata.html",
+      "shelf": "messages/consecrated_life",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-for-consecrated-life",
+      "year": 2016,
+      "ordinal": 20
+    },
+    "sourceGenreLabel": "messages/consecrated_life"
   },
   {
     "id": "mag:francis-i/qui-consiliis-2016",
@@ -1812,7 +2942,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Qui consiliis",
     "characteristics": [
@@ -1853,10 +2983,40 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Amoris laetitia",
     "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-easter-2016",
+    "title": "\"Urbi et Orbi\" - Pasqua 2016",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-03-27",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/papa-francesco_20160327_urbi-et-orbi-pasqua.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2016
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:francis-i/cum-ad-aeternam-2016",
@@ -1872,7 +3032,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Cum ad aeternam",
     "characteristics": [
@@ -1883,6 +3043,36 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/world-mission-day-2016",
+    "title": "Messaggio per la Giornata Missionaria Mondiale 2016",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-05-15",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/missions/documents/papa-francesco_20160515_giornata-missionaria2016.html",
+      "shelf": "messages/missions",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2016
+    },
+    "sourceGenreLabel": "messages/missions"
   },
   {
     "id": "mag:francis-i/de-concordia-inter-codices-2016",
@@ -1900,7 +3090,7 @@
         "IT",
         "LA"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -1927,7 +3117,7 @@
         "FR",
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "characteristics": [
       "motu-proprio"
@@ -1950,7 +3140,7 @@
         "FR",
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -1982,7 +3172,7 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Vultum Dei quaerere",
     "characteristics": [
@@ -2006,7 +3196,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -2031,7 +3221,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "In Apostolorum",
     "characteristics": [
@@ -2061,7 +3251,7 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -2092,7 +3282,7 @@
         "PL",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -2118,7 +3308,7 @@
         "FR",
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "characteristics": [
       "motu-proprio"
@@ -2139,9 +3329,37 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-the-care-of-creation-2016",
+    "title": "Messaggio del Santo Padre per la celebrazione della Giornata mondiale di preghiera per la cura del creato",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-09-01",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/cura-creato/documents/papa-francesco_20160901_messaggio-giornata-cura-creato.html",
+      "shelf": "messages/cura-creato",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-the-care-of-creation",
+      "year": 2016
+    },
+    "sourceGenreLabel": "messages/cura-creato"
   },
   {
     "id": "mag:francis-i/statuto-della-segreteria-per-la-comunicazione-2016",
@@ -2161,13 +3379,102 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Statuto della Segreteria per la Comunicazione",
     "characteristics": [
       "motu-proprio"
     ],
     "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-migrants-and-refugees-2017",
+    "title": "Messaggio per la 103ª Giornata Mondiale del Migrante e del Rifugiato 2017",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-09-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/migration/documents/papa-francesco_20160908_world-migrants-day-2017.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2017,
+      "ordinal": 103
+    },
+    "sourceGenreLabel": "messages/migration"
+  },
+  {
+    "id": "mag:francis-i/world-food-day-2016",
+    "title": "Messaggio per la Giornata Mondiale dell'Alimentazione 2016",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-10-14",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/food/documents/papa-francesco_20161014_messaggio-giornata-alimentazione.html",
+      "shelf": "messages/food",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-food-day",
+      "year": 2016
+    },
+    "sourceGenreLabel": "messages/food"
+  },
+  {
+    "id": "mag:francis-i/lent-2017",
+    "title": "Quaresima 2017: La Parola è un dono. L’altro è un dono",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-10-18",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/lent/documents/papa-francesco_20161018_messaggio-quaresima2017.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2017
+    },
+    "sourceGenreLabel": "messages/lent"
   },
   {
     "id": "mag:francis-i/statuto-della-pontificia-accademia-per-la-vita-2016",
@@ -2185,7 +3492,7 @@
         "FR",
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Statuto della Pontificia Accademia per la Vita",
     "characteristics": [
@@ -2219,10 +3526,196 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Misericordia et misera",
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-vocations-2017",
+    "title": "Messaggio per la 54a Giornata Mondiale di Preghiera per le Vocazioni 2017",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-11-27",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/vocations/documents/papa-francesco_20161127_54-messaggio-giornata-mondiale-vocazioni.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2017,
+      "ordinal": 54
+    },
+    "sourceGenreLabel": "messages/vocations"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-peace-2017",
+    "title": "L Giornata Mondiale della Pace 2017 - La nonviolenza: stile di una politica per la pace",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/peace/documents/papa-francesco_20161208_messaggio-l-giornata-mondiale-pace-2017.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2017,
+      "ordinal": 50
+    },
+    "sourceGenreLabel": "messages/peace"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-the-sick-2017",
+    "title": "XXV Giornata Mondiale del Malato, 2017",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/sick/documents/papa-francesco_20161208_giornata-malato.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2017,
+      "ordinal": 25
+    },
+    "sourceGenreLabel": "messages/sick"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-christmas-2016",
+    "title": "\"Urbi et Orbi\" - Natale 2016",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2016-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/papa-francesco_20161225_urbi-et-orbi-natale.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2016
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
+  },
+  {
+    "id": "mag:francis-i/world-communications-day-2017",
+    "title": "LI Giornata Mondiale delle Comunicazioni Sociali, 2017 - «Non temere, perché io sono con te» (Is 43,5). Comunicare speranza e fiducia nel nostro tempo",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/communications/documents/papa-francesco_20170124_messaggio-comunicazioni-sociali.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2017,
+      "ordinal": 51
+    },
+    "sourceGenreLabel": "messages/communications"
+  },
+  {
+    "id": "mag:francis-i/world-day-for-consecrated-life-2017",
+    "title": "XXI Giornata Mondiale della Vita Consacrata - Festa della Presentazione del Signore",
+    "idStatus": "minted",
+    "genre": "homily",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-02-02",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/consecrated_life/documents/papa-francesco_20170202_omelia-vita-consacrata.html",
+      "shelf": "messages/consecrated_life",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-for-consecrated-life",
+      "year": 2017,
+      "ordinal": 21
+    },
+    "sourceGenreLabel": "messages/consecrated_life"
   },
   {
     "id": "mag:francis-i/sanctuarium-in-ecclesia-2017",
@@ -2241,7 +3734,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -2251,6 +3744,133 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-youth-day-2017",
+    "title": "XXXII Giornata Mondiale della Gioventù, 2017: «Grandi cose ha fatto per me l’Onnipotente» (Lc 1,49)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-02-27",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/youth/documents/papa-francesco_20170227_messaggio-giovani_2017.html",
+      "shelf": "messages/youth",
+      "languages": [
+        "AR",
+        "CS",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "SL",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-youth-day",
+      "year": 2017,
+      "ordinal": 32
+    },
+    "sourceGenreLabel": "messages/youth"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-easter-2017",
+    "title": "\"Urbi et Orbi\" - Pasqua 2017",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-04-16",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/papa-francesco_20170416_urbi-et-orbi-pasqua.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2017
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
+  },
+  {
+    "id": "mag:francis-i/world-mission-day-2017",
+    "title": "Messaggio per la Giornata Missionaria Mondiale 2017",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-06-04",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/missions/documents/papa-francesco_20170604_giornata-missionaria2017.html",
+      "shelf": "messages/missions",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2017
+    },
+    "sourceGenreLabel": "messages/missions"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-the-poor-2017",
+    "title": "I Giornata Mondiale dei Poveri, 2017: Non amiamo a parole ma con i fatti",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-06-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/poveri/documents/papa-francesco_20170613_messaggio-i-giornatamondiale-poveri-2017.html",
+      "shelf": "messages/poveri",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-poor",
+      "year": 2017,
+      "ordinal": 1
+    },
+    "sourceGenreLabel": "messages/poveri"
   },
   {
     "id": "mag:francis-i/maiorem-hac-dilectionem-sull-offerta-della-vita-2017",
@@ -2271,7 +3891,7 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -2281,6 +3901,67 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-migrants-and-refugees-2018",
+    "title": "Messaggio per la 104ª Giornata Mondiale del Migrante e del Rifugiato 2018",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-08-15",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/migration/documents/papa-francesco_20170815_world-migrants-day-2018.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2018,
+      "ordinal": 104
+    },
+    "sourceGenreLabel": "messages/migration"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-the-care-of-creation-2017",
+    "title": "Messaggio congiunto di Papa Francesco e del Patriarca Ecumenico Bartolomeo per la Giornata Mondiale di Preghiera per il Creato",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-09-01",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/cura-creato/documents/papa-francesco_20170901_messaggio-giornata-cura-creato.html",
+      "shelf": "messages/cura-creato",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "RU"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-the-care-of-creation",
+      "year": 2017
+    },
+    "sourceGenreLabel": "messages/cura-creato"
   },
   {
     "id": "mag:francis-i/magnum-principium-2017",
@@ -2300,7 +3981,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -2330,7 +4011,7 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -2340,6 +4021,160 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-food-day-2017",
+    "title": "Visita del Santo Padre alla sede della FAO a Roma",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-10-16",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/food/documents/papa-francesco_20171016_messaggio-giornata-alimentazione.html",
+      "shelf": "messages/food",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-food-day",
+      "year": 2017
+    },
+    "sourceGenreLabel": "messages/food"
+  },
+  {
+    "id": "mag:francis-i/lent-2018",
+    "title": "Quaresima 2018: \"Per il dilagare dell’iniquità, si raffredderà l’amore di molti\" (Mt 24,12)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-11-01",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/lent/documents/papa-francesco_20171101_messaggio-quaresima2018.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2018
+    },
+    "sourceGenreLabel": "messages/lent"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-peace-2018",
+    "title": "LI Giornata Mondiale della Pace 2018 - Migranti e rifugiati: uomini e donne in cerca di pace",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-11-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/peace/documents/papa-francesco_20171113_messaggio-51giornatamondiale-pace2018.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2018,
+      "ordinal": 51
+    },
+    "sourceGenreLabel": "messages/peace"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-the-sick-2018",
+    "title": "XXVI Giornata Mondiale del Malato, 2018",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-11-26",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/sick/documents/papa-francesco_20171126_giornata-malato.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2018,
+      "ordinal": 26
+    },
+    "sourceGenreLabel": "messages/sick"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-vocations-2018",
+    "title": "Messaggio per la 55a Giornata Mondiale di Preghiera per le Vocazioni 2018",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-12-03",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/vocations/documents/papa-francesco_20171203_55-messaggio-giornata-mondiale-vocazioni.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2018,
+      "ordinal": 55
+    },
+    "sourceGenreLabel": "messages/vocations"
   },
   {
     "id": "mag:francis-i/veritatis-gaudium-2017",
@@ -2363,13 +4198,140 @@
         "PL",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Veritatis gaudium",
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-christmas-2017",
+    "title": "\"Urbi et Orbi\" - Natale 2017",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2017-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/papa-francesco_20171225_urbi-et-orbi-natale.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2017
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
+  },
+  {
+    "id": "mag:francis-i/world-communications-day-2018",
+    "title": "LII Giornata Mondiale delle Comunicazioni Sociali, 2018 - « La verità vi farà liberi (Gv 8,32). Fake news e giornalismo di pace»",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/communications/documents/papa-francesco_20180124_messaggio-comunicazioni-sociali.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2018,
+      "ordinal": 52
+    },
+    "sourceGenreLabel": "messages/communications"
+  },
+  {
+    "id": "mag:francis-i/world-day-for-consecrated-life-2018",
+    "title": "XXII Giornata Mondiale della Vita Consacrata - Festa della Presentazione del Signore",
+    "idStatus": "minted",
+    "genre": "homily",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-02-02",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/consecrated_life/documents/papa-francesco_20180202_omelia-vita-consacrata.html",
+      "shelf": "messages/consecrated_life",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-for-consecrated-life",
+      "year": 2018,
+      "ordinal": 22
+    },
+    "sourceGenreLabel": "messages/consecrated_life"
+  },
+  {
+    "id": "mag:francis-i/world-youth-day-2018",
+    "title": "XXXIII Giornata Mondiale della Gioventù, 2018: «Non temere, Maria, perché hai trovato grazia presso Dio» (Lc 1,30)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-02-11",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/youth/documents/papa-francesco_20180211_messaggio-giovani_2018.html",
+      "shelf": "messages/youth",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IN",
+        "IT",
+        "PL",
+        "PT",
+        "SL",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-youth-day",
+      "year": 2018,
+      "ordinal": 33
+    },
+    "sourceGenreLabel": "messages/youth"
   },
   {
     "id": "mag:francis-i/imparare-a-congedarsi-2018",
@@ -2391,7 +4353,7 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -2430,10 +4392,132 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Gaudete et exsultate",
     "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-easter-2018",
+    "title": "\"Urbi et Orbi\" - Pasqua 2018",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-04-01",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/papa-francesco_20180401_urbi-et-orbi-pasqua.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2018
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
+  },
+  {
+    "id": "mag:francis-i/world-mission-day-2018",
+    "title": "Messaggio per la Giornata Missionaria Mondiale 2018",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-05-20",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/missions/documents/papa-francesco_20180520_giornata-missionaria2018.html",
+      "shelf": "messages/missions",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2018
+    },
+    "sourceGenreLabel": "messages/missions"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-the-poor-2018",
+    "title": "II Giornata Mondiale dei Poveri, 2018: Questo povero grida e il Signore lo ascolta",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-06-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/poveri/documents/papa-francesco_20180613_messaggio-ii-giornatamondiale-poveri-2018.html",
+      "shelf": "messages/poveri",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-poor",
+      "year": 2018,
+      "ordinal": 2
+    },
+    "sourceGenreLabel": "messages/poveri"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-the-care-of-creation-2018",
+    "title": "Messaggio del Santo Padre per la celebrazione della Giornata mondiale di preghiera per la cura del creato",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-09-01",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/cura-creato/documents/papa-francesco_20180901_messaggio-giornata-cura-creato.html",
+      "shelf": "messages/cura-creato",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-the-care-of-creation",
+      "year": 2018
+    },
+    "sourceGenreLabel": "messages/cura-creato"
   },
   {
     "id": "mag:francis-i/episcopalis-communio-2018",
@@ -2455,13 +4539,103 @@
         "PL",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Episcopalis communio",
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/lent-2019",
+    "title": "Quaresima 2019: «L'ardente aspettativa della creazione è protesa verso la rivelazione dei figli di Dio» (Rm 8,19)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-10-04",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/lent/documents/papa-francesco_20181004_messaggio-quaresima2019.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "SQ",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2019
+    },
+    "sourceGenreLabel": "messages/lent"
+  },
+  {
+    "id": "mag:francis-i/world-food-day-2018",
+    "title": "Messaggio per la Giornata Mondiale dell'Alimentazione 2018",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-10-16",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/food/documents/papa-francesco_20181016_messaggio-giornata-alimentazione.html",
+      "shelf": "messages/food",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-food-day",
+      "year": 2018
+    },
+    "sourceGenreLabel": "messages/food"
+  },
+  {
+    "id": "mag:francis-i/world-youth-day-2019",
+    "title": "Videomessaggio del Santo Padre ai giovani in preparazione alla XXXIV Giornata Mondiale della Gioventù 2019 [Panama, 22-27 gennaio 2019]",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-11-21",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/youth/documents/papa-francesco_20181121_videomessaggio-panama-gmg.html",
+      "shelf": "messages/youth",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-youth-day",
+      "year": 2019,
+      "ordinal": 34
+    },
+    "sourceGenreLabel": "messages/youth"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2018-11-25",
@@ -2477,12 +4651,107 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "characteristics": [
       "motu-proprio"
     ],
     "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-the-sick-2019",
+    "title": "XXVII Giornata Mondiale del Malato, 2019",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-11-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/sick/documents/papa-francesco_20181125_giornata-malato.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2019,
+      "ordinal": 27
+    },
+    "sourceGenreLabel": "messages/sick"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-peace-2019",
+    "title": "LII Giornata Mondiale della Pace 2019 - La buona politica è al servizio della pace",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/peace/documents/papa-francesco_20181208_messaggio-52giornatamondiale-pace2019.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2019,
+      "ordinal": 52
+    },
+    "sourceGenreLabel": "messages/peace"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-christmas-2018",
+    "title": "\"Urbi et Orbi\" - Natale 2018",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2018-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/papa-francesco_20181225_urbi-et-orbi-natale.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2018
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2019-01-17-1",
@@ -2499,7 +4768,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -2526,7 +4795,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -2550,13 +4819,108 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Statuto dell'Ufficio del Revisore Generale",
     "characteristics": [
       "motu-proprio"
     ],
     "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/world-communications-day-2019",
+    "title": "LIII Giornata Mondiale delle Comunicazioni Sociali, 2019 - « “Siamo membra gli uni degli altri” (Ef 4,25). Dalle social network communities alla comunità umana »",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/communications/documents/papa-francesco_20190124_messaggio-comunicazioni-sociali.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2019,
+      "ordinal": 53
+    },
+    "sourceGenreLabel": "messages/communications"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-vocations-2019",
+    "title": "Messaggio per la 56a Giornata Mondiale di Preghiera per le Vocazioni 2019",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-01-31",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/vocations/documents/papa-francesco_20190131_56-messaggio-giornata-mondiale-vocazioni.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2019,
+      "ordinal": 56
+    },
+    "sourceGenreLabel": "messages/vocations"
+  },
+  {
+    "id": "mag:francis-i/world-day-for-consecrated-life-2019",
+    "title": "XXIII Giornata Mondiale della Vita Consacrata - Festa della Presentazione del Signore",
+    "idStatus": "minted",
+    "genre": "homily",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-02-02",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/consecrated_life/documents/papa-francesco_20190202_omelia-vita-consacrata.html",
+      "shelf": "messages/consecrated_life",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-for-consecrated-life",
+      "year": 2019,
+      "ordinal": 23
+    },
+    "sourceGenreLabel": "messages/consecrated_life"
   },
   {
     "id": "mag:francis-i/communis-vita-2019",
@@ -2578,7 +4942,7 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -2614,7 +4978,7 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Christus vivit",
     "sourceGenreLabel": "apost_exhortations"
@@ -2635,7 +4999,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -2644,6 +5008,40 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-easter-2019",
+    "title": "\"Urbi et Orbi\" - Pasqua 2019",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-04-21",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/papa-francesco_20190421_urbi-et-orbi-pasqua.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "SL",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2019
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2019-05-07",
@@ -2668,7 +5066,7 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -2677,6 +5075,133 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-migrants-and-refugees-2019",
+    "title": "Messaggio per la 105ª Giornata Mondiale del Migrante e del Rifugiato 2019",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-05-27",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/migration/documents/papa-francesco_20190527_world-migrants-day-2019.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "KO",
+        "PL",
+        "PT",
+        "UK",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2019,
+      "ordinal": 105
+    },
+    "sourceGenreLabel": "messages/migration"
+  },
+  {
+    "id": "mag:francis-i/world-mission-day-2019",
+    "title": "Messaggio per la Giornata Missionaria Mondiale 2019",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-06-09",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/missions/documents/papa-francesco_20190609_giornata-missionaria2019.html",
+      "shelf": "messages/missions",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2019
+    },
+    "sourceGenreLabel": "messages/missions"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-the-poor-2019",
+    "title": "III Giornata Mondiale dei Poveri, 2019: La speranza dei poveri non sarà mai delusa",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-06-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/poveri/documents/papa-francesco_20190613_messaggio-iii-giornatamondiale-poveri-2019.html",
+      "shelf": "messages/poveri",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-poor",
+      "year": 2019,
+      "ordinal": 3
+    },
+    "sourceGenreLabel": "messages/poveri"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-the-care-of-creation-2019",
+    "title": "Messaggio del Santo Padre per la celebrazione della Giornata mondiale di preghiera per la cura del creato",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-09-01",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/cura-creato/documents/papa-francesco_20190901_messaggio-giornata-cura-creato.html",
+      "shelf": "messages/cura-creato",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-the-care-of-creation",
+      "year": 2019
+    },
+    "sourceGenreLabel": "messages/cura-creato"
   },
   {
     "id": "mag:francis-i/aperuit-illis-2019",
@@ -2704,7 +5229,7 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -2714,6 +5239,64 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/lent-2020",
+    "title": "Quaresima 2020: «Vi supplichiamo in nome di Cristo: lasciatevi riconciliare con Dio» (2Cor 5,20)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-10-07",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/lent/documents/papa-francesco_20191007_messaggio-quaresima2020.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "SQ",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2020
+    },
+    "sourceGenreLabel": "messages/lent"
+  },
+  {
+    "id": "mag:francis-i/world-food-day-2019",
+    "title": "Messaggio per la Giornata Mondiale dell'Alimentazione 2019",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-10-16",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/food/documents/papa-francesco_20191016_messaggio-giornata-alimentazione.html",
+      "shelf": "messages/food",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-food-day",
+      "year": 2019
+    },
+    "sourceGenreLabel": "messages/food"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2019-10-22",
@@ -2731,7 +5314,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -2767,7 +5350,7 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Admirabile signum",
     "sourceGenreLabel": "apost_letters"
@@ -2788,9 +5371,41 @@
         "EN",
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-peace-2020",
+    "title": "LIII Giornata Mondiale della Pace 2020 - La Pace come cammino di speranza: dialogo, riconciliazione e conversione ecologica",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/peace/documents/papa-francesco_20191208_messaggio-53giornatamondiale-pace2020.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2020,
+      "ordinal": 53
+    },
+    "sourceGenreLabel": "messages/peace"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2019-12-21",
@@ -2810,7 +5425,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -2819,6 +5434,132 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-christmas-2019",
+    "title": "\"Urbi et Orbi\" - Natale 2019",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2019-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/papa-francesco_20191225_urbi-et-orbi-natale.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2019
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-the-sick-2020",
+    "title": "XXVIII Giornata Mondiale del Malato, 2020",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-01-03",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/sick/documents/papa-francesco_20200103_giornata-malato.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2020,
+      "ordinal": 28
+    },
+    "sourceGenreLabel": "messages/sick"
+  },
+  {
+    "id": "mag:francis-i/world-communications-day-2020",
+    "title": "LIV Giornata Mondiale delle Comunicazioni Sociali, 2020 - “Perché tu possa raccontare e fissare nella memoria” (Es 10,2). La vita si fa storia.",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/communications/documents/papa-francesco_20200124_messaggio-comunicazioni-sociali.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2020,
+      "ordinal": 54
+    },
+    "sourceGenreLabel": "messages/communications"
+  },
+  {
+    "id": "mag:francis-i/world-day-for-consecrated-life-2020",
+    "title": "XXIV Giornata Mondiale della Vita Consacrata - Festa della Presentazione del Signore",
+    "idStatus": "minted",
+    "genre": "homily",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-02-01",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/consecrated_life/documents/papa-francesco_20200201_omelia-vitaconsacrata.html",
+      "shelf": "messages/consecrated_life",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-for-consecrated-life",
+      "year": 2020,
+      "ordinal": 24
+    },
+    "sourceGenreLabel": "messages/consecrated_life"
   },
   {
     "id": "mag:francis-i/querida-amazonia-2020",
@@ -2844,10 +5585,74 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Querida Amazonia",
     "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:francis-i/world-youth-day-2020",
+    "title": "XXXV Giornata Mondiale della Gioventù, 2020: “Giovane, dico a te, alzati!” (cfr Lc 7,14)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-02-11",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/youth/documents/papa-francesco_20200211_messaggio-giovani_2020.html",
+      "shelf": "messages/youth",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-youth-day",
+      "year": 2020,
+      "ordinal": 35
+    },
+    "sourceGenreLabel": "messages/youth"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-vocations-2020",
+    "title": "Messaggio per la 57a Giornata Mondiale di Preghiera per le Vocazioni 2020",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-03-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/vocations/documents/papa-francesco_20200308_57-messaggio-giornata-mondiale-vocazioni.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2020,
+      "ordinal": 57
+    },
+    "sourceGenreLabel": "messages/vocations"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2020-03-16",
@@ -2863,12 +5668,102 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "characteristics": [
       "motu-proprio"
     ],
     "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-2020-03-27",
+    "title": "\"Urbi et Orbi\" - Momento straordinario di preghiera presieduto dal Santo Padre",
+    "idStatus": "provisional",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-03-27",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/papa-francesco_20200327_urbi-et-orbi-epidemia.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-easter-2020",
+    "title": "\"Urbi et Orbi\" - Pasqua 2020",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-04-12",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/papa-francesco_20200412_urbi-et-orbi-pasqua.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2020
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-migrants-and-refugees-2020",
+    "title": "Messaggio per la 106ª Giornata Mondiale del Migrante e del Rifugiato 2020",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-05-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/migration/documents/papa-francesco_20200513_world-migrants-day-2020.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "NL",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2020,
+      "ordinal": 106
+    },
+    "sourceGenreLabel": "messages/migration"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2020-05-19",
@@ -2887,7 +5782,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -2911,7 +5806,7 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -2921,6 +5816,100 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-mission-day-2020",
+    "title": "Messaggio per la Giornata Missionaria Mondiale 2020",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-05-31",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/missions/documents/papa-francesco_20200531_giornata-missionaria2020.html",
+      "shelf": "messages/missions",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2020
+    },
+    "sourceGenreLabel": "messages/missions"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-the-poor-2020",
+    "title": "IV Giornata Mondiale dei Poveri, 2020: “Tendi la tua mano al povero” (cfr Sir 7,32)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-06-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/poveri/documents/papa-francesco_20200613_messaggio-iv-giornatamondiale-poveri-2020.html",
+      "shelf": "messages/poveri",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-poor",
+      "year": 2020,
+      "ordinal": 4
+    },
+    "sourceGenreLabel": "messages/poveri"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-the-care-of-creation-2020",
+    "title": "Messaggio del Santo Padre per la celebrazione della VI Giornata Mondiale di Preghiera per la Cura del Creato",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-09-01",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/cura-creato/documents/papa-francesco_20200901_messaggio-giornata-cura-creato.html",
+      "shelf": "messages/cura-creato",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-the-care-of-creation",
+      "year": 2020,
+      "ordinal": 6
+    },
+    "sourceGenreLabel": "messages/cura-creato"
   },
   {
     "id": "mag:francis-i/scripturae-sacrae-affectus-2020",
@@ -2947,7 +5936,7 @@
         "PT",
         "VI"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Scripturae Sacrae affectus",
     "sourceGenreLabel": "apost_letters"
@@ -2983,7 +5972,7 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Fratelli tutti",
     "sourceGenreLabel": "encyclicals"
@@ -3002,9 +5991,36 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-food-day-2020",
+    "title": "Messaggio per la Giornata Mondiale dell'Alimentazione 2020",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-10-16",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/food/documents/papa-francesco_20201016_messaggio-giornata-alimentazione.html",
+      "shelf": "messages/food",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-food-day",
+      "year": 2020
+    },
+    "sourceGenreLabel": "messages/food"
   },
   {
     "id": "mag:francis-i/authenticum-charismatis-2020",
@@ -3027,7 +6043,7 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -3037,6 +6053,39 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/lent-2021",
+    "title": "Quaresima 2021: “Ecco, noi saliamo a Gerusalemme…” (Mt 20,18). Quaresima: tempo per rinnovare fede, speranza e carità",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-11-11",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/lent/documents/papa-francesco_20201111_messaggio-quaresima2021.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "JA",
+        "PL",
+        "PT",
+        "RO",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2021
+    },
+    "sourceGenreLabel": "messages/lent"
   },
   {
     "id": "mag:francis-i/ab-initio-2020",
@@ -3054,7 +6103,7 @@
         "ES",
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -3091,10 +6140,107 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Patris corde",
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-peace-2021",
+    "title": "LIV Giornata Mondiale della Pace 2021 - La cultura della cura come percorso di pace",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/peace/documents/papa-francesco_20201208_messaggio-54giornatamondiale-pace2021.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2021,
+      "ordinal": 54
+    },
+    "sourceGenreLabel": "messages/peace"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-the-sick-2021",
+    "title": "XXIX Giornata Mondiale del Malato, 2021",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-12-20",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/sick/documents/papa-francesco_20201220_giornata-malato.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2021,
+      "ordinal": 29
+    },
+    "sourceGenreLabel": "messages/sick"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-christmas-2020",
+    "title": "\"Urbi et Orbi\" - Natale 2020",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2020-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/papa-francesco_20201225_urbi-et-orbi-natale.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2020
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2020-12-26",
@@ -3113,7 +6259,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -3122,6 +6268,35 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-mission-day-2021",
+    "title": "Messaggio per la Giornata Missionaria Mondiale 2021",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/missions/documents/papa-francesco_20210106_giornata-missionaria2021.html",
+      "shelf": "messages/missions",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2021
+    },
+    "sourceGenreLabel": "messages/missions"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2021-01-10",
@@ -3145,7 +6320,7 @@
         "PL",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -3154,6 +6329,69 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-communications-day-2021",
+    "title": "LV Giornata Mondiale delle Comunicazioni Sociali, 2021 - “Vieni e vedi” (Gv 1,46). Comunicare incontrando le persone dove e come sono",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-01-23",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/communications/documents/papa-francesco_20210123_messaggio-comunicazioni-sociali.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2021,
+      "ordinal": 55
+    },
+    "sourceGenreLabel": "messages/communications"
+  },
+  {
+    "id": "mag:francis-i/world-day-for-consecrated-life-2021",
+    "title": "XXV Giornata Mondiale della Vita Consacrata - Festa della presentazione del Signore",
+    "idStatus": "minted",
+    "genre": "homily",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-02-02",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/consecrated_life/documents/papa-francesco_20210202_omelia-vitaconsacrata.html",
+      "shelf": "messages/consecrated_life",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-for-consecrated-life",
+      "year": 2021,
+      "ordinal": 25
+    },
+    "sourceGenreLabel": "messages/consecrated_life"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2021-02-08",
@@ -3170,7 +6408,7 @@
         "EN",
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -3179,6 +6417,38 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-vocations-2021",
+    "title": "Messaggio per la 58a Giornata Mondiale di Preghiera per le Vocazioni 2021",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-03-19",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/vocations/documents/papa-francesco_20210319_58-messaggio-giornata-mondiale-vocazioni.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2021,
+      "ordinal": 58
+    },
+    "sourceGenreLabel": "messages/vocations"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2021-03-23",
@@ -3197,7 +6467,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -3228,10 +6498,41 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Candor lucis aeternae",
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-easter-2021",
+    "title": "\"Urbi et Orbi\" - Pasqua 2021",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-04-04",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/papa-francesco_20210404_urbi-et-orbi-pasqua.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2021
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2021-04-26",
@@ -3250,7 +6551,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -3274,7 +6575,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -3294,7 +6595,7 @@
         "ES",
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -3303,6 +6604,38 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-migrants-and-refugees-2021",
+    "title": "Messaggio per la 107ª Giornata Mondiale del Migrante e del Rifugiato 2021",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-05-03",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/migration/documents/papa-francesco_20210503_world-migrants-day-2021.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2021,
+      "ordinal": 107
+    },
+    "sourceGenreLabel": "messages/migration"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2021-05-10",
@@ -3331,7 +6664,7 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -3360,13 +6693,77 @@
         "IT",
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Costituzione Apostolica Pascite Gregem Dei",
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-grandparents-and-the-elderly-2021",
+    "title": "I Giornata Mondiale dei Nonni e degli Anziani, 2021: \"Io sono con te tutti i giorni\"",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-05-31",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/nonni/documents/20210531-messaggio-nonni-anziani.html",
+      "shelf": "messages/nonni",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-grandparents-and-the-elderly",
+      "year": 2021,
+      "ordinal": 1
+    },
+    "sourceGenreLabel": "messages/nonni"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-the-poor-2021",
+    "title": "V Giornata Mondiale dei Poveri, 2021: «I poveri li avete sempre con voi» (Mc 14,7)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-06-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/poveri/documents/20210613-messaggio-v-giornatamondiale-poveri-2021.html",
+      "shelf": "messages/poveri",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-poor",
+      "year": 2021,
+      "ordinal": 5
+    },
+    "sourceGenreLabel": "messages/poveri"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2021-07-16",
@@ -3388,7 +6785,7 @@
         "LA",
         "VI"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -3397,6 +6794,91 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-the-care-of-creation-2021",
+    "title": "Messaggio congiunto del Santo Padre Francesco, di Sua Santità Bartolomeo I, Patriarca Ecumenico di Costantinopoli, e di Sua Grazia Justin Welby, Arcivescovo di Canterbury, per la protezione del Creato",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-09-01",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/cura-creato/documents/20210901-messaggio-protezionedelcreato.html",
+      "shelf": "messages/cura-creato",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-the-care-of-creation",
+      "year": 2021
+    },
+    "sourceGenreLabel": "messages/cura-creato"
+  },
+  {
+    "id": "mag:francis-i/world-youth-day-2021",
+    "title": "XXXVI Giornata Mondiale della Gioventù, 2021: “Alzati! Ti costituisco testimone di quel che hai visto!” (cfr. At 26,16)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-09-14",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/youth/documents/papa-francesco_20210914_messaggio-giovani_2021.html",
+      "shelf": "messages/youth",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "SV",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-youth-day",
+      "year": 2021,
+      "ordinal": 36
+    },
+    "sourceGenreLabel": "messages/youth"
+  },
+  {
+    "id": "mag:francis-i/world-food-day-2021",
+    "title": "Messaggio per la Giornata Mondiale dell'Alimentazione 2021",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-10-15",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/food/documents/papa-francesco_20211015_messaggio-giornata-alimentazione.html",
+      "shelf": "messages/food",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-food-day",
+      "year": 2021
+    },
+    "sourceGenreLabel": "messages/food"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2021-10-23",
@@ -3412,9 +6894,48 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/lent-2022",
+    "title": "Quaresima 2022: «Non stanchiamoci di fare il bene; se infatti non desistiamo a suo tempo mieteremo. Poiché dunque ne abbiamo l’occasione, operiamo il bene verso tutti» (Gal 6,9-10a)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-11-11",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/lent/documents/20211111-messaggio-quaresima2022.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "AR",
+        "BE",
+        "BG",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "JA",
+        "PL",
+        "PT",
+        "RO",
+        "RU",
+        "TL",
+        "UK",
+        "VI",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2022
+    },
+    "sourceGenreLabel": "messages/lent"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2021-11-17",
@@ -3431,7 +6952,7 @@
         "EN",
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -3440,6 +6961,137 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-peace-2022",
+    "title": "LV Giornata Mondiale della Pace 2022 - Dialogo fra generazioni, educazione e lavoro: strumenti per edificare una pace duratura",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/peace/documents/20211208-messaggio-55giornatamondiale-pace2022.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "RU",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2022,
+      "ordinal": 55
+    },
+    "sourceGenreLabel": "messages/peace"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-the-sick-2022",
+    "title": "XXX Giornata Mondiale del Malato, 2022",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-12-10",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/sick/documents/20211210_30-giornata-malato.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "RU",
+        "UK",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2022,
+      "ordinal": 30
+    },
+    "sourceGenreLabel": "messages/sick"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-christmas-2021",
+    "title": "Messaggio natalizio e Benedizione “Urbi et Orbi” 2021",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2021-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/papa-francesco_20211225_urbi-et-orbi-natale.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2021
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
+  },
+  {
+    "id": "mag:francis-i/world-mission-day-2022",
+    "title": "Messaggio per la Giornata Missionaria Mondiale 2022",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/missions/documents/20220106-giornata-missionaria.html",
+      "shelf": "messages/missions",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "RU",
+        "UK"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2022
+    },
+    "sourceGenreLabel": "messages/missions"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2022-01-21",
@@ -3456,9 +7108,72 @@
         "FR",
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-communications-day-2022",
+    "title": "LVI Giornata Mondiale delle Comunicazioni Sociali, 2022 - Ascoltare con l’orecchio del cuore",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/communications/documents/20220124-messaggio-comunicazioni-sociali.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2022,
+      "ordinal": 56
+    },
+    "sourceGenreLabel": "messages/communications"
+  },
+  {
+    "id": "mag:francis-i/world-day-for-consecrated-life-2022",
+    "title": "XXVI Giornata Mondiale della Vita Consacrata - Festa della presentazione del Signore",
+    "idStatus": "minted",
+    "genre": "homily",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-02-02",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/consecrated_life/documents/20220202_omelia-vitaconsacrata.html",
+      "shelf": "messages/consecrated_life",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-for-consecrated-life",
+      "year": 2022,
+      "ordinal": 26
+    },
+    "sourceGenreLabel": "messages/consecrated_life"
   },
   {
     "id": "mag:francis-i/competentias-quasdam-decernere-2022",
@@ -3482,7 +7197,7 @@
         "PL",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -3509,7 +7224,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -3543,13 +7258,44 @@
         "PL",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Praedicate Evangelium",
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-easter-2022",
+    "title": "\"Urbi et Orbi\" - Pasqua 2022",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-04-17",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/20220417-urbi-et-orbi-pasqua.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2022
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:francis-i/recognitum-librum-vi-2022",
@@ -3566,7 +7312,7 @@
         "IT",
         "LA"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -3591,9 +7337,105 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-grandparents-and-the-elderly-2022",
+    "title": "II Giornata Mondiale dei Nonni e degli Anziani, 2022: \"Nella vecchiaia daranno ancora frutti\" (Sal 92,15)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-05-03",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/nonni/documents/20220503-messaggio-nonni-anziani.html",
+      "shelf": "messages/nonni",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-grandparents-and-the-elderly",
+      "year": 2022,
+      "ordinal": 2
+    },
+    "sourceGenreLabel": "messages/nonni"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-vocations-2022",
+    "title": "Messaggio per la 59a Giornata Mondiale di Preghiera per le Vocazioni 2022",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-05-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/vocations/documents/20220508-messaggio-59-gm-vocazioni.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2022,
+      "ordinal": 59
+    },
+    "sourceGenreLabel": "messages/vocations"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-migrants-and-refugees-2022",
+    "title": "Messaggio per la 108ª Giornata Mondiale del Migrante e del Rifugiato 2022",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-05-09",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/migration/documents/20220509-world-migrants-day-2022.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2022,
+      "ordinal": 108
+    },
+    "sourceGenreLabel": "messages/migration"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2022-05-15",
@@ -3609,9 +7451,41 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-the-poor-2022",
+    "title": "VI Giornata Mondiale dei Poveri, 2022: Gesù Cristo si è fatto povero per voi (cfr 2 Cor 8,9)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-06-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/poveri/documents/20220613-messaggio-vi-giornatamondiale-poveri-2022.html",
+      "shelf": "messages/poveri",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-poor",
+      "year": 2022,
+      "ordinal": 6
+    },
+    "sourceGenreLabel": "messages/poveri"
   },
   {
     "id": "mag:francis-i/desiderio-desideravi-2022",
@@ -3635,7 +7509,7 @@
         "PT",
         "VI"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Desiderio desideravi",
     "sourceGenreLabel": "apost_letters"
@@ -3655,7 +7529,7 @@
         "EN",
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -3665,6 +7539,37 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-the-care-of-creation-2022",
+    "title": "Messaggio del Santo Padre per la celebrazione della Giornata Mondiale di Preghiera per la Cura del Creato",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-07-16",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/cura-creato/documents/20220716-messaggio-giornata-curacreato.html",
+      "shelf": "messages/cura-creato",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-the-care-of-creation",
+      "year": 2022
+    },
+    "sourceGenreLabel": "messages/cura-creato"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2022-08-01",
@@ -3681,12 +7586,49 @@
         "EN",
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "characteristics": [
       "motu-proprio"
     ],
     "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/world-youth-day-2022",
+    "title": "XXXVII Giornata Mondiale della Gioventù, 2022-2023: «Maria si alzò e andò in fretta» (Lc 1,39)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-08-15",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/youth/documents/papa-francesco_20220815_messaggio-giovani_2022.html",
+      "shelf": "messages/youth",
+      "languages": [
+        "AR",
+        "BN",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IN",
+        "IT",
+        "PL",
+        "PT",
+        "SQ",
+        "SV",
+        "TH",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-youth-day",
+      "year": 2022,
+      "ordinal": 37
+    },
+    "sourceGenreLabel": "messages/youth"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2022-09-03",
@@ -3704,7 +7646,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "characteristics": [
       "motu-proprio"
@@ -3727,13 +7669,39 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "RESCRIPTUM EX AUDIENTIA SS.MI",
     "characteristics": [
       "motu-proprio"
     ],
     "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/world-food-day-2022",
+    "title": "Messaggio per la Giornata Mondiale dell'Alimentazione 2022",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-10-14",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/food/documents/20221014-messaggio-giornata-alimentazione.html",
+      "shelf": "messages/food",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-food-day",
+      "year": 2022
+    },
+    "sourceGenreLabel": "messages/food"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2022-10-22",
@@ -3749,7 +7717,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -3770,7 +7738,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Decreto relativo a Caritas Internationalis",
     "characteristics": [
@@ -3792,7 +7760,7 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -3801,6 +7769,40 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-peace-2023",
+    "title": "LVI Giornata Mondiale della Pace 2023 - Nessuno può salvarsi da solo. Ripartire dal Covid-19 per tracciare insieme sentieri di pace",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/peace/documents/20221208-messaggio-56giornatamondiale-pace2023.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "UK",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2023,
+      "ordinal": 56
+    },
+    "sourceGenreLabel": "messages/peace"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2022-12-10",
@@ -3818,7 +7820,7 @@
         "EN",
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -3836,7 +7838,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Cum mirabilia",
     "characteristics": [
@@ -3847,6 +7849,37 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-christmas-2022",
+    "title": "\"Urbi et Orbi\" - Natale 2022",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2022-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/20221225-urbi-et-orbi-natale.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2022
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:francis-i/totum-amoris-est-2022",
@@ -3870,7 +7903,7 @@
         "PL",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Totum amoris est",
     "sourceGenreLabel": "apost_letters"
@@ -3890,7 +7923,7 @@
         "EN",
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "characteristics": [
       "motu-proprio"
@@ -3911,13 +7944,172 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Costituzione Apostolica In Ecclesiarum Communione",
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/world-mission-day-2023",
+    "title": "Messaggio per la Giornata Missionaria Mondiale 2023",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/missions/documents/20230106-giornata-missionaria.html",
+      "shelf": "messages/missions",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2023
+    },
+    "sourceGenreLabel": "messages/missions"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-the-sick-2023",
+    "title": "XXXI Giornata Mondiale del Malato, 2023",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-01-10",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/sick/documents/20230110-giornata-malato.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "AR",
+        "CS",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2023,
+      "ordinal": 31
+    },
+    "sourceGenreLabel": "messages/sick"
+  },
+  {
+    "id": "mag:francis-i/world-communications-day-2023",
+    "title": "LVII Giornata Mondiale delle Comunicazioni Sociali, 2023 - Parlare col cuore. «Secondo verità nella carità» (Ef 4,15)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/communications/documents/20230124-messaggio-comunicazioni-sociali.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "AR",
+        "CS",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2023,
+      "ordinal": 57
+    },
+    "sourceGenreLabel": "messages/communications"
+  },
+  {
+    "id": "mag:francis-i/lent-2023",
+    "title": "Quaresima 2023: Ascesi quaresimale, itinerario sinodale",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-01-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/lent/documents/20230125-messaggio-quaresima.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "LT",
+        "PL",
+        "PT",
+        "SK",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2023
+    },
+    "sourceGenreLabel": "messages/lent"
+  },
+  {
+    "id": "mag:francis-i/world-day-for-consecrated-life-2023",
+    "title": "Messaggio del Santo Padre ai consacrati riuniti nella Basilica di S. Maria Maggiore in occasione della Giornata Mondiale della Vita Consacrata",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-02-02",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/consecrated_life/documents/20230202-messaggio-gm-vitaconsacrata.html",
+      "shelf": "messages/consecrated_life",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-for-consecrated-life",
+      "year": 2023
+    },
+    "sourceGenreLabel": "messages/consecrated_life"
   },
   {
     "id": "mag:francis-i/regolamento-della-commissione-indipendente-di-vigilanza-del-vicariato-2023",
@@ -3934,7 +8126,7 @@
         "EN",
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Regolamento della Commissione Indipendente di Vigilanza del Vicariato",
     "characteristics": [
@@ -3956,7 +8148,7 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -3981,7 +8173,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -4015,7 +8207,7 @@
         "PL",
         "PT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -4040,7 +8232,7 @@
         "EN",
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -4049,6 +8241,37 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-easter-2023",
+    "title": "\"Urbi et Orbi\" - Pasqua 2023",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-04-09",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/20230409-urbi-et-orbi-pasqua.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2023
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2023-04-12",
@@ -4064,7 +8287,7 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -4089,7 +8312,7 @@
         "IT",
         "LA"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -4099,6 +8322,74 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-vocations-2023",
+    "title": "Messaggio per la 60a Giornata Mondiale di Preghiera per le Vocazioni 2023",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-04-30",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/vocations/documents/20230430-messaggio-60-gm-vocazioni.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "AR",
+        "CS",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2023,
+      "ordinal": 60
+    },
+    "sourceGenreLabel": "messages/vocations"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-migrants-and-refugees-2023",
+    "title": "Messaggio per la 109ª Giornata Mondiale del Migrante e del Rifugiato 2023",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-05-11",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/migration/documents/20230511-world-migrants-day-2023.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "AR",
+        "CS",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2023,
+      "ordinal": 109
+    },
+    "sourceGenreLabel": "messages/migration"
   },
   {
     "id": "mag:francis-i/legge-fondamentale-dello-stato-della-citta-del-vaticano-2023",
@@ -4114,13 +8405,111 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Legge Fondamentale dello Stato della Città del Vaticano",
     "characteristics": [
       "motu-proprio"
     ],
     "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-the-care-of-creation-2023",
+    "title": "Messaggio del Santo Padre in occasione della Giornata Mondiale di Preghiera per la Cura del Creato [1° settembre 2023]",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-05-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/cura-creato/documents/20230513-messaggio-giornata-curacreato.html",
+      "shelf": "messages/cura-creato",
+      "languages": [
+        "AR",
+        "CS",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-the-care-of-creation",
+      "year": 2023
+    },
+    "sourceGenreLabel": "messages/cura-creato"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-grandparents-and-the-elderly-2023",
+    "title": "III Giornata Mondiale dei Nonni e degli Anziani, 2023: \"Di generazione in generazione la sua misericordia\" (Lc 1,50)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-05-31",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/nonni/documents/20230531-messaggio-nonni-anziani.html",
+      "shelf": "messages/nonni",
+      "languages": [
+        "AR",
+        "CS",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-grandparents-and-the-elderly",
+      "year": 2023,
+      "ordinal": 3
+    },
+    "sourceGenreLabel": "messages/nonni"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-the-poor-2023",
+    "title": "VII Giornata Mondiale dei Poveri, 2023: «Non distogliere lo sguardo dal povero» (Tb 4,7)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-06-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/poveri/documents/20230613-messaggio-vii-giornatamondiale-poveri-2023.html",
+      "shelf": "messages/poveri",
+      "languages": [
+        "AR",
+        "CS",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-poor",
+      "year": 2023,
+      "ordinal": 7
+    },
+    "sourceGenreLabel": "messages/poveri"
   },
   {
     "id": "mag:francis-i/sublimitas-et-miseria-hominis-2023",
@@ -4144,7 +8533,7 @@
         "PL",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Sublimitas et miseria hominis",
     "sourceGenreLabel": "apost_letters"
@@ -4164,7 +8553,7 @@
         "EN",
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "characteristics": [
       "motu-proprio"
@@ -4186,7 +8575,7 @@
         "EN",
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "characteristics": [
       "motu-proprio"
@@ -4207,7 +8596,7 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -4232,7 +8621,7 @@
         "EN",
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "characteristics": [
       "motu-proprio"
@@ -4267,7 +8656,7 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Laudate Deum",
     "sourceGenreLabel": "apost_exhortations"
@@ -4296,10 +8685,36 @@
         "PT",
         "SL"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "C’est la confiance",
     "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:francis-i/world-food-day-2023",
+    "title": "Messaggio per la Giornata Mondiale dell'Alimentazione 2023",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-10-16",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/food/documents/20231016-messaggio-giornata-alimentazione.html",
+      "shelf": "messages/food",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-food-day",
+      "year": 2023
+    },
+    "sourceGenreLabel": "messages/food"
   },
   {
     "id": "mag:francis-i/ad-theologiam-promovendam-2023",
@@ -4316,7 +8731,7 @@
         "IT",
         "LA"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -4326,6 +8741,41 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-youth-day-2023",
+    "title": "XXXVIII Giornata Mondiale della Gioventù, 2023: «Lieti nella speranza» (Rm 12,12)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-11-09",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/youth/documents/papa-francesco_20231109_messaggio-giovani_2023.html",
+      "shelf": "messages/youth",
+      "languages": [
+        "AR",
+        "BN",
+        "DE",
+        "EL",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "TH",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-youth-day",
+      "year": 2023,
+      "ordinal": 38
+    },
+    "sourceGenreLabel": "messages/youth"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2023-11-27",
@@ -4341,9 +8791,42 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/lent-2024",
+    "title": "Quaresima 2024: Attraverso il deserto Dio ci guida alla libertà",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-12-03",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/lent/documents/20231203-messaggio-quaresima2024.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "AR",
+        "CS",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2024
+    },
+    "sourceGenreLabel": "messages/lent"
   },
   {
     "id": "mag:francis-i/primum-quidem-gratias-ago-deo-2023",
@@ -4359,10 +8842,45 @@
       "languages": [
         "FR"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Primum quidem gratias ago Deo",
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-peace-2024",
+    "title": "LVII Giornata Mondiale della Pace 2024 - Intelligenza artificiale e pace",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/peace/documents/20231208-messaggio-57giornatamondiale-pace2024.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "RU",
+        "SL",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2024,
+      "ordinal": 57
+    },
+    "sourceGenreLabel": "messages/peace"
   },
   {
     "id": "mag:francis-i/peculiari-gaudio-2023",
@@ -4378,7 +8896,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Peculiari gaudio",
     "characteristics": [
@@ -4389,6 +8907,70 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-christmas-2023",
+    "title": "\"Urbi et Orbi\" - Natale 2023",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2023-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/20231225-urbi-et-orbi-natale.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2023
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-the-sick-2024",
+    "title": "XXXII Giornata Mondiale del Malato, 2024",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-01-10",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/sick/documents/20240110-giornata-malato.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "AR",
+        "CS",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2024,
+      "ordinal": 32
+    },
+    "sourceGenreLabel": "messages/sick"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2024-01-16-1",
@@ -4405,7 +8987,7 @@
         "EN",
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "characteristics": [
       "motu-proprio"
@@ -4428,9 +9010,106 @@
         "ES",
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-communications-day-2024",
+    "title": "LVIII Giornata Mondiale delle Comunicazioni Sociali, 2024 - Intelligenza artificiale e sapienza del cuore: per una comunicazione pienamente umana",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/communications/documents/20240124-messaggio-comunicazioni-sociali.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "AR",
+        "CS",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2024,
+      "ordinal": 58
+    },
+    "sourceGenreLabel": "messages/communications"
+  },
+  {
+    "id": "mag:francis-i/world-mission-day-2024",
+    "title": "Messaggio per la Giornata Missionaria Mondiale 2024",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-01-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/missions/documents/20240125-giornata-missionaria.html",
+      "shelf": "messages/missions",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2024
+    },
+    "sourceGenreLabel": "messages/missions"
+  },
+  {
+    "id": "mag:francis-i/world-day-for-consecrated-life-2024",
+    "title": "XXVIII Giornata Mondiale della Vita Consacrata - Festa della Presentazione del Signore",
+    "idStatus": "minted",
+    "genre": "homily",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-02-02",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/consecrated_life/documents/20240202_omelia-vita-consacrata.html",
+      "shelf": "messages/consecrated_life",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-for-consecrated-life",
+      "year": 2024,
+      "ordinal": 28
+    },
+    "sourceGenreLabel": "messages/consecrated_life"
   },
   {
     "id": "mag:francis-i/alteri-alterius-2024",
@@ -4446,7 +9125,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Alteri alterius",
     "characteristics": [
@@ -4472,7 +9151,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Pastoralis sollicitudinis",
     "characteristics": [
@@ -4498,7 +9177,7 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -4508,6 +9187,39 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-childrens-day-2024",
+    "title": "I Giornata Mondiale dei Bambini, 2024",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-03-02",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/bambini/documents/20240302_messaggio-bambini.html",
+      "shelf": "messages/bambini",
+      "languages": [
+        "AR",
+        "CS",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-childrens-day",
+      "year": 2024,
+      "ordinal": 1
+    },
+    "sourceGenreLabel": "messages/bambini"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2024-03-27",
@@ -4523,7 +9235,7 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -4532,6 +9244,104 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-easter-2024",
+    "title": "\"Urbi et Orbi\" - Pasqua 2024",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-03-31",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/20240331-urbi-et-orbi-pasqua.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2024
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-vocations-2024",
+    "title": "Messaggio per la 61a Giornata Mondiale di Preghiera per le Vocazioni 2024",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-04-21",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/vocations/documents/20240421-messaggio-61-gm-vocazioni.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2024,
+      "ordinal": 61
+    },
+    "sourceGenreLabel": "messages/vocations"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-grandparents-and-the-elderly-2024",
+    "title": "IV Giornata Mondiale dei Nonni e degli Anziani, 2024: “Nella vecchiaia non abbandonarmi” (cfr. Sal 71,9)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-04-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/nonni/documents/20240425-messaggio-nonni-anziani.html",
+      "shelf": "messages/nonni",
+      "languages": [
+        "AR",
+        "CS",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-grandparents-and-the-elderly",
+      "year": 2024,
+      "ordinal": 4
+    },
+    "sourceGenreLabel": "messages/nonni"
   },
   {
     "id": "mag:francis-i/spes-non-confundit-2024",
@@ -4564,7 +9374,7 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Spes non confundit",
     "sourceGenreLabel": "bulls"
@@ -4586,7 +9396,7 @@
         "IT",
         "LA"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -4596,6 +9406,44 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-migrants-and-refugees-2024",
+    "title": "Messaggio per la 110ª Giornata Mondiale del Migrante e del Rifugiato 2024",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-05-24",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/migration/documents/20240524-world-migrants-day-2024.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "AR",
+        "BN",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HI",
+        "IT",
+        "KN",
+        "ML",
+        "NL",
+        "PL",
+        "PT",
+        "TA",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2024,
+      "ordinal": 110
+    },
+    "sourceGenreLabel": "messages/migration"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2024-05-26",
@@ -4611,9 +9459,42 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-the-poor-2024",
+    "title": "VIII Giornata Mondiale dei Poveri, 2024: La preghiera del povero sale fino a Dio (cfr Siracide 21,5)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-06-13",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/poveri/documents/20240613-messaggio-viii-giornatamondiale-poveri-2024.html",
+      "shelf": "messages/poveri",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-poor",
+      "year": 2024,
+      "ordinal": 8
+    },
+    "sourceGenreLabel": "messages/poveri"
   },
   {
     "id": "mag:francis-i/fratello-sole-2024",
@@ -4631,7 +9512,7 @@
         "ES",
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -4641,6 +9522,37 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-the-care-of-creation-2024",
+    "title": "Messaggio del Santo Padre in occasione della Giornata Mondiale di Preghiera per la Cura del Creato [1° settembre 2024]",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-06-27",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/cura-creato/documents/20240627-messaggio-giornata-curacreato.html",
+      "shelf": "messages/cura-creato",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-the-care-of-creation",
+      "year": 2024
+    },
+    "sourceGenreLabel": "messages/cura-creato"
   },
   {
     "id": "mag:francis-i/apostolic-letter-2024-06-29",
@@ -4656,7 +9568,7 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -4675,12 +9587,45 @@
         "EN",
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "characteristics": [
       "motu-proprio"
     ],
     "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:francis-i/world-youth-day-2024",
+    "title": "XXXIX Giornata Mondiale della Gioventù, 2024: «Quanti sperano nel Signore camminano senza stancarsi» (cfr Is 40,31)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-08-29",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/youth/documents/papa-francesco_20240829_messaggio-giovani_2024.html",
+      "shelf": "messages/youth",
+      "languages": [
+        "AR",
+        "DE",
+        "EL",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-youth-day",
+      "year": 2024,
+      "ordinal": 39
+    },
+    "sourceGenreLabel": "messages/youth"
   },
   {
     "id": "mag:francis-i/la-vera-bellezza-2024",
@@ -4696,7 +9641,7 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -4706,6 +9651,32 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:francis-i/world-food-day-2024",
+    "title": "Messaggio per la Giornata Mondiale dell'Alimentazione 2024",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-10-16",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/food/documents/20241016-messaggio-giornata-alimentazione.html",
+      "shelf": "messages/food",
+      "languages": [
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-food-day",
+      "year": 2024
+    },
+    "sourceGenreLabel": "messages/food"
   },
   {
     "id": "mag:francis-i/dilexit-nos-2024",
@@ -4732,7 +9703,7 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Dilexit nos",
     "sourceGenreLabel": "encyclicals"
@@ -4751,7 +9722,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Quod Manifestatum",
     "characteristics": [
@@ -4762,6 +9733,101 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-peace-2025",
+    "title": "LVIII Giornata Mondiale della Pace 2025 - “Rimetti a noi i nostri debiti, concedici la tua pace”",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/peace/documents/20241208-messaggio-58giornatamondiale-pace2025.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "RU",
+        "UK"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2025,
+      "ordinal": 58
+    },
+    "sourceGenreLabel": "messages/peace"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-christmas-2024",
+    "title": "\"Urbi et Orbi\" - Natale 2024",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2024-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/20241225-urbi-et-orbi-natale.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2024
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-the-sick-2025",
+    "title": "XXXIIII Giornata Mondiale del Malato, 2025",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2025-01-14",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/sick/documents/20250114-giornata-malato.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2025,
+      "ordinal": 33
+    },
+    "sourceGenreLabel": "messages/sick"
   },
   {
     "id": "mag:francis-i/in-christo-2025",
@@ -4777,7 +9843,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "In Christo",
     "characteristics": [
@@ -4788,6 +9854,40 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/world-communications-day-2025",
+    "title": "LIX Giornata Mondiale delle Comunicazioni Sociali, 2025 - Condividete con mitezza la speranza che sta nei vostri cuori (cf. 1Pt 3,15-16)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2025-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/communications/documents/20250124-messaggio-comunicazioni-sociali.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "MS",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2025,
+      "ordinal": 59
+    },
+    "sourceGenreLabel": "messages/communications"
   },
   {
     "id": "mag:francis-i/caritate-christi-2025",
@@ -4803,7 +9903,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Caritate Christi",
     "characteristics": [
@@ -4814,6 +9914,99 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/world-mission-day-2025",
+    "title": "Messaggio per la Giornata Missionaria Mondiale 2025",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2025-01-25",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/missions/documents/20250125-giornata-missionaria.html",
+      "shelf": "messages/missions",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2025
+    },
+    "sourceGenreLabel": "messages/missions"
+  },
+  {
+    "id": "mag:francis-i/world-day-for-consecrated-life-2025",
+    "title": "XXIX Giornata Mondiale della Vita Consacrata - Festa della Presentazione del Signore",
+    "idStatus": "minted",
+    "genre": "homily",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2025-02-01",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/consecrated_life/documents/20250201-omelia-presentazione-del-signore.html",
+      "shelf": "messages/consecrated_life",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-for-consecrated-life",
+      "year": 2025,
+      "ordinal": 29
+    },
+    "sourceGenreLabel": "messages/consecrated_life"
+  },
+  {
+    "id": "mag:francis-i/lent-2025",
+    "title": "Quaresima 2025: Camminiamo insieme nella speranza",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2025-02-06",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/lent/documents/20250206-messaggio-quaresima2025.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "VI",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2025
+    },
+    "sourceGenreLabel": "messages/lent"
   },
   {
     "id": "mag:francis-i/fidelium-vitae-2025",
@@ -4829,7 +10022,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Fidelium vitae",
     "characteristics": [
@@ -4840,6 +10033,39 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/world-day-of-prayer-for-vocations-2025",
+    "title": "Messaggio per la 62a Giornata Mondiale di Preghiera per le Vocazioni 2025",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2025-03-19",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/vocations/documents/20250319-messaggio-62-gm-vocazioni.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2025,
+      "ordinal": 62
+    },
+    "sourceGenreLabel": "messages/vocations"
   },
   {
     "id": "mag:francis-i/spei-accensa-lucerna-2025",
@@ -4855,7 +10081,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Spei accensa lucerna",
     "characteristics": [
@@ -4881,7 +10107,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Incomparabilis Magister",
     "characteristics": [
@@ -4892,5 +10118,38 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:francis-i/urbi-et-orbi-easter-2025",
+    "title": "\"Urbi et Orbi\" - Pasqua 2025",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:francis-i",
+    "issuerType": "pope",
+    "date": "2025-04-20",
+    "source": {
+      "url": "https://www.vatican.va/content/francesco/it/messages/urbi/documents/20250420-urbi-et-orbi-pasqua.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2025
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   }
 ]

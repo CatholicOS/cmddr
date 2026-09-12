@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import {
-  MINTED_ID_RE, PROVISIONAL_ID_RE, issuerLocalPart, mintId, mintProvisionalId, parseId,
+  MINTED_ID_RE, PROVISIONAL_ID_RE, issuerLocalPart, mintId, mintProvisionalId, mintSeriesId,
+  parseId,
 } from '../src/ids.js';
 
 describe('issuerLocalPart', () => {
@@ -38,6 +39,36 @@ describe('mintId', () => {
 
   it('produces ids matching MINTED_ID_RE', () => {
     expect(MINTED_ID_RE.test(mintId('rp:leo-xiii', 'Rerum Novarum', '1891-05-15'))).toBe(true);
+  });
+});
+
+describe('mintSeriesId', () => {
+  it('mints issuer/series-id-occasion-year, with the occasion year rather than the signing year', () => {
+    // The 2025 Peace message is signed 8 December 2024; its id carries 2025.
+    expect(mintSeriesId('rp:francis-i', 'world-day-of-peace', 2025))
+      .toBe('mag:francis-i/world-day-of-peace-2025');
+    expect(mintSeriesId('rp:paul-vi', 'world-day-of-peace', 1968))
+      .toBe('mag:paul-vi/world-day-of-peace-1968');
+    expect(mintSeriesId('rp:francis-i', 'lent', 2015)).toBe('mag:francis-i/lent-2015');
+    expect(mintSeriesId('rp:john-paul-ii', 'urbi-et-orbi-easter', 2005))
+      .toBe('mag:john-paul-ii/urbi-et-orbi-easter-2005');
+  });
+
+  it('produces ids matching MINTED_ID_RE', () => {
+    expect(MINTED_ID_RE.test(mintSeriesId('rp:francis-i', 'world-day-of-peace', 2025))).toBe(true);
+  });
+
+  it('rejects a series id that is not slug-form and a year that is not four digits', () => {
+    expect(() => mintSeriesId('rp:francis-i', 'consecrated_life', 2023)).toThrow(/slug/);
+    expect(() => mintSeriesId('rp:francis-i', 'lent', 15)).toThrow(/four-digit/);
+    expect(() => mintSeriesId('rp:francis-i', 'lent', 2015.5)).toThrow(/four-digit/);
+  });
+
+  it('round-trips through parseId: the slug is the series id and the year the occasion year', () => {
+    expect(parseId(mintSeriesId('rp:francis-i', 'world-day-of-peace', 2025)))
+      .toEqual({ issuer: 'francis-i', slug: 'world-day-of-peace', year: '2025' });
+    expect(parseId(mintSeriesId('rp:francis-i', 'lent', 2015)))
+      .toEqual({ issuer: 'francis-i', slug: 'lent', year: '2015' });
   });
 });
 

@@ -10,3 +10,5 @@ export * from './incipit-rules.js';
 export * from './recovered-incipits.js';
 export * from './circumscriptions.js';
 export * from './keywords.js';
+export * from './series.js';
+export * from './series-curation.js';

@@ -93,6 +93,7 @@ addressee, and a possible `regional` value are all deferred to [#4](https://gith
 | Homily | Pope | universal | Authentic Ordinary | Authentic Ordinary | |
 | Prayer | Pope | universal | Authentic Ordinary | Authentic Ordinary | |
 | Audience / Catechesis | Pope | universal | Authentic Ordinary | Authentic Ordinary | |
+| Message | Pope | universal | Authentic Ordinary | Authentic Ordinary | Covers both the annual World Day / Lent series and occasional messages to a congress, dicastery or body. Non-defining pastoral vehicle; sits beside Discourse, Homily and Audience. |
 | Urbi et Orbi | Pope | universal | Authentic Ordinary | Authentic Ordinary | A solemn papal **blessing** to the City and the World (vatican.va’s *Urbi et Orbi* shelf under *Messaggi*), with a plenary indulgence attached under the usual conditions — extended by the Apostolic Penitentiary to those who receive it by radio, television or internet. The blessing is the act; only the accompanying address carries teaching, assessed per statement. See *Acts that do not teach* below. |
 | Episcopal / Pastoral Letter | Bishop | local | Authentic Ordinary | Authentic Ordinary | An individual bishop shares in the ordinary universal magisterium only collegially, not through a local act. |
 | Episcopal Homily | Bishop | local | Authentic Ordinary | Authentic Ordinary | |
@@ -138,11 +139,14 @@ The document categories on [vatican.va](https://www.vatican.va/) — *Encicliche
 them, which is not the same question as the authority the issuer exercised. They are first-rate evidence of what forms exist and of
 how the Holy See itself distinguishes them, and they should **inform** this registry; they do not **govern** it.
 
-Two features of those shelves make the point. First, they sort by *form*, not by weight or audience: *Ordinatio Sacerdotalis* and a
+Three features of those shelves make the point. First, they sort by *form*, not by weight or audience: *Ordinatio Sacerdotalis* and a
 letter erecting a diocese share the *Lettere Apostoliche* shelf, while the universally-addressed *Letter to Artists* (1999) sits
 under *Lettere*. Second, they are not disjoint — *Socialium Scientiarum* (1994) is filed **both** as an Apostolic Letter and as a
 *Motu Proprio*, because issuing a document *motu proprio* is a mode of acting rather than a genre standing beside the apostolic
-letter. This registry handles that kind of relation with **characteristics** rather than sub-genres (see *Characteristics*
+letter. Third, their names are not stable even for one occasion: the *Messaggi* sub-shelf that holds the World Mission Day
+messages is `missions` on every page from Paul VI to Francis and `mission` on Leo XIV's, whose page also renames `poveri` to
+`poor`, `nonni` to `grandparents` and `cura-creato` to `creation`, while John XXIII and Paul VI spell the Urbi et Orbi shelf
+`urbi_et_orbi` where every later pope has `urbi` — the same series, filed under five different names. This registry handles that kind of relation with **characteristics** rather than sub-genres (see *Characteristics*
 above), and `motu-proprio` is one: a document filed on the *Motu Proprio* shelf, or on that shelf as well as another, is an
 `apostolic-letter` bearing the `motu-proprio` characteristic, and the shelf it came from is still recorded on the document.
 
@@ -171,8 +175,11 @@ claim about register or definitiveness, and no invariant couples it to a genre, 
 constitutions whose circumscription keyword (an erection, elevation or union of sees, read from the heading or from the
 hand-curated adjudication tables) carry `actKind: governance`; the flag is derived from the keyword in the harvester, so the two
 cannot disagree. The *Lettere Apostoliche* tail is not yet flagged, because no keyword yet evidences it. Urbi et Orbi keeps its
-own Table 1 row so that a reader finds it where they expect to: the row’s ceiling describes the address, and once the *Messaggi*
-shelves are harvested ([#4](https://github.com/CatholicOS/cmddr/issues/4)) the flag (`liturgical`) will describe the act. The discussion is in [#15](https://github.com/CatholicOS/cmddr/issues/15).
+own Table 1 row so that a reader finds it where they expect to: the row’s ceiling describes the address, and the flag
+(`liturgical`) describes the act — every one of the **145** Urbi et Orbi harvested from the *Messaggi* shelves carries it, whether
+or not the item belongs to the Christmas or Easter series. Seven items on John XXIII’s *Urbi et Orbi* shelf do not carry it,
+because they are not blessings: the radio messages this pope broadcast to the world before Christmas and Easter and on other
+occasions, which vatican.va files beside the feast-day messages, are harvested as `message` on curated rows quoting each heading. The discussion is in [#15](https://github.com/CatholicOS/cmddr/issues/15).
 
 #### Numbered annual series
 
@@ -184,20 +191,42 @@ dated only (*Quaresima 2015: Rinfrancate i vostri cuori*). A series is an entity
 across one — how fifty-odd messages treat migration, or communications — is exactly the kind of traversal this data should
 support.
 
-The registry records this with an optional **`series`** object on the document, `{ "id": "peace", "ordinal": 51 }`, the ordinal
-optional; `id` resolves against [`data/series.json`](data/series.json), one row per occasion using vatican.va’s own message
-sub-shelf slugs (`peace`, `lent`, `communications`, `migration`, …), each row recording whether the series is numbered and the
-shelf evidence for saying so. Consistent with the chancery-shelves note above, these are a vocabulary of **occasions**, not of
-genres: a World Day of Peace message is a message whichever day it is for, and `series` says only where it stands in a sequence.
-It is discovery metadata with **no bearing on register, ceiling or assent**. No document populates it yet, because the
-*Messaggi* shelves are not harvested until [#4](https://github.com/CatholicOS/cmddr/issues/4). The discussion is in
-[#16](https://github.com/CatholicOS/cmddr/issues/16).
+The registry records this with an optional **`series`** object on the document,
+`{ "id": "world-day-of-peace", "year": 2018, "ordinal": 51 }`, the ordinal optional; `id` resolves against
+[`data/series.json`](data/series.json), one row per occasion under a canonical English id, each row listing every vatican.va
+sub-shelf slug the occasion has been filed under (`missions` and `mission`, `nonni` and `grandparents`), recording whether the
+series is numbered and, where a shelf reaches the first occasion (*I Giornata…*), the verified `firstYear` — nine of the sixteen
+occasions, from Paul VI's Peace 1968 and Communications 1967 to Francis's World Children's Day 2024. Consistent with the
+chancery-shelves note above, these are a vocabulary of **occasions**, not of genres: a World Day of Peace message is a message
+whichever day it is for, and `series` says only where it stands in a sequence. It is discovery metadata with **no bearing on
+register, ceiling or assent**. The discussion is in [#16](https://github.com/CatholicOS/cmddr/issues/16).
+
+A document in a series is keyed by its occasion, not by its first words: `mag:francis-i/world-day-of-peace-2025`,
+`mag:paul-vi/world-day-of-peace-1968`, `mag:francis-i/lent-2015`. The year in the id is the **occasion year** the title prints
+(`series.year`), not the year of `date`, because the two routinely disagree — the message for the LVIII World Day of Peace,
+1 January 2025, is signed *Dal Vaticano, 8 dicembre 2024*, and the Peace messages are dated 8 December of the preceding year as
+a rule; the 1976 message is dated 18 October 1975. Under the incipit rule "the 2025 Peace message" would have been minted as
+`…-2024`, an id nobody would guess on a document nobody cites by its first words (the *Acta Apostolicae Sedis* index cites these
+by occasion: *Nuntius S.P. pro XCVII Die Mundiali Missionum*). The ordinal is recorded only where the title prints it — as a
+Roman numeral on most numbered series, Arabic on migration and vocations (*110ª*, *62a*), not at all on Lent, Missions, Food or
+Literacy — and is never computed from `firstYear`; where both are present, invariant 24 checks one against the other, which is
+how a mistyped *XXXIIII* and a *XXIV* printed for a XXXIV were caught before entering an id. A series' printed numbering can
+also be reset by the Holy See — the Care of Creation message of 2025 is titled *X*, repeating 2024's *X*, so that the edition
+matched the tenth anniversary of *Laudato si'* in the Jubilee year, and 2026 is *XI* — and the vocabulary records such a
+reset (`renumberings`) rather than the registry re-computing numbers. **537** series documents across sixteen series and five
+pontificates (Paul VI → Leo XIV) are harvested this way — 526 messages and the 11 homilies Francis gave on the World Day for
+Consecrated Life, which vatican.va files on the series shelf and which are members of the series whatever their genre —
+together with the **145** Urbi et Orbi, of which the Christmas and Easter ones form two dated series assigned by date — or, for
+the one item whose heading names the feast while the act bears another date (John XXIII’s *Santo Natale* of 22 December 1962,
+the shelf’s only Christmas 1962 item), by a curated row. The occasional messages on the year-partitioned
+`pont-messages` shelf are not yet harvested ([#4](https://github.com/CatholicOS/cmddr/issues/4)).
 
 ### The document registry
 
 Concrete documents live in [`data/documents/`](data/documents/), rendered as
 [`registry/documents.md`](registry/documents.md). Identifiers follow
-`mag:{issuer}/{incipit-slug}-{year}` and reference popes and councils by their
+`mag:{issuer}/{incipit-slug}-{year}` — or `mag:{issuer}/{series-id}-{occasion-year}` for a document in an annual series (see
+*Numbered annual series* above) — and reference popes and councils by their
 [CRPDR](https://github.com/CatholicOS/crpdr) `rp:` and
 [COECDR](https://github.com/CatholicOS/coecdr) `oec:` identifiers. The registry is generated by
 `npm run harvest` and checked by `npm run validate`; see

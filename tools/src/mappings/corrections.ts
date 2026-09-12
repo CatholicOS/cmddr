@@ -826,4 +826,69 @@ export const DATE_CORRECTIONS: Record<string, { date: string; note: string }> = 
       "Iunii' (9 June), matching the apost_constitutions shelf's printed '9 giugno 2014' " +
       "-- both wrong; the URL slug (20140709, 9 July) agrees with the closing formula.",
   },
+
+  // The *Messaggi* shelves (messages spec). Keyed on the title, since these headings print
+  // no incipit; the date is read from the heading where it prints one, else from the URL.
+  'pius-xii|messages/urbi|urbi-et-orbi-pasqua-1956|1953-04-01': {
+    date: '1956-04-01',
+    note:
+      "The urbi shelf lists '\"Urbi et Orbi\" - Pasqua 1956' twice, under " +
+      '_19530401_urbi-easter and _19560401_urbi-easter. Both pages carry the same text ' +
+      "('MESSAGGIO URBI ET ORBI DI SUA SANTITÀ PIO XII PASQUA 1956 … Come desti dallo " +
+      "squillo di vittoria del divino Risorto…'); Easter 1956 was 1 April, Easter 1953 was " +
+      '5 April (the shelf\'s own _19530405_urbi-easter). The 1953 slug is a mistyped year on ' +
+      'a second copy of the 1956 message; corrected so that pass 1 merges the two.',
+  },
+  'john-paul-ii|messages/urbi|urbi-et-orbi-31-dicembre-1999|1999-12-31': {
+    date: '1999-12-31',
+    note:
+      "The heading '\"Urbi et Orbi\", 31 Dicembre 1999' prints 31 December 1999; the URL slug " +
+      "(_20000101_urbi) says 1 January 2000. The document dates itself 'Mezzanotte del 31 " +
+      "dicembre 1999' and opens 'inizia in questo momento l\'anno duemila'. The printed date " +
+      'is the one the act bears; kept, and the slug mismatch adjudicated here.',
+  },
+  // John Paul II's tourism shelf prints the day of the occasion (27 September) as the
+  // heading's date and encodes yet another date in the URL; each document's own dating
+  // formula is a third. The formula is the act's date, as everywhere in this table.
+  'john-paul-ii|messages/tourism|messaggio-per-la-giornata-mondiale-del-turismo|2004-09-27': {
+    date: '2004-05-30',
+    note:
+      "Heading 'Messaggio per la Giornata Mondiale del Turismo (27 settembre 2004)'; URL slug " +
+      "_20040625_ (25 June). The document ('Messaggio di Giovanni Paolo II per la XXV Giornata " +
+      "Mondiale del Turismo (27 settembre 2004)') closes 'Dal Vaticano, 30 maggio 2004'.",
+  },
+  'john-paul-ii|messages/tourism|messaggio-per-la-giornata-mondiale-del-turismo|2003-09-27': {
+    date: '2003-06-11',
+    note:
+      "Heading '… (27 settembre 2003)'; URL slug _20030626_ (26 June). The document ('… per la " +
+      "XXIV Giornata Mondiale del Turismo (27 settembre 2003)') closes 'Dal Vaticano, 11 Giugno 2003'.",
+  },
+  'john-paul-ii|messages/tourism|messaggio-per-la-giornata-mondiale-del-turismo|2002-09-27': {
+    date: '2002-06-24',
+    note:
+      "Heading '… (27 settembre 2002)'; URL slug _20020625_ (25 June). The document ('… per la " +
+      "XXIII Giornata Mondiale del Turismo (27 settembre 2002)') closes 'Dal Vaticano, 24 Giugno 2002'.",
+  },
+  'john-paul-ii|messages/tourism|messaggio-per-la-giornata-mondiale-del-turismo|2001-09-27': {
+    date: '2001-06-09',
+    note:
+      "Heading '… (27 settembre 2001)'; URL slug _20010619_ (19 June). The document ('… per la " +
+      "XXII Giornata Mondiale del Turismo 2001') closes 'Dal Vaticano, 9 Giugno 2001'.",
+  },
+  'john-paul-ii|messages/tourism|messaggio-per-la-giornata-mondiale-del-turismo|2000-09-27': {
+    date: '2000-07-29',
+    note:
+      "Heading '… (27 settembre 2000)'; URL slug _20000801_ (1 August). The document ('… per la " +
+      "Giornata Mondiale del Turismo (27 settembre 2000)') closes 'Castel Gandolfo, 29 Luglio 2000'.",
+  },
+  'john-xxiii|messages/urbi_et_orbi|santo-natale|1962-12-25': {
+    date: '1962-12-22',
+    note:
+      "The heading 'Santo Natale (25 dicembre 1962)' prints Christmas Day; the URL slug " +
+      "(_19621222_urbi-natale) says 22 December. The document is headed 'Radiomessaggio del " +
+      "Santo Padre Giovanni XXIII … in occasione della Solennità del Santo Natale, Sabato, 22 " +
+      "dicembre 1962' -- the pre-Christmas radio message, broadcast on the Saturday, as this " +
+      "pope's 1960 and 1961 Christmas radio messages were (22 and 21 December). The heading " +
+      'names the feast, not the date of the act; corrected to the date the act bears.',
+  },
 };

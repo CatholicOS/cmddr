@@ -16,15 +16,27 @@ describe('data/genres.json', () => {
     }
   });
 
-  it('transcribes all sixteen rows of README Table 1', () => {
-    // #10: motu proprio is a characteristic of apostolic-letter, not a row; #15 adds urbi-et-orbi.
-    expect(genres).toHaveLength(16);
+  it('transcribes all seventeen rows of README Table 1', () => {
+    // #10: motu proprio is a characteristic of apostolic-letter, not a row; #15 adds
+    // urbi-et-orbi; #4 adds message, placed after audience-catechesis and before urbi-et-orbi.
+    expect(genres).toHaveLength(17);
     expect(genres.map((g) => g.id)).toEqual([
       'constitution', 'decree', 'declaration', 'papal-bull', 'encyclical',
       'apostolic-exhortation', 'apostolic-letter', 'brief', 'letter',
-      'discourse-address', 'homily', 'prayer', 'audience-catechesis', 'urbi-et-orbi',
+      'discourse-address', 'homily', 'prayer', 'audience-catechesis', 'message', 'urbi-et-orbi',
       'episcopal-pastoral-letter', 'episcopal-homily',
     ]);
+  });
+
+  it('caps the message at authentic-ordinary: one row for every occasion, not one per sub-shelf (#4)', () => {
+    const row = genres.find((g) => g.id === 'message')!;
+    expect(row).toBeDefined();
+    expect(row.issuerTypes).toEqual(['pope']);
+    expect(row.defaultScope).toBe('universal');
+    expect(row.defaultRegister).toBe('authentic-ordinary');
+    expect(row.ceiling).toBe('authentic-ordinary');
+    expect(row.allowedCharacteristics).toBeUndefined();
+    expect(row.description).toMatch(/World Day/);
   });
 
   it('allows characteristics only where README lists them', () => {

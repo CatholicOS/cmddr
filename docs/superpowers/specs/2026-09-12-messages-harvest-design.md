@@ -145,7 +145,13 @@ mag:john-paul-ii/urbi-et-orbi-easter-2005
    assigned by `date` (§2.4), with `series.year` = the year of `date`. Every other item on
    the `urbi` shelf is `genre: urbi-et-orbi` with no series and a provisional id
    (`mag:francis-i/urbi-et-orbi-2020-03-27`). All Urbi et Orbi records carry
-   `actKind: liturgical`.
+   `actKind: liturgical`. Two curated exceptions, adjudicated on PR #26: an item whose
+   heading names the feast while the act bears another date, and for whose year the shelf
+   holds no feast-day item, is placed in the series by a curated row quoting the heading
+   (John XXIII's *Santo Natale* of 22 December 1962); and an item on the shelf that is not
+   a blessing at all — John XXIII's radio messages to the world, broadcast before the feasts
+   and on other occasions beside the feast-day messages — is excluded by a curated row and
+   harvested as a provisional `message` with no `actKind`, as §5.3's exclusions provide.
 
 ### 3.3 Invariants
 
@@ -225,14 +231,23 @@ then
 records `messages/…` in `alsoShelvedAs`, as now. (Whether any such cross-filing exists is a
 count to report, not a rule to assume.)
 
-### 5.3 Curated fallbacks
+### 5.3 Curated tables
 
-Two hand-curated tables, in the style of `recovered-incipits.ts`, each row quoting the
-source: **occasion years** for series items whose title prints none, and **ordinals** for
-items whose title prints one the parser cannot read. Both start empty and are populated only
-from what the corpus measurement (§5.4) actually turns up. An item that neither the parser
-nor a curated row can assign a `series.year` fails the run: a series document without an
-occasion year has no id.
+Four hand-curated tables in `series-curation.ts`, in the style of `recovered-incipits.ts`,
+every row keyed on `{pageSlug}|{shelf}|{slugify(title)}|{date}` (the adjudicated date, where
+`DATE_CORRECTIONS` has changed it) and quoting the source. Each starts empty and is populated
+only from what the corpus measurement (§5.4) actually turns up; a closed-set test asserts
+that every row lands on exactly one record.
+
+| Table | Consulted | Effect | Evidence a row must carry |
+|---|---|---|---|
+| `SERIES_OCCASION_YEARS` | Ahead of the title parser | Supplies or corrects `series.year` | The heading, and why the year is what it is |
+| `SERIES_ORDINALS` | Ahead of the title parser | Supplies or corrects `series.ordinal` | The heading and the printed token; the document where the heading prints none |
+| `SERIES_EXCLUSIONS` | First of all, for any item on a series or Urbi et Orbi shelf | The item is not a member: `genre: message`, no `series`, no `actKind`, provisional `mag:{issuer}/message-YYYY-MM-DD` | The heading, and the document text establishing that the act is not the series' act (a Holy Year day; a radio message or Vigil address rather than the blessing) |
+| `SERIES_URBI_OCCASIONS` | Ahead of the date rule of §2.4, for the Urbi et Orbi shelves only | Places the item in the Christmas or Easter series with the stated occasion year | The heading naming the feast, and that the shelf holds no feast-day item for that year |
+
+An item that neither the parser nor a curated row can assign a `series.year` fails the run: a
+series document without an occasion year has no id.
 
 ### 5.4 Measure before merging
 

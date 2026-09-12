@@ -14,10 +14,29 @@ export interface GenreLike { id: string; issuerTypes?: string[]; allowedCharacte
 /** The keyword rows this module needs from `data/keywords.json`. */
 export interface KeywordLike { id: string }
 
-/** The series rows this module needs from `data/series.json`. */
-export interface SeriesLike { id: string }
+/**
+ * The series rows this module needs from `data/series.json`: id, plus `firstYear` where
+ * the vocabulary has verified one and any `renumberings` (resets of the printed numbering
+ * by the Holy See, each shifting every ordinal from `fromYear` on by `offset`), for
+ * invariant 24.
+ */
+export interface SeriesLike {
+  id: string;
+  firstYear?: number;
+  renumberings?: { fromYear: number; offset: number }[];
+}
 
-/** Invariants 8-13, 15-23 of the design spec. (14 lives in the assessment checker.) */
+/**
+ * The ordinal invariant 24 expects for `year` in a series with a verified `firstYear`:
+ * year - firstYear + 1, plus the offset of every renumbering whose fromYear <= year. The
+ * vocabulary records a reset; the registry never re-computes numbers from it.
+ */
+export function expectedOrdinal(row: SeriesLike, year: number): number {
+  return year - row.firstYear! + 1
+    + (row.renumberings ?? []).filter((r) => r.fromYear <= year).reduce((sum, r) => sum + r.offset, 0);
+}
+
+/** Invariants 8-13, 15-24 of the design specs. (14 lives in the assessment checker.) */
 export function checkDocuments(
   docs: DocumentRecord[], genres: GenreLike[], keywords: KeywordLike[] = [],
   series: SeriesLike[] = [],
@@ -25,12 +44,15 @@ export function checkDocuments(
   const genreIds = new Set(genres.map((g) => g.id));
   const keywordIds = new Set(keywords.map((k) => k.id));
   const seriesIds = new Set(series.map((s) => s.id));
+  const rowsWithFirstYear = new Map(series.filter((s) => s.firstYear !== undefined)
+    .map((s) => [s.id, s]));
   const issuerTypesByGenre = new Map(genres.map((g) => [g.id, g.issuerTypes]));
   const characteristicsByGenre = new Map(genres.map((g) => [g.id, g.allowedCharacteristics]));
   const out: Violation[] = [];
   const seen = new Map<string, number>();
   const byCollision = new Map<string, DocumentRecord[]>();
   const byProvisionalGroup = new Map<string, DocumentRecord[]>();
+  const bySeriesOccasion = new Map<string, DocumentRecord[]>();
 
   for (const d of docs) {
     const re = d.idStatus === 'provisional' ? PROVISIONAL_ID_RE : MINTED_ID_RE;
@@ -53,7 +75,17 @@ export function checkDocuments(
     if (local !== null && parts.issuer !== local) {
       out.push({ rule: 9, id: d.id, message: `namespace '${parts.issuer}' != issuerId '${d.issuerId}'` });
     }
-    if (parts.year !== d.date.slice(0, 4)) {
+    // Rule 10's series branch (messages spec §3.3): a series-form id carries the occasion
+    // year the title prints, which routinely differs from the year of `date` (the 2025
+    // Peace message is signed 8 December 2024). Otherwise the year of `date`, as before.
+    if (d.series) {
+      if (parts.year !== String(d.series.year)) {
+        out.push({
+          rule: 10, id: d.id,
+          message: `id year ${parts.year} != series.year ${d.series.year}`,
+        });
+      }
+    } else if (parts.year !== d.date.slice(0, 4)) {
       out.push({ rule: 10, id: d.id, message: `id year ${parts.year} != date ${d.date}` });
     }
     // Rule 18 runs before rule 12 (review finding, 2026-09-08): rule 12 falls back to
@@ -66,7 +98,14 @@ export function checkDocuments(
       out.push({ rule: 18, id: d.id, message: 'title is missing or empty' });
     }
 
-    if (
+    // Rule 12's series branch: the slug segment of a series-form id is the series id
+    // itself, whatever incipit the source may print (messages spec §3.2.3). Otherwise
+    // slugify(incipit), as before.
+    if (d.series) {
+      if (parts.slug !== d.series.id) {
+        out.push({ rule: 12, id: d.id, message: `slug '${parts.slug}' != series.id '${d.series.id}'` });
+      }
+    } else if (
       d.idStatus === 'minted'
       && (typeof d.incipit === 'string' || hasTitle)
       && parts.slug !== slugify(d.incipit ?? d.title)
@@ -92,10 +131,33 @@ export function checkDocuments(
       }
     }
 
-    // Rule 23 mirrors rule 21: vocabulary membership is the only thing read off `series`,
-    // which is discovery metadata with no bearing on register, ceiling or assent.
+    // Rule 23 mirrors rule 21: vocabulary membership. `series` has no bearing on register,
+    // ceiling or assent; what the other rules read off it (10, 12, 24 and the uniqueness
+    // fold below) concerns only the id and the ordinal.
     if (d.series && !seriesIds.has(d.series.id)) {
       out.push({ rule: 23, id: d.id, message: `unknown series: ${d.series.id}` });
+    }
+
+    // Rule 24: where the vocabulary row has a verified first year and the title printed an
+    // ordinal, the two must agree -- ordinal = year - firstYear + 1, plus the offset of every
+    // renumbering the row records from a year <= this one (expectedOrdinal). This catches a
+    // misread numeral or a miscounted day before it enters a permanent id's neighbourhood.
+    // It never fires when any of the three is absent: an ordinal is never computed from
+    // firstYear.
+    if (d.series && d.series.ordinal !== undefined) {
+      const row = rowsWithFirstYear.get(d.series.id);
+      if (row !== undefined) {
+        const expected = expectedOrdinal(row, d.series.year);
+        if (d.series.ordinal !== expected) {
+          const resets = (row.renumberings ?? []).filter((r) => r.fromYear <= d.series!.year);
+          out.push({
+            rule: 24, id: d.id,
+            message: `series.ordinal ${d.series.ordinal} != ${d.series.year} - ${row.firstYear} + 1`
+              + resets.map((r) => ` ${r.offset < 0 ? '-' : '+'} ${Math.abs(r.offset)} (reset from ${r.fromYear})`).join('')
+              + ` = ${expected} for ${d.series.id}`,
+          });
+        }
+      }
     }
 
     if (local !== null) {
@@ -158,7 +220,14 @@ export function checkDocuments(
     // throws on a non-string argument, so this collision key must not be built from a
     // record with neither a usable incipit nor a string title -- such a record is
     // already reported via rule 18 above and simply takes no part in collision grouping.
-    if (d.idStatus === 'minted' && local !== null && (typeof d.incipit === 'string' || hasTitle)) {
+    // A series-form id is keyed by occasion, not incipit, so it takes no part in rule 11's
+    // incipit-collision grouping; its own uniqueness rule is the fold into rule 8 below.
+    if (d.series) {
+      if (local !== null) {
+        const k = `${local}|${d.series.id}|${d.series.year}`;
+        bySeriesOccasion.set(k, [...(bySeriesOccasion.get(k) ?? []), d]);
+      }
+    } else if (d.idStatus === 'minted' && local !== null && (typeof d.incipit === 'string' || hasTitle)) {
       const k = `${local}|${slugify(d.incipit ?? d.title)}|${d.date.slice(0, 4)}`;
       byCollision.set(k, [...(byCollision.get(k) ?? []), d]);
     }
@@ -171,6 +240,19 @@ export function checkDocuments(
 
   for (const [id, n] of seen) {
     if (n > 1) out.push({ rule: 8, id, message: `id is not unique (${n} occurrences)` });
+  }
+
+  // Folded into rule 8 (messages spec §3.3): one issuer, one series, one occasion year, one
+  // document. The id is derived from exactly this triple, so two such records would share
+  // an id as well; naming the triple says why, which a bare duplicate-id report does not.
+  for (const [k, group] of bySeriesOccasion) {
+    if (group.length < 2) continue;
+    for (const d of group) {
+      out.push({
+        rule: 8, id: d.id,
+        message: `series-form id is not unique: ${group.length} documents share (issuer, series, year) ${k}`,
+      });
+    }
   }
 
   for (const [k, group] of byCollision) {

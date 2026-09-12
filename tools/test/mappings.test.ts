@@ -1,10 +1,14 @@
 import { describe, it, expect } from 'vitest';
+import { existsSync } from 'node:fs';
 import {
   VATICAN_SLUG_TO_ISSUER, POPES, COUNCILS, shelvesFor,
   SOURCE_GENRE_TO_GENRE, CONCILIAR_REASSIGNMENTS,
   KNOWN_PONTIFF_IDS, KNOWN_COUNCIL_IDS,
   DATE_CORRECTIONS, DUPLICATE_MERGES, ADJUDICATED_DISTINCT, CIRCUMSCRIPTION_ERECTIONS,
+  SERIES, seriesForShelf, isMessagesShelf, messagesSubShelf, SERIES_OCCASION_YEARS, SERIES_ORDINALS,
+  SERIES_EXCLUSIONS,
 } from '../src/mappings/index.js';
+import { fixtureName } from '../src/harvest/fixtures.js';
 
 describe('vendored registries', () => {
   it('loads every pontiff and council id', () => {
@@ -73,11 +77,52 @@ describe('the POPES table', () => {
     ]);
   });
 
-  it("keeps Pius XII's eight shelves, without speeches (year-partitioned, spec §2.7)", () => {
+  it("keeps Pius XII's eight formal shelves, without speeches (year-partitioned, spec §2.7), plus its one Messaggi sub-shelf", () => {
     expect(shelvesFor('pius-xii')).toEqual([
       'apost_constitutions', 'apost_exhortations', 'apost_letters', 'briefs', 'bulls',
-      'encyclicals', 'letters', 'motu_proprio',
+      'encyclicals', 'letters', 'motu_proprio', 'messages/urbi',
     ]);
+  });
+
+  it('lists the Messaggi sub-shelves of messages spec §2.2 for every pope from Pius XII on, never pont-messages', () => {
+    const messagesOf = (slug: string) => shelvesFor(slug).filter(isMessagesShelf).map(messagesSubShelf);
+    expect(messagesOf('pius-xii')).toEqual(['urbi']);
+    expect(messagesOf('john-xxiii')).toEqual(['urbi_et_orbi']);
+    expect(messagesOf('paul-vi')).toEqual([
+      'peace', 'communications', 'lent', 'migration', 'missions', 'sick', 'vocations', 'urbi_et_orbi',
+    ]);
+    // John Paul I's three messages sit on the landing page itself; left to the pont-messages PR.
+    expect(messagesOf('john-paul-i')).toEqual([]);
+    expect(messagesOf('john-paul-ii')).toEqual([
+      'peace', 'communications', 'lent', 'migration', 'missions', 'sick', 'vocations', 'youth',
+      'food', 'consecrated_life', 'tourism', 'literacy', 'urbi',
+    ]);
+    expect(messagesOf('benedict-xvi')).toEqual([
+      'peace', 'communications', 'lent', 'migration', 'missions', 'sick', 'vocations', 'youth',
+      'food', 'urbi',
+    ]);
+    expect(messagesOf('francesco')).toEqual([
+      'peace', 'communications', 'lent', 'migration', 'missions', 'sick', 'vocations', 'youth',
+      'food', 'consecrated_life', 'poveri', 'nonni', 'bambini', 'cura-creato', 'urbi',
+    ]);
+    expect(messagesOf('leo-xiv')).toEqual([
+      'peace', 'communications', 'lent', 'migration', 'mission', 'sick', 'vocations', 'youth',
+      'poor', 'grandparents', 'creation', 'urbi',
+    ]);
+    for (const p of POPES) {
+      for (const s of p.shelves) expect(s, p.pageSlug).not.toMatch(/pont[-_]messages/);
+    }
+  });
+
+  it('names a checked-in fixture for every shelf of every shelf-era pope', () => {
+    for (const p of POPES) {
+      if (p.era !== 'shelf') continue;
+      for (const s of p.shelves) {
+        expect(existsSync(`tools/fixtures/${fixtureName(p.pageSlug, s)}.html`), `${p.pageSlug}/${s}`).toBe(true);
+      }
+    }
+    expect(fixtureName('francesco', 'messages/peace')).toBe('francesco-messages-peace');
+    expect(fixtureName('john-paul-ii', 'apost_letters', '1999')).toBe('john-paul-ii-apost_letters-1999');
   });
 
   it('derives the slug->issuer map from POPES and COUNCILS, so none can disagree', () => {
@@ -130,6 +175,44 @@ describe('genre mapping', () => {
   });
 });
 
+describe('shelf -> series (messages spec §5.2)', () => {
+  it('resolves every messages/* shelf of POPES to exactly one series, or to the Urbi et Orbi pair', () => {
+    for (const p of POPES) {
+      for (const s of p.shelves.filter(isMessagesShelf)) {
+        const r = seriesForShelf(s);
+        expect(r, s).not.toBeNull();
+        if (r!.kind === 'urbi') {
+          expect(r!.christmas.id).toBe('urbi-et-orbi-christmas');
+          expect(r!.easter.id).toBe('urbi-et-orbi-easter');
+        } else {
+          expect(r!.row.shelves, s).toContain(messagesSubShelf(s));
+        }
+      }
+    }
+  });
+
+  it("maps Leo XIV's renamed sub-shelves onto the series their predecessors' slugs map to", () => {
+    const id = (s: string) => { const r = seriesForShelf(s)!; return r.kind === 'series' ? r.row.id : 'urbi'; };
+    expect(id('messages/mission')).toBe(id('messages/missions'));
+    expect(id('messages/poor')).toBe(id('messages/poveri'));
+    expect(id('messages/grandparents')).toBe(id('messages/nonni'));
+    expect(id('messages/creation')).toBe(id('messages/cura-creato'));
+    expect(id('messages/urbi')).toBe('urbi');
+    expect(id('messages/urbi_et_orbi')).toBe('urbi');
+  });
+
+  it('returns null for a formal shelf and throws for an unclaimed Messaggi sub-shelf', () => {
+    expect(seriesForShelf('encyclicals')).toBeNull();
+    expect(seriesForShelf(null)).toBeNull();
+    expect(() => seriesForShelf('messages/pont-messages')).toThrow(/claimed by no row/);
+  });
+
+  it('loads the series vocabulary from data/series.json', () => {
+    expect(SERIES.map((s) => s.id)).toContain('world-day-of-peace');
+    expect(SERIES.find((s) => s.id === 'world-day-of-peace')!.firstYear).toBe(1968);
+  });
+});
+
 describe('conciliar reassignments', () => {
   it('moves the two Vatican I constitutions off Pius IX', () => {
     expect(CONCILIAR_REASSIGNMENTS['pius-ix|dei-filius|1870-04-24'])
@@ -169,6 +252,25 @@ describe('every curated table entry carries a non-empty note', () => {
   it('CIRCUMSCRIPTION_ERECTIONS', () => {
     for (const [key, entry] of Object.entries(CIRCUMSCRIPTION_ERECTIONS)) {
       expect(entry.note, key).toBeTruthy();
+    }
+  });
+
+  it('SERIES_OCCASION_YEARS and SERIES_ORDINALS quote the heading in their evidence', () => {
+    for (const [key, entry] of Object.entries(SERIES_OCCASION_YEARS)) {
+      expect(entry.evidence, key).toMatch(/[Hh]eading/);
+      expect(Number.isInteger(entry.year), key).toBe(true);
+      expect(key.split('|'), key).toHaveLength(4);
+      expect(key.split('|')[1], key).toMatch(/^messages\//);
+    }
+    for (const [key, entry] of Object.entries(SERIES_ORDINALS)) {
+      expect(entry.evidence, key).toMatch(/[Hh]eading/);
+      expect(entry.printed === null || entry.printed.length > 0, key).toBe(true);
+      expect(entry.ordinal, key).toBeGreaterThanOrEqual(1);
+      expect(key.split('|')[1], key).toMatch(/^messages\//);
+    }
+    for (const [key, entry] of Object.entries(SERIES_EXCLUSIONS)) {
+      expect(entry.evidence, key).toMatch(/[Hh]eading/);
+      expect(key.split('|')[1], key).toMatch(/^messages\//);
     }
   });
 });

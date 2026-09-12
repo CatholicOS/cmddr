@@ -10,7 +10,7 @@
     "id": {
       "type": "string",
       "pattern": "^mag:[a-z0-9-]+/[a-z0-9]+(-[a-z0-9]+)*$",
-      "description": "Canonical identifier: 'mag:{issuer}/{incipit-slug}-{year}'. The issuer segment is the local part of issuerId. The exact form is fixed by idStatus below. See the design spec §3."
+      "description": "Canonical identifier: 'mag:{issuer}/{incipit-slug}-{year}', or 'mag:{issuer}/{series-id}-{occasion-year}' when series is set. The issuer segment is the local part of issuerId. The exact form is fixed by idStatus below. See the identifiers spec §3 and the messages spec §3."
     },
     "title": { "type": "string" },
     "genre": {
@@ -76,20 +76,26 @@
     "series": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id"],
+      "required": ["id", "year"],
       "properties": {
         "id": {
           "type": "string",
           "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
-          "description": "Foreign key -> series.id in data/series.json: the occasion the series belongs to (e.g. 'peace' for the World Day of Peace)."
+          "description": "Foreign key -> series.id in data/series.json: the occasion the series belongs to (e.g. 'world-day-of-peace'). It is the slug segment of the document's id."
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 1000,
+          "maximum": 9999,
+          "description": "The year of the occasion as the title prints it ('LVIII Giornata Mondiale della Pace 2025' -> 2025), which is the year segment of the document's id. Distinct from the year of date: the 2025 Peace message is signed 8 December 2024. Never derived from date; where the title prints none, a curated row supplies it."
         },
         "ordinal": {
           "type": "integer",
           "minimum": 1,
-          "description": "The document's number within the series, as the source prints it (the 'LI' of 'LI Giornata Mondiale della Pace'). Omit for a series that is dated but not numbered (the Lent messages)."
+          "description": "The document's number within the series, as the source prints it (the 'LI' of 'LI Giornata Mondiale della Pace', the '110' of '110ª Giornata Mondiale del Migrante'). Omit wherever the source prints none, whether the series is dated rather than numbered (the Lent messages) or a single title inside a numbered series lacks one. Never computed from the vocabulary row's firstYear; invariant 24 checks the two against each other where both are present."
         }
       },
-      "description": "Membership in a numbered or dated annual series (World Day of Peace, World Communications Day, Lent message...). Discovery metadata only, with no bearing on register, ceiling or assent; no invariant other than vocabulary membership (invariant 23) reads it."
+      "description": "Membership in a numbered or dated annual series (World Day of Peace, World Communications Day, Lent message...). A document with series set takes the series-form id 'mag:{issuer}/{series-id}-{year}' and is minted without needing an incipit. Otherwise discovery metadata only, with no bearing on register, ceiling or assent; invariants 23 (vocabulary membership), 10, 12 (id round-trip) and 24 (ordinal against firstYear) read it."
     },
     "descriptiveTitle": {
       "enum": ["dogmatic", "pastoral"],
@@ -103,16 +109,21 @@
   },
   "allOf": [
     {
-      "description": "a minted id requires an incipit; a null genre requires the raw source label",
+      "description": "a minted id requires an incipit or a series (a series-form id is keyed by occasion, not by first words); a null genre requires the raw source label",
       "if": { "properties": { "idStatus": { "const": "minted" } }, "required": ["idStatus"] },
-      "then": { "required": ["incipit"] }
+      "then": { "anyOf": [{ "required": ["incipit"] }, { "required": ["series"] }] }
+    },
+    {
+      "description": "a series-form id is minted by rule (messages spec §3.2.2): a document with series set is never provisional",
+      "if": { "required": ["series"] },
+      "then": { "properties": { "idStatus": { "const": "minted" } } }
     },
     {
       "if": { "properties": { "genre": { "type": "null" } }, "required": ["genre"] },
       "then": { "required": ["sourceGenreLabel"] }
     },
     {
-      "description": "a minted id is issuer/incipit-slug-year, optionally extended to the full date to resolve a collision",
+      "description": "a minted id is issuer/incipit-slug-year (or issuer/series-id-year), optionally extended to the full date to resolve an incipit collision",
       "if": { "properties": { "idStatus": { "const": "minted" } }, "required": ["idStatus"] },
       "then": {
         "properties": {

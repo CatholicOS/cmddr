@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { parseSourceDate } from '../src/dates.js';
+import { parseSourceDate, easterSunday } from '../src/dates.js';
 
 describe('parseSourceDate', () => {
   it('parses Italian month names', () => {
@@ -58,5 +58,25 @@ describe('parseSourceDate', () => {
     // recognise either typo for the two affected ids to resolve correctly.
     expect(parseSourceDate('17 augusto 1904')).toBeNull();
     expect(parseSourceDate('14 giungo 1920')).toBeNull();
+  });
+});
+
+describe('easterSunday', () => {
+  it('computes Easter Sunday by the Gregorian computus', () => {
+    // Dates confirmed by the Urbi et Orbi shelves themselves (the URL slug of each Easter item).
+    expect(easterSunday(1956)).toBe('1956-04-01');
+    expect(easterSunday(1963)).toBe('1963-04-14');
+    expect(easterSunday(1970)).toBe('1970-03-29');
+    expect(easterSunday(2000)).toBe('2000-04-23');
+    expect(easterSunday(2005)).toBe('2005-03-27');
+    expect(easterSunday(2020)).toBe('2020-04-12');
+    expect(easterSunday(2024)).toBe('2024-03-31');
+    expect(easterSunday(2025)).toBe('2025-04-20');
+    expect(easterSunday(2026)).toBe('2026-04-05');
+  });
+
+  it('rejects a pre-Gregorian or non-integer year', () => {
+    expect(() => easterSunday(1500)).toThrow(/Gregorian/);
+    expect(() => easterSunday(2024.5)).toThrow(/Gregorian/);
   });
 });

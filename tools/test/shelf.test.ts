@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { parseShelfIndex } from '../src/harvest/shelf.js';
 import { shelvesFor } from '../src/mappings/index.js';
@@ -188,5 +188,55 @@ describe('parseShelfIndex recovers a same-parenthetical gloss (Task 16)', () => 
     const html = readFileSync('tools/fixtures/john-paul-ii-apost_letters-1993.html', 'utf8');
     const divCount = (html.match(/class="item"/g) ?? []).length;
     expect(apl1993).toHaveLength(divCount);
+  });
+});
+
+describe('parseShelfIndex on the Messaggi shelves (messages spec §2.3)', () => {
+  const loadMessages = (pope: string, sub: string) => parseShelfIndex(
+    readFileSync(`tools/fixtures/${pope}-messages-${sub}.html`, 'utf8'), pope, `messages/${sub}`);
+
+  it('keeps the whole heading as the title and extracts no incipit', () => {
+    const lent = loadMessages('francesco', 'lent');
+    expect(lent).toHaveLength(12);
+    expect(lent.every((d) => d.incipit === null)).toBe(true);
+    // A trailing parenthetical that is not a date is a scripture reference and stays.
+    expect(lent.find((d) => d.date === '2014-10-04')!.title).toBe('Quaresima 2015: Rinfrancate i vostri cuori (Gc 5,8)');
+    expect(lent.find((d) => d.date === '2013-12-26')!.title)
+      .toBe('Quaresima 2014: Si è fatto povero per arricchirci con la sua povertà (cfr 2 Cor 8,9)');
+  });
+
+  it('reads the signing date from a bare-date-prefix URL when the heading prints none', () => {
+    // 20241208-messaggio-58giornatamondiale-pace2025.html: no hf_…_YYYYMMDD_ group.
+    const peace = loadMessages('francesco', 'peace');
+    expect(peace.find((d) => d.title.startsWith('LVIII'))!.date).toBe('2024-12-08');
+    // And from the hf_ form, in either digit order, on the older pages.
+    const jp2 = loadMessages('john-paul-ii', 'lent');
+    expect(jp2.find((d) => d.title === 'Quaresima 1999')!.date).toBe('1999-01-19');
+    expect(jp2.find((d) => d.title === 'Quaresima 2005')!.date).toBe('2005-01-27');
+  });
+
+  it('strips a date parenthetical from the title but keeps a bare trailing date in it', () => {
+    const food = loadMessages('benedict-xvi', 'food');
+    const f2012 = food.find((d) => d.date === '2012-10-16')!;
+    expect(f2012.title).toBe('Messaggio in occasione della Giornata Mondiale dell’Alimentazione 2012');
+    const urbi = loadMessages('john-paul-ii', 'urbi');
+    const eve = urbi.find((d) => d.date === '2000-12-31')!;
+    expect(eve.title).toBe('"Urbi et Orbi", 31 Dicembre 2000');
+  });
+
+  it('labels every item with its messages/{sub-shelf} shelf and emits no slug-fallback warning', () => {
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    let items;
+    let slugFallbacks;
+    try {
+      items = loadMessages('paul-vi', 'missions');
+      // Read before mockRestore(), which clears mock.calls and would make this vacuous.
+      slugFallbacks = warnSpy.mock.calls.filter(([m]) => String(m).includes('falling back to URL slug date'));
+    } finally {
+      warnSpy.mockRestore();
+    }
+    expect(items).toHaveLength(15);
+    expect(items.every((d) => d.shelf === 'messages/missions' && d.sourceGenreLabel === 'messages/missions')).toBe(true);
+    expect(slugFallbacks).toEqual([]);
   });
 });

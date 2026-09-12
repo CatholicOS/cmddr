@@ -22,6 +22,26 @@ export function mintId(
   return `mag:${issuerLocalPart(issuerId)}/${slugify(incipit)}-${suffix}`;
 }
 
+/**
+ * The series form (messages spec §3.1): `mag:{issuer}/{series-id}-{occasion-year}`. Keyed by
+ * occasion, not by first words, because that is how these acts are cited (AAS: "Nuntius
+ * S.P. pro XCVII Die Mundiali Missionum") and because the signing date routinely falls in
+ * the year before the occasion. `seriesId` is a `data/series.json` id and is already in
+ * slug form, so the id round-trips through parseId exactly as an incipit slug does
+ * (invariant 12's series branch). The result matches MINTED_ID_RE; a series-form id is
+ * never extended to the full date, since one issuer has one document per occasion year
+ * and a second is a harvest error rather than a collision to discriminate (§3.2.6).
+ */
+export function mintSeriesId(issuerId: string, seriesId: string, occasionYear: number): string {
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(seriesId)) {
+    throw new Error(`series id is not slug-form: ${seriesId}`);
+  }
+  if (!Number.isInteger(occasionYear) || occasionYear < 1000 || occasionYear > 9999) {
+    throw new Error(`occasion year is not a four-digit integer: ${occasionYear}`);
+  }
+  return `mag:${issuerLocalPart(issuerId)}/${seriesId}-${occasionYear}`;
+}
+
 export function mintProvisionalId(
   issuerId: string,
   genreSlug: string,
