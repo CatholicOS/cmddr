@@ -14,12 +14,17 @@ export interface GenreLike { id: string; issuerTypes?: string[]; allowedCharacte
 /** The keyword rows this module needs from `data/keywords.json`. */
 export interface KeywordLike { id: string }
 
-/** Invariants 8-13, 15-22 of the design spec. (14 lives in the assessment checker.) */
+/** The series rows this module needs from `data/series.json`. */
+export interface SeriesLike { id: string }
+
+/** Invariants 8-13, 15-23 of the design spec. (14 lives in the assessment checker.) */
 export function checkDocuments(
   docs: DocumentRecord[], genres: GenreLike[], keywords: KeywordLike[] = [],
+  series: SeriesLike[] = [],
 ): Violation[] {
   const genreIds = new Set(genres.map((g) => g.id));
   const keywordIds = new Set(keywords.map((k) => k.id));
+  const seriesIds = new Set(series.map((s) => s.id));
   const issuerTypesByGenre = new Map(genres.map((g) => [g.id, g.issuerTypes]));
   const characteristicsByGenre = new Map(genres.map((g) => [g.id, g.allowedCharacteristics]));
   const out: Violation[] = [];
@@ -85,6 +90,12 @@ export function checkDocuments(
       if (!keywordIds.has(k)) {
         out.push({ rule: 21, id: d.id, message: `unknown keyword: ${k}` });
       }
+    }
+
+    // Rule 23 mirrors rule 21: vocabulary membership is the only thing read off `series`,
+    // which is discovery metadata with no bearing on register, ceiling or assent.
+    if (d.series && !seriesIds.has(d.series.id)) {
+      out.push({ rule: 23, id: d.id, message: `unknown series: ${d.series.id}` });
     }
 
     if (local !== null) {

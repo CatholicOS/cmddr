@@ -313,3 +313,33 @@ describe('invariant 22: characteristics are allowed by the genre', () => {
     expect(rules).not.toContain(22);
   });
 });
+
+const series = [{ id: 'peace' }, { id: 'lent' }];
+
+describe('invariant 23: series.id resolves against the vocabulary', () => {
+  const d = { ...expansionBase, id: 'mag:leo-xiii/rerum-novarum-1891' };
+
+  it('accepts a known series, numbered or dated', () => {
+    const v = checkDocuments([
+      { ...d, series: { id: 'peace', ordinal: 51 } },
+      { ...d, id: 'mag:leo-xiii/rerum-novarum-1891-05-15', series: { id: 'lent' } },
+    ], GENRES, keywords, series);
+    expect(v.map((x) => x.rule)).not.toContain(23);
+  });
+
+  it('rejects an unknown series', () => {
+    const v = checkDocuments([{ ...d, series: { id: 'world-day-of-peace' } }], GENRES, keywords, series);
+    expect(v.map((x) => x.rule)).toContain(23);
+    expect(v.find((x) => x.rule === 23)!.message).toMatch(/world-day-of-peace/);
+  });
+
+  it('accepts a document with no series at all', () => {
+    expect(checkDocuments([d], GENRES, keywords, series).map((x) => x.rule)).not.toContain(23);
+  });
+
+  it('reads nothing off actKind: the schema enum is its only check', () => {
+    // No invariant couples actKind to a genre or a ceiling (#15): a governance act on an
+    // encyclical, however odd, is not a rule violation.
+    expect(checkDocuments([{ ...d, actKind: 'governance' }], GENRES, keywords, series)).toEqual([]);
+  });
+});

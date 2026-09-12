@@ -3,6 +3,7 @@ import { mintId, mintProvisionalId } from '../ids.js';
 import {
   VATICAN_SLUG_TO_ISSUER, SOURCE_GENRE_TO_GENRE, CONCILIAR_SOURCE_GENRE_TO_GENRE,
   CONCILIAR_REASSIGNMENTS, COUNCILS, RECOVERED_INCIPITS, GENRE_OVERRIDES, keywordsFor,
+  CIRCUMSCRIPTION_KEYWORDS,
 } from '../mappings/index.js';
 import type { DocumentRecord, HarvestItem } from '../types.js';
 
@@ -89,6 +90,14 @@ export function toDocument(item: HarvestItem, retrieved: string): DocumentRecord
   // from the heading text or the hand-curated table, never from genre/characteristics.
   const keywords = keywordsFor(item);
   if (keywords.length) record.keywords = keywords;
+  // Derived from the keyword pipeline, the single evidenced source: each of the three
+  // circumscription keywords names an act of governance (an erection, an elevation or a
+  // union of sees), so a document that earned one is a governance act, not a teaching act
+  // (#15). Absent means teaching. Read off the named set, not off `keywords.length`, so a
+  // keyword minted later for a teaching subject does not make its documents governance
+  // acts by accident. Like `keywords`, `actKind` is never authority-bearing: the schema
+  // enum is the only check, and no invariant couples it to a genre or a ceiling.
+  if (keywords.some((k) => CIRCUMSCRIPTION_KEYWORDS.has(k))) record.actKind = 'governance';
   // The genre label exactly as vatican.va prints it (spec §4.1), preserved unconditionally
   // so the genre mapping stays auditable from the data, not only when genre is null.
   record.sourceGenreLabel = item.sourceGenreLabel;

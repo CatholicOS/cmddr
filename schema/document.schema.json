@@ -69,6 +69,28 @@
       "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
       "description": "Descriptive subject tags -> keyword.id in data/keywords.json. Never authority-bearing: unlike characteristics, a keyword makes no claim about the document's register or definitiveness, and no invariant other than vocabulary membership reads it."
     },
+    "actKind": {
+      "enum": ["teaching", "governance", "liturgical"],
+      "description": "What kind of act the document is. Absent means 'teaching'. 'governance' is a juridical act (erecting a diocese, proclaiming a patron, approving statutes); 'liturgical' is a rite or blessing (an Urbi et Orbi). The operative act is then not a statement Table 2 assesses and the genre's default register does not describe it; a passage that does teach (the address before an Urbi et Orbi blessing) is still assessed per statement, so the flag never forbids an Assessment. Never authority-bearing: like keywords, it makes no claim about register or definitiveness, and no invariant reads it."
+    },
+    "series": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+          "description": "Foreign key -> series.id in data/series.json: the occasion the series belongs to (e.g. 'peace' for the World Day of Peace)."
+        },
+        "ordinal": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The document's number within the series, as the source prints it (the 'LI' of 'LI Giornata Mondiale della Pace'). Omit for a series that is dated but not numbered (the Lent messages)."
+        }
+      },
+      "description": "Membership in a numbered or dated annual series (World Day of Peace, World Communications Day, Lent message...). Discovery metadata only, with no bearing on register, ceiling or assent; no invariant other than vocabulary membership (invariant 23) reads it."
+    },
     "descriptiveTitle": {
       "enum": ["dogmatic", "pastoral"],
       "description": "Optional descriptive title of a conciliar Constitution (mutually exclusive; omit for a plain constitution such as Sacrosanctum Concilium). Descriptive of purpose only — NOT a claim of authority, and unlike 'dogmatic-definition' it is not backed by any assessment."

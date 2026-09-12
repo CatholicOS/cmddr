@@ -112,6 +112,45 @@ describe('document.schema.json', () => {
     expect(validate(strip({ ...baseDoc, id: 'mag:leo-xiii/rerum-novarum', idStatus: undefined }))).toBe(false);
   });
 
+  describe('actKind (#15)', () => {
+    it('accepts each of the three kinds', () => {
+      for (const actKind of ['teaching', 'governance', 'liturgical']) {
+        expect(validate({ ...baseDoc, actKind }), actKind).toBe(true);
+      }
+    });
+
+    it('rejects a kind outside the enum', () => {
+      expect(validate({ ...baseDoc, actKind: 'juridical' })).toBe(false);
+    });
+  });
+
+  describe('series (#16)', () => {
+    it('accepts a numbered series entry', () => {
+      expect(validate({ ...baseDoc, series: { id: 'peace', ordinal: 51 } })).toBe(true);
+    });
+
+    it('accepts a dated-only series entry with no ordinal', () => {
+      expect(validate({ ...baseDoc, series: { id: 'lent' } })).toBe(true);
+    });
+
+    it('requires the id', () => {
+      expect(validate({ ...baseDoc, series: { ordinal: 51 } })).toBe(false);
+    });
+
+    it('rejects an id that is not slug-shaped', () => {
+      expect(validate({ ...baseDoc, series: { id: 'consecrated_life' } })).toBe(false);
+    });
+
+    it('rejects an ordinal of 0 and a non-integer ordinal', () => {
+      expect(validate({ ...baseDoc, series: { id: 'peace', ordinal: 0 } })).toBe(false);
+      expect(validate({ ...baseDoc, series: { id: 'peace', ordinal: 51.5 } })).toBe(false);
+    });
+
+    it('rejects an unknown property on the series object', () => {
+      expect(validate({ ...baseDoc, series: { id: 'peace', year: 2018 } })).toBe(false);
+    });
+  });
+
   it('records harvest provenance', () => {
     expect(validate({
       ...baseDoc,
