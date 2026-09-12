@@ -71,7 +71,7 @@
     },
     "actKind": {
       "enum": ["teaching", "governance", "liturgical"],
-      "description": "What kind of act the document is. Absent means 'teaching'. 'governance' is a juridical act (erecting a diocese, proclaiming a patron, approving statutes); 'liturgical' is a rite or blessing (an Urbi et Orbi). A non-teaching act has nothing for Table 2 to assess, and the genre's default register and ceiling do not apply to it. Never authority-bearing: like keywords, it makes no claim about register or definitiveness, and no invariant reads it."
+      "description": "What kind of act the document is. Absent means 'teaching'. 'governance' is a juridical act (erecting a diocese, proclaiming a patron, approving statutes); 'liturgical' is a rite or blessing (an Urbi et Orbi). The operative act is then not a statement Table 2 assesses and the genre's default register does not describe it; a passage that does teach (the address before an Urbi et Orbi blessing) is still assessed per statement, so the flag never forbids an Assessment. Never authority-bearing: like keywords, it makes no claim about register or definitiveness, and no invariant reads it."
     },
     "series": {
       "type": "object",

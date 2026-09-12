@@ -164,9 +164,10 @@ patrons, approving statutes. For these a default register of Authentic Ordinary 
 decree that erects a diocese teaches nothing that could be assessed.
 
 The registry therefore carries an optional document-level flag, **`actKind`** — `teaching` · `governance` · `liturgical` — with
-absence meaning `teaching`. A non-teaching act has nothing for Table 2 to assess, and its genre’s default register and ceiling do
-not apply to it. The flag is **never authority-bearing**: like `keywords`, it makes no claim about register or definitiveness, and
-no invariant couples it to a genre or a ceiling. It is populated today from one evidenced source only: the **777** apostolic
+absence meaning `teaching`. The operative act of such a document is not a statement Table 2 assesses, and its genre’s default
+register does not describe it; a passage in it that does teach — the address before the blessing — is assessed per statement as
+anywhere else, so the flag never forbids an Assessment. The flag is **never authority-bearing**: like `keywords`, it makes no
+claim about register or definitiveness, and no invariant couples it to a genre, a ceiling or an Assessment. It is populated today from one evidenced source only: the **777** apostolic
 constitutions whose circumscription keyword (an erection, elevation or union of sees, read from the heading or from the
 hand-curated adjudication tables) carry `actKind: governance`; the flag is derived from the keyword in the harvester, so the two
 cannot disagree. The *Lettere Apostoliche* tail is not yet flagged, because no keyword yet evidences it. Urbi et Orbi keeps its
