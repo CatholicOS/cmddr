@@ -227,13 +227,16 @@ describe('parseShelfIndex on the Messaggi shelves (messages spec §2.3)', () => 
   it('labels every item with its messages/{sub-shelf} shelf and emits no slug-fallback warning', () => {
     const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
     let items;
+    let slugFallbacks;
     try {
       items = loadMessages('paul-vi', 'missions');
+      // Read before mockRestore(), which clears mock.calls and would make this vacuous.
+      slugFallbacks = warnSpy.mock.calls.filter(([m]) => String(m).includes('falling back to URL slug date'));
     } finally {
       warnSpy.mockRestore();
     }
     expect(items).toHaveLength(15);
     expect(items.every((d) => d.shelf === 'messages/missions' && d.sourceGenreLabel === 'messages/missions')).toBe(true);
-    expect(warnSpy.mock.calls.filter(([m]) => String(m).includes('falling back to URL slug date'))).toEqual([]);
+    expect(slugFallbacks).toEqual([]);
   });
 });

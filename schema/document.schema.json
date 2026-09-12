@@ -114,6 +114,11 @@
       "then": { "anyOf": [{ "required": ["incipit"] }, { "required": ["series"] }] }
     },
     {
+      "description": "a series-form id is minted by rule (messages spec §3.2.2): a document with series set is never provisional",
+      "if": { "required": ["series"] },
+      "then": { "properties": { "idStatus": { "const": "minted" } } }
+    },
+    {
       "if": { "properties": { "genre": { "type": "null" } }, "required": ["genre"] },
       "then": { "required": ["sourceGenreLabel"] }
     },

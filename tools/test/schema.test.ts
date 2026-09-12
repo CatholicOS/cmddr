@@ -107,6 +107,12 @@ describe('document.schema.json', () => {
         ...peace, id: 'mag:francis-i/lent-2015', series: { id: 'lent', year: 2015 },
       })).toBe(true);
     });
+
+    it('rejects a provisional document that carries a series: the series form is minted by rule', () => {
+      expect(validate({
+        ...peace, idStatus: 'provisional', id: 'mag:francis-i/message-2024-12-08',
+      })).toBe(false);
+    });
   });
 
   it('accepts a minted id extended to the full date to resolve a collision', () => {

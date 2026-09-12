@@ -55,15 +55,18 @@ export const SERIES_EXCLUSIONS: Record<string, SeriesExclusion> = {
   'paul-vi|messages/sick|giornata-mondiale-del-malato-1975|1975-09-16': {
     evidence: "Heading: 'Giornata Mondiale del Malato - 1975' "
       + '(hf_p-vi_mes_19750916_world-day-of-the-sick-1975.html), the only item on the Paul VI '
-      + 'sick shelf. A world day declared for the 1975 Holy Year, not part of the annual World '
-      + "Day of the Sick John Paul II instituted in 1992 (first kept in 1993, the series' "
-      + 'verified firstYear); vatican.va files it on the same sub-shelf. Excluded so that the '
-      + 'series holds only the annual day, and so that its 1975 sits eighteen years before the '
-      + "series' first year without pretending to be a member.",
+      + 'sick shelf. The document itself places the day in the 1975 Holy Year: it is addressed '
+      + "'A tutti i malati del mondo cattolico che, in occasione della speciale celebrazione "
+      + "giubilare, si uniranno ai Fratelli sofferenti convenuti nella Basilica', thanks them for "
+      + "their 'partecipazione all'Anno Santo', and calls their offering 'una delle componenti "
+      + "essenziali del presente Giubileo'. A world day of the Holy Year, then, not the annual "
+      + 'World Day of the Sick John Paul II instituted in 1992 (first kept in 1993, the '
+      + "series' verified firstYear); vatican.va files it on the same sub-shelf. Excluded so "
+      + 'that the series holds only the annual day.',
   },
 };
 
-/** The evidence shared by the twelve Francis consecrated-life rows. */
+/** The reasoning shared by the Francis consecrated-life rows; each row quotes its own heading first. */
 const CONSECRATED_LIFE_EVIDENCE =
   'The heading prints the occasion year only inside its date parenthetical, which on this '
   + 'shelf is the day of the occasion itself: the World Day for Consecrated Life is 2 '
@@ -72,7 +75,7 @@ const CONSECRATED_LIFE_EVIDENCE =
   + '(…_omelia-vita-consacrata.html). The year is that of the printed date, recorded here '
   + 'rather than read off `date` because §3.2.5 forbids the parser that inference.';
 
-/** The evidence shared by the six John Paul II tourism rows. */
+/** The reasoning shared by the John Paul II tourism rows; each row quotes its own heading first. */
 const TOURISM_EVIDENCE =
   "The heading 'Messaggio per la Giornata Mondiale del Turismo (27 settembre YYYY)' prints "
   + 'the occasion year only inside its date parenthetical, which is the day of the occasion '
@@ -139,12 +142,30 @@ export const SERIES_OCCASION_YEARS: Record<string, CuratedOccasionYear> = {
       + 'and the title keeps the range.',
   },
   // Keyed on the adjudicated signing date (DATE_CORRECTIONS), not the heading's 27 September.
-  ...Object.fromEntries([
-    '2004-05-30', '2003-06-11', '2002-06-24', '2001-06-09', '2000-07-29', '1982-09-27',
-  ].map((date) => [
-    `john-paul-ii|messages/tourism|messaggio-per-la-giornata-mondiale-del-turismo|${date}`,
-    { year: Number(date.slice(0, 4)), printed: null, evidence: TOURISM_EVIDENCE },
-  ])),
+  'john-paul-ii|messages/tourism|messaggio-per-la-giornata-mondiale-del-turismo|2004-05-30': {
+    year: 2004, printed: null,
+    evidence: "Heading: 'Messaggio per la Giornata Mondiale del Turismo (27 settembre 2004)'. " + TOURISM_EVIDENCE,
+  },
+  'john-paul-ii|messages/tourism|messaggio-per-la-giornata-mondiale-del-turismo|2003-06-11': {
+    year: 2003, printed: null,
+    evidence: "Heading: 'Messaggio per la Giornata Mondiale del Turismo (27 settembre 2003)'. " + TOURISM_EVIDENCE,
+  },
+  'john-paul-ii|messages/tourism|messaggio-per-la-giornata-mondiale-del-turismo|2002-06-24': {
+    year: 2002, printed: null,
+    evidence: "Heading: 'Messaggio per la Giornata Mondiale del Turismo (27 settembre 2002)'. " + TOURISM_EVIDENCE,
+  },
+  'john-paul-ii|messages/tourism|messaggio-per-la-giornata-mondiale-del-turismo|2001-06-09': {
+    year: 2001, printed: null,
+    evidence: "Heading: 'Messaggio per la Giornata Mondiale del Turismo (27 settembre 2001)'. " + TOURISM_EVIDENCE,
+  },
+  'john-paul-ii|messages/tourism|messaggio-per-la-giornata-mondiale-del-turismo|2000-07-29': {
+    year: 2000, printed: null,
+    evidence: "Heading: 'Messaggio per la Giornata Mondiale del Turismo (27 settembre 2000)'. " + TOURISM_EVIDENCE,
+  },
+  'john-paul-ii|messages/tourism|messaggio-per-la-giornata-mondiale-del-turismo|1982-09-27': {
+    year: 1982, printed: null,
+    evidence: "Heading: 'Messaggio per la Giornata Mondiale del Turismo (27 settembre 1982)'. " + TOURISM_EVIDENCE,
+  },
 
   // -- francesco ---------------------------------------------------------------
   'francesco|messages/youth|xxxvii-giornata-mondiale-della-gioventu-2022-2023-maria-si-alzo-e-ando-in-fretta-lc-1-39|2022-08-15': {
@@ -166,19 +187,53 @@ export const SERIES_OCCASION_YEARS: Record<string, CuratedOccasionYear> = {
       + "pattern as every other year's message on the shelf, delivered in person at the FAO "
       + 'that year. The shelf has no other 2017 entry.',
   },
-  ...Object.fromEntries([
-    ['xxix', '2025-02-01'], ['xxviii', '2024-02-02'], ['xxvi', '2022-02-02'], ['xxv', '2021-02-02'],
-    ['xxiv', '2020-02-01'], ['xxiii', '2019-02-02'], ['xxii', '2018-02-02'], ['xxi', '2017-02-02'],
-    ['xix', '2015-02-02'], ['xviii', '2014-02-02'],
-  ].map(([ord, date]) => [
-    `francesco|messages/consecrated_life|${ord}-giornata-mondiale-della-vita-consacrata-festa-della-presentazione-del-signore|${date}`,
-    { year: Number(date!.slice(0, 4)), printed: null, evidence: CONSECRATED_LIFE_EVIDENCE },
-  ])),
+  'francesco|messages/consecrated_life|xxix-giornata-mondiale-della-vita-consacrata-festa-della-presentazione-del-signore|2025-02-01': {
+    year: 2025, printed: null,
+    evidence: "Heading: 'XXIX Giornata Mondiale della Vita Consacrata - Festa della Presentazione del Signore (1° febbraio 2025)'. " + CONSECRATED_LIFE_EVIDENCE,
+  },
+  'francesco|messages/consecrated_life|xxviii-giornata-mondiale-della-vita-consacrata-festa-della-presentazione-del-signore|2024-02-02': {
+    year: 2024, printed: null,
+    evidence: "Heading: 'XXVIII Giornata Mondiale della Vita Consacrata - Festa della Presentazione del Signore (2 febbraio 2024)'. " + CONSECRATED_LIFE_EVIDENCE,
+  },
+  'francesco|messages/consecrated_life|xxvi-giornata-mondiale-della-vita-consacrata-festa-della-presentazione-del-signore|2022-02-02': {
+    year: 2022, printed: null,
+    evidence: "Heading: 'XXVI Giornata Mondiale della Vita Consacrata - Festa della presentazione del Signore (2 febbraio 2022)'. " + CONSECRATED_LIFE_EVIDENCE,
+  },
+  'francesco|messages/consecrated_life|xxv-giornata-mondiale-della-vita-consacrata-festa-della-presentazione-del-signore|2021-02-02': {
+    year: 2021, printed: null,
+    evidence: "Heading: 'XXV Giornata Mondiale della Vita Consacrata - Festa della presentazione del Signore (2 febbraio 2021)'. " + CONSECRATED_LIFE_EVIDENCE,
+  },
+  'francesco|messages/consecrated_life|xxiv-giornata-mondiale-della-vita-consacrata-festa-della-presentazione-del-signore|2020-02-01': {
+    year: 2020, printed: null,
+    evidence: "Heading: 'XXIV Giornata Mondiale della Vita Consacrata - Festa della Presentazione del Signore (1 febbraio 2020)'. " + CONSECRATED_LIFE_EVIDENCE,
+  },
+  'francesco|messages/consecrated_life|xxiii-giornata-mondiale-della-vita-consacrata-festa-della-presentazione-del-signore|2019-02-02': {
+    year: 2019, printed: null,
+    evidence: "Heading: 'XXIII Giornata Mondiale della Vita Consacrata - Festa della Presentazione del Signore (2 febbraio 2019)'. " + CONSECRATED_LIFE_EVIDENCE,
+  },
+  'francesco|messages/consecrated_life|xxii-giornata-mondiale-della-vita-consacrata-festa-della-presentazione-del-signore|2018-02-02': {
+    year: 2018, printed: null,
+    evidence: "Heading: 'XXII Giornata Mondiale della Vita Consacrata - Festa della Presentazione del Signore (2 febbraio 2018)'. " + CONSECRATED_LIFE_EVIDENCE,
+  },
+  'francesco|messages/consecrated_life|xxi-giornata-mondiale-della-vita-consacrata-festa-della-presentazione-del-signore|2017-02-02': {
+    year: 2017, printed: null,
+    evidence: "Heading: 'XXI Giornata Mondiale della Vita Consacrata - Festa della Presentazione del Signore (2 febbraio 2017)'. " + CONSECRATED_LIFE_EVIDENCE,
+  },
+  'francesco|messages/consecrated_life|xix-giornata-mondiale-della-vita-consacrata-festa-della-presentazione-del-signore|2015-02-02': {
+    year: 2015, printed: null,
+    evidence: "Heading: 'XIX Giornata Mondiale della Vita Consacrata - Festa della Presentazione del Signore (2 febbraio 2015)'. " + CONSECRATED_LIFE_EVIDENCE,
+  },
+  'francesco|messages/consecrated_life|xviii-giornata-mondiale-della-vita-consacrata-festa-della-presentazione-del-signore|2014-02-02': {
+    year: 2014, printed: null,
+    evidence: "Heading: 'XVIII Giornata Mondiale della Vita Consacrata - Festa della Presentazione del Signore (2 febbraio 2014)'. " + CONSECRATED_LIFE_EVIDENCE,
+  },
   'francesco|messages/consecrated_life|xx-giornata-mondiale-della-vita-consacrata-giubileo-straordinario-della-misericordia-giubileo-della-vita-consacrata-e-chiusura-dell-anno-della-vita-consacrata|2016-02-02': {
-    year: 2016, printed: null, evidence: CONSECRATED_LIFE_EVIDENCE,
+    year: 2016, printed: null,
+    evidence: "Heading: 'XX Giornata Mondiale della Vita Consacrata - Giubileo Straordinario della Misericordia: Giubileo della Vita Consacrata e Chiusura dell’Anno della Vita Consacrata (2 febbraio 2016)'. " + CONSECRATED_LIFE_EVIDENCE,
   },
   'francesco|messages/consecrated_life|messaggio-del-santo-padre-ai-consacrati-riuniti-nella-basilica-di-s-maria-maggiore-in-occasione-della-giornata-mondiale-della-vita-consacrata|2023-02-02': {
-    year: 2023, printed: null, evidence: CONSECRATED_LIFE_EVIDENCE,
+    year: 2023, printed: null,
+    evidence: "Heading: 'Messaggio del Santo Padre ai consacrati riuniti nella Basilica di S. Maria Maggiore in occasione della Giornata Mondiale della Vita Consacrata (2 febbraio 2023)'. " + CONSECRATED_LIFE_EVIDENCE,
   },
   'francesco|messages/cura-creato|messaggio-del-santo-padre-per-la-celebrazione-della-giornata-mondiale-di-preghiera-per-la-cura-del-creato|2022-07-16': {
     year: 2022, printed: null, evidence: `Heading: 'Messaggio del Santo Padre per la celebrazione della Giornata Mondiale di Preghiera per la Cura del Creato (16 luglio 2022)'. ${CREATION_EVIDENCE}`,
