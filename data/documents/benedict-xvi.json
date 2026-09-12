@@ -4870,6 +4870,28 @@
     "sourceGenreLabel": "messages/urbi"
   },
   {
+    "id": "mag:benedict-xvi/domine-non-est-2010",
+    "title": "« Domine, non est ». Venerabili Dei Servo Iosepho Tous y Soler, O.F.M. Cap., Beatorum honores decernuntur: Addendum",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-04-25",
+    "source": {
+      "url": null,
+      "shelf": "aas/2018",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Domine, non est",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 110,
+      "year": 2018,
+      "page": 1795
+    }
+  },
+  {
     "id": "mag:benedict-xvi/quettensis-2010",
     "title": "Quettensis",
     "idStatus": "minted",
@@ -4942,6 +4964,72 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/ego-autem-2010",
+    "title": "« Ego autem ». Venerabili Dei Servae Mariae Petrae De Micheli caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-05-30",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Ego autem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 476
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/testes-christianae-2010",
+    "title": "« Testes christianae ». Venerabili Servo Dei Georgio Popiełuszko Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-06-06",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Testes christianae",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 673
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/spe-gaudentes-2010",
+    "title": "« Spe gaudentes ». Venerabili Dei Servo Aloisio Grozde caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-06-13",
+    "source": {
+      "url": null,
+      "shelf": "aas/2021",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Spe gaudentes",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 929
+    }
   },
   {
     "id": "mag:benedict-xvi/salicensis-2010",
@@ -5058,6 +5146,28 @@
       "ordinal": 26
     },
     "sourceGenreLabel": "messages/youth"
+  },
+  {
+    "id": "mag:benedict-xvi/dico-autem-2010",
+    "title": "« Dico autem ». Venerabili Dei Servo Gerardo Hirschfelder caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-09-19",
+    "source": {
+      "url": null,
+      "shelf": "aas/2021",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Dico autem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 113,
+      "year": 2021,
+      "page": 449
+    }
   },
   {
     "id": "mag:benedict-xvi/ubicumque-et-semper-2010",
@@ -5947,6 +6057,28 @@
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/ibi-vacabimus-2011",
+    "title": "« Ibi vacabimus ». Venerabili Servo Dei Ioanni Scheffler Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-07-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2020",
+      "retrieved": "2026-09-12"
+    },
+    "incipit": "Ibi vacabimus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 112,
+      "year": 2020,
+      "page": 479
+    }
   },
   {
     "id": "mag:benedict-xvi/sylethensis-2011",

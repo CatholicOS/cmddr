@@ -7,7 +7,7 @@ for a document in an annual series (`series.id` and `series.year`; the occasion 
 signed). The issuer segment is always the local part of `issuerId`, so conciliar documents namespace under
 their council and record the promulgating pope separately. See the design specs for the minting rules.
 
-**4975 documents**, of which 312 carry a provisional identifier — the source prints no incipit for them, so their id is genre-and-date based and may be re-minted.
+**5241 documents**, of which 387 carry a provisional identifier — the source prints no incipit for them, so their id is genre-and-date based and may be re-minted.
 
 Every document appears in both views below; neither is a subset of the other.
 
@@ -28,8 +28,8 @@ Every document appears in both views below; neither is a subset of the other.
 | [`oec:vatican-ii`](documents/by-issuer/vatican-ii.md) | 16 | 1963-12-04 – 1965-12-07 | — (conciliar) |
 | [`rp:john-paul-i`](documents/by-issuer/john-paul-i.md) | 7 | 1978-09-01 – 1978-09-28 | apost_letters, letters |
 | [`rp:john-paul-ii`](documents/by-issuer/john-paul-ii.md) | 2105 | 1978-10-28 – 2005-04-01 | apost_constitutions, apost_exhortations, apost_letters, bulls, encyclicals, motu_proprio, messages/peace, messages/communications, messages/lent, messages/migration, messages/missions, messages/sick, messages/vocations, messages/youth, messages/food, messages/consecrated_life, messages/tourism, messages/literacy, messages/urbi |
-| [`rp:benedict-xvi`](documents/by-issuer/benedict-xvi.md) | 301 | 2005-04-20 – 2013-02-22 | apost_constitutions, apost_exhortations, apost_letters, encyclicals, motu_proprio, messages/peace, messages/communications, messages/lent, messages/migration, messages/missions, messages/sick, messages/vocations, messages/youth, messages/food, messages/urbi |
-| [`rp:francis-i`](documents/by-issuer/francis-i.md) | 366 | 2013-03-31 – 2025-04-20 | apost_constitutions, apost_exhortations, apost_letters, bulls, encyclicals, motu_proprio, messages/peace, messages/communications, messages/lent, messages/migration, messages/missions, messages/sick, messages/vocations, messages/youth, messages/food, messages/consecrated_life, messages/poveri, messages/nonni, messages/bambini, messages/cura-creato, messages/urbi |
+| [`rp:benedict-xvi`](documents/by-issuer/benedict-xvi.md) | 307 | 2005-04-20 – 2013-02-22 | apost_constitutions, apost_exhortations, apost_letters, encyclicals, motu_proprio, messages/peace, messages/communications, messages/lent, messages/migration, messages/missions, messages/sick, messages/vocations, messages/youth, messages/food, messages/urbi; AAS index 2018–2021 (6 AAS-only) |
+| [`rp:francis-i`](documents/by-issuer/francis-i.md) | 626 | 2013-03-31 – 2025-04-20 | apost_constitutions, apost_exhortations, apost_letters, bulls, encyclicals, motu_proprio, messages/peace, messages/communications, messages/lent, messages/migration, messages/missions, messages/sick, messages/vocations, messages/youth, messages/food, messages/consecrated_life, messages/poveri, messages/nonni, messages/bambini, messages/cura-creato, messages/urbi; AAS index 2015–2024 (260 AAS-only) |
 | [`rp:leo-xiv`](documents/by-issuer/leo-xiv.md) | 40 | 2025-05-08 – 2026-08-29 | apost_constitutions, apost_exhortations, apost_letters, encyclicals, motu_proprio, messages/peace, messages/communications, messages/lent, messages/migration, messages/mission, messages/sick, messages/vocations, messages/youth, messages/poor, messages/grandparents, messages/creation, messages/urbi |
 
 ## By genre
@@ -37,7 +37,7 @@ Every document appears in both views below; neither is a subset of the other.
 | Genre | Documents | Dates |
 | --- | --- | --- |
 | [`apostolic-exhortation`](documents/by-genre/apostolic-exhortation.md) | 54 | 1908-08-04 – 2025-10-04 |
-| [`apostolic-letter`](documents/by-genre/apostolic-letter.md) | 2130 | 1857-06-15 – 2026-08-29 |
+| [`apostolic-letter`](documents/by-genre/apostolic-letter.md) | 2281 | 1857-06-15 – 2026-08-29 |
 | [`brief`](documents/by-genre/brief.md) | 30 | 1741-05-30 – 1950-09-08 |
 | [`constitution`](documents/by-genre/constitution.md) | 6 | 1870-04-24 – 1965-12-07 |
 | [`declaration`](documents/by-genre/declaration.md) | 3 | 1965-10-28 – 1965-12-07 |
@@ -47,7 +47,7 @@ Every document appears in both views below; neither is a subset of the other.
 | [`homily`](documents/by-genre/homily.md) | 11 | 2014-02-02 – 2025-02-01 |
 | [`letter`](documents/by-genre/letter.md) | 432 | 1863-12-21 – 1978-09-28 |
 | [`message`](documents/by-genre/message.md) | 534 | 1960-12-22 – 2026-08-15 |
-| [`papal-bull`](documents/by-genre/papal-bull.md) | 1292 | 1749-03-15 – 2026-01-08 |
+| [`papal-bull`](documents/by-genre/papal-bull.md) | 1407 | 1749-03-15 – 2026-01-08 |
 | [`prayer`](documents/by-genre/prayer.md) | 1 | 1961-09-29 – 1961-09-29 |
 | [`unmapped`](documents/by-genre/unmapped.md) | 5 | 1846-07-16 – 1849-02-14 |
 | [`urbi-et-orbi`](documents/by-genre/urbi-et-orbi.md) | 145 | 1952-04-13 – 2026-04-05 |
@@ -76,6 +76,11 @@ This registry covers the **formal document shelves** of vatican.va. Deliberately
   harvested; the occasional residue is not yet.
 - **Year-partitioned `letters` shelves** — John XXIII, Benedict XV, and Paul VI onward. The
   `letters` shelf is harvested only where the aggregate index carries its items.
+- **The shelves are selections, and the *Acta* fill them only where a shelf is harvested.** 266 documents are created from the annual *Acta Apostolicae Sedis* index (2015–2024) for acts the
+  harvested shelves lack — constitutions, apostolic letters, canonisation decretals; `source.shelf` is
+  `aas/{year}`, the AAS column is their source as well as their citation, and their titles are the index's
+  Latin entries. An act in a category whose shelf is not harvested (letters, homilies, speeches, occasional
+  messages) waits for that harvest; the join report lists every entry held and why.
 - **Bishops' conferences and dicasterial documents**, which remain outside the repository's scope.
 - **Councils before 1870.** vatican.va's council archive publishes only Vatican I and Vatican II;
   the other nineteen ecumenical councils have no source there, so a registry holding two councils
@@ -84,5 +89,5 @@ This registry covers the **formal document shelves** of vatican.va. Deliberately
   prints a bare Latin toponym was read against its own text and recorded as an erection, an
   elevation, a union, or an act of another kind named in the adjudication table.
 
-The Shelves harvested column above is generated from the harvest configuration itself, so it cannot
-drift from what was actually read.
+The Shelves harvested column above is generated from the harvest configuration itself, and its AAS
+note from the documents, so neither can drift from what was actually read.
