@@ -70,10 +70,12 @@ export const SERIES_EXCLUSIONS: Record<string, SeriesExclusion> = {
   // John XXIII's urbi_et_orbi shelf files, beside the feast-day Urbi et Orbi messages, the
   // radio messages this pope broadcast to the world on other occasions and in the days
   // before Christmas and Easter -- the Christmas-eve radio message being a tradition Pius
-  // XII began, whose own are filed under speeches. In 1960, 1961, 1962 (Easter) and 1963
-  // the shelf holds both the pre-feast broadcast and the feast-day message: the feast-day
-  // one is the Urbi et Orbi proper and holds the series slot; the broadcast is a message.
-  // The three remaining broadcasts are not Christmas or Easter acts at all.
+  // XII began, whose own are filed under speeches -- and one address given at the Easter
+  // Vigil. In 1960, 1961, 1962 (Easter) and 1963 the shelf holds both the pre-feast act
+  // and the feast-day message: the feast-day one is the Urbi et Orbi proper and holds the
+  // series slot; the pre-feast act is a message. The three remaining broadcasts are not
+  // Christmas or Easter acts at all. Each row quotes the heading and, where the heading
+  // does not itself say what the act is, the document.
   'john-xxiii|messages/urbi_et_orbi|radiomessaggio-ai-fedeli-e-ai-popoli-del-mondo-intero-22-dicembre-1960|1960-12-22': {
     evidence: "Heading: 'Radiomessaggio ai fedeli e ai popoli del mondo intero, 22 dicembre 1960' "
       + '(hf_j-xxiii_mes_19601222_urbi.html). The pre-Christmas radio message; the shelf holds '
@@ -94,9 +96,15 @@ export const SERIES_EXCLUSIONS: Record<string, SeriesExclusion> = {
   },
   'john-xxiii|messages/urbi_et_orbi|ai-fedeli-di-tutto-il-mondo-nel-giorno-della-solennita-di-pasqua|1962-04-21': {
     evidence: "Heading: 'Ai fedeli di tutto il mondo nel giorno della Solennità di Pasqua (21 aprile "
-      + "1962)' (hf_j-xxiii_mes_19620421_urbi-resurrezione.html) -- Holy Saturday. The shelf holds "
-      + 'the same heading dated 22 April 1962, Easter Sunday (hf_j-xxiii_mes_19620422_urbi-pasqua), '
-      + 'which is the Easter 1962 entry of the series. The eve broadcast is a message, not a blessing.',
+      + "1962)' (hf_j-xxiii_mes_19620421_urbi-resurrezione.html). The document is dated '21 aprile "
+      + "1962' and opens 'Questa santa notte di vigilia rinnova, ancora una volta … i riti liturgici "
+      + "secondo le più antiche tradizioni dell'Oriente e dell'Occidente': the address given at the "
+      + 'Easter Vigil. The shelf holds the same heading dated 22 April 1962, Easter Sunday '
+      + "(hf_j-xxiii_mes_19620422_urbi-pasqua), whose document is headed 'Piazza San Pietro, "
+      + "Domenica di Pasqua, 22 aprile 1962' and begins 'La grande benedizione annunciata in "
+      + "Vigilia Paschali, ieri sera, Ci disponiamo ad estenderla, ora, a tutti voi' -- the "
+      + 'blessing itself, and the Easter 1962 entry of the series. The Vigil address announced '
+      + 'the blessing; it is not the blessing.',
   },
   'john-xxiii|messages/urbi_et_orbi|radiomessaggio-ai-fedeli-di-tutto-il-mondo-in-occasione-delle-imprese-di-navigazione-spaziale-12-agosto-1962-giovanni-xxiii|1962-08-12': {
     evidence: "Heading: 'Radiomessaggio ai fedeli di tutto il mondo in occasione delle imprese di "
