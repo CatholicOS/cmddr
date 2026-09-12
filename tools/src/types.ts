@@ -52,8 +52,9 @@ export interface DocumentRecord {
    * Sanctae Sedis*): the conventional short citation `AAS 115 (2023) 1041` is
    * `{ series: 'AAS', volume: 115, year: 2023, page: 1041 }`, `page` the first page as
    * the index cites it. Purely bibliographic, never authority-bearing; invariant 25 keeps
-   * `(series, volume, page)` unique. Written by the harvest from the AAS index fixtures
-   * (tools/src/acta/). `part` is reserved for the 1917 and 1983 double volumes and unused.
+   * `(series, volume, part, page)` unique. Written by the harvest from the AAS index fixtures
+   * (tools/src/acta/). `part` is the part of a double volume (1917, 1983), whose
+   * pagination restarts per part: `AAS 9-I (1917) 417`.
    */
   acta?: { series: 'AAS' | 'ASS'; volume: number; year: number; page: number; part?: 'I' | 'II' };
   descriptiveTitle?: 'dogmatic' | 'pastoral';

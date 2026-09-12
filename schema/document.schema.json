@@ -134,10 +134,10 @@
         },
         "part": {
           "enum": ["I", "II"],
-          "description": "Reserved for the two-part volumes of 1917 and 1983; not used in phase 1."
+          "description": "The part of a two-part volume (1917, 1983), whose pagination restarts per part: 'AAS 9-I (1917) 417' is { volume: 9, part: 'I', page: 417 }. Absent otherwise."
         }
       },
-      "description": "Where the act stands in the Acta Apostolicae Sedis (or Acta Sanctae Sedis): the citation of record, 'AAS 115 (2023) 1041' being { series: 'AAS', volume: 115, year: 2023, page: 1041 }. A reference joined to the shelf harvest, not a substitute for it: written by the harvest for the documents an annual AAS index entry matches by issuer, date and incipit (2015-2024 in phase 1), and carried by the documents created from the index itself for the acts the shelves lack (source.shelf 'aas/{year}', phase 2a), for which the reference is also the source. Purely bibliographic and never authority-bearing, like keywords, series and actKind; the only invariant is 25, uniqueness of (series, volume, page), since one page opens one act. See #25."
+      "description": "Where the act stands in the Acta Apostolicae Sedis (or Acta Sanctae Sedis): the citation of record, 'AAS 115 (2023) 1041' being { series: 'AAS', volume: 115, year: 2023, page: 1041 }. A reference joined to the shelf harvest, not a substitute for it: written by the harvest for the documents an AAS chronological-index entry matches by issuer, date and incipit (the index PDFs of 2012 and 2015-2024, and the in-volume indexes of the sample volumes 1909, 1917-I, 1931, 1958 and 1978 of phase 2b), and carried by the documents created from the index itself for the acts the shelves lack (source.shelf 'aas/{year}', phase 2a), for which the reference is also the source. Purely bibliographic and never authority-bearing, like keywords, series and actKind; the only invariant is 25, uniqueness of (series, volume, part, page), since one page opens one act -- except the curated pages the volume itself prints two short acts on (ACTA_SHARED_PAGES). See #25."
     },
     "descriptiveTitle": {
       "enum": ["dogmatic", "pastoral"],

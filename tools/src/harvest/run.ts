@@ -347,9 +347,11 @@ for (const [issuer, docs] of byIssuer) {
   if (n > 0) console.warn(`  ${issuer}: ${n} of ${docs.length} provisional`);
 }
 
-// The AAS reference (acta reference spec §4.3): every entry of the ten annual *Index
-// generalis* fixtures (tools/fixtures/acta/) in a harvested category is matched to a
-// document by issuer, date and incipit, and the match writes `acta` on it. The join runs
+// The AAS reference (acta reference spec §4.3; acta volumes spec §5): every entry of the
+// index fixtures (tools/fixtures/acta/: the annual *Index generalis* PDFs of 2012 and
+// 2015-2024 and the chronological-index pages of the sample volumes 1909-1978, listed in
+// ACTA_SOURCES) in a harvested category is matched to a document by issuer, date and
+// incipit, and the match writes `acta` on it. The join runs
 // after every id is final, so the summary below names the ids the report will name. It
 // never writes what it cannot evidence: an ambiguous entry, an entry the shelves lack, a
 // document two entries claim -- each is counted here and listed in the join report
@@ -359,6 +361,9 @@ if (acta.missing.length) console.warn(`AAS index fixture missing for ${acta.miss
 for (const [year, parsed] of acta.parsed) {
   for (const heading of parsed.unseenHeadings) {
     console.warn(`AAS ${year}: unseen category heading '${heading}' -- add it to tools/src/acta/categories.ts`);
+  }
+  for (const heading of parsed.unmappedPopes) {
+    console.warn(`AAS ${year}: unmapped pope heading '${heading}' -- add it to tools/src/acta/popes.ts`);
   }
 }
 {

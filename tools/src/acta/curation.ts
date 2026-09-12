@@ -117,3 +117,30 @@ export const ACTA_HOLDS: Readonly<Record<string, ActaHold>> = {};
 
 /** The curation key of an entry: the volume year and first page the index cites. */
 export const curationKey = (e: { year: number; page: number }): string => `${e.year}:${e.page}`;
+
+export interface SharedPage {
+  /** The documents the page opens, by id. */
+  documentIds: readonly string[];
+  /** Where in the volume the page was read, and what it prints. */
+  evidence: string;
+}
+
+/**
+ * Pages of the *Acta* that open more than one act (acta volumes spec, sample report
+ * §2): invariant 25 reads "one page opens one act", which holds for every act long
+ * enough to fill a page and fails for two short apostolic letters set one after the
+ * other. Keyed `AAS:{volume}[-{part}]:{page}`; the validator exempts exactly the listed
+ * documents from rule 25 on that page, and any other document citing it still fails.
+ * Every row quotes the page as the volume prints it -- never an inference from the index.
+ */
+export const ACTA_SHARED_PAGES: Readonly<Record<string, SharedPage>> = {
+  'AAS:70:150': {
+    documentIds: ['mag:paul-vi/sacra-illa-1978', 'mag:paul-vi/quoniam-beatissima-1978'],
+    evidence: 'AAS 70 (1978) p. 150 (PDF page 150 of AAS-70-1978-ocr.pdf, read 2026-09-13) prints two '
+      + "apostolic letters under one running header: 'Ad perpetuam rei memoriam. — Sacra illa aedes, "
+      + "quae, Beatae Ma-' (9 January 1978, the parish church of Nicaea a minor basilica) and, lower on "
+      + "the same page, 'Ad perpetuam rei memoriam. — Quoniam beatissima Deipara Virgo' (11 January 1978, "
+      + 'Our Lady of Monte Berico patron of Vicenza). The chronological index cites both at 150 '
+      + '(`1978 Ian. 9 Sacra illa … 150`, `1978 Ian. 11 Quoniam beatissima … 150`).',
+  },
+};

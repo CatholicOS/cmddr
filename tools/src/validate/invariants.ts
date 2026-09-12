@@ -1,6 +1,7 @@
 import { slugify } from '../slug.js';
 import { MINTED_ID_RE, PROVISIONAL_ID_RE, parseId, issuerLocalPart } from '../ids.js';
 import { KNOWN_PONTIFF_IDS, KNOWN_COUNCIL_IDS } from '../mappings/index.js';
+import { ACTA_SHARED_PAGES } from '../acta/curation.js';
 import type { DocumentRecord } from '../types.js';
 
 export interface Violation { rule: number; id: string; message: string }
@@ -305,6 +306,10 @@ export function checkDocuments(
 
   for (const [k, group] of byActaPage) {
     if (group.length < 2) continue;
+    // A page the volume itself prints two short acts on (ACTA_SHARED_PAGES, with the page
+    // quoted): the listed documents may share it; any other document citing it still fails.
+    const shared = ACTA_SHARED_PAGES[k.replace(/\|/g, ':')];
+    if (shared !== undefined && group.every((d) => shared.documentIds.includes(d.id))) continue;
     for (const d of group) {
       out.push({
         rule: 25, id: d.id,
