@@ -102,6 +102,69 @@ describe('toDocument', () => {
     expect('actKind' in d).toBe(false);
   });
 
+  describe('medium, read from the heading\'s own word (#27)', () => {
+    it('gives a plain item no medium at all: absent means the ordinary text', () => {
+      const d = toDocument(item({}), '2026-09-12');
+      expect('medium' in d).toBe(false);
+    });
+
+    it('reads a Radiomessaggio as radio, keeping its genre and actKind', () => {
+      // Easter Sunday 1960 on John XXIII's urbi_et_orbi shelf: a feast-day Urbi et Orbi
+      // delivered by radio. The medium describes delivery, not the act.
+      const d = toDocument(item({
+        title: 'Radiomessaggio nella Solennità di Pasqua,', incipit: null, date: '1960-04-17',
+        sourceGenreLabel: 'messages/urbi_et_orbi', shelf: 'messages/urbi_et_orbi', pageSlug: 'john-xxiii',
+      }), '2026-09-12');
+      expect(d.id).toBe('mag:john-xxiii/urbi-et-orbi-easter-1960');
+      expect(d.genre).toBe('urbi-et-orbi');
+      expect(d.actKind).toBe('liturgical');
+      expect(d.series).toEqual({ id: 'urbi-et-orbi-easter', year: 1960 });
+      expect(d.medium).toBe('radio');
+    });
+
+    it('reads an excluded radio message on the same shelf as radio too', () => {
+      const d = toDocument(item({
+        title: 'Radiomessaggio ai fedeli e ai popoli del mondo intero, 22 dicembre 1960', incipit: null,
+        date: '1960-12-22', sourceGenreLabel: 'messages/urbi_et_orbi', shelf: 'messages/urbi_et_orbi',
+        pageSlug: 'john-xxiii',
+      }), '2026-09-12');
+      expect(d.id).toBe('mag:john-xxiii/message-1960-12-22');
+      expect(d.genre).toBe('message');
+      expect(d.actKind).toBeUndefined();
+      expect(d.medium).toBe('radio');
+    });
+
+    it('reads a Videomessaggio as video, wherever in the title the word stands', () => {
+      const d = toDocument(item({
+        title: 'Videomessaggio di Papa Leone XIV per la Giornata Missionaria Mondiale 2025', incipit: null,
+        date: '2025-10-13', sourceGenreLabel: 'messages/mission', shelf: 'messages/mission', pageSlug: 'leo-xiv',
+      }), '2026-09-12');
+      expect(d.id).toBe('mag:leo-xiv/world-mission-day-2025');
+      expect(d.medium).toBe('video');
+      const mid = toDocument(item({ title: 'Inizio della Quaresima, Radiomessaggio di Giovanni XXIII, 27 febbraio 1963' }), '2026-09-12');
+      expect(mid.medium).toBe('radio');
+    });
+
+    it('reads the compound noun case-insensitively, but never the bare word', () => {
+      expect(toDocument(item({ title: 'RADIOMESSAGGIO ai fedeli' }), '2026-09-12').medium).toBe('radio');
+      expect(toDocument(item({ title: 'videomessaggio ai giovani' }), '2026-09-12').medium).toBe('video');
+      // A commission for cinema, radio and television is a topic, not a delivery medium
+      // (Boni Pastoris, 1959); so are videocassettes (Communications Day 1993).
+      for (const title of [
+        'Lettera Apostolica «Motu proprio» Boni Pastoris che erige la Pontificia Commissione per la Cinematografia, la Radio e la Televisione',
+        'XXVII Giornata Mondiale delle Comunicazioni Sociali, 1993 -Videocassette e audiocassette nella formazione della cultura',
+        'La stampa, la radiotelevisione e il cinema per il progresso dei popoli',
+      ]) {
+        expect('medium' in toDocument(item({ title }), '2026-09-12'), title).toBe(false);
+      }
+    });
+
+    it('refuses a heading that names both media rather than choosing one', () => {
+      expect(() => toDocument(item({ title: 'Radiomessaggio e videomessaggio' }), '2026-09-12'))
+        .toThrow(/both a radio and a video/);
+    });
+  });
+
   it('keeps an unmapped genre null and preserves the raw label', () => {
     const d = toDocument(item({
       title: 'La Serie', incipit: 'La Serie', date: '1849-02-14', sourceGenreLabel: 'Protesta',

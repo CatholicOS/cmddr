@@ -73,6 +73,10 @@
       "enum": ["teaching", "governance", "liturgical"],
       "description": "What kind of act the document is. Absent means 'teaching'. 'governance' is a juridical act (erecting a diocese, proclaiming a patron, approving statutes); 'liturgical' is a rite or blessing (an Urbi et Orbi). The operative act is then not a statement Table 2 assesses and the genre's default register does not describe it; a passage that does teach (the address before an Urbi et Orbi blessing) is still assessed per statement, so the flag never forbids an Assessment. Never authority-bearing: like keywords, it makes no claim about register or definitiveness, and no invariant reads it."
     },
+    "medium": {
+      "enum": ["radio", "video"],
+      "description": "The medium the act was delivered by, where the source's heading names one: 'radio' for a Radiomessaggio, 'video' for a Videomessaggio. Absent means the ordinary written or delivered text. Describes delivery, not the act: a Radiomessaggio that is a feast-day Urbi et Orbi keeps its genre and its actKind and simply gains the medium. Never authority-bearing: like keywords and actKind, it makes no claim about register or definitiveness, and no invariant reads it."
+    },
     "series": {
       "type": "object",
       "additionalProperties": false,
