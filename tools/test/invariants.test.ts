@@ -314,32 +314,127 @@ describe('invariant 22: characteristics are allowed by the genre', () => {
   });
 });
 
-const series = [{ id: 'peace' }, { id: 'lent' }];
+const series = [
+  { id: 'world-day-of-peace', firstYear: 1968 }, { id: 'lent' }, { id: 'world-youth-day' },
+  { id: 'urbi-et-orbi-easter' },
+];
+const MESSAGE_GENRES: GenreLike[] = [
+  ...GENRES, { id: 'message', issuerTypes: ['pope'] }, { id: 'urbi-et-orbi', issuerTypes: ['pope'] },
+];
+
+/** A well-formed series-form record: the 2025 Peace message, signed 8 December 2024. */
+const peace: DocumentRecord = {
+  id: 'mag:francis-i/world-day-of-peace-2025',
+  title: 'LVIII Giornata Mondiale della Pace 2025 - “Rimetti a noi i nostri debiti, concedici la tua pace”',
+  idStatus: 'minted', genre: 'message', issuerId: 'rp:francis-i', issuerType: 'pope',
+  date: '2024-12-08', series: { id: 'world-day-of-peace', year: 2025, ordinal: 58 },
+};
+const seriesRules = (docs: DocumentRecord[]) =>
+  checkDocuments(docs, MESSAGE_GENRES, keywords, series).map((v) => v.rule);
 
 describe('invariant 23: series.id resolves against the vocabulary', () => {
-  const d = { ...expansionBase, id: 'mag:leo-xiii/rerum-novarum-1891' };
-
   it('accepts a known series, numbered or dated', () => {
     const v = checkDocuments([
-      { ...d, series: { id: 'peace', ordinal: 51 } },
-      { ...d, id: 'mag:leo-xiii/rerum-novarum-1891-05-15', series: { id: 'lent' } },
-    ], GENRES, keywords, series);
-    expect(v.map((x) => x.rule)).not.toContain(23);
+      peace,
+      { ...peace, id: 'mag:francis-i/lent-2015', series: { id: 'lent', year: 2015 } },
+    ], MESSAGE_GENRES, keywords, series);
+    expect(v).toEqual([]);
   });
 
   it('rejects an unknown series', () => {
-    const v = checkDocuments([{ ...d, series: { id: 'world-day-of-peace' } }], GENRES, keywords, series);
+    const v = checkDocuments([
+      { ...peace, id: 'mag:francis-i/peace-2025', series: { id: 'peace', year: 2025 } },
+    ], MESSAGE_GENRES, keywords, series);
     expect(v.map((x) => x.rule)).toContain(23);
-    expect(v.find((x) => x.rule === 23)!.message).toMatch(/world-day-of-peace/);
+    expect(v.find((x) => x.rule === 23)!.message).toMatch(/peace/);
   });
 
   it('accepts a document with no series at all', () => {
+    const d = { ...expansionBase, id: 'mag:leo-xiii/rerum-novarum-1891' };
     expect(checkDocuments([d], GENRES, keywords, series).map((x) => x.rule)).not.toContain(23);
   });
 
   it('reads nothing off actKind: the schema enum is its only check', () => {
     // No invariant couples actKind to a genre or a ceiling (#15): a governance act on an
     // encyclical, however odd, is not a rule violation.
+    const d = { ...expansionBase, id: 'mag:leo-xiii/rerum-novarum-1891' };
     expect(checkDocuments([{ ...d, actKind: 'governance' }], GENRES, keywords, series)).toEqual([]);
+  });
+});
+
+describe('the series form of a minted id (messages spec §3)', () => {
+  it('passes a minted series-form record with no incipit', () => {
+    expect(checkDocuments([peace], MESSAGE_GENRES, keywords, series)).toEqual([]);
+  });
+
+  it('10: takes the year from series.year, not from date, when series is set', () => {
+    // The occasion year (2025) differs from the signing year (2024) and is the one the id
+    // must carry; an id built from the date year is the very error the series form exists to avoid.
+    expect(seriesRules([peace])).not.toContain(10);
+    expect(seriesRules([{ ...peace, id: 'mag:francis-i/world-day-of-peace-2024' }])).toContain(10);
+    expect(seriesRules([{ ...peace, series: { ...peace.series!, year: 2024 } }])).toContain(10);
+  });
+
+  it('10: still takes the year from date when no series is set', () => {
+    expect(rules([{ ...good, date: '1892-05-15' }])).toContain(10);
+  });
+
+  it('12: takes the slug from series.id when series is set, whatever the incipit', () => {
+    expect(seriesRules([{ ...peace, id: 'mag:francis-i/lviii-giornata-mondiale-della-pace-2025' }]))
+      .toContain(12);
+    // A printed incipit is recorded as a fact and does not drive the id (§3.2.3).
+    expect(seriesRules([{ ...peace, incipit: "All'inizio del nuovo anno" }])).not.toContain(12);
+  });
+
+  it('24: checks a printed ordinal against the vocabulary row\'s verified first year', () => {
+    // 2025 - 1968 + 1 = 58.
+    expect(seriesRules([peace])).not.toContain(24);
+    const v = checkDocuments([{ ...peace, series: { ...peace.series!, ordinal: 57 } }],
+      MESSAGE_GENRES, keywords, series);
+    expect(v.map((x) => x.rule)).toContain(24);
+    expect(v.find((x) => x.rule === 24)!.message).toMatch(/57 != 2025 - 1968 \+ 1 = 58/);
+  });
+
+  it('24: never fires when the ordinal, the year or the first year is absent', () => {
+    // No ordinal printed (the consecrated-life 2023 case, or a dated-only series).
+    expect(seriesRules([{ ...peace, series: { id: 'world-day-of-peace', year: 2025 } }]))
+      .not.toContain(24);
+    // No verified first year on the row: youth's shelf opens at II, so nothing to check against.
+    expect(seriesRules([{
+      ...peace, id: 'mag:francis-i/world-youth-day-2024',
+      series: { id: 'world-youth-day', year: 2024, ordinal: 39 },
+    }])).not.toContain(24);
+    expect(seriesRules([{
+      ...peace, id: 'mag:francis-i/world-youth-day-2024',
+      series: { id: 'world-youth-day', year: 2024, ordinal: 3 },
+    }])).not.toContain(24);
+  });
+
+  it('8: rejects two documents of one issuer sharing a series and an occasion year', () => {
+    const twin = { ...peace, date: '2024-12-09', title: 'A second 2025 Peace message' };
+    const v = checkDocuments([peace, twin], MESSAGE_GENRES, keywords, series)
+      .filter((x) => x.rule === 8);
+    expect(v.length).toBeGreaterThanOrEqual(2);
+    expect(v.some((x) => /series-form id is not unique/.test(x.message))).toBe(true);
+  });
+
+  it('8: accepts the same series and year under two issuers', () => {
+    const leo = {
+      ...peace, id: 'mag:leo-xiv/world-day-of-peace-2025', issuerId: 'rp:leo-xiv',
+    };
+    expect(seriesRules([peace, leo])).not.toContain(8);
+  });
+
+  it('11: exempts series-form ids from the incipit-collision rule', () => {
+    // Two Urbi et Orbi with an identical title in one year (Christmas and Easter) are not an
+    // incipit collision: their ids are keyed by series, not by title.
+    const easter = {
+      ...peace, id: 'mag:francis-i/urbi-et-orbi-easter-2024', genre: 'urbi-et-orbi',
+      title: '"Urbi et Orbi"', date: '2024-03-31', actKind: 'liturgical' as const,
+      series: { id: 'urbi-et-orbi-easter', year: 2024 },
+    };
+    const lent = { ...easter, id: 'mag:francis-i/lent-2024', genre: 'message', actKind: undefined,
+      series: { id: 'lent', year: 2024 } };
+    expect(seriesRules([easter, lent])).not.toContain(11);
   });
 });

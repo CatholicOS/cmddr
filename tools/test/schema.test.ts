@@ -77,8 +77,36 @@ describe('document.schema.json', () => {
     expect(validate(strip(provisional))).toBe(true);
   });
 
-  it('requires incipit when idStatus is minted', () => {
+  it('requires incipit when idStatus is minted and no series is set', () => {
     expect(validate(strip({ ...baseDoc, incipit: undefined }))).toBe(false);
+  });
+
+  describe('the series form of a minted id (#4)', () => {
+    const peace = strip({
+      ...baseDoc, id: 'mag:francis-i/world-day-of-peace-2025',
+      title: 'LVIII Giornata Mondiale della Pace 2025 - “Rimetti a noi i nostri debiti, concedici la tua pace”',
+      genre: 'message', issuerId: 'rp:francis-i', date: '2024-12-08',
+      incipit: undefined, incipitLang: undefined, sigla: undefined,
+      series: { id: 'world-day-of-peace', year: 2025, ordinal: 58 },
+    });
+
+    it('accepts a minted document with a series and no incipit', () => {
+      expect(validate(peace)).toBe(true);
+    });
+
+    it('still accepts a minted document with an incipit and no series', () => {
+      expect(validate(baseDoc)).toBe(true);
+    });
+
+    it('rejects a minted document with neither incipit nor series', () => {
+      expect(validate(strip({ ...peace, series: undefined }))).toBe(false);
+    });
+
+    it('accepts a dated-only series with a year but no ordinal', () => {
+      expect(validate({
+        ...peace, id: 'mag:francis-i/lent-2015', series: { id: 'lent', year: 2015 },
+      })).toBe(true);
+    });
   });
 
   it('accepts a minted id extended to the full date to resolve a collision', () => {
@@ -126,28 +154,38 @@ describe('document.schema.json', () => {
 
   describe('series (#16)', () => {
     it('accepts a numbered series entry', () => {
-      expect(validate({ ...baseDoc, series: { id: 'peace', ordinal: 51 } })).toBe(true);
+      expect(validate({ ...baseDoc, series: { id: 'world-day-of-peace', year: 2018, ordinal: 51 } })).toBe(true);
     });
 
     it('accepts a dated-only series entry with no ordinal', () => {
-      expect(validate({ ...baseDoc, series: { id: 'lent' } })).toBe(true);
+      expect(validate({ ...baseDoc, series: { id: 'lent', year: 2015 } })).toBe(true);
     });
 
     it('requires the id', () => {
-      expect(validate({ ...baseDoc, series: { ordinal: 51 } })).toBe(false);
+      expect(validate({ ...baseDoc, series: { year: 2018, ordinal: 51 } })).toBe(false);
+    });
+
+    it('requires the occasion year (#4): a series document without one has no id', () => {
+      expect(validate({ ...baseDoc, series: { id: 'world-day-of-peace', ordinal: 51 } })).toBe(false);
+    });
+
+    it('rejects a year that is not a four-digit integer', () => {
+      expect(validate({ ...baseDoc, series: { id: 'lent', year: 15 } })).toBe(false);
+      expect(validate({ ...baseDoc, series: { id: 'lent', year: 2015.5 } })).toBe(false);
+      expect(validate({ ...baseDoc, series: { id: 'lent', year: '2015' } })).toBe(false);
     });
 
     it('rejects an id that is not slug-shaped', () => {
-      expect(validate({ ...baseDoc, series: { id: 'consecrated_life' } })).toBe(false);
+      expect(validate({ ...baseDoc, series: { id: 'consecrated_life', year: 2023 } })).toBe(false);
     });
 
     it('rejects an ordinal of 0 and a non-integer ordinal', () => {
-      expect(validate({ ...baseDoc, series: { id: 'peace', ordinal: 0 } })).toBe(false);
-      expect(validate({ ...baseDoc, series: { id: 'peace', ordinal: 51.5 } })).toBe(false);
+      expect(validate({ ...baseDoc, series: { id: 'world-day-of-peace', year: 2018, ordinal: 0 } })).toBe(false);
+      expect(validate({ ...baseDoc, series: { id: 'world-day-of-peace', year: 2018, ordinal: 51.5 } })).toBe(false);
     });
 
     it('rejects an unknown property on the series object', () => {
-      expect(validate({ ...baseDoc, series: { id: 'peace', year: 2018 } })).toBe(false);
+      expect(validate({ ...baseDoc, series: { id: 'world-day-of-peace', year: 2018, shelf: 'peace' } })).toBe(false);
     });
   });
 

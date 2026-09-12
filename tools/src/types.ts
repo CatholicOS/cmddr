@@ -34,8 +34,13 @@ export interface DocumentRecord {
   keywords?: string[];
   /** Absent means teaching. Never authority-bearing; see document.schema.json. */
   actKind?: 'teaching' | 'governance' | 'liturgical';
-  /** Membership in an annual series; `id` resolves against data/series.json (invariant 23). */
-  series?: { id: string; ordinal?: number };
+  /**
+   * Membership in an annual series; `id` resolves against data/series.json (invariant 23).
+   * `year` is the occasion year the title prints, not the year of `date`; together with
+   * `id` it is the document's id (`mag:{issuer}/{id}-{year}`, invariants 10 and 12).
+   * `ordinal` is recorded only where the source prints one (invariant 24).
+   */
+  series?: { id: string; year: number; ordinal?: number };
   descriptiveTitle?: 'dogmatic' | 'pastoral';
   sigla?: string;
   aliases?: string[];

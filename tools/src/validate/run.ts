@@ -9,7 +9,8 @@ const genres = JSON.parse(readFileSync('data/genres.json', 'utf8')) as Array<
   { id: string; issuerTypes?: string[]; allowedCharacteristics?: string[] }
 >;
 const keywords = JSON.parse(readFileSync('data/keywords.json', 'utf8')) as Array<{ id: string }>;
-const series = JSON.parse(readFileSync('data/series.json', 'utf8')) as Array<{ id: string }>;
+const series = JSON.parse(readFileSync('data/series.json', 'utf8')) as
+  Array<{ id: string; firstYear?: number }>;
 
 const ajv = new Ajv2020({ strict: false });
 addFormats(ajv);
