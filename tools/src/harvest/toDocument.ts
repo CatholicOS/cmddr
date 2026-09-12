@@ -115,6 +115,28 @@ function seriesStep(item: HarvestItem, issuerId: string): Pick<
   };
 }
 
+/**
+ * The delivery medium, read from the heading's own word and from nothing else (#27):
+ * *Radiomessaggio* -> `radio`, *Videomessaggio* -> `video`. Measured over every title of
+ * every harvested shelf on 2026-09-12 (4975 documents): `radiomessagg` matches 9 titles,
+ * all of them John XXIII's radio messages on his urbi_et_orbi shelf (three feast-day
+ * Urbi et Orbi and six excluded messages); `videomessagg` matches 2, Francis's World
+ * Youth Day 2019 and Leo XIV's World Mission Day 2025; the hyphenated and spaced spellings
+ * (`radio-messaggio`, `video messaggio`) and the other-language forms (`radio message`,
+ * `Rundfunkbotschaft`, `mensaje radiofónico`) match nothing. The compound stem is the
+ * rule, not the bare word: `radio` alone would also tag *Boni Pastoris* (the commission
+ * for cinema, radio and television), Paul VI's Communications Day 1968 theme and Pius
+ * XII's 1954 letter, and `video` alone John Paul II's 1993 theme on videocassettes -- a
+ * topic, not a medium. Absent means the ordinary written or delivered text.
+ */
+function readMedium(title: string): 'radio' | 'video' | undefined {
+  const radio = /radiomessagg/i.test(title);
+  const video = /videomessagg/i.test(title);
+  // An act is delivered by one medium; a heading naming both would need a curated call.
+  if (radio && video) throw new Error(`Heading names both a radio and a video message: '${title}'`);
+  return radio ? 'radio' : video ? 'video' : undefined;
+}
+
 export function toDocument(item: HarvestItem, retrieved: string): DocumentRecord {
   const pageIssuer = VATICAN_SLUG_TO_ISSUER[item.pageSlug];
   if (!pageIssuer) throw new Error(`No CRPDR mapping for vatican.va slug: ${item.pageSlug}`);
@@ -220,6 +242,12 @@ export function toDocument(item: HarvestItem, retrieved: string): DocumentRecord
   if (!record.actKind && keywords.some((k) => CIRCUMSCRIPTION_KEYWORDS.has(k))) {
     record.actKind = 'governance';
   }
+  // The medium describes delivery, not the act: a Radiomessaggio that is a feast-day Urbi
+  // et Orbi keeps `genre: urbi-et-orbi` and `actKind: liturgical` and simply gains
+  // `medium: radio`. Like `keywords` and `actKind`, never authority-bearing: the schema
+  // enum is the only check (#27).
+  const medium = readMedium(item.title);
+  if (medium) record.medium = medium;
   // The genre label exactly as vatican.va prints it (spec §4.1), preserved unconditionally
   // so the genre mapping stays auditable from the data, not only when genre is null.
   record.sourceGenreLabel = item.sourceGenreLabel;

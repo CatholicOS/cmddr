@@ -2428,6 +2428,7 @@
       "year": 1960
     },
     "actKind": "liturgical",
+    "medium": "radio",
     "sourceGenreLabel": "messages/urbi_et_orbi"
   },
   {
@@ -3180,6 +3181,7 @@
       ],
       "retrieved": "2026-09-12"
     },
+    "medium": "radio",
     "sourceGenreLabel": "messages/urbi_et_orbi"
   },
   {
@@ -3310,6 +3312,7 @@
       "year": 1961
     },
     "actKind": "liturgical",
+    "medium": "radio",
     "sourceGenreLabel": "messages/urbi_et_orbi"
   },
   {
@@ -3412,6 +3415,7 @@
       ],
       "retrieved": "2026-09-12"
     },
+    "medium": "radio",
     "sourceGenreLabel": "messages/urbi_et_orbi"
   },
   {
@@ -3512,6 +3516,7 @@
       ],
       "retrieved": "2026-09-12"
     },
+    "medium": "radio",
     "sourceGenreLabel": "messages/urbi_et_orbi"
   },
   {
@@ -3561,6 +3566,7 @@
       "year": 1961
     },
     "actKind": "liturgical",
+    "medium": "radio",
     "sourceGenreLabel": "messages/urbi_et_orbi"
   },
   {
@@ -3798,6 +3804,7 @@
       ],
       "retrieved": "2026-09-12"
     },
+    "medium": "radio",
     "sourceGenreLabel": "messages/urbi_et_orbi"
   },
   {
@@ -3903,6 +3910,7 @@
       ],
       "retrieved": "2026-09-12"
     },
+    "medium": "radio",
     "sourceGenreLabel": "messages/urbi_et_orbi"
   },
   {
@@ -3970,6 +3978,7 @@
       ],
       "retrieved": "2026-09-12"
     },
+    "medium": "radio",
     "sourceGenreLabel": "messages/urbi_et_orbi"
   },
   {

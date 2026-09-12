@@ -35,6 +35,12 @@ export interface DocumentRecord {
   /** Absent means teaching. Never authority-bearing; see document.schema.json. */
   actKind?: 'teaching' | 'governance' | 'liturgical';
   /**
+   * The medium the act was delivered by, where the heading names one (a Radiomessaggio, a
+   * Videomessaggio). Absent means the ordinary text. Never authority-bearing; see
+   * document.schema.json.
+   */
+  medium?: 'radio' | 'video';
+  /**
    * Membership in an annual series; `id` resolves against data/series.json (invariant 23).
    * `year` is the occasion year the title prints, not the year of `date`; together with
    * `id` it is the document's id (`mag:{issuer}/{id}-{year}`, invariants 10 and 12).

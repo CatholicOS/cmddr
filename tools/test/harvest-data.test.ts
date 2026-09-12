@@ -2054,6 +2054,34 @@ describe('the whole corpus', () => {
     }
   });
 
+  it('carries a medium on exactly the documents whose heading names one, and no other (#27)', () => {
+    // Read from the title's own word and nothing else (toDocument.readMedium). Pinned by
+    // id so that a change in the rule, a re-fetched fixture or a new shelf that brings
+    // radio and video messages with it (pont-messages, #4) fails here rather than
+    // silently moving the set. Nine radio, two video at the time of writing.
+    const byMedium = (m: string) => everything.filter((d) => d.medium === m).map((d) => d.id).sort();
+    expect(byMedium('radio')).toEqual([
+      'mag:john-xxiii/message-1960-12-22', 'mag:john-xxiii/message-1961-09-10',
+      'mag:john-xxiii/message-1961-12-21', 'mag:john-xxiii/message-1962-08-12',
+      'mag:john-xxiii/message-1963-02-27', 'mag:john-xxiii/message-1963-04-13',
+      'mag:john-xxiii/urbi-et-orbi-christmas-1961', 'mag:john-xxiii/urbi-et-orbi-easter-1960',
+      'mag:john-xxiii/urbi-et-orbi-easter-1961',
+    ]);
+    expect(byMedium('video')).toEqual([
+      'mag:francis-i/world-youth-day-2019', 'mag:leo-xiv/world-mission-day-2025',
+    ]);
+    for (const d of everything) {
+      const named = /radiomessagg/i.test(d.title) ? 'radio' : /videomessagg/i.test(d.title) ? 'video' : undefined;
+      expect(d.medium, d.id).toBe(named);
+    }
+    // The medium describes delivery, not the act: the three feast-day radio messages keep
+    // their Urbi et Orbi genre, liturgical actKind and dated series.
+    for (const d of everything.filter((d) => d.medium === 'radio' && d.genre === 'urbi-et-orbi')) {
+      expect(d.actKind, d.id).toBe('liturgical');
+      expect(d.series?.id, d.id).toMatch(/^urbi-et-orbi-(christmas|easter)$/);
+    }
+  });
+
   it('populates series only from the Messaggi shelves (#4)', () => {
     for (const d of everything) {
       if (d.series) expect(isMessagesShelf(d.source?.shelf ?? null), d.id).toBe(true);
