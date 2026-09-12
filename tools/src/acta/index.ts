@@ -10,12 +10,15 @@
  *   page number; a running header, always the first line of a page after the form feed,
  *   can interrupt it;
  * - the date is printed day-first from 2017 (`5 Dec. 2022`) and year-first in 2015-2016
- *   (`2014 Dec. 20`); `»` is a ditto mark inheriting the previous entry's value;
+ *   (`2014 Dec. 20`); `»` is a ditto mark inheriting the previous entry's value; a line
+ *   that prints a month and no day (`  Sept. » Chengden.:`, 2018) is a defect, but its
+ *   month still governs the ditto marks of the entries after it;
  * - month abbreviations vary (`Mar.`/`Mart.`, `Feb.`/`Febr.`, `Sep.`/`Sept.`, with or
  *   without the full stop);
  * - the incipit is printed in guillemets (`« Chi è fedele ».`) or bare (`Ius nativum.`),
  *   ended by a full stop or a colon; a constitution erecting a see prints a small-caps
- *   toponym instead (`VuCArien.:`), which OCR renders in mixed case;
+ *   toponym instead (`VuCArien.:`), which OCR renders in mixed case, or (2017) a toponym
+ *   and then the incipit in guillemets;
  * - a line-end hyphen breaks a word (`Sanc-` / `torum`), which pypdf renders with a
  *   space before the hyphen (`cele -`);
  * - the volume is read from the title page (`Vol. CXV`, or 2015's OCR `vol. CvII`).
@@ -35,6 +38,13 @@ export interface ActaEntry {
   date: string;
   /** The incipit, guillemets and trailing punctuation stripped; null when the entry prints none. */
   incipit: string | null;
+  /**
+   * Whether the incipit is printed in guillemets (`« Chi è fedele »`), the index's mark for
+   * a vernacular incipit -- although the 2019 canonisation decretals wrap Latin ones too,
+   * so the mark evidences the printing, not the language. False for a bare incipit and
+   * for an entry without one.
+   */
+  quoted: boolean;
   /** The small-caps toponym of a constitution, as extracted ('VuCArien.'); null otherwise. */
   toponym: string | null;
   /** The rest of the entry text, leaders and page removed. */
@@ -62,6 +72,12 @@ const MONTHS: Record<string, number> = {
 const MONTH_RE = /^(Ian|Febr?|Mart?|Apr|Maii|Iun|Iul|Aug|Sept?|Oct|Nov|Dec)\.?$/;
 // `5 Dec. 2022 …`, `» » » …`, `2014 Dec. 20 …`; 2017 once prints the year as `2017.`.
 const DATE_LINE_RE = /^\s*(»|\d{1,4})\s+(»|[A-Z][a-z]{2,3}\.?)\s+(»|\d{1,4})\.?(?:\s+(.*))?$/;
+/**
+ * A date line whose day is not printed (`  Sept. » Chengden.: …`, AAS 2018 p. 689): the
+ * entry cannot be dated and is reported, but the month it prints is what the ditto marks
+ * of the following entries refer to, so it must still advance the ditto state.
+ */
+const DAYLESS_DATE_LINE_RE = /^\s*([A-Z][a-z]{2,3}\.?)\s+(»|\d{4})(?:\s+(.*))?$/;
 const RUNNING_HEADER_RE =
   /^\s*(\d+\s+Acta Apostolic(?:ae|æ) Sedis\s*[–-]\s*Commentarium Officiale|Index documentorum chronologico ordine digestus\s+\d+)\s*$/;
 // The parts are numbered `II – `, `IV. – ` or (2018's Diarium) not at all.
@@ -162,20 +178,25 @@ const isToponym = (head: string): boolean =>
  * ended by a colon or full stop that `isToponym` is a toponym instead. Runs of spaces
  * in `text` are significant: `joinLines` keeps a double space as one.
  */
-export function splitEntryText(text: string): Pick<ActaEntry, 'incipit' | 'toponym' | 'description'> {
+export function splitEntryText(text: string): Pick<ActaEntry, 'incipit' | 'quoted' | 'toponym' | 'description'> {
   const tidy = (s: string) => s.replace(/\s+/g, ' ').trim();
   const strip = (s: string) => tidy(s.replace(/^[\s.:,;–-]+/, ''));
   const g = text.match(/^«\s*(.+?)\s*»(.*)$/s);
-  if (g) return { incipit: tidy(g[1]!), toponym: null, description: strip(g[2]!) };
+  if (g) return { incipit: tidy(g[1]!), quoted: true, toponym: null, description: strip(g[2]!) };
 
+  // A toponym can be followed by the constitution's incipit in guillemets (the 2017
+  // index: `DAnlIensIs. « Insita humanae naturae ». In Honduria …`, four entries); the
+  // incipit is then read too, so the document mints from it rather than provisionally.
+  const withToponym = (toponym: string, rest: string) => {
+    const q = strip(rest).match(/^«\s*(.+?)\s*»(.*)$/s);
+    return q
+      ? { incipit: tidy(q[1]!), quoted: true, toponym, description: strip(q[2]!) }
+      : { incipit: null, quoted: false, toponym, description: strip(rest) };
+  };
   const colon = text.match(/^([^:]{1,80}?)\s*:(\s.*|)$/s);
-  if (colon && isToponym(tidy(colon[1]!))) {
-    return { incipit: null, toponym: tidy(colon[1]!), description: strip(colon[2]!) };
-  }
+  if (colon && isToponym(tidy(colon[1]!))) return withToponym(tidy(colon[1]!), colon[2]!);
   const dot = text.match(/^(\S{1,40}?)\.(\s.*|)$/s);
-  if (dot && isToponym(dot[1]!)) {
-    return { incipit: null, toponym: `${dot[1]}.`, description: strip(dot[2]!) };
-  }
+  if (dot && isToponym(dot[1]!)) return withToponym(`${dot[1]}.`, dot[2]!);
   // The first full stop or colon that ends a word (so `S.`, `Card.` and `Em.mum` are
   // passed over), followed by white space or the end; or a double space.
   const re = /\s?[.:](?=\s|$)|\s{2,}/g;
@@ -184,19 +205,19 @@ export function splitEntryText(text: string): Pick<ActaEntry, 'incipit' | 'topon
     const head = text.slice(0, m.index);
     const incipit = asIncipit(head);
     if (incipit !== null) {
-      return { incipit, toponym: null, description: strip(text.slice(m.index + m[0].length)) };
+      return { incipit, quoted: false, toponym: null, description: strip(text.slice(m.index + m[0].length)) };
     }
     // A prose head will not become an incipit by extending it; one ending in an
     // abbreviation might.
     const words = tidy(head).split(' ');
     if (words.length > 8 || /\d/.test(head) || !isAbbreviation(words[words.length - 1]!)) break;
   }
-  return { incipit: null, toponym: null, description: tidy(text) };
+  return { incipit: null, quoted: false, toponym: null, description: tidy(text) };
 }
 
 /** Read the printed date tokens against the previous entry's date; null when a ditto has nothing to inherit. */
 function resolveDate(
-  a: string, b: string, c: string, prev: { day: number; month: number; year: number } | null,
+  a: string, b: string, c: string, prev: { day: number | null; month: number; year: number } | null,
 ): { day: number; month: number; year: number } | null {
   // Day-first (`5 Dec. 2022`, `30 Sep. »`) from 2017; year-first (`2014 Dec. 20`,
   // `» » 22`) in 2015-2016. The layout is read off each line from where the four-digit
@@ -204,7 +225,7 @@ function resolveDate(
   const yearFirst = /^\d{4}$/.test(a) || /^\d{1,2}$/.test(c);
   const [dayTok, yearTok] = yearFirst ? [c, a] : [a, c];
   const monthTok = b;
-  const day = dayTok === '»' ? prev?.day : Number(dayTok);
+  const day = dayTok === '»' ? (prev?.day ?? undefined) : Number(dayTok);
   const year = yearTok === '»' ? prev?.year : Number(yearTok);
   const month = monthTok === '»' ? prev?.month : MONTHS[monthTok.replace(/\.$/, '').toLowerCase()];
   if (day === undefined || month === undefined || year === undefined) return null;
@@ -242,15 +263,17 @@ export function parseActaIndex(text: string, opts: { year?: number } = {}): Acta
   let category: string | null = null;
   let headingLines: string[] = [];     // the raw lines of the current category heading
   let headingOpen = false;             // the previous line was a category heading (continuations attach)
-  let prev: { day: number; month: number; year: number } | null = null;
-  let open: { lines: string[]; date: string; category: string; pope: string } | null = null;
+  let prev: { day: number | null; month: number; year: number } | null = null;
+  // `date` is null for an entry whose day is not printed: read to its page, then reported.
+  let open: { lines: string[]; date: string | null; category: string; pope: string } | null = null;
   const unseen = new Set<string>();
 
   const defect = (cat: string | null, message: string) =>
     result.defects.push({ category: cat ?? '(none)', message });
   const flushDefect = () => {
     if (!open) return;
-    defect(open.category, `entry without a page number: ${open.lines.map((l) => l.trim()).join(' / ')}`);
+    const what = open.date === null ? 'entry without a day' : 'entry without a page number';
+    defect(open.category, `${what}: ${open.lines.map((l) => l.trim()).join(' / ')}`);
     open = null;
   };
 
@@ -300,6 +323,7 @@ export function parseActaIndex(text: string, opts: { year?: number } = {}): Acta
     }
 
     const d = line.match(DATE_LINE_RE);
+    const dayless = d ? null : line.match(DAYLESS_DATE_LINE_RE);
     if (d && (d[2] === '»' || MONTH_RE.test(d[2]!))) {
       flushDefect();
       const date = resolveDate(d[1]!, d[2]!, d[3]!, prev);
@@ -313,6 +337,24 @@ export function parseActaIndex(text: string, opts: { year?: number } = {}): Acta
         lines: [line], category, pope,
         date: `${date.year}-${pad(date.month)}-${pad(date.day)}`,
       };
+    } else if (dayless && MONTH_RE.test(dayless[1]!)) {
+      // No day: the entry is read to its page and reported (never dated by a guess), and
+      // the ditto state takes the month and year it prints with no day to inherit, so a
+      // `» »` on the next entry resolves to this month and its own printed day, and a
+      // `»` day is unreadable rather than a previous entry's.
+      flushDefect();
+      const month = MONTHS[dayless[1]!.replace(/\.$/, '').toLowerCase()];
+      // Read through a closure: the control-flow analysis narrows `prev` to its
+      // initialiser here and would type the inherited year as never.
+      const inheritedYear = (): number | undefined => prev?.year;
+      const year = dayless[2] === '»' ? inheritedYear() : Number(dayless[2]);
+      if (month === undefined || year === undefined) {
+        defect(category, `unreadable date: ${line.trim()}`);
+        prev = null;
+        continue;
+      }
+      prev = { day: null, month, year };
+      open = { lines: [line], category, pope, date: null };
     } else if (open === null) {
       defect(category, `line outside any entry: ${line.trim()}`);
       continue;
@@ -335,6 +377,7 @@ export function parseActaIndex(text: string, opts: { year?: number } = {}): Acta
       if (open.lines.length > 8) flushDefect();
       continue;
     }
+    if (open.date === null) { flushDefect(); continue; }
     const page = Number(pageMatch[1]);
     const body = open.lines.map((l, k) => (k === 0 ? (l.match(DATE_LINE_RE)?.[4] ?? '') : l));
     body[body.length - 1] = body[body.length - 1]!.slice(0, -pageTail);
@@ -344,14 +387,20 @@ export function parseActaIndex(text: string, opts: { year?: number } = {}): Acta
     let entryPope = open.pope;
     // An act of an earlier pontificate printed in this volume carries its own date, and
     // sometimes its pope, in brackets before the incipit: `11 Maii 2018 [2010 Sept. 19]
-    // « Admodum fideli »`, `[Benedictus XVI: 2010 Apr. 25]`. The bracketed date is the
-    // act's date; the printed one stays in `raw`.
-    const bracket = entryText.match(/^\[(?:([A-Za-z]+(?: [IVXL]+)?):\s*)?(\d{4})\s+([A-Z][a-z]{2,3})\.?\s+(\d{1,2})\]\s*/);
+    // « Admodum fideli »`, `[Benedictus XVI: 2010 Apr. 25]` (2018), `[Benedictus PP. XVI:
+    // 6 Iun. 2010]` (2020, 2021 -- day-first, and with the `PP.`). The bracketed date is
+    // the act's date; the printed one stays in `raw`. A bracket that names no pope leaves
+    // the entry under the part's pope, and the creator holds it by its date (create.ts).
+    const bracket = entryText.match(
+      /^\[(?:([A-Za-z]+(?: PP\.)?(?: [IVXL]+)?):\s*)?(?:(\d{4})\s+([A-Z][a-z]{2,3})\.?\s+(\d{1,2})|(\d{1,2})\s+([A-Z][a-z]{2,3})\.?\s+(\d{4}))\]\s*/,
+    );
     if (bracket) {
-      const inner = resolveDate(bracket[2]!, bracket[3]!, bracket[4]!, null);
+      const inner = bracket[2] !== undefined
+        ? resolveDate(bracket[2], bracket[3]!, bracket[4]!, null)
+        : resolveDate(bracket[5]!, bracket[6]!, bracket[7]!, null);
       if (inner) {
         entryDate = `${inner.year}-${pad(inner.month)}-${pad(inner.day)}`;
-        if (bracket[1]) entryPope = bracket[1];
+        if (bracket[1]) entryPope = bracket[1].replace(' PP.', '');
         entryText = entryText.slice(bracket[0].length);
       }
     }
