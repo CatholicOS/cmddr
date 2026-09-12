@@ -4,16 +4,32 @@ import { checkDocuments } from '../src/validate/invariants.js';
 import { parseShelfIndex } from '../src/harvest/shelf.js';
 import {
   shelvesFor, isErectionCandidate, isUnconfirmedCandidate, CIRCUMSCRIPTION_ERECTIONS,
-  RECOVERED_INCIPITS,
+  RECOVERED_INCIPITS, isMessagesShelf, seriesForShelf, SERIES_OCCASION_YEARS, SERIES_ORDINALS,
+  SERIES, POPES,
 } from '../src/mappings/index.js';
+import { fixtureName } from '../src/harvest/fixtures.js';
+import { readOrdinal, readOccasionYear } from '../src/harvest/seriesTitle.js';
+import { easterSunday } from '../src/dates.js';
+import { slugify } from '../src/slug.js';
 import type { DocumentRecord } from '../src/types.js';
 
-const load = (n: string) =>
+/** Every record of one issuer's file, whichever shelf it came from. */
+const loadAll = (n: string) =>
   JSON.parse(readFileSync(`data/documents/${n}.json`, 'utf8')) as DocumentRecord[];
+/**
+ * The formal-shelf records of one issuer: everything but the `messages/*` shelves, which
+ * the per-pontificate blocks below were written and counted before, and which are keyed
+ * by occasion rather than incipit (so 'omits the incipit exactly when provisional' holds
+ * only here). The *Messaggi* shelves have their own block at the end.
+ */
+const load = (n: string) => loadAll(n).filter((d) => !isMessagesShelf(d.source?.shelf ?? null));
 const genres = JSON.parse(readFileSync('data/genres.json', 'utf8')) as
   Array<{ id: string; issuerTypes?: string[]; allowedCharacteristics?: string[] }>;
 const keywords = JSON.parse(readFileSync('data/keywords.json', 'utf8')) as Array<{ id: string }>;
-const series = JSON.parse(readFileSync('data/series.json', 'utf8')) as Array<{ id: string }>;
+const series = JSON.parse(readFileSync('data/series.json', 'utf8')) as
+  Array<{ id: string; firstYear?: number }>;
+/** The date every pope fixture was fetched (FIXTURES_RETRIEVED in harvest/run.ts). */
+const POPE_FIXTURES_RETRIEVED = '2026-09-12';
 
 const all = [...load('benedict-xiv'), ...load('pius-ix'), ...load('leo-xiii'), ...load('vatican-i')];
 
@@ -131,7 +147,7 @@ describe('the harvested pilot corpus', () => {
     let calls: unknown[][];
     try {
       for (const shelf of shelvesFor('leo-xiii')) {
-        parseShelfIndex(readFileSync(`tools/fixtures/leo-xiii-${shelf}.html`, 'utf8'), 'leo-xiii', shelf);
+        parseShelfIndex(readFileSync(`tools/fixtures/${fixtureName('leo-xiii', shelf)}.html`, 'utf8'), 'leo-xiii', shelf);
       }
     } finally {
       calls = warnSpy.mock.calls;
@@ -168,8 +184,8 @@ describe('the harvested pilot corpus', () => {
     // Every document's source.retrieved must match the constant FIXTURES_RETRIEVED,
     // ensuring the harvest is timestamp-independent and does not rewrite data/
     // when run without an explicit env var override.
-    expect(all.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
-    const mismatched = all.filter((d) => d.source?.retrieved !== '2026-09-07');
+    expect(all.every((d) => d.source?.retrieved === POPE_FIXTURES_RETRIEVED)).toBe(true);
+    const mismatched = all.filter((d) => d.source?.retrieved !== POPE_FIXTURES_RETRIEVED);
     expect(mismatched).toEqual([]);
   });
 
@@ -950,7 +966,7 @@ describe('the John Paul I corpus', () => {
     try {
       for (const shelf of shelvesFor('john-paul-i')) {
         parseShelfIndex(
-          readFileSync(`tools/fixtures/john-paul-i-${shelf}.html`, 'utf8'), 'john-paul-i', shelf);
+          readFileSync(`tools/fixtures/${fixtureName('john-paul-i', shelf)}.html`, 'utf8'), 'john-paul-i', shelf);
       }
     } finally {
       calls = warnSpy.mock.calls;
@@ -981,7 +997,7 @@ describe('the John Paul I corpus', () => {
   });
 
   it('records the fixture retrieval date for every document', () => {
-    expect(docs.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
+    expect(docs.every((d) => d.source?.retrieved === POPE_FIXTURES_RETRIEVED)).toBe(true);
   });
 
   it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 178 John XXIII, and 687 Paul VI records untouched', () => {
@@ -1151,7 +1167,7 @@ describe('the John Paul II corpus', () => {
     let calls: unknown[][];
     try {
       for (const shelf of shelvesFor('john-paul-ii')) {
-        const index = readFileSync(`tools/fixtures/john-paul-ii-${shelf}.html`, 'utf8');
+        const index = readFileSync(`tools/fixtures/${fixtureName('john-paul-ii', shelf)}.html`, 'utf8');
         if (shelf === 'apost_letters') {
           for (let y = 1978; y <= 2005; y++) {
             parseShelfIndex(
@@ -1172,7 +1188,7 @@ describe('the John Paul II corpus', () => {
   });
 
   it('records the fixture retrieval date for every document', () => {
-    expect(docs.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
+    expect(docs.every((d) => d.source?.retrieved === POPE_FIXTURES_RETRIEVED)).toBe(true);
   });
 
   it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 178 John XXIII, 687 Paul VI, and 7 John Paul I records untouched', () => {
@@ -1212,7 +1228,7 @@ describe('the Benedict XVI corpus', () => {
 
   it('has no year-partitioned shelf (every fixture is an aggregate page)', () => {
     for (const shelf of shelvesFor('benedict-xvi')) {
-      const index = readFileSync(`tools/fixtures/benedict-xvi-${shelf}.html`, 'utf8');
+      const index = readFileSync(`tools/fixtures/${fixtureName('benedict-xvi', shelf)}.html`, 'utf8');
       expect(index.includes('div class="item"'), shelf).toBe(true);
     }
   });
@@ -1279,7 +1295,7 @@ describe('the Benedict XVI corpus', () => {
     // every heading's parenthetical is either a single plain date or the already-handled
     // dash-gloss shape.
     for (const shelf of shelvesFor('benedict-xvi')) {
-      const html = readFileSync(`tools/fixtures/benedict-xvi-${shelf}.html`, 'utf8');
+      const html = readFileSync(`tools/fixtures/${fixtureName('benedict-xvi', shelf)}.html`, 'utf8');
       const h2s = [...html.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/g)].map((m) => m[1]!);
       for (const h2 of h2s) {
         const text = h2.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
@@ -1332,7 +1348,7 @@ describe('the Benedict XVI corpus', () => {
     let calls: unknown[][];
     try {
       for (const shelf of shelvesFor('benedict-xvi')) {
-        const index = readFileSync(`tools/fixtures/benedict-xvi-${shelf}.html`, 'utf8');
+        const index = readFileSync(`tools/fixtures/${fixtureName('benedict-xvi', shelf)}.html`, 'utf8');
         parseShelfIndex(index, 'benedict-xvi', shelf);
       }
     } finally {
@@ -1344,7 +1360,7 @@ describe('the Benedict XVI corpus', () => {
   });
 
   it('records the fixture retrieval date for every document', () => {
-    expect(docs.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
+    expect(docs.every((d) => d.source?.retrieved === POPE_FIXTURES_RETRIEVED)).toBe(true);
   });
 
   it('leaves the 383 pilot, 306 Pius X, 158/253 Pius XI/XII, 63 Benedict XV, 178 John XXIII, 687 Paul VI, 7 John Paul I, and 1801 John Paul II records untouched', () => {
@@ -1391,7 +1407,7 @@ describe('the Francis corpus', () => {
 
   it('has no year-partitioned shelf (every fixture is an aggregate page)', () => {
     for (const shelf of shelvesFor('francesco')) {
-      const index = readFileSync(`tools/fixtures/francesco-${shelf}.html`, 'utf8');
+      const index = readFileSync(`tools/fixtures/${fixtureName('francesco', shelf)}.html`, 'utf8');
       expect(index.includes('div class="item"'), shelf).toBe(true);
     }
   });
@@ -1430,7 +1446,7 @@ describe('the Francis corpus', () => {
     // candidate awaiting curation. Confirmed against the actual harvested items, not
     // just the exclusion set's presence.
     for (const shelf of shelvesFor('francesco')) {
-      const index = readFileSync(`tools/fixtures/francesco-${shelf}.html`, 'utf8');
+      const index = readFileSync(`tools/fixtures/${fixtureName('francesco', shelf)}.html`, 'utf8');
       const items = parseShelfIndex(index, 'francesco', shelf);
       expect(items.every((i) => !isErectionCandidate(i)), shelf).toBe(true);
     }
@@ -1512,7 +1528,7 @@ describe('the Francis corpus', () => {
     let calls: unknown[][];
     try {
       for (const shelf of shelvesFor('francesco')) {
-        const index = readFileSync(`tools/fixtures/francesco-${shelf}.html`, 'utf8');
+        const index = readFileSync(`tools/fixtures/${fixtureName('francesco', shelf)}.html`, 'utf8');
         parseShelfIndex(index, 'francesco', shelf);
       }
     } finally {
@@ -1524,7 +1540,7 @@ describe('the Francis corpus', () => {
   });
 
   it('records the fixture retrieval date for every document', () => {
-    expect(docs.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
+    expect(docs.every((d) => d.source?.retrieved === POPE_FIXTURES_RETRIEVED)).toBe(true);
   });
 
   it('leaves every prior pontificate untouched', () => {
@@ -1569,7 +1585,7 @@ describe('the Leo XIV corpus', () => {
 
   it('has no year-partitioned shelf (every fixture is an aggregate page)', () => {
     for (const shelf of shelvesFor('leo-xiv')) {
-      const index = readFileSync(`tools/fixtures/leo-xiv-${shelf}.html`, 'utf8');
+      const index = readFileSync(`tools/fixtures/${fixtureName('leo-xiv', shelf)}.html`, 'utf8');
       expect(index.includes('div class="item"'), shelf).toBe(true);
     }
   });
@@ -1604,7 +1620,7 @@ describe('the Leo XIV corpus', () => {
     // candidate awaiting curation. Confirmed against the actual harvested items, not
     // just the exclusion set's presence.
     for (const shelf of shelvesFor('leo-xiv')) {
-      const index = readFileSync(`tools/fixtures/leo-xiv-${shelf}.html`, 'utf8');
+      const index = readFileSync(`tools/fixtures/${fixtureName('leo-xiv', shelf)}.html`, 'utf8');
       const items = parseShelfIndex(index, 'leo-xiv', shelf);
       expect(items.every((i) => !isErectionCandidate(i)), shelf).toBe(true);
     }
@@ -1649,7 +1665,7 @@ describe('the Leo XIV corpus', () => {
     let calls: unknown[][];
     try {
       for (const shelf of shelvesFor('leo-xiv')) {
-        const index = readFileSync(`tools/fixtures/leo-xiv-${shelf}.html`, 'utf8');
+        const index = readFileSync(`tools/fixtures/${fixtureName('leo-xiv', shelf)}.html`, 'utf8');
         parseShelfIndex(index, 'leo-xiv', shelf);
       }
     } finally {
@@ -1661,7 +1677,7 @@ describe('the Leo XIV corpus', () => {
   });
 
   it('records the fixture retrieval date for every document', () => {
-    expect(docs.every((d) => d.source?.retrieved === '2026-09-07')).toBe(true);
+    expect(docs.every((d) => d.source?.retrieved === POPE_FIXTURES_RETRIEVED)).toBe(true);
   });
 
   it('leaves every prior pontificate untouched', () => {
@@ -2029,13 +2045,19 @@ describe('the whole corpus', () => {
     expect(keyworded.length).toBeGreaterThan(0);
     for (const d of keyworded) expect(d.actKind, d.id).toBe('governance');
     expect(governance.map((d) => d.id).sort()).toEqual(keyworded.map((d) => d.id).sort());
+    // The only other actKind source is the Urbi et Orbi shelf, every item of which is a
+    // liturgical act (messages spec §3.2.7); nothing else carries the flag at all.
     for (const d of everything) {
-      if (!keyworded.includes(d)) expect(d.actKind, d.id).toBeUndefined();
+      if (keyworded.includes(d)) continue;
+      if (d.genre === 'urbi-et-orbi') expect(d.actKind, d.id).toBe('liturgical');
+      else expect(d.actKind, d.id).toBeUndefined();
     }
   });
 
-  it('populates no series yet: the messages shelves are not harvested until #4', () => {
-    for (const d of everything) expect(d.series, d.id).toBeUndefined();
+  it('populates series only from the Messaggi shelves (#4)', () => {
+    for (const d of everything) {
+      if (d.series) expect(isMessagesShelf(d.source?.shelf ?? null), d.id).toBe(true);
+    }
   });
 
   it('keeps the keyword out of every authority-bearing field', () => {
@@ -2259,8 +2281,12 @@ describe('the recovered-incipit shelf', () => {
     ]);
   });
 
-  it('leaves the provisional shelf at 299 -- sixteen recovered, one merged away', () => {
-    expect(everything.filter((d) => d.idStatus === 'provisional')).toHaveLength(299);
+  it('leaves the provisional shelf at 299 on the formal shelves -- sixteen recovered, one merged away', () => {
+    // Plus the thirteen Urbi et Orbi dated neither 25 December nor Easter Sunday, which
+    // take the provisional form by design (messages spec §3.2.7); counted in their own block.
+    const formal = everything.filter((d) => !isMessagesShelf(d.source?.shelf ?? null));
+    expect(formal.filter((d) => d.idStatus === 'provisional')).toHaveLength(299);
+    expect(everything.filter((d) => d.idStatus === 'provisional')).toHaveLength(299 + 13);
   });
 
   it('keeps the two Leo XIV 2025 letters provisional, which AAS confirms have no incipit', () => {
@@ -2355,5 +2381,219 @@ describe('the circumscription queue', () => {
     const pxii = everything.filter((d) => d.issuerId === 'rp:pius-xii');
     expect(pxii.filter((d) => d.keywords?.includes('circumscription-elevation'))).toHaveLength(9);
     expect(pxii.filter((d) => d.keywords?.includes('circumscription-erection'))).toHaveLength(19);
+  });
+});
+
+describe('the Messaggi shelves (messages spec)', () => {
+  const everything = readdirSync('data/documents')
+    .filter((f) => f.endsWith('.json'))
+    .flatMap((f) => JSON.parse(readFileSync(`data/documents/${f}`, 'utf8')) as DocumentRecord[]);
+  const messages = everything.filter((d) => isMessagesShelf(d.source?.shelf ?? null));
+  const seriesDocs = messages.filter((d) => d.series);
+  const urbi = messages.filter((d) => d.genre === 'urbi-et-orbi');
+  const pageSlugOf = (d: DocumentRecord) => d.source!.url!.match(/\/content\/([^/]+)\//)![1]!;
+  const curationKey = (d: DocumentRecord) =>
+    `${pageSlugOf(d)}|${d.source!.shelf}|${slugify(d.title)}|${d.date}`;
+
+  it('holds every item of the sixty series and Urbi et Orbi sub-shelves, one merged away', () => {
+    // 691 div.item entries across the 60 fixtures (measured 2026-09-12); Pius XII's urbi
+    // shelf lists the Easter 1956 message twice, once under a mistyped 1953 URL date
+    // (DATE_CORRECTIONS), and pass 1 merges the pair. 691 - 1 = 690. Pinned per pope so
+    // a silently dropped sub-shelf fails here rather than vanishing.
+    expect(messages).toHaveLength(690);
+    const perPope = Object.fromEntries(
+      ['pius-xii', 'john-xxiii', 'paul-vi', 'john-paul-ii', 'benedict-xvi', 'francis-i', 'leo-xiv']
+        .map((p) => [p, messages.filter((d) => d.issuerId === `rp:${p}`).length]));
+    expect(perPope).toEqual({
+      'pius-xii': 7, 'john-xxiii': 15, 'paul-vi': 90, 'john-paul-ii': 304,
+      'benedict-xvi': 87, 'francis-i': 168, 'leo-xiv': 19,
+    });
+  });
+
+  it('pins the per-series counts, so a silent drop fails loudly', () => {
+    const perSeries = Object.fromEntries([...new Set(seriesDocs.map((d) => d.series!.id))].sort()
+      .map((id) => [id, seriesDocs.filter((d) => d.series!.id === id).length]));
+    expect(perSeries).toEqual({
+      'lent': 54,
+      'urbi-et-orbi-christmas': 66,
+      'urbi-et-orbi-easter': 73,
+      'world-childrens-day': 1,
+      'world-communications-day': 60,
+      'world-day-for-consecrated-life': 21,
+      'world-day-of-grandparents-and-the-elderly': 6,
+      'world-day-of-migrants-and-refugees': 49,
+      'world-day-of-peace': 59,
+      'world-day-of-prayer-for-the-care-of-creation': 12,
+      'world-day-of-prayer-for-vocations': 61,
+      'world-day-of-the-poor': 10,
+      'world-day-of-the-sick': 35,
+      'world-food-day': 42,
+      'world-literacy-day': 20,
+      'world-mission-day': 64,
+      'world-tourism-day': 6,
+      'world-youth-day': 38,
+    });
+    expect(seriesDocs).toHaveLength(690 - 13);
+  });
+
+  it('files every series sub-shelf item as a message and every urbi item as an Urbi et Orbi', () => {
+    for (const d of messages) {
+      const shelf = seriesForShelf(d.source!.shelf);
+      expect(shelf, d.id).not.toBeNull();
+      expect(d.genre, d.id).toBe(shelf!.kind === 'urbi' ? 'urbi-et-orbi' : 'message');
+      expect(d.sourceGenreLabel, d.id).toBe(d.source!.shelf);
+      expect(d.characteristics, d.id).toBeUndefined();
+      expect(d.incipit, d.id).toBeUndefined();
+    }
+  });
+
+  it('gives every message a series in this PR: the occasional pont-messages shelf is out of scope', () => {
+    const plain = everything.filter((d) => d.genre === 'message');
+    expect(plain).toHaveLength(538);
+    for (const d of plain) {
+      expect(d.series, d.id).toBeDefined();
+      expect(d.idStatus, d.id).toBe('minted');
+      expect(d.actKind, d.id).toBeUndefined();
+    }
+  });
+
+  it('gives every series document an occasion year and the series-form id', () => {
+    for (const d of seriesDocs) {
+      expect(Number.isInteger(d.series!.year), d.id).toBe(true);
+      expect(d.id, d.id).toBe(`mag:${d.issuerId.slice(3)}/${d.series!.id}-${d.series!.year}`);
+      expect(d.idStatus, d.id).toBe('minted');
+    }
+  });
+
+  it('marks every Urbi et Orbi as a liturgical act, in a dated series or not', () => {
+    expect(urbi).toHaveLength(152);
+    for (const d of urbi) expect(d.actKind, d.id).toBe('liturgical');
+  });
+
+  it('classifies the Urbi et Orbi by date alone: 25 December, Easter Sunday, or neither', () => {
+    const neither: string[] = [];
+    for (const d of urbi) {
+      const year = Number(d.date.slice(0, 4));
+      const expected = d.date.endsWith('-12-25') ? 'urbi-et-orbi-christmas'
+        : d.date === easterSunday(year) ? 'urbi-et-orbi-easter' : null;
+      expect(d.series?.id ?? null, d.id).toBe(expected);
+      if (expected === null) {
+        neither.push(d.id);
+        expect(d.idStatus, d.id).toBe('provisional');
+        expect(d.id, d.id).toMatch(/^mag:[a-z0-9-]+\/urbi-et-orbi-\d{4}-\d{2}-\d{2}$/);
+      }
+    }
+    expect(neither.sort()).toEqual([
+      'mag:benedict-xvi/urbi-et-orbi-2005-04-20',
+      'mag:francis-i/urbi-et-orbi-2020-03-27',
+      'mag:john-paul-ii/urbi-et-orbi-1999-12-31',
+      'mag:john-paul-ii/urbi-et-orbi-2000-12-31',
+      'mag:john-xxiii/urbi-et-orbi-1960-12-22',
+      'mag:john-xxiii/urbi-et-orbi-1961-09-10',
+      'mag:john-xxiii/urbi-et-orbi-1961-12-21',
+      'mag:john-xxiii/urbi-et-orbi-1962-04-21',
+      'mag:john-xxiii/urbi-et-orbi-1962-08-12',
+      'mag:john-xxiii/urbi-et-orbi-1962-12-22',
+      'mag:john-xxiii/urbi-et-orbi-1963-02-27',
+      'mag:john-xxiii/urbi-et-orbi-1963-04-13',
+      'mag:leo-xiv/urbi-et-orbi-2025-05-08',
+    ]);
+  });
+
+  it('records an ordinal exactly where the title prints one or a curated row supplies it', () => {
+    for (const d of seriesDocs) {
+      if (d.genre === 'urbi-et-orbi') { expect(d.series!.ordinal, d.id).toBeUndefined(); continue; }
+      const curated = SERIES_ORDINALS[curationKey(d)];
+      const read = readOrdinal(d.title);
+      const expected = curated?.ordinal ?? (read.kind === 'read' ? read.value : undefined);
+      expect(d.series!.ordinal, d.id).toBe(expected);
+      // A printed token the parser cannot read must have a curated row: nothing is dropped silently.
+      if (read.kind === 'unreadable') expect(curated, `${d.id}: '${read.printed}'`).toBeDefined();
+    }
+  });
+
+  it('reads the ordinal in both scripts, and takes the year from the title, never from date', () => {
+    const by = Object.fromEntries(seriesDocs.map((d) => [d.id, d]));
+    expect(by['mag:francis-i/world-day-of-peace-2025']!.series).toEqual(
+      { id: 'world-day-of-peace', year: 2025, ordinal: 58 });
+    expect(by['mag:francis-i/world-day-of-peace-2025']!.date).toBe('2024-12-08');
+    expect(by['mag:paul-vi/world-day-of-peace-1968']!.series).toEqual(
+      { id: 'world-day-of-peace', year: 1968, ordinal: 1 });
+    expect(by['mag:francis-i/world-day-of-migrants-and-refugees-2024']!.series!.ordinal).toBe(110);
+    expect(by['mag:francis-i/world-day-of-prayer-for-vocations-2025']!.series!.ordinal).toBe(62);
+    expect(by['mag:leo-xiv/world-mission-day-2026']!.series!.ordinal).toBe(100);
+    expect(by['mag:francis-i/lent-2015']!.series).toEqual({ id: 'lent', year: 2015 });
+    expect(by['mag:francis-i/lent-2015']!.title).toBe('Quaresima 2015: Rinfrancate i vostri cuori (Gc 5,8)');
+    // The consecrated-life 2023 entry is titled without an ordinal inside a numbered series.
+    expect(by['mag:francis-i/world-day-for-consecrated-life-2023']!.series)
+      .toEqual({ id: 'world-day-for-consecrated-life', year: 2023 });
+  });
+
+  it("resolves Leo XIV's renamed sub-shelves to the same series as their predecessors'", () => {
+    const by = Object.fromEntries(seriesDocs.map((d) => [d.id, d]));
+    expect(by['mag:leo-xiv/world-mission-day-2026']!.source!.shelf).toBe('messages/mission');
+    expect(by['mag:francis-i/world-mission-day-2025']!.source!.shelf).toBe('messages/missions');
+    expect(by['mag:leo-xiv/world-day-of-the-poor-2025']!.source!.shelf).toBe('messages/poor');
+    expect(by['mag:leo-xiv/world-day-of-grandparents-and-the-elderly-2025']!.source!.shelf)
+      .toBe('messages/grandparents');
+    expect(by['mag:leo-xiv/world-day-of-prayer-for-the-care-of-creation-2025']!.source!.shelf)
+      .toBe('messages/creation');
+    expect(by['mag:john-xxiii/urbi-et-orbi-easter-1963']!.source!.shelf).toBe('messages/urbi_et_orbi');
+  });
+
+  it('lands every curated occasion-year and ordinal row on exactly one record (closed set)', () => {
+    const keys = new Map(messages.map((d) => [curationKey(d), d]));
+    for (const [key, row] of Object.entries(SERIES_OCCASION_YEARS)) {
+      const hit = keys.get(key);
+      expect(hit, key).toBeDefined();
+      expect(hit!.series!.year, key).toBe(row.year);
+      // A fill fills a gap; a correction overrides what was printed. Either way the parser
+      // alone would not have produced this year.
+      const read = readOccasionYear(hit!.title);
+      if (row.printed === null) expect(read.kind, key).toBe('none');
+      else expect(read.kind === 'read' ? read.value : null, key).not.toBe(row.year);
+    }
+    for (const [key, row] of Object.entries(SERIES_ORDINALS)) {
+      const hit = keys.get(key);
+      expect(hit, key).toBeDefined();
+      expect(hit!.series!.ordinal, key).toBe(row.ordinal);
+      const read = readOrdinal(hit!.title);
+      expect(read.kind === 'read' ? read.printed : read.kind === 'unreadable' ? read.printed : null, key)
+        .toBe(row.printed);
+    }
+    expect(Object.keys(SERIES_OCCASION_YEARS)).toHaveLength(32);
+    expect(Object.keys(SERIES_ORDINALS)).toHaveLength(4);
+  });
+
+  it('checks the printed ordinal against firstYear on 273 documents and finds no disagreement', () => {
+    const firstYear = new Map(SERIES.filter((s) => s.firstYear).map((s) => [s.id, s.firstYear!]));
+    const checked = seriesDocs.filter((d) => d.series!.ordinal !== undefined && firstYear.has(d.series!.id));
+    expect(checked).toHaveLength(273);
+    expect(checkDocuments(messages, genres, keywords, series).filter((v) => v.rule === 24)).toEqual([]);
+  });
+
+  it('satisfies every invariant, alone and beside the formal shelves', () => {
+    expect(checkDocuments(messages, genres, keywords, series)).toEqual([]);
+    expect(checkDocuments(everything, genres, keywords, series)).toEqual([]);
+  });
+
+  it('merges no message with a formal-shelf record: no alsoShelvedAs crosses into messages/*', () => {
+    const crossed = everything.filter((d) =>
+      d.source?.alsoShelvedAs?.some((s) => isMessagesShelf(s))
+      || (isMessagesShelf(d.source?.shelf ?? null) && d.source?.alsoShelvedAs?.length));
+    expect(crossed.map((d) => d.id)).toEqual([]);
+  });
+
+  it('lists every messages/* shelf of POPES on a series row, and no series row names a shelf no pope has', () => {
+    const configured = new Set(POPES.flatMap((p) => p.shelves).filter(isMessagesShelf)
+      .map((s) => s.slice('messages/'.length)));
+    for (const shelf of configured) expect(() => seriesForShelf(`messages/${shelf}`), shelf).not.toThrow();
+    for (const row of SERIES) {
+      for (const shelf of row.shelves) expect(configured.has(shelf), `${row.id}: ${shelf}`).toBe(true);
+    }
+  });
+
+  it('records the fixture retrieval date for every document', () => {
+    expect(messages.every((d) => d.source?.retrieved === POPE_FIXTURES_RETRIEVED)).toBe(true);
   });
 });

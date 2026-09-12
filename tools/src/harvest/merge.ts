@@ -1,5 +1,9 @@
 import { slugify } from '../slug.js';
+import { isMessagesShelf } from '../mappings/series.js';
 import type { HarvestItem } from '../types.js';
+
+/** The rank every `messages/{sub-shelf}` shelf takes in SHELF_SPECIFICITY; not itself a shelf name. */
+const MESSAGES_SHELF_RANK = 'messages/*';
 
 /**
  * Most specific shelf first: a document filed twice keeps the more specific genre.
@@ -14,7 +18,7 @@ import type { HarvestItem } from '../types.js';
  */
 export const SHELF_SPECIFICITY = [
   'encyclicals', 'apost_constitutions', 'apost_letters', 'bulls',
-  'briefs', 'motu_proprio', 'apost_exhortations', 'letters', 'speeches',
+  'briefs', 'motu_proprio', 'apost_exhortations', 'letters', MESSAGES_SHELF_RANK, 'speeches',
 ];
 /**
  * Benedict XV hyphenates 'apost-constitutions' (spec §2.5) -- the same genre as
@@ -31,8 +35,13 @@ const SHELF_ALIASES: Record<string, string> = { 'apost-constitutions': 'apost_co
 const rank = (shelf: string | null) => {
   // A flat-era (null) shelf and an unrecognised one both fall through to the same
   // least-specific rank; indexOf's own -1-for-not-found already covers a null shelf
-  // once it is fed the empty string, so no separate branch is needed for it.
-  const canonical = SHELF_ALIASES[shelf ?? ''] ?? (shelf ?? '');
+  // once it is fed the empty string, so no separate branch is needed for it. Every
+  // `messages/{sub-shelf}` shelf shares one rank, at the least-specific end beside
+  // `letters` (messages spec §5.2): a message also filed on a formal shelf keeps that
+  // shelf and records the messages filing only in alsoShelvedAs.
+  const canonical = isMessagesShelf(shelf)
+    ? MESSAGES_SHELF_RANK
+    : (SHELF_ALIASES[shelf ?? ''] ?? (shelf ?? ''));
   const i = SHELF_SPECIFICITY.indexOf(canonical);
   return i === -1 ? SHELF_SPECIFICITY.length : i;
 };

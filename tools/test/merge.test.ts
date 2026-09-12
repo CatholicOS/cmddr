@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { keepMoreSpecific } from '../src/harvest/merge.js';
+import { keepMoreSpecific, SHELF_SPECIFICITY } from '../src/harvest/merge.js';
 import type { HarvestItem } from '../src/types.js';
 
 const item = (over: Partial<HarvestItem>): HarvestItem => ({
@@ -43,6 +43,19 @@ describe('keepMoreSpecific', () => {
     expect(message).toContain('keep.html');
     expect(message).toContain('drop.html');
     expect(message).toMatch(/shelf|incipit/);
+  });
+
+  it('ranks every messages/* shelf at the least-specific end, beside letters (messages spec §5.2)', () => {
+    // A message also filed on a formal shelf keeps that shelf and records the messages
+    // filing only in alsoShelvedAs; the two spellings of the Urbi et Orbi shelf rank alike.
+    for (const formal of ['encyclicals', 'apost_letters', 'apost_exhortations', 'letters']) {
+      const kept = keepMoreSpecific(item({ shelf: 'messages/peace', incipit: null }), item({ shelf: formal }), () => {});
+      expect(kept.shelf, formal).toBe(formal);
+      expect(kept.alsoShelvedAs, formal).toEqual(['messages/peace']);
+    }
+    const speeches = keepMoreSpecific(item({ shelf: 'speeches' }), item({ shelf: 'messages/urbi_et_orbi' }), () => {});
+    expect(speeches.shelf).toBe('messages/urbi_et_orbi');
+    expect(SHELF_SPECIFICITY.indexOf('messages/*')).toBe(SHELF_SPECIFICITY.indexOf('letters') + 1);
   });
 
   it('announces through console.warn when a caller passes no handler', () => {

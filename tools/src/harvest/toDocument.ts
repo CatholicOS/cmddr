@@ -1,11 +1,93 @@
 import { slugify } from '../slug.js';
-import { mintId, mintProvisionalId } from '../ids.js';
+import { mintId, mintProvisionalId, mintSeriesId } from '../ids.js';
+import { easterSunday } from '../dates.js';
 import {
   VATICAN_SLUG_TO_ISSUER, SOURCE_GENRE_TO_GENRE, CONCILIAR_SOURCE_GENRE_TO_GENRE,
   CONCILIAR_REASSIGNMENTS, COUNCILS, RECOVERED_INCIPITS, GENRE_OVERRIDES, keywordsFor,
-  CIRCUMSCRIPTION_KEYWORDS,
+  CIRCUMSCRIPTION_KEYWORDS, seriesForShelf, SERIES_OCCASION_YEARS, SERIES_ORDINALS,
 } from '../mappings/index.js';
+import { readOrdinal, readOccasionYear } from './seriesTitle.js';
 import type { DocumentRecord, HarvestItem } from '../types.js';
+
+/** Thrown for a series item that neither the parser nor a curated row can give an occasion year. */
+export class MissingOccasionYearError extends Error {
+  constructor(readonly item: HarvestItem, readonly reason: string) {
+    super(
+      `No occasion year for '${item.title}' (${item.pageSlug}/${item.shelf}, ${item.date}): `
+      + `${reason}; a series document without an occasion year has no id -- add a row to `
+      + 'SERIES_OCCASION_YEARS quoting the heading, or correct the title parser',
+    );
+  }
+}
+
+const curationKey = (item: HarvestItem) =>
+  `${item.pageSlug}|${item.shelf}|${slugify(item.title)}|${item.date}`;
+
+/**
+ * The series step (messages spec §5.2), taken ahead of the generic genre mapping for every
+ * item of a `messages/{sub-shelf}` shelf. The shelf decides the series and the series
+ * decides the genre, so SOURCE_GENRE_TO_GENRE cannot key these by shelf name alone.
+ * Returns null for any other shelf.
+ */
+function seriesStep(item: HarvestItem, issuerId: string): Pick<
+  DocumentRecord, 'id' | 'idStatus' | 'genre' | 'series' | 'actKind'
+> | null {
+  const shelfSeries = seriesForShelf(item.shelf);
+  if (shelfSeries === null) return null;
+
+  if (shelfSeries.kind === 'urbi') {
+    // Two dated series, assigned by date (§2.4, §3.2.7): the shelf's titles are
+    // inconsistent ('Messaggio Urbi et Orbi - 1975'), the date is not. Every other item on
+    // the shelf -- a first blessing after election, a Jubilee closing, the Momento
+    // straordinario di preghiera of 27 March 2020 -- is an Urbi et Orbi with no series and
+    // takes the provisional form; the orchestrator adds an ordinal where two share a date.
+    const year = Number(item.date.slice(0, 4));
+    const row = item.date.endsWith('-12-25') ? shelfSeries.christmas
+      : item.date === easterSunday(year) ? shelfSeries.easter
+      : null;
+    return row === null
+      ? {
+        id: mintProvisionalId(issuerId, 'urbi-et-orbi', item.date), idStatus: 'provisional',
+        genre: 'urbi-et-orbi', actKind: 'liturgical',
+      }
+      : {
+        id: mintSeriesId(issuerId, row.id, year), idStatus: 'minted',
+        genre: 'urbi-et-orbi', series: { id: row.id, year }, actKind: 'liturgical',
+      };
+  }
+
+  // A curated row is consulted first and wins where it exists, so that a heading which
+  // prints a demonstrably wrong value can be corrected with its evidence beside it; the
+  // parser reads only what the title prints, and never derives a year from `date` or an
+  // ordinal from the vocabulary's firstYear (§3.2.4, §3.2.5).
+  const key = curationKey(item);
+  const curatedYear = SERIES_OCCASION_YEARS[key];
+  const readYear = readOccasionYear(item.title);
+  const year = curatedYear?.year
+    ?? (readYear.kind === 'read' ? readYear.value : undefined);
+  if (year === undefined) {
+    throw new MissingOccasionYearError(item, readYear.kind === 'ambiguous'
+      ? `the title prints more than one year (${readYear.printed.join(', ')})`
+      : 'the title prints no four-digit year');
+  }
+
+  const curatedOrdinal = SERIES_ORDINALS[key];
+  const readOrd = readOrdinal(item.title);
+  const ordinal = curatedOrdinal?.ordinal
+    ?? (readOrd.kind === 'read' ? readOrd.value : undefined);
+  if (curatedOrdinal === undefined && readOrd.kind === 'unreadable') {
+    console.warn(
+      `Unreadable ordinal '${readOrd.printed}' in '${item.title}' (${item.pageSlug}/${item.shelf}): `
+      + 'recorded without one; add a SERIES_ORDINALS row quoting the heading if it is a numeral',
+    );
+  }
+
+  const row = shelfSeries.row;
+  return {
+    id: mintSeriesId(issuerId, row.id, year), idStatus: 'minted', genre: 'message',
+    series: { id: row.id, year, ...(ordinal !== undefined ? { ordinal } : {}) },
+  };
+}
 
 export function toDocument(item: HarvestItem, retrieved: string): DocumentRecord {
   const pageIssuer = VATICAN_SLUG_TO_ISSUER[item.pageSlug];
@@ -42,16 +124,21 @@ export function toDocument(item: HarvestItem, retrieved: string): DocumentRecord
     : undefined;
   const incipit = item.incipit ?? recovered?.incipit ?? null;
 
+  // A *Messaggi* series item is keyed by occasion, not by first words (messages spec §3):
+  // the id, its status, the genre and the series come from the series step, and the
+  // incipit rules above are not consulted. The step is null for every other shelf.
+  const series = seriesStep(item, issuerId);
+
   const record: DocumentRecord = {
-    id: incipit !== null
+    id: series?.id ?? (incipit !== null
       ? mintId(issuerId, incipit, item.date)
       // No incipit is printed and none has been recovered, so the id cannot be name-based.
       // The genre slug plus the full date is the provisional form (spec §3.5); the ordinal,
       // where two share a date, is assigned by the orchestrator, which alone sees the group.
-      : mintProvisionalId(issuerId, genre ?? slugify(item.sourceGenreLabel), item.date),
+      : mintProvisionalId(issuerId, genre ?? slugify(item.sourceGenreLabel), item.date)),
     title: item.title,
-    idStatus: incipit !== null ? 'minted' : 'provisional',
-    genre,
+    idStatus: series?.idStatus ?? (incipit !== null ? 'minted' : 'provisional'),
+    genre: series ? series.genre : genre,
     issuerId,
     issuerType,
     date: item.date,
@@ -65,6 +152,10 @@ export function toDocument(item: HarvestItem, retrieved: string): DocumentRecord
   // undefined -- JSON.stringify would drop either, but `'incipit' in d` would still
   // see the latter.
   if (incipit !== null) record.incipit = incipit;
+  if (series?.series) record.series = series.series;
+  // Every Urbi et Orbi is a liturgical act -- the blessing is the act, the address before
+  // it is assessed per statement (#15) -- whether or not it belongs to a dated series.
+  if (series?.actKind) record.actKind = series.actKind;
 
   // A document harvested from a pope's page and reassigned to a council carries its
   // promulgator in the reassignment row (Vatican I); one harvested from the council's
@@ -82,7 +173,10 @@ export function toDocument(item: HarvestItem, retrieved: string): DocumentRecord
   // 6 Leo XIV, 4 Paul VI, 1 John Paul II) were in that position when the characteristic was
   // introduced -- so the second shelf contributes its characteristic here. Sorted and
   // deduplicated so the harvest stays reproducible whichever shelf won the merge.
-  const characteristics = new Set(mapping.characteristics ?? []);
+  // A series item carries no characteristics (messages spec §5.2): the generic mapping of
+  // its `messages/…` label is `genre: null` and contributes none, and no message is filed
+  // on motu_proprio.
+  const characteristics = new Set(series ? [] : mapping.characteristics ?? []);
   if (item.alsoShelvedAs?.includes('motu_proprio')) characteristics.add('motu-proprio');
   if (characteristics.size) record.characteristics = [...characteristics].sort();
   if (mapping.descriptiveTitle) record.descriptiveTitle = mapping.descriptiveTitle;
@@ -97,7 +191,9 @@ export function toDocument(item: HarvestItem, retrieved: string): DocumentRecord
   // keyword minted later for a teaching subject does not make its documents governance
   // acts by accident. Like `keywords`, `actKind` is never authority-bearing: the schema
   // enum is the only check, and no invariant couples it to a genre or a ceiling.
-  if (keywords.some((k) => CIRCUMSCRIPTION_KEYWORDS.has(k))) record.actKind = 'governance';
+  if (!record.actKind && keywords.some((k) => CIRCUMSCRIPTION_KEYWORDS.has(k))) {
+    record.actKind = 'governance';
+  }
   // The genre label exactly as vatican.va prints it (spec §4.1), preserved unconditionally
   // so the genre mapping stays auditable from the data, not only when genre is null.
   record.sourceGenreLabel = item.sourceGenreLabel;

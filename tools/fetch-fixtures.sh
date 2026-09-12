@@ -36,6 +36,20 @@ years() {
   for y in $(seq "$3" "$4"); do year "$1" "$2" "$y"; done
 }
 
+# messages <pageSlug> <subShelf...> -- the *Messaggi* sub-shelves (spec: messages harvest,
+# §2.2). Every pope's messages.index.html landing page carries no items of its own, only
+# links to sub-shelves, so the landing page is never fetched; each sub-shelf is an aggregate
+# page at /messages/{subShelf}.index.html and lands in
+# tools/fixtures/{pageSlug}-messages-{subShelf}.html, the name run.ts derives from the
+# shelf name 'messages/{subShelf}' by replacing its slash. The year-partitioned
+# pont-messages / pont_messages shelf is deliberately not fetched (spec §7).
+messages() {
+  local pope="$1"; shift
+  for s in "$@"; do
+    get "$pope-messages-$s" "https://www.vatican.va/content/$pope/it/messages/$s.index.html"
+  done
+}
+
 # council <pageSlug> -- the archive-era council index. Note this is NOT under /content/,
 # unlike every pope page, and its filename is index_it.htm rather than it.html.
 council() { get "$1" "https://www.vatican.va/archive/hist_councils/$1/index_it.htm"; }
@@ -69,6 +83,8 @@ if [ -z "$POPE" ] || [ "$POPE" = pius-xii ]; then
            apost_exhortations motu_proprio letters; do
     shelf pius-xii "$s"
   done
+  # The only *Messaggi* sub-shelf on this page is Urbi et Orbi.
+  messages pius-xii urbi
 fi
 
 if [ -z "$POPE" ] || [ "$POPE" = benedict-xv ]; then
@@ -89,12 +105,15 @@ if [ -z "$POPE" ] || [ "$POPE" = john-xxiii ]; then
   years john-xxiii apost_constitutions 1958 1962
   shelf john-xxiii apost_letters
   years john-xxiii apost_letters 1958 1963
+  # John XXIII and Paul VI spell the Urbi et Orbi sub-shelf 'urbi_et_orbi'; later popes 'urbi'.
+  messages john-xxiii urbi_et_orbi
 fi
 
 if [ -z "$POPE" ] || [ "$POPE" = paul-vi ]; then
   for s in encyclicals apost_constitutions apost_letters apost_exhortations motu_proprio; do
     shelf paul-vi "$s"
   done
+  messages paul-vi peace communications lent migration missions sick vocations urbi_et_orbi
 fi
 
 if [ -z "$POPE" ] || [ "$POPE" = john-paul-i ]; then
@@ -107,18 +126,23 @@ if [ -z "$POPE" ] || [ "$POPE" = john-paul-ii ]; then
   done
   shelf john-paul-ii apost_letters
   years john-paul-ii apost_letters 1978 2005
+  messages john-paul-ii peace communications lent migration missions sick vocations youth \
+           food consecrated_life tourism literacy urbi
 fi
 
 if [ -z "$POPE" ] || [ "$POPE" = benedict-xvi ]; then
   for s in encyclicals apost_constitutions apost_letters apost_exhortations motu_proprio; do
     shelf benedict-xvi "$s"
   done
+  messages benedict-xvi peace communications lent migration missions sick vocations youth food urbi
 fi
 
 if [ -z "$POPE" ] || [ "$POPE" = francesco ]; then
   for s in encyclicals bulls apost_constitutions apost_letters apost_exhortations motu_proprio; do
     shelf francesco "$s"
   done
+  messages francesco peace communications lent migration missions sick vocations youth food \
+           consecrated_life poveri nonni bambini cura-creato urbi
 fi
 
 if [ -z "$POPE" ] || [ "$POPE" = leo-xiv ]; then
@@ -128,6 +152,11 @@ if [ -z "$POPE" ] || [ "$POPE" = leo-xiv ]; then
   for s in encyclicals apost_constitutions apost_letters apost_exhortations motu_proprio; do
     shelf leo-xiv "$s"
   done
+  # Leo XIV's page renames four sub-shelves: missions -> mission, poveri -> poor,
+  # nonni -> grandparents, cura-creato -> creation. data/series.json's `shelves` lists
+  # every spelling, so each still resolves to the same series as its predecessor.
+  messages leo-xiv peace communications lent migration mission sick vocations youth poor \
+           grandparents creation urbi
 fi
 
 if [ -z "$POPE" ] || [ "$POPE" = ii_vatican_council ]; then council ii_vatican_council; fi

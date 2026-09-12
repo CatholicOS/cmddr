@@ -2,12 +2,14 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from 'node
 import { parseFlatIndex } from './flat.js';
 import { parseShelfIndex } from './shelf.js';
 import { resolveShelfPages } from './shelfPages.js';
-import { toDocument } from './toDocument.js';
+import { toDocument, MissingOccasionYearError } from './toDocument.js';
+import { fixtureName } from './fixtures.js';
 import { keepMoreSpecific } from './merge.js';
 import { parseCouncilIndex } from './council.js';
 import { assignProvisionalOrdinals } from './ordinals.js';
 import {
   POPES, COUNCILS, DATE_CORRECTIONS, DUPLICATE_MERGES, ADJUDICATED_DISTINCT, isErectionCandidate,
+  isMessagesShelf,
 } from '../mappings/index.js';
 import { issuerLocalPart, mintId } from '../ids.js';
 import { slugify } from '../slug.js';
@@ -37,7 +39,7 @@ function urlDocType(url: string | null): string | null {
  *  (tools/src/mappings/councils.ts) instead and must be updated there -- see retrievedFor
  *  below, which never restamps this value onto a council's records.
  *  Can be overridden with the RETRIEVED env var for testing or when refreshing fixtures. */
-const FIXTURES_RETRIEVED = '2026-09-07';
+const FIXTURES_RETRIEVED = '2026-09-12';
 /**
  * The fetch date to stamp on one item's record. A council is fetched separately from the
  * pope pages and carries its own date, so FIXTURES_RETRIEVED is not restamped onto it and
@@ -56,14 +58,14 @@ for (const pope of POPES) {
     items.push(...parseFlatIndex(fixture(pope.pageSlug), pope.pageSlug));
   } else {
     for (const shelf of pope.shelves) {
-      const index = fixture(`${pope.pageSlug}-${shelf}`);
+      const index = fixture(fixtureName(pope.pageSlug, shelf));
       const pages = resolveShelfPages(index, shelf);
       if (pages.kind === 'aggregate') {
         items.push(...parseShelfIndex(index, pope.pageSlug, shelf));
       } else {
         for (const year of pages.years) {
           items.push(...parseShelfIndex(
-            fixture(`${pope.pageSlug}-${shelf}-${year}`), pope.pageSlug, shelf));
+            fixture(fixtureName(pope.pageSlug, shelf, year)), pope.pageSlug, shelf));
         }
       }
     }
@@ -189,11 +191,17 @@ for (const item of mergedByDuplicateTable.values()) {
   const key = `${item.pageSlug}|${item.date}`;
   byPageDate.set(key, [...(byPageDate.get(key) ?? []), item]);
 }
+// A pair involving a *Messaggi* shelf is counted but not warned: no *Messaggi* heading
+// prints an incipit (shelf.ts), so this incipit-keyed check has nothing to compare there,
+// and pass 2's URL-slug comparison is the identity check that applies to those items. The
+// count is reported so the exemption's reach is visible in every harvest log.
+let messagesPairs = 0;
 for (const group of byPageDate.values()) {
   for (let i = 0; i < group.length; i++) {
     for (let j = i + 1; j < group.length; j++) {
       const a = group[i]!, b = group[j]!;
       if (a.shelf === b.shelf) continue;
+      if (isMessagesShelf(a.shelf) || isMessagesShelf(b.shelf)) { messagesPairs++; continue; }
       // Check if this pair is adjudicated as genuinely distinct (and should not warn)
       const slugA = slugify(a.incipit ?? a.title);
       const slugB = slugify(b.incipit ?? b.title);
@@ -207,6 +215,13 @@ for (const group of byPageDate.values()) {
       );
     }
   }
+}
+
+if (messagesPairs) {
+  console.log(
+    `${messagesPairs} same-date cross-shelf pair(s) involve a messages/* shelf and are not `
+    + 'compared by incipit (none is printed there); pass 2 compared their URL slugs',
+  );
 }
 
 // Circumscription erections filed under a bare Latin toponym with no textual marker
@@ -224,8 +239,49 @@ if (candidates.length) {
   console.warn(`  ${candidates.length} candidates await confirmation into the circumscription tables`);
 }
 
-const allDocs = [...mergedByDuplicateTable.values()]
-  .map((item) => toDocument(item, retrievedFor(item)));
+// A series item that neither the title parser nor a curated SERIES_OCCASION_YEARS row can
+// give an occasion year has no id (messages spec §3.2.5, §5.3). Every such item is
+// reported, not just the first, and then the run fails: a message minted under a guessed
+// year would enter a permanent id's neighbourhood.
+const allDocs: DocumentRecord[] = [];
+const missingYears: string[] = [];
+for (const item of mergedByDuplicateTable.values()) {
+  try {
+    allDocs.push(toDocument(item, retrievedFor(item)));
+  } catch (e) {
+    if (!(e instanceof MissingOccasionYearError)) throw e;
+    missingYears.push(e.message);
+  }
+}
+if (missingYears.length) {
+  for (const m of missingYears) console.error(m);
+  console.error(`${missingYears.length} series item(s) without an occasion year; aborting`);
+  process.exit(1);
+}
+
+// One issuer, one series, one occasion year, one document (messages spec §3.2.6): a
+// second record on the same triple is a harvest error -- a misread year, a duplicate
+// listing -- not a collision to discriminate with a longer id. The validator's rule 8
+// would catch the shared id too; failing here names the two titles instead.
+const bySeriesOccasion = new Map<string, DocumentRecord[]>();
+for (const doc of allDocs) {
+  if (!doc.series) continue;
+  const key = `${issuerLocalPart(doc.issuerId)}|${doc.series.id}|${doc.series.year}`;
+  bySeriesOccasion.set(key, [...(bySeriesOccasion.get(key) ?? []), doc]);
+}
+let seriesCollisions = 0;
+for (const [key, group] of bySeriesOccasion) {
+  if (group.length < 2) continue;
+  seriesCollisions++;
+  console.error(
+    `Series occasion ${key} is claimed by ${group.length} documents: `
+    + group.map((d) => `'${d.title}' (${d.date}, ${d.source?.url})`).join('; '),
+  );
+}
+if (seriesCollisions) {
+  console.error(`${seriesCollisions} series occasion(s) claimed twice; aborting`);
+  process.exit(1);
+}
 
 // Two distinct documents from the same issuer can share both an incipit slug and a year
 // without being duplicates -- e.g. Pius X's two unrelated "Constat apprime" apostolic
@@ -239,7 +295,9 @@ const allDocs = [...mergedByDuplicateTable.values()]
 // participate here.
 const collisionGroups = new Map<string, DocumentRecord[]>();
 for (const doc of allDocs) {
-  if (doc.idStatus !== 'minted') continue;
+  // A series-form id is keyed by occasion and never extended to the full date; its own
+  // collision rule is the occasion-uniqueness check above.
+  if (doc.idStatus !== 'minted' || doc.series) continue;
   const key = `${issuerLocalPart(doc.issuerId)}|${slugify(doc.incipit ?? doc.title)}|${doc.date.slice(0, 4)}`;
   collisionGroups.set(key, [...(collisionGroups.get(key) ?? []), doc]);
 }
@@ -267,7 +325,9 @@ for (const docs of byIssuer.values()) {
 for (const [issuer, docs] of byIssuer) {
   for (const d of docs.filter((d) => d.idStatus === 'provisional')) {
     console.warn(
-      `Provisional id (no incipit recoverable) ${d.issuerId} `
+      `Provisional id (${d.genre === 'urbi-et-orbi'
+        ? 'Urbi et Orbi dated neither 25 December nor Easter Sunday'
+        : 'no incipit recoverable'}) ${d.issuerId} `
       + `${d.source?.shelf ?? 'flat'} ${d.date}: '${d.title}'`,
     );
   }

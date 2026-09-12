@@ -18,6 +18,13 @@ export interface PopeSource {
    * hyphenates `apost-constitutions`), and several linked indexes -- `biography`,
    * `biografia`, `books`, `jubilee`, `elezione` -- are not document shelves at all.
    * Empty for the flat era, which has no shelves.
+   *
+   * The *Messaggi* shelves are listed as `messages/{sub-shelf}` (messages spec §5.1): the
+   * landing page `messages.index.html` carries no items of its own, only links to
+   * sub-shelves, and each series or Urbi et Orbi sub-shelf is an aggregate page. The
+   * sub-shelf slug is what data/series.json's `shelves` lists resolve to a series. The
+   * year-partitioned `pont-messages` / `pont_messages` shelf -- occasional messages with
+   * no occasion -- is out of scope (spec §7) and never listed here.
    */
   shelves: readonly string[];
 }
@@ -61,9 +68,11 @@ export const POPES: readonly PopeSource[] = [
     // incipit-less item still lands as a genuine `idStatus: provisional` record -- exactly
     // the mechanism spec §4.2 designed for documents with no conventional name. See
     // task-8-report.md and the per-shelf diagnostic test in harvest-data.test.ts.
+    // The only *Messaggi* sub-shelf on this page is Urbi et Orbi (eight Easter messages,
+    // 1952-1958; no Christmas ones are indexed).
     shelves: [
       'apost_constitutions', 'apost_exhortations', 'apost_letters', 'briefs', 'bulls',
-      'encyclicals', 'letters', 'motu_proprio',
+      'encyclicals', 'letters', 'motu_proprio', 'messages/urbi',
     ],
   },
   {
@@ -79,10 +88,12 @@ export const POPES: readonly PopeSource[] = [
   {
     pageSlug: 'john-xxiii', issuerId: 'rp:john-xxiii', era: 'shelf',
     // apost_constitutions and apost_letters are year-partitioned (1958-1963) and are
-    // read through resolveShelfPages; the shelf list does not distinguish them.
+    // read through resolveShelfPages; the shelf list does not distinguish them. The
+    // *Messaggi* page links `urbi_et_orbi` (spelled so here and for Paul VI; `urbi` from
+    // John Paul II on) and the year-partitioned, out-of-scope `pont_messages`.
     shelves: [
       'apost_constitutions', 'apost_exhortations', 'apost_letters',
-      'encyclicals', 'motu_proprio',
+      'encyclicals', 'motu_proprio', 'messages/urbi_et_orbi',
     ],
   },
   {
@@ -92,10 +103,14 @@ export const POPES: readonly PopeSource[] = [
     // year-partitioned apost_constitutions/apost_letters. apost_constitutions (354) is
     // dominated by circumscription erections filed under a bare Latin toponym -- see the
     // erection-candidate test in harvest-data.test.ts; confirming them into
-    // CIRCUMSCRIPTION_ERECTIONS is Task 20's work, not this one's.
+    // CIRCUMSCRIPTION_ERECTIONS is Task 20's work, not this one's. The *Messaggi* page
+    // opens the Peace (1968), Communications (1967) and Vocations (1964) series; its
+    // `pont-messages` link leads to a page with no year links and is out of scope.
     shelves: [
       'apost_constitutions', 'apost_exhortations', 'apost_letters',
       'encyclicals', 'motu_proprio',
+      'messages/peace', 'messages/communications', 'messages/lent', 'messages/migration',
+      'messages/missions', 'messages/sick', 'messages/vocations', 'messages/urbi_et_orbi',
     ],
   },
   {
@@ -104,6 +119,12 @@ export const POPES: readonly PopeSource[] = [
     // XV and Paul VI, this pope's `letters` shelf is an aggregate page carrying its own
     // four items directly (not year-partitioned), so it is in scope here (spec §2.7).
     // `speeches` is out of scope for every pope from Pius XI on (see the Pius X entry above).
+    // The *Messaggi* landing page has no sub-shelves: its three items sit directly on it
+    // (two occasional messages -- to the faithful of Ecuador, to Cardinal Oddi -- and the
+    // 'Radiomessaggio Urbi et Orbi (27 agosto 1978)' of the day after the election). None
+    // belongs to a series, and the landing page is the shape `pont-messages` takes
+    // elsewhere, so the page is left to the pont-messages PR (messages spec §5.1, §7)
+    // rather than given a one-pope special case here.
     shelves: ['apost_letters', 'letters'],
   },
   {
@@ -115,10 +136,16 @@ export const POPES: readonly PopeSource[] = [
     // and `speeches` are out of scope (spec §2.7). apost_constitutions (613) is dominated
     // by circumscription erections filed under a bare Latin toponym -- see the
     // erection-candidate test in harvest-data.test.ts; confirming them into
-    // CIRCUMSCRIPTION_ERECTIONS is Task 20's work, not this one's.
+    // CIRCUMSCRIPTION_ERECTIONS is Task 20's work, not this one's. Twelve *Messaggi*
+    // sub-shelves: the seven Paul VI opened plus youth, food, consecrated_life, tourism
+    // and literacy; `pont_messages` (spelled with an underscore here) is out of scope.
     shelves: [
       'apost_constitutions', 'apost_exhortations', 'apost_letters',
       'bulls', 'encyclicals', 'motu_proprio',
+      'messages/peace', 'messages/communications', 'messages/lent', 'messages/migration',
+      'messages/missions', 'messages/sick', 'messages/vocations', 'messages/youth',
+      'messages/food', 'messages/consecrated_life', 'messages/tourism', 'messages/literacy',
+      'messages/urbi',
     ],
   },
   {
@@ -128,10 +155,14 @@ export const POPES: readonly PopeSource[] = [
     // scope (spec §2.7). apost_constitutions (126) is dominated by circumscription
     // erections filed under a bare Latin toponym -- see the erection-candidate test in
     // harvest-data.test.ts; confirming them into CIRCUMSCRIPTION_ERECTIONS is Task 20's
-    // work, not this one's.
+    // work, not this one's. Nine *Messaggi* series sub-shelves plus `urbi`; no
+    // consecrated_life, tourism or literacy shelf exists for this pope.
     shelves: [
       'apost_constitutions', 'apost_exhortations', 'apost_letters',
       'encyclicals', 'motu_proprio',
+      'messages/peace', 'messages/communications', 'messages/lent', 'messages/migration',
+      'messages/missions', 'messages/sick', 'messages/vocations', 'messages/youth',
+      'messages/food', 'messages/urbi',
     ],
   },
   {
@@ -143,11 +174,16 @@ export const POPES: readonly PopeSource[] = [
     // `letters` and `speeches` are year-partitioned and out of scope (spec §2.7).
     // apost_letters and motu_proprio overlap heavily: many acts are a "Lettera Apostolica
     // in forma di «Motu Proprio»" and are filed on both shelves, so pass 1's same-incipit/
-    // same-date merge does real work here.
+    // same-date merge does real work here. Fourteen *Messaggi* series sub-shelves plus
+    // `urbi`; four of them (poveri, nonni, bambini, cura-creato) are this pontificate's own.
     pageSlug: 'francesco', issuerId: 'rp:francis-i', era: 'shelf',
     shelves: [
       'apost_constitutions', 'apost_exhortations', 'apost_letters',
       'bulls', 'encyclicals', 'motu_proprio',
+      'messages/peace', 'messages/communications', 'messages/lent', 'messages/migration',
+      'messages/missions', 'messages/sick', 'messages/vocations', 'messages/youth',
+      'messages/food', 'messages/consecrated_life', 'messages/poveri', 'messages/nonni',
+      'messages/bambini', 'messages/cura-creato', 'messages/urbi',
     ],
   },
   {
@@ -156,11 +192,18 @@ export const POPES: readonly PopeSource[] = [
     // circumscription erection outright ('ha eretto...' / 'ha istituito...'), so
     // 'leo-xiv' also sits in keywords.ts's TEXTUALLY_TAGGED set rather than being
     // scanned for toponym shape. `letters` and `speeches` are year-partitioned and out
-    // of scope (spec §2.7).
+    // of scope (spec §2.7). The *Messaggi* page renames four sub-shelves against every
+    // predecessor's spelling -- `mission` (not `missions`), `poor` (`poveri`),
+    // `grandparents` (`nonni`), `creation` (`cura-creato`) -- one more instance of the
+    // chancery shelves not being a stable taxonomy; data/series.json's `shelves` lists
+    // both spellings so each resolves to the same series as Francis's.
     pageSlug: 'leo-xiv', issuerId: 'rp:leo-xiv', era: 'shelf',
     shelves: [
       'apost_constitutions', 'apost_exhortations', 'apost_letters',
       'encyclicals', 'motu_proprio',
+      'messages/peace', 'messages/communications', 'messages/lent', 'messages/migration',
+      'messages/mission', 'messages/sick', 'messages/vocations', 'messages/youth',
+      'messages/poor', 'messages/grandparents', 'messages/creation', 'messages/urbi',
     ],
   },
 ] as const;

@@ -2,7 +2,7 @@ import * as cheerio from 'cheerio';
 import { parseSourceDate, daysInMonth } from '../dates.js';
 import { resolveItemUrl, extractLanguages } from './dom.js';
 import { slugify } from '../slug.js';
-import { DATE_CORRECTIONS } from '../mappings/index.js';
+import { DATE_CORRECTIONS, isMessagesShelf } from '../mappings/index.js';
 import { extractIncipit } from './incipit.js';
 import type { HarvestItem } from '../types.js';
 
@@ -11,9 +11,17 @@ import type { HarvestItem } from '../types.js';
  * be cross-checked against the slug's own date, which the encyclicals shelf formats
  * `DDMMYYYY` and the other seven `YYYYMMDD`. Returns both readings of the `_{8 digits}_`
  * group in the resolved URL, or `[]` when the URL carries no such group.
+ *
+ * Francis's later pages and every Leo XIV page drop the `hf_…_` prefix and open the
+ * document filename with the bare date instead (`20250206-messaggio-quaresima2025.html`,
+ * `20260113-messaggio-giornata-malato.html`), so that shape is read too. Measured before
+ * it was added: 114 items on the formal shelves carry only this shape, and the printed
+ * date agrees with it on every one, so reading it changes nothing there; on the
+ * *Messaggi* shelves, whose headings print the occasion rather than the signing date, it
+ * is the only date there is.
  */
 function slugDateReadings(url: string | null): string[] {
-  const m = url?.match(/_(\d{8})_/);
+  const m = url?.match(/_(\d{8})_/) ?? url?.match(/\/(\d{8})[-_][^/]*\.html$/);
   if (!m) return [];
   const g = m[1]!;
   const ddmmyyyy = `${g.slice(4, 8)}-${g.slice(2, 4)}-${g.slice(0, 2)}`;
@@ -41,6 +49,19 @@ function isPlausibleIsoDate(iso: string | undefined): iso is string {
 export function parseShelfIndex(html: string, pageSlug: string, shelf: string): HarvestItem[] {
   const $ = cheerio.load(html);
   const items: HarvestItem[] = [];
+
+  // A *Messaggi* heading names an occasion and a theme -- 'Quaresima 2015: Rinfrancate i
+  // vostri cuori (Gc 5,8)', 'LVIII Giornata Mondiale della Pace 2025 - "Rimetti a noi…"' --
+  // and never the act's opening words, so three of the rules below that exist to keep a
+  // date out of an incipit do not apply to it (messages spec §2.3): the heading is kept
+  // whole as the title (a trailing parenthetical that is not a date is a scripture
+  // reference, and a bare trailing date is part of how the heading names the act), the
+  // signing date is read from the URL as a matter of course rather than as a warned-about
+  // fallback, and no incipit is extracted. Measured over the 691 headings on the 60
+  // *Messaggi* fixtures: extractIncipit would have returned a spurious "incipit" for 510
+  // of them ('Urbi et Orbi', 'I Giornata Mondiale della Pace 1968', …), each of which would
+  // then have minted a name-based id in place of the series form.
+  const messages = isMessagesShelf(shelf);
 
   $('div.item').each((_, el) => {
     const $item = $(el);
@@ -107,8 +128,14 @@ export function parseShelfIndex(html: string, pageSlug: string, shelf: string): 
       const parsed = trailing ? parseSourceDate(trailing[1]!) : null;
       if (parsed) {
         date = parsed;
-        headingText = full.slice(0, trailing!.index).trimEnd();
+        if (!messages) headingText = full.slice(0, trailing!.index).trimEnd();
       }
+    }
+
+    if (!date && messages && open > 0) {
+      // '(Gc 5,8)', '(cfr 2 Cor 8,9)', '(Lc 1,39)': a theme's scripture reference, not a
+      // date that failed to parse. Restore it to the title; the date comes from the URL.
+      headingText = full;
     }
 
     if (!date) {
@@ -128,10 +155,12 @@ export function parseShelfIndex(html: string, pageSlug: string, shelf: string): 
         ? preferredSlugDate
         : (slugDates.find(isPlausibleIsoDate) ?? null);
       if (fallbackDate) {
-        console.warn(
-          `No parseable printed date for '${full}' (${pageSlug}/${shelf}): `
-          + `falling back to URL slug date ${fallbackDate}`,
-        );
+        if (!messages) {
+          console.warn(
+            `No parseable printed date for '${full}' (${pageSlug}/${shelf}): `
+            + `falling back to URL slug date ${fallbackDate}`,
+          );
+        }
         date = fallbackDate;
         // The parenthetical still gets stripped here even though its contents failed to
         // parse as a date (review finding, 2026-09-08): headingText was already set to
@@ -146,7 +175,9 @@ export function parseShelfIndex(html: string, pageSlug: string, shelf: string): 
       }
     }
 
-    const { title, incipit } = extractIncipit(headingText);
+    const { title, incipit } = messages
+      ? { title: headingText.trim(), incipit: null }
+      : extractIncipit(headingText);
     if (!title) {
       // Silent loss is this pipeline's worst failure mode (see the date-fallback warning
       // above, and run.ts's provisional-id tally): an empty title after stripping the

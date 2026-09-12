@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { toDocument } from '../src/harvest/toDocument.js';
 import type { HarvestItem } from '../src/types.js';
 
@@ -253,5 +253,150 @@ describe('toDocument on a heading with an incipit', () => {
     expect(d.id).toBe('mag:pius-x/mirabilis-deus-1934');
     expect(d.incipit).toBe('Mirabilis Deus');
     expect(d.title).toBe('Mirabilis Deus, col quale il Pontefice attribuisce a Don Giovanni Bosco');
+  });
+});
+
+describe('toDocument on the Messaggi series shelves (messages spec §5.2)', () => {
+  const msg = (over: Partial<HarvestItem>): HarvestItem => ({
+    title: 'LVIII Giornata Mondiale della Pace 2025 - “Rimetti a noi i nostri debiti, concedici la tua pace”',
+    incipit: null, date: '2024-12-08', sourceGenreLabel: 'messages/peace',
+    url: 'https://www.vatican.va/content/francesco/it/messages/peace/documents/20241208-messaggio-58giornatamondiale-pace2025.html',
+    languages: ['IT'], shelf: 'messages/peace', pageSlug: 'francesco', ...over,
+  });
+
+  it('mints a Peace message by occasion: series id, year and ordinal from the title, id from those', () => {
+    const d = toDocument(msg({}), '2026-09-12');
+    expect(d.id).toBe('mag:francis-i/world-day-of-peace-2025');
+    expect(d.idStatus).toBe('minted');
+    expect(d.genre).toBe('message');
+    expect(d.series).toEqual({ id: 'world-day-of-peace', year: 2025, ordinal: 58 });
+    // The signing date stays what it is: the year in the id is the occasion's, not date's.
+    expect(d.date).toBe('2024-12-08');
+    expect('incipit' in d).toBe(false);
+    expect('actKind' in d).toBe(false);
+    expect(d.characteristics).toBeUndefined();
+    expect(d.sourceGenreLabel).toBe('messages/peace');
+    expect(d.source!.shelf).toBe('messages/peace');
+  });
+
+  it('gives a Lent message no ordinal, since the title prints none', () => {
+    const d = toDocument(msg({
+      title: 'Quaresima 2015: Rinfrancate i vostri cuori (Gc 5,8)', date: '2014-10-04',
+      sourceGenreLabel: 'messages/lent', shelf: 'messages/lent',
+    }), '2026-09-12');
+    expect(d.id).toBe('mag:francis-i/lent-2015');
+    expect(d.series).toEqual({ id: 'lent', year: 2015 });
+  });
+
+  it('reads an Arabic ordinal with its suffix', () => {
+    const d = toDocument(msg({
+      title: 'Messaggio per la 110ª Giornata Mondiale del Migrante e del Rifugiato 2024', date: '2024-05-24',
+      sourceGenreLabel: 'messages/migration', shelf: 'messages/migration',
+    }), '2026-09-12');
+    expect(d.series).toEqual({ id: 'world-day-of-migrants-and-refugees', year: 2024, ordinal: 110 });
+  });
+
+  it("resolves Leo XIV's renamed mission shelf to the same series as Francis's missions shelf", () => {
+    const leo = toDocument(msg({
+      title: 'Videomessaggio di Papa Leone XIV per la Giornata Missionaria Mondiale 2025', date: '2025-10-13',
+      sourceGenreLabel: 'messages/mission', shelf: 'messages/mission', pageSlug: 'leo-xiv',
+    }), '2026-09-12');
+    const francis = toDocument(msg({
+      title: 'Messaggio per la Giornata Missionaria Mondiale 2025', date: '2025-01-25',
+      sourceGenreLabel: 'messages/missions', shelf: 'messages/missions',
+    }), '2026-09-12');
+    expect(leo.series!.id).toBe('world-mission-day');
+    expect(francis.series!.id).toBe('world-mission-day');
+    expect(leo.id).toBe('mag:leo-xiv/world-mission-day-2025');
+    expect(francis.id).toBe('mag:francis-i/world-mission-day-2025');
+    expect(leo.sourceGenreLabel).toBe('messages/mission');
+  });
+
+  it('fails, naming the item, when the title prints no occasion year and no curated row supplies one', () => {
+    expect(() => toDocument(msg({
+      title: 'Messaggio per la Giornata Mondiale del Turismo', date: '1999-09-27',
+      sourceGenreLabel: 'messages/tourism', shelf: 'messages/tourism', pageSlug: 'john-paul-ii',
+    }), '2026-09-12')).toThrow(/No occasion year for 'Messaggio per la Giornata Mondiale del Turismo'/);
+  });
+
+  it('fails likewise when the title prints two different years', () => {
+    expect(() => toDocument(msg({
+      title: 'XXXIX Giornata Mondiale della Gioventù, 2024-2025', date: '2024-08-29',
+      sourceGenreLabel: 'messages/youth', shelf: 'messages/youth',
+    }), '2026-09-12')).toThrow(/more than one year \(2024, 2025\)/);
+  });
+
+  it('takes a curated occasion year and ordinal where the table has a row', () => {
+    const d = toDocument(msg({
+      title: 'XXXIIII Giornata Mondiale del Malato, 2025', date: '2025-01-14',
+      sourceGenreLabel: 'messages/sick', shelf: 'messages/sick',
+    }), '2026-09-12');
+    expect(d.series).toEqual({ id: 'world-day-of-the-sick', year: 2025, ordinal: 33 });
+    const t = toDocument(msg({
+      title: 'Messaggio per la Giornata Mondiale del Turismo', date: '2004-05-30',
+      sourceGenreLabel: 'messages/tourism', shelf: 'messages/tourism', pageSlug: 'john-paul-ii',
+    }), '2026-09-12');
+    expect(t.series).toEqual({ id: 'world-tourism-day', year: 2004 });
+  });
+
+  it('records an unreadable ordinal as absent, with a warning, when no curated row exists', () => {
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    try {
+      const d = toDocument(msg({ title: 'XXXX Giornata Mondiale della Pace 2007' }), '2026-09-12');
+      expect(d.series).toEqual({ id: 'world-day-of-peace', year: 2007 });
+      expect(warnSpy.mock.calls.some(([m]) => String(m).includes("Unreadable ordinal 'XXXX'"))).toBe(true);
+    } finally {
+      warnSpy.mockRestore();
+    }
+  });
+
+  it('throws for a messages sub-shelf no series row claims', () => {
+    expect(() => toDocument(msg({ sourceGenreLabel: 'messages/travels', shelf: 'messages/travels' }), '2026-09-12'))
+      .toThrow(/claimed by no row/);
+  });
+});
+
+describe('toDocument on the Urbi et Orbi shelf (messages spec §2.4, §3.2.7)', () => {
+  const urbi = (over: Partial<HarvestItem>): HarvestItem => ({
+    title: '"Urbi et Orbi" - Natale 2024', incipit: null, date: '2024-12-25',
+    sourceGenreLabel: 'messages/urbi', url: 'https://www.vatican.va/x.html', languages: ['IT'],
+    shelf: 'messages/urbi', pageSlug: 'francesco', ...over,
+  });
+
+  it('files a 25 December item in the Christmas series, minted and liturgical', () => {
+    const d = toDocument(urbi({}), '2026-09-12');
+    expect(d.id).toBe('mag:francis-i/urbi-et-orbi-christmas-2024');
+    expect(d.idStatus).toBe('minted');
+    expect(d.genre).toBe('urbi-et-orbi');
+    expect(d.actKind).toBe('liturgical');
+    expect(d.series).toEqual({ id: 'urbi-et-orbi-christmas', year: 2024 });
+    expect('incipit' in d).toBe(false);
+  });
+
+  it('files an Easter Sunday item in the Easter series by the computus, whatever the title says', () => {
+    const d = toDocument(urbi({ title: 'Messaggio Urbi et Orbi - 1975', date: '2005-03-27', pageSlug: 'john-paul-ii' }), '2026-09-12');
+    expect(d.id).toBe('mag:john-paul-ii/urbi-et-orbi-easter-2005');
+    expect(d.series).toEqual({ id: 'urbi-et-orbi-easter', year: 2005 });
+    expect(d.actKind).toBe('liturgical');
+  });
+
+  it('gives any other date no series and a provisional id, still liturgical', () => {
+    const d = toDocument(urbi({
+      title: '"Urbi et Orbi" - Momento straordinario di preghiera presieduto dal Santo Padre', date: '2020-03-27',
+    }), '2026-09-12');
+    expect(d.id).toBe('mag:francis-i/urbi-et-orbi-2020-03-27');
+    expect(d.idStatus).toBe('provisional');
+    expect(d.genre).toBe('urbi-et-orbi');
+    expect(d.series).toBeUndefined();
+    expect(d.actKind).toBe('liturgical');
+  });
+
+  it('reads the urbi_et_orbi spelling of the older pages the same way', () => {
+    const d = toDocument(urbi({
+      title: 'Urbi et Orbi - Pasqua 1978', date: '1978-03-26', pageSlug: 'paul-vi',
+      sourceGenreLabel: 'messages/urbi_et_orbi', shelf: 'messages/urbi_et_orbi',
+    }), '2026-09-12');
+    expect(d.id).toBe('mag:paul-vi/urbi-et-orbi-easter-1978');
+    expect(d.sourceGenreLabel).toBe('messages/urbi_et_orbi');
   });
 });

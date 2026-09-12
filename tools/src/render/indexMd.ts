@@ -104,9 +104,13 @@ ${keywordSection}
 This registry covers the **formal document shelves** of vatican.va. Deliberately absent:
 
 - **Occasional acts** — speeches (after Leo XIII, whose are genuine Latin allocutions), homilies,
-  general audiences, Angelus addresses, messages, prayers, travels and *cotidie*. They are roughly
+  general audiences, Angelus addresses, prayers, travels and *cotidie*. They are roughly
   99% of the archive by volume and need an identifier rule for documents whose heading is a bare
   date, which this registry does not yet have.
+- **Occasional messages** — the year-partitioned \`pont-messages\` / \`pont_messages\` shelf under
+  *Messaggi*, and John Paul I's three messages, which sit directly on his *Messaggi* landing page.
+  The annual series sub-shelves (World Day of Peace, Lent, …) and the Urbi et Orbi sub-shelf are
+  harvested; the occasional residue is not yet.
 - **Year-partitioned \`letters\` shelves** — John XXIII, Benedict XV, and Paul VI onward. The
   \`letters\` shelf is harvested only where the aggregate index carries its items.
 - **Bishops' conferences and dicasterial documents**, which remain outside the repository's scope.
