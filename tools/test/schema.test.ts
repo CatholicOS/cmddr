@@ -158,6 +158,19 @@ describe('document.schema.json', () => {
     });
   });
 
+  describe('medium (#27)', () => {
+    it('accepts each of the two media', () => {
+      for (const medium of ['radio', 'video']) {
+        expect(validate({ ...baseDoc, medium }), medium).toBe(true);
+      }
+    });
+
+    it('rejects a medium outside the enum', () => {
+      expect(validate({ ...baseDoc, medium: 'television' })).toBe(false);
+      expect(validate({ ...baseDoc, medium: 'Radiomessaggio' })).toBe(false);
+    });
+  });
+
   describe('series (#16)', () => {
     it('accepts a numbered series entry', () => {
       expect(validate({ ...baseDoc, series: { id: 'world-day-of-peace', year: 2018, ordinal: 51 } })).toBe(true);

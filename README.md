@@ -181,6 +181,17 @@ or not the item belongs to the Christmas or Easter series. Seven items on John X
 because they are not blessings: the radio messages this pope broadcast to the world before Christmas and Easter and on other
 occasions, which vatican.va files beside the feast-day messages, are harvested as `message` on curated rows quoting each heading. The discussion is in [#15](https://github.com/CatholicOS/cmddr/issues/15).
 
+Some acts are delivered by a medium the source names in the heading — those same radio messages are *Radiomessaggi*, and
+the World Youth Day 2019 and World Mission Day 2025 messages are *Videomessaggi* — and the medium is a fact about the act of
+the kind Table 1 records, distinct from what the act does (`actKind`) and from what instrument it is (genre). The registry
+records it in an optional **`medium`** — `radio` · `video` — absent meaning the ordinary written or delivered text; a
+*Radiomessaggio* that is a feast-day Urbi et Orbi keeps its genre and its `liturgical` flag and simply gains `medium: radio`.
+Like `actKind` and `keywords`, the field is **never authority-bearing**: no invariant reads it, and nothing couples it to a
+register or a ceiling. It is read from the heading's own word and from nothing else, measured across the corpus first —
+**9** *Radiomessaggi* (all John XXIII's) and **2** *Videomessaggi* today; the bare words *radio* and *video*, which would
+also tag a commission for cinema, radio and television or a Communications Day theme on videocassettes, are not the rule.
+The discussion is in [#27](https://github.com/CatholicOS/cmddr/issues/27).
+
 #### Numbered annual series
 
 A large body of papal messages belongs to **annual series** that run for decades and across pontificates. The World Day of
