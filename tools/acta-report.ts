@@ -70,7 +70,10 @@ function belief(u: ActaUnmatched): string {
   const curated = READINGS[`${e.year}:${e.page}`];
   if (curated !== undefined) return curated;
   if (e.date < '2013-03-13') return 'act of a previous pontificate printed in this volume; no Francis document can match';
-  const sameGenre = u.sameDate.filter((d) => c.classes.some((k) => k.genre === d.genre));
+  // A same-date document of the genre is the act filed under another class only if it
+  // could be the same act: one that prints a different incipit is a different act.
+  const sameGenre = u.sameDate.filter((d) => c.classes.some((k) => k.genre === d.genre)
+    && !(e.incipit !== null && d.incipit !== undefined && slugify(d.incipit) !== slugify(e.incipit)));
   if (sameGenre.length) {
     return `**class mismatch**: the shelf files \`${sameGenre.map((d) => d.id).join('`, `')}\` as ${sameGenre.map(cls).join(', ')}; `
       + 'not matched by rule (spec §4.3), a filing difference to adjudicate';
