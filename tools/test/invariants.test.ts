@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { checkDocuments, checkAssessments, type GenreLike } from '../src/validate/invariants.js';
+import { checkDocuments, checkAssessments, expectedOrdinal, type GenreLike } from '../src/validate/invariants.js';
 import type { DocumentRecord } from '../src/types.js';
 
 const GENRES: GenreLike[] = [
@@ -317,6 +317,8 @@ describe('invariant 22: characteristics are allowed by the genre', () => {
 const series = [
   { id: 'world-day-of-peace', firstYear: 1968 }, { id: 'lent' }, { id: 'world-youth-day' },
   { id: 'urbi-et-orbi-easter' },
+  { id: 'world-day-of-prayer-for-the-care-of-creation', firstYear: 2015,
+    renumberings: [{ fromYear: 2025, offset: -1 }] },
 ];
 const MESSAGE_GENRES: GenreLike[] = [
   ...GENRES, { id: 'message', issuerTypes: ['pope'] }, { id: 'urbi-et-orbi', issuerTypes: ['pope'] },
@@ -408,6 +410,37 @@ describe('the series form of a minted id (messages spec §3)', () => {
       ...peace, id: 'mag:francis-i/world-youth-day-2024',
       series: { id: 'world-youth-day', year: 2024, ordinal: 3 },
     }])).not.toContain(24);
+  });
+
+  it('24: applies every renumbering the row records from its fromYear on', () => {
+    // The Holy See reset the Care of Creation numbering in 2025: 2024 = X, 2025 = X again,
+    // 2026 = XI. Before the reset year the plain count holds; from it on, the offset applies.
+    const creation = (year: number, ordinal: number): DocumentRecord => ({
+      ...peace, id: `mag:leo-xiv/world-day-of-prayer-for-the-care-of-creation-${year}`,
+      issuerId: 'rp:leo-xiv', date: `${year}-06-30`,
+      series: { id: 'world-day-of-prayer-for-the-care-of-creation', year, ordinal },
+    });
+    expect(seriesRules([creation(2024, 10)])).not.toContain(24);   // before the reset
+    expect(seriesRules([creation(2024, 9)])).toContain(24);
+    expect(seriesRules([creation(2025, 10)])).not.toContain(24);   // the reset year
+    expect(seriesRules([creation(2025, 11)])).toContain(24);
+    expect(seriesRules([creation(2026, 11)])).not.toContain(24);   // after it
+    expect(seriesRules([creation(2026, 12)])).toContain(24);
+    const v = checkDocuments([creation(2026, 12)], MESSAGE_GENRES, keywords, series);
+    expect(v.find((x) => x.rule === 24)!.message).toMatch(/2026 - 2015 \+ 1 - 1 \(reset from 2025\) = 11/);
+  });
+
+  it('expectedOrdinal: plain count without renumberings, shifted from the reset year with them', () => {
+    expect(expectedOrdinal({ id: 'x', firstYear: 1968 }, 2025)).toBe(58);
+    const reset = { id: 'x', firstYear: 2015, renumberings: [{ fromYear: 2025, offset: -1 }] };
+    expect(expectedOrdinal(reset, 2024)).toBe(10);
+    expect(expectedOrdinal(reset, 2025)).toBe(10);
+    expect(expectedOrdinal(reset, 2026)).toBe(11);
+    // Two resets accumulate; a positive offset shifts the other way.
+    const twice = { id: 'x', firstYear: 2000, renumberings: [{ fromYear: 2005, offset: -1 }, { fromYear: 2010, offset: 2 }] };
+    expect(expectedOrdinal(twice, 2004)).toBe(5);
+    expect(expectedOrdinal(twice, 2005)).toBe(5);
+    expect(expectedOrdinal(twice, 2010)).toBe(12);
   });
 
   it('8: rejects two documents of one issuer sharing a series and an occasion year', () => {

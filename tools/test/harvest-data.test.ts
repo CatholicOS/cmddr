@@ -1,11 +1,11 @@
 import { describe, it, expect, vi } from 'vitest';
 import { readFileSync, readdirSync } from 'node:fs';
-import { checkDocuments } from '../src/validate/invariants.js';
+import { checkDocuments, expectedOrdinal } from '../src/validate/invariants.js';
 import { parseShelfIndex } from '../src/harvest/shelf.js';
 import {
   shelvesFor, isErectionCandidate, isUnconfirmedCandidate, CIRCUMSCRIPTION_ERECTIONS,
   RECOVERED_INCIPITS, isMessagesShelf, seriesForShelf, SERIES_OCCASION_YEARS, SERIES_ORDINALS,
-  SERIES, POPES,
+  SERIES_EXCLUSIONS, SERIES, POPES,
 } from '../src/mappings/index.js';
 import { fixtureName } from '../src/harvest/fixtures.js';
 import { readOrdinal, readOccasionYear } from '../src/harvest/seriesTitle.js';
@@ -2284,9 +2284,10 @@ describe('the recovered-incipit shelf', () => {
   it('leaves the provisional shelf at 299 on the formal shelves -- sixteen recovered, one merged away', () => {
     // Plus the thirteen Urbi et Orbi dated neither 25 December nor Easter Sunday, which
     // take the provisional form by design (messages spec §3.2.7); counted in their own block.
+    // Plus the one series-shelf item excluded from its series (Paul VI's 1975 day of the sick).
     const formal = everything.filter((d) => !isMessagesShelf(d.source?.shelf ?? null));
     expect(formal.filter((d) => d.idStatus === 'provisional')).toHaveLength(299);
-    expect(everything.filter((d) => d.idStatus === 'provisional')).toHaveLength(299 + 13);
+    expect(everything.filter((d) => d.idStatus === 'provisional')).toHaveLength(299 + 13 + 1);
   });
 
   it('keeps the two Leo XIV 2025 letters provisional, which AAS confirms have no incipit', () => {
@@ -2426,31 +2427,49 @@ describe('the Messaggi shelves (messages spec)', () => {
       'world-day-of-prayer-for-the-care-of-creation': 12,
       'world-day-of-prayer-for-vocations': 61,
       'world-day-of-the-poor': 10,
-      'world-day-of-the-sick': 35,
+      'world-day-of-the-sick': 34,
       'world-food-day': 42,
       'world-literacy-day': 20,
       'world-mission-day': 64,
       'world-tourism-day': 6,
       'world-youth-day': 38,
     });
-    expect(seriesDocs).toHaveLength(690 - 13);
+    // 13 Urbi et Orbi with no series, and the one excluded series-shelf item.
+    expect(seriesDocs).toHaveLength(690 - 13 - 1);
   });
 
-  it('files every series sub-shelf item as a message and every urbi item as an Urbi et Orbi', () => {
+  it('files every series sub-shelf item as a message -- or a homily, where the URL says so -- and every urbi item as an Urbi et Orbi', () => {
+    // Measured over every messages/* shelf: exactly 11 URLs carry `omelia`, all of them
+    // Francis's consecrated_life pages (2014-2022, 2024, 2025); the 2023 item is a messaggio.
+    const homilies = messages.filter((d) => /omelia/.test(d.source?.url ?? ''));
+    expect(homilies.map((d) => d.id).sort()).toEqual([
+      2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2024, 2025,
+    ].map((y) => `mag:francis-i/world-day-for-consecrated-life-${y}`));
     for (const d of messages) {
       const shelf = seriesForShelf(d.source!.shelf);
       expect(shelf, d.id).not.toBeNull();
-      expect(d.genre, d.id).toBe(shelf!.kind === 'urbi' ? 'urbi-et-orbi' : 'message');
+      expect(d.genre, d.id).toBe(shelf!.kind === 'urbi' ? 'urbi-et-orbi'
+        : homilies.includes(d) ? 'homily' : 'message');
       expect(d.sourceGenreLabel, d.id).toBe(d.source!.shelf);
       expect(d.characteristics, d.id).toBeUndefined();
       expect(d.incipit, d.id).toBeUndefined();
     }
+    // A homily on the day is a member of the series all the same: the id rule triggers on membership.
+    for (const d of homilies) expect(d.series?.id, d.id).toBe('world-day-for-consecrated-life');
   });
 
-  it('gives every message a series in this PR: the occasional pont-messages shelf is out of scope', () => {
+  it('gives every message a series in this PR -- the occasional pont-messages shelf is out of scope -- except the one evidenced exclusion', () => {
+    // Paul VI's 'Giornata Mondiale del Malato - 1975' is a Holy Year day, not the annual
+    // World Day of the Sick of 1993 on (SERIES_EXCLUSIONS); it keeps the shelf's genre and
+    // takes the provisional form, as every pont-messages item will.
     const plain = everything.filter((d) => d.genre === 'message');
-    expect(plain).toHaveLength(538);
+    expect(plain).toHaveLength(538 - 11);
+    const excluded = plain.filter((d) => !d.series);
+    expect(excluded.map((d) => d.id)).toEqual(['mag:paul-vi/message-1975-09-16']);
+    expect(excluded[0]!.idStatus).toBe('provisional');
+    expect(excluded[0]!.source!.shelf).toBe('messages/sick');
     for (const d of plain) {
+      if (excluded.includes(d)) continue;
       expect(d.series, d.id).toBeDefined();
       expect(d.idStatus, d.id).toBe('minted');
       expect(d.actKind, d.id).toBeUndefined();
@@ -2561,15 +2580,33 @@ describe('the Messaggi shelves (messages spec)', () => {
       expect(read.kind === 'read' ? read.printed : read.kind === 'unreadable' ? read.printed : null, key)
         .toBe(row.printed);
     }
+    for (const [key, row] of Object.entries(SERIES_EXCLUSIONS)) {
+      const hit = keys.get(key);
+      expect(hit, key).toBeDefined();
+      expect(hit!.series, key).toBeUndefined();
+      expect(row.evidence, key).toBeTruthy();
+    }
     expect(Object.keys(SERIES_OCCASION_YEARS)).toHaveLength(32);
-    expect(Object.keys(SERIES_ORDINALS)).toHaveLength(4);
+    expect(Object.keys(SERIES_ORDINALS)).toHaveLength(5);
+    expect(Object.keys(SERIES_EXCLUSIONS)).toHaveLength(1);
   });
 
-  it('checks the printed ordinal against firstYear on 273 documents and finds no disagreement', () => {
-    const firstYear = new Map(SERIES.filter((s) => s.firstYear).map((s) => [s.id, s.firstYear!]));
-    const checked = seriesDocs.filter((d) => d.series!.ordinal !== undefined && firstYear.has(d.series!.id));
-    expect(checked).toHaveLength(273);
+  it('checks the printed ordinal against firstYear on 276 documents and finds no disagreement', () => {
+    const rows = new Map(SERIES.filter((s) => s.firstYear).map((s) => [s.id, s]));
+    const checked = seriesDocs.filter((d) => d.series!.ordinal !== undefined && rows.has(d.series!.id));
+    expect(checked).toHaveLength(276);
+    for (const d of checked) {
+      expect(d.series!.ordinal, d.id).toBe(expectedOrdinal(rows.get(d.series!.id)!, d.series!.year));
+    }
     expect(checkDocuments(messages, genres, keywords, series).filter((v) => v.rule === 24)).toEqual([]);
+  });
+
+  it('applies the 2025 reset of the Care of Creation numbering: X in 2025 repeats X, 2026 is XI', () => {
+    const by = Object.fromEntries(seriesDocs.map((d) => [d.id, d]));
+    const s = 'world-day-of-prayer-for-the-care-of-creation';
+    expect(by[`mag:francis-i/${s}-2020`]!.series!.ordinal).toBe(6);
+    expect(by[`mag:leo-xiv/${s}-2025`]!.series!.ordinal).toBe(10);
+    expect(by[`mag:leo-xiv/${s}-2026`]!.series!.ordinal).toBe(11);
   });
 
   it('satisfies every invariant, alone and beside the formal shelves', () => {

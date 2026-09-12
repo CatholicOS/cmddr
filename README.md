@@ -208,9 +208,13 @@ a rule; the 1976 message is dated 18 October 1975. Under the incipit rule "the 2
 by occasion: *Nuntius S.P. pro XCVII Die Mundiali Missionum*). The ordinal is recorded only where the title prints it — as a
 Roman numeral on most numbered series, Arabic on migration and vocations (*110ª*, *62a*), not at all on Lent, Missions, Food or
 Literacy — and is never computed from `firstYear`; where both are present, invariant 24 checks one against the other, which is
-how a mistyped *XXXIIII* and a *XXIV* printed for a XXXIV were caught before entering an id. **538** messages across sixteen
-series and five pontificates (Paul VI → Leo XIV) are harvested this way, together with the **152** Urbi et Orbi, of which the
-Christmas and Easter ones form two dated series assigned by date. The occasional messages on the year-partitioned
+how a mistyped *XXXIIII* and a *XXIV* printed for a XXXIV were caught before entering an id. A series' printed numbering can
+also be reset by the Holy See — the Care of Creation message of 2025 is titled *X*, repeating 2024's *X*, so that the edition
+matched the tenth anniversary of *Laudato si'* in the Jubilee year, and 2026 is *XI* — and the vocabulary records such a
+reset (`renumberings`) rather than the registry re-computing numbers. **537** series documents across sixteen series and five
+pontificates (Paul VI → Leo XIV) are harvested this way — 526 messages and the 11 homilies Francis gave on the World Day for
+Consecrated Life, which vatican.va files on the series shelf and which are members of the series whatever their genre —
+together with the **152** Urbi et Orbi, of which the Christmas and Easter ones form two dated series assigned by date. The occasional messages on the year-partitioned
 `pont-messages` shelf are not yet harvested ([#4](https://github.com/CatholicOS/cmddr/issues/4)).
 
 ### The document registry

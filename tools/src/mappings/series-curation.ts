@@ -6,7 +6,8 @@
  *
  * Both tables started empty and hold only what the corpus measurement (spec §5.4) turned
  * up: on 2026-09-12, 31 series items whose title prints no occasion year or prints two,
- * and one whose title prints a numeral that is not one. A row is consulted *first*: where
+ * and one whose title prints a numeral that is not one; a fourth ordinal row (Leo XIV 2025)
+ * records a numeral the document prints but the shelf heading does not. A row is consulted *first*: where
  * it exists it wins over the parser, so that a heading which prints a demonstrably wrong
  * value (a mistyped Roman numeral, a year that contradicts its own ordinal) can be corrected
  * with the evidence beside it -- three such corrections are recorded below, each of which
@@ -31,11 +32,36 @@ export interface CuratedOccasionYear {
 export interface CuratedOrdinal {
   /** The ordinal recorded in `series.ordinal`. */
   ordinal: number;
-  /** The token the heading printed in the ordinal's position. */
-  printed: string;
+  /** The token the heading printed in the ordinal's position: null when it printed none. */
+  printed: string | null;
   /** The heading, quoted, and the evidence for the ordinal. */
   evidence: string;
 }
+
+export interface SeriesExclusion {
+  /** The heading, quoted, and the reason the item is not a member of the shelf's series. */
+  evidence: string;
+}
+
+/**
+ * Items filed on a series sub-shelf that are not members of the series. An excluded item
+ * keeps the shelf's genre (`message`) but gets no `series`, and so takes the provisional
+ * form `mag:{issuer}/message-YYYY-MM-DD` rather than the series-form id. One row so far,
+ * adjudicated by the repository owner on PR #26.
+ */
+export const SERIES_EXCLUSIONS: Record<string, SeriesExclusion> = {
+
+  // -- paul-vi -----------------------------------------------------------------
+  'paul-vi|messages/sick|giornata-mondiale-del-malato-1975|1975-09-16': {
+    evidence: "Heading: 'Giornata Mondiale del Malato - 1975' "
+      + '(hf_p-vi_mes_19750916_world-day-of-the-sick-1975.html), the only item on the Paul VI '
+      + 'sick shelf. A world day declared for the 1975 Holy Year, not part of the annual World '
+      + "Day of the Sick John Paul II instituted in 1992 (first kept in 1993, the series' "
+      + 'verified firstYear); vatican.va files it on the same sub-shelf. Excluded so that the '
+      + 'series holds only the annual day, and so that its 1975 sits eighteen years before the '
+      + "series' first year without pretending to be a member.",
+  },
+};
 
 /** The evidence shared by the twelve Francis consecrated-life rows. */
 const CONSECRATED_LIFE_EVIDENCE =
@@ -215,6 +241,20 @@ export const SERIES_ORDINALS: Record<string, CuratedOrdinal> = {
       + "Mondiale dell'Alimentazione, 1981' on the same shelf, so 1996 is the XVI. The "
       + 'document itself (English page; the Italian one is empty) prints no ordinal. '
       + 'Invariant 24 refuses the heading as printed.',
+  },
+
+  // -- leo-xiv -----------------------------------------------------------------
+  'leo-xiv|messages/creation|messaggio-del-santo-padre-in-occasione-della-giornata-mondiale-di-preghiera-per-la-cura-del-creato-1-settembre-2025|2025-06-30': {
+    ordinal: 10,
+    printed: null,
+    evidence: "Heading: 'Messaggio del Santo Padre in occasione della Giornata Mondiale di "
+      + "Preghiera per la Cura del Creato [1° settembre 2025] (30 giugno 2025)' -- no ordinal "
+      + "on the shelf. The document itself is headed 'MESSAGGIO DI SUA SANTITÀ PAPA LEONE XIV "
+      + 'PER LA X GIORNATA MONDIALE DI PREGHIERA PER LA CURA DEL CREATO 2025 [1° settembre '
+      + "2025]' and dated 'Dal Vaticano, 30 giugno 2025' (retrieved 2026-09-12). X repeats "
+      + "2024's X: the Holy See reset the numbering so that the edition number matched the "
+      + "tenth anniversary of Laudato si' in the 2025 Jubilee, and 2026 is XI. The series row's "
+      + '`renumberings` records the reset (offset -1 from 2025), so invariant 24 accepts 10 here.',
   },
 
   // -- francesco ---------------------------------------------------------------

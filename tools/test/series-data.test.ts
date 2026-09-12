@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 
 interface SeriesRow {
   id: string; label: string; shelves: string[]; numbered: boolean; firstYear?: number;
+  renumberings?: { fromYear: number; offset: number; note: string }[];
   gloss: string; note: string;
 }
 const series = JSON.parse(readFileSync('data/series.json', 'utf8')) as SeriesRow[];
@@ -97,6 +98,7 @@ describe('data/series.json', () => {
       'world-childrens-day': 2024,
       'world-food-day': 1981,
       'world-day-for-consecrated-life': 1997,
+      'world-day-of-prayer-for-the-care-of-creation': 2015,
     });
     for (const s of series) {
       if (s.firstYear === undefined) continue;
@@ -104,15 +106,39 @@ describe('data/series.json', () => {
       expect(s.firstYear, s.id).toBeGreaterThanOrEqual(1000);
       expect(s.firstYear, s.id).toBeLessThanOrEqual(9999);
       expect(s.numbered, `${s.id}: a first year is only checkable against an ordinal`).toBe(true);
-      expect(s.note, s.id).toMatch(/I Giornata/);
+      // The note names the verifying evidence: an 'I Giornata…' title, or for Care of Creation
+      // the instituting letter of 2015 and the VI printed in 2020.
+      expect(s.note, s.id).toContain(String(s.firstYear));
+      if (s.id !== 'world-day-of-prayer-for-the-care-of-creation') expect(s.note, s.id).toMatch(/I Giornata/);
     }
   });
 
   it('leaves firstYear absent where no shelf reaches a first occasion', () => {
     for (const id of ['world-youth-day', 'world-day-of-migrants-and-refugees', 'world-mission-day',
-      'world-day-of-prayer-for-the-care-of-creation', 'lent', ...URBI]) {
+      'lent', ...URBI]) {
       expect(by[id]!.firstYear, id).toBeUndefined();
     }
+  });
+
+  it('records a reset of the printed numbering as a renumbering, never by re-computing ordinals', () => {
+    // fromYear: the first year the shifted numbering applies to; offset: the shift, never
+    // zero; note: the evidence, required. Only the Care of Creation series has one: 2025 was
+    // titled X, repeating 2024's X, so that the edition matched Laudato si's tenth anniversary.
+    for (const s of series) {
+      if (s.renumberings === undefined) continue;
+      expect(s.firstYear, `${s.id}: a renumbering shifts a count, so needs a first year`).toBeDefined();
+      for (const r of s.renumberings) {
+        expect(Number.isInteger(r.fromYear), s.id).toBe(true);
+        expect(r.fromYear, s.id).toBeGreaterThan(s.firstYear!);
+        expect(Number.isInteger(r.offset) && r.offset !== 0, s.id).toBe(true);
+        expect(r.note, s.id).toBeTruthy();
+      }
+    }
+    expect(series.filter((s) => s.renumberings).map((s) => s.id))
+      .toEqual(['world-day-of-prayer-for-the-care-of-creation']);
+    expect(by['world-day-of-prayer-for-the-care-of-creation']!.renumberings)
+      .toMatchObject([{ fromYear: 2025, offset: -1 }]);
+    expect(by['world-day-of-prayer-for-the-care-of-creation']!.renumberings![0]!.note).toMatch(/Laudato si/);
   });
 
   it('never numbers the Urbi et Orbi series', () => {

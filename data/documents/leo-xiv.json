@@ -146,7 +146,8 @@
     },
     "series": {
       "id": "world-day-of-prayer-for-the-care-of-creation",
-      "year": 2025
+      "year": 2025,
+      "ordinal": 10
     },
     "sourceGenreLabel": "messages/creation"
   },

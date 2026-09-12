@@ -350,6 +350,31 @@ describe('toDocument on the Messaggi series shelves (messages spec §5.2)', () =
     }
   });
 
+  it('excludes a curated non-member of the series: genre message, no series, provisional id', () => {
+    const d = toDocument(msg({
+      title: 'Giornata Mondiale del Malato - 1975', date: '1975-09-16', pageSlug: 'paul-vi',
+      sourceGenreLabel: 'messages/sick', shelf: 'messages/sick',
+      url: 'https://www.vatican.va/content/paul-vi/it/messages/sick/documents/hf_p-vi_mes_19750916_world-day-of-the-sick-1975.html',
+    }), '2026-09-12');
+    expect(d.id).toBe('mag:paul-vi/message-1975-09-16');
+    expect(d.idStatus).toBe('provisional');
+    expect(d.genre).toBe('message');
+    expect(d.series).toBeUndefined();
+    expect(d.sourceGenreLabel).toBe('messages/sick');
+  });
+
+  it('files a homily given on the day as a homily in the series: membership, not genre, triggers the id rule', () => {
+    const d = toDocument(msg({
+      title: 'XXIX Giornata Mondiale della Vita Consacrata - Festa della Presentazione del Signore', date: '2025-02-01',
+      sourceGenreLabel: 'messages/consecrated_life', shelf: 'messages/consecrated_life',
+      url: 'https://www.vatican.va/content/francesco/it/messages/consecrated_life/documents/20250201-omelia-presentazione-del-signore.html',
+    }), '2026-09-12');
+    expect(d.genre).toBe('homily');
+    expect(d.id).toBe('mag:francis-i/world-day-for-consecrated-life-2025');
+    expect(d.series).toEqual({ id: 'world-day-for-consecrated-life', year: 2025, ordinal: 29 });
+    expect(d.sourceGenreLabel).toBe('messages/consecrated_life');
+  });
+
   it('throws for a messages sub-shelf no series row claims', () => {
     expect(() => toDocument(msg({ sourceGenreLabel: 'messages/travels', shelf: 'messages/travels' }), '2026-09-12'))
       .toThrow(/claimed by no row/);

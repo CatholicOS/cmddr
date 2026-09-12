@@ -15,6 +15,13 @@ export interface SeriesRow {
   shelves: string[];
   numbered: boolean;
   firstYear?: number;
+  /**
+   * Resets of the printed numbering by the Holy See, each shifting every ordinal from
+   * `fromYear` on by `offset` (invariant 24). Recorded in the vocabulary, never re-computed
+   * by the registry: the Care of Creation message of 2025 repeats 2024's X so that the
+   * edition matched the tenth anniversary of Laudato si', and 2026 is XI.
+   */
+  renumberings?: { fromYear: number; offset: number; note: string }[];
   gloss: string;
   note: string;
 }

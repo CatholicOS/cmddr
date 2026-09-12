@@ -5,6 +5,7 @@ import {
   VATICAN_SLUG_TO_ISSUER, SOURCE_GENRE_TO_GENRE, CONCILIAR_SOURCE_GENRE_TO_GENRE,
   CONCILIAR_REASSIGNMENTS, COUNCILS, RECOVERED_INCIPITS, GENRE_OVERRIDES, keywordsFor,
   CIRCUMSCRIPTION_KEYWORDS, seriesForShelf, SERIES_OCCASION_YEARS, SERIES_ORDINALS,
+  SERIES_EXCLUSIONS,
 } from '../mappings/index.js';
 import { readOrdinal, readOccasionYear } from './seriesTitle.js';
 import type { DocumentRecord, HarvestItem } from '../types.js';
@@ -56,11 +57,21 @@ function seriesStep(item: HarvestItem, issuerId: string): Pick<
       };
   }
 
+  // An item filed on a series sub-shelf that is not a member of the series (Paul VI's
+  // 'Giornata Mondiale del Malato - 1975', a Holy Year day, not the annual day of 1993 on)
+  // keeps the shelf's genre and takes the provisional form, exactly as a pont-messages
+  // item will: no occasion, no series-form id (SERIES_EXCLUSIONS, one row so far).
+  const key = curationKey(item);
+  if (SERIES_EXCLUSIONS[key]) {
+    return {
+      id: mintProvisionalId(issuerId, 'message', item.date), idStatus: 'provisional', genre: 'message',
+    };
+  }
+
   // A curated row is consulted first and wins where it exists, so that a heading which
   // prints a demonstrably wrong value can be corrected with its evidence beside it; the
   // parser reads only what the title prints, and never derives a year from `date` or an
   // ordinal from the vocabulary's firstYear (§3.2.4, §3.2.5).
-  const key = curationKey(item);
   const curatedYear = SERIES_OCCASION_YEARS[key];
   const readYear = readOccasionYear(item.title);
   const year = curatedYear?.year
@@ -82,9 +93,17 @@ function seriesStep(item: HarvestItem, issuerId: string): Pick<
     );
   }
 
+  // The series rule triggers on membership, not genre: a homily given on the day and filed
+  // by vatican.va on the series sub-shelf is a member of the series with the series-form
+  // id, but its genre is what the act is. Measured over every messages/* shelf on
+  // 2026-09-12: exactly 11 items carry `omelia` in their URL, all of them Francis's
+  // consecrated_life pages 2014-2022, 2024 and 2025 (…_omelia-vita-consacrata.html,
+  // …_omelia-vitaconsacrata.html, …-omelia-presentazione-del-signore.html); the 2023 item is
+  // a messaggio. Adjudicated by the repository owner on PR #26.
+  const genre = /omelia/.test(item.url ?? '') ? 'homily' : 'message';
   const row = shelfSeries.row;
   return {
-    id: mintSeriesId(issuerId, row.id, year), idStatus: 'minted', genre: 'message',
+    id: mintSeriesId(issuerId, row.id, year), idStatus: 'minted', genre,
     series: { id: row.id, year, ...(ordinal !== undefined ? { ordinal } : {}) },
   };
 }

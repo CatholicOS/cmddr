@@ -6,6 +6,7 @@ import {
   KNOWN_PONTIFF_IDS, KNOWN_COUNCIL_IDS,
   DATE_CORRECTIONS, DUPLICATE_MERGES, ADJUDICATED_DISTINCT, CIRCUMSCRIPTION_ERECTIONS,
   SERIES, seriesForShelf, isMessagesShelf, messagesSubShelf, SERIES_OCCASION_YEARS, SERIES_ORDINALS,
+  SERIES_EXCLUSIONS,
 } from '../src/mappings/index.js';
 import { fixtureName } from '../src/harvest/fixtures.js';
 
@@ -263,8 +264,12 @@ describe('every curated table entry carries a non-empty note', () => {
     }
     for (const [key, entry] of Object.entries(SERIES_ORDINALS)) {
       expect(entry.evidence, key).toMatch(/[Hh]eading/);
-      expect(entry.printed, key).toBeTruthy();
+      expect(entry.printed === null || entry.printed.length > 0, key).toBe(true);
       expect(entry.ordinal, key).toBeGreaterThanOrEqual(1);
+      expect(key.split('|')[1], key).toMatch(/^messages\//);
+    }
+    for (const [key, entry] of Object.entries(SERIES_EXCLUSIONS)) {
+      expect(entry.evidence, key).toMatch(/[Hh]eading/);
       expect(key.split('|')[1], key).toMatch(/^messages\//);
     }
   });

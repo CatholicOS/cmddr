@@ -16305,9 +16305,9 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:paul-vi/world-day-of-the-sick-1975",
+    "id": "mag:paul-vi/message-1975-09-16",
     "title": "Giornata Mondiale del Malato - 1975",
-    "idStatus": "minted",
+    "idStatus": "provisional",
     "genre": "message",
     "issuerId": "rp:paul-vi",
     "issuerType": "pope",
@@ -16319,10 +16319,6 @@
         "IT"
       ],
       "retrieved": "2026-09-12"
-    },
-    "series": {
-      "id": "world-day-of-the-sick",
-      "year": 1975
     },
     "sourceGenreLabel": "messages/sick"
   },

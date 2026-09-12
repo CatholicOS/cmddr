@@ -16,9 +16,25 @@ export interface KeywordLike { id: string }
 
 /**
  * The series rows this module needs from `data/series.json`: id, plus `firstYear` where
- * the vocabulary has verified one, for invariant 24.
+ * the vocabulary has verified one and any `renumberings` (resets of the printed numbering
+ * by the Holy See, each shifting every ordinal from `fromYear` on by `offset`), for
+ * invariant 24.
  */
-export interface SeriesLike { id: string; firstYear?: number }
+export interface SeriesLike {
+  id: string;
+  firstYear?: number;
+  renumberings?: { fromYear: number; offset: number }[];
+}
+
+/**
+ * The ordinal invariant 24 expects for `year` in a series with a verified `firstYear`:
+ * year - firstYear + 1, plus the offset of every renumbering whose fromYear <= year. The
+ * vocabulary records a reset; the registry never re-computes numbers from it.
+ */
+export function expectedOrdinal(row: SeriesLike, year: number): number {
+  return year - row.firstYear! + 1
+    + (row.renumberings ?? []).filter((r) => r.fromYear <= year).reduce((sum, r) => sum + r.offset, 0);
+}
 
 /** Invariants 8-13, 15-24 of the design specs. (14 lives in the assessment checker.) */
 export function checkDocuments(
@@ -28,8 +44,8 @@ export function checkDocuments(
   const genreIds = new Set(genres.map((g) => g.id));
   const keywordIds = new Set(keywords.map((k) => k.id));
   const seriesIds = new Set(series.map((s) => s.id));
-  const firstYearBySeries = new Map(series.filter((s) => s.firstYear !== undefined)
-    .map((s) => [s.id, s.firstYear!]));
+  const rowsWithFirstYear = new Map(series.filter((s) => s.firstYear !== undefined)
+    .map((s) => [s.id, s]));
   const issuerTypesByGenre = new Map(genres.map((g) => [g.id, g.issuerTypes]));
   const characteristicsByGenre = new Map(genres.map((g) => [g.id, g.allowedCharacteristics]));
   const out: Violation[] = [];
@@ -123,18 +139,22 @@ export function checkDocuments(
     }
 
     // Rule 24: where the vocabulary row has a verified first year and the title printed an
-    // ordinal, the two must agree -- ordinal = year - firstYear + 1. This catches a misread
-    // numeral or a miscounted day before it enters a permanent id's neighbourhood. It never
-    // fires when any of the three is absent: an ordinal is never computed from firstYear.
+    // ordinal, the two must agree -- ordinal = year - firstYear + 1, plus the offset of every
+    // renumbering the row records from a year <= this one (expectedOrdinal). This catches a
+    // misread numeral or a miscounted day before it enters a permanent id's neighbourhood.
+    // It never fires when any of the three is absent: an ordinal is never computed from
+    // firstYear.
     if (d.series && d.series.ordinal !== undefined) {
-      const firstYear = firstYearBySeries.get(d.series.id);
-      if (firstYear !== undefined) {
-        const expected = d.series.year - firstYear + 1;
+      const row = rowsWithFirstYear.get(d.series.id);
+      if (row !== undefined) {
+        const expected = expectedOrdinal(row, d.series.year);
         if (d.series.ordinal !== expected) {
+          const resets = (row.renumberings ?? []).filter((r) => r.fromYear <= d.series!.year);
           out.push({
             rule: 24, id: d.id,
-            message: `series.ordinal ${d.series.ordinal} != ${d.series.year} - ${firstYear} + 1 `
-              + `= ${expected} for ${d.series.id}`,
+            message: `series.ordinal ${d.series.ordinal} != ${d.series.year} - ${row.firstYear} + 1`
+              + resets.map((r) => ` ${r.offset < 0 ? '-' : '+'} ${Math.abs(r.offset)} (reset from ${r.fromYear})`).join('')
+              + ` = ${expected} for ${d.series.id}`,
           });
         }
       }
