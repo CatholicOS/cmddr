@@ -238,7 +238,7 @@ the shelf’s only Christmas 1962 item), by a curated row. The occasional messag
 
 The *Acta Apostolicae Sedis* (AAS, 1909–), and before them the *Acta Sanctae Sedis* (ASS, 1865–1908), are the Holy See's
 official gazette. Unlike the shelves, the AAS are the **promulgating instrument**: publication there is what promulgates a
-universal law (CIC can. 8 §1), and an AAS citation — *AAS 87 (1995) 401* for *Evangelium Vitae*, *AAS 115 (2023) 1041* for
+universal law, unless another manner of promulgation has been prescribed in a particular case (CIC can. 8 §1), and an AAS citation — *AAS 87 (1995) 401* for *Evangelium Vitae*, *AAS 115 (2023) 1041* for
 *Laudate Deum* — is the citation of record in every scholarly apparatus. The registry records it in an optional
 **`acta`** object, `{ "series": "AAS", "volume": 115, "year": 2023, "page": 1041 }`: the series, the volume as the index
 prints it, the volume year (a December act is published in the next year's volume) and the **first page**. It is purely

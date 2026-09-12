@@ -239,10 +239,12 @@ export function checkDocuments(
     }
 
     // Rule 25 (acta reference spec §3): one page of the Acta opens one act, so no two
-    // documents share (series, volume, page). Well-formedness is the schema's; this is
-    // the only invariant that reads `acta`, which bears on nothing but the citation.
+    // documents share (series, volume, part, page) -- the two-part volumes of 1917 and
+    // 1983 restart their pagination per part, so `part` is in the key even though phase 1
+    // never sets it. Well-formedness is the schema's; this is the only invariant that
+    // reads `acta`, which bears on nothing but the citation.
     if (d.acta) {
-      const k = `${d.acta.series}|${d.acta.volume}|${d.acta.page}`;
+      const k = `${d.acta.series}|${d.acta.volume}${d.acta.part ? `-${d.acta.part}` : ''}|${d.acta.page}`;
       byActaPage.set(k, [...(byActaPage.get(k) ?? []), d]);
     }
   }
@@ -307,6 +309,7 @@ export function checkDocuments(
       out.push({
         rule: 25, id: d.id,
         message: `acta reference ${k.replace(/\|/g, ' ')} is shared by ${group.length} documents`,
+        // (k reads 'AAS 115 1041', or 'AAS 9-I 41' for a two-part volume)
       });
     }
   }

@@ -15,8 +15,11 @@ import type { ActaEntry } from './src/acta/index.js';
 import { slugify } from './src/slug.js';
 import type { DocumentRecord } from './src/types.js';
 
+// Sorted by id: readdirSync's order is the platform's, and the report is a checked-in
+// artefact whose candidate lists must not depend on it.
 const docs = readdirSync('data/documents').filter((f) => f.endsWith('.json'))
-  .flatMap((f) => JSON.parse(readFileSync(`data/documents/${f}`, 'utf8')) as DocumentRecord[]);
+  .flatMap((f) => JSON.parse(readFileSync(`data/documents/${f}`, 'utf8')) as DocumentRecord[])
+  .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
 const francis = docs.filter((d) => d.issuerId === 'rp:francis-i');
 const { parsed, missing } = loadActaIndexes();
 const years = [...parsed.keys()];
@@ -25,7 +28,11 @@ const result = matchActa(entries, docs);
 
 const cat = (e: ActaEntry): ActaCategory | null => categoryForHeading(e.category);
 const catId = (e: ActaEntry) => cat(e)?.id ?? e.category;
-const harvestedness = (e: ActaEntry) => cat(e)?.harvested ?? 'no';
+// An unregistered heading is 'unknown', never silently 'no': matchActa skips such an entry,
+// and the report must say so rather than count it among the categories not harvested.
+const harvestedness = (e: ActaEntry): 'yes' | 'partly' | 'no' | 'unknown' => cat(e)?.harvested ?? 'unknown';
+const unseenHeadings = new Map<string, number>();
+for (const e of entries) if (cat(e) === null) unseenHeadings.set(e.category, (unseenHeadings.get(e.category) ?? 0) + 1);
 const cite = (e: ActaEntry) => `AAS ${e.volume} (${e.year}) ${e.page}`;
 const md = (s: string) => s.replace(/\|/g, '\\|').replace(/\n/g, ' / ');
 const cls = (c: ActaCandidate) => `${c.genre}${c.characteristics.length ? '+' + c.characteristics.join('+') : ''}`;
@@ -166,7 +173,7 @@ p('|---|---|---|---|---|---|---|---|---|---|');
 const totals = { parsed: 0, attempted: 0, matched: 0, ambiguous: 0, conflicts: 0, unY: 0, unP: 0, non: 0, without: 0 };
 for (const y of years) {
   const es = parsed.get(y)!.entries;
-  const attempted = es.filter((e) => harvestedness(e) !== 'no');
+  const attempted = es.filter((e) => harvestedness(e) === 'yes' || harvestedness(e) === 'partly');
   const matched = result.matches.filter((m) => m.entry.year === y).length;
   const ambiguous = result.ambiguous.filter((a) => a.entry.year === y).length;
   const conflicts = result.conflicts.filter((c) => c.entries.some((e) => e.year === y)).length;
@@ -251,7 +258,12 @@ for (const c of ACTA_CATEGORIES) {
   p(`| ${c.id} | ${c.harvested} | ${cellsFor.join(' | ')} |`);
 }
 p();
-p('Unseen category headings: **none** — every heading printed in the ten indexes is a row of `categories.ts`. Parts skipped per');
+if (unseenHeadings.size === 0) {
+  p('Unseen category headings: **none** — every heading printed in the ten indexes is a row of `categories.ts`. Parts skipped per');
+} else {
+  p(`Unseen category headings: **${unseenHeadings.size}**, whose entries \`matchActa\` skipped and which count under no harvestedness above — `);
+  p([...unseenHeadings].sort().map(([h, n]) => `*${md(h)}* (${n})`).join(', ') + '. Each needs a row of `categories.ts`. Parts skipped per');
+}
 p('year (dicasteries, synod, *Diarium*): ' + years.map((y) => `${y}: ${parsed.get(y)!.skippedParts.length}`).join('; ') + '.');
 p();
 
@@ -404,7 +416,7 @@ for (const d of window.filter((d) => FORMAL.has(d.genre ?? '')).sort((a, b) => a
   else if (same.some((e) => result.ambiguous.some((a) => a.entry === e && a.candidates.some((c) => c.id === d.id)))) reading = 'ambiguous (§4)';
   else if (same.some((e) => result.conflicts.some((c) => c.documentId === d.id))) reading = 'claimed twice (§5)';
   else if (same.some((e) => harvestedness(e) === 'no')) reading = `the index files the act of this date under ${same.filter((e) => harvestedness(e) === 'no').map(catId).join(', ')}, not harvested`;
-  else if (same.some((e) => harvestedness(e) !== 'no')) reading = 'class mismatch or another act of the date (§6)';
+  else if (same.some((e) => harvestedness(e) === 'yes' || harvestedness(e) === 'partly')) reading = 'class mismatch or another act of the date (§6)';
   else reading = 'no index entry on this date: not in AAS 2015–2024 under any category';
   p(`| \`${d.id}\` | ${d.date} | ${k} | ${md(sameTxt)} | ${md(reading)} |`);
 }

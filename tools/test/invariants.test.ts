@@ -384,6 +384,16 @@ describe('invariant 25: one page of the Acta opens one act', () => {
     expect(out[0]!.message).toContain('AAS 115 1041');
   });
 
+  it('keeps the two parts of a double volume apart: Part I and Part II each restart at page 1', () => {
+    const inPart = (id: string, part: 'I' | 'II'): DocumentRecord => ({
+      ...cited(id, 41, '1917-05-27'), issuerId: 'rp:benedict-xv', acta: { series: 'AAS', volume: 9, year: 1917, page: 41, part },
+    });
+    expect(rules([inPart('mag:benedict-xv/providentissima-mater-1917', 'I'), inPart('mag:benedict-xv/dei-providentis-1917', 'II')])).toEqual([]);
+    const out = checkDocuments([inPart('mag:benedict-xv/providentissima-mater-1917', 'I'), inPart('mag:benedict-xv/dei-providentis-1917', 'I')], GENRES);
+    expect(out.map((v) => v.rule)).toEqual([25, 25]);
+    expect(out[0]!.message).toContain('AAS 9-I 41');
+  });
+
   it('reads nothing else off acta: a reference on a document of any genre or issuer passes', () => {
     expect(rules([{ ...good, acta: { series: 'ASS', volume: 23, year: 1890, page: 705 } }])).toEqual([]);
   });
