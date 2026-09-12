@@ -1,5 +1,32 @@
 [
   {
+    "id": "mag:leo-xiv/urbi-et-orbi-2025-05-08",
+    "title": "Prima Benedizione “Urbi et Orbi” del Santo Padre Leone XIV",
+    "idStatus": "provisional",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-05-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/messages/urbi/documents/20250508-prima-benedizione-urbietorbi.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
+  },
+  {
     "id": "mag:leo-xiv/verba-christi-2025",
     "title": "Verba Christi: Costituzione Apostolica con la quale il Santo Padre eleva la Diocesi di São José do Rio Preto al rango di Arcidiocesi Metropolitana",
     "idStatus": "minted",
@@ -13,7 +40,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Verba Christi",
     "characteristics": [
@@ -24,6 +51,104 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:leo-xiv/world-day-of-the-poor-2025",
+    "title": "Messaggio del Santo Padre per la IX Giornata Mondiale dei Poveri [16 novembre 2025]",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-06-13",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/messages/poor/documents/20250613-messaggio-giornata-poveri.html",
+      "shelf": "messages/poor",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-poor",
+      "year": 2025,
+      "ordinal": 9
+    },
+    "sourceGenreLabel": "messages/poor"
+  },
+  {
+    "id": "mag:leo-xiv/world-day-of-grandparents-and-the-elderly-2025",
+    "title": "Messaggio del Santo Padre per la V Giornata Mondiale dei Nonni e degli Anziani, 2025: “Beato chi non ha perduto la sua speranza” (cfr Sir 14, 2)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-06-26",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/messages/grandparents/documents/20250626-messaggio-nonni-anziani.html",
+      "shelf": "messages/grandparents",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-grandparents-and-the-elderly",
+      "year": 2025,
+      "ordinal": 5
+    },
+    "sourceGenreLabel": "messages/grandparents"
+  },
+  {
+    "id": "mag:leo-xiv/world-day-of-prayer-for-the-care-of-creation-2025",
+    "title": "Messaggio del Santo Padre in occasione della Giornata Mondiale di Preghiera per la Cura del Creato [1° settembre 2025]",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-06-30",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/messages/creation/documents/20250630-messaggio-giornata-curacreato.html",
+      "shelf": "messages/creation",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-the-care-of-creation",
+      "year": 2025
+    },
+    "sourceGenreLabel": "messages/creation"
   },
   {
     "id": "mag:leo-xiv/sinensium-dominici-gregis-2025",
@@ -39,7 +164,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Sinensium Dominici gregis",
     "characteristics": [
@@ -65,7 +190,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Illa sectanda caritas",
     "characteristics": [
@@ -76,6 +201,39 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:leo-xiv/world-day-of-migrants-and-refugees-2025",
+    "title": "Messaggio del Santo Padre Leone XIV per la 111ª Giornata Mondiale del Migrante e del Rifugiato 2025",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-07-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/messages/migration/documents/20250725-world-migrants-day-2025.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2025,
+      "ordinal": 111
+    },
+    "sourceGenreLabel": "messages/migration"
   },
   {
     "id": "mag:leo-xiv/libenter-ac-sedula-2025",
@@ -91,7 +249,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Libenter ac sedula",
     "characteristics": [
@@ -117,7 +275,7 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -142,7 +300,7 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -176,10 +334,69 @@
         "PL",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Dilexi te",
     "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:leo-xiv/world-youth-day-2025",
+    "title": "Messaggio del Santo Padre Leone XIV per la XL Giornata Mondiale della Gioventù [23 novembre 2025]",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-10-07",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/messages/youth/documents/20251007-messaggio-xl-gmg.html",
+      "shelf": "messages/youth",
+      "languages": [
+        "AR",
+        "DE",
+        "EL",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "SQ",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-youth-day",
+      "year": 2025,
+      "ordinal": 40
+    },
+    "sourceGenreLabel": "messages/youth"
+  },
+  {
+    "id": "mag:leo-xiv/world-mission-day-2025",
+    "title": "Videomessaggio di Papa Leone XIV per la Giornata Missionaria Mondiale 2025",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-10-13",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/messages/mission/documents/20251013-giornata-missionaria.html",
+      "shelf": "messages/mission",
+      "languages": [
+        "EN",
+        "ES",
+        "IT",
+        "PL"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2025
+    },
+    "sourceGenreLabel": "messages/mission"
   },
   {
     "id": "mag:leo-xiv/disegnare-nuove-mappe-di-speranza-2025",
@@ -200,7 +417,7 @@
         "PL",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Disegnare nuove mappe di speranza",
     "sourceGenreLabel": "apost_letters"
@@ -220,7 +437,7 @@
         "EN",
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -247,7 +464,7 @@
         "ES",
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -279,7 +496,7 @@
         "PL",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "In unitate fidei",
     "sourceGenreLabel": "apost_letters"
@@ -298,7 +515,7 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Regolamento del Personale della Curia Romana",
     "characteristics": [
@@ -320,7 +537,7 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Regolamento Generale della Curia Romana",
     "characteristics": [
@@ -350,10 +567,44 @@
         "PL",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Una fedeltà che genera futuro",
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:leo-xiv/world-day-of-peace-2026",
+    "title": "Messaggio del Santo Padre Leone XIV per la LIX Giornata Mondiale della Pace 2026: «La pace sia con tutti voi: verso una pace “disarmata e disarmante”»",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/messages/peace/documents/20251208-messaggio-pace.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "RU",
+        "UK",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2026,
+      "ordinal": 59
+    },
+    "sourceGenreLabel": "messages/peace"
   },
   {
     "id": "mag:leo-xiv/apostolic-letter-2025-12-11",
@@ -377,7 +628,7 @@
         "PL",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -395,7 +646,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Mandatum Christi",
     "characteristics": [
@@ -406,6 +657,36 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:leo-xiv/urbi-et-orbi-christmas-2025",
+    "title": "Natale del Signore – Benedizione «Urbi et Orbi»",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2025-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/messages/urbi/documents/20251225-urbi-et-orbi-natale.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2025
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:leo-xiv/ad-quem-diligere-2026",
@@ -421,7 +702,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Ad quem diligere",
     "characteristics": [
@@ -447,7 +728,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Suavis Nutrix animarum",
     "characteristics": [
@@ -458,6 +739,200 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:leo-xiv/world-day-of-the-sick-2026",
+    "title": "XXXIV Giornata Mondiale del Malato 2026",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2026-01-13",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/messages/sick/documents/20260113-messaggio-giornata-malato.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2026,
+      "ordinal": 34
+    },
+    "sourceGenreLabel": "messages/sick"
+  },
+  {
+    "id": "mag:leo-xiv/world-communications-day-2026",
+    "title": "LX Giornata Mondiale delle Comunicazioni Sociali 2026",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2026-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/messages/communications/documents/20260124-messaggio-comunicazioni-sociali.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2026,
+      "ordinal": 60
+    },
+    "sourceGenreLabel": "messages/communications"
+  },
+  {
+    "id": "mag:leo-xiv/world-mission-day-2026",
+    "title": "Messaggio del Santo Padre per la 100ma Giornata Mondiale delle Missioni [18 ottobre 2026]",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2026-01-25",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/messages/mission/documents/20260125-giornata-missionaria.html",
+      "shelf": "messages/mission",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2026,
+      "ordinal": 100
+    },
+    "sourceGenreLabel": "messages/mission"
+  },
+  {
+    "id": "mag:leo-xiv/lent-2026",
+    "title": "Quaresima 2026: Ascoltare e digiunare. La Quaresima come tempo di conversione",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2026-02-05",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/messages/lent/documents/20260205-messaggio-quaresima.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2026
+    },
+    "sourceGenreLabel": "messages/lent"
+  },
+  {
+    "id": "mag:leo-xiv/world-day-of-prayer-for-vocations-2026",
+    "title": "Messaggio del Santo Padre per la 63a Giornata Mondiale di Preghiera per le Vocazioni 2026",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2026-03-16",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/messages/vocations/documents/20260316-messaggio-vocazioni.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "KO",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2026,
+      "ordinal": 63
+    },
+    "sourceGenreLabel": "messages/vocations"
+  },
+  {
+    "id": "mag:leo-xiv/urbi-et-orbi-easter-2026",
+    "title": "Messaggio Pasquale e Benedizione “Urbi et Orbi”, 2026",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2026-04-05",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/messages/urbi/documents/20260405-urbi-et-orbi-pasqua.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2026
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:leo-xiv/magnifica-humanitas-2026",
@@ -481,10 +956,72 @@
         "PT",
         "RU"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Magnifica Humanitas",
     "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:leo-xiv/world-day-of-the-poor-2026",
+    "title": "Messaggio del Santo Padre per la X Giornata Mondiale dei Poveri [15 novembre 2026]",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2026-06-13",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/messages/poor/documents/20260613-messaggio-giornata-poveri.html",
+      "shelf": "messages/poor",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-poor",
+      "year": 2026,
+      "ordinal": 10
+    },
+    "sourceGenreLabel": "messages/poor"
+  },
+  {
+    "id": "mag:leo-xiv/world-day-of-grandparents-and-the-elderly-2026",
+    "title": "Messaggio del Santo Padre per la VI Giornata Mondiale dei Nonni e degli Anziani, 2026: “Io invece non ti dimenticherò mai” (Is 49,15)",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2026-06-15",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/messages/grandparents/documents/20260615-messaggio-nonni-anziani.html",
+      "shelf": "messages/grandparents",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-grandparents-and-the-elderly",
+      "year": 2026,
+      "ordinal": 6
+    },
+    "sourceGenreLabel": "messages/grandparents"
   },
   {
     "id": "mag:leo-xiv/confirma-fratres-tuos-2026",
@@ -500,7 +1037,7 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]
@@ -510,6 +1047,69 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:leo-xiv/world-day-of-migrants-and-refugees-2026",
+    "title": "Messaggio del Santo Padre per la 112ª Giornata Mondiale del Migrante e del Rifugiato 2026",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2026-08-11",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/messages/migration/documents/20260811-world-migrants-day-2026.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2026,
+      "ordinal": 112
+    },
+    "sourceGenreLabel": "messages/migration"
+  },
+  {
+    "id": "mag:leo-xiv/world-day-of-prayer-for-the-care-of-creation-2026",
+    "title": "Messaggio del Santo Padre per l'XI Giornata Mondiale di Preghiera per la Cura del Creato [1° settembre 2026]",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:leo-xiv",
+    "issuerType": "pope",
+    "date": "2026-08-15",
+    "source": {
+      "url": "https://www.vatican.va/content/leo-xiv/it/messages/creation/documents/20260815-messaggio-giornata-curacreato.html",
+      "shelf": "messages/creation",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "VI",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-the-care-of-creation",
+      "year": 2026,
+      "ordinal": 11
+    },
+    "sourceGenreLabel": "messages/creation"
   },
   {
     "id": "mag:leo-xiv/mutua-concordia-2026",
@@ -526,7 +1126,7 @@
         "IT",
         "LA"
       ],
-      "retrieved": "2026-09-07",
+      "retrieved": "2026-09-12",
       "alsoShelvedAs": [
         "motu_proprio"
       ]

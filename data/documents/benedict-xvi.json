@@ -1,5 +1,30 @@
 [
   {
+    "id": "mag:benedict-xvi/urbi-et-orbi-2005-04-20",
+    "title": "Primo Messaggio del Santo Padre al termine della Concelebrazione Eucaristica con i Cardinali elettori nella Cappella Sistina",
+    "idStatus": "provisional",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-04-20",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/urbi/documents/hf_ben-xvi_mes_20050420_missa-pro-ecclesia.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
+  },
+  {
     "id": "mag:benedict-xvi/apostolic-letter-2005-05-14",
     "title": "Lettera Apostolica con la quale il Sommo Pontefice ha iscritto all’albo dei Beati le Serve di Dio: Ascensión Nicol Goñi e Marianne Cope",
     "idStatus": "provisional",
@@ -17,7 +42,7 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -35,7 +60,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Carthaginensis",
     "characteristics": [
@@ -66,7 +91,7 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "L'antica e venerabile Basilica",
     "characteristics": [
@@ -89,7 +114,7 @@
         "ES",
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -107,7 +132,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Gulbargensis",
     "characteristics": [
@@ -142,7 +167,7 @@
         "SL",
         "SV"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "characteristics": [
       "motu-proprio"
@@ -163,7 +188,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Sindhudurgiensis",
     "characteristics": [
@@ -189,7 +214,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Auguensis",
     "characteristics": [
@@ -215,7 +240,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Iaipurensis",
     "characteristics": [
@@ -241,7 +266,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Dominae Nostrae Naregensis",
     "characteristics": [
@@ -263,7 +288,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Yorensis",
     "characteristics": [
@@ -289,7 +314,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Serrignensis",
     "characteristics": [
@@ -300,6 +325,40 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/lent-2006",
+    "title": "Messaggio di Benedetto XVI per la Quaresima 2006",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-09-29",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/lent/documents/hf_ben-xvi_mes_20050929_lent-2006.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IS",
+        "IT",
+        "NL",
+        "PL",
+        "PT",
+        "RO",
+        "SV",
+        "ZH"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2006
+    },
+    "sourceGenreLabel": "messages/lent"
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2005-10-09",
@@ -320,9 +379,65 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/world-food-day-2005",
+    "title": "Messaggio in occasione della Giornata Mondiale dell’Alimentazione 2005",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-10-12",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/food/documents/hf_ben-xvi_mes_20051012_world-food-day-2005.html",
+      "shelf": "messages/food",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-food-day",
+      "year": 2005
+    },
+    "sourceGenreLabel": "messages/food"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-migrants-and-refugees-2006",
+    "title": "Messaggio per la 92ª Giornata Mondiale del Migrante e del Rifugiato 2006",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-10-18",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/migration/documents/hf_ben-xvi_mes_20051018_world-migrants-day.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2006,
+      "ordinal": 92
+    },
+    "sourceGenreLabel": "messages/migration"
   },
   {
     "id": "mag:benedict-xvi/ad-dei-2005",
@@ -338,7 +453,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Ad Dei",
     "sourceGenreLabel": "apost_letters"
@@ -357,7 +472,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Est autem",
     "sourceGenreLabel": "apost_letters"
@@ -376,7 +491,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Iustus Dominus",
     "sourceGenreLabel": "apost_letters"
@@ -395,7 +510,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Omnibus omnia",
     "sourceGenreLabel": "apost_letters"
@@ -414,7 +529,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Qui manet",
     "sourceGenreLabel": "apost_letters"
@@ -438,7 +553,7 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -456,7 +571,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -480,7 +595,7 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Totius orbis",
     "sourceGenreLabel": "apost_letters"
@@ -504,7 +619,7 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -525,7 +640,7 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -543,7 +658,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Barianensis",
     "characteristics": [
@@ -569,7 +684,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Itanagariensis",
     "characteristics": [
@@ -595,7 +710,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Miaoensis",
     "characteristics": [
@@ -606,6 +721,35 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-the-sick-2006",
+    "title": "XIV Giornata Mondiale del Malato, 2006",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/sick/documents/hf_ben-xvi_mes_20051208_world-day-of-the-sick-2006.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2006,
+      "ordinal": 14
+    },
+    "sourceGenreLabel": "messages/sick"
   },
   {
     "id": "mag:benedict-xvi/buxarensis-2005",
@@ -621,7 +765,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Buxarensis",
     "characteristics": [
@@ -632,6 +776,36 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-peace-2006",
+    "title": "XXXIX Giornata Mondiale della Pace 2006, Nella verità, la pace",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-12-13",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/peace/documents/hf_ben-xvi_mes_20051213_xxxix-world-day-peace.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2006,
+      "ordinal": 39
+    },
+    "sourceGenreLabel": "messages/peace"
   },
   {
     "id": "mag:benedict-xvi/fagarasiensis-2005",
@@ -647,7 +821,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Fagarasiensis",
     "characteristics": [
@@ -673,7 +847,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Maumerensis",
     "characteristics": [
@@ -699,7 +873,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Uromiensis",
     "characteristics": [
@@ -725,7 +899,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Pekhonensis",
     "characteristics": [
@@ -765,10 +939,39 @@
         "VI",
         "ZH"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Deus caritas est",
     "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:benedict-xvi/urbi-et-orbi-christmas-2005",
+    "title": "Messaggio Urbi et Orbi - Natale 2005",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/urbi/documents/hf_ben-xvi_mes_20051225_urbi.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2005
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:benedict-xvi/bancoensis-2006",
@@ -784,7 +987,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Bancoënsis",
     "characteristics": [
@@ -795,6 +998,36 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-communications-day-2006",
+    "title": "XL Giornata Mondiale delle Comunicazioni Sociali, 2006 - I media: rete di comunicazione, comunione e cooperazione",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/communications/documents/hf_ben-xvi_mes_20060124_40th-world-communications-day.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "PT",
+        "ZH"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2006,
+      "ordinal": 40
+    },
+    "sourceGenreLabel": "messages/communications"
   },
   {
     "id": "mag:benedict-xvi/iovaiensis-2006",
@@ -810,7 +1043,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Iovaiensis",
     "characteristics": [
@@ -836,7 +1069,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Nongstoinensis",
     "characteristics": [
@@ -847,6 +1080,67 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-youth-day-2006",
+    "title": "XXI Giornata Mondiale della Gioventù, 2006",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-02-22",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/youth/documents/hf_ben-xvi_mes_20060222_youth.html",
+      "shelf": "messages/youth",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "NL",
+        "PT",
+        "ZH"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-youth-day",
+      "year": 2006,
+      "ordinal": 21
+    },
+    "sourceGenreLabel": "messages/youth"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-prayer-for-vocations-2006",
+    "title": "XLIII Giornata Mondiale di Preghiera per le Vocazioni, 2006",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-03-05",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/vocations/documents/hf_ben-xvi_mes_20060305_xliii-vocations.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2006,
+      "ordinal": 43
+    },
+    "sourceGenreLabel": "messages/vocations"
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2006-03-14",
@@ -866,7 +1160,7 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -884,7 +1178,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Kyrgyzstaniae",
     "characteristics": [
@@ -910,7 +1204,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Iashpuriensis",
     "characteristics": [
@@ -936,7 +1230,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Celeiensis",
     "characteristics": [
@@ -962,7 +1256,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Mariborensis",
     "characteristics": [
@@ -988,7 +1282,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Novae Urbis",
     "characteristics": [
@@ -1010,7 +1304,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Sombotiensis",
     "characteristics": [
@@ -1021,6 +1315,64 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/urbi-et-orbi-easter-2006",
+    "title": "Messaggio Urbi et Orbi - Pasqua 2006",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-04-16",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/urbi/documents/hf_ben-xvi_mes_20060416_urbi-easter.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2006
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
+  },
+  {
+    "id": "mag:benedict-xvi/world-mission-day-2006",
+    "title": "Giornata Missionaria Mondiale 2006",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-04-29",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/missions/documents/hf_ben-xvi_mes_20060429_world-mission-day-2006.html",
+      "shelf": "messages/missions",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "PT",
+        "ZH"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2006
+    },
+    "sourceGenreLabel": "messages/missions"
   },
   {
     "id": "mag:benedict-xvi/moramangana-2006",
@@ -1036,7 +1388,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Moramangana",
     "characteristics": [
@@ -1058,7 +1410,7 @@
       "languages": [
         "ES"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -1076,7 +1428,7 @@
       "languages": [
         "ES"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -1094,7 +1446,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Banmavensis",
     "characteristics": [
@@ -1120,7 +1472,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Agbovillensis",
     "characteristics": [
@@ -1146,7 +1498,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Bene omnia",
     "sourceGenreLabel": "apost_letters"
@@ -1165,7 +1517,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Cum mortuus",
     "sourceGenreLabel": "apost_letters"
@@ -1184,7 +1536,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Id enim",
     "sourceGenreLabel": "apost_letters"
@@ -1203,10 +1555,66 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Me in",
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/world-food-day-2006",
+    "title": "Messaggio in occasione della Giornata Mondiale dell’Alimentazione 2006",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-10-16",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/food/documents/hf_ben-xvi_mes_20061016_world-food-day-2006.html",
+      "shelf": "messages/food",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-food-day",
+      "year": 2006
+    },
+    "sourceGenreLabel": "messages/food"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-migrants-and-refugees-2007",
+    "title": "Messaggio per la 93ª Giornata Mondiale del Migrante e del Rifugiato 2007",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-10-18",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/migration/documents/hf_ben-xvi_mes_20061018_world-migrants-day.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2007,
+      "ordinal": 93
+    },
+    "sourceGenreLabel": "messages/migration"
   },
   {
     "id": "mag:benedict-xvi/sydneyensis-2006",
@@ -1222,7 +1630,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Sydneyensis",
     "characteristics": [
@@ -1233,6 +1641,41 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/lent-2007",
+    "title": "Messaggio di Benedetto XVI per la Quaresima 2007",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-11-21",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/lent/documents/hf_ben-xvi_mes_20061121_lent-2007.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "DE",
+        "EL",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "HU",
+        "IT",
+        "NL",
+        "PL",
+        "PT",
+        "RO",
+        "SV",
+        "ZH"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2007
+    },
+    "sourceGenreLabel": "messages/lent"
   },
   {
     "id": "mag:benedict-xvi/buiumburaensis-2006",
@@ -1248,7 +1691,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Buiumburaënsis",
     "characteristics": [
@@ -1274,7 +1717,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Goana et Damanensis",
     "characteristics": [
@@ -1296,7 +1739,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Tigiuanaënsis et aliarum",
     "characteristics": [
@@ -1318,13 +1761,132 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Sancti Ioseph Pinealensis",
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-peace-2007",
+    "title": "XL Giornata Mondiale della Pace 2007, La persona umana, cuore della pace",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/peace/documents/hf_ben-xvi_mes_20061208_xl-world-day-peace.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "PL",
+        "PT",
+        "ZH"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2007,
+      "ordinal": 40
+    },
+    "sourceGenreLabel": "messages/peace"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-the-sick-2007",
+    "title": "XV Giornata Mondiale del Malato, 2007",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/sick/documents/hf_ben-xvi_mes_20061208_world-day-of-the-sick-2007.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2007,
+      "ordinal": 15
+    },
+    "sourceGenreLabel": "messages/sick"
+  },
+  {
+    "id": "mag:benedict-xvi/urbi-et-orbi-christmas-2006",
+    "title": "Messaggio Urbi et Orbi - Natale 2006",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/urbi/documents/hf_ben-xvi_mes_20061225_urbi.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2006
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
+  },
+  {
+    "id": "mag:benedict-xvi/world-communications-day-2007",
+    "title": "XLI Giornata Mondiale delle Comunicazioni Sociali, 2007 - I bambini e i mezzi di comunicazione: una sfida per l'educazione",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/communications/documents/hf_ben-xvi_mes_20070124_41st-world-communications-day.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "PT",
+        "ZH"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2007,
+      "ordinal": 41
+    },
+    "sourceGenreLabel": "messages/communications"
   },
   {
     "id": "mag:benedict-xvi/sinuensis-2007",
@@ -1340,7 +1902,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Sinuensis",
     "characteristics": [
@@ -1351,6 +1913,37 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-youth-day-2007",
+    "title": "XXII Giornata Mondiale della Gioventù, 2007",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-01-27",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/youth/documents/hf_ben-xvi_mes_20070127_youth.html",
+      "shelf": "messages/youth",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "NL",
+        "PT",
+        "ZH"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-youth-day",
+      "year": 2007,
+      "ordinal": 22
+    },
+    "sourceGenreLabel": "messages/youth"
   },
   {
     "id": "mag:benedict-xvi/nepalianus-2007",
@@ -1366,13 +1959,43 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Nepalianus",
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-prayer-for-vocations-2007",
+    "title": "XLIV Giornata Mondiale di Preghiera per le Vocazioni, 2007",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-02-10",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/vocations/documents/hf_ben-xvi_mes_20070210_xliv-vocations.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HU",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2007,
+      "ordinal": 44
+    },
+    "sourceGenreLabel": "messages/vocations"
   },
   {
     "id": "mag:benedict-xvi/sacramentum-caritatis-2007",
@@ -1399,10 +2022,41 @@
         "PT",
         "RU"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Sacramentum Caritatis",
     "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:benedict-xvi/urbi-et-orbi-easter-2007",
+    "title": "Messaggio Urbi et Orbi - Pasqua 2007",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-04-08",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/urbi/documents/hf_ben-xvi_mes_20070408_urbi-easter.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2007
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:benedict-xvi/vir-pacis-2007",
@@ -1418,10 +2072,40 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Vir pacis",
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/world-mission-day-2007",
+    "title": "Giornata Missionaria Mondiale 2007",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-05-27",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/missions/documents/hf_ben-xvi_mes_20070527_world-mission-day-2007.html",
+      "shelf": "messages/missions",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "HU",
+        "IT",
+        "PT",
+        "ZH"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2007
+    },
+    "sourceGenreLabel": "messages/missions"
   },
   {
     "id": "mag:benedict-xvi/riviangulanensi-labradorensi-2007",
@@ -1437,7 +2121,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Riviangulanensi-Labradorensi",
     "characteristics": [
@@ -1459,7 +2143,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Shendamensis",
     "characteristics": [
@@ -1485,7 +2169,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Omnia, quaecumque",
     "sourceGenreLabel": "apost_letters"
@@ -1504,7 +2188,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Salutis omnia",
     "sourceGenreLabel": "apost_letters"
@@ -1523,7 +2207,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Sapientia",
     "sourceGenreLabel": "apost_letters"
@@ -1542,7 +2226,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Ioannesburgensis",
     "characteristics": [
@@ -1568,7 +2252,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Caxitonensis",
     "characteristics": [
@@ -1594,7 +2278,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Viananensis",
     "characteristics": [
@@ -1622,7 +2306,7 @@
         "FR",
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "characteristics": [
       "motu-proprio"
@@ -1643,7 +2327,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Burkinae Fasanae et Nigris",
     "characteristics": [
@@ -1665,7 +2349,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Donkorkromensis",
     "characteristics": [
@@ -1691,7 +2375,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Niameyensis",
     "characteristics": [
@@ -1724,7 +2408,7 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Summorum Pontificum",
     "characteristics": [
@@ -1746,7 +2430,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Sandakanensis",
     "characteristics": [
@@ -1757,6 +2441,109 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-youth-day-2008",
+    "title": "XXIII Giornata Mondiale della Gioventù, 2008",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-07-20",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/youth/documents/hf_ben-xvi_mes_20070720_youth.html",
+      "shelf": "messages/youth",
+      "languages": [
+        "CS",
+        "DE",
+        "EL",
+        "EN",
+        "ES",
+        "FI",
+        "FR",
+        "HR",
+        "HU",
+        "IT",
+        "KM",
+        "MK",
+        "MT",
+        "MY",
+        "NL",
+        "PL",
+        "PT",
+        "RU",
+        "SQ",
+        "SR",
+        "TH",
+        "UK",
+        "VI",
+        "ZH"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-youth-day",
+      "year": 2008,
+      "ordinal": 23
+    },
+    "sourceGenreLabel": "messages/youth"
+  },
+  {
+    "id": "mag:benedict-xvi/world-food-day-2007",
+    "title": "Messaggio in occasione della Giornata Mondiale dell’Alimentazione 2007",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-04",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/food/documents/hf_ben-xvi_mes_20071004_world-food-day-2007.html",
+      "shelf": "messages/food",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-food-day",
+      "year": 2007
+    },
+    "sourceGenreLabel": "messages/food"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-migrants-and-refugees-2008",
+    "title": "Messaggio per la 94ª Giornata Mondiale del Migrante e del Rifugiato 2008",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-18",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/migration/documents/hf_ben-xvi_mes_20071018_world-migrants-day.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "HU",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2008,
+      "ordinal": 94
+    },
+    "sourceGenreLabel": "messages/migration"
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2007-10-26",
@@ -1773,9 +2560,41 @@
         "ES",
         "FR"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/lent-2008",
+    "title": "Messaggio di Benedetto XVI per la Quaresima 2008",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-30",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/lent/documents/hf_ben-xvi_mes_20071030_lent-2008.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "NL",
+        "PL",
+        "PT",
+        "RO",
+        "SV"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2008
+    },
+    "sourceGenreLabel": "messages/lent"
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2007-11-18",
@@ -1789,7 +2608,7 @@
       "url": null,
       "shelf": "apost_letters",
       "languages": [],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -1821,10 +2640,101 @@
         "VI",
         "ZH"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Spe salvi",
     "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-prayer-for-vocations-2008",
+    "title": "XLV Giornata Mondiale di Preghiera per le Vocazioni, 2008",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-12-03",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/vocations/documents/hf_ben-xvi_mes_20071203_xlv-vocations.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2008,
+      "ordinal": 45
+    },
+    "sourceGenreLabel": "messages/vocations"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-peace-2008",
+    "title": "XLI Giornata Mondiale della Pace 2008, Famiglia umana, comunità di pace",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/peace/documents/hf_ben-xvi_mes_20071208_xli-world-day-peace.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "HU",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2008,
+      "ordinal": 41
+    },
+    "sourceGenreLabel": "messages/peace"
+  },
+  {
+    "id": "mag:benedict-xvi/urbi-et-orbi-christmas-2007",
+    "title": "Messaggio Urbi et Orbi - Natale 2007",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/urbi/documents/hf_ben-xvi_mes_20071225_urbi.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2007
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:benedict-xvi/techimanensis-2007",
@@ -1840,7 +2750,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Techimanensis",
     "characteristics": [
@@ -1851,6 +2761,64 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-the-sick-2008",
+    "title": "XVI Giornata Mondiale del Malato, 2008",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-01-11",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/sick/documents/hf_ben-xvi_mes_20080111_world-day-of-the-sick-2008.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2008,
+      "ordinal": 16
+    },
+    "sourceGenreLabel": "messages/sick"
+  },
+  {
+    "id": "mag:benedict-xvi/world-communications-day-2008",
+    "title": "XLII Giornata Mondiale delle Comunicazioni Sociali, 2008 - I mezzi di comunicazione sociale: al bivio fra protagonismo e servizio. Cercare la Verità per condividerla",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/communications/documents/hf_ben-xvi_mes_20080124_42nd-world-communications-day.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2008,
+      "ordinal": 42
+    },
+    "sourceGenreLabel": "messages/communications"
   },
   {
     "id": "mag:benedict-xvi/cassoviensis-2008",
@@ -1866,7 +2834,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Cassoviensis",
     "characteristics": [
@@ -1892,7 +2860,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Slovachia",
     "characteristics": [
@@ -1914,7 +2882,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Florianensis",
     "characteristics": [
@@ -1940,7 +2908,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Faiardensis-Humacaensis",
     "characteristics": [
@@ -1951,6 +2919,36 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/urbi-et-orbi-easter-2008",
+    "title": "Messaggio Urbi et Orbi - Pasqua 2008",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-03-23",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/urbi/documents/hf_ben-xvi_mes_20080323_urbi-easter.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2008
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:benedict-xvi/insulensem-2008",
@@ -1966,7 +2964,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Insulensem",
     "characteristics": [
@@ -1988,7 +2986,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Huariensis",
     "characteristics": [
@@ -2014,10 +3012,37 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Cum pium",
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/world-mission-day-2008",
+    "title": "Giornata Missionaria Mondiale 2008",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-05-11",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/missions/documents/hf_ben-xvi_mes_20080511_world-mission-day-2008.html",
+      "shelf": "messages/missions",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "HR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2008
+    },
+    "sourceGenreLabel": "messages/missions"
   },
   {
     "id": "mag:benedict-xvi/kotakina-baluensis-2008",
@@ -2033,7 +3058,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Kotakina-Baluensis",
     "characteristics": [
@@ -2055,7 +3080,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Diacovensis-Osijekensis",
     "characteristics": [
@@ -2081,7 +3106,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Sirmiensis",
     "characteristics": [
@@ -2103,7 +3128,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Kribensis",
     "characteristics": [
@@ -2136,7 +3161,7 @@
         "PL",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Antiqua ordinatione",
     "sourceGenreLabel": "apost_letters"
@@ -2155,7 +3180,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Nigromontana",
     "characteristics": [
@@ -2177,7 +3202,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Sinuvitullensis-Miragoanensis",
     "characteristics": [
@@ -2203,7 +3228,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Galapagensis",
     "characteristics": [
@@ -2229,13 +3254,42 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Kayangana",
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-migrants-and-refugees-2009",
+    "title": "Messaggio per la 95ª Giornata Mondiale del Migrante e del Rifugiato 2009",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-08-24",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/migration/documents/hf_ben-xvi_mes_20080824_world-migrants-day.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2009,
+      "ordinal": 95
+    },
+    "sourceGenreLabel": "messages/migration"
   },
   {
     "id": "mag:benedict-xvi/animadverto-me-2008",
@@ -2251,7 +3305,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Animadverto me",
     "sourceGenreLabel": "apost_letters"
@@ -2270,7 +3324,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Beata Narcissa",
     "sourceGenreLabel": "apost_letters"
@@ -2289,7 +3343,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Nihil aliud",
     "sourceGenreLabel": "apost_letters"
@@ -2308,10 +3362,37 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Venit enim Filius",
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/world-food-day-2008",
+    "title": "Messaggio in occasione della Giornata Mondiale dell’Alimentazione 2008",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-10-13",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/food/documents/hf_ben-xvi_mes_20081013_world-food-day-2008.html",
+      "shelf": "messages/food",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-food-day",
+      "year": 2008
+    },
+    "sourceGenreLabel": "messages/food"
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2008-10-28",
@@ -2333,7 +3414,7 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -2351,7 +3432,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Gomez-Palaciensis",
     "characteristics": [
@@ -2373,13 +3454,109 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Teotihuacana",
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-peace-2009",
+    "title": "XLII Giornata Mondiale della Pace 2009, Combattere la povertà, costruire la pace",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/peace/documents/hf_ben-xvi_mes_20081208_xlii-world-day-peace.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2009,
+      "ordinal": 42
+    },
+    "sourceGenreLabel": "messages/peace"
+  },
+  {
+    "id": "mag:benedict-xvi/lent-2009",
+    "title": "Messaggio di Benedetto XVI per la Quaresima 2009",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-12-11",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/lent/documents/hf_ben-xvi_mes_20081211_lent-2009.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "NL",
+        "PL",
+        "PT",
+        "RO",
+        "RU",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2009
+    },
+    "sourceGenreLabel": "messages/lent"
+  },
+  {
+    "id": "mag:benedict-xvi/urbi-et-orbi-christmas-2008",
+    "title": "Messaggio Urbi et Orbi - Natale 2008",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/urbi/documents/hf_ben-xvi_mes_20081225_urbi.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2008
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:benedict-xvi/rutana-2009",
@@ -2395,13 +3572,43 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Rutana",
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-prayer-for-vocations-2009",
+    "title": "XLVI Giornata Mondiale di Preghiera per le Vocazioni, 2009",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-01-20",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/vocations/documents/hf_ben-xvi_mes_20090120_xlvi-vocations.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2009,
+      "ordinal": 46
+    },
+    "sourceGenreLabel": "messages/vocations"
   },
   {
     "id": "mag:benedict-xvi/hpaanensis-2009",
@@ -2417,7 +3624,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Hpaanensis",
     "characteristics": [
@@ -2428,6 +3635,96 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-communications-day-2009",
+    "title": "XLIII Giornata Mondiale delle Comunicazioni Sociali, 2009 - Nuove tecnologie, nuove relazioni. Promuovere una cultura di rispetto, di dialogo, di amicizia",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/communications/documents/hf_ben-xvi_mes_20090124_43rd-world-communications-day.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2009,
+      "ordinal": 43
+    },
+    "sourceGenreLabel": "messages/communications"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-the-sick-2009",
+    "title": "XVII Giornata Mondiale del Malato, 2009",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-02-02",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/sick/documents/hf_ben-xvi_mes_20090202_world-day-of-the-sick-2009.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2009,
+      "ordinal": 17
+    },
+    "sourceGenreLabel": "messages/sick"
+  },
+  {
+    "id": "mag:benedict-xvi/world-youth-day-2009",
+    "title": "XXIV Giornata Mondiale della Gioventù, 2009",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-02-22",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/youth/documents/hf_ben-xvi_mes_20090222_youth.html",
+      "shelf": "messages/youth",
+      "languages": [
+        "CS",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "TH"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-youth-day",
+      "year": 2009,
+      "ordinal": 24
+    },
+    "sourceGenreLabel": "messages/youth"
   },
   {
     "id": "mag:benedict-xvi/esquelensis-2009",
@@ -2443,7 +3740,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Esquelensis",
     "characteristics": [
@@ -2469,7 +3766,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Namibensis",
     "characteristics": [
@@ -2495,13 +3792,42 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Libmanana",
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/urbi-et-orbi-easter-2009",
+    "title": "Messaggio Urbi et Orbi - Pasqua 2009",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-04-12",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/urbi/documents/hf_ben-xvi_mes_20090412_urbi-easter.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2009
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:benedict-xvi/accipite-armaturam-2009",
@@ -2517,7 +3843,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Accipite armaturam",
     "sourceGenreLabel": "apost_letters"
@@ -2536,7 +3862,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Ancillae operantur",
     "sourceGenreLabel": "apost_letters"
@@ -2555,7 +3881,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Haec verba Scripturae",
     "sourceGenreLabel": "apost_letters"
@@ -2574,7 +3900,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Hoc est verbum",
     "sourceGenreLabel": "apost_letters"
@@ -2593,7 +3919,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Maiorem hac",
     "sourceGenreLabel": "apost_letters"
@@ -2612,7 +3938,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Mongensis",
     "characteristics": [
@@ -2638,7 +3964,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Oberensis",
     "characteristics": [
@@ -2678,10 +4004,37 @@
         "ZH_CN",
         "ZH_TW"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Caritas in veritate",
     "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:benedict-xvi/world-mission-day-2009",
+    "title": "Giornata Missionaria Mondiale 2009",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-06-29",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/missions/documents/hf_ben-xvi_mes_20090629_world-mission-day-2009.html",
+      "shelf": "messages/missions",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2009
+    },
+    "sourceGenreLabel": "messages/missions"
   },
   {
     "id": "mag:benedict-xvi/ecclesiae-unitatem-2009",
@@ -2703,7 +4056,7 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Ecclesiae unitatem",
     "sourceGenreLabel": "apost_letters"
@@ -2722,7 +4075,7 @@
       "languages": [
         "IT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -2740,7 +4093,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -2758,7 +4111,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Et, quicumque",
     "sourceGenreLabel": "apost_letters"
@@ -2777,7 +4130,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "In convertendo Dominus",
     "sourceGenreLabel": "apost_letters"
@@ -2796,7 +4149,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Iustorum autem",
     "sourceGenreLabel": "apost_letters"
@@ -2815,10 +4168,66 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Praedicationem christianae",
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-migrants-and-refugees-2010",
+    "title": "Messaggio per la 96ª Giornata Mondiale del Migrante e del Rifugiato 2010",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-10-16",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/migration/documents/hf_ben-xvi_mes_20091016_world-migrants-day.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2010,
+      "ordinal": 96
+    },
+    "sourceGenreLabel": "messages/migration"
+  },
+  {
+    "id": "mag:benedict-xvi/world-food-day-2009",
+    "title": "Messaggio in occasione della Giornata Mondiale dell’Alimentazione 2009",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-10-16",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/food/documents/hf_ben-xvi_mes_20091016_world-food-day-2009.html",
+      "shelf": "messages/food",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-food-day",
+      "year": 2009
+    },
+    "sourceGenreLabel": "messages/food"
   },
   {
     "id": "mag:benedict-xvi/omnium-in-mentem-2009",
@@ -2840,10 +4249,41 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Omnium in mentem",
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/lent-2010",
+    "title": "Messaggio di Benedetto XVI per la Quaresima 2010",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-10-30",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/lent/documents/hf_ben-xvi_mes_20091030_lent-2010.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2010
+    },
+    "sourceGenreLabel": "messages/lent"
   },
   {
     "id": "mag:benedict-xvi/anglicanorum-coetibus-2009",
@@ -2865,7 +4305,7 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Anglicanorum coetibus",
     "characteristics": [
@@ -2887,13 +4327,73 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Hyacinthi de Yaguachi",
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-prayer-for-vocations-2010",
+    "title": "XLVII Giornata Mondiale di Preghiera per le Vocazioni, 2010",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-11-13",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/vocations/documents/hf_ben-xvi_mes_20091113_xlvii-vocations.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2010,
+      "ordinal": 47
+    },
+    "sourceGenreLabel": "messages/vocations"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-the-sick-2010",
+    "title": "XVIII Giornata Mondiale del Malato, 2010",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-11-22",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/sick/documents/hf_ben-xvi_mes_20091122_world-day-of-the-sick-2010.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2010,
+      "ordinal": 18
+    },
+    "sourceGenreLabel": "messages/sick"
   },
   {
     "id": "mag:benedict-xvi/tenancingana-2009",
@@ -2909,7 +4409,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Tenancingana",
     "characteristics": [
@@ -2931,7 +4431,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Bellovariensis-Crisiensis",
     "characteristics": [
@@ -2957,7 +4457,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Gambellensis",
     "characteristics": [
@@ -2983,7 +4483,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Gimaënsis-Bongana",
     "characteristics": [
@@ -3009,7 +4509,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Sisciensis",
     "characteristics": [
@@ -3020,6 +4520,40 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-peace-2010",
+    "title": "XLIII Giornata Mondiale della Pace 2010, Se vuoi coltivare la pace, custodisci il creato",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/peace/documents/hf_ben-xvi_mes_20091208_xliii-world-day-peace.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "NL",
+        "PL",
+        "PT",
+        "RU",
+        "ZH_CN",
+        "ZH_TW"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2010,
+      "ordinal": 43
+    },
+    "sourceGenreLabel": "messages/peace"
   },
   {
     "id": "mag:benedict-xvi/russiae-2009",
@@ -3035,13 +4569,43 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Russiae",
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/urbi-et-orbi-christmas-2009",
+    "title": "Messaggio Urbi et Orbi - Natale 2009",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/urbi/documents/hf_ben-xvi_mes_20091225_urbi.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2009
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:benedict-xvi/donkorkromensis-2010",
@@ -3057,7 +4621,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Donkorkromensis",
     "characteristics": [
@@ -3083,7 +4647,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Hosannensis",
     "characteristics": [
@@ -3094,6 +4658,35 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-communications-day-2010",
+    "title": "XLIV Giornata Mondiale delle Comunicazioni Sociali, 2010 - Il sacerdote e la pastorale nel mondo digitale: i nuovi media al servizio della Parola",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/communications/documents/hf_ben-xvi_mes_20100124_44th-world-communications-day.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2010,
+      "ordinal": 44
+    },
+    "sourceGenreLabel": "messages/communications"
   },
   {
     "id": "mag:benedict-xvi/malianensis-2010",
@@ -3109,7 +4702,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Malianensis",
     "characteristics": [
@@ -3120,6 +4713,33 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-mission-day-2010",
+    "title": "Giornata Missionaria Mondiale 2010",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-02-06",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/missions/documents/hf_ben-xvi_mes_20100206_world-mission-day-2010.html",
+      "shelf": "messages/missions",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2010
+    },
+    "sourceGenreLabel": "messages/missions"
   },
   {
     "id": "mag:benedict-xvi/sancti-ioannis-baptistae-de-calama-2010",
@@ -3135,7 +4755,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Sancti Ioannis Baptistae De Calama",
     "characteristics": [
@@ -3157,13 +4777,42 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Tunetana",
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-youth-day-2010",
+    "title": "XXV Giornata Mondiale della Gioventù, 2010",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-02-22",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/youth/documents/hf_ben-xvi_mes_20100222_youth.html",
+      "shelf": "messages/youth",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-youth-day",
+      "year": 2010,
+      "ordinal": 25
+    },
+    "sourceGenreLabel": "messages/youth"
   },
   {
     "id": "mag:benedict-xvi/toamasinensis-2010",
@@ -3179,7 +4828,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Toamasinensis",
     "characteristics": [
@@ -3190,6 +4839,35 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/urbi-et-orbi-easter-2010",
+    "title": "Messaggio Urbi et Orbi - Pasqua 2010",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-04-04",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/urbi/documents/hf_ben-xvi_mes_20100404_urbi-easter.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2010
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:benedict-xvi/quettensis-2010",
@@ -3205,7 +4883,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Quettensis",
     "characteristics": [
@@ -3231,7 +4909,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Insularum Comorensium",
     "characteristics": [
@@ -3253,7 +4931,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Ipilensis",
     "characteristics": [
@@ -3279,7 +4957,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Salicensis",
     "characteristics": [
@@ -3305,7 +4983,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Foederatae Civitates Americae Septentrionalis",
     "characteristics": [
@@ -3327,13 +5005,59 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Karogana",
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-youth-day-2011",
+    "title": "XXVI Giornata Mondiale della Gioventù, 2011",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-08-06",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/youth/documents/hf_ben-xvi_mes_20100806_youth.html",
+      "shelf": "messages/youth",
+      "languages": [
+        "BG",
+        "CS",
+        "DE",
+        "EL",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "HU",
+        "IT",
+        "KM",
+        "KO",
+        "NL",
+        "PL",
+        "PT",
+        "RO",
+        "RU",
+        "SK",
+        "SL",
+        "SQ",
+        "SR",
+        "UK",
+        "VI",
+        "ZH"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-youth-day",
+      "year": 2011,
+      "ordinal": 26
+    },
+    "sourceGenreLabel": "messages/youth"
   },
   {
     "id": "mag:benedict-xvi/ubicumque-et-semper-2010",
@@ -3355,10 +5079,39 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Ubicumque et semper",
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-migrants-and-refugees-2011",
+    "title": "Messaggio per la 97ª Giornata Mondiale del Migrante e del Rifugiato 2011",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-09-27",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/migration/documents/hf_ben-xvi_mes_20100927_world-migrants-day.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2011,
+      "ordinal": 97
+    },
+    "sourceGenreLabel": "messages/migration"
   },
   {
     "id": "mag:benedict-xvi/verbum-domini-2010",
@@ -3381,10 +5134,36 @@
         "PT",
         "RU"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Verbum Domini",
     "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:benedict-xvi/world-food-day-2010",
+    "title": "Messaggio in occasione della Giornata Mondiale dell’Alimentazione 2010",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-10-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/de/messages/food/documents/hf_ben-xvi_mes_20101015_world-food-day-2010.html",
+      "shelf": "messages/food",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-food-day",
+      "year": 2010
+    },
+    "sourceGenreLabel": "messages/food"
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2010-10-17",
@@ -3400,7 +5179,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -3418,7 +5197,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Beata illa creatura",
     "sourceGenreLabel": "apost_letters"
@@ -3437,7 +5216,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Dedit quoque",
     "sourceGenreLabel": "apost_letters"
@@ -3456,7 +5235,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Quae stulta",
     "sourceGenreLabel": "apost_letters"
@@ -3475,7 +5254,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Quicumque quaesierit",
     "sourceGenreLabel": "apost_letters"
@@ -3494,10 +5273,70 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Voluntas Dei",
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/lent-2011",
+    "title": "Messaggio di Benedetto XVI per la Quaresima 2011",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-11-04",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/lent/documents/hf_ben-xvi_mes_20101104_lent-2011.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "ZH"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2011
+    },
+    "sourceGenreLabel": "messages/lent"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-prayer-for-vocations-2011",
+    "title": "XLVIII Giornata Mondiale di Preghiera per le Vocazioni, 2011",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-11-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/vocations/documents/hf_ben-xvi_mes_20101115_xlviii-vocations.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2011,
+      "ordinal": 48
+    },
+    "sourceGenreLabel": "messages/vocations"
   },
   {
     "id": "mag:benedict-xvi/purpuratis-patribus-2010",
@@ -3513,10 +5352,40 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Purpuratis Patribus",
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-the-sick-2011",
+    "title": "XIX Giornata Mondiale del Malato, 2011",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-11-21",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/sick/documents/hf_ben-xvi_mes_20101121_world-day-of-the-sick-2011.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2011,
+      "ordinal": 19
+    },
+    "sourceGenreLabel": "messages/sick"
   },
   {
     "id": "mag:benedict-xvi/bundana-2010",
@@ -3532,13 +5401,43 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Bundana",
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-peace-2011",
+    "title": "XLIV Giornata Mondiale della Pace 2011, Libertà religiosa, via per la pace",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/peace/documents/hf_ben-xvi_mes_20101208_xliv-world-day-peace.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "RU"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2011,
+      "ordinal": 44
+    },
+    "sourceGenreLabel": "messages/peace"
   },
   {
     "id": "mag:benedict-xvi/camassariensis-2010",
@@ -3554,7 +5453,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Camassariensis",
     "characteristics": [
@@ -3565,6 +5464,36 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/urbi-et-orbi-christmas-2010",
+    "title": "Messaggio Urbi et Orbi - Natale 2010",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/urbi/documents/hf_ben-xvi_mes_20101225_urbi.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2010
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2010-12-30",
@@ -3583,12 +5512,39 @@
         "IT",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "characteristics": [
       "motu-proprio"
     ],
     "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xvi/world-mission-day-2011",
+    "title": "Giornata Missionaria Mondiale 2011",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/missions/documents/hf_ben-xvi_mes_20110106_world-mission-day-2011.html",
+      "shelf": "messages/missions",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2011
+    },
+    "sourceGenreLabel": "messages/missions"
   },
   {
     "id": "mag:benedict-xvi/boensis-2011",
@@ -3604,7 +5560,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Boënsis",
     "characteristics": [
@@ -3615,6 +5571,35 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-communications-day-2011",
+    "title": "XLV Giornata Mondiale delle Comunicazioni Sociali, 2011 - Verità, annuncio e autenticità di vita nell’era digitale",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/communications/documents/hf_ben-xvi_mes_20110124_45th-world-communications-day.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2011,
+      "ordinal": 45
+    },
+    "sourceGenreLabel": "messages/communications"
   },
   {
     "id": "mag:benedict-xvi/ordinariatus-militaris-in-bosnia-et-herzegovia-2011",
@@ -3630,7 +5615,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Ordinariatus Militaris in Bosnia et Herzegovia",
     "characteristics": [
@@ -3652,7 +5637,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Lilongvensis",
     "characteristics": [
@@ -3678,7 +5663,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Impfondensis",
     "characteristics": [
@@ -3704,7 +5689,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Kondoaënsis",
     "characteristics": [
@@ -3730,7 +5715,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Machiquesensis",
     "characteristics": [
@@ -3756,7 +5741,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Malaniensis",
     "characteristics": [
@@ -3782,7 +5767,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Saurimoënsis",
     "characteristics": [
@@ -3808,7 +5793,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Passofundensis",
     "characteristics": [
@@ -3834,7 +5819,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Pelotensis",
     "characteristics": [
@@ -3860,13 +5845,42 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Sanctae-Mariae",
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/urbi-et-orbi-easter-2011",
+    "title": "Messaggio Urbi et Orbi - Pasqua 2011",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-04-24",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/urbi/documents/hf_ben-xvi_mes_20110424_urbi-easter.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2011
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2011-05-01",
@@ -3882,7 +5896,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -3900,7 +5914,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Naviraiensis",
     "characteristics": [
@@ -3926,7 +5940,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Torontina",
     "characteristics": [
@@ -3948,7 +5962,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Sylethensis",
     "characteristics": [
@@ -3974,7 +5988,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Malaesia",
     "characteristics": [
@@ -3996,7 +6010,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Azerbaigianiensis",
     "characteristics": [
@@ -4028,13 +6042,42 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Quaerit semper",
     "characteristics": [
       "motu-proprio"
     ],
     "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-migrants-and-refugees-2012",
+    "title": "Messaggio per la 98ª Giornata Mondiale del Migrante e del Rifugiato 2012",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-09-21",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/migration/documents/hf_ben-xvi_mes_20110921_world-migrants-day.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2012,
+      "ordinal": 98
+    },
+    "sourceGenreLabel": "messages/migration"
   },
   {
     "id": "mag:benedict-xvi/porta-fidei-2011",
@@ -4058,13 +6101,70 @@
         "PL",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Porta fidei",
     "characteristics": [
       "motu-proprio"
     ],
     "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:benedict-xvi/world-food-day-2011",
+    "title": "Messaggio in occasione della Giornata Mondiale dell’Alimentazione 2011",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-10-17",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/food/documents/hf_ben-xvi_mes_20111017_world-food-day-2011.html",
+      "shelf": "messages/food",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-food-day",
+      "year": 2011
+    },
+    "sourceGenreLabel": "messages/food"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-prayer-for-vocations-2012",
+    "title": "XLIX Giornata Mondiale di Preghiera per le Vocazioni, 2012",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-10-18",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/vocations/documents/hf_ben-xvi_mes_20111018_xlix-vocations.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "SQ"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2012,
+      "ordinal": 49
+    },
+    "sourceGenreLabel": "messages/vocations"
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2011-10-23",
@@ -4080,7 +6180,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -4098,7 +6198,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Quaerebam",
     "sourceGenreLabel": "apost_letters"
@@ -4117,7 +6217,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Kabvensis",
     "characteristics": [
@@ -4128,6 +6228,34 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/lent-2012",
+    "title": "Messaggio di Benedetto XVI per la Quaresima 2012",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-11-03",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/lent/documents/hf_ben-xvi_mes_20111103_lent-2012.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2012
+    },
+    "sourceGenreLabel": "messages/lent"
   },
   {
     "id": "mag:benedict-xvi/obidensis-2011",
@@ -4143,7 +6271,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Obidensis",
     "characteristics": [
@@ -4177,10 +6305,39 @@
         "PT",
         "SW"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Africae munus",
     "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-the-sick-2012",
+    "title": "XX Giornata Mondiale del Malato, 2012",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-11-20",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/sick/documents/hf_ben-xvi_mes_20111120_world-day-of-the-sick-2012.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2012,
+      "ordinal": 20
+    },
+    "sourceGenreLabel": "messages/sick"
   },
   {
     "id": "mag:benedict-xvi/gauana-2011",
@@ -4196,13 +6353,72 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Gauana",
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-peace-2012",
+    "title": "XLV Giornata Mondiale della Pace 2012, Educare i giovani alla giustizia e alla pace",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/peace/documents/hf_ben-xvi_mes_20111208_xlv-world-day-peace.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "RU"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2012,
+      "ordinal": 45
+    },
+    "sourceGenreLabel": "messages/peace"
+  },
+  {
+    "id": "mag:benedict-xvi/urbi-et-orbi-christmas-2011",
+    "title": "Messaggio Urbi et Orbi - Natale 2011",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2011-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/urbi/documents/hf_ben-xvi_mes_20111225_urbi.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2011
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:benedict-xvi/ceibensis-2011",
@@ -4218,7 +6434,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Ceibensis",
     "characteristics": [
@@ -4229,6 +6445,34 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-mission-day-2012",
+    "title": "Giornata Missionaria Mondiale 2012",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-01-06",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/missions/documents/hf_ben-xvi_mes_20120106_world-mission-day-2012.html",
+      "shelf": "messages/missions",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-mission-day",
+      "year": 2012
+    },
+    "sourceGenreLabel": "messages/missions"
   },
   {
     "id": "mag:benedict-xvi/ifakarensis-2012",
@@ -4244,7 +6488,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Ifakarensis",
     "characteristics": [
@@ -4255,6 +6499,36 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-communications-day-2012",
+    "title": "XLVI Giornata Mondiale delle Comunicazioni Sociali, 2012 - Silenzio e Parola: cammino di evangelizzazione",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/communications/documents/hf_ben-xvi_mes_20120124_46th-world-communications-day.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2012,
+      "ordinal": 46
+    },
+    "sourceGenreLabel": "messages/communications"
   },
   {
     "id": "mag:benedict-xvi/robensis-2012",
@@ -4270,7 +6544,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Robensis",
     "characteristics": [
@@ -4296,7 +6570,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Tenkodogoënsis",
     "characteristics": [
@@ -4322,7 +6596,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Segheneitensis",
     "characteristics": [
@@ -4348,7 +6622,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Faridabadensis Syro-Malabarensium",
     "characteristics": [
@@ -4359,6 +6633,72 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-youth-day-2012",
+    "title": "XXVII Giornata Mondiale della Gioventù, 2012",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-03-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/youth/documents/hf_ben-xvi_mes_20120315_youth.html",
+      "shelf": "messages/youth",
+      "languages": [
+        "BN",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "KO",
+        "PL",
+        "PT",
+        "RO",
+        "SL",
+        "SQ",
+        "ZH"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-youth-day",
+      "year": 2012,
+      "ordinal": 27
+    },
+    "sourceGenreLabel": "messages/youth"
+  },
+  {
+    "id": "mag:benedict-xvi/urbi-et-orbi-easter-2012",
+    "title": "Messaggio Urbi et Orbi - Pasqua 2012",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-04-08",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/urbi/documents/hf_ben-xvi_mes_20120408_urbi-easter.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-easter",
+      "year": 2012
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:benedict-xvi/bafangensis-2012",
@@ -4374,7 +6714,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Bafangensis",
     "characteristics": [
@@ -4400,7 +6740,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Batticaloaënsis",
     "characteristics": [
@@ -4426,7 +6766,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Udupiensis",
     "characteristics": [
@@ -4452,7 +6792,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Eparchia Dominae Nostrae Libanensis Parisiensis Maronitarum",
     "characteristics": [
@@ -4474,7 +6814,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Pulchritudinis fidei",
     "characteristics": [
@@ -4504,10 +6844,40 @@
         "PL",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Ecclesia in Medio Oriente",
     "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-prayer-for-vocations-2013",
+    "title": "L Giornata Mondiale di Preghiera per le Vocazioni, 2013",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-10-06",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/vocations/documents/hf_ben-xvi_mes_20121006_l-vocations.html",
+      "shelf": "messages/vocations",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT",
+        "SQ"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-prayer-for-vocations",
+      "year": 2013,
+      "ordinal": 50
+    },
+    "sourceGenreLabel": "messages/vocations"
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2012-10-07-1",
@@ -4528,7 +6898,7 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -4551,9 +6921,128 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-migrants-and-refugees-2013",
+    "title": "Messaggio per la 99ª Giornata Mondiale del Migrante e del Rifugiato 2013",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-10-12",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/migration/documents/hf_ben-xvi_mes_20121012_world-migrants-day.html",
+      "shelf": "messages/migration",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-migrants-and-refugees",
+      "year": 2013,
+      "ordinal": 99
+    },
+    "sourceGenreLabel": "messages/migration"
+  },
+  {
+    "id": "mag:benedict-xvi/lent-2013",
+    "title": "Messaggio di Benedetto XVI per la Quaresima 2013",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-10-15",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/lent/documents/hf_ben-xvi_mes_20121015_lent-2013.html",
+      "shelf": "messages/lent",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "lent",
+      "year": 2013
+    },
+    "sourceGenreLabel": "messages/lent"
+  },
+  {
+    "id": "mag:benedict-xvi/world-food-day-2012",
+    "title": "Messaggio in occasione della Giornata Mondiale dell’Alimentazione 2012",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-10-16",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/food/documents/hf_ben-xvi_mes_20121016_world-food-day-2012.html",
+      "shelf": "messages/food",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-food-day",
+      "year": 2012
+    },
+    "sourceGenreLabel": "messages/food"
+  },
+  {
+    "id": "mag:benedict-xvi/world-youth-day-2013",
+    "title": "XXVIII Giornata Mondiale della Gioventù, 2013",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-10-18",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/youth/documents/hf_ben-xvi_mes_20121018_youth.html",
+      "shelf": "messages/youth",
+      "languages": [
+        "DE",
+        "EL",
+        "EN",
+        "ES",
+        "FR",
+        "HR",
+        "IT",
+        "PL",
+        "PT",
+        "RO",
+        "SL",
+        "SQ"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-youth-day",
+      "year": 2013,
+      "ordinal": 28
+    },
+    "sourceGenreLabel": "messages/youth"
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2012-10-21-1",
@@ -4569,7 +7058,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -4587,7 +7076,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -4605,7 +7094,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -4623,7 +7112,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -4641,7 +7130,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -4659,7 +7148,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -4677,7 +7166,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -4702,7 +7191,7 @@
         "PL",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Latina Lingua",
     "characteristics": [
@@ -4724,7 +7213,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
   },
@@ -4749,7 +7238,7 @@
         "PL",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Intima Ecclesiae natura",
     "characteristics": [
@@ -4771,9 +7260,68 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-peace-2013",
+    "title": "XLVI Giornata Mondiale della Pace 2013, Beati gli Operatori di Pace",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-12-08",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/peace/documents/hf_ben-xvi_mes_20121208_xlvi-world-day-peace.html",
+      "shelf": "messages/peace",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-peace",
+      "year": 2013,
+      "ordinal": 46
+    },
+    "sourceGenreLabel": "messages/peace"
+  },
+  {
+    "id": "mag:benedict-xvi/urbi-et-orbi-christmas-2012",
+    "title": "Messaggio Urbi et Orbi - Natale 2012",
+    "idStatus": "minted",
+    "genre": "urbi-et-orbi",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-12-25",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/urbi/documents/hf_ben-xvi_mes_20121225_urbi.html",
+      "shelf": "messages/urbi",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "urbi-et-orbi-christmas",
+      "year": 2012
+    },
+    "actKind": "liturgical",
+    "sourceGenreLabel": "messages/urbi"
   },
   {
     "id": "mag:benedict-xvi/gbokensis-2012",
@@ -4789,7 +7337,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Gbokensis",
     "characteristics": [
@@ -4815,7 +7363,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Katsinensis-Alensis",
     "characteristics": [
@@ -4826,6 +7374,35 @@
     ],
     "actKind": "governance",
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-day-of-the-sick-2013",
+    "title": "XXI Giornata Mondiale del Malato, 2013",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2013-01-02",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/sick/documents/hf_ben-xvi_mes_20130102_world-day-of-the-sick-2013.html",
+      "shelf": "messages/sick",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-day-of-the-sick",
+      "year": 2013,
+      "ordinal": 21
+    },
+    "sourceGenreLabel": "messages/sick"
   },
   {
     "id": "mag:benedict-xvi/fides-per-doctrinam-2013",
@@ -4846,7 +7423,7 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Fides per doctrinam",
     "characteristics": [
@@ -4873,7 +7450,7 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Ministrorum institutio",
     "characteristics": [
@@ -4895,7 +7472,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Sanctae Familiae Londiniensis",
     "characteristics": [
@@ -4917,12 +7494,42 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "characteristics": [
       "apostolic-constitution"
     ],
     "sourceGenreLabel": "apost_constitutions"
+  },
+  {
+    "id": "mag:benedict-xvi/world-communications-day-2013",
+    "title": "XLVII Giornata Mondiale delle Comunicazioni Sociali, 2013 - Reti Sociali: porte di verità e di fede; nuovi spazi di evangelizzazione",
+    "idStatus": "minted",
+    "genre": "message",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2013-01-24",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/messages/communications/documents/hf_ben-xvi_mes_20130124_47th-world-communications-day.html",
+      "shelf": "messages/communications",
+      "languages": [
+        "AR",
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "PL",
+        "PT"
+      ],
+      "retrieved": "2026-09-12"
+    },
+    "series": {
+      "id": "world-communications-day",
+      "year": 2013,
+      "ordinal": 47
+    },
+    "sourceGenreLabel": "messages/communications"
   },
   {
     "id": "mag:benedict-xvi/cametanensis-2013",
@@ -4938,7 +7545,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Cametanensis",
     "characteristics": [
@@ -4964,7 +7571,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Portus Leguizamensis-Solanensis",
     "characteristics": [
@@ -4992,7 +7599,7 @@
         "LA",
         "PT"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "characteristics": [
       "motu-proprio"
@@ -5013,7 +7620,7 @@
       "languages": [
         "LA"
       ],
-      "retrieved": "2026-09-07"
+      "retrieved": "2026-09-12"
     },
     "incipit": "Gambomensis",
     "characteristics": [
