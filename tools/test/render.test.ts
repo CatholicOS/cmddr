@@ -195,6 +195,21 @@ describe('renderIndexMd', () => {
     expect(withKw).toMatch(/circumscription-erection.*\| 1 \|/);
   });
 
+  it('marks an issuer with AAS-only documents in the shelves column and counts them in Coverage, from the data', () => {
+    const born: DocumentRecord = {
+      ...docs[0]!, id: 'mag:francis-i/ius-nativum-2023', title: 'Ius nativum. De patrimonio Sedis Apostolicae',
+      incipit: 'Ius nativum', issuerId: 'rp:francis-i', date: '2023-02-20', genre: 'apostolic-letter',
+      source: { url: null, shelf: 'aas/2023', retrieved: '2026-09-12' },
+      acta: { series: 'AAS', volume: 115, year: 2023, page: 263 },
+    };
+    const withBorn = renderIndexMd([...docs, born]);
+    expect(withBorn).toMatch(/rp:francis-i.*; AAS index 2023–2023 \(1 AAS-only\) \|/);
+    expect(withBorn).toMatch(/1 documents are created from the annual \*Acta Apostolicae Sedis\* index/);
+    const none = renderIndexMd(docs);
+    expect(none).not.toMatch(/AAS-only\)/);
+    expect(none).toMatch(/No document is yet created from the \*Acta Apostolicae Sedis\* index/);
+  });
+
   it('reports the remaining candidate count in Coverage, generated from the data', () => {
     // A toponym-shaped apostolic constitution of a pope whose headings are not textually
     // tagged, and which carries no keyword yet, is exactly what the harvest itself flags

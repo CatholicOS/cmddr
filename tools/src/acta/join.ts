@@ -14,6 +14,14 @@ export const ACTA_YEARS: readonly number[] = [2015, 2016, 2017, 2018, 2019, 2020
 
 export const actaFixturePath = (year: number): string => `tools/fixtures/acta/aas-indice-${year}.txt`;
 
+/**
+ * The date the ten index fixtures were fetched (tools/fixtures/acta/README.md), stamped
+ * as `source.retrieved` on every document created from them. Must be updated with the
+ * README whenever the fixtures are refreshed; the RETRIEVED override the pope fixtures
+ * honour applies here too.
+ */
+export const ACTA_FIXTURES_RETRIEVED = '2026-09-12';
+
 /** Parse every fixture present; a missing year is skipped and named, not fatal. */
 export function loadActaIndexes(): { parsed: Map<number, ActaParseResult>; missing: number[] } {
   const parsed = new Map<number, ActaParseResult>();

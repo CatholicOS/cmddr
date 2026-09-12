@@ -11,18 +11,25 @@ import { fixtureName } from '../src/harvest/fixtures.js';
 import { readOrdinal, readOccasionYear } from '../src/harvest/seriesTitle.js';
 import { easterSunday } from '../src/dates.js';
 import { slugify } from '../src/slug.js';
+import { isActaShelf, CREATED_CATEGORIES, PONTIFICATE_BEGAN } from '../src/acta/create.js';
+import { ACTA_INDEX_CORRECTIONS, ACTA_HOLDS } from '../src/acta/curation.js';
+import { loadActaIndexes } from '../src/acta/join.js';
+import { bareProvisionalId } from '../src/harvest/ordinals.js';
 import type { DocumentRecord } from '../src/types.js';
 
-/** Every record of one issuer's file, whichever shelf it came from. */
+/** Every record of one issuer's file, whichever shelf or source it came from. */
 const loadAll = (n: string) =>
   JSON.parse(readFileSync(`data/documents/${n}.json`, 'utf8')) as DocumentRecord[];
 /**
  * The formal-shelf records of one issuer: everything but the `messages/*` shelves, which
  * the per-pontificate blocks below were written and counted before, and which are keyed
  * by occasion rather than incipit (so 'omits the incipit exactly when provisional' holds
- * only here). The *Messaggi* shelves have their own block at the end.
+ * only here), and but the documents created from the *Acta Apostolicae Sedis* index
+ * (`source.shelf` of the `aas/{year}` form), which come from no shelf at all. The
+ * *Messaggi* shelves and the AAS-only documents have their own blocks at the end.
  */
-const load = (n: string) => loadAll(n).filter((d) => !isMessagesShelf(d.source?.shelf ?? null));
+const load = (n: string) => loadAll(n)
+  .filter((d) => !isMessagesShelf(d.source?.shelf ?? null) && !isActaShelf(d.source?.shelf));
 const genres = JSON.parse(readFileSync('data/genres.json', 'utf8')) as
   Array<{ id: string; issuerTypes?: string[]; allowedCharacteristics?: string[] }>;
 const keywords = JSON.parse(readFileSync('data/keywords.json', 'utf8')) as Array<{ id: string }>;
@@ -2314,9 +2321,11 @@ describe('the recovered-incipit shelf', () => {
     // the provisional form by design (messages spec §3.2.7); counted in their own block.
     // Plus the eight series-shelf items excluded from their series (Paul VI's 1975 day of
     // the sick and John XXIII's seven radio messages), which are provisional messages.
-    const formal = everything.filter((d) => !isMessagesShelf(d.source?.shelf ?? null));
+    // Plus the 75 constitutions created from the AAS index under a toponym and no incipit
+    // (AAS-only documents spec §4), counted in their own block.
+    const formal = everything.filter((d) => !isMessagesShelf(d.source?.shelf ?? null) && !isActaShelf(d.source?.shelf));
     expect(formal.filter((d) => d.idStatus === 'provisional')).toHaveLength(299);
-    expect(everything.filter((d) => d.idStatus === 'provisional')).toHaveLength(299 + 5 + 8);
+    expect(everything.filter((d) => d.idStatus === 'provisional')).toHaveLength(299 + 5 + 8 + 75);
   });
 
   it('keeps the two Leo XIV 2025 letters provisional, which AAS confirms have no incipit', () => {
@@ -2687,18 +2696,23 @@ describe('the Messaggi shelves (messages spec)', () => {
 describe('the AAS reference (acta reference spec)', () => {
   const everything = readdirSync('data/documents').filter((f) => f.endsWith('.json'))
     .flatMap((f) => loadAll(f.replace(/\.json$/, '')));
-  const cited = everything.filter((d) => d.acta !== undefined);
+  // The shelf documents an index entry matched; the documents created from the index
+  // carry `acta` too and have their own block below.
+  const cited = everything.filter((d) => d.acta !== undefined && !isActaShelf(d.source?.shelf));
 
   it('pins the matched count per volume year, so a silent drop fails loudly', () => {
     // 2,399 entries parsed from the ten annual indexes, 867 in a harvested category; 222
-    // matched on 2026-09-12 (the join report in docs/superpowers/reports/ lists the rest).
-    // A change to a fixture, the parser, the matcher or a shelf harvest moves these.
+    // matched on 2026-09-12 (the join report in docs/superpowers/reports/ lists the rest),
+    // 225 once the two curated index corrections (De concordia inter Codices, Vultum Dei
+    // quaerere) and the day-less-date fix of the parser (Episcopalis communio) landed with
+    // the AAS-only documents. A change to a fixture, the parser, the matcher or a shelf
+    // harvest moves these.
     const byYear = new Map<number, number>();
     for (const d of cited) byYear.set(d.acta!.year, (byYear.get(d.acta!.year) ?? 0) + 1);
     expect(Object.fromEntries([...byYear].sort())).toEqual({
-      2015: 38, 2016: 24, 2017: 14, 2018: 14, 2019: 17, 2020: 18, 2021: 24, 2022: 18, 2023: 29, 2024: 26,
+      2015: 38, 2016: 26, 2017: 14, 2018: 15, 2019: 17, 2020: 18, 2021: 24, 2022: 18, 2023: 29, 2024: 26,
     });
-    expect(cited).toHaveLength(222);
+    expect(cited).toHaveLength(225);
     // By class: the index's *Nuntii* carry the twenty Christmas and Easter Urbi et Orbi.
     const byClass = new Map<string, number>();
     for (const d of cited) {
@@ -2706,9 +2720,34 @@ describe('the AAS reference (acta reference spec)', () => {
       byClass.set(k, (byClass.get(k) ?? 0) + 1);
     }
     expect(Object.fromEntries([...byClass].sort())).toEqual({
-      'apostolic-exhortation': 6, 'apostolic-letter': 23, 'apostolic-letter+motu-proprio': 47, encyclical: 3,
-      message: 93, 'papal-bull': 2, 'papal-bull+apostolic-constitution': 28, 'urbi-et-orbi': 20,
+      'apostolic-exhortation': 6, 'apostolic-letter': 23, 'apostolic-letter+motu-proprio': 48, encyclical: 3,
+      message: 93, 'papal-bull': 2, 'papal-bull+apostolic-constitution': 30, 'urbi-et-orbi': 20,
     });
+  });
+
+  it('matches the three phase-1 misreadings by their corrected dates', () => {
+    const by = Object.fromEntries(cited.map((d) => [d.id, d.acta!]));
+    // Two curated index corrections (curation.ts), each quoting the act's dating formula.
+    expect(by['mag:francis-i/de-concordia-inter-codices-2016']).toEqual({ series: 'AAS', volume: 108, year: 2016, page: 602 });
+    expect(by['mag:francis-i/vultum-dei-quaerere-2016']).toEqual({ series: 'AAS', volume: 108, year: 2016, page: 835 });
+    // Not a misprint but a day-less date line the parser skipped (index.ts): read from the
+    // fixture as printed, the ditto months after `Sept. » Chengden.:` are September.
+    expect(by['mag:francis-i/episcopalis-communio-2018']).toEqual({ series: 'AAS', volume: 110, year: 2018, page: 1359 });
+  });
+
+  it('keeps every curated index correction live: each row names an entry the parser reads with the printed date', () => {
+    const entries = [...loadActaIndexes().parsed.values()].flatMap((p) => p.entries);
+    for (const [key, row] of Object.entries(ACTA_INDEX_CORRECTIONS)) {
+      const [year, page] = key.split(':').map(Number);
+      const entry = entries.find((e) => e.year === year && e.page === page);
+      expect(entry, key).toBeDefined();
+      expect(entry!.date, key).toBe(row.printed);
+      expect(row.date, key).not.toBe(row.printed);
+    }
+    for (const key of Object.keys(ACTA_HOLDS)) {
+      const [year, page] = key.split(':').map(Number);
+      expect(entries.some((e) => e.year === year && e.page === page), key).toBe(true);
+    }
   });
 
   it('writes a reference only on a Francis document, in the AAS, with the volume the year implies', () => {
@@ -2753,5 +2792,117 @@ describe('the AAS reference (acta reference spec)', () => {
 
   it('satisfies invariant 25 across the whole corpus', () => {
     expect(checkDocuments(everything, genres, keywords, series).filter((v) => v.rule === 25)).toEqual([]);
+  });
+});
+
+describe('the AAS-only documents (AAS-only documents spec, phase 2a)', () => {
+  const everything = readdirSync('data/documents').filter((f) => f.endsWith('.json'))
+    .flatMap((f) => loadAll(f.replace(/\.json$/, '')));
+  const born = everything.filter((d) => isActaShelf(d.source?.shelf));
+  const shelf = everything.filter((d) => !isActaShelf(d.source?.shelf));
+  const cls = (d: DocumentRecord) => `${d.genre}${d.characteristics?.length ? '+' + d.characteristics.join('+') : ''}`;
+
+  it('pins the created count per volume year and per class, so a silent drop or a flood fails loudly', () => {
+    // 266 created on 2026-09-12 from 642 candidate entries (867 in harvested categories
+    // minus 225 matched); the 376 held are listed per reason in the join report.
+    const byYear = new Map<number, number>();
+    for (const d of born) byYear.set(d.acta!.year, (byYear.get(d.acta!.year) ?? 0) + 1);
+    expect(Object.fromEntries([...byYear].sort())).toEqual({
+      2015: 7, 2016: 15, 2017: 30, 2018: 31, 2019: 73, 2020: 24, 2021: 19, 2022: 18, 2023: 32, 2024: 17,
+    });
+    expect(born).toHaveLength(266);
+    const byClass = new Map<string, number>();
+    for (const d of born) byClass.set(cls(d), (byClass.get(cls(d)) ?? 0) + 1);
+    expect(Object.fromEntries([...byClass].sort())).toEqual({
+      'apostolic-letter': 151, 'papal-bull': 39, 'papal-bull+apostolic-constitution': 76,
+    });
+    // Francis and Benedict XVI, the two popes the ten indexes name (six beatification
+    // letters of 2010-2011 printed in the 2018, 2020 and 2021 volumes).
+    expect(born.filter((d) => d.issuerId === 'rp:benedict-xvi')).toHaveLength(6);
+    expect(born.filter((d) => d.issuerId === 'rp:francis-i')).toHaveLength(260);
+    expect(born.every((d) => d.issuerId in PONTIFICATE_BEGAN && d.date >= PONTIFICATE_BEGAN[d.issuerId]!)).toBe(true);
+  });
+
+  it('carries the record shape of spec §4 and nothing the index does not evidence', () => {
+    for (const d of born) {
+      expect(d.source, d.id).toEqual({ url: null, shelf: `aas/${d.acta!.year}`, retrieved: '2026-09-12' });
+      expect(d.acta!.series, d.id).toBe('AAS');
+      expect(d.acta!.volume, d.id).toBe(d.acta!.year - 1908);
+      expect(d.issuerType, d.id).toBe('pope');
+      expect(d.keywords, d.id).toBeUndefined();
+      expect(d.actKind, d.id).toBeUndefined();
+      expect(d.series, d.id).toBeUndefined();
+      expect(d.medium, d.id).toBeUndefined();
+      expect(d.aliases, d.id).toBeUndefined();
+      expect(d.sourceGenreLabel !== undefined && d.sourceGenreLabel in CREATED_CATEGORIES, d.id).toBe(true);
+      expect('incipit' in d, d.id).toBe(d.idStatus === 'minted');
+      // A bare incipit is Latin; a guillemet one carries no language (spec §4). The index
+      // wraps the beatification letters' Latin incipits in guillemets too, so all but one
+      // of the 191 minted records carry none -- reported, not guessed.
+      if (d.incipitLang !== undefined) expect(d.incipitLang, d.id).toBe('la');
+      // The title is the index entry: the incipit as printed, then the description.
+      if (d.incipit !== undefined) expect(d.title, d.id).toContain(d.incipit);
+    }
+    expect(born.filter((d) => d.incipitLang === 'la')).toHaveLength(1);
+    expect(born.filter((d) => d.idStatus === 'provisional')).toHaveLength(75);
+  });
+
+  it('creates the examples the spec and the phase-1 report name', () => {
+    const by = Object.fromEntries(born.map((d) => [d.id, d]));
+    // The four sub plumbo cardinalatial titles of 28 November 2020: papal-bull, provisional.
+    expect(born.filter((d) => d.sourceGenreLabel === 'Litterae Apostolicae sub plumbo datae').map((d) => d.id).sort())
+      .toEqual([1, 2, 3, 4].map((n) => `mag:francis-i/papal-bull-2020-11-28-${n}`));
+    // Prisrensis-Priscensis, 5 September 2018, dated by the day-less `Sept. »` line before it.
+    const prizren = born.find((d) => d.title.startsWith('Prisrensis-Priscensis'));
+    expect(prizren?.date).toBe('2018-09-05');
+    expect(prizren?.id).toBe('mag:francis-i/papal-bull-2018-09-05');
+    // A 2017 constitution printing both toponym and incipit mints from the incipit.
+    expect(by['mag:francis-i/insita-humanae-naturae-2017']?.title)
+      .toBe('Danliensis. « Insita humanae naturae ». In Honduria, dismembratis quibusdam territoriis ecclesiasticae circumscriptionis Tegucigalpensis, dioecesis Danliensis conditur');
+    // Two beatification letters of one year sharing an incipit take the full-date form (invariant 11).
+    expect(by['mag:francis-i/venite-benedicti-2013-04-07']).toBeDefined();
+    expect(by['mag:francis-i/venite-benedicti-2013-11-10']).toBeDefined();
+    // Benedict XVI's letters, read through the `[Benedictus PP. XVI: 6 Iun. 2010]` bracket.
+    expect(by['mag:benedict-xvi/testes-christianae-2010']?.date).toBe('2010-06-06');
+  });
+
+  it('holds rather than creates: no discussion #30 act has an AAS-born twin, and the Tarragona letters stay held', () => {
+    // The twelve ids of discussion #30; a twin would be an AAS-born record of the same
+    // pope on the same date (the shelf records print no incipit to compare by).
+    const thirty = [
+      'mag:francis-i/apostolic-letter-2015-05-28', 'mag:francis-i/apostolic-letter-2023-11-27',
+      'mag:francis-i/apostolic-letter-2024-06-29', 'mag:francis-i/apostolic-letter-2024-01-16-2',
+      'mag:benedict-xvi/totius-orbis-2005', 'mag:benedict-xvi/antiqua-ordinatione-2008',
+      'mag:benedict-xvi/ecclesiae-unitatem-2009', 'mag:benedict-xvi/apostolic-letter-2009-07-07',
+      'mag:benedict-xvi/omnium-in-mentem-2009', 'mag:benedict-xvi/ubicumque-et-semper-2010',
+      'mag:john-xxiii/maiora-in-dies-1959', 'mag:john-xxiii/superno-dei-1960',
+    ];
+    const byId = new Map(shelf.map((d) => [d.id, d]));
+    for (const id of thirty) {
+      const d = byId.get(id);
+      expect(d, id).toBeDefined();
+      const twins = born.filter((b) => b.issuerId === d!.issuerId && b.date === d!.date
+        && (b.incipit === undefined || d!.incipit === undefined || slugify(b.incipit) === slugify(d!.incipit)));
+      expect(twins.map((t) => t.id), id).toEqual([]);
+    }
+    expect(born.filter((d) => d.issuerId === 'rp:francis-i' && d.date === '2013-10-13')).toEqual([]);
+    // The decretals vatican.va filed on apost_letters as *Lettera Decretale* (2013-05-12,
+    // 2014-04-03, 2014-04-27, 2014-11-23, 2015-05-17, 2022-05-15) are held, not doubled.
+    for (const date of ['2013-05-12', '2014-04-03', '2014-04-27', '2014-11-23', '2015-05-17', '2022-05-15']) {
+      expect(born.filter((d) => d.issuerId === 'rp:francis-i' && d.date === date), date).toEqual([]);
+    }
+  });
+
+  it('re-mints no shelf id: no AAS-born provisional record shares an ordinal group with a shelf record', () => {
+    const shelfBare = new Set(shelf.filter((d) => d.idStatus === 'provisional').map((d) => bareProvisionalId(d.id)));
+    expect(born.filter((d) => d.idStatus === 'provisional' && shelfBare.has(bareProvisionalId(d.id)))).toEqual([]);
+    // And no AAS-born minted id collides with a shelf minted id on (issuer, slug, year).
+    const shelfKeys = new Set(shelf.filter((d) => d.idStatus === 'minted' && d.incipit !== undefined && !d.series)
+      .map((d) => `${d.issuerId}|${slugify(d.incipit!)}|${d.date.slice(0, 4)}`));
+    expect(born.filter((d) => d.incipit !== undefined && shelfKeys.has(`${d.issuerId}|${slugify(d.incipit)}|${d.date.slice(0, 4)}`))).toEqual([]);
+  });
+
+  it('satisfies every invariant over the merged corpus', () => {
+    expect(checkDocuments(everything, genres, keywords, series)).toEqual([]);
   });
 });

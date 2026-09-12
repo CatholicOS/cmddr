@@ -15,6 +15,7 @@ import { issuerLocalPart, mintId } from '../ids.js';
 import { slugify } from '../slug.js';
 import { applyActa } from '../acta/join.js';
 import { categoryForHeading } from '../acta/categories.js';
+import { createFromActa } from '../acta/create.js';
 import type { DocumentRecord, HarvestItem } from '../types.js';
 
 
@@ -295,26 +296,35 @@ if (seriesCollisions) {
 // cannot collide the way two minted ids can (its own ordinal pass, below, handles its
 // one collision mode: two of the same genre on the same date). Only minted records
 // participate here.
-const collisionGroups = new Map<string, DocumentRecord[]>();
-for (const doc of allDocs) {
-  // A series-form id is keyed by occasion and never extended to the full date; its own
-  // collision rule is the occasion-uniqueness check above.
-  if (doc.idStatus !== 'minted' || doc.series) continue;
-  const key = `${issuerLocalPart(doc.issuerId)}|${slugify(doc.incipit ?? doc.title)}|${doc.date.slice(0, 4)}`;
-  collisionGroups.set(key, [...(collisionGroups.get(key) ?? []), doc]);
-}
-for (const group of collisionGroups.values()) {
-  if (group.length < 2) continue;
-  for (const doc of group) {
-    doc.id = mintId(doc.issuerId, doc.incipit ?? doc.title, doc.date, { fullDate: true });
+// Run once over the shelf records here and once more over the merged set after the
+// AAS-only records are appended (below): both passes are idempotent.
+function resolveIncipitCollisions(docs: DocumentRecord[]): void {
+  const collisionGroups = new Map<string, DocumentRecord[]>();
+  for (const doc of docs) {
+    // A series-form id is keyed by occasion and never extended to the full date; its own
+    // collision rule is the occasion-uniqueness check above.
+    if (doc.idStatus !== 'minted' || doc.series) continue;
+    const key = `${issuerLocalPart(doc.issuerId)}|${slugify(doc.incipit ?? doc.title)}|${doc.date.slice(0, 4)}`;
+    collisionGroups.set(key, [...(collisionGroups.get(key) ?? []), doc]);
+  }
+  for (const group of collisionGroups.values()) {
+    if (group.length < 2) continue;
+    for (const doc of group) {
+      doc.id = mintId(doc.issuerId, doc.incipit ?? doc.title, doc.date, { fullDate: true });
+    }
   }
 }
+resolveIncipitCollisions(allDocs);
 
-const byIssuer = new Map<string, DocumentRecord[]>();
-for (const doc of allDocs) {
-  const key = issuerLocalPart(doc.issuerId);
-  byIssuer.set(key, [...(byIssuer.get(key) ?? []), doc]);
-}
+const groupByIssuer = (docs: DocumentRecord[]): Map<string, DocumentRecord[]> => {
+  const out = new Map<string, DocumentRecord[]>();
+  for (const doc of docs) {
+    const key = issuerLocalPart(doc.issuerId);
+    out.set(key, [...(out.get(key) ?? []), doc]);
+  }
+  return out;
+};
+let byIssuer = groupByIssuer(allDocs);
 
 // See ordinals.ts for the ordinal-assignment rules (dense, 1-based, sorted by title).
 for (const docs of byIssuer.values()) {
@@ -367,6 +377,33 @@ for (const [year, parsed] of acta.parsed) {
     );
   }
   for (const e of r.unknownPope) console.warn(`AAS ${e.year}:${e.page}: no issuer for pope heading '${e.pope}'`);
+}
+
+// AAS-only documents (AAS-only documents spec §2-§6): the entries the join left
+// unmatched in a category the registry creates from the *Acta* become documents of their
+// own, unless the duplicate guard or a rule holds them. The created records join the
+// pope's file; the collision and ordinal passes then run again over the merged set, and
+// any shelf id that changes as a result is a finding, printed here and listed in the
+// join report -- expected none.
+const creation = createFromActa(acta.result, allDocs);
+{
+  const byReason = new Map<string, number>();
+  for (const h of creation.held) byReason.set(h.reason, (byReason.get(h.reason) ?? 0) + 1);
+  console.log(
+    `AAS-only documents: ${creation.created.length} created, ${creation.held.length} held (`
+    + [...byReason].sort().map(([r, n]) => `${r} ${n}`).join(', ') + ')',
+  );
+  for (const c of creation.created.filter((c) => c.record.idStatus === 'provisional')) {
+    console.warn(`Provisional id (no incipit in the Acta index) ${c.record.issuerId} ${c.record.source?.shelf} ${c.record.date}: '${c.record.title}'`);
+  }
+}
+const shelfIdsBefore = new Map(allDocs.map((d) => [d, d.id]));
+allDocs.push(...creation.created.map((c) => c.record));
+resolveIncipitCollisions(allDocs);
+byIssuer = groupByIssuer(allDocs);
+for (const docs of byIssuer.values()) assignProvisionalOrdinals(docs);
+for (const [doc, before] of shelfIdsBefore) {
+  if (doc.id !== before) console.warn(`Shelf id re-minted beside an AAS-only record: ${before} -> ${doc.id}`);
 }
 
 // Regenerate from scratch so a stale file from a removed reassignment cannot linger
