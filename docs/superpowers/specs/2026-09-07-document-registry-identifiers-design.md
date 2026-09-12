@@ -218,6 +218,16 @@ The "shelf" is therefore a queryable state (`idStatus = provisional`), not a sep
 **zero members in the pilot corpus** and is defined now so that expanding scope to incipit-less
 genres needs no schema change.
 
+### 3.6 The series form
+
+A document that belongs to an annual series (`document.series` is set) is keyed by its occasion,
+not by its first words: `mag:{issuer}/{series-id}-{occasion-year}`, minted, with no incipit
+required. The rule, its evidence (the signing date routinely falls in the year before the
+occasion), the series branches of invariants 10 and 12, the new invariant 24 and the uniqueness
+fold into invariant 8 are specified in
+[the messages harvest spec](2026-09-12-messages-harvest-design.md) §3, so that every normative
+id rule stays findable from this document. §3.1–§3.5 above are unchanged for every other document.
+
 ## 4. Schema changes
 
 ### 4.1 `schema/document.schema.json`
