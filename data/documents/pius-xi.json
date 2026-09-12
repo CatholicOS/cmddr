@@ -1293,6 +1293,31 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
+    "id": "mag:pius-xi/romanus-pontifex-1928",
+    "title": "Romanus Pontifex. Belemensis de Para: dismembrationis et erectionis praelaturae nullius « Marajensis » et praelaturae nullius « Gurupensis »",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1928-04-14",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Romanus Pontifex",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 313
+    }
+  },
+  {
     "id": "mag:pius-xi/miserentissimus-redemptor-1928",
     "title": "Miserentissimus Redemptor",
     "idStatus": "minted",
@@ -1940,6 +1965,31 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:pius-xi/cura-universae-1929",
+    "title": "Cura universae. Cuiabensis: dismembrationis archidioecesis et erectionis novae praelaturae nullius « Adamanteae»",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-03-22",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Cura universae",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 320
+    }
+  },
+  {
     "id": "mag:pius-xi/ad-animorum-bonum-1929",
     "title": "Ad animorum bonum",
     "idStatus": "minted",
@@ -2344,6 +2394,31 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:pius-xi/sollicitudo-1929",
+    "title": "Sollicitudo. Goyasen.: de dioecesis dismembratione et ^ novae praelaturae nullius « Jatahiensis » erectione",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-06-21",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Sollicitudo",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 323
+    }
+  },
+  {
     "id": "mag:pius-xi/martyrum-corona-1929",
     "title": "Martyrum corona",
     "idStatus": "minted",
@@ -2448,6 +2523,53 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
+    "id": "mag:pius-xi/beati-petri-apostoli-1929",
+    "title": "Beati Petri Apostoli. Abbatia Casamariensis, Ordinis Cisterciensium, cum domibus seu monasteriis subiectis in Congregationem sui iuris erigitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-12-14",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Beati Petri Apostoli",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 369
+    }
+  },
+  {
+    "id": "mag:pius-xi/ad-gregem-dominicum-1929",
+    "title": "Ad gregem Dominicum. De Tarapacà et de Arequipa: de vicariatus apostolici de Tarapacà suppressione et de Iquique dioecesis erectione",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1929-12-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Ad gregem Dominicum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 361
+    }
+  },
+  {
     "id": "mag:pius-xi/mens-nostra-1929",
     "title": "Mens Nostra",
     "idStatus": "minted",
@@ -2512,6 +2634,31 @@
     },
     "incipit": "Divini Illius Magistri",
     "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/apostolicae-sedi-1930",
+    "title": "Apostolicae Sedi. Sanctae Crucis de Sierra: dismembrationis dioecesis et erectionis vicariatus apostolici de Chiquitos",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-01-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Apostolicae Sedi",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 364
+    }
   },
   {
     "id": "mag:pius-xi/letter-1930-02-02",
@@ -2609,6 +2756,28 @@
     "sourceGenreLabel": "letters"
   },
   {
+    "id": "mag:pius-xi/quo-maiori-rerum-1930",
+    "title": "Quo maiori rerum. Distracto territorio e vicariatu apostolico de Mariannhill erigitur praefectura apostolica de TTmtata",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-03-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quo maiori rerum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 41
+    }
+  },
+  {
     "id": "mag:pius-xi/ad-salutem-humani-1930",
     "title": "Ad Salutem Humani",
     "idStatus": "minted",
@@ -2627,6 +2796,539 @@
     },
     "incipit": "Ad Salutem Humani",
     "sourceGenreLabel": "encyclicals"
+  },
+  {
+    "id": "mag:pius-xi/decessores-nostros-1930",
+    "title": "Decessores Nostros. Erigitur in vicariatum apostolicum praefectura apostolica de Caqueta",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-05-31",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Decessores Nostros",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 42
+    }
+  },
+  {
+    "id": "mag:pius-xi/ex-hac-divi-1930",
+    "title": "Ex hac Divi. Fines reguntur inter vicariatum apostolicum Districtus occidentalis Promontorii Bonae Spei et praefecturam apostolicam Districtus centralis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-06-28",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Ex hac Divi",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 43
+    }
+  },
+  {
+    "id": "mag:pius-xi/delegatus-apostolicus-1930",
+    "title": "Delegatus Apostolicus. Dismembrato territorio a vicariatu apostolico de Nanning erigitur Missio sui iuris de Wuchow in Sinis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-06-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Delegatus Apostolicus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 152
+    }
+  },
+  {
+    "id": "mag:pius-xi/dioeeesis-segniensis-1930",
+    "title": "Dioeeesis Segniensis. Templum Tersactense B. M. V. Matris Gratiarum, dioecesis Segniensis, titulo honoribusque augetur Basilicae minoris",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-07-07",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Dioeeesis Segniensis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 44
+    }
+  },
+  {
+    "id": "mag:pius-xi/supremi-munus-1930",
+    "title": "Supremi munus. Erigitur in vicariatum apostolicum praefectura Magni Namaqualand",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-07-14",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Supremi munus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 116
+    }
+  },
+  {
+    "id": "mag:pius-xi/ab-archiepiscopo-1930",
+    "title": "Ab archiepiscopo. B. M. V. Immaculata sub titulo « Apparecida » principalis Patrona Brasiliae constituitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-07-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Ab archiepiscopo",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 7
+    }
+  },
+  {
+    "id": "mag:pius-xi/ex-hae-divi-1930",
+    "title": "Ex hae Divi. Distracto territorio ex vicariatu apostolico de Changsha erigitur vicariatus apostolicus de Hengchow in Sinis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-07-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Ex hae Divi",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 47
+    }
+  },
+  {
+    "id": "mag:pius-xi/nos-quibus-1930",
+    "title": "Nos, quibus. In vicariatum apostolicum provehitur praefectura apostolica de Matadi",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-07-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Nos, quibus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 46
+    }
+  },
+  {
+    "id": "mag:pius-xi/pastoralis-officii-1930",
+    "title": "Pastoralis officii. De nova provinciarum ecclesiasticarum et dioecesium in Statu Borussico circumscriptione",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-08-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Pastoralis officii",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 34
+    }
+  },
+  {
+    "id": "mag:pius-xi/dioeeesis-vivariensis-1930",
+    "title": "Dioeeesis Vivariensis. Sanctuarium B. M. V. de Bono Succursu paroeciae de Lablachère, dioecesis Vivariensis intra fines, Basilicae minoris titulo honoribusque augetur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-08-24",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Dioeeesis Vivariensis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 153
+    }
+  },
+  {
+    "id": "mag:pius-xi/oppidi-cui-nomen-1930",
+    "title": "Oppidi cui nomen. B. M. V. ab excubiis, vulgo « delia Guardia », Patrona caelestis declaratur oppidi « Borghetto S. Spirito » dioecesis Albinganensis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-08-24",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Oppidi cui nomen",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 154
+    }
+  },
+  {
+    "id": "mag:pius-xi/expedit-plane-1930",
+    "title": "Expedit plane. S. Ioannes de Deo et S. Camillus de Lellis caelestes declarantur Patroni infirmariorum saecularium eorumque piarum associationum",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-08-28",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Expedit plane",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 8
+    }
+  },
+  {
+    "id": "mag:pius-xi/argentinae-reipublicae-1930",
+    "title": "Argentinae Reipublicae. Argentinae Eeipublicae, itemque Uruguayanae et Paraguayanae caelestis Patrona declaratur B. M. V. Immaculata, sub titulo «de Lujan »",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-09-08",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Argentinae Reipublicae",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 157
+    }
+  },
+  {
+    "id": "mag:pius-xi/matritensi-in-civitate-1930",
+    "title": "Matritensi in civitate. Titulus et privilegia Basilicae minoris ecclesiae S. Michaelis Archangeli, Matriti exstanti, collata",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-09-15",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Matritensi in civitate",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 156
+    }
+  },
+  {
+    "id": "mag:pius-xi/a-seccoviensis-1930",
+    "title": "A Seccoviensis. Ecclesia B. M. V. in caelum Assumptae, coenobii Seccoviensis O. S. B., Congr. Beuronensis, titulo Basilicae minoris ornatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-10-07",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "A Seccoviensis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 158
+    }
+  },
+  {
+    "id": "mag:pius-xi/anno-vertente-1930",
+    "title": "Anno vertente. De erectione et regimine Pontificii collegii ecclesiastici Neerlandici Piani de Urbe",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-10-26",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Anno vertente",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 5
+    }
+  },
+  {
+    "id": "mag:pius-xi/litteris-nostris-1930",
+    "title": "Litteris nostris. Templum B. M. V. Immaculatae in oppido « Lujan », dioecesis de Plata intra fines, Basilicae minoris titulo honestatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-11-15",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Litteris nostris",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 159
+    }
+  },
+  {
+    "id": "mag:pius-xi/dominici-gregis-1930",
+    "title": "Dominici gregis. Fines reguntur inter vicariatus apostolicos de Siwantze et Tsining in Sinis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-11-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Dominici gregis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 326
+    }
+  },
+  {
+    "id": "mag:pius-xi/in-tanta-difficultate-1930",
+    "title": "In tanta difficultate. Ad R. P. D. Hectorem Felici, Archiep. tit. Corynthien. eundemque Nuncium apostolicum apud Chilensem Rempublicam, quem deputat Legatum suum ad Congressum Eucharisticum e tota natione, Valdiviae habendum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-11-25",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "In tanta difficultate",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 48
+    }
+  },
+  {
+    "id": "mag:pius-xi/quoniam-annus-1930",
+    "title": "Quoniam annus. Ad R. P. D. lulium Zichy, Archiepiscopum Oolocensem, eundemque Pont. Solio adstatorem. quintum et vicesimum episcopatus annumexplentem",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-12-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quoniam annus",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 49
+    }
+  },
+  {
+    "id": "mag:pius-xi/in-mortali-1930",
+    "title": "In mortali. Ad Emum P. D. Basilium S. R. E. Cardinalem Pompilj, Episcopum Veliternum eundemque Urbis Vicarium et sacrosanctae Basilicae Lateranensis Archipresbyterum, quinquagesimo appetente natali sacerdotii eius",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-12-15",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "In mortali",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 50
+    }
+  },
+  {
+    "id": "mag:pius-xi/regimen-ecclesiae-1930",
+    "title": "Regimen Ecclesiae. Fines reguntur inter vicariatum apostolicum de Hanchungfu et praefecturam apostolicam de Hinganfu in Sinis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-12-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Regimen Ecclesiae",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 327
+    }
+  },
+  {
+    "id": "mag:pius-xi/letter-1930-12-25",
+    "title": "Ephesinam Synodum, - Ad Emum P. D. Aloisium tit. S. Georgii in Velabro S. R. E. Presb. Cardinalem Sincero, Sacrae Congregationis pro Ecclesia Orientali a Secretis: De Ephesino Concilio, pleno iam saeculo xv a celebratione, in Orbe commemorando",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-12-25",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 11
+    }
+  },
+  {
+    "id": "mag:pius-xi/saeculum-mox-1930",
+    "title": "Saeculum mox. Ad Emum P. D. Basilium S. R. E. Card. Pompilj, Episcopum Veliternum ac vice sacra in Urbe Antistitem: De commemoratione agenda Romae Ephesinae Synodi xv ante saeculo celebratae",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-12-25",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Saeculum mox",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 10
+    }
   },
   {
     "id": "mag:pius-xi/casti-connubii-1930",
@@ -2653,6 +3355,326 @@
     "sourceGenreLabel": "encyclicals"
   },
   {
+    "id": "mag:pius-xi/cum-opera-1931",
+    "title": "Cum opera. Separato territorio e vicariatu apostolico de Coquilhatville erigitur Missio independens de Bikoro in Africa Centrali",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-01-03",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Cum opera",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 328
+    }
+  },
+  {
+    "id": "mag:pius-xi/in-evangelii-1931",
+    "title": "In Evangelii. Permutantur fines vicariatuum apostolicorum de Zanzibar et de Nyeri",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-01-03",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "In Evangelii",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 370
+    }
+  },
+  {
+    "id": "mag:pius-xi/congregationis-missionariorum-1931",
+    "title": "Congregationis Missionariorum. Distracto territorio e praefectura apostolica de Salisbury erigitur Missio independens de Bulawayo in Africa meridionali",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-01-04",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Congregationis Missionariorum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 372
+    }
+  },
+  {
+    "id": "mag:pius-xi/supremi-apostolatus-1931-01-04",
+    "title": "Supremi Apostolatus. Immutantur fines archidioecesis Calcuttensis versus dioecesim Patnensem",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-01-04",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Supremi Apostolatus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 371
+    }
+  },
+  {
+    "id": "mag:pius-xi/apostolicae-litterae-1931",
+    "title": "Apostolicae Litterae. De plumbeo sigillo Cancellariae Apostolicae innovando",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-01-18",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Apostolicae Litterae",
+    "characteristics": [
+      "motu-proprio"
+    ],
+    "sourceGenreLabel": "Litterae Apostolicae Motu proprio datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 33
+    }
+  },
+  {
+    "id": "mag:pius-xi/decessores-nostros-1931",
+    "title": "Decessores Nostros. Templum B. M. V. « Causae nostrae laetitiae » in oppido Tongres dioecesis Leodiensis intra fines, titulo basilicae minoris honestatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-02-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Decessores Nostros",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 373
+    }
+  },
+  {
+    "id": "mag:pius-xi/cum-nihil-1931",
+    "title": "Cum nihil. Fines immutantur inter praefecturas apostolicas de Coquilhatville et de Basankusu in Congo Belgico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-03-01",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Cum nihil",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 374
+    }
+  },
+  {
+    "id": "mag:pius-xi/supremi-apostolatus-1931-03-07",
+    "title": "Supremi Apostolatus. Separato territorio e vicariatu apostolico Norvegiae, erigitur ecclesiasticus districtus Norvegiae Centralis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-03-07",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Supremi Apostolatus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 430
+    }
+  },
+  {
+    "id": "mag:pius-xi/paterna-caritas-1931",
+    "title": "Paterna caritas. Distracto territorio e vicariatu Norvegiae, districtus ecclesiasticus Norvegiae Septentrionalis conditur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-03-08",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Paterna caritas",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 431
+    }
+  },
+  {
+    "id": "mag:pius-xi/sub-titulo-1931",
+    "title": "Sub titulo. Templum cathedrale Eborense, B. M. V. sideribus receptae sacrum, titulo Basilicae minoris condecorata",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-03-09",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Sub titulo",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 377
+    }
+  },
+  {
+    "id": "mag:pius-xi/pastoris-aeterni-1931",
+    "title": "Pastoris aeterni. Lacus Salsi et Sacramentensis: dismembrationis et erectionis novae dioecesis Renensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-03-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Pastoris aeterni",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 366
+    }
+  },
+  {
+    "id": "mag:pius-xi/pastorale-munus-1931",
+    "title": "Pastorale munus. Romana: Ecclesia tituli S. Pancratii M. de Urbe, in paroeciam erigitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-04-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Pastorale munus",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 426
+    }
+  },
+  {
+    "id": "mag:pius-xi/sanctos-inter-1931",
+    "title": "Sanctos inter. Ad R. P. D. Aegistum Melchiori, episcopum Nolanum, quinto decimo exeunte saeculo ab obitu S. Paulini",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-04-15",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Sanctos inter",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 405
+    }
+  },
+  {
+    "id": "mag:pius-xi/praecipua-sane-1931",
+    "title": "Praecipua sane. De canonicis Seminariorum visitationibus",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-04-24",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Praecipua sane",
+    "characteristics": [
+      "motu-proprio"
+    ],
+    "sourceGenreLabel": "Litterae Apostolicae Motu proprio datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 151
+    }
+  },
+  {
     "id": "mag:pius-xi/letter-1931-04-26",
     "title": "Chirografo al Cardinale Presbitero Alfredo Ildefonso Schuster, Arcivescovo di Milano, in difesa dell'Azione Cattolica Italiana",
     "idStatus": "provisional",
@@ -2669,6 +3691,49 @@
       "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/letter-1931-05-05",
+    "title": "Merito sane.-Ad, Einum P. D. Emmanuelem S. R. E. Presb. Card. Gonealves Cerejeira, patriarcham Ulyssiponensem, de Antonianis sollemniis",
+    "idStatus": "provisional",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-05-05",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 407
+    }
+  },
+  {
+    "id": "mag:pius-xi/felix-faustumque-1931",
+    "title": "Felix faustumque. Ad Emos PP. DD. Adolfum, titulo S. Agnetis extra moenia S. R. E. Presb. Card. Bertram, Archiepiscopum Wratislaviensem, Michaelem tit. S. Anastasiae presb. Card. Faulhaber, Archiepiscopum Monacensem et Frisingensem, Carolum I. tit. SS. Quatuor coronatorum S. R. E. Presb. Card. Schulte, Archiepiscopum Coloniensem, ceterosque Aschiepiscopos et Episcopos Germaniae pleno saeculo septimo ab obitu S. Elisabeth",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-05-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Felix faustumque",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 525
+    }
   },
   {
     "id": "mag:pius-xi/quadragesimo-anno-1931",
@@ -2691,7 +3756,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quadragesimo Anno",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 177
+    }
   },
   {
     "id": "mag:pius-xi/deus-scientiarum-dominus-1931",
@@ -2716,6 +3787,119 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
+    "id": "mag:pius-xi/clogheriensis-dioecesis-1931",
+    "title": "Clogheriensis dioecesis. Templum S. Patricii ad lacum Derg intra fines dioecesis Clogheriensis honoribus minoris Basilicae decoratur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-06-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Clogheriensis dioecesis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 398
+    }
+  },
+  {
+    "id": "mag:pius-xi/nobis-commissum-1931",
+    "title": "Nobis commissum. Distracto territorio e vicariatu apostolico de Chefoo erigitur praefectura apostolica de Idushien in Sinis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-06-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Nobis commissum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 399
+    }
+  },
+  {
+    "id": "mag:pius-xi/per-apostolicas-1931",
+    "title": "Per Apostolicas. Csanadiensis: Erectionis novae sedis et ecclesiae cathedralis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-06-19",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Per Apostolicas",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 428
+    }
+  },
+  {
+    "id": "mag:pius-xi/quae-ad-christiani-1931",
+    "title": "Quae ad christiani. Missio Trapezuntina a vicariatu apostolico Constantinopolitano separatur et Sacrae Congregationis de Propaganda Fide iurisdictioni subiicitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-06-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quae ad christiani",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 402
+    }
+  },
+  {
+    "id": "mag:pius-xi/a-nostro-1931",
+    "title": "A nostro. Ad R. P. D. Franciscum Kordac, Archiepiscopum Amasenum, hactenum Archiepiscopum Pragensem",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-06-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "A nostro",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 518
+    }
+  },
+  {
     "id": "mag:pius-xi/non-abbiamo-bisogno-1931",
     "title": "Non Abbiamo Bisogno",
     "idStatus": "minted",
@@ -2733,7 +3917,167 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Non Abbiamo Bisogno",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 285
+    }
+  },
+  {
+    "id": "mag:pius-xi/ad-rei-christianae-1931",
+    "title": "Ad rei christianae. Seiuncto territorio a vicariatu apostolico de Nanking nova conditur apostolica praefectura de Suchow",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-07-01",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Ad rei christianae",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 403
+    }
+  },
+  {
+    "id": "mag:pius-xi/ut-ea-praestemus-1931",
+    "title": "Ut ea praestemus. Separato territorio e vicariatu apostolico de Ningpo in Sinis, erigitur praefectura apostolica de Chuchow",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-07-02",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Ut ea praestemus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 404
+    }
+  },
+  {
+    "id": "mag:pius-xi/ea-verla-1931",
+    "title": "Ea verla. Ad Emum P. D.AdolfumS. R. E. Presb. Card. Bertram, archiepiscopum Wratislaviensiem, quinquagesimo appetente natali sacerdotii eodemque quinto ac vigesimo episcopatus eius",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-07-03",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Ea verla",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 409
+    }
+  },
+  {
+    "id": "mag:pius-xi/praeclarum-illud-1931",
+    "title": "Praeclarum illud. Ad egregium virum Matthaeum Hahn, c praesidem Consilii Norimbergensis conventui 70° catholicorum e Germania apparando",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-08-18",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Praeclarum illud",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 438
+    }
+  },
+  {
+    "id": "mag:pius-xi/monumentum-insigne-1931",
+    "title": "Monumentum insigne. ad Emum P. D. Sebastianum Cardinalem Lerne da Silveira Cintra, Archiepiscopum , S. Sebastiani Fluminis Ianuarii, quem Legatum deputat ad monumentum, nationis brasilianae obsequium, Sanctissimo Redemptori dedicandum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-09-14",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Monumentum insigne",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 440
+    }
+  },
+  {
+    "id": "mag:pius-xi/providentissimus-deus-1931",
+    "title": "Providentissimus Deus. Sanctus Robertus Bellarmino, Romanae Ecclesiae Cardinalis e Societate Iesu, universalis Ecclesiae Doctor renuntiatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-09-17",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Providentissimus Deus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 433
+    }
+  },
+  {
+    "id": "mag:pius-xi/memoriam-suavissimam-1931",
+    "title": "Memoriam suavissimam. Ad Emum P. D. Raphaelem tit. S. Hieronymi Illyiicorum S. R. E. Presbyterum Cardinalem Scapinelli di Leguigno, Sanctitatis Suae Datarium, appetente natali quinquagesimo sacerdotii eius",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-09-19",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Memoriam suavissimam",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 441
+    }
   },
   {
     "id": "mag:pius-xi/nova-impendet-1931",
@@ -2753,7 +4097,35 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Nova Impendet",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 393
+    }
+  },
+  {
+    "id": "mag:pius-xi/libenti-sane-1931",
+    "title": "Libenti sane. Ad RR. PP. DD. Leopoldum Preçan, Archiepiscopum Olomucensem ceterosque Cechoslovachiae locorum Ordinarios, offieiosis litteris respondet ex communi conventu datis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1931-10-21",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf",
+      "shelf": "aas/1931",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Libenti sane",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 442
+    }
   },
   {
     "id": "mag:pius-xi/lux-veritatis-1931",
@@ -2773,7 +4145,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Lux Veritatis",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 23,
+      "year": 1931,
+      "page": 493
+    }
   },
   {
     "id": "mag:pius-xi/caritate-christi-compulsi-1932",

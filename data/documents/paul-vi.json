@@ -16812,7 +16812,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 5
+    }
   },
   {
     "id": "mag:paul-vi/urbi-et-orbi-easter-1977",
@@ -16854,7 +16860,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "In hoc cognovimus",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 281
+    }
   },
   {
     "id": "mag:paul-vi/world-communications-day-1977",
@@ -16959,7 +16971,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quam recte",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 10
+    }
   },
   {
     "id": "mag:paul-vi/apostolorum-catechismi-1977",
@@ -16978,7 +16996,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Apostolorum catechismi",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 777
+    }
   },
   {
     "id": "mag:paul-vi/feliciter-sollemniterque-1977",
@@ -16997,7 +17021,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Feliciter sollemniterque",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 780
+    }
   },
   {
     "id": "mag:paul-vi/vianensis-castelli-1977",
@@ -17023,7 +17053,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 7
+    }
   },
   {
     "id": "mag:paul-vi/avkaensis-1977",
@@ -17049,7 +17085,63 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 8
+    }
+  },
+  {
+    "id": "mag:paul-vi/ut-fert-creditum-1977",
+    "title": "Mohaleshoekensis. Ut fert creditum. Ab archidioecesi Maseruena dioecesis Mohaleshoekensis in Lesotho deducitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1977-11-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Ut fert creditum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 81
+    }
+  },
+  {
+    "id": "mag:paul-vi/votis-concedere-1977",
+    "title": "Ambikaptjkensis. Votis concedere. E dioecesi Raigarhensi-Ambikapurensi deducitur dioecesis Ambikapurensis, in India",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1977-11-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Votis concedere",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 82
+    }
   },
   {
     "id": "mag:paul-vi/world-day-of-migrants-and-refugees-1977",
@@ -17098,7 +17190,13 @@
       "year": 1978,
       "ordinal": 11
     },
-    "sourceGenreLabel": "messages/peace"
+    "sourceGenreLabel": "messages/peace",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 49
+    }
   },
   {
     "id": "mag:paul-vi/de-institutione-1977",
@@ -17117,7 +17215,38 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "De institutione",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 84
+    }
+  },
+  {
+    "id": "mag:paul-vi/nobis-quam-maxime-1977",
+    "title": "Idahtna. Nobis quam maxime. Praefectura Apostolica Idahina, in Nigeria, ad gradum dioecesis attollitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1977-12-17",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Nobis quam maxime",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 145
+    }
   },
   {
     "id": "mag:paul-vi/provido-consilio-1977",
@@ -17136,7 +17265,38 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Provido consilio",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 83
+    }
+  },
+  {
+    "id": "mag:paul-vi/qui-arcano-1977",
+    "title": "Aurangabadeksis. Qui arcano. Aurangabadensis dioecesis in India conditur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1977-12-17",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Qui arcano",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 232
+    }
   },
   {
     "id": "mag:paul-vi/quanto-christifideles-1977",
@@ -17155,7 +17315,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quanto Christifideles",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 11
+    }
   },
   {
     "id": "mag:paul-vi/urbi-et-orbi-christmas-1977",
@@ -17179,7 +17345,301 @@
       "year": 1977
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi_et_orbi"
+    "sourceGenreLabel": "messages/urbi_et_orbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 15
+    }
+  },
+  {
+    "id": "mag:paul-vi/praescriptionum-sacrosancti-1977",
+    "title": "Olomucejstsis et Aliarum. Praescriptionum sacrosancti. Ecclesiarum Olomucensis, Tyrnaviensis, Vratislaviensis et aliarum nova finium dispositio",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1977-12-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Praescriptionum sacrosancti",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 273
+    }
+  },
+  {
+    "id": "mag:paul-vi/qui-divino-1977",
+    "title": "Tyrnaviejstsis. Qui divino. Dioecesis Tyrnaviensis ad gradum metropolitanarum Ecclesiarum attollitur '.",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1977-12-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Qui divino",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 275
+    }
+  },
+  {
+    "id": "mag:paul-vi/qui-ad-deatissimi-1978",
+    "title": "Coxinensis. Qui ad deatissimi. Praelatura Coxinensis in Brasilia constituitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-01-03",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Qui ad deatissimi",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 148
+    }
+  },
+  {
+    "id": "mag:paul-vi/sacer-praesul-1978",
+    "title": "Tbilacunensis. Sacer Praesul. Nova in Brasiliae finibus conditur dioecesis Trilaeunensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-01-03",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Sacer Praesul",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 234
+    }
+  },
+  {
+    "id": "mag:paul-vi/tametsi-munus-1978",
+    "title": "Rondoniensis. Tametsi munus. Praelatura Rondoniensis in Brasilia constituitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-01-03",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Tametsi munus",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 146
+    }
+  },
+  {
+    "id": "mag:paul-vi/sacra-illa-1978",
+    "title": "Sacra illa. Ecclesia paroecialis Beatae Mariae Virginis, in urbe Nicaea, titulo Basilicae Minoris decoratur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-01-09",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Sacra illa",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 150
+    }
+  },
+  {
+    "id": "mag:paul-vi/aptiora-in-dies-1978",
+    "title": "S. Francisci De Macorís. Aptiora in dies. In Republica Dominicana constituitur dioecesis S. Francisci de Macoris",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-01-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Aptiora in dies",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 230
+    }
+  },
+  {
+    "id": "mag:paul-vi/studiosi-instar-1978",
+    "title": "Maoënsis-Montis Christi. Studiosi instar. In Republica Dominicana constituitur dioecesis Maoënsis-Montis Christi",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-01-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Studiosi instar",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 238
+    }
+  },
+  {
+    "id": "mag:paul-vi/quoniam-beatissima-1978",
+    "title": "Quoniam beatissima. B.M.V, a Monte Berico confirmatur patrona principalis civitatis et dioecesis Vicentinae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-01-11",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quoniam beatissima",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 150
+    }
+  },
+  {
+    "id": "mag:paul-vi/patriarchalem-basilicam-1978",
+    "title": "Patriarchalem Basilicam. Facultas conceditur aperiendi se-",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-01-17",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Patriarchalem Basilicam",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 152
+    }
+  },
+  {
+    "id": "mag:paul-vi/quoniam-princeps-1978",
+    "title": "Quoniam princeps. Cathedralis aedes S. Ioannis Portoricensis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-01-25",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quoniam princeps",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 239
+    }
+  },
+  {
+    "id": "mag:paul-vi/qui-volente-1978",
+    "title": "Lodwarina. Qui volente. Praefectura apostolica Lodwarina, in Kenia, ad gradum dioecesis tollitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-01-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Qui volente",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 276
+    }
   },
   {
     "id": "mag:paul-vi/lent-1978",
@@ -17209,6 +17669,78 @@
     "sourceGenreLabel": "messages/lent"
   },
   {
+    "id": "mag:paul-vi/pluries-oblata-1978",
+    "title": "Pluries oblata. S. Franciscus Xavier confirmatur patronus eorum qui in Argentina operam dant ludo pilae vel eius sunt",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-02-14",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Pluries oblata",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 240
+    }
+  },
+  {
+    "id": "mag:paul-vi/properamus-et-gestimus-1978",
+    "title": "Kakamegaënsis. Properamus et gestimus. Nova constituitur dioecesis Kakamegaënsis in Kenia",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-02-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Properamus et gestimus",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 278
+    }
+  },
+  {
+    "id": "mag:paul-vi/rerum-catholicarum-1978",
+    "title": "Klerkpolitana. Rerum catholicarum. Praefectura apostolica de Transvaal Occidentali ad gradum dioecesis tollitur, nomine Klerkpolitanae",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-02-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Rerum catholicarum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 277
+    }
+  },
+  {
     "id": "mag:paul-vi/plus-nongentos-1978",
     "title": "Plus nongentos",
     "idStatus": "minted",
@@ -17225,7 +17757,35 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Plus nongentos",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 284
+    }
+  },
+  {
+    "id": "mag:paul-vi/valentinae-archidioecesis-1978",
+    "title": "Valentinae archidioecesis. B.M.V, in urbe Alcira celebrata confirmatur eiusdem civitatis caelestis apud Deum Patrona",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-03-11",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Valentinae archidioecesis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 321
+    }
   },
   {
     "id": "mag:paul-vi/urbi-et-orbi-easter-1978",
@@ -17250,7 +17810,56 @@
       "year": 1978
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi_et_orbi"
+    "sourceGenreLabel": "messages/urbi_et_orbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 260
+    }
+  },
+  {
+    "id": "mag:paul-vi/apostolic-letter-1978-04-07",
+    "title": "B.M.V, confirmatur caelestis apud Deum Patrona dioecesis",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-04-07",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 322
+    }
+  },
+  {
+    "id": "mag:paul-vi/quales-quantosque-1978",
+    "title": "Quales quantosque. B.M.V, confirmatur caelestis apud Deum",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-04-08",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quales quantosque",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 323
+    }
   },
   {
     "id": "mag:paul-vi/world-day-of-prayer-for-vocations-1978",
@@ -17294,7 +17903,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Homo quisque",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 784
+    }
   },
   {
     "id": "mag:paul-vi/world-communications-day-1978",
@@ -17321,7 +17936,38 @@
       "year": 1978,
       "ordinal": 12
     },
-    "sourceGenreLabel": "messages/communications"
+    "sourceGenreLabel": "messages/communications",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 341
+    }
+  },
+  {
+    "id": "mag:paul-vi/cum-1978",
+    "title": "S. Mariae A Patrocinio. Cum. praeterita. Exarchatus apost, pro fidelibus Ucrainis in Argentina degentibus ad dignitatem epar chiae evehitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-04-24",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Cum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 385
+    }
   },
   {
     "id": "mag:paul-vi/quae-per-caritatem-1978",
@@ -17365,7 +18011,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 441
+    }
   },
   {
     "id": "mag:paul-vi/world-mission-day-1978",
@@ -17389,7 +18041,13 @@
       "id": "world-mission-day",
       "year": 1978
     },
-    "sourceGenreLabel": "messages/missions"
+    "sourceGenreLabel": "messages/missions",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 345
+    }
   },
   {
     "id": "mag:paul-vi/priscis-iam-inde-1978",
@@ -17408,7 +18066,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Priscis iam inde",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 452
+    }
   },
   {
     "id": "mag:paul-vi/fit-saepe-1978",
@@ -17427,7 +18091,113 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Fit saepe",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 453
+    }
+  },
+  {
+    "id": "mag:paul-vi/ad-christiani-1978",
+    "title": "S. Petri Apostoli. Ad christiani. E dioecesi SS.mae Conceptionis in Paraguaia deducitur dioecesis S. Petri Apostoli",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-06-05",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Ad christiani",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 443
+    }
+  },
+  {
+    "id": "mag:paul-vi/qui-superno-1978",
+    "title": "Carapeguana. Qui superno. Ab archidioecesi Sanctae Assumptionis deducitur dioecesis Carapeguana, in Paraguaia",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-06-05",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Qui superno",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 444
+    }
+  },
+  {
+    "id": "mag:paul-vi/ut-pater-1978",
+    "title": "Raiganensis. ut Pater. Nova in India conditur dioecesis Raiganensis, detractis a dioecesi Dumkaënsi quibusdam territoriis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-06-08",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "ut Pater",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 446
+    }
+  },
+  {
+    "id": "mag:paul-vi/trichuriensis-eparchiae-1978",
+    "title": "Irinialakudensis. Trichuriensis eparchiae. Eparchia ritus Malabarensis Irinialakudensis nomine in India constituitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-06-22",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Trichuriensis eparchiae",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 447
+    }
   },
   {
     "id": "mag:paul-vi/seraphicus-patriarcha-1978",
@@ -17446,7 +18216,63 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Seraphicus Patriarcha",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 454
+    }
+  },
+  {
+    "id": "mag:paul-vi/tutius-ut-consuleretur-1978",
+    "title": "S. Michaelis. Tutius ut consuleretur. Dioecesis S. Michaelis in Argentina conditur e quodam territorio dioecesis Foromartiniensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-07-11",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Tutius ut consuleretur",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 448
+    }
+  },
+  {
+    "id": "mag:paul-vi/apostolici-officii-1978",
+    "title": "Bernardinopolitana. Apostolici officii. Dioecesis Bernardinopolitana conditur in Americae Septentrionalis Foederatis Civitatibus",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:paul-vi",
+    "issuerType": "pope",
+    "date": "1978-07-14",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
+      "shelf": "aas/1978",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Apostolici officii",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 450
+    }
   },
   {
     "id": "mag:paul-vi/commune-omnium-1978",
@@ -17465,7 +18291,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Commune omnium",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 455
+    }
   },
   {
     "id": "mag:paul-vi/tanta-est-1978",
@@ -17484,6 +18316,12 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Tanta est",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 787
+    }
   }
 ]

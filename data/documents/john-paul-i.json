@@ -19,7 +19,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 760
+    }
   },
   {
     "id": "mag:john-paul-i/progredientibus-iam-1978",
@@ -38,7 +44,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Progredientibus iam",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 758
+    }
   },
   {
     "id": "mag:john-paul-i/propterea-maxime-1978",
@@ -57,7 +69,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Propterea maxime",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 757
+    }
   },
   {
     "id": "mag:john-paul-i/cum-probe-1978",
@@ -76,7 +94,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Cum probe",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 759
+    }
   },
   {
     "id": "mag:john-paul-i/letter-1978-09-17",
@@ -115,7 +139,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 762
+    }
   },
   {
     "id": "mag:john-paul-i/letter-1978-09-28",
@@ -137,6 +167,12 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 70,
+      "year": 1978,
+      "page": 763
+    }
   }
 ]

@@ -3143,7 +3143,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Venusta quidem",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 63
+    }
   },
   {
     "id": "mag:pius-xii/cum-quintum-1955",
@@ -3476,7 +3482,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Salutari fonti",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 464
+    }
   },
   {
     "id": "mag:pius-xii/quod-de-beatissima-1957",
@@ -3495,7 +3507,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod de Beatissima",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 146
+    }
   },
   {
     "id": "mag:pius-xii/santaremensis-obidensis-1957",
@@ -3521,7 +3539,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 24
+    }
   },
   {
     "id": "mag:pius-xii/fidei-donum-1957",
@@ -3586,7 +3610,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Frondentium silvarum",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 252
+    }
   },
   {
     "id": "mag:pius-xii/novos-caelos-1957",
@@ -3605,7 +3635,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Novos caelos",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 466
+    }
   },
   {
     "id": "mag:pius-xii/brivatensis-civitas-1957",
@@ -3624,7 +3660,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Brivatensis civitas",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 112
+    }
   },
   {
     "id": "mag:pius-xii/deo-in-honorem-1957",
@@ -3643,7 +3685,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Deo in honorem",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 847
+    }
   },
   {
     "id": "mag:pius-xii/templa-dei-1957",
@@ -3681,7 +3729,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Praeclaros inter Christi",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 148
+    }
   },
   {
     "id": "mag:pius-xii/invicti-athletae-christi-1957",
@@ -3743,7 +3797,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Amore subigens populos",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 195
+    }
   },
   {
     "id": "mag:pius-xii/pietatis-clarissimae-1957",
@@ -3762,7 +3822,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Pietatis clarissimae",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 64
+    }
   },
   {
     "id": "mag:pius-xii/de-britannia-1957",
@@ -3784,7 +3850,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 345
+    }
   },
   {
     "id": "mag:pius-xii/quae-in-ecclesia-1957",
@@ -3803,7 +3875,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quae in Ecclesia",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 197
+    }
   },
   {
     "id": "mag:pius-xii/antiquitate-artificiosis-1957",
@@ -3841,7 +3919,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "De more",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 199
+    }
   },
   {
     "id": "mag:pius-xii/corumbensis-registrensis-campi-grandis-auratopolitanae-1957",
@@ -3867,7 +3951,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 57
+    }
   },
   {
     "id": "mag:pius-xii/montisclari-paracatuensis-ianuariensis-1957",
@@ -3889,7 +3979,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 60
+    }
   },
   {
     "id": "mag:pius-xii/chiapasensis-tapacolensis-1957",
@@ -3915,7 +4011,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 185
+    }
   },
   {
     "id": "mag:pius-xii/saltillensis-torreonensis-1957",
@@ -3941,7 +4043,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 188
+    }
   },
   {
     "id": "mag:pius-xii/bathurstensis-in-gambia-1957",
@@ -3967,7 +4075,13 @@
       "circumscription-elevation"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 105
+    }
   },
   {
     "id": "mag:pius-xii/bikoroensis-1957",
@@ -3993,7 +4107,13 @@
       "circumscription-elevation"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 107
+    }
   },
   {
     "id": "mag:pius-xii/le-pelerinage-de-lourdes-1957",
@@ -4041,7 +4161,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 249
+    }
   },
   {
     "id": "mag:pius-xii/berytensis-chaldaeorum-1957",
@@ -4067,7 +4193,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 27
+    }
   },
   {
     "id": "mag:pius-xii/ad-peculiari-1957",
@@ -4086,7 +4218,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ad peculiari",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 302
+    }
   },
   {
     "id": "mag:pius-xii/kikuitensis-kisantuensis-kengen-1957",
@@ -4112,7 +4250,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 190
+    }
   },
   {
     "id": "mag:pius-xii/musomensis-1957",
@@ -4138,7 +4282,13 @@
       "circumscription-elevation"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 137
+    }
   },
   {
     "id": "mag:pius-xii/quinhonensis-saigonensis-nhatrangensis-1957",
@@ -4164,7 +4314,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 109
+    }
   },
   {
     "id": "mag:pius-xii/rabaulensis-kaviengensis-1957",
@@ -4209,7 +4365,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Religionis sedes",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 510
+    }
   },
   {
     "id": "mag:pius-xii/confinioris-californiae-pacensis-in-california-inferiore-1957",
@@ -4231,7 +4393,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 139
+    }
   },
   {
     "id": "mag:pius-xii/spinensis-1957",
@@ -4257,7 +4425,13 @@
       "circumscription-elevation"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 141
+    }
   },
   {
     "id": "mag:pius-xii/novissimae-dioeceses-1957",
@@ -4276,7 +4450,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Novissimae dioeceses",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 467
+    }
   },
   {
     "id": "mag:pius-xii/sacra-loca-1957",
@@ -4295,7 +4475,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Sacra loca",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 469
+    }
   },
   {
     "id": "mag:pius-xii/pietatis-artisque-1957",
@@ -4333,7 +4519,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Sanctorum terra",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 850
+    }
   },
   {
     "id": "mag:pius-xii/amargosensis-victoriensis-de-conquista-1957",
@@ -4359,7 +4551,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 193
+    }
   },
   {
     "id": "mag:pius-xii/ecclesiae-filii-1957",
@@ -4378,7 +4576,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ecclesiae Filii",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 852
+    }
   },
   {
     "id": "mag:pius-xii/puniensis-iuliensis-1957",
@@ -4404,7 +4608,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 144
+    }
   },
   {
     "id": "mag:pius-xii/oenipontis-gloria-1957",
@@ -4423,7 +4633,145 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Oenipontis gloria",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 304
+    }
+  },
+  {
+    "id": "mag:pius-xii/quae-apostolicae-sedis-1957",
+    "title": "Quae Apostolicae Sedis. S. Maria Magdalena praecipua apud Deum Patrona dioecesis Afogadensis de Ingazeira renuntiatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-08-09",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quae Apostolicae Sedis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 470
+    }
+  },
+  {
+    "id": "mag:pius-xii/exstant-etiamnum-1957",
+    "title": "Exstant etiamnum. Titulo ac privilegiis Basilicae Minoris ditatur Ecclesia collegialis et paroecialis Beatae Mariae Virgini «De Beaune» dicata, intra Divisionensis dioecesis fines",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-08-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Exstant etiamnum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 555
+    }
+  },
+  {
+    "id": "mag:pius-xii/haud-raro-1957",
+    "title": "Haud raro. Basilicae Minoris honoribus ac privilegiis afficitur ecclesia paroecialis B. M. V. in Caelum Assumptae in oppido v. « Santa Maria in Vico », Acerrarum dioecesis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-08-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Haud raro",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 354
+    }
+  },
+  {
+    "id": "mag:pius-xii/antiquissima-nobis-1957",
+    "title": "Antiquissima Nobis. Sanctus Michael Archangelus omnium mensis argentariis addictorum ex Italia Patronus Caelestis proclamatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-09-03",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Antiquissima Nobis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 355
+    }
+  },
+  {
+    "id": "mag:pius-xii/plurimi-floruerunt-1957",
+    "title": "Plurimi floruerunt. Sanctus Vincentius Maria Strambi, Ep. et Conf., Caelestis Patronus aeque principalis constituitur dioecesium Maceratensis et Tolentinae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-09-07",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Plurimi floruerunt",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 357
+    }
+  },
+  {
+    "id": "mag:pius-xii/ex-quo-1957",
+    "title": "Ex quo. Sanctus Ioseph, Deiparae Sponsus, in praecipuum caelelestem Patronum pro universa dioecesi Tamatavensi eligitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-09-08",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Ex quo",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 557
+    }
   },
   {
     "id": "mag:pius-xii/miranda-prorsus-1957",
@@ -4451,6 +4799,72 @@
     "sourceGenreLabel": "encyclicals"
   },
   {
+    "id": "mag:pius-xii/quod-venerabilis-frater-1957",
+    "title": "Quod Venerabilis Frater. Beata Maria Virgo a Monte Carmelo eligitur in praecipuam caelestem Patronam pro tota Praelatura « nullius » Sancti Ferdinandi Apurensis, in Venetiola",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-09-08",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quod Venerabilis Frater",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 932
+    }
+  },
+  {
+    "id": "mag:pius-xii/parens-auctoris-1957",
+    "title": "Parens Auctoris. Ecclesia B. M. V. in Caelum Assumptae, in Urbe v. « Randazzo », dioecesis Iaciensis, sita, Basilicae Minoris titulo honoribusque augetur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-09-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Parens Auctoris",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 358
+    }
+  },
+  {
+    "id": "mag:pius-xii/ex-ecclesiae-1957",
+    "title": "Ex Ecclesiae. S. Crispinus Martyr in praecipuum Caelestem Patronum oppidi « Portus Sancti Elpidii » vulgo « Porto S. Elpidio » archidioecesis Firmanae, eligitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-09-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Ex Ecclesiae",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 359
+    }
+  },
+  {
     "id": "mag:pius-xii/copiapoensis-1957",
     "title": "Copiapoënsis",
     "idStatus": "minted",
@@ -4474,7 +4888,35 @@
       "circumscription-elevation"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 341
+    }
+  },
+  {
+    "id": "mag:pius-xii/technicarum-artium-1957",
+    "title": "Technicarum artium. Sanctus Benedictus Abbas omnium Machinariorum et Architectorum Italicorum Patronus caelestis deligitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-11-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Technicarum artium",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 443
+    }
   },
   {
     "id": "mag:pius-xii/esmeraldensis-1957",
@@ -4500,7 +4942,13 @@
       "circumscription-elevation"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 349
+    }
   },
   {
     "id": "mag:pius-xii/s-pauli-de-minnesota-novae-ulmae-1957",
@@ -4522,7 +4970,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 351
+    }
   },
   {
     "id": "mag:pius-xii/arequipensis-ayacuquensis-caraveliens-1957",
@@ -4548,7 +5002,35 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 297
+    }
+  },
+  {
+    "id": "mag:pius-xii/quo-christifidelium-1957",
+    "title": "Quo Christifidelium. Ecclesia collegialis «Nostrae Dominae de Ocotlan » apud Tlaxcallensem civitatem, intra Angelorum archidioecesis fines in Mexico, titulo Basilicae Minoris ornatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-11-22",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quo Christifidelium",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 558
+    }
   },
   {
     "id": "mag:pius-xii/luandensis-silvae-portuensis-malaniensis-1957",
@@ -4574,7 +5056,123 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 300
+    }
+  },
+  {
+    "id": "mag:pius-xii/gravissimum-supremi-1957",
+    "title": "Gravissimum supremi. Malacensis Paeninsula ab Internuntiatura Apostolica in India sei ungi tur et Delegationi Apostolicae Thailandesi adicitur ,",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-11-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Gravissimum supremi",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 251
+    }
+  },
+  {
+    "id": "mag:pius-xii/de-lucensi-templo-1957",
+    "title": "De Lucensi Templo. Templum Sancti Frigdiani Ep., in archidioecesi et urbe Lucensi exstans, honoribus Basilicae Minoris insignitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-11-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "De Lucensi Templo",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 471
+    }
+  },
+  {
+    "id": "mag:pius-xii/quae-recens-1957",
+    "title": "Quae recens. Beata Maria V. a Ssmo Rosario et S. Ioseph, eiusdem Deiparae Sponsus, Patroni caelestes aequae principales dioecesis Gualeguaychensis instituuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-11-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quae recens",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 560
+    }
+  },
+  {
+    "id": "mag:pius-xii/volaterrae-urbs-etruriae-1957",
+    "title": "Volaterrae, urbs Etruriae. Basilicae Minoris honoribus ac privilegiis cumulatur Cathedralis Ecclesia Volaterrana, B. Mariae V. in Caelum Assumptae consecrata",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-11-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Volaterrae, urbs Etruriae",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 444
+    }
+  },
+  {
+    "id": "mag:pius-xii/perfugium-rebus-1957",
+    "title": "Perfugium rebus. Beata Maria Virgo, nomine « Auxilium Christianorum » invocata, Patrona principalis et S. Leo PP. I Patronus minus principalis eliguntur abbatiae « nullius » Beatae Mariae Auxiliatricis de Belmont 621 1957 Dec. 25 ^Egregio ducti. - Novus gradus, seu torques aureus, in Ordine Piano instituitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-12-05",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Perfugium rebus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 29
+    }
   },
   {
     "id": "mag:pius-xii/letter-1957-12-08",
@@ -4592,7 +5190,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 66
+    }
   },
   {
     "id": "mag:pius-xii/letter-1957-12-12",
@@ -4610,7 +5214,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 30
+    }
   },
   {
     "id": "mag:pius-xii/urawaensis-1957",
@@ -4636,7 +5246,13 @@
       "circumscription-elevation"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 505
+    }
   },
   {
     "id": "mag:pius-xii/rivibambensis-guarandensis-1957",
@@ -4662,7 +5278,79 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 553
+    }
+  },
+  {
+    "id": "mag:pius-xii/insubris-urbs-1957",
+    "title": "Insubris urbs. Templum paroeciale Deo in honorem B. Mariae V. Lapurdensis dicatum, in urbe Mediolanensi exstans, privilegiis Basilicae Minoris honestatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-12-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Insubris urbs",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 473
+    }
+  },
+  {
+    "id": "mag:pius-xii/recens-conditas-1957",
+    "title": "Recens conditas. Sanctus Petrus Apostolus praecipuus Caelestis Patronus dioecesis Mariliensis declaratur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-12-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Recens conditas",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 668
+    }
+  },
+  {
+    "id": "mag:pius-xii/velut-amica-1958",
+    "title": "Velut amica. Beata Maria Virgo a Ssmo Rosario praecipua Caelestis Patrona una cum S. Barbara, Virgine et Martyre, totius archidioecesis Manizalensis, proclamatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-01-09",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Velut amica",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 669
+    }
   },
   {
     "id": "mag:pius-xii/palmensis-lagensis-palmensis-et-xapecoensis-1958",
@@ -4688,7 +5376,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 507
+    }
   },
   {
     "id": "mag:pius-xii/s-iosephi-de-grajau-carolinensis-in-brasilia-1958",
@@ -4710,7 +5404,79 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 615
+    }
+  },
+  {
+    "id": "mag:pius-xii/fabrilia-tractare-1958",
+    "title": "Fabrilia tractare. Sanctus Ioannes Bosco, Conf., omnium italicorum iuvenum tironum opificum, vulgo « Giovani Lavoratori Apprendisti Italiani », Patronus Caelestis renuntiatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-01-17",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Fabrilia tractare",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 474
+    }
+  },
+  {
+    "id": "mag:pius-xii/quasi-civitas-1958",
+    "title": "Quasi civitas. Basilicae Minoris honoribus decoratur curiale Templum SS. Petri Apost, et Alexandri PP. I Asciburgi, dioecesis Herbipolensis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-01-17",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quasi civitas",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 670
+    }
+  },
+  {
+    "id": "mag:pius-xii/pervetere-in-urbe-1958",
+    "title": "Pervetere in urbe. Ecclesia Cathedralis Melphiensis, B. Mariae V. in Caelum Assumptae consecrata, Basilicae Minoris titulo honoribusque augetur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-01-31",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Pervetere in urbe",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 476
+    }
   },
   {
     "id": "mag:pius-xii/civitatis-victoriae-matamorensis-1958",
@@ -4732,7 +5498,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 713
+    }
   },
   {
     "id": "mag:pius-xii/spiritus-sancti-victoriensis-spiritus-sancti-1958",
@@ -4772,7 +5544,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 253
+    }
   },
   {
     "id": "mag:pius-xii/niangaraensis-dorumaensis-1958",
@@ -4798,7 +5576,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 619
+    }
   },
   {
     "id": "mag:pius-xii/tangaensis-1958",
@@ -4824,7 +5608,13 @@
       "circumscription-elevation"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 926
+    }
   },
   {
     "id": "mag:pius-xii/thakhekensis-1958",
@@ -4850,7 +5640,13 @@
       "circumscription-elevation"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 617
+    }
   },
   {
     "id": "mag:pius-xii/letter-1958-02-28",
@@ -4868,7 +5664,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 255
+    }
   },
   {
     "id": "mag:pius-xii/letter-1958-03-04-1",
@@ -4925,6 +5727,28 @@
     "sourceGenreLabel": "letters"
   },
   {
+    "id": "mag:pius-xii/haud-aliter-1958",
+    "title": "Haud aliter. Beata Maria V., vulgo « De la Encina » appellata, praecipua Patrona Caelestis renuntiatur oppidi « Ponferrada » et totius regionis « EI Bierzo », in Asturicensi dioecesi",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-03-05",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Haud aliter",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 673
+    }
+  },
+  {
     "id": "mag:pius-xii/letter-1958-03-10",
     "title": "Lettera al Cardinale John Alexander Floersh, Arcivescovo di Louisville, per il 150° anniversario di fondazione di questa Arcidiocesi",
     "idStatus": "provisional",
@@ -4940,7 +5764,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 257
+    }
   },
   {
     "id": "mag:pius-xii/letter-1958-03-12-1",
@@ -4979,6 +5809,50 @@
     "sourceGenreLabel": "letters"
   },
   {
+    "id": "mag:pius-xii/quam-pulchra-1958",
+    "title": "Quam pulchra. Titulo ac dignitate Basilicae Minoris decoratur Ecclesia cathedralis urbis ac dioecesis Pontiscurvi",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-03-15",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quam pulchra",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 933
+    }
+  },
+  {
+    "id": "mag:pius-xii/sublimibus-alta-columnis-1958",
+    "title": "« Sublimibus alta columnis ». Basilicae Minoris honoribus decoratur templum cathedrale Tudertinum",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-03-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Sublimibus alta columnis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 934
+    }
+  },
+  {
     "id": "mag:pius-xii/chilapensis-acapulcanae-1958",
     "title": "Chilapensis (Acapulcanae)",
     "idStatus": "minted",
@@ -5002,7 +5876,35 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 716
+    }
+  },
+  {
+    "id": "mag:pius-xii/marianae-pietatis-1958",
+    "title": "Marianae pietatis. Beata Maria V. sub titulo « Auxilium Christianorum » in insula S. Georgii, Venetiarum Patriarchatus, venerata, eiusdem insulae Patrona Caelestis proclamatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-03-18",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Marianae pietatis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 719
+    }
   },
   {
     "id": "mag:pius-xii/leonensis-1958",
@@ -5024,7 +5926,57 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 928
+    }
+  },
+  {
+    "id": "mag:pius-xii/quanto-arctiores-1958",
+    "title": "Quanto arctiores. Ad titulum et dignitatem Basilicae Minoris evehitur ecclesia cathedralis Beatae Mariae in Caelum Assumptae dicata, in urbe ac dioecesi Troiana exstans",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-03-28",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quanto arctiores",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 936
+    }
+  },
+  {
+    "id": "mag:pius-xii/le-congres-1958",
+    "title": "Le Congrès. Ad Excmum P. D. Henricum Alexandrum Chappoulie, Episcopum Andegavensem, ob indictum LXIX Conventum Pastoralem Galliae, sub titulo «L'Union des Œuvres Catholiques de France »",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-04-01",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Le Congrès",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 310
+    }
   },
   {
     "id": "mag:pius-xii/letter-1958-04-03",
@@ -5042,7 +5994,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 312
+    }
   },
   {
     "id": "mag:pius-xii/urbi-et-orbi-easter-1958",
@@ -5065,7 +6023,13 @@
       "year": 1958
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 261
+    }
   },
   {
     "id": "mag:pius-xii/letter-1958-04-10",
@@ -5083,7 +6047,123 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 260
+    }
+  },
+  {
+    "id": "mag:pius-xii/lucensem-urbem-1958",
+    "title": "Lucensem urbem. Ecclesia paroecialis Sancti Paulini, Ep. et M., in loco « Viareggio » Lucensis archidioecesis, titulo Basilicae Minoris condecoratur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-04-18",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Lucensem urbem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 720
+    }
+  },
+  {
+    "id": "mag:pius-xii/sedes-religionis-marialis-1958",
+    "title": "Sedes religionis Marialis. Ad dignitatem et honorem Basilicae Minoris evehitur Ecclesia Sanctae Mariae a Cruce dioecesis Cremensis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-04-18",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Sedes religionis Marialis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 937
+    }
+  },
+  {
+    "id": "mag:pius-xii/omnigenae-sanctimoniae-1958",
+    "title": "Omnigenae sanctimoniae. Venerabilis Dei famula Teresia a Iesu N Jornet Ibars , Virgo, Congregationis Parvarum Sororum senum derelictorum Fundatrix et Antistita Generalis, Beata renuntiatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-04-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Omnigenae sanctimoniae",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 306
+    }
+  },
+  {
+    "id": "mag:pius-xii/dum-studiosius-1958",
+    "title": "Dum studiosius. Templum Sancti Pii Pp. X, Lapurdi exstans, ad dignitatem et honorem Basilicae Minoris evehitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-05-07",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Dum studiosius",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 938
+    }
+  },
+  {
+    "id": "mag:pius-xii/plurimas-inter-1958",
+    "title": "Plurimas inter. Basilicae Minoris titulo ac dignitate decoratur Ecclesia Paroecialis Beatae Mariae Virgini a Conceptione et S. Iphigeniae sacra in urbe atque archidioecesi S. Pauli in Brasilia exstans",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-05-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Plurimas inter",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 930
+    }
   },
   {
     "id": "mag:pius-xii/huanucensis-huancayensis-tarmensis-1958",
@@ -5109,7 +6189,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 842
+    }
   },
   {
     "id": "mag:pius-xii/huanucensis-huarazensis-huariensis-1958",
@@ -5135,7 +6221,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 844
+    }
   },
   {
     "id": "mag:pius-xii/letter-1958-05-15",
@@ -5153,7 +6245,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 445
+    }
   },
   {
     "id": "mag:pius-xii/ad-uberrima-vitae-1958",
@@ -5175,7 +6273,35 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 460
+    }
+  },
+  {
+    "id": "mag:pius-xii/sanguine-matris-1958",
+    "title": "Sanguine Matris. Templum B. Mariae V. sacrum in pago vulgo «Re», dioecesis Novariensis, exstans titulo Basilicae Minoris condecoratur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-06-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Sanguine Matris",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 1023
+    }
   },
   {
     "id": "mag:pius-xii/letter-1958-06-24",
@@ -5193,7 +6319,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 477
+    }
   },
   {
     "id": "mag:pius-xii/ad-apostolorum-principis-1958",
@@ -5215,7 +6347,57 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ad Apostolorum Principis",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 601
+    }
+  },
+  {
+    "id": "mag:pius-xii/vita-pastoricia-1958",
+    "title": "Vita Pastoricia. Beata Maria Virgo a Lapurdo in Caelestem Patronam Piae Unionis Pastorum Italicorum eligitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-07-11",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Vita Pastoricia",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 848
+    }
+  },
+  {
+    "id": "mag:pius-xii/sicut-quercus-1958",
+    "title": "Sicut quercus. Ecclesia paroecialis Beatae Mariae Virginis « de la Encina » in oppido vulgo « Ponferrada », Asturicensis dioecesis, privilegiis Basilicae Minoris honestatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-07-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+      "shelf": "aas/1958",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Sicut quercus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 1024
+    }
   },
   {
     "id": "mag:pius-xii/meminisse-iuvat-1958",
@@ -5237,7 +6419,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Meminisse Iuvat",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 449
+    }
   },
   {
     "id": "mag:pius-xii/letter-1958-07-24",
@@ -5255,7 +6443,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 561
+    }
   },
   {
     "id": "mag:pius-xii/letter-1958-08-02",
@@ -5273,7 +6467,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 722
+    }
   },
   {
     "id": "mag:pius-xii/clarius-explendescit-1958",
@@ -5328,7 +6528,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 725
+    }
   },
   {
     "id": "mag:pius-xii/letter-1958-09-29",
@@ -5346,6 +6552,12 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 941
+    }
   }
 ]

@@ -3960,6 +3960,27 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:pius-x/apostolic-letter-1909-05-20",
+    "title": "Beatus Clemens Maria Hofbauer, sacerdos professus congregationis SS. Redemptoris, in sanctorum caelitum album refertur",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-05-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
+      "shelf": "aas/1909",
+      "retrieved": "2026-09-13"
+    },
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 1,
+      "year": 1909,
+      "page": 637
+    }
+  },
+  {
     "id": "mag:pius-x/ineffabili-dei-1909",
     "title": "Ineffabili Dei",
     "idStatus": "minted",
@@ -3977,6 +3998,27 @@
     },
     "incipit": "Ineffabili Dei",
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-x/apostolic-letter-1909-06-25",
+    "title": "Ecclesia sanctae Iustinae virginis et martyris in civitate Patavina evehitur ad dignitatem basilicae minoris",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-06-25",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
+      "shelf": "aas/1909",
+      "retrieved": "2026-09-13"
+    },
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 1,
+      "year": 1909,
+      "page": 573
+    }
   },
   {
     "id": "mag:pius-x/e-lapurdensi-basilica-1909",
