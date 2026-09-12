@@ -10,10 +10,15 @@
  * docs/superpowers/reports/. The beliefs it prints per unmatched entry are heuristics
  * named as such; the report's prose is where a human's reading goes.
  *
+ * The join and the creator run over every source of ACTA_SOURCES, as the harvest does
+ * (a document two sources' entries claim is a conflict either way); this report shows
+ * the ten sources of 2015-2024, and tools/acta-volumes-report.ts the sample volumes of
+ * phase 2b.
+ *
  * Usage: npx tsx tools/acta-report.ts > docs/superpowers/reports/2026-09-12-acta-join-2015-2024.md
  */
 import { readFileSync, readdirSync } from 'node:fs';
-import { loadActaIndexes } from './src/acta/join.js';
+import { ACTA_YEARS, loadActaIndexes } from './src/acta/join.js';
 import { matchActa, type ActaUnmatched, type ActaCandidate } from './src/acta/match.js';
 import { createFromActa, isActaShelf, NOT_CREATED, type ActaHoldRow, type HoldReason } from './src/acta/create.js';
 import { ACTA_CATEGORIES, categoryForHeading, type ActaCategory } from './src/acta/categories.js';
@@ -30,13 +35,31 @@ const allDocs = readdirSync('data/documents').filter((f) => f.endsWith('.json'))
 /** The shelf records: what the join and the creator see. */
 const docs = allDocs.filter((d) => !isActaShelf(d.source?.shelf));
 /** The records the harvest created from the index, as the data carries them. */
-const bornInData = allDocs.filter((d) => isActaShelf(d.source?.shelf));
+const bornInDataAll = allDocs.filter((d) => isActaShelf(d.source?.shelf));
 const francis = docs.filter((d) => d.issuerId === 'rp:francis-i');
-const { parsed, missing } = loadActaIndexes();
-const years = [...parsed.keys()];
-const entries = years.flatMap((y) => parsed.get(y)!.entries);
-const result = matchActa(entries, docs);
-const creation = createFromActa(result, docs);
+const { parsed: parsedAll, missing: missingAll } = loadActaIndexes();
+const allEntries = [...parsedAll.values()].flatMap((p) => p.entries);
+const resultAll = matchActa(allEntries, docs);
+const creationAll = createFromActa(resultAll, docs);
+// This report's scope: the ten index PDFs of 2015-2024.
+const years = ACTA_YEARS.map(String).filter((y) => parsedAll.has(y));
+const parsed = new Map(years.map((y) => [y, parsedAll.get(y)!]));
+const missing = missingAll.filter((k) => ACTA_YEARS.map(String).includes(k));
+const inScope = (e: ActaEntry): boolean => e.part === undefined && years.includes(String(e.year));
+const entries = allEntries.filter(inScope);
+const result = {
+  matches: resultAll.matches.filter((m) => inScope(m.entry)),
+  ambiguous: resultAll.ambiguous.filter((a) => inScope(a.entry)),
+  unmatched: resultAll.unmatched.filter((u) => inScope(u.entry)),
+  skipped: resultAll.skipped.filter(inScope),
+  unknownPope: resultAll.unknownPope.filter(inScope),
+  conflicts: resultAll.conflicts.filter((c) => c.entries.some(inScope)),
+};
+const creation = {
+  created: creationAll.created.filter((c) => inScope(c.entry)),
+  held: creationAll.held.filter((h) => inScope(h.entry)),
+};
+const bornInData = bornInDataAll.filter((d) => inScope({ year: d.acta!.year, part: d.acta!.part } as ActaEntry));
 
 const cat = (e: ActaEntry): ActaCategory | null => categoryForHeading(e.category);
 const catId = (e: ActaEntry) => cat(e)?.id ?? e.category;
@@ -89,6 +112,7 @@ function belief(u: ActaUnmatched): string {
   const curated = READINGS[`${e.year}:${e.page}`];
   if (curated !== undefined) return curated;
   if (e.date < '2013-03-13') return 'act of a previous pontificate printed in this volume; no Francis document can match';
+  if (e.date.length === 7) return `**month-only date**: the index prints no day; ${u.sameDate.length ? `the shelf has ${u.sameDate.length} of the class in the month, none with this incipit` : 'nothing of the class in the month is harvested'}`;
   // A same-date document of the genre is the act filed under another class only if it
   // could be the same act: one that prints a different incipit is a different act.
   const sameGenre = u.sameDate.filter((d) => c.classes.some((k) => k.genre === d.genre)
@@ -190,15 +214,15 @@ const totals = { parsed: 0, attempted: 0, matched: 0, ambiguous: 0, conflicts: 0
 for (const y of years) {
   const es = parsed.get(y)!.entries;
   const attempted = es.filter((e) => harvestedness(e) === 'yes' || harvestedness(e) === 'partly');
-  const matched = result.matches.filter((m) => m.entry.year === y).length;
-  const ambiguous = result.ambiguous.filter((a) => a.entry.year === y).length;
-  const conflicts = result.conflicts.filter((c) => c.entries.some((e) => e.year === y)).length;
-  const unY = result.unmatched.filter((u) => u.entry.year === y && harvestedness(u.entry) === 'yes').length;
-  const unP = result.unmatched.filter((u) => u.entry.year === y && harvestedness(u.entry) === 'partly').length;
-  const created = creation.created.filter((c) => c.entry.year === y).length;
-  const held = creation.held.filter((h) => h.entry.year === y).length;
+  const matched = result.matches.filter((m) => String(m.entry.year) === y).length;
+  const ambiguous = result.ambiguous.filter((a) => String(a.entry.year) === y).length;
+  const conflicts = result.conflicts.filter((c) => c.entries.some((e) => String(e.year) === y)).length;
+  const unY = result.unmatched.filter((u) => String(u.entry.year) === y && harvestedness(u.entry) === 'yes').length;
+  const unP = result.unmatched.filter((u) => String(u.entry.year) === y && harvestedness(u.entry) === 'partly').length;
+  const created = creation.created.filter((c) => String(c.entry.year) === y).length;
+  const held = creation.held.filter((h) => String(h.entry.year) === y).length;
   const non = es.length - attempted.length;
-  const without = francis.filter((d) => d.date.startsWith(String(y)) && !d.acta).length;
+  const without = francis.filter((d) => d.date.startsWith(y) && !d.acta).length;
   p(`| ${y} | ${es.length} | ${attempted.length} | ${matched} | ${ambiguous} | ${conflicts} | ${unY} | ${unP} | ${created} | ${held} | ${non} | ${without} |`);
   totals.parsed += es.length; totals.attempted += attempted.length; totals.matched += matched; totals.ambiguous += ambiguous;
   totals.conflicts += conflicts; totals.unY += unY; totals.unP += unP; totals.created += created; totals.held += held;
@@ -213,7 +237,7 @@ p('*Matched*, to *In harvested categories* (a document claimed twice holds both 
 p('entry* counts the harvested shelf documents dated in the volume year that carry no `acta` (§11); the December ones belong to the next');
 p('volume, and 2024\'s December acts to the 2025 index, which does not exist yet.');
 p();
-const byHow = { unique: 0, incipit: 0, toponym: 0, curated: 0 };
+const byHow = { unique: 0, incipit: 0, toponym: 0, curated: 0, 'incipit-month': 0 };
 for (const m of result.matches) byHow[m.by]++;
 const decretals = result.unmatched.filter((u) => catId(u.entry) === 'Litterae Decretales').length;
 const nuntiiTotal = entries.filter((e) => catId(e).startsWith('Nuntii')).length;
@@ -297,9 +321,9 @@ for (const c of ACTA_CATEGORIES) {
     const es = parsed.get(y)!.entries.filter((e) => cat(e)?.id === c.id);
     if (es.length === 0) return '';
     if (c.harvested === 'no') return `${es.length}`;
-    const m = result.matches.filter((x) => x.entry.year === y && cat(x.entry)?.id === c.id).length;
-    const a = result.ambiguous.filter((x) => x.entry.year === y && cat(x.entry)?.id === c.id).length;
-    const u = result.unmatched.filter((x) => x.entry.year === y && cat(x.entry)?.id === c.id).length;
+    const m = result.matches.filter((x) => String(x.entry.year) === y && cat(x.entry)?.id === c.id).length;
+    const a = result.ambiguous.filter((x) => String(x.entry.year) === y && cat(x.entry)?.id === c.id).length;
+    const u = result.unmatched.filter((x) => String(x.entry.year) === y && cat(x.entry)?.id === c.id).length;
     return `${es.length} / ${m} / ${a} / ${u}`;
   });
   if (cellsFor.every((x) => x === '')) continue;
@@ -457,10 +481,10 @@ p();
   p(`| Category | ${years.join(' | ')} | Total |`);
   p(`|---|${years.map(() => '---').join('|')}|---|`);
   for (const c of ACTA_CATEGORIES.filter((c) => cats.includes(c.id))) {
-    const ns = years.map((y) => creation.created.filter((x) => x.entry.year === y && catId(x.entry) === c.id).length);
+    const ns = years.map((y) => creation.created.filter((x) => String(x.entry.year) === y && catId(x.entry) === c.id).length);
     p(`| ${c.id} | ${ns.join(' | ')} | ${ns.reduce((a, b) => a + b, 0)} |`);
   }
-  const ns = years.map((y) => creation.created.filter((x) => x.entry.year === y).length);
+  const ns = years.map((y) => creation.created.filter((x) => String(x.entry.year) === y).length);
   p(`| **Total** | ${ns.map((n) => `**${n}**`).join(' | ')} | **${ns.reduce((a, b) => a + b, 0)}** |`);
 }
 p();
@@ -526,7 +550,7 @@ p();
 p('### Every created record, with the index line it rests on');
 p();
 for (const y of years) {
-  const cs = creation.created.filter((c) => c.entry.year === y);
+  const cs = creation.created.filter((c) => String(c.entry.year) === y);
   if (cs.length === 0) continue;
   p(`<details><summary><b>${y}</b> — ${cs.length} created</summary>`);
   p();
@@ -566,6 +590,7 @@ const HOLD_LABELS: Record<HoldReason, string> = {
   'near-miss': 'Guard: near-miss',
   'same-incipit-elsewhere': 'Guard: same incipit elsewhere',
   'id-collision': 'Id collision',
+  'ocr-damaged': 'OCR-damaged incipit or toponym',
 };
 {
   const byReason = new Map<HoldReason, ActaHoldRow[]>();
@@ -672,7 +697,7 @@ p('The join can be audited line by line: the entry\'s text exactly as extracted,
 p('*By* says what decided it — the only candidate of the class on the date (`unique`), the incipit slug, or the toponym.');
 p();
 for (const y of years) {
-  const ms = result.matches.filter((m) => m.entry.year === y);
+  const ms = result.matches.filter((m) => String(m.entry.year) === y);
   p(`<details><summary><b>${y}</b> — ${ms.length} matched</summary>`);
   p();
   p('| Reference | Category | Document | By | Index line |');
