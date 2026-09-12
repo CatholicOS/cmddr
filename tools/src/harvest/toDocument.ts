@@ -73,7 +73,17 @@ export function toDocument(item: HarvestItem, retrieved: string): DocumentRecord
   const promulgatedBy = reassigned?.promulgatedBy ?? council?.promulgatedBy;
   if (promulgatedBy) record.promulgatedBy = promulgatedBy;
   if (item.aliases?.length) record.aliases = [...item.aliases];
-  if (mapping.characteristics) record.characteristics = [...mapping.characteristics];
+  // Characteristics come from the mapping of the *kept* record's label, and a merge keeps the
+  // more specific shelf (merge.ts): a document filed on both apost_letters and motu_proprio
+  // keeps apost_letters and records the other filing only in alsoShelvedAs. The motu proprio
+  // fact would otherwise survive nowhere else -- Socialium Scientiarum (John Paul II, 1994)
+  // is the issue #10 example, and 66 apostolic letters across four pontificates (55 Francis,
+  // 6 Leo XIV, 4 Paul VI, 1 John Paul II) were in that position when the characteristic was
+  // introduced -- so the second shelf contributes its characteristic here. Sorted and
+  // deduplicated so the harvest stays reproducible whichever shelf won the merge.
+  const characteristics = new Set(mapping.characteristics ?? []);
+  if (item.alsoShelvedAs?.includes('motu_proprio')) characteristics.add('motu-proprio');
+  if (characteristics.size) record.characteristics = [...characteristics].sort();
   if (mapping.descriptiveTitle) record.descriptiveTitle = mapping.descriptiveTitle;
   // Never authority-bearing (invariant 21 is the only rule that reads it): read purely
   // from the heading text or the hand-curated table, never from genre/characteristics.

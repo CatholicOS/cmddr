@@ -44,6 +44,48 @@ describe('toDocument', () => {
     expect(d.characteristics).toEqual(['apostolic-constitution']);
   });
 
+  it('maps the motu_proprio shelf to apostolic-letter with the motu-proprio characteristic (#10)', () => {
+    const d = toDocument(item({
+      title: 'Summorum Pontificum', incipit: 'Summorum Pontificum', date: '2007-07-07',
+      sourceGenreLabel: 'motu_proprio', shelf: 'motu_proprio', pageSlug: 'benedict-xvi',
+    }), '2026-09-11');
+    expect(d.genre).toBe('apostolic-letter');
+    expect(d.characteristics).toEqual(['motu-proprio']);
+    expect(d.sourceGenreLabel).toBe('motu_proprio');
+    expect(d.id).toBe('mag:benedict-xvi/summorum-pontificum-2007');
+  });
+
+  it('adds the motu-proprio characteristic when the second shelf was motu_proprio (#10)', () => {
+    // Socialium Scientiarum is filed on both apost_letters and motu_proprio; the merge keeps
+    // apost_letters (SHELF_SPECIFICITY) and records the other filing only in alsoShelvedAs,
+    // so the characteristic must be read from there or the motu proprio fact is lost.
+    const d = toDocument(item({
+      title: 'Socialium Scientiarum', incipit: 'Socialium Scientiarum', date: '1994-01-01',
+      sourceGenreLabel: 'apost_letters', shelf: 'apost_letters', alsoShelvedAs: ['motu_proprio'],
+      pageSlug: 'john-paul-ii',
+    }), '2026-09-11');
+    expect(d.genre).toBe('apostolic-letter');
+    expect(d.characteristics).toEqual(['motu-proprio']);
+    expect(d.source!.alsoShelvedAs).toEqual(['motu_proprio']);
+  });
+
+  it('does not add the characteristic for any other second shelf, and never duplicates it', () => {
+    const plain = toDocument(item({
+      title: 'Socialium Scientiarum', incipit: 'Socialium Scientiarum', date: '1994-01-01',
+      sourceGenreLabel: 'apost_letters', shelf: 'apost_letters', alsoShelvedAs: ['letters'],
+      pageSlug: 'john-paul-ii',
+    }), '2026-09-11');
+    expect(plain.characteristics).toBeUndefined();
+    // The kept record is itself from motu_proprio and the dropped one was too (a pass-3
+    // duplicate on one shelf): the characteristic appears once.
+    const twice = toDocument(item({
+      title: 'Summorum Pontificum', incipit: 'Summorum Pontificum', date: '2007-07-07',
+      sourceGenreLabel: 'motu_proprio', shelf: 'motu_proprio', alsoShelvedAs: ['motu_proprio'],
+      pageSlug: 'benedict-xvi',
+    }), '2026-09-11');
+    expect(twice.characteristics).toEqual(['motu-proprio']);
+  });
+
   it('keeps an unmapped genre null and preserves the raw label', () => {
     const d = toDocument(item({
       title: 'La Serie', incipit: 'La Serie', date: '1849-02-14', sourceGenreLabel: 'Protesta',
@@ -172,6 +214,14 @@ describe('toDocument on a heading with no recoverable incipit', () => {
   it('falls back to the source label when the genre is unmapped', () => {
     const d = toDocument({ ...heading, sourceGenreLabel: 'Proclama' }, '2026-09-07');
     expect(d.id).toBe('mag:pius-x/proclama-1958-02-14');
+  });
+
+  it('mints a motu_proprio-shelf provisional id under apostolic-letter (#10)', () => {
+    // The provisional id follows the genre, so demoting motu proprio to a characteristic
+    // re-mints these ids; provisional ids are re-mintable by design (spec §3.5).
+    const d = toDocument({ ...heading, sourceGenreLabel: 'motu_proprio', shelf: 'motu_proprio' }, '2026-09-07');
+    expect(d.id).toBe('mag:pius-x/apostolic-letter-1958-02-14');
+    expect(d.characteristics).toEqual(['motu-proprio']);
   });
 });
 

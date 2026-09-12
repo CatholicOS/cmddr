@@ -9,7 +9,7 @@ registry of              individual                 discerned authority of a
 document TYPES           documents                  passage within a document
 ```
 
-- **Genre** — a document / speech *type* (Encyclical, Decree, …). Carries the *default register* and the *ceiling*. → [`schema/genre.schema.json`](schema/genre.schema.json)
+- **Genre** — a document / speech *type* (Encyclical, Decree, …). Carries the *default register*, the *ceiling*, the roles that may issue it (`issuerTypes`) and the characteristics its documents may bear (`allowedCharacteristics`). → [`schema/genre.schema.json`](schema/genre.schema.json)
 - **Document** — one concrete document (e.g. *Evangelium Vitae*). References a `genre`. → [`schema/document.schema.json`](schema/document.schema.json)
 - **Assessment** — the authority actually exercised in a single passage, keyed by a `locus`. References a `document`. → [`schema/assessment.schema.json`](schema/assessment.schema.json)
 
@@ -24,7 +24,7 @@ one **Assessment** per notable passage.
 
 **`scope`** — `universal` · `local`. Juridical reach of the act (whom it binds), not its addressee: *Ordinatio Sacerdotalis* is addressed to the bishops and universal in scope, while the *Letter to Artists* is addressed to everyone and binds no one. `document.scope` overrides `genre.defaultScope`; an omitted `scope` is not materialised — it means the genre default applies, and the harvester never writes one because vatican.va gives it no evidence for it. For an `apostolic-letter`, whose genre spans universal teaching and local governance, it is expected to be set per document rather than inherited. A non-juridical scope is **not representable**: the vocabulary allows only `universal` and `local`, so the *Letter to Artists* currently inherits `letter`'s default and reads as `local`. That is a known limitation of the model, not a claim about the document; representing it, recording the addressee, and a possible `regional` value are all deferred to [#4](https://github.com/CatholicOS/cmddr/issues/4).
 
-**`characteristics`** (non-exclusive document metadata a papal bull may bear) — `apostolic-constitution` · `dogmatic-definition`. A document may carry neither, either, or both (e.g. *Munificentissimus Deus* carries both).
+**`characteristics`** (non-exclusive document-level metadata a genre row *allows*) — `apostolic-constitution` · `dogmatic-definition` · `motu-proprio`. The vocabulary is flat; which genre may bear which is declared per genre in `genre.allowedCharacteristics` (`papal-bull` allows the first two, `apostolic-letter` the third; a genre row without the field allows none) and enforced by invariant 22. A document may carry none, one, or several of the characteristics its genre allows (e.g. *Munificentissimus Deus* carries both bull characteristics; *Socialium Scientiarum* carries `motu-proprio`). `motu-proprio` records a mode of issuance — the pope acting on his own initiative — not a genre, and makes no authority claim.
 
 **`descriptiveTitle`** (optional, mutually-exclusive title of a conciliar Constitution) — `dogmatic` · `pastoral`. Descriptive of purpose only, never a claim of authority; omit for a plain constitution (e.g. *Sacrosanctum Concilium*).
 
@@ -129,6 +129,9 @@ These are the rules a linter/CI should enforce so the data can never re-collapse
     group of *n* carries exactly `-1 … -n`, and a group of 1 carries no ordinal.
 21. **Keyword reference.** Every entry of `keywords`, when present, resolves to an id in `data/keywords.json`. This is the only
     invariant that reads `keywords` — the field carries no authority claim, unlike `characteristics`.
+22. **Characteristics allowed by genre.** Every entry of `characteristics`, when `genre` is non-null, is one of that genre's
+    `allowedCharacteristics` in `data/genres.json`; a genre row without the field allows none. The characteristic parallel of
+    invariant 17.
 
 ---
 

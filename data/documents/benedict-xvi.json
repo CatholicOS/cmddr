@@ -50,7 +50,7 @@
     "id": "mag:benedict-xvi/l-antica-e-venerabile-basilica-2005",
     "title": "Motu Proprio «L'antica e venerabile Basilica» per la Basilica di San Paolo fuori le Mura e per il suo Complesso extraterritoriale",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xvi",
     "issuerType": "pope",
     "date": "2005-05-31",
@@ -68,6 +68,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "L'antica e venerabile Basilica",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -115,10 +118,10 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:benedict-xvi/motu-proprio-2005-06-28",
+    "id": "mag:benedict-xvi/apostolic-letter-2005-06-28",
     "title": "Motu Proprio per l’approvazione e la pubblicazione del Compendio del Catechismo della Chiesa Cattolica",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xvi",
     "issuerType": "pope",
     "date": "2005-06-28",
@@ -139,6 +142,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -1569,10 +1575,10 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:benedict-xvi/motu-proprio-2007-06-11",
+    "id": "mag:benedict-xvi/apostolic-letter-2007-06-11",
     "title": "Motu Proprio con cui il Santo Padre Benedetto XVI ripristina la norma tradizionale circa la maggioranza richiesta nell’elezione del Sommo Pontefice",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xvi",
     "issuerType": "pope",
     "date": "2007-06-11",
@@ -1586,6 +1592,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -1664,7 +1673,7 @@
     "id": "mag:benedict-xvi/summorum-pontificum-2007",
     "title": "Motu Proprio Summorum Pontificum sulla \"Liturgia romana anteriore alla riforma del 1970\"",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xvi",
     "issuerType": "pope",
     "date": "2007-07-07",
@@ -1684,6 +1693,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Summorum Pontificum",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -3494,10 +3506,10 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:benedict-xvi/motu-proprio-2010-12-30",
+    "id": "mag:benedict-xvi/apostolic-letter-2010-12-30",
     "title": "Lettera Apostolica in forma di \"Motu Proprio\" per la prevenzione ed il contrasto delle attività illegali in campo finanziario e monetario",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xvi",
     "issuerType": "pope",
     "date": "2010-12-30",
@@ -3512,6 +3524,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -3924,7 +3939,7 @@
     "id": "mag:benedict-xvi/quaerit-semper-2011",
     "title": "Quaerit semper",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xvi",
     "issuerType": "pope",
     "date": "2011-08-30",
@@ -3943,13 +3958,16 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Quaerit semper",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:benedict-xvi/porta-fidei-2011",
     "title": "Lettera Apostolica in forma di \"Motu Proprio\" Porta fidei con la quale si indice l'Anno della fede",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xvi",
     "issuerType": "pope",
     "date": "2011-10-11",
@@ -3970,6 +3988,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Porta fidei",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -4359,7 +4380,7 @@
     "id": "mag:benedict-xvi/pulchritudinis-fidei-2012",
     "title": "Lettera Apostolica in forma di \"Motu Proprio\" Pulchritudinis fidei con la quale la Pontificia Commissione per i Beni Culturali della Chiesa viene unita al Pontificio Consiglio della Cultura",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xvi",
     "issuerType": "pope",
     "date": "2012-07-30",
@@ -4372,6 +4393,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Pulchritudinis fidei",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -4577,7 +4601,7 @@
     "id": "mag:benedict-xvi/latina-lingua-2012",
     "title": "Lettera Apostolica in forma di \"Motu Proprio\" Latina Lingua, con la quale viene istituita la Pontificia Accademia di Latinità",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xvi",
     "issuerType": "pope",
     "date": "2012-11-10",
@@ -4597,6 +4621,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Latina Lingua",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -4621,7 +4648,7 @@
     "id": "mag:benedict-xvi/intima-ecclesiae-natura-2012",
     "title": "Lettera Apostolica in forma di \"Motu Proprio\" Intima Ecclesiae natura sul servizio della carità",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xvi",
     "issuerType": "pope",
     "date": "2012-11-11",
@@ -4641,6 +4668,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Intima Ecclesiae natura",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -4715,7 +4745,7 @@
     "id": "mag:benedict-xvi/fides-per-doctrinam-2013",
     "title": "Lettera Apostolica in forma di \"Motu Proprio\" Fides per doctrinam con la quale si modifica la Costituzione apostolica Pastor bonus e si trasferisce la competenza sulla Catechesi dalla Congregazione per il Clero al Pontificio Consiglio per la Promozione della Nuova Evangelizzazione",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xvi",
     "issuerType": "pope",
     "date": "2013-01-16",
@@ -4733,13 +4763,16 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Fides per doctrinam",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:benedict-xvi/ministrorum-institutio-2013",
     "title": "Lettera Apostolica in forma di \"Motu Proprio\" Ministrorum institutio con la quale è modificata la Costituzione apostolica Pastor bonus e si trasferisce la competenza sui seminari dalla “Congregazione per l’Educazione Cattolica” alla “Congregazione per il Clero”",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xvi",
     "issuerType": "pope",
     "date": "2013-01-16",
@@ -4757,6 +4790,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Ministrorum institutio",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -4850,6 +4886,33 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
+    "id": "mag:benedict-xvi/apostolic-letter-2013-02-22",
+    "title": "Lettera Apostolica data Motu Proprio su alcune modifiche alle norme relative all’elezione del Romano Pontefice",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2013-02-22",
+    "source": {
+      "url": "https://www.vatican.va/content/benedict-xvi/it/motu_proprio/documents/hf_ben-xvi_motu-proprio_20130222_normas-nonnullas.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "LA",
+        "PT"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "motu-proprio"
+    ],
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
     "id": "mag:benedict-xvi/gambomensis-2013",
     "title": "Gambomensis",
     "idStatus": "minted",
@@ -4873,29 +4936,5 @@
       "circumscription-erection"
     ],
     "sourceGenreLabel": "apost_constitutions"
-  },
-  {
-    "id": "mag:benedict-xvi/motu-proprio-2013-02-22",
-    "title": "Lettera Apostolica data Motu Proprio su alcune modifiche alle norme relative all’elezione del Romano Pontefice",
-    "idStatus": "provisional",
-    "genre": "motu-proprio",
-    "issuerId": "rp:benedict-xvi",
-    "issuerType": "pope",
-    "date": "2013-02-22",
-    "source": {
-      "url": "https://www.vatican.va/content/benedict-xvi/it/motu_proprio/documents/hf_ben-xvi_motu-proprio_20130222_normas-nonnullas.html",
-      "shelf": "motu_proprio",
-      "languages": [
-        "DE",
-        "EN",
-        "ES",
-        "FR",
-        "IT",
-        "LA",
-        "PT"
-      ],
-      "retrieved": "2026-09-07"
-    },
-    "sourceGenreLabel": "motu_proprio"
   }
 ]

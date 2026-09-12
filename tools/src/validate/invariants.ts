@@ -5,19 +5,23 @@ import type { DocumentRecord } from '../types.js';
 
 export interface Violation { rule: number; id: string; message: string }
 
-/** The genre rows this module needs from `data/genres.json`: id plus its allowed issuerTypes. */
-export interface GenreLike { id: string; issuerTypes?: string[] }
+/**
+ * The genre rows this module needs from `data/genres.json`: id plus its allowed issuerTypes
+ * and allowed characteristics.
+ */
+export interface GenreLike { id: string; issuerTypes?: string[]; allowedCharacteristics?: string[] }
 
 /** The keyword rows this module needs from `data/keywords.json`. */
 export interface KeywordLike { id: string }
 
-/** Invariants 8-13, 15-21 of the design spec. (14 lives in the assessment checker.) */
+/** Invariants 8-13, 15-22 of the design spec. (14 lives in the assessment checker.) */
 export function checkDocuments(
   docs: DocumentRecord[], genres: GenreLike[], keywords: KeywordLike[] = [],
 ): Violation[] {
   const genreIds = new Set(genres.map((g) => g.id));
   const keywordIds = new Set(keywords.map((k) => k.id));
   const issuerTypesByGenre = new Map(genres.map((g) => [g.id, g.issuerTypes]));
+  const characteristicsByGenre = new Map(genres.map((g) => [g.id, g.allowedCharacteristics]));
   const out: Violation[] = [];
   const seen = new Map<string, number>();
   const byCollision = new Map<string, DocumentRecord[]>();
@@ -119,6 +123,23 @@ export function checkDocuments(
           rule: 17, id: d.id,
           message: `issuerType '${d.issuerType}' not among ${d.genre}'s issuerTypes (${allowed.join(', ')})`,
         });
+      }
+    }
+
+    // The characteristic parallel of rule 17: a genre row lists what its documents may bear,
+    // and a row with no allowedCharacteristics at all allows none. Only checked when the
+    // genre resolves -- an unknown genre is already reported by rule 15, and a null genre
+    // has no row to consult.
+    if (d.genre !== null && genreIds.has(d.genre)) {
+      const allowedCharacteristics = characteristicsByGenre.get(d.genre) ?? [];
+      for (const c of d.characteristics ?? []) {
+        if (!allowedCharacteristics.includes(c)) {
+          out.push({
+            rule: 22, id: d.id,
+            message: `characteristic '${c}' not among ${d.genre}'s allowedCharacteristics `
+              + `(${allowedCharacteristics.length ? allowedCharacteristics.join(', ') : 'none'})`,
+          });
+        }
       }
     }
 

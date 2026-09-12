@@ -49,7 +49,7 @@
     "id": "mag:john-xxiii/divini-pastoris-ecclesiasticis-1958",
     "title": "Divini Pastoris Ecclesiasticis",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
     "date": "1958-11-12",
@@ -62,6 +62,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Divini Pastoris Ecclesiasticis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -554,10 +557,10 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:john-xxiii/motu-proprio-1959-02-22",
+    "id": "mag:john-xxiii/apostolic-letter-1959-02-22",
     "title": "Lettera Apostolica «Motu proprio» Boni Pastoris che erige la Pontificia Commissione per la Cinematografia, la Radio e la Televisione come stabile Ufficio della Santa Sede",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
     "date": "1959-02-22",
@@ -575,6 +578,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -1195,7 +1201,7 @@
     "id": "mag:john-xxiii/cum-inde-1959",
     "title": "Cum inde Motu Proprio che conferisce al Pontificio Ateneo Lateranense il titolo di \"Universitas\"",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
     "date": "1959-05-17",
@@ -1208,6 +1214,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Cum inde",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -2199,7 +2208,7 @@
     "id": "mag:john-xxiii/de-pontificio-consilio-ecclesiasticis-italiae-tabularis-curandis-1960",
     "title": "De Pontificio Consilio Ecclesiasticis Italiae Tabularis curandis Motu proprio che stabilisce il riordinamento degli Archivi Ecclesiastici in Italia ed emana il nuovo Statuto",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
     "date": "1960-02-29",
@@ -2212,6 +2221,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "De Pontificio Consilio Ecclesiasticis Italiae Tabularis curandis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -2755,6 +2767,28 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:john-xxiii/apostolic-letter-1960-07-25",
+    "title": "Lettera Apostolica «Motu Proprio» Rubricarum Instructum con la quale si approva il nuovo Codice delle Rubriche del Breviario e del Messale Romano",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-xxiii",
+    "issuerType": "pope",
+    "date": "1960-07-25",
+    "source": {
+      "url": "https://www.vatican.va/content/john-xxiii/es/motu_proprio/documents/hf_j-xxiii_motu-proprio_19600725_rubricarum-instructum.html",
+      "shelf": "motu_proprio",
+      "languages": [
+        "ES",
+        "LA"
+      ],
+      "retrieved": "2026-09-07"
+    },
+    "characteristics": [
+      "motu-proprio"
+    ],
+    "sourceGenreLabel": "motu_proprio"
+  },
+  {
     "id": "mag:john-xxiii/expedit-sane-1960-07-25",
     "title": "Expedit sane, con la quale vengono eletti San Raffaele, Patrono principale, e San Giovanni Maria Vianney, Patrono secondario, della diocesi di Dubuque in Iowa",
     "idStatus": "minted",
@@ -2772,25 +2806,6 @@
     },
     "incipit": "Expedit sane",
     "sourceGenreLabel": "apost_letters"
-  },
-  {
-    "id": "mag:john-xxiii/motu-proprio-1960-07-25",
-    "title": "Lettera Apostolica «Motu Proprio» Rubricarum Instructum con la quale si approva il nuovo Codice delle Rubriche del Breviario e del Messale Romano",
-    "idStatus": "provisional",
-    "genre": "motu-proprio",
-    "issuerId": "rp:john-xxiii",
-    "issuerType": "pope",
-    "date": "1960-07-25",
-    "source": {
-      "url": "https://www.vatican.va/content/john-xxiii/es/motu_proprio/documents/hf_j-xxiii_motu-proprio_19600725_rubricarum-instructum.html",
-      "shelf": "motu_proprio",
-      "languages": [
-        "ES",
-        "LA"
-      ],
-      "retrieved": "2026-09-07"
-    },
-    "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:john-xxiii/qui-servatorem-1960",
@@ -3100,10 +3115,10 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
-    "id": "mag:john-xxiii/motu-proprio-1961-03-10",
+    "id": "mag:john-xxiii/apostolic-letter-1961-03-10",
     "title": "Lettera Apostolica «Motu Proprio» Ad Suburbicarias Dioeceses con la quale è abrogata l'opzione per la scelta delle Sedi vescovili suburbicarie e viene messa la nomina a libera disposizione del Papa",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
     "date": "1961-03-10",
@@ -3115,6 +3130,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -3371,10 +3389,10 @@
     "sourceGenreLabel": "apost_exhortations"
   },
   {
-    "id": "mag:john-xxiii/motu-proprio-1962-02-02",
+    "id": "mag:john-xxiii/apostolic-letter-1962-02-02",
     "title": "Lettera Apostolica «Motu Proprio» Consilium che definisce il giorno di apertura del Concilio Ecumenico Vaticano II",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
     "date": "1962-02-02",
@@ -3389,6 +3407,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -3415,10 +3436,10 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:john-xxiii/motu-proprio-1962-04-11",
+    "id": "mag:john-xxiii/apostolic-letter-1962-04-11",
     "title": "Lettera Apostolica «Motu Proprio» Suburbicariis sedibus, sul nuovo ordinamento delle sedi suburbicarie",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
     "date": "1962-04-11",
@@ -3430,13 +3451,16 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
-    "id": "mag:john-xxiii/motu-proprio-1962-04-15",
+    "id": "mag:john-xxiii/apostolic-letter-1962-04-15",
     "title": "Lettera Apostolica «Motu Proprio» Cum gravissima, sulla dignità episcopale da conferirsi a tutti i cardinali",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
     "date": "1962-04-15",
@@ -3449,6 +3473,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -3496,10 +3523,10 @@
     "sourceGenreLabel": "encyclicals"
   },
   {
-    "id": "mag:john-xxiii/motu-proprio-1962-08-06",
+    "id": "mag:john-xxiii/apostolic-letter-1962-08-06",
     "title": "Lettera Apostolica «Motu Proprio» Appropinquante Concilio, con la quale si approva il Regolamento del Concilio Ecumenico Vaticano II",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
     "date": "1962-08-06",
@@ -3512,13 +3539,16 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
-    "id": "mag:john-xxiii/motu-proprio-1962-09-05",
+    "id": "mag:john-xxiii/apostolic-letter-1962-09-05",
     "title": "Lettera Apostolica «Motu Proprio» Summi Pontificis electio, che contiene le norme riguardanti la Sede Apostolica vacante",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
     "date": "1962-09-05",
@@ -3531,13 +3561,16 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
-    "id": "mag:john-xxiii/motu-proprio-1962-09-11",
+    "id": "mag:john-xxiii/apostolic-letter-1962-09-11",
     "title": "Lettera Apostolica «Motu Proprio» Templorum Decus, per l'istituzione dei Canonici Onorari per le Basiliche Patriarcali",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
     "date": "1962-09-11",
@@ -3549,13 +3582,16 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
-    "id": "mag:john-xxiii/motu-proprio-1962-10-01",
+    "id": "mag:john-xxiii/apostolic-letter-1962-10-01",
     "title": "Lettera Apostolica «Motu Proprio» Fidei propagandae, con la quale il Pontificio Ateneo Urbaniano de Propaganda Fide è decorato del titolo di Università",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
     "date": "1962-10-01",
@@ -3567,13 +3603,16 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:john-xxiii/dominicianus-ordo-1963",
     "title": "Lettera Apostolica in forma di 'Motu Proprio' Dominicianus Ordo con la quale l'Angelicum di Roma viene elevato al rango di Università Pontificia",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:john-xxiii",
     "issuerType": "pope",
     "date": "1963-03-07",
@@ -3586,6 +3625,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Dominicianus Ordo",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {

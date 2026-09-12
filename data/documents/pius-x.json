@@ -63,7 +63,7 @@
     "id": "mag:pius-x/tra-le-sollecitudini-1903",
     "title": "Tra le sollecitudini",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1903-11-22",
@@ -79,6 +79,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Tra le sollecitudini",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -142,7 +145,7 @@
     "id": "mag:pius-x/peculiaria-quaedam-1903",
     "title": "Peculiaria quaedam",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1903-12-14",
@@ -155,6 +158,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Peculiaria quaedam",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -179,7 +185,7 @@
     "id": "mag:pius-x/romanis-pontificibus-1903",
     "title": "Romanis Pontificibus",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1903-12-17",
@@ -192,13 +198,16 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Romanis Pontificibus",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:pius-x/fin-dalla-prima-1903",
     "title": "Fin dalla prima",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1903-12-18",
@@ -211,6 +220,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Fin dalla prima",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -236,7 +248,7 @@
     "id": "mag:pius-x/decessor-noster-1904",
     "title": "Decessor Noster",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1904-01-31",
@@ -249,6 +261,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Decessor Noster",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -395,7 +410,7 @@
     "id": "mag:pius-x/arduum-sane-munus-1904",
     "title": "Arduum sane munus",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1904-03-19",
@@ -408,6 +423,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Arduum sane munus",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -487,10 +505,10 @@
     "sourceGenreLabel": "letters"
   },
   {
-    "id": "mag:pius-x/motu-proprio-1904-04-25",
+    "id": "mag:pius-x/apostolic-letter-1904-04-25",
     "title": "Sull'edizione vaticana dei libri liturgici contenenti le melodie gregoriane",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1904-04-25",
@@ -502,6 +520,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -698,7 +719,7 @@
     "id": "mag:pius-x/seminarium-vaticanum-1904",
     "title": "Seminarium Vaticanum",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1904-05-12",
@@ -711,6 +732,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Seminarium Vaticanum",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -793,7 +817,7 @@
     "id": "mag:pius-x/singularitas-regiminis-1904",
     "title": "Singularitas regiminis",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1904-06-29",
@@ -806,6 +830,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Singularitas regiminis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -1477,7 +1504,7 @@
     "id": "mag:pius-x/inter-multiplices-curas-1905",
     "title": "Inter multiplices curas",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1905-02-21",
@@ -1490,6 +1517,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Inter multiplices curas",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -1689,7 +1719,7 @@
     "id": "mag:pius-x/apostolicae-sedi-1905",
     "title": "Apostolicae Sedi",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1905-05-08",
@@ -1702,6 +1732,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Apostolicae Sedi",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -1727,7 +1760,7 @@
     "id": "mag:pius-x/crux-pectoralis-1905",
     "title": "Crux pectoralis",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1905-05-24",
@@ -1741,6 +1774,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Crux pectoralis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -1920,7 +1956,7 @@
     "id": "mag:pius-x/tutte-le-istituzioni-1905",
     "title": "Tutte le istituzioni",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1905-06-20",
@@ -1933,6 +1969,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Tutte le istituzioni",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -1976,7 +2015,7 @@
     "id": "mag:pius-x/sacrosancta-tridentina-synodus-1905",
     "title": "Sacrosancta Tridentina Synodus",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1905-07-16",
@@ -1989,6 +2028,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Sacrosancta Tridentina Synodus",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -2108,7 +2150,7 @@
     "id": "mag:pius-x/summo-sane-1905",
     "title": "Summo sane",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1905-11-18",
@@ -2121,6 +2163,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Summo sane",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -2322,7 +2367,7 @@
     "id": "mag:pius-x/religiosorum-ordinum-1906",
     "title": "Religiosorum Ordinum",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1906-03-19",
@@ -2335,6 +2380,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Religiosorum Ordinum",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -2475,7 +2523,7 @@
     "id": "mag:pius-x/de-sacris-congregationibus-1906",
     "title": "De Sacris Congregationibus",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1906-05-26",
@@ -2488,6 +2536,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "De Sacris Congregationibus",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -2570,7 +2621,7 @@
     "id": "mag:pius-x/dei-providentis-benignitatem-1906",
     "title": "Dei providentis benignitatem",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1906-07-16",
@@ -2583,6 +2634,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Dei providentis benignitatem",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -2628,7 +2682,7 @@
     "id": "mag:pius-x/propositum-urgentes-1906",
     "title": "Propositum urgentes",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1906-08-05",
@@ -2641,6 +2695,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Propositum urgentes",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -3128,7 +3185,7 @@
     "id": "mag:pius-x/in-domibus-1907",
     "title": "In domibus",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1907-09-17",
@@ -3141,13 +3198,16 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "In domibus",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:pius-x/singulari-curare-1907",
     "title": "Singulari curare",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1907-09-17",
@@ -3160,6 +3220,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Singulari curare",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -3204,7 +3267,7 @@
     "id": "mag:pius-x/praestantia-scripturae-1907",
     "title": "Praestantia Scripturae",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1907-11-18",
@@ -3218,6 +3281,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Praestantia Scripturae",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -4599,7 +4665,7 @@
     "id": "mag:pius-x/cum-per-apostolicas-1910",
     "title": "Cum per apostolicas",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1910-04-07",
@@ -4612,6 +4678,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Cum per apostolicas",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -4637,7 +4706,7 @@
     "id": "mag:pius-x/cum-disciplinae-1910",
     "title": "Cum disciplinae",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1910-04-10",
@@ -4650,6 +4719,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Cum disciplinae",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -4754,7 +4826,7 @@
     "id": "mag:pius-x/in-hac-beatissimi-petri-1910",
     "title": "In hac Beatissimi Petri",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1910-05-03",
@@ -4767,6 +4839,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "In hac Beatissimi Petri",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -5041,7 +5116,7 @@
     "id": "mag:pius-x/ex-quo-1910",
     "title": "Ex quo",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1910-05-26",
@@ -5054,6 +5129,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Ex quo",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -5079,7 +5157,7 @@
     "id": "mag:pius-x/sacris-solemniis-1910",
     "title": "Sacris solemniis",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1910-06-09",
@@ -5092,6 +5170,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Sacris solemniis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -5193,7 +5274,7 @@
     "id": "mag:pius-x/illibatae-custodiendae-1910",
     "title": "Illibatae custodiendae",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1910-06-29",
@@ -5206,6 +5287,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Illibatae custodiendae",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -5288,7 +5372,7 @@
     "id": "mag:pius-x/sacrorum-antistitum-1910",
     "title": "Sacrorum antistitum",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1910-09-01",
@@ -5301,6 +5385,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Sacrorum antistitum",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -5345,7 +5432,7 @@
     "id": "mag:pius-x/ob-singularem-1910",
     "title": "Ob singularem",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1910-09-08",
@@ -5358,13 +5445,16 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Ob singularem",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:pius-x/in-romanae-curiae-1910",
     "title": "In Romanae Curiae",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1910-12-08",
@@ -5377,6 +5467,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "In Romanae Curiae",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -5477,10 +5570,10 @@
     "sourceGenreLabel": "encyclicals"
   },
   {
-    "id": "mag:pius-x/motu-proprio-1911-06-28",
+    "id": "mag:pius-x/apostolic-letter-1911-06-28",
     "title": "Sull'edificazione di un nuovo Santuario nel territorio di Nettuno come assistenza spirituale della popolazione",
     "idStatus": "provisional",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1911-06-28",
@@ -5492,6 +5585,9 @@
       ],
       "retrieved": "2026-09-07"
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -5642,7 +5738,7 @@
     "id": "mag:pius-x/supremum-officium-1912",
     "title": "Supremum officium",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1912-12-17",
@@ -5655,13 +5751,16 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Supremum officium",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:pius-x/litteris-apostolicis-1913",
     "title": "Litteris Apostolicis",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1913-01-25",
@@ -5674,6 +5773,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Litteris Apostolicis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -5721,7 +5823,7 @@
     "id": "mag:pius-x/abhinc-duos-annos-1913",
     "title": "Abhinc duos annos",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1913-10-23",
@@ -5734,6 +5836,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Abhinc duos annos",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -5778,7 +5883,7 @@
     "id": "mag:pius-x/in-litteris-nostris-1913",
     "title": "In litteris Nostris",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1913-12-23",
@@ -5791,13 +5896,16 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "In litteris Nostris",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:pius-x/ubi-primum-1914",
     "title": "Ubi primum",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1914-01-06",
@@ -5810,6 +5918,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Ubi primum",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -5835,7 +5946,7 @@
     "id": "mag:pius-x/quanta-semper-cura-1914",
     "title": "Quanta semper cura",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-x",
     "issuerType": "pope",
     "date": "1914-01-16",
@@ -5848,6 +5959,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Quanta semper cura",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {

@@ -119,6 +119,9 @@
       ]
     },
     "incipit": "Coniuncta cura",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -141,6 +144,9 @@
       ]
     },
     "incipit": "Norme applicabili",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -216,6 +222,9 @@
       ]
     },
     "incipit": "Immota manet",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -239,6 +248,9 @@
         "motu_proprio"
       ]
     },
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -272,7 +284,7 @@
     "id": "mag:leo-xiv/regolamento-del-personale-della-curia-romana-2025",
     "title": "Regolamento del Personale della Curia Romana",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:leo-xiv",
     "issuerType": "pope",
     "date": "2025-11-23",
@@ -285,13 +297,16 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Regolamento del Personale della Curia Romana",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:leo-xiv/regolamento-generale-della-curia-romana-2025",
     "title": "Regolamento Generale della Curia Romana",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:leo-xiv",
     "issuerType": "pope",
     "date": "2025-11-23",
@@ -304,6 +319,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Regolamento Generale della Curia Romana",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -481,6 +499,9 @@
       ]
     },
     "incipit": "Confirma fratres tuos",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   },
   {
@@ -504,6 +525,9 @@
       ]
     },
     "incipit": "Mutua Concordia",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "apost_letters"
   }
 ]

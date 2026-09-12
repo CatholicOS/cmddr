@@ -31,8 +31,12 @@ export const SOURCE_GENRE_TO_GENRE: Record<string, GenreMapping> = {
   'apost_constitutions': { genre: 'papal-bull', characteristics: ['apostolic-constitution'] },
   // Benedict XV's page spells this shelf with a hyphen; same genre either way.
   'apost-constitutions': { genre: 'papal-bull', characteristics: ['apostolic-constitution'] },
-  'motu proprio': { genre: 'motu-proprio' },
-  'motu_proprio': { genre: 'motu-proprio' },
+  // A motu proprio is a mode of issuance, not a genre standing beside the apostolic letter
+  // (#10): vatican.va labels these acts 'Lettera Apostolica in forma di Motu Proprio' and
+  // files Socialium Scientiarum (1994) on both apost_letters and motu_proprio. Modelled the
+  // way apost_constitutions is above -- the base genre plus a characteristic.
+  'motu proprio': { genre: 'apostolic-letter', characteristics: ['motu-proprio'] },
+  'motu_proprio': { genre: 'apostolic-letter', characteristics: ['motu-proprio'] },
   'apost_exhortations': { genre: 'apostolic-exhortation' },
   'esortazione apostolica': { genre: 'apostolic-exhortation' },
   'allocuzione': { genre: 'discourse-address' },

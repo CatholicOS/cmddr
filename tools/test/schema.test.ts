@@ -121,6 +121,15 @@ describe('document.schema.json', () => {
       },
     })).toBe(true);
   });
+
+  it('accepts the three characteristics and rejects any other', () => {
+    // The vocabulary is flat; which genre may bear which is invariant 22, not the schema.
+    for (const c of ['apostolic-constitution', 'dogmatic-definition', 'motu-proprio']) {
+      expect(validate({ ...baseDoc, characteristics: [c] }), c).toBe(true);
+    }
+    expect(validate({ ...baseDoc, characteristics: ['encyclical'] })).toBe(false);
+    expect(validate({ ...baseDoc, characteristics: ['motu-proprio', 'motu-proprio'] })).toBe(false);
+  });
 });
 
 describe('assessment.schema.json', () => {

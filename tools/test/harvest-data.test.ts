@@ -11,7 +11,7 @@ import type { DocumentRecord } from '../src/types.js';
 const load = (n: string) =>
   JSON.parse(readFileSync(`data/documents/${n}.json`, 'utf8')) as DocumentRecord[];
 const genres = JSON.parse(readFileSync('data/genres.json', 'utf8')) as
-  Array<{ id: string; issuerTypes?: string[] }>;
+  Array<{ id: string; issuerTypes?: string[]; allowedCharacteristics?: string[] }>;
 const keywords = JSON.parse(readFileSync('data/keywords.json', 'utf8')) as Array<{ id: string }>;
 
 const all = [...load('benedict-xiv'), ...load('pius-ix'), ...load('leo-xiii'), ...load('vatican-i')];
@@ -1766,6 +1766,38 @@ describe('the whole corpus', () => {
 
   it('satisfies every invariant across every issuer at once', () => {
     expect(checkDocuments(everything, genres, keywords)).toEqual([]);
+  });
+
+  it('files no document under a motu-proprio genre (#10)', () => {
+    // Motu proprio is a characteristic of apostolic-letter, not a genre. Before the
+    // change 210 documents across eleven pontificates carried genre 'motu-proprio'; every
+    // one now sits on apostolic-letter with the characteristic, and the shelf is still
+    // visible in sourceGenreLabel.
+    expect(everything.some((d) => d.genre === 'motu-proprio')).toBe(false);
+    const fromShelf = everything.filter((d) =>
+      ['motu proprio', 'motu_proprio'].includes(d.sourceGenreLabel?.toLowerCase() ?? ''));
+    expect(fromShelf).toHaveLength(210);
+    for (const d of fromShelf) {
+      expect(d.genre, d.id).toBe('apostolic-letter');
+      expect(d.characteristics, d.id).toContain('motu-proprio');
+    }
+  });
+
+  it('carries the motu-proprio characteristic on every document also shelved as motu_proprio (#10)', () => {
+    // The 66 apostolic letters kept from apost_letters over motu_proprio by the merge
+    // (55 Francis, 6 Leo XIV, 4 Paul VI, 1 John Paul II -- Socialium Scientiarum) would
+    // otherwise record the motu proprio fact only in alsoShelvedAs.
+    const twice = everything.filter((d) => d.source?.alsoShelvedAs?.includes('motu_proprio'));
+    expect(twice).toHaveLength(66);
+    for (const d of twice) {
+      expect(d.genre, d.id).toBe('apostolic-letter');
+      expect(d.characteristics, d.id).toContain('motu-proprio');
+    }
+    expect(twice.find((d) => d.incipit === 'Socialium Scientiarum')?.characteristics)
+      .toEqual(['motu-proprio']);
+    // And nothing else bears it: the characteristic is read from the shelves only.
+    const bearers = everything.filter((d) => d.characteristics?.includes('motu-proprio'));
+    expect(bearers).toHaveLength(210 + 66);
   });
 
   it('keeps the 383 pilot identifiers exactly as first minted', () => {

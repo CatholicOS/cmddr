@@ -167,7 +167,7 @@
     "id": "mag:leo-xiii/placere-nobis-1880",
     "title": "Placere nobis",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1880-01-18",
@@ -181,6 +181,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Placere nobis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -1287,7 +1290,7 @@
     "id": "mag:leo-xiii/augustum-sanctissimumque-1888",
     "title": "Augustum sanctissimumque",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1888-10-01",
@@ -1301,6 +1304,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Augustum sanctissimumque",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -2349,7 +2355,7 @@
     "id": "mag:leo-xiii/alumnis-seminarii-vaticani-1892",
     "title": "Alumnis Seminarii Vaticani",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1892-07-25",
@@ -2362,6 +2368,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Alumnis Seminarii Vaticani",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -3503,7 +3512,7 @@
     "id": "mag:leo-xiii/auspicia-rerum-1896",
     "title": "Auspicia rerum",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1896-03-19",
@@ -3516,6 +3525,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Auspicia rerum",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -3907,7 +3919,7 @@
     "id": "mag:leo-xiii/sodalium-benedictinorum-ordinem-1897",
     "title": "Sodalium Benedictinorum Ordinem",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1897-12-15",
@@ -3920,6 +3932,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Sodalium Benedictinorum Ordinem",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -3946,7 +3961,7 @@
     "id": "mag:leo-xiii/ea-animi-sollicitudo-1898",
     "title": "Ea animi sollicitudo",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1898-07-04",
@@ -3960,13 +3975,16 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Ea animi sollicitudo",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:leo-xiii/cum-plura-nobis-1898",
     "title": "Cum plura Nobis",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1898-07-10",
@@ -3979,13 +3997,16 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Cum plura Nobis",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
     "id": "mag:leo-xiii/quum-nonnullorum-1898",
     "title": "Quum nonnullorum",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1898-07-20",
@@ -3998,6 +4019,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Quum nonnullorum",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -4936,7 +4960,7 @@
     "id": "mag:leo-xiii/ad-pastoralem-1902",
     "title": "Ad pastoralem",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1902-04-05",
@@ -4949,6 +4973,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Ad pastoralem",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {
@@ -5094,7 +5121,7 @@
     "id": "mag:leo-xiii/litteras-ante-annos-1902",
     "title": "Litteras ante annos",
     "idStatus": "minted",
-    "genre": "motu-proprio",
+    "genre": "apostolic-letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1902-11-25",
@@ -5107,6 +5134,9 @@
       "retrieved": "2026-09-07"
     },
     "incipit": "Litteras ante annos",
+    "characteristics": [
+      "motu-proprio"
+    ],
     "sourceGenreLabel": "motu_proprio"
   },
   {

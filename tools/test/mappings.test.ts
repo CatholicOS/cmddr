@@ -107,6 +107,15 @@ describe('genre mapping', () => {
     expect(m.characteristics).toEqual(['apostolic-constitution']);
   });
 
+  it('treats motu proprio as an apostolic-letter characteristic, not a genre (#10)', () => {
+    for (const label of ['motu proprio', 'motu_proprio']) {
+      const m = SOURCE_GENRE_TO_GENRE[label]!;
+      expect(m.genre, label).toBe('apostolic-letter');
+      expect(m.characteristics, label).toEqual(['motu-proprio']);
+    }
+    expect(Object.values(SOURCE_GENRE_TO_GENRE).some((m) => m.genre === 'motu-proprio')).toBe(false);
+  });
+
   it('maps a dogmatic constitution to the conciliar genre with its descriptive title', () => {
     const m = SOURCE_GENRE_TO_GENRE['constitutio dogmatica']!;
     expect(m.genre).toBe('constitution');
