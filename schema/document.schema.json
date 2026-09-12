@@ -39,6 +39,8 @@
     "source": {
       "type": "object",
       "additionalProperties": false,
+      "required": ["url", "shelf", "retrieved"],
+      "description": "Harvest provenance. Every harvested record carries all three of url, shelf and retrieved; url and shelf may be null (a flat-era page; the fascicle-era Acta), never absent.",
       "properties": {
         "url": { "type": ["string", "null"],
           "description": "The vatican.va page the record was read from; null for a flat-era item without a page and for a document created from the Acta Apostolicae Sedis index in the fascicle era (2003-), where the monthly fascicle holding a page is not derivable from the index." },

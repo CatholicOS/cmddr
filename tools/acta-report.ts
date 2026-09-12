@@ -425,19 +425,29 @@ p('id the shelf\'s rule would mint from the index\'s incipit (provisional, `{gen
 p('toponym only), the index entry as its title, `source.shelf` `aas/{year}` with `url: null`, and `acta` as its citation and its source.');
 p();
 // The data carries what the harvest created after the collision and ordinal passes; the
-// report's creator output is pre-pass, so records are compared, and their ids printed, by
-// (issuer, date, acta page).
+// report's creator output is pre-pass. Records are paired by (issuer, date, acta page) --
+// the only fields those passes never touch -- and then compared whole, with the id (the one
+// field the passes legitimately rewrite) set aside, so that a creator/data disagreement in
+// any other field is reported as a difference rather than hidden behind a matching key.
 const bornKey = (d: DocumentRecord) => `${d.issuerId}|${d.date}|${d.acta!.year}:${d.acta!.page}`;
 const bornByKey = new Map(bornInData.map((d) => [bornKey(d), d]));
 const dataIdOf = (d: DocumentRecord): string => bornByKey.get(bornKey(d))?.id ?? d.id;
+const normalised = (d: DocumentRecord): string => {
+  const { id: _id, ...rest } = d;
+  return JSON.stringify(rest, Object.keys(rest).sort());
+};
 {
-  const fromCreator = new Set(creation.created.map((c) => bornKey(c.record)));
+  const fromCreator = new Map(creation.created.map((c) => [bornKey(c.record), c.record]));
   const onlyData = bornInData.filter((d) => !fromCreator.has(bornKey(d))).map((d) => d.id);
   const onlyCreator = creation.created.filter((c) => !bornByKey.has(bornKey(c.record))).map((c) => c.record.id);
+  const differing = bornInData.filter((d) => {
+    const c = fromCreator.get(bornKey(d));
+    return c !== undefined && normalised(c) !== normalised(d);
+  }).map((d) => d.id);
   p(`The data carries **${bornInData.length}** AAS-only records and the creator, re-run here over the shelf records, produces **${creation.created.length}**`
-    + (onlyData.length === 0 && onlyCreator.length === 0
-      ? ' — the same set, entry for entry.'
-      : ` — **not the same set**: only in the data ${onlyData.map((id) => `\`${id}\``).join(', ') || '—'}; only from the creator ${onlyCreator.map((id) => `\`${id}\``).join(', ') || '—'}.`));
+    + (onlyData.length === 0 && onlyCreator.length === 0 && differing.length === 0
+      ? ' — the same set, entry for entry, and the same records field for field (ids aside, which the collision and ordinal passes assign).'
+      : ` — **not the same**: only in the data ${onlyData.map((id) => `\`${id}\``).join(', ') || '—'}; only from the creator ${onlyCreator.map((id) => `\`${id}\``).join(', ') || '—'}; differing in a field other than the id ${differing.map((id) => `\`${id}\``).join(', ') || '—'}.`));
 }
 p();
 p('### Per year and category');
