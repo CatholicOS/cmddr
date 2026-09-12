@@ -73,9 +73,10 @@ The same reasoning applies to every genre capped below its issuer’s capacity; 
 *Registry of document / speech **types**. `Default register` is the genre’s presumption; `Ceiling` is the maximum its issuer can
 exercise through it. Neither fixes the authority of any particular passage — see Table 2. `Scope` is juridical — whom the act
 binds — not who it is addressed to: *Ordinatio Sacerdotalis* is addressed to the bishops and universal in scope, while the
-*Letter to Artists* is addressed to everyone and has no juridical scope at all — a case the current two-value vocabulary
-cannot express, so such a document simply inherits its genre default. Recording the addressee is deferred to
-[#4](https://github.com/CatholicOS/cmddr/issues/4), together with a possible `regional` value and a possible non-juridical one.*
+*Letter to Artists* is addressed to everyone and binds no one. An omitted `document.scope` inherits the genre's default, so a
+letter is presumed `local`; a non-juridical scope is not representable — both vocabularies allow only `universal` and `local` —
+and the *Letter to Artists* therefore currently reads as `local`, a known limitation. Representing that case, recording the
+addressee, and a possible `regional` value are all deferred to [#4](https://github.com/CatholicOS/cmddr/issues/4).*
 
 | Genre | Issuer | Scope | Default register | Ceiling (issuer capacity) | Notes |
 |---|---|---|---|---|---|
