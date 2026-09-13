@@ -119,7 +119,7 @@ shelf documents of the source's popes dated in the volume year that carry no `ac
 
 ## 3. Per source and per category, and the parser defects
 
-Parsed / matched / ambiguous / unmatched for every category the sample prints, with the mapping decided for each heading
+Parsed / matched / ambiguous / unmatched for every category the era prints, with the mapping decided for each heading
 (§4); a category of the *no* row is counted only.
 
 | Category | Harvested | 1909 | 1917-I | 1931 | 1958 | 1978 | 2012 |
@@ -532,7 +532,7 @@ sub-items is keyed on 13 capitalised division titles listed in `index.ts`.
 | AAS 104 (2012) 400 | 2012-02-11 | Constitutiones Apostolicae | *Ad expeditius* | `mag:benedict-xvi/robensis-2012` (*Robensis*), `mag:benedict-xvi/tenkodogoensis-2012` (*Tenkodogoënsis*) |
 | AAS 104 (2012) 401 | 2012-02-11 | Constitutiones Apostolicae | *Ad aptius provehendam* | `mag:benedict-xvi/robensis-2012` (*Robensis*), `mag:benedict-xvi/tenkodogoensis-2012` (*Tenkodogoënsis*) |
 
-No document of the sample is claimed twice after the evidence rule (§2.1).
+No document of the era is claimed twice after the evidence rule (§2.1).
 
 ## 6. Unmatched entries in harvested and partly harvested categories
 
@@ -983,7 +983,7 @@ No document of the sample is claimed twice after the evidence rule (§2.1).
 
 ## 8. Created from the Acta
 
-The data carries **146** AAS-only records from the sample and the creator, re-run here over the shelf records, produces **146** — the same set, entry for entry, and the same records field for field (ids aside, which the collision and ordinal passes assign).
+The data carries **146** AAS-only records from the era and the creator, re-run here over the shelf records, produces **146** — the same set, entry for entry, and the same records field for field (ids aside, which the collision and ordinal passes assign).
 
 Each record carries `source.url` = the whole-volume PDF for a volume source and `null` for an index PDF (spec 2a §4), the
 fixture's `retrieved` date, `source.shelf` `aas/{year}`, and `acta.part` for a double volume (`"I"` for 1917).

@@ -872,16 +872,16 @@ PAG. 19Ö4 Oet. 7 Ad Sinarum gentem. - Ad Venerabiles Fratres 5
     ]);
   });
 
-  it('parses every fixture of 1932-1957 with no unseen heading and no unmapped pope, above 95 % over the harvested categories except the six named', () => {
+  it('parses every fixture of 1932-1957 with no unseen heading and no unmapped pope, above 95 % over the harvested categories except the four named', () => {
     // 1936 (92 %): *Vigilanti cura*'s day is `2$>` and the Academy's member list under a motu proprio has four page lines;
     // 1939 (94 %): two radio messages with no date column or formula, an appendix line and an OCR page (`i.62`);
     // 1948 (94 %): six OCR pages (`43G`, `III`, a page lost on *Auspicia quaedam*, a line of dittos alone);
-    // 1949 (89 %): a year the OCR reads `3918` breaks the ditto chain of the eight letters after it, `19 IS Ian.` another, and two OCR days;
     // 1950 (92 %): the ceremony of the Assumption listed after the bull (five page lines), the volume's first entry with a `»` for its year, a month read `Die.`, and OCR pages (`c`, `1S8`, `5 M`);
-    // 1953 (87 %): a year the OCR reads `1961` (two years before the volume: outside the repair's span) breaks the ditto chain of the letters after it.
+    // 1949 and 1953 fell below the floor while a year the OCR reads `3918` or `1961` broke the ditto chain of the letters
+    // after it; ACTA_INDEX_CORRECTIONS now supplies those years from the acts' own dating formulae, and both clear 95 %.
     // Each is listed in the report (docs/superpowers/reports/2026-09-13-acta-volumes-1932-1957.md §1); none is a shape
     // the parser could read without guessing.
-    const exempt: Record<string, number> = { 1936: 0.92, 1939: 0.94, 1948: 0.94, 1949: 0.89, 1950: 0.91, 1953: 0.87 };
+    const exempt: Record<string, number> = { 1936: 0.92, 1939: 0.94, 1948: 0.94, 1950: 0.91 };
     for (let year = 1932; year <= 1957; year++) {
       const vol = year - 1908;
       const r = parseActaIndex(readFileSync(`tools/fixtures/acta/aas-${vol}-${year}.txt`, 'utf8'), { year, volume: vol, columnar: true });

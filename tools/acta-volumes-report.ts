@@ -483,7 +483,7 @@ p();
 // 3. Per category
 p('## 3. Per source and per category, and the parser defects');
 p();
-p('Parsed / matched / ambiguous / unmatched for every category the sample prints, with the mapping decided for each heading');
+p('Parsed / matched / ambiguous / unmatched for every category the era prints, with the mapping decided for each heading');
 p('(§4); a category of the *no* row is counted only.');
 p();
 p(`| Category | Harvested | ${sampleKeys.join(' | ')} |`);
@@ -599,7 +599,7 @@ if (result.conflicts.length) {
   p('|---|---|');
   for (const c of result.conflicts) p(`| \`${c.documentId}\` | ${c.entries.map((e) => `${cite(e)}: ${label(e)}`).join('; ')} |`);
 } else {
-  p('No document of the sample is claimed twice after the evidence rule (§2.1).');
+  p('No document of the era is claimed twice after the evidence rule (§2.1).');
 }
 p();
 
@@ -657,7 +657,7 @@ p();
   const onlyData = bornInData.filter((d) => !fromCreator.has(bornKey(d))).map((d) => d.id);
   const onlyCreator = creation.created.filter((c) => !bornByKey.has(bornKey(c.record))).map((c) => c.record.id);
   const differing = bornInData.filter((d) => { const c = fromCreator.get(bornKey(d)); return c !== undefined && normalised(c) !== normalised(d); }).map((d) => d.id);
-  p(`The data carries **${bornInData.length}** AAS-only records from the sample and the creator, re-run here over the shelf records, produces **${creation.created.length}**`
+  p(`The data carries **${bornInData.length}** AAS-only records from the era and the creator, re-run here over the shelf records, produces **${creation.created.length}**`
     + (onlyData.length === 0 && onlyCreator.length === 0 && differing.length === 0
       ? ' — the same set, entry for entry, and the same records field for field (ids aside, which the collision and ordinal passes assign).'
       : ` — **not the same**: only in the data ${onlyData.map((id) => `\`${id}\``).join(', ') || '—'}; only from the creator ${onlyCreator.map((id) => `\`${id}\``).join(', ') || '—'}; differing ${differing.map((id) => `\`${id}\``).join(', ') || '—'}.`));

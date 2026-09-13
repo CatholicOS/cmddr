@@ -265,7 +265,7 @@ the 2012 index (Pius XII's 1958 alone carries 70), and the findings that decide 
 has lost the page column of most index pages, the columnar layout of 1909–1931 dates some acts to the month only, and a volume
 can print an act another volume already published. Phase 2b-ii-a ([era report](docs/superpowers/reports/2026-09-13-acta-volumes-1932-1957.md))
 joined the twenty-six volumes of 1932–1957 the same way: **144** references, thin because the Pius XI and Pius XII shelves are
-(18 and 227 records dated in the era), twenty of the volumes above the 95 % parse-rate floor and the six below it
+(18 and 227 records dated in the era), twenty-two of the volumes above the 95 % parse-rate floor and the four below it
 explained line by line, every OCR misreading of a date the parser admits measured on a named volume, a year the index
 does not print (a `»` with nothing above it, a token the OCR has broken) left blank and supplied only by a curated row
 quoting the act's own dating formula — so that *Munificentissimus Deus* and *Humani generis*, at the head of AAS 42, are
@@ -298,7 +298,7 @@ thinner still than Francis's), created by the same rule — an *Epistula* only w
 constitution or apostolic letter minted from the incipit the volumes print beside the toponym — with `source.url` the
 whole-volume PDF, and held **100** ([sample report](docs/superpowers/reports/2026-09-13-acta-volumes-sample.md)). Phase 2b-ii-a
 added **1,633** from the twenty-six volumes of 1932–1957 — 532 of Pius XI, 1,197 of Pius XII in all; 628 constitutions, most
-of them named by the see alone and therefore provisional, 568 apostolic letters, 437 letters — and held **406**, among them the
+of them named by the see alone and therefore provisional, 568 apostolic letters, 437 letters — and held **432**, among them the
 vernacular texts of four encyclicals the index enters a second time (curated), the entries whose page another act cites where
 the volume prints one (a new *page-shared* hold), and every incipit the OCR has damaged, which is never minted into an id the
 page does not print ([era report](docs/superpowers/reports/2026-09-13-acta-volumes-1932-1957.md)); four pages the volumes print

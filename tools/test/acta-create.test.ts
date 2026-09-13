@@ -317,6 +317,24 @@ describe('createFromActa on the volumes (acta volumes spec §5)', () => {
     expect(held.held.map((h) => h.reason)).toEqual(['shelf-not-harvested', 'shelf-not-harvested']);
   });
 
+  it('holds an entry whose page a matched document or another entry already cites, the note agreeing in number', () => {
+    const notes = (r: ReturnType<typeof run>) => r.held.map((h) => [h.reason, h.note.replace(/ the same page .*$/, '')]);
+    // A matched shelf document alone on the page: singular.
+    const shelf = doc({ id: 'mag:francis-i/ius-nativum-2023', incipit: 'Ius nativum', date: '2023-02-20' });
+    const one = run([entry({ page: 263 }), entry({ incipit: 'Alterum opus', date: '2023-02-21', page: 263 })], [shelf]);
+    expect(notes(one)).toEqual([['page-shared', 'a matched shelf document cites']]);
+    // Two other entries of the index and no match: plural.
+    const three = run([
+      entry({ incipit: 'Primum opus', date: '2023-02-21', page: 264 }),
+      entry({ incipit: 'Alterum opus', date: '2023-02-22', page: 264 }),
+      entry({ incipit: 'Tertium opus', date: '2023-02-23', page: 264 }),
+    ], []);
+    expect(notes(three)).toEqual(Array(3).fill(['page-shared', '2 other entries of the index cite']));
+    // A match and one other entry: plural.
+    const mixed = run([entry({ page: 263 }), entry({ incipit: 'Alterum opus', date: '2023-02-21', page: 263 }), entry({ incipit: 'Tertium opus', date: '2023-02-22', page: 263 })], [shelf]);
+    expect(notes(mixed)).toEqual(Array(2).fill(['page-shared', 'a matched shelf document and 1 other entry of the index cite']));
+  });
+
   it('never creates a month-only entry, and holds an OCR-damaged incipit or toponym', () => {
     const month = run([pius({ date: '1929-03', incipit: 'Pro munere', page: 317 })], []);
     expect(month.created).toEqual([]);

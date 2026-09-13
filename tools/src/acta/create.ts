@@ -519,7 +519,7 @@ export function createFromActa(
     if (!byMatch && others.length === 0) continue;
     collided.add(c);
     const who = [byMatch ? 'a matched shelf document' : '', others.length ? `${others.length} other entr${others.length === 1 ? 'y' : 'ies'} of the index` : ''].filter(Boolean).join(' and ');
-    hold(c.entry, 'page-shared', `${who} cite${!byMatch && others.length === 1 ? 's' : ''} the same page (${key}); one page opens one act (invariant 25) unless ACTA_SHARED_PAGES quotes the page`,
+    hold(c.entry, 'page-shared', `${who} cite${(byMatch ? 1 : 0) + others.length === 1 ? 's' : ''} the same page (${key}); one page opens one act (invariant 25) unless ACTA_SHARED_PAGES quotes the page`,
       result.matches.filter((m) => pageKey(m.entry) === key).map((m) => docs.find((d) => d.id === m.documentId)).filter((d): d is DocumentRecord => d !== undefined));
   }
   for (const group of byId.values()) {
