@@ -46,6 +46,39 @@
  *   prints one, and is otherwise given by the caller (the volume fixtures carry no title
  *   page); `part` (`I`/`II`) is the caller's, for the double volumes.
  *
+ * The volumes of 1932-1957 (AAS 24-49, phase 2b-ii-a; acta volumes spec §9) added, each
+ * measured on a named volume and unit-tested on its excerpt:
+ * - the pope heading in the OCR's spellings (`1 - ACTA PII PP. XII`, `ACTA Pii PP. XII`,
+ *   `PP. Xll`), normalised before the popes-table lookup and recorded as printed
+ *   (`popeHeadings`); a category numeral read `IY.`, `XJV`, `i.`, `1`, `I r-`, `XI •-`; a
+ *   known heading in mixed case (`XIV - Sacra Consistoria`); the column header as `PAO.`,
+ *   `PAS.`, `PAß.`, `PA6.`, `PAe`, `FAS`, `PV(J.`; an act printed before the first category
+ *   heading (1933's bull of indiction), reported, its date feeding the ditto chain;
+ * - the ditto as `»>`, `>>`, `))`, `.)`, `y>`, `«` (only where a date token follows) or a lone
+ *   letter (`» h 3`, `» D »`); junk stuck to a token (`.16`, `20\`, `.Martii`, `Nov,.`,
+ *   `1947 Oct. ; 20`); a doubled token (`» Apr. Apr. 1`); the OCR months of OCR_MONTHS,
+ *   admitted only where a day follows, and any other word there an unreadable month that
+ *   the dittos after it inherit as unreadable until one is printed; a year no volume can
+ *   print (`1047`, `3950`, `1963`), read as the one year of the volume's span a digit off
+ *   and noted on the entry and its dittos (`dateNote`, `dateNoteRef`), a year the volume
+ *   could print (`1919` for 1948 and 1949 alike) never repaired, a ditto in the year
+ *   column with nothing before it unreadable, a split or damaged year (`i 945`, `19 IS`);
+ * - a date the layout mode set beside the last line of the entry before, given to the
+ *   blank-dated entry after it; a blank-dated entry at the page's hanging indent, shaped
+ *   as an entry opens, and a continuation line at the entry column that is not, on a page
+ *   whose entries open `Incipit. - …`; a blank-dated entry dated by its own description
+ *   (`… datus, die 16 mensis Aprilis, anno 1939`);
+ * - a page glued to a leader dot (`.154`) or followed by junk (`47'`, `226 ,`), an entry of
+ *   up to twenty lines, the translations listed under an act consumed as sub-items outside
+ *   the parse rate (TRANSLATION_RE), a header's page number fused to a word cut off;
+ * - the incipit's dash without its spaces (`Quae rei sacrae.-Fines`), a comma for the full
+ *   stop, a bullet before the dash (`•-`), a stray mark before the incipit (`.Mirabilis`); a
+ *   mixed-case see with its vernacular in parentheses (`De Sienhsien (De Kinghsien). -`),
+ *   a see and an incipit both ended by a full stop (`Riopretensis. Decessor Noster. -`),
+ *   a see-shaped head under the constitutions (`Kaying. -`, `Urbis. -`) and, under the
+ *   letters, a diocese the index enters an act under (`Passaviensis dioecesis. -`); the
+ *   addressee of a letter entered without an incipit (`Ad Emum P. D. …`) never an incipit.
+ *
  * The parse rate (spec §4) is measured per fixture: entries parsed against the lines of
  * the pope parts that end in a page number, with the lines consumed without an entry
  * counted; `parseRate` computes it from the `stats` the result carries.
@@ -70,6 +103,14 @@ export interface ActaEntry {
    * layout). A month-only entry is matched by incipit within the month and never created.
    */
   date: string;
+  /**
+   * A reading the parser took of the date beyond what the line prints -- an OCR digit
+   * of the year repaired (`1047` for 1947), a ditto year with nothing before it read as
+   * the volume year -- reported beside the entry; the creator never mints from it.
+   */
+  dateNote?: string;
+  /** For a note inherited by ditto: the curation key (`year:page`) of the entry whose line carried the misread token, so one curated confirmation of that entry confirms the chain. */
+  dateNoteRef?: string;
   /** The incipit, guillemets and trailing punctuation stripped; null when the entry prints none. */
   incipit: string | null;
   /**
@@ -103,8 +144,10 @@ export interface ActaParseStats {
   monthOnly: number;
   /** Entries opened by a date line that never reached a page number (flushed as defects). */
   withoutPage: number;
-  /** Sub-item lines consumed (the 1909 table of contents of *Sapienti Consilio*). */
+  /** Sub-item lines consumed (the 1909 table of contents of *Sapienti Consilio*; the translations the volumes of 1939-1957 list under an act). */
   subItems: number;
+  /** Of the sub-items, the translation lines (`E textu latino versio anglica 645`): the act again in another language, outside the parse rate's denominator. */
+  translations: number;
   /** Lines of the pope parts consumed without producing an entry: sub-items, defects, subtitles. */
   consumed: number;
 }
@@ -118,6 +161,8 @@ export interface ActaParseResult {
   unseenHeadings: string[];
   /** Pope part headings the popes table does not list (`ACTA LEONIS PP. XIII`), as printed. */
   unmappedPopes: string[];
+  /** Every pope part heading as printed, in order (`1 - ACTA PII PP. XII`, `I - ACTA Pii PP. XII`): the report lists the OCR variants. */
+  popeHeadings: string[];
   /** Headings of the parts skipped (dicasteries, synod, conclave, Diarium), in order. */
   skippedParts: string[];
   /** Lines and entries the parser could not read, each with the category it was under. */
@@ -157,15 +202,53 @@ const MONTHS: Record<string, number> = {
  * volumes print both (`Iunii`, `Martii`, `April.`).
  */
 const ABBREVIATED_MONTH_RE = /^(Ian|Febr?|Mart?|Apr|Maii|Iun|Iul|Aug|Sept?|Oct|Nov|Dec)\.?$/;
-const monthOf = (token: string, columnar: boolean): number | undefined => {
+/**
+ * The OCR's misreadings of a month in the volumes' month column, each measured on the
+ * volumes of 1932-1957 and unambiguous: no other Latin month shares the letters. `Man` /
+ * `Mah` for *Maii* (AAS 25 (1933) 516 `1932 Man 2 Apostolica Sedes`, whose constitution
+ * is dated *die secunda mensis Maii* at AAS 25 p. 28; AAS 25 p. 520 `» Mah 1 Singulari
+ * quodam`; AAS 27 (1935) `1934 Man .1 Clarissima Agrigentina civitas`), `Marth` for
+ * *Martii* (AAS 25), `Innii` for *Iunii* (AAS 34, 1942), `Apri` / `Âpr` for *Apr.* (AAS
+ * 42, 1950), `Ott` for *Oct.* (AAS 45, 1953), `Noy` / `NOY` / `NOV` / `NOT` / `ÏTov` for
+ * *Nov.* (AAS 24, 26, 33, 35, 41), `Doc` / `Deo` for *Dec.* (AAS 28 (1936) `1935 Doc. 26
+ * Ad catholici sacerdotii`, the encyclical of 20 December 1935 -- the day too is the OCR's;
+ * AAS 46 (1954) `1953 Deo. 14 Decretum`). A misreading not listed here is an unreadable
+ * month, reported, never inherited from the entry before (readDateLine).
+ */
+const OCR_MONTHS: Record<string, number> = {
+  Man: 5, Mah: 5, Marth: 3, Innii: 6, Apri: 4, Âpr: 4, Ott: 10, Noy: 11, NOY: 11, NOV: 11, NOT: 11, ÏTov: 11, Doc: 12,
+};
+/**
+ * The month a token names: a Latin month in any of the century's spellings, case-folded
+ * (`ian.`, AAS 40), or -- only where `dayFollows`, so that a word opening a continuation
+ * line (`Deo dicatum 14`, `Man …`) is never a month -- one of the OCR misreadings above.
+ */
+const monthOf = (token: string, columnar: boolean, dayFollows = false): number | undefined => {
   if (!columnar) return ABBREVIATED_MONTH_RE.test(token) ? MONTHS[token.replace(/\.$/, '').toLowerCase()] : undefined;
-  return /^[A-Za-z][a-z]{2,9}\.?$/.test(token) ? MONTHS[token.replace(/\.$/, '').toLowerCase()] : undefined;
+  if (!/^[A-Za-zÂÏ][a-z]{1,9}\.?$/i.test(token)) return undefined;
+  const bare = token.replace(/\.$/, '');
+  return MONTHS[bare.toLowerCase()] ?? (dayFollows ? OCR_MONTHS[bare] : undefined);
 };
 const DITTO_RE = /^»[,.]?$/;
-/** Stray OCR punctuation between date tokens (`1978 Ian. - 3`, `» . » 8`). */
-const DATE_JUNK_RE = /^[-–—.,'^]$/;
+/**
+ * The volumes' OCR renders a `»` as `»>`, `>>`, `))`, `.)`, `j>`, `f>`, `•»`, `«`, or as a
+ * lone letter (`h`, `s`, `i`, `D`) where the ditto stands (AAS 24-49, measured in
+ * readDateLine's comment): after the junk characters are stripped from a token, one of
+ * these in a date column is a ditto. A lone letter is one only where a date token has
+ * already been read on the line and a day or a capitalised word follows.
+ */
+const COLUMNAR_DITTO_RE = /^[a-z]?[»>)]{1,2}$/;
+/** `«` for `»` (AAS 43 (1951) `» « 11 Africa Meridionalis`): a ditto only where a date token follows (readDateLine). */
+const COLUMNAR_DITTO_INNER_RE = /^«$/;
+const COLUMNAR_DITTO_LETTER_RE = /^[a-zA-Z]$/;
+/** Stray OCR punctuation between date tokens (`1978 Ian. - 3`, `» . » 8`, `1950 Ian. • 14`, `1947 Oct. ; 20`). */
+const DATE_JUNK_RE = /^[-–—.,'^•;:*"]$/;
+/** The junk the OCR sticks to a date token: `.16`, `20\\`, `.Martii`, `Nov,.`, `Aug-`, `2$>`. */
+const TOKEN_JUNK_RE = /^[.,'"•^*:;\\/(]+|[.,'"•^*:;\\/-]+$/g;
 const YEAR_TOKEN_RE = /^\d{4}\.?$/;
 const DAY_TOKEN_RE = /^\d{1,2}$/;
+/** A month-shaped word that is not a month: an OCR misreading the table above does not list. */
+const WORD_TOKEN_RE = /^[A-Za-zÀ-ÿ]{3,10}\.?$/;
 
 /**
  * A running header: the first non-blank line of a page (`1468 Acta Apostolicæ Sedis –
@@ -194,18 +277,47 @@ const RUN_TOGETHER_RE = /((?:\s\.|\s•)*\s\d{1,4})\s+(?=(?:»[,.]?|\d{4})\s+(?:
  * no page is read from it).
  */
 const INTERLEAVED_RE = /[A-Za-z]{2,},? [A-Za-z]{2,}[,.]? {12,}[A-Za-z]/;
-/** The column header of the volumes: `ANNO MENSE DIE`, `MENSE I DIE`, `PAG.`, in any OCR spelling. */
-const COLUMN_HEADER_RE = /^\s*(?:(?:ANNO|MENSE|DIE|DXE|D1E|PAG\.?|I|')\s*)+$/;
+/**
+ * The column header of the volumes: `ANNO MENSE DIE`, `MENSE I DIE`, `PAG.`, in any OCR
+ * spelling -- the 1932-1957 volumes print `PAG.` 133 times and `PAO.`, `PAS.`, `PAß.`,
+ * `PA6.`, `PAe`, `FAS`, `PV(J.`, `PAG..`, `PAG»`, `, PAG.` beside it (measured over the 26 fixtures).
+ */
+const COLUMN_HEADER_RE = /^[\s.,'"•»-]*(?:(?:ANNO|MENSE|DIE|DXE|D1E|PA[GSOEeß6]|FAS|PV\(J|I|i|')[\s.,'"•»-]*)+$/;
 // The parts are numbered `II – `, `IV. – `, `I. — ` or (2018's Diarium) not at all.
-const PART_HEADING_RE = /^\s*(?:[IVXL]+\.?\s*[–—-]\s*)?(ACTA\s+[A-Z].*|DIARIUM\s+[A-Z].*|CARDINALIUM COMMISSIO.*)$/;
+// The OCR reads the numeral as `1` (AAS 32, 1940: `1 - ACTA PII PP. XII`), `IL` (`IL - ACTA
+// SS. CONGREGATIONUM`, AAS 25) or `U` (`U - ACTA SS. CONGREGATIONUM`, AAS 32): any short
+// token before the dash is the numeral, since the words after it are what is read.
+const PART_HEADING_RE = /^\s*(?:[A-Za-z0-9]{1,4}\.?\s*r?[–—-]\s*)?(ACTA\s+[A-Za-z].*|DIARIUM\s+[A-Z].*|CARDINALIUM COMMISSIO.*)$/;
 /** `ACTA PII PP. X.`, `ACTA IOANNIS PAULI PP. II`, `ACTA BENEDICTI XVI`, `ACTA FRANCISCI PP.`: name words, optional `PP.`, optional numeral. */
 const POPE_PART_RE = /^ACTA\s+([A-Z]+(?:\s+[A-Z]+)*?)(?:\s+PP\.?)?(?:\s+([IVXL]+))?\.?\s*$/;
+/**
+ * A pope heading as the OCR prints it, normalised for the popes table: the name words
+ * upper-cased (`ACTA Pii PP. XII`, AAS 33, 1941) and an `l` in the numeral read as `I`
+ * (`ACTA PII PP. Xll`, AAS 41, 1949). The heading as printed is kept on the result
+ * (`popeHeadings`) so the report can list every variant.
+ */
+const normalisePopeHeading = (heading: string): string => {
+  const words = heading.replace(/\s+/g, ' ').trim().toUpperCase().split(' ');
+  // No pope of the AAS bears a numeral with an L (the highest is XXIII): an L in the
+  // last word is the OCR's lower-case l for I.
+  const last = words[words.length - 1]!;
+  if (/^[IVXL]+\.?$/.test(last) && words.length > 1) words[words.length - 1] = last.replace(/L/g, 'I');
+  return words.join(' ');
+};
 /** The 1917 index numbers *Acta Sacri Consistorii* among the pope's categories; it is not a part. */
 const CONSISTORY_CATEGORY_RE = /^ACTA\s+(?:SACRI\s+)?CONSISTORII/;
-const HEADING_RE = /^\s*[IVXL]+\.?\s*[–—-]\s*[A-Z][A-Z .,'’():«»-]*$/;
+// The numeral in any OCR reading (`IY.`, `XJV`, `i.`, `I r-`; AAS 25, 26, 42): the
+// heading's words decide the category, and normaliseHeading drops the numeral the same way.
+const HEADING_RE = /^\s*[IVXLJYivxl1]+\.?\s*[r•]?\s*[–—-]\s*[A-Z][A-ZÀ-Ý .,'’():«»-]*$/;
+/** The OCR of AAS 46 (1954) 801 sets one heading in mixed case (`XIV - Sacra Consistoria`): a heading only when the words are a known category. */
+const MIXED_CASE_HEADING_RE = /^\s*[IVXL]+\.?\s*[–—-]\s*[A-Z][a-z]+(?: [A-Za-z]+){0,4}\.?$/;
 const HEADING_CONTINUATION_RE = /^[A-Z][A-Z .,'’():-]*$/;
-/** Dot leaders (once an ellipsis), or at least two spaces, then the page number ending the entry. */
-const PAGE_END_RE = /(?:(?:\s*\.){2,}|\s*…|\s{2,})\s*(\d{1,4})[.,]?\s*$/;
+/**
+ * Dot leaders (once an ellipsis), or at least two spaces, then the page number ending the
+ * entry; in the volumes a single leader dot can be glued to the page (`Orientali .154`,
+ * AAS 30, 1938) and OCR junk can follow it (`47'`, `226 ,`, `549-`; AAS 24, 32).
+ */
+const PAGE_END_RE = /(?:(?:\s*\.){2,}|\s*…|\s{2,}|\s\.)\s*(\d{1,4})[.,'’-]?(?:\s*,)?\s*$/;
 /**
  * A full line leaves room for neither leaders nor a second space: `… Erbil (Iraquia) 82`,
  * and the volumes' layout mode prints the page after one space as often as not
@@ -221,7 +333,7 @@ const TIGHT_PAGE_END_RE = /^.{55,}[^\s\d] (\d{1,4})$/;
  * ending in a word and a number below 1500 (no AAS volume reaches it; a year does),
  * still only when the next line opens something else.
  */
-const COLUMNAR_PAGE_END_RE = /^.*[^\s\d] (\d{1,4})[.,]?$/;
+const COLUMNAR_PAGE_END_RE = /^.*(?:[^\s\d]|\b1[89]\d\d) (\d{1,4})[.,'’-]?(?:\s*,)?$/;
 const VOLUME_RE = /\(An\.\s*(\d{4})?\s*et\s*[Vv]ol\.\s*([CDILMVXcdilmvx]+)\)/;
 /**
  * The table of contents of *Sapienti Consilio* the 1909 index prints inside the
@@ -231,6 +343,14 @@ const VOLUME_RE = /\(An\.\s*(\d{4})?\s*et\s*[Vv]ol\.\s*([CDILMVXcdilmvx]+)\)/;
  * `PARS ALTERA. - Normae Peculiares.`, `APPENDIX`) -- sub-items of one act, not acts.
  */
 const SUB_ITEM_RE = /^\s*(?:\d{1,2}\.\s*[°o]\s|\d{1,2}\.\s*-\s|CAP\.\s|Art\.\s|Sect\.\s|TIT\.\s|PARS\s|APPENDIX\b)/;
+/**
+ * The translations the volumes of 1939-1957 list under an act, each with its own page
+ * (`E textu latino versio anglica 645`, AAS 31 (1939); `Eius versiones a Statione
+ * radiophonica Civitatis Vaticanae editae :` / `lingua gallica … 205`, AAS 33 (1941);
+ * `e lingua lusitana versio italica 270`, AAS 34): the same act again, consumed as
+ * sub-items of the entry before, never entries.
+ */
+const TRANSLATION_RE = /^\s*(?:[Ee] textu \w+ versio\b|[Ee] lingua \w+ versio\b|lingua [a-zñ]+\b|Eius versio(?:nes)?\b|Versio(?:nes)? [a-z]+\b)/;
 /**
  * The capitalised lines of that table of contents which the heading rule would otherwise
  * read as category headings, as the 1909 fixture prints them (normalised): the divisions
@@ -284,7 +404,7 @@ export function joinLines(lines: string[]): string {
   return out.replace(/\s{3,}/g, '  ').trim();
 }
 
-const ABBREVIATIONS = new Set(['card', 'rev', 'litt', 'cong', 'pont', 'sect', 'mons', 'prof', 'encycl', 'ven', 'em', 'emi', 'emum', 'emus', 'rmi', 'rmo']);
+const ABBREVIATIONS = new Set(['card', 'rev', 'litt', 'cong', 'pont', 'sect', 'mons', 'prof', 'encycl', 'ven', 'em', 'emi', 'emum', 'emus', 'rmi', 'rmo', 'tit', 'presb', 'praef', 'apost', 'archiep', 'ep']);
 
 /**
  * Whether a word ending in a full stop is an abbreviation rather than the last word of an
@@ -300,10 +420,36 @@ const isAbbreviation = (word: string): boolean => {
 /** A short opening phrase printed as an incipit, or null when the head is prose or ends in an abbreviation. */
 function asIncipit(head: string): string | null {
   const h = head.replace(/\s+/g, ' ').trim();
-  if (h === '' || /[\d()]/.test(h) || !/^[A-Za-zÀ-ÿ]/.test(h) || /[a-z][A-Z]/.test(h)) return null;
+  if (h === '' || /[\d()«»]/.test(h) || !/^[A-Za-zÀ-ÿ]/.test(h) || /[a-z][A-Z]/.test(h)) return null;
+  // The addressee of a letter the index enters without an incipit (`Ad Emum P. D.
+  // Alexandrum tit. Sanctae Mariae in Cosmedin …`, AAS 47 (1955) 211) is description.
+  if (/^Ad (?:Emum|Emos|Emum|Excmum|Excmos|Revmum|Revmos|Revmam|Em\.|Exc\.|R\. P\.|P\. D\.|Venerabil|Dilect|Patres|Episcop|Archiepiscop|Sacerdot|Clerum|Moderator|Praesid|Legat|Delegat|Sodales|Christifidel)/.test(h)) return null;
   const words = h.split(' ');
   if (words.length > 8 || isAbbreviation(words[words.length - 1]!)) return null;
   return h;
+}
+
+/**
+ * A head shaped as a see, the volumes' way of naming a constitution without an incipit
+ * or before one: `Urbis` / `Vrbis` (Rome), `De Kaying`, `S. Didaci`, `Viterbien. et Sancti
+ * Martini ad Montem Ciminum`, `Satmarien. et Magnovaradinen. Latinorum et Aliarum`,
+ * `Portuensis et S. Rufinae`, `B. M. V. de Monteserrato Fluminis Ianuarii` (an abbey):
+ * every word capitalised or a connector, and a Latin see-adjective, an abbreviated one
+ * (`-en.`), a `De`, an `S.` or an *Aliarum* among them. A single capitalised word is one
+ * only when it ends as a see-adjective does (`Riopretensis`), so a one-word incipit
+ * (`Quoniam`, `Expedit`) stays an incipit.
+ */
+const SEE_WORD_RE = /(ensis|ensi|ense|en\.|anae|anum|itana|itanae|orum)$/;
+function isSeeHead(head: string, constitution = false): boolean {
+  if (/^(?:Urbis|Vrbis)$/.test(head)) return true;
+  if (/[a-z][A-Z]/.test(head) || /\d/.test(head)) return false;
+  const words = head.split(/\s+/);
+  if (!words.every((w) => /^(?:[A-ZÀ-Ý][\wÀ-ÿ'’-]*\.?|et|de|in|seu|ad|atque|ac|aliarum|Aliarum|aliorum|Aliorum|S\.|Ss\.|SS\.|B\.|M\.|V\.|[-–]),?$/.test(w))) return false;
+  // Under *Constitutiones Apostolicae* a lone capitalised word before the dash is the see
+  // (`Kaying. - Praefectura Apostolica de Kaying …`, AAS 28 (1936) 99); elsewhere only a
+  // see-adjective is (`Riopretensis`), and `Quoniam` stays an incipit.
+  if (words.length === 1) return constitution || /^[A-ZÀ-Ý][a-zà-ÿ]{3,}(?:ensis|ensi|itana)$/.test(head);
+  return /^(?:De|DE|S\.|Ss\.|B\.)(?:\s|$)/.test(head) || /\b[Aa]liarum$/.test(head) || words.some((w) => /^[A-ZÀ-Ý]/.test(w) && SEE_WORD_RE.test(w));
 }
 
 /**
@@ -328,7 +474,16 @@ const isToponym = (head: string): boolean =>
  * (`B (IARENSIS`, `B.ABAULENSIS`) are kept as printed.
  */
 const CAPS_TOPONYM_RE =
-  /^((?:[A-ZÀ-ÝË][A-ZÀ-ÝË'’-]*|[-–]|\([^)]*\)|(?:et|de|in|Aliarum|aliarum)\b)(?:[ ,.]+(?:[A-ZÀ-ÝË][A-ZÀ-ÝË'’-]*|[-–]|\([^)]*\)|(?:et|de|in|Aliarum|aliarum)\b))*)\.,?\s*(?:[-–—]\s+)?(?=[A-Za-zÀ-ÿ«])/;
+  /^((?:[A-ZÀ-ÝË][A-ZÀ-ÝË'’-]*|[-–]|\([^)]*\)|«[^»]*»|(?:et|de|in|Aliarum|aliarum)\b)(?:[ ,.]+(?:[A-ZÀ-ÝË][A-ZÀ-ÝË'’-]*|[-–]|\([^)]*\)|«[^»]*»|(?:et|de|in|Aliarum|aliarum)\b))*)(?<!\b[A-Z])\.,?\s*(?:[-–—]\s+)?(?=[A-Za-zÀ-ÿ«])/;
+
+/**
+ * A mixed-case toponym with its vernacular in parentheses before the dash (the volumes
+ * of 1932-1957): capitalised Latin words (`S.`, `de`, `et`, `seu`, `in`, `atque`, `ac`,
+ * `aliarum` between them, a hyphen or comma joining two), a parenthesis, a full stop
+ * and/or a dash, then text. The parenthesis is what tells it from an incipit.
+ */
+const MIXED_TOPONYM_RE =
+  /^((?!Ad\b)(?:[A-ZÀ-Ý][\wÀ-ÿ'’]*\.?|S\.|Ss\.|B\.)(?:(?:[ ,]+|-)(?:[A-ZÀ-Ý][\wÀ-ÿ'’]*\.?|et|de|in|seu|atque|ac|aliarum|Aliarum|aliorum|S\.|Ss\.|B\.))*\s*\([^)]{2,60}\))\s*(?:\.?\s*[-–—]+\s*|\.\s+)(?=[A-Za-zÀ-ÿ«])/;
 
 /**
  * Split an entry's text into incipit / toponym / description. The incipit is the text in
@@ -339,7 +494,7 @@ const CAPS_TOPONYM_RE =
  * convention, `Ius nativum. - De …`) is stripped with the full stop. Runs of spaces in
  * `text` are significant: `joinLines` keeps a double space as one.
  */
-export function splitEntryText(text: string, opts: { bareIncipits?: boolean } = {}): Pick<ActaEntry, 'incipit' | 'quoted' | 'toponym' | 'description'> {
+export function splitEntryText(text: string, opts: { bareIncipits?: boolean; constitution?: boolean } = {}): Pick<ActaEntry, 'incipit' | 'quoted' | 'toponym' | 'description'> {
   const bare = opts.bareIncipits ?? true;
   const tidy = (s: string) => s.replace(/\s+/g, ' ').trim();
   const strip = (s: string) => tidy(s.replace(/^[\s.:,;–—-]+/, ''));
@@ -371,14 +526,48 @@ export function splitEntryText(text: string, opts: { bareIncipits?: boolean } = 
   if (caps && /[A-ZÀ-ÝË]{4}/.test(caps[1]!) && !/^[A-Z]+$/.test(tidy(text))) {
     return withToponym(tidy(caps[1]!), text.slice(caps[0].length));
   }
+  // The volumes of 1932-1957 set a constitution's toponym in mixed case with the
+  // vernacular in parentheses, then the dash: `De Sienhsien (De Kinghsien). - Vicariatus
+  // Apostolicus …`, `Sancti Caroli Ancudiae (Portus Montt). - A Dioecesi …`,
+  // `Mysuriensis-Coimbatorensis (Bangalorensis). - …`, `S. Ludovici de Maragnano, S.
+  // Ioseph de Grajahu (Pinerensis). -` (AAS 31-34); from 1946 an incipit can follow the
+  // parenthesis as in 1958 (`Aleppensis (Berytensis). Solent caeli. - Ex territorio`).
+  const mixed = bare ? text.match(MIXED_TOPONYM_RE) : null;
+  if (mixed) return withToponym(tidy(mixed[1]!), text.slice(mixed[0].length));
   // The volumes' `Incipit. - Description` (1917-1978), where the description may itself
   // open with a toponym and a colon (1931: `Sollicitudo. - Goyasen.: de dioecesis …`).
-  const dash = bare ? text.match(/^([^«»:]{1,60}?)\.\s*[-–—]\s+(.*)$/s) : null;
+  // The OCR of the volumes sets the dash without its spaces (`Quae rei sacrae.-Fines`,
+  // AAS 24, 1932) or doubles the full stop (`Ad pastorale ministerium..-De`).
+  const dash = bare ? text.match(/^([^«»:]{1,60}?)(?:\.{1,2}|,)\s*•?\s*[-–—]\s*(?=[A-Z«(])(.*)$/s) : null;
+  if (dash) {
+    // A toponym before the incipit, both ended by a full stop (`Portuensis et S. Rufinae.
+    // Qui cognoverit. - In cathedrali templo …`, AAS 45 (1953) 326; `Riopretensis. Decessor
+    // Noster. -`, `De Ambanja. Ad potioris dignitatis. -`, AAS 43 (1951)): the head splits at
+    // its first full stop where what precedes it is shaped as a see -- a Latin adjective
+    // (`-ensis`, `-en.`), `De …`, `S. …`, `… et Aliarum` -- and what follows is a short
+    // capitalised incipit.
+    // Under *Constitutiones Apostolicae* two full-stop-ended heads before the dash are the
+    // see and the incipit whatever the see's shape (`Africa Meridionalis. Suprema Nobis. -`,
+    // AAS 43 (1951)); elsewhere the first must be shaped as a see.
+    const two = dash[1]!.match(/^(.{2,60}?(?<!\b[A-Z]|\bSs|\bSS|\bBB))\.\s+([A-Z][^.]{1,50})$/s);
+    if (isSeeHead(tidy(dash[1]!), opts.constitution) && /\b[Aa]liarum$/.test(tidy(dash[1]!))) return withToponym(tidy(dash[1]!), dash[2]!);
+    if (two && (opts.constitution ? /^[A-ZÀ-Ý]/.test(two[1]!) && !/[a-z][A-Z]/.test(two[1]!) : isSeeHead(tidy(two[1]!)))
+      && asIncipit(two[2]!) !== null && two[2]!.trim().split(/\s+/).length <= 5) {
+      return { incipit: asIncipit(two[2]!)!, quoted: false, toponym: tidy(two[1]!), description: strip(dash[2]!) };
+    }
+    // A whole head that is a see: under the constitutions any see-shaped head; elsewhere
+    // (a letter can begin *Cum in Republica Estoniensi* or *De Romanorum Pontificum*) only
+    // `Urbis` or `… et Aliarum`.
+    // (the apostolic letters of the 1930s for a minor basilica are entered under the
+    // diocese: `Passaviensis dioecesis. - Abbatiale templum …`, `Ventimiliensium Episcopus. -`).
+    if (isSeeHead(tidy(dash[1]!), opts.constitution)
+      && (opts.constitution || /^(?:Urbis|Vrbis)$|\b[Aa]liarum$|(?:[Aa]rchi)?[Dd]ioecesis$|Episcopus$/.test(tidy(dash[1]!)))) return withToponym(tidy(dash[1]!), dash[2]!);
+  }
   const dashIncipit = dash && !isToponym(`${tidy(dash[1]!)}.`) ? asIncipit(dash[1]!) : null;
   if (dashIncipit !== null) return { incipit: dashIncipit, quoted: false, toponym: null, description: strip(dash![2]!) };
   const colon = text.match(/^([^:]{1,80}?)\s*:(\s.*|)$/s);
   if (colon && isToponym(tidy(colon[1]!))) return withToponym(tidy(colon[1]!), colon[2]!);
-  const dot = text.match(/^(\S{1,40}?)\.(\s.*|)$/s);
+  const dot = text.match(/^(\S{1,40}?)\.(\s.*|\s*[-–—]+\s.*|)$/s);
   if (dot && isToponym(dot[1]!)) return withToponym(`${dot[1]}.`, dot[2]!);
   if (!bare) return { incipit: null, quoted: false, toponym: null, description: tidy(text) };
   // The first full stop or colon that ends a word (so `S.`, `Card.` and `Em.mum` are
@@ -399,35 +588,92 @@ export function splitEntryText(text: string, opts: { bareIncipits?: boolean } = 
   return { incipit: null, quoted: false, toponym: null, description: tidy(text) };
 }
 
-interface DateState { day: number | null; month: number; year: number }
+/**
+ * The date state the ditto marks inherit. `month` is null after an entry whose month the
+ * OCR misread beyond the table (`» Ott. 3` is listed; an unlisted word is not): the
+ * entries after it that inherit the month are unreadable too, until a printed month.
+ */
+interface DateState {
+  day: number | null;
+  month: number | null;
+  year: number;
+  /** The year is the parser's reading (an OCR digit repaired): inherited by the dittos after it, with the note. */
+  note?: string;
+  /** The curation key (`year:page`) of the entry whose line carried the misread token, set when that entry closes; the dittos inherit it. */
+  noteRef?: string;
+}
 
 /** A date line read: the resolved date (day null for a month-only entry), and the text after the date tokens. */
 interface DateLine {
   date: DateState | null;
   /** Why the date did not resolve: a ditto with nothing to inherit, a day out of range. */
   unreadable?: string;
+  /** A reading the parser took that the report should show beside the entry (an OCR year repaired). */
+  note?: string;
+  /** For an unreadable month: what the entries after it inherit (the year; the month stays unreadable until one is printed). */
+  state?: DateState;
+  /** How many date tokens were read (a lone month before lower-case text is a continuation line, not a date). */
+  tokens: number;
   text: string;
 }
 
-type DateToken = { kind: 'ditto' } | { kind: 'year'; n: number } | { kind: 'month'; n: number } | { kind: 'day'; n: number };
+type DateToken = { kind: 'ditto' } | { kind: 'year'; n: number } | { kind: 'month'; n: number | null } | { kind: 'day'; n: number | null };
 
 /**
  * Read the date tokens at the head of a line, tolerant of the layout mode's spacing and
- * of stray punctuation between them; null when the line opens no entry.
+ * of stray punctuation between them; null when the line opens no entry. `volumeYear`
+ * bounds the OCR-year repair below.
  */
-function readDateLine(line: string, prev: DateState | null, columnar: boolean): DateLine | null {
+function readDateLine(line: string, prev: DateState | null, columnar: boolean, volumeYear?: number): DateLine | null {
   const tokens = line.trim().split(/\s+/);
-  // OCR punctuation stuck to the first token (`.1978 Sept. 3`).
-  if (columnar && tokens[0] !== undefined) tokens[0] = tokens[0].replace(/^[.,'^]+(?=\d)/, '');
+  // OCR punctuation stuck to the first token (`.1978 Sept. 3`); an `i` or `l` for the
+  // year's first digit (`i944 Maii 11`, `i 945 Apr. 15`, AAS 37, 1945), split or not.
+  let joined = 0;   // tokens of the line merged into one (the split year), so the text starts one token later
+  if (columnar && tokens[0] !== undefined) {
+    tokens[0] = tokens[0].replace(/^[.,'^"]+(?=\d)/, '').replace(/^(\d{2})\.(\d{2})$/, '$1$2');
+    if (/^[il]$/.test(tokens[0]) && /^\d{3}$/.test(tokens[1] ?? '')) { tokens.splice(0, 2, `1${tokens[1]}`); joined = 1; }
+    else if (/^[il]\d{3}$/.test(tokens[0])) tokens[0] = `1${tokens[0].slice(1)}`;
+    // A year split into two damaged halves before a month (`19 IS Ian. 10 ICENSIS`, AAS 41
+    // (1949) 662, for 1948): the year is unreadable, not the day 19.
+    else if (/^\d{2}$/.test(tokens[0]) && /^[A-Za-z0-9]{2}$/.test(tokens[1] ?? '') && monthOf(tokens[2] ?? '', true) !== undefined) {
+      return { date: null, unreadable: `a damaged year '${tokens[0]} ${tokens[1]}'`, text: tokens.slice(2).join(' '), tokens: 1, ...(prev ? { state: prev } : {}) };
+    }
+  }
   const seq: DateToken[] = [];
   let i = 0;
   const seen = new Set<string>();
+  let note: string | undefined;
   // The index PDFs print exactly three tokens; the columnar volumes any subset.
   const limit = columnar ? Infinity : 3;
   for (; i < tokens.length && seq.length < limit; i++) {
-    const t = tokens[i]!;
-    if (DITTO_RE.test(t)) { seq.push({ kind: 'ditto' }); continue; }
-    if (DATE_JUNK_RE.test(t) && seq.length > 0) continue;
+    const raw = tokens[i]!;
+    // The volumes' OCR sticks punctuation to a date token (`.16`, `20\`, `.Martii`,
+    // `Nov,.`, `Aug-`) and misdraws the ditto (`»>`, `))`, `.)`, `«`): read through it.
+    const t = columnar ? raw.replace(TOKEN_JUNK_RE, '') : raw;
+    if (DITTO_RE.test(raw) || (columnar && COLUMNAR_DITTO_RE.test(t))) { seq.push({ kind: 'ditto' }); continue; }
+    // `«` for `»` (`» « 11 Africa Meridionalis`, AAS 43; `« Apr. 20 Romanorum Pontificum`,
+    // AAS 24): a ditto only where a date token follows, since a guillemet also opens the
+    // entry's own incipit (`» » » « Quasi semine ». - …`) or a quoted name on a
+    // continuation line (`« de Indore » erigitur 59`).
+    if (columnar && COLUMNAR_DITTO_INNER_RE.test(t) && i + 1 < tokens.length && !seen.has('day')) {
+      const after = tokens[i + 1]!.replace(TOKEN_JUNK_RE, '');
+      if (DAY_TOKEN_RE.test(after) || DITTO_RE.test(tokens[i + 1]!) || COLUMNAR_DITTO_RE.test(after) || monthOf(after, true, true) !== undefined) {
+        seq.push({ kind: 'ditto' });
+        continue;
+      }
+    }
+    if ((DATE_JUNK_RE.test(raw) || (columnar && t === '')) && (seq.length > 0 || (columnar && i === 0))) continue;
+    // A lone letter where a ditto stands (`» h 3 Quae rei sacrae`, `» D » De Leopoldville`,
+    // `» s » Montana`, 1932-1957): a ditto, when a date token precedes it and a day, a
+    // ditto or a capitalised word follows.
+    if (columnar && !seen.has('day') && COLUMNAR_DITTO_LETTER_RE.test(t) && i + 1 < tokens.length) {
+      const after = tokens[i + 1]!.replace(TOKEN_JUNK_RE, '');
+      if ((seq.length > 0 && (DAY_TOKEN_RE.test(after) || DITTO_RE.test(tokens[i + 1]!) || COLUMNAR_DITTO_RE.test(after)))
+        || (seq.length === 0 && i === 0 && (monthOf(after, true) !== undefined || DITTO_RE.test(tokens[i + 1]!) || COLUMNAR_DITTO_RE.test(after)))) {
+        seq.push({ kind: 'ditto' });
+        continue;
+      }
+    }
     // An OCR-misread day in the columnar layout (`» Maii la Deus scientiarum`, `Aug. ii
     // Indulgentiae`, `» Iunii Jl 29 Non abbiamo`): a token of one or two letters after a
     // month where a day stands, followed by a day or by capitalised text, is noise -- the
@@ -438,20 +684,63 @@ function readDateLine(line: string, prev: DateState | null, columnar: boolean): 
       continue;
     }
     let tok: DateToken | null = null;
-    if (YEAR_TOKEN_RE.test(t)) tok = { kind: 'year', n: Number(t.replace(/\.$/, '')) };
-    else if (DAY_TOKEN_RE.test(t)) tok = { kind: 'day', n: Number(t) };
+    if (YEAR_TOKEN_RE.test(t)) {
+      let n = Number(t.replace(/\.$/, ''));
+      // The OCR reads a `9` as `0`, a `1` as `3`, a `5` as `6` in the year column (`1047
+      // Maii 15`, AAS 39 (1947) 654, the canonisation of Nicholas of Flüe; `1048 Maii 1`,
+      // AAS 40 (1948), *Auspicia quaedam*; `3950 Dec. 10`, AAS 42 (1950); `1963 Apr. 29
+      // Daniae (Hafniae)`, AAS 45 (1953), the erection of Copenhagen; `1964 Maii 30 Cum
+      // Christus Iesus`, AAS 47 (1955), the canonisation of Pius X): a four-digit token
+      // that no volume can print -- outside the century, or after the volume's own year
+      // -- reads as the year of the volume's span it differs from by exactly one digit,
+      // when there is one such year, and the reading is noted on the entry and on the
+      // dittos that inherit it: the matcher may find the shelf record on the noted date,
+      // the creator mints nothing from it unless a curated row confirms the reading
+      // against the act (curation.ts). A year the volume *could* print is never
+      // repaired, however implausible, because the OCR's digits do not keep to one: AAS
+      // 41 (1949) prints `1919` for 1949 (*Conflictatio bonorum*, 11 February 1949) and
+      // for 1948 (*Guayaquilensis*, 15 July 1948) alike, and `1910` in AAS 9 (1917)
+      // could be 1916 or 1917; such an entry is held by the creator as dated before the
+      // pontificate, and corrected only by a curated row quoting the act.
+      if (columnar && volumeYear !== undefined && (n < 1900 || n > volumeYear + 1)) {
+        const candidates = [volumeYear, volumeYear - 1].filter((y) => {
+          const a = String(y), b = String(n);
+          return a.length === b.length && [...a].filter((c, k) => c !== b[k]).length === 1;
+        });
+        if (candidates.length === 1) { note = `year ${n} read as ${candidates[0]} (an OCR digit)`; n = candidates[0]!; }
+      }
+      tok = { kind: 'year', n };
+    } else if (DAY_TOKEN_RE.test(t)) tok = { kind: 'day', n: Number(t) };
     else {
-      const m = monthOf(t, columnar);
+      const after = i + 1 < tokens.length ? tokens[i + 1]!.replace(TOKEN_JUNK_RE, '') : '';
+      const m = monthOf(t, columnar, DAY_TOKEN_RE.test(after) || DITTO_RE.test(after) || COLUMNAR_DITTO_RE.test(after));
       if (m !== undefined) tok = { kind: 'month', n: m };
+      // A month-shaped word the tables do not list, where a month stands (after the year
+      // or a ditto, before a day): an OCR misreading -- the month is unreadable, and so are
+      // the entries that inherit it. A digit-bearing token that is not a day, in the day's
+      // place after a month (`2$>` for 29), is an unreadable day.
+      else if (columnar && (seq.length > 0 || i === 0) && !seen.has('month') && !seen.has('day') && WORD_TOKEN_RE.test(t)
+        && i + 1 < tokens.length && DAY_TOKEN_RE.test(tokens[i + 1]!.replace(TOKEN_JUNK_RE, ''))
+        && (seq.length > 0 || (/^[A-ZÀ-Ý]/.test(t) && i + 2 < tokens.length && /^[A-Z«]/.test(tokens[i + 2]!)))) tok = { kind: 'month', n: null };
+      else if (columnar && seen.has('month') && !seen.has('day') && /\d/.test(t) && /^[\dA-Za-z$§!?>)\\]{1,4}$/.test(t)) tok = { kind: 'day', n: null };
     }
-    if (tok === null || seen.has(tok.kind)) break;
+    // A repeated token (`» Apr. Apr. 1`, AAS 26 (1934)) is the OCR's doubling: skipped.
+    if (tok !== null && seen.has(tok.kind)) {
+      const prevTok = seq.find((x) => x.kind === tok!.kind);
+      if (prevTok && 'n' in prevTok && 'n' in tok && prevTok.n === tok.n) continue;
+      break;
+    }
+    if (tok === null) break;
     seen.add(tok.kind);
     seq.push(tok);
   }
   if (seq.length === 0) return null;
+  // A lone number and a dash open a heading whose numeral the OCR read as a digit (`1 -
+  // LITTERAE DECRETALES`, AAS 33, 1941), not a day.
+  if (columnar && seq.length === 1 && seq[0]!.kind === 'day' && /^[-–—]$/.test(tokens[1] ?? '')) return null;
   // The text is what follows the consumed tokens, spacing kept (a double space matters).
   let rest = line.replace(/^\s+/, '');
-  for (let k = 0; k < i; k++) rest = rest.replace(/^\S+\s*/, '');
+  for (let k = 0; k < i + joined; k++) rest = rest.replace(/^\S+\s*/, '');
   const text = rest;
 
   if (!columnar) {
@@ -462,8 +751,8 @@ function readDateLine(line: string, prev: DateState | null, columnar: boolean): 
     const at = (k: number) => seq[k];
     if (seq.length === 2 && at(0)!.kind === 'month' && (at(1)!.kind === 'year' || at(1)!.kind === 'ditto')) {
       const year = at(1)!.kind === 'year' ? (at(1) as { n: number }).n : prev?.year;
-      if (year === undefined) return { date: null, unreadable: 'a ditto with nothing to inherit', text };
-      return { date: { day: null, month: (at(0) as { n: number }).n, year }, text };
+      if (year === undefined) return { date: null, unreadable: 'a ditto with nothing to inherit', text, tokens: seq.length };
+      return { date: { day: null, month: (at(0) as { n: number }).n, year }, text, tokens: seq.length };
     }
     if (seq.length !== 3) return null;
     const yearFirst = at(0)!.kind === 'year' || at(2)!.kind === 'day';
@@ -473,19 +762,20 @@ function readDateLine(line: string, prev: DateState | null, columnar: boolean): 
     const year = yTok.kind === 'year' ? yTok.n : prev?.year;
     const month = mTok.kind === 'month' ? mTok.n : prev?.month;
     const day = dTok.kind === 'day' ? dTok.n : prev?.day;
-    if (year === undefined || month === undefined || day === undefined) {
-      return { date: null, unreadable: 'a ditto with nothing to inherit', text };
+    if (year === undefined || month === undefined || month === null || day === undefined) {
+      return { date: null, unreadable: 'a ditto with nothing to inherit', text, tokens: seq.length };
     }
-    if (day === null) return { date: null, unreadable: 'a ditto day after a month-only entry', text };
-    if (day < 1 || day > 31 || year < 1900) return { date: null, unreadable: 'out of range', text };
-    return { date: { day, month, year }, text };
+    if (day === null) return { date: null, unreadable: 'a ditto day after a month-only entry', text, tokens: seq.length };
+    if (day < 1 || day > 31 || year < 1900) return { date: null, unreadable: 'out of range', text, tokens: seq.length };
+    return { date: { day, month, year }, text, tokens: seq.length };
   }
 
   // The columnar layout: typed tokens stand for themselves; a `»` stands for the next
   // missing column in ANNO MENSE DIE order; a blank year or month inherits; a blank day
   // inherits only under a blank month, and is otherwise the month-only shape.
   const typed = { year: seq.find((t) => t.kind === 'year'), month: seq.find((t) => t.kind === 'month'), day: seq.find((t) => t.kind === 'day') };
-  const opensText = /^[A-Za-zÀ-ÿ«"'(\[]/.test(text.trim());
+  // `8. Fidei in Argentina` (AAS 40 (1948) 572) opens with the OCR's `8` for `S.`.
+  const opensText = /^(?:[A-Za-zÀ-ÿ«"'(\[$]|8\.\s*[A-Z])/.test(text.trim().replace(/^[/•*.-]+\s*/, ''));
   // A bare number and text is an entry (`11 Regia primitiva …`); a bare number alone (a
   // page number the layout set on a line of its own), or a date followed by nothing
   // that reads as text, is not a date line.
@@ -500,26 +790,44 @@ function readDateLine(line: string, prev: DateState | null, columnar: boolean): 
   const mHow = take(typed.month);
   const dHow = take(typed.day);
   const year = yHow === 'typed' ? (typed.year as { n: number }).n : prev?.year;
-  const month = mHow === 'typed' ? (typed.month as { n: number }).n : prev?.month;
-  if (year === undefined || month === undefined) return { date: null, unreadable: 'nothing to inherit', text };
+  let noteRef: string | undefined;
+  if (yHow !== 'typed' && prev?.note !== undefined) { note = prev.note; noteRef = prev.noteRef; }
+  const month = mHow === 'typed' ? (typed.month as { n: number | null }).n : prev?.month;
+  // A ditto with nothing before it -- at the head of a part (AAS 42 (1950) 911: `» Nov,. 1
+  // Munificentissimus Deus`, the volume's first entry, whose printed year the OCR lost) or
+  // after a line whose year was unreadable (`1964 Maii 30`, AAS 47 (1955), for 1954) --
+  // is unreadable, and so is every ditto after it until a year is printed: the volume
+  // year would be a guess (a part's first entries can be the December before).
+  if (year === undefined || month === undefined) return { date: null, unreadable: 'nothing to inherit', text, tokens: seq.length };
+  if (month === null) {
+    // The month is the OCR's, here or on the entry this one inherits from: the year is
+    // kept for the entries after, the entry itself is unreadable.
+    return {
+      date: null, state: { year, month: null, day: null }, text, tokens: seq.length, ...(note ? { note } : {}),
+      unreadable: mHow === 'typed' ? `unreadable month '${tokens[seq.findIndex((t) => t.kind === 'month')]}'` : 'inherits an unreadable month',
+    };
+  }
   let day: number | null;
-  if (dHow === 'typed') day = (typed.day as { n: number }).n;
+  if (dHow === 'typed') day = (typed.day as { n: number | null }).n;
   else if (dHow === 'ditto') {
-    if (prev === null) return { date: null, unreadable: 'a ditto with nothing to inherit', text };
+    if (prev === null) return { date: null, unreadable: 'a ditto with nothing to inherit', text, tokens: seq.length, ...(note ? { note } : {}) };
     day = prev.day;
   } else day = mHow === 'blank' ? (prev?.day ?? null) : null;
-  if (year < 1900) return { date: null, unreadable: 'out of range', text };
-  // An OCR-misread day (`» Mai. 80`): the month is read, the day is not -- the entry is
-  // month-only and reported, and the ditto chain after it keeps the month.
-  if (day !== null && (day < 1 || day > 31)) return { date: { day: null, month, year }, unreadable: `day ${day} out of range, read as month-only`, text };
-  return { date: { day, month, year }, text };
+  if (year < 1900 || (volumeYear !== undefined && year > volumeYear + 1)) return { date: null, unreadable: `year ${year} out of range`, text, tokens: seq.length };
+  // An OCR-misread day (`» Mai. 80`, `» Nov. 38`; `2$>`): the month is read, the day is
+  // not -- the entry is month-only and reported, and the ditto chain after it keeps the month.
+  if (dHow === 'typed' && (typed.day as { n: number | null }).n === null) {
+    return { date: { day: null, month, year, ...(note ? { note } : {}) }, unreadable: `day '${tokens[seq.findIndex((t) => t.kind === 'day')]}' unreadable, read as month-only`, text, tokens: seq.length, ...(note ? { note } : {}) };
+  }
+  if (day !== null && (day < 1 || day > 31)) return { date: { day: null, month, year, ...(note ? { note } : {}) }, unreadable: `day ${day} out of range, read as month-only`, text, tokens: seq.length, ...(note ? { note } : {}) };
+  return { date: { day, month, year, ...(note ? { note } : {}), ...(noteRef ? { noteRef } : {}) }, text, tokens: seq.length, ...(note ? { note } : {}) };
 }
 
 /** The bracketed date (and pope) of an earlier act before its incipit, in the index PDFs. */
 const BRACKET_RE =
   /^\[(?:([A-Za-z]+(?: PP\.)?(?: [IVXL]+)?):\s*)?(?:(\d{4})\s+([A-Z][a-z]{2,3})\.?\s+(\d{1,2})|(\d{1,2})\s+([A-Z][a-z]{2,3})\.?\s+(\d{4}))\]\s*/;
 
-const isoOf = (d: DateState): string => d.day === null ? `${d.year}-${pad(d.month)}` : `${d.year}-${pad(d.month)}-${pad(d.day)}`;
+const isoOf = (d: DateState): string => d.day === null ? `${d.year}-${pad(d.month!)}` : `${d.year}-${pad(d.month!)}-${pad(d.day)}`;
 
 export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaParseResult {
   const vol = text.match(VOLUME_RE);
@@ -552,7 +860,12 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
         if (PAGE_TOP_HEADER_RE.test(line)) continue;
       }
       if (RUNNING_HEADER_RE.test(line) || COLUMN_HEADER_RE.test(line) || NOISE_LINE_RE.test(line)) continue;
-      line = line.replace(GLUED_HEADER_RE, '');
+      // A header glued to a line is cut off, with its page number where that is fused to
+      // the line's last word (`Mardensi Armenorum790   Index documentorum`, AAS 46 (1954)
+      // 790); where the OCR has fused it with the entry's own page (`appellandae. 33788
+      // Index documentorum`, 337 and 788 sharing a digit) the entry keeps the fused number
+      // and is reported without a page.
+      if (GLUED_HEADER_RE.test(line)) line = line.replace(/(?<=[a-zà-ÿ])\d{3,4}(?=\s{3,})/, '').replace(GLUED_HEADER_RE, '');
       for (const piece of columnar ? line.replace(RUN_TOGETHER_RE, '$1\n').split('\n') : [line]) {
         lines.push(piece);
         pageOf.push(p);
@@ -567,32 +880,68 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
   // dated entries' text columns, so a line the OCR set apart (1909's `1908 Ian. 29
   // Constitutio « Sapienti Consilio »`, at a column of its own) does not skew it.
   const entryColOf = new Map<number, number>();
+  // The continuation column of a page: the modal indentation of its undated lines. In
+  // the layout mode of 1939-1957 a dated entry's text can sit right after its date
+  // (`1941 Febr. 24 It is with heartfelt affection`, column 14) while a blank-dated
+  // entry keeps the page's hanging indent (`Tui in S. C. de Propaganda Fide`, column
+  // 33, against continuations at 35; AAS 33 (1941) 533), so a capitalised line indented
+  // one to eight columns less than the continuations, shaped as an entry opens
+  // (`Incipit. - …`, `Toponym (vernacular). - …`), is an entry too.
+  const contColOf = new Map<number, number>();
+  // Whether a page's dated entries open as `Incipit. - Description` / `Toponym
+  // (vernacular). - …` (the volumes from 1917 on; 1909 prints descriptions): where at
+  // least three in five do, a blank-dated line must too, so that a continuation line
+  // the OCR set at the entry column and opened with a capital (`Sanctorum honores
+  // decernuntur 161`, AAS 47 (1955) 869; `Index clericorum conclavistarum 142`, AAS 31
+  // (1939) 739) is not read as an entry of its own.
+  const ENTRY_OPENING_RE = /^[A-Z«$][^\n]{1,80}?(?:[.)]\s*•?\s*[-–—]\s|\)\.\s[A-Z])/;
+  const shapedPages = new Set<number>();
   if (columnar) {
     const cols = new Map<number, number[]>();
+    const conts = new Map<number, Map<number, number>>();
+    const shapes = new Map<number, [number, number]>();
     lines.forEach((line, i) => {
-      const d = readDateLine(line, { day: 1, month: 1, year: 1900 }, true);
-      if (!d || d.text.trim() === '') return;
+      if (line.trim() === '') return;
       const p = pageOf[i]!;
-      cols.set(p, [...(cols.get(p) ?? []), line.length - d.text.trimStart().length]);
+      const d = readDateLine(line, { day: 1, month: 1, year: 1900 }, true, year);
+      if (d && d.text.trim() !== '') {
+        cols.set(p, [...(cols.get(p) ?? []), line.length - d.text.trimStart().length]);
+        const sh = shapes.get(p) ?? [0, 0];
+        shapes.set(p, [sh[0] + (ENTRY_OPENING_RE.test(d.text.trim()) ? 1 : 0), sh[1] + 1]);
+        return;
+      }
+      const indent = line.length - line.trimStart().length;
+      if (indent < 8 || HEADING_RE.test(line) || HEADING_CONTINUATION_RE.test(line.trim())) return;
+      const m = conts.get(p) ?? new Map<number, number>();
+      m.set(indent, (m.get(indent) ?? 0) + 1);
+      conts.set(p, m);
     });
     for (const [p, cs] of cols) {
       const sorted = [...cs].sort((a, b) => a - b);
       entryColOf.set(p, sorted[Math.floor(sorted.length / 2)]!);
     }
+    for (const [p, m] of conts) {
+      const [indent] = [...m].sort((a, b) => b[1] - a[1] || a[0] - b[0])[0]!;
+      if (m.get(indent)! >= 3) contColOf.set(p, indent);
+    }
+    for (const [p, [shaped, all]] of shapes) if (all >= 3 && shaped / all >= 0.6) shapedPages.add(p);
   }
   const atEntryColumn = (i: number): boolean => {
     const col = entryColOf.get(pageOf[i]!);
     const line = lines[i]!;
-    return col !== undefined && line.length - line.trimStart().length <= col + 2;
+    const indent = line.length - line.trimStart().length;
+    if (col !== undefined && indent <= col + 2) return !shapedPages.has(pageOf[i]!) || ENTRY_OPENING_RE.test(line.trim());
+    const cont = contColOf.get(pageOf[i]!);
+    return cont !== undefined && indent >= cont - 8 && indent <= cont - 1 && ENTRY_OPENING_RE.test(line.trim());
   };
   const start = lines.findIndex((l) => /^\s*CHRONOLOGICO ORDINE DIGESTUS\s*$/.test(l));
   if (start < 0) throw new Error('No "CHRONOLOGICO ORDINE DIGESTUS" heading found');
   const end = lines.findIndex((l, i) => i > start && /^\s*(INDICES NOMINUM|I – INDEX NOMINUM|INDEX NOMINUM PERSONARUM|INDEX ANALYTICUS|INDEX RERUM|INDEX ALPHABETICUS)/.test(l));
 
-  const stats: ActaParseStats = { lines: 0, pageLines: 0, harvestedPageLines: 0, harvestedEntries: 0, dateLines: 0, entries: 0, monthOnly: 0, withoutPage: 0, subItems: 0, consumed: 0 };
+  const stats: ActaParseStats = { lines: 0, pageLines: 0, harvestedPageLines: 0, harvestedEntries: 0, dateLines: 0, entries: 0, monthOnly: 0, withoutPage: 0, subItems: 0, translations: 0, consumed: 0 };
   const result: ActaParseResult = {
     volume, year, ...(opts.part ? { part: opts.part } : {}),
-    entries: [], unseenHeadings: [], unmappedPopes: [], skippedParts: [], defects: [], stats,
+    entries: [], unseenHeadings: [], unmappedPopes: [], popeHeadings: [], skippedParts: [], defects: [], stats,
   };
   let pope: string | null = null;
   let category: string | null = null;
@@ -600,7 +949,7 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
   let headingOpen = false;             // the previous line was a category heading (continuations attach)
   let prev: DateState | null = null;
   // `date` carries a month-only value for an entry whose day is not printed.
-  let open: { lines: string[]; text: string; date: string; category: string; pope: string } | null = null;
+  let open: { lines: string[]; text: string; date: string; category: string; pope: string; note?: string; state?: DateState; blankDated?: boolean } | null = null;
   const unseen = new Set<string>();
   const unmapped = new Set<string>();
 
@@ -613,8 +962,22 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
     defect(open.category, `entry without a page number: ${open.lines.map((l) => l.trim()).join(' / ')}`);
     open = null;
   };
-  const isHeading = (l: string) => HEADING_RE.test(l) && readDateLine(l, null, columnar) === null;
-  const isDateLine = (l: string) => readDateLine(l, prev ?? { day: 1, month: 1, year: 1900 }, columnar) !== null;
+  const isHeading = (l: string) => (HEADING_RE.test(l) || (columnar && MIXED_CASE_HEADING_RE.test(l) && categoryForHeading(normaliseHeading(l)) !== null))
+    && readDateLine(l, null, columnar, year) === null;
+  const isDateLine = (l: string) => readDateLine(l, prev ?? { day: 1, month: 1, year: 1900 }, columnar, year) !== null;
+  // A blank-dated entry of the columnar layout (see `atEntryColumn`): capitalised, at the
+  // entry column, not a heading. Used where the line is read and where the line before it
+  // asks whether the next line opens something (a page after one space closes an entry
+  // only then).
+  const isBlankDatedEntry = (i: number): boolean => columnar && atEntryColumn(i) && /^[A-Z«]/.test(lines[i]!.trim())
+    && !HEADING_CONTINUATION_RE.test(lines[i]!.trim()) && !HEADING_RE.test(lines[i]!) && !PART_HEADING_RE.test(lines[i]!);
+  // The date the layout mode set beside the last line of the entry before (`» Apr. 4
+  // rum stationalium evehuntur . 363` / `Paterna caritas. - Sancta Teresia …`, AAS 27
+  // (1935) 509): a date line whose text opens in lower case continues the open entry, and
+  // its date, when it is not the open entry's own, is the next blank-dated entry's.
+  let pending: DateState | null = null;
+  let blankDated = false;   // the line being read has no date column at all
+  let translationOpen = false;   // the line before was a translation sub-item (its continuation is one too)
 
   for (let i = start + 1; i < (end < 0 ? lines.length : end); i++) {
     const line = lines[i]!;
@@ -623,11 +986,12 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
     const part = line.match(PART_HEADING_RE);
     if (part && !CONSISTORY_CATEGORY_RE.test(part[1]!.replace(/\s+/g, ' ').trim())) {
       flushDefect();
-      const heading = part[1]!.replace(/\s+/g, ' ').trim();
+      const heading = normalisePopeHeading(part[1]!);
       const m = heading.match(POPE_PART_RE);
       const known = m ? popeForGenitive(`${m[1]} ${m[2] ?? ''}`) : null;
       if (known) {
         pope = known.pope;
+        result.popeHeadings.push(line.replace(/\s+/g, ' ').trim());
       } else if (m && /^[A-Z]+$/.test(m[1]!) && m[2] !== undefined) {
         // A pope's part the table does not list (`ACTA LEONIS PP. XIII`): parsed under
         // the genitive as printed, so the report can count what it carries.
@@ -647,7 +1011,11 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
     stats.lines++;
     const tightEnd = line.match(columnar ? COLUMNAR_PAGE_END_RE : TIGHT_PAGE_END_RE);
     const harvestedHere = category !== null && (categoryForHeading(category)?.harvested ?? 'no') !== 'no';
-    if (PAGE_END_RE.test(line) || (tightEnd && Number(tightEnd[1]) < 1500)) {
+    // A translation listed under an act (`lingua gallica … 205`) is the act again, not
+    // an entry the rate could count: outside the denominator (stats.translations counts it).
+    const translation = columnar && TRANSLATION_RE.test(line);
+    if (translation) stats.translations++;
+    if ((PAGE_END_RE.test(line) || (tightEnd && Number(tightEnd[1]) < 1500)) && !translation) {
       stats.pageLines++;
       if (harvestedHere) stats.harvestedPageLines++;
     }
@@ -655,22 +1023,34 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
     // The 1909 table of contents inside *Sapienti Consilio*: a capitalised division title
     // listed above, or a numbered office, chapter or article, with or without ditto marks
     // before it. Consumed and counted; the ditto state still advances on a dated one.
-    let dated = readDateLine(line, prev, columnar);
+    blankDated = false;
+    let dated = readDateLine(line, prev, columnar, year);
+    // A continuation line that opens with a month's name or a lone mark (`Aprilis a. 1934
+    // 11`, AAS 25 (1933) 517) is text, not a date: one token and lower-case text after it.
+    if (dated !== null && columnar && open !== null && dated.tokens === 1 && /^[a-z]/.test(dated.text.trim())) dated = null;
     // A blank-dated entry of the columnar layout (see `atEntryColumn`): capitalised, at
     // the entry column, and only where a date has been read before on this part.
     // (`prev` is read through a local: the control-flow analysis narrows it to null
     // otherwise, since the closures above assign it.)
     const inherited = (): DateState | null => prev;
     const inheritedDate = inherited();
-    if (dated === null && columnar && inheritedDate !== null && atEntryColumn(i) && /^[A-Z«]/.test(line.trim())
-      && !HEADING_CONTINUATION_RE.test(line.trim())) {
-      dated = { date: { day: inheritedDate.day, month: inheritedDate.month, year: inheritedDate.year }, text: line.trimStart() };
+    if (dated === null && columnar && (inheritedDate !== null || pending !== null) && isBlankDatedEntry(i)) {
+      const from: DateState = pending ?? inheritedDate!;
+      dated = from.month === null
+        ? { date: null, state: from, unreadable: 'inherits an unreadable month', text: line.trimStart(), tokens: 0 }
+        : { date: { day: from.day, month: from.month, year: from.year }, text: line.trimStart(), tokens: 0 };
+      blankDated = true;
     }
+    pending = null;
     const body = dated ? dated.text : line;
     // The nested table of contents of Sapienti Consilio is a shape of AAS 1 alone; elsewhere
     // a heading such as APPENDIX or SACRA ROMANA ROTA inside the pope's part is a heading and
     // must reach isHeading (CodeRabbit, PR #33).
-    if ((volume === 1 && NESTED_TOC_HEADINGS.has(normaliseHeading(line))) || SUB_ITEM_RE.test(body)) {
+    // A translation line's own continuation (`Eius versiones a Statione radiophonica Civitatis Vati-` /
+    // `canae editae :`) is consumed with it.
+    const translationLine: boolean = columnar && dated === null && (TRANSLATION_RE.test(line) || (translationOpen && /^\s+[a-z]/.test(line) && !isBlankDatedEntry(i)));
+    translationOpen = translationLine;
+    if ((volume === 1 && NESTED_TOC_HEADINGS.has(normaliseHeading(line))) || SUB_ITEM_RE.test(body) || SUB_ITEM_RE.test(line) || translationLine) {
       flushDefect();
       stats.subItems++;
       stats.consumed++;
@@ -710,8 +1090,12 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
     }
     headingOpen = false;
     if (category === null) {
+      // An act the index prints before its first category heading (AAS 25 (1933) 515: the
+      // bull of indiction of the Holy Year, `1933 Ian. 6 INDICTIO Anni Sancti … 5`) is
+      // reported, and its date still governs the ditto marks of the entries after it.
       stats.consumed++;
       defect(null, `${pope}: line before any category heading: ${line.trim()}`);
+      if (dated?.date) prev = dated.date;
       continue;
     }
 
@@ -719,8 +1103,8 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
     // the previous one (`» Dec. 16 URAWAËNSIS. Qui superna Dei. - … Urawaën-` / `1957
     // Dec. 16 sis, in Iaponia …`): a date line that opens in lower case with the open
     // entry's own date is its continuation.
-    const continues = dated !== null && open !== null && dated.date !== null && columnar
-      && isoOf(dated.date) === open.date && /^[a-z]/.test(dated.text.trim());
+    const continues = dated !== null && open !== null && columnar && /^[a-z]/.test(dated.text.trim());
+    if (continues && dated!.date !== null && isoOf(dated!.date) !== open!.date) pending = dated!.date;
     if (columnar && INTERLEAVED_RE.test(line)) {
       // The layout mode interleaved two entries here: nothing on the line is trusted.
       flushDefect();
@@ -737,20 +1121,21 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
       if (dated.date === null) {
         stats.consumed++;
         defect(category, `unreadable date (${dated.unreadable}): ${line.trim()}`);
-        prev = null;
+        prev = dated.state ?? null;
         continue;
       }
       if (dated.unreadable) defect(category, `${dated.unreadable}: ${line.trim()}`);
+      if (dated.note) defect(category, `${dated.note}: ${line.trim()}`);
       stats.dateLines++;
       prev = dated.date;
-      open = { lines: [line], text: dated.text, category, pope, date: isoOf(dated.date) };
+      open = { lines: [line], text: dated.text, category, pope, date: isoOf(dated.date), ...(dated.note ? { note: dated.note, state: dated.date } : {}), ...(blankDated ? { blankDated } : {}) };
     } else if (open === null) {
       stats.consumed++;
       defect(category, `line outside any entry: ${line.trim()}`);
       continue;
     } else {
       // A continuation; a repeated date at a page top is dropped from the text.
-      open.lines.push(continues ? line.replace(/^\s*\S+(\s+\S+){2}\s*/, ' '.repeat(30)) : line);
+      open.lines.push(continues ? ' '.repeat(30) + dated!.text : line);
     }
 
     // Does the entry end on this line?
@@ -759,14 +1144,18 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
     let pageTail = pageMatch?.[0].length ?? 0;
     if (!pageMatch) {
       const tight = last.match(columnar ? COLUMNAR_PAGE_END_RE : TIGHT_PAGE_END_RE);
-      const next = lines.slice(i + 1).find((l) => l.trim() !== '') ?? '';
-      const nextOpens = next === '' || isDateLine(next) || HEADING_RE.test(next)
+      const nextAt = lines.findIndex((l, k) => k > i && l.trim() !== '');
+      const next = nextAt < 0 ? '' : lines[nextAt]!;
+      const nextOpens = next === '' || isDateLine(next) || HEADING_RE.test(next) || isHeading(next)
         || PART_HEADING_RE.test(next) || HEADING_CONTINUATION_RE.test(next.trim())
-        || SUB_ITEM_RE.test(next) || (volume === 1 && NESTED_TOC_HEADINGS.has(normaliseHeading(next)));
+        || SUB_ITEM_RE.test(next) || (volume === 1 && NESTED_TOC_HEADINGS.has(normaliseHeading(next)))
+        || (nextAt >= 0 && isBlankDatedEntry(nextAt)) || (columnar && TRANSLATION_RE.test(next));
       if (tight && nextOpens && Number(tight[1]) < 1500) { pageMatch = tight; pageTail = tight[0].length - tight[0].search(/ \d{1,4}[.,]?$/); }
     }
     if (!pageMatch) {
-      if (open.lines.length > 8) flushDefect();
+      // The volumes' letters to several addressees run to sixteen lines (AAS 46 (1954)
+      // 787, *Quamquam*, eight abbots general).
+      if (open.lines.length > (columnar ? 20 : 8)) flushDefect();
       continue;
     }
     // A page number with a leading zero is an OCR misreading (`030` for 930, AAS 50 p.
@@ -779,9 +1168,21 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
     // The double space is a separator only in the index PDFs' typography; the layout
     // mode's runs of spaces are positional and mean nothing.
     let entryText = joinLines(bodyLines).replace(/(\s\.)+$/, '');
-    if (columnar) entryText = entryText.replace(/\s{2,}/g, ' ');
+    // The layout mode's runs of spaces are positional and mean nothing; a stray mark the
+    // OCR set before the incipit (`.Mirabilis Deus. -`, AAS 25 (1933) 518) is not text.
+    if (columnar) entryText = entryText.replace(/\s{2,}/g, ' ').replace(/^[.•*'"]+(?=[A-Z«])/, '');
     let entryDate = open.date;
     let entryPope = open.pope;
+    // An entry with no date column that dates itself in its description -- Pius XII's
+    // radio messages of 1939 (`Con inmenso gozo. - A Ssmo D. N. Pio … ad universos
+    // Hispaniae christifideles datus, die 16 mensis Aprilis, anno 1939`, AAS 31 (1939)
+    // 740) -- takes that printed date rather than the entry's before it.
+    const formula = open.blankDated ? entryText.match(/\bdie (\d{1,2}|[ivxl]{1,6}) (?:mensis )?([A-Z][a-z]{2,10}),? (?:mensis,? )?anno (\d{4})\b/) : null;
+    if (formula) {
+      const d = /^\d/.test(formula[1]!) ? Number(formula[1]) : romanToInt(formula[1]!);
+      const m = monthOf(formula[2]!, true);
+      if (m !== undefined && d >= 1 && d <= 31) entryDate = `${formula[3]}-${pad(m)}-${pad(d)}`;
+    }
     // An act of an earlier pontificate printed in this volume carries its own date, and
     // sometimes its pope, in brackets before the incipit: `11 Maii 2018 [2010 Sept. 19]
     // « Admodum fideli »`, `[Benedictus XVI: 2010 Apr. 25]` (2018), `[Benedictus PP. XVI:
@@ -799,14 +1200,17 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
         entryText = entryText.slice(bracket[0].length);
       }
     }
+    // The entry whose own line carried a repaired year: the dittos after it inherit its
+    // reference, so that one curated confirmation of this entry confirms the chain.
+    if (open.state !== undefined && open.state.note !== undefined && open.state.noteRef === undefined) open.state.noteRef = `${year}:${page}`;
     if (categoryForHeading(open.category) === null) unseen.add(`${open.pope}: ${open.category}`);
     if (entryDate.length === 7) stats.monthOnly++;
     stats.entries++;
     if ((categoryForHeading(open.category)?.harvested ?? 'no') !== 'no') stats.harvestedEntries++;
     result.entries.push({
       series: 'AAS', volume, year, ...(opts.part ? { part: opts.part } : {}), page,
-      pope: entryPope, category: open.category, date: entryDate,
-      ...splitEntryText(entryText, { bareIncipits }),
+      pope: entryPope, category: open.category, date: entryDate, ...(open.note ? { dateNote: open.note } : {}), ...(open.state?.noteRef ? { dateNoteRef: open.state.noteRef } : {}),
+      ...splitEntryText(entryText, { bareIncipits, constitution: categoryForHeading(open.category)?.classes.some((c) => c.requires === 'apostolic-constitution') ?? false }),
       raw: open.lines.map((l) => l.replace(/\s+$/, '')).join('\n'),
     });
     open = null;

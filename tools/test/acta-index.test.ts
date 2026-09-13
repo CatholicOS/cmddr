@@ -546,7 +546,7 @@ describe('parseActaIndex on the volumes (acta volumes spec §4)', () => {
                         nus minus principalis eliguntur abbatiae « nullius » Beatae Ma­
                         riae Auxiliatricis de Belmont 621
                                           VI - HOMILIAE
-1978         Ian.          1       Die ad pacem inter nationes fovendam undecimum celebrato,
+1958         Ian.          1       Die ad pacem inter nationes fovendam undecimum celebrato,
                                                     89
 » » 29 In Basilica Vaticana 155`, 'I - ACTA PII PP. XII'), { year: 1958, volume: 50, ...columnar });
     expect(r.entries.map((e) => [e.page, e.incipit])).toEqual([[621, 'Perfugium rebus'], [89, null], [155, null]]);
@@ -610,6 +610,273 @@ describe('parseActaIndex on the volumes (acta volumes spec §4)', () => {
   });
 });
 
+describe('parseActaIndex on the volumes of 1932-1957 (acta volumes spec §9, phase 2b-ii-a)', () => {
+  const xii = { year: 1950, volume: 42, columnar: true };
+
+  it('reads the pope heading in the OCR\'s spellings and records each as printed', () => {
+    // AAS 32 (1940) `1 - ACTA PII PP. XII`; AAS 33 (1941) `I - ACTA Pii PP. XII`; AAS 41 (1949) `I - ACTA PII PP. Xll`.
+    for (const heading of ['1 - ACTA PII PP. XII', 'I - ACTA Pii PP. XII', 'I - ACTA PII PP. Xll']) {
+      const r = parseActaIndex(volume(`                                   I - LITTERAE ENCYCLICAE
+1949 Nov. 8 Sollemnibus documentis. - Ad Venerabiles Fratres 529`, heading), xii);
+      expect(r.entries.map((e) => e.pope), heading).toEqual(['Pius XII']);
+      expect(r.popeHeadings, heading).toEqual([heading]);
+      expect(r.unmappedPopes, heading).toEqual([]);
+    }
+    // AAS 32 (1940) numbers the dicasteries' part `U - ACTA SS. CONGREGATIONUM`: it ends the pope's part.
+    const r = parseActaIndex(volume(`                                   I - LITTERAE ENCYCLICAE
+1949 Nov. 8 Sollemnibus documentis. - Ad Venerabiles Fratres 529
+                       U - ACTA SS. CONGREGATIONUM
+                     VI - SACRA CONGREGATIO DE PROPAGANDA FIDE
+1940 Ian. 28 Romana seu Sancti Ludovici. - Decretum de miraculis 70`, '1 - ACTA PII PP. XII'), xii);
+    expect(r.entries).toHaveLength(1);
+    expect(r.skippedParts).toEqual(['U - ACTA SS. CONGREGATIONUM']);
+  });
+
+  it('reads a category heading whose numeral the OCR misdrew, a known one in mixed case, and drops every column header', () => {
+    // `IY. -` (AAS 25, 1933), `1 -` (AAS 33, 1941), `XI •- SERMO` (AAS 31, 1939), `XIV - Sacra Consistoria` (AAS 46, 1954),
+    // `X - HORTATIO` followed by the column header `PAG..` on the next line (AAS 31), and `PAO.` / `PAS.` (AAS 30, 1938).
+    const r = parseActaIndex(volume(`                                        IY. - LITTERAE APOSTOLICAE
+                                                                              PAO.
+1933 Febr. 20 A venerabili fratre. - Basilicae minoris titulo ornatur 61
+                                         1 - LITTERAE DECRETALES
+                                                                              PAS.
+1940 Maii 2 Sanctitudinis culmen. - B. Gemmae Galgani, virgini 97
+                                     X - HORTATIO
+                                                                              PAG..
+1939 Iunii 24 Sollemnis conventus. - Quem Beatissimus Pater 245
+                                      XI •- SERMO
+1939 Dec. 24 Nel quarto. - A Ssmo D. N. habitus 5
+                                                  XIV - Sacra Consistoria
+1950 Maii 20 Camerarius Sacri Collegii 289`), xii);
+    expect(r.entries.map((e) => [e.category, e.page])).toEqual([
+      ['LITTERAE APOSTOLICAE', 61], ['LITTERAE DECRETALES', 97], ['HORTATIO', 245], ['SERMO', 5], ['SACRA CONSISTORIA', 289],
+    ]);
+    expect(r.unseenHeadings).toEqual([]);
+    expect(r.defects).toEqual([]);
+  });
+
+  it('reads the OCR\'s ditto marks and the junk stuck to a date token', () => {
+    // `y> » 20` (AAS 32, 1940), `» h 3` and `» »> »` (AAS 24, 1932), `» D »` (AAS 27, 1935), `)) )) 31` (AAS 28, 1936),
+    // `»• » »` (AAS 29), `" » » 28` (AAS 25), `» Nov. 8 -Caebuana` (AAS 34), `.1933 Martii 2` (AAS 25), `1950 Ian. • 14`
+    // (AAS 42), `1947 Oct. ; 20` (AAS 39), `» » .16` (AAS 28), `» Dec. 20\` (AAS 34), `« Apr. 20` (AAS 24).
+    const r = parseActaIndex(volume(`                                   III - CONSTITUTIONES APOSTOLICAE
+.1933 Martii 2 Tra i sacrosanti. - Ad Emum P. D. Franciscum 73
+  y> » 20 De Multan. - Praefectura Apostolica de Multan 31
+  » h 3 Quae rei sacrae. - Fines immutantur inter vicariatum 295
+  » »> » Cum diffusis. - Ex vicariatu apostolico 294
+  » D » De Leopoldville. - Erectionis vicariatus apost. 71
+  )) )) 31 Urbis. - S. Rochi paroecia supprimitur 227
+  »• » » Cincinnatensis et Columbensis. - Ab Archidioecesi 153
+  " » » 28 Auspicatus profecto. - Ad Emum P. D. Carolum 80
+  » Nov. 8 -Caebuana (Tagbilarana). - Ab Archidioecesi Nominis 25
+1950 Ian. • 14 CAMPIFONTIS (Wigorniensis). Ad animarum bonum. - A dioecesi 3
+1947 Oct. ; 20 Inter asperrimas. - Ad Excmum P. D. Angelum Rotta 421
+  » » .16 Compertum habemus. - Sanctuarium B. Mariae V. 100
+  » Dec. 20\\ Bellohorizontinae (Oliveirensis). - Ab Archidioecesi 200
+  « Apr. 20 Romanorum Pontificum. - Dismembrato territorio 300`), xii);
+    expect(r.entries.map((e) => [e.date, e.page])).toEqual([
+      ['1933-03-02', 73], ['1933-03-20', 31], ['1933-03-03', 295], ['1933-03-03', 294], ['1933-03-03', 71], ['1933-03-31', 227],
+      ['1933-03-31', 153], ['1933-03-28', 80], ['1933-11-08', 25], ['1950-01-14', 3], ['1947-10-20', 421], ['1947-10-16', 100],
+      ['1947-12-20', 200], ['1947-04-20', 300],
+    ]);
+    expect(r.entries.map((e) => e.incipit)).toContain('Quae rei sacrae');
+    expect(r.entries[8]).toMatchObject({ toponym: null, description: expect.stringContaining('Ab Archidioecesi') });
+    expect(r.defects).toEqual([]);
+  });
+
+  it('reads the OCR\'s month spellings where a day follows, and leaves an unlisted one -- and what inherits it -- unreadable', () => {
+    // `» Ott. 3` (AAS 45, 1953), `1935 Doc. 26` (AAS 28), `1932 Man 2` (AAS 25; *Maii*, the constitution's own dating formula at
+    // AAS 25 p. 28). `» Xyz. 4` is no month: the entry is reported, the next inherits the unreadable month and the year, and
+    // a printed month restores the chain. `Deo dicatum 14` is a continuation line, never a December.
+    const r = parseActaIndex(volume(`                                   IV - LITTERAE APOSTOLICAE
+1932 Man 2 Apostolica Sedes. - De novae archidioecesis 25
+  » Ott. 3 Quum octogesimum aetatis. - Ad Emum P. D. Fridericum 500
+1935 Doc. 26 Ad catholici sacerdotii. - Venerabilibus fratribus 5
+  » Xyz. 4 Ignota. - Ad quemdam 10
+  » » 5 Item ignota. - Ad alium 11
+  » Iulii 18 Romanorum Pontificum. - Titulo ac privilegiis Basilicae
+                              Minoris honestatur templum in civitate Mediolanensi
+                              Deo dicatum 14`), xii);
+    expect(r.entries.map((e) => [e.date, e.page, e.incipit])).toEqual([
+      ['1932-05-02', 25, 'Apostolica Sedes'], ['1932-10-03', 500, 'Quum octogesimum aetatis'], ['1935-12-26', 5, 'Ad catholici sacerdotii'],
+      ['1935-07-18', 14, 'Romanorum Pontificum'],
+    ]);
+    expect(r.defects.map((d) => d.message.slice(0, 49))).toEqual([
+      "unreadable date (unreadable month 'Xyz.'): » Xyz.",
+      'unreadable date (inherits an unreadable month): »',
+    ]);
+  });
+
+  it('repairs a year the OCR misdrew beyond the century, notes it, and leaves a leading ditto year unreadable', () => {
+    // `1047 Maii 15` (AAS 39, 1947) and `1048 Maii 1` (AAS 40) -- here `1049` against a 1950 volume -- `3950 Dec. 10` (AAS 42), `i944 Maii 11` and `i 945 Apr. 15` (AAS 37),
+    // `19.49 Nov. 7` (AAS 42); a `»` in the year column with nothing before it (AAS 42 (1950) 911, *Munificentissimus Deus*).
+    const r = parseActaIndex(volume(`                                   I - BULLA DOGMATICA- ,
+   » Nov,. 1 Munificentissimus Deus. - Fidei Dogma definitur 753
+                                   II - LITTERAE DECRETALES
+1049 Maii 15 Periucundum nobis. - Beato Nicolao de Flüe 1
+3950 Dec. 10 Delegatis Viris ab Actione Catholica 118
+i944 Maii 11 De Bangkok (de Chanthaburi). - E Vicariatu Apostolico 305
+i 945 Apr. 15 Communium interpretes dolorum. - Ad Venerabiles Fratres 97
+19.49 Nov. 7 Iam plures. - Ad Emum P. D. Normannum 139
+1919 Febr. 11 Ad universos Archiepiscopos 58`), xii);
+    expect(r.entries.map((e) => [e.date, e.dateNote?.slice(0, 22)])).toEqual([
+      ['1949-05-15', 'year 1049 read as 1949'], ['1950-12-10', 'year 3950 read as 1950'],
+      ['1944-05-11', undefined], ['1945-04-15', undefined], ['1949-11-07', undefined], ['1919-02-11', undefined],
+    ]);
+    // A year inside the century is never repaired: AAS 41 prints `1919` for 1948 and 1949 alike (the creator holds it).
+    expect(r.entries[5]).toMatchObject({ date: '1919-02-11' });
+    expect(r.defects.map((d) => d.message.replace(/: .*$/, ''))).toEqual([
+      'unreadable date (nothing to inherit)', 'year 1049 read as 1949 (an OCR digit)', 'year 3950 read as 1950 (an OCR digit)',
+    ]);
+    // The dittos after a repaired year inherit the reading and its note.
+    const d = parseActaIndex(volume(`                                   II - LITTERAE DECRETALES
+1049 Maii 15 Periucundum nobis. - Beato Nicolao de Flüe 1
+  » Iunii 22 Beato Iosepho Cafasso Sanctorum honores decernuntur 217
+1950 Iulii 1 Alia. - Ad quemdam 300`), xii);
+    expect(d.entries.map((e) => [e.date, e.dateNote?.slice(0, 22)])).toEqual([['1949-05-15', 'year 1049 read as 1949'], ['1949-06-22', 'year 1049 read as 1949'], ['1950-07-01', undefined]]);
+  });
+
+  it('skips a date token the OCR doubled, and reads a damaged day as month-only', () => {
+    // `» Apr. Apr. 1` (AAS 26, 1934); `.1930 Iunii 2$>` (AAS 28 (1936), *Vigilanti cura*: 29 June 1936 on the shelf).
+    const r = parseActaIndex(volume(`                                   I - LITTERAE DECRETALES
+1934 Martii 19 Benignissimus Deus. - Beato Iosepho Benedicto Cottolengo 209
+  » Apr. Apr. 1 Geminata laetitia. - Beato Ioanni Bosco 281
+.1930 Iunii 2$> Vigilanti cura. - Venerabilibus Fratribus 249`), xii);
+    expect(r.entries.map((e) => [e.date, e.incipit])).toEqual([
+      ['1934-03-19', 'Benignissimus Deus'], ['1934-04-01', 'Geminata laetitia'], ['1930-06', 'Vigilanti cura'],
+    ]);
+    expect(r.defects.map((d) => d.message.slice(0, 44))).toEqual(["day '2$>' unreadable, read as month-only: .1"]);
+  });
+
+  it('gives a date the layout mode set beside a continuation line to the blank-dated entry after it', () => {
+    // AAS 27 (1935) 509: `» Apr. 4` sits on the last line of the entry before, and *Paterna caritas* has no date column.
+    const r = parseActaIndex(volume(`                                   IV - LITTERAE APOSTOLICAE
+1934 Martii 5                   E religiosae pietatis. - Ecclesiae S. Agathae et S. Mariae
+                                      Novae in Urbe ad honorem et praerogativas ecclesia­
+   » Apr. 4                          rum stationalium evehuntur . 363
+                                Paterna caritas. - Sancta Teresia a Puero Iesu. Virgo, Pa­
+                                     trona principalis constituuntur dioecesis Floridensis 40
+   » » »                        In loco. - Beata Maria Virgo sub titulo « dell'Arco » 41`), xii);
+    expect(r.entries.map((e) => [e.date, e.page, e.incipit])).toEqual([
+      ['1934-03-05', 363, 'E religiosae pietatis'], ['1934-04-04', 40, 'Paterna caritas'], ['1934-04-04', 41, 'In loco'],
+    ]);
+    expect(r.entries[0]!.description).toBe('Ecclesiae S. Agathae et S. Mariae Novae in Urbe ad honorem et praerogativas ecclesiarum stationalium evehuntur');
+  });
+
+  it('closes an entry whose page follows one space when a blank-dated entry comes next, and reads a hanging-indent entry', () => {
+    // AAS 24 (1932) 420: *Sub anulo* and *Cum, aucto pastorum* print no date column; AAS 33 (1941) 533: the dated entries'
+    // text sits right after the date while *Tui in S. C.* keeps the page's hanging indent, two columns short of the
+    // continuations; AAS 47 (1955) 869: a continuation line at the entry column, opened with a capital, is not an entry
+    // on a page whose entries open `Incipit. - Description`.
+    const r = parseActaIndex(volume(`                                   IV - LITTERAE APOSTOLICAE
+1932 Martii 31            Apostolicum munus. - Separato territorio e vicariatu 39
+         Apr.            Expostularunt a Nobis. - Distracto territorio a vicariatu
+                              apostolico de Kwango, novus erigitur vicariatus apo­
+                              stolicus de Kisantu in Congo Belgico . 40
+                         Sub anulo. - Vicariatus apostolici Cameronensis nomen
+                             in appellationem de Yaounde immutatur 42
+                         Cum, aucto pastorum. - Separato territorio e vicariatu
+                              apostolico de Tsinan erigitur nova praefectura apo­
+                              stolica de Lintsing cleroque indigenae committitur. . 42
+\f                                   V - EPISTULAE
+1941 Febr. 24 It is with heartfelt affection. - Ad Praesidem, Doctores
+                                   et alumnos Studiorum Universitatis « Fordham » in
+                                   civitate Neo-Eboracensi : primo saeculo ab eius ortu 325
+  » Apr. 3 Nonagesimum aetatis annum. - Ad Emum P. D. Ianua­
+                                   rium Episcopum Ostiensem et Albanensem S. R. E.
+                                   Cardinalem Granito Pignatelli di Belmonte 494
+                                 Tui in S. C. de Propaganda Fide. - Ad Emum P. D.
+                                   Petrum tit. S. Crucis in Hierusalem S. R. E. Presb.
+                                   Cardinalem Fumasoni Biondi, Praefectum 495
+  » Maii 1 Sedecim ante saeculis. - Ad ecclesiasticam hierarchiam
+                                   Sanctorum honores decernuntur 161
+  » » 2 Explenti feliciter tibi. - Ad Emum P. D. Iosephum 162`), xii);
+    expect(r.entries.map((e) => [e.date, e.page, e.incipit])).toEqual([
+      ['1932-03-31', 39, 'Apostolicum munus'], ['1932-04', 40, 'Expostularunt a Nobis'], ['1932-04', 42, 'Sub anulo'], ['1932-04', 42, 'Cum, aucto pastorum'],
+      ['1941-02-24', 325, 'It is with heartfelt affection'], ['1941-04-03', 494, 'Nonagesimum aetatis annum'],
+      ['1941-04-03', 495, 'Tui in S. C. de Propaganda Fide'], ['1941-05-01', 161, 'Sedecim ante saeculis'], ['1941-05-02', 162, 'Explenti feliciter tibi'],
+    ]);
+    expect(r.defects).toEqual([]);
+  });
+
+  it('consumes the translations listed under an act as sub-items outside the parse rate, and reports a page fused with a glued header\'s', () => {
+    // AAS 33 (1941) 530: the Christmas message's versions; AAS 31 (1939): `E textu latino versio anglica`;
+    // AAS 46 (1954) 788: `appellandae. 33788   Index documentorum …`, the entry's 337 and the header's 788 sharing a digit.
+    const r = parseActaIndex(volume(`                                   IX - NUNTII RADIOPHONICI
+1940 Dec. 24 Grazie, Venerabili Fratelli. - A Ssmo D. N. in pervigilio 5
+                                   Eius versiones a Statione radiophonica Civitatis Vati­
+                                   canae editae :
+                                   lingua gallica . . . . . . . . . . . . 205
+                                   lingua anglica 216
+1941 Ian. 6 Sertum laetitiae. - Ad Dilectos Filios 645
+                                   E textu latino versio anglica 651
+                                   IV - CONSTITUTIONES APOSTOLICAE
+\f788                       Index documentorum chronologico ordine digestus
+1950 Maii 7 DE MERU (Meruensis). Progreditur continenter. - Apostolica
+                    Praefectura de Meru, in Africa Orientali Britannica, ad
+                    dignitatem provehitur dioecesis, « Meruensis » appellandae. 33788                       Index documentorum chronologico ordine diges`), xii);
+    expect(r.entries.map((e) => [e.page, e.incipit])).toEqual([[5, 'Grazie, Venerabili Fratelli'], [645, 'Sertum laetitiae']]);
+    expect(r.stats).toMatchObject({ entries: 2, pageLines: 2, subItems: 5, translations: 4, harvestedPageLines: 2, harvestedEntries: 2, withoutPage: 1 });
+    expect(r.defects.map((d) => d.message.slice(0, 40))).toEqual(['entry without a page number: 1950 Maii 7']);
+  });
+
+  it('reads a page glued to a leader dot or followed by OCR junk, and text opening with an OCR mark', () => {
+    // `.154` (AAS 30, 1938), `47'` and `226 ,` (AAS 24, 1932), `549-` (AAS 32), `8. Fidei` (AAS 40, 1948), `$. Iacobi` (AAS 33).
+    const r = parseActaIndex(volume(`                                   V - MOTU PROPRIO
+1938 Martii 25 Sancta Dei Ecclesia. - De iurisdictione Sacrae Congre­
+                              gationis pro Ecclesia Orientali .154
+  » » 1 Ob nimiam. - E vicariatu apostolico de Changteh sepa­
+                              rato territorio nova conditur praefectura apostolica 47'
+  » Nov. 1 Ut, aucto Pastorum. - Distracto territorio e vicariatu 226 ,
+  » » 2 Dans la tristesse. - Ad Emum P. D. Iosephum Erne­
+                              stum Van Roey, Archiepiscopum Mechliniensem . . 549-
+1947 Iulii 19 8. Fidei in Argentina. - Capitulum Metropolitanum eligitur . 64
+  » Sept. 4 $. Iacobi Capitis Viridis et aliarum. - In Coloniis Lusitanis 14`), xii);
+    expect(r.entries.map((e) => e.page)).toEqual([154, 47, 226, 549, 64, 14]);
+    expect(r.entries[4]!.description).toContain('Capitulum Metropolitanum eligitur');
+    expect(r.defects).toEqual([]);
+  });
+
+  it('dates a blank-dated entry by the formula its own description prints, and an act before the first heading feeds the ditto chain', () => {
+    // AAS 31 (1939) 740: the radio messages of 1939 have no date column; AAS 25 (1933) 515: the bull of indiction stands
+    // before the first category heading, reported, and `» Iunii 3` after it inherits 1933.
+    const r = parseActaIndex(volume(`1933 Ian. 6 INDICTIO Anni Sancti extra ordinem ac generalis maximi-
+                                 que Iubilaei undevicesimo exeunte saeculo 5
+                                         I. - EPISTULA ENCYCLICA
+  » Iunii 3 Dilectissima Nobis. - Ad Emos PP. DD. Franciscum 261
+                                        IX - NUNTII RADIOPHONICI
+                            Con inmenso gozo. - A Ssmo D. N. Pio Div. Prov.
+                                 Papa XII ad universos Hispaniae christifideles da­
+                                 tus, die 16 mensis Aprilis, anno 1939 151
+                            Pour la douzième fois. - A Beatissimo Patre, die 7 men­
+                                 sis Maii anno 1939, christifidelibus datus 221`), xii);
+    expect(r.entries.map((e) => [e.date, e.page])).toEqual([['1933-06-03', 261], ['1939-04-16', 151], ['1939-05-07', 221]]);
+    expect(r.defects.map((d) => d.message.slice(0, 45))).toEqual([
+      'Pius XI: line before any category heading: 19', 'Pius XI: line before any category heading: qu',
+    ]);
+  });
+
+  it('parses every fixture of 1932-1957 with no unseen heading and no unmapped pope, above 95 % over the harvested categories except the six named', () => {
+    // 1936 (92 %): *Vigilanti cura*'s day is `2$>` and the Academy's member list under a motu proprio has four page lines;
+    // 1939 (94 %): two radio messages with no date column or formula, an appendix line and an OCR page (`i.62`);
+    // 1948 (94 %): six OCR pages (`43G`, `III`, a page lost on *Auspicia quaedam*, a line of dittos alone);
+    // 1949 (89 %): a year the OCR reads `3918` breaks the ditto chain of the eight letters after it, `19 IS Ian.` another, and two OCR days;
+    // 1950 (92 %): the ceremony of the Assumption listed after the bull (five page lines), the volume's first entry with a `»` for its year, a month read `Die.`, and OCR pages (`c`, `1S8`, `5 M`);
+    // 1953 (87 %): a year the OCR reads `1961` (two years before the volume: outside the repair's span) breaks the ditto chain of the letters after it.
+    // Each is listed in the report (docs/superpowers/reports/2026-09-13-acta-volumes-1932-1957.md §1); none is a shape
+    // the parser could read without guessing.
+    const exempt: Record<string, number> = { 1936: 0.92, 1939: 0.94, 1948: 0.94, 1949: 0.89, 1950: 0.91, 1953: 0.87 };
+    for (let year = 1932; year <= 1957; year++) {
+      const vol = year - 1908;
+      const r = parseActaIndex(readFileSync(`tools/fixtures/acta/aas-${vol}-${year}.txt`, 'utf8'), { year, volume: vol, columnar: true });
+      expect(r.unseenHeadings, String(year)).toEqual([]);
+      expect(r.unmappedPopes, String(year)).toEqual([]);
+      expect(r.popeHeadings.length, String(year)).toBe(year === 1939 ? 2 : 1);
+      expect(harvestedParseRate(r.stats)!, String(year)).toBeGreaterThanOrEqual(exempt[year] ?? 0.95);
+    }
+  });
+});
+
 describe('splitEntryText', () => {
   it('strips guillemets and takes the rest as description, whatever follows the closing one', () => {
     expect(splitEntryText('« Venite benedicti  ». - Venerabili Dei Servo')).toEqual({ incipit: 'Venite benedicti', quoted: true, toponym: null, description: 'Venerabili Dei Servo' });
@@ -662,6 +929,19 @@ describe('splitEntryText on the volumes', () => {
     expect(splitEntryText('Constitutio « Promulgandi », de promulgatione legum', { bareIncipits: false })).toMatchObject({ incipit: 'Promulgandi', quoted: true, description: 'de promulgatione legum' });
     expect(splitEntryText('Pontificium Institutum Biblicum in Urbe erigitur. — Leges', { bareIncipits: false }).incipit).toBeNull();
     expect(splitEntryText('Pontificium Institutum Biblicum in Urbe erigitur. — Leges').incipit).toBe('Pontificium Institutum Biblicum in Urbe erigitur');
+  });
+});
+
+describe('splitEntryText on the volumes of 1932-1957', () => {
+  it('reads a mixed-case toponym with its vernacular in parentheses, and the incipit after it where one is printed', () => {
+    expect(splitEntryText('De Sienhsien (De Kinghsien). - Vicariatus Apostolicus de Sienhsien bipartitur')).toEqual({ incipit: null, quoted: false, toponym: 'De Sienhsien (De Kinghsien)', description: 'Vicariatus Apostolicus de Sienhsien bipartitur' });
+    expect(splitEntryText('S. Ludovici de Maragnano, S. Ioseph de Grajahu (Pinerensis). - Archidioecesis S. Ludovici')).toMatchObject({ toponym: 'S. Ludovici de Maragnano, S. Ioseph de Grajahu (Pinerensis)', incipit: null });
+    expect(splitEntryText('Transvaallensis Septemtrionalis (de Pietersburg).-Praefectura Apostolica')).toMatchObject({ toponym: 'Transvaallensis Septemtrionalis (de Pietersburg)', description: 'Praefectura Apostolica' });
+    expect(splitEntryText('Aleppensis (Berytensis). Solent caeli. - Ex territorio Apostolici')).toEqual({ incipit: 'Solent caeli', quoted: false, toponym: 'Aleppensis (Berytensis)', description: 'Ex territorio Apostolici' });
+    // An addressee is never a toponym, and a dash set without its spaces still ends the incipit.
+    expect(splitEntryText('Ad Emum P. D. Petrum (Praefectum). - De re quadam').toponym).toBeNull();
+    expect(splitEntryText('Quae rei sacrae.-Fines immutantur inter vicariatum')).toMatchObject({ incipit: 'Quae rei sacrae', description: 'Fines immutantur inter vicariatum' });
+    expect(splitEntryText('Ad pastorale ministerium..-De dioecesis Quilonensis')).toMatchObject({ incipit: 'Ad pastorale ministerium', description: 'De dioecesis Quilonensis' });
   });
 });
 

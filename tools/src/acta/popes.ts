@@ -29,11 +29,15 @@ export const ACTA_POPES: readonly ActaPope[] = [
   { genitive: 'PII X', pope: 'Pius X', issuerId: 'rp:pius-x', began: '1903-08-04' },
   // `I. - ACTA BENEDICTI PP. XV` (AAS 9-I, 1917). Elected 3 September 1914.
   { genitive: 'BENEDICTI XV', pope: 'Benedictus XV', issuerId: 'rp:benedict-xv', began: '1914-09-03' },
-  // `I. - ACTA PII PP. XI` (AAS 23, 1931). Elected 6 February 1922.
+  // `I. - ACTA PII PP. XI` (AAS 23, 1931; AAS 24-31, 1932-1939, with the OCR's `L - ACTA
+  // PII PP. XI` in 1935 and 1937). Elected 6 February 1922.
   { genitive: 'PII XI', pope: 'Pius XI', issuerId: 'rp:pius-xi', began: '1922-02-06' },
-  // `I - ACTA PII PP. XII` (AAS 50, 1958). Elected 2 March 1939. The same volume's `II -
-  // ACTA IN MORTE PII PP. XII` is not a pope part (the name words do not match) and is
-  // skipped with the conclave part that follows it.
+  // `I - ACTA PII PP. XII` (AAS 50, 1958; AAS 31-49, 1939-1957, where the OCR prints `IV -
+  // ACTA PII PP. XII` (1939, after *Acta in morte Pii PP. XI* and *Acta Conclavis*), `1 -
+  // ACTA PII PP. XII` (1940), `I - ACTA Pii PP. XII` (1941) and `I - ACTA PII PP. Xll`
+  // (1949), which the parser normalises before the lookup, index.ts). Elected 2 March
+  // 1939. The 1958 volume's `II - ACTA IN MORTE PII PP. XII` is not a pope part (the name
+  // words do not match) and is skipped with the conclave part that follows it.
   { genitive: 'PII XII', pope: 'Pius XII', issuerId: 'rp:pius-xii', began: '1939-03-02' },
   // `IV - ACTA IOANNIS PP. XXIII` (AAS 50, 1958). Elected 28 October 1958.
   { genitive: 'IOANNIS XXIII', pope: 'Ioannes XXIII', issuerId: 'rp:john-xxiii', began: '1958-10-28' },

@@ -20,7 +20,14 @@ describe('the AAS category table', () => {
     expect(categoryForHeading('CHIROGRAPHI')?.id).toBe('Chirographa');
     expect(categoryForHeading('EPISTULA APOSTOLICA')?.classes).toEqual([{ genre: 'apostolic-letter', excludes: 'motu-proprio' }]);
     expect(categoryForHeading('NUNTII')?.classes.map((c) => c.genre)).toEqual(['message', 'urbi-et-orbi']);
-    expect(categoryForHeading('ADHORTATIO')?.classes).toEqual([]);
+    // A bare *Adhortatio* maps to the exhortation class as `partly` since AAS 46 (1954)
+    // printed *I rapidi progressi* under it: matched where the shelf has one, never created.
+    expect(categoryForHeading('ADHORTATIO')).toMatchObject({ classes: [{ genre: 'apostolic-exhortation' }], harvested: 'partly' });
+    expect(categoryForHeading('HORTATIONES')).toMatchObject({ id: 'Hortationes', harvested: 'partly' });
+    expect(categoryForHeading('IY. - LITTERAE APOSTOLICAE')?.id).toBe('Litterae Apostolicae');
+    expect(categoryForHeading('I r- LITTERAE DECRETALES')?.id).toBe('Litterae Decretales');
+    expect(categoryForHeading("LITTERAE DECRETALES'")?.id).toBe('Litterae Decretales');
+    expect(categoryForHeading('I - BULLA DOGMATICA-')?.id).toBe('Constitutiones Apostolicae');
     expect(categoryForHeading('LITTERAE INAUDITAE')).toBeNull();
   });
 
