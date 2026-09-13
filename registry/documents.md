@@ -7,7 +7,7 @@ for a document in an annual series (`series.id` and `series.year`; the occasion 
 signed). The issuer segment is always the local part of `issuerId`, so conciliar documents namespace under
 their council and record the promulgating pope separately. See the design specs for the minting rules.
 
-**5387 documents**, of which 392 carry a provisional identifier — the source prints no incipit for them, so their id is genre-and-date based and may be re-minted.
+**7019 documents**, of which 712 carry a provisional identifier — the source prints no incipit for them, so their id is genre-and-date based and may be re-minted.
 
 Every document appears in both views below; neither is a subset of the other.
 
@@ -21,10 +21,10 @@ Every document appears in both views below; neither is a subset of the other.
 | [`rp:leo-xiii`](documents/by-issuer/leo-xiii.md) | 263 | 1878-03-28 – 1903-06-22 | apost_constitutions, apost_letters, briefs, bulls, encyclicals, letters, motu_proprio, speeches |
 | [`rp:pius-x`](documents/by-issuer/pius-x.md) | 308 | 1903-08-09 – 1914-01-20 | apost_constitutions, apost_exhortations, apost_letters, encyclicals, letters, motu_proprio; AAS index 1909–1909 (2 AAS-only) |
 | [`rp:benedict-xv`](documents/by-issuer/benedict-xv.md) | 71 | 1914-09-08 – 1921-09-30 | apost-constitutions, apost_exhortations, apost_letters, briefs, bulls, encyclicals, motu_proprio; AAS index 1917–1917 (8 AAS-only) |
-| [`rp:pius-xi`](documents/by-issuer/pius-xi.md) | 218 | 1922-03-01 – 1939-01-18 | apost_constitutions, apost_letters, briefs, bulls, encyclicals, letters, motu_proprio; AAS index 1931–1931 (60 AAS-only) |
-| [`rp:pius-xii`](documents/by-issuer/pius-xii.md) | 296 | 1939-06-18 – 1958-09-29 | apost_constitutions, apost_exhortations, apost_letters, briefs, bulls, encyclicals, letters, motu_proprio, messages/urbi; AAS index 1958–1958 (36 AAS-only) |
+| [`rp:pius-xi`](documents/by-issuer/pius-xi.md) | 690 | 1922-03-01 – 1939-01-18 | apost_constitutions, apost_letters, briefs, bulls, encyclicals, letters, motu_proprio; AAS index 1931–1939 (532 AAS-only) |
+| [`rp:pius-xii`](documents/by-issuer/pius-xii.md) | 1457 | 1939-03-14 – 1958-09-29 | apost_constitutions, apost_exhortations, apost_letters, briefs, bulls, encyclicals, letters, motu_proprio, messages/urbi; AAS index 1939–1958 (1197 AAS-only) |
 | [`rp:john-xxiii`](documents/by-issuer/john-xxiii.md) | 193 | 1958-11-07 – 1963-05-20 | apost_constitutions, apost_exhortations, apost_letters, encyclicals, motu_proprio, messages/urbi_et_orbi |
-| [`rp:paul-vi`](documents/by-issuer/paul-vi.md) | 806 | 1963-06-25 – 1978-08-05 | apost_constitutions, apost_exhortations, apost_letters, encyclicals, motu_proprio, messages/peace, messages/communications, messages/lent, messages/migration, messages/missions, messages/sick, messages/vocations, messages/urbi_et_orbi; AAS index 1978–1978 (29 AAS-only) |
+| [`rp:paul-vi`](documents/by-issuer/paul-vi.md) | 805 | 1963-06-25 – 1978-08-05 | apost_constitutions, apost_exhortations, apost_letters, encyclicals, motu_proprio, messages/peace, messages/communications, messages/lent, messages/migration, messages/missions, messages/sick, messages/vocations, messages/urbi_et_orbi; AAS index 1978–1978 (28 AAS-only) |
 | [`oec:vatican-ii`](documents/by-issuer/vatican-ii.md) | 16 | 1963-12-04 – 1965-12-07 | — (conciliar) |
 | [`rp:john-paul-i`](documents/by-issuer/john-paul-i.md) | 7 | 1978-09-01 – 1978-09-28 | apost_letters, letters |
 | [`rp:john-paul-ii`](documents/by-issuer/john-paul-ii.md) | 2105 | 1978-10-28 – 2005-04-01 | apost_constitutions, apost_exhortations, apost_letters, bulls, encyclicals, motu_proprio, messages/peace, messages/communications, messages/lent, messages/migration, messages/missions, messages/sick, messages/vocations, messages/youth, messages/food, messages/consecrated_life, messages/tourism, messages/literacy, messages/urbi |
@@ -36,8 +36,8 @@ Every document appears in both views below; neither is a subset of the other.
 
 | Genre | Documents | Dates |
 | --- | --- | --- |
-| [`apostolic-exhortation`](documents/by-genre/apostolic-exhortation.md) | 54 | 1908-08-04 – 2025-10-04 |
-| [`apostolic-letter`](documents/by-genre/apostolic-letter.md) | 2380 | 1857-06-15 – 2026-08-29 |
+| [`apostolic-exhortation`](documents/by-genre/apostolic-exhortation.md) | 55 | 1908-08-04 – 2025-10-04 |
+| [`apostolic-letter`](documents/by-genre/apostolic-letter.md) | 2942 | 1857-06-15 – 2026-08-29 |
 | [`brief`](documents/by-genre/brief.md) | 30 | 1741-05-30 – 1950-09-08 |
 | [`constitution`](documents/by-genre/constitution.md) | 6 | 1870-04-24 – 1965-12-07 |
 | [`declaration`](documents/by-genre/declaration.md) | 3 | 1965-10-28 – 1965-12-07 |
@@ -45,9 +45,9 @@ Every document appears in both views below; neither is a subset of the other.
 | [`discourse-address`](documents/by-genre/discourse-address.md) | 30 | 1848-04-29 – 1903-06-22 |
 | [`encyclical`](documents/by-genre/encyclical.md) | 293 | 1740-12-03 – 2026-05-15 |
 | [`homily`](documents/by-genre/homily.md) | 11 | 2014-02-02 – 2025-02-01 |
-| [`letter`](documents/by-genre/letter.md) | 447 | 1863-12-21 – 1978-09-28 |
+| [`letter`](documents/by-genre/letter.md) | 888 | 1863-12-21 – 1978-09-28 |
 | [`message`](documents/by-genre/message.md) | 534 | 1960-12-22 – 2026-08-15 |
-| [`papal-bull`](documents/by-genre/papal-bull.md) | 1439 | 1749-03-15 – 2026-01-08 |
+| [`papal-bull`](documents/by-genre/papal-bull.md) | 2067 | 1749-03-15 – 2026-01-08 |
 | [`prayer`](documents/by-genre/prayer.md) | 1 | 1961-09-29 – 1961-09-29 |
 | [`unmapped`](documents/by-genre/unmapped.md) | 5 | 1846-07-16 – 1849-02-14 |
 | [`urbi-et-orbi`](documents/by-genre/urbi-et-orbi.md) | 145 | 1952-04-13 – 2026-04-05 |
@@ -76,7 +76,7 @@ This registry covers the **formal document shelves** of vatican.va. Deliberately
   harvested; the occasional residue is not yet.
 - **Year-partitioned `letters` shelves** — John XXIII, Benedict XV, and Paul VI onward. The
   `letters` shelf is harvested only where the aggregate index carries its items.
-- **The shelves are selections, and the *Acta* fill them only where a shelf is harvested.** 412 documents are created from the annual *Acta Apostolicae Sedis* index (2015–2024) for acts the
+- **The shelves are selections, and the *Acta* fill them only where a shelf is harvested.** 2044 documents are created from the annual *Acta Apostolicae Sedis* index (2015–2024) for acts the
   harvested shelves lack — constitutions, apostolic letters, canonisation decretals; `source.shelf` is
   `aas/{year}`, the AAS column is their source as well as their citation, and their titles are the index's
   Latin entries. An act in a category whose shelf is not harvested (letters, homilies, speeches, occasional

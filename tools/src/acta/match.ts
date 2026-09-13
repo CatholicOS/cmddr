@@ -42,6 +42,8 @@ export const POPE_ISSUERS: Readonly<Record<string, string>> =
 
 /** Whether the parser dated the entry to the month only (`YYYY-MM`). */
 export const isMonthOnly = (e: { date: string }): boolean => e.date.length === 7;
+/** Whether the index prints no readable year for the entry (`????-MM-DD`, index.ts): matched only through a curated correction. */
+export const isUnprintedYear = (e: { date: string }): boolean => e.date.startsWith('????');
 
 export interface ActaMatch {
   entry: ActaEntry;
@@ -156,6 +158,8 @@ export function matchActa(rawEntries: ActaEntry[], docs: DocumentRecord[]): Acta
     }
 
     const inClasses = (d: DocumentRecord) => category.classes.some((c) => inClass(d, c));
+    // No year printed and no curated correction: nothing to match against, no near-miss.
+    if (isUnprintedYear(entry)) { result.unmatched.push({ entry, sameDate: [], nearMisses: [] }); continue; }
     if (isMonthOnly(entry)) {
       const slug = entry.incipit === null ? null : slugify(entry.incipit);
       const monthly = inMonth(issuer, entry.date).filter(inClasses);
@@ -214,6 +218,10 @@ export function matchActa(rawEntries: ActaEntry[], docs: DocumentRecord[]): Acta
     const doc = byId.get(documentId)!;
     const evidenced = ms.map((m): ActaMatch | null => {
       const e = m.entry;
+      // A curated override (curation.ts) is evidence the row quotes: it keeps the match
+      // against unevidenced claims (the vernacular text of an encyclical the index enters
+      // a second time, AAS 25 (1933) 275).
+      if (m.by === 'curated') return m;
       if (e.incipit !== null && doc.incipit !== undefined && slugify(doc.incipit) === slugify(e.incipit)) return { ...m, by: 'incipit' };
       const category = categoryForHeading(e.category);
       if (e.toponym !== null && category?.classes.some((c) => c.requires === 'apostolic-constitution')
@@ -228,7 +236,7 @@ export function matchActa(rawEntries: ActaEntry[], docs: DocumentRecord[]): Acta
         dropped.add(m);
         const e = m.entry;
         const issuer = POPE_ISSUERS[e.pope]!;
-        const nearMisses = isMonthOnly(e) ? [] : [-1, 1].flatMap((delta) =>
+        const nearMisses = isMonthOnly(e) || isUnprintedYear(e) ? [] : [-1, 1].flatMap((delta) =>
           on(issuer, shiftDate(e.date, delta)).filter((d) => categoryForHeading(e.category)!.classes.some((c) => inClass(d, c))).map(candidate));
         result.unmatched.push({ entry: e, sameDate: (isMonthOnly(e) ? inMonth(issuer, e.date) : on(issuer, e.date)).map(candidate), nearMisses });
       }

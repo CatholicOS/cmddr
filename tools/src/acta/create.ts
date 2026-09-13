@@ -30,7 +30,7 @@ import { slugify } from '../slug.js';
 import { mintId, mintProvisionalId } from '../ids.js';
 import { POPES } from '../mappings/pontiffs.js';
 import { categoryForHeading, type ActaCategory, type GenreClass } from './categories.js';
-import { ACTA_HOLDS, curationKey } from './curation.js';
+import { ACTA_HOLDS, ACTA_INDEX_CORRECTIONS, ACTA_SHARED_PAGES, curationKey } from './curation.js';
 import { ACTA_FIXTURES_RETRIEVED, sourceOfEntry } from './join.js';
 import {
   POPE_ISSUERS, isMonthOnly, shiftDate, toponymStems, type ActaCandidate, type ActaMatchResult,
@@ -91,7 +91,9 @@ export const CREATED_CATEGORIES: Readonly<Record<string, { shelves: readonly str
   // rule below creates for those four and holds the rest (Francis's 81 entries of
   // 2015-2024 among them, where before phase 2b the category was not attempted at all).
   // Measured on the 2b-i sample (acta volumes spec §5): 1917 (Benedict XV, held), 1931
-  // (Pius XI), 1958 (Pius XII), 1978 (Paul VI and John Paul II held, John Paul I created).
+  // (Pius XI), 1958 (Pius XII), 1978 (Paul VI and John Paul II held, John Paul I created);
+  // the volumes of 1932-1957 (phase 2b-ii-a) create 437 letters of Pius XI and Pius XII,
+  // whose letters shelves carry 32 and 95 records.
   'Epistulae': {
     shelves: ['letters'],
     note: 'the letters shelf is harvested for Pius X, Pius XI, Pius XII and John Paul I (pontiffs.ts); held for every other pope',
@@ -115,7 +117,10 @@ export const NOT_CREATED: Readonly<Record<string, string>> = {
   // encicliche, _20180125_lettera-mons-paglia, _20190106_lettera-accademia-vita), which is
   // not harvested for Francis. Created from the *Acta* they would meet their shelf twins
   // under another class the day `letters` is harvested -- the situation the guard holds.
-  'Epistulae Apostolicae': 'the twelve unmatched are on the year-partitioned letters shelf, not harvested for Francis (#4)',
+  // Phase 2b-ii-a: Pius XII's *Epistulae Apostolicae* of 1940-1952 (eight entries) match
+  // his apost_letters shelf but for two, held here with the same reason: the class the
+  // index names is one vatican.va files on either shelf.
+  'Epistulae Apostolicae': 'the twelve unmatched of 2015-2024 are on the year-partitioned letters shelf, not harvested for Francis (#4); the two of Pius XII wait with them',
   // The category maps to two classes (message, urbi-et-orbi) that only the description
   // tells apart, and the occasional messages are on the year-partitioned pont-messages
   // shelf, not harvested (#4).
@@ -125,6 +130,13 @@ export const NOT_CREATED: Readonly<Record<string, string>> = {
   // among them match the harvested urbi shelves; the rest are occasional messages on no
   // harvested shelf, and the category maps to two classes. The count is #27's evidence.
   'Nuntii radiophonici': 'occasional radio messages are on no harvested shelf; the category maps to two classes; counted for #27 (medium), not applied',
+  // One heading, two classes of act (categories.ts): the 2019 joint appeal on Jerusalem
+  // is no exhortation, and the 1954 *I rapidi progressi* matched its shelf record.
+  'Adhortatio': 'the bare heading covers the 2019 joint appeal on Jerusalem, which is no apostolic exhortation; the 1954 exhortation under it matched the shelf',
+  // Pius XII's Lenten addresses to the Roman clergy under a heading that once also
+  // covers an apostolic exhortation (*In auspicando super*, matched): the addresses are
+  // the speeches class, not harvested, and nothing is minted from the heading.
+  'Hortationes': 'the heading covers the Lenten addresses to the parish priests of Rome (speeches, not harvested) beside one apostolic exhortation, which matched the shelf',
 };
 
 /**
@@ -163,6 +175,8 @@ export type HoldReason =
   | 'same-incipit-elsewhere'
   /** Two entries of one date share an incipit; the id scheme has no discriminator beyond the full date. */
   | 'id-collision'
+  /** The entry's page is cited by another entry or a matched document: one page opens one act (invariant 25) unless the page is curated as shared. */
+  | 'page-shared'
   /** The OCR has damaged the incipit or toponym (a stray character, a digit, an unbalanced bracket): the line is not the line as printed. */
   | 'ocr-damaged';
 
@@ -192,6 +206,9 @@ export interface ActaCreation { created: ActaCreated[]; held: ActaHoldRow[] }
  * as printed.
  */
 export function printedToponym(toponym: string): string {
+  // The volumes' mixed-case toponym (`De Nan-King seu Nanchinensis`, `Portalegrensis in
+  // Brasilia`, `S. Ludovici de Maragnano`) is printed as it stands.
+  if (!/[a-z][A-Z]/.test(toponym) && /^[A-ZÀ-Ý]/.test(toponym) && !/[A-Z]{2}/.test(toponym)) return toponym;
   if (/[a-z][A-Z]/.test(toponym) || !/[A-Z]{2}/.test(toponym)) {
     return toponym.toLowerCase().replace(/(^|[\s–-])(\p{L})/gu, (_, sep: string, c: string) => sep + c.toUpperCase());
   }
@@ -226,6 +243,18 @@ export function actaTitle(entry: ActaEntry): string {
 export const ocrDamaged = (text: string): boolean =>
   /[^\p{L}\p{N}\s.,;:'’"«»!?()–—-]/u.test(text)
   || (text.match(/\(/g) ?? []).length !== (text.match(/\)/g) ?? []).length;
+/**
+ * An incipit the OCR of a volume has damaged, beyond `ocrDamaged`: a mark no incipit carries
+ * (`Providet!tissimum Deum`, `Honesta"quaelibet`, `I'e?-agenti`, `a Albae iam»`), a digit, a
+ * full stop inside it that no abbreviation explains (`Quae. feliciter`; `Tui in S. C. de
+ * Propaganda Fide` is whole), a lower-case or non-letter initial (`ut tibi iisque`,
+ * `loubilaenm Maximum`, `.Altissimus creavit`), a lone initial with a full stop (`A.
+ * Minoriticae`) -- measured on the volumes of 1932-1957. A record minted from such a
+ * reading would carry an id the page does not print. The index PDFs are typeset, not
+ * recognised, and their incipits (`Lex N. DCXXVI`, `Il 30 novembre 2019`) are read as printed.
+ */
+export const incipitDamaged = (incipit: string): boolean =>
+  /[!?"«»ß$§%&*=+\d]/.test(incipit) || /(?<![A-Z])\.(?!$)/.test(incipit) || !/^[\p{Lu}]/u.test(incipit) || /^\p{L}\.\s/u.test(incipit);
 
 const isCalendarDate = (iso: string): boolean => {
   const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})$/);
@@ -372,16 +401,40 @@ export function createFromActa(
       hold(entry, 'unresolvable-date', `the index dates the entry to ${entry.date} with no day printed; matched by incipit within the month only, never created`, u.sameDate);
       continue;
     }
+    if (entry.date.startsWith('????')) {
+      hold(entry, 'unresolvable-date', `the index prints no readable year for the entry (${entry.date}: a ditto with nothing above it, or a token the OCR has broken); a curated correction quoting the act can supply it (curation.ts)`, u.sameDate);
+      continue;
+    }
     if (!isCalendarDate(entry.date)) {
       hold(entry, 'unresolvable-date', `${entry.date} is not a calendar date`);
+      continue;
+    }
+    // A date the parser read beyond the print (an OCR digit of the year repaired; index.ts
+    // `dateNote`): the matcher may find the shelf record on that date, but nothing is
+    // minted from a reading -- unless a curated row confirms it against the act's own
+    // dating formula (ACTA_INDEX_CORRECTIONS, whose `date` then equals the reading), on
+    // this entry or on the entry whose line carried the token, which the dittos inherit.
+    const confirmed = ACTA_INDEX_CORRECTIONS[key]?.date === entry.date
+      || (entry.dateNoteRef !== undefined && ACTA_INDEX_CORRECTIONS[entry.dateNoteRef]?.date.slice(0, 4) === entry.date.slice(0, 4));
+    if (entry.dateNote !== undefined && !confirmed) {
+      hold(entry, 'unresolvable-date', `${entry.dateNote}; the date is the parser's reading, not the index's print`, u.sameDate);
       continue;
     }
     // An incipit or toponym the OCR has damaged (`B (IARENSIS`, 1978) would mint an id and
     // a title from a reading the page does not print; held for a curated correction.
     // For an entry printing neither, the head of the description, which the provisional
     // record's title would carry.
-    const head = entry.incipit === null && entry.toponym === null ? entry.description.split(/[.:]\s/)[0]!.slice(0, 60) : null;
-    const damaged = [entry.incipit, entry.toponym, head].find((t) => t !== null && ocrDamaged(t));
+    // The head runs to the first full stop or colon that no abbreviation explains (`Planorum
+    // S. Martini - Villavicentiensis (De Mitu). - A Vicariatu` is one head).
+    const head = entry.incipit === null && entry.toponym === null ? entry.description.split(/(?<![A-Z])[.:]\s/)[0]!.slice(0, 60) : null;
+    const fromVolume = sourceOfEntry(entry)?.kind === 'volume';
+    // In a volume, a head or toponym that opens with anything but a capital or a guillemet
+    // (`-Hodiernos Namurcensis`, `8. Fidei in Argentina`, `privilegiis Basilicae Minoris` --
+    // a continuation line read as an entry), or that mixes cases inside a word (`lAbenti`,
+    // `BaMasensis`), is the OCR's too.
+    const headDamaged = (t: string) => fromVolume && (!/^[\p{Lu}«]/u.test(t) || /\p{Ll}\p{Lu}/u.test(t));
+    const damaged = [entry.incipit, entry.toponym, head].find((t) => t !== null
+      && (ocrDamaged(t) || (fromVolume && t === entry.incipit && incipitDamaged(t)) || (t !== entry.incipit && headDamaged(t))));
     if (damaged !== undefined) {
       hold(entry, 'ocr-damaged', `the extracted ${damaged === entry.incipit ? 'incipit' : damaged === entry.toponym ? 'toponym' : 'head of the entry'} '${damaged}' carries a character the index does not print; needs a curated reading, never a guess`);
       continue;
@@ -446,6 +499,29 @@ export function createFromActa(
     byId.set(k, [...(byId.get(k) ?? []), c]);
   }
   const collided = new Set<ActaCreated>();
+  // One page opens one act (invariant 25): a created record citing a page another entry
+  // cites -- a matched shelf record's, or another created record's -- would fail the
+  // invariant, and the volumes of 1932-1957 print both shapes behind it: two short
+  // letters on one page (AAS 24 (1932) 39, AAS 45 (1953) 91: curated in
+  // ACTA_SHARED_PAGES with the page quoted, and let through) and a page number the OCR
+  // misread onto another act's page (AAS 42 (1950) 37 for 373 and 375, AAS 43 (1951)
+  // 660 for 666, AAS 45 (1953) 782 for one act indexed twice). Held, for the report,
+  // until a curated row says which it is.
+  const pageKey = (e: ActaEntry) => `${e.series}:${e.volume}${e.part ? `-${e.part}` : ''}:${e.page}`;
+  const citedByMatch = new Set(result.matches.map((m) => pageKey(m.entry)));
+  const citedByCreated = new Map<string, ActaCreated[]>();
+  for (const c of created) citedByCreated.set(pageKey(c.entry), [...(citedByCreated.get(pageKey(c.entry)) ?? []), c]);
+  for (const c of created) {
+    const key = pageKey(c.entry);
+    if (key in ACTA_SHARED_PAGES) continue;
+    const others = (citedByCreated.get(key) ?? []).filter((o) => o !== c);
+    const byMatch = citedByMatch.has(key);
+    if (!byMatch && others.length === 0) continue;
+    collided.add(c);
+    const who = [byMatch ? 'a matched shelf document' : '', others.length ? `${others.length} other entr${others.length === 1 ? 'y' : 'ies'} of the index` : ''].filter(Boolean).join(' and ');
+    hold(c.entry, 'page-shared', `${who} cite${(byMatch ? 1 : 0) + others.length === 1 ? 's' : ''} the same page (${key}); one page opens one act (invariant 25) unless ACTA_SHARED_PAGES quotes the page`,
+      result.matches.filter((m) => pageKey(m.entry) === key).map((m) => docs.find((d) => d.id === m.documentId)).filter((d): d is DocumentRecord => d !== undefined));
+  }
   for (const group of byId.values()) {
     if (group.length < 2) continue;
     for (const c of group) {

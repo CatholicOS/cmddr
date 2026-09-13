@@ -5,12 +5,15 @@
  * A category is read from its heading text, never from a fixed position: the order and
  * the set both vary by year (2015 opens with *Litterae Encyclicae*, 2016 with *Adhortatio
  * Apostolica postsynodalis*; *Consistoria* is absent in 2015, 2016 and 2021). Every heading
- * seen in the ten indexes 2015-2024 and in the six sources of phase 2b-i (AAS 1, 9-I, 23,
- * 50, 70 and the 2012 index; acta volumes spec §2, §5) is listed under the row it belongs
- * to, in the normalised form `normaliseHeading` produces (case-folded, the numeral and
- * the trailing punctuation dropped), with the volume it was seen in; an OCR spelling is
- * listed as the fixture prints it. A heading not listed here is reported by the parser as
- * unseen, not dropped and not guessed at.
+ * seen in the ten indexes 2015-2024, in the six sources of phase 2b-i (AAS 1, 9-I, 23,
+ * 50, 70 and the 2012 index; acta volumes spec §2, §5) and in the twenty-six volumes of
+ * 1932-1957 (AAS 24-49, phase 2b-ii-a, spec §9) is listed under the row it belongs to,
+ * in the normalised form `normaliseHeading` produces (case-folded, the numeral and the
+ * trailing punctuation dropped, the OCR's accents stripped), with the volume it was seen
+ * in; an OCR spelling is listed as the fixture prints it. A heading not listed here is
+ * reported by the parser as unseen, not dropped and not guessed at. Two headings cover
+ * two classes of act at once (*Adhortatio*, *Hortationes*): each is a `partly` row the
+ * matcher attempts and the creator never creates from (create.ts, NOT_CREATED).
  *
  * `harvested` says whether the registry harvests the class today, which decides whether an
  * unmatched entry is a finding to list in full (`yes`, `partly`) or a count for a future
@@ -44,12 +47,18 @@ export interface ActaCategory {
   harvested: 'yes' | 'partly' | 'no';
 }
 
-/** Case-fold a heading, collapse whitespace, drop the roman numeral and dash prefix. */
+/**
+ * Case-fold a heading, collapse whitespace, drop the roman numeral and dash prefix -- in
+ * the OCR's readings of the numeral too (`IY. -`, `XJV -`, `i. -`, `I r-`; AAS 25, 26, 42,
+ * 36 of 1933-1950) -- and the OCR's trailing quote or hyphen (`LITTERAE DECRETALES'`,
+ * `BULLA DOGMATICA-`; AAS 28, 42) and its accents (`EPISTULA ENCÌCLICA`, AAS 41).
+ */
 export function normaliseHeading(text: string): string {
   return text
-    .replace(/^\s*[IVXL]+\.?\s*[–-]\s*/, '')
+    .normalize('NFD').replace(/\p{M}/gu, '')   // the OCR's accents (`EPISTULA ENCÌCLICA`, AAS 41)
+    .replace(/^\s*[IVXLJYivxl1]+\.?\s*[r•]?\s*[–-]\s*/, '')
     .replace(/\s+/g, ' ')
-    .replace(/[\s,.:]+$/, '')
+    .replace(/[\s,.:'’-]+$/, '')
     .trim()
     .toUpperCase();
 }
@@ -59,8 +68,14 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // (Fratelli tutti) and 2024 (Dilexit nos); Lumen fidei (2013) precedes the range.
   // 1958 files *Ad Apostolorum Principis* (29 June 1958, to the bishops of China) under
   // its own heading *Epistula encyclica*; vatican.va's encyclicals shelf carries it
-  // (`mag:pius-xii/ad-apostolorum-principis-1958`), so the heading maps here.
-  { id: 'Litterae Encyclicae', headings: ['LITTERAE ENCYCLICAE', 'EPISTULA ENCYCLICA'],
+  // (`mag:pius-xii/ad-apostolorum-principis-1958`), so the heading maps here. The
+  // volumes of 1932-1957 head the encyclical letters to a nation's bishops `EPISTULAE
+  // ENCYCLICAE` (1937: *Mit brennender Sorge*, *Firmissimam constantiam*; 1948: *In
+  // multiplicibus curis*; 1950: *Anni sacri*, *Summi maeroris*, *Mirabile illud*) and the
+  // singular `EPISTULA ENCYCLICA` (1933: *Dilectissima Nobis*; 1936: *Vigilanti cura*;
+  // 1940-1954), every one of them on the encyclicals shelf of its pope; the OCR of AAS 41
+  // (1949) reads `II - EPISTULA ENCÌCLICA` (*Redemptoris nostri cruciatus*).
+  { id: 'Litterae Encyclicae', headings: ['LITTERAE ENCYCLICAE', 'EPISTULA ENCYCLICA', 'EPISTULAE ENCYCLICAE', 'EPISTULA ENCICLICA'],
     classes: [{ genre: 'encyclical' }], harvested: 'yes' },
   // The apost_exhortations shelf. The index prints the singular when the year has one and
   // qualifies the post-synodal ones (Amoris laetitia, Christus vivit, Querida Amazonia).
@@ -79,8 +94,10 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
     classes: [{ genre: 'apostolic-exhortation' }], harvested: 'yes' },
   // The apost_constitutions shelf: a papal-bull bearing `apostolic-constitution` (README,
   // Characteristics). Mostly circumscription erections headed by a toponym from 2017 on;
-  // 2015-2016 print the incipit instead.
-  { id: 'Constitutiones Apostolicae', headings: ['CONSTITUTIONES APOSTOLICAE'],
+  // 2015-2016 print the incipit instead. AAS 42 (1950) heads the definition of the
+  // Assumption `BULLA DOGMATICA` (*Munificentissimus Deus*, 1 November 1950), which
+  // vatican.va's apost_constitutions shelf carries (`mag:pius-xii/munificentissimus-deus-1950`).
+  { id: 'Constitutiones Apostolicae', headings: ['CONSTITUTIONES APOSTOLICAE', 'BULLA DOGMATICA'],
     classes: [{ genre: 'papal-bull', requires: 'apostolic-constitution' }], harvested: 'yes' },
   // The motu_proprio shelf, merged into apost_letters where a document is filed on both:
   // an apostolic-letter bearing `motu-proprio`. A document vatican.va filed on
@@ -88,13 +105,16 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // and is reported as a class mismatch rather than matched (spec §4.3 -- the matcher is
   // never loosened to absorb a filing difference).
   // The volumes head the category *Motu proprio* alone (1909 `V. - MOTU PROPRIO.`, 1917
-  // `III. - MOTU PROPRIO.`, 1931, 1958); the 2012 index sets the words in guillemets.
+  // `III. - MOTU PROPRIO.`, 1931, 1958); the 2012 index sets the words in guillemets. The
+  // OCR of AAS 40 (1948) reads `MOTTI PROPRIO`.
   { id: 'Litterae Apostolicae Motu proprio datae',
-    headings: ['LITTERAE APOSTOLICAE MOTU PROPRIO DATAE', 'LITTERAE APOSTOLICAE «MOTU PROPRIO» DATAE', 'MOTU PROPRIO'],
+    headings: ['LITTERAE APOSTOLICAE MOTU PROPRIO DATAE', 'LITTERAE APOSTOLICAE «MOTU PROPRIO» DATAE', 'MOTU PROPRIO', 'MOTTI PROPRIO'],
     classes: [{ genre: 'apostolic-letter', requires: 'motu-proprio' }], harvested: 'yes' },
   // The apost_letters shelf proper: beatification letters and the Latin-incipit tail. A
   // document bearing `motu-proprio` belongs to the category above, so it is excluded here.
-  { id: 'Litterae Apostolicae', headings: ['LITTERAE APOSTOLICAE'],
+  // The OCR spellings of the volumes: `LITTEEAE APOSTOLICAE` (AAS 28, 1936), `LITTEBAE
+  // APOSTOLICAE` (AAS 41, 1949).
+  { id: 'Litterae Apostolicae', headings: ['LITTERAE APOSTOLICAE', 'LITTEEAE APOSTOLICAE', 'LITTEBAE APOSTOLICAE'],
     classes: [{ genre: 'apostolic-letter', excludes: 'motu-proprio' }], harvested: 'yes' },
   // A category the index uses for a few apostolic letters that are not beatifications --
   // Patris corde (2021), Admirabile signum (2019), letters to a named addressee that
@@ -117,7 +137,10 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // "a bull of canonization bears neither" characteristic), but vatican.va's bulls shelf
   // for Francis carries only the two bulls of indiction, so every decretal is expected to
   // report as a shelf gap.
-  { id: 'Litterae Decretales', headings: ['LITTERAE DECRETALES'],
+  // The volumes of 1932-1957 print the canonisation decretals of Pius XI and Pius XII
+  // under the same heading, in the OCR spellings `LITTEBAE DECRETALES` (AAS 40, 1948) and
+  // `LITTERAE DECKETALES` (AAS 47, 1955) too; neither pope's bulls shelf carries them.
+  { id: 'Litterae Decretales', headings: ['LITTERAE DECRETALES', 'LITTEBAE DECRETALES', 'LITTERAE DECKETALES'],
     classes: [{ genre: 'papal-bull', excludes: 'apostolic-constitution' }], harvested: 'partly' },
   // Anticipated by the spec (§2.2) for other years; not printed in any index 2015-2024.
   { id: 'Bullae', headings: ['BULLAE'],
@@ -127,21 +150,53 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // hence `partly`: the matcher attempts every entry, and the creator creates only for a
   // pope whose letters shelf is harvested (create.ts). The volumes spell it *Epistolae*
   // (1909 `IV. - EPISTOLAE.`, 1917 `V. - EPISTOLAE.`, 1931 `VII. - EPISTOLAE`).
-  { id: 'Epistulae', headings: ['EPISTULAE', 'EPISTULA', 'EPISTOLAE'],
+  // The OCR of AAS 30 (1938) reads `BPISTTJLAE`, that of AAS 34 (1942) `EPISTULAS`.
+  { id: 'Epistulae', headings: ['EPISTULAE', 'EPISTULA', 'EPISTOLAE', 'BPISTTJLAE', 'EPISTULAS'],
     classes: [{ genre: 'letter' }], harvested: 'partly' },
   // Chirographs have no Genre Registry row (#4). Three spellings across the years, and
   // the 1931 fixture's OCR of the plural (`VI. - CHIROGRAPHE`: two Italian letters of
-  // Pius XI to cardinals).
-  { id: 'Chirographa', headings: ['CHIROGRAPHA', 'CHIROGRAPHUM', 'CHIROGRAPHI', 'CHIROGRAPHE'],
+  // Pius XI to cardinals); the volumes of 1933-1955 print the singular as `CHIROGRAPHUS`
+  // (1933 *Tra i sacrosanti*; 1942 and 1943 the statutes of two Vatican charities; 1947
+  // *We have just*, to President Truman; 1954 the Biblical Institute; 1955 *Nella sua*).
+  { id: 'Chirographa', headings: ['CHIROGRAPHA', 'CHIROGRAPHUM', 'CHIROGRAPHI', 'CHIROGRAPHE', 'CHIROGRAPHUS'],
     classes: [], harvested: 'no' },
   // Papal decrees have no row; vatican.va files several of these on the motu_proprio
   // shelf, where the registry carries them as apostolic-letter + motu-proprio.
   { id: 'Decreta', headings: ['DECRETA', 'DECRETUM'], classes: [], harvested: 'no' },
   // The homilies shelf is not harvested; the eleven World Day for Consecrated Life
-  // homilies on the *Messaggi* shelf are the registry's only Francis homilies.
-  { id: 'Homiliae', headings: ['HOMILIAE', 'HOMILIA'], classes: [{ genre: 'homily' }], harvested: 'no' },
-  // The speeches shelf is out of scope.
-  { id: 'Allocutiones', headings: ['ALLOCUTIONES'], classes: [{ genre: 'discourse-address' }], harvested: 'no' },
+  // homilies on the *Messaggi* shelf are the registry's only Francis homilies. AAS 27
+  // (1935) heads the canonisation homily for John Fisher and Thomas More (19 May 1935)
+  // `HOMILIA IN SOLLEMNI CANONIZATIONE`.
+  { id: 'Homiliae', headings: ['HOMILIAE', 'HOMILIA', 'HOMILIA IN SOLLEMNI CANONIZATIONE'], classes: [{ genre: 'homily' }], harvested: 'no' },
+  // The canonisation ceremonies of 1940-1954, each entry a proclamation formula and a
+  // homily with a page number each (`B. Ioannae de Lestonnac, Viduae, Proclamatio 211
+  // Homilia 212`, AAS 41 (1949)): `IN SOLLEMNI CANONIZATIONE` (1938, Andrew Bobola, John
+  // Leonardi and Salvator of Horta), `SOLLEMNIA CANONIZATIONUM` (1940), `SOLLEMNES
+  // CANONIZATIONIS` (1947), `SOLLEMNES CANONIZATIONES` (1949-1951), `IN SOLLEMNIBUS
+  // CANONIZATIONIBUS` (1954, Pius X). No row; counted.
+  { id: 'Sollemnes canonizationes',
+    headings: ['IN SOLLEMNI CANONIZATIONE', 'SOLLEMNIA CANONIZATIONUM', 'SOLLEMNES CANONIZATIONIS', 'SOLLEMNES CANONIZATIONES', 'IN SOLLEMNIBUS CANONIZATIONIBUS'],
+    classes: [], harvested: 'no' },
+  // The speeches shelf is out of scope. The OCR of AAS 40 (1948) reads `ALIOCUTIONES`.
+  { id: 'Allocutiones', headings: ['ALLOCUTIONES', 'ALIOCUTIONES'], classes: [{ genre: 'discourse-address' }], harvested: 'no' },
+  // Pius XII's *Hortationes*: the Lenten address to the parish priests and preachers of
+  // Rome (1945 `IUSTRUCTIO PASTORALIS`, the OCR's *Instructio*; 1946 `HORTATIO
+  // PASTORALIS`, *Ad Parochos Urbis et concionatores sacri temporis quadragesimalis*, 16
+  // March 1946; 1948 `HORTATIONES`, the same of 10 March 1948) and the appeal of 31
+  // August 1939 to the governments of Britain, France, Germany, Italy and Poland (`X -
+  // HORTATIO`, *Le Souverain Pontife*) -- addresses and a diplomatic message, on no
+  // harvested shelf -- beside one apostolic exhortation: the 1948 heading also covers *Ad
+  // clerum indigenam* of 28 June 1948, which vatican.va's apost_exhortations shelf carries
+  // as *In auspicando super* (`mag:pius-xii/in-auspicando-super-1948`). The row maps to
+  // the exhortation class as `partly`, so the matcher writes the reference the shelf
+  // evidences and the creator holds the rest (create.ts, NOT_CREATED) instead of minting
+  // exhortations from them.
+  { id: 'Hortationes', headings: ['HORTATIO', 'HORTATIO PASTORALIS', 'HORTATIONES', 'IUSTRUCTIO PASTORALIS'],
+    classes: [{ genre: 'apostolic-exhortation' }], harvested: 'partly' },
+  // Prayers the pope composed or recited (1942 `ORATIO`: *Consacrazione al Cuore Immacolato
+  // di Maria*, 31 October 1942; 1949 *Pro Anno Sacro Iubilari MCML*; 1953 the Marian Year
+  // prayer) and, in 1940, a sermon at the Minerva filed under the same word; no row.
+  { id: 'Orationes', headings: ['ORATIO'], classes: [], harvested: 'no' },
   // The early volumes' *Sermones* (1909 `VI. - SERMONES.`; 1917 `VII. - SERMO.`, to the
   // Lenten preachers of Rome; 1931 `VIII. - SERMO`, in the consistory hall after a decree
   // on heroic virtues) are addresses in the vernacular, the class of the speeches shelf,
@@ -155,7 +210,8 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // annual series (the 1978 World Day of Peace, Vocations, Lent, Communications and
   // Mission messages, every one on a harvested *Messaggi* sub-shelf), so the heading
   // maps here.
-  { id: 'Nuntii', headings: ['NUNTII', 'NUNTII SCRIPTO DATI'], classes: [{ genre: 'message' }, { genre: 'urbi-et-orbi' }], harvested: 'partly' },
+  // AAS 48 (1956) prints the singular `NUNTIUS SCRIPTO DATUS` (to the Rennes eucharistic congress).
+  { id: 'Nuntii', headings: ['NUNTII', 'NUNTII SCRIPTO DATI', 'NUNTIUS SCRIPTO DATUS'], classes: [{ genre: 'message' }, { genre: 'urbi-et-orbi' }], harvested: 'partly' },
   // Video messages: message + `medium: video` once #27 lands; all on pont-messages today.
   // The 2012 index prints the singular.
   { id: 'Nuntii televisifici', headings: ['NUNTII TELEVISIFICI', 'NUNTIUS TELEVISIFICUS'], classes: [{ genre: 'message' }], harvested: 'partly' },
@@ -169,7 +225,11 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // `partly`, as *Nuntii*, and matched; the occasional ones are on no harvested shelf and
   // nothing is created from the category (create.ts). The count is the evidence for a
   // `medium: radio` (#27), which is not applied here.
-  { id: 'Nuntii radiophonici', headings: ['NUNTII RADIOPHONICI', 'NUNCIUM RADIOPHONICUM', 'NUNTII RADIOTELEVISIFICI'],
+  // Pius XII's 153 radio messages of 1940-1957 are the bulk of the class, and AAS 44
+  // (1952) heads his radio exhortation to the faithful of Rome (*Urbis christifidelibus
+  // data*, 10 February 1952) `ADHORTATIO RADIOPHONICA`: a radio message, filed here and
+  // counted for #27 with the rest.
+  { id: 'Nuntii radiophonici', headings: ['NUNTII RADIOPHONICI', 'NUNCIUM RADIOPHONICUM', 'NUNTII RADIOTELEVISIFICI', 'ADHORTATIO RADIOPHONICA'],
     classes: [{ genre: 'message' }, { genre: 'urbi-et-orbi' }], harvested: 'partly' },
   // 1978's congratulatory messages to cardinals on their jubilees (`VIII - NUNTII
   // GRATULATORII`; John Paul I's single `V - NUNTIUS GRATULATORIUS`): messages on no
@@ -177,14 +237,18 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   { id: 'Nuntii gratulatorii', headings: ['NUNTII GRATULATORII', 'NUNTIUS GRATULATORIUS'],
     classes: [{ genre: 'message' }], harvested: 'no' },
   // John XXIII's two telegrams of 29 October 1958 to Cardinals Mindszenty and Stepinac
-  // (1958 `VI - NUNTII TELEGRAPHICI`); no row.
-  { id: 'Nuntii telegraphici', headings: ['NUNTII TELEGRAPHICI'], classes: [], harvested: 'no' },
+  // (1958 `VI - NUNTII TELEGRAPHICI`); Pius XII's of 1955 and 1956 (singular in 1955); no row.
+  { id: 'Nuntii telegraphici', headings: ['NUNTII TELEGRAPHICI', 'NUNTIUS TELEGRAPHICUS'], classes: [], harvested: 'no' },
   // Consistory announcements, homilies and title assignments; no row. 1917 numbers the
   // heading among the pope's categories as `IX. - ACTA SACRI CONSISTORII.` (the parser
-  // does not take it for a part heading); 1958 prints `IX - SACRA CONSISTORIA`.
-  { id: 'Consistoria', headings: ['CONSISTORIA', 'CONSISTORIUM', 'ACTA SACRI CONSISTORII', 'SACRA CONSISTORIA'], classes: [], harvested: 'no' },
-  // Concordats and agreements with states; no row. Singular in 1958 and 1978.
-  { id: 'Conventiones', headings: ['CONVENTIONES', 'CONVENTIO'], classes: [], harvested: 'no' },
+  // does not take it for a part heading); 1958 prints `IX - SACRA CONSISTORIA`; the
+  // volumes of 1934-1948 print `SACRUM CONSISTORIUM` for a year with one, and the OCR of
+  // AAS 43 (1951) `SACKA CONSISTORIA`.
+  { id: 'Consistoria', headings: ['CONSISTORIA', 'CONSISTORIUM', 'ACTA SACRI CONSISTORII', 'SACRA CONSISTORIA', 'SACRUM CONSISTORIUM', 'SACKA CONSISTORIA'], classes: [], harvested: 'no' },
+  // Concordats and agreements with states; no row. Singular in 1958 and 1978; `SOLLEMNIS
+  // CONVENTIO` for the Austrian concordat (AAS 26, 1934) and the Spanish (AAS 43, 1951),
+  // `SOLLEMNES CONVENTIONES` in AAS 32 (1940).
+  { id: 'Conventiones', headings: ['CONVENTIONES', 'CONVENTIO', 'SOLLEMNIS CONVENTIO', 'SOLLEMNES CONVENTIONES'], classes: [], harvested: 'no' },
   // Rescripts and notes of the Secretariat of State; no row, and dated sub-lists whose
   // entries can lack a page number.
   { id: 'Secretaria Status', headings: ['SECRETARIA STATUS'], classes: [], harvested: 'no' },
@@ -203,9 +267,15 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
     classes: [], harvested: 'no' },
   { id: 'Meditatio', headings: ['MEDITATIO'], classes: [], harvested: 'no' },
   { id: 'Documentum', headings: ['DOCUMENTUM'], classes: [], harvested: 'no' },
-  // 2019's bare *Adhortatio* is the joint appeal of Francis and Mohammed VI on Jerusalem,
-  // not an apostolic exhortation -- kept apart from the row above.
-  { id: 'Adhortatio', headings: ['ADHORTATIO'], classes: [], harvested: 'no' },
+  // A bare *Adhortatio* is, in 2019, the joint appeal of Francis and Mohammed VI on
+  // Jerusalem -- not an apostolic exhortation -- and, in AAS 46 (1954), Pius XII's *I
+  // rapidi progressi* to the ordinaries of Italy on television (1 January 1954), which
+  // vatican.va's apost_exhortations shelf carries (`mag:pius-xii/i-rapidi-progressi-1954`).
+  // One heading, two classes of act: the row maps to the exhortation class as `partly`,
+  // so the 1954 entry matches the shelf record and the 2019 appeal, unmatched, is held by
+  // the creator (NOT_CREATED) rather than minted as an exhortation. Kept apart from the
+  // *Adhortationes Apostolicae* row, which the creator creates from.
+  { id: 'Adhortatio', headings: ['ADHORTATIO'], classes: [{ genre: 'apostolic-exhortation' }], harvested: 'partly' },
   { id: 'Statuta', headings: ['STATUTA'], classes: [], harvested: 'no' },
   { id: 'Lex S.C.V.', headings: ['LEX S.C.V'], classes: [], harvested: 'no' },
   { id: 'Nota', headings: ['NOTA'], classes: [], harvested: 'no' },

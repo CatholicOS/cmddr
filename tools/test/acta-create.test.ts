@@ -317,17 +317,46 @@ describe('createFromActa on the volumes (acta volumes spec §5)', () => {
     expect(held.held.map((h) => h.reason)).toEqual(['shelf-not-harvested', 'shelf-not-harvested']);
   });
 
+  it('holds an entry whose page a matched document or another entry already cites, the note agreeing in number', () => {
+    const notes = (r: ReturnType<typeof run>) => r.held.map((h) => [h.reason, h.note.replace(/ the same page .*$/, '')]);
+    // A matched shelf document alone on the page: singular.
+    const shelf = doc({ id: 'mag:francis-i/ius-nativum-2023', incipit: 'Ius nativum', date: '2023-02-20' });
+    const one = run([entry({ page: 263 }), entry({ incipit: 'Alterum opus', date: '2023-02-21', page: 263 })], [shelf]);
+    expect(notes(one)).toEqual([['page-shared', 'a matched shelf document cites']]);
+    // Two other entries of the index and no match: plural.
+    const three = run([
+      entry({ incipit: 'Primum opus', date: '2023-02-21', page: 264 }),
+      entry({ incipit: 'Alterum opus', date: '2023-02-22', page: 264 }),
+      entry({ incipit: 'Tertium opus', date: '2023-02-23', page: 264 }),
+    ], []);
+    expect(notes(three)).toEqual(Array(3).fill(['page-shared', '2 other entries of the index cite']));
+    // A match and one other entry: plural.
+    const mixed = run([entry({ page: 263 }), entry({ incipit: 'Alterum opus', date: '2023-02-21', page: 263 }), entry({ incipit: 'Tertium opus', date: '2023-02-22', page: 263 })], [shelf]);
+    expect(notes(mixed)).toEqual(Array(2).fill(['page-shared', 'a matched shelf document and 1 other entry of the index cite']));
+  });
+
   it('never creates a month-only entry, and holds an OCR-damaged incipit or toponym', () => {
     const month = run([pius({ date: '1929-03', incipit: 'Pro munere', page: 317 })], []);
     expect(month.created).toEqual([]);
     expect(month.held.map((h) => [h.reason, h.note.slice(0, 30)])).toEqual([['unresolvable-date', 'the index dates the entry to 1']]);
     const damaged = run([
       pius({ toponym: 'B (IARENSIS', incipit: null, description: 'Peramplum Berberatensis. In Africae Mediae natione dioecesis Buarensis constituitur', page: 280, date: '1978-02-27', pope: 'Paulus VI', year: 1978, volume: 70 }),
-      pius({ incipit: 'Lex N. DCXXVI', page: 281 }),
-      pius({ incipit: 'Il 30 novembre 2019', quoted: true, page: 282 }),
+      pius({ incipit: 'Tui in S. C. de Propaganda Fide', page: 281 }),
+      pius({ incipit: 'Cum sit', page: 282 }),
+      // The OCR of a volume (phase 2b-ii-a): a mark, a digit, a full stop, a lower-case initial no incipit carries.
+      pius({ incipit: 'Providet!tissimum Deum', page: 283 }),
+      pius({ incipit: 'Quae. feliciter', page: 284 }),
+      pius({ incipit: 'ut tibi iisque', page: 285 }),
+      pius({ incipit: 'Honesta"quaelibet', page: 286 }),
     ], []);
-    expect(damaged.held.map((h) => [h.entry.page, h.reason])).toEqual([[280, 'ocr-damaged']]);
+    expect(damaged.held.map((h) => [h.entry.page, h.reason])).toEqual([[280, 'ocr-damaged'], [283, 'ocr-damaged'], [284, 'ocr-damaged'], [285, 'ocr-damaged'], [286, 'ocr-damaged']]);
     expect(damaged.created.map((c) => c.entry.page)).toEqual([281, 282]);
+    // The index PDFs are typeset: a digit or a full stop in an incipit is the print (`Lex N. DCXXVI`, 2019).
+    const typeset = run([
+      entry({ pope: 'Franciscus', year: 2019, volume: 111, category: 'LITTERAE APOSTOLICAE MOTU PROPRIO DATAE', date: '2019-06-01', page: 1, incipit: 'Lex N. DCXXVI', description: 'De re', raw: 'x' }),
+      entry({ pope: 'Franciscus', year: 2019, volume: 111, category: 'LITTERAE APOSTOLICAE', date: '2019-11-30', page: 2, incipit: 'Il 30 novembre 2019', quoted: true, description: 'De re', raw: 'x' }),
+    ], []);
+    expect(typeset.created.map((c) => c.entry.page)).toEqual([1, 2]);
     // A toponym-and-incipit constitution of 1958 mints from the incipit, the toponym in the title.
     const both = run([entry({
       pope: 'Pius XII', year: 1958, volume: 50, category: 'CONSTITUTIONES APOSTOLICAE', date: '1957-04-10', page: 24,
