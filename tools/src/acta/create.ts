@@ -33,7 +33,7 @@ import { categoryForHeading, type ActaCategory, type GenreClass } from './catego
 import { ACTA_HOLDS, ACTA_INDEX_CORRECTIONS, ACTA_SHARED_PAGES, curationKey } from './curation.js';
 import { ACTA_FIXTURES_RETRIEVED, sourceOfEntry } from './join.js';
 import {
-  POPE_ISSUERS, isMonthOnly, shiftDate, toponymStems, type ActaCandidate, type ActaMatchResult,
+  POPE_ISSUERS, isMonthOnly, shiftDate, titleHasToponym, type ActaCandidate, type ActaMatchResult,
 } from './match.js';
 import { ACTA_POPES } from './popes.js';
 import type { ActaEntry } from './index.js';
@@ -137,6 +137,9 @@ export const NOT_CREATED: Readonly<Record<string, string>> = {
   // covers an apostolic exhortation (*In auspicando super*, matched): the addresses are
   // the speeches class, not harvested, and nothing is minted from the heading.
   'Hortationes': 'the heading covers the Lenten addresses to the parish priests of Rome (speeches, not harvested) beside one apostolic exhortation, which matched the shelf',
+  // One heading for one act (AAS 60 (1968) 836): the Credo of the People of God, which
+  // vatican.va files on the motu_proprio shelf and the matcher cites there.
+  'Sollemnis professio fidei': 'one heading for one act, the Credo of the People of God (30 June 1968), which the motu_proprio shelf carries and the matcher cites; nothing is minted from the heading',
 };
 
 /**
@@ -239,9 +242,14 @@ export function actaTitle(entry: ActaEntry): string {
   return tail;
 }
 
-/** An unbalanced bracket, or a character outside letters, digits and the index's punctuation. */
+/**
+ * An unbalanced bracket, a character outside letters, digits and the index's punctuation,
+ * or a lone capital hyphenated to the word after it (`G-UYANAE`, AAS 51 (1959) 21;
+ * `G-AUHATINAE`, AAS 62 (1970) 29: the OCR's mark inside a see's name).
+ */
 export const ocrDamaged = (text: string): boolean =>
   /[^\p{L}\p{N}\s.,;:'’"«»!?()–—-]/u.test(text)
+  || /(?:^|\s)\p{Lu}-\p{Lu}/u.test(text)
   || (text.match(/\(/g) ?? []).length !== (text.match(/\)/g) ?? []).length;
 /**
  * An incipit the OCR of a volume has damaged, beyond `ocrDamaged`: a mark no incipit carries
@@ -272,11 +280,6 @@ const candidateOf = (d: DocumentRecord): ActaCandidate => ({
 export const titleContainsIncipit = (title: string, incipit: string): boolean => {
   const needle = slugify(incipit);
   return needle !== '' && `-${slugify(title)}-`.includes(`-${needle}-`);
-};
-
-const titleHasToponym = (title: string, toponym: string): boolean => {
-  const words = `-${slugify(title)}-`;
-  return toponymStems(toponym).some((stem) => words.includes(`-${stem}`));
 };
 
 /** The one genre class a created category maps to (CREATED_CATEGORIES admits no other). */

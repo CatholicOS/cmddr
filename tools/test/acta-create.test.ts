@@ -348,8 +348,10 @@ describe('createFromActa on the volumes (acta volumes spec §5)', () => {
       pius({ incipit: 'Quae. feliciter', page: 284 }),
       pius({ incipit: 'ut tibi iisque', page: 285 }),
       pius({ incipit: 'Honesta"quaelibet', page: 286 }),
+      // A lone capital hyphenated to the see (`G-UYANAE`, AAS 51 (1959) 21; `G-AUHATINAE`, AAS 62 (1970) 29; phase 2b-ii-b).
+      pius({ toponym: 'G-UYANAE HOLLANDICAE (Paramariboënsis)', incipit: 'Cum apostolicus', description: 'Apostolicus Vicariatus', page: 287, category: 'CONSTITUTIONES APOSTOLICAE' }),
     ], []);
-    expect(damaged.held.map((h) => [h.entry.page, h.reason])).toEqual([[280, 'ocr-damaged'], [283, 'ocr-damaged'], [284, 'ocr-damaged'], [285, 'ocr-damaged'], [286, 'ocr-damaged']]);
+    expect(damaged.held.map((h) => [h.entry.page, h.reason])).toEqual([[280, 'ocr-damaged'], [283, 'ocr-damaged'], [284, 'ocr-damaged'], [285, 'ocr-damaged'], [286, 'ocr-damaged'], [287, 'ocr-damaged']]);
     expect(damaged.created.map((c) => c.entry.page)).toEqual([281, 282]);
     // The index PDFs are typeset: a digit or a full stop in an incipit is the print (`Lex N. DCXXVI`, 2019).
     const typeset = run([

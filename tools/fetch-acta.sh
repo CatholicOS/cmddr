@@ -23,7 +23,10 @@
 # three columns (ANNO MENSE DIE) beside the entry: the default mode emits each column as
 # a run of its own (every month of the page, then every day, then the entries), and only
 # the layout mode keeps a date on the line of its entry (README, measured on 1909, 1917
-# and 1931). Each page becomes one page of the fixture, separated by a form feed (\f).
+# and 1931) -- except where the layout mode interleaves or fuses a page's lines, which is
+# detected per page and falls back to the default mode (extract_index_pages below; most
+# pages of eight volumes of 1959-1977). Each page becomes one page of the fixture,
+# separated by a form feed (\f).
 #
 # After running this, update the README's rows and ACTA_SOURCES in tools/src/acta/join.ts
 # (retrieval date) and re-run `npm run harvest && npm run render`. The matched and created
@@ -35,7 +38,7 @@
 #        tools/fetch-acta.sh 2023            # one index year (2010-2024)
 #        tools/fetch-acta.sh 1958            # one volume (1909-2002); 1917 and 1983 fetch both parts
 #        tools/fetch-acta.sh sample          # the six sources of phase 2b-i: 1909 1917 1931 1958 1978 2012
-#        tools/fetch-acta.sh 1932-1957       # a range of volumes (phase 2b-ii-a: AAS 24-49)
+#        tools/fetch-acta.sh 1932-1957       # a range of volumes (phase 2b-ii-a: AAS 24-49; 1959-1977 is phase 2b-ii-b, AAS 51-69)
 set -euo pipefail
 cd "$(dirname "$0")/.."
 mkdir -p tools/fixtures/acta
@@ -110,18 +113,39 @@ while end - 1 > start and text(end - 1).strip() == '':
 # default mode instead, where the entries run together on one line but in order, with
 # each page number before the next date -- the parser splits them there.
 INTERLEAVED = re.compile(r'[A-Za-z]{2,},? [A-Za-z]{2,}[,.]? {12,}[A-Za-z]')
-def interleaved(page_text):
+# The volumes of 1959-1977 (AAS 51-69) interleave differently: the layout mode fuses two
+# physical lines into one with no gap between them, and the seam is a word the OCR broke
+# at the line end (its soft hyphen, U+00AD) followed at once by the next line's text --
+# `Basilicae Mino\u00adris evehitur ecclesia cathedralis`, `privile\u00adin Caelum Assumptae sacra 76`
+# (AAS 52 (1960) 1035), so that continuation lines and page numbers land on the wrong
+# entries. Measured over every fixture: 25-70 such seams per volume in eight volumes of
+# 1959-1977 (AAS 52, 54-58, 60, 68), 0-4 per volume before 1959 and none after 1968 --
+# and in this era the default mode keeps each date on the line of its entry (the same
+# count of date-headed lines as the layout mode, measured page by page), where in
+# 1909-1957 it emits the date columns as runs of their own. A page with a seam is
+# therefore extracted in the default mode only when that mode keeps at least as many
+# date-headed lines as the layout mode did: AAS 54 (1962) 894 and 901, where the default
+# mode breaks the columns (0 and 8 date lines against 18 and 19), stay in the layout mode
+# and are reported by the parser for what they are.
+FUSED = re.compile('\u00ad\\S')
+DATE_LINE = re.compile(r'^\s*(?:\d{4}|[»>)]{1,2})\s+(?:[A-Za-zÀ-ÿ]{3,10}\.?|[»>)]{1,2})\s+(?:\d{1,2}|[»>)]{1,2})\s+\S')
+def date_lines(page_text):
+    return sum(1 for line in page_text.split('\n') if DATE_LINE.match(line))
+def interleaved(page_text, default_text):
     for line in page_text.split('\n')[1:]:
         if not INTERLEAVED.search(line) or re.search(r'\d\s*$', line): continue
         if 'Index documentorum' in line or re.match(r'\s*(ANNO|MENSE|DIE|PAG)', line): continue
+        return True
+    if FUSED.search(page_text) and date_lines(default_text) >= date_lines(page_text):
         return True
     return False
 pages, fallback = [], []
 for i in range(start, end):
     layout = reader.pages[i].extract_text(extraction_mode='layout') or ''
-    if interleaved(layout):
+    default = reader.pages[i].extract_text() or ''
+    if interleaved(layout, default):
         fallback.append(i + 1)
-        layout = reader.pages[i].extract_text() or ''
+        layout = default
     pages.append(layout)
 with open(out, 'w', encoding='utf-8') as f:
     f.write('\f'.join(pages))

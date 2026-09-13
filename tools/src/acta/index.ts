@@ -81,6 +81,26 @@
  *   letters, a diocese the index enters an act under (`Passaviensis dioecesis. -`); the
  *   addressee of a letter entered without an incipit (`Ad Emum P. D. …`) never an incipit.
  *
+ * The volumes of 1959-1977 (AAS 51-69, phase 2b-ii-b) added, each measured on a named volume
+ * and unit-tested on its excerpt:
+ * - a page in pypdf's default mode (fetch-acta.sh falls back to it where the layout mode
+ *   fuses lines, most pages of AAS 52, 54-58, 60 and 68): every line at the margin, so the
+ *   page is *flat* -- no blank-dated entry is looked for on it -- and the index's title,
+ *   which that mode renders after the first page's entries, is skipped wherever it stands;
+ *   a volume fixture is read from its first line, since it is the index's pages;
+ * - the pope heading with a full stop after the word (`I - ACTA. PAULI PP. VI`, AAS 67) or
+ *   with digits in the name (`II - ACTA I0A1OTS PP. XXIII`, AAS 51: an OCR genitive listed
+ *   in popes.ts); the synod's part numbered without the word (`II - SYNODUS EPISCOPORUM`, AAS 69);
+ * - headings unnumbered and in mixed case (`Litterae Encyclicae`, `Litterae Apostolicae`,
+ *   AAS 59, 1967), read as headings only where the words are a known category; the column
+ *   header glued to a heading (`XIV - NUNTII SCRIPTO DATI PAG.`, AAS 51, 66); an OCR `^`
+ *   after a heading's second line (AAS 52); the numeral as `XI- -` (AAS 66);
+ * - the ditto as `%` (AAS 52), `->` (AAS 53), `Ä` (AAS 58); the months `Maü`, `Dee`, `Mail`,
+ *   `Eebr`, `lui` (OCR_MONTHS); a year with its last digit broken (`196S`, AAS 55), `????`;
+ * - the page number alone on its line where the default mode lost the entry's other lines
+ *   (AAS 58), read as the page unless the line before already ends in one (AAS 48); a page
+ *   with a quote before it (`'563`, AAS 58).
+ *
  * The parse rate (spec §4) is measured per fixture: entries parsed against the lines of
  * the pope parts that end in a page number, with the lines consumed without an entry
  * counted; `parseRate` computes it from the `stats` the result carries.
@@ -220,6 +240,13 @@ const ABBREVIATED_MONTH_RE = /^(Ian|Febr?|Mart?|Apr|Maii|Iun|Iul|Aug|Sept?|Oct|N
  */
 const OCR_MONTHS: Record<string, number> = {
   Man: 5, Mah: 5, Marth: 3, Innii: 6, Apri: 4, Âpr: 4, Ott: 10, Oet: 10, Noy: 11, NOY: 11, NOV: 11, NOT: 11, ÏTov: 11, Doc: 12,
+  // The volumes of 1959-1977 (AAS 51-69, phase 2b-ii-b): `Maü` for *Maii* (AAS 54 (1962)
+  // 894, `1961 Maü 5 URBIS. Inter frequentissima`), `Mail` for *Maii* (AAS 66 (1974) 762,
+  // `» Mail 11 Mira eademque`), `Dee` for *Dec.* (AAS 66 (1974) 762, `1973 Dee. 13 Quod
+  // pastorale`, the letter of 13 December 1973 erecting the delegation in Chad), `Eebr`
+  // for *Febr.* (AAS 55 (1963) 1077, `Eebr. 9 Ad praelatos … Tribunalis Sacrae Romanae
+  // Rotae`), `lui` for *Iul.* (AAS 61 (1969) 840, `» lui. 26 Fidelium Hispanorum`).
+  Maü: 5, Mail: 5, Dee: 12, Eebr: 2, lui: 7,
 };
 /**
  * The month a token names: a Latin month in any of the century's spellings, case-folded
@@ -228,7 +255,7 @@ const OCR_MONTHS: Record<string, number> = {
  */
 const monthOf = (token: string, columnar: boolean, dayFollows = false): number | undefined => {
   if (!columnar) return ABBREVIATED_MONTH_RE.test(token) ? MONTHS[token.replace(/\.$/, '').toLowerCase()] : undefined;
-  if (!/^[A-Za-zÂÏ][a-z]{1,9}\.?$/i.test(token)) return undefined;
+  if (!/^[A-Za-zÂÏ][a-zü]{1,9}\.?$/i.test(token)) return undefined;
   const bare = token.replace(/\.$/, '');
   return MONTHS[bare.toLowerCase()] ?? (dayFollows ? OCR_MONTHS[bare] : undefined);
 };
@@ -241,13 +268,14 @@ const DITTO_RE = /^»[,.]?$/;
  * already been read on the line and a day or a capitalised word follows.
  */
 const COLUMNAR_DITTO_RE = /^[a-z]?[»>)]{1,2}$/;
-/** `«` for `»` (AAS 43 (1951) `» « 11 Africa Meridionalis`): a ditto only where a date token follows (readDateLine). */
-const COLUMNAR_DITTO_INNER_RE = /^«$/;
-const COLUMNAR_DITTO_LETTER_RE = /^[a-zA-Z]$/;
+/** `«` for `»` (AAS 43 (1951) `» « 11 Africa Meridionalis`), `%` for `»` (AAS 52 (1960) 1033, `% » » PORTUS MORESBY`): a ditto only where a date token follows (readDateLine). */
+const COLUMNAR_DITTO_INNER_RE = /^[«%]$/;
+/** A lone letter where a ditto stands (`» h 3`, `» D »`; `Ä » 20`, AAS 58 (1966) 1207). */
+const COLUMNAR_DITTO_LETTER_RE = /^[a-zA-ZÀ-ÿ]$/;
 /** Stray OCR punctuation between date tokens (`1978 Ian. - 3`, `» . » 8`, `1950 Ian. • 14`, `1947 Oct. ; 20`). */
 const DATE_JUNK_RE = /^[-–—.,'^•;:*"]$/;
-/** The junk the OCR sticks to a date token: `.16`, `20\\`, `.Martii`, `Nov,.`, `Aug-`, `2$>`. */
-const TOKEN_JUNK_RE = /^[.,'"•^*:;\\/(]+|[.,'"•^*:;\\/-]+$/g;
+/** The junk the OCR sticks to a date token: `.16`, `20\\`, `.Martii`, `Nov,.`, `Aug-`, `2$>`, `->` for `»` (AAS 53 (1961) 843). */
+const TOKEN_JUNK_RE = /^[-.,'"•^*:;\\/(]+|[.,'"•^*:;\\/-]+$/g;
 const YEAR_TOKEN_RE = /^\d{4}\.?$/;
 const DAY_TOKEN_RE = /^\d{1,2}$/;
 /** A month-shaped word that is not a month: an OCR misreading the table above does not list. */
@@ -264,6 +292,8 @@ const RUNNING_HEADER_RE =
 const PAGE_TOP_HEADER_RE = /Index documentor|chronologico ordi\w*ne digest|^\s*[^\s\d]{0,2}\d{1,4}\s*$/;
 /** A header the layout mode glued to the end of a line: `… Coloniensem,536   Index documentorum`. */
 const GLUED_HEADER_RE = /(?<=\S)\s{3,}(?:\d{1,4}\s+)?(?:Index documentor.*|chronologico ordi\w*ne digest.*)$/;
+/** The chronological index's title lines (`INDEX DOCUMENTORUM` / `CHRONOLOGICO ORDINE DIGESTUS`), which a volume fixture opens with. */
+const TITLE_LINE_RE = /^\s*(?:INDEX DOCUMENTORUM|CHRONOLOGICO ORDINE DIGESTUS)\s*$/;
 /** A line of OCR noise: one or two characters that are neither capitals, digits nor ditto marks (`i`, `^`, `•`). */
 const NOISE_LINE_RE = /^\s*[^\sA-Z0-9«»]{1,2}\s*$/;
 /**
@@ -289,18 +319,25 @@ const COLUMN_HEADER_RE = /^[\s.,'"•»-]*(?:(?:ANNO|MENSE|DIE|DXE|D1E|PA[GSOEe�
 // The parts are numbered `II – `, `IV. – `, `I. — ` or (2018's Diarium) not at all.
 // The OCR reads the numeral as `1` (AAS 32, 1940: `1 - ACTA PII PP. XII`), `IL` (`IL - ACTA
 // SS. CONGREGATIONUM`, AAS 25) or `U` (`U - ACTA SS. CONGREGATIONUM`, AAS 32): any short
-// token before the dash is the numeral, since the words after it are what is read.
-const PART_HEADING_RE = /^\s*(?:[A-Za-z0-9]{1,4}\.?\s*r?[–—-]\s*)?(ACTA\s+[A-Za-z].*|DIARIUM\s+[A-Z].*|CARDINALIUM COMMISSIO.*)$/;
+// token before the dash is the numeral, since the words after it are what is read. AAS 67
+// (1975) sets a full stop after the word (`I - ACTA. PAULI PP. VI`), and AAS 51 (1959)
+// reads John XXIII's name as `I0A1OTS` (`II - ACTA I0A1OTS PP. XXIII`), digits inside the
+// word: both are read, the second through the popes table's OCR spellings (popes.ts).
+// AAS 69 (1977) numbers the synod's part without the word (`II - SYNODUS EPISCOPORUM`, p.
+// 764, the pope's three allocutions at the fifth synod), between the pope's part and the
+// dicasteries': a part, skipped as `ACTA SYNODI EPISCOPORUM` is.
+const PART_HEADING_RE = /^\s*(?:[A-Za-z0-9]{1,4}\.?\s*r?[–—-]\s*)?(ACTA\.?\s+[A-Za-z].*|DIARIUM\s+[A-Z].*|CARDINALIUM COMMISSIO.*|SYNODUS EPISCOPORUM\s*)$/;
 /** `ACTA PII PP. X.`, `ACTA IOANNIS PAULI PP. II`, `ACTA BENEDICTI XVI`, `ACTA FRANCISCI PP.`: name words, optional `PP.`, optional numeral. */
-const POPE_PART_RE = /^ACTA\s+([A-Z]+(?:\s+[A-Z]+)*?)(?:\s+PP\.?)?(?:\s+([IVXL]+))?\.?\s*$/;
+const POPE_PART_RE = /^ACTA\s+([A-Z][A-Z0-9]*(?:\s+[A-Z][A-Z0-9]*)*?)(?:\s+PP\.?)?(?:\s+([IVXL]+))?\.?\s*$/;
 /**
  * A pope heading as the OCR prints it, normalised for the popes table: the name words
- * upper-cased (`ACTA Pii PP. XII`, AAS 33, 1941) and an `l` in the numeral read as `I`
- * (`ACTA PII PP. Xll`, AAS 41, 1949). The heading as printed is kept on the result
- * (`popeHeadings`) so the report can list every variant.
+ * upper-cased (`ACTA Pii PP. XII`, AAS 33, 1941), an `l` in the numeral read as `I`
+ * (`ACTA PII PP. Xll`, AAS 41, 1949), the full stop after `ACTA` dropped (`ACTA. PAULI
+ * PP. VI`, AAS 67, 1975). The heading as printed is kept on the result (`popeHeadings`)
+ * so the report can list every variant.
  */
 const normalisePopeHeading = (heading: string): string => {
-  const words = heading.replace(/\s+/g, ' ').trim().toUpperCase().split(' ');
+  const words = heading.replace(/\s+/g, ' ').trim().toUpperCase().replace(/^ACTA\.\s/, 'ACTA ').split(' ');
   // No pope of the AAS bears a numeral with an L (the highest is XXIII): an L in the
   // last word is the OCR's lower-case l for I.
   const last = words[words.length - 1]!;
@@ -311,16 +348,24 @@ const normalisePopeHeading = (heading: string): string => {
 const CONSISTORY_CATEGORY_RE = /^ACTA\s+(?:SACRI\s+)?CONSISTORII/;
 // The numeral in any OCR reading (`IY.`, `XJV`, `i.`, `I r-`; AAS 25, 26, 42): the
 // heading's words decide the category, and normaliseHeading drops the numeral the same way.
-const HEADING_RE = /^\s*[IVXLJYivxl1]+\.?\s*[r•]?\s*[–—-]\s*[A-Z][A-ZÀ-Ý .,'’():«»-]*$/;
-/** The OCR of AAS 46 (1954) 801 sets one heading in mixed case (`XIV - Sacra Consistoria`): a heading only when the words are a known category. */
-const MIXED_CASE_HEADING_RE = /^\s*[IVXL]+\.?\s*[–—-]\s*[A-Z][a-z]+(?: [A-Za-z]+){0,4}\.?$/;
-const HEADING_CONTINUATION_RE = /^[A-Z][A-Z .,'’():-]*$/;
+const HEADING_RE = /^\s*[IVXLJYivxl1]+[.-]?\s*[r•]?\s*[–—-]\s*[A-Z][A-ZÀ-Ý .,'’():«»-]*$/;
+/**
+ * The OCR of AAS 46 (1954) 801 sets one heading in mixed case (`XIV - Sacra Consistoria`),
+ * and AAS 59 (1967) prints its headings unnumbered, several in mixed case (`Litterae
+ * Encyclicae`, `Epistula Apostolica`, `Adhortationes Apostolicae`, `Litterae Apostolicae`,
+ * `Nuntii Telegraphici`, pp. 1140-1152): a heading only when the words are a known category.
+ */
+const MIXED_CASE_HEADING_RE = /^\s*(?:[IVXL]+\.?\s*[–—-]\s*)?[A-Z][a-z]+(?: [A-Za-z]+){0,4}\.?$/;
+/** The second line of a heading, or an unnumbered one; AAS 52 (1960) 1033 ends one in an OCR `^` (`MOTU PROPRIO DATAE^`), AAS 68 (1976) 756 sets the guillemets apart (`« MOTU PROPRIO» DATAE`). */
+const HEADING_CONTINUATION_RE = /^[A-Z][A-Z .,'’():«»-]*\^?$/;
+/** The column header glued to a heading's line (`XIV - NUNTII SCRIPTO DATI PAG.`, AAS 51 (1959) 946; AAS 66 (1974) 762, 764). */
+const HEADING_GLUED_PAG_RE = /^(\s*(?:[IVXL]+\s*[–—-]\s*)?[A-Z][A-Z «»]+?)\s+PA[GS]\.?\s*$/;
 /**
  * Dot leaders (once an ellipsis), or at least two spaces, then the page number ending the
  * entry; in the volumes a single leader dot can be glued to the page (`Orientali .154`,
  * AAS 30, 1938) and OCR junk can follow it (`47'`, `226 ,`, `549-`; AAS 24, 32).
  */
-const PAGE_END_RE = /(?:(?:\s*\.){2,}|\s*…|\s{2,}|\s\.)\s*(\d{1,4})[.,'’-]?(?:\s*,)?\s*$/;
+const PAGE_END_RE = /(?:(?:\s*\.){2,}|\s*…|\s{2,}|\s\.)\s*['’]?(\d{1,4})[.,'’-]?(?:\s*,)?\s*$/;
 /**
  * A full line leaves room for neither leaders nor a second space: `… Erbil (Iraquia) 82`,
  * and the volumes' layout mode prints the page after one space as often as not
@@ -336,7 +381,7 @@ const TIGHT_PAGE_END_RE = /^.{55,}[^\s\d] (\d{1,4})$/;
  * ending in a word and a number below 1500 (no AAS volume reaches it; a year does),
  * still only when the next line opens something else.
  */
-const COLUMNAR_PAGE_END_RE = /^.*(?:[^\s\d]|\b1[89]\d\d) (\d{1,4})[.,'’-]?(?:\s*,)?$/;
+const COLUMNAR_PAGE_END_RE = /^.*(?:[^\s\d]|\b1[89]\d\d) ['’]?(\d{1,4})[.,'’-]?(?:\s*,)?$/;
 const VOLUME_RE = /\(An\.\s*(\d{4})?\s*et\s*[Vv]ol\.\s*([CDILMVXcdilmvx]+)\)/;
 /**
  * The table of contents of *Sapienti Consilio* the 1909 index prints inside the
@@ -650,7 +695,9 @@ function readDateLine(line: string, prev: DateState | null, columnar: boolean, v
     // (1949) 662, for 1948), or a four-character token with a digit broken (`19Ö4 Oet. 7`,
     // AAS 47): the year is unprinted, not the day 19.
     else if (/^\d{2}$/.test(tokens[0]) && /^[A-Za-z0-9]{2}$/.test(tokens[1] ?? '') && monthOf(tokens[2] ?? '', true, true) !== undefined) { tokens.splice(0, 2, '????'); joined = 1; }
-    else if (/^\d{2}[^\d\s]{1,2}\d$|^\d[^\d\s]{1,2}\d{2}$/.test(tokens[0]) && monthOf(tokens[1] ?? '', true, true) !== undefined) tokens[0] = '????';
+    // … or the last digit broken (`196S Nov. 4 Summi Dei`, `196S Sept. 14 Cum proximus`, AAS
+    // 55 (1963) 1081): the year is unprinted here too.
+    else if (/^\d{2}[^\d\s]{1,2}\d$|^\d[^\d\s]{1,2}\d{2}$|^\d{3}[^\d\s]$/.test(tokens[0]) && monthOf(tokens[1] ?? '', true, true) !== undefined) tokens[0] = '????';
   }
   const seq: DateToken[] = [];
   let i = 0;
@@ -886,6 +933,10 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
       // Index documentorum`, 337 and 788 sharing a digit) the entry keeps the fused number
       // and is reported without a page.
       if (GLUED_HEADER_RE.test(line)) line = line.replace(/(?<=[a-zà-ÿ])\d{3,4}(?=\s{3,})/, '').replace(GLUED_HEADER_RE, '');
+      // The index's own title, wherever the extraction sets it (the default mode renders
+      // it after the first page's entries, AAS 52 (1960) 1032): never a category heading.
+      if (columnar && TITLE_LINE_RE.test(line)) continue;
+      if (columnar) line = line.replace(HEADING_GLUED_PAG_RE, '$1');
       for (const piece of columnar ? line.replace(RUN_TOGETHER_RE, '$1\n').split('\n') : [line]) {
         lines.push(piece);
         pageOf.push(p);
@@ -916,10 +967,21 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
   // (1939) 739) is not read as an entry of its own.
   const ENTRY_OPENING_RE = /^[A-Z«$][^\n]{1,80}?(?:[.)]\s*•?\s*[-–—]\s|\)\.\s[A-Z])/;
   const shapedPages = new Set<number>();
+  // A page extracted in pypdf's default mode (fetch-acta.sh falls back to it where the
+  // layout mode fused lines: most pages of AAS 52, 54-58, 60 and 68, 1960-1968 and 1976)
+  // has no column geometry at all -- every line starts at the margin, the date on the
+  // entry's line and the continuations unindented -- so a capitalised continuation
+  // (`Patronam et S. Ioannes Maria Vianney`, AAS 52 (1960) 1035) is not at any entry
+  // column and must never be read as a blank-dated entry. Such a *flat* page is told by
+  // its indentation: no line of it is indented four columns or more.
+  const flatPages = new Set<number>();
   if (columnar) {
     const cols = new Map<number, number[]>();
     const conts = new Map<number, Map<number, number>>();
     const shapes = new Map<number, [number, number]>();
+    const indented = new Set<number>();
+    lines.forEach((line, i) => { if (line.trim() !== '' && line.length - line.trimStart().length >= 4) indented.add(pageOf[i]!); });
+    for (let p = 0; p < text.split('\f').length; p++) if (!indented.has(p)) flatPages.add(p);
     lines.forEach((line, i) => {
       if (line.trim() === '') return;
       const p = pageOf[i]!;
@@ -947,6 +1009,7 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
     for (const [p, [shaped, all]] of shapes) if (all >= 3 && shaped / all >= 0.6) shapedPages.add(p);
   }
   const atEntryColumn = (i: number): boolean => {
+    if (flatPages.has(pageOf[i]!)) return false;
     const col = entryColOf.get(pageOf[i]!);
     const line = lines[i]!;
     const indent = line.length - line.trimStart().length;
@@ -954,8 +1017,16 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
     const cont = contColOf.get(pageOf[i]!);
     return cont !== undefined && indent >= cont - 8 && indent <= cont - 1 && ENTRY_OPENING_RE.test(line.trim());
   };
-  const start = lines.findIndex((l) => /^\s*CHRONOLOGICO ORDINE DIGESTUS\s*$/.test(l));
-  if (start < 0) throw new Error('No "CHRONOLOGICO ORDINE DIGESTUS" heading found');
+  // The index PDFs are extracted whole, so the chronological index is found by its
+  // title; a volume fixture *is* the index's pages (fetch-acta.sh located them by that
+  // title), and where its first page is in pypdf's default mode the title is rendered
+  // after the page's entries (AAS 52 (1960) 1032: `I - ACTA PII PP. XII` … then `INDEX
+  // DOCUMENTORUM` / `CHRONOLOGICO ORDINE DIGESTUS` as the page's last lines), so a
+  // volume is read from its first line -- everything before the first pope part is
+  // skipped in any case.
+  const titleAt = lines.findIndex((l) => /^\s*CHRONOLOGICO ORDINE DIGESTUS\s*$/.test(l));
+  if (titleAt < 0 && !columnar) throw new Error('No "CHRONOLOGICO ORDINE DIGESTUS" heading found');
+  const start = columnar ? -1 : titleAt;
   const end = lines.findIndex((l, i) => i > start && /^\s*(INDICES NOMINUM|I – INDEX NOMINUM|INDEX NOMINUM PERSONARUM|INDEX ANALYTICUS|INDEX RERUM|INDEX ALPHABETICUS)/.test(l));
 
   const stats: ActaParseStats = { lines: 0, pageLines: 0, harvestedPageLines: 0, harvestedEntries: 0, dateLines: 0, entries: 0, monthOnly: 0, withoutPage: 0, subItems: 0, translations: 0, consumed: 0 };
@@ -1035,7 +1106,10 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
     // an entry the rate could count: outside the denominator (stats.translations counts it).
     const translation = columnar && TRANSLATION_RE.test(line);
     if (translation) stats.translations++;
-    if ((PAGE_END_RE.test(line) || (tightEnd && Number(tightEnd[1]) < 1500)) && !translation) {
+    // A page number alone on its line (the layout mode a line below its entry, the default
+    // mode where the OCR lost the entry's other lines) is a page line of the denominator too.
+    const bareNumberLine = columnar && /^\s*\d{1,4}\s*$/.test(line) && Number(line) < 1500;
+    if ((PAGE_END_RE.test(line) || (tightEnd && Number(tightEnd[1]) < 1500) || bareNumberLine) && !translation) {
       stats.pageLines++;
       if (harvestedHere) stats.harvestedPageLines++;
     }
@@ -1133,9 +1207,23 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
       if (dated?.date) prev = dated.date;
       continue;
     }
-    if (columnar && open !== null && /^\s*\d{1,4}\s*$/.test(line) && Number(line) < 1500) {
-      // The page number alone on a line (the layout mode set it a line below its entry).
+    let bareNumber = false;
+    let junkNumberSkipped = false;
+    const lastTight = open !== null ? open.lines[open.lines.length - 1]!.match(COLUMNAR_PAGE_END_RE) : null;
+    if (columnar && open !== null && /^\s*\d{1,4}\s*$/.test(line) && Number(line) < 1500 && !(lastTight && Number(lastTight[1]) < 1500)) {
+      // The page number alone on a line (the layout mode set it a line below its entry; the
+      // default mode of AAS 58 (1966) 1207 sets it so where the OCR lost the entry's other
+      // lines: `1965 Dec. 11 Illustri laude. - Titulo ac privilegiis Basilicae Minoris ecclesia` / `569`).
+      // Not where the entry's last line already ends in a page (`… nuncupandus 647` / `9`,
+      // AAS 48 (1956) 861, the `9` being the OCR's for the next entry's ditto): that page
+      // is the entry's, and the bare number is read as the junk it is.
       open.lines.push(line);
+      bareNumber = true;
+    } else if (columnar && open !== null && /^\s*\d{1,4}\s*$/.test(line) && Number(line) < 1500 && lastTight && Number(lastTight[1]) < 1500) {
+      junkNumberSkipped = true;
+      stats.consumed++;
+      defect(category, `a bare number after a page-ended line, not read as a page: ${line.trim()}`);
+      // The open entry closes on its own page below.
     } else if (dated && !continues) {
       flushDefect();
       if (dated.date === null) {
@@ -1160,13 +1248,13 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
 
     // Does the entry end on this line?
     const last = open.lines[open.lines.length - 1]!;
-    let pageMatch = last.match(PAGE_END_RE);
+    let pageMatch = bareNumber ? last.match(/^\s*(\d{1,4})\s*$/) : last.match(PAGE_END_RE);
     let pageTail = pageMatch?.[0].length ?? 0;
     if (!pageMatch) {
       const tight = last.match(columnar ? COLUMNAR_PAGE_END_RE : TIGHT_PAGE_END_RE);
       const nextAt = lines.findIndex((l, k) => k > i && l.trim() !== '');
       const next = nextAt < 0 ? '' : lines[nextAt]!;
-      const nextOpens = next === '' || isDateLine(next) || HEADING_RE.test(next) || isHeading(next)
+      const nextOpens = next === '' || junkNumberSkipped || isDateLine(next) || HEADING_RE.test(next) || isHeading(next)
         || PART_HEADING_RE.test(next) || HEADING_CONTINUATION_RE.test(next.trim())
         || SUB_ITEM_RE.test(next) || (volume === 1 && NESTED_TOC_HEADINGS.has(normaliseHeading(next)))
         || (nextAt >= 0 && isBlankDatedEntry(nextAt)) || (columnar && TRANSLATION_RE.test(next));

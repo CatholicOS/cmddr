@@ -87,6 +87,20 @@ describe('the AAS category table', () => {
     expect(categoryForHeading('I – ADHORTATIONES APOSTOLICAE POSTSYNODALES:')?.id).toBe('Adhortationes Apostolicae');
     expect(categoryForHeading('VIII. - ADHORTATIO AD POPULORUM BELLIOERANTIUM MODERATORES.')?.id).toBe('Adhortationes Apostolicae');
     expect(categoryForHeading('IX – NUNTIUS TELEVISIFICUS')?.id).toBe('Nuntii televisifici');
+    // The volumes of 1959-1977 (phase 2b-ii-b).
+    expect(categoryForHeading('VII - NUNTIUS RADIOTELEVISIFICAS')?.id).toBe('Nuntii radiophonici');
+    expect(categoryForHeading('NUNTII RADIOPHONICI ET TELEVISIFICI')?.id).toBe('Nuntii radiophonici');
+    expect(categoryForHeading('XI - NUNTII SCRIPTI DATI')?.id).toBe('Nuntii');
+    expect(categoryForHeading('NUNTII GRATULATOMI')?.id).toBe('Nuntii gratulatorii');
+    expect(categoryForHeading('IV - SOLLEMNIA CANONIZATIONIS')?.id).toBe('Sollemnes canonizationes');
+    expect(categoryForHeading('SUMMI PONTIFICIS PEREGRINANTES ITER IN ASIAM ET OCEANIAM')?.id).toBe('Itinera Apostolica');
+    expect(categoryForHeading('IN SOLLEMNI RITU INEUNDI CONCILII OECU MENICI VATICANI SECUNDI')?.harvested).toBe('no');
+    expect(categoryForHeading('I - SOLLEMNIS PROFESSIO FIDEI')?.classes).toEqual([{ genre: 'apostolic-letter', requires: 'motu-proprio' }]);
+    expect(categoryForHeading('RESCRIPTUM EX AUDIENTIA')?.id).toBe('Rescriptum');
+    expect(categoryForHeading('XX - DECLARATIO')?.id).toBe('Declaratio');
+    expect(normaliseHeading('XI- - ALLOCUTIONES')).toBe('ALLOCUTIONES');
+    expect(normaliseHeading('IV - LITTERAE APOSTOLICAE « MOTU PROPRIO» DATAE')).toBe('LITTERAE APOSTOLICAE «MOTU PROPRIO» DATAE');
+    expect(normaliseHeading('MOTU PROPRIO DATAE^')).toBe('MOTU PROPRIO DATAE');
     expect(normaliseHeading('I. - CONSTITUTIONES APOSTOLICAE.')).toBe('CONSTITUTIONES APOSTOLICAE');
   });
 
@@ -105,8 +119,8 @@ describe('the AAS category table', () => {
     }
     // And every heading listed is a heading line of some fixture (alone or joined to the
     // next line), so the table carries no guess: the exceptions are the spec's
-    // anticipated BULLAE and the correctly spelt BELLIGERANTIUM listed beside the 1917
-    // fixture's OCR spelling.
+    // anticipated BULLAE and the correctly spelt BELLIGERANTIUM and OECUMENICI listed
+    // beside the 1917 and 1962 fixtures' OCR spellings.
     const printedLines = new Set<string>();
     for (const src of ACTA_SOURCES) {
       const lines = readFileSync(src.file, 'utf8').split(/\f|\n/).map((l) => l.trim()).filter((l) => l !== '');
@@ -116,7 +130,7 @@ describe('the AAS category table', () => {
       });
     }
     const unprinted = ACTA_CATEGORIES.flatMap((c) => c.headings).filter((h) => !printedLines.has(h));
-    expect(unprinted).toEqual(['ADHORTATIO AD POPULORUM BELLIGERANTIUM MODERATORES', 'BULLAE']);
+    expect(unprinted).toEqual(['ADHORTATIO AD POPULORUM BELLIGERANTIUM MODERATORES', 'BULLAE', 'IN SOLLEMNI RITU INEUNDI CONCILII OECUMENICI VATICANI SECUNDI']);
     void parseActaIndex;
   });
 });

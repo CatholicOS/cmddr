@@ -349,8 +349,9 @@ for (const [issuer, docs] of byIssuer) {
 
 // The AAS reference (acta reference spec §4.3; acta volumes spec §5): every entry of the
 // index fixtures (tools/fixtures/acta/: the annual *Index generalis* PDFs of 2012 and
-// 2015-2024 and the chronological-index pages of the sample volumes 1909-1978, listed in
-// ACTA_SOURCES) in a harvested category is matched to a document by issuer, date and
+// 2015-2024 and the chronological-index pages of the sample volumes 1909-1978 and of the
+// volumes of 1932-1957 and 1959-1977, listed in ACTA_SOURCES) in a harvested category is
+// matched to a document by issuer, date and
 // incipit, and the match writes `acta` on it. The join runs
 // after every id is final, so the summary below names the ids the report will name. It
 // never writes what it cannot evidence: an ambiguous entry, an entry the shelves lack, a

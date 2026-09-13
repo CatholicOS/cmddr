@@ -28,7 +28,7 @@ not used silently.
 | 1917-I | 595–607 of 639 | 386 | 41 | 37 | **90.2 %** ⚠ | 35 / 37 = 94.6 % | 61 | 10 | 0 | 246 | none | none |
 | 1931 | 531–540 of 566 | 234 | 76 | 76 | **100.0 %** | 73 / 73 = 100.0 % | 2 | 2 | 0 | 5 | none | none |
 | 1958 | 1032–1047 of 1130 | 552 | 196 | 179 | **91.3 %** ⚠ | 132 / 134 = 98.5 % | 7 | 2 | 0 | 24 | none | none |
-| 1978 | 1008–1017 of 1130 | 360 | 164 | 161 | **98.2 %** | 72 / 72 = 100.0 % | 6 | 6 | 0 | 14 | none | none |
+| 1978 | 1008–1017 of 1130 | 360 | 164 | 162 | **98.8 %** | 72 / 72 = 100.0 % | 6 | 6 | 0 | 13 | none | none |
 | 2012 | 1–64 (whole) | 313 | 163 | 151 | **92.6 %** ⚠ | 61 / 61 = 100.0 % | 0 | 0 | 0 | 33 | none | none |
 
 ### The reading
@@ -64,7 +64,7 @@ not used silently.
    page), the layout mode interleaves two entries' words on one line and lands page numbers on the wrong entries, so
    `fetch-acta.sh` falls back to the default mode for that page (README) and the parser splits the run-together line at
    each page number a date follows: 1931 parses at 100.0 %, and Pius XI's four encyclicals of 1931 cite their pages.
-5. **1958 and 1978 are clean and print toponym and incipit both.** 91.3 % and 98.2 % overall, 98.5 % and
+5. **1958 and 1978 are clean and print toponym and incipit both.** 91.3 % and 98.8 % overall, 98.5 % and
    100.0 % over the harvested categories: what 1958 loses below 95 % are the numbered items of its two consistories
    (*I. Consistorium secretum 393*, *II. Optio Ecclesiarum 393* …) and the *Possessio Romanae Cathedralis* line of John XXIII's
    part, which end in page numbers and are not acts. The constitutions read *SANTAREMENSIS (Obidensis). Cum sit. -* (1958) and
@@ -83,10 +83,10 @@ not used silently.
 | 1909 | Pius X | 2 | 2 | 0 | 0 | 0 | 2 | 2 | 0 | 0 | 0 | 18 |
 | 1917-I | Benedictus XV | 37 | 35 | 1 | 0 | 0 | 34 | 8 | 26 | 2 | 13 | 8 |
 | 1931 | Pius XI | 76 | 73 | 4 | 0 | 0 | 69 | 60 | 9 | 3 | 6 | 2 |
-| 1958 | Pius XII, Ioannes XXIII | 179 | 132 | 71 | 9 | 0 | 52 | 36 | 25 | 47 | 1 | 20 |
-| 1978 | Paulus VI, Ioannes Paulus I, Ioannes Paulus II | 161 | 72 | 29 | 0 | 0 | 43 | 28 | 15 | 89 | 0 | 16 |
+| 1958 | Pius XII, Ioannes XXIII | 179 | 132 | 73 | 7 | 0 | 52 | 36 | 23 | 47 | 1 | 7 |
+| 1978 | Paulus VI, Ioannes Paulus I, Ioannes Paulus II | 162 | 72 | 29 | 0 | 0 | 43 | 28 | 15 | 90 | 0 | 16 |
 | 2012 | Benedictus XVI | 151 | 61 | 24 | 2 | 0 | 35 | 12 | 25 | 90 | 17 | 21 |
-| **Total** | | **606** | **375** | **129** | **11** | **0** | **235** | **146** | **100** | **231** | **37** | **85** |
+| **Total** | | **607** | **375** | **131** | **9** | **0** | **235** | **146** | **98** | **232** | **37** | **72** |
 
 *Unmatched* counts the entries of a harvested or partly harvested category the join left without a document (each is
 listed in §6 with a belief); *Created* and *Held* partition them, with the ambiguous and doubly-claimed entries, by the
@@ -96,13 +96,13 @@ shelf documents of the source's popes dated in the volume year that carry no `ac
 
 ### The reading
 
-1. **129 references written, every one from a quoted index line (§12):** 1 curated, 19 incipit, 1 incipit-month, 20 toponym, 88 unique. The
+1. **131 references written, every one from a quoted index line (§12):** 1 curated, 19 incipit, 1 incipit-month, 22 toponym, 88 unique. The
    *incipit-month* matches are the month-only entries of §1.3; the *toponym* and *incipit* ones include the claims the
    evidence rule resolved (`match.ts`): where several constitutions of one day are entered against one shelf record of the
    day (10 November 1977: *Avkaënsis*, *Mohaleshoekensis*, *Ambikapurensis* against the shelf's *Avkaensis*), the entry the
    record names keeps the match and the others are released to the creator instead of all three being withheld.
-2. **146 documents created** (§8) -- `rp:benedict-xv` 8, `rp:benedict-xvi` 12, `rp:paul-vi` 28, `rp:pius-x` 2, `rp:pius-xi` 60, `rp:pius-xii` 36 -- and 100 entries held (§9), 10 of them by the
-   duplicate guard. 61 constitutions print toponym and incipit both (§1.5), so almost no provisional id is minted from the
+2. **146 documents created** (§8) -- `rp:benedict-xv` 8, `rp:benedict-xvi` 12, `rp:paul-vi` 28, `rp:pius-x` 2, `rp:pius-xi` 60, `rp:pius-xii` 36 -- and 98 entries held (§9), 7 of them by the
+   duplicate guard and 3 by the id-collision, OCR and page rules. 61 constitutions print toponym and incipit both (§1.5), so almost no provisional id is minted from the
    volumes; the *Epistulae* are created only where the pope's letters shelf is harvested (Pius XI, Pius XII, John Paul I in this
    sample) and held elsewhere (§9, *shelf not harvested*).
 3. **A volume can reprint an act another volume already published, and a page can open two acts.** The 2020 index lists
@@ -126,14 +126,14 @@ Parsed / matched / ambiguous / unmatched for every category the era prints, with
 |---|---|---|---|---|---|---|---|
 | Litterae Encyclicae | yes |  |  | 4 / 4 / 0 / 0 | 2 / 2 / 0 / 0 |  |  |
 | Adhortationes Apostolicae | yes |  | 1 / 1 / 0 / 0 |  |  |  | 2 / 2 / 0 / 0 |
-| Constitutiones Apostolicae | yes |  |  | 12 / 0 / 0 / 12 | 37 / 35 / 2 / 0 | 28 / 3 / 0 / 25 | 11 / 8 / 2 / 1 |
+| Constitutiones Apostolicae | yes |  |  | 12 / 0 / 0 / 12 | 37 / 37 / 0 / 0 | 28 / 3 / 0 / 25 | 11 / 8 / 2 / 1 |
 | Litterae Apostolicae Motu proprio datae | yes |  |  | 2 / 0 / 0 / 2 | 1 / 1 / 0 / 0 | 1 / 1 / 0 / 0 | 3 / 3 / 0 / 0 |
 | Litterae Apostolicae | yes | 2 / 0 / 0 / 2 | 23 / 0 / 0 / 23 | 38 / 0 / 0 / 38 | 58 / 19 / 2 / 37 | 25 / 17 / 0 / 8 | 12 / 0 / 0 / 12 |
 | Epistulae Apostolicae | yes |  |  | 1 / 0 / 0 / 1 |  |  |  |
 | Litterae Decretales | partly |  |  |  |  | 2 / 0 / 0 / 2 | 9 / 0 / 0 / 9 |
 | Epistulae | partly |  | 11 / 0 / 0 / 11 | 15 / 0 / 0 / 15 | 19 / 13 / 5 / 1 | 6 / 3 / 0 / 3 |  |
 | Chirographa | no |  |  | 2 |  |  |  |
-| Homiliae | no |  |  |  |  | 10 | 34 |
+| Homiliae | no |  |  |  |  | 11 | 34 |
 | Allocutiones | no |  |  |  | 38 | 70 | 43 |
 | Sermones | no |  | 1 | 1 |  |  |  |
 | Nuntii | partly |  |  |  | 3 / 0 / 0 / 3 | 7 / 3 / 0 / 4 | 23 / 11 / 0 / 12 |
@@ -413,12 +413,11 @@ volume prints and the page the text layer lacks.
 
 </details>
 
-<details><summary><b>1978</b> — 11 defects</summary>
+<details><summary><b>1978</b> — 10 defects</summary>
 
 | Category | Defect |
 |---|---|
 | Constitutiones Apostolicae | day 80 out of range, read as month-only: » Mai. 80 BARTTIPURENSIS. - Ad supernam. Dioecesis Baruipurensis in |
-| Homiliae | unreadable date (unreadable month 'Dee.'): 1977 Dee. 25 In Basilica Vaticana habita, nocte Nativitatis D.N.I.Ch. . . 13 |
 | Homiliae | line outside any entry: » Febr. 8 161 |
 | Homiliae | line outside any entry: » » 19 248 |
 | Allocutiones | entry without a page number: > F.A.O |
@@ -520,8 +519,6 @@ sub-items is keyed on 13 capitalised division titles listed in `index.ts`.
 
 | Reference | Date | Category | Entry | Candidates |
 |---|---|---|---|---|
-| AAS 50 (1958) 111 | 1957-07-05 | Constitutiones Apostolicae | *Cum apostolicum* | `mag:pius-xii/kikuitensis-kisantuensis-kengen-1957` (*Kikuitensis - Kisantuensis (Kengen.)*), `mag:pius-xii/musomensis-1957` (*Musomensis*), `mag:pius-xii/quinhonensis-saigonensis-nhatrangensis-1957` (*Quinhonensis - Saigonensis (Nhatrangensis)*), `mag:pius-xii/rabaulensis-kaviengensis-1957` (*Rabaulensis (Kaviengensis)*) |
-| AAS 50 (1958) 665 | 1958-02-16 | Constitutiones Apostolicae | *Cum territorium* | `mag:pius-xii/civitatis-victoriae-matamorensis-1958` (*Civitatis Victoriae (Matamorensis)*), `mag:pius-xii/spiritus-sancti-victoriensis-spiritus-sancti-1958` (*Spiritus Sancti (Victoriensis Spiritus Sancti)*) |
 | AAS 50 (1958) 147 | 1957-04-26 | Litterae Apostolicae | *Tempia Dei* | `mag:pius-xii/brivatensis-civitas-1957` (*Brivatensis civitas*), `mag:pius-xii/deo-in-honorem-1957` (*Deo in honorem*), `mag:pius-xii/templa-dei-1957` (*Templa Dei*) |
 | AAS 50 (1958) 198 | 1957-06-14 | Litterae Apostolicae | *Antiquitate artiftciosis* | `mag:pius-xii/antiquitate-artificiosis-1957` (*Antiquitate artificiosis*), `mag:pius-xii/de-more-1957` (*De more*) |
 | AAS 50 (1958) 201 | 1958-03-04 | Epistulae | *Suavi animi* | `mag:pius-xii/letter-1958-03-04-1`, `mag:pius-xii/letter-1958-03-04-2`, `mag:pius-xii/letter-1958-03-04-3` |
@@ -1149,7 +1146,7 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 | AAS 70 (1978) 145 | Constitutiones Apostolicae | `mag:paul-vi/nobis-quam-maxime-1977` | Idahtna. Nobis quam maxime. Praefectura Apostolica Idahina, in Nigeria, ad gradum dioecesis attollitur | ` » Dec. 17 IDAHTNA. - Nobis quam maxime. Praefectura Apostolica Idahina, / in Nigeria, ad gradum dioecesis attollitur ........ 145` |  |
 | AAS 70 (1978) 232 | Constitutiones Apostolicae | `mag:paul-vi/qui-arcano-1977` | Aurangabadeksis. Qui arcano. Aurangabadensis dioecesis in India conditur | ` » » » AURANGABADEKSIS. - Qui arcano. Aurangabadensis dioecesis in / India conditur . 232` |  |
 | AAS 70 (1978) 273 | Constitutiones Apostolicae | `mag:paul-vi/praescriptionum-sacrosancti-1977` | Olomucejstsis et Aliarum. Praescriptionum sacrosancti. Ecclesiarum Olomucensis, Tyrnaviensis, Vratislaviensis et aliarum nova finium dispositio | ` » » 30 OLOMUCEJSTSIS et Aliarum. - Praescriptionum sacrosancti. Ec­ / clesiarum Olomucensis, Tyrnaviensis, Vratislaviensis et alia­ / rum nova finium dispositio 273` |  |
-| AAS 70 (1978) 275 | Constitutiones Apostolicae | `mag:paul-vi/qui-divino-1977` | Tyrnaviejstsis. Qui divino. Dioecesis Tyrnaviensis ad gradum metropolitanarum Ecclesiarum attollitur '. | ` » » » TYRNAVIEJSTSIS. - Qui divino. Dioecesis Tyrnaviensis ad gradum / metropolitanarum Ecclesiarum attollitur '. 275` |  |
+| AAS 70 (1978) 275 | Constitutiones Apostolicae | `mag:paul-vi/qui-divino-1977-12-30` | Tyrnaviejstsis. Qui divino. Dioecesis Tyrnaviensis ad gradum metropolitanarum Ecclesiarum attollitur '. | ` » » » TYRNAVIEJSTSIS. - Qui divino. Dioecesis Tyrnaviensis ad gradum / metropolitanarum Ecclesiarum attollitur '. 275` |  |
 | AAS 70 (1978) 234 | Constitutiones Apostolicae | `mag:paul-vi/sacer-praesul-1978` | Tbilacunensis. Sacer Praesul. Nova in Brasiliae finibus conditur dioecesis Trilaeunensis | `1978 Ian. 3 TBILACUNENSIS. - Sacer Praesul. Nova in Brasiliae finibus con­ / ditur dioecesis Trilaeunensis 234` |  |
 | AAS 70 (1978) 146 | Constitutiones Apostolicae | `mag:paul-vi/tametsi-munus-1978` | Rondoniensis. Tametsi munus. Praelatura Rondoniensis in Brasilia constituitur | ` » » » RONDONIENSIS. - Tametsi munus. Praelatura Rondoniensis in / Brasilia constituitur 146` |  |
 | AAS 70 (1978) 148 | Constitutiones Apostolicae | `mag:paul-vi/qui-ad-deatissimi-1978` | Coxinensis. Qui ad deatissimi. Praelatura Coxinensis in Brasilia constituitur | `1978 Ian. - 3 COXINENSIS. - Qui ad deatissimi. Praelatura Coxinensis in Bra­ / silia constituitur . .. . . . . . . . 148` |  |
@@ -1205,13 +1202,13 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 | Category not created from the Acta | 34 | 1931 2; 1958 14; 1978 5; 2012 13 |
 | Shelf not harvested for the pope | 25 | 1917-I 11; 1978 5; 2012 9 |
 | Date before the pontificate | 9 | 1917-I 9 |
-| Ambiguous (§5) | 11 | 1958 9; 2012 2 |
+| Ambiguous (§5) | 9 | 1958 7; 2012 2 |
 | Unresolvable date (month-only) | 11 | 1917-I 6; 1931 2; 1978 3 |
 | Guard: possible identity | 1 | 1958 1 |
 | Guard: same incipit elsewhere | 6 | 1931 5; 1958 1 |
 | Id collision | 1 | 2012 1 |
 | OCR-damaged incipit or toponym | 2 | 1978 2 |
-| **Total** | **100** | |
+| **Total** | **98** | |
 
 <details><summary><b>Category not created from the Acta</b> — 34</summary>
 
@@ -1302,12 +1299,10 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 
 </details>
 
-<details><summary><b>Ambiguous (§5)</b> — 11</summary>
+<details><summary><b>Ambiguous (§5)</b> — 9</summary>
 
 | Reference | Pope | Date | Category | Entry | Candidates | Note |
 |---|---|---|---|---|---|---|
-| AAS 50 (1958) 111 | Pius XII | 1957-07-05 | Constitutiones Apostolicae | *Cum apostolicum* | `mag:pius-xii/kikuitensis-kisantuensis-kengen-1957` (*Kikuitensis - Kisantuensis (Kengen.)*), `mag:pius-xii/musomensis-1957` (*Musomensis*), `mag:pius-xii/quinhonensis-saigonensis-nhatrangensis-1957` (*Quinhonensis - Saigonensis (Nhatrangensis)*), `mag:pius-xii/rabaulensis-kaviengensis-1957` (*Rabaulensis (Kaviengensis)*) | 4 shelf candidates of the class on the date; neither the incipit nor the toponym separates them |
-| AAS 50 (1958) 665 | Pius XII | 1958-02-16 | Constitutiones Apostolicae | *Cum territorium* | `mag:pius-xii/civitatis-victoriae-matamorensis-1958` (*Civitatis Victoriae (Matamorensis)*), `mag:pius-xii/spiritus-sancti-victoriensis-spiritus-sancti-1958` (*Spiritus Sancti (Victoriensis Spiritus Sancti)*) | 2 shelf candidates of the class on the date; neither the incipit nor the toponym separates them |
 | AAS 50 (1958) 147 | Pius XII | 1957-04-26 | Litterae Apostolicae | *Tempia Dei* | `mag:pius-xii/brivatensis-civitas-1957` (*Brivatensis civitas*), `mag:pius-xii/deo-in-honorem-1957` (*Deo in honorem*), `mag:pius-xii/templa-dei-1957` (*Templa Dei*) | 3 shelf candidates of the class on the date; neither the incipit nor the toponym separates them |
 | AAS 50 (1958) 198 | Pius XII | 1957-06-14 | Litterae Apostolicae | *Antiquitate artiftciosis* | `mag:pius-xii/antiquitate-artificiosis-1957` (*Antiquitate artificiosis*), `mag:pius-xii/de-more-1957` (*De more*) | 2 shelf candidates of the class on the date; neither the incipit nor the toponym separates them |
 | AAS 50 (1958) 201 | Pius XII | 1958-03-04 | Epistulae | *Suavi animi* | `mag:pius-xii/letter-1958-03-04-1`, `mag:pius-xii/letter-1958-03-04-2`, `mag:pius-xii/letter-1958-03-04-3` | 3 shelf candidates of the class on the date; neither the incipit nor the toponym separates them |
@@ -1386,15 +1381,15 @@ era and in total; the AAS-only records of every other era are in the *after* col
 | `rp:pius-x` | 306 | 2 | 2 | 308 |
 | `rp:benedict-xv` | 63 | 8 | 8 | 71 |
 | `rp:pius-xi` | 158 | 532 | 60 | 690 |
-| `rp:pius-xii` | 260 | 1197 | 36 | 1457 |
-| `rp:john-xxiii` | 193 | 0 | 0 | 193 |
-| `rp:paul-vi` | 777 | 28 | 28 | 805 |
+| `rp:pius-xii` | 260 | 1234 | 36 | 1494 |
+| `rp:john-xxiii` | 193 | 294 | 0 | 487 |
+| `rp:paul-vi` | 777 | 355 | 28 | 1132 |
 | `rp:john-paul-i` | 7 | 0 | 0 | 7 |
 | `rp:john-paul-ii` | 2105 | 0 | 0 | 2105 |
 | `rp:benedict-xvi` | 301 | 17 | 12 | 318 |
 | `rp:francis-i` | 366 | 260 | 0 | 626 |
-| **Popes of the AAS** | **4536** | **2044** | **146** | **6580** |
-| **Registry** | **4975** | **2044** | **146** | **7019** |
+| **Popes of the AAS** | **4536** | **2702** | **146** | **7238** |
+| **Registry** | **4975** | **2702** | **146** | **7677** |
 
 ## 11. Documents of the era's popes with no AAS entry
 
@@ -1441,24 +1436,11 @@ not harvested, homilies, allocutions) is counted in §3.
 
 </details>
 
-<details><summary><b>1958</b> — 20 without an entry (papal-bull+apostolic-constitution 9; letter 6; apostolic-letter 5)</summary>
+<details><summary><b>1958</b> — 7 without an entry (letter 6; apostolic-letter 1)</summary>
 
 | Document | Date | Class | Index entries on this date | Reading |
 |---|---|---|---|---|
-| `mag:pius-xii/spiritus-sancti-victoriensis-spiritus-sancti-1958` | 1958-02-16 | papal-bull+apostolic-constitution | Constitutiones Apostolicae (AAS 50 (1958) 665: *Cum territorium*); Constitutiones Apostolicae (AAS 50 (1958) 713: *Haud inani*) | ambiguous (§5) |
 | `mag:pius-xii/clarius-explendescit-1958` | 1958-08-21 | apostolic-letter | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
-| `mag:john-xxiii/pacensis-in-bolivia-coroicensis-1958` | 1958-11-07 | papal-bull+apostolic-constitution | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
-| `mag:john-xxiii/papal-bull-1958-11-09` | 1958-11-09 | papal-bull+apostolic-constitution | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
-| `mag:john-xxiii/portus-moresby-mendiensis-1958` | 1958-11-13 | papal-bull+apostolic-constitution | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
-| `mag:john-xxiii/haeret-animis-1958` | 1958-11-20 | apostolic-letter | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
-| `mag:john-xxiii/durangensis-chihuahuensis-1958` | 1958-11-22 | papal-bull+apostolic-constitution | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
-| `mag:john-xxiii/papal-bull-1958-11-22` | 1958-11-22 | papal-bull+apostolic-constitution | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
-| `mag:john-xxiii/inclitam-dei-genetricem-1958` | 1958-11-28 | apostolic-letter | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
-| `mag:john-xxiii/bergomensem-inter-1958` | 1958-12-10 | apostolic-letter | — | December: the next volume |
-| `mag:john-xxiii/fortiter-suaviterque-1958` | 1958-12-10 | apostolic-letter | — | December: the next volume |
-| `mag:john-xxiii/liberopolitanae-1958` | 1958-12-11 | papal-bull+apostolic-constitution | — | December: the next volume |
-| `mag:john-xxiii/liberopolitanae-muilaensis-1958` | 1958-12-11 | papal-bull+apostolic-constitution | — | December: the next volume |
-| `mag:john-xxiii/tananarivensis-de-diego-suarez-et-aliarum-1958` | 1958-12-11 | papal-bull+apostolic-constitution | — | December: the next volume |
 
 </details>
 
@@ -1530,7 +1512,7 @@ not harvested, homilies, allocutions) is counted in §3.
 
 </details>
 
-<details><summary><b>1958</b> — 71 matched</summary>
+<details><summary><b>1958</b> — 73 matched</summary>
 
 | Reference | Category | Document | By | Index line |
 |---|---|---|---|---|
@@ -1547,6 +1529,7 @@ not harvested, homilies, allocutions) is counted in §3.
 | AAS 50 (1958) 27 | Constitutiones Apostolicae | `mag:pius-xii/berytensis-chaldaeorum-1957` | toponym | ` » Iulii 3 BERYTENSIS CHALDAEORUM. Etsi taeterrima. - In Libani territorio, / adhuc sub dicione apostolicae administrationis de Gazira Supe­ / riore Chaldaeorum, nova efficitur dioecesis, « Berytensis Chal­ / daeorum » appellanda 27` |
 | AAS 50 (1958) 249 | Constitutiones Apostolicae | `mag:pius-xii/aleppensis-chaldaeorum-1957` | toponym | ` » » » ALEPPENSIS CHALDAEORUM. Quasi pastor. - Sublata Apostolica Admi­ / nistratione de Gazira Superiore Chaldaeorum, nova conditur / dioecesis in regione Syria, quae « Aleppensis Chaldaeorum » / nuncupabitur 249` |
 | AAS 50 (1958) 109 | Constitutiones Apostolicae | `mag:pius-xii/quinhonensis-saigonensis-nhatrangensis-1957` | toponym | ` » » 5 QUINHONENSIS - SAIGONENSIS (Nhatrangensis). Crescit laetissimo. - / A Vicariatibus Apostolicis Quinhonensi et Saigonensi quaedam / territoria detrahuntur, quibus novus conditur Apostolicus Vica­ / riatus « Nhatrangensis » appellandus 109` |
+| AAS 50 (1958) 111 | Constitutiones Apostolicae | `mag:pius-xii/rabaulensis-kaviengensis-1957` | toponym | ` » » » B.ABAULENSIS (Kaviengensis). Cum apostolicum. - Ab Apostolico Vi­ / cariatu Rabaulensi quaedam territoria distrahantur, quibus / novus Vicariatus Apostolicus « Kaviengensis » constituitur . . 111` |
 | AAS 50 (1958) 137 | Constitutiones Apostolicae | `mag:pius-xii/musomensis-1957` | toponym | ` » » » MUSOMENSIS. Quam pollicitationem. - Praefectura Apostolica Muso- / mensis ad gradum et dignitatem dioecesis evehitur .... 137` |
 | AAS 50 (1958) 190 | Constitutiones Apostolicae | `mag:pius-xii/kikuitensis-kisantuensis-kengen-1957` | toponym | ` » » » KIKUITENSIS - KISANTUENSIS (Kengen.). Illa spei. - Certis distractis / terris ab Apostolicis Vicariatibus Kikuitensi et Kisantuensi, / nova constituitur Apostolica Praefectura, Kengensis nomine . 190` |
 | AAS 50 (1958) 139 | Constitutiones Apostolicae | `mag:pius-xii/confinioris-californiae-pacensis-in-california-inferiore-1957` | unique | ` » » 13 CONFINIORIS CALIFORNIAE (Pacensis in California Inferiore). Qui ar- / canaDei. - A Vicariatu Apostolico Confinioris Californiae quae­ / dam territoria distrahantur, quibus nova Praefectura Aposto­ / lica constituitur, « Pacensis in California Inferiore » appellanda 139` |
@@ -1562,6 +1545,7 @@ not harvested, homilies, allocutions) is counted in §3.
 | AAS 50 (1958) 553 | Constitutiones Apostolicae | `mag:pius-xii/rivibambensis-guarandensis-1957` | unique | ` » » 29 BIVIBAMBENSIS (Guarandensis). Qui iuxta. - Quadam regione a dioe­ / cesi Rivibambensi detracta, nova Ecclesia efficitur, « Guaran­ / densis» appellanda 553` |
 | AAS 50 (1958) 507 | Constitutiones Apostolicae | `mag:pius-xii/palmensis-lagensis-palmensis-et-xapecoensis-1958` | toponym | `1958 Ian. 14 PALMENSIS - LAGENSIS (Palmensis et Xapecoënsis). Quoniam vene­ / rabilis. - Praelatura « nullius » Palmensis exstinguitur atque / a dioecesi Lagensi quaedam separantur regiones, ex iisque duae / novae efformantur dioeceses, « Palmensis » et « Xapecoënsis » / nuncupandae 507` |
 | AAS 50 (1958) 615 | Constitutiones Apostolicae | `mag:pius-xii/s-iosephi-de-grajau-carolinensis-in-brasilia-1958` | toponym | ` » » » S. IOSEPHI DE GRAJAÚ (Carolinensis in Brasilia). Qui aeque. - A / praelatura « nullius » S. Iosephi de Grajaú quaedam territoria / detrahuntur, quibus nova praelatura efficitur, « Carolinensis in / Brasilia » appellanda 615` |
+| AAS 50 (1958) 665 | Constitutiones Apostolicae | `mag:pius-xii/spiritus-sancti-victoriensis-spiritus-sancti-1958` | toponym | ` » Febr. 16 SPIRITUS SANCTI (Victoriensis Spiritus Sancti) (Cachoëirensis de / Itapemirim - S. Matthaei). Cum territorium. - A dioecesi Spi­ / ritus Sancti quaedam territoria detrahuntur, quibus duae novae / dioeceses constituuntur; dioecesis praeterea Spiritus Sancti ad / dignitatem archidioecesis metropolitanae evehitur « Victorien­ / sis Spiritus Sancti » appellanda 665` |
 | AAS 50 (1958) 713 | Constitutiones Apostolicae | `mag:pius-xii/civitatis-victoriae-matamorensis-1958` | toponym | ` » » » CIVITATIS VICTORIAE (Matamorensis). Haud inani. - Distractis qui­ / busdam territoriis a dioecesi Civitatis Victoriae, nova quaedam / dioecesis conditur, « Matamorensis » nomine 713` |
 | AAS 50 (1958) 617 | Constitutiones Apostolicae | `mag:pius-xii/thakhekensis-1958` | toponym | ` » » 24 THAKHEKENSIS. Qui ad Ecclesiae. - Apostolica praefectura « Thakhe- / kensis », in regno Laotiano, ad gradum Apostolici Vicariatus / evehitur, nomine ac finibus immutatis 617` |
 | AAS 50 (1958) 619 | Constitutiones Apostolicae | `mag:pius-xii/niangaraensis-dorumaensis-1958` | toponym | ` » » » NIANGARAËNSIS (Dorumaënsis). Qui cotidie. - Detractis quibusdam / territoriis a Vicariatu apostolico Niangaraënsi, nova praefec­ / tura apostolica constituitur, « Dorumaënsis » cognominanda . 619` |
@@ -1680,7 +1664,7 @@ not harvested, homilies, allocutions) is counted in §3.
 | Category | Registry | 1909 | 1917-I | 1931 | 1958 | 1978 | 2012 | Total |
 |---|---|---|---|---|---|---|---|---|
 | Chirographa | — | 0 | 0 | 2 | 0 | 0 | 0 | 2 |
-| Homiliae | `homily` | 0 | 0 | 0 | 0 | 10 | 34 | 44 |
+| Homiliae | `homily` | 0 | 0 | 0 | 0 | 11 | 34 | 45 |
 | Allocutiones | `discourse-address` | 0 | 0 | 0 | 38 | 70 | 43 | 151 |
 | Sermones | `discourse-address` | 0 | 1 | 1 | 0 | 0 | 0 | 2 |
 | Nuntii radiophonici | `message`, `urbi-et-orbi` | 0 | 0 | 1 | 12 | 3 | 0 | 16 |

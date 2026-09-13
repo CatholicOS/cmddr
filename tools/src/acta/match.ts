@@ -103,10 +103,57 @@ export function toponymStems(toponym: string): string[] {
   });
 }
 
-const titleHasToponym = (title: string, toponym: string): boolean => {
+/**
+ * Whether a vatican.va title carries the index's toponym. The index prints a
+ * constitution's toponym as the mother see, a double see joined by a hyphen or *et*, and
+ * the new see in parentheses (`DURANGENSIS-SINALOENSIS (Mazatlanensis)`, `CORDUBENSIS
+ * (Crucis Axeatae)`, `CHUNCHEONENSIS (Voniuensis)`, AAS 51-69); the shelves of John XXIII
+ * and Paul VI title the same acts by the mother see alone (`Cordubensis`, 1963), by both
+ * (`Durangensis (Chihuahuensis)`, `Durangensis - Sinaloensis (Mazatlanensis)`, 1958) or,
+ * from 1965, by the new see alone (`Voniuensis`, `Bafiensis`, `Cabimensis`), and a day
+ * can carry two erections from one mother see (Durango, 22 November 1958: Chihuahua and
+ * Mazatlán). So the title must carry every word of the head (before the parenthesis) or
+ * every word of the parenthesis. Measured on AAS 51-69: the rule that took any one stem
+ * anywhere in the title left 164 entries ambiguous between the erections of one day.
+ * The 2017-2024 index's abbreviated adjectives (`VuCArien.`) still meet their full form.
+ */
+export const titleHasToponym = (title: string, toponym: string): boolean => {
   const words = `-${slugify(title)}-`;
-  return toponymStems(toponym).some((stem) => words.includes(`-${stem}`));
+  const has = (w: string) => toponymStems(w).some((stem) => words.includes(`-${stem}-`));
+  const paren = toponym.match(/\(([^()]*)\)/);
+  const head = toponymWords(toponym.replace(/\(.*$/, ''));
+  const inner = paren ? toponymWords(paren[1]!) : [];
+  return (head.length > 0 && head.every(has)) || (inner.length > 0 && inner.every(has));
 };
+/**
+ * Where two titles carry the head, the new see in parentheses tells them apart: a word
+ * of the entry's parenthesis is in the title's (`(Chihuahuensis)` against `(Chihuahuensis)`
+ * and `(Mazatlanensis)`). Only a separator among candidates that all carry the toponym --
+ * never a reason to drop the one that does, since the shelf spells a new see in its own
+ * case (`Cuschensis (Sicuanensi)` for the index's `CUSCHENSIS (Sicuanensis)`).
+ */
+export const titleHasToponymInner = (title: string, toponym: string): boolean => {
+  const paren = toponym.match(/\(([^()]*)\)/);
+  const titleParen = title.match(/\(([^()]*)\)/);
+  if (!paren || !titleParen) return false;
+  const inner = toponymWords(paren[1]!);
+  const titleInner = `-${slugify(titleParen[1]!)}-`;
+  // Every word of the entry's parenthesis, not some: a shared word such as `Ioannis` between
+  // two different sees must not decide a tie. Measured on every fixture through 1977 before
+  // the change (CodeRabbit, PR #35): `some` and `every` produce the same 3,966 matches.
+  return inner.every((w) => titleInner.includes(`-${w}-`));
+};
+/** The words of a toponym part, slugged, the connectors and abbreviations (`S.`, `et`, `in`) dropped. */
+const toponymWords = (part: string): string[] =>
+  [...new Set(part.split(/\s*[–-]\s*|\s+/).map((w) => slugify(w.replace(/\.$/, ''))).filter((w) => w.length >= 4))];
+/**
+ * Whether a title's own toponym -- what precedes its first comma, the Italian gloss of
+ * the John XXIII shelf aside (`Durangensis (Chihuahuensis), con la quale …`) -- is the
+ * entry's toponym word for word: the tie-break where two shelf titles carry the head
+ * (`Liberopolitanae` and `Liberopolitanae (Muilaënsis)`, 11 December 1958).
+ */
+export const titleIsToponym = (title: string, toponym: string): boolean =>
+  slugify(title.split(',')[0]!) === slugify(toponym.replace(/\.$/, ''));
 
 /**
  * The entry with its curated index correction applied (curation.ts), or the entry itself.
@@ -188,6 +235,14 @@ export function matchActa(rawEntries: ActaEntry[], docs: DocumentRecord[]): Acta
     if (candidates.length > 1 && entry.toponym !== null && category.classes.some((c) => c.requires === 'apostolic-constitution')) {
       const byToponym = candidates.filter((d) => titleHasToponym(d.title, entry.toponym!));
       if (byToponym.length >= 1) { candidates = byToponym; by = 'toponym'; }
+      if (candidates.length > 1) {
+        const byInner = candidates.filter((d) => titleHasToponymInner(d.title, entry.toponym!));
+        if (byInner.length >= 1) candidates = byInner;
+      }
+      if (candidates.length > 1) {
+        const exact = candidates.filter((d) => titleIsToponym(d.title, entry.toponym!));
+        if (exact.length === 1) candidates = exact;
+      }
     }
 
     if (candidates.length === 1) {

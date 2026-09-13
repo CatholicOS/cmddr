@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { matchActa, shiftDate, toponymStems } from '../src/acta/match.js';
+import { matchActa, shiftDate, toponymStems, titleHasToponym, titleHasToponymInner, titleIsToponym } from '../src/acta/match.js';
 import type { ActaEntry } from '../src/acta/index.js';
 import type { DocumentRecord } from '../src/types.js';
 
@@ -191,6 +191,42 @@ describe('toponymStems', () => {
     expect(toponymStems('VuCArien.')).toEqual(['vucarien', 'vucariensis', 'vucariensi']);
     expect(toponymStems('Cuneen. – fossAnen.')).toEqual(['cuneen', 'cuneensis', 'cuneensi', 'fossanen', 'fossanensis', 'fossanensi']);
     expect(toponymStems('isiolAnus')).toEqual(['isiolanus']);
+  });
+});
+
+describe('titleHasToponym (the volumes of 1959-1977)', () => {
+  it('needs every word of the head, or every word of the parenthesis, in the title', () => {
+    // Paul VI's shelf titles an erection by the mother see to 1964 and by the new see from 1965; John XXIII's by both.
+    expect(titleHasToponym('Cordubensis', 'CORDUBENSIS (Crucis Axeatae)')).toBe(true);
+    expect(titleHasToponym('Voniuensis', 'CHUNCHEONENSIS (Voniuensis)')).toBe(true);
+    expect(titleHasToponym('Durangensis - Sinaloensis (Mazatlanensis), con la quale …', 'DURANGENSIS-SINALOENSIS (Mazatlanensis)')).toBe(true);
+    // Not a stem anywhere: Durango's other erection of the day, Chihuahua, does not carry Sinaloa.
+    expect(titleHasToponym('Durangensis (Chihuahuensis), con la quale …', 'DURANGENSIS-SINALOENSIS (Mazatlanensis)')).toBe(false);
+    expect(titleHasToponym('Resistenciae', 'CORDUBENSIS (Crucis Axeatae)')).toBe(false);
+    // The 2017-2024 index's abbreviated adjective still meets its full form; a double see needs both.
+    expect(titleHasToponym('Vucariensis', 'VuCArien.')).toBe(true);
+    expect(titleHasToponym('Cuneensis - Fossanensis', 'Cuneen. – fossAnen.')).toBe(true);
+    expect(titleHasToponym('Cuneensis', 'Cuneen. – fossAnen.')).toBe(false);
+  });
+
+  it('separates two titles carrying the head by the new see, and by the exact toponym', () => {
+    expect(titleHasToponymInner('Durangensis (Chihuahuensis)', 'DURANGENSIS (Chihuahuensis)')).toBe(true);
+    expect(titleHasToponymInner('Durangensis - Sinaloensis (Mazatlanensis)', 'DURANGENSIS (Chihuahuensis)')).toBe(false);
+    expect(titleHasToponymInner('Cordubensis', 'CORDUBENSIS (Crucis Axeatae)')).toBe(false);
+    expect(titleIsToponym('Liberopolitanae', 'LIBEROPOLITANAE')).toBe(true);
+    expect(titleIsToponym('Liberopolitanae (Muilaënsis)', 'LIBEROPOLITANAE')).toBe(false);
+    // Durango, 22 November 1958: two erections from one mother see, told apart in the matcher.
+    const docs = [
+      doc({ id: 'mag:john-xxiii/durangensis-chihuahuensis-1958', title: 'Durangensis (Chihuahuensis), con la quale …', issuerId: 'rp:john-xxiii', genre: 'papal-bull', characteristics: ['apostolic-constitution'], date: '1958-11-22', incipit: 'Durangensis (Chihuahuensis)' }),
+      doc({ id: 'mag:john-xxiii/papal-bull-1958-11-22', title: 'Durangensis - Sinaloensis (Mazatlanensis), con la quale …', idStatus: 'provisional', issuerId: 'rp:john-xxiii', genre: 'papal-bull', characteristics: ['apostolic-constitution'], date: '1958-11-22' }),
+    ];
+    const r = matchActa([
+      entry({ pope: 'Ioannes XXIII', year: 1959, volume: 51, page: 406, category: 'CONSTITUTIONES APOSTOLICAE', date: '1958-11-22', toponym: 'DURANGENSIS-SINALOENSIS (Mazatlanensis)', incipit: 'Qui hominum' }),
+      entry({ pope: 'Ioannes XXIII', year: 1959, volume: 51, page: 400, category: 'CONSTITUTIONES APOSTOLICAE', date: '1958-11-22', toponym: 'DURANGENSIS (Chihuahuensis)', incipit: 'Ex quo' }),
+    ], docs);
+    expect(r.matches.map((m) => [m.entry.page, m.documentId, m.by])).toEqual([
+      [406, 'mag:john-xxiii/papal-bull-1958-11-22', 'toponym'], [400, 'mag:john-xxiii/durangensis-chihuahuensis-1958', 'toponym'],
+    ]);
   });
 });
 

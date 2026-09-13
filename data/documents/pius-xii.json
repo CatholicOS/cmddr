@@ -8226,6 +8226,30 @@
     }
   },
   {
+    "id": "mag:pius-xii/papal-bull-1947-01-27",
+    "title": "Magellanensis - De Punta Arenas. Vicariatus Apostolicus Magellanensis in novam evehitur et constituitur dioecesim, de Punta Arenas nomine appellandam",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1947-01-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-39-1947-ocr.pdf",
+      "shelf": "aas/1947",
+      "retrieved": "2026-09-13"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 39,
+      "year": 1947,
+      "page": 337
+    }
+  },
+  {
     "id": "mag:pius-xii/provida-mater-ecclesia-1947",
     "title": "Provida Mater Ecclesia",
     "idStatus": "minted",
@@ -14702,8 +14726,30 @@
     }
   },
   {
+    "id": "mag:pius-xii/gemina-1950",
+    "title": "Gemina. Sancta Maria Goretti, V. et M., loci vulgo nuncupati « Masi di Larino », intra fines Tridentinae archidioecesis, Patrona caelestis constituitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1950-05-26",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-44-1952-ocr.pdf",
+      "shelf": "aas/1952",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Gemina",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 44,
+      "year": 1952,
+      "page": 262
+    }
+  },
+  {
     "id": "mag:pius-xii/sacris-aedibus-1950",
-    "title": "Sacris Aedibus. Basilicae Minoris titulo condecora tur paroecialis Ecclesia B. Mariae Virgini in Caelum Assumptae sacra in civitate Illicitana intra fines Oriolensis dioecesis exstans 261 Ù » » Gemina. - Sancta Maria Goretti, V. et M., loci vulgo nuncupati « Masi di Larino », intra fines Tridentinae archidioecesis, Patrona caelestis constituitur",
+    "title": "Sacris Aedibus. Basilicae Minoris titulo condecora tur paroecialis Ecclesia B. Mariae Virgini in Caelum Assumptae sacra in civitate Illicitana intra fines Oriolensis dioecesis exstans",
     "idStatus": "minted",
     "genre": "apostolic-letter",
     "issuerId": "rp:pius-xii",
@@ -14720,7 +14766,7 @@
       "series": "AAS",
       "volume": 44,
       "year": 1952,
-      "page": 262
+      "page": 261
     }
   },
   {
@@ -15864,31 +15910,6 @@
     }
   },
   {
-    "id": "mag:pius-xii/quo-in-africa-1950",
-    "title": "De Brazzaville (Arcis Rousset). Quo in Africa. Vicariatus Apostolici de Brazzaville territorium bipartitur et novus erigitur Vicariatus Apostolicus, Arcis Rousset nuncupandus",
-    "idStatus": "minted",
-    "genre": "papal-bull",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1950-12-12",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-43-1951-ocr.pdf",
-      "shelf": "aas/1951",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "Quo in Africa",
-    "characteristics": [
-      "apostolic-constitution"
-    ],
-    "sourceGenreLabel": "Constitutiones Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 43,
-      "year": 1951,
-      "page": 710
-    }
-  },
-  {
     "id": "mag:pius-xii/unius-tantum-1950",
     "title": "Sionensis. Unius tantum. Episcopalis Ecclesia titulo Sionensis ad archiepiscopalis dignitatis gradum extollitur",
     "idStatus": "minted",
@@ -15911,6 +15932,56 @@
       "volume": 43,
       "year": 1951,
       "page": 154
+    }
+  },
+  {
+    "id": "mag:pius-xii/maius-sane-1950",
+    "title": "Laosiensis (Thakhekensis). Maius sane. A Vicariatus Apostolici Laosiensis in Indosina territorio pars seiungitur, quae in novam Praefecturam Apostolicam Thakhekensem nomine erigitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1950-12-21",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-43-1951-ocr.pdf",
+      "shelf": "aas/1951",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Maius sane",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 43,
+      "year": 1951,
+      "page": 253
+    }
+  },
+  {
+    "id": "mag:pius-xii/quo-in-africa-1950",
+    "title": "De Brazzaville (Arcis Rousset). Quo in Africa. Vicariatus Apostolici de Brazzaville territorium bipartitur et novus erigitur Vicariatus Apostolicus, Arcis Rousset nuncupandus",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1950-12-21",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-43-1951-ocr.pdf",
+      "shelf": "aas/1951",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quo in Africa",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 43,
+      "year": 1951,
+      "page": 710
     }
   },
   {
@@ -28258,6 +28329,31 @@
     }
   },
   {
+    "id": "mag:pius-xii/apostolica-sedes-1956",
+    "title": "Kongoloensis - Stanleypolitani (Kinduensis). Apostolica Sedes. Ab Apostolicis Vicariatibus Kongoloënsi et Stanleypolitano, in Congo Belgico, quaedam separantur territoria, quibus novus Vicariatus constituitur, « Kinduensis » nuncupandus",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1956-04-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-48-1956-ocr.pdf",
+      "shelf": "aas/1956",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Apostolica Sedes",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 48,
+      "year": 1956,
+      "page": 647
+    }
+  },
+  {
     "id": "mag:pius-xii/cum-ingenti-sane-1956",
     "title": "De Sintang. Cum, ingenti sane. Apostolica Praefectura de Sintang, quae est in Indonesia, ad gradum Vicariatus Apostolici evehitur",
     "idStatus": "minted",
@@ -29674,31 +29770,6 @@
       "volume": 49,
       "year": 1957,
       "page": 388
-    }
-  },
-  {
-    "id": "mag:pius-xii/qui-christo-1956",
-    "title": "G-Aruensis (Palaënsis). Qui Christo. A G-aruensi dioecesi, in Africa Aequatoriali Gallica, quoddam distrahitur territorium, ex quo nova conditur Apostolica Praefectura « Palaënsis »",
-    "idStatus": "minted",
-    "genre": "papal-bull",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1956-12-19",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-49-1957-ocr.pdf",
-      "shelf": "aas/1957",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "Qui Christo",
-    "characteristics": [
-      "apostolic-constitution"
-    ],
-    "sourceGenreLabel": "Constitutiones Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 49,
-      "year": 1957,
-      "page": 391
     }
   },
   {
@@ -31417,7 +31488,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 111
+    }
   },
   {
     "id": "mag:pius-xii/religionis-sedes-1957",
@@ -32633,6 +32710,28 @@
     }
   },
   {
+    "id": "mag:pius-xii/maria-parens-auctoris-1957",
+    "title": "Maria, Parens Auctoris. Beata Maria V., nomine « Auxilii Christianorum » invocata, praecipua Caelestis Patrona dioecesis Yellorensis proclamatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1957-12-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Maria, Parens Auctoris",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 158
+    }
+  },
+  {
     "id": "mag:pius-xii/urawaensis-1957",
     "title": "Urawaënsis",
     "idStatus": "minted",
@@ -32760,6 +32859,28 @@
       "volume": 50,
       "year": 1958,
       "page": 668
+    }
+  },
+  {
+    "id": "mag:pius-xii/in-vitae-1958",
+    "title": "In vitae. Beata Maria V. « Omnium Gratiarum Mediatrix » praecipua Caelestis Patrona totius dioecesis Meerutensis constituitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-01-04",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "In vitae",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 15
     }
   },
   {
@@ -32958,7 +33079,35 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 50,
+      "year": 1958,
+      "page": 665
+    }
+  },
+  {
+    "id": "mag:pius-xii/quantum-iuniores-1958",
+    "title": "Quantum iuniores. Beata Maria Virgo « de Itati » in praei puam caelestem Patronam atque Sanctus Ignatius, Confessor, in Patronum secundarium dioecesis Posadensis in Argentina eliguntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-02-18",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-52-1960-ocr.pdf",
+      "shelf": "aas/1960",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quantum iuniores",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 52,
+      "year": 1960,
+      "page": 405
+    }
   },
   {
     "id": "mag:pius-xii/letter-1958-02-22",
@@ -33510,6 +33659,28 @@
     }
   },
   {
+    "id": "mag:pius-xii/quae-materno-1958",
+    "title": "Quae materno. Beata Maria Virgo «de Perpetuo Succursu» praecipua caelestis Patrona Vicariatus Apostolici Samarindaënsis declaratur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-04-18",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quae materno",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 642
+    }
+  },
+  {
     "id": "mag:pius-xii/sedes-religionis-marialis-1958",
     "title": "Sedes religionis Marialis. Ad dignitatem et honorem Basilicae Minoris evehitur Ecclesia Sanctae Mariae a Cruce dioecesis Cremensis",
     "idStatus": "minted",
@@ -33529,6 +33700,31 @@
       "volume": 50,
       "year": 1958,
       "page": 937
+    }
+  },
+  {
+    "id": "mag:pius-xii/sacrorum-antistitum-1958",
+    "title": "S. Pauli In Brasilia Et Taubatensis (Apparitiopolitanae et aliarum). Sacrorum Antistitum. Ab archidioecesi S. Pauli in Brasilia et a Taubatensi dioecesi quibusdam distraotis territoriis, nova conditur archidioecesis, « Apparitiopolitana » appellanda; provincia autem ecclesiastica S. Pauli dismembrata, novae efficiuntur provinciae ecclesiasticae: Apparitiopolitana, Botucatuensis, Campinensis et Eivi Nigri",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-04-19",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Sacrorum Antistitum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 90
     }
   },
   {
@@ -33554,6 +33750,31 @@
     }
   },
   {
+    "id": "mag:pius-xii/eius-in-terris-vicarii-1958",
+    "title": "Karachiensis (Hyderabadensis in Pakistan). Eius in terris Vicarii. Ab archidioecesi Karachiensi quaedam territoria detrahuntur, quibus nova dioecesis, « Hyderabadensis in Pakistan », constituitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-04-28",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Eius in terris Vicarii",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 94
+    }
+  },
+  {
     "id": "mag:pius-xii/dum-studiosius-1958",
     "title": "Dum studiosius. Templum Sancti Pii Pp. X, Lapurdi exstans, ad dignitatem et honorem Basilicae Minoris evehitur",
     "idStatus": "minted",
@@ -33573,6 +33794,31 @@
       "volume": 50,
       "year": 1958,
       "page": 938
+    }
+  },
+  {
+    "id": "mag:pius-xii/singularem-huius-1958",
+    "title": "Australiae. Singularem huius. Exarchatus Apostolicus in Australia pro fidelibus Euthenis ritus Byzantini ibi commorantibus constituitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-05-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Singularem huius",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 97
     }
   },
   {
@@ -33686,6 +33932,144 @@
     }
   },
   {
+    "id": "mag:pius-xii/praecipua-laude-1958",
+    "title": "Praecipua laude. Templum paroeciale Apparitionis Beatae Mariae Virginis vulgo « Nossa Senhora de Lourdes », archidioecesis Bellohorizontinae, Basilicis Minoribus accensetur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-05-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Praecipua laude",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 218
+    }
+  },
+  {
+    "id": "mag:pius-xii/quasi-mater-1958",
+    "title": "Cagayanae (Zamboangensis). Quasi mater. Dioecesis Zamboangensis, in Insulis Philippinis, ad gradum metropolitanae Ecclesiae perducitur, atque caput novae ecclesiasticae provinciae efficitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-05-19",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quasi mater",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 99
+    }
+  },
+  {
+    "id": "mag:pius-xii/vere-gentium-apostolus-1958",
+    "title": "Vere Gentium Apostolus. Sanctus Paulus Apostolus in praecipuum caelestem Patronum pro urbe et civitate « Sancti Pauli in Brasilia » eligitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-05-21",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Vere Gentium Apostolus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 219
+    }
+  },
+  {
+    "id": "mag:pius-xii/treverorum-urbs-1958",
+    "title": "Treverorum urbs. Paroecialis Ecclesia Sancti Paulini in urbe et dioecesi Trevirensi Basilicis Minoribus accensetur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-05-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-52-1960-ocr.pdf",
+      "shelf": "aas/1960",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Treverorum urbs",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 52,
+      "year": 1960,
+      "page": 406
+    }
+  },
+  {
+    "id": "mag:pius-xii/cum-supremum-1958",
+    "title": "S. Augustini (Miamiensis). Cum supremum. A dioecesi S. Augustini quaedam territoria detrahuntur, quibus nova dioecesis efficitur, « Miamiensis » appellanda",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-05-25",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Cum supremum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 25
+    }
+  },
+  {
+    "id": "mag:pius-xii/stat-crux-1958",
+    "title": "Stat crux. Monasterium cum templo « S. Crucis de Valle Occasorum », ad Congregationem Solesmensem O. S. B. pertinens, Abbatiae nomine et iure donatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-05-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Stat crux",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 643
+    }
+  },
+  {
     "id": "mag:pius-xii/ad-uberrima-vitae-1958",
     "title": "Ad uberrima vitae",
     "idStatus": "minted",
@@ -33714,6 +34098,50 @@
     }
   },
   {
+    "id": "mag:pius-xii/regi-saeculorum-1958",
+    "title": "« Regi saeculorum ». Templum paroeciale Sacratissimo Cordi Iesu dicatum in urbe Boseto, Grossetanae dioecesis, Basilicae Minoris titulo ac privilegiis cohonestatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-06-06",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Regi saeculorum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 268
+    }
+  },
+  {
+    "id": "mag:pius-xii/haud-pauca-1958",
+    "title": "Haud pauca. Titulo Basilicae Minoris insignitur Ecclesia abbatialis ac paroecialis « Beatae Mariae Virginis ad Scotos », in urbe Vindobona in Austria",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-06-07",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Haud pauca",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 269
+    }
+  },
+  {
     "id": "mag:pius-xii/sanguine-matris-1958",
     "title": "Sanguine Matris. Templum B. Mariae V. sacrum in pago vulgo «Re», dioecesis Novariensis, exstans titulo Basilicae Minoris condecoratur",
     "idStatus": "minted",
@@ -33733,6 +34161,181 @@
       "volume": 50,
       "year": 1958,
       "page": 1023
+    }
+  },
+  {
+    "id": "mag:pius-xii/magna-quidem-1958",
+    "title": "Caracensis et Aliarum (Civitatis Bolivarensis). Magna quidem. Dioeceses Civitatis Bolivarensis, Barcinonensis in Venezuela, Cumanensis et Maturinensis a metropolitico iure Ecclesiae Caracensis eximuntur atque ex iis nova constituitur ecclesiastica provincia « Civitatis Bolivarensis » appellanda, cuius caput erit cathedralis Ecclesia Civitatis Bolivarensis, quae proinde ad gradum metropolitanae Ecclesiae perducitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-06-21",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Magna quidem",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 211
+    }
+  },
+  {
+    "id": "mag:pius-xii/qui-supremi-1958",
+    "title": "Caracensis-Calabocensis (Maracayensis). Qui Supremi. Ab archidioecesi Caracensi et a dioecesi Calabocensi quaedam territorii pars detrahitur, quae in novae dioecesis formam redigitur, « Maracayensis » appellandae",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-06-21",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Qui Supremi",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 209
+    }
+  },
+  {
+    "id": "mag:pius-xii/in-similitudinem-1958",
+    "title": "Lydenburgensis et Aliarum (Volksrustensis). In similitudinem. Detractis quibusdam territoriis a dioecesibus Lydenburgensi et Bremersdorpensi et ab archidioecesi Dubraniana, nova praefectura apostolica constituitur, « Volksrustensis » appellanda",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-06-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "In similitudinem",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 214
+    }
+  },
+  {
+    "id": "mag:pius-xii/saero-suadente-1958",
+    "title": "Seulensis (Cheongiuensis-Daiieonensis). Saero suadente. E Vicariatu apostolico Seulensi quaedam detrahuntur civiles provinciae, quibus duo Vicariatus apostolici conduntur, « Cheongiuensis » et « Daiieonensis » appellandi",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-06-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Saero suadente",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 152
+    }
+  },
+  {
+    "id": "mag:pius-xii/si-qua-inter-gentes-1958",
+    "title": "Tarahumarensis. Si qua inter gentes. Missio « sui iuris » Tarahumarensis, in Mexicana Republica, ad gradum et dignitatem vicariatus apostolici evehitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-06-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Si qua inter gentes",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 261
+    }
+  },
+  {
+    "id": "mag:pius-xii/sollemne-nobis-1958",
+    "title": "Kuduguensis (Uahiguyaensis). Sollemne nobis. Ex dioecesi Kuduguensi in Africa Occidentali Gallica totum territorium distrahitur, quod regionem civilem de Ouahigouya complectitur ex eoque nova dioecesis conditur « Uahiguyaensis » appellanda",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-06-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Sollemne nobis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 30
+    }
+  },
+  {
+    "id": "mag:pius-xii/sollicite-usque-1958",
+    "title": "Overriensis (Umuahianae). Sollicite usque. Ex dioecesi Overriensi in Nigeria quaedam territoria distrahuntur, quibus nova efficitur dioecesis, « Umuahiana » appellanda",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-06-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Sollicite usque",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 216
     }
   },
   {
@@ -33788,6 +34391,105 @@
     }
   },
   {
+    "id": "mag:pius-xii/quandoquidem-1958",
+    "title": "Rivi Nigri. Quandoquidem. In metropolitano templo Rivi Nigri Collegium Canonicorum constituitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-06-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quandoquidem",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 263
+    }
+  },
+  {
+    "id": "mag:pius-xii/externum-atque-adventicium-1958",
+    "title": "Sinus Albi. Externum atque adventicium. In metropolitano templo Sinus Albi Canonicorum Collegium constituitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-07-07",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Externum atque adventicium",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 154
+    }
+  },
+  {
+    "id": "mag:pius-xii/papal-bull-1958-07-10",
+    "title": "Philadelphiensis-Stanfordensis. Apostolicam hanc - Exarchia Apostolica Philadelphiensis byzantini ritus, in Americae Septemtrionalis Foederatis Civitatibus, ad dignitatem metropolitanae sedis evehitur; exarchia vero Apostolica Stanfordensis ad eparchiae gradum; ex iisdemque Ecclesiis nova provincia ecclesiastica constituitur",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-07-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 156
+    }
+  },
+  {
+    "id": "mag:pius-xii/qui-a-christo-iesu-1958",
+    "title": "Bellohorizontinae-Aterradensis (Divinopolitanae). Qui a Christo Iesu. Quibusdam detractis territoriis ex Bellohorizontina archidioecesi et Aterradensi dioecesi, nova conditur dioecesis « Divinopolitana » appellanda",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-07-11",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Qui a Christo Iesu",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 265
+    }
+  },
+  {
     "id": "mag:pius-xii/vita-pastoricia-1958",
     "title": "Vita Pastoricia. Beata Maria Virgo a Lapurdo in Caelestem Patronam Piae Unionis Pastorum Italicorum eligitur",
     "idStatus": "minted",
@@ -33807,6 +34509,31 @@
       "volume": 50,
       "year": 1958,
       "page": 848
+    }
+  },
+  {
+    "id": "mag:pius-xii/ecclesia-sancta-1958",
+    "title": "Suluensis (Ioloënsis). Ecclesia Sancta. Apostolica praefectura Suluensis, in Insulis Philippinis, ad gradum et dignitatem vicariatus apostolici evehitur, « Ioloënsis » appellandi",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-07-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Ecclesia Sancta",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 319
     }
   },
   {
@@ -33860,6 +34587,93 @@
     }
   },
   {
+    "id": "mag:pius-xii/apostolic-letter-1958-07-16",
+    "title": "Sancti Pii Papae X. - Sanctus Pius X. P. M., Confessor, in praecipuum caelestem Patronum pro universa dioecesi Campifontis-Capitis Girardeauensi renuntiatur",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-07-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 221
+    }
+  },
+  {
+    "id": "mag:pius-xii/quidquid-1958",
+    "title": "Quidquid. Beata Maria Virgo Immaculata eligitur praecipua apud Deum Patrona pro universo Vicariatu Castrensi Insularum Philippinarum",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-07-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quidquid",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 32
+    }
+  },
+  {
+    "id": "mag:pius-xii/pietatis-monumentum-1958",
+    "title": "Pietatis monumentum. Paroecialis Ecclesia Deo in honorem Beatae Mariae Virginis in Caelum Assumptae consecrata in urbe « Morella », Dertosensis dioecesis, Basilicae Minoris titulo honoribusque augetur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-07-19",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Pietatis monumentum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 33
+    }
+  },
+  {
+    "id": "mag:pius-xii/parthenopen-urbem-1958",
+    "title": "Parthenopen urbem. Basilicae Minoris honoribus privilegiisque afficitur ecclesia, quae vulgo « Gesù Vecchio » appellatur, Neapoli exstans",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-07-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Parthenopen urbem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 34
+    }
+  },
+  {
     "id": "mag:pius-xii/letter-1958-07-24",
     "title": "Lettera al Cardinale Giuseppe Siri, Arcivescovo di Genova, Inviato alle celebrazioni per l'inaugurazione dell'Esposizione Universale a Bruxelles",
     "idStatus": "provisional",
@@ -33881,6 +34695,31 @@
       "volume": 50,
       "year": 1958,
       "page": 561
+    }
+  },
+  {
+    "id": "mag:pius-xii/ex-illis-1958",
+    "title": "Puniensis (Ayaviriensis). Ex illis. A dioecesi Puniensi territorii pars seiungitur, ex qua nova constituitur praelatura « nullius » Ayaviriensis appellanda, metropolitanae Ecclesiae Arequipensi subicienda",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-07-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Ex illis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 321
     }
   },
   {
@@ -33969,6 +34808,28 @@
     }
   },
   {
+    "id": "mag:pius-xii/merito-dilaudatur-1958",
+    "title": "Merito dilaudatur. Titulo ac privilegiis Basilicae Minoris ornatur Ecclesia paroecialis Deo in honorem Sancti Georgii Martyris, in urbe Victoria, intra fines Gaudisiensis dioecesis, consecrata",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-09-06",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Merito dilaudatur",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 323
+    }
+  },
+  {
     "id": "mag:pius-xii/letter-1958-09-29",
     "title": "Lettera a S. E. Monsignor Luigi Agostino Marmottin, in occasione della riapertura al culto della Basilica di Reims",
     "idStatus": "provisional",
@@ -33990,6 +34851,28 @@
       "volume": 50,
       "year": 1958,
       "page": 941
+    }
+  },
+  {
+    "id": "mag:pius-xii/expedit-sane-1958",
+    "title": "Expedit sane. Sanctus Ioseph, Sponsus B. M. V., in Patronam principalem et Sanctus Ioannes Ap. et Ev. in Patronum secundarium dioecesis Reconquistensis eliguntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1958-10-01",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-51-1959-ocr.pdf",
+      "shelf": "aas/1959",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Expedit sane",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 51,
+      "year": 1959,
+      "page": 222
     }
   }
 ]

@@ -55,8 +55,9 @@ const index = (year: number, retrieved: string): ActaSource => ({
 
 /**
  * Every source with a fixture, in volume order. The six sources of phase 2b-i (the
- * sample of the acta volumes spec §5) and the twenty-six volumes of phase 2b-ii-a (AAS
- * 24-49, 1932-1957; spec §9) precede the ten annual index PDFs of phase 1.
+ * sample of the acta volumes spec §5), the twenty-six volumes of phase 2b-ii-a (AAS
+ * 24-49, 1932-1957) and the nineteen of phase 2b-ii-b (AAS 51-69, 1959-1977; spec §9)
+ * precede the ten annual index PDFs of phase 1.
  * AAS 9 (1917) part II is the *Codex Iuris Canonici* itself and carries no chronological
  * index (its one papal act, *Providentissima Mater Ecclesia*, is on the bulls shelf as
  * `mag:benedict-xv/providentissima-mater-1917`), so only part I has a fixture.
@@ -72,6 +73,9 @@ export const ACTA_SOURCES: readonly ActaSource[] = [
   // his death in February 1939, Pius XII from his election (AAS 31, 1939, carries both).
   ...Array.from({ length: 1957 - 1932 + 1 }, (_, i) => volume(1932 + i, '2026-09-13')),
   volume(1958, '2026-09-13'),
+  // Phase 2b-ii-b (spec §9): AAS 51-69, the volumes of 1959-1977 -- John XXIII (AAS 51
+  // opens with Pius XII's last acts) to Paul VI (AAS 55, 1963, carries both).
+  ...Array.from({ length: 1977 - 1959 + 1 }, (_, i) => volume(1959 + i, '2026-09-13')),
   volume(1978, '2026-09-13'),
   index(2012, '2026-09-13'),
   ...[2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024].map((y) => index(y, '2026-09-12')),
