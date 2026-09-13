@@ -113,3 +113,25 @@ headline numbers as a comment.
 releasing guard holds (needs its own curated mechanism, noted in PR #32); keywords /
 `actKind` / `medium` on AAS-born records (*Nuntii radiophonici* is #27's evidence and is
 counted, not applied).
+
+## 9. Addendum (2026-09-13, after PR #33): how 2b-ii is split
+
+The sample's parse rates — 100 % (1931), 98.2 % (1978), 91–93 % (1958, 2012) over all
+lines and ≥ 98.5 % over the harvested categories, against 7.4 % (1909) and 90.2 % (1917-I)
+where the OCR lost the page column — settle the order: the clean era first, the early
+volumes last. Three PRs, sequential (they share the fetch script, `categories.ts`, the
+curated tables and the pinned-count tests), each with its own report and its own
+`Refs #25` comment:
+
+| PR | Volumes | Popes | Notes |
+|---|---|---|---|
+| 2b-ii-a | 24–49 (1932–1957) | Pius XI, Pius XII | 1939 has two popes; *Nuntii radiophonici* are Pius XII's (counted for #27, never created) |
+| 2b-ii-b | 51–69 (1959–1977) | John XXIII, Paul VI | 1963 has two popes |
+| 2b-ii-c | 71–94 (1979–2002) and the 2010, 2011, 2013, 2014 index PDFs | John Paul II, Benedict XVI | 1983 is a double volume (`part`); the *Ibi vacabimus* reprint (2012 and 2020) needs a curated citation-of-record rule, decided here |
+| 2b-iii | 2–23 (1910–1931), and 9-II if it has an index | Pius X, Benedict XV, Pius XI | after deciding how to recover the lost page column: a positional join against the *Index generalis rerum*, or a curated readings table |
+
+Each PR: the volumes' index pages as fixtures (README rows), per-volume parse rate with the
+95 % floor and named exemptions, every new category or pope heading mapped with its
+quotation, join → report → create by the 2a rule, holds listed, re-minted ids expected none.
+A PR whose created count is large is not a reason to loosen anything: the report is the
+review instrument, and every creation quotes its index line.
