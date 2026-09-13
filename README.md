@@ -261,8 +261,8 @@ entry, every act the shelves lack and every document two entries claim is listed
 [join report](docs/superpowers/reports/2026-09-12-acta-join-2015-2024.md) — whose headline is that vatican.va's Francis shelves
 for constitutions and apostolic letters are selections (49 and 59 against the index's 118 and 202), while the *Acta* are the
 record. The [sample report](docs/superpowers/reports/2026-09-13-acta-volumes-sample.md) of phase 2b-i measures the century's
-typography and OCR the same way, volume by volume, with a parse rate per volume: **129** references from the five volumes and
-the 2012 index (Pius XII's 1958 alone carries 70), and the findings that decide the rest of 2b — the OCR text of AAS 1 and 9-I
+typography and OCR the same way, volume by volume, with a parse rate per volume: **131** references from the five volumes and
+the 2012 index (Pius XII's 1958 alone carries 73), and the findings that decide the rest of 2b — the OCR text of AAS 1 and 9-I
 has lost the page column of most index pages, the columnar layout of 1909–1931 dates some acts to the month only, and a volume
 can print an act another volume already published. Phase 2b-ii-a ([era report](docs/superpowers/reports/2026-09-13-acta-volumes-1932-1957.md))
 joined the twenty-six volumes of 1932–1957 the same way: **144** references, thin because the Pius XI and Pius XII shelves are
@@ -304,9 +304,9 @@ lists every creation with the index line it rests on and every hold with its can
 from the sample volumes and the 2012 index (Pius XI's 1931 volume alone 60: the shelves of the early twentieth century are
 thinner still than Francis's), created by the same rule — an *Epistula* only where the pope's `letters` shelf is harvested, a
 constitution or apostolic letter minted from the incipit the volumes print beside the toponym — with `source.url` the
-whole-volume PDF, and held **100** ([sample report](docs/superpowers/reports/2026-09-13-acta-volumes-sample.md)). Phase 2b-ii-a
-added **1,633** from the twenty-six volumes of 1932–1957 — 532 of Pius XI, 1,197 of Pius XII in all; 628 constitutions, most
-of them named by the see alone and therefore provisional, 568 apostolic letters, 437 letters — and held **432**, among them the
+whole-volume PDF, and held **98** ([sample report](docs/superpowers/reports/2026-09-13-acta-volumes-sample.md)). Phase 2b-ii-a
+added **1,636** from the twenty-six volumes of 1932–1957 — 472 of Pius XI and 1,164 of Pius XII from this era (532 and 1,234 in all); 631 constitutions and bulls, most
+of them named by the see alone and therefore provisional, 563 apostolic letters, 441 letters — and held **434**, among them the
 vernacular texts of four encyclicals the index enters a second time (curated), the entries whose page another act cites where
 the volume prints one (a new *page-shared* hold), and every incipit the OCR has damaged, which is never minted into an id the
 page does not print ([era report](docs/superpowers/reports/2026-09-13-acta-volumes-1932-1957.md)); four pages the volumes print

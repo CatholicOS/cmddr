@@ -50,7 +50,7 @@ interface Era {
   covers: (s: ActaSource) => boolean;
   /** The reading under §1, §2, §4 and §13, given the parsed sources and the computed tables. */
   reading1: (r: Map<string, ActaParseResult>) => string[];
-  reading2: (ctx: { matched: number; byHow: string; created: number; byIssuer: string; held: number; guard: number; toponymIncipit: number; pageShared: number; provisional: number; epistulae: number }) => string[];
+  reading2: (ctx: { matched: number; byHow: string; created: number; byIssuer: string; held: number; guard: number; otherRules: number; toponymIncipit: number; pageShared: number; provisional: number; epistulae: number }) => string[];
   mappingsProse: string[];
   radioProse: (ctx: { radio: number; matched: string[]; first: string }) => string[];
   partsSkippedNote: string;
@@ -123,7 +123,7 @@ const ERAS: Record<string, Era> = {
       `   day (10 November 1977: *Avkaënsis*, *Mohaleshoekensis*, *Ambikapurensis* against the shelf's *Avkaensis*), the entry the`,
       `   record names keeps the match and the others are released to the creator instead of all three being withheld.`,
       `2. **${c.created} documents created** (§8) -- ${c.byIssuer} -- and ${c.held} entries held (§9), ${c.guard} of them by the`,
-      `   duplicate guard. ${c.toponymIncipit} constitutions print toponym and incipit both (§1.5), so almost no provisional id is minted from the`,
+      `   duplicate guard and ${c.otherRules} by the id-collision, OCR and page rules. ${c.toponymIncipit} constitutions print toponym and incipit both (§1.5), so almost no provisional id is minted from the`,
       `   volumes; the *Epistulae* are created only where the pope's letters shelf is harvested (Pius XI, Pius XII, John Paul I in this`,
       `   sample) and held elsewhere (§9, *shelf not harvested*).`,
       `3. **A volume can reprint an act another volume already published, and a page can open two acts.** The 2020 index lists`,
@@ -261,7 +261,7 @@ const ERAS: Record<string, Era> = {
       `   and a curated row supplies -- among them the registry's dogmatic-definition bull *Munificentissimus Deus* and *Humani generis*`,
       `   at the head of AAS 42, and *Ad Sinarum gentem* at the head of AAS 47 (§1.2).`,
       `2. **${c.created} documents created** (§8) -- ${c.byIssuer} -- and ${c.held} entries held (§9), ${c.guard} of them by the`,
-      `   duplicate guard, the OCR rule and the page rule. ${c.toponymIncipit} constitutions print toponym and incipit both; the constitutions of`,
+      `   duplicate guard and ${c.otherRules} by the id-collision, OCR and page rules. ${c.toponymIncipit} constitutions print toponym and incipit both; the constitutions of`,
       `   1932–1945 print the see, with its vernacular in parentheses, and no incipit (*De Sienhsien (De Kinghsien). - Vicariatus*`,
       `   *Apostolicus …*), and the letters of the 1930s for a minor basilica are entered under the diocese (*Passaviensis dioecesis. -*),`,
       `   which the parser reads as toponyms, so they mint provisionally with the see in the title (§8). The *Epistulae* are`,
@@ -419,7 +419,7 @@ ERAS['1959-1977'] = {
     `   heading *Sollemnis professio fidei*, against the other motu proprio of the day), *Populorum progressio* and *Sacrae laudis*`,
     `   (§1.2).`,
     `2. **${c.created} documents created** (§8) -- ${c.byIssuer} -- and ${c.held} entries held (§9), ${c.guard} of them by the`,
-    `   duplicate guard, the OCR rule and the page rule. The creations fall where the shelves stop: none from 1967–1970 and 1972,`,
+    `   duplicate guard and ${c.otherRules} by the id-collision, OCR and page rules. The creations fall where the shelves stop: none from 1967–1970 and 1972,`,
     `   where Paul VI's shelves hold what the index prints, and 45–59 a year from 1973, where vatican.va's apost_constitutions`,
     `   shelf carries no act of 1973, 1974 or 1976 and two of 1975 against the 40, 15, 2, 18 and 34 the index prints, and its`,
     `   apost_letters shelf one or two a year against 22–30; John XXIII's from 1959–1963, where his year-partitioned shelves`,
@@ -637,13 +637,14 @@ p();
   const byIssuer = new Map<string, number>();
   for (const c of created) byIssuer.set(c.record.issuerId, (byIssuer.get(c.record.issuerId) ?? 0) + 1);
   const toponymIncipit = entries.filter((e) => e.toponym !== null && e.incipit !== null).length;
-  const guard = creation.held.filter((h) => ['class-mismatch', 'possible-identity', 'near-miss', 'same-incipit-elsewhere', 'id-collision', 'ocr-damaged', 'page-shared'].includes(h.reason)).length;
+  const guard = creation.held.filter((h) => ['class-mismatch', 'possible-identity', 'near-miss', 'same-incipit-elsewhere'].includes(h.reason)).length;
+  const otherRules = creation.held.filter((h) => ['id-collision', 'ocr-damaged', 'page-shared'].includes(h.reason)).length;
   const pageShared = creation.held.filter((h) => h.reason === 'page-shared').length;
   p('### The reading');
   p();
   for (const line of ERA.reading2({
     matched: result.matches.length, byHow: [...byHow].sort().map(([k, n]) => `${n} ${k}`).join(', '), created: created.length,
-    byIssuer: [...byIssuer].sort().map(([k, n]) => `\`${k}\` ${n}`).join(', '), held: creation.held.length, guard, toponymIncipit, pageShared,
+    byIssuer: [...byIssuer].sort().map(([k, n]) => `\`${k}\` ${n}`).join(', '), held: creation.held.length, guard, otherRules, toponymIncipit, pageShared,
     provisional: created.filter((c) => c.record.idStatus === 'provisional').length,
     epistulae: entries.filter((e) => cat(e)?.id === 'Epistulae').length,
   })) p(line);

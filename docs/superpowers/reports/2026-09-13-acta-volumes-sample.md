@@ -101,8 +101,8 @@ shelf documents of the source's popes dated in the volume year that carry no `ac
    evidence rule resolved (`match.ts`): where several constitutions of one day are entered against one shelf record of the
    day (10 November 1977: *Avkaënsis*, *Mohaleshoekensis*, *Ambikapurensis* against the shelf's *Avkaensis*), the entry the
    record names keeps the match and the others are released to the creator instead of all three being withheld.
-2. **146 documents created** (§8) -- `rp:benedict-xv` 8, `rp:benedict-xvi` 12, `rp:paul-vi` 28, `rp:pius-x` 2, `rp:pius-xi` 60, `rp:pius-xii` 36 -- and 98 entries held (§9), 10 of them by the
-   duplicate guard. 61 constitutions print toponym and incipit both (§1.5), so almost no provisional id is minted from the
+2. **146 documents created** (§8) -- `rp:benedict-xv` 8, `rp:benedict-xvi` 12, `rp:paul-vi` 28, `rp:pius-x` 2, `rp:pius-xi` 60, `rp:pius-xii` 36 -- and 98 entries held (§9), 7 of them by the
+   duplicate guard and 3 by the id-collision, OCR and page rules. 61 constitutions print toponym and incipit both (§1.5), so almost no provisional id is minted from the
    volumes; the *Epistulae* are created only where the pope's letters shelf is harvested (Pius XI, Pius XII, John Paul I in this
    sample) and held elsewhere (§9, *shelf not harvested*).
 3. **A volume can reprint an act another volume already published, and a page can open two acts.** The 2020 index lists

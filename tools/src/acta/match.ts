@@ -138,7 +138,10 @@ export const titleHasToponymInner = (title: string, toponym: string): boolean =>
   if (!paren || !titleParen) return false;
   const inner = toponymWords(paren[1]!);
   const titleInner = `-${slugify(titleParen[1]!)}-`;
-  return inner.some((w) => titleInner.includes(`-${w}-`));
+  // Every word of the entry's parenthesis, not some: a shared word such as `Ioannis` between
+  // two different sees must not decide a tie. Measured on every fixture through 1977 before
+  // the change (CodeRabbit, PR #35): `some` and `every` produce the same 3,966 matches.
+  return inner.every((w) => titleInner.includes(`-${w}-`));
 };
 /** The words of a toponym part, slugged, the connectors and abbreviations (`S.`, `et`, `in`) dropped. */
 const toponymWords = (part: string): string[] =>
