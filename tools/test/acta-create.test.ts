@@ -323,11 +323,22 @@ describe('createFromActa on the volumes (acta volumes spec §5)', () => {
     expect(month.held.map((h) => [h.reason, h.note.slice(0, 30)])).toEqual([['unresolvable-date', 'the index dates the entry to 1']]);
     const damaged = run([
       pius({ toponym: 'B (IARENSIS', incipit: null, description: 'Peramplum Berberatensis. In Africae Mediae natione dioecesis Buarensis constituitur', page: 280, date: '1978-02-27', pope: 'Paulus VI', year: 1978, volume: 70 }),
-      pius({ incipit: 'Lex N. DCXXVI', page: 281 }),
-      pius({ incipit: 'Il 30 novembre 2019', quoted: true, page: 282 }),
+      pius({ incipit: 'Tui in S. C. de Propaganda Fide', page: 281 }),
+      pius({ incipit: 'Cum sit', page: 282 }),
+      // The OCR of a volume (phase 2b-ii-a): a mark, a digit, a full stop, a lower-case initial no incipit carries.
+      pius({ incipit: 'Providet!tissimum Deum', page: 283 }),
+      pius({ incipit: 'Quae. feliciter', page: 284 }),
+      pius({ incipit: 'ut tibi iisque', page: 285 }),
+      pius({ incipit: 'Honesta"quaelibet', page: 286 }),
     ], []);
-    expect(damaged.held.map((h) => [h.entry.page, h.reason])).toEqual([[280, 'ocr-damaged']]);
+    expect(damaged.held.map((h) => [h.entry.page, h.reason])).toEqual([[280, 'ocr-damaged'], [283, 'ocr-damaged'], [284, 'ocr-damaged'], [285, 'ocr-damaged'], [286, 'ocr-damaged']]);
     expect(damaged.created.map((c) => c.entry.page)).toEqual([281, 282]);
+    // The index PDFs are typeset: a digit or a full stop in an incipit is the print (`Lex N. DCXXVI`, 2019).
+    const typeset = run([
+      entry({ pope: 'Franciscus', year: 2019, volume: 111, category: 'LITTERAE APOSTOLICAE MOTU PROPRIO DATAE', date: '2019-06-01', page: 1, incipit: 'Lex N. DCXXVI', description: 'De re', raw: 'x' }),
+      entry({ pope: 'Franciscus', year: 2019, volume: 111, category: 'LITTERAE APOSTOLICAE', date: '2019-11-30', page: 2, incipit: 'Il 30 novembre 2019', quoted: true, description: 'De re', raw: 'x' }),
+    ], []);
+    expect(typeset.created.map((c) => c.entry.page)).toEqual([1, 2]);
     // A toponym-and-incipit constitution of 1958 mints from the incipit, the toponym in the title.
     const both = run([entry({
       pope: 'Pius XII', year: 1958, volume: 50, category: 'CONSTITUTIONES APOSTOLICAE', date: '1957-04-10', page: 24,

@@ -1821,13 +1821,17 @@ describe('the whole corpus', () => {
     expect(twice.find((d) => d.incipit === 'Socialium Scientiarum')?.characteristics)
       .toEqual(['motu-proprio']);
     // And nothing else bears it: the characteristic is read from the shelves only -- and
-    // from the *Motu proprio* category of the AAS index for the two records of Pius XI
-    // created from AAS 23 (1931), *Apostolicae Litterae* and *Praecipua sane*, which are
-    // on no shelf (AAS-only documents spec §4: the class's characteristic).
+    // from the *Motu proprio* category of the AAS index for the records created from the
+    // volumes, which are on no shelf (AAS-only documents spec §4: the class's
+    // characteristic): two of Pius XI from AAS 23 (1931), *Apostolicae Litterae* and
+    // *Praecipua sane*, and 21 more of Pius XI and Pius XII from the volumes of 1932-1957
+    // (phase 2b-ii-a), every one under the index's *Motu proprio* heading.
     const bearers = everything.filter((d) => d.characteristics?.includes('motu-proprio'));
-    expect(bearers).toHaveLength(210 + 66 + 2);
-    expect(bearers.filter((d) => isActaShelf(d.source?.shelf)).map((d) => d.id).sort())
-      .toEqual(['mag:pius-xi/apostolicae-litterae-1931', 'mag:pius-xi/praecipua-sane-1931']);
+    expect(bearers).toHaveLength(210 + 66 + 2 + 21);
+    const bornBearers = bearers.filter((d) => isActaShelf(d.source?.shelf));
+    expect(bornBearers).toHaveLength(23);
+    expect(bornBearers.map((d) => d.id)).toEqual(expect.arrayContaining(['mag:pius-xi/apostolicae-litterae-1931', 'mag:pius-xi/praecipua-sane-1931']));
+    expect(bornBearers.every((d) => d.sourceGenreLabel === 'Litterae Apostolicae Motu proprio datae' && ['rp:pius-xi', 'rp:pius-xii'].includes(d.issuerId))).toBe(true);
   });
 
   it('keeps the 383 pilot identifiers exactly as first minted', () => {
@@ -2327,12 +2331,14 @@ describe('the recovered-incipit shelf', () => {
     // the provisional form by design (messages spec §3.2.7); counted in their own block.
     // Plus the eight series-shelf items excluded from their series (Paul VI's 1975 day of
     // the sick and John XXIII's seven radio messages), which are provisional messages.
-    // Plus the 80 records created from the AAS index without an incipit -- 75 constitutions
-    // of 2015-2024 named by toponym only (AAS-only documents spec §4) and five of the
-    // phase-2b sample (acta volumes spec §5) -- counted in their own block.
+    // Plus the 399 records created from the AAS index without an incipit -- 75 constitutions
+    // of 2015-2024 named by toponym only (AAS-only documents spec §4), five of the
+    // phase-2b sample (acta volumes spec §5) and 319 of the volumes of 1932-1957 (phase
+    // 2b-ii-a: the constitutions of 1932-1945 named by the see and its vernacular, the
+    // letters the index enters by their addressee) -- counted in their own block.
     const formal = everything.filter((d) => !isMessagesShelf(d.source?.shelf ?? null) && !isActaShelf(d.source?.shelf));
     expect(formal.filter((d) => d.idStatus === 'provisional')).toHaveLength(299);
-    expect(everything.filter((d) => d.idStatus === 'provisional')).toHaveLength(299 + 5 + 8 + 75 + 5);
+    expect(everything.filter((d) => d.idStatus === 'provisional')).toHaveLength(299 + 5 + 8 + 75 + 5 + 319);
   });
 
   it('keeps the two Leo XIV 2025 letters provisional, which AAS confirms have no incipit', () => {
@@ -2717,14 +2723,20 @@ describe('the AAS reference (acta reference spec)', () => {
     // the AAS-only documents. Phase 2b-i (acta volumes spec §5) adds the six sample
     // sources -- 129 references from 1917-I, 1931, 1958, 1978 and 2012 (none from 1909,
     // whose OCR lost the page column) -- and leaves the ten of 2015-2024 as they were.
+    // Phase 2b-ii-a (spec §9) adds the 26 volumes of 1932-1957: 140 references from 25 of
+    // them (AAS 26 (1934), 27 (1935) and 47 (1955) cite nothing the shelves hold), thin
+    // because the Pius XI and Pius XII shelves are (18 and 227 records dated in the era).
     // A change to a fixture, the parser, the matcher or a shelf harvest moves these.
     const bySource = new Map<string, number>();
     for (const d of cited) bySource.set(sourceOf(d), (bySource.get(sourceOf(d)) ?? 0) + 1);
     expect(Object.fromEntries([...bySource].sort())).toEqual({
-      '1917-I': 1, '1931': 4, '1958': 71, '1978': 29, '2012': 24,
+      '1917-I': 1, '1931': 4,
+      '1932': 2, '1933': 2, '1936': 4, '1937': 4, '1938': 1, '1939': 3, '1940': 4, '1941': 2, '1942': 5, '1943': 6, '1944': 8, '1945': 3,
+      '1946': 11, '1947': 11, '1948': 10, '1949': 8, '1950': 9, '1951': 5, '1952': 6, '1953': 11, '1954': 11, '1956': 8, '1957': 6,
+      '1958': 71, '1978': 29, '2012': 24,
       '2015': 38, '2016': 26, '2017': 14, '2018': 15, '2019': 17, '2020': 18, '2021': 24, '2022': 18, '2023': 29, '2024': 26,
     });
-    expect(cited).toHaveLength(225 + 129);
+    expect(cited).toHaveLength(225 + 129 + 140);
     // By class: the index's *Nuntii* carry the Christmas and Easter Urbi et Orbi, and the
     // volumes' *Nuntii radiophonici* / *radiotelevisifici* three more (1958, 1978).
     const byClass = new Map<string, number>();
@@ -2735,9 +2747,10 @@ describe('the AAS reference (acta reference spec)', () => {
     expect(Object.fromEntries([...byClass].sort())).toEqual({
       // Finis et modus moves from the motu_proprio decree to the apost_letters letter by
       // the curated override (curation.ts), hence 24 plain letters and 47 motu proprio
-      // in 2015-2024; the rest are the sample's.
-      'apostolic-exhortation': 9, 'apostolic-letter': 60, 'apostolic-letter+motu-proprio': 52, encyclical: 9,
-      letter: 16, message: 105, 'papal-bull': 2, 'papal-bull+apostolic-constitution': 76, 'urbi-et-orbi': 25,
+      // in 2015-2024; the rest are the sample's and the 1932-1957 volumes' (45 encyclicals
+      // of Pius XI and Pius XII among them, and the three Easter Urbi et Orbi of 1952-1957).
+      'apostolic-exhortation': 15, 'apostolic-letter': 75, 'apostolic-letter+motu-proprio': 62, encyclical: 54,
+      letter: 67, message: 105, 'papal-bull': 2, 'papal-bull+apostolic-constitution': 86, 'urbi-et-orbi': 28,
     });
     const francisOnly = cited.filter((d) => d.acta!.year >= 2015);
     expect(francisOnly).toHaveLength(225);
@@ -2748,8 +2761,9 @@ describe('the AAS reference (acta reference spec)', () => {
     const sample = cited.filter((d) => d.acta!.year < 2015);
     const byIssuer = new Map<string, number>();
     for (const d of sample) byIssuer.set(d.issuerId, (byIssuer.get(d.issuerId) ?? 0) + 1);
+    // Pius XI's 4 and Pius XII's 70 of the sample, plus 13 and 127 from the volumes of 1932-1957.
     expect(Object.fromEntries([...byIssuer].sort())).toEqual({
-      'rp:benedict-xv': 1, 'rp:benedict-xvi': 24, 'rp:john-paul-i': 6, 'rp:john-xxiii': 1, 'rp:paul-vi': 23, 'rp:pius-xi': 4, 'rp:pius-xii': 70,
+      'rp:benedict-xv': 1, 'rp:benedict-xvi': 24, 'rp:john-paul-i': 6, 'rp:john-xxiii': 1, 'rp:paul-vi': 23, 'rp:pius-xi': 17, 'rp:pius-xii': 197,
     });
     // Every reference into AAS 9 (1917) names part I -- part II is the Code and has no
     // index -- and no other reference carries a part.
@@ -2769,6 +2783,34 @@ describe('the AAS reference (acta reference spec)', () => {
     expect(by['mag:benedict-xv/des-le-debut-1917']).toEqual({ series: 'AAS', volume: 9, year: 1917, part: 'I', page: 417 });
     // Resolved among three claims by the toponym the shelf record carries (match.ts).
     expect(by['mag:paul-vi/avkaensis-1977']).toEqual({ series: 'AAS', volume: 70, year: 1978, page: 8 });
+  });
+
+  it('cites the acts of Pius XI and Pius XII the era report names (acta volumes spec §9, phase 2b-ii-a)', () => {
+    const by = Object.fromEntries(cited.map((d) => [d.id, d.acta!]));
+    expect(by['mag:pius-xi/mit-brennender-sorge-1937']).toEqual({ series: 'AAS', volume: 29, year: 1937, page: 145 });
+    expect(by['mag:pius-xii/divino-afflante-spiritu-1943']).toEqual({ series: 'AAS', volume: 35, year: 1943, page: 297 });
+    expect(by['mag:pius-xii/mediator-dei-1947']).toEqual({ series: 'AAS', volume: 39, year: 1947, page: 521 });
+    // The Latin text of an encyclical the index enters twice, by a curated override (curation.ts).
+    expect(by['mag:pius-xi/dilectissima-nobis-1933']).toEqual({ series: 'AAS', volume: 25, year: 1933, page: 261 });
+    expect(by['mag:pius-xi/firmissimam-constantiam-1937']).toEqual({ series: 'AAS', volume: 29, year: 1937, page: 189 });
+    expect(by['mag:pius-xi/divini-redemptoris-1937']).toEqual({ series: 'AAS', volume: 29, year: 1937, page: 65 });
+    // Years and days the OCR misread, corrected by curated rows quoting the acts.
+    expect(by['mag:pius-xii/summi-pontificatus-1939']).toEqual({ series: 'AAS', volume: 31, year: 1939, page: 413 });
+    expect(by['mag:pius-xii/conflictatio-bonorum-1949']).toEqual({ series: 'AAS', volume: 41, year: 1949, page: 58 });
+    expect(by['mag:pius-xii/sollemnibus-documentis-1949']).toEqual({ series: 'AAS', volume: 41, year: 1949, page: 529 });
+    expect(by['mag:pius-xii/redemptoris-nostri-cruciatus-1949']).toEqual({ series: 'AAS', volume: 41, year: 1949, page: 161 });
+    expect(by['mag:pius-xi/ad-catholici-sacerdotii-1935']).toEqual({ series: 'AAS', volume: 28, year: 1936, page: 5 });
+    expect(by['mag:pius-xi/vigilanti-cura-1936']).toEqual({ series: 'AAS', volume: 28, year: 1936, page: 249 });
+    // The two headings that cover two classes (Adhortatio, Hortationes): matched where the shelf has the act.
+    expect(by['mag:pius-xii/i-rapidi-progressi-1954']).toEqual({ series: 'AAS', volume: 46, year: 1954, page: 18 });
+    expect(by['mag:pius-xii/in-auspicando-super-1948']).toEqual({ series: 'AAS', volume: 40, year: 1948, page: 374 });
+    // The Santarem constitution, by a curated override (its 1958 toponym is the OCR's).
+    expect(by['mag:pius-xii/santaremensis-obidensis-1957']).toEqual({ series: 'AAS', volume: 50, year: 1958, page: 24 });
+    // The Easter Urbi et Orbi of 1952, under *Nuntii radiophonici*.
+    expect(by['mag:pius-xii/urbi-et-orbi-easter-1952']).toEqual({ series: 'AAS', volume: 44, year: 1952, page: 378 });
+    // Unreadable in the index, so uncited: the volume's first entry with a `»` for its year (AAS 42 (1950) 911).
+    expect(by['mag:pius-xii/munificentissimus-deus-1950']).toBeUndefined();
+    expect(by['mag:pius-xii/humani-generis-1950']).toBeUndefined();
   });
 
   it('matches the three phase-1 misreadings by their corrected dates', () => {
@@ -2804,7 +2846,10 @@ describe('the AAS reference (acta reference spec)', () => {
       const entry = entries.find((e) => e.year === year && e.page === page);
       expect(entry, key).toBeDefined();
       expect(entry!.date, key).toBe(row.printed);
-      expect(row.date, key).not.toBe(row.printed);
+      // A correction changes the date; a confirmation (phase 2b-ii-a) keeps a date the
+      // parser read from an OCR year no volume prints, and only such an entry may have one.
+      if (row.date === row.printed) expect(entry!.dateNote, key).toBeDefined();
+      else expect(row.date, key).not.toBe(row.printed);
     }
     for (const key of Object.keys(ACTA_HOLDS)) {
       const [year, page] = key.split(':').map(Number);
@@ -2874,17 +2919,27 @@ describe('the AAS-only documents (AAS-only documents spec, phase 2a)', () => {
     // fewer of 2020 since phase 2b-i joined the 2012 index: Benedict XVI's *Ibi vacabimus*
     // (3 July 2011) is printed in both AAS 104 (2012) 482 and AAS 112 (2020) 479, and
     // the id-collision rule holds both entries (sample report §2). The sample adds 147.
+    // Phase 2b-ii-a adds 1,633 from the 26 volumes of 1932-1957 (the era report lists every
+    // one with its index line), and the sample's 1978 count drops by one: *Ut Pater*, whose
+    // incipit the OCR prints `ut Pater`, is now held as OCR-damaged (create.ts).
     const bySource = new Map<string, number>();
     for (const d of born) bySource.set(sourceOf(d), (bySource.get(sourceOf(d)) ?? 0) + 1);
     expect(Object.fromEntries([...bySource].sort())).toEqual({
-      '1909': 2, '1917-I': 8, '1931': 60, '1958': 36, '1978': 29, '2012': 12,
+      '1909': 2, '1917-I': 8, '1931': 60,
+      '1932': 85, '1933': 62, '1934': 39, '1935': 81, '1936': 67, '1937': 56, '1938': 69, '1939': 49, '1940': 57, '1941': 28, '1942': 35,
+      '1943': 17, '1944': 23, '1945': 38, '1946': 27, '1947': 48, '1948': 55, '1949': 70, '1950': 79, '1951': 108, '1952': 119, '1953': 79,
+      '1954': 77, '1955': 95, '1956': 88, '1957': 82,
+      '1958': 36, '1978': 28, '2012': 12,
       '2015': 7, '2016': 15, '2017': 30, '2018': 31, '2019': 73, '2020': 23, '2021': 19, '2022': 18, '2023': 32, '2024': 17,
     });
-    expect(born).toHaveLength(265 + 147);
+    expect(born).toHaveLength(265 + 146 + 1633);
     const byClass = new Map<string, number>();
     for (const d of born) byClass.set(cls(d), (byClass.get(cls(d)) ?? 0) + 1);
     expect(Object.fromEntries([...byClass].sort())).toEqual({
-      'apostolic-letter': 248, 'apostolic-letter+motu-proprio': 2, letter: 15, 'papal-bull': 39, 'papal-bull+apostolic-constitution': 108,
+      // The one exhortation is Pius XII's of 13 September 1951 to the teaching nuns'
+      // congress, entered without an incipit (a provisional id); no encyclical is created
+      // (the four vernacular texts the index enters twice are held by curated rows).
+      'apostolic-exhortation': 1, 'apostolic-letter': 795, 'apostolic-letter+motu-proprio': 23, letter: 452, 'papal-bull': 75, 'papal-bull+apostolic-constitution': 698,
     });
     // Francis and Benedict XVI from the ten indexes (five beatification letters of
     // 2010-2011 printed in the 2018, 2020 and 2021 volumes, the sixth held as above), and
@@ -2894,7 +2949,7 @@ describe('the AAS-only documents (AAS-only documents spec, phase 2a)', () => {
     const byIssuer = new Map<string, number>();
     for (const d of born) byIssuer.set(d.issuerId, (byIssuer.get(d.issuerId) ?? 0) + 1);
     expect(Object.fromEntries([...byIssuer].sort())).toEqual({
-      'rp:benedict-xv': 8, 'rp:benedict-xvi': 17, 'rp:francis-i': 260, 'rp:paul-vi': 29, 'rp:pius-x': 2, 'rp:pius-xi': 60, 'rp:pius-xii': 36,
+      'rp:benedict-xv': 8, 'rp:benedict-xvi': 17, 'rp:francis-i': 260, 'rp:paul-vi': 28, 'rp:pius-x': 2, 'rp:pius-xi': 532, 'rp:pius-xii': 1197,
     });
     expect(born.every((d) => d.issuerId in PONTIFICATE_BEGAN && d.date >= PONTIFICATE_BEGAN[d.issuerId]!)).toBe(true);
     // The *Epistulae* are created only where the letters shelf is harvested (Pius XI, Pius XII).
@@ -2931,7 +2986,7 @@ describe('the AAS-only documents (AAS-only documents spec, phase 2a)', () => {
       if (d.incipit !== undefined) expect(d.title, d.id).toContain(d.incipit);
     }
     expect(everything.filter((d) => d.incipitLang !== undefined)).toEqual([]);
-    expect(born.filter((d) => d.idStatus === 'provisional')).toHaveLength(75 + 5);
+    expect(born.filter((d) => d.idStatus === 'provisional')).toHaveLength(75 + 5 + 319);
   });
 
   it('creates the examples the sample report names (acta volumes spec §5)', () => {
@@ -2966,7 +3021,12 @@ describe('the AAS-only documents (AAS-only documents spec, phase 2a)', () => {
     // 1917 letters dated 1910 (an OCR year before the pontificate).
     expect(by['mag:benedict-xvi/ibi-vacabimus-2011']).toBeUndefined();
     expect(born.filter((d) => d.date.startsWith('1910'))).toEqual([]);
-    expect(born.filter((d) => /\(/.test(d.title) && !/\)/.test(d.title))).toEqual([]);
+    // The OCR-damaged guard reads the incipit, the toponym and the head of a description-only
+    // entry, not the description (whose OCR noise -- `P. I).` for `P. D.` in the volumes of
+    // 1932-1957 -- is the index's own text, as *Kerum novarum* was in 1931): no born incipit
+    // carries a bracket, and no sample title does.
+    expect(born.filter((d) => d.incipit !== undefined && /[()]/.test(d.incipit))).toEqual([]);
+    expect(born.filter((d) => [1909, 1917, 1931, 1958, 1978, 2012].includes(d.acta!.year) && /\(/.test(d.title) && !/\)/.test(d.title))).toEqual([]);
   });
 
   it('creates the examples the spec and the phase-1 report name', () => {
@@ -2986,6 +3046,50 @@ describe('the AAS-only documents (AAS-only documents spec, phase 2a)', () => {
     expect(by['mag:francis-i/venite-benedicti-2013-11-10']).toBeDefined();
     // Benedict XVI's letters, read through the `[Benedictus PP. XVI: 6 Iun. 2010]` bracket.
     expect(by['mag:benedict-xvi/testes-christianae-2010']?.date).toBe('2010-06-06');
+  });
+
+  it('joins and creates from the volumes of 1932-1957 as the era report says (acta volumes spec §9, phase 2b-ii-a)', () => {
+    const era = born.filter((d) => d.acta!.year >= 1932 && d.acta!.year <= 1957);
+    expect(era).toHaveLength(1633);
+    // Every AAS-born record of the era cites the whole-volume PDF of its volume, whose
+    // number the year implies, and belongs to Pius XI or Pius XII.
+    for (const d of era) {
+      expect(d.acta!.volume, d.id).toBe(d.acta!.year - 1908);
+      expect(d.acta!.part, d.id).toBeUndefined();
+      expect(d.source!.url, d.id).toBe(`https://www.vatican.va/archive/aas/documents/AAS-${d.acta!.volume}-${d.acta!.year}-ocr.pdf`);
+      expect(d.source!.shelf, d.id).toBe(`aas/${d.acta!.year}`);
+      expect(d.source!.retrieved, d.id).toBe('2026-09-13');
+      expect(['rp:pius-xi', 'rp:pius-xii'].includes(d.issuerId), d.id).toBe(true);
+      expect(d.date >= PONTIFICATE_BEGAN[d.issuerId]!, d.id).toBe(true);
+    }
+    const by = Object.fromEntries(everything.map((d) => [d.id, d]));
+    // Two short letters on one page, each read in the volume and curated (ACTA_SHARED_PAGES).
+    expect(by['mag:pius-xi/constitutione-apostolica-1931']).toMatchObject({ date: '1931-01-12', acta: { series: 'AAS', volume: 24, year: 1932, page: 39 }, sourceGenreLabel: 'Litterae Apostolicae' });
+    expect(by['mag:pius-xi/apostolicum-munus-1931']).toMatchObject({ date: '1931-03-31', acta: { volume: 24, page: 39 } });
+    expect(by['mag:pius-xi/quum-perlibenter-1933']).toMatchObject({ genre: 'letter', acta: { volume: 26, page: 19 } });
+    expect(by['mag:pius-xi/nobilissima-cui-praesides-1933']).toMatchObject({ genre: 'letter', acta: { volume: 26, page: 19 } });
+    expect(by['mag:pius-xi/cum-in-republica-estoniensi-1933']).toMatchObject({ acta: { volume: 28, year: 1936, page: 102 } });
+    expect(by['mag:pius-xi/cum-aterradensis-1933']).toMatchObject({ acta: { volume: 28, page: 102 } });
+    expect(by['mag:pius-xii/quinto-ac-vicesimo-1952']).toMatchObject({ genre: 'letter', acta: { volume: 45, year: 1953, page: 91 } });
+    expect(by['mag:pius-xii/peculiari-animi-1952']).toMatchObject({ genre: 'letter', acta: { volume: 45, page: 91 } });
+    // Constitutions of 1948 whose year the OCR reads `1919`, corrected by curated rows quoting the acts.
+    expect(by['mag:pius-xii/christianae-plebis-1948']).toMatchObject({ date: '1948-07-15', acta: { volume: 41, year: 1949, page: 16 }, title: expect.stringMatching(/^Guayaquilensis \(Fluminensis\)\. Christianae plebis\. /) });
+    expect(by['mag:pius-xii/opportunis-providentiae-studiis-1948']).toMatchObject({ date: '1948-05-20', acta: { page: 62 } });
+    expect(by['mag:pius-xii/quo-maiori-1948']).toMatchObject({ date: '1948-08-07', acta: { page: 311 } });
+    // A year no volume prints (`3939`), read as 1939, noted, and confirmed by a curated row.
+    expect(by['mag:pius-xii/singulari-animi-1939-11-20']).toMatchObject({ genre: 'letter', date: '1939-11-20', acta: { volume: 32, year: 1940, page: 42 } });
+    // A constitution of 1939-1945 named by the see and its vernacular, no incipit: provisional, the see in the title.
+    expect(born.filter((d) => d.acta!.year === 1939 && d.date === '1939-04-25' && d.genre === 'papal-bull').map((d) => d.title.split('.')[0]).sort())
+      .toEqual(['De Dakar (Ziguinchorensis)', 'De Seul (Sunsenensis)', 'De Sienhsien (De Kinghsien)']);
+    // The other constitution of 10 April 1957, beside the shelf's Santarem (matched by a curated override).
+    expect(by['mag:pius-xii/in-similitudinem-1957']).toMatchObject({ acta: { volume: 49, year: 1957, page: 885 }, title: expect.stringMatching(/^Chihuahuensis \(Civitatis Iuarezensis\)\. In similitudinem\. /) });
+    // Held, not created: the vernacular texts of four encyclicals (ACTA_HOLDS), the pages two acts cite where the
+    // volume prints one (page-shared), *Ut Pater* of 1978 (an OCR lower-case initial).
+    expect(born.filter((d) => d.issuerId === 'rp:pius-xi' && d.genre === 'encyclical')).toEqual([]);
+    expect(born.filter((d) => d.acta!.year === 1950 && [37, 42].includes(d.acta!.page))).toEqual([]);
+    expect(by['mag:paul-vi/ut-pater-1978']).toBeUndefined();
+    // No Nuntii radiophonici is created: the category is counted for #27, never created.
+    expect(born.filter((d) => d.sourceGenreLabel === 'Nuntii radiophonici')).toEqual([]);
   });
 
   it('holds rather than creates: no discussion #30 act has an AAS-born twin, and the Tarragona letters stay held', () => {

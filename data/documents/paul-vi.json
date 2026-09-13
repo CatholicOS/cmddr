@@ -18150,31 +18150,6 @@
     }
   },
   {
-    "id": "mag:paul-vi/ut-pater-1978",
-    "title": "Raiganensis. ut Pater. Nova in India conditur dioecesis Raiganensis, detractis a dioecesi Dumkaënsi quibusdam territoriis",
-    "idStatus": "minted",
-    "genre": "papal-bull",
-    "issuerId": "rp:paul-vi",
-    "issuerType": "pope",
-    "date": "1978-06-08",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-70-1978-ocr.pdf",
-      "shelf": "aas/1978",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "ut Pater",
-    "characteristics": [
-      "apostolic-constitution"
-    ],
-    "sourceGenreLabel": "Constitutiones Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 70,
-      "year": 1978,
-      "page": 446
-    }
-  },
-  {
     "id": "mag:paul-vi/trichuriensis-eparchiae-1978",
     "title": "Irinialakudensis. Trichuriensis eparchiae. Eparchia ritus Malabarensis Irinialakudensis nomine in India constituitur",
     "idStatus": "minted",
