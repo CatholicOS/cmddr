@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { ACTA_CATEGORIES, categoryForHeading, normaliseHeading } from '../src/acta/categories.js';
 import { parseActaIndex } from '../src/acta/index.js';
-import { ACTA_YEARS, actaFixturePath } from '../src/acta/join.js';
+import { ACTA_SOURCES, loadActaIndexes } from '../src/acta/join.js';
 
 const genres = JSON.parse(readFileSync('data/genres.json', 'utf8')) as
   Array<{ id: string; allowedCharacteristics?: string[] }>;
@@ -49,27 +49,67 @@ describe('the AAS category table', () => {
     expect(harvested('Litterae Apostolicae Motu proprio datae')).toBe('yes');
     expect(harvested('Litterae Decretales')).toBe('partly');
     expect(harvested('Nuntii')).toBe('partly');
-    expect(harvested('Epistulae')).toBe('no');
+    // Phase 2b: the letters shelf is harvested for five popes (pontiffs.ts), so the
+    // class is partly harvested; the creator decides per pope.
+    expect(harvested('Epistulae')).toBe('partly');
+    expect(harvested('Nuntii radiophonici')).toBe('partly');
     expect(harvested('Homiliae')).toBe('no');
     expect(harvested('Allocutiones')).toBe('no');
+    expect(harvested('Sermones')).toBe('no');
+    expect(harvested('Nuntii gratulatorii')).toBe('no');
   });
 
-  it('covers every heading the ten fixtures print (none is unseen)', () => {
-    for (const year of ACTA_YEARS) {
-      const r = parseActaIndex(readFileSync(actaFixturePath(year), 'utf8'), { year });
-      expect(r.unseenHeadings, String(year)).toEqual([]);
-    }
+  it('maps the headings of the volumes (acta volumes spec §2), each as the fixture prints it', () => {
+    expect(categoryForHeading('II - EPISTULA ENCYCLICA')?.id).toBe('Litterae Encyclicae');
+    expect(categoryForHeading('III. - MOTU PROPRIO.')?.id).toBe('Litterae Apostolicae Motu proprio datae');
+    expect(categoryForHeading('III – LITTERAE APOSTOLICAE «MOTU PROPRIO» DATAE')?.id).toBe('Litterae Apostolicae Motu proprio datae');
+    expect(categoryForHeading('II. - APOSTOLICAE SUB PLUMBO LITTERAE')?.id).toBe('Litterae Apostolicae sub plumbo datae');
+    expect(categoryForHeading('II. - EPISTOLA APOSTOLICA')?.id).toBe('Epistulae Apostolicae');
+    expect(categoryForHeading('VII. - EPISTOLAE')?.id).toBe('Epistulae');
+    expect(categoryForHeading('VI. - CHIROGRAPHE')?.id).toBe('Chirographa');
+    expect(categoryForHeading('VIII. - SERMO')?.id).toBe('Sermones');
+    expect(categoryForHeading('VII. - HOMILIA.')?.id).toBe('Homiliae');
+    expect(categoryForHeading('IX. - NUNCIUM RADIOPHONICUM')?.id).toBe('Nuntii radiophonici');
+    expect(categoryForHeading('IX - NUNTII RADIOTELEVISIFICI')?.classes.map((c) => c.genre)).toEqual(['message', 'urbi-et-orbi']);
+    expect(categoryForHeading('VIII - NUNTII SCRIPTO DATI')?.id).toBe('Nuntii');
+    expect(categoryForHeading('VIII - NUNTII GRATULATORII')?.id).toBe('Nuntii gratulatorii');
+    expect(categoryForHeading('VI - NUNTII TELEGRAPHICI')?.id).toBe('Nuntii telegraphici');
+    expect(categoryForHeading('IX. - ACTA SACRI CONSISTORII.')?.id).toBe('Consistoria');
+    expect(categoryForHeading('IX - SACRA CONSISTORIA')?.id).toBe('Consistoria');
+    expect(categoryForHeading('VI - CONVENTIO')?.id).toBe('Conventiones');
+    expect(categoryForHeading('I – ADHORTATIONES APOSTOLICAE POSTSYNODALES:')?.id).toBe('Adhortationes Apostolicae');
+    expect(categoryForHeading('VIII. - ADHORTATIO AD POPULORUM BELLIOERANTIUM MODERATORES.')?.id).toBe('Adhortationes Apostolicae');
+    expect(categoryForHeading('IX – NUNTIUS TELEVISIFICUS')?.id).toBe('Nuntii televisifici');
+    expect(normaliseHeading('I. - CONSTITUTIONES APOSTOLICAE.')).toBe('CONSTITUTIONES APOSTOLICAE');
+  });
+
+  it('covers every heading every fixture prints (none is unseen)', () => {
+    const { parsed, missing } = loadActaIndexes();
+    expect(missing).toEqual([]);
+    for (const [key, r] of parsed) expect(r.unseenHeadings, key).toEqual([]);
   });
 
   it('is printed in the fixtures, row by row, except the anticipated Bullae', () => {
     const seen = new Set<string>();
-    for (const year of ACTA_YEARS) {
-      const r = parseActaIndex(readFileSync(actaFixturePath(year), 'utf8'), { year });
-      for (const e of r.entries) seen.add(e.category);
-    }
+    for (const r of loadActaIndexes().parsed.values()) for (const e of r.entries) seen.add(e.category);
     for (const c of ACTA_CATEGORIES) {
       const printed = c.headings.some((h) => seen.has(h));
       expect(printed, c.id).toBe(c.id !== 'Bullae');
     }
+    // And every heading listed is a heading line of some fixture (alone or joined to the
+    // next line), so the table carries no guess: the exceptions are the spec's
+    // anticipated BULLAE and the correctly spelt BELLIGERANTIUM listed beside the 1917
+    // fixture's OCR spelling.
+    const printedLines = new Set<string>();
+    for (const src of ACTA_SOURCES) {
+      const lines = readFileSync(src.file, 'utf8').split(/\f|\n/).map((l) => l.trim()).filter((l) => l !== '');
+      lines.forEach((l, i) => {
+        printedLines.add(normaliseHeading(l));
+        if (i + 1 < lines.length) printedLines.add(normaliseHeading(`${l} ${lines[i + 1]}`));
+      });
+    }
+    const unprinted = ACTA_CATEGORIES.flatMap((c) => c.headings).filter((h) => !printedLines.has(h));
+    expect(unprinted).toEqual(['ADHORTATIO AD POPULORUM BELLIGERANTIUM MODERATORES', 'BULLAE']);
+    void parseActaIndex;
   });
 });

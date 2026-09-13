@@ -134,6 +134,29 @@
     "sourceGenreLabel": "apost-constitutions"
   },
   {
+    "id": "mag:benedict-xv/benigne-annuentes-1915",
+    "title": "Benigne annuentes. Plenaria indulgentia conceditur pro festo Bb. Agathangeli et Cassiani",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1915-08-11",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Benigne annuentes",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 53
+    }
+  },
+  {
     "id": "mag:benedict-xv/quandoquidem-in-iis-1915",
     "title": "Quandoquidem in iis con il quale si ribadisce che dovranno essere sottoposti all’esame della Suprema Congregazione del Santo Ufficio soltanto i documenti relativi alle Indulgenze che siano concesse ai fedeli di tutto il mondo cattolico",
     "idStatus": "minted",
@@ -401,6 +424,98 @@
     "sourceGenreLabel": "bulls"
   },
   {
+    "id": "mag:benedict-xv/extat-granatae-1917",
+    "title": "Extat Granatae. Indulgentia plenaria quotidiana Basilicae Granatensi S. Ioannis de Deo in perpetuum conceditur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-06-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Extat Granatae",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 369
+    }
+  },
+  {
+    "id": "mag:benedict-xv/quae-catholici-nomini-1917",
+    "title": "Quae catholici nomini. Praefectura apostolica de Kassai Superiore, Congi Belgici, in Vicariatum erigitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-06-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quae catholici nomini",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 370
+    }
+  },
+  {
+    "id": "mag:benedict-xv/ut-mature-1917",
+    "title": "Ut mature. Praefectura apostolica de « Bahr-el-Gazal » in Vicariatum apostolicum erigitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-06-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Ut mature",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 371
+    }
+  },
+  {
+    "id": "mag:benedict-xv/cum-deipara-virgo-1917",
+    "title": "Cum Deipara Virgo. Sodalibus et monialibus Congregationis Ssmi Redemptoris quandam precem recitantibus indulgentia ccc dierum in perpetuum conceditur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-06-15",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Cum Deipara Virgo",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 372
+    }
+  },
+  {
     "id": "mag:benedict-xv/humani-generis-redemptionem-1917",
     "title": "Humani Generis Redemptionem",
     "idStatus": "minted",
@@ -423,6 +538,75 @@
     "sourceGenreLabel": "encyclicals"
   },
   {
+    "id": "mag:benedict-xv/dilectus-filius-himerius-a-iesu-1917",
+    "title": "Dilectus filius Himerius a Iesu. Sodalibus instituti Scholarum Christianarum quandam precem recitantibus indulgentia partialis ac plenaria in perpetuum conceditur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-06-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Dilectus filius Himerius a Iesu",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 373
+    }
+  },
+  {
+    "id": "mag:benedict-xv/ad-augendam-fidelium-religionem-1917",
+    "title": "Ad augendam fidelium religionem. Visitantibus, certis diebus, ecclesiam parochialem S. Vincentii a Paulo in civitate Nanceyensi indulgentia plenaria in perpetuum conceditur, .v",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-07-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Ad augendam fidelium religionem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 424
+    }
+  },
+  {
+    "id": "mag:benedict-xv/quae-catholico-nomini-1917",
+    "title": "Quae catholico nomini. Duodecim districtus paroeciales ab archidioecesi Sydneyensi disiunguntur et dioecesi Goulbournensi adiiciuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-07-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quae catholico nomini",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 425
+    }
+  },
+  {
     "id": "mag:benedict-xv/des-le-debut-1917",
     "title": "Dès le début ai Capi dei popoli belligeranti invitandoli a trovare la via per una pace «giusta e duratura»",
     "idStatus": "minted",
@@ -440,7 +624,14 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Dès le début",
-    "sourceGenreLabel": "apost_exhortations"
+    "sourceGenreLabel": "apost_exhortations",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 417
+    }
   },
   {
     "id": "mag:benedict-xv/cum-iuris-canonici-1917",

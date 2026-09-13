@@ -16,26 +16,41 @@
  * correction, for an entry whose printed date the act's own dating formula contradicts,
  * matched by the corrected date; and a match override, for an entry the class rule sends
  * to the wrong act, matched to the document the row names before the class rule runs.
+ *
+ * One rule is the volumes' (acta volumes spec §4): an entry the index dates to the month
+ * only (a printed month and a blank day, the columnar layout of 1909-1931; the parser
+ * gives it a `YYYY-MM` date) matches the one document of the pope and the class in that
+ * month whose incipit slug equals the entry's -- the month, the class and the incipit
+ * together evidence the identity, and the shelf supplies the day. Two such documents, or
+ * none, or an entry without an incipit, leave it unmatched; it is never created.
  */
 import { slugify } from '../slug.js';
 import { categoryForHeading, type GenreClass } from './categories.js';
 import { ACTA_INDEX_CORRECTIONS, ACTA_MATCH_OVERRIDES, curationKey, overrideKey } from './curation.js';
+import { ACTA_POPES } from './popes.js';
 import type { ActaEntry } from './index.js';
 import type { DocumentRecord } from '../types.js';
 
-/** The index's pope heading (nominative, as the parser renders it) to the CRPDR issuer. */
-export const POPE_ISSUERS: Readonly<Record<string, string>> = {
-  Franciscus: 'rp:francis-i',
-  // The 2020 index carries two beatification letters of 2010-2011 in a part of their own,
-  // and the 2018 index one with the pope named in brackets before the incipit.
-  'Benedictus XVI': 'rp:benedict-xvi',
-};
+/**
+ * The index's pope heading (nominative, as the parser renders it) to the CRPDR issuer,
+ * from the popes table (popes.ts): 'Pius X' -> 'rp:pius-x', 'Franciscus' ->
+ * 'rp:francis-i'. The bracketed pope of the 2018-2021 indexes (`[Benedictus PP. XVI: …]`)
+ * renders to the same label as the 2012 and 2020 part heading.
+ */
+export const POPE_ISSUERS: Readonly<Record<string, string>> =
+  Object.fromEntries(ACTA_POPES.map((p) => [p.pope, p.issuerId]));
+
+/** Whether the parser dated the entry to the month only (`YYYY-MM`). */
+export const isMonthOnly = (e: { date: string }): boolean => e.date.length === 7;
 
 export interface ActaMatch {
   entry: ActaEntry;
   documentId: string;
-  /** What decided the match: the only candidate, the incipit slug, the toponym, or a curated override. */
-  by: 'unique' | 'incipit' | 'toponym' | 'curated';
+  /**
+   * What decided the match: the only candidate, the incipit slug, the toponym, a curated
+   * override, or -- for a month-only entry -- the incipit slug within the month.
+   */
+  by: 'unique' | 'incipit' | 'toponym' | 'curated' | 'incipit-month';
 }
 export interface ActaCandidate { id: string; date: string; genre: string | null; characteristics: string[]; title: string; incipit?: string }
 export interface ActaAmbiguity { entry: ActaEntry; candidates: ActaCandidate[] }
@@ -106,11 +121,15 @@ export function correctedEntry(entry: ActaEntry): ActaEntry {
 export function matchActa(rawEntries: ActaEntry[], docs: DocumentRecord[]): ActaMatchResult {
   const entries = rawEntries.map(correctedEntry);
   const byIssuerDate = new Map<string, DocumentRecord[]>();
+  const byIssuerMonth = new Map<string, DocumentRecord[]>();
   for (const d of docs) {
     const k = `${d.issuerId}|${d.date}`;
     byIssuerDate.set(k, [...(byIssuerDate.get(k) ?? []), d]);
+    const m = `${d.issuerId}|${d.date.slice(0, 7)}`;
+    byIssuerMonth.set(m, [...(byIssuerMonth.get(m) ?? []), d]);
   }
   const on = (issuer: string, date: string) => byIssuerDate.get(`${issuer}|${date}`) ?? [];
+  const inMonth = (issuer: string, month: string) => byIssuerMonth.get(`${issuer}|${month}`) ?? [];
   const byId = new Map(docs.map((d) => [d.id, d]));
 
   const result: ActaMatchResult = {
@@ -136,8 +155,24 @@ export function matchActa(rawEntries: ActaEntry[], docs: DocumentRecord[]): Acta
       continue;
     }
 
-    const sameDate = on(issuer, entry.date);
     const inClasses = (d: DocumentRecord) => category.classes.some((c) => inClass(d, c));
+    if (isMonthOnly(entry)) {
+      const slug = entry.incipit === null ? null : slugify(entry.incipit);
+      const monthly = inMonth(issuer, entry.date).filter(inClasses);
+      const byIncipit = slug === null || slug === '' ? []
+        : monthly.filter((d) => d.incipit !== undefined && slugify(d.incipit) === slug);
+      if (byIncipit.length === 1) {
+        result.matches.push({ entry, documentId: byIncipit[0]!.id, by: 'incipit-month' });
+      } else if (byIncipit.length > 1) {
+        result.ambiguous.push({ entry, candidates: byIncipit.map(candidate) });
+      } else {
+        // Reported with what the pope has of the class in the month; no near-miss for a
+        // date that has no day.
+        result.unmatched.push({ entry, sameDate: monthly.map(candidate), nearMisses: [] });
+      }
+      continue;
+    }
+    const sameDate = on(issuer, entry.date);
     let candidates = sameDate.filter(inClasses);
     let by: ActaMatch['by'] = 'unique';
 
@@ -163,13 +198,45 @@ export function matchActa(rawEntries: ActaEntry[], docs: DocumentRecord[]): Acta
   }
 
   // One page opens one act (invariant 25), and one act has one first page: a document
-  // claimed twice is a finding, not a choice. Neither claim is kept.
-  const claims = new Map<string, ActaEntry[]>();
-  for (const m of result.matches) claims.set(m.documentId, [...(claims.get(m.documentId) ?? []), m.entry]);
-  for (const [documentId, es] of claims) {
-    if (es.length > 1) result.conflicts.push({ documentId, entries: es });
+  // claimed twice is a finding, not a choice -- unless exactly one of the claims carries
+  // positive evidence the others lack: the document's incipit slug is the entry's, or (a
+  // constitution) its title carries the entry's toponym. The volumes print several
+  // constitutions of one day where the shelf holds one (10 November 1977: *Avkaënsis*,
+  // *Mohaleshoekensis*, *Ambikapurensis* against the shelf's *Avkaensis*), and the
+  // `unique` rule sends every entry to it; the entry the document names keeps the match
+  // and the others are released as unmatched, with the document listed beside them, so
+  // the creator's guard sees it. With no such evidence, or with two, neither claim is kept.
+  const claims = new Map<string, ActaMatch[]>();
+  for (const m of result.matches) claims.set(m.documentId, [...(claims.get(m.documentId) ?? []), m]);
+  const dropped = new Set<ActaMatch>();
+  for (const [documentId, ms] of claims) {
+    if (ms.length < 2) continue;
+    const doc = byId.get(documentId)!;
+    const evidenced = ms.map((m): ActaMatch | null => {
+      const e = m.entry;
+      if (e.incipit !== null && doc.incipit !== undefined && slugify(doc.incipit) === slugify(e.incipit)) return { ...m, by: 'incipit' };
+      const category = categoryForHeading(e.category);
+      if (e.toponym !== null && category?.classes.some((c) => c.requires === 'apostolic-constitution')
+        && titleHasToponym(doc.title, e.toponym)) return { ...m, by: 'toponym' };
+      return null;
+    });
+    const winners = evidenced.filter((m): m is ActaMatch => m !== null);
+    if (winners.length === 1) {
+      const winner = winners[0]!;
+      for (const [k, m] of ms.entries()) {
+        if (evidenced[k] !== null) { Object.assign(m, winner); continue; }
+        dropped.add(m);
+        const e = m.entry;
+        const issuer = POPE_ISSUERS[e.pope]!;
+        const nearMisses = isMonthOnly(e) ? [] : [-1, 1].flatMap((delta) =>
+          on(issuer, shiftDate(e.date, delta)).filter((d) => categoryForHeading(e.category)!.classes.some((c) => inClass(d, c))).map(candidate));
+        result.unmatched.push({ entry: e, sameDate: (isMonthOnly(e) ? inMonth(issuer, e.date) : on(issuer, e.date)).map(candidate), nearMisses });
+      }
+      continue;
+    }
+    result.conflicts.push({ documentId, entries: ms.map((m) => m.entry) });
   }
   const conflicted = new Set(result.conflicts.map((c) => c.documentId));
-  result.matches = result.matches.filter((m) => !conflicted.has(m.documentId));
+  result.matches = result.matches.filter((m) => !conflicted.has(m.documentId) && !dropped.has(m));
   return result;
 }

@@ -276,6 +276,68 @@ describe('the curated match override', () => {
   });
 });
 
+describe('createFromActa on the volumes (acta volumes spec §5)', () => {
+  const pius = (over: Partial<ActaEntry>) => entry({
+    pope: 'Pius XI', year: 1931, volume: 23, category: 'CONSTITUTIONES APOSTOLICAE', date: '1931-03-27',
+    incipit: 'Pastoris aeterni', description: 'Lacus Salsi et Sacramentensis: dismembrationis et erectionis novae dioecesis Renensis',
+    raw: '1931 Martii        27   Pastoris aeterni. - Lacus Salsi et Sacramentensis: dismem­ / brationis et erectionis novae dioecesis Renensis .... 366',
+    page: 366, ...over,
+  });
+
+  it('cites the whole-volume PDF as source.url for a volume source, with the fixture\'s retrieval date', () => {
+    const r = run([pius({})], []);
+    expect(r.created).toHaveLength(1);
+    expect(r.created[0]!.record).toMatchObject({
+      id: 'mag:pius-xi/pastoris-aeterni-1931', issuerId: 'rp:pius-xi', genre: 'papal-bull', characteristics: ['apostolic-constitution'],
+      source: { url: 'https://www.vatican.va/archive/aas/documents/AAS-23-1931-ocr.pdf', shelf: 'aas/1931', retrieved: '2026-09-12' },
+      acta: { series: 'AAS', volume: 23, year: 1931, page: 366 },
+    });
+    // The retrieval date defaults to the source's when none is given.
+    const d = createFromActa(matchActa([pius({})], []), []);
+    expect(d.created[0]!.record.source!.retrieved).toBe('2026-09-13');
+    // A part carries into acta.part and into the URL.
+    const part = createFromActa(matchActa([entry({
+      pope: 'Benedictus XV', year: 1917, volume: 9, part: 'I', page: 53, date: '1915-08-11', incipit: 'Benigne annuentes',
+      description: 'Plenaria indulgentia conceditur pro festo Bb. Agathangeli et Cassiani',
+    })], []), []);
+    expect(part.created[0]!.record.acta).toEqual({ series: 'AAS', volume: 9, year: 1917, part: 'I', page: 53 });
+    expect(part.created[0]!.record.source!.url).toBe('https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf');
+    // An index PDF (2012) has no volume URL.
+    const idx = run([entry({ pope: 'Benedictus XVI', year: 2012, volume: 104, page: 404, date: '2012-01-10', incipit: 'Quo aptius' })], []);
+    expect(idx.created[0]!.record.source).toEqual({ url: null, shelf: 'aas/2012', retrieved: '2026-09-12' });
+  });
+
+  it('creates an Epistula only for a pope whose letters shelf is harvested', () => {
+    const letter = (pope: string, date: string) => entry({
+      pope, category: 'EPISTOLAE', date, year: 1931, volume: 23, incipit: 'Quoniam annus', description: 'Ad R. P. D. Iulium Zichy', page: 49,
+    });
+    const created = run([letter('Pius XI', '1930-12-13')], []);
+    expect(created.created.map((c) => [c.record.id, c.record.genre, c.record.sourceGenreLabel])).toEqual([['mag:pius-xi/quoniam-annus-1930', 'letter', 'Epistulae']]);
+    const held = run([letter('Benedictus XV', '1917-12-13'), letter('Franciscus', '2023-12-13')], []);
+    expect(held.held.map((h) => h.reason)).toEqual(['shelf-not-harvested', 'shelf-not-harvested']);
+  });
+
+  it('never creates a month-only entry, and holds an OCR-damaged incipit or toponym', () => {
+    const month = run([pius({ date: '1929-03', incipit: 'Pro munere', page: 317 })], []);
+    expect(month.created).toEqual([]);
+    expect(month.held.map((h) => [h.reason, h.note.slice(0, 30)])).toEqual([['unresolvable-date', 'the index dates the entry to 1']]);
+    const damaged = run([
+      pius({ toponym: 'B (IARENSIS', incipit: null, description: 'Peramplum Berberatensis. In Africae Mediae natione dioecesis Buarensis constituitur', page: 280, date: '1978-02-27', pope: 'Paulus VI', year: 1978, volume: 70 }),
+      pius({ incipit: 'Lex N. DCXXVI', page: 281 }),
+      pius({ incipit: 'Il 30 novembre 2019', quoted: true, page: 282 }),
+    ], []);
+    expect(damaged.held.map((h) => [h.entry.page, h.reason])).toEqual([[280, 'ocr-damaged']]);
+    expect(damaged.created.map((c) => c.entry.page)).toEqual([281, 282]);
+    // A toponym-and-incipit constitution of 1958 mints from the incipit, the toponym in the title.
+    const both = run([entry({
+      pope: 'Pius XII', year: 1958, volume: 50, category: 'CONSTITUTIONES APOSTOLICAE', date: '1957-04-10', page: 24,
+      toponym: 'SANTAREMENSIS (Obidensis)', incipit: 'Cum sit', description: 'Distractis quibusdam municipiis',
+      raw: '1957 Apr. 10 SANTAREMENSIS (Obidensis). Cum sit. - Distractis quibusdam municipiis 24',
+    })], []);
+    expect(both.created[0]!.record).toMatchObject({ id: 'mag:pius-xii/cum-sit-1957', title: 'Santaremensis (Obidensis). Cum sit. Distractis quibusdam municipiis' });
+  });
+});
+
 describe('the created-category table', () => {
   it('names only categories of categories.ts with exactly one class, and every harvested category is created or explained', () => {
     for (const id of Object.keys(CREATED_CATEGORIES)) {

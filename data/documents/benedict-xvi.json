@@ -4660,6 +4660,28 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
+    "id": "mag:benedict-xvi/quis-non-separabit-2010",
+    "title": "« Quis non separabit ». Venerabili Dei Servo Iosepho Samsó Elías, presbytero, caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-01-23",
+    "source": {
+      "url": null,
+      "shelf": "aas/2012",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quis non separabit",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 404
+    }
+  },
+  {
     "id": "mag:benedict-xvi/world-communications-day-2010",
     "title": "XLIV Giornata Mondiale delle Comunicazioni Sociali, 2010 - Il sacerdote e la pastorale nel mondo digitale: i nuovi media al servizio della Parola",
     "idStatus": "minted",
@@ -4870,6 +4892,28 @@
     "sourceGenreLabel": "messages/urbi"
   },
   {
+    "id": "mag:benedict-xvi/videbunt-in-quem-2010",
+    "title": "« Videbunt in quem ». Venerabili Dei Servo Bernardo Francisco de Hoyos caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-04-18",
+    "source": {
+      "url": null,
+      "shelf": "aas/2012",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Videbunt in quem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 695
+    }
+  },
+  {
     "id": "mag:benedict-xvi/domine-non-est-2010",
     "title": "« Domine, non est ». Venerabili Dei Servo Iosepho Tous y Soler, O.F.M. Cap., Beatorum honores decernuntur: Addendum",
     "idStatus": "minted",
@@ -5058,6 +5102,50 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
+    "id": "mag:benedict-xvi/induite-dominum-2010",
+    "title": "« Induite Dominum ». Venerabili Dei Servo Emmanueli Lozano Garrido Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-06-22",
+    "source": {
+      "url": null,
+      "shelf": "aas/2012",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Induite Dominum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 406
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/venite-ad-me-2010",
+    "title": "« Venite ad me ». Venerabili Dei Servo Stephano Nehmé Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-06-27",
+    "source": {
+      "url": null,
+      "shelf": "aas/2012",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Venite ad me",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 868
+    }
+  },
+  {
     "id": "mag:benedict-xvi/foederatae-civitates-americae-septentrionalis-2010",
     "title": "Foederatae Civitates Americae Septentrionalis",
     "idStatus": "minted",
@@ -5148,6 +5236,28 @@
     "sourceGenreLabel": "messages/youth"
   },
   {
+    "id": "mag:benedict-xvi/domine-dominus-noster-2010",
+    "title": "« Domine, Dominus noster ». Venerabili Dei Servo Leopoldo de Alpandeire caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-09-12",
+    "source": {
+      "url": null,
+      "shelf": "aas/2012",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Domine, Dominus noster",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 410
+    }
+  },
+  {
     "id": "mag:benedict-xvi/dico-autem-2010",
     "title": "« Dico autem ». Venerabili Dei Servo Gerardo Hirschfelder caelitum Beatorum tribuitur dignitas",
     "idStatus": "minted",
@@ -5193,6 +5303,28 @@
     },
     "incipit": "Ubicumque et semper",
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/iesu-ego-2010",
+    "title": "« Iesu, ego ». Venerabili Servae Dei Clarae Badano Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-09-25",
+    "source": {
+      "url": null,
+      "shelf": "aas/2012",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Iesu, ego",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 698
+    }
   },
   {
     "id": "mag:benedict-xvi/world-day-of-migrants-and-refugees-2011",
@@ -5248,6 +5380,28 @@
     },
     "incipit": "Verbum Domini",
     "sourceGenreLabel": "apost_exhortations"
+  },
+  {
+    "id": "mag:benedict-xvi/mulierem-fortem-2010",
+    "title": "« Mulierem fortem ». Venerabili Dei Servae Annae Mariae Adorni caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-10-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2012",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Mulierem fortem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 633
+    }
   },
   {
     "id": "mag:benedict-xvi/world-food-day-2010",
@@ -5389,6 +5543,50 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:benedict-xvi/hic-est-2010",
+    "title": "« Hic est ». Venerabili Dei Servae Alfonsae Clerici Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-10-23",
+    "source": {
+      "url": null,
+      "shelf": "aas/2012",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Hic est",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 870
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/accipietis-virtutem-2010",
+    "title": "« Accipietis virtutem ». Venerabili Dei Servo Szilárd Bogdánffy, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-10-29",
+    "source": {
+      "url": null,
+      "shelf": "aas/2012",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Accipietis virtutem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 476
+    }
+  },
+  {
     "id": "mag:benedict-xvi/lent-2011",
     "title": "Messaggio di Benedetto XVI per la Quaresima 2011",
     "idStatus": "minted",
@@ -5417,6 +5615,28 @@
       "year": 2011
     },
     "sourceGenreLabel": "messages/lent"
+  },
+  {
+    "id": "mag:benedict-xvi/sponsus-noster-2010",
+    "title": "« Sponsus noster ». Venerabili Dei Servae Barbarae Maix, caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2010-11-06",
+    "source": {
+      "url": null,
+      "shelf": "aas/2012",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Sponsus noster",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 479
+    }
   },
   {
     "id": "mag:benedict-xvi/world-day-of-prayer-for-vocations-2011",
@@ -6059,28 +6279,6 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
-    "id": "mag:benedict-xvi/ibi-vacabimus-2011",
-    "title": "« Ibi vacabimus ». Venerabili Servo Dei Ioanni Scheffler Beatorum honores decernuntur",
-    "idStatus": "minted",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:benedict-xvi",
-    "issuerType": "pope",
-    "date": "2011-07-03",
-    "source": {
-      "url": null,
-      "shelf": "aas/2020",
-      "retrieved": "2026-09-12"
-    },
-    "incipit": "Ibi vacabimus",
-    "sourceGenreLabel": "Litterae Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 112,
-      "year": 2020,
-      "page": 479
-    }
-  },
-  {
     "id": "mag:benedict-xvi/sylethensis-2011",
     "title": "Sylethensis",
     "idStatus": "minted",
@@ -6296,7 +6494,13 @@
       "year": 2012,
       "ordinal": 49
     },
-    "sourceGenreLabel": "messages/vocations"
+    "sourceGenreLabel": "messages/vocations",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 194
+    }
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2011-10-23",
@@ -6387,7 +6591,13 @@
       "id": "lent",
       "year": 2012
     },
-    "sourceGenreLabel": "messages/lent"
+    "sourceGenreLabel": "messages/lent",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 199
+    }
   },
   {
     "id": "mag:benedict-xvi/obidensis-2011",
@@ -6440,7 +6650,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Africae munus",
-    "sourceGenreLabel": "apost_exhortations"
+    "sourceGenreLabel": "apost_exhortations",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 239
+    }
   },
   {
     "id": "mag:benedict-xvi/world-day-of-the-sick-2012",
@@ -6469,7 +6685,13 @@
       "year": 2012,
       "ordinal": 20
     },
-    "sourceGenreLabel": "messages/sick"
+    "sourceGenreLabel": "messages/sick",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 44
+    }
   },
   {
     "id": "mag:benedict-xvi/gauana-2011",
@@ -6491,7 +6713,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 84
+    }
   },
   {
     "id": "mag:benedict-xvi/world-day-of-peace-2012",
@@ -6521,7 +6749,13 @@
       "year": 2012,
       "ordinal": 45
     },
-    "sourceGenreLabel": "messages/peace"
+    "sourceGenreLabel": "messages/peace",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 50
+    }
   },
   {
     "id": "mag:benedict-xvi/urbi-et-orbi-christmas-2011",
@@ -6550,7 +6784,13 @@
       "year": 2011
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 59
+    }
   },
   {
     "id": "mag:benedict-xvi/ceibensis-2011",
@@ -6576,7 +6816,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 85
+    }
   },
   {
     "id": "mag:benedict-xvi/world-mission-day-2012",
@@ -6630,7 +6876,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 399
+    }
   },
   {
     "id": "mag:benedict-xvi/world-communications-day-2012",
@@ -6660,7 +6912,13 @@
       "year": 2012,
       "ordinal": 46
     },
-    "sourceGenreLabel": "messages/communications"
+    "sourceGenreLabel": "messages/communications",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 112
+    }
   },
   {
     "id": "mag:benedict-xvi/robensis-2012",
@@ -6741,6 +6999,53 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
+    "id": "mag:benedict-xvi/in-monte-sancto-2012",
+    "title": "In Monte Sancto. Sanctuario Gostyni Beatae Mariae Virgini dicato Rosa aurea tribuitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-02-14",
+    "source": {
+      "url": null,
+      "shelf": "aas/2012",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "In Monte Sancto",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 413
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/cum-visum-sit-2012",
+    "title": "Cum visum sit. In Erythraea nova Eparchia Segheneitensis conditur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2012-02-29",
+    "source": {
+      "url": null,
+      "shelf": "aas/2012",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Cum visum sit",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 474
+    }
+  },
+  {
     "id": "mag:benedict-xvi/faridabadensis-syro-malabarensium-2012",
     "title": "Faridabadensis Syro-Malabarensium",
     "idStatus": "minted",
@@ -6764,7 +7069,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 403
+    }
   },
   {
     "id": "mag:benedict-xvi/world-youth-day-2012",
@@ -6800,7 +7111,13 @@
       "year": 2012,
       "ordinal": 27
     },
-    "sourceGenreLabel": "messages/youth"
+    "sourceGenreLabel": "messages/youth",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 351
+    }
   },
   {
     "id": "mag:benedict-xvi/urbi-et-orbi-easter-2012",
@@ -6830,7 +7147,13 @@
       "year": 2012
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 430
+    }
   },
   {
     "id": "mag:benedict-xvi/bafangensis-2012",
@@ -6856,7 +7179,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 629
+    }
   },
   {
     "id": "mag:benedict-xvi/batticaloaensis-2012",
@@ -6882,7 +7211,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 692
+    }
   },
   {
     "id": "mag:benedict-xvi/udupiensis-2012",
@@ -6908,7 +7243,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 693
+    }
   },
   {
     "id": "mag:benedict-xvi/eparchia-dominae-nostrae-libanensis-parisiensis-maronitarum-2012",
@@ -6930,7 +7271,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 691
+    }
   },
   {
     "id": "mag:benedict-xvi/pulchritudinis-fidei-2012",
@@ -6952,7 +7299,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 631
+    }
   },
   {
     "id": "mag:benedict-xvi/ecclesia-in-medio-oriente-2012",
@@ -6979,7 +7332,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ecclesia in Medio Oriente",
-    "sourceGenreLabel": "apost_exhortations"
+    "sourceGenreLabel": "apost_exhortations",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 751
+    }
   },
   {
     "id": "mag:benedict-xvi/world-day-of-prayer-for-vocations-2013",
@@ -7084,7 +7443,13 @@
       "year": 2013,
       "ordinal": 99
     },
-    "sourceGenreLabel": "messages/migration"
+    "sourceGenreLabel": "messages/migration",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 905
+    }
   },
   {
     "id": "mag:benedict-xvi/lent-2013",
@@ -7140,7 +7505,13 @@
       "id": "world-food-day",
       "year": 2012
     },
-    "sourceGenreLabel": "messages/food"
+    "sourceGenreLabel": "messages/food",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 902
+    }
   },
   {
     "id": "mag:benedict-xvi/world-youth-day-2013",
@@ -7174,7 +7545,13 @@
       "year": 2013,
       "ordinal": 28
     },
-    "sourceGenreLabel": "messages/youth"
+    "sourceGenreLabel": "messages/youth",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 1043
+    }
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2012-10-21-1",
@@ -7329,7 +7706,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 991
+    }
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2012-11-11",
@@ -7376,7 +7759,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 104,
+      "year": 2012,
+      "page": 996
+    }
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2012-12-02",

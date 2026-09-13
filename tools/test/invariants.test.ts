@@ -397,6 +397,16 @@ describe('invariant 25: one page of the Acta opens one act', () => {
   it('reads nothing else off acta: a reference on a document of any genre or issuer passes', () => {
     expect(rules([{ ...good, acta: { series: 'ASS', volume: 23, year: 1890, page: 705 } }])).toEqual([]);
   });
+
+  it('lets exactly the documents a curated shared page names share it (ACTA_SHARED_PAGES), and no other', () => {
+    // AAS 70 (1978) p. 150 prints two short apostolic letters; the row quotes the page.
+    const on150 = (id: string): DocumentRecord => ({
+      ...cited(id, 150, '1978-01-09'), issuerId: 'rp:paul-vi', acta: { series: 'AAS', volume: 70, year: 1978, page: 150 },
+    });
+    expect(rules([on150('mag:paul-vi/sacra-illa-1978'), on150('mag:paul-vi/quoniam-beatissima-1978')])).toEqual([]);
+    expect(rules([on150('mag:paul-vi/sacra-illa-1978'), on150('mag:paul-vi/quoniam-beatissima-1978'), on150('mag:paul-vi/alia-1978')])).toEqual([25, 25, 25]);
+    expect(rules([on150('mag:paul-vi/sacra-illa-1978'), on150('mag:paul-vi/alia-1978')])).toEqual([25, 25]);
+  });
 });
 
 describe('the series form of a minted id (messages spec §3)', () => {

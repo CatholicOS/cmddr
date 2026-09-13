@@ -31,10 +31,11 @@ import { mintId, mintProvisionalId } from '../ids.js';
 import { POPES } from '../mappings/pontiffs.js';
 import { categoryForHeading, type ActaCategory, type GenreClass } from './categories.js';
 import { ACTA_HOLDS, curationKey } from './curation.js';
-import { ACTA_FIXTURES_RETRIEVED } from './join.js';
+import { ACTA_FIXTURES_RETRIEVED, sourceOfEntry } from './join.js';
 import {
-  POPE_ISSUERS, shiftDate, toponymStems, type ActaCandidate, type ActaMatchResult,
+  POPE_ISSUERS, isMonthOnly, shiftDate, toponymStems, type ActaCandidate, type ActaMatchResult,
 } from './match.js';
+import { ACTA_POPES } from './popes.js';
 import type { ActaEntry } from './index.js';
 import type { DocumentRecord } from '../types.js';
 
@@ -84,6 +85,17 @@ export const CREATED_CATEGORIES: Readonly<Record<string, { shelves: readonly str
     note: '6 entries 2015-2024: the two bulls of indiction matched; the four cardinalatial titles of 28 Nov 2020 are on no shelf',
   },
   'Bullae': { shelves: ['bulls'], note: 'anticipated by the phase-1 spec; printed in no index 2015-2024' },
+  // Ordinary correspondence (*Epistulae* / *Epistolae*): the letters shelf, harvested for
+  // Pius X, Pius XI, Pius XII and John Paul I among the popes of the AAS (pontiffs.ts;
+  // Leo XIII precedes the AAS) and out of scope for the others, so the per-pope shelf
+  // rule below creates for those four and holds the rest (Francis's 81 entries of
+  // 2015-2024 among them, where before phase 2b the category was not attempted at all).
+  // Measured on the 2b-i sample (acta volumes spec §5): 1917 (Benedict XV, held), 1931
+  // (Pius XI), 1958 (Pius XII), 1978 (Paul VI and John Paul II held, John Paul I created).
+  'Epistulae': {
+    shelves: ['letters'],
+    note: 'the letters shelf is harvested for Pius X, Pius XI, Pius XII and John Paul I (pontiffs.ts); held for every other pope',
+  },
 };
 
 /**
@@ -109,18 +121,20 @@ export const NOT_CREATED: Readonly<Record<string, string>> = {
   // shelf, not harvested (#4).
   'Nuntii': 'occasional messages are on the pont-messages shelf, not harvested (#4); the category maps to two classes',
   'Nuntii televisifici': 'video messages are on the pont-messages shelf, not harvested (#4)',
+  // The radio messages of 1931-1978 (categories.ts): the Christmas and Easter Urbi et Orbi
+  // among them match the harvested urbi shelves; the rest are occasional messages on no
+  // harvested shelf, and the category maps to two classes. The count is #27's evidence.
+  'Nuntii radiophonici': 'occasional radio messages are on no harvested shelf; the category maps to two classes; counted for #27 (medium), not applied',
 };
 
 /**
- * The first day of each harvested pontificate, for the entry the index prints under one
- * pope's part with an earlier act's date in brackets and no pope named (`11 Maii 2018
- * [2010 Sept. 19] « Admodum fideli »`: Newman's beatification letter, Benedict XVI's).
- * Election dates from CRPDR.
+ * The first day of each pontificate the index names (popes.ts), for the entry the index
+ * prints under one pope's part with an earlier act's date in brackets and no pope named
+ * (`11 Maii 2018 [2010 Sept. 19] « Admodum fideli »`: Newman's beatification letter,
+ * Benedict XVI's), and for the acts of a predecessor a volume reprints.
  */
-export const PONTIFICATE_BEGAN: Readonly<Record<string, string>> = {
-  'rp:francis-i': '2013-03-13',
-  'rp:benedict-xvi': '2005-04-19',
-};
+export const PONTIFICATE_BEGAN: Readonly<Record<string, string>> =
+  Object.fromEntries(ACTA_POPES.map((p) => [p.issuerId, p.began]));
 
 export type HoldReason =
   /** §2.1: a harvested category the registry does not create from the *Acta* (NOT_CREATED). */
@@ -135,7 +149,7 @@ export type HoldReason =
   | 'ambiguous'
   /** §2.3: the entry and another both match one shelf document. */
   | 'claimed-twice'
-  /** §2.5: the printed date is not a calendar date. */
+  /** §2.5: the printed date is not a calendar date -- or the index prints the month only (acta volumes spec §4). */
   | 'unresolvable-date'
   /** §5: an ACTA_HOLDS row. */
   | 'curated'
@@ -148,7 +162,9 @@ export type HoldReason =
   /** §3: a record of the genre, or of the year, carries the same incipit on another date. */
   | 'same-incipit-elsewhere'
   /** Two entries of one date share an incipit; the id scheme has no discriminator beyond the full date. */
-  | 'id-collision';
+  | 'id-collision'
+  /** The OCR has damaged the incipit or toponym (a stray character, a digit, an unbalanced bracket): the line is not the line as printed. */
+  | 'ocr-damaged';
 
 export interface ActaHoldRow {
   entry: ActaEntry;
@@ -169,10 +185,18 @@ export interface ActaCreation { created: ActaCreated[]; held: ActaHoldRow[] }
  * A small-caps toponym as the index prints it: the text layer renders small capitals in
  * mixed case (`VuCArien.`, `de sAnCto petro sulA`, `phIlArChIIs A rAbICIs unItIs`), and
  * the printed form is an initial capital and lower case for each word. Nothing else is
- * repaired: an OCR-split word (`A rAbICIs`) stays split.
+ * repaired: an OCR-split word (`A rAbICIs`) stays split. The volumes print the toponym in
+ * full capitals with the vernacular in parentheses (`SANTAREMENSIS (Obidensis)`,
+ * `OLOMUCENSIS et Aliarum`, `CONFINIORIS CALIFORNIAE (Pacensis in California Inferiore)`):
+ * each word of capitals takes the same initial-capital form and every other word stays
+ * as printed.
  */
 export function printedToponym(toponym: string): string {
-  return toponym.toLowerCase().replace(/(^|[\s–-])(\p{L})/gu, (_, sep: string, c: string) => sep + c.toUpperCase());
+  if (/[a-z][A-Z]/.test(toponym) || !/[A-Z]{2}/.test(toponym)) {
+    return toponym.toLowerCase().replace(/(^|[\s–-])(\p{L})/gu, (_, sep: string, c: string) => sep + c.toUpperCase());
+  }
+  return toponym.replace(/\p{Lu}[\p{Lu}.'’-]+/gu, (w) =>
+    w.charAt(0) + w.slice(1).toLowerCase().replace(/([-–])(\p{L})/gu, (_, h: string, c: string) => h + c.toUpperCase()));
 }
 
 /**
@@ -197,6 +221,11 @@ export function actaTitle(entry: ActaEntry): string {
   }
   return tail;
 }
+
+/** An unbalanced bracket, or a character outside letters, digits and the index's punctuation. */
+export const ocrDamaged = (text: string): boolean =>
+  /[^\p{L}\p{N}\s.,;:'’"«»!?()–—-]/u.test(text)
+  || (text.match(/\(/g) ?? []).length !== (text.match(/\)/g) ?? []).length;
 
 const isCalendarDate = (iso: string): boolean => {
   const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})$/);
@@ -225,9 +254,15 @@ const titleHasToponym = (title: string, toponym: string): boolean => {
 const classOf = (category: ActaCategory): GenreClass | null =>
   category.classes.length === 1 ? category.classes[0]! : null;
 
-/** The record for an entry that passed every rule (spec §4). */
-export function toActaDocument(entry: ActaEntry, issuerId: string, cls: GenreClass, category: ActaCategory, retrieved: string): DocumentRecord {
+/**
+ * The record for an entry that passed every rule (spec §4). `source.url` is the
+ * whole-volume PDF for a volume source (1909-2002) and null for an index PDF (the
+ * fascicle era), `source.retrieved` the fixture's date, both from the sources table
+ * (join.ts); `acta.part` is carried for a double volume.
+ */
+export function toActaDocument(entry: ActaEntry, issuerId: string, cls: GenreClass, category: ActaCategory, retrieved?: string): DocumentRecord {
   const provisional = entry.incipit === null;
+  const source = sourceOfEntry(entry);
   const record: DocumentRecord = {
     id: provisional
       ? mintProvisionalId(issuerId, cls.genre, entry.date)
@@ -238,7 +273,10 @@ export function toActaDocument(entry: ActaEntry, issuerId: string, cls: GenreCla
     issuerId,
     issuerType: 'pope',
     date: entry.date,
-    source: { url: null, shelf: actaShelf(entry.year), retrieved },
+    source: {
+      url: source?.url ?? null, shelf: actaShelf(entry.year),
+      retrieved: retrieved ?? process.env.RETRIEVED ?? source?.retrieved ?? ACTA_FIXTURES_RETRIEVED,
+    },
   };
   // No `incipitLang`, whether the incipit is bare or in guillemets. The spec's first
   // draft read a bare incipit as Latin and a guillemet one as vernacular; measured on
@@ -251,7 +289,10 @@ export function toActaDocument(entry: ActaEntry, issuerId: string, cls: GenreCla
   if (entry.incipit !== null) record.incipit = entry.incipit;
   if (cls.requires !== undefined) record.characteristics = [cls.requires];
   record.sourceGenreLabel = category.id;
-  record.acta = { series: entry.series, volume: entry.volume, year: entry.year, page: entry.page };
+  record.acta = {
+    series: entry.series, volume: entry.volume, year: entry.year,
+    ...(entry.part ? { part: entry.part } : {}), page: entry.page,
+  };
   return record;
 }
 
@@ -262,7 +303,7 @@ export function toActaDocument(entry: ActaEntry, issuerId: string, cls: GenreCla
  * entries' order, and every decision is a rule or a curated row.
  */
 export function createFromActa(
-  result: ActaMatchResult, docs: DocumentRecord[], retrieved: string = process.env.RETRIEVED ?? ACTA_FIXTURES_RETRIEVED,
+  result: ActaMatchResult, docs: DocumentRecord[], retrieved?: string,
 ): ActaCreation {
   const byIssuerDate = new Map<string, DocumentRecord[]>();
   const byIssuerSlug = new Map<string, DocumentRecord[]>();
@@ -325,9 +366,24 @@ export function createFromActa(
       hold(entry, 'date-before-pontificate', `${entry.date} precedes the election of ${issuerId} (${began}): an earlier pontificate's act printed in this volume`);
       continue;
     }
-    // §2.5 -- the date.
+    // §2.5 -- the date. A month-only entry (acta volumes spec §4) is matched by incipit
+    // within the month, never created: a record needs the day.
+    if (isMonthOnly(entry)) {
+      hold(entry, 'unresolvable-date', `the index dates the entry to ${entry.date} with no day printed; matched by incipit within the month only, never created`, u.sameDate);
+      continue;
+    }
     if (!isCalendarDate(entry.date)) {
       hold(entry, 'unresolvable-date', `${entry.date} is not a calendar date`);
+      continue;
+    }
+    // An incipit or toponym the OCR has damaged (`B (IARENSIS`, 1978) would mint an id and
+    // a title from a reading the page does not print; held for a curated correction.
+    // For an entry printing neither, the head of the description, which the provisional
+    // record's title would carry.
+    const head = entry.incipit === null && entry.toponym === null ? entry.description.split(/[.:]\s/)[0]!.slice(0, 60) : null;
+    const damaged = [entry.incipit, entry.toponym, head].find((t) => t !== null && ocrDamaged(t));
+    if (damaged !== undefined) {
+      hold(entry, 'ocr-damaged', `the extracted ${damaged === entry.incipit ? 'incipit' : damaged === entry.toponym ? 'toponym' : 'head of the entry'} '${damaged}' carries a character the index does not print; needs a curated reading, never a guess`);
       continue;
     }
     // §5 -- the owner's holds.

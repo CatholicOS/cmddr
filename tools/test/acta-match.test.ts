@@ -120,6 +120,70 @@ describe('matchActa', () => {
       entries: [expect.objectContaining({ page: 157 }), expect.objectContaining({ page: 165 })],
     }]);
   });
+
+  it('resolves several claims on one document by the one entry the document names (acta volumes spec), releasing the others', () => {
+    // AAS 70 (1978): three constitutions of 10 November 1977 against the shelf's one.
+    const constitution = (over: Partial<ActaEntry>) => entry({
+      pope: 'Paulus VI', category: 'CONSTITUTIONES APOSTOLICAE', date: '1977-11-10', year: 1978, volume: 70, ...over,
+    });
+    const shelf = doc({
+      id: 'mag:paul-vi/avkaensis-1977', issuerId: 'rp:paul-vi', genre: 'papal-bull', characteristics: ['apostolic-constitution'],
+      date: '1977-11-10', title: 'Avkaensis', incipit: 'Avkaensis',
+    });
+    const r = matchActa([
+      constitution({ page: 81, toponym: 'MOHALESHOEKENSIS', incipit: 'Ut fert creditum' }),
+      constitution({ page: 8, toponym: 'AVKAËNSIS', incipit: 'Verba Christi' }),
+      constitution({ page: 82, toponym: 'AMBIKAPURENSIS', incipit: 'Votis concedere' }),
+    ], [shelf]);
+    expect(r.matches.map((m) => [m.entry.page, m.documentId, m.by])).toEqual([[8, 'mag:paul-vi/avkaensis-1977', 'toponym']]);
+    expect(r.conflicts).toEqual([]);
+    expect(r.unmatched.map((u) => [u.entry.page, u.sameDate.map((c) => c.id)])).toEqual([
+      [81, ['mag:paul-vi/avkaensis-1977']], [82, ['mag:paul-vi/avkaensis-1977']],
+    ]);
+    // The incipit slug is evidence too; two evidenced claims, or none, keep neither.
+    const letter = doc({ id: 'mag:paul-vi/plus-nongentos-1978', issuerId: 'rp:paul-vi', characteristics: [], date: '1978-03-11', incipit: 'Plus nongentos' });
+    const l = matchActa([
+      entry({ pope: 'Paulus VI', category: 'LITTERAE APOSTOLICAE', date: '1978-03-11', page: 284, incipit: 'Plus nongentos' }),
+      entry({ pope: 'Paulus VI', category: 'LITTERAE APOSTOLICAE', date: '1978-03-11', page: 321, incipit: 'Valentinae archidioecesis' }),
+    ], [letter]);
+    expect(l.matches.map((m) => [m.entry.page, m.by])).toEqual([[284, 'incipit']]);
+    const none = matchActa([
+      entry({ pope: 'Paulus VI', category: 'LITTERAE APOSTOLICAE', date: '1978-03-11', page: 284, incipit: 'Alia' }),
+      entry({ pope: 'Paulus VI', category: 'LITTERAE APOSTOLICAE', date: '1978-03-11', page: 321, incipit: 'Altera' }),
+    ], [letter]);
+    expect(none.matches).toEqual([]);
+    expect(none.conflicts).toHaveLength(1);
+  });
+
+  it('matches a month-only entry by incipit within the month, and nothing else (acta volumes spec §4)', () => {
+    const shelf = [
+      doc({ id: 'mag:benedict-xv/alloquentes-proxime-1917', issuerId: 'rp:benedict-xv', date: '1917-03-25', incipit: 'Alloquentes proxime' }),
+      doc({ id: 'mag:benedict-xv/nobilissimam-sacrarum-1917', issuerId: 'rp:benedict-xv', date: '1917-04-08', incipit: 'Nobilissimam sacrarum' }),
+      doc({ id: 'mag:benedict-xv/alia-1917', issuerId: 'rp:benedict-xv', date: '1917-04-20', incipit: 'Alia' }),
+    ];
+    const mp = (over: Partial<ActaEntry>) => entry({ pope: 'Benedictus XV', year: 1917, volume: 9, part: 'I', ...over });
+    const r = matchActa([
+      mp({ date: '1917-03', incipit: 'Alloquentes proxime', page: 167 }),
+      // The index's incipit is the full one, the shelf's is truncated: no match.
+      mp({ date: '1917-04', incipit: 'Nobilissimam sacrarum aedium', page: 209 }),
+      // A month-only entry without an incipit has nothing to match by.
+      mp({ date: '1917-04', incipit: null, description: 'De clericorum Collegio', page: 210 }),
+      // Two documents of the class with the incipit in the month: ambiguous.
+      mp({ date: '1917-04', incipit: 'Alia', page: 211 }),
+    ], [...shelf, doc({ id: 'mag:benedict-xv/alia-1917-04-30', issuerId: 'rp:benedict-xv', date: '1917-04-30', incipit: 'Alia' })]);
+    expect(r.matches.map((m) => [m.entry.page, m.documentId, m.by])).toEqual([[167, 'mag:benedict-xv/alloquentes-proxime-1917', 'incipit-month']]);
+    expect(r.unmatched.map((u) => [u.entry.page, u.sameDate.length, u.nearMisses.length])).toEqual([[209, 3, 0], [210, 3, 0]]);
+    expect(r.ambiguous.map((a) => a.entry.page)).toEqual([211]);
+  });
+
+  it('maps every pope of the popes table, so a volume\'s genitive heading reaches the shelf', () => {
+    const r = matchActa(
+      [entry({ pope: 'Pius XI', category: 'LITTERAE ENCYCLICAE', date: '1931-05-15', incipit: 'Quadragesimo anno', year: 1931, volume: 23, page: 177 })],
+      [doc({ id: 'mag:pius-xi/quadragesimo-anno-1931', issuerId: 'rp:pius-xi', genre: 'encyclical', characteristics: [], date: '1931-05-15', incipit: 'Quadragesimo anno' })],
+    );
+    expect(r.matches.map((m) => m.documentId)).toEqual(['mag:pius-xi/quadragesimo-anno-1931']);
+    expect(matchActa([entry({ pope: 'LEONIS XIII', category: 'LITTERAE ENCYCLICAE', date: '1891-05-15' })], []).unknownPope).toHaveLength(1);
+  });
 });
 
 describe('toponymStems', () => {
