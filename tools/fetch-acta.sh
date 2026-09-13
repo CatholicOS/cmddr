@@ -35,6 +35,7 @@
 #        tools/fetch-acta.sh 2023            # one index year (2010-2024)
 #        tools/fetch-acta.sh 1958            # one volume (1909-2002); 1917 and 1983 fetch both parts
 #        tools/fetch-acta.sh sample          # the six sources of phase 2b-i: 1909 1917 1931 1958 1978 2012
+#        tools/fetch-acta.sh 1932-1957       # a range of volumes (phase 2b-ii-a: AAS 24-49)
 set -euo pipefail
 cd "$(dirname "$0")/.."
 mkdir -p tools/fixtures/acta
@@ -78,14 +79,22 @@ from pypdf import PdfReader
 pdf, out = sys.argv[1], sys.argv[2]
 reader = PdfReader(pdf)
 n = len(reader.pages)
-START = re.compile(r'INDEX\s+DOCUMENTORUM[\s\S]{0,40}CHRONOLOGIC\w*\s+ORDINE\s+DIGEST\w*')
-END = re.compile(r'^[\s\S]{0,120}?(INDICES\s+NOMINUM|INDEX\s+NOMINUM|INDEX\s+ANALYTICUS|INDEX\s+RERUM|INDEX\s+ALPHABETICUS)')
+# The OCR reads the heading's initial as `Í` (AAS 25, 1933; AAS 32, 1940: `ÍNDICES NOMINUM`) and
+# once sets a full stop after it (AAS 46, 1954: `INDEX. DOCUMENTORUM`), measured on the volumes
+# of 1932-1957; both spellings are admitted, and nothing looser.
+START = re.compile(r'[IÍ]NDEX\.?\s+DOCUMENTORUM[\s\S]{0,40}CHRONOLOGIC\w*\s+ORDINE\s+DIGEST\w*')
+END = re.compile(r'^[\s\S]{0,120}?([IÍ]NDICES\s+NOMINUM|[IÍ]NDEX\s+NOMINUM|[IÍ]NDEX\s+ANALYTICUS|[IÍ]NDEX\s+RERUM|[IÍ]NDEX\s+ALPHABETICUS)')
 texts = {}
 def text(i):
     if i not in texts:
         texts[i] = reader.pages[i].extract_text() or ''
     return texts[i]
 start = next((i for i in range(n // 2, n) if START.search(text(i))), None)
+if start is None:
+    # AAS 25 (1933): the default mode drops the heading of the index's first page altogether
+    # (the page's text opens at the pope part); the layout mode keeps it. A second pass in
+    # that mode, only when the first finds nothing.
+    start = next((i for i in range(n // 2, n) if START.search(reader.pages[i].extract_text(extraction_mode='layout') or '')), None)
 if start is None:
     print(f'    NO CHRONOLOGICAL INDEX FOUND in {pdf} ({n} pages)', file=sys.stderr)
     sys.exit(0)
@@ -173,6 +182,8 @@ get() { # get <year>
 ARG="${1:-}"
 if [ "$ARG" = "sample" ]; then
   for y in 1909 1917 1931 1958 1978 2012; do get "$y"; done
+elif [[ "$ARG" =~ ^([0-9]{4})-([0-9]{4})$ ]]; then
+  for y in $(seq "${BASH_REMATCH[1]}" "${BASH_REMATCH[2]}"); do get "$y"; done
 elif [ -n "$ARG" ]; then
   get "$ARG"
 else

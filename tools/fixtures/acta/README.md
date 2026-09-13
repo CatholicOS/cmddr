@@ -1,4 +1,4 @@
-# The AAS index fixtures: the *Index generalis* PDFs of 2012 and 2015–2024, and the sample volumes of 1909–1978
+# The AAS index fixtures: the *Index generalis* PDFs of 2012 and 2015–2024, the sample volumes of 1909–1978, and the volumes of 1932–1957
 
 The extracted text of the *Index documentorum chronologico ordine digestus* of the *Acta
 Apostolicae Sedis*, one file per source, one page per form feed (`\f`), from two kinds of
@@ -12,7 +12,9 @@ source on vatican.va (`https://www.vatican.va/archive/aas/index_it.htm`, which
   1983 in two parts, `AAS-09-I-1917-ocr.pdf`), of which only the pages of the chronological
   index are extracted (`aas-{vol}-{year}[-{part}].txt`; acta volumes spec,
   `docs/superpowers/specs/2026-09-13-acta-volumes-design.md` §3) — the six sources of phase
-  2b-i are the sample below; the remaining volumes are phase 2b-ii.
+  2b-i are the sample below, and the twenty-six volumes of 1932–1957 (AAS 24–49, Pius XI and
+  Pius XII) are phase 2b-ii-a (spec §9); 1959–1977, 1979–2002 with the 2010–2014 index PDFs,
+  and 1910–1931 follow in 2b-ii-b, 2b-ii-c and 2b-iii.
 
 They are the input of the AAS join (acta reference spec, `docs/superpowers/specs/2026-09-12-acta-reference-design.md`
 §4.1): `tools/src/acta/index.ts` parses the *Acta Summi Pontificis* parts, and `npm run
@@ -29,13 +31,45 @@ retrieval date and parser options; update it with this table.
 | AAS 9 part I (1917) | `aas-09-1917-I.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 595–607 (13) | 639 |
 | AAS 9 part II (1917) | — | — | — | **no chronological index**: the volume is the *Codex Iuris Canonici* (594 pages), with *Providentissima Mater Ecclesia* (27 May 1917, p. 5) before it and the Code's own index after | 594 |
 | AAS 23 (1931) | `aas-23-1931.txt` | **2026-09-13** | pypdf 6.14.2, layout mode; p. 531 default mode | 531–540 (10) | 566 |
+| AAS 24 (1932) | `aas-24-1932.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 419–430 (12) | 462 |
+| AAS 25 (1933) | `aas-25-1933.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 515–526 (12) | 560 |
+| AAS 26 (1934) | `aas-26-1934.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 655–665 (11) | 695 |
+| AAS 27 (1935) | `aas-27-1935.txt` | **2026-09-13** | pypdf 6.14.2, layout mode (pypdf warns of rotated text on the volume; the index pages are complete) | 507–517 (11) | 558 |
+| AAS 28 (1936) | `aas-28-1936.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 503–514 (12) | 546 |
+| AAS 29 (1937) | `aas-29-1937.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 503–513 (11) | 551 |
+| AAS 30 (1938) | `aas-30-1938.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 423–434 (12) | 471 |
+| AAS 31 (1939) | `aas-31-1939.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 733–745 (13) | 800 |
+| AAS 32 (1940) | `aas-32-1940.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 579–592 (14) | 650 |
+| AAS 33 (1941) | `aas-33-1941.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 529–538 (10) | 566 |
+| AAS 34 (1942) | `aas-34-1942.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 403–411 (9) | 441 |
+| AAS 35 (1943) | `aas-35-1943.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 411–418 (8) | 509 |
+| AAS 36 (1944) | `aas-36-1944.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 345–352 (8) | 380 |
+| AAS 37 (1945) | `aas-37-1945.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 339–347 (9) | 384 |
+| AAS 38 (1946) | `aas-38-1946.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 455–464 (10) | 610 |
+| AAS 39 (1947) | `aas-39-1947.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 651–659 (9) | 700 |
+| AAS 40 (1948) | `aas-40-1948.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 571–580 (10) | 618 |
+| AAS 41 (1949) | `aas-41-1949.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 659–669 (11) | 722 |
+| AAS 42 (1950) | `aas-42-1950.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 911–924 (14) | 980 |
+| AAS 43 (1951) | `aas-43-1951.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 883–896 (14) | 938 |
+| AAS 44 (1952) | `aas-44-1952.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 899–912 (14) | 947 |
+| AAS 45 (1953) | `aas-45-1953.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 867–882 (16) | 923 |
+| AAS 46 (1954) | `aas-46-1954.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 787–802 (16) | 839 |
+| AAS 47 (1955) | `aas-47-1955.txt` | **2026-09-13** | pypdf 6.14.2, layout mode; p. 867 default mode | 867–880 (14) | 912 |
+| AAS 48 (1956) | `aas-48-1956.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 859–872 (14) | 918 |
+| AAS 49 (1957) | `aas-49-1957.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1059–1073 (15) | 1112 |
 | AAS 50 (1958) | `aas-50-1958.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1032–1047 (16) | 1130 |
 | AAS 70 (1978) | `aas-70-1978.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1008–1017 (10) | 1130 |
 
-No source was missing on its retrieval date. Every index has the same three parts (the
-general index by category, the chronological index, the indexes of names), so no source
-differs in shape at that level; the shapes that differ *inside* the chronological index are
-listed below, and each is handled by the parser and covered by a unit test.
+No source was missing on its retrieval date, and every volume of 1932–1957 has a chronological
+index. Every index has the same three parts (the general index by category, the
+chronological index, the indexes of names), so no source differs in shape at that level; the
+shapes that differ *inside* the chronological index are listed below, and each is handled by
+the parser and covered by a unit test. Three volumes needed the index locator extended
+(`fetch-acta.sh`, measured): the OCR reads the heading's initial as `Í` (AAS 25 (1933) `ÍNDEX
+DOCUMENTORUM`; AAS 32 (1940) `ÍNDICES NOMINUM`, which the first extraction ran past, into the
+index of names), AAS 46 (1954) sets a full stop after it (`INDEX. DOCUMENTORUM`), and pypdf's
+default mode drops the heading of AAS 25's first index page altogether, so the script
+searches the layout mode when the default finds nothing.
 
 ## The volumes: what the `-ocr.pdf` files are, and the two extraction modes
 
@@ -140,7 +174,7 @@ whitespace and normalising the leaders:
   2021); `[2010 Sept. 19]` (2018, Newman) names no pope and stays under Francis's part,
   where the creator holds it by its date.
 
-## Shapes inside the volumes' chronological index (1909–1978)
+## Shapes inside the volumes' chronological index (1909–1978, and 1932–1957)
 
 - **Date layout.** Year-first in three columns (`1931 Maii 15`, `1917       Iun.      15`); a
   `»` is a ditto, and in the columnar layout of 1909–1931 a **blank** column is one too — a
@@ -199,6 +233,55 @@ whitespace and normalising the leaders:
   an act printed in two volumes (*Ibi vacabimus*, AAS 104 (2012) 482 and AAS 112 (2020)
   479, held by the id-collision rule); and two short letters opening on one page (AAS 70
   (1978) 150, `ACTA_SHARED_PAGES` in `curation.ts`, which invariant 25 honours).
+
+### The volumes of 1932–1957 (phase 2b-ii-a)
+
+The page column survives on every index page of AAS 24–49; what the OCR loses is a token here
+and there, and the parser reads through each loss it can measure (`index.ts` names the volume
+for every one; the report `docs/superpowers/reports/2026-09-13-acta-volumes-1932-1957.md`
+lists what it could not read):
+
+- **Pope headings** in OCR spellings: `L - ACTA PII PP. XI` (1935, 1937), `1 - ACTA PII PP.
+  XII` (1940), `I - ACTA Pii PP. XII` (1941), `I - ACTA PII PP. Xll` (1949); the dicasteries'
+  part as `IL -` and `U - ACTA SS. CONGREGATIONUM`.
+- **Category headings**: the numeral as `IY.`, `XJV`, `i.`, `1`, `I r-`, `XI •-`; one heading in
+  mixed case (`XIV - Sacra Consistoria`, 1954); OCR spellings listed in `categories.ts`
+  (`LITTEEAE APOSTOLICAE`, `BPISTTJLAE`, `MOTTI PROPRIO`, `SACKA CONSISTORIA` …); the column
+  header as `PAO.`, `PAS.`, `PAß.`, `PA6.`, `PAe`, `PV(J.`, `PAG..`; an act printed before the
+  first category heading (1933's bull of indiction), reported.
+- **Dates**: the ditto as `»>`, `>>`, `))`, `.)`, `y>`, `«` (only where a date token follows)
+  or a lone letter (`» h 3`, `» D »`); junk stuck to a token (`.16`, `20\`, `.Martii`, `Nov,.`,
+  `1950 Ian. • 14`, `1947 Oct. ; 20`); a doubled token (`» Apr. Apr. 1`); the months `Man`,
+  `Mah` (*Maii*, verified against the act at AAS 25 p. 28), `Marth`, `Innii`, `Apri`, `Âpr`,
+  `Ott`, `Noy`, `NOT`, `ÏTov`, `Doc`, each accepted only where a day follows, and any other
+  word there an unreadable month that the ditto chain does not inherit; the years `1047`,
+  `1048`, `3950` (read as the volume span's year one digit off, and noted on the entry, which
+  the creator holds), `i944`, `i 945`, `19.49`; a ditto in the year column with nothing before
+  it (1950, read as the volume year and noted); a year inside the century is never repaired
+  (`1919` for 1949, `1930` for 1936: curated corrections quoting the acts). A date the layout
+  mode set beside the last line of the entry before goes to the blank-dated entry after it
+  (1935); a blank-dated entry can keep the page's hanging indent while dated entries' text
+  sits after the date (1941), and on a page whose entries open `Incipit. - …` a capitalised
+  continuation line at the entry column is not an entry (1955); a blank-dated entry that
+  dates itself in its description (`… datus, die 16 mensis Aprilis, anno 1939`, the radio
+  messages of 1939) takes that date.
+- **Entries**: a page glued to a leader dot (`.154`) or followed by junk (`47'`, `226 ,`,
+  `549-`); a page fused with a glued running header's (`33788`, reported without a page);
+  letters to several addressees of up to sixteen lines; the translations listed under an act
+  (`E textu latino versio anglica 645`, `lingua gallica … 205`), consumed as sub-items and
+  left out of the parse rate; the lists under one act with a page per item (the Academy's
+  members, 1936; the Assumption ceremony, 1950), reported; an encyclical indexed twice, the
+  vernacular text at its own page (1933, 1937), held by curated rows.
+- **Incipits and toponyms**: the dash without its spaces (`Quae rei sacrae.-Fines`), a doubled
+  full stop (`Ad pastorale ministerium..-De`), a stray mark before the incipit (`.Mirabilis
+  Deus`); a mixed-case toponym with the vernacular in parentheses and no incipit (`De Sienhsien
+  (De Kinghsien). - Vicariatus …`, 1939–1945), read as a toponym, or with an incipit after it
+  (`Aleppensis (Berytensis). Solent caeli. -`, 1954).
+- **Pages two acts cite**: two short letters on one page (AAS 24 (1932) 39, AAS 26 (1934) 19,
+  AAS 28 (1936) 102, AAS 45 (1953) 91 -- each read in the volume and curated in
+  `ACTA_SHARED_PAGES`), and a page the OCR misread onto another act's (AAS 42 (1950) 37 and 42,
+  AAS 43 (1951) 660, AAS 46 (1954) 753, AAS 49 (1957) 825, AAS 45 (1953) 782), which the
+  creator holds (`page-shared`).
 
 The RETRIEVED dates above are also stamped as `source.retrieved` on every document created
 from these fixtures (`ACTA_SOURCES` in `tools/src/acta/join.ts`): update both together when
