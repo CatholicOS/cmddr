@@ -597,6 +597,7 @@ const HOLD_LABELS: Record<HoldReason, string> = {
   'same-incipit-elsewhere': 'Guard: same incipit elsewhere',
   'id-collision': 'Id collision',
   'ocr-damaged': 'OCR-damaged incipit or toponym',
+  'page-shared': 'Page cited by another act (invariant 25)',
 };
 {
   const byReason = new Map<HoldReason, ActaHoldRow[]>();
