@@ -143,7 +143,12 @@ for (const s of SAMPLE) {
 p();
 p('### The reading');
 p();
-{
+// The reading quotes the six sample sources by name; a fixture missing from disk leaves a
+// placeholder rather than a crash, so the sections that can render still do.
+const sample = ['1909', '1917-I', '1931', '1958', '1978', '2012'].filter((k) => !parsedAll.has(k));
+if (sample.length > 0) {
+  p(`*(The reading is not rendered: the sample fixture${sample.length > 1 ? 's' : ''} ${sample.join(', ')} ${sample.length > 1 ? 'are' : 'is'} missing from tools/fixtures/acta/.)*`);
+} else {
   const r1909 = parsedAll.get('1909')!, r1917 = parsedAll.get('1917-I')!, r1931 = parsedAll.get('1931')!;
   const r1958 = parsedAll.get('1958')!, r1978 = parsedAll.get('1978')!, r2012 = parsedAll.get('2012')!;
   p(`1. **The OCR of 1909 and 1917 lost the page column, and the PDFs carry no image to check it against.** The vatican.va`);
@@ -607,7 +612,7 @@ for (const s of SAMPLE) {
     else if (same.some((e) => harvestedness(e) === 'no')) reading = `the index files the act of this date under ${same.filter((e) => harvestedness(e) === 'no').map(catId).join(', ')}, not harvested`;
     else if (same.length) reading = 'class mismatch or another act of the date (§6)';
     else if (monthOnly.length) reading = `a month-only entry of ${monthOnly[0]!.date} may be it (${monthOnly.map((e) => `${cite(e)}: ${label(e)}`).join('; ')})`;
-    else if (parsedAll.get(s.key)!.defects.some((x) => x.message.includes('without a page number'))) reading = 'no dated entry: possibly among the entries without a page (§3), or not in this volume';
+    else if ((parsedAll.get(s.key)?.defects ?? []).some((x) => x.message.includes('without a page number'))) reading = 'no dated entry: possibly among the entries without a page (§3), or not in this volume';
     else reading = 'no index entry on this date';
     p(`| \`${d.id}\` | ${d.date} | ${cls({ genre: d.genre, characteristics: d.characteristics ?? [] })} | ${md(sameTxt)} | ${md(reading)} |`);
   }

@@ -140,7 +140,7 @@ them, which is not the same question as the authority the issuer exercised. They
 how the Holy See itself distinguishes them, and they should **inform** this registry; they do not **govern** it. Nor are they the
 record: the *Acta Apostolicae Sedis*, unlike the shelves, are the promulgating instrument, and the registry records where an act
 stands in them (*The Acta Apostolicae Sedis reference*, below). Nor are they complete, even for the current pontificate: over
-2015–2024 the AAS index names **117** apostolic constitutions and **206** apostolic letters of Francis where the
+2015–2024 the AAS index names **118** apostolic constitutions and **202** apostolic letters of Francis where the
 `apost_constitutions` and `apost_letters` shelves carry **49** and **59** — the shelves are selections, and the acts they omit
 (most circumscription erections, most beatification letters, every canonisation decretal) are registered from the *Acta* instead.
 
@@ -257,7 +257,7 @@ part heading names (Pius X → Francis) by issuer, date and incipit, writing `ac
 is reported before it is trusted: **225** Francis documents carry a reference from the ten annual indexes, and every ambiguous
 entry, every act the shelves lack and every document two entries claim is listed, classified, in the
 [join report](docs/superpowers/reports/2026-09-12-acta-join-2015-2024.md) — whose headline is that vatican.va's Francis shelves
-for constitutions and apostolic letters are selections (49 and 59 against the index's 117 and 206), while the *Acta* are the
+for constitutions and apostolic letters are selections (49 and 59 against the index's 118 and 202), while the *Acta* are the
 record. The [sample report](docs/superpowers/reports/2026-09-13-acta-volumes-sample.md) of phase 2b-i measures the century's
 typography and OCR the same way, volume by volume, with a parse rate per volume: **129** references from the five volumes and
 the 2012 index (Pius XII's 1958 alone carries 70), and the findings that decide the rest of 2b — the OCR text of AAS 1 and 9-I
@@ -278,11 +278,12 @@ record carrying the entry's incipit or toponym under another class (the shelf an
 [#30](https://github.com/CatholicOS/cmddr/discussions/30)), a same-date record with no incipit (vatican.va files canonisation
 decretals on `apost_letters` without one; the Tarragona letters of [#31](https://github.com/CatholicOS/cmddr/issues/31)), a
 same-incipit record a day off or anywhere in the pontificate, and two entries of one date with one incipit, which no form of the
-id tells apart. Measured on 2026-09-12: **266** AAS-only documents created from the ten annual indexes (260 of Francis, 6 of
-Benedict XVI; 151 apostolic letters, 76 constitutions, 39 bulls), **376** entries held with a reason — 266 in categories that
-wait for their shelf, 45 by the guard, 40 ambiguous, 24 claimed twice, 1 dated before the pontificate — and no shelf id
-changed; one fewer of them since the 2012 index joined (Benedict XVI's *Ibi vacabimus* is printed in both the 2012 and the 2020
-volumes, and the id-collision rule holds both). The [join report](docs/superpowers/reports/2026-09-12-acta-join-2015-2024.md)
+id tells apart. Measured on 2026-09-13, with the 2012 index joined: **265** AAS-only documents created from the ten annual
+indexes (260 of Francis, 5 of Benedict XVI; 150 apostolic letters, 76 constitutions, 39 bulls) — one fewer than on
+2026-09-12, since Benedict XVI's *Ibi vacabimus* is printed in both the 2012 and the 2020 volumes and the id-collision rule
+now holds both — and **459** entries held with a reason: 266 in categories that wait for their shelf, 81 *Epistulae* whose
+pope's *letters* shelf is not harvested, 43 by the guard, 40 ambiguous, 24 claimed twice, 3 id collisions, 1 dated before the
+pontificate, 1 with no resolvable date; no shelf id changed. The [join report](docs/superpowers/reports/2026-09-12-acta-join-2015-2024.md)
 lists every creation with the index line it rests on and every hold with its candidates. Phase 2b-i added **147** documents
 from the sample volumes and the 2012 index (Pius XI's 1931 volume alone 60: the shelves of the early twentieth century are
 thinner still than Francis's), created by the same rule — an *Epistula* only where the pope's `letters` shelf is harvested, a

@@ -47,6 +47,11 @@ const parsed = new Map(years.map((y) => [y, parsedAll.get(y)!]));
 const missing = missingAll.filter((k) => ACTA_YEARS.map(String).includes(k));
 const inScope = (e: ActaEntry): boolean => e.part === undefined && years.includes(String(e.year));
 const entries = allEntries.filter(inScope);
+// The index's own totals for the two classes whose shelves are selections, computed rather than
+// typed: a parser fix changes them (117 → 118 constitutions, 206 → 208 letters after PR #32/#33).
+const indexTotal = (category: string) => entries.filter((e) => e.pope === 'Franciscus' && catId(e) === category).length;
+const constitutionsInIndex = () => indexTotal('Constitutiones Apostolicae');
+const lettersInIndex = () => indexTotal('Litterae Apostolicae');
 const result = {
   matches: resultAll.matches.filter((m) => inScope(m.entry)),
   ambiguous: resultAll.ambiguous.filter((a) => inScope(a.entry)),
@@ -135,9 +140,9 @@ function belief(u: ActaUnmatched): string {
   }
   switch (c.id) {
     case 'Constitutiones Apostolicae':
-      return '**shelf gap**: nothing of this date on apost_constitutions (a selection: 49 against the index\'s 117)';
+      return `**shelf gap**: nothing of this date on apost_constitutions (a selection: 49 against the index's ${constitutionsInIndex()})`;
     case 'Litterae Apostolicae':
-      return '**shelf gap**: nothing of this date on apost_letters (a selection: 59 plain letters against the index\'s 206)';
+      return `**shelf gap**: nothing of this date on apost_letters (a selection: 59 plain letters against the index's ${lettersInIndex()})`;
     case 'Epistulae Apostolicae':
       return '**not harvested**: a letter to a named addressee, filed on the letters shelf (#4); nothing of this date is harvested';
     case 'Litterae Apostolicae Motu proprio datae':
@@ -251,7 +256,7 @@ p('   decree of the same date because the letter it names is on apost_letters al
 p('   question). Every one rests on an index line quoted in §12,');
 p('   and every Francis encyclical and exhortation of the ten volumes is among them. Nothing was written that the rules could not');
 p('   evidence: the 40 ambiguous entries (§4) and the 12 documents two entries claim (§5) stay without a reference.');
-p('2. **The Francis shelves are selections, and the index is the record.** The index names 117 apostolic constitutions and 206');
+p(`2. **The Francis shelves are selections, and the index is the record.** The index names ${constitutionsInIndex()} apostolic constitutions and ${lettersInIndex()}`);
 p('   apostolic letters over 2015–2024; vatican.va\'s apost_constitutions and apost_letters shelves carry 49 and 59 (plain) for the');
 p('   same pontificate, and the *bulls* shelf none of the ' + decretals + ' canonisation decretals. Almost every unmatched entry of §6 is a');
 p('   **shelf gap** of this kind, and every one prints an incipit, a date and a page: phase 2a made ' + creation.created.length + ' of them documents (§8)');
@@ -292,8 +297,9 @@ p('   (a page split `76 4`, ditto marks read `? ?`, a page glued to a footnote d
   const provisional = born.filter((c) => c.record.idStatus === 'provisional').length;
   const quoted = born.filter((c) => c.entry.quoted).length;
   const minted = born.length - provisional;
-  const guard = creation.held.filter((h) => ['class-mismatch', 'possible-identity', 'near-miss', 'same-incipit-elsewhere', 'id-collision'].includes(h.reason)).length;
-  p(`8. **The shelves\' gaps are now documents, and the guard held ${guard}.** ${born.length} AAS-only documents (§8): `
+  const guard = creation.held.filter((h) => ['class-mismatch', 'possible-identity', 'near-miss', 'same-incipit-elsewhere'].includes(h.reason)).length;
+  const collisions = creation.held.filter((h) => h.reason === 'id-collision').length;
+  p(`8. **The shelves\' gaps are now documents, and the guard held ${guard}** (the four guard reasons of §9; ${collisions} more by the id-collision rule)**.** ${born.length} AAS-only documents (§8): `
     + [...byClass].sort().map(([k, n]) => `${n} ${k}`).join(', ') + `; ${provisional} provisional (a constitution the index names`);
   p('   by toponym only), and the rest minted from the index\'s incipit exactly as a shelf incipit mints. None carries `incipitLang`:');
   p(`   the index wraps the beatification letters\' Latin incipits in guillemets as it does vernacular ones (${quoted} of the ${minted} minted`);
@@ -409,7 +415,7 @@ p('## 6. Unmatched entries in harvested categories');
 p();
 p('Each is a candidate gap in the shelf harvest, a parser defect or a matcher defect; the belief column says which. The two');
 p('dominant shapes are both **shelf gaps**: vatican.va\'s Francis shelves for constitutions and apostolic letters are');
-p('selections, not the record — the index names 117 apostolic constitutions and 206 apostolic letters over the ten years');
+p(`selections, not the record — the index names ${constitutionsInIndex()} apostolic constitutions and ${lettersInIndex()} apostolic letters over the ten years`);
 p('against 49 and 59 on the shelves.');
 p();
 for (const [k, us] of unmatchedBy('yes')) {

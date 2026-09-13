@@ -373,6 +373,24 @@ describe('parseActaIndex on the volumes (acta volumes spec §4)', () => {
     for (const h of NESTED_TOC_HEADINGS) expect(fixture, h).toMatch(new RegExp(h.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
   });
 
+  it('swallows the nested table of contents in AAS 1 only: in another volume the same words are a heading', () => {
+    // The Sapienti Consilio sub-items are a shape of vol. 1; a later volume printing
+    // 'SACRA ROMANA ROTA' or 'APPENDIX' inside the pope's part must see a heading, and
+    // report it as unseen rather than silently consume the entries that follow it.
+    const text = volume(`                                   I - LITTERAE APOSTOLICAE
+1958    Ian.   10    Quae de fidelibus. - Templum paroeciale S. Ioannis . . 41
+                                   III - SACRA ROMANA ROTA
+1957    Dec.   16    Vic Apost. Aegypti. - Nullitatis matrimonii (Dentrice - Montano) . 55`, 'I - ACTA PII PP. XII');
+    const r1958 = parseActaIndex(text, { year: 1958, volume: 50, columnar: true });
+    expect(r1958.stats.subItems).toBe(0);
+    expect(r1958.unseenHeadings).toEqual(['Pius XII: SACRA ROMANA ROTA']);
+    expect(r1958.entries.map((e) => [e.category, e.page])).toEqual([['LITTERAE APOSTOLICAE', 41], ['SACRA ROMANA ROTA', 55]]);
+    // The same text as AAS 1 consumes the heading as a sub-item and nothing follows it.
+    const r1909 = parseActaIndex(text, { year: 1909, volume: 1, columnar: true });
+    expect(r1909.stats.subItems).toBeGreaterThan(0);
+    expect(r1909.unseenHeadings).toEqual([]);
+  });
+
   it('reads a 1909 incipit only in guillemets after a genre word, never from a bare description', () => {
     const r = parseActaIndex(volume(`                                        III. - LITTERAE ENCYCLICAE.
 1909 Apr.        21      Litt. encycl. « Communium rerum », de saecularibus
@@ -583,9 +601,11 @@ describe('parseActaIndex on the volumes (acta volumes spec §4)', () => {
       const r = parseActaIndex(readFileSync(`tools/fixtures/acta/${file}.txt`, 'utf8'), opts);
       expect(r.unseenHeadings, file).toEqual([]);
       expect(r.unmappedPopes, file).toEqual([]);
-      // AAS 1 is the exception: the OCR lost the page column of most index pages (sample
-      // report §1), so two entries of 114 carry a page. The finding is explained there.
-      if (file !== 'aas-01-1909') expect(harvestedParseRate(r.stats)!, file).toBeGreaterThan(0.94);
+      // AAS 1 and AAS 9-I are the exceptions: the OCR lost the page column of most of their
+      // index pages (sample report §1) -- two entries of 114 carry a page in 1909, and 1917-I
+      // reaches 94.6 % over the harvested categories. Every other source clears the spec's
+      // 95 % floor (§4); the two are explained in the report, not lowered into the threshold.
+      if (file !== 'aas-01-1909' && file !== 'aas-09-1917-I') expect(harvestedParseRate(r.stats)!, file).toBeGreaterThanOrEqual(0.95);
     }
   });
 });

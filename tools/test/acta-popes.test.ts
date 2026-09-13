@@ -38,7 +38,9 @@ describe('the pope headings of the AAS index (acta volumes spec §2)', () => {
   });
 
   it('is printed in the fixtures: every row is a part heading of some source, and no source prints an unmapped one', () => {
-    const { parsed } = loadActaIndexes();
+    const { parsed, missing } = loadActaIndexes();
+    // Every configured fixture must be present: a missing one would make the checks below vacuous for it.
+    expect(missing).toEqual([]);
     const seen = new Set<string>();
     for (const r of parsed.values()) {
       expect(r.unmappedPopes).toEqual([]);

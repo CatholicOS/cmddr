@@ -667,7 +667,10 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
       dated = { date: { day: inheritedDate.day, month: inheritedDate.month, year: inheritedDate.year }, text: line.trimStart() };
     }
     const body = dated ? dated.text : line;
-    if (NESTED_TOC_HEADINGS.has(normaliseHeading(line)) || SUB_ITEM_RE.test(body)) {
+    // The nested table of contents of Sapienti Consilio is a shape of AAS 1 alone; elsewhere
+    // a heading such as APPENDIX or SACRA ROMANA ROTA inside the pope's part is a heading and
+    // must reach isHeading (CodeRabbit, PR #33).
+    if ((volume === 1 && NESTED_TOC_HEADINGS.has(normaliseHeading(line))) || SUB_ITEM_RE.test(body)) {
       flushDefect();
       stats.subItems++;
       stats.consumed++;
@@ -759,7 +762,7 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
       const next = lines.slice(i + 1).find((l) => l.trim() !== '') ?? '';
       const nextOpens = next === '' || isDateLine(next) || HEADING_RE.test(next)
         || PART_HEADING_RE.test(next) || HEADING_CONTINUATION_RE.test(next.trim())
-        || SUB_ITEM_RE.test(next) || NESTED_TOC_HEADINGS.has(normaliseHeading(next));
+        || SUB_ITEM_RE.test(next) || (volume === 1 && NESTED_TOC_HEADINGS.has(normaliseHeading(next)));
       if (tight && nextOpens && Number(tight[1]) < 1500) { pageMatch = tight; pageTail = tight[0].length - tight[0].search(/ \d{1,4}[.,]?$/); }
     }
     if (!pageMatch) {
