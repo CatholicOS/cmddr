@@ -9,8 +9,9 @@
  * (expected none). The tables are computed; the prose of each era's *reading* is the
  * author's, written against the numbers (ERAS below).
  *
- * Eras: `sample` (phase 2b-i: AAS 1, 9-I, 23, 50, 70 and the 2012 index) and
- * `1932-1957` (phase 2b-ii-a: AAS 24-49, Pius XI and Pius XII).
+ * Eras: `sample` (phase 2b-i: AAS 1, 9-I, 23, 50, 70 and the 2012 index), `1932-1957`
+ * (phase 2b-ii-a: AAS 24-49, Pius XI and Pius XII) and `1959-1977` (phase 2b-ii-b: AAS
+ * 51-69, John XXIII and Paul VI).
  *
  * A sibling of tools/acta-report.ts rather than a dimension of it: that report's prose
  * is the reading of the Francis decade. Like it, this one is NEVER run by the harvest;
@@ -20,6 +21,7 @@
  *
  * Usage: npx tsx tools/acta-volumes-report.ts sample > docs/superpowers/reports/2026-09-13-acta-volumes-sample.md
  *        npx tsx tools/acta-volumes-report.ts 1932-1957 > docs/superpowers/reports/2026-09-13-acta-volumes-1932-1957.md
+ *        npx tsx tools/acta-volumes-report.ts 1959-1977 > docs/superpowers/reports/2026-09-13-acta-volumes-1959-1977.md
  */
 import { readFileSync, readdirSync } from 'node:fs';
 import { ACTA_SOURCES, actaSource, loadActaIndexes, sourceKeyOf, type ActaSource } from './src/acta/join.js';
@@ -48,7 +50,7 @@ interface Era {
   covers: (s: ActaSource) => boolean;
   /** The reading under §1, §2, §4 and §13, given the parsed sources and the computed tables. */
   reading1: (r: Map<string, ActaParseResult>) => string[];
-  reading2: (ctx: { matched: number; byHow: string; created: number; byIssuer: string; held: number; guard: number; toponymIncipit: number; pageShared: number }) => string[];
+  reading2: (ctx: { matched: number; byHow: string; created: number; byIssuer: string; held: number; guard: number; toponymIncipit: number; pageShared: number; provisional: number; epistulae: number }) => string[];
   mappingsProse: string[];
   radioProse: (ctx: { radio: number; matched: string[]; first: string }) => string[];
   partsSkippedNote: string;
@@ -63,7 +65,7 @@ const ERAS: Record<string, Era> = {
       'the whole-volume OCR PDFs by `tools/fetch-acta.sh` in pypdf\'s layout mode, and the 2012 *Index generalis* PDF, extracted',
       'whole as in phase 1 (`tools/fixtures/acta/README.md` records page ranges, modes and retrieval). Each is parsed',
     ],
-    covers: (s) => s.year < 1932 || (s.year >= 1958 && s.year < 2015),
+    covers: (s) => [1909, 1917, 1931, 1958, 1978, 2012].includes(s.year),
     reading1: (parsedAll) => {
       const sample = ['1909', '1917-I', '1931', '1958', '1978', '2012'].filter((k) => !parsedAll.has(k));
       if (sample.length > 0) return [`*(The reading is not rendered: the sample fixture${sample.length > 1 ? 's' : ''} ${sample.join(', ')} ${sample.length > 1 ? 'are' : 'is'} missing from tools/fixtures/acta/.)*`];
@@ -179,7 +181,7 @@ const ERAS: Record<string, Era> = {
       const monthOnly = [...parsedAll].filter(([k]) => ERAS['1932-1957']!.covers(actaSource(k)!)).reduce((n, [, x]) => n + x.stats.monthOnly, 0);
       const noted = [...parsedAll].filter(([k]) => ERAS['1932-1957']!.covers(actaSource(k)!)).flatMap(([, x]) => x.entries.filter((e) => e.dateNote && !e.date.startsWith('????'))).length;
       const unprinted = [...parsedAll].filter(([k]) => ERAS['1932-1957']!.covers(actaSource(k)!)).flatMap(([, x]) => x.entries.filter((e) => e.date.startsWith('????'))).length;
-      const supplied = Object.entries(ACTA_INDEX_CORRECTIONS).filter(([, row]) => row.printed.startsWith('????')).length;
+      const supplied = Object.entries(ACTA_INDEX_CORRECTIONS).filter(([key, row]) => row.printed.startsWith('????') && Number(key.split(':')[0]) >= 1932 && Number(key.split(':')[0]) <= 1957).length;
       return [
         `1. **The page column survives; what the OCR loses is a token here and there.** Unlike AAS 1 and 9-I (sample report §1),`,
         `   every volume of 1932–1957 renders its page column, and ${[...parsedAll].filter(([k]) => ERAS['1932-1957']!.covers(actaSource(k)!)).length - under.length} of the 26 clear the spec's 95 % floor over the harvested`,
@@ -303,6 +305,174 @@ const ERAS: Record<string, Era> = {
     ],
     partsSkippedNote: 'dicasteries, tribunals, offices, the death of Pius XI and the conclave of 1939',
   },
+};
+ERAS['1959-1977'] = {
+  title: '# The AAS volumes of 1959–1977 (AAS 51–69): the phase-2b-ii-b report',
+  intro: [
+    'the report of phase 2b-ii-b of [#25](https://github.com/CatholicOS/cmddr/issues/25) as the',
+    '[acta volumes spec](../specs/2026-09-13-acta-volumes-design.md) §6 and §9 define it: the nineteen whole-volume OCR PDFs',
+    'of 1959–1977 -- John XXIII from his first full year (AAS 51 and 52 open with Pius XII\'s last acts) to his death (3 June',
+    '1963) and Paul VI from his election (21 June 1963; AAS 55 carries both) to 1977, the Second Vatican Council between them --',
+    'their chronological-index pages extracted by `tools/fetch-acta.sh` in pypdf\'s layout mode, or in its default mode where the',
+    'layout mode fuses lines (`tools/fixtures/acta/README.md` records page ranges, modes and retrieval). Each is parsed',
+  ],
+  covers: (s) => s.year >= 1959 && s.year <= 1977,
+  reading1: (parsedAll) => {
+    const era = [...parsedAll].filter(([k]) => ERAS['1959-1977']!.covers(actaSource(k)!));
+    const r = (k: string) => parsedAll.get(k)!;
+    const under = era.filter(([, x]) => (harvestedParseRate(x.stats) ?? 1) < 0.95).map(([k]) => k);
+    const underAll = era.filter(([, x]) => (parseRate(x.stats) ?? 1) < 0.95).map(([k]) => k);
+    const monthOnly = era.reduce((n, [, x]) => n + x.stats.monthOnly, 0);
+    const unprinted = era.flatMap(([, x]) => x.entries.filter((e) => e.date.startsWith('????')));
+    const unprintedHarvested = unprinted.filter((e) => (categoryForHeading(e.category)?.harvested ?? 'no') !== 'no').length;
+    const noted = era.flatMap(([, x]) => x.entries.filter((e) => e.dateNote && !e.date.startsWith('????'))).length;
+    const journeys = era.reduce((n, [, x]) => n + x.entries.filter((e) => categoryForHeading(e.category)?.id === 'Itinera Apostolica').length, 0);
+    const lowest = era.map(([k, x]) => [k, harvestedParseRate(x.stats) ?? 1] as const).sort((a, b) => a[1] - b[1])[0]!;
+    return [
+      `1. **Every volume clears the floor over the harvested categories; the default mode carries eight of them.** ${era.length - under.length} of the`,
+      `   ${era.length} volumes parse at 95 % or better over the harvested categories (§4)${under.length ? `; the ${under.length} below it -- ${under.map((k) => `${k} (${pct(harvestedParseRate(r(k).stats))})`).join(', ')} -- are explained below` : `, the lowest ${lowest[0]} at ${pct(lowest[1])}`}.`,
+      `   The overall rate falls under 95 % in ${underAll.length} (${underAll.join(', ')}) for the parts the join does not act on: Paul VI's journeys, which`,
+      `   the volumes head one by one (*Peregrinatio Summi Pontificis in Palaestinam*, 1964; India, 1965; Fatima and Turkey, 1967;`,
+      `   Bogotá, 1968; Asia and Oceania, 1971: ${journeys} entries, and the *Dies N.* lines under them that the 2015–2024 journeys section`,
+      `   prints too), the consistories' numbered items, and the head of his allocutions in AAS 55 and 56, which prints a ditto for the`,
+      `   year with nothing above it (reported, not harvested). What made the era readable at all is a change of extraction mode:`,
+      `   in AAS 52, 54–58, 60 and 68 pypdf's layout mode fuses two physical lines into one with no gap between them -- the seam a`,
+      `   word the OCR broke at the line end, its soft hyphen followed at once by the next line's text (\`Basilicae Mino­ris evehitur`,
+      `   ecclesia cathedralis\`, AAS 52 (1960) 1035) -- so that continuations and page numbers landed on the wrong entries and the`,
+      `   first extraction read 1960 at 85 %, 1962 at 81 %, 1965 at 86 % over the harvested categories. Measured over every fixture,`,
+      `   such seams number 25–70 per volume in those eight and 0–4 in every volume before 1959; and in this era the default mode keeps`,
+      `   each date on the line of its entry (the same count of date-headed lines as the layout mode, page by page) where in`,
+      `   1909–1957 it emitted the date columns as runs of their own. \`fetch-acta.sh\` therefore falls back to the default mode for a`,
+      `   page with a seam when that mode keeps at least as many date-headed lines as the layout mode did (README): 95 pages of the`,
+      `   eight volumes. AAS 54 (1962) 894 and 901, where the default mode breaks the columns (0 and 8 date lines against 18 and 19),`,
+      `   stay in the layout mode, and their fused constitutions of May–June 1961 and radio messages are the losses §3 lists (the`,
+      `   volume reads at ${pct(harvestedParseRate(r('1962').stats))} over the harvested categories). A default-mode page has no indentation`,
+      `   (every line at the margin) and renders the index's title *after* the first page's entries: the parser reads such a *flat*`,
+      `   page without looking for blank-dated entries at an entry column, and skips the title wherever it stands.`,
+      `2. **What the OCR loses in this era is a token, a page number or a whole line -- and two pope headings.** AAS 67 (1975) prints`,
+      `   \`I - ACTA. PAULI PP. VI\` and AAS 51 (1959) \`II - ACTA I0A1OTS PP. XXIII\`, digits inside the name: the first extraction read`,
+      `   nothing of 1975 and nothing of John XXIII's first year, and both are read now (\`popes.ts\` lists the OCR genitive beside`,
+      `   the row; the parser drops the full stop). The ditto comes as \`%\` (AAS 52), \`->\` (AAS 53), \`Ä\` (AAS 58) beside the`,
+      `   earlier era's forms; the months as \`Maü\` (AAS 54), \`Dee.\` and \`Mail\` (AAS 66), \`Eebr.\` (AAS 55), \`lui.\` (AAS 61), each`,
+      `   admitted only where a day follows. A year with its last digit broken (\`196S\`, AAS 55 (1963) 1081) joins the middle-digit`,
+      `   forms (\`19Ö8\`, at the head of Pius XII's part in AAS 51) in dating the entry \`????\`: ${unprinted.length} entries, ${unprintedHarvested} of them in harvested`,
+      `   categories, every one of those supplied by a curated row quoting the act's own dating formula (\`ACTA_INDEX_CORRECTIONS\`:`,
+      `   the nine constitutions of April–June 1958 that AAS 51 prints under \`19Ö8 Apr. 19\` -- Aparecida, Hyderabad in Pakistan,`,
+      `   Paramaribo, the Ukrainian exarchate in Australia, Huacho, Zamboanga, Maturín, Miami, Maracay -- and Paul VI's *Summi Dei*`,
+      `   *Verbum* and *Cum proximus* of 1963); the rest are allocutions. \`1071\` for 1971 (AAS 64 (1972) 14, *Qui secreto*, and the`,
+      `   ten letters after it) is read as 1971 and noted (${noted} entries): every one matched its shelf record, so nothing was minted`,
+      `   from the reading. Two index misprints are corrected by rows quoting the acts: *Populorum progressio* (\`1967 Maii 26\` for`,
+      `   26 March, AAS 59 (1967) 299) and *Sacrae laudis* (\`Ian. 5\` for the Epiphany, AAS 54 (1962) 75); one is the shelf's, not the`,
+      `   index's -- *Ingravescentem aetatem* is dated \`die xxi mensis Novembris\` at AAS 62 (1970) 813 as the index says, and`,
+      `   vatican.va's record 20 November -- so the guard's near-miss hold stands until the shelf record is corrected. The page`,
+      `   number alone on its line where the default mode lost an entry's other lines (\`Illustri laude … ecclesia\` / \`569\`, AAS 58)`,
+      `   is read as the page, unless the line before already ends in one; a page with a quote before it (\`'563\`) is read; OCR`,
+      `   page digits (\`46S\`, \`2C4\`, \`14S\`, \`¿72\`, \`Illi\`) are losses, listed. ${monthOnly} entries are dated to the month (§1), held.`,
+      `3. **From 1967 the index prints its headings unnumbered, several in mixed case.** AAS 59 (1967) heads *Litterae Encyclicae*,`,
+      `   *Epistula Apostolica*, *Adhortationes Apostolicae*, *Litterae Apostolicae* and *Nuntii Telegraphici* so, between entries,`,
+      `   with no numeral: the first extraction lost *Populorum progressio* and *Sacerdotalis caelibatus* before the first heading`,
+      `   it recognised and filed fifty-five apostolic letters as constitutions. A mixed-case line is now a heading only where its`,
+      `   words are a known category. The column header glued to a heading (\`XIV - NUNTII SCRIPTO DATI PAG.\`), an OCR \`^\` after`,
+      `   one, the guillemets set apart (\`« MOTU PROPRIO» DATAE\`) and the numeral as \`XI- -\` are read too (§4).`,
+      `4. **The Second Vatican Council is in the volumes, in a part of its own, and the pipeline does not touch it.** The index files`,
+      `   the sixteen conciliar documents under \`ACTA SS. OECUMENICI CONCILII VATICANI II\` -- a part beside the pope's, skipped as`,
+      `   the dicasteries' are -- by title, not incipit: AAS 56 (1964) 97 *Constitutio de Sacra Liturgia* and 145 *Decretum de*`,
+      `   *instrumentis communicationis socialis* (4 December 1963); AAS 57 (1965) 5 *Constitutio Dogmatica de Ecclesia*, 76 *Decretum*`,
+      `   *de Ecclesiis Orientalibus Catholicis*, 90 *Decretum de Oecumenismo* (21 November 1964); AAS 58 (1966) 673 *Decretum de*`,
+      `   *pastorali Episcoporum munere*, 702 *de accommodata renovatione vitae religiosae*, 713 *de institutione sacerdotali*, 728`,
+      `   *Declaratio de educatione christiana*, 740 *de Ecclesiae habitudine ad religiones non-christianas* (28 October 1965); 817`,
+      `   *Constitutio dogmatica de divina Revelatione*, 837 *Decretum de apostolatu laicorum* (18 November 1965); 929 *Declaratio de*`,
+      `   *libertate religiosa*, 948 *Decretum de activitate missionali Ecclesiae*, 991 *de presbyterorum ministerio et vita*, 1025`,
+      `   *Constitutio pastoralis de Ecclesia in mundo huius temporis* (7 December 1965) -- and, in AAS 54 (1962) 822, the Fathers'`,
+      `   message to the world under \`ACTA PATRUM S. CONCILII OECUMENICI VATICANI II\`. None is listed under John XXIII or Paul VI, so`,
+      `   the matcher, which works within a pope's part and issuer, cannot reach them, and nothing is created: the registry carries`,
+      `   all sixteen under \`oec:vatican-ii\` (${docs.filter((d) => d.issuerId === 'oec:vatican-ii').length} records, \`promulgatedBy\` the pope), and none carries an \`acta\` reference. The pages`,
+      `   above are the evidence for a hand-curated reference in a later phase (as \`AAS 9-II (1917) 5\` is for the Code); what the pope's`,
+      `   part does carry of the council is his own: the opening and closing rites (\`IN SOLLEMNI RITU INEUNDI …\`, John XXIII's *Gaudet*`,
+      `   *Mater Ecclesia*, AAS 54 (1962) 786; \`… CONCLUDENDI …\`, AAS 58 (1966) 5 and 8), mapped to a row of the speeches class and`,
+      `   counted, and the exhortations, letters and motu proprio *about* the council (*Sacrae laudis*, *Cum proximus*, *Quarta Sessio*,`,
+      `   *Postrema Sessio*, *Apostolica sollicitudo*), matched or created as any other act.`,
+      `5. **Every pope heading maps.** \`I - ACTA PII PP. XII\` then \`II - ACTA IOANNIS PP. XXIII\` (1959, the OCR's \`I0A1OTS\`; 1960),`,
+      `   \`I - ACTA IOANNIS PP. XXIII\` (1961–1964), \`IV - ACTA PAULI PP. VI\` after *Acta in morte Ioannis PP. XXIII* and *Acta*`,
+      `   *Conclavis* (1963), \`II - ACTA PAULI PP. VI\` (1964), \`I - ACTA PAULI PP. VI\` (1965–1977, with AAS 67's full stop). The`,
+      `   synod's part of 1977 is numbered without the word (\`II - SYNODUS EPISCOPORUM\`, the pope's three allocutions at the fifth`,
+      `   synod) and is skipped as \`ACTA SYNODI EPISCOPORUM\` is in 2015–2024.`,
+    ];
+  },
+  reading2: (c) => [
+    `1. **${c.matched} references written, every one from a quoted index line (§12):** ${c.byHow}. The John XXIII and`,
+    `   Paul VI shelves are full where the earlier popes' were thin -- vatican.va's apost_constitutions and apost_letters shelves`,
+    `   carry their erections and letters up to 1972 -- so the join's *toponym* rule carried the era: the index prints a`,
+    `   constitution's toponym as the mother see, a double see and the new see in parentheses (\`DURANGENSIS-SINALOENSIS`,
+    `   (Mazatlanensis)\`, \`CORDUBENSIS (Crucis Axeatae)\`), and the shelves title the same act by the mother see alone (Paul VI`,
+    `   to 1964: *Cordubensis*), by both (John XXIII: *Durangensis (Chihuahuensis)*) or by the new see alone (Paul VI from 1965:`,
+    `   *Voniuensis*), and a day carries two erections from one mother see (Durango, 22 November 1958). The sample's rule --`,
+    `   any one stem of the toponym anywhere in the title -- left 164 entries ambiguous between the erections of one day; the`,
+    `   rule now (\`match.ts\`) needs every word of the head or every word of the parenthesis in the title, separates two titles`,
+    `   that carry the head by the new see, and takes the exact toponym where two still stand (*Liberopolitanae* against`,
+    `   *Liberopolitanae (Muilaënsis)*). It also cited two constitutions of 1958 the sample had left (§12 of the sample report) and`,
+    `   changed no other era's match. What stays ambiguous (§5) is the OCR's (\`EHODESIAE\`, \`PITTSBURGENSE (rassaicensis\`,`,
+    `   \`Weetebtjlaënsis\`), the shelf's own spelling (\`RESISTENTIAE\` for *Resistenciae*), and the cardinalatial titles of 5`,
+    `   February 1965 and 7 June 1967 -- twenty-nine constitutions headed *Urbis* with an incipit each, against shelf records`,
+    `   the index's incipit cannot reach because vatican.va titles them by their church (*Urbis (Templum S. Eugenii Papae)*).`,
+    `   Three curated rows cite what the rules could not: the Credo of the People of God (AAS 60 (1968) 433, under its own`,
+    `   heading *Sollemnis professio fidei*, against the other motu proprio of the day), *Populorum progressio* and *Sacrae laudis*`,
+    `   (§1.2).`,
+    `2. **${c.created} documents created** (§8) -- ${c.byIssuer} -- and ${c.held} entries held (§9), ${c.guard} of them by the`,
+    `   duplicate guard, the OCR rule and the page rule. The creations fall where the shelves stop: none from 1967–1970 and 1972,`,
+    `   where Paul VI's shelves hold what the index prints, and 45–59 a year from 1973, where vatican.va's apost_constitutions`,
+    `   shelf carries no act of 1973, 1974 or 1976 and two of 1975 against the 40, 15, 2, 18 and 34 the index prints, and its`,
+    `   apost_letters shelf one or two a year against 22–30; John XXIII's from 1959–1963, where his year-partitioned shelves`,
+    `   carry roughly half of what the index prints. ${c.toponymIncipit} entries print toponym and incipit both, so the provisional ids of the`,
+    `   era are ${c.provisional} (the sees the index names without an incipit). The *Epistulae* (${c.epistulae} entries) and *Litterae*`,
+    `   *Decretales* are held for both popes, whose letters and bulls shelves are not harvested (§9, *shelf not harvested*), as`,
+    `   the spec provides. Pius XII's last thirty-four acts (AAS 51 and 52) are created for him. One curated hold (§9): the`,
+    `   index's *Begnum Dei* for the Maturín constitution, which the act opens *Regnum Dei* (AAS 51 (1959) 101) -- an OCR`,
+    `   misspelling that makes a well-formed word the damage rule cannot see, held rather than minted under it.`,
+    `3. **Two acts to a page, and one page misdrawn.** Seven pages of the era open two acts each, every one read in the volume`,
+    `   and curated in \`ACTA_SHARED_PAGES\`: AAS 60 (1968) 10 and AAS 64 (1972) 471, whose pairs are both on the apost_letters shelf`,
+    `   (the first case of two *matched* records on one page, which invariant 25 admits only through the table), and AAS 65 (1973)`,
+    `   237, AAS 68 (1976) 256 and 400, AAS 69 (1977) 198 and 252, whose pairs are created. ${c.pageShared} entries cite a page the`,
+    `   volume prints another act on -- AAS 69 (1977) 245, Jagdalpur's page given to Sagar's constitution of the same day -- and`,
+    `   are held (*page-shared*), for a curated page correction this phase does not attempt.`,
+    `4. **One id of another era is re-minted.** Three constitutions *Qui divino* of 1977 (Ujjain, 26 February; Chiquinquirá,`,
+    `   26 April; Trnava, 30 December, the last in AAS 70 (1978) 275 and created by the sample) collide on (issuer, incipit, year),`,
+    `   so the collision pass (invariant 11) gives all three the full-date form and the sample's \`mag:paul-vi/qui-divino-1977\``,
+    `   becomes \`mag:paul-vi/qui-divino-1977-12-30\`. No shelf id is re-minted (§8). And three records of 1932–1957 move with`,
+    `   the era's rules: the \`%\`, \`->\` and \`Ù\` dittos and the bare-number rule read four entries the earlier parser had fused`,
+    `   to their neighbours (*Maius sane* and, corrected from 12 to 21 December 1950 by the day it now inherits, *Quo in Africa*,`,
+    `   AAS 43; *Gemina* split from *Sacris Aedibus*, AAS 44; Magellanensis, AAS 39; *Apostolica Sedes*, AAS 48, at its page 647`,
+    `   rather than lost), and the hyphen rule holds one (*Qui Christo*, \`G-Aruensis\`, AAS 49); the 1932–1957 report is regenerated.`,
+    `5. **Documents of the era's popes dated in the volume years without a reference** (§11): the shelves' own December acts`,
+    `   (the next volume's), the *Urbis* constitutions the join could not tell apart (§5), the acts whose index line the OCR`,
+    `   damaged (§3), and the classes the index files under a category the registry does not attempt.`,
+  ],
+  mappingsProse: [
+    'Decisions taken here with the evidence beside each row of `categories.ts` (the earlier decisions stand): the opening and',
+    'closing rites of the council (*In sollemni ritu ineundi Concilii Oecumenici Vaticani Secundi*, 1962, whose OCR breaks',
+    '*oecumenici* as `OECU MENICI`; *… concludendi …*, 1966) to a new row of the speeches class, not harvested, since what the',
+    'pope\'s part carries of the council is his addresses; *Sollemnis professio fidei* (1968, the Credo of the People of God) to',
+    'a row of its own mapping to the motu-proprio class as `partly`, since vatican.va\'s motu_proprio shelf carries the act -- the',
+    'matcher cites it (by a curated override, against the other motu proprio of the day) and the creator never mints from the',
+    'heading (`NOT_CREATED`); Paul VI\'s journeys, headed one by one (*Peregrinatio Summi Pontificis in Palaestinam*, *Summi*',
+    '*Pontificis peregrinantis iter in Indiam*, *… peregrinante iter in Lusitaniam*, *… iter in Turcarum Rempublicam*, *… in*',
+    '*Columbiam*, *… peregrinantes iter in Asiam et Oceaniam*) to *Itinera Apostolica*, as the 2015–2024 journeys section; the',
+    'radio-television messages (*Nuntius radiotelevisificas*, the OCR\'s *-us*; *Nuntii radiotelevisifict*; *Nuntii radiophonici*',
+    '*et televisifici*) and the singular *Nuntius radiophonicus* to *Nuntii radiophonici*, counted for #27; *Nuntii scripti dati*',
+    '(OCR) to *Nuntii*; *Nuntii gratulatomi* and *Nuntii gratulatori i* (OCR) to *Nuntii gratulatorii*; *Sollemnia canonizationis*',
+    'and *Sollemnis canonizatio* to *Sollemnes canonizationes*; *Rescriptum ex audientia* (1974, the instruction on the',
+    'pontifical secret) to *Rescriptum*; *Declaratio* (1965, on n. 23 of *Pastorale munus*) to a row of its own, no class. The',
+    'synod\'s part of 1977 (`II - SYNODUS EPISCOPORUM`) is a part, not a category, and is skipped. No heading is left `unknown`.',
+  ],
+  radioProse: (c) => [
+    `The era prints ${c.radio} radio and radio-television messages under *Nuntii radiophonici* and its variants -- John XXIII's from`,
+    `the first of the volumes (${c.first}) on, Paul VI's Christmas and Easter messages and the rest -- and ${c.matched.length} of them matched`,
+    `harvested records: the *Urbi et Orbi* shelves, John XXIII's seven radio messages the *Messaggi* harvest kept apart from`,
+    `their series, and the annual series a radio message opened (Vocations 1964, Missions 1965–1966, Lent 1974)`,
+    `(${c.matched.length ? c.matched.map((m) => `\`${m}\``).join(', ') : 'none'}). That is the`,
+    'count #27 asks for (`medium: radio`), recorded here and applied nowhere: no AAS-born record carries `medium`.',
+  ],
+  partsSkippedNote: 'dicasteries, tribunals, offices, secretariats, commissions, the council, the synod, the death of John XXIII and the conclave of 1963',
 };
 const eraKey = process.argv[2] ?? 'sample';
 const ERA = ERAS[eraKey];
@@ -474,6 +644,8 @@ p();
   for (const line of ERA.reading2({
     matched: result.matches.length, byHow: [...byHow].sort().map(([k, n]) => `${n} ${k}`).join(', '), created: created.length,
     byIssuer: [...byIssuer].sort().map(([k, n]) => `\`${k}\` ${n}`).join(', '), held: creation.held.length, guard, toponymIncipit, pageShared,
+    provisional: created.filter((c) => c.record.idStatus === 'provisional').length,
+    epistulae: entries.filter((e) => cat(e)?.id === 'Epistulae').length,
   })) p(line);
   if (false) {
   }
@@ -638,7 +810,8 @@ const outcome = (e: ActaEntry): string => {
   if (h) return `held (${h.reason})`;
   return result.unmatched.some((u) => u.entry === e) ? 'unmatched' : 'not attempted';
 };
-const bornKey = (d: DocumentRecord) => `${d.issuerId}|${d.date}|${d.acta!.year}${d.acta!.part ?? ''}:${d.acta!.page}`;
+// The title is part of the key: two letters of one day can share a page (AAS 68 (1976) 256, ACTA_SHARED_PAGES).
+const bornKey = (d: DocumentRecord) => `${d.issuerId}|${d.date}|${d.acta!.year}${d.acta!.part ?? ''}:${d.acta!.page}|${d.title}`;
 const bornByKey = new Map(bornInData.map((d) => [bornKey(d), d]));
 function dataIdOf(d: DocumentRecord): string { return bornByKey.get(bornKey(d))?.id ?? d.id; }
 for (const s of SAMPLE) {
@@ -865,7 +1038,8 @@ p();
 {
   const radio = entries.filter((e) => cat(e)?.id === 'Nuntii radiophonici');
   const matchedRadio = result.matches.filter((m) => cat(m.entry)?.id === 'Nuntii radiophonici');
-  const first = radio.filter((e) => e.pope === 'Pius XII').sort((a, b) => a.date < b.date ? -1 : 1)[0];
+  const firstPope = eraKey === '1959-1977' ? 'Ioannes XXIII' : 'Pius XII';
+  const first = radio.filter((e) => e.pope === firstPope).sort((a, b) => a.date < b.date ? -1 : 1)[0];
   for (const line of ERA.radioProse({ radio: radio.length, matched: matchedRadio.map((m) => m.documentId), first: first ? `${label(first)}, ${first.date}, ${cite(first)}` : '—' })) p(line);
 }
 p();

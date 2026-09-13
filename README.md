@@ -252,8 +252,9 @@ The reference is **joined to** the shelf harvest, not substituted for it. vatica
 generalis* PDF for 2010–2024 and a whole-volume OCR PDF for each year 1909–2002, which carries the same chronological index
 in its tail; the harvest parses the *Acta Summi Pontificis* part of each (checked in as text under `tools/fixtures/acta/`:
 the ten index PDFs of 2015–2024, the 2012 index, the index pages of the five sample volumes of phase 2b — AAS 1 (1909),
-9-I (1917), 23 (1931), 50 (1958) and 70 (1978) — and of the twenty-six volumes of 1932–1957, AAS 24–49, the pontificates of
-Pius XI and Pius XII) and matches every entry in a harvested category to a document of the pope the
+9-I (1917), 23 (1931), 50 (1958) and 70 (1978) — of the twenty-six volumes of 1932–1957, AAS 24–49, the pontificates of
+Pius XI and Pius XII, and of the nineteen of 1959–1977, AAS 51–69, John XXIII and Paul VI) and matches every entry in a
+harvested category to a document of the pope the
 part heading names (Pius X → Francis) by issuer, date and incipit, writing `acta` only where one candidate is evidenced. The join
 is reported before it is trusted: **225** Francis documents carry a reference from the ten annual indexes, and every ambiguous
 entry, every act the shelves lack and every document two entries claim is listed, classified, in the
@@ -269,9 +270,16 @@ joined the twenty-six volumes of 1932–1957 the same way: **144** references, t
 explained line by line, every OCR misreading of a date the parser admits measured on a named volume, a year the index
 does not print (a `»` with nothing above it, a token the OCR has broken) left blank and supplied only by a curated row
 quoting the act's own dating formula — so that *Munificentissimus Deus* and *Humani generis*, at the head of AAS 42, are
-cited — and a year the OCR misread inside the century never repaired but corrected the same way. The volumes of 2003–2009 have no
-index online and await a fascicle parser; 1959–1977, 1979–2002 with the 2010–2014 index PDFs, and 1910–1931 are phases
-2b-ii-b, 2b-ii-c and 2b-iii.
+cited — and a year the OCR misread inside the century never repaired but corrected the same way. Phase 2b-ii-b ([era
+report](docs/superpowers/reports/2026-09-13-acta-volumes-1959-1977.md)) joined the nineteen volumes of 1959–1977: **800**
+references, full where the earlier eras were thin because the John XXIII and Paul VI shelves carry their acts up to 1972,
+every volume above the floor once eight of them were extracted in pypdf's default mode (in this era the layout mode fuses
+lines and the default mode keeps the dates, the opposite of 1909–1957), the join's toponym rule reading the mother see and
+the new see the index prints in parentheses against shelves that title an erection by either. The sixteen documents of the
+Second Vatican Council are in those volumes under a part of their own, `Acta Ss. Oecumenici Concilii Vaticani II`, which the
+parser skips: they stay under `oec:vatican-ii` with no reference, their pages listed in the report for a curated one. The
+volumes of 2003–2009 have no index online and await a fascicle parser; 1979–2002 with the 2010–2014 index PDFs, and 1910–1931,
+are phases 2b-ii-c and 2b-iii.
 
 The *Acta* are therefore also a **second source**. An index entry the join leaves unmatched becomes a document of its own
 (phase 2a, `tools/src/acta/create.ts`) when its category is one the registry creates from the *Acta* — encyclicals,
@@ -302,9 +310,17 @@ of them named by the see alone and therefore provisional, 568 apostolic letters,
 vernacular texts of four encyclicals the index enters a second time (curated), the entries whose page another act cites where
 the volume prints one (a new *page-shared* hold), and every incipit the OCR has damaged, which is never minted into an id the
 page does not print ([era report](docs/superpowers/reports/2026-09-13-acta-volumes-1932-1957.md)); four pages the volumes print
-two short letters on were read and curated. Phases 2b-ii-b, 2b-ii-c and 2b-iii
-([#25](https://github.com/CatholicOS/cmddr/issues/25)) are the remaining 67 sources of 1910–2014, read by the same parser and
-creator; phase 2c the *Acta Sanctae Sedis* of 1865–1908, whose indexes carry no date or incipit and are confirmed by hand.
+two short letters on were read and curated. Phase 2b-ii-b added **655** from the nineteen volumes of 1959–1977 — 294 of John
+XXIII, 327 of Paul VI, 34 last acts of Pius XII; 331 constitutions and 321 apostolic letters, minted from the incipit the
+volumes print beside the toponym — none from 1967–1970 and 1972, where Paul VI's shelves hold what the index prints, and
+45–59 a year from 1973, where vatican.va's shelves for his constitutions and letters stop; the *Epistulae* and canonisation
+decretals of both popes are held, their `letters` and `bulls` shelves not being harvested. It held **775**, among them the
+twenty-nine cardinalatial-title constitutions of 1965 and 1967 the index names by incipit and the shelf by church, and it
+re-minted one id of the sample (three constitutions *Qui divino* of 1977 take the full-date form) and no shelf id
+([era report](docs/superpowers/reports/2026-09-13-acta-volumes-1959-1977.md)). Phases 2b-ii-c and 2b-iii
+([#25](https://github.com/CatholicOS/cmddr/issues/25)) are the remaining 48 sources of 1910–1931 and 1979–2014, read by the
+same parser and creator; phase 2c the *Acta Sanctae Sedis* of 1865–1908, whose indexes carry no date or incipit and are
+confirmed by hand.
 
 ### The document registry
 
