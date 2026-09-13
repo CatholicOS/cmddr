@@ -21400,31 +21400,6 @@
     }
   },
   {
-    "id": "mag:paul-vi/urbis-augescentibus-in-dies-1973",
-    "title": "URBIS Augescentibus in dies. Diaconia S. Petri Damiani ad Montes S. Pauli constituitur",
-    "idStatus": "minted",
-    "genre": "papal-bull",
-    "issuerId": "rp:paul-vi",
-    "issuerType": "pope",
-    "date": "1973-02-11",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-65-1973-ocr.pdf",
-      "shelf": "aas/1973",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "URBIS Augescentibus in dies",
-    "characteristics": [
-      "apostolic-constitution"
-    ],
-    "sourceGenreLabel": "Constitutiones Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 65,
-      "year": 1973,
-      "page": 144
-    }
-  },
-  {
     "id": "mag:paul-vi/quo-in-honore-1973",
     "title": "Quo in honore. Templum B. M. V. vulgo «Virgen del Coro» appellatae, in dioecesi S. Sebastiani ad Basilicae Minoris dignitatem attollitur",
     "idStatus": "minted",
@@ -24868,56 +24843,6 @@
     }
   },
   {
-    "id": "mag:paul-vi/quo-gravius-1975",
-    "title": "Coohabambensis. QUO gravius. Dioecesis Cochabambensis ad Metropolitanae dignitatem evehitur",
-    "idStatus": "minted",
-    "genre": "papal-bull",
-    "issuerId": "rp:paul-vi",
-    "issuerType": "pope",
-    "date": "1975-07-30",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-67-1975-ocr.pdf",
-      "shelf": "aas/1975",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "QUO gravius",
-    "characteristics": [
-      "apostolic-constitution"
-    ],
-    "sourceGenreLabel": "Constitutiones Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 67,
-      "year": 1975,
-      "page": 518
-    }
-  },
-  {
-    "id": "mag:paul-vi/quo-gravius-et-propius-1975",
-    "title": "S. Crucis De Sierra. QUO gravius et propius. In Republica Boliviana nova constituitur provincia ecclesiastica",
-    "idStatus": "minted",
-    "genre": "papal-bull",
-    "issuerId": "rp:paul-vi",
-    "issuerType": "pope",
-    "date": "1975-07-30",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-67-1975-ocr.pdf",
-      "shelf": "aas/1975",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "QUO gravius et propius",
-    "characteristics": [
-      "apostolic-constitution"
-    ],
-    "sourceGenreLabel": "Constitutiones Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 67,
-      "year": 1975,
-      "page": 519
-    }
-  },
-  {
     "id": "mag:paul-vi/quoniam-cathedrale-1975",
     "title": "Quoniam cathedrale. Ecclesia cathedralis, Sancto Cerbonio Episcopo dicata in dioecesi Massana-Populoniensi, titulo ac dignitate Basilicae Minoris exornatur",
     "idStatus": "minted",
@@ -24937,31 +24862,6 @@
       "volume": 67,
       "year": 1975,
       "page": 522
-    }
-  },
-  {
-    "id": "mag:paul-vi/pereirensis-de-eca-quoniam-apprime-1975",
-    "title": "PEREIRENSIS DE EÇA. Quoniam apprime. Nova in Angolia constituitur dioecesis nomine « Pereirensis de Eça »",
-    "idStatus": "minted",
-    "genre": "papal-bull",
-    "issuerId": "rp:paul-vi",
-    "issuerType": "pope",
-    "date": "1975-08-10",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-67-1975-ocr.pdf",
-      "shelf": "aas/1975",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "PEREIRENSIS DE EÇA. Quoniam apprime",
-    "characteristics": [
-      "apostolic-constitution"
-    ],
-    "sourceGenreLabel": "Constitutiones Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 67,
-      "year": 1975,
-      "page": 563
     }
   },
   {
@@ -25519,31 +25419,6 @@
       "volume": 68,
       "year": 1976,
       "page": 161
-    }
-  },
-  {
-    "id": "mag:paul-vi/ex-quo-dei-1975",
-    "title": "Mogadisoensis. EX quo Dei. In Republica Somaliensi Vicariatus Apostolicus Mogadiscensis in dioecesis formam redigitur, eodem servato nomine",
-    "idStatus": "minted",
-    "genre": "papal-bull",
-    "issuerId": "rp:paul-vi",
-    "issuerType": "pope",
-    "date": "1975-11-20",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-68-1976-ocr.pdf",
-      "shelf": "aas/1976",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "EX quo Dei",
-    "characteristics": [
-      "apostolic-constitution"
-    ],
-    "sourceGenreLabel": "Constitutiones Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 68,
-      "year": 1976,
-      "page": 162
     }
   },
   {
@@ -27587,31 +27462,6 @@
     }
   },
   {
-    "id": "mag:paul-vi/bissagensis-rerum-catholicarum-1977",
-    "title": "BISSAGENSIS - Rerum catholicarum. Praefectura apost. Guineae-Bissagensis ad gradum dioecesis tollitur, nomine Bissagensis",
-    "idStatus": "minted",
-    "genre": "papal-bull",
-    "issuerId": "rp:paul-vi",
-    "issuerType": "pope",
-    "date": "1977-03-21",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-69-1977-ocr.pdf",
-      "shelf": "aas/1977",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "BISSAGENSIS - Rerum catholicarum",
-    "characteristics": [
-      "apostolic-constitution"
-    ],
-    "sourceGenreLabel": "Constitutiones Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 69,
-      "year": 1977,
-      "page": 321
-    }
-  },
-  {
     "id": "mag:paul-vi/munus-apostolicum-1977",
     "title": "Cheiuensis. Munus apostolicum. Praefectura apost. Cheiudoensis in Corea dioecesis fit, nomine Cheiuensis",
     "idStatus": "minted",
@@ -29359,7 +29209,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quae per caritatem",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 71,
+      "year": 1979,
+      "page": 1617
+    }
   },
   {
     "id": "mag:paul-vi/inter-eximia-1978",

@@ -6759,28 +6759,6 @@
     }
   },
   {
-    "id": "mag:pius-xii/ii-y-aura-donc-un-siecle-1945",
-    "title": "II y aura donc un siècle. Ad R. P. Gervasium Quénard, Praepositum Generalem Augustinianorum ab Assumptione, saeculo impleto ab ortu eiusdem Piae Societatis",
-    "idStatus": "minted",
-    "genre": "letter",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1945-10-19",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-38-1946-ocr.pdf",
-      "shelf": "aas/1946",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "II y aura donc un siècle",
-    "sourceGenreLabel": "Epistulae",
-    "acta": {
-      "series": "AAS",
-      "volume": 38,
-      "year": 1946,
-      "page": 157
-    }
-  },
-  {
     "id": "mag:pius-xii/ex-amantissimis-1945",
     "title": "Ex amantissimis. Ad Excmum P. D. Michaelem Rackl, Episcopum Eystettensem : duodecimo elapso saeculo a Dioecesi Eystettensi condita",
     "idStatus": "minted",
@@ -17842,28 +17820,6 @@
     }
   },
   {
-    "id": "mag:pius-xii/v-um-iam-lustri-1951",
-    "title": "V um iam lustri. Ad Excmos PP. DD. Archiepiscopos, Episcopos locorumque Ordinarios Poloniae pacem et communionem cum Apostolica Sede habentes",
-    "idStatus": "minted",
-    "genre": "letter",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1951-09-01",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-43-1951-ocr.pdf",
-      "shelf": "aas/1951",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "V um iam lustri",
-    "sourceGenreLabel": "Epistulae",
-    "acta": {
-      "series": "AAS",
-      "volume": 43,
-      "year": 1951,
-      "page": 775
-    }
-  },
-  {
     "id": "mag:pius-xii/sempiternus-rex-christus-1951",
     "title": "Sempiternus Rex Christus",
     "idStatus": "minted",
@@ -18463,31 +18419,6 @@
       "volume": 44,
       "year": 1952,
       "page": 258
-    }
-  },
-  {
-    "id": "mag:pius-xii/ex-antiqua-1951",
-    "title": "Syracusana Et Ragusiensis. EX antiqua. Canonicorum Capitulum in Cathedrali Ecclesia Ragusiensi erigitur",
-    "idStatus": "minted",
-    "genre": "papal-bull",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1951-11-30",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-44-1952-ocr.pdf",
-      "shelf": "aas/1952",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "EX antiqua",
-    "characteristics": [
-      "apostolic-constitution"
-    ],
-    "sourceGenreLabel": "Constitutiones Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 44,
-      "year": 1952,
-      "page": 256
     }
   },
   {
@@ -21210,28 +21141,6 @@
       "volume": 45,
       "year": 1953,
       "page": 485
-    }
-  },
-  {
-    "id": "mag:pius-xii/p-er-gratae-nobis-1953",
-    "title": "P er gratae Nobis. Ad Emum P. D. Ignatium tit. Basilicae XII Apostolorum S. E. E. Presb. Cardinalem Tappouni, Patriarcham Syrorum Antiochenum dena lustra Episcopatus ac quina lustra Patriachae muneris fauste celebraturam",
-    "idStatus": "minted",
-    "genre": "letter",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1953-02-09",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-45-1953-ocr.pdf",
-      "shelf": "aas/1953",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "P er gratae Nobis",
-    "sourceGenreLabel": "Epistulae",
-    "acta": {
-      "series": "AAS",
-      "volume": 45,
-      "year": 1953,
-      "page": 455
     }
   },
   {
@@ -25069,6 +24978,28 @@
     }
   },
   {
+    "id": "mag:pius-xii/altissimus-creavit-1954",
+    "title": "« Altissimus creavit ». Sanctus Lucas Evangelista Caelestis Patronus Publici Collegii Medicorum Hispanorum, vulgo « Cuerpo de Sanidad Nacional », in dioecesi Matritensi, confirmatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1954-11-11",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-48-1956-ocr.pdf",
+      "shelf": "aas/1956",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Altissimus creavit",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 48,
+      "year": 1956,
+      "page": 205
+    }
+  },
+  {
     "id": "mag:pius-xii/it-is-with-a-full-heart-1954",
     "title": "It is with a full heart. Ad Excmos Sacrorum Antistites et ad Missionales totius Nigeriae ob Marialem Conventum ab ipsis celebrandum, cui Legatus mittitur Emus P. D. Iacobus Franciscus «tit. S. Anastasiae Presb. Cardinalis Me Intyre, Archiepiscopus Angelorum in California",
     "idStatus": "minted",
@@ -26560,31 +26491,6 @@
       "volume": 47,
       "year": 1955,
       "page": 625
-    }
-  },
-  {
-    "id": "mag:pius-xii/de-aysen-in-amplitudinem-1955",
-    "title": "DE AYSÉN. In amplitudinem. Apostolica praefectura de Aysén ad gradum et dignitatem perducitur apostolici vicariatus, iisdem servatis finibus atque appellatione",
-    "idStatus": "minted",
-    "genre": "papal-bull",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1955-05-08",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-47-1955-ocr.pdf",
-      "shelf": "aas/1955",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "DE AYSÉN. In amplitudinem",
-    "characteristics": [
-      "apostolic-constitution"
-    ],
-    "sourceGenreLabel": "Constitutiones Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 47,
-      "year": 1955,
-      "page": 659
     }
   },
   {
@@ -29210,31 +29116,6 @@
       "volume": 48,
       "year": 1956,
       "page": 610
-    }
-  },
-  {
-    "id": "mag:pius-xii/ex-vetusto-1956",
-    "title": "Roterodamensis. EX vetusto. In Roterodamensi dioecesi Canonicorum Collegium conditur",
-    "idStatus": "minted",
-    "genre": "papal-bull",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1956-08-15",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-49-1957-ocr.pdf",
-      "shelf": "aas/1957",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "EX vetusto",
-    "characteristics": [
-      "apostolic-constitution"
-    ],
-    "sourceGenreLabel": "Constitutiones Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 49,
-      "year": 1957,
-      "page": 260
     }
   },
   {
