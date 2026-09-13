@@ -68,7 +68,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 956
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-04-19",
@@ -114,7 +120,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 63
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-05-04",
@@ -156,7 +168,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 627
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-05-12-1",
@@ -239,7 +257,13 @@
       "id": "world-mission-day",
       "year": 2013
     },
-    "sourceGenreLabel": "messages/missions"
+    "sourceGenreLabel": "messages/missions",
+    "acta": {
+      "series": "AAS",
+      "volume": 105,
+      "year": 2013,
+      "page": 821
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-05-25",
@@ -356,7 +380,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Lumen fidei",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 105,
+      "year": 2013,
+      "page": 555
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-07-11",
@@ -383,7 +413,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 105,
+      "year": 2013,
+      "page": 651
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-migrants-and-refugees-2014",
@@ -413,7 +449,13 @@
       "year": 2014,
       "ordinal": 100
     },
-    "sourceGenreLabel": "messages/migration"
+    "sourceGenreLabel": "messages/migration",
+    "acta": {
+      "series": "AAS",
+      "volume": 105,
+      "year": 2013,
+      "page": 926
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-08-08",
@@ -437,7 +479,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 105,
+      "year": 2013,
+      "page": 811
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-08-31",
@@ -774,7 +822,13 @@
       "id": "world-food-day",
       "year": 2013
     },
-    "sourceGenreLabel": "messages/food"
+    "sourceGenreLabel": "messages/food",
+    "acta": {
+      "series": "AAS",
+      "volume": 105,
+      "year": 2013,
+      "page": 982
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-10-19",
@@ -848,7 +902,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 105,
+      "year": 2013,
+      "page": 1138
+    }
   },
   {
     "id": "mag:francis-i/evangelii-gaudium-2013",
@@ -881,7 +941,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Evangelii gaudium",
-    "sourceGenreLabel": "apost_exhortations"
+    "sourceGenreLabel": "apost_exhortations",
+    "acta": {
+      "series": "AAS",
+      "volume": 105,
+      "year": 2013,
+      "page": 1019
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-the-sick-2014",
@@ -911,7 +977,13 @@
       "year": 2014,
       "ordinal": 22
     },
-    "sourceGenreLabel": "messages/sick"
+    "sourceGenreLabel": "messages/sick",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 19
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-peace-2014",
@@ -942,7 +1014,13 @@
       "year": 2014,
       "ordinal": 47
     },
-    "sourceGenreLabel": "messages/peace"
+    "sourceGenreLabel": "messages/peace",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 22
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2013-12-17",
@@ -986,7 +1064,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 159
+    }
   },
   {
     "id": "mag:francis-i/quo-aptius-spirituali-2013",
@@ -1042,7 +1126,13 @@
       "year": 2013
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 35
+    }
   },
   {
     "id": "mag:francis-i/lent-2014",
@@ -1075,7 +1165,13 @@
       "id": "lent",
       "year": 2014
     },
-    "sourceGenreLabel": "messages/lent"
+    "sourceGenreLabel": "messages/lent",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 93
+    }
   },
   {
     "id": "mag:francis-i/cum-ad-aeternam-2013",
@@ -1101,7 +1197,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 64
+    }
   },
   {
     "id": "mag:francis-i/world-day-of-prayer-for-vocations-2014",
@@ -1132,7 +1234,13 @@
       "year": 2014,
       "ordinal": 51
     },
-    "sourceGenreLabel": "messages/vocations"
+    "sourceGenreLabel": "messages/vocations",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 99
+    }
   },
   {
     "id": "mag:francis-i/world-youth-day-2014",
@@ -1166,7 +1274,13 @@
       "year": 2014,
       "ordinal": 29
     },
-    "sourceGenreLabel": "messages/youth"
+    "sourceGenreLabel": "messages/youth",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 106
+    }
   },
   {
     "id": "mag:francis-i/world-communications-day-2014",
@@ -1196,7 +1310,13 @@
       "year": 2014,
       "ordinal": 48
     },
-    "sourceGenreLabel": "messages/communications"
+    "sourceGenreLabel": "messages/communications",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 113
+    }
   },
   {
     "id": "mag:francis-i/credo-in-deum-2014",
@@ -1331,7 +1451,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 164
+    }
   },
   {
     "id": "mag:francis-i/cum-ad-aeternam-2014",
@@ -1357,7 +1483,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 423
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2014-04-03",
@@ -1405,7 +1537,13 @@
       "year": 2014
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 387
+    }
   },
   {
     "id": "mag:francis-i/hoc-est-praeceptum-2014",
@@ -1471,7 +1609,13 @@
       "circumscription-elevation"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 612
+    }
   },
   {
     "id": "mag:francis-i/quo-aptius-2014",
@@ -1497,7 +1641,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 614
+    }
   },
   {
     "id": "mag:francis-i/beatus-populus-2014",
@@ -1592,7 +1742,13 @@
       "id": "world-mission-day",
       "year": 2014
     },
-    "sourceGenreLabel": "messages/missions"
+    "sourceGenreLabel": "messages/missions",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 558
+    }
   },
   {
     "id": "mag:francis-i/ad-totius-dominici-gregis-2014",
@@ -1614,7 +1770,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 817
+    }
   },
   {
     "id": "mag:francis-i/trasferimento-della-sezione-ordinaria-dell-amministrazione-del-patrimonio-della-sede-apostolica-2014",
@@ -1640,7 +1802,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 618
+    }
   },
   {
     "id": "mag:francis-i/christi-voluntate-2014",
@@ -1666,7 +1834,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 616
+    }
   },
   {
     "id": "mag:francis-i/undecim-abhinc-annos-2014",
@@ -1692,7 +1866,13 @@
       "circumscription-elevation"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 815
+    }
   },
   {
     "id": "mag:francis-i/dico-autem-vobis-2014",
@@ -1744,7 +1924,13 @@
       "year": 2015,
       "ordinal": 101
     },
-    "sourceGenreLabel": "messages/migration"
+    "sourceGenreLabel": "messages/migration",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 790
+    }
   },
   {
     "id": "mag:francis-i/bonum-autem-2014",
@@ -1873,7 +2059,13 @@
       "id": "world-food-day",
       "year": 2014
     },
-    "sourceGenreLabel": "messages/food"
+    "sourceGenreLabel": "messages/food",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 875
+    }
   },
   {
     "id": "mag:francis-i/omne-conspicimus-2014",
@@ -2024,7 +2216,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 106,
+      "year": 2014,
+      "page": 935
+    }
   },
   {
     "id": "mag:francis-i/apostolic-letter-2014-11-23-1",

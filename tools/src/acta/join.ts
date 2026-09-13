@@ -31,7 +31,7 @@ export interface ActaSource {
   url: string | null;
   retrieved: string;
   /** The parser options the fixture needs (index.ts): the columnar layout, and whether bare incipits are printed. */
-  parse: { columnar: boolean; bareIncipits: boolean };
+  parse: { columnar: boolean; bareIncipits: boolean; fullLine?: 40 | 55 };
 }
 
 const VOLUME_URL = (vol: number, year: number, part?: 'I' | 'II') =>
@@ -47,17 +47,18 @@ const volume = (year: number, retrieved: string, extra: Partial<ActaSource> = {}
     ...extra,
   };
 };
-const index = (year: number, retrieved: string): ActaSource => ({
+const index = (year: number, retrieved: string, extra: Partial<ActaSource['parse']> = {}): ActaSource => ({
   key: `${year}`, year, volume: year - 1908, kind: 'index',
   file: `tools/fixtures/acta/aas-indice-${year}.txt`, url: null, retrieved,
-  parse: { columnar: false, bareIncipits: true },
+  parse: { columnar: false, bareIncipits: true, ...extra },
 });
 
 /**
  * Every source with a fixture, in volume order. The six sources of phase 2b-i (the
  * sample of the acta volumes spec §5), the twenty-six volumes of phase 2b-ii-a (AAS
- * 24-49, 1932-1957) and the nineteen of phase 2b-ii-b (AAS 51-69, 1959-1977; spec §9)
- * precede the ten annual index PDFs of phase 1.
+ * 24-49, 1932-1957), the nineteen of phase 2b-ii-b (AAS 51-69, 1959-1977; spec §9) and
+ * the twenty-four of phase 2b-ii-c (AAS 71-94, 1979-2002, with the index PDFs of 2010,
+ * 2011, 2013 and 2014) precede the ten annual index PDFs of phase 1.
  * AAS 9 (1917) part II is the *Codex Iuris Canonici* itself and carries no chronological
  * index (its one papal act, *Providentissima Mater Ecclesia*, is on the bulls shelf as
  * `mag:benedict-xv/providentissima-mater-1917`), so only part I has a fixture.
@@ -77,7 +78,25 @@ export const ACTA_SOURCES: readonly ActaSource[] = [
   // opens with Pius XII's last acts) to Paul VI (AAS 55, 1963, carries both).
   ...Array.from({ length: 1977 - 1959 + 1 }, (_, i) => volume(1959 + i, '2026-09-13')),
   volume(1978, '2026-09-13'),
+  // Phase 2b-ii-c (spec §9): AAS 71-94, the volumes of 1979-2002 -- John Paul II from his
+  // first full year -- and the index PDFs of 2010, 2011, 2013 and 2014 (Benedict XVI; the
+  // 2013 index carries Francis's first year too). AAS 75 (1983) is a double volume whose
+  // part II is the *Codex Iuris Canonici* of 1983 (355 pages: *Sacrae disciplinae leges* of
+  // 25 January 1983 at pp. VII-XIV, the Code, its index, and an appendix of corrigenda of
+  // 22 September 1983) with no chronological index, as AAS 9-II is the Code of 1917; only
+  // part I has a fixture, and every 1983 reference carries `part: "I"`. The index page
+  // names the 1983 parts after the year (`AAS-75-1983-I-ocr.pdf`), where 1917's come
+  // before it (`AAS-09-I-1917-ocr.pdf`): the URL is the page's, not a pattern's.
+  ...Array.from({ length: 1982 - 1979 + 1 }, (_, i) => volume(1979 + i, '2026-09-13')),
+  volume(1983, '2026-09-13', { part: 'I', url: 'https://www.vatican.va/archive/aas/documents/AAS-75-1983-I-ocr.pdf' }),
+  ...Array.from({ length: 2002 - 1984 + 1 }, (_, i) => volume(1984 + i, '2026-09-13')),
+  // The 2010 and 2011 index PDFs are set in a narrower column than 2012-2024 (their full
+  // lines run to 40-60 characters), so a page after one space closes a line of 40 (index.ts).
+  index(2010, '2026-09-13', { fullLine: 40 }),
+  index(2011, '2026-09-13', { fullLine: 40 }),
   index(2012, '2026-09-13'),
+  index(2013, '2026-09-13'),
+  index(2014, '2026-09-13'),
   ...[2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024].map((y) => index(y, '2026-09-12')),
 ];
 

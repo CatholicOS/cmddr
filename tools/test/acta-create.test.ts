@@ -369,6 +369,94 @@ describe('createFromActa on the volumes (acta volumes spec §5)', () => {
   });
 });
 
+describe('createFromActa on the volumes of 1979-2002 and the index PDFs of 2010-2014 (acta volumes spec §9, phase 2b-ii-c)', () => {
+  const jp2 = (over: Partial<ActaEntry>) => entry({
+    pope: 'Ioannes Paulus II', year: 1983, volume: 75, part: 'I', category: 'CONSTITUTIONES APOSTOLICAE', date: '1982-09-10',
+    toponym: 'SAMOA-PAGOPAGENSIS', incipit: 'Studiose quidem', description: 'Regio civili ratione «Samoa Americana» appellata a dioecesi Samoa-Apiana et Tokelauana distrahitur',
+    raw: '1982 Sept. 10 SAMOA-PAGOPAGENSIS. Studiose quidem. - Regio civili ratione / «Samoa Americana» appellata … 5', page: 5, ...over,
+  });
+  const jdoc = (over: Partial<DocumentRecord> & { id: string }) => doc({ issuerId: 'rp:john-paul-ii', ...over });
+
+  it('cites the 1983 part-I PDF by the name the index page gives it, with part I on the reference', () => {
+    const r = run([jp2({})], []);
+    expect(r.created[0]!.record).toMatchObject({
+      id: 'mag:john-paul-ii/studiose-quidem-1982', title: 'Samoa-Pagopagensis. Studiose quidem. Regio civili ratione «Samoa Americana» appellata a dioecesi Samoa-Apiana et Tokelauana distrahitur',
+      source: { url: 'https://www.vatican.va/archive/aas/documents/AAS-75-1983-I-ocr.pdf', shelf: 'aas/1983', retrieved: '2026-09-12' },
+      acta: { series: 'AAS', volume: 75, year: 1983, part: 'I', page: 5 },
+    });
+    // An index PDF of 2010-2014 cites null, as 2015-2024 do.
+    const b = run([entry({ pope: 'Benedictus XVI', year: 2010, volume: 102, date: '2008-10-19', page: 205, incipit: 'Coniuges christiani', quoted: true, description: 'Venerabilibus Dei Servis Ludovico Martin et Zélie Mariae Guérin Beatorum honores decernuntur' })], []);
+    expect(b.created[0]!.record.source).toEqual({ url: null, shelf: 'aas/2010', retrieved: '2026-09-12' });
+  });
+
+  it('holds an incipit the OCR split, set in capitals or opened with a J before a consonant, and lets the words A, E, O, I, È stand', () => {
+    const r = run([
+      jp2({ incipit: 'M ementote sermonis', page: 905, year: 1996, volume: 88, part: undefined, category: 'LITTERAE DECRETALES', date: '1995-05-21', toponym: null }),
+      jp2({ incipit: 'QUO maius', page: 597, date: '1983-02-10', toponym: 'ACAPUICANA' }),
+      jp2({ incipit: 'Jn vita eorum', page: 221, year: 1993, volume: 85, part: undefined, category: 'LITTERAE DECRETALES', date: '1991-11-17', toponym: null }),
+      jp2({ incipit: 'A Domino est', page: 750, year: 2013, volume: 105, part: undefined, category: 'LITTERAE APOSTOLICAE', date: '2011-05-15', toponym: null, pope: 'Benedictus XVI' }),
+      jp2({ incipit: 'E supremi', page: 6, date: '1982-09-11', toponym: null, category: 'LITTERAE APOSTOLICAE' }),
+      jp2({ incipit: 'È certo ben noto', page: 7, date: '1982-09-12', toponym: null, category: 'LITTERAE APOSTOLICAE' }),
+      jp2({ incipit: 'I rapidi progressi', page: 8, date: '1982-09-13', toponym: null, category: 'LITTERAE APOSTOLICAE' }),
+      // A lone capital before the dash of a double see: the OCR's fragment of *Tamalensis* (AAS 48 (1956) 862).
+      jp2({ toponym: 'S - KETAËNSIS (Navrongensis)', incipit: 'Semper fuit', page: 649, date: '1956-04-23', pope: 'Pius XII', year: 1956, volume: 48, part: undefined }),
+    ], []);
+    expect(r.held.map((h) => [h.entry.page, h.reason])).toEqual([[905, 'ocr-damaged'], [597, 'ocr-damaged'], [221, 'ocr-damaged'], [649, 'ocr-damaged']]);
+    expect(r.created.map((c) => c.record.id)).toEqual([
+      'mag:benedict-xvi/a-domino-est-2011', 'mag:john-paul-ii/e-supremi-1982', 'mag:john-paul-ii/e-certo-ben-noto-1982', 'mag:john-paul-ii/i-rapidi-progressi-1982',
+    ]);
+  });
+
+  it('holds the later printing of an act the Acta print twice (ACTA_REPRINTS), and an entry cited at two pages no row settles', () => {
+    // *Ibi vacabimus*: AAS 104 (2012) 482 the record, AAS 112 (2020) 479 a reprint; the same entry twice would otherwise collide.
+    const twice = [
+      entry({ pope: 'Benedictus XVI', year: 2012, volume: 104, page: 482, date: '2011-07-03', incipit: 'Ibi vacabimus', quoted: true, description: 'Venerabili Dei Servo Ioanni Scheffler, Beatorum honores decernuntur' }),
+      entry({ pope: 'Benedictus XVI', year: 2020, volume: 112, page: 479, date: '2011-07-03', incipit: 'Ibi vacabimus', quoted: true, description: 'Venerabili Servo Dei Ioanni Scheffler Beatorum honores decernuntur' }),
+    ];
+    const r = run(twice, []);
+    expect(r.created.map((c) => [c.record.id, c.record.acta!.year, c.record.acta!.page])).toEqual([['mag:benedict-xvi/ibi-vacabimus-2011', 2012, 482]]);
+    expect(r.held.map((h) => [h.entry.page, h.reason, h.note.slice(0, 70)])).toEqual([[479, 'reprint', 'the later printing of an act the Acta print twice; the citation of rec']]);
+    // *Deus caritas* at `138, 261` (the 2014 index): created at 138 because the row keys 261 to 138; the same
+    // entry with a page no row settles is held.
+    const dc = (page: number, alsoPages: number[]) => entry({ pope: 'Benedictus XVI', year: 2014, volume: 106, page, alsoPages, date: '2011-10-08', incipit: 'Deus caritas', quoted: true, description: 'Venerabili Servae Dei Mariae Janer Anglarill Beatorum honores decernuntur' });
+    expect(run([dc(138, [261])], []).created.map((c) => c.record.acta!.page)).toEqual([138]);
+    const unsettled = run([dc(138, [300])], []);
+    expect(unsettled.created).toEqual([]);
+    expect(unsettled.held.map((h) => [h.reason, h.note.slice(0, 50)])).toEqual([['reprint', 'the index cites the act at pages 138, 300; the cit']]);
+  });
+
+  it('holds a possible identity for an entry printing neither incipit nor toponym beside a same-date record of the genre', () => {
+    // AAS 91 (1999) 849, `Nova statuta Academiarum theologicarum approbantur`, beside the shelf's *Inter munera academiarum*.
+    const r = run([jp2({ year: 1999, volume: 91, part: undefined, page: 849, category: 'LITTERAE APOSTOLICAE MOTU PROPRIO DATAE', date: '1999-01-28', incipit: null, toponym: null, description: 'Nova statuta Academiarum theologicarum approbantur' })],
+      [jdoc({ id: 'mag:john-paul-ii/inter-munera-academiarum-1999', date: '1999-01-28', incipit: 'Inter Munera Academiarum', title: 'Inter Munera Academiarum' })]);
+    expect(r.created).toEqual([]);
+    expect(r.held.map((h) => [h.reason, h.candidates.map((c) => c.id)])).toEqual([['possible-identity', ['mag:john-paul-ii/inter-munera-academiarum-1999']]]);
+    // With an incipit, the same shelf record is an ordinary class mismatch or nothing.
+    const withIncipit = run([jp2({ year: 1999, volume: 91, part: undefined, page: 849, category: 'LITTERAE APOSTOLICAE MOTU PROPRIO DATAE', date: '1999-01-28', incipit: 'Inter munera', toponym: null, description: 'Nova statuta' })],
+      [jdoc({ id: 'mag:john-paul-ii/alia-1999', date: '1999-01-28', incipit: 'Alia res', title: 'Alia res' })]);
+    expect(withIncipit.created).toHaveLength(1);
+  });
+
+  it('sees through the shelf\'s parenthesised incipit in the guard: the same incipit elsewhere in the year holds', () => {
+    // The shelf's `Constat Christifideles (Sanctus Franciscus Assisiensis)` of 2 August 1982 against the index's
+    // *Constat Christifideles* of 11 August 1982 (AAS 74 (1982) 1105).
+    const r = run([jp2({ year: 1982, volume: 74, part: undefined, page: 1105, category: 'LITTERAE APOSTOLICAE', date: '1982-08-11', incipit: 'Constat Christifideles', toponym: null, description: 'Beata Maria Virgo Regina' })],
+      [jdoc({ id: 'mag:john-paul-ii/constat-christifideles-sanctus-franciscus-assisiensis-1982', date: '1982-08-02', incipit: 'Constat Christifideles (Sanctus Franciscus Assisiensis)', title: 'Constat Christifideles (Sanctus Franciscus Assisiensis)' })]);
+    expect(r.created).toEqual([]);
+    expect(r.held.map((h) => h.reason)).toEqual(['same-incipit-elsewhere']);
+  });
+
+  it('holds an Epistula and a decretal of Benedict XVI (no letters or bulls shelf), and creates a decretal of John Paul II (bulls harvested)', () => {
+    const r = run([
+      jp2({ year: 2011, volume: 103, part: undefined, page: 168, category: 'LITTERAE DECRETALES', date: '2009-04-26', incipit: 'Accipite armaturam', quoted: true, toponym: null, description: 'Quibus beato Nonio Sanctorum honores decernuntur', pope: 'Benedictus XVI' }),
+      jp2({ year: 1994, volume: 86, part: undefined, page: 305, category: 'LITTERAE DECRETALES', date: '1992-05-31', incipit: 'Notum feci vobis', quoted: true, toponym: null, description: 'Beatus Claudius La Colombière Sanctus renuntiatur' }),
+      jp2({ year: 1980, volume: 72, part: undefined, page: 5, category: 'EPISTULAE', date: '1980-01-02', incipit: null, toponym: null, description: 'Ad Patriarchas' }),
+    ], []);
+    expect(r.created.map((c) => c.record.id)).toEqual(['mag:john-paul-ii/notum-feci-vobis-1992']);
+    expect(r.held.map((h) => [h.entry.page, h.reason])).toEqual([[168, 'shelf-not-harvested'], [5, 'shelf-not-harvested']]);
+  });
+});
+
 describe('the created-category table', () => {
   it('names only categories of categories.ts with exactly one class, and every harvested category is created or explained', () => {
     for (const id of Object.keys(CREATED_CATEGORIES)) {

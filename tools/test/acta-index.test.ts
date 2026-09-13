@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { parseActaIndex, splitEntryText, joinLines, romanToInt, parseRate, harvestedParseRate, NESTED_TOC_HEADINGS } from '../src/acta/index.js';
+import { categoryForHeading } from '../src/acta/categories.js';
 
 /** Wrap an excerpt of the chronological index in the title page and part heading it needs. */
 const index = (body: string, head = '(An. 2023 et Vol. CXV)') => `ACTA  APOSTOLICAE  SEDIS
@@ -1038,6 +1039,313 @@ novus Vicariatus constituitur, « Kinduensis » nuncupandus 647
       expect(r.unmappedPopes, String(year)).toEqual([]);
       expect(r.popeHeadings.length, String(year)).toBe([1959, 1960, 1963, 1964].includes(year) ? 2 : 1);
       expect(harvestedParseRate(r.stats)!, String(year)).toBeGreaterThanOrEqual(0.95);
+    }
+  });
+});
+
+describe('parseActaIndex on the volumes of 1979-2002 and the index PDFs of 2010-2014 (acta volumes spec §9, phase 2b-ii-c)', () => {
+  const jp2 = 'I - ACTA IOANNIS PAULI PP. II';
+  /** An excerpt of a 2010-2011 index PDF, whose chronological index the parser finds by its title. */
+  const index2010 = (body: string, pope = 'I – ACTA BENEDICTI XVI') => `An. et vol. CII 31 Decembris 2010 (Index generalis)
+ACTA APOSTOLICAE SEDIS
+I
+INDEX GENERALIS ACTORUM
+(An.etvol.CII )
+${pope}
+Homiliae: 17, 21.
+\fIndex generalis actorum 959II
+INDEX DOCUMENTORUM
+CHRONOLOGICO ORDINE DIGESTUS
+${pope}
+${body}
+`;
+
+  it('reads the pope part numbered with a full stop and no dash, the em dash, the OCR `Il`, and Paul VI\'s act under EX ACTIBUS', () => {
+    // AAS 86 (1994) 1028 `I. ACTA IOANNIS PAULI PP. II`; AAS 87 (1995) `I — ACTA …`; AAS 80 (1988) `PP. Il`;
+    // AAS 71 (1979) 1641 `EX ACTIBUS PAULI PP. VI` / `LITTERAE APOSTOLICAE` at the end of John Paul II's part.
+    for (const heading of ['I. ACTA IOANNIS PAULI PP. II', 'I — ACTA IOANNIS PAULI PP. II', 'I - ACTA IOANNIS PAULI PP. Il']) {
+      const r = parseActaIndex(volume(`                               I - EPISTULA APOSTOLICA
+1994 Maii 22 Ordinatio sacerdotalis - De Sacerdotali ordinatione viris tantum
+                        reservanda 545`, heading), { year: 1994, volume: 86, ...columnar });
+      expect(r.entries.map((e) => [e.pope, e.page]), heading).toEqual([['Ioannes Paulus II', 545]]);
+      expect(r.unmappedPopes, heading).toEqual([]);
+    }
+    const r = parseActaIndex(volume(`                                    XIII - NUNTII TELEGRAPHICI
+1979 Mart. 23 Ad Georgium Singha 204
+                                     EX ACTIBUS PAULI PP. VI
+                                               LITTERAE APOSTOLICAE
+1978 Mai. 7 Quae per caritatem. - Venerabili Servae Dei Mariae Henricae
+                                      Dominici, Beatorum honores decernuntur 1617`, jp2), { year: 1979, volume: 71, ...columnar });
+    expect(r.entries.map((e) => [e.pope, e.category, e.incipit, e.page])).toEqual([
+      ['Ioannes Paulus II', 'NUNTII TELEGRAPHICI', null, 204], ['Paulus VI', 'LITTERAE APOSTOLICAE', 'Quae per caritatem', 1617],
+    ]);
+    expect(r.popeHeadings).toEqual([jp2, 'EX ACTIBUS PAULI PP. VI']);
+  });
+
+  it('skips the 2013 index\'s SEDIS VACANTIS ACTA and CONCLAVE as parts, and reads both popes\' parts', () => {
+    const r = parseActaIndex(`ACTA  APOSTOLICAE  SEDIS
+INDEX GENERALIS ACTORUM
+(An. 2013 et Vol. CV)
+I – ACTA BENEDICTI XVI
+\fII
+INDEX DOCUMENTORUM
+CHRONOLOGICO ORDINE DIGESTUS
+I – ACTA BENEDICTI XVI
+I – DECLARATIO
+2013 Febr. 10 De muneris Episcopi Romae, Successoris Sancti Petri, abdi-
+catione   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  239
+II – SEDIS VACANTIS ACTA
+Instrumenta confecta:
+2013 Febr. 28 I. Apposizione dei sigilli alla porta principale   .  .  .  .  336
+III – CONCLAVE
+2013 Mart. 11 Obsignatio locorum   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . 358
+IV – ACTA FRANCISCI PP.
+I – PONTIFICATUS EXORDIA
+2013 Mart. 14 Prima Hom. S.P. concelebrantis cum Cardinalibus .  .  .  .  . 365
+III – LITTERAE ENCYCLICAE
+2013 Iun. 28 Lumen Fidei  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . 555
+`, { year: 2013 });
+    expect(r.entries.map((e) => [e.pope, e.category, e.page])).toEqual([
+      ['Benedictus XVI', 'DECLARATIO', 239], ['Franciscus', 'PONTIFICATUS EXORDIA', 365], ['Franciscus', 'LITTERAE ENCYCLICAE', 555],
+    ]);
+    expect(r.skippedParts).toEqual(['II – SEDIS VACANTIS ACTA', 'III – CONCLAVE']);
+    expect(r.unseenHeadings).toEqual([]);
+  });
+
+  it('reads the journeys\' headings by shape, with the OCR\'s Ex and PEBAGBAT, and a heading numbered with a full stop', () => {
+    // AAS 74 (1982) 1330, AAS 80 (1988) 1836, AAS 84 (1992) 1220 (`ex`), AAS 89 (1997) 895; AAS 91 (1999) 1204 `I. LITTERAE ENCYCLICAE`.
+    const r = parseActaIndex(volume(`                                    I. LITTERAE ENCYCLICAE
+1998 Sept. 14 Fides et ratio. - Ad Episcopos 5
+                                   XVI - ITINERA APOSTOLICA
+                              EX HABITIS DUM SUMMUS PONTIFEX AFRICAM PERAGRAT
+                                        DELECTAE ALLOCUTIONES
+1982 Febr. 12 Lagi, ad Nationum legatos 550
+                              Ex HABITIS DUM SUMMUS PONTIFEX URUQUARIAM, CHILIAM ET ARGENTINAM
+                                        PEBAGBAT DETECTAE ALLOCUTIONES
+1987 Apr. 1 Montevidei, ad nationis moderatores 1090
+                              ex HABITIS DUM SUMMUS PONTIFEX POLONIAM
+                                    PERAGRAT DELECTAE ALLOCUTIONES
+1991 Iun. 2 Intra fines dioecesis Premisliensis habita 356
+                                   XII - ITINERA APOSTOLICA
+             SUMMUS PONTIFEX HAS NATIONES INVISIT:
+1997 Apr. 12-13 Bosniam 311`, jp2), { year: 1999, volume: 91, ...columnar });
+    expect(r.entries.map((e) => [e.category, e.page])).toEqual([
+      ['LITTERAE ENCYCLICAE', 5],
+      // The first journey's sub-heading follows the known `ITINERA APOSTOLICA` and is consumed as its subtitle; the next journeys' headings stand alone.
+      ['ITINERA APOSTOLICA', 550],
+      ['EX HABITIS DUM SUMMUS PONTIFEX URUQUARIAM, CHILIAM ET ARGENTINAM PEBAGBAT DETECTAE ALLOCUTIONES', 1090],
+      ['EX HABITIS DUM SUMMUS PONTIFEX POLONIAM PERAGRAT DELECTAE ALLOCUTIONES', 356],
+    ]);
+    expect(r.unseenHeadings).toEqual([]);
+    expect(r.entries.map((e) => categoryForHeading(e.category)?.id)).toEqual(['Litterae Encyclicae', 'Itinera Apostolica', 'Itinera Apostolica', 'Itinera Apostolica']);
+    // `1997 Apr. 12-13 Bosniam` is dated to a span: not an entry, reported.
+    expect(r.defects.some((d) => d.message.includes('Bosniam'))).toBe(true);
+  });
+
+  it('reads a page above 1,500 (AAS 80 has 1,868 pages), the OCR months Iuli, Oec and Mal, and the dittos yf, jff and y?', () => {
+    const r = parseActaIndex(volume(`                                    I - EPISTULAE APOSTOLICAE
+1988 Ian. 25 Euntes in mundum universum. - Ob expletum millennium 935
+yf Mai. 22 Litterae Encyclicae. - Ad personas consecratas 1639
+jff Aug. 15 Mulieris dignitatem. - De dignitate et vocatione mulieris 1653
+                         II - LITTERAE APOSTOLICAE MOTU PROPRIO DATAE
+  » Iuli. 2 Ecclesia Dei. - Commissio quaedam instituitur 1495
+                                    III - LITTERAE APOSTOLICAE
+  » Oec. 11 Qui loco Petri. - In Manilensi archidioecesi templum 367
+  » Mal. 22 « Il tempo è compiuto ». - Em.mo P. D. Praesidi Consilii 1292
+            » y? 30 REGIO CAMPANA. Quamquam Ecclesia. - Campanae regionis 562`, jp2), { year: 1988, volume: 80, ...columnar });
+    expect(r.entries.map((e) => [e.date, e.page])).toEqual([
+      ['1988-01-25', 935], ['1988-05-22', 1639], ['1988-08-15', 1653], ['1988-07-02', 1495], ['1988-12-11', 367], ['1988-05-22', 1292], ['1988-05-30', 562],
+    ]);
+    expect(r.entries[6]!.toponym).toBe('REGIO CAMPANA');
+    // A four-digit number of the century is still a year, never a page: the line stays open.
+    const y = parseActaIndex(volume(`                                    III - LITTERAE APOSTOLICAE
+1988 Ian. 25 Euntes in. - Ob expletum millennium a Baptismo anno 1988
+                            Regionis Rus' Kiovensis 935`, jp2), { year: 1988, volume: 80, ...columnar });
+    expect(y.entries.map((e) => e.page)).toEqual([935]);
+  });
+
+  it('leaves a year one digit from two years of the volume\'s span unprinted, and drops the numeral numbering the acts of one heading', () => {
+    // AAS 76 (1984) 1108-1109: `1988 » » II. Beato Leopoldo Mandic"` under `1982 Oct. 10 I. Beato Maximiliano Mariae Kolbe`.
+    const r = parseActaIndex(volume(`                                    IV - LITTERAE DECRETALES
+1982 Oct. 10 I. Beato Maximiliano Mariae Kolbe, Sacerdoti professi Ordi­
+                          nis Fratrum Minorum Conventualium, Sanctorum honores
+                          decernuntur 5
+1988 » » II. Beato Leopoldo Mandic" a Castro Novo, Sanctorum caelitum
+                          honores decernuntur 937
+                                    II - EPISTULAE APOSTOLICAE
+1984 Febr. 11 I. « Salvifici Doloris ». - Ad totius Catholicae Ecclesiae Episcopos 201`, jp2), { year: 1984, volume: 76, ...columnar });
+    expect(r.entries.map((e) => [e.date, e.incipit, e.description.slice(0, 22)])).toEqual([
+      ['1982-10-10', null, 'Beato Maximiliano Mari'], ['????-10-10', null, 'Beato Leopoldo Mandic"'], ['1984-02-11', 'Salvifici Doloris', 'Ad totius Catholicae E'],
+    ]);
+    expect(r.entries[1]!.dateNote).toMatch(/the year is not printed/);
+  });
+
+  it('reads a margin-noisy page (AAS 89 (1997) 890) without the scan\'s marks, and leaves a mark after a page elsewhere reported', () => {
+    const noisy = `                                    VI - CONSTITUTIONES APOSTOLICAE
+1996 Iun. 14 De universis. - A dioecesi Livingstonensi in Zambia qui- *
+                       busdam distractis territoriis, nova conditur Monguen-
+                       sis dioecesis 673 \\
+  » » 28 Cum ad aeternam. - In Africa Media nova conditur dioe­
+                       cesis Kagiensis-Bandorensis 748 :
+                                                                                                     è
+                                                                                                     S'
+                      VII - LITTERAE APOSTOLICAE [
+                                                                                                     i i
+1995 Maii 12 «Docete omnes». - Venerabili Dei Servo Ianuario Mariae ;
+                       Sarnelli Beatorum honores decernuntur .... 157 j
+  » Oct. 1 « Beati pauperes ». - Venerabili Servo Dei Petro Casani I
+                       Beatorum honores decernuntur 19 ^
+  » » » Ecclesia primo. - Venerabilibus Servis Dei Angelae a San- §
+                       cto Ioseph Lloret Marti et XVI Sociis martyribus f
+                       Beatorum honores decernuntur 21 j
+1996 Mart. 17 « Euntes in ». — Venerabili Servo Dei Danieli Comboni I
+                       Beatorum honores decernuntur 10 I`;
+    const r = parseActaIndex(volume(noisy, jp2), { year: 1997, volume: 89, ...columnar });
+    expect(r.entries.map((e) => [e.category, e.incipit, e.page])).toEqual([
+      ['CONSTITUTIONES APOSTOLICAE', 'De universis', 673], ['CONSTITUTIONES APOSTOLICAE', 'Cum ad aeternam', 748],
+      ['LITTERAE APOSTOLICAE', 'Docete omnes', 157], ['LITTERAE APOSTOLICAE', 'Beati pauperes', 19], ['LITTERAE APOSTOLICAE', 'Ecclesia primo', 21], ['LITTERAE APOSTOLICAE', 'Euntes in', 10],
+    ]);
+    expect(r.entries[4]!.description).toBe('Venerabilibus Servis Dei Angelae a Sancto Ioseph Lloret Marti et XVI Sociis martyribus Beatorum honores decernuntur');
+    expect(r.entries[5]!.description).toBe('Venerabili Servo Dei Danieli Comboni Beatorum honores decernuntur');
+    expect(r.unseenHeadings).toEqual([]);
+    // Alone on a quiet page, `5 M` (AAS 42 (1950) 212) is still the OCR's page: the entry is reported without one.
+    const quiet = parseActaIndex(volume(`                                    III - LITTERAE APOSTOLICAE
+1949 Dec. 8 Quae Deo. - Ecclesia Sancti Iosephi, privilegiis Basilicae
+                                  Minoris honestatur 5 M
+1950 Ian. 6 Alia quaedam. - Ecclesia 27`, jp2), { year: 1950, volume: 42, ...columnar });
+    expect(quiet.entries.map((e) => e.page)).toEqual([27]);
+    expect(quiet.stats.withoutPage).toBe(1);
+  });
+
+  it('consumes the annexes and undated statutes listed under an act as sub-items, and closes the act on its own page', () => {
+    // AAS 86 (1994) 1029; AAS 28 (1936) 40 (*In multis solaciis* at 421, its statutes at 427 and 437); the 2011 index.
+    const r = parseActaIndex(volume(`                         IV - LITTERAE APOSTOLICAE MOTU PROPRIO DATAE
+1994 Ian. 1 Socialium Scientiarum. - Pontificia Academia Scientiarum So­
+                        cialium constituitur . . . . . 209
+  » » » Adnexum: Pontificiae Academiae Scientiarum Socialium ordi­
+                        natio 213
+  » Sept. 30 La sollecitudine. - Ultima ordinatio Officii Laboris Apostolicae
+                        Sedis foras datur . 841
+  » » » Adnexum I: Albo degli Avvocati presso il Collegio di conciliazio­
+                        ne e arbitrato dell'Ufficio del Lavoro della Sede Apostolica
+                         (ULSA) 851
+1936 Oct. 28 In multis solaeiis. - De Pontificia Academia Scientiarum. 421
+                       Statuta Pontificiae Academiae Scientiarum 427
+                       Statuto delia Pont. Accademia delle Scienze . . . . . . 437`, jp2), { year: 1994, volume: 86, ...columnar });
+    expect(r.entries.map((e) => [e.incipit, e.page])).toEqual([['Socialium Scientiarum', 209], ['La sollecitudine', 841], ['In multis solaeiis', 421]]);
+    expect(r.stats).toMatchObject({ entries: 3, pageLines: 3, harvestedPageLines: 3, translations: 4, withoutPage: 0 });
+    expect(r.defects).toEqual([]);
+  });
+
+  it('never takes the OCR\'s doubled year at the head of a line for a page, and reads a 9 in the year column before two dittos as the ditto', () => {
+    // AAS 78 (1986) 1333 ` 1986 1986   Mart.  10  IAMMUENSIS`; AAS 48 (1956) 862 ` 9 » » TAMALENSIS - KETAËNSIS (Navrongensis). Semper fuit.`
+    const r = parseActaIndex(volume(`                                    VI - CONSTITUTIONES APOSTOLICAE
+1986 Febr. 15 RONDONOPOLITANA. Laetantes omnino. - Praelatura Rondonopoli­
+                            tana ad gradum dioecesis attollitur 703
+ 1986 1986   Mart.          10     IAMMUENSIS-SRINAGARENSIS. Qui Sanctissimi Numinis. - Ap. Prae­
+                                            fecturae Iammuensi et Kashmirensi iam iuridicialis forma
+                                            dioecesis imponitur 903
+  » Apr. 23 KONGOLOENSIS (Kinduensis). Apostolica Sedes. - Ab Apostolicis
+                            Vicariatibus quaedam separantur territoria 647
+ 9 » » TAMALENSIS - KETAËNSIS (Navrongensis). Semper fuit. - A Dioe­
+                           cesibus Tamalensi et Ketaënsi quaedam territoria detrahuntur 649`, jp2), { year: 1986, volume: 78, ...columnar });
+    expect(r.entries.map((e) => [e.date, e.incipit, e.page])).toEqual([
+      ['1986-02-15', 'Laetantes omnino', 703], ['1986-03-10', 'Qui Sanctissimi Numinis', 903], ['1986-04-23', 'Apostolica Sedes', 647], ['1986-04-23', 'Semper fuit', 649],
+    ]);
+  });
+
+  it('reads the 2010-2011 index PDFs: spaced digits, the doubled ditto, a glued header and heading, a full stop after the day, a narrow full line', () => {
+    const r = parseActaIndex(index2010(`I – ADHORTATIO APOSTOLICA POSTSYNODALIS
+2010 Sept. 30 Verbum Domini ................ 6 8 1
+II – LITTERAE DECRETALES
+2008 Oct. 12 « Animadverto me oblationem ». - Quibus Beatae Alfonsae ab
+Immaculata Conceptione Sanctorum honores decernuntur . . . 521
+»» » « Gaudium et spes ». - Quibus Beatae Narcissae a Iesu Mar-
+tillo Mora´n Sanctorum honores decernuntur .... 8 6 8
+» Oct. 18 Ad Sacrorum Alumnos Sacerdotali exeunte Anno .... 7 9 3IV – LITTERAE APOSTOLICAE « MOTU PROPRIO » DATAE
+2009 Oct. 26 Omnium in mentem . - Quaedam in Codice Iuris Canonici
+immutantur ................ 8
+V – LITTERAE APOSTOLICAE SUB PLUMBO DATAE
+2010 Nov. 20. S. Maria Odigitria Siculorum, fit Titulus Cardinalicius
+Presbyteralis ................ 8 7 5
+VI – CONSTITUTIONES APOSTOLICAE
+2010 Ian. 20 Cum esset petitum. - In Aethiopia novus conditur Vicariatus
+Apostolicus Hosannensis ........... 1 3 7
+»» 3 0 Missionalem Ecclesiae. - In Timoria Orientali nova conditur
+dioecesis Malianensis appellanda ........ 1 3 8
+\fIndex documentorum chronologico ordine digestus 9612010 Maii 1 Divini Salvatoris . - Vicariatus Apostolicus conditur in
+Archipelago Comorensi appellandus ................ 3 1 3
+VII – LITTERAE APOSTOLICAE
+» » » « Misericordiae Domini ». - Venerabili Servo Dei Euphrasio
+a Iesu Infante, Beatorum honores decernuntur 444
+» Oct. 15 Internationali adveniente Die Alimoniae dicato, anno 2010 846
+\f962 Acta Apostolicae Sedis – Commentarium OfficialeVIII – LITTERAE PASTORALES
+2010 Mart. 19 Litterae Pastorales ad christifideles catholicos in Hibern ia 209`), { year: 2010, volume: 102, fullLine: 40 });
+    expect(r.entries.map((e) => [e.date, e.category, e.page])).toEqual([
+      ['2010-09-30', 'ADHORTATIO APOSTOLICA POSTSYNODALIS', 681],
+      ['2008-10-12', 'LITTERAE DECRETALES', 521], ['2008-10-12', 'LITTERAE DECRETALES', 868], ['2008-10-18', 'LITTERAE DECRETALES', 793],
+      ['2009-10-26', 'LITTERAE APOSTOLICAE «MOTU PROPRIO» DATAE', 8],
+      ['2010-11-20', 'LITTERAE APOSTOLICAE SUB PLUMBO DATAE', 875],
+      ['2010-01-20', 'CONSTITUTIONES APOSTOLICAE', 137], ['2010-01-30', 'CONSTITUTIONES APOSTOLICAE', 138], ['2010-05-01', 'CONSTITUTIONES APOSTOLICAE', 313],
+      ['2010-05-01', 'LITTERAE APOSTOLICAE', 444], ['2010-10-15', 'LITTERAE APOSTOLICAE', 846],
+      ['2010-03-19', 'LITTERAE PASTORALES', 209],
+    ]);
+    expect(r.entries[2]!.incipit).toBe('Gaudium et spes');
+    expect(r.unseenHeadings).toEqual([]);
+    expect(parseRate(r.stats)).toBe(1);
+    // Without `fullLine: 40` the two full lines of the narrow column are not read as page lines (as 2012-2024 print none so).
+    const wide = parseActaIndex(index2010(`VII – LITTERAE APOSTOLICAE
+» » » « Misericordiae Domini ». - Venerabili Servo Dei Euphrasio
+a Iesu Infante, Beatorum honores decernuntur 444
+» Oct. 15 Internationali adveniente Die Alimoniae dicato, anno 2010 846`.replace('» » »', '2007 Oct. 28')), { year: 2010, volume: 102 });
+    expect(wide.entries).toHaveLength(0);
+  });
+
+  it('reads an act the index cites at two pages, keeping the first as the page and the rest as alsoPages', () => {
+    // The 2014 index, AAS 106 (2014) 1083: *Deus caritas*, printed at 138 and again at 261.
+    const r = parseActaIndex(index(`VII – LITTERAE APOSTOLICAE
+ »  Oct. 8 « Deus caritas ». – Venerabili Servae Dei Mariae Janer Angla-
+rill Beatorum honores decernuntur 138, 261
+ »  » 23 « Secundum eum ». – Venerabili Dei Servo Iustino Mariae Russolillo
+caelitum Beatorum tribuitur dignitas .  .  .  .  .  .  .  .  .  .  142`.replace(' »  Oct. 8', '8 Oct. 2011'), '(An. 2014 et Vol. CVI)'), { year: 2014 });
+    expect(r.entries.map((e) => [e.incipit, e.page, e.alsoPages])).toEqual([['Deus caritas', 138, [261]], ['Secundum eum', 142, undefined]]);
+  });
+
+  it('drops a stray mark the OCR set inside the guillemets, and keeps the unprinted-year marker whole', () => {
+    // AAS 81 (1989) 1397 `«.Deus tantum »`; the `????` a broken year leaves (AAS 43 (1951) `1ÍS50 Ian. 29`).
+    const r = parseActaIndex(volume(`                                    III - LITTERAE DECRETALES
+1989 Oct. 2 «.Deus tantum ». - Beata Magdalena de Canossa Sancta esse
+                              decernitur 1001
+                                    IV - LITTERAE APOSTOLICAE
+1ÍS50 Ian. 29 Benedixisti, Domine. - Basilicae Minoris honoribus 71
+  » » 30 In finibus. - Paroeciale Templum 73`, jp2), { year: 1989, volume: 81, ...columnar });
+    expect(r.entries.map((e) => [e.date, e.incipit, e.quoted])).toEqual([
+      ['1989-10-02', 'Deus tantum', true], ['????-01-29', 'Benedixisti, Domine', false], ['????-01-30', 'In finibus', false],
+    ]);
+  });
+
+  it('parses every fixture of 1979-2002 and 2010-2014 with no unseen heading and no unmapped pope, above 95 % over the harvested categories except 1988', () => {
+    // AAS 80 (1988) reads at 91.1 % over the harvested categories: its text layer drops the text of eight messages under
+    // *Nuntii scripto dati* and *Nuntii televisifici* (pp. 1834-1835) and prints their date and page alone, so the lines
+    // end in a page and open no entry -- a loss of the file, named here, not a shape the parser lacks. The overall rate
+    // falls below 95 % in seven sources for the journeys, the consistories' items and the 2013 index's inaugural ceremonies.
+    const sources = [...Array.from({ length: 24 }, (_, i) => 1979 + i), 2010, 2011, 2013, 2014];
+    for (const year of sources) {
+      const vol = year - 1908;
+      const file = year <= 2002 ? `tools/fixtures/acta/aas-${vol}-${year}${year === 1983 ? '-I' : ''}.txt` : `tools/fixtures/acta/aas-indice-${year}.txt`;
+      const r = parseActaIndex(readFileSync(file, 'utf8'), year <= 2002
+        ? { year, volume: vol, ...(year === 1983 ? { part: 'I' as const } : {}), columnar: true }
+        : { year, volume: vol, ...([2010, 2011].includes(year) ? { fullLine: 40 as const } : {}) });
+      expect(r.unseenHeadings, String(year)).toEqual([]);
+      expect(r.unmappedPopes, String(year)).toEqual([]);
+      expect(r.popeHeadings.length, String(year)).toBe([1979, 2013, 2014].includes(year) ? 2 : 1);
+      if (year === 1988) {
+        expect(harvestedParseRate(r.stats)!).toBeGreaterThanOrEqual(0.91);
+        expect(r.stats.harvestedPageLines - r.stats.harvestedEntries).toBe(8);
+      } else {
+        expect(harvestedParseRate(r.stats)!, String(year)).toBeGreaterThanOrEqual(0.95);
+      }
+      if (year === 1983) expect(r.entries.every((e) => e.part === 'I'), '1983').toBe(true);
     }
   });
 });

@@ -348,9 +348,9 @@ for (const [issuer, docs] of byIssuer) {
 }
 
 // The AAS reference (acta reference spec §4.3; acta volumes spec §5): every entry of the
-// index fixtures (tools/fixtures/acta/: the annual *Index generalis* PDFs of 2012 and
+// index fixtures (tools/fixtures/acta/: the annual *Index generalis* PDFs of 2010-2014 and
 // 2015-2024 and the chronological-index pages of the sample volumes 1909-1978 and of the
-// volumes of 1932-1957 and 1959-1977, listed in ACTA_SOURCES) in a harvested category is
+// volumes of 1932-1957, 1959-1977 and 1979-2002, listed in ACTA_SOURCES) in a harvested category is
 // matched to a document by issuer, date and
 // incipit, and the match writes `acta` on it. The join runs
 // after every id is final, so the summary below names the ids the report will name. It
@@ -383,6 +383,13 @@ for (const [year, parsed] of acta.parsed) {
     );
   }
   for (const e of r.unknownPope) console.warn(`AAS ${e.year}:${e.page}: no issuer for pope heading '${e.pope}'`);
+  for (const sp of r.sharedPages) {
+    console.warn(
+      `AAS page ${sp.page} is cited by ${sp.matches.map((m) => m.documentId).join(' and ')} and is not curated in ACTA_SHARED_PAGES; `
+      + 'neither reference is written (one page opens one act, invariant 25)',
+    );
+  }
+  for (const e of r.reprints) console.log(`AAS ${e.year}:${e.page} is the later printing of an act printed twice (ACTA_REPRINTS); not a claim`);
 }
 
 // AAS-only documents (AAS-only documents spec §2-§6): the entries the join left

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { matchActa, shiftDate, toponymStems, titleHasToponym, titleHasToponymInner, titleIsToponym } from '../src/acta/match.js';
+import { matchActa, citedAt, incipitSlug, shiftDate, toponymStems, titleHasToponym, titleHasToponymInner, titleIsToponym } from '../src/acta/match.js';
 import type { ActaEntry } from '../src/acta/index.js';
 import type { DocumentRecord } from '../src/types.js';
 
@@ -183,6 +183,67 @@ describe('matchActa', () => {
     );
     expect(r.matches.map((m) => m.documentId)).toEqual(['mag:pius-xi/quadragesimo-anno-1931']);
     expect(matchActa([entry({ pope: 'LEONIS XIII', category: 'LITTERAE ENCYCLICAE', date: '1891-05-15' })], []).unknownPope).toHaveLength(1);
+  });
+});
+
+describe('matchActa on the volumes of 1979-2002 (phase 2b-ii-c)', () => {
+  it('compares an incipit with the shelf\'s trailing parenthesis dropped (incipitSlug), on both sides', () => {
+    expect(incipitSlug('Tanta est (Episcopus Ipialensis)')).toBe('tanta-est');
+    expect(incipitSlug('Constat Christifideles («Nossa Senhora da Luz»)')).toBe('constat-christifideles');
+    expect(incipitSlug('Caritas Christi (Ludovico a Casaurea)')).toBe('caritas-christi');
+    expect(incipitSlug('Qui a pueris')).toBe('qui-a-pueris');
+    const docs = [
+      doc({ id: 'mag:john-paul-ii/tanta-est-episcopus-ipialensis-1981', issuerId: 'rp:john-paul-ii', incipit: 'Tanta est (Episcopus Ipialensis)', title: 'Tanta est (Episcopus Ipialensis)', date: '1981-02-18', characteristics: [] }),
+      doc({ id: 'mag:john-paul-ii/quod-ait-1981', issuerId: 'rp:john-paul-ii', incipit: 'Quod ait', title: 'Quod ait', date: '1981-02-18', characteristics: [] }),
+    ];
+    const r = matchActa([entry({ pope: 'Ioannes Paulus II', category: 'LITTERAE APOSTOLICAE', incipit: 'Tanta est', date: '1981-02-18', year: 1981, volume: 73, page: 4 })], docs);
+    expect(r.matches.map((m) => [m.documentId, m.by])).toEqual([['mag:john-paul-ii/tanta-est-episcopus-ipialensis-1981', 'incipit']]);
+  });
+
+  it('re-points a two-page entry to the page a corrigendum keyed by its first page cites, instead of holding it (citedAt)', () => {
+    // The 2014 index cites one act at `138, 261`; a corrigendum keyed AAS:106:138 whose
+    // citation of record is AAS:106:261 means the act is cited at 261, and nothing is a reprint.
+    const two = entry({ pope: 'Benedictus XVI', category: 'LITTERAE APOSTOLICAE', incipit: 'Deus caritas', date: '2011-10-08', year: 2014, volume: 106, page: 138, alsoPages: [261] });
+    const row = { kind: 'corrigendum' as const, citationOf: 'AAS:106:261', indexLines: ['a', 'b'] as const, evidence: 'test' };
+    const cited = citedAt(two, { 'AAS:106:138': row });
+    expect(cited.reprint).toBe(false);
+    expect(cited.entry.page).toBe(261);
+    expect(cited.entry.alsoPages).toBeUndefined();
+    // A row keyed by the entry's page whose citation is another entry's page: a reprint, as before.
+    expect(citedAt(two, { 'AAS:106:138': { ...row, citationOf: 'AAS:104:482' } })).toEqual({ entry: two, reprint: true });
+    // No row: untouched.
+    expect(citedAt(two, {})).toEqual({ entry: two, reprint: false });
+  });
+
+  it('lists the later printing of an act printed twice as a reprint, never a claim', () => {
+    const docs = [doc({ id: 'mag:benedict-xvi/ibi-vacabimus-2011', issuerId: 'rp:benedict-xvi', incipit: 'Ibi vacabimus', date: '2011-07-03', characteristics: [] })];
+    const r = matchActa([
+      entry({ pope: 'Benedictus XVI', category: 'LITTERAE APOSTOLICAE', incipit: 'Ibi vacabimus', date: '2011-07-03', year: 2012, volume: 104, page: 482 }),
+      entry({ pope: 'Benedictus XVI', category: 'LITTERAE APOSTOLICAE', incipit: 'Ibi vacabimus', date: '2011-07-03', year: 2020, volume: 112, page: 479 }),
+    ], docs);
+    expect(r.matches.map((m) => [m.entry.year, m.documentId])).toEqual([[2012, 'mag:benedict-xvi/ibi-vacabimus-2011']]);
+    expect(r.reprints.map((e) => e.year)).toEqual([2020]);
+    expect(r.conflicts).toEqual([]);
+  });
+
+  it('withholds both references of a page two matched documents cite unless ACTA_SHARED_PAGES lists the pair', () => {
+    const docs = [
+      doc({ id: 'mag:john-paul-ii/pro-nostro-1979', issuerId: 'rp:john-paul-ii', incipit: 'Pro Nostro', date: '1979-05-02', characteristics: [] }),
+      doc({ id: 'mag:john-paul-ii/qui-a-pueris-1979', issuerId: 'rp:john-paul-ii', incipit: 'Qui a pueris', date: '1979-05-05', characteristics: [] }),
+      doc({ id: 'mag:john-paul-ii/portus-blairensis-1984', issuerId: 'rp:john-paul-ii', title: 'Portus Blairensis', date: '1984-06-22', genre: 'papal-bull', characteristics: ['apostolic-constitution'] }),
+      doc({ id: 'mag:john-paul-ii/cabindana-1984', issuerId: 'rp:john-paul-ii', title: 'Cabindana', date: '1984-07-02', genre: 'papal-bull', characteristics: ['apostolic-constitution'] }),
+    ];
+    const jp2 = (over: Partial<ActaEntry>) => entry({ pope: 'Ioannes Paulus II', category: 'LITTERAE APOSTOLICAE', ...over });
+    const r = matchActa([
+      // AAS 71 (1979) 920: curated, both cited.
+      jp2({ incipit: 'Pro Nostro', date: '1979-05-02', year: 1979, volume: 71, page: 920 }),
+      jp2({ incipit: 'Qui a pueris', date: '1979-05-05', year: 1979, volume: 71, page: 920 }),
+      // AAS 76 (1984) 946: not curated (Cabinda opens at 947), neither cited.
+      jp2({ category: 'CONSTITUTIONES APOSTOLICAE', incipit: 'EX quo', toponym: 'PORTUS BLAIRENSIS', date: '1984-06-22', year: 1984, volume: 76, page: 946 }),
+      jp2({ category: 'CONSTITUTIONES APOSTOLICAE', incipit: 'Catholicae prosperitas', toponym: 'CABINDANA', date: '1984-07-02', year: 1984, volume: 76, page: 946 }),
+    ], docs);
+    expect(r.matches.map((m) => m.documentId).sort()).toEqual(['mag:john-paul-ii/pro-nostro-1979', 'mag:john-paul-ii/qui-a-pueris-1979']);
+    expect(r.sharedPages.map((sp) => [sp.page, sp.matches.map((m) => m.documentId)])).toEqual([['AAS:76:946', ['mag:john-paul-ii/portus-blairensis-1984', 'mag:john-paul-ii/cabindana-1984']]]);
   });
 });
 

@@ -84,11 +84,12 @@ not used silently.
 | 1917-I | Benedictus XV | 37 | 35 | 1 | 0 | 0 | 34 | 8 | 26 | 2 | 13 | 8 |
 | 1931 | Pius XI | 76 | 73 | 4 | 0 | 0 | 69 | 60 | 9 | 3 | 6 | 2 |
 | 1958 | Pius XII, Ioannes XXIII | 179 | 132 | 73 | 7 | 0 | 52 | 36 | 23 | 47 | 1 | 7 |
-| 1978 | Paulus VI, Ioannes Paulus I, Ioannes Paulus II | 162 | 72 | 29 | 0 | 0 | 43 | 28 | 15 | 90 | 0 | 16 |
-| 2012 | Benedictus XVI | 151 | 61 | 24 | 2 | 0 | 35 | 12 | 25 | 90 | 17 | 21 |
-| **Total** | | **607** | **375** | **131** | **9** | **0** | **235** | **146** | **98** | **232** | **37** | **72** |
+| 1978 | Paulus VI, Ioannes Paulus I, Ioannes Paulus II | 162 | 72 | 29 | 0 | 0 | 43 | 28 | 15 | 90 | 0 | 7 |
+| 2012 | Benedictus XVI | 151 | 61 | 24 | 2 | 0 | 35 | 13 | 24 | 90 | 17 | 15 |
+| **Total** | | **607** | **375** | **131** | **9** | **0** | **235** | **147** | **97** | **232** | **37** | **57** |
 
-*Unmatched* counts the entries of a harvested or partly harvested category the join left without a document (each is
+*Claimed twice* counts the documents two entries both match (§5), as the 2015–2024 report does; a document claimed from
+two sources counts in each. *Unmatched* counts the entries of a harvested or partly harvested category the join left without a document (each is
 listed in §6 with a belief); *Created* and *Held* partition them, with the ambiguous and doubly-claimed entries, by the
 creator's rules (§8, §9). *Dated > 1 year before the volume* counts the acts a volume publishes late (spec §2: an entry can be
 dated years earlier; 1917 prints letters of 1910 and 1915). *Documents of the popes without an entry* counts the harvested
@@ -101,15 +102,16 @@ shelf documents of the source's popes dated in the volume year that carry no `ac
    evidence rule resolved (`match.ts`): where several constitutions of one day are entered against one shelf record of the
    day (10 November 1977: *Avkaënsis*, *Mohaleshoekensis*, *Ambikapurensis* against the shelf's *Avkaensis*), the entry the
    record names keeps the match and the others are released to the creator instead of all three being withheld.
-2. **146 documents created** (§8) -- `rp:benedict-xv` 8, `rp:benedict-xvi` 12, `rp:paul-vi` 28, `rp:pius-x` 2, `rp:pius-xi` 60, `rp:pius-xii` 36 -- and 98 entries held (§9), 7 of them by the
-   duplicate guard and 3 by the id-collision, OCR and page rules. 61 constitutions print toponym and incipit both (§1.5), so almost no provisional id is minted from the
+2. **147 documents created** (§8) -- `rp:benedict-xv` 8, `rp:benedict-xvi` 13, `rp:paul-vi` 28, `rp:pius-x` 2, `rp:pius-xi` 60, `rp:pius-xii` 36 -- and 97 entries held (§9), 7 of them by the
+   duplicate guard and 2 by the OCR rule. 61 constitutions print toponym and incipit both (§1.5), so almost no provisional id is minted from the
    volumes; the *Epistulae* are created only where the pope's letters shelf is harvested (Pius XI, Pius XII, John Paul I in this
    sample) and held elsewhere (§9, *shelf not harvested*).
 3. **A volume can reprint an act another volume already published, and a page can open two acts.** The 2020 index lists
    Benedict XVI's *Ibi vacabimus* (3 July 2011) at AAS 112 (2020) 479, and the 2012 index the same letter at AAS 104 (2012)
-   482: two references to one act. Neither is created -- the id-collision rule holds both (the phase-1 report's 2020 count
-   drops by one) -- and which is the citation of record (the first publication, presumably) is a curated decision for 2b-ii,
-   not a rule. And AAS 70 (1978) p. 150 opens two short apostolic letters (*Sacra illa*, 9 January; *Quoniam beatissima*,
+   482: two references to one act. On this PR's first run neither was created -- the id-collision rule held both -- and
+   which is the citation of record was left to phase 2b-ii-c, which decided it (`ACTA_REPRINTS`, curation.ts: the first
+   printing, unless the volume marks the later as a correction; the 2020 fascicle re-prints the letter without a note), so
+   the 2012 entry is created and the 2020 one is a reprint (§5). And AAS 70 (1978) p. 150 opens two short apostolic letters (*Sacra illa*, 9 January; *Quoniam beatissima*,
    11 January -- the volume's p. 150 prints both under one running header), which invariant 25's premise did not foresee: the
    page is curated in `ACTA_SHARED_PAGES` (`curation.ts`) with the page quoted, and the invariant exempts exactly those two.
    A page number the OCR misread with a leading zero (*030* for 930, AAS 50 p. 1035) is reported rather than cited.
@@ -530,6 +532,20 @@ sub-items is keyed on 13 capitalised division titles listed in `index.ts`.
 | AAS 104 (2012) 401 | 2012-02-11 | Constitutiones Apostolicae | *Ad aptius provehendam* | `mag:benedict-xvi/robensis-2012` (*Robensis*), `mag:benedict-xvi/tenkodogoensis-2012` (*Tenkodogoënsis*) |
 
 No document of the era is claimed twice after the evidence rule (§2.1).
+
+### Pages two matched acts cite, withheld
+
+None: every page two matched documents of the era cite is curated in `ACTA_SHARED_PAGES` with the volume page quoted, and
+invariant 25 admits exactly those pairs (1 page of the era).
+
+### Acts the Acta print twice
+
+The citation of record is the first printing unless the volume marks the later as a correction (`ACTA_REPRINTS`, curation.ts, where
+each row quotes what the fascicles print); the later printing's entry is a *reprint*, neither a claim nor a record.
+
+| Later printing | Citation of record | Kind | Index lines |
+|---|---|---|---|
+| AAS 112 (2020) 479 | AAS 104 (2012) 482 | reissue | `2011 Iul. 3 « Ibi vacabimus». – Venerabili Dei Servo Ioanni Scheffler, Bea- / torum honores decernuntur . . . . . . . . . . . . 482` — ` 3 Iul. 2011 « Ibi vacabimus ». Venerabili Servo Dei Ioanni Scheffler Bea - / torum honores decernuntur . . . . . . . . . . . . 479` |
 
 ## 6. Unmatched entries in harvested and partly harvested categories
 
@@ -980,7 +996,7 @@ No document of the era is claimed twice after the evidence rule (§2.1).
 
 ## 8. Created from the Acta
 
-The data carries **146** AAS-only records from the era and the creator, re-run here over the shelf records, produces **146** — the same set, entry for entry, and the same records field for field (ids aside, which the collision and ordinal passes assign).
+The data carries **147** AAS-only records from the era and the creator, re-run here over the shelf records, produces **147** — the same set, entry for entry, and the same records field for field (ids aside, which the collision and ordinal passes assign).
 
 Each record carries `source.url` = the whole-volume PDF for a volume source and `null` for an index PDF (spec 2a §4), the
 fixture's `retrieved` date, `source.shelf` `aas/{year}`, and `acta.part` for a double volume (`"I"` for 1917).
@@ -989,11 +1005,11 @@ fixture's `retrieved` date, `source.shelf` `aas/{year}`, and `acta.part` for a d
 |---|---|---|---|---|---|---|---|
 | Constitutiones Apostolicae | 0 | 0 | 10 | 0 | 20 | 1 | 31 |
 | Litterae Apostolicae Motu proprio datae | 0 | 0 | 2 | 0 | 0 | 0 | 2 |
-| Litterae Apostolicae | 2 | 8 | 34 | 35 | 8 | 11 | 98 |
+| Litterae Apostolicae | 2 | 8 | 34 | 35 | 8 | 12 | 99 |
 | Epistulae | 0 | 0 | 14 | 1 | 0 | 0 | 15 |
-| **Total** | **2** | **8** | **60** | **36** | **28** | **12** | **146** |
+| **Total** | **2** | **8** | **60** | **36** | **28** | **13** | **147** |
 
-By class: apostolic-letter+motu-proprio 2; apostolic-letter 98; letter 15; papal-bull+apostolic-constitution 31. Provisional (no incipit read): 4.
+By class: apostolic-letter+motu-proprio 2; apostolic-letter 99; letter 15; papal-bull+apostolic-constitution 31. Provisional (no incipit read): 4.
 
 **Circumscription material.** Of the 31 AAS-born constitutions of the era, the index describes 20 with an erection or elevation
 verb (*conditur*, *erigitur*, *constituitur*, *dismembrato*, *evehitur*, *attollitur*, *extollitur*); none carries `keywords` or `actKind` (spec 2a §4).
@@ -1174,7 +1190,7 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 
 </details>
 
-<details><summary><b>2012</b> — 12 created</summary>
+<details><summary><b>2012</b> — 13 created</summary>
 
 | Reference | Category | Id | Title | Index line | Note |
 |---|---|---|---|---|---|
@@ -1189,6 +1205,7 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 | AAS 104 (2012) 870 | Litterae Apostolicae | `mag:benedict-xvi/hic-est-2010` | « Hic est ». Venerabili Dei Servae Alfonsae Clerici Beatorum honores decernuntur | `2010 Oct. 23 «Hic est». – Venerabili Dei Servae Alfonsae Clerici Beatorum / honores decernuntur . . . . . . . . . . . . . . . 870` |  |
 | AAS 104 (2012) 476 | Litterae Apostolicae | `mag:benedict-xvi/accipietis-virtutem-2010` | « Accipietis virtutem ». Venerabili Dei Servo Szilárd Bogdánffy, Beatorum honores decernuntur | ` » » 29 «Accipietis virtutem». – Venerabili Dei Servo Szilárd Bogdán - / ffy, Beatorum honores decernuntur . . . . . . . . . 476` |  |
 | AAS 104 (2012) 479 | Litterae Apostolicae | `mag:benedict-xvi/sponsus-noster-2010` | « Sponsus noster ». Venerabili Dei Servae Barbarae Maix, caelitum Beatorum tribuitur dignitas | ` » Nov. 6 «Sponsus noster». – Venerabili Dei Servae Barbarae Maix, caeli- / tum Beatorum tribuitur dignitas . . . . . . . . . . 479` |  |
+| AAS 104 (2012) 482 | Litterae Apostolicae | `mag:benedict-xvi/ibi-vacabimus-2011` | « Ibi vacabimus ». Venerabili Dei Servo Ioanni Scheffler, Beatorum honores decernuntur | `2011 Iul. 3 « Ibi vacabimus». – Venerabili Dei Servo Ioanni Scheffler, Bea- / torum honores decernuntur . . . . . . . . . . . . 482` |  |
 | AAS 104 (2012) 413 | Litterae Apostolicae | `mag:benedict-xvi/in-monte-sancto-2012` | In Monte Sancto. Sanctuario Gostyni Beatae Mariae Virgini dicato Rosa aurea tribuitur | `2012 Febr. 14 In Monte Sancto. – Sanctuario Gostyni Beatae Mariae Virgini / dicato Rosa aurea tribuitur . . . . . . . . . . . . 413` |  |
 
 </details>
@@ -1206,9 +1223,8 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 | Unresolvable date (month-only) | 11 | 1917-I 6; 1931 2; 1978 3 |
 | Guard: possible identity | 1 | 1958 1 |
 | Guard: same incipit elsewhere | 6 | 1931 5; 1958 1 |
-| Id collision | 1 | 2012 1 |
 | OCR-damaged incipit or toponym | 2 | 1978 2 |
-| **Total** | **98** | |
+| **Total** | **97** | |
 
 <details><summary><b>Category not created from the Acta</b> — 34</summary>
 
@@ -1354,14 +1370,6 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 
 </details>
 
-<details><summary><b>Id collision</b> — 1</summary>
-
-| Reference | Pope | Date | Category | Entry | Candidates | Note |
-|---|---|---|---|---|---|---|
-| AAS 104 (2012) 482 | Benedictus XVI | 2011-07-03 | Litterae Apostolicae | *Ibi vacabimus* | — | 2 entries of 2011-07-03 print the incipit *Ibi vacabimus*; the identifier scheme cannot tell them apart beyond the full date (AAS 104 (2012) 482, 112 (2020) 479) |
-
-</details>
-
 <details><summary><b>OCR-damaged incipit or toponym</b> — 2</summary>
 
 | Reference | Pope | Date | Category | Entry | Candidates | Note |
@@ -1380,16 +1388,16 @@ era and in total; the AAS-only records of every other era are in the *after* col
 |---|---|---|---|---|
 | `rp:pius-x` | 306 | 2 | 2 | 308 |
 | `rp:benedict-xv` | 63 | 8 | 8 | 71 |
-| `rp:pius-xi` | 158 | 532 | 60 | 690 |
-| `rp:pius-xii` | 260 | 1234 | 36 | 1494 |
+| `rp:pius-xi` | 158 | 528 | 60 | 686 |
+| `rp:pius-xii` | 260 | 1229 | 36 | 1489 |
 | `rp:john-xxiii` | 193 | 294 | 0 | 487 |
-| `rp:paul-vi` | 777 | 355 | 28 | 1132 |
+| `rp:paul-vi` | 777 | 349 | 28 | 1126 |
 | `rp:john-paul-i` | 7 | 0 | 0 | 7 |
-| `rp:john-paul-ii` | 2105 | 0 | 0 | 2105 |
-| `rp:benedict-xvi` | 301 | 17 | 12 | 318 |
+| `rp:john-paul-ii` | 2105 | 43 | 0 | 2148 |
+| `rp:benedict-xvi` | 301 | 69 | 13 | 370 |
 | `rp:francis-i` | 366 | 260 | 0 | 626 |
-| **Popes of the AAS** | **4536** | **2702** | **146** | **7238** |
-| **Registry** | **4975** | **2702** | **146** | **7677** |
+| **Popes of the AAS** | **4536** | **2782** | **147** | **7318** |
+| **Registry** | **4975** | **2782** | **147** | **7757** |
 
 ## 11. Documents of the era's popes with no AAS entry
 
@@ -1398,7 +1406,7 @@ formal genres are listed. A December act belongs to the next volume; an act whos
 a class the index files under a category the registry does not attempt (*Epistulae* for a pope whose letters shelf is
 not harvested, homilies, allocutions) is counted in §3.
 
-<details><summary><b>1909</b> — 18 without an entry (letter 9; apostolic-letter 8; encyclical 1)</summary>
+<details><summary><b>1909</b> — 18 without an entry (letter 9; apostolic-letter 8; encyclical 1); 9 of the formal genres listed</summary>
 
 | Document | Date | Class | Index entries on this date | Reading |
 |---|---|---|---|---|
@@ -1414,7 +1422,7 @@ not harvested, homilies, allocutions) is counted in §3.
 
 </details>
 
-<details><summary><b>1917-I</b> — 8 without an entry (apostolic-letter+motu-proprio 5; encyclical 1; papal-bull 1; brief 1)</summary>
+<details><summary><b>1917-I</b> — 8 without an entry (apostolic-letter+motu-proprio 5; encyclical 1; papal-bull 1; brief 1); 7 of the formal genres listed</summary>
 
 | Document | Date | Class | Index entries on this date | Reading |
 |---|---|---|---|---|
@@ -1428,7 +1436,7 @@ not harvested, homilies, allocutions) is counted in §3.
 
 </details>
 
-<details><summary><b>1931</b> — 2 without an entry (papal-bull+apostolic-constitution 1; letter 1)</summary>
+<details><summary><b>1931</b> — 2 without an entry (papal-bull+apostolic-constitution 1; letter 1); 1 of the formal genres listed</summary>
 
 | Document | Date | Class | Index entries on this date | Reading |
 |---|---|---|---|---|
@@ -1436,7 +1444,7 @@ not harvested, homilies, allocutions) is counted in §3.
 
 </details>
 
-<details><summary><b>1958</b> — 7 without an entry (letter 6; apostolic-letter 1)</summary>
+<details><summary><b>1958</b> — 7 without an entry (letter 6; apostolic-letter 1); 1 of the formal genres listed</summary>
 
 | Document | Date | Class | Index entries on this date | Reading |
 |---|---|---|---|---|
@@ -1444,24 +1452,16 @@ not harvested, homilies, allocutions) is counted in §3.
 
 </details>
 
-<details><summary><b>1978</b> — 16 without an entry (papal-bull+apostolic-constitution 6; message 4; apostolic-letter 3; letter 1; apostolic-letter+motu-proprio 1; urbi-et-orbi 1)</summary>
+<details><summary><b>1978</b> — 7 without an entry (message 4; letter 1; apostolic-letter+motu-proprio 1; papal-bull+apostolic-constitution 1); 2 of the formal genres listed</summary>
 
 | Document | Date | Class | Index entries on this date | Reading |
 |---|---|---|---|---|
-| `mag:paul-vi/quae-per-caritatem-1978` | 1978-05-07 | apostolic-letter | Homiliae (AAS 70 (1978) 325: Die beatificationis ven. Dei Famulae Mariae Henricae Dominici) | the index files the act of this date under Homiliae, not harvested |
-| `mag:john-paul-ii/batteriensis-1978` | 1978-10-28 | papal-bull+apostolic-constitution | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
-| `mag:john-paul-ii/cum-beata-1978` | 1978-11-06 | apostolic-letter | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
-| `mag:john-paul-ii/itabunensis-1978` | 1978-11-07 | papal-bull+apostolic-constitution | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
-| `mag:john-paul-ii/jequieana-1978` | 1978-11-07 | papal-bull+apostolic-constitution | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
-| `mag:john-paul-ii/honiarana-1978` | 1978-11-15 | papal-bull+apostolic-constitution | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
 | `mag:john-paul-ii/campi-grandis-1978` | 1978-11-27 | papal-bull+apostolic-constitution | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
-| `mag:john-paul-ii/tandagensis-1978` | 1978-12-09 | papal-bull+apostolic-constitution | — | December: the next volume |
 | `mag:john-paul-ii/apostolic-letter-1978-12-13` | 1978-12-13 | apostolic-letter+motu-proprio | — | December: the next volume |
-| `mag:john-paul-ii/quandoquidem-1978` | 1978-12-28 | apostolic-letter | — | December: the next volume |
 
 </details>
 
-<details><summary><b>2012</b> — 21 without an entry (apostolic-letter 11; papal-bull+apostolic-constitution 5; message 4; urbi-et-orbi 1)</summary>
+<details><summary><b>2012</b> — 15 without an entry (apostolic-letter 9; papal-bull+apostolic-constitution 5; message 1); 14 of the formal genres listed</summary>
 
 | Document | Date | Class | Index entries on this date | Reading |
 |---|---|---|---|---|
@@ -1477,8 +1477,6 @@ not harvested, homilies, allocutions) is counted in §3.
 | `mag:benedict-xvi/apostolic-letter-2012-10-21-5` | 2012-10-21 | apostolic-letter | Homiliae (AAS 104 (2012) 883: In Canonizatione beatorum Iacobi Berthieu, Petri Calungsod, Ioannis Ba) | the index files the act of this date under Homiliae, not harvested |
 | `mag:benedict-xvi/apostolic-letter-2012-10-21-6` | 2012-10-21 | apostolic-letter | Homiliae (AAS 104 (2012) 883: In Canonizatione beatorum Iacobi Berthieu, Petri Calungsod, Ioannis Ba) | the index files the act of this date under Homiliae, not harvested |
 | `mag:benedict-xvi/apostolic-letter-2012-10-21-7` | 2012-10-21 | apostolic-letter | Homiliae (AAS 104 (2012) 883: In Canonizatione beatorum Iacobi Berthieu, Petri Calungsod, Ioannis Ba) | the index files the act of this date under Homiliae, not harvested |
-| `mag:benedict-xvi/apostolic-letter-2012-11-11` | 2012-11-11 | apostolic-letter | Litterae Apostolicae Motu proprio datae (AAS 104 (2012) 996: De Caritate ministranda) | class mismatch or another act of the date (§6) |
-| `mag:benedict-xvi/apostolic-letter-2012-12-02` | 2012-12-02 | apostolic-letter | — | December: the next volume |
 | `mag:benedict-xvi/gbokensis-2012` | 2012-12-29 | papal-bull+apostolic-constitution | — | December: the next volume |
 | `mag:benedict-xvi/katsinensis-alensis-2012` | 2012-12-29 | papal-bull+apostolic-constitution | — | December: the next volume |
 
