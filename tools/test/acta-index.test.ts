@@ -893,6 +893,155 @@ PAG. 19Ö4 Oet. 7 Ad Sinarum gentem. - Ad Venerabiles Fratres 5
   });
 });
 
+describe('parseActaIndex on the volumes of 1959-1977 (acta volumes spec §9, phase 2b-ii-b)', () => {
+  const vi = { year: 1966, volume: 58, columnar: true };
+  /** A page in pypdf's default mode: every line at the margin, the index's title after the entries (AAS 52 (1960) 1032). */
+  const flat = (body: string, pope = 'I - ACTA PAULI PP. VI') => `II \n${pope} \n${body}\nINDEX DOCUMENTORUM \nCHRONOLOGICO ORDINE DIGESTUS \n`;
+
+  it('reads the pope headings the OCR prints with a full stop after ACTA and with digits in the name', () => {
+    // AAS 67 (1975) `I - ACTA. PAULI PP. VI`; AAS 51 (1959) `II - ACTA I0A1OTS PP. XXIII` after Pius XII's part.
+    const r = parseActaIndex(volume(`                                    I - ADHORTATIONES APOSTOLICAE
+1975 Maii 9 Gaudete in Domino. - Ad Episcopos, Sacerdotes et Christifideles 289`, 'I - ACTA. PAULI PP. VI'), { year: 1975, volume: 67, ...columnar });
+    expect(r.entries.map((e) => [e.pope, e.page])).toEqual([['Paulus VI', 289]]);
+    expect(r.popeHeadings).toEqual(['I - ACTA. PAULI PP. VI']);
+    const j = parseActaIndex(volume(`                                    LITTERAE APOSTOLICAE
+1958 Febr. 18 Quantum iuniores. - Beata Maria Virgo 405
+                                  II - ACTA I0A1OTS PP. XXIII
+                                    I - LITTERAE DECRETALES
+1959 Apr. 12 Militantis Ecclesiae. - Beato Carolo a Setia 617`, 'I - ACTA PII PP. XII'), { year: 1959, volume: 51, ...columnar });
+    expect(j.entries.map((e) => [e.pope, e.page])).toEqual([['Pius XII', 405], ['Ioannes XXIII', 617]]);
+    expect(j.popeHeadings).toEqual(['I - ACTA PII PP. XII', 'II - ACTA I0A1OTS PP. XXIII']);
+    expect(j.unmappedPopes).toEqual([]);
+    // AAS 69 (1977) numbers the synod's part without the word: `II - SYNODUS EPISCOPORUM` ends the pope's part.
+    const k = parseActaIndex(volume(`                                    XII - NUNTII TELEGRAPHICI
+1977 Mart. 23 Ad Georgium Singha, Episcoporum Congi Decanum 204
+                                  II - SYNODUS EPISCOPORUM
+1977 Sept. 30 Ineunte V Synodo Episcoporum, Summi Pontificis allocutio 625`, 'I - ACTA PAULI PP. VI'), { year: 1977, volume: 69, ...columnar });
+    expect(k.entries).toHaveLength(1);
+    expect(k.skippedParts).toEqual(['II - SYNODUS EPISCOPORUM']);
+  });
+
+  it('reads a flat (default-mode) page: the title after the entries is skipped, a capitalised continuation is not an entry', () => {
+    // AAS 52 (1960) 1032-1036: the default mode sets every line at the margin and renders the index's title last.
+    const r = parseActaIndex(flat(`I - LITTERAE APOSTOLICAE 
+PAG. 
+1959 Nov. 25 Luctifera bella. - Beata Maria Virgo « Regina Pacis » Consocia­
+tionis Nationalis Victimarum Civilium belli in Italia (vulgo 
+« Associazione Nazionale delle Vittime Civili della guerra ») 
+Patrona caelestis constituitur 382 
+» » 30 Caelesti coruscans. - Beata Maria V. Immaculata in praecipuam 
+Patronam et S. Ioannes Maria Vianney, Conf., in Patronum 
+minus principalem dioecesis Lafayettensis eliguntur ... 144 `, 'II - ACTA IOANNIS PP. XXIII'), { year: 1960, volume: 52, ...columnar });
+    expect(r.entries.map((e) => [e.incipit, e.page])).toEqual([['Luctifera bella', 382], ['Caelesti coruscans', 144]]);
+    expect(r.entries[0]!.description).toBe('Beata Maria Virgo « Regina Pacis » Consociationis Nationalis Victimarum Civilium belli in Italia (vulgo « Associazione Nazionale delle Vittime Civili della guerra ») Patrona caelestis constituitur');
+    expect(r.unseenHeadings).toEqual([]);
+    expect(r.defects).toEqual([]);
+  });
+
+  it('reads the unnumbered headings of 1967, in capitals or in mixed case, only where the words are a known category', () => {
+    // AAS 59 (1967) 1140-1152: `Litterae Encyclicae`, `Litterae Apostolicae` between the entries, with no numeral.
+    const r = parseActaIndex(volume(`                                                       Litterae Encyclicae
+1967 Mart. 26 Populorum progressio. - Ad Episcopos, ad Sacerdotes 257
+                                                  CONSTITUTIONES APOSTOLICAE
+  » Aug. 15 Regimini Ecclesiae universae. - De Romana Curia 885
+                                                        Litterae Apostolicae
+                                                        Patrona declaratur
+1965 Sept. 18 Templis praeclaris. - Titulus ac privilegia Basilicae Minoris paroe­
+                                  ciali templo Sanctorum Apostolorum tribuuntur 5
+1965 Dec. 18 Maria Virgo. - Beata Maria Virgo « Mater Ecclesiae » principalis
+                               Patrona totius dioecesis Montisclarensis eligitur 215`, 'I - ACTA PAULI PP. VI'), { year: 1967, volume: 59, ...columnar });
+    expect(r.entries.map((e) => [e.category, e.page])).toEqual([
+      ['LITTERAE ENCYCLICAE', 257], ['CONSTITUTIONES APOSTOLICAE', 885], ['LITTERAE APOSTOLICAE', 5], ['LITTERAE APOSTOLICAE', 215],
+    ]);
+    // `Patrona declaratur` is no category: reported as a line outside any entry, not read as a heading.
+    expect(r.defects.map((d) => d.message)).toEqual(['line outside any entry: Patrona declaratur']);
+  });
+
+  it('reads a heading with the column header glued, an OCR mark after it, the guillemets apart, and the numeral as `XI- -`', () => {
+    // AAS 51 (1959) 946 `XIV - NUNTII SCRIPTO DATI PAG.`; AAS 52 (1960) 1033 `LITTERAE APOSTOLICAE` / `MOTU PROPRIO DATAE^`;
+    // AAS 68 (1976) 756 `IV - LITTERAE APOSTOLICAE « MOTU PROPRIO» DATAE`; AAS 66 (1974) 762 `XI- - ALLOCUTIONES`.
+    const r = parseActaIndex(volume(`                                         XIV - NUNTII SCRIPTO DATI PAG.
+1959 Ian. 1 Ad universos catholicos 5
+                                              LITTERAE APOSTOLICAE
+                                              MOTU PROPRIO DATAE^
+1959 Dec. 8 Maiora in dies. - Academia Mariana 24
+                                  IV - LITTERAE APOSTOLICAE « MOTU PROPRIO» DATAE
+1976 Ian. 7 Apostolatus peragendi. - Consilium de Laicis 696
+                                                           XI- - ALLOCUTIONES
+1973 Dec. 13 Ad Excellentissimum Virum Gustavum Adolfum Guerrero 8`), { year: 1976, volume: 68, ...columnar });
+    expect(r.entries.map((e) => [e.category, e.page])).toEqual([
+      ['NUNTII SCRIPTO DATI', 5], ['LITTERAE APOSTOLICAE MOTU PROPRIO DATAE', 24], ['LITTERAE APOSTOLICAE «MOTU PROPRIO» DATAE', 696], ['ALLOCUTIONES', 8],
+    ]);
+    expect(r.unseenHeadings).toEqual([]);
+  });
+
+  it('reads the era\'s OCR ditto marks and months, and dates a year with its last digit broken `????`', () => {
+    // `% » » PORTUS MORESBY` (AAS 52, 1960), `-> » »` (AAS 53, 1961), `Ä » 20` (AAS 58, 1966); `Maü` (AAS 54, 1962),
+    // `Dee.` and `Mail` (AAS 66, 1974); `196S Nov. 4 Summi Dei` (AAS 55, 1963).
+    const r = parseActaIndex(volume(`                                    VII - CONSTITUTIONES APOSTOLICAE
+1959 Iun. 3 KADUNAËNSIS. Quandoquidem. - Nova dioecesis 72
+  % » » PORTUS MORESBY (Insulae Yule et Daruensis). Qui per electionem. - Quibusdam territoriis 74
+  -> » 5 Quemadmodum. - Sanctus Patricius, Ep. et Conf., caelestis Patronus 150
+  Ä » 20 Adulescentium patris. - Titulus ac privilegia Basilicae Minoris 282
+1961 Maü 5 URBIS. Inter frequentissima. - Templum S. Teresiae Virginis 703
+1973 Dee. 13 Quod pastorale. - In Republica Ciadensi constituitur Delegatio Apostolica 190
+  » Mail 11 Mira eademque. - Beata Maria Virgo 378
+196S Nov. 4 Summi Dei. - Ad Patriarchas, Primates 979`), { year: 1974, volume: 66, ...columnar });
+    expect(r.entries.map((e) => [e.date, e.page])).toEqual([
+      ['1959-06-03', 72], ['1959-06-03', 74], ['1959-06-05', 150], ['1959-06-20', 282], ['1961-05-05', 703],
+      ['1973-12-13', 190], ['1973-05-11', 378], ['????-11-04', 979],
+    ]);
+    expect(r.entries[1]!.toponym).toBe('PORTUS MORESBY (Insulae Yule et Daruensis)');
+    expect(r.entries[7]!.dateNote).toMatch(/the year is not printed/);
+  });
+
+  it('reads a page number alone on its line after a line the OCR cut short, but not after a line that already ends in a page', () => {
+    // AAS 58 (1966) 1207: `Illustri laude. - Titulo ac privilegiis Basilicae Minoris ecclesia` / `PAG.` / `569`, the entry's
+    // other lines lost; AAS 48 (1956) 861: `… nuncupandus 647` / `9`, the `9` being the OCR's for the next entry's ditto.
+    const r = parseActaIndex(flat(`I - LITTERAE APOSTOLICAE 
+1965 Dec. 11 Illustri laude. - Titulo ac privilegiis Basilicae Minoris ecclesia 
+PAG. 
+569 
+» » » Camposinae urbis. - Titulo ac privilegiis Basilicae Minoris ecclesia 
+cathedralis Camposina decoratur 571 
+» » 23 Apostolica Sedes. - Ab Apostolicis Vicariatibus Kongoloënsi quaedam separantur territoria, quibus 
+novus Vicariatus constituitur, « Kinduensis » nuncupandus 647 
+9 
+» » 25 Semper fuit. - A Dioecesibus Tamalensi et Ketaënsi quaedam territoria detrahuntur 649 `), vi);
+    expect(r.entries.map((e) => [e.incipit, e.page])).toEqual([
+      ['Illustri laude', 569], ['Camposinae urbis', 571], ['Apostolica Sedes', 647], ['Semper fuit', 649],
+    ]);
+    expect(r.defects.map((d) => d.message)).toEqual(['a bare number after a page-ended line, not read as a page: 9']);
+    // Both bare numbers are page lines of the denominator; the second is consumed.
+    expect(r.stats).toMatchObject({ pageLines: 5, entries: 4, consumed: 1 });
+  });
+
+  it('reads a page number with a quote before it', () => {
+    // AAS 58 (1966) 1206: `… ad gradum dioecesis evehitur '563`.
+    const r = parseActaIndex(volume(`                                    VII - CONSTITUTIONES APOSTOLICAE
+1965 Nov. 6 MVEKAËNSIS. Sanctorum mater. - Praefectura apostolica Mvekaën­
+                            sis, in Congo, ad gradum dioecesis evehitur '563`), vi);
+    expect(r.entries.map((e) => [e.incipit, e.page])).toEqual([['Sanctorum mater', 563]]);
+  });
+
+  it('parses every fixture of 1959-1977 with no unseen heading and no unmapped pope, above 95 % over the harvested categories', () => {
+    // The overall rate falls below 95 % in eight volumes for the parts the join does not act on -- Paul VI's journeys,
+    // listed under their own headings with a page per homily and address and dated `Dies N.` (1965: India; 1967: Fatima,
+    // Turkey; 1968: Bogotá; 1971: Asia and Oceania, 83 entries), the consistories' numbered items, and the head of his
+    // allocutions in 1963 and 1964 printing a ditto for the year with nothing above it -- and every volume clears the
+    // floor over the harvested categories (1974, the lowest, at 97.6 %: `Dee.` and `Mail` before they were listed;
+    // an OCR page `46S`). AAS 51 carries Pius XII's last acts and John XXIII's, AAS 55 John XXIII's and Paul VI's.
+    for (let year = 1959; year <= 1977; year++) {
+      const vol = year - 1908;
+      const r = parseActaIndex(readFileSync(`tools/fixtures/acta/aas-${vol}-${year}.txt`, 'utf8'), { year, volume: vol, columnar: true });
+      expect(r.unseenHeadings, String(year)).toEqual([]);
+      expect(r.unmappedPopes, String(year)).toEqual([]);
+      expect(r.popeHeadings.length, String(year)).toBe([1959, 1960, 1963, 1964].includes(year) ? 2 : 1);
+      expect(harvestedParseRate(r.stats)!, String(year)).toBeGreaterThanOrEqual(0.95);
+    }
+  });
+});
+
 describe('splitEntryText', () => {
   it('strips guillemets and takes the rest as description, whatever follows the closing one', () => {
     expect(splitEntryText('« Venite benedicti  ». - Venerabili Dei Servo')).toEqual({ incipit: 'Venite benedicti', quoted: true, toponym: null, description: 'Venerabili Dei Servo' });

@@ -18,6 +18,8 @@ describe('the pope headings of the AAS index (acta volumes spec §2)', () => {
     expect(popeForGenitive('IOANNIS PAULI II')?.issuerId).toBe('rp:john-paul-ii');
     expect(popeForGenitive('BENEDICTI XVI')?.issuerId).toBe('rp:benedict-xvi');
     expect(popeForGenitive('FRANCISCI')?.issuerId).toBe('rp:francis-i');
+    // The OCR of AAS 51 (1959) reads John XXIII's name as `I0A1OTS`: listed beside the row.
+    expect(popeForGenitive('I0A1OTS XXIII')?.issuerId).toBe('rp:john-xxiii');
     expect(popeForGenitive('LEONIS XIII')).toBeNull();
     expect(popeForGenitive('IN MORTE PII XII')).toBeNull();
     for (const p of ACTA_POPES) {
@@ -51,6 +53,16 @@ describe('the pope headings of the AAS index (acta volumes spec §2)', () => {
     const r1958 = parsed.get('1958')!;
     expect(r1958.skippedParts).toContain('II - ACTA IN MORTE PII PP. XII');
     expect(r1958.skippedParts).toContain('III - ACTA CONCLAVIS');
+    // The volumes of 1959-1977: two pope parts where a pontificate ends (1959, 1960: Pius XII's last acts before
+    // John XXIII's; 1963, 1964: John XXIII's before Paul VI's), the council's, the synod's and the conclave's parts skipped.
+    expect(parsed.get('1959')!.popeHeadings).toEqual(['I - ACTA PII PP. XII', 'II - ACTA I0A1OTS PP. XXIII']);
+    expect(parsed.get('1963')!.popeHeadings).toEqual(['I - ACTA IOANNIS PP. XXIII', 'IV - ACTA PAULI PP. VI']);
+    expect(parsed.get('1963')!.skippedParts).toContain('II - ACTA IN MORTE IOANNIS PP. XXIII');
+    expect(parsed.get('1963')!.skippedParts).toContain('III - ACTA CONCLAVIS');
+    expect(parsed.get('1975')!.popeHeadings).toEqual(['I - ACTA. PAULI PP. VI']);
+    for (const [key, part] of [['1962', 'ACTA PATRUM S. CONCILII OECUMENICI VATICANI II'], ['1964', 'III - ACTA Ss. OECUMENICI CONCILII'], ['1965', 'II - ACTA SS. OECUMENICI CONCILII'], ['1966', 'II - ACTA SS. OECUMENICI CONCILII'], ['1977', 'II - SYNODUS EPISCOPORUM']]) {
+      expect(parsed.get(key!)!.skippedParts, key).toContain(part);
+    }
     void readFileSync;
   });
 });
