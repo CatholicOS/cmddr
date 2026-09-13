@@ -1,4 +1,4 @@
-# The AAS index fixtures: the *Index generalis* PDFs of 2012 and 2015–2024, the sample volumes of 1909–1978, and the volumes of 1932–1957
+# The AAS index fixtures: the *Index generalis* PDFs of 2012 and 2015–2024, the sample volumes of 1909–1978, and the volumes of 1932–1957 and 1959–1977
 
 The extracted text of the *Index documentorum chronologico ordine digestus* of the *Acta
 Apostolicae Sedis*, one file per source, one page per form feed (`\f`), from two kinds of
@@ -12,9 +12,10 @@ source on vatican.va (`https://www.vatican.va/archive/aas/index_it.htm`, which
   1983 in two parts, `AAS-09-I-1917-ocr.pdf`), of which only the pages of the chronological
   index are extracted (`aas-{vol}-{year}[-{part}].txt`; acta volumes spec,
   `docs/superpowers/specs/2026-09-13-acta-volumes-design.md` §3) — the six sources of phase
-  2b-i are the sample below, and the twenty-six volumes of 1932–1957 (AAS 24–49, Pius XI and
-  Pius XII) are phase 2b-ii-a (spec §9); 1959–1977, 1979–2002 with the 2010–2014 index PDFs,
-  and 1910–1931 follow in 2b-ii-b, 2b-ii-c and 2b-iii.
+  2b-i are the sample below, the twenty-six volumes of 1932–1957 (AAS 24–49, Pius XI and
+  Pius XII) are phase 2b-ii-a and the nineteen of 1959–1977 (AAS 51–69, John XXIII and Paul
+  VI) phase 2b-ii-b (spec §9); 1979–2002 with the 2010–2014 index PDFs, and 1910–1931 follow
+  in 2b-ii-c and 2b-iii.
 
 They are the input of the AAS join (acta reference spec, `docs/superpowers/specs/2026-09-12-acta-reference-design.md`
 §4.1): `tools/src/acta/index.ts` parses the *Acta Summi Pontificis* parts, and `npm run
@@ -58,10 +59,29 @@ retrieval date and parser options; update it with this table.
 | AAS 48 (1956) | `aas-48-1956.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 859–872 (14) | 918 |
 | AAS 49 (1957) | `aas-49-1957.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1059–1073 (15) | 1112 |
 | AAS 50 (1958) | `aas-50-1958.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1032–1047 (16) | 1130 |
+| AAS 51 (1959) | `aas-51-1959.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 932–949 (18) | 1037 |
+| AAS 52 (1960) | `aas-52-1960.txt` | **2026-09-13** | pypdf 6.14.2, layout mode; pp. 1032, 1034–1045 default mode | 1032–1045 (14) | 1132 |
+| AAS 53 (1961) | `aas-53-1961.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 836–851 (16) | 916 |
+| AAS 54 (1962) | `aas-54-1962.txt` | **2026-09-13** | pypdf 6.14.2, layout mode; pp. 893, 895–900, 902–904 default mode | 892–904 (13) | 952 |
+| AAS 55 (1963) | `aas-55-1963.txt` | **2026-09-13** | pypdf 6.14.2, layout mode; pp. 1071–1074, 1076, 1077, 1079, 1080, 1082 default mode | 1068–1083 (16) | 1163 |
+| AAS 56 (1964) | `aas-56-1964.txt` | **2026-09-13** | pypdf 6.14.2, layout mode; pp. 1048–1055, 1057–1059, 1061, 1062, 1064 default mode (pypdf warns of rotated text on the volume; the index pages are complete) | 1048–1064 (17) | 1146 |
+| AAS 57 (1965) | `aas-57-1965.txt` | **2026-09-13** | pypdf 6.14.2, layout mode; pp. 1029–1032, 1034–1040, 1042, 1043 default mode | 1028–1044 (17) | 1094 |
+| AAS 58 (1966) | `aas-58-1966.txt` | **2026-09-13** | pypdf 6.14.2, layout mode; pp. 1204–1215, 1218 default mode (pypdf warns of rotated text) | 1204–1219 (16) | 1279 |
+| AAS 59 (1967) | `aas-59-1967.txt` | **2026-09-13** | pypdf 6.14.2, layout mode (pypdf warns of rotated text) | 1140–1157 (18) | 1231 |
+| AAS 60 (1968) | `aas-60-1968.txt` | **2026-09-13** | pypdf 6.14.2, layout mode; pp. 836–848 default mode | 836–849 (14) | 904 |
+| AAS 61 (1969) | `aas-61-1969.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 828–842 (15) | 939 |
+| AAS 62 (1970) | `aas-62-1970.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 868–881 (14) | 963 |
+| AAS 63 (1971) | `aas-63-1971.txt` | **2026-09-13** | pypdf 6.14.2, layout mode (pypdf warns of rotated text) | 964–981 (18) | 1036 |
+| AAS 64 (1972) | `aas-64-1972.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 804–817 (14) | 890 |
+| AAS 65 (1973) | `aas-65-1973.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 692–704 (13) | 762 |
+| AAS 66 (1974) | `aas-66-1974.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 756–767 (12) | 824 |
+| AAS 67 (1975) | `aas-67-1975.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 756–768 (13) | 884 |
+| AAS 68 (1976) | `aas-68-1976.txt` | **2026-09-13** | pypdf 6.14.2, layout mode; pp. 756–761, 763–765, 767 default mode (pypdf warns of rotated text) | 756–768 (13) | 862 |
+| AAS 69 (1977) | `aas-69-1977.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 756–766 (11) | 853 |
 | AAS 70 (1978) | `aas-70-1978.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1008–1017 (10) | 1130 |
 
-No source was missing on its retrieval date, and every volume of 1932–1957 has a chronological
-index. Every index has the same three parts (the general index by category, the
+No source was missing on its retrieval date, and every volume of 1932–1957 and 1959–1977 has a
+chronological index. Every index has the same three parts (the general index by category, the
 chronological index, the indexes of names), so no source differs in shape at that level; the
 shapes that differ *inside* the chronological index are listed below, and each is handled by
 the parser and covered by a unit test. Three volumes needed the index locator extended
@@ -96,6 +116,22 @@ header comment records the shapes):
   default mode instead, where the four entries run together on one line but in order, each
   page number before the next date, and the parser splits them there. Only p. 531 needed it
   in the sample; the script prints the pages it falls back on.
+- **From 1959 the layout mode fuses lines with no gap, and the default mode keeps the dates.**
+  In eight volumes of 1959–1977 (AAS 52, 54–58, 60, 68) the layout mode fuses two physical
+  lines into one, the seam a word the OCR broke at the line end -- its soft hyphen followed
+  at once by the next line's text (`Basilicae Mino­ris evehitur ecclesia cathedralis`, AAS 52
+  p. 1035) -- so that continuations and page numbers land on the wrong entries: 25–70 such
+  seams per volume, against 0–4 in every volume before 1959 (measured over all fixtures). And
+  in this era pypdf's default mode keeps each date on the line of its entry (the same count
+  of date-headed lines as the layout mode, page by page) where in 1909–1957 it emitted the
+  columns as runs. `fetch-acta.sh` therefore extracts a page with a seam in the default mode
+  when that mode keeps at least as many date-headed lines as the layout mode did (the rows
+  above list the pages); AAS 54 (1962) pp. 894 and 901, where the default mode breaks the
+  columns (0 and 8 date lines against 18 and 19), stay in the layout mode and their fused
+  entries are reported by the parser. A default-mode page has no indentation at all (every
+  line at the margin), which the parser reads as a *flat* page: no blank-dated entry is
+  looked for on it, and the index's title, which the default mode renders after the first
+  page's entries, is skipped wherever it stands.
 - **The page column is lost on most index pages of AAS 1 and AAS 9-I.** The rendering shows
   none (two page numbers at the foot of p. 839 of vol. 1, none above them), so the entries of
   those pages are parsed to their dates and text and reported without a page (sample report
@@ -285,6 +321,53 @@ lists what it could not read):
   `ACTA_SHARED_PAGES`), and a page the OCR misread onto another act's (AAS 42 (1950) 37 and 42,
   AAS 43 (1951) 660, AAS 46 (1954) 753, AAS 49 (1957) 825, AAS 45 (1953) 782), which the
   creator holds (`page-shared`).
+
+### The volumes of 1959–1977 (phase 2b-ii-b)
+
+John XXIII and Paul VI, with the Second Vatican Council between them. What the era prints
+that the earlier volumes did not (`index.ts` names the volume for each; the report
+`docs/superpowers/reports/2026-09-13-acta-volumes-1959-1977.md` lists what could not be read):
+
+- **Pope headings**: `I - ACTA PII PP. XII` then `II - ACTA IOANNIS PP. XXIII` (1959, 1960:
+  Pius XII's last acts open both volumes), the OCR's `II - ACTA I0A1OTS PP. XXIII` (AAS 51,
+  1959: digits inside the name, listed as an OCR spelling in `popes.ts`), `IV - ACTA PAULI PP.
+  VI` after `II - ACTA IN MORTE IOANNIS PP. XXIII` and `III - ACTA CONCLAVIS` (1963), `I -
+  ACTA. PAULI PP. VI` with a full stop after the word (AAS 67, 1975). The council's part
+  (`ACTA PATRUM S. CONCILII OECUMENICI VATICANI II`, 1962; `III - ACTA Ss. OECUMENICI
+  CONCILII` / `VATICANI II`, 1964–1966), the synod's (`II - SYNODUS EPISCOPORUM`, 1977, without
+  the word *Acta*), the Secretariat of State's, the councils', commissions' and secretariats'
+  are skipped with the dicasteries.
+- **Category headings**: unnumbered from 1967, several in mixed case (`Litterae Encyclicae`,
+  `Epistula Apostolica`, `Adhortationes Apostolicae`, `Litterae Apostolicae`, `Nuntii
+  Telegraphici`; AAS 59, 1967), read as headings only where the words are a known category;
+  the column header glued to a heading (`XIV - NUNTII SCRIPTO DATI PAG.`, AAS 51; AAS 66); a
+  heading's second line ending in an OCR `^` (`MOTU PROPRIO DATAE^`, AAS 52) or with the
+  guillemets set apart (`« MOTU PROPRIO» DATAE`, AAS 68); the numeral as `XI- -` (AAS 66);
+  new wordings, each mapped in `categories.ts` with its quotation -- the opening and closing
+  rites of the council (`IN SOLLEMNI RITU INEUNDI CONCILII OECUMENICI VATICANI SECUNDI`, `IN
+  SOLLEMNI RITU CONCLUDENDI …`), the *Sollemnis professio fidei* of 1968, Paul VI's journeys
+  headed one by one (`SUMMI PONTIFICIS PEREGRINANTE ITER IN LUSITANIAM` …), `DECLARATIO`,
+  `RESCRIPTUM EX AUDIENTIA`, the radio-television messages (`NUNTIUS RADIOTELEVISIFICAS`,
+  `NUNTII RADIOPHONICI ET TELEVISIFICI`), the OCR's `NUNTII GRATULATOMI`, `NUNTII SCRIPTI DATI`.
+- **Dates**: the ditto as `%` (AAS 52, `% » » PORTUS MORESBY`), `->` (AAS 53), `Ä` (AAS 58); the
+  months `Maü` (AAS 54), `Dee.` and `Mail` (AAS 66), `Eebr.` (AAS 55), `lui.` (AAS 61); a year with
+  its last digit broken (`196S`, AAS 55) or a middle one (`19Ö8` at the head of Pius XII's
+  part in AAS 51), dated `????` and supplied by curated rows quoting the acts; `1071` for 1971
+  (AAS 64), read and noted; the head of Paul VI's allocutions in AAS 55 and AAS 56 printing a
+  ditto for the year with nothing above it (reported, not harvested).
+- **Entries**: the page number alone on its line where the default mode lost the entry's other
+  lines (`1965 Dec. 11 Illustri laude. - Titulo ac privilegiis Basilicae Minoris ecclesia` /
+  `569`, AAS 58), read as the page unless the line before already ends in one; a page with a
+  quote before it (`'563`); OCR page digits (`46S`, `2C4`, `14S`, `¿72`, `Illi`), reported.
+- **Toponyms**: the mother see, a double see and the new see in parentheses (`DURANGENSIS-
+  SINALOENSIS (Mazatlanensis)`, `CORDUBENSIS (Crucis Axeatae)`), against shelves that title
+  the act by the mother see alone (Paul VI to 1964), by both (John XXIII), or by the new see
+  alone (Paul VI from 1965): the matcher's toponym rule (`match.ts`) reads both; a lone
+  capital hyphenated to the see (`G-UYANAE`, `G-AUHATINAE`) is OCR damage and holds.
+- **Pages two acts cite**: seven read in the volumes and curated (`ACTA_SHARED_PAGES`: AAS 60
+  (1968) 10 and AAS 64 (1972) 471, both acts on the shelf; AAS 65 (1973) 237, AAS 68 (1976) 256
+  and 400, AAS 69 (1977) 198 and 252, both acts created) and one the OCR misdrew (AAS 69 (1977)
+  245, Sagar's page onto Jagdalpur's), held.
 
 The RETRIEVED dates above are also stamped as `source.retrieved` on every document created
 from these fixtures (`ACTA_SOURCES` in `tools/src/acta/join.ts`): update both together when
