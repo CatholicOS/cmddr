@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { matchActa, incipitSlug, shiftDate, toponymStems, titleHasToponym, titleHasToponymInner, titleIsToponym } from '../src/acta/match.js';
+import { matchActa, citedAt, incipitSlug, shiftDate, toponymStems, titleHasToponym, titleHasToponymInner, titleIsToponym } from '../src/acta/match.js';
 import type { ActaEntry } from '../src/acta/index.js';
 import type { DocumentRecord } from '../src/types.js';
 
@@ -198,6 +198,21 @@ describe('matchActa on the volumes of 1979-2002 (phase 2b-ii-c)', () => {
     ];
     const r = matchActa([entry({ pope: 'Ioannes Paulus II', category: 'LITTERAE APOSTOLICAE', incipit: 'Tanta est', date: '1981-02-18', year: 1981, volume: 73, page: 4 })], docs);
     expect(r.matches.map((m) => [m.documentId, m.by])).toEqual([['mag:john-paul-ii/tanta-est-episcopus-ipialensis-1981', 'incipit']]);
+  });
+
+  it('re-points a two-page entry to the page a corrigendum keyed by its first page cites, instead of holding it (citedAt)', () => {
+    // The 2014 index cites one act at `138, 261`; a corrigendum keyed AAS:106:138 whose
+    // citation of record is AAS:106:261 means the act is cited at 261, and nothing is a reprint.
+    const two = entry({ pope: 'Benedictus XVI', category: 'LITTERAE APOSTOLICAE', incipit: 'Deus caritas', date: '2011-10-08', year: 2014, volume: 106, page: 138, alsoPages: [261] });
+    const row = { kind: 'corrigendum' as const, citationOf: 'AAS:106:261', indexLines: ['a', 'b'] as const, evidence: 'test' };
+    const cited = citedAt(two, { 'AAS:106:138': row });
+    expect(cited.reprint).toBe(false);
+    expect(cited.entry.page).toBe(261);
+    expect(cited.entry.alsoPages).toBeUndefined();
+    // A row keyed by the entry's page whose citation is another entry's page: a reprint, as before.
+    expect(citedAt(two, { 'AAS:106:138': { ...row, citationOf: 'AAS:104:482' } })).toEqual({ entry: two, reprint: true });
+    // No row: untouched.
+    expect(citedAt(two, {})).toEqual({ entry: two, reprint: false });
   });
 
   it('lists the later printing of an act printed twice as a reprint, never a claim', () => {

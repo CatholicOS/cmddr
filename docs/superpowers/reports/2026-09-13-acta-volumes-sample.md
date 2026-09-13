@@ -88,7 +88,8 @@ not used silently.
 | 2012 | Benedictus XVI | 151 | 61 | 24 | 2 | 0 | 35 | 13 | 24 | 90 | 17 | 15 |
 | **Total** | | **607** | **375** | **131** | **9** | **0** | **235** | **147** | **97** | **232** | **37** | **57** |
 
-*Unmatched* counts the entries of a harvested or partly harvested category the join left without a document (each is
+*Claimed twice* counts the documents two entries both match (§5), as the 2015–2024 report does; a document claimed from
+two sources counts in each. *Unmatched* counts the entries of a harvested or partly harvested category the join left without a document (each is
 listed in §6 with a belief); *Created* and *Held* partition them, with the ambiguous and doubly-claimed entries, by the
 creator's rules (§8, §9). *Dated > 1 year before the volume* counts the acts a volume publishes late (spec §2: an entry can be
 dated years earlier; 1917 prints letters of 1910 and 1915). *Documents of the popes without an entry* counts the harvested
@@ -102,7 +103,7 @@ shelf documents of the source's popes dated in the volume year that carry no `ac
    day (10 November 1977: *Avkaënsis*, *Mohaleshoekensis*, *Ambikapurensis* against the shelf's *Avkaensis*), the entry the
    record names keeps the match and the others are released to the creator instead of all three being withheld.
 2. **147 documents created** (§8) -- `rp:benedict-xv` 8, `rp:benedict-xvi` 13, `rp:paul-vi` 28, `rp:pius-x` 2, `rp:pius-xi` 60, `rp:pius-xii` 36 -- and 97 entries held (§9), 7 of them by the
-   duplicate guard and 2 by the id-collision, OCR and page rules. 61 constitutions print toponym and incipit both (§1.5), so almost no provisional id is minted from the
+   duplicate guard and 2 by the OCR rule. 61 constitutions print toponym and incipit both (§1.5), so almost no provisional id is minted from the
    volumes; the *Epistulae* are created only where the pope's letters shelf is harvested (Pius XI, Pius XII, John Paul I in this
    sample) and held elsewhere (§9, *shelf not harvested*).
 3. **A volume can reprint an act another volume already published, and a page can open two acts.** The 2020 index lists
@@ -1405,7 +1406,7 @@ formal genres are listed. A December act belongs to the next volume; an act whos
 a class the index files under a category the registry does not attempt (*Epistulae* for a pope whose letters shelf is
 not harvested, homilies, allocutions) is counted in §3.
 
-<details><summary><b>1909</b> — 18 without an entry (letter 9; apostolic-letter 8; encyclical 1)</summary>
+<details><summary><b>1909</b> — 18 without an entry (letter 9; apostolic-letter 8; encyclical 1); 9 of the formal genres listed</summary>
 
 | Document | Date | Class | Index entries on this date | Reading |
 |---|---|---|---|---|
@@ -1421,7 +1422,7 @@ not harvested, homilies, allocutions) is counted in §3.
 
 </details>
 
-<details><summary><b>1917-I</b> — 8 without an entry (apostolic-letter+motu-proprio 5; encyclical 1; papal-bull 1; brief 1)</summary>
+<details><summary><b>1917-I</b> — 8 without an entry (apostolic-letter+motu-proprio 5; encyclical 1; papal-bull 1; brief 1); 7 of the formal genres listed</summary>
 
 | Document | Date | Class | Index entries on this date | Reading |
 |---|---|---|---|---|
@@ -1435,7 +1436,7 @@ not harvested, homilies, allocutions) is counted in §3.
 
 </details>
 
-<details><summary><b>1931</b> — 2 without an entry (papal-bull+apostolic-constitution 1; letter 1)</summary>
+<details><summary><b>1931</b> — 2 without an entry (papal-bull+apostolic-constitution 1; letter 1); 1 of the formal genres listed</summary>
 
 | Document | Date | Class | Index entries on this date | Reading |
 |---|---|---|---|---|
@@ -1443,7 +1444,7 @@ not harvested, homilies, allocutions) is counted in §3.
 
 </details>
 
-<details><summary><b>1958</b> — 7 without an entry (letter 6; apostolic-letter 1)</summary>
+<details><summary><b>1958</b> — 7 without an entry (letter 6; apostolic-letter 1); 1 of the formal genres listed</summary>
 
 | Document | Date | Class | Index entries on this date | Reading |
 |---|---|---|---|---|
@@ -1451,7 +1452,7 @@ not harvested, homilies, allocutions) is counted in §3.
 
 </details>
 
-<details><summary><b>1978</b> — 7 without an entry (message 4; letter 1; apostolic-letter+motu-proprio 1; papal-bull+apostolic-constitution 1)</summary>
+<details><summary><b>1978</b> — 7 without an entry (message 4; letter 1; apostolic-letter+motu-proprio 1; papal-bull+apostolic-constitution 1); 2 of the formal genres listed</summary>
 
 | Document | Date | Class | Index entries on this date | Reading |
 |---|---|---|---|---|
@@ -1460,7 +1461,7 @@ not harvested, homilies, allocutions) is counted in §3.
 
 </details>
 
-<details><summary><b>2012</b> — 15 without an entry (apostolic-letter 9; papal-bull+apostolic-constitution 5; message 1)</summary>
+<details><summary><b>2012</b> — 15 without an entry (apostolic-letter 9; papal-bull+apostolic-constitution 5; message 1); 14 of the formal genres listed</summary>
 
 | Document | Date | Class | Index entries on this date | Reading |
 |---|---|---|---|---|

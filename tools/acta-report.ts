@@ -598,7 +598,7 @@ const HOLD_LABELS: Record<HoldReason, string> = {
   'id-collision': 'Id collision',
   'ocr-damaged': 'OCR-damaged incipit or toponym',
   'page-shared': 'Page cited by another act (invariant 25)',
-  'reprint': 'Reprint (ACTA_REPRINTS): the citation of record is the other printing',
+  'reprint': 'Printed more than once, or cited at more than one page: the citation of record is the other printing or awaits an ACTA_REPRINTS row',
 };
 {
   const byReason = new Map<HoldReason, ActaHoldRow[]>();

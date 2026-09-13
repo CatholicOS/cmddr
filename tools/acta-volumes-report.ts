@@ -52,7 +52,7 @@ interface Era {
   covers: (s: ActaSource) => boolean;
   /** The reading under §1, §2, §4 and §13, given the parsed sources and the computed tables. */
   reading1: (r: Map<string, ActaParseResult>) => string[];
-  reading2: (ctx: { matched: number; byHow: string; created: number; byIssuer: string; held: number; guard: number; otherRules: number; toponymIncipit: number; pageShared: number; provisional: number; epistulae: number }) => string[];
+  reading2: (ctx: { matched: number; byHow: string; created: number; byIssuer: string; held: number; guard: number; otherRules: number; otherRulesText: string; toponymIncipit: number; pageShared: number; provisional: number; epistulae: number }) => string[];
   mappingsProse: string[];
   radioProse: (ctx: { radio: number; matched: string[]; first: string }) => string[];
   partsSkippedNote: string;
@@ -125,7 +125,7 @@ const ERAS: Record<string, Era> = {
       `   day (10 November 1977: *Avkaënsis*, *Mohaleshoekensis*, *Ambikapurensis* against the shelf's *Avkaensis*), the entry the`,
       `   record names keeps the match and the others are released to the creator instead of all three being withheld.`,
       `2. **${c.created} documents created** (§8) -- ${c.byIssuer} -- and ${c.held} entries held (§9), ${c.guard} of them by the`,
-      `   duplicate guard and ${c.otherRules} by the id-collision, OCR and page rules. ${c.toponymIncipit} constitutions print toponym and incipit both (§1.5), so almost no provisional id is minted from the`,
+      `   duplicate guard and ${c.otherRulesText}. ${c.toponymIncipit} constitutions print toponym and incipit both (§1.5), so almost no provisional id is minted from the`,
       `   volumes; the *Epistulae* are created only where the pope's letters shelf is harvested (Pius XI, Pius XII, John Paul I in this`,
       `   sample) and held elsewhere (§9, *shelf not harvested*).`,
       `3. **A volume can reprint an act another volume already published, and a page can open two acts.** The 2020 index lists`,
@@ -264,7 +264,7 @@ const ERAS: Record<string, Era> = {
       `   and a curated row supplies -- among them the registry's dogmatic-definition bull *Munificentissimus Deus* and *Humani generis*`,
       `   at the head of AAS 42, and *Ad Sinarum gentem* at the head of AAS 47 (§1.2).`,
       `2. **${c.created} documents created** (§8) -- ${c.byIssuer} -- and ${c.held} entries held (§9), ${c.guard} of them by the`,
-      `   duplicate guard and ${c.otherRules} by the id-collision, OCR and page rules. ${c.toponymIncipit} constitutions print toponym and incipit both; the constitutions of`,
+      `   duplicate guard and ${c.otherRulesText}. ${c.toponymIncipit} constitutions print toponym and incipit both; the constitutions of`,
       `   1932–1945 print the see, with its vernacular in parentheses, and no incipit (*De Sienhsien (De Kinghsien). - Vicariatus*`,
       `   *Apostolicus …*), and the letters of the 1930s for a minor basilica are entered under the diocese (*Passaviensis dioecesis. -*),`,
       `   which the parser reads as toponyms, so they mint provisionally with the see in the title (§8). The *Epistulae* are`,
@@ -422,7 +422,7 @@ ERAS['1959-1977'] = {
     `   heading *Sollemnis professio fidei*, against the other motu proprio of the day), *Populorum progressio* and *Sacrae laudis*`,
     `   (§1.2).`,
     `2. **${c.created} documents created** (§8) -- ${c.byIssuer} -- and ${c.held} entries held (§9), ${c.guard} of them by the`,
-    `   duplicate guard and ${c.otherRules} by the id-collision, OCR and page rules. The creations fall where the shelves stop: none from 1967–1970 and 1972,`,
+    `   duplicate guard and ${c.otherRulesText}. The creations fall where the shelves stop: none from 1967–1970 and 1972,`,
     `   where Paul VI's shelves hold what the index prints, and 45–59 a year from 1973, where vatican.va's apost_constitutions`,
     `   shelf carries no act of 1973, 1974 or 1976 and two of 1975 against the 40, 15, 2, 18 and 34 the index prints, and its`,
     `   apost_letters shelf one or two a year against 22–30; John XXIII's from 1959–1963, where his year-partitioned shelves`,
@@ -499,7 +499,12 @@ ERAS['1979-2014'] = {
     const unprinted = era.flatMap(([, x]) => x.entries.filter((e) => e.date.startsWith('????')));
     const journeys = era.reduce((n, [, x]) => n + x.entries.filter((e) => categoryForHeading(e.category)?.id === 'Itinera Apostolica').length, 0);
     const lowest = era.map(([k, x]) => [k, harvestedParseRate(x.stats) ?? 1] as const).sort((a, b) => a[1] - b[1]);
-    const noText = r('1988').stats.harvestedPageLines - r('1988').stats.harvestedEntries;
+    const r1988 = r('1988'), r2010 = r('2010'), r2011 = r('2011');
+    if (r1988 === undefined || r2010 === undefined || r2011 === undefined) {
+      const gone = ['1988', '2010', '2011'].filter((k) => parsedAll.get(k) === undefined);
+      return [`*(The reading is not rendered: the fixture${gone.length > 1 ? 's' : ''} ${gone.join(', ')} ${gone.length > 1 ? 'are' : 'is'} missing from tools/fixtures/acta/.)*`];
+    }
+    const noText = r1988.stats.harvestedPageLines - r1988.stats.harvestedEntries;
     return [
       `1. **Every source but one clears the floor over the harvested categories; the one below it lost its lines to the text layer, not`,
       `   to a shape.** ${era.length - under.length} of the ${era.length} sources parse at 95 % or better over the harvested categories (§4)${under.length ? `; the ${under.length} below -- ${under.map((k) => `${k} (${pct(harvestedParseRate(r(k).stats))})`).join(', ')} --` : ''}`,
@@ -567,7 +572,7 @@ ERAS['1979-2014'] = {
     `   uniquely and none doubly -- the description-to-title rule phase 2b-ii-b declined for the *Urbis* titles, left here to the owner`,
     `   with the count.`,
     `2. **${c.created} documents created** (§8) -- ${c.byIssuer} -- and ${c.held} entries held (§9), ${c.guard} of them by the`,
-    `   duplicate guard and ${c.otherRules} by the id-collision, OCR, page and reprint rules. The creations fall where the shelves stop or`,
+    `   duplicate guard and ${c.otherRulesText}. The creations fall where the shelves stop or`,
     `   never reached: John Paul II's constitutions of 1982–1983 and 1989 (AAS 75 and 81, eighteen and nine, where his`,
     `   apost_constitutions shelf is thin), six of his canonisation decretals (the bulls shelf is harvested for him, so *Litterae*`,
     `   *Decretales* are created -- but the guard holds fifty-two of them as class mismatches, since vatican.va files the decretals on`,
@@ -785,7 +790,8 @@ for (const s of SAMPLE) {
 }
 p(`| **Total** | | **${totals.entries}** | **${totals.attempted}** | **${totals.matched}** | **${totals.ambiguous}** | **${totals.conflicts}** | **${totals.unmatched}** | **${totals.created}** | **${totals.held}** | **${totals.non}** | **${totals.early}** | **${totals.without}** |`);
 p();
-p('*Unmatched* counts the entries of a harvested or partly harvested category the join left without a document (each is');
+p('*Claimed twice* counts the documents two entries both match (§5), as the 2015–2024 report does; a document claimed from');
+p('two sources counts in each. *Unmatched* counts the entries of a harvested or partly harvested category the join left without a document (each is');
 p('listed in §6 with a belief); *Created* and *Held* partition them, with the ambiguous and doubly-claimed entries, by the');
 p('creator\'s rules (§8, §9). *Dated > 1 year before the volume* counts the acts a volume publishes late (spec §2: an entry can be');
 p('dated years earlier; 1917 prints letters of 1910 and 1915). *Documents of the popes without an entry* counts the harvested');
@@ -799,13 +805,18 @@ p();
   for (const c of created) byIssuer.set(c.record.issuerId, (byIssuer.get(c.record.issuerId) ?? 0) + 1);
   const toponymIncipit = entries.filter((e) => e.toponym !== null && e.incipit !== null).length;
   const guard = creation.held.filter((h) => ['class-mismatch', 'possible-identity', 'near-miss', 'same-incipit-elsewhere'].includes(h.reason)).length;
-  const otherRules = creation.held.filter((h) => ['id-collision', 'ocr-damaged', 'page-shared', 'reprint'].includes(h.reason)).length;
+  const otherRuleNames: Record<string, string> = { 'id-collision': 'the id-collision rule', 'ocr-damaged': 'the OCR rule', 'page-shared': 'the page rule', 'reprint': 'the reprint rule' };
+  const otherRuleCounts = Object.entries(otherRuleNames).map(([k, name]) => [name, creation.held.filter((h) => h.reason === k).length] as const).filter(([, n]) => n > 0);
+  const otherRules = otherRuleCounts.reduce((n, [, c]) => n + c, 0);
+  // Named per rule so the sentence agrees with the §9 table row by row (CodeRabbit, PR #37).
+  const otherRulesText = otherRuleCounts.length === 0 ? 'none by the id-collision, OCR, page or reprint rules'
+    : otherRuleCounts.map(([name, n]) => `${n} by ${name}`).join(', ');
   const pageShared = creation.held.filter((h) => h.reason === 'page-shared').length;
   p('### The reading');
   p();
   for (const line of ERA.reading2({
     matched: result.matches.length, byHow: [...byHow].sort().map(([k, n]) => `${n} ${k}`).join(', '), created: created.length,
-    byIssuer: [...byIssuer].sort().map(([k, n]) => `\`${k}\` ${n}`).join(', '), held: creation.held.length, guard, otherRules, toponymIncipit, pageShared,
+    byIssuer: [...byIssuer].sort().map(([k, n]) => `\`${k}\` ${n}`).join(', '), held: creation.held.length, guard, otherRules, otherRulesText, toponymIncipit, pageShared,
     provisional: created.filter((c) => c.record.idStatus === 'provisional').length,
     epistulae: entries.filter((e) => cat(e)?.id === 'Epistulae').length,
   })) p(line);
@@ -1116,7 +1127,7 @@ const HOLD_LABELS: Record<HoldReason, string> = {
   'id-collision': 'Id collision',
   'ocr-damaged': 'OCR-damaged incipit or toponym',
   'page-shared': 'Page cited by another act (invariant 25)',
-  'reprint': 'Reprint (ACTA_REPRINTS): the citation of record is the other printing',
+  'reprint': 'Printed more than once, or cited at more than one page: the citation of record is the other printing or awaits an ACTA_REPRINTS row',
 };
 {
   const byReason = new Map<HoldReason, ActaHoldRow[]>();
@@ -1188,7 +1199,8 @@ for (const s of SAMPLE) {
   const ds = docsWithoutEntry(s.key);
   const byGenre = new Map<string, number>();
   for (const d of ds) byGenre.set(cls({ genre: d.genre, characteristics: d.characteristics ?? [] }), (byGenre.get(cls({ genre: d.genre, characteristics: d.characteristics ?? [] })) ?? 0) + 1);
-  p(`<details><summary><b>${s.key}</b> — ${ds.length} without an entry (${[...byGenre].sort((a, b) => b[1] - a[1]).map(([k, n]) => `${k} ${n}`).join('; ') || '—'})</summary>`);
+  const listed = ds.filter((d) => FORMAL.has(d.genre ?? '')).length;
+  p(`<details><summary><b>${s.key}</b> — ${ds.length} without an entry (${[...byGenre].sort((a, b) => b[1] - a[1]).map(([k, n]) => `${k} ${n}`).join('; ') || '—'}); ${listed} of the formal genres listed</summary>`);
   p();
   p('| Document | Date | Class | Index entries on this date | Reading |');
   p('|---|---|---|---|---|');
