@@ -30,10 +30,10 @@ import { slugify } from '../slug.js';
 import { mintId, mintProvisionalId } from '../ids.js';
 import { POPES } from '../mappings/pontiffs.js';
 import { categoryForHeading, type ActaCategory, type GenreClass } from './categories.js';
-import { ACTA_HOLDS, ACTA_INDEX_CORRECTIONS, ACTA_SHARED_PAGES, curationKey } from './curation.js';
+import { ACTA_HOLDS, ACTA_INDEX_CORRECTIONS, ACTA_REPRINTS, ACTA_SHARED_PAGES, curationKey, overrideKey } from './curation.js';
 import { ACTA_FIXTURES_RETRIEVED, sourceOfEntry } from './join.js';
 import {
-  POPE_ISSUERS, isMonthOnly, shiftDate, titleHasToponym, type ActaCandidate, type ActaMatchResult,
+  POPE_ISSUERS, incipitSlug, isMonthOnly, shiftDate, titleHasToponym, type ActaCandidate, type ActaMatchResult,
 } from './match.js';
 import { ACTA_POPES } from './popes.js';
 import type { ActaEntry } from './index.js';
@@ -140,6 +140,9 @@ export const NOT_CREATED: Readonly<Record<string, string>> = {
   // One heading for one act (AAS 60 (1968) 836): the Credo of the People of God, which
   // vatican.va files on the motu_proprio shelf and the matcher cites there.
   'Sollemnis professio fidei': 'one heading for one act, the Credo of the People of God (30 June 1968), which the motu_proprio shelf carries and the matcher cites; nothing is minted from the heading',
+  // One heading for one act (the 2010 index): Benedict XVI's pastoral letter to the
+  // Catholics of Ireland, on the year-partitioned letters shelf, not harvested for him.
+  'Litterae pastorales': 'one heading for one act, the pastoral letter to the Catholics of Ireland (19 March 2010), which vatican.va files on the year-partitioned letters shelf, not harvested for Benedict XVI (#4)',
 };
 
 /**
@@ -180,6 +183,8 @@ export type HoldReason =
   | 'id-collision'
   /** The entry's page is cited by another entry or a matched document: one page opens one act (invariant 25) unless the page is curated as shared. */
   | 'page-shared'
+  /** The later printing of an act the *Acta* print twice (ACTA_REPRINTS), or an entry the index cites at two pages that no row settles: the citation of record is one reference. */
+  | 'reprint'
   /** The OCR has damaged the incipit or toponym (a stray character, a digit, an unbalanced bracket): the line is not the line as printed. */
   | 'ocr-damaged';
 
@@ -250,6 +255,10 @@ export function actaTitle(entry: ActaEntry): string {
 export const ocrDamaged = (text: string): boolean =>
   /[^\p{L}\p{N}\s.,;:'’"«»!?()–—-]/u.test(text)
   || /(?:^|\s)\p{Lu}-\p{Lu}/u.test(text)
+  // A lone capital before the dash of a double see (`S - KETAËNSIS (Navrongensis)`, AAS 48
+  // (1956) 862: the OCR's fragment of *Tamalensis*, the rest of the word lost on the line
+  // before) is a see the page does not print so.
+  || /^\p{Lu}\s+[–-]\s/u.test(text)
   || (text.match(/\(/g) ?? []).length !== (text.match(/\)/g) ?? []).length;
 /**
  * An incipit the OCR of a volume has damaged, beyond `ocrDamaged`: a mark no incipit carries
@@ -262,7 +271,17 @@ export const ocrDamaged = (text: string): boolean =>
  * recognised, and their incipits (`Lex N. DCXXVI`, `Il 30 novembre 2019`) are read as printed.
  */
 export const incipitDamaged = (incipit: string): boolean =>
-  /[!?"«»ß$§%&*=+\d]/.test(incipit) || /(?<![A-Z])\.(?!$)/.test(incipit) || !/^[\p{Lu}]/u.test(incipit) || /^\p{L}\.\s/u.test(incipit);
+  /[!?"«»ß$§%&*=+\d]/.test(incipit) || /(?<![A-Z])\.(?!$)/.test(incipit) || !/^[\p{Lu}]/u.test(incipit) || /^\p{L}\.\s/u.test(incipit)
+  // Phase 2b-ii-c, measured over every volume's incipits: the OCR splits the first letter
+  // from its word (`M ementote sermonis`, AAS 88 (1996) 905, the act being *Mementote
+  // sermonis*; `H orti conclusi`, AAS 25; `P er celebre in tota`, AAS 27) -- a lone
+  // capital before a lower-case word, unless it is a word (*A*, *E*, *O*, the Italian
+  // article *I* and *È*: `A Domino est`, `E supremi`, `I rapidi progressi`, `È certo ben
+  // noto`) -- and sets a word in
+  // capitals (`QUO maius`, AAS 75 (1983) 597; `EX antiqua`, AAS 44; `IS Stat sublimis`, AAS
+  // 43) where the index prints mixed case; and no Latin word opens with a J before a
+  // consonant (`Jn vita eorum`, AAS 85 (1993) 221: *In vita eorum*, on the shelf).
+  || /^(?![AEIOÈÉÀÒÙ]\s)\p{Lu}\s\p{Ll}/u.test(incipit) || /\b\p{Lu}{2,}(?!\.)\b/u.test(incipit) || /\bJ[^aeiouAEIOU\s]/.test(incipit);
 
 const isCalendarDate = (iso: string): boolean => {
   const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})$/);
@@ -343,7 +362,7 @@ export function createFromActa(
     const k = `${d.issuerId}|${d.date}`;
     byIssuerDate.set(k, [...(byIssuerDate.get(k) ?? []), d]);
     if (d.incipit !== undefined) {
-      const s = `${d.issuerId}|${slugify(d.incipit)}`;
+      const s = `${d.issuerId}|${incipitSlug(d.incipit)}`;
       byIssuerSlug.set(s, [...(byIssuerSlug.get(s) ?? []), d]);
     }
   }
@@ -368,6 +387,10 @@ export function createFromActa(
     }
   }
   for (const e of result.unknownPope) hold(e, 'pope-not-harvested', `no issuer for the pope heading '${e.pope}'`);
+  for (const e of result.reprints) {
+    const row = ACTA_REPRINTS[overrideKey(e)]!;
+    hold(e, 'reprint', `the ${row.kind === 'reissue' ? 'later printing' : 'first printing, superseded by the corrigendum'} of an act the Acta print twice; the citation of record is ${row.citationOf.replace(/^AAS:(\d+):(\d+)$/, (_, v, pg) => `AAS ${v} (${Number(v) + 1908}) ${pg}`)} (ACTA_REPRINTS)`);
+  }
 
   for (const u of result.unmatched) {
     const entry = u.entry;
@@ -442,6 +465,15 @@ export function createFromActa(
       hold(entry, 'ocr-damaged', `the extracted ${damaged === entry.incipit ? 'incipit' : damaged === entry.toponym ? 'toponym' : 'head of the entry'} '${damaged}' carries a character the index does not print; needs a curated reading, never a guess`);
       continue;
     }
+    // An act the index cites at two pages (`138, 261`): one page is the citation, and only
+    // a curated row (ACTA_REPRINTS) says which; without one, held.
+    if (entry.alsoPages !== undefined) {
+      const settled = entry.alsoPages.every((pg) => ACTA_REPRINTS[`${entry.series}:${entry.volume}:${pg}`]?.citationOf === overrideKey(entry));
+      if (!settled) {
+        hold(entry, 'reprint', `the index cites the act at pages ${[entry.page, ...entry.alsoPages].join(', ')}; the citation of record needs an ACTA_REPRINTS row`);
+        continue;
+      }
+    }
     // §5 -- the owner's holds.
     const curated = ACTA_HOLDS[key];
     if (curated !== undefined) {
@@ -451,22 +483,30 @@ export function createFromActa(
 
     // §3 -- the duplicate guard, against every document of the pope.
     const sameDate = on(issuerId, entry.date);
-    const slug = entry.incipit === null ? null : slugify(entry.incipit);
+    const slug = entry.incipit === null ? null : incipitSlug(entry.incipit);
     const classMismatch = sameDate.filter((d) =>
-      (slug !== null && ((d.incipit !== undefined && slugify(d.incipit) === slug) || titleContainsIncipit(d.title, entry.incipit!)))
+      (slug !== null && ((d.incipit !== undefined && incipitSlug(d.incipit) === slug) || titleContainsIncipit(d.title, entry.incipit!)))
       || (entry.toponym !== null && titleHasToponym(d.title, entry.toponym)));
     if (classMismatch.length) {
       hold(entry, 'class-mismatch', `a same-date record carries the entry's ${entry.toponym !== null && slug === null ? 'toponym' : 'incipit'} as ${classMismatch.map((d) => `${d.genre}${d.characteristics?.length ? '+' + d.characteristics.join('+') : ''}`).join(', ')}; the shelf and the Acta disagree about the class (discussion #30)`, classMismatch);
       continue;
     }
-    const possibleIdentity = sameDate.filter((d) => d.incipit === undefined);
+    // … and the entry's side of the same shape (phase 2b-ii-c, measured over every era: one
+    // case, AAS 91 (1999) 849, `Nova statuta Academiarum theologicarum approbantur` beside
+    // the shelf's *Inter munera academiarum* of the day, which vatican.va files on
+    // apost_letters without the motu-proprio characteristic): an entry that prints neither
+    // incipit nor toponym, beside a same-date record of the genre, cannot be told from it.
+    const possibleIdentity = sameDate.filter((d) => d.incipit === undefined
+      || (entry.incipit === null && entry.toponym === null && d.genre === cls.genre));
     if (possibleIdentity.length) {
-      hold(entry, 'possible-identity', `a same-date record prints no incipit (${possibleIdentity.map((d) => d.genre).join(', ')}); only the documents' own text can say whether it is this act (#31)`, possibleIdentity);
+      hold(entry, 'possible-identity', entry.incipit === null && entry.toponym === null && possibleIdentity.some((d) => d.incipit !== undefined)
+        ? `the entry prints no incipit and a same-date record of the genre stands (${possibleIdentity.map((d) => d.id).join(', ')}); only the documents' own text can say whether it is this act (#31)`
+        : `a same-date record prints no incipit (${possibleIdentity.map((d) => d.genre).join(', ')}); only the documents' own text can say whether it is this act (#31)`, possibleIdentity);
       continue;
     }
     if (slug !== null) {
       const nearMisses = [-1, 1].flatMap((delta) =>
-        on(issuerId, shiftDate(entry.date, delta)).filter((d) => d.genre === cls.genre && d.incipit !== undefined && slugify(d.incipit) === slug));
+        on(issuerId, shiftDate(entry.date, delta)).filter((d) => d.genre === cls.genre && d.incipit !== undefined && incipitSlug(d.incipit) === slug));
       if (nearMisses.length) {
         hold(entry, 'near-miss', 'a record of the genre a day off carries the same incipit; needs the act\'s own dating formula and a DATE_CORRECTIONS row, never a guess', nearMisses);
         continue;
