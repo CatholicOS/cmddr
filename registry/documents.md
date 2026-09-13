@@ -7,7 +7,7 @@ for a document in an annual series (`series.id` and `series.year`; the occasion 
 signed). The issuer segment is always the local part of `issuerId`, so conciliar documents namespace under
 their council and record the promulgating pope separately. See the design specs for the minting rules.
 
-**7019 documents**, of which 711 carry a provisional identifier — the source prints no incipit for them, so their id is genre-and-date based and may be re-minted.
+**7019 documents**, of which 712 carry a provisional identifier — the source prints no incipit for them, so their id is genre-and-date based and may be re-minted.
 
 Every document appears in both views below; neither is a subset of the other.
 
@@ -37,7 +37,7 @@ Every document appears in both views below; neither is a subset of the other.
 | Genre | Documents | Dates |
 | --- | --- | --- |
 | [`apostolic-exhortation`](documents/by-genre/apostolic-exhortation.md) | 55 | 1908-08-04 – 2025-10-04 |
-| [`apostolic-letter`](documents/by-genre/apostolic-letter.md) | 2948 | 1857-06-15 – 2026-08-29 |
+| [`apostolic-letter`](documents/by-genre/apostolic-letter.md) | 2942 | 1857-06-15 – 2026-08-29 |
 | [`brief`](documents/by-genre/brief.md) | 30 | 1741-05-30 – 1950-09-08 |
 | [`constitution`](documents/by-genre/constitution.md) | 6 | 1870-04-24 – 1965-12-07 |
 | [`declaration`](documents/by-genre/declaration.md) | 3 | 1965-10-28 – 1965-12-07 |
@@ -45,9 +45,9 @@ Every document appears in both views below; neither is a subset of the other.
 | [`discourse-address`](documents/by-genre/discourse-address.md) | 30 | 1848-04-29 – 1903-06-22 |
 | [`encyclical`](documents/by-genre/encyclical.md) | 293 | 1740-12-03 – 2026-05-15 |
 | [`homily`](documents/by-genre/homily.md) | 11 | 2014-02-02 – 2025-02-01 |
-| [`letter`](documents/by-genre/letter.md) | 884 | 1863-12-21 – 1978-09-28 |
+| [`letter`](documents/by-genre/letter.md) | 888 | 1863-12-21 – 1978-09-28 |
 | [`message`](documents/by-genre/message.md) | 534 | 1960-12-22 – 2026-08-15 |
-| [`papal-bull`](documents/by-genre/papal-bull.md) | 2065 | 1749-03-15 – 2026-01-08 |
+| [`papal-bull`](documents/by-genre/papal-bull.md) | 2067 | 1749-03-15 – 2026-01-08 |
 | [`prayer`](documents/by-genre/prayer.md) | 1 | 1961-09-29 – 1961-09-29 |
 | [`unmapped`](documents/by-genre/unmapped.md) | 5 | 1846-07-16 – 1849-02-14 |
 | [`urbi-et-orbi`](documents/by-genre/urbi-et-orbi.md) | 145 | 1952-04-13 – 2026-04-05 |

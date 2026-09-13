@@ -113,10 +113,11 @@ export const ACTA_INDEX_CORRECTIONS: Readonly<Record<string, IndexCorrection>> =
       + "quorum semper commixtis moribus …'). The OCR reads the year as `1919`, before the pontificate; the "
       + 'shelf record is `mag:pius-xii/conflictatio-bonorum-1949`, dated 1949-02-11.',
   },
-  // The constitutions of 1948 that AAS 41 (1949) prints, whose year the OCR reads as `1919`
-  // too (index.ts: never repaired), each against its dating formula.
+  // The constitutions of 1948 that AAS 41 (1949) prints under the line `19 IS Ian. 10
+  // ICENSIS`, whose year the OCR has broken (index.ts: the year is left unprinted, `????`,
+  // and the dittos after it inherit the blank), each against its dating formula.
   '1949:16': {
-    printed: '1919-07-15',
+    printed: '????-07-15',
     date: '1948-07-15',
     indexLine: '  » » 15 GUAYAQUILENSIS (Fluminensis). - Christianae plebis. - A Dioecesi / Guayaquilensi Provincia civilis « Los Rios » '
       + 'dismembratur et / exinde novus erigitur Vicariatus Apostolicus Fluminensis ... 16',
@@ -127,7 +128,7 @@ export const ACTA_INDEX_CORRECTIONS: Readonly<Record<string, IndexCorrection>> =
       + 'column as `1919`. No shelf record carries the act.',
   },
   '1949:18': {
-    printed: '1919-07-17',
+    printed: '????-07-17',
     date: '1948-07-17',
     indexLine: '  » » 17 EDMONTONENSIS {S. Pauli in Alberta). - Quo satis. - Ab archidioecesis / Edmontonensis territorio pars distrahitur '
       + 'quae in novam dioece- / sim S. Pauli in Alberta nomine erigitur . . 18',
@@ -138,7 +139,7 @@ export const ACTA_INDEX_CORRECTIONS: Readonly<Record<string, IndexCorrection>> =
       + 'held as OCR-damaged until its toponym is curated.',
   },
   '1949:62': {
-    printed: '1919-05-20',
+    printed: '????-05-20',
     date: '1948-05-20',
     indexLine: '  » Maii 20 BOMBAYENSIS (Karachiensis). - Opportunis providentiae studiis. - Ab / Archidioecesi Bombayensi territorii pars '
       + 'seiungitur et nova / exinde erigitur Dioecesis, nomine « Karachiensis ...... 62',
@@ -148,7 +149,7 @@ export const ACTA_INDEX_CORRECTIONS: Readonly<Record<string, IndexCorrection>> =
       + "BOMBAYENSIS (KARACHIENSIS)'. The OCR reads the year column as `1919`. No shelf record carries the act.",
   },
   '1949:140': {
-    printed: '1919-07-08',
+    printed: '????-07-08',
     date: '1948-07-08',
     indexLine: '  » Iulii 8 DE LULUA ET KATANGA (Lacus Moëri). - In Congo Belgico. - E Vica- / riatu Apostolico de Lulua et Katanga '
       + 'territorii pars distrahitur / et nova exinde Praefectura Apostolica erigitur, «Lacus Moëri» / nomine 140-',
@@ -157,7 +158,7 @@ export const ACTA_INDEX_CORRECTIONS: Readonly<Record<string, IndexCorrection>> =
       + 'AAS-41-1949-ocr.pdf, read 2026-09-13) -- 8 July 1948. The OCR reads the year column as `1919`. No shelf record carries the act.',
   },
   '1949:311': {
-    printed: '1919-08-07',
+    printed: '????-08-07',
     date: '1948-08-07',
     indexLine: '  » Aug. 7 " OLIDENSIS ET RECIFENSIS (Caruaruensis). - Quo maiori. - Ab archidioe- / cesi Olidensi et Recifensi et a '
       + 'Dioecesibus Nazarensi et Pesquei- / rensi territoria distrahuntur, ex quibus nova Dioecesis Carua- / ruensis constituitur • 311',
@@ -188,6 +189,124 @@ export const ACTA_INDEX_CORRECTIONS: Readonly<Record<string, IndexCorrection>> =
       + "Nostri primo' (AAS 32 (1940) 43, PDF page 43 of AAS-32-1940-ocr.pdf, read 2026-09-13) -- 20 November 1939, the first year of "
       + "the pontificate; the volume opens it at p. 42 under 'EPISTULAE / I / AD EXCMUM P. D. IOANNEM PANICO, ARCHIEPISCOPUM TIT. "
       + "IUSTINIANENSEM …'. No shelf record carries the act.",
+  },
+  // Entries whose year the index does not print: a `»` in the year column with nothing
+  // above it (the head of AAS 42's index), a year token the OCR has broken (`19 IS`,
+  // `19Ö4`, `3918`) or misread beyond the parser's one-digit repair (`1961`), and the
+  // dittos that inherit the blank. The parser dates each `????-MM-DD` (index.ts); these
+  // rows supply the year from the act's own dating formula, read in the volume PDF, and
+  // every row's month and day agree with the index's print. Where the act's page could
+  // not be found under the index's page (AAS 41 (1949) 21, 27, 67, 69; AAS 45 (1953) 176,
+  // 177, 266), or the OCR has damaged the incipit a row would mint (AAS 45 (1953) 173
+  // `Qementium Solatrix`, 223 `Quanto praeseniius`, 267 `Quemadmodum piantana`, 489 `Qusi
+  // praesidium`), no row is written and the entry stays held.
+  "1950:753": {
+    printed: "????-11-01",
+    date: "1950-11-01",
+    indexLine: " » Nov,. 1 Munificentissimus Deus. - Fidei Dogma definitur Deiparam Virgi- / nem Mariam corpore et anima fuisse ad caelestem gloriam as- / sumptam ................. 753",
+    evidence: "The act's own dating formula reads 'Datum Romae, apud S. Petrum anno Iubilaei Maximi mil lesimo nongentesimo quinquagesimo, die prima mensis Novem bris, in festo omnium Sanctorum, Pontificatus Nostri anno duodecimo' (AAS 42 (1950) 771, PDF page 771 of AAS-42-1950-ocr.pdf, read 2026-09-13) -- 1950-11-01; the volume opens it at p. 753 under 'CONSTITUTIO APOSTOLICA / FIDEI DOGMA DEFINITUR DEIPARAM VIRGINEM MARIAM CORPORE ET ANIMA FUISSE AD CAELESTEM GLORIAM ASSUMPTAM / PIUS EPISCOPUS … Munificentissimus Deus, qui omnia potest', the first page of the fascicle of 4 November 1950. AAS 42's chronological index opens with this entry, whose year column prints `»` with nothing above it to inherit: the OCR lost the printed `1950`. The shelf record is `mag:pius-xii/munificentissimus-deus-1950`, dated 1950-11-01, the registry's dogmatic-definition bull.",
+  },
+  "1950:561": {
+    printed: "????-08-12",
+    date: "1950-08-12",
+    indexLine: " » Aug. 12 Humani generis. - Ad Venerabiles Fratres Patriarchas, Primates, / Archiepiscopos, Episcopos aliosque Locorum Ordinarios, pacem et / communionem cum Apostolica Sede habentes : de nonnullis falsis / opinionibus, quae catholicae doctrinae fundamenta subruere mi- / minantur 561",
+    evidence: "The act's own dating formula reads 'Datum Romae, apud S. Petrum, die xii mensis Augusti, anno MDCCCL, Pontificatus Nostri duodecimo. PIUS PP. XII' (the OCR's `MDCCCL` for MCML; AAS 42 (1950) 578, PDF page 578 of AAS-42-1950-ocr.pdf, read 2026-09-13) -- 1950-08-12, the twelfth year of a pontificate begun 2 March 1939; the volume opens it at p. 561 under 'LITTERAE ENCYCLICAE / AD VENERABILES FRATRES … DE NONNULLIS FALSIS OPINIONIBUS, QUAE CATHOLICAE DOCTRINAE FUNDAMENTA SUBRUERE MINANTUR', the first page of the fascicle of 2 September 1950. The second entry of AAS 42's index, inheriting by ditto the year the OCR lost on the first (`» Nov,. 1 Munificentissimus Deus`). The shelf record is `mag:pius-xii/humani-generis-1950`, dated 1950-08-12.",
+  },
+  "1955:5": {
+    printed: "????-10-07",
+    date: "1954-10-07",
+    indexLine: "PAG. 19Ö4 Oet. 7 Ad Sinarum gentem. - Ad Venerabiles Fratres ac dilectos Mos / Archiepiscopos aliosque locorum Ordinarios ceterumque cle- / rum ac populum Sinarum, pacem et communionem cum / Apostolica Sede habentes: paterna impertiuntur hortamenta / in praesentibus rerum augustus 5",
+    evidence: "The act's own dating formula reads 'Datum Romae, apud S. Petrum, die vii mensis Octobris, in festo Sacratissimi Rosarii Beatae Mariae Virginis, an. MDCCCCLIV, Pontificatus Nostri sexto decimo.' (AAS 47 (1955) 14, PDF page 14 of AAS-47-1955-ocr.pdf, read 2026-09-13) -- 1954-10-07; the volume opens it at p. 5 under 'EPISTULA ENCYCLICA / AD VENERABILES FRATRES AC DILECTOS FILIOS ARCHIEPISCOPOS … CLERUM AC POPULUM SINARUM … Ad Sinarum gentem', the first page of the fascicle of 28 January 1955. AAS 47's index opens with this entry, whose year the OCR reads `19Ö4` beside the column header (`PAG. 19Ö4 Oet. 7`, the page extracted in the default mode); the parser reads the month and day and leaves the year unprinted. The shelf record is `mag:pius-xii/ad-sinarum-gentem-1954`, dated 1954-10-07.",
+  },
+  "1955:664": {
+    printed: "????-04-27",
+    date: "1951-04-27",
+    indexLine: "1961 Apr. 27 Haud parvae. - Beata Maria V. a Purissimo et Immaculato Corde / pro universa Huancavelicensi dioecesi, in Peruviana dicione, / praecipua Caelestis Patrona declaratur. 664",
+    evidence: "The act's own dating formula reads 'Datum Romae, apud Sanctum Petrum, sub anulo Piscatoris, die XXVII mensis Aprilis, anno mcmli, Pontificatus Nostri tertio decimo. De speciali mandato Sanctissimi' (AAS 47 (1955) 665, PDF page 665 of AAS-47-1955-ocr.pdf, read 2026-09-13) -- 1951-04-27; The OCR reads the year as `1961` (`1961 Apr. 27 Haud parvae`), four years after the volume and beyond the parser's one-digit repair, so the year is left unprinted; the volume prints the act at p. 664. No shelf record carries the act.",
+  },
+  "1949:308": {
+    printed: "????-01-10",
+    date: "1948-01-10",
+    indexLine: "19 IS Ian. 10 ICENSIS. - Cathedralia Capitula. - Canonicorum Capitulum in Cathe- / drali Ecclesia Icensi erigitur 308",
+    evidence: "The act's own dating formula reads 'Datum Romae apud S. Petrum, anno Domini millesimo nongentesimo quadragesimo octavo, die decima Ianuarii mensis, Pontificatus Nostri anno nono.' (AAS 41 (1949) 310, PDF page 310 of AAS-41-1949-ocr.pdf, read 2026-09-13) -- 1948-01-10; The entry's year the OCR reads `19 IS` (`19 IS Ian. 10 ICENSIS. - Cathedralia Capitula`); the volume prints the act at p. 308. No shelf record carries the act.",
+  },
+  "1949:26": {
+    printed: "????-08-06",
+    date: "1948-08-06",
+    indexLine: " » Aug. 6 Quintum ac vicesimum. - Ad Moderatores, Doctores et Alumnos Ca- / tholicae Studiorum Universitatis Noviomagensis, quinto ac vice- / simo anno ab eiusdem universitatis exordio 26",
+    evidence: "The act's own dating formula reads 'Datum ex Arce Gandulphi, prope Romam, die Vi mensis Augusti, anno MDCCCCXXXXVIH, Pontificatus Nostri decimo. PIUS PP. XII ,' (AAS 41 (1949) 27, PDF page 27 of AAS-41-1949-ocr.pdf, read 2026-09-13) -- 1948-08-06; Inherits by ditto the year of AAS 41's line `3918 Iulii 11 Quinquagesimo`, which the OCR has broken beyond repair; the volume prints the act at the page the index cites. No shelf record carries the act.",
+  },
+  "1949:64": {
+    printed: "????-12-04",
+    date: "1948-12-04",
+    indexLine: " » Dec. 4 Quemadmodum. - Ad Revnium P. Clementem a Milwaukee, Ordinis / Franciscanum Capulatorum Ministrum Generalem : de apostolatu / ab eodem Ordine provehendo 64",
+    evidence: "The act's own dating formula reads 'Datum Romae, apud Sanetum Petrum, die iv mensis Decembris, anno MDCCCCXXXXVIII, Pontificatus Nostri decimo. Acta Pu Pp. XU 67' (AAS 41 (1949) 66, PDF page 66 of AAS-41-1949-ocr.pdf, read 2026-09-13) -- 1948-12-04; Inherits by ditto the year of AAS 41's line `3918 Iulii 11 Quinquagesimo`, which the OCR has broken beyond repair; the volume prints the act at the page the index cites. No shelf record carries the act.",
+  },
+  "1949:68": {
+    printed: "????-12-15",
+    date: "1948-12-15",
+    indexLine: " » » 15 Agnovimus perlibenter. - Ad Revmum D. Laurentium Perosi, Anti- / stitem Urbanum, quinquagesimum annum magisterii Chori Xy- / stini a Summo Pontifice Leone XIII eidem crediti expleturum . 68",
+    evidence: "The act's own dating formula reads 'Datum Romae apud Sanctum Petrum, die xv mensis Decembris, anno MDCCCCXXxxvni, Pontificatus Nostri decimo. PIUS PP. XII' (AAS 41 (1949) 69, PDF page 69 of AAS-41-1949-ocr.pdf, read 2026-09-13) -- 1948-12-15; Inherits by ditto the year of AAS 41's line `3918 Iulii 11 Quinquagesimo`, which the OCR has broken beyond repair; the volume prints the act at the page the index cites. No shelf record carries the act.",
+  },
+  "1949:216": {
+    printed: "????-12-20",
+    date: "1948-12-20",
+    indexLine: " » » 20 Disertae admodum litterae. - Ad Emos PP. DD- Michaelem tit. / S. Anastasiae S. R. B. Presb. Card. Faulhaber, Archiepiscopum / Monacensem et Frisingensem, Iosephum tit. S. Ioannis ante Por- / tam Latinam, S. R. E. Presb. Card. Frings, Archiepiscopum Co- / loniensem, Conradum tit. S. Agathae, S. R. E- Presb. Card. / von Preysing, Episcopum Berolinensem ceterosque Germaniae / Archiepiscopos, Episcopos locorumque Ordinarios: omciosis lit- / teris respondet ex episcopali coetu datis 216",
+    evidence: "The act's own dating formula reads 'Datum Romae apud Sanctum Petrum, die xx mensis Decembris, anno MDCCCCXXXXVIII, Pontificatus Nostri decimo. PIUS PP. XII' (AAS 41 (1949) 218, PDF page 218 of AAS-41-1949-ocr.pdf, read 2026-09-13) -- 1948-12-20; Inherits by ditto the year of AAS 41's line `3918 Iulii 11 Quinquagesimo`, which the OCR has broken beyond repair; the volume prints the act at the page the index cites. No shelf record carries the act.",
+  },
+  "1949:175": {
+    printed: "????-12-21",
+    date: "1948-12-21",
+    indexLine: " » » 21 Opportunum. - Ad Revmum P. Gulielmum van Hees, Ordinis San- / ctae Crucis Magistrum Generalem : septimo exeunte saeculo ab / eiusdem Ordinis Constitutionum approbatione . . . . 175",
+    evidence: "The act's own dating formula reads 'Datum Romae apud Sanctum Petrum, die xxi mensis Decembris, anno MDCCCCXXXXVIII, Pontificatus Nostri decimo. PIUS PP. XII' (AAS 41 (1949) 176, PDF page 176 of AAS-41-1949-ocr.pdf, read 2026-09-13) -- 1948-12-21; Inherits by ditto the year of AAS 41's line `3918 Iulii 11 Quinquagesimo`, which the OCR has broken beyond repair; the volume prints the act at the page the index cites. No shelf record carries the act.",
+  },
+  "1953:221": {
+    printed: "????-04-13",
+    date: "1951-04-13",
+    indexLine: "1961 Apr. 13 Vetus est. - Beata Maria V., vulgo « Notre-Dame du Rempart » / invocata, totius civitatis Namurcensis Patrona caelestis / aeque principalis cum Sancto Albano renuntiatur 221",
+    evidence: "The act's own dating formula reads 'Datum Romae, apud Sanctum Petrum, sub anulo Piscatoris, die XIII mensis Aprilis, anno MCMLI, Pontificatus Nostri tertio decimo. De speciali mandato Sanctissimi' (AAS 45 (1953) 222, PDF page 222 of AAS-45-1953-ocr.pdf, read 2026-09-13) -- 1951-04-13; The year the OCR reads `1961` (two years before the volume, outside the parser's repair span) is left unprinted; the volume prints the act at p. 221. No shelf record carries the act.",
+  },
+  "1953:175": {
+    printed: "????-10",
+    date: "1951-10-04",
+    indexLine: " » Oct. Asisinas civis. - Sanctus Franciscus Asisinas, C, paroeciae loci / « Llavallol », intra fines archidioecesis Platensis positae, / praecipuus caelestis Patronus constituitur 175",
+    evidence: "The act's own dating formula reads 'Datum ex Arce Gandulphi, sub anulo Piscatoris, die iv mensis Octo bris, anno MCMLI, Pontificatus Nostri tertio decimo. De speciali mandato Sanctissimi' (AAS 45 (1953) 176, PDF page 176 of AAS-45-1953-ocr.pdf, read 2026-09-13) -- 1951-10-04; Inherits by ditto the year of AAS 45's line `1961 Apr. 13 Vetus est`, which the OCR misreads (1951, two years before the volume: outside the parser's repair span); the volume prints the act at the page the index cites. No shelf record carries the act.",
+  },
+  "1953:149": {
+    printed: "????-05-12",
+    date: "1952-05-12",
+    indexLine: " Maii 12 Vitae huius. - Beatae Mariae V., vulgo « de Làttani » dicta, titulo / « Regina mundi » honestata. dioecesium Calvensis et Thea- / nensis caelestis Patrona confirmatur 149",
+    evidence: "The act's own dating formula reads 'Datum Romae, apud Sanctum Petrum, sub anulo Piscatoris, die xn mensis Maii, anno MCMLTI, Pontificatus Nostri quarto decimo. De speciali mandato Sanctissimi' (AAS 45 (1953) 150, PDF page 150 of AAS-45-1953-ocr.pdf, read 2026-09-13) -- 1952-05-12; Inherits by ditto the year of AAS 45's line `1961 Apr. 13 Vetus est`, which the OCR misreads (1951, two years before the volume: outside the parser's repair span); the volume prints the act at the page the index cites. No shelf record carries the act.",
+  },
+  "1953:150": {
+    printed: "????-06-14",
+    date: "1952-06-14",
+    indexLine: " Iunii 14 Consociati in honesta. - Sanctus Franciscus Xaverius sodalitatis / « Federación Española de Sindicatos de Iniciativa y Turi- / smo » nuncupatae caelestis Patronus confirmatur 150",
+    evidence: "The act's own dating formula reads 'Datum Romae, apud Sanctum Petrum, sub anulo Piscatoris, die xiv mensis Iunii, anno MOMLII, Pontificatus Nostri quarto decimo. De speciali mandato Sanctissimi' (AAS 45 (1953) 151, PDF page 151 of AAS-45-1953-ocr.pdf, read 2026-09-13) -- 1952-06-14; Inherits by ditto the year of AAS 45's line `1961 Apr. 13 Vetus est`, which the OCR misreads (1951, two years before the volume: outside the parser's repair span); the volume prints the act at the page the index cites. No shelf record carries the act.",
+  },
+  "1953:451": {
+    printed: "????-08-12",
+    date: "1952-08-12",
+    indexLine: " 12 Ex quo ut supremus. - Beata Maria V. in Caelum Assumpta Zi- / paquirensis Dioecesis Caelestis Patrona renuntiatur ... 451",
+    evidence: "The act's own dating formula reads 'Datum ex Arce Gandulphi, sub anulo Piscatoris, die xn mensis Au gusti, anno MCMLii, Pontificatus Nostri quarto decimo. De speciali mandato Sanctissimi' (AAS 45 (1953) 452, PDF page 452 of AAS-45-1953-ocr.pdf, read 2026-09-13) -- 1952-08-12; Inherits by ditto the year of AAS 45's line `1961 Apr. 13 Vetus est`, which the OCR misreads (1951, two years before the volume: outside the parser's repair span); the volume prints the act at the page the index cites. No shelf record carries the act.",
+  },
+  "1953:269": {
+    printed: "????-10-16",
+    date: "1952-10-16",
+    indexLine: " Oct. 16 Solent Maximi. - Paroecialis ecclesia Sacratissimo Cordi Iesu / in urbe ac dioecesi Luganensi dicata Basilicis Minoribus / accensetur 269",
+    evidence: "The act's own dating formula reads 'Datum ex Arce Gandulphi, sub anulo Piscatoris, die xvi mensis Octobris, anno MCMLII, Pontificatus Nostri quarto decimo. De speciali mandato Sanctissimi' (AAS 45 (1953) 270, PDF page 270 of AAS-45-1953-ocr.pdf, read 2026-09-13) -- 1952-10-16; Inherits by ditto the year of AAS 45's line `1961 Apr. 13 Vetus est`, which the OCR misreads (1951, two years before the volume: outside the parser's repair span); the volume prints the act at the page the index cites. No shelf record carries the act.",
+  },
+  "1953:452": {
+    printed: "????-11",
+    date: "1952-11-03",
+    indexLine: " » Nov. Praeclaro Templo. - Templum Sancti Antonii, « do Embarè » / nuncupatum, in urbe ac Dioecesi « De Santos » positum, / titulo Basilicae Minoris ornatur 452",
+    evidence: "The act's own dating formula reads 'Datum ex Arce Gandulphi, sub anulo Piscatoris, die III mensis Novembris, anno MDCCCCLII, Pontificatus Nostri quarto decimo. De speciali mandato Sanctissimi' (AAS 45 (1953) 453, PDF page 453 of AAS-45-1953-ocr.pdf, read 2026-09-13) -- 1952-11-03; Inherits by ditto the year of AAS 45's line `1961 Apr. 13 Vetus est`, which the OCR misreads (1951, two years before the volume: outside the parser's repair span); the volume prints the act at the page the index cites. No shelf record carries the act.",
+  },
+  "1953:453": {
+    printed: "????-12",
+    date: "1952-12-03",
+    indexLine: " Dec. Augusta Dei Genetrix. -~ Beata Maria V., «a Septem Dolori- / bus » appellata, Dioecesis Pinnensis-Piscariensis Caelestis / Patrona aeque principalis cum Sancto Cetaeo et Sancto / Maximo declaratur 453",
+    evidence: "The act's own dating formula reads 'Datum Romae, apud Sanctum Petrum, sub anulo Piscatoris, die III mensis Decembris, anno MCMLII, Pontificatus Nostri quarto decimo. De speciali mandato Sanctissimi' (AAS 45 (1953) 454, PDF page 454 of AAS-45-1953-ocr.pdf, read 2026-09-13) -- 1952-12-03; Inherits by ditto the year of AAS 45's line `1961 Apr. 13 Vetus est`, which the OCR misreads (1951, two years before the volume: outside the parser's repair span); the volume prints the act at the page the index cites. No shelf record carries the act.",
   },
   '1949:529': {
     printed: '1919-11-08',

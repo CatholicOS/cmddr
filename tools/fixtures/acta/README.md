@@ -256,9 +256,12 @@ lists what it could not read):
   `Ott`, `Noy`, `NOT`, `ÏTov`, `Doc`, each accepted only where a day follows, and any other
   word there an unreadable month that the ditto chain does not inherit; the years `1047`,
   `1048`, `3950` (read as the volume span's year one digit off, and noted on the entry, which
-  the creator holds), `i944`, `i 945`, `19.49`; a ditto in the year column with nothing before
-  it (1950, read as the volume year and noted); a year inside the century is never repaired
-  (`1919` for 1949, `1930` for 1936: curated corrections quoting the acts). A date the layout
+  the creator holds), `i944`, `i 945`, `19.49`; a year the index does not print -- a ditto in
+  the year column with nothing above it (the head of AAS 42, 1950), a token the OCR has broken
+  (`19 IS`, `19Ö4`, `1ÍS50`, `3918`) -- dates the entry `????-MM-DD`, inherited by the dittos
+  after it, and only a curated correction quoting the act supplies the year; a year inside the
+  century is never repaired (`1919` for 1949, `1930` for 1936: curated corrections quoting the
+  acts). A date the layout
   mode set beside the last line of the entry before goes to the blank-dated entry after it
   (1935); a blank-dated entry can keep the page's hanging indent while dated entries' text
   sits after the date (1941), and on a page whose entries open `Incipit. - …` a capitalised

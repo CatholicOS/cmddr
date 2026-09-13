@@ -401,6 +401,10 @@ export function createFromActa(
       hold(entry, 'unresolvable-date', `the index dates the entry to ${entry.date} with no day printed; matched by incipit within the month only, never created`, u.sameDate);
       continue;
     }
+    if (entry.date.startsWith('????')) {
+      hold(entry, 'unresolvable-date', `the index prints no readable year for the entry (${entry.date}: a ditto with nothing above it, or a token the OCR has broken); a curated correction quoting the act can supply it (curation.ts)`, u.sameDate);
+      continue;
+    }
     if (!isCalendarDate(entry.date)) {
       hold(entry, 'unresolvable-date', `${entry.date} is not a calendar date`);
       continue;

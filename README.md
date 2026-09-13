@@ -264,10 +264,12 @@ typography and OCR the same way, volume by volume, with a parse rate per volume:
 the 2012 index (Pius XII's 1958 alone carries 70), and the findings that decide the rest of 2b — the OCR text of AAS 1 and 9-I
 has lost the page column of most index pages, the columnar layout of 1909–1931 dates some acts to the month only, and a volume
 can print an act another volume already published. Phase 2b-ii-a ([era report](docs/superpowers/reports/2026-09-13-acta-volumes-1932-1957.md))
-joined the twenty-six volumes of 1932–1957 the same way: **140** references, thin because the Pius XI and Pius XII shelves are
-(18 and 227 records dated in the era), twenty-two of the volumes above the 95 % parse-rate floor and the four below it
-explained line by line, every OCR misreading of a date the parser admits measured on a named volume, and a year the OCR
-misread inside the century never repaired but corrected by a curated row quoting the act. The volumes of 2003–2009 have no
+joined the twenty-six volumes of 1932–1957 the same way: **144** references, thin because the Pius XI and Pius XII shelves are
+(18 and 227 records dated in the era), twenty of the volumes above the 95 % parse-rate floor and the six below it
+explained line by line, every OCR misreading of a date the parser admits measured on a named volume, a year the index
+does not print (a `»` with nothing above it, a token the OCR has broken) left blank and supplied only by a curated row
+quoting the act's own dating formula — so that *Munificentissimus Deus* and *Humani generis*, at the head of AAS 42, are
+cited — and a year the OCR misread inside the century never repaired but corrected the same way. The volumes of 2003–2009 have no
 index online and await a fascicle parser; 1959–1977, 1979–2002 with the 2010–2014 index PDFs, and 1910–1931 are phases
 2b-ii-b, 2b-ii-c and 2b-iii.
 

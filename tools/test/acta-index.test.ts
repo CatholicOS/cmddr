@@ -707,7 +707,7 @@ describe('parseActaIndex on the volumes of 1932-1957 (acta volumes spec §9, pha
     ]);
   });
 
-  it('repairs a year the OCR misdrew beyond the century, notes it, and leaves a leading ditto year unreadable', () => {
+  it('repairs a year the OCR misdrew beyond the century, notes it, and dates a leading ditto year `????`', () => {
     // `1047 Maii 15` (AAS 39, 1947) and `1048 Maii 1` (AAS 40) -- here `1049` against a 1950 volume -- `3950 Dec. 10` (AAS 42), `i944 Maii 11` and `i 945 Apr. 15` (AAS 37),
     // `19.49 Nov. 7` (AAS 42); a `»` in the year column with nothing before it (AAS 42 (1950) 911, *Munificentissimus Deus*).
     const r = parseActaIndex(volume(`                                   I - BULLA DOGMATICA- ,
@@ -719,14 +719,30 @@ i944 Maii 11 De Bangkok (de Chanthaburi). - E Vicariatu Apostolico 305
 i 945 Apr. 15 Communium interpretes dolorum. - Ad Venerabiles Fratres 97
 19.49 Nov. 7 Iam plures. - Ad Emum P. D. Normannum 139
 1919 Febr. 11 Ad universos Archiepiscopos 58`), xii);
+    // A `»` in the year column with nothing above it: the year is not printed, the entry is
+    // dated `????-MM-DD` and noted, so that a curated correction can supply the year from the
+    // act (AAS 42 (1950) 911, *Munificentissimus Deus*) and the creator mints nothing from it.
     expect(r.entries.map((e) => [e.date, e.dateNote?.slice(0, 22)])).toEqual([
-      ['1949-05-15', 'year 1049 read as 1949'], ['1950-12-10', 'year 3950 read as 1950'],
+      ['????-11-01', 'the year column prints'], ['1949-05-15', 'year 1049 read as 1949'], ['1950-12-10', 'year 3950 read as 1950'],
       ['1944-05-11', undefined], ['1945-04-15', undefined], ['1949-11-07', undefined], ['1919-02-11', undefined],
     ]);
     // A year inside the century is never repaired: AAS 41 prints `1919` for 1948 and 1949 alike (the creator holds it).
-    expect(r.entries[5]).toMatchObject({ date: '1919-02-11' });
+    expect(r.entries[6]).toMatchObject({ date: '1919-02-11' });
     expect(r.defects.map((d) => d.message.replace(/: .*$/, ''))).toEqual([
-      'unreadable date (nothing to inherit)', 'year 1049 read as 1949 (an OCR digit)', 'year 3950 read as 1950 (an OCR digit)',
+      'the year column prints a ditto with nothing above it, or a token the OCR has broken', 'year 1049 read as 1949 (an OCR digit)', 'year 3950 read as 1950 (an OCR digit)',
+    ]);
+    // A broken year token (`19 IS`, `19Ö4`, `3918` with no one-digit repair) is unprinted too, and the
+    // dittos after it inherit the blank until a year is printed; a `PAG.` the default mode glued before
+    // the date is dropped.
+    const broken = parseActaIndex(volume(`                                   II - LITTERAE DECRETALES
+19 IS Ian. 10 ICENSIS. - Cathedralia Capitula. - Canonicorum Capitulum 308
+  » Maii 20 BOMBAYENSIS (Karachiensis). - Opportunis providentiae studiis. - Ab Archidioecesi 62
+PAG. 19Ö4 Oet. 7 Ad Sinarum gentem. - Ad Venerabiles Fratres 5
+3918 Iulii 11 Quinquagesimo. - Ad R. P. Matthaeum 21
+1950 Aug. 6 Quintum ac vicesimum. - Ad Moderatores 26`), xii);
+    expect(broken.entries.map((e) => [e.date, e.page, e.incipit])).toEqual([
+      ['????-01-10', 308, 'Cathedralia Capitula'], ['????-05-20', 62, 'Opportunis providentiae studiis'], ['????-10-07', 5, 'Ad Sinarum gentem'],
+      ['????-07-11', 21, 'Quinquagesimo'], ['1950-08-06', 26, 'Quintum ac vicesimum'],
     ]);
     // The dittos after a repaired year inherit the reading and its note.
     const d = parseActaIndex(volume(`                                   II - LITTERAE DECRETALES

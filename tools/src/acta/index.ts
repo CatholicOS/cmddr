@@ -61,8 +61,10 @@
  *   the dittos after it inherit as unreadable until one is printed; a year no volume can
  *   print (`1047`, `3950`, `1963`), read as the one year of the volume's span a digit off
  *   and noted on the entry and its dittos (`dateNote`, `dateNoteRef`), a year the volume
- *   could print (`1919` for 1948 and 1949 alike) never repaired, a ditto in the year
- *   column with nothing before it unreadable, a split or damaged year (`i 945`, `19 IS`);
+ *   could print (`1919` for 1948 and 1949 alike) never repaired; a year the index does not
+ *   print -- a ditto in the year column with nothing above it, a broken token (`19 IS`,
+ *   `19Ö4`, `1ÍS50`), an impossible year no repair fits (`3918`) -- dates the entry
+ *   `????-MM-DD`, inherited by the dittos after it, for a curated correction to supply;
  * - a date the layout mode set beside the last line of the entry before, given to the
  *   blank-dated entry after it; a blank-dated entry at the page's hanging indent, shaped
  *   as an entry opens, and a continuation line at the entry column that is not, on a page
@@ -210,13 +212,14 @@ const ABBREVIATED_MONTH_RE = /^(Ian|Febr?|Mart?|Apr|Maii|Iun|Iul|Aug|Sept?|Oct|N
  * quodam`; AAS 27 (1935) `1934 Man .1 Clarissima Agrigentina civitas`), `Marth` for
  * *Martii* (AAS 25), `Innii` for *Iunii* (AAS 34, 1942), `Apri` / `Âpr` for *Apr.* (AAS
  * 42, 1950), `Ott` for *Oct.* (AAS 45, 1953), `Noy` / `NOY` / `NOV` / `NOT` / `ÏTov` for
- * *Nov.* (AAS 24, 26, 33, 35, 41), `Doc` / `Deo` for *Dec.* (AAS 28 (1936) `1935 Doc. 26
+ * *Nov.* (AAS 24, 26, 33, 35, 41), `Oet` for *Oct.* (AAS 47 (1955) 867, `19Ö4 Oet. 7 Ad
+ * Sinarum gentem`, the encyclical of 7 October 1954), `Doc` / `Deo` for *Dec.* (AAS 28 (1936) `1935 Doc. 26
  * Ad catholici sacerdotii`, the encyclical of 20 December 1935 -- the day too is the OCR's;
  * AAS 46 (1954) `1953 Deo. 14 Decretum`). A misreading not listed here is an unreadable
  * month, reported, never inherited from the entry before (readDateLine).
  */
 const OCR_MONTHS: Record<string, number> = {
-  Man: 5, Mah: 5, Marth: 3, Innii: 6, Apri: 4, Âpr: 4, Ott: 10, Noy: 11, NOY: 11, NOV: 11, NOT: 11, ÏTov: 11, Doc: 12,
+  Man: 5, Mah: 5, Marth: 3, Innii: 6, Apri: 4, Âpr: 4, Ott: 10, Oet: 10, Noy: 11, NOY: 11, NOV: 11, NOT: 11, ÏTov: 11, Doc: 12,
 };
 /**
  * The month a token names: a Latin month in any of the century's spellings, case-folded
@@ -596,7 +599,14 @@ export function splitEntryText(text: string, opts: { bareIncipits?: boolean; con
 interface DateState {
   day: number | null;
   month: number | null;
-  year: number;
+  /**
+   * Null where the index prints no readable year: a `»` in the year column with nothing
+   * above it to inherit (AAS 42 (1950) 911, the volume's first entries), a year token the
+   * OCR has broken (`19 IS`, `19Ö4`, `3918`) that no one-digit repair fits. The entry is
+   * dated `????-MM-DD` and the dittos after it inherit the null until a year is printed;
+   * a curated correction (curation.ts) supplies the year from the act itself.
+   */
+  year: number | null;
   /** The year is the parser's reading (an OCR digit repaired): inherited by the dittos after it, with the note. */
   note?: string;
   /** The curation key (`year:page`) of the entry whose line carried the misread token, set when that entry closes; the dittos inherit it. */
@@ -617,7 +627,7 @@ interface DateLine {
   text: string;
 }
 
-type DateToken = { kind: 'ditto' } | { kind: 'year'; n: number } | { kind: 'month'; n: number | null } | { kind: 'day'; n: number | null };
+type DateToken = { kind: 'ditto' } | { kind: 'year'; n: number | null } | { kind: 'month'; n: number | null } | { kind: 'day'; n: number | null };
 
 /**
  * Read the date tokens at the head of a line, tolerant of the layout mode's spacing and
@@ -630,14 +640,17 @@ function readDateLine(line: string, prev: DateState | null, columnar: boolean, v
   // year's first digit (`i944 Maii 11`, `i 945 Apr. 15`, AAS 37, 1945), split or not.
   let joined = 0;   // tokens of the line merged into one (the split year), so the text starts one token later
   if (columnar && tokens[0] !== undefined) {
-    tokens[0] = tokens[0].replace(/^[.,'^"]+(?=\d)/, '').replace(/^(\d{2})\.(\d{2})$/, '$1$2');
+    // The default extraction mode glues the column header to the first entry of a page
+    // (`PAG. 19Ö4 Oet. 7 Ad Sinarum gentem`, AAS 47 (1955) 867): dropped where date tokens follow.
+    if (/^PA[GSOEeß6]\.?$/.test(tokens[0]) && tokens.length > 2 && (YEAR_TOKEN_RE.test(tokens[1]!) || /^\d{2}[^\d\s]{1,2}\d$/.test(tokens[1]!) || DITTO_RE.test(tokens[1]!))) { tokens.shift(); joined = 1; }
+    tokens[0] = tokens[0]!.replace(/^[.,'^"]+(?=\d)/, '').replace(/^(\d{2})\.(\d{2})$/, '$1$2');
     if (/^[il]$/.test(tokens[0]) && /^\d{3}$/.test(tokens[1] ?? '')) { tokens.splice(0, 2, `1${tokens[1]}`); joined = 1; }
     else if (/^[il]\d{3}$/.test(tokens[0])) tokens[0] = `1${tokens[0].slice(1)}`;
     // A year split into two damaged halves before a month (`19 IS Ian. 10 ICENSIS`, AAS 41
-    // (1949) 662, for 1948): the year is unreadable, not the day 19.
-    else if (/^\d{2}$/.test(tokens[0]) && /^[A-Za-z0-9]{2}$/.test(tokens[1] ?? '') && monthOf(tokens[2] ?? '', true) !== undefined) {
-      return { date: null, unreadable: `a damaged year '${tokens[0]} ${tokens[1]}'`, text: tokens.slice(2).join(' '), tokens: 1, ...(prev ? { state: prev } : {}) };
-    }
+    // (1949) 662, for 1948), or a four-character token with a digit broken (`19Ö4 Oet. 7`,
+    // AAS 47): the year is unprinted, not the day 19.
+    else if (/^\d{2}$/.test(tokens[0]) && /^[A-Za-z0-9]{2}$/.test(tokens[1] ?? '') && monthOf(tokens[2] ?? '', true, true) !== undefined) { tokens.splice(0, 2, '????'); joined = 1; }
+    else if (/^\d{2}[^\d\s]{1,2}\d$|^\d[^\d\s]{1,2}\d{2}$/.test(tokens[0]) && monthOf(tokens[1] ?? '', true, true) !== undefined) tokens[0] = '????';
   }
   const seq: DateToken[] = [];
   let i = 0;
@@ -684,7 +697,8 @@ function readDateLine(line: string, prev: DateState | null, columnar: boolean, v
       continue;
     }
     let tok: DateToken | null = null;
-    if (YEAR_TOKEN_RE.test(t)) {
+    if (t === '????') tok = { kind: 'year', n: null };
+    else if (YEAR_TOKEN_RE.test(t)) {
       let n = Number(t.replace(/\.$/, ''));
       // The OCR reads a `9` as `0`, a `1` as `3`, a `5` as `6` in the year column (`1047
       // Maii 15`, AAS 39 (1947) 654, the canonisation of Nicholas of Flüe; `1048 Maii 1`,
@@ -708,8 +722,10 @@ function readDateLine(line: string, prev: DateState | null, columnar: boolean, v
           return a.length === b.length && [...a].filter((c, k) => c !== b[k]).length === 1;
         });
         if (candidates.length === 1) { note = `year ${n} read as ${candidates[0]} (an OCR digit)`; n = candidates[0]!; }
+        // No such year (`3918`, AAS 41; `1961`, AAS 45): the year is unprinted.
+        else { tok = { kind: 'year', n: null }; }
       }
-      tok = { kind: 'year', n };
+      if (tok === null) tok = { kind: 'year', n };
     } else if (DAY_TOKEN_RE.test(t)) tok = { kind: 'day', n: Number(t) };
     else {
       const after = i + 1 < tokens.length ? tokens[i + 1]!.replace(TOKEN_JUNK_RE, '') : '';
@@ -750,8 +766,8 @@ function readDateLine(line: string, prev: DateState | null, columnar: boolean, v
     // year or a ditto and no day (`Sept. » Chengden.:`), which is month-only.
     const at = (k: number) => seq[k];
     if (seq.length === 2 && at(0)!.kind === 'month' && (at(1)!.kind === 'year' || at(1)!.kind === 'ditto')) {
-      const year = at(1)!.kind === 'year' ? (at(1) as { n: number }).n : prev?.year;
-      if (year === undefined) return { date: null, unreadable: 'a ditto with nothing to inherit', text, tokens: seq.length };
+      const year = at(1)!.kind === 'year' ? (at(1) as { n: number | null }).n : prev?.year;
+      if (year === undefined || year === null) return { date: null, unreadable: 'a ditto with nothing to inherit', text, tokens: seq.length };
       return { date: { day: null, month: (at(0) as { n: number }).n, year }, text, tokens: seq.length };
     }
     if (seq.length !== 3) return null;
@@ -762,7 +778,7 @@ function readDateLine(line: string, prev: DateState | null, columnar: boolean, v
     const year = yTok.kind === 'year' ? yTok.n : prev?.year;
     const month = mTok.kind === 'month' ? mTok.n : prev?.month;
     const day = dTok.kind === 'day' ? dTok.n : prev?.day;
-    if (year === undefined || month === undefined || month === null || day === undefined) {
+    if (year === undefined || year === null || month === undefined || month === null || day === undefined) {
       return { date: null, unreadable: 'a ditto with nothing to inherit', text, tokens: seq.length };
     }
     if (day === null) return { date: null, unreadable: 'a ditto day after a month-only entry', text, tokens: seq.length };
@@ -789,15 +805,19 @@ function readDateLine(line: string, prev: DateState | null, columnar: boolean, v
   const yHow = take(typed.year);
   const mHow = take(typed.month);
   const dHow = take(typed.day);
-  const year = yHow === 'typed' ? (typed.year as { n: number }).n : prev?.year;
+  let year: number | null | undefined = yHow === 'typed' ? (typed.year as { n: number | null }).n : prev?.year;
   let noteRef: string | undefined;
   if (yHow !== 'typed' && prev?.note !== undefined) { note = prev.note; noteRef = prev.noteRef; }
   const month = mHow === 'typed' ? (typed.month as { n: number | null }).n : prev?.month;
-  // A ditto with nothing before it -- at the head of a part (AAS 42 (1950) 911: `» Nov,. 1
-  // Munificentissimus Deus`, the volume's first entry, whose printed year the OCR lost) or
-  // after a line whose year was unreadable (`1964 Maii 30`, AAS 47 (1955), for 1954) --
-  // is unreadable, and so is every ditto after it until a year is printed: the volume
-  // year would be a guess (a part's first entries can be the December before).
+  // A ditto in the year column with nothing before it -- at the head of a part (AAS 42
+  // (1950) 911: `» Nov,. 1 Munificentissimus Deus`, the volume's first entry, whose
+  // printed year the OCR lost) -- or a year token the OCR has broken beyond repair: the
+  // year is not printed, and the volume year would be a guess (a part's first entries
+  // can be the December before). The entry is kept with a `????` year, which a curated
+  // correction supplies from the act itself, and every ditto after it inherits the blank
+  // until a year is printed; the creator never mints an entry so dated.
+  if (year === undefined && yHow === 'ditto' && month !== undefined) year = null;
+  if (year === null && !note) note = 'the year column prints a ditto with nothing above it, or a token the OCR has broken: the year is not printed';
   if (year === undefined || month === undefined) return { date: null, unreadable: 'nothing to inherit', text, tokens: seq.length };
   if (month === null) {
     // The month is the OCR's, here or on the entry this one inherits from: the year is
@@ -813,7 +833,7 @@ function readDateLine(line: string, prev: DateState | null, columnar: boolean, v
     if (prev === null) return { date: null, unreadable: 'a ditto with nothing to inherit', text, tokens: seq.length, ...(note ? { note } : {}) };
     day = prev.day;
   } else day = mHow === 'blank' ? (prev?.day ?? null) : null;
-  if (year < 1900 || (volumeYear !== undefined && year > volumeYear + 1)) return { date: null, unreadable: `year ${year} out of range`, text, tokens: seq.length };
+  if (year !== null && (year < 1900 || (volumeYear !== undefined && year > volumeYear + 1))) return { date: null, unreadable: `year ${year} out of range`, text, tokens: seq.length };
   // An OCR-misread day (`» Mai. 80`, `» Nov. 38`; `2$>`): the month is read, the day is
   // not -- the entry is month-only and reported, and the ditto chain after it keeps the month.
   if (dHow === 'typed' && (typed.day as { n: number | null }).n === null) {
@@ -827,7 +847,7 @@ function readDateLine(line: string, prev: DateState | null, columnar: boolean, v
 const BRACKET_RE =
   /^\[(?:([A-Za-z]+(?: PP\.)?(?: [IVXL]+)?):\s*)?(?:(\d{4})\s+([A-Z][a-z]{2,3})\.?\s+(\d{1,2})|(\d{1,2})\s+([A-Z][a-z]{2,3})\.?\s+(\d{4}))\]\s*/;
 
-const isoOf = (d: DateState): string => d.day === null ? `${d.year}-${pad(d.month!)}` : `${d.year}-${pad(d.month!)}-${pad(d.day)}`;
+const isoOf = (d: DateState): string => `${d.year ?? '????'}-${pad(d.month!)}${d.day === null ? '' : `-${pad(d.day)}`}`;
 
 export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaParseResult {
   const vol = text.match(VOLUME_RE);

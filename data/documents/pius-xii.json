@@ -9980,6 +9980,31 @@
     }
   },
   {
+    "id": "mag:pius-xii/cathedralia-capitula-1948",
+    "title": "Icensis. Cathedralia Capitula. Canonicorum Capitulum in Cathedrali Ecclesia Icensi erigitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1948-01-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-41-1949-ocr.pdf",
+      "shelf": "aas/1949",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Cathedralia Capitula",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 41,
+      "year": 1949,
+      "page": 308
+    }
+  },
+  {
     "id": "mag:pius-xii/ex-officiosis-litteris-1948",
     "title": "Ex officiosis litteris. Ad Excmum P. D. Lucianum Lebrun, Episcopum Augustodunensem, Cabillonensem et Matisconensem : ob commemorationem praedicationis a S. Ioanne Eudes, sub praesidio Immaculati Cordis B. Mariae V. tribus abhinc saeculis inceptae, in Augustodunensi dioecesi",
     "idStatus": "minted",
@@ -11140,6 +11165,28 @@
     }
   },
   {
+    "id": "mag:pius-xii/quintum-ac-vicesimum-1948",
+    "title": "Quintum ac vicesimum. Ad Moderatores, Doctores et Alumnos Catholicae Studiorum Universitatis Noviomagensis, quinto ac vicesimo anno ab eiusdem universitatis exordio",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1948-08-06",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-41-1949-ocr.pdf",
+      "shelf": "aas/1949",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quintum ac vicesimum",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 41,
+      "year": 1949,
+      "page": 26
+    }
+  },
+  {
     "id": "mag:pius-xii/quo-maiori-1948",
     "title": "Olidensis Et Recifensis (Caruaruensis). Quo maiori. Ab archidioecesi Olidensi et Recifensi et a Dioecesibus Nazarensi et Pesqueirensi territoria distrahuntur, ex quibus nova Dioecesis Caruaruensis constituitur •",
     "idStatus": "minted",
@@ -11461,6 +11508,28 @@
     }
   },
   {
+    "id": "mag:pius-xii/quemadmodum-1948",
+    "title": "Quemadmodum. Ad Revnium P. Clementem a Milwaukee, Ordinis Franciscanum Capulatorum Ministrum Generalem : de apostolatu ab eodem Ordine provehendo",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1948-12-04",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-41-1949-ocr.pdf",
+      "shelf": "aas/1949",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Quemadmodum",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 41,
+      "year": 1949,
+      "page": 64
+    }
+  },
+  {
     "id": "mag:pius-xii/ad-altiorem-1948",
     "title": "De Oudtshoorn. Ad altiorem. Praefectura Apostolica de Oudtshoorn in Vicariatum Apostolicum eiusdem nominis evehitur",
     "idStatus": "minted",
@@ -11611,6 +11680,28 @@
     }
   },
   {
+    "id": "mag:pius-xii/agnovimus-perlibenter-1948",
+    "title": "Agnovimus perlibenter. Ad Revmum D. Laurentium Perosi, Antistitem Urbanum, quinquagesimum annum magisterii Chori Xystini a Summo Pontifice Leone XIII eidem crediti expleturum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1948-12-15",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-41-1949-ocr.pdf",
+      "shelf": "aas/1949",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Agnovimus perlibenter",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 41,
+      "year": 1949,
+      "page": 68
+    }
+  },
+  {
     "id": "mag:pius-xii/letter-1948-12-20",
     "title": "Lettera all'Episcopato di Germania",
     "idStatus": "provisional",
@@ -11626,7 +11717,35 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 41,
+      "year": 1949,
+      "page": 216
+    }
+  },
+  {
+    "id": "mag:pius-xii/opportunum-1948",
+    "title": "Opportunum. Ad Revmum P. Gulielmum van Hees, Ordinis Sanctae Crucis Magistrum Generalem : septimo exeunte saeculo ab eiusdem Ordinis Constitutionum approbatione",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1948-12-21",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-41-1949-ocr.pdf",
+      "shelf": "aas/1949",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Opportunum",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 41,
+      "year": 1949,
+      "page": 175
+    }
   },
   {
     "id": "mag:pius-xii/letter-1949-01-02",
@@ -11843,28 +11962,6 @@
       "volume": 41,
       "year": 1949,
       "page": 405
-    }
-  },
-  {
-    "id": "mag:pius-xii/in-finibus-1949",
-    "title": "In finibus. Paroeciale Templum Deo in honorem S. Magni dicatum, in oppido «Legnano» intra fines Mediolanensis archidioecesis, honoribus ac privilegiis Basilicae Minoris afficitur",
-    "idStatus": "minted",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1949-03-05",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-43-1951-ocr.pdf",
-      "shelf": "aas/1951",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "In finibus",
-    "sourceGenreLabel": "Litterae Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 43,
-      "year": 1951,
-      "page": 73
     }
   },
   {
@@ -12358,50 +12455,6 @@
     }
   },
   {
-    "id": "mag:pius-xii/excultoribus-templis-1949",
-    "title": "Excultoribus Templis. Ecclesia Sancti Materni, in oppido « Walcourt » dioecesis Namurcensis exstans, Basilicae Minoris titulo ac privilegiis cohonestatur",
-    "idStatus": "minted",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1949-05-13",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-43-1951-ocr.pdf",
-      "shelf": "aas/1951",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "Excultoribus Templis",
-    "sourceGenreLabel": "Litterae Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 43,
-      "year": 1951,
-      "page": 268
-    }
-  },
-  {
-    "id": "mag:pius-xii/vulgatissimam-1949",
-    "title": "Vulgatissimam. Ecclesia B. Mariae V. de Monte Carmelo, in urbe et archidioecesi Sancti Pauli in Brasilia, privilegiis Basilicae Minoris honestatur",
-    "idStatus": "minted",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1949-05-13",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-43-1951-ocr.pdf",
-      "shelf": "aas/1951",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "Vulgatissimam",
-    "sourceGenreLabel": "Litterae Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 43,
-      "year": 1951,
-      "page": 75
-    }
-  },
-  {
     "id": "mag:pius-xii/nous-ne-sommes-pas-1949",
     "title": "Nous ne sommes pas. Ad Excmum P. D. Renatum Iosephum Piérard, Episcopum Catalaunensem, ob sacra sollemnia octavo impleto saeculo a consecratione eiusdem Cathedralis ecclesiae indicta",
     "idStatus": "minted",
@@ -12556,28 +12609,6 @@
       "volume": 41,
       "year": 1949,
       "page": 359
-    }
-  },
-  {
-    "id": "mag:pius-xii/paterna-caritas-1949",
-    "title": "Paterna caritas. Beata Virgo Maria ab Immaculato Corde totius dioecesis Leopoldinensis in Brasilia praecipua Patrona caelestis, insuper S. Antonius Maria Claret, E. C, et S. Teresia a Iesu Infante, V., eiusdem dioecesis Patroni secundarii proclamantur",
-    "idStatus": "minted",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1949-06-01",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-43-1951-ocr.pdf",
-      "shelf": "aas/1951",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "Paterna caritas",
-    "sourceGenreLabel": "Litterae Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 43,
-      "year": 1951,
-      "page": 362
     }
   },
   {
@@ -12740,28 +12771,6 @@
     }
   },
   {
-    "id": "mag:pius-xii/veterum-monasteriorum-1949",
-    "title": "Veterum monasteriorum. Basilicae Minoris titulo ac dignitate afficitur Paroecialis Ecclesia Prumiensis, intra fines Trevirensis Dioeceseos, Divino Salvatori dicata",
-    "idStatus": "minted",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1949-06-10",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-43-1951-ocr.pdf",
-      "shelf": "aas/1951",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "Veterum monasteriorum",
-    "sourceGenreLabel": "Litterae Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 43,
-      "year": 1951,
-      "page": 106
-    }
-  },
-  {
     "id": "mag:pius-xii/miserator-dominus-1949",
     "title": "Miserator Dominus. Beatae Mariae Iosephae Rossello, Instituti Filiarum Dominae Nostrae a Misericordia fundatrici, Sanctorum honores decernuntur",
     "idStatus": "minted",
@@ -12781,28 +12790,6 @@
       "volume": 42,
       "year": 1950,
       "page": 222
-    }
-  },
-  {
-    "id": "mag:pius-xii/in-aprica-1949",
-    "title": "In aprica. Basilicae Minoris honoribus ac privilegiis cumulatur cathedralis Ecclesia Brixinensis",
-    "idStatus": "minted",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1949-06-14",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-43-1951-ocr.pdf",
-      "shelf": "aas/1951",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "In aprica",
-    "sourceGenreLabel": "Litterae Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 43,
-      "year": 1951,
-      "page": 76
     }
   },
   {
@@ -12852,28 +12839,6 @@
       "volume": 42,
       "year": 1950,
       "page": 138
-    }
-  },
-  {
-    "id": "mag:pius-xii/quas-moles-1949",
-    "title": "Quas moles. ~ Cathedralis Ecclesia Halifaxiensis, in Canadensi dicione, Basilicae Minoris titulo honoribusque augetur",
-    "idStatus": "minted",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1949-06-14",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-43-1951-ocr.pdf",
-      "shelf": "aas/1951",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "Quas moles",
-    "sourceGenreLabel": "Litterae Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 43,
-      "year": 1951,
-      "page": 108
     }
   },
   {
@@ -13083,50 +13048,6 @@
     }
   },
   {
-    "id": "mag:pius-xii/imaginem-1949",
-    "title": "Imaginem. Beata Maria Virgo « a Miraculis » in aede loci « Casalbordino » venerata, totius Vastensis Dioecesis Patrona caelestis declaratur",
-    "idStatus": "minted",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1949-07-25",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-43-1951-ocr.pdf",
-      "shelf": "aas/1951",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "Imaginem",
-    "sourceGenreLabel": "Litterae Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 43,
-      "year": 1951,
-      "page": 111
-    }
-  },
-  {
-    "id": "mag:pius-xii/mirum-sane-1949",
-    "title": "Mirum sane. Beata Maria Virgo « a Miraculis », in aede loci « Casalbordino » venerata, totius Theatinae archidioecesis praecipua Patrona constituitur",
-    "idStatus": "minted",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1949-07-25",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-43-1951-ocr.pdf",
-      "shelf": "aas/1951",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "Mirum sane",
-    "sourceGenreLabel": "Litterae Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 43,
-      "year": 1951,
-      "page": 156
-    }
-  },
-  {
     "id": "mag:pius-xii/catholicas-studiorum-universitates-1949",
     "title": "Catholicas Studiorum Universitates",
     "idStatus": "minted",
@@ -13264,28 +13185,6 @@
     }
   },
   {
-    "id": "mag:pius-xii/superiore-iam-aetate-1949",
-    "title": "Superiore iam aetate. Sancta Francisca Xaveria Cabrini, V., omnium emigrantium Patrona apud Deum constituitur",
-    "idStatus": "minted",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1949-09-08",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-43-1951-ocr.pdf",
-      "shelf": "aas/1951",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "Superiore iam aetate",
-    "sourceGenreLabel": "Litterae Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 43,
-      "year": 1951,
-      "page": 455
-    }
-  },
-  {
     "id": "mag:pius-xii/quam-romani-pontifices-1949",
     "title": "Quam Romani Pontifices. Nova Statuta Ordinis Equestris S. Sepulchri Hierosolymitani approbantur idemque in personam «iuridicam » erigitur",
     "idStatus": "minted",
@@ -13305,28 +13204,6 @@
       "volume": 43,
       "year": 1951,
       "page": 722
-    }
-  },
-  {
-    "id": "mag:pius-xii/quamvis-1949",
-    "title": "Quamvis. Ecclesia « Corpus Domini » appellata, in urbe et archidioecesi Mediolanensi, Basilicis Minoribus accensetur",
-    "idStatus": "minted",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1949-09-20",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-43-1951-ocr.pdf",
-      "shelf": "aas/1951",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "Quamvis",
-    "sourceGenreLabel": "Litterae Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 43,
-      "year": 1951,
-      "page": 157
     }
   },
   {
@@ -13667,94 +13544,6 @@
       "volume": 42,
       "year": 1950,
       "page": 627
-    }
-  },
-  {
-    "id": "mag:pius-xii/in-edito-monte-1949",
-    "title": "In edito monte. Titulus ac privilegia Basilicae Minoris conferuntur Ecclesiae Deo in honorem B. Mariae V. in Caelum assumptae, in Valle Umbrosa intra fines Fesulanae dioecesis, dicatae",
-    "idStatus": "minted",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1949-11-28",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-43-1951-ocr.pdf",
-      "shelf": "aas/1951",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "In edito monte",
-    "sourceGenreLabel": "Litterae Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 43,
-      "year": 1951,
-      "page": 426
-    }
-  },
-  {
-    "id": "mag:pius-xii/quandoquidem-1949",
-    "title": "Quandoquidem. Titulo ac privilegiis Basilicae Minoris ditatur Cathedrale Templum Urbinatense",
-    "idStatus": "minted",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1949-11-28",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-43-1951-ocr.pdf",
-      "shelf": "aas/1951",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "Quandoquidem",
-    "sourceGenreLabel": "Litterae Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 43,
-      "year": 1951,
-      "page": 456
-    }
-  },
-  {
-    "id": "mag:pius-xii/sacras-inter-aedes-1949",
-    "title": "Sacras inter aedes. Ecclesia in honorem Sancti Venantii M. Deo dicata, in civitate Camerinensi exstans, ad dignitatem Basilicae Minoris evehitur",
-    "idStatus": "minted",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1949-11-28",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-43-1951-ocr.pdf",
-      "shelf": "aas/1951",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "Sacras inter aedes",
-    "sourceGenreLabel": "Litterae Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 43,
-      "year": 1951,
-      "page": 205
-    }
-  },
-  {
-    "id": "mag:pius-xii/quemadmodum-1949",
-    "title": "Quemadmodum. Sanctus Ioseph, sponsus B. Mariae V., praecipuus Barranquillensis dioecesis Patronus confirmatur 2G7 1ÍS50 Ian. 29 « Benedixisti, Domine ». - Basilicae Minoris honoribus privilegiisque decoratur Ecclesia paroecialis et collegialis Deo in honorem S. Pauli Apostoli dicata, in civitate Canturio intra fines Mediolanensis archidioecesis",
-    "idStatus": "minted",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:pius-xii",
-    "issuerType": "pope",
-    "date": "1949-12-05",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-43-1951-ocr.pdf",
-      "shelf": "aas/1951",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "Quemadmodum",
-    "sourceGenreLabel": "Litterae Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 43,
-      "year": 1951,
-      "page": 71
     }
   },
   {
@@ -15595,7 +15384,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Humani Generis",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 42,
+      "year": 1950,
+      "page": 561
+    }
   },
   {
     "id": "mag:pius-xii/ihr-findet-1950",
@@ -15888,7 +15683,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 42,
+      "year": 1950,
+      "page": 753
+    }
   },
   {
     "id": "mag:pius-xii/laetanti-1950",
@@ -16860,6 +16661,28 @@
     }
   },
   {
+    "id": "mag:pius-xii/vetus-est-1951",
+    "title": "Vetus est. Beata Maria V., vulgo « Notre-Dame du Rempart » invocata, totius civitatis Namurcensis Patrona caelestis aeque principalis cum Sancto Albano renuntiatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1951-04-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-45-1953-ocr.pdf",
+      "shelf": "aas/1953",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Vetus est",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 45,
+      "year": 1953,
+      "page": 221
+    }
+  },
+  {
     "id": "mag:pius-xii/le-memorie-1951",
     "title": "Le memorie. Ad Revmum P. D. Paulum Savino, Praelatum referendarium S. Tribunalis Signaturae Apostolicae et Pontificiae Academiae Ecclesiasticae Praesidem: anno CCL ab eadem Academia condita exeunte",
     "idStatus": "minted",
@@ -16901,6 +16724,28 @@
       "volume": 43,
       "year": 1951,
       "page": 270
+    }
+  },
+  {
+    "id": "mag:pius-xii/haud-parvae-1951",
+    "title": "Haud parvae. Beata Maria V. a Purissimo et Immaculato Corde pro universa Huancavelicensi dioecesi, in Peruviana dicione, praecipua Caelestis Patrona declaratur.",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1951-04-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-47-1955-ocr.pdf",
+      "shelf": "aas/1955",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Haud parvae",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 47,
+      "year": 1955,
+      "page": 664
     }
   },
   {
@@ -17230,6 +17075,30 @@
       "volume": 43,
       "year": 1951,
       "page": 828
+    }
+  },
+  {
+    "id": "mag:pius-xii/papal-bull-1951-06-14",
+    "title": "Calcuttensis et aliarum (Sambalpurensis). Novarum dioecesium.-E dioecesium Calcuttensis, Ranchiensis et Nagporensis territorio aliquot districtus civiles seiunguntur et nova exinde erigitur Dioecesis, Sambalpurensis nuncupanda",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1951-06-14",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-43-1951-ocr.pdf",
+      "shelf": "aas/1951",
+      "retrieved": "2026-09-13"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 43,
+      "year": 1951,
+      "page": 660
     }
   },
   {
@@ -18111,6 +17980,28 @@
       "volume": 44,
       "year": 1952,
       "page": 612
+    }
+  },
+  {
+    "id": "mag:pius-xii/asisinas-civis-1951",
+    "title": "Asisinas civis. Sanctus Franciscus Asisinas, C, paroeciae loci « Llavallol », intra fines archidioecesis Platensis positae, praecipuus caelestis Patronus constituitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1951-10-04",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-45-1953-ocr.pdf",
+      "shelf": "aas/1953",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Asisinas civis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 45,
+      "year": 1953,
+      "page": 175
     }
   },
   {
@@ -19629,6 +19520,28 @@
     }
   },
   {
+    "id": "mag:pius-xii/vitae-huius-1952",
+    "title": "Vitae huius. Beatae Mariae V., vulgo « de Làttani » dicta, titulo « Regina mundi » honestata. dioecesium Calvensis et Theanensis caelestis Patrona confirmatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1952-05-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-45-1953-ocr.pdf",
+      "shelf": "aas/1953",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Vitae huius",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 45,
+      "year": 1953,
+      "page": 149
+    }
+  },
+  {
     "id": "mag:pius-xii/nous-apprenons-1952",
     "title": "Nous apprenons. Ad clarum virum Iosephum Folliet, moderatorem commentarii « Chronique Sociale de France » nuncupati : ob duodena lustra ab eiusdem commentarii ortu impleta",
     "idStatus": "minted",
@@ -19814,6 +19727,28 @@
       "volume": 44,
       "year": 1952,
       "page": 522
+    }
+  },
+  {
+    "id": "mag:pius-xii/consociati-in-honesta-1952",
+    "title": "Consociati in honesta. Sanctus Franciscus Xaverius sodalitatis « Federación Española de Sindicatos de Iniciativa y Turismo » nuncupatae caelestis Patronus confirmatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1952-06-14",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-45-1953-ocr.pdf",
+      "shelf": "aas/1953",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Consociati in honesta",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 45,
+      "year": 1953,
+      "page": 150
     }
   },
   {
@@ -20261,6 +20196,28 @@
     }
   },
   {
+    "id": "mag:pius-xii/ex-quo-ut-supremus-1952",
+    "title": "Ex quo ut supremus. Beata Maria V. in Caelum Assumpta Zipaquirensis Dioecesis Caelestis Patrona renuntiatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1952-08-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-45-1953-ocr.pdf",
+      "shelf": "aas/1953",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Ex quo ut supremus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 45,
+      "year": 1953,
+      "page": 451
+    }
+  },
+  {
     "id": "mag:pius-xii/quel-motif-1952",
     "title": "Quel motif. Ad dilectos filios Rogerium Millot et Rosarium Beaulé, praesides sodalitatis « Pax Romana » nuncupatae, ob Conventum Internationalem XXII in Canada indictum",
     "idStatus": "minted",
@@ -20371,6 +20328,28 @@
       "volume": 45,
       "year": 1953,
       "page": 209
+    }
+  },
+  {
+    "id": "mag:pius-xii/solent-maximi-1952",
+    "title": "Solent Maximi. Paroecialis ecclesia Sacratissimo Cordi Iesu in urbe ac dioecesi Luganensi dicata Basilicis Minoribus accensetur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1952-10-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-45-1953-ocr.pdf",
+      "shelf": "aas/1953",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Solent Maximi",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 45,
+      "year": 1953,
+      "page": 269
     }
   },
   {
@@ -20490,6 +20469,28 @@
       "volume": 45,
       "year": 1953,
       "page": 211
+    }
+  },
+  {
+    "id": "mag:pius-xii/praeclaro-templo-1952",
+    "title": "Praeclaro Templo. Templum Sancti Antonii, « do Embarè » nuncupatum, in urbe ac Dioecesi « De Santos » positum, titulo Basilicae Minoris ornatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1952-11-03",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-45-1953-ocr.pdf",
+      "shelf": "aas/1953",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Praeclaro Templo",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 45,
+      "year": 1953,
+      "page": 452
     }
   },
   {
@@ -20689,6 +20690,28 @@
       "volume": 44,
       "year": 1952,
       "page": 849
+    }
+  },
+  {
+    "id": "mag:pius-xii/augusta-dei-genetrix-1952",
+    "title": "Augusta Dei Genetrix. ~ Beata Maria V., «a Septem Doloribus » appellata, Dioecesis Pinnensis-Piscariensis Caelestis Patrona aeque principalis cum Sancto Cetaeo et Sancto Maximo declaratur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xii",
+    "issuerType": "pope",
+    "date": "1952-12-03",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-45-1953-ocr.pdf",
+      "shelf": "aas/1953",
+      "retrieved": "2026-09-13"
+    },
+    "incipit": "Augusta Dei Genetrix",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 45,
+      "year": 1953,
+      "page": 453
     }
   },
   {
@@ -24736,7 +24759,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ad Sinarum Gentem",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 47,
+      "year": 1955,
+      "page": 5
+    }
   },
   {
     "id": "mag:pius-xii/ad-caeli-reginam-1954",

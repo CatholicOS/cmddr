@@ -27,6 +27,7 @@ import { matchActa, POPE_ISSUERS, isMonthOnly, type ActaCandidate, type ActaUnma
 import { createFromActa, isActaShelf, CREATED_CATEGORIES, NOT_CREATED, type ActaHoldRow, type HoldReason } from './src/acta/create.js';
 import { ACTA_CATEGORIES, categoryForHeading, type ActaCategory } from './src/acta/categories.js';
 import { ACTA_POPES } from './src/acta/popes.js';
+import { ACTA_INDEX_CORRECTIONS } from './src/acta/curation.js';
 import { parseRate, harvestedParseRate, NESTED_TOC_HEADINGS, type ActaEntry, type ActaParseResult } from './src/acta/index.js';
 import { POPES } from './src/mappings/pontiffs.js';
 import { assignProvisionalOrdinals, bareProvisionalId } from './src/harvest/ordinals.js';
@@ -176,7 +177,9 @@ const ERAS: Record<string, Era> = {
       const under = [...parsedAll].filter(([k, x]) => ERAS['1932-1957']!.covers(actaSource(k)!) && (harvestedParseRate(x.stats) ?? 1) < 0.95).map(([k]) => k);
       const translations = [...parsedAll].filter(([k]) => ERAS['1932-1957']!.covers(actaSource(k)!)).reduce((n, [, x]) => n + x.stats.translations, 0);
       const monthOnly = [...parsedAll].filter(([k]) => ERAS['1932-1957']!.covers(actaSource(k)!)).reduce((n, [, x]) => n + x.stats.monthOnly, 0);
-      const noted = [...parsedAll].filter(([k]) => ERAS['1932-1957']!.covers(actaSource(k)!)).flatMap(([, x]) => x.entries.filter((e) => e.dateNote)).length;
+      const noted = [...parsedAll].filter(([k]) => ERAS['1932-1957']!.covers(actaSource(k)!)).flatMap(([, x]) => x.entries.filter((e) => e.dateNote && !e.date.startsWith('????'))).length;
+      const unprinted = [...parsedAll].filter(([k]) => ERAS['1932-1957']!.covers(actaSource(k)!)).flatMap(([, x]) => x.entries.filter((e) => e.date.startsWith('????'))).length;
+      const supplied = Object.entries(ACTA_INDEX_CORRECTIONS).filter(([, row]) => row.printed.startsWith('????')).length;
       return [
         `1. **The page column survives; what the OCR loses is a token here and there.** Unlike AAS 1 and 9-I (sample report §1),`,
         `   every volume of 1932–1957 renders its page column, and ${[...parsedAll].filter(([k]) => ERAS['1932-1957']!.covers(actaSource(k)!)).length - under.length} of the 26 clear the spec's 95 % floor over the harvested`,
@@ -196,20 +199,27 @@ const ERAS: Record<string, Era> = {
         `   p. 28), \`Marth\`, \`Innii\`, \`Apri\`, \`Ott\`, \`Noy\`, \`NOT\`, \`ÏTov\`, \`Doc\`, each admitted only where a day follows; a year`,
         `   \`i944\`, \`i 945\`, \`19.49\`. \`index.ts\` names the volume each was measured on. A month it does not list is an unreadable`,
         `   date, reported, and the entries that inherit it by ditto are unreadable too until a month is printed -- never inherited`,
-        `   from the entry before, which is what an unlisted word would silently have done -- and so is a ditto in the year column`,
-        `   with nothing before it (AAS 42 (1950) 911, the volume's first entry, *Munificentissimus Deus*, and *Humani generis* after`,
-        `   it: both on the shelf, neither cited). A year no volume can print -- outside the century, or after the volume's own`,
-        `   (\`1047\`, \`1048\`, \`3950\`, \`3939\`, \`1963\`, \`1964\`) -- is read as the one year of the volume's span it differs from by a`,
-        `   single digit and *noted* on the entry and on the dittos after it (${noted} entries, §3): the matcher may find the shelf`,
-        `   record on the noted date, and the creator holds the entry as unresolvable rather than mint from a reading, unless a`,
-        `   curated row confirms it against the act (*Singulari animi*, AAS 32 (1940) 42). A year the volume *could* print is never`,
-        `   repaired, because the OCR's digits do not keep to one: AAS 41 (1949) prints \`1919\` for 1949 (*Conflictatio bonorum*) and`,
-        `   for 1948 (five constitutions) alike, so each is corrected by a curated row quoting the act's dating formula`,
-        `   (\`ACTA_INDEX_CORRECTIONS\`: eight rows for AAS 41, one each for *Summi Pontificatus* (\`1930\`, AAS 31), *Ad catholici*`,
-        `   *sacerdotii* (\`Doc. 26\` for 20 December, AAS 28) and *Vigilanti cura* (\`1930 Iunii 2$>\`, AAS 28)), and the rest are held`,
-        `   as dated before the pontificate (§9). A page check on one noted chain (AAS 45 (1953): *Daniae (Hafniae)*, \`1963\` for`,
-        `   1953) found the index's page \`587\` to be the OCR's too -- the act opens at p. 537 -- which is why nothing is minted from`,
-        `   a noted entry: the line that lost a digit in one column has lost it in another.`,
+        `   from the entry before, which is what an unlisted word would silently have done. A year the index does not print -- a`,
+        `   \`»\` in the year column with nothing above it (AAS 42 (1950) 911, the volume's first entries, *Munificentissimus Deus*`,
+        `   and *Humani generis*), a token the OCR has broken (\`19 IS\`, \`19Ö4\`, \`1ÍS50\`, \`3918\`) or misread beyond repair`,
+        `   (\`1961\` in a 1953 volume) -- dates the entry \`????-MM-DD\`, and the dittos after it inherit the blank until a year is`,
+        `   printed (${unprinted} entries, §3): the volume year would be a guess (the seventeen letters after AAS 43's \`1ÍS50 Ian. 29\`,`,
+        `   which the earlier parser dated 1949 by the entry above, are acts of 1950), so nothing is matched or minted from such an`,
+        `   entry unless a curated row supplies the year from the act's own dating formula (\`ACTA_INDEX_CORRECTIONS\`: ${supplied}`,
+        `   rows, each read in the volume PDF and agreeing with the index's month and day -- the head of AAS 42, *Ad Sinarum gentem*`,
+        `   at the head of AAS 47, the constitutions and letters of 1948 under AAS 41's broken lines, the letters of 1951-1952 under`,
+        `   AAS 45's). A year no volume can print but one digit from a year of the volume's span (\`1047\`, \`1048\`, \`3950\`, \`3939\`,`,
+        `   \`1963\`, \`1964\`) is read as that year and *noted* on the entry and its dittos (${noted} entries, §3): the matcher may find`,
+        `   the shelf record on the noted date, and the creator holds the entry as unresolvable rather than mint from a reading,`,
+        `   unless a curated row confirms it against the act (*Singulari animi*, AAS 32 (1940) 42). A year the volume *could* print is`,
+        `   never repaired, because the OCR's digits do not keep to one: AAS 41 (1949) prints \`1919\` for 1949 (*Conflictatio*`,
+        `   *bonorum*), so each is corrected by a curated row quoting the act (three for AAS 41, one each for *Summi Pontificatus*`,
+        `   (\`1930\`, AAS 31), *Ad catholici sacerdotii* (\`Doc. 26\` for 20 December, AAS 28) and *Vigilanti cura* (\`1930 Iunii`,
+        `   2$>\`, AAS 28)), and the rest are held as dated before the pontificate (§9). A page check on one noted chain (AAS 45`,
+        `   (1953): *Daniae (Hafniae)*, \`1963\` for 1953) found the index's page \`587\` to be the OCR's too -- the act opens at`,
+        `   p. 537 -- which is why nothing is minted from a noted entry: the line that lost a digit in one column has lost it in`,
+        `   another. *Auspicia quaedam* (AAS 40 (1948), 1 May 1948) stays uncited for another reason: the text layer drops the page line of`,
+        `   its entry (\`1048 Maii 1 Auspicia quaedam. …\` runs into the next date), so no entry exists for a row to correct.`,
         `3. **The layout mode drifts a date onto the line before its entry, and sets blank-dated entries at a hanging indent.**`,
         `   Where the OCR's line boxes overlap, the layout mode prints an entry's date beside the last line of the entry before`,
         `   (AAS 27 (1935) 509: \`» Apr. 4 rum stationalium evehuntur . 363\` / \`Paterna caritas. - Sancta Teresia …\`); the parser`,
@@ -244,8 +254,10 @@ const ERAS: Record<string, Era> = {
       `1. **${c.matched} references written, every one from a quoted index line (§12):** ${c.byHow}. The shelves of Pius XI`,
       `   and Pius XII are thin -- 18 and 227 of their shelf records are dated in the era, against the ${c.matched + c.created + c.held} entries the twenty-six`,
       `   volumes print in harvested categories -- so most of what the index names is unmatched, and the *unique* rule carries the join; the *toponym* and`,
-      `   *incipit* matches include the claims the evidence rule resolved (\`match.ts\`) and two the curated overrides settle (the`,
-      `   Latin texts of *Dilectissima Nobis* and *Firmissimam constantiam*, §4).`,
+      `   *incipit* matches include the claims the evidence rule resolved (\`match.ts\`), two the curated overrides settle (the`,
+      `   Latin texts of *Dilectissima Nobis* and *Firmissimam constantiam*, §4), and the acts whose year the index does not print`,
+      `   and a curated row supplies -- among them the registry's dogmatic-definition bull *Munificentissimus Deus* and *Humani generis*`,
+      `   at the head of AAS 42, and *Ad Sinarum gentem* at the head of AAS 47 (§1.2).`,
       `2. **${c.created} documents created** (§8) -- ${c.byIssuer} -- and ${c.held} entries held (§9), ${c.guard} of them by the`,
       `   duplicate guard, the OCR rule and the page rule. ${c.toponymIncipit} constitutions print toponym and incipit both; the constitutions of`,
       `   1932–1945 print the see, with its vernacular in parentheses, and no incipit (*De Sienhsien (De Kinghsien). - Vicariatus*`,
