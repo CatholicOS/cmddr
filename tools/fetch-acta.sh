@@ -8,7 +8,8 @@
 #
 # - an annual *Index generalis* PDF (2010-2024): extracted whole, one page per form feed,
 #   to aas-indice-{year}.txt;
-# - a whole-volume OCR PDF (1909-2002; 1917 and 1983 in two parts): the pages of the
+# - a whole-volume OCR PDF (1909-2002; 1917 and 1983 in two parts, `AAS-09-I-1917-ocr.pdf`
+#   and `AAS-75-1983-I-ocr.pdf` -- the part before the year in one, after it in the other): the pages of the
 #   *Index documentorum chronologico ordine digestus* are located -- the first by its
 #   heading, the last by the next top-level index heading (*Indices nominum*, *Index
 #   analyticus*, *Index rerum*, *Index alphabeticus*) -- and only those pages are
@@ -38,7 +39,8 @@
 #        tools/fetch-acta.sh 2023            # one index year (2010-2024)
 #        tools/fetch-acta.sh 1958            # one volume (1909-2002); 1917 and 1983 fetch both parts
 #        tools/fetch-acta.sh sample          # the six sources of phase 2b-i: 1909 1917 1931 1958 1978 2012
-#        tools/fetch-acta.sh 1932-1957       # a range of volumes (phase 2b-ii-a: AAS 24-49; 1959-1977 is phase 2b-ii-b, AAS 51-69)
+#        tools/fetch-acta.sh 1932-1957       # a range of volumes (phase 2b-ii-a: AAS 24-49; 1959-1977 is phase 2b-ii-b, AAS 51-69;
+#                                            # 1979-2002 with the index PDFs 2010, 2011, 2013 and 2014 is phase 2b-ii-c, AAS 71-94)
 set -euo pipefail
 cd "$(dirname "$0")/.."
 mkdir -p tools/fixtures/acta
@@ -177,7 +179,11 @@ get_index() { # get_index <year>
 get_volume() { # get_volume <year>
   local year="$1"
   local paths
-  paths="$(links_for "$year" | grep -E "AAS-[0-9]{2}-(I-|II-)?$year-ocr\.pdf" || true)"
+  # The two double volumes name their parts differently, measured on the index page:
+  # 1917 puts the part before the year (`AAS-09-I-1917-ocr.pdf`, `AAS-09-II-1917-ocr.pdf`),
+  # 1983 after it (`AAS-75-1983-I-ocr.pdf`, `AAS-75-1983-II-ocr.pdf`). Both are read from
+  # the page, never guessed; ACTA_SOURCES (join.ts) carries the URL of each part as printed.
+  paths="$(links_for "$year" | grep -E "AAS-[0-9]{2}-((I|II)-)?$year(-(I|II))?-ocr\.pdf" || true)"
   if [ -z "$paths" ]; then
     echo "    MISSING: no volume PDF for $year on $BASE/index_it.htm" >&2
     return 0
@@ -187,7 +193,7 @@ get_volume() { # get_volume <year>
     local file vol part out
     file="$(basename "$path")"
     vol="$(echo "$file" | sed -E 's/^AAS-([0-9]{2})-.*/\1/')"
-    part="$(echo "$file" | sed -nE 's/^AAS-[0-9]{2}-(I|II)-.*/\1/p')"
+    part="$(echo "$file" | sed -nE 's/^AAS-[0-9]{2}-(I|II)-.*/\1/p; s/^AAS-[0-9]{2}-[0-9]{4}-(I|II)-.*/\1/p')"
     out="tools/fixtures/acta/aas-$vol-$year${part:+-$part}.txt"
     local pdf="$SCRATCH/$file"
     echo "  $year  ($path)"
