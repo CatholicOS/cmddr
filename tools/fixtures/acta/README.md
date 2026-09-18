@@ -24,8 +24,9 @@ source on vatican.va (`https://www.vatican.va/archive/aas/index_it.htm`, which
 They are the input of the AAS join (acta reference spec, `docs/superpowers/specs/2026-09-12-acta-reference-design.md`
 §4.1): `tools/src/acta/index.ts` parses the *Acta Summi Pontificis* parts, and `npm run
 harvest` matches the entries to the documents and creates documents for the acts the shelves
-lack. The PDFs are not checked in; `tools/fetch-acta.sh` downloads them to a scratch directory
-and writes these files. `tools/src/acta/join.ts` (`ACTA_SOURCES`) lists every source with its
+lack. The PDFs are not checked in; `tools/fetch-acta.sh` keeps them in a local store outside the
+repository (`~/development/sources/AAS/pdf`, or `ACTA_SOURCES`), downloads a volume only when the
+store lacks it, and writes these files. `tools/src/acta/join.ts` (`ACTA_SOURCES`) lists every source with its
 retrieval date and parser options; update it with this table.
 
 | Source | File | RETRIEVED | Extractor | PDF pages extracted | Volume pages |
