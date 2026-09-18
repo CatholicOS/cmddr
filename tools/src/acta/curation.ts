@@ -670,6 +670,21 @@ export const ACTA_HOLDS: Readonly<Record<string, ActaHold>> = {
       + "`mag:pius-xi/firmissimam-constantiam-1937`): AAS 29 p. 200 is headed 'CARTA APOSTOLICA DE SU SANTIDAD EL PAPA PIO XI AL "
       + "EPISCOPADO MEJICANO: SOBRE LA SITUACIÓN RELIGIOSA' (PDF page 200 of AAS-29-1937-ocr.pdf, read 2026-09-13). One act, not two.",
   },
+  // Phase 2b-iii-a: the Italian original of *Divini illius Magistri* (31 December 1929),
+  // printed in the December fascicle of AAS 21 (1929) 723-762 under its own heading and
+  // entered by the 1929 index as an encyclical of its own; the Latin follows at AAS 22
+  // (1930) 49-86, which the shelf record cites (`mag:pius-xi/divini-illius-magistri-1929`).
+  // One act, not two: the same shape as the four of 1933 and 1937 above.
+  '1929:723': {
+    indexLine: '  » » 31 Rappresentanti in terra. — Ad Venerabiles Fratres, Patriar­ / chas, Primates, Archiepiscopos, Episcopos, aliosque / '
+      + 'locorum Ordinarios pacem et communionem cum Apo­ / stolica Sede habentes et ad dilectos filios christi­ / '
+      + 'fideles orbis universos: De christiana iuventae edu­ / catione 723',
+    reason: 'the Italian text of the encyclical *Divini illius Magistri* (31 December 1929; the Latin text at AAS 22 (1930) 49, '
+      + "`mag:pius-xi/divini-illius-magistri-1929`): AAS 21 p. 723 is headed 'III / AD VENERABILES FRATRES PATRIARCHAS, PRIMATES, "
+      + "ARCHIEPISCOPOS, EPISCOPOS, ALIOSQUE LOCORUM ORDINARIOS … DE CHRISTIANA IUVENTAE EDUCATIONE. / PIO PP. XI / VENERABILI FRATELLI E "
+      + "DILETTI FIGLI / SALUTE E APOSTOLICA BENEDIZIONE / Rappresentanti in terra di quel Divino Maestro …' (PDF page 723 of "
+      + 'AAS-21-1929-ocr.pdf, read 2026-09-18). One act, not two.',
+  },
 };
 
 /** The curation key of an entry: the volume year and first page the index cites. */
@@ -1000,6 +1015,23 @@ export const ACTA_SHARED_PAGES: Readonly<Record<string, SharedPage>> = {
       + "PAULUS PP. II / Ad perpetuam rei memoriam. — Universos cohortamur homines ut, secundum proprias traditas consuetudines, "
       + "cotidie cum V…'. The index cites both at 385; both are on the apost_letters shelf.",
   },
+  // Phase 2b-iii-a (AAS 18-22): the volumes of the late 1920s set two short letters on one
+  // page as the 1930s do. Of the four pages the era's index gives two acts each, one was
+  // read in the volume PDF on 2026-09-18 and prints two; the other three print one act
+  // opening and the other act's *end* -- AAS 19 (1927) 205 (*Pro Apostolico* opens at 265;
+  // the index's `205` is the OCR's), 268 (*Quae ad rei* opens at 267 and ends here) and
+  // AAS 22 (1930) 323 (*Ordinis Capuccinarum* opens at 320 and ends here) -- and are held
+  // by the creator (`page-shared`) with both acts, listed in the report with the true pages.
+  'AAS:19:130': {
+    documentIds: ['mag:pius-xi/cum-ex-apostolico-munere-1926', 'mag:pius-xi/non-sine-1927'],
+    evidence: "AAS 19 (1927) p. 130 (PDF page 130 of AAS-19-1927-ocr.pdf) prints 'III / IMMUTATUR NOMEN VICARIATUS APOSTOLICI DE UELLÉ "
+      + "ORIENTALI / PIUS PP. XI / Ad futuram rei memoriam. — Cum ex Apostolico munere, quo fungimur …', dated 'die xiv mensis Decembris, "
+      + "anno MDCCCCXXVI Pontificatus Nostri quinto. P. CARD. GASPARRI, a Secretis Status', and, lower on the same page, 'IV / PRAEFECTURA "
+      + "APOSTOLICA DE KONG-MOON IN SINIS AD VICARIATUM APOSTOLICUM EVEHITUR. / PIUS PP. XI / Ad futuram rei memoriam. — Non sine magna "
+      + "animi Nostri laetitia comperimus …' (3 February 1927). The index cites both at 130 (`» Dec. 14 Cum ex apostólico munere. - "
+      + "Immutatur nomen vicariatus / apostolici de Uellé Orientali 130`, `» » » Non sine. - Praefectura apostolica de Kong-moon in Sinis / "
+      + "ad vicariatum apostolicum evehitur 130`).",
+  },
 };
 
 export interface Reprint {
@@ -1070,5 +1102,27 @@ export const ACTA_REPRINTS: Readonly<Record<string, Reprint>> = {
       + 'eversiones") and no note of correction and no corrigenda heading. The index enters the act once and cites both pages '
       + '(`138, 261`). A re-issue by this table\'s rule: the citation of record is the first printing, AAS 106 (2014) 138; the emendations '
       + 'are recorded here for the owner, who may re-key the row as a corrigendum.',
+  },
+  // Phase 2b-iii-a: Pius XI's *Quo maiori rerum* (30 March 1930, the prefecture apostolic
+  // of Umtata separated from the vicariate of Mariannhill), printed in AAS 22 (1930)
+  // 483-484 and again at the head of AAS 23 (1931) 41-42, whose chronological index
+  // enters it a second time. Both entries were held by the id-collision rule before this row.
+  'AAS:23:41': {
+    kind: 'reissue',
+    citationOf: 'AAS:22:483',
+    indexLines: [
+      '  » » » Quo maiori rerum. - Dis tracto territorio e vicariatu apo­ / stolico de Mariannhill erigitur praefectura apostolica / de umtata 483',
+      '1930 Martii 30 Quo maiori rerum. - Distracto territorio e vicariatu apo­ / stolico de Mariannhill erigitur praefectura apostolica / de TTmtata 41',
+    ],
+    evidence: "AAS 22 (1930) p. 483 (PDF page 483 of AAS-22-1930-ocr.pdf, read 2026-09-18) prints 'VII / DISTRACTO TERRITORIO A VICARIATU "
+      + "APOSTOLICO DE MARIANNHILL ERIGITUR PRAEFECTURA APOSTOLICA DE UMTATA. / PIUS PP. XI / Ad perpetuam rei memoriam. — Quo maiori "
+      + "rerum fidei incremento consideret, Delegatus Apostolicus Africae Meridionalis …', dated 'die xxx mensis Martii anno MDCCCCXXX, "
+      + "Pontificatus Nostri nono. E. CARD. PACELLI, a Secretis Status' (p. 484). AAS 23 (1931) p. 41 (PDF page 41 of AAS-23-1931-ocr.pdf) "
+      + "prints, after the constitution that ends the page's top half, 'LITTERAE APOSTOLICAE / I / DISTRACTO TERRITORIO A VICARIATU "
+      + "APOSTOLICO DE MARIANNHILL ERIGITUR PRAEFECTURA APOSTOLICA DE UMTATA. / PIUS PP. XI / Ad perpetuam rei memoriam. — Quo maiori rerum "
+      + "fidei incremento consuleret, Delegatus Apostolicus Africae Meridionalis …' and the same letter again, the same dating formula and "
+      + "signature (p. 42), with no note of why it is printed again and no heading of corrigenda (the one difference the OCR shows, "
+      + "'consideret' against 'consuleret', is the OCR's). A re-issue by this table's rule: the citation of record is the first "
+      + 'printing, AAS 22 (1930) 483.',
   },
 };

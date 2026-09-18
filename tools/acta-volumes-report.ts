@@ -638,6 +638,22 @@ ERAS['1979-2014'] = {
   ],
   partsSkippedNote: 'dicasteries, tribunals, commissions, councils, the synods of 1980 and 2001, the *sede vacante* and conclave of 2013, *Diarium*',
 };
+ERAS['1926-1930'] = {
+  title: '# The AAS volumes of 1926–1930 (AAS 18–22): the phase-2b-iii-a report',
+  intro: [
+    'the report of phase 2b-iii-a of [#25](https://github.com/CatholicOS/cmddr/issues/25) as the',
+    '[acta volumes spec](../specs/2026-09-13-acta-volumes-design.md) §6 and §10 define it: the five whole-volume OCR PDFs of',
+    '1926–1930 -- Pius XI, the early volumes whose OCR kept the page column (the seventeen of 1909–1925 lost it on most index pages',
+    'and wait for the page recovery of 2b-iii-b, spec §10) -- their chronological-index pages extracted by `tools/fetch-acta.sh` in',
+    'pypdf\'s layout mode (`tools/fixtures/acta/README.md` records page ranges, modes and retrieval). Each is parsed',
+  ],
+  covers: (s) => s.year >= 1926 && s.year <= 1930,
+  reading1: () => ['TODO'],
+  reading2: () => ['TODO'],
+  mappingsProse: ['TODO'],
+  radioProse: () => ['TODO'],
+  partsSkippedNote: 'dicasteries, tribunals, offices, *Diarium*',
+};
 const eraKey = process.argv[2] ?? 'sample';
 const ERA = ERAS[eraKey];
 if (!ERA) throw new Error(`Unknown era '${eraKey}': ${Object.keys(ERAS).join(', ')}`);
