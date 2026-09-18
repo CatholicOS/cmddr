@@ -138,7 +138,9 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // vatican.va files on apost_letters. Singular when the year has one.
   // 1931 spells it *Epistola apostolica* (`II. - EPISTOLA APOSTOLICA`: *Antoniana
   // solemnia*, 1 March 1931, to the bishop of Padua for the centenary of St Anthony).
-  { id: 'Epistulae Apostolicae', headings: ['EPISTULAE APOSTOLICAE', 'EPISTULA APOSTOLICA', 'EPISTOLA APOSTOLICA'],
+  // AAS 18 (1926) 533 prints the plural with the O of the era (`II. - EPISTOLAE APOSTOLICAE`:
+  // *Paterna sane* to the Mexican bishops, 2 February 1926, p. 175, and one more).
+  { id: 'Epistulae Apostolicae', headings: ['EPISTULAE APOSTOLICAE', 'EPISTULA APOSTOLICA', 'EPISTOLA APOSTOLICA', 'EPISTOLAE APOSTOLICAE'],
     classes: [{ genre: 'apostolic-letter', excludes: 'motu-proprio' }], harvested: 'yes' },
   // Bulls of indiction (Misericordiae Vultus 2015, Spes non confundit 2024) are on the bulls
   // shelf; the four cardinalatial-title erections of 28 November 2020 that the 2020 index
@@ -182,7 +184,10 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // Pius XI to cardinals); the volumes of 1933-1955 print the singular as `CHIROGRAPHUS`
   // (1933 *Tra i sacrosanti*; 1942 and 1943 the statutes of two Vatican charities; 1947
   // *We have just*, to President Truman; 1954 the Biblical Institute; 1955 *Nella sua*).
-  { id: 'Chirographa', headings: ['CHIROGRAPHA', 'CHIROGRAPHUM', 'CHIROGRAPHI', 'CHIROGRAPHE', 'CHIROGRAPHUS'],
+  // AAS 19 (1927) 451 and 22 (1930) 607 read the plural as `IV. - CHTRO GRAPHIS` and `VI. -
+  // CHIEOGRAPHI` (Pius XI's French and Italian letters to cardinals: *C'est de tout cœur*,
+  // 5 January 1927; *Ci commuovono profondamente*, 2 February 1930, p. 89).
+  { id: 'Chirographa', headings: ['CHIROGRAPHA', 'CHIROGRAPHUM', 'CHIROGRAPHI', 'CHIROGRAPHE', 'CHIROGRAPHUS', 'CHTRO GRAPHIS', 'CHIEOGRAPHI'],
     classes: [], harvested: 'no' },
   // Papal decrees have no row; vatican.va files several of these on the motu_proprio
   // shelf, where the registry carries them as apostolic-letter + motu-proprio.
@@ -391,6 +396,10 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // AAS 93 (2001) 899: `VIII - NOTIFICATIO CONIUNCTA`, the joint notification of John Paul II
   // and Karekin II of 9 November 2000 (p. 85); no row.
   { id: 'Notificatio coniuncta', headings: ['NOTIFICATIO CONIUNCTA'], classes: [], harvested: 'no' },
+  // AAS 18 (1926) 543: an unnumbered `NOTIFICATIO` of 5 July 1925 (p. 89) declaring the
+  // competence and constitution of the Congregation for Extraordinary Ecclesiastical
+  // Affairs -- a notice of the Curia's organisation, no class of the registry's.
+  { id: 'Notificatio', headings: ['NOTIFICATIO'], classes: [], harvested: 'no' },
   // AAS 77 (1985) 1202: `IX - LITTERAE MUTUO DATAE`, the letters exchanged between King Hassan
   // II of Morocco and John Paul II on the statute of the Catholic Church in Morocco (5
   // February 1984, p. 712); a diplomatic exchange, no row.
