@@ -8667,6 +8667,31 @@
     }
   },
   {
+    "id": "mag:pius-xi/universa-christifidelium-cura-1930",
+    "title": "Universa christifidelium cura. De archidioecesis Beginatensis dismembratione et dioecesis Gravelburgensis erectione",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-01-31",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-22-1930-ocr.pdf",
+      "shelf": "aas/1930",
+      "retrieved": "2026-09-18"
+    },
+    "incipit": "Universa christifidelium cura",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 22,
+      "year": 1930,
+      "page": 309
+    }
+  },
+  {
     "id": "mag:pius-xi/letter-1930-02-02",
     "title": "Chirografo al Cardinale Basilio Pompili, Vicario di Roma, sulle violenze compiute in Russia",
     "idStatus": "provisional",
@@ -8766,6 +8791,56 @@
       "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/curis-ac-laboribus-1930",
+    "title": "Curis ac laboribus. De Pontificio Seminario seu Collegio Aethiopico",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-02-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-22-1930-ocr.pdf",
+      "shelf": "aas/1930",
+      "retrieved": "2026-09-18"
+    },
+    "incipit": "Curis ac laboribus",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 22,
+      "year": 1930,
+      "page": 237
+    }
+  },
+  {
+    "id": "mag:pius-xi/ecclesiarum-in-orbe-1930",
+    "title": "Ecclesiarum in Orbe. De dioecesis Bockamptonen. dismembratione ac de dioecesis de Townsville in Statu Australiensi de Queenslandia erectione",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-02-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-22-1930-ocr.pdf",
+      "shelf": "aas/1930",
+      "retrieved": "2026-09-18"
+    },
+    "incipit": "Ecclesiarum in Orbe",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 22,
+      "year": 1930,
+      "page": 312
+    }
   },
   {
     "id": "mag:pius-xi/decet-romanum-pontificem-1930",
@@ -8944,6 +9019,31 @@
     }
   },
   {
+    "id": "mag:pius-xi/inde-ab-inito-1930",
+    "title": "Inde ab inito. Commissio pro Bussia a Sacra Congregatione pro Ecclesia Orientali seiungitur ac sui iuris constituitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-04-06",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-22-1930-ocr.pdf",
+      "shelf": "aas/1930",
+      "retrieved": "2026-09-18"
+    },
+    "incipit": "Inde ab inito",
+    "characteristics": [
+      "motu-proprio"
+    ],
+    "sourceGenreLabel": "Litterae Apostolicae Motu proprio datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 22,
+      "year": 1930,
+      "page": 153
+    }
+  },
+  {
     "id": "mag:pius-xi/ad-salutem-humani-1930",
     "title": "Ad Salutem Humani",
     "idStatus": "minted",
@@ -8961,7 +9061,38 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ad Salutem Humani",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 22,
+      "year": 1930,
+      "page": 201
+    }
+  },
+  {
+    "id": "mag:pius-xi/ubi-primum-cecoslovacha-1930",
+    "title": "Ubi primum Cecoslovacha. De Pontificio Collegio Nepomuceno in Urbe",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-04-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-22-1930-ocr.pdf",
+      "shelf": "aas/1930",
+      "retrieved": "2026-09-18"
+    },
+    "incipit": "Ubi primum Cecoslovacha",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 22,
+      "year": 1930,
+      "page": 340
+    }
   },
   {
     "id": "mag:pius-xi/prophetica-illa-1930",
@@ -9121,6 +9252,31 @@
       "volume": 23,
       "year": 1931,
       "page": 42
+    }
+  },
+  {
+    "id": "mag:pius-xi/solemni-conventione-1930",
+    "title": "Solemni Conventione. De nova circumscriptione et ordinatione hierarchica dioecesium rituum tam latini tam graeci-rumeni in Bomaniae Begno",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1930-06-05",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-22-1930-ocr.pdf",
+      "shelf": "aas/1930",
+      "retrieved": "2026-09-18"
+    },
+    "incipit": "Solemni Conventione",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 22,
+      "year": 1930,
+      "page": 381
     }
   },
   {
