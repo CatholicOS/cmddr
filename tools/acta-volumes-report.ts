@@ -24,6 +24,7 @@
  *        npx tsx tools/acta-volumes-report.ts 1932-1957 > docs/superpowers/reports/2026-09-13-acta-volumes-1932-1957.md
  *        npx tsx tools/acta-volumes-report.ts 1959-1977 > docs/superpowers/reports/2026-09-13-acta-volumes-1959-1977.md
  *        npx tsx tools/acta-volumes-report.ts 1979-2014 > docs/superpowers/reports/2026-09-13-acta-volumes-1979-2014.md
+ *        npx tsx tools/acta-volumes-report.ts 1926-1930 > docs/superpowers/reports/2026-09-18-acta-volumes-1926-1930.md
  */
 import { readFileSync, readdirSync } from 'node:fs';
 import { ACTA_SOURCES, actaSource, loadActaIndexes, sourceKeyOf, type ActaSource } from './src/acta/join.js';
@@ -56,6 +57,8 @@ interface Era {
   mappingsProse: string[];
   radioProse: (ctx: { radio: number; matched: string[]; first: string }) => string[];
   partsSkippedNote: string;
+  /** The date the report was generated, for the line after the title (the earlier eras' reports were all generated on 2026-09-13). */
+  generatedOn?: string;
 }
 const ERAS: Record<string, Era> = {
   sample: {
@@ -643,16 +646,111 @@ ERAS['1926-1930'] = {
   intro: [
     'the report of phase 2b-iii-a of [#25](https://github.com/CatholicOS/cmddr/issues/25) as the',
     '[acta volumes spec](../specs/2026-09-13-acta-volumes-design.md) §6 and §10 define it: the five whole-volume OCR PDFs of',
-    '1926–1930 -- Pius XI, the early volumes whose OCR kept the page column (the seventeen of 1909–1925 lost it on most index pages',
-    'and wait for the page recovery of 2b-iii-b, spec §10) -- their chronological-index pages extracted by `tools/fetch-acta.sh` in',
-    'pypdf\'s layout mode (`tools/fixtures/acta/README.md` records page ranges, modes and retrieval). Each is parsed',
+    '1926–1930 -- Pius XI, the early volumes whose OCR kept the page column, where the seventeen of 1909–1925 lost it on most index',
+    'pages and wait for the page recovery of 2b-iii-b (spec §10) -- their chronological-index pages extracted by `tools/fetch-acta.sh`',
+    'in pypdf\'s layout mode from the PDFs kept in the local store (`tools/fixtures/acta/README.md` records page ranges, modes and',
+    'retrieval). Each is parsed',
   ],
   covers: (s) => s.year >= 1926 && s.year <= 1930,
-  reading1: () => ['TODO'],
-  reading2: () => ['TODO'],
-  mappingsProse: ['TODO'],
-  radioProse: () => ['TODO'],
+  reading1: (parsedAll) => {
+    const era = [...parsedAll].filter(([k]) => ERAS['1926-1930']!.covers(actaSource(k)!));
+    const r = (k: string) => parsedAll.get(k)!;
+    if (era.length < 5) return [`*(The reading is not rendered: ${5 - era.length} fixture(s) of 1926–1930 are missing from tools/fixtures/acta/.)*`];
+    const underAll = era.filter(([, x]) => (parseRate(x.stats) ?? 1) < 0.95).map(([k]) => `${k} (${pct(parseRate(r(k).stats))})`);
+    const lost = era.reduce((n, [, x]) => n + x.stats.withoutPage, 0);
+    const opened = era.reduce((n, [, x]) => n + x.stats.dateLines, 0);
+    const monthOnly = era.reduce((n, [, x]) => n + x.stats.monthOnly, 0);
+    const unprinted = era.flatMap(([, x]) => x.entries.filter((e) => e.date.startsWith('????')));
+    return [
+      `1. **The page column survived in these five, and every source clears the floor over the harvested categories.** The OCR of`,
+      `   1909–1925 lost the page column on most index pages (spec §10.1: 56–99 % of the entries opened there close without a page); here`,
+      `   ${lost} of the ${opened} entries opened do (${(100 * lost / opened).toFixed(1)} %), the run of the later volumes, and the five sources parse at`,
+      `   ${era.map(([k, x]) => `${pct(harvestedParseRate(x.stats))} (${k})`).join(', ')} over the harvested categories (§4).`,
+      `   The overall rate falls under 95 % in ${underAll.length} -- ${underAll.join(', ')} -- for the parts the join does not act on: the`,
+      `   consistories' items with their OCR month (\`Decembr.\`, 1927), and the 1929 volume's *Conventiones*, which list the Lateran Pacts of`,
+      `   11 February 1929 clause by clause under one heading (thirty-seven lines outside any entry, §3), beside the letters whose`,
+      `   addressee runs to six lines. Nothing of the era is held for a lost page.`,
+      `2. **What the OCR loses is the year at the head of a section.** AAS 22 (1930) reads its printed \`1930\` as \`1J30\` (the encyclicals),`,
+      `   \`1030\` (the motu proprio) and \`1@30\` (the constitutions), so the first entry of each section and every ditto below it carried no`,
+      `   year: the parser repairs \`1030\` and notes it (spec §9's rule), and leaves \`1J30\` and \`1@30\` unprinted. Seven rows of`,
+      `   \`ACTA_INDEX_CORRECTIONS\` supply the year from each act's own dating formula, read in the volume with the page it opens on:`,
+      `   *Ad salutem* (20 April 1930, p. 201, the encyclical for Augustine's fifteenth centenary, matched to its shelf record), *Già da*`,
+      `   *qualche tempo* (6 February 1930, p. 87, whose confirmation the ditto *Inde ab inito* inherits) and the five constitutions of`,
+      `   31 January to 5 June 1930 (Gravelbourg, Townsville, the Ethiopian College, the Nepomucenum, the Romanian hierarchy), all`,
+      `   created. ${monthOnly} entries are dated to the month, held; of the ${unprinted.length} that print no year, the rows supply six and *Casti connubii* is`,
+      `   finding 3. The months come in lower case from 1926 (\`febr.\`, \`iunii\`, \`maii\`), read as the capitals are.`,
+      `3. **Two acts the index cites at a page they do not open on are left without a reference, on purpose.** *Casti connubii*`,
+      `   (31 December 1930) is cited at \`530\` and opens at 539 (AAS 22 p. 539: \`LITTERAE ENCYCLICAE … DE MATRIMONIO CHRISTIANO …`,
+      `   Casti connubii quanta sit dignitas\`; p. 530 is the Christmas address to the cardinals); the motu proprio *In allocutione*`,
+      `   (5 August 1930) is cited at \`307\`, the page that opens the public consistory of 3 July, and opens at 337. A year row would`,
+      `   have matched the first and created the second at the index's page, so the encyclical is left unmatched and the motu proprio held`,
+      `   (\`ACTA_HOLDS\`); with the three shared pages of finding 4 they are the era's evidence that a *page* correction is the mechanism`,
+      `   the curation tables still lack (phase 2b-ii-c named two such pages; this era names five).`,
+      `4. **Of four pages the index gives two acts each, one prints two.** AAS 19 (1927) 130 opens both *Cum ex Apostolico munere*`,
+      `   (14 December 1926) and *Non sine* (3 February 1927), numbered III and IV under one heading: curated in \`ACTA_SHARED_PAGES\``,
+      `   with both headings quoted, and both created. The other three print one act's opening and the other's *end*: AAS 19 p. 205`,
+      `   opens *Quoniam annus* while *Pro Apostolico* (cited \`205\`) opens at 265; p. 268 opens *In omnes catholici* while *Quae ad rei*`,
+      `   (cited \`268\`) opens at 267 and ends there; AAS 22 (1930) 323 opens *Nono exeunte saeculo* while *Ordinis Capuccinarum* (cited`,
+      `   \`323\`) opens at 320 and ends there. All six entries stay held (\`page-shared\`, §9), the true pages recorded here.`,
+      `5. **An act printed in two volumes has one citation.** *Quo maiori rerum* (30 March 1930, the prefecture of Umtata) is printed`,
+      `   at AAS 22 (1930) 483 and again at the head of AAS 23 (1931) 41, whose index enters it a second time under its 1930 date; the`,
+      `   sample era had created it from 1931, and this era's join held both entries as an id collision until \`ACTA_REPRINTS\` names`,
+      `   the 1931 printing a re-issue (the same letter, dating formula and signature, no note): the record is created from AAS 22`,
+      `   under the same id, and the 1931 count falls by one (§8). Three other records of the sample era change id, not existence:`,
+      `   *Decessores Nostros*, *Litteris nostris* and *Pastoralis officii* of 1930, created from AAS 23, now share their incipit and year`,
+      `   with acts AAS 22 prints, and the collision pass gives each pair the full-date form (\`mag:pius-xi/decessores-nostros-1930-05-31\`).`,
+      `6. **Every pope heading maps, and three headings are new.** \`I. - ACTA PII PP. XI\` heads every volume (the OCR's \`L\` and \`IL\``,
+      `   for the numeral in 1926 and 1928). AAS 18 (1926) prints \`EPISTOLAE APOSTOLICAE\` with the O of the era and an unnumbered`,
+      `   \`NOTIFICATIO\` on the competence of the Congregation for Extraordinary Ecclesiastical Affairs (5 July 1925, p. 89; no class of the`,
+      `   registry's); AAS 19 (1927) and 22 (1930) read the chirographs' heading as \`CHTRO GRAPHIS\` and \`CHIEOGRAPHI\`. No heading is left`,
+      `   unknown (§4). The 1929 volume also prints the Italian original of *Divini illius Magistri* (31 December 1929) at p. 723 under`,
+      `   its own heading, which the index enters as an encyclical of its own beside the Latin at AAS 22 (1930) 49 that the shelf record`,
+      `   cites: held by a curated row (\`ACTA_HOLDS\`), as the four vernaculars of 1933 and 1937 are.`,
+    ];
+  },
+  reading2: (c) => [
+    `1. **${c.matched} references written, every one from a quoted index line (§12):** ${c.byHow}. Pius XI's shelves are thin for the`,
+    `   era -- vatican.va holds 15 records dated 1926, 1927 and 1930 against 64 of 1928–1929, mostly apostolic letters -- so 53 of the`,
+    `   references are AAS 21's (1929), and the era is a harvest more than a join: the ten encyclicals the shelf holds (*Rerum Ecclesiae*,`,
+    `   *Rite expiatis* and *Iniquis afflictisque* of 1926, *Mortalium animos*, *Miserentissimus Redemptor* and *Rerum orientalium* of 1928,`,
+    `   *Mens Nostra*, *Quinquagesimo ante* and *Divini illius Magistri* of 1929, *Ad salutem* of 1930 by its curated year), the motu`,
+    `   proprio and the constitutions all cite their pages. What stays ambiguous (§5) is 1929's shape alone:`,
+    `   five days of two or three apostolic letters where the shelf's incipits are the letters' addressees (*Dilectusfilius*, *Decessor Noster*)`,
+    `   and neither the incipit nor a toponym separates them.`,
+    `2. **${c.created} documents created** (§8) -- ${c.byIssuer} -- and ${c.held} entries held (§9), ${c.guard} of them by the`,
+    `   duplicate guard and ${c.otherRulesText}. The creations are the era: 138 apostolic letters (basilicas, patronages, the`,
+    `   circumscriptions of the missions), 87 letters (Pius XI's letters shelf is harvested, so *Epistulae* are creatable for him where they`,
+    `   are held for Francis and Benedict XVI), 41 constitutions, 5 canonisation decretals of 1930 and 6 motu proprio. ${c.toponymIncipit} constitutions`,
+    `   print toponym and incipit both; the provisional ids of the era are ${c.provisional}. The guard's *same incipit elsewhere* holds`,
+    `   21 -- *Venerabilis frater* and *Quae catholico* five times each, formulae the letters of the 1920s open with as often as the`,
+    `   1930s do, beside a shelf record of 1923 -- for the release mechanism of [#39](https://github.com/CatholicOS/cmddr/issues/39).`,
+    `   The two *Tanquam sublimi* of 10 March 1926 (AAS 18 pp. 372 and 374) are two acts with one incipit and one date, held as the two`,
+    `   *Vos autem* of 2019 are.`,
+    `3. **Seven incipits the OCR damaged are held, not guessed** (§9): \`ACTA, vol\` (a running header where the incipit should be),`,
+    `   \`/Sacra aedes\` and \`/Supremi apostolatus\` (a stroke before the word), \`JE a quae ad Christi\`, \`II Santo Padre\` (the Italian *Il*),`,
+    `   \`lanuensi in civitate\` (the OCR's *l* for *I*) and *Flagrantissimo illo\\**; each waits for a curated reading.`,
+    `4. **Dated years before the volume** (§7): ${c.epistulae ? '' : ''}four acts of 1923–1926 printed in the volumes of 1927–1928 -- *Cum religio*`,
+    `   (12 June 1923, AAS 19 p. 397), *Ad sacram Petri Sedem* and *De more Romanorum Pontificum* (1925), *Decimo sexto reparatae* (1926) --`,
+    `   all created under their own dates, the volume year being the citation's.`,
+    `5. **Documents of the era's pope dated in the volume years without a reference** (§11): thirteen, of which five are of the formal`,
+    `   genres -- two on the ambiguous days of 1929 (§5), *Nobis ex alto* (25 May 1929) against an entry of the date under another incipit,`,
+    `   the motu proprio of 7 June 1929 on the Lateran ratification, which the index files under *Conventiones* and *Chirographa*, and`,
+    `   *Casti connubii* (finding 3) -- and the rest the letters shelf's Italian letters the index files under *Chirographa* (§13).`,
+  ],
+  mappingsProse: [
+    'Decisions taken here with the evidence beside each row of `categories.ts` (the earlier decisions stand): `EPISTOLAE APOSTOLICAE`',
+    '(AAS 18, 1926) to *Epistulae Apostolicae*, the O spelling of the era; `CHTRO GRAPHIS` (AAS 19, 1927) and `CHIEOGRAPHI` (AAS 22, 1930) to',
+    '*Chirographa*, the OCR of the plural (Pius XI\'s French and Italian letters to cardinals); and a new row with no registry class,',
+    '*Notificatio* (AAS 18, 1926: the unnumbered notification of 5 July 1925 on the competence and constitution of the Congregation for',
+    'Extraordinary Ecclesiastical Affairs, a notice of the Curia\'s organisation). No heading is left `unknown`.',
+  ],
+  radioProse: (c) => [
+    `The era prints ${c.radio} radio message${c.radio === 1 ? '' : 's'}: Vatican Radio was inaugurated on 12 February 1931 (*Qui arcano Dei*, AAS 23 (1931) 65, the`,
+    `sample's), and the volumes of 1926–1930 precede it. The count #27 asks for (\`medium: radio\`) is zero here, and`,
+    '[#38](https://github.com/CatholicOS/cmddr/issues/38) carries the later eras\' count.',
+  ],
   partsSkippedNote: 'dicasteries, tribunals, offices, *Diarium*',
+  generatedOn: '2026-09-18',
 };
 const eraKey = process.argv[2] ?? 'sample';
 const ERA = ERAS[eraKey];
@@ -728,7 +826,7 @@ function belief(u: ActaUnmatched): string {
 // ---------------------------------------------------------------------------------------
 p(ERA.title);
 p();
-p(`Generated by \`npx tsx tools/acta-volumes-report.ts ${eraKey}\` from \`data/documents/*.json\` and \`tools/fixtures/acta/\` on 2026-09-13 —`);
+p(`Generated by \`npx tsx tools/acta-volumes-report.ts ${eraKey}\` from \`data/documents/*.json\` and \`tools/fixtures/acta/\` on ${ERA.generatedOn ?? '2026-09-13'} —`);
 for (const line of ERA.intro) p(line);
 p('(`tools/src/acta/index.ts`, generalised across the century\'s typography and OCR), classified (`categories.ts`), its pope');
 p('headings mapped (`popes.ts`), and matched to the shelf records of Pius X → Benedict XVI by issuer, date and incipit');

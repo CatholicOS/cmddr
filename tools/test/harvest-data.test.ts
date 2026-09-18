@@ -3361,6 +3361,50 @@ describe('the AAS-only documents (AAS-only documents spec, phase 2a)', () => {
     expect(by['mag:benedict-xvi/ibi-vacabimus-2011']!.acta).toEqual({ series: 'AAS', volume: 104, year: 2012, page: 482 });
   });
 
+  it('joins and creates from the volumes of 1926-1930 as the era report says (acta volumes spec §10, phase 2b-iii-a)', () => {
+    const era = born.filter((d) => d.acta!.year >= 1926 && d.acta!.year <= 1930);
+    expect(era).toHaveLength(277);
+    // Every AAS-born record of the era cites the whole-volume PDF of its volume and is Pius XI's; his letters shelf is
+    // harvested, so *Epistulae* are created for him where they are held for Francis and Benedict XVI.
+    for (const d of era) {
+      expect(d.acta!.volume, d.id).toBe(d.acta!.year - 1908);
+      expect(d.acta!.part, d.id).toBeUndefined();
+      expect(d.source!.shelf, d.id).toBe(`aas/${d.acta!.year}`);
+      expect(d.source!.retrieved, d.id).toBe('2026-09-18');
+      expect(d.source!.url, d.id).toBe(`https://www.vatican.va/archive/aas/documents/AAS-${d.acta!.volume}-${d.acta!.year}-ocr.pdf`);
+      expect(d.issuerId, d.id).toBe('rp:pius-xi');
+      expect(d.date >= PONTIFICATE_BEGAN['rp:pius-xi']!, d.id).toBe(true);
+    }
+    expect(era.filter((d) => d.genre === 'letter')).toHaveLength(87);
+    expect(era.filter((d) => d.genre === 'encyclical')).toEqual([]);
+    const by = Object.fromEntries(everything.map((d) => [d.id, d]));
+    // *Quo maiori rerum* (30 March 1930), printed in AAS 22 (1930) 483 and again in AAS 23 (1931) 41: created from the
+    // first printing under the id the sample era had minted from the second, the 1931 entry being a curated re-issue.
+    expect(by['mag:pius-xi/quo-maiori-rerum-1930']).toMatchObject({ date: '1930-03-30', acta: { series: 'AAS', volume: 22, year: 1930, page: 483 }, source: { shelf: 'aas/1930' } });
+    expect(everything.filter((d) => d.acta?.volume === 23 && d.acta.page === 41)).toEqual([]);
+    // AAS 19 (1927) 130 prints two apostolic letters, curated in ACTA_SHARED_PAGES: both created at the page.
+    expect(by['mag:pius-xi/cum-ex-apostolico-munere-1926']).toMatchObject({ date: '1926-12-14', acta: { volume: 19, year: 1927, page: 130 } });
+    expect(by['mag:pius-xi/non-sine-1927']).toMatchObject({ date: '1927-02-03', acta: { volume: 19, year: 1927, page: 130 } });
+    // The year the 1930 index's OCR reads `1J30` / `1@30`, supplied by curated rows from each act's dating formula: *Ad
+    // salutem* matched to its shelf record, the five constitutions created; *Casti connubii*, cited at a page it does not
+    // open on (`530` for 539), is left without a reference, and the motu proprio *In allocutione* (`307` for 337) is held.
+    expect(by['mag:pius-xi/ad-salutem-humani-1930']).toMatchObject({ acta: { volume: 22, year: 1930, page: 201 } });
+    expect(by['mag:pius-xi/universa-christifidelium-cura-1930']).toMatchObject({ date: '1930-01-31', acta: { volume: 22, year: 1930, page: 309 } });
+    expect(by['mag:pius-xi/solemni-conventione-1930']).toMatchObject({ date: '1930-06-05', acta: { volume: 22, year: 1930, page: 381 } });
+    expect(by['mag:pius-xi/casti-connubii-1930']!.acta).toBeUndefined();
+    expect(everything.filter((d) => d.acta?.volume === 22 && [307, 530].includes(d.acta.page))).toEqual([]);
+    // The Italian text of *Divini illius Magistri* (AAS 21 (1929) 723) is held by a curated row; the Latin is the citation.
+    expect(by['mag:pius-xi/rappresentanti-in-terra-1929']).toBeUndefined();
+    expect(by['mag:pius-xi/divini-illius-magistri-1929']).toMatchObject({ acta: { volume: 22, year: 1930, page: 49 } });
+    // Two acts of one incipit and one year, one from AAS 22 and one from AAS 23: the collision pass gives both the
+    // full-date form, so the sample era's `decessores-nostros-1930` is re-minted (the era report §1).
+    expect(by['mag:pius-xi/decessores-nostros-1930']).toBeUndefined();
+    expect(by['mag:pius-xi/decessores-nostros-1930-03-30']).toMatchObject({ acta: { volume: 22, year: 1930, page: 485 } });
+    expect(by['mag:pius-xi/decessores-nostros-1930-05-31']).toMatchObject({ acta: { volume: 23, year: 1931, page: 42 } });
+    // An act published late is created under its own date, the volume year being the citation's.
+    expect(by['mag:pius-xi/cum-religio-1923']).toMatchObject({ date: '1923-06-12', acta: { volume: 19, year: 1927, page: 397 } });
+  });
+
   it('holds rather than creates: no discussion #30 act has an AAS-born twin, and the Tarragona letters stay held', () => {
     // The twelve ids of discussion #30; a twin would be an AAS-born record of the same
     // pope on the same date (the shelf records print no incipit to compare by).
