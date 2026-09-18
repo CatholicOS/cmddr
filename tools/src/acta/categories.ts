@@ -7,8 +7,10 @@
  * Apostolica postsynodalis*; *Consistoria* is absent in 2015, 2016 and 2021). Every heading
  * seen in the ten indexes 2015-2024, in the six sources of phase 2b-i (AAS 1, 9-I, 23,
  * 50, 70 and the 2012 index; acta volumes spec §2, §5), in the twenty-six volumes of
- * 1932-1957 (AAS 24-49, phase 2b-ii-a, spec §9) and in the nineteen volumes of 1959-1977
- * (AAS 51-69, phase 2b-ii-b: John XXIII and Paul VI) is listed under the row it belongs to,
+ * 1932-1957 (AAS 24-49, phase 2b-ii-a, spec §9), in the nineteen volumes of 1959-1977
+ * (AAS 51-69, phase 2b-ii-b: John XXIII and Paul VI) and in the twenty-four volumes of
+ * 1979-2002 with the index PDFs of 2010, 2011, 2013 and 2014 (AAS 71-94, 102, 103, 105,
+ * 106, phase 2b-ii-c: John Paul II, Benedict XVI and Francis's first year) is listed under the row it belongs to,
  * in the normalised form `normaliseHeading` produces (case-folded, the numeral and the
  * trailing punctuation dropped, the OCR's accents stripped), with the volume it was seen
  * in; an OCR spelling is listed as the fixture prints it. A heading not listed here is
@@ -40,6 +42,14 @@ export interface ActaCategory {
   /** Every heading seen for this category, as `normaliseHeading` renders it. */
   headings: readonly string[];
   /**
+   * Headings that vary with each printing and are read by shape rather than listed one by
+   * one -- the journeys of John Paul II, which the volumes of 1980-2002 head with the
+   * countries visited (`EX HABITIS DUM SUMMUS PONTIFEX AFRICAM PERAGRAT DELECTAE
+   * ALLOCUTIONES`): a heading matching a pattern belongs to the row as a listed one does.
+   * The report lists every heading as printed, so nothing is hidden by the pattern.
+   */
+  patterns?: readonly RegExp[];
+  /**
    * The registry classes the category corresponds to -- usually one; *Nuntii* two, since
    * the index files the Christmas and Easter blessings as a *Nuntius et Benedictio* where
    * the registry keeps its own `urbi-et-orbi` row. Empty when the registry has no row.
@@ -57,10 +67,10 @@ export interface ActaCategory {
 export function normaliseHeading(text: string): string {
   return text
     .normalize('NFD').replace(/\p{M}/gu, '')   // the OCR's accents (`EPISTULA ENCÌCLICA`, AAS 41)
-    .replace(/^\s*[IVXLJYivxl1]+[.-]?\s*[r•]?\s*[–-]\s*/, '')   // `XI- - ALLOCUTIONES` (AAS 66, 1974)
+    .replace(/^\s*[IVXLJYivxl1]+(?:[.-]?\s*[r•]?\s*[–-]\s*|\.\s+(?=[A-Z]))/, '')   // `XI- - ALLOCUTIONES` (AAS 66, 1974); `I. LITTERAE ENCYCLICAE` (AAS 91, 1999)
     .replace(/\s+/g, ' ')
     .replace(/«\s+/g, '«').replace(/\s+»/g, '»')   // `« MOTU PROPRIO» DATAE` (AAS 68, 1976)
-    .replace(/[\s,.:'’^-]+$/, '')   // the OCR's `^` after a heading (AAS 52, 1960)
+    .replace(/[\s,.:'’^\[|\\-]+$/, '')   // the OCR's `^` after a heading (AAS 52, 1960); the scan margin's `[` (AAS 89 (1997) 890)
     .trim()
     .toUpperCase();
 }
@@ -108,9 +118,14 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // never loosened to absorb a filing difference).
   // The volumes head the category *Motu proprio* alone (1909 `V. - MOTU PROPRIO.`, 1917
   // `III. - MOTU PROPRIO.`, 1931, 1958); the 2012 index sets the words in guillemets. The
-  // OCR of AAS 40 (1948) reads `MOTTI PROPRIO`.
+  // OCR of AAS 40 (1948) reads `MOTTI PROPRIO`. The 2010 index heads *Ubicumque et
+  // semper* (21 September 2010, which vatican.va files on motu_proprio as
+  // `mag:benedict-xvi/ubicumque-et-semper-2010`) and the letter to seminarians of 18
+  // October 2010 `III – EPISTULAE APOSTOLICAE « MOTU PROPRIO » DATAE`, beside its `IV –
+  // LITTERAE APOSTOLICAE « MOTU PROPRIO » DATAE` (*Omnium in mentem*): the same class.
   { id: 'Litterae Apostolicae Motu proprio datae',
-    headings: ['LITTERAE APOSTOLICAE MOTU PROPRIO DATAE', 'LITTERAE APOSTOLICAE «MOTU PROPRIO» DATAE', 'MOTU PROPRIO', 'MOTTI PROPRIO'],
+    headings: ['LITTERAE APOSTOLICAE MOTU PROPRIO DATAE', 'LITTERAE APOSTOLICAE «MOTU PROPRIO» DATAE', 'MOTU PROPRIO', 'MOTTI PROPRIO',
+      'EPISTULAE APOSTOLICAE «MOTU PROPRIO» DATAE'],
     classes: [{ genre: 'apostolic-letter', requires: 'motu-proprio' }], harvested: 'yes' },
   // The apost_letters shelf proper: beatification letters and the Latin-incipit tail. A
   // document bearing `motu-proprio` belongs to the category above, so it is excluded here.
@@ -155,6 +170,13 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // The OCR of AAS 30 (1938) reads `BPISTTJLAE`, that of AAS 34 (1942) `EPISTULAS`.
   { id: 'Epistulae', headings: ['EPISTULAE', 'EPISTULA', 'EPISTOLAE', 'BPISTTJLAE', 'EPISTULAS'],
     classes: [{ genre: 'letter' }], harvested: 'partly' },
+  // The 2010 index heads Benedict XVI's pastoral letter to the Catholics of Ireland (19
+  // March 2010, AAS 102 (2010) 209) `VIII – LITTERAE PASTORALES`: one heading for one act,
+  // which vatican.va files on the year-partitioned letters shelf (…/letters/2010/documents/
+  // hf_ben-xvi_let_20100319_church-ireland.html), not harvested for him. The class is the
+  // letters shelf's, so the row is `partly` as *Epistulae* is, and the creator never mints
+  // from it (create.ts, NOT_CREATED).
+  { id: 'Litterae pastorales', headings: ['LITTERAE PASTORALES'], classes: [{ genre: 'letter' }], harvested: 'partly' },
   // Chirographs have no Genre Registry row (#4). Three spellings across the years, and
   // the 1931 fixture's OCR of the plural (`VI. - CHIROGRAPHE`: two Italian letters of
   // Pius XI to cardinals); the volumes of 1933-1955 print the singular as `CHIROGRAPHUS`
@@ -202,7 +224,9 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // Prayers the pope composed or recited (1942 `ORATIO`: *Consacrazione al Cuore Immacolato
   // di Maria*, 31 October 1942; 1949 *Pro Anno Sacro Iubilari MCML*; 1953 the Marian Year
   // prayer) and, in 1940, a sermon at the Minerva filed under the same word; no row.
-  { id: 'Orationes', headings: ['ORATIO'], classes: [], harvested: 'no' },
+  // AAS 74 (1982) 1316 heads John Paul II's Holy Thursday prayer to priests (8 April 1982,
+  // p. 521) `III - PRECATIO SOLLEMNIS`: a prayer, filed with the others.
+  { id: 'Orationes', headings: ['ORATIO', 'PRECATIO SOLLEMNIS'], classes: [], harvested: 'no' },
   // The early volumes' *Sermones* (1909 `VI. - SERMONES.`; 1917 `VII. - SERMO.`, to the
   // Lenten preachers of Rome; 1931 `VIII. - SERMO`, in the consistory hall after a decree
   // on heroic virtues) are addresses in the vernacular, the class of the speeches shelf,
@@ -225,7 +249,9 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   { id: 'Nuntii', headings: ['NUNTII', 'NUNTII SCRIPTO DATI', 'NUNTIUS SCRIPTO DATUS', 'NUNTII SCRIPTI DATI'], classes: [{ genre: 'message' }, { genre: 'urbi-et-orbi' }], harvested: 'partly' },
   // Video messages: message + `medium: video` once #27 lands; all on pont-messages today.
   // The 2012 index prints the singular.
-  { id: 'Nuntii televisifici', headings: ['NUNTII TELEVISIFICI', 'NUNTIUS TELEVISIFICUS'], classes: [{ genre: 'message' }], harvested: 'partly' },
+  // The 2012 index prints the singular; AAS 89 (1997) 895 prints it `XIII - NUNTIUS
+  // TELEVISIFICA` (the Christmas message of 1996).
+  { id: 'Nuntii televisifici', headings: ['NUNTII TELEVISIFICI', 'NUNTIUS TELEVISIFICUS', 'NUNTIUS TELEVISIFICA'], classes: [{ genre: 'message' }], harvested: 'partly' },
   // Radio messages, from the first (1931 `IX. - NUNCIUM RADIOPHONICUM`: *Qui arcano Dei*,
   // 12 February 1931, the inauguration of Vatican Radio) through Pius XII's and John
   // XXIII's (1958 `VII - NUNTII RADIOPHONICI`) to Paul VI's radio-television messages
@@ -256,11 +282,13 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // harvested shelf.
   // Paul VI's of 1964-1977, in the OCR spellings `NUNTII GRATULATOMI` (AAS 57 (1965) 1041; 59,
   // 60, 62, 65, 67) and `NUNTII GRATULATORI I` (AAS 69 (1977) 763).
-  { id: 'Nuntii gratulatorii', headings: ['NUNTII GRATULATORII', 'NUNTIUS GRATULATORIUS', 'NUNTII GRATULATOMI', 'NUNTII GRATULATORI I'],
+  // John Paul II's of 1979-2002; the OCR of AAS 81 (1989) 1406 reads `XI - NUTU GRATULATORII`.
+  { id: 'Nuntii gratulatorii', headings: ['NUNTII GRATULATORII', 'NUNTIUS GRATULATORIUS', 'NUNTII GRATULATOMI', 'NUNTII GRATULATORI I', 'NUTU GRATULATORII'],
     classes: [{ genre: 'message' }], harvested: 'no' },
   // John XXIII's two telegrams of 29 October 1958 to Cardinals Mindszenty and Stepinac
   // (1958 `VI - NUNTII TELEGRAPHICI`); Pius XII's of 1955 and 1956 (singular in 1955); no row.
-  { id: 'Nuntii telegraphici', headings: ['NUNTII TELEGRAPHICI', 'NUNTIUS TELEGRAPHICUS'], classes: [], harvested: 'no' },
+  // AAS 76 (1984) 1119 spells it `XV - NUNTII TELEGRAFICI` (to the faithful of Lithuania).
+  { id: 'Nuntii telegraphici', headings: ['NUNTII TELEGRAPHICI', 'NUNTIUS TELEGRAPHICUS', 'NUNTII TELEGRAFICI'], classes: [], harvested: 'no' },
   // Consistory announcements, homilies and title assignments; no row. 1917 numbers the
   // heading among the pope's categories as `IX. - ACTA SACRI CONSISTORII.` (the parser
   // does not take it for a part heading); 1958 prints `IX - SACRA CONSISTORIA`; the
@@ -270,7 +298,11 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // Concordats and agreements with states; no row. Singular in 1958 and 1978; `SOLLEMNIS
   // CONVENTIO` for the Austrian concordat (AAS 26, 1934) and the Spanish (AAS 43, 1951),
   // `SOLLEMNES CONVENTIONES` in AAS 32 (1940).
-  { id: 'Conventiones', headings: ['CONVENTIONES', 'CONVENTIO', 'SOLLEMNIS CONVENTIO', 'SOLLEMNES CONVENTIONES'], classes: [], harvested: 'no' },
+  // AAS 92 (2000) 907 heads the basic agreement with the Palestine Liberation Organization
+  // (15 February 2000) `VIII - PACTIO`, AAS 93 (2001) 899 the agreement with the
+  // Organization of African Unity (19 October 2000) `X - PACTIO`: agreements with a
+  // non-state party, filed with the concordats.
+  { id: 'Conventiones', headings: ['CONVENTIONES', 'CONVENTIO', 'SOLLEMNIS CONVENTIO', 'SOLLEMNES CONVENTIONES', 'PACTIO'], classes: [], harvested: 'no' },
   // Rescripts and notes of the Secretariat of State; no row, and dated sub-lists whose
   // entries can lack a page number.
   { id: 'Secretaria Status', headings: ['SECRETARIA STATUS'], classes: [], harvested: 'no' },
@@ -286,6 +318,19 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // ET OCEANIAM` (November-December 1970, 83 entries; AAS 63 (1971) 969-975): the homilies
   // and addresses of the journey, each with a page, as the 2015-2024 journeys section
   // re-lists them. Nothing to match, nothing to create.
+  // John Paul II's journeys: AAS 71 (1979) 1641 heads the category `XIV - ITINERA
+  // APOSTOLICA` alone (the Mexico journey of January 1979, its addresses with a page each);
+  // from AAS 72 (1980) to AAS 88 (1996) the heading is followed by a sub-heading per journey
+  // naming the countries -- `EX HABITIS DUM SUMMUS PONTIFEX AFRICAM PERAGRAT` / `DELECTAE
+  // ALLOCUTIONES` (AAS 74 (1982) 1330), `… IN GERMANIAM PERAGRAT …` (AAS 73), `… SEULUM ET
+  // INSULAS IAVAM, TIMORIAM, SUMATRAM AC MAURICIANAM PERAGRAT …` (AAS 82 (1990) 1664, in
+  // the OCR's spelling), `… PERAGRAT DELECTAS ALLOCUTIONES` (AAS 80, 81), `DELECTAE
+  // ALLOCUTIONES UNA CUM SCRIPTO DATO NUNTIO AUTOCHTHONIBUS TOTIUS AMERICAE` (AAS 85 (1993)
+  // 1306, the Denver journey) -- read by the patterns below, since every journey prints
+  // its own; from AAS 89 (1997) the heading runs `ITINERA APOSTOLICA` / `SUMMUS PONTIFEX
+  // HAS NATIONES INVISIT:` over a list of the year's journeys, a page each. The 2010-2014
+  // indexes head the section `ITINERA APOSTOLICA, VISITATIONES PASTORALES, ITINERA` as
+  // 2015-2024 do. Nothing to match, nothing to create.
   { id: 'Itinera Apostolica',
     headings: [
       'ITINERA APOSTOLICA, VISITATIONES PASTORALES, VISITATIONES, ITINERA',
@@ -297,6 +342,18 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
       'SUMMI PONTIFICIS ITER IN TURCARUM REMPUBLICAM',
       'SUMMI PONTIFICIS PEREGRINANTE ITER IN COLUMBIAM',
       'SUMMI PONTIFICIS PEREGRINANTES ITER IN ASIAM ET OCEANIAM',
+      'ITINERA APOSTOLICA',
+      'ITINERA APOSTOLICA SUMMUS PONTIFEX HAS NATIONES INVISIT',
+    ],
+    patterns: [
+      // `ITINERA APOSTOLICA EX HABITIS DUM SUMMUS PONTIFEX HISPANIAM PERAGRAT DELECTAE
+      // ALLOCUTIONES` (three lines joined), `EX HABITIS DUM SUMMUS PONTIFEX … PERAGRAT
+      // DELECTAE ALLOCUTIONES` (two), and the OCR's `PEBAGBAT DETECTAE` (AAS 80 (1988) 1836).
+      // ALLOCUTIONES` (three lines joined), `EX HABITIS DUM SUMMUS PONTIFEX … PERAGRAT
+      // DELECTAE ALLOCUTIONES` (two), the OCR's `PEBAGBAT DETECTAE` (AAS 80 (1988) 1836), and
+      // `EX HABITIS SANCTI DOMINICI IN AMERICA CENTRALI DELECTAE ALLOCUTIONES UNA CUM SCRIPTO
+      // DATO NUNTIO AUTOCHTHONIBUS TOTIUS AMERICAE` (AAS 85 (1993) 1306).
+      /^(?:ITINERA APOSTOLICA )?EX HABITIS (?:DUM SUMMUS PONTIFEX )?.*\bDE[LT]ECTA[ES] ALLOCUTIONES\b/,
     ],
     classes: [], harvested: 'no' },
   // One-off categories, each printed in a single year; no row for any of them.
@@ -327,8 +384,27 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // (create.ts, NOT_CREATED) -- the class is the shelf's filing, not the index's word.
   { id: 'Sollemnis professio fidei', headings: ['SOLLEMNIS PROFESSIO FIDEI'],
     classes: [{ genre: 'apostolic-letter', requires: 'motu-proprio' }], harvested: 'partly' },
-  { id: 'Declarationes communes', headings: ['DECLARATIONES COMMUNES', 'DECLARATIO COMMUNIS'],
+  // AAS 93 (2001) 898 and 94 (2002) 779 head the joint declarations with Christodoulos,
+  // Karekin II, Bartholomew I and Teoctist `DECLARATIONES CONIUNCTAE`.
+  { id: 'Declarationes communes', headings: ['DECLARATIONES COMMUNES', 'DECLARATIO COMMUNIS', 'DECLARATIONES CONIUNCTAE'],
     classes: [], harvested: 'no' },
+  // AAS 93 (2001) 899: `VIII - NOTIFICATIO CONIUNCTA`, the joint notification of John Paul II
+  // and Karekin II of 9 November 2000 (p. 85); no row.
+  { id: 'Notificatio coniuncta', headings: ['NOTIFICATIO CONIUNCTA'], classes: [], harvested: 'no' },
+  // AAS 77 (1985) 1202: `IX - LITTERAE MUTUO DATAE`, the letters exchanged between King Hassan
+  // II of Morocco and John Paul II on the statute of the Catholic Church in Morocco (5
+  // February 1984, p. 712); a diplomatic exchange, no row.
+  { id: 'Litterae mutuo datae', headings: ['LITTERAE MUTUO DATAE'], classes: [], harvested: 'no' },
+  // AAS 75 (1983) 1115: `XVII - CONSILIUM PRO PUBLICIS ECCLESIAE NEGOTIIS`, a letter of
+  // Cardinal Casaroli to Cardinal Tomášek (14 February 1983) filed inside the pope's part,
+  // as the *Secretaria Status* rescripts of 2015-2024 are; no row.
+  { id: 'Consilium pro Publicis Ecclesiae Negotiis', headings: ['CONSILIUM PRO PUBLICIS ECCLESIAE NEGOTIIS'], classes: [], harvested: 'no' },
+  // The 2013 index opens Francis's part with `I – PONTIFICATUS EXORDIA` (the first homily,
+  // the unsealing of the conclave, the visit to St Mary Major, 14-15 March 2013) and `II –
+  // SOLLEMNE INITIUM MINISTERII` / `FRANCISCI SUMMI ECCLESIAE PASTORIS` (the inaugural
+  // homily of 19 March and the delegations present): ceremonial, no row.
+  { id: 'Pontificatus exordia', headings: ['PONTIFICATUS EXORDIA'], classes: [], harvested: 'no' },
+  { id: 'Sollemne initium ministerii', headings: ['SOLLEMNE INITIUM MINISTERII FRANCISCI SUMMI ECCLESIAE PASTORIS'], classes: [], harvested: 'no' },
   { id: 'Meditatio', headings: ['MEDITATIO'], classes: [], harvested: 'no' },
   { id: 'Documentum', headings: ['DOCUMENTUM'], classes: [], harvested: 'no' },
   // A bare *Adhortatio* is, in 2019, the joint appeal of Francis and Mohammed VI on
@@ -350,9 +426,10 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
 const BY_HEADING = new Map<string, ActaCategory>();
 for (const c of ACTA_CATEGORIES) for (const h of c.headings) BY_HEADING.set(h, c);
 
-/** The category a normalised heading belongs to, or null when the heading is unseen. */
+/** The category a normalised heading belongs to, by the listed headings and then by the patterns, or null when the heading is unseen. */
 export function categoryForHeading(heading: string): ActaCategory | null {
-  return BY_HEADING.get(normaliseHeading(heading)) ?? null;
+  const h = normaliseHeading(heading);
+  return BY_HEADING.get(h) ?? ACTA_CATEGORIES.find((c) => c.patterns?.some((re) => re.test(h))) ?? null;
 }
 
 export const categoryById = (id: string): ActaCategory | undefined =>

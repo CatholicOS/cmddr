@@ -1,4 +1,4 @@
-# The AAS index fixtures: the *Index generalis* PDFs of 2012 and 2015–2024, the sample volumes of 1909–1978, and the volumes of 1932–1957 and 1959–1977
+# The AAS index fixtures: the *Index generalis* PDFs of 2010–2014 and 2015–2024, the sample volumes of 1909–1978, and the volumes of 1932–2002
 
 The extracted text of the *Index documentorum chronologico ordine digestus* of the *Acta
 Apostolicae Sedis*, one file per source, one page per form feed (`\f`), from two kinds of
@@ -6,16 +6,20 @@ source on vatican.va (`https://www.vatican.va/archive/aas/index_it.htm`, which
 `tools/fetch-acta.sh` reads for every file name, since their case varies):
 
 - the annual *Index generalis actorum* PDFs published separately from the monthly
-  fascicles (`documents/{year}/aas-indice{year}.pdf`, 2015–2024; `documents/2012/AAS-indice2012.pdf`),
-  extracted whole (`aas-indice-{year}.txt`);
+  fascicles (`documents/{year}/aas-indice{year}.pdf`, 2015–2024; `AAS-indice2012.pdf`,
+  `AAS-INDICE2010.pdf`, `AAS-INDICE2011.pdf`, `AAS-indice2013.pdf`, `AAS-indice2014.pdf` — the
+  case varies, so the script reads the file names off the index page), extracted whole
+  (`aas-indice-{year}.txt`);
 - the whole-volume OCR PDFs of 1909–2002 (`documents/AAS-{vol}-{year}-ocr.pdf`; 1917 and
-  1983 in two parts, `AAS-09-I-1917-ocr.pdf`), of which only the pages of the chronological
+  1983 in two parts, named `AAS-09-I-1917-ocr.pdf` and `AAS-75-1983-I-ocr.pdf` — the part
+  before the year in one, after it in the other), of which only the pages of the chronological
   index are extracted (`aas-{vol}-{year}[-{part}].txt`; acta volumes spec,
   `docs/superpowers/specs/2026-09-13-acta-volumes-design.md` §3) — the six sources of phase
   2b-i are the sample below, the twenty-six volumes of 1932–1957 (AAS 24–49, Pius XI and
-  Pius XII) are phase 2b-ii-a and the nineteen of 1959–1977 (AAS 51–69, John XXIII and Paul
-  VI) phase 2b-ii-b (spec §9); 1979–2002 with the 2010–2014 index PDFs, and 1910–1931 follow
-  in 2b-ii-c and 2b-iii.
+  Pius XII) are phase 2b-ii-a, the nineteen of 1959–1977 (AAS 51–69, John XXIII and Paul
+  VI) phase 2b-ii-b, and the twenty-four of 1979–2002 (AAS 71–94, John Paul II) with the
+  index PDFs of 2010, 2011, 2013 and 2014 (Benedict XVI, and Francis's first year) phase
+  2b-ii-c (spec §9); 1910–1931 follow in 2b-iii, and 2003–2009 have no index online.
 
 They are the input of the AAS join (acta reference spec, `docs/superpowers/specs/2026-09-12-acta-reference-design.md`
 §4.1): `tools/src/acta/index.ts` parses the *Acta Summi Pontificis* parts, and `npm run
@@ -79,9 +83,38 @@ retrieval date and parser options; update it with this table.
 | AAS 68 (1976) | `aas-68-1976.txt` | **2026-09-13** | pypdf 6.14.2, layout mode; pp. 756–761, 763–765, 767 default mode (pypdf warns of rotated text) | 756–768 (13) | 862 |
 | AAS 69 (1977) | `aas-69-1977.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 756–766 (11) | 853 |
 | AAS 70 (1978) | `aas-70-1978.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1008–1017 (10) | 1130 |
+| AAS 71 (1979) | `aas-71-1979.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1632–1643 (12) | 1718 |
+| AAS 72 (1980) | `aas-72-1980.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1284–1298 (15) | 1398 |
+| AAS 73 (1981) | `aas-73-1981.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 755–764 (10) | 852 |
+| AAS 74 (1982) | `aas-74-1982.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1316–1332 (17) | 1459 |
+| AAS 75 part I (1983) | `aas-75-1983-I.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1104–1116 (13) | 1213 |
+| AAS 75 part II (1983) | — | — | — | **no chronological index**: the volume is the *Codex Iuris Canonici* of 1983 (355 pages), with *Sacrae disciplinae leges* (25 January 1983, pp. VII–XIV) before it, the Code's own index after, and an appendix of corrigenda (22 September 1983) | 355 |
+| AAS 76 (1984) | `aas-76-1984.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1108–1120 (13) | 1238 |
+| AAS 77 (1985) | `aas-77-1985.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1198–1208 (11) | 1290 |
+| AAS 78 (1986) | `aas-78-1986.txt` | **2026-09-13** | pypdf 6.14.2, layout mode (pypdf warns of rotated text on the volume; the index pages are complete) | 1332–1342 (11) | 1372 |
+| AAS 79 (1987) | `aas-79-1987.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1540–1552 (13) | 1647 |
+| AAS 80 (1988) | `aas-80-1988.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1826–1839 (14) | 1868 |
+| AAS 81 (1989) | `aas-81-1989.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1396–1407 (12) | 1438 |
+| AAS 82 (1990) | `aas-82-1990.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1656–1665 (10) | 1703 |
+| AAS 83 (1991) | `aas-83-1991.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1100–1108 (9) | 1142 |
+| AAS 84 (1992) | `aas-84-1992.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1212–1222 (11) | 1264 |
+| AAS 85 (1993) | `aas-85-1993.txt` | **2026-09-13** | pypdf 6.14.2, layout mode; pp. 1296, 1297, 1298 default mode | 1296–1307 (12) | 1346 |
+| AAS 86 (1994) | `aas-86-1994.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1028–1039 (12) | 1082 |
+| AAS 87 (1995) | `aas-87-1995.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1172–1184 (13) | 1233 |
+| AAS 88 (1996) | `aas-88-1996.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 996–1007 (12) | 1066 |
+| AAS 89 (1997) | `aas-89-1997.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 884–895 (12) | 940 |
+| AAS 90 (1998) | `aas-90-1998.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1052–1063 (12) | 1116 |
+| AAS 91 (1999) | `aas-91-1999.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 1204–1213 (10) | 1279 |
+| AAS 92 (2000) | `aas-92-2000.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 900–909 (10) | 1071 |
+| AAS 93 (2001) | `aas-93-2001.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 892–901 (10) | 1118 |
+| AAS 94 (2002) | `aas-94-2002.txt` | **2026-09-13** | pypdf 6.14.2, layout mode; pp. 779, 781 default mode | 772–781 (10) | 946 |
+| 2010 index PDF (`AAS-INDICE2010.pdf`) | `aas-indice-2010.txt` | **2026-09-13** | pypdf 6.14.2, default mode | whole: 72 | — |
+| 2011 index PDF (`AAS-INDICE2011.pdf`) | `aas-indice-2011.txt` | **2026-09-13** | pypdf 6.14.2, default mode | whole: 60 | — |
+| 2013 index PDF (`AAS-indice2013.pdf`) | `aas-indice-2013.txt` | **2026-09-13** | pypdf 6.14.2, default mode | whole: 104 | — |
+| 2014 index PDF (`AAS-indice2014.pdf`) | `aas-indice-2014.txt` | **2026-09-13** | pypdf 6.14.2, default mode | whole: 80 | — |
 
-No source was missing on its retrieval date, and every volume of 1932–1957 and 1959–1977 has a
-chronological index. Every index has the same three parts (the general index by category, the
+No source was missing on its retrieval date, and every volume of 1932–1957, 1959–1977 and 1979–2002
+has a chronological index (AAS 75 part II, the Code of 1983, has none, as AAS 9 part II has none). Every index has the same three parts (the general index by category, the
 chronological index, the indexes of names), so no source differs in shape at that level; the
 shapes that differ *inside* the chronological index are listed below, and each is handled by
 the parser and covered by a unit test. Three volumes needed the index locator extended
@@ -368,6 +401,60 @@ that the earlier volumes did not (`index.ts` names the volume for each; the repo
   (1968) 10 and AAS 64 (1972) 471, both acts on the shelf; AAS 65 (1973) 237, AAS 68 (1976) 256
   and 400, AAS 69 (1977) 198 and 252, both acts created) and one the OCR misdrew (AAS 69 (1977)
   245, Sagar's page onto Jagdalpur's), held.
+
+### The volumes of 1979–2002 and the index PDFs of 2010–2014 (phase 2b-ii-c)
+
+John Paul II's volumes, and Benedict XVI's index PDFs with Francis's first year (the 2013
+index carries both). What they print that the earlier sources did not (`index.ts` names the
+source for each; the report `docs/superpowers/reports/2026-09-13-acta-volumes-1979-2014.md`
+lists what could not be read):
+
+- **Pope headings**: `I - ACTA IOANNIS PAULI PP. II` (1979–1993, with the OCR's `PP. Il` in
+  1988), `I. ACTA IOANNIS PAULI PP. II` with a full stop and no dash (AAS 86, 1994), `I — ACTA
+  IOANNIS PAULI PP. II` with an em dash (1995–2002); `EX ACTIBUS PAULI PP. VI` at the end of
+  John Paul II's part (AAS 71, 1979: one letter of Paul VI, read as a pope heading in the
+  genitive); the 2013 index's `I – ACTA BENEDICTI XVI`, `II – SEDIS VACANTIS ACTA`, `III –
+  CONCLAVE` (parts, skipped) and `IV – ACTA FRANCISCI PP.`; the 2014 index's `II – ACTA
+  BENEDICTI XVI` after Francis's part.
+- **Category headings**: the journeys headed one by one with the countries visited (`XV -
+  ITINERA APOSTOLICA` / `EX HABITIS DUM SUMMUS PONTIFEX AFRICAM PERAGRAT` / `DELECTAE
+  ALLOCUTIONES`, 1980–1996, the OCR's `Ex`, `ex`, `PEBAGBAT DETECTAE`; `ITINERA APOSTOLICA` /
+  `SUMMUS PONTIFEX HAS NATIONES INVISIT:` over a list from 1997), mapped by a pattern; a
+  heading numbered with a full stop and no dash (`I. LITTERAE ENCYCLICAE`, AAS 91); the acts
+  under one heading numbered `I.`, `II.` in the entry text (AAS 76, 1984); new wordings mapped
+  in `categories.ts` (`PRECATIO SOLLEMNIS`, `LITTERAE MUTUO DATAE`, `PACTIO`, `DECLARATIONES
+  CONIUNCTAE`, `NOTIFICATIO CONIUNCTA`, `CONSILIUM PRO PUBLICIS ECCLESIAE NEGOTIIS`, `LITTERAE
+  PASTORALES`, `EPISTULAE APOSTOLICAE « MOTU PROPRIO » DATAE`, `PONTIFICATUS EXORDIA`, `SOLLEMNE
+  INITIUM MINISTERII …`) and the OCR's `NUNTII TELEGRAFICI`, `NUTU GRATULATORII`, `NUNTIUS
+  TELEVISIFICA`.
+- **Dates**: the months `Iuli.`, `Oec.`, `Mal.` (AAS 80, each verified against the act); the
+  year's ditto as `yf` and `jff` at the head of a line (AAS 80) and `y?` inside one (AAS 71);
+  a year one digit from two years of the volume's span (`1988` for 1983 in AAS 76), left
+  unprinted and supplied by a curated row; the OCR's doubled year at a line's head (` 1986
+  1986   Mart. 10`, AAS 78), which the run-together split no longer takes for a page.
+- **Entries**: page numbers above 1,500 (AAS 71, 79, 80 and 82 exceed it; the ceiling is
+  1,900); the scan margin's marks after a page or a word on one page of AAS 89 (1997) (` 604
+  c`, ` 523 \`, `Comboni I`: dropped on a page with eight or more such lines); the annexes
+  and undated statutes listed under an act (`» » » Adnexum: … ordinatio 213`, AAS 86;
+  `Statuto dell'Autorità …`, the 2011 index), consumed as sub-items; an act the index cites at
+  two pages (`138, 261`, the 2014 index), the second kept as `alsoPages`.
+- **The 2010 and 2011 index PDFs**: page numbers and days as spaced digits (`.... 6 8 1`, `»»
+  3 0`), the year's and the month's dittos as one token (`»» »`), a running header or a heading
+  glued to the text (`… digestus 9612010 Maii 1 Divini Salvatoris`, `.... 7 9 3IV – LITTERAE
+  APOSTOLICAE`), a full stop after the day (`Nov. 20.`), a column narrow enough that a full
+  line runs to forty characters (`fullLine: 40` in `ACTA_SOURCES`).
+- **Toponyms and incipits**: from AAS 81 (1989) the index prints a constitution as incipit and
+  description with no toponym head, while vatican.va titles the act by the see alone (the
+  join's largest ambiguity, characterised in the report); the shelf's incipits carry the
+  addressee in parentheses (`Tanta est (Episcopus Ipialensis)`), dropped before the slug is
+  compared (`incipitSlug`, match.ts); a stray mark inside the guillemets (`«.Deus tantum »`,
+  AAS 81) dropped; an incipit the OCR split or set in capitals (`M ementote sermonis`, `QUO
+  maius`, `Jn vita eorum`) held as damaged.
+- **Pages two acts cite**: eighteen read in the volumes and curated (`ACTA_SHARED_PAGES`: two
+  apostolic letters to a page, both on the shelf) and two the OCR or the index misdrew (AAS
+  76 (1984) 946, AAS 82 (1990) 43), withheld by the join.
+- **Acts printed twice**: *Ibi vacabimus* (AAS 104 (2012) 482 and AAS 112 (2020) 479) and
+  *Deus caritas* (AAS 106 (2014) 138 and 261), both read in the fascicles: `ACTA_REPRINTS`.
 
 The RETRIEVED dates above are also stamped as `source.retrieved` on every document created
 from these fixtures (`ACTA_SOURCES` in `tools/src/acta/join.ts`): update both together when

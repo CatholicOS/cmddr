@@ -5543,28 +5543,6 @@
     }
   },
   {
-    "id": "mag:pius-xi/y-ir-entern-sanctorum-1932",
-    "title": "Y ir entern Sanctorum. Ad Emum P. D. Laurentium tit. S. Pancratii S. E. E. Presbyterum Cardinalem Lauri eundemque Poenitentiarium Maiorem, quem mittit Legatum suum ad Conventum Eucharisticum ex omnibus gentibus Dublini celebrandum",
-    "idStatus": "minted",
-    "genre": "letter",
-    "issuerId": "rp:pius-xi",
-    "issuerType": "pope",
-    "date": "1932-05-26",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-24-1932-ocr.pdf",
-      "shelf": "aas/1932",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "Y ir entern Sanctorum",
-    "sourceGenreLabel": "Epistulae",
-    "acta": {
-      "series": "AAS",
-      "volume": 24,
-      "year": 1932,
-      "page": 234
-    }
-  },
-  {
     "id": "mag:pius-xi/cum-non-sine-1932",
     "title": "Cum non sine. Erigitur in vicariatum apostolicum de Kisumu denominandum praefectura apostolica de Kavirondo",
     "idStatus": "minted",
@@ -5584,28 +5562,6 @@
       "volume": 24,
       "year": 1932,
       "page": 366
-    }
-  },
-  {
-    "id": "mag:pius-xi/n-osti-profecto-1932",
-    "title": "N osti profecto. Ad Emum P.D. Michaelem S. E. E. Cardinalem Lega, episcopum Tusculanum, quem Legatum mittit Patavium ad Antoniana solemnia",
-    "idStatus": "minted",
-    "genre": "letter",
-    "issuerId": "rp:pius-xi",
-    "issuerType": "pope",
-    "date": "1932-05-27",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-24-1932-ocr.pdf",
-      "shelf": "aas/1932",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "N osti profecto",
-    "sourceGenreLabel": "Epistulae",
-    "acta": {
-      "series": "AAS",
-      "volume": 24,
-      "year": 1932,
-      "page": 233
     }
   },
   {
@@ -7683,28 +7639,6 @@
       "volume": 25,
       "year": 1933,
       "page": 432
-    }
-  },
-  {
-    "id": "mag:pius-xi/h-orti-conclusi-1933",
-    "title": "H orti conclusi. Venerabilis Dei famula Catharina Labouré, e S. Vincentii a Paulo Societate Puellarum Caritatis, Beata renuntiatur 367 >•> Iulii 31 Ad Senarium Montem. - Facultas conceditur recognoscendi ac recondendi exuvias ss. VII Fundatorum O. S. M. ad Senarium Montem, ad id Legato Emo viro Card. Alexio H. Lépicier",
-    "idStatus": "minted",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:pius-xi",
-    "issuerType": "pope",
-    "date": "1933-05-28",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-25-1933-ocr.pdf",
-      "shelf": "aas/1933",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "H orti conclusi",
-    "sourceGenreLabel": "Litterae Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 25,
-      "year": 1933,
-      "page": 329
     }
   },
   {
@@ -10410,28 +10344,6 @@
     }
   },
   {
-    "id": "mag:pius-xi/p-er-celebre-in-tota-1935",
-    "title": "P er celebre in tota. Sanctuarium Marianum de « Vicoforte », intra fines dioecesis Montis Regalis in Pedemonte, titulo ac dignitate Basilicae Minoris augetur",
-    "idStatus": "minted",
-    "genre": "apostolic-letter",
-    "issuerId": "rp:pius-xi",
-    "issuerType": "pope",
-    "date": "1935-05-24",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-27-1935-ocr.pdf",
-      "shelf": "aas/1935",
-      "retrieved": "2026-09-13"
-    },
-    "incipit": "P er celebre in tota",
-    "sourceGenreLabel": "Litterae Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 27,
-      "year": 1935,
-      "page": 404
-    }
-  },
-  {
     "id": "mag:pius-xi/perpetua-semper-exstitit-1935",
     "title": "Perpetua semper exstitit. Ad Emum P. D. Iosephum Ernestum tit. S. Mariae de Aracoeli S. E. E. Presb. Cardinalem Van Eoey, Archiepiscopum Mechlmensem, cui de centenaria commemoratione felicis restaurationis Universitatis Lovaniensis deque per quinque lustra ab ipsius rectore praeclare gestis gratulatur",
     "idStatus": "minted",
@@ -12117,7 +12029,7 @@
       "series": "AAS",
       "volume": 28,
       "year": 1936,
-      "page": 437
+      "page": 421
     }
   },
   {

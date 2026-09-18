@@ -125,9 +125,9 @@ curated tables and the pinned-count tests), each with its own report and its own
 
 | PR | Volumes | Popes | Notes |
 |---|---|---|---|
-| 2b-ii-a | 24–49 (1932–1957) | Pius XI, Pius XII | 1939 has two popes; *Nuntii radiophonici* are Pius XII's (counted for #27, never created) |
-| 2b-ii-b | 51–69 (1959–1977) | John XXIII, Paul VI | 1963 has two popes |
-| 2b-ii-c | 71–94 (1979–2002) and the 2010, 2011, 2013, 2014 index PDFs | John Paul II, Benedict XVI | 1983 is a double volume (`part`); the *Ibi vacabimus* reprint (2012 and 2020) needs a curated citation-of-record rule, decided here |
+| 2b-ii-a | 24–49 (1932–1957) | Pius XI, Pius XII | 1939 has two popes; *Nuntii radiophonici* are Pius XII's (counted for #27, never created) — **done** (PR #34) |
+| 2b-ii-b | 51–69 (1959–1977) | John XXIII, Paul VI | 1963 has two popes — **done** (PR #35) |
+| 2b-ii-c | 71–94 (1979–2002) and the 2010, 2011, 2013, 2014 index PDFs | John Paul II, Benedict XVI | 1983 is a double volume (`part`); the *Ibi vacabimus* reprint (2012 and 2020) needs a curated citation-of-record rule, decided here — **done**: `ACTA_REPRINTS` (the first printing is the citation unless the volume marks the later as a correction; *Deus caritas*, printed twice in AAS 106 (2014), decided the same way); AAS 75 part II is the Code of 1983 and has no index, so every 1983 reference carries part I; the 2013 index carries Francis's first year too |
 | 2b-iii | 2–23 (1910–1931), and 9-II if it has an index | Pius X, Benedict XV, Pius XI | after deciding how to recover the lost page column: a positional join against the *Index generalis rerum*, or a curated readings table |
 
 Each PR: the volumes' index pages as fixtures (README rows), per-volume parse rate with the

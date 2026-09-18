@@ -26,7 +26,8 @@
  */
 import { slugify } from '../slug.js';
 import { categoryForHeading, type GenreClass } from './categories.js';
-import { ACTA_INDEX_CORRECTIONS, ACTA_MATCH_OVERRIDES, curationKey, overrideKey } from './curation.js';
+import { ACTA_INDEX_CORRECTIONS, ACTA_MATCH_OVERRIDES, ACTA_REPRINTS, ACTA_SHARED_PAGES, curationKey, overrideKey } from './curation.js';
+import type { Reprint } from './curation.js';
 import { ACTA_POPES } from './popes.js';
 import type { ActaEntry } from './index.js';
 import type { DocumentRecord } from '../types.js';
@@ -39,6 +40,20 @@ import type { DocumentRecord } from '../types.js';
  */
 export const POPE_ISSUERS: Readonly<Record<string, string>> =
   Object.fromEntries(ACTA_POPES.map((p) => [p.pope, p.issuerId]));
+
+/**
+ * The slug an incipit is compared by. vatican.va's headings of John Paul II's letters and
+ * constitutions append the addressee or subject in parentheses to tell two acts of one
+ * incipit apart -- `Tanta est (Episcopus Ipialensis)`, `Constat Christifideles (Sanctus
+ * Franciscus Assisiensis)`, `Quamdiu fecistis (Columbae Gabriel)` -- and the shelf harvest
+ * keeps the whole heading as the incipit (251 shelf records, 170 of them John Paul II's,
+ * 28 each of John XXIII and Paul VI, 25 of Pius XII; measured on 2026-09-13). The
+ * parenthesis is not the incipit: it is dropped before the slug is taken, on the shelf's
+ * side and the index's alike, so the matcher's incipit rule and the creator's guard see
+ * *Tanta est* on both (47 more references over 1979-2014, measured against the slug with
+ * the parenthesis kept). Nothing else is repaired.
+ */
+export const incipitSlug = (incipit: string): string => slugify(incipit.replace(/\s*\([^()]*\)\s*$/, ''));
 
 /** Whether the parser dated the entry to the month only (`YYYY-MM`). */
 export const isMonthOnly = (e: { date: string }): boolean => e.date.length === 7;
@@ -71,8 +86,22 @@ export interface ActaMatchResult {
   skipped: ActaEntry[];
   /** Entries whose pope heading maps to no issuer. */
   unknownPope: ActaEntry[];
+  /**
+   * Entries the curated reprint table names as the later printing of an act the *Acta*
+   * print twice (ACTA_REPRINTS): not attempted, since the act's citation of record is the
+   * other printing's; listed by the reports.
+   */
+  reprints: ActaEntry[];
   /** Documents claimed by more than one entry; none of those claims is kept as a match. */
   conflicts: { documentId: string; entries: ActaEntry[] }[];
+  /**
+   * Pages two matched documents would cite that ACTA_SHARED_PAGES does not list: one page
+   * opens one act (invariant 25) unless the volume was read and the pair curated, so neither
+   * reference is written and the page is reported. Two of the era's twenty such pages print
+   * one act (AAS 76 (1984) 946, AAS 82 (1990) 43): the OCR's or the index's page for one
+   * of the two, which a page correction, not the join, would settle.
+   */
+  sharedPages: { page: string; matches: ActaMatch[] }[];
 }
 
 const inClass = (d: DocumentRecord, c: GenreClass): boolean =>
@@ -156,6 +185,29 @@ export const titleIsToponym = (title: string, toponym: string): boolean =>
   slugify(title.split(',')[0]!) === slugify(toponym.replace(/\.$/, ''));
 
 /**
+ * Where an entry stands with the reprint table (curation.ts, ACTA_REPRINTS). A row keyed by
+ * this entry's page names it the printing that is *not* the citation of record: the later
+ * printing of a re-issue, or the first printing a corrigendum supersedes -- a reprint, no
+ * claim. Except when the row's `citationOf` is one of the entry's own `alsoPages`: the
+ * index cited the act at both pages on one line (`138, 261`), and a corrigendum keyed by
+ * the first page whose citation is the second means the entry is cited *at the second
+ * page* -- so the entry is re-pointed there and matched or created as usual, its other
+ * pages set aside (CodeRabbit, PR #37). The table is a parameter so the shape can be tested
+ * without a curated row.
+ */
+export function citedAt(entry: ActaEntry, reprints: Readonly<Record<string, Reprint>> = ACTA_REPRINTS): { entry: ActaEntry; reprint: boolean } {
+  const row = reprints[overrideKey(entry)];
+  if (row === undefined) return { entry, reprint: false };
+  const m = row.citationOf.match(/^([A-Z]+):(\d+):(\d+)$/);
+  const page = m !== null && m[1] === entry.series && Number(m[2]) === entry.volume ? Number(m[3]) : undefined;
+  if (page !== undefined && entry.alsoPages?.includes(page)) {
+    const { alsoPages: _also, ...rest } = entry;
+    return { entry: { ...rest, page }, reprint: false };
+  }
+  return { entry, reprint: true };
+}
+
+/**
  * The entry with its curated index correction applied (curation.ts), or the entry itself.
  * A row applies only while the parser still reads the printed date the row records, so a
  * fixture or parser change that alters the printed date surfaces as a row that no longer
@@ -182,15 +234,20 @@ export function matchActa(rawEntries: ActaEntry[], docs: DocumentRecord[]): Acta
   const byId = new Map(docs.map((d) => [d.id, d]));
 
   const result: ActaMatchResult = {
-    matches: [], ambiguous: [], unmatched: [], skipped: [], unknownPope: [], conflicts: [],
+    matches: [], ambiguous: [], unmatched: [], skipped: [], unknownPope: [], conflicts: [], reprints: [], sharedPages: [],
   };
 
-  for (const entry of entries) {
-    const category = categoryForHeading(entry.category);
+  for (const raw of entries) {
+    const category = categoryForHeading(raw.category);
     if (category === null || category.harvested === 'no' || category.classes.length === 0) {
-      result.skipped.push(entry);
+      result.skipped.push(raw);
       continue;
     }
+    // The printing that is not the citation of record (curation.ts, ACTA_REPRINTS): no
+    // claim -- unless the row re-points a two-page entry to its other page (citedAt).
+    const cited = citedAt(raw);
+    if (cited.reprint) { result.reprints.push(raw); continue; }
+    const entry = cited.entry;
     const issuer = POPE_ISSUERS[entry.pope];
     if (issuer === undefined) { result.unknownPope.push(entry); continue; }
 
@@ -208,10 +265,10 @@ export function matchActa(rawEntries: ActaEntry[], docs: DocumentRecord[]): Acta
     // No year printed and no curated correction: nothing to match against, no near-miss.
     if (isUnprintedYear(entry)) { result.unmatched.push({ entry, sameDate: [], nearMisses: [] }); continue; }
     if (isMonthOnly(entry)) {
-      const slug = entry.incipit === null ? null : slugify(entry.incipit);
+      const slug = entry.incipit === null ? null : incipitSlug(entry.incipit);
       const monthly = inMonth(issuer, entry.date).filter(inClasses);
       const byIncipit = slug === null || slug === '' ? []
-        : monthly.filter((d) => d.incipit !== undefined && slugify(d.incipit) === slug);
+        : monthly.filter((d) => d.incipit !== undefined && incipitSlug(d.incipit) === slug);
       if (byIncipit.length === 1) {
         result.matches.push({ entry, documentId: byIncipit[0]!.id, by: 'incipit-month' });
       } else if (byIncipit.length > 1) {
@@ -228,8 +285,8 @@ export function matchActa(rawEntries: ActaEntry[], docs: DocumentRecord[]): Acta
     let by: ActaMatch['by'] = 'unique';
 
     if (candidates.length > 1 && entry.incipit !== null) {
-      const slug = slugify(entry.incipit);
-      const byIncipit = candidates.filter((d) => d.incipit !== undefined && slugify(d.incipit) === slug);
+      const slug = incipitSlug(entry.incipit);
+      const byIncipit = candidates.filter((d) => d.incipit !== undefined && incipitSlug(d.incipit) === slug);
       if (byIncipit.length >= 1) { candidates = byIncipit; by = 'incipit'; }
     }
     if (candidates.length > 1 && entry.toponym !== null && category.classes.some((c) => c.requires === 'apostolic-constitution')) {
@@ -277,7 +334,7 @@ export function matchActa(rawEntries: ActaEntry[], docs: DocumentRecord[]): Acta
       // against unevidenced claims (the vernacular text of an encyclical the index enters
       // a second time, AAS 25 (1933) 275).
       if (m.by === 'curated') return m;
-      if (e.incipit !== null && doc.incipit !== undefined && slugify(doc.incipit) === slugify(e.incipit)) return { ...m, by: 'incipit' };
+      if (e.incipit !== null && doc.incipit !== undefined && incipitSlug(doc.incipit) === incipitSlug(e.incipit)) return { ...m, by: 'incipit' };
       const category = categoryForHeading(e.category);
       if (e.toponym !== null && category?.classes.some((c) => c.requires === 'apostolic-constitution')
         && titleHasToponym(doc.title, e.toponym)) return { ...m, by: 'toponym' };
@@ -301,5 +358,22 @@ export function matchActa(rawEntries: ActaEntry[], docs: DocumentRecord[]): Acta
   }
   const conflicted = new Set(result.conflicts.map((c) => c.documentId));
   result.matches = result.matches.filter((m) => !conflicted.has(m.documentId) && !dropped.has(m));
+  // One page opens one act (invariant 25): two matched documents on one page are both
+  // withheld unless ACTA_SHARED_PAGES quotes the page (the creator holds a created record
+  // the same way, create.ts). The pair the table lists is written with the table's ids.
+  const byPage = new Map<string, ActaMatch[]>();
+  for (const m of result.matches) {
+    const key = `${m.entry.series}:${m.entry.volume}${m.entry.part ? `-${m.entry.part}` : ''}:${m.entry.page}`;
+    byPage.set(key, [...(byPage.get(key) ?? []), m]);
+  }
+  const withheld = new Set<ActaMatch>();
+  for (const [page, ms] of byPage) {
+    if (ms.length < 2) continue;
+    const curated = ACTA_SHARED_PAGES[page];
+    if (curated !== undefined && ms.every((m) => curated.documentIds.includes(m.documentId))) continue;
+    for (const m of ms) withheld.add(m);
+    result.sharedPages.push({ page, matches: ms });
+  }
+  result.matches = result.matches.filter((m) => !withheld.has(m));
   return result;
 }

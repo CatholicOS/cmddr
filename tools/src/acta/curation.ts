@@ -447,6 +447,40 @@ export const ACTA_INDEX_CORRECTIONS: Readonly<Record<string, IndexCorrection>> =
       + 'the fourth year of a pontificate begun 21 June 1963. The index prints `Maii` for `Mart.`; the shelf record is '
       + '`mag:paul-vi/populorum-progressio-1967`, dated 1967-03-26.',
   },
+  // Phase 2b-ii-c (AAS 71-94): the volumes of John Paul II.
+  '1984:937': {
+    printed: '????-10-10',
+    date: '1983-10-16',
+    indexLine: '1988 » » II. Beato Leopoldo Mandic" a Castro Novo, Sanctorum caelitum / honores decernuntur 937',
+    evidence: "The decretal's own dating formula reads 'Datum Romae apud Sanctum Petrum die decimo sexto mensis Octobris anno Domini "
+      + "millesimo nongentesimo octogesimo tertio Pontificatus Nostri sexto' (AAS 76 (1984) 944, PDF page 944 of AAS-76-1984-ocr.pdf, "
+      + "read 2026-09-13; the act opens at p. 937 under 'LITTERAE DECRETALES / Beato Leopoldo Mandic a Castro Novo, Sanctorum caelitum "
+      + "honores decernuntur') -- 16 October 1983, the canonisation of Leopold Mandić. The index numbers it `II.` under the Kolbe decretal "
+      + '(`1982 Oct. 10 I. Beato Maximiliano Mariae Kolbe …`), prints the year as `1988` (a year no 1984 volume can print, one digit from '
+      + '1983 and from 1984 alike, so the parser leaves it unprinted) and dittos the month and day, which the act contradicts too.',
+  },
+  '1993:309': {
+    printed: '1992-01-15',
+    date: '1993-01-15',
+    indexLine: '1992 Ian. 15 Pontificia Commissio « Pro Russia » in Commissionem Interdi\u00adcasterialem Stabilem pro Ecclesia in Europa Orientali im\u00admutatur 309',
+    evidence: "The motu proprio's own dating formula reads 'Datum Romae, apud Sanctum Petrum, die xv mensis Ianuarii, anno MCMXCIII, "
+      + "Pontificatus Nostri quinto decimo' (AAS 85 (1993) 310, PDF page 310 of AAS-85-1993-ocr.pdf, read 2026-09-13; the act opens at "
+      + "p. 309 under 'LITTERAE APOSTOLICAE MOTU PROPRIO DATAE / Pontificia Commissio « Pro Russia » in Commissionem Interdicasterialem "
+      + "Stabilem pro Ecclesia in Europa Orientali immutatur' and begins 'Europae Orientalis fidelium solliciti') -- 15 January 1993, "
+      + 'the fifteenth year of a pontificate begun 16 October 1978. The index prints `1992`; the shelf record is '
+      + '`mag:john-paul-ii/europae-orientalis-1993`, dated 1993-01-15.',
+  },
+  // The 2013 index prints Francis's first encyclical a day early.
+  '2013:555': {
+    printed: '2013-06-28',
+    date: '2013-06-29',
+    indexLine: '2013 Iun. 28 Lumen Fidei  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . 555',
+    evidence: "The encyclical's own dating formula reads 'Datum Romae, apud Sanctum Petrum, die undetricesimo mensis Iunii, in "
+      + "sollemnitate Apostolorum Petri et Pauli, anno Domini bis millesimo tertio decimo, ipso Anno Fidei, Pontificatus Nostri primo' "
+      + '(AAS 105 (2013) 596, the July 2013 fascicle actaluglio2013.pdf, which opens at p. 555 with \'ACTA FRANCISCI PP. / LITTERAE '
+      + "ENCYCLICAE / LUMEN FIDEI', read 2026-09-13) -- 29 June 2013, the solemnity of Peter and Paul. The index prints `Iun. 28`; the "
+      + 'shelf record is `mag:francis-i/lumen-fidei-2013`, dated 2013-06-29.',
+  },
   '1962:66': {
     printed: '1962-01-05',
     date: '1962-01-06',
@@ -612,6 +646,24 @@ export const ACTA_HOLDS: Readonly<Record<string, ActaHold>> = {
       + "AAS-51-1959-ocr.pdf, read 2026-09-13) opens 'Regnum Dei, quod est Ecclesia, quodque Christus tam amplum fore'. A record minted from "
       + 'the index line would carry an incipit the act does not print; held until an incipit correction can be curated.',
   },
+  // Phase 2b-ii-c: an incipit the OCR misspells into a well-formed word (as *Begnum Dei*
+  // above), and a statute the index lists as an entry of its own under the act that gives it.
+  '1983:541': {
+    indexLine: '         Dec. 4 FOEDERATAE CIVITATES AMERICAE SEPTEUTBIOJÏALIS. Bomenorum / multitudo. - Exarchatus Apostolicus pro fidelibus ritus / '
+      + 'byzantini Romenorum in Foederatis Civitatibus Americae / Septentrionalis commorantibus constituitur 541',
+    reason: "the index's `Bomenorum multitudo` is the OCR's: the constitution erecting the Romanian exarchate in the United States (4 December "
+      + "1982, AAS 75 (1983) 541, PDF page 541 of AAS-75-1983-I-ocr.pdf, read 2026-09-13) opens 'Romenorum multitudo ritus byzantini, exeunte "
+      + "superiore saeculo'. A record minted from the index line would carry an incipit the act does not print; held until an incipit "
+      + 'correction can be curated.',
+  },
+  '1994:843': {
+    indexLine: '  » » » Officii Laboris Apostolicae Sedis ordinatio . 843',
+    reason: 'not an act: AAS 86 (1994) 843 (PDF page 843 of AAS-86-1994-ocr.pdf, read 2026-09-13) prints \'Officii Laboris apud Sedem '
+      + "Apostolicam ordinatio. / STATUTO DELL'UFFICIO DEL LAVORO DELLA SEDE APOSTOLICA / Art. 1', the statute the motu proprio *La "
+      + "sollecitudine* of 30 September 1994 (p. 841, `mag:john-paul-ii/la-sollecitudine-1994`) gives, which the index lists under the "
+      + 'act with the same ditto date as its two *Adnexa* at 851 and 853 (consumed as sub-items, index.ts); this line alone is not headed '
+      + '*Adnexum*, so it is held by row.',
+  },
   '1937:200': {
     indexLine: '  » » » Al Episcopado Mejicano sobre la situación religiosa . . . 200',
     reason: 'the Spanish text of the encyclical *Firmissimam constantiam* (28 March 1937; the Latin text at AAS 29 (1937) 189, '
@@ -750,5 +802,273 @@ export const ACTA_SHARED_PAGES: Readonly<Record<string, SharedPage>> = {
       + "cuius sedes in urbe Icosio seu Alger, ut gallica lingua, collocatur. / PAULUS PP. VI / Ad perpetuam rei memoriam. — Quantopere aestimanda "
       + "ac facienda sit amicitia …'. The index cites both at 471 (`» Apr. 13 Cum sit … 471`, `» » » Quantopere aestimanda … 471`); both are on the "
       + 'apost_letters shelf.',
+  },
+  // Phase 2b-ii-c (AAS 71-94): John Paul II's apostolic letters, which the volumes set two
+  // to a page as a matter of course -- a nunciature erected and a basilica raised, a
+  // patroness confirmed and a beatification -- and which his apost_letters shelf carries
+  // both of: eighteen pages of matched pairs, each read in the volume PDF on 2026-09-13
+  // (the second act's dating formula stands on the page after). Two more pages the index
+  // gives two matched acts (AAS 76 (1984) 946 and AAS 82 (1990) 43) print one -- the OCR's
+  // 946 for Cabinda's 947, the index's 43 for *Fidelem populum*'s 42 -- and are withheld by
+  // the join (match.ts, `sharedPages`) for a curated page correction this phase does not
+  // attempt.
+  'AAS:71:920': {
+    documentIds: ['mag:john-paul-ii/pro-nostro-1979', 'mag:john-paul-ii/qui-a-pueris-1979'],
+    evidence: "AAS 71 (1979) p. 920 (PDF page 920 of AAS-71-1979-ocr.pdf, read 2026-09-13) prints 'V / Regiones Civitatis Beninensis et "
+      + "Toganae seiunguntur ab Apostolica Nuntiatura Abidianensi et ad Accraè'nsem adiciuntur. / IOANNES PAULUS PP. II / Ad "
+      + "perpetuam rei memoriam. — Pro Nostro munere Patris et Pastoris universae Ecclesiae, intenti quidem ad singulas etiam…' "
+      + "(dated 'Datum Romae, apud Sanctum Petrum, sub anulo Piscatoris, die n mensis Maii, anno MCMLXXIX, Pontificatus Nostri "
+      + "primo.') and, lower on the same page, 'VI / Christi Mater sub titulo « Immaculatum Cor Beatae Mariae Virginis » Patrona "
+      + "dioecesis Sinceleiensis confirmatur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Qui a pueris, ac fere ab ipsa "
+      + "nativitate sincero ac tenero amore in beatissimam Virginem…'. The index cites both at 920; both are on the apost_letters "
+      + "shelf.",
+  },
+  'AAS:71:975': {
+    documentIds: ['mag:john-paul-ii/cum-cathedrale-1979', 'mag:john-paul-ii/innumera-fere-1979'],
+    evidence: "AAS 71 (1979) p. 975 (PDF page 975 of AAS-71-1979-ocr.pdf, read 2026-09-13) prints 'IV / Templum cathedrale dioecesis "
+      + "Galvestoniensis-Houstoniensis ad gradum Basilicae Minoris evehitur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — "
+      + "Cum cathedrale dioecesis Galvestoniensis-Houstoniensis templum ut ad Basilicae Minoris g…' (dated 'Datum Romae, apud S. "
+      + "Petrum, sub anulo Piscatoris, die II mensis Augusti, anno MCMLXXIX, Pontificatus Nostri primo.') and, lower on the same "
+      + "page, 'V / Sacra aedes in dioecesi S. Marci Argentanensis Beatae Mariae Virginis Nativitati dicata, quae vulgari sermone « "
+      + "Maria Santissima del Pettoruto » cognominatur, ad gradum et dignitatem Basilicae Minoris evehitur. / IOANNES PAULUS PP. II / "
+      + "Ad perpetuam rei memoriam. — Innúmera fere sunt templa a populo Christiano toto terrarum orbe per labentem saeculorum…'. The "
+      + "index cites both at 975; both are on the apost_letters shelf.",
+  },
+  'AAS:72:384': {
+    documentIds: ['mag:john-paul-ii/beatam-ac-semper-episcopo-plocensi-1980', 'mag:john-paul-ii/amor-noster-1980'],
+    evidence: "AAS 72 (1980) p. 384 (PDF page 384 of AAS-72-1980-ocr.pdf, read 2026-09-13) prints 'III / Episcopo Plocensi conceditur ut "
+      + "possit imaginem B. M. V. coronare pretioso diademate, in loco Sierpe, in finibus suae ipsius dioecesis veneratam. / IOANNES "
+      + "PAULUS PP. II / Ad perpetuam rei memoriam. — Beatam ac semper Virginem Mariam, Christi Matrem sanctissimam, eandemque "
+      + "hominum decus a…' (dated 'Datum Romae, apud S. Petrum, sub Anulo Piscatoris, die xxv mensis Aprilis, anno MDCCCCLXXX, "
+      + "Pontificatus Nostri altero.') and, lower on the same page, 'IV / In loco Niepokalanów, qui est in Polonia, templum B. M. V. "
+      + "Immaculatae, Mediatricis omnium gratiarum, ad dignitatem Basilicae Minoris evehitur. / IOANNES PAULUS PP. II / Ad perpetuam "
+      + "rei memoriam. — Amor Noster in beatissimam Virginem Mariam, Christi Matrem, tam in pectore regnat et tam…'. The index cites "
+      + "both at 384; both are on the apost_letters shelf.",
+  },
+  'AAS:72:592': {
+    documentIds: ['mag:john-paul-ii/vigilem-curam-1980', 'mag:john-paul-ii/ecclesia-sancta-1980'],
+    evidence: "AAS 72 (1980) p. 592 (PDF page 592 of AAS-72-1980-ocr.pdf, read 2026-09-13) prints 'IV / In Republica Maliana Nuntiatura "
+      + "Apostolica constituitur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Vigilem curam agentes de Christi Ecclesia, "
+      + "quae divino mandato omnes populos invitat ad Ev…' (dated 'Datum Romae, apud Sanctum Petrum, sub anulo Piscatoris, die III "
+      + "mensis Iunii, anno MCMLXXX, Pontificatus Nostri secundo.') and, lower on the same page, 'V / Templum S. Hyacinthi de "
+      + "Yaguachi, in archidioecesi Guayaquilensi, ad dignitatem Basilicae Minoris evehitur. / IOANNES PAULUS PP. II / Ad perpetuam "
+      + "rei memoriam. — Ecclesia sancta catholica, a primaeva sui aetate, cultum Sanctorum non modo non reprehen…'. The index cites "
+      + "both at 592; both are on the apost_letters shelf.",
+  },
+  'AAS:73:477': {
+    documentIds: ['mag:john-paul-ii/quandoquidem-publicae-1980', 'mag:john-paul-ii/in-variis-vitae-1980'],
+    evidence: "AAS 73 (1981) p. 477 (PDF page 477 of AAS-73-1981-ocr.pdf, read 2026-09-13) prints 'I / In Re publica Zimbabuae constituitur "
+      + "Apostolica Nuntiatura. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Quandoquidem publicae nuper necessitudinis "
+      + "ratione inter Apostolicam Sedem et Civitatem…' (dated 'Datum Romae, apud Sanctum Petrum, sub anulo Piscatoris, die xxvii "
+      + "mensis Iunii anno MCMLXXX, Pontificatus Nostri secundo.') and, lower on the same page, 'II / Venerabili Servo Dei Aloisio "
+      + "Orione Beatorum honores decernuntur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — « In variis vitae generibus et "
+      + "officiis una sanctitas excolitur ab omnibus, qui a Spiritu…'. The index cites both at 477; both are on the apost_letters "
+      + "shelf.",
+  },
+  'AAS:75-I:877': {
+    documentIds: ['mag:john-paul-ii/magnopere-curae-1982', 'mag:john-paul-ii/quantum-denique-suetiae-natione-1982'],
+    evidence: "AAS 75-I (1983) p. 877 (PDF page 877 of AAS-75-1983-I-ocr.pdf, read 2026-09-13) prints 'III / In Norvegia Nuntiatura "
+      + "Apostolica constituitur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Magnopere curae est Nobis ad effectum "
+      + "consilia adducere, quibus putamus commune religionis…' (dated 'Datum, apud Sanctum Petrum, sub anulo Piscatoris, die i "
+      + "mensis Augusti, anno Domini MCMLXXXII, Pontificatus Nosfri quarto.') and, lower on the same page, 'IV / In Suetiae natione "
+      + "Apostolica constituitur Nuntiatura. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Quantum denique pacis optatae ac "
+      + "prosperitatis, quanta insuper ipsius progressionis social…'. The index cites both at 877; both are on the apost_letters "
+      + "shelf.",
+  },
+  'AAS:75-I:17': {
+    documentIds: ['mag:john-paul-ii/quecumque-domus-1982', 'mag:john-paul-ii/quantum-denique-santa-rita-de-cascia-1982'],
+    evidence: "AAS 75-I (1983) p. 17 (PDF page 17 of AAS-75-1983-I-ocr.pdf, read 2026-09-13) prints 'II / In Italia templum cathedrale "
+      + "Calliense, Beatae Mariae Virgini in caelum Assumptae sacrum, ad honorem Basilicae Minoris evehitur. / IOANNES PAULUS PP. II "
+      + "/ Ad perpetuam rei memoriam. — Quaecumque Domus Dei decorem Nobis augere videntur, ea libenti animo studemus comparare. Q…' "
+      + "(dated 'Datum Romae, apud Sanctum Petrum, sub anulo Piscatoris, die XXIV mensis Septembris, anno MCMLXXXII, Pontificatus "
+      + "Nostri quarto.') and, lower on the same page, 'III / Sancta Rita de Cascia oppidi ac municipii « Viçosa », intra fines "
+      + "archidioecesis Marianensis in Brasilia, Patrona principalis confirmatur. / IOANNES PAULUS PP. II / Ad perpetuam rei "
+      + "memoriam. — Quantum denique cultus Sanctae Ritae de Cascia contulerit Christifidelium pietati inflamma…'. The index cites "
+      + "both at 17; both are on the apost_letters shelf.",
+  },
+  'AAS:77:931': {
+    documentIds: ['mag:john-paul-ii/qui-dei-consilio-1983', 'mag:john-paul-ii/sacerdotalis-usquequaque-1984'],
+    evidence: "AAS 77 (1985) p. 931 (PDF page 931 of AAS-77-1985-ocr.pdf, read 2026-09-13) prints 'I / Nuntiatura Apostolica in Regno "
+      + "Nepaliae conditur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Qui Dei consilio universae Ecclesiae praesumus, "
+      + "sicut in eius negotiis expediendis usum…' (dated 'Datum Romae, apud Sanctum Petrum, sub anulo Piscatoris, die x mensis "
+      + "Septembris, anno MCMLXXXIII, Pontificatus Nostri quinto.') and, lower on the same page, 'II / Venerabili Servo Dei Clementi "
+      + "Marchisio honores Beatorum caelitum rite decernuntur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Sacerdotalis "
+      + "usquequaque animi ac studii vitae ac disciplinae exemplaria numquam non conqu…'. The index cites both at 931; both are on "
+      + "the apost_letters shelf.",
+  },
+  'AAS:76:262': {
+    documentIds: ['mag:john-paul-ii/ex-quo-1983', 'mag:john-paul-ii/ipsum-quo-1983'],
+    evidence: "AAS 76 (1984) p. 262 (PDF page 262 of AAS-76-1984-ocr.pdf, read 2026-09-13) prints 'III / Delegationis Apostolicae in "
+      + "Malaysia nomen mutatur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Ipsum quo fungimur munus Christi Ecclesiam "
+      + "regendi postulat ut quae sint animarum bono uti…' (dated 'Datum Romae, apud S. Petrum, sub anulo Piscatoris, die VII mensis "
+      + "Decembris, anno MCMLXXXIII, Pontificatus Nostri sexto.') and, lower on the same page, 'IV / Delegatio Apostolica Laosiana "
+      + "constituitur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Ex quo Dei consilio beatissimo Petro, Apostolorum "
+      + "Principi, in regimen totius Ecclesiae su…'. The index cites both at 262; both are on the apost_letters shelf.",
+  },
+  'AAS:77:281': {
+    documentIds: ['mag:john-paul-ii/ut-ecclesiae-ipsius-1984', 'mag:john-paul-ii/inspicienti-cuique-1984'],
+    evidence: "AAS 77 (1985) p. 281 (PDF page 281 of AAS-77-1985-ocr.pdf, read 2026-09-13) prints 'II / Nuntiatura Apostolica in Insulis "
+      + "Seicellensibus constituitur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Ut Ecclesiae ipsius, quae Christi "
+      + "caritate nullam non prosequitur per orbem gentem, regimi…' (dated 'Datum Romae, apud Sanctum Petrum, sub anulo Piscatoris, "
+      + "die xxvii mensis Iulii anno MCMLXXXIV, Pontificatus Nostri sexto.') and, lower on the same page, 'III / B. Virgo Maria sub "
+      + "titulo Immaculati Cordis Patrona Angolae confirmatur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Inspicienti "
+      + "cuique tam ortum Christiani nominis quam ipsius progressum haec quinque per su…'. The index cites both at 281; both are on "
+      + "the apost_letters shelf.",
+  },
+  'AAS:83:18': {
+    documentIds: ['mag:john-paul-ii/quo-aptius-1990', 'mag:john-paul-ii/templum-beatae-mariae-virgini-1990'],
+    evidence: "AAS 83 (1991) p. 18 (PDF page 18 of AAS-83-1991-ocr.pdf, read 2026-09-13) prints 'IV / In Republica « Myanmar » nuncupata "
+      + "Delegatio Apostolica constituitur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Quo aptius Evangelizationis operi "
+      + "necnon Ecclesiae regimini in Republica « Myanmar » nuncu…' (dated 'Datum Romae, apud Sanctum Petrum, sub anulo Piscatoris, "
+      + "die XIII mensis Septembris, anno MCMXC, Pontificatus Nostri duodecimo.') and, lower on the same page, 'V / In « Morbio "
+      + "Inferiore », quod oppidum ad dioecesim Luganensem pertinet, templum B.M.V, vulgo « Madonna dei Miracoli » dicatum titulo "
+      + "Basilicae Minoris exornatur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Templum Beatae Mariae Virgini « Madonna "
+      + "dei Miracoli » vulgo appellatae dicatum, quod in l…'. The index cites both at 18; both are on the apost_letters shelf.",
+  },
+  'AAS:92:312': {
+    documentIds: ['mag:john-paul-ii/armeniam-nationem-1992', 'mag:john-paul-ii/nos-vos-1998'],
+    evidence: "AAS 92 (2000) p. 312 (PDF page 312 of AAS-92-2000-ocr.pdf, read 2026-09-13) prints 'III / In Republica Armenia Nuntiatura "
+      + "Apostolica conditur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Armeniam Nationem Romani Pontifices singulari "
+      + "prorsus cogitatione curaque per saeculorum…' (dated 'Datum Romae, apud Sanctum Petrum, sub anulo Piscatoris, die xxiv mensis "
+      + "Maii, anno MCMXCII, Pontificatus Nostri decimo quarto.') and, lower on the same page, 'IV / Dei Venerabilis Servus, Iosephus "
+      + "Antonius Tovini, caelitum Beatorum refertur in fastos. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — « Nos vos me "
+      + "elegistis, sed Ego elegi vos et posui vos, ut vos eatis et fructum afferatis,…'. The index cites both at 312; both are on "
+      + "the apost_letters shelf.",
+  },
+  'AAS:85:127': {
+    documentIds: ['mag:john-paul-ii/qui-pro-nostro-1992', 'mag:john-paul-ii/in-florenti-et-clarissima-1992'],
+    evidence: "AAS 85 (1993) p. 127 (PDF page 127 of AAS-85-1993-ocr.pdf, read 2026-09-13) prints 'III / In Foederatis Civitatibus "
+      + "Mexicanis conditur Nuntiatura Apostolica. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Qui pro Nostro munere de "
+      + "universa Ecclesia solliciti sumus, etiam in Nuntiaturas in Gentib…' (dated 'Datum Romae, apud Sanctum Petrum, sub anulo "
+      + "Piscatoris, die xxi mensis Septembris, anno Domini MCMXCII, Pontificatus Nostri quinto decimo.') and, lower on the same "
+      + "page, 'IV / Sanctuarium Beatae Mariae Virginis Lapurdensis, quod in urbe Sancti Iacobi in Chilia exstat, ad Basilicae "
+      + "Minoris gradum dignitatemque evehitur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — In fiorenti et clarissima "
+      + "quidem urbe Sancti Iacobi in Chilia probe novimus eminere Sanctu…'. The index cites both at 127; both are on the "
+      + "apost_letters shelf.",
+  },
+  'AAS:86:394': {
+    documentIds: ['mag:john-paul-ii/ad-plenius-1993', 'mag:john-paul-ii/est-quidem-1994'],
+    evidence: "AAS 86 (1994) p. 394 (PDF page 394 of AAS-86-1994-ocr.pdf, read 2026-09-13) prints 'I / In Republica Insularum "
+      + "Marshallensium Nuntiatura Apostolica conditur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Ad plenius "
+      + "confirmandas necessitudinis rationes, quae inter hanc Apostolicam Sedem et Re…' (dated 'Datum Romae, apud Sanctum Petrum, "
+      + "sub anulo Piscatoris, die xxx mensis Decembris, anno MCMXCIII, Pontificatus Nostri sexto decimo.') and, lower on the same "
+      + "page, 'II / Beata Maria Virgo titulo « Domina nostra Palaestinae Regina » invocata, Patrona apud Deum Ordinis Equestris S. "
+      + "Sepulcri Hierosolymitani confirmatur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Est quidem notum sodales "
+      + "illustris Ordinis Equestris S. Sepulcri Hierosolymitani singula…'. The index cites both at 394; both are on the "
+      + "apost_letters shelf.",
+  },
+  'AAS:86:571': {
+    documentIds: ['mag:john-paul-ii/ad-firmiores-republica-africae-australis-1994', 'mag:john-paul-ii/fideles-ecclesialis-de-guadalupe-1994'],
+    evidence: "AAS 86 (1994) p. 571 (PDF page 571 of AAS-86-1994-ocr.pdf, read 2026-09-13) prints 'VI / Nuntiatura in Republica Africae "
+      + "Australie erigitur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Ad firmiores magisque frugiferas reddendas "
+      + "publicae necessitudinis rationes, quae inter…' (dated 'Datum Romae, apud Sanctum Petrum, sub anulo Piscatoris, die v mensis "
+      + "Martii, anno MCMXCIV, Pontificatus Nostri sexto decimo.') and, lower on the same page, 'VII / Beata Maria Virgo sub titulo « "
+      + "de Guadalupe » Patrona apud Deum dioecesis Colimensis confirmatur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — "
+      + "Fideles ecclesialis communitatis Colimensis, a Leone Pp. XIII die xi mensis Decembris an…'. The index cites both at 571; "
+      + "both are on the apost_letters shelf.",
+  },
+  'AAS:86:791': {
+    documentIds: ['mag:john-paul-ii/sacra-illa-loco-podgorze-1994', 'mag:john-paul-ii/notae-sunt-dioecesis-coatzacoalsensis-1994'],
+    evidence: "AAS 86 (1994) p. 791 (PDF page 791 of AAS-86-1994-ocr.pdf, read 2026-09-13) prints 'III / Imago Beatae Mariae Virginis de "
+      + "Perpetuo Succursu, pie servata in ecclesia paroeciali Sanctissimo Redemptori dicata, loco Podgórze, Cracoviae in regione, "
+      + "pretioso diademate redimiri sinitur « nomine et auctoritate Summi Pontificis ». / IOANNES PAULUS PP. II / Ad perpetuam rei "
+      + "memoriam. — Sacra illa paroecialis aedes Sanctissimo Redemptori dicata loco Podgórze, Cracoviae in r…' (dated 'Datum Romae, "
+      + "apud Sanctum Petrum, sub anulo Piscatoris, die quarto decimo mensis Maii, anno MCMXCIV, Pontificatus Nostri sexto decimo.') "
+      + "and, lower on the same page, 'IV / Sanctus Ioseph, Beatae Mariae Virginis Sponsus, Patronus apud Deum dioecesis "
+      + "Coatzacoalsensis confirmatur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Notae sunt pietas ac veneratio quibus "
+      + "sanctus Ioseph, Beatae Mariae Virginis Sponsus, coli…'. The index cites both at 791; both are on the apost_letters shelf.",
+  },
+  'AAS:89:607': {
+    documentIds: ['mag:john-paul-ii/evangelii-disseminationem-1997', 'mag:john-paul-ii/inter-sacras-rengo-1997'],
+    evidence: "AAS 89 (1997) p. 607 (PDF page 607 of AAS-89-1997-ocr.pdf, read 2026-09-13) prints 'II / Templum cathedrale Deo dicatum in "
+      + "honorem S. Ioannis Baptistae in dioecesi Saltensi in Uruguay ad gradum Basilicae Minoris evehitur. / IOANNES PAULUS PP. II / "
+      + "Ad perpetuam rei memoriam. — Evangelii disseminationem dum prospicimus per orbem terrarum, singulari ratione communit…' "
+      + "(dated 'Datum Romae, apud Sanctum Petrum, sub anulo Piscatoris, die VIII mensis Aprilis, anno MCMXCVII, Pontificatus Nostri "
+      + "undevicesimo.') and, lower on the same page, 'III / Templum paroeciale Sanctae Annae, quod in urbe « Rengo » intra fines "
+      + "Rancaguensis dioecesis exstat, ad Basilicae Minoris gradum dignitatemque evehitur. / IOANNES PAULUS PP. II / Ad perpetuam "
+      + "rei memoriam. — Inter sacras aedes Rancaguensis dioecesis in Chilia merito celebratur templum paroeciale…'. The index cites "
+      + "both at 607; both are on the apost_letters shelf.",
+  },
+  'AAS:90:385': {
+    documentIds: ['mag:john-paul-ii/praeclarum-confert-1998', 'mag:john-paul-ii/universos-cohortamur-1998'],
+    evidence: "AAS 90 (1998) p. 385 (PDF page 385 of AAS-90-1998-ocr.pdf, read 2026-09-13) prints 'III / Imago Beatae Mariae Virginis sub "
+      + "titulo « Nuestra Señora del Remedio », quae in Lucentina ecclesia concathedrali pie colitur, pretioso diademate redimitur. / "
+      + "IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Praeclarum confert donum christifidelibus diligens Deiparae cultus. "
+      + "Merito ideo multis i…' (dated 'Datum Romae, apud Sanctum Petrum, sub anulo Piscatoris, die iv mensis Aprilis, anno "
+      + "MCMXCVIII, Pontificatus Nostri vicesimo.') and, lower on the same page, 'IV / Ecclesiae paroeciali Assumptionis Beatae "
+      + "Virginis Mariae dicatae in loco v.d. « Krzeszów », in dioecesi Legnicensi, Basilicae minoris dignitas tribuitur. / IOANNES "
+      + "PAULUS PP. II / Ad perpetuam rei memoriam. — Universos cohortamur homines ut, secundum proprias traditas consuetudines, "
+      + "cotidie cum V…'. The index cites both at 385; both are on the apost_letters shelf.",
+  },
+};
+
+export interface Reprint {
+  /** Whether the later printing is a plain re-issue of the act, or a correction the volume marks as such. */
+  kind: 'reissue' | 'corrigendum';
+  /** The reference of the citation of record (`AAS:104:482`): the first printing for a re-issue, the later one for a corrigendum. */
+  citationOf: string;
+  /** Both index lines, quoted as extracted: the first printing's and the later one's. */
+  indexLines: readonly [string, string];
+  /** What the later printing prints, read in the fascicle or volume, and the differences found. */
+  evidence: string;
+}
+
+/**
+ * Acts the *Acta* print twice (acta volumes spec §9, decided in phase 2b-ii-c). One act has
+ * one citation of record, and the *Acta* are the promulgating instrument (CIC can. 8 §1):
+ * the **first printing** is the citation, since it is the one that promulgated the act and
+ * the one every apparatus cites, **unless the volume marks the later printing as a
+ * correction** -- a *corrigendum* heading, a note that the earlier text was faulty -- in
+ * which case the corrected text is the act as the Holy See wants it read and the later
+ * printing is the citation (`kind: 'corrigendum'`). A later printing that re-sets the text
+ * without saying why, even with emended readings, is a re-issue (`kind: 'reissue'`): the
+ * reader who follows the first citation finds the act, and the emendations are recorded
+ * here, not adjudicated. Keyed by the reference of the printing that is *not* the
+ * citation; the matcher and the creator read the table (match.ts, create.ts): the entry so
+ * keyed is neither a claim on a shelf record nor a record of its own, it is listed as a
+ * reprint, and the index's other entry for the act carries the one reference. An entry
+ * the index itself cites at two pages (`… 138, 261`, the 2014 index) is created only when
+ * the further page is keyed here; otherwise it is held. Every row was read in the
+ * fascicles or volumes on 2026-09-13.
+ */
+export const ACTA_REPRINTS: Readonly<Record<string, Reprint>> = {
+  // Benedict XVI's *Ibi vacabimus* (3 July 2011, the beatification of János Scheffler),
+  // printed in AAS 104 (2012) 482-485 and again in AAS 112 (2020) 479-482. Both entries
+  // were held by the id-collision rule from phase 2b-i to 2b-ii-b.
+  'AAS:112:479': {
+    kind: 'reissue',
+    citationOf: 'AAS:104:482',
+    indexLines: [
+      '2011 Iul. 3 « Ibi vacabimus». – Venerabili Dei Servo Ioanni Scheffler, Bea- / torum honores decernuntur .  .  .  .  .  .  .  .  .  .  .  . 482',
+      '  3 Iul. 2011 « Ibi vacabimus ». Venerabili Servo Dei Ioanni Scheffler Bea - / torum honores decernuntur .  .  .  .  .  .  .  .  .  .  .  . 479',
+    ],
+    evidence: "AAS 104 (2012) p. 482 (the June 2012 fascicle, giugno2012.pdf, read 2026-09-13) prints 'III / Venerabili Dei Servo Ioanni "
+      + "Scheffler, Beatorum honores decernuntur. / BENEDICTUS PP. XVI / Ad perpetuam rei memoriam. — « Ibi vacabimus et videbimus …', "
+      + "dated 'die III mensis Iulii, anno MMXI, Pontificatus Nostri septimo', 'In Secret. Status tab., n. 168.425' (p. 485). AAS 112 "
+      + "(2020) p. 479 (the May 2020 fascicle, acta-maggio2020.pdf) prints the same letter under a part of its own after the Congregations, "
+      + "'ACTA BENEDICTI XVI PP. / LITTERAE APOSTOLICAE / II / Venerabili Servo Dei Ioanni Scheffler Beatorum honores decernuntur', the "
+      + 'same text word for word, the same dating formula and the same protocol number (p. 482), with no note of why it is printed again '
+      + "and no heading of corrigenda: a re-issue (the 2020 fascicle re-prints two beatification letters of 2010-2011, *Ego autem* at p. 476 "
+      + 'with it, which no earlier index lists). The citation of record is the first printing, AAS 104 (2012) 482.',
+  },
+  // Benedict XVI's *Deus caritas* (8 October 2011, the beatification of Anna Maria Janer
+  // Anglarill), printed in AAS 106 (2014) 138-140 (the February fascicle) and again at
+  // 261-263 (the March fascicle); the 2014 index cites both pages on one line.
+  'AAS:106:261': {
+    kind: 'reissue',
+    citationOf: 'AAS:106:138',
+    indexLines: [
+      ' »  Oct. 8 « Deus caritas ». – Venerabili Servae Dei Mariae Janer Angla- / rill Beatorum honores decernuntur 138, 261',
+      ' »  Oct. 8 « Deus caritas ». – Venerabili Servae Dei Mariae Janer Angla- / rill Beatorum honores decernuntur 138, 261',
+    ],
+    evidence: "AAS 106 (2014) p. 138 (acta-febbraio2014.pdf, read 2026-09-13) prints 'ACTA BENEDICTI XVI PP. / LITTERAE APOSTOLICAE / I / "
+      + "Venerabili Dei Servae Annae Mariae Janer Anglarill Beatorum honores decernuntur. / BENEDICTUS PP. XVI / Ad perpetuam rei memoriam. — "
+      + "« Deus caritas est, et, qui manet in caritate, in Deo manet, et Deus in eo manet » (1 Io 4, 16)'; p. 261 (acta-marzo2014.pdf) prints "
+      + "'Acta Benedicti Pp. XVI / II / Venerabili Dei Servae Annae Mariae Janer Anglarill Beatorum honores decernuntur' and the same letter "
+      + 'again, re-set in the fascicle\'s small capitals, with two emended readings ("Ipsa est nata familiae prorsus christianae" at p. 138 '
+      + 'reads "ipsa est nata ex familia prorsus christiana" at p. 261; "plurimas publicarum eversiones" reads "plurimas publicarum rerum '
+      + 'eversiones") and no note of correction and no corrigenda heading. The index enters the act once and cites both pages '
+      + '(`138, 261`). A re-issue by this table\'s rule: the citation of record is the first printing, AAS 106 (2014) 138; the emendations '
+      + 'are recorded here for the owner, who may re-key the row as a corrigendum.',
   },
 };
