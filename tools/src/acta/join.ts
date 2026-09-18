@@ -69,6 +69,10 @@ export const ACTA_SOURCES: readonly ActaSource[] = [
   // describing every other act without one -- measured on the fixture, sample report §2.
   volume(1909, '2026-09-13', { parse: { columnar: true, bareIncipits: false } }),
   volume(1917, '2026-09-13', { part: 'I' }),
+  // Phase 2b-iii-a (spec §10): the early volumes whose OCR kept the page column -- AAS
+  // 18-22 (1926-1930, Pius XI). The volumes of 1910-1925 lost it on most index pages and
+  // wait for the page recovery of 2b-iii-b.
+  ...Array.from({ length: 1930 - 1926 + 1 }, (_, i) => volume(1926 + i, '2026-09-18')),
   volume(1931, '2026-09-13'),
   // Phase 2b-ii-a (acta volumes spec §9): AAS 24-49, the volumes of 1932-1957 -- Pius XI to
   // his death in February 1939, Pius XII from his election (AAS 31, 1939, carries both).

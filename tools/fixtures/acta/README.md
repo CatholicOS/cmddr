@@ -1,4 +1,4 @@
-# The AAS index fixtures: the *Index generalis* PDFs of 2010–2014 and 2015–2024, the sample volumes of 1909–1978, and the volumes of 1932–2002
+# The AAS index fixtures: the *Index generalis* PDFs of 2010–2014 and 2015–2024, the sample volumes of 1909–1978, and the volumes of 1926–2002
 
 The extracted text of the *Index documentorum chronologico ordine digestus* of the *Acta
 Apostolicae Sedis*, one file per source, one page per form feed (`\f`), from two kinds of
@@ -19,7 +19,9 @@ source on vatican.va (`https://www.vatican.va/archive/aas/index_it.htm`, which
   Pius XII) are phase 2b-ii-a, the nineteen of 1959–1977 (AAS 51–69, John XXIII and Paul
   VI) phase 2b-ii-b, and the twenty-four of 1979–2002 (AAS 71–94, John Paul II) with the
   index PDFs of 2010, 2011, 2013 and 2014 (Benedict XVI, and Francis's first year) phase
-  2b-ii-c (spec §9); 1910–1931 follow in 2b-iii, and 2003–2009 have no index online.
+  2b-ii-c (spec §9); 1926–1930, whose OCR kept the page column, are 2b-iii-a, and 1910–1925,
+  whose OCR lost it on most pages, wait for the page recovery of 2b-iii-b (spec §10);
+  2003–2009 have no index online.
 
 They are the input of the AAS join (acta reference spec, `docs/superpowers/specs/2026-09-12-acta-reference-design.md`
 §4.1): `tools/src/acta/index.ts` parses the *Acta Summi Pontificis* parts, and `npm run
@@ -34,8 +36,13 @@ retrieval date and parser options; update it with this table.
 | 2015–2024 index PDFs | `aas-indice-{year}.txt` | **2026-09-12** | pypdf 6.14.2 (python3), default mode | whole: 2015: 96 · 2016: 72 · 2017: 88 · 2018: 96 · 2019: 96 · 2020: 64 · 2021: 80 · 2022: 88 · 2023: 88 · 2024: 96 | — |
 | 2012 index PDF (`AAS-indice2012.pdf`) | `aas-indice-2012.txt` | **2026-09-13** | pypdf 6.14.2, default mode | whole: 64 | — |
 | AAS 1 (1909) | `aas-01-1909.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 835–860 (26) | 908 |
-| AAS 9 part I (1917) | `aas-09-1917-I.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 595–607 (13) | 639 |
+| AAS 9 part I (1917) | `aas-09-1917-I.txt` | **2026-09-13** | pypdf 6.14.2, layout mode (extracted before the interleaving fallback of 2b-ii-b, which now selects the default mode for p. 603; re-extracted in 2b-iii-b, with the page recovery) | 595–607 (13) | 639 |
 | AAS 9 part II (1917) | — | — | — | **no chronological index**: the volume is the *Codex Iuris Canonici* (594 pages), with *Providentissima Mater Ecclesia* (27 May 1917, p. 5) before it and the Code's own index after | 594 |
+| AAS 18 (1926) | `aas-18-1926.txt` | **2026-09-18** | pypdf 6.14.2, layout mode | 533–544 (12) | 579 |
+| AAS 19 (1927) | `aas-19-1927.txt` | **2026-09-18** | pypdf 6.14.2, layout mode | 451–462 (12) | 495 |
+| AAS 20 (1928) | `aas-20-1928.txt` | **2026-09-18** | pypdf 6.14.2, layout mode | 423–433 (11) | 464 |
+| AAS 21 (1929) | `aas-21-1929.txt` | **2026-09-18** | pypdf 6.14.2, layout mode | 779–792 (14) | 828 |
+| AAS 22 (1930) | `aas-22-1930.txt` | **2026-09-18** | pypdf 6.14.2, layout mode | 607–618 (12) | 652 |
 | AAS 23 (1931) | `aas-23-1931.txt` | **2026-09-13** | pypdf 6.14.2, layout mode; p. 531 default mode | 531–540 (10) | 566 |
 | AAS 24 (1932) | `aas-24-1932.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 419–430 (12) | 462 |
 | AAS 25 (1933) | `aas-25-1933.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 515–526 (12) | 560 |

@@ -128,8 +128,8 @@ curated tables and the pinned-count tests), each with its own report and its own
 | 2b-ii-a | 24–49 (1932–1957) | Pius XI, Pius XII | 1939 has two popes; *Nuntii radiophonici* are Pius XII's (counted for #27, never created) — **done** (PR #34) |
 | 2b-ii-b | 51–69 (1959–1977) | John XXIII, Paul VI | 1963 has two popes — **done** (PR #35) |
 | 2b-ii-c | 71–94 (1979–2002) and the 2010, 2011, 2013, 2014 index PDFs | John Paul II, Benedict XVI | 1983 is a double volume (`part`); the *Ibi vacabimus* reprint (2012 and 2020) needs a curated citation-of-record rule, decided here — **done**: `ACTA_REPRINTS` (the first printing is the citation unless the volume marks the later as a correction; *Deus caritas*, printed twice in AAS 106 (2014), decided the same way); AAS 75 part II is the Code of 1983 and has no index, so every 1983 reference carries part I; the 2013 index carries Francis's first year too |
-| 2b-iii-a | 3, 17–22 (1911, 1925–1930) | Pius X, Pius XI | the early volumes whose OCR kept the page column (§10): parsed as the phases above, with the locator and parser fixes the two anomalies need (1911's pope heading doubled on one line; 1925's title line lost, its months in lower case) |
-| 2b-iii-b | 1–2, 4–8, 9-I, 10–16 (1909–1910, 1912–1924) | Pius X, Benedict XV, Pius XI | the volumes whose OCR lost the page column on 56–99 % of entries: the page recovery of §10, then the join as above; 9-II has no chronological index (the Code of 1917) and its one act, *Providentissima Mater*, takes a curated reference |
+| 2b-iii-a | 18–22 (1926–1930) | Pius XI | the early volumes whose OCR kept the page column (§10): parsed as the phases above |
+| 2b-iii-b | 1–8, 9-I, 10–17 (1909–1925) | Pius X, Benedict XV, Pius XI | the volumes whose OCR lost the page column on 56–99 % of entries: the page recovery of §10, then the join as above; 9-II has no chronological index (the Code of 1917) and its one act, *Providentissima Mater*, takes a curated reference |
 
 Each PR: the volumes' index pages as fixtures (README rows), per-volume parse rate with the
 95 % floor and named exemptions, every new category or pope heading mapped with its
@@ -148,8 +148,8 @@ chronological indexes parsed with the phase-2b parser, unchanged:
 
 | Volumes | Entries opened without a page | Reading |
 |---|---|---|
-| AAS 1–16 (1909–1924; 15 fixtures, 9-II having no index) | 56–99 % per volume, ≈ 1,000 entries in all | the page column is lost — the rule for the era, not the exception |
-| AAS 3 (1911), 17–23 (1925–1931) | 3–6 % | the column survived; 1911 parsed to nothing and 1925 was not located, both for heading reasons (§10.3), not for a lost column |
+| AAS 1–17 (1909–1925; 17 fixtures, 9-II having no index) | 56–99 % per volume, ≈ 1,100 entries in all | the page column is lost — the rule for the era, not the exception. Two of them first looked otherwise: AAS 3 (1911) parsed to nothing because the layout mode doubled its pope heading on one line (`I. — ACTA PII PP. X. I. — ACTA PII PP. X.`, read once now), and AAS 17 (1925) was not located because the OCR reads its title as `II` / `CHRONOLOGICO ORDINE DIGESTUS` (admitted now); read, 1911 keeps the column on ten index pages of sixteen and 1925 on two of fourteen (its months in lower case: `iunii`, `dec.`) |
+| AAS 18–23 (1926–1931) | 3–6 % | the column survived |
 
 Two extraction facts settle what can and cannot recover the pages. **The numbers are
 absent from the text layer itself**: pypdf's default mode, which keeps the date columns as

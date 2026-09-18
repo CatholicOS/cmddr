@@ -98,6 +98,11 @@ n = len(reader.pages)
 # once sets a full stop after it (AAS 46, 1954: `INDEX. DOCUMENTORUM`), measured on the volumes
 # of 1932-1957; both spellings are admitted, and nothing looser.
 START = re.compile(r'[IÍ]NDEX\.?\s+DOCUMENTORUM[\s\S]{0,40}CHRONOLOGIC\w*\s+ORDINE\s+DIGEST\w*')
+# AAS 17 (1925): the OCR reads the title's first line as `II` and keeps only its second,
+# so the heading is also admitted as CHRONOLOGICO ORDINE DIGESTUS alone in capitals at the
+# head of a page (the running header of the following pages is in lower case), and
+# nothing looser.
+START_ALONE = re.compile(r'^[\s\S]{0,40}CHRONOLOGIC\w*\s+ORDINE\s+DIGEST\w*')
 END = re.compile(r'^[\s\S]{0,120}?([IÍ]NDICES\s+NOMINUM|[IÍ]NDEX\s+NOMINUM|[IÍ]NDEX\s+ANALYTICUS|[IÍ]NDEX\s+RERUM|[IÍ]NDEX\s+ALPHABETICUS)')
 texts = {}
 def text(i):
@@ -110,6 +115,8 @@ if start is None:
     # (the page's text opens at the pope part); the layout mode keeps it. A second pass in
     # that mode, only when the first finds nothing.
     start = next((i for i in range(n // 2, n) if START.search(reader.pages[i].extract_text(extraction_mode='layout') or '')), None)
+if start is None:
+    start = next((i for i in range(n // 2, n) if START_ALONE.search(text(i))), None)
 if start is None:
     print(f'    NO CHRONOLOGICAL INDEX FOUND in {pdf} ({n} pages)', file=sys.stderr)
     sys.exit(0)
