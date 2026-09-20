@@ -16,9 +16,11 @@
 #   extracted, to aas-{vol}-{year}[-{part}].txt. The script prints the page range and the
 #   volume's page count for the README row.
 #
-# The PDFs are downloaded to a scratch directory and are never checked in; the extracted
-# text is, so the parser (tools/src/acta/index.ts) and its tests run offline and
-# deterministically. Extraction is by pypdf -- chosen over pdfjs-dist on the 2023 index,
+# The PDFs are kept in a local store outside the repository -- ~/development/sources/AAS/pdf
+# by default, ACTA_SOURCES to point elsewhere -- named as on vatican.va, and a PDF already in
+# the store is not downloaded again (the volumes are 2-6 MB each and vatican.va serves them
+# slowly); they are never checked in. The extracted text is, so the parser
+# (tools/src/acta/index.ts) and its tests run offline and deterministically. Extraction is by pypdf -- chosen over pdfjs-dist on the 2023 index,
 # see tools/fixtures/acta/README.md -- in its default mode for the born-digital index
 # PDFs and in `layout` mode for the OCR'd volumes, whose text layer carries the date in
 # three columns (ANNO MENSE DIE) beside the entry: the default mode emits each column as
@@ -45,13 +47,30 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 mkdir -p tools/fixtures/acta
 
-SCRATCH="${ACTA_SCRATCH:-${TMPDIR:-/tmp}/cmddr-acta}"
-mkdir -p "$SCRATCH"
+STORE="${ACTA_SOURCES:-$HOME/development/sources/AAS}/pdf"
+mkdir -p "$STORE"
 BASE='https://www.vatican.va/archive/aas'
 
-# The index page, fetched once per run: the source of every file name below.
-INDEX_HTML="$SCRATCH/index_it.htm"
+# The index page, fetched once per run (it is small, and it is where the file names come
+# from): the source of every file name below.
+INDEX_HTML="$STORE/index_it.htm"
 curl -fsSL --retry 3 --max-time 60 "$BASE/index_it.htm" -o "$INDEX_HTML"
+
+# Download a PDF into the store unless it is already there and non-empty. Prints the
+# path fetched or `cached`; returns non-zero when the download fails. The download goes
+# to a `.part` file that is renamed only once curl has succeeded, so a transfer that
+# dies half-way (vatican.va is slow; --max-time is finite) leaves nothing the next run
+# would take for a cached volume.
+fetch_pdf() { # fetch_pdf <path-on-vatican.va> <local-pdf> <max-time>
+  if [ -s "$2" ]; then echo "    cached: $2"; return 0; fi
+  local part="$2.part"
+  if curl -fsSL --retry 3 --max-time "$3" "$BASE/$1" -o "$part"; then
+    mv -f "$part" "$2"
+  else
+    rm -f "$part"
+    return 1
+  fi
+}
 
 # The `documents/...` paths the index page links for a year, one per line.
 links_for() { # links_for <year>
@@ -88,6 +107,11 @@ n = len(reader.pages)
 # once sets a full stop after it (AAS 46, 1954: `INDEX. DOCUMENTORUM`), measured on the volumes
 # of 1932-1957; both spellings are admitted, and nothing looser.
 START = re.compile(r'[IÍ]NDEX\.?\s+DOCUMENTORUM[\s\S]{0,40}CHRONOLOGIC\w*\s+ORDINE\s+DIGEST\w*')
+# AAS 17 (1925): the OCR reads the title's first line as `II` and keeps only its second,
+# so the heading is also admitted as CHRONOLOGICO ORDINE DIGESTUS alone in capitals at the
+# head of a page (the running header of the following pages is in lower case), and
+# nothing looser.
+START_ALONE = re.compile(r'^[\s\S]{0,40}CHRONOLOGIC\w*\s+ORDINE\s+DIGEST\w*')
 END = re.compile(r'^[\s\S]{0,120}?([IÍ]NDICES\s+NOMINUM|[IÍ]NDEX\s+NOMINUM|[IÍ]NDEX\s+ANALYTICUS|[IÍ]NDEX\s+RERUM|[IÍ]NDEX\s+ALPHABETICUS)')
 texts = {}
 def text(i):
@@ -100,6 +124,8 @@ if start is None:
     # (the page's text opens at the pope part); the layout mode keeps it. A second pass in
     # that mode, only when the first finds nothing.
     start = next((i for i in range(n // 2, n) if START.search(reader.pages[i].extract_text(extraction_mode='layout') or '')), None)
+if start is None:
+    start = next((i for i in range(n // 2, n) if START_ALONE.search(text(i))), None)
 if start is None:
     print(f'    NO CHRONOLOGICAL INDEX FOUND in {pdf} ({n} pages)', file=sys.stderr)
     sys.exit(0)
@@ -165,9 +191,9 @@ get_index() { # get_index <year>
     echo "    MISSING: no index PDF for $year on $BASE/index_it.htm" >&2
     return 0
   fi
-  local pdf="$SCRATCH/$(basename "$path")"
+  local pdf="$STORE/$(basename "$path")"
   echo "  $year  ($path)"
-  if ! curl -fsSL --retry 3 --max-time 120 "$BASE/$path" -o "$pdf"; then
+  if ! fetch_pdf "$path" "$pdf" 120; then
     # A missing year is recorded, not fatal (spec §4.1): the README notes it and the
     # remaining years are still extracted.
     echo "    MISSING: $BASE/$path" >&2
@@ -195,9 +221,9 @@ get_volume() { # get_volume <year>
     vol="$(echo "$file" | sed -E 's/^AAS-([0-9]{2})-.*/\1/')"
     part="$(echo "$file" | sed -nE 's/^AAS-[0-9]{2}-(I|II)-.*/\1/p; s/^AAS-[0-9]{2}-[0-9]{4}-(I|II)-.*/\1/p')"
     out="tools/fixtures/acta/aas-$vol-$year${part:+-$part}.txt"
-    local pdf="$SCRATCH/$file"
+    local pdf="$STORE/$file"
     echo "  $year  ($path)"
-    if ! curl -fsSL --retry 3 --max-time 600 "$BASE/$path" -o "$pdf"; then
+    if ! fetch_pdf "$path" "$pdf" 600; then
       echo "    MISSING: $BASE/$path" >&2
       continue
     fi

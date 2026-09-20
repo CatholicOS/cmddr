@@ -82,11 +82,11 @@ not used silently.
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1909 | Pius X | 2 | 2 | 0 | 0 | 0 | 2 | 2 | 0 | 0 | 0 | 18 |
 | 1917-I | Benedictus XV | 37 | 35 | 1 | 0 | 0 | 34 | 8 | 26 | 2 | 13 | 8 |
-| 1931 | Pius XI | 76 | 73 | 4 | 0 | 0 | 69 | 60 | 9 | 3 | 6 | 2 |
+| 1931 | Pius XI | 76 | 73 | 4 | 0 | 0 | 68 | 59 | 10 | 3 | 6 | 2 |
 | 1958 | Pius XII, Ioannes XXIII | 179 | 132 | 73 | 7 | 0 | 52 | 36 | 23 | 47 | 1 | 7 |
 | 1978 | Paulus VI, Ioannes Paulus I, Ioannes Paulus II | 162 | 72 | 29 | 0 | 0 | 43 | 28 | 15 | 90 | 0 | 7 |
 | 2012 | Benedictus XVI | 151 | 61 | 24 | 2 | 0 | 35 | 13 | 24 | 90 | 17 | 15 |
-| **Total** | | **607** | **375** | **131** | **9** | **0** | **235** | **147** | **97** | **232** | **37** | **57** |
+| **Total** | | **607** | **375** | **131** | **9** | **0** | **234** | **146** | **98** | **232** | **37** | **57** |
 
 *Claimed twice* counts the documents two entries both match (§5), as the 2015–2024 report does; a document claimed from
 two sources counts in each. *Unmatched* counts the entries of a harvested or partly harvested category the join left without a document (each is
@@ -102,8 +102,8 @@ shelf documents of the source's popes dated in the volume year that carry no `ac
    evidence rule resolved (`match.ts`): where several constitutions of one day are entered against one shelf record of the
    day (10 November 1977: *Avkaënsis*, *Mohaleshoekensis*, *Ambikapurensis* against the shelf's *Avkaensis*), the entry the
    record names keeps the match and the others are released to the creator instead of all three being withheld.
-2. **147 documents created** (§8) -- `rp:benedict-xv` 8, `rp:benedict-xvi` 13, `rp:paul-vi` 28, `rp:pius-x` 2, `rp:pius-xi` 60, `rp:pius-xii` 36 -- and 97 entries held (§9), 7 of them by the
-   duplicate guard and 2 by the OCR rule. 61 constitutions print toponym and incipit both (§1.5), so almost no provisional id is minted from the
+2. **146 documents created** (§8) -- `rp:benedict-xv` 8, `rp:benedict-xvi` 13, `rp:paul-vi` 28, `rp:pius-x` 2, `rp:pius-xi` 59, `rp:pius-xii` 36 -- and 98 entries held (§9), 7 of them by the
+   duplicate guard and 2 by the OCR rule, 1 by the reprint rule. 61 constitutions print toponym and incipit both (§1.5), so almost no provisional id is minted from the
    volumes; the *Epistulae* are created only where the pope's letters shelf is harvested (Pius XI, Pius XII, John Paul I in this
    sample) and held elsewhere (§9, *shelf not harvested*).
 3. **A volume can reprint an act another volume already published, and a page can open two acts.** The 2020 index lists
@@ -130,7 +130,7 @@ Parsed / matched / ambiguous / unmatched for every category the era prints, with
 | Adhortationes Apostolicae | yes |  | 1 / 1 / 0 / 0 |  |  |  | 2 / 2 / 0 / 0 |
 | Constitutiones Apostolicae | yes |  |  | 12 / 0 / 0 / 12 | 37 / 37 / 0 / 0 | 28 / 3 / 0 / 25 | 11 / 8 / 2 / 1 |
 | Litterae Apostolicae Motu proprio datae | yes |  |  | 2 / 0 / 0 / 2 | 1 / 1 / 0 / 0 | 1 / 1 / 0 / 0 | 3 / 3 / 0 / 0 |
-| Litterae Apostolicae | yes | 2 / 0 / 0 / 2 | 23 / 0 / 0 / 23 | 38 / 0 / 0 / 38 | 58 / 19 / 2 / 37 | 25 / 17 / 0 / 8 | 12 / 0 / 0 / 12 |
+| Litterae Apostolicae | yes | 2 / 0 / 0 / 2 | 23 / 0 / 0 / 23 | 38 / 0 / 0 / 37 | 58 / 19 / 2 / 37 | 25 / 17 / 0 / 8 | 12 / 0 / 0 / 12 |
 | Epistulae Apostolicae | yes |  |  | 1 / 0 / 0 / 1 |  |  |  |
 | Litterae Decretales | partly |  |  |  |  | 2 / 0 / 0 / 2 | 9 / 0 / 0 / 9 |
 | Epistulae | partly |  | 11 / 0 / 0 / 11 | 15 / 0 / 0 / 15 | 19 / 13 / 5 / 1 | 6 / 3 / 0 / 3 |  |
@@ -546,6 +546,9 @@ each row quotes what the fascicles print); the later printing's entry is a *repr
 | Later printing | Citation of record | Kind | Index lines |
 |---|---|---|---|
 | AAS 112 (2020) 479 | AAS 104 (2012) 482 | reissue | `2011 Iul. 3 « Ibi vacabimus». – Venerabili Dei Servo Ioanni Scheffler, Bea- / torum honores decernuntur . . . . . . . . . . . . 482` — ` 3 Iul. 2011 « Ibi vacabimus ». Venerabili Servo Dei Ioanni Scheffler Bea - / torum honores decernuntur . . . . . . . . . . . . 479` |
+| AAS 23 (1931) 41 | AAS 22 (1930) 483 | reissue | ` » » » Quo maiori rerum. - Dis tracto territorio e vicariatu apo­ / stolico de Mariannhill erigitur praefectura apostolica / de umtata 483` — `1930 Martii 30 Quo maiori rerum. - Distracto territorio e vicariatu apo­ / stolico de Mariannhill erigitur praefectura apostolica / de TTmtata 41` |
+
+Entries of the era so held: AAS 23 (1931) 41 (*Quo maiori rerum*).
 
 ## 6. Unmatched entries in harvested and partly harvested categories
 
@@ -642,12 +645,11 @@ each row quotes what the fascicles print); the later printing's entry is a *repr
 
 </details>
 
-<details><summary><b>1931 · Litterae Apostolicae</b> — 38 unmatched</summary>
+<details><summary><b>1931 · Litterae Apostolicae</b> — 37 unmatched</summary>
 
 | Reference | Pope | Date | Entry | Belief |
 |---|---|---|---|---|
 | AAS 23 (1931) 369 | Pius XI | 1929-12-14 | *Beati Petri Apostoli* — Abbatia Casamariensis, Ordinis Cisterciensium, cum domibus seu monasteriis subiectis in Co | **shelf gap**: nothing of this date is harvested |
-| AAS 23 (1931) 41 | Pius XI | 1930-03-30 | *Quo maiori rerum* — Distracto territorio e vicariatu apostolico de Mariannhill erigitur praefectura apostolica | **shelf gap**: nothing of this date is harvested |
 | AAS 23 (1931) 42 | Pius XI | 1930-05-31 | *Decessores Nostros* — Erigitur in vicariatum apostolicum praefectura apostolica de Caqueta | **shelf gap**: nothing of this date is harvested |
 | AAS 23 (1931) 43 | Pius XI | 1930-06-28 | *Ex hac Divi* — Fines reguntur inter vicariatum apostolicum Districtus occidentalis Promontorii Bonae Spei | **shelf gap**: nothing of this date is harvested |
 | AAS 23 (1931) 115 | Pius XI | 1930-06-30 | *Quae catholico* — Nova erigitur Missio independens de Eajaburi ex territorio a vicariatu apostolico de Bangk | **shelf gap**: nothing of this date is harvested |
@@ -996,7 +998,7 @@ each row quotes what the fascicles print); the later printing's entry is a *repr
 
 ## 8. Created from the Acta
 
-The data carries **147** AAS-only records from the era and the creator, re-run here over the shelf records, produces **147** — the same set, entry for entry, and the same records field for field (ids aside, which the collision and ordinal passes assign).
+The data carries **146** AAS-only records from the era and the creator, re-run here over the shelf records, produces **146** — the same set, entry for entry, and the same records field for field (ids aside, which the collision and ordinal passes assign).
 
 Each record carries `source.url` = the whole-volume PDF for a volume source and `null` for an index PDF (spec 2a §4), the
 fixture's `retrieved` date, `source.shelf` `aas/{year}`, and `acta.part` for a double volume (`"I"` for 1917).
@@ -1005,11 +1007,11 @@ fixture's `retrieved` date, `source.shelf` `aas/{year}`, and `acta.part` for a d
 |---|---|---|---|---|---|---|---|
 | Constitutiones Apostolicae | 0 | 0 | 10 | 0 | 20 | 1 | 31 |
 | Litterae Apostolicae Motu proprio datae | 0 | 0 | 2 | 0 | 0 | 0 | 2 |
-| Litterae Apostolicae | 2 | 8 | 34 | 35 | 8 | 12 | 99 |
+| Litterae Apostolicae | 2 | 8 | 33 | 35 | 8 | 12 | 98 |
 | Epistulae | 0 | 0 | 14 | 1 | 0 | 0 | 15 |
-| **Total** | **2** | **8** | **60** | **36** | **28** | **13** | **147** |
+| **Total** | **2** | **8** | **59** | **36** | **28** | **13** | **146** |
 
-By class: apostolic-letter+motu-proprio 2; apostolic-letter 99; letter 15; papal-bull+apostolic-constitution 31. Provisional (no incipit read): 4.
+By class: apostolic-letter+motu-proprio 2; apostolic-letter 98; letter 15; papal-bull+apostolic-constitution 31. Provisional (no incipit read): 4.
 
 **Circumscription material.** Of the 31 AAS-born constitutions of the era, the index describes 20 with an erection or elevation
 verb (*conditur*, *erigitur*, *constituitur*, *dismembrato*, *evehitur*, *attollitur*, *extollitur*); none carries `keywords` or `actKind` (spec 2a §4).
@@ -1045,7 +1047,7 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 
 </details>
 
-<details><summary><b>1931</b> — 60 created</summary>
+<details><summary><b>1931</b> — 59 created</summary>
 
 | Reference | Category | Id | Title | Index line | Note |
 |---|---|---|---|---|---|
@@ -1056,14 +1058,13 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 | AAS 23 (1931) 323 | Constitutiones Apostolicae | `mag:pius-xi/papal-bull-1929-06-21` † | Sollicitudo. Goyasen.: de dioecesis dismembratione et ^ novae praelaturae nullius « Jatahiensis » erectione | ` » Iunii 21 Sollicitudo. - Goyasen.: de dioecesis dismembratione et ^ / novae praelaturae nullius « Jatahiensis » erectione . . 323` |  |
 | AAS 23 (1931) 361 | Constitutiones Apostolicae | `mag:pius-xi/ad-gregem-dominicum-1929` | Ad gregem Dominicum. De Tarapacà et de Arequipa: de vicariatus apostolici de Tarapacà suppressione et de Iquique dioecesis erectione | ` » Dec. 20 Ad gregem Dominicum. - De Tarapacà et de Arequipa: de / vicariatus apostolici de Tarapacà suppressione et de / Iquique dioecesis erectione 361` |  |
 | AAS 23 (1931) 364 | Constitutiones Apostolicae | `mag:pius-xi/apostolicae-sedi-1930` | Apostolicae Sedi. Sanctae Crucis de Sierra: dismembrationis dioecesis et erectionis vicariatus apostolici de Chiquitos | `1930 Ian. 27 Apostolicae Sedi. - Sanctae Crucis de Sierra: dismembra­ / tionis dioecesis et erectionis vicariatus apostolici de / Chiquitos 364` |  |
-| AAS 23 (1931) 34 | Constitutiones Apostolicae | `mag:pius-xi/pastoralis-officii-1930` | Pastoralis officii. De nova provinciarum ecclesiasticarum et dioecesium in Statu Borussico circumscriptione | ` » » 13 Pastoralis officii. - De nova provinciarum ecclesiasticarum / et dioecesium in Statu Borussico circumscriptione . . 34` |  |
+| AAS 23 (1931) 34 | Constitutiones Apostolicae | `mag:pius-xi/pastoralis-officii-1930-08-13` | Pastoralis officii. De nova provinciarum ecclesiasticarum et dioecesium in Statu Borussico circumscriptione | ` » » 13 Pastoralis officii. - De nova provinciarum ecclesiasticarum / et dioecesium in Statu Borussico circumscriptione . . 34` |  |
 | AAS 23 (1931) 5 | Constitutiones Apostolicae | `mag:pius-xi/anno-vertente-1930` | Anno vertente. De erectione et regimine Pontificii collegii ecclesiastici Neerlandici Piani de Urbe | ` » Oct. 26 Anno vertente. - De erectione et regimine Pontificii collegii / ecclesiastici Neerlandici Piani de Urbe 5` |  |
 | AAS 23 (1931) 366 | Constitutiones Apostolicae | `mag:pius-xi/pastoris-aeterni-1931` | Pastoris aeterni. Lacus Salsi et Sacramentensis: dismembrationis et erectionis novae dioecesis Renensis | `1931 Martii 27 Pastoris aeterni. - Lacus Salsi et Sacramentensis: dismem­ / brationis et erectionis novae dioecesis Renensis .... 366` |  |
 | AAS 23 (1931) 426 | Constitutiones Apostolicae | `mag:pius-xi/pastorale-munus-1931` | Pastorale munus. Romana: Ecclesia tituli S. Pancratii M. de Urbe, in paroeciam erigitur | ` » Apr. 12 Pastorale munus. - Romana: Ecclesia tituli S. Pancratii / M. de Urbe, in paroeciam erigitur 426` |  |
 | AAS 23 (1931) 428 | Constitutiones Apostolicae | `mag:pius-xi/per-apostolicas-1931` | Per Apostolicas. Csanadiensis: Erectionis novae sedis et ecclesiae cathedralis | ` » Iunii 19 Per Apostolicas. - Csanadiensis: Erectionis novae sedis et / ecclesiae cathedralis . 428` |  |
 | AAS 23 (1931) 369 | Litterae Apostolicae | `mag:pius-xi/beati-petri-apostoli-1929` | Beati Petri Apostoli. Abbatia Casamariensis, Ordinis Cisterciensium, cum domibus seu monasteriis subiectis in Congregationem sui iuris erigitur | `1929 Dec. 14 Beati Petri Apostoli. - Abbatia Casamariensis, Ordinis Ci­ / sterciensium, cum domibus seu monasteriis subiectis / in Congregationem sui iuris erigitur 369` |  |
-| AAS 23 (1931) 41 | Litterae Apostolicae | `mag:pius-xi/quo-maiori-rerum-1930` | Quo maiori rerum. Distracto territorio e vicariatu apostolico de Mariannhill erigitur praefectura apostolica de TTmtata | `1930 Martii 30 Quo maiori rerum. - Distracto territorio e vicariatu apo­ / stolico de Mariannhill erigitur praefectura apostolica / de TTmtata 41` |  |
-| AAS 23 (1931) 42 | Litterae Apostolicae | `mag:pius-xi/decessores-nostros-1930` | Decessores Nostros. Erigitur in vicariatum apostolicum praefectura apostolica de Caqueta | `1930 Maii 31 Decessores Nostros. - Erigitur in vicariatum apostolicum / praefectura apostolica de Caqueta 42` |  |
+| AAS 23 (1931) 42 | Litterae Apostolicae | `mag:pius-xi/decessores-nostros-1930-05-31` | Decessores Nostros. Erigitur in vicariatum apostolicum praefectura apostolica de Caqueta | `1930 Maii 31 Decessores Nostros. - Erigitur in vicariatum apostolicum / praefectura apostolica de Caqueta 42` |  |
 | AAS 23 (1931) 43 | Litterae Apostolicae | `mag:pius-xi/ex-hac-divi-1930` | Ex hac Divi. Fines reguntur inter vicariatum apostolicum Districtus occidentalis Promontorii Bonae Spei et praefecturam apostolicam Districtus centralis | ` » Iunii 28 Ex hac Divi. - Fines reguntur inter vicariatum apostoli­ / cum Districtus occidentalis Promontorii Bonae Spei / et praefecturam apostolicam Districtus centralis ... 43` |  |
 | AAS 23 (1931) 152 | Litterae Apostolicae | `mag:pius-xi/delegatus-apostolicus-1930` | Delegatus Apostolicus. Dismembrato territorio a vicariatu apostolico de Nanning erigitur Missio sui iuris de Wuchow in Sinis | ` » » » Delegatus Apostolicus. - Dismembrato territorio a vica­ / riatu apostolico de Nanning erigitur Missio sui iuris / de Wuchow in Sinis 152` |  |
 | AAS 23 (1931) 44 | Litterae Apostolicae | `mag:pius-xi/dioeeesis-segniensis-1930` | Dioeeesis Segniensis. Templum Tersactense B. M. V. Matris Gratiarum, dioecesis Segniensis, titulo honoribusque augetur Basilicae minoris | ` » Iulii 7 Dioeeesis Segniensis. - Templum Tersactense B. M. V. Ma­ / tris Gratiarum, dioecesis Segniensis, titulo honoribus- / que augetur Basilicae minoris 44` |  |
@@ -1077,7 +1078,7 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 | AAS 23 (1931) 157 | Litterae Apostolicae | `mag:pius-xi/argentinae-reipublicae-1930` | Argentinae Reipublicae. Argentinae Eeipublicae, itemque Uruguayanae et Paraguayanae caelestis Patrona declaratur B. M. V. Immaculata, sub titulo «de Lujan » | ` » Sept. 8 Argentinae Reipublicae. - Argentinae Eeipublicae, item­ / que Uruguayanae et Paraguayanae caelestis Patrona / declaratur B. M. V. Immaculata, sub titulo «de Lujan » 157` |  |
 | AAS 23 (1931) 156 | Litterae Apostolicae | `mag:pius-xi/matritensi-in-civitate-1930` | Matritensi in civitate. Titulus et privilegia Basilicae minoris ecclesiae S. Michaelis Archangeli, Matriti exstanti, collata | ` » » 15 Matritensi in civitate. - Titulus et privilegia Basilicae mi­ / noris ecclesiae S. Michaelis Archangeli, Matriti ex- / stanti, collata 156` |  |
 | AAS 23 (1931) 158 | Litterae Apostolicae | `mag:pius-xi/a-seccoviensis-1930` | A Seccoviensis. Ecclesia B. M. V. in caelum Assumptae, coenobii Seccoviensis O. S. B., Congr. Beuronensis, titulo Basilicae minoris ornatur | ` » Oct. 7 A Seccoviensis. - Ecclesia B. M. V. in caelum Assumptae, / coenobii Seccoviensis O. S. B., Congr. Beuronensis, ti­ / tulo Basilicae minoris ornatur 158` |  |
-| AAS 23 (1931) 159 | Litterae Apostolicae | `mag:pius-xi/litteris-nostris-1930` | Litteris nostris. Templum B. M. V. Immaculatae in oppido « Lujan », dioecesis de Plata intra fines, Basilicae minoris titulo honestatur | ` » Nov. 15 Litteris nostris. - Templum B. M. V. Immaculatae in op­ / pido « Lujan », dioecesis de Plata intra fines, Basilicae / minoris titulo honestatur 159` |  |
+| AAS 23 (1931) 159 | Litterae Apostolicae | `mag:pius-xi/litteris-nostris-1930-11-15` | Litteris nostris. Templum B. M. V. Immaculatae in oppido « Lujan », dioecesis de Plata intra fines, Basilicae minoris titulo honestatur | ` » Nov. 15 Litteris nostris. - Templum B. M. V. Immaculatae in op­ / pido « Lujan », dioecesis de Plata intra fines, Basilicae / minoris titulo honestatur 159` |  |
 | AAS 23 (1931) 326 | Litterae Apostolicae | `mag:pius-xi/dominici-gregis-1930` | Dominici gregis. Fines reguntur inter vicariatus apostolicos de Siwantze et Tsining in Sinis | ` » » 20 Dominici gregis. - Fines reguntur inter vicariatus aposto­ / licos de Siwantze et Tsining in Sinis 326` |  |
 | AAS 23 (1931) 327 | Litterae Apostolicae | `mag:pius-xi/regimen-ecclesiae-1930` | Regimen Ecclesiae. Fines reguntur inter vicariatum apostolicum de Hanchungfu et praefecturam apostolicam de Hinganfu in Sinis | ` » Dec. 20 Regimen Ecclesiae. - Fines reguntur inter vicariatum apo­ / stolicum de Hanchungfu et praefecturam apostolicam / de Hinganfu in Sinis 327` |  |
 | AAS 23 (1931) 328 | Litterae Apostolicae | `mag:pius-xi/cum-opera-1931` | Cum opera. Separato territorio e vicariatu apostolico de Coquilhatville erigitur Missio independens de Bikoro in Africa Centrali | `1931 Ian. 3 Cum opera. - Separato territorio e vicariatu apostolico / de Coquilhatville erigitur Missio independens de Bikoro / in Africa Centrali 328` |  |
@@ -1224,7 +1225,8 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 | Guard: possible identity | 1 | 1958 1 |
 | Guard: same incipit elsewhere | 6 | 1931 5; 1958 1 |
 | OCR-damaged incipit or toponym | 2 | 1978 2 |
-| **Total** | **97** | |
+| Printed more than once, or cited at more than one page: the citation of record is the other printing or awaits an ACTA_REPRINTS row | 1 | 1931 1 |
+| **Total** | **98** | |
 
 <details><summary><b>Category not created from the Acta</b> — 34</summary>
 
@@ -1379,6 +1381,14 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 
 </details>
 
+<details><summary><b>Printed more than once, or cited at more than one page: the citation of record is the other printing or awaits an ACTA_REPRINTS row</b> — 1</summary>
+
+| Reference | Pope | Date | Category | Entry | Candidates | Note |
+|---|---|---|---|---|---|---|
+| AAS 23 (1931) 41 | Pius XI | 1930-03-30 | Litterae Apostolicae | *Quo maiori rerum* | — | the later printing of an act the Acta print twice; the citation of record is AAS 22 (1930) 483 (ACTA_REPRINTS) |
+
+</details>
+
 ## 10. Documents before and after
 
 The shelf records (before) and the shelf records with every AAS-only document the data carries (after), per pope of the
@@ -1388,7 +1398,7 @@ era and in total; the AAS-only records of every other era are in the *after* col
 |---|---|---|---|---|
 | `rp:pius-x` | 306 | 2 | 2 | 308 |
 | `rp:benedict-xv` | 63 | 8 | 8 | 71 |
-| `rp:pius-xi` | 158 | 528 | 60 | 686 |
+| `rp:pius-xi` | 158 | 804 | 59 | 962 |
 | `rp:pius-xii` | 260 | 1229 | 36 | 1489 |
 | `rp:john-xxiii` | 193 | 294 | 0 | 487 |
 | `rp:paul-vi` | 777 | 349 | 28 | 1126 |
@@ -1396,8 +1406,8 @@ era and in total; the AAS-only records of every other era are in the *after* col
 | `rp:john-paul-ii` | 2105 | 43 | 0 | 2148 |
 | `rp:benedict-xvi` | 301 | 69 | 13 | 370 |
 | `rp:francis-i` | 366 | 260 | 0 | 626 |
-| **Popes of the AAS** | **4536** | **2782** | **147** | **7318** |
-| **Registry** | **4975** | **2782** | **147** | **7757** |
+| **Popes of the AAS** | **4536** | **3058** | **146** | **7594** |
+| **Registry** | **4975** | **3058** | **146** | **8033** |
 
 ## 11. Documents of the era's popes with no AAS entry
 

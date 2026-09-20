@@ -491,6 +491,57 @@ export const ACTA_INDEX_CORRECTIONS: Readonly<Record<string, IndexCorrection>> =
       + "'ADHORTATIO APOSTOLICA … IOANNES PP. XXIII … SACRAE LAUDIS concentum gratiarumque actiones') -- 6 January 1962, the Epiphany. The index "
       + 'prints `Ian. 5`; the shelf record is `mag:john-xxiii/sacrae-laudis-1962`, dated 1962-01-06.',
   },
+  // Phase 2b-iii-a: AAS 22 (1930), whose OCR reads the printed `1930` at the head of three
+  // sections as `1J30`, `1030` and `1@30`. The parser repairs `1030` and notes it (the
+  // dittos below it inherit the note); `1J30` and `1@30` leave the year unprinted for the
+  // entry and every ditto that follows. Each act was read in the volume on 2026-09-18 and
+  // its own dating formula quoted; the page the index prints was checked against the page
+  // the act opens on, and a row is written only where the two agree. *Casti connubii* (index
+  // `530`, the act opening at 539) and *In allocutione* (index `307`, the act at 337) get no
+  // row: a date confirmed here would cite them at a page they do not open on, and a page
+  // correction is a mechanism this phase does not add (the era report §2 names both).
+  '1930:201': {
+    printed: '????-04-20',
+    date: '1930-04-20',
+    indexLine: '1J30 Apr. 20 Ad salutem. - Ad venerabiles fratres Patriarchas, Prima­ / tes, Archiepiscopos, Episcopos, aliosque locorum Ordi­ / narios, pacem et communionem cum Apostolica Sede / habentes: de Sancto Augustino Episcopo Hipponensi / et Ecclesiae Doctore, millesimo et quingentésimo ab / eius obitu exeunte anno 201',
+    evidence: "The act's own dating formula reads 'Datum Romae apud Sanctum Petrum die xx mensis Aprilis, in festo Paschae Resurrectionis D. N. I. C, anno MDCCCCXXX, Pontificatus Nostri nono. PIUS PP. XI' (AAS 22 (1930) 234, PDF page 234 of AAS-22-1930-ocr.pdf, read 2026-09-18) -- 1930-04-20; the volume opens it at p. 201, the first page of the fascicle of 1 May 1930, under 'ACTA PII PP. XI / LITTERAE ENCYCLICAE / AD VENERABILES FRATRES PATRIARCHAS, PRIMATES, ARCHIEPISCOPOS, EPISCOPOS, ALIOSQUE LOCORUM ORDINARIOS … DE SANCTO AUGUSTINO EPISCOPO HIPPONENSI ET ECCLESIAE DOCTORE … Ad salutem humani generis constitutae providenter Ecclesiae'. The first entry of the encyclicals section, whose year the OCR reads `1J30`. The shelf record is `mag:pius-xi/ad-salutem-humani-1930`, dated 1930-04-20.",
+  },
+  '1930:87': {
+    printed: '1930-02-06',
+    date: '1930-02-06',
+    indexLine: '1030 Febr. 6 Già da qualche tempo. - Instituitur « Sectio Historica » pe­ / nes Sacrorum Bituum Congregationem ....... 87',
+    evidence: "The act's own heading and text read 'MOTU PROPRIO / INSTITUITUR « SECTIO HISTORICA » PENES SACRORUM RITUUM CONGREGATIONEM. / PIUS PP. XI / Già da qualche tempo è venuta maturando in Noi la persuasione …' at AAS 22 (1930) 87 (PDF page 87 of AAS-22-1930-ocr.pdf, read 2026-09-18), in the fascicle of 6 February 1930, and the volume's own *Index generalis actorum* files the motu proprio at 87. The first entry of the motu proprio section, whose year the OCR reads `1030` and the parser repairs to 1930 with a note; this row confirms the reading, and with it the dittos that inherit it -- *Inde ab inito* (6 April 1930, p. 153, whose formula reads 'Datum Romae apud Sanctum Petrum, die dominico Passionis, vi mensis Aprilis anno MDCCCCXXX, Pontificatus Nostri nono', p. 154). No shelf record carries the act.",
+  },
+  '1930:309': {
+    printed: '????-01-31',
+    date: '1930-01-31',
+    indexLine: '1@30 Ian. 31 Universa christifidelium cura. - De archidioecesis Begina- / tensis dismembratione et dioecesis Gravelburgensis / erectione 309',
+    evidence: "The act's own dating formula reads 'Datum Romae apud S. Petrum, anno Domini millesimo nongentesimo trigesimo, die trigesima prima mensis Ianuarii, Pontificatus Nostri anno octavo. Fr. ANDREAS Card. FRÜHWIRTH, Cancellarius S. R. E.' (AAS 22 (1930) 311, PDF page 311 of AAS-22-1930-ocr.pdf, read 2026-09-18) -- 1930-01-31; the volume opens it at p. 309 under 'CONSTITUTIONES APOSTOLICAE / I / REGINATENSEM DE ARCHIDIOECESIS DISMEMBRATIONE ET DIOECESIS GRAVELBURGENSIS ERECTIONE. / PIUS EPISCOPUS SERVUS SERVORUM DEI AD PERPETUAM REI MEMORIAM / Universa christifidelium cura'. The first entry of the constitutions section, whose year the OCR reads `1@30`; the four dittos below it are the four rows that follow. No shelf record carries the act.",
+  },
+  '1930:312': {
+    printed: '????-02-12',
+    date: '1930-02-12',
+    indexLine: '» Febr. 12 Ecclesiarum in Orbe. - De dioecesis Bockamptonen. dis­ / membratione ac de dioecesis de Townsville in Statu / Australiensi de Queenslandia erectione 312',
+    evidence: "The act's own dating formula reads 'Datum Romae, apud Sanctum Petrum, anno Domini millesimo nongentesimo trigesimo, die duodecima mensis Februarii, Pontificatus Nostri anno nono. FR. ANDREAS CARD. FRÜHWIRTH, G. M. CARD. VAN ROSSUM' (AAS 22 (1930) 315, PDF page 315 of AAS-22-1930-ocr.pdf, read 2026-09-18; the OCR's `nnllesimo`) -- 1930-02-12; the volume opens it at p. 312 under 'II / ROCKAMPTONENSIS DE DIOECESIS DISMEMBRATIONE AC DE NOVAE DIOECESIS DE TOWNSVILLE IN STATU AUSTRALIENSI DE QUEENSLANDIA ERECTIONE. / PIUS EPISCOPUS SERVUS SERVORUM DEI'. A ditto under the `1@30` of p. 309. No shelf record carries the act.",
+  },
+  '1930:237': {
+    printed: '????-02-12',
+    date: '1930-02-12',
+    indexLine: '» » » Curis ac laboribus. - De Pontificio Seminario seu Collegio / Aethiopico 237',
+    evidence: "The act's own dating formula reads 'Datum Romae apud S. Petrum, anno Domini millesimo nongentesimo ac trigesimo, die decima secunda mensis Februarii, Pontificatus Nostri nono. Fr. ANDREAS Card. FRÜHWIRTH, ALOYSIUS Card. SINCERO' (AAS 22 (1930) 240, PDF page 240 of AAS-22-1930-ocr.pdf, read 2026-09-18) -- 1930-02-12; the volume opens it at p. 237 under 'CONSTITUTIO APOSTOLICA / DE PONTIFICIO SEMINARIO SEU COLLEGIO AETHIOPICO / PIUS EPISCOPUS SERVUS SERVORUM DEI AD PERPETUAM REI MEMORIAM / Curis ac laboribus nunquam Apostolica Sedes pepercit'. A ditto under the `1@30` of p. 309. No shelf record carries the act.",
+  },
+  '1930:340': {
+    printed: '????-04-23',
+    date: '1930-04-23',
+    indexLine: '» Apr. 23 Ubi primum Cecoslovacha. - De Pontificio Collegio Nepo­ / muceno in Urbe 340',
+    evidence: "The act's own dating formula reads 'Datum Romae apud S. Petrum, anno Domini millesimo nongentesimo ac trigesimo, die vigesima tertia mensis Aprilis, in festo S. Adalberti Ep. M., Pontificatus Nostri anno nono. FR. ANDREAS CARD. FRÜHWIRTH' (AAS 22 (1930) 342, PDF page 342 of AAS-22-1930-ocr.pdf, read 2026-09-18) -- 1930-04-23; the volume opens it at p. 340, below the end of the motu proprio *In allocutione*, under 'CONSTITUTIO APOSTOLICA / DE PONTIFICIO COLLEGIO NEPOMUCENO IN URBE / PIUS EPISCOPUS SERVUS SERVORUM DEI AD PERPETUAM REI MEMORIAM / Ubi primum Cecoslovacha Respublica'. A ditto under the `1@30` of p. 309. No shelf record carries the act.",
+  },
+  '1930:381': {
+    printed: '????-06-05',
+    date: '1930-06-05',
+    indexLine: 'Iunii 5 Solemni Conventione. - De nova circumscriptione et ordi­ / natione hierarchica dioecesium rituum tam latini tam / graeci-rumeni in Bomaniae Begno 381',
+    evidence: "The act's own dating formula reads 'Datum Romae apud Sanctum Petrum, anno Domini millesimo nongentesimo ac trigesimo, die quinta mensis Iunii, Pontificatus Nostri anno nono. D. CARD. SBARRETTI, FR. A. CARD. FRÜHWIRTH, A. CARD. SINCERO' (AAS 22 (1930) 386, PDF page 386 of AAS-22-1930-ocr.pdf, read 2026-09-18) -- 1930-06-05; the volume opens it at p. 381 under 'CONSTITUTIO APOSTOLICA / DE NOVA CIRCUMSCRIPTIONE ET ORDINATIONE HIERARCHICA DIOECESIUM RITUS TAM LATINI TAM GRAECI-RUMENI IN ROMANIAE REGNO. / PIUS EPISCOPUS SERVUS SERVORUM DEI AD PERPETUAM REI MEMORIAM / Solemni Conventione nuper inita et confirmata inter Apostolicam Sedem et Romaniae Regnum'. The last ditto under the `1@30` of p. 309 (its year column blank in the print). No shelf record carries the act.",
+  },
 };
 
 export interface MatchOverride {
@@ -669,6 +720,34 @@ export const ACTA_HOLDS: Readonly<Record<string, ActaHold>> = {
     reason: 'the Spanish text of the encyclical *Firmissimam constantiam* (28 March 1937; the Latin text at AAS 29 (1937) 189, '
       + "`mag:pius-xi/firmissimam-constantiam-1937`): AAS 29 p. 200 is headed 'CARTA APOSTOLICA DE SU SANTIDAD EL PAPA PIO XI AL "
       + "EPISCOPADO MEJICANO: SOBRE LA SITUACIÓN RELIGIOSA' (PDF page 200 of AAS-29-1937-ocr.pdf, read 2026-09-13). One act, not two.",
+  },
+  // Phase 2b-iii-a: the Italian original of *Divini illius Magistri* (31 December 1929),
+  // printed in the December fascicle of AAS 21 (1929) 723-762 under its own heading and
+  // entered by the 1929 index as an encyclical of its own; the Latin follows at AAS 22
+  // (1930) 49-86, which the shelf record cites (`mag:pius-xi/divini-illius-magistri-1929`).
+  // One act, not two: the same shape as the four of 1933 and 1937 above.
+  '1929:723': {
+    indexLine: '  » » 31 Rappresentanti in terra. — Ad Venerabiles Fratres, Patriar­ / chas, Primates, Archiepiscopos, Episcopos, aliosque / '
+      + 'locorum Ordinarios pacem et communionem cum Apo­ / stolica Sede habentes et ad dilectos filios christi­ / '
+      + 'fideles orbis universos: De christiana iuventae edu­ / catione 723',
+    reason: 'the Italian text of the encyclical *Divini illius Magistri* (31 December 1929; the Latin text at AAS 22 (1930) 49, '
+      + "`mag:pius-xi/divini-illius-magistri-1929`): AAS 21 p. 723 is headed 'III / AD VENERABILES FRATRES PATRIARCHAS, PRIMATES, "
+      + "ARCHIEPISCOPOS, EPISCOPOS, ALIOSQUE LOCORUM ORDINARIOS … DE CHRISTIANA IUVENTAE EDUCATIONE. / PIO PP. XI / VENERABILI FRATELLI E "
+      + "DILETTI FIGLI / SALUTE E APOSTOLICA BENEDIZIONE / Rappresentanti in terra di quel Divino Maestro …' (PDF page 723 of "
+      + 'AAS-21-1929-ocr.pdf, read 2026-09-18). One act, not two.',
+  },
+  // Phase 2b-iii-a: the motu proprio *In allocutione* (5 August 1930), which the 1930 index
+  // cites at 307 -- a page that opens the public consistory of 3 July 1930 -- where the
+  // volume prints the act at 337-340. Its year is the parser's repair of `1030`, which the
+  // row on p. 87 confirms for its dittos; confirmed, it would be created at the index's
+  // page, so it is held here until a page correction exists.
+  '1930:307': {
+    indexLine: '» Aug. 5 In allocutione. - De novo opere in locum Leoniani operis / de Fidei praeservatione sufficiendo 307',
+    reason: "the index's page is not the act's: AAS 22 (1930) p. 307 (PDF page 307 of AAS-22-1930-ocr.pdf, read 2026-09-18) opens 'II. - "
+      + "CONSISTORIUM PUBLICUM / Feria V, 3 Iulii 1930, in Aula supra porticum Basilicae Vaticanae …', and the motu proprio opens at p. 337 "
+      + "('MOTU PROPRIO / DE NOVO OPERE IN LOCUM LEONIANI OPERIS DE FIDEI PRAESERVATIONE SUFFICIENDO. / PIUS PP. XI / In Allocutione habita "
+      + "in Consistorio …'), dated at p. 340 'die v mensis Augusti, in festo Dedicationis Sanctae Mariae ad Nives, anno MDCCCCXXX, Pontificatus "
+      + 'Nostri nono\'. Held for a page correction, as *Casti connubii* (index `530`, opening at 539) is left unmatched for one.',
   },
 };
 
@@ -1000,6 +1079,23 @@ export const ACTA_SHARED_PAGES: Readonly<Record<string, SharedPage>> = {
       + "PAULUS PP. II / Ad perpetuam rei memoriam. — Universos cohortamur homines ut, secundum proprias traditas consuetudines, "
       + "cotidie cum V…'. The index cites both at 385; both are on the apost_letters shelf.",
   },
+  // Phase 2b-iii-a (AAS 18-22): the volumes of the late 1920s set two short letters on one
+  // page as the 1930s do. Of the four pages the era's index gives two acts each, one was
+  // read in the volume PDF on 2026-09-18 and prints two; the other three print one act
+  // opening and the other act's *end* -- AAS 19 (1927) 205 (*Pro Apostolico* opens at 265;
+  // the index's `205` is the OCR's), 268 (*Quae ad rei* opens at 267 and ends here) and
+  // AAS 22 (1930) 323 (*Ordinis Capuccinarum* opens at 320 and ends here) -- and are held
+  // by the creator (`page-shared`) with both acts, listed in the report with the true pages.
+  'AAS:19:130': {
+    documentIds: ['mag:pius-xi/cum-ex-apostolico-munere-1926', 'mag:pius-xi/non-sine-1927'],
+    evidence: "AAS 19 (1927) p. 130 (PDF page 130 of AAS-19-1927-ocr.pdf) prints 'III / IMMUTATUR NOMEN VICARIATUS APOSTOLICI DE UELLÉ "
+      + "ORIENTALI / PIUS PP. XI / Ad futuram rei memoriam. — Cum ex Apostolico munere, quo fungimur …', dated 'die xiv mensis Decembris, "
+      + "anno MDCCCCXXVI Pontificatus Nostri quinto. P. CARD. GASPARRI, a Secretis Status', and, lower on the same page, 'IV / PRAEFECTURA "
+      + "APOSTOLICA DE KONG-MOON IN SINIS AD VICARIATUM APOSTOLICUM EVEHITUR. / PIUS PP. XI / Ad futuram rei memoriam. — Non sine magna "
+      + "animi Nostri laetitia comperimus …' (3 February 1927). The index cites both at 130 (`» Dec. 14 Cum ex apostólico munere. - "
+      + "Immutatur nomen vicariatus / apostolici de Uellé Orientali 130`, `» » » Non sine. - Praefectura apostolica de Kong-moon in Sinis / "
+      + "ad vicariatum apostolicum evehitur 130`).",
+  },
 };
 
 export interface Reprint {
@@ -1070,5 +1166,27 @@ export const ACTA_REPRINTS: Readonly<Record<string, Reprint>> = {
       + 'eversiones") and no note of correction and no corrigenda heading. The index enters the act once and cites both pages '
       + '(`138, 261`). A re-issue by this table\'s rule: the citation of record is the first printing, AAS 106 (2014) 138; the emendations '
       + 'are recorded here for the owner, who may re-key the row as a corrigendum.',
+  },
+  // Phase 2b-iii-a: Pius XI's *Quo maiori rerum* (30 March 1930, the prefecture apostolic
+  // of Umtata separated from the vicariate of Mariannhill), printed in AAS 22 (1930)
+  // 483-484 and again at the head of AAS 23 (1931) 41-42, whose chronological index
+  // enters it a second time. Both entries were held by the id-collision rule before this row.
+  'AAS:23:41': {
+    kind: 'reissue',
+    citationOf: 'AAS:22:483',
+    indexLines: [
+      '  » » » Quo maiori rerum. - Dis tracto territorio e vicariatu apo­ / stolico de Mariannhill erigitur praefectura apostolica / de umtata 483',
+      '1930 Martii 30 Quo maiori rerum. - Distracto territorio e vicariatu apo­ / stolico de Mariannhill erigitur praefectura apostolica / de TTmtata 41',
+    ],
+    evidence: "AAS 22 (1930) p. 483 (PDF page 483 of AAS-22-1930-ocr.pdf, read 2026-09-18) prints 'VII / DISTRACTO TERRITORIO A VICARIATU "
+      + "APOSTOLICO DE MARIANNHILL ERIGITUR PRAEFECTURA APOSTOLICA DE UMTATA. / PIUS PP. XI / Ad perpetuam rei memoriam. — Quo maiori "
+      + "rerum fidei incremento consideret, Delegatus Apostolicus Africae Meridionalis …', dated 'die xxx mensis Martii anno MDCCCCXXX, "
+      + "Pontificatus Nostri nono. E. CARD. PACELLI, a Secretis Status' (p. 484). AAS 23 (1931) p. 41 (PDF page 41 of AAS-23-1931-ocr.pdf) "
+      + "prints, after the constitution that ends the page's top half, 'LITTERAE APOSTOLICAE / I / DISTRACTO TERRITORIO A VICARIATU "
+      + "APOSTOLICO DE MARIANNHILL ERIGITUR PRAEFECTURA APOSTOLICA DE UMTATA. / PIUS PP. XI / Ad perpetuam rei memoriam. — Quo maiori rerum "
+      + "fidei incremento consuleret, Delegatus Apostolicus Africae Meridionalis …' and the same letter again, the same dating formula and "
+      + "signature (p. 42), with no note of why it is printed again and no heading of corrigenda (the one difference the OCR shows, "
+      + "'consideret' against 'consuleret', is the OCR's). A re-issue by this table's rule: the citation of record is the first "
+      + 'printing, AAS 22 (1930) 483.',
   },
 };

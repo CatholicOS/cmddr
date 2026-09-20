@@ -1350,6 +1350,42 @@ caelitum Beatorum tribuitur dignitas .  .  .  .  .  .  .  .  .  .  142`.replace(
   });
 });
 
+describe('parseActaIndex on the early volumes whose OCR kept the page column (acta volumes spec §10, phase 2b-iii-a)', () => {
+  it('reads a pope heading the layout mode doubled on one line (AAS 3, 1911), and keeps the printed line', () => {
+    const r = parseActaIndex(volume(`                                                   I. - CONSTITUTIONES APOSTOLICAE.
+1911          Oct.        28      Si qua est. - De nova ecclesiasticae hierarchiae in
+                                                                                                                               553
+   »         Nov.           1     Divino afflatu. - De nova Psalterii in Breviario Romano
+                                        dispositione                                                                           633`, 'I. — ACTA PII PP. X. I. — ACTA PII PP. X.'), { year: 1911, volume: 3, ...columnar });
+    expect(r.popeHeadings).toEqual(['I. — ACTA PII PP. X. I. — ACTA PII PP. X.']);
+    expect(r.skippedParts).toEqual([]);
+    expect(r.entries.map((e) => [e.pope, e.date, e.incipit, e.page])).toEqual([
+      ['Pius X', '1911-10-28', 'Si qua est', 553],
+      ['Pius X', '1911-11-01', 'Divino afflatu', 633],
+    ]);
+  });
+
+  it('maps the headings of 1926-1930: the O spelling of Epistulae Apostolicae, a bare Notificatio, and the OCR of Chirographi', () => {
+    expect(categoryForHeading('EPISTOLAE APOSTOLICAE')?.id).toBe('Epistulae Apostolicae');
+    expect(categoryForHeading('NOTIFICATIO')).toMatchObject({ id: 'Notificatio', harvested: 'no' });
+    expect(categoryForHeading('CHTRO GRAPHIS')?.id).toBe('Chirographa');
+    expect(categoryForHeading('CHIEOGRAPHI')?.id).toBe('Chirographa');
+  });
+
+  it('parses every fixture of 1926-1930 with no unseen heading and no unmapped pope, above 95 % over the harvested categories', () => {
+    for (const year of [1926, 1927, 1928, 1929, 1930]) {
+      const vol = year - 1908;
+      const r = parseActaIndex(readFileSync(`tools/fixtures/acta/aas-${String(vol).padStart(2, '0')}-${year}.txt`, 'utf8'), { year, volume: vol, ...columnar });
+      expect(r.unseenHeadings, String(year)).toEqual([]);
+      expect(r.unmappedPopes, String(year)).toEqual([]);
+      expect(r.popeHeadings.length, String(year)).toBe(1);
+      expect(harvestedParseRate(r.stats)!, String(year)).toBeGreaterThanOrEqual(0.95);
+      // The page column survived in these five (spec §10.1): few entries open without a page.
+      expect(r.stats.withoutPage / r.stats.dateLines, String(year)).toBeLessThan(0.1);
+    }
+  });
+});
+
 describe('splitEntryText', () => {
   it('strips guillemets and takes the rest as description, whatever follows the closing one', () => {
     expect(splitEntryText('« Venite benedicti  ». - Venerabili Dei Servo')).toEqual({ incipit: 'Venite benedicti', quoted: true, toponym: null, description: 'Venerabili Dei Servo' });

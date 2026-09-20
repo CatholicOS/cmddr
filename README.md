@@ -253,8 +253,8 @@ generalis* PDF for 2010–2024 and a whole-volume OCR PDF for each year 1909–2
 in its tail; the harvest parses the *Acta Summi Pontificis* part of each (checked in as text under `tools/fixtures/acta/`:
 the ten index PDFs of 2015–2024, the 2010–2014 indexes, the index pages of the five sample volumes of phase 2b — AAS 1 (1909),
 9-I (1917), 23 (1931), 50 (1958) and 70 (1978) — of the twenty-six volumes of 1932–1957, AAS 24–49, the pontificates of
-Pius XI and Pius XII, of the nineteen of 1959–1977, AAS 51–69, John XXIII and Paul VI, and of the twenty-four of 1979–2002,
-AAS 71–94, John Paul II) and matches every entry in a
+Pius XI and Pius XII, of the nineteen of 1959–1977, AAS 51–69, John XXIII and Paul VI, of the twenty-four of 1979–2002,
+AAS 71–94, John Paul II, and of the five of 1926–1930, AAS 18–22, Pius XI) and matches every entry in a
 harvested category to a document of the pope the
 part heading names (Pius X → Francis) by issuer, date and incipit, writing `acta` only where one candidate is evidenced. The join
 is reported before it is trusted: **225** Francis documents carry a reference from the ten annual indexes, and every ambiguous
@@ -287,8 +287,15 @@ text layer drops the words of eight messages), eighteen pages the volumes set tw
 and the join's largest residue characterised rather than loosened: from 1989 the index prints a constitution without its
 toponym while vatican.va titles it by the see alone, so 167 same-day erections stay ambiguous. An act the *Acta* print twice
 — *Ibi vacabimus* in 2012 and 2020, *Deus caritas* twice in 2014 — carries one reference, the first printing's, by a curated
-table (`ACTA_REPRINTS`) that quotes both fascicles. The AAS join now covers 1932–2002 and 2010–2024, with the sample's 1909,
-1917 and 1931; the volumes of 2003–2009 have no index online and await a fascicle parser, and 1910–1930 are phase 2b-iii.
+table (`ACTA_REPRINTS`) that quotes both fascicles. Phase 2b-iii-a ([era report](docs/superpowers/reports/2026-09-18-acta-volumes-1926-1930.md))
+joined the five volumes of 1926–1930, the early volumes whose OCR kept the page column: **66** references, 53 of them AAS 21's
+(1929), the one year Pius XI's apostolic-letters shelf holds in number, and the year the 1930 index's OCR lost at the head of
+three sections (`1J30`, `1030`, `1@30`) supplied by curated rows quoting each act's dating formula. Two acts the index cites at a
+page they do not open on — *Casti connubii* at `530` for 539, the motu proprio *In allocutione* at `307` for 337 — are left
+without a reference, the evidence for a page correction the curation tables do not yet have. The AAS join now covers 1926–2002
+and 2010–2024, with the sample's 1909 and 1917; the volumes of 2003–2009 have no index online and await a fascicle parser, and
+1909–1925, whose OCR lost the page column on most index pages, are phase 2b-iii-b ([spec §10](docs/superpowers/specs/2026-09-13-acta-volumes-design.md)),
+which recovers the pages from the volume bodies.
 
 The *Acta* are therefore also a **second source**. An index entry the join leaves unmatched becomes a document of its own
 (phase 2a, `tools/src/acta/create.ts`) when its category is one the registry creates from the *Acta* — encyclicals,
@@ -332,9 +339,17 @@ and 1989, where his shelf is thin, and six canonisation decretals, the rest of w
 of discussion #30) and 51 of Benedict XVI (the beatification letters of 2007–2012 his shelf lacks) — and held **750**, 266 of
 them the toponym-less constitutions the join could not tell apart; it re-minted no shelf id, and its rule for an incipit the OCR
 split or set in capitals (*H orti conclusi*, *QUO gravius*) holds sixteen records the earlier eras had minted under such
-readings ([era report](docs/superpowers/reports/2026-09-13-acta-volumes-1979-2014.md)). Phase 2b-iii
-([#25](https://github.com/CatholicOS/cmddr/issues/25)) is the remaining 22 volumes of 1910–1931, read by the same parser and
-creator; phase 2c the *Acta Sanctae Sedis* of 1865–1908, whose indexes carry no date or incipit and are confirmed by hand.
+readings ([era report](docs/superpowers/reports/2026-09-13-acta-volumes-1979-2014.md)). Phase 2b-iii-a added **277** of
+Pius XI from the five volumes of 1926–1930 — 138 apostolic letters, 87 letters (his letters shelf being harvested), 41
+constitutions, 5 decretals and 6 motu proprio, the era being a harvest more than a join since vatican.va holds fifteen of
+his acts of 1926, 1927 and 1930 — and held **53**; *Quo maiori rerum* (30 March 1930), printed in AAS 22 and again in AAS 23,
+is created from the first printing by the reprint table, and the Italian text of *Divini illius Magistri* the 1929 index enters
+as an encyclical of its own is held as the 1933 and 1937 vernaculars are
+([era report](docs/superpowers/reports/2026-09-18-acta-volumes-1926-1930.md)). Phase 2b-iii-b
+([#25](https://github.com/CatholicOS/cmddr/issues/25), [spec §10](docs/superpowers/specs/2026-09-13-acta-volumes-design.md))
+is the seventeen volumes of 1909–1925, whose OCR lost the page column on most index pages: a page recovery from the volume
+bodies, then the same parser and creator; phase 2c the *Acta Sanctae Sedis* of 1865–1908, whose indexes carry no date or
+incipit and are confirmed by hand.
 
 ### The document registry
 

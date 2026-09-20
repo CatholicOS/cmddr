@@ -128,10 +128,105 @@ curated tables and the pinned-count tests), each with its own report and its own
 | 2b-ii-a | 24–49 (1932–1957) | Pius XI, Pius XII | 1939 has two popes; *Nuntii radiophonici* are Pius XII's (counted for #27, never created) — **done** (PR #34) |
 | 2b-ii-b | 51–69 (1959–1977) | John XXIII, Paul VI | 1963 has two popes — **done** (PR #35) |
 | 2b-ii-c | 71–94 (1979–2002) and the 2010, 2011, 2013, 2014 index PDFs | John Paul II, Benedict XVI | 1983 is a double volume (`part`); the *Ibi vacabimus* reprint (2012 and 2020) needs a curated citation-of-record rule, decided here — **done**: `ACTA_REPRINTS` (the first printing is the citation unless the volume marks the later as a correction; *Deus caritas*, printed twice in AAS 106 (2014), decided the same way); AAS 75 part II is the Code of 1983 and has no index, so every 1983 reference carries part I; the 2013 index carries Francis's first year too |
-| 2b-iii | 2–23 (1910–1931), and 9-II if it has an index | Pius X, Benedict XV, Pius XI | after deciding how to recover the lost page column: a positional join against the *Index generalis rerum*, or a curated readings table |
+| 2b-iii-a | 18–22 (1926–1930) | Pius XI | the early volumes whose OCR kept the page column (§10): parsed as the phases above |
+| 2b-iii-b | 1–8, 9-I, 10–17 (1909–1925) | Pius X, Benedict XV, Pius XI | the volumes whose OCR lost the page column on 56–99 % of entries: the page recovery of §10, then the join as above; 9-II has no chronological index (the Code of 1917) and its one act, *Providentissima Mater*, takes a curated reference |
 
 Each PR: the volumes' index pages as fixtures (README rows), per-volume parse rate with the
 95 % floor and named exemptions, every new category or pope heading mapped with its
 quotation, join → report → create by the 2a rule, holds listed, re-minted ids expected none.
 A PR whose created count is large is not a reason to loosen anything: the report is the
 review instrument, and every creation quotes its index line.
+
+## 10. Addendum (2026-09-18, after PR #37): the early volumes and the lost page column
+
+### 10.1 What the twenty remaining volumes measure
+
+The sample (PR #33, report §1) found the OCR of AAS 1 (1909) and 9-I (1917) without its
+page column on most index pages and deferred the decision to this phase. On 2026-09-18 the
+twenty volumes of 1910–1930 were fetched (into the local store, §10.4) and their
+chronological indexes parsed with the phase-2b parser, unchanged:
+
+| Volumes | Entries opened without a page | Reading |
+|---|---|---|
+| AAS 1–17 (1909–1925; 17 fixtures, 9-II having no index) | 56–99 % per volume, ≈ 1,100 entries in all | the page column is lost — the rule for the era, not the exception. Two of them first looked otherwise: AAS 3 (1911) parsed to nothing because the layout mode doubled its pope heading on one line (`I. — ACTA PII PP. X. I. — ACTA PII PP. X.`, read once now), and AAS 17 (1925) was not located because the OCR reads its title as `II` / `CHRONOLOGICO ORDINE DIGESTUS` (admitted now); read, 1911 keeps the column on ten index pages of sixteen and 1925 on two of fourteen (its months in lower case: `iunii`, `dec.`) |
+| AAS 18–23 (1926–1931) | 3–6 % | the column survived |
+
+Two extraction facts settle what can and cannot recover the pages. **The numbers are
+absent from the text layer itself**: pypdf's default mode, which keeps the date columns as
+runs of their own, holds no run of page numbers either — only the dot leaders survive
+(`Franciscanum condito . .`), so no extraction mode or fallback yields them. **The *Index
+generalis actorum* at the head of each volume's indexes cannot supply them by position**: it
+prints, per category, page *runs* rather than pages (`LITTERAE APOSTOLICAE, 6-9, 185-194,
+294-307, …`, AAS 13 p. 571), each run holding several acts and naming none, so there is
+nothing to align an entry to. A curated readings table for a thousand entries is not a
+mechanism. What remains is the volume body.
+
+### 10.2 The body carries the page
+
+Every act opens with its incipit on its first page, every page carries its printed number
+in its running header, and in these volumes the PDF page number *is* the printed page
+(AAS 13: 472 of 480 numbered headers agree, offset 0; the disagreements are OCR of the
+header). The citation convention is the act's first page even when that page is a
+fascicle cover with no printed number — measured on AAS 23 (1931), whose chronological
+index kept its pages: *Quadragesimo anno* 177, *Nova impendet* 393, *Lux veritatis* 493,
+*Deus scientiarum* 241, all on covers, all cited at the cover; and the index generalis's
+`34` for *Sacra propediem* (AAS 13) is the OCR's reading of the cover page 33.
+
+Measured on the clean volume, a search of the body for each index incipit finds it on
+exactly the cited page for 60 of 73 entries; 10 misses are OCR noise on the index side
+(`Dioeeesis`, `Ex hae`, `Ea verla`) and 3 are wrong (an incipit quoted inside another act,
+or two acts on adjacent pages). Measured on 1921's 79 lost entries in harvested categories,
+an exact search constrained to the category's runs recovers 40 uniquely; the rest are
+*ambiguous* — several acts sharing one incipit in one category (*Constat apprime* three
+times, *Quae catholico nomini* three times), which only the act's own dating formula
+separates — and *no hit*, OCR noise on one side or the other (`Placet oculog`, `Quoniam
+por est`), which a fuzzy match takes a share of. The recovery of §10.3 is expected to land
+well above the naive 40 of 79; what it does not recover is reported, never guessed.
+
+### 10.3 Phase 2b-iii-b: the page recovery
+
+A **recovery step** between the parser and the join, for the volumes of §10.1's first row:
+
+1. **Input.** The chronological-index fixture (as today) and the volume's whole text,
+   which `fetch-acta.sh` exports once per volume to the local store
+   (`<store>/txt/aas-{vol}-{year}.txt`, one page per form feed, default mode) and which is
+   never checked in; plus the *Index generalis actorum*'s page runs per category, parsed
+   from the volume's first index page (the same export).
+2. **Method**, in `tools/src/acta/recover.ts`, unit-tested on excerpts. For each entry the
+   parser opened without a page: normalise the incipit as `match.ts` does and search the
+   body pages *within the category's runs* (±1 page, for the runs' own OCR) for the incipit
+   at the head of a paragraph; accept a **unique** hit. Where the hits are several, read
+   the dating formula on the hit page and the following ones (*Datum Romae … die … mensis
+   … anno …*) and accept the one whose date is the entry's; where there is no exact hit,
+   retry with a bounded edit distance per word (the OCR's `e`/`c`, `o`/`a`, `t`/`l`),
+   accepting a unique hit only. Anything else — none, several, a hit outside every run —
+   stays without a page.
+3. **Output.** A checked-in sidecar per volume, `tools/fixtures/acta/aas-{vol}-{year}.pages.json`:
+   one row per recovered entry keyed as the parser keys it (date, category, incipit), with
+   the page, the body line quoted, the running header quoted, and the rule that accepted
+   it (`unique`, `dated`, `fuzzy`). The join reads the sidecar offline, as it reads the
+   fixtures; an entry with a recovered page carries `pageSource: 'recovered'` into the
+   report, and a reference created from it is cited exactly as one read from the index —
+   the sidecar row *is* the evidence, as the curated tables are. A sidecar row whose entry
+   the parser no longer opens is a hard error, as a stale correction is.
+4. **Report.** Per volume: entries opened without a page, recovered by each rule, still
+   without a page (each listed with its text), and the parse rate before and after; the
+   95 % floor applies to the rate *after* recovery, and a volume below it is a finding.
+   The report's held section lists the unrecovered entries under their own reason
+   (`page-not-recovered`), never created and never cited.
+5. **Curation.** `ACTA_PAGE_READINGS` in `curation.ts`, for the entries that matter and
+   that the recovery leaves — the encyclicals and constitutions first — each row quoting
+   the body's heading and dating formula as read in the PDF; consulted before the sidecar.
+
+Out of scope for 2b-iii-b: recovering pages for entries without an incipit (1909's
+descriptions, the consistory items), beyond what the curated table takes; and the
+dicasteries' parts, as ever.
+
+### 10.4 The local store
+
+`fetch-acta.sh` keeps the PDFs in `~/development/sources/AAS/pdf` (`ACTA_SOURCES` to
+point elsewhere), named as on vatican.va, and downloads a volume only when the store lacks
+it (PR 2b-iii-a; measured on AAS 50: the fixture extracted from the stored PDF is
+byte-identical to the committed one). The whole-volume text of §10.3 goes beside it in
+`<store>/txt/`. Nothing in the store is tracked; the fixtures and sidecars in the
+repository are what the parser, the recovery's consumers and the tests read.

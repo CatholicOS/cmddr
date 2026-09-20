@@ -423,6 +423,8 @@ const COLUMN_HEADER_RE = /^[\s.,'"•»-]*(?:(?:ANNO|MENSE|DIE|DXE|D1E|PA[GSOEe�
 const PART_HEADING_RE = /^\s*(?:[A-Za-z0-9]{1,4}\.?\s*r?[–—-]\s*|[IVX]{1,4}\.\s+)?((?:ACTA\.?|EX ACTIBUS)\s+[A-Za-z].*|DIARIUM\s+[A-Z].*|CARDINALIUM COMMISSIO.*|SYNODUS EPISCOPORUM\s*|SEDIS VACANTIS ACTA\s*|CONCLAVE\s*)$/;
 /** `ACTA PII PP. X.`, `ACTA IOANNIS PAULI PP. II`, `ACTA BENEDICTI XVI`, `ACTA FRANCISCI PP.`: name words, optional `PP.`, optional numeral. */
 const POPE_PART_RE = /^ACTA\s+([A-Z][A-Z0-9]*(?:\s+[A-Z][A-Z0-9]*)*?)(?:\s+PP\.?)?(?:\s+([IVXL]+))?\.?\s*$/;
+/** The heading repeated after itself, with or without a part numeral between: `X. I. — ACTA PII PP. X.` */
+const DOUBLED_HEADING_RE = /^(.+?)\s+(?:[IVX]{1,4}\.?\s*[–—-]\s*)?\1$/;
 /**
  * A pope heading as the OCR prints it, normalised for the popes table: the name words
  * upper-cased (`ACTA Pii PP. XII`, AAS 33, 1941), an `l` in the numeral read as `I`
@@ -431,7 +433,11 @@ const POPE_PART_RE = /^ACTA\s+([A-Z][A-Z0-9]*(?:\s+[A-Z][A-Z0-9]*)*?)(?:\s+PP\.?
  * so the report can list every variant.
  */
 export const normalisePopeHeading = (heading: string): string => {
-  const words = heading.replace(/\s+/g, ' ').trim().toUpperCase().replace(/^ACTA\.\s/, 'ACTA ').replace(/^EX ACTIBUS\s/, 'ACTA ').split(' ');
+  // AAS 3 (1911) 675: the layout mode sets the heading twice on one line, the second with
+  // its numeral (`ACTA PII PP. X. I. — ACTA PII PP. X.`) -- the text layer holds it twice
+  // and only that page of the fixtures does. Read once, as the printed heading is.
+  const once = heading.replace(/\s+/g, ' ').trim().replace(DOUBLED_HEADING_RE, '$1');
+  const words = once.toUpperCase().replace(/^ACTA\.\s/, 'ACTA ').replace(/^EX ACTIBUS\s/, 'ACTA ').split(' ');
   // No pope of the AAS bears a numeral with an L (the highest is XXIII): an L in the
   // last word is the OCR's lower-case l for I.
   const last = words[words.length - 1]!;
