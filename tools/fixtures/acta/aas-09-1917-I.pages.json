@@ -44,6 +44,16 @@
       "header": "Acta Benedicti PP. XV 9"
     },
     {
+      "key": "1916-05|LITTERAE APOSTOLICAE|Honorificentissimum magisterium|Alexandro Ruspoli, viro principi, perinsignis titulus Magni ",
+      "date": "1916-05",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Honorificentissimum magisterium",
+      "page": 72,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. - Honorificentissimum magisterium Hospitii Palatii Apostolici praenobili familiae de",
+      "header": "/"
+    },
+    {
       "key": "1916-07|LITTERAE APOSTOLICAE|De more Romanorum Pontificum|Opus ab apostolatu caritatis, in domo principe Sororum paupe",
       "date": "1916-07",
       "category": "LITTERAE APOSTOLICAE",
@@ -154,6 +164,26 @@
       "header": "Acta Benedicti PP. XV 79"
     },
     {
+      "key": "1916-12-17|EPISTOLAE|Scribendi ad vos|Ad Antonium card. Mendes Bello, patriarcham Lisbonensem, cet",
+      "date": "1916-12-17",
+      "category": "EPISTOLAE",
+      "incipit": "Scribendi ad vos",
+      "page": 12,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Scribendi ad vos, dilecte Fili Noster ac venerabiles",
+      "header": "Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1916-12-20|LITTERAE APOSTOLICAE|Exstat Granatae|Templum S. Ioannis de Deo, quod Granatae exstat, titulo Basi",
+      "date": "1916-12-20",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Exstat Granatae",
+      "page": 7,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Exstat Granatae praenobile templum",
+      "header": "Acta Benedicti PP. XV"
+    },
+    {
       "key": "1917-01-10|EPISTOLAE|Communi vestra epistola|Ad Ioannem S. R. E. Presb. Card. Csernoch, archiepiscopum St",
       "date": "1917-01-10",
       "category": "EPISTOLAE",
@@ -172,6 +202,26 @@
       "rule": "unique",
       "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Probe Nos",
       "header": "Acta Benedicti PP. XV 101"
+    },
+    {
+      "key": "1917-03-10|EPISTOLAE|Petrianam accepimus stipem|Ad R. P. D. Emmanuelem Lago y Gonzalez, episcopum Oxomensem,",
+      "date": "1917-03-10",
+      "category": "EPISTOLAE",
+      "incipit": "Petrianam accepimus stipem",
+      "page": 223,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Petrianam accepimus stipem a te nuper missam tuaque diligentia corrogatam ;",
+      "header": "Acta Benedicti PP. XV"
+    },
+    {
+      "key": "1917-03-24|LITTERAE APOSTOLICAE|Refert ad Nos|Primaria Ssmae Crucis Associatio in \"Sessoriana Basilica ere",
+      "date": "1917-03-24",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Refert ad Nos",
+      "page": 212,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Refert ad Nos dilectus filius Placidus .",
+      "header": "Acta Apostolicae Sedis - Commentaì'ium Officiale"
     },
     {
       "key": "1917-03|MOTU PROPRIO|Alloquentes proxime|De attribuenda Sancto Officio censura librorum et Poenitenti",
@@ -224,6 +274,16 @@
       "header": "Acta Benedicti PP. XV 317"
     },
     {
+      "key": "1917-04-13|EPISTOLAE|Non mediocri cum fructu|Ad R. P. D. Gasparem Mariam Michaelem Latty, archiepiscopum ",
+      "date": "1917-04-13",
+      "category": "EPISTOLAE",
+      "incipit": "Non mediocri cum fructu",
+      "page": 225,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Non",
+      "header": "Acta Benedicti PP. XV"
+    },
+    {
       "key": "1917-04-14|EPISTOLAE|A venerabili fratre Nostro|Ad R. P. D. Titum Trocchi, archiepiscopum titularem Lacedemo",
       "date": "1917-04-14",
       "category": "EPISTOLAE",
@@ -262,6 +322,16 @@
       "rule": "unique",
       "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem. — Confirmantur consilia ac proposita Nostra iudicio vestro vestraeque pietatis",
       "header": "Acta Benedicti PP. XV 267"
+    },
+    {
+      "key": "1917-04-30|EPISTOLAE|Habet hoc virtus|Ad R. P. D. Ioannem Cavanaugh, e Congregatione Sanctae Cruci",
+      "date": "1917-04-30",
+      "category": "EPISTOLAE",
+      "incipit": "Habet hoc virtus",
+      "page": 264,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Habet hoc",
+      "header": "m Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1917-04|LITTERAE APOSTOLICAE|Si unquam alias|Venerabili Servo Dei Iosepho Benedicto Cottolengo beatorum c",
@@ -352,6 +422,16 @@
       "rule": "unique",
       "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Quod nuntias",
       "header": "Acta Benedicti PP. XV 377"
+    },
+    {
+      "key": "1917-07-10|LITTERAE APOSTOLICAE|Ut, aucto Pastorum numero|Erigitur nova dioecesis de Wagga-Wagga in Australia. .......",
+      "date": "1917-07-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ut, aucto Pastorum numero",
+      "page": 424,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Ut, aucto Pastorum numero,",
+      "header": "Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1917-07-13|EPISTOLAE|Si- quid est|Ad R. P. D. Alfredum Louwick, sacerdotum a Missione vicarium",
@@ -486,36 +566,6 @@
   ],
   "unrecovered": [
     {
-      "key": "1916-05|LITTERAE APOSTOLICAE|Honorificentissimum magisterium|Alexandro Ruspoli, viro principi, perinsignis titulus Magni ",
-      "date": "1916-05",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Honorificentissimum magisterium",
-      "reason": "header-mismatch",
-      "candidates": [
-        72
-      ]
-    },
-    {
-      "key": "1916-12-17|EPISTOLAE|Scribendi ad vos|Ad Antonium card. Mendes Bello, patriarcham Lisbonensem, cet",
-      "date": "1916-12-17",
-      "category": "EPISTOLAE",
-      "incipit": "Scribendi ad vos",
-      "reason": "header-mismatch",
-      "candidates": [
-        12
-      ]
-    },
-    {
-      "key": "1916-12-20|LITTERAE APOSTOLICAE|Exstat Granatae|Templum S. Ioannis de Deo, quod Granatae exstat, titulo Basi",
-      "date": "1916-12-20",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Exstat Granatae",
-      "reason": "header-mismatch",
-      "candidates": [
-        7
-      ]
-    },
-    {
       "key": "1916-12-20|LITTERAE APOSTOLICAE|Quae catholico nomini|Erectio Vicariatus apostolici Alaskensis.",
       "date": "1916-12-20",
       "category": "LITTERAE APOSTOLICAE",
@@ -534,56 +584,6 @@
       "reason": "several",
       "candidates": [
         100,
-        424
-      ]
-    },
-    {
-      "key": "1917-03-10|EPISTOLAE|Petrianam accepimus stipem|Ad R. P. D. Emmanuelem Lago y Gonzalez, episcopum Oxomensem,",
-      "date": "1917-03-10",
-      "category": "EPISTOLAE",
-      "incipit": "Petrianam accepimus stipem",
-      "reason": "header-mismatch",
-      "candidates": [
-        223
-      ]
-    },
-    {
-      "key": "1917-03-24|LITTERAE APOSTOLICAE|Refert ad Nos|Primaria Ssmae Crucis Associatio in \"Sessoriana Basilica ere",
-      "date": "1917-03-24",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Refert ad Nos",
-      "reason": "header-mismatch",
-      "candidates": [
-        212
-      ]
-    },
-    {
-      "key": "1917-04-13|EPISTOLAE|Non mediocri cum fructu|Ad R. P. D. Gasparem Mariam Michaelem Latty, archiepiscopum ",
-      "date": "1917-04-13",
-      "category": "EPISTOLAE",
-      "incipit": "Non mediocri cum fructu",
-      "reason": "header-mismatch",
-      "candidates": [
-        225
-      ]
-    },
-    {
-      "key": "1917-04-30|EPISTOLAE|Habet hoc virtus|Ad R. P. D. Ioannem Cavanaugh, e Congregatione Sanctae Cruci",
-      "date": "1917-04-30",
-      "category": "EPISTOLAE",
-      "incipit": "Habet hoc virtus",
-      "reason": "header-mismatch",
-      "candidates": [
-        264
-      ]
-    },
-    {
-      "key": "1917-07-10|LITTERAE APOSTOLICAE|Ut, aucto Pastorum numero|Erigitur nova dioecesis de Wagga-Wagga in Australia. .......",
-      "date": "1917-07-10",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Ut, aucto Pastorum numero",
-      "reason": "header-mismatch",
-      "candidates": [
         424
       ]
     },

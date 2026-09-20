@@ -34,6 +34,16 @@
       "header": "144 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
+      "key": "1923-01-15|LITTERAE APOSTOLICAE|Per similes Litteras|Sodalitas a Divino Infante Pragensi ad unitatem revocatur et",
+      "date": "1923-01-15",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Per similes Litteras",
+      "page": 262,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Per similes Litteras Apostolicas,",
+      "header": "Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1923-01-23|LITTERAE APOSTOLICAE|Praeclarissima|Ecclesia paroecialis B. M. V. a Valle Florum in civitate Tre",
       "date": "1923-01-23",
       "category": "LITTERAE APOSTOLICAE",
@@ -82,6 +92,16 @@
       "rule": "unique",
       "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem. — Communes",
       "header": "108 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1923-02|LITTERAE APOSTOLICAE|Explorata res est|Conceduntur indulgentiae, facultates et privilegia sociis, z",
+      "date": "1923-02",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Explorata res est",
+      "page": 103,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. —- Explorata res est, Presbyteros a Sancta/",
+      "header": "Acta Pii PP. XI ioa"
     },
     {
       "key": "1923-03-01|CONSTITUTIONES APOSTOLICAE|Suessionensis|Concessionis sacri Pallii",
@@ -314,6 +334,16 @@
       "header": "Acta Pii PP. XI 27"
     },
     {
+      "key": "1923-11-24|CONSTITUTIONES APOSTOLICAE|Orbis catholici regimen|Verae Crucis. Dismembrationis et erectionis dioecesis Papant",
+      "date": "1923-11-24",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Orbis catholici regimen",
+      "page": 329,
+      "rule": "unique",
+      "bodyLine": "Orbis catholici regimen, inscrutabili divinae Providentiae consilio,",
+      "header": "Acta Pii PP. XI"
+    },
+    {
       "key": "1923-11|CONSTITUTIONES APOSTOLICAE|Inter negotia|De Tulancingo. Dismembrationis et erectionis dioecesis Hueju",
       "date": "1923-11",
       "category": "CONSTITUTIONES APOSTOLICAE",
@@ -346,16 +376,6 @@
   ],
   "unrecovered": [
     {
-      "key": "1923-01-15|LITTERAE APOSTOLICAE|Per similes Litteras|Sodalitas a Divino Infante Pragensi ad unitatem revocatur et",
-      "date": "1923-01-15",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Per similes Litteras",
-      "reason": "header-mismatch",
-      "candidates": [
-        262
-      ]
-    },
-    {
       "key": "1923-01-16|LITTERAE APOSTOLICAE||Metropolitanum templum, ~ Metropolitanum templum Ssmi Salvat",
       "date": "1923-01-16",
       "category": "LITTERAE APOSTOLICAE",
@@ -371,16 +391,6 @@
       "candidates": [
         141,
         258
-      ]
-    },
-    {
-      "key": "1923-02|LITTERAE APOSTOLICAE|Explorata res est|Conceduntur indulgentiae, facultates et privilegia sociis, z",
-      "date": "1923-02",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Explorata res est",
-      "reason": "header-mismatch",
-      "candidates": [
-        103
       ]
     },
     {
@@ -602,16 +612,6 @@
       "category": "EPISTOLAE",
       "incipit": "ANNO MENSE DIE ¡PAG",
       "reason": "none"
-    },
-    {
-      "key": "1923-11-24|CONSTITUTIONES APOSTOLICAE|Orbis catholici regimen|Verae Crucis. Dismembrationis et erectionis dioecesis Papant",
-      "date": "1923-11-24",
-      "category": "CONSTITUTIONES APOSTOLICAE",
-      "incipit": "Orbis catholici regimen",
-      "reason": "header-mismatch",
-      "candidates": [
-        329
-      ]
     },
     {
       "key": "1923-11-27|LITTERAE APOSTOLICAE|Ex hac|Vicariatus apostolicus Insularum Tahiti separatur in duas pa",

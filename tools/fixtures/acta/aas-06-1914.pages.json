@@ -34,6 +34,16 @@
       "header": "106 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
+      "key": "1914-03|EPISTOLAE|Ad eucharisticum conventum|Ad R. P. D. Natalem Serafino, Bugellensium episcopum, occasi",
+      "date": "1914-03",
+      "category": "EPISTOLAE",
+      "incipit": "Ad eucharisticum conventum",
+      "page": 224,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam [benedictionem. — Ad",
+      "header": "<m Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1914-03|EPISTOLAE|Et vota|Ad Augustinum card. Richelmy, Taurinensi um archiepiscopum, ",
       "date": "1914-03",
       "category": "EPISTOLAE",
@@ -52,6 +62,16 @@
       "rule": "unique",
       "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Quo societas",
       "header": "Acta Pii PP. X 259"
+    },
+    {
+      "key": "1914-04-10|EPISTOLAE|Civium ex omni ordine|Ad R. P. D. Iosephum Nèmeth, episcopum tit. Isaurensem, auxi",
+      "date": "1914-04-10",
+      "category": "EPISTOLAE",
+      "incipit": "Civium ex omni ordine",
+      "page": 225,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Civium",
+      "header": "Acta PU PP. X"
     },
     {
       "key": "1914-04-10|EPISTOLAE|Quae istinc|Ad R. P. D. Iosephum S. Pelczar, Premisliensium latinorum ep",
@@ -266,16 +286,6 @@
   ],
   "unrecovered": [
     {
-      "key": "1914-03|EPISTOLAE|Ad eucharisticum conventum|Ad R. P. D. Natalem Serafino, Bugellensium episcopum, occasi",
-      "date": "1914-03",
-      "category": "EPISTOLAE",
-      "incipit": "Ad eucharisticum conventum",
-      "reason": "header-mismatch",
-      "candidates": [
-        224
-      ]
-    },
-    {
       "key": "1914-03|EPISTOLAE|Ex quo|Ad R. P. Clementem a Ss. Faustino et Iovita, praepositum gen",
       "date": "1914-03",
       "category": "EPISTOLAE",
@@ -287,16 +297,6 @@
         253,
         522,
         546
-      ]
-    },
-    {
-      "key": "1914-04-10|EPISTOLAE|Civium ex omni ordine|Ad R. P. D. Iosephum Nèmeth, episcopum tit. Isaurensem, auxi",
-      "date": "1914-04-10",
-      "category": "EPISTOLAE",
-      "incipit": "Civium ex omni ordine",
-      "reason": "header-mismatch",
-      "candidates": [
-        225
       ]
     },
     {

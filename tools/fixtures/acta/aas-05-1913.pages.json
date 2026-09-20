@@ -164,6 +164,16 @@
       "header": "268 Acta Apostolicae Sedis. - Commentarium Officiale."
     },
     {
+      "key": "1913-05-03|EPISTOLAE|Iucunda te|Ad Desideratum cardinalem Mercier, Mechliniensium archiepisc",
+      "date": "1913-05-03",
+      "category": "EPISTOLAE",
+      "incipit": "Iucunda te",
+      "page": 267,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili Noster, salutem et apostolicam benedictionem. — Iucunda",
+      "header": "Acta Pii PP. X."
+    },
+    {
       "key": "1913-05-10|LITTERAE APOSTOLICAE|Ecclesiarum omnium|Erigitur novus vicariatus apostolicus, titulo de Fianarantso",
       "date": "1913-05-10",
       "category": "LITTERAE APOSTOLICAE",
@@ -352,16 +362,6 @@
       "candidates": [
         153,
         178
-      ]
-    },
-    {
-      "key": "1913-05-03|EPISTOLAE|Iucunda te|Ad Desideratum cardinalem Mercier, Mechliniensium archiepisc",
-      "date": "1913-05-03",
-      "category": "EPISTOLAE",
-      "incipit": "Iucunda te",
-      "reason": "header-mismatch",
-      "candidates": [
-        267
       ]
     },
     {

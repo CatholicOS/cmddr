@@ -124,6 +124,36 @@
       "header": "190 Acta Apostolicae Sedis. - Commentarium Officiale."
     },
     {
+      "key": "1910-02-27|EPISTOLAE|Exeunte anno|Ad R. D. Carolum Kanter et Marchionissam Ad elem Pallavicini",
+      "date": "1910-02-27",
+      "category": "EPISTOLAE",
+      "incipit": "Exeunte anno",
+      "page": 191,
+      "rule": "unique",
+      "bodyLine": "Dilecti filii, salutem et apostolicam benedictionem. — Exeunte anno",
+      "header": "Acta Pii PP. X."
+    },
+    {
+      "key": "1910-03-04|LITTERAE APOSTOLICAE|Quae ad fidei|Conceditur indulgentia partialis perpetua pro Insularum Phil",
+      "date": "1910-03-04",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae ad fidei",
+      "page": 226,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Quae ad fidei pietatique praesertim in longinquis regionibus satius consulendum pertinent, quaeque Nobis sacri Antistites proponunt, utpote qui dominici sui cuique commissi",
+      "header": "Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1910-03-14|EPISTOLAE|Quae nuper|Ad Petrum S. R. E. presbyterum Cardinalem Coullié, Archiepis",
+      "date": "1910-03-14",
+      "category": "EPISTOLAE",
+      "incipit": "Quae nuper",
+      "page": 191,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili Noster, salutem et apostolicam benedictionem. — Quae",
+      "header": "Acta Pii PP. X."
+    },
+    {
       "key": "1910-04-05|LITTERAE APOSTOLICAE|Laeto accepimus|Consociationi sacerdotum in honorem SSmi Cordis Iesu concedu",
       "date": "1910-04-05",
       "category": "LITTERAE APOSTOLICAE",
@@ -252,6 +282,16 @@
       "rule": "unique",
       "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Paternam curam providentiamque Nostram de prosperitate ecclesiae Philippinae multis iam rebus nulli quidem non cognitam, maturum arbitramur",
       "header": "326 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1910-05-03|EPISTOLAE|Studium quo tenemur|Ad Emum Virum S. R. E. Cardinalem Vincentium Vannutelli, Epi",
+      "date": "1910-05-03",
+      "category": "EPISTOLAE",
+      "incipit": "Studium quo tenemur",
+      "page": 721,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili Noster, salutem et apostolicam benedictionem. — Studium quo tenemur fovendi cultus erga sanctissimam Eucharistiam, unde,",
+      "header": "Acta Pii PP. X."
     },
     {
       "key": "1910-05-03|EPISTOLAE|Vide quae sit|Ad R. P. D. Valerium Laspro, Salernitanum Archiepiscopum, qu",
@@ -520,36 +560,6 @@
       "reason": "no-incipit"
     },
     {
-      "key": "1910-02-27|EPISTOLAE|Exeunte anno|Ad R. D. Carolum Kanter et Marchionissam Ad elem Pallavicini",
-      "date": "1910-02-27",
-      "category": "EPISTOLAE",
-      "incipit": "Exeunte anno",
-      "reason": "header-mismatch",
-      "candidates": [
-        191
-      ]
-    },
-    {
-      "key": "1910-03-04|LITTERAE APOSTOLICAE|Quae ad fidei|Conceditur indulgentia partialis perpetua pro Insularum Phil",
-      "date": "1910-03-04",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Quae ad fidei",
-      "reason": "header-mismatch",
-      "candidates": [
-        226
-      ]
-    },
-    {
-      "key": "1910-03-14|EPISTOLAE|Quae nuper|Ad Petrum S. R. E. presbyterum Cardinalem Coullié, Archiepis",
-      "date": "1910-03-14",
-      "category": "EPISTOLAE",
-      "incipit": "Quae nuper",
-      "reason": "header-mismatch",
-      "candidates": [
-        191
-      ]
-    },
-    {
       "key": "1910-03-15|EPISTOLAE|Novimus|Ad R. P. D. Ioachimum Cantagalli, Faventinorum Episcopum, qu",
       "date": "1910-03-15",
       "category": "EPISTOLAE",
@@ -609,16 +619,6 @@
       "candidates": [
         8,
         408
-      ]
-    },
-    {
-      "key": "1910-05-03|EPISTOLAE|Studium quo tenemur|Ad Emum Virum S. R. E. Cardinalem Vincentium Vannutelli, Epi",
-      "date": "1910-05-03",
-      "category": "EPISTOLAE",
-      "incipit": "Studium quo tenemur",
-      "reason": "header-mismatch",
-      "candidates": [
-        721
       ]
     },
     {

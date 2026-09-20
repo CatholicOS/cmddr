@@ -4,6 +4,36 @@
   "text": "~/development/sources/AAS/txt/aas-12-1920.txt (643 pages)",
   "rows": [
     {
+      "key": "1919-10-30|EPISTOLAE|Te nuper|Ad R. D. Aloisium Lamerand, quem Consociationis apostolicae ",
+      "date": "1919-10-30",
+      "category": "EPISTOLAE",
+      "incipit": "Te nuper",
+      "page": 12,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Te nuper Consociationis Apostolicae praepositum generalem esse renuntiatum, quod",
+      "header": "Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1919-10|EPISTOLAE|Officia pietatis|Ad Petrum S. R. E. card. La Fontaine, patriarcham Venetiarum",
+      "date": "1919-10",
+      "category": "EPISTOLAE",
+      "incipit": "Officia pietatis",
+      "page": 12,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili noster, salutem et apostolicam benedictionem. — Officia",
+      "header": "Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1919-11-10|EPISTOLAE|Con viva soddisfazione|Ad R. P. Octavium Marchetti, S. I. : de schola theologiae as",
+      "date": "1919-11-10",
+      "category": "EPISTOLAE",
+      "incipit": "Con viva soddisfazione",
+      "page": 29,
+      "rule": "unique",
+      "bodyLine": "Diletto figlio, salute ed apostolica benedizione. — Con viva soddisfazione vedemmo nel passato anno sorgere in cotesta illustre Università, insieme all'opportunissima iniziativa di un Istituto di cultura",
+      "header": "Acta Benedicti PP. XV"
+    },
+    {
       "key": "1919-12-18|EPISTOLAE|Celeberrima evenisse sollemnia|Ad Antonium S. R. E. card. Mendes Bello, patriarcham Ulyssip",
       "date": "1919-12-18",
       "category": "EPISTOLAE",
@@ -84,6 +114,26 @@
       "header": "Acta Benedicti PP. XV 155"
     },
     {
+      "key": "1920-04|EPISTOLAE|Quamquam satis|Ad R. D. Aloisium Orione, Parvi Operis a divina Providentia ",
+      "date": "1920-04",
+      "category": "EPISTOLAE",
+      "incipit": "Quamquam satis",
+      "page": 325,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Quamquam",
+      "header": "Acta Benedicti PP. XV"
+    },
+    {
+      "key": "1920-05-13|LITTERAE DECRETALES|Ecclesiae consuetudo|B. Margaritae Mariae Alacoque, virgini, moniali a Visitation",
+      "date": "1920-05-13",
+      "category": "LITTERAE DECRETALES",
+      "incipit": "Ecclesiae consuetudo",
+      "page": 486,
+      "rule": "unique",
+      "bodyLine": "Ecclesiae consuetudo antiquissima in Sanctorum numero eos adscribere qui, heroico gradu, virtutes, dum viverent, exercuerunt et miracula",
+      "header": "ï"
+    },
+    {
       "key": "1920-05-23|LITTERAE ENCYCLICAE|Pacem, Dei munus pulcherrimum|Ad Patriarchas, Primates, Archiepiscopos, Episcopos aliosque",
       "date": "1920-05-23",
       "category": "LITTERAE ENCYCLICAE",
@@ -152,6 +202,16 @@
       "rule": "unique",
       "bodyLine": "benedictionem. — intelleximus ex iis litteris, quas dudum communiter",
       "header": "290 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1920-06|EPISTOLAE|Quae Mutinam|Ad RR. PP. DD. Natalem, archiepiscopum Mutinensem, Guidonem ",
+      "date": "1920-06",
+      "category": "EPISTOLAE",
+      "incipit": "Quae Mutinam",
+      "page": 289,
+      "rule": "unique",
+      "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem. — Quae",
+      "header": "Acta Benedicti PP. XV"
     },
     {
       "key": "1920-07-10|LITTERAE APOSTOLICAE|Inter potiores|Curialis aedes S. Andochii, in civitate",
@@ -316,36 +376,6 @@
   ],
   "unrecovered": [
     {
-      "key": "1919-10-30|EPISTOLAE|Te nuper|Ad R. D. Aloisium Lamerand, quem Consociationis apostolicae ",
-      "date": "1919-10-30",
-      "category": "EPISTOLAE",
-      "incipit": "Te nuper",
-      "reason": "header-mismatch",
-      "candidates": [
-        12
-      ]
-    },
-    {
-      "key": "1919-10|EPISTOLAE|Officia pietatis|Ad Petrum S. R. E. card. La Fontaine, patriarcham Venetiarum",
-      "date": "1919-10",
-      "category": "EPISTOLAE",
-      "incipit": "Officia pietatis",
-      "reason": "header-mismatch",
-      "candidates": [
-        12
-      ]
-    },
-    {
-      "key": "1919-11-10|EPISTOLAE|Con viva soddisfazione|Ad R. P. Octavium Marchetti, S. I. : de schola theologiae as",
-      "date": "1919-11-10",
-      "category": "EPISTOLAE",
-      "incipit": "Con viva soddisfazione",
-      "reason": "header-mismatch",
-      "candidates": [
-        29
-      ]
-    },
-    {
       "key": "1919-11-10|EPISTOLAE|Opportune admodum|Ad RR. PP. DD. Hieronymum, archiepiscopum S. Salvatoris in B",
       "date": "1919-11-10",
       "category": "EPISTOLAE",
@@ -452,26 +482,6 @@
       "reason": "no-incipit"
     },
     {
-      "key": "1920-04|EPISTOLAE|Quamquam satis|Ad R. D. Aloisium Orione, Parvi Operis a divina Providentia ",
-      "date": "1920-04",
-      "category": "EPISTOLAE",
-      "incipit": "Quamquam satis",
-      "reason": "header-mismatch",
-      "candidates": [
-        325
-      ]
-    },
-    {
-      "key": "1920-05-13|LITTERAE DECRETALES|Ecclesiae consuetudo|B. Margaritae Mariae Alacoque, virgini, moniali a Visitation",
-      "date": "1920-05-13",
-      "category": "LITTERAE DECRETALES",
-      "incipit": "Ecclesiae consuetudo",
-      "reason": "header-mismatch",
-      "candidates": [
-        486
-      ]
-    },
-    {
       "key": "1920-05-13|LITTERAE DECRETALES|Non sine proviolentissimo|B. Gabriel a Virgine perdolente, clericus professus e Congre",
       "date": "1920-05-13",
       "category": "LITTERAE DECRETALES",
@@ -530,16 +540,6 @@
       "reason": "header-mismatch",
       "candidates": [
         431
-      ]
-    },
-    {
-      "key": "1920-06|EPISTOLAE|Quae Mutinam|Ad RR. PP. DD. Natalem, archiepiscopum Mutinensem, Guidonem ",
-      "date": "1920-06",
-      "category": "EPISTOLAE",
-      "incipit": "Quae Mutinam",
-      "reason": "header-mismatch",
-      "candidates": [
-        289
       ]
     },
     {

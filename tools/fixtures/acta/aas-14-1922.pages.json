@@ -4,6 +4,16 @@
   "text": "~/development/sources/AAS/txt/aas-14-1922.txt (774 pages)",
   "rows": [
     {
+      "key": "1921-11-14|EPISTOLAE|Con particolare soddisfazione|Ad virum principem Camillum Franciscum Massimo: de solemniis",
+      "date": "1921-11-14",
+      "category": "EPISTOLAE",
+      "incipit": "Con particolare soddisfazione",
+      "page": 152,
+      "rule": "unique",
+      "bodyLine": "Con particolare soddisfazione del Nostro animo abbiamo appreso",
+      "header": "Acta Apostoìieae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1921-11-14|EPISTOLAE|Maximus ille|Ad R. P. D. Ioannem Gamberoni, archiepiscopum Vercellensium ",
       "date": "1921-11-14",
       "category": "EPISTOLAE",
@@ -42,6 +52,16 @@
       "rule": "unique",
       "bodyLine": "Dilecte fili Noster, salutem et apostolicam benedictionem. — Datis",
       "header": "Acta Benedicti PP. XV 153"
+    },
+    {
+      "key": "1922-03-08|LITTERAE APOSTOLICAE|Apostolatus officium|Novi efformantur vicariatus apostolici de Kansù orientali et",
+      "date": "1922-03-08",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Apostolatus officium",
+      "page": 222,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Apostolatus officium commissum",
+      "header": "Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1922-03-11|LITTERAE APOSTOLICAE|Cum, sicuti accepimus|Pia Consociatio </ a choris marianis » in Urbe indulgentiis ",
@@ -162,6 +182,26 @@
       "rule": "unique",
       "bodyLine": "Ad perpetuam rei memoriam. — Exigit apostolicum munus, quo",
       "header": "Acta Pii PP. XI 373"
+    },
+    {
+      "key": "1922-04-30|EPISTOLAE|Cum optatis|Ad Emum P.D. Augustinum, tit. Sanctae Mariae in Via, S. R. E",
+      "date": "1922-04-30",
+      "category": "EPISTOLAE",
+      "incipit": "Cum optatis",
+      "page": 341,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili Noster, salutem et apostolicam benedictionem. — Cum",
+      "header": "Acta Pii PP. XI Sii"
+    },
+    {
+      "key": "1922-04|EPISTOLAE|Cum, divinae Providentiae|Ad R. P. D. Anselmum Rizzi, episcopum Adriensem, quintum ac ",
+      "date": "1922-04",
+      "category": "EPISTOLAE",
+      "incipit": "Cum, divinae Providentiae",
+      "page": 226,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Cum,",
+      "header": "Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1922-04|EPISTOLAE|In eam|Ad R. P. D. Paschalem Gagliardi, archiepiscopum Sypontinum, ",
@@ -414,6 +454,16 @@
       "header": "584 Acta Apostolicae Sedis, - Commentarium Officiale"
     },
     {
+      "key": "1922-10-30|EPISTOLAE|Laetum sane|Ad R. P. D. Iosephum Schrembs, episcopum Clevelandensem : se",
+      "date": "1922-10-30",
+      "category": "EPISTOLAE",
+      "incipit": "Laetum sane",
+      "page": 641,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Laetum sane nuncium abs te dudum accepimus, proxime scilicet annum",
+      "header": "Acta PU PP. XI m"
+    },
+    {
       "key": "1922-12-11|SACRUM CONSISTORIUM|Consistorium secretum|Camerariatus Sacri Collegii",
       "date": "1922-12-11",
       "category": "SACRUM CONSISTORIUM",
@@ -422,6 +472,16 @@
       "rule": "unique",
       "bodyLine": "Consistorium secretum, cuius acta ex ordine referuntur:",
       "header": "Amuis XIV - Vol. XIV 15 Decembris 1922 Num. 17"
+    },
+    {
+      "key": "1922-12-14|SACRUM CONSISTORIUM|Consistorium publicum|Traditio rubri galeri Erais Cardinalibus Consistorium secret",
+      "date": "1922-12-14",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": "Consistorium publicum",
+      "page": 621,
+      "rule": "unique",
+      "bodyLine": "Consistorium publicum, in quo Ssmus Dnus Noster Purpuratorum Patrum",
+      "header": "Acta Pii PF. XI mi"
     }
   ],
   "unrecovered": [
@@ -433,16 +493,6 @@
       "reason": "outside-runs",
       "candidates": [
         7
-      ]
-    },
-    {
-      "key": "1921-11-14|EPISTOLAE|Con particolare soddisfazione|Ad virum principem Camillum Franciscum Massimo: de solemniis",
-      "date": "1921-11-14",
-      "category": "EPISTOLAE",
-      "incipit": "Con particolare soddisfazione",
-      "reason": "header-mismatch",
-      "candidates": [
-        152
       ]
     },
     {
@@ -543,16 +593,6 @@
       "reason": "no-incipit"
     },
     {
-      "key": "1922-03-08|LITTERAE APOSTOLICAE|Apostolatus officium|Novi efformantur vicariatus apostolici de Kansù orientali et",
-      "date": "1922-03-08",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Apostolatus officium",
-      "reason": "header-mismatch",
-      "candidates": [
-        222
-      ]
-    },
-    {
       "key": "1922-04-25|EPISTOLAE|Quandoquidem|Ad Emos PP. DD. Gulielmum, tit. Sancti Clementis, S. R. E. c",
       "date": "1922-04-25",
       "category": "EPISTOLAE",
@@ -561,26 +601,6 @@
       "candidates": [
         390,
         423
-      ]
-    },
-    {
-      "key": "1922-04-30|EPISTOLAE|Cum optatis|Ad Emum P.D. Augustinum, tit. Sanctae Mariae in Via, S. R. E",
-      "date": "1922-04-30",
-      "category": "EPISTOLAE",
-      "incipit": "Cum optatis",
-      "reason": "header-mismatch",
-      "candidates": [
-        341
-      ]
-    },
-    {
-      "key": "1922-04|EPISTOLAE|Cum, divinae Providentiae|Ad R. P. D. Anselmum Rizzi, episcopum Adriensem, quintum ac ",
-      "date": "1922-04",
-      "category": "EPISTOLAE",
-      "incipit": "Cum, divinae Providentiae",
-      "reason": "header-mismatch",
-      "candidates": [
-        226
       ]
     },
     {
@@ -666,16 +686,6 @@
       "reason": "none"
     },
     {
-      "key": "1922-10-30|EPISTOLAE|Laetum sane|Ad R. P. D. Iosephum Schrembs, episcopum Clevelandensem : se",
-      "date": "1922-10-30",
-      "category": "EPISTOLAE",
-      "incipit": "Laetum sane",
-      "reason": "header-mismatch",
-      "candidates": [
-        641
-      ]
-    },
-    {
       "key": "1922-10|EPISTOLAE|Peculiari|Ad R. P. D. Aloisium Hickey, episcopum Providentiensem, quin",
       "date": "1922-10",
       "category": "EPISTOLAE",
@@ -694,16 +704,6 @@
       "category": "SACRUM CONSISTORIUM",
       "incipit": null,
       "reason": "no-incipit"
-    },
-    {
-      "key": "1922-12-14|SACRUM CONSISTORIUM|Consistorium publicum|Traditio rubri galeri Erais Cardinalibus Consistorium secret",
-      "date": "1922-12-14",
-      "category": "SACRUM CONSISTORIUM",
-      "incipit": "Consistorium publicum",
-      "reason": "header-mismatch",
-      "candidates": [
-        621
-      ]
     }
   ]
 }

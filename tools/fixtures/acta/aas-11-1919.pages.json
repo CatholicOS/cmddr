@@ -94,6 +94,16 @@
       "header": "Acta Benedicti PP. XV 71"
     },
     {
+      "key": "1919-02-13|CONSTITUTIONES APOSTOLICAE|Catholici fideles|Erectio novae dioecesis graeci ritus « Lungrensis » nuncupat",
+      "date": "1919-02-13",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Catholici fideles",
+      "page": 222,
+      "rule": "unique",
+      "bodyLine": "Catholici fideles graeci ritus, incolae Epiri et Albaniae, a Turcica",
+      "header": "Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1919-02-14|EPISTOLAE|Mirifice|Ad R. P. Reginaldum Garrigou-Lagrange, ex Ordine Praedicator",
       "date": "1919-02-14",
       "category": "EPISTOLAE",
@@ -123,6 +133,26 @@
       "bodyLine": "Nuper ex Venerabilis Fratris Patriarchae Hierosolymitani",
       "header": "108 Acta Apostolicae Sedis - Commentarium Officiale",
       "formula": "Datum Romae apud sanctum Petrum, die xi martii, anno mcmxix, Pontificatus Nostri quinto. BENEDICTUS PP. XV LITTERAE APOSTOLICAE CONSOCIATIONI DOMINAE NOSTRAE A SALUTE PARISIIS CANONICE ERECTAE INDULGE"
+    },
+    {
+      "key": "1919-03-12|EPISTOLAE|Multiplices quidem|Ad Ioannem S. R. E. card. Csernoch, archiepiscopum Strigonie",
+      "date": "1919-03-12",
+      "category": "EPISTOLAE",
+      "incipit": "Multiplices quidem",
+      "page": 122,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili Noster, salutem et apostolicam benedictionem. — Multiplices quidem anxietates tam crudele tamque diuturnum bellum Nobis",
+      "header": "m Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1919-03-20|EPISTOLAE|Quae Pompeios|Ad RR. PP. DD. Carolum Gregorium Mariam Grasso, archiepiscop",
+      "date": "1919-03-20",
+      "category": "EPISTOLAE",
+      "incipit": "Quae Pompeios",
+      "page": 264,
+      "rule": "unique",
+      "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem. — Quae",
+      "header": "Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1919-04-10|EPISTOLAE|Communes litteras|Ad Iacobum S. R. E. card. Gibbons, archiepiscopum Baltimoren",
@@ -235,6 +265,16 @@
       "header": "Acta Benedicti PP. XV 307"
     },
     {
+      "key": "1919-06|EPISTOLAE|In his rerum angustiis|Ad R. D. Ioannem Praschl, canonicum Budovicensem, Marialis C",
+      "date": "1919-06",
+      "category": "EPISTOLAE",
+      "incipit": "In his rerum angustiis",
+      "page": 274,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — In his rerum",
+      "header": "m Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1919-06|LITTERAE APOSTOLICAE|Cum ex Apostolico munere|Metropolitanae ecclesiae Gorcyrensi uniuntur Sedes Zacynthie",
       "date": "1919-06",
       "category": "LITTERAE APOSTOLICAE",
@@ -314,36 +354,6 @@
       "reason": "none"
     },
     {
-      "key": "1919-02-13|CONSTITUTIONES APOSTOLICAE|Catholici fideles|Erectio novae dioecesis graeci ritus « Lungrensis » nuncupat",
-      "date": "1919-02-13",
-      "category": "CONSTITUTIONES APOSTOLICAE",
-      "incipit": "Catholici fideles",
-      "reason": "header-mismatch",
-      "candidates": [
-        222
-      ]
-    },
-    {
-      "key": "1919-03-12|EPISTOLAE|Multiplices quidem|Ad Ioannem S. R. E. card. Csernoch, archiepiscopum Strigonie",
-      "date": "1919-03-12",
-      "category": "EPISTOLAE",
-      "incipit": "Multiplices quidem",
-      "reason": "header-mismatch",
-      "candidates": [
-        122
-      ]
-    },
-    {
-      "key": "1919-03-20|EPISTOLAE|Quae Pompeios|Ad RR. PP. DD. Carolum Gregorium Mariam Grasso, archiepiscop",
-      "date": "1919-03-20",
-      "category": "EPISTOLAE",
-      "incipit": "Quae Pompeios",
-      "reason": "header-mismatch",
-      "candidates": [
-        264
-      ]
-    },
-    {
       "key": "1919-03|LITTERAE APOSTOLICAE|Illustriores|Ecclesia Rothomagensis B. M. Virginis a Bono Succursu titulo",
       "date": "1919-03",
       "category": "LITTERAE APOSTOLICAE",
@@ -352,16 +362,6 @@
       "candidates": [
         226,
         371
-      ]
-    },
-    {
-      "key": "1919-06|EPISTOLAE|In his rerum angustiis|Ad R. D. Ioannem Praschl, canonicum Budovicensem, Marialis C",
-      "date": "1919-06",
-      "category": "EPISTOLAE",
-      "incipit": "In his rerum angustiis",
-      "reason": "header-mismatch",
-      "candidates": [
-        274
       ]
     },
     {

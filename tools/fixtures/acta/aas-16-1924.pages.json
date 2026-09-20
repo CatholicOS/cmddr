@@ -34,6 +34,16 @@
       "header": "38 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
+      "key": "1923-11-20|EPISTOLAE|Quam animi|Ad B. P. D. Carolum Cox, Episcopum tit. Dioclensem, Vicarium",
+      "date": "1923-11-20",
+      "category": "EPISTOLAE",
+      "incipit": "Quam animi",
+      "page": 42,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Quam",
+      "header": "Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1923-11-26|LITTERAE APOSTOLICAE|Quae catholico nomini|Dismembrato territorio e vicariatu apostolico de Kimberley, ",
       "date": "1923-11-26",
       "category": "LITTERAE APOSTOLICAE",
@@ -86,6 +96,16 @@
       "header": "Acta PU PP. XI 39"
     },
     {
+      "key": "1923-12-04|LITTERAE APOSTOLICAE|Anno reparatae|Indulgentiae, privilegia et titulus Basilicae minoris conced",
+      "date": "1923-12-04",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Anno reparatae",
+      "page": 182,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Anno reparatae salutis MXXIV Henricus II, Sacri Romani Imperii Caesar, mortalem vitam cum immortali",
+      "header": "m Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1923-12-04|LITTERAE APOSTOLICAE|Praeclarissimas inter|Paroecialis ecclesia Beatae Mariae Virginis, vulgo «Marija B",
       "date": "1923-12-04",
       "category": "LITTERAE APOSTOLICAE",
@@ -104,6 +124,16 @@
       "rule": "unique",
       "bodyLine": "Ad futuram rei memoriam. — Quo christiani gregis bono atque incolumitati satius consultum sit, Romanorum Pontificum decessorum Nostrorum vestigiis insistentes, longinquis in missionibus Pastorum numerum",
       "header": "Aeta Pii PP. XI 35"
+    },
+    {
+      "key": "1923-12-27|LITTERAE APOSTOLICAE|Ad maiorem Dei gloriam|Ex dismembratione vicariatus de Fo-kien, cui in posterum nom",
+      "date": "1923-12-27",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ad maiorem Dei gloriam",
+      "page": 82,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Ad maiorem Dei gloriam ehristianaeque",
+      "header": "Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1923-12-27|LITTERAE APOSTOLICAE|Cum propagationi|Dismembrato territorio ex praefectura apostolica Sumatrae, i",
@@ -216,6 +246,26 @@
       "header": "86 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
+      "key": "1924-01|EPISTOLAE|Quae est|Ad R. P. D. Iosephum Guérard, Episcopum Constantiensem: xxv ",
+      "date": "1924-01",
+      "category": "EPISTOLAE",
+      "incipit": "Quae est",
+      "page": 88,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Quae est",
+      "header": "Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1924-01|EPISTOLAE|Quod paene nulli|Ad R. P. D. Franciscum Mariam Redwood, Archiepiscopum Wellin",
+      "date": "1924-01",
+      "category": "EPISTOLAE",
+      "incipit": "Quod paene nulli",
+      "page": 49,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Quod",
+      "header": "AcU Pii PP. XÍ"
+    },
+    {
       "key": "1924-01|LITTERAE APOSTOLICAE|Ad oras|Titulus basilicae minoris pro curiali templo S. Petri Aposto",
       "date": "1924-01",
       "category": "LITTERAE APOSTOLICAE",
@@ -266,6 +316,36 @@
       "header": "Acta Pii PP. XI 219"
     },
     {
+      "key": "1924-02|LITTERAE APOSTOLICAE|Exstat in civitate|Titulo ac privilegiis basilicae minoris honestatur sanctuari",
+      "date": "1924-02",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Exstat in civitate",
+      "page": 152,
+      "rule": "unique",
+      "bodyLine": "Act perpetuam rei memoriam. — Exstat in civitate Verdelais, intra",
+      "header": "Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1924-03-25|LITTERAE APOSTOLICAE|Pontificium opus|Indulgentiae, privilegia et f acuìtates spirituales tribuunt",
+      "date": "1924-03-25",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Pontificium opus",
+      "page": 220,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Pontificium opus a Propagatione",
+      "header": "Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1924-03-26|EPISTOLAE|Tam praeclara|Ad Emum P. D. Desideratum, tit. S. Petri in Vinculis, S. B. ",
+      "date": "1924-03-26",
+      "category": "EPISTOLAE",
+      "incipit": "Tam praeclara",
+      "page": 225,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili Noster, salutem et apostolicam benedictionem. — Tam",
+      "header": "Acta Pii PP. XI"
+    },
+    {
       "key": "1924-03|EPISTOLA APOSTOLICA|Unigenitus Dei Filius|Ad summos Moderatores Ordinum Regularium aliarumque sodalita",
       "date": "1924-03",
       "category": "EPISTOLA APOSTOLICA",
@@ -294,6 +374,26 @@
       "rule": "unique",
       "bodyLine": "Dilecte fili Noster, salutem et apostolicam benedictionem. — Institutum novum, gregorianis concentibus altius excolendis, te, haud ita",
       "header": "Acta Pii PP. XI 185"
+    },
+    {
+      "key": "1924-04-12|EPISTOLAE|Linciae, in urbe|Ad Emum P. D. Andream, tit. Sanctorum Cosmae et Damiani S. B",
+      "date": "1924-04-12",
+      "category": "EPISTOLAE",
+      "incipit": "Linciae, in urbe",
+      "page": 228,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili Noster, salutem et apostolicam benedictionem. — Linciae,",
+      "header": "2|8 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1924-04-15|EPISTOLAE|Litterae, quas|Ad B. P. D. Guilelmum Turner, Episcopum Buffalensem: de dioe",
+      "date": "1924-04-15",
+      "category": "EPISTOLAE",
+      "incipit": "Litterae, quas",
+      "page": 229,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Litterae,",
+      "header": "Acta Pii PP. XI"
     },
     {
       "key": "1924-04-15|LITTERAE APOSTOLICAE|Ex hac sublimi|Ex dismembratione vicariatuum apostolicorum de Ce-li Central",
@@ -325,6 +425,16 @@
       "bodyLine": "Civilibus inter Aequatorianam et Columbianam rempublicam nunc vigentibus continetur. Ex hac vero parte territorii, sic a Napensi vicariatu",
       "header": "270 Acta Apostolicae Sedis - Commentarium Officiale",
       "formula": "Datum Romae apud Sanctum Petrum, sub anulo Piscatoris, die xvi mensis aprilis, anno MDCCCCXXIV, Pontificatus Nostri tertio. P. CARD. GASPARRI, a Secretis Status. V PRAEFECTURA APOSTOLICA DE UELLÉ ORIE"
+    },
+    {
+      "key": "1924-04|EPISTOLAE|Quantopere intersit|Ad Emum P. D. Caietanum episc. Sabinensem, S. B. E. Card. De",
+      "date": "1924-04",
+      "category": "EPISTOLAE",
+      "incipit": "Quantopere intersit",
+      "page": 227,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater Noster, salutem et apostolicam benedictionem. —",
+      "header": "Acta Pii PP. XI"
     },
     {
       "key": "1924-05-04|EPISTOLAE|Inter alia|Ad Emum P. D. Basilium, Episcopum Veliternum, S. E. E. Card.",
@@ -425,6 +535,16 @@
       "rule": "unique",
       "bodyLine": "Ad perpetuam rei memoriam. — Ecclesia conlegiata Deo dicata in",
       "header": "Annus XVI - Vol. XVI 1 Septembris 192é Num. 9"
+    },
+    {
+      "key": "1924-06|EPISTOLAE|De catholicis Germaniae|Ad egregium virum Hermannum Stolberg, praesidem Consilii gen",
+      "date": "1924-06",
+      "category": "EPISTOLAE",
+      "incipit": "De catholicis Germaniae",
+      "page": 275,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — De catholicis",
+      "header": "Acta Pii PP. XI S75"
     },
     {
       "key": "1924-06|EPISTOLAE|Insuetum|Ad Rev. D. Constantinum Gutberlet, doctorem, protonotarium a",
@@ -656,31 +776,11 @@
       "reason": "no-incipit"
     },
     {
-      "key": "1923-11-20|EPISTOLAE|Quam animi|Ad B. P. D. Carolum Cox, Episcopum tit. Dioclensem, Vicarium",
-      "date": "1923-11-20",
-      "category": "EPISTOLAE",
-      "incipit": "Quam animi",
-      "reason": "header-mismatch",
-      "candidates": [
-        42
-      ]
-    },
-    {
       "key": "1923-11|EPISTOLAE|Quas, eum Episcopis|Ad E. P. D. Natalem Bruni, Archiepiscopum Mutinensem, eumdem",
       "date": "1923-11",
       "category": "EPISTOLAE",
       "incipit": "Quas, eum Episcopis",
       "reason": "none"
-    },
-    {
-      "key": "1923-12-04|LITTERAE APOSTOLICAE|Anno reparatae|Indulgentiae, privilegia et titulus Basilicae minoris conced",
-      "date": "1923-12-04",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Anno reparatae",
-      "reason": "header-mismatch",
-      "candidates": [
-        182
-      ]
     },
     {
       "key": "1923-12-11|LITTERAE APOSTOLICAE|Quae catholico nomini|Praefectura apostolica de Zululand, novis aucta finibus, in ",
@@ -701,16 +801,6 @@
       "reason": "no-incipit"
     },
     {
-      "key": "1923-12-27|LITTERAE APOSTOLICAE|Ad maiorem Dei gloriam|Ex dismembratione vicariatus de Fo-kien, cui in posterum nom",
-      "date": "1923-12-27",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Ad maiorem Dei gloriam",
-      "reason": "header-mismatch",
-      "candidates": [
-        82
-      ]
-    },
-    {
       "key": "1923-12|EPISTOLAE|Non una|Ad B. P. D. Natalem Bruni, Archiepiscopum Mutinensem: de nov",
       "date": "1923-12",
       "category": "EPISTOLAE",
@@ -727,36 +817,6 @@
       "category": "LITTERAE APOSTOLICAE",
       "incipit": "Vt, aucto Pastorum",
       "reason": "none"
-    },
-    {
-      "key": "1924-01|EPISTOLAE|Quae est|Ad R. P. D. Iosephum Guérard, Episcopum Constantiensem: xxv ",
-      "date": "1924-01",
-      "category": "EPISTOLAE",
-      "incipit": "Quae est",
-      "reason": "header-mismatch",
-      "candidates": [
-        88
-      ]
-    },
-    {
-      "key": "1924-01|EPISTOLAE|Quod paene nulli|Ad R. P. D. Franciscum Mariam Redwood, Archiepiscopum Wellin",
-      "date": "1924-01",
-      "category": "EPISTOLAE",
-      "incipit": "Quod paene nulli",
-      "reason": "header-mismatch",
-      "candidates": [
-        49
-      ]
-    },
-    {
-      "key": "1924-02|LITTERAE APOSTOLICAE|Exstat in civitate|Titulo ac privilegiis basilicae minoris honestatur sanctuari",
-      "date": "1924-02",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Exstat in civitate",
-      "reason": "header-mismatch",
-      "candidates": [
-        152
-      ]
     },
     {
       "key": "1924-03-17|LITTERAE APOSTOLICAE|Inter potiora|Sanctuarium Beatae Mariae Virginis « de l'Osier », intra fin",
@@ -808,26 +868,6 @@
       ]
     },
     {
-      "key": "1924-03-25|LITTERAE APOSTOLICAE|Pontificium opus|Indulgentiae, privilegia et f acuìtates spirituales tribuunt",
-      "date": "1924-03-25",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Pontificium opus",
-      "reason": "header-mismatch",
-      "candidates": [
-        220
-      ]
-    },
-    {
-      "key": "1924-03-26|EPISTOLAE|Tam praeclara|Ad Emum P. D. Desideratum, tit. S. Petri in Vinculis, S. B. ",
-      "date": "1924-03-26",
-      "category": "EPISTOLAE",
-      "incipit": "Tam praeclara",
-      "reason": "header-mismatch",
-      "candidates": [
-        225
-      ]
-    },
-    {
       "key": "1924-03-27|EPISTOLAE||Assignatio titulorum",
       "date": "1924-03-27",
       "category": "EPISTOLAE",
@@ -856,26 +896,6 @@
       "reason": "no-incipit"
     },
     {
-      "key": "1924-04-12|EPISTOLAE|Linciae, in urbe|Ad Emum P. D. Andream, tit. Sanctorum Cosmae et Damiani S. B",
-      "date": "1924-04-12",
-      "category": "EPISTOLAE",
-      "incipit": "Linciae, in urbe",
-      "reason": "header-mismatch",
-      "candidates": [
-        228
-      ]
-    },
-    {
-      "key": "1924-04-15|EPISTOLAE|Litterae, quas|Ad B. P. D. Guilelmum Turner, Episcopum Buffalensem: de dioe",
-      "date": "1924-04-15",
-      "category": "EPISTOLAE",
-      "incipit": "Litterae, quas",
-      "reason": "header-mismatch",
-      "candidates": [
-        229
-      ]
-    },
-    {
       "key": "1924-04-18|EPISTOLAE|Nikil profecto|Ad Emum P. D. Orestem, tit. S. Mariae in Cosmedin, S. B. E. ",
       "date": "1924-04-18",
       "category": "EPISTOLAE",
@@ -898,16 +918,6 @@
       ]
     },
     {
-      "key": "1924-04|EPISTOLAE|Quantopere intersit|Ad Emum P. D. Caietanum episc. Sabinensem, S. B. E. Card. De",
-      "date": "1924-04",
-      "category": "EPISTOLAE",
-      "incipit": "Quantopere intersit",
-      "reason": "header-mismatch",
-      "candidates": [
-        227
-      ]
-    },
-    {
       "key": "1924-05|EPISTOLAE||Quandoquidem pro Apostolicae - Ad Emum P. D. Aloisium diacon",
       "date": "1924-05",
       "category": "EPISTOLAE",
@@ -920,16 +930,6 @@
       "category": "EPISTOLAE",
       "incipit": "Conditam a te",
       "reason": "none"
-    },
-    {
-      "key": "1924-06|EPISTOLAE|De catholicis Germaniae|Ad egregium virum Hermannum Stolberg, praesidem Consilii gen",
-      "date": "1924-06",
-      "category": "EPISTOLAE",
-      "incipit": "De catholicis Germaniae",
-      "reason": "header-mismatch",
-      "candidates": [
-        275
-      ]
     },
     {
       "key": "1924-06|LITTERAE APOSTOLICAE|Inter potiora|Titulus Basilicae minoris pro sanctuario Mariascheinensi Bea",

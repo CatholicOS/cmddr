@@ -64,6 +64,16 @@
       "header": "Annus IV. - Vol. IV. Die 15 Ianuarii 191J Num. 1."
     },
     {
+      "key": "1912-01-15|LITTERAE APOSTOLICAE|Catholici Orbis|Titulus Basilicae minoris pro vetustissimo templo parochiali",
+      "date": "1912-01-15",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Catholici Orbis",
+      "page": 50,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Catholici Orbis praestantiora templa , quae vel molis amplitudine et insignibus artis monumentis, vel",
+      "header": "bO Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
       "key": "1912-01-15|LITTERAE APOSTOLICAE|Pias christianorum|Sodalitas sanctissimi Rosarii canonice instituta in oppido «",
       "date": "1912-01-15",
       "category": "LITTERAE APOSTOLICAE",
@@ -204,6 +214,16 @@
       "header": "Acta PU PP. X. 265"
     },
     {
+      "key": "1912-03|LITTERAE APOSTOLICAE|Sacras et praeclaras|Erectio in Basilicam minorem templi Ss. Ferreolo et Ferrutio",
+      "date": "1912-03",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Sacras et praeclaras",
+      "page": 210,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Sacras et praeclaras Aedes, quae",
+      "header": "aio Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
       "key": "1912-03|LITTERAE APOSTOLICAE|Societates fidelium|Conceduntur peculiaria privilegia piae Unioni pro communione",
       "date": "1912-03",
       "category": "LITTERAE APOSTOLICAE",
@@ -334,6 +354,16 @@
       "header": "Acta Pii PP. X. 441"
     },
     {
+      "key": "1912-05|EPISTOLAE|Quamquam te|Ad R. D. Iosephum Fagnano, e pia Societate S. Francisci Sale",
+      "date": "1912-05",
+      "category": "EPISTOLAE",
+      "incipit": "Quamquam te",
+      "page": 402,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Quamquam",
+      "header": "Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
       "key": "1912-06-07|LITTERAE ENCYCLICAE|Lacrimabili statu|Ad Archiepiscopos et Episcopos Americae Latinae de misera In",
       "date": "1912-06-07",
       "category": "LITTERAE ENCYCLICAE",
@@ -352,6 +382,16 @@
       "rule": "unique",
       "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Dies",
       "header": "490 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1912-06-21|EPISTOLAE|Auspicia rerum|Ad V. E. Andream Card. Ferrari, Archiepiscopum Mediolanensem",
+      "date": "1912-06-21",
+      "category": "EPISTOLAE",
+      "incipit": "Auspicia rerum",
+      "page": 527,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Auspicia rerum secunda vobis portendere iure visa",
+      "header": "Acta Pii PP. X."
     },
     {
       "key": "1912-06-24|EPISTOLAE|Vestram non sine|Ad V. E. Iulium Card. Boschi, Archiepiscopum Ferrariensem, c",
@@ -514,6 +554,16 @@
       "header": "620 Acta Apostolicae Sedis. - Commentarium Officiale."
     },
     {
+      "key": "1912-09-12|EPISTOLAE|Antequam dioecesanam synodum|Ad R. P. D. Franciscum Ciceri, Episcopum Papiensem, ob synod",
+      "date": "1912-09-12",
+      "category": "EPISTOLAE",
+      "incipit": "Antequam dioecesanam synodum",
+      "page": 621,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Antequam dioecesanam synodum convocares, per litteras manu Nostra scriptas animum tuum confirmavimus humilesque preces Nostras de rei",
+      "header": "Acta Pii PP. X. mi"
+    },
+    {
       "key": "1912-09-12|EPISTOLAE|E litteris|Ad RR. PP. DD. Carolum Castelli Archiepiscopum Firmanum, Cam",
       "date": "1912-09-12",
       "category": "EPISTOLAE",
@@ -638,16 +688,6 @@
       ]
     },
     {
-      "key": "1912-01-15|LITTERAE APOSTOLICAE|Catholici Orbis|Titulus Basilicae minoris pro vetustissimo templo parochiali",
-      "date": "1912-01-15",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Catholici Orbis",
-      "reason": "header-mismatch",
-      "candidates": [
-        50
-      ]
-    },
-    {
       "key": "1912-02-12|EPISTOLAE|Pergratum Nos scito|Ad R. P. Aloisium Yabar, S. L, Urbani pontificii Collegii Pi",
       "date": "1912-02-12",
       "category": "EPISTOLAE",
@@ -659,41 +699,11 @@
       ]
     },
     {
-      "key": "1912-03|LITTERAE APOSTOLICAE|Sacras et praeclaras|Erectio in Basilicam minorem templi Ss. Ferreolo et Ferrutio",
-      "date": "1912-03",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Sacras et praeclaras",
-      "reason": "header-mismatch",
-      "candidates": [
-        210
-      ]
-    },
-    {
-      "key": "1912-05|EPISTOLAE|Quamquam te|Ad R. D. Iosephum Fagnano, e pia Societate S. Francisci Sale",
-      "date": "1912-05",
-      "category": "EPISTOLAE",
-      "incipit": "Quamquam te",
-      "reason": "header-mismatch",
-      "candidates": [
-        402
-      ]
-    },
-    {
       "key": "1912-06-08|APOSTOLICAE SUB PLUMBO LITTERAE|Christifideles graeci rihis|Erectio dioecesis Hajdu-Doroghensis ritus graeci catholici i",
       "date": "1912-06-08",
       "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
       "incipit": "Christifideles graeci rihis",
       "reason": "none"
-    },
-    {
-      "key": "1912-06-21|EPISTOLAE|Auspicia rerum|Ad V. E. Andream Card. Ferrari, Archiepiscopum Mediolanensem",
-      "date": "1912-06-21",
-      "category": "EPISTOLAE",
-      "incipit": "Auspicia rerum",
-      "reason": "header-mismatch",
-      "candidates": [
-        527
-      ]
     },
     {
       "key": "1912-08-10|EPISTOLAE|Per grato te|Ad Rev. P. Iosephum Gredt, Ordinis sancti Benedicti, ob eius",
@@ -708,16 +718,6 @@
       "category": "LITTERAE APOSTOLICAE",
       "incipit": "Cum sit Nobis",
       "reason": "none"
-    },
-    {
-      "key": "1912-09-12|EPISTOLAE|Antequam dioecesanam synodum|Ad R. P. D. Franciscum Ciceri, Episcopum Papiensem, ob synod",
-      "date": "1912-09-12",
-      "category": "EPISTOLAE",
-      "incipit": "Antequam dioecesanam synodum",
-      "reason": "header-mismatch",
-      "candidates": [
-        621
-      ]
     },
     {
       "key": "1912-09-12|EPISTOLAE|Te propediem|Ad R. P. D. Ioannem Cutbbertum Hedley, Neoportensium Episcop",

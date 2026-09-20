@@ -94,6 +94,16 @@
       "header": "Annus VIII - Vol. VIII Die 5 Maii 1916 Num. 5"
     },
     {
+      "key": "1916-04-19|EPISTOLAE|Altero iam exeunte saeculo|Ad R. D. Antonium Lhoumeau, societatis Mariae et Filiarum a ",
+      "date": "1916-04-19",
+      "category": "EPISTOLAE",
+      "incipit": "Altero iam exeunte saeculo",
+      "page": 172,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Altero iam",
+      "header": "m Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1916-04-27|LITTERAE APOSTOLICAE|Cum divinus Redemptor|Oratio quaedam ad S. Petrum, Apostolorum Principem, indulgen",
       "date": "1916-04-27",
       "category": "LITTERAE APOSTOLICAE",
@@ -144,6 +154,16 @@
       "header": "218 ' Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
+      "key": "1916-06|EPISTOLAE|Cum ex apostolico officio|Ad R. D. Amadeum Guizzoni, canonicum theologum Piacentinum :",
+      "date": "1916-06",
+      "category": "EPISTOLAE",
+      "incipit": "Cum ex apostolico officio",
+      "page": 220,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Cum ex apostolico officio Nostrum praecipue sit laborare et efficere ut quae Christus",
+      "header": "<m Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1916-07-15|LITTERAE APOSTOLICAE|Romanorum Pontificum|Templum S. Mariae vulgo «di Pozzano», apud Stabiam seu Castr",
       "date": "1916-07-15",
       "category": "LITTERAE APOSTOLICAE",
@@ -172,6 +192,16 @@
       "rule": "unique",
       "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Venerabilis Frater Titus, Archiepiscopus tit. Lacedaemoniensis, Noster apud",
       "header": "Acta Benedicti BB. XV 355"
+    },
+    {
+      "key": "1916-07|EPISTOLAE|A dilecto Filio|Ad R. D. Aloisium Jauch scribens, pium opus a S. Francisco S",
+      "date": "1916-07",
+      "category": "EPISTOLAE",
+      "incipit": "A dilecto Filio",
+      "page": 262,
+      "rule": "unique",
+      "bodyLine": "Dilecti Filii, salutem et apostolicam benedictionem. — A dilecto Filio",
+      "header": "Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1916-07|EPISTOLAE|Epistolam accepimus|A.d Iulium S. R. E. presb, cardinalem Boschi, archiepiscopum",
@@ -303,16 +333,6 @@
       "reason": "none"
     },
     {
-      "key": "1916-04-19|EPISTOLAE|Altero iam exeunte saeculo|Ad R. D. Antonium Lhoumeau, societatis Mariae et Filiarum a ",
-      "date": "1916-04-19",
-      "category": "EPISTOLAE",
-      "incipit": "Altero iam exeunte saeculo",
-      "reason": "header-mismatch",
-      "candidates": [
-        172
-      ]
-    },
-    {
       "key": "1916-05|EPISTOLAE|Sanctum et salutare|Ad R. P. Eduardum Hugon, sodalem domicianum, doctorem decuri",
       "date": "1916-05",
       "category": "EPISTOLAE",
@@ -340,26 +360,6 @@
       "category": "EPISTOLAE",
       "incipit": "Ingravescente in dies",
       "reason": "none"
-    },
-    {
-      "key": "1916-06|EPISTOLAE|Cum ex apostolico officio|Ad R. D. Amadeum Guizzoni, canonicum theologum Piacentinum :",
-      "date": "1916-06",
-      "category": "EPISTOLAE",
-      "incipit": "Cum ex apostolico officio",
-      "reason": "header-mismatch",
-      "candidates": [
-        220
-      ]
-    },
-    {
-      "key": "1916-07|EPISTOLAE|A dilecto Filio|Ad R. D. Aloisium Jauch scribens, pium opus a S. Francisco S",
-      "date": "1916-07",
-      "category": "EPISTOLAE",
-      "incipit": "A dilecto Filio",
-      "reason": "header-mismatch",
-      "candidates": [
-        262
-      ]
     },
     {
       "key": "1916-07|EPISTOLAE|Aus. Accepimus vos|Ad R. P. D. Bernardum, archiepiscopum Bogotensem, ceterosque",

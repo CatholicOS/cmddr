@@ -230,6 +230,27 @@ describe('recoverPages', () => {
     const r2 = recoverPages([entry('1921-06-01', 'LITTERAE APOSTOLICAE', 'Quae catholico nomini')], bad, parseIndexGeneralis(bad), { lastBodyPage: 7 });
     expect(r2.unrecovered).toEqual([expect.objectContaining({ reason: 'header-mismatch', candidates: [5] })]);
   });
+  it('accepts a header that prints no digit at all (the OCR dropped the number: `Acta Pii PP. X.`), quoting it as read', () => {
+    const numberless = BODY.map((p, i) => (i === 4 ? p.replace(HEADER(5), 'Acta Benedicti PP. XV') : p));
+    const { rows, unrecovered } = recoverPages([entry('1921-06-01', 'LITTERAE APOSTOLICAE', 'Quae catholico nomini')], numberless, parseIndexGeneralis(numberless), { lastBodyPage: 7 });
+    expect(unrecovered).toEqual([]);
+    expect(rows).toEqual([expect.objectContaining({ page: 5, rule: 'unique', header: 'Acta Benedicti PP. XV' })]);
+  });
+  it('accepts a header that prints the number with one character wrong (AAS 3, 1911, p. 344: `34i Acta Apostolicae ...`), and still refuses one that prints another number', () => {
+    const header = '34i Acta Apostolicae Sedis. - Commentarium Officiale.';
+    const body = (h: string) => [
+      ...Array.from({ length: 343 }, (_, i) => `${i + 1} Acta Apostolicae Sedis. - Commentarium Officiale. \nfiller`),
+      `${h} \nAd futuram rei memoriam. — Deferendo nuper honoribus \nDatum Romae die i mensis Iunii anno MDCCCCXI.`,
+    ];
+    const g = { page: null, runs: new Map<string, [number, number][]>([['Litterae Apostolicae', [[340, 344]]]]), unmapped: [] as string[] };
+    const e = [entry('1911-06-01', 'LITTERAE APOSTOLICAE', 'Deferendo nuper')];
+    const ok = recoverPages(e, body(header), g, { lastBodyPage: 344 });
+    expect(ok.unrecovered).toEqual([]);
+    expect(ok.rows).toEqual([expect.objectContaining({ page: 344, rule: 'unique', header })]);
+    const other = recoverPages(e, body('341 Acta Apostolicae Sedis. - Commentarium Officiale.'), g, { lastBodyPage: 344 });
+    expect(other.rows).toEqual([]);
+    expect(other.unrecovered).toEqual([expect.objectContaining({ reason: 'header-mismatch', candidates: [344] })]);
+  });
   it('searches the whole pope part, and requires the dating formula, when the Index generalis has no run for the category', () => {
     const noRuns = { page: null, runs: new Map<string, [number, number][]>(), unmapped: [] as string[] };
     const { rows, unrecovered } = recoverPages([entry('1921-06-01', 'LITTERAE APOSTOLICAE', 'Quae catholico nomini'), entry('1921-01-06', 'LITTERAE ENCYCLICAE', 'Sacra propediem')], BODY, noRuns, { lastBodyPage: 7 });

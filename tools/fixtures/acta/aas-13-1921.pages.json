@@ -14,6 +14,16 @@
       "header": "Annus XIII - Toi. XIII 1 Octobris 1921 Num. 12"
     },
     {
+      "key": "1918-01-11|CONSTITUTIONES APOSTOLICAE|A multis|Dismembrationis et erectionis dioecesis Lafayettensis",
+      "date": "1918-01-11",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "A multis",
+      "page": 461,
+      "rule": "unique",
+      "bodyLine": "A multis iam annis crescente catholicorum fidelium numero in",
+      "header": "Acta Benedicti PP. XV m"
+    },
+    {
       "key": "1920-05-18|LITTERAE APOSTOLICAE|Exstat in civitate|Templum parochiale sancti Ioannis",
       "date": "1920-05-18",
       "category": "LITTERAE APOSTOLICAE",
@@ -184,6 +194,16 @@
       "header": "336 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
+      "key": "1921-02-11|LITTERAE APOSTOLICAE|Pia Societas|Ecclesia parochialis Sacratissimi Cordis Iesu ad Castrum Pra",
+      "date": "1921-02-11",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Pia Societas",
+      "page": 192,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. - Pia Societas sancti Francisci Salesii,",
+      "header": "Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1921-02-20|EPISTOLAE|Tertii Ordinis a Poenitentia|Ad R. P. Arnaldum Rigo, Tertii Ordinis Regularis S. Francisc",
       "date": "1921-02-20",
       "category": "EPISTOLAE",
@@ -283,6 +303,16 @@
       "rule": "unique",
       "bodyLine": "In praeclara summorum copia hominum, suo splendore et gloria fidem catholicam illustrandum, qui cum in",
       "header": "Annus XIII - Vol. XIII 6 Maii 1921 Num. 6"
+    },
+    {
+      "key": "1921-04|EPISTOLAE|Officii Nostri|Ad R. P. D. Marium Besson, episcopum Lausannensium et Geneve",
+      "date": "1921-04",
+      "category": "EPISTOLAE",
+      "incipit": "Officii Nostri",
+      "page": 220,
+      "rule": "unique",
+      "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem. — Officii",
+      "header": "no Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1921-05-13|LITTERAE APOSTOLICAE|Cum in archidioecesi|Erigitur nova Praefectura Apostolica « de Tierradentro », in",
@@ -415,6 +445,16 @@
       "header": "470 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
+      "key": "1921-08-10|LITTERAE APOSTOLICAE|Beatus Franciscus|Sanctuarium B. M. V. in caelos assumptae, in Monte Alverna, ",
+      "date": "1921-08-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Beatus Franciscus",
+      "page": 472,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Beatus Franciscus Asisiensis ad",
+      "header": "47ä Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1921-08|EPISTOLAE|Le notizie|Ad Emum P. D. Petrum S. R. E. card. Gasparri, a secretis Sta",
       "date": "1921-08",
       "category": "EPISTOLAE",
@@ -465,6 +505,16 @@
       "header": "Acta Benedicti PP. XV v 473"
     },
     {
+      "key": "1921-10-05|LITTERAE APOSTOLICAE|Inter potiores|Titulus basilicae minoris cathedrali templo Monopoiitano con",
+      "date": "1921-10-05",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Inter potiores",
+      "page": 492,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Inter potiores sacras Apuliae aedes",
+      "header": "m Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1921-10-14|EPISTOLAE|Priusquam|Ad Emos PP. DD. Michaelem S. R. E. card. Faulhaber, Archiepi",
       "date": "1921-10-14",
       "category": "EPISTOLAE",
@@ -496,16 +546,6 @@
     }
   ],
   "unrecovered": [
-    {
-      "key": "1918-01-11|CONSTITUTIONES APOSTOLICAE|A multis|Dismembrationis et erectionis dioecesis Lafayettensis",
-      "date": "1918-01-11",
-      "category": "CONSTITUTIONES APOSTOLICAE",
-      "incipit": "A multis",
-      "reason": "header-mismatch",
-      "candidates": [
-        461
-      ]
-    },
     {
       "key": "1918-08-02|CONSTITUTIONES APOSTOLICAE||Creantur novae dioeceses Nazarensis et Garanhunensis in Bras",
       "date": "1918-08-02",
@@ -575,16 +615,6 @@
       "candidates": [
         127,
         195
-      ]
-    },
-    {
-      "key": "1921-02-11|LITTERAE APOSTOLICAE|Pia Societas|Ecclesia parochialis Sacratissimi Cordis Iesu ad Castrum Pra",
-      "date": "1921-02-11",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Pia Societas",
-      "reason": "header-mismatch",
-      "candidates": [
-        192
       ]
     },
     {
@@ -680,16 +710,6 @@
       "candidates": [
         187,
         340
-      ]
-    },
-    {
-      "key": "1921-04|EPISTOLAE|Officii Nostri|Ad R. P. D. Marium Besson, episcopum Lausannensium et Geneve",
-      "date": "1921-04",
-      "category": "EPISTOLAE",
-      "incipit": "Officii Nostri",
-      "reason": "header-mismatch",
-      "candidates": [
-        220
       ]
     },
     {
@@ -831,16 +851,6 @@
       ]
     },
     {
-      "key": "1921-08-10|LITTERAE APOSTOLICAE|Beatus Franciscus|Sanctuarium B. M. V. in caelos assumptae, in Monte Alverna, ",
-      "date": "1921-08-10",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Beatus Franciscus",
-      "reason": "header-mismatch",
-      "candidates": [
-        472
-      ]
-    },
-    {
       "key": "1921-09-10|LITTERAE APOSTOLICAE|Ex hac|A vicariatu apostolico Natalensi separatur pars territorii a",
       "date": "1921-09-10",
       "category": "LITTERAE APOSTOLICAE",
@@ -849,16 +859,6 @@
       "candidates": [
         469,
         491
-      ]
-    },
-    {
-      "key": "1921-10-05|LITTERAE APOSTOLICAE|Inter potiores|Titulus basilicae minoris cathedrali templo Monopoiitano con",
-      "date": "1921-10-05",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Inter potiores",
-      "reason": "header-mismatch",
-      "candidates": [
-        492
       ]
     },
     {

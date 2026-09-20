@@ -312,8 +312,24 @@ export function findIncipit(page: string, incipit: string, fuzzy: boolean): { li
 
 /** The page's first non-blank line: `574 Index documentorum`, `Acta Pii PP. XI 483`, `Annus XXII - Vol. XXII 1 Maii 1930 Num. 5`. */
 const headerOf = (page: string): string => (page.split('\n').find((l) => l.trim() !== '') ?? '').trim();
-/** Whether the header prints the page's own number (a fascicle cover prints none and is admitted). */
-const headerAgrees = (header: string, n: number): boolean => /\bNum\.\s*\d/.test(header) || new RegExp(`(^|\\s)${n}(\\s|$)`).test(header);
+/**
+ * Whether the header contradicts the page's own number. It agrees when it prints the number
+ * as a whole token, when it is a fascicle cover (`Num. 5`), when it prints no digit at all
+ * (the OCR dropped the number: `Acta Pii PP. X.`, `Acta Apostolicae Sedis. - Commentarium
+ * Officiale.`), or when it prints the number with one character wrong -- a token of the
+ * same length within one edit of it (`34i Acta Apostolicae ...` for 344, `Acta PU PP. X.
+ * Í31` for 131, `2^4 Acta ...` for 224); the token keeps a digit, so a lone `-` or `.`
+ * never stands in for a one-digit page. A token that is all digits and differs prints
+ * another number, and refuses. Of the 98 pages refused before this rule (measured
+ * 2026-09-21 over the seventeen sidecars), 74 printed no digit and 7 the number with one
+ * character wrong; the 17 left carry an extra character (`488*`, `344;`) or a damaged
+ * cover (`Num: 16`, `Nun. 13`, `Num. U`) and stay refused.
+ */
+const headerAgrees = (header: string, n: number): boolean => {
+  if (/\bNum\.\s*\d/.test(header) || !/\d/.test(header)) return true;
+  const digits = String(n);
+  return header.split(/\s+/).some((t) => t === digits || (t.length === digits.length && /\d/.test(t) && !/^\d+$/.test(t) && dist(t, digits) <= 1));
+};
 
 const inRuns = (runs: PageRun[] | undefined, p: number): boolean =>
   runs === undefined || runs.some(([a, b]) => p >= a - 1 && p <= b + 1);

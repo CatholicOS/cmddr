@@ -4,6 +4,16 @@
   "text": "~/development/sources/AAS/txt/aas-10-1918.txt (578 pages)",
   "rows": [
     {
+      "key": "1917-02|EPISTOLAE|Admodum, delectarunt|Ad Episcopos Graeco-rumenos, qui de condita nova Congregatio",
+      "date": "1917-02",
+      "category": "EPISTOLAE",
+      "incipit": "Admodum, delectarunt",
+      "page": 133,
+      "rule": "unique",
+      "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem. — Admodum delectarunt Nos communes liberae, in quibus, ob conditam nuper",
+      "header": "Acta Benedicti PP. XV"
+    },
+    {
       "key": "1917-02|EPISTOLAE|Libenter comperimus|Ad Henricum S. R. E. card. Almaraz y Santos, archiepiscopum ",
       "date": "1917-02",
       "category": "EPISTOLAE",
@@ -12,6 +22,16 @@
       "rule": "unique",
       "bodyLine": "Dilecte fili Noster, salutem et apostolicam benedictionem. — Libenter comperimus annos te quinque et viginti a suscepto episcopatus",
       "header": "134 Acta Apostolicae Sedis r- Commentarium Officiale"
+    },
+    {
+      "key": "1917-11-15|APOSTOLICAE SUB PLUMBO LITTERAE|Episcopalis Carnutensis Ecclesia|De privilegii sacri pallii cathedrali Ecclesiae Carnutensi c",
+      "date": "1917-11-15",
+      "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
+      "incipit": "Episcopalis Carnutensis Ecclesia",
+      "page": 52,
+      "rule": "unique",
+      "bodyLine": "Episcopalis Carnutensis Ecclesia, ut inter Galliarum principes iure",
+      "header": "Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1917-11|LITTERAE APOSTOLICAE|Sacras conspicuas|Ecclesia paroecialis B. M. V. de Mercede in urbe Bonaerensi ",
@@ -124,6 +144,16 @@
       "header": "88 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
+      "key": "1918-01-31|EPISTOLAE|Grato te animo|Ad Ioannem Mariam card. Farley, archiepiscopum Neo-Eboracens",
+      "date": "1918-01-31",
+      "category": "EPISTOLAE",
+      "incipit": "Grato te animo",
+      "page": 89,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili Noster, salutem et apostolicam benedictionem. — Grato",
+      "header": "Acta Benedicti PP. XV"
+    },
+    {
       "key": "1918-02-02|EPISTOLAE|Benignitas Dei|Ad R. D. Ioannem Dunn, cuius diligentiam in moderando per di",
       "date": "1918-02-02",
       "category": "EPISTOLAE",
@@ -162,6 +192,16 @@
       "rule": "unique",
       "bodyLine": "Dilecte filii, salutem et apostolicam benedictionem, — Admodum",
       "header": "188 Acta Apostolicae Sedis - Commentarmm Officiale"
+    },
+    {
+      "key": "1918-04-21|EPISTOLAE|In maximis|Ad R. P. P. Alexandrum Kakowski, archiepiscopum Varsaviensem",
+      "date": "1918-04-21",
+      "category": "EPISTOLAE",
+      "incipit": "In maximis",
+      "page": 227,
+      "rule": "unique",
+      "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem. — In maximis, quibus premimur, difficultatibus ac sollicitudinibus internecivi huius",
+      "header": "Acta Benedicti PP. XV"
     },
     {
       "key": "1918-04-21|EPISTOLAE|Studii erga nos|Ad R. P. D. Willibrordum Benzler, episcopum Metensem, de off",
@@ -222,6 +262,16 @@
       "rule": "unique",
       "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Salesiani",
       "header": "Acta Benedicti PP. XV 233"
+    },
+    {
+      "key": "1918-05|EPISTOLAE|Decimus hic annus|Ad R. P. Richardum H. Tierney. sac. S. I., scriptionis hebdo",
+      "date": "1918-05",
+      "category": "EPISTOLAE",
+      "incipit": "Decimus hic annus",
+      "page": 231,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Decimus hic",
+      "header": "Acta Benedicti PP. XV m"
     },
     {
       "key": "1918-05|MOTU PROPRIO|Quartus iam annus|De Missa pro societatis humanae necessitatibus die 29 iunii ",
@@ -406,16 +456,6 @@
   ],
   "unrecovered": [
     {
-      "key": "1917-02|EPISTOLAE|Admodum, delectarunt|Ad Episcopos Graeco-rumenos, qui de condita nova Congregatio",
-      "date": "1917-02",
-      "category": "EPISTOLAE",
-      "incipit": "Admodum, delectarunt",
-      "reason": "header-mismatch",
-      "candidates": [
-        133
-      ]
-    },
-    {
       "key": "1917-06|APOSTOLICAE SUB PLUMBO LITTERAE|Quandocumque|De Metropolitanae et novae Provinciae ecclesiasticae Adamant",
       "date": "1917-06",
       "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
@@ -424,16 +464,6 @@
       "candidates": [
         49,
         50
-      ]
-    },
-    {
-      "key": "1917-11-15|APOSTOLICAE SUB PLUMBO LITTERAE|Episcopalis Carnutensis Ecclesia|De privilegii sacri pallii cathedrali Ecclesiae Carnutensi c",
-      "date": "1917-11-15",
-      "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
-      "incipit": "Episcopalis Carnutensis Ecclesia",
-      "reason": "header-mismatch",
-      "candidates": [
-        52
       ]
     },
     {
@@ -455,16 +485,6 @@
       "reason": "header-mismatch",
       "candidates": [
         81
-      ]
-    },
-    {
-      "key": "1918-01-31|EPISTOLAE|Grato te animo|Ad Ioannem Mariam card. Farley, archiepiscopum Neo-Eboracens",
-      "date": "1918-01-31",
-      "category": "EPISTOLAE",
-      "incipit": "Grato te animo",
-      "reason": "header-mismatch",
-      "candidates": [
-        89
       ]
     },
     {
@@ -491,31 +511,11 @@
       ]
     },
     {
-      "key": "1918-04-21|EPISTOLAE|In maximis|Ad R. P. P. Alexandrum Kakowski, archiepiscopum Varsaviensem",
-      "date": "1918-04-21",
-      "category": "EPISTOLAE",
-      "incipit": "In maximis",
-      "reason": "header-mismatch",
-      "candidates": [
-        227
-      ]
-    },
-    {
       "key": "1918-04-29|EPISTOLAE|JE serie voluminum|Ad R. P. Laurentium Janssens, abbatem benedictinum, qui suum",
       "date": "1918-04-29",
       "category": "EPISTOLAE",
       "incipit": "JE serie voluminum",
       "reason": "none"
-    },
-    {
-      "key": "1918-05|EPISTOLAE|Decimus hic annus|Ad R. P. Richardum H. Tierney. sac. S. I., scriptionis hebdo",
-      "date": "1918-05",
-      "category": "EPISTOLAE",
-      "incipit": "Decimus hic annus",
-      "reason": "header-mismatch",
-      "candidates": [
-        231
-      ]
     },
     {
       "key": "1918-06|EPISTOLAE|Dum tanta|Ad R. P. Innocentium Lopez, Ordinis Mercedarii vicarium gene",

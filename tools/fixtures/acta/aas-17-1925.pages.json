@@ -44,6 +44,26 @@
       "header": "Acta Pii PP. XI 97"
     },
     {
+      "key": "1924-12|LITTERAE APOSTOLICAE|Sancto Antonino Abbati|Titulo ac privilegiis Basilicae minoris honestatur ecclesia ",
+      "date": "1924-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Sancto Antonino Abbati",
+      "page": 62,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Sancto Antonino Abbati, qui cum",
+      "header": "6% Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1925-01-26|LITTERAE APOSTOLICAE|Monachorum vita|Approbatio constitutionum Ordinis Cisterciensium strictioris",
+      "date": "1925-01-26",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Monachorum vita",
+      "page": 64,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Monachorum vita iuxta Sancti Patris",
+      "header": "Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1925-02-11|LITTERAE APOSTOLICAE|Quae catholico nomini|Erectio praefecturae apostolicae de « Tsingtao » in Sinis, d",
       "date": "1925-02-11",
       "category": "LITTERAE APOSTOLICAE",
@@ -62,6 +82,16 @@
       "rule": "unique",
       "bodyLine": "' Ad futuram rei memoriam. — Apostolatus supremi officium Nobis divinitus commissum postulat ut in omnes christiani orbis regiones, vel longo",
       "header": "132 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1925-02-26|LITTERAE APOSTOLICAE|Expedit|Ex dismembratione vicariatus apostolici de « Chaco » efforma",
+      "date": "1925-02-26",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Expedit",
+      "page": 228,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Expedit, et Romanorum Pontificum",
+      "header": "Acta Apostolicae Sedis - .Commentarium,Officiale"
     },
     {
       "key": "1925-03|EPISTOLAE|Quod Sanctuarii|Ad Emum P. D. Eugenium, tit. Ss. Silvestri et Martini, S. E.",
@@ -134,6 +164,16 @@
       "header": "Acta Pii PP. XI 445"
     },
     {
+      "key": "1925-05-12|LITTERAE APOSTOLICAE|Supremi apostolatus|Dismembrato territorio e praefectura apostolica de « Katanga",
+      "date": "1925-05-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Supremi apostolatus",
+      "page": 446,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Supremi apostolatus officium Nobis",
+      "header": "m Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1925-05-13|LITTERAE APOSTOLICAE|Cum venerabilis frater|Immutatur nomen vicariatus apostolici olim de «Unjanyembé», ",
       "date": "1925-05-13",
       "category": "LITTERAE APOSTOLICAE",
@@ -142,6 +182,16 @@
       "rule": "unique",
       "bodyLine": "Ad futuram rei memoriam. — Cum venerabilis frater Henricus Léonard^ Missionariis Africae, Episcopus titularis Tipasitanus et Vicarius Apostolicus de TJnjanyembé, in Africa centrali, variis de causis, nuper postulaverit ut nomen dictae Missionis loco de TJnjanyembé ex nunc de Tabora",
       "header": "Acta Pii PP. XI 447"
+    },
+    {
+      "key": "1925-05-31|LITTERAE DECRETALES|Hoc sacro anno|Beatus Ioannes Eudes, Missionarius apostolicus et institutor",
+      "date": "1925-05-31",
+      "category": "LITTERAE DECRETALES",
+      "incipit": "Hoc sacro anno",
+      "page": 482,
+      "rule": "unique",
+      "bodyLine": "Hoc sacro anno, singulorum civitatumque perfectioni dicato, omnipotens et pientissimus Dominus nonnullos Servos Suos, etiam in terris,'",
+      "header": "m Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1925-05|LITTERAE APOSTOLICAE|Quintus supra sexagesimum|Ven. Dei Servus Ioseph Cafasso, presbyter saecularis et Conl",
@@ -224,6 +274,16 @@
       "header": "366 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
+      "key": "1925-10-28|CONSTITUTIONES APOSTOLICAE|Vixdum Poloniae unitas|De nova dioecesium latini ritus circumscriptione in ditione ",
+      "date": "1925-10-28",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Vixdum Poloniae unitas",
+      "page": 521,
+      "rule": "unique",
+      "bodyLine": "Vixdum Poloniae unitas, post diuturnam catholicae illius Nationis sub",
+      "header": "Acta Pii PP. XI mi"
+    },
+    {
       "key": "1925-12-25|CONSTITUTIONES APOSTOLICAE|Servatoris Iesu Christi|Extensionis Iubilaei tertii ac vicesimi ad totum catholicum ",
       "date": "1925-12-25",
       "category": "CONSTITUTIONES APOSTOLICAE",
@@ -297,16 +357,6 @@
       ]
     },
     {
-      "key": "1924-12|LITTERAE APOSTOLICAE|Sancto Antonino Abbati|Titulo ac privilegiis Basilicae minoris honestatur ecclesia ",
-      "date": "1924-12",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Sancto Antonino Abbati",
-      "reason": "header-mismatch",
-      "candidates": [
-        62
-      ]
-    },
-    {
       "key": "1925-01-06|CONSTITUTIONES APOSTOLICAE|Inter praecipuas|~ Erectionis provinciae ecclesiasticae Sancti Christophori d",
       "date": "1925-01-06",
       "category": "CONSTITUTIONES APOSTOLICAE",
@@ -314,16 +364,6 @@
       "reason": "header-mismatch",
       "candidates": [
         289
-      ]
-    },
-    {
-      "key": "1925-01-26|LITTERAE APOSTOLICAE|Monachorum vita|Approbatio constitutionum Ordinis Cisterciensium strictioris",
-      "date": "1925-01-26",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Monachorum vita",
-      "reason": "header-mismatch",
-      "candidates": [
-        64
       ]
     },
     {
@@ -342,16 +382,6 @@
       "candidates": [
         63,
         227
-      ]
-    },
-    {
-      "key": "1925-02-26|LITTERAE APOSTOLICAE|Expedit|Ex dismembratione vicariatus apostolici de « Chaco » efforma",
-      "date": "1925-02-26",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Expedit",
-      "reason": "header-mismatch",
-      "candidates": [
-        228
       ]
     },
     {
@@ -374,16 +404,6 @@
       "category": "SACRUM CONSISTORIUM",
       "incipit": null,
       "reason": "no-incipit"
-    },
-    {
-      "key": "1925-05-12|LITTERAE APOSTOLICAE|Supremi apostolatus|Dismembrato territorio e praefectura apostolica de « Katanga",
-      "date": "1925-05-12",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Supremi apostolatus",
-      "reason": "header-mismatch",
-      "candidates": [
-        446
-      ]
     },
     {
       "key": "1925-05-17|SOLEMNIA CANONIZATIONUM||Sanctae Teresiae ab Infante Iesu, Virginis,",
@@ -426,16 +446,6 @@
       "category": "SOLEMNIA CANONIZATIONUM",
       "incipit": null,
       "reason": "no-incipit"
-    },
-    {
-      "key": "1925-05-31|LITTERAE DECRETALES|Hoc sacro anno|Beatus Ioannes Eudes, Missionarius apostolicus et institutor",
-      "date": "1925-05-31",
-      "category": "LITTERAE DECRETALES",
-      "incipit": "Hoc sacro anno",
-      "reason": "header-mismatch",
-      "candidates": [
-        482
-      ]
     },
     {
       "key": "1925-05-31|SOLEMNIA CANONIZATIONUM||Sanctorum Conf essorum Ioannis Baptistae Mariae Vianney, Par",
@@ -497,16 +507,6 @@
       "candidates": [
         232,
         530
-      ]
-    },
-    {
-      "key": "1925-10-28|CONSTITUTIONES APOSTOLICAE|Vixdum Poloniae unitas|De nova dioecesium latini ritus circumscriptione in ditione ",
-      "date": "1925-10-28",
-      "category": "CONSTITUTIONES APOSTOLICAE",
-      "incipit": "Vixdum Poloniae unitas",
-      "reason": "header-mismatch",
-      "candidates": [
-        521
       ]
     },
     {

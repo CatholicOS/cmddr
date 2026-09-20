@@ -64,6 +64,16 @@
       "header": "Annus III. - Vol. III. Die 15 Februarii 1911. Num. 2."
     },
     {
+      "key": "1910-02-15|LITTERAE APOSTOLICAE|Traditum a Romanis|Templum B. M. Virginis vulgo « dei Pilastrello » prope Lendi",
+      "date": "1910-02-15",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Traditum a Romanis",
+      "page": 122,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Traditum a Romanis Pontificibus",
+      "header": "m Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
       "key": "1910-02-25|LITTERAE APOSTOLICAE|Quum nostrum|Partialis indulgentia perpetua pro Sociis Archisodalitatis a",
       "date": "1910-02-25",
       "category": "LITTERAE APOSTOLICAE",
@@ -112,6 +122,16 @@
       "rule": "unique",
       "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Ad",
       "header": "Acta PU PP. X. 17"
+    },
+    {
+      "key": "1910-11-30|EPISTOLAE|Quem proximis|Ad RR. PP. DD. Alexandrum Christie, Oregonopolitanorum Archi",
+      "date": "1910-11-30",
+      "category": "EPISTOLAE",
+      "incipit": "Quem proximis",
+      "page": 62,
+      "rule": "unique",
+      "bodyLine": "Venerabiles Fratres, Salutem et Apostolicam Benedictionem. —",
+      "header": "Acta Apostolicae Sedis. - Commentarium Officiale."
     },
     {
       "key": "1910-12-12|EPISTOLAE|Il Nous a été|Ad perillustrem virum Comitem Guilelmum Verspeyen, quinquage",
@@ -184,6 +204,16 @@
       "header": "Acta Pii PP. X. 63"
     },
     {
+      "key": "1911-01-16|EPISTOLAE|Perceptum his diebus|Dilecto filio M. Demimuid Protonotario Apostolico Moderatori",
+      "date": "1911-01-16",
+      "category": "EPISTOLAE",
+      "incipit": "Perceptum his diebus",
+      "page": 129,
+      "rule": "fuzzy",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Perceptam",
+      "header": "Acta PU PP. X. im"
+    },
+    {
       "key": "1911-01|EPISTOLAE|Non mediocri|Ad Anselmum, Archiepiscopum Acherontinum et Materanensem",
       "date": "1911-01",
       "category": "EPISTOLAE",
@@ -202,6 +232,36 @@
       "rule": "unique",
       "bodyLine": "benedictionem. — Quas vos haud ita pridem, cum solemne consilium",
       "header": "20 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1911-02-16|EPISTOLAE|Deferendo nuper|Ad D. Franciscum Eichert ceterosque sodales e Societate litt",
+      "date": "1911-02-16",
+      "category": "EPISTOLAE",
+      "incipit": "Deferendo nuper",
+      "page": 344,
+      "rule": "unique",
+      "bodyLine": "Dilecti filii, salutem et apostolicam benedictionem. — Deferendo",
+      "header": "34i Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1911-02-16|EPISTOLAE|Quo tempore|Venerabilibus fratribus Carolo Archiepiscopo Firmano aliisqu",
+      "date": "1911-02-16",
+      "category": "EPISTOLAE",
+      "incipit": "Quo tempore",
+      "page": 132,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Quo",
+      "header": "im Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1911-02|EPISTOLAE|Benedicti Patris|Dilecto filio religioso viro Mauro Serafini Abbati Generali ",
+      "date": "1911-02",
+      "category": "EPISTOLAE",
+      "incipit": "Benedicti Patris",
+      "page": 131,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, Religiose Vir, salutem et apostolicam benedictionem. —",
+      "header": "Acta PU PP. X. Í31"
     },
     {
       "key": "1911-03-10|EPISTOLAE|Geminum istinc|Ad R. P. D. Ioannem Baptistam Correa, Campinensium Episcopum",
@@ -252,6 +312,26 @@
       "rule": "unique",
       "bodyLine": "Dilecte Fili Noster, salutem et apostolicam benedictionem. — Gratam sane occasionem confirmandi singularem, qua te prosequimur, benevolentiam proximus iam dies affert, sacer Augustae Virgini Dei Parenti",
       "header": "160 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1911-04-08|LITTERAE APOSTOLICAE|Quo uberiores|Constitutio novi Vicariatus Apostolici in Regione Coreana de",
+      "date": "1911-04-08",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quo uberiores",
+      "page": 224,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Quo uberiores fructus in Domino",
+      "header": "2^4 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1911-04-12|LITTERAE APOSTOLICAE|Non sine magno|Erectio novi Vicariatus Apostolici Scen-Si septentrionalis",
+      "date": "1911-04-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Non sine magno",
+      "page": 225,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Non sine magno animi Nostri solatio",
+      "header": "Acta Pii PP. X."
     },
     {
       "key": "1911-04-30|EPISTOLAE|Diligentia ipsa|Ad RR. PP. DD. Bavaiiae Archiepiscopos et Episcopos, Frising",
@@ -312,6 +392,26 @@
       "rule": "unique",
       "bodyLine": "Ad perpetuam rei memoriam. — Praestantiora Catholici Orbis Sanctuaria, quae antiqua Christiani populi religione celebria, tum molis",
       "header": "Annus III. - Vol. III. Die 15 Maii 1911. Num. 6."
+    },
+    {
+      "key": "1911-05-02|LITTERAE APOSTOLICAE|Cum summa|Praefectura Apostolica de « Ho-Nan » Occidentali erigitur in",
+      "date": "1911-05-02",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Cum summa",
+      "page": 226,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Cum summa afficiamur laetitia ob",
+      "header": "Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1911-05-02|LITTERAE APOSTOLICAE|Pia Consociatio|Superior Generalis pro tempore Congregationis Iesu et Mariae",
+      "date": "1911-05-02",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Pia Consociatio",
+      "page": 227,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Pia Consociatio, quam saeculo XVII",
+      "header": "Acta Pii PP. X."
     },
     {
       "key": "1911-05-15|EPISTOLAE|Conventum alterum|Ad RR. PP. DD. Archiepiscopos atque Episcopos Galliae, occas",
@@ -534,6 +634,16 @@
       "header": "Acta Pii PP. X. 565"
     },
     {
+      "key": "????-07-30|EPISTOLAE|Vobis plane|Ad R. P. D. Patriarcham atque Archiepiscopos et Episcopos ca",
+      "date": "????-07-30",
+      "category": "EPISTOLAE",
+      "incipit": "Vobis plane",
+      "page": 522,
+      "rule": "unique",
+      "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem. — Vobis",
+      "header": "Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
       "key": "????-09|EPISTOLAE|Ubi accepimus|Ad R. P. D. Eduardum Likowski, Episcopum tit. Aureliopolitan",
       "date": "????-09",
       "category": "EPISTOLAE",
@@ -585,16 +695,6 @@
     }
   ],
   "unrecovered": [
-    {
-      "key": "1910-02-15|LITTERAE APOSTOLICAE|Traditum a Romanis|Templum B. M. Virginis vulgo « dei Pilastrello » prope Lendi",
-      "date": "1910-02-15",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Traditum a Romanis",
-      "reason": "header-mismatch",
-      "candidates": [
-        122
-      ]
-    },
     {
       "key": "1910-02-20|LITTERAE APOSTOLICAE|Dilectus filius|Erectio in Archiconfraternitatem cum facultate aggregandi in",
       "date": "1910-02-20",
@@ -651,16 +751,6 @@
       ]
     },
     {
-      "key": "1910-11-30|EPISTOLAE|Quem proximis|Ad RR. PP. DD. Alexandrum Christie, Oregonopolitanorum Archi",
-      "date": "1910-11-30",
-      "category": "EPISTOLAE",
-      "incipit": "Quem proximis",
-      "reason": "header-mismatch",
-      "candidates": [
-        62
-      ]
-    },
-    {
       "key": "1910-11|LITTERAE APOSTOLICAE|Ii Grati sunt Nobis|Facultates atque indulgentiae pro Missionibus a Fratribus Or",
       "date": "1910-11",
       "category": "LITTERAE APOSTOLICAE",
@@ -675,46 +765,6 @@
       "reason": "none"
     },
     {
-      "key": "1911-01-16|EPISTOLAE|Perceptum his diebus|Dilecto filio M. Demimuid Protonotario Apostolico Moderatori",
-      "date": "1911-01-16",
-      "category": "EPISTOLAE",
-      "incipit": "Perceptum his diebus",
-      "reason": "header-mismatch",
-      "candidates": [
-        129
-      ]
-    },
-    {
-      "key": "1911-02-16|EPISTOLAE|Deferendo nuper|Ad D. Franciscum Eichert ceterosque sodales e Societate litt",
-      "date": "1911-02-16",
-      "category": "EPISTOLAE",
-      "incipit": "Deferendo nuper",
-      "reason": "header-mismatch",
-      "candidates": [
-        344
-      ]
-    },
-    {
-      "key": "1911-02-16|EPISTOLAE|Quo tempore|Venerabilibus fratribus Carolo Archiepiscopo Firmano aliisqu",
-      "date": "1911-02-16",
-      "category": "EPISTOLAE",
-      "incipit": "Quo tempore",
-      "reason": "header-mismatch",
-      "candidates": [
-        132
-      ]
-    },
-    {
-      "key": "1911-02|EPISTOLAE|Benedicti Patris|Dilecto filio religioso viro Mauro Serafini Abbati Generali ",
-      "date": "1911-02",
-      "category": "EPISTOLAE",
-      "incipit": "Benedicti Patris",
-      "reason": "header-mismatch",
-      "candidates": [
-        131
-      ]
-    },
-    {
       "key": "1911-03|EPISTOLAE|Propediem|Ad celsitudinem suam Luitpoldum Bavariae regnum regentem, no",
       "date": "1911-03",
       "category": "EPISTOLAE",
@@ -723,16 +773,6 @@
       "candidates": [
         161,
         313
-      ]
-    },
-    {
-      "key": "1911-04-08|LITTERAE APOSTOLICAE|Quo uberiores|Constitutio novi Vicariatus Apostolici in Regione Coreana de",
-      "date": "1911-04-08",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Quo uberiores",
-      "reason": "header-mismatch",
-      "candidates": [
-        224
       ]
     },
     {
@@ -748,36 +788,6 @@
       ]
     },
     {
-      "key": "1911-04-12|LITTERAE APOSTOLICAE|Non sine magno|Erectio novi Vicariatus Apostolici Scen-Si septentrionalis",
-      "date": "1911-04-12",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Non sine magno",
-      "reason": "header-mismatch",
-      "candidates": [
-        225
-      ]
-    },
-    {
-      "key": "1911-05-02|LITTERAE APOSTOLICAE|Cum summa|Praefectura Apostolica de « Ho-Nan » Occidentali erigitur in",
-      "date": "1911-05-02",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Cum summa",
-      "reason": "header-mismatch",
-      "candidates": [
-        226
-      ]
-    },
-    {
-      "key": "1911-05-02|LITTERAE APOSTOLICAE|Pia Consociatio|Superior Generalis pro tempore Congregationis Iesu et Mariae",
-      "date": "1911-05-02",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Pia Consociatio",
-      "reason": "header-mismatch",
-      "candidates": [
-        227
-      ]
-    },
-    {
       "key": "1911-05|EPISTOLAE|Medias inter|Ad R. P. D. Iosephum Torras y Bages, Vicensium Episcopum, ob",
       "date": "1911-05",
       "category": "EPISTOLAE",
@@ -786,16 +796,6 @@
       "candidates": [
         13,
         232
-      ]
-    },
-    {
-      "key": "????-07-30|EPISTOLAE|Vobis plane|Ad R. P. D. Patriarcham atque Archiepiscopos et Episcopos ca",
-      "date": "????-07-30",
-      "category": "EPISTOLAE",
-      "incipit": "Vobis plane",
-      "reason": "header-mismatch",
-      "candidates": [
-        522
       ]
     },
     {
