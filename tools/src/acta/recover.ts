@@ -251,7 +251,9 @@ export function findIncipit(page: string, incipit: string, fuzzy: boolean): { li
   if (want.length === 0) return null;
   const folded = fold(page);
   const lines = folded.split('\n');
-  const rawLines = page.replace(/­\s*\n\s*/g, '').split('\n');
+  // Joined the same way as `fold` (soft hyphen, `letter-\n letter`), case and diacritics
+  // kept, so `rawLines` stays index-aligned with `lines`.
+  const rawLines = page.replace(/­\s*\n\s*/g, '').replace(/([a-z])-\s*\n\s*([a-z])/gi, '$1$2').split('\n');
   for (let li = 0; li < lines.length; li++) {
     const line = lines[li]!;
     // Candidate heads: the line start, and each position after `— `, `. `, `: `.
@@ -279,11 +281,14 @@ const inRuns = (runs: PageRun[] | undefined, p: number): boolean =>
  * The recovery (spec §10.3.2). For each pageless entry with an incipit: the pages of the
  * pope's part (1..lastBodyPage) that open an act with it, within the category's runs from
  * the Index generalis (±1 page, for the runs' own OCR). One hit is accepted (`unique`);
- * several are settled by the dating formula on and after each hit (`dated`), the one
- * whose date is the entry's; none is retried fuzzily (`fuzzy`, unique only). A category
- * the Index generalis has no run for is searched over the whole part and accepted only
- * when the formula confirms the date. A hit whose running header prints another number
- * is not a page (`header-mismatch`). Anything else is reported with its reason.
+ * several are settled by the dating formula on and inside each hit's own span (`dated`) --
+ * up to the next candidate hit and not past the end of the Index generalis run (±1) that
+ * put this hit `inside`, so an unrelated act further down the page range never confirms a
+ * wrong page -- the one whose date is the entry's; none is retried fuzzily (`fuzzy`, unique
+ * only). A category the Index generalis has no run for is searched over the whole part and
+ * accepted only when the formula confirms the date, within 8 pages of the hit. A hit whose
+ * running header prints another number is not a page (`header-mismatch`). Anything else is
+ * reported with its reason.
  */
 export function recoverPages(pageless: readonly PagelessEntry[], pages: readonly string[], generalis: IndexGeneralis, opts: { lastBodyPage: number }): { rows: RecoveredRow[]; unrecovered: UnrecoveredRow[] } {
   const rows: RecoveredRow[] = [];
@@ -313,15 +318,22 @@ export function recoverPages(pageless: readonly PagelessEntry[], pages: readonly
         rows.push({ ...base, incipit: e.incipit!, page: h.page, rule: r, bodyLine: h.line, header, ...(formula ? { formula } : {}) });
       };
       if (inside.length === 1 && runs !== undefined) { accept(inside[0]!, rule); return true; }
-      // Several hits, or no runs to constrain them: the act's own dating formula decides.
-      const dated = inside.filter((h) => {
-        const next = inside.find((o) => o.page > h.page)?.page;
-        return formulaNear(pages, h.page, Math.min(next !== undefined ? next : last, h.page + 40))?.date === e.date;
-      });
+      // Several hits, or no runs to constrain them: the act's own dating formula decides --
+      // but only a formula inside the act's own span (up to the next candidate, and not past
+      // the end of the Index generalis run that put this hit `inside`, ±1 for the run's own
+      // OCR): an unrelated act's formula further down the page range confirms nothing.
+      const runEndFor = (p: number): number | undefined => runs?.find(([a, b]) => p >= a - 1 && p <= b + 1)?.[1];
+      const dated = inside
+        .map((h) => {
+          const next = inside.find((o) => o.page > h.page)?.page;
+          const upto = runs !== undefined
+            ? Math.min(next !== undefined ? next - 1 : Infinity, runEndFor(h.page)! + 1)
+            : Math.min(next !== undefined ? next - 1 : h.page + 8, h.page + 8);
+          return { h, formula: formulaNear(pages, h.page, Math.min(upto, last)) };
+        })
+        .filter((x) => x.formula?.date === e.date);
       if (dated.length === 1) {
-        const h = dated[0]!;
-        const next = inside.find((o) => o.page > h.page)?.page;
-        accept(h, 'dated', formulaNear(pages, h.page, Math.min(next !== undefined ? next : last, h.page + 40))!.text);
+        accept(dated[0]!.h, 'dated', dated[0]!.formula!.text);
       } else {
         unrecovered.push({ ...base, reason: 'several', candidates: inside.map((h) => h.page) });
       }

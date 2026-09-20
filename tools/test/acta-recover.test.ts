@@ -105,7 +105,8 @@ describe('findIncipit', () => {
   });
   it('folds case, diacritics and soft hyphens, and joins a word the line break split', () => {
     expect(findIncipit('Ad perpetuam rei memoriam. — Quæ cathólico no­\nmini bene', 'Quae catholico nomini', false)).not.toBeNull();
-    expect(findIncipit('Ad perpetuam rei memoriam. — Quo maio-\nri rerum fidei', 'Quo maiori rerum', false)).not.toBeNull();
+    expect(findIncipit('Ad perpetuam rei memoriam. — Quo maio-\nri rerum fidei', 'Quo maiori rerum', false)).toEqual({ line: 'Ad perpetuam rei memoriam. — Quo maiori rerum fidei' });
+    expect(findIncipit('Prima li-\nnea longa.\nAd futuram rei memoriam. — Constat apprime quam sit', 'Constat apprime', false)).toEqual({ line: 'Ad futuram rei memoriam. — Constat apprime quam sit' });
   });
   it('in fuzzy mode admits one wrong character per word of five letters or more, and nothing in a shorter word', () => {
     expect(findIncipit(BODY[6]!, 'Placet oculog', false)).toBeNull();
@@ -153,5 +154,17 @@ describe('recoverPages', () => {
     const { rows, unrecovered } = recoverPages([entry('1921-06-01', 'LITTERAE APOSTOLICAE', 'Quae catholico nomini'), entry('1921-01-06', 'LITTERAE ENCYCLICAE', 'Sacra propediem')], BODY, noRuns, { lastBodyPage: 7 });
     expect(rows).toEqual([expect.objectContaining({ page: 5, rule: 'dated' })]);
     expect(unrecovered).toEqual([expect.objectContaining({ incipit: 'Sacra propediem', reason: 'several', candidates: [1] })]);
+  });
+  it('settles a tie only by a formula inside the act\'s own run: an unrelated act\'s formula beyond the run confirms nothing', () => {
+    const body = [
+      'Acta Pii PP. XI 1 \nAd futuram rei memoriam. — Common incipit phrase',
+      '2 Acta Apostolicae Sedis - Commentarium Officiale \nAd futuram rei memoriam. — Common incipit phrase',
+      '3 Acta Apostolicae Sedis - Commentarium Officiale \nfiller with no formula',
+      'Acta Pii PP. XI 4 \nUNRELATED ACT ENTIRELY. — Something else \nDatum Romae apud Sanctum Petrum, die i mensis Ianuarii anno MDCCCCXXV.',
+    ];
+    const g = { page: null, runs: new Map<string, [number, number][]>([['Litterae Apostolicae', [[1, 2]]]]), unmapped: [] as string[] };
+    const { rows, unrecovered } = recoverPages([entry('1925-01-01', 'LITTERAE APOSTOLICAE', 'Common incipit phrase')], body, g, { lastBodyPage: 4 });
+    expect(rows).toEqual([]);
+    expect(unrecovered).toEqual([expect.objectContaining({ reason: 'several', candidates: [1, 2] })]);
   });
 });
