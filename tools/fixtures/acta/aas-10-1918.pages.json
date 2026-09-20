@@ -1,27 +1,218 @@
 {
   "source": "1918",
-  "generated": "2026-09-20",
+  "generated": "2026-09-21",
   "text": "~/development/sources/AAS/txt/aas-10-1918.txt (578 pages)",
-  "rows": [],
+  "rows": [
+    {
+      "key": "1917-02|EPISTOLAE|Libenter comperimus|Ad Henricum S. R. E. card. Almaraz y Santos, archiepiscopum ",
+      "date": "1917-02",
+      "category": "EPISTOLAE",
+      "incipit": "Libenter comperimus",
+      "page": 134,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili Noster, salutem et apostolicam benedictionem. — Libenter comperimus annos te quinque et viginti a suscepto episcopatus",
+      "header": "134 Acta Apostolicae Sedis r- Commentarium Officiale"
+    },
+    {
+      "key": "1917-11|LITTERAE APOSTOLICAE|Sacras conspicuas|Ecclesia paroecialis B. M. V. de Mercede in urbe Bonaerensi ",
+      "date": "1917-11",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Sacras conspicuas",
+      "page": 8,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Sacras conspicuas Aedes, quae",
+      "header": "8 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1917-12-03|EPISTOLAE|Gratias vobis|Ad RR. PP. DD. Archiepiscopos et Episcopos regni Bavariae ; ",
+      "date": "1917-12-03",
+      "category": "EPISTOLAE",
+      "incipit": "Gratias vobis",
+      "page": 15,
+      "rule": "unique",
+      "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem. — Gratias",
+      "header": "Acta Benedicti PP. XV 15"
+    },
+    {
+      "key": "1917-12-03|EPISTOLAE|Tanta Nos|Ad Ioannem S. R. E. Card. Gsernoch, archiepiscopum Strigonie",
+      "date": "1917-12-03",
+      "category": "EPISTOLAE",
+      "incipit": "Tanta Nos",
+      "page": 14,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Tanta Nos mole curarum et sollicitudinum oppressos,",
+      "header": "14 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1917-12-10|CONSTITUTIO APOSTOLICA|Apostolicis litteris|Paroecia Ss. Cordis pro animabus igne purgatorio expiandis i",
+      "date": "1917-12-10",
+      "category": "CONSTITUTIO APOSTOLICA",
+      "incipit": "Apostolicis litteris",
+      "page": 5,
+      "rule": "unique",
+      "bodyLine": "Apostolicis litteris « Cum Nobis », die xxianuarii mcmxiii datis, decessor Noster fel. rec. Pius X, vehementer probans Victoris Jouet, pientissimi sacerdotis missionarii, opera in hac urbe",
+      "header": "Annus X - Yol. X 2 Ianuarii 1918 Num. 1"
+    },
+    {
+      "key": "1917-12-27|EPISTOLAE|Annua pietatis|Ad Georgium S. R. E. presb, card Gusmini, archicancellariutn",
+      "date": "1917-12-27",
+      "category": "EPISTOLAE",
+      "incipit": "Annua pietatis",
+      "page": 58,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili Noster, salutem et apostolicam benedictionem. — Annua",
+      "header": "58 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1917-12-27|EPISTOLAE|Natalis trecentesimi|Ad R. M. Angelam a Nostra Domina, virginum Ursulinarum union",
+      "date": "1917-12-27",
+      "category": "EPISTOLAE",
+      "incipit": "Natalis trecentesimi",
+      "page": 57,
+      "rule": "unique",
+      "bodyLine": "Dilecta in Christo filia, salutem et apostolicam benedictionem. —",
+      "header": "Acta Benedicti PP. XV 57"
+    },
+    {
+      "key": "1917-12|LITTERAE APOSTOLICAE|Quae catholico|Vicariatus Apost. « de Beni » erigitur",
+      "date": "1917-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae catholico",
+      "page": 9,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Quae catholico nomini aeternaeque",
+      "header": "Acta Benedicti PP. XV 9"
+    },
+    {
+      "key": "1918-01-18|EPISTOLAE|Litteris, quibus|Ad Gotifredum de Grandmaison, praesidem societatis bibliogra",
+      "date": "1918-01-18",
+      "category": "EPISTOLAE",
+      "incipit": "Litteris, quibus",
+      "page": 86,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Litteris, quibus,",
+      "header": "86 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1918-02-02|EPISTOLAE|Conspirantibus|Ad Episcopos Austriacae ditionis, qui e coetu Vindobonensi c",
+      "date": "1918-02-02",
+      "category": "EPISTOLAE",
+      "incipit": "Conspirantibus",
+      "page": 228,
+      "rule": "unique",
+      "bodyLine": "conspirantibus in unum animis, inceptum persequemini, fieri nullo modo",
+      "header": "228 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1918-02-11|SERMO|Negli anni scorsi|Habitus ad parochos et ad quadragesimales in Urbe concionato",
+      "date": "1918-02-11",
+      "category": "SERMO",
+      "incipit": "Negli anni scorsi",
+      "page": 92,
+      "rule": "unique",
+      "bodyLine": "IN URBE CONCIONATORES.",
+      "header": "92 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1918-04-21|EPISTOLAE|Admodum iucunda|Ad R. P. Patritium Murray, Congregationis Ssmi Redemptoris g",
+      "date": "1918-04-21",
+      "category": "EPISTOLAE",
+      "incipit": "Admodum iucunda",
+      "page": 188,
+      "rule": "unique",
+      "bodyLine": "Dilecte filii, salutem et apostolicam benedictionem, — Admodum",
+      "header": "188 Acta Apostolicae Sedis - Commentarmm Officiale"
+    },
+    {
+      "key": "1918-04-21|EPISTOLAE|Studii erga nos|Ad R. P. D. Willibrordum Benzler, episcopum Metensem, de off",
+      "date": "1918-04-21",
+      "category": "EPISTOLAE",
+      "incipit": "Studii erga nos",
+      "page": 228,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Studii",
+      "header": "228 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1918-05-12|EPISTOLAE|Maximas inter|Ad Andream S. R. E. card. Ferrari, arc h episcopum Mediolane",
+      "date": "1918-05-12",
+      "category": "EPISTOLAE",
+      "incipit": "Maximas inter",
+      "page": 273,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Maximas inter horum temporum amaritudines haud",
+      "header": "Annus X - Vol. X 1 Iulii 1918 Num. 7"
+    },
+    {
+      "key": "1918-05|MOTU PROPRIO|Quartus iam annus|De Missa pro societatis humanae necessitatibus die 29 iunii ",
+      "date": "1918-05",
+      "category": "MOTU PROPRIO",
+      "incipit": "Quartus iam annus",
+      "page": 225,
+      "rule": "unique",
+      "bodyLine": "Quartus iam annus ad exitum appropinqua t, ex quo, ut",
+      "header": "Annus X - Vol. X 1 Iunii 1918 Num. 6"
+    },
+    {
+      "key": "1918-06-10|EPISTOLAE|Iucundus Nobis|Ad regem Rajah Rama Vurmah, cui de sexagesimo eius natali gr",
+      "date": "1918-06-10",
+      "category": "EPISTOLAE",
+      "incipit": "Iucundus Nobis",
+      "page": 358,
+      "rule": "unique",
+      "bodyLine": "Serenissime Rex, salutem et prosperitatem. — Iucundus Nobis nuntius allatus est, natalem Te sexagesimum proximo mense octobri celebraturum; ac sane facere non possumus quin Celsitudini Tuae ex animo",
+      "header": "358 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1918-06-30|EPISTOLAE|Pastoralis sollertiae|Ad R. P. D. Michaelem 0'Doherty, archiepiscopum Maniianum, c",
+      "date": "1918-06-30",
+      "category": "EPISTOLAE",
+      "incipit": "Pastoralis sollertiae",
+      "page": 357,
+      "rule": "unique",
+      "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem. — Pastoralis sollertiae, qua vos Dei gloriae animarumque saluti prospicitis, novo",
+      "header": "Acta Benedicti PP. XV 357"
+    },
+    {
+      "key": "1918-06|EPISTOLAE|Litteris apostolicis|Ad Ludovicum Nazarium S. R. E. card. Bégin, archiepiscopum Q",
+      "date": "1918-06",
+      "category": "EPISTOLAE",
+      "incipit": "Litteris apostolicis",
+      "page": 440,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili Noster, venerabiles fratres, salutem et apostolicam benedictionem. — Litteris apostolicis Commisso divinitus, quas ad vos dedimus die VIII septembris MCMXVI, clerum populumque catholicum regionis",
+      "header": "440 Acta Apostolicae Sedis - Comwientarium Officiale"
+    },
+    {
+      "key": "1918-07|APOSTOLICAE SUB PLUMBO LITTERAE|Cum urbs|De erectione Concathedralis Recifensis in Brasilia",
+      "date": "1918-07",
+      "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
+      "incipit": "Cum urbs",
+      "page": 401,
+      "rule": "unique",
+      "bodyLine": "Cum urbs Recife in Brasilia tum incolarum numero rerumque commerciis, tum politica auctoritate, qua civilis gubernii de Pernambuco",
+      "header": "Annus X - Vol. X 1 Octobris 1918 Num. 10"
+    },
+    {
+      "key": "1918-07|APOSTOLICAE SUB PLUMBO LITTERAE|Romanis Pontificibus|De cathedralis Ecclesiae Aterradensis erectione",
+      "date": "1918-07",
+      "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
+      "incipit": "Romanis Pontificibus",
+      "page": 353,
+      "rule": "unique",
+      "bodyLine": "Romanis Pontificibus nil unquam magis cordi fuit quam spiritualibus fidelium necessitatibus pro casuum adiunctis providere; atque",
+      "header": "Annus X - Vol. X 2 Septembris 1918 Num. 9"
+    }
+  ],
   "unrecovered": [
     {
       "key": "1917-02|EPISTOLAE|Admodum, delectarunt|Ad Episcopos Graeco-rumenos, qui de condita nova Congregatio",
       "date": "1917-02",
       "category": "EPISTOLAE",
       "incipit": "Admodum, delectarunt",
-      "reason": "several",
+      "reason": "header-mismatch",
       "candidates": [
         133
-      ]
-    },
-    {
-      "key": "1917-02|EPISTOLAE|Libenter comperimus|Ad Henricum S. R. E. card. Almaraz y Santos, archiepiscopum ",
-      "date": "1917-02",
-      "category": "EPISTOLAE",
-      "incipit": "Libenter comperimus",
-      "reason": "several",
-      "candidates": [
-        134
       ]
     },
     {
@@ -40,39 +231,9 @@
       "date": "1917-11-15",
       "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
       "incipit": "Episcopalis Carnutensis Ecclesia",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         52
-      ]
-    },
-    {
-      "key": "1917-11|LITTERAE APOSTOLICAE|Sacras conspicuas|Ecclesia paroecialis B. M. V. de Mercede in urbe Bonaerensi ",
-      "date": "1917-11",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Sacras conspicuas",
-      "reason": "several",
-      "candidates": [
-        8
-      ]
-    },
-    {
-      "key": "1917-12-03|EPISTOLAE|Gratias vobis|Ad RR. PP. DD. Archiepiscopos et Episcopos regni Bavariae ; ",
-      "date": "1917-12-03",
-      "category": "EPISTOLAE",
-      "incipit": "Gratias vobis",
-      "reason": "several",
-      "candidates": [
-        15
-      ]
-    },
-    {
-      "key": "1917-12-03|EPISTOLAE|Tanta Nos|Ad Ioannem S. R. E. Card. Gsernoch, archiepiscopum Strigonie",
-      "date": "1917-12-03",
-      "category": "EPISTOLAE",
-      "incipit": "Tanta Nos",
-      "reason": "several",
-      "candidates": [
-        14
       ]
     },
     {
@@ -80,22 +241,9 @@
       "date": "1917-12-08",
       "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
       "incipit": "Postquam, sexaginta",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         53
-      ]
-    },
-    {
-      "key": "1917-12-10|CONSTITUTIO APOSTOLICA|Apostolicis litteris|Paroecia Ss. Cordis pro animabus igne purgatorio expiandis i",
-      "date": "1917-12-10",
-      "category": "CONSTITUTIO APOSTOLICA",
-      "incipit": "Apostolicis litteris",
-      "reason": "several",
-      "candidates": [
-        5,
-        194,
-        404,
-        438
       ]
     },
     {
@@ -103,40 +251,9 @@
       "date": "1917-12-20",
       "category": "EPISTOLAE",
       "incipit": "In consilium",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         16
-      ]
-    },
-    {
-      "key": "1917-12-27|EPISTOLAE|Annua pietatis|Ad Georgium S. R. E. presb, card Gusmini, archicancellariutn",
-      "date": "1917-12-27",
-      "category": "EPISTOLAE",
-      "incipit": "Annua pietatis",
-      "reason": "several",
-      "candidates": [
-        58
-      ]
-    },
-    {
-      "key": "1917-12-27|EPISTOLAE|Natalis trecentesimi|Ad R. M. Angelam a Nostra Domina, virginum Ursulinarum union",
-      "date": "1917-12-27",
-      "category": "EPISTOLAE",
-      "incipit": "Natalis trecentesimi",
-      "reason": "several",
-      "candidates": [
-        57
-      ]
-    },
-    {
-      "key": "1917-12|LITTERAE APOSTOLICAE|Quae catholico|Vicariatus Apost. « de Beni » erigitur",
-      "date": "1917-12",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Quae catholico",
-      "reason": "several",
-      "candidates": [
-        9,
-        180
       ]
     },
     {
@@ -144,7 +261,7 @@
       "date": "1918-01-16",
       "category": "EPISTOLAE",
       "incipit": "Quod de natali",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         59
       ]
@@ -154,19 +271,9 @@
       "date": "1918-01-17",
       "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
       "incipit": "Quo vehementius",
-      "reason": "several",
+      "reason": "header-mismatch",
       "candidates": [
         81
-      ]
-    },
-    {
-      "key": "1918-01-18|EPISTOLAE|Litteris, quibus|Ad Gotifredum de Grandmaison, praesidem societatis bibliogra",
-      "date": "1918-01-18",
-      "category": "EPISTOLAE",
-      "incipit": "Litteris, quibus",
-      "reason": "several",
-      "candidates": [
-        86
       ]
     },
     {
@@ -174,7 +281,7 @@
       "date": "1918-01-27",
       "category": "EPISTOLAE",
       "incipit": "Facere non possumus",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         88
       ]
@@ -184,7 +291,7 @@
       "date": "1918-01-31",
       "category": "EPISTOLAE",
       "incipit": "Grato te animo",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         89
       ]
@@ -194,20 +301,9 @@
       "date": "1918-02-02",
       "category": "EPISTOLAE",
       "incipit": "Benignitas Dei",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         91
-      ]
-    },
-    {
-      "key": "1918-02-02|EPISTOLAE|Conspirantibus|Ad Episcopos Austriacae ditionis, qui e coetu Vindobonensi c",
-      "date": "1918-02-02",
-      "category": "EPISTOLAE",
-      "incipit": "Conspirantibus",
-      "reason": "several",
-      "candidates": [
-        89,
-        228
       ]
     },
     {
@@ -218,18 +314,7 @@
       "reason": "several",
       "candidates": [
         84,
-        177,
-        440
-      ]
-    },
-    {
-      "key": "1918-02-11|SERMO|Negli anni scorsi|Habitus ad parochos et ad quadragesimales in Urbe concionato",
-      "date": "1918-02-11",
-      "category": "SERMO",
-      "incipit": "Negli anni scorsi",
-      "reason": "several",
-      "candidates": [
-        92
+        177
       ]
     },
     {
@@ -237,19 +322,9 @@
       "date": "1918-03",
       "category": "EPISTOLAE",
       "incipit": "Ad afferendum",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         135
-      ]
-    },
-    {
-      "key": "1918-04-21|EPISTOLAE|Admodum iucunda|Ad R. P. Patritium Murray, Congregationis Ssmi Redemptoris g",
-      "date": "1918-04-21",
-      "category": "EPISTOLAE",
-      "incipit": "Admodum iucunda",
-      "reason": "several",
-      "candidates": [
-        188
       ]
     },
     {
@@ -257,19 +332,9 @@
       "date": "1918-04-21",
       "category": "EPISTOLAE",
       "incipit": "In maximis",
-      "reason": "several",
+      "reason": "header-mismatch",
       "candidates": [
         227
-      ]
-    },
-    {
-      "key": "1918-04-21|EPISTOLAE|Studii erga nos|Ad R. P. D. Willibrordum Benzler, episcopum Metensem, de off",
-      "date": "1918-04-21",
-      "category": "EPISTOLAE",
-      "incipit": "Studii erga nos",
-      "reason": "several",
-      "candidates": [
-        228
       ]
     },
     {
@@ -277,7 +342,7 @@
       "date": "1918-04-29",
       "category": "EPISTOLAE",
       "incipit": "In his temporum",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         229
       ]
@@ -294,7 +359,7 @@
       "date": "1918-05-10",
       "category": "EPISTOLAE",
       "incipit": "Optimum sane",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         232
       ]
@@ -304,19 +369,9 @@
       "date": "1918-05-12",
       "category": "EPISTOLAE",
       "incipit": "Diem vertentis",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         275
-      ]
-    },
-    {
-      "key": "1918-05-12|EPISTOLAE|Maximas inter|Ad Andream S. R. E. card. Ferrari, arc h episcopum Mediolane",
-      "date": "1918-05-12",
-      "category": "EPISTOLAE",
-      "incipit": "Maximas inter",
-      "reason": "several",
-      "candidates": [
-        273
       ]
     },
     {
@@ -324,7 +379,7 @@
       "date": "1918-05-12",
       "category": "EPISTOLAE",
       "incipit": "Salesiani instituti",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         233
       ]
@@ -334,19 +389,9 @@
       "date": "1918-05",
       "category": "EPISTOLAE",
       "incipit": "Decimus hic annus",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         231
-      ]
-    },
-    {
-      "key": "1918-05|MOTU PROPRIO|Quartus iam annus|De Missa pro societatis humanae necessitatibus die 29 iunii ",
-      "date": "1918-05",
-      "category": "MOTU PROPRIO",
-      "incipit": "Quartus iam annus",
-      "reason": "several",
-      "candidates": [
-        225
       ]
     },
     {
@@ -354,19 +399,9 @@
       "date": "1918-06-10",
       "category": "EPISTOLAE",
       "incipit": "Grata nobis",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         281
-      ]
-    },
-    {
-      "key": "1918-06-10|EPISTOLAE|Iucundus Nobis|Ad regem Rajah Rama Vurmah, cui de sexagesimo eius natali gr",
-      "date": "1918-06-10",
-      "category": "EPISTOLAE",
-      "incipit": "Iucundus Nobis",
-      "reason": "several",
-      "candidates": [
-        358
       ]
     },
     {
@@ -374,7 +409,7 @@
       "date": "1918-06-19",
       "category": "EPISTOLAE",
       "incipit": "Anniversarium diem",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         359
       ]
@@ -384,7 +419,7 @@
       "date": "1918-06-25",
       "category": "EPISTOLAE",
       "incipit": "Utrumque Nobis",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         321
       ]
@@ -394,19 +429,9 @@
       "date": "1918-06-27",
       "category": "EPISTOLAE",
       "incipit": "Vicesimum quintam",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         322
-      ]
-    },
-    {
-      "key": "1918-06-30|EPISTOLAE|Pastoralis sollertiae|Ad R. P. D. Michaelem 0'Doherty, archiepiscopum Maniianum, c",
-      "date": "1918-06-30",
-      "category": "EPISTOLAE",
-      "incipit": "Pastoralis sollertiae",
-      "reason": "several",
-      "candidates": [
-        357
       ]
     },
     {
@@ -414,7 +439,7 @@
       "date": "1918-06-31",
       "category": "EPISTOLAE",
       "incipit": "Quoniam dena",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         360
       ]
@@ -424,41 +449,9 @@
       "date": "1918-06",
       "category": "EPISTOLAE",
       "incipit": "Dum tanta",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         277
-      ]
-    },
-    {
-      "key": "1918-06|EPISTOLAE|Litteris apostolicis|Ad Ludovicum Nazarium S. R. E. card. Bégin, archiepiscopum Q",
-      "date": "1918-06",
-      "category": "EPISTOLAE",
-      "incipit": "Litteris apostolicis",
-      "reason": "several",
-      "candidates": [
-        84,
-        177,
-        440
-      ]
-    },
-    {
-      "key": "1918-07|APOSTOLICAE SUB PLUMBO LITTERAE|Cum urbs|De erectione Concathedralis Recifensis in Brasilia",
-      "date": "1918-07",
-      "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
-      "incipit": "Cum urbs",
-      "reason": "several",
-      "candidates": [
-        401
-      ]
-    },
-    {
-      "key": "1918-07|APOSTOLICAE SUB PLUMBO LITTERAE|Romanis Pontificibus|De cathedralis Ecclesiae Aterradensis erectione",
-      "date": "1918-07",
-      "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
-      "incipit": "Romanis Pontificibus",
-      "reason": "several",
-      "candidates": [
-        353
       ]
     },
     {
@@ -466,7 +459,7 @@
       "date": "1918-07",
       "category": "MOTU PROPRIO",
       "incipit": "Tribus abhinc annis",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         305
       ]
@@ -476,7 +469,7 @@
       "date": "1918-08-21",
       "category": "EPISTOLAE",
       "incipit": "Variis sane",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         442
       ]
@@ -486,7 +479,7 @@
       "date": "1918-08",
       "category": "EPISTOLAE",
       "incipit": "Quod Nobis",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         361
       ]
@@ -496,7 +489,7 @@
       "date": "1918-08",
       "category": "EPISTOLAE",
       "incipit": "Varie sane",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         360
       ]
@@ -506,7 +499,7 @@
       "date": "1918-09-11",
       "category": "EPISTOLAE",
       "incipit": "Dum sacra",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         444
       ]
@@ -516,7 +509,7 @@
       "date": "1918-09-17",
       "category": "EPISTOLAE",
       "incipit": "Quamquam in obsequio",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         444
       ]
@@ -526,7 +519,7 @@
       "date": "1918-09-20",
       "category": "EPISTOLAE",
       "incipit": "Quae in proximis",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         445
       ]
@@ -543,7 +536,7 @@
       "date": "1918-10-16",
       "category": "EPISTOLAE",
       "incipit": "Animus tuus",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         449
       ]
@@ -560,7 +553,7 @@
       "date": "1918-10",
       "category": "EPISTOLAE",
       "incipit": "Cum ad christianos",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         447
       ]

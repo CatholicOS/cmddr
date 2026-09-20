@@ -27,7 +27,11 @@ const sources = range
   ? ACTA_SOURCES.filter((s) => s.kind === 'volume' && s.year >= Number(range[1]) && s.year <= Number(range[2]))
   : [actaSource(arg) ?? (() => { throw new Error(`unknown source ${arg}`); })()];
 
-const today = new Date().toISOString().slice(0, 10);
+// The local calendar date, not UTC's: `toISOString` reads a day behind local midnight
+// until the UTC clock itself crosses it (controller ruling 9, fix round 1).
+const pad2 = (n: number) => String(n).padStart(2, '0');
+const now = new Date();
+const today = `${now.getFullYear()}-${pad2(now.getMonth() + 1)}-${pad2(now.getDate())}`;
 for (const s of sources) {
   const text = textPath(s);
   if (!existsSync(text)) { console.error(`${s.key}: no volume text at ${text} (run tools/fetch-acta.sh text ${s.year})`); continue; }

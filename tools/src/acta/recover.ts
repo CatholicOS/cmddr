@@ -37,9 +37,15 @@ export interface IndexGeneralis {
   unmapped: string[];
 }
 
-const GENERALIS_RE = /INDEX\s+GENERALIS\s+ACTORUM/;
+// AAS 1-12 (1909-1920) title the same table `INDEX GENERALIS RERUM`, not `...ACTORUM`
+// (AAS 1 (1909) 833: `INDEX GENERALIS RERUM` / `ACTA PII PP. X.` / `CONSTITUTIONES, 5, 7,`
+// / `LITTERAE APOSTOLICAE, 197, 229, ...` -- the same heading/comma/page-run structure).
+const GENERALIS_RE = /INDEX\s+GENERALIS\s+(?:ACTORUM|RERUM)/;
 /** The pope part's end: the dicasteries' part (`II. - ACTA SACRARUM CONGREGATIONUM`, `ACTA SS. CONGREGATIONUM`) or the next index. */
-const PART_END_RE = /^\s*(?:[IVX]+\.?\s*[–—-]\s*)?ACTA\s*$|^\s*(?:[IVX]+\.?\s*[–—-]\s*)?ACTA\s+(?:SACRARUM|SS\.)\s+CONGREGATION|^\s*INDEX\s+DOCUMENTORUM/;
+// The numeral prefix's class matches the parser's own `PART_HEADING_RE` (index.ts): AAS 17
+// (1925) reads the part end `IL - ACTA` (roman `II.` misread as `IL`) on its own line,
+// before `SACRARUM CONGREGATIONUM` on the next.
+const PART_END_RE = /^\s*(?:[A-Za-z0-9]{1,4}\.?\s*[–—-]\s*)?ACTA\s*$|^\s*(?:[A-Za-z0-9]{1,4}\.?\s*[–—-]\s*)?ACTA\s+(?:SACRARUM|SS\.)\s+CONGREGATION|^\s*INDEX\s+DOCUMENTORUM/;
 /** `EPISTOLAE, 10-12, 89-91, 195 s.,` -- a heading in capitals, a comma, then pages. */
 const HEADING_LINE_RE = /^\s*([A-Z][A-Z .'’]+?)\s*[,:]\s*(.*)$/;
 /** A continuation line: pages only. */
@@ -73,7 +79,9 @@ export function parseIndexGeneralis(pages: readonly string[]): IndexGeneralis {
     buffer = '';
   };
   for (const line of lines) {
-    if (!inPope) { if (/^\s*(?:[IVX]+\.?\s*[–—-]\s*)?ACTA\s+[A-Z]+\s+PP\./.test(line)) inPope = true; continue; }
+    // The pope's name token is any run of non-space characters, not `[A-Z]+`: AAS 16
+    // (1924) 507 reads the opening line `I. - ACTA £'11 PP. XI` (`PII` garbled to `£'11`).
+    if (!inPope) { if (/^\s*(?:[IVX]+\.?\s*[–—-]\s*)?ACTA\s+\S+\s+PP\./.test(line)) inPope = true; continue; }
     if (PART_END_RE.test(line)) { flush(); break; }
     const h = line.match(HEADING_LINE_RE);
     if (h && !PAGES_LINE_RE.test(line)) { flush(); heading = h[1]!.trim(); buffer = h[2]!; continue; }

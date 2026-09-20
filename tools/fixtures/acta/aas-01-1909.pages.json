@@ -1,8 +1,19 @@
 {
   "source": "1909",
-  "generated": "2026-09-20",
+  "generated": "2026-09-21",
   "text": "~/development/sources/AAS/txt/aas-01-1909.txt (908 pages)",
-  "rows": [],
+  "rows": [
+    {
+      "key": "1909-04-21|LITTERAE ENCYCLICAE|Communium rerum|de saecularibus solemniis in honorem S. Anselmi, Episcopi et",
+      "date": "1909-04-21",
+      "category": "LITTERAE ENCYCLICAE",
+      "incipit": "Communium rerum",
+      "page": 333,
+      "rule": "unique",
+      "bodyLine": "Communium rerum inter ásperas vices additasque nuper",
+      "header": "Annus I. - Vol. I. Die 21 Aprilis 1909. Num. 8."
+    }
+  ],
   "unrecovered": [
     {
       "key": "1908-01-29|CONSTITUTIONES APOSTOLICAE|Sapienti Consilio|DE ROMANA CURIA.",
@@ -337,16 +348,6 @@
       "category": "SERMONES",
       "incipit": null,
       "reason": "no-incipit"
-    },
-    {
-      "key": "1909-04-21|LITTERAE ENCYCLICAE|Communium rerum|de saecularibus solemniis in honorem S. Anselmi, Episcopi et",
-      "date": "1909-04-21",
-      "category": "LITTERAE ENCYCLICAE",
-      "incipit": "Communium rerum",
-      "reason": "several",
-      "candidates": [
-        333
-      ]
     },
     {
       "key": "1909-04-27|EPISTOLAE||Ad R. P. D. Aemilianum Manacorda, Episcopum Fossanen., ob L ",

@@ -55,6 +55,51 @@ describe('parseIndexGeneralis', () => {
     expect(g.page).toBeNull();
     expect(g.runs.size).toBe(0);
   });
+
+  // AAS 1 (1909) p. 833, pypdf default mode, as the store text carries it.
+  const AAS1_GENERALIS_RERUM = `I.
+INDEX GENERALIS RERUM
+ACTA PII PP. X.
+LITTERAE APOSTOLICAE, 197, 229, 245,
+269, 301, 389, 447, 477, 573, 605,
+637, 669, 725, 757, 781, 802.
+LITTERAE ENCYCLICAE, 333.
+MOTU PROPRIO, 445, 801.
+`;
+
+  it('reads the page runs when the volume heads the table `INDEX GENERALIS RERUM`, not `...ACTORUM` (AAS 1-12, 1909-1920)', () => {
+    const g = parseIndexGeneralis(['front matter', 'body', AAS1_GENERALIS_RERUM, 'INDEX DOCUMENTORUM\nCHRONOLOGICO ORDINE DIGESTUS']);
+    expect(g.page).toBe(3);
+    expect(g.runs.get('Litterae Apostolicae')).toEqual([
+      [197, 197], [229, 229], [245, 245], [269, 269], [301, 301], [389, 389], [447, 447],
+      [477, 477], [573, 573], [605, 605], [637, 637], [669, 669], [725, 725], [757, 757], [781, 781], [802, 802],
+    ]);
+    expect(g.runs.get('Litterae Encyclicae')).toEqual([[333, 333]]);
+    expect(g.runs.get('Litterae Apostolicae Motu proprio datae')).toEqual([[445, 445], [801, 801]]);
+  });
+
+  it('detects the pope part when the OCR garbles the pope\'s name (AAS 16, 1924, p. 507: `I. - ACTA £\'11 PP. XI`, `PII` misread)', () => {
+    const text = `INDEX GENERALIS ACTORUM
+I. - ACTA £'11 PP. XI
+LITTERAE ENCYCLICAE, 5.
+`;
+    const g = parseIndexGeneralis(['front matter', 'body', text, 'INDEX DOCUMENTORUM\nCHRONOLOGICO ORDINE DIGESTUS']);
+    expect(g.runs.get('Litterae Encyclicae')).toEqual([[5, 5]]);
+  });
+
+  it('ends the pope part at a numeral the OCR misreads past roman letters (AAS 17, 1925, p. 672: `IL - ACTA` / `SACRARUM CONGREGATIONUM`, `II.` misread)', () => {
+    const text = `INDEX GENERALIS ACTORUM
+I. - ACTA PII PP. XI
+LITTERAE ENCYCLICAE, 593.
+IL - ACTA
+SACRARUM CONGREGATIONUM
+SUPREMA S. CONGREGATIO S. OFFICII, 69.
+`;
+    const g = parseIndexGeneralis(['front matter', 'body', text, 'INDEX DOCUMENTORUM\nCHRONOLOGICO ORDINE DIGESTUS']);
+    expect(g.runs.get('Litterae Encyclicae')).toEqual([[593, 593]]);
+    expect(g.runs.has('SUPREMA S. CONGREGATIO S. OFFICII')).toBe(false);
+    expect(g.unmapped).toEqual([]);
+  });
 });
 
 describe('latinDate', () => {

@@ -1,94 +1,228 @@
 {
   "source": "1914",
-  "generated": "2026-09-20",
+  "generated": "2026-09-21",
   "text": "~/development/sources/AAS/txt/aas-06-1914.txt (795 pages)",
   "rows": [
-    {
-      "key": "1914-10-25|EPISTOLAE|Pontificatum|Ad R. P. D. Iosephum Mora y del Rio, archiepiscopum Mexicanu",
-      "date": "1914-10-25",
-      "category": "EPISTOLAE",
-      "incipit": "Pontificatum",
-      "page": 543,
-      "rule": "dated",
-      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Pontificatum secreto Dei consilio ineuntes, haud mediocrem sensimus moerorem ob teterrimum illud bellum, quod iam diu campos Europae fere",
-      "header": "Acta Benedicti PP. XV 543",
-      "formula": "Datum Romae apud S. Petrum, die xxv mensis octobris anno MCMXIV, Pontificatus Nostri primo. BENEDICTUS PP. XV "
-    }
-  ],
-  "unrecovered": [
     {
       "key": "1914-02|EPISTOLAE|Abbiamo ricevuto|Ad Franciscum de Paula card. Cassetta, episcopum Tusculanum,",
       "date": "1914-02",
       "category": "EPISTOLAE",
       "incipit": "Abbiamo ricevuto",
-      "reason": "several",
-      "candidates": [
-        106
-      ]
+      "page": 106,
+      "rule": "unique",
+      "bodyLine": "Abbiamo ricevuto colla massima compiacenza una copia della",
+      "header": "106 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1914-02|EPISTOLAE|Florere istic|Ad perillustrem virum Aloisium Oster, praesidem Consilii Ope",
       "date": "1914-02",
       "category": "EPISTOLAE",
       "incipit": "Florere istic",
-      "reason": "several",
-      "candidates": [
-        105
-      ]
+      "page": 105,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Florere istic",
+      "header": "Annus VI. - Vol. VI. Die 12 Martii 1914. Num. 4."
     },
     {
       "key": "1914-02|EPISTOLAE|Nuntia rei quidem|Ad perillustrem virum A. d'Hendecourt vicecomitem, Societati",
       "date": "1914-02",
       "category": "EPISTOLAE",
       "incipit": "Nuntia rei quidem",
-      "reason": "several",
-      "candidates": [
-        106
-      ]
-    },
-    {
-      "key": "1914-03|EPISTOLAE|Ad eucharisticum conventum|Ad R. P. D. Natalem Serafino, Bugellensium episcopum, occasi",
-      "date": "1914-03",
-      "category": "EPISTOLAE",
-      "incipit": "Ad eucharisticum conventum",
-      "reason": "several",
-      "candidates": [
-        224
-      ]
+      "page": 106,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Nuntia rei",
+      "header": "106 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1914-03|EPISTOLAE|Et vota|Ad Augustinum card. Richelmy, Taurinensi um archiepiscopum, ",
       "date": "1914-03",
       "category": "EPISTOLAE",
       "incipit": "Et vota",
-      "reason": "several",
-      "candidates": [
-        180
-      ]
+      "page": 180,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili Noster, salutem et apostolicam benedictionem. — Et",
+      "header": "180 Acta Apostolicae Sedis. - Commentarium Officiale"
     },
     {
       "key": "1914-03|EPISTOLAE|Ex quo|Ad R. P. Clementem a Ss. Faustino et Iovita, praepositum gen",
       "date": "1914-03",
       "category": "EPISTOLAE",
       "incipit": "Ex quo",
-      "reason": "several",
-      "candidates": [
-        137,
-        194,
-        253,
-        522,
-        546,
-        570
-      ]
+      "page": 137,
+      "rule": "unique",
+      "bodyLine": "Dilecti Filii, salutem et apostolicam benedictionem. — Ex quo",
+      "header": "Annus VI. - Vol. VI. Die 31 Martii 1914. Num. 5."
     },
     {
       "key": "1914-03|EPISTOLAE|Quo societas|Ad dilectum filium Praesidem Piae Societatis Antonianae univ",
       "date": "1914-03",
       "category": "EPISTOLAE",
       "incipit": "Quo societas",
-      "reason": "several",
+      "page": 259,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Quo societas",
+      "header": "Acta Pii PP. X 259"
+    },
+    {
+      "key": "1914-04-10|EPISTOLAE|Quae istinc|Ad R. P. D. Iosephum S. Pelczar, Premisliensium latinorum ep",
+      "date": "1914-04-10",
+      "category": "EPISTOLAE",
+      "incipit": "Quae istinc",
+      "page": 181,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. =— Quae",
+      "header": "Acta Pii PP. X 181"
+    },
+    {
+      "key": "1914-04|EPISTOLAE|Pervetustum istud|Ad R. P. D. Vincentium Scozzoli, Ariminensium episcopum, sae",
+      "date": "1914-04",
+      "category": "EPISTOLAE",
+      "incipit": "Pervetustum istud",
+      "page": 180,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Pervetustum istud Virginis augustae simulacrum, non tradita tantum a",
+      "header": "180 Acta Apostolicae Sedis. - Commentarium Officiale"
+    },
+    {
+      "key": "1914-05-25|ALLOCUTIONES|Ex quo postremum|Habita in Consistorio.",
+      "date": "1914-05-25",
+      "category": "ALLOCUTIONES",
+      "incipit": "Ex quo postremum",
+      "page": 253,
+      "rule": "unique",
+      "bodyLine": "Ex quo postremum ad vos, in sacrum Consistorium congregatos, verba fecimus, non ita quidem multum intercessit",
+      "header": "Annus VI. - Vol. VI. Die 28 Maii 1914. Num. 8."
+    },
+    {
+      "key": "1914-05-27|ALLOCUTIONES|Il grave dolore|Habita occasione impositionis bireti novis cardinalibus",
+      "date": "1914-05-27",
+      "category": "ALLOCUTIONES",
+      "incipit": "Il grave dolore",
+      "page": 260,
+      "rule": "unique",
+      "bodyLine": "Il grave dolore, provato dopo il Concistoro del 1911 per la perdita",
+      "header": "260 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1914-05|EPISTOLAE|Omnes quidem|Ad R. P. Franciscum Xaverium Wernz, Societatis Iesu praeposi",
+      "date": "1914-05",
+      "category": "EPISTOLAE",
+      "incipit": "Omnes quidem",
+      "page": 303,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Omnes quidem filios Ecclesiae paterno Nos amore complectimur: sed Ordines et",
+      "header": "Acta Pii PP. X 303"
+    },
+    {
+      "key": "1914-06|EPISTOLAE|Si unquam|Ad R. P. D. Iosephum Scatti, episcopum Savonensem et Naulens",
+      "date": "1914-06",
+      "category": "EPISTOLAE",
+      "incipit": "Si unquam",
+      "page": 374,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Si",
+      "header": "374 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1914-07|EPISTOLAE|Ad clara|Ad Iacobum card. Gibbons, Baltimórensium archiepiscopum, de ",
+      "date": "1914-07",
+      "category": "EPISTOLAE",
+      "incipit": "Ad clara",
+      "page": 375,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili Noster, salutem et apostolicam benedictionem. — Ad",
+      "header": "Acta Pii PP. X 375"
+    },
+    {
+      "key": "1914-09-21|EPISTOLAE|Litteras abs te|Ad Antonium card. Mendes Bello, Olyssiponensem patriarcham, ",
+      "date": "1914-09-21",
+      "category": "EPISTOLAE",
+      "incipit": "Litteras abs te",
+      "page": 513,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili Noster, salutem et apostolicam benedictionem. — Litteras abs te habuimus amoris officiique plenissimas, pergratumque fuit",
+      "header": "Annus VI. - Vol. VI. Die 16 Octobris 1914. Num. 16"
+    },
+    {
+      "key": "1914-09-21|EPISTOLAE|Proximis diebus|Ad R. P. D. Franciscum Xaverium Schoepfer, episcopum Tarbien",
+      "date": "1914-09-21",
+      "category": "EPISTOLAE",
+      "incipit": "Proximis diebus",
+      "page": 514,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. - Proximis diebus a dilecto Filio Nostro, cardinali Ianuario Granito di Belmonte, certiores facti sumus - quod iam ex publicis nuntiis ac multorum",
+      "header": "514 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1914-09-21|EPISTOLAE|Voluntatis tuae|Ad Franciscum V. card. Dubillard, Chamberiensem archiepiscop",
+      "date": "1914-09-21",
+      "category": "EPISTOLAE",
+      "incipit": "Voluntatis tuae",
+      "page": 514,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili Noster, salutem et apostolicam benedictionem. — Voluntatis tuae significationem amplectimur libentissime : futurum enim confidimus ut iis quae Nobis obtulisti fausta vota, pias ad Deum preces",
+      "header": "514 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1914-10-12|EPISTOLAE|Litteras obsequii plenas|Ad R. P. D. Paschalem Morganti, archiepiscopum Ravennatensem",
+      "date": "1914-10-12",
+      "category": "EPISTOLAE",
+      "incipit": "Litteras obsequii plenas",
+      "page": 540,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Litteras obsequii plenas nec non Petrianam stipem a sacerdotibus Ravennatensis archidioecesis et dioecesis Cerviensis, qui nuper religioni operam dederunt, per te Nobis exhibitas, libenti animo accepimus ; eaeque",
+      "header": "540 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1914-10|EPISTOLAE|Communes litteras|Ad Franciscum a Paula card. Cassetta, episcopum Tusculanum, ",
+      "date": "1914-10",
+      "category": "EPISTOLAE",
+      "incipit": "Communes litteras",
+      "page": 539,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater Noster, salutem et apostolicam benedictionem. —",
+      "header": "Acta Benedicti PP. XV 539"
+    },
+    {
+      "key": "1914-11-21|EPISTOLAE|Petis tu|Ad R. D. Fl. Mortier, moderatorem generalem Congregationis a",
+      "date": "1914-11-21",
+      "category": "EPISTOLAE",
+      "incipit": "Petis tu",
+      "page": 692,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Petis tu",
+      "header": "692 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1914-11-23|MOTU PROPRIO|Consilium a Decessore Nostro|De Pontificia Commissione Vulgatae versioni Bibliorum emenda",
+      "date": "1914-11-23",
+      "category": "MOTU PROPRIO",
+      "incipit": "Consilium a Decessore Nostro",
+      "page": 665,
+      "rule": "unique",
+      "bodyLine": "Consilium a Decessore Nostro sanctae memoriae initum latinae Bibliorum versionis, quae Vulgata dicitur, ad pristinam",
+      "header": "Annus VI. - Vol. Vi. Die 9 Decembris 1914. Num. 20"
+    },
+    {
+      "key": "1914-12-03|MOTU PROPRIO|Sacrae theologiae|De Bononiensi theologorum collegio",
+      "date": "1914-12-03",
+      "category": "MOTU PROPRIO",
+      "incipit": "Sacrae theologiae",
+      "page": 689,
+      "rule": "unique",
+      "bodyLine": "Sacrae theologiae multimodis fovere studia, quibus ministeria sacerdotum in animarum salutem mirifice adiuvantur,",
+      "header": "Annus Vi. - Vol. VI. Die 30 Decembris 1914. Num. 21"
+    }
+  ],
+  "unrecovered": [
+    {
+      "key": "1914-03|EPISTOLAE|Ad eucharisticum conventum|Ad R. P. D. Natalem Serafino, Bugellensium episcopum, occasi",
+      "date": "1914-03",
+      "category": "EPISTOLAE",
+      "incipit": "Ad eucharisticum conventum",
+      "reason": "header-mismatch",
       "candidates": [
-        259
+        224
       ]
     },
     {
@@ -96,79 +230,9 @@
       "date": "1914-04-10",
       "category": "EPISTOLAE",
       "incipit": "Civium ex omni ordine",
-      "reason": "several",
+      "reason": "header-mismatch",
       "candidates": [
         225
-      ]
-    },
-    {
-      "key": "1914-04-10|EPISTOLAE|Quae istinc|Ad R. P. D. Iosephum S. Pelczar, Premisliensium latinorum ep",
-      "date": "1914-04-10",
-      "category": "EPISTOLAE",
-      "incipit": "Quae istinc",
-      "reason": "several",
-      "candidates": [
-        181
-      ]
-    },
-    {
-      "key": "1914-04|EPISTOLAE|Pervetustum istud|Ad R. P. D. Vincentium Scozzoli, Ariminensium episcopum, sae",
-      "date": "1914-04",
-      "category": "EPISTOLAE",
-      "incipit": "Pervetustum istud",
-      "reason": "several",
-      "candidates": [
-        180
-      ]
-    },
-    {
-      "key": "1914-05-25|ALLOCUTIONES|Ex quo postremum|Habita in Consistorio.",
-      "date": "1914-05-25",
-      "category": "ALLOCUTIONES",
-      "incipit": "Ex quo postremum",
-      "reason": "several",
-      "candidates": [
-        253
-      ]
-    },
-    {
-      "key": "1914-05-27|ALLOCUTIONES|Il grave dolore|Habita occasione impositionis bireti novis cardinalibus",
-      "date": "1914-05-27",
-      "category": "ALLOCUTIONES",
-      "incipit": "Il grave dolore",
-      "reason": "several",
-      "candidates": [
-        260
-      ]
-    },
-    {
-      "key": "1914-05|EPISTOLAE|Omnes quidem|Ad R. P. Franciscum Xaverium Wernz, Societatis Iesu praeposi",
-      "date": "1914-05",
-      "category": "EPISTOLAE",
-      "incipit": "Omnes quidem",
-      "reason": "several",
-      "candidates": [
-        303
-      ]
-    },
-    {
-      "key": "1914-06|EPISTOLAE|Si unquam|Ad R. P. D. Iosephum Scatti, episcopum Savonensem et Naulens",
-      "date": "1914-06",
-      "category": "EPISTOLAE",
-      "incipit": "Si unquam",
-      "reason": "several",
-      "candidates": [
-        374
-      ]
-    },
-    {
-      "key": "1914-07|EPISTOLAE|Ad clara|Ad Iacobum card. Gibbons, Baltimórensium archiepiscopum, de ",
-      "date": "1914-07",
-      "category": "EPISTOLAE",
-      "incipit": "Ad clara",
-      "reason": "several",
-      "candidates": [
-        375
       ]
     },
     {
@@ -176,39 +240,9 @@
       "date": "1914-07",
       "category": "EPISTOLAE",
       "incipit": "Ex omnibus locis",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         376
-      ]
-    },
-    {
-      "key": "1914-09-21|EPISTOLAE|Litteras abs te|Ad Antonium card. Mendes Bello, Olyssiponensem patriarcham, ",
-      "date": "1914-09-21",
-      "category": "EPISTOLAE",
-      "incipit": "Litteras abs te",
-      "reason": "several",
-      "candidates": [
-        513
-      ]
-    },
-    {
-      "key": "1914-09-21|EPISTOLAE|Proximis diebus|Ad R. P. D. Franciscum Xaverium Schoepfer, episcopum Tarbien",
-      "date": "1914-09-21",
-      "category": "EPISTOLAE",
-      "incipit": "Proximis diebus",
-      "reason": "several",
-      "candidates": [
-        514
-      ]
-    },
-    {
-      "key": "1914-09-21|EPISTOLAE|Voluntatis tuae|Ad Franciscum V. card. Dubillard, Chamberiensem archiepiscop",
-      "date": "1914-09-21",
-      "category": "EPISTOLAE",
-      "incipit": "Voluntatis tuae",
-      "reason": "several",
-      "candidates": [
-        514
       ]
     },
     {
@@ -219,21 +253,11 @@
       "reason": "no-incipit"
     },
     {
-      "key": "1914-10-12|EPISTOLAE|Litteras obsequii plenas|Ad R. P. D. Paschalem Morganti, archiepiscopum Ravennatensem",
-      "date": "1914-10-12",
-      "category": "EPISTOLAE",
-      "incipit": "Litteras obsequii plenas",
-      "reason": "several",
-      "candidates": [
-        540
-      ]
-    },
-    {
       "key": "1914-10-16|EPISTOLAE|C'est avec un intérêt tout particulier|Ad Aloisium L card. Luçon, archiepiscopum Rhemensem, ob litt",
       "date": "1914-10-16",
       "category": "EPISTOLAE",
       "incipit": "C'est avec un intérêt tout particulier",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         541
       ]
@@ -250,7 +274,7 @@
       "date": "1914-10-18",
       "category": "EPISTOLAE",
       "incipit": "Gratum equidem",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         542
       ]
@@ -260,7 +284,7 @@
       "date": "1914-10-20",
       "category": "EPISTOLAE",
       "incipit": "Il Nous a été",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         544
       ]
@@ -270,19 +294,19 @@
       "date": "1914-10-25",
       "category": "EPISTOLAE",
       "incipit": "Nobis, ad catholicam",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         582
       ]
     },
     {
-      "key": "1914-10|EPISTOLAE|Communes litteras|Ad Franciscum a Paula card. Cassetta, episcopum Tusculanum, ",
-      "date": "1914-10",
+      "key": "1914-10-25|EPISTOLAE|Pontificatum|Ad R. P. D. Iosephum Mora y del Rio, archiepiscopum Mexicanu",
+      "date": "1914-10-25",
       "category": "EPISTOLAE",
-      "incipit": "Communes litteras",
-      "reason": "several",
+      "incipit": "Pontificatum",
+      "reason": "outside-runs",
       "candidates": [
-        539
+        543
       ]
     },
     {
@@ -291,26 +315,6 @@
       "category": "EPISTOLAE",
       "incipit": "Per accepta",
       "reason": "none"
-    },
-    {
-      "key": "1914-11-21|EPISTOLAE|Petis tu|Ad R. D. Fl. Mortier, moderatorem generalem Congregationis a",
-      "date": "1914-11-21",
-      "category": "EPISTOLAE",
-      "incipit": "Petis tu",
-      "reason": "several",
-      "candidates": [
-        692
-      ]
-    },
-    {
-      "key": "1914-11-23|MOTU PROPRIO|Consilium a Decessore Nostro|De Pontificia Commissione Vulgatae versioni Bibliorum emenda",
-      "date": "1914-11-23",
-      "category": "MOTU PROPRIO",
-      "incipit": "Consilium a Decessore Nostro",
-      "reason": "several",
-      "candidates": [
-        665
-      ]
     },
     {
       "key": "1914-11|EPISTOLAE|Communis episcoporum|Ad Michaelem card. Logue, archiepiscopum Armacanum, ob litte",
@@ -324,7 +328,7 @@
       "date": "1914-11",
       "category": "EPISTOLAE",
       "incipit": "Ex quo Pontificatum",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         546
       ]
@@ -338,16 +342,6 @@
       "candidates": [
         565,
         585
-      ]
-    },
-    {
-      "key": "1914-12-03|MOTU PROPRIO|Sacrae theologiae|De Bononiensi theologorum collegio",
-      "date": "1914-12-03",
-      "category": "MOTU PROPRIO",
-      "incipit": "Sacrae theologiae",
-      "reason": "several",
-      "candidates": [
-        689
       ]
     }
   ]

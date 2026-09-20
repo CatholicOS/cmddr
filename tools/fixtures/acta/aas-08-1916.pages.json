@@ -1,18 +1,47 @@
 {
   "source": "1916",
-  "generated": "2026-09-20",
+  "generated": "2026-09-21",
   "text": "~/development/sources/AAS/txt/aas-08-1916.txt (548 pages)",
   "rows": [
+    {
+      "key": "1915-12|APOSTOLICAE SUB PLUMBO LITTERAE|Inter praecipuas|De erectione Provinciae Reginensis, divisione dioecesis sanc",
+      "date": "1915-12",
+      "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
+      "incipit": "Inter praecipuas",
+      "page": 89,
+      "rule": "unique",
+      "bodyLine": "Inter praecipuas Apostolicae Sedis curas ea semper enituit novas",
+      "header": "Annus VIII - Vol. VIII Die 3 Aprilis 1916 Num. 4"
+    },
+    {
+      "key": "1916-03|EPISTOLAE|Al tremendo conflitto|Ad Basilium S. R. E. Presbyterum Cardinalem Pompilj, in Urbe",
+      "date": "1916-03",
+      "category": "EPISTOLAE",
+      "incipit": "Al tremendo conflitto",
+      "page": 58,
+      "rule": "unique",
+      "bodyLine": "Al tremendo conflitto, che lacera l'Europa, Noi, come Pastore universale delle anime, non potevamo, senza venir meno ai sacri doveri",
+      "header": "58 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1916-03|SERMO|Al vescovo|Ad divini verbi per Quadragesimam in Urbe praecones.",
+      "date": "1916-03",
+      "category": "SERMO",
+      "incipit": "Al vescovo",
+      "page": 95,
+      "rule": "unique",
+      "bodyLine": "PRAECONES.",
+      "header": "Acta Benedicti PP. XV 95"
+    },
     {
       "key": "1916-04-03|APOSTOLICAE SUB PLUMBO LITTERAE|Catholicae Ecclesiae cura|De erectione novae dioecesis Penedensis",
       "date": "1916-04-03",
       "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
       "incipit": "Catholicae Ecclesiae cura",
       "page": 169,
-      "rule": "dated",
+      "rule": "unique",
       "bodyLine": "Catholicae Ecclesiae cura Romanis Pontificibus divinitus commissa",
-      "header": "Annus VIII - Vol. VIII Die 7 Iunii 1916 Num. 6",
-      "formula": "Datum Romae apud S. Petrum, anno Domini millesimo nongentesimo decimo sexto, die tertia mensis aprilis, Pontificatus Nostri anno secundo. Loco Plumbi. O. CARD. CAGIANO DE AZEVEDO % C. CARD. DE LAI S. "
+      "header": "Annus VIII - Vol. VIII Die 7 Iunii 1916 Num. 6"
     },
     {
       "key": "1916-04-15|LITTERAE APOSTOLICAE|Cum Catholicae Ecclesiae|Oratio ad populos christianos Orientis cum Ecclesia Romana i",
@@ -20,10 +49,139 @@
       "category": "LITTERAE APOSTOLICAE",
       "incipit": "Cum Catholicae Ecclesiae",
       "page": 137,
-      "rule": "dated",
+      "rule": "unique",
       "bodyLine": "Ad perpetuam rei memoriam. — Cum Catholicae Ecclesiae veritas",
-      "header": "Annus VIII - Vol. VIII Die 5 Maii 1916 Num. 5",
-      "formula": "Datum Romae apud S. Petrum, sub annulo Piscatoris, die xv aprilis anno MCMXVI, Pontificatus Nostri secundo. P. CARD. GASPARRT, a Secretis Status. L. % S. "
+      "header": "Annus VIII - Vol. VIII Die 5 Maii 1916 Num. 5"
+    },
+    {
+      "key": "1916-04-30|EPISTOLAE|Institutiones Theologiae Moralis|Ad R. P. Ianuarium Bucceroni, e Soc. Iesu, doctorem decurial",
+      "date": "1916-04-30",
+      "category": "EPISTOLAE",
+      "incipit": "Institutiones Theologiae Moralis",
+      "page": 173,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Institutiones",
+      "header": "Acta Benedicti PP. XV 173"
+    },
+    {
+      "key": "1916-05|EPISTOLAE|Epistola, quam Mediolani|Ad Andream card. Ferrari, archiepiscopum Mediolanensem, cete",
+      "date": "1916-05",
+      "category": "EPISTOLAE",
+      "incipit": "Epistola, quam Mediolani",
+      "page": 261,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Epistola, quam Mediolani nuper congregati ad Nos",
+      "header": "Acta Benedicti PP. XV 261"
+    },
+    {
+      "key": "1916-05|EPISTOLAE|Optimo sane iure|Ad R. D. Ianuarium Asprenatem Galante, protonotarium apostol",
+      "date": "1916-05",
+      "category": "EPISTOLAE",
+      "incipit": "Optimo sane iure",
+      "page": 219,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Optimo sane",
+      "header": "Acta Benedicti PP. XV 219"
+    },
+    {
+      "key": "1916-05|EPISTOLAE|Significandae tibi|Ad R. D. Paulum Buguet, curionem Montislegionis, protonotari",
+      "date": "1916-05",
+      "category": "EPISTOLAE",
+      "incipit": "Significandae tibi",
+      "page": 218,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Significandae",
+      "header": "218 ' Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1916-07-15|LITTERAE APOSTOLICAE|Romanorum Pontificum|Templum S. Mariae vulgo «di Pozzano», apud Stabiam seu Castr",
+      "date": "1916-07-15",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Romanorum Pontificum",
+      "page": 259,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Romanorum Pontificum Decessorum Nostrorum vestigia persequentes, sacras Aedes, quae, ante actis",
+      "header": "Acta Benedicti BP. XV 259"
+    },
+    {
+      "key": "1916-07-21|EPISTOLAE|Laetamur utrumque|Ad R. P. Ludovicum Theissliug, recens electum Dominiciani Or",
+      "date": "1916-07-21",
+      "category": "EPISTOLAE",
+      "incipit": "Laetamur utrumque",
+      "page": 355,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Laetamur",
+      "header": "Acta Benedicti BB. XV 355"
+    },
+    {
+      "key": "1916-07-21|EPISTOLAE|Venerabilis frater Titus|Ad R. P. D. Felicem Ambrosium, archiepiscopum S. Iacobi de C",
+      "date": "1916-07-21",
+      "category": "EPISTOLAE",
+      "incipit": "Venerabilis frater Titus",
+      "page": 355,
+      "rule": "unique",
+      "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Venerabilis Frater Titus, Archiepiscopus tit. Lacedaemoniensis, Noster apud",
+      "header": "Acta Benedicti BB. XV 355"
+    },
+    {
+      "key": "1916-07|EPISTOLAE|Epistolam accepimus|A.d Iulium S. R. E. presb, cardinalem Boschi, archiepiscopum",
+      "date": "1916-07",
+      "category": "EPISTOLAE",
+      "incipit": "Epistolam accepimus",
+      "page": 309,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Epistolam accepimus, quam ad Nos dedistis dimisso",
+      "header": "Acta Benedicti PP. XV 309"
+    },
+    {
+      "key": "1916-07|EPISTOLAE|Pietatis in Nos vestrae|Ad R. P. D. Iulianum, archiepiscopum Portus Principis, ceter",
+      "date": "1916-07",
+      "category": "EPISTOLAE",
+      "incipit": "Pietatis in Nos vestrae",
+      "page": 308,
+      "rule": "unique",
+      "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Pietatis in Nos vestrae quamdam veluti expressam imaginem vidimus in",
+      "header": "308 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1916-09|EPISTOLAE|Commisso divinitus Nobis|Ad Ludovicum Nazarium S. R. E. presb. card. Bégin, archiepis",
+      "date": "1916-09",
+      "category": "EPISTOLAE",
+      "incipit": "Commisso divinitus Nobis",
+      "page": 389,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Commisso divinitus Nobis pascendi dominici gregis",
+      "header": "Acta Benedicti PP. XV 389"
+    },
+    {
+      "key": "1916-09|EPISTOLAE|Legentes vestram|Ad Felicem S. R. E. presb, cardinalem de Hartmann, archiepis",
+      "date": "1916-09",
+      "category": "EPISTOLAE",
+      "incipit": "Legentes vestram",
+      "page": 356,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Legentes vestram communem epistolam, quae quidem",
+      "header": "356 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1916-10-30|EPISTOLAE|Communis epistola|A.& RR. PP. DD. Natalem Bruni, archiepiscopum Mutinensium, a",
+      "date": "1916-10-30",
+      "category": "EPISTOLAE",
+      "incipit": "Communis epistola",
+      "page": 434,
+      "rule": "unique",
+      "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Communis epistola, quam ad Nos dedistis Mutinae nuper congregati, vestra",
+      "header": "434 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1916-12|ALLOCUTIO|Quandoquidem|Habita in Consistorio.",
+      "date": "1916-12",
+      "category": "ALLOCUTIO",
+      "incipit": "Quandoquidem",
+      "page": 465,
+      "rule": "unique",
+      "bodyLine": "Quandoquidem quae huic Apostolicae Sedi undique solent deferri decernenda, non ea in Consistorio, ut olim, tractari possunt omnia - sunt enim frequentiora in dies, multaque",
+      "header": "Annus VIII - Vol. VIII Die 9 Decembris 1916 Num. 13"
     }
   ],
   "unrecovered": [
@@ -32,19 +190,9 @@
       "date": "1915-12-20",
       "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
       "incipit": "Apostolatus officium",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         92
-      ]
-    },
-    {
-      "key": "1915-12|APOSTOLICAE SUB PLUMBO LITTERAE|Inter praecipuas|De erectione Provinciae Reginensis, divisione dioecesis sanc",
-      "date": "1915-12",
-      "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
-      "incipit": "Inter praecipuas",
-      "reason": "several",
-      "candidates": [
-        89
       ]
     },
     {
@@ -59,7 +207,7 @@
       "date": "1916-03-10",
       "category": "EPISTOLAE",
       "incipit": "Nonnullos",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         143
       ]
@@ -69,19 +217,9 @@
       "date": "1916-03-13",
       "category": "EPISTOLAE",
       "incipit": "Litteris tuis",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         144
-      ]
-    },
-    {
-      "key": "1916-03|EPISTOLAE|Al tremendo conflitto|Ad Basilium S. R. E. Presbyterum Cardinalem Pompilj, in Urbe",
-      "date": "1916-03",
-      "category": "EPISTOLAE",
-      "incipit": "Al tremendo conflitto",
-      "reason": "several",
-      "candidates": [
-        58
       ]
     },
     {
@@ -89,19 +227,9 @@
       "date": "1916-03",
       "category": "EPISTOLAE",
       "incipit": "Vix poteras",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         142
-      ]
-    },
-    {
-      "key": "1916-03|SERMO|Al vescovo|Ad divini verbi per Quadragesimam in Urbe praecones.",
-      "date": "1916-03",
-      "category": "SERMO",
-      "incipit": "Al vescovo",
-      "reason": "several",
-      "candidates": [
-        95
       ]
     },
     {
@@ -109,7 +237,7 @@
       "date": "1916-04-19",
       "category": "EPISTOLAE",
       "incipit": "Altero iam exeunte saeculo",
-      "reason": "several",
+      "reason": "header-mismatch",
       "candidates": [
         172
       ]
@@ -119,39 +247,9 @@
       "date": "1916-04-27",
       "category": "LITTERAE APOSTOLICAE",
       "incipit": "Cum divinus Redemptor",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         139
-      ]
-    },
-    {
-      "key": "1916-04-30|EPISTOLAE|Institutiones Theologiae Moralis|Ad R. P. Ianuarium Bucceroni, e Soc. Iesu, doctorem decurial",
-      "date": "1916-04-30",
-      "category": "EPISTOLAE",
-      "incipit": "Institutiones Theologiae Moralis",
-      "reason": "several",
-      "candidates": [
-        173
-      ]
-    },
-    {
-      "key": "1916-05|EPISTOLAE|Epistola, quam Mediolani|Ad Andream card. Ferrari, archiepiscopum Mediolanensem, cete",
-      "date": "1916-05",
-      "category": "EPISTOLAE",
-      "incipit": "Epistola, quam Mediolani",
-      "reason": "several",
-      "candidates": [
-        261
-      ]
-    },
-    {
-      "key": "1916-05|EPISTOLAE|Optimo sane iure|Ad R. D. Ianuarium Asprenatem Galante, protonotarium apostol",
-      "date": "1916-05",
-      "category": "EPISTOLAE",
-      "incipit": "Optimo sane iure",
-      "reason": "several",
-      "candidates": [
-        219
       ]
     },
     {
@@ -159,20 +257,10 @@
       "date": "1916-05",
       "category": "EPISTOLAE",
       "incipit": "Sanctum et salutare",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         174,
         413
-      ]
-    },
-    {
-      "key": "1916-05|EPISTOLAE|Significandae tibi|Ad R. D. Paulum Buguet, curionem Montislegionis, protonotari",
-      "date": "1916-05",
-      "category": "EPISTOLAE",
-      "incipit": "Significandae tibi",
-      "reason": "several",
-      "candidates": [
-        218
       ]
     },
     {
@@ -180,7 +268,7 @@
       "date": "1916-06-18",
       "category": "EPISTOLAE",
       "incipit": "Sollemnia",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         221,
         395
@@ -198,40 +286,9 @@
       "date": "1916-06",
       "category": "EPISTOLAE",
       "incipit": "Cum ex apostolico officio",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         220
-      ]
-    },
-    {
-      "key": "1916-07-15|LITTERAE APOSTOLICAE|Romanorum Pontificum|Templum S. Mariae vulgo «di Pozzano», apud Stabiam seu Castr",
-      "date": "1916-07-15",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Romanorum Pontificum",
-      "reason": "several",
-      "candidates": [
-        171,
-        259
-      ]
-    },
-    {
-      "key": "1916-07-21|EPISTOLAE|Laetamur utrumque|Ad R. P. Ludovicum Theissliug, recens electum Dominiciani Or",
-      "date": "1916-07-21",
-      "category": "EPISTOLAE",
-      "incipit": "Laetamur utrumque",
-      "reason": "several",
-      "candidates": [
-        355
-      ]
-    },
-    {
-      "key": "1916-07-21|EPISTOLAE|Venerabilis frater Titus|Ad R. P. D. Felicem Ambrosium, archiepiscopum S. Iacobi de C",
-      "date": "1916-07-21",
-      "category": "EPISTOLAE",
-      "incipit": "Venerabilis frater Titus",
-      "reason": "several",
-      "candidates": [
-        355
       ]
     },
     {
@@ -239,7 +296,7 @@
       "date": "1916-07",
       "category": "EPISTOLAE",
       "incipit": "A dilecto Filio",
-      "reason": "several",
+      "reason": "header-mismatch",
       "candidates": [
         262
       ]
@@ -252,33 +309,13 @@
       "reason": "none"
     },
     {
-      "key": "1916-07|EPISTOLAE|Epistolam accepimus|A.d Iulium S. R. E. presb, cardinalem Boschi, archiepiscopum",
-      "date": "1916-07",
-      "category": "EPISTOLAE",
-      "incipit": "Epistolam accepimus",
-      "reason": "several",
-      "candidates": [
-        309
-      ]
-    },
-    {
       "key": "1916-07|EPISTOLAE|Il devoto indirizzo|Al conte Massimiliano Zara, presidente generale della Societ",
       "date": "1916-07",
       "category": "EPISTOLAE",
       "incipit": "Il devoto indirizzo",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         310
-      ]
-    },
-    {
-      "key": "1916-07|EPISTOLAE|Pietatis in Nos vestrae|Ad R. P. D. Iulianum, archiepiscopum Portus Principis, ceter",
-      "date": "1916-07",
-      "category": "EPISTOLAE",
-      "incipit": "Pietatis in Nos vestrae",
-      "reason": "several",
-      "candidates": [
-        308
       ]
     },
     {
@@ -293,7 +330,7 @@
       "date": "1916-09-10",
       "category": "EPISTOLAE",
       "incipit": "Singulare tuum",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         394
       ]
@@ -309,26 +346,6 @@
       ]
     },
     {
-      "key": "1916-09|EPISTOLAE|Commisso divinitus Nobis|Ad Ludovicum Nazarium S. R. E. presb. card. Bégin, archiepis",
-      "date": "1916-09",
-      "category": "EPISTOLAE",
-      "incipit": "Commisso divinitus Nobis",
-      "reason": "several",
-      "candidates": [
-        389
-      ]
-    },
-    {
-      "key": "1916-09|EPISTOLAE|Legentes vestram|Ad Felicem S. R. E. presb, cardinalem de Hartmann, archiepis",
-      "date": "1916-09",
-      "category": "EPISTOLAE",
-      "incipit": "Legentes vestram",
-      "reason": "several",
-      "candidates": [
-        356
-      ]
-    },
-    {
       "key": "1916-10-14|EPISTOLAE|ANNO MENSE I DIE [PAG|tentibus solemnibus ob Ordinem ante annos pce legitime confi",
       "date": "1916-10-14",
       "category": "EPISTOLAE",
@@ -340,7 +357,7 @@
       "date": "1916-10-14",
       "category": "EPISTOLAE",
       "incipit": "In coetu sodalium",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         395
       ]
@@ -350,19 +367,9 @@
       "date": "1916-10-14",
       "category": "EPISTOLAE",
       "incipit": "Quid agant",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         394
-      ]
-    },
-    {
-      "key": "1916-10-30|EPISTOLAE|Communis epistola|A.& RR. PP. DD. Natalem Bruni, archiepiscopum Mutinensium, a",
-      "date": "1916-10-30",
-      "category": "EPISTOLAE",
-      "incipit": "Communis epistola",
-      "reason": "several",
-      "candidates": [
-        434
       ]
     },
     {
@@ -370,7 +377,7 @@
       "date": "1916-11-13",
       "category": "EPISTOLAE",
       "incipit": "In libro",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         436
       ]
@@ -380,20 +387,10 @@
       "date": "1916-11",
       "category": "EPISTOLAE",
       "incipit": "Quae verba",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         435,
         450
-      ]
-    },
-    {
-      "key": "1916-12|ALLOCUTIO|Quandoquidem|Habita in Consistorio.",
-      "date": "1916-12",
-      "category": "ALLOCUTIO",
-      "incipit": "Quandoquidem",
-      "reason": "several",
-      "candidates": [
-        465
       ]
     }
   ]

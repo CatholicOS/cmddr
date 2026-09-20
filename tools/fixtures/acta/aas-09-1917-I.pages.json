@@ -1,18 +1,317 @@
 {
   "source": "1917-I",
-  "generated": "2026-09-20",
+  "generated": "2026-09-21",
   "text": "~/development/sources/AAS/txt/aas-09-1917-I.txt (639 pages)",
   "rows": [
+    {
+      "key": "1914-10-16|LITTERAE APOSTOLICAE|Templa huius almae Urbis|Canonici pro tempore ecclesiae Ss. Celsi et Iuliani de Urbe ",
+      "date": "1914-10-16",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Templa huius almae Urbis",
+      "page": 49,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Templa huius almae Urbis Nostrae,",
+      "header": "Annus IX - Vol. IX Die 1 Februarii 1917 Num. 2"
+    },
+    {
+      "key": "1914-12-10|LITTERAE APOSTOLICAE|Templa Dei|Ecclesia S. Michaelis Archangeli civitatis « Piano di Sorren",
+      "date": "1914-12-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Templa Dei",
+      "page": 50,
+      "rule": "fuzzy",
+      "bodyLine": "Ad perpetuam rei memoriam. — tempia Dei tum vetustate, tum",
+      "header": "50 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1915-09-16|LITTERAE APOSTOLICAE|Cum in sancta|Conceduntur plenariae et partiales indulgentiae sodalitatibu",
+      "date": "1915-09-16",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Cum in sancta",
+      "page": 53,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Cum in sancta Altaris Hostia",
+      "header": "Acta BmeìUcti PP. XV 53"
+    },
+    {
+      "key": "1916-05|EPISTOLAE|Votre touchante supplique|Adm t R. P. Emmanuele Bailly, magistrum generalem Ordinis Au",
+      "date": "1916-05",
+      "category": "EPISTOLAE",
+      "incipit": "Votre touchante supplique",
+      "page": 9,
+      "rule": "unique",
+      "bodyLine": "Votre touchante supplique Nous a rappelé les bienfaits accomplis",
+      "header": "Acta Benedicti PP. XV 9"
+    },
+    {
+      "key": "1916-07|LITTERAE APOSTOLICAE|De more Romanorum Pontificum|Opus ab apostolatu caritatis, in domo principe Sororum paupe",
+      "date": "1916-07",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "De more Romanorum Pontificum",
+      "page": 74,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. - De more Romanorum Pontificum",
+      "header": "74 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1916-07|LITTERAE APOSTOLICAE|Quae ad fovendam|Concessio indulgentiae recitantibus iaculatoriam precem in h",
+      "date": "1916-07",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae ad fovendam",
+      "page": 73,
+      "rule": "unique",
+      "bodyLine": "Ád perpetuam rei memoriam. — Quae ad fovendam christiani",
+      "header": "Acta Benedicti PP. XV 73"
+    },
+    {
+      "key": "1916-08|EPISTOLAE|Nous avons pris connaissance|Ad R. P. Henricum Le Floch, Pontificii Seminarii Gallici in ",
+      "date": "1916-08",
+      "category": "EPISTOLAE",
+      "incipit": "Nous avons pris connaissance",
+      "page": 78,
+      "rule": "unique",
+      "bodyLine": "Nous avons pris connaissance, Nous-même, avec un intérêt tout",
+      "header": "78 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1916-08|LITTERAE APOSTOLICAE|Quum magis|Erectio in perpetuum Sodalitatis a B. M. V. Regina Angelorum",
+      "date": "1916-08",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quum magis",
+      "page": 75,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Quum magis necesse nihil sit ad",
+      "header": "Acta Benedicti PP. XV 75"
+    },
+    {
+      "key": "1916-10|EPISTOLAE|Pietà profonda di padre|Ad Iacobum card. Gibbons, archiep. Baltimorensem, operam com",
+      "date": "1916-10",
+      "category": "EPISTOLAE",
+      "incipit": "Pietà profonda di padre",
+      "page": 10,
+      "rule": "unique",
+      "bodyLine": "Pietà profonda di padre stringeva, ancora una volta, il cuor Nostro",
+      "header": "10 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1916-10|LITTERAE APOSTOLICAE|Centesimo hodie|De vexillo Cohortis vulgo « dei Gendarmi Pontifici» nuncupat",
+      "date": "1916-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Centesimo hodie",
+      "page": 77,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Centesimo hodie exeunte anno ab",
+      "header": "Acta Benedicti PP. XV 77"
+    },
+    {
+      "key": "1916-11|LITTERAE APOSTOLICAE|Quae in longinquis|Praefectura apostolica Jukonensis in Vicariatum erigitur, du",
+      "date": "1916-11",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae in longinquis",
+      "page": 97,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Quae in longinquis catholici orbis",
+      "header": "Annus IX - Yol. IX Die 1 Martii 1917 Num. 3"
+    },
+    {
+      "key": "1916-12-10|LITTERAE APOSTOLICAE|Compertum Nobis est|Consociatio cleri consortialis in civitate Bononiensi indulg",
+      "date": "1916-12-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Compertum Nobis est",
+      "page": 5,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Compertum Nobis est exploratumque",
+      "header": "Annus IX - Vol. IX Die 10 Ianuarii 1917 Num. 1"
+    },
+    {
+      "key": "1916-12-13|LITTERAE APOSTOLICAE|Quum anno|Ecclesia S. Antonii Abbatis, Neapoli, ad sacrum militarem Or",
+      "date": "1916-12-13",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quum anno",
+      "page": 6,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Quum anno MDCCCLXIII per similes",
+      "header": "6 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1916-12-17|EPISTOLAE|Administrationem Apostolicam Luganensem|Ad R. P. D. Alfredum Peri-Morosini, episcopum tit. Arcensem,",
+      "date": "1916-12-17",
+      "category": "EPISTOLAE",
+      "incipit": "Administrationem Apostolicam Luganensem",
+      "page": 101,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. - Administrationem apostolicam Luganensem, quam diu gessisti, tu, sponte",
+      "header": "Acta Benedicti PP. XV 101"
+    },
+    {
+      "key": "1916-12-17|EPISTOLAE|Mentes animosque|Ad R. fratrem Stratonicum, centesimo exeunte anno ex quo Ins",
+      "date": "1916-12-17",
+      "category": "EPISTOLAE",
+      "incipit": "Mentes animosque",
+      "page": 79,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Mentes animosque puerorum instituendo formare, eiusmodi sane est opus, ut nullum videatur quod societatis humanae plus possit interesse. Habet enim",
+      "header": "Acta Benedicti PP. XV 79"
+    },
+    {
+      "key": "1917-01-10|EPISTOLAE|Communi vestra epistola|Ad Ioannem S. R. E. Presb. Card. Csernoch, archiepiscopum St",
+      "date": "1917-01-10",
+      "category": "EPISTOLAE",
+      "incipit": "Communi vestra epistola",
+      "page": 81,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Communi vestra epistola delectati admodum sumus.",
+      "header": "Acta Benedicti PP. XV 81"
+    },
+    {
+      "key": "1917-01-10|EPISTOLAE|Probe Nos quidem|Ad R. P. Alexium Mariam Lépicier, Ord. Servorum B. M. V. pri",
+      "date": "1917-01-10",
+      "category": "EPISTOLAE",
+      "incipit": "Probe Nos quidem",
+      "page": 101,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Probe Nos",
+      "header": "Acta Benedicti PP. XV 101"
+    },
+    {
+      "key": "1917-03|MOTU PROPRIO|Alloquentes proxime|De attribuenda Sancto Officio censura librorum et Poenitenti",
+      "date": "1917-03",
+      "category": "MOTU PROPRIO",
+      "incipit": "Alloquentes proxime",
+      "page": 167,
+      "rule": "unique",
+      "bodyLine": "Alloquentes proxime in Consistorio Sacrum Cardinalium Collegium,",
+      "header": "Acta Benedicti PP. XV 167"
+    },
+    {
+      "key": "1917-04-10|LITTERAE APOSTOLICAE|Quod Ioannes|Venerabili servae Dei Annae a S. Bartholomaeo, carmelitae ex",
+      "date": "1917-04-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quod Ioannes",
+      "page": 257,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Quod Ioannes vidit in monte Sion",
+      "header": "Annus IX - Vol. IX Die 1 Iunii 1917 Num. 6"
+    },
+    {
+      "key": "1917-04-12|EPISTOLAE|Epistola vestra|Ad Andream card. Ferrari, archiepiscopum Mediolanensem, ac c",
+      "date": "1917-04-12",
+      "category": "EPISTOLAE",
+      "incipit": "Epistola vestra",
+      "page": 327,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Epistola vestra habet quae vobis amorem concilient.",
+      "header": "Acta Benedicti PP. XV 327"
+    },
+    {
+      "key": "1917-04-12|EPISTOLAE|In maximis sollicitudinibus|Ad Rmum D. Iacobum Ogier, sacerdotalis foederis « Pro Pontif",
+      "date": "1917-04-12",
+      "category": "EPISTOLAE",
+      "incipit": "In maximis sollicitudinibus",
+      "page": 428,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — In maximis",
+      "header": "428 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1917-04-12|LITTERAE APOSTOLICAE|Beati Petri Apostolorum Principis|Sodalitati veritatis catholicae in Hibernia constitutae indu",
+      "date": "1917-04-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Beati Petri Apostolorum Principis",
+      "page": 317,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Beati Petri Apostolorum Principis vices hic in terris, nullis quidem meritis Nostris, gerentibus divinitus, antiquius nihil est Nobis, quam ut piae Societates, quae militantis Ecclesiae ministros, quasi auxiliares cohortes, in bono certamine",
+      "header": "Acta Benedicti PP. XV 317"
+    },
+    {
+      "key": "1917-04-14|EPISTOLAE|A venerabili fratre Nostro|Ad R. P. D. Titum Trocchi, archiepiscopum titularem Lacedemo",
+      "date": "1917-04-14",
+      "category": "EPISTOLAE",
+      "incipit": "A venerabili fratre Nostro",
+      "page": 263,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — A venerabili fratre Nostro Sacrae Congregationis Consistorialis a Secretis relatum Nobis fuit de primo conventu annuo ab Antistitibus Cubanis, sub",
+      "header": "Acta Benedicti PP. XV 263"
+    },
+    {
+      "key": "1917-04-14|EPISTOLAE|In epistola|Ad R. P. D. Mauritium Landrieux, episc. Divionensem : episto",
+      "date": "1917-04-14",
+      "category": "EPISTOLAE",
+      "incipit": "In epistola",
+      "page": 226,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — In epistola, quam nuper, pro pastorali officio, ad populum dedisti, vix poteras",
+      "header": "226 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1917-04-30|EPISTOLAE|Communem vestram epistolam|Ad R. P. D. Franciscum Rossi, archiepiscopum Calaritanum, ce",
+      "date": "1917-04-30",
+      "category": "EPISTOLAE",
+      "incipit": "Communem vestram epistolam",
+      "page": 326,
+      "rule": "unique",
+      "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem. — Communem vestram epistolam libentissime legimus. Quae enim vos pietas",
+      "header": "326 Acta Apostolicae Seolis - Commentarium Officiale"
+    },
+    {
+      "key": "1917-04-30|EPISTOLAE|Confirmantur consilia|Ad R. P. D. Iulianum Guilelmum Conan, archiepiscopum Portus ",
+      "date": "1917-04-30",
+      "category": "EPISTOLAE",
+      "incipit": "Confirmantur consilia",
+      "page": 267,
+      "rule": "unique",
+      "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem. — Confirmantur consilia ac proposita Nostra iudicio vestro vestraeque pietatis",
+      "header": "Acta Benedicti PP. XV 267"
+    },
+    {
+      "key": "1917-04|LITTERAE APOSTOLICAE|Si unquam alias|Venerabili Servo Dei Iosepho Benedicto Cottolengo beatorum c",
+      "date": "1917-04",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Si unquam alias",
+      "page": 214,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Si unquam alias, at hodie certe a",
+      "header": "214 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1917-04|MOTU PROPRIO|Nobilissimam sacrarum aedium|De clericorum Collegio Patriarchali Basilicae Liberianae add",
+      "date": "1917-04",
+      "category": "MOTU PROPRIO",
+      "incipit": "Nobilissimam sacrarum aedium",
+      "page": 209,
+      "rule": "unique",
+      "bodyLine": "Nobilissimam sacrarum aedium toto orbe catholico Virgini Deiparae dicatarum, Patriarchalem Basilicam Sanctae",
+      "header": "Annus IX - Vol. IX Die 1 Maii 1917 Num. 5"
+    },
     {
       "key": "1917-05-01|MOTU PROPRIO|Dei providentis|De Sacra Congregatione pro Ecclesia Orientali",
       "date": "1917-05-01",
       "category": "MOTU PROPRIO",
       "incipit": "Dei providentis",
       "page": 529,
-      "rule": "dated",
+      "rule": "unique",
       "bodyLine": "Dei providentis arcano consilio locum obtinentes beati Petri",
-      "header": "Aanus IX - Yol. IX Die 2 Novembris 1917 Num. 11",
-      "formula": "Datum Romae apud S. Petrum die i mensis maii, anno MDCCCCXVII, Pontificatus Nostri tertio. BENEDICTUS PP. XV II DE INSTITUTO PONTIFICIO STUDIIS RERUM ORIENTALIUM PROVEHENDIS BENEDICTUS PP. XV Orientis"
+      "header": "Aanus IX - Yol. IX Die 2 Novembris 1917 Num. 11"
+    },
+    {
+      "key": "1917-06-11|LITTERAE APOSTOLICAE|Supplices ad Nos|Conceditur ut Ordinis Praedicatorum fratres, sorores et tert",
+      "date": "1917-06-11",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Supplices ad Nos",
+      "page": 323,
+      "rule": "fuzzy",
+      "bodyLine": "Ad perpetuam rei memoriam. — Suppliées ad Nos preces adhibuit",
+      "header": "Acta Benedicti PP. XV 323"
+    },
+    {
+      "key": "1917-06-12|LITTERAE APOSTOLICAE|Cum Ssma Virgo Maria|Ecclesia Tarvisina Assumptionis B. M. V., vulgo « La Madonna",
+      "date": "1917-06-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Cum Ssma Virgo Maria",
+      "page": 324,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Cum SSma Virgo Maria tot tantisque meritis Dei mater electa fuerit, atque eodem tempore gratiarum",
+      "header": "324 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1917-06-15|EPISTOLAE|Exploratum vobis est|Expostulatione]» ab Episcopis Mexicanis editam in lege illic",
@@ -20,10 +319,49 @@
       "category": "EPISTOLAE",
       "incipit": "Exploratum vobis est",
       "page": 376,
-      "rule": "dated",
+      "rule": "unique",
       "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem. — Exploratum vobis est, nec uno quidem argumento, quibus apud vos iam",
-      "header": "376 Acta Apostolicae Sedis - Commentarium Officiale",
-      "formula": "Datum Romae apud S. Petrum, die xv mensis iunii, festo SS. Cordis Iesu, anno MCMXVII, Pontificatus Nostri tertio. BENEDICTUS PP. XV II AD R. D. FRATREM IOANNEM IOSEPHUM FRATRUM AB INSTRUCTIONE CHRI ST"
+      "header": "376 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1917-06-15|LITTERAE ENCYCLICAE|Humani generis redemptionem|Ad Patriarchas, Primates, Archiepiscopos, Episcopos aliosque",
+      "date": "1917-06-15",
+      "category": "LITTERAE ENCYCLICAE",
+      "incipit": "Humani generis redemptionem",
+      "page": 305,
+      "rule": "unique",
+      "bodyLine": "Humani generis Redemptionem Iesus Christus in ara Crucis monendo cum consummasset, velletque adducere homines ut, suis praeceptis obtemperando, compotes fierent aeternae",
+      "header": "Amms IX - Yol. IX Die 2 Iulii' 1917 Num. 7"
+    },
+    {
+      "key": "1917-06-16|EPISTOLAE|Admodum probatur|Ad R. P. Stephanum Babin, antistitem Benedictinorum ad Maria",
+      "date": "1917-06-16",
+      "category": "EPISTOLAE",
+      "incipit": "Admodum probatur",
+      "page": 378,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Admodum",
+      "header": "378 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1917-06-16|EPISTOLAE|Quod nuntias|Ad R. D. fratrem Ioannem Iosephum, Fratrum ab instructione c",
+      "date": "1917-06-16",
+      "category": "EPISTOLAE",
+      "incipit": "Quod nuntias",
+      "page": 377,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Quod nuntias",
+      "header": "Acta Benedicti PP. XV 377"
+    },
+    {
+      "key": "1917-07-13|EPISTOLAE|Si- quid est|Ad R. P. D. Alfredum Louwick, sacerdotum a Missione vicarium",
+      "date": "1917-07-13",
+      "category": "EPISTOLAE",
+      "incipit": "Si- quid est",
+      "page": 380,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Si quid est",
+      "header": "380 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1917-07-16|EPISTOLAE|Qui, Cancellarii munere|Ad Petrum S. R. E. card. La Fontaine, patriarcham Venetiarum",
@@ -31,171 +369,130 @@
       "category": "EPISTOLAE",
       "incipit": "Qui, Cancellarii munere",
       "page": 381,
-      "rule": "dated",
+      "rule": "unique",
       "bodyLine": "Dilecte fili Noster, salutem et apostolicam benedictionem. — Qui,",
-      "header": "Acta- Benedicti PP. XV 381",
-      "formula": "Datum Romae apud S. Petrum, die xvi iulii anno MCMXVII, Pontifi catus Nostri tertio. BENEDICTUS PP. XV "
+      "header": "Acta- Benedicti PP. XV 381"
+    },
+    {
+      "key": "1917-07|EPISTOLAE|Testandae benevolentiae|Ad R. D. Leandrum Schnerr, sac. benedictinum, archiabbatem S",
+      "date": "1917-07",
+      "category": "EPISTOLAE",
+      "incipit": "Testandae benevolentiae",
+      "page": 380,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Testandae",
+      "header": "380 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1917-09-10|EPISTOLAE|Redditae sunt Nobis|Ad R. P. D. Iulium Mauritium, episcopum Sedunensem, ceterosq",
+      "date": "1917-09-10",
+      "category": "EPISTOLAE",
+      "incipit": "Redditae sunt Nobis",
+      "page": 486,
+      "rule": "unique",
+      "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem. — Redditae sunt Nobis communes Vestrae litterae, quas cum legeremus, amorem in vos Nostrum augeri sensimus, pristina gratificandi proposita",
+      "header": "486 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1917-09-15|MOTU PROPRIO|Cum iuris canonici Codicem|Commissio instituitur ad Codicis canones authentice interpre",
+      "date": "1917-09-15",
+      "category": "MOTU PROPRIO",
+      "incipit": "Cum iuris canonici Codicem",
+      "page": 483,
+      "rule": "unique",
+      "bodyLine": "Cum iuris canonici Codicem, fel. rec. decessoris Nostri Pii X iussu",
+      "header": "Acta Benedicti PP. XV 483"
+    },
+    {
+      "key": "1917-09|EPISTOLAE|Graves inter amaritudines|Ad Felicem S. R. E. card. De Hartmann, archiepiscopum Coloni",
+      "date": "1917-09",
+      "category": "EPISTOLAE",
+      "incipit": "Graves inter amaritudines",
+      "page": 485,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Graves inter amaritudines quibus animus Noster calamitosis hisce tempestatibus magis magisque in dies angitur, singulare",
+      "header": "Acta Benedicti PP. XV 485"
+    },
+    {
+      "key": "1917-10-15|MOTU PROPRIO|Orientis catholici|De Instituto Pontificio studiis rerum orientalium provehendi",
+      "date": "1917-10-15",
+      "category": "MOTU PROPRIO",
+      "incipit": "Orientis catholici",
+      "page": 531,
+      "rule": "unique",
+      "bodyLine": "Orientis catholici ad spem veteris prosperitatis excitandi",
+      "header": "Acta Benedicti PP. XV 531"
+    },
+    {
+      "key": "1917-10-27|EPISTOLAE|Communes litterae|Ad RR. PP. DD. Carolum, archiepiscopum Firmanum, ceterosque ",
+      "date": "1917-10-27",
+      "category": "EPISTOLAE",
+      "incipit": "Communes litterae",
+      "page": 563,
+      "rule": "unique",
+      "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem. — Communes litterae, quas, Firmi nuper congregati, ad Nos dedistis, visae",
+      "header": "Acta Benedicti PP. XV 563"
+    },
+    {
+      "key": "1917-10-27|EPISTOLAE|Officia pietatis|Ad RR. PP. DD. Ludovicum, archiepiscopum Ianuensem, ceterosq",
+      "date": "1917-10-27",
+      "category": "EPISTOLAE",
+      "incipit": "Officia pietatis",
+      "page": 563,
+      "rule": "unique",
+      "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem. — Officia",
+      "header": "Acta Benedicti PP. XV 563"
+    },
+    {
+      "key": "1917-10|EPISTOLAE|Exorientem|Ad R. P. Flavianum Prat, exeunte anno centesimo ab instituta",
+      "date": "1917-10",
+      "category": "EPISTOLAE",
+      "incipit": "Exorientem",
+      "page": 562,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Exorientem",
+      "header": "562 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1917-10|EPISTOLAE|Omnem vestram|Ad Petrum S. R. E. card. Maffi, archiepiscopum Pisanum, et A",
+      "date": "1917-10",
+      "category": "EPISTOLAE",
+      "incipit": "Omnem vestram",
+      "page": 537,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Omnem vestram de Ecclesiae sanctae utilitate deque",
+      "header": "Acta Benedicti PP. XV 537"
+    },
+    {
+      "key": "1917-10|LITTERAE APOSTOLICAE|Saluberrimo sane proposito|Sodalitas Sacratissimi Cordis Iesu pro piandis animabus in p",
+      "date": "1917-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Saluberrimo sane proposito",
+      "page": 533,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Saluberrimo sane proposito, ad",
+      "header": "Acta Benedicti BP. XV 533"
+    },
+    {
+      "key": "1917-11-21|MOTU PROPRIO|Decessor Noster|De ecclesia S. Mariae Angelorum in Portiuncula Apostolicae S",
+      "date": "1917-11-21",
+      "category": "MOTU PROPRIO",
+      "incipit": "Decessor Noster",
+      "page": 561,
+      "rule": "unique",
+      "bodyLine": "Decessor Noster fel. rec. Pius X, ob memoriam instituti septem",
+      "header": "Annus IX - Vol. IX Die 1 Decembris 1917 Num. 12"
     }
   ],
   "unrecovered": [
-    {
-      "key": "1914-10-16|LITTERAE APOSTOLICAE|Templa huius almae Urbis|Canonici pro tempore ecclesiae Ss. Celsi et Iuliani de Urbe ",
-      "date": "1914-10-16",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Templa huius almae Urbis",
-      "reason": "several",
-      "candidates": [
-        49
-      ]
-    },
-    {
-      "key": "1914-12-10|LITTERAE APOSTOLICAE|Templa Dei|Ecclesia S. Michaelis Archangeli civitatis « Piano di Sorren",
-      "date": "1914-12-10",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Templa Dei",
-      "reason": "several",
-      "candidates": [
-        50
-      ]
-    },
-    {
-      "key": "1915-09-16|LITTERAE APOSTOLICAE|Cum in sancta|Conceduntur plenariae et partiales indulgentiae sodalitatibu",
-      "date": "1915-09-16",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Cum in sancta",
-      "reason": "several",
-      "candidates": [
-        53
-      ]
-    },
-    {
-      "key": "1916-05|EPISTOLAE|Votre touchante supplique|Adm t R. P. Emmanuele Bailly, magistrum generalem Ordinis Au",
-      "date": "1916-05",
-      "category": "EPISTOLAE",
-      "incipit": "Votre touchante supplique",
-      "reason": "several",
-      "candidates": [
-        9
-      ]
-    },
     {
       "key": "1916-05|LITTERAE APOSTOLICAE|Honorificentissimum magisterium|Alexandro Ruspoli, viro principi, perinsignis titulus Magni ",
       "date": "1916-05",
       "category": "LITTERAE APOSTOLICAE",
       "incipit": "Honorificentissimum magisterium",
-      "reason": "several",
+      "reason": "header-mismatch",
       "candidates": [
         72
-      ]
-    },
-    {
-      "key": "1916-07|LITTERAE APOSTOLICAE|De more Romanorum Pontificum|Opus ab apostolatu caritatis, in domo principe Sororum paupe",
-      "date": "1916-07",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "De more Romanorum Pontificum",
-      "reason": "several",
-      "candidates": [
-        74
-      ]
-    },
-    {
-      "key": "1916-07|LITTERAE APOSTOLICAE|Quae ad fovendam|Concessio indulgentiae recitantibus iaculatoriam precem in h",
-      "date": "1916-07",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Quae ad fovendam",
-      "reason": "several",
-      "candidates": [
-        73
-      ]
-    },
-    {
-      "key": "1916-08|EPISTOLAE|Nous avons pris connaissance|Ad R. P. Henricum Le Floch, Pontificii Seminarii Gallici in ",
-      "date": "1916-08",
-      "category": "EPISTOLAE",
-      "incipit": "Nous avons pris connaissance",
-      "reason": "several",
-      "candidates": [
-        78
-      ]
-    },
-    {
-      "key": "1916-08|LITTERAE APOSTOLICAE|Quum magis|Erectio in perpetuum Sodalitatis a B. M. V. Regina Angelorum",
-      "date": "1916-08",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Quum magis",
-      "reason": "several",
-      "candidates": [
-        75
-      ]
-    },
-    {
-      "key": "1916-10|EPISTOLAE|Pietà profonda di padre|Ad Iacobum card. Gibbons, archiep. Baltimorensem, operam com",
-      "date": "1916-10",
-      "category": "EPISTOLAE",
-      "incipit": "Pietà profonda di padre",
-      "reason": "several",
-      "candidates": [
-        10
-      ]
-    },
-    {
-      "key": "1916-10|LITTERAE APOSTOLICAE|Centesimo hodie|De vexillo Cohortis vulgo « dei Gendarmi Pontifici» nuncupat",
-      "date": "1916-10",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Centesimo hodie",
-      "reason": "several",
-      "candidates": [
-        77
-      ]
-    },
-    {
-      "key": "1916-11|LITTERAE APOSTOLICAE|Quae in longinquis|Praefectura apostolica Jukonensis in Vicariatum erigitur, du",
-      "date": "1916-11",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Quae in longinquis",
-      "reason": "several",
-      "candidates": [
-        97
-      ]
-    },
-    {
-      "key": "1916-12-10|LITTERAE APOSTOLICAE|Compertum Nobis est|Consociatio cleri consortialis in civitate Bononiensi indulg",
-      "date": "1916-12-10",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Compertum Nobis est",
-      "reason": "several",
-      "candidates": [
-        5
-      ]
-    },
-    {
-      "key": "1916-12-13|LITTERAE APOSTOLICAE|Quum anno|Ecclesia S. Antonii Abbatis, Neapoli, ad sacrum militarem Or",
-      "date": "1916-12-13",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Quum anno",
-      "reason": "several",
-      "candidates": [
-        6
-      ]
-    },
-    {
-      "key": "1916-12-17|EPISTOLAE|Administrationem Apostolicam Luganensem|Ad R. P. D. Alfredum Peri-Morosini, episcopum tit. Arcensem,",
-      "date": "1916-12-17",
-      "category": "EPISTOLAE",
-      "incipit": "Administrationem Apostolicam Luganensem",
-      "reason": "several",
-      "candidates": [
-        101
-      ]
-    },
-    {
-      "key": "1916-12-17|EPISTOLAE|Mentes animosque|Ad R. fratrem Stratonicum, centesimo exeunte anno ex quo Ins",
-      "date": "1916-12-17",
-      "category": "EPISTOLAE",
-      "incipit": "Mentes animosque",
-      "reason": "several",
-      "candidates": [
-        79
       ]
     },
     {
@@ -203,7 +500,7 @@
       "date": "1916-12-17",
       "category": "EPISTOLAE",
       "incipit": "Scribendi ad vos",
-      "reason": "several",
+      "reason": "header-mismatch",
       "candidates": [
         12
       ]
@@ -213,7 +510,7 @@
       "date": "1916-12-20",
       "category": "LITTERAE APOSTOLICAE",
       "incipit": "Exstat Granatae",
-      "reason": "several",
+      "reason": "header-mismatch",
       "candidates": [
         7
       ]
@@ -227,26 +524,6 @@
       "candidates": [
         99,
         425
-      ]
-    },
-    {
-      "key": "1917-01-10|EPISTOLAE|Communi vestra epistola|Ad Ioannem S. R. E. Presb. Card. Csernoch, archiepiscopum St",
-      "date": "1917-01-10",
-      "category": "EPISTOLAE",
-      "incipit": "Communi vestra epistola",
-      "reason": "several",
-      "candidates": [
-        81
-      ]
-    },
-    {
-      "key": "1917-01-10|EPISTOLAE|Probe Nos quidem|Ad R. P. Alexium Mariam Lépicier, Ord. Servorum B. M. V. pri",
-      "date": "1917-01-10",
-      "category": "EPISTOLAE",
-      "incipit": "Probe Nos quidem",
-      "reason": "several",
-      "candidates": [
-        101
       ]
     },
     {
@@ -265,7 +542,7 @@
       "date": "1917-03-10",
       "category": "EPISTOLAE",
       "incipit": "Petrianam accepimus stipem",
-      "reason": "several",
+      "reason": "header-mismatch",
       "candidates": [
         223
       ]
@@ -275,59 +552,9 @@
       "date": "1917-03-24",
       "category": "LITTERAE APOSTOLICAE",
       "incipit": "Refert ad Nos",
-      "reason": "several",
+      "reason": "header-mismatch",
       "candidates": [
         212
-      ]
-    },
-    {
-      "key": "1917-03|MOTU PROPRIO|Alloquentes proxime|De attribuenda Sancto Officio censura librorum et Poenitenti",
-      "date": "1917-03",
-      "category": "MOTU PROPRIO",
-      "incipit": "Alloquentes proxime",
-      "reason": "several",
-      "candidates": [
-        167
-      ]
-    },
-    {
-      "key": "1917-04-10|LITTERAE APOSTOLICAE|Quod Ioannes|Venerabili servae Dei Annae a S. Bartholomaeo, carmelitae ex",
-      "date": "1917-04-10",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Quod Ioannes",
-      "reason": "several",
-      "candidates": [
-        257
-      ]
-    },
-    {
-      "key": "1917-04-12|EPISTOLAE|Epistola vestra|Ad Andream card. Ferrari, archiepiscopum Mediolanensem, ac c",
-      "date": "1917-04-12",
-      "category": "EPISTOLAE",
-      "incipit": "Epistola vestra",
-      "reason": "several",
-      "candidates": [
-        327
-      ]
-    },
-    {
-      "key": "1917-04-12|EPISTOLAE|In maximis sollicitudinibus|Ad Rmum D. Iacobum Ogier, sacerdotalis foederis « Pro Pontif",
-      "date": "1917-04-12",
-      "category": "EPISTOLAE",
-      "incipit": "In maximis sollicitudinibus",
-      "reason": "several",
-      "candidates": [
-        428
-      ]
-    },
-    {
-      "key": "1917-04-12|LITTERAE APOSTOLICAE|Beati Petri Apostolorum Principis|Sodalitati veritatis catholicae in Hibernia constitutae indu",
-      "date": "1917-04-12",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Beati Petri Apostolorum Principis",
-      "reason": "several",
-      "candidates": [
-        317
       ]
     },
     {
@@ -335,49 +562,9 @@
       "date": "1917-04-13",
       "category": "EPISTOLAE",
       "incipit": "Non mediocri cum fructu",
-      "reason": "several",
+      "reason": "header-mismatch",
       "candidates": [
         225
-      ]
-    },
-    {
-      "key": "1917-04-14|EPISTOLAE|A venerabili fratre Nostro|Ad R. P. D. Titum Trocchi, archiepiscopum titularem Lacedemo",
-      "date": "1917-04-14",
-      "category": "EPISTOLAE",
-      "incipit": "A venerabili fratre Nostro",
-      "reason": "several",
-      "candidates": [
-        263
-      ]
-    },
-    {
-      "key": "1917-04-14|EPISTOLAE|In epistola|Ad R. P. D. Mauritium Landrieux, episc. Divionensem : episto",
-      "date": "1917-04-14",
-      "category": "EPISTOLAE",
-      "incipit": "In epistola",
-      "reason": "several",
-      "candidates": [
-        226
-      ]
-    },
-    {
-      "key": "1917-04-30|EPISTOLAE|Communem vestram epistolam|Ad R. P. D. Franciscum Rossi, archiepiscopum Calaritanum, ce",
-      "date": "1917-04-30",
-      "category": "EPISTOLAE",
-      "incipit": "Communem vestram epistolam",
-      "reason": "several",
-      "candidates": [
-        326
-      ]
-    },
-    {
-      "key": "1917-04-30|EPISTOLAE|Confirmantur consilia|Ad R. P. D. Iulianum Guilelmum Conan, archiepiscopum Portus ",
-      "date": "1917-04-30",
-      "category": "EPISTOLAE",
-      "incipit": "Confirmantur consilia",
-      "reason": "several",
-      "candidates": [
-        267
       ]
     },
     {
@@ -385,79 +572,9 @@
       "date": "1917-04-30",
       "category": "EPISTOLAE",
       "incipit": "Habet hoc virtus",
-      "reason": "several",
+      "reason": "header-mismatch",
       "candidates": [
         264
-      ]
-    },
-    {
-      "key": "1917-04|LITTERAE APOSTOLICAE|Si unquam alias|Venerabili Servo Dei Iosepho Benedicto Cottolengo beatorum c",
-      "date": "1917-04",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Si unquam alias",
-      "reason": "several",
-      "candidates": [
-        214
-      ]
-    },
-    {
-      "key": "1917-04|MOTU PROPRIO|Nobilissimam sacrarum aedium|De clericorum Collegio Patriarchali Basilicae Liberianae add",
-      "date": "1917-04",
-      "category": "MOTU PROPRIO",
-      "incipit": "Nobilissimam sacrarum aedium",
-      "reason": "several",
-      "candidates": [
-        209
-      ]
-    },
-    {
-      "key": "1917-06-11|LITTERAE APOSTOLICAE|Supplices ad Nos|Conceditur ut Ordinis Praedicatorum fratres, sorores et tert",
-      "date": "1917-06-11",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Supplices ad Nos",
-      "reason": "several",
-      "candidates": [
-        323
-      ]
-    },
-    {
-      "key": "1917-06-12|LITTERAE APOSTOLICAE|Cum Ssma Virgo Maria|Ecclesia Tarvisina Assumptionis B. M. V., vulgo « La Madonna",
-      "date": "1917-06-12",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Cum Ssma Virgo Maria",
-      "reason": "several",
-      "candidates": [
-        324
-      ]
-    },
-    {
-      "key": "1917-06-15|LITTERAE ENCYCLICAE|Humani generis redemptionem|Ad Patriarchas, Primates, Archiepiscopos, Episcopos aliosque",
-      "date": "1917-06-15",
-      "category": "LITTERAE ENCYCLICAE",
-      "incipit": "Humani generis redemptionem",
-      "reason": "several",
-      "candidates": [
-        305
-      ]
-    },
-    {
-      "key": "1917-06-16|EPISTOLAE|Admodum probatur|Ad R. P. Stephanum Babin, antistitem Benedictinorum ad Maria",
-      "date": "1917-06-16",
-      "category": "EPISTOLAE",
-      "incipit": "Admodum probatur",
-      "reason": "several",
-      "candidates": [
-        378
-      ]
-    },
-    {
-      "key": "1917-06-16|EPISTOLAE|Quod nuntias|Ad R. D. fratrem Ioannem Iosephum, Fratrum ab instructione c",
-      "date": "1917-06-16",
-      "category": "EPISTOLAE",
-      "incipit": "Quod nuntias",
-      "reason": "several",
-      "candidates": [
-        377
       ]
     },
     {
@@ -465,19 +582,9 @@
       "date": "1917-07-10",
       "category": "LITTERAE APOSTOLICAE",
       "incipit": "Ut, aucto Pastorum numero",
-      "reason": "several",
+      "reason": "header-mismatch",
       "candidates": [
         424
-      ]
-    },
-    {
-      "key": "1917-07-13|EPISTOLAE|Si- quid est|Ad R. P. D. Alfredum Louwick, sacerdotum a Missione vicarium",
-      "date": "1917-07-13",
-      "category": "EPISTOLAE",
-      "incipit": "Si- quid est",
-      "reason": "several",
-      "candidates": [
-        380
       ]
     },
     {
@@ -485,19 +592,9 @@
       "date": "1917-07",
       "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
       "incipit": "Universalis Ecclesiae procuratio",
-      "reason": "several",
+      "reason": "header-mismatch",
       "candidates": [
         481
-      ]
-    },
-    {
-      "key": "1917-07|EPISTOLAE|Testandae benevolentiae|Ad R. D. Leandrum Schnerr, sac. benedictinum, archiabbatem S",
-      "date": "1917-07",
-      "category": "EPISTOLAE",
-      "incipit": "Testandae benevolentiae",
-      "reason": "several",
-      "candidates": [
-        380
       ]
     },
     {
@@ -506,110 +603,6 @@
       "category": "LITTERAE APOSTOLICAE",
       "incipit": null,
       "reason": "no-incipit"
-    },
-    {
-      "key": "1917-09-10|EPISTOLAE|Redditae sunt Nobis|Ad R. P. D. Iulium Mauritium, episcopum Sedunensem, ceterosq",
-      "date": "1917-09-10",
-      "category": "EPISTOLAE",
-      "incipit": "Redditae sunt Nobis",
-      "reason": "several",
-      "candidates": [
-        486
-      ]
-    },
-    {
-      "key": "1917-09-15|MOTU PROPRIO|Cum iuris canonici Codicem|Commissio instituitur ad Codicis canones authentice interpre",
-      "date": "1917-09-15",
-      "category": "MOTU PROPRIO",
-      "incipit": "Cum iuris canonici Codicem",
-      "reason": "several",
-      "candidates": [
-        483
-      ]
-    },
-    {
-      "key": "1917-09|EPISTOLAE|Graves inter amaritudines|Ad Felicem S. R. E. card. De Hartmann, archiepiscopum Coloni",
-      "date": "1917-09",
-      "category": "EPISTOLAE",
-      "incipit": "Graves inter amaritudines",
-      "reason": "several",
-      "candidates": [
-        485
-      ]
-    },
-    {
-      "key": "1917-10-15|MOTU PROPRIO|Orientis catholici|De Instituto Pontificio studiis rerum orientalium provehendi",
-      "date": "1917-10-15",
-      "category": "MOTU PROPRIO",
-      "incipit": "Orientis catholici",
-      "reason": "several",
-      "candidates": [
-        531
-      ]
-    },
-    {
-      "key": "1917-10-27|EPISTOLAE|Communes litterae|Ad RR. PP. DD. Carolum, archiepiscopum Firmanum, ceterosque ",
-      "date": "1917-10-27",
-      "category": "EPISTOLAE",
-      "incipit": "Communes litterae",
-      "reason": "several",
-      "candidates": [
-        563
-      ]
-    },
-    {
-      "key": "1917-10-27|EPISTOLAE|Officia pietatis|Ad RR. PP. DD. Ludovicum, archiepiscopum Ianuensem, ceterosq",
-      "date": "1917-10-27",
-      "category": "EPISTOLAE",
-      "incipit": "Officia pietatis",
-      "reason": "several",
-      "candidates": [
-        563
-      ]
-    },
-    {
-      "key": "1917-10|EPISTOLAE|Exorientem|Ad R. P. Flavianum Prat, exeunte anno centesimo ab instituta",
-      "date": "1917-10",
-      "category": "EPISTOLAE",
-      "incipit": "Exorientem",
-      "reason": "several",
-      "candidates": [
-        562
-      ]
-    },
-    {
-      "key": "1917-10|EPISTOLAE|Omnem vestram|Ad Petrum S. R. E. card. Maffi, archiepiscopum Pisanum, et A",
-      "date": "1917-10",
-      "category": "EPISTOLAE",
-      "incipit": "Omnem vestram",
-      "reason": "several",
-      "candidates": [
-        537
-      ]
-    },
-    {
-      "key": "1917-10|LITTERAE APOSTOLICAE|Saluberrimo sane proposito|Sodalitas Sacratissimi Cordis Iesu pro piandis animabus in p",
-      "date": "1917-10",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Saluberrimo sane proposito",
-      "reason": "several",
-      "candidates": [
-        533
-      ]
-    },
-    {
-      "key": "1917-11-21|MOTU PROPRIO|Decessor Noster|De ecclesia S. Mariae Angelorum in Portiuncula Apostolicae S",
-      "date": "1917-11-21",
-      "category": "MOTU PROPRIO",
-      "incipit": "Decessor Noster",
-      "reason": "several",
-      "candidates": [
-        221,
-        260,
-        324,
-        534,
-        561
-      ]
     },
     {
       "key": "1917-11|EPISTOLAE|Quod ant^p|Ad RR. PP. DD. Franciscum, archiepiscopum Calaritanum, Gletu",
