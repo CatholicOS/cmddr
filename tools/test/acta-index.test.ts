@@ -1400,6 +1400,33 @@ describe('parseActaIndex on the early volumes whose OCR kept the page column (ac
   });
 });
 
+describe('parseActaIndex keeps the entries opened without a page (spec §10.3, phase 2b-iii-b)', () => {
+  it('keeps an entry the OCR lost the page of as a pageless entry with everything but the page (AAS 13, 1921)', () => {
+    const r = parseActaIndex(volume(`                                                         I. - LITTERAE ENCYCLICAE.
+1921          Ian.          6      Sacra propediem. - Ad Patriarchas, Primates, Archie­
+                                        piscopos, Episcopos aliosque locorum Ordinarios,
+                                        pacem et communionem cum Apostolica Sede ha­
+                                        bentes: septimo saeculo exeunte a Tertio Ordine
+                                        Franciscanum condito . .
+             Apr.         30       In praeclara summorum. - Dilectis filiis doctoribus
+                                        et alumnis litterarum artiumque optimarum orbis
+                                        catholici, saeculo sexto exeunte ab obitu Dantis
+                                        Aligherii 209`, 'I. - ACTA BENEDICTI PP. XV'), { year: 1921, volume: 13, ...columnar });
+    expect(r.entries.map((e) => [e.incipit, e.page, e.pageSource])).toEqual([['In praeclara summorum', 209, undefined]]);
+    expect(r.pageless).toHaveLength(1);
+    expect(r.pageless[0]).toMatchObject({
+      series: 'AAS', volume: 13, year: 1921, pope: 'Benedictus XV', category: 'LITTERAE ENCYCLICAE', date: '1921-01-06',
+      incipit: 'Sacra propediem', quoted: false, toponym: null,
+      description: 'Ad Patriarchas, Primates, Archiepiscopos, Episcopos aliosque locorum Ordinarios, pacem et communionem cum Apostolica Sede habentes: septimo saeculo exeunte a Tertio Ordine Franciscanum condito',
+    });
+    expect('page' in r.pageless[0]!).toBe(false);
+    expect(r.pageless[0]!.raw.split('\n')).toHaveLength(5);
+    // The defect and the count are as before: the pageless entry is the same fact, structured.
+    expect(r.stats.withoutPage).toBe(1);
+    expect(r.defects.filter((d) => d.message.startsWith('entry without a page number'))).toHaveLength(1);
+  });
+});
+
 describe('splitEntryText', () => {
   it('strips guillemets and takes the rest as description, whatever follows the closing one', () => {
     expect(splitEntryText('« Venite benedicti  ». - Venerabili Dei Servo')).toEqual({ incipit: 'Venite benedicti', quoted: true, toponym: null, description: 'Venerabili Dei Servo' });

@@ -176,7 +176,16 @@ export interface ActaEntry {
   description: string;
   /** The entry's lines exactly as extracted, joined by newlines, for the report. */
   raw: string;
+  /**
+   * Where the page came from when the index did not print it (phase 2b-iii-b, spec §10.3):
+   * `recovered` from the volume body by the sidecar, `reading` from a curated row
+   * (ACTA_PAGE_READINGS). Absent for a page read from the index line.
+   */
+  pageSource?: 'recovered' | 'reading';
 }
+
+/** An entry the index opened whose page the OCR lost: everything the line prints but the page (spec §10.3). */
+export type PagelessEntry = Omit<ActaEntry, 'page' | 'alsoPages' | 'pageSource'>;
 
 export interface ActaParseStats {
   /** Lines of the pope parts (blank lines and headers excluded). */
@@ -207,6 +216,8 @@ export interface ActaParseResult {
   year: number;
   part?: 'I' | 'II';
   entries: ActaEntry[];
+  /** The entries opened without a page (`stats.withoutPage` counts them), for the page recovery; each is also a defect. */
+  pageless: PagelessEntry[];
   /** Category headings (normalised) that categories.ts does not list, with the pope part. */
   unseenHeadings: string[];
   /** Pope part headings the popes table does not list (`ACTA LEONIS PP. XIII`), as printed. */
@@ -1219,7 +1230,7 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
   const stats: ActaParseStats = { lines: 0, pageLines: 0, harvestedPageLines: 0, harvestedEntries: 0, dateLines: 0, entries: 0, monthOnly: 0, withoutPage: 0, subItems: 0, translations: 0, consumed: 0 };
   const result: ActaParseResult = {
     volume, year, ...(opts.part ? { part: opts.part } : {}),
-    entries: [], unseenHeadings: [], unmappedPopes: [], popeHeadings: [], skippedParts: [], defects: [], stats,
+    entries: [], pageless: [], unseenHeadings: [], unmappedPopes: [], popeHeadings: [], skippedParts: [], defects: [], stats,
   };
   let pope: string | null = null;
   let category: string | null = null;
@@ -1233,11 +1244,73 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
 
   const defect = (cat: string | null, message: string) =>
     result.defects.push({ category: cat ?? '(none)', message });
+  /**
+   * The entry an open line group makes: its date (the bracket of an earlier pontificate's
+   * act, the dating formula a description prints), its pope, its incipit/toponym/description
+   * (splitEntryText). With a page it is an entry; without one (the OCR lost the column) it
+   * is a pageless entry, the same fact for the recovery (spec §10.3).
+   */
+  const build = (o: NonNullable<typeof open>, page: number | null, alsoPages?: number[]): ActaEntry | PagelessEntry => {
+    const bodyLines = o.lines.map((l, k) => (k === 0 ? o.text : l));
+    if (page !== null) bodyLines[bodyLines.length - 1] = bodyLines[bodyLines.length - 1]!.slice(0, -pageTail);
+    // A lone leader dot left before a double-space page (`sui iuris   .  484`) is not text.
+    // The double space is a separator only in the index PDFs' typography; the layout
+    // mode's runs of spaces are positional and mean nothing.
+    let entryText = joinLines(bodyLines).replace(/(\s\.)+$/, '');
+    // The layout mode's runs of spaces are positional and mean nothing; a stray mark the
+    // OCR set before the incipit (`.Mirabilis Deus. -`, AAS 25 (1933) 518) is not text.
+    if (columnar) entryText = entryText.replace(/\s{2,}/g, ' ').replace(/^[.•*'"]+(?=[A-Z«])/, '');
+    // AAS 76 (1984) numbers the acts under one heading (`I. « Salvifici Doloris »`, `II.
+    // « Redemptionis Anno »` under *Epistulae Apostolicae*; `I. Beato Maximiliano Mariae
+    // Kolbe`, `II. Beato Leopoldo Mandić` under *Litterae Decretales*, pp. 1108-1109), as
+    // the consistories' items are numbered everywhere: the numeral is not the act's text.
+    if (columnar) entryText = entryText.replace(/^[IVX]{1,4}\.\s+(?=[A-Z«])/, '');
+    let entryDate = o.date;
+    let entryPope = o.pope;
+    // An entry with no date column that dates itself in its description -- Pius XII's
+    // radio messages of 1939 (`Con inmenso gozo. - A Ssmo D. N. Pio … ad universos
+    // Hispaniae christifideles datus, die 16 mensis Aprilis, anno 1939`, AAS 31 (1939)
+    // 740) -- takes that printed date rather than the entry's before it.
+    const formula = o.blankDated ? entryText.match(/\bdie (\d{1,2}|[ivxl]{1,6}) (?:mensis )?([A-Z][a-z]{2,10}),? (?:mensis,? )?anno (\d{4})\b/) : null;
+    if (formula) {
+      const d = /^\d/.test(formula[1]!) ? Number(formula[1]) : romanToInt(formula[1]!);
+      const m = monthOf(formula[2]!, true);
+      if (m !== undefined && d >= 1 && d <= 31) entryDate = `${formula[3]}-${pad(m)}-${pad(d)}`;
+    }
+    // An act of an earlier pontificate printed in this volume carries its own date, and
+    // sometimes its pope, in brackets before the incipit: `11 Maii 2018 [2010 Sept. 19]
+    // « Admodum fideli »`, `[Benedictus XVI: 2010 Apr. 25]` (2018), `[Benedictus PP. XVI:
+    // 6 Iun. 2010]` (2020, 2021 -- day-first, and with the `PP.`). The bracketed date is
+    // the act's date; the printed one stays in `raw`. A bracket that names no pope leaves
+    // the entry under the part's pope, and the creator holds it by its date (create.ts).
+    const bracket = entryText.match(BRACKET_RE);
+    if (bracket) {
+      const [yTok, mTok, dTok] = bracket[2] !== undefined
+        ? [bracket[2], bracket[3]!, bracket[4]!] : [bracket[7]!, bracket[6]!, bracket[5]!];
+      const month = monthOf(mTok, false);
+      if (month !== undefined) {
+        entryDate = `${yTok}-${pad(month)}-${pad(Number(dTok))}`;
+        if (bracket[1]) entryPope = labelForBracket(bracket[1]);
+        entryText = entryText.slice(bracket[0].length);
+      }
+    }
+    // `page`/`alsoPages` are spliced in here, not appended after `raw`, so a real entry's
+    // key order -- and so its JSON serialisation -- is exactly what it was before the
+    // extraction (determinism check, task 2 brief step 5).
+    const built: ActaEntry | PagelessEntry = {
+      series: 'AAS', volume, year, ...(opts.part ? { part: opts.part } : {}), ...(page !== null ? { page, ...(alsoPages ? { alsoPages } : {}) } : {}),
+      pope: entryPope, category: o.category, date: entryDate, ...(o.note ? { dateNote: o.note } : {}), ...(o.state?.noteRef ? { dateNoteRef: o.state.noteRef } : {}),
+      ...splitEntryText(entryText, { bareIncipits, constitution: categoryForHeading(o.category)?.classes.some((c) => c.requires === 'apostolic-constitution') ?? false }),
+      raw: o.lines.map((l) => l.replace(/\s+$/, '')).join('\n'),
+    } as ActaEntry | PagelessEntry;
+    return built;
+  };
   const flushDefect = () => {
     if (!open) return;
     stats.withoutPage++;
     stats.consumed += open.lines.length;
     defect(open.category, `entry without a page number: ${open.lines.map((l) => l.trim()).join(' / ')}`);
+    result.pageless.push(build(open, null) as PagelessEntry);
     open = null;
   };
   const isHeading = (l: string) => (HEADING_RE.test(l) || (columnar && MIXED_CASE_HEADING_RE.test(l) && categoryForHeading(normaliseHeading(l)) !== null))
@@ -1256,6 +1329,10 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
   let pending: DateState | null = null;
   let blankDated = false;   // the line being read has no date column at all
   let translationOpen = false;   // the line before was a translation sub-item (its continuation is one too)
+  // The length of the trailing page match on an entry's last line (`build` strips it when
+  // building a real entry's text); set within the iteration that finds the page, read by
+  // `build` in that same iteration, unused for a pageless entry (there is nothing to strip).
+  let pageTail = 0;
 
   for (let i = start + 1; i < (end < 0 ? lines.length : end); i++) {
     let line = lines[i]!;
@@ -1442,7 +1519,7 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
     // Does the entry end on this line?
     const last = open.lines[open.lines.length - 1]!;
     let pageMatch = bareNumber ? last.match(/^\s*(\d{1,4})\s*$/) : last.match(PAGE_END_RE);
-    let pageTail = pageMatch?.[0].length ?? 0;
+    pageTail = pageMatch?.[0].length ?? 0;
     let alsoPages: number[] | undefined;
     if (!pageMatch && !columnar) {
       const list = last.match(PAGE_LIST_END_RE);
@@ -1469,62 +1546,15 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
     // 1035): the entry is reported without a page rather than cited at a wrong one.
     if (/^0/.test(pageMatch[1]!)) { flushDefect(); continue; }
     const page = Number(pageMatch[1]);
-    const bodyLines = open.lines.map((l, k) => (k === 0 ? open!.text : l));
-    bodyLines[bodyLines.length - 1] = bodyLines[bodyLines.length - 1]!.slice(0, -pageTail);
-    // A lone leader dot left before a double-space page (`sui iuris   .  484`) is not text.
-    // The double space is a separator only in the index PDFs' typography; the layout
-    // mode's runs of spaces are positional and mean nothing.
-    let entryText = joinLines(bodyLines).replace(/(\s\.)+$/, '');
-    // The layout mode's runs of spaces are positional and mean nothing; a stray mark the
-    // OCR set before the incipit (`.Mirabilis Deus. -`, AAS 25 (1933) 518) is not text.
-    if (columnar) entryText = entryText.replace(/\s{2,}/g, ' ').replace(/^[.•*'"]+(?=[A-Z«])/, '');
-    // AAS 76 (1984) numbers the acts under one heading (`I. « Salvifici Doloris »`, `II.
-    // « Redemptionis Anno »` under *Epistulae Apostolicae*; `I. Beato Maximiliano Mariae
-    // Kolbe`, `II. Beato Leopoldo Mandić` under *Litterae Decretales*, pp. 1108-1109), as
-    // the consistories' items are numbered everywhere: the numeral is not the act's text.
-    if (columnar) entryText = entryText.replace(/^[IVX]{1,4}\.\s+(?=[A-Z«])/, '');
-    let entryDate = open.date;
-    let entryPope = open.pope;
-    // An entry with no date column that dates itself in its description -- Pius XII's
-    // radio messages of 1939 (`Con inmenso gozo. - A Ssmo D. N. Pio … ad universos
-    // Hispaniae christifideles datus, die 16 mensis Aprilis, anno 1939`, AAS 31 (1939)
-    // 740) -- takes that printed date rather than the entry's before it.
-    const formula = open.blankDated ? entryText.match(/\bdie (\d{1,2}|[ivxl]{1,6}) (?:mensis )?([A-Z][a-z]{2,10}),? (?:mensis,? )?anno (\d{4})\b/) : null;
-    if (formula) {
-      const d = /^\d/.test(formula[1]!) ? Number(formula[1]) : romanToInt(formula[1]!);
-      const m = monthOf(formula[2]!, true);
-      if (m !== undefined && d >= 1 && d <= 31) entryDate = `${formula[3]}-${pad(m)}-${pad(d)}`;
-    }
-    // An act of an earlier pontificate printed in this volume carries its own date, and
-    // sometimes its pope, in brackets before the incipit: `11 Maii 2018 [2010 Sept. 19]
-    // « Admodum fideli »`, `[Benedictus XVI: 2010 Apr. 25]` (2018), `[Benedictus PP. XVI:
-    // 6 Iun. 2010]` (2020, 2021 -- day-first, and with the `PP.`). The bracketed date is
-    // the act's date; the printed one stays in `raw`. A bracket that names no pope leaves
-    // the entry under the part's pope, and the creator holds it by its date (create.ts).
-    const bracket = entryText.match(BRACKET_RE);
-    if (bracket) {
-      const [yTok, mTok, dTok] = bracket[2] !== undefined
-        ? [bracket[2], bracket[3]!, bracket[4]!] : [bracket[7]!, bracket[6]!, bracket[5]!];
-      const month = monthOf(mTok, false);
-      if (month !== undefined) {
-        entryDate = `${yTok}-${pad(month)}-${pad(Number(dTok))}`;
-        if (bracket[1]) entryPope = labelForBracket(bracket[1]);
-        entryText = entryText.slice(bracket[0].length);
-      }
-    }
     // The entry whose own line carried a repaired year: the dittos after it inherit its
     // reference, so that one curated confirmation of this entry confirms the chain.
     if (open.state !== undefined && open.state.note !== undefined && open.state.noteRef === undefined) open.state.noteRef = `${year}:${page}`;
     if (categoryForHeading(open.category) === null) unseen.add(`${open.pope}: ${open.category}`);
-    if (entryDate.length === 7) stats.monthOnly++;
+    const entry = build(open, page, alsoPages) as ActaEntry;
+    if (entry.date.length === 7) stats.monthOnly++;
     stats.entries++;
     if ((categoryForHeading(open.category)?.harvested ?? 'no') !== 'no') stats.harvestedEntries++;
-    result.entries.push({
-      series: 'AAS', volume, year, ...(opts.part ? { part: opts.part } : {}), page, ...(alsoPages ? { alsoPages } : {}),
-      pope: entryPope, category: open.category, date: entryDate, ...(open.note ? { dateNote: open.note } : {}), ...(open.state?.noteRef ? { dateNoteRef: open.state.noteRef } : {}),
-      ...splitEntryText(entryText, { bareIncipits, constitution: categoryForHeading(open.category)?.classes.some((c) => c.requires === 'apostolic-constitution') ?? false }),
-      raw: open.lines.map((l) => l.replace(/\s+$/, '')).join('\n'),
-    });
+    result.entries.push(entry);
     open = null;
   }
   flushDefect();
