@@ -3970,7 +3970,7 @@
     "source": {
       "url": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
       "shelf": "aas/1909",
-      "retrieved": "2026-09-13"
+      "retrieved": "2026-09-20"
     },
     "sourceGenreLabel": "Litterae Apostolicae",
     "acta": {
@@ -4010,7 +4010,7 @@
     "source": {
       "url": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
       "shelf": "aas/1909",
-      "retrieved": "2026-09-13"
+      "retrieved": "2026-09-20"
     },
     "sourceGenreLabel": "Litterae Apostolicae",
     "acta": {
@@ -4037,7 +4037,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "E Lapurdensi Basilica",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 317
+    }
   },
   {
     "id": "mag:pius-x/septimo-iam-1909",
@@ -4094,7 +4100,35 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Sodalitium",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 137
+    }
+  },
+  {
+    "id": "mag:pius-x/romani-pontifices-1909",
+    "title": "Romani Pontifices. Translatio in Dominicam immediate praecedentem diem Octobris mensis vicesimum octavum festivitatis Patronorum pro paroecia Seifersdorf, dioecesis Litomericensis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1909-10-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-02-1910-ocr.pdf",
+      "shelf": "aas/1910",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Romani Pontifices",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 940
+    }
   },
   {
     "id": "mag:pius-x/paucis-ante-diebus-1909",
@@ -4113,7 +4147,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Paucis ante diebus",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 705
+    }
   },
   {
     "id": "mag:pius-x/decessor-noster-1909",
@@ -4132,7 +4172,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Decessor Noster",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 138
+    }
   },
   {
     "id": "mag:pius-x/grate-accepimus-1909",
@@ -4458,6 +4504,28 @@
     "sourceGenreLabel": "letters"
   },
   {
+    "id": "mag:pius-x/fidelium-sodalitates-1910",
+    "title": "Fidelium sodalitates. Sodalitio Mariae Reginae Cordium in Urbe instituto nonnullae indulgentiae in perpetuo conceduntur, addito pariter privilegio in perpetuum indulto altaris privilegiati personalis pro sociis sacerdotibus",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-02-01",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-02-1910-ocr.pdf",
+      "shelf": "aas/1910",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Fidelium sodalitates",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 185
+    }
+  },
+  {
     "id": "mag:pius-x/quem-ex-perspecta-1910",
     "title": "Quem ex perspecta",
     "idStatus": "minted",
@@ -4512,7 +4580,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Nobis in sublimi",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 141
+    }
   },
   {
     "id": "mag:pius-x/quod-cognovimus-1910",
@@ -4628,6 +4702,28 @@
     "sourceGenreLabel": "letters"
   },
   {
+    "id": "mag:pius-x/pias-inter-fidelium-1910",
+    "title": "Pias inter fidelium. Consociatio precum pro Scandinavorum conversione impetranda erigitur in Abbatia S. Mauritii Claravallensis, in dioecesi Luxemburgensi, cum facultate inscribendi socios ubique terrarum et cum indulgentiis consuetis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-03-04",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-02-1910-ocr.pdf",
+      "shelf": "aas/1910",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Pias inter fidelium",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 187
+    }
+  },
+  {
     "id": "mag:pius-x/quae-nuper-1910",
     "title": "Quae nuper",
     "idStatus": "minted",
@@ -4664,6 +4760,28 @@
     },
     "incipit": "Novimus",
     "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-x/comperta-sunt-1910",
+    "title": "Comperta sunt. Conceduntur praecipuae facultates Ordini Eremitarum S. Augustini 406 chronologice- ordine digestus.",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-03-18",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-02-1910-ocr.pdf",
+      "shelf": "aas/1910",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Comperta sunt",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 983
+    }
   },
   {
     "id": "mag:pius-x/est-profecto-1910",
@@ -4783,7 +4901,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod ex tuis",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 987
+    }
   },
   {
     "id": "mag:pius-x/conspicua-templa-1910",
@@ -5237,6 +5361,28 @@
     "sourceGenreLabel": "letters"
   },
   {
+    "id": "mag:pius-x/nihil-magis-1910",
+    "title": "Nihil magis. Ad Moderatores et Scriptores commentarii menstrui « Revue catholique des institutions et du droit », ob studium religionem aequitatemque defendendi commendationis hortationisque causa",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-06-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-02-1910-ocr.pdf",
+      "shelf": "aas/1910",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Nihil magis",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 541
+    }
+  },
+  {
     "id": "mag:pius-x/perillustrem-fratrum-1910",
     "title": "Perillustrem Fratrum",
     "idStatus": "minted",
@@ -5253,7 +5399,35 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Perillustrem Fratrum",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 899
+    }
+  },
+  {
+    "id": "mag:pius-x/quae-paucis-1910",
+    "title": "Quae paucis. Ad V. E. Iulium S. R. E. Card. Boschi, Archiepiscopum Ferrariensem et Episcopum Comaclensem, ceterosque Flaminiae regionis Archiepiscopos et Episcopos, post annuum conventum Bononiae habitum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-06-14",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-02-1910-ocr.pdf",
+      "shelf": "aas/1910",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quae paucis",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 513
+    }
   },
   {
     "id": "mag:pius-x/gratiae-quae-1910",
@@ -5272,7 +5446,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Gratiae, quae",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 569
+    }
   },
   {
     "id": "mag:pius-x/constat-apprime-1910-06-21",
@@ -5310,7 +5490,35 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Nobis exponendum",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 571
+    }
+  },
+  {
+    "id": "mag:pius-x/quod-significatum-1910",
+    "title": "Quod significatum. Ad R. P. D. Ioannem Volpi, Episcopum Aretinorum, de coetu habito a vicariis eius foraneis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-06-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-02-1910-ocr.pdf",
+      "shelf": "aas/1910",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quod significatum",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 722
+    }
   },
   {
     "id": "mag:pius-x/illibatae-custodiendae-1910",
@@ -5351,7 +5559,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Cathedralis Plocensis",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 572
+    }
   },
   {
     "id": "mag:pius-x/romanum-decet-1910",
@@ -5370,7 +5584,79 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Romanum decet",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 573
+    }
+  },
+  {
+    "id": "mag:pius-x/ex-nativo-1910",
+    "title": "Ex nativo. Transfertur in alium diem festivitas coelestis Patroni pro oppido « Armillas » in Archidioecesi Caesaraugustana",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-07-18",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-02-1910-ocr.pdf",
+      "shelf": "aas/1910",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ex nativo",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 633
+    }
+  },
+  {
+    "id": "mag:pius-x/quod-significatum-est-1910",
+    "title": "Quod significatum est. Ad R. P. D. Raymundum Villard, Episcopum Augustodunensium, decimo recurrente saeculo a condito Cluniaciensi coenobio",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-08-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-02-1910-ocr.pdf",
+      "shelf": "aas/1910",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quod significatum est",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 726
+    }
+  },
+  {
+    "id": "mag:pius-x/ex-hac-1910",
+    "title": "Ex hac. Erectio novi Apost. Vicar. Kientchang in Sinis.",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-08-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-02-1910-ocr.pdf",
+      "shelf": "aas/1910",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ex hac",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 941
+    }
   },
   {
     "id": "mag:pius-x/seraphici-patriarchae-1910",
@@ -5389,7 +5675,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Seraphici Patriarchae",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 713
+    }
   },
   {
     "id": "mag:pius-x/manilensium-archiepiscopus-1910",
@@ -5408,7 +5700,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Manilensium Archiepiscopus",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 900
+    }
   },
   {
     "id": "mag:pius-x/sacrorum-antistitum-1910",
@@ -5449,7 +5747,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Fuldensem",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 704
+    }
   },
   {
     "id": "mag:pius-x/decessorum-nostrorum-1910",
@@ -5491,6 +5795,251 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-x/haustum-pietatis-1910",
+    "title": "Haustum pietatis. Ad R. P. D. Ioannem Vincentium Tasso, Episcopum Augustae Pretoriae, ob devotionis obsequium Sanctitati Suae exhibitum . . . . . chronologice- ordine digestus.",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-09-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-02-1910-ocr.pdf",
+      "shelf": "aas/1910",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Haustum pietatis",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 989
+    }
+  },
+  {
+    "id": "mag:pius-x/utilitatum-1910",
+    "title": "Utilitatum. Ad R. P. D. Thomam Pium Boggiani, O. P., Episcopum Adriensem, ob venerationis obsequium occasione spiritualium exercitiorum cleri eiusdem dioecesis Beatissimo Patri exhibitum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-09-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-02-1910-ocr.pdf",
+      "shelf": "aas/1910",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Utilitatum",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 736
+    }
+  },
+  {
+    "id": "mag:pius-x/incensum-1910",
+    "title": "Incensum. Erigitur nova Archidioecesis Simlensis (Simla) in Indiis Orientalibus",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-09-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-02-1910-ocr.pdf",
+      "shelf": "aas/1910",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Incensum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 851
+    }
+  },
+  {
+    "id": "mag:pius-x/solemne-hoc-fuit-1910",
+    "title": "Solemne hoc fuit. De novanda divini cultus ratione",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-10-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-03-1911-ocr.pdf",
+      "shelf": "aas/1911",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Solemne hoc fuit",
+    "characteristics": [
+      "motu-proprio"
+    ],
+    "sourceGenreLabel": "Litterae Apostolicae Motu proprio datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 3,
+      "year": 1911,
+      "page": 337
+    }
+  },
+  {
+    "id": "mag:pius-x/medias-inter-acerbitates-1910",
+    "title": "Medias inter acerbitates. Ad R. P. D. Eduardum Pulciano Genuensium Archiepiscopum, ceterosque Liguriae Episcopos, ob venerationis obsequium, occasione annui episcopalis conventus, Beatissimo Patri per litteras oblatum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-10-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-03-1911-ocr.pdf",
+      "shelf": "aas/1911",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Medias inter acerbitates",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 3,
+      "year": 1911,
+      "page": 13
+    }
+  },
+  {
+    "id": "mag:pius-x/pergratum-quidem-1910",
+    "title": "Pergratum quidem. Ad R. P. D. Franciscum de Bettinger, Archiepiscopum Monacensem ac Frisingensem, ceterosque Bavariae Archiepiscopum et Episcopos, ob filiale venerationis obsequium ab iisdem, episcopalem coetum inituris, Beatissimo Patri per litteras exhibitum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-10-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-03-1911-ocr.pdf",
+      "shelf": "aas/1911",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Pergratum quidem",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 3,
+      "year": 1911,
+      "page": 12
+    }
+  },
+  {
+    "id": "mag:pius-x/plurimum-1910",
+    "title": "Plurimum. Ad Iosephum M. Card. Martin de Herrera y de la Iglesia, Archiepiscopum Compostellanuni, ob litteras obsequii devotionisque plenas Beatissimo Patri exhibitas",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-10-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-03-1911-ocr.pdf",
+      "shelf": "aas/1911",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Plurimum",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 3,
+      "year": 1911,
+      "page": 11
+    }
+  },
+  {
+    "id": "mag:pius-x/ad-augendam-1910",
+    "title": "Ad augendam. Indulgentia quotidiana perpetua pro sanctuario a S. Specu S. Benedicti 405 chronologice- ordine digestus.",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-10-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-02-1910-ocr.pdf",
+      "shelf": "aas/1910",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ad augendam",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 2,
+      "year": 1910,
+      "page": 985
+    }
+  },
+  {
+    "id": "mag:pius-x/cum-omnia-1910",
+    "title": "Cum omnia. Singularia privilegia atque indulgentiae pro Archisodalitate ab adoratione nocturna occasione primi centenarii ab erectione",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-11-11",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-03-1911-ocr.pdf",
+      "shelf": "aas/1911",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Cum omnia",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 3,
+      "year": 1911,
+      "page": 5
+    }
+  },
+  {
+    "id": "mag:pius-x/qua-vos-ratione-1910",
+    "title": "Qua vos ratione. Ad Archiepiscopum et Episcopos Provinciae Rothomagensis de ratione ab eis inducta in admittendis pueris ad sacram sinaxim",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-11-14",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-03-1911-ocr.pdf",
+      "shelf": "aas/1911",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Qua vos ratione",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 3,
+      "year": 1911,
+      "page": 16
+    }
+  },
+  {
+    "id": "mag:pius-x/moerentibus-nobis-1910",
+    "title": "Moerentibus Nobis. Ad V. E. Claudium Cardinalem Vaszary, Strigoniensem Archiepiscopum, ceterosque Archiepiscopos Hungariae, ob venerationis specimen Beatissimo Patri per litteras exhibitum ab iisdem praesulibus, Budapestini congregatis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1910-11-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-03-1911-ocr.pdf",
+      "shelf": "aas/1911",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Moerentibus Nobis",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 3,
+      "year": 1911,
+      "page": 61
+    }
   },
   {
     "id": "mag:pius-x/in-romanae-curiae-1910",
@@ -5609,7 +6158,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Iamdudum",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 3,
+      "year": 1911,
+      "page": 217
+    }
   },
   {
     "id": "mag:pius-x/apostolic-letter-1911-06-28",
@@ -5630,7 +6185,132 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 3,
+      "year": 1911,
+      "page": 307
+    }
+  },
+  {
+    "id": "mag:pius-x/in-templo-1911",
+    "title": "In templo. Confraternitas S. Missae Reparatricis in templo S. Crucis vulgo « dei Lucchesi » in Urbe erigitur in Archiconfraternitatem cum facultate aggregandi",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1911-06-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-03-1911-ocr.pdf",
+      "shelf": "aas/1911",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "In templo",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 3,
+      "year": 1911,
+      "page": 409
+    }
+  },
+  {
+    "id": "mag:pius-x/anno-reparatae-1911",
+    "title": "Anno reparatae. Ecclesia Augustae Taurinorum in honorem Virginis Christianorum Adiutricis erigitur in Basilicam Minoren)",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1911-07-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-03-1911-ocr.pdf",
+      "shelf": "aas/1911",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Anno reparatae",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 3,
+      "year": 1911,
+      "page": 410
+    }
+  },
+  {
+    "id": "mag:pius-x/quantavis-diligentia-1911",
+    "title": "Quantavis diligentia. De trahentibus clericos ad tri-",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1911-10-09",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-03-1911-ocr.pdf",
+      "shelf": "aas/1911",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quantavis diligentia",
+    "characteristics": [
+      "motu-proprio"
+    ],
+    "sourceGenreLabel": "Litterae Apostolicae Motu proprio datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 3,
+      "year": 1911,
+      "page": 555
+    }
+  },
+  {
+    "id": "mag:pius-x/quo-magis-1911",
+    "title": "Quo magis. De nonnullis in Ordine Fratrum Minorum servandis circa Curiam Generalem, electiones",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1911-10-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-03-1911-ocr.pdf",
+      "shelf": "aas/1911",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quo magis",
+    "characteristics": [
+      "motu-proprio"
+    ],
+    "sourceGenreLabel": "Litterae Apostolicae Motu proprio datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 3,
+      "year": 1911,
+      "page": 556
+    }
+  },
+  {
+    "id": "mag:pius-x/si-qua-est-1911",
+    "title": "Si qua est. De nova ecclesiasticae hierarchiae in",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1911-10-28",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-03-1911-ocr.pdf",
+      "shelf": "aas/1911",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Si qua est",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 3,
+      "year": 1911,
+      "page": 553
+    }
   },
   {
     "id": "mag:pius-x/divino-afflatu-1911",
@@ -5652,7 +6332,35 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 3,
+      "year": 1911,
+      "page": 633
+    }
+  },
+  {
+    "id": "mag:pius-x/quae-catholico-1911",
+    "title": "Quae Catholico. Divisio Apostolicae Praefecturae Lit-",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1911-11-17",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-03-1911-ocr.pdf",
+      "shelf": "aas/1911",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quae Catholico",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 3,
+      "year": 1911,
+      "page": 652
+    }
   },
   {
     "id": "mag:pius-x/etsi-nos-1912",
@@ -5756,7 +6464,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Singulari quadam",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 4,
+      "year": 1912,
+      "page": 8
+    }
   },
   {
     "id": "mag:pius-x/letter-1912-10-18",
@@ -5799,6 +6513,50 @@
     "sourceGenreLabel": "motu_proprio"
   },
   {
+    "id": "mag:pius-x/romani-pontifices-1912",
+    "title": "Romani Pontifices. Facultas conferendi gradus academicos in iure canonico conceditur metropolitano seminario maiori Mediolanensi",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1912-12-18",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-05-1913-ocr.pdf",
+      "shelf": "aas/1913",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Romani Pontifices",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 5,
+      "year": 1913,
+      "page": 57
+    }
+  },
+  {
+    "id": "mag:pius-x/cum-nobis-1913",
+    "title": "Cum Nobis. Consociatio a S. Corde Iesu pro piandis in purgatorio igne detentis animabus, novum templum, omniaque opera a pio sacerdote P. Victore Jouet instituta, sodalibus Missionariis a S. Corde Iesu provinciae Italicae administranda concreduntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1913-01-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-05-1913-ocr.pdf",
+      "shelf": "aas/1913",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Cum Nobis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 5,
+      "year": 1913,
+      "page": 26
+    }
+  },
+  {
     "id": "mag:pius-x/litteris-apostolicis-1913",
     "title": "Litteris Apostolicis",
     "idStatus": "minted",
@@ -5818,7 +6576,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 5,
+      "year": 1913,
+      "page": 145
+    }
   },
   {
     "id": "mag:pius-x/refert-ad-nos-1913",
@@ -5840,6 +6604,28 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:pius-x/adventantem-sacerdotii-tui-1913",
+    "title": "Adventantem sacerdotii tui. Ad R. P. D. Iacobum Cardona y Tur, episcopum tit. Sionensem, quinquagesimo sacerdotii eius anniversario nuper expleto",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1913-05-25",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-05-1913-ocr.pdf",
+      "shelf": "aas/1913",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Adventantem sacerdotii tui",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 5,
+      "year": 1913,
+      "page": 270
+    }
+  },
+  {
     "id": "mag:pius-x/in-praecipuis-1913",
     "title": "In praecipuis",
     "idStatus": "minted",
@@ -5859,7 +6645,101 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 5,
+      "year": 1913,
+      "page": 297
+    }
+  },
+  {
+    "id": "mag:pius-x/i-aug-1913",
+    "title": "I Aug. ! 15 Officiosissimis litteris. - Ad RR. PP. DD. Archiepiscopos et Episcopos quibus utitur patronis catholica studiorum Universitas Andegavensis, ob litteras venerationis et obsequii plenas beatissimo Patri exhibitas",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1913-08-01",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-05-1913-ocr.pdf",
+      "shelf": "aas/1913",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "I Aug",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 5,
+      "year": 1913,
+      "page": 425
+    }
+  },
+  {
+    "id": "mag:pius-x/iamdudum-noveramus-1913",
+    "title": "Iamdudum noveramus. Ad Carolum card. de Hornig, Veszprimiensium episcopum, vigesimum quintum episcopalis muneris annum explentem",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1913-08-01",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-05-1913-ocr.pdf",
+      "shelf": "aas/1913",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Iamdudum noveramus",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 5,
+      "year": 1913,
+      "page": 424
+    }
+  },
+  {
+    "id": "mag:pius-x/vobis-nuperrime-1913",
+    "title": "Vobis nuperrime. Ad R. P. D. Iulium Mauritium Abbet, episcopum Sedunensem, ceterosque Helvetiorum Episcopos, de quinquagesimo anno ab initis eorum annuis conventibus, de Constantinianis sollemnibus ac de coniunctione cum Apostolica Sede.",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1913-08-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-05-1913-ocr.pdf",
+      "shelf": "aas/1913",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Vobis nuperrime",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 5,
+      "year": 1913,
+      "page": 427
+    }
+  },
+  {
+    "id": "mag:pius-x/indignitates-rerum-1913",
+    "title": "Indignitates rerum. Ad RR. PP. DD. Ioannem archiepiscopum S. Iacobi de Chile ceterosque Episcopos reipublicae Chilensi s, qui, communibus ad beatissimum Patrem datis litteris, iniurias Internuntio Apostolico apud se illatas conquesti, suum et suorum populorum in Sedem Apostolicam obsequium studiumque confirmarunt",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1913-08-22",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-05-1913-ocr.pdf",
+      "shelf": "aas/1913",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Indignitates rerum",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 5,
+      "year": 1913,
+      "page": 452
+    }
   },
   {
     "id": "mag:pius-x/abhinc-duos-annos-1913",
@@ -5903,6 +6783,28 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:pius-x/nuperrime-1913",
+    "title": "Nuperrime. Ad Augustinum card. Richelmy, archiepiscopum Taurinensem, ob litteras devotionis plenas beatissimo Patri exhibitas occasione annui congressus Augustae Taurinorum ab Episcopis Pedemontanae regionis nuper celebrati",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1913-10-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-05-1913-ocr.pdf",
+      "shelf": "aas/1913",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Nuperrime",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 5,
+      "year": 1913,
+      "page": 490
+    }
+  },
+  {
     "id": "mag:pius-x/te-sane-1913",
     "title": "Te sane",
     "idStatus": "minted",
@@ -5941,7 +6843,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 5,
+      "year": 1913,
+      "page": 545
+    }
   },
   {
     "id": "mag:pius-x/ubi-primum-1914",

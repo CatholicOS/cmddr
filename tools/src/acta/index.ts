@@ -398,9 +398,10 @@ const INTERLEAVED_RE = /[A-Za-z]{2,},? [A-Za-z]{2,}[,.]? {12,}[A-Za-z]/;
 /**
  * The column header of the volumes: `ANNO MENSE DIE`, `MENSE I DIE`, `PAG.`, in any OCR
  * spelling -- the 1932-1957 volumes print `PAG.` 133 times and `PAO.`, `PAS.`, `PAß.`,
- * `PA6.`, `PAe`, `FAS`, `PV(J.`, `PAG..`, `PAG»`, `, PAG.` beside it (measured over the 26 fixtures).
+ * `PA6.`, `PAe`, `FAS`, `PV(J.`, `PAG..`, `PAG»`, `, PAG.` beside it (measured over the 26
+ * fixtures); AAS 14 (1922) 709: `ANNO MUNSE DIE`.
  */
-const COLUMN_HEADER_RE = /^[\s.,'"•»-]*(?:(?:ANNO|MENSE|DIE|DXE|D1E|PA[GSOEeß6]|FAS|PV\(J|I|i|')[\s.,'"•»-]*)+$/;
+const COLUMN_HEADER_RE = /^[\s.,'"•»-]*(?:(?:ANNO|MENSE|MUNSE|DIE|DXE|D1E|PA[GSOEeß6]|FAS|PV\(J|I|i|')[\s.,'"•»-]*)+$/;
 // The parts are numbered `II – `, `IV. – `, `I. — ` or (2018's Diarium) not at all.
 // The OCR reads the numeral as `1` (AAS 32, 1940: `1 - ACTA PII PP. XII`), `IL` (`IL - ACTA
 // SS. CONGREGATIONUM`, AAS 25) or `U` (`U - ACTA SS. CONGREGATIONUM`, AAS 32): any short

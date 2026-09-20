@@ -1394,11 +1394,7 @@ describe('parseActaIndex on the early volumes whose OCR kept the page column (ac
     ];
     for (const [file, opts] of sources) {
       const r = parseActaIndex(readFileSync(`tools/fixtures/acta/${file}.txt`, 'utf8'), opts);
-      // AAS 14 (1922) p. 709 once misreads the column header `ANNO MENSE DIE` as `ANNO
-      // MUNSE DIE`, which the column-header regex (index.ts) does not admit; a concern for
-      // the report, not a category to guess.
-      const unseen = file === 'aas-14-1922' ? r.unseenHeadings.filter((h) => h !== 'Pius XI: ANNO MUNSE DIE') : r.unseenHeadings;
-      expect(unseen, file).toEqual([]);
+      expect(r.unseenHeadings, file).toEqual([]);
       expect(r.unmappedPopes, file).toEqual([]);
     }
   });
