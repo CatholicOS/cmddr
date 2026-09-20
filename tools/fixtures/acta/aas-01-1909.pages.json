@@ -4,6 +4,16 @@
   "text": "~/development/sources/AAS/txt/aas-01-1909.txt (908 pages)",
   "rows": [
     {
+      "key": "1908-09|CONSTITUTIONES APOSTOLICAE|Promulgandi|de promulgatione legum et evulgatione actorum S. Sedis",
+      "date": "1908-09",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Promulgandi",
+      "page": 71,
+      "rule": "unique",
+      "bodyLine": "Iuxta praescriptum Constit. Promulgandi, quae hac ipsa die vulgatur",
+      "header": "Ordo servandus in Romana Curia. - Normae peculiares. 71"
+    },
+    {
       "key": "1909-04-21|LITTERAE ENCYCLICAE|Communium rerum|de saecularibus solemniis in honorem S. Anselmi, Episcopi et",
       "date": "1909-04-21",
       "category": "LITTERAE ENCYCLICAE",
@@ -20,7 +30,7 @@
       "date": "1908-01-29",
       "category": "CONSTITUTIONES APOSTOLICAE",
       "incipit": "Sapienti Consilio",
-      "reason": "outside-runs",
+      "reason": "several",
       "candidates": [
         48,
         61,
@@ -32,17 +42,7 @@
         100,
         102,
         103,
-        104,
-        151,
-        212,
-        295,
-        316,
-        423,
-        684,
-        685,
-        814,
-        815,
-        830
+        104
       ]
     },
     {
@@ -79,16 +79,6 @@
       "category": "LITTERAE APOSTOLICAE",
       "incipit": null,
       "reason": "no-incipit"
-    },
-    {
-      "key": "1908-09|CONSTITUTIONES APOSTOLICAE|Promulgandi|de promulgatione legum et evulgatione actorum S. Sedis",
-      "date": "1908-09",
-      "category": "CONSTITUTIONES APOSTOLICAE",
-      "incipit": "Promulgandi",
-      "reason": "outside-runs",
-      "candidates": [
-        71
-      ]
     },
     {
       "key": "1908-10-16|LITTERAE APOSTOLICAE||Pia congregatio Matritensis nostrae Dominae de la Paloma ind",

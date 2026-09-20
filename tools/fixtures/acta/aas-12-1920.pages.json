@@ -24,16 +24,6 @@
       "header": "108 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
-      "key": "1920-01|EPISTOLAE|Quandoquidem|Ad R. P. D. Franciscum Kordac, archiepiscopum Pragensem, coe",
-      "date": "1920-01",
-      "category": "EPISTOLAE",
-      "incipit": "Quandoquidem",
-      "page": 33,
-      "rule": "unique",
-      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Quandoquidem non paucas paterni studii Nostri erga Bohemorum gentem",
-      "header": "Acta Benedicti PP. XV 33"
-    },
-    {
       "key": "1920-02|EPISTOLAE|Istum, cui praesides|Ad R. P. Norbertum Schachinger, Canonicorum Regularium Praem",
       "date": "1920-02",
       "category": "EPISTOLAE",
@@ -382,6 +372,17 @@
       "category": "EPISTOLAE",
       "incipit": "Par Vintermédiaire",
       "reason": "none"
+    },
+    {
+      "key": "1920-01|EPISTOLAE|Quandoquidem|Ad R. P. D. Franciscum Kordac, archiepiscopum Pragensem, coe",
+      "date": "1920-01",
+      "category": "EPISTOLAE",
+      "incipit": "Quandoquidem",
+      "reason": "several",
+      "candidates": [
+        33,
+        172
+      ]
     },
     {
       "key": "1920-02-16|SERMO|Or fa un anno|Habitus die 16 februarii 1920 ad parochos et ad quadragesima",

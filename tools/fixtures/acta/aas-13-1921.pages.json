@@ -285,16 +285,6 @@
       "header": "Annus XIII - Vol. XIII 6 Maii 1921 Num. 6"
     },
     {
-      "key": "1921-05-13|CONSTITUTIONES APOSTOLICAE|Romani Pontifices|Praelatura nullius de Rio Branco abbatiae Beatae Mariae Virg",
-      "date": "1921-05-13",
-      "category": "CONSTITUTIONES APOSTOLICAE",
-      "incipit": "Romani Pontifices",
-      "page": 370,
-      "rule": "unique",
-      "bodyLine": "Romani Pontifices praedecessores Nostri precibus a Sancti Benedicti",
-      "header": "370 Acta Apostolicae Sedis - Commentarium Officiale"
-    },
-    {
       "key": "1921-05-13|LITTERAE APOSTOLICAE|Cum in archidioecesi|Erigitur nova Praefectura Apostolica « de Tierradentro », in",
       "date": "1921-05-13",
       "category": "LITTERAE APOSTOLICAE",
@@ -721,6 +711,17 @@
       "reason": "outside-runs",
       "candidates": [
         290
+      ]
+    },
+    {
+      "key": "1921-05-13|CONSTITUTIONES APOSTOLICAE|Romani Pontifices|Praelatura nullius de Rio Branco abbatiae Beatae Mariae Virg",
+      "date": "1921-05-13",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Romani Pontifices",
+      "reason": "several",
+      "candidates": [
+        302,
+        370
       ]
     },
     {

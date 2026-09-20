@@ -4,6 +4,16 @@
   "text": "~/development/sources/AAS/txt/aas-08-1916.txt (548 pages)",
   "rows": [
     {
+      "key": "1915-12-20|APOSTOLICAE SUB PLUMBO LITTERAE|Apostolatus officium|De erectione novae dioecesis « Portus Nationalis » ,",
+      "date": "1915-12-20",
+      "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
+      "incipit": "Apostolatus officium",
+      "page": 92,
+      "rule": "unique",
+      "bodyLine": "Apostolatus officium Summo Pontifici divinitus commissum postulat",
+      "header": "92 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1915-12|APOSTOLICAE SUB PLUMBO LITTERAE|Inter praecipuas|De erectione Provinciae Reginensis, divisione dioecesis sanc",
       "date": "1915-12",
       "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
@@ -14,6 +24,26 @@
       "header": "Annus VIII - Vol. VIII Die 3 Aprilis 1916 Num. 4"
     },
     {
+      "key": "1916-03-10|EPISTOLAE|Nonnullos|Ad R. P. D. Camillum Moreschini, archiepiscopum Camerinensem",
+      "date": "1916-03-10",
+      "category": "EPISTOLAE",
+      "incipit": "Nonnullos",
+      "page": 143,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Nonnullos ex egregiis viris, qui doctrinae christianae per Picenum promovendae praesunt, cum proxime, te producente, admisissemus coram,",
+      "header": "Acta Benedicti PF. XV 143"
+    },
+    {
+      "key": "1916-03-13|EPISTOLAE|Litteris tuis|Ad R. P. D. Barnabam Piedrabuena, episcopum Catamarciensium,",
+      "date": "1916-03-13",
+      "category": "EPISTOLAE",
+      "incipit": "Litteris tuis",
+      "page": 144,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. - Litteris",
+      "header": "144 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1916-03|EPISTOLAE|Al tremendo conflitto|Ad Basilium S. R. E. Presbyterum Cardinalem Pompilj, in Urbe",
       "date": "1916-03",
       "category": "EPISTOLAE",
@@ -22,6 +52,16 @@
       "rule": "unique",
       "bodyLine": "Al tremendo conflitto, che lacera l'Europa, Noi, come Pastore universale delle anime, non potevamo, senza venir meno ai sacri doveri",
       "header": "58 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1916-03|EPISTOLAE|Vix poteras|Ad religiosum virum Gyrum de Pisauro, O. F. M., de oblata, i",
+      "date": "1916-03",
+      "category": "EPISTOLAE",
+      "incipit": "Vix poteras",
+      "page": 142,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, religiose vir, salutem et apostolicam benedictionem. -",
+      "header": "142 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1916-03|SERMO|Al vescovo|Ad divini verbi per Quadragesimam in Urbe praecones.",
@@ -52,6 +92,16 @@
       "rule": "unique",
       "bodyLine": "Ad perpetuam rei memoriam. — Cum Catholicae Ecclesiae veritas",
       "header": "Annus VIII - Vol. VIII Die 5 Maii 1916 Num. 5"
+    },
+    {
+      "key": "1916-04-27|LITTERAE APOSTOLICAE|Cum divinus Redemptor|Oratio quaedam ad S. Petrum, Apostolorum Principem, indulgen",
+      "date": "1916-04-27",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Cum divinus Redemptor",
+      "page": 139,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Cum divinus Redemptor noster",
+      "header": "Acta Benedicti PP. XV 139"
     },
     {
       "key": "1916-04-30|EPISTOLAE|Institutiones Theologiae Moralis|Ad R. P. Ianuarium Bucceroni, e Soc. Iesu, doctorem decurial",
@@ -134,6 +184,16 @@
       "header": "Acta Benedicti PP. XV 309"
     },
     {
+      "key": "1916-07|EPISTOLAE|Il devoto indirizzo|Al conte Massimiliano Zara, presidente generale della Societ",
+      "date": "1916-07",
+      "category": "EPISTOLAE",
+      "incipit": "Il devoto indirizzo",
+      "page": 310,
+      "rule": "unique",
+      "bodyLine": "Diletto Figlio, salute ed apostolica benedizione. — Il devoto indirizzo, che Ci avete fatto pervenire unitamente al resoconto generale dei",
+      "header": "310 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1916-07|EPISTOLAE|Pietatis in Nos vestrae|Ad R. P. D. Iulianum, archiepiscopum Portus Principis, ceter",
       "date": "1916-07",
       "category": "EPISTOLAE",
@@ -142,6 +202,16 @@
       "rule": "unique",
       "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Pietatis in Nos vestrae quamdam veluti expressam imaginem vidimus in",
       "header": "308 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1916-09-10|EPISTOLAE|Singulare tuum|Ad Franciscum S. R. E. presbyterum cardinalem De Bettinger, ",
+      "date": "1916-09-10",
+      "category": "EPISTOLAE",
+      "incipit": "Singulare tuum",
+      "page": 394,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili Noster, salutem et apostolicam benedictionem. — Singulare tuum in Nos pietatis et observantiae studium ex humanissimis",
+      "header": "394 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1916-09-19|MOTU PROPRIO|Sanctae Mariae ad Rupes|Dé sanctuariis S. Mariae ad Rupes et S. Bernardini Senensis ",
@@ -174,6 +244,26 @@
       "header": "356 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
+      "key": "1916-10-14|EPISTOLAE|In coetu sodalium|Ad R. P. Ludovicum Theissling, Ordinis Dominiciani Magistrum",
+      "date": "1916-10-14",
+      "category": "EPISTOLAE",
+      "incipit": "In coetu sodalium",
+      "page": 395,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — In coetu sodalium Tertiariorum Sancti Dominici, qui abhinc tribus annis actus est",
+      "header": "Acta Benedicti BB. XV 395"
+    },
+    {
+      "key": "1916-10-14|EPISTOLAE|Quid agant|Ad Petrum S. R. E. presb, cardinalem Maffi, archiepiscopum P",
+      "date": "1916-10-14",
+      "category": "EPISTOLAE",
+      "incipit": "Quid agant",
+      "page": 394,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Quid agant et quo spectent curae vestrae, quae vos",
+      "header": "394 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1916-10-30|EPISTOLAE|Communis epistola|A.& RR. PP. DD. Natalem Bruni, archiepiscopum Mutinensium, a",
       "date": "1916-10-30",
       "category": "EPISTOLAE",
@@ -182,6 +272,16 @@
       "rule": "unique",
       "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Communis epistola, quam ad Nos dedistis Mutinae nuper congregati, vestra",
       "header": "434 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1916-11-13|EPISTOLAE|In libro|Ad Georgium S. R. E. presb. card. Gusmini, archiepiscopum Bo",
+      "date": "1916-11-13",
+      "category": "EPISTOLAE",
+      "incipit": "In libro",
+      "page": 436,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili Noster, salutem et apostolicam benedictionem. — In",
+      "header": "436 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1916-12|ALLOCUTIO|Quandoquidem|Habita in Consistorio.",
@@ -196,51 +296,11 @@
   ],
   "unrecovered": [
     {
-      "key": "1915-12-20|APOSTOLICAE SUB PLUMBO LITTERAE|Apostolatus officium|De erectione novae dioecesis « Portus Nationalis » ,",
-      "date": "1915-12-20",
-      "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
-      "incipit": "Apostolatus officium",
-      "reason": "outside-runs",
-      "candidates": [
-        92
-      ]
-    },
-    {
       "key": "1916-02-07|APOSTOLICAE SUB PLUMBO LITTERAE|Cantoria, celtica|De erectione ecclesiasticae provinciae Gardiffensis",
       "date": "1916-02-07",
       "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
       "incipit": "Cantoria, celtica",
       "reason": "none"
-    },
-    {
-      "key": "1916-03-10|EPISTOLAE|Nonnullos|Ad R. P. D. Camillum Moreschini, archiepiscopum Camerinensem",
-      "date": "1916-03-10",
-      "category": "EPISTOLAE",
-      "incipit": "Nonnullos",
-      "reason": "outside-runs",
-      "candidates": [
-        143
-      ]
-    },
-    {
-      "key": "1916-03-13|EPISTOLAE|Litteris tuis|Ad R. P. D. Barnabam Piedrabuena, episcopum Catamarciensium,",
-      "date": "1916-03-13",
-      "category": "EPISTOLAE",
-      "incipit": "Litteris tuis",
-      "reason": "outside-runs",
-      "candidates": [
-        144
-      ]
-    },
-    {
-      "key": "1916-03|EPISTOLAE|Vix poteras|Ad religiosum virum Gyrum de Pisauro, O. F. M., de oblata, i",
-      "date": "1916-03",
-      "category": "EPISTOLAE",
-      "incipit": "Vix poteras",
-      "reason": "outside-runs",
-      "candidates": [
-        142
-      ]
     },
     {
       "key": "1916-04-19|EPISTOLAE|Altero iam exeunte saeculo|Ad R. D. Antonium Lhoumeau, societatis Mariae et Filiarum a ",
@@ -253,21 +313,11 @@
       ]
     },
     {
-      "key": "1916-04-27|LITTERAE APOSTOLICAE|Cum divinus Redemptor|Oratio quaedam ad S. Petrum, Apostolorum Principem, indulgen",
-      "date": "1916-04-27",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Cum divinus Redemptor",
-      "reason": "outside-runs",
-      "candidates": [
-        139
-      ]
-    },
-    {
       "key": "1916-05|EPISTOLAE|Sanctum et salutare|Ad R. P. Eduardum Hugon, sodalem domicianum, doctorem decuri",
       "date": "1916-05",
       "category": "EPISTOLAE",
       "incipit": "Sanctum et salutare",
-      "reason": "outside-runs",
+      "reason": "several",
       "candidates": [
         174,
         413
@@ -278,7 +328,7 @@
       "date": "1916-06-18",
       "category": "EPISTOLAE",
       "incipit": "Sollemnia",
-      "reason": "outside-runs",
+      "reason": "several",
       "candidates": [
         221,
         395
@@ -296,7 +346,7 @@
       "date": "1916-06",
       "category": "EPISTOLAE",
       "incipit": "Cum ex apostolico officio",
-      "reason": "outside-runs",
+      "reason": "header-mismatch",
       "candidates": [
         220
       ]
@@ -319,31 +369,11 @@
       "reason": "none"
     },
     {
-      "key": "1916-07|EPISTOLAE|Il devoto indirizzo|Al conte Massimiliano Zara, presidente generale della Societ",
-      "date": "1916-07",
-      "category": "EPISTOLAE",
-      "incipit": "Il devoto indirizzo",
-      "reason": "outside-runs",
-      "candidates": [
-        310
-      ]
-    },
-    {
       "key": "1916-08-10|LITTERAE APOSTOLICAE|Quod, in tanta|Una e praebendis canonicalibus ecclesiae Ss. Celsi et Iulian",
       "date": "1916-08-10",
       "category": "LITTERAE APOSTOLICAE",
       "incipit": "Quod, in tanta",
       "reason": "none"
-    },
-    {
-      "key": "1916-09-10|EPISTOLAE|Singulare tuum|Ad Franciscum S. R. E. presbyterum cardinalem De Bettinger, ",
-      "date": "1916-09-10",
-      "category": "EPISTOLAE",
-      "incipit": "Singulare tuum",
-      "reason": "outside-runs",
-      "candidates": [
-        394
-      ]
     },
     {
       "key": "1916-10-14|EPISTOLAE|ANNO MENSE I DIE [PAG|tentibus solemnibus ob Ordinem ante annos pce legitime confi",
@@ -353,41 +383,11 @@
       "reason": "none"
     },
     {
-      "key": "1916-10-14|EPISTOLAE|In coetu sodalium|Ad R. P. Ludovicum Theissling, Ordinis Dominiciani Magistrum",
-      "date": "1916-10-14",
-      "category": "EPISTOLAE",
-      "incipit": "In coetu sodalium",
-      "reason": "outside-runs",
-      "candidates": [
-        395
-      ]
-    },
-    {
-      "key": "1916-10-14|EPISTOLAE|Quid agant|Ad Petrum S. R. E. presb, cardinalem Maffi, archiepiscopum P",
-      "date": "1916-10-14",
-      "category": "EPISTOLAE",
-      "incipit": "Quid agant",
-      "reason": "outside-runs",
-      "candidates": [
-        394
-      ]
-    },
-    {
-      "key": "1916-11-13|EPISTOLAE|In libro|Ad Georgium S. R. E. presb. card. Gusmini, archiepiscopum Bo",
-      "date": "1916-11-13",
-      "category": "EPISTOLAE",
-      "incipit": "In libro",
-      "reason": "outside-runs",
-      "candidates": [
-        436
-      ]
-    },
-    {
       "key": "1916-11|EPISTOLAE|Quae verba|Ad RR. PP. DD. Ludovicum Gavotti, archiepiscopum Genuensium,",
       "date": "1916-11",
       "category": "EPISTOLAE",
       "incipit": "Quae verba",
-      "reason": "outside-runs",
+      "reason": "several",
       "candidates": [
         435,
         450

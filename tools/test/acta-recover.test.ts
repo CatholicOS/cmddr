@@ -36,13 +36,19 @@ describe('parseIndexGeneralis', () => {
   it('reads the page runs of the pope part, per category, joining a run the line break splits and reading `s.` as the next page', () => {
     const g = parseIndexGeneralis(['front matter', 'body', AAS13_GENERALIS, 'INDEX DOCUMENTORUM\nCHRONOLOGICO ORDINE DIGESTUS']);
     expect(g.page).toBe(3);
-    expect(g.runs.get('Litterae Encyclicae')).toEqual([[34, 34], [209, 209], [329, 329]]);
-    expect(g.runs.get('Constitutiones Apostolicae')).toEqual([[249, 255], [299, 299], [336, 336], [370, 370], [409, 409], [457, 469], [489, 489]]);
+    // A singleton run (`209` alone, not `209-...`) is a section start (controller ruling
+    // 11): extended to the page before the next section start of any category -- so `209`
+    // (Litterae Encyclicae) runs to 217, the page before Epistulae's own `218-221` starts.
+    // An explicit range (`249-255`) and a `195 s.` pair (`[195, 196]`) are untouched.
+    expect(g.runs.get('Litterae Encyclicae')).toEqual([[34, 88], [209, 217], [329, 335]]);
+    expect(g.runs.get('Constitutiones Apostolicae')).toEqual([[249, 255], [299, 306], [336, 338], [370, 371], [409, 411], [457, 469], [489, 490]]);
     expect(g.runs.get('Litterae Apostolicae')).toEqual([[6, 9], [185, 194], [294, 307], [339, 346], [372, 377], [412, 422], [469, 473], [491, 494], [553, 553]]);
-    expect(g.runs.get('Epistulae')).toEqual([[10, 12], [89, 91], [127, 131], [195, 196], [218, 221], [256, 256], [307, 307], [346, 347], [377, 377], [423, 429], [473, 473], [494, 496], [528, 531], [554, 554]]);
-    expect(g.runs.get('Sermones')).toEqual([[93, 93]]);
+    expect(g.runs.get('Epistulae')).toEqual([[10, 12], [89, 91], [127, 131], [195, 196], [218, 221], [256, 280], [307, 328], [346, 347], [377, 408], [423, 429], [473, 488], [494, 496], [528, 531], [554, 563]]);
+    expect(g.runs.get('Sermones')).toEqual([[93, 120]]);
     // `PRECATIONUM FORMULAE` is the categories table's `Orationes` row (categories.ts):
-    // the only prayer heading AAS 13 prints (no `ORATIO`).
+    // the only prayer heading AAS 13 prints (no `ORATIO`). Both singletons already abut
+    // the next section's own start (370, Constitutiones; and 564 has none greater), so
+    // extension leaves them unchanged.
     expect(g.runs.get('Orationes')).toEqual([[369, 369], [564, 564]]);
     // The pope part ends at the dicasteries' part; nothing of it is read.
     expect(g.runs.has('Consistoria')).toBe(true);
@@ -70,12 +76,26 @@ MOTU PROPRIO, 445, 801.
   it('reads the page runs when the volume heads the table `INDEX GENERALIS RERUM`, not `...ACTORUM` (AAS 1-12, 1909-1920)', () => {
     const g = parseIndexGeneralis(['front matter', 'body', AAS1_GENERALIS_RERUM, 'INDEX DOCUMENTORUM\nCHRONOLOGICO ORDINE DIGESTUS']);
     expect(g.page).toBe(3);
+    // Every run here is a singleton (a bare page, not a range), so every one is a section
+    // start extended to the page before the next section start of any category (ruling
+    // 11) -- `802` is the last, so it keeps its own page.
     expect(g.runs.get('Litterae Apostolicae')).toEqual([
-      [197, 197], [229, 229], [245, 245], [269, 269], [301, 301], [389, 389], [447, 447],
-      [477, 477], [573, 573], [605, 605], [637, 637], [669, 669], [725, 725], [757, 757], [781, 781], [802, 802],
+      [197, 228], [229, 244], [245, 268], [269, 300], [301, 332], [389, 444], [447, 476],
+      [477, 572], [573, 604], [605, 636], [637, 668], [669, 724], [725, 756], [757, 780], [781, 800], [802, 802],
     ]);
-    expect(g.runs.get('Litterae Encyclicae')).toEqual([[333, 333]]);
-    expect(g.runs.get('Litterae Apostolicae Motu proprio datae')).toEqual([[445, 445], [801, 801]]);
+    expect(g.runs.get('Litterae Encyclicae')).toEqual([[333, 388]]);
+    expect(g.runs.get('Litterae Apostolicae Motu proprio datae')).toEqual([[445, 446], [801, 801]]);
+  });
+
+  it('extends a singleton run to the page before the next section start of any category, not just its own (AAS 4, 1912, p. 745: `EPISTOLAE, 23, 51, 98, 138, …`; *Est sane* opens at p. 140, inside the section starting at 138, not on 138 itself)', () => {
+    const text = `INDEX GENERALIS RERUM
+ACTA PII PP. X.
+EPISTOLAE, 23, 98.
+LITTERAE APOSTOLICAE, 49, 137.
+`;
+    const g = parseIndexGeneralis(['front matter', 'body', text, 'INDEX DOCUMENTORUM\nCHRONOLOGICO ORDINE DIGESTUS']);
+    expect(g.runs.get('Epistulae')).toEqual([[23, 48], [98, 136]]);
+    expect(g.runs.get('Litterae Apostolicae')).toEqual([[49, 97], [137, 137]]);
   });
 
   it('detects the pope part when the OCR garbles the pope\'s name (AAS 16, 1924, p. 507: `I. - ACTA £\'11 PP. XI`, `PII` misread)', () => {

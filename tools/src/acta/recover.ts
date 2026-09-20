@@ -59,7 +59,14 @@ const PAGES_LINE_RE = /^\s*[\d\s,.\-–s]+$/;
  * pope's part, the pages the volume prints its acts at, as runs. The page is searched from
  * the volume's midpoint (the indexes sit in the tail). A run the line break splits
  * (`294-` / `307`) is joined before reading; `195 s.` (*et sequens*) is the page and the
- * next. Measured on AAS 13 (1921) p. 571.
+ * next. A singleton run (`readRuns` reads one bare page, not a range) is not a single-page
+ * act but a section start -- the *Index generalis* prints, per category, the page each
+ * fascicle's section for that category opens at, not the page of every act in it (AAS 4
+ * (1912) 745: `EPISTOLAE, 23, 51, 98, 138, …`; the letter *Est sane* opens at p. 140,
+ * inside the section that starts at 138, not on 138 itself) -- so it is extended, after
+ * every category is read, to the page before the next section start of *any* category (a
+ * run with no later start keeps its own page). Measured on AAS 13 (1921) p. 571 and AAS 4
+ * (1912) p. 745.
  */
 export function parseIndexGeneralis(pages: readonly string[]): IndexGeneralis {
   const start = pages.findIndex((t, i) => i >= Math.floor(pages.length / 2) && GENERALIS_RE.test(t));
@@ -91,7 +98,26 @@ export function parseIndexGeneralis(pages: readonly string[]): IndexGeneralis {
     if (heading !== null && PAGES_LINE_RE.test(line)) buffer += ' ' + line.trim();
   }
   flush();
+  extendSingletonRuns(runs);
   return { page: start + 1, runs, unmapped };
+}
+
+/**
+ * A singleton run `[s, s]` is a section start (see `parseIndexGeneralis`'s comment):
+ * extended in place to end the page before the next section start of any category in the
+ * pope's part, collected once over every category before any run is extended, so the
+ * result does not depend on the categories' print order. An explicit range or a `195 s.`
+ * pair (already `[195, 196]`) is untouched.
+ */
+function extendSingletonRuns(runs: Map<string, PageRun[]>): void {
+  const starts = [...runs.values()].flatMap((rs) => rs.map(([s]) => s)).sort((a, b) => a - b);
+  for (const rs of runs.values()) {
+    for (const r of rs) {
+      if (r[0] !== r[1]) continue;
+      const next = starts.find((s) => s > r[0]);
+      if (next !== undefined) r[1] = next - 1;
+    }
+  }
 }
 
 /** `6-9,185-194,294- 307, 195 s., 553.` -> runs; a dangling `294-` joins the number after it. */

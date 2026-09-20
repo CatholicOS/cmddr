@@ -54,6 +54,26 @@
       "header": "^pnus V. - Vol. V. Die 31 Martii 1913. Num. 5."
     },
     {
+      "key": "1913-02-11|LITTERAE APOSTOLICAE|Salutare maxime|Adprobatio in perpetuum Constitutionum Congregationis Canoni",
+      "date": "1913-02-11",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Salutare maxime",
+      "page": 117,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Salutare maxime ac frugiferum",
+      "header": "Acta Pii PP. X. 117"
+    },
+    {
+      "key": "1913-02|EPISTOLAE|Gratae Nobis|Ad R. P. D. Iosephum Angelucci, episcopum Civitatis Plebis, ",
+      "date": "1913-02",
+      "category": "EPISTOLAE",
+      "incipit": "Gratae Nobis",
+      "page": 31,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater ac dilecti filii, salutem et apostolicam benedictionem. —Gratae Nobis vehementer vestrae litterae. Inest in iis suavissima pietatis atque absoluti immutabilisque obsequii in Nos significatio ;",
+      "header": "Acta PU PP. X. 31"
+    },
+    {
       "key": "1913-03-23|EPISTOLAE|Quod propediem|Ad Vincentium card. Vannutelli, quem Parisios, ut saecularib",
       "date": "1913-03-23",
       "category": "EPISTOLAE",
@@ -114,6 +134,26 @@
       "header": "Acta Pii PP. X. 485"
     },
     {
+      "key": "1913-04|EPISTOLAE|Inter publicas|Ad Dominicum card. Ferrata, archipresbyterum Lateranensem, q",
+      "date": "1913-04",
+      "category": "EPISTOLAE",
+      "incipit": "Inter publicas",
+      "page": 180,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili noster salutem et apostolicam benedictionem. — Inter",
+      "header": "180 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1913-04|EPISTOLAE|Quae nuper|Ad R. P. D. Germanum Breton, Antistitem domus pontificiae, r",
+      "date": "1913-04",
+      "category": "EPISTOLAE",
+      "incipit": "Quae nuper",
+      "page": 179,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Quae nuper",
+      "header": "Acta Pii PP. X. 179"
+    },
+    {
       "key": "1913-05-03|EPISTOLAE|Bononiam nuper|Ad Iulium card. Boschi, Ferrariensium archiepiscopum, Comacl",
       "date": "1913-05-03",
       "category": "EPISTOLAE",
@@ -122,6 +162,26 @@
       "rule": "unique",
       "bodyLine": "benedictionem. — Bononiam nuper congressi litteras ad Nos dedistis",
       "header": "268 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1913-05-10|LITTERAE APOSTOLICAE|Ecclesiarum omnium|Erigitur novus vicariatus apostolicus, titulo de Fianarantso",
+      "date": "1913-05-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ecclesiarum omnium",
+      "page": 235,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Ecclesiarum omnium cura Nobis",
+      "header": "Acta PU PP. X. 235"
+    },
+    {
+      "key": "1913-05-30|EPISTOLAE|Columbiae Episcoporum|Ad R. P. D. Bernardum Herrera Restrepo, Bogotensium archiepi",
+      "date": "1913-05-30",
+      "category": "EPISTOLAE",
+      "incipit": "Columbiae Episcoporum",
+      "page": 269,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Columbiae Episcoporum coetum decrevisse nuntias Eucharisticum conventum,",
+      "header": "Acta Pii PP. X. 269"
     },
     {
       "key": "1913-06-05|EPISTOLAE|Vertitur tibi|Ad R. P. Iosephum Hiss, moderatorem societatis Marianae, qui",
@@ -174,6 +234,16 @@
       "header": "Acta Pii PP. X. 487"
     },
     {
+      "key": "1913-07-16|EPISTOLAE|Gratias ex animo|Ad dominos Kintzinger, Ernest, Federspil, praesides, et Cuny",
+      "date": "1913-07-16",
+      "category": "EPISTOLAE",
+      "incipit": "Gratias ex animo",
+      "page": 422,
+      "rule": "unique",
+      "bodyLine": "Dilecti Filii, salutem et apostolicam benedictionem. — Gratias ex^",
+      "header": "422 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
       "key": "1913-08-01|EPISTOLAE|Cum primum|Ad R. P. Hyacinthum Mariam Cormier, magistrum generalem Ordi",
       "date": "1913-08-01",
       "category": "EPISTOLAE",
@@ -182,6 +252,16 @@
       "rule": "unique",
       "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Cum primum",
       "header": "Acta Pii PP. X. 387"
+    },
+    {
+      "key": "1913-08-01|EPISTOLAE|Levandis opificum|Ad R. P. D. Michaelem C. Vasquez, episcopum tit. Legionensem",
+      "date": "1913-08-01",
+      "category": "EPISTOLAE",
+      "incipit": "Levandis opificum",
+      "page": 424,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem- et apostolicam benedictionem. — Levandis opificum angustiis fovendaeque in iisdem religioni opportune admodum factum ut perillustris civis Melchior Concha y Toro Societatem",
+      "header": "424 Acta Apostolicae Sedis. - Commentarium Officiale."
     },
     {
       "key": "1913-08-17|LITTERAE APOSTOLICAE|Exstat in loco|Archiconfraternitas sancti Christophori in oppido « Saint-Ch",
@@ -204,6 +284,16 @@
       "header": "Annus V. - Vol. V. Die 28 Octobris 1913. Num. 16."
     },
     {
+      "key": "1913-10|EPISTOLAE|Nolumus studia|Ad Leonem Adolfum card. Amette, archiepiscopum Parisiensem, ",
+      "date": "1913-10",
+      "category": "EPISTOLAE",
+      "incipit": "Nolumus studia",
+      "page": 489,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili noster, venerabiles Fratres, salutem et apostolicam benedictionem. — Nolumus studia, per ferias aestivas intermissa, in ista",
+      "header": "Acta,Pii PP. X. 489"
+    },
+    {
       "key": "1913-11-12|EPISTOLAE|Consilium aperuistis|Ad RR. PP. DD. Archiepiscopos et Episcopos Mexicanae reipubl",
       "date": "1913-11-12",
       "category": "EPISTOLAE",
@@ -212,6 +302,16 @@
       "rule": "unique",
       "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Consilium aperuistis cum vobis summopere decorum, tum apprime iucundum",
       "header": "546 Acta, Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1913-12|EPISTOLAE|Alberto Tesnière|Ad R. D. Nicolaum Sebastiani, Doctorem litteris latinis trad",
+      "date": "1913-12",
+      "category": "EPISTOLAE",
+      "incipit": "Alberto Tesnière",
+      "page": 516,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Alberto Tesnière, sacerdoti e Congregatione sanctissimi Sacramenti, cum suorum",
+      "header": "516 Acta Apostolicae Sedis. - Commentarium Officiale."
     },
     {
       "key": "1913-12|EPISTOLAE|Communes vestrae|Ad RR. PP. DD. Archiepiscopum Caracensem ceterosque de Venez",
@@ -226,16 +326,6 @@
   ],
   "unrecovered": [
     {
-      "key": "1913-02-11|LITTERAE APOSTOLICAE|Salutare maxime|Adprobatio in perpetuum Constitutionum Congregationis Canoni",
-      "date": "1913-02-11",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Salutare maxime",
-      "reason": "outside-runs",
-      "candidates": [
-        117
-      ]
-    },
-    {
       "key": "1913-02-23|LITTERAE APOSTOLICAE|Mandatum illud|Praefectura apostolica Tripolitana in vicariatum apostolicum",
       "date": "1913-02-23",
       "category": "LITTERAE APOSTOLICAE",
@@ -244,16 +334,6 @@
       "candidates": [
         234,
         265
-      ]
-    },
-    {
-      "key": "1913-02|EPISTOLAE|Gratae Nobis|Ad R. P. D. Iosephum Angelucci, episcopum Civitatis Plebis, ",
-      "date": "1913-02",
-      "category": "EPISTOLAE",
-      "incipit": "Gratae Nobis",
-      "reason": "outside-runs",
-      "candidates": [
-        31
       ]
     },
     {
@@ -275,26 +355,6 @@
       ]
     },
     {
-      "key": "1913-04|EPISTOLAE|Inter publicas|Ad Dominicum card. Ferrata, archipresbyterum Lateranensem, q",
-      "date": "1913-04",
-      "category": "EPISTOLAE",
-      "incipit": "Inter publicas",
-      "reason": "outside-runs",
-      "candidates": [
-        180
-      ]
-    },
-    {
-      "key": "1913-04|EPISTOLAE|Quae nuper|Ad R. P. D. Germanum Breton, Antistitem domus pontificiae, r",
-      "date": "1913-04",
-      "category": "EPISTOLAE",
-      "incipit": "Quae nuper",
-      "reason": "outside-runs",
-      "candidates": [
-        179
-      ]
-    },
-    {
       "key": "1913-05-03|EPISTOLAE|Iucunda te|Ad Desideratum cardinalem Mercier, Mechliniensium archiepisc",
       "date": "1913-05-03",
       "category": "EPISTOLAE",
@@ -305,51 +365,11 @@
       ]
     },
     {
-      "key": "1913-05-10|LITTERAE APOSTOLICAE|Ecclesiarum omnium|Erigitur novus vicariatus apostolicus, titulo de Fianarantso",
-      "date": "1913-05-10",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Ecclesiarum omnium",
-      "reason": "outside-runs",
-      "candidates": [
-        235
-      ]
-    },
-    {
       "key": "1913-05-10|LITTERAE APOSTOLICAE|Iun. ! S In pluribus|Indulgentiae perpetuae conceduntur sodalitati « Infantes dil",
       "date": "1913-05-10",
       "category": "LITTERAE APOSTOLICAE",
       "incipit": "Iun. ! S In pluribus",
       "reason": "none"
-    },
-    {
-      "key": "1913-05-30|EPISTOLAE|Columbiae Episcoporum|Ad R. P. D. Bernardum Herrera Restrepo, Bogotensium archiepi",
-      "date": "1913-05-30",
-      "category": "EPISTOLAE",
-      "incipit": "Columbiae Episcoporum",
-      "reason": "outside-runs",
-      "candidates": [
-        269
-      ]
-    },
-    {
-      "key": "1913-07-16|EPISTOLAE|Gratias ex animo|Ad dominos Kintzinger, Ernest, Federspil, praesides, et Cuny",
-      "date": "1913-07-16",
-      "category": "EPISTOLAE",
-      "incipit": "Gratias ex animo",
-      "reason": "outside-runs",
-      "candidates": [
-        422
-      ]
-    },
-    {
-      "key": "1913-08-01|EPISTOLAE|Levandis opificum|Ad R. P. D. Michaelem C. Vasquez, episcopum tit. Legionensem",
-      "date": "1913-08-01",
-      "category": "EPISTOLAE",
-      "incipit": "Levandis opificum",
-      "reason": "outside-runs",
-      "candidates": [
-        424
-      ]
     },
     {
       "key": "1913-09-25|EPISTOLAE|Operam sane doctam|Ad R. P. Iosephum Chiaudano, sacerdotem e Societate Iesu ; e",
@@ -359,16 +379,6 @@
       "reason": "header-mismatch",
       "candidates": [
         488
-      ]
-    },
-    {
-      "key": "1913-10|EPISTOLAE|Nolumus studia|Ad Leonem Adolfum card. Amette, archiepiscopum Parisiensem, ",
-      "date": "1913-10",
-      "category": "EPISTOLAE",
-      "incipit": "Nolumus studia",
-      "reason": "outside-runs",
-      "candidates": [
-        489
       ]
     },
     {
@@ -394,16 +404,6 @@
       "candidates": [
         58,
         147
-      ]
-    },
-    {
-      "key": "1913-12|EPISTOLAE|Alberto Tesnière|Ad R. D. Nicolaum Sebastiani, Doctorem litteris latinis trad",
-      "date": "1913-12",
-      "category": "EPISTOLAE",
-      "incipit": "Alberto Tesnière",
-      "reason": "outside-runs",
-      "candidates": [
-        516
       ]
     }
   ]

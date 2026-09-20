@@ -4,6 +4,26 @@
   "text": "~/development/sources/AAS/txt/aas-03-1911.txt (736 pages)",
   "rows": [
     {
+      "key": "1910-01-11|LITTERAE APOSTOLICAE|Quod redempti|Regularis Provinciae S. Crucis in Saxonia Ordinis Fratrum Mi",
+      "date": "1910-01-11",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quod redempti",
+      "page": 57,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Quod redempti pretioso Christi",
+      "header": "Acta Pii PP. X. 57"
+    },
+    {
+      "key": "1910-01-27|LITTERAE APOSTOLICAE|Benigna Mater|Lex abstinentiae relaxatur pro Scotiae regni fidelibus",
+      "date": "1910-01-27",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Benigna Mater",
+      "page": 58,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Benigna Mater Ecclesia, dum suis",
+      "header": "58 Acta Apostolicae Sedis. - Commentar vam Officiale."
+    },
+    {
       "key": "1910-02-02|LITTERAE APOSTOLICAE|Ecclesiarum|Erectio Vicariatus Apostolici Erythraei.",
       "date": "1910-02-02",
       "category": "LITTERAE APOSTOLICAE",
@@ -12,6 +32,26 @@
       "rule": "unique",
       "bodyLine": "Ad futuram rei memoriam. — Ecclesiarum omnium cura Nobis divinitus commissa, illud praecipue postulat, ut quum in aliqua regione",
       "header": "94 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1910-02-02|LITTERAE APOSTOLICAE|Perinsignis|Peculiares concessiones pro Missis votivis in Patriarchali B",
+      "date": "1910-02-02",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Perinsignis",
+      "page": 95,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Perinsignis Patriarchalis Basilica",
+      "header": "Acta Pii PP. X. 95"
+    },
+    {
+      "key": "1910-02-02|LITTERAE APOSTOLICAE|Quoties animum|De proposito fine precum operumque pro reditu ad Ecclesiae u",
+      "date": "1910-02-02",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quoties animum",
+      "page": 59,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Quoties animum subit cogitatio",
+      "header": "Acta Pii PP. X. 59"
     },
     {
       "key": "1910-02-11|LITTERAE APOSTOLICAE|Gravi iamdiu|Sacerdotes Arnoldus Harris Mathew, Herbertus Ignatius Beale ",
@@ -24,24 +64,14 @@
       "header": "Annus III. - Vol. III. Die 15 Februarii 1911. Num. 2."
     },
     {
-      "key": "1910-02-20|LITTERAE APOSTOLICAE|Refert ad Nos|Festum S. Othmari Abbatis in paroecia S. Galli in choro tant",
-      "date": "1910-02-20",
+      "key": "1910-02-25|LITTERAE APOSTOLICAE|Quum nostrum|Partialis indulgentia perpetua pro Sociis Archisodalitatis a",
+      "date": "1910-02-25",
       "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Refert ad Nos",
-      "page": 257,
+      "incipit": "Quum nostrum",
+      "page": 124,
       "rule": "unique",
-      "bodyLine": "Ad futuram rei memoriam. — Refert ad Nos Episcopus S. Galli in",
-      "header": "Annus III. - Vol. III. Die 26 Iunii 1911. Num. 8."
-    },
-    {
-      "key": "1910-03-10|LITTERAE APOSTOLICAE|Refert ad Nos|Conceduntur indulgentiae perpetuae pro Sodalitio Iuventutis ",
-      "date": "1910-03-10",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Refert ad Nos",
-      "page": 257,
-      "rule": "unique",
-      "bodyLine": "Ad futuram rei memoriam. — Refert ad Nos Episcopus S. Galli in",
-      "header": "Annus III. - Vol. III. Die 26 Iunii 1911. Num. 8."
+      "bodyLine": "Ad perpetuam rei memoriam. — Quum Nostrum subit animum grata",
+      "header": "124 Acta Apostolicae Sedis. - Commentarium Officiale."
     },
     {
       "key": "1910-03-27|LITTERAE APOSTOLICAE|Pias fidelium|Pro Archisodalitate ab « Hora Sancta » in dioecesi Augustodu",
@@ -54,6 +84,46 @@
       "header": "Annus III. - Vol. III. Die 29 Aprilis 1911. Num. 5."
     },
     {
+      "key": "1910-11-19|LITTERAE APOSTOLICAE|Sacras Aedes|Erectio Ecclesiae S. Laurentii in pago « Buia » archidioeces",
+      "date": "1910-11-19",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Sacras Aedes",
+      "page": 9,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Sacras Aedes, quae non minus vetustate, quam eximia fidelium religione praestent, perhonorificis titulis",
+      "header": "Acta Pii PP. X. 9"
+    },
+    {
+      "key": "1910-11-19|LITTERAE APOSTOLICAE|Tempia Dei|Templum S. Trophimenae V. et M. in Urbe Minori ad dignitatem",
+      "date": "1910-11-19",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Tempia Dei",
+      "page": 10,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Tempia Dei vetustate veneranda",
+      "header": "10 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1910-11-23|EPISTOLAE|Ad agenda|Ad R. P. D. Alfredum Episcopum titularem Arcensem, Administr",
+      "date": "1910-11-23",
+      "category": "EPISTOLAE",
+      "incipit": "Ad agenda",
+      "page": 17,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Ad",
+      "header": "Acta PU PP. X. 17"
+    },
+    {
+      "key": "1910-12-12|EPISTOLAE|Il Nous a été|Ad perillustrem virum Comitem Guilelmum Verspeyen, quinquage",
+      "date": "1910-12-12",
+      "category": "EPISTOLAE",
+      "incipit": "Il Nous a été",
+      "page": 63,
+      "rule": "unique",
+      "bodyLine": "GANDAVENSI EPHEMERIDI QUAE INSCRIBITUR « LE BIEN PUBLIC ».",
+      "header": "Acta Pii PP. X. 63"
+    },
+    {
       "key": "1910-12-18|EPISTOLAE|Paulopolim nuper|Ad V. E. Ioachim Card. Arcoverde de Albuquerque Cavalcanti, ",
       "date": "1910-12-18",
       "category": "EPISTOLAE",
@@ -62,6 +132,16 @@
       "rule": "unique",
       "bodyLine": "benedictionem. — Paulopolim nuper congressi litteras ad Nos dedistis,",
       "header": "310 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1910-12-20|LITTERAE APOSTOLICAE|Templa Dei|Titulus Basilicae Minoris conceditur pro Ecclesia Parochiali",
+      "date": "1910-12-20",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Templa Dei",
+      "page": 56,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Templa Dei, quae sacra vetustate",
+      "header": "56 Acta Apostolicae Sedis. - Commentarium Officiale."
     },
     {
       "key": "1910-12-24|EPISTOLAE|Ex quo|Qua vulgatum scriptum quoddam reprobatur circa quaestionem d",
@@ -84,6 +164,46 @@
       "header": "98 Acta Apostolicae Sedis. - Commentarium Officiale."
     },
     {
+      "key": "1910-12-31|EPISTOLAE|Quae tuo nomine|Ad Antonium Card. Fischer, Archiepiscopum Coloniensem",
+      "date": "1910-12-31",
+      "category": "EPISTOLAE",
+      "incipit": "Quae tuo nomine",
+      "page": 18,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili Noster, salutem et apostolicam benedictionem. — Quae",
+      "header": "18 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1910-12|EPISTOLAE|Pietatis significationem|Ad perillustrem virum Comitem Alphonsum Mensdorff-Poully, Pr",
+      "date": "1910-12",
+      "category": "EPISTOLAE",
+      "incipit": "Pietatis significationem",
+      "page": 63,
+      "rule": "unique",
+      "bodyLine": "Dilecti Filii, Salutem et Apostolicam Benedictionem. — Pietatis",
+      "header": "Acta Pii PP. X. 63"
+    },
+    {
+      "key": "1911-01|EPISTOLAE|Non mediocri|Ad Anselmum, Archiepiscopum Acherontinum et Materanensem",
+      "date": "1911-01",
+      "category": "EPISTOLAE",
+      "incipit": "Non mediocri",
+      "page": 21,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Non mediocri Nos affecit gaudio communis epistola, quam tu, Venerabilis Frater,",
+      "header": "Acta Pii PP. X. 21"
+    },
+    {
+      "key": "1911-01|EPISTOLAE|Quas vos|Ad Antonium Iosephum Card. Gruscha, Archiepiscopum Viennense",
+      "date": "1911-01",
+      "category": "EPISTOLAE",
+      "incipit": "Quas vos",
+      "page": 20,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Quas vos haud ita pridem, cum solemne consilium",
+      "header": "20 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
       "key": "1911-03-10|EPISTOLAE|Geminum istinc|Ad R. P. D. Ioannem Baptistam Correa, Campinensium Episcopum",
       "date": "1911-03-10",
       "category": "EPISTOLAE",
@@ -92,6 +212,26 @@
       "rule": "unique",
       "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Geminum istinc nuncium accepimus: alterum altero iucundius. Relatum",
       "header": "Acta Pii PP, X. 161"
+    },
+    {
+      "key": "1911-03-15|EPISTOLAE|Iucunda sane|Ad RR. DD. Pontificii Instituti Biblici Praesidem ac Doctore",
+      "date": "1911-03-15",
+      "category": "EPISTOLAE",
+      "incipit": "Iucunda sane",
+      "page": 230,
+      "rule": "unique",
+      "bodyLine": "Dilecti Filii, salutem et apostolicam benedictionem. — Iucunda",
+      "header": "230 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1911-03-15|EPISTOLAE|Litteras legimus|Ad Ludovicum Iosephum Cardinalem Luçon Rhemensium Archiepisc",
+      "date": "1911-03-15",
+      "category": "EPISTOLAE",
+      "incipit": "Litteras legimus",
+      "page": 162,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili Noster, salutem et apostolicam benedictionem. — Litteras legimus quas nuper misisti officii plenissimas, et amavimus vota,",
+      "header": "162 Acta Apostolicae Sedis. - Commentarium Officiale."
     },
     {
       "key": "1911-03-15|EPISTOLAE|Nostris subiciendas|Ad R. P. D. Antonium Mende s Bello, patriarcham Olyssiponens",
@@ -114,14 +254,24 @@
       "header": "160 Acta Apostolicae Sedis. - Commentarium Officiale."
     },
     {
-      "key": "1911-03|EPISTOLAE|Propediem|Ad celsitudinem suam Luitpoldum Bavariae regnum regentem, no",
-      "date": "1911-03",
+      "key": "1911-04-30|EPISTOLAE|Diligentia ipsa|Ad RR. PP. DD. Bavaiiae Archiepiscopos et Episcopos, Frising",
+      "date": "1911-04-30",
       "category": "EPISTOLAE",
-      "incipit": "Propediem",
-      "page": 161,
+      "incipit": "Diligentia ipsa",
+      "page": 264,
       "rule": "unique",
-      "bodyLine": "Dilectissime in Christo fili Noster, salutem et apostolicam benedictionem. — Propediem exoriturus nonagesimus Celsitudinis tuae natalis",
-      "header": "Acta Pii PP, X. 161"
+      "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Diligentia ipsa quae, elapsis vix paucis mensibus ab ultima congressione,",
+      "header": "264 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1911-04-30|EPISTOLAE|Ubere cum fructu|Ad Moderatorem Congregationis presbyterorum a Sancta Maria T",
+      "date": "1911-04-30",
+      "category": "EPISTOLAE",
+      "incipit": "Ubere cum fructu",
+      "page": 265,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Ubere cum",
+      "header": "Acta Pii PP. X. 265"
     },
     {
       "key": "1911-04|EPISTOLAE|Multa quidem|Ad R. P. Iosephum Boubée e Societate Iesu, Moderatorem gener",
@@ -132,6 +282,16 @@
       "rule": "unique",
       "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Multa quidem",
       "header": "Acta Pii PP. X. 345"
+    },
+    {
+      "key": "1911-04|EPISTOLAE|Quam nobis|Ad augustum serenissimumque Principem Gulielmum II, regem Wu",
+      "date": "1911-04",
+      "category": "EPISTOLAE",
+      "incipit": "Quam nobis",
+      "page": 163,
+      "rule": "unique",
+      "bodyLine": "Serenissime et Celsissime Rex, salutem. — Quam Nobis grata acceptaque omina obvenerint, quibus Maiestati Tuae, opportunitatibus animo",
+      "header": "S. Congregatio S. Officii. 163"
     },
     {
       "key": "1911-04|EPISTOLAE|Scribendi inde|Ad R. D. Carolum Grannan, qui mirabili studio ad iuvandum au",
@@ -154,6 +314,16 @@
       "header": "Annus III. - Vol. III. Die 15 Maii 1911. Num. 6."
     },
     {
+      "key": "1911-05-15|EPISTOLAE|Conventum alterum|Ad RR. PP. DD. Archiepiscopos atque Episcopos Galliae, occas",
+      "date": "1911-05-15",
+      "category": "EPISTOLAE",
+      "incipit": "Conventum alterum",
+      "page": 268,
+      "rule": "unique",
+      "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Conventum alterum celebraturis, dioecesanis Missionibus provehendis, ne desint",
+      "header": "268 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
       "key": "1911-05-20|LITTERAE APOSTOLICAE|Nihil Nobis|Invocationem « Gesù mio, misericordia » vel aliam « O Iesu i",
       "date": "1911-05-20",
       "category": "LITTERAE APOSTOLICAE",
@@ -174,6 +344,16 @@
       "header": "340 Acta Apostolicae Sedis. - Commentarium Officiale."
     },
     {
+      "key": "1911-05|EPISTOLAE|Id libenter accepimus|Ad V. E. Iacobum S. R. E. presbyterum Cardinalem Gibbons, Ba",
+      "date": "1911-05",
+      "category": "EPISTOLAE",
+      "incipit": "Id libenter accepimus",
+      "page": 267,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili Noster, salutem et apostolicam benedictionem. — Id libenter accepimus, omnes scilicet Antistites Glerumque universum Foederatorum Americae Civitatum, quin adeo plurimos e praestantissimis",
+      "header": "Acta Pii PP. X. 267"
+    },
+    {
       "key": "1911-05|EPISTOLAE|Peculiaris necessitudinis|Ad R. P. D. Andream Hyacinthum Longhin, episcopum Tarvisinum",
       "date": "1911-05",
       "category": "EPISTOLAE",
@@ -182,6 +362,26 @@
       "rule": "unique",
       "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Peculiaris necessitudinis vincula, quae cum dioecesi Tarvisina Nobis inter-",
       "header": "Acta Pii PP. X. 345"
+    },
+    {
+      "key": "1911-06-10|EPISTOLAE|Delectarunt eae Nos|Ad R. P. D. Fridericum Fuzet, Archiepiscopum Rothomagensem o",
+      "date": "1911-06-10",
+      "category": "EPISTOLAE",
+      "incipit": "Delectarunt eae Nos",
+      "page": 316,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Delectarunt eae Nos litterae, a te nuper, Venerabilis Frater, et a pluribus",
+      "header": "316 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1911-06-10|EPISTOLAE|Vestram ex more|Ad V. E. Iulium S. R. E. Presbyterum Cardinalem Boschi, Arch",
+      "date": "1911-06-10",
+      "category": "EPISTOLAE",
+      "incipit": "Vestram ex more",
+      "page": 315,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili Noster, Venerabiles Fratres, salutem et apostolicam benedictionem. — Vestram ex more communem epistolam nuper accepimus,",
+      "header": "Acta Pii PP. X. 315"
     },
     {
       "key": "1911-06-10|LITTERAE APOSTOLICAE|Romani Pontifices|Constitutio de ieiunii atque abstinentiae lege in Dalmatia s",
@@ -204,6 +404,16 @@
       "header": "Annus IH. - Vol. Ili. Die 30 Septembris 1911. Num. 13."
     },
     {
+      "key": "1911-06-19|LITTERAE APOSTOLICAE|Conspicua tempia Dei|Aedes Deiparae Virginis in coelum Assumptae oppidi « Gandino",
+      "date": "1911-06-19",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Conspicua tempia Dei",
+      "page": 363,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Conspicua tempia Dei, quae vetustate non minus quam artis operibus, atque imprimis eximia fidelium",
+      "header": "Acta PU PP. X. 363"
+    },
+    {
       "key": "1911-06-19|LITTERAE APOSTOLICAE|Salutare illud|Indulgentia plenaria perpetua ubique terrarum pro Associatio",
       "date": "1911-06-19",
       "category": "LITTERAE APOSTOLICAE",
@@ -224,6 +434,26 @@
       "header": "474 Acta Apostolicae Sedis. - Commentarium Officiale."
     },
     {
+      "key": "1911-06-30|LITTERAE APOSTOLICAE|Ex nativo Apostolatus|Archisodalitas a S. Missa Reparatrice, Pragae erecta, limita",
+      "date": "1911-06-30",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ex nativo Apostolatus",
+      "page": 342,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Ex nativo Apostolatus Nobis divinitus commissi officio, ad fidelium societates pro pietatis caritatisque",
+      "header": "342 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1911-06|EPISTOLAE|Qui propediem|Ad V. E. Gregorium S. R. E. Presbyterum Cardinalem Aguirre, ",
+      "date": "1911-06",
+      "category": "EPISTOLAE",
+      "incipit": "Qui propediem",
+      "page": 313,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili Noster, salutem et apostolicam benedictionem. — Qui",
+      "header": "Acta Pii PP. X. 313"
+    },
+    {
       "key": "1911-06|EPISTOLAE|Quod hierarchia catholica|Ad V. E. loachim S. R. E. presbyterum Cardinalem Arcoverde C",
       "date": "1911-06",
       "category": "EPISTOLAE",
@@ -232,6 +462,26 @@
       "rule": "unique",
       "bodyLine": "benedictionem. — Quod hierarchia catholica per Brasiliam non paulum",
       "header": "Acta PU PP. X. 261"
+    },
+    {
+      "key": "1911-06|LITTERAE APOSTOLICAE|Comperimus ex gravi|Societas Puerorum a comitatu Sanctissimi Sacramenti, Romae i",
+      "date": "1911-06",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Comperimus ex gravi",
+      "page": 260,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Comperimus ex gravi commendatione dilecti filii Nostri Petri S. R. E. presbyteri Cardinalis Respighi",
+      "header": "260 Acta. Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1911-07|EPISTOLAE|Ista quanti|Ad V. E. Andream Card. Ferrari, Archiepiscopum Mediolanensem",
+      "date": "1911-07",
+      "category": "EPISTOLAE",
+      "incipit": "Ista quanti",
+      "page": 475,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Ista quanti sit apud Nos pietas, quam communes",
+      "header": "Acta Pii PP. X. 475"
     },
     {
       "key": "????-07-10|EPISTOLAE|Laetamur utrumque|Ad Adamum Iosephum Schmitt, praesidem coetus virorum Mogunti",
@@ -264,6 +514,56 @@
       "header": "Acta Pii PP. X. 365"
     },
     {
+      "key": "????-07-10|EPISTOLAE|Quum quingentésimo|Ad claros viros Balfour of Burleigh, Rosebery, Iacobum Donal",
+      "date": "????-07-10",
+      "category": "EPISTOLAE",
+      "incipit": "Quum quingentésimo",
+      "page": 564,
+      "rule": "unique",
+      "bodyLine": "Clari viri, salutem. — Quum quingentésimo natali istius Academiae",
+      "header": "564 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "????-07-10|EPISTOLAE|Societatem Goerresianam|Ad R. P. D. Stephanum Elises, Protonotarium Apostolicum, acc",
+      "date": "????-07-10",
+      "category": "EPISTOLAE",
+      "incipit": "Societatem Goerresianam",
+      "page": 565,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Societatem",
+      "header": "Acta Pii PP. X. 565"
+    },
+    {
+      "key": "????-09|EPISTOLAE|Ubi accepimus|Ad R. P. D. Eduardum Likowski, Episcopum tit. Aureliopolitan",
+      "date": "????-09",
+      "category": "EPISTOLAE",
+      "incipit": "Ubi accepimus",
+      "page": 565,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Ubi",
+      "header": "Acta Pii PP. X. 565"
+    },
+    {
+      "key": "????-10-10|EPISTOLAE|Gratias vobis|Ad RR. PP. DD. Episcopos Helvetiorum de rebus communiter sig",
+      "date": "????-10-10",
+      "category": "EPISTOLAE",
+      "incipit": "Gratias vobis",
+      "page": 567,
+      "rule": "unique",
+      "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Gratias vobis, Venerabiles Fratres, agimus pro eo, quod tribuistis Nobis",
+      "header": "Acta PU PP. X. 567"
+    },
+    {
+      "key": "????-10|EPISTOLAE|Quoniam satis|Ad R. D. Aloysium Talamoni, in Seminario Modoetiensi profess",
+      "date": "????-10",
+      "category": "EPISTOLAE",
+      "incipit": "Quoniam satis",
+      "page": 566,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Quoniam",
+      "header": "566 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
       "key": "????-11|ALLOCUTIONES|Vi ringrazio|Habita occasione impositionis bireti novis Cardinalibus",
       "date": "????-11",
       "category": "ALLOCUTIONES",
@@ -286,46 +586,6 @@
   ],
   "unrecovered": [
     {
-      "key": "1910-01-11|LITTERAE APOSTOLICAE|Quod redempti|Regularis Provinciae S. Crucis in Saxonia Ordinis Fratrum Mi",
-      "date": "1910-01-11",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Quod redempti",
-      "reason": "outside-runs",
-      "candidates": [
-        57
-      ]
-    },
-    {
-      "key": "1910-01-27|LITTERAE APOSTOLICAE|Benigna Mater|Lex abstinentiae relaxatur pro Scotiae regni fidelibus",
-      "date": "1910-01-27",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Benigna Mater",
-      "reason": "outside-runs",
-      "candidates": [
-        58
-      ]
-    },
-    {
-      "key": "1910-02-02|LITTERAE APOSTOLICAE|Perinsignis|Peculiares concessiones pro Missis votivis in Patriarchali B",
-      "date": "1910-02-02",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Perinsignis",
-      "reason": "outside-runs",
-      "candidates": [
-        95
-      ]
-    },
-    {
-      "key": "1910-02-02|LITTERAE APOSTOLICAE|Quoties animum|De proposito fine precum operumque pro reditu ad Ecclesiae u",
-      "date": "1910-02-02",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Quoties animum",
-      "reason": "outside-runs",
-      "candidates": [
-        59
-      ]
-    },
-    {
       "key": "1910-02-15|LITTERAE APOSTOLICAE|Traditum a Romanis|Templum B. M. Virginis vulgo « dei Pilastrello » prope Lendi",
       "date": "1910-02-15",
       "category": "LITTERAE APOSTOLICAE",
@@ -347,13 +607,25 @@
       ]
     },
     {
-      "key": "1910-02-25|LITTERAE APOSTOLICAE|Quum nostrum|Partialis indulgentia perpetua pro Sociis Archisodalitatis a",
-      "date": "1910-02-25",
+      "key": "1910-02-20|LITTERAE APOSTOLICAE|Refert ad Nos|Festum S. Othmari Abbatis in paroecia S. Galli in choro tant",
+      "date": "1910-02-20",
       "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Quum nostrum",
-      "reason": "outside-runs",
+      "incipit": "Refert ad Nos",
+      "reason": "several",
       "candidates": [
-        124
+        128,
+        257
+      ]
+    },
+    {
+      "key": "1910-03-10|LITTERAE APOSTOLICAE|Refert ad Nos|Conceduntur indulgentiae perpetuae pro Sodalitio Iuventutis ",
+      "date": "1910-03-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Refert ad Nos",
+      "reason": "several",
+      "candidates": [
+        128,
+        257
       ]
     },
     {
@@ -361,12 +633,10 @@
       "date": "1910-03",
       "category": "LITTERAE APOSTOLICAE",
       "incipit": "Ex hac",
-      "reason": "outside-runs",
+      "reason": "several",
       "candidates": [
         126,
-        127,
-        167,
-        289
+        127
       ]
     },
     {
@@ -374,41 +644,10 @@
       "date": "1910-03",
       "category": "LITTERAE APOSTOLICAE",
       "incipit": "Quae Catholico",
-      "reason": "outside-runs",
+      "reason": "several",
       "candidates": [
         125,
         653
-      ]
-    },
-    {
-      "key": "1910-11-19|LITTERAE APOSTOLICAE|Sacras Aedes|Erectio Ecclesiae S. Laurentii in pago « Buia » archidioeces",
-      "date": "1910-11-19",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Sacras Aedes",
-      "reason": "outside-runs",
-      "candidates": [
-        9,
-        14
-      ]
-    },
-    {
-      "key": "1910-11-19|LITTERAE APOSTOLICAE|Tempia Dei|Templum S. Trophimenae V. et M. in Urbe Minori ad dignitatem",
-      "date": "1910-11-19",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Tempia Dei",
-      "reason": "outside-runs",
-      "candidates": [
-        10
-      ]
-    },
-    {
-      "key": "1910-11-23|EPISTOLAE|Ad agenda|Ad R. P. D. Alfredum Episcopum titularem Arcensem, Administr",
-      "date": "1910-11-23",
-      "category": "EPISTOLAE",
-      "incipit": "Ad agenda",
-      "reason": "outside-runs",
-      "candidates": [
-        17
       ]
     },
     {
@@ -429,46 +668,6 @@
       "reason": "none"
     },
     {
-      "key": "1910-12-12|EPISTOLAE|Il Nous a été|Ad perillustrem virum Comitem Guilelmum Verspeyen, quinquage",
-      "date": "1910-12-12",
-      "category": "EPISTOLAE",
-      "incipit": "Il Nous a été",
-      "reason": "outside-runs",
-      "candidates": [
-        63
-      ]
-    },
-    {
-      "key": "1910-12-20|LITTERAE APOSTOLICAE|Templa Dei|Titulus Basilicae Minoris conceditur pro Ecclesia Parochiali",
-      "date": "1910-12-20",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Templa Dei",
-      "reason": "outside-runs",
-      "candidates": [
-        56
-      ]
-    },
-    {
-      "key": "1910-12-31|EPISTOLAE|Quae tuo nomine|Ad Antonium Card. Fischer, Archiepiscopum Coloniensem",
-      "date": "1910-12-31",
-      "category": "EPISTOLAE",
-      "incipit": "Quae tuo nomine",
-      "reason": "outside-runs",
-      "candidates": [
-        18
-      ]
-    },
-    {
-      "key": "1910-12|EPISTOLAE|Pietatis significationem|Ad perillustrem virum Comitem Alphonsum Mensdorff-Poully, Pr",
-      "date": "1910-12",
-      "category": "EPISTOLAE",
-      "incipit": "Pietatis significationem",
-      "reason": "outside-runs",
-      "candidates": [
-        63
-      ]
-    },
-    {
       "key": "1911-01-16|EPISTOLAE|Mirificam cepimus|Dilecto filio F. Galon Praesidi Consociationis S. Vincentii ",
       "date": "1911-01-16",
       "category": "EPISTOLAE",
@@ -486,26 +685,6 @@
       ]
     },
     {
-      "key": "1911-01|EPISTOLAE|Non mediocri|Ad Anselmum, Archiepiscopum Acherontinum et Materanensem",
-      "date": "1911-01",
-      "category": "EPISTOLAE",
-      "incipit": "Non mediocri",
-      "reason": "outside-runs",
-      "candidates": [
-        21
-      ]
-    },
-    {
-      "key": "1911-01|EPISTOLAE|Quas vos|Ad Antonium Iosephum Card. Gruscha, Archiepiscopum Viennense",
-      "date": "1911-01",
-      "category": "EPISTOLAE",
-      "incipit": "Quas vos",
-      "reason": "outside-runs",
-      "candidates": [
-        20
-      ]
-    },
-    {
       "key": "1911-02-16|EPISTOLAE|Deferendo nuper|Ad D. Franciscum Eichert ceterosque sodales e Societate litt",
       "date": "1911-02-16",
       "category": "EPISTOLAE",
@@ -520,7 +699,7 @@
       "date": "1911-02-16",
       "category": "EPISTOLAE",
       "incipit": "Quo tempore",
-      "reason": "outside-runs",
+      "reason": "header-mismatch",
       "candidates": [
         132
       ]
@@ -530,29 +709,20 @@
       "date": "1911-02",
       "category": "EPISTOLAE",
       "incipit": "Benedicti Patris",
-      "reason": "outside-runs",
+      "reason": "header-mismatch",
       "candidates": [
         131
       ]
     },
     {
-      "key": "1911-03-15|EPISTOLAE|Iucunda sane|Ad RR. DD. Pontificii Instituti Biblici Praesidem ac Doctore",
-      "date": "1911-03-15",
+      "key": "1911-03|EPISTOLAE|Propediem|Ad celsitudinem suam Luitpoldum Bavariae regnum regentem, no",
+      "date": "1911-03",
       "category": "EPISTOLAE",
-      "incipit": "Iucunda sane",
-      "reason": "outside-runs",
+      "incipit": "Propediem",
+      "reason": "several",
       "candidates": [
-        230
-      ]
-    },
-    {
-      "key": "1911-03-15|EPISTOLAE|Litteras legimus|Ad Ludovicum Iosephum Cardinalem Luçon Rhemensium Archiepisc",
-      "date": "1911-03-15",
-      "category": "EPISTOLAE",
-      "incipit": "Litteras legimus",
-      "reason": "outside-runs",
-      "candidates": [
-        162
+        161,
+        313
       ]
     },
     {
@@ -573,7 +743,8 @@
       "reason": "several",
       "candidates": [
         178,
-        225
+        225,
+        473
       ]
     },
     {
@@ -587,41 +758,11 @@
       ]
     },
     {
-      "key": "1911-04-30|EPISTOLAE|Diligentia ipsa|Ad RR. PP. DD. Bavaiiae Archiepiscopos et Episcopos, Frising",
-      "date": "1911-04-30",
-      "category": "EPISTOLAE",
-      "incipit": "Diligentia ipsa",
-      "reason": "outside-runs",
-      "candidates": [
-        264
-      ]
-    },
-    {
-      "key": "1911-04-30|EPISTOLAE|Ubere cum fructu|Ad Moderatorem Congregationis presbyterorum a Sancta Maria T",
-      "date": "1911-04-30",
-      "category": "EPISTOLAE",
-      "incipit": "Ubere cum fructu",
-      "reason": "outside-runs",
-      "candidates": [
-        265
-      ]
-    },
-    {
-      "key": "1911-04|EPISTOLAE|Quam nobis|Ad augustum serenissimumque Principem Gulielmum II, regem Wu",
-      "date": "1911-04",
-      "category": "EPISTOLAE",
-      "incipit": "Quam nobis",
-      "reason": "outside-runs",
-      "candidates": [
-        163
-      ]
-    },
-    {
       "key": "1911-05-02|LITTERAE APOSTOLICAE|Cum summa|Praefectura Apostolica de « Ho-Nan » Occidentali erigitur in",
       "date": "1911-05-02",
       "category": "LITTERAE APOSTOLICAE",
       "incipit": "Cum summa",
-      "reason": "outside-runs",
+      "reason": "header-mismatch",
       "candidates": [
         226
       ]
@@ -631,29 +772,9 @@
       "date": "1911-05-02",
       "category": "LITTERAE APOSTOLICAE",
       "incipit": "Pia Consociatio",
-      "reason": "outside-runs",
+      "reason": "header-mismatch",
       "candidates": [
         227
-      ]
-    },
-    {
-      "key": "1911-05-15|EPISTOLAE|Conventum alterum|Ad RR. PP. DD. Archiepiscopos atque Episcopos Galliae, occas",
-      "date": "1911-05-15",
-      "category": "EPISTOLAE",
-      "incipit": "Conventum alterum",
-      "reason": "outside-runs",
-      "candidates": [
-        268
-      ]
-    },
-    {
-      "key": "1911-05|EPISTOLAE|Id libenter accepimus|Ad V. E. Iacobum S. R. E. presbyterum Cardinalem Gibbons, Ba",
-      "date": "1911-05",
-      "category": "EPISTOLAE",
-      "incipit": "Id libenter accepimus",
-      "reason": "outside-runs",
-      "candidates": [
-        267
       ]
     },
     {
@@ -661,100 +782,10 @@
       "date": "1911-05",
       "category": "EPISTOLAE",
       "incipit": "Medias inter",
-      "reason": "outside-runs",
+      "reason": "several",
       "candidates": [
         13,
         232
-      ]
-    },
-    {
-      "key": "1911-06-10|EPISTOLAE|Delectarunt eae Nos|Ad R. P. D. Fridericum Fuzet, Archiepiscopum Rothomagensem o",
-      "date": "1911-06-10",
-      "category": "EPISTOLAE",
-      "incipit": "Delectarunt eae Nos",
-      "reason": "outside-runs",
-      "candidates": [
-        316
-      ]
-    },
-    {
-      "key": "1911-06-10|EPISTOLAE|Vestram ex more|Ad V. E. Iulium S. R. E. Presbyterum Cardinalem Boschi, Arch",
-      "date": "1911-06-10",
-      "category": "EPISTOLAE",
-      "incipit": "Vestram ex more",
-      "reason": "outside-runs",
-      "candidates": [
-        315
-      ]
-    },
-    {
-      "key": "1911-06-19|LITTERAE APOSTOLICAE|Conspicua tempia Dei|Aedes Deiparae Virginis in coelum Assumptae oppidi « Gandino",
-      "date": "1911-06-19",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Conspicua tempia Dei",
-      "reason": "outside-runs",
-      "candidates": [
-        363
-      ]
-    },
-    {
-      "key": "1911-06-30|LITTERAE APOSTOLICAE|Ex nativo Apostolatus|Archisodalitas a S. Missa Reparatrice, Pragae erecta, limita",
-      "date": "1911-06-30",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Ex nativo Apostolatus",
-      "reason": "outside-runs",
-      "candidates": [
-        342
-      ]
-    },
-    {
-      "key": "1911-06|EPISTOLAE|Qui propediem|Ad V. E. Gregorium S. R. E. Presbyterum Cardinalem Aguirre, ",
-      "date": "1911-06",
-      "category": "EPISTOLAE",
-      "incipit": "Qui propediem",
-      "reason": "outside-runs",
-      "candidates": [
-        313
-      ]
-    },
-    {
-      "key": "1911-06|LITTERAE APOSTOLICAE|Comperimus ex gravi|Societas Puerorum a comitatu Sanctissimi Sacramenti, Romae i",
-      "date": "1911-06",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Comperimus ex gravi",
-      "reason": "outside-runs",
-      "candidates": [
-        260
-      ]
-    },
-    {
-      "key": "1911-07|EPISTOLAE|Ista quanti|Ad V. E. Andream Card. Ferrari, Archiepiscopum Mediolanensem",
-      "date": "1911-07",
-      "category": "EPISTOLAE",
-      "incipit": "Ista quanti",
-      "reason": "outside-runs",
-      "candidates": [
-        475
-      ]
-    },
-    {
-      "key": "????-07-10|EPISTOLAE|Quum quingentésimo|Ad claros viros Balfour of Burleigh, Rosebery, Iacobum Donal",
-      "date": "????-07-10",
-      "category": "EPISTOLAE",
-      "incipit": "Quum quingentésimo",
-      "reason": "outside-runs",
-      "candidates": [
-        564
-      ]
-    },
-    {
-      "key": "????-07-10|EPISTOLAE|Societatem Goerresianam|Ad R. P. D. Stephanum Elises, Protonotarium Apostolicum, acc",
-      "date": "????-07-10",
-      "category": "EPISTOLAE",
-      "incipit": "Societatem Goerresianam",
-      "reason": "outside-runs",
-      "candidates": [
-        565
       ]
     },
     {
@@ -765,36 +796,6 @@
       "reason": "header-mismatch",
       "candidates": [
         522
-      ]
-    },
-    {
-      "key": "????-09|EPISTOLAE|Ubi accepimus|Ad R. P. D. Eduardum Likowski, Episcopum tit. Aureliopolitan",
-      "date": "????-09",
-      "category": "EPISTOLAE",
-      "incipit": "Ubi accepimus",
-      "reason": "outside-runs",
-      "candidates": [
-        565
-      ]
-    },
-    {
-      "key": "????-10-10|EPISTOLAE|Gratias vobis|Ad RR. PP. DD. Episcopos Helvetiorum de rebus communiter sig",
-      "date": "????-10-10",
-      "category": "EPISTOLAE",
-      "incipit": "Gratias vobis",
-      "reason": "outside-runs",
-      "candidates": [
-        567
-      ]
-    },
-    {
-      "key": "????-10|EPISTOLAE|Quoniam satis|Ad R. D. Aloysium Talamoni, in Seminario Modoetiensi profess",
-      "date": "????-10",
-      "category": "EPISTOLAE",
-      "incipit": "Quoniam satis",
-      "reason": "outside-runs",
-      "candidates": [
-        566
       ]
     },
     {

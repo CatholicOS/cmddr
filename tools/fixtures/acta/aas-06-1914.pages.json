@@ -44,16 +44,6 @@
       "header": "180 Acta Apostolicae Sedis. - Commentarium Officiale"
     },
     {
-      "key": "1914-03|EPISTOLAE|Ex quo|Ad R. P. Clementem a Ss. Faustino et Iovita, praepositum gen",
-      "date": "1914-03",
-      "category": "EPISTOLAE",
-      "incipit": "Ex quo",
-      "page": 137,
-      "rule": "unique",
-      "bodyLine": "Dilecti Filii, salutem et apostolicam benedictionem. — Ex quo",
-      "header": "Annus VI. - Vol. VI. Die 31 Martii 1914. Num. 5."
-    },
-    {
       "key": "1914-03|EPISTOLAE|Quo societas|Ad dilectum filium Praesidem Piae Societatis Antonianae univ",
       "date": "1914-03",
       "category": "EPISTOLAE",
@@ -134,6 +124,16 @@
       "header": "Acta Pii PP. X 375"
     },
     {
+      "key": "1914-07|EPISTOLAE|Ex omnibus locis|Ad Ianuarium card. Granito Pignatelli di Belmonte, qui Con v",
+      "date": "1914-07",
+      "category": "EPISTOLAE",
+      "incipit": "Ex omnibus locis",
+      "page": 376,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili Noster, salutem et apostolicam benedictionem, — Ex",
+      "header": "376 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1914-09-21|EPISTOLAE|Litteras abs te|Ad Antonium card. Mendes Bello, Olyssiponensem patriarcham, ",
       "date": "1914-09-21",
       "category": "EPISTOLAE",
@@ -174,6 +174,46 @@
       "header": "540 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
+      "key": "1914-10-16|EPISTOLAE|C'est avec un intérêt tout particulier|Ad Aloisium L card. Luçon, archiepiscopum Rhemensem, ob litt",
+      "date": "1914-10-16",
+      "category": "EPISTOLAE",
+      "incipit": "C'est avec un intérêt tout particulier",
+      "page": 541,
+      "rule": "unique",
+      "bodyLine": "Cher Fils, salut et bénédiction apostolique. — C'est avec un intérêt",
+      "header": "Acta Benedicti PP. XV 541"
+    },
+    {
+      "key": "1914-10-18|EPISTOLAE|Gratum equidem|Ad Felicem card. de Hartmann, Coloniensium archiepiscopum, q",
+      "date": "1914-10-18",
+      "category": "EPISTOLAE",
+      "incipit": "Gratum equidem",
+      "page": 542,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili Noster, salutem et apostolicam benedictionem. — Gratum equidem a te nuncium accepimus Maiestatem Suam Germanorum",
+      "header": "542 Acta Apostolicae Sedis — Commentarium Officiale"
+    },
+    {
+      "key": "1914-10-20|EPISTOLAE|Il Nous a été|Ad egregium virum Ludovicum vicecomitem d'Hendecourt, praesi",
+      "date": "1914-10-20",
+      "category": "EPISTOLAE",
+      "incipit": "Il Nous a été",
+      "page": 544,
+      "rule": "unique",
+      "bodyLine": "Cher Fils, salut et bénédiction apostolique. — Il Nous a été très",
+      "header": "544 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1914-10-25|EPISTOLAE|Pontificatum|Ad R. P. D. Iosephum Mora y del Rio, archiepiscopum Mexicanu",
+      "date": "1914-10-25",
+      "category": "EPISTOLAE",
+      "incipit": "Pontificatum",
+      "page": 543,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Pontificatum secreto Dei consilio ineuntes, haud mediocrem sensimus moerorem ob teterrimum illud bellum, quod iam diu campos Europae fere",
+      "header": "Acta Benedicti PP. XV 543"
+    },
+    {
       "key": "1914-10|EPISTOLAE|Communes litteras|Ad Franciscum a Paula card. Cassetta, episcopum Tusculanum, ",
       "date": "1914-10",
       "category": "EPISTOLAE",
@@ -204,6 +244,16 @@
       "header": "Annus VI. - Vol. Vi. Die 9 Decembris 1914. Num. 20"
     },
     {
+      "key": "1914-11|EPISTOLAE|Ex quo Pontificatum|Ad R. P. Nicolaum Dobrecic, archiepiscopum Antibarensem, cui",
+      "date": "1914-11",
+      "category": "EPISTOLAE",
+      "incipit": "Ex quo Pontificatum",
+      "page": 546,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Ex",
+      "header": "546 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1914-12-03|MOTU PROPRIO|Sacrae theologiae|De Bononiensi theologorum collegio",
       "date": "1914-12-03",
       "category": "MOTU PROPRIO",
@@ -226,6 +276,20 @@
       ]
     },
     {
+      "key": "1914-03|EPISTOLAE|Ex quo|Ad R. P. Clementem a Ss. Faustino et Iovita, praepositum gen",
+      "date": "1914-03",
+      "category": "EPISTOLAE",
+      "incipit": "Ex quo",
+      "reason": "several",
+      "candidates": [
+        137,
+        194,
+        253,
+        522,
+        546
+      ]
+    },
+    {
       "key": "1914-04-10|EPISTOLAE|Civium ex omni ordine|Ad R. P. D. Iosephum Nèmeth, episcopum tit. Isaurensem, auxi",
       "date": "1914-04-10",
       "category": "EPISTOLAE",
@@ -236,31 +300,11 @@
       ]
     },
     {
-      "key": "1914-07|EPISTOLAE|Ex omnibus locis|Ad Ianuarium card. Granito Pignatelli di Belmonte, qui Con v",
-      "date": "1914-07",
-      "category": "EPISTOLAE",
-      "incipit": "Ex omnibus locis",
-      "reason": "outside-runs",
-      "candidates": [
-        376
-      ]
-    },
-    {
       "key": "1914-09|HORTATIO AD UNIVERSOS ORBIS CATHOLICOS||Ubi primum",
       "date": "1914-09",
       "category": "HORTATIO AD UNIVERSOS ORBIS CATHOLICOS",
       "incipit": null,
       "reason": "no-incipit"
-    },
-    {
-      "key": "1914-10-16|EPISTOLAE|C'est avec un intérêt tout particulier|Ad Aloisium L card. Luçon, archiepiscopum Rhemensem, ob litt",
-      "date": "1914-10-16",
-      "category": "EPISTOLAE",
-      "incipit": "C'est avec un intérêt tout particulier",
-      "reason": "outside-runs",
-      "candidates": [
-        541
-      ]
     },
     {
       "key": "1914-10-16|MOTU PROPRIO|Vix dum|Gratiae et privilegia clericis conclavistis postremi conclav",
@@ -270,26 +314,6 @@
       "reason": "none"
     },
     {
-      "key": "1914-10-18|EPISTOLAE|Gratum equidem|Ad Felicem card. de Hartmann, Coloniensium archiepiscopum, q",
-      "date": "1914-10-18",
-      "category": "EPISTOLAE",
-      "incipit": "Gratum equidem",
-      "reason": "outside-runs",
-      "candidates": [
-        542
-      ]
-    },
-    {
-      "key": "1914-10-20|EPISTOLAE|Il Nous a été|Ad egregium virum Ludovicum vicecomitem d'Hendecourt, praesi",
-      "date": "1914-10-20",
-      "category": "EPISTOLAE",
-      "incipit": "Il Nous a été",
-      "reason": "outside-runs",
-      "candidates": [
-        544
-      ]
-    },
-    {
       "key": "1914-10-25|EPISTOLAE|Nobis, ad catholicam|Ad R. P. D. Paschalem Morganti, archiepiscopum Ravennatensiu",
       "date": "1914-10-25",
       "category": "EPISTOLAE",
@@ -297,16 +321,6 @@
       "reason": "outside-runs",
       "candidates": [
         582
-      ]
-    },
-    {
-      "key": "1914-10-25|EPISTOLAE|Pontificatum|Ad R. P. D. Iosephum Mora y del Rio, archiepiscopum Mexicanu",
-      "date": "1914-10-25",
-      "category": "EPISTOLAE",
-      "incipit": "Pontificatum",
-      "reason": "outside-runs",
-      "candidates": [
-        543
       ]
     },
     {
@@ -322,16 +336,6 @@
       "category": "EPISTOLAE",
       "incipit": "Communis episcoporum",
       "reason": "none"
-    },
-    {
-      "key": "1914-11|EPISTOLAE|Ex quo Pontificatum|Ad R. P. Nicolaum Dobrecic, archiepiscopum Antibarensem, cui",
-      "date": "1914-11",
-      "category": "EPISTOLAE",
-      "incipit": "Ex quo Pontificatum",
-      "reason": "outside-runs",
-      "candidates": [
-        546
-      ]
     },
     {
       "key": "1914-11|LITTERAE ENCYCLICAE|Ad beatissimi Apostolorum Principis|Ad venerabiles Fratres Patriarchas, Primates, Archiepiscopos",
