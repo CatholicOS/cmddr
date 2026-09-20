@@ -1,0 +1,933 @@
+{
+  "source": "1921",
+  "generated": "2026-09-20",
+  "text": "~/development/sources/AAS/txt/aas-13-1921.txt (631 pages)",
+  "rows": [
+    {
+      "key": "1917-02-05|CONSTITUTIONES APOSTOLICAE|Quod catholicae religionis|Dismembrato territorio ex dioecesi Antioquiensi et Iericoèns",
+      "date": "1917-02-05",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Quod catholicae religionis",
+      "page": 457,
+      "rule": "unique",
+      "bodyLine": "Quod catholicae religionis bonum duobus abhinc annis postulavit,",
+      "header": "Annus XIII - Toi. XIII 1 Octobris 1921 Num. 12"
+    },
+    {
+      "key": "1920-05-18|LITTERAE APOSTOLICAE|Exstat in civitate|Templum parochiale sancti Ioannis",
+      "date": "1920-05-18",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Exstat in civitate",
+      "page": 5,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Exstat in civitate episcopali Macaraibo, dioecesis Zuliensis, intra fines Reipublicae de Venezuela, Americae meridionalis, ecclesia parochialis in honorem sancti Ioannis de Deo",
+      "header": "Annus XIII - Vol. XIII 3 Ianuarii 1921 Num. 1"
+    },
+    {
+      "key": "1920-06-28|LITTERAE APOSTOLICAE|Praestantiores inter|Ecclesia curialis sanctae Mariae Magdalenae in oppido Vezela",
+      "date": "1920-06-28",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Praestantiores inter",
+      "page": 6,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Praestantiores inter sacras aedes,",
+      "header": "6 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1920-07-16|LITTERAE APOSTOLICAE|Quod inclytus|Templum Carmelitarum, beatae Mariae Virgini de Monte Carmelo",
+      "date": "1920-07-16",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quod inclytus",
+      "page": 8,
+      "rule": "fuzzy",
+      "bodyLine": "Ad perpetuam rei memoriam. — Quod inclitus Carmelitarum antiquae observantiae Ordo templum habet suae custodiae curaeque commissum in urbe Recifensi, e Statu Pernambuci, Deo Optimo Maximo",
+      "header": "8 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1920-11-09|EPISTOLAE|Opportune admodum|Ad R. P. Arthurum Vermeersch S. I. propositum laudans celebr",
+      "date": "1920-11-09",
+      "category": "EPISTOLAE",
+      "incipit": "Opportune admodum",
+      "page": 10,
+      "rule": "unique",
+      "bodyLine": "Dilecte filii, salutem et apostolicam benedictionem. — Opportune",
+      "header": "10 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1920-11-09|EPISTOLAE|Plane intelligimus|Ad Gustavum Fridericum S. R. E. card. Piffl, archiepiscopum ",
+      "date": "1920-11-09",
+      "category": "EPISTOLAE",
+      "incipit": "Plane intelligimus",
+      "page": 12,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Plane intelligimus ex communibus vestris litteris",
+      "header": "12 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1920-11-09|EPISTOLAE|Quae praeclaro|Ad Alexandrum S. R. E. card. Kakowski, archiep. Varsaviensem",
+      "date": "1920-11-09",
+      "category": "EPISTOLAE",
+      "incipit": "Quae praeclaro",
+      "page": 11,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Quae praeclaro pietatis solertiaeque vestrae studio",
+      "header": "Acta Benedicti PP. XV 11"
+    },
+    {
+      "key": "1920-11-27|LITTERAE APOSTOLICAE|Incumbentes Nobis|Erigitur Vicariatus Apostolicus de Ontario Septemtrionali",
+      "date": "1920-11-27",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Incumbentes Nobis",
+      "page": 186,
+      "rule": "fuzzy",
+      "bodyLine": "Ad perpetuam rei memoriam. — Incumbentis Nobis pastoralis officii",
+      "header": "186 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1920-12-02|LITTERAE APOSTOLICAE|Dilectus filius|Ecclesia beatae Mariae Virginis de Mercede sub titulo « Libé",
+      "date": "1920-12-02",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Dilectus filius",
+      "page": 187,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Dilectus filius Constantius Vallejo,",
+      "header": "Acta Benedicti PP. XV 187"
+    },
+    {
+      "key": "1920-12-10|CONSTITUTIONES APOSTOLICAE|Christi Domini|Divisionis et creationis novae dioecesis Lodzensis .......",
+      "date": "1920-12-10",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Christi Domini",
+      "page": 249,
+      "rule": "unique",
+      "bodyLine": "Christi Domini, qui sese bonum Pastorem appellavit, vestigia sectantes, semper Pontifices Romani spirituali catholici gregis bono consulere sedulo curaverunt. Quum vero ad id assequendum nihil magis",
+      "header": "Annus XIII « Vol. XIII 1 Iunii 1921 Num. 7"
+    },
+    {
+      "key": "1920-12-10|EPISTOLAE|Inter praeclaras laudes|Ad R. P. D. Thomam Iosephum, episcopum Trentonensem, cuius p",
+      "date": "1920-12-10",
+      "category": "EPISTOLAE",
+      "incipit": "Inter praeclaras laudes",
+      "page": 89,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Inter",
+      "header": "Annus XIII - Vol. Xin 10 Februarii 1921 Num. 3"
+    },
+    {
+      "key": "1920-12-15|LITTERAE APOSTOLICAE|Cum ex parte|Sanctuarium beatae Mariae Virginis vulgo « dei Pilastrello »",
+      "date": "1920-12-15",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Cum ex parte",
+      "page": 189,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Cum ex parte Monachorum Congregationis beatae Mariae Virginis de Monte Oliveto, Ordinis sancti",
+      "header": "Acta Benedicti PP. XV 189"
+    },
+    {
+      "key": "1920-12-17|EPISTOLAE|Bina a te accepimus|Ad R. D. Dantem Munerati, piae Societatis S. Francisci Sales",
+      "date": "1920-12-17",
+      "category": "EPISTOLAE",
+      "incipit": "Bina a te accepimus",
+      "page": 90,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Bina a te accepimus volumina, alterum inscriptum Promptuarium pro ordinandis et",
+      "header": "90 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1920-12-17|EPISTOLAE|Cohaeret plane|Ad R. P. Franciscum Zorell, S. L, propositum absolvendi « Cu",
+      "date": "1920-12-17",
+      "category": "EPISTOLAE",
+      "incipit": "Cohaeret plane",
+      "page": 91,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Cohaeret",
+      "header": "Acta Benedicti PP. XV 91"
+    },
+    {
+      "key": "1921-01-06|LITTERAE ENCYCLICAE|Sacra propediem|Ad Patriarchas, Primates, Archiepiscopos, Episcopos aliosque",
+      "date": "1921-01-06",
+      "category": "LITTERAE ENCYCLICAE",
+      "incipit": "Sacra propediem",
+      "page": 33,
+      "rule": "unique",
+      "bodyLine": "SEPTIMO SAECULO EXEUNTE A TERTIO ORDINE FRANCISGALIUM CONDITO.",
+      "header": "Annus XIII - Vol. XIII 24 Ianuarii 1921 Num. 2"
+    },
+    {
+      "key": "1921-01-20|EPISTOLAE|Communis vestra epistola|Ad Ioannem S. R. E. presb. card. Csernoch, archiepiscopum St",
+      "date": "1921-01-20",
+      "category": "EPISTOLAE",
+      "incipit": "Communis vestra epistola",
+      "page": 91,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili Noster ac venerabiles fratres, salutem et apostolicam benedictionem. — Communis vestra epistola memoriam Nobis renovavit ac",
+      "header": "Acta Benedicti PP. XV 91"
+    },
+    {
+      "key": "1921-01-20|EPISTOLAE|Dignum plane|Ad Emos PP. DD. Iosephum Card. Francica Nava, archiepiscopum",
+      "date": "1921-01-20",
+      "category": "EPISTOLAE",
+      "incipit": "Dignum plane",
+      "page": 307,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Dignum plane pietate vestra Nobisque peracceptum",
+      "header": "Acta Benedicti PP. XV 307"
+    },
+    {
+      "key": "1921-02-11|CONSTITUTIONES APOSTOLICAE|Pastoralis sollicitudo|Dismembrationis et erectionis dioecesis Bellohorizontinae",
+      "date": "1921-02-11",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Pastoralis sollicitudo",
+      "page": 336,
+      "rule": "unique",
+      "bodyLine": "Pastoralis sollicitudo onus Nobis imponit diligentissime curandi ut",
+      "header": "336 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1921-02-20|EPISTOLAE|Tertii Ordinis a Poenitentia|Ad R. P. Arnaldum Rigo, Tertii Ordinis Regularis S. Francisc",
+      "date": "1921-02-20",
+      "category": "EPISTOLAE",
+      "incipit": "Tertii Ordinis a Poenitentia",
+      "page": 130,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Tertii Ordinis",
+      "header": "130 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1921-02-27|LITTERAE APOSTOLICAE|In sublimi|Nova Praefectura Apostolica a S. Gabriele a Virgine Perdolen",
+      "date": "1921-02-27",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "In sublimi",
+      "page": 295,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — In sublimi Principis Apostolorum",
+      "header": "Acta Benedicti PP. XV 295"
+    },
+    {
+      "key": "1921-02|SERMO|È bello il nome|Ad parochos et ad quadragesimae in Urbe concionatores",
+      "date": "1921-02",
+      "category": "SERMO",
+      "incipit": "È bello il nome",
+      "page": 93,
+      "rule": "unique",
+      "bodyLine": "E bello il nome di «uomini di Dio», che compete ai predicatori:",
+      "header": "Acta Benedicti PP. XV 93"
+    },
+    {
+      "key": "1921-03-10|SACRA CONSISTORIA|Consistorium publicum|Emi PP. Cardinales rubro galero ornantur .... Consistorium s",
+      "date": "1921-03-10",
+      "category": "SACRA CONSISTORIA",
+      "incipit": "Consistorium publicum",
+      "page": 125,
+      "rule": "unique",
+      "bodyLine": "Consistorium publicum, in quo Ssmus Dominus Noster Purpuratorum",
+      "header": "Acta Benedicti PP. XV 125"
+    },
+    {
+      "key": "1921-03-21|CONSTITUTIONES APOSTOLICAE|Sedis Apostolicae|Dismembrationis et aggregationis oppidi « Vallecorsa »",
+      "date": "1921-03-21",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Sedis Apostolicae",
+      "page": 255,
+      "rule": "unique",
+      "bodyLine": "Sedis Apostolicae semper cura fuit pro meliori christifidelium regimine et commodo nonnulla circa dioecesum limites innovare, seu melius",
+      "header": "Acta Benedicti PP. XV 255"
+    },
+    {
+      "key": "1921-03-21|LITTERAE APOSTOLICAE|Placet oculog|R. P. Albanus Schachleiter,, Ordinis sancti Benedicti, abbas",
+      "date": "1921-03-21",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Placet oculog",
+      "page": 194,
+      "rule": "fuzzy",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. - Placet oculos",
+      "header": "194 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1921-03|LITTERAE APOSTOLICAE|In hac sublimi|A Vicariatu Apostolico de Kassai Superiore pars territorii s",
+      "date": "1921-03",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "In hac sublimi",
+      "page": 297,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — In hac sublimi Principis Apostolorum",
+      "header": "Acta Benedicti PP. XV 297"
+    },
+    {
+      "key": "1921-04-16|LITTERAE APOSTOLICAE|Constat apprime|Indulgentia plenaria toties quoties in sacello Portiunculae ",
+      "date": "1921-04-16",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Constat apprime",
+      "page": 298,
+      "rule": "dated",
+      "bodyLine": "Ad perpetuam rei memoriam. — Constat apprime, ecclesiam Sanctae",
+      "header": "298 Acta Apostolicae Sedis - Commentarium Officiale",
+      "formula": "Datum Romae apud Sanctum Petrum, sub anulo Piscatoris, die XVI mensis aprilis anno MCMXXI, Pontificatus Nostri septimo. P. CARD. GASPARRI, a Secretis Status. Vi UNIO APOSTOLICA SACERDOTUM PARISIIS INS"
+    },
+    {
+      "key": "1921-04-21|LITTERAE APOSTOLICAE|Anno Domini|Sanctuarium beatae Mariae Virginis de Misericordia in dioece",
+      "date": "1921-04-21",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Anno Domini",
+      "page": 305,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Anno Domini 1447, mortifera grassante pestilentia, Maceratensis urbis cives Virginem Mariam, sub titulo",
+      "header": "Acta Benedicti BP. XV 305"
+    },
+    {
+      "key": "1921-04-30|LITTERAE ENCYCLICAE|In praeclara summorum|Dilectis filiis doctoribus f et alumnis litterarum artiumque",
+      "date": "1921-04-30",
+      "category": "LITTERAE ENCYCLICAE",
+      "incipit": "In praeclara summorum",
+      "page": 209,
+      "rule": "unique",
+      "bodyLine": "In praeclara summorum copia hominum, suo splendore et gloria fidem catholicam illustrandum, qui cum in",
+      "header": "Annus XIII - Vol. XIII 6 Maii 1921 Num. 6"
+    },
+    {
+      "key": "1921-05-13|CONSTITUTIONES APOSTOLICAE|Romani Pontifices|Praelatura nullius de Rio Branco abbatiae Beatae Mariae Virg",
+      "date": "1921-05-13",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Romani Pontifices",
+      "page": 370,
+      "rule": "unique",
+      "bodyLine": "Romani Pontifices praedecessores Nostri precibus a Sancti Benedicti",
+      "header": "370 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1921-05-13|LITTERAE APOSTOLICAE|Cum in archidioecesi|Erigitur nova Praefectura Apostolica « de Tierradentro », in",
+      "date": "1921-05-13",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Cum in archidioecesi",
+      "page": 374,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Cum in archidioecesi Popayanensi, Reipublicae Columbianae in America meridionali, pars vulgo Tierradentro",
+      "header": "374 .Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1921-05-16|LITTERAE APOSTOLICAE|Constat nobis|Metropolitanum templum Limanum ad basilicae minoris dignitat",
+      "date": "1921-05-16",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Constat nobis",
+      "page": 413,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Constat Nobis metropolitanum templum Limanum universae Peruvianae regionis primatiale, antiquitate,",
+      "header": "Acta Benedicti PP. XV 413"
+    },
+    {
+      "key": "1921-05-31|LITTERAE APOSTOLICAE|Sodalitatem|Sodalibus nostrae Dominae a bona morte quandam recitantibus ",
+      "date": "1921-05-31",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Sodalitatem",
+      "page": 342,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Sodalitatem Nostrae Dominae a",
+      "header": "342 Acta Apostolicae Sedis - Gç-mmentarium Officiale"
+    },
+    {
+      "key": "1921-05|LITTERAE APOSTOLICAE|Vetustissima ecclesia|Ecclesia sancti Dominici, vulgo «. Maggiore », Neapoli extan",
+      "date": "1921-05",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Vetustissima ecclesia",
+      "page": 375,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam.— Vetustissima ecclesia cum adnexo",
+      "header": "Acta Benedicti PP. XV 375"
+    },
+    {
+      "key": "1921-06-16|SACRA CONSISTORIA|Consistorium publicum|",
+      "date": "1921-06-16",
+      "category": "SACRA CONSISTORIA",
+      "incipit": "Consistorium publicum",
+      "page": 125,
+      "rule": "unique",
+      "bodyLine": "Consistorium publicum, in quo Ssmus Dominus Noster Purpuratorum",
+      "header": "Acta Benedicti PP. XV 125"
+    },
+    {
+      "key": "1921-06-17|CONSTITUTIONES APOSTOLICAE|Quo maiori|Erectionis Capituli metropolitani Montis videi",
+      "date": "1921-06-17",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Quo maiori",
+      "page": 489,
+      "rule": "unique",
+      "bodyLine": "Quo maiori dignitati ac decori suae metropolitanae ecclesiae consulere!, Ordinarius Montisvidei nuper ab Apostolica Sede postulavit,",
+      "header": "Annus XIII - Vol. XIII 2 Novembris 1921 Num. 13"
+    },
+    {
+      "key": "1921-06-19|LITTERAE APOSTOLICAE|Pro benedictione|Generale seu commune mandatum apostolicum fit semel pro semp",
+      "date": "1921-06-19",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Pro benedictione",
+      "page": 416,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Pro benedictione Abbatum duplex",
+      "header": "416 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1921-06-24|CONSTITUTIONES APOSTOLICAE|Sollicitudo omnium|Suppressis Vicariatu Apostolico Saxoniae et Praefectura Apos",
+      "date": "1921-06-24",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Sollicitudo omnium",
+      "page": 409,
+      "rule": "unique",
+      "bodyLine": "Sollicitudo omnium Ecclesiarum, quae Romano Pontifici incumbit,",
+      "header": "Annus XIII - Vol. XIII 1 Septembris 1921 Num. 11"
+    },
+    {
+      "key": "1921-06-29|LITTERAE ENCYCLICAE|Fausto appetente die|Ad Patriarchas, Primates, Archiepiscopos, Episcopos aliosque",
+      "date": "1921-06-29",
+      "category": "LITTERAE ENCYCLICAE",
+      "incipit": "Fausto appetente die",
+      "page": 329,
+      "rule": "unique",
+      "bodyLine": "Fausto appetente die, cum, abhinc septingentis annis,",
+      "header": "Annus XIII - Vol. XIII 7 Iulii 1921 Num. 9"
+    },
+    {
+      "key": "1921-07-30|CONSTITUTIONES APOSTOLICAE|Ecclesiae universae|Dismembrato territorio ex archidioecesi Coloniensi, creatur ",
+      "date": "1921-07-30",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Ecclesiae universae",
+      "page": 467,
+      "rule": "unique",
+      "bodyLine": "Ecclesiae universae, divinitus Romanis Pontificibus commissae, cura",
+      "header": "Acta Benedicti PP. XV 467"
+    },
+    {
+      "key": "1921-07-30|LITTERAE APOSTOLICAE|Nihil magis acceptum|Erigitur in Primariam Associatio a ter repetita angelica sal",
+      "date": "1921-07-30",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Nihil magis acceptum",
+      "page": 419,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. - Nihil magis acceptum Nobis est",
+      "header": "Acia Benedicti PP. XV 419"
+    },
+    {
+      "key": "1921-07|LITTERAE APOSTOLICAE|Decessorum nostrorum|Ecclesia cathedralis Burgensis B. M. V. sideribus receptae d",
+      "date": "1921-07",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Decessorum nostrorum",
+      "page": 418,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Decessorum Nostrorum insistentes",
+      "header": "418"
+    },
+    {
+      "key": "1921-08-10|LITTERAE APOSTOLICAE|Ampla ac pervetusta|Titulus basilicae minoris confertur ecclesiae seu sanctuario",
+      "date": "1921-08-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ampla ac pervetusta",
+      "page": 470,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Ampla ac pervetusta Cisterciensium Fratrum abbatia, decimo secundo labente saeculo fundata, exstat",
+      "header": "470 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1921-08|EPISTOLAE|Le notizie|Ad Emum P. D. Petrum S. R. E. card. Gasparri, a secretis Sta",
+      "date": "1921-08",
+      "category": "EPISTOLAE",
+      "incipit": "Le notizie",
+      "page": 428,
+      "rule": "unique",
+      "bodyLine": "Le notizie che in questi giorni Ci pervengono intorno alle condizioni del popolo russo, sono, come Ella, signor Cardinale, ben sa, particolarmente gravi. A quanto si può giudicare dalla laconica sobrietà",
+      "header": "428 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1921-08|LITTERAE APOSTOLICAE|Ex hac B. Petri|Erectio vicariatus apostolici de Ngan-Hoei et immutatio nomi",
+      "date": "1921-08",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ex hac B. Petri",
+      "page": 469,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Ex hac B. Petri Apostolorum Principis cathedra, quam nullis quidem meritis Nostris divinitus obtinemus,",
+      "header": "Acta Benedicti PP. XV 469"
+    },
+    {
+      "key": "1921-08|PRECATIONUM FORMULAE|O Dio di bontà|Ad impetrandam Italis pacis et concordiae reconciliationem.",
+      "date": "1921-08",
+      "category": "PRECATIONUM FORMULAE",
+      "incipit": "O Dio di bontà",
+      "page": 369,
+      "rule": "unique",
+      "bodyLine": "O Dio di bontà e di perdono, col cuore trafitto ci stringiamo intorno",
+      "header": "Attnus XIII - Vol. XIII 1 Augusti 1921 Num. 10"
+    },
+    {
+      "key": "1921-09-19|EPISTOLAE|Cum adlatum sit|Ad R. P. Franciscum Ehiie, S. I., sexaginta in religione ann",
+      "date": "1921-09-19",
+      "category": "EPISTOLAE",
+      "incipit": "Cum adlatum sit",
+      "page": 494,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Cum adlatum",
+      "header": "494 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1921-09-19|EPISTOLAE|Non senza|Ad Emum P. D. Vincentium S. R. E. card. Vannutelli, Sacri Co",
+      "date": "1921-09-19",
+      "category": "EPISTOLAE",
+      "incipit": "Non senza",
+      "page": 473,
+      "rule": "unique",
+      "bodyLine": "Non senza vivo compiacimento del Nostro attimo abbiamo appreso",
+      "header": "Acta Benedicti PP. XV v 473"
+    },
+    {
+      "key": "1921-10-14|EPISTOLAE|Priusquam|Ad Emos PP. DD. Michaelem S. R. E. card. Faulhaber, Archiepi",
+      "date": "1921-10-14",
+      "category": "EPISTOLAE",
+      "incipit": "Priusquam",
+      "page": 529,
+      "rule": "unique",
+      "bodyLine": "benedictionem.— Priusquam e Frisingensi conventu digrederemini, libuit",
+      "header": "Acta Benedicti PP. XV 529"
+    },
+    {
+      "key": "1921-10-20|EPISTOLAE|Novum idemque|Ad R. D. Iacobum Ogier, cubiculari m intimum S. S. supra num",
+      "date": "1921-10-20",
+      "category": "EPISTOLAE",
+      "incipit": "Novum idemque",
+      "page": 495,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Novum idemque praeclarum fidei et observantiae documentum tu nuper Nobis praefoebas, cum, nomine quoque istius Sodalitatis, cui tam sollerter et lau-",
+      "header": "Acta Benedicti PP. XV 495"
+    },
+    {
+      "key": "1921-11-17|PRECATIONUM FORMULAE|O Gesù|Ad impetrandam Fidei catholicae propagationem",
+      "date": "1921-11-17",
+      "category": "PRECATIONUM FORMULAE",
+      "incipit": "O Gesù",
+      "page": 564,
+      "rule": "unique",
+      "bodyLine": "PREGHIERA PER LA PROPAGAZIONE DELLA FEDE.",
+      "header": "564 Acta Apostolicae Sedis - Commentarium Officiale."
+    }
+  ],
+  "unrecovered": [
+    {
+      "key": "1918-01-11|CONSTITUTIONES APOSTOLICAE|A multis|Dismembrationis et erectionis dioecesis Lafayettensis",
+      "date": "1918-01-11",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "A multis",
+      "reason": "header-mismatch",
+      "candidates": [
+        461
+      ]
+    },
+    {
+      "key": "1918-08-02|CONSTITUTIONES APOSTOLICAE||Creantur novae dioeceses Nazarensis et Garanhunensis in Bras",
+      "date": "1918-08-02",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1920-05-01|LITTERAE APOSTOLICAE||Zuliensis de Deo, in civitate Macaraibo, dioecesis, titulo a",
+      "date": "1920-05-01",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1920-11-12|LITTERAE APOSTOLICAE|Quae catholico nomini|Erigitur Delegatio Apostolica in Albania",
+      "date": "1920-11-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae catholico nomini",
+      "reason": "several",
+      "candidates": [
+        185,
+        294,
+        553
+      ]
+    },
+    {
+      "key": "1920-12-10|LITTERAE APOSTOLICAE|Venerabilis, frater|Ecclesia Ssmi Cordis Iesu in civitate Adamantina titulo et p",
+      "date": "1920-12-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Venerabilis, frater",
+      "reason": "several",
+      "candidates": [
+        188,
+        415
+      ]
+    },
+    {
+      "key": "1921-01-25|LITTERAE APOSTOLICAE|Constat apprime|Ecclesia sancti Ignatii Lojolaei in oppido Azpeitia, in Hisp",
+      "date": "1921-01-25",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Constat apprime",
+      "reason": "several",
+      "candidates": [
+        191,
+        298,
+        493
+      ]
+    },
+    {
+      "key": "1921-02-09|EPISTOLAE|Cum semper|Ad dilectum filium Moderatorem Comitatus catholicae Universi",
+      "date": "1921-02-09",
+      "category": "EPISTOLAE",
+      "incipit": "Cum semper",
+      "reason": "several",
+      "candidates": [
+        127,
+        195
+      ]
+    },
+    {
+      "key": "1921-02-10|EPISTOLAE|Cum semper|Ad Desideratum S. R. E. card. Mercier, archiepiscopum Mechli",
+      "date": "1921-02-10",
+      "category": "EPISTOLAE",
+      "incipit": "Cum semper",
+      "reason": "several",
+      "candidates": [
+        127,
+        195
+      ]
+    },
+    {
+      "key": "1921-02-11|LITTERAE APOSTOLICAE|Pia Societas|Ecclesia parochialis Sacratissimi Cordis Iesu ad Castrum Pra",
+      "date": "1921-02-11",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Pia Societas",
+      "reason": "header-mismatch",
+      "candidates": [
+        192
+      ]
+    },
+    {
+      "key": "1921-02-16|CONSTITUTIONES APOSTOLICAE|Praedecessorum nostrorum|Erectionis novae provinciae ecclesiasticae S. Iosephi Costar",
+      "date": "1921-02-16",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Praedecessorum nostrorum",
+      "reason": "header-mismatch",
+      "candidates": [
+        252
+      ]
+    },
+    {
+      "key": "1921-02-22|LITTERAE APOSTOLICAE|Quae catholico nomini|Praefectura Apostolica S. Leonis de Amazonis in Vicariatum A",
+      "date": "1921-02-22",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae catholico nomini",
+      "reason": "several",
+      "candidates": [
+        185,
+        294,
+        553
+      ]
+    },
+    {
+      "key": "1921-03-10|SACRA CONSISTORIA||Sacri Pallii expostulatio et concessio ......",
+      "date": "1921-03-10",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1921-03-10|SACRA CONSISTORIA||Tituli Emis PP. Cardinalibus assignati",
+      "date": "1921-03-10",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1921-03|LITTERAE APOSTOLICAE|Commissum nobis|Missiones Ducatus Anhaltini incorporantur in dioecesim Pader",
+      "date": "1921-03",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Commissum nobis",
+      "reason": "header-mismatch",
+      "candidates": [
+        296
+      ]
+    },
+    {
+      "key": "1921-03|SACRA CONSISTORIA|Consistorium secretum|Optio tituli",
+      "date": "1921-03",
+      "category": "SACRA CONSISTORIA",
+      "incipit": "Consistorium secretum",
+      "reason": "header-mismatch",
+      "candidates": [
+        521
+      ]
+    },
+    {
+      "key": "1921-03|SACRA CONSISTORIA||Allocutio SS. D. N. Benedicti PP. XV. - Creatio et publicati",
+      "date": "1921-03",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1921-04-17|LITTERAE APOSTOLICAE|Romanorum Pontificum|Unio Apostolica sacerdotum Parisiis instituta in Primariam e",
+      "date": "1921-04-17",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Romanorum Pontificum",
+      "reason": "several",
+      "candidates": [
+        302,
+        372
+      ]
+    },
+    {
+      "key": "1921-04-21|LITTERAE APOSTOLICAE|Cathedralis ecclesiae|Cathedrale templum Samogitiense titulo ac privilegiis basili",
+      "date": "1921-04-21",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Cathedralis ecclesiae",
+      "reason": "outside-runs",
+      "candidates": [
+        286
+      ]
+    },
+    {
+      "key": "1921-04-27|LITTERAE APOSTOLICAE|Procurator generalis|Pia associatio sub titulo « Eucharistici Foederis » Mediolan",
+      "date": "1921-04-27",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Procurator generalis",
+      "reason": "several",
+      "candidates": [
+        187,
+        340
+      ]
+    },
+    {
+      "key": "1921-04|EPISTOLAE|Officii Nostri|Ad R. P. D. Marium Besson, episcopum Lausannensium et Geneve",
+      "date": "1921-04",
+      "category": "EPISTOLAE",
+      "incipit": "Officii Nostri",
+      "reason": "header-mismatch",
+      "candidates": [
+        220
+      ]
+    },
+    {
+      "key": "1921-04|LITTERAE APOSTOLICAE|Romanorum Pontificum|Opera Apostolica a Iesu Christo Operario, Gene vae instituta",
+      "date": "1921-04",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Romanorum Pontificum",
+      "reason": "several",
+      "candidates": [
+        302,
+        372
+      ]
+    },
+    {
+      "key": "1921-05-06|CONSTITUTIONES APOSTOLICAE|Eximia Benedictini Ordinis|Dismembrationis et erectionis in abbatiam nullius S. Petri d",
+      "date": "1921-05-06",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Eximia Benedictini Ordinis",
+      "reason": "outside-runs",
+      "candidates": [
+        290
+      ]
+    },
+    {
+      "key": "1921-05-16|LITTERAE APOSTOLICAE|Inter sacras aedes|Titulus basilicae minoris confertur archipresbyterali et col",
+      "date": "1921-05-16",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Inter sacras aedes",
+      "reason": "several",
+      "candidates": [
+        375,
+        412
+      ]
+    },
+    {
+      "key": "1921-06-10|EPISTOLAE|Optimum sane|Ad Emum P. D. Carolum Iosephum S. R. E. presb. card. Schulte",
+      "date": "1921-06-10",
+      "category": "EPISTOLAE",
+      "incipit": "Optimum sane",
+      "reason": "several",
+      "candidates": [
+        11,
+        423
+      ]
+    },
+    {
+      "key": "1921-06-13|SACRA CONSISTORIA|Consistorium secretum|",
+      "date": "1921-06-13",
+      "category": "SACRA CONSISTORIA",
+      "incipit": "Consistorium secretum",
+      "reason": "header-mismatch",
+      "candidates": [
+        521
+      ]
+    },
+    {
+      "key": "1921-06-13|SACRA CONSISTORIA||Allocutio SS. D. N. Benedicti PP. XV. - Creatio et publicati",
+      "date": "1921-06-13",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1921-06-13|SACRA CONSISTORIA||Provisio Ecclesiarum",
+      "date": "1921-06-13",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1921-06-16|SACRA CONSISTORIA|Consistorium secretum|",
+      "date": "1921-06-16",
+      "category": "SACRA CONSISTORIA",
+      "incipit": "Consistorium secretum",
+      "reason": "header-mismatch",
+      "candidates": [
+        521
+      ]
+    },
+    {
+      "key": "1921-06-16|SACRA CONSISTORIA||Postulatio Sacri Pallii",
+      "date": "1921-06-16",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1921-06-16|SACRA CONSISTORIA||Provisio Ecclesiarum",
+      "date": "1921-06-16",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1921-06-16|SACRA CONSISTORIA||Tituli Emis PP. Cardinalibus assignati",
+      "date": "1921-06-16",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1921-06-16|SACRA CONSISTORIA||Traditio rubri galeri Emis Cardinalibus .....",
+      "date": "1921-06-16",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1921-06|LITTERAE APOSTOLICAE|Ex officio|Pars territorii Vicariatus Apostolici de Ce-Li meridio-orien",
+      "date": "1921-06",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ex officio",
+      "reason": "several",
+      "candidates": [
+        376,
+        415
+      ]
+    },
+    {
+      "key": "1921-07|LITTERAE APOSTOLICAE|Ex officio|Vicariatus Apostolicus Saharensis in duplicem Vicariatum de ",
+      "date": "1921-07",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ex officio",
+      "reason": "several",
+      "candidates": [
+        376,
+        415
+      ]
+    },
+    {
+      "key": "1921-08-10|LITTERAE APOSTOLICAE|Beatus Franciscus|Sanctuarium B. M. V. in caelos assumptae, in Monte Alverna, ",
+      "date": "1921-08-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Beatus Franciscus",
+      "reason": "header-mismatch",
+      "candidates": [
+        472
+      ]
+    },
+    {
+      "key": "1921-09-10|LITTERAE APOSTOLICAE|Ex hac|A vicariatu apostolico Natalensi separatur pars territorii a",
+      "date": "1921-09-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ex hac",
+      "reason": "several",
+      "candidates": [
+        469,
+        491
+      ]
+    },
+    {
+      "key": "1921-10-05|LITTERAE APOSTOLICAE|Inter potiores|Titulus basilicae minoris cathedrali templo Monopoiitano con",
+      "date": "1921-10-05",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Inter potiores",
+      "reason": "header-mismatch",
+      "candidates": [
+        492
+      ]
+    },
+    {
+      "key": "1921-10-20|LITTERAE APOSTOLICAE|Constat apprime|Ecclesia Nostrae Dominae a miraculis in civitate Mauriac, di",
+      "date": "1921-10-20",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Constat apprime",
+      "reason": "several",
+      "candidates": [
+        191,
+        298,
+        493
+      ]
+    },
+    {
+      "key": "1921-10-20|LITTERAE APOSTOLICAE|Quae catholico nomini|Praefecturae Slevigis-Holsatiae pars ad regnum Danicum\" modo",
+      "date": "1921-10-20",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae catholico nomini",
+      "reason": "several",
+      "candidates": [
+        185,
+        294,
+        553
+      ]
+    },
+    {
+      "key": "1921-11-10|EPISTOLAE|Quoniam por est|Ad Marium Eduardum Marietti, equitem, de nuper edito eius ty",
+      "date": "1921-11-10",
+      "category": "EPISTOLAE",
+      "incipit": "Quoniam por est",
+      "reason": "none"
+    },
+    {
+      "key": "1921-11-21|SACRA CONSISTORIA|Consistorium secretum|",
+      "date": "1921-11-21",
+      "category": "SACRA CONSISTORIA",
+      "incipit": "Consistorium secretum",
+      "reason": "header-mismatch",
+      "candidates": [
+        521
+      ]
+    },
+    {
+      "key": "1921-11-21|SACRA CONSISTORIA||Allocutio SS. D. N. Benedicti PP. XV",
+      "date": "1921-11-21",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1921-11-21|SACRA CONSISTORIA||Postulatio Sacri Pallii .\" -",
+      "date": "1921-11-21",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1921-11-21|SACRA CONSISTORIA||Provisio Ecclesiarum",
+      "date": "1921-11-21",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1921-11-30|EPISTOLAE||Ad RR. PP. DD. Franciscum Kordac, Archiepiscopum Pragensem, ",
+      "date": "1921-11-30",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    }
+  ]
+}

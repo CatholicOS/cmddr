@@ -195,7 +195,10 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // AAS 19 (1927) 451 and 22 (1930) 607 read the plural as `IV. - CHTRO GRAPHIS` and `VI. -
   // CHIEOGRAPHI` (Pius XI's French and Italian letters to cardinals: *C'est de tout cœur*,
   // 5 January 1927; *Ci commuovono profondamente*, 2 February 1930, p. 89).
-  { id: 'Chirographa', headings: ['CHIROGRAPHA', 'CHIROGRAPHUM', 'CHIROGRAPHI', 'CHIROGRAPHE', 'CHIROGRAPHUS', 'CHTRO GRAPHIS', 'CHIEOGRAPHI'],
+  // AAS 14 (1922) 703 heads the same class `II. - LITTERAE AUTOGRAPHAE` (two Italian
+  // letters of Benedict XV: *Con vivo piacere*, to the archbishop of Genoa; *Il vivissimo
+  // desiderio*, to card. Gasparri, both on the Genoa peace conference).
+  { id: 'Chirographa', headings: ['CHIROGRAPHA', 'CHIROGRAPHUM', 'CHIROGRAPHI', 'CHIROGRAPHE', 'CHIROGRAPHUS', 'CHTRO GRAPHIS', 'CHIEOGRAPHI', 'LITTERAE AUTOGRAPHAE'],
     classes: [], harvested: 'no' },
   // Papal decrees have no row; vatican.va files several of these on the motu_proprio
   // shelf, where the registry carries them as apostolic-letter + motu-proprio.
@@ -239,7 +242,10 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // prayer) and, in 1940, a sermon at the Minerva filed under the same word; no row.
   // AAS 74 (1982) 1316 heads John Paul II's Holy Thursday prayer to priests (8 April 1982,
   // p. 521) `III - PRECATIO SOLLEMNIS`: a prayer, filed with the others.
-  { id: 'Orationes', headings: ['ORATIO', 'PRECATIO SOLLEMNIS'], classes: [], harvested: 'no' },
+  // AAS 13 (1921) 571 heads the same class `VI. - PRECATIONUM FORMULAE.` (two prayers for
+  // peace, in Italian: *O Dio di bontà*, *O Gesù*), the only prayer heading that volume
+  // prints (no `ORATIO`), so the same row.
+  { id: 'Orationes', headings: ['ORATIO', 'PRECATIO SOLLEMNIS', 'PRECATIONUM FORMULAE'], classes: [], harvested: 'no' },
   // The early volumes' *Sermones* (1909 `VI. - SERMONES.`; 1917 `VII. - SERMO.`, to the
   // Lenten preachers of Rome; 1931 `VIII. - SERMO`, in the consistory hall after a decree
   // on heroic virtues) are addresses in the vernacular, the class of the speeches shelf,

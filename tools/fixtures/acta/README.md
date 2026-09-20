@@ -147,6 +147,19 @@ index of names), AAS 46 (1954) sets a full stop after it (`INDEX. DOCUMENTORUM`)
 default mode drops the heading of AAS 25's first index page altogether, so the script
 searches the layout mode when the default finds nothing.
 
+## The page sidecars (phase 2b-iii-b)
+
+`aas-{vol}-{year}[-{part}].pages.json`, one per volume of 1909–1925, written by
+`npm run recover -- <key>` from the fixture and the whole-volume text in the local store
+(`tools/fetch-acta.sh text <year>`; acta volumes spec §10.3). Each `rows[]` entry names a
+pageless entry by its key (`date|category|incipit|description head`), the page recovered,
+the rule that accepted it (`unique`: the only hit within the category's runs of the *Index
+generalis actorum*; `dated`: the hit whose dating formula gives the entry's date; `fuzzy`:
+the only hit with one OCR character per word admitted), the body line and the running
+header quoted, and the formula where one settled it. `unrecovered[]` lists the rest with a
+reason. The join reads the sidecar and never the store; a row whose entry the parser no
+longer opens is a hard error.
+
 ## The volumes: what the `-ocr.pdf` files are, and the two extraction modes
 
 The whole-volume PDFs carry **no page images**: each is typeset from the OCR text in Times

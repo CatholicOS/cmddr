@@ -17,10 +17,14 @@
  */
 import { categoryForHeading } from './categories.js';
 import type { ActaEntry, PagelessEntry } from './index.js';
+import type { ActaSource } from './join.js';
 
 /** The key a sidecar row and a curated reading name a pageless entry by: what the index line prints, minus the page. */
 export const pagelessKey = (e: { date: string; category: string; incipit: string | null; description: string }): string =>
   `${e.date}|${e.category}|${e.incipit ?? ''}|${e.description.slice(0, 60)}`;
+
+/** The sidecar beside a source's fixture: `tools/fixtures/acta/aas-13-1921.pages.json`. */
+export const sidecarPath = (source: Pick<ActaSource, 'file'>): string => source.file.replace(/\.txt$/, '.pages.json');
 
 export type PageRun = [number, number];
 

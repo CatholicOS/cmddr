@@ -41,10 +41,13 @@ describe('parseIndexGeneralis', () => {
     expect(g.runs.get('Litterae Apostolicae')).toEqual([[6, 9], [185, 194], [294, 307], [339, 346], [372, 377], [412, 422], [469, 473], [491, 494], [553, 553]]);
     expect(g.runs.get('Epistulae')).toEqual([[10, 12], [89, 91], [127, 131], [195, 196], [218, 221], [256, 256], [307, 307], [346, 347], [377, 377], [423, 429], [473, 473], [494, 496], [528, 531], [554, 554]]);
     expect(g.runs.get('Sermones')).toEqual([[93, 93]]);
+    // `PRECATIONUM FORMULAE` is the categories table's `Orationes` row (categories.ts):
+    // the only prayer heading AAS 13 prints (no `ORATIO`).
+    expect(g.runs.get('Orationes')).toEqual([[369, 369], [564, 564]]);
     // The pope part ends at the dicasteries' part; nothing of it is read.
     expect(g.runs.has('Consistoria')).toBe(true);
     expect([...g.runs.keys()].some((k) => /OFFICII|Decreta/.test(k))).toBe(false);
-    expect(g.unmapped).toEqual(['PRECATIONUM FORMULAE']);
+    expect(g.unmapped).toEqual([]);
   });
 
   it('returns no page and no runs when the volume has no Index generalis', () => {

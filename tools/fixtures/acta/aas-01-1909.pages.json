@@ -1,0 +1,814 @@
+{
+  "source": "1909",
+  "generated": "2026-09-20",
+  "text": "~/development/sources/AAS/txt/aas-01-1909.txt (908 pages)",
+  "rows": [],
+  "unrecovered": [
+    {
+      "key": "1908-01-29|CONSTITUTIONES APOSTOLICAE|Sapienti Consilio|DE ROMANA CURIA.",
+      "date": "1908-01-29",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Sapienti Consilio",
+      "reason": "several",
+      "candidates": [
+        48,
+        61,
+        62,
+        64,
+        86,
+        93,
+        98,
+        100,
+        102,
+        103,
+        104,
+        151,
+        212,
+        295,
+        316,
+        423,
+        684,
+        685,
+        814,
+        815,
+        830
+      ]
+    },
+    {
+      "key": "1908-01|CONSTITUTIONES APOSTOLICAE||Congregati",
+      "date": "1908-01",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1908-09-11|LITTERAE APOSTOLICAE||Regia primitiva archisodalitas Matritensis. Mariae LB virgin",
+      "date": "1908-09-11",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1908-09-18|LITTERAE APOSTOLICAE||Episcopo Nolano datur facultas transferendi Nolam corpus S. ",
+      "date": "1908-09-18",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1908-09-19|LITTERAE APOSTOLICAE||Dioecesis Neo-Westmonasteriensis in archidioecesim erigitur ",
+      "date": "1908-09-19",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1908-09-27|LITTERAE APOSTOLICAE||Dioecesis Rockfordiensis in Statibus foederatis Americae sep",
+      "date": "1908-09-27",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1908-09|CONSTITUTIONES APOSTOLICAE|Promulgandi|de promulgatione legum et evulgatione actorum S. Sedis",
+      "date": "1908-09",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Promulgandi",
+      "reason": "several",
+      "candidates": [
+        71
+      ]
+    },
+    {
+      "key": "1908-10-16|LITTERAE APOSTOLICAE||Pia congregatio Matritensis nostrae Dominae de la Paloma ind",
+      "date": "1908-10-16",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1908-10-31|LITTERAE APOSTOLICAE||Indulgentia plenaria conceditur recitantibus orationem ad re",
+      "date": "1908-10-31",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1908-11-27|LITTERAE APOSTOLICAE||Quibus ecclesia S. Laurentii in Lucina de Urbe evehitur ad B",
+      "date": "1908-11-27",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1908-12|SERMONES||IB A P. PP. X habitus, lectis decretis beatificationis Ven. ",
+      "date": "1908-12",
+      "category": "SERMONES",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-01-12|EPISTOLAE||Ad Henricum Oster, moderatorem piae sodalitatis",
+      "date": "1909-01-12",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-01-12|EPISTOLAE||Catanensem, de Sicula clade",
+      "date": "1909-01-12",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-01-18|EPISTOLAE||Aquisgranensis a sacra Iesus Infantia, propter exhibitus ann",
+      "date": "1909-01-18",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-01-19|EPISTOLAE||Ad F. Calon, praesidem consociationis Parisiensis S. Vincent",
+      "date": "1909-01-19",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-01-20|EPISTOLAE||Ad comitem Keller, de habendi Ioannae Arcensi honoribus Beat",
+      "date": "1909-01-20",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-01|EPISTOLAE||Ad Conradum Bush, Episcopum Spirensem, circa mo-2 dernismum",
+      "date": "1909-01",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-01|EPISTOLAE||Ad Iosephum Card. Francica-Nava, Archiepiscopum",
+      "date": "1909-01",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-02-07|EPISTOLAE||Ad Stanislaum Episcopum Aurelianensem, quoad sacra solemnia ",
+      "date": "1909-02-07",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-02-18|LITTERAE APOSTOLICAE||Praefectura Apostolica de Basuto-Land in Africa australi eri",
+      "date": "1909-02-18",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-02|LITTERAE APOSTOLICAE||Ecclesia metropolitana Lancianensis titulo basilicae minoris",
+      "date": "1909-02",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-02|LITTERAE APOSTOLICAE||Indulgentiae conceduntur pio operi a conservanda ac tutanda ",
+      "date": "1909-02",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-02|LITTERAE APOSTOLICAE||Plenaria indulgentia conceditur pro festo S. Ioannis Baptist",
+      "date": "1909-02",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-03-12|LITTERAE APOSTOLICAE||Exstinguuntur paroeciae Urbis S. Mariae in via Lata, S. Marc",
+      "date": "1909-03-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-03-19|EPISTOLAE||Ad R. P. D. Episcopum Santanderien. ob vigesimum sui episcop",
+      "date": "1909-03-19",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-03-19|EPISTOLAE||Ad R. P. Nicolaum Dal-Gal, O. F .M., de proxime futuro Terti",
+      "date": "1909-03-19",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-03|EPISTOLAE||Ad Carolum Korz praesidem, et ad supremum Consilium consocia",
+      "date": "1909-03",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-03|EPISTOLAE||Ad R. P. D. iacobum Poletto, Protonotarium Apostolicum decur",
+      "date": "1909-03",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-03|EPISTOLAE||Ad R. P. Ioannem Baptistam Ferreres, S. I., de editis P. Gur",
+      "date": "1909-03",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-03|EPISTOLAE||Ad R. P. Raymundum Velasquez rectorem, et doctores decuriale",
+      "date": "1909-03",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-03|EPISTOLAE||Ad moderatores, decuriales et alumnos catholicae studiorum U",
+      "date": "1909-03",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-03|SERMONES||Habitus a SS. D. N. Pio PP. X ad peregrinos Belgas.",
+      "date": "1909-03",
+      "category": "SERMONES",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-04-02|EPISTOLAE||Ad R. P. D. Renatum Graffin, Antistitem domus pontificalis, ",
+      "date": "1909-04-02",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-04-11|LITTERAE APOSTOLICAE||Ecclesia S. Mariae Angelorum de portiuncula declaratur basil",
+      "date": "1909-04-11",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-04-11|LITTERAE APOSTOLICAE||Ven. Ioannes Eudes, Missionarius apostolicus, institutor con",
+      "date": "1909-04-11",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-04-11|LITTERAE APOSTOLICAE||Venerabilis Franciscus de Capillas, sacerdos professus Ordin",
+      "date": "1909-04-11",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-04-11|LITTERAE APOSTOLICAE||Venerabilis Ioanna de Arc virgo, Aurelianensis nuncupata, re",
+      "date": "1909-04-11",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-04-12|EPISTOLAE||Ad R. P. D. Anselmum Sansoni, Episcopum Cephalu-. den., de p",
+      "date": "1909-04-12",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-04-15|LITTERAE APOSTOLICAE||Conceditur indulgentia plenaria pio operi S. Ioannis Baptist",
+      "date": "1909-04-15",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-04-16|SERMONES||Ad Paulum Calon, praesidem generalem societatis S. Vincentii",
+      "date": "1909-04-16",
+      "category": "SERMONES",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-04-17|EPISTOLAE||Ad R. P. D. Gulielmum O'Connell, Archiepiscopum Bostonien., ",
+      "date": "1909-04-17",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-04-19|EPISTOLAE||Ad moderatores, doctores decuriales et alumnos catholicae st",
+      "date": "1909-04-19",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-04-19|SERMONES||Ad R. P. D. Episcopum Aurelianen., et peregrinos Galliae",
+      "date": "1909-04-19",
+      "category": "SERMONES",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-04-20|SERMONES||Ad Episcopos Galliae",
+      "date": "1909-04-20",
+      "category": "SERMONES",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-04-21|LITTERAE ENCYCLICAE|Communium rerum|de saecularibus solemniis in honorem S. Anselmi, Episcopi et",
+      "date": "1909-04-21",
+      "category": "LITTERAE ENCYCLICAE",
+      "incipit": "Communium rerum",
+      "reason": "several",
+      "candidates": [
+        333
+      ]
+    },
+    {
+      "key": "1909-04-27|EPISTOLAE||Ad R. P. D. Aemilianum Manacorda, Episcopum Fossanen., ob L ",
+      "date": "1909-04-27",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-04-30|EPISTOLAE||Ad R. P. D. Aloisium Pellizzo, Episcopum Patavinum, de coron",
+      "date": "1909-04-30",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-04|EPISTOLAE||Ad R. P. Dionysium Schüler, Ministrum generalem Ordinis Frat",
+      "date": "1909-04",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-05-10|SERMONES||A Pio PP. X habitus ad iuvenes foederatos catholicarum Unive",
+      "date": "1909-05-10",
+      "category": "SERMONES",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-05-20|HOMILIA||SSmi D. N. P. PP. X habita inter sacrum solemne, post relato",
+      "date": "1909-05-20",
+      "category": "HOMILIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-05-20|LITTERAE APOSTOLICAE||Beatus Iosephus Oriol in sanctorum caelitum album refertur .",
+      "date": "1909-05-20",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-05-21|EPISTOLAE||Ad Archiepiscopum Mutinensem ceterosque Episcopos regionis A",
+      "date": "1909-05-21",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-05-24|EPISTOLAE||Ad R. P. D. Stanislaum Touchet, Episcopum Aurelianensem, ob ",
+      "date": "1909-05-24",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-05|EPISTOLAE||Ad Archiepiscopum Bambergensem ceterosque Episcopos Bavariae",
+      "date": "1909-05",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-05|EPISTOLAE||Ad R. P. D. Cyrillum VIII, Patriarcham Antiochenum, de proxi",
+      "date": "1909-05",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-05|LITTERAE APOSTOLICAE||Indulgentiae conceduntur pio operi Horae sanctae Perpetuae d",
+      "date": "1909-05",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-05|LITTERAE APOSTOLICAE||Pontificium Institutum Biblicum in Urbe erigitur. — Leges po",
+      "date": "1909-05",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-05|LITTERAE APOSTOLICAE||Supprimitur abbatia S. Mauri in Gallia et erigitur nova S. M",
+      "date": "1909-05",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-05|MOTU PROPRIO||Deletur coetus iurisconsultorum et causam in foro agentium c",
+      "date": "1909-05",
+      "category": "MOTU PROPRIO",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-06-13|SERMONES||A Pio PP. X habitus ad Episcopos Americae septentrionalis et",
+      "date": "1909-06-13",
+      "category": "SERMONES",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-06-14|EPISTOLAE||Ad R. P. Honoratum Del Val, de eius vulgato opere S. Theolog",
+      "date": "1909-06-14",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-06-17|EPISTOLAE||Ad R. P. D. Gustavum Iosephum Waffelaert, Episcopum Brugense",
+      "date": "1909-06-17",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-06-29|EPISTOLAE||Ad R. P. D. Desiderátum Castelain, Praefectum provinciae Par",
+      "date": "1909-06-29",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-06-29|EPISTOLAE||Ad R. P. D. Franciscum Ciceri, Episcopum Papiensem, ob celeb",
+      "date": "1909-06-29",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-06|EPISTOLAE||Ad R. P. D. Thomam Kennedy, Episcopum titularem Adrianopolit",
+      "date": "1909-06",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-07-04|SERMONES||A Pio PP. X habitus ad Legationem extraordinariam imperii Tu",
+      "date": "1909-07-04",
+      "category": "SERMONES",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-07-11|EPISTOLAE||Ad augustissimum et potentissimi um Imperatorem Mahometum V",
+      "date": "1909-07-11",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-07-12|LITTERAE APOSTOLICAE||Missio de Kenia in Africa orientali anglica erigitur in Vica",
+      "date": "1909-07-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-07-12|LITTERAE APOSTOLICAE||Sodalitas ab infante Iesu, Bethlehem erecta apud Fratres Sch",
+      "date": "1909-07-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-07-31|LITTERAE APOSTOLICAE||Confraternitas Immaculatae Conceptionis ac Defunctorum in di",
+      "date": "1909-07-31",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-07|EPISTOLAE||Ad Felicem Porsch, iuris doctorem, ceterosque egregios viros",
+      "date": "1909-07",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-07|EPISTOLAE||Ad Vincentium Card. Vannutelli, renuntiatum Legatum Apostoli",
+      "date": "1909-07",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-07|LITTERAE APOSTOLICAE||Conceditur indulgentia presbyteris sodalibus Reparationis sa",
+      "date": "1909-07",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-07|LITTERAE APOSTOLICAE||Indulgentia conceditur recitantibus iaculatoriam precem in .",
+      "date": "1909-07",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-07|LITTERAE APOSTOLICAE||Superior generalis pro tempore Congregationis missionis decl",
+      "date": "1909-07",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-08-12|LITTERAE APOSTOLICAE||Sacello Rosarum apud basilicam patriarchalem S. Mariae Angel",
+      "date": "1909-08-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-08-17|LITTERAE APOSTOLICAE||Ecclesia cathedralis Constantinopolitana evehitur ad dignita",
+      "date": "1909-08-17",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-08-23|LITTERAE APOSTOLICAE||Templum Bonaerense B. Mariae Virginis a Rosario evehitur ad ",
+      "date": "1909-08-23",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-08|EPISTOLAE||Ad Carolum Simon et Petrum Martin, de instituta societate cu",
+      "date": "1909-08",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-08|EPISTOLAE||Ad R. P. D. Valerium Laspro, Archiepiscopum Salernitanum, in",
+      "date": "1909-08",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-08|LITTERAE APOSTOLICAE||Indulgentiae et privilegium altaris conceduntur Institutis r",
+      "date": "1909-08",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-09-08|LITTERAE APOSTOLICAE||Approbantur et confirmantur novae constitutiones Ordinis Fra",
+      "date": "1909-09-08",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-09-10|EPISTOLAE||Ad R. P. Henricum Debout, ob edita opera de B. Ioanna de Arc",
+      "date": "1909-09-10",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-09-10|EPISTOLAE||Ad V. E. Iosephum Mariam Card. Martin de Herrera y de la Igl",
+      "date": "1909-09-10",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-09-17|LITTERAE APOSTOLICAE||Praefectura Apostolica Delta Nili nuncupata in Vicariatum Ap",
+      "date": "1909-09-17",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-09-28|EPISTOLAE||Ad RR. PP. DD. Ioannem Fidelem Battaglia, Archiepiscopum tit",
+      "date": "1909-09-28",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-09|EPISTOLAE||Ad Fridericum Brunetti, canonicum marcianum, praefectum disc",
+      "date": "1909-09",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-10-04|LITTERAE APOSTOLICAE||De primo Ordine sancti Francisci nonnulla in perpetuum statu",
+      "date": "1909-10-04",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-10-07|LITTERAE APOSTOLICAE||Indulgentiae perpetuae conceduntur piis sodalitiis sub titul",
+      "date": "1909-10-07",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-10-10|EPISTOLAE||Ad V. E. Ioannem Card. Katschthaler, Archiepiscopum Salisbur",
+      "date": "1909-10-10",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-11-15|EPISTOLAE||Ad V. E. Iulium Card. Boschi, Archiepiscopum Ferrariensem et",
+      "date": "1909-11-15",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-11-18|EPISTOLAE||Ad R. P. D. Ioannem Mariam Farley, Archiepiscopum Neo-Eborac",
+      "date": "1909-11-18",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-11-18|SERMONES||Habitus a SS. D. N. Pio PP X ad peregrinos Galliae.",
+      "date": "1909-11-18",
+      "category": "SERMONES",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-11-20|EPISTOLAE||Ad ; augustissimum et potentissimum Gulielmum II, Germaniae ",
+      "date": "1909-11-20",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-11-21|EPISTOLAE||Ad V V. EE. Georgium^Card. Kopp, Episcopum Vratislaviensem, ",
+      "date": "1909-11-21",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-11|EPISTOLAE||Ad P. Cormier, de magno Collegio pontificio Ordinis Praedica",
+      "date": "1909-11",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-11|EPISTOLAE||Ad P. Montagne, de Commentario Eevue Thomiste.",
+      "date": "1909-11",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-11|EPISTOLAE||Ad R. P. D. Ambrosium Agius, Legatum Apostolicum apud Episco",
+      "date": "1909-11",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-11|EPISTOLAE||Ad R. P. D. Ioannem Cagherò, Archiepiscopum titularem Sebast",
+      "date": "1909-11",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-11|LITTERAE APOSTOLICAE||Instauratur Pisis, in seminario dioecesano, theologica facul",
+      "date": "1909-11",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-12-01|EPISTOLAE||Ad R. P. D. Aloysium Philippum Ortiz y Gutiérrez, Episcopum ",
+      "date": "1909-12-01",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-12-10|EPISTOLAE||Ad R. P. D. Fridericum Bonnet, Episcopum Vivariensem, in qui",
+      "date": "1909-12-10",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-12-13|EPISTOLAE||Ad P. Lehodey, circa librum de Les voies de Voraison mentale",
+      "date": "1909-12-13",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-12-14|EPISTOLAE||Ad sodales Canadenses ab apostolatu precum, de sacris solemn",
+      "date": "1909-12-14",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-12-15|EPISTOLAE||Ad V. E. Iosephum Calasanctium Card. Vives, praefectum S. Co",
+      "date": "1909-12-15",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-12-15|MOTU PROPRIO||De instauratione congregationis Clericorum regularium vulgo ",
+      "date": "1909-12-15",
+      "category": "MOTU PROPRIO",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-12-19|EPISTOLAE||Ad Episcopos Reipublicae Columbianae, ob coetum solemniter h",
+      "date": "1909-12-19",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-12-20|EPISTOLAE||Ad P. Kuhn, ob oblatum opus de historia artis christianae",
+      "date": "1909-12-20",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-12-21|EPISTOLAE||Ad P. Muff, de collectis libris ad fovendam pietatem.",
+      "date": "1909-12-21",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-12-23|EPISTOLAE||Ad Episcopum Tarbiensem, de sacris solemnibus ad oppidum Lou",
+      "date": "1909-12-23",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1909-12|EPISTOLAE||Ad Archiepiscopum Hispalensem, ob habitum episcopalem conven",
+      "date": "1909-12",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    }
+  ]
+}

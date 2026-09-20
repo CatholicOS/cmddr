@@ -1,0 +1,610 @@
+{
+  "source": "1920",
+  "generated": "2026-09-20",
+  "text": "~/development/sources/AAS/txt/aas-12-1920.txt (643 pages)",
+  "rows": [
+    {
+      "key": "1920-01-31|EPISTOLAE|Edito in lucem|Ad R. D. Dominicum Mariani, praelatum domesticum, cuius opus",
+      "date": "1920-01-31",
+      "category": "EPISTOLAE",
+      "incipit": "Edito in lucem",
+      "page": 108,
+      "rule": "dated",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Edito in lucem",
+      "header": "108 Acta Apostolicae Sedis - Commentarium Officiale",
+      "formula": "Datum Romae apud sanctum Petrum, die xxxi mensis ianuarii anno MCMXX, Pontificatus Nostri sexto. BENEDICTUS PP. XV "
+    },
+    {
+      "key": "1920-09-15|LITTERAE APOSTOLICAE|Cum in honorem|Decernitur de triduanis sollemnibus et de Cappella Papali in",
+      "date": "1920-09-15",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Cum in honorem",
+      "page": 438,
+      "rule": "dated",
+      "bodyLine": "et apostolicam benedictionem. — Cum in honorem sancti Hieronymi,",
+      "header": "438 Acta Apostolicae Sedis - Commentarium Officiale",
+      "formula": "Datum Romae apud sanctum Petrum sub annulo Piscatoris, die xv mensis septembris, anno MCMXX, Pontificatus Nostri septimo. P. CARD. GASPARRÌ, a Secretis Status. IX FACULTAS FIT'PONTIFICIO INSTITUTO ORI"
+    }
+  ],
+  "unrecovered": [
+    {
+      "key": "1919-10-30|EPISTOLAE|Te nuper|Ad R. D. Aloisium Lamerand, quem Consociationis apostolicae ",
+      "date": "1919-10-30",
+      "category": "EPISTOLAE",
+      "incipit": "Te nuper",
+      "reason": "several",
+      "candidates": [
+        12
+      ]
+    },
+    {
+      "key": "1919-10|EPISTOLAE|Officia pietatis|Ad Petrum S. R. E. card. La Fontaine, patriarcham Venetiarum",
+      "date": "1919-10",
+      "category": "EPISTOLAE",
+      "incipit": "Officia pietatis",
+      "reason": "several",
+      "candidates": [
+        12
+      ]
+    },
+    {
+      "key": "1919-11-10|EPISTOLAE|Con viva soddisfazione|Ad R. P. Octavium Marchetti, S. I. : de schola theologiae as",
+      "date": "1919-11-10",
+      "category": "EPISTOLAE",
+      "incipit": "Con viva soddisfazione",
+      "reason": "several",
+      "candidates": [
+        29
+      ]
+    },
+    {
+      "key": "1919-11-10|EPISTOLAE|Opportune admodum|Ad RR. PP. DD. Hieronymum, archiepiscopum S. Salvatoris in B",
+      "date": "1919-11-10",
+      "category": "EPISTOLAE",
+      "incipit": "Opportune admodum",
+      "reason": "several",
+      "candidates": [
+        31,
+        292
+      ]
+    },
+    {
+      "key": "1919-12-18|EPISTOLAE|Celeberrima evenisse sollemnia|Ad Antonium S. R. E. card. Mendes Bello, patriarcham Ulyssip",
+      "date": "1919-12-18",
+      "category": "EPISTOLAE",
+      "incipit": "Celeberrima evenisse sollemnia",
+      "reason": "several",
+      "candidates": [
+        32
+      ]
+    },
+    {
+      "key": "1920-01|EPISTOLAE|Cum in catholicae rei|Ad R. P. D. Franciscum Kordac, archiepiscopum Pragensem: de ",
+      "date": "1920-01",
+      "category": "EPISTOLAE",
+      "incipit": "Cum in catholicae rei",
+      "reason": "several",
+      "candidates": [
+        57
+      ]
+    },
+    {
+      "key": "1920-01|EPISTOLAE|Par Vintermédiaire|Ad perillustrem D. Herbertum Hoover: de opera ab eo inita ad",
+      "date": "1920-01",
+      "category": "EPISTOLAE",
+      "incipit": "Par Vintermédiaire",
+      "reason": "none"
+    },
+    {
+      "key": "1920-01|EPISTOLAE|Quandoquidem|Ad R. P. D. Franciscum Kordac, archiepiscopum Pragensem, coe",
+      "date": "1920-01",
+      "category": "EPISTOLAE",
+      "incipit": "Quandoquidem",
+      "reason": "several",
+      "candidates": [
+        33,
+        172,
+        335
+      ]
+    },
+    {
+      "key": "1920-02-16|SERMO|Or fa un anno|Habitus die 16 februarii 1920 ad parochos et ad quadragesima",
+      "date": "1920-02-16",
+      "category": "SERMO",
+      "incipit": "Or fa un anno",
+      "reason": "none"
+    },
+    {
+      "key": "1920-02|EPISTOLAE|Istum, cui praesides|Ad R. P. Norbertum Schachinger, Canonicorum Regularium Praem",
+      "date": "1920-02",
+      "category": "EPISTOLAE",
+      "incipit": "Istum, cui praesides",
+      "reason": "several",
+      "candidates": [
+        60
+      ]
+    },
+    {
+      "key": "1920-02|EPISTOLAE|Redditum Nobis|Ad R. P. Alexium Mariam Lépicier, Ordinis Servorum beatae Ma",
+      "date": "1920-02",
+      "category": "EPISTOLAE",
+      "incipit": "Redditum Nobis",
+      "reason": "several",
+      "candidates": [
+        59
+      ]
+    },
+    {
+      "key": "1920-03-16|LITTERAE APOSTOLICAE|j Quae catholico nomini|Praefectura Apostolica Ni-",
+      "date": "1920-03-16",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "j Quae catholico nomini",
+      "reason": "none"
+    },
+    {
+      "key": "1920-03-16|LITTERAE APOSTOLICAE||I geriae inferioris in Africa occidentali in Vicariatum Apos",
+      "date": "1920-03-16",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1920-03-16|LITTERAE APOSTOLICAE||I nalis 17 j Supremi apostolatus munus. - Praefectura Aposto",
+      "date": "1920-03-16",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1920-03-19|EPISTOLAE|Pastoralem epistolam|Ad R. P. D. Alfredum, episcopum Winnipegensium, de litteris ",
+      "date": "1920-03-19",
+      "category": "EPISTOLAE",
+      "incipit": "Pastoralem epistolam",
+      "reason": "several",
+      "candidates": [
+        246
+      ]
+    },
+    {
+      "key": "1920-03|EPISTOLAE|Fecisti haud ita pridem|Ad Iosephum S. R. E. card. Francica-Nava, in xxv natali eius",
+      "date": "1920-03",
+      "category": "EPISTOLAE",
+      "incipit": "Fecisti haud ita pridem",
+      "reason": "several",
+      "candidates": [
+        109
+      ]
+    },
+    {
+      "key": "1920-03|SACRUM CONSISTORIUM|Camerariatus sacri S. R. E. Cardinalium Collegii|",
+      "date": "1920-03",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": "Camerariatus sacri S. R. E. Cardinalium Collegii",
+      "reason": "several",
+      "candidates": [
+        97,
+        585
+      ]
+    },
+    {
+      "key": "1920-03|SACRUM CONSISTORIUM||Allocutio",
+      "date": "1920-03",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1920-03|SACRUM CONSISTORIUM||Provisio Ecclesiarum",
+      "date": "1920-03",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1920-03|SACRUM CONSISTORIUM||Sacri Pallii expostulatio et concessio",
+      "date": "1920-03",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1920-04-15|EPISTOLAE|La notizia|Ad R. P. Paulum Albera, Moderatorem Piae Societatis S. Franc",
+      "date": "1920-04-15",
+      "category": "EPISTOLAE",
+      "incipit": "La notizia",
+      "reason": "several",
+      "candidates": [
+        288
+      ]
+    },
+    {
+      "key": "1920-04|EPISTOLAE|Optimo sane consilio|Ad R. P. Silvium a S. Bernardo, sodalium Passionistarum prae",
+      "date": "1920-04",
+      "category": "EPISTOLAE",
+      "incipit": "Optimo sane consilio",
+      "reason": "several",
+      "candidates": [
+        155
+      ]
+    },
+    {
+      "key": "1920-04|EPISTOLAE|Quamquam satis|Ad R. D. Aloisium Orione, Parvi Operis a divina Providentia ",
+      "date": "1920-04",
+      "category": "EPISTOLAE",
+      "incipit": "Quamquam satis",
+      "reason": "several",
+      "candidates": [
+        325
+      ]
+    },
+    {
+      "key": "1920-04|SACRUM CONSISTORIUM||Consistorium publicum",
+      "date": "1920-04",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1920-04|SACRUM CONSISTORIUM||Consistorium secretum",
+      "date": "1920-04",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1920-05-13|LITTERAE DECRETALES|Ecclesiae consuetudo|B. Margaritae Mariae Alacoque, virgini, moniali a Visitation",
+      "date": "1920-05-13",
+      "category": "LITTERAE DECRETALES",
+      "incipit": "Ecclesiae consuetudo",
+      "reason": "several",
+      "candidates": [
+        486
+      ]
+    },
+    {
+      "key": "1920-05-13|LITTERAE DECRETALES|Non sine proviolentissimo|B. Gabriel a Virgine perdolente, clericus professus e Congre",
+      "date": "1920-05-13",
+      "category": "LITTERAE DECRETALES",
+      "incipit": "Non sine proviolentissimo",
+      "reason": "none"
+    },
+    {
+      "key": "1920-05-16|LITTERAE DECRETALES|Dwina disponente clementia|B. Ioanna de Arc, virgo, in sanctorum caelitum album refertu",
+      "date": "1920-05-16",
+      "category": "LITTERAE DECRETALES",
+      "incipit": "Dwina disponente clementia",
+      "reason": "none"
+    },
+    {
+      "key": "1920-05-23|LITTERAE ENCYCLICAE|Pacem, Dei munus pulcherrimum|Ad Patriarchas, Primates, Archiepiscopos, Episcopos aliosque",
+      "date": "1920-05-23",
+      "category": "LITTERAE ENCYCLICAE",
+      "incipit": "Pacem, Dei munus pulcherrimum",
+      "reason": "several",
+      "candidates": [
+        209
+      ]
+    },
+    {
+      "key": "1920-05-30|LITTERAE APOSTOLICAE|Quod habetur|Venerabili Dei Famulae Annae Mariae Taigi, matrifamilias, e ",
+      "date": "1920-05-30",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quod habetur",
+      "reason": "several",
+      "candidates": [
+        240
+      ]
+    },
+    {
+      "key": "1920-05|LITTERAE APOSTOLICAE|Ex quo Ecclesia Christi|Venerabili Dei Famulo Oliverio Plunket, archiepiscopo Armaca",
+      "date": "1920-05",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ex quo Ecclesia Christi",
+      "reason": "several",
+      "candidates": [
+        235
+      ]
+    },
+    {
+      "key": "1920-05|LITTERAE APOSTOLICAE|Religiosas inter familias|Venerabili Dei Famulae Ludovicae de Marii!ac, viduae Le Gras",
+      "date": "1920-05",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Religiosas inter familias",
+      "reason": "several",
+      "candidates": [
+        230
+      ]
+    },
+    {
+      "key": "1920-05|SACRUM CONSISTORIUM|Consistorium secretum|",
+      "date": "1920-05",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": "Consistorium secretum",
+      "reason": "several",
+      "candidates": [
+        146,
+        219,
+        585
+      ]
+    },
+    {
+      "key": "1920-05|SACRUM CONSISTORIUM||Consistorium semipublicum de canonizatione Bb. Gabrielis a V",
+      "date": "1920-05",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1920-05|SACRUM CONSISTORIUM||In solemni canonizatione B. Ioannae de Arc, habita in Basili",
+      "date": "1920-05",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1920-06-13|LITTERAE APOSTOLICAE|Martyrum rigata sanguine|Venerabiles Servae Dei Maria Magdalena Fontaine et tres eius",
+      "date": "1920-06-13",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Martyrum rigata sanguine",
+      "reason": "several",
+      "candidates": [
+        281
+      ]
+    },
+    {
+      "key": "1920-06-14|EPISTOLAE|Gratis vos animis|Ad Georgium S. R. E. presb, card. Gusmini, archiepiscopum Bo",
+      "date": "1920-06-14",
+      "category": "EPISTOLAE",
+      "incipit": "Gratis vos animis",
+      "reason": "several",
+      "candidates": [
+        292
+      ]
+    },
+    {
+      "key": "1920-06-14|EPISTOLAE|Intelleximus|Ad Petrum S. R. E. presb. card. La Fontaine, patriarcham Ven",
+      "date": "1920-06-14",
+      "category": "EPISTOLAE",
+      "incipit": "Intelleximus",
+      "reason": "several",
+      "candidates": [
+        290
+      ]
+    },
+    {
+      "key": "1920-06-14|EPISTOLAE|Opportune|Ad RR. PP. DD. Ioannem, archiepiscoscopum Perusinum, Petrum,",
+      "date": "1920-06-14",
+      "category": "EPISTOLAE",
+      "incipit": "Opportune",
+      "reason": "several",
+      "candidates": [
+        31,
+        115,
+        292
+      ]
+    },
+    {
+      "key": "1920-06-14|LITTERAE APOSTOLICAE|Inter Suebiae coenobia|Perantiqua abbatia Neresheimensis sanctorum Udalrici et Afra",
+      "date": "1920-06-14",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Inter Suebiae coenobia",
+      "reason": "header-mismatch",
+      "candidates": [
+        431
+      ]
+    },
+    {
+      "key": "1920-06|EPISTOLAE|Quae Mutinam|Ad RR. PP. DD. Natalem, archiepiscopum Mutinensem, Guidonem ",
+      "date": "1920-06",
+      "category": "EPISTOLAE",
+      "incipit": "Quae Mutinam",
+      "reason": "several",
+      "candidates": [
+        289
+      ]
+    },
+    {
+      "key": "1920-06|LITTERAE APOSTOLICAE|In Africani quisnam|Venerabilibus Dei Famulis Carolo Lwanga, Mathiae Murumba et ",
+      "date": "1920-06",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "In Africani quisnam",
+      "reason": "none"
+    },
+    {
+      "key": "1920-07-10|LITTERAE APOSTOLICAE|Inter potiores|Curialis aedes S. Andochii, in civitate",
+      "date": "1920-07-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Inter potiores",
+      "reason": "several",
+      "candidates": [
+        9
+      ]
+    },
+    {
+      "key": "1920-07-20|LITTERAE APOSTOLICAE|Titulum sancti Cyriaci|Ecclesia sanctae Mariae Angelorum in Urbe ad basilicam minor",
+      "date": "1920-07-20",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Titulum sancti Cyriaci",
+      "reason": "several",
+      "candidates": [
+        435
+      ]
+    },
+    {
+      "key": "1920-07|EPISTOLAE|Optime profecto|Ad RR. PP. DD. Iacobum Augustinum, archiepiscopum S. Andreae",
+      "date": "1920-07",
+      "category": "EPISTOLAE",
+      "incipit": "Optime profecto",
+      "reason": "several",
+      "candidates": [
+        353
+      ]
+    },
+    {
+      "key": "1920-07|EPISTOLAE|Quod Ioanna de Arc|Ad. R. D. Henricum Debout, protonotarium apostolicum, cuius ",
+      "date": "1920-07",
+      "category": "EPISTOLAE",
+      "incipit": "Quod Ioanna de Arc",
+      "reason": "several",
+      "candidates": [
+        326
+      ]
+    },
+    {
+      "key": "1920-08-29|LITTERAE APOSTOLICAE|Christiani gregis sollicitudo|Praefectura Apostolica Novae Guineae Hollandiae in Vicariatu",
+      "date": "1920-08-29",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Christiani gregis sollicitudo",
+      "reason": "several",
+      "candidates": [
+        565
+      ]
+    },
+    {
+      "key": "1920-08|EPISTOLAE|Libenter admodum|Ad R. P. D. Iacobum Seammler, episcopum Basileensem et Lugan",
+      "date": "1920-08",
+      "category": "EPISTOLAE",
+      "incipit": "Libenter admodum",
+      "reason": "several",
+      "candidates": [
+        355
+      ]
+    },
+    {
+      "key": "1920-08|LITTERAE APOSTOLICAE|Concreditum Nobis|Parte e Vicariatu Apostolico de Seoul dismembrata, novus eri",
+      "date": "1920-08",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Concreditum Nobis",
+      "reason": "several",
+      "candidates": [
+        563
+      ]
+    },
+    {
+      "key": "1920-08|LITTERAE APOSTOLICAE|Divinae sponsiones|Novus erigitur Vicariatus de Kan-Chow in Sinis",
+      "date": "1920-08",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Divinae sponsiones",
+      "reason": "several",
+      "candidates": [
+        564
+      ]
+    },
+    {
+      "key": "1920-08|LITTERAE APOSTOLICAE|Si ulla unquam|Novus erigitur Vicariatus Apostolicus de Quan-tong occidenta",
+      "date": "1920-08",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Si ulla unquam",
+      "reason": "several",
+      "candidates": [
+        562
+      ]
+    },
+    {
+      "key": "1920-08|LITTERAE APOSTOLICAE|Tot inter celeberrima templa|Cathedralis aedes Leonensis Deiparae « Matri luminum » sacra",
+      "date": "1920-08",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Tot inter celeberrima templa",
+      "reason": "several",
+      "candidates": [
+        437
+      ]
+    },
+    {
+      "key": "1920-09-15|LITTERAE ENCYCLICAE|Spiritus Paraclitus|Ad Patriarchas, Primates, Archiepiscopos, Episcopos aliosque",
+      "date": "1920-09-15",
+      "category": "LITTERAE ENCYCLICAE",
+      "incipit": "Spiritus Paraclitus",
+      "reason": "several",
+      "candidates": [
+        385,
+        483
+      ]
+    },
+    {
+      "key": "1920-09-19|EPISTOLAE|Gratum sane|Ad R. P. Aloisium M. De Stefania, Ordinis S. Hieronymi Moder",
+      "date": "1920-09-19",
+      "category": "EPISTOLAE",
+      "incipit": "Gratum sane",
+      "reason": "several",
+      "candidates": [
+        442
+      ]
+    },
+    {
+      "key": "1920-09|EPISTOLAE||Cum de Poloniae rebus - Ad Alexandrum S. R. E. card. Kakowsk",
+      "date": "1920-09",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1920-09|LITTERAE APOSTOLICAE|Quod Nobis|Facultas^ fit Pontificio Instituto Orientali doctorales laur",
+      "date": "1920-09",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quod Nobis",
+      "reason": "several",
+      "candidates": [
+        440
+      ]
+    },
+    {
+      "key": "1920-10|LITTERAE ENCYCLICAE|Principi Apostolomtm Petro|Ad Patriarchas, Primates, Archiepiscopos, Episcopos aliosque",
+      "date": "1920-10",
+      "category": "LITTERAE ENCYCLICAE",
+      "incipit": "Principi Apostolomtm Petro",
+      "reason": "none"
+    },
+    {
+      "key": "1920-11|EPISTOLAE|Quae civitatis istius|Ad Thomam Pium S. R. E. presb. card. Boggiani, archiepiscopu",
+      "date": "1920-11",
+      "category": "EPISTOLAE",
+      "incipit": "Quae civitatis istius",
+      "reason": "several",
+      "candidates": [
+        568
+      ]
+    },
+    {
+      "key": "1920-11|LITTERAE APOSTOLICAE||Sedeloco, dioecesis Divionensis, titulo ac privilegiis basil",
+      "date": "1920-11",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1920-12-16|SACRUM CONSISTORIUM||Allocutio",
+      "date": "1920-12-16",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1920-12-16|SACRUM CONSISTORIUM||Camerariatus sacri S. R. E. Cardinalium Collegii",
+      "date": "1920-12-16",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1920-12|LITTERAE APOSTOLICAE|Per similes|Titulus honorificus Patriarchae Indiarum Occideatalium trans",
+      "date": "1920-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Per similes",
+      "reason": "several",
+      "candidates": [
+        594
+      ]
+    },
+    {
+      "key": "1920-12|LITTERAE ENCYCLICAE|Annus iam plenus|Ad Patriarchas, Primates, Archiepiscopos, Episcopos aliosque",
+      "date": "1920-12",
+      "category": "LITTERAE ENCYCLICAE",
+      "incipit": "Annus iam plenus",
+      "reason": "several",
+      "candidates": [
+        553
+      ]
+    }
+  ]
+}

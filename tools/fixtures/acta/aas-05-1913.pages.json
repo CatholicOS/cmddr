@@ -1,0 +1,413 @@
+{
+  "source": "1913",
+  "generated": "2026-09-20",
+  "text": "~/development/sources/AAS/txt/aas-05-1913.txt (624 pages)",
+  "rows": [
+    {
+      "key": "1913-08-01|EPISTOLAE|Levandis opificum|Ad R. P. D. Michaelem C. Vasquez, episcopum tit. Legionensem",
+      "date": "1913-08-01",
+      "category": "EPISTOLAE",
+      "incipit": "Levandis opificum",
+      "page": 424,
+      "rule": "dated",
+      "bodyLine": "Venerabilis Frater, salutem- et apostolicam benedictionem. — Levandis opificum angustiis fovendaeque in iisdem religioni opportune admodum factum ut perillustris civis Melchior Concha y Toro Societatem",
+      "header": "424 Acta Apostolicae Sedis. - Commentarium Officiale.",
+      "formula": "Datum Romae apud S. Petrum, die i mensis augusti anno MCMXIII, Pontificatus Nostri decimo. PIUS PP. X. IV. AD R. P. D. MICHAELEM C. VASQUEZ, EPISCOPUM TIT. LEGIONENSEM, PRAESI DEM VIRORUM COETUS REGEN"
+    }
+  ],
+  "unrecovered": [
+    {
+      "key": "1912-11|EPISTOLAE|Tuae sane|Ad R. P. D. Iosephum A. Archambeault, Joliettensium episcopu",
+      "date": "1912-11",
+      "category": "EPISTOLAE",
+      "incipit": "Tuae sane",
+      "reason": "several",
+      "candidates": [
+        29
+      ]
+    },
+    {
+      "key": "1912-12-12|LITTERAE APOSTOLICAE|Apostolatus munus|Erectio novi vicariatus aposto liei de Kivu in Africa. ¡25",
+      "date": "1912-12-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Apostolatus munus",
+      "reason": "several",
+      "candidates": [
+        25
+      ]
+    },
+    {
+      "key": "1913-01-23|EPISTOLAE|Una cum ofíiciosis|Ad R. P. D. Petrum E. Garcia Naranjo, archiepiscopum Limanum",
+      "date": "1913-01-23",
+      "category": "EPISTOLAE",
+      "incipit": "Una cum ofíiciosis",
+      "reason": "several",
+      "candidates": [
+        17,
+        30
+      ]
+    },
+    {
+      "key": "1913-01-28|LITTERAE APOSTOLICAE|Magno est semper|Erectio novi vicariatus apostolici de Banguelo, territorio N",
+      "date": "1913-01-28",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Magno est semper",
+      "reason": "several",
+      "candidates": [
+        233
+      ]
+    },
+    {
+      "key": "1913-02-10|LITTERAE APOSTOLICAE|Archicoenobium Casinense|Privilegia atque indulgentia in forma iubilaei pro inaugurat",
+      "date": "1913-02-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Archicoenobium Casinense",
+      "reason": "several",
+      "candidates": [
+        113
+      ]
+    },
+    {
+      "key": "1913-02-11|LITTERAE APOSTOLICAE|Salutare maxime|Adprobatio in perpetuum Constitutionum Congregationis Canoni",
+      "date": "1913-02-11",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Salutare maxime",
+      "reason": "several",
+      "candidates": [
+        117
+      ]
+    },
+    {
+      "key": "1913-02-23|LITTERAE APOSTOLICAE|Mandatum illud|Praefectura apostolica Tripolitana in vicariatum apostolicum",
+      "date": "1913-02-23",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Mandatum illud",
+      "reason": "several",
+      "candidates": [
+        234,
+        265
+      ]
+    },
+    {
+      "key": "1913-02|EPISTOLAE|Gratae Nobis|Ad R. P. D. Iosephum Angelucci, episcopum Civitatis Plebis, ",
+      "date": "1913-02",
+      "category": "EPISTOLAE",
+      "incipit": "Gratae Nobis",
+      "reason": "several",
+      "candidates": [
+        31
+      ]
+    },
+    {
+      "key": "1913-03-08|LITTERAE APOSTOLICAE|Magni faustiane|Indicitur universale Iubilaeum in memoriam pacis a Constanti",
+      "date": "1913-03-08",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Magni faustiane",
+      "reason": "none"
+    },
+    {
+      "key": "1913-03-23|EPISTOLAE|Quod propediem|Ad Vincentium card. Vannutelli, quem Parisios, ut saecularib",
+      "date": "1913-03-23",
+      "category": "EPISTOLAE",
+      "incipit": "Quod propediem",
+      "reason": "several",
+      "candidates": [
+        177
+      ]
+    },
+    {
+      "key": "1913-03-26|EPISTOLAE|Gratias vobis|Ad RR. PP. DD. Bernardum Herrera Restrepo, archiepiscopum Bo",
+      "date": "1913-03-26",
+      "category": "EPISTOLAE",
+      "incipit": "Gratias vobis",
+      "reason": "several",
+      "candidates": [
+        178
+      ]
+    },
+    {
+      "key": "1913-03-26|EPISTOLAE|In tanta|Ad virum illustrem Emmanuelem comitem De Torre Diaz, praesid",
+      "date": "1913-03-26",
+      "category": "EPISTOLAE",
+      "incipit": "In tanta",
+      "reason": "several",
+      "candidates": [
+        153,
+        178
+      ]
+    },
+    {
+      "key": "1913-03-30|LITTERAE APOSTOLICAE|Significat Nobis|Facultas erigendi societates titulo i I divini Infantis Prag",
+      "date": "1913-03-30",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Significat Nobis",
+      "reason": "several",
+      "candidates": [
+        152
+      ]
+    },
+    {
+      "key": "1913-03|EPISTOLAE|Ubi reipublicae|Ad R. P. D. Antonium Mendes Bello, patriarcham Lisbonensem, ",
+      "date": "1913-03",
+      "category": "EPISTOLAE",
+      "incipit": "Ubi reipublicae",
+      "reason": "several",
+      "candidates": [
+        420
+      ]
+    },
+    {
+      "key": "1913-04-28|EPISTOLAE|Laudari satis|Ad Franciscum Virgilium card. Dubillard, archiepiscopum Camb",
+      "date": "1913-04-28",
+      "category": "EPISTOLAE",
+      "incipit": "Laudari satis",
+      "reason": "several",
+      "candidates": [
+        209
+      ]
+    },
+    {
+      "key": "1913-04-28|LITTERAE APOSTOLICAE|Refert ad Nos|Sodalitas « Mariae reginae cordium », Romae erecta in sacell",
+      "date": "1913-04-28",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Refert ad Nos",
+      "reason": "several",
+      "candidates": [
+        485
+      ]
+    },
+    {
+      "key": "1913-04|EPISTOLAE|Inter publicas|Ad Dominicum card. Ferrata, archipresbyterum Lateranensem, q",
+      "date": "1913-04",
+      "category": "EPISTOLAE",
+      "incipit": "Inter publicas",
+      "reason": "several",
+      "candidates": [
+        180
+      ]
+    },
+    {
+      "key": "1913-04|EPISTOLAE|Quae nuper|Ad R. P. D. Germanum Breton, Antistitem domus pontificiae, r",
+      "date": "1913-04",
+      "category": "EPISTOLAE",
+      "incipit": "Quae nuper",
+      "reason": "several",
+      "candidates": [
+        179
+      ]
+    },
+    {
+      "key": "1913-05-03|EPISTOLAE|Bononiam nuper|Ad Iulium card. Boschi, Ferrariensium archiepiscopum, Comacl",
+      "date": "1913-05-03",
+      "category": "EPISTOLAE",
+      "incipit": "Bononiam nuper",
+      "reason": "several",
+      "candidates": [
+        268
+      ]
+    },
+    {
+      "key": "1913-05-03|EPISTOLAE|Iucunda te|Ad Desideratum cardinalem Mercier, Mechliniensium archiepisc",
+      "date": "1913-05-03",
+      "category": "EPISTOLAE",
+      "incipit": "Iucunda te",
+      "reason": "several",
+      "candidates": [
+        267
+      ]
+    },
+    {
+      "key": "1913-05-10|LITTERAE APOSTOLICAE|Ecclesiarum omnium|Erigitur novus vicariatus apostolicus, titulo de Fianarantso",
+      "date": "1913-05-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ecclesiarum omnium",
+      "reason": "several",
+      "candidates": [
+        235
+      ]
+    },
+    {
+      "key": "1913-05-10|LITTERAE APOSTOLICAE|Iun. ! S In pluribus|Indulgentiae perpetuae conceduntur sodalitati « Infantes dil",
+      "date": "1913-05-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Iun. ! S In pluribus",
+      "reason": "none"
+    },
+    {
+      "key": "1913-05-30|EPISTOLAE|Columbiae Episcoporum|Ad R. P. D. Bernardum Herrera Restrepo, Bogotensium archiepi",
+      "date": "1913-05-30",
+      "category": "EPISTOLAE",
+      "incipit": "Columbiae Episcoporum",
+      "reason": "several",
+      "candidates": [
+        269
+      ]
+    },
+    {
+      "key": "1913-06-05|EPISTOLAE|Vertitur tibi|Ad R. P. Iosephum Hiss, moderatorem societatis Marianae, qui",
+      "date": "1913-06-05",
+      "category": "EPISTOLAE",
+      "incipit": "Vertitur tibi",
+      "reason": "several",
+      "candidates": [
+        363
+      ]
+    },
+    {
+      "key": "1913-07-04|LITTERAE APOSTOLICAE|Felix catholicae|Praefectura apostolica de Urubamba in apostolicum vicariatum",
+      "date": "1913-07-04",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Felix catholicae",
+      "reason": "several",
+      "candidates": [
+        337
+      ]
+    },
+    {
+      "key": "1913-07-15|LITTERAE APOSTOLICAE|Nostra plurimum|Societas « ab oratione assidua pro Pontifice », Barcinone in",
+      "date": "1913-07-15",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Nostra plurimum",
+      "reason": "several",
+      "candidates": [
+        417
+      ]
+    },
+    {
+      "key": "1913-07-15|LITTERAE APOSTOLICAE|Per similes Litteras|Conceduntur indulgentiae plenariae et partiales archisodalit",
+      "date": "1913-07-15",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Per similes Litteras",
+      "reason": "several",
+      "candidates": [
+        385
+      ]
+    },
+    {
+      "key": "1913-07-16|EPISTOLAE|Aquinatis disciplinam|Ad R. P. Eduardum Hugon, sacerdotem ex Ordine Praedicatorum,",
+      "date": "1913-07-16",
+      "category": "EPISTOLAE",
+      "incipit": "Aquinatis disciplinam",
+      "reason": "several",
+      "candidates": [
+        487
+      ]
+    },
+    {
+      "key": "1913-07-16|EPISTOLAE|Gratias ex animo|Ad dominos Kintzinger, Ernest, Federspil, praesides, et Cuny",
+      "date": "1913-07-16",
+      "category": "EPISTOLAE",
+      "incipit": "Gratias ex animo",
+      "reason": "several",
+      "candidates": [
+        422
+      ]
+    },
+    {
+      "key": "1913-08-01|EPISTOLAE|Cum primum|Ad R. P. Hyacinthum Mariam Cormier, magistrum generalem Ordi",
+      "date": "1913-08-01",
+      "category": "EPISTOLAE",
+      "incipit": "Cum primum",
+      "reason": "several",
+      "candidates": [
+        254,
+        387
+      ]
+    },
+    {
+      "key": "1913-08-17|LITTERAE APOSTOLICAE|Exstat in loco|Archiconfraternitas sancti Christophori in oppido « Saint-Ch",
+      "date": "1913-08-17",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Exstat in loco",
+      "reason": "several",
+      "candidates": [
+        418
+      ]
+    },
+    {
+      "key": "1913-09-25|EPISTOLAE|Operam sane doctam|Ad R. P. Iosephum Chiaudano, sacerdotem e Societate Iesu ; e",
+      "date": "1913-09-25",
+      "category": "EPISTOLAE",
+      "incipit": "Operam sane doctam",
+      "reason": "several",
+      "candidates": [
+        488
+      ]
+    },
+    {
+      "key": "1913-10-23|MOTU PROPRIO|Abhinc duos annos|De Officiis divinis novo aliqua ex parte modo ordinandis",
+      "date": "1913-10-23",
+      "category": "MOTU PROPRIO",
+      "incipit": "Abhinc duos annos",
+      "reason": "several",
+      "candidates": [
+        449
+      ]
+    },
+    {
+      "key": "1913-10|EPISTOLAE|Nolumus studia|Ad Leonem Adolfum card. Amette, archiepiscopum Parisiensem, ",
+      "date": "1913-10",
+      "category": "EPISTOLAE",
+      "incipit": "Nolumus studia",
+      "reason": "several",
+      "candidates": [
+        489
+      ]
+    },
+    {
+      "key": "1913-11-12|EPISTOLAE|Consilium aperuistis|Ad RR. PP. DD. Archiepiscopos et Episcopos Mexicanae reipubl",
+      "date": "1913-11-12",
+      "category": "EPISTOLAE",
+      "incipit": "Consilium aperuistis",
+      "reason": "several",
+      "candidates": [
+        546
+      ]
+    },
+    {
+      "key": "1913-11|EPISTOLAE|ANNO MENSE ! DIE ¡PAG|",
+      "date": "1913-11",
+      "category": "EPISTOLAE",
+      "incipit": "ANNO MENSE ! DIE ¡PAG",
+      "reason": "none"
+    },
+    {
+      "key": "1913-12|ALLOCUTIONES|Febr|! 23 La vostra visita. - Ad cives Januenses qui Romam ad bea",
+      "date": "1913-12",
+      "category": "ALLOCUTIONES",
+      "incipit": "Febr",
+      "reason": "none"
+    },
+    {
+      "key": "1913-12|ALLOCUTIONES|La vostra presenza|Ad christifideles, qui occasione solemnium saecularium pacis",
+      "date": "1913-12",
+      "category": "ALLOCUTIONES",
+      "incipit": "La vostra presenza",
+      "reason": "several",
+      "candidates": [
+        58,
+        147
+      ]
+    },
+    {
+      "key": "1913-12|EPISTOLAE|Alberto Tesnière|Ad R. D. Nicolaum Sebastiani, Doctorem litteris latinis trad",
+      "date": "1913-12",
+      "category": "EPISTOLAE",
+      "incipit": "Alberto Tesnière",
+      "reason": "several",
+      "candidates": [
+        516
+      ]
+    },
+    {
+      "key": "1913-12|EPISTOLAE|Communes vestrae|Ad RR. PP. DD. Archiepiscopum Caracensem ceterosque de Venez",
+      "date": "1913-12",
+      "category": "EPISTOLAE",
+      "incipit": "Communes vestrae",
+      "reason": "several",
+      "candidates": [
+        547
+      ]
+    }
+  ]
+}

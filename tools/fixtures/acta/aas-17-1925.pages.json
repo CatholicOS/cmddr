@@ -1,0 +1,534 @@
+{
+  "source": "1925",
+  "generated": "2026-09-20",
+  "text": "~/development/sources/AAS/txt/aas-17-1925.txt (728 pages)",
+  "rows": [
+    {
+      "key": "1924-11-08|LITTERAE APOSTOLICAE|Exstat in Bononiensium civitate|Titulus ac privilegia Basilicae minoris conferuntur ecclesia",
+      "date": "1924-11-08",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Exstat in Bononiensium civitate",
+      "page": 8,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Exstat in Bononiensium civitate,",
+      "header": "8 Acta Apostolicae Sedis - Gommentarmm Officiale"
+    },
+    {
+      "key": "1924-12-12|LITTERAE APOSTOLICAE|Limana in civitate|Ecclesia Beatae Mariae Virginis de Mercede, in civitate Lima",
+      "date": "1924-12-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Limana in civitate",
+      "page": 9,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Limana in civitate quoddam, Beatae",
+      "header": "Acta Pii PP. XI 9"
+    },
+    {
+      "key": "1924-12-19|LITTERAE APOSTOLICAE|Inter praecipua|Basilicae minoris titulo condecoratur ecclesia Beatae Mariae",
+      "date": "1924-12-19",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Inter praecipua",
+      "page": 131,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Inter praecipua sacra templa, quibus",
+      "header": "Acta PUPP. XI 131"
+    },
+    {
+      "key": "1924-12-23|LITTERAE APOSTOLICAE|Sancto Francisco Assisiensi|Titulus ac privilegia Basilicae minoris conferuntur ecclesia",
+      "date": "1924-12-23",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Sancto Francisco Assisiensi",
+      "page": 97,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Sancto Francisco Assisiensi exstat",
+      "header": "Acta Pii PP. XI 97"
+    },
+    {
+      "key": "1925-02-11|LITTERAE APOSTOLICAE|Quae catholico nomini|Erectio praefecturae apostolicae de « Tsingtao » in Sinis, d",
+      "date": "1925-02-11",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae catholico nomini",
+      "page": 226,
+      "rule": "fuzzy",
+      "bodyLine": "Ad futuram rei memoriam. — Quae catholico uomini aeternaeque",
+      "header": "226 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1925-02-20|LITTERAE APOSTOLICAE|Apostolatus supremi|Certi assignantur fines inter vicariatum apostolicum « de Ga",
+      "date": "1925-02-20",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Apostolatus supremi",
+      "page": 132,
+      "rule": "unique",
+      "bodyLine": "' Ad futuram rei memoriam. — Apostolatus supremi officium Nobis divinitus commissum postulat ut in omnes christiani orbis regiones, vel longo",
+      "header": "132 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1925-03|EPISTOLAE|Quod Sanctuarii|Ad Emum P. D. Eugenium, tit. Ss. Silvestri et Martini, S. E.",
+      "date": "1925-03",
+      "category": "EPISTOLAE",
+      "incipit": "Quod Sanctuarii",
+      "page": 239,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili Noster, salutem et apostolicam benedictionem. — Quod",
+      "header": "Acta Pii PPrXI 239"
+    },
+    {
+      "key": "1925-04-19|LITTERAE APOSTOLICAE|Divina gratia|Ven. Dei Servus Antonius Maria Gianelli, Episcopus Bobiensis",
+      "date": "1925-04-19",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Divina gratia",
+      "page": 176,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Divina gratia, quae non destruit sed",
+      "header": "176 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1925-04-26|LITTERAE APOSTOLICAE|Inter sollertes|Ven. Dei Servus Vincentius Maria Strambi, Episcopus Macerate",
+      "date": "1925-04-26",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Inter sollertes",
+      "page": 180,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Inter sollertes navosque operarios,",
+      "header": "180 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1925-04|LITTERAE APOSTOLICAE|In finibus|Titulus Basilicae minoris pro ecclesia metropolitana Platens",
+      "date": "1925-04",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "In finibus",
+      "page": 229,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — In finibus Eeipublieae Bolivianae",
+      "header": "Acta Pii PP. XI 229"
+    },
+    {
+      "key": "1925-05-10|LITTERAE APOSTOLICAE|Adolevit Martyrum|Ven. Servae Dei Iphigenia a Sancto Matthaeo, e Congregatione",
+      "date": "1925-05-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Adolevit Martyrum",
+      "page": 234,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Adolevit Martyrum purpurata sanguine Ecclesia, sed fortissimorum heroum seriem, qui, effuso sanguine,",
+      "header": "234 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1925-05-12|LITTERAE APOSTOLICAE|In omnes catholici|Separato territorio e vicariatu apostolico de « Changsha », ",
+      "date": "1925-05-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "In omnes catholici",
+      "page": 444,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — In omnes catholici orbis regiones, licet",
+      "header": "444 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1925-05-12|LITTERAE APOSTOLICAE|In omnes orbis|Novi statuuntur fines vicariatibus de Birmania orientali et ",
+      "date": "1925-05-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "In omnes orbis",
+      "page": 445,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — In omnes orbis catholici partes oculos",
+      "header": "Acta Pii PP. XI 445"
+    },
+    {
+      "key": "1925-05-13|LITTERAE APOSTOLICAE|Cum venerabilis frater|Immutatur nomen vicariatus apostolici olim de «Unjanyembé», ",
+      "date": "1925-05-13",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Cum venerabilis frater",
+      "page": 447,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Cum venerabilis frater Henricus Léonard^ Missionariis Africae, Episcopus titularis Tipasitanus et Vicarius Apostolicus de TJnjanyembé, in Africa centrali, variis de causis, nuper postulaverit ut nomen dictae Missionis loco de TJnjanyembé ex nunc de Tabora",
+      "header": "Acta Pii PP. XI 447"
+    },
+    {
+      "key": "1925-05|LITTERAE APOSTOLICAE|Quintus supra sexagesimum|Ven. Dei Servus Ioseph Cafasso, presbyter saecularis et Conl",
+      "date": "1925-05",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quintus supra sexagesimum",
+      "page": 230,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Quintus supra sexagesimum proximo mense iunio annus recurrit, ex quo discessit ex hae mortali vita",
+      "header": "230 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1925-06-14|LITTERAE APOSTOLICAE|Deus, qui infirma|Ven. Dei Serva M. Bernarda Soubirous, e Sororibus a caritate",
+      "date": "1925-06-14",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Deus, qui infirma",
+      "page": 296,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Deus, qui infirma mundi eligit ut",
+      "header": "296 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1925-06-14|LITTERAE APOSTOLICAE|Eapallensi in civitate|Titulo et privilegiis Basilicae minoris exornatur ecclesia p",
+      "date": "1925-06-14",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Eapallensi in civitate",
+      "page": 301,
+      "rule": "fuzzy",
+      "bodyLine": "Ad perpetuam rei memoriam. — Rapallensi in civitate exstat paroecia",
+      "header": "Acta Pii PP. XI 301"
+    },
+    {
+      "key": "1925-06|LITTERAE APOSTOLICAE|Flores apparuerunt|Ven. Dei Famula Maria Michaela a Ssmo Sacramento, fundatrix ",
+      "date": "1925-06",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Flores apparuerunt",
+      "page": 292,
+      "rule": "fuzzy",
+      "bodyLine": "Ad perpetuam rei memoriam. — Plores apparuerunt in terra nostra,",
+      "header": "292 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1925-06|LITTERAE APOSTOLICAE|Turonensi in civitate|Titulo et privilegiis Basilicae minoris honestatur ecclesia ",
+      "date": "1925-06",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Turonensi in civitate",
+      "page": 504,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Turonensi in civitate ad antiquum",
+      "header": "504 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1925-06|LITTERAE APOSTOLICAE|Venerabilis frater Hippdlytus|Ecclesia paroecialis Beatae Mariae Virginis Lapurdensis, in ",
+      "date": "1925-06",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Venerabilis frater Hippdlytus",
+      "page": 529,
+      "rule": "fuzzy",
+      "bodyLine": "Ad perpetuam rei memoriam. — Venerabilis frater Hippolytus de la",
+      "header": "Acta Pii PP. XI 529"
+    },
+    {
+      "key": "1925-07-12|LITTERAE APOSTOLICAE|Ab exordiis suis|Ven. Dei Famulus Petrus Iulianus Eymard, fundator Congregati",
+      "date": "1925-07-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ab exordiis suis",
+      "page": 370,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Ab exordiis suis ad nostram usque aetatem per tot saecula semper Ecclesia Christi Sanctorum numero aucta est,",
+      "header": "370 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1925-07|LITTERAE APOSTOLICAE|E Christi latere|Ven. Dei Famuli Laurentius Imbert, episcopus Capsensis, et S",
+      "date": "1925-07",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "E Christi latere",
+      "page": 366,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — E Christi latere egressa, ac pretioso",
+      "header": "366 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1925-12-25|CONSTITUTIONES APOSTOLICAE|Servatoris Iesu Christi|Extensionis Iubilaei tertii ac vicesimi ad totum catholicum ",
+      "date": "1925-12-25",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Servatoris Iesu Christi",
+      "page": 611,
+      "rule": "unique",
+      "bodyLine": "Servatoris IESU CHRISTI benignitati habemus ex animo gratiam, quod per Annum sacrum, quem usitato heri sollemnissimoque Eomanae Ecclesiae ritu conclusimus, et Nobis paene",
+      "header": "Acta Pii PP. XI 611"
+    }
+  ],
+  "unrecovered": [
+    {
+      "key": "1924-08|EPISTOLAE|Tam illustri loco|Ad B. P. D. Henricum van De Wetering, archiepiscopum Ultraie",
+      "date": "1924-08",
+      "category": "EPISTOLAE",
+      "incipit": "Tam illustri loco",
+      "reason": "outside-runs",
+      "candidates": [
+        11
+      ]
+    },
+    {
+      "key": "1924-11-18|EPISTOLAE|Tertium e tota natione|Ad B. P. D. Raphaelem Edwards Salas, Episcopum tit. Dodonens",
+      "date": "1924-11-18",
+      "category": "EPISTOLAE",
+      "incipit": "Tertium e tota natione",
+      "reason": "outside-runs",
+      "candidates": [
+        12
+      ]
+    },
+    {
+      "key": "1924-12-05|LITTERAE APOSTOLICAE|Ex hac|Mutantur fines apostolicorum vicariatuum de Mariannhill et N",
+      "date": "1924-12-05",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ex hac",
+      "reason": "several",
+      "candidates": [
+        63,
+        227
+      ]
+    },
+    {
+      "key": "1924-12|EPISTOLAE|A te nuper|Ad B. P. D. Aloysium Mariam Benziger, episcopum Quilonensem,",
+      "date": "1924-12",
+      "category": "EPISTOLAE",
+      "incipit": "A te nuper",
+      "reason": "outside-runs",
+      "candidates": [
+        16
+      ]
+    },
+    {
+      "key": "1924-12|EPISTOLAE|Cum postridie|Ad B. P. D. Ernestum Franciscum Geurts, episcopum tit. Rhino",
+      "date": "1924-12",
+      "category": "EPISTOLAE",
+      "incipit": "Cum postridie",
+      "reason": "outside-runs",
+      "candidates": [
+        15
+      ]
+    },
+    {
+      "key": "1924-12|EPISTOLAE|Paucis diebus ante|Ad B. P. D. Franciscum Xaverium Schoepfer, episcopum Tarbien",
+      "date": "1924-12",
+      "category": "EPISTOLAE",
+      "incipit": "Paucis diebus ante",
+      "reason": "outside-runs",
+      "candidates": [
+        13
+      ]
+    },
+    {
+      "key": "1924-12|LITTERAE APOSTOLICAE|Sancto Antonino Abbati|Titulo ac privilegiis Basilicae minoris honestatur ecclesia ",
+      "date": "1924-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Sancto Antonino Abbati",
+      "reason": "header-mismatch",
+      "candidates": [
+        62
+      ]
+    },
+    {
+      "key": "1925-01-06|CONSTITUTIONES APOSTOLICAE|Inter praecipuas|~ Erectionis provinciae ecclesiasticae Sancti Christophori d",
+      "date": "1925-01-06",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Inter praecipuas",
+      "reason": "header-mismatch",
+      "candidates": [
+        289
+      ]
+    },
+    {
+      "key": "1925-01-26|LITTERAE APOSTOLICAE|Monachorum vita|Approbatio constitutionum Ordinis Cisterciensium strictioris",
+      "date": "1925-01-26",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Monachorum vita",
+      "reason": "header-mismatch",
+      "candidates": [
+        64
+      ]
+    },
+    {
+      "key": "1925-01|SOLEMNIA CANONIZATIONUM||Inter Sanctam Sedem et Bavariae Eempublicam Sollemnis Conven",
+      "date": "1925-01",
+      "category": "SOLEMNIA CANONIZATIONUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1925-02-13|LITTERAE APOSTOLICAE|Ex hac|Amplificatur praefectura apostolica de « Gibuti » in Africa ",
+      "date": "1925-02-13",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ex hac",
+      "reason": "several",
+      "candidates": [
+        63,
+        227
+      ]
+    },
+    {
+      "key": "1925-02-26|LITTERAE APOSTOLICAE|Expedit|Ex dismembratione vicariatus apostolici de « Chaco » efforma",
+      "date": "1925-02-26",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Expedit",
+      "reason": "header-mismatch",
+      "candidates": [
+        228
+      ]
+    },
+    {
+      "key": "1925-03-30|SACRUM CONSISTORIUM||Consistorium secretum - Camerariatus sacri Collegii S. R. E.",
+      "date": "1925-03-30",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1925-04|SACRUM CONSISTORIUM||Consistorium publicum - Peroratio Causarum Canonizationis Be",
+      "date": "1925-04",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1925-04|SACRUM CONSISTORIUM||Consistorium semipublicum de canonizatione BB. Petri Canisii",
+      "date": "1925-04",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1925-05-12|LITTERAE APOSTOLICAE|Supremi apostolatus|Dismembrato territorio e praefectura apostolica de « Katanga",
+      "date": "1925-05-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Supremi apostolatus",
+      "reason": "header-mismatch",
+      "candidates": [
+        446
+      ]
+    },
+    {
+      "key": "1925-05-17|SOLEMNIA CANONIZATIONUM||Sanctae Teresiae ab Infante Iesu, Virginis,",
+      "date": "1925-05-17",
+      "category": "SOLEMNIA CANONIZATIONUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1925-05-19|LITTERAE APOSTOLICAE|Ex officio|Erigitur Delegatio Apostolica Indosinensis",
+      "date": "1925-05-19",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ex officio",
+      "reason": "several",
+      "candidates": [
+        175,
+        291
+      ]
+    },
+    {
+      "key": "1925-05-19|LITTERAE APOSTOLICAE|Inter praestantiores|Titulo et privilegiis Basilicae minoris honestatur ecclesia ",
+      "date": "1925-05-19",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Inter praestantiores",
+      "reason": "header-mismatch",
+      "candidates": [
+        448
+      ]
+    },
+    {
+      "key": "1925-05-21|SOLEMNIA CANONIZATIONUM||Sancti Petri Canisii, Sacerdotis e Societate Iesu, Ecclesiae",
+      "date": "1925-05-21",
+      "category": "SOLEMNIA CANONIZATIONUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1925-05-24|SOLEMNIA CANONIZATIONUM||Sanctarum Virginum Mariae Magdalenae Postel et Magdalenae So",
+      "date": "1925-05-24",
+      "category": "SOLEMNIA CANONIZATIONUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1925-05-31|LITTERAE DECRETALES|Hoc sacro anno|Beatus Ioannes Eudes, Missionarius apostolicus et institutor",
+      "date": "1925-05-31",
+      "category": "LITTERAE DECRETALES",
+      "incipit": "Hoc sacro anno",
+      "reason": "header-mismatch",
+      "candidates": [
+        482
+      ]
+    },
+    {
+      "key": "1925-05-31|SOLEMNIA CANONIZATIONUM||Sanctorum Conf essorum Ioannis Baptistae Mariae Vianney, Par",
+      "date": "1925-05-31",
+      "category": "SOLEMNIA CANONIZATIONUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1925-06-10|CONSTITUTIONES APOSTOLICAE|Vertit in animarum|Dismembrationis et unionis partis territorii dioecesium Medi",
+      "date": "1925-06-10",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Vertit in animarum",
+      "reason": "outside-runs",
+      "candidates": [
+        569
+      ]
+    },
+    {
+      "key": "1925-06-21|LITTERAE APOSTOLICAE|Pretioso purpúrala|Ven. Dei Famuli Ioannes de Brébeuf, Isaacus Jogues, Gabriel ",
+      "date": "1925-06-21",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Pretioso purpúrala",
+      "reason": "none"
+    },
+    {
+      "key": "1925-06|SOLEMNIA CANONIZATIONUM||Inter Sanctam Sedem et Poloniae Eempublicam Sollemnis Conven",
+      "date": "1925-06",
+      "category": "SOLEMNIA CANONIZATIONUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1925-07|LITTERAE APOSTOLICAE|Inter vetustissima|Titulus et privilegia Basilicae minoris collata ecclesiae S.",
+      "date": "1925-07",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Inter vetustissima",
+      "reason": "outside-runs",
+      "candidates": [
+        571
+      ]
+    },
+    {
+      "key": "1925-07|LITTERAE APOSTOLICAE|Satis constat|Ecclesia cathedralis Spirensis, in honorem Beatae Mariae Vir",
+      "date": "1925-07",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Satis constat",
+      "reason": "outside-runs",
+      "candidates": [
+        572
+      ]
+    },
+    {
+      "key": "1925-07|LITTERAE APOSTOLICAE|Sub titulo|Monasterium Ordinis S. Benedicti, Beatae Mariae Virgini de e",
+      "date": "1925-07",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Sub titulo",
+      "reason": "several",
+      "candidates": [
+        232,
+        530
+      ]
+    },
+    {
+      "key": "1925-10-28|CONSTITUTIONES APOSTOLICAE|Vixdum Poloniae unitas|De nova dioecesium latini ritus circumscriptione in ditione ",
+      "date": "1925-10-28",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Vixdum Poloniae unitas",
+      "reason": "header-mismatch",
+      "candidates": [
+        521
+      ]
+    },
+    {
+      "key": "1925-12-14|SACRUM CONSISTORIUM||Consistorium secretum - Ssmi Domini Nostri Allocutio - Creat",
+      "date": "1925-12-14",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1925-12-17|SACRUM CONSISTORIUM|Consistorium publicum - Impositio Rubri Galeri...|",
+      "date": "1925-12-17",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": "Consistorium publicum - Impositio Rubri Galeri...",
+      "reason": "none"
+    },
+    {
+      "key": "1925-12-17|SACRUM CONSISTORIUM||Consistorium secretum - Provisio Ecclesiarum - Postulatio Pa",
+      "date": "1925-12-17",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    }
+  ]
+}

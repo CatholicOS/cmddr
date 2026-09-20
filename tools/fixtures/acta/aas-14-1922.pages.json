@@ -1,0 +1,676 @@
+{
+  "source": "1922",
+  "generated": "2026-09-20",
+  "text": "~/development/sources/AAS/txt/aas-14-1922.txt (774 pages)",
+  "rows": [
+    {
+      "key": "1921-11-14|EPISTOLAE|Maximus ille|Ad R. P. D. Ioannem Gamberoni, archiepiscopum Vercellensium ",
+      "date": "1921-11-14",
+      "category": "EPISTOLAE",
+      "incipit": "Maximus ille",
+      "page": 38,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem.— Maximus ille venerationis cultus erga sanctissimam Dei Parentem, qui a",
+      "header": "38 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1921-11|EPISTOLAE|ACTA, vol|XIV, n. 18. — 27-12-S2Î. ANNO) MENSE DIE exteris provehendis",
+      "date": "1921-11",
+      "category": "EPISTOLAE",
+      "incipit": "ACTA, vol",
+      "page": 497,
+      "rule": "unique",
+      "bodyLine": "accepta beneficia obliterare, non prae se ferre palam, imo non gloriari.",
+      "header": "Acta Pii PP. XI 497"
+    },
+    {
+      "key": "1921-12-20|EPISTOLAE|In epistola|Ad Emum P. D. Ioannem, tit. Sancti Eusebii, S. R. E. presb. ",
+      "date": "1921-12-20",
+      "category": "EPISTOLAE",
+      "incipit": "In epistola",
+      "page": 39,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — In epistola, quam coniunctim ad Nos dedistis Budapestini congregati, ornastis Nos iudicii vestri testimonio et, adventante",
+      "header": "Acta Benedicti PP. XV 39"
+    },
+    {
+      "key": "1921-12|EPISTOLAE|Datis hodierna die|Ad Emum P. D. Augustum, titulo sanctae Caeeiliae, S. R. E. p",
+      "date": "1921-12",
+      "category": "EPISTOLAE",
+      "incipit": "Datis hodierna die",
+      "page": 153,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili Noster, salutem et apostolicam benedictionem. — Datis",
+      "header": "Acta Benedicti PP. XV 153"
+    },
+    {
+      "key": "1922-03-14|LITTERAE APOSTOLICAE|Christiani gregis|Divisio vicariatus apostolici Mongoliae occiduo-meridionalis",
+      "date": "1922-03-14",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Christiani gregis",
+      "page": 271,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Christiani gregis sollicitudo, quem",
+      "header": "Acta Pii PP. XI 271"
+    },
+    {
+      "key": "1922-03-18|EPISTOLAE|Petis tu quidem|Ad R. P. Eliam Magennis, moderatorem generalem Ordinis Carme",
+      "date": "1922-03-18",
+      "category": "EPISTOLAE",
+      "incipit": "Petis tu quidem",
+      "page": 274,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Petis tu quidem a Nobis ut, labente saeculo sexto ex quo Sabbatinum Privilegium",
+      "header": "274 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1922-03-31|EPISTOLAE|Non potuit|Ad Emum P. D. Antonium, tit. Ss. Marcellini et Petri, S. R. ",
+      "date": "1922-03-31",
+      "category": "EPISTOLAE",
+      "incipit": "Non potuit",
+      "page": 376,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Non potuit Nobis non esse vehementer iucunda significatio pietatis vestrae. Vix dum, miserentis Dei consilio, evecti sumus",
+      "header": "376 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1922-03-31|EPISTOLAE|Quamquam haud sane|Ad R. P. Lucam a Maria Sanctissima, praepositum generalem, e",
+      "date": "1922-03-31",
+      "category": "EPISTOLAE",
+      "incipit": "Quamquam haud sane",
+      "page": 275,
+      "rule": "unique",
+      "bodyLine": "Dilecti filii, salutem et apostolicam benedictionem. — Quamquam",
+      "header": "Acta Pii PP. XI 275"
+    },
+    {
+      "key": "1922-03|EPISTOLAE|Cum alia|Ad R. P. Iosephum Antonium a S. Ioanne in Persiceto, Fratrum",
+      "date": "1922-03",
+      "category": "EPISTOLAE",
+      "incipit": "Cum alia",
+      "page": 225,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem.— Cum alia, quae",
+      "header": "Acta Pii PP. XI 225"
+    },
+    {
+      "key": "1922-03|EPISTOLAE|Fausta profecto|Ad R. P. Ioannem Raffln, Societatis Mariae praepositum gener",
+      "date": "1922-03",
+      "category": "EPISTOLAE",
+      "incipit": "Fausta profecto",
+      "page": 336,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Fausta profecto atque iucunda vobis erit dies ix huius mensis; exibit enim tum",
+      "header": "336 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1922-03|EPISTOLAE|Se a codesto|Ad virum principem Camillum Franciscum Massimo: de solemniis",
+      "date": "1922-03",
+      "category": "EPISTOLAE",
+      "incipit": "Se a codesto",
+      "page": 148,
+      "rule": "unique",
+      "bodyLine": "Se a codesto illustre Comitato Romano per le feste del terzo centenario dalla canonizzazione di san Filippo Neri fu tanto opportunamente",
+      "header": "148 Acta Apostolicae Sedis .- Commentarium Officiale"
+    },
+    {
+      "key": "1922-04-18|EPISTOLAE|Pastoralis vigilantiae tuae|Ad Enium P. D. Gustavum Fridericum, tit. S. Marci, S. R. E. ",
+      "date": "1922-04-18",
+      "category": "EPISTOLAE",
+      "incipit": "Pastoralis vigilantiae tuae",
+      "page": 337,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili Noster, salutem et apostolicam benedictionem. — Pastoralis vigilantiae tuae hoc etiam diligimus fructum, dioecesanum conventum eo indictum proposito, ut cleri populique tui consilia ac studia",
+      "header": "Acta Pii PP. XI 337"
+    },
+    {
+      "key": "1922-04-25|EPISTOLAE|Quandoquidem|Ad Emos PP. DD. Gulielmum, tit. Sancti Clementis, S. R. E. c",
+      "date": "1922-04-25",
+      "category": "EPISTOLAE",
+      "incipit": "Quandoquidem",
+      "page": 423,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Quandoquidem probe novimus quantum valeant catholica Instituta ad animos mentesque recte conformandos, facere non possumus, ab ipso Pontificatus Nostri initio, quin omnes curas cogitationesque in ea Athenaea nobilissima conferimus, quae, ut ista studiorum",
+      "header": "Acta Pii PP. XI 423"
+    },
+    {
+      "key": "1922-04-25|LITTERAE APOSTOLICAE|Exigit apostolicum munus|Diviso territorio vicariatus apostolici de Kivu, eriguntur v",
+      "date": "1922-04-25",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Exigit apostolicum munus",
+      "page": 373,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Exigit apostolicum munus, quo",
+      "header": "Acta Pii PP. XI 373"
+    },
+    {
+      "key": "1922-04|EPISTOLAE|In eam|Ad R. P. D. Paschalem Gagliardi, archiepiscopum Sypontinum, ",
+      "date": "1922-04",
+      "category": "EPISTOLAE",
+      "incipit": "In eam",
+      "page": 496,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — In eam",
+      "header": "496 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1922-05-02|LITTERAE APOSTOLICAE|Penes oppidulum|Sanctuarium B. M. V. in oppido Aspricollis, archidioecesis M",
+      "date": "1922-05-02",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Penes oppidulum",
+      "page": 374,
+      "rule": "fuzzy",
+      "bodyLine": "Ad perpetuam rei memoriam. — Penes oppiduium Aspricollis vulgo",
+      "header": "374 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1922-05|EPISTOLAE|Novos ac veteres|Ad R. P. D. Franciscum Ciceri, episcopum Papiensium : de nat",
+      "date": "1922-05",
+      "category": "EPISTOLAE",
+      "incipit": "Novos ac veteres",
+      "page": 497,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem.t — Novos",
+      "header": "Acta Pii PP. XI 497"
+    },
+    {
+      "key": "1922-07-25|EPISTOLAE|Cum annos|Ad R. P. D. Andream Caron, archiepiscopum tit. Chalcedonense",
+      "date": "1922-07-25",
+      "category": "EPISTOLAE",
+      "incipit": "Cum annos",
+      "page": 636,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Cum",
+      "header": "636 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1922-08-09|LITTERAE APOSTOLICAE|Late iam|Erigitur Apostolica Delegatio in Sinis",
+      "date": "1922-08-09",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Late iam",
+      "page": 635,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Late iam per SinenSem regionem",
+      "header": "Acta Pii PP. XI 635"
+    },
+    {
+      "key": "1922-08-17|EPISTOLAE|Norunt omnes|Ad Emum P. D. Petrum, tit. Sancti Laurentii in Lucina, S. R.",
+      "date": "1922-08-17",
+      "category": "EPISTOLAE",
+      "incipit": "Norunt omnes",
+      "page": 544,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili Noster, salutem et apostolicam benedictionem. — Norunt",
+      "header": "544 Acta Apostolicae Sedis r- Commentarium Officiale"
+    },
+    {
+      "key": "1922-08-21|LITTERAE APOSTOLICAE|Vetustissima inter|Titulus basilicae minoris pro ecclesia praepositurali et par",
+      "date": "1922-08-21",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Vetustissima inter",
+      "page": 542,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Vetustissima inter sanctuaria, quibus Bergomensis dioecesis nobilitatur, iure merito accensenda est praeposituralis et paroecialis ecclesia ad Sancti Martini in civitate vulgo",
+      "header": "542 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1922-09-10|EPISTOLAE|Nella imminenza|Ad Emum P. D. Petrum, tit. S. Chrysogoni, S. R. E. presb. ca",
+      "date": "1922-09-10",
+      "category": "EPISTOLAE",
+      "incipit": "Nella imminenza",
+      "page": 587,
+      "rule": "unique",
+      "bodyLine": "Diletto figlio Nostro, salute ed apostolica, benedizione. — Nella",
+      "header": "Acta Pii PP. XI 587"
+    },
+    {
+      "key": "1922-09-14|EPISTOLAE|Decessor noster|Ad R. P. D. Vlodimirum Ledóchowski, S. I. Praepositum Genera",
+      "date": "1922-09-14",
+      "category": "EPISTOLAE",
+      "incipit": "Decessor noster",
+      "page": 147,
+      "rule": "unique",
+      "bodyLine": "Pontificis, abdicasset, idem proximus fel. rec. decessor Noster Benedictus XV putavit rem se tempestivam facturum, si in illius locum, munus et iura ipsum Ministrum Ordinis Generalem suffecisset, et Sanctuarium reliquasque sacras aedes, quae in huius veluti corpore inhaerent,",
+      "header": "Acta Pii PP. XI 147"
+    },
+    {
+      "key": "1922-09|EPISTOLAE|Le haut intérêt|Ad illustrem virum doctorem Murray Butler, praesidem Univers",
+      "date": "1922-09",
+      "category": "EPISTOLAE",
+      "incipit": "Le haut intérêt",
+      "page": 586,
+      "rule": "unique",
+      "bodyLine": "Le haut intérêt que le Saint-Siège a toujours porté à la création",
+      "header": "586 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1922-10-10|EPISTOLAE|La devozione|Ad R. P. Philippum Rinaldi, Piae Societatis Salesianae recto",
+      "date": "1922-10-10",
+      "category": "EPISTOLAE",
+      "incipit": "La devozione",
+      "page": 637,
+      "rule": "unique",
+      "bodyLine": "Diletto figlio, salute ed apostolica benedizione. — La devozione profonda che nutrimmo fino dai primi anni della Nostra vita al Cuore Sacratissimo di Gesù, centro di amore eterno ed infinito, e sorgente viva di",
+      "header": "Acta Pii PP. XI 637"
+    },
+    {
+      "key": "1922-10-21|LITTERAE APOSTOLICAE|Venetae Reipublicae|Templum Ss. Ioannis et Pauli, Venetiis, basilicae minoris ti",
+      "date": "1922-10-21",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Venetae Reipublicae",
+      "page": 584,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Venetae Reipublicae moderatores,",
+      "header": "584 Acta Apostolicae Sedis, - Commentarium Officiale"
+    },
+    {
+      "key": "1922-12-11|SACRUM CONSISTORIUM|Consistorium secretum|Camerariatus Sacri Collegii",
+      "date": "1922-12-11",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": "Consistorium secretum",
+      "page": 609,
+      "rule": "unique",
+      "bodyLine": "Consistorium secretum, cuius acta ex ordine referuntur:",
+      "header": "Amuis XIV - Vol. XIV 15 Decembris 1922 Num. 17"
+    }
+  ],
+  "unrecovered": [
+    {
+      "key": "1921-10-15|EPISTOLAE|Libenter quidem|Ad R. P. D. Petrum Pisani, archiepiscopum tit. Constantiense",
+      "date": "1921-10-15",
+      "category": "EPISTOLAE",
+      "incipit": "Libenter quidem",
+      "reason": "outside-runs",
+      "candidates": [
+        7
+      ]
+    },
+    {
+      "key": "1921-11-14|EPISTOLAE|Con particolare soddisfazione|Ad virum principem Camillum Franciscum Massimo: de solemniis",
+      "date": "1921-11-14",
+      "category": "EPISTOLAE",
+      "incipit": "Con particolare soddisfazione",
+      "reason": "header-mismatch",
+      "candidates": [
+        152
+      ]
+    },
+    {
+      "key": "1921-11-14|EPISTOLAE|Non ab re|Ad R. P. D. Amadeum Casabona, episcopum Clavarensium : occas",
+      "date": "1921-11-14",
+      "category": "EPISTOLAE",
+      "incipit": "Non ab re",
+      "reason": "outside-runs",
+      "candidates": [
+        12
+      ]
+    },
+    {
+      "key": "1921-11|EPISTOLAE|Libenter admodum|Ad R. P. Paulum Manna, seminarii Ducentani « a Sacro Corde I",
+      "date": "1921-11",
+      "category": "EPISTOLAE",
+      "incipit": "Libenter admodum",
+      "reason": "none"
+    },
+    {
+      "key": "1921-12-13|EPISTOLAE|Iucundum sane|Ad RR. PP. DD. Basilium Suciu, archiepiscopum Albae-Iuliense",
+      "date": "1921-12-13",
+      "category": "EPISTOLAE",
+      "incipit": "Iucundum sane",
+      "reason": "outside-runs",
+      "candidates": [
+        155,
+        156
+      ]
+    },
+    {
+      "key": "1921-12|EPISTOLAE|Con benevolenza|Ad egregium virum Bartholum Longo, de eodem argumente . . . ",
+      "date": "1921-12",
+      "category": "EPISTOLAE",
+      "incipit": "Con benevolenza",
+      "reason": "outside-runs",
+      "candidates": [
+        154
+      ]
+    },
+    {
+      "key": "1921-12|EPISTOLAE|Consilium|Ad R. P. D. Aloisium Ferri, episcopum Montis Alti: de quadri",
+      "date": "1921-12",
+      "category": "EPISTOLAE",
+      "incipit": "Consilium",
+      "reason": "header-mismatch",
+      "candidates": [
+        424
+      ]
+    },
+    {
+      "key": "1921-12|EPISTOLAE|Iucundum sane|Ad egregium virum Aloisium Oster, primarium in Germania Soda",
+      "date": "1921-12",
+      "category": "EPISTOLAE",
+      "incipit": "Iucundum sane",
+      "reason": "outside-runs",
+      "candidates": [
+        155,
+        156
+      ]
+    },
+    {
+      "key": "1921-12|LITTERAE APOSTOLICAE||Prope a Utor e. - Titulus ac privilegia Basilicae minoris pr",
+      "date": "1921-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1922-03-08|LITTERAE APOSTOLICAE|Apostolatus officium|Novi efformantur vicariatus apostolici de Kansù orientali et",
+      "date": "1922-03-08",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Apostolatus officium",
+      "reason": "header-mismatch",
+      "candidates": [
+        222
+      ]
+    },
+    {
+      "key": "1922-03-11|LITTERAE APOSTOLICAE|Cum, sicuti accepimus|Pia Consociatio </ a choris marianis » in Urbe indulgentiis ",
+      "date": "1922-03-11",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Cum, sicuti accepimus",
+      "reason": "outside-runs",
+      "candidates": [
+        188
+      ]
+    },
+    {
+      "key": "1922-03-12|LITTERAE APOSTOLICAE|Ex officio|Praefectura apostolica insularum Sundae minorum in Indiis Ho",
+      "date": "1922-03-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ex officio",
+      "reason": "outside-runs",
+      "candidates": [
+        224,
+        241
+      ]
+    },
+    {
+      "key": "1922-04-18|EPISTOLAE|Con vivo compiacimento|Ad R. P. Augustinum Gemelli, O. F. M., Universitatis studior",
+      "date": "1922-04-18",
+      "category": "EPISTOLAE",
+      "incipit": "Con vivo compiacimento",
+      "reason": "outside-runs",
+      "candidates": [
+        338
+      ]
+    },
+    {
+      "key": "1922-04-30|EPISTOLAE|Cum optatis|Ad Emum P.D. Augustinum, tit. Sanctae Mariae in Via, S. R. E",
+      "date": "1922-04-30",
+      "category": "EPISTOLAE",
+      "incipit": "Cum optatis",
+      "reason": "outside-runs",
+      "candidates": [
+        341
+      ]
+    },
+    {
+      "key": "1922-04|EPISTOLAE|Cum, divinae Providentiae|Ad R. P. D. Anselmum Rizzi, episcopum Adriensem, quintum ac ",
+      "date": "1922-04",
+      "category": "EPISTOLAE",
+      "incipit": "Cum, divinae Providentiae",
+      "reason": "header-mismatch",
+      "candidates": [
+        226
+      ]
+    },
+    {
+      "key": "1922-05-16|EPISTOLAE|Felicis exitus|Ad R. P. D. Lucam Piergiovanni, episcopum Latii superioris :",
+      "date": "1922-05-16",
+      "category": "EPISTOLAE",
+      "incipit": "Felicis exitus",
+      "reason": "outside-runs",
+      "candidates": [
+        499
+      ]
+    },
+    {
+      "key": "1922-05-18|EPISTOLAE|Dimisso conventu|Ad R. P. D. Ioannem Bedam Cardinale, archiepiscopum Perusinu",
+      "date": "1922-05-18",
+      "category": "EPISTOLAE",
+      "incipit": "Dimisso conventu",
+      "reason": "outside-runs",
+      "candidates": [
+        499
+      ]
+    },
+    {
+      "key": "1922-05-29|EPISTOLAE|Pochi giorni or sono|Ad Emum P. D. Basilium, episcopum Veliternum, S. R. E. card.",
+      "date": "1922-05-29",
+      "category": "EPISTOLAE",
+      "incipit": "Pochi giorni or sono",
+      "reason": "outside-runs",
+      "candidates": [
+        342
+      ]
+    },
+    {
+      "key": "1922-05-30|EPISTOLAE||Concordat entre le Saint-Siège et le Gouvernement de Lettoni",
+      "date": "1922-05-30",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1922-05|EPISTOLAE|In communi|Ad Emum P. D. Ioannem, tit. Sancti Eusebii, S. R. E. presb. ",
+      "date": "1922-05",
+      "category": "EPISTOLAE",
+      "incipit": "In communi",
+      "reason": "outside-runs",
+      "candidates": [
+        498
+      ]
+    },
+    {
+      "key": "1922-06-14|EPISTOLAE|Se da tutti è sahdata|Ad Emum P. D. Ioannem, episcopum Tusculanum, S. R. E. card. ",
+      "date": "1922-06-14",
+      "category": "EPISTOLAE",
+      "incipit": "Se da tutti è sahdata",
+      "reason": "none"
+    },
+    {
+      "key": "1922-06-18|LITTERAE APOSTOLICAE|Quae catholico nom ini|Erectio praefecturae apostolicae de Lulua et Katanga central",
+      "date": "1922-06-18",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae catholico nom ini",
+      "reason": "none"
+    },
+    {
+      "key": "1922-06-27|LITTERAE APOSTOLICAE|Quae catholico nomini|Separato territorio e vicariatibus apostolicis Ugandensi et ",
+      "date": "1922-06-27",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae catholico nomini",
+      "reason": "several",
+      "candidates": [
+        183,
+        487,
+        488
+      ]
+    },
+    {
+      "key": "1922-06|HOMILIA|Accipietis virtutem|De Fidei propagatione; habita inter Missarum solemnia, sacra",
+      "date": "1922-06",
+      "category": "HOMILIA",
+      "incipit": "Accipietis virtutem",
+      "reason": "header-mismatch",
+      "candidates": [
+        344
+      ]
+    },
+    {
+      "key": "1922-07-08|LITTERAE APOSTOLICAE|Dilectus filius|Restituitur perantiqua abbatia Sancti Martini de Weingarten ",
+      "date": "1922-07-08",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Dilectus filius",
+      "reason": "outside-runs",
+      "candidates": [
+        489,
+        494
+      ]
+    },
+    {
+      "key": "1922-07-10|LITTERAE APOSTOLICAE|Minime Nos|Templum B. M. V. Matris Gratiarum, Utini, titulo ac dignitat",
+      "date": "1922-07-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Minime Nos",
+      "reason": "outside-runs",
+      "candidates": [
+        491
+      ]
+    },
+    {
+      "key": "1922-07-21|LITTERAE APOSTOLICAE|Media in urbe|Titulus basilicae minoris confertur in ipsa consecratione ec",
+      "date": "1922-07-21",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Media in urbe",
+      "reason": "outside-runs",
+      "candidates": [
+        494
+      ]
+    },
+    {
+      "key": "1922-07-23|LITTERAE APOSTOLICAE|Inter sacras aedes|Templum B. M. V. de Mercede, in urbe Sancti Iacobi de Cile, ",
+      "date": "1922-07-23",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Inter sacras aedes",
+      "reason": "outside-runs",
+      "candidates": [
+        495
+      ]
+    },
+    {
+      "key": "1922-07|LITTERAE APOSTOLICAE|Tempia Dei|Aedes curialis B. M. V. de Funiculo, in civitate Valencienne",
+      "date": "1922-07",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Tempia Dei",
+      "reason": "outside-runs",
+      "candidates": [
+        492
+      ]
+    },
+    {
+      "key": "1922-08-10|EPISTOLAE|Dr evidentissimi Dei|Ad Emum P. D. Ioachimum, tit. Ss. Bonifacii et Alexii, S. R.",
+      "date": "1922-08-10",
+      "category": "EPISTOLAE",
+      "incipit": "Dr evidentissimi Dei",
+      "reason": "none"
+    },
+    {
+      "key": "1922-09-15|EPISTOLAE|Quod nuper|Ad R. P. Paulum dell'Olio, S. L, Instituti Leoniani in urbe ",
+      "date": "1922-09-15",
+      "category": "EPISTOLAE",
+      "incipit": "Quod nuper",
+      "reason": "outside-runs",
+      "candidates": [
+        588
+      ]
+    },
+    {
+      "key": "1922-09-17|EPISTOLAE|Cum tertio|Ad Einum P. D. Franciscum, tit. Sanctae Pudentianae, S. R. E",
+      "date": "1922-09-17",
+      "category": "EPISTOLAE",
+      "incipit": "Cum tertio",
+      "reason": "outside-runs",
+      "candidates": [
+        547
+      ]
+    },
+    {
+      "key": "1922-09-17|EPISTOLAE|IS Quae, annuum|AA Eñios Patres Adolfum card. Bertram, episcopum Vratislavie",
+      "date": "1922-09-17",
+      "category": "EPISTOLAE",
+      "incipit": "IS Quae, annuum",
+      "reason": "none"
+    },
+    {
+      "key": "1922-09-19|EPISTOLAE|Magnas quidem|Ad R. P. D. Hieronymum Thomé da Silva, archiepiscopum S. Sal",
+      "date": "1922-09-19",
+      "category": "EPISTOLAE",
+      "incipit": "Magnas quidem",
+      "reason": "outside-runs",
+      "candidates": [
+        589
+      ]
+    },
+    {
+      "key": "1922-09-19|EPISTOLAE|Qua flores|Ad R. P. D. Paulum Gulielmum Keppler, episcopum Rottemburgen",
+      "date": "1922-09-19",
+      "category": "EPISTOLAE",
+      "incipit": "Qua flores",
+      "reason": "outside-runs",
+      "candidates": [
+        549
+      ]
+    },
+    {
+      "key": "1922-09-30|EPISTOLAE|Assai opportunamente|Ad Emum P. D. Petrum, tit. Ss. XII Apostolorum, S. R. E. car",
+      "date": "1922-09-30",
+      "category": "EPISTOLAE",
+      "incipit": "Assai opportunamente",
+      "reason": "outside-runs",
+      "candidates": [
+        590
+      ]
+    },
+    {
+      "key": "1922-10-10|EPISTOLAE|Pastorum Princeps|Ad R. P. Eliam Magennis, priorem generalem Carmelitarum anti",
+      "date": "1922-10-10",
+      "category": "EPISTOLAE",
+      "incipit": "Pastorum Princeps",
+      "reason": "outside-runs",
+      "candidates": [
+        639
+      ]
+    },
+    {
+      "key": "1922-10-30|EPISTOLAE|Laetum sane|Ad R. P. D. Iosephum Schrembs, episcopum Clevelandensem : se",
+      "date": "1922-10-30",
+      "category": "EPISTOLAE",
+      "incipit": "Laetum sane",
+      "reason": "outside-runs",
+      "candidates": [
+        641
+      ]
+    },
+    {
+      "key": "1922-10|EPISTOLAE|Peculiari|Ad R. P. D. Aloisium Hickey, episcopum Providentiensem, quin",
+      "date": "1922-10",
+      "category": "EPISTOLAE",
+      "incipit": "Peculiari",
+      "reason": "outside-runs",
+      "candidates": [
+        9,
+        25,
+        168,
+        288,
+        466,
+        592
+      ]
+    },
+    {
+      "key": "1922-12-11|SACRUM CONSISTORIUM||Allocutio SS. D. N. Xii PP. XV. - Creatio et publicatio S. R",
+      "date": "1922-12-11",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1922-12-14|SACRUM CONSISTORIUM|Consistorium publicum|Traditio rubri galeri Erais Cardinalibus Consistorium secret",
+      "date": "1922-12-14",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": "Consistorium publicum",
+      "reason": "outside-runs",
+      "candidates": [
+        621
+      ]
+    }
+  ]
+}

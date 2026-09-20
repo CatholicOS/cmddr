@@ -1,0 +1,680 @@
+{
+  "source": "1910",
+  "generated": "2026-09-20",
+  "text": "~/development/sources/AAS/txt/aas-02-1910.txt (1046 pages)",
+  "rows": [
+    {
+      "key": "1910-06-03|EPISTOLAE|Communem epistolam|Dilecto Filio Nostro S. R. E. Presb. Card. Ferrari, Archiepi",
+      "date": "1910-06-03",
+      "category": "EPISTOLAE",
+      "incipit": "Communem epistolam",
+      "page": 476,
+      "rule": "dated",
+      "bodyLine": "Dilecte Fili Noster, salutem et Apostolicam benedictionem. — Communem epistolam, a te tuisque sacerdotibus e dioecesana Synodo",
+      "header": "476 Acta Apostolicae Sedis. - Commentarium Officiale.",
+      "formula": "Datum Romae apud S. Petrum, die III Iunii MCMX, Pontificatus Nostri anno septimo. PIUS PP. X. S. CONGREGATIO S. OFFICII (SECTIO DE INDULGENTIIS) DUBIA CIRCA INTERPRETATIONEM MOTUS PROPRII \" CUM PER AP"
+    }
+  ],
+  "unrecovered": [
+    {
+      "key": "1910-01-10|EPISTOLAE|Grate cognovimus|Ad V. E. Antonium Iosephum S. R. E. Cardinalem Gruscha, Arch",
+      "date": "1910-01-10",
+      "category": "EPISTOLAE",
+      "incipit": "Grate cognovimus",
+      "reason": "several",
+      "candidates": [
+        50
+      ]
+    },
+    {
+      "key": "1910-01-10|EPISTOLAE|Gratias tibi|Ad R. P. D. Iacobum Della Chiesa, Archiep. Bononiensem, ob v",
+      "date": "1910-01-10",
+      "category": "EPISTOLAE",
+      "incipit": "Gratias tibi",
+      "reason": "none"
+    },
+    {
+      "key": "1910-01-10|EPISTOLAE|Libentissime legimus|Ad R. P. D. Vincentium Fran¬ ceschini Episcopum Fanensem, de",
+      "date": "1910-01-10",
+      "category": "EPISTOLAE",
+      "incipit": "Libentissime legimus",
+      "reason": "several",
+      "candidates": [
+        51
+      ]
+    },
+    {
+      "key": "1910-01-10|EPISTOLAE|Venerabilem Fratrem|Ad R. D. Aloysium Salvatorelli Archipresbyterum et Canonicos",
+      "date": "1910-01-10",
+      "category": "EPISTOLAE",
+      "incipit": "Venerabilem Fratrem",
+      "reason": "several",
+      "candidates": [
+        51
+      ]
+    },
+    {
+      "key": "1910-01-24|EPISTOLAE|Et Petrianam|Ad R. P. D. Marianum Antonium Espinosa, Archiepiscopum Bonaë",
+      "date": "1910-01-24",
+      "category": "EPISTOLAE",
+      "incipit": "Et Petrianam",
+      "reason": "several",
+      "candidates": [
+        52
+      ]
+    },
+    {
+      "key": "1910-01-24|EPISTOLAE|Gratias primum|Ad R. P. D. Paulum Huyn, Episcopum Brunensem, de nuper habit",
+      "date": "1910-01-24",
+      "category": "EPISTOLAE",
+      "incipit": "Gratias primum",
+      "reason": "several",
+      "candidates": [
+        53
+      ]
+    },
+    {
+      "key": "1910-01|EPISTOLAE|Annum proximo|Ad D. P. Calon, Praesidem ceterosque viros e supremo consili",
+      "date": "1910-01",
+      "category": "EPISTOLAE",
+      "incipit": "Annum proximo",
+      "reason": "several",
+      "candidates": [
+        54
+      ]
+    },
+    {
+      "key": "1910-01|EPISTOLAE|Ex annalibus|Ad R. D. H. Oster, consociationis « A Sancta Iesu Infantia »",
+      "date": "1910-01",
+      "category": "EPISTOLAE",
+      "incipit": "Ex annalibus",
+      "reason": "several",
+      "candidates": [
+        53
+      ]
+    },
+    {
+      "key": "1910-02-13|EPISTOLAE|Quem ex perspecta|Ad Antonium S. R. E. presbyterum Cardinalem Fischer, Colonie",
+      "date": "1910-02-13",
+      "category": "EPISTOLAE",
+      "incipit": "Quem ex perspecta",
+      "reason": "several",
+      "candidates": [
+        144
+      ]
+    },
+    {
+      "key": "1910-02-14|EPISTOLAE|Inter viros|Ad R. D. Iosephum Ballerini, adlectum inter antistites dom. ",
+      "date": "1910-02-14",
+      "category": "EPISTOLAE",
+      "incipit": "Inter viros",
+      "reason": "several",
+      "candidates": [
+        97
+      ]
+    },
+    {
+      "key": "1910-02-17|EPISTOLAE|Quod cognovimus|Ad R. P. D. Agnellum Renzullo, Episcopum Nolanum, ob quinqua",
+      "date": "1910-02-17",
+      "category": "EPISTOLAE",
+      "incipit": "Quod cognovimus",
+      "reason": "several",
+      "candidates": [
+        189
+      ]
+    },
+    {
+      "key": "1910-02-18|EPISTOLAE|Per solemnia saecularia|Ad RR. PP. DD. Archiepiscopos et Episcopos Reipublicae Mexic",
+      "date": "1910-02-18",
+      "category": "EPISTOLAE",
+      "incipit": "Per solemnia saecularia",
+      "reason": "several",
+      "candidates": [
+        98
+      ]
+    },
+    {
+      "key": "1910-02-18|EPISTOLAE|Quem datis|Ad Gabrielem Mariam Fratrum a Scholis christianis Antistitem",
+      "date": "1910-02-18",
+      "category": "EPISTOLAE",
+      "incipit": "Quem datis",
+      "reason": "several",
+      "candidates": [
+        190
+      ]
+    },
+    {
+      "key": "1910-02-18|EPISTOLAE||Ad Rmum D. Franciscum Xaverium Haberi, de rhy¬ thmo cantus g",
+      "date": "1910-02-18",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1910-02-27|EPISTOLAE|Exeunte anno|Ad R. D. Carolum Kanter et Marchionissam Ad elem Pallavicini",
+      "date": "1910-02-27",
+      "category": "EPISTOLAE",
+      "incipit": "Exeunte anno",
+      "reason": "several",
+      "candidates": [
+        191
+      ]
+    },
+    {
+      "key": "1910-03-04|LITTERAE APOSTOLICAE|Quae ad fidei|Conceditur indulgentia partialis perpetua pro Insularum Phil",
+      "date": "1910-03-04",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae ad fidei",
+      "reason": "several",
+      "candidates": [
+        226
+      ]
+    },
+    {
+      "key": "1910-03-14|EPISTOLAE|Quae nuper|Ad Petrum S. R. E. presbyterum Cardinalem Coullié, Archiepis",
+      "date": "1910-03-14",
+      "category": "EPISTOLAE",
+      "incipit": "Quae nuper",
+      "reason": "several",
+      "candidates": [
+        191,
+        505
+      ]
+    },
+    {
+      "key": "1910-03-15|EPISTOLAE|Novimus|Ad R. P. D. Ioachimum Cantagalli, Faventinorum Episcopum, qu",
+      "date": "1910-03-15",
+      "category": "EPISTOLAE",
+      "incipit": "Novimus",
+      "reason": "several",
+      "candidates": [
+        52,
+        228,
+        409,
+        506,
+        510,
+        540
+      ]
+    },
+    {
+      "key": "1910-04-05|LITTERAE APOSTOLICAE|Laeto accepimus|Consociationi sacerdotum in honorem SSmi Cordis Iesu concedu",
+      "date": "1910-04-05",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Laeto accepimus",
+      "reason": "several",
+      "candidates": [
+        318
+      ]
+    },
+    {
+      "key": "1910-04-05|LITTERAE APOSTOLICAE|Refert ad Nos|Erectio Sodalitii sub titulo Missae Reparatricis in Archisod",
+      "date": "1910-04-05",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Refert ad Nos",
+      "reason": "several",
+      "candidates": [
+        282
+      ]
+    },
+    {
+      "key": "1910-04-11|EPISTOLAE|Quod ex tuis|Ad R. D. Sebastianum Corradi cano¬ nicum, Praepositum aedis ",
+      "date": "1910-04-11",
+      "category": "EPISTOLAE",
+      "incipit": "Quod ex tuis",
+      "reason": "several",
+      "candidates": [
+        285
+      ]
+    },
+    {
+      "key": "1910-04-13|LITTERAE APOSTOLICAE|Conspicua templa|Ecclesia parochialis pagi vulgo « Bonsecours », dioecesis To",
+      "date": "1910-04-13",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Conspicua templa",
+      "reason": "several",
+      "candidates": [
+        323
+      ]
+    },
+    {
+      "key": "1910-04-13|LITTERAE APOSTOLICAE|Inter gravissimas|Ad D. Mariam Stiltz, Moderatricem Generalem Societatis Filia",
+      "date": "1910-04-13",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Inter gravissimas",
+      "reason": "several",
+      "candidates": [
+        320
+      ]
+    },
+    {
+      "key": "1910-04-18|LITTERAE APOSTOLICAE||Litterae Apostolicae « Trans Oceanum »",
+      "date": "1910-04-18",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1910-04-20|LITTERAE APOSTOLICAE|Dilectus Filius|Sodalibus Associationis Reparationis Sacerdotalis indulgenti",
+      "date": "1910-04-20",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Dilectus Filius",
+      "reason": "several",
+      "candidates": [
+        474
+      ]
+    },
+    {
+      "key": "1910-04-20|LITTERAE APOSTOLICAE|Romanorum Pontificum|Societas B. M. V. Auxilii Christianorum et Reginae Pacis loc",
+      "date": "1910-04-20",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Romanorum Pontificum",
+      "reason": "several",
+      "candidates": [
+        444
+      ]
+    },
+    {
+      "key": "1910-04|EPISTOLAE|Est profecto|Ad RR. PP. Scriptores ephemeridis quae inscribitur « La Civi",
+      "date": "1910-04",
+      "category": "EPISTOLAE",
+      "incipit": "Est profecto",
+      "reason": "several",
+      "candidates": [
+        540
+      ]
+    },
+    {
+      "key": "1910-05-02|LITTERAE APOSTOLICAE|Caritatis opera|Conceduntur indulgentiae plenariae et partiales fidelibus qu",
+      "date": "1910-05-02",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Caritatis opera",
+      "reason": "several",
+      "candidates": [
+        567
+      ]
+    },
+    {
+      "key": "1910-05-02|LITTERAE APOSTOLICAE|Constat apprime|Superiori pro tempore Sanctuarii B. M. Virginis de « Poupsis",
+      "date": "1910-05-02",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Constat apprime",
+      "reason": "several",
+      "candidates": [
+        570,
+        634,
+        703
+      ]
+    },
+    {
+      "key": "1910-05-02|LITTERAE APOSTOLICAE|Inter cogitationes|Conceduntur indulgentiae et privilegia in perpetuum Sanctuar",
+      "date": "1910-05-02",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Inter cogitationes",
+      "reason": "several",
+      "candidates": [
+        503
+      ]
+    },
+    {
+      "key": "1910-05-02|LITTERAE APOSTOLICAE|Piam frugiferamque|Constituitur Supremus Moderator pro Associatione Reparationi",
+      "date": "1910-05-02",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Piam frugiferamque",
+      "reason": "none"
+    },
+    {
+      "key": "1910-05-02|LITTERAE APOSTOLICAE|Pias fidelium|Confirmantur nominatim veteres r indulgentiae piae catholica",
+      "date": "1910-05-02",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Pias fidelium",
+      "reason": "several",
+      "candidates": [
+        470
+      ]
+    },
+    {
+      "key": "1910-05-03|EPISTOLAE|Delectarunt|Ad R. P. D. Ioannem Baptistam, Episc. Iacensem",
+      "date": "1910-05-03",
+      "category": "EPISTOLAE",
+      "incipit": "Delectarunt",
+      "reason": "several",
+      "candidates": [
+        408
+      ]
+    },
+    {
+      "key": "1910-05-03|EPISTOLAE|Non satis|Ad Iosephum S. R. E. Presb. Card. Fran¬ cica-Nava, Archiepis",
+      "date": "1910-05-03",
+      "category": "EPISTOLAE",
+      "incipit": "Non satis",
+      "reason": "several",
+      "candidates": [
+        208,
+        407
+      ]
+    },
+    {
+      "key": "1910-05-03|EPISTOLAE|Paternam curam|Ad R. P. D. Ambrosium Agius, Archiepiscopum tit. Palmyrenum,",
+      "date": "1910-05-03",
+      "category": "EPISTOLAE",
+      "incipit": "Paternam curam",
+      "reason": "several",
+      "candidates": [
+        326
+      ]
+    },
+    {
+      "key": "1910-05-03|EPISTOLAE|Quod nobis|Ad R. P. D. Alfredum, Episcopum titul. Arcensem, Administrat",
+      "date": "1910-05-03",
+      "category": "EPISTOLAE",
+      "incipit": "Quod nobis",
+      "reason": "several",
+      "candidates": [
+        8,
+        408
+      ]
+    },
+    {
+      "key": "1910-05-03|EPISTOLAE|Studium quo tenemur|Ad Emum Virum S. R. E. Cardinalem Vincentium Vannutelli, Epi",
+      "date": "1910-05-03",
+      "category": "EPISTOLAE",
+      "incipit": "Studium quo tenemur",
+      "reason": "several",
+      "candidates": [
+        721
+      ]
+    },
+    {
+      "key": "1910-05-03|EPISTOLAE|Vide quae sit|Ad R. P. D. Valerium Laspro, Salernitanum Archiepiscopum, qu",
+      "date": "1910-05-03",
+      "category": "EPISTOLAE",
+      "incipit": "Vide quae sit",
+      "reason": "several",
+      "candidates": [
+        328
+      ]
+    },
+    {
+      "key": "1910-05-20|EPISTOLAE|Litterae istinc|Ad R. P. D. Septimium Caracciolo di Torchiarolo, Episcopum A",
+      "date": "1910-05-20",
+      "category": "EPISTOLAE",
+      "incipit": "Litterae istinc",
+      "reason": "several",
+      "candidates": [
+        446
+      ]
+    },
+    {
+      "key": "1910-05-21|EPISTOLAE|Optimum sane|Ad R. P. D. Iosephum Deruaz, Lausanensium et Genevensium Epi",
+      "date": "1910-05-21",
+      "category": "EPISTOLAE",
+      "incipit": "Optimum sane",
+      "reason": "several",
+      "candidates": [
+        98,
+        446,
+        904
+      ]
+    },
+    {
+      "key": "1910-05-23|EPISTOLAE|Etsi pro tua modestia|Ad R. P. D. Guglielmum van de Ven, Buscoducensem Episcopum",
+      "date": "1910-05-23",
+      "category": "EPISTOLAE",
+      "incipit": "Etsi pro tua modestia",
+      "reason": "several",
+      "candidates": [
+        509
+      ]
+    },
+    {
+      "key": "1910-05-23|EPISTOLAE|Qui tristia saepius|Ad R. P. D. Alfredum Williez, Atrebatensium Episcopum, de vi",
+      "date": "1910-05-23",
+      "category": "EPISTOLAE",
+      "incipit": "Qui tristia saepius",
+      "reason": "several",
+      "candidates": [
+        509
+      ]
+    },
+    {
+      "key": "1910-05-23|EPISTOLAE|Tuam pastoralis officii|Ad R. P. D. Iacobum Ra¬ dini-Tedescbi, Episcopum. Bergomense",
+      "date": "1910-05-23",
+      "category": "EPISTOLAE",
+      "incipit": "Tuam pastoralis officii",
+      "reason": "several",
+      "candidates": [
+        510
+      ]
+    },
+    {
+      "key": "1910-05-24|EPISTOLAE|Bari operam|Ad R. P. D. Ferdinandum de Croy, Protonotarium Apostolicum, ",
+      "date": "1910-05-24",
+      "category": "EPISTOLAE",
+      "incipit": "Bari operam",
+      "reason": "none"
+    },
+    {
+      "key": "1910-06-06|EPISTOLAE|Quamquam et in cura|Ad V. E. Andream S. R. E. Cardinalem Ferrari, Archiepiscopum",
+      "date": "1910-06-06",
+      "category": "EPISTOLAE",
+      "incipit": "Quamquam et in cura",
+      "reason": "several",
+      "candidates": [
+        512
+      ]
+    },
+    {
+      "key": "1910-06-09|LITTERAE APOSTOLICAE|Allata nuper|Ad R. P. D. Patritium Fergo Mac Evay, Archiepiscopum,Toronti",
+      "date": "1910-06-09",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Allata nuper",
+      "reason": "several",
+      "candidates": [
+        536
+      ]
+    },
+    {
+      "key": "1910-06-09|LITTERAE APOSTOLICAE|Quae nuper|Laudatur Societas pro diffusione catho¬ licae fidei Chicagii",
+      "date": "1910-06-09",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae nuper",
+      "reason": "several",
+      "candidates": [
+        191,
+        505
+      ]
+    },
+    {
+      "key": "1910-08-10|EPISTOLAE|Quod significabas|R. P. D. Alphonso Mariae An¬ dreoli, Episcopo Feretrano, app",
+      "date": "1910-08-10",
+      "category": "EPISTOLAE",
+      "incipit": "Quod significabas",
+      "reason": "several",
+      "candidates": [
+        725
+      ]
+    },
+    {
+      "key": "1910-08|EPISTOLAE|Amantissimis litteris|Ad V. E. Petrum S. R. E. Cardinalem Coullié, Archiepiscopum ",
+      "date": "1910-08",
+      "category": "EPISTOLAE",
+      "incipit": "Amantissimis litteris",
+      "reason": "several",
+      "candidates": [
+        723
+      ]
+    },
+    {
+      "key": "1910-08|EPISTOLAE|Quae de Coloniensi|Ad V. E. Ubertum Antonium, S. R. E. Cardinalem Fischer, Arch",
+      "date": "1910-08",
+      "category": "EPISTOLAE",
+      "incipit": "Quae de Coloniensi",
+      "reason": "several",
+      "candidates": [
+        5
+      ]
+    },
+    {
+      "key": "1910-09-11|EPISTOLAE|Opportunum sane|Ad RR. PP. DD. Ioannem Fidelem Battaglia, Archiepiscopum tit",
+      "date": "1910-09-11",
+      "category": "EPISTOLAE",
+      "incipit": "Opportunum sane",
+      "reason": "several",
+      "candidates": [
+        737
+      ]
+    },
+    {
+      "key": "1910-09-12|EPISTOLAE|Solertiae|Ad Emum V. Aristidem S. R. E. Presbyterum Cardinalem Cavalla",
+      "date": "1910-09-12",
+      "category": "EPISTOLAE",
+      "incipit": "Solertiae",
+      "reason": "several",
+      "candidates": [
+        562
+      ]
+    },
+    {
+      "key": "1910-09-13|LITTERAE APOSTOLICAE|In hoc summo|Erigitur novus Vicariatus Apostolicus de « Kilima-Njaro » in",
+      "date": "1910-09-13",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "In hoc summo",
+      "reason": "several",
+      "candidates": [
+        852
+      ]
+    },
+    {
+      "key": "1910-09-15|EPISTOLAE|Tuum opus|Ad Illmum V. Gasparem Decurtins, doctorem decurialem in Athe",
+      "date": "1910-09-15",
+      "category": "EPISTOLAE",
+      "incipit": "Tuum opus",
+      "reason": "several",
+      "candidates": [
+        738
+      ]
+    },
+    {
+      "key": "1910-10-10|EPISTOLAE|Nuncium vix dum|Ad R. P. D. Bernardum Herrera Restrepo, Bogotensium Archiepi",
+      "date": "1910-10-10",
+      "category": "EPISTOLAE",
+      "incipit": "Nuncium vix dum",
+      "reason": "none"
+    },
+    {
+      "key": "1910-10-13|EPISTOLAE|Binas nuper|Ad R. P. D. Guidonem M. Conforti, Parmensium Archiepiscopum,",
+      "date": "1910-10-13",
+      "category": "EPISTOLAE",
+      "incipit": "Binas nuper",
+      "reason": "several",
+      "candidates": [
+        905
+      ]
+    },
+    {
+      "key": "1910-10-13|EPISTOLAE|Communes litterae|Ad Gregorium M. Card. Aguirre y Garcia, Archiepiscopum Tolet",
+      "date": "1910-10-13",
+      "category": "EPISTOLAE",
+      "incipit": "Communes litterae",
+      "reason": "several",
+      "candidates": [
+        905
+      ]
+    },
+    {
+      "key": "1910-11-12|SERMO||SSmi Domini Nostri Pii PP. X ad Patres Franciscales responsi",
+      "date": "1910-11-12",
+      "category": "SERMO",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1910-11-19|LITTERAE APOSTOLICAE|Quae ad spirituale|Vicariatus Apostolicus Giblata¬ riensis in Dioecesim immedia",
+      "date": "1910-11-19",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae ad spirituale",
+      "reason": "several",
+      "candidates": [
+        142,
+        942
+      ]
+    },
+    {
+      "key": "1910-11|EPISTOLAE|Omni sane laude|Ad R. P. D. Thomam Fennelly, Caseliensium Archiepiscopum, Em",
+      "date": "1910-11",
+      "category": "EPISTOLAE",
+      "incipit": "Omni sane laude",
+      "reason": "several",
+      "candidates": [
+        943
+      ]
+    },
+    {
+      "key": "1910-12-11|EPISTOLAE|Catholicos|Ad Camillum Bataille Advocatum",
+      "date": "1910-12-11",
+      "category": "EPISTOLAE",
+      "incipit": "Catholicos",
+      "reason": "several",
+      "candidates": [
+        8
+      ]
+    },
+    {
+      "key": "1910-12-11|EPISTOLAE|Diarium Terrae Sanctae|Ad R. P. Robertum Razzoli, O. F. M., Custodem Terrae Sanctae",
+      "date": "1910-12-11",
+      "category": "EPISTOLAE",
+      "incipit": "Diarium Terrae Sanctae",
+      "reason": "several",
+      "candidates": [
+        9
+      ]
+    },
+    {
+      "key": "1910-12-11|EPISTOLAE|Grate accepimus|Ad R. P. D. Eduardum Pulciano, Archiepiscopum Ianuensem, de ",
+      "date": "1910-12-11",
+      "category": "EPISTOLAE",
+      "incipit": "Grate accepimus",
+      "reason": "several",
+      "candidates": [
+        6
+      ]
+    },
+    {
+      "key": "1910-12-11|EPISTOLAE|Redditae sunt Nobis|Ad Rmum D. Henricum Garri¬ riguet, Antistitem Generalem Soci",
+      "date": "1910-12-11",
+      "category": "EPISTOLAE",
+      "incipit": "Redditae sunt Nobis",
+      "reason": "several",
+      "candidates": [
+        7
+      ]
+    },
+    {
+      "key": "1910-12-13|EPISTOLAE|Communis vobiscum|Ad Antistitam Anniciensis domus a Visitatione, ceterasque Re",
+      "date": "1910-12-13",
+      "category": "EPISTOLAE",
+      "incipit": "Communis vobiscum",
+      "reason": "several",
+      "candidates": [
+        10
+      ]
+    },
+    {
+      "key": "1910-12-17|EPISTOLAE|Delectavit Nos|Ad Tertiarios Franciscales e Foederatis Sodalitiis Urbis",
+      "date": "1910-12-17",
+      "category": "EPISTOLAE",
+      "incipit": "Delectavit Nos",
+      "reason": "several",
+      "candidates": [
+        12
+      ]
+    },
+    {
+      "key": "1910-12-17|EPISTOLAE|Pontificium institutum|Ad R. P. D. Gulielmum 0'ConnelI, Archiepiscopum Bostoniensem",
+      "date": "1910-12-17",
+      "category": "EPISTOLAE",
+      "incipit": "Pontificium institutum",
+      "reason": "none"
+    }
+  ]
+}

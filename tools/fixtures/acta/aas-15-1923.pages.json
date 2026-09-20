@@ -1,0 +1,700 @@
+{
+  "source": "1923",
+  "generated": "2026-09-20",
+  "text": "~/development/sources/AAS/txt/aas-15-1923.txt (676 pages)",
+  "rows": [
+    {
+      "key": "1922-12-23|LITTERAE ENCYCLICAE|Fin dal primo momento|Ai venerabili fratelli Patriarchi, Primati, Arcivescovi, Ves",
+      "date": "1922-12-23",
+      "category": "LITTERAE ENCYCLICAE",
+      "incipit": "Fin dal primo momento",
+      "page": 5,
+      "rule": "unique",
+      "bodyLine": "Fin dal primo momento in cui, per gli imperscrutabili disegni di",
+      "header": "Annus XY - Yol. XY 15 Ianuarii 1923 Num. 1"
+    },
+    {
+      "key": "1923-01-02|LITTERAE APOSTOLICAE|Sanctuarii|Sanctuarium B. M. V. a Miraculis, oppidi Saronno, archidioec",
+      "date": "1923-01-02",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Sanctuarii",
+      "page": 65,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Sanctuarii Virginis a miraculis",
+      "header": "Acta Pii PP. XI 65"
+    },
+    {
+      "key": "1923-01-12|LITTERAE APOSTOLICAE|Votivum templum|Ecclesia Sanctae Mariae Magdalenae Poenitentis, Andegavii, t",
+      "date": "1923-01-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Votivum templum",
+      "page": 144,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Votivum templum sub titulo Sanctae",
+      "header": "144 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1923-01-26|LITTERAE ENCYCLICAE|Rerum omnium perturbationem|Ad venerabiles fratres Patriarchas, Primates, Archiepiscopos",
+      "date": "1923-01-26",
+      "category": "LITTERAE ENCYCLICAE",
+      "incipit": "Rerum omnium perturbationem",
+      "page": 49,
+      "rule": "unique",
+      "bodyLine": "Rerum omnium perturbationem, quae nunc adest, cum",
+      "header": "Almus XV - Vol. XY 1 Februarii 1923 Num. 2"
+    },
+    {
+      "key": "1923-01-31|EPISTOLAE|Quando alia vigilia|Ad Emum P. D. Basilium, episcopum Veliternum, S. E. E. card.",
+      "date": "1923-01-31",
+      "category": "EPISTOLAE",
+      "incipit": "Quando alia vigilia",
+      "page": 97,
+      "rule": "unique",
+      "bodyLine": "INDICAT AD AVERTENDA PRAESENTIA DISCRIMINA.",
+      "header": "Annus XV - Vol. XV 5 Martii 1923 Num. 3"
+    },
+    {
+      "key": "1923-02-02|CONSTITUTIONES APOSTOLICAE|Semper Romani Pontifices|De Vladivostok. Erectionis dioecesis",
+      "date": "1923-02-02",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Semper Romani Pontifices",
+      "page": 443,
+      "rule": "unique",
+      "bodyLine": "Semper Romani Pontifices, vel propria auctoritate, vel rogatu Ordinariorum dioecesium, diligentissime curarunt ut, ob mutatas in aliqua",
+      "header": "Acta Pii PP. XI 443"
+    },
+    {
+      "key": "1923-02-12|EPISTOLAE|Communes accepimus|Ad EE. PP. DD. Michaelem Kelly, archiepiscopum Sydneyensem, ",
+      "date": "1923-02-12",
+      "category": "EPISTOLAE",
+      "incipit": "Communes accepimus",
+      "page": 108,
+      "rule": "unique",
+      "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem. — Communes",
+      "header": "108 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1923-02-18|CONSTITUTIONES APOSTOLICAE|Apostolica Sedes|Clavarensis. Erectionis collegiatae ad honorem",
+      "date": "1923-02-18",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Apostolica Sedes",
+      "page": 258,
+      "rule": "unique",
+      "bodyLine": "Apostolica Sedes, de Ecclesiarum omnium decore sollicita, ad eas praesertim, quae animarum curam adnexam nubent, suam curam extendere,",
+      "header": "258 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1923-03-15|LITTERAE APOSTOLICAE|Quae catholico nomini|Erigitur vicariatus apostolicus de « Volta inferiore » in Af",
+      "date": "1923-03-15",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae catholico nomini",
+      "page": 444,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Quae catholico nomini aeternaeque christiani populi saluti bene, prospere ac feliciter eveniant, ea ut mature praegtemus Nos admonet supremi apostolatus officium, quo in terris fungimur.",
+      "header": "444 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1923-04-19|LITTERAE APOSTOLICAE|Quae catholico nomini|Sejjarato territorio a vicariatu apostolico Natalensi, erigi",
+      "date": "1923-04-19",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae catholico nomini",
+      "page": 444,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Quae catholico nomini aeternaeque christiani populi saluti bene, prospere ac feliciter eveniant, ea ut mature praegtemus Nos admonet supremi apostolatus officium, quo in terris fungimur.",
+      "header": "444 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1923-04-23|LITTERAE APOSTOLICAE|In civitate Kevelaer|Titulus Basilicae minoris confertur paroeciali ecclesiae B..",
+      "date": "1923-04-23",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "In civitate Kevelaer",
+      "page": 488,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — In civitate Kevelaer appellata, prope",
+      "header": "488"
+    },
+    {
+      "key": "1923-05|LITTERAE APOSTOLICAE|Cum ex apostolico munere|Dioecesis Osahensis in Iaponia dismembratur atque inde effor",
+      "date": "1923-05",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Cum ex apostolico munere",
+      "page": 335,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Cum ex apostolico munere, quo fungimur,",
+      "header": "Acta Pii PP. XI 335"
+    },
+    {
+      "key": "1923-05|LITTERAE APOSTOLICAE|Ex hac sublimi|Suppressi vicariatus apostolici de Marshall territorio et no",
+      "date": "1923-05",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ex hac sublimi",
+      "page": 336,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Ex hac sublimi Principis Apostolorum",
+      "header": "336 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1923-06-11|CONSTITUTIONES APOSTOLICAE|Inter praecipuas|Caracensis. Erectionis novae provinciae ecclesiasticae Emeri",
+      "date": "1923-06-11",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Inter praecipuas",
+      "page": 533,
+      "rule": "unique",
+      "bodyLine": "Inter praecipuas Sanctae Sedis curas haec quoque constans fuit ut.",
+      "header": "Annus XV - Vol. XV 6 Novembris 192S Num. 11"
+    },
+    {
+      "key": "1923-06-29|MOTU PROPRIO|Orbem catholicum|De christianae doctrinae institutione toto orbe catholico or",
+      "date": "1923-06-29",
+      "category": "MOTU PROPRIO",
+      "incipit": "Orbem catholicum",
+      "page": 327,
+      "rule": "unique",
+      "bodyLine": "Orbem catholicum Encyclicis Litteris cum primum alloqueremur, omnium maiorum, quibus humana societas laboraret,",
+      "header": "Acta Pii PP. XI 327"
+    },
+    {
+      "key": "1923-06|LITTERAE APOSTOLICAE|Cum ex Apostolico munere|Erigitur nova praefectura apostolica de Buca, in regione Kam",
+      "date": "1923-06",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Cum ex Apostolico munere",
+      "page": 335,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Cum ex apostolico munere, quo fungimur,",
+      "header": "Acta Pii PP. XI 335"
+    },
+    {
+      "key": "1923-06|LITTERAE APOSTOLICAE|Insula Islandia|Insula Islandia erigitur in proprii iuris apostolicam praefe",
+      "date": "1923-06",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Insula Islandia",
+      "page": 489,
+      "rule": "unique",
+      "bodyLine": "ÍNSULA ISLANDIA, A VICARIATU APOSTOLICO DANIAE SEIUNCTA, ERIGITUR",
+      "header": "Acta Pii PP. XI 489"
+    },
+    {
+      "key": "1923-06|LITTERAE APOSTOLICAE|Quae catholico nomini|Erigitur praefectura apostolica Nili aequatorialis in Africa",
+      "date": "1923-06",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae catholico nomini",
+      "page": 444,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Quae catholico nomini aeternaeque christiani populi saluti bene, prospere ac feliciter eveniant, ea ut mature praegtemus Nos admonet supremi apostolatus officium, quo in terris fungimur.",
+      "header": "444 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1923-07-15|CONSTITUTIONES APOSTOLICAE|Romani Pontifices|Aversana. De erectione in Collegiatam ad honorem ecclesiae p",
+      "date": "1923-07-15",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Romani Pontifices",
+      "page": 137,
+      "rule": "unique",
+      "bodyLine": "Romani Pontifices, de ecclesiarum omnium decore solliciti, ad eas",
+      "header": "Annus XV - Yol. XV 5 Aprilis 1923 x Num. 4"
+    },
+    {
+      "key": "1923-07-16|CONSTITUTIONES APOSTOLICAE|Apostolica Sedes|Aversana. Do erectione in Collegiatam ad honorem ecclesiae p",
+      "date": "1923-07-16",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Apostolica Sedes",
+      "page": 258,
+      "rule": "unique",
+      "bodyLine": "Apostolica Sedes, de Ecclesiarum omnium decore sollicita, ad eas praesertim, quae animarum curam adnexam nubent, suam curam extendere,",
+      "header": "258 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1923-07|LITTERAE APOSTOLICAE|Quae catholico nomini|Separato territorio e Vicariatu Apostolico Maroquiensi, erig",
+      "date": "1923-07",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae catholico nomini",
+      "page": 444,
+      "rule": "unique",
+      "bodyLine": "Ad futuram rei memoriam. — Quae catholico nomini aeternaeque christiani populi saluti bene, prospere ac feliciter eveniant, ea ut mature praegtemus Nos admonet supremi apostolatus officium, quo in terris fungimur.",
+      "header": "444 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1923-08-20|EPISTOLA APOSTOLICA|Quod sancti Bernardi|Ad R. P. D. Florentium du Bois de la Villerabel, episcopum A",
+      "date": "1923-08-20",
+      "category": "EPISTOLA APOSTOLICA",
+      "incipit": "Quod sancti Bernardi",
+      "page": 437,
+      "rule": "unique",
+      "bodyLine": "Quod sancti Bernardi a Menthone sollemnibus pietatis sanet aeque laetitiae significationibus paras celebrare memoriam,",
+      "header": "Annus XV - Voi. XV 1 Septembris 1923 Num. 9"
+    },
+    {
+      "key": "1923-08-23|LITTERAE APOSTOLICAE|In Varsaviensis|Titulus basilicae minoris confertur in ipsa consecratione ec",
+      "date": "1923-08-23",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "In Varsaviensis",
+      "page": 583,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — In Varsaviensis civitatis suburbio",
+      "header": "Acta Pii PP. XI 583"
+    },
+    {
+      "key": "1923-10-12|CONSTITUTIONES APOSTOLICAE|Ad munus|Venezuelana. Dismembrationis et erectionis dioecesium Corens",
+      "date": "1923-10-12",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Ad munus",
+      "page": 99,
+      "rule": "unique",
+      "bodyLine": "Ad munus ab Unigenito Dei Filio Nobis traditum pertinere dignoscimus dioeceses per orbem erigere et dividere, prout dominici gregis",
+      "header": "Acta Pii PP. XI 99"
+    },
+    {
+      "key": "1923-11-12|LITTERAE ENCYCLICAE|Ecclesiam Dei|Ad venerabiles fratres Patriarchas, Primates, Archiepiscopos",
+      "date": "1923-11-12",
+      "category": "LITTERAE ENCYCLICAE",
+      "incipit": "Ecclesiam Dei",
+      "page": 573,
+      "rule": "unique",
+      "bodyLine": "Ecclesiam Dei admirabili consilio sic constitutam, ut in plenitudine temporum esset immensae familiae instar, quae humani",
+      "header": "Annus XY - Vol. XV 1 Decembris 1923 Num. 12"
+    },
+    {
+      "key": "1923-11-15|EPISTOLAE|Probe Nobis|Ad R. D. Iacobum Ogier, S. S. cubicularium honoris, eumdemqu",
+      "date": "1923-11-15",
+      "category": "EPISTOLAE",
+      "incipit": "Probe Nobis",
+      "page": 66,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili, salutem et apostolicam benedictionem. — Probe Nobis",
+      "header": "66 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1923-11-23|LITTERAE APOSTOLICAE|Incumbentis Nobis|Praefectura apostolica Terrae Gulielmi orientalis in vicaria",
+      "date": "1923-11-23",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Incumbentis Nobis",
+      "page": 27,
+      "rule": "fuzzy",
+      "bodyLine": "Ad perpetuam rei memoriam. — Ineumbentis Nobis Apostolici officii",
+      "header": "Acta Pii PP. XI 27"
+    },
+    {
+      "key": "1923-12-04|CONSTITUTIONES APOSTOLICAE|Ad supremae|Nictheroyensis. Erectionis dioecesium B arcensis et Camposin",
+      "date": "1923-12-04",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Ad supremae",
+      "page": 485,
+      "rule": "unique",
+      "bodyLine": "Ad supremae Apostolicae Sedis solium, divina disponente clementia,",
+      "header": "Annus XV - Yol. XV 1 Octobris 1923 Num. 10"
+    }
+  ],
+  "unrecovered": [
+    {
+      "key": "1923-01-15|LITTERAE APOSTOLICAE|Per similes Litteras|Sodalitas a Divino Infante Pragensi ad unitatem revocatur et",
+      "date": "1923-01-15",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Per similes Litteras",
+      "reason": "header-mismatch",
+      "candidates": [
+        262
+      ]
+    },
+    {
+      "key": "1923-01-16|LITTERAE APOSTOLICAE||Metropolitanum templum, ~ Metropolitanum templum Ssmi Salvat",
+      "date": "1923-01-16",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1923-01-23|LITTERAE APOSTOLICAE|Praeclarissima|Ecclesia paroecialis B. M. V. a Valle Florum in civitate Tre",
+      "date": "1923-01-23",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Praeclarissima",
+      "reason": "outside-runs",
+      "candidates": [
+        146
+      ]
+    },
+    {
+      "key": "1923-02|LITTERAE APOSTOLICAE|Explorata res est|Conceduntur indulgentiae, facultates et privilegia sociis, z",
+      "date": "1923-02",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Explorata res est",
+      "reason": "header-mismatch",
+      "candidates": [
+        103
+      ]
+    },
+    {
+      "key": "1923-02|LITTERAE APOSTOLICAE|Sanctuarium|Titulo ac privilegiis basilicae minoris honestatur sanctuari",
+      "date": "1923-02",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Sanctuarium",
+      "reason": "several",
+      "candidates": [
+        65,
+        488
+      ]
+    },
+    {
+      "key": "1923-03-01|CONSTITUTIONES APOSTOLICAE|Suessionensis|Concessionis sacri Pallii",
+      "date": "1923-03-01",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Suessionensis",
+      "reason": "outside-runs",
+      "candidates": [
+        261
+      ]
+    },
+    {
+      "key": "1923-03-14|EPISTOLAE|Plenum quintum|Ad E. P. D. Augustinum Dontenwill, archiepiscopum tit. Ptole",
+      "date": "1923-03-14",
+      "category": "EPISTOLAE",
+      "incipit": "Plenum quintum",
+      "reason": "outside-runs",
+      "candidates": [
+        212
+      ]
+    },
+    {
+      "key": "1923-03-15|LITTERAE APOSTOLICAE|Ex hae excelsa|Erigitur in insula Madagascaria vicariatus apostolicus de « ",
+      "date": "1923-03-15",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ex hae excelsa",
+      "reason": "none"
+    },
+    {
+      "key": "1923-03-17|LITTERAE APOSTOLICAE|Bomani Pontifices|Divus Leonardus a Portu Mauritio caelestis Patronus declarat",
+      "date": "1923-03-17",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Bomani Pontifices",
+      "reason": "outside-runs",
+      "candidates": [
+        137,
+        196
+      ]
+    },
+    {
+      "key": "1923-03-24|LITTERAE APOSTOLICAE|Monasterium Speinshartense|Perantiqua Praemonstratensis Ordinis abbatia B. M. V. de «Sp",
+      "date": "1923-03-24",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Monasterium Speinshartense",
+      "reason": "outside-runs",
+      "candidates": [
+        197
+      ]
+    },
+    {
+      "key": "1923-04-13|LITTERAE APOSTOLICAE|Romanorum Pontificum|Ecclesia S. Basilii in civitate Brugensi titulo et privilegi",
+      "date": "1923-04-13",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Romanorum Pontificum",
+      "reason": "outside-runs",
+      "candidates": [
+        140
+      ]
+    },
+    {
+      "key": "1923-04-29|LITTERAE APOSTOLICAE|Quod Ioannes|Venerabilis Dei Famula Theresia a Iesu Infante, monialis pro",
+      "date": "1923-04-29",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quod Ioannes",
+      "reason": "outside-runs",
+      "candidates": [
+        202
+      ]
+    },
+    {
+      "key": "1923-05-13|LITTERAE APOSTOLICAE|Conspicuum|Ven. Dei Servus Robertus S. R. E. Card. Bellarminus, e Socie",
+      "date": "1923-05-13",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Conspicuum",
+      "reason": "outside-runs",
+      "candidates": [
+        269
+      ]
+    },
+    {
+      "key": "1923-05-23|SACRA CONSISTORIA||Allocutio SS. D. N. Pii PP. XI. - Creatio et publicatio S. E",
+      "date": "1923-05-23",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1923-05-23|SACRA CONSISTORIA||Camerariatus Sacri Collegii",
+      "date": "1923-05-23",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1923-05-23|SACRA CONSISTORIA||Provisio Ecclesiarum",
+      "date": "1923-05-23",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1923-05-25|SACRA CONSISTORIA||Optio tituli",
+      "date": "1923-05-25",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1923-05-25|SACRA CONSISTORIA||Postulatio Ss. Palliorum",
+      "date": "1923-05-25",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1923-05-25|SACRA CONSISTORIA||Provisio Ecclesiarum",
+      "date": "1923-05-25",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1923-05-25|SACRA CONSISTORIA||Tituli Emis PP. Cardinalibus assignati",
+      "date": "1923-05-25",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1923-05-25|SACRA CONSISTORIA||Traditio rubri galeri Emis PP. Cardinalibus ......",
+      "date": "1923-05-25",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1923-05-26|EPISTOLAE|Quod die|Ad Emum P. D. Ludovicum titulo Sanctae Mariae in Aquiro, S. ",
+      "date": "1923-05-26",
+      "category": "EPISTOLAE",
+      "incipit": "Quod die",
+      "reason": "outside-runs",
+      "candidates": [
+        342
+      ]
+    },
+    {
+      "key": "1923-06-19|LITTERAE APOSTOLICAE|Exstat in civitate|Ecclesia curialis B. M. V. de Nazareth, urbis Belemensis de ",
+      "date": "1923-06-19",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Exstat in civitate",
+      "reason": "outside-runs",
+      "candidates": [
+        494
+      ]
+    },
+    {
+      "key": "1923-06-31|LITTERAE APOSTOLICAE|Iam inde|Sanctuarium a Matre Domini, intra fines archidioecesis Saler",
+      "date": "1923-06-31",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Iam inde",
+      "reason": "outside-runs",
+      "candidates": [
+        156,
+        337
+      ]
+    },
+    {
+      "key": "1923-06-31|LITTERAE APOSTOLICAE|Venerabilis frater|Titulus basilicae minoris confertur ecclesiae Sanctae Mariae",
+      "date": "1923-06-31",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Venerabilis frater",
+      "reason": "outside-runs",
+      "candidates": [
+        37,
+        209,
+        210,
+        212,
+        213,
+        214,
+        215,
+        218,
+        220,
+        221,
+        277,
+        278,
+        281,
+        282,
+        283,
+        338,
+        340,
+        343,
+        348,
+        349,
+        353,
+        437,
+        495,
+        496,
+        499,
+        503,
+        505,
+        510,
+        511,
+        537,
+        538,
+        539,
+        540,
+        541,
+        542
+      ]
+    },
+    {
+      "key": "1923-06|LITTERAE APOSTOLICAE|In dissitis|Nova erigitur apostolica praefectura de Lydenburg, in Africa",
+      "date": "1923-06",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "In dissitis",
+      "reason": "outside-runs",
+      "candidates": [
+        492
+      ]
+    },
+    {
+      "key": "1923-06|LITTERAE APOSTOLICAE|Quo christiani nominis|Nova praefectura apostolica Gariepensis erigitur in Africa m",
+      "date": "1923-06",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quo christiani nominis",
+      "reason": "outside-runs",
+      "candidates": [
+        493
+      ]
+    },
+    {
+      "key": "1923-07-27|CONSTITUTIONES APOSTOLICAE|Inter plurimas|Concessionis personalis Pallii Archiepiscopo Emeritensi",
+      "date": "1923-07-27",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Inter plurimas",
+      "reason": "outside-runs",
+      "candidates": [
+        535
+      ]
+    },
+    {
+      "key": "1923-08-20|MOTU PROPRIO|i apr|20 Post datam. - De Ordinariorum facultatibus quinquennalibu",
+      "date": "1923-08-20",
+      "category": "MOTU PROPRIO",
+      "incipit": "i apr",
+      "reason": "none"
+    },
+    {
+      "key": "1923-10-21|EPISTOLAE|Prope adsunt dies|Ad Emum P. D. Basilium episcopum Veliternum S. R. E. card. P",
+      "date": "1923-10-21",
+      "category": "EPISTOLAE",
+      "incipit": "Prope adsunt dies",
+      "reason": "outside-runs",
+      "candidates": [
+        541
+      ]
+    },
+    {
+      "key": "1923-10|EPISTOLAE|ANNO MENSE DIE ¡PAG|eum laetitiae significationibus se peramanter consociat",
+      "date": "1923-10",
+      "category": "EPISTOLAE",
+      "incipit": "ANNO MENSE DIE ¡PAG",
+      "reason": "none"
+    },
+    {
+      "key": "1923-10|EPISTOLAE|Respicientibus|Ad E. P. D. Augustinum Fischer-Colbrie, episcopum Cassoviens",
+      "date": "1923-10",
+      "category": "EPISTOLAE",
+      "incipit": "Respicientibus",
+      "reason": "outside-runs",
+      "candidates": [
+        540
+      ]
+    },
+    {
+      "key": "1923-11-24|CONSTITUTIONES APOSTOLICAE|Orbis catholici regimen|Verae Crucis. Dismembrationis et erectionis dioecesis Papant",
+      "date": "1923-11-24",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Orbis catholici regimen",
+      "reason": "header-mismatch",
+      "candidates": [
+        329
+      ]
+    },
+    {
+      "key": "1923-11-27|LITTERAE APOSTOLICAE|Ex hac|Vicariatus apostolicus Insularum Tahiti separatur in duas pa",
+      "date": "1923-11-27",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ex hac",
+      "reason": "several",
+      "candidates": [
+        28,
+        336
+      ]
+    },
+    {
+      "key": "1923-11|CONSTITUTIONES APOSTOLICAE|Inter negotia|De Tulancingo. Dismembrationis et erectionis dioecesis Hueju",
+      "date": "1923-11",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Inter negotia",
+      "reason": "outside-runs",
+      "candidates": [
+        332
+      ]
+    },
+    {
+      "key": "1923-12-07|LITTERAE APOSTOLICAE|Be more Romanorum Pontificum|Erigitur apostolica Delegatio Africae meridionalis",
+      "date": "1923-12-07",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Be more Romanorum Pontificum",
+      "reason": "none"
+    },
+    {
+      "key": "1923-12-23|SACRA CONSISTORIA|Tituli Emis PP. Cardinalibus assignati|",
+      "date": "1923-12-23",
+      "category": "SACRA CONSISTORIA",
+      "incipit": "Tituli Emis PP. Cardinalibus assignati",
+      "reason": "outside-runs",
+      "candidates": [
+        257
+      ]
+    },
+    {
+      "key": "1923-12-23|SACRA CONSISTORIA||Allocutio SS. D. N. Pii PP. XI. - Creatio et publicatio S. E",
+      "date": "1923-12-23",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1923-12-23|SACRA CONSISTORIA||Postulatio Ss. Pallii",
+      "date": "1923-12-23",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1923-12-23|SACRA CONSISTORIA||Postulatio Ss. Palliorum IV",
+      "date": "1923-12-23",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1923-12-23|SACRA CONSISTORIA||Provisio Ecclesiarum",
+      "date": "1923-12-23",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1923-12-23|SACRA CONSISTORIA||Provisio Ecclesiarum",
+      "date": "1923-12-23",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1923-12-23|SACRA CONSISTORIA||Traditio galeri rubri Emis PP. Cardinalibus ....",
+      "date": "1923-12-23",
+      "category": "SACRA CONSISTORIA",
+      "incipit": null,
+      "reason": "no-incipit"
+    }
+  ]
+}

@@ -1,0 +1,410 @@
+{
+  "source": "1919",
+  "generated": "2026-09-20",
+  "text": "~/development/sources/AAS/txt/aas-11-1919.txt (536 pages)",
+  "rows": [
+    {
+      "key": "1919-03-11|EPISTOLAE|Nuper|Ad omnes catholici orbis Episcopos ceterosque locorum Ordina",
+      "date": "1919-03-11",
+      "category": "EPISTOLAE",
+      "incipit": "Nuper",
+      "page": 108,
+      "rule": "dated",
+      "bodyLine": "Nuper ex Venerabilis Fratris Patriarchae Hierosolymitani",
+      "header": "108 Acta Apostolicae Sedis - Commentarium Officiale",
+      "formula": "Datum Romae apud sanctum Petrum, die xi martii, anno mcmxix, Pontificatus Nostri quinto. BENEDICTUS PP. XV LITTERAE APOSTOLICAE CONSOCIATIONI DOMINAE NOSTRAE A SALUTE PARISIIS CANONICE ERECTAE INDULGE"
+    }
+  ],
+  "unrecovered": [
+    {
+      "key": "1918-12-19|LITTERAE APOSTOLICAE|Exstat, Derthusensi|Conceditur in perpetuum indulgentia plenaria toties quoties ",
+      "date": "1918-12-19",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Exstat, Derthusensi",
+      "reason": "several",
+      "candidates": [
+        65
+      ]
+    },
+    {
+      "key": "1918-12-26|EPISTOLAE|Imaginem vestrae|Ad Iosephum S. R. E. card. Prisco, archiepiscopum Neapolitan",
+      "date": "1918-12-26",
+      "category": "EPISTOLAE",
+      "incipit": "Imaginem vestrae",
+      "reason": "several",
+      "candidates": [
+        35
+      ]
+    },
+    {
+      "key": "1919-01-01|EPISTOLAE|Inter egregias|Ad RR. PP. DD. Archiepiscopum Lini anum ceterosque in Peruvi",
+      "date": "1919-01-01",
+      "category": "EPISTOLAE",
+      "incipit": "Inter egregias",
+      "reason": "none"
+    },
+    {
+      "key": "1919-01-06|EPISTOLAE|Pietatem et fidem|Ad R. P. D. Arthurum Hinsley, antistitem dom. pont., Angloru",
+      "date": "1919-01-06",
+      "category": "EPISTOLAE",
+      "incipit": "Pietatem et fidem",
+      "reason": "several",
+      "candidates": [
+        36
+      ]
+    },
+    {
+      "key": "1919-01-20|EPISTOLAE|Quum annus|Ad R. P. D. Franciscum Xaverium episcopum Tarbiensem et Lour",
+      "date": "1919-01-20",
+      "category": "EPISTOLAE",
+      "incipit": "Quum annus",
+      "reason": "several",
+      "candidates": [
+        37
+      ]
+    },
+    {
+      "key": "1919-01-23|LITTERAE APOSTOLICAE|Dilectus filius|Consociationi Dominae Nostrae a salute Parisiis canonice ere",
+      "date": "1919-01-23",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Dilectus filius",
+      "reason": "several",
+      "candidates": [
+        109,
+        338
+      ]
+    },
+    {
+      "key": "1919-01-27|EPISTOLAE|Exeunte altero|Ad R. F. Himerium a Iesu, Fratrum a Scholis christianis prae",
+      "date": "1919-01-27",
+      "category": "EPISTOLAE",
+      "incipit": "Exeunte altero",
+      "reason": "several",
+      "candidates": [
+        70
+      ]
+    },
+    {
+      "key": "1919-01|LITTERAE APOSTOLICAE|Exstat in urbe|Ecclesia Ss. Ursulae et Sociarum, Vv. et Mm , in urbe Bonaer",
+      "date": "1919-01",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Exstat in urbe",
+      "reason": "several",
+      "candidates": [
+        68
+      ]
+    },
+    {
+      "key": "1919-01|LITTERAE APOSTOLICAE|Locami, intra fines|Templum Locarnense B. Mariae Virg. a Saxo, in dioecesi Lugan",
+      "date": "1919-01",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Locami, intra fines",
+      "reason": "several",
+      "candidates": [
+        66
+      ]
+    },
+    {
+      "key": "1919-02-05|EPISTOLAE|Praeclara|Ad R. P. Thomam Pègues, ex Ordine Praedicatorum, qui Summam ",
+      "date": "1919-02-05",
+      "category": "EPISTOLAE",
+      "incipit": "Praeclara",
+      "reason": "several",
+      "candidates": [
+        56,
+        71
+      ]
+    },
+    {
+      "key": "1919-02-13|CONSTITUTIONES APOSTOLICAE|Catholici fideles|Erectio novae dioecesis graeci ritus « Lungrensis » nuncupat",
+      "date": "1919-02-13",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Catholici fideles",
+      "reason": "several",
+      "candidates": [
+        222
+      ]
+    },
+    {
+      "key": "1919-02-14|EPISTOLAE|Mirifice|Ad R. P. Reginaldum Garrigou-Lagrange, ex Ordine Praedicator",
+      "date": "1919-02-14",
+      "category": "EPISTOLAE",
+      "incipit": "Mirifice",
+      "reason": "several",
+      "candidates": [
+        121
+      ]
+    },
+    {
+      "key": "1919-03-10|EPISTOLAE|Antequam Ordinem|Allocutio SS. D. N. Benedi-3 3 cti PP. XV, habita in Consist",
+      "date": "1919-03-10",
+      "category": "EPISTOLAE",
+      "incipit": "Antequam Ordinem",
+      "reason": "several",
+      "candidates": [
+        97
+      ]
+    },
+    {
+      "key": "1919-03-12|EPISTOLAE|Multiplices quidem|Ad Ioannem S. R. E. card. Csernoch, archiepiscopum Strigonie",
+      "date": "1919-03-12",
+      "category": "EPISTOLAE",
+      "incipit": "Multiplices quidem",
+      "reason": "several",
+      "candidates": [
+        122
+      ]
+    },
+    {
+      "key": "1919-03-20|EPISTOLAE|Quae Pompeios|Ad RR. PP. DD. Carolum Gregorium Mariam Grasso, archiepiscop",
+      "date": "1919-03-20",
+      "category": "EPISTOLAE",
+      "incipit": "Quae Pompeios",
+      "reason": "several",
+      "candidates": [
+        264
+      ]
+    },
+    {
+      "key": "1919-03|LITTERAE APOSTOLICAE|Illustriores|Ecclesia Rothomagensis B. M. Virginis a Bono Succursu titulo",
+      "date": "1919-03",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Illustriores",
+      "reason": "several",
+      "candidates": [
+        226,
+        371
+      ]
+    },
+    {
+      "key": "1919-04-10|EPISTOLAE|Communes litteras|Ad Iacobum S. R. E. card. Gibbons, archiepiscopum Baltimoren",
+      "date": "1919-04-10",
+      "category": "EPISTOLAE",
+      "incipit": "Communes litteras",
+      "reason": "several",
+      "candidates": [
+        171
+      ]
+    },
+    {
+      "key": "1919-04-22|EPISTOLAE|Est sane|Ad R. P. D. Angelum Marquina y Corrales, episcopum Canariens",
+      "date": "1919-04-22",
+      "category": "EPISTOLAE",
+      "incipit": "Est sane",
+      "reason": "several",
+      "candidates": [
+        266
+      ]
+    },
+    {
+      "key": "1919-04-29|LITTERAE APOSTOLICAE|Quae catholici orbis|Ecclesia metropolitana S. Iacobi Maioris in Urbe Marianopoli",
+      "date": "1919-04-29",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae catholici orbis",
+      "reason": "several",
+      "candidates": [
+        229
+      ]
+    },
+    {
+      "key": "1919-04-30|EPISTOLAE|Quum te|Ad R. P. D. Ioannem Benlloch y Vivó, archiepiscopum Burgense",
+      "date": "1919-04-30",
+      "category": "EPISTOLAE",
+      "incipit": "Quum te",
+      "reason": "several",
+      "candidates": [
+        267
+      ]
+    },
+    {
+      "key": "1919-04|LITTERAE APOSTOLICAE|Quae catholico nomini|Vicariatu Apostolico Congi Belgici dismembrato, duo ex eo co",
+      "date": "1919-04",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae catholico nomini",
+      "reason": "several",
+      "candidates": [
+        228
+      ]
+    },
+    {
+      "key": "1919-05-24|EPISTOLAE|Laetamur tecum|Ad R. P. D. Paulum Reynaud, episc. tit. Fussalanum, vicarium",
+      "date": "1919-05-24",
+      "category": "EPISTOLAE",
+      "incipit": "Laetamur tecum",
+      "reason": "several",
+      "candidates": [
+        273
+      ]
+    },
+    {
+      "key": "1919-05-24|EPISTOLAE|Tristia laeta|Ad R. P. D. Leopoldum Duarte Silva, archiepiscopum sancti Pa",
+      "date": "1919-05-24",
+      "category": "EPISTOLAE",
+      "incipit": "Tristia laeta",
+      "reason": "several",
+      "candidates": [
+        272
+      ]
+    },
+    {
+      "key": "1919-05|EPISTOLAE|Epistola tua|Ad R. D. sac. Maximilianum Kassiepe, ex Missionariis Oblatis",
+      "date": "1919-05",
+      "category": "EPISTOLAE",
+      "incipit": "Epistola tua",
+      "reason": "several",
+      "candidates": [
+        271
+      ]
+    },
+    {
+      "key": "1919-05|EPISTOLAE|Exactum non ita|Ad religiosas feminas Antistitam ac Sorores Dominicanas Hibe",
+      "date": "1919-05",
+      "category": "EPISTOLAE",
+      "incipit": "Exactum non ita",
+      "reason": "several",
+      "candidates": [
+        269
+      ]
+    },
+    {
+      "key": "1919-05|EPISTOLAE|Inter praestantissimus viros|Ad R. P. Venantium a Lisle-en-Rigault, Ordinis Minorum Capuc",
+      "date": "1919-05",
+      "category": "EPISTOLAE",
+      "incipit": "Inter praestantissimus viros",
+      "reason": "several",
+      "candidates": [
+        268
+      ]
+    },
+    {
+      "key": "1919-06-17|EPISTOLAE|Gratum nobis|Ad R. P. MaurumJParodi, Congregationis Olivetanae abbatem ge",
+      "date": "1919-06-17",
+      "category": "EPISTOLAE",
+      "incipit": "Gratum nobis",
+      "reason": "several",
+      "candidates": [
+        307
+      ]
+    },
+    {
+      "key": "1919-06|EPISTOLAE|In his rerum angustiis|Ad R. D. Ioannem Praschl, canonicum Budovicensem, Marialis C",
+      "date": "1919-06",
+      "category": "EPISTOLAE",
+      "incipit": "In his rerum angustiis",
+      "reason": "several",
+      "candidates": [
+        274
+      ]
+    },
+    {
+      "key": "1919-06|LITTERAE APOSTOLICAE|Cum ex Apostolico munere|Metropolitanae ecclesiae Gorcyrensi uniuntur Sedes Zacynthie",
+      "date": "1919-06",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Cum ex Apostolico munere",
+      "reason": "several",
+      "candidates": [
+        262
+      ]
+    },
+    {
+      "key": "1919-06|LITTERAE APOSTOLICAE|Inclyta Benedicti Patris familia|Restituitur ecclesia sanctae Iustinae, Patavii sita, in abba",
+      "date": "1919-06",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Inclyta Benedicti Patris familia",
+      "reason": "several",
+      "candidates": [
+        369
+      ]
+    },
+    {
+      "key": "1919-06|LITTERAE APOSTOLICAE|Quae rei sacrae|Metropolitanae ecclesiae. Naxiensi uniuntur Sedes Tinensis e",
+      "date": "1919-06",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae rei sacrae",
+      "reason": "several",
+      "candidates": [
+        263
+      ]
+    },
+    {
+      "key": "1919-07-03|EPISTOLAE|Nobis quidem|Allocutio SS. D. N. Benedicti PP. XV, 257 i i VII. - SERMO. ",
+      "date": "1919-07-03",
+      "category": "EPISTOLAE",
+      "incipit": "Nobis quidem",
+      "reason": "several",
+      "candidates": [
+        257
+      ]
+    },
+    {
+      "key": "1919-07-15|LITTERAE APOSTOLICAE|Diuturni|Ad Germaniae Episcopos: pace tandem sancita, opportuna monit",
+      "date": "1919-07-15",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Diuturni",
+      "reason": "several",
+      "candidates": [
+        305
+      ]
+    },
+    {
+      "key": "1919-07-15|LITTERAE APOSTOLICAE|Illustriores inter sacras aedes|Cathedralis ecclesia Derthusensis beatae Mariae Virginis in ",
+      "date": "1919-07-15",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Illustriores inter sacras aedes",
+      "reason": "several",
+      "candidates": [
+        226,
+        371
+      ]
+    },
+    {
+      "key": "1919-07-15|LITTERAE APOSTOLICAE||AU£ 21 Romanorum Pontificum. - Sanctuarium Eugubinum sancti ",
+      "date": "1919-07-15",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1919-07-20|EPISTOLAE|Nel decorso anno|Ad R. P. Augustinum Garagnani S. L, de erigendo « Istituto d",
+      "date": "1919-07-20",
+      "category": "EPISTOLAE",
+      "incipit": "Nel decorso anno",
+      "reason": "several",
+      "candidates": [
+        342
+      ]
+    },
+    {
+      "key": "1919-09-10|LITTERAE APOSTOLICAE|In suprema|Nova in Indiis orientalibus dioecesis Patnensis erigitur . .",
+      "date": "1919-09-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "In suprema",
+      "reason": "several",
+      "candidates": [
+        456
+      ]
+    },
+    {
+      "key": "1919-09-27|LITTERAE APOSTOLICAE|Parisiis|Templum parisiense « Voti nationalis », Sacratissimo Iesu Co",
+      "date": "1919-09-27",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Parisiis",
+      "reason": "several",
+      "candidates": [
+        109,
+        158,
+        457
+      ]
+    },
+    {
+      "key": "1919-09|LITTERAE APOSTOLICAE|Vestigiis Romanorum Pontificum|Ecclesia B. M. Virginis ad Nives, in oppido Cuglieri, dioece",
+      "date": "1919-09",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Vestigiis Romanorum Pontificum",
+      "reason": "several",
+      "candidates": [
+        409
+      ]
+    }
+  ]
+}
