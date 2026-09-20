@@ -61,13 +61,14 @@ export interface ActaCategory {
 /**
  * Case-fold a heading, collapse whitespace, drop the roman numeral and dash prefix -- in
  * the OCR's readings of the numeral too (`IY. -`, `XJV -`, `i. -`, `I r-`; AAS 25, 26, 42,
- * 36 of 1933-1950) -- and the OCR's trailing quote or hyphen (`LITTERAE DECRETALES'`,
- * `BULLA DOGMATICA-`; AAS 28, 42) and its accents (`EPISTULA ENCÌCLICA`, AAS 41).
+ * 36 of 1933-1950; `T. -` for `I. -`, AAS 14 (1922) 705) -- and the OCR's trailing quote
+ * or hyphen (`LITTERAE DECRETALES'`, `BULLA DOGMATICA-`; AAS 28, 42) and its accents
+ * (`EPISTULA ENCÌCLICA`, AAS 41).
  */
 export function normaliseHeading(text: string): string {
   return text
     .normalize('NFD').replace(/\p{M}/gu, '')   // the OCR's accents (`EPISTULA ENCÌCLICA`, AAS 41)
-    .replace(/^\s*[IVXLJYivxl1]+(?:[.-]?\s*[r•]?\s*[–-]\s*|\.\s+(?=[A-Z]))/, '')   // `XI- - ALLOCUTIONES` (AAS 66, 1974); `I. LITTERAE ENCYCLICAE` (AAS 91, 1999)
+    .replace(/^\s*[IVXLJYTivxl1]+(?:[.-]?\s*[r•]?\s*[–-]\s*|\.\s+(?=[A-Z]))/, '')   // `XI- - ALLOCUTIONES` (AAS 66, 1974); `I. LITTERAE ENCYCLICAE` (AAS 91, 1999); `T. -` for `I. -` (AAS 14, 1922)
     .replace(/\s+/g, ' ')
     .replace(/«\s+/g, '«').replace(/\s+»/g, '»')   // `« MOTU PROPRIO» DATAE` (AAS 68, 1976)
     .replace(/[\s,.:'’^\[|\\-]+$/, '')   // the OCR's `^` after a heading (AAS 52, 1960); the scan margin's `[` (AAS 89 (1997) 890)
@@ -86,8 +87,11 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // multiplicibus curis*; 1950: *Anni sacri*, *Summi maeroris*, *Mirabile illud*) and the
   // singular `EPISTULA ENCYCLICA` (1933: *Dilectissima Nobis*; 1936: *Vigilanti cura*;
   // 1940-1954), every one of them on the encyclicals shelf of its pope; the OCR of AAS 41
-  // (1949) reads `II - EPISTULA ENCÌCLICA` (*Redemptoris nostri cruciatus*).
-  { id: 'Litterae Encyclicae', headings: ['LITTERAE ENCYCLICAE', 'EPISTULA ENCYCLICA', 'EPISTULAE ENCYCLICAE', 'EPISTULA ENCICLICA'],
+  // (1949) reads `II - EPISTULA ENCÌCLICA` (*Redemptoris nostri cruciatus*). The volumes of
+  // 1919 and 1924 print the O spelling `EPISTOLAE ENCYCLICAE` (AAS 11, 1919: *In hac tanta*)
+  // and `EPISTOLA ENCYCLICA` (AAS 16, 1924: *Maximam gravissimamque*).
+  { id: 'Litterae Encyclicae',
+    headings: ['LITTERAE ENCYCLICAE', 'EPISTULA ENCYCLICA', 'EPISTULAE ENCYCLICAE', 'EPISTULA ENCICLICA', 'EPISTOLA ENCYCLICA', 'EPISTOLAE ENCYCLICAE'],
     classes: [{ genre: 'encyclical' }], harvested: 'yes' },
   // The apost_exhortations shelf. The index prints the singular when the year has one and
   // qualifies the post-synodal ones (Amoris laetitia, Christus vivit, Querida Amazonia).
@@ -109,7 +113,11 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // 2015-2016 print the incipit instead. AAS 42 (1950) heads the definition of the
   // Assumption `BULLA DOGMATICA` (*Munificentissimus Deus*, 1 November 1950), which
   // vatican.va's apost_constitutions shelf carries (`mag:pius-xii/munificentissimus-deus-1950`).
-  { id: 'Constitutiones Apostolicae', headings: ['CONSTITUTIONES APOSTOLICAE', 'BULLA DOGMATICA'],
+  // The volumes of 1913, 1922 and 1924 head a single constitution with the singular
+  // `CONSTITUTIO APOSTOLICA` (AAS 5, 1913: *In praecipuis*; AAS 16, 1924: *Dominici gregis
+  // cura*), the OCR once reading the numeral `I.` as `T.` (AAS 14, 1922: *Ad christifidelium
+  // bonum*).
+  { id: 'Constitutiones Apostolicae', headings: ['CONSTITUTIONES APOSTOLICAE', 'BULLA DOGMATICA', 'CONSTITUTIO APOSTOLICA'],
     classes: [{ genre: 'papal-bull', requires: 'apostolic-constitution' }], harvested: 'yes' },
   // The motu_proprio shelf, merged into apost_letters where a document is filed on both:
   // an apostolic-letter bearing `motu-proprio`. A document vatican.va filed on

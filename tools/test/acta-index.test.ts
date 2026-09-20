@@ -1384,6 +1384,24 @@ describe('parseActaIndex on the early volumes whose OCR kept the page column (ac
       expect(r.stats.withoutPage / r.stats.dateLines, String(year)).toBeLessThan(0.1);
     }
   });
+
+  it('parses the seventeen fixtures of 1909-1925 with no unseen heading and no unmapped pope (phase 2b-iii-b, spec §10); their pages are recovered by a later task, not asserted here', () => {
+    const sources: [string, object][] = [
+      ['aas-01-1909', { year: 1909, volume: 1, columnar: true, bareIncipits: false }],
+      ...[1910, 1911, 1912, 1913, 1914, 1915, 1916].map((year): [string, object] => [`aas-${String(year - 1908).padStart(2, '0')}-${year}`, { year, volume: year - 1908, ...columnar }]),
+      ['aas-09-1917-I', { year: 1917, volume: 9, part: 'I', ...columnar }],
+      ...[1918, 1919, 1920, 1921, 1922, 1923, 1924, 1925].map((year): [string, object] => [`aas-${String(year - 1908).padStart(2, '0')}-${year}`, { year, volume: year - 1908, ...columnar }]),
+    ];
+    for (const [file, opts] of sources) {
+      const r = parseActaIndex(readFileSync(`tools/fixtures/acta/${file}.txt`, 'utf8'), opts);
+      // AAS 14 (1922) p. 709 once misreads the column header `ANNO MENSE DIE` as `ANNO
+      // MUNSE DIE`, which the column-header regex (index.ts) does not admit; a concern for
+      // the report, not a category to guess.
+      const unseen = file === 'aas-14-1922' ? r.unseenHeadings.filter((h) => h !== 'Pius XI: ANNO MUNSE DIE') : r.unseenHeadings;
+      expect(unseen, file).toEqual([]);
+      expect(r.unmappedPopes, file).toEqual([]);
+    }
+  });
 });
 
 describe('splitEntryText', () => {

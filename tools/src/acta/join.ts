@@ -64,11 +64,15 @@ const index = (year: number, retrieved: string, extra: Partial<ActaSource['parse
  * `mag:benedict-xv/providentissima-mater-1917`), so only part I has a fixture.
  */
 export const ACTA_SOURCES: readonly ActaSource[] = [
-  // AAS 1: the page column is cropped from the scan on most index pages, and the index
-  // prints incipits only in guillemets after a genre word (`Constitutio « Promulgandi »`),
-  // describing every other act without one -- measured on the fixture, sample report §2.
-  volume(1909, '2026-09-13', { parse: { columnar: true, bareIncipits: false } }),
-  volume(1917, '2026-09-13', { part: 'I' }),
+  // Phase 2b-iii-b (spec §10): AAS 1-17, the volumes of 1909-1925, whose OCR lost the page
+  // column on most index pages -- the pages come back from the volume body through the
+  // sidecars (recover.ts). 1909 and 1917-I, the sample's, re-extracted on 2026-09-20 with
+  // the interleaving fallback of 2b-ii-b. AAS 1 prints incipits only in guillemets after
+  // a genre word (sample report §2), hence `bareIncipits: false`.
+  volume(1909, '2026-09-20', { parse: { columnar: true, bareIncipits: false } }),
+  ...Array.from({ length: 1916 - 1910 + 1 }, (_, i) => volume(1910 + i, '2026-09-20')),
+  volume(1917, '2026-09-20', { part: 'I' }),
+  ...Array.from({ length: 1925 - 1918 + 1 }, (_, i) => volume(1918 + i, '2026-09-20')),
   // Phase 2b-iii-a (spec §10): the early volumes whose OCR kept the page column -- AAS
   // 18-22 (1926-1930, Pius XI). The volumes of 1910-1925 lost it on most index pages and
   // wait for the page recovery of 2b-iii-b.

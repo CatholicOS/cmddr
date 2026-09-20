@@ -43,6 +43,9 @@
 #        tools/fetch-acta.sh sample          # the six sources of phase 2b-i: 1909 1917 1931 1958 1978 2012
 #        tools/fetch-acta.sh 1932-1957       # a range of volumes (phase 2b-ii-a: AAS 24-49; 1959-1977 is phase 2b-ii-b, AAS 51-69;
 #                                            # 1979-2002 with the index PDFs 2010, 2011, 2013 and 2014 is phase 2b-ii-c, AAS 71-94)
+#        tools/fetch-acta.sh 1909-1925       # a range of volumes (phase 2b-iii-b: AAS 1-17, the lost page column, spec §10)
+#        tools/fetch-acta.sh text 1921       # the whole text of a volume to <store>/txt/ (phase 2b-iii-b's recovery input)
+#        tools/fetch-acta.sh text 1909-1925  # the same for a range
 set -euo pipefail
 cd "$(dirname "$0")/.."
 mkdir -p tools/fixtures/acta
@@ -183,6 +186,26 @@ print(f'    PDF pages {start + 1}-{end} of {n} -> {out}{note}')
 EOF
 }
 
+# Export a volume's whole text -- every page, in pypdf's default mode, one page per form
+# feed -- to <store>/txt/aas-{vol}-{year}[-{part}].txt, for the page recovery of phase
+# 2b-iii-b (acta volumes spec §10.3): the recovery tool (tools/recover-acta-pages.ts)
+# reads it from the store and writes the checked-in sidecar; the text itself is never
+# checked in (500-1,300 pages a volume). Skipped when the file is already there.
+extract_text() { # extract_text <pdf> <out>
+  if [ -s "$2" ]; then echo "    cached: $2"; return 0; fi
+  mkdir -p "$(dirname "$2")"
+  python3 - "$1" "$2" <<'EOF'
+import sys
+from pypdf import PdfReader
+pdf, out = sys.argv[1], sys.argv[2]
+reader = PdfReader(pdf)
+pages = [(p.extract_text() or '') for p in reader.pages]
+with open(out, 'w', encoding='utf-8') as f:
+    f.write('\f'.join(pages))
+print(f'    {len(pages)} pages -> {out}')
+EOF
+}
+
 get_index() { # get_index <year>
   local year="$1"
   local path
@@ -218,6 +241,10 @@ get_volume() { # get_volume <year>
   for path in $paths; do
     local file vol part out
     file="$(basename "$path")"
+    # In text mode, a part II (1917, 1983) is skipped outright: it has no chronological
+    # index and so no act to recover (extract_index_pages already reports as much in
+    # fixture mode; there is nothing for the recovery tool to read from its text).
+    if [ "$MODE" = "text" ] && [[ "$file" == *-II-* ]]; then continue; fi
     vol="$(echo "$file" | sed -E 's/^AAS-([0-9]{2})-.*/\1/')"
     part="$(echo "$file" | sed -nE 's/^AAS-[0-9]{2}-(I|II)-.*/\1/p; s/^AAS-[0-9]{2}-[0-9]{4}-(I|II)-.*/\1/p')"
     out="tools/fixtures/acta/aas-$vol-$year${part:+-$part}.txt"
@@ -227,7 +254,11 @@ get_volume() { # get_volume <year>
       echo "    MISSING: $BASE/$path" >&2
       continue
     fi
-    extract_index_pages "$pdf" "$out"
+    if [ "$MODE" = "text" ]; then
+      extract_text "$pdf" "${STORE%/pdf}/txt/aas-$vol-$year${part:+-$part}.txt"
+    else
+      extract_index_pages "$pdf" "$out"
+    fi
   done
 }
 
@@ -235,6 +266,8 @@ get() { # get <year>
   if [ "$1" -le 2002 ]; then get_volume "$1"; else get_index "$1"; fi
 }
 
+MODE=fixtures
+if [ "${1:-}" = "text" ]; then MODE=text; shift; fi
 ARG="${1:-}"
 if [ "$ARG" = "sample" ]; then
   for y in 1909 1917 1931 1958 1978 2012; do get "$y"; done
