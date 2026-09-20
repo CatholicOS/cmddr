@@ -44,8 +44,11 @@ const GENERALIS_RE = /INDEX\s+GENERALIS\s+(?:ACTORUM|RERUM)/;
 /** The pope part's end: the dicasteries' part (`II. - ACTA SACRARUM CONGREGATIONUM`, `ACTA SS. CONGREGATIONUM`) or the next index. */
 // The numeral prefix's class matches the parser's own `PART_HEADING_RE` (index.ts): AAS 17
 // (1925) reads the part end `IL - ACTA` (roman `II.` misread as `IL`) on its own line,
-// before `SACRARUM CONGREGATIONUM` on the next.
-const PART_END_RE = /^\s*(?:[A-Za-z0-9]{1,4}\.?\s*[–—-]\s*)?ACTA\s*$|^\s*(?:[A-Za-z0-9]{1,4}\.?\s*[–—-]\s*)?ACTA\s+(?:SACRARUM|SS\.)\s+CONGREGATION|^\s*INDEX\s+DOCUMENTORUM/;
+// before `SACRARUM CONGREGATIONUM` on the next. AAS 1-7 (1909-1915) bound the dicasteries'
+// part with `SACRAE CONGREGATIONES.` alone, no `ACTA` token: AAS 2 (1910) 979 reads `SERMO,
+// 906.` then `SACRAE CONGREGATIONES.` on its own line, before `S. CONGREGATIO S. OFFICII,
+// 55, 100, ...`.
+const PART_END_RE = /^\s*(?:[A-Za-z0-9]{1,4}\.?\s*[–—-]\s*)?ACTA\s*$|^\s*(?:[A-Za-z0-9]{1,4}\.?\s*[–—-]\s*)?ACTA\s+(?:SACRARUM|SS\.)\s+CONGREGATION|^\s*(?:[A-Za-z0-9]{1,4}\.?\s*[–—-]\s*)?SACRAE\s+CONGREGATIONES\.?\s*$|^\s*INDEX\s+DOCUMENTORUM/;
 /** `EPISTOLAE, 10-12, 89-91, 195 s.,` -- a heading in capitals, a comma, then pages. */
 const HEADING_LINE_RE = /^\s*([A-Z][A-Z .'’]+?)\s*[,:]\s*(.*)$/;
 /** A continuation line: pages only. */

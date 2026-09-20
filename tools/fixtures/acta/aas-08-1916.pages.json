@@ -144,6 +144,16 @@
       "header": "308 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
+      "key": "1916-09-19|MOTU PROPRIO|Sanctae Mariae ad Rupes|Dé sanctuariis S. Mariae ad Rupes et S. Bernardini Senensis ",
+      "date": "1916-09-19",
+      "category": "MOTU PROPRIO",
+      "incipit": "Sanctae Mariae ad Rupes",
+      "page": 387,
+      "rule": "unique",
+      "bodyLine": "Sanctae Mariae ad Rupes, imminens valli Suppentoniae, Sanctuarium, quod quidem decessor Noster fel. rec. Pius X basilicam minorem",
+      "header": "Acta Benedicti PB. XV 387"
+    },
+    {
       "key": "1916-09|EPISTOLAE|Commisso divinitus Nobis|Ad Ludovicum Nazarium S. R. E. presb. card. Bégin, archiepis",
       "date": "1916-09",
       "category": "EPISTOLAE",
@@ -333,16 +343,6 @@
       "reason": "outside-runs",
       "candidates": [
         394
-      ]
-    },
-    {
-      "key": "1916-09-19|MOTU PROPRIO|Sanctae Mariae ad Rupes|Dé sanctuariis S. Mariae ad Rupes et S. Bernardini Senensis ",
-      "date": "1916-09-19",
-      "category": "MOTU PROPRIO",
-      "incipit": "Sanctae Mariae ad Rupes",
-      "reason": "several",
-      "candidates": [
-        387
       ]
     },
     {

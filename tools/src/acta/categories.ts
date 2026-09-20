@@ -116,8 +116,9 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // The volumes of 1913, 1922 and 1924 head a single constitution with the singular
   // `CONSTITUTIO APOSTOLICA` (AAS 5, 1913: *In praecipuis*; AAS 16, 1924: *Dominici gregis
   // cura*), the OCR once reading the numeral `I.` as `T.` (AAS 14, 1922: *Ad christifidelium
-  // bonum*).
-  { id: 'Constitutiones Apostolicae', headings: ['CONSTITUTIONES APOSTOLICAE', 'BULLA DOGMATICA', 'CONSTITUTIO APOSTOLICA'],
+  // bonum*). The *Index generalis rerum* of AAS 1 (1909) 833 heads the bare plural
+  // `CONSTITUTIONES, 5, 7,` (AAS 2, 1910, and AAS 3, 1911, read the same).
+  { id: 'Constitutiones Apostolicae', headings: ['CONSTITUTIONES APOSTOLICAE', 'BULLA DOGMATICA', 'CONSTITUTIO APOSTOLICA', 'CONSTITUTIONES'],
     classes: [{ genre: 'papal-bull', requires: 'apostolic-constitution' }], harvested: 'yes' },
   // The motu_proprio shelf, merged into apost_letters where a document is filed on both:
   // an apostolic-letter bearing `motu-proprio`. A document vatican.va filed on
@@ -131,9 +132,10 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // `mag:benedict-xvi/ubicumque-et-semper-2010`) and the letter to seminarians of 18
   // October 2010 `III – EPISTULAE APOSTOLICAE « MOTU PROPRIO » DATAE`, beside its `IV –
   // LITTERAE APOSTOLICAE « MOTU PROPRIO » DATAE` (*Omnium in mentem*): the same class.
+  // The *Index generalis rerum* of AAS 8 (1916) 497 reads `MOTU PROPRJO, 387.` (`J` for `I`).
   { id: 'Litterae Apostolicae Motu proprio datae',
     headings: ['LITTERAE APOSTOLICAE MOTU PROPRIO DATAE', 'LITTERAE APOSTOLICAE «MOTU PROPRIO» DATAE', 'MOTU PROPRIO', 'MOTTI PROPRIO',
-      'EPISTULAE APOSTOLICAE «MOTU PROPRIO» DATAE'],
+      'EPISTULAE APOSTOLICAE «MOTU PROPRIO» DATAE', 'MOTU PROPRJO'],
     classes: [{ genre: 'apostolic-letter', requires: 'motu-proprio' }], harvested: 'yes' },
   // The apost_letters shelf proper: beatification letters and the Latin-incipit tail. A
   // document bearing `motu-proprio` belongs to the category above, so it is excluded here.
@@ -221,8 +223,10 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
     headings: ['IN SOLLEMNI CANONIZATIONE', 'SOLLEMNIA CANONIZATIONUM', 'SOLLEMNES CANONIZATIONIS', 'SOLLEMNES CANONIZATIONES', 'IN SOLLEMNIBUS CANONIZATIONIBUS',
       'SOLLEMNIA CANONIZATIONIS', 'SOLLEMNIS CANONIZATIO'],
     classes: [], harvested: 'no' },
-  // The speeches shelf is out of scope. The OCR of AAS 40 (1948) reads `ALIOCUTIONES`.
-  { id: 'Allocutiones', headings: ['ALLOCUTIONES', 'ALIOCUTIONES'], classes: [{ genre: 'discourse-address' }], harvested: 'no' },
+  // The speeches shelf is out of scope. The OCR of AAS 40 (1948) reads `ALIOCUTIONES`. The
+  // *Index generalis rerum* of AAS 6 (1914) 729 and AAS 8 (1916) 497 head a single
+  // allocution with the singular `ALLOCUTIO` (`ALLOCUTIO, 694.`; `ALLOCUTIO, 465.`).
+  { id: 'Allocutiones', headings: ['ALLOCUTIONES', 'ALIOCUTIONES', 'ALLOCUTIO'], classes: [{ genre: 'discourse-address' }], harvested: 'no' },
   // Pius XII's *Hortationes*: the Lenten address to the parish priests and preachers of
   // Rome (1945 `IUSTRUCTIO PASTORALIS`, the OCR's *Instructio*; 1946 `HORTATIO
   // PASTORALIS`, *Ad Parochos Urbis et concionatores sacri temporis quadragesimalis*, 16
@@ -312,8 +316,9 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // heading among the pope's categories as `IX. - ACTA SACRI CONSISTORII.` (the parser
   // does not take it for a part heading); 1958 prints `IX - SACRA CONSISTORIA`; the
   // volumes of 1934-1948 print `SACRUM CONSISTORIUM` for a year with one, and the OCR of
-  // AAS 43 (1951) `SACKA CONSISTORIA`.
-  { id: 'Consistoria', headings: ['CONSISTORIA', 'CONSISTORIUM', 'ACTA SACRI CONSISTORII', 'SACRA CONSISTORIA', 'SACRUM CONSISTORIUM', 'SACKA CONSISTORIA'], classes: [], harvested: 'no' },
+  // AAS 43 (1951) `SACKA CONSISTORIA`. The *Index generalis rerum* of AAS 11 (1919) 491
+  // reads `ACTA SACRORUM CONSISTORIORUM, R97-108, 257-261, 485-489.`.
+  { id: 'Consistoria', headings: ['CONSISTORIA', 'CONSISTORIUM', 'ACTA SACRI CONSISTORII', 'SACRA CONSISTORIA', 'SACRUM CONSISTORIUM', 'SACKA CONSISTORIA', 'ACTA SACRORUM CONSISTORIORUM'], classes: [], harvested: 'no' },
   // Concordats and agreements with states; no row. Singular in 1958 and 1978; `SOLLEMNIS
   // CONVENTIO` for the Austrian concordat (AAS 26, 1934) and the Spanish (AAS 43, 1951),
   // `SOLLEMNES CONVENTIONES` in AAS 32 (1940).
@@ -414,6 +419,13 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // competence and constitution of the Congregation for Extraordinary Ecclesiastical
   // Affairs -- a notice of the Curia's organisation, no class of the registry's.
   { id: 'Notificatio', headings: ['NOTIFICATIO'], classes: [], harvested: 'no' },
+  // The *Index generalis rerum* of AAS 4 (1912) 745 reads `MONITUM, 695.`: p. 695 heads it
+  // (in Italian) `AVVERTENZA.` -- a Vatican notice, appended after Pius X's letter to
+  // card. Kopp, that certain Italian Catholic newspapers (*L'Avvenire d'Italia*, *Il
+  // Momento*, *Il Corriere d'Italia*, *Il Corriere di Sicilia*, *L'Italia*) are not
+  // recognised as conforming to the directives of the letter to the Lombard episcopate of
+  // 1 July 1911. No class of the registry's.
+  { id: 'Monitum', headings: ['MONITUM'], classes: [], harvested: 'no' },
   // AAS 77 (1985) 1202: `IX - LITTERAE MUTUO DATAE`, the letters exchanged between King Hassan
   // II of Morocco and John Paul II on the statute of the Catholic Church in Morocco (5
   // February 1984, p. 712); a diplomatic exchange, no row.

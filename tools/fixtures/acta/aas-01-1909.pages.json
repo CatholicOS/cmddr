@@ -20,7 +20,7 @@
       "date": "1908-01-29",
       "category": "CONSTITUTIONES APOSTOLICAE",
       "incipit": "Sapienti Consilio",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         48,
         61,
@@ -85,7 +85,7 @@
       "date": "1908-09",
       "category": "CONSTITUTIONES APOSTOLICAE",
       "incipit": "Promulgandi",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
         71
       ]

@@ -100,6 +100,19 @@ SUPREMA S. CONGREGATIO S. OFFICII, 69.
     expect(g.runs.has('SUPREMA S. CONGREGATIO S. OFFICII')).toBe(false);
     expect(g.unmapped).toEqual([]);
   });
+
+  it('ends the pope part at `SACRAE CONGREGATIONES`, which carries no `ACTA` token (AAS 2, 1910, p. 979: `SERMO, 906.` / `SACRAE CONGREGATIONES.` / `S. CONGREGATIO S. OFFICII, 55, 100, ...`)', () => {
+    const text = `INDEX GENERALIS RERUM
+ACTA PII PP. X.
+SERMO, 906.
+SACRAE CONGREGATIONES.
+S. CONGREGATIO S. OFFICII, 55, 100, 477.
+`;
+    const g = parseIndexGeneralis(['front matter', 'body', text, 'INDEX DOCUMENTORUM\nCHRONOLOGICO ORDINE DIGESTUS']);
+    expect(g.runs.get('Sermones')).toEqual([[906, 906]]);
+    expect(g.runs.has('S. CONGREGATIO S. OFFICII')).toBe(false);
+    expect(g.unmapped).toEqual([]);
+  });
 });
 
 describe('latinDate', () => {

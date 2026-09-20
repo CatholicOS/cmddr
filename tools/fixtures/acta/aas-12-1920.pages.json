@@ -412,6 +412,20 @@
       "reason": "no-incipit"
     },
     {
+      "key": "1920-03|ALLOCUTIO||Provisio Ecclesiarum",
+      "date": "1920-03",
+      "category": "ALLOCUTIO",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1920-03|ALLOCUTIO||Sacri Pallii expostulatio et concessio",
+      "date": "1920-03",
+      "category": "ALLOCUTIO",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
       "key": "1920-03|SACRUM CONSISTORIUM|Camerariatus sacri S. R. E. Cardinalium Collegii|",
       "date": "1920-03",
       "category": "SACRUM CONSISTORIUM",
@@ -423,23 +437,16 @@
       ]
     },
     {
-      "key": "1920-03|SACRUM CONSISTORIUM||Allocutio",
-      "date": "1920-03",
-      "category": "SACRUM CONSISTORIUM",
+      "key": "1920-04|ALLOCUTIO||Consistorium publicum",
+      "date": "1920-04",
+      "category": "ALLOCUTIO",
       "incipit": null,
       "reason": "no-incipit"
     },
     {
-      "key": "1920-03|SACRUM CONSISTORIUM||Provisio Ecclesiarum",
-      "date": "1920-03",
-      "category": "SACRUM CONSISTORIUM",
-      "incipit": null,
-      "reason": "no-incipit"
-    },
-    {
-      "key": "1920-03|SACRUM CONSISTORIUM||Sacri Pallii expostulatio et concessio",
-      "date": "1920-03",
-      "category": "SACRUM CONSISTORIUM",
+      "key": "1920-04|ALLOCUTIO||Consistorium secretum",
+      "date": "1920-04",
+      "category": "ALLOCUTIO",
       "incipit": null,
       "reason": "no-incipit"
     },
@@ -452,20 +459,6 @@
       "candidates": [
         325
       ]
-    },
-    {
-      "key": "1920-04|SACRUM CONSISTORIUM||Consistorium publicum",
-      "date": "1920-04",
-      "category": "SACRUM CONSISTORIUM",
-      "incipit": null,
-      "reason": "no-incipit"
-    },
-    {
-      "key": "1920-04|SACRUM CONSISTORIUM||Consistorium secretum",
-      "date": "1920-04",
-      "category": "SACRUM CONSISTORIUM",
-      "incipit": null,
-      "reason": "no-incipit"
     },
     {
       "key": "1920-05-13|LITTERAE DECRETALES|Ecclesiae consuetudo|B. Margaritae Mariae Alacoque, virgini, moniali a Visitation",
@@ -492,9 +485,9 @@
       "reason": "none"
     },
     {
-      "key": "1920-05|SACRUM CONSISTORIUM|Consistorium secretum|",
+      "key": "1920-05|ALLOCUTIO|Consistorium secretum|",
       "date": "1920-05",
-      "category": "SACRUM CONSISTORIUM",
+      "category": "ALLOCUTIO",
       "incipit": "Consistorium secretum",
       "reason": "several",
       "candidates": [
@@ -504,16 +497,16 @@
       ]
     },
     {
-      "key": "1920-05|SACRUM CONSISTORIUM||Consistorium semipublicum de canonizatione Bb. Gabrielis a V",
+      "key": "1920-05|ALLOCUTIO||Consistorium semipublicum de canonizatione Bb. Gabrielis a V",
       "date": "1920-05",
-      "category": "SACRUM CONSISTORIUM",
+      "category": "ALLOCUTIO",
       "incipit": null,
       "reason": "no-incipit"
     },
     {
-      "key": "1920-05|SACRUM CONSISTORIUM||In solemni canonizatione B. Ioannae de Arc, habita in Basili",
+      "key": "1920-05|ALLOCUTIO||In solemni canonizatione B. Ioannae de Arc, habita in Basili",
       "date": "1920-05",
-      "category": "SACRUM CONSISTORIUM",
+      "category": "ALLOCUTIO",
       "incipit": null,
       "reason": "no-incipit"
     },
@@ -577,16 +570,9 @@
       "reason": "no-incipit"
     },
     {
-      "key": "1920-12-16|SACRUM CONSISTORIUM||Allocutio",
+      "key": "1920-12-16|ALLOCUTIO||Camerariatus sacri S. R. E. Cardinalium Collegii",
       "date": "1920-12-16",
-      "category": "SACRUM CONSISTORIUM",
-      "incipit": null,
-      "reason": "no-incipit"
-    },
-    {
-      "key": "1920-12-16|SACRUM CONSISTORIUM||Camerariatus sacri S. R. E. Cardinalium Collegii",
-      "date": "1920-12-16",
-      "category": "SACRUM CONSISTORIUM",
+      "category": "ALLOCUTIO",
       "incipit": null,
       "reason": "no-incipit"
     },
