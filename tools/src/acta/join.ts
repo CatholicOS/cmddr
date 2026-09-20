@@ -7,6 +7,8 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { parseActaIndex, type ActaEntry, type ActaParseResult } from './index.js';
 import { matchActa, type ActaMatchResult } from './match.js';
+import { ACTA_PAGE_READINGS } from './curation.js';
+import { applyPageRows, sidecarPath, type PagesSidecar } from './recover.js';
 import type { DocumentRecord } from '../types.js';
 
 /**
@@ -122,15 +124,32 @@ export const sourceOfEntry = (e: { year: number; part?: 'I' | 'II' }): ActaSourc
  */
 export const ACTA_FIXTURES_RETRIEVED = '2026-09-12';
 
-/** Parse every fixture present; a missing one is skipped and named, not fatal. */
+/**
+ * Parse every fixture present; a missing one is skipped and named, not fatal. Pageless
+ * entries then get their pages from the curated readings first, then the sidecar (spec
+ * §10.3.3, §10.3.5): a page read by hand outranks one recovered by rule, and a key both
+ * name is applied once, from the reading.
+ */
 export function loadActaIndexes(sources: readonly ActaSource[] = ACTA_SOURCES): { parsed: Map<string, ActaParseResult>; missing: string[] } {
   const parsed = new Map<string, ActaParseResult>();
   const missing: string[] = [];
   for (const s of sources) {
     if (!existsSync(s.file)) { missing.push(s.key); continue; }
-    parsed.set(s.key, parseActaIndex(readFileSync(s.file, 'utf8'), {
+    const r = parseActaIndex(readFileSync(s.file, 'utf8'), {
       year: s.year, volume: s.volume, ...(s.part ? { part: s.part } : {}), ...s.parse,
-    }));
+    });
+    // The curated readings first, then the sidecar (spec §10.3.3, §10.3.5): a page read by
+    // hand outranks one recovered by rule, and a key both name is applied once.
+    const readings = Object.entries(ACTA_PAGE_READINGS).filter(([k]) => k.startsWith(`${s.key}|`))
+      .map(([k, v]) => ({ key: k.slice(s.key.length + 1), page: v.page, source: 'reading' as const }));
+    applyPageRows(r, readings, 'ACTA_PAGE_READINGS');
+    const sidecar = sidecarPath(s);
+    if (existsSync(sidecar)) {
+      const sc = JSON.parse(readFileSync(sidecar, 'utf8')) as PagesSidecar;
+      const read = new Set(readings.map((x) => x.key));
+      applyPageRows(r, sc.rows.filter((row) => !read.has(row.key)).map((row) => ({ key: row.key, page: row.page, source: 'recovered' as const })), sidecar);
+    }
+    parsed.set(s.key, r);
   }
   return { parsed, missing };
 }

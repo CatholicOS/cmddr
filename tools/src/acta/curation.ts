@@ -751,6 +751,24 @@ export const ACTA_HOLDS: Readonly<Record<string, ActaHold>> = {
   },
 };
 
+export interface PageReading {
+  /** The act's first page, read in the volume. */
+  page: number;
+  /** The index line, quoted as extracted (without a page, as the OCR left it). */
+  indexLine: string;
+  /** The heading and incipit as the volume prints them at that page, and where they were read. */
+  evidence: string;
+}
+
+/**
+ * Pages read by hand for entries the recovery (recover.ts) leaves without one -- the acts
+ * that matter most first: encyclicals, constitutions -- keyed `{source}|{pageless key}`
+ * (`1921|1921-12-31|LITTERAE ENCYCLICAE|Casti connubii|Ad venerabiles ...`), each quoting the
+ * volume. Consulted before the sidecar (join.ts). Empty until phase 2b-iii-b's report
+ * names what to read.
+ */
+export const ACTA_PAGE_READINGS: Readonly<Record<string, PageReading>> = {};
+
 /** The curation key of an entry: the volume year and first page the index cites. */
 export const curationKey = (e: { year: number; page: number }): string => `${e.year}:${e.page}`;
 

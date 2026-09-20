@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { pagelessKey, parseIndexGeneralis, latinDate, formulaNear, findIncipit, recoverPages } from '../src/acta/recover.js';
+import { pagelessKey, parseIndexGeneralis, latinDate, formulaNear, findIncipit, recoverPages, applyPageRows } from '../src/acta/recover.js';
+import { parseActaIndex } from '../src/acta/index.js';
 
 describe('pagelessKey', () => {
   it('keys a pageless entry by date, category, incipit and the head of its description', () => {
@@ -268,5 +269,31 @@ describe('recoverPages', () => {
     const { rows, unrecovered } = recoverPages([entry('1925-01-01', 'LITTERAE APOSTOLICAE', 'Common incipit phrase')], body, g, { lastBodyPage: 4 });
     expect(rows).toEqual([]);
     expect(unrecovered).toEqual([expect.objectContaining({ reason: 'several', candidates: [1, 2] })]);
+  });
+});
+
+describe('applyPageRows', () => {
+  const parse = () => parseActaIndex(`                                  H
+
+                             INDEX DOCUMENTORUM
+               CHRONOLOGICO ORDINE DIGESTUS
+
+                                  I. - ACTA BENEDICTI PP. XV
+
+                                                         I. - LITTERAE ENCYCLICAE.
+1921          Ian.          6      Sacra propediem. - Ad Patriarchas, Primates
+             Apr.         30       In praeclara summorum. - Dilectis filiis 209
+`, { year: 1921, volume: 13, columnar: true });
+  it('moves a pageless entry to the entries with the page and its source, in date order, and counts it', () => {
+    const r = parse();
+    const n = applyPageRows(r, [{ key: '1921-01-06|LITTERAE ENCYCLICAE|Sacra propediem|Ad Patriarchas, Primates', page: 33, source: 'recovered' }], 'test');
+    expect(n).toBe(1);
+    expect(r.pageless).toEqual([]);
+    expect(r.entries.map((e) => [e.incipit, e.page, e.pageSource])).toEqual([['Sacra propediem', 33, 'recovered'], ['In praeclara summorum', 209, undefined]]);
+    expect(r.stats.recovered).toBe(1);
+  });
+  it('refuses a row whose entry the parser no longer opens', () => {
+    expect(() => applyPageRows(parse(), [{ key: '1921-01-06|LITTERAE ENCYCLICAE|Sacra propediem|Something else', page: 33, source: 'recovered' }], 'aas-13-1921.pages.json'))
+      .toThrow(/stale page row .* aas-13-1921\.pages\.json/);
   });
 });

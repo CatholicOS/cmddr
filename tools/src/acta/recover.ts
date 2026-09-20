@@ -16,7 +16,7 @@
  * the join reads the sidecar offline (applyPageRows, join.ts) and never the store.
  */
 import { categoryForHeading } from './categories.js';
-import type { ActaEntry, PagelessEntry } from './index.js';
+import type { ActaEntry, ActaParseResult, PagelessEntry } from './index.js';
 import type { ActaSource } from './join.js';
 
 /** The key a sidecar row and a curated reading name a pageless entry by: what the index line prints, minus the page. */
@@ -25,6 +25,28 @@ export const pagelessKey = (e: { date: string; category: string; incipit: string
 
 /** The sidecar beside a source's fixture: `tools/fixtures/acta/aas-13-1921.pages.json`. */
 export const sidecarPath = (source: Pick<ActaSource, 'file'>): string => source.file.replace(/\.txt$/, '.pages.json');
+
+/**
+ * Give pageless entries their pages from sidecar rows or curated readings: each row's key
+ * names a pageless entry, which becomes an entry with the page and `pageSource`, kept in
+ * date order among the entries. A key no pageless entry answers to is a stale row -- the
+ * fixture or the parser changed under it -- and a hard error, as a stale correction is.
+ * Returns the number of entries moved.
+ */
+export function applyPageRows(result: ActaParseResult, rows: readonly { key: string; page: number; source: 'recovered' | 'reading' }[], label: string): number {
+  let n = 0;
+  for (const row of rows) {
+    const i = result.pageless.findIndex((e) => pagelessKey(e) === row.key);
+    if (i < 0) throw new Error(`stale page row ${row.key} in ${label}: no entry of the fixture is opened without a page under that key`);
+    const [e] = result.pageless.splice(i, 1);
+    const entry: ActaEntry = { ...e!, page: row.page, pageSource: row.source };
+    result.entries.push(entry);
+    result.stats.recovered++;
+    n++;
+  }
+  if (n > 0) result.entries.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : a.page - b.page));
+  return n;
+}
 
 export type PageRun = [number, number];
 

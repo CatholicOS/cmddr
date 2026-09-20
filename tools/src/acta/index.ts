@@ -209,6 +209,8 @@ export interface ActaParseStats {
   translations: number;
   /** Lines of the pope parts consumed without producing an entry: sub-items, defects, subtitles. */
   consumed: number;
+  /** Pageless entries given a page by a sidecar or a curated reading (recover.ts). */
+  recovered: number;
 }
 
 export interface ActaParseResult {
@@ -1227,7 +1229,7 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
   const start = columnar ? -1 : titleAt;
   const end = lines.findIndex((l, i) => i > start && /^\s*(INDICES NOMINUM|I – INDEX NOMINUM|INDEX NOMINUM PERSONARUM|INDEX ANALYTICUS|INDEX RERUM|INDEX ALPHABETICUS)/.test(l));
 
-  const stats: ActaParseStats = { lines: 0, pageLines: 0, harvestedPageLines: 0, harvestedEntries: 0, dateLines: 0, entries: 0, monthOnly: 0, withoutPage: 0, subItems: 0, translations: 0, consumed: 0 };
+  const stats: ActaParseStats = { lines: 0, pageLines: 0, harvestedPageLines: 0, harvestedEntries: 0, dateLines: 0, entries: 0, monthOnly: 0, withoutPage: 0, subItems: 0, translations: 0, consumed: 0, recovered: 0 };
   const result: ActaParseResult = {
     volume, year, ...(opts.part ? { part: opts.part } : {}),
     entries: [], pageless: [], unseenHeadings: [], unmappedPopes: [], popeHeadings: [], skippedParts: [], defects: [], stats,
