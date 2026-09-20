@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { pagelessKey, parseIndexGeneralis } from '../src/acta/recover.js';
+import { pagelessKey, parseIndexGeneralis, latinDate, formulaNear } from '../src/acta/recover.js';
 
 describe('pagelessKey', () => {
   it('keys a pageless entry by date, category, incipit and the head of its description', () => {
@@ -51,5 +51,34 @@ describe('parseIndexGeneralis', () => {
     const g = parseIndexGeneralis(['a', 'b', 'INDEX DOCUMENTORUM\nCHRONOLOGICO ORDINE DIGESTUS']);
     expect(g.page).toBeNull();
     expect(g.runs.size).toBe(0);
+  });
+});
+
+describe('latinDate', () => {
+  it('reads the day in roman numerals, the year in roman numerals (MDCCCC and MCM)', () => {
+    expect(latinDate('Datum Romae apud Sanctum Petrum, sub anulo Piscatoris, die xxx mensis Martii anno MDCCCCXXX, Pontificatus Nostri nono.')).toBe('1930-03-30');
+    expect(latinDate('Datum Romae apud Sanctum Petrum die xx mensis Aprilis, in festo Paschae Resurrectionis D. N. I. C, anno MDCCCCXXX, Pontificatus Nostri nono.')).toBe('1930-04-20');
+    expect(latinDate('Datum Romae, apud S. Petrum, die xii mensis Augusti, anno MCMXXI, Pontificatus Nostri septimo.')).toBe('1921-08-12');
+  });
+  it('reads the day and the year as ordinal words, in either order, with the OCR\'s misreadings of the words', () => {
+    expect(latinDate('Datum Romae apud Sanctum Petrum, anno Domini millesimo nongentesimo ac trigesimo, die decimatertia mensis Augusti, Pontificatus Nostri anno nono.')).toBe('1930-08-13');
+    expect(latinDate('Datum Romae, apud Sanctum Petrum, anno Domini nnllesimo nongentesimo trigesimo, die duodecima mensis Februarii, Pontificatus Nostri anno nono.')).toBe('1930-02-12');
+    expect(latinDate('Datum Romae apud S. Petrum, anno Domini millesimo nongentesimo trigesimo, die trigesima prima mensis Ianuarii, Pontificatus Nostri anno octavo.')).toBe('1930-01-31');
+    expect(latinDate('Datum Eomae, apud Sanctum Petrum, anno Domini millesimo nongentesimo vigesimo octavo die decimanona mensis Maii, Pontificatus Nostri anno septimo.')).toBe('1928-05-19');
+  });
+  it('reads arabic numerals, and returns null for text without a formula', () => {
+    expect(latinDate('Datum Romae, ex aedibus Sacrae Congregationis Consistorialis, die 23 Aprilis 1930.')).toBe('1930-04-23');
+    expect(latinDate('Datum Romae apud Sanctum Petrum, die 6 mensis Aprilis anno 1930, Pontificatus Nostri nono.')).toBe('1930-04-06');
+    expect(latinDate('Ad perpetuam rei memoriam. — Quo maiori rerum fidei incremento')).toBeNull();
+    expect(latinDate('Datum Romae apud Sanctum Petrum, die festo, Pontificatus Nostri nono.')).toBeNull();
+  });
+});
+
+describe('formulaNear', () => {
+  it('finds the first formula on or after a page, up to a limit, and says which page', () => {
+    const pages = ['', 'opening of the act', 'more text', 'ends. Datum Romae apud Sanctum Petrum, die xxx mensis Martii anno MDCCCCXXX, Pontificatus Nostri nono. E. CARD. PACELLI', 'Datum Romae die i mensis Ianuarii anno MDCCCCXXXI'];
+    expect(formulaNear(pages, 2, 4)).toMatchObject({ page: 4, date: '1930-03-30' });
+    expect(formulaNear(pages, 5, 5)).toMatchObject({ page: 5, date: '1931-01-01' });
+    expect(formulaNear(pages, 1, 3)).toBeNull();
   });
 });

@@ -96,3 +96,91 @@ function readRuns(text: string): PageRun[] {
   }
   return out;
 }
+
+const MONTHS: Record<string, number> = {
+  ianuarii: 1, februarii: 2, martii: 3, aprilis: 4, maii: 5, iunii: 6, iulii: 7, augusti: 8, septembris: 9, octobris: 10, novembris: 11, decembris: 12,
+};
+const UNITS: Record<string, number> = {
+  prima: 1, primo: 1, secunda: 2, secundo: 2, altera: 2, tertia: 3, tertio: 3, quarta: 4, quarto: 4, quinta: 5, quinto: 5,
+  sexta: 6, sexto: 6, septima: 7, septimo: 7, octava: 8, octavo: 8, nona: 9, nono: 9,
+};
+const TENS: Record<string, number> = { decima: 10, decimo: 10, vigesima: 20, vigesimo: 20, vicesima: 20, vicesimo: 20, trigesima: 30, trigesimo: 30 };
+const TEENS: Record<string, number> = { undecima: 11, duodecima: 12, undecimo: 11, duodecimo: 12 };
+const ROMAN: Record<string, number> = { i: 1, v: 5, x: 10, l: 50, c: 100, d: 500, m: 1000 };
+
+/** A roman numeral in either case (`MDCCCCXXX`, `xxx`, `xn` is not one); null when a character is not a numeral. */
+function roman(s: string): number | null {
+  const u = s.toLowerCase();
+  let total = 0;
+  for (let i = 0; i < u.length; i++) {
+    const v = ROMAN[u[i]!];
+    if (v === undefined) return null;
+    const next = ROMAN[u[i + 1] ?? ''] ?? 0;
+    total += v < next ? -v : v;
+  }
+  return total > 0 ? total : null;
+}
+
+/** `decimatertia`, `decima tertia`, `trigesima prima`, `duodecima`, `nona` -> a day number. */
+function ordinalDay(words: string[]): number | null {
+  const w = words.join(' ').replace(/(decima|vigesima|vicesima|trigesima)(prima|secunda|tertia|quarta|quinta|sexta|septima|octava|nona)/g, '$1 $2').split(/\s+/);
+  let n = 0;
+  for (const x of w) {
+    if (TEENS[x] !== undefined) n += TEENS[x]!;
+    else if (TENS[x] !== undefined) n += TENS[x]!;
+    else if (UNITS[x] !== undefined) n += UNITS[x]!;
+    else return null;
+  }
+  return n >= 1 && n <= 31 ? n : null;
+}
+
+/** `millesimo nongentesimo [ac] trigesimo [primo]` (the OCR's `nnllesimo`, `noningentesimo`) -> a year. */
+function ordinalYear(text: string): number | null {
+  const m = text.match(/[mn]\w{1,3}lesimo\s+non\w*gentesimo(?:\s+ac)?(?:\s+(decimo|vigesimo|vicesimo|trigesimo|quadragesimo))?(?:\s+(primo|secundo|tertio|quarto|quinto|sexto|septimo|octavo|nono))?/);
+  if (!m) return null;
+  const tens: Record<string, number> = { decimo: 10, vigesimo: 20, vicesimo: 20, trigesimo: 30, quadragesimo: 40 };
+  return 1900 + (m[1] ? tens[m[1]]! : 0) + (m[2] ? UNITS[m[2]]! : 0);
+}
+
+/**
+ * The date of an act from its own dating formula: `Datum Romae apud Sanctum Petrum, die
+ * xxx mensis Martii anno MDCCCCXXX, Pontificatus Nostri nono` -- the day in roman
+ * numerals, arabic numerals or ordinal words (`decimatertia`, `trigesima prima`), the
+ * month in the genitive, the year in roman numerals, arabic numerals or ordinal words
+ * (`millesimo nongentesimo ac trigesimo`), which the constitutions set before the day. The
+ * OCR reads `Eomae`, `Bomae`, `nnllesimo`; the anchor admits them. When neither `anno …`
+ * nor an ordinal year is read, a bare four-digit year anywhere in the formula (1800-2100)
+ * is taken (`die 23 Aprilis 1930.`). Null when the text has no formula, or the formula no
+ * readable day, month or year.
+ */
+export function latinDate(text: string): string | null {
+  const t = text.replace(/­/g, '').replace(/\s+/g, ' ');
+  const anchor = t.search(/Datum [REB]omae/);
+  if (anchor < 0) return null;
+  const f = t.slice(anchor, anchor + 260).toLowerCase();
+  const dm = f.match(/\bdie\s+([a-z0-9]+(?:\s+(?:prima|secunda|tertia|quarta|quinta|sexta|septima|octava|nona))?)\s+(?:mensis\s+)?([a-z]+)/);
+  if (!dm) return null;
+  const month = MONTHS[dm[2]!];
+  if (month === undefined) return null;
+  const dayTok = dm[1]!;
+  const day = /^\d+$/.test(dayTok) ? Number(dayTok) : (roman(dayTok) ?? ordinalDay(dayTok.split(/\s+/)));
+  if (day === null || day < 1 || day > 31) return null;
+  const ym = f.match(/\banno\s+(?:domini\s+)?(?:(\d{4})|([mdclxvi]{4,})\b)/);
+  const bare = f.match(/\b(1[89]\d{2}|20\d{2}|21\d{2})\b/);
+  const year = ym ? (ym[1] ? Number(ym[1]) : roman(ym[2]!)) : (ordinalYear(f) ?? (bare ? Number(bare[1]) : null));
+  if (year === null || year < 1800 || year > 2100) return null;
+  const pad = (n: number) => String(n).padStart(2, '0');
+  return `${year}-${pad(month)}-${pad(day)}`;
+}
+
+/** The first dating formula on pages `from`..`upto` (1-based, inclusive) of the volume text, with its page and text. */
+export function formulaNear(pages: readonly string[], from: number, upto: number): { page: number; date: string; text: string } | null {
+  for (let p = from; p <= Math.min(upto, pages.length); p++) {
+    const t = pages[p - 1]!;
+    const m = t.replace(/­/g, '').replace(/\s+/g, ' ').match(/Datum [REB]omae[^]{0,260}/);
+    if (!m) continue;
+    const date = latinDate(m[0]);
+    if (date !== null) return { page: p, date, text: m[0].slice(0, 200) };
+  }
+  return null;
+}
