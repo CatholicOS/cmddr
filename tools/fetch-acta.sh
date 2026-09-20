@@ -57,10 +57,19 @@ INDEX_HTML="$STORE/index_it.htm"
 curl -fsSL --retry 3 --max-time 60 "$BASE/index_it.htm" -o "$INDEX_HTML"
 
 # Download a PDF into the store unless it is already there and non-empty. Prints the
-# path fetched or `cached`; returns non-zero when the download fails.
+# path fetched or `cached`; returns non-zero when the download fails. The download goes
+# to a `.part` file that is renamed only once curl has succeeded, so a transfer that
+# dies half-way (vatican.va is slow; --max-time is finite) leaves nothing the next run
+# would take for a cached volume.
 fetch_pdf() { # fetch_pdf <path-on-vatican.va> <local-pdf> <max-time>
   if [ -s "$2" ]; then echo "    cached: $2"; return 0; fi
-  curl -fsSL --retry 3 --max-time "$3" "$BASE/$1" -o "$2"
+  local part="$2.part"
+  if curl -fsSL --retry 3 --max-time "$3" "$BASE/$1" -o "$part"; then
+    mv -f "$part" "$2"
+  else
+    rm -f "$part"
+    return 1
+  fi
 }
 
 # The `documents/...` paths the index page links for a year, one per line.
