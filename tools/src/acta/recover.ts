@@ -184,3 +184,152 @@ export function formulaNear(pages: readonly string[], from: number, upto: number
   }
   return null;
 }
+
+export interface RecoveredRow {
+  key: string; date: string; category: string; incipit: string;
+  page: number;
+  /** What accepted the page: the only hit in the runs; the hit whose dating formula gives the entry's date; the only fuzzy hit. */
+  rule: 'unique' | 'dated' | 'fuzzy';
+  /** The body line the incipit opens, as the text prints it. */
+  bodyLine: string;
+  /** The page's first line (its running header, or the fascicle cover's title line). */
+  header: string;
+  /** The dating formula that settled a tie, quoted. */
+  formula?: string;
+}
+export interface UnrecoveredRow {
+  key: string; date: string; category: string; incipit: string | null;
+  reason: 'no-incipit' | 'none' | 'several' | 'outside-runs' | 'header-mismatch';
+  /** The pages the incipit was found on, where there were any. */
+  candidates?: number[];
+}
+export interface PagesSidecar {
+  /** The source key (`1921`, `1917-I`). */
+  source: string;
+  generated: string;
+  /** The store file the body was read from, with its page count. */
+  text: string;
+  rows: RecoveredRow[];
+  unrecovered: UnrecoveredRow[];
+}
+
+/** Lower case, diacritics folded, soft hyphens dropped, a word the line break split joined, spaces collapsed (newlines kept). */
+function fold(text: string): string {
+  return text.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/æ/g, 'ae').replace(/œ/g, 'oe')
+    .replace(/­\s*\n\s*/g, '').replace(/([a-z])-\s*\n\s*([a-z])/gi, '$1$2')
+    .toLowerCase().replace(/[ \t]+/g, ' ');
+}
+
+const WORD = /[a-z]+/g;
+
+/** Levenshtein distance capped at 2. */
+function dist(a: string, b: string): number {
+  if (a === b) return 0;
+  if (Math.abs(a.length - b.length) > 1) return 2;
+  const prev = Array.from({ length: b.length + 1 }, (_, i) => i);
+  for (let i = 1; i <= a.length; i++) {
+    let left = i;
+    let diag = prev[0]!;
+    prev[0] = i;
+    for (let j = 1; j <= b.length; j++) {
+      const cur = Math.min(prev[j]! + 1, left + 1, diag + (a[i - 1] === b[j - 1] ? 0 : 1));
+      diag = prev[j]!; prev[j] = cur; left = cur;
+    }
+  }
+  return Math.min(prev[b.length]!, 2);
+}
+
+/**
+ * Whether the page opens an act with the incipit: the incipit's words in order, at the
+ * head of a paragraph -- the start of a line, or after the salutation's dash or a full
+ * stop (`Ad perpetuam rei memoriam. — Quo maiori rerum`) -- and not inside running text.
+ * Exact by default; `fuzzy` admits one differing character per word of five letters or
+ * more (the OCR's `e`/`c`, `o`/`a`, `t`/`l`), nothing in a shorter word.
+ */
+export function findIncipit(page: string, incipit: string, fuzzy: boolean): { line: string } | null {
+  const want = fold(incipit).match(WORD) ?? [];
+  if (want.length === 0) return null;
+  const folded = fold(page);
+  const lines = folded.split('\n');
+  const rawLines = page.replace(/­\s*\n\s*/g, '').split('\n');
+  for (let li = 0; li < lines.length; li++) {
+    const line = lines[li]!;
+    // Candidate heads: the line start, and each position after `— `, `. `, `: `.
+    const heads = [0, ...[...line.matchAll(/(?:—|\.|:)\s+/g)].map((m) => m.index! + m[0].length)];
+    for (const h of heads) {
+      const tail = line.slice(h) + ' ' + (lines[li + 1] ?? '');
+      const got = [...tail.matchAll(WORD)].slice(0, want.length).map((m) => m[0]);
+      if (got.length < want.length) continue;
+      const ok = want.every((w, i) => w === got[i] || (fuzzy && w.length >= 5 && got[i]!.length >= 5 && dist(w, got[i]!) <= 1));
+      if (ok) return { line: (rawLines[li] ?? line).trim() };
+    }
+  }
+  return null;
+}
+
+/** The page's first non-blank line: `574 Index documentorum`, `Acta Pii PP. XI 483`, `Annus XXII - Vol. XXII 1 Maii 1930 Num. 5`. */
+const headerOf = (page: string): string => (page.split('\n').find((l) => l.trim() !== '') ?? '').trim();
+/** Whether the header prints the page's own number (a fascicle cover prints none and is admitted). */
+const headerAgrees = (header: string, n: number): boolean => /\bNum\.\s*\d/.test(header) || new RegExp(`(^|\\s)${n}(\\s|$)`).test(header);
+
+const inRuns = (runs: PageRun[] | undefined, p: number): boolean =>
+  runs === undefined || runs.some(([a, b]) => p >= a - 1 && p <= b + 1);
+
+/**
+ * The recovery (spec §10.3.2). For each pageless entry with an incipit: the pages of the
+ * pope's part (1..lastBodyPage) that open an act with it, within the category's runs from
+ * the Index generalis (±1 page, for the runs' own OCR). One hit is accepted (`unique`);
+ * several are settled by the dating formula on and after each hit (`dated`), the one
+ * whose date is the entry's; none is retried fuzzily (`fuzzy`, unique only). A category
+ * the Index generalis has no run for is searched over the whole part and accepted only
+ * when the formula confirms the date. A hit whose running header prints another number
+ * is not a page (`header-mismatch`). Anything else is reported with its reason.
+ */
+export function recoverPages(pageless: readonly PagelessEntry[], pages: readonly string[], generalis: IndexGeneralis, opts: { lastBodyPage: number }): { rows: RecoveredRow[]; unrecovered: UnrecoveredRow[] } {
+  const rows: RecoveredRow[] = [];
+  const unrecovered: UnrecoveredRow[] = [];
+  const last = Math.min(opts.lastBodyPage, pages.length);
+  for (const e of pageless) {
+    const key = pagelessKey(e);
+    const base = { key, date: e.date, category: e.category, incipit: e.incipit };
+    if (e.incipit === null) { unrecovered.push({ ...base, reason: 'no-incipit' }); continue; }
+    const cat = categoryForHeading(e.category)?.id ?? e.category;
+    const runs = generalis.runs.get(cat);
+    const hits = (fuzzy: boolean) => {
+      const all: { page: number; line: string }[] = [];
+      for (let p = 1; p <= last; p++) {
+        const f = findIncipit(pages[p - 1]!, e.incipit!, fuzzy);
+        if (f) all.push({ page: p, line: f.line });
+      }
+      return all;
+    };
+    const decide = (all: { page: number; line: string }[], rule: 'unique' | 'fuzzy'): boolean => {
+      if (all.length === 0) return false;
+      const inside = all.filter((h) => inRuns(runs, h.page));
+      if (inside.length === 0) { unrecovered.push({ ...base, reason: 'outside-runs', candidates: all.map((h) => h.page) }); return true; }
+      const accept = (h: { page: number; line: string }, r: RecoveredRow['rule'], formula?: string) => {
+        const header = headerOf(pages[h.page - 1]!);
+        if (!headerAgrees(header, h.page)) { unrecovered.push({ ...base, reason: 'header-mismatch', candidates: [h.page] }); return; }
+        rows.push({ ...base, incipit: e.incipit!, page: h.page, rule: r, bodyLine: h.line, header, ...(formula ? { formula } : {}) });
+      };
+      if (inside.length === 1 && runs !== undefined) { accept(inside[0]!, rule); return true; }
+      // Several hits, or no runs to constrain them: the act's own dating formula decides.
+      const dated = inside.filter((h) => {
+        const next = inside.find((o) => o.page > h.page)?.page;
+        return formulaNear(pages, h.page, Math.min(next !== undefined ? next : last, h.page + 40))?.date === e.date;
+      });
+      if (dated.length === 1) {
+        const h = dated[0]!;
+        const next = inside.find((o) => o.page > h.page)?.page;
+        accept(h, 'dated', formulaNear(pages, h.page, Math.min(next !== undefined ? next : last, h.page + 40))!.text);
+      } else {
+        unrecovered.push({ ...base, reason: 'several', candidates: inside.map((h) => h.page) });
+      }
+      return true;
+    };
+    if (decide(hits(false), 'unique')) continue;
+    if (decide(hits(true), 'fuzzy')) continue;
+    unrecovered.push({ ...base, reason: 'none' });
+  }
+  return { rows, unrecovered };
+}

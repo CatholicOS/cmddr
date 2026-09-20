@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { pagelessKey, parseIndexGeneralis, latinDate, formulaNear } from '../src/acta/recover.js';
+import { pagelessKey, parseIndexGeneralis, latinDate, formulaNear, findIncipit, recoverPages } from '../src/acta/recover.js';
 
 describe('pagelessKey', () => {
   it('keys a pageless entry by date, category, incipit and the head of its description', () => {
@@ -80,5 +80,78 @@ describe('formulaNear', () => {
     expect(formulaNear(pages, 2, 4)).toMatchObject({ page: 4, date: '1930-03-30' });
     expect(formulaNear(pages, 5, 5)).toMatchObject({ page: 5, date: '1931-01-01' });
     expect(formulaNear(pages, 1, 3)).toBeNull();
+  });
+});
+
+const HEADER = (n: number) => `${n} Acta Apostolicae Sedis - Commentarium Officiale`;
+const BODY: string[] = [
+  /* 1 */ 'Annus XIII - Vol. XIII 24 Ianuarii 1921 Num. 1 \nACTA APOSTOLICAE SEDIS \nEPISTOLA ENCYCLICA \nSacra propediem celebrari sollemnia, cum septingenti \nerunt anni',
+  /* 2 */ `${HEADER(2)} \ntext of the encyclical, which mentions sacra propediem again in passing`,
+  /* 3 */ `${HEADER(3)} \nLITTERAE APOSTOLICAE \nI \nPIUS PP. XI \nAd futuram rei memoriam. — Constat apprime quam sit \nDatum Romae apud Sanctum Petrum, die v mensis Martii anno MDCCCCXXI, Pontificatus Nostri septimo.`,
+  /* 4 */ `Acta Benedicti PP. XV 4 \nII \nAd futuram rei memoriam. — Constat apprime alia res \nDatum Romae apud Sanctum Petrum, die xx mensis Maii anno MDCCCCXXI, Pontificatus Nostri septimo.`,
+  /* 5 */ `${HEADER(5)} \nIII \nAd perpetuam rei memoriam. — Quae catholico nomini bene \nDatum Romae, die i mensis Iunii anno MDCCCCXXI.`,
+  /* 6 */ `${HEADER(6)} \nEPISTOLAE \nDilecte fili. — Quoniam annus mox celebrabitur`,
+  /* 7 */ `${HEADER(7)} \nIV \nAd futuram rei memoriam. — Placet oculos Nostris \nDatum Romae die ii mensis Iulii anno MDCCCCXXI.`,
+  /* 8 */ 'INDEX GENERALIS ACTORUM \nI. - ACTA BENEDICTI PP. XV \nEPISTOLAE ENCYCLICAE, 1. \nLITTERAE APOSTOLICAE, 3-5, 7. \nEPISTOLAE, 6. \nII. - ACTA SACRARUM CONGREGATIONUM',
+];
+const entry = (date: string, category: string, incipit: string | null, description = 'Ad aliquem'): import('../src/acta/index.js').PagelessEntry =>
+  ({ series: 'AAS', volume: 13, year: 1921, pope: 'Benedictus XV', category, date, incipit, quoted: false, toponym: null, description, raw: '' });
+
+describe('findIncipit', () => {
+  it('finds an incipit at the head of a paragraph -- after the salutation dash or at a line start -- and not inside running text', () => {
+    expect(findIncipit(BODY[0]!, 'Sacra propediem', false)).toMatchObject({ line: 'Sacra propediem celebrari sollemnia, cum septingenti' });
+    expect(findIncipit(BODY[1]!, 'Sacra propediem', false)).toBeNull();
+    expect(findIncipit(BODY[2]!, 'Constat apprime', false)).toMatchObject({ line: 'Ad futuram rei memoriam. — Constat apprime quam sit' });
+  });
+  it('folds case, diacritics and soft hyphens, and joins a word the line break split', () => {
+    expect(findIncipit('Ad perpetuam rei memoriam. — Quæ cathólico no­\nmini bene', 'Quae catholico nomini', false)).not.toBeNull();
+    expect(findIncipit('Ad perpetuam rei memoriam. — Quo maio-\nri rerum fidei', 'Quo maiori rerum', false)).not.toBeNull();
+  });
+  it('in fuzzy mode admits one wrong character per word of five letters or more, and nothing in a shorter word', () => {
+    expect(findIncipit(BODY[6]!, 'Placet oculog', false)).toBeNull();
+    expect(findIncipit(BODY[6]!, 'Placet oculog', true)).toMatchObject({ line: 'Ad futuram rei memoriam. — Placet oculos Nostris' });
+    expect(findIncipit(BODY[6]!, 'Placet oculogg', true)).toBeNull();
+    expect(findIncipit(BODY[6]!, 'Plaset oculis', true)).not.toBeNull();
+    expect(findIncipit(BODY[6]!, 'Pl oculis', true)).toBeNull();
+  });
+});
+
+describe('recoverPages', () => {
+  const generalis = parseIndexGeneralis(BODY);
+  it('accepts a unique hit within the category\'s runs, quoting the body line and the running header', () => {
+    const { rows, unrecovered } = recoverPages([entry('1921-01-06', 'LITTERAE ENCYCLICAE', 'Sacra propediem')], BODY, generalis, { lastBodyPage: 7 });
+    expect(unrecovered).toEqual([]);
+    expect(rows).toEqual([expect.objectContaining({ page: 1, rule: 'unique', incipit: 'Sacra propediem', header: 'Annus XIII - Vol. XIII 24 Ianuarii 1921 Num. 1', bodyLine: 'Sacra propediem celebrari sollemnia, cum septingenti' })]);
+  });
+  it('settles two acts of one incipit by the dating formula, and reports the one whose date no formula gives', () => {
+    const { rows, unrecovered } = recoverPages([
+      entry('1921-03-05', 'LITTERAE APOSTOLICAE', 'Constat apprime', 'First'),
+      entry('1921-05-20', 'LITTERAE APOSTOLICAE', 'Constat apprime', 'Second'),
+      entry('1921-09-09', 'LITTERAE APOSTOLICAE', 'Constat apprime', 'Third'),
+    ], BODY, generalis, { lastBodyPage: 7 });
+    expect(rows.map((r) => [r.page, r.rule, r.formula?.slice(0, 11)])).toEqual([[3, 'dated', 'Datum Romae'], [4, 'dated', 'Datum Romae']]);
+    expect(unrecovered).toEqual([expect.objectContaining({ reason: 'several', candidates: [3, 4] })]);
+  });
+  it('retries a missed incipit fuzzily, accepts a unique fuzzy hit, and reports a miss', () => {
+    const { rows, unrecovered } = recoverPages([entry('1921-07-02', 'LITTERAE APOSTOLICAE', 'Placet oculog'), entry('1921-07-03', 'LITTERAE APOSTOLICAE', 'Nihil tale')], BODY, generalis, { lastBodyPage: 7 });
+    expect(rows).toEqual([expect.objectContaining({ page: 7, rule: 'fuzzy' })]);
+    expect(unrecovered).toEqual([expect.objectContaining({ incipit: 'Nihil tale', reason: 'none' })]);
+  });
+  it('reports a hit outside every run of the category, an entry without an incipit, and a page whose header disagrees', () => {
+    const { rows, unrecovered } = recoverPages([
+      entry('1921-06-01', 'LITTERAE ENCYCLICAE', 'Quae catholico nomini'),   // on p. 5, a Litterae Apostolicae page; Litterae Encyclicae run is 1
+      entry('1921-06-06', 'EPISTOLAE', null),
+    ], BODY, generalis, { lastBodyPage: 7 });
+    expect(rows).toEqual([]);
+    expect(unrecovered.map((u) => u.reason)).toEqual(['outside-runs', 'no-incipit']);
+    const bad = BODY.map((p, i) => (i === 4 ? p.replace(HEADER(5), HEADER(9)) : p));
+    const r2 = recoverPages([entry('1921-06-01', 'LITTERAE APOSTOLICAE', 'Quae catholico nomini')], bad, parseIndexGeneralis(bad), { lastBodyPage: 7 });
+    expect(r2.unrecovered).toEqual([expect.objectContaining({ reason: 'header-mismatch', candidates: [5] })]);
+  });
+  it('searches the whole pope part, and requires the dating formula, when the Index generalis has no run for the category', () => {
+    const noRuns = { page: null, runs: new Map<string, [number, number][]>(), unmapped: [] as string[] };
+    const { rows, unrecovered } = recoverPages([entry('1921-06-01', 'LITTERAE APOSTOLICAE', 'Quae catholico nomini'), entry('1921-01-06', 'LITTERAE ENCYCLICAE', 'Sacra propediem')], BODY, noRuns, { lastBodyPage: 7 });
+    expect(rows).toEqual([expect.objectContaining({ page: 5, rule: 'dated' })]);
+    expect(unrecovered).toEqual([expect.objectContaining({ incipit: 'Sacra propediem', reason: 'several', candidates: [1] })]);
   });
 });
