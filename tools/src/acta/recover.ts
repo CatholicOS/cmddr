@@ -20,7 +20,7 @@ import type { ActaEntry, PagelessEntry } from './index.js';
 
 /** The key a sidecar row and a curated reading name a pageless entry by: what the index line prints, minus the page. */
 export const pagelessKey = (e: { date: string; category: string; incipit: string | null; description: string }): string =>
-  `${e.date}|${e.category}|${e.incipit ?? ''}|${e.description.slice(0, 66)}`;
+  `${e.date}|${e.category}|${e.incipit ?? ''}|${e.description.slice(0, 60)}`;
 
 export type PageRun = [number, number];
 
