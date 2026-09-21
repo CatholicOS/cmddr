@@ -23,6 +23,10 @@
  * month whose incipit slug equals the entry's -- the month, the class and the incipit
  * together evidence the identity, and the shelf supplies the day. Two such documents, or
  * none, or an entry without an incipit, leave it unmatched; it is never created.
+ *
+ * An ASS entry (ass.ts) carries an eight-word opening and no incipit; its rule is the
+ * candidate's incipit slug as a word-boundary prefix of the opening's (incipitAgrees),
+ * recorded as 'opening'; nothing else differs (ass volumes spec §5).
  */
 import { slugify } from '../slug.js';
 import { categoryForHeading, type GenreClass } from './categories.js';
@@ -65,10 +69,31 @@ export interface ActaMatch {
   documentId: string;
   /**
    * What decided the match: the only candidate, the incipit slug, the toponym, a curated
-   * override, or -- for a month-only entry -- the incipit slug within the month.
+   * override, for a month-only entry the incipit slug within the month, or -- for an ASS
+   * entry, which carries an opening and no incipit -- the candidate's incipit slug as a
+   * word-boundary prefix of the opening's slug (ass volumes spec §5).
    */
-  by: 'unique' | 'incipit' | 'toponym' | 'curated' | 'incipit-month';
+  by: 'unique' | 'incipit' | 'toponym' | 'curated' | 'incipit-month' | 'opening';
 }
+
+/**
+ * Whether a document's incipit agrees with an entry's: equality of slugs where the entry
+ * prints an incipit (the AAS), or -- where it carries an opening and no incipit (the ASS) --
+ * the document's incipit slug as a prefix of the opening slug ending at a hyphen or at the
+ * end (`tametsi-futura` of `tametsi-futura-prospicientibus-…`; `tametsi-fut` is not).
+ * False when the entry carries neither, or the document no incipit.
+ */
+export function incipitAgrees(entry: Pick<ActaEntry, 'incipit'> & Partial<Pick<ActaEntry, 'opening'>>, doc: Pick<DocumentRecord, 'incipit'>): boolean {
+  if (doc.incipit === undefined) return false;
+  const ds = incipitSlug(doc.incipit);
+  if (ds === '') return false;
+  if (entry.incipit !== null) return incipitSlug(entry.incipit) === ds;
+  if (entry.opening === undefined) return false;
+  const os = slugify(entry.opening);
+  return os === ds || os.startsWith(`${ds}-`);
+}
+/** The rule an agreeing incipit is recorded under: `incipit` for a printed incipit, `opening` for an ASS opening. */
+const agreementRule = (entry: Pick<ActaEntry, 'incipit'>): ActaMatch['by'] => (entry.incipit !== null ? 'incipit' : 'opening');
 export interface ActaCandidate { id: string; date: string; genre: string | null; characteristics: string[]; title: string; incipit?: string }
 export interface ActaAmbiguity { entry: ActaEntry; candidates: ActaCandidate[] }
 export interface ActaUnmatched {
@@ -292,10 +317,9 @@ export function matchActa(rawEntries: ActaEntry[], docs: DocumentRecord[]): Acta
     let candidates = sameDate.filter(inClasses);
     let by: ActaMatch['by'] = 'unique';
 
-    if (candidates.length > 1 && entry.incipit !== null) {
-      const slug = incipitSlug(entry.incipit);
-      const byIncipit = candidates.filter((d) => d.incipit !== undefined && incipitSlug(d.incipit) === slug);
-      if (byIncipit.length >= 1) { candidates = byIncipit; by = 'incipit'; }
+    if (candidates.length > 1 && (entry.incipit !== null || entry.opening !== undefined)) {
+      const byIncipit = candidates.filter((d) => incipitAgrees(entry, d));
+      if (byIncipit.length >= 1) { candidates = byIncipit; by = agreementRule(entry); }
     }
     if (candidates.length > 1 && entry.toponym !== null && category.classes.some((c) => c.requires === 'apostolic-constitution')) {
       const byToponym = candidates.filter((d) => titleHasToponym(d.title, entry.toponym!));
@@ -323,8 +347,9 @@ export function matchActa(rawEntries: ActaEntry[], docs: DocumentRecord[]): Acta
 
   // One page opens one act (invariant 25), and one act has one first page: a document
   // claimed twice is a finding, not a choice -- unless exactly one of the claims carries
-  // positive evidence the others lack: the document's incipit slug is the entry's, or (a
-  // constitution) its title carries the entry's toponym. The volumes print several
+  // positive evidence the others lack: the document's incipit slug is the entry's (or, for
+  // an ASS entry, a word-boundary prefix of its opening's), or (a constitution) its title
+  // carries the entry's toponym. The volumes print several
   // constitutions of one day where the shelf holds one (10 November 1977: *Avkaënsis*,
   // *Mohaleshoekensis*, *Ambikapurensis* against the shelf's *Avkaensis*), and the
   // `unique` rule sends every entry to it; the entry the document names keeps the match
@@ -342,7 +367,7 @@ export function matchActa(rawEntries: ActaEntry[], docs: DocumentRecord[]): Acta
       // against unevidenced claims (the vernacular text of an encyclical the index enters
       // a second time, AAS 25 (1933) 275).
       if (m.by === 'curated') return m;
-      if (e.incipit !== null && doc.incipit !== undefined && incipitSlug(doc.incipit) === incipitSlug(e.incipit)) return { ...m, by: 'incipit' };
+      if (incipitAgrees(e, doc)) return { ...m, by: agreementRule(e) };
       const category = categoryForHeading(e.category);
       if (e.toponym !== null && category?.classes.some((c) => c.requires === 'apostolic-constitution')
         && titleHasToponym(doc.title, e.toponym)) return { ...m, by: 'toponym' };

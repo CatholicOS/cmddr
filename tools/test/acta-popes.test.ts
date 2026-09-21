@@ -4,7 +4,7 @@ import { ACTA_POPES, popeForGenitive, popeForLabel, labelForBracket } from '../s
 import { POPES, KNOWN_PONTIFF_IDS } from '../src/mappings/pontiffs.js';
 import { POPE_ISSUERS } from '../src/acta/match.js';
 import { PONTIFICATE_BEGAN } from '../src/acta/create.js';
-import { loadActaIndexes } from '../src/acta/join.js';
+import { ACTA_SOURCES, loadActaIndexes } from '../src/acta/join.js';
 
 describe('the pope headings of the AAS index (acta volumes spec §2)', () => {
   it('maps every genitive heading of the sample to a CRPDR issuer the harvest knows', () => {
@@ -58,8 +58,17 @@ describe('the pope headings of the AAS index (acta volumes spec §2)', () => {
       expect(r.unmappedPopes).toEqual([]);
       for (const e of r.entries) seen.add(e.pope);
     }
-    // Pius IX and Leo XIII are the ASS's (phase 2c-i); their fixtures are the entries JSON, checked in Task 5.
-    for (const p of ACTA_POPES.filter((p) => p.pope !== 'Pius IX' && p.pope !== 'Leo XIII')) expect(seen.has(p.pope), p.pope).toBe(true);
+    // Pius IX and Leo XIII are the ASS's (phase 2c-i): an `ass` source's popes are the `pope` of
+    // its entries -- the scanner's and the curated readings' (ASS_READINGS) -- as the loader
+    // reads them, matched against the label, not the genitive.
+    for (const p of ACTA_POPES) expect(seen.has(p.pope), p.pope).toBe(true);
+    for (const src of ACTA_SOURCES.filter((s) => s.kind === 'ass')) {
+      const printed = new Set(parsed.get(src.key)!.entries.map((e) => e.pope));
+      for (const pope of printed) expect(ACTA_POPES.some((p) => p.pope === pope), `${src.key}: ${pope}`).toBe(true);
+      expect(printed.size, src.key).toBeGreaterThan(0);
+    }
+    expect(new Set(parsed.get('ass-1')!.entries.map((e) => e.pope))).toEqual(new Set(['Pius IX']));
+    expect(new Set(parsed.get('ass-41')!.entries.map((e) => e.pope))).toEqual(new Set(['Pius X']));
     // And the 1958 volume's two parts that are not a pope's are skipped by name.
     const r1958 = parsed.get('1958')!;
     expect(r1958.skippedParts).toContain('II - ACTA IN MORTE PII PP. XII');

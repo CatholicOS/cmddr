@@ -457,6 +457,21 @@ describe('createFromActa on the volumes of 1979-2002 and the index PDFs of 2010-
   });
 });
 
+describe('createFromActa on the Acta Sanctae Sedis (ass volumes spec, decision 1)', () => {
+  it('holds every unmatched ASS entry as series-not-created and creates nothing from the ASS', () => {
+    const ass: ActaEntry = { series: 'ASS', volume: 33, year: 1900, page: 286, pope: 'Leo XIII', category: 'LITTERAE APOSTOLICAE', date: '1900-10-20', incipit: null, quoted: false, toponym: null, description: 'de Collegio Clericorum Lusitanorum', raw: '', opening: 'Quod iam diu optabamus, ut Collegium Lusitanum', anchor: 'dateline', evidence: { heading: '', salutation: null, opening: '', dateline: null, header: '' } };
+    const result = matchActa([ass], []);
+    const creation = createFromActa(result, []);
+    expect(creation.created).toEqual([]);
+    expect(creation.held).toMatchObject([{ reason: 'series-not-created', entry: { page: 286 } }]);
+    // Held before the class and shelf rules: a same-date shelf record of the class is a match, not a hold.
+    const shelf = doc({ id: 'mag:leo-xiii/quod-iam-diu-1900', issuerId: 'rp:leo-xiii', date: '1900-10-20', incipit: 'Quod iam diu' });
+    const matched = run([ass], [shelf]);
+    expect(matched.created).toEqual([]);
+    expect(matched.held).toEqual([]);
+  });
+});
+
 describe('the created-category table', () => {
   it('names only categories of categories.ts with exactly one class, and every harvested category is created or explained', () => {
     for (const id of Object.keys(CREATED_CATEGORIES)) {

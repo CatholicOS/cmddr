@@ -1551,8 +1551,9 @@ export const ASS_READINGS: Readonly<Record<string, AssReading>> = {
   },
 };
 
-/** The curation key of an entry: the volume year and first page the index cites. */
-export const curationKey = (e: { year: number; page: number }): string => `${e.year}:${e.page}`;
+/** The key of ACTA_INDEX_CORRECTIONS and ACTA_HOLDS: `{year}:{page}` for the AAS (the volume year and first page the index cites); `ASS:{volume}:{page}` for the ASS, whose volumes 2 and 3 share a year. */
+export const curationKey = (e: { series?: string; volume?: number; year: number; page: number }): string =>
+  e.series === 'ASS' ? `ASS:${e.volume}:${e.page}` : `${e.year}:${e.page}`;
 
 export interface SharedPage {
   /** The documents the page opens, by id. */

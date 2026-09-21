@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
-import { loadActaIndexes, actaSource, applyCuratedReferences, ACTA_SOURCES } from '../src/acta/join.js';
-import { ACTA_CURATED_REFERENCES, ACTA_PAGE_CORRECTIONS, ACTA_PAGE_READINGS } from '../src/acta/curation.js';
+import { loadActaIndexes, actaSource, applyCuratedReferences, applyAssReadings, emptyScan, ACTA_SOURCES } from '../src/acta/join.js';
+import { ACTA_CURATED_REFERENCES, ACTA_PAGE_CORRECTIONS, ACTA_PAGE_READINGS, ASS_READINGS } from '../src/acta/curation.js';
 import { categoryForHeading } from '../src/acta/categories.js';
 import { pagelessKey, sidecarPath, type PagesSidecar } from '../src/acta/recover.js';
 import type { ActaEntry } from '../src/acta/index.js';
@@ -128,5 +128,62 @@ describe('applyCuratedReferences (controller ruling 15: a curated reference may 
     r2.matches.push(italian(), { entry: entry({ volume: 9, year: 1917, part: 'I', page: 5, date: '1917-05-27' }), documentId: 'mag:benedict-xv/providentissima-mater-1917', by: 'unique' });
     expect(() => applyCuratedReferences(r2, both())).toThrow(/providentissima-mater-1917, which the join also matched/);
     expect(() => applyCuratedReferences(empty(), [doc('mag:pius-xi/ubi-arcano-dei-consilio-1922', '1922-12-23')])).toThrow(/no document carries/);
+  });
+});
+
+describe('loadActaIndexes with an ASS source (ass volumes spec §5)', () => {
+  it('reads the entries fixture of every ass source into a parse result whose entries are the fixture\'s plus the curated readings, with no pageless entry and the scan\'s defects', () => {
+    const sources = ACTA_SOURCES.filter((s) => s.kind === 'ass');
+    expect(sources.map((s) => s.key)).toEqual(['ass-1', 'ass-12', 'ass-23', 'ass-33', 'ass-41']);
+    const { parsed, missing } = loadActaIndexes(sources);
+    expect(missing).toEqual([]);
+    for (const s of sources) {
+      const r = parsed.get(s.key)!;
+      const fixture = JSON.parse(readFileSync(s.file, 'utf8'));
+      const readings = Object.keys(ASS_READINGS).filter((k) => k.startsWith(`ASS:${s.volume}:`));
+      const replaced = readings.filter((k) => fixture.entries.some((e: { page: number }) => `ASS:${s.volume}:${e.page}` === k)).length;
+      expect(r.volume).toBe(s.volume);
+      expect(r.year).toBe(s.year);
+      expect(r.entries).toHaveLength(fixture.entries.length + readings.length - replaced);
+      // ASS 1's scan is empty (acta-ass.test.ts): its three acts are readings, so no source is left without an entry.
+      expect(r.entries.length, s.key).toBeGreaterThan(0);
+      expect(r.entries.filter((e) => e.anchor === 'reading')).toHaveLength(readings.length);
+      expect(r.pageless).toEqual([]);
+      expect(r.defects).toHaveLength(fixture.defects.length);
+      expect(r.entries.every((e) => e.series === 'ASS' && e.incipit === null && typeof e.opening === 'string')).toBe(true);
+      // Sorted by page, the readings in their place.
+      expect(r.entries.map((e) => e.page)).toEqual([...r.entries.map((e) => e.page)].sort((a, b) => a - b));
+    }
+  });
+  const reading = { pope: 'Leo XIII', category: 'LITTERAE', date: '1900-01-01', opening: 'a b c', description: 'd', evidence: 'e' };
+  const row = { description: 'Litterae', page: 3, raw: 'Litterae 3' };
+  it('rejects a reading that answers no finding', () => {
+    // A summa with a row, so the scan is not the empty one every reading answers (ASS 1).
+    expect(() => applyAssReadings({ ...emptyScan(), summa: { pages: null, rows: [row], claimed: [], unclaimed: [row], omitted: [] } }, 33, 1900, { 'ASS:33:999': reading }))
+      .toThrow(/stale reading ASS:33:999/);
+    // The unclaimed row's page answers.
+    expect(applyAssReadings({ ...emptyScan(), summa: { pages: null, rows: [row], claimed: [], unclaimed: [row], omitted: [] } }, 33, 1900, { 'ASS:33:3': reading }))
+      .toMatchObject([{ page: 3, anchor: 'reading', series: 'ASS', volume: 33, year: 1900, incipit: null, opening: 'a b c' }]);
+  });
+  it('accepts a reading at any page from the previous anchor through a no-heading defect\'s page, which is the dateline\'s, not the heading\'s (the Task 4 ruling)', () => {
+    const scanned = (page: number) => ({ ...reading, series: 'ASS' as const, volume: 23, year: 1890, page, incipit: null, quoted: false, toponym: null, raw: '', anchor: 'dateline' as const, evidence: { heading: '', salutation: null, opening: '', dateline: null, header: '' } });
+    const scan = { ...emptyScan(), entries: [scanned(518)], defects: [{ page: 526, reason: 'no-heading' as const, lines: [] }], summa: { pages: null, rows: [row], claimed: [], unclaimed: [], omitted: [] } };
+    // ASS 23 (1890-91): the motu proprio at p. 522, whose dateline the scanner found at p. 526 (ASS_READINGS).
+    expect(applyAssReadings(scan, 23, 1890, { 'ASS:23:522': reading }).map((e) => [e.page, e.anchor])).toEqual([[518, 'dateline'], [522, 'reading']]);
+    expect(applyAssReadings(scan, 23, 1890, { 'ASS:23:518': reading }).map((e) => [e.page, e.anchor])).toEqual([[518, 'reading']]);
+    expect(applyAssReadings(scan, 23, 1890, { 'ASS:23:526': reading }).map((e) => e.page)).toEqual([518, 526]);
+    expect(() => applyAssReadings(scan, 23, 1890, { 'ASS:23:517': reading })).toThrow(/stale reading ASS:23:517/);
+    expect(() => applyAssReadings(scan, 23, 1890, { 'ASS:23:527': reading })).toThrow(/stale reading ASS:23:527/);
+    // A `no-date` defect answers at its own page only.
+    const noDate = { ...scan, defects: [{ page: 526, reason: 'no-date' as const, lines: [] }] };
+    expect(() => applyAssReadings(noDate, 23, 1890, { 'ASS:23:522': reading })).toThrow(/stale reading ASS:23:522/);
+    // The first no-heading defect of a volume reaches back to page 1.
+    const first = { ...scan, entries: [], defects: [{ page: 526, reason: 'no-heading' as const, lines: [] }] };
+    expect(applyAssReadings(first, 23, 1890, { 'ASS:23:1': reading }).map((e) => e.page)).toEqual([1]);
+  });
+  it('accepts every reading of a volume whose scan and summa are both empty (ASS 1)', () => {
+    expect(applyAssReadings(emptyScan(), 1, 1865, { 'ASS:1:193': reading, 'ASS:1:744': reading }).map((e) => e.page)).toEqual([193, 744]);
+    // Defects alone do not make a scan non-empty: ASS 1's three no-heading defects sit beside no entry and no summa row.
+    expect(applyAssReadings({ ...emptyScan(), defects: [{ page: 325, reason: 'no-heading', lines: [] }] }, 1, 1865, { 'ASS:1:744': reading }).map((e) => e.page)).toEqual([744]);
   });
 });

@@ -143,6 +143,10 @@ export const NOT_CREATED: Readonly<Record<string, string>> = {
   // One heading for one act (the 2010 index): Benedict XVI's pastoral letter to the
   // Catholics of Ireland, on the year-partitioned letters shelf, not harvested for him.
   'Litterae pastorales': 'one heading for one act, the pastoral letter to the Catholics of Ireland (19 March 2010), which vatican.va files on the year-partitioned letters shelf, not harvested for Benedict XVI (#4)',
+  // The briefs of the ASS (categories.ts, phase 2c-i): every ASS entry is held before this
+  // table is read (`series-not-created`, ass volumes spec decision 1), and no AAS index
+  // prints the heading; whether the class is created is decided in 2c-iii.
+  'Brevia': 'printed by the ASS only, whose entries phase 2c-i joins as references and never creates (ass volumes spec, decision 1); creation from the briefs shelf is decided in 2c-iii',
 };
 
 /**
@@ -186,7 +190,9 @@ export type HoldReason =
   /** The later printing of an act the *Acta* print twice (ACTA_REPRINTS), or an entry the index cites at two pages that no row settles: the citation of record is one reference. */
   | 'reprint'
   /** The OCR has damaged the incipit or toponym (a stray character, a digit, an unbalanced bracket): the line is not the line as printed. */
-  | 'ocr-damaged';
+  | 'ocr-damaged'
+  /** An ASS entry (ass volumes spec, decision 1): phase 2c-i joins references only; ASS-born documents are 2c-iii. */
+  | 'series-not-created';
 
 export interface ActaHoldRow {
   entry: ActaEntry;
@@ -394,6 +400,9 @@ export function createFromActa(
 
   for (const u of result.unmatched) {
     const entry = u.entry;
+    // The ASS (ass volumes spec, decision 1): every unmatched entry is held, before any other
+    // rule reads it; the ambiguous and conflict loops above hold and never create.
+    if (entry.series === 'ASS') { hold(entry, 'series-not-created', 'an Acta Sanctae Sedis entry: phase 2c-i joins references only (ass volumes spec §5); creation is decided in 2c-iii from this phase\'s gap report', u.sameDate); continue; }
     const category = categoryForHeading(entry.category);
     if (category === null) continue;   // unseen heading: matchActa never reaches here, reported by the parser
     const key = curationKey(entry);

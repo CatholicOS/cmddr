@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { matchActa, citedAt, incipitSlug, shiftDate, toponymStems, titleHasToponym, titleHasToponymInner, titleIsToponym } from '../src/acta/match.js';
+import { matchActa, citedAt, incipitAgrees, incipitSlug, shiftDate, toponymStems, titleHasToponym, titleHasToponymInner, titleIsToponym } from '../src/acta/match.js';
 import type { ActaEntry } from '../src/acta/index.js';
 import type { DocumentRecord } from '../src/types.js';
 
@@ -295,5 +295,53 @@ describe('shiftDate', () => {
   it('moves across month and year boundaries', () => {
     expect(shiftDate('2023-01-01', -1)).toBe('2022-12-31');
     expect(shiftDate('2024-02-28', 1)).toBe('2024-02-29');
+  });
+});
+
+describe('the opening-prefix rule for ASS entries (ass volumes spec §5)', () => {
+  const assEntry = (opening: string, page = 273): ActaEntry => ({
+    series: 'ASS', volume: 33, year: 1900, page, pope: 'Leo XIII', category: 'EPISTOLA ENCYCLICA', date: '1900-11-01',
+    incipit: null, quoted: false, toponym: null, description: 'De Iesu Christo Redemptore', raw: '', opening, anchor: 'dateline',
+    evidence: { heading: '', salutation: null, opening, dateline: null, header: '' },
+  });
+  const tametsi = doc({ id: 'mag:leo-xiii/tametsi-futura-1900', issuerId: 'rp:leo-xiii', date: '1900-11-01', genre: 'encyclical', characteristics: [], incipit: 'Tametsi futura', title: 'Tametsi futura' });
+  const other = doc({ id: 'mag:leo-xiii/other-1900', issuerId: 'rp:leo-xiii', date: '1900-11-01', genre: 'encyclical', characteristics: [], incipit: 'Tametsi', title: 'Tametsi' });
+  const third = doc({ id: 'mag:leo-xiii/tametsi-fut-1900', issuerId: 'rp:leo-xiii', date: '1900-11-01', genre: 'encyclical', characteristics: [], incipit: 'Tametsi fut', title: 'x' });
+  const opening = 'Tametsi futura prospicientibus, vacuo a sollicitudine animo esse';
+  it('matches the one candidate of the class on the date without reading the opening (`unique`)', () => {
+    const r = matchActa([assEntry(opening)], [tametsi]);
+    expect(r.matches).toMatchObject([{ documentId: 'mag:leo-xiii/tametsi-futura-1900', by: 'unique' }]);
+  });
+  it('tells two candidates apart by the incipit slug as a word-boundary prefix of the opening slug (`opening`), and both candidates are prefixes → ambiguous', () => {
+    const r = matchActa([assEntry(opening)], [tametsi, other]);
+    // `tametsi` and `tametsi-futura` are both word-boundary prefixes: nothing separates them.
+    expect(r.matches).toEqual([]);
+    expect(r.ambiguous).toHaveLength(1);
+    const r2 = matchActa([assEntry(opening)], [tametsi, third]);
+    expect(r2.matches).toMatchObject([{ documentId: 'mag:leo-xiii/tametsi-futura-1900', by: 'opening' }]);
+  });
+  it('does not read `tametsi-fut` as a prefix of `tametsi-futura` (word boundary)', () => {
+    const fourth = doc({ id: 'mag:leo-xiii/alia-1900', issuerId: 'rp:leo-xiii', date: '1900-11-01', genre: 'encyclical', characteristics: [], incipit: 'Alia verba', title: 'y' });
+    const r = matchActa([assEntry(opening)], [third, fourth]);
+    expect(r.matches).toEqual([]);
+    expect(r.ambiguous).toHaveLength(1);
+  });
+  it('agrees when the opening is the incipit exactly, and never when the document prints no incipit', () => {
+    expect(incipitAgrees({ incipit: null, opening: 'Tametsi futura' }, { incipit: 'Tametsi futura' })).toBe(true);
+    expect(incipitAgrees({ incipit: null, opening: 'Tametsi futura' }, {})).toBe(false);
+    expect(incipitAgrees({ incipit: null }, { incipit: 'Tametsi futura' })).toBe(false);
+    // An AAS entry keeps the equality rule: the printed incipit, never a prefix.
+    expect(incipitAgrees({ incipit: 'Tametsi futura', opening: 'Tametsi futura prospicientibus' }, { incipit: 'Tametsi futura' })).toBe(true);
+    expect(incipitAgrees({ incipit: 'Tametsi futura prospicientibus' }, { incipit: 'Tametsi futura' })).toBe(false);
+  });
+  it('keeps the claim with the opening evidence when two ASS entries claim one document', () => {
+    const r = matchActa([assEntry(opening, 273), assEntry('Alia verba prorsus diversa hic leguntur nunc', 300)], [tametsi]);
+    expect(r.matches).toMatchObject([{ entry: { page: 273 }, by: 'opening' }]);
+    expect(r.unmatched).toMatchObject([{ entry: { page: 300 } }]);
+    expect(r.conflicts).toEqual([]);
+  });
+  it('leaves an ASS entry with the unreadable date marker unmatched and without near-misses', () => {
+    const r = matchActa([{ ...assEntry('Ingenti sane laetitia suavique animi iucunditate hodie perfundimur'), date: '????-??-??', category: 'EPISTOLA' }], [tametsi]);
+    expect(r.unmatched).toMatchObject([{ sameDate: [], nearMisses: [] }]);
   });
 });

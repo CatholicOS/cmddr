@@ -7,8 +7,10 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { parseActaIndex, type ActaEntry, type ActaParseResult } from './index.js';
 import { matchActa, type ActaMatchResult } from './match.js';
-import { ACTA_CURATED_REFERENCES, ACTA_PAGE_CORRECTIONS, ACTA_PAGE_READINGS, overrideKey, type CuratedReference } from './curation.js';
+import { ACTA_CURATED_REFERENCES, ACTA_PAGE_CORRECTIONS, ACTA_PAGE_READINGS, ASS_READINGS, overrideKey, type AssReading, type CuratedReference } from './curation.js';
 import { applyPageCorrections, applyPageRows, sidecarPath, type PagesSidecar } from './recover.js';
+import { categoryForHeading } from './categories.js';
+import type { AssEntry, AssScan } from './ass.js';
 import type { DocumentRecord } from '../types.js';
 
 /**
@@ -181,21 +183,81 @@ export const sourceOfEntry = (e: { series?: string; volume?: number; year: numbe
  */
 export const ACTA_FIXTURES_RETRIEVED = '2026-09-12';
 
+/** An empty scan -- no entry, no defect, no summa row: the shape applyAssReadings reads, for the tests. */
+export const emptyScan = (): Omit<AssScan, 'source' | 'generated' | 'text' | 'volume' | 'year' | 'pages'> => ({ entries: [], defects: [], summa: { pages: null, rows: [], claimed: [], unclaimed: [], omitted: [] } });
+
+/**
+ * The curated readings of a volume (ASS_READINGS, ass volumes spec §6) applied to its scan:
+ * a row at a page the scan has no entry for is added; a row at a scanned entry's page
+ * replaces it. A row is stale (a hard error) unless it answers a finding of the scan
+ * (the controller's ruling of the Task 4 fix round): its page is a scanned entry's page,
+ * an unclaimed summa row's page, a defect's page, or -- for a `no-heading` defect, which
+ * the scanner keys to the dateline's page while the act's heading stands somewhere between
+ * the previous anchor and it -- any page from the previous anchor's page through the
+ * defect's page, the previous anchor being the scanned entry or defect that precedes the
+ * defect in page order (or page 1 for the first); or the volume's scan and summa are both
+ * empty (ASS 1 (1865-66): no class heading of the list, no papal part in the summa), where
+ * every act is a reading. Returns the entries sorted by page.
+ */
+export function applyAssReadings(scan: Pick<AssScan, 'entries' | 'defects' | 'summa'>, volume: number, year: number, table: Readonly<Record<string, AssReading>> = ASS_READINGS): AssEntry[] {
+  const entries = [...scan.entries];
+  const nothingScanned = scan.entries.length === 0 && scan.summa.rows.length === 0;
+  // The anchors in page order: every scanned entry's page and every defect's page.
+  const anchorPages = [...new Set([...scan.entries.map((e) => e.page), ...scan.defects.map((d) => d.page)])].sort((a, b) => a - b);
+  const previousAnchor = (page: number): number => anchorPages.filter((p) => p < page).at(-1) ?? 1;
+  const withinNoHeading = (page: number): boolean =>
+    scan.defects.some((d) => d.reason === 'no-heading' && page >= previousAnchor(d.page) && page <= d.page);
+  for (const [key, row] of Object.entries(table)) {
+    if (!key.startsWith(`ASS:${volume}:`)) continue;
+    const page = Number(key.split(':')[2]);
+    const at = entries.findIndex((e) => e.page === page);
+    const answers = nothingScanned || at >= 0 || scan.defects.some((d) => d.page === page)
+      || scan.summa.unclaimed.some((r) => r.page === page) || withinNoHeading(page);
+    if (!answers) throw new Error(`stale reading ${key}: no scanned entry, defect, unclaimed summa row or no-heading span at that page`);
+    const entry: AssEntry = {
+      series: 'ASS', volume, year, page, pope: row.pope, category: row.category, date: row.date,
+      incipit: null, quoted: false, toponym: null, description: row.description, raw: row.evidence,
+      opening: row.opening, anchor: 'reading',
+      evidence: { heading: row.evidence, salutation: null, opening: row.opening, dateline: null, header: '' },
+    };
+    if (at >= 0) entries[at] = entry; else entries.push(entry);
+  }
+  return entries.sort((a, b) => a.page - b.page);
+}
+
+/** An ASS source's fixture as a parse result (index.ts): the entries with the readings applied, no pageless entry, the scan's defects, and stats that count the summa's rows as the lines. */
+function loadAssSource(s: ActaSource): ActaParseResult {
+  const scan = JSON.parse(readFileSync(s.file, 'utf8')) as AssScan;
+  const entries = applyAssReadings(scan, s.volume, s.year);
+  const harvested = (e: ActaEntry) => (categoryForHeading(e.category)?.harvested ?? 'no') !== 'no';
+  const rows = scan.summa.rows.length;
+  return {
+    volume: s.volume, year: s.year, entries, pageless: [],
+    unseenHeadings: [...new Set(entries.filter((e) => categoryForHeading(e.category) === null).map((e) => e.category))],
+    unmappedPopes: [], popeHeadings: [...new Set(entries.map((e) => e.pope))], skippedParts: [],
+    defects: scan.defects.map((d) => ({ category: '', message: `p. ${d.page} ${d.reason}: ${d.lines.join(' / ')}` })),
+    stats: {
+      lines: rows, pageLines: rows, harvestedPageLines: scan.summa.claimed.length, harvestedEntries: entries.filter(harvested).length,
+      dateLines: entries.filter((e) => !e.date.startsWith('????')).length, entries: entries.length, monthOnly: 0,
+      withoutPage: 0, subItems: 0, translations: 0, consumed: scan.defects.length, recovered: entries.filter((e) => e.anchor === 'reading').length,
+    },
+  };
+}
+
 /**
  * Parse every fixture present; a missing one is skipped and named, not fatal. Pageless
  * entries then get their pages from the curated readings first, then the sidecar (spec
  * §10.3.3, §10.3.5): a page read by hand outranks one recovered by rule, and a key both
- * name is applied once, from the reading.
+ * name is applied once, from the reading. An `ass` source's fixture is the entries JSON
+ * the scanner writes, read with its curated readings (loadAssSource) and never fed to the
+ * index parser.
  */
 export function loadActaIndexes(sources: readonly ActaSource[] = ACTA_SOURCES): { parsed: Map<string, ActaParseResult>; missing: string[] } {
   const parsed = new Map<string, ActaParseResult>();
   const missing: string[] = [];
   for (const s of sources) {
-    // An `ass` source's fixture is the entries JSON the scanner writes, not index text: read
-    // by Task 5 of phase 2c-i (ass volumes spec §5), skipped here until then so the AAS
-    // parser is never fed it.
-    if (s.kind === 'ass') continue;
     if (!existsSync(s.file)) { missing.push(s.key); continue; }
+    if (s.kind === 'ass') { parsed.set(s.key, loadAssSource(s)); continue; }
     const r = parseActaIndex(readFileSync(s.file, 'utf8'), {
       year: s.year, volume: s.volume, ...(s.part ? { part: s.part } : {}), ...s.parse,
     });

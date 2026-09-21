@@ -46,6 +46,11 @@ import { assignProvisionalOrdinals, bareProvisionalId } from './src/harvest/ordi
 import { slugify } from './src/slug.js';
 import type { DocumentRecord } from './src/types.js';
 
+// The ASS have their own report (tools/ass-volumes-report.ts); this one reads the AAS.
+const AAS_SOURCES: readonly ActaSource[] = ACTA_SOURCES.filter((s) => s.kind !== 'ass');
+/** A document's reference as the reports cite it: `AAS 75-I (1983) 877`, `ASS 33 (1900) 273`. */
+const citeRef = (a: NonNullable<DocumentRecord['acta']>) => `${a.series} ${a.volume}${a.part ? `-${a.part}` : ''} (${a.year}) ${a.page}`;
+
 const allDocs = readdirSync('data/documents').filter((f) => f.endsWith('.json'))
   .flatMap((f) => JSON.parse(readFileSync(`data/documents/${f}`, 'utf8')) as DocumentRecord[])
   .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
@@ -1172,15 +1177,15 @@ const ERA = ERAS[eraKey];
 if (!ERA) throw new Error(`Unknown era '${eraKey}': ${Object.keys(ERAS).join(', ')}`);
 
 /** The era's sources, in volume order. */
-const SAMPLE: readonly ActaSource[] = ACTA_SOURCES.filter(ERA.covers);
+const SAMPLE: readonly ActaSource[] = AAS_SOURCES.filter(ERA.covers);
 const sampleKeys = SAMPLE.map((s) => s.key);
-const { parsed: parsedAll, missing } = loadActaIndexes();
+const { parsed: parsedAll, missing } = loadActaIndexes(AAS_SOURCES);
 const allEntries = [...parsedAll.values()].flatMap((p) => p.entries);
 const resultAll = matchActa(allEntries, docs);
 // The curated references, as the harvest applies them (join.ts): a match a row supersedes leaves `matches` before the creator runs.
 applyCuratedReferences(resultAll, docs);
 const creationAll = createFromActa(resultAll, docs);
-const inSample = (e: { year: number; part?: 'I' | 'II' }): boolean => sampleKeys.includes(sourceKeyOf(e));
+const inSample = (e: { series?: string; volume?: number; year: number; part?: 'I' | 'II' }): boolean => sampleKeys.includes(sourceKeyOf(e));
 const entries = allEntries.filter(inSample);
 const result = {
   matches: resultAll.matches.filter((m) => inSample(m.entry)),
@@ -1197,12 +1202,12 @@ const creation = {
   created: creationAll.created.filter((c) => inSample(c.entry)),
   held: creationAll.held.filter((h) => inSample(h.entry)),
 };
-const bornInData = bornInDataAll.filter((d) => inSample({ year: d.acta!.year, ...(d.acta!.part ? { part: d.acta!.part } : {}) }));
+const bornInData = bornInDataAll.filter((d) => inSample(d.acta!));
 
 const cat = (e: Pick<ActaEntry, 'category'>): ActaCategory | null => categoryForHeading(e.category);
 const catId = (e: Pick<ActaEntry, 'category'>) => cat(e)?.id ?? e.category;
 const harvestedness = (e: ActaEntry): 'yes' | 'partly' | 'no' | 'unknown' => cat(e)?.harvested ?? 'unknown';
-const cite = (e: ActaEntry) => `AAS ${e.volume}${e.part ? `-${e.part}` : ''} (${e.year}) ${e.page}`;
+const cite = (e: ActaEntry) => citeRef(e);
 const md = (s: string) => s.replace(/\|/g, '\\|').replace(/\n/g, ' / ').replace(/\s+/g, ' ');
 const cls = (c: { genre: string | null; characteristics: string[] }) => `${c.genre}${c.characteristics.length ? '+' + c.characteristics.join('+') : ''}`;
 const label = (e: Pick<ActaEntry, 'incipit' | 'toponym' | 'description'>) => e.incipit !== null ? `*${md(e.incipit)}*` : e.toponym !== null ? `${md(e.toponym)}` : md(e.description.slice(0, 70));
@@ -1212,7 +1217,7 @@ const pct = (n: number | null) => n === null ? '—' : `${(n * 100).toFixed(1)} 
  * the reason each unrecovered entry was left, both by the pageless key.
  */
 const sidecars = new Map<string, PagesSidecar>();
-for (const s of ACTA_SOURCES) {
+for (const s of AAS_SOURCES) {
   const path = sidecarPath(s);
   if (existsSync(path)) sidecars.set(s.key, JSON.parse(readFileSync(path, 'utf8')) as PagesSidecar);
 }
@@ -1408,7 +1413,7 @@ p();
   const pageShared = creation.held.filter((h) => h.reason === 'page-shared').length;
   // The curated references into the era's volumes (controller ruling 19: with the matches, the era's "references") --
   // by volume, since a part with no chronological index (AAS 9-II, the Code) is no source of its own.
-  const curated = Object.values(ACTA_CURATED_REFERENCES).filter((r) => SAMPLE.some((s) => s.volume === r.acta.volume && s.year === r.acta.year)).length;
+  const curated = Object.values(ACTA_CURATED_REFERENCES).filter((r) => r.acta.series === 'AAS' && SAMPLE.some((s) => s.volume === r.acta.volume && s.year === r.acta.year)).length;
   const byGenre = new Map<string, number>();
   for (const c of created) byGenre.set(cat(c.entry)?.id ?? c.entry.category, (byGenre.get(cat(c.entry)?.id ?? c.entry.category) ?? 0) + 1);
   const heldBy = new Map<string, number>();
@@ -1596,7 +1601,7 @@ p();
   if (result.superseded.length === 0) p('None among the era\'s sources.');
   else {
     const rowOf = (m: ActaMatch) => ACTA_CURATED_REFERENCES[m.documentId]!;
-    p(`Entries of the era so superseded: ${result.superseded.map((m) => `${cite(m.entry)} (${label(m.entry)}, \`${m.documentId}\`; the citation of record is ${refOf(`AAS:${rowOf(m).acta.volume}${rowOf(m).acta.part ? `-${rowOf(m).acta.part}` : ''}:${rowOf(m).acta.page}`)} by ACTA_CURATED_REFERENCES)`).join('; ')}.`);
+    p(`Entries of the era so superseded: ${result.superseded.map((m) => `${cite(m.entry)} (${label(m.entry)}, \`${m.documentId}\`; the citation of record is ${citeRef(rowOf(m).acta)} by ACTA_CURATED_REFERENCES)`).join('; ')}.`);
   }
   p();
   p('### Pages the index prints wrongly, corrected');
@@ -1654,7 +1659,7 @@ const outcome = (e: ActaEntry): string => {
   return result.unmatched.some((u) => sameEntry(u.entry, e)) ? 'unmatched' : 'not attempted';
 };
 // The title is part of the key: two letters of one day can share a page (AAS 68 (1976) 256, ACTA_SHARED_PAGES).
-const bornKey = (d: DocumentRecord) => `${d.issuerId}|${d.date}|${d.acta!.year}${d.acta!.part ?? ''}:${d.acta!.page}|${d.title}`;
+const bornKey = (d: DocumentRecord) => `${d.issuerId}|${d.date}|${d.acta!.series}:${d.acta!.volume}${d.acta!.part ?? ''}:${d.acta!.page}|${d.title}`;
 const bornByKey = new Map(bornInData.map((d) => [bornKey(d), d]));
 function dataIdOf(d: DocumentRecord): string { return bornByKey.get(bornKey(d))?.id ?? d.id; }
 // The date is the entry's as the join reads it: a curated correction's where one applies
@@ -1761,6 +1766,7 @@ const HOLD_LABELS: Record<HoldReason, string> = {
   'ocr-damaged': 'OCR-damaged incipit or toponym',
   'page-shared': 'Page cited by another act (invariant 25)',
   'reprint': 'Printed more than once, or cited at more than one page: the citation of record is the other printing or awaits an ACTA_REPRINTS row',
+  'series-not-created': 'An Acta Sanctae Sedis entry: joined as a reference only, never created (ass volumes spec, decision 1)',
 };
 {
   const byReason = new Map<HoldReason, ActaHoldRow[]>();
@@ -1832,7 +1838,10 @@ p();
 p('| Issuer | Shelf records | AAS-only records | Of which from this era | After |');
 p('|---|---|---|---|---|');
 {
-  const issuers = [...new Set([...ACTA_POPES.map((x) => x.issuerId)])];
+  // The popes of the AAS: those an AAS source prints a part heading for. ACTA_POPES also
+  // names the ASS's Pius IX and Leo XIII (phase 2c-i), who have no AAS-only record.
+  const aasIssuers = new Set(allEntries.map((e) => POPE_ISSUERS[e.pope]));
+  const issuers = [...new Set([...ACTA_POPES.map((x) => x.issuerId)])].filter((id) => aasIssuers.has(id));
   let tb = 0, ta = 0, ts = 0;
   for (const issuer of issuers) {
     const before = docs.filter((d) => d.issuerId === issuer).length;
