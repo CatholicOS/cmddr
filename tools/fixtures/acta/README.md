@@ -161,8 +161,10 @@ reason. The join reads the sidecar and never the store; a row whose entry the pa
 longer opens is a hard error. Pages read by hand for the acts the recovery leaves
 (`ACTA_PAGE_READINGS` in `tools/src/acta/curation.ts`, keyed `{source}|{key}`, each row
 quoting the page the act opens on and its dating formula) are consulted before the sidecar
-and outrank it; the curated reference of *Providentissima Mater Ecclesia* (AAS 9-II (1917)
-5, `ACTA_CURATED_REFERENCES`) is written after the join, the part having no index.
+and outrank it; the curated references (`ACTA_CURATED_REFERENCES`) are written after the
+join: *Providentissima Mater Ecclesia* (AAS 9-II (1917) 5, the part having no index) and *Ubi
+arcano Dei consilio* (AAS 14 (1922) 673, whose index line opens no entry; the row names and
+displaces the match of the Italian printing, AAS 15 (1923) 5).
 
 ## The volumes: what the `-ocr.pdf` files are, and the two extraction modes
 

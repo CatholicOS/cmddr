@@ -365,8 +365,10 @@ the index OCR misspells into a well-formed word the body contradicts (*Placet oc
 each quoting the page the act opens on and its dating formula): the encyclicals *Ad beatissimi Apostolorum Principis*, *Quod iam
 diu*, *Principi Apostolorum Petro* and *Annus iam plenus* and the constitution *Sapienti Consilio* now cite their pages, and
 eleven constitutions and motu proprio are created at theirs; the 358 entries still without a page are neither created nor
-cited. *Providentissima Mater Ecclesia* (27 May 1917) carries the one curated reference (`ACTA_CURATED_REFERENCES`): it opens AAS
-9 part II — the Code of 1917, which has no chronological index — at p. 5. The
+cited. Two references are curated (`ACTA_CURATED_REFERENCES`): *Providentissima Mater Ecclesia* (27 May 1917) opens AAS 9 part
+II — the Code of 1917, which has no chronological index — at p. 5; and *Ubi arcano Dei consilio* (23 December 1922) is cited at
+its Latin printing, AAS 14 (1922) 673, whose index line lost its date columns and opens no entry, the row displacing the match
+of the Italian printing (AAS 15 (1923) 5) it names and quotes. The
 remaining phases are 2b′, the volumes of 2003–2009, which have no index online and await a fascicle parser, and 2c, the *Acta
 Sanctae Sedis* of 1865–1908, whose indexes carry no date or incipit and are confirmed by hand.
 

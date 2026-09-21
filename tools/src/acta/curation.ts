@@ -1031,7 +1031,7 @@ export const ACTA_PAGE_READINGS: Readonly<Record<string, PageReading>> = {
   // *Vix dum* (1914), *Quandoquidem* (1915), none of them a shelf record awaiting its
   // reference; and *Ubi arcano Dei consilio* (AAS 14 (1922) 673), whose index line prints
   // no date at all and opens no entry (index.ts: a line outside any entry), so no key of
-  // this table can name it.
+  // this table can name it -- ACTA_CURATED_REFERENCES cites it (controller ruling 15).
   '1909|1908-01-29|CONSTITUTIONES APOSTOLICAE|Sapienti Consilio|DE ROMANA CURIA.': {
     page: 7,
     indexLine: '1908 Ian. 29 Constitutio « Sapienti Consilio » / DE ROMANA CURIA.',
@@ -1234,14 +1234,24 @@ export const ACTA_PAGE_READINGS: Readonly<Record<string, PageReading>> = {
 
 export interface CuratedReference {
   acta: { series: 'AAS'; volume: number; year: number; part?: 'I' | 'II'; page: number };
+  /**
+   * The reference key (`AAS:{volume}:{page}`, overrideKey) of the matched entry this
+   * reference displaces -- allowed only with evidence in the row that the displaced entry
+   * is not the act's citation of record (controller ruling 15). The match moves to
+   * `superseded` (join.ts); a key that names no match of the document is a stale row.
+   */
+  supersedes?: string;
   /** Where the page was read and what it prints, and the act's own dating formula. */
   evidence: string;
 }
 
 /**
  * References no index entry can give: the constitution that promulgates a Code opens the
- * Code's own volume, which has no chronological index (AAS 9-II, 1917; AAS 75-II, 1983).
- * Applied after the join (applyActa); a document the join has also matched is an error.
+ * Code's own volume, which has no chronological index (AAS 9-II, 1917; AAS 75-II, 1983);
+ * and the Latin printing of an encyclical whose index line lost its date columns and opens
+ * no entry, while the vernacular printing's entry matched the shelf record (AAS 14 (1922)
+ * 673, *Ubi arcano Dei consilio*). Applied after the join (applyActa); a document the join
+ * has also matched is an error unless the row names that match in `supersedes`.
  */
 export const ACTA_CURATED_REFERENCES: Readonly<Record<string, CuratedReference>> = {
   'mag:benedict-xv/providentissima-mater-1917': {
@@ -1255,6 +1265,31 @@ export const ACTA_CURATED_REFERENCES: Readonly<Record<string, CuratedReference>>
       + "-- Pentecost, 27 May 1917: the promulgation of the Codex Iuris Canonici that fills the rest of the part, which has no "
       + "chronological index (tools/fixtures/acta/README.md). *Sacrae disciplinae leges* (25 January 1983) opens AAS 75 (1983) part II "
       + "at pp. VII-XIV, Roman-numbered (README.md, the 1979-2014 report), which `acta.page` cannot carry: no reference, recorded here.",
+  },
+  // Controller ruling 15 (phase 2b-iii-b, Task 9 fix round 1): the 1922 index's line for the
+  // Latin prints no date and opens no entry (index.ts: a line outside any entry), so no
+  // reading or correction can name it, and the 1923 index's entry for the Italian printing
+  // matched the shelf record by date and class. The Latin is the citation of record.
+  'mag:pius-xi/ubi-arcano-dei-consilio-1922': {
+    acta: { series: 'AAS', volume: 14, year: 1922, page: 673 },
+    supersedes: 'AAS:15:5',
+    evidence: "AAS 14 (1922) p. 673 (PDF page 673 of AAS-14-1922-ocr.pdf, read 2026-09-21), the first page of the fascicle of 27 "
+      + "December 1922, prints 'ACTA PII PP. XI / LITTERAE ENCYCLICAE / AD VENERABILES FRATRES PATRIARCHAS, PRIMATES, ARCHIEPISCOPOS, "
+      + "EPISCOPOS, ALIOSQUE LOCORUM ORDINARIOS PACEM ET COMMUNIONEM CUM APOSTOLICA SEDE HABENTES: DE PACE CHRISTI IN REGNO CHRISTI "
+      + "QUAERENDA. / PIUS PP. XI / … / Ubi arcano Dei consilio ac nutu Nos, qui nullis sane meritis commendaremur'; dated at p. 700 "
+      + "'Datum Romae apud Sanctum Petrum, die xxiii Decembris MDCCCCXXII, Pontificatus Nostri anno primo' -- 23 December 1922, the "
+      + "shelf record's date (`mag:pius-xi/ubi-arcano-dei-consilio-1922`, encyclicals). The 1922 index enters it under `I. - LITTERAE "
+      + "ENCYCLICAE` with no year, month or day on its line (`Ubi arcano Dei consilio. - Ad venerabiles fratres Pa­ / triarchas, "
+      + "Primates, Archiepiscopos, Episcopos / aliisque locorum Ordinarios pacem et communio­ / nem cum Apostolica Sede habentes : de "
+      + "pace Chri­ / sti in regno Christi quaerenda`, fixture aas-14-1922.txt lines 123-127), and the parser opens no entry for it. "
+      + "The displaced match, AAS 15 (1923) p. 5 (PDF page 5 of AAS-15-1923-ocr.pdf, read 2026-09-21), the first page of the fascicle "
+      + "of 15 January 1923, prints the Italian text: 'LETTERA-ENCICLICA / AI VENERABILI FRATELLI, PATRIARCHI, PRIMATI, ARCIVESCOVI, "
+      + "VESCOVI ED ALTRI ORDINARI AVENTI PACE E COMUNIONE CON LA SEDE APOSTOLICA: SU LA RESTAURAZIONE DEL REGNO DI CRISTO PER LA "
+      + "PACIFICAZIONE IN CRISTO. / PIO PP. XI / … / Fin dal primo momento in cui, per gli imperscrutabili disegni di Dio', which the "
+      + "1923 index enters as `1922 dec. 23 Fin dal primo momento. - Ai venerabili fratelli Patriar­ / chi, Primati, Arcivescovi, "
+      + "Vescovi ed altri Ordinari / aventi pace e comunione con la Sede Apostolica: / su la restaurazione del regno di Cristo per la "
+      + "pacifi­ / cazione in Cristo .` -- one act, two printings: the Latin page is the citation, as for the vernaculars of 1929, "
+      + "1933 and 1937 (ACTA_HOLDS).",
   },
 };
 

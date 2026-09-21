@@ -7,7 +7,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { parseActaIndex, type ActaEntry, type ActaParseResult } from './index.js';
 import { matchActa, type ActaMatchResult } from './match.js';
-import { ACTA_CURATED_REFERENCES, ACTA_PAGE_READINGS } from './curation.js';
+import { ACTA_CURATED_REFERENCES, ACTA_PAGE_READINGS, overrideKey } from './curation.js';
 import { applyPageRows, sidecarPath, type PagesSidecar } from './recover.js';
 import type { DocumentRecord } from '../types.js';
 
@@ -176,13 +176,31 @@ export function applyActa(docs: DocumentRecord[]): ActaJoin {
     const { series, volume, year, part, page } = m.entry;
     byId.get(m.documentId)!.acta = { series, volume, year, ...(part ? { part } : {}), page };
   }
-  // The references no entry can give (ACTA_CURATED_REFERENCES): written after the matches,
-  // and never over one.
+  applyCuratedReferences(result, docs);
+  return { parsed, missing, entries, result };
+}
+
+/**
+ * The references no entry can give (ACTA_CURATED_REFERENCES): written after the matches,
+ * and never over one -- unless the row names the match it displaces (`supersedes`,
+ * controller ruling 15), which then moves from `matches` to `superseded`: not a claim, not
+ * a record, listed by the reports beside the reprints. A row naming a document the join
+ * matched without naming the match, a `supersedes` key that names no match of the
+ * document, and an id no document carries are each an error. The report tools call this
+ * after matchActa, as applyActa does, so their §5 and the data agree.
+ */
+export function applyCuratedReferences(result: ActaMatchResult, docs: DocumentRecord[]): void {
+  const byId = new Map(docs.map((d) => [d.id, d]));
   for (const [id, row] of Object.entries(ACTA_CURATED_REFERENCES)) {
     const d = byId.get(id);
     if (d === undefined) throw new Error(`ACTA_CURATED_REFERENCES names ${id}, which no document carries`);
+    if (row.supersedes !== undefined) {
+      const i = result.matches.findIndex((m) => m.documentId === id && overrideKey(m.entry) === row.supersedes);
+      if (i < 0) throw new Error(`ACTA_CURATED_REFERENCES ${id} supersedes ${row.supersedes}, which the join did not match to it (stale row)`);
+      const [m] = result.matches.splice(i, 1);
+      result.superseded.push(m!);
+    }
     if (result.matches.some((m) => m.documentId === id)) throw new Error(`ACTA_CURATED_REFERENCES names ${id}, which the join also matched`);
     d.acta = { ...row.acta };
   }
-  return { parsed, missing, entries, result };
 }

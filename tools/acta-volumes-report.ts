@@ -31,12 +31,12 @@
  *        npx tsx tools/acta-volumes-report.ts 1909-1925 > docs/superpowers/reports/2026-09-21-acta-volumes-1909-1925.md
  */
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
-import { ACTA_SOURCES, actaSource, loadActaIndexes, sourceKeyOf, type ActaSource } from './src/acta/join.js';
-import { matchActa, correctedEntry, POPE_ISSUERS, isMonthOnly, type ActaCandidate, type ActaUnmatched } from './src/acta/match.js';
+import { ACTA_SOURCES, actaSource, applyCuratedReferences, loadActaIndexes, sourceKeyOf, type ActaSource } from './src/acta/join.js';
+import { matchActa, correctedEntry, POPE_ISSUERS, isMonthOnly, type ActaCandidate, type ActaMatch, type ActaUnmatched } from './src/acta/match.js';
 import { createFromActa, isActaShelf, CREATED_CATEGORIES, NOT_CREATED, type ActaHoldRow, type HoldReason } from './src/acta/create.js';
 import { ACTA_CATEGORIES, categoryForHeading, type ActaCategory } from './src/acta/categories.js';
 import { ACTA_POPES } from './src/acta/popes.js';
-import { ACTA_INDEX_CORRECTIONS, ACTA_REPRINTS, ACTA_SHARED_PAGES } from './src/acta/curation.js';
+import { ACTA_CURATED_REFERENCES, ACTA_INDEX_CORRECTIONS, ACTA_REPRINTS, ACTA_SHARED_PAGES } from './src/acta/curation.js';
 import { pagelessKey, sidecarPath, type PagesSidecar } from './src/acta/recover.js';
 import { parseRate, harvestedParseRate, normalisePopeHeading, NESTED_TOC_HEADINGS, type ActaEntry, type ActaParseResult } from './src/acta/index.js';
 import { POPES } from './src/mappings/pontiffs.js';
@@ -885,13 +885,14 @@ ERAS['1909-1925'] = {
     `   its month) and *Latinarum litterarum* (AAS 16 (1924) 417). One reference no index entry can give is curated`,
     `   (\`ACTA_CURATED_REFERENCES\`): *Providentissima Mater Ecclesia* (27 May 1917) opens AAS 9 (1917) part II at p. 5, the volume of the`,
     `   Code, which has no chronological index; *Sacrae disciplinae leges* (AAS 75 (1983) part II, pp. VII-XIV, Roman-numbered)`,
-    `   stays without one, \`acta.page\` being an integer. One reference is the Italian text's page: *Ubi arcano Dei consilio*`,
-    `   (23 December 1922) matched the 1923 index's *Fin dal primo momento* at AAS 15 (1923) 5, the Italian printing of the January`,
-    `   fascicle, because the 1922 index's line for the Latin (AAS 14 (1922) 673, \`Ubi arcano Dei consilio. - Ad venerabiles fratres\`)`,
-    `   prints no date and opens no entry (§3): a reading is keyed to an entry the parser opens without a page, so none can name`,
-    `   it, and a hold stops a creation, not a match, so the reference stands and is named here for the owner, as the Italian`,
-    `   *Divini illius Magistri* of 1929 was held (phase 2b-iii-a). The Latin opens AAS 14 (1922) 673 under \`LITTERAE ENCYCLICAE …`,
-    `   DE PACE CHRISTI IN REGNO CHRISTI QUAERENDA\`, dated at p. 700 \`die xxiii Decembris MDCCCCXXII\` (the store text, read 2026-09-21).`,
+    `   stays without one, \`acta.page\` being an integer. The second curated reference displaces a match (controller ruling 15,`,
+    `   \`supersedes\`; §5): *Ubi arcano Dei consilio* (23 December 1922) had matched the 1923 index's *Fin dal primo momento* at AAS 15`,
+    `   (1923) 5, the Italian printing of the January fascicle, because the 1922 index's line for the Latin (AAS 14 (1922) 673, \`Ubi`,
+    `   arcano Dei consilio. - Ad venerabiles fratres\`) prints no date and opens no entry (§3) -- a reading is keyed to an entry the`,
+    `   parser opens without a page, so none could name it, and a hold stops a creation, not a match. The row cites the Latin, which`,
+    `   opens AAS 14 (1922) 673 under \`LITTERAE ENCYCLICAE … DE PACE CHRISTI IN REGNO CHRISTI QUAERENDA\`, dated at p. 700 \`die xxiii`,
+    `   Decembris MDCCCCXXII\` (the store text, read 2026-09-21), and quotes the Italian page it displaces (\`LETTERA-ENCICLICA … Fin dal`,
+    `   primo momento\`); the 1923 entry is neither a claim nor a record, as the vernaculars of 1929, 1933 and 1937 are held.`,
     `2. **${c.created} documents created** (§8) -- ${c.byIssuer} -- and ${c.held} entries held (§9), ${c.guard} of them by the`,
     `   duplicate guard and ${c.otherRulesText}. The creations are the era: 191 letters of Pius X and Pius XI (whose letters shelves`,
     `   are harvested; Benedict XV's are held), 186 apostolic letters, 56 constitutions, 12 motu proprio, 4 *sub plumbo* letters and`,
@@ -978,6 +979,8 @@ const sampleKeys = SAMPLE.map((s) => s.key);
 const { parsed: parsedAll, missing } = loadActaIndexes();
 const allEntries = [...parsedAll.values()].flatMap((p) => p.entries);
 const resultAll = matchActa(allEntries, docs);
+// The curated references, as the harvest applies them (join.ts): a match a row supersedes leaves `matches` before the creator runs.
+applyCuratedReferences(resultAll, docs);
 const creationAll = createFromActa(resultAll, docs);
 const inSample = (e: { year: number; part?: 'I' | 'II' }): boolean => sampleKeys.includes(sourceKeyOf(e));
 const entries = allEntries.filter(inSample);
@@ -990,6 +993,7 @@ const result = {
   conflicts: resultAll.conflicts.filter((c) => c.entries.some(inSample)),
   sharedPages: resultAll.sharedPages.filter((sp) => sp.matches.some((m) => inSample(m.entry))),
   reprints: resultAll.reprints.filter(inSample),
+  superseded: resultAll.superseded.filter((m) => inSample(m.entry)),
 };
 const creation = {
   created: creationAll.created.filter((c) => inSample(c.entry)),
@@ -1371,6 +1375,16 @@ p();
     p('|---|---|---|---|');
     for (const [k, row] of rows) p(`| ${refOf(k)} | ${refOf(row.citationOf)} | ${row.kind} | ${row.indexLines.map((l) => `\`${md(l).replace(/\`/g, "'")}\``).join(' — ')} |`);
     if (result.reprints.length) p(`\nEntries of the era so held: ${result.reprints.map((e) => `${cite(e)} (${label(e)})`).join('; ')}.`);
+  }
+  p();
+  p('### Matches a curated reference displaces');
+  p();
+  p('A row of `ACTA_CURATED_REFERENCES` (curation.ts) that names the match it supersedes, with the evidence that the matched entry is');
+  p('not the act\'s citation of record (controller ruling 15): the match is neither a claim nor a record, and the document cites the row\'s page.');
+  if (result.superseded.length === 0) p('None among the era\'s sources.');
+  else {
+    const rowOf = (m: ActaMatch) => ACTA_CURATED_REFERENCES[m.documentId]!;
+    p(`Entries of the era so superseded: ${result.superseded.map((m) => `${cite(m.entry)} (${label(m.entry)}, \`${m.documentId}\`; the citation of record is ${refOf(`AAS:${rowOf(m).acta.volume}${rowOf(m).acta.part ? `-${rowOf(m).acta.part}` : ''}:${rowOf(m).acta.page}`)} by ACTA_CURATED_REFERENCES)`).join('; ')}.`);
   }
 }
 p();

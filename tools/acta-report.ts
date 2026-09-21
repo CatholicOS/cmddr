@@ -18,7 +18,7 @@
  * Usage: npx tsx tools/acta-report.ts > docs/superpowers/reports/2026-09-12-acta-join-2015-2024.md
  */
 import { readFileSync, readdirSync } from 'node:fs';
-import { ACTA_YEARS, loadActaIndexes } from './src/acta/join.js';
+import { ACTA_YEARS, applyCuratedReferences, loadActaIndexes } from './src/acta/join.js';
 import { matchActa, type ActaUnmatched, type ActaCandidate } from './src/acta/match.js';
 import { createFromActa, isActaShelf, NOT_CREATED, type ActaHoldRow, type HoldReason } from './src/acta/create.js';
 import { ACTA_CATEGORIES, categoryForHeading, type ActaCategory } from './src/acta/categories.js';
@@ -40,6 +40,7 @@ const francis = docs.filter((d) => d.issuerId === 'rp:francis-i');
 const { parsed: parsedAll, missing: missingAll } = loadActaIndexes();
 const allEntries = [...parsedAll.values()].flatMap((p) => p.entries);
 const resultAll = matchActa(allEntries, docs);
+applyCuratedReferences(resultAll, docs);   // as the harvest applies them (join.ts); none touches 2015-2024
 const creationAll = createFromActa(resultAll, docs);
 // This report's scope: the ten index PDFs of 2015-2024.
 const years = ACTA_YEARS.map(String).filter((y) => parsedAll.has(y));

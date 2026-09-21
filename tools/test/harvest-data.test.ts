@@ -2780,13 +2780,16 @@ describe('the AAS reference (acta reference spec)', () => {
     // (553), *Post datam* (AAS 15 (1923) 193, the index's `i apr.` read as its incipit) and
     // *Latinarum litterarum* (AAS 16 (1924) 417); and the curated reference of
     // *Providentissima Mater Ecclesia* (AAS 9-II (1917) 5, ACTA_CURATED_REFERENCES), the
-    // one reference into a part with no chronological index.
+    // one reference into a part with no chronological index. Controller ruling 15 (fix round
+    // 1): the second curated reference, *Ubi arcano Dei consilio* at its Latin printing (AAS
+    // 14 (1922) 673), supersedes the 1923 index's match of the Italian text (AAS 15 (1923)
+    // 5): 1923 drops by one and 1922 rises by one, the total unchanged.
     // A change to a fixture, the parser, the matcher or a shelf harvest moves these.
     const bySource = new Map<string, number>();
     for (const d of cited) bySource.set(sourceOf(d), (bySource.get(sourceOf(d)) ?? 0) + 1);
     expect(Object.fromEntries([...bySource].sort())).toEqual({
       '1909': 3, '1910': 37, '1911': 7, '1912': 6, '1913': 5, '1914': 2, '1915': 4, '1917-I': 6, '1917-II': 1, '1918': 2, '1919': 2, '1920': 14,
-      '1921': 3, '1922': 2, '1923': 15, '1924': 2, '1925': 2,
+      '1921': 3, '1922': 3, '1923': 14, '1924': 2, '1925': 2,
       '1926': 5, '1927': 1, '1928': 4, '1929': 53, '1930': 3, '1931': 4,
       '1932': 2, '1933': 2, '1936': 4, '1937': 4, '1938': 1, '1939': 3, '1940': 4, '1941': 2, '1942': 5, '1943': 6, '1944': 8, '1945': 3,
       '1946': 11, '1947': 11, '1948': 10, '1949': 9, '1950': 11, '1951': 5, '1952': 6, '1953': 11, '1954': 11, '1955': 1, '1956': 8, '1957': 6,
@@ -2800,7 +2803,8 @@ describe('the AAS reference (acta reference spec)', () => {
       '2015': 38, '2016': 26, '2017': 14, '2018': 15, '2019': 17, '2020': 18, '2021': 24, '2022': 18, '2023': 29, '2024': 26,
     });
     // The sample's 130 are 1931, 1958, 1978 and 2012's; 1909 and 1917-I count with their era (phase 2b-iii-b) since the recovery;
-    // the era's 105 are 112 with Task 9's seven readings, and *Providentissima Mater* is the one curated reference.
+    // the era's 105 are 112 with Task 9's seven readings; the two curated references are *Providentissima Mater* (no index
+    // entry) and *Ubi arcano Dei consilio* (whose Italian match it displaces: one reference either way, counted in the 112).
     expect(cited).toHaveLength(225 + 130 + 144 + 800 + 1421 + 66 + 112 + 1);
     // By class: the index's *Nuntii* carry the Christmas and Easter Urbi et Orbi, and the
     // volumes' *Nuntii radiophonici* / *radiotelevisifici* three more (1958, 1978).
@@ -3599,12 +3603,14 @@ describe('the AAS-only documents (AAS-only documents spec, phase 2a)', () => {
     expect(by['mag:pius-xi/vertit-in-animarum-1925']).toMatchObject({ acta: { volume: 17, year: 1925, page: 569 } });
     // *Inter praecipuas* (6 January 1925) is read at AAS 17 (1925) 289, the page the index's OCR sets on the line of *Ex
     // Apostolico officio* (27 March 1925, which opens at 516): invariant 25 holds both, and the record that cited 289 for the
-    // second is no longer created. *Ubi arcano Dei consilio* keeps the Italian text's page (AAS 15 (1923) 5): the 1922
-    // index's line for the Latin (AAS 14 (1922) 673) prints no date and opens no entry, so no reading can name it.
+    // second is no longer created. *Ubi arcano Dei consilio* cites the Latin printing (AAS 14 (1922) 673) by a curated
+    // reference that supersedes the 1923 index's match of the Italian text (AAS 15 (1923) 5; controller ruling 15): the 1922
+    // index's line for the Latin prints no date and opens no entry, so no reading could name it, and the Italian page is
+    // cited by nothing.
     expect(everything.filter((d) => d.acta?.volume === 17 && d.acta.page === 289)).toEqual([]);
     expect(by['mag:pius-xi/ex-apostolico-officio-1925']).toBeUndefined();
-    expect(by['mag:pius-xi/ubi-arcano-dei-consilio-1922']).toMatchObject({ acta: { volume: 15, year: 1923, page: 5 } });
-    expect(everything.filter((d) => d.acta?.volume === 14 && d.acta.page === 673)).toEqual([]);
+    expect(by['mag:pius-xi/ubi-arcano-dei-consilio-1922']).toMatchObject({ acta: { volume: 14, year: 1922, page: 673 } });
+    expect(everything.filter((d) => d.acta?.volume === 15 && d.acta.page === 5)).toEqual([]);
   });
 
   it('holds rather than creates: no discussion #30 act has an AAS-born twin, and the Tarragona letters stay held', () => {

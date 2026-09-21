@@ -269,6 +269,9 @@ such heading of the fixtures), which the parser now reads, so two of the three c
 the recovery's own rule; and *Inter praecipuas* (AAS 17 (1925) 289) opens the page the index's
 OCR sets on the next entry's line (*Ex Apostolico officio*, which opens at 516), so invariant
 25 holds both until a page correction can be curated -- the second entry-level key, after
-the two holds of §1.4, that the page-keyed tables lack. *Ubi arcano Dei consilio* keeps the
-Italian text's page: the 1922 line for the Latin prints no date and opens no entry, and a
-reading is keyed to an entry.
+the two holds of §1.4, that the page-keyed tables lack. *Ubi arcano Dei consilio* is cited at
+its Latin printing (AAS 14 (1922) 673) by the second curated reference: the 1922 line for the
+Latin prints no date and opens no entry, and a reading is keyed to an entry, so the row names
+the match it displaces (`supersedes: 'AAS:15:5'`, the Italian printing, quoted beside the
+Latin with its dating formula; controller ruling 15) and the join moves that match to
+`superseded` -- neither a claim nor a record, listed in the report's §5 beside the reprints.
