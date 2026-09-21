@@ -388,7 +388,13 @@ parse rate per source before and after the ditto reading, the references and cre
 per pope and class, every hold with its reason. The pinned counts in
 `tools/test/harvest-data.test.ts`, `ACTA_SOURCES`, the fixtures README, SCHEMA.md's
 `acta` paragraph and the README's two phase paragraphs move as in every era; §1's row
-for 2003–2009 and §8's *out of scope* line are corrected to point here.
+for 2003–2009 and §8's *out of scope* line are corrected to point here. The six earlier
+eras' reports are regenerated with this one, as in every era (2026-09-21): five move only
+by the corpus totals (John Paul II's AAS-created records 43 → 57, Benedict XVI's 69 → 134,
+the registry 8,490 → 8,569), and 1979–2014 moves besides by the 2001 index's `SYNODUS
+EPISCOPORUM` part, read here as a category (§11.2) rather than skipped -- twelve more lines
+counted, two more entries, one more defect, 96.6 % → 95.9 % -- and by the acts of 1992, 2001
+and 2002 that now carry a reference from AAS 95–101, which leave its §11 lists.
 
 ### 11.4 Out of scope
 
