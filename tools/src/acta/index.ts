@@ -181,7 +181,14 @@ export interface ActaEntry {
    * `recovered` from the volume body by the sidecar, `reading` from a curated row
    * (ACTA_PAGE_READINGS). Absent for a page read from the index line.
    */
-  pageSource?: 'recovered' | 'reading';
+  pageSource?: 'recovered' | 'reading' | 'corrected';
+  /**
+   * The page the index line prints where a curated correction (ACTA_PAGE_CORRECTIONS)
+   * replaced it with the page the volume opens the act at -- the OCR's `530` for *Casti
+   * connubii* at 539, the index's `946` for a constitution that opens at 947. Kept for
+   * the report; `page` is the act's.
+   */
+  printedPage?: number;
 }
 
 /** An entry the index opened whose page the OCR lost: everything the line prints but the page (spec §10.3). */

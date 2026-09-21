@@ -602,8 +602,10 @@ ERAS['1979-2014'] = {
     `   raised, a patroness confirmed and a beatification): curated in \`ACTA_SHARED_PAGES\` with both headings and incipits quoted,`,
     `   so invariant 25 admits the pairs. Two print one -- AAS 76 (1984) 946, Portus Blairensis's page given by the OCR to Cabinda's`,
     `   constitution, which opens at 947; AAS 82 (1990) 43, *Inter sacras*'s page given by the index to *Fidelem populum*, which opens`,
-    `   at 42 -- and the join now withholds both references of an uncurated shared page (\`sharedPages\`, match.ts; §5), as the`,
-    `   creator holds a created record on one, for a page correction this phase does not attempt${c.pageShared ? ` (${c.pageShared} created entries so held)` : ' (no created entry of the era cites a page another act cites)'}.`,
+    `   at 42 -- and the join withholds both references of an uncurated shared page (\`sharedPages\`, match.ts; §5), as the`,
+    `   creator holds a created record on one${c.pageShared ? ` (${c.pageShared} created entries so held)` : ''}. Both pages are corrected now: \`ACTA_PAGE_CORRECTIONS\``,
+    `   (2026-09-21) gives Cabinda's constitution 947 and *Fidelem populum* 42, each read in the volume with its dating formula, and`,
+    `   the four documents cite their pages (§5, *Pages the index prints wrongly, corrected*).`,
     `4. **An act the Acta print twice has one citation of record: the first printing, unless the volume marks the later as a`,
     `   correction.** Benedict XVI's *Ibi vacabimus* (3 July 2011) is printed at AAS 104 (2012) 482 and again at AAS 112 (2020) 479 --`,
     `   the May 2020 fascicle re-prints two beatification letters of 2010–2011 under a part of their own, the same text, the same`,
@@ -692,19 +694,20 @@ ERAS['1926-1930'] = {
       `   31 January to 5 June 1930 (Gravelbourg, Townsville, the Ethiopian College, the Nepomucenum, the Romanian hierarchy), all`,
       `   created. ${monthOnly} entries are dated to the month, held; of the ${unprinted.length} that print no year, the rows supply six and *Casti connubii* is`,
       `   finding 3. The months come in lower case from 1926 (\`febr.\`, \`iunii\`, \`maii\`), read as the capitals are.`,
-      `3. **Two acts the index cites at a page they do not open on are left without a reference, on purpose.** *Casti connubii*`,
+      `3. **Two acts the index cites at a page they do not open on are cited at the page the volume opens them at.** *Casti connubii*`,
       `   (31 December 1930) is cited at \`530\` and opens at 539 (AAS 22 p. 539: \`LITTERAE ENCYCLICAE … DE MATRIMONIO CHRISTIANO …`,
       `   Casti connubii quanta sit dignitas\`; p. 530 is the Christmas address to the cardinals); the motu proprio *In allocutione*`,
-      `   (5 August 1930) is cited at \`307\`, the page that opens the public consistory of 3 July, and opens at 337. A year row would`,
-      `   have matched the first and created the second at the index's page, so the encyclical is left unmatched and the motu proprio held`,
-      `   (\`ACTA_HOLDS\`); with the three shared pages of finding 4 they are the era's evidence that a *page* correction is the mechanism`,
-      `   the curation tables still lack (phase 2b-ii-c named two such pages; this era names five).`,
+      `   (5 August 1930) is cited at \`307\`, the page that opens the public consistory of 3 July, and opens at 337. When this phase`,
+      `   landed (PR #40) the encyclical was left unmatched and the motu proprio held, for want of a page correction; \`ACTA_PAGE_CORRECTIONS\``,
+      `   (2026-09-21) now replaces both pages, each read in the volume with its dating formula, so the encyclical matches its shelf`,
+      `   record at 539 (its year row keyed on that page) and the motu proprio is created at 337 (§5, *Pages the index prints wrongly, corrected*).`,
       `4. **Of four pages the index gives two acts each, one prints two.** AAS 19 (1927) 130 opens both *Cum ex Apostolico munere*`,
       `   (14 December 1926) and *Non sine* (3 February 1927), numbered III and IV under one heading: curated in \`ACTA_SHARED_PAGES\``,
       `   with both headings quoted, and both created. The other three print one act's opening and the other's *end*: AAS 19 p. 205`,
       `   opens *Quoniam annus* while *Pro Apostolico* (cited \`205\`) opens at 265; p. 268 opens *In omnes catholici* while *Quae ad rei*`,
       `   (cited \`268\`) opens at 267 and ends there; AAS 22 (1930) 323 opens *Nono exeunte saeculo* while *Ordinis Capuccinarum* (cited`,
-      `   \`323\`) opens at 320 and ends there. All six entries stay held (\`page-shared\`, §9), the true pages recorded here.`,
+      `   \`323\`) opens at 319 and ends there. The three wrong pages are corrected (\`ACTA_PAGE_CORRECTIONS\`, 2026-09-21), and all six`,
+      `   acts are created at their pages.`,
       `5. **An act printed in two volumes has one citation.** *Quo maiori rerum* (30 March 1930, the prefecture of Umtata) is printed`,
       `   at AAS 22 (1930) 483 and again at the head of AAS 23 (1931) 41, whose index enters it a second time under its 1930 date; the`,
       `   sample era had created it from 1931, and this era's join held both entries as an id collision until \`ACTA_REPRINTS\` names`,
@@ -745,10 +748,11 @@ ERAS['1926-1930'] = {
     `4. **Dated years before the volume** (§7): ${c.epistulae ? '' : ''}four acts of 1923–1926 printed in the volumes of 1927–1928 -- *Cum religio*`,
     `   (12 June 1923, AAS 19 p. 397), *Ad sacram Petri Sedem* and *De more Romanorum Pontificum* (1925), *Decimo sexto reparatae* (1926) --`,
     `   all created under their own dates, the volume year being the citation's.`,
-    `5. **Documents of the era's pope dated in the volume years without a reference** (§11): thirteen, of which five are of the formal`,
+    `5. **Documents of the era's pope dated in the volume years without a reference** (§11): twelve, of which four are of the formal`,
     `   genres -- two on the ambiguous days of 1929 (§5), *Nobis ex alto* (25 May 1929) against an entry of the date under another incipit,`,
-    `   the motu proprio of 7 June 1929 on the Lateran ratification, which the index files under *Conventiones* and *Chirographa*, and`,
-    `   *Casti connubii* (finding 3) -- and the rest the letters shelf's Italian letters the index files under *Chirographa* (§13).`,
+    `   and the motu proprio of 7 June 1929 on the Lateran ratification, which the index files under *Conventiones* and *Chirographa*`,
+    `   (*Casti connubii* cites its page since the correction of finding 3) -- and the rest the letters shelf's Italian letters the index`,
+    `   files under *Chirographa* (§13).`,
   ],
   mappingsProse: [
     'Decisions taken here with the evidence beside each row of `categories.ts` (the earlier decisions stand): `EPISTOLAE APOSTOLICAE`',
@@ -958,9 +962,9 @@ ERAS['1909-1925'] = {
     `   incipit, *Vix dum* (1914) and *Quandoquidem* (1915) were not, none being a shelf record awaiting its reference, and the seven`,
     `   *sub plumbo* letters stay as the recovery left them. One reading opens a page the index also gives another act: *Inter*`,
     `   *praecipuas* (6 January 1925) opens AAS 17 (1925) 289, and the 1925 index's OCR sets that \`289\` on the line of *Ex Apostolico*`,
-    `   *officio* (27 March 1925), which opens at p. 516 (\`VALENTINA IN BRASILIA / ERECTIONIS DIOECESIS\`, dated at p. 519); invariant 25`,
-    `   now holds both (§9, *page-shared*), and the record that cited 289 for the second (\`ex-apostolico-officio-1925\`) is no longer`,
-    `   created -- held, as *Casti connubii* (1930) is, until a page correction can be curated. The two holds the page-keyed tables`,
+    `   *officio* (27 March 1925), which opens at p. 516 (\`VALENTINA IN BRASILIA / ERECTIONIS DIOECESIS\`, dated at p. 518). When`,
+    `   this phase landed (PR #41) invariant 25 held both; \`ACTA_PAGE_CORRECTIONS\` (2026-09-21) gives the second its page, and both`,
+    `   are created (§5, *Pages the index prints wrongly, corrected*). The two holds the page-keyed tables`,
     `   cannot reach (§1.4) were read again and stay: *Communes litterae* is dated \`die xxvi Octobris MDMX\` at AAS 2 (1910) 906 and`,
     `   *Ubi accepimus* \`die xxvi mensis Septembris MCMXI\` at AAS 3 (1911) 566, but a correction is keyed by the page and gated by the`,
     `   printed date, and each page's key is another act's (\`1910:905\` would re-date *Binas nuper* too; \`1911:565\` is *Societatem*`,
@@ -1046,6 +1050,7 @@ for (const s of ACTA_SOURCES) {
 const pageSuffix = (e: ActaEntry): string => {
   if (e.pageSource === undefined) return '';
   if (e.pageSource === 'reading') return ' (page read: ACTA_PAGE_READINGS)';
+  if (e.pageSource === 'corrected') return ` (page corrected: the index prints ${e.printedPage})`;
   const rule = sidecars.get(sourceKeyOf(e))?.rows.find((row) => row.key === pagelessKey(e))?.rule ?? 'sidecar';
   return ` (page recovered: ${rule})`;
 };
@@ -1157,7 +1162,7 @@ if (recovered.length > 0) {
     const why = (reason: string) => sc.unrecovered.filter((x) => x.reason === reason).length;
     const harvestedOf = (e: Pick<ActaEntry, 'category'>) => (categoryForHeading(e.category)?.harvested ?? 'no') !== 'no';
     const after = (r.stats.entries + r.stats.recovered) / (r.stats.pageLines + r.stats.withoutPage);
-    const recoveredHarvested = r.entries.filter((e) => e.pageSource !== undefined && harvestedOf(e)).length;
+    const recoveredHarvested = r.entries.filter((e) => (e.pageSource === 'recovered' || e.pageSource === 'reading') && harvestedOf(e)).length;
     const pagelessHarvested = r.pageless.filter(harvestedOf).length;
     const harvestedAfter = r.stats.harvestedPageLines + pagelessHarvested + recoveredHarvested === 0 ? null
       : (r.stats.harvestedEntries + recoveredHarvested) / (r.stats.harvestedPageLines + pagelessHarvested + recoveredHarvested);
@@ -1382,12 +1387,13 @@ p();
   p();
   if (result.sharedPages.length === 0) {
     p('None: every page two matched documents of the era cite is curated in `ACTA_SHARED_PAGES` with the volume page quoted, and');
-    const n = Object.keys(ACTA_SHARED_PAGES).filter((k) => { const y = Number(k.split(':')[1]) + 1908; return sampleKeys.some((sk) => Number(sk.slice(0, 4)) === y); }).length;
+    // The key's volume may carry a part (`AAS:75-I:877`): the year is the volume's, part dropped.
+    const n = Object.keys(ACTA_SHARED_PAGES).filter((k) => { const y = Number(k.split(':')[1]!.replace(/-I+$/, '')) + 1908; return sampleKeys.some((sk) => Number(sk.slice(0, 4)) === y); }).length;
     p(`invariant 25 admits exactly those pairs (${n} page${n === 1 ? '' : 's'} of the era).`);
   } else {
     p('One page opens one act (invariant 25): where two matched documents would cite a page `ACTA_SHARED_PAGES` does not list, the');
     p('join writes neither reference (match.ts, `sharedPages`), as the creator holds a created record on such a page. Each page below was');
-    p('read in the volume and prints one act; the other act\'s true page is named for a page correction this phase does not attempt.');
+    p('read in the volume and prints one act; the other act\'s true page is named for a row of `ACTA_PAGE_CORRECTIONS`.');
     p();
     p('| Page | Documents withheld | Entries | Read in the volume |');
     p('|---|---|---|---|');
@@ -1421,6 +1427,19 @@ p();
   else {
     const rowOf = (m: ActaMatch) => ACTA_CURATED_REFERENCES[m.documentId]!;
     p(`Entries of the era so superseded: ${result.superseded.map((m) => `${cite(m.entry)} (${label(m.entry)}, \`${m.documentId}\`; the citation of record is ${refOf(`AAS:${rowOf(m).acta.volume}${rowOf(m).acta.part ? `-${rowOf(m).acta.part}` : ''}:${rowOf(m).acta.page}`)} by ACTA_CURATED_REFERENCES)`).join('; ')}.`);
+  }
+  p();
+  p('### Pages the index prints wrongly, corrected');
+  p();
+  p('A row of `ACTA_PAGE_CORRECTIONS` (curation.ts) replaces the page an index line prints -- the OCR\'s digit, or the index\'s own slip --');
+  p('with the page the volume opens the act at, both read; the entry is matched, created and checked for a shared page at the act\'s page.');
+  const corrected = entries.filter((e) => e.pageSource === 'corrected');
+  if (corrected.length === 0) p('None among the era\'s sources.');
+  else {
+    p();
+    p('| Reference | Printed | Pope | Date | Category | Entry |');
+    p('|---|---|---|---|---|---|');
+    for (const e of corrected) p(`| ${cite(e)} | ${e.printedPage} | ${e.pope} | ${e.date} | ${categoryForHeading(e.category)?.id ?? e.category} | ${label(e)} |`);
   }
 }
 p();

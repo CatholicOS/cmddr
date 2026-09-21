@@ -70,6 +70,28 @@ export function applyPageRows(result: ActaParseResult, rows: readonly { key: str
   return n;
 }
 
+/**
+ * Replace the page an index line prints with the page the volume opens the act at, from a
+ * curated correction (ACTA_PAGE_CORRECTIONS): the row names the entry by its key and the
+ * page as printed, and applies only while the parser still reads that page -- a key no
+ * entry answers to, or a printed page the index no longer reads, is a stale row and a
+ * hard error, as a stale date correction is. The entry keeps the printed page beside the
+ * corrected one and is marked `corrected`. Returns the number of entries corrected.
+ */
+export function applyPageCorrections(result: ActaParseResult, rows: readonly { key: string; printed: number; page: number }[], label: string): number {
+  let n = 0;
+  for (const row of rows) {
+    const e = result.entries.find((x) => pagelessKey(x) === row.key);
+    if (e === undefined) throw new Error(`stale page correction ${row.key} in ${label}: no entry of the fixture is opened under that key`);
+    if (e.page !== row.printed) throw new Error(`stale page correction ${row.key} in ${label}: the index prints ${e.page}, not ${row.printed}`);
+    e.printedPage = e.page;
+    e.page = row.page;
+    e.pageSource = 'corrected';
+    n++;
+  }
+  return n;
+}
+
 export type PageRun = [number, number];
 
 export interface IndexGeneralis {

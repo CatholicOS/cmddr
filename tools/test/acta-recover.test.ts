@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { pagelessKey, parseIndexGeneralis, latinDate, formulaNear, findIncipit, recoverPages, applyPageRows } from '../src/acta/recover.js';
+import { applyPageCorrections, pagelessKey, parseIndexGeneralis, latinDate, formulaNear, findIncipit, recoverPages, applyPageRows } from '../src/acta/recover.js';
 import { parseActaIndex, type ActaEntry, type ActaParseResult, type PagelessEntry } from '../src/acta/index.js';
 
 describe('pagelessKey', () => {
@@ -402,6 +402,32 @@ describe('recoverPages', () => {
     // 16 April entry takes the formula after its hit, on p. 2.
     expect(unrecovered).toEqual([expect.objectContaining({ date: '1924-04-15', reason: 'several', candidates: [1, 3] })]);
     expect(rows.map((r) => [r.page, r.rule, r.date])).toEqual([[1, 'dated', '1924-04-16']]);
+  });
+});
+
+describe('applyPageCorrections', () => {
+  const parse = () => parseActaIndex(`                                  H
+
+                             INDEX DOCUMENTORUM
+               CHRONOLOGICO ORDINE DIGESTUS
+
+                                  I. - ACTA PII PP. XI
+
+                                                         I. - LITTERAE ENCYCLICAE.
+1930          Apr.         20      Ad salutem. - Ad venerabiles fratres 201
+              Dec.         31      Casti connubii. - Ad venerabiles fratres 530
+`, { year: 1930, volume: 22, columnar: true });
+  it('replaces the page the index prints with the page the volume opens the act at, keeping the printed one', () => {
+    const r = parse();
+    const n = applyPageCorrections(r, [{ key: '1930-12-31|LITTERAE ENCYCLICAE|Casti connubii|Ad venerabiles fratres', printed: 530, page: 539 }], 'test');
+    expect(n).toBe(1);
+    expect(r.entries.map((e) => [e.incipit, e.page, e.printedPage, e.pageSource])).toEqual([['Ad salutem', 201, undefined, undefined], ['Casti connubii', 539, 530, 'corrected']]);
+  });
+  it('refuses a row whose entry the parser no longer opens, and one whose printed page the index no longer reads', () => {
+    expect(() => applyPageCorrections(parse(), [{ key: '1930-12-31|LITTERAE ENCYCLICAE|Casti connubii|Something else', printed: 530, page: 539 }], 'ACTA_PAGE_CORRECTIONS'))
+      .toThrow(/stale page correction .* ACTA_PAGE_CORRECTIONS/);
+    expect(() => applyPageCorrections(parse(), [{ key: '1930-12-31|LITTERAE ENCYCLICAE|Casti connubii|Ad venerabiles fratres', printed: 531, page: 539 }], 'ACTA_PAGE_CORRECTIONS'))
+      .toThrow(/prints 530, not 531/);
   });
 });
 

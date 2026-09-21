@@ -12050,7 +12050,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 76,
+      "year": 1984,
+      "page": 946
+    }
   },
   {
     "id": "mag:john-paul-ii/aguaricoensis-1984",
@@ -12104,7 +12110,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 76,
+      "year": 1984,
+      "page": 947
+    }
   },
   {
     "id": "mag:john-paul-ii/s-michaelis-de-sucumbios-1984",
@@ -22981,7 +22993,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Fidelem populum",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 82,
+      "year": 1990,
+      "page": 42
+    }
   },
   {
     "id": "mag:john-paul-ii/world-food-day-1989",
@@ -23307,7 +23325,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Inter sacras («Ouidah»)",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 82,
+      "year": 1990,
+      "page": 43
+    }
   },
   {
     "id": "mag:john-paul-ii/donum-primum-1989",
