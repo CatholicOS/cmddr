@@ -154,10 +154,15 @@ searches the layout mode when the default finds nothing.
 (`tools/fetch-acta.sh text <year>`; acta volumes spec §10.3). Each `rows[]` entry names a
 pageless entry by its key (`date|category|incipit|description head`), the page recovered,
 the rule that accepted it (`unique`: the only hit within the category's runs of the *Index
-generalis actorum*; `dated`: the hit whose dating formula gives the entry's date; `fuzzy`:
-the only hit with one OCR character per word admitted), the body line and the running
-header quoted, and the formula where one settled it. `unrecovered[]` lists the rest with a
-reason. The join reads the sidecar and never the store; a row whose entry the parser no
+generalis actorum*; `dated`: the hit whose dating formula gives the entry's date, with
+`fuzzy: true` on the row when that hit was found with one OCR character per word admitted;
+`fuzzy`: the only such hit), the body line and the running header quoted, and the formula
+where one settled it. `unrecovered[]` lists the rest with a reason (`no-incipit`, `none`,
+`several`, `outside-runs`, `header-mismatch`, and `claimants`: the page was given to, or is
+held by, another entry of the same category and incipit -- a page goes to one claimant
+only, the page listed as the candidate). An incipit two or more entries of one category
+carry, the volume's paged entries counted, is never taken by the `unique` or `fuzzy` rule.
+The join reads the sidecar and never the store; a row whose entry the parser no
 longer opens is a hard error. Pages read by hand for the acts the recovery leaves
 (`ACTA_PAGE_READINGS` in `tools/src/acta/curation.ts`, keyed `{source}|{key}`, each row
 quoting the page the act opens on and its dating formula) are consulted before the sidecar

@@ -234,17 +234,22 @@ repository are what the parser, the recovery's consumers and the tests read.
 ### 10.5 Measured
 
 Phase 2b-iii-b ran on 2026-09-21 over the seventeen volumes (the [era
-report](../reports/2026-09-21-acta-volumes-1909-1925.md) §1b). Of the 1,136 entries the
-indexes opened without a page, the volume bodies gave back **759** (unique 729, dated 5,
-fuzzy 25) and **377** stayed without one: 205 described by the index without an incipit
+report](../reports/2026-09-21-acta-volumes-1909-1925.md) §1b, whose numbers the report tool
+computes from the sidecars and the parse results). Of the 1,136 entries the
+indexes opened without a page, the volume bodies gave back **770** (unique 732, dated 13,
+fuzzy 25) and **366** stayed without one: 205 described by the index without an incipit
 (108 of them AAS 1's, whose index prints incipits only in guillemets after a genre word),
-66 whose incipit opens several pages with no formula inside the act's span to settle them,
-61 found on no page, 32 found outside the category's runs, 13 under a running header that
-contradicts the page. The rate after recovery — entries with a page over every line that
-ended in a page or opened without one, the 95 % floor of §4 applying to it — is 70.0 % over
-the era and 76.5 % without AAS 1, and under 95 % in every volume (the highest 1917-I at
-91.2 %); each volume's reasons are in the report, the floor unchanged. The join wrote 112
-references and created 453 documents from the seventeen; 533 entries are held with their
+58 whose incipit opens several pages with no formula inside the act's span to settle them,
+61 found on no page, 26 found outside the category's runs, 14 under a running header that
+contradicts the page, and 2 -- the two letters *Communis vestra* of AAS 7 (1915), both
+dated 10 November by the index -- whose one page of that date another entry of the same
+category and incipit claims (`claimants`: a page goes to one claimant only, or to neither).
+The rate after recovery — entries with a page over every line that
+ended in a page or opened without one, the 95 % floor of §4 applying to it — is 71.8 % over
+the era and 78.4 % without AAS 1, and under 95 % in every volume (the highest 1917-I at
+91.2 %); each volume's reasons are in the report, the floor unchanged. 113 documents carry
+a reference into the seventeen volumes (111 matched from a quoted index line, two curated),
+458 documents were created from them and 537 entries are held with their
 reasons. Two rules of §10.3.2 were tightened before the join ran, on the evidence of five
 pages the first sidecars gave wrongly: a paragraph head is the salutation's dash or a line
 start under a heading, a numeral, a salutation or the memorial formula — a word that opens a
@@ -275,3 +280,14 @@ Latin prints no date and opens no entry, and a reading is keyed to an entry, so 
 the match it displaces (`supersedes: 'AAS:15:5'`, the Italian printing, quoted beside the
 Latin with its dating formula; controller ruling 15) and the join moves that match to
 `superseded` -- neither a claim nor a record, listed in the report's §5 beside the reprints.
+The final review of the branch (2026-09-21) settled three readings of §10.3.2 the first
+run had left implicit, each measured in the report's §1.2: a (category, incipit) group
+with two or more claimants -- pageless entries and the volume's paged entries counted
+together -- never takes the `unique` or `fuzzy` rule, and a page two rows of a group land
+on goes to neither; the last section start of a category runs to the pope part's end; a
+heading whose page list the OCR spoils (AAS 16 (1924) 507, `LITTERAE ENCYCLICAE, 5 (12)`)
+constrains nothing; and the dating formula reads a roman year set right after the month
+with no `anno` (`die x novembris MCMXV`, AAS 7 (1915) 569). The regeneration moved
+thirteen rows -- three to `unique`, eight to `dated`, two to `claimants` -- and the join
+created five more documents (four apostolic letters of AAS 13 (1921), one letter of AAS 4
+(1912)), each at a page its own formula dates.
