@@ -13,11 +13,13 @@ century of typography and OCR, the popes, and the sample-first sequencing.
 | Years | On vatican.va | Index | Fetch |
 |---|---|---|---|
 | 1909–2002 | one whole-volume OCR PDF per year (`documents/AAS-{vol}-{year}-ocr.pdf`, 2–6 MB, 500–1,300 pages); 1917 and 1983 in two parts (`AAS-09-I-1917`, `AAS-09-II-1917`; `AAS-75-I-1983`, `-II-`) | *Index documentorum chronologico ordine digestus* in the volume's tail — vol. 1 (1909) p. 835, vol. 23 (1931) p. 531, vol. 50 (1958) p. 1032, vol. 87 (1995) p. 1175 — the same structure as 2015–2024 | download; locate the index pages; extract only those to text |
-| 2003–2009 | twelve born-digital monthly fascicles per year, no index file; the December fascicle carries no index (2005: 48 pages, none) | **none online** | **out of scope** — needs a body-heading parser over the fascicles (pope heading → category heading → title → *Datum Romae … die … mensis … anno …*); recorded as phase 2b′ |
+| 2003–2009 | twelve born-digital monthly fascicles per year, no index file; the December fascicle carries no index (2005: 48 pages, none) | an annual *Index generalis* PDF per year, linked wrongly (§11.1) | as phase 1, by the hyphenated URL, layout mode with spaces collapsed — **phase 2b′, done** (§11) |
 | 2010–2014 | monthly fascicles plus an annual index PDF (`AAS-INDICE2010.pdf`, `AAS-indice2012.pdf` — case varies) | as 2015–2024 | as phase 1 |
 
 So phase 2b's corpus is **99 index sources**: 94 volume-tail indexes (96 files, counting
-the two double volumes) and 5 index PDFs.
+the two double volumes) and 5 index PDFs — **106** once §11 adds the seven annual index
+PDFs of 2003–2009 this section had recorded as none online, which makes 12 index PDFs
+beside the volume-tail indexes.
 
 ## 2. What varies across the century (from the four sampled volumes)
 
@@ -104,12 +106,14 @@ constitutions read; total and per-pope documents before and after; re-minted she
 
 SCHEMA.md and README: the coverage sentence of the *Acta Apostolicae Sedis reference*
 subsection is extended (which years are joined, which created from, and that 2003–2009
-await a fascicle parser); `acta.part` is no longer "unused". Issue #25 gets the sample's
+await a fascicle parser — superseded by §11, which joins them from the index PDFs the
+index page links wrongly; the README and SCHEMA.md say so instead); `acta.part` is no
+longer "unused". Issue #25 gets the sample's
 headline numbers as a comment.
 
 ## 8. Out of scope
 
-2003–2009 (phase 2b′, fascicle bodies); the ASS (2c); the remaining 93 sources (2b-ii);
+2003–2009 (phase 2b′, §11 — done); the ASS (2c); the remaining 93 sources (2b-ii);
 releasing guard holds (needs its own curated mechanism, noted in PR #32); keywords /
 `actKind` / `medium` on AAS-born records (*Nuntii radiophonici* is #27's evidence and is
 counted, not applied).
@@ -293,3 +297,121 @@ with no `anno` (`die x novembris MCMXV`, AAS 7 (1915) 569). The regeneration mov
 thirteen rows -- three to `unique`, eight to `dated`, two to `claimants` -- and the join
 created five more documents (four apostolic letters of AAS 13 (1921), one letter of AAS 4
 (1912)), each at a page its own formula dates.
+
+## 11. Addendum (2026-09-21): phase 2b′, the index PDFs of 2003–2009
+
+§1 recorded 2003–2009 as **none online** and phase 2b′ as a body-heading parser over the
+monthly fascicles. Measured again on 2026-09-21, the premise is wrong: the AAS index page
+links an annual *Index generalis* PDF for each of the seven years (`AAS 95` … `AAS 101`),
+and only the links are broken — space-encoded paths for 2004–2007
+(`documents/AAS-Index%202002-2009/AAS-Index%202005.pdf`, 404) and a folder name folded
+into the file name for 2003 (`documents/AAS-Index-2002-2009-AAS-Index-2003.pdf`, 404),
+while the hyphenated form the 2008 and 2009 links use,
+`documents/AAS-Index-2002-2009/AAS-Index-{year}.pdf`, serves all seven (200; 0.6–1.3 MB,
+56–88 pages). Each carries the *Index documentorum chronologico ordine digestus* at PDF
+p. 4, in the shape of 2010–2014. Phase 2b′ is therefore **seven more index sources of the
+2b-ii-c kind**, not a fascicle parser; the fascicles stay unread.
+
+### 11.1 Fetch and fixtures
+
+`fetch-acta.sh` gains the years 2003–2009 in its index mode. The file name is read off
+the index page as ever, then **normalised** to the hyphenated form (`%20` → `-`, and the
+2003 name's folded folder restored), since that is the form the server resolves; the
+README row records the link as printed beside the URL fetched. The PDFs go to the store
+as `AAS-Index-{year}.pdf`.
+
+The text layer of 2003–2006 drops the spaces between words in the default mode — the
+pope heading is `I—ACTAIOANNISPAULIPP.II`, a category heading `I–LITTERAEENCYCLICAE`,
+an entry's tail `honoresdecernuntur`, a page `4 3 3` — and 2005, 2008 and 2009 fuse the
+volume heading (`An.etvol.C 31Decembris2008`); pypdf's `space_width` changes nothing
+(measured at 200, 100, 50 and 20). The **layout mode keeps every space**, at the cost of
+the column gaps the index PDFs do not have. The fixture for these seven is therefore the
+layout-mode text with each run of two or more spaces collapsed to one and each line
+trimmed (`aas-indice-{year}.txt`, one page per form feed, as the others), which the
+parser reads with the index options (`columnar: false`); the README row names the
+extractor as `pypdf 6.14.2, layout mode, spaces collapsed`. Measured before any parser
+change, over all lines: 2003 90.5 %, 2004 84.8 %, 2005 86.8 %, 2007 91.3 %, 2008 90.4 %,
+2009 90.4 % (2006 does not parse, §11.2). The 2010–2024 fixtures are not re-extracted.
+
+### 11.2 What the seven print that the parser has not seen
+
+Measured on the collapsed fixtures (the census in the era report):
+
+- **The ditto marks glued.** The layout mode sets the third ditto against the opening
+  guillemet (`» » »« Cum vis ut ». – Beato Humili …`), the year and month dittos against
+  the day (`»»14 De universo dominico`) and the day against the text (`» » 12Ad
+  Congressum`; 2006's `2005 Dec. 25Deus Caritas est`). Counted on 2026-09-21 over the
+  seven committed fixtures as *lines the rule rewrites*, each rule in its place in
+  `untangleIndexLine` (so the ditto-day rule's output is what the guillemet rule sees),
+  the parse run as `ACTA_SOURCES` configures it:
+
+  | Shape | 2003 | 2004 | 2005 | 2006 | 2007 | 2008 | 2009 | All |
+  |---|---|---|---|---|---|---|---|---|
+  | ditto glued to the guillemet | 11 | 16 | 15 | 18 | 4 | 8 | 11 | 83 |
+  | dittos glued to the day | 0 | 6 | 5 | 6 | 6 | 9 | 6 | 38 |
+  | day glued to the text | 0 | 0 | 0 | 2 | 8 | 0 | 1 | 11 |
+
+  Every year prints at least one of the three; 2006 and 2009, which the first statement of
+  this bullet omitted, print two each. Counted instead as *entries the parse loses when
+  that one rule is disabled*, the guillemet row is identical and the other two are lower
+  where a glued line still opens an entry, wrongly dated or with the day inside its text:
+  ditto-day 0, 6, 5, 6, **5**, **8**, **5** and day-text 0, 0, 0, 2, **7**, 0, 1. The
+  date-line reading admits a ditto with no space before the guillemet or the day, and a
+  day with no space before a capital, in the index PDFs only; its blast radius is measured
+  over the 2010–2024 fixtures before it is accepted (measured: 0 lines match, none). Every
+  continuation line the census lists as *outside any entry* follows one of these openers.
+- **2006's index has no title line and one pope part.** Its p. 4 opens `I — ACTA SUMMI
+  PONTIFICIS` / `ACTA BENEDICTI XVI` / `I – LITTERAE ENCYCLICAE` and prints `INDEX
+  DOCUMENTORUM / CHRONOLOGICO ORDINE DIGESTUS` nowhere in the text layer (the running
+  header `Index documentorum chronologico ordine digestus 965` opens p. 5). The parser
+  admits the running header, in lower case with its page, as the title where the capitals
+  are absent, and reads `ACTA SUMMI PONTIFICIS` as a part whose pope is named by the
+  `ACTA {pope}` sub-headings under it (`ACTA BENEDICTI XVI`, then `ACTA IOANNIS PAULI II`
+  for the acts of the late pope printed in 2006), each sub-heading switching the pope as
+  a pope part does. 2005 prints two pope parts in the usual way (`I — ACTA IOANNIS PAULI
+  PP. II`, `II — ACTA BENEDICTI PP. XVI`).
+- **Headings.** `ADHORTATIO APOSTOLICA POST-SYNODALIS` (2003, hyphenated) and `EPISTULA
+  APOSTOLICA MOTU PROPRIO DATA` (2009) map as their unhyphenated and plural forms do;
+  `COSTITUTIONES APOSTOLICAE` (2007) is the index's own misprint and maps to the
+  constitutions with the heading quoted; `SYNODUS EPISCOPORUM` under Benedict XVI in 2005
+  (`VIII – SYNODUS EPISCOPORUM`, a numbered category of the pope part, not a part) is a
+  category of the pope's part where its numeral continues the part's (VIII after VII; AAS
+  93 (2001) prints XV after XIV the same way) and a part where it does not (AAS 69 (1977),
+  II after the pope's XII). `CONSISTORIUM` (2005) is the consistory, not
+  harvested, as before.
+- **The journeys.** The *Itinera apostolica* entries of 2003–2005 are dated by a range
+  (`2003 Iun. 5-9 in Croatiam … 492`) and those of 2007–2008 by a sub-list under the
+  heading (`V. Assisium.` / `die 17 Iunii Assisium in Italia.`, no page on the line): both
+  are lines of a category the registry does not harvest, counted in the rate's denominator
+  where they end in a page and listed in the report as the era's shape, never parsed into
+  entries.
+
+The 95 % floor of §4 applies per source after the ditto reading; a source below it is
+explained line by line in the era report, as in every era.
+
+### 11.3 Join, creation, report
+
+As phase 2b-ii-c: the popes are John Paul II (2003–2005) and Benedict XVI (2005–2009),
+whose shelves the registry harvests; the creation rule and the duplicate guard are the 2a
+spec's; `ACTA_REPRINTS` is consulted for any act these volumes print that a later index
+enters again (`Ibi vacabimus` is 2012's; none is expected from 2003–2009 and the report
+says what it found). `source.url` is `null` for a document created from these sources, as
+for every fascicle-era source, since the monthly fascicle holding a page is not derivable
+from the index. The era report, `docs/superpowers/reports/2026-09-21-acta-volumes-2003-2009.md`,
+follows the 2b-ii-c report's sections: the census of §11.2 with counts per year, the
+parse rate per source before and after the ditto reading, the references and creations
+per pope and class, every hold with its reason. The pinned counts in
+`tools/test/harvest-data.test.ts`, `ACTA_SOURCES`, the fixtures README, SCHEMA.md's
+`acta` paragraph and the README's two phase paragraphs move as in every era; §1's row
+for 2003–2009 and §8's *out of scope* line are corrected to point here. The six earlier
+eras' reports are regenerated with this one, as in every era (2026-09-21): five move only
+by the corpus totals (John Paul II's AAS-created records 43 → 57, Benedict XVI's 69 → 134,
+the registry 8,490 → 8,569), and 1979–2014 moves besides by the 2001 index's `SYNODUS
+EPISCOPORUM` part, read here as a category (§11.2) rather than skipped -- twelve more lines
+counted, two more entries, one more defect, 96.6 % → 95.9 % -- and by the acts of 1992, 2001
+and 2002 that now carry a reference from AAS 95–101, which leave its §11 lists.
+
+### 11.4 Out of scope
+
+The monthly fascicles of 2003–2009 (nothing reads them); the ASS (2c, its own spec — its
+volumes carry no chronological index, measured on ASS 12, 23, 33 and 41).

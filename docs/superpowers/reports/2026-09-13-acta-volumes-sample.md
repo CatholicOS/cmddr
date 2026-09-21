@@ -1659,11 +1659,11 @@ era and in total; the AAS-only records of every other era are in the *after* col
 | `rp:john-xxiii` | 193 | 294 | 0 | 487 |
 | `rp:paul-vi` | 777 | 349 | 28 | 1126 |
 | `rp:john-paul-i` | 7 | 0 | 0 | 7 |
-| `rp:john-paul-ii` | 2105 | 43 | 0 | 2148 |
-| `rp:benedict-xvi` | 301 | 69 | 13 | 370 |
+| `rp:john-paul-ii` | 2105 | 57 | 0 | 2162 |
+| `rp:benedict-xvi` | 301 | 134 | 13 | 435 |
 | `rp:francis-i` | 366 | 260 | 0 | 626 |
-| **Popes of the AAS** | **4536** | **3515** | **166** | **8051** |
-| **Registry** | **4975** | **3515** | **166** | **8490** |
+| **Popes of the AAS** | **4536** | **3594** | **166** | **8130** |
+| **Registry** | **4975** | **3594** | **166** | **8569** |
 
 ## 11. Documents of the era's popes with no AAS entry
 

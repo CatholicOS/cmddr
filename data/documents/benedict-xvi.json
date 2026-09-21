@@ -70,7 +70,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 772
+    }
   },
   {
     "id": "mag:benedict-xvi/l-antica-e-venerabile-basilica-2005",
@@ -97,7 +103,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 769
+    }
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2005-06-04",
@@ -117,6 +129,72 @@
       "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/beati-qui-persecutionem-2005",
+    "title": "« Beati, qui persecutionem ». Ladislao Findysz Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-06-19",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Beati, qui persecutionem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 9
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/diliges-dominum-2005",
+    "title": "« Diliges Dominum ». Venerabili Servo Dei Bronislao Markiewicz Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-06-19",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Diliges Dominum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 314
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/ignem-veni-2005",
+    "title": "« Ignem veni ». Venerabili Dei Servo Ignatio Kłopotowski Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-06-19",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Ignem veni",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 311
+    }
   },
   {
     "id": "mag:benedict-xvi/gulbargensis-2005",
@@ -142,7 +220,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 803
+    }
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2005-06-28",
@@ -172,7 +256,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 801
+    }
   },
   {
     "id": "mag:benedict-xvi/sindhudurgiensis-2005",
@@ -198,7 +288,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 873
+    }
   },
   {
     "id": "mag:benedict-xvi/auguensis-2005",
@@ -224,7 +320,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 841
+    }
   },
   {
     "id": "mag:benedict-xvi/iaipurensis-2005",
@@ -250,7 +352,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 842
+    }
   },
   {
     "id": "mag:benedict-xvi/dominae-nostrae-naregensis-2005",
@@ -272,7 +380,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 937
+    }
   },
   {
     "id": "mag:benedict-xvi/yorensis-2005",
@@ -298,7 +412,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 938
+    }
   },
   {
     "id": "mag:benedict-xvi/serrignensis-2005",
@@ -324,7 +444,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 940
+    }
   },
   {
     "id": "mag:benedict-xvi/lent-2006",
@@ -381,7 +507,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 317
+    }
   },
   {
     "id": "mag:benedict-xvi/world-food-day-2005",
@@ -408,7 +540,13 @@
       "id": "world-food-day",
       "year": 2005
     },
-    "sourceGenreLabel": "messages/food"
+    "sourceGenreLabel": "messages/food",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 979
+    }
   },
   {
     "id": "mag:benedict-xvi/world-day-of-migrants-and-refugees-2006",
@@ -576,6 +714,28 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:benedict-xvi/mulier-se-ipsa-2005",
+    "title": "« Mulier se ipsa ». Venerabili Dei Servae Eurosiae Fabris Barban Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-11-06",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Mulier se ipsa",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 432
+    }
+  },
+  {
     "id": "mag:benedict-xvi/totius-orbis-2005",
     "title": "Lettera Apostolica in forma di \"Motu Proprio\" Totius orbis contenente nuove disposizioni circa le Basiliche di San Francesco e di Santa Maria degli Angeli in Assisi",
     "idStatus": "minted",
@@ -642,7 +802,57 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 648
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/christiani-lumen-2005",
+    "title": "« Christiani... lumen ». Venerabili Dei Servo Dario Acosta Zurita caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-11-20",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Christiani... lumen",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 646
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/in-ecclesia-omnes-2005",
+    "title": "« In Ecclesia omnes ». Venerabili Servo Dei Iosepho a Trinitate Rangel Montan˜ o, Andreae Sola´ Molist et Leonardo Pe´rez Larios Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2005-11-20",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "In Ecclesia omnes",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 500
+    }
   },
   {
     "id": "mag:benedict-xvi/barianensis-2005",
@@ -668,7 +878,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 1019
+    }
   },
   {
     "id": "mag:benedict-xvi/itanagariensis-2005",
@@ -775,7 +991,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 105
+    }
   },
   {
     "id": "mag:benedict-xvi/world-day-of-peace-2006",
@@ -909,7 +1131,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 5
+    }
   },
   {
     "id": "mag:benedict-xvi/deus-caritas-est-2005",
@@ -942,7 +1170,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Deus caritas est",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 217
+    }
   },
   {
     "id": "mag:benedict-xvi/urbi-et-orbi-christmas-2005",
@@ -997,7 +1231,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 108
+    }
   },
   {
     "id": "mag:benedict-xvi/world-communications-day-2006",
@@ -1027,7 +1267,13 @@
       "year": 2006,
       "ordinal": 40
     },
-    "sourceGenreLabel": "messages/communications"
+    "sourceGenreLabel": "messages/communications",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 139
+    }
   },
   {
     "id": "mag:benedict-xvi/iovaiensis-2006",
@@ -1110,7 +1356,13 @@
       "year": 2006,
       "ordinal": 21
     },
-    "sourceGenreLabel": "messages/youth"
+    "sourceGenreLabel": "messages/youth",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 282
+    }
   },
   {
     "id": "mag:benedict-xvi/world-day-of-prayer-for-vocations-2006",
@@ -1140,7 +1392,13 @@
       "year": 2006,
       "ordinal": 43
     },
-    "sourceGenreLabel": "messages/vocations"
+    "sourceGenreLabel": "messages/vocations",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 358
+    }
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2006-03-14",
@@ -1163,6 +1421,28 @@
       "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/infirma-mundi-2006",
+    "title": "« Infirma mundi ». Beatorum Caelitum honor dignitasque Venerabili Dei Servae Eliae a Sancto Clemente Carmelitidi Barensi tribuuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-03-18",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Infirma mundi",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 662
+    }
   },
   {
     "id": "mag:benedict-xvi/kyrgyzstaniae-2006",
@@ -1188,7 +1468,13 @@
       "circumscription-elevation"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 308
+    }
   },
   {
     "id": "mag:benedict-xvi/iashpuriensis-2006",
@@ -1214,7 +1500,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 369
+    }
   },
   {
     "id": "mag:benedict-xvi/celeiensis-2006",
@@ -1343,7 +1635,13 @@
       "year": 2006
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 395
+    }
   },
   {
     "id": "mag:benedict-xvi/world-mission-day-2006",
@@ -1375,6 +1673,72 @@
     "sourceGenreLabel": "messages/missions"
   },
   {
+    "id": "mag:benedict-xvi/deus-caritas-est-2006",
+    "title": "« Deus caritas est ». Venerabili Dei Servo Aloisio Monza caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-04-30",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Deus caritas est",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 883
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/imitatores-mei-2006",
+    "title": "« Imitatores mei ». Venerabili Dei Servo Aloisio Biraghi caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-04-30",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Imitatores mei",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 657
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/deus-laudandus-2006",
+    "title": "« Deus laudandus ». Venerabili Servae Dei Mariae Teresiae a Sancto Ioseph caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-05-13",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Deus laudandus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 786
+    }
+  },
+  {
     "id": "mag:benedict-xvi/moramangana-2006",
     "title": "Moramangana",
     "idStatus": "minted",
@@ -1394,7 +1758,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 431
+    }
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2006-05-14",
@@ -1412,7 +1782,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 9
+    }
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2006-05-28",
@@ -1430,7 +1806,35 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 886
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/videns-autem-turbas-2006",
+    "title": "« Videns autem turbas ». Venerabili Dei Servo Eustachio van Lieshout Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-06-15",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Videns autem turbas",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 789
+    }
   },
   {
     "id": "mag:benedict-xvi/banmavensis-2006",
@@ -1456,7 +1860,57 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 689
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/maiorem-hac-dilectionem-2006",
+    "title": "« Maiorem hac dilectionem ». Beatorum caelitum honores ipsi Sarae Salkaha´ zi tribuuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-09-17",
+    "source": {
+      "url": null,
+      "shelf": "aas/2007",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Maiorem hac dilectionem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 319
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/cognoscat-mundus-2006",
+    "title": "« Cognoscat mundus ». Venerabili Servae Dei Mariae Teresiae a Iesu (in saeculo:Mariae Scrilli) Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-10-08",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Cognoscat mundus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 8
+    }
   },
   {
     "id": "mag:benedict-xvi/agbovillensis-2006",
@@ -1482,7 +1936,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 785
+    }
   },
   {
     "id": "mag:benedict-xvi/bene-omnia-2006",
@@ -1585,7 +2045,13 @@
       "id": "world-food-day",
       "year": 2006
     },
-    "sourceGenreLabel": "messages/food"
+    "sourceGenreLabel": "messages/food",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 822
+    }
   },
   {
     "id": "mag:benedict-xvi/world-day-of-migrants-and-refugees-2007",
@@ -1640,7 +2106,79 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 881
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/omnibus-omnia-factus-sum-2006",
+    "title": "« Omnibus omnia factus sum ». Venerabili Dei Servae Margaritae Mariae Lo´ pez de Maturana Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-10-22",
+    "source": {
+      "url": null,
+      "shelf": "aas/2007",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Omnibus omnia factus sum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 324
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/pascite-qui-est-in-vobis-2006",
+    "title": "« Pascite, qui est in vobis ». Venerabili Dei Servo Paulo Iosepho Nardini caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-10-22",
+    "source": {
+      "url": null,
+      "shelf": "aas/2007",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Pascite, qui est in vobis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 321
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/super-omnia-2006",
+    "title": "« Super omnia ». Venerabili Dei Servo Mariano de la Mata Aparicio caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-11-05",
+    "source": {
+      "url": null,
+      "shelf": "aas/2007",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Super omnia",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 406
+    }
   },
   {
     "id": "mag:benedict-xvi/lent-2007",
@@ -1748,6 +2286,28 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
+    "id": "mag:benedict-xvi/tabernaculum-mobile-2006",
+    "title": "« Tabernaculum mobile ». Venerabili Servae Dei Euphrasiae a Sacro Corde Iesu (in saec.: Rosae Eluvathingal) Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-12-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2007",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Tabernaculum mobile",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 588
+    }
+  },
+  {
     "id": "mag:benedict-xvi/sancti-ioseph-pinealensis-2006",
     "title": "Sancti Ioseph Pinealensis",
     "idStatus": "minted",
@@ -1767,7 +2327,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 7
+    }
   },
   {
     "id": "mag:benedict-xvi/world-day-of-peace-2007",
@@ -1830,6 +2396,31 @@
     "sourceGenreLabel": "messages/sick"
   },
   {
+    "id": "mag:benedict-xvi/quo-plenius-2006",
+    "title": "Quo plenius. Nuntiatura Apostolica constituitur apud Rempublicam Montis Nigri",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-12-16",
+    "source": {
+      "url": null,
+      "shelf": "aas/2007",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Quo plenius",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 405
+    }
+  },
+  {
     "id": "mag:benedict-xvi/urbi-et-orbi-christmas-2006",
     "title": "Messaggio Urbi et Orbi - Natale 2006",
     "idStatus": "minted",
@@ -1856,7 +2447,13 @@
       "year": 2006
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 44
+    }
   },
   {
     "id": "mag:benedict-xvi/world-communications-day-2007",
@@ -1886,7 +2483,13 @@
       "year": 2007,
       "ordinal": 41
     },
-    "sourceGenreLabel": "messages/communications"
+    "sourceGenreLabel": "messages/communications",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 92
+    }
   },
   {
     "id": "mag:benedict-xvi/sinuensis-2007",
@@ -1912,7 +2515,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 316
+    }
   },
   {
     "id": "mag:benedict-xvi/world-youth-day-2007",
@@ -1943,7 +2552,13 @@
       "year": 2007,
       "ordinal": 22
     },
-    "sourceGenreLabel": "messages/youth"
+    "sourceGenreLabel": "messages/youth",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 295
+    }
   },
   {
     "id": "mag:benedict-xvi/nepalianus-2007",
@@ -1965,7 +2580,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 318
+    }
   },
   {
     "id": "mag:benedict-xvi/world-day-of-prayer-for-vocations-2007",
@@ -1995,7 +2616,13 @@
       "year": 2007,
       "ordinal": 44
     },
-    "sourceGenreLabel": "messages/vocations"
+    "sourceGenreLabel": "messages/vocations",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 359
+    }
   },
   {
     "id": "mag:benedict-xvi/sacramentum-caritatis-2007",
@@ -2025,7 +2652,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Sacramentum Caritatis",
-    "sourceGenreLabel": "apost_exhortations"
+    "sourceGenreLabel": "apost_exhortations",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 105
+    }
   },
   {
     "id": "mag:benedict-xvi/urbi-et-orbi-easter-2007",
@@ -2056,7 +2689,101 @@
       "year": 2007
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 355
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/contigit-mihi-pax-2007",
+    "title": "« Contigit mihi pax ». Venerabili Dei Servae Mariae Magdalenae a Passione Starace Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-04-11",
+    "source": {
+      "url": null,
+      "shelf": "aas/2007",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Contigit mihi pax",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 408
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/iesu-tibi-me-2007",
+    "title": "« Iesu, Tibi me ». Venerabili Dei Servo Aloisio Boccardo caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-04-14",
+    "source": {
+      "url": null,
+      "shelf": "aas/2007",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Iesu, Tibi me",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 792
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/domine-meam-2007",
+    "title": "« Domine, meam ». Venerabili Dei Servo Francisco Spoto caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-04-21",
+    "source": {
+      "url": null,
+      "shelf": "aas/2007",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Domine, meam",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 787
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/ambulate-in-dilectione-2007",
+    "title": "« Ambulate in dilectione ». Venerabili Dei Servae Mariae de Monte Carmelo a Puero Iesu Gonza´ lez Ramos Garcı´a Prieto caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-05-06",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Ambulate in dilectione",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 129
+    }
   },
   {
     "id": "mag:benedict-xvi/vir-pacis-2007",
@@ -2105,7 +2832,13 @@
       "id": "world-mission-day",
       "year": 2007
     },
-    "sourceGenreLabel": "messages/missions"
+    "sourceGenreLabel": "messages/missions",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 460
+    }
   },
   {
     "id": "mag:benedict-xvi/riviangulanensi-labradorensi-2007",
@@ -2127,7 +2860,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 782
+    }
   },
   {
     "id": "mag:benedict-xvi/shendamensis-2007",
@@ -2153,7 +2892,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 583
+    }
   },
   {
     "id": "mag:benedict-xvi/omnia-quaecumque-2007",
@@ -2236,7 +2981,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 582
+    }
   },
   {
     "id": "mag:benedict-xvi/caxitonensis-2007",
@@ -2311,7 +3062,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 776
+    }
   },
   {
     "id": "mag:benedict-xvi/burkinae-fasanae-et-nigris-2007",
@@ -2333,7 +3090,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 783
+    }
   },
   {
     "id": "mag:benedict-xvi/donkorkromensis-2007",
@@ -2385,7 +3148,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 785
+    }
   },
   {
     "id": "mag:benedict-xvi/summorum-pontificum-2007",
@@ -2414,7 +3183,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 777
+    }
   },
   {
     "id": "mag:benedict-xvi/sandakanensis-2007",
@@ -2440,7 +3215,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 784
+    }
   },
   {
     "id": "mag:benedict-xvi/world-youth-day-2008",
@@ -2486,7 +3267,123 @@
       "year": 2008,
       "ordinal": 23
     },
-    "sourceGenreLabel": "messages/youth"
+    "sourceGenreLabel": "messages/youth",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 731
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/ricorre-quest-anno-2007",
+    "title": "Ricorre quest’anno. XVI exeunte saeculo ab obitu Sancti Ioannis Chrysostomi",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-08-10",
+    "source": {
+      "url": null,
+      "shelf": "aas/2007",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Ricorre quest’anno",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 1030
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/qui-manet-in-me-2007",
+    "title": "« Qui manet in me ». Venerabili Dei Servo Basilio Antonio Mariae Moreau caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-09-15",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Qui manet in me",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 421
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/mundanas-relinquens-2007",
+    "title": "« Mundanas relinquens ». Venerabili Servae Dei Mariae Caelinae a Praesentatione (in saeculo:Ioannae Germanae Castang) Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-09-16",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Mundanas relinquens",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 24
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/omnia-vestra-2007",
+    "title": "« Omnia vestra ». Venerabili Dei Servo Stanislao a Iesu Maria Papczyn´ ski Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-09-16",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Omnia vestra",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 424
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/et-sive-patitur-2007",
+    "title": "« Et sive patitur ». Venerabili Servae Dei Mariae Aloisiae Merkert Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-09-30",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Et sive patitur",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 215
+    }
   },
   {
     "id": "mag:benedict-xvi/world-food-day-2007",
@@ -2513,7 +3410,35 @@
       "id": "world-food-day",
       "year": 2007
     },
-    "sourceGenreLabel": "messages/food"
+    "sourceGenreLabel": "messages/food",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 933
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/vos-testes-mei-2007",
+    "title": "« Vos testes mei ». Venerabili Dei Servo Francisco Ioanni Bonifacio caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-06",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Vos testes mei",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 843
+    }
   },
   {
     "id": "mag:benedict-xvi/world-day-of-migrants-and-refugees-2008",
@@ -2543,7 +3468,57 @@
       "year": 2008,
       "ordinal": 94
     },
-    "sourceGenreLabel": "messages/migration"
+    "sourceGenreLabel": "messages/migration",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 1065
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/an-nescitis-2007",
+    "title": "« An nescitis ». Venerabili Dei Servae Albertinae Berkenbrock caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-20",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "An nescitis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 764
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/quis-nos-separabit-2007",
+    "title": "« Quis nos separabit ». Venerabilibus Dei Servis martyribus Emmanueli Go´ mez Gonza´ lez et Adilio Daronch caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-21",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Quis nos separabit",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 599
+    }
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2007-10-26",
@@ -2562,7 +3537,123 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 430
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/per-crucem-2007",
+    "title": "« Per crucem ». Venerabili Dei Servae Caelinae Chludzin´ ska Borze˛cka Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-27",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Per crucem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 427
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/bonum-certamen-2007",
+    "title": "« Bonum certamen ». Venerabili Dei Servo Cruci Laplana y Laguna, episcopo, et Ferdinando Espan˜ ol Berdie´ , presbytero, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Bonum certamen",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 821
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/et-eritis-odio-2007",
+    "title": "« Et eritis odio ». Venerabilibus Servis Dei Victori Chumillas Ferna´ ndez, presbytero professo ex Ordine Fratrum Minorum, et XXI Sociis eiusdem Ordinis Beatorum martyrum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Et eritis odio",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 260
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/et-illi-quidem-2007",
+    "title": "« Et illi quidem ». Venerabilibus Servis Dei Felici Echevarrı´a Gorostiaga, Presbytero professo ex Ordine Fratrum Minorum, et VI Sociis eiusdem Ordinis Beatorum martyrum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Et illi quidem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 455
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/et-ipsi-vicerunt-2007",
+    "title": "« Et ipsi vicerunt ». Venerabilibus Servis Dei Laurentino Alonso Fuente, Vergilio Lacunza Unzu et XLIV Sociis Beatorum martyrum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Et ipsi vicerunt",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 601
+    }
   },
   {
     "id": "mag:benedict-xvi/hic-estis-2007",
@@ -2609,6 +3700,28 @@
     }
   },
   {
+    "id": "mag:benedict-xvi/ipsa-sancta-2007",
+    "title": "« Ipsa sancta ». Venerabilibus Servis Dei Lucae a S. Ioseph Tristany Pujol, presbytero professo ex Ordine Fratrum Carmelitarum Discalceatorum, Leonardo Iosepho Aragone´ s Mateu, religioso professo ex Instituto Fratrum Scholarum Christianarum, Apolloniae Lizarraga a Sanctissimo Sacramento, religiosae professae et moderatrı`ci generali Congregationis Carmelitanarum a Caritate, et LXI Sociis Beatorum martyrum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Ipsa sancta",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 825
+    }
+  },
+  {
     "id": "mag:benedict-xvi/misericordiae-domini-2007",
     "title": "« Misericordiae Domini ». Venerabili Servo Dei Euphrasio a Iesu Infante, Beatorum honores decernuntur",
     "idStatus": "minted",
@@ -2628,6 +3741,182 @@
       "volume": 102,
       "year": 2010,
       "page": 444
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/morte-afficiuntur-2007",
+    "title": "« Morte afficiuntur ». Venerabilibus Servis Dei Mariano a Sancto Ioseph, presbytero professo ex Ordine Sanctissimae Trinitatis, et IX Sociis Beatorum martyrum honoresdecernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Morte afficiuntur",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 27
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/ne-terreamini-2007",
+    "title": "« Ne terreamini ». Venerabilibus Servis Dei Simoni Reyne´ s Solivellas, presbytero professo ex Congregatione Missionariorum a Ss. Cordibus Iesu et Mariae, eiusque tribus Sociis ex eadem Congregatione, ac Catharinae Calde´ s Socı´as et Michae¨ lae Rulla´ n Ribot, religiosis ex Congregatione Sororum Franciscalium Filiarum Misericordiae, necnon Prudentiae Canyelles y Ginesta` viduae, Beatorum martyrum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Ne terreamini",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 92
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/omnis-ergo-2007",
+    "title": "« Omnis ergo ». Venerabilibus Servis Dei Martyribus Narcisso de Este´ naga y Echevarrı´a et X Sociis Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Omnis ergo",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 266
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/quia-eris-2007",
+    "title": "« Quia eris ». Venerabilibus Servis Dei Liberio Gonza´ lez Nombela, presbytero, et XII Sociis ex clero archidioecesis Toletanae Beatorum martyrum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Quia eris",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 817
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/quia-eris-testis-2007",
+    "title": "« Quia eris testis ». Venerabilibus Servis Dei Liberio Gonza´ les Nombela, presbytero, et XII Sociis ex clero Archidioecesis Toletanae Beatorum martyrum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Quia eris testis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 83
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/semper-enim-nos-2007",
+    "title": "« Semper enim nos ». Venerabilibus Servis Dei Avellino Rodrı´guez Alonso, presbytero professo ex Ordine Fratrum Sancti Augustini, et XCVII Sociis eiusdem Ordinis, necnon VI Sociis ex clero dioecesano, Beatorum martyrum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Semper enim nos",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 435
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/si-exprobramini-2007",
+    "title": "« Si exprobramini ». Venerabili Servo Dei Bernardo Placido Fa´ brega Julia` , religioso professo Instituti Fratrum Maristarum a Scholis, martyri, Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Si exprobramini",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 606
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/vivat-christus-rex-2007",
+    "title": "« Vivat Christus Rex! ». Venerabilibus Servis Dei Emmanuelae a Corde Iesu Arriola Uranga, professae ex Congregatione Ancillarum Adoratricum Sanctissimi Sacramenti et Caritatis, et XXII Sociis Beatorum martyrum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-10-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Vivat Christus Rex!",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 838
     }
   },
   {
@@ -2660,7 +3949,35 @@
       "id": "lent",
       "year": 2008
     },
-    "sourceGenreLabel": "messages/lent"
+    "sourceGenreLabel": "messages/lent",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 95
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/in-ipsa-hora-2007",
+    "title": "« In ipsa hora ». Venerabili Servo Dei Zephyrino Namuncura´ caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-11-11",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "In ipsa hora",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 616
+    }
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2007-11-18",
@@ -2676,7 +3993,13 @@
       "languages": [],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 466
+    }
   },
   {
     "id": "mag:benedict-xvi/spe-salvi-2007",
@@ -2709,7 +4032,35 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Spe salvi",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 985
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/humiliter-in-christo-2007",
+    "title": "« Humiliter in Christo ». Venerabili Dei Servae Lindalvae Justo de Oliveira caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-12-02",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Humiliter in Christo",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 619
+    }
   },
   {
     "id": "mag:benedict-xvi/world-day-of-prayer-for-vocations-2008",
@@ -2739,7 +4090,13 @@
       "year": 2008,
       "ordinal": 45
     },
-    "sourceGenreLabel": "messages/vocations"
+    "sourceGenreLabel": "messages/vocations",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 181
+    }
   },
   {
     "id": "mag:benedict-xvi/world-day-of-peace-2008",
@@ -2771,7 +4128,13 @@
       "year": 2008,
       "ordinal": 41
     },
-    "sourceGenreLabel": "messages/peace"
+    "sourceGenreLabel": "messages/peace",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 38
+    }
   },
   {
     "id": "mag:benedict-xvi/urbi-et-orbi-christmas-2007",
@@ -2800,7 +4163,13 @@
       "year": 2007
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 34
+    }
   },
   {
     "id": "mag:benedict-xvi/techimanensis-2007",
@@ -2826,7 +4195,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 57
+    }
   },
   {
     "id": "mag:benedict-xvi/world-day-of-the-sick-2008",
@@ -2855,7 +4230,13 @@
       "year": 2008,
       "ordinal": 16
     },
-    "sourceGenreLabel": "messages/sick"
+    "sourceGenreLabel": "messages/sick",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 99
+    }
   },
   {
     "id": "mag:benedict-xvi/world-communications-day-2008",
@@ -2884,7 +4265,13 @@
       "year": 2008,
       "ordinal": 42
     },
-    "sourceGenreLabel": "messages/communications"
+    "sourceGenreLabel": "messages/communications",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 103
+    }
   },
   {
     "id": "mag:benedict-xvi/cassoviensis-2008",
@@ -2913,6 +4300,28 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
+    "id": "mag:benedict-xvi/quae-sui-oblita-2008",
+    "title": "« Quae sui oblita ». Venerabili Dei Servae Iosephinae Nicoli caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-02-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Quae sui oblita",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 433
+    }
+  },
+  {
     "id": "mag:benedict-xvi/slovachia-2008",
     "title": "Slovachia",
     "idStatus": "minted",
@@ -2932,7 +4341,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 125
+    }
   },
   {
     "id": "mag:benedict-xvi/florianensis-2008",
@@ -2958,7 +4373,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 585
+    }
   },
   {
     "id": "mag:benedict-xvi/faiardensis-humacaensis-2008",
@@ -2984,7 +4405,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 417
+    }
   },
   {
     "id": "mag:benedict-xvi/urbi-et-orbi-easter-2008",
@@ -3014,7 +4441,13 @@
       "year": 2008
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 253
+    }
   },
   {
     "id": "mag:benedict-xvi/insulensem-2008",
@@ -3036,7 +4469,35 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 213
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/quisquis-unum-2008",
+    "title": "« Quisquis unum ». Venerabili Dei Servae Caelestinae a Matre Dei (quae saeculari nomine Maria Anna Donati appellatur) caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-03-30",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Quisquis unum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 102
+    }
   },
   {
     "id": "mag:benedict-xvi/huariensis-2008",
@@ -3062,7 +4523,79 @@
       "circumscription-elevation"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 419
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/laudatus-sit-deus-2008",
+    "title": "« Laudatus sit Deus ». Venerabili Dei Servae Candelariae a Sancto Ioseph (quae saeculari nomine Susanna Pax Castillo Ramı´rez appellatur) caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-04-27",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Laudatus sit Deus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 104
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/qui-manducat-2008",
+    "title": "« Qui manducat ». Venerabili Servae Dei Mariae Magdalenae ab Incarnatione (in saec.:Catharinae Sordini) Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-05-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Qui manducat",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 450
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/multum-pro-christo-2008",
+    "title": "« Multum pro Christo ». Venerabili Dei Servae Mariae Rosae Flesch (in saeculo Margaritae) caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-05-04",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Multum pro Christo",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 766
+    }
   },
   {
     "id": "mag:benedict-xvi/cum-pium-2008",
@@ -3108,7 +4641,13 @@
       "id": "world-mission-day",
       "year": 2008
     },
-    "sourceGenreLabel": "messages/missions"
+    "sourceGenreLabel": "messages/missions",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 567
+    }
   },
   {
     "id": "mag:benedict-xvi/kotakina-baluensis-2008",
@@ -3130,7 +4669,35 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 587
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/domine-volo-2008",
+    "title": "« Domine, volo ». Venerabili Servae Dei Mariae Iosephae a Iesu Crucifixo Beatorum honores tribuuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-06-01",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Domine, volo",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 452
+    }
   },
   {
     "id": "mag:benedict-xvi/diacovensis-osijekensis-2008",
@@ -3204,7 +4771,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 588
+    }
   },
   {
     "id": "mag:benedict-xvi/antiqua-ordinatione-2008",
@@ -3233,6 +4806,31 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:benedict-xvi/ad-totius-dominici-2008",
+    "title": "Ad totius dominici. Nova conditur Provincia Ecclesiastica, scilicet Diacovensis-Osijekensis quae sedes ad dignitatem Ecclesiae metropolitanae attollitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-06-22",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Ad totius dominici",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 593
+    }
+  },
+  {
     "id": "mag:benedict-xvi/nunc-autem-manet-2008",
     "title": "« Nunc autem manet ». Venerabili Servo Dei Iacobo a Ghazir (in saec.:Kalil Haddad), presbytero ex O.F.M. Cap., Beatorum honores tribuuntur",
     "idStatus": "minted",
@@ -3255,6 +4853,75 @@
     }
   },
   {
+    "id": "mag:benedict-xvi/pastorali-navitati-2008",
+    "title": "Pastorali navitati. In Serbia restituitur dioecesis Sirmiensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-06-22",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Pastorali navitati",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 591
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/nihil-aliud-ego-2008",
+    "title": "« Nihil aliud ego ». Venerabili Dei Servae Iosephae Hendrinae Stenmanns caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-06-29",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Nihil aliud ego",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 161
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/cum-nimirum-2008",
+    "title": "Cum nimirum. Sanctuario Ottingensi Beatae Mariae Virgini dicato Rosa aurea tribuitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-07-01",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Cum nimirum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 443
+    }
+  },
+  {
     "id": "mag:benedict-xvi/nigromontana-2008",
     "title": "Nigromontana",
     "idStatus": "minted",
@@ -3274,7 +4941,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 590
+    }
   },
   {
     "id": "mag:benedict-xvi/sinuvitullensis-miragoanensis-2008",
@@ -3300,7 +4973,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 594
+    }
   },
   {
     "id": "mag:benedict-xvi/galapagensis-2008",
@@ -3326,7 +5005,13 @@
       "circumscription-elevation"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 596
+    }
   },
   {
     "id": "mag:benedict-xvi/kayangana-2008",
@@ -3348,7 +5033,35 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 597
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/spiritale-omnium-2008",
+    "title": "Spiritale omnium. Templum paroeciale Deo dicatum in honorem Sacratissimi Cordis Iesu in oppido vulgo Da˘browa Go´rnicza – Strzemieszyce, Sosnoviensi in dioecesi, ad gradum Basilicae Minoris evehitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-08-19",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Spiritale omnium",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 621
+    }
   },
   {
     "id": "mag:benedict-xvi/world-day-of-migrants-and-refugees-2009",
@@ -3377,7 +5090,13 @@
       "year": 2009,
       "ordinal": 95
     },
-    "sourceGenreLabel": "messages/migration"
+    "sourceGenreLabel": "messages/migration",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 805
+    }
   },
   {
     "id": "mag:benedict-xvi/membra-christi-2008",
@@ -3399,6 +5118,50 @@
       "volume": 102,
       "year": 2010,
       "page": 15
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/qui-sequitur-2008",
+    "title": "« Qui sequitur ». Venerabili Dei Servo Michae¨ li Sopoc´ ko Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-09-28",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Qui sequitur",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 768
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/spiritus-domini-2008",
+    "title": "« Spiritus Domini ». Venerabili Dei Servo Francisco Pianzola caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-10-04",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Spiritus Domini",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 771
     }
   },
   {
@@ -3502,7 +5265,13 @@
       "id": "world-food-day",
       "year": 2008
     },
-    "sourceGenreLabel": "messages/food"
+    "sourceGenreLabel": "messages/food",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 808
+    }
   },
   {
     "id": "mag:benedict-xvi/coniuges-christiani-2008",
@@ -3551,6 +5320,54 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:benedict-xvi/apostolic-letter-2008-11-01-1",
+    "title": "Circa l’Opera del Pane dei Poveri",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-11-01",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "characteristics": [
+      "motu-proprio"
+    ],
+    "sourceGenreLabel": "Litterae Apostolicae Motu proprio datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 7
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2008-11-01-2",
+    "title": "Regolamento dell’Opera del Pane dei Poveri",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-11-01",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "characteristics": [
+      "motu-proprio"
+    ],
+    "sourceGenreLabel": "Litterae Apostolicae Motu proprio datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 9
+    }
+  },
+  {
     "id": "mag:benedict-xvi/reddite-ergo-2008",
     "title": "« Reddite ergo ». Venerabilibus Servis Dei Martyribus Petro Kibe Kasui, S.I. ac centum octoginta et septem Sociis Beatorum honores decernuntur",
     "idStatus": "minted",
@@ -3592,7 +5409,35 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 21
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/et-in-quamcumque-2008",
+    "title": "« Et in quamcumque ». Venerabili Dei Servo Iosepho Olallo Valde´ s caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2008-11-29",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Et in quamcumque",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 836
+    }
   },
   {
     "id": "mag:benedict-xvi/teotihuacana-2008",
@@ -3614,7 +5459,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 23
+    }
   },
   {
     "id": "mag:benedict-xvi/world-day-of-peace-2009",
@@ -3680,7 +5531,13 @@
       "id": "lent",
       "year": 2009
     },
-    "sourceGenreLabel": "messages/lent"
+    "sourceGenreLabel": "messages/lent",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 132
+    }
   },
   {
     "id": "mag:benedict-xvi/urbi-et-orbi-christmas-2008",
@@ -3732,7 +5589,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 81
+    }
   },
   {
     "id": "mag:benedict-xvi/world-day-of-prayer-for-vocations-2009",
@@ -3762,7 +5625,13 @@
       "year": 2009,
       "ordinal": 46
     },
-    "sourceGenreLabel": "messages/vocations"
+    "sourceGenreLabel": "messages/vocations",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 325
+    }
   },
   {
     "id": "mag:benedict-xvi/hpaanensis-2009",
@@ -3788,7 +5657,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 257
+    }
   },
   {
     "id": "mag:benedict-xvi/world-communications-day-2009",
@@ -3817,7 +5692,13 @@
       "year": 2009,
       "ordinal": 43
     },
-    "sourceGenreLabel": "messages/communications"
+    "sourceGenreLabel": "messages/communications",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 136
+    }
   },
   {
     "id": "mag:benedict-xvi/world-day-of-the-sick-2009",
@@ -3846,7 +5727,13 @@
       "year": 2009,
       "ordinal": 17
     },
-    "sourceGenreLabel": "messages/sick"
+    "sourceGenreLabel": "messages/sick",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 203
+    }
   },
   {
     "id": "mag:benedict-xvi/world-youth-day-2009",
@@ -3878,7 +5765,35 @@
       "year": 2009,
       "ordinal": 24
     },
-    "sourceGenreLabel": "messages/youth"
+    "sourceGenreLabel": "messages/youth",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 207
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/la-remissione-della-scomunica-2009",
+    "title": "La remissione della scomunica. Ad Episcopos Ecclesiae Catholicae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-03-10",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "La remissione della scomunica",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 270
+    }
   },
   {
     "id": "mag:benedict-xvi/esquelensis-2009",
@@ -3904,7 +5819,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 449
+    }
   },
   {
     "id": "mag:benedict-xvi/namibensis-2009",
@@ -3930,7 +5851,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 345
+    }
   },
   {
     "id": "mag:benedict-xvi/libmanana-2009",
@@ -3952,7 +5879,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 259
+    }
   },
   {
     "id": "mag:benedict-xvi/urbi-et-orbi-easter-2009",
@@ -4102,7 +6035,13 @@
       "circumscription-elevation"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 763
+    }
   },
   {
     "id": "mag:benedict-xvi/oberensis-2009",
@@ -4128,7 +6067,34 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 761
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/apostolic-letter-2009-06-16",
+    "title": "Ad Presbyteros Ecclesiae Catholicae",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-06-16",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 569
+    }
   },
   {
     "id": "mag:benedict-xvi/caritas-in-veritate-2009",
@@ -4161,7 +6127,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Caritas in veritate",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 641
+    }
   },
   {
     "id": "mag:benedict-xvi/world-mission-day-2009",
@@ -4188,7 +6160,13 @@
       "id": "world-mission-day",
       "year": 2009
     },
-    "sourceGenreLabel": "messages/missions"
+    "sourceGenreLabel": "messages/missions",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 873
+    }
   },
   {
     "id": "mag:benedict-xvi/ecclesiae-unitatem-2009",
@@ -4254,6 +6232,28 @@
       "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xvi/et-circumibat-iesus-2009",
+    "title": "« Et circumibat Iesus ». Venerabili Dei Servo Eustachio Kugler caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2009-10-04",
+    "source": {
+      "url": null,
+      "shelf": "aas/2009",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Et circumibat Iesus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 1007
+    }
   },
   {
     "id": "mag:benedict-xvi/apostolic-letter-2009-10-11",
@@ -4553,7 +6553,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 985
+    }
   },
   {
     "id": "mag:benedict-xvi/hyacinthi-de-yaguachi-2009",
@@ -4641,7 +6647,13 @@
       "year": 2010,
       "ordinal": 18
     },
-    "sourceGenreLabel": "messages/sick"
+    "sourceGenreLabel": "messages/sick",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 1062
+    }
   },
   {
     "id": "mag:benedict-xvi/tenancingana-2009",
@@ -4663,7 +6675,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 101,
+      "year": 2009,
+      "page": 999
+    }
   },
   {
     "id": "mag:benedict-xvi/bellovariensis-crisiensis-2009",

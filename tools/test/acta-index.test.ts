@@ -1432,6 +1432,173 @@ describe('parseActaIndex keeps the entries opened without a page (spec §10.3, p
   });
 });
 
+describe('parseActaIndex on the index PDFs of 2003-2009 (acta volumes spec §11, phase 2b\')', () => {
+  it('reads the ditto marks the layout mode glues: to the guillemet, to the day, and the day to the text', () => {
+    const r = parseActaIndex(index(`IV – LITTERAE DECRETALES
+2004 Maii 16 « Cum liber essem ». – Beato Aloisio Orione Sanctorum ho-
+nores decernuntur .............. 6
+» » »« Cum dilexisset suos ». – Beatae Ioannae Beretta Molla
+Sanctorum honores decernuntur ........ 9
+»» »« Qui manet». – Beato Alberto Hurtado Cruchaga Sancto-
+rum honores decernuntur ........... 300
+»»30 Pertransiit benefaciendo. – Beato Carolo a S. Andrea
+Houben Sanctorum honores decernuntur ..... 361
+»»3 0 Salutis omnium. – Beato Simoni de Lipnica, presbytero,
+Sanctorum honores decernuntur ......... 121
+V – CONSTITUTIONES APOSTOLICAE
+2004 Ian. 14 De universo dominico. – In Madagascaria nova conditur
+Provincia ecclesiastica, Toliarana appellanda ..... 87
+» » 25Ad universae incrementum. – In Aethiopia nova Eparchia
+constituitur nomine Emdeberensis ........ 251
+2004 Dec. 25Deus Caritas est. – Episcopis, presbyteris et diaconis, viris
+et mulieribus consecratis ............ 217`, '(An. 2004 et Vol. XCVI)'), { year: 2004 });
+    expect(r.defects).toEqual([]);
+    expect(r.entries.map((e) => [e.date, e.incipit, e.page])).toEqual([
+      ['2004-05-16', 'Cum liber essem', 6],
+      ['2004-05-16', 'Cum dilexisset suos', 9],
+      ['2004-05-16', 'Qui manet', 300],
+      ['2004-05-30', 'Pertransiit benefaciendo', 361],
+      ['2004-05-30', 'Salutis omnium', 121],
+      ['2004-01-14', 'De universo dominico', 87],
+      ['2004-01-25', 'Ad universae incrementum', 251],
+      ['2004-12-25', 'Deus Caritas est', 217],
+    ]);
+  });
+
+  it('starts 2006\'s index, which prints no title line, at the page before the first running header, and reads ACTA SUMMI PONTIFICIS as a container of the pope sub-headings', () => {
+    const text = `ACTA APOSTOLICAE SEDIS
+INDEX GENERALIS ACTORUM
+(An. 2006 et Vol. XCVIII)
+I – ACTA SUMMI PONTIFICIS
+Litterae Encyclicae: 217.
+\fIndex generalis actorum 963
+In Civitate Vaticana: 215, 295.
+\fI — ACTA SUMMI PONTIFICIS
+
+ACTA BENEDICTI XVI
+
+I – LITTERAE ENCYCLICAE
+
+2005 Dec. 25 Deus Caritas est. – Episcopis, presbyteris et diaconis, viris
+et mulieribus consecratis ............ 217
+\fIndex documentorum chronologico ordine digestus 965
+
+II – LITTERAE DECRETALES
+
+2005 Oct. 23 « Iustus Dominus ». – Beato Caietano Catanoso Sanctorum
+honores decernuntur ............. 297
+
+ACTA IOANNIS PAULI II
+
+I – LITTERAE APOSTOLICAE
+
+2005 Mart. 19 « Sit vobis ». – Venerabili Servo Dei Marino
+Beatorum honores decernuntur .......... 7
+`;
+    const r = parseActaIndex(text, { year: 2006 });
+    expect(r.volume).toBe(98);
+    expect(r.skippedParts).toEqual([]);
+    expect(r.popeHeadings).toEqual(['ACTA BENEDICTI XVI', 'ACTA IOANNIS PAULI II']);
+    expect(r.defects).toEqual([]);
+    expect(r.entries.map((e) => [e.pope, e.date, e.incipit, e.page])).toEqual([
+      ['Benedictus XVI', '2005-12-25', 'Deus Caritas est', 217],
+      ['Benedictus XVI', '2005-10-23', 'Iustus Dominus', 297],
+      ['Ioannes Paulus II', '2005-03-19', 'Sit vobis', 7],
+    ]);
+    // The general index's own `I – ACTA SUMMI PONTIFICIS` (page 1) is before the start: its page list is neither an entry nor a defect.
+  });
+
+  it('still throws for an index PDF with neither a title line nor a running header', () => {
+    expect(() => parseActaIndex('ACTA APOSTOLICAE SEDIS\n(An. 2006 et Vol. XCVIII)\nI – ACTA BENEDICTI XVI\n', { year: 2006 })).toThrow(/CHRONOLOGICO ORDINE DIGESTUS/);
+  });
+
+  it('still throws where the running header opens the very first page, there being no page before it to start at', () => {
+    // `headerPage` is 0, so the page before it does not exist: no line of `lines` carries
+    // page -1, `firstOfPage` stays -1 and `titleAt` is left at -1 by the guard in
+    // parseActaIndex. Measured on 2026-09-21: the guard is belt-and-braces -- without it
+    // `titleAt` would be -2 and the check below would throw all the same -- so this case
+    // pins the behaviour the guard states, not the guard's presence.
+    const text = `Index documentorum chronologico ordine digestus 963
+
+I – ACTA BENEDICTI XVI
+
+I – LITTERAE ENCYCLICAE
+
+2005 Dec. 25 Deus Caritas est. – Episcopis ............ 217
+`;
+    expect(() => parseActaIndex(text, { year: 2006, volume: 98 })).toThrow(/CHRONOLOGICO ORDINE DIGESTUS/);
+  });
+
+  it('reads SYNODUS EPISCOPORUM as a category of the pope part where its numeral continues the part\'s, and as a part where it does not', () => {
+    const asCategory = parseActaIndex(index(`VII – ITINERA APOSTOLICA
+2005 Aug. 18-21 Germaniam .................. 933
+VIII – SYNODUS EPISCOPORUM
+2005 Oct. 22 Nuntius datus ab XI Coetu Generali Ordinario Synodi
+Episcoporum ............... 988
+IX – SECRETARIA STATUS
+2005 Ian. 10 Conventio inter Sanctam Sedem et Rempublicam Slovacam .... 12`, '(An. 2005 et Vol. XCVII)'), { year: 2005 });
+    expect(asCategory.skippedParts).toEqual([]);
+    expect(asCategory.entries.map((e) => [e.category, e.date, e.page])).toEqual([
+      ['SYNODUS EPISCOPORUM', '2005-10-22', 988],
+      ['SECRETARIA STATUS', '2005-01-10', 12],
+    ]);
+    const asPart = parseActaIndex(index(`XII – NUNTII
+2005 Aug. 18 Ad iuvenes Coloniae congregatos ........ 933
+II – SYNODUS EPISCOPORUM
+2005 Oct. 22 Nuntius datus ab XI Coetu Generali Ordinario Synodi
+Episcoporum ............... 988`, '(An. 2005 et Vol. XCVII)'), { year: 2005 });
+    expect(asPart.skippedParts).toEqual(['II – SYNODUS EPISCOPORUM']);
+    expect(asPart.entries.map((e) => e.category)).toEqual(['NUNTII']);
+  });
+
+  it('reads the numeral of a dot-only heading too (AAS 90 (1998) 457, AAS 91 (1999) 5: `I. LITTERAE …` with no dash), so a SYNODUS EPISCOPORUM numbered next after one is a category', () => {
+    const r = parseActaIndex(index(`I. LITTERAE ENCYCLICAE
+2005 Sept. 14 Fides et ratio ........................ 5
+II – SYNODUS EPISCOPORUM
+2005 Oct. 22 Nuntius datus ab XI Coetu Generali Ordinario Synodi
+Episcoporum ............... 988`, '(An. 2005 et Vol. XCVII)'), { year: 2005 });
+    expect(r.skippedParts).toEqual([]);
+    expect(r.entries.map((e) => [e.category, e.date, e.page])).toEqual([
+      ['LITTERAE ENCYCLICAE', '2005-09-14', 5],
+      ['SYNODUS EPISCOPORUM', '2005-10-22', 988],
+    ]);
+  });
+
+  it('parses every index PDF of 2003-2009 with no unseen heading and no unmapped pope, and measures its rate (spec §11.2)', () => {
+    for (const year of [2003, 2004, 2005, 2006, 2007, 2008, 2009]) {
+      const r = parseActaIndex(readFileSync(`tools/fixtures/acta/aas-indice-${year}.txt`, 'utf8'), { year });
+      expect(r.volume, String(year)).toBe(year - 1908);
+      expect(r.unseenHeadings, String(year)).toEqual([]);
+      expect(r.unmappedPopes, String(year)).toEqual([]);
+      expect(r.popeHeadings.length, String(year)).toBe([2005, 2006].includes(year) ? 2 : 1);
+      expect(r.stats.entries, String(year)).toBeGreaterThan(120);
+      // Note this reads the fixture with the parser's defaults, where ACTA_SOURCES gives
+      // these seven `fullLine: 40` (join.ts): the rates below are the floor's worst case.
+      // Every one of the seven parses every line of a harvested category (1.000 for all
+      // seven), so the 95 % floor of spec §4 holds with room. Over all the pope parts' page
+      // lines the rate is 0.985 (2003), 0.987 (2004), 0.986 (2005), 0.989 (2006) and 1.000
+      // (2007-2009); what it misses is the journey ranges and sub-lists of ITINERA
+      // APOSTOLICA and the sub-list openers of the consistory, the synod and the Secretariat
+      // of State -- categories the registry does not harvest.
+      expect(harvestedParseRate(r.stats)!, String(year)).toBeGreaterThanOrEqual(0.95);
+      // And with the `fullLine: 40` the sources carry, every entry closes: the harvested
+      // rate is measured over more lines (72, 69, 82, 77, 63, 67, 67 against 71, 68, 77, 74,
+      // 62, 65, 67) and is still 1.000, and every remaining defect of all seven is a line of
+      // a category the registry does not harvest. The 21 entries the defaults leave without
+      // a page (their page set after one space at the end of a short continuation line) come
+      // back but for one, 2006's journey line whose page the layout mode fused to the next
+      // journey's opener.
+      const wide = parseActaIndex(readFileSync(`tools/fixtures/acta/aas-indice-${year}.txt`, 'utf8'), { year, fullLine: 40 });
+      expect(harvestedParseRate(wide.stats)!, String(year)).toBe(1);
+      expect(wide.stats.harvestedPageLines, String(year)).toBe(
+        { 2003: 72, 2004: 69, 2005: 82, 2006: 77, 2007: 63, 2008: 67, 2009: 67 }[year],
+      );
+      expect(wide.stats.withoutPage, String(year)).toBe(year === 2006 ? 1 : 0);
+      expect(wide.defects.filter((d) => (categoryForHeading(d.category!)?.harvested ?? 'no') !== 'no'), String(year)).toEqual([]);
+    }
+  });
+});
+
 describe('splitEntryText', () => {
   it('strips guillemets and takes the rest as description, whatever follows the closing one', () => {
     expect(splitEntryText('« Venite benedicti  ». - Venerabili Dei Servo')).toEqual({ incipit: 'Venite benedicti', quoted: true, toponym: null, description: 'Venerabili Dei Servo' });

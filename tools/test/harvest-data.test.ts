@@ -1842,10 +1842,15 @@ describe('the whole corpus', () => {
     // abhinc annis* (AAS 10 (1918) 305, read by hand) and Pius XI's *Poiché ogni ragione*
     // (AAS 16 (1924) 177) and *Bibliorum scientiam* (180), recovered by rule once the
     // parser reads the 1924 index's `IV.?- MOTU PROPRIO` heading (the OCR's `?`).
+    // Phase 2b' (spec §11: the seven index PDFs of 2003-2009) adds two of Benedict XVI, both
+    // created from the 2009 index's `Litterae Apostolicae Motu proprio datae` and both
+    // entered without an incipit (provisional ids): *Circa l'Opera del Pane dei Poveri*
+    // (AAS 101 (2009) 7) and *Regolamento dell'Opera del Pane dei Poveri* (9), of 1 November
+    // 2008. The era's other five motu proprio are matched on the shelves, not created.
     const bearers = everything.filter((d) => d.characteristics?.includes('motu-proprio'));
-    expect(bearers).toHaveLength(210 + 66 + 2 + 21 + 1 + 2 + 6 + 4 + 5 + 3 + 1);
+    expect(bearers).toHaveLength(210 + 66 + 2 + 21 + 1 + 2 + 6 + 4 + 5 + 3 + 1 + 2);
     const bornBearers = bearers.filter((d) => isActaShelf(d.source?.shelf));
-    expect(bornBearers).toHaveLength(45);
+    expect(bornBearers).toHaveLength(47);
     expect(bornBearers.map((d) => d.id)).toEqual(expect.arrayContaining(['mag:pius-xi/apostolicae-litterae-1931', 'mag:pius-xi/praecipua-sane-1931', 'mag:paul-vi/ad-summi-pontificatus-1963']));
     expect(bornBearers.every((d) => d.sourceGenreLabel === 'Litterae Apostolicae Motu proprio datae' && ['rp:pius-x', 'rp:benedict-xv', 'rp:pius-xi', 'rp:pius-xii', 'rp:paul-vi', 'rp:john-paul-ii', 'rp:benedict-xvi'].includes(d.issuerId))).toBe(true);
   });
@@ -2362,9 +2367,14 @@ describe('the recovered-incipit shelf', () => {
     // constitutions the index enters without an incipit the parser reads -- *Coenobium
     // Sublacense* (AAS 7 (1915) 197) and *Archidioecesis Olindensis-Recifensis* (AAS 13
     // (1921) 463), each read as a toponym, though the act opens with those words.
+    // Phase 2b' (spec §11) adds three of the 2009 index, all Benedict XVI's and all counted
+    // with the AAS-only block: the two *Opera del Pane dei Poveri* motu proprio of 1 November
+    // 2008 (AAS 101 (2009) 7 and 9) and the letter to the priests of the Church of
+    // 16 June 2009 (569), which the index enters by its addressee, `Ad Presbyteros Ecclesiae
+    // Catholicae`. The formal shelves are untouched: 299 as before.
     const formal = everything.filter((d) => !isMessagesShelf(d.source?.shelf ?? null) && !isActaShelf(d.source?.shelf));
     expect(formal.filter((d) => d.idStatus === 'provisional')).toHaveLength(299);
-    expect(everything.filter((d) => d.idStatus === 'provisional')).toHaveLength(299 + 5 + 8 + 75 + 4 + 322 + 22 + 5 + 6 + 1 + 2 + 2);
+    expect(everything.filter((d) => d.idStatus === 'provisional')).toHaveLength(299 + 5 + 8 + 75 + 4 + 322 + 22 + 5 + 6 + 1 + 2 + 2 + 3);
   });
 
   it('keeps the two Leo XIV 2025 letters provisional, which AAS confirms have no incipit', () => {
@@ -2801,13 +2811,15 @@ describe('the AAS reference (acta reference spec)', () => {
       '1978': 29,
       '1979': 59, '1980': 58, '1981': 49, '1982': 73, '1983-I': 35, '1984': 62, '1985': 50, '1986': 47, '1987': 61, '1988': 60, '1989': 61,
       '1990': 56, '1991': 56, '1992': 65, '1993': 54, '1994': 75, '1995': 52, '1996': 62, '1997': 59, '1998': 65, '1999': 43, '2000': 50,
-      '2001': 37, '2002': 44, '2010': 19, '2011': 25, '2012': 24, '2013': 20, '2014': 28,
+      '2001': 37, '2002': 44,
+      '2003': 36, '2004': 32, '2005': 34, '2006': 18, '2007': 23, '2008': 23, '2009': 20,
+      '2010': 19, '2011': 25, '2012': 24, '2013': 20, '2014': 28,
       '2015': 38, '2016': 26, '2017': 14, '2018': 15, '2019': 17, '2020': 18, '2021': 24, '2022': 18, '2023': 29, '2024': 26,
     });
     // The sample's 130 are 1931, 1958, 1978 and 2012's; 1909 and 1917-I count with their era (phase 2b-iii-b) since the recovery;
     // the era's 105 are 112 with Task 9's seven readings; the two curated references are *Providentissima Mater* (no index
     // entry) and *Ubi arcano Dei consilio* (whose Italian match it displaces: one reference either way, counted in the 112).
-    expect(cited).toHaveLength(225 + 130 + 144 + 800 + 1421 + 66 + 112 + 1 + 5);
+    expect(cited).toHaveLength(225 + 130 + 144 + 800 + 1421 + 66 + 112 + 1 + 5 + 186);
     // By class: the index's *Nuntii* carry the Christmas and Easter Urbi et Orbi, and the
     // volumes' *Nuntii radiophonici* / *radiotelevisifici* three more (1958, 1978).
     const byClass = new Map<string, number>();
@@ -2833,8 +2845,16 @@ describe('the AAS reference (acta reference spec)', () => {
       // 2 motu proprio (*Post datam*, *Latinarum litterarum*) and a constitution (*Sapienti
       // Consilio*); the curated reference adds *Providentissima Mater*, on the bulls shelf.
       // ACTA_PAGE_CORRECTIONS (2026-09-21): +1 encyclical (*Casti connubii*), +2 apostolic letters and +2 constitutions (AAS 76 and 82).
-      'apostolic-exhortation': 44, 'apostolic-letter': 1333, 'apostolic-letter+motu-proprio': 171, encyclical: 116,
-      letter: 101, message: 234, 'papal-bull': 4, 'papal-bull+apostolic-constitution': 827, 'urbi-et-orbi': 74,
+      // Phase 2b' (spec §11: the seven index PDFs of 2003-2009) adds 186 references of John
+      // Paul II and Benedict XVI: 74 constitutions, 61 apostolic letters, 31 messages, 9 Urbi
+      // et Orbi, 5 motu proprio, 4 encyclicals (*Ecclesia de Eucharistia*, *Deus Caritas est*,
+      // *Spe salvi*, *Caritas in Veritate*) and 2 exhortations; no letter, the *Epistulae* of
+      // these seven being letters neither pope's harvested shelves hold. Five of the 186 are
+      // the `fullLine: 40` the seven sources carry (join.ts): +3 apostolic letters of 2005,
+      // +1 constitution of 2006 (*In Kyrgyzstania*) and +1 message of 2008, each an entry
+      // whose page the narrow column sets after one space on a short continuation line.
+      'apostolic-exhortation': 46, 'apostolic-letter': 1394, 'apostolic-letter+motu-proprio': 176, encyclical: 120,
+      letter: 101, message: 265, 'papal-bull': 4, 'papal-bull+apostolic-constitution': 901, 'urbi-et-orbi': 83,
     });
     const francisOnly = cited.filter((d) => d.acta!.year >= 2015);
     expect(francisOnly).toHaveLength(225);
@@ -2857,8 +2877,11 @@ describe('the AAS reference (acta reference spec)', () => {
     // (AAS 14-17, 1922-1925). Task 9's curated page readings add Pius X's *Sapienti Consilio*,
     // Benedict XV's four encyclicals of 1914-1920 and Pius XI's two motu proprio of 1923-1924,
     // and the curated reference Benedict XV's *Providentissima Mater* (AAS 9-II).
+    // Phase 2b' (spec §11) adds the seven index PDFs of 2003-2009: Benedict XVI's 96 more
+    // (83 -> 179, the era of his pontificate the registry had no Acta source for) and John
+    // Paul II's 90 more (1,332 -> 1,422). No other pope moves: the seven print only these two.
     expect(Object.fromEntries([...byIssuer].sort())).toEqual({
-      'rp:benedict-xv': 35, 'rp:benedict-xvi': 83, 'rp:francis-i': 33, 'rp:john-paul-i': 6, 'rp:john-paul-ii': 1332, 'rp:john-xxiii': 170,
+      'rp:benedict-xv': 35, 'rp:benedict-xvi': 179, 'rp:francis-i': 33, 'rp:john-paul-i': 6, 'rp:john-paul-ii': 1422, 'rp:john-xxiii': 170,
       'rp:paul-vi': 655, 'rp:pius-x': 58, 'rp:pius-xi': 104, 'rp:pius-xii': 203,
     });
     // Every reference into AAS 9 (1917) and AAS 75 (1983) names part I -- part II is the Code
@@ -3134,11 +3157,23 @@ describe('the AAS-only documents (AAS-only documents spec, phase 2a)', () => {
       '1973': 58, '1974': 45, '1975': 41, '1976': 53, '1977': 52,
       '1978': 28,
       '1982': 1, '1983-I': 19, '1984': 3, '1986': 1, '1987': 2, '1989': 9, '1994': 1, '1997': 4, '2000': 2, '2002': 1,
+      '2003': 1, '2004': 2, '2005': 4, '2006': 18, '2007': 10, '2008': 20, '2009': 24,
       '2010': 16, '2011': 2, '2012': 13, '2013': 25, '2014': 8,
       '2015': 7, '2016': 15, '2017': 30, '2018': 31, '2019': 73, '2020': 23, '2021': 19, '2022': 18, '2023': 32, '2024': 17,
     });
+    // Phase 2b' (spec §11) adds 79 from the seven index PDFs of 2003-2009, few while John
+    // Paul II's shelves hold what the index prints and many once Benedict XVI's thin out
+    // (1, 2, 4, 18, 10, 20, 24 -- 2007 falls back, its index being the era's shortest at 63
+    // lines of a harvested category): 65 of Benedict XVI
+    // and 14 of John Paul II, almost all beatification and canonisation acts vatican.va does
+    // not shelve. The earlier eras do not move, and no shelf id is re-minted. Seven of the 79
+    // are the `fullLine: 40` the seven sources carry (join.ts): four apostolic letters of
+    // 3 October 2004 (AAS 98 (2006) 614, 617, 619, 622) that the whole-line reading had fused
+    // into one five-fold claim on a single shelf record -- the `claimed-twice` hold that
+    // wrote none of the five -- and three the option closes for the first time (*Deus
+    // laudandus* 2006, *Pascite, qui est in vobis* 2007, *Humiliter in Christo* 2008).
     // The sample's 136 are 1931, 1958, 1978 and 2012's; 1909 and 1917-I count with their era (phase 2b-iii-b) since the recovery.
-    expect(born).toHaveLength(265 + 136 + 1627 + 649 + 94 + 277 + 458 + 9);
+    expect(born).toHaveLength(265 + 136 + 1627 + 649 + 94 + 277 + 458 + 9 + 79);
     const byClass = new Map<string, number>();
     for (const d of born) byClass.set(cls(d), (byClass.get(cls(d)) ?? 0) + 1);
     expect(Object.fromEntries([...byClass].sort())).toEqual({
@@ -3160,7 +3195,11 @@ describe('the AAS-only documents (AAS-only documents spec, phase 2a)', () => {
       // Task 9's curated page readings add 3 motu proprio and 8 constitutions (453 in all);
       // the final review's fixes 4 apostolic letters of AAS 13 (1921) and 1 letter of AAS 4 (1912) (458).
       // ACTA_PAGE_CORRECTIONS (2026-09-21): +3 apostolic letters, +1 motu proprio, +2 letters, +3 constitutions at their pages (AAS 17, 19, 22).
-      'apostolic-exhortation': 3, 'apostolic-letter': 1481, 'apostolic-letter+motu-proprio': 45, letter: 732, 'papal-bull': 94, 'papal-bull+apostolic-constitution': 1160,
+      // Phase 2b' (spec §11) adds 79 from the index PDFs of 2003-2009: 67 apostolic letters,
+      // 6 constitutions, 4 decretals and 2 motu proprio; no exhortation, no encyclical and no
+      // letter, the two popes' *Epistulae* being on no harvested shelf. All seven the
+      // `fullLine: 40` of the sources adds are apostolic letters.
+      'apostolic-exhortation': 3, 'apostolic-letter': 1548, 'apostolic-letter+motu-proprio': 47, letter: 732, 'papal-bull': 98, 'papal-bull+apostolic-constitution': 1166,
     });
     // Francis and Benedict XVI from the ten indexes (five beatification letters of
     // 2010-2011 printed in the 2018, 2020 and 2021 volumes, the sixth held as above), and
@@ -3180,8 +3219,10 @@ describe('the AAS-only documents (AAS-only documents spec, phase 2a)', () => {
     // final review's fixes Benedict XV's 4 (AAS 13, 1921) and Pius X's 1 (AAS 4, 1912).
     const byIssuer = new Map<string, number>();
     for (const d of born) byIssuer.set(d.issuerId, (byIssuer.get(d.issuerId) ?? 0) + 1);
+    // Phase 2b' (spec §11) adds Benedict XVI's 65 and John Paul II's 14 from the index PDFs
+    // of 2003-2009; no other pope moves.
     expect(Object.fromEntries([...byIssuer].sort())).toEqual({
-      'rp:benedict-xv': 112, 'rp:benedict-xvi': 69, 'rp:francis-i': 260, 'rp:john-paul-ii': 43, 'rp:john-xxiii': 294, 'rp:paul-vi': 349, 'rp:pius-x': 159, 'rp:pius-xi': 1000, 'rp:pius-xii': 1229,
+      'rp:benedict-xv': 112, 'rp:benedict-xvi': 134, 'rp:francis-i': 260, 'rp:john-paul-ii': 57, 'rp:john-xxiii': 294, 'rp:paul-vi': 349, 'rp:pius-x': 159, 'rp:pius-xi': 1000, 'rp:pius-xii': 1229,
     });
     expect(born.every((d) => d.issuerId in PONTIFICATE_BEGAN && d.date >= PONTIFICATE_BEGAN[d.issuerId]!)).toBe(true);
     // The *Epistulae* are created only where the letters shelf is harvested (Pius X, Pius XI,
@@ -3193,7 +3234,7 @@ describe('the AAS-only documents (AAS-only documents spec, phase 2a)', () => {
     const sources = new Map(ACTA_SOURCES.map((s) => [s.key, s]));
     for (const d of born) {
       // source.url is the whole-volume PDF for a volume source (1909-2002) and null for an
-      // index PDF (2012, 2015-2024); retrieved is the fixture's date (acta volumes spec §3).
+      // index PDF (2003-2014, 2015-2024); retrieved is the fixture's date (acta volumes spec §3).
       const src = sources.get(sourceOf(d))!;
       expect(src, d.id).toBeDefined();
       expect(d.source, d.id).toEqual({ url: src.url, shelf: `aas/${d.acta!.year}`, retrieved: src.retrieved });
@@ -3230,7 +3271,11 @@ describe('the AAS-only documents (AAS-only documents spec, phase 2a)', () => {
     // Task 9's curated page readings add two constitutions the parser reads as a toponym
     // alone (*Coenobium Sublacense*, AAS 7 (1915) 197; *Archidioecesis Olindensis-Recifensis*,
     // AAS 13 (1921) 463).
-    expect(born.filter((d) => d.idStatus === 'provisional')).toHaveLength(75 + 4 + 322 + 22 + 5 + 6 + 1 + 2 + 2);
+    // Phase 2b' (spec §11) adds three of the 2009 index, all Benedict XVI's: the two *Opera
+    // del Pane dei Poveri* motu proprio of 1 November 2008 (AAS 101 (2009) 7 and 9), entered
+    // in Italian with no incipit, and the letter to the priests of 16 June 2009 (569),
+    // entered by its addressee (`Ad Presbyteros Ecclesiae Catholicae`).
+    expect(born.filter((d) => d.idStatus === 'provisional')).toHaveLength(75 + 4 + 322 + 22 + 5 + 6 + 1 + 2 + 2 + 3);
   });
 
   it('creates the examples the sample report names (acta volumes spec §5)', () => {
@@ -3545,6 +3590,45 @@ describe('the AAS-only documents (AAS-only documents spec, phase 2a)', () => {
     expect(by['mag:pius-xi/decessores-nostros-1930-05-31']).toMatchObject({ acta: { volume: 23, year: 1931, page: 42 } });
     // An act published late is created under its own date, the volume year being the citation's.
     expect(by['mag:pius-xi/cum-religio-1923']).toMatchObject({ date: '1923-06-12', acta: { volume: 19, year: 1927, page: 397 } });
+  });
+
+  it('joins and creates from the index PDFs of 2003-2009 as the era report says (acta volumes spec §11, phase 2b\')', () => {
+    const era = born.filter((d) => d.acta!.year >= 2003 && d.acta!.year <= 2009);
+    // 79 created: 1, 2, 4, 18, 10, 20, 24 -- few while John Paul II's shelves hold what the
+    // index prints, many once Benedict XVI's thin out, with 2007 falling back on a short index.
+    expect(era).toHaveLength(79);
+    for (const d of era) {
+      expect(d.acta!.volume, d.id).toBe(d.acta!.year - 1908);
+      expect(d.acta!.part, d.id).toBeUndefined();
+      expect(d.source!.shelf, d.id).toBe(`aas/${d.acta!.year}`);
+      expect(d.source!.retrieved, d.id).toBe('2026-09-21');
+      // An index PDF names no fascicle: no URL (spec §11.3).
+      expect(d.source!.url, d.id).toBeNull();
+      expect(['rp:john-paul-ii', 'rp:benedict-xvi'], d.id).toContain(d.issuerId);
+    }
+    // Neither pope's *Epistulae* shelf is harvested, so no letter is created from these seven.
+    expect(era.filter((d) => d.genre === 'letter')).toEqual([]);
+    expect(era.filter((d) => d.genre === 'encyclical')).toEqual([]);
+    const refs = everything.filter((d) => d.acta && d.acta.year >= 2003 && d.acta.year <= 2009);
+    // 265 = 186 matched + 79 created. The `fullLine: 40` the seven sources carry adds 12 of
+    // them (5 matched, 7 created), the narrow column setting their page after one space on a
+    // continuation line the whole-line reading would not close (join.ts).
+    expect(refs).toHaveLength(265);
+    // Spot checks read in the fixtures: the encyclicals cite their pages, each verified against
+    // the line the index prints -- `2003 Apr. 17 « Ecclesia de Eucharistia » … 433` (2003 fixture
+    // l. 128-131), `2005 Dec. 25Deus Caritas est … 217` (2006, l. 132-134), `2007 Nov. 30 « Spe
+    // salvi facti sumus » … 985` (2007, l. 148-150) and `2009 Iun. 29 Caritas in Veritate … 641`
+    // (2009, l. 149-152). All four encyclicals of the era carry a reference; none is held.
+    const by = Object.fromEntries(everything.map((d) => [d.id, d]));
+    expect(by['mag:john-paul-ii/ecclesia-de-eucharistia-2003']?.acta).toEqual({ series: 'AAS', volume: 95, year: 2003, page: 433 });
+    expect(by['mag:benedict-xvi/deus-caritas-est-2005']?.acta).toEqual({ series: 'AAS', volume: 98, year: 2006, page: 217 });
+    expect(by['mag:benedict-xvi/spe-salvi-2007']?.acta).toEqual({ series: 'AAS', volume: 99, year: 2007, page: 985 });
+    expect(by['mag:benedict-xvi/caritas-in-veritate-2009']?.acta).toEqual({ series: 'AAS', volume: 101, year: 2009, page: 641 });
+    // The one act of weight the era leaves unreferenced is John Paul II's post-synodal
+    // exhortation *Pastores gregis*: the 2004 index dates it `2003 Oct. 5` (AAS 96 (2004) 825)
+    // and vatican.va's shelf 16 October 2003, so the join does not match it and the duplicate
+    // guard holds the entry as `same-incipit-elsewhere` rather than mint a second record. A
+    // curated correction, not a pin, is what releases it (spec §11.3); it is not asserted here.
   });
 
   it('joins and creates from the volumes of 1909-1925 with their recovered pages as the era report says (acta volumes spec §10, phase 2b-iii-b)', () => {

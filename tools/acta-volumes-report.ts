@@ -15,7 +15,8 @@
  * PDFs of 2010, 2011, 2013 and 2014 -- John Paul II, Benedict XVI and Francis's first year),
  * `1926-1930` (phase 2b-iii-a: AAS 18-22, Pius XI) and `1909-1925` (phase 2b-iii-b: AAS 1-17,
  * Pius X, Benedict XV and Pius XI's first three years, with the pages the volume bodies gave
- * back -- spec §10; §1b of its report measures the recovery).
+ * back -- spec §10; §1b of its report measures the recovery), and `2003-2009` (phase 2b': the seven
+ * annual index PDFs of 2003-2009, John Paul II and Benedict XVI -- spec §11).
  *
  * A sibling of tools/acta-report.ts rather than a dimension of it: that report's prose
  * is the reading of the Francis decade. Like it, this one is NEVER run by the harvest;
@@ -29,6 +30,7 @@
  *        npx tsx tools/acta-volumes-report.ts 1979-2014 > docs/superpowers/reports/2026-09-13-acta-volumes-1979-2014.md
  *        npx tsx tools/acta-volumes-report.ts 1926-1930 > docs/superpowers/reports/2026-09-18-acta-volumes-1926-1930.md
  *        npx tsx tools/acta-volumes-report.ts 1909-1925 > docs/superpowers/reports/2026-09-21-acta-volumes-1909-1925.md
+ *        npx tsx tools/acta-volumes-report.ts 2003-2009 > docs/superpowers/reports/2026-09-21-acta-volumes-2003-2009.md
  */
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { ACTA_SOURCES, actaSource, applyCuratedReferences, loadActaIndexes, sourceKeyOf, type ActaSource } from './src/acta/join.js';
@@ -995,6 +997,174 @@ ERAS['1909-1925'] = {
     'here, and [#38](https://github.com/CatholicOS/cmddr/issues/38) carries the later eras\' count.',
   ],
   partsSkippedNote: 'dicasteries, tribunals, offices, the consistories of 1917, *Diarium*',
+  generatedOn: '2026-09-21',
+};
+ERAS['2003-2009'] = {
+  title: '# The AAS index PDFs of 2003–2009 (AAS 95–101): the phase-2b′ report',
+  intro: [
+    'the report of phase 2b′ of [#25](https://github.com/CatholicOS/cmddr/issues/25) as the',
+    '[acta volumes spec](../specs/2026-09-13-acta-volumes-design.md) §6 and §11 define it: the seven annual *Index generalis*',
+    'PDFs of 2003–2009, which §1 had recorded as none online -- the index page links them under paths the server does not',
+    'resolve, and the hyphenated form serves all seven (spec §11.1) -- extracted by `tools/fetch-acta.sh` in pypdf\'s layout mode',
+    'with the spaces collapsed, since the default mode drops the spaces between words in 2003–2006 (`tools/fixtures/acta/README.md`',
+    'records modes and retrieval). Each is parsed',
+  ],
+  covers: (s) => s.kind === 'index' && s.year >= 2003 && s.year <= 2009,
+  reading1: (parsedAll) => {
+    const era = [...parsedAll].filter(([k]) => ERAS['2003-2009']!.covers(actaSource(k)!));
+    if (era.length < 7) return [`*(The reading is not rendered: ${7 - era.length} fixture(s) of 2003–2009 are missing from tools/fixtures/acta/.)*`];
+    const underAll = era.filter(([, x]) => (parseRate(x.stats) ?? 1) < 0.95).map(([k, x]) => `${k} (${pct(parseRate(x.stats))})`);
+    const underHarvested = era.filter(([, x]) => (harvestedParseRate(x.stats) ?? 1) < 0.95).map(([k, x]) => `${k} (${pct(harvestedParseRate(x.stats))})`);
+    const rates = era.map(([, x]) => parseRate(x.stats) ?? 1);
+    const defects = era.flatMap(([, x]) => x.defects);
+    const inHarvested = defects.filter((d) => (categoryForHeading(d.category)?.harvested ?? 'no') !== 'no');
+    const byCat = new Map<string, number>();
+    for (const d of defects) { const id = categoryForHeading(d.category)?.id ?? d.category; byCat.set(id, (byCat.get(id) ?? 0) + 1); }
+    const journeys = byCat.get('Itinera Apostolica') ?? 0;
+    const harvestedLines = era.reduce((n, [, x]) => n + x.stats.harvestedPageLines, 0);
+    const openedWithoutPage = era.reduce((n, [, x]) => n + x.stats.withoutPage, 0);
+    const twoPopes = era.filter(([, x]) => x.popeHeadings.length === 2).map(([k]) => k);
+    const pdfPages = era.map(([k]) => Number((README_PAGES[k] ?? '').match(/(\d+)\s*\(whole\)/)?.[1] ?? NaN)).filter((n) => !Number.isNaN(n));
+    return [
+      `1. **The seven index PDFs exist, and the parser reads them as it reads 2010–2014.** The spec's §1 had recorded 2003–2009 as`,
+      `   *none online* and phase 2b′ as a heading parser over the monthly fascicles. The premise was wrong, and the era's first finding`,
+      `   is that nothing had to be built: vatican.va's AAS page links an *Index generalis* for each of the seven years, and only the`,
+      `   links are broken -- a space-encoded path for 2004–2007, a folder name folded into the file name for 2003, all answered 404 --`,
+      `   while the hyphenated form the 2008 and 2009 links already use serves all seven (spec §11.1). Each carries the *Index*`,
+      `   *documentorum chronologico ordine digestus* in the shape of 2010–2014, in ${Math.min(...pdfPages)} to ${Math.max(...pdfPages)} PDF pages (§1). The seven parse at`,
+      `   ${era.map(([k, x]) => `${pct(harvestedParseRate(x.stats))} (${k})`).join(', ')} over the harvested categories (§4)${underHarvested.length ? `, under the 95 % floor in ${underHarvested.join(', ')}` : ', every one above the 95 % floor'},`,
+      `   and at ${pct(Math.min(...rates))}–${pct(Math.max(...rates))} over all pope-part page lines${underAll.length ? `, under the floor in ${underAll.join(', ')}` : ', above it everywhere'}. The ${defects.length} lines the parser does not read`,
+      `   into an entry (§3) fall, every one of them, in a category the registry does not harvest. ${journeys} are the *Itinera apostolica*,`,
+      `   which the seven print in three shapes, read in the fixtures. 2003–2005 give a journey one dated line ending in a page`,
+      `   (\`2003 Iun. 5-9 in Croatiam .................. 492\`), so those lines stand in the rate's denominator, whether the parser opens an`,
+      `   entry on them (§13 counts one in 2003) or reports them (§3). 2007 and 2008 give it an undated opener and a cross-reference,`,
+      `   neither carrying a page (\`die 17 Iunii Assisium in Italia.\` over \`V.Assisium.\` in 2007;`,
+      `   \`V. Vasintonia; Neoeboracum.\` in 2008). 2006 and 2009 give it a sub-list under a pageless opener, and the sub-lists differ:`,
+      `   2006's items end in a page as an entry does (\`2006 a die 25 ad diem 28mensis Maii per Poloniam\`, then`,
+      `   \`» » 26 Ad Santuarium loci Jasna Go´ ra in Cze˛stochowa .... 469\` and the sixteen others §13 counts), while 2009's carry their`,
+      `   pages inline, comma-separated and closed by a stop (\`A die 17 ad diem 22 mensis Martii per Camaruniam et Angoliam:\`, then`,
+      `   \`Die 21 Alloc. ad iuvenes Angolienses in Stadio v. « Dos Coqueiros », 321.\`), so that one line of that section's 57 non-blank`,
+      `   lines ends in a bare digit. That is why 2009 shows ${era.find(([k]) => k === '2009')![1].defects.length} defects at ${pct(parseRate(era.find(([k]) => k === '2009')![1].stats))}: its journey lines are read and`,
+      `   reported, and they are rightly outside the rate's denominator, not lost from it. The rest of the ${defects.length} are`,
+      `   ${[...byCat].filter(([id]) => id !== 'Itinera Apostolica').map(([id, n]) => `${n} ${id}`).join(', ')}. ${inHarvested.length === 0 ? 'Not one defect of the era falls in a harvested category' : `${inHarvested.length} of them fall in a harvested category`}.`,
+      `2. **What the layout mode glues is read at the date position, and 2006 needed a title line it does not print.** The fixtures are`,
+      `   the layout mode's text because the default mode drops the spaces between words in 2003–2006 (\`honoresdecernuntur\`,`,
+      `   \`I—ACTAIOANNISPAULIPP.II\`); what the layout mode gives back in spaces it takes in glue -- the third ditto set against the`,
+      `   opening guillemet (\`» » »« Cum vis ut ». – Beato Humili …\`), the year's and month's dittos against the day`,
+      `   (\`»»14 De universo dominico\`), the day against the text (\`» » 12Ad Congressum\`, \`2005 Dec. 25Deus Caritas est\`) -- and the date-line reading`,
+      `   admits each of these in the index PDFs alone (spec §11.2). Measured on the collapsed fixtures before that reading, over all`,
+      `   lines: 90.5 % (2003), 84.8 % (2004), 86.8 % (2005), 91.3 % (2007), 90.4 % (2008 and 2009), and 2006 did not parse at all, its`,
+      `   text layer printing \`INDEX DOCUMENTORUM / CHRONOLOGICO ORDINE DIGESTUS\` nowhere -- the parser now starts that year at the page`,
+      `   before its first running header. The seven are the rates of §1 above; no source outside them moved, the reading being the index`,
+      `   PDFs' alone and every pinned count of 2010–2024 unchanged.`,
+      `3. **Two indexes carry two popes, and four headings were decided here.** ${twoPopes.join(' and ')} print the acts of John Paul II and`,
+      `   Benedict XVI, and they print them differently (§4): 2005 gives each pope a numbered part of its own (\`I — ACTA IOANNIS PAULI`,
+      `   PP. II\`, \`II — ACTA BENEDICTI PP. XVI\`), 2006 prints the two headings bare under the single part \`I — ACTA SUMMI PONTIFICIS\`,`,
+      `   the late pope's acts after the reigning pope's, and the parser reads both bare headings as pope headings. No pope heading and no`,
+      `   category heading is left unmapped in any of the seven (§1, §4). The four decisions are the hyphenated`,
+      `   \`ADHORTATIO APOSTOLICA POST-SYNODALIS\` of 2003, the singular \`EPISTULA APOSTOLICA MOTU PROPRIO DATA\` of 2009, 2007's own`,
+      `   misprint \`COSTITUTIONES APOSTOLICAE\` -- each mapped with the heading quoted -- and \`SYNODUS EPISCOPORUM\`, which these indexes`,
+      `   number as a category of the pope's part (2005, 2008) where AAS 69 (1977) heads a part of that name with it: the numeral tells`,
+      `   them apart (§4's row, \`index.ts\`), and the category is not harvested (§13).`,
+      `4. **\`fullLine: 40\` is the era's second finding: without it thirteen acts of harvested categories were dropped in silence.** These`,
+      `   seven are set in the narrow column of 2010–2011, not the wide one of 2012–2024, and a page that follows a single space at the`,
+      `   end of a *short* continuation line was never read: the entry was reported without a page and dropped, and its line counted in`,
+      `   neither term of the parse rate, so the rate could not see the loss (\`» Dec. 2 « Humiliter in Christo ». – Venerabili Dei Servae`,
+      `   Lindalvae / Justo de Oliveira caelitum Beatorum tribuitur dignitas 619\`, 2008). With the option, measured entry by entry over`,
+      `   the seven fixtures (\`join.ts\`, the phase-2b′ block), 20 of the 21 pageless entries come back, 13 of them in categories the`,
+      `   registry harvests, and not one entry of any year changes or is lost; the harvested denominator of §1 rose from 484 lines to`,
+      `   ${harvestedLines}, which is the honest reading of the 100 % -- the floor did not rise, its denominator did. §1 now opens ${openedWithoutPage} entry without a`,
+      `   page over the whole era (2006's fused journey line) and §3 no longer carries the shape at all. **Being read is not being`,
+      `   recorded**, and the thirteen divide 5 / 3 / 1 / 4. Five match a shelf record (§12): *Quocumque in opere* (AAS 97 (2005) 137),`,
+      `   *Sicut Pastor bonus* (286) and *Testimonium vita propria* (387), the constitution *In Kyrgyzstania* (AAS 98 (2006) 308, whose`,
+      `   shelf record had no reference at all before this phase), and the 2008 food-day message (AAS 100 (2008) 808). Three are created`,
+      `   (§8): *Deus laudandus* (AAS 98 (2006) 786), *Pascite, qui est in vobis* (99 (2007) 321) and *Humiliter in Christo*`,
+      `   (100 (2008) 619). One is held \`shelf-not-harvested\` (§9): the letter to the bishop of Coimbra of 14 February 2005 on Sister`,
+      `   Lúcia's funeral (97 (2005) 313), neither pope's letters shelf being harvested. **Four reach no record at all**, and they are the`,
+      `   reading for the owner. What the sources show: *Maturescens Catholica* (95 (2003) 381), *Qui autem pespexerit* (96 (2004) 524)`,
+      `   and *Da, mihi, Iesu* (97 (2005) 23) are each held \`ambiguous\` (§5) against two, five and four shelf records of their class and`,
+      `   date, and *Iesus “cum dilexisset”* (98 (2006) 660) \`ocr-damaged\` (§9), its extracted incipit carrying the curly quotes the`,
+      `   layout mode makes of the index's inner quotation. No record in \`data/documents/\` carries any of those four pages or any of`,
+      `   those four incipits -- checked both ways. What I judge, separately: each of the four looks releasable by a curated row and by`,
+      `   nothing else -- the *Maturescens Catholica* entry's own description names the see (\`nominata « Idukkensis »\`) that its two`,
+      `   candidates are filed under, the 2004 text layer drops the \`r\` of the shelf's *Qui autem perspexerit*, the index's`,
+      `   *Da, mihi, Iesu* is the shelf's *Da mihi Iesus* with two commas and another last word, and the fourth needs a reading of its`,
+      `   incipit. Those are four editorial calls; none was made here, and no curated row was written. What the option bought them is`,
+      `   that they are now read, counted and held with a named reason instead of vanishing unlogged.`,
+    ];
+  },
+  reading2: (c) => [
+    `1. **${c.references} references written, every one from a quoted index line (§12):** ${c.byHow}; no curated reference, no page correction and no`,
+    `   shared page was needed in the era (§5), and \`ACTA_REPRINTS\` fired for none of the seven, as spec §11.3 expected. With the`,
+    `   ${c.created} created records they give **${c.references + c.created} documents citing AAS 95–101**, where the registry had none: the volumes of 2003–2009`,
+    `   were the one gap left in the AAS join. Per pope the count is 161 Benedict XVI and 104 John Paul II (96 and 90 matched, 65 and`,
+    `   14 created), and per class the matches are 74 constitutions, 61 apostolic letters, 31 messages, 9 *urbi et orbi* messages,`,
+    `   5 motu proprio, 4 encyclicals and 2 exhortations. **Every encyclical of the era cites its page** -- *Ecclesia de Eucharistia*`,
+    `   (AAS 95 (2003) 433), *Deus caritas est* (98 (2006) 217), *Spe salvi* (99 (2007) 985), *Caritas in veritate* (101 (2009) 641) --`,
+    `   as do two of the three exhortations (*Ecclesia in Europa*, 95 (2003) 649; *Sacramentum caritatis*, 99 (2007) 105).`,
+    `2. **The era turns from a join into a harvest at the change of pontificate.** John Paul II's shelf is the registry's densest`,
+    `   (2 105 records, §10) and Benedict XVI's is thin (301), and the join's shape follows: 2003, 2004 and 2005 match 36, 32 and 34`,
+    `   entries and create 1, 2 and 4, while 2006 to 2009 match 18, 23, 23 and 20 and create 18, 10, 20 and 24 (§2). The rise is not`,
+    `   monotonic -- 2007 falls back to 10, its index the era's shortest at 63 harvested page lines -- but the direction is the one phase`,
+    `   2b-ii-c found on the far side of the same pontificate. What is created is almost entirely one genre: ${c.byGenre.get('Litterae Apostolicae') ?? 0} apostolic letters of the`,
+    `   \`Litterae Apostolicae\` beatification series, against ${c.byGenre.get('Constitutiones Apostolicae') ?? 0} constitutions, ${c.byGenre.get('Litterae Decretales') ?? 0} decretal letters and ${c.byGenre.get('Litterae Apostolicae Motu proprio datae') ?? 0} motu proprio (§8).`,
+    `3. **${c.created} documents created** (§8) -- ${c.byIssuer} -- and ${c.held} entries held (§9), ${c.guard} of them by the`,
+    `   duplicate guard and ${c.otherRulesText}; the other ${c.held - c.guard - c.otherRules} fall to the rules that precede the guard, and each is a shelf the`,
+    `   registry does not attempt rather than a failure of the index: ${c.heldBy.get('not-created-category') ?? 0} in categories not created from the *Acta* (72 *Nuntii*,`,
+    `   5 *Nuntii televisifici*, 2 *Epistulae Apostolicae*), ${c.heldBy.get('shelf-not-harvested') ?? 0} on shelves not harvested for these popes (18 *Epistulae*, 15`,
+    `   *Litterae Decretales*, 3 *Litterae Apostolicae sub plumbo datae*), ${c.heldBy.get('ambiguous') ?? 0} ambiguous and ${c.heldBy.get('claimed-twice') ?? 0} claimed twice. ${c.provisional} created records carry a`,
+    `   provisional id, all three Benedict XVI's from the 2009 index and all three for want of an incipit the index does not print: the`,
+    `   two *Opera del Pane dei Poveri* motu proprio of 1 November 2008, entered in Italian (AAS 101 (2009) 7 and 9), and the letter to`,
+    `   the priests of the Church of 16 June 2009, entered by its addressee (569). No shelf id was re-minted (§8).`,
+    `4. **The era's ambiguity is one shape, and it is the index and the shelf naming the same act differently.** ${c.heldBy.get('ambiguous') ?? 0} entries are held`,
+    `   \`ambiguous\` (§5) and 45 of them are circumscription constitutions of a single day: the index prints the act's Latin incipit`,
+    `   (*Ad aptius*, *Dilecta in Indiae*) and vatican.va files the record under the see (\`gandhinagarensis-2002\`,`,
+    `   \`rodriguensis-2002\`), so a day on which two or more sees are erected cannot be separated by incipit, by class or by date. The`,
+    `   other 13 are beatification letters of one day whose shelf incipit is not the index's, and 2 are messages. What would settle`,
+    `   the 45 is the see, which several of the entries' own descriptions print (\`nominata « Idukkensis »\`) and none of them prints as a`,
+    `   toponym: ${c.toponymIncipit === 0 ? 'no entry of the seven indexes prints toponym and incipit both' : `${c.toponymIncipit} entries print toponym and incipit both`} (§1's finding 4 reads the same shape from the other side).`,
+    `5. **The canonisation decretals are a filing difference, not a gap.** The seven indexes print 42 entries under`,
+    `   \`LITTERAE DECRETALES\` and **not one matches** (§3): 23 are held \`class-mismatch\` because vatican.va files the same act on the`,
+    `   apostolic-letters shelf as an \`apostolic-letter\` where the index's category maps to \`papal-bull\` (§9), 15 because the bulls shelf`,
+    `   is not harvested for the pope, and 4 are created. The same difference is the largest single cause in §11: of the ${c.withoutEntry} shelf`,
+    `   documents of the two popes dated in the volume years that carry no reference, 119 are of the formal genres, and 46 of those 119`,
+    `   are dated to a canonisation or beatification day, whose entries of that date the reading names as the homily's; the acts`,
+    `   themselves are the decretals, which the index files under \`LITTERAE DECRETALES\` and often in the following volume`,
+    `   (\`mag:john-paul-ii/dominus-adiutor-meus-2003\`, 4 May 2003, whose decretal the 2004 index prints at AAS 96 (2004) 81). Of the rest of the 119: 43 are the ambiguous days of`,
+    `   finding 4, 12 are December acts belonging to the next volume, 7 a class mismatch or another act of the date, 4 claimed twice,`,
+    `   3 filed under *Allocutiones*, 3 with no entry of their date at all and 1 possibly among the entries without a page.`,
+    `6. **One act of weight carries no reference, and the reason is a date, not a defect** (§6, §9). John Paul II's post-synodal`,
+    `   exhortation *Pastores gregis* is the era's single unreferenced act of the formal genres with an entry of its own. What the`,
+    `   sources show: the 2004 index enters it under \`I – ADHORTATIO APOSTOLICA POSTSYNODALIS\` at AAS 96 (2004) 825, dated`,
+    `   **5 October 2003**, the closing of the Synod; vatican.va's exhortations shelf dates \`mag:john-paul-ii/pastores-gregis-2003\``,
+    `   **16 October 2003**, the day of the signing. The matcher is keyed on the date and finds nothing; the creation guard then reads`,
+    `   the same incipit on the shelf eleven days later and holds the entry \`same-incipit-elsewhere\` (§9) rather than mint a second`,
+    `   *Pastores gregis*. What I judge, separately: that is the guard working, not failing, and the entry and the record are one act --`,
+    `   but saying so is a curated row (an \`ACTA_MATCH_OVERRIDES\` or \`ACTA_INDEX_CORRECTIONS\` entry giving the act's own dating`,
+    `   formula), and the row is the owner's to write. None was written here. Two of the era's other three \`same-incipit-elsewhere\``,
+    `   holds are the same disagreement over a date (*Homo caritatis est*, the index's 29 October 2003 against the shelf's 19 October;`,
+    `   *Maiorem hac*, 24 May 2008 against 26 April 2009); the third is its opposite -- *Caritas Christi* (AAS 98 (2006) 291,`,
+    `   17 October 2001) against two letters of 1990 and 1993 that open with the same formula, where the guard is right to refuse and`,
+    `   the entry is a third act. Of lesser weight, \`mag:john-paul-ii/apostolic-letter-2004-11-26\`, the motu proprio vatican.va shelves`,
+    `   with an Italian title and no incipit (hence its provisional id), is in §11 with a *Nuntii* entry as the only one of its date.`,
+  ],
+  mappingsProse: [
+    'Decisions taken here with the evidence beside each row of `categories.ts` (the earlier decisions stand): the hyphenated',
+    '`ADHORTATIO APOSTOLICA POST-SYNODALIS` (2003, *Ecclesia in Europa*) to the exhortations row, as the unhyphenated form of 2004 and',
+    '2007 maps; the singular `EPISTULA APOSTOLICA MOTU PROPRIO DATA` (2009) to the motu proprio row, as the plural maps;',
+    '`COSTITUTIONES APOSTOLICAE` (2007) to the constitutions row, the index\'s own misprint, mapped with the heading quoted; and a new',
+    'row for `SYNODUS EPISCOPORUM` with no registry class, the papal acts at the synod, not harvested -- a category of the pope\'s part',
+    'where its numeral continues the part\'s (`VIII – SYNODUS EPISCOPORUM` after Benedict XVI\'s `VII – ITINERA APOSTOLICA` in 2005,',
+    '`XIV` in 2008, as AAS 93 (2001) prints `XV` after `XIV`) and a part of its own where it does not (AAS 69 (1977), `II` after the',
+    'pope\'s twelve categories), which `index.ts` tells apart by the numeral. No heading is left `unknown`.',
+  ],
+  radioProse: (c) => [
+    `The era prints ${c.radio} entr${c.radio === 1 ? 'y' : 'ies'} under a *Nuntii radiophonici* heading: from 2003 the indexes file every message of the`,
+    'pope, the *Urbi et Orbi* of Christmas and Easter included, under the one `NUNTII` heading (§3), and the 9 records of class `urbi-et-orbi`',
+    'the era matches (§12) come from there. The count #27 asks for (`medium: radio`) is therefore zero here, and',
+    '[#38](https://github.com/CatholicOS/cmddr/issues/38) carries the later eras\' count.',
+  ],
+  partsSkippedNote: 'dicasteries, tribunals, offices, *Diarium*',
   generatedOn: '2026-09-21',
 };
 const eraKey = process.argv[2] ?? 'sample';

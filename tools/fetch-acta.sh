@@ -6,8 +6,8 @@
 # (https://www.vatican.va/archive/aas/index_it.htm) rather than guessed, since the file
 # names vary in case (`aas-indice2015.pdf`, `AAS-indice2012.pdf`, `AAS-INDICE2010.pdf`):
 #
-# - an annual *Index generalis* PDF (2010-2024): extracted whole, one page per form feed,
-#   to aas-indice-{year}.txt;
+# - an annual *Index generalis* PDF (2003-2024): extracted whole, one page per form feed,
+#   to aas-indice-{year}.txt; 2003-2009 in the layout mode with spaces collapsed (extract_whole_collapsed);
 # - a whole-volume OCR PDF (1909-2002; 1917 and 1983 in two parts, `AAS-09-I-1917-ocr.pdf`
 #   and `AAS-75-1983-I-ocr.pdf` -- the part before the year in one, after it in the other): the pages of the
 #   *Index documentorum chronologico ordine digestus* are located -- the first by its
@@ -38,7 +38,8 @@
 # Requires: curl, python3 with pypdf (`pip install pypdf`; measured with pypdf 6.14.2).
 #
 # Usage: tools/fetch-acta.sh                 # the ten index PDFs, 2015-2024
-#        tools/fetch-acta.sh 2023            # one index year (2010-2024)
+#        tools/fetch-acta.sh 2023            # one index year (2003-2024; 2003-2009 by the hyphenated URL, layout mode with spaces collapsed -- spec §11.1)
+#        tools/fetch-acta.sh 2003-2009       # the seven index PDFs of phase 2b' (spec §11)
 #        tools/fetch-acta.sh 1958            # one volume (1909-2002); 1917 and 1983 fetch both parts
 #        tools/fetch-acta.sh sample          # the six sources of phase 2b-i: 1909 1917 1931 1958 1978 2012
 #        tools/fetch-acta.sh 1932-1957       # a range of volumes (phase 2b-ii-a: AAS 24-49; 1959-1977 is phase 2b-ii-b, AAS 51-69;
@@ -78,6 +79,42 @@ fetch_pdf() { # fetch_pdf <path-on-vatican.va> <local-pdf> <max-time>
 # The `documents/...` paths the index page links for a year, one per line.
 links_for() { # links_for <year>
   grep -oiE "documents/([0-9]{4}/)?aas-(indice)?[0-9I-]*$1[^\"']*\.pdf" "$INDEX_HTML" | sort -u
+}
+
+# The index page links an *Index generalis* PDF for each of 2003-2009 (`AAS 95` ...
+# `AAS 101`) under paths the server does not resolve -- `documents/AAS-Index%202002-2009/
+# AAS-Index%202005.pdf` (2004-2007, the spaces encoded; 404) and `documents/AAS-Index-2002-
+# 2009-AAS-Index-2003.pdf` (2003, the folder folded into the file name; 404) -- while the
+# form the 2008 and 2009 links take, `documents/AAS-Index-2002-2009/AAS-Index-{year}.pdf`,
+# serves all seven (measured 2026-09-21; acta volumes spec §11.1). The link is read off the
+# page as ever and normalised to that form; the README row records both.
+index_path_for_0309() { # index_path_for_0309 <year>  -> "<as-linked>|<fetched>"
+  local linked
+  linked="$(grep -oiE "documents/[^\"']*AAS-Index[^\"']*$1\.pdf" "$INDEX_HTML" | sort -u | head -n1 || true)"
+  [ -z "$linked" ] && return 0
+  local fetched
+  fetched="$(printf '%s' "$linked" | sed -E 's/%20/-/g; s#AAS-Index-2002-2009-AAS-Index-#AAS-Index-2002-2009/AAS-Index-#')"
+  printf '%s|%s\n' "$linked" "$fetched"
+}
+
+# The text layer of the 2003-2006 index PDFs drops the spaces between words in pypdf's
+# default mode (`I—ACTAIOANNISPAULIPP.II`, `honoresdecernuntur`, a page as `4 3 3`), and
+# 2005, 2008 and 2009 fuse the volume heading (`An.etvol.C 31Decembris2008`); `space_width`
+# changes nothing (measured at 200, 100, 50, 20). The layout mode keeps every space and
+# adds the column gaps these PDFs do not have, so each run of two or more spaces is
+# collapsed to one and each line trimmed (spec §11.1). One page per form feed, as ever.
+extract_whole_collapsed() { # extract_whole_collapsed <pdf> <out>
+  python3 - "$1" "$2" <<'EOF'
+import re, sys
+from pypdf import PdfReader
+pdf, out = sys.argv[1], sys.argv[2]
+pages = [(p.extract_text(extraction_mode='layout') or '') for p in PdfReader(pdf).pages]
+pages = ['\n'.join(re.sub(r' {2,}', ' ', line).strip() for line in page.split('\n')) for page in pages]
+with open(out, 'w', encoding='utf-8') as f:
+    f.write('\f'.join(pages))
+    f.write('\n')
+print(f'    {len(pages)} pages -> {out} (layout mode, spaces collapsed)')
+EOF
 }
 
 extract_whole() { # extract_whole <pdf> <out>
@@ -208,6 +245,23 @@ EOF
 
 get_index() { # get_index <year>
   local year="$1"
+  if [ "$year" -ge 2003 ] && [ "$year" -le 2009 ]; then
+    local pair
+    pair="$(index_path_for_0309 "$year")"
+    if [ -z "$pair" ]; then
+      echo "    MISSING: no index PDF for $year on $BASE/index_it.htm" >&2
+      return 0
+    fi
+    local linked="${pair%%|*}" fetched="${pair##*|}"
+    local pdf="$STORE/AAS-Index-$year.pdf"
+    echo "  $year  ($fetched; linked as $linked)"
+    if ! fetch_pdf "$fetched" "$pdf" 300; then
+      echo "    MISSING: $BASE/$fetched" >&2
+      return 0
+    fi
+    extract_whole_collapsed "$pdf" "tools/fixtures/acta/aas-indice-$year.txt"
+    return 0
+  fi
   local path
   path="$(links_for "$year" | grep -i "indice" | head -n1 || true)"
   if [ -z "$path" ]; then

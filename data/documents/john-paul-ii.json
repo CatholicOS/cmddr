@@ -27608,7 +27608,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ucrainam nationem",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 720
+    }
   },
   {
     "id": "mag:john-paul-ii/christifideles-mexicani-1992",
@@ -49452,7 +49458,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ego praecipio tibi",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 37
+    }
   },
   {
     "id": "mag:john-paul-ii/plenitudo-ergo-2001",
@@ -49496,7 +49508,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Donum autem",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 385
+    }
   },
   {
     "id": "mag:john-paul-ii/dorsum-meum-2001",
@@ -49766,7 +49784,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Si benefacientes",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 100
+    }
   },
   {
     "id": "mag:john-paul-ii/si-haberetis-fidem-2001",
@@ -49865,7 +49889,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Coniuges parentesque",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 166
+    }
   },
   {
     "id": "mag:john-paul-ii/chisinauensis-2001",
@@ -49966,7 +49996,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Non diligamus verbo",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 817
+    }
   },
   {
     "id": "mag:john-paul-ii/omnia-possum-methodius-dominicus-trcka-2001",
@@ -49985,7 +50021,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Omnia possum («Methodius Dominicus Trčka»)",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 168
+    }
   },
   {
     "id": "mag:john-paul-ii/promitto-me-cotidie-2001",
@@ -50054,7 +50096,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Venite filii",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 171
+    }
   },
   {
     "id": "mag:john-paul-ii/dundensis-2001",
@@ -50231,6 +50279,28 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:john-paul-ii/nisi-granum-frumenti-2001",
+    "title": "« Nisi granum frumenti ». Beatae Paulae Montal Forne´saS. Iosepho Calasanctio Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-paul-ii",
+    "issuerType": "pope",
+    "date": "2001-11-25",
+    "source": {
+      "url": null,
+      "shelf": "aas/2003",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Nisi granum frumenti",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 97
+    }
+  },
+  {
     "id": "mag:john-paul-ii/obliviscere-omnino-mei-2001",
     "title": "Obliviscere omnino mei, Lettera Decretale",
     "idStatus": "minted",
@@ -50317,7 +50387,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Spiritale omnium",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 501
+    }
   },
   {
     "id": "mag:john-paul-ii/world-day-of-peace-2002",
@@ -50893,7 +50969,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Domine quando",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 819
+    }
   },
   {
     "id": "mag:john-paul-ii/et-venit-2002",
@@ -50912,7 +50994,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Et venit",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 574
+    }
   },
   {
     "id": "mag:john-paul-ii/hora-est-2002",
@@ -50931,7 +51019,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Hora est",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 576
+    }
   },
   {
     "id": "mag:john-paul-ii/omnibus-omnia-ludovicus-pavoni-2002",
@@ -50950,7 +51044,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Omnibus omnia («Ludovicus Pavoni»)",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 389
+    }
   },
   {
     "id": "mag:john-paul-ii/reconciliamini-deo-2002",
@@ -50969,7 +51069,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Reconciliamini Deo",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 173
+    }
   },
   {
     "id": "mag:john-paul-ii/si-quis-mihi-2002",
@@ -50988,7 +51094,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Si quis mihi",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 387
+    }
   },
   {
     "id": "mag:john-paul-ii/ulaanbaatarensis-2002",
@@ -51326,7 +51438,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Qui passionis",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 500
+    }
   },
   {
     "id": "mag:john-paul-ii/ut-filii-2002",
@@ -51383,7 +51501,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Scriptum est",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 327
+    }
   },
   {
     "id": "mag:john-paul-ii/bonum-mihi-2002",
@@ -51402,7 +51526,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Bonum mihi",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 90
+    }
   },
   {
     "id": "mag:john-paul-ii/et-si-distribuero-2002",
@@ -51421,7 +51551,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Et si distribuero",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 190
+    }
   },
   {
     "id": "mag:john-paul-ii/nam-si-evangelizavero-2002",
@@ -51440,7 +51576,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Nam si evangelizavero",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 821
+    }
   },
   {
     "id": "mag:john-paul-ii/spe-gaudentes-2002",
@@ -51459,7 +51601,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Spe gaudentes",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 391
+    }
   },
   {
     "id": "mag:john-paul-ii/domine-ut-2002",
@@ -51605,7 +51753,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Memores operis",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 329
+    }
   },
   {
     "id": "mag:john-paul-ii/omnia-omnibus-2002",
@@ -51624,7 +51778,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Omnia omnibus",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 823
+    }
   },
   {
     "id": "mag:john-paul-ii/qui-autem-perspexerit-2002",
@@ -51662,7 +51822,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Unus Deus",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 826
+    }
   },
   {
     "id": "mag:john-paul-ii/videbunt-omnes-2002",
@@ -51681,7 +51847,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Videbunt omnes",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 721
+    }
   },
   {
     "id": "mag:john-paul-ii/quo-expeditius-2002",
@@ -51700,7 +51872,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quo expeditius",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 39
+    }
   },
   {
     "id": "mag:john-paul-ii/auchiana-2002",
@@ -51722,7 +51900,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 229
+    }
   },
   {
     "id": "mag:john-paul-ii/coxinensis-2002",
@@ -51748,7 +51932,13 @@
       "circumscription-elevation"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 165
+    }
   },
   {
     "id": "mag:john-paul-ii/world-day-of-prayer-for-vocations-2003",
@@ -51831,7 +52021,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 230
+    }
   },
   {
     "id": "mag:john-paul-ii/novalichesina-2002",
@@ -51990,7 +52186,13 @@
       "year": 2002
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 407
+    }
   },
   {
     "id": "mag:john-paul-ii/acariguaraurensis-2002",
@@ -52016,7 +52218,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 234
+    }
   },
   {
     "id": "mag:john-paul-ii/saxanigrensis-2003",
@@ -52042,7 +52250,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 382
+    }
   },
   {
     "id": "mag:john-paul-ii/samarindaensis-2003",
@@ -52068,7 +52282,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 384
+    }
   },
   {
     "id": "mag:john-paul-ii/slovachiae-2003",
@@ -52090,7 +52310,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 235
+    }
   },
   {
     "id": "mag:john-paul-ii/world-communications-day-2003",
@@ -52249,7 +52475,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Cum postremum",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 392
+    }
   },
   {
     "id": "mag:john-paul-ii/makokuensis-2003",
@@ -52345,7 +52577,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Dignus est operarius",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 723
+    }
   },
   {
     "id": "mag:john-paul-ii/et-obtulerunt-ei-2003",
@@ -52364,7 +52602,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Et obtulerunt ei",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 526
+    }
   },
   {
     "id": "mag:john-paul-ii/euntes-in-mundum-2003",
@@ -52383,7 +52627,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Euntes in mundum",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 728
+    }
   },
   {
     "id": "mag:john-paul-ii/hac-libertate-2003",
@@ -52402,7 +52652,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Hac libertate",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 725
+    }
   },
   {
     "id": "mag:john-paul-ii/praeceptum-domini-2003",
@@ -52421,7 +52677,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Praeceptum Domini",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 394
+    }
   },
   {
     "id": "mag:john-paul-ii/ecclesia-de-eucharistia-2003",
@@ -52450,7 +52712,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ecclesia de Eucharistia",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 433
+    }
   },
   {
     "id": "mag:john-paul-ii/urbi-et-orbi-easter-2003",
@@ -52479,7 +52747,13 @@
       "year": 2003
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 783
+    }
   },
   {
     "id": "mag:john-paul-ii/catechizabo-semper-2003",
@@ -52498,7 +52772,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Catechizabo semper",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 21
+    }
   },
   {
     "id": "mag:john-paul-ii/cultus-eucharisticus-maria-christina-brando-2003",
@@ -52517,7 +52797,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Cultus eucharisticus («Maria Christina Brando»)",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 26
+    }
   },
   {
     "id": "mag:john-paul-ii/maiores-quam-ipse-2003",
@@ -52536,7 +52822,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Maiores quam ipse",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 8
+    }
   },
   {
     "id": "mag:john-paul-ii/pacem-tantum-2003",
@@ -52555,7 +52847,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Pacem tantum",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 730
+    }
   },
   {
     "id": "mag:john-paul-ii/per-caritatem-invicem-2003",
@@ -52574,7 +52872,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Per caritatem invicem",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 396
+    }
   },
   {
     "id": "mag:john-paul-ii/qui-maior-est-vestrum-2003",
@@ -52631,7 +52935,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Effigies viva",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 720
+    }
   },
   {
     "id": "mag:john-paul-ii/evangelicam-legem-2003",
@@ -52729,7 +53039,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 566
+    }
   },
   {
     "id": "mag:john-paul-ii/sanctae-mariae-in-astana-2003",
@@ -52868,7 +53184,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Trinitatis mysterium",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 88
+    }
   },
   {
     "id": "mag:john-paul-ii/sancta-elisabeth-2003",
@@ -52887,7 +53209,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Sancta Elisabeth",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 721
+    }
   },
   {
     "id": "mag:john-paul-ii/vitae-sensus-maria-iesu-crucifixi-2003",
@@ -52906,7 +53234,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Vitae sensus («Maria Iesu crucifixi»)",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 132
+    }
   },
   {
     "id": "mag:john-paul-ii/world-tourism-day-2003",
@@ -53004,7 +53338,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Fides catholica («Ivanus Merz»)",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 134
+    }
   },
   {
     "id": "mag:john-paul-ii/ad-plenius-2003",
@@ -53023,7 +53363,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ad plenius",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 829
+    }
   },
   {
     "id": "mag:john-paul-ii/cubaoensis-2003",
@@ -53075,7 +53421,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ecclesia in Europa",
-    "sourceGenreLabel": "apost_exhortations"
+    "sourceGenreLabel": "apost_exhortations",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 649
+    }
   },
   {
     "id": "mag:john-paul-ii/kalookana-2003",
@@ -53141,7 +53493,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 95,
+      "year": 2003,
+      "page": 810
+    }
   },
   {
     "id": "mag:john-paul-ii/engativensis-2003",
@@ -53260,7 +53618,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ridebit mundus",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 733
+    }
   },
   {
     "id": "mag:john-paul-ii/vobis-hoc-donatum-2003",
@@ -53279,7 +53643,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Vobis hoc donatum",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 735
+    }
   },
   {
     "id": "mag:john-paul-ii/caritas-christi-urget-2003",
@@ -53416,7 +53786,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 84
+    }
   },
   {
     "id": "mag:john-paul-ii/portus-abditi-2003",
@@ -53438,7 +53814,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 85
+    }
   },
   {
     "id": "mag:john-paul-ii/maiorem-hac-dilectionem-aloisius-maria-monti-2003",
@@ -53457,7 +53839,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Maiorem hac dilectionem («Aloisius Maria Monti»)",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 867
+    }
   },
   {
     "id": "mag:john-paul-ii/mihi-eorum-aspectu-maria-rosalia-rendu-2003",
@@ -53476,7 +53864,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Mihi eorum aspectu («Maria Rosalia Rendu»)",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 284
+    }
   },
   {
     "id": "mag:john-paul-ii/misericors-est-dominus-valentinus-paquay-2003",
@@ -53495,7 +53889,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Misericors est Dominus («Valentinus Paquay»)",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 289
+    }
   },
   {
     "id": "mag:john-paul-ii/quocumque-in-opere-bonifatia-rodriguez-castro-2003",
@@ -53514,7 +53914,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quocumque in opere («Bonifatia Rodríguez Castro»)",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 137
+    }
   },
   {
     "id": "mag:john-paul-ii/sicut-pastor-bonus-ioannes-nepomucenus-zegri-y-moreno-2003",
@@ -53533,7 +53939,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Sicut pastor bonus («Ioannes Nepomucenus Zegrí y Moreno»)",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 286
+    }
   },
   {
     "id": "mag:john-paul-ii/mindelensis-2003",
@@ -53607,7 +54019,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 251
+    }
   },
   {
     "id": "mag:john-paul-ii/in-loco-ubi-sanctus-2003",
@@ -53626,7 +54044,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "In loco ubi sanctus",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 92
+    }
   },
   {
     "id": "mag:john-paul-ii/world-day-of-the-sick-2004",
@@ -53731,7 +54155,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 324
+    }
   },
   {
     "id": "mag:john-paul-ii/apostolic-letter-2003-12-15",
@@ -53752,7 +54182,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 199
+    }
   },
   {
     "id": "mag:john-paul-ii/world-day-of-peace-2004",
@@ -53809,7 +54245,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 325
+    }
   },
   {
     "id": "mag:john-paul-ii/world-day-of-migrants-and-refugees-2004",
@@ -53891,7 +54333,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 140
+    }
   },
   {
     "id": "mag:john-paul-ii/world-communications-day-2004",
@@ -54167,7 +54615,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Inops ego sum («Pietas a Cruce»)",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 296
+    }
   },
   {
     "id": "mag:john-paul-ii/ipsum-eorum-aloisius-talamoni-2004",
@@ -54215,7 +54669,13 @@
       "year": 2004
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 547
+    }
   },
   {
     "id": "mag:john-paul-ii/apostolic-letter-2004-04-25",
@@ -54358,6 +54818,28 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:john-paul-ii/atque-in-te-benedicentur-2004",
+    "title": "« Atque in te benedicentur ». Beato Iosepho Manyanet y Vives Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-paul-ii",
+    "issuerType": "pope",
+    "date": "2004-05-16",
+    "source": {
+      "url": null,
+      "shelf": "aas/2005",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Atque in te benedicentur",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 121
+    }
+  },
+  {
     "id": "mag:john-paul-ii/beatus-hannibal-maria-di-francia-2004",
     "title": "Beatus Hannibal Maria di Francia, Lettera Decretale",
     "idStatus": "minted",
@@ -54434,6 +54916,28 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:john-paul-ii/cum-vidisset-ergo-2004",
+    "title": "« Cum vidisset ergo ». Beatae Paulae Elisabethae Cerioli Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-paul-ii",
+    "issuerType": "pope",
+    "date": "2004-05-16",
+    "source": {
+      "url": null,
+      "shelf": "aas/2005",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Cum vidisset ergo",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 124
+    }
+  },
+  {
     "id": "mag:john-paul-ii/faciem-tuam-2004",
     "title": "Faciem tuam, Lettera Decretale («Beatus Nimatullacius Al Hardini»)",
     "idStatus": "minted",
@@ -54451,6 +54955,28 @@
     },
     "incipit": "Faciem tuam",
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:john-paul-ii/faciem-tuam-domine-2004",
+    "title": "« Faciem tuam, Domine ». Beato Nimatullacio Al Hardini Sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-paul-ii",
+    "issuerType": "pope",
+    "date": "2004-05-26",
+    "source": {
+      "url": null,
+      "shelf": "aas/2005",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Faciem tuam, Domine",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 276
+    }
   },
   {
     "id": "mag:john-paul-ii/world-tourism-day-2004",
@@ -54503,7 +55029,38 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 621
+    }
+  },
+  {
+    "id": "mag:john-paul-ii/ad-totius-dominici-2004",
+    "title": "Ad totius dominici. Nova conditur Provincia ecclesiastica scilicet Barcinonensis, quae Sedes ad dignitatem Ecclesiae metropolitanae attollitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-paul-ii",
+    "issuerType": "pope",
+    "date": "2004-06-05",
+    "source": {
+      "url": null,
+      "shelf": "aas/2004",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Ad totius dominici",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 622
+    }
   },
   {
     "id": "mag:john-paul-ii/barcinonensis-2004",
@@ -54603,7 +55160,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 717
+    }
   },
   {
     "id": "mag:john-paul-ii/villavicentiensis-2004",
@@ -54629,7 +55192,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 620
+    }
   },
   {
     "id": "mag:john-paul-ii/baghiopolitana-2004",
@@ -54651,7 +55220,38 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 718
+    }
+  },
+  {
+    "id": "mag:john-paul-ii/varia-inter-munera-2004",
+    "title": "Varia inter munera. Ex Archidioecesi Barcinonensi quodam distracto territorio nova dioecesis Sancti Felicis de Llobregat appellanda erigitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-paul-ii",
+    "issuerType": "pope",
+    "date": "2004-07-15",
+    "source": {
+      "url": null,
+      "shelf": "aas/2004",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Varia inter munera",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 716
+    }
   },
   {
     "id": "mag:john-paul-ii/world-youth-day-2005",
@@ -54712,7 +55312,79 @@
       "year": 2005,
       "ordinal": 42
     },
-    "sourceGenreLabel": "messages/vocations"
+    "sourceGenreLabel": "messages/vocations",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 167
+    }
+  },
+  {
+    "id": "mag:john-paul-ii/omne-quodcumque-2004",
+    "title": "« Omne, quodcumque ». Venerabili Servo Dei Alberto Martelli Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-paul-ii",
+    "issuerType": "pope",
+    "date": "2004-09-05",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Omne, quodcumque",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 609
+    }
+  },
+  {
+    "id": "mag:john-paul-ii/sic-luceat-2004",
+    "title": "« Sic luceat ». Venerabili Servo Dei Petro Tarre´s i Claret Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-paul-ii",
+    "issuerType": "pope",
+    "date": "2004-09-05",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Sic luceat",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 606
+    }
+  },
+  {
+    "id": "mag:john-paul-ii/te-diligere-2004",
+    "title": "« Te diligere ». Venerabili Servae Dei Iosephae Suriano Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-paul-ii",
+    "issuerType": "pope",
+    "date": "2004-09-05",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Te diligere",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 611
+    }
   },
   {
     "id": "mag:john-paul-ii/world-day-of-the-sick-2005",
@@ -54744,6 +55416,94 @@
     "sourceGenreLabel": "messages/sick"
   },
   {
+    "id": "mag:john-paul-ii/cum-iam-missam-2004",
+    "title": "« Cum iam missam ». Venerabili Deo Servo Iosepho Mariae Cassant Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-paul-ii",
+    "issuerType": "pope",
+    "date": "2004-10-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Cum iam missam",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 614
+    }
+  },
+  {
+    "id": "mag:john-paul-ii/et-tuam-ipsius-2004",
+    "title": "« Et tuam ipsius ». Venerabili Dei Servae Annae Catharinae Emmerick Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-paul-ii",
+    "issuerType": "pope",
+    "date": "2004-10-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Et tuam ipsius",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 619
+    }
+  },
+  {
+    "id": "mag:john-paul-ii/illud-tantummodo-2004",
+    "title": "« Illud tantummodo ». Venerabili Deo Servo Carolo e Domo Austriae Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-paul-ii",
+    "issuerType": "pope",
+    "date": "2004-10-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Illud tantummodo",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 622
+    }
+  },
+  {
+    "id": "mag:john-paul-ii/sanctissimum-sacramentum-2004",
+    "title": "« Sanctissimum Sacramentum ». Venerabili Deo Servo Petro Vigne Beatorum caelitum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-paul-ii",
+    "issuerType": "pope",
+    "date": "2004-10-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Sanctissimum Sacramentum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 617
+    }
+  },
+  {
     "id": "mag:john-paul-ii/testimonium-vita-propria-maria-ludovica-de-angelis-2004",
     "title": "Testimonium vita propria («Maria Ludovica de Angelis»)",
     "idStatus": "minted",
@@ -54760,7 +55520,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Testimonium vita propria («Maria Ludovica de Angelis»)",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 387
+    }
   },
   {
     "id": "mag:john-paul-ii/mane-nobiscum-domine-2004",
@@ -54786,7 +55552,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Mane nobiscum Domine",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 337
+    }
   },
   {
     "id": "mag:john-paul-ii/world-food-day-2004",
@@ -54814,7 +55586,13 @@
       "year": 2004,
       "ordinal": 24
     },
-    "sourceGenreLabel": "messages/food"
+    "sourceGenreLabel": "messages/food",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 967
+    }
   },
   {
     "id": "mag:john-paul-ii/bruneiensis-2004",
@@ -54840,7 +55618,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 16
+    }
   },
   {
     "id": "mag:john-paul-ii/doriensis-2004",
@@ -54866,7 +55650,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 17
+    }
   },
   {
     "id": "mag:john-paul-ii/world-day-of-migrants-and-refugees-2005",
@@ -54893,7 +55683,13 @@
       "id": "world-day-of-migrants-and-refugees",
       "year": 2005
     },
-    "sourceGenreLabel": "messages/migration"
+    "sourceGenreLabel": "messages/migration",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 173
+    }
   },
   {
     "id": "mag:john-paul-ii/apostolic-letter-2004-11-26",
@@ -54975,7 +55771,13 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 128
+    }
   },
   {
     "id": "mag:john-paul-ii/urbi-et-orbi-christmas-2004",
@@ -55005,7 +55807,38 @@
       "year": 2004
     },
     "actKind": "liturgical",
-    "sourceGenreLabel": "messages/urbi"
+    "sourceGenreLabel": "messages/urbi",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 184
+    }
+  },
+  {
+    "id": "mag:john-paul-ii/cum-pacis-et-gaudii-2004",
+    "title": "Cum pacis et gaudii. In Foederatis Civitatibus Americae Septentrionalis nova constituitur provincia ecclesiastica Galvestoniensis-Houstoniensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:john-paul-ii",
+    "issuerType": "pope",
+    "date": "2004-12-27",
+    "source": {
+      "url": null,
+      "shelf": "aas/2005",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Cum pacis et gaudii",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 129
+    }
   },
   {
     "id": "mag:john-paul-ii/castagnalensis-de-para-2004",
@@ -55082,7 +55915,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Il rapido sviluppo",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 265
+    }
   },
   {
     "id": "mag:john-paul-ii/world-communications-day-2005",
@@ -55111,7 +55950,13 @@
       "year": 2005,
       "ordinal": 39
     },
-    "sourceGenreLabel": "messages/communications"
+    "sourceGenreLabel": "messages/communications",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 188
+    }
   },
   {
     "id": "mag:john-paul-ii/tiranensis-dyrracena-2005",
@@ -55137,7 +55982,13 @@
       "circumscription-elevation"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 131
+    }
   },
   {
     "id": "mag:john-paul-ii/lent-2005",
@@ -55300,6 +56151,12 @@
       "circumscription-erection"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 377
+    }
   }
 ]

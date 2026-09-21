@@ -106,6 +106,8 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
       'ADHORTATIONES APOSTOLICAE', 'ADHORTATIO APOSTOLICA', 'ADHORTATIO APOSTOLICA POSTSYNODALIS',
       'ADHORTATIONES APOSTOLICAE POSTSYNODALES',
       'ADHORTATIO AD POPULORUM BELLIGERANTIUM MODERATORES', 'ADHORTATIO AD POPULORUM BELLIOERANTIUM MODERATORES',
+      // The 2003 index PDF hyphenates the word (*Ecclesia in Europa*, 28 June 2003, AAS 95 (2003) 649).
+      'ADHORTATIO APOSTOLICA POST-SYNODALIS',
     ],
     classes: [{ genre: 'apostolic-exhortation' }], harvested: 'yes' },
   // The apost_constitutions shelf: a papal-bull bearing `apostolic-constitution` (README,
@@ -118,7 +120,12 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // cura*), the OCR once reading the numeral `I.` as `T.` (AAS 14, 1922: *Ad christifidelium
   // bonum*). The *Index generalis rerum* of AAS 1 (1909) 833 heads the bare plural
   // `CONSTITUTIONES, 5, 7,` (AAS 2, 1910, and AAS 3, 1911, read the same).
-  { id: 'Constitutiones Apostolicae', headings: ['CONSTITUTIONES APOSTOLICAE', 'BULLA DOGMATICA', 'CONSTITUTIO APOSTOLICA', 'CONSTITUTIONES'],
+  { id: 'Constitutiones Apostolicae',
+    headings: [
+      'CONSTITUTIONES APOSTOLICAE', 'BULLA DOGMATICA', 'CONSTITUTIO APOSTOLICA', 'CONSTITUTIONES',
+      // The 2007 index PDF's own misprint, `VI – COSTITUTIONES APOSTOLICAE` (AAS 99, 2007), mapped with the heading quoted.
+      'COSTITUTIONES APOSTOLICAE',
+    ],
     classes: [{ genre: 'papal-bull', requires: 'apostolic-constitution' }], harvested: 'yes' },
   // The motu_proprio shelf, merged into apost_letters where a document is filed on both:
   // an apostolic-letter bearing `motu-proprio`. A document vatican.va filed on
@@ -135,7 +142,9 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // The *Index generalis rerum* of AAS 8 (1916) 497 reads `MOTU PROPRJO, 387.` (`J` for `I`).
   { id: 'Litterae Apostolicae Motu proprio datae',
     headings: ['LITTERAE APOSTOLICAE MOTU PROPRIO DATAE', 'LITTERAE APOSTOLICAE «MOTU PROPRIO» DATAE', 'MOTU PROPRIO', 'MOTTI PROPRIO',
-      'EPISTULAE APOSTOLICAE «MOTU PROPRIO» DATAE', 'MOTU PROPRJO'],
+      'EPISTULAE APOSTOLICAE «MOTU PROPRIO» DATAE', 'MOTU PROPRJO',
+      // The 2009 index PDF heads one act in the singular (`II – EPISTULA APOSTOLICA MOTU PROPRIO DATA`, AAS 101, 2009).
+      'EPISTULA APOSTOLICA MOTU PROPRIO DATA'],
     classes: [{ genre: 'apostolic-letter', requires: 'motu-proprio' }], harvested: 'yes' },
   // The apost_letters shelf proper: beatification letters and the Latin-incipit tail. A
   // document bearing `motu-proprio` belongs to the category above, so it is excluded here.
@@ -330,6 +339,14 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // Rescripts and notes of the Secretariat of State; no row, and dated sub-lists whose
   // entries can lack a page number.
   { id: 'Secretaria Status', headings: ['SECRETARIA STATUS'], classes: [], harvested: 'no' },
+  // The synod as a numbered category of the pope's part -- `XV - SYNODUS EPISCOPORUM` after
+  // `XIV - ITINERA APOSTOLICA` in AAS 93 (2001), `VIII – SYNODUS EPISCOPORUM` after Benedict
+  // XVI's `VII – ITINERA APOSTOLICA` in the 2005 index PDF (a nuntius and a letter to the
+  // Chinese bishops absent from the synod hall), `XIV – SYNODUS EPISCOPORUM` in 2008 -- where
+  // the volumes of 1967-1977 print `SYNODUS EPISCOPORUM` as a part of its own after the pope's
+  // (AAS 69 (1977): `II - SYNODUS EPISCOPORUM` after the pope's twelve categories). index.ts
+  // tells them apart by the numeral (spec §11.2). Papal acts at the synod; not harvested.
+  { id: 'Synodus Episcoporum', headings: ['SYNODUS EPISCOPORUM'], classes: [], harvested: 'no' },
   // The journeys section re-lists the homilies and addresses of each journey under
   // "Dies N." lines that carry no date of their own; nothing to parse, nothing to match.
   // Paul VI's journeys are headed one by one in the volumes: `PEREGRINATIO SUMMI PONTIFICIS

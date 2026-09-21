@@ -31,6 +31,13 @@ describe('the AAS category table', () => {
     expect(categoryForHeading('LITTERAE INAUDITAE')).toBeNull();
   });
 
+  it('maps the headings of the 2003-2009 index PDFs (spec §11.2): the hyphenated post-synodal exhortation, the 2007 misprint COSTITUTIONES, the singular motu proprio epistula, and the synod as a non-harvested category', () => {
+    expect(categoryForHeading('ADHORTATIO APOSTOLICA POST-SYNODALIS')?.id).toBe('Adhortationes Apostolicae');
+    expect(categoryForHeading('COSTITUTIONES APOSTOLICAE')?.id).toBe('Constitutiones Apostolicae');
+    expect(categoryForHeading('EPISTULA APOSTOLICA MOTU PROPRIO DATA')?.id).toBe('Litterae Apostolicae Motu proprio datae');
+    expect(categoryForHeading('SYNODUS EPISCOPORUM')).toMatchObject({ id: 'Synodus Episcoporum', harvested: 'no' });
+  });
+
   it('lists each heading once, under one row', () => {
     const all = ACTA_CATEGORIES.flatMap((c) => c.headings);
     expect(new Set(all).size).toBe(all.length);
