@@ -76,17 +76,33 @@ not used silently.
    exists for it, and `acta.part` is therefore `"I"` on every 1917 reference. The one act is on the bulls shelf
    (`mag:benedict-xv/providentissima-mater-1917`) and could take a hand-curated reference (*AAS 9-II (1917) 5*) in 2b-ii.
 
+### 1b. Pages recovered from the volume body (spec §10.3)
+
+| Source | Opened without a page | Recovered | unique | dated | fuzzy | Not recovered | none | several | outside runs | header | no incipit | **Rate after recovery** | Harvested, after |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1909 | 111 | 2 | 1 | 0 | 1 | 109 | 0 | 0 | 1 | 0 | 108 | **2.9 %** ⚠ | 3.1 % |
+| 1917-I | 61 | 56 | 54 | 0 | 2 | 5 | 1 | 2 | 0 | 1 | 1 | **91.2 %** ⚠ | 92.9 % |
+| **Total** | **172** | **58** | **55** | **0** | **3** | **114** | **1** | **2** | **1** | **1** | **109** | **40.4 %** | |
+
+*Opened without a page* is the parser's count before recovery (§1); *Recovered* the sidecar's rows, by the rule that accepted
+each page (the only hit in the category's runs; the hit whose dating formula gives the entry's date; the only hit within one OCR
+character); *Not recovered* by its reason (no hit; several hits and no formula to settle them; hits outside the category's runs;
+a running header that contradicts the page; an entry the index describes without an incipit). The rate after recovery counts the
+recovered entries among the entries and every entry opened without a page among the lines -- (entries + recovered) / (page lines +
+opened without a page) -- and the 95 % floor applies to it; a source under it is explained in the reading. Every unrecovered entry
+is listed under §9, *Page not recovered*.
+
 ## 2. Headline per source
 
 | Source | Popes | Entries | In harvested categories | Matched | Ambiguous | Claimed twice | Unmatched | Created | Held | Non-harvested (counted) | Dated > 1 year before the volume | Documents of the popes without an entry |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1909 | Pius X | 2 | 2 | 0 | 0 | 0 | 2 | 2 | 0 | 0 | 0 | 18 |
-| 1917-I | Benedictus XV | 37 | 35 | 1 | 0 | 0 | 34 | 8 | 26 | 2 | 13 | 8 |
+| 1909 | Pius X | 4 | 4 | 2 | 0 | 0 | 2 | 2 | 0 | 0 | 0 | 13 |
+| 1917-I | Benedictus XV | 93 | 91 | 6 | 0 | 0 | 85 | 28 | 57 | 2 | 16 | 3 |
 | 1931 | Pius XI | 76 | 73 | 4 | 0 | 0 | 68 | 59 | 10 | 3 | 6 | 2 |
 | 1958 | Pius XII, Ioannes XXIII | 179 | 132 | 73 | 7 | 0 | 52 | 36 | 23 | 47 | 1 | 7 |
 | 1978 | Paulus VI, Ioannes Paulus I, Ioannes Paulus II | 162 | 72 | 29 | 0 | 0 | 43 | 28 | 15 | 90 | 0 | 7 |
 | 2012 | Benedictus XVI | 151 | 61 | 24 | 2 | 0 | 35 | 13 | 24 | 90 | 17 | 15 |
-| **Total** | | **607** | **375** | **131** | **9** | **0** | **234** | **146** | **98** | **232** | **37** | **57** |
+| **Total** | | **665** | **433** | **138** | **9** | **0** | **285** | **166** | **129** | **232** | **40** | **47** |
 
 *Claimed twice* counts the documents two entries both match (§5), as the 2015–2024 report does; a document claimed from
 two sources counts in each. *Unmatched* counts the entries of a harvested or partly harvested category the join left without a document (each is
@@ -97,12 +113,12 @@ shelf documents of the source's popes dated in the volume year that carry no `ac
 
 ### The reading
 
-1. **131 references written, every one from a quoted index line (§12):** 1 curated, 19 incipit, 1 incipit-month, 22 toponym, 88 unique. The
+1. **138 references written, every one from a quoted index line (§12):** 1 curated, 19 incipit, 3 incipit-month, 22 toponym, 93 unique. The
    *incipit-month* matches are the month-only entries of §1.3; the *toponym* and *incipit* ones include the claims the
    evidence rule resolved (`match.ts`): where several constitutions of one day are entered against one shelf record of the
    day (10 November 1977: *Avkaënsis*, *Mohaleshoekensis*, *Ambikapurensis* against the shelf's *Avkaensis*), the entry the
    record names keeps the match and the others are released to the creator instead of all three being withheld.
-2. **146 documents created** (§8) -- `rp:benedict-xv` 8, `rp:benedict-xvi` 13, `rp:paul-vi` 28, `rp:pius-x` 2, `rp:pius-xi` 59, `rp:pius-xii` 36 -- and 98 entries held (§9), 7 of them by the
+2. **166 documents created** (§8) -- `rp:benedict-xv` 28, `rp:benedict-xvi` 13, `rp:paul-vi` 28, `rp:pius-x` 2, `rp:pius-xi` 59, `rp:pius-xii` 36 -- and 129 entries held (§9), 9 of them by the
    duplicate guard and 2 by the OCR rule, 1 by the reprint rule. 61 constitutions print toponym and incipit both (§1.5), so almost no provisional id is minted from the
    volumes; the *Epistulae* are created only where the pope's letters shelf is harvested (Pius XI, Pius XII, John Paul I in this
    sample) and held elsewhere (§9, *shelf not harvested*).
@@ -126,14 +142,14 @@ Parsed / matched / ambiguous / unmatched for every category the era prints, with
 
 | Category | Harvested | 1909 | 1917-I | 1931 | 1958 | 1978 | 2012 |
 |---|---|---|---|---|---|---|---|
-| Litterae Encyclicae | yes |  |  | 4 / 4 / 0 / 0 | 2 / 2 / 0 / 0 |  |  |
+| Litterae Encyclicae | yes | 1 / 1 / 0 / 0 | 1 / 1 / 0 / 0 | 4 / 4 / 0 / 0 | 2 / 2 / 0 / 0 |  |  |
 | Adhortationes Apostolicae | yes |  | 1 / 1 / 0 / 0 |  |  |  | 2 / 2 / 0 / 0 |
-| Constitutiones Apostolicae | yes |  |  | 12 / 0 / 0 / 12 | 37 / 37 / 0 / 0 | 28 / 3 / 0 / 25 | 11 / 8 / 2 / 1 |
-| Litterae Apostolicae Motu proprio datae | yes |  |  | 2 / 0 / 0 / 2 | 1 / 1 / 0 / 0 | 1 / 1 / 0 / 0 | 3 / 3 / 0 / 0 |
-| Litterae Apostolicae | yes | 2 / 0 / 0 / 2 | 23 / 0 / 0 / 23 | 38 / 0 / 0 / 37 | 58 / 19 / 2 / 37 | 25 / 17 / 0 / 8 | 12 / 0 / 0 / 12 |
+| Constitutiones Apostolicae | yes | 1 / 1 / 0 / 0 |  | 12 / 0 / 0 / 12 | 37 / 37 / 0 / 0 | 28 / 3 / 0 / 25 | 11 / 8 / 2 / 1 |
+| Litterae Apostolicae Motu proprio datae | yes |  | 6 / 4 / 0 / 2 | 2 / 0 / 0 / 2 | 1 / 1 / 0 / 0 | 1 / 1 / 0 / 0 | 3 / 3 / 0 / 0 |
+| Litterae Apostolicae | yes | 2 / 0 / 0 / 2 | 43 / 0 / 0 / 43 | 38 / 0 / 0 / 37 | 58 / 19 / 2 / 37 | 25 / 17 / 0 / 8 | 12 / 0 / 0 / 12 |
 | Epistulae Apostolicae | yes |  |  | 1 / 0 / 0 / 1 |  |  |  |
 | Litterae Decretales | partly |  |  |  |  | 2 / 0 / 0 / 2 | 9 / 0 / 0 / 9 |
-| Epistulae | partly |  | 11 / 0 / 0 / 11 | 15 / 0 / 0 / 15 | 19 / 13 / 5 / 1 | 6 / 3 / 0 / 3 |  |
+| Epistulae | partly |  | 40 / 0 / 0 / 40 | 15 / 0 / 0 / 15 | 19 / 13 / 5 / 1 | 6 / 3 / 0 / 3 |  |
 | Chirographa | no |  |  | 2 |  |  |  |
 | Homiliae | no |  |  |  |  | 11 | 34 |
 | Allocutiones | no |  |  |  | 38 | 70 | 43 |
@@ -454,7 +470,7 @@ the fixture prints it. No heading was left `unknown` (§1).
 | ADHORTATIONES APOSTOLICAE POSTSYNODALES | 2012 | Adhortationes Apostolicae | `apostolic-exhortation` | yes | yes (apost_exhortations shelf, per pope) |
 | ALLOCUTIONES | 1958, 1978, 2012 | Allocutiones | `discourse-address` | no | no (not harvested) |
 | CHIROGRAPHE | 1931 | Chirographa | — | no | no (not harvested) |
-| CONSTITUTIONES APOSTOLICAE | 1931, 1958, 1978, 2012 | Constitutiones Apostolicae | `papal-bull`+apostolic-constitution | yes | yes (apost_constitutions/apost-constitutions shelf, per pope) |
+| CONSTITUTIONES APOSTOLICAE | 1909, 1931, 1958, 1978, 2012 | Constitutiones Apostolicae | `papal-bull`+apostolic-constitution | yes | yes (apost_constitutions/apost-constitutions shelf, per pope) |
 | CONVENTIO | 1958, 1978 | Conventiones | — | no | no (not harvested) |
 | CONVENTIONES | 2012 | Conventiones | — | no | no (not harvested) |
 | EPISTOLA APOSTOLICA | 1931 | Epistulae Apostolicae | `apostolic-letter` (not motu-proprio) | yes | no: the twelve unmatched of 2015-2024 are on the year-partitioned letters shelf, not harvested for Francis (#4); the two of Pius XII wait with them |
@@ -466,8 +482,8 @@ the fixture prints it. No heading was left `unknown` (§1).
 | LITTERAE APOSTOLICAE «MOTU PROPRIO» DATAE | 2012 | Litterae Apostolicae Motu proprio datae | `apostolic-letter`+motu-proprio | yes | yes (motu_proprio shelf, per pope) |
 | LITTERAE APOSTOLICAE | 1909, 1917-I, 1931, 1958, 1978, 2012 | Litterae Apostolicae | `apostolic-letter` (not motu-proprio) | yes | yes (apost_letters shelf, per pope) |
 | LITTERAE DECRETALES | 1978, 2012 | Litterae Decretales | `papal-bull` (not apostolic-constitution) | partly | yes (bulls shelf, per pope) |
-| LITTERAE ENCYCLICAE | 1931, 1958 | Litterae Encyclicae | `encyclical` | yes | yes (encyclicals shelf, per pope) |
-| MOTU PROPRIO | 1931, 1958 | Litterae Apostolicae Motu proprio datae | `apostolic-letter`+motu-proprio | yes | yes (motu_proprio shelf, per pope) |
+| LITTERAE ENCYCLICAE | 1909, 1917-I, 1931, 1958 | Litterae Encyclicae | `encyclical` | yes | yes (encyclicals shelf, per pope) |
+| MOTU PROPRIO | 1917-I, 1931, 1958 | Litterae Apostolicae Motu proprio datae | `apostolic-letter`+motu-proprio | yes | yes (motu_proprio shelf, per pope) |
 | NUNCIUM RADIOPHONICUM | 1931 | Nuntii radiophonici | `message`, `urbi-et-orbi` | partly | no: occasional radio messages are on no harvested shelf; the category maps to two classes; counted for #27 (medium), not applied |
 | NUNTII GRATULATORII | 1978 | Nuntii gratulatorii | `message` | no | no (not harvested) |
 | NUNTII RADIOPHONICI | 1958 | Nuntii radiophonici | `message`, `urbi-et-orbi` | partly | no: occasional radio messages are on no harvested shelf; the category maps to two classes; counted for #27 (medium), not applied |
@@ -561,7 +577,7 @@ Entries of the era so held: AAS 23 (1931) 41 (*Quo maiori rerum*).
 
 </details>
 
-<details><summary><b>1917-I · Litterae Apostolicae</b> — 23 unmatched</summary>
+<details><summary><b>1917-I · Litterae Apostolicae</b> — 43 unmatched</summary>
 
 | Reference | Pope | Date | Entry | Belief |
 |---|---|---|---|---|
@@ -569,32 +585,60 @@ Entries of the era so held: AAS 23 (1931) 41 (*Quo maiori rerum*).
 | AAS 9-I (1917) 53 | Benedictus XV | 1915-08-11 | *Benigne annuentes* — Plenaria indulgentia conceditur pro festo Bb. Agathangeli et Cassiani | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 98 | Benedictus XV | 1915-11 | Nihil est A - Templum Ss. Eucharistiae Sacramento in civitate Bonaeren | **month-only date**: nothing of the class in 1915-11 is harvested |
 | AAS 9-I (1917) 55 | Benedictus XV | 1915-12 | *Divinum praeceptum* — Conceditur Seminario archiepiscopali Bonaerensi potestas conferendi academicos gradus in P | **month-only date**: nothing of the class in 1915-12 is harvested |
-| AAS 9-I (1917) 57 | Benedictus XV | 1910-01-13 | *Eximia fidelium* — Templum B. M. V. vulgo « del Pino » in Urbe « Las Palmas », Canariensis dioeceseos, ad Bas | act of a previous pontificate printed in this volume; no document of this pope can match |
-| AAS 9-I (1917) 58 | Benedictus XV | 1910-01-18 | *Romani Pontifices* — «Parvum sanctuarium Mariae Virginis perdolentis vulgo " Al Fiumícello „ », quod Neapoli ex | act of a previous pontificate printed in this volume; no document of this pope can match |
-| AAS 9-I (1917) 59 | Benedictus XV | 1910-02-16 | *Nihil est profecto* — Confraternitas sub titulo « Ligue de l'Evangile », in oppido « Montmagny », dioeceseos Ver | act of a previous pontificate printed in this volume; no document of this pope can match |
-| AAS 9-I (1917) 61 | Benedictus XV | 1910-02-25 | *Romanorum Pontificum* — Preces quaedam ad Ecclesiae unitatem a Domino impetrandam indulgentiis ditantur.... . . .  | act of a previous pontificate printed in this volume; no document of this pope can match |
-| AAS 9-I (1917) 63 | Benedictus XV | 1910-04-27 | *Rhedonensi in Urbe* — Curiale templum Rhedonense, sub titulo SSmi Salvatoris et B. M. V. de miraculis et virtuti | act of a previous pontificate printed in this volume; no document of this pope can match |
-| AAS 9-I (1917) 64 | Benedictus XV | 1910-04-27 | *Conspicua Dei templa* — Titulus Basilicae minoris pro parochiali ecclesia Rhedonensi S. Albino Ep. et | act of a previous pontificate printed in this volume; no document of this pope can match |
-| AAS 9-I (1917) 66 | Benedictus XV | 1910-05 | *Dilectus filius Noster* — Sodalitio a catholica veritate, vulgo « Catholic truth society »,'in Anglia instituto, par | act of a previous pontificate printed in this volume; no document of this pope can match |
-| AAS 9-I (1917) 68 | Benedictus XV | 1910-05-13 | Rector Ecclesiae B. M. V. - Christifidelibus loci « Perth », dioecesis | act of a previous pontificate printed in this volume; no document of this pope can match |
-| AAS 9-I (1917) 69 | Benedictus XV | 1910-05-13 | Basilica B. M. V. - Sanctuarium B. M. V. Montis Berici indulgentiis ac | act of a previous pontificate printed in this volume; no document of this pope can match |
+| AAS 9-I (1917) 57 | Benedictus XV | 1916-01-13 | *Eximia fidelium* — Templum B. M. V. vulgo « del Pino » in Urbe « Las Palmas », Canariensis dioeceseos, ad Bas | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 58 | Benedictus XV | 1916-01-18 | *Romani Pontifices* — «Parvum sanctuarium Mariae Virginis perdolentis vulgo " Al Fiumícello „ », quod Neapoli ex | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 59 | Benedictus XV | 1916-02-16 | *Nihil est profecto* — Confraternitas sub titulo « Ligue de l'Evangile », in oppido « Montmagny », dioeceseos Ver | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 61 | Benedictus XV | 1916-02-25 | *Romanorum Pontificum* — Preces quaedam ad Ecclesiae unitatem a Domino impetrandam indulgentiis ditantur.... . . .  | **another act of the date**: the shelf has `mag:benedict-xv/romanorum-pontificum-1916` (*Romanorum Pontificum*) on 1916-02-25, under another incipit or class |
+| AAS 9-I (1917) 63 | Benedictus XV | 1916-04-27 | *Rhedonensi in Urbe* — Curiale templum Rhedonense, sub titulo SSmi Salvatoris et B. M. V. de miraculis et virtuti | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 64 | Benedictus XV | 1916-04-27 | *Conspicua Dei templa* — Titulus Basilicae minoris pro parochiali ecclesia Rhedonensi S. Albino Ep. et | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 66 | Benedictus XV | 1916-05-02 | *Dilectus filius Noster* — Sodalitio a catholica veritate, vulgo « Catholic truth society »,'in Anglia instituto, par | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 68 | Benedictus XV | 1916-05-13 | Rector Ecclesiae B. M. V. - Christifidelibus loci « Perth », dioecesis | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 69 | Benedictus XV | 1916-05-20 | Basilica B. M. V. - Sanctuarium B. M. V. Montis Berici indulgentiis ac | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 49 | Benedictus XV | 1914-10-16 | *Templa huius almae Urbis* — Canonici pro tempore ecclesiae Ss. Celsi et Iuliani de Urbe « Capellani secreti honoris »  | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 50 | Benedictus XV | 1914-12-10 | *Templa Dei* — Ecclesia S. Michaelis Archangeli civitatis « Piano di Sorrento » titulo simplicis Basilica | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 53 | Benedictus XV | 1915-09-16 | *Cum in sancta* — Conceduntur plenariae et partiales indulgentiae sodalitatibus sub titulo « Foedus Missae q | **another act of the date**: the shelf has `mag:benedict-xv/quandoquidem-in-iis-1915` (*Quandoquidem in iis*) on 1915-09-16, under another incipit or class |
+| AAS 9-I (1917) 72 | Benedictus XV | 1916-05 | *Honorificentissimum magisterium* — Alexandro Ruspoli, viro principi, perinsignis titulus Magni Magistri Hospitii Palatii Apos | **month-only date**: nothing of the class in 1916-05 is harvested |
+| AAS 9-I (1917) 74 | Benedictus XV | 1916-07 | *De more Romanorum Pontificum* — Opus ab apostolatu caritatis, in domo principe Sororum pauperum Senis constitutum, primari | **month-only date**: nothing of the class in 1916-07 is harvested |
+| AAS 9-I (1917) 73 | Benedictus XV | 1916-07 | *Quae ad fovendam* — Concessio indulgentiae recitantibus iaculatoriam precem in honorem B. M. V. vulgo « di Mon | **month-only date**: nothing of the class in 1916-07 is harvested |
+| AAS 9-I (1917) 75 | Benedictus XV | 1916-08 | *Quum magis* — Erectio in perpetuum Sodalitatis a B. M. V. Regina Angelorum, apud sanctuarium abbatiae Ei | **month-only date**: nothing of the class in 1916-08 is harvested |
+| AAS 9-I (1917) 77 | Benedictus XV | 1916-10 | *Centesimo hodie* — De vexillo Cohortis vulgo « dei Gendarmi Pontifici» nuncupatae, aureis numismatibus duobus | **month-only date**: nothing of the class in 1916-10 is harvested |
+| AAS 9-I (1917) 97 | Benedictus XV | 1916-11 | *Quae in longinquis* — Praefectura apostolica Jukonensis in Vicariatum erigitur, duplici titulo denominandum, Juk | **month-only date**: nothing of the class in 1916-11 is harvested |
+| AAS 9-I (1917) 5 | Benedictus XV | 1916-12-10 | *Compertum Nobis est* — Consociatio cleri consortialis in civitate Bononiensi indulgentiis in perpetuum ditatur | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 6 | Benedictus XV | 1916-12-13 | *Quum anno* — Ecclesia S. Antonii Abbatis, Neapoli, ad sacrum militarem Ordinem Constantinianum restitui | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 7 | Benedictus XV | 1916-12-20 | *Exstat Granatae* — Templum S. Ioannis de Deo, quod Granatae exstat, titulo Basilicae minoris cohonestatur. , | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 212 | Benedictus XV | 1917-03-24 | *Refert ad Nos* — Primaria Ssmae Crucis Associatio in "Sessoriana Basilica erecta indulgentiis ditatur | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 262 | Benedictus XV | 1917-04 | *Quae omnia* — Tertiariis saecularibus S. Francisci datur facultas benedictionis seu absolutionis recipie | **month-only date**: nothing of the class in 1917-04 is harvested |
 | AAS 9-I (1917) 320 | Benedictus XV | 1917-04 | *Dilectus filius* — Pio operi vulgo « Messbund » nuncupato indulgentiae in perpetuum conceduntur | **month-only date**: nothing of the class in 1917-04 is harvested |
 | AAS 9-I (1917) 321 | Benedictus XV | 1917-04 | *Supplices, sunt Nobis* — Sodalitati mulierum Bergomensi titulo B. M. V. a pietate et S. Vincentii a Paulo concedunt | **month-only date**: nothing of the class in 1917-04 is harvested |
+| AAS 9-I (1917) 214 | Benedictus XV | 1917-04 | *Si unquam alias* — Venerabili Servo Dei Iosepho Benedicto Cottolengo beatorum caelitum honores decernuntur | **month-only date**: nothing of the class in 1917-04 is harvested |
+| AAS 9-I (1917) 257 | Benedictus XV | 1917-04-10 | *Quod Ioannes* — Venerabili servae Dei Annae a S. Bartholomaeo, carmelitae excalceatae, beatorum caelitum h | **another act of the date**: the shelf has `mag:benedict-xv/quod-ioannes-1917` (*Quod Ioannes*) on 1917-04-10, under another incipit or class |
+| AAS 9-I (1917) 317 | Benedictus XV | 1917-04-12 | *Beati Petri Apostolorum Principis* — Sodalitati veritatis catholicae in Hibernia constitutae indulgentiae et privilegia in perp | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 323 | Benedictus XV | 1917-06-11 | *Supplices ad Nos* — Conceditur ut Ordinis Praedicatorum fratres, sorores et tertiarii in communi viventes acci | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 369 | Benedictus XV | 1917-06-12 | *Extat Granatae* — Indulgentia plenaria quotidiana Basilicae Granatensi S. Ioannis de Deo in perpetuum conced | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 324 | Benedictus XV | 1917-06-12 | *Cum Ssma Virgo Maria* — Ecclesia Tarvisina Assumptionis B. M. V., vulgo « La Madonna grande», titulo et privilegii | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 370 | Benedictus XV | 1917-06-13 | *Quae catholici nomini* — Praefectura apostolica de Kassai Superiore, Congi Belgici, in Vicariatum erigitur | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 371 | Benedictus XV | 1917-06-13 | *Ut mature* — Praefectura apostolica de « Bahr-el-Gazal » in Vicariatum apostolicum erigitur | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 372 | Benedictus XV | 1917-06-15 | *Cum Deipara Virgo* — Sodalibus et monialibus Congregationis Ssmi Redemptoris quandam precem recitantibus indulg | **another act of the date**: the shelf has `mag:benedict-xv/humani-generis-redemptionem-1917` (*Humani Generis Redemptionem*) on 1917-06-15, under another incipit or class |
 | AAS 9-I (1917) 373 | Benedictus XV | 1917-06-16 | *Dilectus filius Himerius a Iesu* — Sodalibus instituti Scholarum Christianarum quandam precem recitantibus indulgentia partia | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 424 | Benedictus XV | 1917-07-10 | *Ad augendam fidelium religionem* — Visitantibus, certis diebus, ecclesiam parochialem S. Vincentii a Paulo in civitate Nancey | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 425 | Benedictus XV | 1917-07-10 | *Quae catholico nomini* — Duodecim districtus paroeciales ab archidioecesi Sydneyensi disiunguntur et dioecesi Goulb | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 424 | Benedictus XV | 1917-07-10 | *Ut, aucto Pastorum numero* — Erigitur nova dioecesis de Wagga-Wagga in Australia. ....... | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 533 | Benedictus XV | 1917-10 | *Saluberrimo sane proposito* — Sodalitas Sacratissimi Cordis Iesu pro piandis animabus in purgatorio igne detentis, quae  | **month-only date**: nothing of the class in 1917-10 is harvested |
 
 </details>
 
-<details><summary><b>1917-I · Epistulae</b> — 11 unmatched</summary>
+<details><summary><b>1917-I · Epistulae</b> — 40 unmatched</summary>
 
 | Reference | Pope | Date | Entry | Belief |
 |---|---|---|---|---|
+| AAS 9-I (1917) 9 | Benedictus XV | 1916-05 | *Votre touchante supplique* — Adm t R. P. Emmanuele Bailly, magistrum generalem Ordinis Augustiniani a B. V. Maria sider | **month-only date**: nothing of the class in 1916-05 is harvested |
+| AAS 9-I (1917) 78 | Benedictus XV | 1916-08 | *Nous avons pris connaissance* — Ad R. P. Henricum Le Floch, Pontificii Seminarii Gallici in Urbe moderatorem, de eius oper | **month-only date**: nothing of the class in 1916-08 is harvested |
+| AAS 9-I (1917) 10 | Benedictus XV | 1916-10 | *Pietà profonda di padre* — Ad Iacobum card. Gibbons, archiep. Baltimorensem, operam commendans Comitatus ad adiuvando | **month-only date**: nothing of the class in 1916-10 is harvested |
+| AAS 9-I (1917) 101 | Benedictus XV | 1916-12-17 | *Administrationem Apostolicam Luganensem* — Ad R. P. D. Alfredum Peri-Morosini, episcopum tit. Arcensem, cui facultatem facit munere a | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 79 | Benedictus XV | 1916-12-17 | *Mentes animosque* — Ad R. fratrem Stratonicum, centesimo exeunte anno ex quo Institutum, cui praeest, Parvorum | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 12 | Benedictus XV | 1916-12-17 | *Scribendi ad vos* — Ad Antonium card. Mendes Bello, patriarcham Lisbonensem, ceterosque Lusitaniae archiepisco | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 81 | Benedictus XV | 1917-01-10 | *Communi vestra epistola* — Ad Ioannem S. R. E. Presb. Card. Csernoch, archiepiscopum Strigoniensium, ceterosque Hunga | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 101 | Benedictus XV | 1917-01-10 | *Probe Nos quidem* — Ad R. P. Alexium Mariam Lépicier, Ord. Servorum B. M. V. priorem generalem, . eius tractat | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 102 | Benedictus XV | 1917-01-15 | *Considerantibus Nobis* — Ad RR. PP. DD. Archiepiscopos et Episcopos Foederatarum Americae Civitatum: societatem « H | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 168 | Benedictus XV | 1917-02 | *Ex litteris* — Ad nobilem virum Ludovicum d'Hendecourt vicecomitem, Societatis Vincentianae praesidem gen | **month-only date**: nothing of the class in 1917-02 is harvested |
 | AAS 9-I (1917) 104 | Benedictus XV | 1917-02-10 | *Compluribus quidem armis* — Ad R. P. Thomam a S. Aloisio Viñas, Ordinis Scholarum Piarum praepositum generalem : in sa | **shelf gap**: nothing of this date is harvested |
@@ -602,10 +646,40 @@ Entries of the era so held: AAS 23 (1931) 41 (*Quo maiori rerum*).
 | AAS 9-I (1917) 107 | Benedictus XV | 1917-02-15 | *Diuturnae munus disciplinae* — Ad R. P. D. Iacobum Sinibaldi, episcopum tit. Tiberiensem, Congregationis Seminariis et Un | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 170 | Benedictus XV | 1917-03 | *Perlibenter Nos* — Ad R. D. Paulum Albera, magistrum maximum Sodalium Salesianorum : acta septimi conventus « | **month-only date**: nothing of the class in 1917-03 is harvested |
 | AAS 9-I (1917) 171 | Benedictus XV | 1917-03 | *Anno iam exeunte centesimo* — Ad R. P. Iosephum Hiss, sacerdotem, societatis Mariae praepositum generalem, exeunte anno  | **month-only date**: nothing of the class in 1917-03 is harvested |
+| AAS 9-I (1917) 223 | Benedictus XV | 1917-03-10 | *Petrianam accepimus stipem* — Ad R. P. D. Emmanuelem Lago y Gonzalez, episcopum Oxomensem, de petriana stipe, nomine dio | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 175 | Benedictus XV | 1917-03-11 | *Opus a Propagatione Fidei* — Ad R. D. Albertum Dien, antistitem urbanum, moderatorem Operis apostolici sacrae supellect | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 176 | Benedictus XV | 1917-03-11 | *Catholicam ephemeridem* — Ad-R. D. Ioannem Franciscum Noli, sacerdotem, curionem ecclesiae Sanctae Mariae Huntington | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 177 | Benedictus XV | 1917-03-12 | *Cum nostra caritas* — Ad R. P. D. Augustinum, episcopum tit. Constantiensem, abbatem generalem Cisterciensium re | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 224 | Benedictus XV | 1917-03-27 | *Fidei et obsequii erga Nos* — Ad R. P. Michaelem Cerdà, praepositum generalem, cum procuratore et consultoribus Clericor | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 327 | Benedictus XV | 1917-04-12 | *Epistola vestra* — Ad Andream card. Ferrari, archiepiscopum Mediolanensem, ac ceteros episcopos provinciae ec | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 428 | Benedictus XV | 1917-04-12 | *In maximis sollicitudinibus* — Ad Rmum D. Iacobum Ogier, sacerdotalis foederis « Pro Pontifice et Ecclesia » moderatorem  | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 225 | Benedictus XV | 1917-04-13 | *Non mediocri cum fructu* — Ad R. P. D. Gasparem Mariam Michaelem Latty, archiepiscopum Avenionensem : de nonnullis co | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 263 | Benedictus XV | 1917-04-14 | *A venerabili fratre Nostro* — Ad R. P. D. Titum Trocchi, archiepiscopum titularem Lacedemoniensem, Delegatum Apostolicum | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 226 | Benedictus XV | 1917-04-14 | *In epistola* — Ad R. P. D. Mauritium Landrieux, episc. Divionensem : epistolam eius pastoralem, quae de p | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 326 | Benedictus XV | 1917-04-30 | *Communem vestram epistolam* — Ad R. P. D. Franciscum Rossi, archiepiscopum Calaritanum, ceterosque archiepiscopos et epi | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 267 | Benedictus XV | 1917-04-30 | *Confirmantur consilia* — Ad R. P. D. Iulianum Guilelmum Conan, archiepiscopum Portus Principis, administratorem apo | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 264 | Benedictus XV | 1917-04-30 | *Habet hoc virtus* — Ad R. P. D. Ioannem Cavanaugh, e Congregatione Sanctae Crucis, moderatorem studiorum Unive | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 376 | Benedictus XV | 1917-06-15 | *Exploratum vobis est* — Expostulatione]» ab Episcopis Mexicanis editam in lege illic latam de re publica novanda a | **another act of the date**: the shelf has `mag:benedict-xv/humani-generis-redemptionem-1917` (*Humani Generis Redemptionem*) on 1917-06-15, under another incipit or class |
+| AAS 9-I (1917) 378 | Benedictus XV | 1917-06-16 | *Admodum probatur* — Ad R. P. Stephanum Babin, antistitem Benedictinorum ad Mariae D. N. de « Cogullada », de i | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 377 | Benedictus XV | 1917-06-16 | *Quod nuntias* — Ad R. D. fratrem Ioannem Iosephum, Fratrum ab instructione christiana moderatorem generale | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 380 | Benedictus XV | 1917-07 | *Testandae benevolentiae* — Ad R. D. Leandrum Schnerr, sac. benedictinum, archiabbatem S. Vincentii, ob annum xxv exeu | **month-only date**: nothing of the class in 1917-07 is harvested |
+| AAS 9-I (1917) 380 | Benedictus XV | 1917-07-13 | *Si- quid est* — Ad R. P. D. Alfredum Louwick, sacerdotum a Missione vicarium generalem, de sodalitio «Muli | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 381 | Benedictus XV | 1917-07-16 | *Qui, Cancellarii munere* — Ad Petrum S. R. E. card. La Fontaine, patriarcham Venetiarum, gratias persolvens de offici | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 485 | Benedictus XV | 1917-09 | *Graves inter amaritudines* — Ad Felicem S. R. E. card. De Hartmann, archiepiscopum Coloniensem, ac ceteros archiepiscop | **month-only date**: nothing of the class in 1917-09 is harvested |
+| AAS 9-I (1917) 486 | Benedictus XV | 1917-09-10 | *Redditae sunt Nobis* — Ad R. P. D. Iulium Mauritium, episcopum Sedunensem, ceterosque Helvetiae episcopos, de com | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 562 | Benedictus XV | 1917-10 | *Exorientem* — Ad R. P. Flavianum Prat, exeunte anno centesimo ab instituta Sodalitate Ss. Cordium Iesu e | **month-only date**: nothing of the class in 1917-10 is harvested |
+| AAS 9-I (1917) 537 | Benedictus XV | 1917-10 | *Omnem vestram* — Ad Petrum S. R. E. card. Maffi, archiepiscopum Pisanum, et Alphonsum S. R. E. card. Mistra | **month-only date**: nothing of the class in 1917-10 is harvested |
+| AAS 9-I (1917) 563 | Benedictus XV | 1917-10-27 | *Communes litterae* — Ad RR. PP. DD. Carolum, archiepiscopum Firmanum, ceterosque Piceni episcopos gratias agens | **shelf gap**: nothing of this date is harvested |
+| AAS 9-I (1917) 563 | Benedictus XV | 1917-10-27 | *Officia pietatis* — Ad RR. PP. DD. Ludovicum, archiepiscopum Ianuensem, ceterosque Liguriae episcopos, de litt | **shelf gap**: nothing of this date is harvested |
+
+</details>
+
+<details><summary><b>1917-I · Litterae Apostolicae Motu proprio datae</b> — 2 unmatched</summary>
+
+| Reference | Pope | Date | Entry | Belief |
+|---|---|---|---|---|
+| AAS 9-I (1917) 209 | Benedictus XV | 1917-04 | *Nobilissimam sacrarum aedium* — De clericorum Collegio Patriarchali Basilicae Liberianae addicendo | **month-only date**: the pope has 1 document(s) of the class in 1917-04 (`mag:benedict-xv/nobilissimam-sacrarum-1917` (*Nobilissimam Sacrarum*)), none with this incipit |
+| AAS 9-I (1917) 561 | Benedictus XV | 1917-11-21 | *Decessor Noster* — De ecclesia S. Mariae Angelorum in Portiuncula Apostolicae Sedi immediate subiecta | **shelf gap**: nothing of this date is harvested |
 
 </details>
 
@@ -962,15 +1036,9 @@ Entries of the era so held: AAS 23 (1931) 41 (*Quo maiori rerum*).
 | AAS 9-I (1917) 53 | Benedictus XV | 1915-08-11 | Litterae Apostolicae | *Benigne annuentes* | created `mag:benedict-xv/benigne-annuentes-1915` |
 | AAS 9-I (1917) 98 | Benedictus XV | 1915-11 | Litterae Apostolicae | Nihil est A - Templum Ss. Eucharistiae Sacramento in civitate Bonaeren | held (unresolvable-date) |
 | AAS 9-I (1917) 55 | Benedictus XV | 1915-12 | Litterae Apostolicae | *Divinum praeceptum* | held (unresolvable-date) |
-| AAS 9-I (1917) 57 | Benedictus XV | 1910-01-13 | Litterae Apostolicae | *Eximia fidelium* | held (date-before-pontificate) |
-| AAS 9-I (1917) 58 | Benedictus XV | 1910-01-18 | Litterae Apostolicae | *Romani Pontifices* | held (date-before-pontificate) |
-| AAS 9-I (1917) 59 | Benedictus XV | 1910-02-16 | Litterae Apostolicae | *Nihil est profecto* | held (date-before-pontificate) |
-| AAS 9-I (1917) 61 | Benedictus XV | 1910-02-25 | Litterae Apostolicae | *Romanorum Pontificum* | held (date-before-pontificate) |
-| AAS 9-I (1917) 63 | Benedictus XV | 1910-04-27 | Litterae Apostolicae | *Rhedonensi in Urbe* | held (date-before-pontificate) |
-| AAS 9-I (1917) 64 | Benedictus XV | 1910-04-27 | Litterae Apostolicae | *Conspicua Dei templa* | held (date-before-pontificate) |
-| AAS 9-I (1917) 66 | Benedictus XV | 1910-05 | Litterae Apostolicae | *Dilectus filius Noster* | held (date-before-pontificate) |
-| AAS 9-I (1917) 68 | Benedictus XV | 1910-05-13 | Litterae Apostolicae | Rector Ecclesiae B. M. V. - Christifidelibus loci « Perth », dioecesis | held (date-before-pontificate) |
-| AAS 9-I (1917) 69 | Benedictus XV | 1910-05-13 | Litterae Apostolicae | Basilica B. M. V. - Sanctuarium B. M. V. Montis Berici indulgentiis ac | held (date-before-pontificate) |
+| AAS 9-I (1917) 49 | Benedictus XV | 1914-10-16 | Litterae Apostolicae | *Templa huius almae Urbis* | created `mag:benedict-xv/templa-huius-almae-urbis-1914` |
+| AAS 9-I (1917) 50 | Benedictus XV | 1914-12-10 | Litterae Apostolicae | *Templa Dei* | created `mag:benedict-xv/templa-dei-1914` |
+| AAS 9-I (1917) 53 | Benedictus XV | 1915-09-16 | Litterae Apostolicae | *Cum in sancta* | created `mag:benedict-xv/cum-in-sancta-1915` |
 | AAS 23 (1931) 313 | Pius XI | 1928-04-14 | Constitutiones Apostolicae | *Romanus Pontifex* | created `mag:pius-xi/romanus-pontifex-1928` |
 | AAS 23 (1931) 317 | Pius XI | 1929-03 | Constitutiones Apostolicae | *Pro munere* | held (unresolvable-date) |
 | AAS 23 (1931) 320 | Pius XI | 1929-03-22 | Constitutiones Apostolicae | *Cura universae* | created `mag:pius-xi/cura-universae-1929` |
@@ -998,7 +1066,7 @@ Entries of the era so held: AAS 23 (1931) 41 (*Quo maiori rerum*).
 
 ## 8. Created from the Acta
 
-The data carries **146** AAS-only records from the era and the creator, re-run here over the shelf records, produces **146** — the same set, entry for entry, and the same records field for field (ids aside, which the collision and ordinal passes assign).
+The data carries **166** AAS-only records from the era and the creator, re-run here over the shelf records, produces **166** — the same set, entry for entry, and the same records field for field (ids aside, which the collision and ordinal passes assign).
 
 Each record carries `source.url` = the whole-volume PDF for a volume source and `null` for an index PDF (spec 2a §4), the
 fixture's `retrieved` date, `source.shelf` `aas/{year}`, and `acta.part` for a double volume (`"I"` for 1917).
@@ -1006,12 +1074,12 @@ fixture's `retrieved` date, `source.shelf` `aas/{year}`, and `acta.part` for a d
 | Category | 1909 | 1917-I | 1931 | 1958 | 1978 | 2012 | Total |
 |---|---|---|---|---|---|---|---|
 | Constitutiones Apostolicae | 0 | 0 | 10 | 0 | 20 | 1 | 31 |
-| Litterae Apostolicae Motu proprio datae | 0 | 0 | 2 | 0 | 0 | 0 | 2 |
-| Litterae Apostolicae | 2 | 8 | 33 | 35 | 8 | 12 | 98 |
+| Litterae Apostolicae Motu proprio datae | 0 | 1 | 2 | 0 | 0 | 0 | 3 |
+| Litterae Apostolicae | 2 | 27 | 33 | 35 | 8 | 12 | 117 |
 | Epistulae | 0 | 0 | 14 | 1 | 0 | 0 | 15 |
-| **Total** | **2** | **8** | **59** | **36** | **28** | **13** | **146** |
+| **Total** | **2** | **28** | **59** | **36** | **28** | **13** | **166** |
 
-By class: apostolic-letter+motu-proprio 2; apostolic-letter 98; letter 15; papal-bull+apostolic-constitution 31. Provisional (no incipit read): 4.
+By class: apostolic-letter+motu-proprio 3; apostolic-letter 117; letter 15; papal-bull+apostolic-constitution 31. Provisional (no incipit read): 6.
 
 **Circumscription material.** Of the 31 AAS-born constitutions of the era, the index describes 20 with an erection or elevation
 verb (*conditur*, *erigitur*, *constituitur*, *dismembrato*, *evehitur*, *attollitur*, *extollitur*); none carries `keywords` or `actKind` (spec 2a §4).
@@ -1032,18 +1100,38 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 
 </details>
 
-<details><summary><b>1917-I</b> — 8 created</summary>
+<details><summary><b>1917-I</b> — 28 created</summary>
 
 | Reference | Category | Id | Title | Index line | Note |
 |---|---|---|---|---|---|
 | AAS 9-I (1917) 53 | Litterae Apostolicae | `mag:benedict-xv/benigne-annuentes-1915` | Benigne annuentes. Plenaria indulgentia conceditur pro festo Bb. Agathangeli et Cassiani | ` Aug. 11 Benigne annuentes. - Plenaria indulgentia conceditur / pro festo Bb. Agathangeli et Cassiani ..... 53` |  |
+| AAS 9-I (1917) 57 | Litterae Apostolicae | `mag:benedict-xv/eximia-fidelium-1916` | Eximia fidelium. Templum B. M. V. vulgo « del Pino » in Urbe « Las Palmas », Canariensis dioeceseos, ad Basilicae minoris dignitatem in perpetuum evehitur | ` 1910 Ian. 13 Eximia fidelium. - Templum B. M. V. vulgo « del Pino » / in Urbe « Las Palmas », Canariensis dioeceseos, ad / Basilicae minoris dignitatem in perpetuum evehitur 57` |  |
+| AAS 9-I (1917) 58 | Litterae Apostolicae | `mag:benedict-xv/romani-pontifices-1916` | Romani Pontifices. «Parvum sanctuarium Mariae Virginis perdolentis vulgo " Al Fiumícello „ », quod Neapoli exstat, pontificio cognomine perpetuo decoratur | ` 18 Romani Pontifices. - «Parvum sanctuarium Mariae / Virginis perdolentis vulgo " Al Fiumícello „ », quod / Neapoli exstat, pontificio cognomine perpetuo de­ / coratur 58` |  |
+| AAS 9-I (1917) 59 | Litterae Apostolicae | `mag:benedict-xv/nihil-est-profecto-1916` | Nihil est profecto. Confraternitas sub titulo « Ligue de l'Evangile », in oppido « Montmagny », dioeceseos Versaliensis constituta, in archisodalitatem perpetuo erigitur, cum facultate aggregandi ubique terrarum. | ` Febr. 16 Nihil est profecto. - Confraternitas sub titulo « Ligue / de l'Evangile », in oppido « Montmagny », dioece­ / seos Versaliensis constituta, in archisodalitatem / perpetuo erigitur, cum facultate aggregandi ubique / terrarum. 59` |  |
+| AAS 9-I (1917) 63 | Litterae Apostolicae | `mag:benedict-xv/rhedonensi-in-urbe-1916` | Rhedonensi in Urbe. Curiale templum Rhedonense, sub titulo SSmi Salvatoris et B. M. V. de miraculis et virtutibus, Basilicae minoris dignitate in perpetuum cohonestatur | ` Apr. 27 Rhedonensi in Urbe. - Curiale templum Rhedonense, / sub titulo SSmi Salvatoris et B. M. V. de miraculis / et virtutibus, Basilicae minoris dignitate in perpe­ / tuum cohonestatur. . . . . . . . . ... 63` |  |
+| AAS 9-I (1917) 64 | Litterae Apostolicae | `mag:benedict-xv/conspicua-dei-templa-1916` | Conspicua Dei templa. Titulus Basilicae minoris pro parochiali ecclesia Rhedonensi S. Albino Ep. et | ` Conspicua Dei templa. - Titulus Basilicae minoris pro / parochiali ecclesia Rhedonensi S. Albino Ep. et 64` |  |
+| AAS 9-I (1917) 66 | Litterae Apostolicae | `mag:benedict-xv/dilectus-filius-noster-1916` | Dilectus filius Noster. Sodalitio a catholica veritate, vulgo « Catholic truth society »,'in Anglia instituto, partiales ac plenariae indulgentiae conceduntur, additis peculiaribus privilegiis pro sociis sacerdotibus | ` Maii Dilectus filius Noster. - Sodalitio a catholica veritate, / vulgo « Catholic truth society »,'in Anglia instituto, / partiales ac plenariae indulgentiae conceduntur, / additis peculiaribus privilegiis pro sociis sacerdo­ / tibus 66` |  |
+| AAS 9-I (1917) 68 | Litterae Apostolicae | `mag:benedict-xv/apostolic-letter-1916-05-13` † | Rector Ecclesiae B. M. V. - Christifidelibus loci « Perth », dioecesis Dunkeldensis, ter salutationem angelicam pro Scotiae conversione recitantibus, nonnullae indulgentiae conceduntur | ` 13 Rector Ecclesiae B. M. V. - Christifidelibus loci « Perth », / dioecesis Dunkeldensis, ter salutationem angelicam / pro Scotiae conversione recitantibus, nonnullae / indulgentiae conceduntur . . . . . . . . . 68` |  |
+| AAS 9-I (1917) 69 | Litterae Apostolicae | `mag:benedict-xv/apostolic-letter-1916-05-20` † | Basilica B. M. V. - Sanctuarium B. M. V. Montis Berici indulgentiis ac privilegiis ditatur | ` Basilica B. M. V. - Sanctuarium B. M. V. Montis Be- / rici indulgentiis ac privilegiis ditatur 69` |  |
+| AAS 9-I (1917) 49 (page recovered: unique) | Litterae Apostolicae | `mag:benedict-xv/templa-huius-almae-urbis-1914` | Templa huius almae Urbis. Canonici pro tempore ecclesiae Ss. Celsi et Iuliani de Urbe « Capellani secreti honoris » in perpetuum renuntiantur. | `1914 Oct. 16 Templa huius almae Urbis. - Canonici pro tempore / ecclesiae Ss. Celsi et Iuliani de Urbe « Capellani / secreti honoris » in perpetuum renuntiantur. . .` |  |
+| AAS 9-I (1917) 50 (page recovered: fuzzy) | Litterae Apostolicae | `mag:benedict-xv/templa-dei-1914` | Templa Dei. Ecclesia S. Michaelis Archangeli civitatis « Piano di Sorrento » titulo simplicis Basilicae decoratur | ` Dec. 10 Templa Dei. - Ecclesia S. Michaelis Archangeli civi­ / tatis « Piano di Sorrento » titulo simplicis Basilicae / decoratur` |  |
+| AAS 9-I (1917) 53 (page recovered: unique) | Litterae Apostolicae | `mag:benedict-xv/cum-in-sancta-1915` | Cum in sancta. Conceduntur plenariae et partiales indulgentiae sodalitatibus sub titulo « Foedus Missae quotidianae » in Hibernia erectis vel erigendis. robis antiquius. | ` Sept. 16 Cum in sancta. - Conceduntur plenariae et partiales / indulgentiae sodalitatibus sub titulo « Foedus Mis­ / sae quotidianae » in Hibernia erectis vel erigendis. / robis antiquius.` |  |
+| AAS 9-I (1917) 5 (page recovered: unique) | Litterae Apostolicae | `mag:benedict-xv/compertum-nobis-est-1916` | Compertum Nobis est. Consociatio cleri consortialis in civitate Bononiensi indulgentiis in perpetuum ditatur | ` Dec. 10 Compertum Nobis est. - Consociatio cleri consortialis / in civitate Bononiensi indulgentiis in perpetuum / ditatur` |  |
+| AAS 9-I (1917) 6 (page recovered: unique) | Litterae Apostolicae | `mag:benedict-xv/quum-anno-1916` | Quum anno. Ecclesia S. Antonii Abbatis, Neapoli, ad sacrum militarem Ordinem Constantinianum restituitur | ` 13 Quum anno. - Ecclesia S. Antonii Abbatis, Neapoli, / ad sacrum militarem Ordinem Constantinianum re­ / stituitur` |  |
+| AAS 9-I (1917) 7 (page recovered: unique) | Litterae Apostolicae | `mag:benedict-xv/exstat-granatae-1916` | Exstat Granatae. Templum S. Ioannis de Deo, quod Granatae exstat, titulo Basilicae minoris cohonestatur. , | ` 20 Exstat Granatae. - Templum S. Ioannis de Deo, quod / Granatae exstat, titulo Basilicae minoris cohone­ / statur. , . . . .` |  |
+| AAS 9-I (1917) 212 (page recovered: unique) | Litterae Apostolicae | `mag:benedict-xv/refert-ad-nos-1917` | Refert ad Nos. Primaria Ssmae Crucis Associatio in "Sessoriana Basilica erecta indulgentiis ditatur | ` Mart. 24 Refert ad Nos. - Primaria Ssmae Crucis Associatio in / "Sessoriana Basilica erecta indulgentiis ditatur . .` |  |
+| AAS 9-I (1917) 317 (page recovered: unique) | Litterae Apostolicae | `mag:benedict-xv/beati-petri-apostolorum-principis-1917` | Beati Petri Apostolorum Principis. Sodalitati veritatis catholicae in Hibernia constitutae indulgentiae et privilegia in perpetuum conceduntur. | ` 12 Beati Petri Apostolorum Principis. - Sodalitati veri­ / tatis catholicae in Hibernia constitutae indulgen­ / tiae et privilegia in perpetuum conceduntur. . .` |  |
+| AAS 9-I (1917) 323 (page recovered: fuzzy) | Litterae Apostolicae | `mag:benedict-xv/supplices-ad-nos-1917` | Supplices ad Nos. Conceditur ut Ordinis Praedicatorum fratres, sorores et tertiarii in communi viventes accipere possint absolutionem generalem cum indulgentia plenaria die festo B. M. V. a Rosario, addita facultate absolutionem huic festo aliisque adnexam accipiendi intra octiduum .... | ` Iun. 11 Supplices ad Nos. - Conceditur ut Ordinis Praedica­ / torum fratres, sorores et tertiarii in communi vi­ / ventes accipere possint absolutionem generalem / cum indulgentia plenaria die festo B. M. V. a Ro­ / sario, addita facultate absolutionem huic festo aliis­ / que adnexam accipiendi intra octiduum ....` |  |
 | AAS 9-I (1917) 369 | Litterae Apostolicae | `mag:benedict-xv/extat-granatae-1917` | Extat Granatae. Indulgentia plenaria quotidiana Basilicae Granatensi S. Ioannis de Deo in perpetuum conceditur | ` Extat Granatae. - Indulgentia plenaria quotidiana / Basilicae Granatensi S. Ioannis de Deo in perpe­ / tuum conceditur ... . 369` |  |
+| AAS 9-I (1917) 324 (page recovered: unique) | Litterae Apostolicae | `mag:benedict-xv/cum-ssma-virgo-maria-1917` | Cum Ssma Virgo Maria. Ecclesia Tarvisina Assumptionis B. M. V., vulgo « La Madonna grande», titulo et privilegiis Basilicae minoris decoratur | ` 12 Cum Ssma Virgo Maria: - Ecclesia Tarvisina Assum­ / ptionis B. M. V., vulgo « La Madonna grande», titulo / et privilegiis Basilicae minoris decoratur . . . .` |  |
 | AAS 9-I (1917) 370 | Litterae Apostolicae | `mag:benedict-xv/quae-catholici-nomini-1917` | Quae catholici nomini. Praefectura apostolica de Kassai Superiore, Congi Belgici, in Vicariatum erigitur | ` 13 Quae catholici nomini. - Praefectura apostolica de / Kassai Superiore, Congi Belgici, in Vicariatum eri­ / gitur 370` |  |
 | AAS 9-I (1917) 371 | Litterae Apostolicae | `mag:benedict-xv/ut-mature-1917` | Ut mature. Praefectura apostolica de « Bahr-el-Gazal » in Vicariatum apostolicum erigitur | ` Ut mature. - Praefectura apostolica de « Bahr-el-Gazal » / in Vicariatum apostolicum erigitur ...... 371` |  |
 | AAS 9-I (1917) 372 | Litterae Apostolicae | `mag:benedict-xv/cum-deipara-virgo-1917` | Cum Deipara Virgo. Sodalibus et monialibus Congregationis Ssmi Redemptoris quandam precem recitantibus indulgentia ccc dierum in perpetuum conceditur | ` 15 Cum Deipara Virgo. - Sodalibus et monialibus Con­ / gregationis Ssmi Redemptoris quandam precem / recitantibus indulgentia ccc dierum in perpetuum / conceditur. . . . . . . . . ... 372` |  |
 | AAS 9-I (1917) 373 | Litterae Apostolicae | `mag:benedict-xv/dilectus-filius-himerius-a-iesu-1917` | Dilectus filius Himerius a Iesu. Sodalibus instituti Scholarum Christianarum quandam precem recitantibus indulgentia partialis ac plenaria in perpetuum conceditur | ` 16 Dilectus filius Himerius a Iesu. - Sodalibus instituti / Scholarum Christianarum quandam precem recitan­ / tibus indulgentia partialis ac plenaria in perpe­ / tuum conceditur .. . . . . . . . . . . . 373` |  |
 | AAS 9-I (1917) 424 | Litterae Apostolicae | `mag:benedict-xv/ad-augendam-fidelium-religionem-1917` | Ad augendam fidelium religionem. Visitantibus, certis diebus, ecclesiam parochialem S. Vincentii a Paulo in civitate Nanceyensi indulgentia plenaria in perpetuum conceditur, .v | ` Iul. 10 Ad augendam fidelium religionem. - Visitantibus, cer­ / tis diebus, ecclesiam parochialem S. Vincentii a / Paulo in civitate Nanceyensi indulgentia plenaria / in perpetuum conceditur, .v 424` |  |
 | AAS 9-I (1917) 425 | Litterae Apostolicae | `mag:benedict-xv/quae-catholico-nomini-1917` | Quae catholico nomini. Duodecim districtus paroeciales ab archidioecesi Sydneyensi disiunguntur et dioecesi Goulbournensi adiiciuntur | ` Quae catholico nomini. - Duodecim districtus paroe­ / ciales ab archidioecesi Sydneyensi disiunguntur et / dioecesi Goulbournensi adiiciuntur 425` |  |
+| AAS 9-I (1917) 424 (page recovered: unique) | Litterae Apostolicae | `mag:benedict-xv/ut-aucto-pastorum-numero-1917` | Ut, aucto Pastorum numero. Erigitur nova dioecesis de Wagga-Wagga in Australia. ....... | ` Ut, aucto Pastorum numero. - Erigitur nova dioecesis / de Wagga-Wagga in Australia. .......` |  |
+| AAS 9-I (1917) 561 (page recovered: unique) | Litterae Apostolicae Motu proprio datae | `mag:benedict-xv/decessor-noster-1917` | Decessor Noster. De ecclesia S. Mariae Angelorum in Portiuncula Apostolicae Sedi immediate subiecta | ` Nov. 21 Decessor Noster. - De ecclesia S. Mariae Angelorum / in Portiuncula Apostolicae Sedi immediate subiecta` |  |
 
 </details>
 
@@ -1218,15 +1306,16 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 | Reason | Held | Of which per source |
 |---|---|---|
 | Category not created from the Acta | 34 | 1931 2; 1958 14; 1978 5; 2012 13 |
-| Shelf not harvested for the pope | 25 | 1917-I 11; 1978 5; 2012 9 |
-| Date before the pontificate | 9 | 1917-I 9 |
+| Shelf not harvested for the pope | 54 | 1917-I 40; 1978 5; 2012 9 |
 | Ambiguous (§5) | 9 | 1958 7; 2012 2 |
-| Unresolvable date (month-only) | 11 | 1917-I 6; 1931 2; 1978 3 |
+| Unresolvable date (month-only) | 20 | 1917-I 15; 1931 2; 1978 3 |
+| Guard: class mismatch | 2 | 1917-I 2 |
 | Guard: possible identity | 1 | 1958 1 |
 | Guard: same incipit elsewhere | 6 | 1931 5; 1958 1 |
 | OCR-damaged incipit or toponym | 2 | 1978 2 |
 | Printed more than once, or cited at more than one page: the citation of record is the other printing or awaits an ACTA_REPRINTS row | 1 | 1931 1 |
-| **Total** | **98** | |
+| **Total** | **129** | |
+| Page not recovered (§1b; outside the total: never reached the join) | 114 | 1909 109; 1917-I 5 |
 
 <details><summary><b>Category not created from the Acta</b> — 34</summary>
 
@@ -1269,10 +1358,18 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 
 </details>
 
-<details><summary><b>Shelf not harvested for the pope</b> — 25</summary>
+<details><summary><b>Shelf not harvested for the pope</b> — 54</summary>
 
 | Reference | Pope | Date | Category | Entry | Candidates | Note |
 |---|---|---|---|---|---|---|
+| AAS 9-I (1917) 9 | Benedictus XV | 1916-05 | Epistulae | *Votre touchante supplique* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 78 | Benedictus XV | 1916-08 | Epistulae | *Nous avons pris connaissance* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 10 | Benedictus XV | 1916-10 | Epistulae | *Pietà profonda di padre* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 101 | Benedictus XV | 1916-12-17 | Epistulae | *Administrationem Apostolicam Luganensem* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 79 | Benedictus XV | 1916-12-17 | Epistulae | *Mentes animosque* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 12 | Benedictus XV | 1916-12-17 | Epistulae | *Scribendi ad vos* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 81 | Benedictus XV | 1917-01-10 | Epistulae | *Communi vestra epistola* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 101 | Benedictus XV | 1917-01-10 | Epistulae | *Probe Nos quidem* | — | the letters shelf is not harvested for rp:benedict-xv |
 | AAS 9-I (1917) 102 | Benedictus XV | 1917-01-15 | Epistulae | *Considerantibus Nobis* | — | the letters shelf is not harvested for rp:benedict-xv |
 | AAS 9-I (1917) 168 | Benedictus XV | 1917-02 | Epistulae | *Ex litteris* | — | the letters shelf is not harvested for rp:benedict-xv |
 | AAS 9-I (1917) 104 | Benedictus XV | 1917-02-10 | Epistulae | *Compluribus quidem armis* | — | the letters shelf is not harvested for rp:benedict-xv |
@@ -1280,10 +1377,31 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 | AAS 9-I (1917) 107 | Benedictus XV | 1917-02-15 | Epistulae | *Diuturnae munus disciplinae* | — | the letters shelf is not harvested for rp:benedict-xv |
 | AAS 9-I (1917) 170 | Benedictus XV | 1917-03 | Epistulae | *Perlibenter Nos* | — | the letters shelf is not harvested for rp:benedict-xv |
 | AAS 9-I (1917) 171 | Benedictus XV | 1917-03 | Epistulae | *Anno iam exeunte centesimo* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 223 | Benedictus XV | 1917-03-10 | Epistulae | *Petrianam accepimus stipem* | — | the letters shelf is not harvested for rp:benedict-xv |
 | AAS 9-I (1917) 175 | Benedictus XV | 1917-03-11 | Epistulae | *Opus a Propagatione Fidei* | — | the letters shelf is not harvested for rp:benedict-xv |
 | AAS 9-I (1917) 176 | Benedictus XV | 1917-03-11 | Epistulae | *Catholicam ephemeridem* | — | the letters shelf is not harvested for rp:benedict-xv |
 | AAS 9-I (1917) 177 | Benedictus XV | 1917-03-12 | Epistulae | *Cum nostra caritas* | — | the letters shelf is not harvested for rp:benedict-xv |
 | AAS 9-I (1917) 224 | Benedictus XV | 1917-03-27 | Epistulae | *Fidei et obsequii erga Nos* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 327 | Benedictus XV | 1917-04-12 | Epistulae | *Epistola vestra* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 428 | Benedictus XV | 1917-04-12 | Epistulae | *In maximis sollicitudinibus* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 225 | Benedictus XV | 1917-04-13 | Epistulae | *Non mediocri cum fructu* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 263 | Benedictus XV | 1917-04-14 | Epistulae | *A venerabili fratre Nostro* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 226 | Benedictus XV | 1917-04-14 | Epistulae | *In epistola* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 326 | Benedictus XV | 1917-04-30 | Epistulae | *Communem vestram epistolam* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 267 | Benedictus XV | 1917-04-30 | Epistulae | *Confirmantur consilia* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 264 | Benedictus XV | 1917-04-30 | Epistulae | *Habet hoc virtus* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 376 | Benedictus XV | 1917-06-15 | Epistulae | *Exploratum vobis est* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 378 | Benedictus XV | 1917-06-16 | Epistulae | *Admodum probatur* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 377 | Benedictus XV | 1917-06-16 | Epistulae | *Quod nuntias* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 380 | Benedictus XV | 1917-07 | Epistulae | *Testandae benevolentiae* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 380 | Benedictus XV | 1917-07-13 | Epistulae | *Si- quid est* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 381 | Benedictus XV | 1917-07-16 | Epistulae | *Qui, Cancellarii munere* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 485 | Benedictus XV | 1917-09 | Epistulae | *Graves inter amaritudines* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 486 | Benedictus XV | 1917-09-10 | Epistulae | *Redditae sunt Nobis* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 562 | Benedictus XV | 1917-10 | Epistulae | *Exorientem* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 537 | Benedictus XV | 1917-10 | Epistulae | *Omnem vestram* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 563 | Benedictus XV | 1917-10-27 | Epistulae | *Communes litterae* | — | the letters shelf is not harvested for rp:benedict-xv |
+| AAS 9-I (1917) 563 | Benedictus XV | 1917-10-27 | Epistulae | *Officia pietatis* | — | the letters shelf is not harvested for rp:benedict-xv |
 | AAS 70 (1978) 217 | Paulus VI | 1977-06-19 | Litterae Decretales | *Regni caelorum* | — | the bulls shelf is not harvested for rp:paul-vi |
 | AAS 70 (1978) 224 | Paulus VI | 1977-10-09 | Litterae Decretales | *Quamvis Libanus* | — | the bulls shelf is not harvested for rp:paul-vi |
 | AAS 70 (1978) 12 | Paulus VI | 1977-08-03 | Epistulae | Ad Moraviae Christifideles, altero exacto saeculo a constituta archidi | — | the letters shelf is not harvested for rp:paul-vi |
@@ -1298,22 +1416,6 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 | AAS 104 (2012) 626 | Benedictus XVI | 2011-10-23 | Litterae Decretales | *Omnia omnibus* | — | the bulls shelf is not harvested for rp:benedict-xvi |
 | AAS 104 (2012) 159 | Benedictus XVI | 2011-10-23 | Litterae Decretales | *Quaerebam excellentissimum* | — | the bulls shelf is not harvested for rp:benedict-xvi |
 | AAS 104 (2012) 863 | Benedictus XVI | 2012-05-10 | Litterae Decretales | *Spiritum Sanctum* | — | the bulls shelf is not harvested for rp:benedict-xvi |
-
-</details>
-
-<details><summary><b>Date before the pontificate</b> — 9</summary>
-
-| Reference | Pope | Date | Category | Entry | Candidates | Note |
-|---|---|---|---|---|---|---|
-| AAS 9-I (1917) 57 | Benedictus XV | 1910-01-13 | Litterae Apostolicae | *Eximia fidelium* | — | 1910-01-13 precedes the election of rp:benedict-xv (1914-09-03): an earlier pontificate's act printed in this volume |
-| AAS 9-I (1917) 58 | Benedictus XV | 1910-01-18 | Litterae Apostolicae | *Romani Pontifices* | — | 1910-01-18 precedes the election of rp:benedict-xv (1914-09-03): an earlier pontificate's act printed in this volume |
-| AAS 9-I (1917) 59 | Benedictus XV | 1910-02-16 | Litterae Apostolicae | *Nihil est profecto* | — | 1910-02-16 precedes the election of rp:benedict-xv (1914-09-03): an earlier pontificate's act printed in this volume |
-| AAS 9-I (1917) 61 | Benedictus XV | 1910-02-25 | Litterae Apostolicae | *Romanorum Pontificum* | — | 1910-02-25 precedes the election of rp:benedict-xv (1914-09-03): an earlier pontificate's act printed in this volume |
-| AAS 9-I (1917) 63 | Benedictus XV | 1910-04-27 | Litterae Apostolicae | *Rhedonensi in Urbe* | — | 1910-04-27 precedes the election of rp:benedict-xv (1914-09-03): an earlier pontificate's act printed in this volume |
-| AAS 9-I (1917) 64 | Benedictus XV | 1910-04-27 | Litterae Apostolicae | *Conspicua Dei templa* | — | 1910-04-27 precedes the election of rp:benedict-xv (1914-09-03): an earlier pontificate's act printed in this volume |
-| AAS 9-I (1917) 66 | Benedictus XV | 1910-05 | Litterae Apostolicae | *Dilectus filius Noster* | — | 1910-05 precedes the election of rp:benedict-xv (1914-09-03): an earlier pontificate's act printed in this volume |
-| AAS 9-I (1917) 68 | Benedictus XV | 1910-05-13 | Litterae Apostolicae | Rector Ecclesiae B. M. V. - Christifidelibus loci « Perth », dioecesis | — | 1910-05-13 precedes the election of rp:benedict-xv (1914-09-03): an earlier pontificate's act printed in this volume |
-| AAS 9-I (1917) 69 | Benedictus XV | 1910-05-13 | Litterae Apostolicae | Basilica B. M. V. - Sanctuarium B. M. V. Montis Berici indulgentiis ac | — | 1910-05-13 precedes the election of rp:benedict-xv (1914-09-03): an earlier pontificate's act printed in this volume |
 
 </details>
 
@@ -1333,21 +1435,39 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 
 </details>
 
-<details><summary><b>Unresolvable date (month-only)</b> — 11</summary>
+<details><summary><b>Unresolvable date (month-only)</b> — 20</summary>
 
 | Reference | Pope | Date | Category | Entry | Candidates | Note |
 |---|---|---|---|---|---|---|
 | AAS 9-I (1917) 51 | Benedictus XV | 1915-01 | Litterae Apostolicae | *Cum antiquius* | — | the index dates the entry to 1915-01 with no day printed; matched by incipit within the month only, never created |
 | AAS 9-I (1917) 98 | Benedictus XV | 1915-11 | Litterae Apostolicae | Nihil est A - Templum Ss. Eucharistiae Sacramento in civitate Bonaeren | — | the index dates the entry to 1915-11 with no day printed; matched by incipit within the month only, never created |
 | AAS 9-I (1917) 55 | Benedictus XV | 1915-12 | Litterae Apostolicae | *Divinum praeceptum* | — | the index dates the entry to 1915-12 with no day printed; matched by incipit within the month only, never created |
+| AAS 9-I (1917) 72 | Benedictus XV | 1916-05 | Litterae Apostolicae | *Honorificentissimum magisterium* | — | the index dates the entry to 1916-05 with no day printed; matched by incipit within the month only, never created |
+| AAS 9-I (1917) 74 | Benedictus XV | 1916-07 | Litterae Apostolicae | *De more Romanorum Pontificum* | — | the index dates the entry to 1916-07 with no day printed; matched by incipit within the month only, never created |
+| AAS 9-I (1917) 73 | Benedictus XV | 1916-07 | Litterae Apostolicae | *Quae ad fovendam* | — | the index dates the entry to 1916-07 with no day printed; matched by incipit within the month only, never created |
+| AAS 9-I (1917) 75 | Benedictus XV | 1916-08 | Litterae Apostolicae | *Quum magis* | — | the index dates the entry to 1916-08 with no day printed; matched by incipit within the month only, never created |
+| AAS 9-I (1917) 77 | Benedictus XV | 1916-10 | Litterae Apostolicae | *Centesimo hodie* | — | the index dates the entry to 1916-10 with no day printed; matched by incipit within the month only, never created |
+| AAS 9-I (1917) 97 | Benedictus XV | 1916-11 | Litterae Apostolicae | *Quae in longinquis* | — | the index dates the entry to 1916-11 with no day printed; matched by incipit within the month only, never created |
 | AAS 9-I (1917) 262 | Benedictus XV | 1917-04 | Litterae Apostolicae | *Quae omnia* | — | the index dates the entry to 1917-04 with no day printed; matched by incipit within the month only, never created |
 | AAS 9-I (1917) 320 | Benedictus XV | 1917-04 | Litterae Apostolicae | *Dilectus filius* | — | the index dates the entry to 1917-04 with no day printed; matched by incipit within the month only, never created |
 | AAS 9-I (1917) 321 | Benedictus XV | 1917-04 | Litterae Apostolicae | *Supplices, sunt Nobis* | — | the index dates the entry to 1917-04 with no day printed; matched by incipit within the month only, never created |
+| AAS 9-I (1917) 214 | Benedictus XV | 1917-04 | Litterae Apostolicae | *Si unquam alias* | — | the index dates the entry to 1917-04 with no day printed; matched by incipit within the month only, never created |
+| AAS 9-I (1917) 533 | Benedictus XV | 1917-10 | Litterae Apostolicae | *Saluberrimo sane proposito* | — | the index dates the entry to 1917-10 with no day printed; matched by incipit within the month only, never created |
+| AAS 9-I (1917) 209 | Benedictus XV | 1917-04 | Litterae Apostolicae Motu proprio datae | *Nobilissimam sacrarum aedium* | `mag:benedict-xv/nobilissimam-sacrarum-1917` (*Nobilissimam Sacrarum*) | the index dates the entry to 1917-04 with no day printed; matched by incipit within the month only, never created |
 | AAS 23 (1931) 317 | Pius XI | 1929-03 | Constitutiones Apostolicae | *Pro munere* | — | the index dates the entry to 1929-03 with no day printed; matched by incipit within the month only, never created |
 | AAS 23 (1931) 241 | Pius XI | 1931-05 | Constitutiones Apostolicae | *Deus scientiarum* | `mag:pius-xi/deus-scientiarum-dominus-1931` (*Deus scientiarum Dominus*) | the index dates the entry to 1931-05 with no day printed; matched by incipit within the month only, never created |
 | AAS 70 (1978) 233 | Paulus VI | 1977-05 | Constitutiones Apostolicae | *Ad supernam* | — | the index dates the entry to 1977-05 with no day printed; matched by incipit within the month only, never created |
 | AAS 70 (1978) 387 | Paulus VI | 1978-05 | Constitutiones Apostolicae | *De christiani* | — | the index dates the entry to 1978-05 with no day printed; matched by incipit within the month only, never created |
 | AAS 70 (1978) 388 | Paulus VI | 1978-05 | Constitutiones Apostolicae | *Cum Toletanus* | — | the index dates the entry to 1978-05 with no day printed; matched by incipit within the month only, never created |
+
+</details>
+
+<details><summary><b>Guard: class mismatch</b> — 2</summary>
+
+| Reference | Pope | Date | Category | Entry | Candidates | Note |
+|---|---|---|---|---|---|---|
+| AAS 9-I (1917) 61 | Benedictus XV | 1916-02-25 | Litterae Apostolicae | *Romanorum Pontificum* | `mag:benedict-xv/romanorum-pontificum-1916` (*Romanorum Pontificum*) | a same-date record carries the entry's incipit as brief; the shelf and the Acta disagree about the class (discussion #30) |
+| AAS 9-I (1917) 257 | Benedictus XV | 1917-04-10 | Litterae Apostolicae | *Quod Ioannes* | `mag:benedict-xv/quod-ioannes-1917` (*Quod Ioannes*) | a same-date record carries the entry's incipit as brief; the shelf and the Acta disagree about the class (discussion #30) |
 
 </details>
 
@@ -1389,6 +1509,127 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 
 </details>
 
+<details><summary><b>Page not recovered</b> — 114</summary>
+
+| Reference | Pope | Date | Category | Entry | Reason (sidecar) | Candidates |
+|---|---|---|---|---|---|---|
+| AAS 1 (1909) — | Pius X | 1908-01-29 | Constitutiones Apostolicae | *Sapienti Consilio* — DE ROMANA CURIA. | hits outside the category's runs of the Index generalis | 295 |
+| AAS 1 (1909) — | Pius X | 1908-01 | Constitutiones Apostolicae | Congregati | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1908-09-11 | Litterae Apostolicae | Regia primitiva archisodalitas Matritensis. Mariae LB virginis a prodi | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1908-09-18 | Litterae Apostolicae | Episcopo Nolano datur facultas transferendi Nolam corpus S. Paulini Ep | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1908-09-19 | Litterae Apostolicae | Dioecesis Neo-Westmonasteriensis in archidioecesim erigitur Vancouveri | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1908-09-27 | Litterae Apostolicae | Dioecesis Rockfordiensis in Statibus foederatis Americae septentrional | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1908-10-16 | Litterae Apostolicae | Pia congregatio Matritensis nostrae Dominae de la Paloma indulgentia p | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1908-10-31 | Litterae Apostolicae | Indulgentia plenaria conceditur recitantibus orationem ad repellandas  | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1908-11-27 | Litterae Apostolicae | Quibus ecclesia S. Laurentii in Lucina de Urbe evehitur ad Basilicae m | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-02 | Litterae Apostolicae | Plenaria indulgentia conceditur pro festo S. Ioannis Baptistae de la S | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-02 | Litterae Apostolicae | Ecclesia metropolitana Lancianensis titulo basilicae minoris augetur | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-02 | Litterae Apostolicae | Indulgentiae conceduntur pio operi a conservanda ac tutanda fide in Hi | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-02-18 | Litterae Apostolicae | Praefectura Apostolica de Basuto-Land in Africa australi erigitur in V | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-03-12 | Litterae Apostolicae | Exstinguuntur paroeciae Urbis S. Mariae in via Lata, S. Marcelli, ac S | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-04-11 | Litterae Apostolicae | Venerabilis Ioanna de Arc virgo, Aurelianensis nuncupata, renunciatur  | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-04-11 | Litterae Apostolicae | Ecclesia S. Mariae Angelorum de portiuncula declaratur basilica patria | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-04-11 | Litterae Apostolicae | Venerabilis Franciscus de Capillas, sacerdos professus Ordinis Praedic | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-04-11 | Litterae Apostolicae | Ven. Ioannes Eudes, Missionarius apostolicus, institutor congregationi | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-04-15 | Litterae Apostolicae | Conceditur indulgentia plenaria pio operi S. Ioannis Baptistae de la S | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-05 | Litterae Apostolicae | Supprimitur abbatia S. Mauri in Gallia et erigitur nova S. Mauritii in | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-05 | Litterae Apostolicae | Pontificium Institutum Biblicum in Urbe erigitur. — Leges pontificio I | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-05 | Litterae Apostolicae | Indulgentiae conceduntur pio operi Horae sanctae Perpetuae de Gethsema | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-05-20 | Litterae Apostolicae | Beatus Iosephus Oriol in sanctorum caelitum album refertur . . . . . . | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-07 | Litterae Apostolicae | Indulgentia conceditur recitantibus iaculatoriam precem in .honorem -S | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-07 | Litterae Apostolicae | Superior generalis pro tempore Congregationis missionis declaratur gen | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-07 | Litterae Apostolicae | Conceditur indulgentia presbyteris sodalibus Reparationis sacerdotalis | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-07-12 | Litterae Apostolicae | Missio de Kenia in Africa orientali anglica erigitur in Vicariatum apo | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-07-12 | Litterae Apostolicae | Sodalitas ab infante Iesu, Bethlehem erecta apud Fratres Scholarum chr | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-07-31 | Litterae Apostolicae | Confraternitas Immaculatae Conceptionis ac Defunctorum in dioecesi Ñus | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-08 | Litterae Apostolicae | Indulgentiae et privilegium altaris conceduntur Institutis religiosis  | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-08-12 | Litterae Apostolicae | Sacello Rosarum apud basilicam patriarchalem S. Mariae Angelorum in Po | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-08-17 | Litterae Apostolicae | Ecclesia cathedralis Constantinopolitana evehitur ad dignitatem basili | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-08-23 | Litterae Apostolicae | Templum Bonaerense B. Mariae Virginis a Rosario evehitur ad dignitatem | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-09-08 | Litterae Apostolicae | Approbantur et confirmantur novae constitutiones Ordinis Fratrum Minor | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-09-17 | Litterae Apostolicae | Praefectura Apostolica Delta Nili nuncupata in Vicariatum Apostolicum  | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-10-04 | Litterae Apostolicae | De primo Ordine sancti Francisci nonnulla in perpetuum statuuntur | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-10-07 | Litterae Apostolicae | Indulgentiae perpetuae conceduntur piis sodalitiis sub titulo Missioni | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-11 | Litterae Apostolicae | Instauratur Pisis, in seminario dioecesano, theologica facultas, et Ar | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-11 | Epistulae | Ad R. P. D. Ambrosium Agius, Legatum Apostolicum apud Episcopos insula | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-11 | Epistulae | Ad P. Cormier, de magno Collegio pontificio Ordinis Praedicatorum | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-11 | Epistulae | Ad P. Montagne, de Commentario Eevue Thomiste. | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-12 | Epistulae | Ad Archiepiscopum Hispalensem, ob habitum episcopalem conventum | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-12-13 | Epistulae | Ad P. Lehodey, circa librum de Les voies de Voraison mentale | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-12-14 | Epistulae | Ad sodales Canadenses ab apostolatu precum, de sacris solemnibus pro I | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-12-19 | Epistulae | Ad Episcopos Reipublicae Columbianae, ob coetum solemniter habitum | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-12-20 | Epistulae | Ad P. Kuhn, ob oblatum opus de historia artis christianae | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-12-21 | Epistulae | Ad P. Muff, de collectis libris ad fovendam pietatem. | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-12-23 | Epistulae | Ad Episcopum Tarbiensem, de sacris solemnibus ad oppidum Lourdes in ho | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-01 | Epistulae | Ad Conradum Bush, Episcopum Spirensem, circa mo-2 dernismum | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-01 | Epistulae | Ad Iosephum Card. Francica-Nava, Archiepiscopum | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-01-12 | Epistulae | Catanensem, de Sicula clade | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-01-12 | Epistulae | Ad Henricum Oster, moderatorem piae sodalitatis | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-01-18 | Epistulae | Aquisgranensis a sacra Iesus Infantia, propter exhibitus annales | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-01-19 | Epistulae | Ad F. Calon, praesidem consociationis Parisiensis S. Vincentii a Paulo | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-01-20 | Epistulae | Ad comitem Keller, de habendi Ioannae Arcensi honoribus Beatorum | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-02-07 | Epistulae | Ad Stanislaum Episcopum Aurelianensem, quoad sacra solemnia Ioannae de | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-03 | Epistulae | Ad Carolum Korz praesidem, et ad supremum Consilium consociationis cat | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-03 | Epistulae | Ad R. P. Ioannem Baptistam Ferreres, S. I., de editis P. Gury operibus | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-03 | Epistulae | Ad moderatores, decuriales et alumnos catholicae studiorum Universitat | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-03 | Epistulae | Ad R. P. Raymundum Velasquez rectorem, et doctores decuriales Universi | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-03 | Epistulae | Ad R. P. D. iacobum Poletto, Protonotarium Apostolicum decurialem, de  | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-03-19 | Epistulae | Ad R. P. D. Episcopum Santanderien. ob vigesimum sui episcopatus natal | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-03-19 | Epistulae | Ad R. P. Nicolaum Dal-Gal, O. F .M., de proxime futuro Tertiariorum Fr | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-04-02 | Epistulae | Ad R. P. D. Renatum Graffin, Antistitem domus pontificalis, de Galloru | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-04-12 | Epistulae | Ad R. P. D. Anselmum Sansoni, Episcopum Cephalu-. den., de proxime hab | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-04-17 | Epistulae | Ad R. P. D. Gulielmum O'Connell, Archiepiscopum Bostonien., de comment | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-04-19 | Epistulae | Ad moderatores, doctores decuriales et alumnos catholicae studiorum Un | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-04 | Epistulae | Ad R. P. Dionysium Schüler, Ministrum generalem Ordinis Fratrum Minoru | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-04-27 | Epistulae | Ad R. P. D. Aemilianum Manacorda, Episcopum Fossanen., ob L expletos a | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-04-30 | Epistulae | Ad R. P. D. Aloisium Pellizzo, Episcopum Patavinum, de coronanda, nomi | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-05 | Epistulae | Ad R. P. D. Cyrillum VIII, Patriarcham Antiochenum, de proxime habenda | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-05 | Epistulae | Ad Archiepiscopum Bambergensem ceterosque Episcopos Bavariae, ob episc | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-05-21 | Epistulae | Ad Archiepiscopum Mutinensem ceterosque Episcopos regionis Aemilianae, | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-05-24 | Epistulae | Ad R. P. D. Stanislaum Touchet, Episcopum Aurelianensem, ob feliciter  | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-06 | Epistulae | Ad R. P. D. Thomam Kennedy, Episcopum titularem Adrianopolitanum, rect | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-06-14 | Epistulae | Ad R. P. Honoratum Del Val, de eius vulgato opere S. Theologia dogmati | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-06-17 | Epistulae | Ad R. P. D. Gustavum Iosephum Waffelaert, Episcopum Brugensem, de edit | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-06-29 | Epistulae | Ad R. P. D. Desiderátum Castelain, Praefectum provinciae Parisiensis s | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-06-29 | Epistulae | Ad R. P. D. Franciscum Ciceri, Episcopum Papiensem, ob celebratam syno | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-07-11 | Epistulae | Ad augustissimum et potentissimi um Imperatorem Mahometum V | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-07 | Epistulae | Ad Vincentium Card. Vannutelli, renuntiatum Legatum Apostolicum et Pra | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-07 | Epistulae | Ad Felicem Porsch, iuris doctorem, ceterosque egregios viros Vratislav | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-08 | Epistulae | Ad Carolum Simon et Petrum Martin, de instituta societate cui titulus  | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-08 | Epistulae | Ad R. P. D. Valerium Laspro, Archiepiscopum Salernitanum, in quinquage | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-09 | Epistulae | Ad Fridericum Brunetti, canonicum marcianum, praefectum disciplinae iu | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-09-10 | Epistulae | Ad V. E. Iosephum Mariam Card. Martin de Herrera y de la Iglesia, Arch | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-09-10 | Epistulae | Ad R. P. Henricum Debout, ob edita opera de B. Ioanna de Arc | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-09-28 | Epistulae | Ad RR. PP. DD. Ioannem Fidelem Battaglia, Archiepiscopum titularem Cyz | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-10-10 | Epistulae | Ad V. E. Ioannem Card. Katschthaler, Archiepiscopum Salisburgensem, de | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-11 | Epistulae | Ad R. P. D. Ioannem Cagherò, Archiepiscopum titularem Sebastensem, Del | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-11-15 | Epistulae | Ad V. E. Iulium Card. Boschi, Archiepiscopum Ferrariensem et Episcopum | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-11-18 | Epistulae | Ad R. P. D. Ioannem Mariam Farley, Archiepiscopum Neo-Eboracensem, ob  | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-11-20 | Epistulae | Ad ; augustissimum et potentissimum Gulielmum II, Germaniae Imperatore | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-11-21 | Epistulae | Ad V V. EE. Georgium^Card. Kopp, Episcopum Vratislaviensem, et Antoniu | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-12-01 | Epistulae | Ad R. P. D. Aloysium Philippum Ortiz y Gutiérrez, Episcopum Zamorensem | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-12-10 | Epistulae | Ad R. P. D. Fridericum Bonnet, Episcopum Vivariensem, in quinquagesimo | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-12-15 | Epistulae | Ad V. E. Iosephum Calasanctium Card. Vives, praefectum S. Congregation | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-05 | Litterae Apostolicae Motu proprio datae | Deletur coetus iurisconsultorum et causam in foro agentium cui nomen a | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-12-15 | Litterae Apostolicae Motu proprio datae | De instauratione congregationis Clericorum regularium vulgo Theatinoru | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1908-12 | Sermones | IB A P. PP. X habitus, lectis decretis beatificationis Ven. Ioannae de | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-03 | Sermones | Habitus a SS. D. N. Pio PP. X ad peregrinos Belgas. | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-04-16 | Sermones | Ad Paulum Calon, praesidem generalem societatis S. Vincentii a Paulo,  | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-04-19 | Sermones | Ad R. P. D. Episcopum Aurelianen., et peregrinos Galliae | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-04-20 | Sermones | Ad Episcopos Galliae | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-05-10 | Sermones | A Pio PP. X habitus ad iuvenes foederatos catholicarum Universitatum,  | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-06-13 | Sermones | A Pio PP. X habitus ad Episcopos Americae septentrionalis et ad alumno | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-07-04 | Sermones | A Pio PP. X habitus ad Legationem extraordinariam imperii Turcarum | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-11-18 | Sermones | Habitus a SS. D. N. Pio PP X ad peregrinos Galliae. | no incipit: the index describes the act without one | — |
+| AAS 1 (1909) — | Pius X | 1909-05-20 | Homiliae | SSmi D. N. P. PP. X habita inter sacrum solemne, post relatos in sanct | no incipit: the index describes the act without one | — |
+| AAS 9-I (1917) — | Benedictus XV | 1917-07 | Litterae Apostolicae sub plumbo datae | *Universalis Ecclesiae procuratio* — Oppidum Brentwood in episcopalem civitatem erigitur et in eo sedes episcopalis constituitu | the running header of the page found contradicts its number | 481 |
+| AAS 9-I (1917) — | Benedictus XV | 1916-12-20 | Litterae Apostolicae | *Quae catholico nomini* — Erectio Vicariatus apostolici Alaskensis. | several hits, no dating formula to settle them | 99, 425 |
+| AAS 9-I (1917) — | Benedictus XV | 1917-02-15 | Litterae Apostolicae | *Ad augendam fidelium religionem* — Conceditur in perpetuum indulgentia plenaria toties quoties lucranda fidelibus die 21 mens | several hits, no dating formula to settle them | 100, 424 |
+| AAS 9-I (1917) — | Benedictus XV | 1917-07 | Litterae Apostolicae | Cum ex Apostolico mimer e. - Decernitur Wilcanniensem dioecesim, addit | no incipit: the index describes the act without one | — |
+| AAS 9-I (1917) — | Benedictus XV | 1917-11 | Epistulae | *Quod ant^p* — Ad RR. PP. DD. Franciscum, archiepiscopum Calaritanum, Gletum, archiepiscopum Turritanum,  | no hit: the incipit was not found in the volume body | — |
+
+</details>
+
 ## 10. Documents before and after
 
 The shelf records (before) and the shelf records with every AAS-only document the data carries (after), per pope of the
@@ -1396,9 +1637,9 @@ era and in total; the AAS-only records of every other era are in the *after* col
 
 | Issuer | Shelf records | AAS-only records | Of which from this era | After |
 |---|---|---|---|---|
-| `rp:pius-x` | 306 | 2 | 2 | 308 |
-| `rp:benedict-xv` | 63 | 8 | 8 | 71 |
-| `rp:pius-xi` | 158 | 804 | 59 | 962 |
+| `rp:pius-x` | 306 | 158 | 2 | 464 |
+| `rp:benedict-xv` | 63 | 103 | 28 | 166 |
+| `rp:pius-xi` | 158 | 985 | 59 | 1143 |
 | `rp:pius-xii` | 260 | 1229 | 36 | 1489 |
 | `rp:john-xxiii` | 193 | 294 | 0 | 487 |
 | `rp:paul-vi` | 777 | 349 | 28 | 1126 |
@@ -1406,8 +1647,8 @@ era and in total; the AAS-only records of every other era are in the *after* col
 | `rp:john-paul-ii` | 2105 | 43 | 0 | 2148 |
 | `rp:benedict-xvi` | 301 | 69 | 13 | 370 |
 | `rp:francis-i` | 366 | 260 | 0 | 626 |
-| **Popes of the AAS** | **4536** | **3058** | **146** | **7594** |
-| **Registry** | **4975** | **3058** | **146** | **8033** |
+| **Popes of the AAS** | **4536** | **3490** | **166** | **8026** |
+| **Registry** | **4975** | **3490** | **166** | **8465** |
 
 ## 11. Documents of the era's popes with no AAS entry
 
@@ -1416,33 +1657,23 @@ formal genres are listed. A December act belongs to the next volume; an act whos
 a class the index files under a category the registry does not attempt (*Epistulae* for a pope whose letters shelf is
 not harvested, homilies, allocutions) is counted in §3.
 
-<details><summary><b>1909</b> — 18 without an entry (letter 9; apostolic-letter 8; encyclical 1); 9 of the formal genres listed</summary>
+<details><summary><b>1909</b> — 13 without an entry (letter 9; apostolic-letter 4); 4 of the formal genres listed</summary>
 
 | Document | Date | Class | Index entries on this date | Reading |
 |---|---|---|---|---|
 | `mag:pius-x/conspicua-templa-1909` | 1909-02-05 | apostolic-letter | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
-| `mag:pius-x/communium-rerum-1909` | 1909-04-21 | encyclical | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
 | `mag:pius-x/vinea-electa-1909` | 1909-05-07 | apostolic-letter | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
 | `mag:pius-x/ineffabili-dei-1909` | 1909-06-13 | apostolic-letter | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
-| `mag:pius-x/e-lapurdensi-basilica-1909` | 1909-07-05 | apostolic-letter | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
 | `mag:pius-x/septimo-iam-1909` | 1909-07-09 | apostolic-letter | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
-| `mag:pius-x/sodalitium-1909` | 1909-08-24 | apostolic-letter | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
-| `mag:pius-x/paucis-ante-diebus-1909` | 1909-11-01 | apostolic-letter | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
-| `mag:pius-x/decessor-noster-1909` | 1909-12-09 | apostolic-letter | — | December: the next volume |
 
 </details>
 
-<details><summary><b>1917-I</b> — 8 without an entry (apostolic-letter+motu-proprio 5; encyclical 1; papal-bull 1; brief 1); 7 of the formal genres listed</summary>
+<details><summary><b>1917-I</b> — 3 without an entry (apostolic-letter+motu-proprio 1; papal-bull 1; brief 1); 2 of the formal genres listed</summary>
 
 | Document | Date | Class | Index entries on this date | Reading |
 |---|---|---|---|---|
-| `mag:benedict-xv/alloquentes-proxime-1917` | 1917-03-25 | apostolic-letter+motu-proprio | — | a month-only entry of 1917-03 may be it (AAS 9-I (1917) 170: *Perlibenter Nos*; AAS 9-I (1917) 171: *Anno iam exeunte centesimo*) |
-| `mag:benedict-xv/nobilissimam-sacrarum-1917` | 1917-04-08 | apostolic-letter+motu-proprio | — | a month-only entry of 1917-04 may be it (AAS 9-I (1917) 262: *Quae omnia*; AAS 9-I (1917) 320: *Dilectus filius*; AAS 9-I (1917) 321: *Supplices, sunt Nobis*) |
-| `mag:benedict-xv/dei-providentis-1917` | 1917-05-01 | apostolic-letter+motu-proprio | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
+| `mag:benedict-xv/nobilissimam-sacrarum-1917` | 1917-04-08 | apostolic-letter+motu-proprio | — | a month-only entry of 1917-04 may be it (AAS 9-I (1917) 262: *Quae omnia*; AAS 9-I (1917) 320: *Dilectus filius*; AAS 9-I (1917) 321: *Supplices, sunt Nobis*; AAS 9-I (1917) 214: *Si unquam alias*; AAS 9-I (1917) 209: *Nobilissimam sacrarum aedium*) |
 | `mag:benedict-xv/providentissima-mater-1917` | 1917-05-27 | papal-bull | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
-| `mag:benedict-xv/humani-generis-redemptionem-1917` | 1917-06-15 | encyclical | Litterae Apostolicae (AAS 9-I (1917) 372: *Cum Deipara Virgo*) | class mismatch or another act of the date (§6) |
-| `mag:benedict-xv/cum-iuris-canonici-1917` | 1917-09-15 | apostolic-letter+motu-proprio | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
-| `mag:benedict-xv/orientis-catholici-1917` | 1917-10-15 | apostolic-letter+motu-proprio | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
 
 </details>
 
@@ -1494,18 +1725,25 @@ not harvested, homilies, allocutions) is counted in §3.
 
 ## 12. Every match, with the index line it rests on
 
-<details><summary><b>1909</b> — 0 matched</summary>
+<details><summary><b>1909</b> — 2 matched</summary>
 
 | Reference | Category | Document | By | Index line |
 |---|---|---|---|---|
+| AAS 1 (1909) 5 (page recovered: fuzzy) | Constitutiones Apostolicae | `mag:pius-x/promulgandi-1908` | incipit-month | ` Sept. Constitutio « Promulgandi », de promulgatione legum / et evulgatione actorum S. Sedis` |
+| AAS 1 (1909) 333 (page recovered: unique) | Litterae Encyclicae | `mag:pius-x/communium-rerum-1909` | unique | ` Apr. 21 Litt. encycl. « Communium rerum », de saecularibus / solemniis in honorem S. Anselmi, Episcopi et Eccle­ / siae Doctoris` |
 
 </details>
 
-<details><summary><b>1917-I</b> — 1 matched</summary>
+<details><summary><b>1917-I</b> — 6 matched</summary>
 
 | Reference | Category | Document | By | Index line |
 |---|---|---|---|---|
 | AAS 9-I (1917) 417 | Adhortationes Apostolicae | `mag:benedict-xv/des-le-debut-1917` | unique | `.1917 Aug. 1 Dès le début. - Quarto ineunte bellorum anno, nova / Pontificis Summi ad Moderatores populorum belli- / gerantium adhortatio, qua certae quaedam conside­ / rationes suggerantur, componendis discidiis et paci / 417` |
+| AAS 9-I (1917) 167 (page recovered: unique) | Litterae Apostolicae Motu proprio datae | `mag:benedict-xv/alloquentes-proxime-1917` | incipit-month | `1917 Mart. Alloquentes proxime. - De attribuenda Sancto Officio / censura librorum et Poenitentiariae Apostolicae con­ / cessione indulgentiarum` |
+| AAS 9-I (1917) 529 (page recovered: unique) | Litterae Apostolicae Motu proprio datae | `mag:benedict-xv/dei-providentis-1917` | unique | ` Maii 1 Dei providentis. - De Sacra Congregatione pro Ecclesia / Orientali` |
+| AAS 9-I (1917) 483 (page recovered: unique) | Litterae Apostolicae Motu proprio datae | `mag:benedict-xv/cum-iuris-canonici-1917` | unique | ` Sept. 15 Cum iuris canonici Codicem. - Commissio instituitur / ad Codicis canones authentice interpretandos . .` |
+| AAS 9-I (1917) 531 (page recovered: unique) | Litterae Apostolicae Motu proprio datae | `mag:benedict-xv/orientis-catholici-1917` | unique | ` Oct. 15 Orientis catholici. - De Instituto Pontificio studiis re­ / rum orientalium provehendis .` |
+| AAS 9-I (1917) 305 (page recovered: unique) | Litterae Encyclicae | `mag:benedict-xv/humani-generis-redemptionem-1917` | unique | `1917 Iun. 15 Humani generis redemptionem. - Ad Patriarchas, Pri­ / mates, Archiepiscopos, Episcopos aliosque locorum / Ordinarios, pacem et communionem cum Aposto­ / lica Sede habentes .` |
 
 </details>
 

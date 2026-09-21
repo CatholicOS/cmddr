@@ -40,6 +40,50 @@
     "sourceGenreLabel": "letters"
   },
   {
+    "id": "mag:pius-xi/cum-sicuti-accepimus-1922",
+    "title": "Cum, sicuti accepimus. Pia Consociatio </ a choris marianis » in Urbe indulgentiis et gratiis spiritualibus augetur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-03-11",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Cum, sicuti accepimus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 188
+    }
+  },
+  {
+    "id": "mag:pius-xi/ex-officio-1922",
+    "title": "Ex officio. Praefectura apostolica insularum Sundae minorum in Indiis Hollandicis erigitur in vicaria-; tum apostolicum.............",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-03-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ex officio",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 224
+    }
+  },
+  {
     "id": "mag:pius-xi/romani-pontificis-1922",
     "title": "Motu Proprio Romani Pontificis, sui privilegi concessi ai Conclavisti",
     "idStatus": "minted",
@@ -62,6 +106,94 @@
     "sourceGenreLabel": "motu_proprio"
   },
   {
+    "id": "mag:pius-xi/christiani-gregis-1922",
+    "title": "Christiani gregis. Divisio vicariatus apostolici Mongoliae occiduo-meridionalis in duos vicariatus apostolicos de « Ning-hia » et de « Souei-yuen » nuncupandos ......... .¡",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-03-14",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Christiani gregis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 271
+    }
+  },
+  {
+    "id": "mag:pius-xi/petis-tu-quidem-1922",
+    "title": "Petis tu quidem. Ad R. P. Eliam Magennis, moderatorem generalem Ordinis Carmelitarum, labente saeculo sexto ex quo « Privilegium Sabbatinum » vulgat u m est, religionem in B. M. V. de Monte Carmelo impense inculcat",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-03-18",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Petis tu quidem",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 274
+    }
+  },
+  {
+    "id": "mag:pius-xi/non-potuit-1922",
+    "title": "Non potuit. Ad Emum P. D. Antonium, tit. Ss. Marcellini et Petri, S. R. E. presb. card. Mendes Bello, Patriarcham Lisbonensem, ceterosque Archiepiscopos et Episcopos Lusitaniae: officiosis litteris respondit ex communi conventu datis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-03-31",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Non potuit",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 376
+    }
+  },
+  {
+    "id": "mag:pius-xi/quamquam-haud-sane-1922",
+    "title": "Quamquam haud sane. Ad R. P. Lucam a Maria Sanctissima, praepositum generalem, et ad universum Ordinem Fratrum Carmelitarum Exalceatorum: de honoribus S. Theresiae decretis, tertio pleno saeculo ex quo in album Sanctorum eius nomen relatum est",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-03-31",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quamquam haud sane",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 275
+    }
+  },
+  {
     "id": "mag:pius-xi/letter-1922-04-07",
     "title": "Lettera al Reverendo Padre Giosuè Signori, Arcivescovo di Genova",
     "idStatus": "provisional",
@@ -81,6 +213,50 @@
     "sourceGenreLabel": "letters"
   },
   {
+    "id": "mag:pius-xi/con-vivo-compiacimento-1922",
+    "title": "Con vivo compiacimento. Ad R. P. Augustinum Gemelli, O. F. M., Universitatis studiorum Mediolanensis a Ssmo Corde Iesu rectorem magnificum: de eadem feliciter instituta gratulationes et vota.",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-04-18",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Con vivo compiacimento",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 338
+    }
+  },
+  {
+    "id": "mag:pius-xi/pastoralis-vigilantiae-tuae-1922",
+    "title": "Pastoralis vigilantiae tuae. Ad Enium P. D. Gustavum Fridericum, tit. S. Marci, S. R. E. presb. card. Piffl, archiepiscopum Viennensi u m : adversus malas eorum artes qui avitam fidem labefactare contendunt",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-04-18",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Pastoralis vigilantiae tuae",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 337
+    }
+  },
+  {
     "id": "mag:pius-xi/letter-1922-04-22",
     "title": "Lettera al Reverendo Padre Agostino Gemelli, fondatore dell'Università Cattolica del Sacro Cuore, di Milano",
     "idStatus": "provisional",
@@ -97,6 +273,94 @@
       "retrieved": "2026-09-12"
     },
     "sourceGenreLabel": "letters"
+  },
+  {
+    "id": "mag:pius-xi/exigit-apostolicum-munus-1922",
+    "title": "Exigit apostolicum munus. Diviso territorio vicariatus apostolici de Kivu, eriguntur vicariatus de Ruanda et de Urundi in Africa centrali",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-04-25",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Exigit apostolicum munus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 373
+    }
+  },
+  {
+    "id": "mag:pius-xi/quandoquidem-1922",
+    "title": "Quandoquidem. Ad Emos PP. DD. Gulielmum, tit. Sancti Clementis, S. R. E. card. 0'Connell, archiepiscopum Bostoniensem, acDionysium, tit. Ss. Nerei et Achillei, S. R. E. card. Dougherty, archiepiscopum Philadelphiensem, ceterosque Archiepiscopos et Episcopos Foederatarum Americae septentrionalis Civitatum : de catholica Washingtoniensi studiorum Universitate provehenda",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-04-25",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quandoquidem",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 423
+    }
+  },
+  {
+    "id": "mag:pius-xi/cum-optatis-1922",
+    "title": "Cum optatis. Ad Emum P.D. Augustinum, tit. Sanctae Mariae in Via, S. R. E. presb. card. Richelmy, archiepiscopum Taurinensium, quinquagesimum sacerdotii sui natalem in Eucharistico regionali Conventu celebraturam",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-04-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Cum optatis",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 341
+    }
+  },
+  {
+    "id": "mag:pius-xi/penes-oppidulum-1922",
+    "title": "Penes oppidulum. Sanctuarium B. M. V. in oppido Aspricollis, archidioecesis Mechlinieñsis, titulo et privilegiis basilicae minoris augetur.",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-05-02",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Penes oppidulum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 374
+    }
   },
   {
     "id": "mag:pius-xi/romanorum-pontificum-1922",
@@ -121,6 +385,116 @@
     "sourceGenreLabel": "motu_proprio"
   },
   {
+    "id": "mag:pius-xi/felicis-exitus-1922",
+    "title": "Felicis exitus. Ad R. P. D. Lucam Piergiovanni, episcopum Latii superioris : de communi conventu nuper habito",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-05-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Felicis exitus",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 499
+    }
+  },
+  {
+    "id": "mag:pius-xi/dimisso-conventu-1922",
+    "title": "Dimisso conventu. Ad R. P. D. Ioannem Bedam Cardinale, archiepiscopum Perusinum, ceterosque Umbriae Episcopos: officiosis litteris respondet ex annuo conventu datis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-05-18",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Dimisso conventu",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 499
+    }
+  },
+  {
+    "id": "mag:pius-xi/pochi-giorni-or-sono-1922",
+    "title": "Pochi giorni or sono. Ad Emum P. D. Basilium, episcopum Veliternum, S. R. E. card. Pompilj, in Urbe vice sacra antistitem: de felici successu XXVI Congressus Eucharistici",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-05-29",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Pochi giorni or sono",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 342
+    }
+  },
+  {
+    "id": "mag:pius-xi/quae-catholico-nomini-1922",
+    "title": "Quae catholico nomini. Separato territorio e vicariatibus apostolicis Ugandensi et de Stanley Falls erigitur praefectura apostolica Lacus Alberti in Africa centrali",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-06-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quae catholico nomini",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 488
+    }
+  },
+  {
+    "id": "mag:pius-xi/dilectus-filius-1922",
+    "title": "Dilectus filius. Restituitur perantiqua abbatia Sancti Martini de Weingarten et in eadem transfertur abbas et conventus Sancti Thomae de Erdington, Congregationis Beuronensis O. S. B",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-07-08",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Dilectus filius",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 489
+    }
+  },
+  {
     "id": "mag:pius-xi/annus-fere-1922",
     "title": "Annus Fere: ai Vescovi di tutto il mondo cattolico affinché si adoperino per far fronte alle esigenze dei popoli russi travolti dalla fame e dalla pestilenza",
     "idStatus": "minted",
@@ -137,7 +511,79 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Annus Fere",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 491
+    }
+  },
+  {
+    "id": "mag:pius-xi/media-in-urbe-1922",
+    "title": "Media in urbe. Titulus basilicae minoris confertur in ipsa consecratione ecclesiae abbatiali Virginis Deiparae in caelos assum ptae, civitatis Sancti Pauli in Brasilia, O. S. B..",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-07-21",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Media in urbe",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 494
+    }
+  },
+  {
+    "id": "mag:pius-xi/inter-sacras-aedes-1922",
+    "title": "Inter sacras aedes. Templum B. M. V. de Mercede, in urbe Sancti Iacobi de Cile, ad titulum et dignignitatem. basilicae minoris evehitur .....",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-07-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Inter sacras aedes",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 495
+    }
+  },
+  {
+    "id": "mag:pius-xi/cum-annos-1922",
+    "title": "Cum annos. Ad R. P. D. Andream Caron, archiepiscopum tit. Chalcedonensem, quinquagesimum sacerdotii sui natalem celebraturam",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-07-25",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Cum annos",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 636
+    }
   },
   {
     "id": "mag:pius-xi/summorum-pontificum-1922",
@@ -200,6 +646,94 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:pius-xi/late-iam-1922",
+    "title": "Late iam. Erigitur Apostolica Delegatio in Sinis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-08-09",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Late iam",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 635
+    }
+  },
+  {
+    "id": "mag:pius-xi/norunt-omnes-1922",
+    "title": "Norunt omnes. Ad Emum P. D. Petrum, tit. Sancti Laurentii in Lucina, S. R. E. presb, cardinalem Gasparri, a negotiis publicis administrum, quem Legatum mittit ad transvehendam Lauretum Beatae Mariae Virginis novam iconem, a se benedictam aureoque diademate redimitam",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-08-17",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Norunt omnes",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 544
+    }
+  },
+  {
+    "id": "mag:pius-xi/vetustissima-inter-1922",
+    "title": "Vetustissima inter. Titulus basilicae minoris pro ecclesia praepositurali et paroeciali Sancti Martini oppido « Alzano Maggiore », dioecesis Bergomensis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-08-21",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Vetustissima inter",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 542
+    }
+  },
+  {
+    "id": "mag:pius-xi/nella-imminenza-1922",
+    "title": "Nella imminenza. Ad Emum P. D. Petrum, tit. S. Chrysogoni, S. R. E. presb. card. Maffi, quem Legatum mittit Modoetiam, ad praesidendum Coetui Eucharistico archidioeceseos Mediolanensis . . . •",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-09-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Nella imminenza",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 587
+    }
+  },
+  {
     "id": "mag:pius-xi/decessor-noster-1922",
     "title": "Decessor Noster",
     "idStatus": "minted",
@@ -219,6 +753,182 @@
     "sourceGenreLabel": "letters"
   },
   {
+    "id": "mag:pius-xi/quod-nuper-1922",
+    "title": "Quod nuper. Ad R. P. Paulum dell'Olio, S. L, Instituti Leoniani in urbe Anagnia moderatorem: anno vigesimo quinto exeunte ab eodem instituto condito",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-09-15",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quod nuper",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 588
+    }
+  },
+  {
+    "id": "mag:pius-xi/cum-tertio-1922",
+    "title": "Cum tertio. Ad Einum P. D. Franciscum, tit. Sanctae Pudentianae, S. R. E. card. Bourne, archiepiscopum Westmonasteriensem : de coetu missionali convocato ad commemorandum ccc annum a sacra Congregatione fidei propagandae condita ....",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-09-17",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Cum tertio",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 547
+    }
+  },
+  {
+    "id": "mag:pius-xi/magnas-quidem-1922",
+    "title": "Magnas quidem. Ad R. P. D. Hieronymum Thomé da Silva, archiepiscopum S. Salvatoris in Brasilia, quinquagesimum sacerdotii annum acturum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-09-19",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Magnas quidem",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 589
+    }
+  },
+  {
+    "id": "mag:pius-xi/qua-flores-1922",
+    "title": "Qua flores. Ad R. P. D. Paulum Gulielmum Keppler, episcopum Rottemburgensem : septuagesimum natalem gratulatur •",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-09-19",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Qua flores",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 549
+    }
+  },
+  {
+    "id": "mag:pius-xi/assai-opportunamente-1922",
+    "title": "Assai opportunamente. Ad Emum P. D. Petrum, tit. Ss. XII Apostolorum, S. R. E. card. La Fontaine, patriarcham Venetiarum: de parentalibus Antonii Canova rite celebrandis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-09-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Assai opportunamente",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 590
+    }
+  },
+  {
+    "id": "mag:pius-xi/la-devozione-1922",
+    "title": "La devozione. Ad R. P. Philippum Rinaldi, Piae Societatis Salesianae rectorem, eumdemque praesidem primi Conventus nationis Italicae ad Ssmi Cordis Iesu cultum provehendum ,",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-10-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "La devozione",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 637
+    }
+  },
+  {
+    "id": "mag:pius-xi/pastorum-princeps-1922",
+    "title": "Pastorum Princeps. Ad R. P. Eliam Magennis, priorem generalem Carmelitarum antiquae Observantiae: de coetu Tertii Ordinis Carmelitarum in urbe Sancti Sebastiani Fluminis Ianuarii habendo",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-10-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Pastorum Princeps",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 639
+    }
+  },
+  {
+    "id": "mag:pius-xi/venetae-reipublicae-1922",
+    "title": "Venetae Reipublicae. Templum Ss. Ioannis et Pauli, Venetiis, basilicae minoris titulo et privilegiis augetur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-10-21",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Venetae Reipublicae",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 584
+    }
+  },
+  {
     "id": "mag:pius-xi/ora-sono-pochi-1922",
     "title": "Ora sono pochi: nel giorno della «Marcia su Roma»",
     "idStatus": "minted",
@@ -236,6 +946,28 @@
     },
     "incipit": "Ora sono pochi",
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/laetum-sane-1922",
+    "title": "Laetum sane. Ad R. P. D. Iosephum Schrembs, episcopum Clevelandensem : septuagesimo quinto exeunte anno ex quo dioecesis eadem condita est",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-10-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-14-1922-ocr.pdf",
+      "shelf": "aas/1922",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Laetum sane",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 14,
+      "year": 1922,
+      "page": 641
+    }
   },
   {
     "id": "mag:pius-xi/ad-musicae-sacrae-1922",
@@ -343,7 +1075,101 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ubi Arcano Dei Consilio",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 5
+    }
+  },
+  {
+    "id": "mag:pius-xi/sanctuarii-1923",
+    "title": "Sanctuarii. Sanctuarium B. M. V. a Miraculis, oppidi Saronno, archidioecesis Mediolanensis, ad Basilicae minoris dignitatem evehitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-01-02",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Sanctuarii",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 65
+    }
+  },
+  {
+    "id": "mag:pius-xi/votivum-templum-1923",
+    "title": "Votivum templum. Ecclesia Sanctae Mariae Magdalenae Poenitentis, Andegavii, titulo ac dignitate basilicae minoris augetur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-01-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Votivum templum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 144
+    }
+  },
+  {
+    "id": "mag:pius-xi/per-similes-litteras-1923",
+    "title": "Per similes Litteras. Sodalitas a Divino Infante Pragensi ad unitatem revocatur et Ordini Carmelitarum Discalceatorum exclusive concreditur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-01-15",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Per similes Litteras",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 262
+    }
+  },
+  {
+    "id": "mag:pius-xi/praeclarissima-1923",
+    "title": "Praeclarissima. Ecclesia paroecialis B. M. V. a Valle Florum in civitate Tremp, dioecesis Urgellensis intra fines, basilicae minoris titulo ac privilegiis augetur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-01-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Praeclarissima",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 146
+    }
   },
   {
     "id": "mag:pius-xi/rerum-omnium-perturbationem-1923",
@@ -364,7 +1190,82 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Rerum Omnium Perturbationem",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 49
+    }
+  },
+  {
+    "id": "mag:pius-xi/quando-alia-vigilia-1923",
+    "title": "Quando alia vigilia. Ad Emum P. D. Basilium, episcopum Veliternum, S. E. E. card. Pompili, vice sacra in Urbe antistitem, cui mandat ut publicas preces indicat ad avertenda praesentia discrimina",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-01-31",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quando alia vigilia",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 97
+    }
+  },
+  {
+    "id": "mag:pius-xi/semper-romani-pontifices-1923",
+    "title": "Semper Romani Pontifices. De Vladivostok. Erectionis dioecesis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-02-02",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Semper Romani Pontifices",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 443
+    }
+  },
+  {
+    "id": "mag:pius-xi/communes-accepimus-1923",
+    "title": "Communes accepimus. Ad EE. PP. DD. Michaelem Kelly, archiepiscopum Sydneyensem, ceterosque Australasiae Archiepiscopos et Episcopos, obsequiosis respondens litteris ex communi conventu datis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-02-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Communes accepimus",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 108
+    }
   },
   {
     "id": "mag:pius-xi/seminarium-patavinum-1923",
@@ -455,6 +1356,31 @@
     }
   },
   {
+    "id": "mag:pius-xi/suessionensis-1923",
+    "title": "Suessionensis Ecclesia. Suessionensis. Concessionis sacri Pallii",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-03-01",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Suessionensis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 261
+    }
+  },
+  {
     "id": "mag:pius-xi/vobis-sane-1923",
     "title": "Vobis sane. Ad E. P. Eugenium Eeffo, supremum Moderatorem Piae Societatis a Sancto Iosepho: incrementa Instituti abhinc quinquaginta annos conditi gratulatur",
     "idStatus": "minted",
@@ -474,6 +1400,28 @@
       "volume": 15,
       "year": 1923,
       "page": 210
+    }
+  },
+  {
+    "id": "mag:pius-xi/plenum-quintum-1923",
+    "title": "Plenum quintum. Ad E. P. D. Augustinum Dontenwill, archiepiscopum tit. Ptolemaidensem, a quindecim ante annis Superiorem Generalem Missionalium Oblatorum Mariae Immaculatae, initum abbine xxv annos episcopatum celebraturam . . 2L",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-03-14",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Plenum quintum",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 212
     }
   },
   {
@@ -811,6 +1759,28 @@
     "sourceGenreLabel": "motu_proprio"
   },
   {
+    "id": "mag:pius-xi/in-civitate-kevelaer-1923",
+    "title": "In civitate Kevelaer. Titulus Basilicae minoris confertur paroeciali ecclesiae B.. M. V. Consolatricis afflictorum, oppidi Kevelaer",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-04-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "In civitate Kevelaer",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 488
+    }
+  },
+  {
     "id": "mag:pius-xi/fidei-propagandae-1923",
     "title": "Fidei propagandae. ~ Ad Emum P. D. Gulielmum titulo Sanctae Crucis in Ierusalem S. E. E. presb, card. Van Eossum, Sacrae Congregationi de Propaganda Pide praefectum: de expositione missionaria in Urbe Anno Sancto MDCCCCXXV habenda.",
     "idStatus": "minted",
@@ -953,7 +1923,35 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ex hac sublimi",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 336
+    }
+  },
+  {
+    "id": "mag:pius-xi/conspicuum-1923",
+    "title": "Conspicuum. Ven. Dei Servus Robertus S. R. E. Card. Bellarminus, e Societate Iesu, beatus rehunciatur.",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-05-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Conspicuum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 269
+    }
   },
   {
     "id": "mag:pius-xi/perlibenti-sane-1923",
@@ -1063,7 +2061,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod die",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 342
+    }
   },
   {
     "id": "mag:pius-xi/quinquagesimo-propediem-1923",
@@ -1239,7 +2243,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ceteriores nos",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 353
+    }
   },
   {
     "id": "mag:pius-xi/iam-inde-1923",
@@ -1259,6 +2269,31 @@
     },
     "incipit": "Iam inde",
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:pius-xi/inter-praecipuas-1923",
+    "title": "Inter praecipuas. Caracensis. Erectionis novae provinciae ecclesiasticae Emeritensis in Indiis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-06-11",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Inter praecipuas",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 533
+    }
   },
   {
     "id": "mag:pius-xi/venerabilis-frater-1923",
@@ -1302,6 +2337,28 @@
     }
   },
   {
+    "id": "mag:pius-xi/exstat-in-civitate-1923",
+    "title": "Exstat in civitate. Ecclesia curialis B. M. V. de Nazareth, urbis Belemensis de Para, privilegiis Basilicae minoris augetur.",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-06-19",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Exstat in civitate",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 494
+    }
+  },
+  {
     "id": "mag:pius-xi/quando-nel-principio-1923",
     "title": "Lettera Quando nel principio al Cardinal Pietro Gasparri, in merito ai rapporti internazionali tra le nazioni europee",
     "idStatus": "minted",
@@ -1318,7 +2375,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quando nel principio",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 353
+    }
   },
   {
     "id": "mag:pius-xi/orbem-catholicum-1923",
@@ -1340,7 +2403,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 327
+    }
   },
   {
     "id": "mag:pius-xi/studiorum-ducem-1923",
@@ -1495,6 +2564,53 @@
     }
   },
   {
+    "id": "mag:pius-xi/inter-plurimas-1923",
+    "title": "Inter plurimas. Concessionis personalis Pallii Archiepiscopo Emeritensi",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-07-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Inter plurimas",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 535
+    }
+  },
+  {
+    "id": "mag:pius-xi/congregationis-missionis-1923",
+    "title": "Congregationis Missionis. Titulus basilicae minoris confertur ecclesiae Sancti Vincentii a Paulo, Congregationis Missionis, Matriti",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-07-28",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Congregationis Missionis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 148
+    }
+  },
+  {
     "id": "mag:pius-xi/indictus-1923",
     "title": "Indictus. Ad Emum P. D. Caietanum S. E. E. card. De Lai, Episcopum Sabinensem, Sacri Conlegii Subdecanum, quem Legatum mittit Genuam ad Conventum Eucharisticum Nationalem",
     "idStatus": "minted",
@@ -1624,6 +2740,72 @@
     "sourceGenreLabel": "letters"
   },
   {
+    "id": "mag:pius-xi/in-varsaviensis-1923",
+    "title": "In Varsaviensis. Titulus basilicae minoris confertur in ipsa consecratione ecclesiae curiali Ssmo Cordi Iesu dicatae in suburbio Varsaviae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-08-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "In Varsaviensis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 583
+    }
+  },
+  {
+    "id": "mag:pius-xi/probe-meminimus-1923",
+    "title": "Probe meminimus. Ad Mariam principem viduam Eadziwill: de templo in honorem Sacratissimi Cordis Iesu in Varsaviae suburbio eius sumptibus exstructo",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-08-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Probe meminimus",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 510
+    }
+  },
+  {
+    "id": "mag:pius-xi/quae-ab-initio-1923",
+    "title": "Quae ab initio. Ad E. P. D. Eliam Huayek, patriarcham Antiochensem Maronitarum: ad gratulandum quintum ac vicesimum patriarchalis dignitatis annum",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-08-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quae ab initio",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 510
+    }
+  },
+  {
     "id": "mag:pius-xi/quod-litteris-1923",
     "title": "Quod Litteris. Ad E. P. D. Casparem Mariam Michaelem Latty, archiepiscopum Avenionensem: de triduanis supplicationibus in eadem civitate in honorem S. Thomae Aquinatis solemniter peragendis",
     "idStatus": "minted",
@@ -1646,6 +2828,97 @@
     }
   },
   {
+    "id": "mag:pius-xi/ad-munus-1923",
+    "title": "Ad munus. Venezuelana. Dismembrationis et erectionis dioecesium Corensis, Cumanensis, • Valentinae et Sancti Christophori",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-10-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ad munus",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 99
+    }
+  },
+  {
+    "id": "mag:pius-xi/prope-adsunt-dies-1923",
+    "title": "Prope adsunt dies. Ad Emum P. D. Basilium episcopum Veliternum S. R. E. card. Pompilj, vicaria potestate Urbis antistitem: appetente fidelium defunctorum commemoratione",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-10-21",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Prope adsunt dies",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 541
+    }
+  },
+  {
+    "id": "mag:pius-xi/laetitiam-sane-1923",
+    "title": "Laetitiam sane. Ad R. P. D. Ignatium Dubowski, Episcopum Luceoriensem et Zytomiriensem: de supplicationibus Vladimiriae, in oppido natali Sancti Iosaphat Kuneevitii, Episcopi et Martyris, habendis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-10-25",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Laetitiam sane",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 37
+    }
+  },
+  {
+    "id": "mag:pius-xi/urbem-istam-1923",
+    "title": "Urbem istam. Aa R. P. D; Ioannem Augustinum Germain, Archiepiscopum Tolosanum: de commemoratione Sancti Thomae Aquinatis ea in urbe celebranda '• • • • |PAG.",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-10-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Urbem istam",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 38
+    }
+  },
+  {
     "id": "mag:pius-xi/ecclesiam-dei-1923",
     "title": "Ecclesiam Dei",
     "idStatus": "minted",
@@ -1663,7 +2936,170 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ecclesiam Dei",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 573
+    }
+  },
+  {
+    "id": "mag:pius-xi/probe-nobis-1923",
+    "title": "Probe Nobis. Ad R. D. Iacobum Ogier, S. S. cubicularium honoris, eumdemque moderatorem Sodalitatis « pro Pontifice et Ecclesia »: de ipsius sodalitii incremento et studiis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-11-15",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Probe Nobis",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 66
+    }
+  },
+  {
+    "id": "mag:pius-xi/quam-animi-1923",
+    "title": "Quam animi. Ad B. P. D. Carolum Cox, Episcopum tit. Dioclensem, Vicarium Apostolicum Transvaalen. et Administratorem Apostolicum Kimberliensem: quinquagesimum sacerdotii eius natalem gratulatur :",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-11-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quam animi",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 42
+    }
+  },
+  {
+    "id": "mag:pius-xi/incumbentis-nobis-1923",
+    "title": "Incumbentis Nobis. Praefectura apostolica Terrae Gulielmi orientalis in vicariatum apostolicum, Novae Guineae orientalis denominan dum, erigitur.",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-11-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Incumbentis Nobis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 27
+    }
+  },
+  {
+    "id": "mag:pius-xi/orbis-catholici-regimen-1923",
+    "title": "Orbis catholici regimen. Verae Crucis. Dismembrationis et erectionis dioecesis Papantlensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-11-24",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Orbis catholici regimen",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 329
+    }
+  },
+  {
+    "id": "mag:pius-xi/quae-catholico-nomini-1923",
+    "title": "Quae catholico nomini. Dismembrato territorio e vicariatu apostolico de Kimberley, in Africa meridionali^ erigitur praefectura de Kroonstad",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-11-26",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quae catholico nomini",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 81
+    }
+  },
+  {
+    "id": "mag:pius-xi/cum-die-decimo-primo-1923",
+    "title": "Cum, die decimo primo. Ad B. P. D. Bartholomaeum Lagumina, Episcopum Agrigentinum, xxv appetente episcopatus eius natali",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-11-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Cum, die decimo primo",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 43
+    }
+  },
+  {
+    "id": "mag:pius-xi/dioecesis-istius-1923",
+    "title": "Dioecesis istius. Ad B. P. D. Franciscum Alberti, Episcopum De Plata, xxv anno exeunte ab episcopali eius consecratione",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-11-29",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Dioecesis istius",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 44
+    }
   },
   {
     "id": "mag:pius-xi/dominici-gregis-cura-1923",
@@ -1688,6 +3124,229 @@
       "volume": 16,
       "year": 1924,
       "page": 216
+    }
+  },
+  {
+    "id": "mag:pius-xi/ad-supremae-1923",
+    "title": "Ad supremae. Nictheroyensis. Erectionis dioecesium B arcensis et Camposinae",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-12-04",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ad supremae",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 485
+    }
+  },
+  {
+    "id": "mag:pius-xi/anno-reparatae-1923",
+    "title": "Anno reparatae. Indulgentiae, privilegia et titulus Basilicae minoris conceduntur metropolitano templo Bambergensi, nongentesimo vertente anno a beato obitu sancti Henrici Imperatoris, cuius festum pro Germania augetur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-12-04",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Anno reparatae",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 182
+    }
+  },
+  {
+    "id": "mag:pius-xi/praeclarissimas-inter-1923",
+    "title": "Praeclarissimas inter. Paroecialis ecclesia Beatae Mariae Virginis, vulgo «Marija Bistrica », intra fines archidioecesis Zagabriensis, titulo ac dignitate basilicae minoris cohonestatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-12-04",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Praeclarissimas inter",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 33
+    }
+  },
+  {
+    "id": "mag:pius-xi/quo-christiani-gregis-1923",
+    "title": "Quo christiani gregis. Dismembrato territorio vicariatus apostolici de Hupé Orientali, exinde « de Hankow » appellandi, tres praefecturae apostolicae, « de Hanyang », « de Wuchang » et « de Puchi », in Sinis eriguntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-12-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quo christiani gregis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 35
+    }
+  },
+  {
+    "id": "mag:pius-xi/ad-maiorem-dei-gloriam-1923",
+    "title": "Ad maiorem Dei gloriam. Ex dismembratione vicariatus de Fo-kien, cui in posterum nomen fit « de Foochow », efformantur vicariatus apostolicus de Funing et praefectura apostolica de Tingehow in Sinis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-12-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ad maiorem Dei gloriam",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 82
+    }
+  },
+  {
+    "id": "mag:pius-xi/cum-propagationi-1923",
+    "title": "Cum propagationi. Dismembrato territorio ex praefectura apostolica Sumatrae, in posterum de « Padang » nuncupandae, eriguntur praefecturae apostolicae de Bengkoelen atque de Banka et Biliton",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-12-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Cum propagationi",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 83
+    }
+  },
+  {
+    "id": "mag:pius-xi/tibi-et-clero-tuo-1923",
+    "title": "Tibi et clero tuo. Aa. R. P. D. Ioannem Baptistam Luis Perez, Episcopum Ovetensem: de dioecesana Synodo feliciter absoluta",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-12-28",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Tibi et clero tuo",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 48
+    }
+  },
+  {
+    "id": "mag:pius-xi/societatem-istam-1924",
+    "title": "Societatem istam. Ad perillustrem virum Ludovicum vicecomitem d'Hendecourt, praesidem generalem Societatis Vincentianae: de eiusdem sodalitii incrementis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-01-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Societatem istam",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 89
+    }
+  },
+  {
+    "id": "mag:pius-xi/pulcherrimos-sane-1924",
+    "title": "Pulcherrimos sane. Ad Emum P. D. Ioannem Baptistam titulo S. M. in Transpontina S. B. E. presbyterum Cardinalem Nasalli Bocca, Archiepiscopum Bononiensem: oíñciosis litteris, nomine quoque Collegii Theologici datis, respondet",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-01-11",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Pulcherrimos sane",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 90
+    }
+  },
+  {
+    "id": "mag:pius-xi/ut-hanc-tibi-1924",
+    "title": "Ut hanc tibi. Ad B. P. D. Paulum Gubernium de Keppler, Episcopum Bottenburgensem, xxv annos ab inito episcopatu explentem",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-01-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ut hanc tibi",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 91
     }
   },
   {
@@ -1716,6 +3375,188 @@
     }
   },
   {
+    "id": "mag:pius-xi/quamquam-quod-te-1924",
+    "title": "Quamquam, quod te. Ad B. P. D. Celsum Costantini, Archiepiscopum tit. Theodosiensem, Apostolicae Sedis in Sinis delegatum: de primo Concilio plenario in Sinis convocando",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-01-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quamquam, quod te",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 92
+    }
+  },
+  {
+    "id": "mag:pius-xi/haud-multo-1924",
+    "title": "Haud multo. Ad B. P. Henricum Hollmann, Magistrum generalem Canonicorum Begularium Crucigerorum, vicesimo quinto anno exeunte ex quo munus istud gerit",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-01-21",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Haud multo",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 184
+    }
+  },
+  {
+    "id": "mag:pius-xi/surgit-in-civitate-1924",
+    "title": "Surgit in civitate. Titulo et privilegiis basilicae minoris condecoratur ecclesia paroecialis B. M. V. Gratiarum, civitatis « Este », in dioecesi Patavina",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-01-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Surgit in civitate",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 85
+    }
+  },
+  {
+    "id": "mag:pius-xi/cum-ex-apostolico-munere-1924",
+    "title": "Cum ex Apostólico munere. Territorio augetur finibusque immutatur vicariatus apostolicus Leopoldopolitanus",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-01-29",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Cum ex Apostólico munere",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 149
+    }
+  },
+  {
+    "id": "mag:pius-xi/ad-munus-1924",
+    "title": "Ad munus. Bellohorizontinae. Erectionis Provinciae ecclesiasticae",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-02-01",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ad munus",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 264
+    }
+  },
+  {
+    "id": "mag:pius-xi/ad-sacrosancti-apostolatus-1924",
+    "title": "Ad sacrosancti apostolatus. Dismembrationis et erectionis dioecesis de « Juiz de Fora » mau 29 Infinita Dei. - Indictio Universalis Iubilaei Anni Sancti millesimi nongentesimi vicesimi quinti",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-02-01",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ad sacrosancti apostolatus",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 421
+    }
+  },
+  {
+    "id": "mag:pius-xi/in-apostolico-vicariatu-1924",
+    "title": "In apostolico vicariatu. Erigitur in Congo Belgico praefectura apostolica « de Thsuapa » e dismembratione vicariatus apostolici Novae Antuerpiae .....",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-02-11",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "In apostolico vicariatu",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 153
+    }
+  },
+  {
+    "id": "mag:pius-xi/cum-moderatores-1924",
+    "title": "Cum Moderatores. Indultum Oratorii privati conceditur sacerdotibus in Consilia Pontificii Operis a Propagatione Fidei adscitis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-02-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Cum Moderatores",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 219
+    }
+  },
+  {
     "id": "mag:pius-xi/unigenitus-dei-1924",
     "title": "Unigenitus Dei: sui criteri cui deve ispirarsi la formazione del clero regolare",
     "idStatus": "minted",
@@ -1736,6 +3577,204 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:pius-xi/pontificium-opus-1924",
+    "title": "Pontificium opus. Indulgentiae, privilegia et f acuìtates spirituales tribuuntur fidelibus et sacerdotibus in Pium Opus a Propagatione Fidei adlectis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-03-25",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Pontificium opus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 220
+    }
+  },
+  {
+    "id": "mag:pius-xi/tam-praeclara-1924",
+    "title": "Tam praeclara. Ad Emum P. D. Desideratum, tit. S. Petri in Vinculis, S. B. E. presb. Cardinalem Mercier, Archiepiscopum Mechliniensem, quinquagesimum ab inito sacerdotio annum explentem",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-03-26",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Tam praeclara",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 225
+    }
+  },
+  {
+    "id": "mag:pius-xi/institutum-novum-1924",
+    "title": "Institutum novum. Ad Emum P. D. Ludovicum Ernestum tit. S. Mariae in Aquiro, S. B. E. Cardinalem Dubois, Parisiensium Archiepiscopum; de Instituto Gregorianis concentibus altius excolendis Parisiis condito -Suavi quodam. - Ad Emum P. D. Michaelem S. B. E. Cardinalem Lega, Diaconum S. Eustachii: de solemnibus Bavennae habendis ob translationem Reliquiarum sancti Episcopi et Martyris Apollinaris",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-04-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Institutum novum",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 185
+    }
+  },
+  {
+    "id": "mag:pius-xi/linciae-in-urbe-1924",
+    "title": "Linciae, in urbe. Ad Emum P. D. Andream, tit. Sanctorum Cosmae et Damiani S. B. E. presb. Card. Frühwirth, quem Linciam Legatum suum mittit occasione dedicationis novi templi cathedralis",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-04-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Linciae, in urbe",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 228
+    }
+  },
+  {
+    "id": "mag:pius-xi/litterae-quas-1924",
+    "title": "Litterae, quas. Ad B. P. D. Guilelmum Turner, Episcopum Buffalensem: de dioecesana Synodo",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-04-15",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Litterae, quas",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 229
+    }
+  },
+  {
+    "id": "mag:pius-xi/ut-in-praefectura-1924",
+    "title": "Ut in praefectura. Praefectura apostolica de Uellé Occidentali in Congo Belgico in vicariatum apostolicum erigitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-04-15",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ut in praefectura",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 268
+    }
+  },
+  {
+    "id": "mag:pius-xi/inter-alia-1924",
+    "title": "Inter alia. Ad Emum P. D. Basilium, Episcopum Veliternum, S. E. E. Card. Pompilj, vicaria potestate Urbis, antistitem, archibasilicae Lateranensis archipresbyterum: decimo sexto exeunte saeculo a dedicata primum eadem archibasilica",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-05-04",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Inter alia",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 233
+    }
+  },
+  {
+    "id": "mag:pius-xi/in-abbatia-1924",
+    "title": "In Abbatia. Ad R. P. D. Iosephum Mariétan, Episcopum Bethlemensem, abbatem S. Mauritii Agaunensis: decimo quarto exeunte saeculo ab insigni SS. Sigismundi, Burgundionum regis, et Sociorum eius martyrio",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-05-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "In Abbatia",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 271
+    }
+  },
+  {
+    "id": "mag:pius-xi/allatum-ad-nos-1924",
+    "title": "Allatum ad nos. Ad Emum P. D. Ludovicum Nazarium, tit. Ss. Vitalis, Gervasii et Protasii, S. R. E. presb. Card. Bégin, Archiepiscopum Quebecensem: peractam feliciter dioecesanam synodum gratulatur.",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-05-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Allatum ad nos",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 273
+    }
+  },
+  {
     "id": "mag:pius-xi/infinita-dei-misericordia-1924",
     "title": "Infinita Dei Misericordia",
     "idStatus": "minted",
@@ -1753,6 +3792,28 @@
     },
     "incipit": "Infinita Dei Misericordia",
     "sourceGenreLabel": "bulls"
+  },
+  {
+    "id": "mag:pius-xi/vitam-qui-velit-1924",
+    "title": "Vitam qui velit. Ad Emum P. D. Gulielmum, tit. Ssmae Crucis in Hierusalem, S. R. E. presb. Card. Van Rossum, sacrae Congregationi de Propaganda Fide Praefectum: quinquagesimo appetente natali religiosae professionis eius",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-05-29",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Vitam qui velit",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 274
+    }
   },
   {
     "id": "mag:pius-xi/christi-domini-mandatum-1924",
@@ -1777,6 +3838,94 @@
       "volume": 17,
       "year": 1925,
       "page": 5
+    }
+  },
+  {
+    "id": "mag:pius-xi/augustam-bracarum-1924",
+    "title": "Augustam Bracarum. Ad Emum P. D. Antonium, tit. Ss. Marcellini et Petri, S. R. E. presb. Card. Mendes Bello, Patriarcham Lisbonensem: de Coetu Eucharistico e tota Natione Lusitana",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-06-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Augustam Bracarum",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 280
+    }
+  },
+  {
+    "id": "mag:pius-xi/placet-tecum-1924",
+    "title": "Placet tecum. Ad Emum P. D. Franciscum, tit. S. Pudentianae, S. R. E. presb. Card. Bourne, Archiepiscopum Westmonasteriensem: de Minorum Ordine abhinc septingentos annos in Angliam invecto",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-06-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Placet tecum",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 281
+    }
+  },
+  {
+    "id": "mag:pius-xi/inter-silesiae-1924",
+    "title": "Inter Silesiae. Abbatia Grissoviensis, in dioecesi Wratislaviensi, restituitur sub vetere titulo Domus Gratiae Sanctae Mariae et unitur Congregationi Beuronensi Ordinis Sancti Benedicti",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-06-19",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Inter Silesiae",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 323
+    }
+  },
+  {
+    "id": "mag:pius-xi/ecclesia-conlegiata-1924",
+    "title": "Ecclesia conlegiata. Titulus Basilicae minoris confertur ecclesiae conlegiatae B. M. V. a salute, in civitate Pazcuaro, archidiocesis Mechoacanensis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-06-25",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ecclesia conlegiata",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 353
     }
   },
   {
@@ -1805,6 +3954,56 @@
     }
   },
   {
+    "id": "mag:pius-xi/ex-quo-primum-1924",
+    "title": "Ex quo primum. Suspenduntur indulgentiae et facultates vertente anno universalis Iubilaei 1925",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-07-05",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ex quo primum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 305
+    }
+  },
+  {
+    "id": "mag:pius-xi/umbratilem-remotamque-1924",
+    "title": "Umbratilem remotamque. Statuta Ordinis Cartusiensis, ad normam Codicis revisa, definitive approbantur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-07-05",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Umbratilem remotamque",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 385
+    }
+  },
+  {
     "id": "mag:pius-xi/umbratilem-1924",
     "title": "Umbratilem",
     "idStatus": "minted",
@@ -1827,6 +4026,188 @@
     "sourceGenreLabel": "apost_constitutions"
   },
   {
+    "id": "mag:pius-xi/agi-hoc-mense-1924",
+    "title": "Agi hoc mense. Ad E. D. Victorem Alphonsum Huard, sacerdotem, moderatorem commentarii « Le naturalisme canadien ». ...",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-07-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Agi hoc mense",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 359
+    }
+  },
+  {
+    "id": "mag:pius-xi/si-unquam-alias-1924",
+    "title": "Si unquam alias. Poenitentiariis aliisque in Urbe confessariis facultates extraordinariae pro anno Iubilaei conceduntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-07-15",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Si unquam alias",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 309
+    }
+  },
+  {
+    "id": "mag:pius-xi/inter-religiosas-familias-1924",
+    "title": "Inter religiosas familias. Congregatio Missionariorum Filiorum Immaculati Cordis B. M. V. eiusque constitutiones plenissime approbantur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-07-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Inter religiosas familias",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 354
+    }
+  },
+  {
+    "id": "mag:pius-xi/apostolico-muneri-1924",
+    "title": "Apostolico muneri. Indulgentiae anni Iubilaei 1925 conceduntur monialibus aliisque stabili impedimento detentis, cum opportunis facultatibus circa absolutiones et votorum commutationes IV.?- MOTU PROPRIO",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-07-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Apostolico muneri",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 316
+    }
+  },
+  {
+    "id": "mag:pius-xi/de-ephemeride-1924",
+    "title": "De ephemeride. Ad EE. PP. scriptores ephemeridis cui titulus « La Civiltà Cattolica », quintum ac septuagesimum emensos operae annum.",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-07-31",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "De ephemeride",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 360
+    }
+  },
+  {
+    "id": "mag:pius-xi/ante-quam-1924",
+    "title": "Ante quam. Ad R, P. D. Celsum Costantini, Archiepiscopum tit. Theodosiensem, Delegatum Apostolicum in Sinis: de primo plenario Concilio Sinensi feliciter peracto",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-10-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ante quam",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 460
+    }
+  },
+  {
+    "id": "mag:pius-xi/de-vives-instances-1924",
+    "title": "De vives instances. Ad Emum P. D. Ludovicum, tit. Sanctae Mariae in Aquiro, S. R. E. Presb. Card. Dubois, Archiepiscopum Parisiensem: de cantu gregoriano in religiosis Sororum Carmelitarum Familiis.",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-10-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "De vives instances",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 458
+    }
+  },
+  {
+    "id": "mag:pius-xi/recentibus-litteris-1924",
+    "title": "Recentibus litteris. Ad Emum P. D. Michaelem, tit. S. Anastasiae, S. R. E. presb. Card. De Faulhaber, ceterosque Bavariae Archiepiscopos et Episcopos: officiosis litteris respondet ex annuo conventu datis.",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-10-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Recentibus litteris",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 457
+    }
+  },
+  {
     "id": "mag:pius-xi/latinarum-litterarum-1924",
     "title": "Motu Proprio Latinarum litterarum",
     "idStatus": "minted",
@@ -1847,6 +4228,94 @@
       "motu-proprio"
     ],
     "sourceGenreLabel": "motu_proprio"
+  },
+  {
+    "id": "mag:pius-xi/omnium-urbis-1924",
+    "title": "Omnium Urbis. De centenariis sollemnibus Dedicationis Papalis Archibasilicae Lateranensis.",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-10-22",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Omnium Urbis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 450
+    }
+  },
+  {
+    "id": "mag:pius-xi/sodalitatem-istam-1924",
+    "title": "Sodalitatem istam. Ad R. D. Iacobum Ogier, antistitem urbanum, praesidem generalem Sodalitatis « pro Pontifice et Ecclesia »",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-10-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Sodalitatem istam",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 461
+    }
+  },
+  {
+    "id": "mag:pius-xi/exstat-in-bononiensium-civitate-1924",
+    "title": "Exstat in Bononiensium civitate. Titulus ac privilegia Basilicae minoris conferuntur ecclesiae paroeciali Sancti Bartholomaei Bononiae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-11-08",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
+      "shelf": "aas/1925",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Exstat in Bononiensium civitate",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 17,
+      "year": 1925,
+      "page": 8
+    }
+  },
+  {
+    "id": "mag:pius-xi/limana-in-civitate-1924",
+    "title": "Limana in civitate. Ecclesia Beatae Mariae Virginis de Mercede, in civitate Limana, titulo ac privilegiis Basilicae minoris augetur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-12-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
+      "shelf": "aas/1925",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Limana in civitate",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 17,
+      "year": 1925,
+      "page": 9
+    }
   },
   {
     "id": "mag:pius-xi/omnium-ecclesiarum-1924",
@@ -1921,6 +4390,50 @@
     }
   },
   {
+    "id": "mag:pius-xi/inter-praecipua-1924",
+    "title": "Inter praecipua. Basilicae minoris titulo condecoratur ecclesia Beatae Mariae Virginis vulgo « all'Impruneta », prope Florentiam",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-12-19",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
+      "shelf": "aas/1925",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Inter praecipua",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 17,
+      "year": 1925,
+      "page": 131
+    }
+  },
+  {
+    "id": "mag:pius-xi/sancto-francisco-assisiensi-1924",
+    "title": "Sancto Francisco Assisiensi. Titulus ac privilegia Basilicae minoris conferuntur ecclesiae O. F. M. Conventualium Sancto Francisco dicatae in civitate Panormitana",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-12-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
+      "shelf": "aas/1925",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Sancto Francisco Assisiensi",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 17,
+      "year": 1925,
+      "page": 97
+    }
+  },
+  {
     "id": "mag:pius-xi/id-nuper-fecit-1924",
     "title": "Id nuper fecit. Ad E. D. Henricum Garriguet, Sulpitianae Societatis moderatorem generalem, quinquagesimum sacerdotii natalem celebraturum",
     "idStatus": "minted",
@@ -1940,6 +4453,94 @@
       "volume": 17,
       "year": 1925,
       "page": 134
+    }
+  },
+  {
+    "id": "mag:pius-xi/monachorum-vita-1925",
+    "title": "Monachorum vita. Approbatio constitutionum Ordinis Cisterciensium strictioris Observantiae",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1925-01-26",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
+      "shelf": "aas/1925",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Monachorum vita",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 17,
+      "year": 1925,
+      "page": 64
+    }
+  },
+  {
+    "id": "mag:pius-xi/quae-catholico-nomini-1925",
+    "title": "Quae catholico nomini. Erectio praefecturae apostolicae de « Tsingtao » in Sinis, dismembrato territorio e vicariatu apostolico de « Yenchowfu »",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1925-02-11",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
+      "shelf": "aas/1925",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quae catholico nomini",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 17,
+      "year": 1925,
+      "page": 226
+    }
+  },
+  {
+    "id": "mag:pius-xi/apostolatus-supremi-1925",
+    "title": "Apostolatus supremi. Certi assignantur fines inter vicariatum apostolicum « de Gallas » et praefecturam apostolicam de Kaffa, in Africa orientah",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1925-02-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
+      "shelf": "aas/1925",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Apostolatus supremi",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 17,
+      "year": 1925,
+      "page": 132
+    }
+  },
+  {
+    "id": "mag:pius-xi/expedit-1925",
+    "title": "Expedit. Ex dismembratione vicariatus apostolici de « Chaco » efformatur nova praefectura apostolica de «Pilcomayo», in Boliviana republica",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1925-02-26",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
+      "shelf": "aas/1925",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Expedit",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 17,
+      "year": 1925,
+      "page": 228
     }
   },
   {
@@ -2078,6 +4679,28 @@
     }
   },
   {
+    "id": "mag:pius-xi/divina-gratia-1925",
+    "title": "Divina gratia. Ven. Dei Servus Antonius Maria Gianelli, Episcopus Bobiensis, Beatus renuntiatur ....",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1925-04-19",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
+      "shelf": "aas/1925",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Divina gratia",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 17,
+      "year": 1925,
+      "page": 176
+    }
+  },
+  {
     "id": "mag:pius-xi/supremum-pastorale-munus-1925",
     "title": "Supremum pastorale munus. Erectionis dioecesis ac capituli Fluminensis et immutationis finium",
     "idStatus": "minted",
@@ -2100,6 +4723,28 @@
       "volume": 17,
       "year": 1925,
       "page": 519
+    }
+  },
+  {
+    "id": "mag:pius-xi/inter-sollertes-1925",
+    "title": "Inter sollertes. Ven. Dei Servus Vincentius Maria Strambi, Episcopus Maceratensis et Tolentinas, Beatus renuntiatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1925-04-26",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
+      "shelf": "aas/1925",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Inter sollertes",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 17,
+      "year": 1925,
+      "page": 180
     }
   },
   {
@@ -2178,6 +4823,94 @@
     }
   },
   {
+    "id": "mag:pius-xi/adolevit-martyrum-1925",
+    "title": "Adolevit Martyrum. Ven. Servae Dei Iphigenia a Sancto Matthaeo, e Congregatione Sororum ab adoratione perpetua Ssmi Sacramenti, Elisabeth Teresia a Sacro Corde Iesu, Ordinis Ursulinarum, Maria Rosa, Ordinis Sancti Benedicti, Maria a Sancto Henrico, Ordinis Cisterciensis, et Sociae, Beatae renuntiantur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1925-05-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
+      "shelf": "aas/1925",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Adolevit Martyrum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 17,
+      "year": 1925,
+      "page": 234
+    }
+  },
+  {
+    "id": "mag:pius-xi/in-omnes-catholici-1925",
+    "title": "In omnes catholici. Separato territorio e vicariatu apostolico de « Changsha », erigitur praefectura apostolica de « Yungchowfu » in Sinis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1925-05-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
+      "shelf": "aas/1925",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "In omnes catholici",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 17,
+      "year": 1925,
+      "page": 444
+    }
+  },
+  {
+    "id": "mag:pius-xi/in-omnes-orbis-1925",
+    "title": "In omnes orbis. Novi statuuntur fines vicariatibus de Birmania orientali et septentrionali",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1925-05-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
+      "shelf": "aas/1925",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "In omnes orbis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 17,
+      "year": 1925,
+      "page": 445
+    }
+  },
+  {
+    "id": "mag:pius-xi/supremi-apostolatus-1925-05-12",
+    "title": "Supremi apostolatus. Dismembrato territorio e praefectura apostolica de « Katanga », erigitur praefectura apostolica de « Luapula superiore », in Congo belgico",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1925-05-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
+      "shelf": "aas/1925",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Supremi apostolatus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 17,
+      "year": 1925,
+      "page": 446
+    }
+  },
+  {
     "id": "mag:pius-xi/vehementer-exsultamus-1925",
     "title": "Vehementer exsultamus. Beata Teresia a Iesu Infante, monialis professa Ordinis Carmelitarum Excalcea-",
     "idStatus": "minted",
@@ -2241,6 +4974,28 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:pius-xi/hoc-sacro-anno-1925",
+    "title": "Hoc sacro anno. Beatus Ioannes Eudes, Missionarius apostolicus et institutor Congregationis Iesu et Mariae atque Ordinis Dominae Nostrae a caritate,",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1925-05-31",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
+      "shelf": "aas/1925",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Hoc sacro anno",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 17,
+      "year": 1925,
+      "page": 482
+    }
+  },
+  {
     "id": "mag:pius-xi/in-altis-sabinae-1925",
     "title": "In altis Sabinae. Dismembrationis et unionis Abbatiae SS. Salvatoris Maioris",
     "idStatus": "minted",
@@ -2291,6 +5046,28 @@
     }
   },
   {
+    "id": "mag:pius-xi/deus-qui-infirma-1925",
+    "title": "Deus, qui infirma. Ven. Dei Serva M. Bernarda Soubirous, e Sororibus a caritate et institutione christiana Nivernensibus, Beata renuntiatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1925-06-14",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
+      "shelf": "aas/1925",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Deus, qui infirma",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 17,
+      "year": 1925,
+      "page": 296
+    }
+  },
+  {
     "id": "mag:pius-xi/libenti-sane-1925",
     "title": "Libenti sane. Ad R. P. D. Antonium Bonaventuram Jeglid, episcopum Labacensem: de conventu pro studiis rerum orientalium Labaci habendo",
     "idStatus": "minted",
@@ -2313,7 +5090,29 @@
     }
   },
   {
-    "id": "mag:pius-xi/supremi-apostolatus-1925",
+    "id": "mag:pius-xi/ab-exordiis-suis-1925",
+    "title": "Ab exordiis suis. Ven. Dei Famulus Petrus Iulianus Eymard, fundator Congregationis Presbyterorum a Ss.mo Sacramento atque Instituti Ancillarum Ss.mi Sacramenti, Beatus renuntiatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1925-07-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
+      "shelf": "aas/1925",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ab exordiis suis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 17,
+      "year": 1925,
+      "page": 370
+    }
+  },
+  {
+    "id": "mag:pius-xi/supremi-apostolatus-1925-07-14",
     "title": "Supremi apostolatus. Evectio praefecturae apostolicae de Ucayali in Peruvia in vicariatum apostolicum",
     "idStatus": "minted",
     "genre": "apostolic-letter",
@@ -2630,6 +5429,31 @@
     }
   },
   {
+    "id": "mag:pius-xi/vixdum-poloniae-unitas-1925",
+    "title": "Vixdum Poloniae unitas. De nova dioecesium latini ritus circumscriptione in ditione Polonica",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1925-10-28",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
+      "shelf": "aas/1925",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Vixdum Poloniae unitas",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 17,
+      "year": 1925,
+      "page": 521
+    }
+  },
+  {
     "id": "mag:pius-xi/centesimo-vertente-1925",
     "title": "Centesimo vertente. Ad B. P. D. Ioannem Franciscum Aragone, archiepiscopum Montisvidei, centesimo vertente anno a condita Bepublica",
     "idStatus": "minted",
@@ -2794,6 +5618,31 @@
       "volume": 17,
       "year": 1925,
       "page": 593
+    }
+  },
+  {
+    "id": "mag:pius-xi/servatoris-iesu-christi-1925",
+    "title": "Servatoris Iesu Christi. Extensionis Iubilaei tertii ac vicesimi ad totum catholicum Orbem",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1925-12-25",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
+      "shelf": "aas/1925",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Servatoris Iesu Christi",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 17,
+      "year": 1925,
+      "page": 611
     }
   },
   {

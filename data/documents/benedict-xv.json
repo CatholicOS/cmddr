@@ -19,6 +19,29 @@
     "sourceGenreLabel": "apost_exhortations"
   },
   {
+    "id": "mag:benedict-xv/templa-huius-almae-urbis-1914",
+    "title": "Templa huius almae Urbis. Canonici pro tempore ecclesiae Ss. Celsi et Iuliani de Urbe « Capellani secreti honoris » in perpetuum renuntiantur.",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1914-10-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Templa huius almae Urbis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 49
+    }
+  },
+  {
     "id": "mag:benedict-xv/ad-beatissimi-apostolorum-1914",
     "title": "Ad Beatissimi Apostolorum",
     "idStatus": "minted",
@@ -61,7 +84,61 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 6,
+      "year": 1914,
+      "page": 665
+    }
+  },
+  {
+    "id": "mag:benedict-xv/sacrae-theologiae-1914",
+    "title": "Sacrae theologiae. De Bononiensi theologorum collegio",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1914-12-03",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-06-1914-ocr.pdf",
+      "shelf": "aas/1914",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Sacrae theologiae",
+    "characteristics": [
+      "motu-proprio"
+    ],
+    "sourceGenreLabel": "Litterae Apostolicae Motu proprio datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 6,
+      "year": 1914,
+      "page": 689
+    }
+  },
+  {
+    "id": "mag:benedict-xv/templa-dei-1914",
+    "title": "Templa Dei. Ecclesia S. Michaelis Archangeli civitatis « Piano di Sorrento » titulo simplicis Basilicae decoratur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1914-12-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Templa Dei",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 50
+    }
   },
   {
     "id": "mag:benedict-xv/non-multo-post-1914",
@@ -84,7 +161,85 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 7,
+      "year": 1915,
+      "page": 5
+    }
+  },
+  {
+    "id": "mag:benedict-xv/romanorum-pontificum-1914",
+    "title": "Romanorum Pontificum. Cruciatae Bulla ad decem annos pro locis Lusitanae ditioni subiectis renovatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1914-12-31",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-07-1915-ocr.pdf",
+      "shelf": "aas/1915",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Romanorum Pontificum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 7,
+      "year": 1915,
+      "page": 549
+    }
+  },
+  {
+    "id": "mag:benedict-xv/ex-actis-tempore-1915",
+    "title": "Ex actis tempore. De Dioecesibus Suburbicariis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1915-02-01",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-07-1915-ocr.pdf",
+      "shelf": "aas/1915",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ex actis tempore",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 7,
+      "year": 1915,
+      "page": 229
+    }
+  },
+  {
+    "id": "mag:benedict-xv/quum-iampridem-1915",
+    "title": "Quum iampridem. De capellanis seu cantoribus choralibus Basilicae Liberianae",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1915-07-11",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-07-1915-ocr.pdf",
+      "shelf": "aas/1915",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quum iampridem",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 7,
+      "year": 1915,
+      "page": 317
+    }
   },
   {
     "id": "mag:benedict-xv/allorche-fummo-chiamati-1915",
@@ -137,7 +292,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost-constitutions"
+    "sourceGenreLabel": "apost-constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 7,
+      "year": 1915,
+      "page": 401
+    }
   },
   {
     "id": "mag:benedict-xv/benigne-annuentes-1915",
@@ -153,6 +314,51 @@
       "retrieved": "2026-09-20"
     },
     "incipit": "Benigne annuentes",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 53
+    }
+  },
+  {
+    "id": "mag:benedict-xv/ut-praesens-periculum-1915",
+    "title": "Ut praesens periculum. Renovatio Bullae Cruciatae ad duodecim annos pro locis Hispanicae ditioni subiectis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1915-08-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-07-1915-ocr.pdf",
+      "shelf": "aas/1915",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ut praesens periculum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 7,
+      "year": 1915,
+      "page": 557
+    }
+  },
+  {
+    "id": "mag:benedict-xv/cum-in-sancta-1915",
+    "title": "Cum in sancta. Conceduntur plenariae et partiales indulgentiae sodalitatibus sub titulo « Foedus Missae quotidianae » in Hibernia erectis vel erigendis. robis antiquius.",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1915-09-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Cum in sancta",
     "sourceGenreLabel": "Litterae Apostolicae",
     "acta": {
       "series": "AAS",
@@ -183,7 +389,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 7,
+      "year": 1915,
+      "page": 493
+    }
   },
   {
     "id": "mag:benedict-xv/seminaria-clericorum-1915",
@@ -209,6 +421,28 @@
     "sourceGenreLabel": "motu_proprio"
   },
   {
+    "id": "mag:benedict-xv/apostolatus-officium-1915",
+    "title": "Apostolatus officium. De erectione novae dioecesis « Portus Nationalis » ,",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1915-12-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-08-1916-ocr.pdf",
+      "shelf": "aas/1916",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Apostolatus officium",
+    "sourceGenreLabel": "Litterae Apostolicae sub plumbo datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 8,
+      "year": 1916,
+      "page": 92
+    }
+  },
+  {
     "id": "mag:benedict-xv/divinum-praeceptum-1915",
     "title": "Divinum Praeceptum con il quale si concede al Seminario Arcivescovile di Buenos Aires il potere di conferire titoli accademici in Filosofia e Sacra Teologia",
     "idStatus": "minted",
@@ -226,6 +460,75 @@
     },
     "incipit": "Divinum Praeceptum",
     "sourceGenreLabel": "briefs"
+  },
+  {
+    "id": "mag:benedict-xv/eximia-fidelium-1916",
+    "title": "Eximia fidelium. Templum B. M. V. vulgo « del Pino » in Urbe « Las Palmas », Canariensis dioeceseos, ad Basilicae minoris dignitatem in perpetuum evehitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1916-01-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Eximia fidelium",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 57
+    }
+  },
+  {
+    "id": "mag:benedict-xv/romani-pontifices-1916",
+    "title": "Romani Pontifices. «Parvum sanctuarium Mariae Virginis perdolentis vulgo \" Al Fiumícello „ », quod Neapoli exstat, pontificio cognomine perpetuo decoratur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1916-01-18",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Romani Pontifices",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 58
+    }
+  },
+  {
+    "id": "mag:benedict-xv/nihil-est-profecto-1916",
+    "title": "Nihil est profecto. Confraternitas sub titulo « Ligue de l'Evangile », in oppido « Montmagny », dioeceseos Versaliensis constituta, in archisodalitatem perpetuo erigitur, cum facultate aggregandi ubique terrarum.",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1916-02-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Nihil est profecto",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 59
+    }
   },
   {
     "id": "mag:benedict-xv/romanorum-pontificum-1916",
@@ -247,6 +550,28 @@
     "sourceGenreLabel": "briefs"
   },
   {
+    "id": "mag:benedict-xv/catholicae-ecclesiae-cura-1916",
+    "title": "Catholicae Ecclesiae cura. De erectione novae dioecesis Penedensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1916-04-03",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-08-1916-ocr.pdf",
+      "shelf": "aas/1916",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Catholicae Ecclesiae cura",
+    "sourceGenreLabel": "Litterae Apostolicae sub plumbo datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 8,
+      "year": 1916,
+      "page": 169
+    }
+  },
+  {
     "id": "mag:benedict-xv/cum-catholicae-ecclesiae-1916",
     "title": "Cum Catholicae Ecclesiae con il quale si intende agevolare l’unione dei Cristiani d’Oriente alla Chiesa di Roma",
     "idStatus": "minted",
@@ -266,6 +591,141 @@
     "sourceGenreLabel": "briefs"
   },
   {
+    "id": "mag:benedict-xv/conspicua-dei-templa-1916",
+    "title": "Conspicua Dei templa. Titulus Basilicae minoris pro parochiali ecclesia Rhedonensi S. Albino Ep. et",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1916-04-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Conspicua Dei templa",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 64
+    }
+  },
+  {
+    "id": "mag:benedict-xv/cum-divinus-redemptor-1916",
+    "title": "Cum divinus Redemptor. Oratio quaedam ad S. Petrum, Apostolorum Principem, indulgentia ditatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1916-04-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-08-1916-ocr.pdf",
+      "shelf": "aas/1916",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Cum divinus Redemptor",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 8,
+      "year": 1916,
+      "page": 139
+    }
+  },
+  {
+    "id": "mag:benedict-xv/rhedonensi-in-urbe-1916",
+    "title": "Rhedonensi in Urbe. Curiale templum Rhedonense, sub titulo SSmi Salvatoris et B. M. V. de miraculis et virtutibus, Basilicae minoris dignitate in perpetuum cohonestatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1916-04-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Rhedonensi in Urbe",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 63
+    }
+  },
+  {
+    "id": "mag:benedict-xv/dilectus-filius-noster-1916",
+    "title": "Dilectus filius Noster. Sodalitio a catholica veritate, vulgo « Catholic truth society »,'in Anglia instituto, partiales ac plenariae indulgentiae conceduntur, additis peculiaribus privilegiis pro sociis sacerdotibus",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1916-05-02",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Dilectus filius Noster",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 66
+    }
+  },
+  {
+    "id": "mag:benedict-xv/apostolic-letter-1916-05-13",
+    "title": "Rector Ecclesiae B. M. V. - Christifidelibus loci « Perth », dioecesis Dunkeldensis, ter salutationem angelicam pro Scotiae conversione recitantibus, nonnullae indulgentiae conceduntur",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1916-05-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-20"
+    },
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 68
+    }
+  },
+  {
+    "id": "mag:benedict-xv/apostolic-letter-1916-05-20",
+    "title": "Basilica B. M. V. - Sanctuarium B. M. V. Montis Berici indulgentiis ac privilegiis ditatur",
+    "idStatus": "provisional",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1916-05-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-20"
+    },
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 69
+    }
+  },
+  {
     "id": "mag:benedict-xv/cum-biblia-sacra-1916",
     "title": "Cum Biblia Sacra con il quale vengono promulgate le norme che debbono regolare il funzionamento dei tre Istituti di studi biblici operanti in Roma, e i rapporti fra loro intercorrenti",
     "idStatus": "minted",
@@ -283,6 +743,31 @@
     },
     "incipit": "Cum Biblia Sacra",
     "sourceGenreLabel": "briefs"
+  },
+  {
+    "id": "mag:benedict-xv/sanctae-mariae-ad-rupes-1916",
+    "title": "Sanctae Mariae ad Rupes. Dé sanctuariis S. Mariae ad Rupes et S. Bernardini Senensis quod Aquilae est, Ministri Generalis Fratrum Minorum iurisdictioni immediate subiciendis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1916-09-19",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-08-1916-ocr.pdf",
+      "shelf": "aas/1916",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Sanctae Mariae ad Rupes",
+    "characteristics": [
+      "motu-proprio"
+    ],
+    "sourceGenreLabel": "Litterae Apostolicae Motu proprio datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 8,
+      "year": 1916,
+      "page": 387
+    }
   },
   {
     "id": "mag:benedict-xv/summa-afficimur-laetitia-1916",
@@ -345,6 +830,123 @@
     "sourceGenreLabel": "briefs"
   },
   {
+    "id": "mag:benedict-xv/compertum-nobis-est-1916",
+    "title": "Compertum Nobis est. Consociatio cleri consortialis in civitate Bononiensi indulgentiis in perpetuum ditatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1916-12-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Compertum Nobis est",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 5
+    }
+  },
+  {
+    "id": "mag:benedict-xv/quum-anno-1916",
+    "title": "Quum anno. Ecclesia S. Antonii Abbatis, Neapoli, ad sacrum militarem Ordinem Constantinianum restituitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1916-12-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quum anno",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 6
+    }
+  },
+  {
+    "id": "mag:benedict-xv/exstat-granatae-1916",
+    "title": "Exstat Granatae. Templum S. Ioannis de Deo, quod Granatae exstat, titulo Basilicae minoris cohonestatur. ,",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1916-12-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Exstat Granatae",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 7
+    }
+  },
+  {
+    "id": "mag:benedict-xv/quod-catholicae-religionis-1917",
+    "title": "Quod catholicae religionis. Dismembrato territorio ex dioecesi Antioquiensi et Iericoènsi, invicem aeque principaliter unitis, creatur nova dioecesis S. Rosae de Osos in Columbia. .......",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-02-05",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quod catholicae religionis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 457
+    }
+  },
+  {
+    "id": "mag:benedict-xv/refert-ad-nos-1917",
+    "title": "Refert ad Nos. Primaria Ssmae Crucis Associatio in \"Sessoriana Basilica erecta indulgentiis ditatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-03-24",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Refert ad Nos",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 212
+    }
+  },
+  {
     "id": "mag:benedict-xv/alloquentes-proxime-1917",
     "title": "Alloquentes Proxime con il quale si decide la fusione delle Sacre Congregazioni dell’Indice e del Sant’Uffizio e affidata alla Penitenzieria Apostolica la materia riguardante le Indulgenze",
     "idStatus": "minted",
@@ -365,7 +967,14 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 167
+    }
   },
   {
     "id": "mag:benedict-xv/nobilissimam-sacrarum-1917",
@@ -410,6 +1019,29 @@
     "sourceGenreLabel": "briefs"
   },
   {
+    "id": "mag:benedict-xv/beati-petri-apostolorum-principis-1917",
+    "title": "Beati Petri Apostolorum Principis. Sodalitati veritatis catholicae in Hibernia constitutae indulgentiae et privilegia in perpetuum conceduntur.",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-04-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Beati Petri Apostolorum Principis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 317
+    }
+  },
+  {
     "id": "mag:benedict-xv/dei-providentis-1917",
     "title": "Dei Providentis con il quale viene istituita la Sacra Congregazione per la Chiesa Orientale",
     "idStatus": "minted",
@@ -430,7 +1062,14 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 529
+    }
   },
   {
     "id": "mag:benedict-xv/providentissima-mater-1917",
@@ -450,6 +1089,52 @@
     },
     "incipit": "Providentissima Mater",
     "sourceGenreLabel": "bulls"
+  },
+  {
+    "id": "mag:benedict-xv/supplices-ad-nos-1917",
+    "title": "Supplices ad Nos. Conceditur ut Ordinis Praedicatorum fratres, sorores et tertiarii in communi viventes accipere possint absolutionem generalem cum indulgentia plenaria die festo B. M. V. a Rosario, addita facultate absolutionem huic festo aliisque adnexam accipiendi intra octiduum ....",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-06-11",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Supplices ad Nos",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 323
+    }
+  },
+  {
+    "id": "mag:benedict-xv/cum-ssma-virgo-maria-1917",
+    "title": "Cum Ssma Virgo Maria. Ecclesia Tarvisina Assumptionis B. M. V., vulgo « La Madonna grande», titulo et privilegiis Basilicae minoris decoratur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-06-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Cum Ssma Virgo Maria",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 324
+    }
   },
   {
     "id": "mag:benedict-xv/extat-granatae-1917",
@@ -563,7 +1248,14 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Humani Generis Redemptionem",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 305
+    }
   },
   {
     "id": "mag:benedict-xv/dilectus-filius-himerius-a-iesu-1917",
@@ -635,6 +1327,29 @@
     }
   },
   {
+    "id": "mag:benedict-xv/ut-aucto-pastorum-numero-1917",
+    "title": "Ut, aucto Pastorum numero. Erigitur nova dioecesis de Wagga-Wagga in Australia. .......",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-07-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ut, aucto Pastorum numero",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 424
+    }
+  },
+  {
     "id": "mag:benedict-xv/des-le-debut-1917",
     "title": "Dès le début ai Capi dei popoli belligeranti invitandoli a trovare la via per una pace «giusta e duratura»",
     "idStatus": "minted",
@@ -682,7 +1397,14 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 483
+    }
   },
   {
     "id": "mag:benedict-xv/orientis-catholici-1917",
@@ -705,7 +1427,109 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 531
+    }
+  },
+  {
+    "id": "mag:benedict-xv/episcopalis-carnutensis-ecclesia-1917",
+    "title": "Episcopalis Carnutensis Ecclesia. De privilegii sacri pallii cathedrali Ecclesiae Carnutensi concessione.",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-11-15",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-10-1918-ocr.pdf",
+      "shelf": "aas/1918",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Episcopalis Carnutensis Ecclesia",
+    "sourceGenreLabel": "Litterae Apostolicae sub plumbo datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 10,
+      "year": 1918,
+      "page": 52
+    }
+  },
+  {
+    "id": "mag:benedict-xv/decessor-noster-1917",
+    "title": "Decessor Noster. De ecclesia S. Mariae Angelorum in Portiuncula Apostolicae Sedi immediate subiecta",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-11-21",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "shelf": "aas/1917",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Decessor Noster",
+    "characteristics": [
+      "motu-proprio"
+    ],
+    "sourceGenreLabel": "Litterae Apostolicae Motu proprio datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "I",
+      "page": 561
+    }
+  },
+  {
+    "id": "mag:benedict-xv/postquam-sexaginta-1917",
+    "title": "Postquam, sexaginta. De privilegii sacri pallii cathedrali Tarbiensi et Lourdensi concessione.",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-12-08",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-10-1918-ocr.pdf",
+      "shelf": "aas/1918",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Postquam, sexaginta",
+    "sourceGenreLabel": "Litterae Apostolicae sub plumbo datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 10,
+      "year": 1918,
+      "page": 53
+    }
+  },
+  {
+    "id": "mag:benedict-xv/apostolicis-litteris-1917",
+    "title": "Apostolicis litteris. Paroecia Ss. Cordis pro animabus igne purgatorio expiandis in Urbe instituitur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1917-12-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-10-1918-ocr.pdf",
+      "shelf": "aas/1918",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Apostolicis litteris",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 10,
+      "year": 1918,
+      "page": 5
+    }
   },
   {
     "id": "mag:benedict-xv/pias-fidelium-1917",
@@ -749,6 +1573,31 @@
       "volume": 10,
       "year": 1918,
       "page": 12
+    }
+  },
+  {
+    "id": "mag:benedict-xv/a-multis-1918",
+    "title": "A multis. Dismembrationis et erectionis dioecesis Lafayettensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1918-01-11",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "A multis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 461
     }
   },
   {
@@ -882,7 +1731,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 10,
+      "year": 1918,
+      "page": 225
+    }
   },
   {
     "id": "mag:benedict-xv/compertum-est-1918",
@@ -1033,6 +1888,97 @@
     }
   },
   {
+    "id": "mag:benedict-xv/exstat-derthusensi-1918",
+    "title": "Exstat, Derthusensi. Conceditur in perpetuum indulgentia plenaria toties quoties lucranda die festo titulari Societatis regalis á cingulo Nostrae Dominae ad cathedralis ecclesiae Derthusensis....",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1918-12-19",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-11-1919-ocr.pdf",
+      "shelf": "aas/1919",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Exstat, Derthusensi",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 11,
+      "year": 1919,
+      "page": 65
+    }
+  },
+  {
+    "id": "mag:benedict-xv/dilectus-filius-1919",
+    "title": "Dilectus filius. Consociationi Dominae Nostrae a salute Parisiis canonice erectae indulgentiae et spiritualia privilegia conceduntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1919-01-23",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-11-1919-ocr.pdf",
+      "shelf": "aas/1919",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Dilectus filius",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 11,
+      "year": 1919,
+      "page": 109
+    }
+  },
+  {
+    "id": "mag:benedict-xv/catholici-fideles-1919",
+    "title": "Catholici fideles. Erectio novae dioecesis graeci ritus « Lungrensis » nuncupatae",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1919-02-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-11-1919-ocr.pdf",
+      "shelf": "aas/1919",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Catholici fideles",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 11,
+      "year": 1919,
+      "page": 222
+    }
+  },
+  {
+    "id": "mag:benedict-xv/quae-catholici-orbis-1919",
+    "title": "Quae catholici orbis. Ecclesia metropolitana S. Iacobi Maioris in Urbe Marianopoli titulo ac privilegiis basilicae minoris honestatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1919-04-29",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-11-1919-ocr.pdf",
+      "shelf": "aas/1919",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quae catholici orbis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 11,
+      "year": 1919,
+      "page": 229
+    }
+  },
+  {
     "id": "mag:benedict-xv/bracarensis-1919",
     "title": "Bracarensis",
     "idStatus": "minted",
@@ -1104,6 +2050,28 @@
       "volume": 11,
       "year": 1919,
       "page": 337
+    }
+  },
+  {
+    "id": "mag:benedict-xv/diuturni-1919",
+    "title": "Diuturni. Ad Germaniae Episcopos: pace tandem sancita, opportuna monita profert quibus, Catholicae Ecclesiae opera, quamprimum belli damna resarciantur. • . . . . . . . . • . . . ...",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1919-07-15",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-11-1919-ocr.pdf",
+      "shelf": "aas/1919",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Diuturni",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 11,
+      "year": 1919,
+      "page": 305
     }
   },
   {
@@ -1467,7 +2435,35 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Religiosas inter familias",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 12,
+      "year": 1920,
+      "page": 230
+    }
+  },
+  {
+    "id": "mag:benedict-xv/ecclesiae-consuetudo-1920",
+    "title": "Ecclesiae consuetudo. B. Margaritae Mariae Alacoque, virgini, moniali a Visitatione sanctae Mariae, sanctorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-05-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-12-1920-ocr.pdf",
+      "shelf": "aas/1920",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ecclesiae consuetudo",
+    "sourceGenreLabel": "Litterae Decretales",
+    "acta": {
+      "series": "AAS",
+      "volume": 12,
+      "year": 1920,
+      "page": 486
+    }
   },
   {
     "id": "mag:benedict-xv/sedis-huius-apostolicae-1920",
@@ -1607,7 +2603,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Pacem, Dei Munus Pulcherrimum",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 12,
+      "year": 1920,
+      "page": 209
+    }
   },
   {
     "id": "mag:benedict-xv/quod-habetur-1920",
@@ -1626,7 +2628,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod habetur",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 12,
+      "year": 1920,
+      "page": 240
+    }
   },
   {
     "id": "mag:benedict-xv/in-africam-1920",
@@ -1695,7 +2703,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Martyrum rigata",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 12,
+      "year": 1920,
+      "page": 281
+    }
   },
   {
     "id": "mag:benedict-xv/inter-americae-1920",
@@ -1734,6 +2748,28 @@
     },
     "incipit": "Inter Suebiae",
     "sourceGenreLabel": "apost_letters"
+  },
+  {
+    "id": "mag:benedict-xv/praestantiores-inter-1920",
+    "title": "Praestantiores inter. Ecclesia curialis sanctae Mariae Magdalenae in oppido Vezelay, dioecesis Senonensis, titulo basilicae minoris decoratur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-06-28",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Praestantiores inter",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 6
+    }
   },
   {
     "id": "mag:benedict-xv/cum-primum-1920",
@@ -1786,6 +2822,28 @@
     }
   },
   {
+    "id": "mag:benedict-xv/quod-inclytus-1920",
+    "title": "Quod inclytus. Templum Carmelitarum, beatae Mariae Virgini de Monte Carmelo sacrum, in urbe Recifensi, e Statu Pernambuco, in Brasilia, titulo ac privilegiis basilicae minoris decoratur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-07-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quod inclytus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 8
+    }
+  },
+  {
     "id": "mag:benedict-xv/titulum-sancti-1920",
     "title": "Titulum sancti",
     "idStatus": "minted",
@@ -1802,7 +2860,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Titulum sancti",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 12,
+      "year": 1920,
+      "page": 435
+    }
   },
   {
     "id": "mag:benedict-xv/bonum-sane-1920",
@@ -1878,6 +2942,28 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:benedict-xv/christiani-gregis-sollicitudo-1920",
+    "title": "Christiani gregis sollicitudo. Praefectura Apostolica Novae Guineae Hollandiae in Vicariatum Apostolicum erigitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-08-29",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-12-1920-ocr.pdf",
+      "shelf": "aas/1920",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Christiani gregis sollicitudo",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 12,
+      "year": 1920,
+      "page": 565
+    }
+  },
+  {
     "id": "mag:benedict-xv/cum-in-honorem-1920",
     "title": "Cum in honorem",
     "idStatus": "minted",
@@ -1894,7 +2980,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Cum in honorem",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 12,
+      "year": 1920,
+      "page": 438
+    }
   },
   {
     "id": "mag:benedict-xv/spiritus-paraclitus-1920",
@@ -1916,7 +3008,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Spiritus Paraclitus",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 12,
+      "year": 1920,
+      "page": 385
+    }
   },
   {
     "id": "mag:benedict-xv/quod-nobis-1920",
@@ -1941,7 +3039,13 @@
     "aliases": [
       "Quod nobis in condendo"
     ],
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 12,
+      "year": 1920,
+      "page": 440
+    }
   },
   {
     "id": "mag:benedict-xv/ecclesiae-universae-regimen-1920",
@@ -2033,6 +3137,97 @@
     "sourceGenreLabel": "encyclicals"
   },
   {
+    "id": "mag:benedict-xv/dilectus-filius-1920",
+    "title": "Dilectus filius. Ecclesia beatae Mariae Virginis de Mercede sub titulo « Libératricis a terraemotu » in Civitate Quitensi erigitur in basilicam minorem",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-12-02",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Dilectus filius",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 187
+    }
+  },
+  {
+    "id": "mag:benedict-xv/christi-domini-1920",
+    "title": "Christi Domini. Divisionis et creationis novae dioecesis Lodzensis .......",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-12-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Christi Domini",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 249
+    }
+  },
+  {
+    "id": "mag:benedict-xv/venerabilis-frater-1920",
+    "title": "Venerabilis, frater. Ecclesia Ssmi Cordis Iesu in civitate Adamantina titulo et privilegiis basilicae minoris honestatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-12-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Venerabilis, frater",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 188
+    }
+  },
+  {
+    "id": "mag:benedict-xv/cum-ex-parte-1920",
+    "title": "Cum ex parte. Sanctuarium beatae Mariae Virginis vulgo « dei Pilastrello » in abbatiam Ordinis Olivetani erigitur et primus abbas in persona R. D. Caelestia Mariae Colombo nominatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-12-15",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Cum ex parte",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 189
+    }
+  },
+  {
     "id": "mag:benedict-xv/sacra-propediem-1921",
     "title": "Sacra Propediem",
     "idStatus": "minted",
@@ -2050,7 +3245,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Sacra Propediem",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 33
+    }
   },
   {
     "id": "mag:benedict-xv/ad-perennandam-memoriam-1921",
@@ -2075,6 +3276,166 @@
     }
   },
   {
+    "id": "mag:benedict-xv/pastoralis-sollicitudo-1921",
+    "title": "Pastoralis sollicitudo. Dismembrationis et erectionis dioecesis Bellohorizontinae",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-02-11",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Pastoralis sollicitudo",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 336
+    }
+  },
+  {
+    "id": "mag:benedict-xv/pia-societas-1921",
+    "title": "Pia Societas. Ecclesia parochialis Sacratissimi Cordis Iesu ad Castrum Praetorium in Urbe titulo et privilegiis basilicae minoris decoratur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-02-11",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Pia Societas",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 192
+    }
+  },
+  {
+    "id": "mag:benedict-xv/in-sublimi-1921",
+    "title": "In sublimi. Nova Praefectura Apostolica a S. Gabriele a Virgine Perdolente de Marañon, erigitur.",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-02-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "In sublimi",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 295
+    }
+  },
+  {
+    "id": "mag:benedict-xv/sedis-apostolicae-1921",
+    "title": "Sedis Apostolicae. Dismembrationis et aggregationis oppidi « Vallecorsa »",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-03-21",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Sedis Apostolicae",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 255
+    }
+  },
+  {
+    "id": "mag:benedict-xv/constat-apprime-1921",
+    "title": "Constat apprime. Indulgentia plenaria toties quoties in sacello Portiunculae prope Asisium lucranda ad omnes et singulos anni dies extenditur ....",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-04-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Constat apprime",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 298
+    }
+  },
+  {
+    "id": "mag:benedict-xv/anno-domini-1921",
+    "title": "Anno Domini. Sanctuarium beatae Mariae Virginis de Misericordia in dioecesi Maceratensi titulo ac privilegiis basilicae minoris honestatur ....",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-04-21",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Anno Domini",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 305
+    }
+  },
+  {
+    "id": "mag:benedict-xv/cathedralis-ecclesiae-1921",
+    "title": "Cathedralis ecclesiae. Cathedrale templum Samogitiense titulo ac privilegiis basilicae minoris donatur.",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-04-21",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Cathedralis ecclesiae",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 339
+    }
+  },
+  {
     "id": "mag:benedict-xv/in-praeclara-summorum-1921",
     "title": "In Praeclara Summorum, Lettera Enciclica in occasione del VI centenario della morte di Dante Alighieri",
     "idStatus": "minted",
@@ -2094,7 +3455,198 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "In Praeclara Summorum",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 209
+    }
+  },
+  {
+    "id": "mag:benedict-xv/cum-in-archidioecesi-1921",
+    "title": "Cum in archidioecesi. Erigitur nova Praefectura Apostolica « de Tierradentro », in Columbia, parte territorii distracta ex archidioecesi Popayanensi",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-05-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Cum in archidioecesi",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 374
+    }
+  },
+  {
+    "id": "mag:benedict-xv/romani-pontifices-1921",
+    "title": "Romani Pontifices. Praelatura nullius de Rio Branco abbatiae Beatae Mariae Virginis de Monteserrato Fluminis Ianuarii aggregatur",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-05-13",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Romani Pontifices",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 370
+    }
+  },
+  {
+    "id": "mag:benedict-xv/constat-nobis-1921",
+    "title": "Constat nobis. Metropolitanum templum Limanum ad basilicae minoris dignitatem promovetur.",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-05-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Constat nobis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 413
+    }
+  },
+  {
+    "id": "mag:benedict-xv/inter-sacras-aedes-1921",
+    "title": "Inter sacras aedes. Titulus basilicae minoris confertur archipresbyterali et collegiatae ecclesiae sancti Stephani civitatis Lavaniensis, in dioecesi Clavarensi",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-05-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Inter sacras aedes",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 412
+    }
+  },
+  {
+    "id": "mag:benedict-xv/sodalitatem-1921",
+    "title": "Sodalitatem. Sodalibus nostrae Dominae a bona morte quandam recitantibus preculam et sacrum litandum curantibus ad gratiam pii obitus sibi aliisve impetrandam, indulgentiae plenariae et partiales conceduntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-05-31",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Sodalitatem",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 342
+    }
+  },
+  {
+    "id": "mag:benedict-xv/quo-maiori-1921",
+    "title": "Quo maiori. Erectionis Capituli metropolitani Montis videi",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-06-17",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quo maiori",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 489
+    }
+  },
+  {
+    "id": "mag:benedict-xv/pro-benedictione-1921",
+    "title": "Pro benedictione. Generale seu commune mandatum apostolicum fit semel pro semper locorum Ordinariis pro benedictione Abbatum Ordinis Sancti Benedicti.",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-06-19",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Pro benedictione",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 416
+    }
+  },
+  {
+    "id": "mag:benedict-xv/sollicitudo-omnium-1921",
+    "title": "Sollicitudo omnium. Suppressis Vicariatu Apostolico Saxoniae et Praefectura Apostolica Lusatiae, eorum territorio restituitur dioecesis Misnensis ....",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-06-24",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Sollicitudo omnium",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 409
+    }
   },
   {
     "id": "mag:benedict-xv/fausto-appetente-die-1921",
@@ -2115,7 +3667,104 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Fausto Appetente Die",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 329
+    }
+  },
+  {
+    "id": "mag:benedict-xv/ecclesiae-universae-1921",
+    "title": "Ecclesiae universae. Dismembrato territorio ex archidioecesi Coloniensi, creatur dioecesis Eupensis et Malmediensis, ac aeque principaliter unitur dioecesi Leodiensi",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-07-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ecclesiae universae",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 467
+    }
+  },
+  {
+    "id": "mag:benedict-xv/nihil-magis-acceptum-1921",
+    "title": "Nihil magis acceptum. Erigitur in Primariam Associatio a ter repetita angelica salutatione vulgo «Œuvre de propagande des trois Ave Maria », Blesii instituta, cum facultate aggregandi ubique terrarum, additis indulgentiis ac privilegiis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-07-30",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Nihil magis acceptum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 419
+    }
+  },
+  {
+    "id": "mag:benedict-xv/ampla-ac-pervetusta-1921",
+    "title": "Ampla ac pervetusta. Titulus basilicae minoris confertur ecclesiae seu sanctuario Annunciationis B. M. V. oppidi « Follina », dioecesis Cenetensis",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-08-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ampla ac pervetusta",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 470
+    }
+  },
+  {
+    "id": "mag:benedict-xv/beatus-franciscus-1921",
+    "title": "Beatus Franciscus. Sanctuarium B. M. V. in caelos assumptae, in Monte Alverna, O. F. M., dignitate ac titulo basilicae minoris cohonestatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-08-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Beatus Franciscus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 472
+    }
   },
   {
     "id": "mag:benedict-xv/ad-christifidelium-bonum-1921",
