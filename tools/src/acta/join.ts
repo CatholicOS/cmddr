@@ -104,8 +104,12 @@ export const ACTA_SOURCES: readonly ActaSource[] = [
   // Phase 2b' (spec §11): the annual index PDFs of 2003-2009, served at
   // `documents/AAS-Index-2002-2009/AAS-Index-{year}.pdf` where the index page links them
   // wrongly, extracted in the layout mode with the spaces collapsed (the fixtures README).
-  // John Paul II to 2005, Benedict XVI from 2005; the 2006 index prints both popes under
-  // one part. `url` is null as for every index PDF: the fascicle holding a page is not
+  // John Paul II to 2005, Benedict XVI from 2005. Both popes' acts are indexed in 2005 and
+  // in 2006, but only 2005 gives each a numbered part of its own (`I - ACTA IOANNIS PAULI
+  // PP. II`, `II - ACTA BENEDICTI PP. XVI`); 2006 prints the two headings bare, under the
+  // one part `I - ACTA SUMMI PONTIFICIS` (`ACTA BENEDICTI XVI`, `ACTA IOANNIS PAULI II`,
+  // aas-indice-2006.txt ll. 128 and 476), and the parser reads both as pope headings.
+  // `url` is null as for every index PDF: the fascicle holding a page is not
   // derivable from the index.
   // These seven are set in the narrow column of 2010-2011, not the wide one of 2012-2024,
   // so they take the same `fullLine: 40`. Without it an entry whose page follows one space
@@ -115,9 +119,15 @@ export const ACTA_SOURCES: readonly ActaSource[] = [
   // Lindalvae / Justo de Oliveira caelitum Beatorum tribuitur dignitas 619`, 2008). Measured
   // over the seven fixtures, entry by entry (task 5 report §2 and its fix report): with the
   // option, 20 of the 21 pageless entries come back -- 13 of them in categories the registry
-  // harvests, among them the constitutions *Maturescens Catholica* (2003, 381) and *In
-  // Kyrgyzstania* (2006, 308) and nine beatification letters of 2004-2008 -- and not one
-  // entry of any year changes or is lost (the entry sets are strict supersets). No other
+  // harvests -- and not one entry of any year changes or is lost (the entry sets are strict
+  // supersets). Being read is not the same as reaching a record: of those 13, five match a
+  // shelf document (among them the constitution *In Kyrgyzstania*, AAS 98 (2006) 308) and
+  // three are created, while one is held on an unharvested shelf and four reach no record at
+  // all -- the constitution *Maturescens Catholica* (AAS 95 (2003) 381) and the letters *Qui
+  // autem pespexerit* (96 (2004) 524) and *Da, mihi, Iesu* (97 (2005) 23) are held
+  // `ambiguous` against several shelf records of their class and date, and *Iesus "cum
+  // dilexisset"* (98 (2006) 660) `ocr-damaged`. What the option buys them is that they are
+  // now read and held with a reason instead of vanishing; releasing them is curation. No other
   // fixture can move: `fullLine` is a per-source option, carried by 2010, 2011 and these
   // seven alone. The one entry still not closed is 2006's journey line, where the layout
   // mode fused a page to the next journey's opener (ITINERA APOSTOLICA, not harvested).

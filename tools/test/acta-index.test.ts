@@ -1573,7 +1573,9 @@ Episcoporum ............... 988`, '(An. 2005 et Vol. XCVII)'), { year: 2005 });
       // journey's opener.
       const wide = parseActaIndex(readFileSync(`tools/fixtures/acta/aas-indice-${year}.txt`, 'utf8'), { year, fullLine: 40 });
       expect(harvestedParseRate(wide.stats)!, String(year)).toBe(1);
-      expect(wide.stats.harvestedPageLines, String(year)).toBeGreaterThanOrEqual(r.stats.harvestedPageLines);
+      expect(wide.stats.harvestedPageLines, String(year)).toBe(
+        { 2003: 72, 2004: 69, 2005: 82, 2006: 77, 2007: 63, 2008: 67, 2009: 67 }[year],
+      );
       expect(wide.stats.withoutPage, String(year)).toBe(year === 2006 ? 1 : 0);
       expect(wide.defects.filter((d) => (categoryForHeading(d.category!)?.harvested ?? 'no') !== 'no'), String(year)).toEqual([]);
     }

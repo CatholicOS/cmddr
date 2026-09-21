@@ -3161,14 +3161,17 @@ describe('the AAS-only documents (AAS-only documents spec, phase 2a)', () => {
       '2010': 16, '2011': 2, '2012': 13, '2013': 25, '2014': 8,
       '2015': 7, '2016': 15, '2017': 30, '2018': 31, '2019': 73, '2020': 23, '2021': 19, '2022': 18, '2023': 32, '2024': 17,
     });
-    // Phase 2b' (spec §11) adds 79 from the seven index PDFs of 2003-2009, rising year by
-    // year as Benedict XVI's shelves thin out (1, 2, 4, 18, 10, 20, 24): 65 of Benedict XVI
+    // Phase 2b' (spec §11) adds 79 from the seven index PDFs of 2003-2009, few while John
+    // Paul II's shelves hold what the index prints and many once Benedict XVI's thin out
+    // (1, 2, 4, 18, 10, 20, 24 -- 2007 falls back, its index being the era's shortest at 63
+    // lines of a harvested category): 65 of Benedict XVI
     // and 14 of John Paul II, almost all beatification and canonisation acts vatican.va does
     // not shelve. The earlier eras do not move, and no shelf id is re-minted. Seven of the 79
     // are the `fullLine: 40` the seven sources carry (join.ts): four apostolic letters of
     // 3 October 2004 (AAS 98 (2006) 614, 617, 619, 622) that the whole-line reading had fused
     // into one five-fold claim on a single shelf record -- the `claimed-twice` hold that
-    // wrote neither -- and three more the option closes (2006, 2007, 2008).
+    // wrote none of the five -- and three the option closes for the first time (*Deus
+    // laudandus* 2006, *Pascite, qui est in vobis* 2007, *Humiliter in Christo* 2008).
     // The sample's 136 are 1931, 1958, 1978 and 2012's; 1909 and 1917-I count with their era (phase 2b-iii-b) since the recovery.
     expect(born).toHaveLength(265 + 136 + 1627 + 649 + 94 + 277 + 458 + 9 + 79);
     const byClass = new Map<string, number>();
@@ -3591,7 +3594,8 @@ describe('the AAS-only documents (AAS-only documents spec, phase 2a)', () => {
 
   it('joins and creates from the index PDFs of 2003-2009 as the era report says (acta volumes spec §11, phase 2b\')', () => {
     const era = born.filter((d) => d.acta!.year >= 2003 && d.acta!.year <= 2009);
-    // 79 created, rising year by year as Benedict XVI's shelves thin out: 1, 2, 4, 18, 10, 20, 24.
+    // 79 created: 1, 2, 4, 18, 10, 20, 24 -- few while John Paul II's shelves hold what the
+    // index prints, many once Benedict XVI's thin out, with 2007 falling back on a short index.
     expect(era).toHaveLength(79);
     for (const d of era) {
       expect(d.acta!.volume, d.id).toBe(d.acta!.year - 1908);
