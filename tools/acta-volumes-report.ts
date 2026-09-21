@@ -15,7 +15,7 @@
  * PDFs of 2010, 2011, 2013 and 2014 -- John Paul II, Benedict XVI and Francis's first year),
  * `1926-1930` (phase 2b-iii-a: AAS 18-22, Pius XI) and `1909-1925` (phase 2b-iii-b: AAS 1-17,
  * Pius X, Benedict XV and Pius XI's first three years, with the pages the volume bodies gave
- * back -- spec §10; §1b of its report measures the recovery) and `2003-2009` (phase 2b': the seven
+ * back -- spec §10; §1b of its report measures the recovery), and `2003-2009` (phase 2b': the seven
  * annual index PDFs of 2003-2009, John Paul II and Benedict XVI -- spec §11).
  *
  * A sibling of tools/acta-report.ts rather than a dimension of it: that report's prose
@@ -1034,9 +1034,18 @@ ERAS['2003-2009'] = {
       `   *documentorum chronologico ordine digestus* in the shape of 2010–2014, in ${Math.min(...pdfPages)} to ${Math.max(...pdfPages)} PDF pages (§1). The seven parse at`,
       `   ${era.map(([k, x]) => `${pct(harvestedParseRate(x.stats))} (${k})`).join(', ')} over the harvested categories (§4)${underHarvested.length ? `, under the 95 % floor in ${underHarvested.join(', ')}` : ', every one above the 95 % floor'},`,
       `   and at ${pct(Math.min(...rates))}–${pct(Math.max(...rates))} over all pope-part page lines${underAll.length ? `, under the floor in ${underAll.join(', ')}` : ', above it everywhere'}. The ${defects.length} lines the parser does not read`,
-      `   into an entry (§3) fall, every one of them, in a category the registry does not harvest: ${journeys} of the *Itinera apostolica* --`,
-      `   the journeys of 2003–2005 dated by a range (\`2003 Iun. 5-9 in Croatiam .... 492\`) and those of 2006–2009 listed under the`,
-      `   heading with no page on the line (\`V. Assisium.\`), which is why 2009 shows ${era.find(([k]) => k === '2009')![1].defects.length} defects at ${pct(parseRate(era.find(([k]) => k === '2009')![1].stats))} --`,
+      `   into an entry (§3) fall, every one of them, in a category the registry does not harvest. ${journeys} are the *Itinera apostolica*,`,
+      `   which the seven print in three shapes, read in the fixtures. 2003–2005 give a journey one dated line ending in a page`,
+      `   (\`2003 Iun. 5-9 in Croatiam .................. 492\`), so those lines stand in the rate's denominator, whether the parser opens an`,
+      `   entry on them (§13 counts one in 2003) or reports them (§3). 2007 and 2008 give it an undated opener and a cross-reference,`,
+      `   neither carrying a page (\`die 17 Iunii Assisium in Italia.\` over \`V.Assisium.\` in 2007;`,
+      `   \`V. Vasintonia; Neoeboracum.\` in 2008). 2006 and 2009 give it a sub-list under a pageless opener, and the sub-lists differ:`,
+      `   2006's items end in a page as an entry does (\`2006 a die 25 ad diem 28mensis Maii per Poloniam\`, then`,
+      `   \`» » 26 Ad Santuarium loci Jasna Go´ ra in Cze˛stochowa .... 469\` and the sixteen others §13 counts), while 2009's carry their`,
+      `   pages inline, comma-separated and closed by a stop (\`A die 17 ad diem 22 mensis Martii per Camaruniam et Angoliam:\`, then`,
+      `   \`Die 21 Alloc. ad iuvenes Angolienses in Stadio v. « Dos Coqueiros », 321.\`), so that one line of that section's 57 non-blank`,
+      `   lines ends in a bare digit. That is why 2009 shows ${era.find(([k]) => k === '2009')![1].defects.length} defects at ${pct(parseRate(era.find(([k]) => k === '2009')![1].stats))}: its journey lines are read and`,
+      `   reported, and they are rightly outside the rate's denominator, not lost from it. The rest of the ${defects.length} are`,
       `   ${[...byCat].filter(([id]) => id !== 'Itinera Apostolica').map(([id, n]) => `${n} ${id}`).join(', ')}. ${inHarvested.length === 0 ? 'Not one defect of the era falls in a harvested category' : `${inHarvested.length} of them fall in a harvested category`}.`,
       `2. **What the layout mode glues is read at the date position, and 2006 needed a title line it does not print.** The fixtures are`,
       `   the layout mode's text because the default mode drops the spaces between words in 2003–2006 (\`honoresdecernuntur\`,`,

@@ -388,9 +388,12 @@ of the Italian printing (AAS 15 (1923) 5) it names and quotes. Phase 2b′
 decretals and 2 motu proprio — and held **232**: 79 in categories that wait for their shelf (72 of them *Nuntii*), 60
 ambiguous, 36 on shelves not harvested for these popes, 34 by the guard, 14 claimed twice, 7 id collisions and 2 incipits the
 text layer damaged. It re-minted no shelf id and needed no curated row of any kind. Forty-five of the sixty ambiguous entries
-are circumscription constitutions of a single day, which the index names by incipit and vatican.va by see; the one act of
-weight left without a reference is John Paul II's *Pastores gregis*, which the 2004 index dates 5 October 2003, the closing of
-the Synod, and vatican.va's shelf 16 October, the signing, so the guard holds the entry rather than mint a second record. The
+are circumscription constitutions of a single day, which the index names by incipit and vatican.va by see. The era report's
+§11 lists **163** shelf documents of the two popes dated in the volume years that carry no reference, 119 of them of the formal
+genres, most dated to a canonisation or beatification day whose decretal the *next* volume prints; the one act of weight with
+an entry of its own and no reference is John Paul II's *Pastores gregis*, which the 2004 index dates 5 October 2003, the
+closing of the Synod, and vatican.va's shelf 16 October, the signing, so the guard holds the entry rather than mint a second
+record. The
 remaining phase is 2c, the *Acta Sanctae Sedis* of 1865–1908, whose indexes carry no date or incipit and are confirmed by hand.
 
 ### The document registry

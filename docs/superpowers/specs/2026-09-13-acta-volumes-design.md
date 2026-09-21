@@ -104,7 +104,9 @@ constitutions read; total and per-pope documents before and after; re-minted she
 
 SCHEMA.md and README: the coverage sentence of the *Acta Apostolicae Sedis reference*
 subsection is extended (which years are joined, which created from, and that 2003–2009
-await a fascicle parser); `acta.part` is no longer "unused". Issue #25 gets the sample's
+await a fascicle parser — superseded by §11, which joins them from the index PDFs the
+index page links wrongly; the README and SCHEMA.md say so instead); `acta.part` is no
+longer "unused". Issue #25 gets the sample's
 headline numbers as a comment.
 
 ## 8. Out of scope
