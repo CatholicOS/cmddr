@@ -2062,6 +2062,23 @@ export const ACTA_SHARED_PAGES: Readonly<Record<string, SharedPage>> = {
       + "E. Card. Ga- / sparri, a secretis Status: de dissidiis componendis / quae pacem populis affulgere nondum sinunt . . 353`); both letters "
       + "are on the letters shelf (the shelf's slug of the first reads `ceteriores-nos`, vatican.va's own spelling).",
   },
+  // Phase 2c-i (the ASS sample): the one page of the five sample volumes that two matched
+  // shelf letters cite. Read in the store text on 2026-09-21; the ASS sets Leo XIII's short
+  // letters one after the other under their own headings, as the AAS fascicles do.
+  'ASS:33:641': {
+    documentIds: ['mag:leo-xiii/de-ingenii-1901', 'mag:leo-xiii/le-nostre-ferme-speranze-1901'],
+    evidence: "ASS 33 (1900) p. 641 (page 641 of ass-33-1900.txt, read 2026-09-21) prints 'LITTERAE SS.mi Patris Leonis XIII ad "
+      + "auctorem libri in quo exposita est admira­ / bilis inhabitatio Sancti Spiritus in animis iustis. / Dilecto Filio Bartholomeo "
+      + "Froget Sodali Dominicano. / Pictavium. / Dilecte Fili, salutem et Apostolicam Benedictionem. — De ingenii doctrinaeque "
+      + "fructibus quos nobis frequentes catholicorum exhibet pietas …', dated on the same page 'Datum Romae apud Sanctum Petrum die 20 "
+      + "februarii 1901, Pontificatus Nostri vicesimo quarto. LEO PP. XIII.', and, lower on the same page, 'LITTERAE SS.mi D. N. Leonis "
+      + "XIII quoad consociationem Rosarii perpetui. / Al diletto Figlio Costanzo Maria Becchi, dei Predicatori, Direttore dell'Assoc. "
+      + "del Rosario Perpetuo in Italia. / Le nostre ferme speranze di quattro anni fa, quando scrivemmo l'Enciclica sul Rosario di "
+      + "Maria …', which runs onto p. 642 and is dated there 'Dato a Roma, presso S. Pietro, il giorno 28 marzo dell'anno 1901, "
+      + "vigesimoquarto del Nostro Pontificato. LEO PP. XIII.' (the shelf's URL slug dates it 19010228, its record 1901-03-28, the "
+      + "dateline's). The scanner enters both at 641 (ass-33-1900.entries.json, anchor `dateline`), and both letters are on the "
+      + "letters shelf.",
+  },
 };
 
 export interface Reprint {
@@ -2154,5 +2171,61 @@ export const ACTA_REPRINTS: Readonly<Record<string, Reprint>> = {
       + "signature (p. 42), with no note of why it is printed again and no heading of corrigenda (the one difference the OCR shows, "
       + "'consideret' against 'consuleret', is the OCR's). A re-issue by this table's rule: the citation of record is the first "
       + 'printing, AAS 22 (1930) 483.',
+  },
+  // Phase 2c-i (the ASS sample): the two constitutions of 1908 the first fascicle of the AAS
+  // (1 January 1909) prints again from ASS 41 -- *Sapienti consilio* (29 June 1908, the
+  // Roman Curia) and *Promulgandi* (29 September 1908, the AAS itself instituted). Until the
+  // ASS was joined, AAS 1 (1909) 7 and 5 were the registry's references (phase 2b-iii-b, a
+  // curated page reading and a recovered page); with ASS 41 read, each act is claimed twice
+  // and this table's rule decides: the first printing is the citation of record, the ASS
+  // being the Holy See's official organ since 1904 (*Ex actis*, 23 May 1904). The owner may
+  // prefer the AAS by canonical usage (the *Fontes* cite both at AAS 1); that needs a kind
+  // this table does not have (a later printing cited over a plain first one), so the rule
+  // stands and the era report names both printings. The first "index line" of each row is
+  // the ASS heading the reading quotes, the ASS having no chronological index.
+  'AAS:1:7': {
+    kind: 'reissue',
+    citationOf: 'ASS:41:425',
+    indexLines: [
+      'CONSTITUTIO APOSTOLICA / SS. D. N. Pii div. prov. Papae X, de Romana Curia.',
+      '1908    Ian.   29    Constitutio « Sapienti Consilio » / DE ROMANA CURIA.',
+    ],
+    evidence: "ASS 41 (1908) p. 425 (page 425 of ass-41-1908.txt, read 2026-09-21; the curated reading ASS:41:425) prints "
+      + "'CONSTITUTIO APOSTOLICA / SS. D. N. Pii div. prov. Papae X, de Romana Curia. / PIUS EPISCOPUS / SERVUS SERVORUM DEI / "
+      + "A d perpetuam rei memoriam. / Sapienti consilio sa. me. Pontifex Xystus V, Decessorum / vestigiis inhaerens eorumque coepta "
+      + "perficiens, sacros Car- / dinalium coetus, seu Romanas Congregationes …', dated p. 440 'Datum Romae apud Sanctum Petrum, anno "
+      + "Incarnationis Dominicae millesimo nongentesimo octavo, die festo Sanctorum Apostolorum Petri et Pauli, III Kal. Iulias' -- 29 "
+      + "June 1908 -- in the fascicle of the summer of 1908. AAS 1 (1909) p. 7 (page 7 of aas-01-1909.txt, read 2026-09-21), under the "
+      + "running head 'Constitutio Apostolica Sapienti consilio.. 7', prints 'CONSTITUTIO APOSTOLICA / DE ROMANA CURIA / PIUS EPISCOPUS "
+      + "/ SERVUS SERVORUM DEI / AD PERPETUAM REI MEMORIAM / Sapienti consilio sa. me. Pontifex Xystus V, Decessorum ve- / stigiis "
+      + "inhaerens eorumque coepta perficiens, sacros Cardi- / nalium coetus, seu Romanas Congregationes …', the same text (the ASS's "
+      + "'suis quaeque finibus' reads 'suis quamque finibus' in the AAS) and the same dating formula at p. 19 ('Datum Romae apud Sanctum "
+      + "Petrum, anno Incarnationis … III Kalendas Iulias'), in the first fascicle of the AAS (1 January 1909, 'Annus I. - Vol. I. Die 1 "
+      + "Ianuarii 1909. Num. 1.'), with no note of why it is printed again and no heading of corrigenda: a re-issue. The 1909 index "
+      + "enters it under `I. - CONSTITUTIONES APOSTOLICAE` as `1908 Ian. 29 Constitutio « Sapienti Consilio » / DE ROMANA CURIA.` (the "
+      + "`Ian.` corrected to June by ACTA_INDEX_CORRECTIONS '1909:7', the page read by ACTA_PAGE_READINGS). The citation of record is the "
+      + "first printing, ASS 41 (1908) 425.",
+  },
+  'AAS:1:5': {
+    kind: 'reissue',
+    citationOf: 'ASS:41:619',
+    indexLines: [
+      'ACTA ROMANI PONTIFICIS / CONSTITUTIO APOSTOLICA / De promulgatione legum et evulgatione actorum S. Sedis.',
+      '             Sept.                Constitutio « Promulgandi », de promulgatione legum / et evulgatione actorum S. Sedis',
+    ],
+    evidence: "ASS 41 (1908) p. 619 (page 619 of ass-41-1908.txt, read 2026-09-21; the curated reading ASS:41:619) prints 'ACTA ROMANI "
+      + "PONTIFICIS / CONSTITUTIO APOSTOLICA / De promulgatione legum et evulgatione actorum S. Sedis. / PIUS EPISCOPUS / SERVUS SERVORUM "
+      + "DEI / Ad perpetuam rei memoriam. / Promulgandi pontificias Constitutiones ac leges non idem / semper decursu temporis in Ecclesia "
+      + "catholica fuit modus …', dated p. 620 'Datum Romae apud S. Petrum, anno Incarnationis Do- / minicae millesimo nongentesimo "
+      + "octavo, in Kalendas Octo- / bres, Pontificatus Nostri sexto.' (the OCR's `in` for `III`: 29 September 1908), signed 'A. Card. "
+      + "Di PIETRO R. Card. MERRY DEL VAL / Datarius a Secretis Status'. AAS 1 (1909) p. 5 (page 5 of aas-01-1909.txt, read 2026-09-21), "
+      + "the first page of the first fascicle ('Annus I. - Vol. I. Die 1 Ianuarii 1909. Num. 1.'), prints 'CONSTITUTIO APOSTOLICA / DE "
+      + "PROMULGATIONE LEGUM ET EVULGATIONE ACTORUM S. SEDIS / PIUS EPISCOPUS / SERVUS SERVORUM DEI / AD PERPETUAM REI MEMORIAM / "
+      + "Promulgandi pontificias Constitutiones ac leges non idem / semper decursu temporis in Ecclesia catholica fuit modus …', the same "
+      + "text, the same formula at p. 6 ('… nicae millesimo nongentesimo octavo, III Kalendas Octobres, / Pontificatus Nostri sexto.') and "
+      + "the same signatures, with no note of why it is printed again and no heading of corrigenda: a re-issue -- the AAS opening with "
+      + "the constitution that instituted it. The 1909 index enters it as `Sept. Constitutio « Promulgandi », de promulgatione legum / et "
+      + "evulgatione actorum S. Sedis` (the page recovered from the body, aas-01-1909.pages.json). The citation of record is the first "
+      + "printing, ASS 41 (1908) 619.",
   },
 };
