@@ -60,7 +60,8 @@ const index = (year: number, retrieved: string, extra: Partial<ActaSource['parse
  * sample of the acta volumes spec §5), the twenty-six volumes of phase 2b-ii-a (AAS
  * 24-49, 1932-1957), the nineteen of phase 2b-ii-b (AAS 51-69, 1959-1977; spec §9) and
  * the twenty-four of phase 2b-ii-c (AAS 71-94, 1979-2002, with the index PDFs of 2010,
- * 2011, 2013 and 2014) precede the ten annual index PDFs of phase 1.
+ * 2011, 2013 and 2014), and the seven index PDFs of 2003-2009 (phase 2b', spec §11)
+ * precede the ten annual index PDFs of phase 1.
  * AAS 9 (1917) part II is the *Codex Iuris Canonici* itself and carries no chronological
  * index (its one papal act, *Providentissima Mater Ecclesia*, is on the bulls shelf as
  * `mag:benedict-xv/providentissima-mater-1917`), so only part I has a fixture.
@@ -100,6 +101,13 @@ export const ACTA_SOURCES: readonly ActaSource[] = [
   ...Array.from({ length: 1982 - 1979 + 1 }, (_, i) => volume(1979 + i, '2026-09-13')),
   volume(1983, '2026-09-13', { part: 'I', url: 'https://www.vatican.va/archive/aas/documents/AAS-75-1983-I-ocr.pdf' }),
   ...Array.from({ length: 2002 - 1984 + 1 }, (_, i) => volume(1984 + i, '2026-09-13')),
+  // Phase 2b' (spec §11): the annual index PDFs of 2003-2009, served at
+  // `documents/AAS-Index-2002-2009/AAS-Index-{year}.pdf` where the index page links them
+  // wrongly, extracted in the layout mode with the spaces collapsed (the fixtures README).
+  // John Paul II to 2005, Benedict XVI from 2005; the 2006 index prints both popes under
+  // one part. `url` is null as for every index PDF: the fascicle holding a page is not
+  // derivable from the index.
+  ...[2003, 2004, 2005, 2006, 2007, 2008, 2009].map((y) => index(y, '2026-09-21')),
   // The 2010 and 2011 index PDFs are set in a narrower column than 2012-2024 (their full
   // lines run to 40-60 characters), so a page after one space closes a line of 40 (index.ts).
   index(2010, '2026-09-13', { fullLine: 40 }),

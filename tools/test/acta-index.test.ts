@@ -1546,6 +1546,29 @@ Episcoporum ............... 988`, '(An. 2005 et Vol. XCVII)'), { year: 2005 });
       ['SYNODUS EPISCOPORUM', '2005-10-22', 988],
     ]);
   });
+
+  it('parses every index PDF of 2003-2009 with no unseen heading and no unmapped pope, and measures its rate (spec §11.2)', () => {
+    for (const year of [2003, 2004, 2005, 2006, 2007, 2008, 2009]) {
+      const r = parseActaIndex(readFileSync(`tools/fixtures/acta/aas-indice-${year}.txt`, 'utf8'), { year });
+      expect(r.volume, String(year)).toBe(year - 1908);
+      expect(r.unseenHeadings, String(year)).toEqual([]);
+      expect(r.unmappedPopes, String(year)).toEqual([]);
+      expect(r.popeHeadings.length, String(year)).toBe([2005, 2006].includes(year) ? 2 : 1);
+      expect(r.stats.entries, String(year)).toBeGreaterThan(120);
+      // Measured after Tasks 2-4: every one of the seven parses every line of a harvested
+      // category (1.000 for all seven), so the 95 % floor of spec §4 holds with room. Over
+      // all the pope parts' page lines the rate is 0.985 (2003), 0.987 (2004), 0.986 (2005),
+      // 0.989 (2006) and 1.000 (2007-2009); what it misses is the journey ranges and
+      // sub-lists of ITINERA APOSTOLICA and the sub-list openers of the consistory, the
+      // synod and the Secretariat of State -- categories the registry does not harvest.
+      // The rate flatters the seven by a little: 13 entries of harvested categories end in a
+      // page set after one space on a continuation line too short to be a full line, so the
+      // parser closes no entry and the line counts in neither term (2003 *Maturescens
+      // Catholica* 381, 2006 *In Kyrgyzstania* 308, nine beatification letters of 2004-2008,
+      // two of the letters and messages). The task 5 report §2 lists all thirteen.
+      expect(harvestedParseRate(r.stats)!, String(year)).toBeGreaterThanOrEqual(0.95);
+    }
+  });
 });
 
 describe('splitEntryText', () => {
