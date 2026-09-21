@@ -1280,6 +1280,13 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
   };
   let pope: string | null = null;
   let category: string | null = null;
+  // The roman numeral of the last category heading of the open pope part (0 at a part
+  // heading): a `SYNODUS EPISCOPORUM` heading numbered as the next category is one.
+  let lastCategoryNumeral = 0;
+  const numeralOf = (l: string): number | null => {
+    const m = l.match(/^\s*([IVXL]{1,5})\s*[.-]?\s*[–—-]/);
+    return m ? romanToInt(m[1]!) : null;
+  };
   let headingLines: string[] = [];     // the raw lines of the current category heading
   let headingOpen = false;             // the previous line was a category heading (continuations attach)
   let prev: DateState | null = null;
@@ -1385,7 +1392,13 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
     if (line.trim() === '') continue;
 
     const part = line.match(PART_HEADING_RE);
-    if (part && !CONSISTORY_CATEGORY_RE.test(part[1]!.replace(/\s+/g, ' ').trim())) {
+    // `XV - SYNODUS EPISCOPORUM` after `XIV - ITINERA APOSTOLICA` (AAS 93, 2001), `VIII –
+    // SYNODUS EPISCOPORUM` after `VII – ITINERA APOSTOLICA` (the 2005 index PDF): a category
+    // of the pope's part, its acts the pope's. `II - SYNODUS EPISCOPORUM` after the pope's
+    // twelve categories (AAS 69, 1977) is the part it has always been. Spec §11.2; measured
+    // over every fixture: only 2001, 2005 and 2008 print the heading as a category.
+    const synodCategory = part !== null && pope !== null && /^SYNODUS EPISCOPORUM\s*$/.test(part[1]!) && numeralOf(line) === lastCategoryNumeral + 1;
+    if (part && !synodCategory && !CONSISTORY_CATEGORY_RE.test(part[1]!.replace(/\s+/g, ' ').trim())) {
       flushDefect();
       const heading = normalisePopeHeading(part[1]!);
       // The 2006 index PDF (spec §11.2) heads the whole papal part `I — ACTA SUMMI
@@ -1415,6 +1428,7 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
         result.skippedParts.push(line.replace(/\s+/g, ' ').trim());
       }
       category = null;
+      lastCategoryNumeral = 0;
       headingOpen = false;
       prev = null;
       continue;
@@ -1484,6 +1498,7 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
       flushDefect();
       headingLines = [line];
       category = normaliseHeading(line);
+      lastCategoryNumeral = numeralOf(line) ?? lastCategoryNumeral;
       headingOpen = true;
       continue;
     }

@@ -1511,6 +1511,28 @@ Beatorum honores decernuntur .......... 7
   it('still throws for an index PDF with neither a title line nor a running header', () => {
     expect(() => parseActaIndex('ACTA APOSTOLICAE SEDIS\n(An. 2006 et Vol. XCVIII)\nI – ACTA BENEDICTI XVI\n', { year: 2006 })).toThrow(/CHRONOLOGICO ORDINE DIGESTUS/);
   });
+
+  it('reads SYNODUS EPISCOPORUM as a category of the pope part where its numeral continues the part\'s, and as a part where it does not', () => {
+    const asCategory = parseActaIndex(index(`VII – ITINERA APOSTOLICA
+2005 Aug. 18-21 Germaniam .................. 933
+VIII – SYNODUS EPISCOPORUM
+2005 Oct. 22 Nuntius datus ab XI Coetu Generali Ordinario Synodi
+Episcoporum ............... 988
+IX – SECRETARIA STATUS
+2005 Ian. 10 Conventio inter Sanctam Sedem et Rempublicam Slovacam .... 12`, '(An. 2005 et Vol. XCVII)'), { year: 2005 });
+    expect(asCategory.skippedParts).toEqual([]);
+    expect(asCategory.entries.map((e) => [e.category, e.date, e.page])).toEqual([
+      ['SYNODUS EPISCOPORUM', '2005-10-22', 988],
+      ['SECRETARIA STATUS', '2005-01-10', 12],
+    ]);
+    const asPart = parseActaIndex(index(`XII – NUNTII
+2005 Aug. 18 Ad iuvenes Coloniae congregatos ........ 933
+II – SYNODUS EPISCOPORUM
+2005 Oct. 22 Nuntius datus ab XI Coetu Generali Ordinario Synodi
+Episcoporum ............... 988`, '(An. 2005 et Vol. XCVII)'), { year: 2005 });
+    expect(asPart.skippedParts).toEqual(['II – SYNODUS EPISCOPORUM']);
+    expect(asPart.entries.map((e) => e.category)).toEqual(['NUNTII']);
+  });
 });
 
 describe('splitEntryText', () => {

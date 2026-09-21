@@ -31,6 +31,13 @@ describe('the AAS category table', () => {
     expect(categoryForHeading('LITTERAE INAUDITAE')).toBeNull();
   });
 
+  it('maps the headings of the 2003-2009 index PDFs (spec §11.2): the hyphenated post-synodal exhortation, the 2007 misprint COSTITUTIONES, the singular motu proprio epistula, and the synod as a non-harvested category', () => {
+    expect(categoryForHeading('ADHORTATIO APOSTOLICA POST-SYNODALIS')?.id).toBe('Adhortationes Apostolicae');
+    expect(categoryForHeading('COSTITUTIONES APOSTOLICAE')?.id).toBe('Constitutiones Apostolicae');
+    expect(categoryForHeading('EPISTULA APOSTOLICA MOTU PROPRIO DATA')?.id).toBe('Litterae Apostolicae Motu proprio datae');
+    expect(categoryForHeading('SYNODUS EPISCOPORUM')).toMatchObject({ id: 'Synodus Episcoporum', harvested: 'no' });
+  });
+
   it('lists each heading once, under one row', () => {
     const all = ACTA_CATEGORIES.flatMap((c) => c.headings);
     expect(new Set(all).size).toBe(all.length);
@@ -132,7 +139,11 @@ describe('the AAS category table', () => {
     // the checked-in fixture (a chronological-index extract, which never carries them):
     // CONSTITUTIONES (AAS 1, 1909, 833), MOTU PROPRJO (AAS 8, 1916, 497), ACTA SACRORUM
     // CONSISTORIORUM (AAS 11, 1919, 491) and MONITUM (AAS 4, 1912, 745, `MONITUM, 695.`,
-    // glued to its page number, never bare even there).
+    // glued to its page number, never bare even there). The 2003, 2007 and 2009 index PDFs
+    // print ADHORTATIO APOSTOLICA POST-SYNODALIS, COSTITUTIONES APOSTOLICAE and EPISTULA
+    // APOSTOLICA MOTU PROPRIO DATA (spec §11.2), but their fixtures are not yet in
+    // ACTA_SOURCES (phase 2b', a later task wires them in), so `printedLines` below cannot
+    // see them either.
     const printedLines = new Set<string>();
     for (const src of ACTA_SOURCES) {
       const lines = readFileSync(src.file, 'utf8').split(/\f|\n/).map((l) => l.trim()).filter((l) => l !== '');
@@ -142,7 +153,7 @@ describe('the AAS category table', () => {
       });
     }
     const unprinted = ACTA_CATEGORIES.flatMap((c) => c.headings).filter((h) => !printedLines.has(h));
-    expect(unprinted).toEqual(['ADHORTATIO AD POPULORUM BELLIGERANTIUM MODERATORES', 'CONSTITUTIONES', 'MOTU PROPRJO', 'BULLAE', 'ACTA SACRORUM CONSISTORIORUM', 'IN SOLLEMNI RITU INEUNDI CONCILII OECUMENICI VATICANI SECUNDI', 'MONITUM']);
+    expect(unprinted).toEqual(['ADHORTATIO AD POPULORUM BELLIGERANTIUM MODERATORES', 'ADHORTATIO APOSTOLICA POST-SYNODALIS', 'CONSTITUTIONES', 'COSTITUTIONES APOSTOLICAE', 'MOTU PROPRJO', 'EPISTULA APOSTOLICA MOTU PROPRIO DATA', 'BULLAE', 'ACTA SACRORUM CONSISTORIORUM', 'IN SOLLEMNI RITU INEUNDI CONCILII OECUMENICI VATICANI SECUNDI', 'MONITUM']);
     void parseActaIndex;
   });
 });
