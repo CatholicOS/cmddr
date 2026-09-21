@@ -17,7 +17,9 @@ century of typography and OCR, the popes, and the sample-first sequencing.
 | 2010–2014 | monthly fascicles plus an annual index PDF (`AAS-INDICE2010.pdf`, `AAS-indice2012.pdf` — case varies) | as 2015–2024 | as phase 1 |
 
 So phase 2b's corpus is **99 index sources**: 94 volume-tail indexes (96 files, counting
-the two double volumes) and 5 index PDFs.
+the two double volumes) and 5 index PDFs — **106** once §11 adds the seven annual index
+PDFs of 2003–2009 this section had recorded as none online, which makes 12 index PDFs
+beside the volume-tail indexes.
 
 ## 2. What varies across the century (from the four sampled volumes)
 
