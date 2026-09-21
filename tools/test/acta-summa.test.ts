@@ -62,6 +62,34 @@ describe('parseSummaPapalPart (spec §4): the papal part, loosely', () => {
   it('returns no rows and a null heading when the text has no papal part', () => {
     expect(parseSummaPapalPart('INDEX GENERALIS CONCLUSIONUM\nAbbas . . 12')).toEqual({ rows: [], heading: null, end: null });
   });
+  it('does not close a row on a Latin word that reduces to a well-formed page number (`iis` → 115): the row closes only at the next genuine page token', () => {
+    const text = [
+      'ACTA ROMANI PONTIFICIS',
+      '',
+      'Epistola qua mandatur ut quae omnia mandata tradantur iis',
+      '        qui curam animarum habent » 44',
+    ].join('\n');
+    const { rows } = parseSummaPapalPart(text);
+    expect(rows).toEqual([{
+      description: 'Epistola qua mandatur ut quae omnia mandata tradantur iis qui curam animarum habent',
+      page: 44,
+      raw: 'Epistola qua mandatur ut quae omnia mandata tradantur iis / qui curam animarum habent » 44',
+    }]);
+  });
+  it('does not close a row on `sis` either (→ 515), a middle line ending in a bare OCR-digit-letter word', () => {
+    const text = [
+      'ACTA ROMANI PONTIFICIS',
+      '',
+      'Epistola ad omnes qui hoc munus obeunt sis',
+      '        gerendum suscipiant » 12',
+    ].join('\n');
+    const { rows } = parseSummaPapalPart(text);
+    expect(rows).toEqual([{
+      description: 'Epistola ad omnes qui hoc munus obeunt sis gerendum suscipiant',
+      page: 12,
+      raw: 'Epistola ad omnes qui hoc munus obeunt sis / gerendum suscipiant » 12',
+    }]);
+  });
 });
 
 describe('locateSumma: the summa pages, from the volume\'s midpoint', () => {

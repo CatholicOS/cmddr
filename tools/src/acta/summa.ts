@@ -59,15 +59,22 @@ export function normalisePage(token: string): number | null {
 
 const PAPAL_HEAD_RE = /^\s*(?:\d+\s+)?(LITTERAE\s+ET\s+A(?:LLOCUTIONES|CTA)(?:\s+R\.\s*PONTIFICIS|\s+APOSTOLICAE)?|ACTA\s+ROMANI\s+PONTIFICIS)/;
 const DICASTERY_RE = /^\s*(EX\s+(?:S\.|SS\.|SACRA|SECRETARIA|ACTIS|AEDIBUS|SUPREMA|CANCELLARIA|DATARIA)\b.*)$/;
-/** A row's end: a page token after a leader, a sign or a space, possibly `N et M`, possibly a trailing stop. */
-const ROW_END_RE = /^(.*?)(?:\s*(?:pag\.|»|>|\*|·|\.{2,}|\s))\s*([\dOoiIlSsgB][\dOoiIlSsgB]{0,3}(?:\s\d{1,2})?)(?:\s+et\s+(\d[\dOoiIlSsgB]{0,3}))?\s*\.?\s*$/;
+/**
+ * A row's end: a page token after a leader, a sign or a space, possibly `N et M`, possibly
+ * a trailing stop. The token may start with an OCR letter (`ig3`), but a lookahead requires
+ * a genuine digit within its first four characters, so a short Latin word made entirely of
+ * OCR-digit-letters (`iis`, `sis`) never reads as a page and closes a row.
+ */
+const ROW_END_RE = /^(.*?)(?:\s*(?:pag\.|»|>|\*|·|\.{2,}|\s))\s*(?=[\dOoiIlSsgB]{0,3}\d)([\dOoiIlSsgB][\dOoiIlSsgB]{0,3}(?:\s\d{1,2})?)(?:\s+et\s+(\d[\dOoiIlSsgB]{0,3}))?\s*\.?\s*$/;
 
 /**
  * The rows of the papal part: from the papal heading (or the summa's first line, when the
  * heading is interleaved into a row, as ASS 12's `LITTERAE ET ALLOCUTIONES Motu Proprio …`)
  * to the first dicastery heading. A row accumulates lines until one ends in a page token;
  * `N et M` yields two rows of one description. Lines that are only a running header
- * (`8oo Index analyticus`, `SUMMA ACTORUM.`) are skipped.
+ * (`8oo Index analyticus`, `SUMMA ACTORUM.`) are skipped. A page token may start with an
+ * OCR letter (`ig3`) but must contain a genuine digit, so a short Latin word (`iis`) never
+ * closes a row.
  */
 export function parseSummaPapalPart(text: string): { rows: SummaRow[]; heading: string | null; end: string | null } {
   const lines = text.split('\n');
