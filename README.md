@@ -292,10 +292,19 @@ joined the five volumes of 1926–1930, the early volumes whose OCR kept the pag
 (1929), the one year Pius XI's apostolic-letters shelf holds in number, and the year the 1930 index's OCR lost at the head of
 three sections (`1J30`, `1030`, `1@30`) supplied by curated rows quoting each act's dating formula. Two acts the index cites at a
 page they do not open on — *Casti connubii* at `530` for 539, the motu proprio *In allocutione* at `307` for 337 — are left
-without a reference, the evidence for a page correction the curation tables do not yet have. The AAS join now covers 1926–2002
-and 2010–2024, with the sample's 1909 and 1917; the volumes of 2003–2009 have no index online and await a fascicle parser, and
-1909–1925, whose OCR lost the page column on most index pages, are phase 2b-iii-b ([spec §10](docs/superpowers/specs/2026-09-13-acta-volumes-design.md)),
-which recovers the pages from the volume bodies.
+without a reference, the evidence for a page correction the curation tables do not yet have. Phase 2b-iii-b
+([era report](docs/superpowers/reports/2026-09-21-acta-volumes-1909-1925.md), [spec §10](docs/superpowers/specs/2026-09-13-acta-volumes-design.md))
+joined the seventeen volumes of 1909–1925, whose OCR lost the page column on most index pages, after recovering the pages from
+the volume bodies (`tools/src/acta/recover.ts`, the sidecars beside the fixtures): of the 1,136 entries opened without a page,
+**759** recovered (unique 729, dated 5, fuzzy 25) and 377 not (205 described by the index without an incipit, 108 of them AAS 1's;
+66 incipits opening several pages with no formula to settle them; 61 found nowhere; 32 outside the category's runs; 13 under a
+damaged running header), and **105** references written — sixteen encyclicals of Pius X, Benedict XV and Pius XI cite their page, eleven of them
+recovered. No volume clears the 95 % floor after recovery (the era's rate is 70.0 %, 76.5 % without AAS 1, whose index
+describes its acts without incipits): the rate counts every line the recovery cannot reach, and the reasons are listed per
+volume rather than the floor lowered. Nineteen curated rows supply the year the OCR read `1910` for 1916 over nine letters of
+AAS 9-I (1917) and `191Í` for 1911 over ten of AAS 3, from each act's own dating formula; twelve pages the volumes set two short
+letters on are read and curated. The AAS join now covers 1909–2002 and 2010–2024; the volumes of 2003–2009 have no index
+online and await a fascicle parser (phase 2b′), and the *Acta Sanctae Sedis* of 1865–1908 are phase 2c.
 
 The *Acta* are therefore also a **second source**. An index entry the join leaves unmatched becomes a document of its own
 (phase 2a, `tools/src/acta/create.ts`) when its category is one the registry creates from the *Acta* — encyclicals,
@@ -346,10 +355,16 @@ his acts of 1926, 1927 and 1930 — and held **53**; *Quo maiori rerum* (30 Marc
 is created from the first printing by the reprint table, and the Italian text of *Divini illius Magistri* the 1929 index enters
 as an encyclical of its own is held as the 1933 and 1937 vernaculars are
 ([era report](docs/superpowers/reports/2026-09-18-acta-volumes-1926-1930.md)). Phase 2b-iii-b
-([#25](https://github.com/CatholicOS/cmddr/issues/25), [spec §10](docs/superpowers/specs/2026-09-13-acta-volumes-design.md))
-is the seventeen volumes of 1909–1925, whose OCR lost the page column on most index pages: a page recovery from the volume
-bodies, then the same parser and creator; phase 2c the *Acta Sanctae Sedis* of 1865–1908, whose indexes carry no date or
-incipit and are confirmed by hand.
+([#25](https://github.com/CatholicOS/cmddr/issues/25), [spec §10](docs/superpowers/specs/2026-09-13-acta-volumes-design.md),
+[era report](docs/superpowers/reports/2026-09-21-acta-volumes-1909-1925.md)) added **442** from the seventeen volumes of
+1909–1925 with the pages the volume bodies gave back — 191 letters of Pius X and Pius XI (Benedict XV's letters shelf is not
+harvested, so his 275 stay held), 186 apostolic letters, 48 constitutions, 9 motu proprio, 4 *sub plumbo* and 4 decretal
+letters — and held **532**; the shelves of Pius X and Benedict XV being thin, the era is a harvest. Five entries whose incipit
+the index OCR misspells into a well-formed word the body contradicts (*Placet oculog* for *oculos*) are held by curated rows, as
+*Begnum Dei* is, and the 377 entries the recovery left without a page are neither created nor cited — the encyclicals among
+them (*Ad beatissimi Apostolorum Principis*, *Principi Apostolorum Petro*, *Annus iam plenus*) wait for a hand-read page. The
+remaining phases are 2b′, the volumes of 2003–2009, which have no index online and await a fascicle parser, and 2c, the *Acta
+Sanctae Sedis* of 1865–1908, whose indexes carry no date or incipit and are confirmed by hand.
 
 ### The document registry
 

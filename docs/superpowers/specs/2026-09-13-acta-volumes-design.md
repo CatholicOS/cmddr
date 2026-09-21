@@ -230,3 +230,28 @@ it (PR 2b-iii-a; measured on AAS 50: the fixture extracted from the stored PDF i
 byte-identical to the committed one). The whole-volume text of §10.3 goes beside it in
 `<store>/txt/`. Nothing in the store is tracked; the fixtures and sidecars in the
 repository are what the parser, the recovery's consumers and the tests read.
+
+### 10.5 Measured
+
+Phase 2b-iii-b ran on 2026-09-21 over the seventeen volumes (the [era
+report](../reports/2026-09-21-acta-volumes-1909-1925.md) §1b). Of the 1,136 entries the
+indexes opened without a page, the volume bodies gave back **759** (unique 729, dated 5,
+fuzzy 25) and **377** stayed without one: 205 described by the index without an incipit
+(108 of them AAS 1's, whose index prints incipits only in guillemets after a genre word),
+66 whose incipit opens several pages with no formula inside the act's span to settle them,
+61 found on no page, 32 found outside the category's runs, 13 under a running header that
+contradicts the page. The rate after recovery — entries with a page over every line that
+ended in a page or opened without one, the 95 % floor of §4 applying to it — is 70.0 % over
+the era and 76.5 % without AAS 1, and under 95 % in every volume (the highest 1917-I at
+91.2 %); each volume's reasons are in the report, the floor unchanged. The join wrote 105
+references and created 442 documents from the seventeen; 532 entries are held with their
+reasons. Two rules of §10.3.2 were tightened before the join ran, on the evidence of five
+pages the first sidecars gave wrongly: a paragraph head is the salutation's dash or a line
+start under a heading, a numeral, a salutation or the memorial formula — a word that opens a
+line inside running text, or follows a full stop inside a line, opens no act — and the
+formula that settles a tie is read from the hit's own line on, not from the top of its page
+(the previous act's formula). The rows the earlier eras' curation tables take were written
+where the era showed their shapes (nineteen index corrections from the acts' formulae,
+twelve shared pages read in the volumes, five holds for an incipit the OCR misspelt); the
+entries left without a page are neither created nor cited, and the readings of §10.3.5 are
+the next task's.
