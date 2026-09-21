@@ -359,6 +359,15 @@ const RUNNING_HEADER_RE =
   /^\s*(\d+\s+A[cd]ta Apostolic(?:ae|æ) Sedis\s*[–—-]\s*Commentarium Officiale|Index documentorum chronologico ordine digestus\s+\d+)\s*$/;
 const PAGE_TOP_HEADER_RE = /Index documentor|chronologico ordi\w*ne digest|^\s*[^\s\d]{0,2}\d{1,4}\s*$/;
 /**
+ * The index's running header standing alone on a page's first line, with its page number
+ * (`Index documentorum chronologico ordine digestus 965`) -- narrower than
+ * `PAGE_TOP_HEADER_RE`, which also admits a bare page number and a header with text after
+ * it. Used to find the first page of the 2006 index, whose text layer prints no title line.
+ */
+const RUNNING_HEADER_ONLY_RE = /^\s*Index documentorum chronologico ordine digestus\s+\d{1,4}\s*$/;
+/** A page's first line that is not blank, its trailing whitespace cut; the empty string where the page has none. */
+const firstNonBlankLine = (page: string): string => (page.split('\n').find((l) => l.trim() !== '') ?? '').replace(/\s+$/, '');
+/**
  * A running header the text layer of the 2010 and 2011 index PDFs glues to the first
  * line of the page's text with no break at all: `Index documentorum chronologico ordine
  * digestus 9612010 Maii 1 Divini Salvatoris` (the header's page 961, then the entry;
@@ -390,13 +399,18 @@ const SPACED_DAY_RE = /^(\s*(?:\d{4}|»)\s+(?:[A-Z][a-z]{2,4}\.?|»)\s+)(\d) (\d
 const DOTTED_DAY_RE = /^(\s*(?:\d{4}|»)\s+[A-Z][a-z]{2,4}\.?\s+\d{1,2})\.(?=\s)/;
 /**
  * The layout mode of the 2003-2009 index PDFs (spec §11.2; fixtures extracted with the
- * spaces collapsed) glues the third ditto to the opening guillemet (`» » »« Cum vis ut ».`:
- * 11, 15, 13, 3 and 8 lines of 2003, 2004, 2005, 2007 and 2008), the year's and month's
- * dittos to the day (`»»14 De universo dominico`: 6, 5, 5 and 8 lines of 2004, 2005, 2007
- * and 2008; `»»3 0 Sapientia`, which the spaced-day rule then reads) and the day to the
- * text (`» » 12Ad Congressum`, four lines of 2007; `2005 Dec. 25Deus Caritas est`, 2006).
- * Each is undone at the date position only. Measured over the 2010-2024 fixtures on
- * 2026-09-21: 0 lines match (none).
+ * spaces collapsed) glues the third ditto to the opening guillemet (`» » »« Cum vis ut ».`),
+ * the year's and month's dittos to the day (`»»14 De universo dominico`; `»»3 0 Sapientia`,
+ * which the spaced-day rule then reads) and the day to the text (`» » 12Ad Congressum`;
+ * `2005 Dec. 25Deus Caritas est`). Each is undone at the date position only. Counted on
+ * 2026-09-21 over the seven fixtures as the lines each rule rewrites, each rule in its place
+ * in `untangleIndexLine` below, for 2003, 2004, 2005, 2006, 2007, 2008 and 2009 in turn:
+ * the guillemet rule 11, 16, 15, 18, 4, 8, 11 lines (83); the ditto-day rule 0, 6, 5, 6, 6,
+ * 9, 6 (38); the day-text rule 0, 0, 0, 2, 8, 0, 1 (11). Every year prints at least one
+ * shape. (Counted instead as the entries the parse loses with one rule disabled, the
+ * guillemet row is the same, ditto-day is 0, 6, 5, 6, 5, 8, 5 and day-text 0, 0, 0, 2, 7,
+ * 0, 1: a glued line can still open an entry, wrongly dated.) Measured over the 2010-2024
+ * fixtures on 2026-09-21: 0 lines match (none).
  */
 const GLUED_DITTO_GUILLEMET_RE = /^(\s*(?:\d{4}|»)\s+(?:[A-Z][a-z]{2,4}\.?|»)\s+)»«(?=\s*[A-Z])/;
 const GLUED_DITTO_DAY_RE = /^(\s*)»»(?=\d)/;
@@ -1261,7 +1275,7 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
     // so its page is found by re-splitting the raw text on the form feed the lines loop
     // already splits on, the same way, rather than by searching `lines` for a line that
     // is never there.
-    const headerPage = text.split('\f').findIndex((p) => /^\s*Index documentorum chronologico ordine digestus\s+\d{1,4}\s*$/.test((p.split('\n').find((l) => l.trim() !== '') ?? '').replace(/\s+$/, '')));
+    const headerPage = text.split('\f').findIndex((page) => RUNNING_HEADER_ONLY_RE.test(firstNonBlankLine(page)));
     if (headerPage >= 0) {
       const firstOfPage = lines.findIndex((_, i) => pageOf[i] === headerPage - 1);
       // If the header is on page 0 there is no page before it: `firstOfPage` stays -1 and

@@ -336,15 +336,28 @@ change, over all lines: 2003 90.5 %, 2004 84.8 %, 2005 86.8 %, 2007 91.3 %, 2008
 Measured on the collapsed fixtures (the census in the era report):
 
 - **The ditto marks glued.** The layout mode sets the third ditto against the opening
-  guillemet (`» » »« Cum vis ut ». – Beato Humili …`: 11, 15, 13, 3, 8 lines in 2003,
-  2004, 2005, 2007, 2008) and the year and month dittos against the day (`»»14 De
-  universo dominico`: 6, 5, 5, 8 lines in 2004, 2005, 2007, 2008), and in 2007 the day
-  against the text (`» » 12Ad Congressum`, four lines; 2006's `2005 Dec. 25Deus Caritas
-  est`). The date-line reading admits a ditto with no space before the guillemet or the
-  day, and a day with no space before a capital, in the index PDFs only; its blast radius
-  is measured over the 2010–2024 fixtures before it is accepted (expected: no line
-  changes). Every continuation line the census lists as *outside any entry* follows one
-  of these openers.
+  guillemet (`» » »« Cum vis ut ». – Beato Humili …`), the year and month dittos against
+  the day (`»»14 De universo dominico`) and the day against the text (`» » 12Ad
+  Congressum`; 2006's `2005 Dec. 25Deus Caritas est`). Counted on 2026-09-21 over the
+  seven committed fixtures as *lines the rule rewrites*, each rule in its place in
+  `untangleIndexLine` (so the ditto-day rule's output is what the guillemet rule sees),
+  the parse run as `ACTA_SOURCES` configures it:
+
+  | Shape | 2003 | 2004 | 2005 | 2006 | 2007 | 2008 | 2009 | All |
+  |---|---|---|---|---|---|---|---|---|
+  | ditto glued to the guillemet | 11 | 16 | 15 | 18 | 4 | 8 | 11 | 83 |
+  | dittos glued to the day | 0 | 6 | 5 | 6 | 6 | 9 | 6 | 38 |
+  | day glued to the text | 0 | 0 | 0 | 2 | 8 | 0 | 1 | 11 |
+
+  Every year prints at least one of the three; 2006 and 2009, which the first statement of
+  this bullet omitted, print two each. Counted instead as *entries the parse loses when
+  that one rule is disabled*, the guillemet row is identical and the other two are lower
+  where a glued line still opens an entry, wrongly dated or with the day inside its text:
+  ditto-day 0, 6, 5, 6, **5**, **8**, **5** and day-text 0, 0, 0, 2, **7**, 0, 1. The
+  date-line reading admits a ditto with no space before the guillemet or the day, and a
+  day with no space before a capital, in the index PDFs only; its blast radius is measured
+  over the 2010–2024 fixtures before it is accepted (measured: 0 lines match, none). Every
+  continuation line the census lists as *outside any entry* follows one of these openers.
 - **2006's index has no title line and one pope part.** Its p. 4 opens `I — ACTA SUMMI
   PONTIFICIS` / `ACTA BENEDICTI XVI` / `I – LITTERAE ENCYCLICAE` and prints `INDEX
   DOCUMENTORUM / CHRONOLOGICO ORDINE DIGESTUS` nowhere in the text layer (the running

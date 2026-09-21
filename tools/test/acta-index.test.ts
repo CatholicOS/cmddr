@@ -1512,6 +1512,23 @@ Beatorum honores decernuntur .......... 7
     expect(() => parseActaIndex('ACTA APOSTOLICAE SEDIS\n(An. 2006 et Vol. XCVIII)\nI – ACTA BENEDICTI XVI\n', { year: 2006 })).toThrow(/CHRONOLOGICO ORDINE DIGESTUS/);
   });
 
+  it('still throws where the running header opens the very first page, there being no page before it to start at', () => {
+    // `headerPage` is 0, so the page before it does not exist: no line of `lines` carries
+    // page -1, `firstOfPage` stays -1 and `titleAt` is left at -1 by the guard in
+    // parseActaIndex. Measured on 2026-09-21: the guard is belt-and-braces -- without it
+    // `titleAt` would be -2 and the check below would throw all the same -- so this case
+    // pins the behaviour the guard states, not the guard's presence.
+    const text = `Index documentorum chronologico ordine digestus 963
+
+I – ACTA BENEDICTI XVI
+
+I – LITTERAE ENCYCLICAE
+
+2005 Dec. 25 Deus Caritas est. – Episcopis ............ 217
+`;
+    expect(() => parseActaIndex(text, { year: 2006, volume: 98 })).toThrow(/CHRONOLOGICO ORDINE DIGESTUS/);
+  });
+
   it('reads SYNODUS EPISCOPORUM as a category of the pope part where its numeral continues the part\'s, and as a part where it does not', () => {
     const asCategory = parseActaIndex(index(`VII – ITINERA APOSTOLICA
 2005 Aug. 18-21 Germaniam .................. 933

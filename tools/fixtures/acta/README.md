@@ -10,9 +10,9 @@ source on vatican.va (`https://www.vatican.va/archive/aas/index_it.htm`, which
   `AAS-INDICE2010.pdf`, `AAS-INDICE2011.pdf`, `AAS-indice2013.pdf`, `AAS-indice2014.pdf` — the
   case varies, so the script reads the file names off the index page); 2003–2009 under
   `documents/AAS-Index-2002-2009/AAS-Index-{year}.pdf`, the form the server resolves, where
-  the page links 2003–2007 under paths that 404 (spec §11.1), extracted in the layout mode
-  with the spaces collapsed, since the default mode drops the spaces between words in
-  2003–2006, extracted whole (`aas-indice-{year}.txt`);
+  the page links 2003–2007 under paths that 404 (spec §11.1), extracted whole and in the
+  layout mode with the spaces collapsed, since the default mode drops the spaces between
+  words in 2003–2006 (`aas-indice-{year}.txt`);
 - the whole-volume OCR PDFs of 1909–2002 (`documents/AAS-{vol}-{year}-ocr.pdf`; 1917 and
   1983 in two parts, named `AAS-09-I-1917-ocr.pdf` and `AAS-75-1983-I-ocr.pdf` — the part
   before the year in one, after it in the other), of which only the pages of the chronological
