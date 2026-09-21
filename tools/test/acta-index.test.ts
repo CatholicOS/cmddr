@@ -1432,6 +1432,40 @@ describe('parseActaIndex keeps the entries opened without a page (spec §10.3, p
   });
 });
 
+describe('parseActaIndex on the index PDFs of 2003-2009 (acta volumes spec §11, phase 2b\')', () => {
+  it('reads the ditto marks the layout mode glues: to the guillemet, to the day, and the day to the text', () => {
+    const r = parseActaIndex(index(`IV – LITTERAE DECRETALES
+2004 Maii 16 « Cum liber essem ». – Beato Aloisio Orione Sanctorum ho-
+nores decernuntur .............. 6
+» » »« Cum dilexisset suos ». – Beatae Ioannae Beretta Molla
+Sanctorum honores decernuntur ........ 9
+»» »« Qui manet». – Beato Alberto Hurtado Cruchaga Sancto-
+rum honores decernuntur ........... 300
+»»30 Pertransiit benefaciendo. – Beato Carolo a S. Andrea
+Houben Sanctorum honores decernuntur ..... 361
+»»3 0 Salutis omnium. – Beato Simoni de Lipnica, presbytero,
+Sanctorum honores decernuntur ......... 121
+V – CONSTITUTIONES APOSTOLICAE
+2004 Ian. 14 De universo dominico. – In Madagascaria nova conditur
+Provincia ecclesiastica, Toliarana appellanda ..... 87
+» » 25Ad universae incrementum. – In Aethiopia nova Eparchia
+constituitur nomine Emdeberensis ........ 251
+2004 Dec. 25Deus Caritas est. – Episcopis, presbyteris et diaconis, viris
+et mulieribus consecratis ............ 217`, '(An. 2004 et Vol. XCVI)'), { year: 2004 });
+    expect(r.defects).toEqual([]);
+    expect(r.entries.map((e) => [e.date, e.incipit, e.page])).toEqual([
+      ['2004-05-16', 'Cum liber essem', 6],
+      ['2004-05-16', 'Cum dilexisset suos', 9],
+      ['2004-05-16', 'Qui manet', 300],
+      ['2004-05-30', 'Pertransiit benefaciendo', 361],
+      ['2004-05-30', 'Salutis omnium', 121],
+      ['2004-01-14', 'De universo dominico', 87],
+      ['2004-01-25', 'Ad universae incrementum', 251],
+      ['2004-12-25', 'Deus Caritas est', 217],
+    ]);
+  });
+});
+
 describe('splitEntryText', () => {
   it('strips guillemets and takes the rest as description, whatever follows the closing one', () => {
     expect(splitEntryText('« Venite benedicti  ». - Venerabili Dei Servo')).toEqual({ incipit: 'Venite benedicti', quoted: true, toponym: null, description: 'Venerabili Dei Servo' });

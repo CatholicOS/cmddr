@@ -388,11 +388,27 @@ const SPACED_PAGE_END_RE = /(?:(?:\s*\.){2,}|\s*…|\s{2,})\s*(\d(?: \d){1,3})\s
 const DOUBLED_DITTO_RE = /^(\s*)»»(?=\s)/;
 const SPACED_DAY_RE = /^(\s*(?:\d{4}|»)\s+(?:[A-Z][a-z]{2,4}\.?|»)\s+)(\d) (\d)(?=\s)/;
 const DOTTED_DAY_RE = /^(\s*(?:\d{4}|»)\s+[A-Z][a-z]{2,4}\.?\s+\d{1,2})\.(?=\s)/;
+/**
+ * The layout mode of the 2003-2009 index PDFs (spec §11.2; fixtures extracted with the
+ * spaces collapsed) glues the third ditto to the opening guillemet (`» » »« Cum vis ut ».`:
+ * 11, 15, 13, 3 and 8 lines of 2003, 2004, 2005, 2007 and 2008), the year's and month's
+ * dittos to the day (`»»14 De universo dominico`: 6, 5, 5 and 8 lines of 2004, 2005, 2007
+ * and 2008; `»»3 0 Sapientia`, which the spaced-day rule then reads) and the day to the
+ * text (`» » 12Ad Congressum`, four lines of 2007; `2005 Dec. 25Deus Caritas est`, 2006).
+ * Each is undone at the date position only. Measured over the 2010-2024 fixtures on
+ * 2026-09-21: 0 lines match (none).
+ */
+const GLUED_DITTO_GUILLEMET_RE = /^(\s*(?:\d{4}|»)\s+(?:[A-Z][a-z]{2,4}\.?|»)\s+)»«(?=\s*[A-Z])/;
+const GLUED_DITTO_DAY_RE = /^(\s*)»»(?=\d)/;
+const GLUED_DAY_TEXT_RE = /^(\s*(?:\d{4}|»)\s+(?:[A-Z][a-z]{2,4}\.?|»)\s+\d{1,2})(?=[A-Z«])/;
 const untangleIndexLine = (line: string): string => {
   let l = line.replace(SPACED_PAGE_END_RE, (m, digits: string) => m.replace(digits, digits.replace(/ /g, '')));
+  l = l.replace(GLUED_DITTO_DAY_RE, '$1» » ');
   l = l.replace(DOUBLED_DITTO_RE, '$1» »');
   l = l.replace(DOUBLED_DITTO_RE, '$1» »');
+  l = l.replace(GLUED_DITTO_GUILLEMET_RE, '$1» «');
   l = l.replace(SPACED_DAY_RE, '$1$2$3').replace(DOTTED_DAY_RE, '$1');
+  l = l.replace(GLUED_DAY_TEXT_RE, '$1 ');
   return l;
 };
 /** A header the layout mode glued to the end of a line: `… Coloniensem,536   Index documentorum`. */
