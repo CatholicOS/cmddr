@@ -24,8 +24,11 @@ describe('assDate (ass volumes spec §3): the three spellings of the ASS datelin
     expect(assDate('Datum Romae apud Sanctum Petrum anno Incarnationis Dominicae millesimo nongentesimo octavo, tertio Kalendas Iulias, Pontificatus Nostri anno quinto.', { from: 1908, to: 1908 })).toBeNull();
     // The Kalends form is not read by rule (one act in the sample, *Sapienti consilio*): null, so the tool emits a defect and a curated reading supplies the date.
   });
-  it('rejects a year outside the span by more than two years, and a formula without a day', () => {
+  it('rejects a year more than ten years before the span, accepts one the ASS prints years late, rejects one after the span plus one, and rejects a formula without a day', () => {
     expect(assDate('Datum Romae apud S. Petrum die XXI Iulii anno MDCCCLXX, Pontificatus Nostri XXIII.', SPAN)).toBeNull();
+    // ASS 41 (1908) prints nine letters of 1905 at pp. 12-20: printed years late, not early -- accepted.
+    expect(assDate('Datum Romae apud S. Petrum, die xxv Iunii a. MDCCCCV, Pontificatus Nostri secundo.', { from: 1908, to: 1908 })).toBe('1905-06-25');
+    expect(assDate('Datum Romae apud S. Petrum die iii Ianuarii anno MCMX, Pontificatus Nostri septimo.', { from: 1908, to: 1908 })).toBeNull();
     expect(assDate('Datum Romae ex Secretaria eiusdem sac. Congregationis 1879.', { from: 1879, to: 1879 })).toBeNull();
   });
   it('reads an Italian dateline (`Dal Vaticano, 20 Settembre 1900`)', () => {
@@ -108,6 +111,26 @@ describe('scanVolume (spec §3): an act read from its dateline back to its headi
     const { entries } = scanVolume(PAGES, opts);
     expect(entries[0]!.page).toBe(2);
   });
+  it('does not stop the walk-back at a running head followed by a blank line, even when the body after it names `Pontifex` (`274 EPISTOLA ENCYCLICA`, ASS 41 (1908) 65)', () => {
+    const pages = [
+      PAGES[0]!,
+      PAGES[1]!,
+      [
+        '274                                           EPISTOLA ENCYCLICA',
+        '',
+        'communi studio summisque precibus flectere ad misericordiam',
+        'his verbis Pontifex adloquitur populum suum sine mora,',
+        '         Datum Romae apud S. Petrum die i Novembris An. MDCGCC,',
+        'Pontificatus Nostri vicesimo tertio.',
+        '',
+        '                                                     LEO PP. XIII.',
+      ].join('\n'),
+    ];
+    const { entries, defects } = scanVolume(pages, opts);
+    expect(defects).toEqual([]);
+    expect(entries).toHaveLength(1);
+    expect(entries[0]!.page).toBe(2);
+  });
   it('reports an anchor with no heading before it (and after the previous anchor) as `no-heading`, with the dateline quoted', () => {
     const pages = [['Body of a decree.', '   Datum Romae apud S. Petrum die 3 Martii 1901,', 'Pontificatus Nostri vicesimo quarto.'].join('\n')];
     const { entries, defects } = scanVolume(pages, { ...opts, lastBodyPage: 1 });
@@ -155,15 +178,18 @@ describe('scanVolume (spec §3): an act read from its dateline back to its headi
       '   Libenter accepimus litteras tuas quibus ... significas.',
       '         Datum Romae apud S. Petrum, die xxx Iunii a. MDCCCCV, Pontificatus Nostri secundo.',
     ].join('\n');
-    // ASS 41 was published in 1908 well behind schedule (as the OCR-repair test's own p. 297,
-    // 298, 491 citations for 1908 attest), so the volume's span reaches back to 1905, where
-    // this pair is dated (p. 19, cited above); the fixture's `yearTo: 1908, year: 1908` in an
-    // earlier draft rejected them under the two-year tolerance -- corrected to the volume's
-    // actual span.
-    const { entries, defects } = scanVolume([page], { volume: 41, year: 1905, yearTo: 1908, lastBodyPage: 1 });
+    // ASS 41 is the 1908 volume (year: 1908, the span Task 4 will pass), and prints this
+    // pair's 1905 dates at pp. 12-20: the sanity bound (assDate) reaches ten years back and
+    // one year forward of the span, which admits them without widening the volume's own span.
+    const { entries, defects } = scanVolume([page], { volume: 41, year: 1908, yearTo: 1908, lastBodyPage: 1 });
     expect(defects).toEqual([]);
     expect(entries.map((e) => [e.date, e.opening.split(' ').slice(0, 2).join(' ')])).toEqual([['1905-06-25', 'Quum Seminarium'], ['1905-06-30', 'Libenter accepimus']]);
     expect(entries.every((e) => e.page === 1 && e.category === 'EPISTOLA' && e.pope === 'Pius X')).toBe(true);
+    // The dateline-slice fix (stop at a blank or a heading line) is what keeps each entry's
+    // own dateline from swallowing the other act's heading, since the two acts sit on one
+    // page with no blank line between the first dateline and the second heading.
+    expect(entries[0]!.evidence.dateline).toBe('Datum Romae apud S. Petrum, die xxv Iunii a. MDCCCCV, Pontificatus Nostri secundo.');
+    expect(entries[1]!.evidence.dateline).toBe('Datum Romae apud S. Petrum, die xxx Iunii a. MDCCCCV, Pontificatus Nostri secundo.');
   });
   it('reports a page whose running header prints another number as `header-mismatch`', () => {
     const pages = [PAGES[0]!, PAGES[1]!.replace(/^\s*2\n/, '   291\n'), PAGES[2]!];

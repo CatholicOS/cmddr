@@ -100,15 +100,17 @@ const IT_MONTHS: Readonly<Record<string, number>> = {
  * (ROMAN_OCR) -- both repaired in the text before `latinDate` reads it, the numeral repair
  * on numeral-shaped tokens after `die`, `anno`/`an.`/`a.` and the month only. An Italian
  * dateline (`Dal Vaticano, 20 Settembre 1900`) is read by its own month table. A year more
- * than two years outside the volume's span (`span`) is rejected: the repair must not make
- * a year out of noise. Null when no readable date; the caller reports a defect.
+ * than ten years before the volume's first year, or after its last year plus one, is
+ * rejected: the ASS reprint an act years late (ASS 41 (1908) prints nine letters of 1905 at
+ * pp. 12-20), never early; the bound is what stops an OCR-mangled year becoming a value.
+ * Null when no readable date; the caller reports a defect.
  */
 export function assDate(text: string, span: { from: number; to: number }): string | null {
   const t = text.replace(/­/g, '').replace(/\s+/g, ' ');
   const inSpan = (iso: string | null): string | null => {
     if (iso === null) return null;
     const y = Number(iso.slice(0, 4));
-    return y >= span.from - 2 && y <= span.to + 2 ? iso : null;
+    return y >= span.from - 10 && y <= span.to + 1 ? iso : null;
   };
   // Latin: normalise `An.`/`a.` to `anno`; repair the day token after `die` (pass 1) and any
   // numeral-shaped token of four letters or more that needs a repair (pass 2: a year --
@@ -171,25 +173,34 @@ const HEADING_DATE_RE = /\bdie[i]?\s+(\d{1,2}|[ivxl]+)\s+([A-Za-z]+)\.?\s+(\d{4}
 const OPENING_FORMULA_RE = new RegExp(`${POPE_RE.source}|SANCTISSIMI|Sanctissimi|SS(?:MI|mi|ÑI)?\\.?\\s*[DO]\\.?\\s*N\\.|\\bPontifex\\b|SS(?:mus|MUS)\\.?\\s+Pater`, 'i');
 
 /**
- * Whether the heading line at `lines[i]` names nothing else of its own (`ALLOCUTIO` alone,
- * versus `EPISTOLA ENCYCLICA Sanctissimi Domini Nostri LEONIS PAPAE XIII.`): its heading
- * block then carries a blank line before its by-line (`ALLOCUTIO`, blank, `SANCTISSIMI
- * DOMINI NOSTRI LEONIS XIII`, ASS 12 (1879) 13), which the block reader skips once.
+ * Whether the heading line at `lines[i]` names nothing else of its own and carries no
+ * leading page number: `ALLOCUTIO` alone, versus `274 EPISTOLA ENCYCLICA` -- a running
+ * head, whose leading digits `HEADING_RE` swallows into the same uncaptured group as a
+ * real heading's own leading whitespace, so its rest-of-line capture (`$3`) is empty too,
+ * and the captured groups alone cannot tell the two apart. Checked against the raw line,
+ * not the captured groups, only a heading truly alone on its line carries a blank line
+ * before its by-line (`ALLOCUTIO`, blank, `SANCTISSIMI DOMINI NOSTRI LEONIS XIII`, ASS 12
+ * (1879) 13), which the block reader skips once; a running head's blank line, if any, stays
+ * a stop, so a body word like `Pontifex` after it is never read into its block (ASS 41
+ * (1908) 65).
  */
 const headingAlone = (lines: readonly string[], i: number): boolean => {
-  const h = lines[i]!.match(HEADING_RE);
-  return h !== null && !h[2] && h[3]!.trim() === '';
+  const line = lines[i]!;
+  const h = line.match(HEADING_RE);
+  return h !== null && !h[2] && h[3]!.trim() === '' && !/^\s*\d[\dOoiIla]{0,3}\s+/.test(line);
 };
 
 /**
  * Whether the class heading at `lines[i]` opens an act: its heading block -- the line and
- * the lines after it to the first blank line, four at most (plus the one blank line a
- * lone class word skips, headingAlone) -- carries the opening formula (OPENING_FORMULA_RE).
- * A running head (`274 EPISTOLA ENCYCLICA`, `EPISTOLA ENCYCLICA Hi` for the OCR's 111,
- * ASS 12 (1879)) is followed by body text and fails the test; an `ALLOCUTIO` alone on its
- * line is followed by `SANCTISSIMI DOMINI NOSTRI LEONIS XIII` (ASS 12 (1879) 13) and
- * passes. A body line whose first words the OCR set in capitals as a class word is
- * excluded the same way.
+ * the lines after it to the first blank line, four at most (plus the one blank line a bare
+ * class word skips before its by-line, headingAlone) -- carries the opening formula
+ * (OPENING_FORMULA_RE). A running head (`274 EPISTOLA ENCYCLICA`, `EPISTOLA ENCYCLICA Hi`
+ * for the OCR's 111, ASS 12 (1879)) is followed by body text and fails the test, whether or
+ * not a blank line comes after it (headingAlone excludes it by its leading page number, so
+ * the blank is never skipped and the body is never read into its block); a bare class word
+ * (`ALLOCUTIO`) is followed by one blank line and then its by-line (`SANCTISSIMI DOMINI
+ * NOSTRI LEONIS XIII`, ASS 12 (1879) 13) and passes. A body line whose first words the OCR
+ * set in capitals as a class word is excluded the same way.
  */
 const isOpening = (lines: readonly string[], i: number): boolean => {
   if (!HEADING_RE.test(lines[i]!)) return false;
@@ -204,6 +215,23 @@ const isOpening = (lines: readonly string[], i: number): boolean => {
 };
 
 /**
+ * The lines quoted from `start` on -- a dateline, or the lines above an anchor with no
+ * heading before it -- stopping at a blank line or the next act's heading, capped at
+ * `max`: shared by the dateline extraction (readAct), the anchor's own quoted text
+ * (findAnchors) and the `no-heading` defect's lines (readAct), so a run-on page (two acts
+ * with no blank between them, ASS 41 (1908); an anchor with nothing above it) is bounded
+ * the same way everywhere the body is quoted.
+ */
+const quotedLines = (lines: readonly string[], start: number, max = 3): string[] => {
+  const out: string[] = [lines[start]!];
+  for (let k = start + 1; k < Math.min(lines.length, start + max); k++) {
+    if (lines[k]!.trim() === '' || HEADING_RE.test(lines[k]!)) break;
+    out.push(lines[k]!);
+  }
+  return out;
+};
+
+/**
  * Every anchor of the body, in page order: the pope's datelines (`dateline`) and the
  * allocution headings (`heading`, since an allocution closes without a dateline). A
  * heading line is an anchor only when it opens an act (isOpening).
@@ -214,7 +242,7 @@ export function findAnchors(pages: readonly string[]): Anchor[] {
     const lines = page.split('\n');
     lines.forEach((line, i) => {
       if (DATUM_RE.test(line) && PONTIFICATUS_RE.test(lines.slice(i, i + 4).join(' '))) {
-        anchors.push({ page: p + 1, line: i, kind: 'dateline', text: lines.slice(i, i + 2).map((l) => l.trim()).join(' ').replace(/­/g, '') });
+        anchors.push({ page: p + 1, line: i, kind: 'dateline', text: quotedLines(lines, i).map((l) => l.trim()).join(' ').replace(/­/g, '') });
         return;
       }
       const h = line.match(HEADING_RE);
@@ -262,7 +290,7 @@ function readAct(pages: readonly string[], anchor: Anchor, floor: Located | null
       if (floor !== null && floor.page === p) break;
     }
   }
-  const anchorLines = at(anchor.page).slice(anchor.line, anchor.line + 2).map((l) => l.trim());
+  const anchorLines = quotedLines(at(anchor.page), anchor.line).map((l) => l.trim());
   if (heading === null) return { defect: { page: anchor.page, reason: 'no-heading', lines: anchorLines } };
 
   // 2. The heading block: from the heading line to the first blank line (or the salutation),
@@ -296,16 +324,9 @@ function readAct(pages: readonly string[], anchor: Anchor, floor: Located | null
   let date: string | null;
   let dateline: string | null = null;
   if (anchor.kind === 'dateline') {
-    // The dateline's own lines only, capped at three: a blank line or the next act's heading
-    // ends it, so a dateline on one line does not swallow the act that follows it with no
-    // blank between them (ASS 41 (1908), two acts on one page).
-    const al = at(anchor.page);
-    const datelineLines: string[] = [al[anchor.line]!];
-    for (let k = anchor.line + 1; k < Math.min(al.length, anchor.line + 3); k++) {
-      if (al[k]!.trim() === '' || HEADING_RE.test(al[k]!)) break;
-      datelineLines.push(al[k]!);
-    }
-    dateline = joinBreaks(datelineLines);
+    // The dateline's own lines only (quotedLines): a dateline on one line does not swallow
+    // the act that follows it with no blank between them (ASS 41 (1908), two acts on one page).
+    dateline = joinBreaks(quotedLines(at(anchor.page), anchor.line));
     date = assDate(dateline, span);
     if (date === null) return { defect: { page: heading.page, reason: 'no-date', lines: [headingText, dateline] } };
   } else {
