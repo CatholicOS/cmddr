@@ -500,6 +500,14 @@ export const ACTA_INDEX_CORRECTIONS: Readonly<Record<string, IndexCorrection>> =
   // `530`, the act opening at 539) and *In allocutione* (index `307`, the act at 337) get no
   // row: a date confirmed here would cite them at a page they do not open on, and a page
   // correction is a mechanism this phase does not add (the era report §2 names both).
+  // *Casti connubii*'s page is the OCR's `530` corrected to 539 (ACTA_PAGE_CORRECTIONS), so
+  // its year row is keyed on the act's page; the year is a ditto under the same `1J30`.
+  '1930:539': {
+    printed: '????-12-31',
+    date: '1930-12-31',
+    indexLine: '  » Dec. 31 Casti connubii. - Ad venerabiles fratres Patriarchas, Pri­ / mates, Archiepiscopos, Episcopos, aliosque locorum / Ordinarios, pacem et communionem cum Apostolica / Sede habentes: de Matrimonio christiano spectatis / praesentibus familiae et societatis conditionibus, ne­ / cessitatibus, erroribus, vitiis . 530',
+    evidence: "The act's own dating formula reads 'Datum Romae apud Sanctum Petrum, die xxxi mensis Decembris anno MDCCCCXXX, Pontificatus Nostri nono. PIUS PP. XI' (the OCR's `xxxr`; AAS 22 (1930) 592, PDF page 592 of AAS-22-1930-ocr.pdf, read 2026-09-21) -- 1930-12-31; the volume opens it at p. 539 under 'LITTERAE ENCYCLICAE / AD VENERABILES FRATRES … DE MATRIMONIO CHRISTIANO … / Casti connubii quanta sit dignitas' (the page correction above). A ditto under the `1J30` of p. 201. The shelf record is `mag:pius-xi/casti-connubii-1930`, dated 1930-12-31.",
+  },
   '1930:201': {
     printed: '????-04-20',
     date: '1930-04-20',
@@ -950,19 +958,6 @@ export const ACTA_HOLDS: Readonly<Record<string, ActaHold>> = {
       + "DILETTI FIGLI / SALUTE E APOSTOLICA BENEDIZIONE / Rappresentanti in terra di quel Divino Maestro …' (PDF page 723 of "
       + 'AAS-21-1929-ocr.pdf, read 2026-09-18). One act, not two.',
   },
-  // Phase 2b-iii-a: the motu proprio *In allocutione* (5 August 1930), which the 1930 index
-  // cites at 307 -- a page that opens the public consistory of 3 July 1930 -- where the
-  // volume prints the act at 337-340. Its year is the parser's repair of `1030`, which the
-  // row on p. 87 confirms for its dittos; confirmed, it would be created at the index's
-  // page, so it is held here until a page correction exists.
-  '1930:307': {
-    indexLine: '» Aug. 5 In allocutione. - De novo opere in locum Leoniani operis / de Fidei praeservatione sufficiendo 307',
-    reason: "the index's page is not the act's: AAS 22 (1930) p. 307 (PDF page 307 of AAS-22-1930-ocr.pdf, read 2026-09-18) opens 'II. - "
-      + "CONSISTORIUM PUBLICUM / Feria V, 3 Iulii 1930, in Aula supra porticum Basilicae Vaticanae …', and the motu proprio opens at p. 337 "
-      + "('MOTU PROPRIO / DE NOVO OPERE IN LOCUM LEONIANI OPERIS DE FIDEI PRAESERVATIONE SUFFICIENDO. / PIUS PP. XI / In Allocutione habita "
-      + "in Consistorio …'), dated at p. 340 'die v mensis Augusti, in festo Dedicationis Sanctae Mariae ad Nives, anno MDCCCCXXX, Pontificatus "
-      + 'Nostri nono\'. Held for a page correction, as *Casti connubii* (index `530`, opening at 539) is left unmatched for one.',
-  },
   // Phase 2b-iii-b: incipits the index OCR misspells into a well-formed word, which the
   // damage rule (create.ts) cannot see, on entries whose page the recovery read back by
   // the fuzzy rule -- the body line the sidecar quotes (`aas-XX-YYYY.pages.json`) is the
@@ -1000,6 +995,95 @@ export const ACTA_HOLDS: Readonly<Record<string, ActaHold>> = {
     reason: "the index's `purpúrala` is the OCR's: the letter beatifying the Canadian martyrs (21 June 1925, AAS 17 (1925) 302, PDF page "
       + "302 of AAS-17-1925-ocr.pdf, read 2026-09-21) opens 'Ad perpetuam rei memoriam.—Pretioso purpurata martyrum sanguine'. A record "
       + "minted from the index line would carry `purpurala`; held until an incipit correction can be curated.",
+  },
+};
+
+export interface PageCorrection {
+  /** The page the index line prints, as the parser reads it; the row applies only while it still does. */
+  printed: number;
+  /** The page the volume opens the act at. */
+  page: number;
+  /** The index line, quoted as extracted. */
+  indexLine: string;
+  /** What the volume prints at the corrected page (heading, incipit, dating formula), what the printed page opens instead, and where both were read. */
+  evidence: string;
+}
+
+/**
+ * Pages the index prints wrongly for an entry it dates and names -- the OCR's reading of a
+ * digit (`530` for 539, `205` for 265) or the index's own slip (`946` for 947) -- keyed
+ * `{source}|{pageless key}` as the readings are, each row giving the page the volume
+ * opens the act at, with both pages read. Applied first of all in the join (join.ts,
+ * applyPageCorrections), so the matcher, the creator and the shared-page check see the
+ * act's page; a row whose entry the parser no longer opens, or whose printed page the
+ * index no longer reads, is a hard error. The eight rows are the cases phases 2b-ii-c,
+ * 2b-iii-a and 2b-iii-b named for this table (PR #37, #40, #41); every page was read in
+ * the volume text on 2026-09-21.
+ */
+export const ACTA_PAGE_CORRECTIONS: Readonly<Record<string, PageCorrection>> = {
+  // AAS 17 (1925): the index gives *Ex Apostolico officio* (Valença, 27 March 1925) the page
+  // `289`, which the volume gives to *Inter praecipuas* (6 January 1925, a curated reading
+  // above); the constitution opens at 516.
+  '1925|1925-03-27|CONSTITUTIONES APOSTOLICAE|Ex Apostolico officio|Erectionis dioecesis Valentinae': {
+    printed: 289,
+    page: 516,
+    indexLine: '              martii            27       Ex Apostolico officio. - Erectionis dioecesis Valentinae                                                         289',
+    evidence: "AAS 17 (1925) p. 516 (PDF page 516 of AAS-17-1925-ocr.pdf, read 2026-09-21) prints, after the end of the constitution before it, 'II / VALENTINA IN BRASILIA ERECTIONIS DIOECESIS / PIUS EPISCOPUS SERVUS SERVORUM DEI AD PERPETUAM REI MEMORIAM / Ex Apostolico officio Nobis commisso ad Nos spectat …', dated 'anno Domini millesimo nongentesimo vigesimo quinto, die vigesima septima mensis martii, Pontificatus Nostri anno quarto' (p. 518). P. 289 opens *Inter praecipuas* (the ecclesiastical province of San Cristóbal, 6 January 1925), the act the reading above cites there.",
+  },
+  // AAS 19 (1927): the OCR reads `205` for 265 on *Pro Apostolico* (Vicenza and Padua, 28
+  // January 1927) -- p. 205 opens the letter *Quoniam annus* -- and `268` for 267 on *Quae ad
+  // rei* (Mackenzie and Athabaska, 15 March 1927), whose last lines and formula are on 268.
+  '1927|1927-01-28|CONSTITUTIONES APOSTOLICAE|Pro Apostolico|Dismembrationis et aggregationis, inter dioec. Pata viii. et': {
+    printed: 205,
+    page: 265,
+    indexLine: '   » » 28 Pro Apostolico. - Dismembrationis et aggregationis, inter / dioec. Pata viii. et Vicentin. 205',
+    evidence: "AAS 19 (1927) p. 265 (PDF page 265 of AAS-19-1927-ocr.pdf, read 2026-09-21), the first page of the fascicle of 1 August 1927 (Num. 8), prints 'ACTA PII PP. XI / CONSTITUTIO APOSTOLICA / VICENTINA ET PATAVINA / DISMEMBRATIONIS ET AGGREGATIONIS / PIUS EPISCOPUS SERVUS SERVORUM DEI AD PERPETUAM REI MEMORIAM / Pro Apostolico munere quo, licet immerito, fungimur …', dated 'anno Domini millesimo nongentesimo vigesimo septimo, die vigesima octava mensis Ianuarii, Pontificatus Nostri anno quinto' (p. 266). P. 205 opens 'EPISTOLAE / I / AD EMUM P. D. ALEXIUM … CARD. CHAROST … / Quoniam annus mox celebrabitur' (14 March 1927).",
+  },
+  '1927|1927-03-15|LITTERAE APOSTOLICAE|Quae ad rei|Nova delimitatio inter vicariatus apostolicos de Mackenzie e': {
+    printed: 268,
+    page: 267,
+    indexLine: '   » » 15 Quae ad rei. - Nova delimitatio inter vicariatus apostoli­ / cos de Mackenzie et de Athabaska, qui est in posterum / de Grouard denominandus 268',
+    evidence: "AAS 19 (1927) p. 267 (PDF page 267 of AAS-19-1927-ocr.pdf, read 2026-09-21) prints 'LITTERAE APOSTOLICAE / I / NOVA DELIMITATIO INTER VICARIATUS APOSTOLICOS DE MACKENZIE ET DE ATHABASKA, QUI EST IN POSTERUM DE GROUARD DENOMINANDUS. / PIUS PP. XI / Ad futuram rei memoriam. — Quae ad rei sacrae procurationem melius gerendam …', dated 'die xv mensis Martii anno MDCCCCXXVII, Pontificatus Nostri sexto' (p. 268). P. 268 prints the letter's end and then 'II / IMMUTATIO FINIUM INTER VICARIATUM APOSTOLICUM DE ORANGE … / In omnes catholici orbis partes' (16 March 1927), the act the index cites at 268 too.",
+  },
+  // AAS 22 (1930): three pages the OCR misread -- `323` for 319 (the beatification of Konrad
+  // von Parzham, 15 June 1930; p. 323 prints the letter's end and opens the epistle *Nono
+  // exeunte saeculo*), `530` for 539 (*Casti connubii*; p. 530 is inside the Christmas
+  // address to the cardinals) and `307` for 337 (the motu proprio *In allocutione*; p. 307
+  // opens the public consistory of 3 July 1930). Each was held for this table by phase
+  // 2b-iii-a (PR #40): the ACTA_HOLDS row on the motu proprio is retired with this one.
+  '1930|1930-06-15|LITTERAE APOSTOLICAE|Ordinis Capuccinarum|Venerabilis Servus Dei CoDradus a Parzham, laicus professus ': {
+    printed: 323,
+    page: 319,
+    indexLine: '  » » 15 Ordinis Capuccinarum. - Venerabilis Servus Dei CoDradus / a Parzham, laicus professus Ordinis Minorum Capucci­ / norum, Beatus renuntiatur 323',
+    evidence: "AAS 22 (1930) p. 319 (PDF page 319 of AAS-22-1930-ocr.pdf, read 2026-09-21) prints, after a letter dated 8 June 1930, 'III / VENERABILIS SERVUS DEI CONRADUS A PARZHAM LAICUS PROFESSUS ORDINIS MINORUM CAPUCCINORUM BEATUS RENUNTIATUR. / PIUS PP. XI / Ad perpetuam rei memoriam. — Ordinis Capuccinorum sodales inter laicos satis compertum est …' (the index's *Capuccinarum* is its own reading), dated 'die xv mensis Iunii, anno MDCCCCXXX, Pontificatus Nostri nono' (p. 323). P. 323 prints that formula and opens 'V / EPISTOLA / AD EMUM P. D. IUSTINIANUM … CARD. SERÉDI … / Nono exeunte saeculo' (2 June 1930).",
+  },
+  '1930|????-12-31|LITTERAE ENCYCLICAE|Casti connubii|Ad venerabiles fratres Patriarchas, Primates, Archiepiscopos': {
+    printed: 530,
+    page: 539,
+    indexLine: '  » Dec. 31 Casti connubii. - Ad venerabiles fratres Patriarchas, Pri­ / mates, Archiepiscopos, Episcopos, aliosque locorum / Ordinarios, pacem et communionem cum Apostolica / Sede habentes: de Matrimonio christiano spectatis / praesentibus familiae et societatis conditionibus, ne­ / cessitatibus, erroribus, vitiis . 530',
+    evidence: "AAS 22 (1930) p. 539 (PDF page 539 of AAS-22-1930-ocr.pdf, read 2026-09-21) prints, after the last lines of the Christmas address to the cardinals, 'LITTERAE ENCYCLICAE / AD VENERABILES FRATRES PATRIARCHAS, PRIMATES, ARCHIEPISCOPOS, EPISCOPOS ALIOSQUE LOCORUM ORDINARIOS, PACEM ET COMMUNIONEM CUM APOSTOLICA SEDE HABENTES: DE MATRIMONIO CHRISTIANO … / PIUS PP. XI / VENERABILES FRATRES SALUTEM ET APOSTOLICAM BENEDICTIONEM / Casti connubii quanta sit dignitas …', dated 'die xxxi mensis Decembris anno MDCCCCXXX, Pontificatus Nostri nono' (p. 592; the OCR's `xxxr`). P. 530 is inside that address. The entry's year is a ditto under the `1J30` the OCR reads for 1930 (the correction row on *Ad salutem* above); with its page corrected it matches the shelf record `mag:pius-xi/casti-connubii-1930` through the correction keyed on this page.",
+  },
+  '1930|1930-08-05|MOTU PROPRIO|In allocutione|De novo opere in locum Leoniani operis de Fidei praeservatio': {
+    printed: 307,
+    page: 337,
+    indexLine: '  » Aug. 5 In allocutione. - De novo opere in locum Leoniani operis / de Fidei praeservatione sufficiendo 307',
+    evidence: "AAS 22 (1930) p. 337 (PDF page 337 of AAS-22-1930-ocr.pdf, read 2026-09-21), the first page of the fascicle of 7 August 1930 (Num. 8), prints 'ACTA PII PP. XI / MOTU PROPRIO / DE NOVO OPERE IN LOCUM LEONIANI OPERIS DE FIDEI PRAESERVATIONE SUFFICIENDO. / PIUS PP. XI / In Allocutione habita in Consistorio …', dated 'die v mensis Augusti, in festo Dedicationis Sanctae Mariae ad Nives, anno MDCCCCXXX, Pontificatus Nostri nono' (p. 340). P. 307 opens 'II. - CONSISTORIUM PUBLICUM / Feria V, 3 Iulii 1930 …'. The entry's year is the parser's repair of `1030`, confirmed by the row on p. 87 above.",
+  },
+  // AAS 76 (1984) and 82 (1990), the two pages phase 2b-ii-c found two acts cited at where the
+  // volume prints one (PR #37): the index's `946` for Cabinda's constitution, which opens at
+  // 947 (p. 946 opens Port Blair's), and its `43` for *Fidelem populum*, which opens at 42
+  // (p. 43 opens *Inter sacras aedes*).
+  '1984|1984-07-02|CONSTITUTIONES APOSTOLICAE|Catholicae prosperitas|In Angola nova dioecesis conditur Cabindana nomine': {
+    printed: 946,
+    page: 947,
+    indexLine: '  » Iul. 2 CABINDANA. Catholicae prosperitas. - In Angola nova dioecesis / conditur Cabindana nomine 946',
+    evidence: "AAS 76 (1984) p. 947 (PDF page 947 of AAS-76-1984-ocr.pdf, read 2026-09-21) prints, after the end of Port Blair's constitution, 'III / CABINDANA / In Angola nova dioecesis conditur Cabindanae nomine. / IOANNES PAULUS EPISCOPUS SERVUS SERVORUM DEI AD PERPETUAM REI MEMORIAM / Catholicae prosperitas communitatis in Angoliensi natione …', dated 'die altero mensis Iulii, anno Domini millesimo nongentesimo octogesimo quarto, Pontificatus Nostri sexto' (p. 948). P. 946 opens *Ex quo Christus* (Portus Blairensis, 22 June 1984), which the index cites there.",
+  },
+  '1990|1989-10-10|LITTERAE APOSTOLICAE|Fidelem populum|B.M.V, in caelum Assumpta dioecesis Bataënsis Patrona confir': {
+    printed: 43,
+    page: 42,
+    indexLine: '   » » 10 Fidelem populum. - B.M.V, in caelum Assumpta dioecesis Ba- / taënsis Patrona confirmatur 43',
+    evidence: "AAS 82 (1990) p. 42 (PDF page 42 of AAS-82-1990-ocr.pdf, read 2026-09-21) prints, after a letter dated 23 September 1989, 'II / Beata Maria Virgo in caelum Assumpta dioecesis Bataënsis Patrona confirmatur. / IOANNES PAULUS PP. II / Ad perpetuam rei memoriam. — Fidelem populum, ad beatam patriam …' (10 October 1989). P. 43 opens *Inter sacras aedes* (Ouidah, 9 November 1989), which the index cites there.",
   },
 };
 

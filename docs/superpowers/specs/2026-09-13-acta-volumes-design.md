@@ -273,8 +273,10 @@ showed: the 1924 index heads its motu proprio `IV.?- MOTU PROPRIO` (the OCR's `?
 such heading of the fixtures), which the parser now reads, so two of the three come back by
 the recovery's own rule; and *Inter praecipuas* (AAS 17 (1925) 289) opens the page the index's
 OCR sets on the next entry's line (*Ex Apostolico officio*, which opens at 516), so invariant
-25 holds both until a page correction can be curated -- the second entry-level key, after
-the two holds of §1.4, that the page-keyed tables lack. *Ubi arcano Dei consilio* is cited at
+25 held both until `ACTA_PAGE_CORRECTIONS` (2026-09-21) -- a row keyed as the readings are,
+naming the printed page and the act's, both read in the volume, applied before the join
+matches or creates -- gave the second its page; the eight cases the phases had named for it
+(PR #37, #40, #41) are its first rows. *Ubi arcano Dei consilio* is cited at
 its Latin printing (AAS 14 (1922) 673) by the second curated reference: the 1922 line for the
 Latin prints no date and opens no entry, and a reading is keyed to an entry, so the row names
 the match it displaces (`supersedes: 'AAS:15:5'`, the Italian printing, quoted beside the

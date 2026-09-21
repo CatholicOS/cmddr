@@ -7,8 +7,8 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { parseActaIndex, type ActaEntry, type ActaParseResult } from './index.js';
 import { matchActa, type ActaMatchResult } from './match.js';
-import { ACTA_CURATED_REFERENCES, ACTA_PAGE_READINGS, overrideKey, type CuratedReference } from './curation.js';
-import { applyPageRows, sidecarPath, type PagesSidecar } from './recover.js';
+import { ACTA_CURATED_REFERENCES, ACTA_PAGE_CORRECTIONS, ACTA_PAGE_READINGS, overrideKey, type CuratedReference } from './curation.js';
+import { applyPageCorrections, applyPageRows, sidecarPath, type PagesSidecar } from './recover.js';
 import type { DocumentRecord } from '../types.js';
 
 /**
@@ -140,6 +140,12 @@ export function loadActaIndexes(sources: readonly ActaSource[] = ACTA_SOURCES): 
     });
     // The curated readings first, then the sidecar (spec §10.3.3, §10.3.5): a page read by
     // hand outranks one recovered by rule, and a key both name is applied once.
+    // A page the index prints wrongly for an entry it dates and names (the OCR's `530` for
+    // *Casti connubii* at 539, the index's own `946` for a constitution that opens at 947) is
+    // replaced from the curated table first, so the matcher, the creator and the shared-page
+    // check see the act's page.
+    applyPageCorrections(r, Object.entries(ACTA_PAGE_CORRECTIONS).filter(([k]) => k.startsWith(`${s.key}|`))
+      .map(([k, v]) => ({ key: k.slice(s.key.length + 1), printed: v.printed, page: v.page })), 'ACTA_PAGE_CORRECTIONS');
     const readings = Object.entries(ACTA_PAGE_READINGS).filter(([k]) => k.startsWith(`${s.key}|`))
       .map(([k, v]) => ({ key: k.slice(s.key.length + 1), page: v.page, source: 'reading' as const }));
     applyPageRows(r, readings, 'ACTA_PAGE_READINGS');

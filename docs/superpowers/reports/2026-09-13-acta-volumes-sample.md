@@ -556,7 +556,7 @@ No document of the era is claimed twice after the evidence rule (§2.1).
 ### Pages two matched acts cite, withheld
 
 None: every page two matched documents of the era cite is curated in `ACTA_SHARED_PAGES` with the volume page quoted, and
-invariant 25 admits exactly those pairs (1 page of the era).
+invariant 25 admits exactly those pairs (3 pages of the era).
 
 ### Acts the Acta print twice
 
@@ -574,6 +574,12 @@ Entries of the era so held: AAS 23 (1931) 41 (*Quo maiori rerum*).
 
 A row of `ACTA_CURATED_REFERENCES` (curation.ts) that names the match it supersedes, with the evidence that the matched entry is
 not the act's citation of record (controller ruling 15): the match is neither a claim nor a record, and the document cites the row's page.
+None among the era's sources.
+
+### Pages the index prints wrongly, corrected
+
+A row of `ACTA_PAGE_CORRECTIONS` (curation.ts) replaces the page an index line prints -- the OCR's digit, or the index's own slip --
+with the page the volume opens the act at, both read; the entry is matched, created and checked for a shared page at the act's page.
 None among the era's sources.
 
 ## 6. Unmatched entries in harvested and partly harvested categories
@@ -1648,7 +1654,7 @@ era and in total; the AAS-only records of every other era are in the *after* col
 |---|---|---|---|---|
 | `rp:pius-x` | 306 | 159 | 2 | 465 |
 | `rp:benedict-xv` | 63 | 112 | 28 | 175 |
-| `rp:pius-xi` | 158 | 991 | 59 | 1149 |
+| `rp:pius-xi` | 158 | 1000 | 59 | 1158 |
 | `rp:pius-xii` | 260 | 1229 | 36 | 1489 |
 | `rp:john-xxiii` | 193 | 294 | 0 | 487 |
 | `rp:paul-vi` | 777 | 349 | 28 | 1126 |
@@ -1656,8 +1662,8 @@ era and in total; the AAS-only records of every other era are in the *after* col
 | `rp:john-paul-ii` | 2105 | 43 | 0 | 2148 |
 | `rp:benedict-xvi` | 301 | 69 | 13 | 370 |
 | `rp:francis-i` | 366 | 260 | 0 | 626 |
-| **Popes of the AAS** | **4536** | **3506** | **166** | **8042** |
-| **Registry** | **4975** | **3506** | **166** | **8481** |
+| **Popes of the AAS** | **4536** | **3515** | **166** | **8051** |
+| **Registry** | **4975** | **3515** | **166** | **8490** |
 
 ## 11. Documents of the era's popes with no AAS entry
 

@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { loadActaIndexes, actaSource, applyCuratedReferences, ACTA_SOURCES } from '../src/acta/join.js';
-import { ACTA_CURATED_REFERENCES, ACTA_PAGE_READINGS } from '../src/acta/curation.js';
+import { ACTA_CURATED_REFERENCES, ACTA_PAGE_CORRECTIONS, ACTA_PAGE_READINGS } from '../src/acta/curation.js';
 import { categoryForHeading } from '../src/acta/categories.js';
 import { pagelessKey, sidecarPath, type PagesSidecar } from '../src/acta/recover.js';
 import type { ActaEntry } from '../src/acta/index.js';
@@ -55,6 +55,21 @@ describe('loadActaIndexes with the sidecars (spec §10.3)', () => {
       expect(entry!.page, key).toBe(row.page);
     }
   });
+  it('applies every curated page correction: the entry carries the volume\'s page, the printed one beside it, and no other entry of the source cites the corrected page', () => {
+    const { parsed } = loadActaIndexes();
+    expect(Object.keys(ACTA_PAGE_CORRECTIONS).length).toBe(8);
+    for (const [key, row] of Object.entries(ACTA_PAGE_CORRECTIONS)) {
+      const [source] = key.split('|');
+      expect(actaSource(source!), key).toBeDefined();
+      const entry = parsed.get(source!)!.entries.find((e) => `${source}|${pagelessKey(e)}` === key);
+      expect(entry, key).toBeDefined();
+      expect(entry!.pageSource, key).toBe('corrected');
+      expect(entry!.page, key).toBe(row.page);
+      expect(entry!.printedPage, key).toBe(row.printed);
+      expect(parsed.get(source!)!.entries.filter((e) => e.page === row.page && e.part === entry!.part), key).toHaveLength(1);
+    }
+  });
+
   it('writes the curated references of the Code\'s constitution and of Ubi arcano Dei, and no other', () => {
     const docs = readdirSync('data/documents').filter((f) => f.endsWith('.json')).flatMap((f) => JSON.parse(readFileSync(`data/documents/${f}`, 'utf8')) as DocumentRecord[]);
     const by = Object.fromEntries(docs.map((d) => [d.id, d]));

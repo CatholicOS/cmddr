@@ -290,9 +290,11 @@ toponym while vatican.va titles it by the see alone, so 167 same-day erections s
 table (`ACTA_REPRINTS`) that quotes both fascicles. Phase 2b-iii-a ([era report](docs/superpowers/reports/2026-09-18-acta-volumes-1926-1930.md))
 joined the five volumes of 1926–1930, the early volumes whose OCR kept the page column: **66** references, 53 of them AAS 21's
 (1929), the one year Pius XI's apostolic-letters shelf holds in number, and the year the 1930 index's OCR lost at the head of
-three sections (`1J30`, `1030`, `1@30`) supplied by curated rows quoting each act's dating formula. Two acts the index cites at a
-page they do not open on — *Casti connubii* at `530` for 539, the motu proprio *In allocutione* at `307` for 337 — are left
-without a reference, the evidence for a page correction the curation tables do not yet have. Phase 2b-iii-b
+three sections (`1J30`, `1030`, `1@30`) supplied by curated rows quoting each act's dating formula. A page the index prints
+wrongly for an act it dates and names — the OCR's `530` for *Casti connubii* at 539, `307` for the motu proprio *In allocutione*
+at 337, the index's own `946` for a constitution that opens at 947 — is replaced from a curated table (`ACTA_PAGE_CORRECTIONS`,
+`tools/src/acta/curation.ts`, both pages read in the volume; eight rows on 2026-09-21), applied before the join matches or creates,
+so the act is cited at its page and the page it shared with another act by the misprint holds neither. Phase 2b-iii-b
 ([era report](docs/superpowers/reports/2026-09-21-acta-volumes-1909-1925.md), [spec §10](docs/superpowers/specs/2026-09-13-acta-volumes-design.md))
 joined the seventeen volumes of 1909–1925, whose OCR lost the page column on most index pages, after recovering the pages from
 the volume bodies (`tools/src/acta/recover.ts`, the sidecars beside the fixtures): of the 1,136 entries opened without a page,
