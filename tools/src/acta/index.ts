@@ -1248,7 +1248,27 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
   // DOCUMENTORUM` / `CHRONOLOGICO ORDINE DIGESTUS` as the page's last lines), so a
   // volume is read from its first line -- everything before the first pope part is
   // skipped in any case.
-  const titleAt = lines.findIndex((l) => /^\s*CHRONOLOGICO ORDINE DIGESTUS\s*$/.test(l));
+  let titleAt = lines.findIndex((l) => /^\s*CHRONOLOGICO ORDINE DIGESTUS\s*$/.test(l));
+  if (titleAt < 0 && !columnar) {
+    // The 2006 index PDF prints `INDEX DOCUMENTORUM / CHRONOLOGICO ORDINE DIGESTUS` nowhere
+    // in its text layer (spec §11.2): its p. 4 opens `I — ACTA SUMMI PONTIFICIS` / `ACTA
+    // BENEDICTI XVI` and the running header `Index documentorum chronologico ordine digestus
+    // 965` opens p. 5. The index's first page is then the page before the first page so
+    // headed; the general index on the pages before it (whose `I – ACTA SUMMI PONTIFICIS`
+    // heads page lists, not entries) stays before the start.
+    // That header, alone on its page's first line, is itself dropped by the lines loop
+    // above (the `PAGE_TOP_HEADER_RE` branch under `first`) before it ever reaches `lines`,
+    // so its page is found by re-splitting the raw text on the form feed the lines loop
+    // already splits on, the same way, rather than by searching `lines` for a line that
+    // is never there.
+    const headerPage = text.split('\f').findIndex((p) => /^\s*Index documentorum chronologico ordine digestus\s+\d{1,4}\s*$/.test((p.split('\n').find((l) => l.trim() !== '') ?? '').replace(/\s+$/, '')));
+    if (headerPage >= 0) {
+      const firstOfPage = lines.findIndex((_, i) => pageOf[i] === headerPage - 1);
+      // If the header is on page 0 there is no page before it: `firstOfPage` stays -1 and
+      // `titleAt` is left at -1, so the final check below still throws.
+      if (firstOfPage >= 0) titleAt = firstOfPage - 1;
+    }
+  }
   if (titleAt < 0 && !columnar) throw new Error('No "CHRONOLOGICO ORDINE DIGESTUS" heading found');
   const start = columnar ? -1 : titleAt;
   const end = lines.findIndex((l, i) => i > start && /^\s*(INDICES NOMINUM|I – INDEX NOMINUM|INDEX NOMINUM PERSONARUM|INDEX ANALYTICUS|INDEX RERUM|INDEX ALPHABETICUS)/.test(l));
@@ -1368,6 +1388,18 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
     if (part && !CONSISTORY_CATEGORY_RE.test(part[1]!.replace(/\s+/g, ' ').trim())) {
       flushDefect();
       const heading = normalisePopeHeading(part[1]!);
+      // The 2006 index PDF (spec §11.2) heads the whole papal part `I — ACTA SUMMI
+      // PONTIFICIS` and names the popes by unnumbered sub-headings under it (`ACTA
+      // BENEDICTI XVI`, then `ACTA IOANNIS PAULI II` for the late pope's acts printed that
+      // year), each read as a pope part is: the container itself names no pope and is not
+      // a part skipped -- nothing under it is lost.
+      if (heading === 'ACTA SUMMI PONTIFICIS') {
+        pope = null;
+        category = null;
+        headingOpen = false;
+        prev = null;
+        continue;
+      }
       const m = heading.match(POPE_PART_RE);
       const known = m ? popeForGenitive(`${m[1]} ${m[2] ?? ''}`) : null;
       if (known) {

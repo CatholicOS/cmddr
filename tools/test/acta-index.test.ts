@@ -1464,6 +1464,53 @@ et mulieribus consecratis ............ 217`, '(An. 2004 et Vol. XCVI)'), { year:
       ['2004-12-25', 'Deus Caritas est', 217],
     ]);
   });
+
+  it('starts 2006\'s index, which prints no title line, at the page before the first running header, and reads ACTA SUMMI PONTIFICIS as a container of the pope sub-headings', () => {
+    const text = `ACTA APOSTOLICAE SEDIS
+INDEX GENERALIS ACTORUM
+(An. 2006 et Vol. XCVIII)
+I – ACTA SUMMI PONTIFICIS
+Litterae Encyclicae: 217.
+\fIndex generalis actorum 963
+In Civitate Vaticana: 215, 295.
+\fI — ACTA SUMMI PONTIFICIS
+
+ACTA BENEDICTI XVI
+
+I – LITTERAE ENCYCLICAE
+
+2005 Dec. 25 Deus Caritas est. – Episcopis, presbyteris et diaconis, viris
+et mulieribus consecratis ............ 217
+\fIndex documentorum chronologico ordine digestus 965
+
+II – LITTERAE DECRETALES
+
+2005 Oct. 23 « Iustus Dominus ». – Beato Caietano Catanoso Sanctorum
+honores decernuntur ............. 297
+
+ACTA IOANNIS PAULI II
+
+I – LITTERAE APOSTOLICAE
+
+2005 Mart. 19 « Sit vobis ». – Venerabili Servo Dei Marino
+Beatorum honores decernuntur .......... 7
+`;
+    const r = parseActaIndex(text, { year: 2006 });
+    expect(r.volume).toBe(98);
+    expect(r.skippedParts).toEqual([]);
+    expect(r.popeHeadings).toEqual(['ACTA BENEDICTI XVI', 'ACTA IOANNIS PAULI II']);
+    expect(r.defects).toEqual([]);
+    expect(r.entries.map((e) => [e.pope, e.date, e.incipit, e.page])).toEqual([
+      ['Benedictus XVI', '2005-12-25', 'Deus Caritas est', 217],
+      ['Benedictus XVI', '2005-10-23', 'Iustus Dominus', 297],
+      ['Ioannes Paulus II', '2005-03-19', 'Sit vobis', 7],
+    ]);
+    // The general index's own `I – ACTA SUMMI PONTIFICIS` (page 1) is before the start: its page list is neither an entry nor a defect.
+  });
+
+  it('still throws for an index PDF with neither a title line nor a running header', () => {
+    expect(() => parseActaIndex('ACTA APOSTOLICAE SEDIS\n(An. 2006 et Vol. XCVIII)\nI – ACTA BENEDICTI XVI\n', { year: 2006 })).toThrow(/CHRONOLOGICO ORDINE DIGESTUS/);
+  });
 });
 
 describe('splitEntryText', () => {
