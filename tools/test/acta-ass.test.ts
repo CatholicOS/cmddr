@@ -208,27 +208,29 @@ describe('scanVolume (spec §3): an act read from its dateline back to its headi
 });
 
 describe('the first curation round (phase 2c-i, Task 4): the dateline shapes the five volumes print', () => {
-  it('reads `an.` and `ann.` before an arabic year (ASS 12 (1879) 115: `die 4 Augusti ann. 1879`; ASS 41 (1908) 193: `die xxvn Maii an. MCMVII`)', () => {
+  it('reads `an.` and `ann.` before an arabic year (ASS 12 (1879) 115: `die 4 Augusti ann. 1879`; ASS 41 (1908) 195: `die xxvn Maii an. MCMVII`)', () => {
     expect(assDate('Datum Romae apud S. Petrum, die 4 Augusti ann. 1879. Pontificatus Nostri anno secundo', { from: 1879, to: 1879 })).toBe('1879-08-04');
     expect(assDate('Datum Romae apud S. Petrum, die xxvn Maii an. MCMVII, Pontificatus Nostri quarto.', { from: 1908, to: 1908 })).toBe('1907-05-27');
   });
-  it('reads the year 1900 spelt `MCM`, the one year of the series three letters spell (ASS 33 (1900) 129: `die XXXI Augusti an. MCM`; 348: `die xix Decembris MCM`)', () => {
+  it('reads the year 1900 spelt `MCM`, the one year of the series three letters spell (ASS 33 (1900) 130: `die XXXI Augusti an. MCM`; 348: `die xix Decembris MCM`)', () => {
     expect(assDate('Datum Romae apud S. Petrum die XXXI Augusti an. MCM, Pontificatus Nostri vicesimo tertio.', SPAN)).toBe('1900-08-31');
     expect(assDate('Datum Romae apud S. Petrum, die xix Decembris MCM, Pontificatus Nostri anno vicesimo tertio.', SPAN)).toBe('1900-12-19');
   });
-  it('drops the stop the early volumes print after the day (ASS 23 (1890) 518: `die III. Martii MDCCCXCI`; ASS 1 (1865) 581: `die XII. / Februarii Anno MDCCCLXVI`)', () => {
+  it('drops the stop the early volumes print after the day (ASS 23 (1890) 522: `die III. Martii MDCCCXCI`; ASS 1 (1865) 581: `die XII. / Februarii Anno MDCCCLXVI`)', () => {
     expect(assDate('Datum Romae apud S. Petrum, die III. Martii MDCCCXCI, Pontificatus Nostri Decimo quarto.', { from: 1890, to: 1891 })).toBe('1891-03-03');
     expect(assDate('Datum Romae apud S. Petrum sub Annulo Piscatoris die XII. Februarii Anno MDCCCLXVI. Pontificatus Nostri Anno Vicesimo.', { from: 1865, to: 1866 })).toBe('1866-02-12');
   });
-  it('never takes the pontificate\'s own year for the date (ASS 23 (1890) 437: `die I Ianuarii MDCCCXCI. Pontificatus Nostri anno XIII`, where `anno XIII` is the first `anno …` numeral)', () => {
+  it('never takes the pontificate\'s own year for the date (ASS 23 (1890) 439: `die I Ianuarii MDCCCXCI. Pontificatus Nostri anno XIII`, where `anno XIII` is the first `anno …` numeral)', () => {
     expect(assDate('exhibitae vel ostensae. Datum Romae apud S. Petrum sub annulo Piscatoris die I Ianuarii MDCCCXCI. Pontificatus Nostri anno XIII.', { from: 1890, to: 1891 })).toBe('1891-01-01');
   });
-  it('reads the Italian datelines with `presso S. Pietro`, `il giorno` and `dell\'anno` (ASS 23 (1890) 206; ASS 33 (1900) 641, 715), and the French one of ASS 41 (1908) 361', () => {
+  it('reads the Italian datelines with `presso S. Pietro`, `il giorno` and `dell\'anno` (ASS 23 (1890) 206; ASS 33 (1900) 642, 715), and the French ones of ASS 41 (1908) 364 and ASS 33 (1900) 363, 722', () => {
     expect(assDate('Dato a Roma presso S. Pietro, li 15 Ottobre 1890, anno decimoterzo del Nostro Pontificato.', { from: 1890, to: 1891 })).toBe('1890-10-15');
     expect(assDate("Dato a Roma, presso S. Pietro, il giorno 28 marzo dell'anno 1901, vigesimoquarto del Nostro Pontificato.", SPAN)).toBe('1901-03-28');
     expect(assDate('Dato a Roma presso S. Pietro il giorno 11 Giugno 1901, del Nostro Pontificato anno vigesimo quarto.', SPAN)).toBe('1901-06-11');
-    expect(assDate("Donné à Rome, 17 Mai de l'année 1908, de Notre Pontificat le cinquième.", { from: 1908, to: 1908 })).toBe('1908-05-17');
-    expect(assDate("Donné à Rome, près de Saint-Pierre, le 23 Décembre de l'année 1900, de Notre Pontificat la vingt-troisième.", SPAN)).toBe('1900-12-23');
+    expect(assDate("Donné à Rome, 17 Mai de l'année 1908, de Notre Pontificat la cinquième.", { from: 1908, to: 1908 })).toBe('1908-05-17');
+    // `l'an` (ASS 33 (1900) 363, the year on the next line) and `l'année` (ASS 33 722; ASS 41 364) are both printed.
+    expect(assDate("Donné à Rome, près de Saint-Pierre, le 23 Décembre de l'an 1900, de Notre Pontificat le vingt-troisième.", SPAN)).toBe('1900-12-23');
+    expect(assDate("Donné à Rome près Saint Pierre le 29 Juin de l'année 1901, vingtqUatrième de Notre Pontificat.", SPAN)).toBe('1901-06-29');
   });
   it('reads a signed dateline that prints no `Datum Romae` (ASS 41 (1908) 621: `Ex aedibus Vaticanis, die 9 Iulii 1908.`; 19: `Dalle stanze del Vaticano, il 23 Giugno 1905.`)', () => {
     expect(assDate('Ex aedibus Vaticanis, die 9 Iulii 1908.', { from: 1908, to: 1908 })).toBe('1908-07-09');
@@ -247,8 +249,8 @@ describe('the first curation round: the anchors the five volumes print', () => {
     const p19 = ["cuore l'Apostolica benedizione.", '          Dalle stanze del Vaticano, il 23 Giugno 1905.', '', '                                            PIUS PP. X'].join('\n');
     const p621 = ['        Ex aedibus Vaticanis, die 9 Iulii 1908.', '', '                                            PIUS PP. X'].join('\n');
     const p198 = ["l'Apostolica benedizione.", '                  Dal Vaticano li 19 agosto 1900.', '', '                                     LEO PP. XIIL'].join('\n');
-    const p363 = ['         Donné à Rome, près de Saint-Pierre, le 23 Décembre de', "l'année 1900, de Notre Pontificat la vingt-troisième.", '', '                                                 LEO PP. XIII.'].join('\n');
-    const p722 = ["             Donné à Rome près Saint Pierre le 29 Juin de l'année 1901,", 'de Notre Pontificat la vingt-quatrième.', '', '                                                            LEON XIII PAPE.'].join('\n');
+    const p363 = ['        Donné à Rome, près de Saint-Pierre, le 23 Décembre de', "l'an 1900, de Notre Pontificat le vingt-troisième.", '', '                                                LEO PP. XIII.'].join('\n');
+    const p722 = ["            Donné à Rome près Saint Pierre le 29 Juin de l'année 1901,", ' vingtqUatrième de Notre Pontificat.', '', '                                                           LEON XIII PAPE.'].join('\n');
     const decree = ['         Datum Romae ex Secretaria S. Congregationis die 9 Iulii 1908.', '', '                     A. Card. Di PIETRO, Praef.'].join('\n');
     expect(findAnchors([p363])).toMatchObject([{ page: 1, line: 0, kind: 'dateline' }]);
     expect(findAnchors([p722])).toMatchObject([{ page: 1, line: 0, kind: 'dateline' }]);
@@ -386,7 +388,9 @@ describe('the entries fixtures are well-formed (runs offline)', () => {
       expect(fixture.source).toBe(s.key);
       // ASS 1 (1865-66) is the one sample volume the scanner reads no act from: its papal
       // acts print no class heading of the list (`ALLOCVTIO`, `LITERAE APOSTOLICAE` under
-      // the Secretaria Brevium with an editorial preface) -- the Task 4 report, ASS 1.
+      // the Secretaria Brevium with an editorial preface) -- the Task 4 report, ASS 1. The
+      // fixture is the scan, and the scan is empty; its three acts are ASS_READINGS rows,
+      // and Task 5's loader test asserts entries > 0 after the readings for every source.
       if (s.volume !== 1) expect(fixture.entries.length).toBeGreaterThan(0);
       for (const e of fixture.entries) {
         expect(e.series).toBe('ASS');

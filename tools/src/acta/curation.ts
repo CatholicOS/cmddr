@@ -1393,18 +1393,42 @@ export interface AssReading {
 
 /**
  * The papal acts of the ASS the scanner (ass.ts) missed or misread, read by hand in the
- * store text (ass volumes spec §6): keyed `ASS:{volume}:{page}`. A row is applied by the
- * loader (join.ts) as an entry with `anchor: 'reading'` -- added where the scan has no entry
- * at the page, replacing the scanned entry where it has one -- and is stale (a hard error)
- * unless the page is one of the scan's defects, one of the summa's unclaimed rows, or a
- * scanned entry's page: a reading must answer a finding. Every row names why the scan
- * missed the act.
+ * store text (ass volumes spec §6): keyed `ASS:{volume}:{page}`, the page the act opens on.
+ * A row is applied by the loader (join.ts) as an entry with `anchor: 'reading'` -- added
+ * where the scan has no entry at the page, replacing the scanned entry where it has one --
+ * and is stale (a hard error) unless it answers a finding (the controller's ruling of the
+ * Task 4 fix round, which Task 5 implements): its page is a scanned entry's page, an
+ * unclaimed summa row's page, a defect's page, or -- for a `no-heading` defect, whose page
+ * is the anchor's -- any page from the previous anchor's page through the defect's page; or
+ * the volume's scan and summa are both empty (ASS 1). Every row names why the scan missed
+ * the act.
  */
 export const ASS_READINGS: Readonly<Record<string, AssReading>> = {
   // Phase 2c-i, Task 4 (the first curation round): read in the store text on 2026-09-21 at
   // the page the act opens on. The page in the key is the PDF page, which equals the printed
   // page in every sample volume; `evidence` quotes the lines and names the finding the row
   // answers -- a defect of the scan, an unclaimed summa row, or a scanned entry misread.
+  // ASS 1 (1865-66): the scan reads no act and the summa has no papal part (its rows sit
+  // under the dicasteries), so the volume's three papal acts are read by hand under the
+  // ruling's last clause.
+  'ASS:1:193': {
+    pope: 'Pius IX', category: 'ALLOCUTIO', date: '1865-09-25',
+    opening: 'Multiplices inter machinationes artesque, quibus Christiani nominis hostes',
+    description: 'SS. D. N. PII PAPAE IX HABITA IN CONSISTORIO SECRETO DIE XXV SEPTEMBRIS MDCCCLXV.',
+    evidence: "ASS 1 (1865) 193-197, ass-01-1865.txt. p. 193 l. 2 'EX ACTIS COMTOBIALIBE' (the running head, the OCR's reading of CONSISTORIALIBUS), ll. 6-10 'SANCTISSIMI DOMINI NOSTRI / PII / DIVINA PROVIDENTIA / PAPAE IX.', l. 12 'ALLOCVTIO' (the OCR's V for U), l. 14 'HABITA IN CONSISTORIO SECRETO', l. 17 'DIE XXV SEPTEMBRIS MDCCCLXV.', l. 21 'VENERABILES FRATRES', l. 22 '« Multiplices inter machinationes artesque, quibus Christiani / nominis hostes adoriri Ecclesiam Dei'; no dateline (an allocution), dated from its heading, 25 September 1865; the running heads of the following pages read '194 ALLOCUTIO SS. D. N. PII PAPAE IX.'. Why the scan missed it: `ALLOCVTIO` is no class heading (one line in the sample), so no heading anchor; and ASS 1's summa (pp. 747-752) has no papal part -- its row ('Allocutio SSmi, qua iterum reprobantur et damnantur Massonicae sectae. 193') sits under EX ACTIS CONSISTORIALIBUS -- so the scan and the summa both leave the volume empty (the ruling's last clause).",
+  },
+  'ASS:1:578': {
+    pope: 'Pius IX', category: 'LITTERAE APOSTOLICAE', date: '1866-02-12',
+    opening: 'Gravissimum supremi Nostri Apostolici ministerii munus omnino postulat,',
+    description: 'Litterae Apostolicae in forma Brevis quibus Romanae ephemeridi cui titulus La Civiltà Cattolica perennitati et perpetuitati consulitur (the editor\'s preface, p. 577).',
+    evidence: "ASS 1 (1865) 577-581, ass-01-1865.txt. p. 577 l. 4 'LITERA E APOSTOLICAE,' (the volume's single-T spelling, OCR-split) then the editor's preface, l. 12 'Sequentes Apostolicas Literas in forma Brevi expeditas re- / ferimus, quibus Sanctissimus Dominus Noster … praeclarissima encomiis Romanae ephemeridi / cui titulus - LA CIVILTÀ CATTOLICA - merito tributis, eiusdem peren- / nitati, et perpetuitati consulere dignatus est.'; the act opens p. 578 (running head '578 LITERAE APOSTOLICAE.'): l. 2 'PIUS PP. IX.', l. 3 'AD PERPETUAM REI MEMORIAM.', l. 4 '« Gravissimum supremi Nostri Apostolici ministerii munus / omnino postulat, ut intentissimo studio'. Dated p. 581 ll. 26-28 'Datum Romae apud S. Petrum sub Annulo Piscatoris die XII. / Februarii Anno MDCCCLXVI. Pontificatus Nostri Anno Vicesimo. / Locus*Sigilli PIUS PP. IX.'. Why the scan missed it: `LITERAE APOSTOLICAE` is no class heading of the list (the volume's spelling; two acts in ASS 1, none elsewhere), so the anchor at p. 581 found no heading (the no-heading defect at 581, the anchor's page) and its summa row sits under EX SECRETARIA BREVIUM: the scan and the summa both leave the volume empty (the ruling's last clause). Keyed 578, where the act itself opens after the preface.",
+  },
+  'ASS:1:744': {
+    pope: 'Pius IX', category: 'LITTERAE APOSTOLICAE', date: '1866-04-13',
+    opening: 'Quamvis Urbs Roma Beatissimos Apostolorum Principes tamquam praecipuos',
+    description: 'Litterae Apostolicae in forma Brevis quibus S. Catharina Senensis inter secundarios Almae Urbis coelestes Patronos recensetur (the editor\'s preface, p. 744).',
+    evidence: "ASS 1 (1865) 744-746, ass-01-1865.txt. p. 744 l. 2 'Il SECRETARIA BREVIUM.' (the part's running head), l. 8 'LITERAE APOSTOLICAE,' (the volume's single-T spelling) then the editor's preface, l. 11 'Quamvis iam Decretum retulerimus pag. 630, quo SSmus / Dominus Noster electam Virginem S. Catharinam Senensem in- / ter secundarios Almae Urbis coelestes Patronos recensendam / declaravit; praetermittere tamen nolumus Apostolicas Literas in / forma Brevis', l. 28 'Literae autem Apostolicae sunt sequentis tenoris.', l. 31 'PIUS PP. IX.', l. 32 'AD PERPETUAM REI MEMORIAM.', l. 33 '« Quamvis Urbs Roma Beatissimos Apostolorum Principes tam* / quam praecipuos Patronos suos veneretur'. Dated p. 746 ll. 10-11 'Datum Romae apud S. Petrum sub annulo Piscatoris die XIII. / Aprilis Anno MDCCCLXV1. Pontificatus Nostri Anno Vigesimo.' (the OCR's `1` for `I`). Why the scan missed it: as ASS:1:578 -- `LITERAE APOSTOLICAE` is no class heading, the anchor at p. 746 found no heading (the no-heading defect at 746), the summa lists it under EX SECRETARIA BREVIUM; the scan and the summa both leave the volume empty (the ruling's last clause). Keyed 744, where the heading, the preface and the act's own first words all stand.",
+  },
   'ASS:12:3': {
     pope: 'Leo XIII', category: 'LITTERAE', date: '1879-06-01',
     opening: 'Ingens Nobis attulit gaudium pastoralis sollicitudo vestra, Venerabiles',

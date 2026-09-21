@@ -541,7 +541,8 @@ keyed to each volume: ASS 1: no papal heading — the 1865 summa lists the pope'
 the dicasteries (`EX ACTIS CONSISTORIALIBUS`, `EX SECRETARIA BREVIUM`), so the check is
 vacuous, and the scanner reads no act (the allocution of 25 September 1865 at p. 193 is headed
 `ALLOCVTIO`, the two letters apostolic at pp. 578 and 745 `LITERAE APOSTOLICAE` after an
-editorial preface); 0 readings. ASS 12: `LITTERAE ET ALLOCUTIONES` … `EX ACTIS CONSISTORIALIBUS`;
+editorial preface), so its three acts are readings under the ruling that a reading answers a
+finding when a volume's scan and summa are both empty; 3 readings. ASS 12: `LITTERAE ET ALLOCUTIONES` … `EX ACTIS CONSISTORIALIBUS`;
 1 reading. ASS 23: `LITTERAE ET ACTA ROM. PONTIFICIS` … `EX ACTIS CONSISTORIALIBUS` (summa p. 753
 is interleaved word by word by the OCR and yields three garbage rows, and loses *Rerum
 novarum*'s own row); 5 readings. ASS 33: `LITTERAE ET ACTA` (`R. PONTIFICIS` on the next line)

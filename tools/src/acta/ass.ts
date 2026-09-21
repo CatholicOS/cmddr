@@ -141,7 +141,7 @@ export function assDate(text: string, span: { from: number; to: number }): strin
   // Italian: `Dal Vaticano, 20 Settembre 1900` / `Dato a Roma presso S. Pietro, li 15 Ottobre
   // 1890` (ASS 23 (1890) 129) / `Dato a Roma, presso S. Pietro, il giorno 28 marzo dell'anno
   // 1901` (ASS 33 (1900) 641; `il giorno 11 Giugno 1901`, 715).
-  // The French `Donné à Rome, 17 Mai de l'année 1908` (ASS 41 (1908) 361) by the same rule with its own months.
+  // The French `Donné à Rome, 17 Mai de l'année 1908` (ASS 41 (1908) 364; `de l'année 1901`, ASS 33 (1900) 722; `de l'an 1900`, ASS 33 363) by the same rule with its own months.
   const it = t.match(/\b(?:Dal|Dalle|Dato|Data|Roma|Vaticano|Rome)\b.{0,80}?\b(?:li|il giorno|il|addì|le)?\s*(\d{1,2})\s+([A-Za-zÀ-ÿ]+)\s+(?:dell[’']anno\s+|de l[’']an(?:née)?\s+)?(\d{4})/);
   if (it) {
     const month = IT_MONTHS[it[2]!.toLowerCase()] ?? FR_MONTHS[it[2]!.toLowerCase()];
@@ -157,19 +157,22 @@ export function assDate(text: string, span: { from: number; to: number }): strin
 const DATUM_RE = /Dat(?:um|\.)\s+[REB]om[ae]{1,2}|\bDat[oa]\s+(?:a|in)\s+Roma|\bDal\s+Vaticano|\bDal\s+Palazzo/;
 /**
  * The dateline of the pope's private letters, which print no `Pontificatus Nostri`: the
- * place and date, then the pope's signature within three lines (SIGNATURE_RE) -- `Dalle
- * stanze del Vaticano, il 23 Giugno 1905.` / `PIUS PP. X` (ASS 41 (1908) 19), `Ex aedibus
- * Vaticanis, die 9 Iulii 1908.` (ASS 41 621), `Donné à Rome, 17 Mai de l'année 1908` (ASS
- * 41 361; `Donné à Rome, près de Saint-Pierre, le 23 Décembre de / l'année 1900`, the year
- * on the next line, ASS 33 (1900) 363; `… le 29 Juin de l'année 1901,` / `LEON XIII PAPE.`,
- * ASS 33 722), `Dal Vaticano li 19 agosto 1900.` / `LEO PP. XIIL` (ASS 33 198). A
- * dicastery's dateline is signed by its cardinal, never by the pope. (`Romae ex Aedibus
- * Vaticanis, die Pentecostes, 1 Iunii 1879.`, ASS 12 (1879) 12, prints no signature
- * within four lines and stays a reading.)
+ * place and date, then the pope's signature within four lines (SIGNATURE_RE). The rule
+ * rests on the eight anchors it yields in the sample, every one a `Dal` / `Dalle` / `Donné`
+ * / `Ex aedibus` line: ASS 33 (1900) 3 (`Dal Vaticano 16 luglio 1900.` / `LEO PP. XIII`),
+ * 198 (`Dal Vaticano li 19 agosto 1900.` / `LEO PP. XIIL`), 363 (`Donné à Rome, près de
+ * Saint-Pierre, le 23 Décembre de / l'an 1900`, the year on the next line, / `LEO PP.
+ * XIII.`), 722 (`Donné à Rome près Saint Pierre le 29 Juin de l'année 1901,` / `LEON XIII
+ * PAPE.`); ASS 41 (1908) 19 (`Dalle stanze del Vaticano, il 23 Giugno 1905.` / `PIUS PP.
+ * X`), 364 (`Donné à Rome, 17 Mai de l'année 1908`), 615 (`Dal Vaticano, li 9 Maggio
+ * 1908.`), 621 (`Ex aedibus Vaticanis, die 9 Iulii 1908.`). A `Datum Romae` without
+ * `Pontificatus Nostri` is a dicastery's (spec §3) and is not admitted here. (`Romae ex
+ * Aedibus Vaticanis, die Pentecostes, 1 Iunii 1879.`, ASS 12 (1879) 12, prints no
+ * signature within four lines and stays a reading.)
  */
-const SIGNED_DATELINE_RE = /^\s*(?:Datum\s+[REB]om|Dat[oa]\s+(?:a|in)\s+Roma|Dal\s+Vaticano|Dalle\s+stanze|Dal\s+Palazzo|(?:Romae\s+)?[Ee]x\s+[Aa]edibus\s+Vaticanis|Donné\s+à\s+Rome)\b/;
-/** The signature: `PIUS PP. X`, `LEO PP. XIII`, the OCR's `LEO PP. XIIL` (ASS 33 (1900) 198), the French letters' `LEON XIII PAPE.` (ASS 33 722). */
-const SIGNATURE_RE = /^\s*(?:(?:LEO|PIUS|LEONE|PIO)\s+PP\.?\s*(?:X-?[Il1L]{3,4}|IX|X)|L[EÉ]ON\s+XIII\s+PAPE)\.?\s*$/;
+const SIGNED_DATELINE_RE = /^\s*(?:Dal\s+Vaticano|Dalle\s+stanze|(?:Romae\s+)?[Ee]x\s+[Aa]edibus\s+Vaticanis|Donné\s+à\s+Rome)\b/;
+/** The signature: `PIUS PP. X` (ASS 41 (1908) 19), `LEO PP. XIII` (ASS 33 (1900) 3), the OCR's `LEO PP. XIIL` (ASS 33 198), the French letters' `LEON XIII PAPE.` (ASS 33 722). */
+const SIGNATURE_RE = /^\s*(?:(?:LEO|PIUS)\s+PP\.?\s*(?:X-?[Il1L]{3,4}|IX|X)|LEON\s+XIII\s+PAPE)\.?\s*$/;
 /** `Pontificatus Nostri`, the ASS's `Pontificatus nostri` (ASS 23 (1890) 222; ASS 41 (1908) 297; ASS 1 (1865)). */
 const PONTIFICATUS_RE = /Pontificatus\s+[NnÑ]ostri|(?:del|Del)\s+Nostro\s+Pontificato/;
 
@@ -226,11 +229,12 @@ const SALUTATION_RE = /^\s*(LEO|PIUS|LEONE|PIO)\s+(PP\.?|PAPA|EPISCOPUS)\b[^\n]{
  * Universis Catholici Orbis … / cum Apostolica Sede Habentibus.` (ASS 12 97), `Dilecto Filio
  * Bartholomeo Froget Sodali Dominicano. / Pictavium.` (ASS 33 (1900) 641), `Al Signor
  * Cardinale Mariano Rampolla del Tindaro, / Nostro Segretario di Stato.` (ASS 33 714), `Al
- * diletto Figlio Costanzo Maria Becchi` (ASS 33 641). The vocative of the greeting
+ * diletto Figlio Costanzo Maria Becchi` (ASS 33 641), `AUGUSTISSIMO SERENISSIMOQUE
+ * PRINCIPI` (ASS 41 (1908) 18), `A NOS TRÈS CHERS FILS` (ASS 41 361). The vocative of the greeting
  * (`Venerabilis Frater`, `Dilecte Fili`) is not matched: an opening may begin with it
  * (`Venerabilis Frater Augustinus Episcopus Papiae una cum`, ASS 33 198).
  */
-const ADDRESSEE_RE = /^\s*(?:Venerabili(?:bus)?\s+Frat|Dilect(?:o|is)\s+Fili|Al\s+(?:Signor|Sig\.|diletto|Venerabile|Reverendo|Rev)|Ai\s+(?:Venerabili|diletti)|Alla\s|Augustissimo|Serenissimo|A\s+Nos\s+(?:très\s+)?chers|A\s+Notre\s+(?:très\s+)?cher)/i;
+const ADDRESSEE_RE = /^\s*(?:Venerabili(?:bus)?\s+Frat|Dilect(?:o|is)\s+Fili|Al\s+(?:Signor|diletto)|Augustissimo|A\s+Nos\s+(?:très\s+)?chers)/i;
 /** The addressee set in capitals right after the by-line, with no blank line between (`Qua Pontifex dilaudat … / ricam pro catholico prelo favendo. / VENERABILI FRATRI / OTTOCARO EPISCOPO …`, ASS 41 (1908) 198; `A NOS TRÈS CHERS FILS`, ASS 41 361): where the heading block ends. */
 const ADDRESSEE_CAPS_RE = /^\s*(?:VENERABILI(?:BUS)?\s+FRAT|DILECT(?:O|IS)\s+FILI|AL\s+SIGNOR|A\s+NOS\s|AUGUSTISSIMO|SERENISSIMO)/;
 /**
