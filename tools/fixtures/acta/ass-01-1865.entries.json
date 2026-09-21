@@ -1,0 +1,47 @@
+{
+  "source": "ass-1",
+  "generated": "2026-09-21",
+  "text": "~/development/sources/ASS/txt/ass-01-1865.txt (767 pages)",
+  "volume": 1,
+  "year": 1865,
+  "pages": 767,
+  "entries": [],
+  "defects": [
+    {
+      "page": 325,
+      "reason": "no-heading",
+      "lines": [
+        "« Datum Romae apud S. Mariam Maiorem sub Annulo Pisca­",
+        "toris die viii. Augusti MDCCCXLIII. Pontificatus Nostri Anno De­",
+        "cimo Tertio. »"
+      ]
+    },
+    {
+      "page": 581,
+      "reason": "no-heading",
+      "lines": [
+        "Datum Romae apud S. Petrum sub Annulo Piscatoris die XII.",
+        "Februarii Anno MDCCCLXVI. Pontificatus Nostri Anno Vicesimo.",
+        "Locus*Sigilli PIUS PP. IX."
+      ]
+    },
+    {
+      "page": 746,
+      "reason": "no-heading",
+      "lines": [
+        "Datum Romae apud S. Petrum sub annulo Piscatoris die XIII.",
+        "Aprilis Anno MDCCCLXV1. Pontificatus Nostri Anno Vigesimo."
+      ]
+    }
+  ],
+  "summa": {
+    "pages": {
+      "from": 747,
+      "to": 752
+    },
+    "rows": [],
+    "claimed": [],
+    "unclaimed": [],
+    "omitted": []
+  }
+}

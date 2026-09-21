@@ -1,5 +1,9 @@
 import { describe, expect, it } from 'vitest';
+import { existsSync, readFileSync } from 'node:fs';
+import { homedir } from 'node:os';
 import { assDate, findAnchors, scanVolume } from '../src/acta/ass.js';
+import { ACTA_SOURCES } from '../src/acta/join.js';
+import { checkSumma, locateSumma, parseSummaPapalPart } from '../src/acta/summa.js';
 
 const SPAN = { from: 1900, to: 1901 };
 
@@ -201,4 +205,206 @@ describe('scanVolume (spec §3): an act read from its dateline back to its headi
     const { entries } = scanVolume(PAGES, { ...opts, lastBodyPage: 2 });
     expect(entries).toEqual([]);
   });
+});
+
+describe('the first curation round (phase 2c-i, Task 4): the dateline shapes the five volumes print', () => {
+  it('reads `an.` and `ann.` before an arabic year (ASS 12 (1879) 115: `die 4 Augusti ann. 1879`; ASS 41 (1908) 193: `die xxvn Maii an. MCMVII`)', () => {
+    expect(assDate('Datum Romae apud S. Petrum, die 4 Augusti ann. 1879. Pontificatus Nostri anno secundo', { from: 1879, to: 1879 })).toBe('1879-08-04');
+    expect(assDate('Datum Romae apud S. Petrum, die xxvn Maii an. MCMVII, Pontificatus Nostri quarto.', { from: 1908, to: 1908 })).toBe('1907-05-27');
+  });
+  it('reads the year 1900 spelt `MCM`, the one year of the series three letters spell (ASS 33 (1900) 129: `die XXXI Augusti an. MCM`; 348: `die xix Decembris MCM`)', () => {
+    expect(assDate('Datum Romae apud S. Petrum die XXXI Augusti an. MCM, Pontificatus Nostri vicesimo tertio.', SPAN)).toBe('1900-08-31');
+    expect(assDate('Datum Romae apud S. Petrum, die xix Decembris MCM, Pontificatus Nostri anno vicesimo tertio.', SPAN)).toBe('1900-12-19');
+  });
+  it('drops the stop the early volumes print after the day (ASS 23 (1890) 518: `die III. Martii MDCCCXCI`; ASS 1 (1865) 581: `die XII. / Februarii Anno MDCCCLXVI`)', () => {
+    expect(assDate('Datum Romae apud S. Petrum, die III. Martii MDCCCXCI, Pontificatus Nostri Decimo quarto.', { from: 1890, to: 1891 })).toBe('1891-03-03');
+    expect(assDate('Datum Romae apud S. Petrum sub Annulo Piscatoris die XII. Februarii Anno MDCCCLXVI. Pontificatus Nostri Anno Vicesimo.', { from: 1865, to: 1866 })).toBe('1866-02-12');
+  });
+  it('never takes the pontificate\'s own year for the date (ASS 23 (1890) 437: `die I Ianuarii MDCCCXCI. Pontificatus Nostri anno XIII`, where `anno XIII` is the first `anno …` numeral)', () => {
+    expect(assDate('exhibitae vel ostensae. Datum Romae apud S. Petrum sub annulo Piscatoris die I Ianuarii MDCCCXCI. Pontificatus Nostri anno XIII.', { from: 1890, to: 1891 })).toBe('1891-01-01');
+  });
+  it('reads the Italian datelines with `presso S. Pietro`, `il giorno` and `dell\'anno` (ASS 23 (1890) 206; ASS 33 (1900) 641, 715), and the French one of ASS 41 (1908) 361', () => {
+    expect(assDate('Dato a Roma presso S. Pietro, li 15 Ottobre 1890, anno decimoterzo del Nostro Pontificato.', { from: 1890, to: 1891 })).toBe('1890-10-15');
+    expect(assDate("Dato a Roma, presso S. Pietro, il giorno 28 marzo dell'anno 1901, vigesimoquarto del Nostro Pontificato.", SPAN)).toBe('1901-03-28');
+    expect(assDate('Dato a Roma presso S. Pietro il giorno 11 Giugno 1901, del Nostro Pontificato anno vigesimo quarto.', SPAN)).toBe('1901-06-11');
+    expect(assDate("Donné à Rome, 17 Mai de l'année 1908, de Notre Pontificat le cinquième.", { from: 1908, to: 1908 })).toBe('1908-05-17');
+    expect(assDate("Donné à Rome, près de Saint-Pierre, le 23 Décembre de l'année 1900, de Notre Pontificat la vingt-troisième.", SPAN)).toBe('1900-12-23');
+  });
+  it('reads a signed dateline that prints no `Datum Romae` (ASS 41 (1908) 621: `Ex aedibus Vaticanis, die 9 Iulii 1908.`; 19: `Dalle stanze del Vaticano, il 23 Giugno 1905.`)', () => {
+    expect(assDate('Ex aedibus Vaticanis, die 9 Iulii 1908.', { from: 1908, to: 1908 })).toBe('1908-07-09');
+    expect(assDate('Dalle stanze del Vaticano, il 23 Giugno 1905.', { from: 1908, to: 1908 })).toBe('1905-06-23');
+  });
+});
+
+describe('the first curation round: the anchors the five volumes print', () => {
+  it('anchors on `Pon­ / tificatus Nostri` broken at the line end (ASS 33 (1900) 4) and on the lower-case `Pontificatus nostri` (ASS 23 (1890) 222)', () => {
+    const p4 = ['timus.', '        Datum Romae, apud S. Petrum die VIII Iunii MCM Pon­', 'tificatus Nostri anno vigesimo tertio.'].join('\n');
+    const p222 = ['         Datum Romae apud Sanet. Petrum Idibus Octobris anno', 'MDCCCLXXXX. Pontificatus nostri XIII.'].join('\n');
+    expect(findAnchors([p4])).toMatchObject([{ page: 1, line: 1, kind: 'dateline' }]);
+    expect(findAnchors([p222])).toMatchObject([{ page: 1, line: 0, kind: 'dateline' }]);
+  });
+  it('anchors a private letter on its place-and-date line followed by the pope\'s signature (ASS 41 (1908) 19; 621; ASS 33 (1900) 198 with the OCR\'s `LEO PP. XIIL`; the French letters of ASS 33 363 and 722), and not a dicastery\'s dateline signed by its cardinal', () => {
+    const p19 = ["cuore l'Apostolica benedizione.", '          Dalle stanze del Vaticano, il 23 Giugno 1905.', '', '                                            PIUS PP. X'].join('\n');
+    const p621 = ['        Ex aedibus Vaticanis, die 9 Iulii 1908.', '', '                                            PIUS PP. X'].join('\n');
+    const p198 = ["l'Apostolica benedizione.", '                  Dal Vaticano li 19 agosto 1900.', '', '                                     LEO PP. XIIL'].join('\n');
+    const p363 = ['         Donné à Rome, près de Saint-Pierre, le 23 Décembre de', "l'année 1900, de Notre Pontificat la vingt-troisième.", '', '                                                 LEO PP. XIII.'].join('\n');
+    const p722 = ["             Donné à Rome près Saint Pierre le 29 Juin de l'année 1901,", 'de Notre Pontificat la vingt-quatrième.', '', '                                                            LEON XIII PAPE.'].join('\n');
+    const decree = ['         Datum Romae ex Secretaria S. Congregationis die 9 Iulii 1908.', '', '                     A. Card. Di PIETRO, Praef.'].join('\n');
+    expect(findAnchors([p363])).toMatchObject([{ page: 1, line: 0, kind: 'dateline' }]);
+    expect(findAnchors([p722])).toMatchObject([{ page: 1, line: 0, kind: 'dateline' }]);
+    expect(findAnchors([p19])).toMatchObject([{ page: 1, line: 1, kind: 'dateline' }]);
+    expect(findAnchors([p621])).toMatchObject([{ page: 1, line: 0, kind: 'dateline' }]);
+    expect(findAnchors([p198])).toMatchObject([{ page: 1, line: 1, kind: 'dateline' }]);
+    expect(findAnchors([decree])).toEqual([]);
+  });
+});
+
+describe('the first curation round: the heading shapes the five volumes print', () => {
+  const opts33 = { volume: 33, year: 1900, yearTo: 1901, lastBodyPage: 9 };
+  it('reads the pope from the caps block the 1879 volume sets above the class heading, through the blank lines after a lone class word, past the dative addressee to the salutation (ASS 12 (1879) 97)', () => {
+    const page = [
+      '                                                                                                       97',
+      '                          SANCTISSIMI DOMINI NOSTRI', '', '                                     LEONIS', '', '                                DIVINA PROVIDENTIA', '', '                       PAPAE XIII.', '', '',
+      '                              EPISTOLA ENCYCLICA.', '', '',
+      '           AD PATRIARCHAS PRIMATES ARCHIEPISCOPOS ET EriSCOPOS', '                                 UNIVERSOS CATHOLICI ORBIS', '        GRATIAM ET COMMUNIONEM CUM APOSTOLICA SEDE HABENTES.', '', '', '', '', '', '', '',
+      '        Venerabilibus Fratribus Patriarchis Primatibus Archiepiscopis et Episcopis', '                      Universis Catholici Orbis Gratiani et Communionem', '                                 cum Apostolica Sede Habentibus.', '', '',
+      '                                          LEO PP. XIII', '',
+      '               Venerabilibus Fratribus Salutem et Apostolicam Benedictionem', '',
+      '        Aeterni Patris Unigenitus Filius, qui in terris apparuit,', 'ut humanum genus ...',
+      '       Datum Romae apud S. Petrum, die 4 Augusti ann. 1879.', 'Pontificatus Nostri anno secundo',
+    ].join('\n');
+    // The page is the volume's 97th, as its header says (blank pages before it).
+    const { entries, defects } = scanVolume([...Array.from({ length: 96 }, () => ''), page], { volume: 12, year: 1879, yearTo: 1879, lastBodyPage: 97 });
+    expect(defects).toEqual([]);
+    expect(entries[0]).toMatchObject({ category: 'EPISTOLA ENCYCLICA', pope: 'Leo XIII', date: '1879-08-04', page: 97, opening: 'Aeterni Patris Unigenitus Filius, qui in terris apparuit,', evidence: { salutation: 'LEO PP. XIII' } });
+    expect(entries[0]!.evidence.heading).toBe('SANCTISSIMI DOMINI NOSTRI / LEONIS / DIVINA PROVIDENTIA / PAPAE XIII. / EPISTOLA ENCYCLICA. / AD PATRIARCHAS PRIMATES ARCHIEPISCOPOS ET EriSCOPOS / UNIVERSOS CATHOLICI ORBIS / GRATIAM ET COMMUNIONEM CUM APOSTOLICA SEDE HABENTES.');
+  });
+  it('opens an act on a heading whose block names no pope when the salutation follows past the caps addressee (ASS 41 (1908) 34, 299), reading the opening after the two-line greeting', () => {
+    const page = [
+      '                                                   MOTU PROPRIO', 'Quo reformatur Collegium Poenitentiariorum Franciscanum', '           Basilicae Lateranensis.', '',
+      '                                                              PIUS PP. X',
+      '          Singulari curare studio, ut praeclarus Ordo Fratrum Mi­', ' norum in omnibus rebus suum decus dignitatemque retineat,',
+      '        Datum Romae apud S. Petrum, die xvn Septembris', 'anno MCMVII, Pontificatus Nostri quinto.', '', '                                                        PIUS PP. X', '',
+      '                                                 EPISTOLA', 'Qua Pontifex gratias agit ob comparatam domum pro Inter-', '         nuntio Apostolico Reipublicae Argentinae.', '', '',
+      '                                                   VENERABILI FRATRI', '', '                    MARIANO ANTONIO ARCHIEPISCOPO BONAERENSI', '', '                                                                                                       BONUM AEREM',
+      '                                                          PIUS PP. x', '                            Venerabilis Frater et dilecte Fili,', '                       salutem et Apostolicam benedictionem.', '',
+      '         Studiosa erga Iesu Christi Vicarium voluntas Argentino-', 'rum, Nobis quidem satis superque iam cognita, non mira­',
+      '        Datum Romae apud S. Petrum, die xxiv Aprilis MCMVIII,', 'Pontificatus Nostri anno quinto.',
+    ].join('\n');
+    const { entries, defects } = scanVolume([page], { volume: 41, year: 1908, yearTo: 1908, lastBodyPage: 1 });
+    expect(defects).toEqual([]);
+    expect(entries.map((e) => [e.category, e.date, e.opening, e.evidence.salutation])).toEqual([
+      ['MOTU PROPRIO', '1907-09-17', 'Singulari curare studio, ut praeclarus Ordo Fratrum Minorum', 'PIUS PP. X'],
+      ['EPISTOLA', '1908-04-24', 'Studiosa erga Iesu Christi Vicarium voluntas Argentinorum, Nobis', 'PIUS PP. x'],
+    ]);
+    expect(entries[1]!.description).toBe('Qua Pontifex gratias agit ob comparatam domum pro Inter- nuntio Apostolico Reipublicae Argentinae.');
+  });
+  it('never opens an act on a running head with a trailing page number, whatever the body names (ASS 33 (1900) 201: `LITTERAE 201` over `Benedictus XIII Pontifex Maximus`; ASS 1 (1865) 195: `ALLOCUTIO SS. D. N. PII PAPAE IX. 195`)', () => {
+    const pages = [
+      ['                                                          LITTERAE 201', 'Episcopus cum Capitulo Cathedralis ; tertiam magister seu prae­', 'ses municipii Papiensis, id quod Benedictus XIII Pontifex Ma­', 'ximus largitus est: ut Episcopo et Capitulo Cathedralis ius as­', '', '         Datum Romae apud S. Petrum sub annulo Piscatoris die', 'XIV Septembris MCM. Pontificatus Nostri Anno Vigesimo tertio.'].join('\n'),
+      ['ALLOCUTIO SS. D. N. PII PAPAE IX. 195', 'patent omnibus leges, quibus reguntur, patent quae iuxta Evan­', 'gelii doctrinam exercentur opera charitatis.'].join('\n'),
+    ];
+    expect(findAnchors(pages).filter((a) => a.kind === 'heading')).toEqual([]);
+    const { entries, defects } = scanVolume(pages, { ...opts33, lastBodyPage: 2 });
+    expect(entries).toEqual([]);
+    expect(defects).toMatchObject([{ page: 1, reason: 'no-heading' }]);
+  });
+  it('reads the pope from `Leonis Divina Providentia Papae XIII` and the OCR\'s numerals `Xlii`, `Xiil`, `XÍII` (ASS 33 (1900) 341, 449, 642; ASS 23 (1890) 526), and `LEO EPISCOPUS` alone as the pope of the volume\'s year (ASS 33 349)', () => {
+    const act = (heading: string, salutation: string) => [
+      `   ${heading}`, '', `                     ${salutation}`, '', '   Dilecti Filii, salutem et Apostolicam benedictionem.', '', '   Conditae a Christo Ecclesiae ea vis divinitus inest ac fe­', 'cunditas, ut multas anteactis temporibus, plurimas aetate hac',
+      '        Datum Romae apud S. Petrum, die xix Decembris MCM, Pontificatus Nostri anno vicesimo tertio.',
+    ].join('\n');
+    const popes = (pages: string[], year: number, yearTo: number) => scanVolume(pages, { volume: 33, year, yearTo, lastBodyPage: pages.length }).entries.map((e) => e.pope);
+    expect(popes([act('CONSTITUTIO APOSTOLICA Sanctissimi Domini Nostri Leonis Divina Providentia / Papae XIII de Religiosorum Institutis.'.replace(' / ', '\n'), 'LEO EPISCOPUS')], 1900, 1901)).toEqual(['Leo XIII']);
+    expect(popes([act('EPISTOLA Sanctissimi D. N. Leonis Xlii ad comitem de Ballestrem.', 'LEO PP. XIII')], 1900, 1901)).toEqual(['Leo XIII']);
+    expect(popes([act('LITTERAE SS.mi Patris Leonis Xiil ad E.mum Archiepiscopum Vestmonasteriensem.', 'LEO PP. XIII')], 1900, 1901)).toEqual(['Leo XIII']);
+    expect(popes([act('LITTERAE SSmi D. N. Leonis XÍII ad Abbatem Solesmensem.', 'LEO PP. XIII')], 1900, 1901)).toEqual(['Leo XIII']);
+    expect(popes([act('LITTERAE SS.mi D. N. Leonis, quibus universalis iubilaeus extenditur.', 'LEO EPISCOPUS')], 1900, 1901)).toEqual(['Leo XIII']);
+    expect(popes([act('CONSTITUTIO APOSTOLICA / De promulgatione legum et evulgatione actorum S. Sedis.'.replace(' / ', '\n'), 'PIUS EPISCOPUS')], 1908, 1908)).toEqual(['Pius X']);
+    // A name a numeral follows that the table lacks is another pope's, and stays unread.
+    expect(scanVolume([act('EPISTOLA quam Leonis XII decessor scripsit.', 'LEO EPISCOPUS')], { volume: 33, year: 1900, yearTo: 1901, lastBodyPage: 1 }).entries.map((e) => e.pope)).toEqual(['Leo XIII']);
+  });
+  it('reads the opening after a greeting set on its own line (ASS 33 (1900) 577: `Dilecti filii, salutem et Apostolicam benedictionem. Saecu­`) and past a dative addressee and its continuation (ASS 33 641: `Dilecto Filio Bartholomeo Froget Sodali Dominicano. / Pictavium.`)', () => {
+    const p577 = [
+      ' LITTERAE in forma Brevis SSmi O. N. Leonis XIII, occasione anni centesimi ab in­', '          stitutione nobilis cohortis Sacratissimum Principem protuentis.', '',
+      '                                                       LEO PP. XIII.', ' Dilectis Filiis Protector ¿bus Nostri Lateris Merentibus et Emeritis.', '',
+      '          Dilecti filii, salutem et Apostolicam benedictionem. Saecu­', 'laris eventus faustitas, quae nobilem cohortem vestram hisce', ' diebus laetitia merito perfundit, non ita cadit in rationem rerum',
+      'trariis quibuscumque. Datum Romae apud Sanctum Petrum sub Annulo Piscatoris die 11 maii 1901. Pontificatus Nostri Anno Vicesimo quarto.',
+    ].join('\n');
+    const p641 = [
+      'LITTERAE SS.mi Patris Leonis XIII ad auctorem libri in quo exposita est admira­', '        bilis inhabitatio Sancti Spiritus in animis iustis.', '',
+      '           Dilecto Filio Bartholomeo Froget Sodali Dominicano.', '                                                                                                              Pictavium.', '',
+      '          Dilecte Fili, salutem et Apostolicam Benedictionem. — De', 'ingenii doctrinaeque fructibus quos nobis frequentes catholico­', 'rum exhibet pietas, ii profecto solent multo accidere gratiores',
+      '          Datum Romae apud Sanctum Petrum die 20 februarii 1901, Pontificatus Nostri vicesimo quarto.',
+    ].join('\n');
+    const { entries, defects } = scanVolume([p577, p641], { ...opts33, lastBodyPage: 2 });
+    expect(defects).toEqual([]);
+    expect(entries.map((e) => e.opening)).toEqual([
+      'Saecularis eventus faustitas, quae nobilem cohortem vestram hisce',
+      'De ingenii doctrinaeque fructibus quos nobis frequentes catholicorum',
+    ]);
+  });
+  it('reads the OCR\'s `IITTERAE` as LITTERAE (ASS 33 (1900) 643), `LITTERAE Encyclicae` and `LETTERA Enciclica` with their class (ASS 23 (1890) 206, 193), and `CHIROGRAPHUM` (ASS 33 714)', () => {
+    const tail = ['', '   Dilecte Fili, salutem et Apostolicam Benedictionem.', '', '   Iucundas scito Nobis communes litteras vestras fuisse. Me­', 'moriam beneficiorum colere, multoque magis ferre prae se pa­', '        Datum Romae apud S. Petrum, die 17 Maii anno 1901. Pontificatus Nostri vicesimo quarto.'];
+    const heads = [
+      'IITTERAE SSmi D. N. Leonis XIII ad Herbertum Story Praefectum et Vice-Cancel-',
+      '        LITTERAE Encyclicae SS. D. N. Leonis XIII ad Episcopos, Clerum',
+      '                 LETTERA Enciclica del Papa Leone XIII ai Vescovi, al Clero',
+      'CHIROGRAPHUM Sanctissimi D. N. Leonis XIII quoad officia vacabilia Cancellariae',
+    ];
+    const pages = heads.map((h) => [h, ...tail].join('\n'));
+    const { entries, defects } = scanVolume(pages, { ...opts33, lastBodyPage: 4 });
+    expect(defects).toEqual([]);
+    expect(entries.map((e) => e.category)).toEqual(['LITTERAE', 'LITTERAE ENCYCLICAE', 'LETTERA ENCICLICA', 'CHIROGRAPHUM']);
+    expect(entries[0]!.evidence.heading).toBe('IITTERAE SSmi D. N. Leonis XIII ad Herbertum Story Praefectum et Vice-Cancel-');
+  });
+});
+
+describe('the entries fixtures are what the scanner writes from the store text (skipped when the store is absent)', () => {
+  const store = `${process.env['ACTA_SOURCES'] ?? `${homedir()}/development/sources/ASS`}/txt`;
+  for (const s of ACTA_SOURCES.filter((x) => x.kind === 'ass')) {
+    const text = `${store}/ass-${String(s.volume).padStart(2, '0')}-${s.year}.txt`;
+    it.skipIf(!existsSync(text))(`${s.key}: re-scanning the store text gives the fixture's entries, defects and summa check`, () => {
+      const pages = readFileSync(text, 'utf8').split('\f');
+      const fixture = JSON.parse(readFileSync(s.file, 'utf8'));
+      const summaPages = locateSumma(pages);
+      const lastBodyPage = summaPages ? summaPages.from - 1 : pages.length;
+      const { entries, defects } = scanVolume(pages, { volume: s.volume, year: s.year, yearTo: s.yearTo ?? s.year, lastBodyPage });
+      const summaText = summaPages ? pages.slice(summaPages.from - 1, summaPages.to).join('\f') + '\n' : '';
+      expect(readFileSync(s.summaFile!, 'utf8')).toBe(summaText);
+      expect(entries).toEqual(fixture.entries);
+      expect(defects).toEqual(fixture.defects);
+      expect(checkSumma(entries, { pages: summaPages, rows: parseSummaPapalPart(summaText).rows })).toEqual(fixture.summa);
+    });
+  }
+});
+
+describe('the entries fixtures are well-formed (runs offline)', () => {
+  for (const s of ACTA_SOURCES.filter((x) => x.kind === 'ass')) {
+    it(`${s.key}: every entry carries series ASS, the source's volume and year, a page within the volume, a pope the table names, a date or the unreadable marker, an opening of three to eight words and its five evidence lines`, () => {
+      const fixture = JSON.parse(readFileSync(s.file, 'utf8'));
+      expect(fixture.source).toBe(s.key);
+      // ASS 1 (1865-66) is the one sample volume the scanner reads no act from: its papal
+      // acts print no class heading of the list (`ALLOCVTIO`, `LITERAE APOSTOLICAE` under
+      // the Secretaria Brevium with an editorial preface) -- the Task 4 report, ASS 1.
+      if (s.volume !== 1) expect(fixture.entries.length).toBeGreaterThan(0);
+      for (const e of fixture.entries) {
+        expect(e.series).toBe('ASS');
+        expect(e.volume).toBe(s.volume);
+        expect(e.year).toBe(s.year);
+        expect(e.page).toBeGreaterThanOrEqual(1);
+        expect(e.page).toBeLessThanOrEqual(fixture.pages);
+        expect(['Pius IX', 'Leo XIII', 'Pius X']).toContain(e.pope);
+        expect(e.date).toMatch(/^(\d{4}-\d{2}-\d{2}|\?\?\?\?-\?\?-\?\?)$/);
+        expect(e.incipit).toBeNull();
+        expect(e.opening.split(' ').length).toBeGreaterThanOrEqual(3);
+        expect(e.opening.split(' ').length).toBeLessThanOrEqual(8);
+        expect(['dateline', 'heading']).toContain(e.anchor);
+        expect(Object.keys(e.evidence).sort()).toEqual(['dateline', 'header', 'heading', 'opening', 'salutation']);
+      }
+      // One page opens one act -- except the pages two short letters share, which the join's shared-page check reports.
+      const pages = fixture.entries.map((e: { page: number }) => e.page);
+      expect(new Set(pages).size).toBeGreaterThanOrEqual(pages.length - 6);
+    });
+  }
 });

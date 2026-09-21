@@ -23,8 +23,8 @@ import type { ActaSource } from './join.js';
 export const pagelessKey = (e: { date: string; category: string; incipit: string | null; description: string }): string =>
   `${e.date}|${e.category}|${e.incipit ?? ''}|${e.description.slice(0, 60)}`;
 
-/** The sidecar beside a source's fixture: `tools/fixtures/acta/aas-13-1921.pages.json`. */
-export const sidecarPath = (source: Pick<ActaSource, 'file'>): string => source.file.replace(/\.txt$/, '.pages.json');
+/** The sidecar beside a source's fixture: `tools/fixtures/acta/aas-13-1921.pages.json` (an ASS source's entries JSON, `ass-33-1900.entries.json`, would name `ass-33-1900.pages.json`, which no ASS source has: the scanner reads its pages from the body). */
+export const sidecarPath = (source: Pick<ActaSource, 'file'>): string => source.file.replace(/\.(?:txt|entries\.json)$/, '.pages.json');
 
 /**
  * Where a recovered entry lands among `entries` that share its pope and category

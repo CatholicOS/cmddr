@@ -1,0 +1,349 @@
+{
+  "source": "ass-12",
+  "generated": "2026-09-21",
+  "text": "~/development/sources/ASS/txt/ass-12-1879.txt (672 pages)",
+  "volume": 12,
+  "year": 1879,
+  "pages": 672,
+  "entries": [
+    {
+      "series": "ASS",
+      "volume": 12,
+      "year": 1879,
+      "page": 13,
+      "pope": "Leo XIII",
+      "category": "ALLOCUTIO",
+      "date": "????-??-??",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SANCTISSIMI DOMINI NOSTRI LEONIS XIII",
+      "raw": "ALLOCUTIO / SANCTISSIMI DOMINI NOSTRI LEONIS XIII",
+      "opening": "Ingenti sane laetitia suavique animi iucunditate hodie perfundimur",
+      "anchor": "heading",
+      "evidence": {
+        "heading": "ALLOCUTIO / SANCTISSIMI DOMINI NOSTRI LEONIS XIII",
+        "salutation": null,
+        "opening": "Ingenti sane laetitia suavique animi iucunditate hodie per­",
+        "dateline": null,
+        "header": "la"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 12,
+      "year": 1879,
+      "page": 97,
+      "pope": "Leo XIII",
+      "category": "EPISTOLA ENCYCLICA",
+      "date": "1879-08-04",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "AD PATRIARCHAS PRIMATES ARCHIEPISCOPOS ET EriSCOPOS UNIVERSOS CATHOLICI ORBIS GRATIAM ET COMMUNIONEM CUM APOSTOLICA SEDE HABENTES.",
+      "raw": "SANCTISSIMI DOMINI NOSTRI / LEONIS / DIVINA PROVIDENTIA / PAPAE XIII. / EPISTOLA ENCYCLICA. / AD PATRIARCHAS PRIMATES ARCHIEPISCOPOS ET EriSCOPOS / UNIVERSOS CATHOLICI ORBIS / GRATIAM ET COMMUNIONEM CUM APOSTOLICA SEDE HABENTES.",
+      "opening": "Aeterni Patris Unigenitus Filius, qui in terris apparuit,",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "SANCTISSIMI DOMINI NOSTRI / LEONIS / DIVINA PROVIDENTIA / PAPAE XIII. / EPISTOLA ENCYCLICA. / AD PATRIARCHAS PRIMATES ARCHIEPISCOPOS ET EriSCOPOS / UNIVERSOS CATHOLICI ORBIS / GRATIAM ET COMMUNIONEM CUM APOSTOLICA SEDE HABENTES.",
+        "salutation": "LEO PP. XIII",
+        "opening": "Aeterni Patris Unigenitus Filius, qui in terris apparuit, ut",
+        "dateline": "Datum Romae apud S. Petrum, die 4 Augusti ann. 1879. Pontificatus Nostri anno secundo",
+        "header": "97"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 12,
+      "year": 1879,
+      "page": 225,
+      "pope": "Leo XIII",
+      "category": "LITTERAE",
+      "date": "1879-10-15",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "AD EMUM AC RMUM DOMINUM ANTQNINUM EPISCOPUM PRAENESTINUM S. R. E. CARDINALEM DE LUCA SACRO CONSILIO STUDIIS REGUNDIS PRAEFECTUM",
+      "raw": "SANCTISSIMI DOMINI NOSTRI / LEONIS / DIVINA PROVIDENTIA / PAPAE XIII. / LITTERAE / AD EMUM AC RMUM DOMINUM / ANTQNINUM EPISCOPUM PRAENESTINUM S. R. E. CARDINALEM DE LUCA / SACRO CONSILIO STUDIIS REGUNDIS PRAEFECTUM",
+      "opening": "Iampridem considerando experiendoque intelleximus, teterrimum quod adversus Ecclesiam",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "SANCTISSIMI DOMINI NOSTRI / LEONIS / DIVINA PROVIDENTIA / PAPAE XIII. / LITTERAE / AD EMUM AC RMUM DOMINUM / ANTQNINUM EPISCOPUM PRAENESTINUM S. R. E. CARDINALEM DE LUCA / SACRO CONSILIO STUDIIS REGUNDIS PRAEFECTUM",
+        "salutation": "LEO PP. XIII",
+        "opening": "Iampridem considerando experiendoque intelleximus, teter-",
+        "dateline": "Datum Romae apud s. Petrum, die 15 octobris an. 1879, Pontificatus Nostri Anno Secundo.",
+        "header": "225"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 12,
+      "year": 1879,
+      "page": 273,
+      "pope": "Leo XIII",
+      "category": "LITTERAE",
+      "date": "1879-08-28",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SSMI D. N. LEONIS XIII QUOAD OPERA DOCTORIS",
+      "raw": "LITTERAE / SSMI D. N. LEONIS XIII QUOAD OPERA DOCTORIS",
+      "opening": "Licet universum iam orbem pervaserint, non sine amplissimo",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE / SSMI D. N. LEONIS XIII QUOAD OPERA DOCTORIS",
+        "salutation": null,
+        "opening": "< Licet universum iam orbem pervaserint, non sine amplis­",
+        "dateline": "« Datum Romae apud Sanctum Petrum, die 28 augusti 1879, Pontificatus Nostri anno secundo. LEO PP. XIII.",
+        "header": "273"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 12,
+      "year": 1879,
+      "page": 275,
+      "pope": "Leo XIII",
+      "category": "LITTERAE",
+      "date": "1879-09-11",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SS. D. N. LEONIS XIII. AD EPISCOPUM VIGLEBANI",
+      "raw": "LITTERAE / SS. D. N. LEONIS XIII. AD EPISCOPUM VIGLEBANI",
+      "opening": "Gratulationes et officia Cleri tui, venerabilis Frater, qui",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE / SS. D. N. LEONIS XIII. AD EPISCOPUM VIGLEBANI",
+        "salutation": null,
+        "opening": "Gratulationes et officia Cleri tui, venerabilis Frater, qui te­",
+        "dateline": "Datum Romae apud s. Petrum die 11 Septembris anno 1879, Pontificatus Nostri anno secundo.",
+        "header": "275"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 12,
+      "year": 1879,
+      "page": 337,
+      "pope": "Leo XIII",
+      "category": "MOTU PROPRIO",
+      "date": "1880-01-18",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SSmi. D. N. Leonis XIII. quo Deputatio trium Emorum. Cardinalium constituitur ad dirigendam et curandam omnium operum s. Thomae Aquinatis editionem.",
+      "raw": "MOTU PROPRIO. SSmi. D. N. Leonis XIII. quo Deputatio trium / Emorum. Cardinalium constituitur ad dirigendam et curandam / omnium operum s. Thomae Aquinatis editionem.",
+      "opening": "Placere Nobis, omnia sancti Thomae Aquinatis Opera de",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "MOTU PROPRIO. SSmi. D. N. Leonis XIII. quo Deputatio trium / Emorum. Cardinalium constituitur ad dirigendam et curandam / omnium operum s. Thomae Aquinatis editionem.",
+        "salutation": "LEO PP. xm.",
+        "opening": "Placere Nobis, omnia sancti Thomae Aquinatis Opera de",
+        "dateline": "Datum Romae apud S. Petrum die 18 Ianuarii 1880. Pontificatus Nostri Anno Secundo.",
+        "header": "337"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 12,
+      "year": 1879,
+      "page": 385,
+      "pope": "Leo XIII",
+      "category": "EPISTOLA ENCYCLICA",
+      "date": "1880-02-10",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "AD PATRIARCHAS, PRIMATES, ARCHIEPISCOPOS ET EPISCOPOS UNIVERSOS CATHOLICI ORBIS GRATIAM ET COMMUNIONEM CUM APOSTOLICA SEDE HABENTES",
+      "raw": "SANCTISSIMI \"DOMINI NOSTRI / DIVINA PROVIDENTIA / PAPAE XIII / EPISTOLA ENCYCLICA / AD PATRIARCHAS, PRIMATES, ARCHIEPISCOPOS ET EPISCOPOS / UNIVERSOS CATHOLICI ORBIS GRATIAM ET COMMUNIONEM / CUM APOSTOLICA SEDE HABENTES",
+      "opening": "Arcanum, divinae sapientiae consilium, quod Salvator hominum Iesus",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "SANCTISSIMI \"DOMINI NOSTRI / DIVINA PROVIDENTIA / PAPAE XIII / EPISTOLA ENCYCLICA / AD PATRIARCHAS, PRIMATES, ARCHIEPISCOPOS ET EPISCOPOS / UNIVERSOS CATHOLICI ORBIS GRATIAM ET COMMUNIONEM / CUM APOSTOLICA SEDE HABENTES",
+        "salutation": "LEO PP. XIII.",
+        "opening": "Arcanum, divinae sapientiae consilium, quod Salvator hominum",
+        "dateline": "Datum Romae apud s. Petrum , die 10 Februarii an. 1880 , Pontificatus Nostri Anno Secundo.",
+        "header": "385"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 12,
+      "year": 1879,
+      "page": 481,
+      "pope": "Leo XIII",
+      "category": "LITTERAE",
+      "date": "1880-02-24",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SSmi. D. N. Leonis XIII ad Archiepiscopum Coloniensem; quibus declarat se passurum, concordiae tnaturandae gratia, ut nomina animarum pastorum Borussico Gubernio exhibeantur, ante cano­ nicam institutionem.",
+      "raw": "LITTERAE / SSmi. D. N. Leonis XIII ad Archiepiscopum Coloniensem; quibus / declarat se passurum, concordiae tnaturandae gratia, ut nomina / animarum pastorum Borussico Gubernio exhibeantur, ante cano­ / nicam institutionem.",
+      "opening": "Libenti prorsus animo perlegimus commentarium a Te nuper",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE / SSmi. D. N. Leonis XIII ad Archiepiscopum Coloniensem; quibus / declarat se passurum, concordiae tnaturandae gratia, ut nomina / animarum pastorum Borussico Gubernio exhibeantur, ante cano­ / nicam institutionem.",
+        "salutation": "LEO PP. XIII.",
+        "opening": "Libenti prorsus animo perlegimus commentarium a Te nuper",
+        "dateline": "Datum Romae apud S. Petrum die 24 Februarii 1880. Pontificatus Nostri Anno Tertio.",
+        "header": "481"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 12,
+      "year": 1879,
+      "page": 486,
+      "pope": "Leo XIII",
+      "category": "ALLOCUTIO",
+      "date": "????-??-??",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Qua SSmus Pater Leo XIII respondit catholicis scientiarum cultori­ bus, magna affici laetitia de obsequio sibi ab illis praestito ; eis­ demque adpromittit Angelicum Doctorem omnium domiciliorum scientiarum, et bonarum artium patronum caelestem.",
+      "raw": "ALLOCUTIO / Qua SSmus Pater Leo XIII respondit catholicis scientiarum cultori­ / bus, magna affici laetitia de obsequio sibi ab illis praestito ; eis­ / demque adpromittit Angelicum Doctorem omnium domiciliorum / scientiarum, et bonarum artium patronum caelestem.",
+      "opening": "Pergratus Nobis perque iucundus est conspectus vester, dilecti",
+      "anchor": "heading",
+      "evidence": {
+        "heading": "ALLOCUTIO / Qua SSmus Pater Leo XIII respondit catholicis scientiarum cultori­ / bus, magna affici laetitia de obsequio sibi ab illis praestito ; eis­ / demque adpromittit Angelicum Doctorem omnium domiciliorum / scientiarum, et bonarum artium patronum caelestem.",
+        "salutation": null,
+        "opening": "Pergratus Nobis perque iucundus est conspectus vester, dilecti",
+        "dateline": null,
+        "header": "486                                                 LITTERAE"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 12,
+      "year": 1879,
+      "page": 588,
+      "pope": "Leo XIII",
+      "category": "BREVE",
+      "date": "1880-03-23",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "quo Sodalitates ab adoratione perpetua SSmi Sacramenti eto. nuncupatae, plenaria ditantur Indulgentia, v?riis anni diebus lu- erandâ.",
+      "raw": "BREVE quo Sodalitates ab adoratione perpetua SSmi Sacramenti eto. / nuncupatae, plenaria ditantur Indulgentia, v?riis anni diebus lu- / erandâ.",
+      "opening": "Ad perpetuam rei memoriam, Benedicente Domino, variis iam",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "BREVE quo Sodalitates ab adoratione perpetua SSmi Sacramenti eto. / nuncupatae, plenaria ditantur Indulgentia, v?riis anni diebus lu- / erandâ.",
+        "salutation": "LEO PP. XIII.",
+        "opening": "Ad perpetuam rei memoriam, Benedicente Domino, variis",
+        "dateline": "Datum Romae apud s. Petrum sub Annulo Piscatoris die XXIII Martii MDCCCLXXX Pontificatus Nostri Anno Tertio.",
+        "header": "DECRETI: M"
+      }
+    }
+  ],
+  "defects": [
+    {
+      "page": 637,
+      "reason": "no-heading",
+      "lines": [
+        "Datum Romae apud s. Petrum sub Annulo piscatoris XIII",
+        "Augusti MDCCCLXXIX."
+      ]
+    }
+  ],
+  "summa": {
+    "pages": {
+      "from": 647,
+      "to": 653
+    },
+    "rows": [
+      {
+        "description": "APOSTOLICAE Litterae SSmi D. N. Leonis XIII ad Archiepiscopos et Episcopos Ecclesiasticarum Provinciarum Taurini, Vercellae et Genuae. p",
+        "page": 3,
+        "raw": "APOSTOLICAE / Litterae SSmi D. N. Leonis XIII ad / Archiepiscopos et Episcopos Ec­ / clesiasticarum Provinciarum Tau­ / rini, Vercellae et Genuae. p. 3"
+      },
+      {
+        "description": "Allocutio eiusdem Sanctissimi Patris ad catholicarum ephemeri- dum repraesentantes, in qua praecipue exorantur, ne desinant voce ac scriptis propugnare s. Imperii necessi tatem, ad liberum sp iri tua-lis potestatis exercitium. .",
+        "page": 13,
+        "raw": "Allocutio eiusdem Sanctissimi Pa­ / tris ad catholicarum ephemeri- / dum repraesentantes, in qua prae­ / cipue exorantur, ne desinant voce / ac scriptis propugnare s. Imperii / necessi tatem, ad liberum sp iri tua-lis / potestatis exercitium. . . » 13"
+      },
+      {
+        "description": "Epistola Encyclica SSmi D. N. Leonis XIII ad Patriarchas, Pri- matess et Episcor Archiepiscopo pos; qua commendatur studium philosophiae s. Thomae Aquinatis",
+        "page": 97,
+        "raw": "Epistola Encyclica SSmi D. N. / Leonis XIII ad Patriarchas, Pri- / matess et Episco­ / r Archiepiscopo / pos; qua commendatur studium / philosophiae s. Thomae Aqui­ / natis » 97"
+      },
+      {
+        "description": "Litterae SSmi D. N. Leonis XIII ad Emum Cardinalem De Luca, sacro consilio studiis regundis, praefectum",
+        "page": 225,
+        "raw": "Litterae SSmi D. N. Leonis XIII / ad Emum Cardinalem De Luca, / sacro consilio studiis regundis, / praefectum » 225"
+      },
+      {
+        "description": "Litterae SSmi D. N. Leonis XIII quoad opera Doctoris s. Alphonsi de Ligorio",
+        "page": 273,
+        "raw": "Litterae SSmi D. N. Leonis XIII / quoad opera Doctoris s. Alphonsi / de Ligorio » 273"
+      },
+      {
+        "description": "Litterae SSmi D. N. Leonis XIII ad Episcopum Viglebanen. in commendationem doctrinae sancti Thomae Aquinatis. .",
+        "page": 275,
+        "raw": "Litterae SSmi D. N. Leonis XIII / ad Episcopum Viglebanen. in / commendationem doctrinae san­ / cti Thomae Aquinatis. . . » 275"
+      },
+      {
+        "description": "Motu Proprio SS. D. N. Leonis XIII,quo deputatio trium Emorum Cardinalium constituitur, ad dirigendam et curandam omnium operum s. Thomae Aquinatis editionem",
+        "page": 337,
+        "raw": "Motu Proprio SS. D. N. Leonis / XIII,quo deputatio trium Emorum / Cardinalium constituitur, ad di­ / rigendam et curandam omnium / operum s. Thomae Aquinatis edi­ / tionem » 337"
+      },
+      {
+        "description": "Encyclica SSmi D. N. Leonis XIII ad Patriarchas, Primates etc. de matrimonio Christiano.",
+        "page": 385,
+        "raw": "Encyclica SSmi D. N. Leonis XIII / ad Patriarchas, Primates etc. de / matrimonio Christiano. . » 385"
+      },
+      {
+        "description": "Litterae SSmi D. N. Leonis XIII ad Archiepiscopum Coloniensem; quibus declarat se passurum, concordiae maturandae causa, ut nomina animarum pastorum Borus- sico Gubernio exhibeantur, ante canonicam institutionem",
+        "page": 481,
+        "raw": "Litterae SSmi D. N. Leonis XIII / ad Archiepiscopum Coloniensem; / quibus declarat se passurum, con­ / cordiae maturandae causa, ut no­ / mina animarum pastorum Borus- / sico Gubernio exhibeantur, ante / canonicam institutionem. » 481"
+      },
+      {
+        "description": "Allocutio R. P. D. Tripepi habita coram SSmo, nomine scientiarum cultorum die 7 Martii 1880",
+        "page": 483,
+        "raw": "Allocutio R. P. D. Tripepi habita / coram SSmo, nomine scientiarum / cultorum die 7 Martii 1880. 483"
+      },
+      {
+        "description": "Allocutio qua SSmus D. N. Leo XIII respondit scientiarum cultoribus, magna affici laetitia de obsequio sibi ab illis praestito; , eisdemque adpromittit Angelicum Doctorem omnium domiciliorum scientiarum et bonarum artium patronum caelestem. .",
+        "page": 486,
+        "raw": "Allocutio qua SSmus D. N. Leo / XIII respondit scientiarum culto­ / ribus, magna affici laetitia de / obsequio sibi ab illis praestito; , / eisdemque adpromittit Angelicum / Doctorem omnium domiciliorum / scientiarum et bonarum artium / patronum caelestem. . . » 486"
+      },
+      {
+        "description": "Epistola Encyclica Pontificis Gregorii XVI, continens novam societatum biblicarum reprobationem etc. ,",
+        "page": 545,
+        "raw": "Epistola Encyclica Pontificis Gre­ / gorii XVI, continens novam so­ / cietatum biblicarum reprobatio­ / nem etc. , » 545"
+      }
+    ],
+    "claimed": [
+      13,
+      97,
+      225,
+      273,
+      275,
+      337,
+      385,
+      481,
+      486
+    ],
+    "unclaimed": [
+      {
+        "description": "APOSTOLICAE Litterae SSmi D. N. Leonis XIII ad Archiepiscopos et Episcopos Ecclesiasticarum Provinciarum Taurini, Vercellae et Genuae. p",
+        "page": 3,
+        "raw": "APOSTOLICAE / Litterae SSmi D. N. Leonis XIII ad / Archiepiscopos et Episcopos Ec­ / clesiasticarum Provinciarum Tau­ / rini, Vercellae et Genuae. p. 3"
+      },
+      {
+        "description": "Allocutio R. P. D. Tripepi habita coram SSmo, nomine scientiarum cultorum die 7 Martii 1880",
+        "page": 483,
+        "raw": "Allocutio R. P. D. Tripepi habita / coram SSmo, nomine scientiarum / cultorum die 7 Martii 1880. 483"
+      },
+      {
+        "description": "Epistola Encyclica Pontificis Gregorii XVI, continens novam societatum biblicarum reprobationem etc. ,",
+        "page": 545,
+        "raw": "Epistola Encyclica Pontificis Gre­ / gorii XVI, continens novam so­ / cietatum biblicarum reprobatio­ / nem etc. , » 545"
+      }
+    ],
+    "omitted": [
+      588
+    ]
+  }
+}

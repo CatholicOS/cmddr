@@ -31,6 +31,13 @@ export interface SummaCheck {
 
 const SUMMA_HEAD_RE = /^[\s\S]{0,60}?(SUMMA\s+A[CGO]TO[RKT]?[UTJ]*M|INDEX\s+ANALYTICUS)/;
 const NEXT_INDEX_RE = /^[\s\S]{0,60}?(INDEX\s+GENERALIS|INDEX\s+ALPHABETICUS|INDEX\s+RERUM|INDEX\s+NOMINUM)/;
+/**
+ * A page's first three non-blank lines, trimmed and joined: what the two heading regexes
+ * read. The layout mode pads the page-number line above the heading to the right margin
+ * (`{150 spaces}761` then `SUMMA ACTORUM`, ASS 33 (1900) 761; ASS 12 (1879) 647), which
+ * alone exceeds the sixty characters the regexes allow before the heading.
+ */
+const headOf = (page: string): string => page.split('\n').filter((l) => l.trim() !== '').slice(0, 3).map((l) => l.trim()).join(' ');
 
 /**
  * The summa's pages: the first page from the volume's midpoint headed SUMMA ACTORUM (the
@@ -40,10 +47,10 @@ const NEXT_INDEX_RE = /^[\s\S]{0,60}?(INDEX\s+GENERALIS|INDEX\s+ALPHABETICUS|IND
 export function locateSumma(pages: readonly string[]): { from: number; to: number } | null {
   const n = pages.length;
   let from = -1;
-  for (let i = Math.floor(n / 2); i < n; i++) if (SUMMA_HEAD_RE.test(pages[i]!)) { from = i; break; }
+  for (let i = Math.floor(n / 2); i < n; i++) if (SUMMA_HEAD_RE.test(headOf(pages[i]!))) { from = i; break; }
   if (from < 0) return null;
   let to = n;
-  for (let i = from + 1; i < n; i++) if (NEXT_INDEX_RE.test(pages[i]!)) { to = i; break; }
+  for (let i = from + 1; i < n; i++) if (NEXT_INDEX_RE.test(headOf(pages[i]!))) { to = i; break; }
   while (to - 1 > from && pages[to - 1]!.trim() === '') to--;
   return { from: from + 1, to };
 }
@@ -57,15 +64,56 @@ export function normalisePage(token: string): number | null {
   return n >= 1 ? n : null;
 }
 
-const PAPAL_HEAD_RE = /^\s*(?:\d+\s+)?(LITTERAE\s+ET\s+A(?:LLOCUTIONES|CTA)(?:\s+R\.\s*PONTIFICIS|\s+APOSTOLICAE)?|ACTA\s+ROMANI\s+PONTIFICIS)/;
-const DICASTERY_RE = /^\s*(EX\s+(?:S\.|SS\.|SACRA|SECRETARIA|ACTIS|AEDIBUS|SUPREMA|CANCELLARIA|DATARIA)\b.*)$/;
+const PAPAL_HEAD_RE = /^\s*(?:\d+\s+)?(LITTERAE\s+ET\s+A(?:LLOCUTIONES|CTA)(?:\s+R(?:OM)?\.\s*PONTIFICIS|\s+APOSTOLICAE)?|ACTA\s+ROMANI\s+PONTIFICIS)/;
 /**
- * A row's end: a page token after a leader, a sign or a space, possibly `N et M`, possibly
- * a trailing stop. The token may start with an OCR letter (`ig3`), but a lookahead requires
+ * A dicastery heading. The abbreviated forms end in a stop (`EX S. C. CONCILII`, ASS 33
+ * (1900) 762; `EX S.APOSTOLICA POENITENTIARIA`, ASS 1 (1865) 747), after which no word
+ * boundary follows, so the boundary is written per alternative on the spelt-out words only.
+ */
+const DICASTERY_RE = /^\s*(EX\s+(?:S\.|SS\.|SACRA\b|SECRETARIA\b|ACTIS\b|AEDIBUS\b|SUPREMA\b|CANCELLARIA\b|DATARIA\b).*)$/;
+
+/** A line that is only the summa's running header (`8oo Index analyticus`, `SUMMA ACTORUM.`, `762 SUMMA {60 spaces} ACTORUM`) or a bare page number (`761`, padded to the margin, ASS 33 (1900) 761), whitespace collapsed. */
+const HEADER_LINE_RE = /^\s*(?:(?:\d[\dOoiIl]{0,3}\s+)?(?:Index analyticus|SUMMA\.?\s+A[CGO]TO[RKT]?[UTJ]*M\.?)\s*(?:\d[\dOoiIl]{0,3})?\s*-?|\d[\dOoiIl]{0,3})\s*$/;
+
+/**
+ * A page's lines with its two columns unwoven: the summae of ASS 1-33 are set in two
+ * columns, which the layout mode prints side by side on one line (`     co-Melchitas 65
+ * {70 spaces} stitutis vota simplicia profiten­`, ASS 33 (1900) 761), so the left
+ * column's page tokens sit mid-line and close no row. The gutter is the rightmost column
+ * that the most lines' runs of four or more spaces cover (the right column's first lines
+ * start there; its continuation lines are indented five columns deeper, so a text start
+ * would cut only one kind), at column 25 or beyond and on four or more lines; each line is
+ * cut at the run covering the gutter (within two columns of it), the left parts first and
+ * the right parts after them, and the header line dropped. A page with no such gutter
+ * (ASS 41's single-column *Index analyticus*) is returned as printed.
+ */
+export function splitColumns(page: string): string[] {
+  const lines = page.split('\n').filter((l) => !HEADER_LINE_RE.test(l.replace(/\s+/g, ' ')));
+  // A line's runs of four or more spaces, the leading run included: a line the left column
+  // leaves empty (`{90 spaces}sis .198`, ASS 33 (1900) 761) is the right column's alone.
+  const gapsOf = (l: string): { from: number; to: number }[] => [...l.matchAll(/(^|\S)(\s{4,})(?=\S)/g)].map((m) => ({ from: m.index! + m[1]!.length, to: m.index! + m[1]!.length + m[2]!.length }));
+  const width = Math.max(0, ...lines.map((l) => l.length));
+  const coverage = new Array<number>(width + 1).fill(0);
+  for (const l of lines) for (const g of gapsOf(l)) for (let c = Math.max(25, g.from); c < g.to; c++) coverage[c]!++;
+  let gutter = -1;
+  let most = 0;
+  for (let c = 25; c <= width; c++) if (coverage[c]! >= most && coverage[c]! > 0) { most = coverage[c]!; gutter = c; }
+  if (gutter < 0 || most < 4) return lines;
+  const left: string[] = [];
+  const right: string[] = [];
+  for (const l of lines) {
+    const g = gapsOf(l).find((x) => x.from <= gutter + 2 && x.to >= gutter - 1);
+    if (g) { left.push(l.slice(0, g.from)); right.push(l.slice(g.to)); } else left.push(l);
+  }
+  return left.concat(right);
+}
+/**
+ * A row's end: a page token after a leader, a sign, a space or a single stop glued to the
+ * number (`sis .198`, ASS 33 (1900) 761), possibly `N et M`, possibly a trailing stop. The token may start with an OCR letter (`ig3`), but a lookahead requires
  * a genuine digit within its first four characters, so a short Latin word made entirely of
  * OCR-digit-letters (`iis`, `sis`) never reads as a page and closes a row.
  */
-const ROW_END_RE = /^(.*?)(?:\s*(?:pag\.|»|>|\*|·|\.{2,}|\s))\s*(?=[\dOoiIlSsgB]{0,3}\d)([\dOoiIlSsgB][\dOoiIlSsgB]{0,3}(?:\s\d{1,2})?)(?:\s+et\s+(\d[\dOoiIlSsgB]{0,3}))?\s*\.?\s*$/;
+const ROW_END_RE = /^(.*?)(?:\s*(?:pag\.|»|>|\*|·|\.+|\s))\s*(?=[\dOoiIlSsgB]{0,3}\d)([\dOoiIlSsgB][\dOoiIlSsgB]{0,3}(?:\s\d{1,2})?)(?:\s+et\s+(\d[\dOoiIlSsgB]{0,3}))?\s*\.?\s*$/;
 
 /**
  * The rows of the papal part: from the papal heading (or the summa's first line, when the
@@ -77,12 +125,18 @@ const ROW_END_RE = /^(.*?)(?:\s*(?:pag\.|»|>|\*|·|\.{2,}|\s))\s*(?=[\dOoiIlSsg
  * closes a row.
  */
 export function parseSummaPapalPart(text: string): { rows: SummaRow[]; heading: string | null; end: string | null } {
-  const lines = text.split('\n');
+  const lines = text.split('\f').flatMap(splitColumns);
   let start = -1;
   let heading: string | null = null;
   for (let i = 0; i < lines.length; i++) {
     const m = lines[i]!.match(PAPAL_HEAD_RE);
     if (m) { start = i; heading = m[1]!.replace(/\s+/g, ' ').trim(); break; }
+    // The heading set over two lines, the first a lone class word: `LITTERAE` / `ET ACTA
+    // ROM. PONTIFICIS` (ASS 23 (1890) 752) -- joined, and the second line consumed.
+    if (/^\s*LITTERAE\s*$/.test(lines[i]!) && i + 1 < lines.length) {
+      const two = `${lines[i]!.trim()} ${lines[i + 1]!.trim()}`.match(PAPAL_HEAD_RE);
+      if (two) { lines[i] = two[0]; lines[i + 1] = ''; start = i; heading = two[1]!.replace(/\s+/g, ' ').trim(); break; }
+    }
   }
   if (start < 0) return { rows: [], heading: null, end: null };
   const rows: SummaRow[] = [];
@@ -92,7 +146,7 @@ export function parseSummaPapalPart(text: string): { rows: SummaRow[]; heading: 
     const line = lines[i]!;
     const d = line.match(DICASTERY_RE);
     if (d) { end = d[1]!.replace(/\s+/g, ' ').trim(); break; }
-    if (line.trim() === '' || /^\s*(?:\d[\dOoiIl]{0,3}\s+)?(?:Index analyticus|SUMMA\.?\s+A[CGO]TO[RKT]?[UTJ]*M\.?)\s*(?:\d[\dOoiIl]{0,3})?\s*$/.test(line)) continue;
+    if (line.trim() === '' || HEADER_LINE_RE.test(line.replace(/\s+/g, ' '))) continue;
     const content = i === start ? line.replace(PAPAL_HEAD_RE, '').trim() : line;
     if (content.trim() === '') continue;
     acc.push(content.trim());

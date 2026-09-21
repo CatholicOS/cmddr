@@ -23,16 +23,22 @@ import type { DocumentRecord } from '../types.js';
  * fixtures honour applies here too).
  */
 export interface ActaSource {
-  /** The key the reports and tests use: the volume year, with the part for a double volume (`1917-I`). */
+  /** The key the reports and tests use: the volume year, with the part for a double volume (`1917-I`); for the ASS, `ass-{volume}` (ASS 2 and 3 are both 1867). */
   key: string;
   year: number;
+  /** The last year of a two-year ASS volume (ASS 33: 1901); absent otherwise. `acta.year` stays the first (ass volumes spec, decision 3). */
+  yearTo?: number;
   volume: number;
   part?: 'I' | 'II';
-  kind: 'index' | 'volume';
+  /** An annual index PDF, the index pages of an AAS volume, or an ASS volume's synthesised entries (ass.ts). */
+  kind: 'index' | 'volume' | 'ass';
+  /** The fixture: the extracted index text, or for an `ass` source the entries JSON the scanner writes. */
   file: string;
+  /** For an `ass` source, the summa fixture beside the entries. */
+  summaFile?: string;
   url: string | null;
   retrieved: string;
-  /** The parser options the fixture needs (index.ts): the columnar layout, and whether bare incipits are printed. */
+  /** The parser options the fixture needs (index.ts): the columnar layout, and whether bare incipits are printed. Unused by an `ass` source. */
   parse: { columnar: boolean; bareIncipits: boolean; fullLine?: 40 | 55 };
 }
 
@@ -54,6 +60,15 @@ const index = (year: number, retrieved: string, extra: Partial<ActaSource['parse
   file: `tools/fixtures/acta/aas-indice-${year}.txt`, url: null, retrieved,
   parse: { columnar: false, bareIncipits: true, ...extra },
 });
+const ASS_URL = (file: string) => `https://www.vatican.va/archive/ass/documents/${file}`;
+/** An ASS volume (ass volumes spec §2): `file` is the PDF's name as the ASS index page links it. */
+const ass = (volume: number, year: number, file: string, retrieved: string, yearTo?: number): ActaSource => ({
+  key: `ass-${volume}`, year, ...(yearTo !== undefined ? { yearTo } : {}), volume, kind: 'ass',
+  file: `tools/fixtures/acta/ass-${String(volume).padStart(2, '0')}-${year}.entries.json`,
+  summaFile: `tools/fixtures/acta/ass-${String(volume).padStart(2, '0')}-${year}.summa.txt`,
+  url: ASS_URL(file), retrieved,
+  parse: { columnar: false, bareIncipits: false },
+});
 
 /**
  * Every source with a fixture, in volume order. The six sources of phase 2b-i (the
@@ -65,8 +80,17 @@ const index = (year: number, retrieved: string, extra: Partial<ActaSource['parse
  * AAS 9 (1917) part II is the *Codex Iuris Canonici* itself and carries no chronological
  * index (its one papal act, *Providentissima Mater Ecclesia*, is on the bulls shelf as
  * `mag:benedict-xv/providentissima-mater-1917`), so only part I has a fixture.
+ * The five ASS volumes of phase 2c-i (ass volumes spec §2) come first, keyed by volume.
  */
 export const ACTA_SOURCES: readonly ActaSource[] = [
+  // Phase 2c-i (ass volumes spec §2): the five sample volumes of the Acta Sanctae Sedis --
+  // one a decade, every pope of the series -- read from the entries the scanner writes
+  // (ass.ts, tools/scan-ass.ts), not from an index the volumes never print.
+  ass(1, 1865, 'ASS-01-1865-66-ocr.pdf', '2026-09-21', 1866),
+  ass(12, 1879, 'ASS-12-1879-ocr.pdf', '2026-09-21'),
+  ass(23, 1890, 'ASS-23-1890-91-ocr.pdf', '2026-09-21', 1891),
+  ass(33, 1900, 'ASS-33-1900-1-ocr.pdf', '2026-09-21', 1901),
+  ass(41, 1908, 'ASS-41-1908-ocr.pdf', '2026-09-21'),
   // Phase 2b-iii-b (spec §10): AAS 1-17, the volumes of 1909-1925, whose OCR lost the page
   // column on most index pages -- the pages come back from the volume body through the
   // sidecars (recover.ts). 1909 and 1917-I, the sample's, re-extracted on 2026-09-20 with
@@ -146,9 +170,10 @@ export const ACTA_SOURCES: readonly ActaSource[] = [
 export const ACTA_YEARS: readonly number[] = ACTA_SOURCES.filter((s) => s.kind === 'index' && s.year >= 2015).map((s) => s.year);
 
 export const actaSource = (key: string): ActaSource | undefined => ACTA_SOURCES.find((s) => s.key === key);
-export const sourceKeyOf = (e: { year: number; part?: 'I' | 'II' }): string => (e.part ? `${e.year}-${e.part}` : `${e.year}`);
-/** The source an entry was parsed from. */
-export const sourceOfEntry = (e: { year: number; part?: 'I' | 'II' }): ActaSource | undefined => actaSource(sourceKeyOf(e));
+export const sourceKeyOf = (e: { series?: string; volume?: number; year: number; part?: 'I' | 'II' }): string =>
+  e.series === 'ASS' ? `ass-${e.volume}` : e.part ? `${e.year}-${e.part}` : `${e.year}`;
+/** The source an entry was parsed from (or, for the ASS, scanned into). */
+export const sourceOfEntry = (e: { series?: string; volume?: number; year: number; part?: 'I' | 'II' }): ActaSource | undefined => actaSource(sourceKeyOf(e));
 
 /**
  * The date the ten phase-1 index fixtures were fetched (tools/fixtures/acta/README.md).
@@ -166,6 +191,10 @@ export function loadActaIndexes(sources: readonly ActaSource[] = ACTA_SOURCES): 
   const parsed = new Map<string, ActaParseResult>();
   const missing: string[] = [];
   for (const s of sources) {
+    // An `ass` source's fixture is the entries JSON the scanner writes, not index text: read
+    // by Task 5 of phase 2c-i (ass volumes spec §5), skipped here until then so the AAS
+    // parser is never fed it.
+    if (s.kind === 'ass') continue;
     if (!existsSync(s.file)) { missing.push(s.key); continue; }
     const r = parseActaIndex(readFileSync(s.file, 'utf8'), {
       year: s.year, volume: s.volume, ...(s.part ? { part: s.part } : {}), ...s.parse,

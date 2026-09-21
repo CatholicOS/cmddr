@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { checkSumma, locateSumma, normalisePage, parseSummaPapalPart } from '../src/acta/summa.js';
+import { checkSumma, locateSumma, normalisePage, parseSummaPapalPart, splitColumns } from '../src/acta/summa.js';
 
 describe('normalisePage (spec §4): the OCR of a page number in the summa', () => {
   it('reads the digits and the letters the OCR puts for them: ig3 → 193, 3oo → 300, 3oi → 301, i3o → 130, 6 19 → 619, 5 80 → 580', () => {
@@ -111,5 +111,49 @@ describe('checkSumma (spec §4): every summa page must be a scanned act\'s page,
     const rows = [{ description: 'a', page: 427, raw: 'a 427' }, { description: 'b', page: 619, raw: 'b 619' }, { description: 'c', page: 193, raw: 'c 193' }];
     const check = checkSumma([{ page: 427 }, { page: 619 }, { page: 21 }], { pages: { from: 799, to: 809 }, rows });
     expect(check).toEqual({ pages: { from: 799, to: 809 }, rows, claimed: [427, 619], unclaimed: [rows[2]], omitted: [21] });
+  });
+});
+
+describe('the first curation round (phase 2c-i, Task 4): the summa shapes the five volumes print', () => {
+  const page761 = [
+    '                                                                                                                                                          761',
+    '                                         SUMMA ACTORUM',
+    '          QUAE IN HOC VOLUMINE XXXIII CONTINENTUR',
+    '',
+    '              LITTERAE ET ACTA                                                            gustini ad Basilicam s. Petri in',
+    '                     R. PONTIFICIS                                                        coelo aureo civitatis Papien­',
+    '                                                                                          sis .198',
+    'Litterae SSmi D. N. Leonis XIII ad                                                  Litterae SSmi D. N. Leonis XIII ad',
+    '     Emum Vicarium, ut excitet Re­                                                        Emum Praesidem, occasione qua',
+    '     veraque redeat concordia, p. 3                                                 Epistola Encyclica SSmi D. N. Leo­',
+    'Litterae SSmi D. N. Leonis XIII ad                                                        nis XIII De Jesu Christo Redem­',
+    '     Patriarcham et Episcopos Grae-                                                       ptore. ......... 273',
+    '     co-Melchitas 65                                                                      stitutis vota simplicia profiten­',
+    'Litterae in forma Brevis SSmi D.                                                          tium 341',
+    '     N. Leonis XIII ad Archiepisco­                                                                 EX S. C. CONCILII',
+    '     pum mediolanensem, quoad in-                                                   Senen. distributionum choralium;',
+    '      res populi eligendos .... 3                                                       rario debeantur nonnullae dis- . 4',
+  ].join('\n');
+  it('locates a summa whose page-number line is padded past the sixty characters the heading regex allows (ASS 33 (1900) 761; ASS 12 (1879) 647)', () => {
+    const body = 'body\n';
+    const pages = [body, body, body, body, page761, '                                        INDEX GENERALIS\n rows'];
+    expect(locateSumma(pages)).toEqual({ from: 5, to: 5 });
+  });
+  it('unweaves the two columns of ASS 1-33 so the left column\'s mid-line page tokens close rows (`co-Melchitas 65`, ASS 33 (1900) 761), and stops at `EX S. C. CONCILII`, whose stop admits no word boundary', () => {
+    const { rows, heading, end } = parseSummaPapalPart(page761);
+    expect(heading).toBe('LITTERAE ET ACTA');
+    expect(end).toBe('EX S. C. CONCILII');
+    expect(rows.map((r) => r.page)).toEqual([3, 65, 3, 198, 273, 341]);
+    expect(rows[1]!.description).toBe('Litterae SSmi D. N. Leonis XIII ad Patriarcham et Episcopos Grae- co-Melchitas');
+  });
+  it('leaves a single-column page as printed (ASS 41\'s Index analyticus)', () => {
+    expect(splitColumns(SUMMA_41)).toEqual(SUMMA_41.split('\n'));
+  });
+  it('reads the papal heading set over two lines (`LITTERAE` / `ET ACTA ROM. PONTIFICIS`, ASS 23 (1890) 752)', () => {
+    const text = ['                      LITTERAE', '      ET ACTA ROM. PONTIFICIS', '', ' Litterae SSmi D. N. Leonis XIII', '     ad Cardinalem Lavigerie, occa­', '     in Africani profectum est. pag. 3', '      EX ACTIS CONSISTORIALIBUS', 'De Consistorio habito » 705'].join('\n');
+    const { rows, heading, end } = parseSummaPapalPart(text);
+    expect(heading).toBe('LITTERAE ET ACTA ROM. PONTIFICIS');
+    expect(end).toBe('EX ACTIS CONSISTORIALIBUS');
+    expect(rows.map((r) => r.page)).toEqual([3]);
   });
 });

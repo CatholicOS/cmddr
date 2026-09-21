@@ -528,11 +528,29 @@ lines each rests on (spec §3). `{year}` is the first year of the volume's span.
 
 | Source | Files | RETRIEVED | Volume pages | Summa pages | Acts scanned | Defects | Summa rows: claimed / unclaimed |
 |---|---|---|---|---|---|---|---|
-| ASS 1 (1865–66, Pius IX) | `ass-01-1865.*` | **2026-09-2D** | N | a–b | n | n | n / n |
-| ASS 12 (1879, Leo XIII) | `ass-12-1879.*` | **2026-09-2D** | 672 | 647–653 | n | n | n / n |
-| ASS 23 (1890–91, Leo XIII) | `ass-23-1890.*` | **2026-09-2D** | N | a–b | n | n | n / n |
-| ASS 33 (1900–01, Leo XIII) | `ass-33-1900.*` | **2026-09-2D** | 768 | 761–768 | n | n | n / n |
-| ASS 41 (1908, Pius X) | `ass-41-1908.*` | **2026-09-2D** | 810 | 799–809 | n | n | n / n |
+| ASS 1 (1865–66, Pius IX) | `ass-01-1865.*` | **2026-09-21** | 767 | 747–752 | 0 | 3 | 0 / 0 |
+| ASS 12 (1879, Leo XIII) | `ass-12-1879.*` | **2026-09-21** | 672 | 647–653 | 10 | 1 | 9 / 3 |
+| ASS 23 (1890–91, Leo XIII) | `ass-23-1890.*` | **2026-09-21** | 768 | 752–758 | 8 | 5 | 7 / 7 |
+| ASS 33 (1900–01, Leo XIII) | `ass-33-1900.*` | **2026-09-21** | 768 | 761–768 | 18 | 10 | 14 / 8 |
+| ASS 41 (1908, Pius X) | `ass-41-1908.*` | **2026-09-21** | 810 | 799–810 | 27 | 18 | 27 / 10 |
+
+Scanned on 2026-09-21 (`npm run scan-ass -- sample`, after the first curation round of
+phase 2c-i Task 4). The summa's papal part, from its heading to the first dicastery heading
+as the tool printed them, and the curated readings (`ASS_READINGS`, `tools/src/acta/curation.ts`)
+keyed to each volume: ASS 1: no papal heading — the 1865 summa lists the pope's acts under
+the dicasteries (`EX ACTIS CONSISTORIALIBUS`, `EX SECRETARIA BREVIUM`), so the check is
+vacuous, and the scanner reads no act (the allocution of 25 September 1865 at p. 193 is headed
+`ALLOCVTIO`, the two letters apostolic at pp. 578 and 745 `LITERAE APOSTOLICAE` after an
+editorial preface); 0 readings. ASS 12: `LITTERAE ET ALLOCUTIONES` … `EX ACTIS CONSISTORIALIBUS`;
+1 reading. ASS 23: `LITTERAE ET ACTA ROM. PONTIFICIS` … `EX ACTIS CONSISTORIALIBUS` (summa p. 753
+is interleaved word by word by the OCR and yields three garbage rows, and loses *Rerum
+novarum*'s own row); 5 readings. ASS 33: `LITTERAE ET ACTA` (`R. PONTIFICIS` on the next line)
+… `EX S. C. CONCILII`; 6 readings. ASS 41: `ACTA ROMANI PONTIFICIS` … `EX SECRETARIA BREVIUM`;
+8 readings. The defects are mostly the brevia of the Secretaria Brevium part (`sub annulo
+Piscatoris … R. Card. MERRY DEL VAL, a Secretis Status`), which carry no class heading and
+which the summa lists under the dicastery. In every volume the PDF page is the printed page:
+each `header-mismatch` is the OCR's reading of the number (`585` for 385, `U9` for 449, `-318`,
+`2` / `98` split over two lines).
 
 The RETRIEVED dates above are also stamped as `source.retrieved` on every document created
 from these fixtures (`ACTA_SOURCES` in `tools/src/acta/join.ts`): update both together when

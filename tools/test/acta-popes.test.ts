@@ -36,6 +36,13 @@ describe('the pope headings of the AAS index (acta volumes spec §2)', () => {
     expect(Object.keys(PONTIFICATE_BEGAN).sort()).toEqual(ACTA_POPES.map((p) => p.issuerId).sort());
   });
 
+  it('names the popes of the Acta Sanctae Sedis (ass volumes spec §2): Pius IX and Leo XIII, before Pius X', () => {
+    expect(ACTA_POPES.find((p) => p.genitive === 'PII IX')).toEqual({ genitive: 'PII IX', pope: 'Pius IX', issuerId: 'rp:pius-ix', began: '1846-06-16' });
+    expect(ACTA_POPES.find((p) => p.genitive === 'LEONIS XIII')).toEqual({ genitive: 'LEONIS XIII', pope: 'Leo XIII', issuerId: 'rp:leo-xiii', began: '1878-02-20' });
+    const i = ACTA_POPES.findIndex((p) => p.genitive === 'PII X');
+    expect(ACTA_POPES.slice(0, i).map((p) => p.pope)).toEqual(['Pius IX', 'Leo XIII']);
+  });
+
   it('renders the bracketed pope of the 2018-2021 indexes to the same label as the part heading', () => {
     expect(labelForBracket('Benedictus PP. XVI')).toBe('Benedictus XVI');
     expect(labelForBracket('Benedictus XVI')).toBe('Benedictus XVI');
