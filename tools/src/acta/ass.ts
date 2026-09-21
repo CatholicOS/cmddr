@@ -18,15 +18,7 @@ import { latinDate, headerOf, headerAgrees } from './recover.js';
 import { normaliseHeading } from './categories.js';
 import { ACTA_POPES } from './popes.js';
 import type { ActaEntry } from './index.js';
-
-// Moved to summa.ts in Task 3.
-export interface SummaCheck {
-  pages: { from: number; to: number } | null;
-  rows: { description: string; page: number; raw: string }[];
-  claimed: number[];
-  unclaimed: { description: string; page: number; raw: string }[];
-  omitted: number[];
-}
+import type { SummaCheck } from './summa.js';
 
 export interface AssEvidence {
   /** The class heading line(s) as extracted, joined by ` / `. */
