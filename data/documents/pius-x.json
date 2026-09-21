@@ -3534,7 +3534,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 1,
+      "year": 1909,
+      "page": 7
+    }
   },
   {
     "id": "mag:pius-x/me-taedet-1908",

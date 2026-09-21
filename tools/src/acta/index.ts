@@ -460,11 +460,12 @@ export const normalisePopeHeading = (heading: string): string => {
 };
 /** The 1917 index numbers *Acta Sacri Consistorii* among the pope's categories; it is not a part. */
 const CONSISTORY_CATEGORY_RE = /^ACTA\s+(?:SACRI\s+)?CONSISTORII/;
-// The numeral in any OCR reading (`IY.`, `XJV`, `i.`, `I r-`; AAS 25, 26, 42): the
-// heading's words decide the category, and normaliseHeading drops the numeral the same way.
+// The numeral in any OCR reading (`IY.`, `XJV`, `i.`, `I r-`; AAS 25, 26, 42; `IV.?-`, AAS 16
+// (1924) 510, the one heading of the fixtures with a `?` after the numeral): the heading's
+// words decide the category, and normaliseHeading drops the numeral the same way.
 // AAS 90 (1998) 1052 and 91 (1999) 1204 number a heading with a full stop and no dash
 // (`I. LITTERAE APOSTOLICAE MOTU PROPRIO DATAE`, `I. LITTERAE ENCYCLICAE`).
-const HEADING_RE = /^\s*[IVXLJYivxl1]+(?:[.-]?\s*[r•]?\s*[–—-]\s*|\.\s+)[A-Z][A-ZÀ-Ý .,'’():«»-]*(?: [\[|\\])?$/;
+const HEADING_RE = /^\s*[IVXLJYivxl1]+(?:[.-]?\s*[r•?]?\s*[–—-]\s*|\.\s+)[A-Z][A-ZÀ-Ý .,'’():«»-]*(?: [\[|\\])?$/;
 /**
  * The OCR of AAS 46 (1954) 801 sets one heading in mixed case (`XIV - Sacra Consistoria`),
  * and AAS 59 (1967) prints its headings unnumbered, several in mixed case (`Litterae

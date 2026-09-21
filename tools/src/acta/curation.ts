@@ -667,6 +667,95 @@ export const ACTA_INDEX_CORRECTIONS: Readonly<Record<string, IndexCorrection>> =
     indexLine: 'Nov. Expleverunt desiderii. - Ad V. E. Marianum Card. Ram­ / polla, patronum piae societatis a S. Caecilia post / annum primum ex quo schola superior musicae / sacrae, ob eiusdem societatis sollertiam, Romae con­ / dita est',
     evidence: "The act's own dating formula reads 'Datum Romae apud S. Petrum, die iv Novembris MCMXI, Pontificatus Nostri anno nono.' (AAS 3 (1911) 655, PDF page 655 of AAS-03-1911-ocr.pdf, read 2026-09-21) -- 1911-11-04; the volume opens it at p. 654, below the end of the apostolic letter before it, under 'EPISTOLA / AD V. E. MARIANUM CARD. RAMPOLLA, PATRONUM PIAE SOCIETATIS A S. CAECILIA, POST ANNUM PRIMUM EX QUO SCHOLA SUPERIOR MUSICAE SACRAE OB EIUSDEM SOCIETATIS SOLLERTIAM ROMAE CONDITA EST. / Dilecte Fili Noster, salutem et apostolicam benedictionem — Expleverunt desiderii Nostri expectationem'. The index prints the month with no day under the `191Í` of p. 365: the formula supplies the day. No shelf record carries the act.",
   },
+  // Phase 2b-iii-b, Task 9: the dates of the acts ACTA_PAGE_READINGS gives a page -- keyed
+  // by that page -- where the index prints the month alone, the wrong month, or a ditto of
+  // the wrong year, each against the act's own dating formula read in the store text on
+  // 2026-09-21 (the reading's evidence quotes the page it opens on).
+  '1909:7': {
+    printed: '1908-01-29',
+    date: '1908-06-29',
+    indexLine: '1908 Ian. 29 Constitutio « Sapienti Consilio » / DE ROMANA CURIA.',
+    evidence: "The constitution's own dating formula reads 'Datum Romae apud Sanctum Petrum, anno Incarnationis Dominicae millesimo "
+      + "nongentesimo octavo, die festo Sanctorum Apostolorum Petri et Pauli, III Kalendas Iulias, Pontificatus Nostri anno quinto' "
+      + "(AAS 1 (1909) 19, PDF page 19 of AAS-01-1909-ocr.pdf, read 2026-09-21) -- 29 June 1908, the fifth year of a pontificate begun "
+      + "4 August 1903. The index prints `Ian. 29`, its `Iun.` set apart four lines below the entry's sub-items (fixture line 55); the "
+      + 'shelf record is `mag:pius-x/sapienti-consilio-1908`, dated 1908-06-29.',
+  },
+  '1914:565': {
+    printed: '1914-11',
+    date: '1914-11-01',
+    indexLine: '1914 Nov. Ad beatissimi Apostolorum Principis. - Ad venera­ / biles Fratres Patriarchas, Primates, Archiepiscopos, / '
+      + 'Episcopos, aliosque locorum Ordinarios pacem et / communionem cum Apostolica Sede habentes . .',
+    evidence: "The encyclical's own dating formula reads 'Datum Romae apud S. Petrum die festo Sanctorum omnium, i Novembris mcmxiv, "
+      + "Pontificatus Nostri anno primo' (AAS 6 (1914) 581, PDF page 581 of AAS-06-1914-ocr.pdf, read 2026-09-21) -- 1 November 1914. "
+      + 'The index prints the month with no day; the shelf record is `mag:benedict-xv/ad-beatissimi-apostolorum-1914`, dated 1914-11-01.',
+  },
+  '1918:305': {
+    printed: '1918-07',
+    date: '1918-07-01',
+    indexLine: 'Iul. Tribus abhinc annis. - Sodalium Ssmi Crucifixi ad / S. Marcelli novas constitutiones ratas habet. . .',
+    evidence: "The motu proprio's own dating formula reads 'Datum Romae apud S. Petrum die i mensis iulii, in festo Pretiosissimi "
+      + "Sanguinis D, N. I. C. MDCCCCXVIII, Pontificatus Nostri anno quarto' (AAS 10 (1918) 306, PDF page 306 of AAS-10-1918-ocr.pdf, "
+      + 'read 2026-09-21) -- 1 July 1918. The index prints the month with no day. No shelf record carries the act.',
+  },
+  '1918:473': {
+    printed: '1918-12',
+    date: '1918-12-01',
+    indexLine: '1918 Dec. Per quas publicae indicuntur preces pro conventu / de pace componenda .',
+    evidence: "The encyclical's own dating formula reads 'Datum Romae apud S. Petrum die i mensis decembris MDCCCCXVIII, Pontificatus "
+      + "Nostri anno quinto' (AAS 10 (1918) 474, PDF page 474 of AAS-10-1918-ocr.pdf, read 2026-09-21) -- 1 December 1918; its incipit, "
+      + "which the index does not print, is *Quod iam diu* (p. 473). The index prints the month with no day; the shelf record is "
+      + '`mag:benedict-xv/quod-iam-diu-1918`, dated 1918-12-01.',
+  },
+  '1920:457': {
+    printed: '1920-10',
+    date: '1920-10-05',
+    indexLine: 'Oct. Principi Apostolomtm Petro. - Ad Patriarchas, Prima­ / tes, Archiepiscopos, Episcopos aliosque locorum / '
+      + 'Ordinarios, pacem et communionem cum Aposto­ / lica Sede habentes : de sancto Ephrem Syro, monaco / Edesseno, doctore Ecclesiae renuntiando ....',
+    evidence: "The encyclical's own dating formula reads 'Datum Romae apud Sanctum Petrum die v mensis Octobris anno MDCGCCXX, "
+      + "Pontificatus Nostri septimo' (AAS 12 (1920) 471, PDF page 471 of AAS-12-1920-ocr.pdf, read 2026-09-21; the OCR's `MDCGCCXX`) "
+      + '-- 5 October 1920. The index prints the month with no day; the shelf record is `mag:benedict-xv/principi-apostolorum-petro-1920`, '
+      + 'dated 1920-10-05.',
+  },
+  '1920:553': {
+    printed: '1920-12',
+    date: '1920-12-01',
+    indexLine: 'Dec. Annus iam plenus. - Ad Patriarchas, Primates, Archie­ / piscopos, Episcopos aliosque locorum Ordinarios, / '
+      + 'pacem et communionem cum Apostolica Sede ha­ / bentes: de pueris ex bello egentioribus iterum / . adiuvandis .',
+    evidence: "The encyclical's own dating formula reads 'Datum Romae apud Sanctum Petrum die i mensis Decembris anno MDCCCCXX, "
+      + "Pontificatus Nostri septimo' (AAS 12 (1920) 556, PDF page 556 of AAS-12-1920-ocr.pdf, read 2026-09-21) -- 1 December 1920. "
+      + 'The index prints the month with no day; the shelf record is `mag:benedict-xv/annus-iam-plenus-1920`, dated 1920-12-01.',
+  },
+  '1923:137': {
+    printed: '1923-07-15',
+    date: '1922-07-15',
+    indexLine: 'iulii 15 Romani Pontifices. - Aversana. De erectione in Colle­ / giatam ad honorem ecclesiae paroecialis Sancti Sosii / '
+      + 'martyris in civitate « Erattamaggiore »',
+    evidence: "The constitution's own dating formula reads 'Datum Romae apud Sanctum Petrum, anno Domini millesimo nongentesimo "
+      + "vigesimo secundo, die decimaquinta mensis iulii, Pontificatus Nostri' … (AAS 15 (1923) 140, PDF page 140 of AAS-15-1923-ocr.pdf, "
+      + "read 2026-09-21) -- 15 July 1922, printed in the fascicle of 5 April 1923 (p. 137, 'CONSTITUTIONES APOSTOLICAE / AVERSANA') "
+      + "under a ditto of the index's `1923`. Dated 1923 it was held by the same-incipit guard beside `mag:pius-xi/romani-pontifices-1923` "
+      + '(17 March 1923), a different act; no shelf record carries this one.',
+  },
+  '1923:141': {
+    printed: '1923-07-16',
+    date: '1922-07-16',
+    indexLine: '16 Apostolica Sedes. - Aversana. Do erectione in Collegia­ / tam ad honorem ecclesiae paroecialis Beatae Mariae / '
+      + 'Virginis Immaculatae in civitate « Erattamaggiore »',
+    evidence: "The constitution's own dating formula reads 'Datum Romae apud Sanctum Petrum, anno Domini millesimo nongentesimo "
+      + "vigesimo secundo, die decima sexta mensis iulii, Pontificatus Nostri anno primo' (AAS 15 (1923) 143, PDF page 143 of "
+      + 'AAS-15-1923-ocr.pdf, read 2026-09-21) -- 16 July 1922, the first year of a pontificate begun 6 February 1922, printed in the '
+      + "fascicle of 5 April 1923 under a ditto of the index's `1923`. No shelf record carries the act.",
+  },
+  '1923:193': {
+    printed: '1923-08-20',
+    date: '1923-04-20',
+    indexLine: '1923 i apr. 20 Post datam. - De Ordinariorum facultatibus quinquen­ / nalibus',
+    evidence: "The motu proprio's own dating formula reads 'Datum Romae apud Sanctum Petrum, die xx mensis aprilis anno MCMXXIII, "
+      + "Pontificatus Nostri secundo' (AAS 15 (1923) 194, PDF page 194 of AAS-15-1923-ocr.pdf, read 2026-09-21) -- 20 April 1923. The "
+      + 'index OCR sets the month as `i apr.`, which the parser reads as the incipit, and the entry takes August from the line before '
+      + 'it; the shelf record is `mag:pius-xi/post-datam-1923`, dated 1923-04-20.',
+  },
 };
 
 export interface MatchOverride {
@@ -927,10 +1016,247 @@ export interface PageReading {
  * Pages read by hand for entries the recovery (recover.ts) leaves without one -- the acts
  * that matter most first: encyclicals, constitutions -- keyed `{source}|{pageless key}`
  * (`1921|1921-12-31|LITTERAE ENCYCLICAE|Casti connubii|Ad venerabiles ...`), each quoting the
- * volume. Consulted before the sidecar (join.ts). Empty until phase 2b-iii-b's report
- * names what to read.
+ * volume. Consulted before the sidecar (join.ts). The seventeen rows are the acts of
+ * weight the era report of phase 2b-iii-b (AAS 1-17) named in its *Page not recovered*
+ * block, each read in the store text; a reading whose act the index also misdates has
+ * its ACTA_INDEX_CORRECTIONS row keyed by the page read here.
  */
-export const ACTA_PAGE_READINGS: Readonly<Record<string, PageReading>> = {};
+export const ACTA_PAGE_READINGS: Readonly<Record<string, PageReading>> = {
+  // Phase 2b-iii-b, Task 9: the encyclicals, constitutions and motu proprio the recovery
+  // (recover.ts) left without a page -- the era report's *Page not recovered* block -- each
+  // read in the store text on 2026-09-21 at the page it opens on, with the act's own dating
+  // formula; where the index's date is wrong or prints no day, an ACTA_INDEX_CORRECTIONS
+  // row keyed by the page read here supplies it. Every row names why the recovery missed
+  // the act. Not read: the 1909 motu proprio the index describes without an incipit and
+  // *Vix dum* (1914), *Quandoquidem* (1915), none of them a shelf record awaiting its
+  // reference; and *Ubi arcano Dei consilio* (AAS 14 (1922) 673), whose index line prints
+  // no date at all and opens no entry (index.ts: a line outside any entry), so no key of
+  // this table can name it.
+  '1909|1908-01-29|CONSTITUTIONES APOSTOLICAE|Sapienti Consilio|DE ROMANA CURIA.': {
+    page: 7,
+    indexLine: '1908 Ian. 29 Constitutio « Sapienti Consilio » / DE ROMANA CURIA.',
+    evidence: "AAS 1 (1909) p. 7 (PDF page 7 of AAS-01-1909-ocr.pdf, read 2026-09-21) prints 'CONSTITUTIO APOSTOLICA / DE ROMANA "
+      + "CURIA / PIUS EPISCOPUS / SERVUS SERVORUM DEI / AD PERPETUAM REI MEMORIAM / Sapienti consilio sa. me. Pontifex Xystus V' (the "
+      + "drop capital sets the S on its own line), under the running header 'Constitutio Apostolica Sapienti consilio.. 7'; dated at "
+      + "p. 19 'Datum Romae apud Sanctum Petrum, anno Incarnationis Dominicae millesimo nongentesimo octavo, die festo Sanctorum "
+      + "Apostolorum Petri et Pauli, III Kalendas Iulias, Pontificatus Nostri anno quinto' -- 29 June 1908, which the index prints as "
+      + '`Ian. 29` (ACTA_INDEX_CORRECTIONS `1909:7`). The recovery found the incipit at p. 295 only, outside the constitutions\' run '
+      + "of the Index generalis, because the drop capital breaks 'Sapienti' across two lines at p. 7. The shelf record is "
+      + '`mag:pius-x/sapienti-consilio-1908`.',
+  },
+  '1914|1914-11|LITTERAE ENCYCLICAE|Ad beatissimi Apostolorum Principis|Ad venerabiles Fratres Patriarchas, Primates, Archiepiscopos': {
+    page: 565,
+    indexLine: '1914 Nov. Ad beatissimi Apostolorum Principis. - Ad venera­ / biles Fratres Patriarchas, Primates, Archiepiscopos, / '
+      + 'Episcopos, aliosque locorum Ordinarios pacem et / communionem cum Apostolica Sede habentes . .',
+    evidence: "AAS 6 (1914) p. 565 (PDF page 565 of AAS-06-1914-ocr.pdf, read 2026-09-21), the first page of the fascicle of 18 "
+      + "November 1914, prints 'ACTA BENEDICTI PP. XV / LITTERAE ENCYCLICAE / AD VENERABILES FRATRES PATRIARCHAS PRIMATES ARCHIEPISCOPOS "
+      + "EPISCOPOS ALIOSQUE LOCORUM ORDINARIOS PACEM ET COMMUNIONEM CUM APOSTOLICA SEDE HABENTES. / BENEDICTUS PP. XV / … / Ad beatissimi "
+      + "Apostolorum Principis cathedram arcano Dei providentis consilio'; dated at p. 581 'Datum Romae apud S. Petrum die festo Sanctorum "
+      + "omnium, i Novembris mcmxiv, Pontificatus Nostri anno primo' -- 1 November 1914 (ACTA_INDEX_CORRECTIONS `1914:565`; the index "
+      + "prints the month only). The recovery found the incipit at pp. 565 and 585 both: p. 585 (the fascicle of 25 November) heads the "
+      + "'VERSIONES AUTHENTICAE' of the same encyclical (`« AD BEATISSIMI APOSTOLORUM PRINCIPIS », DIEI 1 NOVEMBRIS 1914`). The shelf "
+      + 'record is `mag:benedict-xv/ad-beatissimi-apostolorum-1914`.',
+  },
+  '1915|1915-03-21|CONSTITUTIONES APOSTOLICAE||De Abbatia Sublacensi': {
+    page: 197,
+    indexLine: 'Mart. 21 Coenobium Sublacense. - De Abbatia Sublacensi . .',
+    evidence: "AAS 7 (1915) p. 197 (PDF page 197 of AAS-07-1915-ocr.pdf, read 2026-09-21), the first page of the fascicle of 6 May "
+      + "1915, prints 'ACTA BENEDICTI PP. XV / CONSTITUTIO APOSTOLICA / DE ABBATIA SUBLACENSI / BENEDICTUS EPISCOPUS / SERVUS SERVORUM "
+      + "DEI / AD PERPETUAM REI MEMORIAM / Coenobium Sublacense, utpote ab ipso Monachorum per occidentem Patriarcha, sancto Benedicto, "
+      + "conditum'; dated at p. 200 'Datum Romae apud S. Petrum, anno Incarnationis Dominicae millesimo nongentesimo decimo quinto, die "
+      + "vicesima prima martii, in festo sancti Patris Benedicti, Pontificatus Nostri anno primo' -- 21 March 1915, as the index prints. "
+      + "The parser reads the index's `Coenobium Sublacense` as a toponym and gives the entry no incipit, so the recovery had nothing to "
+      + 'search for; the act opens with those words. No shelf record carries the act.',
+  },
+  '1918|1918-12|LITTERAE ENCYCLICAE||Per quas publicae indicuntur preces pro conventu de pace com': {
+    page: 473,
+    indexLine: '1918 Dec. Per quas publicae indicuntur preces pro conventu / de pace componenda .',
+    evidence: "AAS 10 (1918) p. 473 (PDF page 473 of AAS-10-1918-ocr.pdf, read 2026-09-21), the first page of the fascicle of 5 "
+      + "December 1918, prints 'ACTA BENEDICTI PP. XV / LITTERAE ENCYCLICAE / AD VENERABILES FRATRES, PATRIARCHAS, PRIMATES, "
+      + "ARCHIEPISCOPOS, EPISCOPOS ALIOSQUE LOCORUM ORDINARIOS, PACEM ET COMMUNIONEM CUM APOSTOLICA SEDE HABENTES, PER QUAS PUBLICAE "
+      + "INDICUNTUR PRECES PRO CONVENTU DE PACE COMPONENDA. / BENEDICTUS PP. XV / … / Quod iam diu orbis terrarum anxie expetebat'; "
+      + "dated at p. 474 'Datum Romae apud S. Petrum die i mensis decembris MDCCCCXVIII, Pontificatus Nostri anno quinto' -- 1 December "
+      + "1918 (ACTA_INDEX_CORRECTIONS `1918:473`; the index prints the month only). The index describes the act by its heading and "
+      + "prints no incipit, so the recovery had nothing to search for; the act is found by the heading's words. The shelf record is "
+      + '`mag:benedict-xv/quod-iam-diu-1918`.',
+  },
+  '1918|1918-07|MOTU PROPRIO|Tribus abhinc annis|Sodalium Ssmi Crucifixi ad S. Marcelli novas constitutiones ': {
+    page: 305,
+    indexLine: 'Iul. Tribus abhinc annis. - Sodalium Ssmi Crucifixi ad / S. Marcelli novas constitutiones ratas habet. . .',
+    evidence: "AAS 10 (1918) p. 305 (PDF page 305 of AAS-10-1918-ocr.pdf, read 2026-09-21), the first page of the fascicle of 1 "
+      + "August 1918, prints 'ACTA BENEDICTI PP. XV / MOTU PROPRIO / SODALIUM SS. CRUCIFIXI AD S. MARCELLI NOVAS CONSTITUTIONES RATAS "
+      + "HABET / BENEDICTUS PP. XV / Tribus abhinc annis, cum sanctissima Iesu Crucifixi Imago'; dated at p. 306 'Datum Romae apud S. "
+      + "Petrum die i mensis iulii, in festo Pretiosissimi Sanguinis D, N. I. C. MDCCCCXVIII, Pontificatus Nostri anno quarto' -- 1 July "
+      + "1918 (ACTA_INDEX_CORRECTIONS `1918:305`; the index prints the month only). The recovery found the incipit at p. 305 only, "
+      + "outside the motu proprio run of the Index generalis. No shelf record carries the act.",
+  },
+  '1920|1920-10|LITTERAE ENCYCLICAE|Principi Apostolomtm Petro|Ad Patriarchas, Primates, Archiepiscopos, Episcopos aliosque': {
+    page: 457,
+    indexLine: 'Oct. Principi Apostolomtm Petro. - Ad Patriarchas, Prima­ / tes, Archiepiscopos, Episcopos aliosque locorum / '
+      + 'Ordinarios, pacem et communionem cum Aposto­ / lica Sede habentes : de sancto Ephrem Syro, monaco / Edesseno, doctore Ecclesiae renuntiando ....',
+    evidence: "AAS 12 (1920) p. 457 (PDF page 457 of AAS-12-1920-ocr.pdf, read 2026-09-21), the first page of the fascicle of 2 "
+      + "November 1920, prints 'ACTA BENEDICTI PP. XV / LITTERAE ENCYCLICAE / AD PATRIARCHAS, PRIMATES, ARCHIEPISCOPOS, EPISCOPOS "
+      + "ALIOSQUE LOCORUM ORDINARIOS, PACEM ET COMMUNIONEM CUM APOSTOLICA SEDE HABENTES, DE SANCTO EPHREM SYRO MONACO EDESSENO DOCTORE "
+      + "ECCLESIAE RENUNTIANDO. / BENEDICTUS PP. XV / … / Principi Apostolorum Petro illud est a divino Ecclesiae Conditore attributum'; "
+      + "dated at p. 471 'Datum Romae apud Sanctum Petrum die v mensis Octobris anno MDCGCCXX, Pontificatus Nostri septimo' (the OCR's "
+      + "`MDCGCCXX`) -- 5 October 1920 (ACTA_INDEX_CORRECTIONS `1920:457`; the index prints the month only). The index OCR reads the "
+      + "incipit as `Apostolomtm`, which the body does not print, so the recovery found nothing. The shelf record is "
+      + '`mag:benedict-xv/principi-apostolorum-petro-1920`.',
+  },
+  '1920|1920-12|LITTERAE ENCYCLICAE|Annus iam plenus|Ad Patriarchas, Primates, Archiepiscopos, Episcopos aliosque': {
+    page: 553,
+    indexLine: 'Dec. Annus iam plenus. - Ad Patriarchas, Primates, Archie­ / piscopos, Episcopos aliosque locorum Ordinarios, / '
+      + 'pacem et communionem cum Apostolica Sede ha­ / bentes: de pueris ex bello egentioribus iterum / . adiuvandis .',
+    evidence: "AAS 12 (1920) p. 553 (PDF page 553 of AAS-12-1920-ocr.pdf, read 2026-09-21), the first page of the fascicle of 1 "
+      + "December 1920, prints 'ACTA BENEDICTI PP. XV / EPISTOLA ENCYCLICA / AD PATRIARCHAS, PRIMATES, ARCHIEPISCOPOS, EPISCOPOS ALIOSQUE "
+      + "LOCORUM ORDINARIOS, PACEM ET COMMUNIONEM CUM APOSTOLICA SEDE HABENTES I DE PUERIS EX BELLO EGENTIORIBUS ITERUM ADIUVANDIS. / "
+      + "BENEDICTUS PP. XV / … / Annus iam plenus est, cum, recenti adhuc bello'; dated at p. 556 'Datum Romae apud Sanctum Petrum die i "
+      + "mensis Decembris anno MDCCCCXX, Pontificatus Nostri septimo' -- 1 December 1920 (ACTA_INDEX_CORRECTIONS `1920:553`; the index "
+      + "prints the month only). The recovery found the incipit at p. 553 and refused it because the OCR of the running header reads "
+      + "'Annus XII • Vol. XII 1 Decembris 1920 Nun. 13'. The shelf record is `mag:benedict-xv/annus-iam-plenus-1920`.",
+  },
+  '1921|1918-08-02|CONSTITUTIONES APOSTOLICAE||Creantur novae dioeceses Nazarensis et Garanhunensis in Bras': {
+    page: 463,
+    indexLine: 'Aug. 2 Archidioecesis Olindensis-Recifensis. - Creantur novae / dioeceses Nazarensis et Garanhunensis in Brasilia, / '
+      + 'et transfertur sedes episcopalis Florestensis . . .',
+    evidence: "AAS 13 (1921) p. 463 (PDF page 463 of AAS-13-1921-ocr.pdf, read 2026-09-21) prints, below the end of the constitution "
+      + "before it, 'III / OLINDENSIS-RECIFENSIS / CREANTUR NOVAE DIOECESES NAZARENSIS ET GARANHUNENSIS IN BRASILIA, ET TRANSFERTUR SEDES "
+      + "EPISCOPALIS FLORESTENSIS. / BENEDICTUS EPISCOPUS / SERVUS SERVORUM DEI / AD PERPETUAM REI MEMORIAM / Archidioecesis "
+      + "Olindensis-Recifensis, quae olim civilem Statum de Pernambuco ex integro complectebatur'; dated at p. 466 'Datum Romae apud "
+      + "Sanctum Petrum, anno Domini millesimo nongentesimo decimo octavo, die secunda mensis augusti, Pontificatus Nostri anno quarto' "
+      + "-- 2 August 1918, as the index prints (a constitution of 1918 the volume of 1921 prints late, with the two of 1917 and 1918 at "
+      + "pp. 457 and 461). The parser reads the index's `Archidioecesis Olindensis-Recifensis` as a toponym and gives the entry no "
+      + 'incipit, so the recovery had nothing to search for; the act opens with those words. No shelf record carries the act.',
+  },
+  '1921|1921-02-16|CONSTITUTIONES APOSTOLICAE|Praedecessorum nostrorum|Erectionis novae provinciae ecclesiasticae S. Iosephi Costar': {
+    page: 252,
+    indexLine: '» 16 Praedecessorum nostrorum. - Erectionis novae pro­ / vinciae ecclesiasticae S. Iosephi Costaricensis, novae / '
+      + 'dioecesis Alajuelensis, novique vicariatus aposto­ / lici Limonensis',
+    evidence: "AAS 13 (1921) p. 252 (PDF page 252 of AAS-13-1921-ocr.pdf, read 2026-09-21) prints 'II / SANCTI IOSEPHI COSTARICENSIS / "
+      + "ERECTIONIS NOVAE PROVINCIAE ECCLESIASTICAE EIUSDEM NOMINIS, NOVAE DIOECESIS ALAJUELENSIS, NOVIQUE VICARIATUS APOSTOLICI "
+      + "LIMONENSIS. / BENEDICTUS EPISCOPUS / SERVUS SERVORUM DEI / AD PERPETUAM REI MEMORIAM / Praedecessorum Nostrorum vestigiis "
+      + "inhaerentes'; dated at p. 255 'Datum Romae apud sanctum Petrum, anno Domini millesimo nongentesimo vigesimo primo, die decima "
+      + "sexta mensis februarii, Pontificatus Nostri anno septimo' -- 16 February 1921, as the index prints. The recovery found the "
+      + "incipit at p. 252 and refused it because the OCR of the running header reads '25Î- Acta Apostolicae Sedis - Commentarium "
+      + "Officiale'. No shelf record carries the act.",
+  },
+  '1921|1921-05-06|CONSTITUTIONES APOSTOLICAE|Eximia Benedictini Ordinis|Dismembrationis et erectionis in abbatiam nullius S. Petri d': {
+    page: 290,
+    indexLine: 'Maii 6 Eximia Benedictini Ordinis. - Dismembrationis et ere­ / ctionis in abbatiam nullius S. Petri de Muenster.',
+    evidence: "AAS 13 (1921) p. 290 (PDF page 290 of AAS-13-1921-ocr.pdf, read 2026-09-21) prints 'CONSTITUTIO APOSTOLICA / SANCTI "
+      + "PETRI APUD MUENSTER / DISMEMBRATIONIS ET ERECTIONIS IN ABBATIAM NULLIUS / BENEDICTUS EPISCOPUS / SERVUS SERVORUM DEI / AD "
+      + "PERPETUAM REI MEMORIAM / Eximia Benedictini Ordinis tum in Ecclesiam tum in civilem societatem gesta nemo est qui ignoret'; "
+      + "dated at p. 293 'Datum Romae apud Sanctum Petrum, anno Domini millesimo nongentesimo vigesimo primo, die sexta mensis maii, "
+      + "Pontificatus Nostri anno septimo' -- 6 May 1921, as the index prints. The recovery found the incipit at p. 290 only, outside "
+      + "the constitutions' run of the Index generalis (the running header of p. 290 prints no page number). No shelf record carries "
+      + 'the act.',
+  },
+  '1923|1923-08-20|MOTU PROPRIO|i apr|20 Post datam. - De Ordinariorum facultatibus quinquennalibu': {
+    page: 193,
+    indexLine: '1923 i apr. 20 Post datam. - De Ordinariorum facultatibus quinquen­ / nalibus',
+    evidence: "AAS 15 (1923) p. 193 (PDF page 193 of AAS-15-1923-ocr.pdf, read 2026-09-21), the first page of the fascicle of 5 May "
+      + "1923, prints 'ACTA PII PP. XI / MOTU PROPRIO / DE ORDINARIORUM FACULTATIBUS QUINQUENNALIBUS / PIUS PP. XI / Post datam "
+      + "instructionem et statutam normam pro facultatum quinquennalium concessione'; dated at p. 194 'Datum Romae apud Sanctum Petrum, "
+      + "die xx mensis aprilis anno MCMXXIII, Pontificatus Nostri secundo' -- 20 April 1923 (ACTA_INDEX_CORRECTIONS `1923:193`). The "
+      + "index OCR sets the month column as `i apr.` and the parser reads it as the incipit, dating the entry 1923-08-20 and searching "
+      + "the body for `i apr`; the incipit is *Post datam*. The shelf record is `mag:pius-xi/post-datam-1923` (motu_proprio, 1923-04-20).",
+  },
+  '1923|1923-07-16|CONSTITUTIONES APOSTOLICAE|Apostolica Sedes|Aversana. Do erectione in Collegiatam ad honorem ecclesiae p': {
+    page: 141,
+    indexLine: '16 Apostolica Sedes. - Aversana. Do erectione in Collegia­ / tam ad honorem ecclesiae paroecialis Beatae Mariae / '
+      + 'Virginis Immaculatae in civitate « Erattamaggiore »',
+    evidence: "AAS 15 (1923) p. 141 (PDF page 141 of AAS-15-1923-ocr.pdf, read 2026-09-21) prints 'II / AVERSANA / DE ERECTIONE IN "
+      + "COLLEGIATAM AD HONOREM ECCLESIAE PAROECIALIS BEATAE MARIAE VIRGINIS IMMACULATAE IN CIVITATE « FRATTAMAGGIORE ». / PIUS EPISCOPUS "
+      + "/ SERVUS SERVORUM DEI / AD PERPETUAM REI MEMORIAM / Apostolica Sedes, quoties eidem se praebuit occasio'; dated at p. 143 "
+      + "'Datum Romae apud Sanctum Petrum, anno Domini millesimo nongentesimo vigesimo secundo, die decima sexta mensis iulii, "
+      + "Pontificatus Nostri anno primo' -- 16 July 1922, the first year of a pontificate begun 6 February 1922, printed in the fascicle "
+      + "of 5 April 1923 under a ditto of the index's `1923` (ACTA_INDEX_CORRECTIONS `1923:141`; the constitution before it, *Romani "
+      + "Pontifices* for the same town at p. 137, is dated 15 July 1922 the same way, `1923:137`). The recovery found the incipit at pp. "
+      + "141 and 258 both and read no formula to settle them. No shelf record carries the act.",
+  },
+  '1923|1923-02-18|CONSTITUTIONES APOSTOLICAE|Apostolica Sedes|Clavarensis. Erectionis collegiatae ad honorem': {
+    page: 258,
+    indexLine: '» 18 Apostolica Sedes. - Clavarensis. Erectionis collegiatae / ad honorem',
+    evidence: "AAS 15 (1923) p. 258 (PDF page 258 of AAS-15-1923-ocr.pdf, read 2026-09-21) prints 'CONSTITUTIONES APOSTOLICAE / I / "
+      + "CLAVARENSIS / ERECTIONIS COLLEGIATAE AD HONOREM / PIUS EPISCOPUS / SERVUS SERVORUM DEI / AD PERPETUAM REI MEMORIAM / Apostolica "
+      + "Sedes, de Ecclesiarum omnium decore sollicita'; dated at p. 260 'Datum Romae apud Sanctum Petrum, anno Domini millesimo "
+      + "nongentesimo vigesimo tertio, die decima octava mensis februarii, Pontificatus Nostri anno secundo' (the OCR's `Eomae`) -- 18 "
+      + "February 1923, as the index prints. The recovery found the incipit at pp. 141 and 258 both and read no formula to settle them. "
+      + 'No shelf record carries the act.',
+  },
+  '1924|1924-07-25|CONSTITUTIO APOSTOLICA|Ad munus pastorale|Dismembrationis et erectionis Praelaturae Nullius Sancti Ios': {
+    page: 424,
+    indexLine: '25 Ad munus pastorale. - Dismembrationis et erectionis / Praelaturae Nullius Sancti Iosephi de « Alto To- / cantins »',
+    evidence: "AAS 16 (1924) p. 424 (PDF page 424 of AAS-16-1924-ocr.pdf, read 2026-09-21) prints 'II / GOYASENSIS / DISMEMBRATIONIS "
+      + "ET ERECTIONIS PRAELATURAE « NULLIUS » SANCTI IOSEPHI DE « ALTO TOCANTINS ». / PIUS EPISCOPUS / SERVUS SERVORUM DEI / AD PERPETUAM "
+      + "REI MEMORIAM / Ad muniis pastorale Nobis commissum ab aeterno Pastorum Principe' (the OCR's `muniis`, which is why the recovery "
+      + "found no hit); dated at p. 426 'Datum Romae apud Sanctum Petrum, anno Domini millesimo nongentesimo vigesimo quarto, die "
+      + "vigesima quinta mensis iulii, Pontificatus Nostri anno tertio' -- 25 July 1924, as the index prints. No shelf record carries "
+      + 'the act.',
+  },
+  '1924|1924-10-20|MOTU PROPRIO|Latinarum litterarum|De peculiari litterarum latinarum schola in Athenaeo Gregori': {
+    page: 417,
+    indexLine: 'oct. 20 Latinarum litterarum. - De peculiari litterarum lati­ / narum schola in Athenaeo Gregoriano constituenda.',
+    evidence: "AAS 16 (1924) p. 417 (PDF page 417 of AAS-16-1924-ocr.pdf, read 2026-09-21), the first page of the fascicle of 5 "
+      + "November 1924, prints 'ACTA PII PP. XI / MOTU PROPRIO / DE PECULIARI LITTERARUM LATINARUM SCHOLA IN ATHENAEO GREGORIANO "
+      + "CONSTITUENDA. / PIUS PP. XI / Latinarum litterarum quae quantaque sit dignitas ac praestantia' (the OCR's `MOTU PBOPBIO`); "
+      + "dated at p. 420 'Datum Romae apud Sanctum Petrum, die xx mensis octobris anno MDCCCCXXIV, Pontificatus Nostri tertio' -- 20 "
+      + "October 1924, as the index prints. The recovery found the incipit at p. 417 and refused it because the OCR of the running "
+      + "header reads 'Anijius XVI - Vol. XVI 5 Novembris 192á Num. U'. The index heads it `IV.?- MOTU PROPRIO` (the OCR's `?`), a "
+      + "heading the parser now reads (index.ts); the shelf record is `mag:pius-xi/latinarum-litterarum-1924` (motu_proprio).",
+  },
+  '1925|1925-01-06|CONSTITUTIONES APOSTOLICAE|Inter praecipuas|~ Erectionis provinciae ecclesiasticae Sancti Christophori d': {
+    page: 289,
+    indexLine: '1925 ian. 6 Inter praecipuas. ~ Erectionis provinciae ecclesiasticae / Sancti Christophori de Habana',
+    evidence: "AAS 17 (1925) p. 289 (PDF page 289 of AAS-17-1925-ocr.pdf, read 2026-09-21), the first page of the fascicle of 1 July "
+      + "1925, prints 'ACTA PII PP. XI / CONSTITUTIO APOSTOLICA / SANCTI CHRISTOPHORI DE HABANA / ERECTIONIS PROVINCIAE ECCLESIASTICAE "
+      + "SANCTI CHRISTOPHORI DE HABANA / PIUS EPISCOPUS / SERVUS SERVORUM DEI / AD PERPETUAM REI MEMORIAM / Inter praecipuas Apostolicae "
+      + "Sedis curas haec quoque constans fuit' (the OCR's `CHEISTOPHOEI` in the first heading line); dated at p. 290 'Datum Romae apud "
+      + "Sanctum Petrum, anno Domini millesimo nongentesimo vigesimo quinto, die sexta mensis ianuarii, Pontificatus Nostri anno "
+      + "tertio' -- 6 January 1925, as the index prints. The recovery found the incipit at p. 289 and refused it because the OCR of the "
+      + "running header reads 'Annus XVII-Toi. XVII 1 Iulii 1925 Num, 9'. No shelf record carries the act (`inter-praecipuas-1923` is "
+      + "the constitution of 11 June 1923 for Caracas). The index's OCR sets this entry's `289` on the line of the entry after it, "
+      + "*Ex Apostolico officio* (27 March 1925, the diocese of Valença), which opens at p. 516 ('II / VALENTINA IN BRASILIA / ERECTIONIS "
+      + "DIOECESIS / … / Ex Apostolico officio Nobis commisso', dated at p. 519 'die vigesima septima mensis martii'); the two entries "
+      + 'cite one page and invariant 25 holds both until a page correction can be curated, as *Casti connubii* (1930) is held.',
+  },
+  '1925|1925-06-10|CONSTITUTIONES APOSTOLICAE|Vertit in animarum|Dismembrationis et unionis partis territorii dioecesium Medi': {
+    page: 569,
+    indexLine: '1925 iunii 10 Vertit in animarum. - Dismembrationis et unionis partis / territorii dioecesium Mediolanensis et Papiensis',
+    evidence: "AAS 17 (1925) p. 569 (PDF page 569 of AAS-17-1925-ocr.pdf, read 2026-09-21) prints, below the end of the constitution "
+      + "before it, 'IV / MEDIOLANEN, ET PAPIEN. / DISMEMBRATIONIS ET UNIONIS / PIUS EPISCOPUS / SERVUS SERVORUM DEI / AD PERPETUAM REI "
+      + "MEMORIAM / Vertit in animarum bonum ut paroeciae, quae ab habituali sui Ordinarii residentia distant'; dated at p. 570 'Datum "
+      + "Romae apud Sanctum Petrum, anno Domini millesimo nongentesimo vigesimo quinto, die decima mensis iunii, Pontificatus Nostri "
+      + "anno quarto' (the OCR's `Eomae`) -- 10 June 1925, as the index prints. The recovery found the incipit at p. 569 only, outside "
+      + "the constitutions' run of the Index generalis. No shelf record carries the act.",
+  },
+};
+
+export interface CuratedReference {
+  acta: { series: 'AAS'; volume: number; year: number; part?: 'I' | 'II'; page: number };
+  /** Where the page was read and what it prints, and the act's own dating formula. */
+  evidence: string;
+}
+
+/**
+ * References no index entry can give: the constitution that promulgates a Code opens the
+ * Code's own volume, which has no chronological index (AAS 9-II, 1917; AAS 75-II, 1983).
+ * Applied after the join (applyActa); a document the join has also matched is an error.
+ */
+export const ACTA_CURATED_REFERENCES: Readonly<Record<string, CuratedReference>> = {
+  'mag:benedict-xv/providentissima-mater-1917': {
+    acta: { series: 'AAS', volume: 9, year: 1917, part: 'II', page: 5 },
+    evidence: "AAS 9 (1917) part II (AAS-09-II-1917-ocr.pdf, 594 pages, PDF page 5 read with pypdf on 2026-09-21) opens at p. 5 with "
+      + "'VENERABILIBVS FRATRIBVS ET DILECTIS FILIIS PATRIARCHIS, PRIMATIBVS, ARCHIEPISCOPIS, EPISCOPIS ALIISQVE ORDINARIIS AC PRAETEREA "
+      + "CATHOLICARVM STUDIORVM VNIVERSITATVM AC SEMINARIORVM DOCTORIBVS ATQVE AVDITORIBVS. / BENEDICTVS EPISCOPVS / SERVVS SERVORVM DEI / "
+      + "AD PERPETVAM REI MEMORIAM. / Providentissima Mater Ecclesia, ita a Conditore Christo constituta' (the drop capital P is not in "
+      + "the text layer; the running header of p. 7 reads 'Constitutio Apostolica 7', that of p. 6 'Codex Iuris Canonici'), dated at "
+      + "p. 8 'Datum Romae apud S. Petrum die festo Pentecostes anno millesimo nongentesimo decimo septimo, Pontificatus Nostri tertio' "
+      + "-- Pentecost, 27 May 1917: the promulgation of the Codex Iuris Canonici that fills the rest of the part, which has no "
+      + "chronological index (tools/fixtures/acta/README.md). *Sacrae disciplinae leges* (25 January 1983) opens AAS 75 (1983) part II "
+      + "at pp. VII-XIV, Roman-numbered (README.md, the 1979-2014 report), which `acta.page` cannot carry: no reference, recorded here.",
+  },
+};
 
 /** The curation key of an entry: the volume year and first page the index cites. */
 export const curationKey = (e: { year: number; page: number }): string => `${e.year}:${e.page}`;

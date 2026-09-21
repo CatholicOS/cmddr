@@ -345,6 +345,16 @@
       "header": "Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
+      "key": "1924-03-25|MOTU PROPRIO|Poiché ogni ragione|De Oratorio Sancti Petri apud Vaticanam Basilicam in adolesc",
+      "date": "1924-03-25",
+      "category": "MOTU PROPRIO",
+      "incipit": "Poiché ogni ragione",
+      "page": 177,
+      "rule": "unique",
+      "bodyLine": "Poiché ogni ragione del Nostro supremo ufficio pastorale è",
+      "header": "Annus XVI • Vol. XVI 1 Maii 1924 Num. 5"
+    },
+    {
       "key": "1924-03-26|EPISTOLAE|Tam praeclara|Ad Emum P. D. Desideratum, tit. S. Petri in Vinculis, S. B. ",
       "date": "1924-03-26",
       "category": "EPISTOLAE",
@@ -434,6 +444,16 @@
       "bodyLine": "Ad futuram rei memoriam. — Ex hac beati Petri Apostolorum Principis cathedra, quam divinitus obtinemus, tamquam e sublimi specula",
       "header": "Acta Pii PP. XI 269",
       "formula": "Datum Romae apud Sanctum Petrum, sub anulo Piscatoris, die xvi mensis aprilis, anno MDCCCCXXIV, Pontificatus Nostri tertio. P. CARD. GASPARRI, a Secretis Status. V PRAEFECTURA APOSTOLICA DE UELLÉ ORIE"
+    },
+    {
+      "key": "1924-04-27|MOTU PROPRIO|Bibliorum scientiam|De disciplinae biblicae magisteriis..",
+      "date": "1924-04-27",
+      "category": "MOTU PROPRIO",
+      "incipit": "Bibliorum scientiam",
+      "page": 180,
+      "rule": "unique",
+      "bodyLine": "Bibliorum scientiam quanti Ecclesia Dei perpetuo fecerit, vel",
+      "header": "180 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1924-04|EPISTOLAE|Quantopere intersit|Ad Emum P. D. Caietanum episc. Sabinensem, S. B. E. Card. De",
@@ -856,16 +876,6 @@
       "reason": "no-incipit"
     },
     {
-      "key": "1924-03-25|CONSTITUTIO APOSTOLICA|Poiché ogni ragione|De Oratorio Sancti Petri apud Vaticanam Basilicam in adolesc",
-      "date": "1924-03-25",
-      "category": "CONSTITUTIO APOSTOLICA",
-      "incipit": "Poiché ogni ragione",
-      "reason": "outside-runs",
-      "candidates": [
-        177
-      ]
-    },
-    {
       "key": "1924-03-27|EPISTOLAE||Assignatio titulorum",
       "date": "1924-03-27",
       "category": "EPISTOLAE",
@@ -902,16 +912,6 @@
       "candidates": [
         48,
         230
-      ]
-    },
-    {
-      "key": "1924-04-27|CONSTITUTIO APOSTOLICA|Bibliorum scientiam|De disciplinae biblicae magisteriis..",
-      "date": "1924-04-27",
-      "category": "CONSTITUTIO APOSTOLICA",
-      "incipit": "Bibliorum scientiam",
-      "reason": "outside-runs",
-      "candidates": [
-        180
       ]
     },
     {
@@ -979,11 +979,11 @@
       ]
     },
     {
-      "key": "1924-10-20|CONSTITUTIO APOSTOLICA|Latinarum litterarum|De peculiari litterarum latinarum schola in Athenaeo Gregori",
+      "key": "1924-10-20|MOTU PROPRIO|Latinarum litterarum|De peculiari litterarum latinarum schola in Athenaeo Gregori",
       "date": "1924-10-20",
-      "category": "CONSTITUTIO APOSTOLICA",
+      "category": "MOTU PROPRIO",
       "incipit": "Latinarum litterarum",
-      "reason": "outside-runs",
+      "reason": "header-mismatch",
       "candidates": [
         417
       ]

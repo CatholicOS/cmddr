@@ -7,7 +7,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { parseActaIndex, type ActaEntry, type ActaParseResult } from './index.js';
 import { matchActa, type ActaMatchResult } from './match.js';
-import { ACTA_PAGE_READINGS } from './curation.js';
+import { ACTA_CURATED_REFERENCES, ACTA_PAGE_READINGS } from './curation.js';
 import { applyPageRows, sidecarPath, type PagesSidecar } from './recover.js';
 import type { DocumentRecord } from '../types.js';
 
@@ -162,9 +162,10 @@ export interface ActaJoin {
 }
 
 /**
- * Match every parsed entry against `docs` and write `acta` on the matched documents.
- * Matching runs over all sources at once so a document claimed by two sources' entries
- * is a conflict (match.ts) rather than a silent overwrite.
+ * Match every parsed entry against `docs` and write `acta` on the matched documents,
+ * then the curated references (ACTA_CURATED_REFERENCES) on theirs. Matching runs over all
+ * sources at once so a document claimed by two sources' entries is a conflict (match.ts)
+ * rather than a silent overwrite.
  */
 export function applyActa(docs: DocumentRecord[]): ActaJoin {
   const { parsed, missing } = loadActaIndexes();
@@ -174,6 +175,14 @@ export function applyActa(docs: DocumentRecord[]): ActaJoin {
   for (const m of result.matches) {
     const { series, volume, year, part, page } = m.entry;
     byId.get(m.documentId)!.acta = { series, volume, year, ...(part ? { part } : {}), page };
+  }
+  // The references no entry can give (ACTA_CURATED_REFERENCES): written after the matches,
+  // and never over one.
+  for (const [id, row] of Object.entries(ACTA_CURATED_REFERENCES)) {
+    const d = byId.get(id);
+    if (d === undefined) throw new Error(`ACTA_CURATED_REFERENCES names ${id}, which no document carries`);
+    if (result.matches.some((m) => m.documentId === id)) throw new Error(`ACTA_CURATED_REFERENCES names ${id}, which the join also matched`);
+    d.acta = { ...row.acta };
   }
   return { parsed, missing, entries, result };
 }

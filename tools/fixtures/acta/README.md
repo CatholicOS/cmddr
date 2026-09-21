@@ -158,7 +158,11 @@ generalis actorum*; `dated`: the hit whose dating formula gives the entry's date
 the only hit with one OCR character per word admitted), the body line and the running
 header quoted, and the formula where one settled it. `unrecovered[]` lists the rest with a
 reason. The join reads the sidecar and never the store; a row whose entry the parser no
-longer opens is a hard error.
+longer opens is a hard error. Pages read by hand for the acts the recovery leaves
+(`ACTA_PAGE_READINGS` in `tools/src/acta/curation.ts`, keyed `{source}|{key}`, each row
+quoting the page the act opens on and its dating formula) are consulted before the sidecar
+and outrank it; the curated reference of *Providentissima Mater Ecclesia* (AAS 9-II (1917)
+5, `ACTA_CURATED_REFERENCES`) is written after the join, the part having no index.
 
 ## The volumes: what the `-ocr.pdf` files are, and the two extraction modes
 

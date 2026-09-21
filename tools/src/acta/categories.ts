@@ -68,7 +68,7 @@ export interface ActaCategory {
 export function normaliseHeading(text: string): string {
   return text
     .normalize('NFD').replace(/\p{M}/gu, '')   // the OCR's accents (`EPISTULA ENCÌCLICA`, AAS 41)
-    .replace(/^\s*[IVXLJYTivxl1]+(?:[.-]?\s*[r•]?\s*[–-]\s*|\.\s+(?=[A-Z]))/, '')   // `XI- - ALLOCUTIONES` (AAS 66, 1974); `I. LITTERAE ENCYCLICAE` (AAS 91, 1999); `T. -` for `I. -` (AAS 14, 1922)
+    .replace(/^\s*[IVXLJYTivxl1]+(?:[.-]?\s*[r•?]?\s*[–-]\s*|\.\s+(?=[A-Z]))/, '')   // `XI- - ALLOCUTIONES` (AAS 66, 1974); `I. LITTERAE ENCYCLICAE` (AAS 91, 1999); `T. -` for `I. -` (AAS 14, 1922); `IV.?- MOTU PROPRIO` (AAS 16, 1924)
     .replace(/\s+/g, ' ')
     .replace(/«\s+/g, '«').replace(/\s+»/g, '»')   // `« MOTU PROPRIO» DATAE` (AAS 68, 1976)
     .replace(/[\s,.:'’^\[|\\-]+$/, '')   // the OCR's `^` after a heading (AAS 52, 1960); the scan margin's `[` (AAS 89 (1997) 890)

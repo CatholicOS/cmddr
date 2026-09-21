@@ -520,6 +520,56 @@
     }
   },
   {
+    "id": "mag:pius-xi/romani-pontifices-1922",
+    "title": "Romani Pontifices. Aversana. De erectione in Collegiatam ad honorem ecclesiae paroecialis Sancti Sosii martyris in civitate « Erattamaggiore »",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-07-15",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Romani Pontifices",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 137
+    }
+  },
+  {
+    "id": "mag:pius-xi/apostolica-sedes-1922",
+    "title": "Apostolica Sedes. Aversana. Do erectione in Collegiatam ad honorem ecclesiae paroecialis Beatae Mariae Virginis Immaculatae in civitate « Erattamaggiore »",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1922-07-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Apostolica Sedes",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 141
+    }
+  },
+  {
     "id": "mag:pius-xi/media-in-urbe-1922",
     "title": "Media in urbe. Titulus basilicae minoris confertur in ipsa consecratione ecclesiae abbatiali Virginis Deiparae in caelos assum ptae, civitatis Sancti Pauli in Brasilia, O. S. B..",
     "idStatus": "minted",
@@ -1312,6 +1362,31 @@
     }
   },
   {
+    "id": "mag:pius-xi/apostolica-sedes-1923",
+    "title": "Apostolica Sedes. Clavarensis. Erectionis collegiatae ad honorem",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1923-02-18",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-15-1923-ocr.pdf",
+      "shelf": "aas/1923",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Apostolica Sedes",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 258
+    }
+  },
+  {
     "id": "mag:pius-xi/praeclarum-sane-1923",
     "title": "Praeclarum sane. Ad E. P. Eduardum Hugon, ex Ordine Praedicatorum: de tractatibus dogmaticis ab eodem editis",
     "idStatus": "minted",
@@ -1756,7 +1831,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 15,
+      "year": 1923,
+      "page": 193
+    }
   },
   {
     "id": "mag:pius-xi/in-civitate-kevelaer-1923",
@@ -3577,6 +3658,31 @@
     "sourceGenreLabel": "apost_letters"
   },
   {
+    "id": "mag:pius-xi/poiche-ogni-ragione-1924",
+    "title": "Poiché ogni ragione. De Oratorio Sancti Petri apud Vaticanam Basilicam in adolescentium utilitatem constituendo",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-03-25",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Poiché ogni ragione",
+    "characteristics": [
+      "motu-proprio"
+    ],
+    "sourceGenreLabel": "Litterae Apostolicae Motu proprio datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 177
+    }
+  },
+  {
     "id": "mag:pius-xi/pontificium-opus-1924",
     "title": "Pontificium opus. Indulgentiae, privilegia et f acuìtates spirituales tribuuntur fidelibus et sacerdotibus in Pium Opus a Propagatione Fidei adlectis",
     "idStatus": "minted",
@@ -3706,6 +3812,31 @@
       "volume": 16,
       "year": 1924,
       "page": 268
+    }
+  },
+  {
+    "id": "mag:pius-xi/bibliorum-scientiam-1924",
+    "title": "Bibliorum scientiam. De disciplinae biblicae magisteriis..",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-04-27",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Bibliorum scientiam",
+    "characteristics": [
+      "motu-proprio"
+    ],
+    "sourceGenreLabel": "Litterae Apostolicae Motu proprio datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 180
     }
   },
   {
@@ -4095,8 +4226,33 @@
     }
   },
   {
+    "id": "mag:pius-xi/ad-munus-pastorale-1924",
+    "title": "Ad munus pastorale. Dismembrationis et erectionis Praelaturae Nullius Sancti Iosephi de « Alto Tocantins »",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1924-07-25",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-16-1924-ocr.pdf",
+      "shelf": "aas/1924",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ad munus pastorale",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 424
+    }
+  },
+  {
     "id": "mag:pius-xi/apostolico-muneri-1924",
-    "title": "Apostolico muneri. Indulgentiae anni Iubilaei 1925 conceduntur monialibus aliisque stabili impedimento detentis, cum opportunis facultatibus circa absolutiones et votorum commutationes IV.?- MOTU PROPRIO",
+    "title": "Apostolico muneri. Indulgentiae anni Iubilaei 1925 conceduntur monialibus aliisque stabili impedimento detentis, cum opportunis facultatibus circa absolutiones et votorum commutationes",
     "idStatus": "minted",
     "genre": "papal-bull",
     "issuerId": "rp:pius-xi",
@@ -4227,7 +4383,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "AAS",
+      "volume": 16,
+      "year": 1924,
+      "page": 417
+    }
   },
   {
     "id": "mag:pius-xi/omnium-urbis-1924",
@@ -4607,31 +4769,6 @@
       "volume": 17,
       "year": 1925,
       "page": 175
-    }
-  },
-  {
-    "id": "mag:pius-xi/ex-apostolico-officio-1925",
-    "title": "Ex Apostolico officio. Erectionis dioecesis Valentinae",
-    "idStatus": "minted",
-    "genre": "papal-bull",
-    "issuerId": "rp:pius-xi",
-    "issuerType": "pope",
-    "date": "1925-03-27",
-    "source": {
-      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
-      "shelf": "aas/1925",
-      "retrieved": "2026-09-20"
-    },
-    "incipit": "Ex Apostolico officio",
-    "characteristics": [
-      "apostolic-constitution"
-    ],
-    "sourceGenreLabel": "Constitutiones Apostolicae",
-    "acta": {
-      "series": "AAS",
-      "volume": 17,
-      "year": 1925,
-      "page": 289
     }
   },
   {
@@ -5043,6 +5180,31 @@
       "volume": 18,
       "year": 1926,
       "page": 36
+    }
+  },
+  {
+    "id": "mag:pius-xi/vertit-in-animarum-1925",
+    "title": "Vertit in animarum. Dismembrationis et unionis partis territorii dioecesium Mediolanensis et Papiensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:pius-xi",
+    "issuerType": "pope",
+    "date": "1925-06-10",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-17-1925-ocr.pdf",
+      "shelf": "aas/1925",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Vertit in animarum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 17,
+      "year": 1925,
+      "page": 569
     }
   },
   {

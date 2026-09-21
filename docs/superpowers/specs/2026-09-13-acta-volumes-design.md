@@ -243,8 +243,8 @@ fuzzy 25) and **377** stayed without one: 205 described by the index without an 
 contradicts the page. The rate after recovery — entries with a page over every line that
 ended in a page or opened without one, the 95 % floor of §4 applying to it — is 70.0 % over
 the era and 76.5 % without AAS 1, and under 95 % in every volume (the highest 1917-I at
-91.2 %); each volume's reasons are in the report, the floor unchanged. The join wrote 105
-references and created 442 documents from the seventeen; 532 entries are held with their
+91.2 %); each volume's reasons are in the report, the floor unchanged. The join wrote 112
+references and created 453 documents from the seventeen; 533 entries are held with their
 reasons. Two rules of §10.3.2 were tightened before the join ran, on the evidence of five
 pages the first sidecars gave wrongly: a paragraph head is the salutation's dash or a line
 start under a heading, a numeral, a salutation or the memorial formula — a word that opens a
@@ -253,5 +253,22 @@ formula that settles a tie is read from the hit's own line on, not from the top 
 (the previous act's formula). The rows the earlier eras' curation tables take were written
 where the era showed their shapes (nineteen index corrections from the acts' formulae,
 twelve shared pages read in the volumes, five holds for an incipit the OCR misspelt); the
-entries left without a page are neither created nor cited, and the readings of §10.3.5 are
-the next task's.
+entries left without a page are neither created nor cited. The readings of §10.3.5 are
+seventeen rows of `ACTA_PAGE_READINGS` -- every encyclical and constitution the report's
+*Page not recovered* block listed, three motu proprio -- each read in the store text at the
+page the act opens on with its dating formula quoted, and nine `ACTA_INDEX_CORRECTIONS`
+rows keyed by those pages where the index prints the month alone, the wrong month
+(*Sapienti Consilio*, `Ian. 29` for 29 June 1908; *Post datam*, the OCR's `i apr.` read as
+the incipit) or a ditto of the wrong year (the two Aversa constitutions of July 1922 under
+`1923`): seven shelf records cited, eleven documents created. *Providentissima Mater*
+*Ecclesia* takes the one curated reference (`ACTA_CURATED_REFERENCES`, AAS 9-II (1917) 5,
+applied after the join and never over a match); *Sacrae disciplinae leges* (AAS 75-II, pp.
+VII–XIV, Roman-numbered) cannot, `acta.page` being an integer. Two things the readings
+showed: the 1924 index heads its motu proprio `IV.?- MOTU PROPRIO` (the OCR's `?`, the one
+such heading of the fixtures), which the parser now reads, so two of the three come back by
+the recovery's own rule; and *Inter praecipuas* (AAS 17 (1925) 289) opens the page the index's
+OCR sets on the next entry's line (*Ex Apostolico officio*, which opens at 516), so invariant
+25 holds both until a page correction can be curated -- the second entry-level key, after
+the two holds of §1.4, that the page-keyed tables lack. *Ubi arcano Dei consilio* keeps the
+Italian text's page: the 1922 line for the Latin prints no date and opens no entry, and a
+reading is keyed to an entry.

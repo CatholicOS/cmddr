@@ -61,7 +61,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ad Beatissimi Apostolorum",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 6,
+      "year": 1914,
+      "page": 565
+    }
   },
   {
     "id": "mag:benedict-xv/consilium-a-decessore-1914",
@@ -214,6 +220,30 @@
       "volume": 7,
       "year": 1915,
       "page": 229
+    }
+  },
+  {
+    "id": "mag:benedict-xv/papal-bull-1915-03-21",
+    "title": "Coenobium Sublacense. De Abbatia Sublacensi",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1915-03-21",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-07-1915-ocr.pdf",
+      "shelf": "aas/1915",
+      "retrieved": "2026-09-20"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 7,
+      "year": 1915,
+      "page": 197
     }
   },
   {
@@ -1088,7 +1118,14 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Providentissima Mater",
-    "sourceGenreLabel": "bulls"
+    "sourceGenreLabel": "bulls",
+    "acta": {
+      "series": "AAS",
+      "volume": 9,
+      "year": 1917,
+      "part": "II",
+      "page": 5
+    }
   },
   {
     "id": "mag:benedict-xv/supplices-ad-nos-1917",
@@ -1806,6 +1843,55 @@
     }
   },
   {
+    "id": "mag:benedict-xv/tribus-abhinc-annis-1918",
+    "title": "Tribus abhinc annis. Sodalium Ssmi Crucifixi ad S. Marcelli novas constitutiones ratas habet.",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1918-07-01",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-10-1918-ocr.pdf",
+      "shelf": "aas/1918",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Tribus abhinc annis",
+    "characteristics": [
+      "motu-proprio"
+    ],
+    "sourceGenreLabel": "Litterae Apostolicae Motu proprio datae",
+    "acta": {
+      "series": "AAS",
+      "volume": 10,
+      "year": 1918,
+      "page": 305
+    }
+  },
+  {
+    "id": "mag:benedict-xv/papal-bull-1918-08-02",
+    "title": "Archidioecesis Olindensis-Recifensis. Creantur novae dioeceses Nazarensis et Garanhunensis in Brasilia, et transfertur sedes episcopalis Florestensis",
+    "idStatus": "provisional",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1918-08-02",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 463
+    }
+  },
+  {
     "id": "mag:benedict-xv/molis-amplitudine-1918",
     "title": "Molis amplitudine",
     "idStatus": "minted",
@@ -1863,7 +1949,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod Iam Diu",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 10,
+      "year": 1918,
+      "page": 473
+    }
   },
   {
     "id": "mag:benedict-xv/exponendum-curavit-1918",
@@ -3091,7 +3183,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Principi Apostolorum Petro",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 12,
+      "year": 1920,
+      "page": 457
+    }
   },
   {
     "id": "mag:benedict-xv/neminem-latet-1920",
@@ -3134,7 +3232,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Annus Iam Plenus",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "AAS",
+      "volume": 12,
+      "year": 1920,
+      "page": 553
+    }
   },
   {
     "id": "mag:benedict-xv/dilectus-filius-1920",
@@ -3323,6 +3427,31 @@
     }
   },
   {
+    "id": "mag:benedict-xv/praedecessorum-nostrorum-1921",
+    "title": "Praedecessorum nostrorum. Erectionis novae provinciae ecclesiasticae S. Iosephi Costaricensis, novae dioecesis Alajuelensis, novique vicariatus apostolici Limonensis",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-02-16",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Praedecessorum nostrorum",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 252
+    }
+  },
+  {
     "id": "mag:benedict-xv/in-sublimi-1921",
     "title": "In sublimi. Nova Praefectura Apostolica a S. Gabriele a Virgine Perdolente de Marañon, erigitur.",
     "idStatus": "minted",
@@ -3461,6 +3590,31 @@
       "volume": 13,
       "year": 1921,
       "page": 209
+    }
+  },
+  {
+    "id": "mag:benedict-xv/eximia-benedictini-ordinis-1921",
+    "title": "Eximia Benedictini Ordinis. Dismembrationis et erectionis in abbatiam nullius S. Petri de Muenster.",
+    "idStatus": "minted",
+    "genre": "papal-bull",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-05-06",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Eximia Benedictini Ordinis",
+    "characteristics": [
+      "apostolic-constitution"
+    ],
+    "sourceGenreLabel": "Constitutiones Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 290
     }
   },
   {

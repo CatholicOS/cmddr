@@ -635,7 +635,9 @@ describe('parseActaIndex on the volumes of 1932-1957 (acta volumes spec §9, pha
 
   it('reads a category heading whose numeral the OCR misdrew, a known one in mixed case, and drops every column header', () => {
     // `IY. -` (AAS 25, 1933), `1 -` (AAS 33, 1941), `XI •- SERMO` (AAS 31, 1939), `XIV - Sacra Consistoria` (AAS 46, 1954),
-    // `X - HORTATIO` followed by the column header `PAG..` on the next line (AAS 31), and `PAO.` / `PAS.` (AAS 30, 1938).
+    // `X - HORTATIO` followed by the column header `PAG..` on the next line (AAS 31), `PAO.` / `PAS.` (AAS 30, 1938), and
+    // `IV.?- MOTU PROPRIO` (AAS 16 (1924) 510, the one heading of the fixtures with a `?` after the numeral; before it was
+    // read, the three motu proprio under it fell under the constitutions heading before it).
     const r = parseActaIndex(volume(`                                        IY. - LITTERAE APOSTOLICAE
                                                                               PAO.
 1933 Febr. 20 A venerabili fratre. - Basilicae minoris titulo ornatur 61
@@ -648,9 +650,12 @@ describe('parseActaIndex on the volumes of 1932-1957 (acta volumes spec §9, pha
                                       XI •- SERMO
 1939 Dec. 24 Nel quarto. - A Ssmo D. N. habitus 5
                                                   XIV - Sacra Consistoria
-1950 Maii 20 Camerarius Sacri Collegii 289`), xii);
+1950 Maii 20 Camerarius Sacri Collegii 289
+                                                                       IV.?- MOTU PROPRIO
+1924 apr. 27 Bibliorum scientiam. - De disciplinae biblicae magisteriis 180`), xii);
     expect(r.entries.map((e) => [e.category, e.page])).toEqual([
       ['LITTERAE APOSTOLICAE', 61], ['LITTERAE DECRETALES', 97], ['HORTATIO', 245], ['SERMO', 5], ['SACRA CONSISTORIA', 289],
+      ['MOTU PROPRIO', 180],
     ]);
     expect(r.unseenHeadings).toEqual([]);
     expect(r.defects).toEqual([]);

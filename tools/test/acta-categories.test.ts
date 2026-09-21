@@ -102,6 +102,9 @@ describe('the AAS category table', () => {
     expect(normaliseHeading('IV - LITTERAE APOSTOLICAE « MOTU PROPRIO» DATAE')).toBe('LITTERAE APOSTOLICAE «MOTU PROPRIO» DATAE');
     expect(normaliseHeading('MOTU PROPRIO DATAE^')).toBe('MOTU PROPRIO DATAE');
     expect(normaliseHeading('I. - CONSTITUTIONES APOSTOLICAE.')).toBe('CONSTITUTIONES APOSTOLICAE');
+    // AAS 16 (1924) 510: the OCR's `?` after the numeral, the one such heading of the fixtures (phase 2b-iii-b, Task 9).
+    expect(normaliseHeading('IV.?- MOTU PROPRIO')).toBe('MOTU PROPRIO');
+    expect(categoryForHeading('IV.?- MOTU PROPRIO')?.id).toBe('Litterae Apostolicae Motu proprio datae');
   });
 
   it('covers every heading every fixture prints (none is unseen)', () => {

@@ -356,13 +356,17 @@ is created from the first printing by the reprint table, and the Italian text of
 as an encyclical of its own is held as the 1933 and 1937 vernaculars are
 ([era report](docs/superpowers/reports/2026-09-18-acta-volumes-1926-1930.md)). Phase 2b-iii-b
 ([#25](https://github.com/CatholicOS/cmddr/issues/25), [spec §10](docs/superpowers/specs/2026-09-13-acta-volumes-design.md),
-[era report](docs/superpowers/reports/2026-09-21-acta-volumes-1909-1925.md)) added **442** from the seventeen volumes of
+[era report](docs/superpowers/reports/2026-09-21-acta-volumes-1909-1925.md)) added **453** from the seventeen volumes of
 1909–1925 with the pages the volume bodies gave back — 191 letters of Pius X and Pius XI (Benedict XV's letters shelf is not
-harvested, so his 275 stay held), 186 apostolic letters, 48 constitutions, 9 motu proprio, 4 *sub plumbo* and 4 decretal
-letters — and held **532**; the shelves of Pius X and Benedict XV being thin, the era is a harvest. Five entries whose incipit
+harvested, so his 275 stay held), 186 apostolic letters, 56 constitutions, 12 motu proprio, 4 *sub plumbo* and 4 decretal
+letters — and held **533**; the shelves of Pius X and Benedict XV being thin, the era is a harvest. Five entries whose incipit
 the index OCR misspells into a well-formed word the body contradicts (*Placet oculog* for *oculos*) are held by curated rows, as
-*Begnum Dei* is, and the 377 entries the recovery left without a page are neither created nor cited — the encyclicals among
-them (*Ad beatissimi Apostolorum Principis*, *Principi Apostolorum Petro*, *Annus iam plenus*) wait for a hand-read page. The
+*Begnum Dei* is. The acts of weight the recovery left without a page were read by hand (`ACTA_PAGE_READINGS`, seventeen rows,
+each quoting the page the act opens on and its dating formula): the encyclicals *Ad beatissimi Apostolorum Principis*, *Quod iam
+diu*, *Principi Apostolorum Petro* and *Annus iam plenus* and the constitution *Sapienti Consilio* now cite their pages, and
+eleven constitutions and motu proprio are created at theirs; the 358 entries still without a page are neither created nor
+cited. *Providentissima Mater Ecclesia* (27 May 1917) carries the one curated reference (`ACTA_CURATED_REFERENCES`): it opens AAS
+9 part II — the Code of 1917, which has no chronological index — at p. 5. The
 remaining phases are 2b′, the volumes of 2003–2009, which have no index online and await a fascicle parser, and 2c, the *Acta
 Sanctae Sedis* of 1865–1908, whose indexes carry no date or incipit and are confirmed by hand.
 

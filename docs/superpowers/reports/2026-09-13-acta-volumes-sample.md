@@ -73,16 +73,19 @@ not used silently.
    journeys section's undated *Die N.* lines, as in phase 1).
 6. **AAS 9 part II carries no chronological index.** The second part of 1917 is the *Codex Iuris Canonici* itself, with the
    constitution *Providentissima Mater Ecclesia* (27 May 1917, p. 5) before it and the Code's own index after; no fixture
-   exists for it, and `acta.part` is therefore `"I"` on every 1917 reference. The one act is on the bulls shelf
-   (`mag:benedict-xv/providentissima-mater-1917`) and could take a hand-curated reference (*AAS 9-II (1917) 5*) in 2b-ii.
+   exists for it, and `acta.part` is `"I"` on every 1917 reference the index gives. The one act is on the bulls shelf
+   (`mag:benedict-xv/providentissima-mater-1917`) and carries the one curated reference (`ACTA_CURATED_REFERENCES`, phase
+   2b-iii-b): AAS 9-II (1917) 5, read in the PDF on 2026-09-21 (`Providentissima Mater Ecclesia, ita a Conditore Christo
+   constituta`, dated at p. 8 `die festo Pentecostes anno millesimo nongentesimo decimo septimo`), written after the join
+   and never over a match; it is not an index match, so §11 no longer lists the act and §12 does not.
 
 ### 1b. Pages recovered from the volume body (spec §10.3)
 
 | Source | Opened without a page | Recovered | unique | dated | fuzzy | Not recovered | none | several | outside runs | header | no incipit | **Rate after recovery** | Harvested, after |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1909 | 111 | 2 | 1 | 0 | 1 | 109 | 0 | 0 | 1 | 0 | 108 | **2.9 %** ⚠ | 3.1 % |
+| 1909 | 111 | 2 | 1 | 0 | 1 | 109 | 0 | 0 | 1 | 0 | 108 | **3.6 %** ⚠ | 3.9 % |
 | 1917-I | 61 | 56 | 54 | 0 | 2 | 5 | 1 | 2 | 0 | 1 | 1 | **91.2 %** ⚠ | 92.9 % |
-| **Total** | **172** | **58** | **55** | **0** | **3** | **114** | **1** | **2** | **1** | **1** | **109** | **40.4 %** | |
+| **Total** | **172** | **58** | **55** | **0** | **3** | **114** | **1** | **2** | **1** | **1** | **109** | **40.8 %** | |
 
 *Opened without a page* is the parser's count before recovery (§1); *Recovered* the sidecar's rows, by the rule that accepted
 each page (the only hit in the category's runs; the hit whose dating formula gives the entry's date; the only hit within one OCR
@@ -96,13 +99,13 @@ is listed under §9, *Page not recovered*.
 
 | Source | Popes | Entries | In harvested categories | Matched | Ambiguous | Claimed twice | Unmatched | Created | Held | Non-harvested (counted) | Dated > 1 year before the volume | Documents of the popes without an entry |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1909 | Pius X | 4 | 4 | 2 | 0 | 0 | 2 | 2 | 0 | 0 | 0 | 13 |
-| 1917-I | Benedictus XV | 93 | 91 | 6 | 0 | 0 | 85 | 28 | 57 | 2 | 16 | 3 |
+| 1909 | Pius X | 5 | 5 | 3 | 0 | 0 | 2 | 2 | 0 | 0 | 0 | 13 |
+| 1917-I | Benedictus XV | 93 | 91 | 6 | 0 | 0 | 85 | 28 | 57 | 2 | 16 | 2 |
 | 1931 | Pius XI | 76 | 73 | 4 | 0 | 0 | 68 | 59 | 10 | 3 | 6 | 2 |
 | 1958 | Pius XII, Ioannes XXIII | 179 | 132 | 73 | 7 | 0 | 52 | 36 | 23 | 47 | 1 | 7 |
 | 1978 | Paulus VI, Ioannes Paulus I, Ioannes Paulus II | 162 | 72 | 29 | 0 | 0 | 43 | 28 | 15 | 90 | 0 | 7 |
 | 2012 | Benedictus XVI | 151 | 61 | 24 | 2 | 0 | 35 | 13 | 24 | 90 | 17 | 15 |
-| **Total** | | **665** | **433** | **138** | **9** | **0** | **285** | **166** | **129** | **232** | **40** | **47** |
+| **Total** | | **666** | **434** | **139** | **9** | **0** | **285** | **166** | **129** | **232** | **40** | **46** |
 
 *Claimed twice* counts the documents two entries both match (§5), as the 2015–2024 report does; a document claimed from
 two sources counts in each. *Unmatched* counts the entries of a harvested or partly harvested category the join left without a document (each is
@@ -113,7 +116,7 @@ shelf documents of the source's popes dated in the volume year that carry no `ac
 
 ### The reading
 
-1. **138 references written, every one from a quoted index line (§12):** 1 curated, 19 incipit, 3 incipit-month, 22 toponym, 93 unique. The
+1. **139 references written, every one from a quoted index line (§12):** 1 curated, 19 incipit, 3 incipit-month, 22 toponym, 94 unique. The
    *incipit-month* matches are the month-only entries of §1.3; the *toponym* and *incipit* ones include the claims the
    evidence rule resolved (`match.ts`): where several constitutions of one day are entered against one shelf record of the
    day (10 November 1977: *Avkaënsis*, *Mohaleshoekensis*, *Ambikapurensis* against the shelf's *Avkaensis*), the entry the
@@ -144,7 +147,7 @@ Parsed / matched / ambiguous / unmatched for every category the era prints, with
 |---|---|---|---|---|---|---|---|
 | Litterae Encyclicae | yes | 1 / 1 / 0 / 0 | 1 / 1 / 0 / 0 | 4 / 4 / 0 / 0 | 2 / 2 / 0 / 0 |  |  |
 | Adhortationes Apostolicae | yes |  | 1 / 1 / 0 / 0 |  |  |  | 2 / 2 / 0 / 0 |
-| Constitutiones Apostolicae | yes | 1 / 1 / 0 / 0 |  | 12 / 0 / 0 / 12 | 37 / 37 / 0 / 0 | 28 / 3 / 0 / 25 | 11 / 8 / 2 / 1 |
+| Constitutiones Apostolicae | yes | 2 / 2 / 0 / 0 |  | 12 / 0 / 0 / 12 | 37 / 37 / 0 / 0 | 28 / 3 / 0 / 25 | 11 / 8 / 2 / 1 |
 | Litterae Apostolicae Motu proprio datae | yes |  | 6 / 4 / 0 / 2 | 2 / 0 / 0 / 2 | 1 / 1 / 0 / 0 | 1 / 1 / 0 / 0 | 3 / 3 / 0 / 0 |
 | Litterae Apostolicae | yes | 2 / 0 / 0 / 2 | 43 / 0 / 0 / 43 | 38 / 0 / 0 / 37 | 58 / 19 / 2 / 37 | 25 / 17 / 0 / 8 | 12 / 0 / 0 / 12 |
 | Epistulae Apostolicae | yes |  |  | 1 / 0 / 0 / 1 |  |  |  |
@@ -1315,7 +1318,7 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 | OCR-damaged incipit or toponym | 2 | 1978 2 |
 | Printed more than once, or cited at more than one page: the citation of record is the other printing or awaits an ACTA_REPRINTS row | 1 | 1931 1 |
 | **Total** | **129** | |
-| Page not recovered (§1b; outside the total: never reached the join) | 114 | 1909 109; 1917-I 5 |
+| Page not recovered (§1b; outside the total: never reached the join) | 113 | 1909 108; 1917-I 5 |
 
 <details><summary><b>Category not created from the Acta</b> — 34</summary>
 
@@ -1509,11 +1512,10 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 
 </details>
 
-<details><summary><b>Page not recovered</b> — 114</summary>
+<details><summary><b>Page not recovered</b> — 113</summary>
 
 | Reference | Pope | Date | Category | Entry | Reason (sidecar) | Candidates |
 |---|---|---|---|---|---|---|
-| AAS 1 (1909) — | Pius X | 1908-01-29 | Constitutiones Apostolicae | *Sapienti Consilio* — DE ROMANA CURIA. | hits outside the category's runs of the Index generalis | 295 |
 | AAS 1 (1909) — | Pius X | 1908-01 | Constitutiones Apostolicae | Congregati | no incipit: the index describes the act without one | — |
 | AAS 1 (1909) — | Pius X | 1908-09-11 | Litterae Apostolicae | Regia primitiva archisodalitas Matritensis. Mariae LB virginis a prodi | no incipit: the index describes the act without one | — |
 | AAS 1 (1909) — | Pius X | 1908-09-18 | Litterae Apostolicae | Episcopo Nolano datur facultas transferendi Nolam corpus S. Paulini Ep | no incipit: the index describes the act without one | — |
@@ -1638,8 +1640,8 @@ era and in total; the AAS-only records of every other era are in the *after* col
 | Issuer | Shelf records | AAS-only records | Of which from this era | After |
 |---|---|---|---|---|
 | `rp:pius-x` | 306 | 158 | 2 | 464 |
-| `rp:benedict-xv` | 63 | 103 | 28 | 166 |
-| `rp:pius-xi` | 158 | 985 | 59 | 1143 |
+| `rp:benedict-xv` | 63 | 108 | 28 | 171 |
+| `rp:pius-xi` | 158 | 991 | 59 | 1149 |
 | `rp:pius-xii` | 260 | 1229 | 36 | 1489 |
 | `rp:john-xxiii` | 193 | 294 | 0 | 487 |
 | `rp:paul-vi` | 777 | 349 | 28 | 1126 |
@@ -1647,8 +1649,8 @@ era and in total; the AAS-only records of every other era are in the *after* col
 | `rp:john-paul-ii` | 2105 | 43 | 0 | 2148 |
 | `rp:benedict-xvi` | 301 | 69 | 13 | 370 |
 | `rp:francis-i` | 366 | 260 | 0 | 626 |
-| **Popes of the AAS** | **4536** | **3490** | **166** | **8026** |
-| **Registry** | **4975** | **3490** | **166** | **8465** |
+| **Popes of the AAS** | **4536** | **3501** | **166** | **8037** |
+| **Registry** | **4975** | **3501** | **166** | **8476** |
 
 ## 11. Documents of the era's popes with no AAS entry
 
@@ -1668,12 +1670,11 @@ not harvested, homilies, allocutions) is counted in §3.
 
 </details>
 
-<details><summary><b>1917-I</b> — 3 without an entry (apostolic-letter+motu-proprio 1; papal-bull 1; brief 1); 2 of the formal genres listed</summary>
+<details><summary><b>1917-I</b> — 2 without an entry (apostolic-letter+motu-proprio 1; brief 1); 1 of the formal genres listed</summary>
 
 | Document | Date | Class | Index entries on this date | Reading |
 |---|---|---|---|---|
 | `mag:benedict-xv/nobilissimam-sacrarum-1917` | 1917-04-08 | apostolic-letter+motu-proprio | — | a month-only entry of 1917-04 may be it (AAS 9-I (1917) 262: *Quae omnia*; AAS 9-I (1917) 320: *Dilectus filius*; AAS 9-I (1917) 321: *Supplices, sunt Nobis*; AAS 9-I (1917) 214: *Si unquam alias*; AAS 9-I (1917) 209: *Nobilissimam sacrarum aedium*) |
-| `mag:benedict-xv/providentissima-mater-1917` | 1917-05-27 | papal-bull | — | no dated entry: possibly among the entries without a page (§3), or not in this volume |
 
 </details>
 
@@ -1725,10 +1726,11 @@ not harvested, homilies, allocutions) is counted in §3.
 
 ## 12. Every match, with the index line it rests on
 
-<details><summary><b>1909</b> — 2 matched</summary>
+<details><summary><b>1909</b> — 3 matched</summary>
 
 | Reference | Category | Document | By | Index line |
 |---|---|---|---|---|
+| AAS 1 (1909) 7 (page read: ACTA_PAGE_READINGS) | Constitutiones Apostolicae | `mag:pius-x/sapienti-consilio-1908` | unique | `1908 Ian. 29 Constitutio « Sapienti Consilio » / DE ROMANA CURIA.` |
 | AAS 1 (1909) 5 (page recovered: fuzzy) | Constitutiones Apostolicae | `mag:pius-x/promulgandi-1908` | incipit-month | ` Sept. Constitutio « Promulgandi », de promulgatione legum / et evulgatione actorum S. Sedis` |
 | AAS 1 (1909) 333 (page recovered: unique) | Litterae Encyclicae | `mag:pius-x/communium-rerum-1909` | unique | ` Apr. 21 Litt. encycl. « Communium rerum », de saecularibus / solemniis in honorem S. Anselmi, Episcopi et Eccle­ / siae Doctoris` |
 
