@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { pagelessKey, parseIndexGeneralis, latinDate, formulaNear, findIncipit, recoverPages, applyPageRows } from '../src/acta/recover.js';
-import { parseActaIndex } from '../src/acta/index.js';
+import { parseActaIndex, type ActaEntry, type ActaParseResult, type PagelessEntry } from '../src/acta/index.js';
 
 describe('pagelessKey', () => {
   it('keys a pageless entry by date, category, incipit and the head of its description', () => {
@@ -295,5 +295,31 @@ describe('applyPageRows', () => {
   it('refuses a row whose entry the parser no longer opens', () => {
     expect(() => applyPageRows(parse(), [{ key: '1921-01-06|LITTERAE ENCYCLICAE|Sacra propediem|Something else', page: 33, source: 'recovered' }], 'aas-13-1921.pages.json'))
       .toThrow(/stale page row .* aas-13-1921\.pages\.json/);
+  });
+  // Controller ruling 13: applyPageRows inserts a recovered entry into its own pope/category
+  // group instead of resorting `entries` -- a full resort would reorder the parser's
+  // category-grouped entries, which the category-by-category reports and create.ts depend on.
+  const withPage = (e: PagelessEntry, page: number): ActaEntry => ({ ...e, page }) as ActaEntry;
+  const buildResult = (entries: ActaEntry[], pageless: PagelessEntry[]): ActaParseResult => ({
+    volume: 13, year: 1921, entries, pageless, unseenHeadings: [], unmappedPopes: [], popeHeadings: [], skippedParts: [], defects: [],
+    stats: { lines: 0, pageLines: 0, harvestedPageLines: 0, harvestedEntries: 0, dateLines: 0, entries: entries.length, monthOnly: 0, withoutPage: pageless.length, subItems: 0, translations: 0, consumed: 0, recovered: 0 },
+  });
+  it('inserts a recovered entry into its own category group, before the first later-dated entry of that group, leaving other groups and pre-existing order untouched', () => {
+    const a1 = withPage(entry('1921-01-01', 'LITTERAE ENCYCLICAE', 'Alpha primum'), 10);
+    const a3 = withPage(entry('1921-03-01', 'LITTERAE ENCYCLICAE', 'Alpha tertium'), 30);
+    const b1 = withPage(entry('1921-02-01', 'LITTERAE APOSTOLICAE', 'Beta primum'), 20);
+    const a2 = entry('1921-02-15', 'LITTERAE ENCYCLICAE', 'Alpha secundum');
+    // The parser's own order (category by category, not date order across categories).
+    const r = buildResult([a1, a3, b1], [a2]);
+    const n = applyPageRows(r, [{ key: pagelessKey(a2), page: 50, source: 'recovered' }], 'test');
+    expect(n).toBe(1);
+    expect(r.entries.map((e) => e.incipit)).toEqual(['Alpha primum', 'Alpha secundum', 'Alpha tertium', 'Beta primum']);
+  });
+  it('appends a recovered entry at the end when its pope/category opens no group among the entries', () => {
+    const a1 = withPage(entry('1921-01-01', 'LITTERAE ENCYCLICAE', 'Alpha primum'), 10);
+    const c1 = entry('1921-01-15', 'EPISTOLAE', 'Gamma primum');
+    const r = buildResult([a1], [c1]);
+    applyPageRows(r, [{ key: pagelessKey(c1), page: 15, source: 'recovered' }], 'test');
+    expect(r.entries.map((e) => e.incipit)).toEqual(['Alpha primum', 'Gamma primum']);
   });
 });

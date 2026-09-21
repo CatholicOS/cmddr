@@ -27,11 +27,34 @@ export const pagelessKey = (e: { date: string; category: string; incipit: string
 export const sidecarPath = (source: Pick<ActaSource, 'file'>): string => source.file.replace(/\.txt$/, '.pages.json');
 
 /**
+ * Where a recovered entry lands among `entries` that share its pope and category
+ * (controller ruling 13): right after the last such entry whose date does not follow
+ * it -- i.e. before the first later-dated one of the group; before the group's first
+ * entry when every one of the group is later-dated; appended at the end when the pope
+ * and category open no group at all. Every pre-existing entry keeps its position
+ * relative to every other pre-existing entry -- only the recovered entry moves.
+ */
+function groupInsertionIndex(entries: readonly ActaEntry[], entry: ActaEntry): number {
+  let firstOfGroup = -1;
+  let lastNotLater = -1;
+  for (let i = 0; i < entries.length; i++) {
+    const e = entries[i]!;
+    if (e.pope !== entry.pope || e.category !== entry.category) continue;
+    if (firstOfGroup < 0) firstOfGroup = i;
+    if (e.date <= entry.date) lastNotLater = i;
+  }
+  if (firstOfGroup < 0) return entries.length;
+  return lastNotLater >= 0 ? lastNotLater + 1 : firstOfGroup;
+}
+
+/**
  * Give pageless entries their pages from sidecar rows or curated readings: each row's key
- * names a pageless entry, which becomes an entry with the page and `pageSource`, kept in
- * date order among the entries. A key no pageless entry answers to is a stale row -- the
- * fixture or the parser changed under it -- and a hard error, as a stale correction is.
- * Returns the number of entries moved.
+ * names a pageless entry, which becomes an entry with the page and `pageSource`, inserted
+ * into its own pope/category group (`groupInsertionIndex`) rather than resorted among all
+ * entries -- a full resort would reorder the parser's category-grouped entries, which a
+ * category-by-category report (create.ts, the reports) depends on. A key no pageless entry
+ * answers to is a stale row -- the fixture or the parser changed under it -- and a hard
+ * error, as a stale correction is. Returns the number of entries moved.
  */
 export function applyPageRows(result: ActaParseResult, rows: readonly { key: string; page: number; source: 'recovered' | 'reading' }[], label: string): number {
   let n = 0;
@@ -40,11 +63,10 @@ export function applyPageRows(result: ActaParseResult, rows: readonly { key: str
     if (i < 0) throw new Error(`stale page row ${row.key} in ${label}: no entry of the fixture is opened without a page under that key`);
     const [e] = result.pageless.splice(i, 1);
     const entry: ActaEntry = { ...e!, page: row.page, pageSource: row.source };
-    result.entries.push(entry);
+    result.entries.splice(groupInsertionIndex(result.entries, entry), 0, entry);
     result.stats.recovered++;
     n++;
   }
-  if (n > 0) result.entries.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : a.page - b.page));
   return n;
 }
 
