@@ -102,6 +102,9 @@ describe('the AAS category table', () => {
     expect(normaliseHeading('IV - LITTERAE APOSTOLICAE « MOTU PROPRIO» DATAE')).toBe('LITTERAE APOSTOLICAE «MOTU PROPRIO» DATAE');
     expect(normaliseHeading('MOTU PROPRIO DATAE^')).toBe('MOTU PROPRIO DATAE');
     expect(normaliseHeading('I. - CONSTITUTIONES APOSTOLICAE.')).toBe('CONSTITUTIONES APOSTOLICAE');
+    // AAS 16 (1924) 510: the OCR's `?` after the numeral, the one such heading of the fixtures (phase 2b-iii-b, Task 9).
+    expect(normaliseHeading('IV.?- MOTU PROPRIO')).toBe('MOTU PROPRIO');
+    expect(categoryForHeading('IV.?- MOTU PROPRIO')?.id).toBe('Litterae Apostolicae Motu proprio datae');
   });
 
   it('covers every heading every fixture prints (none is unseen)', () => {
@@ -110,17 +113,26 @@ describe('the AAS category table', () => {
     for (const [key, r] of parsed) expect(r.unseenHeadings, key).toEqual([]);
   });
 
-  it('is printed in the fixtures, row by row, except the anticipated Bullae', () => {
+  it('is printed in the fixtures, row by row, except the anticipated Bullae and Monitum (read only by the Index generalis, not the chronological index)', () => {
     const seen = new Set<string>();
     for (const r of loadActaIndexes().parsed.values()) for (const e of r.entries) seen.add(e.category);
     for (const c of ACTA_CATEGORIES) {
       const printed = c.headings.some((h) => seen.has(h));
-      expect(printed, c.id).toBe(c.id !== 'Bullae');
+      // `MONITUM` (AAS 4, 1912, 745) is a category of the *Index generalis rerum* only
+      // (recover.ts's parseIndexGeneralis reads it, for the 1912 *Ex litteris* / `AVVERTENZA.`
+      // notice at p. 695); the chronological index files that same act under `EPISTOLAE`, so
+      // no entry anywhere is ever categorised `MONITUM` and `seen` never carries it.
+      expect(printed, c.id).toBe(c.id !== 'Bullae' && c.id !== 'Monitum');
     }
     // And every heading listed is a heading line of some fixture (alone or joined to the
     // next line), so the table carries no guess: the exceptions are the spec's
-    // anticipated BULLAE and the correctly spelt BELLIGERANTIUM and OECUMENICI listed
-    // beside the 1917 and 1962 fixtures' OCR spellings.
+    // anticipated BULLAE, the correctly spelt BELLIGERANTIUM and OECUMENICI listed beside
+    // the 1917 and 1962 fixtures' OCR spellings, and the four headings phase 2b-iii-b (spec
+    // §10) read from the *Index generalis rerum* of the store's whole-volume text, not from
+    // the checked-in fixture (a chronological-index extract, which never carries them):
+    // CONSTITUTIONES (AAS 1, 1909, 833), MOTU PROPRJO (AAS 8, 1916, 497), ACTA SACRORUM
+    // CONSISTORIORUM (AAS 11, 1919, 491) and MONITUM (AAS 4, 1912, 745, `MONITUM, 695.`,
+    // glued to its page number, never bare even there).
     const printedLines = new Set<string>();
     for (const src of ACTA_SOURCES) {
       const lines = readFileSync(src.file, 'utf8').split(/\f|\n/).map((l) => l.trim()).filter((l) => l !== '');
@@ -130,7 +142,7 @@ describe('the AAS category table', () => {
       });
     }
     const unprinted = ACTA_CATEGORIES.flatMap((c) => c.headings).filter((h) => !printedLines.has(h));
-    expect(unprinted).toEqual(['ADHORTATIO AD POPULORUM BELLIGERANTIUM MODERATORES', 'BULLAE', 'IN SOLLEMNI RITU INEUNDI CONCILII OECUMENICI VATICANI SECUNDI']);
+    expect(unprinted).toEqual(['ADHORTATIO AD POPULORUM BELLIGERANTIUM MODERATORES', 'CONSTITUTIONES', 'MOTU PROPRJO', 'BULLAE', 'ACTA SACRORUM CONSISTORIORUM', 'IN SOLLEMNI RITU INEUNDI CONCILII OECUMENICI VATICANI SECUNDI', 'MONITUM']);
     void parseActaIndex;
   });
 });

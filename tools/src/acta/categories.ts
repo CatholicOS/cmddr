@@ -61,13 +61,14 @@ export interface ActaCategory {
 /**
  * Case-fold a heading, collapse whitespace, drop the roman numeral and dash prefix -- in
  * the OCR's readings of the numeral too (`IY. -`, `XJV -`, `i. -`, `I r-`; AAS 25, 26, 42,
- * 36 of 1933-1950) -- and the OCR's trailing quote or hyphen (`LITTERAE DECRETALES'`,
- * `BULLA DOGMATICA-`; AAS 28, 42) and its accents (`EPISTULA ENCÌCLICA`, AAS 41).
+ * 36 of 1933-1950; `T. -` for `I. -`, AAS 14 (1922) 705) -- and the OCR's trailing quote
+ * or hyphen (`LITTERAE DECRETALES'`, `BULLA DOGMATICA-`; AAS 28, 42) and its accents
+ * (`EPISTULA ENCÌCLICA`, AAS 41).
  */
 export function normaliseHeading(text: string): string {
   return text
     .normalize('NFD').replace(/\p{M}/gu, '')   // the OCR's accents (`EPISTULA ENCÌCLICA`, AAS 41)
-    .replace(/^\s*[IVXLJYivxl1]+(?:[.-]?\s*[r•]?\s*[–-]\s*|\.\s+(?=[A-Z]))/, '')   // `XI- - ALLOCUTIONES` (AAS 66, 1974); `I. LITTERAE ENCYCLICAE` (AAS 91, 1999)
+    .replace(/^\s*[IVXLJYTivxl1]+(?:[.-]?\s*[r•?]?\s*[–-]\s*|\.\s+(?=[A-Z]))/, '')   // `XI- - ALLOCUTIONES` (AAS 66, 1974); `I. LITTERAE ENCYCLICAE` (AAS 91, 1999); `T. -` for `I. -` (AAS 14, 1922); `IV.?- MOTU PROPRIO` (AAS 16, 1924)
     .replace(/\s+/g, ' ')
     .replace(/«\s+/g, '«').replace(/\s+»/g, '»')   // `« MOTU PROPRIO» DATAE` (AAS 68, 1976)
     .replace(/[\s,.:'’^\[|\\-]+$/, '')   // the OCR's `^` after a heading (AAS 52, 1960); the scan margin's `[` (AAS 89 (1997) 890)
@@ -86,8 +87,11 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // multiplicibus curis*; 1950: *Anni sacri*, *Summi maeroris*, *Mirabile illud*) and the
   // singular `EPISTULA ENCYCLICA` (1933: *Dilectissima Nobis*; 1936: *Vigilanti cura*;
   // 1940-1954), every one of them on the encyclicals shelf of its pope; the OCR of AAS 41
-  // (1949) reads `II - EPISTULA ENCÌCLICA` (*Redemptoris nostri cruciatus*).
-  { id: 'Litterae Encyclicae', headings: ['LITTERAE ENCYCLICAE', 'EPISTULA ENCYCLICA', 'EPISTULAE ENCYCLICAE', 'EPISTULA ENCICLICA'],
+  // (1949) reads `II - EPISTULA ENCÌCLICA` (*Redemptoris nostri cruciatus*). The volumes of
+  // 1919 and 1924 print the O spelling `EPISTOLAE ENCYCLICAE` (AAS 11, 1919: *In hac tanta*)
+  // and `EPISTOLA ENCYCLICA` (AAS 16, 1924: *Maximam gravissimamque*).
+  { id: 'Litterae Encyclicae',
+    headings: ['LITTERAE ENCYCLICAE', 'EPISTULA ENCYCLICA', 'EPISTULAE ENCYCLICAE', 'EPISTULA ENCICLICA', 'EPISTOLA ENCYCLICA', 'EPISTOLAE ENCYCLICAE'],
     classes: [{ genre: 'encyclical' }], harvested: 'yes' },
   // The apost_exhortations shelf. The index prints the singular when the year has one and
   // qualifies the post-synodal ones (Amoris laetitia, Christus vivit, Querida Amazonia).
@@ -109,7 +113,12 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // 2015-2016 print the incipit instead. AAS 42 (1950) heads the definition of the
   // Assumption `BULLA DOGMATICA` (*Munificentissimus Deus*, 1 November 1950), which
   // vatican.va's apost_constitutions shelf carries (`mag:pius-xii/munificentissimus-deus-1950`).
-  { id: 'Constitutiones Apostolicae', headings: ['CONSTITUTIONES APOSTOLICAE', 'BULLA DOGMATICA'],
+  // The volumes of 1913, 1922 and 1924 head a single constitution with the singular
+  // `CONSTITUTIO APOSTOLICA` (AAS 5, 1913: *In praecipuis*; AAS 16, 1924: *Dominici gregis
+  // cura*), the OCR once reading the numeral `I.` as `T.` (AAS 14, 1922: *Ad christifidelium
+  // bonum*). The *Index generalis rerum* of AAS 1 (1909) 833 heads the bare plural
+  // `CONSTITUTIONES, 5, 7,` (AAS 2, 1910, and AAS 3, 1911, read the same).
+  { id: 'Constitutiones Apostolicae', headings: ['CONSTITUTIONES APOSTOLICAE', 'BULLA DOGMATICA', 'CONSTITUTIO APOSTOLICA', 'CONSTITUTIONES'],
     classes: [{ genre: 'papal-bull', requires: 'apostolic-constitution' }], harvested: 'yes' },
   // The motu_proprio shelf, merged into apost_letters where a document is filed on both:
   // an apostolic-letter bearing `motu-proprio`. A document vatican.va filed on
@@ -123,9 +132,10 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // `mag:benedict-xvi/ubicumque-et-semper-2010`) and the letter to seminarians of 18
   // October 2010 `III – EPISTULAE APOSTOLICAE « MOTU PROPRIO » DATAE`, beside its `IV –
   // LITTERAE APOSTOLICAE « MOTU PROPRIO » DATAE` (*Omnium in mentem*): the same class.
+  // The *Index generalis rerum* of AAS 8 (1916) 497 reads `MOTU PROPRJO, 387.` (`J` for `I`).
   { id: 'Litterae Apostolicae Motu proprio datae',
     headings: ['LITTERAE APOSTOLICAE MOTU PROPRIO DATAE', 'LITTERAE APOSTOLICAE «MOTU PROPRIO» DATAE', 'MOTU PROPRIO', 'MOTTI PROPRIO',
-      'EPISTULAE APOSTOLICAE «MOTU PROPRIO» DATAE'],
+      'EPISTULAE APOSTOLICAE «MOTU PROPRIO» DATAE', 'MOTU PROPRJO'],
     classes: [{ genre: 'apostolic-letter', requires: 'motu-proprio' }], harvested: 'yes' },
   // The apost_letters shelf proper: beatification letters and the Latin-incipit tail. A
   // document bearing `motu-proprio` belongs to the category above, so it is excluded here.
@@ -187,7 +197,10 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // AAS 19 (1927) 451 and 22 (1930) 607 read the plural as `IV. - CHTRO GRAPHIS` and `VI. -
   // CHIEOGRAPHI` (Pius XI's French and Italian letters to cardinals: *C'est de tout cœur*,
   // 5 January 1927; *Ci commuovono profondamente*, 2 February 1930, p. 89).
-  { id: 'Chirographa', headings: ['CHIROGRAPHA', 'CHIROGRAPHUM', 'CHIROGRAPHI', 'CHIROGRAPHE', 'CHIROGRAPHUS', 'CHTRO GRAPHIS', 'CHIEOGRAPHI'],
+  // AAS 14 (1922) 703 heads the same class `II. - LITTERAE AUTOGRAPHAE` (two Italian
+  // letters of Benedict XV: *Con vivo piacere*, to the archbishop of Genoa; *Il vivissimo
+  // desiderio*, to card. Gasparri, both on the Genoa peace conference).
+  { id: 'Chirographa', headings: ['CHIROGRAPHA', 'CHIROGRAPHUM', 'CHIROGRAPHI', 'CHIROGRAPHE', 'CHIROGRAPHUS', 'CHTRO GRAPHIS', 'CHIEOGRAPHI', 'LITTERAE AUTOGRAPHAE'],
     classes: [], harvested: 'no' },
   // Papal decrees have no row; vatican.va files several of these on the motu_proprio
   // shelf, where the registry carries them as apostolic-letter + motu-proprio.
@@ -210,8 +223,10 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
     headings: ['IN SOLLEMNI CANONIZATIONE', 'SOLLEMNIA CANONIZATIONUM', 'SOLLEMNES CANONIZATIONIS', 'SOLLEMNES CANONIZATIONES', 'IN SOLLEMNIBUS CANONIZATIONIBUS',
       'SOLLEMNIA CANONIZATIONIS', 'SOLLEMNIS CANONIZATIO'],
     classes: [], harvested: 'no' },
-  // The speeches shelf is out of scope. The OCR of AAS 40 (1948) reads `ALIOCUTIONES`.
-  { id: 'Allocutiones', headings: ['ALLOCUTIONES', 'ALIOCUTIONES'], classes: [{ genre: 'discourse-address' }], harvested: 'no' },
+  // The speeches shelf is out of scope. The OCR of AAS 40 (1948) reads `ALIOCUTIONES`. The
+  // *Index generalis rerum* of AAS 6 (1914) 729 and AAS 8 (1916) 497 head a single
+  // allocution with the singular `ALLOCUTIO` (`ALLOCUTIO, 694.`; `ALLOCUTIO, 465.`).
+  { id: 'Allocutiones', headings: ['ALLOCUTIONES', 'ALIOCUTIONES', 'ALLOCUTIO'], classes: [{ genre: 'discourse-address' }], harvested: 'no' },
   // Pius XII's *Hortationes*: the Lenten address to the parish priests and preachers of
   // Rome (1945 `IUSTRUCTIO PASTORALIS`, the OCR's *Instructio*; 1946 `HORTATIO
   // PASTORALIS`, *Ad Parochos Urbis et concionatores sacri temporis quadragesimalis*, 16
@@ -231,7 +246,10 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // prayer) and, in 1940, a sermon at the Minerva filed under the same word; no row.
   // AAS 74 (1982) 1316 heads John Paul II's Holy Thursday prayer to priests (8 April 1982,
   // p. 521) `III - PRECATIO SOLLEMNIS`: a prayer, filed with the others.
-  { id: 'Orationes', headings: ['ORATIO', 'PRECATIO SOLLEMNIS'], classes: [], harvested: 'no' },
+  // AAS 13 (1921) 571 heads the same class `VI. - PRECATIONUM FORMULAE.` (two prayers for
+  // peace, in Italian: *O Dio di bontà*, *O Gesù*), the only prayer heading that volume
+  // prints (no `ORATIO`), so the same row.
+  { id: 'Orationes', headings: ['ORATIO', 'PRECATIO SOLLEMNIS', 'PRECATIONUM FORMULAE'], classes: [], harvested: 'no' },
   // The early volumes' *Sermones* (1909 `VI. - SERMONES.`; 1917 `VII. - SERMO.`, to the
   // Lenten preachers of Rome; 1931 `VIII. - SERMO`, in the consistory hall after a decree
   // on heroic virtues) are addresses in the vernacular, the class of the speeches shelf,
@@ -298,8 +316,9 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // heading among the pope's categories as `IX. - ACTA SACRI CONSISTORII.` (the parser
   // does not take it for a part heading); 1958 prints `IX - SACRA CONSISTORIA`; the
   // volumes of 1934-1948 print `SACRUM CONSISTORIUM` for a year with one, and the OCR of
-  // AAS 43 (1951) `SACKA CONSISTORIA`.
-  { id: 'Consistoria', headings: ['CONSISTORIA', 'CONSISTORIUM', 'ACTA SACRI CONSISTORII', 'SACRA CONSISTORIA', 'SACRUM CONSISTORIUM', 'SACKA CONSISTORIA'], classes: [], harvested: 'no' },
+  // AAS 43 (1951) `SACKA CONSISTORIA`. The *Index generalis rerum* of AAS 11 (1919) 491
+  // reads `ACTA SACRORUM CONSISTORIORUM, R97-108, 257-261, 485-489.`.
+  { id: 'Consistoria', headings: ['CONSISTORIA', 'CONSISTORIUM', 'ACTA SACRI CONSISTORII', 'SACRA CONSISTORIA', 'SACRUM CONSISTORIUM', 'SACKA CONSISTORIA', 'ACTA SACRORUM CONSISTORIORUM'], classes: [], harvested: 'no' },
   // Concordats and agreements with states; no row. Singular in 1958 and 1978; `SOLLEMNIS
   // CONVENTIO` for the Austrian concordat (AAS 26, 1934) and the Spanish (AAS 43, 1951),
   // `SOLLEMNES CONVENTIONES` in AAS 32 (1940).
@@ -400,6 +419,13 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // competence and constitution of the Congregation for Extraordinary Ecclesiastical
   // Affairs -- a notice of the Curia's organisation, no class of the registry's.
   { id: 'Notificatio', headings: ['NOTIFICATIO'], classes: [], harvested: 'no' },
+  // The *Index generalis rerum* of AAS 4 (1912) 745 reads `MONITUM, 695.`: p. 695 heads it
+  // (in Italian) `AVVERTENZA.` -- a Vatican notice, appended after Pius X's letter to
+  // card. Kopp, that certain Italian Catholic newspapers (*L'Avvenire d'Italia*, *Il
+  // Momento*, *Il Corriere d'Italia*, *Il Corriere di Sicilia*, *L'Italia*) are not
+  // recognised as conforming to the directives of the letter to the Lombard episcopate of
+  // 1 July 1911. No class of the registry's.
+  { id: 'Monitum', headings: ['MONITUM'], classes: [], harvested: 'no' },
   // AAS 77 (1985) 1202: `IX - LITTERAE MUTUO DATAE`, the letters exchanged between King Hassan
   // II of Morocco and John Paul II on the statute of the Catholic Church in Morocco (5
   // February 1984, p. 712); a diplomatic exchange, no row.

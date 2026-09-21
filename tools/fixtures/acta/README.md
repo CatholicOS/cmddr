@@ -1,4 +1,4 @@
-# The AAS index fixtures: the *Index generalis* PDFs of 2010–2014 and 2015–2024, the sample volumes of 1909–1978, and the volumes of 1926–2002
+# The AAS index fixtures: the *Index generalis* PDFs of 2010–2014 and 2015–2024, and the volumes of 1909–2002
 
 The extracted text of the *Index documentorum chronologico ordine digestus* of the *Acta
 Apostolicae Sedis*, one file per source, one page per form feed (`\f`), from two kinds of
@@ -19,9 +19,9 @@ source on vatican.va (`https://www.vatican.va/archive/aas/index_it.htm`, which
   Pius XII) are phase 2b-ii-a, the nineteen of 1959–1977 (AAS 51–69, John XXIII and Paul
   VI) phase 2b-ii-b, and the twenty-four of 1979–2002 (AAS 71–94, John Paul II) with the
   index PDFs of 2010, 2011, 2013 and 2014 (Benedict XVI, and Francis's first year) phase
-  2b-ii-c (spec §9); 1926–1930, whose OCR kept the page column, are 2b-iii-a, and 1910–1925,
-  whose OCR lost it on most pages, wait for the page recovery of 2b-iii-b (spec §10);
-  2003–2009 have no index online.
+  2b-ii-c (spec §9); 1926–1930, whose OCR kept the page column, are 2b-iii-a, and
+  1909–1925 are phase 2b-iii-b (spec §10), their pages recovered from the volume bodies
+  into the sidecars below; 2003–2009 have no index online.
 
 They are the input of the AAS join (acta reference spec, `docs/superpowers/specs/2026-09-12-acta-reference-design.md`
 §4.1): `tools/src/acta/index.ts` parses the *Acta Summi Pontificis* parts, and `npm run
@@ -35,9 +35,24 @@ retrieval date and parser options; update it with this table.
 |---|---|---|---|---|---|
 | 2015–2024 index PDFs | `aas-indice-{year}.txt` | **2026-09-12** | pypdf 6.14.2 (python3), default mode | whole: 2015: 96 · 2016: 72 · 2017: 88 · 2018: 96 · 2019: 96 · 2020: 64 · 2021: 80 · 2022: 88 · 2023: 88 · 2024: 96 | — |
 | 2012 index PDF (`AAS-indice2012.pdf`) | `aas-indice-2012.txt` | **2026-09-13** | pypdf 6.14.2, default mode | whole: 64 | — |
-| AAS 1 (1909) | `aas-01-1909.txt` | **2026-09-13** | pypdf 6.14.2, layout mode | 835–860 (26) | 908 |
-| AAS 9 part I (1917) | `aas-09-1917-I.txt` | **2026-09-13** | pypdf 6.14.2, layout mode (extracted before the interleaving fallback of 2b-ii-b, which now selects the default mode for p. 603; re-extracted in 2b-iii-b, with the page recovery) | 595–607 (13) | 639 |
+| AAS 1 (1909) | `aas-01-1909.txt` | **2026-09-20** | pypdf 6.14.2, layout mode (re-extracted with the interleaving fallback) | 835–860 (26) | 908 |
+| AAS 9 part I (1917) | `aas-09-1917-I.txt` | **2026-09-20** | pypdf 6.14.2, layout mode (re-extracted with the interleaving fallback); p. 603 default mode | 595–607 (13) | 639 |
 | AAS 9 part II (1917) | — | — | — | **no chronological index**: the volume is the *Codex Iuris Canonici* (594 pages), with *Providentissima Mater Ecclesia* (27 May 1917, p. 5) before it and the Code's own index after | 594 |
+| AAS 2 (1910) | `aas-02-1910.txt` | **2026-09-20** | pypdf 6.14.2, layout mode | 981–999 (19) | 1046 |
+| AAS 3 (1911) | `aas-03-1911.txt` | **2026-09-20** | pypdf 6.14.2, layout mode | 675–690 (16) | 736 |
+| AAS 4 (1912) | `aas-04-1912.txt` | **2026-09-20** | pypdf 6.14.2, layout mode | 747–761 (15) | 807 |
+| AAS 5 (1913) | `aas-05-1913.txt` | **2026-09-20** | pypdf 6.14.2, layout mode | 565–578 (14) | 624 |
+| AAS 6 (1914) | `aas-06-1914.txt` | **2026-09-20** | pypdf 6.14.2, layout mode; pp. 731, 732, 736 default mode | 731–744 (14) | 795 |
+| AAS 7 (1915) | `aas-07-1915.txt` | **2026-09-20** | pypdf 6.14.2, layout mode; p. 610 default mode | 599–610 (12) | 675 |
+| AAS 8 (1916) | `aas-08-1916.txt` | **2026-09-20** | pypdf 6.14.2, layout mode; pp. 509–527, 530–546 default mode | 499–548 (50) | 548 |
+| AAS 10 (1918) | `aas-10-1918.txt` | **2026-09-20** | pypdf 6.14.2, layout mode; p. 535 default mode | 533–544 (12) | 578 |
+| AAS 11 (1919) | `aas-11-1919.txt` | **2026-09-20** | pypdf 6.14.2, layout mode; p. 498 default mode | 493–504 (12) | 536 |
+| AAS 12 (1920) | `aas-12-1920.txt` | **2026-09-20** | pypdf 6.14.2, layout mode; pp. 613–621, 623, 625–629, 631–638, 640–642 default mode | 601–643 (43) | 643 |
+| AAS 13 (1921) | `aas-13-1921.txt` | **2026-09-20** | pypdf 6.14.2, layout mode; p. 584 default mode | 573–586 (14) | 631 |
+| AAS 14 (1922) | `aas-14-1922.txt` | **2026-09-20** | pypdf 6.14.2, layout mode; pp. 707, 708 default mode | 705–719 (15) | 774 |
+| AAS 15 (1923) | `aas-15-1923.txt` | **2026-09-20** | pypdf 6.14.2, layout mode | 623–637 (15) | 676 |
+| AAS 16 (1924) | `aas-16-1924.txt` | **2026-09-20** | pypdf 6.14.2, layout mode | 509–522 (14) | 564 |
+| AAS 17 (1925) | `aas-17-1925.txt` | **2026-09-20** | pypdf 6.14.2, layout mode (the OCR reads the title's first line as `II`; the locator admits the second alone) | 673–686 (14) | 728 |
 | AAS 18 (1926) | `aas-18-1926.txt` | **2026-09-18** | pypdf 6.14.2, layout mode | 533–544 (12) | 579 |
 | AAS 19 (1927) | `aas-19-1927.txt` | **2026-09-18** | pypdf 6.14.2, layout mode | 451–462 (12) | 495 |
 | AAS 20 (1928) | `aas-20-1928.txt` | **2026-09-18** | pypdf 6.14.2, layout mode | 423–433 (11) | 464 |
@@ -131,6 +146,30 @@ DOCUMENTORUM`; AAS 32 (1940) `ÍNDICES NOMINUM`, which the first extraction ran 
 index of names), AAS 46 (1954) sets a full stop after it (`INDEX. DOCUMENTORUM`), and pypdf's
 default mode drops the heading of AAS 25's first index page altogether, so the script
 searches the layout mode when the default finds nothing.
+
+## The page sidecars (phase 2b-iii-b)
+
+`aas-{vol}-{year}[-{part}].pages.json`, one per volume of 1909–1925, written by
+`npm run recover -- <key>` from the fixture and the whole-volume text in the local store
+(`tools/fetch-acta.sh text <year>`; acta volumes spec §10.3). Each `rows[]` entry names a
+pageless entry by its key (`date|category|incipit|description head`), the page recovered,
+the rule that accepted it (`unique`: the only hit within the category's runs of the *Index
+generalis actorum*; `dated`: the hit whose dating formula gives the entry's date, with
+`fuzzy: true` on the row when that hit was found with one OCR character per word admitted;
+`fuzzy`: the only such hit), the body line and the running header quoted, and the formula
+where one settled it. `unrecovered[]` lists the rest with a reason (`no-incipit`, `none`,
+`several`, `outside-runs`, `header-mismatch`, and `claimants`: the page was given to, or is
+held by, another entry of the same category and incipit -- a page goes to one claimant
+only, the page listed as the candidate). An incipit two or more entries of one category
+carry, the volume's paged entries counted, is never taken by the `unique` or `fuzzy` rule.
+The join reads the sidecar and never the store; a row whose entry the parser no
+longer opens is a hard error. Pages read by hand for the acts the recovery leaves
+(`ACTA_PAGE_READINGS` in `tools/src/acta/curation.ts`, keyed `{source}|{key}`, each row
+quoting the page the act opens on and its dating formula) are consulted before the sidecar
+and outrank it; the curated references (`ACTA_CURATED_REFERENCES`) are written after the
+join: *Providentissima Mater Ecclesia* (AAS 9-II (1917) 5, the part having no index) and *Ubi
+arcano Dei consilio* (AAS 14 (1922) 673, whose index line opens no entry; the row names and
+displaces the match of the Italian printing, AAS 15 (1923) 5).
 
 ## The volumes: what the `-ocr.pdf` files are, and the two extraction modes
 

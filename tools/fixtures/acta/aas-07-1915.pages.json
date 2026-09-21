@@ -1,0 +1,587 @@
+{
+  "source": "1915",
+  "generated": "2026-09-21",
+  "text": "~/development/sources/AAS/txt/aas-07-1915.txt (675 pages)",
+  "rows": [
+    {
+      "key": "1914-12-20|EPISTOLAE|Laetamur plane|Ad R. D. sac. Eugenium Couet, moderatorem generalem Congrega",
+      "date": "1914-12-20",
+      "category": "EPISTOLAE",
+      "incipit": "Laetamur plane",
+      "page": 25,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Laetamur",
+      "header": "Acta Benedicti PP. XV 25"
+    },
+    {
+      "key": "1914-12-31|LITTERAE APOSTOLICAE|Romanorum Pontificum|Cruciatae Bulla ad decem annos pro locis Lusitanae ditioni s",
+      "date": "1914-12-31",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Romanorum Pontificum",
+      "page": 549,
+      "rule": "unique",
+      "bodyLine": "Romanorum Pontificum usus atque institutum semper fuit, nationes",
+      "header": "Annus Til - Vol. VII Die 20 Decembris 1915 Num. 20"
+    },
+    {
+      "key": "1914-12-31|MOTU PROPRIO|Non multo post|De romana sancti Thomae Academia",
+      "date": "1914-12-31",
+      "category": "MOTU PROPRIO",
+      "incipit": "Non multo post",
+      "page": 5,
+      "rule": "unique",
+      "bodyLine": "Non multo post editam Encyclicam Epistolam A eterni Patris de philosophia christiana ad mentem Angelici Doctoris instauranda, decessor Noster fel. rec. Leo XIII ad Antoninum",
+      "header": "Annus VII - Vol. YII Die 15 Ianuarii 1915 Num. 1"
+    },
+    {
+      "key": "1915-02-01|CONSTITUTIONES APOSTOLICAE|Ex actis tempore|De Dioecesibus Suburbicariis",
+      "date": "1915-02-01",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Ex actis tempore",
+      "page": 229,
+      "rule": "unique",
+      "bodyLine": "Ex actis tempore quidem postremis, sed pondere atque utilitate praecipuis Pii X sanctissimae memoriae Summi Pontificis",
+      "header": "Annus TU - Yol. TU Die 21 Maii 1915 Num. 9"
+    },
+    {
+      "key": "1915-03-21|EPISTOLAE|Binos libros|Ad R. D. Franciscum Naval, sacerdotem e Missionalibus Filiis",
+      "date": "1915-03-21",
+      "category": "EPISTOLAE",
+      "incipit": "Binos libros",
+      "page": 170,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Binos libros",
+      "header": "170 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1915-03-21|EPISTOLAE|Pergrato Nos|Ad R. P. Iosephum Bellino, de exemplari operis Gesù Cristo n",
+      "date": "1915-03-21",
+      "category": "EPISTOLAE",
+      "incipit": "Pergrato Nos",
+      "page": 171,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Pergrato",
+      "header": "Acta Benedicti PP. XV 171"
+    },
+    {
+      "key": "1915-04|EPISTOLAE|Decessorem Nostrum|Ad R. P. D. Iosephum Scatti, episcopum Savonensem et Naulens",
+      "date": "1915-04",
+      "category": "EPISTOLAE",
+      "incipit": "Decessorem Nostrum",
+      "page": 201,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Decessorem Nostrum sanctae memoriae Pium X scimus anno superiore, datis",
+      "header": "Acta Benedicti PP. XV 201"
+    },
+    {
+      "key": "1915-04|EPISTOLAE|Decessori Nostro|Ad archiepiscopos et episcopos",
+      "date": "1915-04",
+      "category": "EPISTOLAE",
+      "incipit": "Decessori Nostro",
+      "page": 257,
+      "rule": "unique",
+      "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Decessori Nostro f. r. Pio X, Australianam Legationem instituenti, ea profecto",
+      "header": "Acta Benedicti PP. XV 257"
+    },
+    {
+      "key": "1915-04|EPISTOLAE|Libenter tuas|Ad R. D. Matthaeum Crawley Boevey, sacerdotem e Congr. Ss. C",
+      "date": "1915-04",
+      "category": "EPISTOLAE",
+      "incipit": "Libenter tuas",
+      "page": 203,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Libenter tuas",
+      "header": "Acta Benedicti PP. XV 203"
+    },
+    {
+      "key": "1915-04|EPISTOLAE|Memoriam etiam nunc|Ad Ludovicum N. card. Bégin, Quebecensium archiepiscopum, de",
+      "date": "1915-04",
+      "category": "EPISTOLAE",
+      "incipit": "Memoriam etiam nunc",
+      "page": 256,
+      "rule": "fuzzy",
+      "bodyLine": "Dilecte Fili Noster, salutem et apostolicam benedictionem. — Memoria etiam nunc tenemus laetitiae signa observantiaeque testimonia, quibus",
+      "header": "256 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1915-04|EPISTOLAE|Munusculum tuum|Ad R. P. D. Paschalem Morganti, archiep. Ravennatensium, gra",
+      "date": "1915-04",
+      "category": "EPISTOLAE",
+      "incipit": "Munusculum tuum",
+      "page": 201,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Munusculum tuum non ob exhibita tantum pietatis in Nos tuae officia",
+      "header": "Acta Benedicti PP. XV 201"
+    },
+    {
+      "key": "1915-04|EPISTOLAE|Quod tu|Ad R. P. D. Michaelem F. Eorum, episcopum Trevirensem, de li",
+      "date": "1915-04",
+      "category": "EPISTOLAE",
+      "incipit": "Quod tu",
+      "page": 258,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Quod",
+      "header": "258 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1915-04|EPISTOLAE|Vertitur tibi|Ad Andream card. Ferrari, archiep.",
+      "date": "1915-04",
+      "category": "EPISTOLAE",
+      "incipit": "Vertitur tibi",
+      "page": 255,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili Noster, salutem et apostolicam benedictionem. — Vertitur",
+      "header": "Acta Benedicti PP. XV 255"
+    },
+    {
+      "key": "1915-05-30|EPISTOLAE|Litteras nuper|Ad Ioachim card. Arcoverde de Aibuquerque Cavalcanti, archie",
+      "date": "1915-05-30",
+      "category": "EPISTOLAE",
+      "incipit": "Litteras nuper",
+      "page": 405,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Litteras nuper accepimus, quas ad nos dedistis NeoFriburgi congregati: in iisque habuimus cur laetaremur cum ex pietatis",
+      "header": "Acta Benedicti PP. XV 405"
+    },
+    {
+      "key": "1915-05|EPISTOLAE|Communes litteras|Ad. Franciscum card. de Bettinger, archiep. Monacensem ac Fr",
+      "date": "1915-05",
+      "category": "EPISTOLAE",
+      "incipit": "Communes litteras",
+      "page": 259,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Communes litteras, quas nuper congregati ad Nos",
+      "header": "Acta Benedicti PP. XV 259"
+    },
+    {
+      "key": "1915-05|EPISTOLAE|Cum religiosae familiae|Ad R. P. D. Franciscum •",
+      "date": "1915-05",
+      "category": "EPISTOLAE",
+      "incipit": "Cum religiosae familiae",
+      "page": 260,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, religiose vir, salutem et apostolicam benedictionem. —",
+      "header": "260 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1915-05|EPISTOLAE|Era Nostro proposito|Ad Seraphinus card. Vannutelli, episcopum Ostiem, Portuen. e",
+      "date": "1915-05",
+      "category": "EPISTOLAE",
+      "incipit": "Era Nostro proposito",
+      "page": 253,
+      "rule": "unique",
+      "bodyLine": "Era Nostro proposito convocare nei primi giorni del prossimo giugno il sacro Concistoro per provvedere alle molte chiese attualmente",
+      "header": "Annus TU - Yol. VII Die 1 Iunii 1915 Num. 10"
+    },
+    {
+      "key": "1915-05|EPISTOLAE|Hisce te|Ad Antonium card. Mendes Bello, patriarcham Lisbonensem, de ",
+      "date": "1915-05",
+      "category": "EPISTOLAE",
+      "incipit": "Hisce te",
+      "page": 285,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili Noster, salutem et apostolicam benedictionem. — Hisce",
+      "header": "Annus TH.- Vol. YIÏ Pie 21 Iunii 1915 Num. 11"
+    },
+    {
+      "key": "1915-05|EPISTOLAE|Susceptum a te|Ad R. D. Silverium a S. Teresia, sac. Ordinis Carmelitarum E",
+      "date": "1915-05",
+      "category": "EPISTOLAE",
+      "incipit": "Susceptum a te",
+      "page": 260,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Susceptum",
+      "header": "260 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1915-06|EPISTOLAE|Grata recordatione|Ad R. D. Georgium Triller, antistitem urbanum, praesidem coe",
+      "date": "1915-06",
+      "category": "EPISTOLAE",
+      "incipit": "Grata recordatione",
+      "page": 405,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Grata recordatione te collegasque tuos prosequi humanitatis officia, quibus, alias,",
+      "header": "Acta Benedicti PP. XV 405"
+    },
+    {
+      "key": "1915-06|EPISTOLAE|Propediem quinquaginta|Ad Franciscum a Paula",
+      "date": "1915-06",
+      "category": "EPISTOLAE",
+      "incipit": "Propediem quinquaginta",
+      "page": 286,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Propediem quinquaginta ab inito sacerdotio te completurum annos equidem",
+      "header": "286 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1915-06|EPISTOLAE|Reddidit Nobis|Ad R. P. D. Marianum Antonium",
+      "date": "1915-06",
+      "category": "EPISTOLAE",
+      "incipit": "Reddidit Nobis",
+      "page": 406,
+      "rule": "unique",
+      "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Reddidit Nobis dilectus filius Iosephus Gallardo sacerdos, simul cum excellentissimo xuo, qui Reipublicae Argentinae apud nos personam gerit,",
+      "header": "406 Acia Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1915-07-11|CONSTITUTIONES APOSTOLICAE|Quum iampridem|De capellanis seu cantoribus choralibus Basilicae Liberianae",
+      "date": "1915-07-11",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Quum iampridem",
+      "page": 317,
+      "rule": "unique",
+      "bodyLine": "Quum iampridem haud Nos lateat Venerabilem Fratrem",
+      "header": "Annus YIÏ - Vol. \"VII Die 20 Iulii 1915 Num. 12"
+    },
+    {
+      "key": "1915-08-10|CONSTITUTIONES APOSTOLICAE|Incruentum altaris|De sacro ter peragendo in die sollemnis Commemorationis omni",
+      "date": "1915-08-10",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Incruentum altaris",
+      "page": 401,
+      "rule": "unique",
+      "bodyLine": "Incruentum Altaris sacrificium, utpote quod a sacrificio",
+      "header": "Annus VII - Yol. VII Die U Augusti 1915 Num. 14"
+    },
+    {
+      "key": "1915-08-12|LITTERAE APOSTOLICAE|Ut praesens periculum|Renovatio Bullae Cruciatae ad duodecim annos pro locis Hispa",
+      "date": "1915-08-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ut praesens periculum",
+      "page": 557,
+      "rule": "unique",
+      "bodyLine": "Ut praesens periculum ab Europae nationibus averterent, teterrima",
+      "header": "Acta Benedicti PP. XV 557"
+    },
+    {
+      "key": "1915-08-15|EPISTOLAE|Testem vestrae in Nos|Ad Andream card. Ferrari, archiepiscopum Mediolanensem, occa",
+      "date": "1915-08-15",
+      "category": "EPISTOLAE",
+      "incipit": "Testem vestrae in Nos",
+      "page": 458,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Testem vestrae in Nos pietatis epistolam accepimus,.",
+      "header": "458 Acta Apostolicae Sedis - Commentarium Ufficiale"
+    },
+    {
+      "key": "1915-08-17|EPISTOLAE|Tuae sane|Ad Raphaelem Mariam Carrasquilla, antistitem urbanum, modera",
+      "date": "1915-08-17",
+      "category": "EPISTOLAE",
+      "incipit": "Tuae sane",
+      "page": 473,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Tuae sane est",
+      "header": "Annus VII - Yol. VII Die 27 Octobris 1915 Num. 17"
+    },
+    {
+      "key": "1915-08-31|EPISTOLAE|Fuldae, sicut vobis|Ad Felicem card. De Hartmann, archiep. Coloniensem, et ad ep",
+      "date": "1915-08-31",
+      "category": "EPISTOLAE",
+      "incipit": "Fuldae, sicut vobis",
+      "page": 460,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Fuldae, sicut vobis est in more positum, nuper congregati, litteras ad Nos dedistis cum pietatis in Nos vestrae, tum testes",
+      "header": "460 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1915-08-31|EPISTOLAE|Te veluti|Ad Ioachim card. Arcoverde de Albuquerque Cavalcanti, archie",
+      "date": "1915-08-31",
+      "category": "EPISTOLAE",
+      "incipit": "Te veluti",
+      "page": 459,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili Noster, salutem et apostolicam benedictionem. — Te",
+      "header": "Acta Benedicti PP. XV 459"
+    },
+    {
+      "key": "1915-09-16|MOTU PROPRIO|Seminaria clericorum|Nova conditur sacra Congregatio « de Seminariis et de studio",
+      "date": "1915-09-16",
+      "category": "MOTU PROPRIO",
+      "incipit": "Seminaria clericorum",
+      "page": 493,
+      "rule": "unique",
+      "bodyLine": "Seminaria clericorum usque ab initio tantae esse utilitatis",
+      "header": "Annus TU - Vol. VII Die 30 Novembris 1915 Num. 18"
+    },
+    {
+      "key": "1915-10-17|EPISTOLAE|Feretrana Synodo|Ad R. P. D. Raphaelem Santi, episcopum Feretranum, cui gratu",
+      "date": "1915-10-17",
+      "category": "EPISTOLAE",
+      "incipit": "Feretrana Synodo",
+      "page": 568,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Feretrana Synodo, quam feliciter absolutam nuntiasti, sollertiam tuam Nobis",
+      "header": "568 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1915-10-17|EPISTOLAE|Laeta, tristia|Ad Augustinum card. Richelmy, archiepiscopum Taurinensem, et",
+      "date": "1915-10-17",
+      "category": "EPISTOLAE",
+      "incipit": "Laeta, tristia",
+      "page": 567,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Laeta, tristia in ^epistola vestra commemoratis, eo",
+      "header": "Acta Benedicti PP. XV 567"
+    },
+    {
+      "key": "1915-10|EPISTOLAE|Nihil Nobis|Ad Iulium card. Boschi, archiep. Ferrariensem, aliosque epis",
+      "date": "1915-10",
+      "category": "EPISTOLAE",
+      "incipit": "Nihil Nobis",
+      "page": 474,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Nihil Nobis iucundius eis litteris quas vos, annuum",
+      "header": "474 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1915-10|EPISTOLAE|Plane videmus|Ad R. P. D. Adulphum episcopum",
+      "date": "1915-10",
+      "category": "EPISTOLAE",
+      "incipit": "Plane videmus",
+      "page": 475,
+      "rule": "unique",
+      "bodyLine": "» Venerabilis Frater, salutem et apostolicam benedictionem. — Plane",
+      "header": "Acta Benedicti PP. XV 475"
+    },
+    {
+      "key": "1915-11-10|EPISTOLAE|Affari vos|Ad R. P. D. Rinaldum C. Rousset, Rheginensem archiepiscopum,",
+      "date": "1915-11-10",
+      "category": "EPISTOLAE",
+      "incipit": "Affari vos",
+      "page": 592,
+      "rule": "unique",
+      "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Affari",
+      "header": "592 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1915-11-10|EPISTOLAE|Communem vestram|Ad RR. PP. DD. Archiepiscopos et Episcopos Galliciae, de com",
+      "date": "1915-11-10",
+      "category": "EPISTOLAE",
+      "incipit": "Communem vestram",
+      "page": 591,
+      "rule": "unique",
+      "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Communem vestram epistolam ea apud Nos commendat pietatis observantiaeque significatio, qua catholicae Poloniae non solum Episcopos, sed",
+      "header": "Acta Benedicti BP. XV 591"
+    },
+    {
+      "key": "1915-11-10|EPISTOLAE|Epistola tua|Ad R. D. E. Villette, moderatorem archisodalitatis ab Agonia",
+      "date": "1915-11-10",
+      "category": "EPISTOLAE",
+      "incipit": "Epistola tua",
+      "page": 590,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, religiose vir, salutem et apostolicam benedictionem. —",
+      "header": "590 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1915-11-10|EPISTOLAE|Et hórrida|Ad Ioannem card. Csernoch, archiepiscopum Strigoniensem, cet",
+      "date": "1915-11-10",
+      "category": "EPISTOLAE",
+      "incipit": "Et hórrida",
+      "page": 593,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Et hórrida doletis huius belli, et ea studiose recolitis,",
+      "header": "Acta Benedicti PP. XV 593"
+    },
+    {
+      "key": "1915-11-10|EPISTOLAE|Libenter abs te|Ad Ioannem «Baptistam Menghini, caeremoniarum pontificalium ",
+      "date": "1915-11-10",
+      "category": "EPISTOLAE",
+      "incipit": "Libenter abs te",
+      "page": 569,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. - Libenter abs",
+      "header": "Acta Benedicti PP. XV 569"
+    },
+    {
+      "key": "1915-11-10|EPISTOLAE|Perspecta iam diu|Ad R. P'. D. Iosephum Torras y",
+      "date": "1915-11-10",
+      "category": "EPISTOLAE",
+      "incipit": "Perspecta iam diu",
+      "page": 589,
+      "rule": "unique",
+      "bodyLine": "Venerabiiis Frater, salutem et apostolicam benedictionem. — Perspecta iam diu quidem Nobis tua in Apostolicam Sedem et studia et",
+      "header": "Annus Til - Vol.. VII Die 81 Decembris 1915 Num. 21"
+    },
+    {
+      "key": "1915-12|LITTERAE APOSTOLICAE|Nihil tam aptum|Quaedam ad SS. Cor Iesu oratio indulgentia ditatur",
+      "date": "1915-12",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Nihil tam aptum",
+      "page": 565,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Nihil tam aptum tamque idoneum",
+      "header": "Acta Benedicti PP. XV 565"
+    }
+  ],
+  "unrecovered": [
+    {
+      "key": "1915-02-15|SERMO|Il predicare|Ad concionatores quadragesimae et ad parochos almae Urbis ..",
+      "date": "1915-02-15",
+      "category": "SERMO",
+      "incipit": "Il predicare",
+      "reason": "none"
+    },
+    {
+      "key": "1915-03-21|CONSTITUTIONES APOSTOLICAE||De Abbatia Sublacensi",
+      "date": "1915-03-21",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1915-03-21|EPISTOLAE||Ss. Padri e Dottori reverenter exhibito gratias per-14 solvi",
+      "date": "1915-03-21",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1915-04|EPISTOLAE||Australiae, de aedibus Delegato Apostolico acquisitis instru",
+      "date": "1915-04",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1915-04|EPISTOLAE||Mediolanensem, de anno xxv ab nito episcopali 19 munere grat",
+      "date": "1915-04",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1915-05|EPISTOLAE||Iesu consecrandis",
+      "date": "1915-05",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1915-06|EPISTOLAE||S. R. E. card. Cassetta, episcopum Tusculanum, gratulationes",
+      "date": "1915-06",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1915-08-10|CHIROGRAPHUM||«Iun. Attentis expositis. - Ad instantiam Emi card. Praefect",
+      "date": "1915-08-10",
+      "category": "CHIROGRAPHUM",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1915-08-15|EPISTOLAE||adprecetur",
+      "date": "1915-08-15",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1915-08-17|EPISTOLAE||Bogotensis in Columbia a Rosario nuncupati, exeunte anno vic",
+      "date": "1915-08-17",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1915-08-17|EPISTOLAE||exeunte saeculo ab accepta catholica Fide",
+      "date": "1915-08-17",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1915-08-30|EPISTOLAE||sione annui conventus",
+      "date": "1915-08-30",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1915-08-31|EPISTOLAE|Sept|feliciter explentem",
+      "date": "1915-08-31",
+      "category": "EPISTOLAE",
+      "incipit": "Sept",
+      "reason": "none"
+    },
+    {
+      "key": "1915-08-31|EPISTOLAE||Ianuarii, vicesimum quintum episcopatus annum",
+      "date": "1915-08-31",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1915-08-31|EPISTOLAE||nas B. P. exhibitas",
+      "date": "1915-08-31",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1915-09-16|MOTU PROPRIO|Quandoquidem|Quaenam indulgentiarum concessio-Nov. nes S. Congregationi S",
+      "date": "1915-09-16",
+      "category": "MOTU PROPRIO",
+      "incipit": "Quandoquidem",
+      "reason": "header-mismatch",
+      "candidates": [
+        457
+      ]
+    },
+    {
+      "key": "1915-10|EPISTOLAE||Vratislaviensem, ut eidem gratuletur sollertiam in regenda d",
+      "date": "1915-10",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1915-11-10|EPISTOLAE|Communis vestra|Ad R. P. D. Hieronymum Thomé da Silva, archiepiscopum S. Sal",
+      "date": "1915-11-10",
+      "category": "EPISTOLAE",
+      "incipit": "Communis vestra",
+      "reason": "claimants",
+      "candidates": [
+        569
+      ]
+    },
+    {
+      "key": "1915-11-10|EPISTOLAE|Communis vestra|Ad RR. PP. DD. Ludovicum",
+      "date": "1915-11-10",
+      "category": "EPISTOLAE",
+      "incipit": "Communis vestra",
+      "reason": "claimants",
+      "candidates": [
+        569
+      ]
+    },
+    {
+      "key": "1915-11-10|EPISTOLAE|Dec|tiones ob volumina de rebus liturgicis B. P. oblata",
+      "date": "1915-11-10",
+      "category": "EPISTOLAE",
+      "incipit": "Dec",
+      "reason": "several",
+      "candidates": [
+        486,
+        488,
+        575
+      ]
+    },
+    {
+      "key": "1915-11-10|EPISTOLAE||Bages, Vicensium episcopum, de libello « El inter-30 naciona",
+      "date": "1915-11-10",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    },
+    {
+      "key": "1915-11-10|EPISTOLAE||Gavotti, archiep. Genuensem, ceterosque Liguriae episcopos, ",
+      "date": "1915-11-10",
+      "category": "EPISTOLAE",
+      "incipit": null,
+      "reason": "no-incipit"
+    }
+  ]
+}

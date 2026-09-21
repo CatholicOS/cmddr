@@ -635,7 +635,9 @@ describe('parseActaIndex on the volumes of 1932-1957 (acta volumes spec §9, pha
 
   it('reads a category heading whose numeral the OCR misdrew, a known one in mixed case, and drops every column header', () => {
     // `IY. -` (AAS 25, 1933), `1 -` (AAS 33, 1941), `XI •- SERMO` (AAS 31, 1939), `XIV - Sacra Consistoria` (AAS 46, 1954),
-    // `X - HORTATIO` followed by the column header `PAG..` on the next line (AAS 31), and `PAO.` / `PAS.` (AAS 30, 1938).
+    // `X - HORTATIO` followed by the column header `PAG..` on the next line (AAS 31), `PAO.` / `PAS.` (AAS 30, 1938), and
+    // `IV.?- MOTU PROPRIO` (AAS 16 (1924) 510, the one heading of the fixtures with a `?` after the numeral; before it was
+    // read, the three motu proprio under it fell under the constitutions heading before it).
     const r = parseActaIndex(volume(`                                        IY. - LITTERAE APOSTOLICAE
                                                                               PAO.
 1933 Febr. 20 A venerabili fratre. - Basilicae minoris titulo ornatur 61
@@ -648,9 +650,12 @@ describe('parseActaIndex on the volumes of 1932-1957 (acta volumes spec §9, pha
                                       XI •- SERMO
 1939 Dec. 24 Nel quarto. - A Ssmo D. N. habitus 5
                                                   XIV - Sacra Consistoria
-1950 Maii 20 Camerarius Sacri Collegii 289`), xii);
+1950 Maii 20 Camerarius Sacri Collegii 289
+                                                                       IV.?- MOTU PROPRIO
+1924 apr. 27 Bibliorum scientiam. - De disciplinae biblicae magisteriis 180`), xii);
     expect(r.entries.map((e) => [e.category, e.page])).toEqual([
       ['LITTERAE APOSTOLICAE', 61], ['LITTERAE DECRETALES', 97], ['HORTATIO', 245], ['SERMO', 5], ['SACRA CONSISTORIA', 289],
+      ['MOTU PROPRIO', 180],
     ]);
     expect(r.unseenHeadings).toEqual([]);
     expect(r.defects).toEqual([]);
@@ -1383,6 +1388,47 @@ describe('parseActaIndex on the early volumes whose OCR kept the page column (ac
       // The page column survived in these five (spec §10.1): few entries open without a page.
       expect(r.stats.withoutPage / r.stats.dateLines, String(year)).toBeLessThan(0.1);
     }
+  });
+
+  it('parses the seventeen fixtures of 1909-1925 with no unseen heading and no unmapped pope (phase 2b-iii-b, spec §10); their pages are recovered by a later task, not asserted here', () => {
+    const sources: [string, object][] = [
+      ['aas-01-1909', { year: 1909, volume: 1, columnar: true, bareIncipits: false }],
+      ...[1910, 1911, 1912, 1913, 1914, 1915, 1916].map((year): [string, object] => [`aas-${String(year - 1908).padStart(2, '0')}-${year}`, { year, volume: year - 1908, ...columnar }]),
+      ['aas-09-1917-I', { year: 1917, volume: 9, part: 'I', ...columnar }],
+      ...[1918, 1919, 1920, 1921, 1922, 1923, 1924, 1925].map((year): [string, object] => [`aas-${String(year - 1908).padStart(2, '0')}-${year}`, { year, volume: year - 1908, ...columnar }]),
+    ];
+    for (const [file, opts] of sources) {
+      const r = parseActaIndex(readFileSync(`tools/fixtures/acta/${file}.txt`, 'utf8'), opts);
+      expect(r.unseenHeadings, file).toEqual([]);
+      expect(r.unmappedPopes, file).toEqual([]);
+    }
+  });
+});
+
+describe('parseActaIndex keeps the entries opened without a page (spec §10.3, phase 2b-iii-b)', () => {
+  it('keeps an entry the OCR lost the page of as a pageless entry with everything but the page (AAS 13, 1921)', () => {
+    const r = parseActaIndex(volume(`                                                         I. - LITTERAE ENCYCLICAE.
+1921          Ian.          6      Sacra propediem. - Ad Patriarchas, Primates, Archie­
+                                        piscopos, Episcopos aliosque locorum Ordinarios,
+                                        pacem et communionem cum Apostolica Sede ha­
+                                        bentes: septimo saeculo exeunte a Tertio Ordine
+                                        Franciscanum condito . .
+             Apr.         30       In praeclara summorum. - Dilectis filiis doctoribus
+                                        et alumnis litterarum artiumque optimarum orbis
+                                        catholici, saeculo sexto exeunte ab obitu Dantis
+                                        Aligherii 209`, 'I. - ACTA BENEDICTI PP. XV'), { year: 1921, volume: 13, ...columnar });
+    expect(r.entries.map((e) => [e.incipit, e.page, e.pageSource])).toEqual([['In praeclara summorum', 209, undefined]]);
+    expect(r.pageless).toHaveLength(1);
+    expect(r.pageless[0]).toMatchObject({
+      series: 'AAS', volume: 13, year: 1921, pope: 'Benedictus XV', category: 'LITTERAE ENCYCLICAE', date: '1921-01-06',
+      incipit: 'Sacra propediem', quoted: false, toponym: null,
+      description: 'Ad Patriarchas, Primates, Archiepiscopos, Episcopos aliosque locorum Ordinarios, pacem et communionem cum Apostolica Sede habentes: septimo saeculo exeunte a Tertio Ordine Franciscanum condito',
+    });
+    expect('page' in r.pageless[0]!).toBe(false);
+    expect(r.pageless[0]!.raw.split('\n')).toHaveLength(5);
+    // The defect and the count are as before: the pageless entry is the same fact, structured.
+    expect(r.stats.withoutPage).toBe(1);
+    expect(r.defects.filter((d) => d.message.startsWith('entry without a page number'))).toHaveLength(1);
   });
 });
 

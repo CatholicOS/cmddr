@@ -102,6 +102,14 @@ export interface ActaMatchResult {
    * of the two, which a page correction, not the join, would settle.
    */
   sharedPages: { page: string; matches: ActaMatch[] }[];
+  /**
+   * Matches a curated reference displaced (ACTA_CURATED_REFERENCES, `supersedes`; join.ts):
+   * the entry is a printing of the act that is not its citation of record -- the Italian
+   * text of *Ubi arcano Dei consilio* at AAS 15 (1923) 5 -- and the row names the page that
+   * is. Neither a claim nor a record, as a reprint is; listed by the reports. Empty until
+   * applyCuratedReferences runs.
+   */
+  superseded: ActaMatch[];
 }
 
 const inClass = (d: DocumentRecord, c: GenreClass): boolean =>
@@ -234,7 +242,7 @@ export function matchActa(rawEntries: ActaEntry[], docs: DocumentRecord[]): Acta
   const byId = new Map(docs.map((d) => [d.id, d]));
 
   const result: ActaMatchResult = {
-    matches: [], ambiguous: [], unmatched: [], skipped: [], unknownPope: [], conflicts: [], reprints: [], sharedPages: [],
+    matches: [], ambiguous: [], unmatched: [], skipped: [], unknownPope: [], conflicts: [], reprints: [], sharedPages: [], superseded: [],
   };
 
   for (const raw of entries) {

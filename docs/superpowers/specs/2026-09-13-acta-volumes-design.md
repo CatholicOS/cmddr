@@ -230,3 +230,64 @@ it (PR 2b-iii-a; measured on AAS 50: the fixture extracted from the stored PDF i
 byte-identical to the committed one). The whole-volume text of §10.3 goes beside it in
 `<store>/txt/`. Nothing in the store is tracked; the fixtures and sidecars in the
 repository are what the parser, the recovery's consumers and the tests read.
+
+### 10.5 Measured
+
+Phase 2b-iii-b ran on 2026-09-21 over the seventeen volumes (the [era
+report](../reports/2026-09-21-acta-volumes-1909-1925.md) §1b, whose numbers the report tool
+computes from the sidecars and the parse results). Of the 1,136 entries the
+indexes opened without a page, the volume bodies gave back **770** (unique 732, dated 13,
+fuzzy 25) and **366** stayed without one: 205 described by the index without an incipit
+(108 of them AAS 1's, whose index prints incipits only in guillemets after a genre word),
+58 whose incipit opens several pages with no formula inside the act's span to settle them,
+61 found on no page, 26 found outside the category's runs, 14 under a running header that
+contradicts the page, and 2 -- the two letters *Communis vestra* of AAS 7 (1915), both
+dated 10 November by the index -- whose one page of that date another entry of the same
+category and incipit claims (`claimants`: a page goes to one claimant only, or to neither).
+The rate after recovery — entries with a page over every line that
+ended in a page or opened without one, the 95 % floor of §4 applying to it — is 71.8 % over
+the era and 78.4 % without AAS 1, and under 95 % in every volume (the highest 1917-I at
+91.2 %); each volume's reasons are in the report, the floor unchanged. 113 documents carry
+a reference into the seventeen volumes (111 matched from a quoted index line, two curated),
+458 documents were created from them and 537 entries are held with their
+reasons. Two rules of §10.3.2 were tightened before the join ran, on the evidence of five
+pages the first sidecars gave wrongly: a paragraph head is the salutation's dash or a line
+start under a heading, a numeral, a salutation or the memorial formula — a word that opens a
+line inside running text, or follows a full stop inside a line, opens no act — and the
+formula that settles a tie is read from the hit's own line on, not from the top of its page
+(the previous act's formula). The rows the earlier eras' curation tables take were written
+where the era showed their shapes (nineteen index corrections from the acts' formulae,
+twelve shared pages read in the volumes, five holds for an incipit the OCR misspelt); the
+entries left without a page are neither created nor cited. The readings of §10.3.5 are
+seventeen rows of `ACTA_PAGE_READINGS` -- every encyclical and constitution the report's
+*Page not recovered* block listed, three motu proprio -- each read in the store text at the
+page the act opens on with its dating formula quoted, and nine `ACTA_INDEX_CORRECTIONS`
+rows keyed by those pages where the index prints the month alone, the wrong month
+(*Sapienti Consilio*, `Ian. 29` for 29 June 1908; *Post datam*, the OCR's `i apr.` read as
+the incipit) or a ditto of the wrong year (the two Aversa constitutions of July 1922 under
+`1923`): seven shelf records cited, eleven documents created. *Providentissima Mater*
+*Ecclesia* takes the one curated reference (`ACTA_CURATED_REFERENCES`, AAS 9-II (1917) 5,
+applied after the join and never over a match); *Sacrae disciplinae leges* (AAS 75-II, pp.
+VII–XIV, Roman-numbered) cannot, `acta.page` being an integer. Two things the readings
+showed: the 1924 index heads its motu proprio `IV.?- MOTU PROPRIO` (the OCR's `?`, the one
+such heading of the fixtures), which the parser now reads, so two of the three come back by
+the recovery's own rule; and *Inter praecipuas* (AAS 17 (1925) 289) opens the page the index's
+OCR sets on the next entry's line (*Ex Apostolico officio*, which opens at 516), so invariant
+25 holds both until a page correction can be curated -- the second entry-level key, after
+the two holds of §1.4, that the page-keyed tables lack. *Ubi arcano Dei consilio* is cited at
+its Latin printing (AAS 14 (1922) 673) by the second curated reference: the 1922 line for the
+Latin prints no date and opens no entry, and a reading is keyed to an entry, so the row names
+the match it displaces (`supersedes: 'AAS:15:5'`, the Italian printing, quoted beside the
+Latin with its dating formula; controller ruling 15) and the join moves that match to
+`superseded` -- neither a claim nor a record, listed in the report's §5 beside the reprints.
+The final review of the branch (2026-09-21) settled three readings of §10.3.2 the first
+run had left implicit, each measured in the report's §1.2: a (category, incipit) group
+with two or more claimants -- pageless entries and the volume's paged entries counted
+together -- never takes the `unique` or `fuzzy` rule, and a page two rows of a group land
+on goes to neither; the last section start of a category runs to the pope part's end; a
+heading whose page list the OCR spoils (AAS 16 (1924) 507, `LITTERAE ENCYCLICAE, 5 (12)`)
+constrains nothing; and the dating formula reads a roman year set right after the month
+with no `anno` (`die x novembris MCMXV`, AAS 7 (1915) 569). The regeneration moved
+thirteen rows -- three to `unique`, eight to `dated`, two to `claimants` -- and the join
+created five more documents (four apostolic letters of AAS 13 (1921), one letter of AAS 4
+(1912)), each at a page its own formula dates.

@@ -7,6 +7,8 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { parseActaIndex, type ActaEntry, type ActaParseResult } from './index.js';
 import { matchActa, type ActaMatchResult } from './match.js';
+import { ACTA_CURATED_REFERENCES, ACTA_PAGE_READINGS, overrideKey, type CuratedReference } from './curation.js';
+import { applyPageRows, sidecarPath, type PagesSidecar } from './recover.js';
 import type { DocumentRecord } from '../types.js';
 
 /**
@@ -64,11 +66,15 @@ const index = (year: number, retrieved: string, extra: Partial<ActaSource['parse
  * `mag:benedict-xv/providentissima-mater-1917`), so only part I has a fixture.
  */
 export const ACTA_SOURCES: readonly ActaSource[] = [
-  // AAS 1: the page column is cropped from the scan on most index pages, and the index
-  // prints incipits only in guillemets after a genre word (`Constitutio « Promulgandi »`),
-  // describing every other act without one -- measured on the fixture, sample report §2.
-  volume(1909, '2026-09-13', { parse: { columnar: true, bareIncipits: false } }),
-  volume(1917, '2026-09-13', { part: 'I' }),
+  // Phase 2b-iii-b (spec §10): AAS 1-17, the volumes of 1909-1925, whose OCR lost the page
+  // column on most index pages -- the pages come back from the volume body through the
+  // sidecars (recover.ts). 1909 and 1917-I, the sample's, re-extracted on 2026-09-20 with
+  // the interleaving fallback of 2b-ii-b. AAS 1 prints incipits only in guillemets after
+  // a genre word (sample report §2), hence `bareIncipits: false`.
+  volume(1909, '2026-09-20', { parse: { columnar: true, bareIncipits: false } }),
+  ...Array.from({ length: 1916 - 1910 + 1 }, (_, i) => volume(1910 + i, '2026-09-20')),
+  volume(1917, '2026-09-20', { part: 'I' }),
+  ...Array.from({ length: 1925 - 1918 + 1 }, (_, i) => volume(1918 + i, '2026-09-20')),
   // Phase 2b-iii-a (spec §10): the early volumes whose OCR kept the page column -- AAS
   // 18-22 (1926-1930, Pius XI). The volumes of 1910-1925 lost it on most index pages and
   // wait for the page recovery of 2b-iii-b.
@@ -118,15 +124,32 @@ export const sourceOfEntry = (e: { year: number; part?: 'I' | 'II' }): ActaSourc
  */
 export const ACTA_FIXTURES_RETRIEVED = '2026-09-12';
 
-/** Parse every fixture present; a missing one is skipped and named, not fatal. */
+/**
+ * Parse every fixture present; a missing one is skipped and named, not fatal. Pageless
+ * entries then get their pages from the curated readings first, then the sidecar (spec
+ * §10.3.3, §10.3.5): a page read by hand outranks one recovered by rule, and a key both
+ * name is applied once, from the reading.
+ */
 export function loadActaIndexes(sources: readonly ActaSource[] = ACTA_SOURCES): { parsed: Map<string, ActaParseResult>; missing: string[] } {
   const parsed = new Map<string, ActaParseResult>();
   const missing: string[] = [];
   for (const s of sources) {
     if (!existsSync(s.file)) { missing.push(s.key); continue; }
-    parsed.set(s.key, parseActaIndex(readFileSync(s.file, 'utf8'), {
+    const r = parseActaIndex(readFileSync(s.file, 'utf8'), {
       year: s.year, volume: s.volume, ...(s.part ? { part: s.part } : {}), ...s.parse,
-    }));
+    });
+    // The curated readings first, then the sidecar (spec §10.3.3, §10.3.5): a page read by
+    // hand outranks one recovered by rule, and a key both name is applied once.
+    const readings = Object.entries(ACTA_PAGE_READINGS).filter(([k]) => k.startsWith(`${s.key}|`))
+      .map(([k, v]) => ({ key: k.slice(s.key.length + 1), page: v.page, source: 'reading' as const }));
+    applyPageRows(r, readings, 'ACTA_PAGE_READINGS');
+    const sidecar = sidecarPath(s);
+    if (existsSync(sidecar)) {
+      const sc = JSON.parse(readFileSync(sidecar, 'utf8')) as PagesSidecar;
+      const read = new Set(readings.map((x) => x.key));
+      applyPageRows(r, sc.rows.filter((row) => !read.has(row.key)).map((row) => ({ key: row.key, page: row.page, source: 'recovered' as const })), sidecar);
+    }
+    parsed.set(s.key, r);
   }
   return { parsed, missing };
 }
@@ -139,9 +162,10 @@ export interface ActaJoin {
 }
 
 /**
- * Match every parsed entry against `docs` and write `acta` on the matched documents.
- * Matching runs over all sources at once so a document claimed by two sources' entries
- * is a conflict (match.ts) rather than a silent overwrite.
+ * Match every parsed entry against `docs` and write `acta` on the matched documents,
+ * then the curated references (ACTA_CURATED_REFERENCES) on theirs. Matching runs over all
+ * sources at once so a document claimed by two sources' entries is a conflict (match.ts)
+ * rather than a silent overwrite.
  */
 export function applyActa(docs: DocumentRecord[]): ActaJoin {
   const { parsed, missing } = loadActaIndexes();
@@ -152,5 +176,39 @@ export function applyActa(docs: DocumentRecord[]): ActaJoin {
     const { series, volume, year, part, page } = m.entry;
     byId.get(m.documentId)!.acta = { series, volume, year, ...(part ? { part } : {}), page };
   }
+  applyCuratedReferences(result, docs);
   return { parsed, missing, entries, result };
+}
+
+/**
+ * The references no entry can give (ACTA_CURATED_REFERENCES): written after the matches,
+ * and never over one -- unless the row names the match it displaces (`supersedes`,
+ * controller ruling 15), which then moves from `matches` to `superseded`: not a claim, not
+ * a record, listed by the reports beside the reprints. A row naming a document the join
+ * matched without naming the match, a `supersedes` key that names no match of the
+ * document, a `supersedes` on a row that cites a part or names a two-part volume (the key
+ * carries no part), and an id no document carries are each an error. The report tools call this
+ * after matchActa, as applyActa does, so their §5 and the data agree.
+ */
+export function applyCuratedReferences(result: ActaMatchResult, docs: DocumentRecord[], table: Readonly<Record<string, CuratedReference>> = ACTA_CURATED_REFERENCES): void {
+  const byId = new Map(docs.map((d) => [d.id, d]));
+  for (const [id, row] of Object.entries(table)) {
+    const d = byId.get(id);
+    if (d === undefined) throw new Error(`ACTA_CURATED_REFERENCES names ${id}, which no document carries`);
+    if (row.supersedes !== undefined) {
+      // `overrideKey` is series, volume and page -- no part -- so a key of a two-part
+      // volume (AAS 9 (1917), AAS 75 (1983)) names one page of each part, and a row that
+      // cites a part cannot say which match it displaces: refused until the key carries one.
+      const volume = Number(row.supersedes.split(':')[1]);
+      if (row.acta.part !== undefined || volume === 9 || volume === 75) {
+        throw new Error(`ACTA_CURATED_REFERENCES ${id} supersedes ${row.supersedes} in a two-part volume, but overrideKey carries no part: the match it displaces cannot be named`);
+      }
+      const i = result.matches.findIndex((m) => m.documentId === id && overrideKey(m.entry) === row.supersedes);
+      if (i < 0) throw new Error(`ACTA_CURATED_REFERENCES ${id} supersedes ${row.supersedes}, which the join did not match to it (stale row)`);
+      const [m] = result.matches.splice(i, 1);
+      result.superseded.push(m!);
+    }
+    if (result.matches.some((m) => m.documentId === id)) throw new Error(`ACTA_CURATED_REFERENCES names ${id}, which the join also matched`);
+    d.acta = { ...row.acta };
+  }
 }
