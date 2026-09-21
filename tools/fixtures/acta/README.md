@@ -513,6 +513,27 @@ lists what could not be read):
 - **Acts printed twice**: *Ibi vacabimus* (AAS 104 (2012) 482 and AAS 112 (2020) 479) and
   *Deus caritas* (AAS 106 (2014) 138 and 261), both read in the fascicles: `ACTA_REPRINTS`.
 
+### The *Acta Sanctae Sedis* volumes (phase 2c-i, the sample)
+
+The ASS (41 volumes, 1865–1908) print no chronological index (ass volumes spec,
+`docs/superpowers/specs/2026-09-21-ass-volumes-design.md` §1), so the fixtures are not
+index pages but two files per volume written by `tools/scan-ass.ts` from the whole-volume
+text in the local store (`tools/fetch-acta.sh ass <vol>`; `~/development/sources/ASS/txt/`,
+pypdf 6.14.2 layout mode, never checked in): `ass-{vol}-{year}.summa.txt`, the pages of the
+volume's *Summa actorum* (ASS 41: *Index analyticus*), and `ass-{vol}-{year}.entries.json`,
+the chronological index synthesised from the body — one row per papal act with its class
+heading, pope, description, the first eight words after the salutation (`opening`; no
+incipit is asserted), the date from the act's own dateline, the page, and the five quoted
+lines each rests on (spec §3). `{year}` is the first year of the volume's span.
+
+| Source | Files | RETRIEVED | Volume pages | Summa pages | Acts scanned | Defects | Summa rows: claimed / unclaimed |
+|---|---|---|---|---|---|---|---|
+| ASS 1 (1865–66, Pius IX) | `ass-01-1865.*` | **2026-09-2D** | N | a–b | n | n | n / n |
+| ASS 12 (1879, Leo XIII) | `ass-12-1879.*` | **2026-09-2D** | 672 | 647–653 | n | n | n / n |
+| ASS 23 (1890–91, Leo XIII) | `ass-23-1890.*` | **2026-09-2D** | N | a–b | n | n | n / n |
+| ASS 33 (1900–01, Leo XIII) | `ass-33-1900.*` | **2026-09-2D** | 768 | 761–768 | n | n | n / n |
+| ASS 41 (1908, Pius X) | `ass-41-1908.*` | **2026-09-2D** | 810 | 799–809 | n | n | n / n |
+
 The RETRIEVED dates above are also stamped as `source.retrieved` on every document created
 from these fixtures (`ACTA_SOURCES` in `tools/src/acta/join.ts`): update both together when
 a fixture is refreshed.
