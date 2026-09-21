@@ -70,6 +70,17 @@ describe('applyCuratedReferences (controller ruling 15: a curated reference may 
     result.matches.push({ ...italian(), documentId: 'mag:pius-xi/quas-primas-1925' });   // the page matched to another document
     expect(() => applyCuratedReferences(result, both())).toThrow(/stale row/);
   });
+  it('refuses a `supersedes` on a row that cites a part or names a two-part volume: overrideKey carries no part, so the displaced match cannot be named (Task 9 review)', () => {
+    const sacrae = doc('mag:john-paul-ii/sacrae-disciplinae-leges-1983', '1983-01-25');
+    const partRow = { 'mag:john-paul-ii/sacrae-disciplinae-leges-1983': { acta: { series: 'AAS' as const, volume: 75, year: 1983, part: 'II' as const, page: 7 }, supersedes: 'AAS:75:7', evidence: 'test' } };
+    const volumeRow = { 'mag:john-paul-ii/sacrae-disciplinae-leges-1983': { acta: { series: 'AAS' as const, volume: 76, year: 1984, page: 7 }, supersedes: 'AAS:9:7', evidence: 'test' } };
+    for (const rows of [partRow, volumeRow]) {
+      const result = { ...empty(), matches: [{ entry: entry({ volume: 75, year: 1983, part: 'II', page: 7 }), documentId: sacrae.id, by: 'unique' as const }] };
+      expect(() => applyCuratedReferences(result, [sacrae], rows)).toThrow(/overrideKey carries no part/);
+    }
+    // The table's own rows pass: the part-bearing row has no `supersedes`, the superseding row no part.
+    expect(Object.entries(ACTA_CURATED_REFERENCES).filter(([, r]) => r.supersedes !== undefined && (r.acta.part !== undefined || [9, 75].includes(Number(r.supersedes.split(':')[1]))))).toEqual([]);
+  });
   it('still refuses a row on a document the join matched elsewhere, and an id no document carries', () => {
     const result = empty();
     result.matches.push(italian(), { entry: entry({ volume: 14, year: 1922, page: 673, incipit: 'Ubi arcano Dei consilio' }), documentId: 'mag:pius-xi/ubi-arcano-dei-consilio-1922', by: 'incipit' });

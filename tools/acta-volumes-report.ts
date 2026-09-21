@@ -56,9 +56,13 @@ interface Era {
   intro: string[];
   /** Which sources the era covers. */
   covers: (s: ActaSource) => boolean;
-  /** The reading under §1, §2, §4 and §13, given the parsed sources and the computed tables. */
-  reading1: (r: Map<string, ActaParseResult>) => string[];
-  reading2: (ctx: { matched: number; byHow: string; created: number; byIssuer: string; held: number; guard: number; otherRules: number; otherRulesText: string; toponymIncipit: number; pageShared: number; provisional: number; epistulae: number }) => string[];
+  /** The reading under §1, §2, §4 and §13, given the parsed sources, the sidecars (spec §10.3.4) and the computed tables. */
+  reading1: (r: Map<string, ActaParseResult>, sidecars: Map<string, PagesSidecar>) => string[];
+  /**
+   * `references` (controller ruling 19): the documents carrying a reference into the era's volumes -- the index
+   * matches (`matched`) and the curated references (`curated`, ACTA_CURATED_REFERENCES rows citing an era volume).
+   */
+  reading2: (ctx: { matched: number; byHow: string; curated: number; references: number; created: number; byIssuer: string; byGenre: Map<string, number>; held: number; heldBy: Map<string, number>; guard: number; otherRules: number; otherRulesText: string; toponymIncipit: number; pageShared: number; provisional: number; epistulae: number; withoutEntry: number }) => string[];
   mappingsProse: string[];
   radioProse: (ctx: { radio: number; matched: string[]; first: string }) => string[];
   partsSkippedNote: string;
@@ -773,12 +777,18 @@ ERAS['1909-1925'] = {
     'the volume bodies into the sidecars beside the fixtures (`tools/recover-acta-pages.ts`, spec §10.3; §1b). Each is parsed',
   ],
   covers: (s) => s.year >= 1909 && s.year <= 1925,
-  reading1: (parsedAll) => {
+  reading1: (parsedAll, sidecars) => {
     const era = [...parsedAll].filter(([k]) => ERAS['1909-1925']!.covers(actaSource(k)!));
     if (era.length < 17) return [`*(The reading is not rendered: ${17 - era.length} fixture(s) of 1909–1925 are missing from tools/fixtures/acta/.)*`];
     const sum = (f: (r: ActaParseResult) => number) => era.reduce((n, [, x]) => n + f(x), 0);
     const opened = sum((x) => x.stats.withoutPage);
-    const recovered = sum((x) => x.stats.recovered);
+    // The recovery's own counts, from the sidecars (§1b): `stats.recovered` also counts the curated readings.
+    const scs = era.map(([k]) => sidecars.get(k)).filter((x): x is PagesSidecar => x !== undefined);
+    const byRule = (rule: string) => scs.reduce((n, sc) => n + sc.rows.filter((r) => r.rule === rule).length, 0);
+    const datedFuzzy = scs.reduce((n, sc) => n + sc.rows.filter((r) => r.rule === 'dated' && r.fuzzy).length, 0);
+    const why = (reason: string, key = '') => scs.filter((sc) => key === '' || sc.source === key).reduce((n, sc) => n + sc.unrecovered.filter((u) => u.reason === reason).length, 0);
+    const recovered = scs.reduce((n, sc) => n + sc.rows.length, 0);
+    const readings = sum((x) => x.entries.filter((e) => e.pageSource === 'reading').length);
     const left = sum((x) => x.pageless.length);
     const lines = sum((x) => x.stats.pageLines + x.stats.withoutPage);
     const entries = sum((x) => x.stats.entries + x.stats.recovered);
@@ -792,18 +802,23 @@ ERAS['1909-1925'] = {
       `1. **The volume bodies give back ${recovered} of the ${opened} pages the index OCR lost (${(100 * recovered / opened).toFixed(1)} %), and no volume clears the floor.** Of the`,
       `   ${sum((x) => x.stats.dateLines)} entries the seventeen indexes open, ${opened} close without a page (spec §10.1); the recovery (§1b) reads ${recovered} back from`,
       `   the body, by the only hit inside the category's runs of the *Index generalis*`,
-      `   (729), by the only hit within one OCR character (25) or by the dating formula that settles a tie (5). ${left} stay without one, and`,
+      `   (${byRule('unique')}), by the only hit within one OCR character (${byRule('fuzzy')}) or by the dating formula that settles a tie (${byRule('dated')}${datedFuzzy ? `, ${datedFuzzy} of them among hits within one OCR character` : ''}), and`,
+      `   ${readings} more are read by hand (\`ACTA_PAGE_READINGS\`, §2.1). ${left} stay without one, and`,
       `   the rate after recovery -- entries with a page over every line that ended in a page or opened without one, ${entries} / ${lines} = ${pct(entries / lines)} over`,
       `   the era, ${pct(after16)} without AAS 1 -- is under 95 % in every source; the highest are ${best.map(([k, v]) => `${k} (${pct(v)})`).join(', ')}. Three`,
       `   things keep it there, each measured. (a) An index that describes an act without its incipit gives the recovery nothing to`,
-      `   search for: 205 of the ${left} (§1b, *no incipit*) -- 108 in AAS 1 (1909), whose index prints incipits only in guillemets after a`,
+      `   search for: ${why('no-incipit')} of the ${left} (§1b, *no incipit*) -- ${why('no-incipit', '1909')} in AAS 1 (1909), whose index prints incipits only in guillemets after a`,
       `   genre word (the sample report §1.2; ${r1909.stats.withoutPage} of its ${r1909.stats.dateLines} entries open without a page and ${r1909.stats.recovered} come back, *Promulgandi* at p. 5 and`,
       `   *Communium rerum* at p. 333), and the rest the consistories' items (*Sacri Pallii expostulatio*, *Tituli assignati*), the`,
       `   canonisation lists of 1925 and the letters whose index line the OCR broke before the incipit. (b) An incipit that opens no`,
-      `   paragraph of the body, or opens several with no formula to tell them apart: 61 *none* and 66 *several*, 127 letters and`,
+      `   paragraph of the body, or opens several with no formula to tell them apart: ${why('none')} *none* and ${why('several')} *several*, ${why('none') + why('several')} letters and`,
       `   apostolic letters whose body the OCR damaged at the opening (*Sapienti Consilio* at AAS 1 p. 7 prints a drop capital the`,
       `   text layer reads \`S\` / \`apienti\`) or whose incipit -- *Quae catholico nomini*, *Ex hac*, *Dilectus filius* -- opens two or`,
-      `   three acts of the volume. (c) Lines that end in a page and are not acts: ${nonEntry} across the era, the consistory items of`,
+      `   three acts of the volume; ${why('outside-runs')} open a page outside the category's runs, ${why('header-mismatch')} a page whose running header contradicts its`,
+      `   number, and ${why('claimants')} (*claimants*) a page another entry of the same category and incipit was given -- the two letters *Communis vestra*`,
+      `   the 1915 index dates 10 November, whose one formula of that date is p. 569's (the Ligurian bishops'; the Brazilian`,
+      `   bishops' opens at p. 591, dated \`die ix decembris MCMXV\`, the index's \`Dec.\` and \`10\` set by the layout mode on lines below its`,
+      `   incipit), so neither is given the page. (c) Lines that end in a page and are not acts: ${nonEntry} across the era, the consistory items of`,
       `   AAS 10 (1918, 21 of them), AAS 14 (1922, 13) and AAS 1 (1909, 25), which the parse rate has always counted (spec §4) and the`,
       `   rate after recovery inherits. The *Harvested, after* column, which leaves the consistories out, puts 1918 at 87.7 % where`,
       `   the overall rate is 69.2 %. The floor is not lowered: every source is listed with its reasons, and the entries left without`,
@@ -815,8 +830,14 @@ ERAS['1909-1925'] = {
       `   \`SACRAE CONGREGATIONES.\` (AAS 2 (1910) 979) with no \`ACTA\` token; AAS 16 (1924) 507 opens \`I. - ACTA £'11 PP. XI\` and`,
       `   AAS 17 (1925) 671 splits the part end \`IL - ACTA\` / \`SACRARUM CONGREGATIONUM\` over two lines. Of 98 pages first refused for`,
       `   a running header that did not print the page number, 74 print no number at all (\`Acta Pii PP. X.\`) and 7 the number`,
-      `   with one character wrong (\`34i\` for 344): both are accepted now, and the 13 still refused (§1b, *header*) are fascicle`,
-      `   covers with a damaged \`Num.\` (\`Num: 16\`, \`Nun. 13\`, \`Num. U\`) and numbers two edits off. Mapping the bare \`ALLOCUTIO\` the`,
+      `   with one character wrong (\`34i\` for 344): both are accepted now, and the ${why('header-mismatch')} still refused (§1b, *header*) are fascicle`,
+      `   covers with a damaged \`Num.\` (\`Num: 16\`, \`Nun. 13\`, \`Num. U\`) and numbers two edits off. The last section start of a category`,
+      `   runs to the pope part's end (the page before the *Index generalis*; AAS 7 (1915): \`EPISTOLAE … 589\` to 596, where three`,
+      `   December letters open at pp. 591-593), a heading whose page list the OCR spoils (AAS 16 (1924) 507: \`LITTERAE ENCYCLICAE, 5`,
+      `   (12)\`) constrains nothing instead of excluding every page, and a roman year set right after the month with no \`anno\``,
+      `   (\`die x novembris MCMXV\`, AAS 7 (1915) 569 -- the form Benedict XV's letters print) is read by the dating formula: the`,
+      `   final review's regeneration moved 13 rows, three to *unique*, eight to *dated* and the two *Communis vestra* to *claimants*`,
+      `   (the sidecars, 2026-09-21). Mapping the bare \`ALLOCUTIO\` the`,
       `   *Index generalis rerum* of AAS 6 and 8 prints made a bare \`Allocutio\` line inside AAS 12 (1920) 585-593's *Sacrum*`,
       `   *Consistorium* a heading of its own: eight consistory items are labelled *Allocutiones* there (five of them entries, §13,`,
       `   three without a page, §9), neither category harvested, no document moved -- an editorial point for the owner.`,
@@ -830,9 +851,9 @@ ERAS['1909-1925'] = {
       `   had been written into the data by the first run (*Promulgandi*, *Solertiae*). A paragraph head is now the salutation's dash`,
       `   or a line start under a heading, a numeral, a salutation or the memorial formula -- not under running text -- and the`,
       `   formula that settles a tie is read from the hit's own line on (\`recover.ts\`, with the pages quoted): the sidecars`,
-      `   regenerated (740 rows to 759) lose six -- three of the five (*Promulgandi* and *Ex hac* move to their true pages instead) and`,
-      `   three consistories that open mid-sentence (*Consistorium secretum, cuius acta*) -- and gain 25 openings the false hits had`,
-      `   made *several*. Every accepted page was then`,
+      `   regenerated then (740 rows to 759, before the final review's 13 moves above) lost six -- three of the five (*Promulgandi* and`,
+      `   *Ex hac* move to their true pages instead) and three consistories that open mid-sentence (*Consistorium secretum, cuius acta*)`,
+      `   -- and gained 25 openings the false hits had made *several*. Every page accepted then was`,
       `   read against its context: 646 follow the salutation's dash, 113 open a line under a heading, a numeral or a salutation.`,
       `4. **What the OCR loses beyond the page: a year at the head of a run, which the dittos inherit.** AAS 9-I (1917) reads the`,
       `   \`1916\` over nine apostolic letters at pp. 57-69 as \`1910\` (the sample report §1), so the creator held all nine as dated before`,
@@ -867,9 +888,10 @@ ERAS['1909-1925'] = {
     ];
   },
   reading2: (c) => [
-    `1. **${c.matched} references written, every one from a quoted index line (§12):** ${c.byHow}. The shelves of Pius X and`,
+    `1. **${c.references} documents carry a reference into the seventeen volumes: ${c.matched} matched, every one from a quoted index line (§12) --`,
+    `   ${c.byHow} -- and ${c.curated} curated (\`ACTA_CURATED_REFERENCES\`, below).** The shelves of Pius X and`,
     `   Benedict XV are thin -- vatican.va holds 306 records of Pius X and 63 of Benedict XV (§10) -- and`,
-    `   Benedict XV's letters shelf is not harvested (275 *Epistulae* of 1912-1922 held for it, §9), so the era is a harvest more than`,
+    `   Benedict XV's letters shelf is not harvested (${c.heldBy.get('shelf-not-harvested') ?? 0} *Epistulae* of 1912-1922 held for it, §9), so the era is a harvest more than`,
     `   a join. What matches cites its page: Pius X's *Communium rerum* (AAS 1 (1909) 333, recovered), *Iamdudum* (AAS 3 (1911) 217),`,
     `   *Lacrimabili statu* (AAS 4 (1912) 521, recovered) and *Singulari quadam* (AAS 4 (1912) 8); Benedict XV's *Humani generis*`,
     `   *redemptionem* (AAS 9-I (1917) 305), *Paterno iam diu* (AAS 11 (1919) 437, by incipit within the month), *Pacem, Dei munus*`,
@@ -894,9 +916,9 @@ ERAS['1909-1925'] = {
     `   Decembris MDCCCCXXII\` (the store text, read 2026-09-21), and quotes the Italian page it displaces (\`LETTERA-ENCICLICA … Fin dal`,
     `   primo momento\`); the 1923 entry is neither a claim nor a record, as the vernaculars of 1929, 1933 and 1937 are held.`,
     `2. **${c.created} documents created** (§8) -- ${c.byIssuer} -- and ${c.held} entries held (§9), ${c.guard} of them by the`,
-    `   duplicate guard and ${c.otherRulesText}. The creations are the era: 191 letters of Pius X and Pius XI (whose letters shelves`,
-    `   are harvested; Benedict XV's are held), 186 apostolic letters, 56 constitutions, 12 motu proprio, 4 *sub plumbo* letters and`,
-    `   4 decretal letters -- eleven of them at a page read by hand (Task 9, §8 \`page read\`): *Tribus abhinc annis* (AAS 10 (1918)`,
+    `   duplicate guard and ${c.otherRulesText}. The creations are the era: ${c.byGenre.get('Epistulae') ?? 0} letters of Pius X and Pius XI (whose letters shelves`,
+    `   are harvested; Benedict XV's are held), ${c.byGenre.get('Litterae Apostolicae') ?? 0} apostolic letters, ${c.byGenre.get('Constitutiones Apostolicae') ?? 0} constitutions, ${c.byGenre.get('Litterae Apostolicae Motu proprio datae') ?? 0} motu proprio, ${c.byGenre.get('Litterae Apostolicae sub plumbo datae') ?? 0} *sub plumbo* letters and`,
+    `   ${c.byGenre.get('Litterae Decretales') ?? 0} decretal letters -- eleven of them at a page read by hand (Task 9, §8 \`page read\`): *Tribus abhinc annis* (AAS 10 (1918)`,
     `   305, 1 July 1918 by its formula), the constitutions *Coenobium Sublacense* (AAS 7 (1915) 197) and *Archidioecesis*`,
     `   *Olindensis-Recifensis* (AAS 13 (1921) 463, 2 August 1918), *Praedecessorum nostrorum* (AAS 13 (1921) 252), *Eximia Benedictini*`,
     `   *Ordinis* (AAS 13 (1921) 290), the two *Apostolica Sedes* (AAS 15 (1923) 141 and 258; the first dated 16 July 1922 by its`,
@@ -908,18 +930,20 @@ ERAS['1909-1925'] = {
     `   index describes the act and prints no incipit in guillemets, one of 1920 whose toponym the OCR broke (\`J Guineae Gallicae\`),`,
     `   two of 1916 whose opening words the parser does not read as an incipit for the abbreviation in them (*Rector Ecclesiae*`,
     `   *B. M. V.*, *Basilica B. M. V.*), and the two constitutions read by hand whose opening words the parser reads as a toponym`,
-    `   (*Coenobium Sublacense*, *Archidioecesis Olindensis-Recifensis*). ${c.held - c.guard - c.otherRules} are held by the rules that precede the guard: 275 for Benedict XV's letters`,
-    `   shelf, 193 dated to the month, 4 ambiguous and 5 claimed twice (§5: *Delectarunt* and *Studium quo tenemur* of 3 May 1910`,
+    `   (*Coenobium Sublacense*, *Archidioecesis Olindensis-Recifensis*). ${c.held - c.guard - c.otherRules} are held by the rules that precede the guard: ${c.heldBy.get('shelf-not-harvested') ?? 0} for Benedict XV's letters`,
+    `   shelf, ${c.heldBy.get('unresolvable-date') ?? 0} dated to the month, ${c.heldBy.get('ambiguous') ?? 0} ambiguous and ${c.heldBy.get('claimed-twice') ?? 0} claimed twice (§5: *Delectarunt* and *Studium quo tenemur* of 3 May 1910`,
     `   against two shelf letters of the day under other incipits; three letters of 14 May 1923 against \`perlibenti-sane-1923\`,`,
-    `   whose incipit the index prints as *Perlibenti* alone) and 2 *Epistulae Apostolicae* not created from the *Acta*; the OCR rule`,
-    `   holds 4 whose incipit it damaged (\`[an. 5 Dilecti filii\`, \`ACTA, vol\`, \`N ee excedere\`, \`ACT* , vol\`), each for a curated reading,`,
-    `   and five curated rows (\`ACTA_HOLDS\`) hold the entries whose incipit the OCR misspells into a well-formed word the body`,
+    `   whose incipit the index prints as *Perlibenti* alone) and ${c.heldBy.get('not-created-category') ?? 0} *Epistulae Apostolicae* not created from the *Acta*; the OCR rule`,
+    `   holds ${c.heldBy.get('ocr-damaged') ?? 0} whose incipit it damaged (\`[an. 5 Dilecti filii\`, \`ACTA, vol\`, \`N ee excedere\`, \`ACT* , vol\`), each for a curated reading,`,
+    `   and ${c.heldBy.get('curated') ?? 0} curated rows (\`ACTA_HOLDS\`) hold the entries whose incipit the OCR misspells into a well-formed word the body`,
     `   contradicts -- the fuzzy rule found their pages, and the body line the sidecar quotes is the evidence: *Una cum ofíiciosis*`,
     `   (AAS 5 (1913) 30: *officiosis*), *Incumbentes Nobis* (AAS 13 (1921) 186: *Incumbentis*), *Placet oculog* (AAS 13 (1921) 194:`,
     `   *oculos*), *Eapallensi in civitate* (AAS 17 (1925) 301: *Rapallensi*), *Pretioso purpúrala* (AAS 17 (1925) 302: *purpurata*) --`,
-    `   as *Begnum Dei* (1959) is held. One AAS-only id of the earlier era moves: \`mag:pius-xi/supremi-apostolatus-1925\` (AAS 18 (1926)`,
-    `   86, 14 July 1925) becomes \`supremi-apostolatus-1925-07-14\` beside AAS 17 (1925)'s *Supremi apostolatus* of 12 May 1925, the`,
-    `   collision pass giving both the full-date form; no shelf id is re-minted (§8).`,
+    `   as *Begnum Dei* (1959) is held. Two AAS-only ids move: \`mag:pius-xi/supremi-apostolatus-1925\` (AAS 18 (1926)`,
+    `   86, 14 July 1925) becomes \`supremi-apostolatus-1925-07-14\` beside AAS 17 (1925)'s *Supremi apostolatus* of 12 May 1925, and`,
+    `   \`mag:benedict-xv/constat-apprime-1921\` (AAS 13 (1921) 298, 16 April 1921) becomes \`constat-apprime-1921-04-16\` beside the two`,
+    `   *Constat apprime* of 25 January and 20 October 1921 (pp. 191 and 493) the final review's formula reading settles, the`,
+    `   collision pass giving each the full-date form; no shelf id is re-minted (§8).`,
     `3. **Dated years before the volume** (§7): ${c.epistulae ? '' : ''}the nineteen are AAS 9-I's -- the letters of 1915 the 1917`,
     `   volume prints late, and the nine of 1916 the OCR dated 1910 (§1.4) -- with *Sollicitis Nobis* (December 1910 in AAS 4) and`,
     `   the two constitutions of 1917 and 1918 (*Quod catholicae religionis*, *A multis*) AAS 13 (1921) prints at pp. 457 and 461, both`,
@@ -941,7 +965,7 @@ ERAS['1909-1925'] = {
     `   *Ubi accepimus* \`die xxvi mensis Septembris MCMXI\` at AAS 3 (1911) 566, but a correction is keyed by the page and gated by the`,
     `   printed date, and each page's key is another act's (\`1910:905\` would re-date *Binas nuper* too; \`1911:565\` is *Societatem*`,
     `   *Goerresianam*'s row).`,
-    `5. **Documents of the era's popes dated in the volume years without a reference** (§11): ${c.matched ? '' : ''}113, of which the`,
+    `5. **Documents of the era's popes dated in the volume years without a reference** (§11): ${c.withoutEntry}, of which the`,
     `   formal genres are mostly the acts the index dates to the month (matched only by incipit, which the shelf's headings do not`,
     `   always print), the December acts (the next volume's), and Pius X's motu proprio of 1910 -- *Sacrorum antistitum*, *Cum*`,
     `   *per apostolicas*, *Illibatae custodiendae* -- whose months the 1910 index enters only month-only entries under; *Editae*`,
@@ -1107,7 +1131,7 @@ for (const s of SAMPLE) {
 p();
 p('### The reading');
 p();
-for (const line of ERA.reading1(parsedAll)) p(line);
+for (const line of ERA.reading1(parsedAll, sidecars)) p(line);
 p();
 
 // §1b: the page recovery (spec §10.3.4), from the sidecars of the era's sources. The
@@ -1121,12 +1145,15 @@ const recovered = [...parsedAll].filter(([k]) => ERA.covers(actaSource(k)!) && s
 if (recovered.length > 0) {
   p('### 1b. Pages recovered from the volume body (spec §10.3)');
   p('');
-  p('| Source | Opened without a page | Recovered | unique | dated | fuzzy | Not recovered | none | several | outside runs | header | no incipit | **Rate after recovery** | Harvested, after |');
-  p('|---|---|---|---|---|---|---|---|---|---|---|---|---|---|');
-  const sum = { opened: 0, rows: 0, unique: 0, dated: 0, fuzzy: 0, un: 0, none: 0, several: 0, outside: 0, header: 0, noIncipit: 0, entries: 0, lines: 0 };
+  p('| Source | Opened without a page | Recovered | unique | dated | fuzzy | Not recovered | none | several | outside runs | header | claimants | no incipit | **Rate after recovery** | Harvested, after |');
+  p('|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|');
+  const sum = { opened: 0, rows: 0, unique: 0, dated: 0, datedFuzzy: 0, fuzzy: 0, un: 0, none: 0, several: 0, outside: 0, header: 0, claimants: 0, noIncipit: 0, entries: 0, lines: 0 };
+  // `5 (1 fuzzy)`: a tie among fuzzy hits the formula settled is `dated` with `fuzzy: true` on the row.
+  const datedCell = (n: number, f: number) => `${n}${f ? ` (${f} fuzzy)` : ''}`;
   for (const [k, r] of recovered) {
     const sc = sidecars.get(k)!;
     const by = (rule: string) => sc.rows.filter((x) => x.rule === rule).length;
+    const datedFuzzy = sc.rows.filter((x) => x.rule === 'dated' && x.fuzzy).length;
     const why = (reason: string) => sc.unrecovered.filter((x) => x.reason === reason).length;
     const harvestedOf = (e: Pick<ActaEntry, 'category'>) => (categoryForHeading(e.category)?.harvested ?? 'no') !== 'no';
     const after = (r.stats.entries + r.stats.recovered) / (r.stats.pageLines + r.stats.withoutPage);
@@ -1134,17 +1161,18 @@ if (recovered.length > 0) {
     const pagelessHarvested = r.pageless.filter(harvestedOf).length;
     const harvestedAfter = r.stats.harvestedPageLines + pagelessHarvested + recoveredHarvested === 0 ? null
       : (r.stats.harvestedEntries + recoveredHarvested) / (r.stats.harvestedPageLines + pagelessHarvested + recoveredHarvested);
-    p(`| ${k} | ${r.stats.withoutPage} | ${sc.rows.length} | ${by('unique')} | ${by('dated')} | ${by('fuzzy')} | ${sc.unrecovered.length} | ${why('none')} | ${why('several')} | ${why('outside-runs')} | ${why('header-mismatch')} | ${why('no-incipit')} | **${pct(after)}**${after < 0.95 ? ' ⚠' : ''} | ${pct(harvestedAfter)} |`);
-    sum.opened += r.stats.withoutPage; sum.rows += sc.rows.length; sum.unique += by('unique'); sum.dated += by('dated'); sum.fuzzy += by('fuzzy');
-    sum.un += sc.unrecovered.length; sum.none += why('none'); sum.several += why('several'); sum.outside += why('outside-runs'); sum.header += why('header-mismatch'); sum.noIncipit += why('no-incipit');
+    p(`| ${k} | ${r.stats.withoutPage} | ${sc.rows.length} | ${by('unique')} | ${datedCell(by('dated'), datedFuzzy)} | ${by('fuzzy')} | ${sc.unrecovered.length} | ${why('none')} | ${why('several')} | ${why('outside-runs')} | ${why('header-mismatch')} | ${why('claimants')} | ${why('no-incipit')} | **${pct(after)}**${after < 0.95 ? ' ⚠' : ''} | ${pct(harvestedAfter)} |`);
+    sum.opened += r.stats.withoutPage; sum.rows += sc.rows.length; sum.unique += by('unique'); sum.dated += by('dated'); sum.datedFuzzy += datedFuzzy; sum.fuzzy += by('fuzzy');
+    sum.un += sc.unrecovered.length; sum.none += why('none'); sum.several += why('several'); sum.outside += why('outside-runs'); sum.header += why('header-mismatch'); sum.claimants += why('claimants'); sum.noIncipit += why('no-incipit');
     sum.entries += r.stats.entries + r.stats.recovered; sum.lines += r.stats.pageLines + r.stats.withoutPage;
   }
-  p(`| **Total** | **${sum.opened}** | **${sum.rows}** | **${sum.unique}** | **${sum.dated}** | **${sum.fuzzy}** | **${sum.un}** | **${sum.none}** | **${sum.several}** | **${sum.outside}** | **${sum.header}** | **${sum.noIncipit}** | **${pct(sum.entries / sum.lines)}** | |`);
+  p(`| **Total** | **${sum.opened}** | **${sum.rows}** | **${sum.unique}** | **${datedCell(sum.dated, sum.datedFuzzy)}** | **${sum.fuzzy}** | **${sum.un}** | **${sum.none}** | **${sum.several}** | **${sum.outside}** | **${sum.header}** | **${sum.claimants}** | **${sum.noIncipit}** | **${pct(sum.entries / sum.lines)}** | |`);
   p('');
   p('*Opened without a page* is the parser\'s count before recovery (§1); *Recovered* the sidecar\'s rows, by the rule that accepted');
-  p('each page (the only hit in the category\'s runs; the hit whose dating formula gives the entry\'s date; the only hit within one OCR');
-  p('character); *Not recovered* by its reason (no hit; several hits and no formula to settle them; hits outside the category\'s runs;');
-  p('a running header that contradicts the page; an entry the index describes without an incipit). The rate after recovery counts the');
+  p('each page (the only hit in the category\'s runs; the hit whose dating formula gives the entry\'s date, `(n fuzzy)` of them among hits');
+  p('within one OCR character; the only hit within one OCR character); *Not recovered* by its reason (no hit; several hits and no formula');
+  p('to settle them; hits outside the category\'s runs; a running header that contradicts the page; a page another entry of the same');
+  p('category and incipit was given or already holds; an entry the index describes without an incipit). The rate after recovery counts the');
   p('recovered entries among the entries and every entry opened without a page among the lines -- (entries + recovered) / (page lines +');
   p('opened without a page) -- and the 95 % floor applies to it; a source under it is explained in the reading. Every unrecovered entry');
   p('is listed under §9, *Page not recovered*.');
@@ -1203,13 +1231,21 @@ p();
   const otherRulesText = otherRuleCounts.length === 0 ? 'none by the id-collision, OCR, page or reprint rules'
     : otherRuleCounts.map(([name, n]) => `${n} by ${name}`).join(', ');
   const pageShared = creation.held.filter((h) => h.reason === 'page-shared').length;
+  // The curated references into the era's volumes (controller ruling 19: with the matches, the era's "references") --
+  // by volume, since a part with no chronological index (AAS 9-II, the Code) is no source of its own.
+  const curated = Object.values(ACTA_CURATED_REFERENCES).filter((r) => SAMPLE.some((s) => s.volume === r.acta.volume && s.year === r.acta.year)).length;
+  const byGenre = new Map<string, number>();
+  for (const c of created) byGenre.set(cat(c.entry)?.id ?? c.entry.category, (byGenre.get(cat(c.entry)?.id ?? c.entry.category) ?? 0) + 1);
+  const heldBy = new Map<string, number>();
+  for (const h of creation.held) heldBy.set(h.reason, (heldBy.get(h.reason) ?? 0) + 1);
   p('### The reading');
   p();
   for (const line of ERA.reading2({
-    matched: result.matches.length, byHow: [...byHow].sort().map(([k, n]) => `${n} ${k}`).join(', '), created: created.length,
-    byIssuer: [...byIssuer].sort().map(([k, n]) => `\`${k}\` ${n}`).join(', '), held: creation.held.length, guard, otherRules, otherRulesText, toponymIncipit, pageShared,
+    matched: result.matches.length, byHow: [...byHow].sort().map(([k, n]) => `${n} ${k}`).join(', '), curated, references: result.matches.length + curated, created: created.length,
+    byIssuer: [...byIssuer].sort().map(([k, n]) => `\`${k}\` ${n}`).join(', '), byGenre, held: creation.held.length, heldBy, guard, otherRules, otherRulesText, toponymIncipit, pageShared,
     provisional: created.filter((c) => c.record.idStatus === 'provisional').length,
     epistulae: entries.filter((e) => cat(e)?.id === 'Epistulae').length,
+    withoutEntry: totals.without,
   })) p(line);
   if (false) {
   }
@@ -1581,6 +1617,7 @@ const HOLD_LABELS: Record<HoldReason, string> = {
       several: 'several hits, no dating formula to settle them',
       'outside-runs': "hits outside the category's runs of the Index generalis",
       'header-mismatch': 'the running header of the page found contradicts its number',
+      claimants: 'the page was given to, or is held by, another entry of the same category and incipit',
     };
     p(`<details><summary><b>Page not recovered</b> — ${pageless.length}</summary>`);
     p();

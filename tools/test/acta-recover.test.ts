@@ -35,7 +35,8 @@ a) Decreta, 42, 197.
 
 describe('parseIndexGeneralis', () => {
   it('reads the page runs of the pope part, per category, joining a run the line break splits and reading `s.` as the next page', () => {
-    const g = parseIndexGeneralis(['front matter', 'body', AAS13_GENERALIS, 'INDEX DOCUMENTORUM\nCHRONOLOGICO ORDINE DIGESTUS']);
+    // The pope's part of AAS 13 ends at p. 570, the page before the Index generalis (p. 571).
+    const g = parseIndexGeneralis(['front matter', 'body', AAS13_GENERALIS, 'INDEX DOCUMENTORUM\nCHRONOLOGICO ORDINE DIGESTUS'], 570);
     expect(g.page).toBe(3);
     // A singleton run (`209` alone, not `209-...`) is a section start (controller ruling
     // 11): extended to the page before the next section start of any category -- so `209`
@@ -47,10 +48,10 @@ describe('parseIndexGeneralis', () => {
     expect(g.runs.get('Epistulae')).toEqual([[10, 12], [89, 91], [127, 131], [195, 196], [218, 221], [256, 280], [307, 328], [346, 347], [377, 408], [423, 429], [473, 488], [494, 496], [528, 531], [554, 563]]);
     expect(g.runs.get('Sermones')).toEqual([[93, 120]]);
     // `PRECATIONUM FORMULAE` is the categories table's `Orationes` row (categories.ts):
-    // the only prayer heading AAS 13 prints (no `ORATIO`). Both singletons already abut
-    // the next section's own start (370, Constitutiones; and 564 has none greater), so
-    // extension leaves them unchanged.
-    expect(g.runs.get('Orationes')).toEqual([[369, 369], [564, 564]]);
+    // the only prayer heading AAS 13 prints (no `ORATIO`). `369` abuts the next section's
+    // own start (370, Constitutiones) and stays one page; `564`, the last start of the
+    // part, runs to the part's end, 570 (controller ruling 17).
+    expect(g.runs.get('Orationes')).toEqual([[369, 369], [564, 570]]);
     // The pope part ends at the dicasteries' part; nothing of it is read.
     expect(g.runs.has('Consistoria')).toBe(true);
     expect([...g.runs.keys()].some((k) => /OFFICII|Decreta/.test(k))).toBe(false);
@@ -75,14 +76,15 @@ MOTU PROPRIO, 445, 801.
 `;
 
   it('reads the page runs when the volume heads the table `INDEX GENERALIS RERUM`, not `...ACTORUM` (AAS 1-12, 1909-1920)', () => {
-    const g = parseIndexGeneralis(['front matter', 'body', AAS1_GENERALIS_RERUM, 'INDEX DOCUMENTORUM\nCHRONOLOGICO ORDINE DIGESTUS']);
+    // The pope's part of AAS 1 ends at p. 832, the page before the Index generalis (p. 833).
+    const g = parseIndexGeneralis(['front matter', 'body', AAS1_GENERALIS_RERUM, 'INDEX DOCUMENTORUM\nCHRONOLOGICO ORDINE DIGESTUS'], 832);
     expect(g.page).toBe(3);
     // Every run here is a singleton (a bare page, not a range), so every one is a section
     // start extended to the page before the next section start of any category (ruling
-    // 11) -- `802` is the last, so it keeps its own page.
+    // 11) -- `802` is the last, so it runs to the part's end (ruling 17).
     expect(g.runs.get('Litterae Apostolicae')).toEqual([
       [197, 228], [229, 244], [245, 268], [269, 300], [301, 332], [389, 444], [447, 476],
-      [477, 572], [573, 604], [605, 636], [637, 668], [669, 724], [725, 756], [757, 780], [781, 800], [802, 802],
+      [477, 572], [573, 604], [605, 636], [637, 668], [669, 724], [725, 756], [757, 780], [781, 800], [802, 832],
     ]);
     expect(g.runs.get('Litterae Encyclicae')).toEqual([[333, 388]]);
     expect(g.runs.get('Litterae Apostolicae Motu proprio datae')).toEqual([[445, 446], [801, 801]]);
@@ -96,7 +98,37 @@ LITTERAE APOSTOLICAE, 49, 137.
 `;
     const g = parseIndexGeneralis(['front matter', 'body', text, 'INDEX DOCUMENTORUM\nCHRONOLOGICO ORDINE DIGESTUS']);
     expect(g.runs.get('Epistulae')).toEqual([[23, 48], [98, 136]]);
+    // No last page given: the last start keeps its own page.
     expect(g.runs.get('Litterae Apostolicae')).toEqual([[49, 97], [137, 137]]);
+  });
+
+  it('extends the last singleton run of the part to the part\'s last page when it is given (controller ruling 17; AAS 7, 1915: the last `EPISTOLAE` start 589 runs to the part\'s end, where *Communis vestra* to the Brazilian bishops opens at p. 591)', () => {
+    const text = `INDEX GENERALIS RERUM
+ACTA BENEDICTI PP. XV
+EPISTOLAE, 507, 589.
+LITTERAE APOSTOLICAE, 553.
+SACRAE CONGREGATIONES.
+`;
+    const g = parseIndexGeneralis(['front matter', 'body', text, 'INDEX DOCUMENTORUM\nCHRONOLOGICO ORDINE DIGESTUS'], 600);
+    expect(g.runs.get('Epistulae')).toEqual([[507, 552], [589, 600]]);
+    expect(g.runs.get('Litterae Apostolicae')).toEqual([[553, 588]]);
+    // A last page at or before the start extends nothing.
+    expect(parseIndexGeneralis(['front matter', 'body', text, 'INDEX DOCUMENTORUM\nCHRONOLOGICO ORDINE DIGESTUS'], 589).runs.get('Epistulae')).toEqual([[507, 552], [589, 589]]);
+  });
+
+  it('sets no run list for a heading whose pages it cannot read (AAS 16, 1924, p. 507: `LITTERAE ENCYCLICAE, 5 (12)`), so the category is searched over the whole part, not excluded from every page', () => {
+    const text = `INDEX GENERALIS ACTORUM
+I. - ACTA PII PP. XI
+LITTERAE ENCYCLICAE, 5 (12)
+EPISTOLA APOSTOLICA, 133.
+MOTU PROPRIO, 177, 181, 417
+II. - ACTA
+SACRARUM CONGREGATIONUM
+`;
+    const g = parseIndexGeneralis(['front matter', 'body', text, 'INDEX DOCUMENTORUM\nCHRONOLOGICO ORDINE DIGESTUS'], 500);
+    expect(g.runs.has('Litterae Encyclicae')).toBe(false);
+    expect(g.runs.get('Litterae Apostolicae Motu proprio datae')).toEqual([[177, 180], [181, 416], [417, 500]]);
+    expect(g.unmapped).toEqual([]);
   });
 
   it('detects the pope part when the OCR garbles the pope\'s name (AAS 16, 1924, p. 507: `I. - ACTA £\'11 PP. XI`, `PII` misread)', () => {
@@ -147,6 +179,13 @@ describe('latinDate', () => {
     expect(latinDate('Datum Romae, apud Sanctum Petrum, anno Domini nnllesimo nongentesimo trigesimo, die duodecima mensis Februarii, Pontificatus Nostri anno nono.')).toBe('1930-02-12');
     expect(latinDate('Datum Romae apud S. Petrum, anno Domini millesimo nongentesimo trigesimo, die trigesima prima mensis Ianuarii, Pontificatus Nostri anno octavo.')).toBe('1930-01-31');
     expect(latinDate('Datum Eomae, apud Sanctum Petrum, anno Domini millesimo nongentesimo vigesimo octavo die decimanona mensis Maii, Pontificatus Nostri anno septimo.')).toBe('1928-05-19');
+  });
+  it('reads the roman year right after the month when no `anno` precedes it (AAS 7, 1915, p. 569: `die x novembris MCMXV, Pontificatus Nostri anno secundo`)', () => {
+    expect(latinDate('Datum Romae apud S. Petrum, die x novembris MCMXV, Pontifica­tus Nostri anno secundo.')).toBe('1915-11-10');
+    expect(latinDate('Datum Romae apud S. Petrum, die ix decembris MCMXV, Pontificatus Nostri anno secundo.')).toBe('1915-12-09');
+    // `Pontificatus Nostri anno secundo` is not a year, and `anno …` still wins over the year after the month.
+    expect(latinDate('Datum Romae apud S. Petrum, die ix decembris, Pontificatus Nostri anno secundo.')).toBeNull();
+    expect(latinDate('Datum Romae apud S. Petrum, die ix decembris MCMXV anno MCMXVI.')).toBe('1916-12-09');
   });
   it('reads arabic numerals, and returns null for text without a formula', () => {
     expect(latinDate('Datum Romae, ex aedibus Sacrae Congregationis Consistorialis, die 23 Aprilis 1930.')).toBe('1930-04-23');
@@ -232,14 +271,53 @@ describe('recoverPages', () => {
     expect(unrecovered).toEqual([]);
     expect(rows).toEqual([expect.objectContaining({ page: 1, rule: 'unique', incipit: 'Sacra propediem', header: 'Annus XIII - Vol. XIII 24 Ianuarii 1921 Num. 1', bodyLine: 'Sacra propediem celebrari sollemnia, cum septingenti' })]);
   });
-  it('settles two acts of one incipit by the dating formula, and reports the one whose date no formula gives', () => {
+  it('settles two acts of one incipit by the dating formula (both `dated`, controller ruling 18 unchanged), and reports the one whose date no formula gives', () => {
     const { rows, unrecovered } = recoverPages([
       entry('1921-03-05', 'LITTERAE APOSTOLICAE', 'Constat apprime', 'First'),
       entry('1921-05-20', 'LITTERAE APOSTOLICAE', 'Constat apprime', 'Second'),
       entry('1921-09-09', 'LITTERAE APOSTOLICAE', 'Constat apprime', 'Third'),
     ], BODY, generalis, { lastBodyPage: 7 });
     expect(rows.map((r) => [r.page, r.rule, r.formula?.slice(0, 11)])).toEqual([[3, 'dated', 'Datum Romae'], [4, 'dated', 'Datum Romae']]);
+    expect(rows.every((r) => r.fuzzy === undefined)).toBe(true);
     expect(unrecovered).toEqual([expect.objectContaining({ reason: 'several', candidates: [3, 4] })]);
+  });
+  it('gives a page to one claimant of an incipit only: two pageless entries of one incipit and one body hit are both `claimants` with the page as candidate (controller ruling 18; AAS 7, 1915: two letters *Communis vestra* of 10 November, one hit at p. 569)', () => {
+    // Both entries carry the hit's date, so the formula would settle each on p. 5 alone.
+    const { rows, unrecovered } = recoverPages([
+      entry('1921-06-01', 'LITTERAE APOSTOLICAE', 'Quae catholico nomini', 'To the Ligurian bishops'),
+      entry('1921-06-01', 'LITTERAE APOSTOLICAE', 'Quae catholico nomini', 'To the Brazilian bishops'),
+    ], BODY, generalis, { lastBodyPage: 7 });
+    expect(rows).toEqual([]);
+    expect(unrecovered.map((u) => [u.reason, u.candidates])).toEqual([['claimants', [5]], ['claimants', [5]]]);
+    expect(unrecovered.map((u) => u.key)).toEqual([
+      '1921-06-01|LITTERAE APOSTOLICAE|Quae catholico nomini|To the Ligurian bishops',
+      '1921-06-01|LITTERAE APOSTOLICAE|Quae catholico nomini|To the Brazilian bishops',
+    ]);
+  });
+  it('counts the volume\'s paged entries as claimants: one pageless entry whose incipit a paged entry of the category carries, with one body hit, is `claimants`, not `unique`', () => {
+    const paged = [{ category: 'LITTERAE APOSTOLICAE', incipit: 'Quae catholico nomini', page: 5 }];
+    const { rows, unrecovered } = recoverPages([entry('1921-06-01', 'LITTERAE APOSTOLICAE', 'Quae catholico nomini')], BODY, generalis, { lastBodyPage: 7, paged });
+    expect(rows).toEqual([]);
+    expect(unrecovered).toEqual([expect.objectContaining({ reason: 'claimants', candidates: [5] })]);
+    // Without the paged claimant the same hit is `unique`; with a paged claimant of another
+    // category or another incipit it still is.
+    expect(recoverPages([entry('1921-06-01', 'LITTERAE APOSTOLICAE', 'Quae catholico nomini')], BODY, generalis, { lastBodyPage: 7 }).rows).toEqual([expect.objectContaining({ page: 5, rule: 'unique' })]);
+    expect(recoverPages([entry('1921-06-01', 'LITTERAE APOSTOLICAE', 'Quae catholico nomini')], BODY, generalis, { lastBodyPage: 7, paged: [{ category: 'EPISTOLAE', incipit: 'Quae catholico nomini', page: 5 }, { category: 'LITTERAE APOSTOLICAE', incipit: 'Alia verba', page: 5 }] }).rows)
+      .toEqual([expect.objectContaining({ page: 5, rule: 'unique' })]);
+    // A contested incipit whose one hit's formula gives another date is `several`, never the page.
+    expect(recoverPages([entry('1921-06-02', 'LITTERAE APOSTOLICAE', 'Quae catholico nomini')], BODY, generalis, { lastBodyPage: 7, paged }).unrecovered)
+      .toEqual([expect.objectContaining({ reason: 'several', candidates: [5] })]);
+  });
+  it('marks a tie settled by the formula among fuzzy hits as `dated` with `fuzzy: true`', () => {
+    const body = [
+      `${HEADER(1)} \nLITTERAE APOSTOLICAE \nI \nAd futuram rei memoriam. — Placet oculos Nostris \nfiller with no formula`,
+      `${HEADER(2)} \nII \nAd futuram rei memoriam. — Placet oculos Nostris \nDatum Romae die ii mensis Iulii anno MDCCCCXXI.`,
+    ];
+    const g = { page: null, runs: new Map<string, [number, number][]>([['Litterae Apostolicae', [[1, 2]]]]), unmapped: [] as string[] };
+    const { rows, unrecovered } = recoverPages([entry('1921-07-02', 'LITTERAE APOSTOLICAE', 'Placet oculog')], body, g, { lastBodyPage: 2 });
+    expect(unrecovered).toEqual([]);
+    expect(rows).toEqual([expect.objectContaining({ page: 2, rule: 'dated', fuzzy: true, bodyLine: 'Ad futuram rei memoriam. — Placet oculos Nostris' })]);
+    expect(rows[0]!.formula).toMatch(/^Datum Romae die ii mensis Iulii/);
   });
   it('retries a missed incipit fuzzily, accepts a unique fuzzy hit, and reports a miss', () => {
     const { rows, unrecovered } = recoverPages([entry('1921-07-02', 'LITTERAE APOSTOLICAE', 'Placet oculog'), entry('1921-07-03', 'LITTERAE APOSTOLICAE', 'Nihil tale')], BODY, generalis, { lastBodyPage: 7 });

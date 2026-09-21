@@ -108,12 +108,17 @@ const PAGES_LINE_RE = /^\s*[\d\s,.\-–s]+$/;
  * fascicle's section for that category opens at, not the page of every act in it (AAS 4
  * (1912) 745: `EPISTOLAE, 23, 51, 98, 138, …`; the letter *Est sane* opens at p. 140,
  * inside the section that starts at 138, not on 138 itself) -- so it is extended, after
- * every category is read, to the page before the next section start of *any* category (a
- * run with no later start keeps its own page). Measured on AAS 13 (1921) p. 571 and AAS 4
- * (1912) p. 745.
+ * every category is read, to the page before the next section start of *any* category; the
+ * run with no later start -- the last section of the pope's part -- extends to
+ * `lastBodyPage`, the part's last page (controller ruling 17; the CLI passes the page
+ * before the *Index generalis*), and keeps its own page when none is given. A heading whose
+ * page list reads as empty (AAS 16 (1924) 507: `LITTERAE ENCYCLICAE, 5 (12)`, which
+ * `readRuns` skips) sets no run list at all: an empty list would exclude every page, where
+ * no list searches the whole part with the formula required (`recoverPages`). Measured on
+ * AAS 13 (1921) p. 571 and AAS 4 (1912) p. 745.
  */
-export function parseIndexGeneralis(pages: readonly string[]): IndexGeneralis {
-  const start = pages.findIndex((t, i) => i >= Math.floor(pages.length / 2) && GENERALIS_RE.test(t));
+export function parseIndexGeneralis(pages: readonly string[], lastBodyPage?: number): IndexGeneralis {
+  const start = findIndexGeneralis(pages);
   const runs = new Map<string, PageRun[]>();
   const unmapped: string[] = [];
   if (start < 0) return { page: null, runs, unmapped };
@@ -128,7 +133,8 @@ export function parseIndexGeneralis(pages: readonly string[]): IndexGeneralis {
     const cat = categoryForHeading(heading);
     const id = cat?.id ?? heading;
     if (cat === null) unmapped.push(heading);
-    runs.set(id, [...(runs.get(id) ?? []), ...readRuns(buffer)]);
+    const rs = readRuns(buffer);
+    if (rs.length > 0) runs.set(id, [...(runs.get(id) ?? []), ...rs]);
     heading = null;
     buffer = '';
   };
@@ -142,24 +148,32 @@ export function parseIndexGeneralis(pages: readonly string[]): IndexGeneralis {
     if (heading !== null && PAGES_LINE_RE.test(line)) buffer += ' ' + line.trim();
   }
   flush();
-  extendSingletonRuns(runs);
+  extendSingletonRuns(runs, lastBodyPage);
   return { page: start + 1, runs, unmapped };
 }
+
+/** The 0-based index of the *Index generalis* page in the volume text, searched from the midpoint, or -1. */
+export const findIndexGeneralis = (pages: readonly string[]): number =>
+  pages.findIndex((t, i) => i >= Math.floor(pages.length / 2) && GENERALIS_RE.test(t));
 
 /**
  * A singleton run `[s, s]` is a section start (see `parseIndexGeneralis`'s comment):
  * extended in place to end the page before the next section start of any category in the
  * pope's part, collected once over every category before any run is extended, so the
- * result does not depend on the categories' print order. An explicit range or a `195 s.`
- * pair (already `[195, 196]`) is untouched.
+ * result does not depend on the categories' print order; the singleton no start follows
+ * ends at `lastBodyPage` when that is given and lies past it (AAS 7 (1915): the last
+ * `EPISTOLAE` start 589 runs to the part's end, where the letter *Communis vestra* to the
+ * Brazilian bishops opens at p. 591). An explicit range or a `195 s.` pair (already
+ * `[195, 196]`) is untouched.
  */
-function extendSingletonRuns(runs: Map<string, PageRun[]>): void {
+function extendSingletonRuns(runs: Map<string, PageRun[]>, lastBodyPage?: number): void {
   const starts = [...runs.values()].flatMap((rs) => rs.map(([s]) => s)).sort((a, b) => a - b);
   for (const rs of runs.values()) {
     for (const r of rs) {
       if (r[0] !== r[1]) continue;
       const next = starts.find((s) => s > r[0]);
       if (next !== undefined) r[1] = next - 1;
+      else if (lastBodyPage !== undefined && lastBodyPage > r[0]) r[1] = lastBodyPage;
     }
   }
 }
@@ -227,20 +241,26 @@ function ordinalYear(text: string): number | null {
   return 1900 + (m[1] ? tens[m[1]]! : 0) + (m[2] ? UNITS[m[2]]! : 0);
 }
 
+/** The dating formula's anchor as the OCR reads it (`Datum Romae`, `Datum Eomae`, `Datum Bomae`). */
+const DATUM_RE = /Datum [REB]omae/;
+/** The anchor with the formula after it: the 260 characters `latinDate` reads. */
+const DATUM_TAIL_RE = new RegExp(`${DATUM_RE.source}[^]{0,260}`);
+
 /**
  * The date of an act from its own dating formula: `Datum Romae apud Sanctum Petrum, die
  * xxx mensis Martii anno MDCCCCXXX, Pontificatus Nostri nono` -- the day in roman
  * numerals, arabic numerals or ordinal words (`decimatertia`, `trigesima prima`), the
  * month in the genitive, the year in roman numerals, arabic numerals or ordinal words
- * (`millesimo nongentesimo ac trigesimo`), which the constitutions set before the day. The
- * OCR reads `Eomae`, `Bomae`, `nnllesimo`; the anchor admits them. When neither `anno …`
- * nor an ordinal year is read, a bare four-digit year anywhere in the formula (1800-2100)
- * is taken (`die 23 Aprilis 1930.`). Null when the text has no formula, or the formula no
- * readable day, month or year.
+ * (`millesimo nongentesimo ac trigesimo`), which the constitutions set before the day, or
+ * in roman numerals right after the month with no `anno` (`die x novembris MCMXV`, AAS 7
+ * (1915) 569). The OCR reads `Eomae`, `Bomae`, `nnllesimo`; the anchor admits them. When
+ * neither `anno …`, the year after the month nor an ordinal year is read, a bare
+ * four-digit year anywhere in the formula (1800-2100) is taken (`die 23 Aprilis 1930.`).
+ * Null when the text has no formula, or the formula no readable day, month or year.
  */
 export function latinDate(text: string): string | null {
   const t = text.replace(/­/g, '').replace(/\s+/g, ' ');
-  const anchor = t.search(/Datum [REB]omae/);
+  const anchor = t.search(DATUM_RE);
   if (anchor < 0) return null;
   const f = t.slice(anchor, anchor + 260).toLowerCase();
   const dm = f.match(/\bdie\s+([a-z0-9]+(?:\s+(?:prima|secunda|tertia|quarta|quinta|sexta|septima|octava|nona))?)\s+(?:mensis\s+)?([a-z]+)/);
@@ -251,8 +271,12 @@ export function latinDate(text: string): string | null {
   const day = /^\d+$/.test(dayTok) ? Number(dayTok) : (roman(dayTok) ?? ordinalDay(dayTok.split(/\s+/)));
   if (day === null || day < 1 || day > 31) return null;
   const ym = f.match(/\banno\s+(?:domini\s+)?(?:(\d{4})|([mdclxvi]{4,})\b)/);
+  // The roman year right after the month, no `anno` before it: `die x novembris MCMXV,
+  // Pontificatus Nostri anno secundo` (AAS 7 (1915) 569; the form Benedict XV's letters of
+  // 1914-1919 print), read only when no `anno …` year is.
+  const afterMonth = f.match(new RegExp(`\\b${dm[2]}\\s*,?\\s+([mdclxvi]{4,})\\b`));
   const bare = f.match(/\b(1[89]\d{2}|20\d{2}|21\d{2})\b/);
-  const year = ym ? (ym[1] ? Number(ym[1]) : roman(ym[2]!)) : (ordinalYear(f) ?? (bare ? Number(bare[1]) : null));
+  const year = ym ? (ym[1] ? Number(ym[1]) : roman(ym[2]!)) : (afterMonth ? roman(afterMonth[1]!) : null) ?? ordinalYear(f) ?? (bare ? Number(bare[1]) : null);
   if (year === null || year < 1800 || year > 2100) return null;
   const pad = (n: number) => String(n).padStart(2, '0');
   return `${year}-${pad(month)}-${pad(day)}`;
@@ -279,7 +303,7 @@ const joinedLines = (page: string): string[] => page.replace(/­\s*\n\s*/g, '').
 export function formulaNear(pages: readonly string[], from: number, upto: number, fromLine = 0): { page: number; date: string; text: string } | null {
   for (let p = from; p <= Math.min(upto, pages.length); p++) {
     const t = p === from && fromLine > 0 ? joinedLines(pages[p - 1]!).slice(fromLine).join('\n') : pages[p - 1]!;
-    const m = t.replace(/­/g, '').replace(/\s+/g, ' ').match(/Datum [REB]omae[^]{0,260}/);
+    const m = t.replace(/­/g, '').replace(/\s+/g, ' ').match(DATUM_TAIL_RE);
     if (!m) continue;
     const date = latinDate(m[0]);
     if (date !== null) return { page: p, date, text: m[0].slice(0, 200) };
@@ -292,6 +316,8 @@ export interface RecoveredRow {
   page: number;
   /** What accepted the page: the only hit in the runs; the hit whose dating formula gives the entry's date; the only fuzzy hit. */
   rule: 'unique' | 'dated' | 'fuzzy';
+  /** Set on a `dated` row whose hit was found by the fuzzy retry (one OCR character off), not exactly. */
+  fuzzy?: true;
   /** The body line the incipit opens, as the text prints it. */
   bodyLine: string;
   /** The page's first line (its running header, or the fascicle cover's title line). */
@@ -301,7 +327,8 @@ export interface RecoveredRow {
 }
 export interface UnrecoveredRow {
   key: string; date: string; category: string; incipit: string | null;
-  reason: 'no-incipit' | 'none' | 'several' | 'outside-runs' | 'header-mismatch';
+  /** `claimants`: another entry of the same category and incipit was given, or already holds, the same page (controller ruling 18). */
+  reason: 'no-incipit' | 'none' | 'several' | 'outside-runs' | 'header-mismatch' | 'claimants';
   /** The pages the incipit was found on, where there were any. */
   candidates?: number[];
 }
@@ -358,7 +385,8 @@ function dist(a: string, b: string): number {
  * follow the dash and 113 open a line under a heading, a numeral or a salutation; the
  * regeneration (740 rows to 759) lost six -- three of the five wrong pages (the other two,
  * *Promulgandi* and *Ex hac*, moved to their true pages) and three consistories that open
- * mid-sentence -- and gained 25 openings the false hits had made `several`.
+ * mid-sentence -- and gained 25 openings the false hits had made `several` (the final
+ * review's regeneration then brought the rows to 770; the report's §1b has the counts).
  * Exact by default; `fuzzy` admits one differing character per
  * word of five letters or more (the OCR's `e`/`c`, `o`/`a`, `t`/`l`), nothing in a
  * shorter word. The hit's line index is returned for the dated rule, which reads the
@@ -428,6 +456,10 @@ const headerAgrees = (header: string, n: number): boolean => {
 const inRuns = (runs: PageRun[] | undefined, p: number): boolean =>
   runs === undefined || runs.some(([a, b]) => p >= a - 1 && p <= b + 1);
 
+/** The group an entry claims a page in: its category id and its incipit's folded words (what `findIncipit` compares). */
+const claimKey = (e: { category: string; incipit: string | null }): string =>
+  `${categoryForHeading(e.category)?.id ?? e.category}|${(fold(e.incipit ?? '').match(WORD) ?? []).join(' ')}`;
+
 /**
  * The recovery (spec §10.3.2). For each pageless entry with an incipit: the pages of the
  * pope's part (1..lastBodyPage) that open an act with it, within the category's runs from
@@ -440,17 +472,35 @@ const inRuns = (runs: PageRun[] | undefined, p: number): boolean =>
  * accepted only when the formula confirms the date, within 8 pages of the hit. A hit whose
  * running header prints another number is not a page (`header-mismatch`). Anything else is
  * reported with its reason.
+ *
+ * An incipit several entries of one category carry (controller ruling 18) -- counted over
+ * the pageless entries and over the volume's paged entries, `opts.paged` -- is never taken
+ * by the `unique` or `fuzzy` rule, whose one hit may be the other entry's page (AAS 7 (1915)
+ * indexes two letters *Communis vestra*, 10 November 1915, to the Ligurian and the Brazilian
+ * bishops; the body opens them at pp. 569 and 591, and the second lay past the category's
+ * last run before ruling 17): the formula alone settles such a group, a fuzzy hit it
+ * settles being marked `fuzzy: true`. After the loop, a page two rows of one group were
+ * given, or a row was given while a paged entry of the group already holds it, goes to
+ * neither: both are reported `claimants` with the page as their candidate. A page two acts
+ * of *different* incipits share (ACTA_SHARED_PAGES) is untouched.
  */
-export function recoverPages(pageless: readonly PagelessEntry[], pages: readonly string[], generalis: IndexGeneralis, opts: { lastBodyPage: number }): { rows: RecoveredRow[]; unrecovered: UnrecoveredRow[] } {
+export function recoverPages(pageless: readonly PagelessEntry[], pages: readonly string[], generalis: IndexGeneralis, opts: { lastBodyPage: number; paged?: readonly Pick<ActaEntry, 'category' | 'incipit' | 'page'>[] }): { rows: RecoveredRow[]; unrecovered: UnrecoveredRow[] } {
   const rows: RecoveredRow[] = [];
   const unrecovered: UnrecoveredRow[] = [];
   const last = Math.min(opts.lastBodyPage, pages.length);
+  const claimants = new Map<string, number>();
+  for (const e of [...pageless, ...(opts.paged ?? [])]) {
+    if (e.incipit === null) continue;
+    const k = claimKey(e);
+    claimants.set(k, (claimants.get(k) ?? 0) + 1);
+  }
   for (const e of pageless) {
     const key = pagelessKey(e);
     const base = { key, date: e.date, category: e.category, incipit: e.incipit };
     if (e.incipit === null) { unrecovered.push({ ...base, reason: 'no-incipit' }); continue; }
     const cat = categoryForHeading(e.category)?.id ?? e.category;
     const runs = generalis.runs.get(cat);
+    const contested = (claimants.get(claimKey(e)) ?? 0) >= 2;
     const hits = (fuzzy: boolean) => {
       const all: { page: number; line: string; lineIndex: number }[] = [];
       for (let p = 1; p <= last; p++) {
@@ -466,14 +516,15 @@ export function recoverPages(pageless: readonly PagelessEntry[], pages: readonly
       const accept = (h: { page: number; line: string }, r: RecoveredRow['rule'], formula?: string) => {
         const header = headerOf(pages[h.page - 1]!);
         if (!headerAgrees(header, h.page)) { unrecovered.push({ ...base, reason: 'header-mismatch', candidates: [h.page] }); return; }
-        rows.push({ ...base, incipit: e.incipit!, page: h.page, rule: r, bodyLine: h.line, header, ...(formula ? { formula } : {}) });
+        rows.push({ ...base, incipit: e.incipit!, page: h.page, rule: r, ...(r === 'dated' && rule === 'fuzzy' ? { fuzzy: true as const } : {}), bodyLine: h.line, header, ...(formula ? { formula } : {}) });
       };
-      if (inside.length === 1 && runs !== undefined) { accept(inside[0]!, rule); return true; }
-      // Several hits, or no runs to constrain them: the act's own dating formula decides --
-      // but only a formula inside the act's own span (from the hit's line, up to the next
-      // candidate, and not past the end of the Index generalis run that put this hit
-      // `inside`, ±1 for the run's own OCR): an unrelated act's formula further down the
-      // page range, or the previous act's above the hit on its page, confirms nothing.
+      if (inside.length === 1 && runs !== undefined && !contested) { accept(inside[0]!, rule); return true; }
+      // Several hits, no runs to constrain them, or an incipit another entry of the
+      // category also carries: the act's own dating formula decides -- but only a formula
+      // inside the act's own span (from the hit's line, up to the next candidate, and not
+      // past the end of the Index generalis run that put this hit `inside`, ±1 for the
+      // run's own OCR): an unrelated act's formula further down the page range, or the
+      // previous act's above the hit on its page, confirms nothing.
       const runEndFor = (p: number): number | undefined => runs?.find(([a, b]) => p >= a - 1 && p <= b + 1)?.[1];
       const dated = inside
         .map((h) => {
@@ -496,5 +547,21 @@ export function recoverPages(pageless: readonly PagelessEntry[], pages: readonly
     if (decide(hits(true), 'fuzzy')) continue;
     unrecovered.push({ ...base, reason: 'none' });
   }
-  return { rows, unrecovered };
+  // One page to one claimant of a group (ruling 18): the pages the paged entries of each
+  // group hold, then the rows' -- a row on a page of its group's paged entry or of another
+  // row of the group is withdrawn, with the page as its candidate.
+  const held = new Map<string, Set<number>>();
+  for (const e of opts.paged ?? []) {
+    if (e.incipit === null) continue;
+    const k = claimKey(e);
+    held.set(k, (held.get(k) ?? new Set()).add(e.page));
+  }
+  const given = new Map<string, RecoveredRow[]>();
+  for (const r of rows) {
+    const k = `${claimKey(r)}|${r.page}`;
+    given.set(k, [...(given.get(k) ?? []), r]);
+  }
+  const withdrawn = new Set(rows.filter((r) => held.get(claimKey(r))?.has(r.page) || given.get(`${claimKey(r)}|${r.page}`)!.length > 1));
+  for (const r of withdrawn) unrecovered.push({ key: r.key, date: r.date, category: r.category, incipit: r.incipit, reason: 'claimants', candidates: [r.page] });
+  return { rows: rows.filter((r) => !withdrawn.has(r)), unrecovered };
 }

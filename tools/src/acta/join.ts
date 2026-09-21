@@ -7,7 +7,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { parseActaIndex, type ActaEntry, type ActaParseResult } from './index.js';
 import { matchActa, type ActaMatchResult } from './match.js';
-import { ACTA_CURATED_REFERENCES, ACTA_PAGE_READINGS, overrideKey } from './curation.js';
+import { ACTA_CURATED_REFERENCES, ACTA_PAGE_READINGS, overrideKey, type CuratedReference } from './curation.js';
 import { applyPageRows, sidecarPath, type PagesSidecar } from './recover.js';
 import type { DocumentRecord } from '../types.js';
 
@@ -186,15 +186,23 @@ export function applyActa(docs: DocumentRecord[]): ActaJoin {
  * controller ruling 15), which then moves from `matches` to `superseded`: not a claim, not
  * a record, listed by the reports beside the reprints. A row naming a document the join
  * matched without naming the match, a `supersedes` key that names no match of the
- * document, and an id no document carries are each an error. The report tools call this
+ * document, a `supersedes` on a row that cites a part or names a two-part volume (the key
+ * carries no part), and an id no document carries are each an error. The report tools call this
  * after matchActa, as applyActa does, so their §5 and the data agree.
  */
-export function applyCuratedReferences(result: ActaMatchResult, docs: DocumentRecord[]): void {
+export function applyCuratedReferences(result: ActaMatchResult, docs: DocumentRecord[], table: Readonly<Record<string, CuratedReference>> = ACTA_CURATED_REFERENCES): void {
   const byId = new Map(docs.map((d) => [d.id, d]));
-  for (const [id, row] of Object.entries(ACTA_CURATED_REFERENCES)) {
+  for (const [id, row] of Object.entries(table)) {
     const d = byId.get(id);
     if (d === undefined) throw new Error(`ACTA_CURATED_REFERENCES names ${id}, which no document carries`);
     if (row.supersedes !== undefined) {
+      // `overrideKey` is series, volume and page -- no part -- so a key of a two-part
+      // volume (AAS 9 (1917), AAS 75 (1983)) names one page of each part, and a row that
+      // cites a part cannot say which match it displaces: refused until the key carries one.
+      const volume = Number(row.supersedes.split(':')[1]);
+      if (row.acta.part !== undefined || volume === 9 || volume === 75) {
+        throw new Error(`ACTA_CURATED_REFERENCES ${id} supersedes ${row.supersedes} in a two-part volume, but overrideKey carries no part: the match it displaces cannot be named`);
+      }
       const i = result.matches.findIndex((m) => m.documentId === id && overrideKey(m.entry) === row.supersedes);
       if (i < 0) throw new Error(`ACTA_CURATED_REFERENCES ${id} supersedes ${row.supersedes}, which the join did not match to it (stale row)`);
       const [m] = result.matches.splice(i, 1);

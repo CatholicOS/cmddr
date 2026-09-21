@@ -15,7 +15,7 @@ import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { parseActaIndex } from './src/acta/index.js';
 import { ACTA_SOURCES, actaSource, type ActaSource } from './src/acta/join.js';
-import { parseIndexGeneralis, recoverPages, sidecarPath, type PagesSidecar } from './src/acta/recover.js';
+import { findIndexGeneralis, parseIndexGeneralis, recoverPages, sidecarPath, type PagesSidecar } from './src/acta/recover.js';
 
 const STORE = `${process.env['ACTA_SOURCES'] ?? `${homedir()}/development/sources/AAS`}/txt`;
 const textPath = (s: ActaSource) => `${STORE}/aas-${String(s.volume).padStart(2, '0')}-${s.year}${s.part ? `-${s.part}` : ''}.txt`;
@@ -37,11 +37,15 @@ for (const s of sources) {
   if (!existsSync(text)) { console.error(`${s.key}: no volume text at ${text} (run tools/fetch-acta.sh text ${s.year})`); continue; }
   const pages = readFileSync(text, 'utf8').split('\f');
   const parsed = parseActaIndex(readFileSync(s.file, 'utf8'), { year: s.year, volume: s.volume, ...(s.part ? { part: s.part } : {}), ...s.parse });
-  const generalis = parseIndexGeneralis(pages);
-  // The pope's part precedes the indexes; the chronological index's first page bounds it.
+  // The pope's part precedes the indexes: the Index generalis's page, or the chronological
+  // index's first page, bounds it -- computed before the runs are read, since the last
+  // section run of the part extends to it (controller ruling 17).
+  const generalisStart = findIndexGeneralis(pages);
   const indexStart = pages.findIndex((t, i) => i >= Math.floor(pages.length / 2) && /CHRONOLOGIC\w*\s+ORDINE\s+DIGEST/.test(t));
-  const lastBodyPage = (generalis.page ?? (indexStart >= 0 ? indexStart + 1 : pages.length)) - 1;
-  const { rows, unrecovered } = recoverPages(parsed.pageless, pages, generalis, { lastBodyPage });
+  const lastBodyPage = (generalisStart >= 0 ? generalisStart + 1 : indexStart >= 0 ? indexStart + 1 : pages.length) - 1;
+  const generalis = parseIndexGeneralis(pages, lastBodyPage);
+  // The paged entries count as claimants of their incipit (ruling 18).
+  const { rows, unrecovered } = recoverPages(parsed.pageless, pages, generalis, { lastBodyPage, paged: parsed.entries });
   const byKey = (a: { key: string }, b: { key: string }) => (a.key < b.key ? -1 : a.key > b.key ? 1 : 0);
   const sidecar: PagesSidecar = {
     source: s.key, generated: today, text: `${text.replace(`${homedir()}`, '~')} (${pages.length} pages)`,
@@ -50,7 +54,8 @@ for (const s of sources) {
   writeFileSync(sidecarPath(s), JSON.stringify(sidecar, null, 2) + '\n');
   const by = (k: string) => rows.filter((r) => r.rule === k).length;
   const why = (k: string) => unrecovered.filter((u) => u.reason === k).length;
-  console.log(`${s.key}: ${parsed.pageless.length} without a page -> recovered ${rows.length} (unique ${by('unique')}, dated ${by('dated')}, fuzzy ${by('fuzzy')}); `
-    + `unrecovered ${unrecovered.length} (none ${why('none')}, several ${why('several')}, outside-runs ${why('outside-runs')}, header-mismatch ${why('header-mismatch')}, no-incipit ${why('no-incipit')}); `
+  const datedFuzzy = rows.filter((r) => r.rule === 'dated' && r.fuzzy).length;
+  console.log(`${s.key}: ${parsed.pageless.length} without a page -> recovered ${rows.length} (unique ${by('unique')}, dated ${by('dated')}${datedFuzzy ? ` (${datedFuzzy} fuzzy)` : ''}, fuzzy ${by('fuzzy')}); `
+    + `unrecovered ${unrecovered.length} (none ${why('none')}, several ${why('several')}, outside-runs ${why('outside-runs')}, header-mismatch ${why('header-mismatch')}, claimants ${why('claimants')}, no-incipit ${why('no-incipit')}); `
     + `Index generalis ${generalis.page === null ? 'not found' : `p. ${generalis.page}, ${generalis.runs.size} categories`}${generalis.unmapped.length ? `, unmapped: ${generalis.unmapped.join('; ')}` : ''}`);
 }
