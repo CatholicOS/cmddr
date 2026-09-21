@@ -1,4 +1,4 @@
-# The AAS index fixtures: the *Index generalis* PDFs of 2010–2014 and 2015–2024, and the volumes of 1909–2002
+# The AAS index fixtures: the *Index generalis* PDFs of 2003–2014 and 2015–2024, and the volumes of 1909–2002
 
 The extracted text of the *Index documentorum chronologico ordine digestus* of the *Acta
 Apostolicae Sedis*, one file per source, one page per form feed (`\f`), from two kinds of
@@ -8,8 +8,11 @@ source on vatican.va (`https://www.vatican.va/archive/aas/index_it.htm`, which
 - the annual *Index generalis actorum* PDFs published separately from the monthly
   fascicles (`documents/{year}/aas-indice{year}.pdf`, 2015–2024; `AAS-indice2012.pdf`,
   `AAS-INDICE2010.pdf`, `AAS-INDICE2011.pdf`, `AAS-indice2013.pdf`, `AAS-indice2014.pdf` — the
-  case varies, so the script reads the file names off the index page), extracted whole
-  (`aas-indice-{year}.txt`);
+  case varies, so the script reads the file names off the index page); 2003–2009 under
+  `documents/AAS-Index-2002-2009/AAS-Index-{year}.pdf`, the form the server resolves, where
+  the page links 2003–2007 under paths that 404 (spec §11.1), extracted in the layout mode
+  with the spaces collapsed, since the default mode drops the spaces between words in
+  2003–2006, extracted whole (`aas-indice-{year}.txt`);
 - the whole-volume OCR PDFs of 1909–2002 (`documents/AAS-{vol}-{year}-ocr.pdf`; 1917 and
   1983 in two parts, named `AAS-09-I-1917-ocr.pdf` and `AAS-75-1983-I-ocr.pdf` — the part
   before the year in one, after it in the other), of which only the pages of the chronological
@@ -21,7 +24,7 @@ source on vatican.va (`https://www.vatican.va/archive/aas/index_it.htm`, which
   index PDFs of 2010, 2011, 2013 and 2014 (Benedict XVI, and Francis's first year) phase
   2b-ii-c (spec §9); 1926–1930, whose OCR kept the page column, are 2b-iii-a, and
   1909–1925 are phase 2b-iii-b (spec §10), their pages recovered from the volume bodies
-  into the sidecars below; 2003–2009 have no index online.
+  into the sidecars below; the index PDFs of 2003–2009 are phase 2b′ (spec §11).
 
 They are the input of the AAS join (acta reference spec, `docs/superpowers/specs/2026-09-12-acta-reference-design.md`
 §4.1): `tools/src/acta/index.ts` parses the *Acta Summi Pontificis* parts, and `npm run
@@ -135,6 +138,13 @@ retrieval date and parser options; update it with this table.
 | 2011 index PDF (`AAS-INDICE2011.pdf`) | `aas-indice-2011.txt` | **2026-09-13** | pypdf 6.14.2, default mode | whole: 60 | — |
 | 2013 index PDF (`AAS-indice2013.pdf`) | `aas-indice-2013.txt` | **2026-09-13** | pypdf 6.14.2, default mode | whole: 104 | — |
 | 2014 index PDF (`AAS-indice2014.pdf`) | `aas-indice-2014.txt` | **2026-09-13** | pypdf 6.14.2, default mode | whole: 80 | — |
+| 2003 index PDF (`AAS-Index-2002-2009/AAS-Index-2003.pdf`; linked as `AAS-Index-2002-2009-AAS-Index-2003.pdf`, 404) | `aas-indice-2003.txt` | **2026-09-21** | pypdf 6.14.2, layout mode, spaces collapsed | whole: 68 | — |
+| 2004 index PDF (`AAS-Index-2002-2009/AAS-Index-2004.pdf`; linked with `%20` for the hyphens, 404) | `aas-indice-2004.txt` | **2026-09-21** | pypdf 6.14.2, layout mode, spaces collapsed | whole: 56 | — |
+| 2005 index PDF (`AAS-Index-2002-2009/AAS-Index-2005.pdf`; linked with `%20`, 404) | `aas-indice-2005.txt` | **2026-09-21** | pypdf 6.14.2, layout mode, spaces collapsed | whole: 80 | — |
+| 2006 index PDF (`AAS-Index-2002-2009/AAS-Index-2006.pdf`; linked with `%20`, 404) | `aas-indice-2006.txt` | **2026-09-21** | pypdf 6.14.2, layout mode, spaces collapsed; the text layer prints no title line (spec §11.2) | whole: 80 | — |
+| 2007 index PDF (`AAS-Index-2002-2009/AAS-Index-2007.pdf`; linked with `%20`, 404) | `aas-indice-2007.txt` | **2026-09-21** | pypdf 6.14.2, layout mode, spaces collapsed | whole: 88 | — |
+| 2008 index PDF (`AAS-Index-2002-2009/AAS-Index-2008.pdf`, linked so) | `aas-indice-2008.txt` | **2026-09-21** | pypdf 6.14.2, layout mode, spaces collapsed | whole: 76 | — |
+| 2009 index PDF (`AAS-Index-2002-2009/AAS-Index-2009.pdf`, linked so) | `aas-indice-2009.txt` | **2026-09-21** | pypdf 6.14.2, layout mode, spaces collapsed | whole: 70 | — |
 
 No source was missing on its retrieval date, and every volume of 1932–1957, 1959–1977 and 1979–2002
 has a chronological index (AAS 75 part II, the Code of 1983, has none, as AAS 9 part II has none). Every index has the same three parts (the general index by category, the
