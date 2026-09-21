@@ -310,16 +310,19 @@ describe('parseActaIndex on the volumes (acta volumes spec §4)', () => {
                  IV - ACTA IOANNIS PP. XXIII
                        III - MOTU PROPRIO
 1958 Nov. 12 Divini Pastoris. - De Commissione 981
-                 V - ACTA LEONIS PP. XIII
+                 V - ACTA GREGORII PP. XVI
                        I - EPISTULAE
 1958 Nov. 13 Olim scripsit. - Ad aliquem 982`, 'I - ACTA PII PP. XII'), { year: 1958, volume: 50, ...columnar });
     expect(r.entries.map((e) => [e.pope, e.category, e.incipit])).toEqual([
       ['Pius XII', 'LITTERAE ENCYCLICAE', 'Meminisse iuvat'],
       ['Ioannes XXIII', 'MOTU PROPRIO', 'Divini Pastoris'],
-      ['LEONIS XIII', 'EPISTULAE', 'Olim scripsit'],
+      ['GREGORII XVI', 'EPISTULAE', 'Olim scripsit'],
     ]);
     expect(r.skippedParts).toEqual(['II - ACTA IN MORTE PII PP. XII', 'III - ACTA CONCLAVIS']);
-    expect(r.unmappedPopes).toEqual(['ACTA LEONIS PP. XIII']);
+    // `LEONIS XIII` (Leo XIII) and `PII IX` (Pius IX) are now listed too (the ASS's, ass
+    // volumes spec §2), so the genitive this fixture proves unmapped is Gregory XVI's,
+    // from before either gazette (died 1846, before the ASS begins in 1865).
+    expect(r.unmappedPopes).toEqual(['ACTA GREGORII PP. XVI']);
   });
 
   it('reads 1909: the column header, the blank-column dittos, and the nested table of contents as sub-items', () => {

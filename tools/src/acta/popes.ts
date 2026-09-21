@@ -27,6 +27,13 @@ export interface ActaPope {
 }
 
 export const ACTA_POPES: readonly ActaPope[] = [
+  // The *Acta Sanctae Sedis* (ass volumes spec §2) print no pope part: the scanner (ass.ts)
+  // reads the pope from an act's heading (`SANCTISSIMI DOMINI NOSTRI LEONIS XIII`, ASS 12
+  // (1879) 13; `SS. D. N. Pii div. prov. PP. X`, ASS 41 (1908) 3) or its salutation (`LEO
+  // PP. XIII`), keyed here by the same genitive form. Pius IX elected 16 June 1846; the ASS
+  // begin in 1865. Leo XIII elected 20 February 1878.
+  { genitive: 'PII IX', pope: 'Pius IX', issuerId: 'rp:pius-ix', began: '1846-06-16' },
+  { genitive: 'LEONIS XIII', pope: 'Leo XIII', issuerId: 'rp:leo-xiii', began: '1878-02-20' },
   // `I. — ACTA PII PP. X.` (AAS 1, 1909). Elected 4 August 1903.
   { genitive: 'PII X', pope: 'Pius X', issuerId: 'rp:pius-x', began: '1903-08-04' },
   // `I. - ACTA BENEDICTI PP. XV` (AAS 9-I, 1917). Elected 3 September 1914.
