@@ -81,16 +81,17 @@ not used silently.
 
 ### 1b. Pages recovered from the volume body (spec §10.3)
 
-| Source | Opened without a page | Recovered | unique | dated | fuzzy | Not recovered | none | several | outside runs | header | no incipit | **Rate after recovery** | Harvested, after |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1909 | 111 | 2 | 1 | 0 | 1 | 109 | 0 | 0 | 1 | 0 | 108 | **3.6 %** ⚠ | 3.9 % |
-| 1917-I | 61 | 56 | 54 | 0 | 2 | 5 | 1 | 2 | 0 | 1 | 1 | **91.2 %** ⚠ | 92.9 % |
-| **Total** | **172** | **58** | **55** | **0** | **3** | **114** | **1** | **2** | **1** | **1** | **109** | **40.8 %** | |
+| Source | Opened without a page | Recovered | unique | dated | fuzzy | Not recovered | none | several | outside runs | header | claimants | no incipit | **Rate after recovery** | Harvested, after |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1909 | 111 | 2 | 1 | 0 | 1 | 109 | 0 | 0 | 1 | 0 | 0 | 108 | **3.6 %** ⚠ | 3.9 % |
+| 1917-I | 61 | 56 | 54 | 0 | 2 | 5 | 1 | 2 | 0 | 1 | 0 | 1 | **91.2 %** ⚠ | 92.9 % |
+| **Total** | **172** | **58** | **55** | **0** | **3** | **114** | **1** | **2** | **1** | **1** | **0** | **109** | **40.8 %** | |
 
 *Opened without a page* is the parser's count before recovery (§1); *Recovered* the sidecar's rows, by the rule that accepted
-each page (the only hit in the category's runs; the hit whose dating formula gives the entry's date; the only hit within one OCR
-character); *Not recovered* by its reason (no hit; several hits and no formula to settle them; hits outside the category's runs;
-a running header that contradicts the page; an entry the index describes without an incipit). The rate after recovery counts the
+each page (the only hit in the category's runs; the hit whose dating formula gives the entry's date, `(n fuzzy)` of them among hits
+within one OCR character; the only hit within one OCR character); *Not recovered* by its reason (no hit; several hits and no formula
+to settle them; hits outside the category's runs; a running header that contradicts the page; a page another entry of the same
+category and incipit was given or already holds; an entry the index describes without an incipit). The rate after recovery counts the
 recovered entries among the entries and every entry opened without a page among the lines -- (entries + recovered) / (page lines +
 opened without a page) -- and the 95 % floor applies to it; a source under it is explained in the reading. Every unrecovered entry
 is listed under §9, *Page not recovered*.
@@ -1645,8 +1646,8 @@ era and in total; the AAS-only records of every other era are in the *after* col
 
 | Issuer | Shelf records | AAS-only records | Of which from this era | After |
 |---|---|---|---|---|
-| `rp:pius-x` | 306 | 158 | 2 | 464 |
-| `rp:benedict-xv` | 63 | 108 | 28 | 171 |
+| `rp:pius-x` | 306 | 159 | 2 | 465 |
+| `rp:benedict-xv` | 63 | 112 | 28 | 175 |
 | `rp:pius-xi` | 158 | 991 | 59 | 1149 |
 | `rp:pius-xii` | 260 | 1229 | 36 | 1489 |
 | `rp:john-xxiii` | 193 | 294 | 0 | 487 |
@@ -1655,8 +1656,8 @@ era and in total; the AAS-only records of every other era are in the *after* col
 | `rp:john-paul-ii` | 2105 | 43 | 0 | 2148 |
 | `rp:benedict-xvi` | 301 | 69 | 13 | 370 |
 | `rp:francis-i` | 366 | 260 | 0 | 626 |
-| **Popes of the AAS** | **4536** | **3501** | **166** | **8037** |
-| **Registry** | **4975** | **3501** | **166** | **8476** |
+| **Popes of the AAS** | **4536** | **3506** | **166** | **8042** |
+| **Registry** | **4975** | **3506** | **166** | **8481** |
 
 ## 11. Documents of the era's popes with no AAS entry
 

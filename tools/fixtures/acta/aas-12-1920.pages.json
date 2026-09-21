@@ -204,6 +204,17 @@
       "header": "290 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
+      "key": "1920-06-14|EPISTOLAE|Opportune|Ad RR. PP. DD. Ioannem, archiepiscoscopum Perusinum, Petrum,",
+      "date": "1920-06-14",
+      "category": "EPISTOLAE",
+      "incipit": "Opportune",
+      "page": 292,
+      "rule": "dated",
+      "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem. — Opportune admodum in superiore conventu consilia iniistis de revocandis",
+      "header": "292 Acta Apostolicae Sedis - Commentarium Officiale",
+      "formula": "Datum Romae apud sanctum Petrum, die xiv iunii MCMXX, Pontificatus Nostri anno sexto. BENEDICTUS PP. XV V AD GEORGIUM S. R. B. PRESB. CARD. GUSMINI, ARCHIEPISCOPUM BONONIENSEM, CETEROSQUE ARCHIEPISCOP"
+    },
+    {
       "key": "1920-06|EPISTOLAE|Quae Mutinam|Ad RR. PP. DD. Natalem, archiepiscopum Mutinensem, Guidonem ",
       "date": "1920-06",
       "category": "EPISTOLAE",
@@ -519,17 +530,6 @@
       "category": "ALLOCUTIO",
       "incipit": null,
       "reason": "no-incipit"
-    },
-    {
-      "key": "1920-06-14|EPISTOLAE|Opportune|Ad RR. PP. DD. Ioannem, archiepiscoscopum Perusinum, Petrum,",
-      "date": "1920-06-14",
-      "category": "EPISTOLAE",
-      "incipit": "Opportune",
-      "reason": "several",
-      "candidates": [
-        31,
-        292
-      ]
     },
     {
       "key": "1920-06-14|LITTERAE APOSTOLICAE|Inter Suebiae coenobia|Perantiqua abbatia Neresheimensis sanctorum Udalrici et Afra",

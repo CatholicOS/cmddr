@@ -344,24 +344,24 @@
       "header": "Acta Benedicti PP. XV 475"
     },
     {
-      "key": "1915-11-10|EPISTOLAE|Communis vestra|Ad R. P. D. Hieronymum Thomé da Silva, archiepiscopum S. Sal",
+      "key": "1915-11-10|EPISTOLAE|Affari vos|Ad R. P. D. Rinaldum C. Rousset, Rheginensem archiepiscopum,",
       "date": "1915-11-10",
       "category": "EPISTOLAE",
-      "incipit": "Communis vestra",
-      "page": 569,
+      "incipit": "Affari vos",
+      "page": 592,
       "rule": "unique",
-      "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Communis vestra epistola non uno nomine grata Nobis exstitit. Detulit enim",
-      "header": "Acta Benedicti PP. XV 569"
+      "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Affari",
+      "header": "592 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
-      "key": "1915-11-10|EPISTOLAE|Communis vestra|Ad RR. PP. DD. Ludovicum",
+      "key": "1915-11-10|EPISTOLAE|Communem vestram|Ad RR. PP. DD. Archiepiscopos et Episcopos Galliciae, de com",
       "date": "1915-11-10",
       "category": "EPISTOLAE",
-      "incipit": "Communis vestra",
-      "page": 569,
+      "incipit": "Communem vestram",
+      "page": 591,
       "rule": "unique",
-      "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Communis vestra epistola non uno nomine grata Nobis exstitit. Detulit enim",
-      "header": "Acta Benedicti PP. XV 569"
+      "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Communem vestram epistolam ea apud Nos commendat pietatis observantiaeque significatio, qua catholicae Poloniae non solum Episcopos, sed",
+      "header": "Acta Benedicti BP. XV 591"
     },
     {
       "key": "1915-11-10|EPISTOLAE|Epistola tua|Ad R. D. E. Villette, moderatorem archisodalitatis ab Agonia",
@@ -372,6 +372,16 @@
       "rule": "unique",
       "bodyLine": "Dilecte Fili, religiose vir, salutem et apostolicam benedictionem. —",
       "header": "590 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1915-11-10|EPISTOLAE|Et hórrida|Ad Ioannem card. Csernoch, archiepiscopum Strigoniensem, cet",
+      "date": "1915-11-10",
+      "category": "EPISTOLAE",
+      "incipit": "Et hórrida",
+      "page": 593,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Et hórrida doletis huius belli, et ea studiose recolitis,",
+      "header": "Acta Benedicti PP. XV 593"
     },
     {
       "key": "1915-11-10|EPISTOLAE|Libenter abs te|Ad Ioannem «Baptistam Menghini, caeremoniarum pontificalium ",
@@ -528,23 +538,23 @@
       "reason": "no-incipit"
     },
     {
-      "key": "1915-11-10|EPISTOLAE|Affari vos|Ad R. P. D. Rinaldum C. Rousset, Rheginensem archiepiscopum,",
+      "key": "1915-11-10|EPISTOLAE|Communis vestra|Ad R. P. D. Hieronymum Thomé da Silva, archiepiscopum S. Sal",
       "date": "1915-11-10",
       "category": "EPISTOLAE",
-      "incipit": "Affari vos",
-      "reason": "outside-runs",
+      "incipit": "Communis vestra",
+      "reason": "claimants",
       "candidates": [
-        592
+        569
       ]
     },
     {
-      "key": "1915-11-10|EPISTOLAE|Communem vestram|Ad RR. PP. DD. Archiepiscopos et Episcopos Galliciae, de com",
+      "key": "1915-11-10|EPISTOLAE|Communis vestra|Ad RR. PP. DD. Ludovicum",
       "date": "1915-11-10",
       "category": "EPISTOLAE",
-      "incipit": "Communem vestram",
-      "reason": "outside-runs",
+      "incipit": "Communis vestra",
+      "reason": "claimants",
       "candidates": [
-        591
+        569
       ]
     },
     {
@@ -557,16 +567,6 @@
         486,
         488,
         575
-      ]
-    },
-    {
-      "key": "1915-11-10|EPISTOLAE|Et hórrida|Ad Ioannem card. Csernoch, archiepiscopum Strigoniensem, cet",
-      "date": "1915-11-10",
-      "category": "EPISTOLAE",
-      "incipit": "Et hórrida",
-      "reason": "outside-runs",
-      "candidates": [
-        593
       ]
     },
     {

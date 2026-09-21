@@ -664,6 +664,17 @@
       "header": "Annus IV. - Vol. IV. Die 2 Decembris 1912. Num. 21."
     },
     {
+      "key": "1912-11-14|EPISTOLAE|Ex litteris|Ad Georgium Card. Kopp, Vratislaviensium Episcopum, ob epist",
+      "date": "1912-11-14",
+      "category": "EPISTOLAE",
+      "incipit": "Ex litteris",
+      "page": 693,
+      "rule": "dated",
+      "bodyLine": "Dilecte fili Noster, salutem et apostolicam benedictionem. — Ex",
+      "header": "Acta Pii PP. X. 693",
+      "formula": "Datum Romae apud S. Petrum, die xiv novembris MCMXII, Pontificatus Nostri anno decimo. PIUS PP. X. ALLOCUTIO HABITA DIE XVIII NOVEMBRIS MCMXII AD SACERDOTES CONSOCIATIONI « L'UNIONE APOSTOLICA » ADDIC"
+    },
+    {
       "key": "1912-12-20|EPISTOLAE|Alias Nos|Ad Leonem A. Card. Amette, Parisiensium Archiepiscopum, de a",
       "date": "1912-12-20",
       "category": "EPISTOLAE",
@@ -727,17 +738,6 @@
       "category": "LITTERAE APOSTOLICAE",
       "incipit": "Cum sit Nobis",
       "reason": "none"
-    },
-    {
-      "key": "1912-11-14|EPISTOLAE|Ex litteris|Ad Georgium Card. Kopp, Vratislaviensium Episcopum, ob epist",
-      "date": "1912-11-14",
-      "category": "EPISTOLAE",
-      "incipit": "Ex litteris",
-      "reason": "several",
-      "candidates": [
-        604,
-        693
-      ]
     },
     {
       "key": "1912-11-18|ALLOCUTIONES|Ti ringrazio|Ad sacerdotes consociationis « L'Unione Apostolica » addicto",

@@ -3192,6 +3192,28 @@
     }
   },
   {
+    "id": "mag:benedict-xv/quae-catholico-nomini-1920",
+    "title": "Quae catholico nomini. Erigitur Delegatio Apostolica in Albania",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1920-11-12",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Quae catholico nomini",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 185
+    }
+  },
+  {
     "id": "mag:benedict-xv/neminem-latet-1920",
     "title": "Neminem latet. Florentinum templum « S. Maria No-' velia » ad dignitatem basilicae minoris evehitur",
     "idStatus": "minted",
@@ -3380,6 +3402,28 @@
     }
   },
   {
+    "id": "mag:benedict-xv/constat-apprime-1921-01-25",
+    "title": "Constat apprime. Ecclesia sancti Ignatii Lojolaei in oppido Azpeitia, in Hispania, titulo et privilegiis basilicae minoris augetur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-01-25",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Constat apprime",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 191
+    }
+  },
+  {
     "id": "mag:benedict-xv/pastoralis-sollicitudo-1921",
     "title": "Pastoralis sollicitudo. Dismembrationis et erectionis dioecesis Bellohorizontinae",
     "idStatus": "minted",
@@ -3499,7 +3543,7 @@
     }
   },
   {
-    "id": "mag:benedict-xv/constat-apprime-1921",
+    "id": "mag:benedict-xv/constat-apprime-1921-04-16",
     "title": "Constat apprime. Indulgentia plenaria toties quoties in sacello Portiunculae prope Asisium lucranda ad omnes et singulos anni dies extenditur ....",
     "idStatus": "minted",
     "genre": "apostolic-letter",
@@ -3518,6 +3562,28 @@
       "volume": 13,
       "year": 1921,
       "page": 298
+    }
+  },
+  {
+    "id": "mag:benedict-xv/romanorum-pontificum-1921",
+    "title": "Romanorum Pontificum. Unio Apostolica sacerdotum Parisiis instituta in Primariam erigitur seu confirmatur, atque indulgentiis et gratiis spiritualibus ditatur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-04-17",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Romanorum Pontificum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 302
     }
   },
   {
@@ -3946,6 +4012,28 @@
       "volume": 14,
       "year": 1922,
       "page": 190
+    }
+  },
+  {
+    "id": "mag:benedict-xv/constat-apprime-1921-10-20",
+    "title": "Constat apprime. Ecclesia Nostrae Dominae a miraculis in civitate Mauriac, dioecesis Sancti Fiori, exstans, ad titulum et dignitatem basilicae minoris evehitur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xv",
+    "issuerType": "pope",
+    "date": "1921-10-20",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-13-1921-ocr.pdf",
+      "shelf": "aas/1921",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Constat apprime",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 13,
+      "year": 1921,
+      "page": 493
     }
   },
   {

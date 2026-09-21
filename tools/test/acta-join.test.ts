@@ -1,8 +1,9 @@
 import { describe, it, expect } from 'vitest';
-import { readdirSync, readFileSync } from 'node:fs';
-import { loadActaIndexes, actaSource, applyCuratedReferences } from '../src/acta/join.js';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
+import { loadActaIndexes, actaSource, applyCuratedReferences, ACTA_SOURCES } from '../src/acta/join.js';
 import { ACTA_CURATED_REFERENCES, ACTA_PAGE_READINGS } from '../src/acta/curation.js';
-import { pagelessKey } from '../src/acta/recover.js';
+import { categoryForHeading } from '../src/acta/categories.js';
+import { pagelessKey, sidecarPath, type PagesSidecar } from '../src/acta/recover.js';
 import type { ActaEntry } from '../src/acta/index.js';
 import type { ActaMatch, ActaMatchResult } from '../src/acta/match.js';
 import type { DocumentRecord } from '../src/types.js';
@@ -17,6 +18,29 @@ describe('loadActaIndexes with the sidecars (spec §10.3)', () => {
       for (const e of r.entries.filter((e) => e.pageSource !== undefined)) expect(e.page, e.incipit ?? e.raw).toBeGreaterThan(0);
     }
     expect(parsed.get('1917-I')!.stats.recovered).toBeGreaterThan(0);
+  });
+  it('gives a page to one claimant of an incipit only (controller ruling 18): in every sidecar, no two rows of one category and folded incipit share a page, and no row holds the page of a paged entry of the same category and incipit', () => {
+    const { parsed } = loadActaIndexes();
+    // The group a row claims a page in, as recover.ts keys it: the category id and the incipit's folded words.
+    const fold = (t: string) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/æ/g, 'ae').replace(/œ/g, 'oe').toLowerCase().match(/[a-z]+/g)?.join(' ') ?? '';
+    const group = (e: { category: string; incipit: string | null }) => `${categoryForHeading(e.category)?.id ?? e.category}|${fold(e.incipit ?? '')}`;
+    let sidecars = 0;
+    for (const s of ACTA_SOURCES) {
+      if (!existsSync(sidecarPath(s))) continue;
+      sidecars++;
+      const sc = JSON.parse(readFileSync(sidecarPath(s), 'utf8')) as PagesSidecar;
+      const seen = new Map<string, string>();
+      for (const r of sc.rows) {
+        const k = `${group(r)}|${r.page}`;
+        expect(seen.get(k), `${s.key}: ${r.key} shares p. ${r.page} with ${seen.get(k)}`).toBeUndefined();
+        seen.set(k, r.key);
+      }
+      // The entries the index itself paged: those the sidecar and the readings did not supply.
+      const paged = parsed.get(s.key)!.entries.filter((e) => e.pageSource === undefined && e.incipit !== null);
+      const held = new Set(paged.map((e) => `${group(e)}|${e.page}`));
+      for (const r of sc.rows) expect(held.has(`${group(r)}|${r.page}`), `${s.key}: ${r.key} holds p. ${r.page}, the page of a paged entry of its category and incipit`).toBe(false);
+    }
+    expect(sidecars).toBe(17);
   });
   it('keys every curated reading to a source that exists and applies it as `reading`', () => {
     const { parsed } = loadActaIndexes();

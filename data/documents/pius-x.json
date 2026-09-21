@@ -8797,6 +8797,28 @@
     }
   },
   {
+    "id": "mag:pius-x/ex-litteris-1912",
+    "title": "Ex litteris. Ad Georgium Card. Kopp, Vratislaviensium Episcopum, ob epistolam venerationis plenam ab eodem una cum ceteris Germaniae Episcopis Fuldae congregatis, beatissimo Patri datam",
+    "idStatus": "minted",
+    "genre": "letter",
+    "issuerId": "rp:pius-x",
+    "issuerType": "pope",
+    "date": "1912-11-14",
+    "source": {
+      "url": "https://www.vatican.va/archive/aas/documents/AAS-04-1912-ocr.pdf",
+      "shelf": "aas/1912",
+      "retrieved": "2026-09-20"
+    },
+    "incipit": "Ex litteris",
+    "sourceGenreLabel": "Epistulae",
+    "acta": {
+      "series": "AAS",
+      "volume": 4,
+      "year": 1912,
+      "page": 693
+    }
+  },
+  {
     "id": "mag:pius-x/apostolatus-munus-1912",
     "title": "Apostolatus munus. Erectio novi vicariatus aposto liei de Kivu in Africa. ¡25",
     "idStatus": "minted",
