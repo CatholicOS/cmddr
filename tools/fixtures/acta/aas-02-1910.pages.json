@@ -154,6 +154,16 @@
       "header": "Acta Pii PP. X."
     },
     {
+      "key": "1910-03-15|EPISTOLAE|Novimus|Ad R. P. D. Ioachimum Cantagalli, Faventinorum Episcopum, qu",
+      "date": "1910-03-15",
+      "category": "EPISTOLAE",
+      "incipit": "Novimus",
+      "page": 228,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Novimus te Sacerdotem pium iisdemque perpolitum litteris quae te a pue¬",
+      "header": "228 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
       "key": "1910-04-05|LITTERAE APOSTOLICAE|Laeto accepimus|Consociationi sacerdotum in honorem SSmi Cordis Iesu concedu",
       "date": "1910-04-05",
       "category": "LITTERAE APOSTOLICAE",
@@ -310,7 +320,17 @@
       "incipit": "Litterae istinc",
       "page": 446,
       "rule": "fuzzy",
-      "bodyLine": "NUM, SACERDOTII SUI ANNIVERSARIUM VIGESIMUM QUINTUM CELEBRANTEM, GRATULANDI CAUSA.",
+      "bodyLine": "Litteras istinc accepimus communis laetitiae nuncias. Allatum enim",
+      "header": "446 Acta Apostolicae Sedfis. - Commentarium Officiale."
+    },
+    {
+      "key": "1910-05-21|EPISTOLAE|Optimum sane|Ad R. P. D. Iosephum Deruaz, Lausanensium et Genevensium Epi",
+      "date": "1910-05-21",
+      "category": "EPISTOLAE",
+      "incipit": "Optimum sane",
+      "page": 446,
+      "rule": "unique",
+      "bodyLine": "Optimum sane consilium iniisti cum, appetente sacerdotii tui natali sexagesimo, immortales constituisti Deo habendas gratias, cuius",
       "header": "446 Acta Apostolicae Sedfis. - Commentarium Officiale."
     },
     {
@@ -422,16 +442,6 @@
       "rule": "unique",
       "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Opportunum sane locum habendo Conventui Lucanum elegistis, grate memores",
       "header": "Acta Pii PP. X. 737"
-    },
-    {
-      "key": "1910-09-12|EPISTOLAE|Solertiae|Ad Emum V. Aristidem S. R. E. Presbyterum Cardinalem Cavalla",
-      "date": "1910-09-12",
-      "category": "EPISTOLAE",
-      "incipit": "Solertiae",
-      "page": 562,
-      "rule": "fuzzy",
-      "bodyLine": "nuntioque, vos hortatur Sanctitas Sua - in iisdem persequendis comitem adhibete constanter. Sollertiae vestrae Eum profecto ad ferendam",
-      "header": "562 Acta Apostolicae Sedis. - Commentarium Officiale."
     },
     {
       "key": "1910-09-13|LITTERAE APOSTOLICAE|In hoc summo|Erigitur novus Vicariatus Apostolicus de « Kilima-Njaro » in",
@@ -560,20 +570,6 @@
       "reason": "no-incipit"
     },
     {
-      "key": "1910-03-15|EPISTOLAE|Novimus|Ad R. P. D. Ioachimum Cantagalli, Faventinorum Episcopum, qu",
-      "date": "1910-03-15",
-      "category": "EPISTOLAE",
-      "incipit": "Novimus",
-      "reason": "several",
-      "candidates": [
-        52,
-        228,
-        409,
-        510,
-        540
-      ]
-    },
-    {
       "key": "1910-04-18|LITTERAE APOSTOLICAE||Litterae Apostolicae « Trans Oceanum »",
       "date": "1910-04-18",
       "category": "LITTERAE APOSTOLICAE",
@@ -622,22 +618,17 @@
       ]
     },
     {
-      "key": "1910-05-21|EPISTOLAE|Optimum sane|Ad R. P. D. Iosephum Deruaz, Lausanensium et Genevensium Epi",
-      "date": "1910-05-21",
-      "category": "EPISTOLAE",
-      "incipit": "Optimum sane",
-      "reason": "several",
-      "candidates": [
-        98,
-        446,
-        904
-      ]
-    },
-    {
       "key": "1910-05-24|EPISTOLAE|Bari operam|Ad R. P. D. Ferdinandum de Croy, Protonotarium Apostolicum, ",
       "date": "1910-05-24",
       "category": "EPISTOLAE",
       "incipit": "Bari operam",
+      "reason": "none"
+    },
+    {
+      "key": "1910-09-12|EPISTOLAE|Solertiae|Ad Emum V. Aristidem S. R. E. Presbyterum Cardinalem Cavalla",
+      "date": "1910-09-12",
+      "category": "EPISTOLAE",
+      "incipit": "Solertiae",
       "reason": "none"
     },
     {

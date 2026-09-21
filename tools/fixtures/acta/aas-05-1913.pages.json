@@ -290,7 +290,7 @@
       "incipit": "Abhinc duos annos",
       "page": 449,
       "rule": "unique",
-      "bodyLine": "PIUS PP. x.",
+      "bodyLine": "Abhinc duos annos, cum Constitutionem Apostolicam ederemus Divino afflatu, qua id proprie spectavimus, ut, quoad",
       "header": "Annus V. - Vol. V. Die 28 Octobris 1913. Num. 16."
     },
     {
@@ -312,6 +312,16 @@
       "rule": "unique",
       "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Consilium aperuistis cum vobis summopere decorum, tum apprime iucundum",
       "header": "546 Acta, Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1913-12|ALLOCUTIONES|La vostra presenza|Ad christifideles, qui occasione solemnium saecularium pacis",
+      "date": "1913-12",
+      "category": "ALLOCUTIONES",
+      "incipit": "La vostra presenza",
+      "page": 147,
+      "rule": "unique",
+      "bodyLine": "La vostra presenza, o figli diletti, Ci ricolma di grande letizia, perchè se in ogni parte del mondo cattolico si commemora",
+      "header": "Acta Pii PP. X. 147"
     },
     {
       "key": "1913-12|EPISTOLAE|Alberto Tesnière|Ad R. D. Nicolaum Sebastiani, Doctorem litteris latinis trad",
@@ -361,7 +371,7 @@
       "reason": "several",
       "candidates": [
         153,
-        178
+        488
       ]
     },
     {
@@ -394,17 +404,6 @@
       "category": "ALLOCUTIONES",
       "incipit": "Febr",
       "reason": "none"
-    },
-    {
-      "key": "1913-12|ALLOCUTIONES|La vostra presenza|Ad christifideles, qui occasione solemnium saecularium pacis",
-      "date": "1913-12",
-      "category": "ALLOCUTIONES",
-      "incipit": "La vostra presenza",
-      "reason": "several",
-      "candidates": [
-        58,
-        147
-      ]
     }
   ]
 }

@@ -258,10 +258,16 @@ export function latinDate(text: string): string | null {
   return `${year}-${pad(month)}-${pad(day)}`;
 }
 
-/** The first dating formula on pages `from`..`upto` (1-based, inclusive) of the volume text, with its page and text. */
-export function formulaNear(pages: readonly string[], from: number, upto: number): { page: number; date: string; text: string } | null {
+/**
+ * The first dating formula on pages `from`..`upto` (1-based, inclusive) of the volume text,
+ * with its page and text; `fromLine` starts the first page at that line, so a formula
+ * printed above the act's opening -- the previous act's, ending at the top of the page
+ * (AAS 16 (1924) 269: *Ex hac* opens below the 15 April formula of the letter before it)
+ * -- is not read as the act's.
+ */
+export function formulaNear(pages: readonly string[], from: number, upto: number, fromLine = 0): { page: number; date: string; text: string } | null {
   for (let p = from; p <= Math.min(upto, pages.length); p++) {
-    const t = pages[p - 1]!;
+    const t = p === from && fromLine > 0 ? pages[p - 1]!.split('\n').slice(fromLine).join('\n') : pages[p - 1]!;
     const m = t.replace(/­/g, '').replace(/\s+/g, ' ').match(/Datum [REB]omae[^]{0,260}/);
     if (!m) continue;
     const date = latinDate(m[0]);
@@ -326,12 +332,27 @@ function dist(a: string, b: string): number {
 
 /**
  * Whether the page opens an act with the incipit: the incipit's words in order, at the
- * head of a paragraph -- the start of a line, or after the salutation's dash or a full
- * stop (`Ad perpetuam rei memoriam. — Quo maiori rerum`) -- and not inside running text.
- * Exact by default; `fuzzy` admits one differing character per word of five letters or
- * more (the OCR's `e`/`c`, `o`/`a`, `t`/`l`), nothing in a shorter word.
+ * head of a paragraph, and not inside running text. A paragraph head is the salutation's
+ * dash (`Ad perpetuam rei memoriam. — Quo maiori rerum`; the OCR's `-`, `—•`), or the
+ * start of a line whose previous non-blank line is not running text -- a heading or the
+ * pope's name in capitals, a numeral, a salutation or sentence ending in a mark
+ * (`Signor Cardinale,`, `benedictionem.`), or nothing at all. A line that continues a
+ * sentence (`Moderator Generalis Associationis titulo Nostrae Dominae a Salute` /
+ * `Parisiis canonice erectae`, AAS 11 (1919) 109) opens no act, whatever word it starts
+ * with; nor does a word after a full stop inside a line (`praescriptum Constit.
+ * Promulgandi`, AAS 1 (1909) 71; `constanter. Sollertiae vestrae`, AAS 2 (1910) 562) --
+ * the first sidecars accepted all three and cited two of them, and *Ex hac* (AAS 16 (1924)
+ * 269) was given p. 270 by a formula read above its opening (`formulaNear`). Measured
+ * 2026-09-21 over the seventeen volumes after the change: of 759 pages accepted, 646
+ * follow the dash and 113 open a line under a heading, a numeral or a salutation; the
+ * regeneration lost the five wrong pages and three consistories that open mid-sentence,
+ * moved two to their true pages and gained 25 openings the false hits had made `several`.
+ * Exact by default; `fuzzy` admits one differing character per
+ * word of five letters or more (the OCR's `e`/`c`, `o`/`a`, `t`/`l`), nothing in a
+ * shorter word. The hit's line index is returned for the dated rule, which reads the
+ * formula from that line on.
  */
-export function findIncipit(page: string, incipit: string, fuzzy: boolean): { line: string } | null {
+export function findIncipit(page: string, incipit: string, fuzzy: boolean): { line: string; lineIndex: number } | null {
   const want = fold(incipit).match(WORD) ?? [];
   if (want.length === 0) return null;
   const folded = fold(page);
@@ -339,16 +360,32 @@ export function findIncipit(page: string, incipit: string, fuzzy: boolean): { li
   // Joined the same way as `fold` (soft hyphen, `letter-\n letter`), case and diacritics
   // kept, so `rawLines` stays index-aligned with `lines`.
   const rawLines = page.replace(/­\s*\n\s*/g, '').replace(/([a-z])-\s*\n\s*([a-z])/gi, '$1$2').split('\n');
+  // Running text, which the next line continues: a line with a lower-case word that ends
+  // in no mark (the sentence goes on), or ends in a full stop that is not a salutation's
+  // or the memorial formula's (`1.° Quaenam sit huius Congregationis auctoritas statuitur
+  // in Const.` / `Sapienti consilio.`, AAS 1 (1909) 100, the Ordo servandus citing the
+  // constitution that opens at p. 7).
+  const continues = (raw: string): boolean => {
+    const t = raw.trim();
+    if (!/[a-z]{2}/.test(t)) return false;
+    if (/[,:;!?»)]$/.test(t)) return false;
+    if (/\.$/.test(t)) return !/benedictionem|memoriam|salutem|benedizione|bénédiction/i.test(t);
+    return true;
+  };
   for (let li = 0; li < lines.length; li++) {
     const line = lines[li]!;
-    // Candidate heads: the line start, and each position after `— `, `. `, `: `.
-    const heads = [0, ...[...line.matchAll(/(?:—|\.|:)\s+/g)].map((m) => m.index! + m[0].length)];
+    const prev = rawLines.slice(0, li).map((l) => l.trim()).filter((l) => l !== '').pop();
+    // Candidate heads: the line start (a paragraph head only under a line that is not
+    // running text), and each position after a dash.
+    // The dash as the OCR draws it: `— `, `—`, `.— `, `-—-`, `=—`, `•—•`, or a bare hyphen
+    // between spaces (`benedictionem. - Placet`), also at the line's end.
+    const heads = [...(prev === undefined || !continues(prev) ? [0] : []), ...[...line.matchAll(/[-=•]*[—–][-=•]*\s*|(?<=\s)-(?:\s+|$)/g)].map((m) => m.index! + m[0].length)];
     for (const h of heads) {
       const tail = line.slice(h) + ' ' + (lines[li + 1] ?? '');
       const got = [...tail.matchAll(WORD)].slice(0, want.length).map((m) => m[0]);
       if (got.length < want.length) continue;
       const ok = want.every((w, i) => w === got[i] || (fuzzy && w.length >= 5 && got[i]!.length >= 5 && dist(w, got[i]!) <= 1));
-      if (ok) return { line: (rawLines[li] ?? line).trim() };
+      if (ok) return { line: (rawLines[li] ?? line).trim(), lineIndex: li };
     }
   }
   return null;
@@ -402,14 +439,14 @@ export function recoverPages(pageless: readonly PagelessEntry[], pages: readonly
     const cat = categoryForHeading(e.category)?.id ?? e.category;
     const runs = generalis.runs.get(cat);
     const hits = (fuzzy: boolean) => {
-      const all: { page: number; line: string }[] = [];
+      const all: { page: number; line: string; lineIndex: number }[] = [];
       for (let p = 1; p <= last; p++) {
         const f = findIncipit(pages[p - 1]!, e.incipit!, fuzzy);
-        if (f) all.push({ page: p, line: f.line });
+        if (f) all.push({ page: p, line: f.line, lineIndex: f.lineIndex });
       }
       return all;
     };
-    const decide = (all: { page: number; line: string }[], rule: 'unique' | 'fuzzy'): boolean => {
+    const decide = (all: { page: number; line: string; lineIndex: number }[], rule: 'unique' | 'fuzzy'): boolean => {
       if (all.length === 0) return false;
       const inside = all.filter((h) => inRuns(runs, h.page));
       if (inside.length === 0) { unrecovered.push({ ...base, reason: 'outside-runs', candidates: all.map((h) => h.page) }); return true; }
@@ -420,9 +457,10 @@ export function recoverPages(pageless: readonly PagelessEntry[], pages: readonly
       };
       if (inside.length === 1 && runs !== undefined) { accept(inside[0]!, rule); return true; }
       // Several hits, or no runs to constrain them: the act's own dating formula decides --
-      // but only a formula inside the act's own span (up to the next candidate, and not past
-      // the end of the Index generalis run that put this hit `inside`, ±1 for the run's own
-      // OCR): an unrelated act's formula further down the page range confirms nothing.
+      // but only a formula inside the act's own span (from the hit's line, up to the next
+      // candidate, and not past the end of the Index generalis run that put this hit
+      // `inside`, ±1 for the run's own OCR): an unrelated act's formula further down the
+      // page range, or the previous act's above the hit on its page, confirms nothing.
       const runEndFor = (p: number): number | undefined => runs?.find(([a, b]) => p >= a - 1 && p <= b + 1)?.[1];
       const dated = inside
         .map((h) => {
@@ -430,7 +468,8 @@ export function recoverPages(pageless: readonly PagelessEntry[], pages: readonly
           const upto = runs !== undefined
             ? Math.min(next !== undefined ? next - 1 : Infinity, runEndFor(h.page)! + 1)
             : Math.min(next !== undefined ? next - 1 : h.page + 8, h.page + 8);
-          return { h, formula: formulaNear(pages, h.page, Math.min(upto, last)) };
+          // From the hit's own line on: a formula above it on the page is the previous act's.
+          return { h, formula: formulaNear(pages, h.page, Math.min(upto, last), h.lineIndex) };
         })
         .filter((x) => x.formula?.date === e.date);
       if (dated.length === 1) {

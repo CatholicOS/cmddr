@@ -94,6 +94,16 @@
       "header": "Annus IV. - Vol. IV. Die 31 Ianuarii 1912. Num. 2."
     },
     {
+      "key": "1912-02-12|EPISTOLAE|Pergratum Nos scito|Ad R. P. Aloisium Yabar, S. L, Urbani pontificii Collegii Pi",
+      "date": "1912-02-12",
+      "category": "EPISTOLAE",
+      "incipit": "Pergratum Nos scito",
+      "page": 138,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Pergratum",
+      "header": "138 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
       "key": "1912-02-17|LITTERAE APOSTOLICAE|In sacello|Associatio « Horae Sanctae perpetuae de Gethsemani » in arch",
       "date": "1912-02-17",
       "category": "LITTERAE APOSTOLICAE",
@@ -250,7 +260,7 @@
       "incipit": "Je vous remercie",
       "page": 261,
       "rule": "unique",
-      "bodyLine": "HABITA DIE XIV APRILIS MDCCCCXII AD PUEROS PRIMA VICE SACRA COMMUNIONE REFECTOS, QUI, SEDEM APOSTOLICAM VENERATURI, E GALLIA PEREGRINANTES ADVENERUNT.",
+      "bodyLine": "Je vous remercie, mes chers enfants, de la consolation que vous",
       "header": "Annus IV. - Vol. IV. Die 15 Aprilis 1912. Num. 7"
     },
     {
@@ -330,7 +340,7 @@
       "incipit": "Cum incolarum",
       "page": 436,
       "rule": "unique",
-      "bodyLine": "AD PERPETUAM REI MEMORIAM.",
+      "bodyLine": "Cum incolarum numerus Urbis Romae, ut in aliis regionibus praesertim extremis, ita in pratis sub Vaticano crevisset, ac propterea salus",
       "header": "436 Acta Apostolicae Sedis. - Commentarium Officiale."
     },
     {
@@ -340,7 +350,7 @@
       "incipit": "Quamdiu per agri",
       "page": 437,
       "rule": "unique",
-      "bodyLine": "AD PERPETUAM REI MEMORIAM.",
+      "bodyLine": "Quamdiu per agri romani immensam latitudinem exiguus admodum",
       "header": "Acta Pii PP. X. 437"
     },
     {
@@ -370,7 +380,7 @@
       "incipit": "Lacrimabili statu",
       "page": 521,
       "rule": "unique",
-      "bodyLine": "VENERABILES FRATRES SALUTEM ET APOSTOLICAM BENEDICTIONEM.",
+      "bodyLine": "Lacrimabili statu Indorum ex inferiori America vehementer",
       "header": "Annus IV. - Vol. IV. Die 16 Augusti 1912. Num. 15."
     },
     {
@@ -510,7 +520,7 @@
       "incipit": "Cum omnes Catholicos",
       "page": 526,
       "rule": "unique",
-      "bodyLine": "DE CATHOLICORUM IN EXTERAS REGIONES EMIGRATIONE.",
+      "bodyLine": "Cum omnes catholicos Ecclesia materno studio complectatur,",
       "header": "526 A età Apostolicae Sedis. - Commentarium Officiale."
     },
     {
@@ -520,7 +530,7 @@
       "incipit": "Quo pietatis",
       "page": 553,
       "rule": "unique",
-      "bodyLine": "DE SANCTUARIO S. MARIAE AD RUPES AD VALLEM SUPPENTONIAM.",
+      "bodyLine": "Quo pietatis studium in Cristifidelium animis impensius",
       "header": "Annus IV. - Vol. IV. Die 31 Augusti 1912. Num. 16."
     },
     {
@@ -550,7 +560,7 @@
       "incipit": "Il Nous a été",
       "page": 620,
       "rule": "unique",
-      "bodyLine": "MATRIMONII ANNIVERSARIUM.",
+      "bodyLine": "Il Nous a été bien agréable d'apprendre que vous allez célébrer",
       "header": "620 Acta Apostolicae Sedis. - Commentarium Officiale."
     },
     {
@@ -572,6 +582,16 @@
       "rule": "unique",
       "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem. — E",
       "header": "666 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1912-09-12|EPISTOLAE|Te propediem|Ad R. P. D. Ioannem Cutbbertum Hedley, Neoportensium Episcop",
+      "date": "1912-09-12",
+      "category": "EPISTOLAE",
+      "incipit": "Te propediem",
+      "page": 622,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Te propediem celebraturam annum sacerdotii quinquagesimum et sanctae laetitiae socios non Benedictinos tantum habiturum sodales, sed et omnes",
+      "header": "622 Acta Apostolicae Sedis. - Commentarium Officiale."
     },
     {
       "key": "1912-09-14|CONSTITUTIONES APOSTOLICAE|Tradita ab antiquis|De sanctissima Eucharistia promiscuo ritu sumenda",
@@ -688,17 +708,6 @@
       ]
     },
     {
-      "key": "1912-02-12|EPISTOLAE|Pergratum Nos scito|Ad R. P. Aloisium Yabar, S. L, Urbani pontificii Collegii Pi",
-      "date": "1912-02-12",
-      "category": "EPISTOLAE",
-      "incipit": "Pergratum Nos scito",
-      "reason": "several",
-      "candidates": [
-        138,
-        213
-      ]
-    },
-    {
       "key": "1912-06-08|APOSTOLICAE SUB PLUMBO LITTERAE|Christifideles graeci rihis|Erectio dioecesis Hajdu-Doroghensis ritus graeci catholici i",
       "date": "1912-06-08",
       "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
@@ -718,17 +727,6 @@
       "category": "LITTERAE APOSTOLICAE",
       "incipit": "Cum sit Nobis",
       "reason": "none"
-    },
-    {
-      "key": "1912-09-12|EPISTOLAE|Te propediem|Ad R. P. D. Ioannem Cutbbertum Hedley, Neoportensium Episcop",
-      "date": "1912-09-12",
-      "category": "EPISTOLAE",
-      "incipit": "Te propediem",
-      "reason": "several",
-      "candidates": [
-        622,
-        667
-      ]
     },
     {
       "key": "1912-11-14|EPISTOLAE|Ex litteris|Ad Georgium Card. Kopp, Vratislaviensium Episcopum, ob epist",

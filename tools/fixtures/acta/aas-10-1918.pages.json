@@ -164,13 +164,23 @@
       "header": "Acta Benedicti PP. XV 91"
     },
     {
+      "key": "1918-02-02|EPISTOLAE|Conspirantibus|Ad Episcopos Austriacae ditionis, qui e coetu Vindobonensi c",
+      "date": "1918-02-02",
+      "category": "EPISTOLAE",
+      "incipit": "Conspirantibus",
+      "page": 89,
+      "rule": "unique",
+      "bodyLine": "Dilecti filii Nostri et venerabiles fratres, salutem et apostolicam benedictionem. — Conspirantibus adversus Christi Vicarium factionibus improborum, iisque cuilibet eius vel saluberrimo consilio obsistentibus,",
+      "header": "Acta Benedicti PP. XV"
+    },
+    {
       "key": "1918-02-11|SERMO|Negli anni scorsi|Habitus ad parochos et ad quadragesimales in Urbe concionato",
       "date": "1918-02-11",
       "category": "SERMO",
       "incipit": "Negli anni scorsi",
       "page": 92,
       "rule": "unique",
-      "bodyLine": "IN URBE CONCIONATORES.",
+      "bodyLine": "Negli anni scorsi, il saluto da Noi rivolto ai predicatori della Quaresima in Roma fa sempre accompagnato da una calda esortazione a",
       "header": "92 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
@@ -354,6 +364,16 @@
       "header": "360 Acta Apostolicae S«äis - Commentarium Officiale"
     },
     {
+      "key": "1918-06|EPISTOLAE|Litteris apostolicis|Ad Ludovicum Nazarium S. R. E. card. Bégin, archiepiscopum Q",
+      "date": "1918-06",
+      "category": "EPISTOLAE",
+      "incipit": "Litteris apostolicis",
+      "page": 440,
+      "rule": "unique",
+      "bodyLine": "Dilecte fili Noster, venerabiles fratres, salutem et apostolicam benedictionem. — Litteris apostolicis Commisso divinitus, quas ad vos dedimus die VIII septembris MCMXVI, clerum populumque catholicum regionis",
+      "header": "440 Acta Apostolicae Sedis - Comwientarium Officiale"
+    },
+    {
       "key": "1918-07|APOSTOLICAE SUB PLUMBO LITTERAE|Cum urbs|De erectione Concathedralis Recifensis in Brasilia",
       "date": "1918-07",
       "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
@@ -488,17 +508,6 @@
       ]
     },
     {
-      "key": "1918-02-02|EPISTOLAE|Conspirantibus|Ad Episcopos Austriacae ditionis, qui e coetu Vindobonensi c",
-      "date": "1918-02-02",
-      "category": "EPISTOLAE",
-      "incipit": "Conspirantibus",
-      "reason": "several",
-      "candidates": [
-        89,
-        228
-      ]
-    },
-    {
       "key": "1918-02-03|LITTERAE APOSTOLICAE|Litteris Apostolicis|Capitulo et clero sancti Blasii et sancti Aegidii in oppido ",
       "date": "1918-02-03",
       "category": "LITTERAE APOSTOLICAE",
@@ -506,7 +515,6 @@
       "reason": "several",
       "candidates": [
         84,
-        177,
         440
       ]
     },
@@ -525,17 +533,6 @@
       "reason": "header-mismatch",
       "candidates": [
         277
-      ]
-    },
-    {
-      "key": "1918-06|EPISTOLAE|Litteris apostolicis|Ad Ludovicum Nazarium S. R. E. card. Bégin, archiepiscopum Q",
-      "date": "1918-06",
-      "category": "EPISTOLAE",
-      "incipit": "Litteris apostolicis",
-      "reason": "several",
-      "candidates": [
-        177,
-        440
       ]
     },
     {

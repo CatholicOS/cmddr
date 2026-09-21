@@ -124,6 +124,16 @@
       "header": "Annus XIII - Vol. Xin 10 Februarii 1921 Num. 3"
     },
     {
+      "key": "1920-12-10|LITTERAE APOSTOLICAE|Venerabilis, frater|Ecclesia Ssmi Cordis Iesu in civitate Adamantina titulo et p",
+      "date": "1920-12-10",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Venerabilis, frater",
+      "page": 188,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Venerabilis frater Ioachim Silverius de Sousa, archiepiscopus Adamantinus, sua et cleri populique",
+      "header": "188 Acta Apostolicae ßedis - Commentarium Officiale"
+    },
+    {
       "key": "1920-12-15|LITTERAE APOSTOLICAE|Cum ex parte|Sanctuarium beatae Mariae Virginis vulgo « dei Pilastrello »",
       "date": "1920-12-15",
       "category": "LITTERAE APOSTOLICAE",
@@ -160,7 +170,7 @@
       "incipit": "Sacra propediem",
       "page": 33,
       "rule": "unique",
-      "bodyLine": "SEPTIMO SAECULO EXEUNTE A TERTIO ORDINE FRANCISGALIUM CONDITO.",
+      "bodyLine": "Sacra propediem celebrari sollemnia, cum septingenti",
       "header": "Annus XIII - Vol. XIII 24 Ianuarii 1921 Num. 2"
     },
     {
@@ -234,16 +244,6 @@
       "header": "Acta Benedicti PP. XV 93"
     },
     {
-      "key": "1921-03-10|SACRA CONSISTORIA|Consistorium publicum|Emi PP. Cardinales rubro galero ornantur .... Consistorium s",
-      "date": "1921-03-10",
-      "category": "SACRA CONSISTORIA",
-      "incipit": "Consistorium publicum",
-      "page": 125,
-      "rule": "unique",
-      "bodyLine": "Consistorium publicum, in quo Ssmus Dominus Noster Purpuratorum",
-      "header": "Acta Benedicti PP. XV 125"
-    },
-    {
       "key": "1921-03-21|CONSTITUTIONES APOSTOLICAE|Sedis Apostolicae|Dismembrationis et aggregationis oppidi « Vallecorsa »",
       "date": "1921-03-21",
       "category": "CONSTITUTIONES APOSTOLICAE",
@@ -295,6 +295,16 @@
       "header": "Acta Benedicti BP. XV 305"
     },
     {
+      "key": "1921-04-21|LITTERAE APOSTOLICAE|Cathedralis ecclesiae|Cathedrale templum Samogitiense titulo ac privilegiis basili",
+      "date": "1921-04-21",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Cathedralis ecclesiae",
+      "page": 339,
+      "rule": "fuzzy",
+      "bodyLine": "Ad perpetuam rei memoriam. — Cathedralis ecclesia Samogitiensis",
+      "header": "Acta Benedicti PP. XV 339"
+    },
+    {
       "key": "1921-04-30|LITTERAE ENCYCLICAE|In praeclara summorum|Dilectis filiis doctoribus f et alumnis litterarum artiumque",
       "date": "1921-04-30",
       "category": "LITTERAE ENCYCLICAE",
@@ -313,6 +323,16 @@
       "rule": "unique",
       "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem. — Officii",
       "header": "no Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1921-05-13|CONSTITUTIONES APOSTOLICAE|Romani Pontifices|Praelatura nullius de Rio Branco abbatiae Beatae Mariae Virg",
+      "date": "1921-05-13",
+      "category": "CONSTITUTIONES APOSTOLICAE",
+      "incipit": "Romani Pontifices",
+      "page": 370,
+      "rule": "unique",
+      "bodyLine": "Romani Pontifices praedecessores Nostri precibus a Sancti Benedicti",
+      "header": "370 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1921-05-13|LITTERAE APOSTOLICAE|Cum in archidioecesi|Erigitur nova Praefectura Apostolica « de Tierradentro », in",
@@ -335,6 +355,16 @@
       "header": "Acta Benedicti PP. XV 413"
     },
     {
+      "key": "1921-05-16|LITTERAE APOSTOLICAE|Inter sacras aedes|Titulus basilicae minoris confertur archipresbyterali et col",
+      "date": "1921-05-16",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Inter sacras aedes",
+      "page": 412,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Inter sacras aedes quibus Lavania",
+      "header": "Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1921-05-31|LITTERAE APOSTOLICAE|Sodalitatem|Sodalibus nostrae Dominae a bona morte quandam recitantibus ",
       "date": "1921-05-31",
       "category": "LITTERAE APOSTOLICAE",
@@ -355,14 +385,14 @@
       "header": "Acta Benedicti PP. XV 375"
     },
     {
-      "key": "1921-06-16|SACRA CONSISTORIA|Consistorium publicum|",
-      "date": "1921-06-16",
-      "category": "SACRA CONSISTORIA",
-      "incipit": "Consistorium publicum",
-      "page": 125,
+      "key": "1921-06-10|EPISTOLAE|Optimum sane|Ad Emum P. D. Carolum Iosephum S. R. E. presb. card. Schulte",
+      "date": "1921-06-10",
+      "category": "EPISTOLAE",
+      "incipit": "Optimum sane",
+      "page": 423,
       "rule": "unique",
-      "bodyLine": "Consistorium publicum, in quo Ssmus Dominus Noster Purpuratorum",
-      "header": "Acta Benedicti PP. XV 125"
+      "bodyLine": "Dilecte fili noster, salutem et apostolicam benedictionem. — Optimum sane consilium, uti accepimus ex tuis officiosis litteris, nuper",
+      "header": "m"
     },
     {
       "key": "1921-06-17|CONSTITUTIONES APOSTOLICAE|Quo maiori|Erectionis Capituli metropolitani Montis videi",
@@ -541,7 +571,7 @@
       "incipit": "O Gesù",
       "page": 564,
       "rule": "unique",
-      "bodyLine": "PREGHIERA PER LA PROPAGAZIONE DELLA FEDE.",
+      "bodyLine": "O Gesù, non è spenta l'eco della parola, con cui la scarsità degli",
       "header": "564 Acta Apostolicae Sedis - Commentarium Officiale."
     }
   ],
@@ -570,17 +600,6 @@
         185,
         294,
         553
-      ]
-    },
-    {
-      "key": "1920-12-10|LITTERAE APOSTOLICAE|Venerabilis, frater|Ecclesia Ssmi Cordis Iesu in civitate Adamantina titulo et p",
-      "date": "1920-12-10",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Venerabilis, frater",
-      "reason": "several",
-      "candidates": [
-        188,
-        415
       ]
     },
     {
@@ -640,6 +659,13 @@
       ]
     },
     {
+      "key": "1921-03-10|SACRA CONSISTORIA|Consistorium publicum|Emi PP. Cardinales rubro galero ornantur .... Consistorium s",
+      "date": "1921-03-10",
+      "category": "SACRA CONSISTORIA",
+      "incipit": "Consistorium publicum",
+      "reason": "none"
+    },
+    {
       "key": "1921-03-10|SACRA CONSISTORIA||Sacri Pallii expostulatio et concessio ......",
       "date": "1921-03-10",
       "category": "SACRA CONSISTORIA",
@@ -668,10 +694,7 @@
       "date": "1921-03",
       "category": "SACRA CONSISTORIA",
       "incipit": "Consistorium secretum",
-      "reason": "header-mismatch",
-      "candidates": [
-        521
-      ]
+      "reason": "none"
     },
     {
       "key": "1921-03|SACRA CONSISTORIA||Allocutio SS. D. N. Benedicti PP. XV. - Creatio et publicati",
@@ -689,16 +712,6 @@
       "candidates": [
         302,
         372
-      ]
-    },
-    {
-      "key": "1921-04-21|LITTERAE APOSTOLICAE|Cathedralis ecclesiae|Cathedrale templum Samogitiense titulo ac privilegiis basili",
-      "date": "1921-04-21",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Cathedralis ecclesiae",
-      "reason": "outside-runs",
-      "candidates": [
-        286
       ]
     },
     {
@@ -734,47 +747,11 @@
       ]
     },
     {
-      "key": "1921-05-13|CONSTITUTIONES APOSTOLICAE|Romani Pontifices|Praelatura nullius de Rio Branco abbatiae Beatae Mariae Virg",
-      "date": "1921-05-13",
-      "category": "CONSTITUTIONES APOSTOLICAE",
-      "incipit": "Romani Pontifices",
-      "reason": "several",
-      "candidates": [
-        302,
-        370
-      ]
-    },
-    {
-      "key": "1921-05-16|LITTERAE APOSTOLICAE|Inter sacras aedes|Titulus basilicae minoris confertur archipresbyterali et col",
-      "date": "1921-05-16",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Inter sacras aedes",
-      "reason": "several",
-      "candidates": [
-        375,
-        412
-      ]
-    },
-    {
-      "key": "1921-06-10|EPISTOLAE|Optimum sane|Ad Emum P. D. Carolum Iosephum S. R. E. presb. card. Schulte",
-      "date": "1921-06-10",
-      "category": "EPISTOLAE",
-      "incipit": "Optimum sane",
-      "reason": "several",
-      "candidates": [
-        11,
-        423
-      ]
-    },
-    {
       "key": "1921-06-13|SACRA CONSISTORIA|Consistorium secretum|",
       "date": "1921-06-13",
       "category": "SACRA CONSISTORIA",
       "incipit": "Consistorium secretum",
-      "reason": "header-mismatch",
-      "candidates": [
-        521
-      ]
+      "reason": "none"
     },
     {
       "key": "1921-06-13|SACRA CONSISTORIA||Allocutio SS. D. N. Benedicti PP. XV. - Creatio et publicati",
@@ -791,14 +768,18 @@
       "reason": "no-incipit"
     },
     {
+      "key": "1921-06-16|SACRA CONSISTORIA|Consistorium publicum|",
+      "date": "1921-06-16",
+      "category": "SACRA CONSISTORIA",
+      "incipit": "Consistorium publicum",
+      "reason": "none"
+    },
+    {
       "key": "1921-06-16|SACRA CONSISTORIA|Consistorium secretum|",
       "date": "1921-06-16",
       "category": "SACRA CONSISTORIA",
       "incipit": "Consistorium secretum",
-      "reason": "header-mismatch",
-      "candidates": [
-        521
-      ]
+      "reason": "none"
     },
     {
       "key": "1921-06-16|SACRA CONSISTORIA||Postulatio Sacri Pallii",
@@ -897,10 +878,7 @@
       "date": "1921-11-21",
       "category": "SACRA CONSISTORIA",
       "incipit": "Consistorium secretum",
-      "reason": "header-mismatch",
-      "candidates": [
-        521
-      ]
+      "reason": "none"
     },
     {
       "key": "1921-11-21|SACRA CONSISTORIA||Allocutio SS. D. N. Benedicti PP. XV",

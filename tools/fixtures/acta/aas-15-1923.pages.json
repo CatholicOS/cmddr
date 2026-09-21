@@ -70,7 +70,7 @@
       "incipit": "Quando alia vigilia",
       "page": 97,
       "rule": "unique",
-      "bodyLine": "INDICAT AD AVERTENDA PRAESENTIA DISCRIMINA.",
+      "bodyLine": "Quando alia vigilia della lieta solennità del Santo Natale, quasi eco",
       "header": "Annus XV - Vol. XV 5 Martii 1923 Num. 3"
     },
     {
@@ -402,8 +402,7 @@
       "candidates": [
         65,
         147,
-        337,
-        488
+        337
       ]
     },
     {
@@ -452,7 +451,7 @@
       "incipit": "Romanorum Pontificum",
       "reason": "outside-runs",
       "candidates": [
-        140
+        200
       ]
     },
     {
@@ -550,7 +549,6 @@
       "incipit": "Venerabilis frater",
       "reason": "several",
       "candidates": [
-        37,
         338,
         495
       ]

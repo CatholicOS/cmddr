@@ -20,7 +20,7 @@
       "incipit": "Romanorum Pontificum",
       "page": 549,
       "rule": "unique",
-      "bodyLine": "DILECTE FILI NOSTER, SALUTEM ET APOSTOLICAM BENEDICTIONEM.",
+      "bodyLine": "Romanorum Pontificum usus atque institutum semper fuit, nationes",
       "header": "Annus Til - Vol. VII Die 20 Decembris 1915 Num. 20"
     },
     {
@@ -250,7 +250,7 @@
       "incipit": "Ut praesens periculum",
       "page": 557,
       "rule": "unique",
-      "bodyLine": "CARISSIME IN CHRISTO FILI NOSTER, SALUTEM ET APOSTOLICAM BENEDICTIONEM.",
+      "bodyLine": "Ut praesens periculum ab Europae nationibus averterent, teterrima",
       "header": "Acta Benedicti PP. XV 557"
     },
     {
@@ -494,11 +494,7 @@
       "date": "1915-08-31",
       "category": "EPISTOLAE",
       "incipit": "Sept",
-      "reason": "outside-runs",
-      "candidates": [
-        534,
-        537
-      ]
+      "reason": "none"
     },
     {
       "key": "1915-08-31|EPISTOLAE||Ianuarii, vicesimum quintum episcopatus annum",
@@ -558,8 +554,6 @@
       "incipit": "Dec",
       "reason": "several",
       "candidates": [
-        190,
-        212,
         486,
         488,
         575

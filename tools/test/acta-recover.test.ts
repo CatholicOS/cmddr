@@ -163,6 +163,11 @@ describe('formulaNear', () => {
     expect(formulaNear(pages, 5, 5)).toMatchObject({ page: 5, date: '1931-01-01' });
     expect(formulaNear(pages, 1, 3)).toBeNull();
   });
+  it('reads the first page from a given line, so a formula above the act\'s opening is not the act\'s', () => {
+    const pages = ['Datum Romae die i mensis Ianuarii anno MDCCCCXXXI. \nIV \nAd futuram rei memoriam. — Ex hac \nDatum Romae die xvi mensis Aprilis anno MDCCCCXXIV.'];
+    expect(formulaNear(pages, 1, 1)).toMatchObject({ date: '1931-01-01' });
+    expect(formulaNear(pages, 1, 1, 2)).toMatchObject({ date: '1924-04-16' });
+  });
 });
 
 const HEADER = (n: number) => `${n} Acta Apostolicae Sedis - Commentarium Officiale`;
@@ -187,8 +192,29 @@ describe('findIncipit', () => {
   });
   it('folds case, diacritics and soft hyphens, and joins a word the line break split', () => {
     expect(findIncipit('Ad perpetuam rei memoriam. — Quæ cathólico no­\nmini bene', 'Quae catholico nomini', false)).not.toBeNull();
-    expect(findIncipit('Ad perpetuam rei memoriam. — Quo maio-\nri rerum fidei', 'Quo maiori rerum', false)).toEqual({ line: 'Ad perpetuam rei memoriam. — Quo maiori rerum fidei' });
-    expect(findIncipit('Prima li-\nnea longa.\nAd futuram rei memoriam. — Constat apprime quam sit', 'Constat apprime', false)).toEqual({ line: 'Ad futuram rei memoriam. — Constat apprime quam sit' });
+    expect(findIncipit('Ad perpetuam rei memoriam. — Quo maio-\nri rerum fidei', 'Quo maiori rerum', false)).toEqual({ line: 'Ad perpetuam rei memoriam. — Quo maiori rerum fidei', lineIndex: 0 });
+    expect(findIncipit('Prima li-\nnea longa.\nAd futuram rei memoriam. — Constat apprime quam sit', 'Constat apprime', false)).toEqual({ line: 'Ad futuram rei memoriam. — Constat apprime quam sit', lineIndex: 1 });
+  });
+  it('does not take a word that opens a line inside running text for a paragraph head (AAS 11, 1919, p. 109: `… titulo Nostrae Dominae a Salute` / `Parisiis canonice erectae`, inside *Dilectus filius*)', () => {
+    const page = 'Acta Benedicti PP. XV 109 \nAd perpetuam rei memoriam. — Dilectus filius Iosephus Maubon, \nModerator Generalis Associationis titulo Nostrae Dominae a Salute \nParisiis canonice erectae, enixis nos precibus flagitat, ut nonnullas';
+    expect(findIncipit(page, 'Parisiis', false)).toBeNull();
+    expect(findIncipit(page, 'Dilectus filius', false)).toMatchObject({ lineIndex: 1 });
+  });
+  it('takes a line start for a paragraph head under a heading, a numeral, a salutation ending in a comma, or the memorial formula without its dash -- not under a sentence broken at an abbreviation (AAS 1, 1909, p. 100: `… statuitur in Const.` / `Sapienti consilio. In iis vero`)', () => {
+    expect(findIncipit('PIUS PP. x. \nAbhinc duos annos, cum Constitutionem', 'Abhinc duos annos', false)).not.toBeNull();
+    expect(findIncipit('II \nSuessionensis', 'Suessionensis', false)).not.toBeNull();
+    expect(findIncipit('Signor Cardinale, \nFin dai primordi del nostro Pontificato', 'Fin dai primordi', false)).not.toBeNull();
+    expect(findIncipit('Ad perpetuam rei memoriam. \nCum incolarum numerus', 'Cum incolarum', false)).not.toBeNull();
+    expect(findIncipit('1.° Quaenam sit huius Congregationis auctoritas statuitur in Const. \nSapienti consilio. In iis vero quae ad internam disciplinam', 'Sapienti Consilio', false)).toBeNull();
+  });
+  it('does not take a word after a full stop inside a line for a paragraph head (AAS 1, 1909, p. 71: `Iuxta praescriptum Constit. Promulgandi`; AAS 2, 1910, p. 562: `constanter. Sollertiae vestrae`), and reads the dash as the OCR draws it', () => {
+    expect(findIncipit('ORDO SERVANDUS \nIuxta praescriptum Constit. Promulgandi, quae hac ipsa die vulgatur', 'Promulgandi', false)).toBeNull();
+    expect(findIncipit('EPISTOLAE \nadhibete constanter. Sollertiae vestrae Eum profecto', 'Solertiae', true)).toBeNull();
+    for (const dash of ['. —Delectarunt', '.— Cuncta', '. -—- Plane', '. =— Quae', '. •—• Ante', '. - Placet', '.—-Inter']) {
+      const [w] = dash.match(/[A-Z][a-z]+/)!;
+      expect(findIncipit(`HEADING \nVenerabilis Frater, salutem et apostolicam benedictionem${dash} Nos tuae`, w, false), dash).not.toBeNull();
+    }
+    expect(findIncipit('HEADING \nDilecte Fili, salutem et apostolicam benedictionem. -\nVix poteras', 'Vix poteras', false)).not.toBeNull();
   });
   it('in fuzzy mode admits one wrong character per word of five letters or more, and nothing in a shorter word', () => {
     expect(findIncipit(BODY[6]!, 'Placet oculog', false)).toBeNull();
@@ -269,6 +295,16 @@ describe('recoverPages', () => {
     const { rows, unrecovered } = recoverPages([entry('1925-01-01', 'LITTERAE APOSTOLICAE', 'Common incipit phrase')], body, g, { lastBodyPage: 4 });
     expect(rows).toEqual([]);
     expect(unrecovered).toEqual([expect.objectContaining({ reason: 'several', candidates: [1, 2] })]);
+  });
+  it('settles a tie by a formula from the hit\'s own line on: the previous act\'s formula at the top of the page confirms nothing (AAS 16, 1924, p. 269: *Ex hac* opens under the 15 April formula of the letter before it, and its own is on p. 270)', () => {
+    const body = [
+      'Acta Pii PP. XI \nDatum Romae apud Sanctum Petrum, die xv mensis aprilis, anno MDCCCCXXIV. \nIV \nPIUS PP. XI \nAd futuram rei memoriam. — Ex hac beati Petri cathedra',
+      'Acta Apostolicae Sedis - Commentarium Officiale \ntibus continetur. Ex hac vero parte territorii \nDatum Romae apud Sanctum Petrum, die xvi mensis aprilis, anno MDCCCCXXIV.',
+      'Acta Pii PP. XI \nV \nPIUS PP. XI \nAd futuram rei memoriam. — Ex hac divi Petri cathedra \nDatum Romae apud Sanctum Petrum, die v mensis decembris, anno MDCCCCXXIV.',
+    ];
+    const g = { page: null, runs: new Map<string, [number, number][]>([['Litterae Apostolicae', [[1, 3]]]]), unmapped: [] as string[] };
+    const { rows } = recoverPages([entry('1924-04-16', 'LITTERAE APOSTOLICAE', 'Ex hac'), entry('1924-12-05', 'LITTERAE APOSTOLICAE', 'Ex hac', 'Other')], body, g, { lastBodyPage: 3 });
+    expect(rows.map((r) => [r.page, r.rule, r.date])).toEqual([[1, 'dated', '1924-04-16'], [3, 'dated', '1924-12-05']]);
   });
 });
 

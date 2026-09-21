@@ -8,10 +8,10 @@
       "date": "1908-09",
       "category": "CONSTITUTIONES APOSTOLICAE",
       "incipit": "Promulgandi",
-      "page": 71,
-      "rule": "unique",
-      "bodyLine": "Iuxta praescriptum Constit. Promulgandi, quae hac ipsa die vulgatur",
-      "header": "Ordo servandus in Romana Curia. - Normae peculiares. 71"
+      "page": 5,
+      "rule": "fuzzy",
+      "bodyLine": "romulgandi pontificias Constitutiones ac leges non idem",
+      "header": "Annus I. - Vol. I. Die 1 Ianuarii 1909. Num. 1."
     },
     {
       "key": "1909-04-21|LITTERAE ENCYCLICAE|Communium rerum|de saecularibus solemniis in honorem S. Anselmi, Episcopi et",
@@ -30,19 +30,9 @@
       "date": "1908-01-29",
       "category": "CONSTITUTIONES APOSTOLICAE",
       "incipit": "Sapienti Consilio",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
-        48,
-        61,
-        62,
-        64,
-        86,
-        93,
-        98,
-        100,
-        102,
-        103,
-        104
+        295
       ]
     },
     {

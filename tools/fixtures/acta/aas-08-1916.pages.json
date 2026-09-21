@@ -70,7 +70,7 @@
       "incipit": "Al vescovo",
       "page": 95,
       "rule": "unique",
-      "bodyLine": "PRAECONES.",
+      "bodyLine": "Al Vescovo che, secondo un lodevole costume, assiste nella sua",
       "header": "Acta Benedicti PP. XV 95"
     },
     {
@@ -144,6 +144,16 @@
       "header": "Acta Benedicti PP. XV 219"
     },
     {
+      "key": "1916-05|EPISTOLAE|Sanctum et salutare|Ad R. P. Eduardum Hugon, sodalem domicianum, doctorem decuri",
+      "date": "1916-05",
+      "category": "EPISTOLAE",
+      "incipit": "Sanctum et salutare",
+      "page": 174,
+      "rule": "unique",
+      "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Sanctum et",
+      "header": "174 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1916-05|EPISTOLAE|Significandae tibi|Ad R. D. Paulum Buguet, curionem Montislegionis, protonotari",
       "date": "1916-05",
       "category": "EPISTOLAE",
@@ -152,6 +162,16 @@
       "rule": "unique",
       "bodyLine": "Dilecte Fili, salutem et apostolicam benedictionem. — Significandae",
       "header": "218 ' Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1916-06-18|EPISTOLAE|Sollemnia|Ad R. P. D. Carolum Garcia Irigoyen, episcopum de Truxillo, ",
+      "date": "1916-06-18",
+      "category": "EPISTOLAE",
+      "incipit": "Sollemnia",
+      "page": 221,
+      "rule": "unique",
+      "bodyLine": "Venerabilis Frater, salutem et apostolicam benedictionem. — Sollemnia, quae istic, uti allatum est, apparantur, exacto quarto iam saeculo, ex quo, auctoritate et gratia Sedis apostolicae, Truxillensis dioecesis erecta est, digna enimvero visa Nobis sunt quibus vel hae Nostrae",
+      "header": "Acta Benedicti PP. XV"
     },
     {
       "key": "1916-06|EPISTOLAE|Cum ex apostolico officio|Ad R. D. Amadeum Guizzoni, canonicum theologum Piacentinum :",
@@ -314,6 +334,16 @@
       "header": "436 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
+      "key": "1916-11|EPISTOLAE|Quae verba|Ad RR. PP. DD. Ludovicum Gavotti, archiepiscopum Genuensium,",
+      "date": "1916-11",
+      "category": "EPISTOLAE",
+      "incipit": "Quae verba",
+      "page": 435,
+      "rule": "unique",
+      "bodyLine": "Venerabiles Fratres, salutem et apostolicam benedictionem. — Quae",
+      "header": "Acta Benedicti PP. XV 435"
+    },
+    {
       "key": "1916-12|ALLOCUTIO|Quandoquidem|Habita in Consistorio.",
       "date": "1916-12",
       "category": "ALLOCUTIO",
@@ -331,28 +361,6 @@
       "category": "APOSTOLICAE SUB PLUMBO LITTERAE",
       "incipit": "Cantoria, celtica",
       "reason": "none"
-    },
-    {
-      "key": "1916-05|EPISTOLAE|Sanctum et salutare|Ad R. P. Eduardum Hugon, sodalem domicianum, doctorem decuri",
-      "date": "1916-05",
-      "category": "EPISTOLAE",
-      "incipit": "Sanctum et salutare",
-      "reason": "several",
-      "candidates": [
-        174,
-        413
-      ]
-    },
-    {
-      "key": "1916-06-18|EPISTOLAE|Sollemnia|Ad R. P. D. Carolum Garcia Irigoyen, episcopum de Truxillo, ",
-      "date": "1916-06-18",
-      "category": "EPISTOLAE",
-      "incipit": "Sollemnia",
-      "reason": "several",
-      "candidates": [
-        221,
-        395
-      ]
     },
     {
       "key": "1916-06-29|EPISTOLAE|Ingravescente in dies|Ad R. P. Seraphinum Cimino, Ordinis Fratrum Minorum ministru",
@@ -381,17 +389,6 @@
       "category": "EPISTOLAE",
       "incipit": "ANNO MENSE I DIE [PAG",
       "reason": "none"
-    },
-    {
-      "key": "1916-11|EPISTOLAE|Quae verba|Ad RR. PP. DD. Ludovicum Gavotti, archiepiscopum Genuensium,",
-      "date": "1916-11",
-      "category": "EPISTOLAE",
-      "incipit": "Quae verba",
-      "reason": "several",
-      "candidates": [
-        435,
-        450
-      ]
     }
   ]
 }

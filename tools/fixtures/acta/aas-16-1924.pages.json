@@ -70,10 +70,9 @@
       "category": "EPISTOLAE",
       "incipit": "Dioecesis istius",
       "page": 44,
-      "rule": "dated",
+      "rule": "unique",
       "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Dioecesis istius tuae clerus populusque eo iam nunc spectat, ut, cum quintus",
-      "header": "44 Acta Apostolicae Sedis - Commentarium Officiale",
-      "formula": "Datum Romae apud Sanctum Petrum, die xxix mensis novembris, anno MDCCCCXXIII, Pontificatus Nostri secundo. PIUS PP. XI "
+      "header": "44 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1923-11|EPISTOLAE|Ita benignissimus Deus|Ad R. P. D. Franciscum",
@@ -164,6 +163,16 @@
       "rule": "unique",
       "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Cum",
       "header": "46 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1923-12|EPISTOLAE|Non una|Ad B. P. D. Natalem Bruni, Archiepiscopum Mutinensem: de nov",
+      "date": "1923-12",
+      "category": "EPISTOLAE",
+      "incipit": "Non una",
+      "page": 45,
+      "rule": "unique",
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Non",
+      "header": "Acta Pii PP. XI 45"
     },
     {
       "key": "1924-01-10|EPISTOLAE|Societatem istam|Ad perillustrem virum Ludovicum vicecomitem d'Hendecourt, pr",
@@ -420,10 +429,10 @@
       "date": "1924-04-16",
       "category": "LITTERAE APOSTOLICAE",
       "incipit": "Ex hac",
-      "page": 270,
+      "page": 269,
       "rule": "dated",
-      "bodyLine": "Civilibus inter Aequatorianam et Columbianam rempublicam nunc vigentibus continetur. Ex hac vero parte territorii, sic a Napensi vicariatu",
-      "header": "270 Acta Apostolicae Sedis - Commentarium Officiale",
+      "bodyLine": "Ad futuram rei memoriam. — Ex hac beati Petri Apostolorum Principis cathedra, quam divinitus obtinemus, tamquam e sublimi specula",
+      "header": "Acta Pii PP. XI 269",
       "formula": "Datum Romae apud Sanctum Petrum, sub anulo Piscatoris, die xvi mensis aprilis, anno MDCCCCXXIV, Pontificatus Nostri tertio. P. CARD. GASPARRI, a Secretis Status. V PRAEFECTURA APOSTOLICA DE UELLÉ ORIE"
     },
     {
@@ -801,17 +810,6 @@
       "reason": "no-incipit"
     },
     {
-      "key": "1923-12|EPISTOLAE|Non una|Ad B. P. D. Natalem Bruni, Archiepiscopum Mutinensem: de nov",
-      "date": "1923-12",
-      "category": "EPISTOLAE",
-      "incipit": "Non una",
-      "reason": "several",
-      "candidates": [
-        45,
-        361
-      ]
-    },
-    {
       "key": "1924-01-31|LITTERAE APOSTOLICAE|Vt, aucto Pastorum|Dismembrato territorio e vicariatu apostolico de Canton, eff",
       "date": "1924-01-31",
       "category": "LITTERAE APOSTOLICAE",
@@ -902,7 +900,6 @@
       "incipit": "Nikil profecto",
       "reason": "several",
       "candidates": [
-        45,
         48,
         230
       ]
@@ -978,9 +975,7 @@
       "candidates": [
         267,
         269,
-        270,
-        392,
-        452
+        392
       ]
     },
     {

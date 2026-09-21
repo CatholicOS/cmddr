@@ -174,6 +174,16 @@
       "header": "Acta Pii PP. XI 337"
     },
     {
+      "key": "1922-04-25|EPISTOLAE|Quandoquidem|Ad Emos PP. DD. Gulielmum, tit. Sancti Clementis, S. R. E. c",
+      "date": "1922-04-25",
+      "category": "EPISTOLAE",
+      "incipit": "Quandoquidem",
+      "page": 423,
+      "rule": "unique",
+      "bodyLine": "benedictionem. — Quandoquidem probe novimus quantum valeant catholica Instituta ad animos mentesque recte conformandos, facere non possumus, ab ipso Pontificatus Nostri initio, quin omnes curas cogitationesque in ea Athenaea nobilissima conferimus, quae, ut ista studiorum",
+      "header": "Acta Pii PP. XI 423"
+    },
+    {
       "key": "1922-04-25|LITTERAE APOSTOLICAE|Exigit apostolicum munus|Diviso territorio vicariatus apostolici de Kivu, eriguntur v",
       "date": "1922-04-25",
       "category": "LITTERAE APOSTOLICAE",
@@ -272,6 +282,28 @@
       "rule": "unique",
       "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem.t — Novos",
       "header": "Acta Pii PP. XI 497"
+    },
+    {
+      "key": "1922-06-27|LITTERAE APOSTOLICAE|Quae catholico nomini|Separato territorio e vicariatibus apostolicis Ugandensi et ",
+      "date": "1922-06-27",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Quae catholico nomini",
+      "page": 488,
+      "rule": "dated",
+      "bodyLine": "Ad perpetuam rei memoriam. — Quae catholico nomini aeternaeque",
+      "header": "488 Acta Apostolicae Sedis - Commentarium Officiale",
+      "formula": "Datum Romae apud Sanctum Petrum, sub anulo Piscatoris, die XXVII iunii anno MCMXXII, Pontificatus Nostri primo. P. CARD. GASPARRI, a Secretis Status. III t RESTITUITUR PERANTIQUA ABBATIA SANCTI MARTIN"
+    },
+    {
+      "key": "1922-07-08|LITTERAE APOSTOLICAE|Dilectus filius|Restituitur perantiqua abbatia Sancti Martini de Weingarten ",
+      "date": "1922-07-08",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Dilectus filius",
+      "page": 489,
+      "rule": "dated",
+      "bodyLine": "Ad perpetuam rei memoriam.— Dilectus filius Ansgarius Höckelmann,",
+      "header": "Acta Pii PP. XI 489",
+      "formula": "Datum Romae apud Sanctum Petrum, sub anulo Piscatoris, die VIII iulii anno MCMXXII, Pontificatus Nostri primo. P. CARD. GASPARRI, a Secretis Status. IV TEMPLUM B. M. V. MATRIS GRATIARUM, UTINI, TITULO"
     },
     {
       "key": "1922-07-10|LITTERAE APOSTOLICAE|Minime Nos|Templum B. M. V. Matris Gratiarum, Utini, titulo ac dignitat",
@@ -464,24 +496,14 @@
       "header": "Acta PU PP. XI m"
     },
     {
-      "key": "1922-12-11|SACRUM CONSISTORIUM|Consistorium secretum|Camerariatus Sacri Collegii",
-      "date": "1922-12-11",
-      "category": "SACRUM CONSISTORIUM",
-      "incipit": "Consistorium secretum",
-      "page": 609,
+      "key": "1922-10|EPISTOLAE|Peculiari|Ad R. P. D. Aloisium Hickey, episcopum Providentiensem, quin",
+      "date": "1922-10",
+      "category": "EPISTOLAE",
+      "incipit": "Peculiari",
+      "page": 592,
       "rule": "unique",
-      "bodyLine": "Consistorium secretum, cuius acta ex ordine referuntur:",
-      "header": "Amuis XIV - Vol. XIV 15 Decembris 1922 Num. 17"
-    },
-    {
-      "key": "1922-12-14|SACRUM CONSISTORIUM|Consistorium publicum|Traditio rubri galeri Erais Cardinalibus Consistorium secret",
-      "date": "1922-12-14",
-      "category": "SACRUM CONSISTORIUM",
-      "incipit": "Consistorium publicum",
-      "page": 621,
-      "rule": "unique",
-      "bodyLine": "Consistorium publicum, in quo Ssmus Dnus Noster Purpuratorum Patrum",
-      "header": "Acta Pii PF. XI mi"
+      "bodyLine": "Venerabilis frater, salutem et apostolicam benedictionem. — Peculiari quadam animi iucunditate nuntium accepimus, primo adventantis",
+      "header": "592 Acta Apostolicae Sedis - Commentarium Officiale"
     }
   ],
   "unrecovered": [
@@ -512,34 +534,11 @@
       "incipit": "ACTA, vol",
       "reason": "several",
       "candidates": [
-        49,
-        53,
         69,
-        85,
-        109,
-        125,
-        141,
-        145,
-        161,
-        177,
-        233,
-        249,
-        281,
         297,
-        313,
         321,
-        401,
-        417,
-        449,
-        465,
-        481,
-        497,
-        553,
         569,
-        593,
-        641,
-        657,
-        673
+        641
       ]
     },
     {
@@ -547,7 +546,10 @@
       "date": "1921-11",
       "category": "EPISTOLAE",
       "incipit": "Libenter admodum",
-      "reason": "none"
+      "reason": "outside-runs",
+      "candidates": [
+        10
+      ]
     },
     {
       "key": "1921-12-13|EPISTOLAE|Iucundum sane|Ad RR. PP. DD. Basilium Suciu, archiepiscopum Albae-Iuliense",
@@ -565,13 +567,9 @@
       "date": "1921-12",
       "category": "EPISTOLAE",
       "incipit": "Consilium",
-      "reason": "several",
+      "reason": "outside-runs",
       "candidates": [
-        424,
-        647,
-        648,
-        649,
-        652
+        13
       ]
     },
     {
@@ -591,17 +589,6 @@
       "category": "LITTERAE APOSTOLICAE",
       "incipit": null,
       "reason": "no-incipit"
-    },
-    {
-      "key": "1922-04-25|EPISTOLAE|Quandoquidem|Ad Emos PP. DD. Gulielmum, tit. Sancti Clementis, S. R. E. c",
-      "date": "1922-04-25",
-      "category": "EPISTOLAE",
-      "incipit": "Quandoquidem",
-      "reason": "several",
-      "candidates": [
-        390,
-        423
-      ]
     },
     {
       "key": "1922-05-30|EPISTOLAE||Concordat entre le Saint-Siège et le Gouvernement de Lettoni",
@@ -625,18 +612,6 @@
       "reason": "none"
     },
     {
-      "key": "1922-06-27|LITTERAE APOSTOLICAE|Quae catholico nomini|Separato territorio e vicariatibus apostolicis Ugandensi et ",
-      "date": "1922-06-27",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Quae catholico nomini",
-      "reason": "several",
-      "candidates": [
-        183,
-        487,
-        488
-      ]
-    },
-    {
       "key": "1922-06|HOMILIA|Accipietis virtutem|De Fidei propagatione; habita inter Missarum solemnia, sacra",
       "date": "1922-06",
       "category": "HOMILIA",
@@ -644,17 +619,6 @@
       "reason": "header-mismatch",
       "candidates": [
         344
-      ]
-    },
-    {
-      "key": "1922-07-08|LITTERAE APOSTOLICAE|Dilectus filius|Restituitur perantiqua abbatia Sancti Martini de Weingarten ",
-      "date": "1922-07-08",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Dilectus filius",
-      "reason": "several",
-      "candidates": [
-        489,
-        494
       ]
     },
     {
@@ -671,10 +635,7 @@
       "incipit": "Decessor noster",
       "reason": "several",
       "candidates": [
-        145,
-        147,
         321,
-        455,
         545
       ]
     },
@@ -686,17 +647,11 @@
       "reason": "none"
     },
     {
-      "key": "1922-10|EPISTOLAE|Peculiari|Ad R. P. D. Aloisium Hickey, episcopum Providentiensem, quin",
-      "date": "1922-10",
-      "category": "EPISTOLAE",
-      "incipit": "Peculiari",
-      "reason": "several",
-      "candidates": [
-        168,
-        288,
-        466,
-        592
-      ]
+      "key": "1922-12-11|SACRUM CONSISTORIUM|Consistorium secretum|Camerariatus Sacri Collegii",
+      "date": "1922-12-11",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": "Consistorium secretum",
+      "reason": "none"
     },
     {
       "key": "1922-12-11|SACRUM CONSISTORIUM||Allocutio SS. D. N. Xii PP. XV. - Creatio et publicatio S. R",
@@ -704,6 +659,13 @@
       "category": "SACRUM CONSISTORIUM",
       "incipit": null,
       "reason": "no-incipit"
+    },
+    {
+      "key": "1922-12-14|SACRUM CONSISTORIUM|Consistorium publicum|Traditio rubri galeri Erais Cardinalibus Consistorium secret",
+      "date": "1922-12-14",
+      "category": "SACRUM CONSISTORIUM",
+      "incipit": "Consistorium publicum",
+      "reason": "none"
     }
   ]
 }

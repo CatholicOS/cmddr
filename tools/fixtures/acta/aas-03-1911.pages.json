@@ -60,7 +60,7 @@
       "incipit": "Gravi iamdiu",
       "page": 53,
       "rule": "unique",
-      "bodyLine": "NOMINATIM EXCOMMUNICANTUR.",
+      "bodyLine": "Gravi iamdiu scandalo, maximo animi moerore, vobis esse",
       "header": "Annus III. - Vol. III. Die 15 Februarii 1911. Num. 2."
     },
     {
@@ -92,6 +92,16 @@
       "rule": "unique",
       "bodyLine": "Ad perpetuam rei memoriam. — Pias fidelium sodalitates, quae",
       "header": "Annus III. - Vol. III. Die 29 Aprilis 1911. Num. 5."
+    },
+    {
+      "key": "1910-03|LITTERAE APOSTOLICAE|Ex hac|Erectio novi Vicariatus Apostolici insulae Guam",
+      "date": "1910-03",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Ex hac",
+      "page": 127,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Ex hac, quam divinitus obtinemus, Beati Petri Principis Apostolorum Cathedra, tamquam e sublimi",
+      "header": "Acta Pii PP. X. 127"
     },
     {
       "key": "1910-11-19|LITTERAE APOSTOLICAE|Sacras Aedes|Erectio Ecclesiae S. Laurentii in pago « Buia » archidioeces",
@@ -140,7 +150,7 @@
       "incipit": "Il Nous a été",
       "page": 63,
       "rule": "unique",
-      "bodyLine": "GANDAVENSI EPHEMERIDI QUAE INSCRIBITUR « LE BIEN PUBLIC ».",
+      "bodyLine": "Il Nous a été bien agréable d'apprendre que vous allez prochainement célébrer le cinquantième anniversaire de votre entrée dans la",
       "header": "Acta Pii PP. X. 63"
     },
     {
@@ -170,7 +180,7 @@
       "incipit": "Ex quo",
       "page": 117,
       "rule": "unique",
-      "bodyLine": "VENERABILES FRATRES, SALUTEM ET APOSTOLICAM BENEDICTIONEM.",
+      "bodyLine": "Ex quo, nono labente saeculo, Orientis gentes ab unitate",
       "header": "Annus Ili. - Vol. III. Die 31 Martii 1911. Num. 4."
     },
     {
@@ -312,6 +322,16 @@
       "rule": "unique",
       "bodyLine": "Dilecte Fili Noster, salutem et apostolicam benedictionem. — Gratam sane occasionem confirmandi singularem, qua te prosequimur, benevolentiam proximus iam dies affert, sacer Augustae Virgini Dei Parenti",
       "header": "160 Acta Apostolicae Sedis. - Commentarium Officiale."
+    },
+    {
+      "key": "1911-03|EPISTOLAE|Propediem|Ad celsitudinem suam Luitpoldum Bavariae regnum regentem, no",
+      "date": "1911-03",
+      "category": "EPISTOLAE",
+      "incipit": "Propediem",
+      "page": 161,
+      "rule": "unique",
+      "bodyLine": "Dilectissime in Christo fili Noster, salutem et apostolicam benedictionem. — Propediem exoriturus nonagesimus Celsitudinis tuae natalis",
+      "header": "Acta Pii PP, X. 161"
     },
     {
       "key": "1911-04-08|LITTERAE APOSTOLICAE|Quo uberiores|Constitutio novi Vicariatus Apostolici in Regione Coreana de",
@@ -680,7 +700,7 @@
       "incipit": "Vi ringrazio",
       "page": 655,
       "rule": "unique",
-      "bodyLine": "DIE XXIX NOVEMBRIS MCMXI.",
+      "bodyLine": "Vi ringrazio, Signor Cardinale, dei sentimenti che in nome vostro",
       "header": "Acta Pii PP. X. 655"
     },
     {
@@ -729,17 +749,6 @@
       ]
     },
     {
-      "key": "1910-03|LITTERAE APOSTOLICAE|Ex hac|Erectio novi Vicariatus Apostolici insulae Guam",
-      "date": "1910-03",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Ex hac",
-      "reason": "several",
-      "candidates": [
-        126,
-        127
-      ]
-    },
-    {
       "key": "1910-03|LITTERAE APOSTOLICAE|Quae Catholico|Erectio novi Vicariatus Apostolici Carolinensis et Marianens",
       "date": "1910-03",
       "category": "LITTERAE APOSTOLICAE",
@@ -763,17 +772,6 @@
       "category": "EPISTOLAE",
       "incipit": "Mirificam cepimus",
       "reason": "none"
-    },
-    {
-      "key": "1911-03|EPISTOLAE|Propediem|Ad celsitudinem suam Luitpoldum Bavariae regnum regentem, no",
-      "date": "1911-03",
-      "category": "EPISTOLAE",
-      "incipit": "Propediem",
-      "reason": "several",
-      "candidates": [
-        161,
-        313
-      ]
     },
     {
       "key": "1911-04-11|LITTERAE APOSTOLICAE|Venerabilis Frater|Sodalitas S. Barbarae V. et M. in Ecclesia parochiali loci «",

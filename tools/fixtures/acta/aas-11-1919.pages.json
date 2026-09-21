@@ -24,6 +24,16 @@
       "header": "Acta Benedicti PP. XV 35"
     },
     {
+      "key": "1919-01-01|EPISTOLAE|Inter egregias|Ad RR. PP. DD. Archiepiscopum Lini anum ceterosque in Peruvi",
+      "date": "1919-01-01",
+      "category": "EPISTOLAE",
+      "incipit": "Inter egregias",
+      "page": 230,
+      "rule": "unique",
+      "bodyLine": "Venerabiles fratres, salutem et apostolicam benedictionem.—-Inter",
+      "header": "230 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1919-01-06|EPISTOLAE|Pietatem et fidem|Ad R. P. D. Arthurum Hinsley, antistitem dom. pont., Angloru",
       "date": "1919-01-06",
       "category": "EPISTOLAE",
@@ -129,10 +139,9 @@
       "category": "EPISTOLAE",
       "incipit": "Nuper",
       "page": 108,
-      "rule": "dated",
+      "rule": "unique",
       "bodyLine": "Nuper ex Venerabilis Fratris Patriarchae Hierosolymitani",
-      "header": "108 Acta Apostolicae Sedis - Commentarium Officiale",
-      "formula": "Datum Romae apud sanctum Petrum, die xi martii, anno mcmxix, Pontificatus Nostri quinto. BENEDICTUS PP. XV LITTERAE APOSTOLICAE CONSOCIATIONI DOMINAE NOSTRAE A SALUTE PARISIIS CANONICE ERECTAE INDULGE"
+      "header": "108 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1919-03-12|EPISTOLAE|Multiplices quidem|Ad Ioannem S. R. E. card. Csernoch, archiepiscopum Strigonie",
@@ -333,26 +342,9 @@
       "rule": "unique",
       "bodyLine": "Diletto figlio, salute ed apostolica benedizione. — Nel decorso anno",
       "header": "342 Acta Apostolicae Sedis - Commentarium Officiale"
-    },
-    {
-      "key": "1919-09-27|LITTERAE APOSTOLICAE|Parisiis|Templum parisiense « Voti nationalis », Sacratissimo Iesu Co",
-      "date": "1919-09-27",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Parisiis",
-      "page": 109,
-      "rule": "unique",
-      "bodyLine": "Parisiis canonice erectae, enixis nos precibus flagitat, ut nonnullas",
-      "header": "Acta Benedicti PP. XV 109"
     }
   ],
   "unrecovered": [
-    {
-      "key": "1919-01-01|EPISTOLAE|Inter egregias|Ad RR. PP. DD. Archiepiscopum Lini anum ceterosque in Peruvi",
-      "date": "1919-01-01",
-      "category": "EPISTOLAE",
-      "incipit": "Inter egregias",
-      "reason": "none"
-    },
     {
       "key": "1919-03|LITTERAE APOSTOLICAE|Illustriores|Ecclesia Rothomagensis B. M. Virginis a Bono Succursu titulo",
       "date": "1919-03",
@@ -390,6 +382,16 @@
       "reason": "outside-runs",
       "candidates": [
         456
+      ]
+    },
+    {
+      "key": "1919-09-27|LITTERAE APOSTOLICAE|Parisiis|Templum parisiense « Voti nationalis », Sacratissimo Iesu Co",
+      "date": "1919-09-27",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Parisiis",
+      "reason": "outside-runs",
+      "candidates": [
+        457
       ]
     },
     {

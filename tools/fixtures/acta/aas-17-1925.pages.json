@@ -224,6 +224,16 @@
       "header": "Acta Pii PP. XI 301"
     },
     {
+      "key": "1925-06-21|LITTERAE APOSTOLICAE|Pretioso purpúrala|Ven. Dei Famuli Ioannes de Brébeuf, Isaacus Jogues, Gabriel ",
+      "date": "1925-06-21",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Pretioso purpúrala",
+      "page": 302,
+      "rule": "fuzzy",
+      "bodyLine": "Ad perpetuam rei memoriam.—Pretioso purpurata martyrum sanguine'",
+      "header": "302 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
       "key": "1925-06|LITTERAE APOSTOLICAE|Flores apparuerunt|Ven. Dei Famula Maria Michaela a Ssmo Sacramento, fundatrix ",
       "date": "1925-06",
       "category": "LITTERAE APOSTOLICAE",
@@ -272,6 +282,16 @@
       "rule": "unique",
       "bodyLine": "Ad perpetuam rei memoriam. — E Christi latere egressa, ac pretioso",
       "header": "366 Acta Apostolicae Sedis - Commentarium Officiale"
+    },
+    {
+      "key": "1925-07|LITTERAE APOSTOLICAE|Sub titulo|Monasterium Ordinis S. Benedicti, Beatae Mariae Virgini de e",
+      "date": "1925-07",
+      "category": "LITTERAE APOSTOLICAE",
+      "incipit": "Sub titulo",
+      "page": 530,
+      "rule": "unique",
+      "bodyLine": "Ad perpetuam rei memoriam. — Sub titulo Beatae Mariae Virginis",
+      "header": "530 Acta Apostolicae Sedis - Commentarium Officiale"
     },
     {
       "key": "1925-10-28|CONSTITUTIONES APOSTOLICAE|Vixdum Poloniae unitas|De nova dioecesium latini ritus circumscriptione in ditione ",
@@ -465,13 +485,6 @@
       ]
     },
     {
-      "key": "1925-06-21|LITTERAE APOSTOLICAE|Pretioso purpúrala|Ven. Dei Famuli Ioannes de Brébeuf, Isaacus Jogues, Gabriel ",
-      "date": "1925-06-21",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Pretioso purpúrala",
-      "reason": "none"
-    },
-    {
       "key": "1925-06|SOLEMNIA CANONIZATIONUM||Inter Sanctam Sedem et Poloniae Eempublicam Sollemnis Conven",
       "date": "1925-06",
       "category": "SOLEMNIA CANONIZATIONUM",
@@ -496,17 +509,6 @@
       "reason": "outside-runs",
       "candidates": [
         572
-      ]
-    },
-    {
-      "key": "1925-07|LITTERAE APOSTOLICAE|Sub titulo|Monasterium Ordinis S. Benedicti, Beatae Mariae Virgini de e",
-      "date": "1925-07",
-      "category": "LITTERAE APOSTOLICAE",
-      "incipit": "Sub titulo",
-      "reason": "several",
-      "candidates": [
-        232,
-        530
       ]
     },
     {
