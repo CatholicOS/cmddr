@@ -13,7 +13,7 @@ century of typography and OCR, the popes, and the sample-first sequencing.
 | Years | On vatican.va | Index | Fetch |
 |---|---|---|---|
 | 1909–2002 | one whole-volume OCR PDF per year (`documents/AAS-{vol}-{year}-ocr.pdf`, 2–6 MB, 500–1,300 pages); 1917 and 1983 in two parts (`AAS-09-I-1917`, `AAS-09-II-1917`; `AAS-75-I-1983`, `-II-`) | *Index documentorum chronologico ordine digestus* in the volume's tail — vol. 1 (1909) p. 835, vol. 23 (1931) p. 531, vol. 50 (1958) p. 1032, vol. 87 (1995) p. 1175 — the same structure as 2015–2024 | download; locate the index pages; extract only those to text |
-| 2003–2009 | twelve born-digital monthly fascicles per year, no index file; the December fascicle carries no index (2005: 48 pages, none) | **none online** | **out of scope** — needs a body-heading parser over the fascicles (pope heading → category heading → title → *Datum Romae … die … mensis … anno …*); recorded as phase 2b′ |
+| 2003–2009 | twelve born-digital monthly fascicles per year, no index file; the December fascicle carries no index (2005: 48 pages, none) | an annual *Index generalis* PDF per year, linked wrongly (§11.1) | as phase 1, by the hyphenated URL, layout mode with spaces collapsed — **phase 2b′, done** (§11) |
 | 2010–2014 | monthly fascicles plus an annual index PDF (`AAS-INDICE2010.pdf`, `AAS-indice2012.pdf` — case varies) | as 2015–2024 | as phase 1 |
 
 So phase 2b's corpus is **99 index sources**: 94 volume-tail indexes (96 files, counting
@@ -109,7 +109,7 @@ headline numbers as a comment.
 
 ## 8. Out of scope
 
-2003–2009 (phase 2b′, fascicle bodies); the ASS (2c); the remaining 93 sources (2b-ii);
+2003–2009 (phase 2b′, §11 — done); the ASS (2c); the remaining 93 sources (2b-ii);
 releasing guard holds (needs its own curated mechanism, noted in PR #32); keywords /
 `actKind` / `medium` on AAS-born records (*Nuntii radiophonici* is #27's evidence and is
 counted, not applied).
@@ -357,8 +357,10 @@ Measured on the collapsed fixtures (the census in the era report):
   APOSTOLICA MOTU PROPRIO DATA` (2009) map as their unhyphenated and plural forms do;
   `COSTITUTIONES APOSTOLICAE` (2007) is the index's own misprint and maps to the
   constitutions with the heading quoted; `SYNODUS EPISCOPORUM` under Benedict XVI in 2005
-  (`VIII – SYNODUS EPISCOPORUM`, a numbered category of the pope part, not a part) is
-  skipped as the part of that name is. `CONSISTORIUM` (2005) is the consistory, not
+  (`VIII – SYNODUS EPISCOPORUM`, a numbered category of the pope part, not a part) is a
+  category of the pope's part where its numeral continues the part's (VIII after VII; AAS
+  93 (2001) prints XV after XIV the same way) and a part where it does not (AAS 69 (1977),
+  II after the pope's XII). `CONSISTORIUM` (2005) is the consistory, not
   harvested, as before.
 - **The journeys.** The *Itinera apostolica* entries of 2003–2005 are dated by a range
   (`2003 Iun. 5-9 in Croatiam … 492`) and those of 2007–2008 by a sub-list under the
@@ -378,7 +380,7 @@ spec's; `ACTA_REPRINTS` is consulted for any act these volumes print that a late
 enters again (`Ibi vacabimus` is 2012's; none is expected from 2003–2009 and the report
 says what it found). `source.url` is `null` for a document created from these sources, as
 for every fascicle-era source, since the monthly fascicle holding a page is not derivable
-from the index. The era report, `docs/superpowers/reports/2026-09-2D-acta-volumes-2003-2009.md`,
+from the index. The era report, `docs/superpowers/reports/2026-09-21-acta-volumes-2003-2009.md`,
 follows the 2b-ii-c report's sections: the census of §11.2 with counts per year, the
 parse rate per source before and after the ditto reading, the references and creations
 per pope and class, every hold with its reason. The pinned counts in

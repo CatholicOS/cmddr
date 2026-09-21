@@ -249,9 +249,9 @@ bibliographic — like `keywords` and `series` it has **no bearing on register, 
 that reads it is 25 in [SCHEMA.md](SCHEMA.md): one page opens one act.
 
 The reference is **joined to** the shelf harvest, not substituted for it. vatican.va publishes a separate annual *Index
-generalis* PDF for 2010–2024 and a whole-volume OCR PDF for each year 1909–2002, which carries the same chronological index
+generalis* PDF for 2003–2024 and a whole-volume OCR PDF for each year 1909–2002, which carries the same chronological index
 in its tail; the harvest parses the *Acta Summi Pontificis* part of each (checked in as text under `tools/fixtures/acta/`:
-the ten index PDFs of 2015–2024, the 2010–2014 indexes, the index pages of the five sample volumes of phase 2b — AAS 1 (1909),
+the ten index PDFs of 2015–2024, the 2003–2014 indexes, the index pages of the five sample volumes of phase 2b — AAS 1 (1909),
 9-I (1917), 23 (1931), 50 (1958) and 70 (1978) — of the twenty-six volumes of 1932–1957, AAS 24–49, the pontificates of
 Pius XI and Pius XII, of the nineteen of 1959–1977, AAS 51–69, John XXIII and Paul VI, of the twenty-four of 1979–2002,
 AAS 71–94, John Paul II, and of the five of 1926–1930, AAS 18–22, Pius XI) and matches every entry in a
@@ -306,9 +306,18 @@ encyclicals of Pius X, Benedict XV and Pius XI cite their page, eleven of them r
 recovery (the era's rate is 71.8 %, 78.4 % without AAS 1, whose index describes its acts without incipits): the rate counts every
 line the recovery cannot reach, and the reasons are listed per volume rather than the floor lowered. Nineteen curated rows supply
 the year the OCR read `1910` for 1916 over nine letters of AAS 9-I (1917) and `191Í` for 1911 over ten of AAS 3, from each act's own
-dating formula; twelve pages the volumes set two short letters on are read and curated. The AAS join now covers 1909–2002 and
-2010–2024; the volumes of 2003–2009 have no index
-online and await a fascicle parser (phase 2b′), and the *Acta Sanctae Sedis* of 1865–1908 are phase 2c.
+dating formula; twelve pages the volumes set two short letters on are read and curated. Phase 2b′
+([era report](docs/superpowers/reports/2026-09-21-acta-volumes-2003-2009.md),
+[spec §11](docs/superpowers/specs/2026-09-13-acta-volumes-design.md)) joined the seven annual index PDFs of 2003–2009
+(AAS 95–101), which vatican.va serves under a URL its own index page links wrongly — the spec had recorded them as **none
+online**, and the premise was the era's first finding: **186** references, every one from a quoted index line (John Paul II 90,
+Benedict XVI 96), the fixtures taken from pypdf's layout mode because the default mode drops the spaces between words in
+2003–2006, the ditto marks that mode glues to the guillemet, to the day and to the text read at the date position, and the
+narrow column's `fullLine: 40` — which the 2010 and 2011 indexes already carry — recovering thirteen acts of harvested
+categories that the parser had been dropping in silence, since the line whose page it missed counted in neither term of the
+parse rate. All seven parse at 100 % over the harvested categories and 98.6–100 % over all pope-part page lines, and every one
+of the hundred lines left unread falls in a category the registry does not harvest. The AAS join now covers 1909–2002 and
+2003–2024 without a gap, and the *Acta Sanctae Sedis* of 1865–1908 are phase 2c.
 
 The *Acta* are therefore also a **second source**. An index entry the join leaves unmatched becomes a document of its own
 (phase 2a, `tools/src/acta/create.ts`) when its category is one the registry creates from the *Acta* — encyclicals,
@@ -372,9 +381,17 @@ eleven constitutions and motu proprio are created at theirs; the 349 entries sti
 cited. Two references are curated (`ACTA_CURATED_REFERENCES`): *Providentissima Mater Ecclesia* (27 May 1917) opens AAS 9 part
 II — the Code of 1917, which has no chronological index — at p. 5; and *Ubi arcano Dei consilio* (23 December 1922) is cited at
 its Latin printing, AAS 14 (1922) 673, whose index line lost its date columns and opens no entry, the row displacing the match
-of the Italian printing (AAS 15 (1923) 5) it names and quotes. The
-remaining phases are 2b′, the volumes of 2003–2009, which have no index online and await a fascicle parser, and 2c, the *Acta
-Sanctae Sedis* of 1865–1908, whose indexes carry no date or incipit and are confirmed by hand.
+of the Italian printing (AAS 15 (1923) 5) it names and quotes. Phase 2b′
+([era report](docs/superpowers/reports/2026-09-21-acta-volumes-2003-2009.md),
+[spec §11](docs/superpowers/specs/2026-09-13-acta-volumes-design.md)) added **79** from the seven index PDFs of 2003–2009 —
+65 of Benedict XVI and 14 of John Paul II; 67 apostolic letters of the beatification series, 6 constitutions, 4 canonisation
+decretals and 2 motu proprio — and held **232**: 79 in categories that wait for their shelf (72 of them *Nuntii*), 60
+ambiguous, 36 on shelves not harvested for these popes, 34 by the guard, 14 claimed twice, 7 id collisions and 2 incipits the
+text layer damaged. It re-minted no shelf id and needed no curated row of any kind. Forty-five of the sixty ambiguous entries
+are circumscription constitutions of a single day, which the index names by incipit and vatican.va by see; the one act of
+weight left without a reference is John Paul II's *Pastores gregis*, which the 2004 index dates 5 October 2003, the closing of
+the Synod, and vatican.va's shelf 16 October, the signing, so the guard holds the entry rather than mint a second record. The
+remaining phase is 2c, the *Acta Sanctae Sedis* of 1865–1908, whose indexes carry no date or incipit and are confirmed by hand.
 
 ### The document registry
 
