@@ -259,15 +259,26 @@ export function latinDate(text: string): string | null {
 }
 
 /**
+ * A page's lines with a word the line break split joined back (a soft hyphen, or
+ * `letter-\n letter`), case and diacritics kept: the one line space `findIncipit` finds a
+ * hit in (`lineIndex`) and `formulaNear` reads from (`fromLine`), so the index means the
+ * same line in both -- a page with hyphen breaks above the hit (AAS 16 (1924) 269 has four
+ * before *Ex hac*) would otherwise place `fromLine` above the hit in the raw lines and let
+ * the previous act's formula through.
+ */
+const joinedLines = (page: string): string[] => page.replace(/­\s*\n\s*/g, '').replace(/([a-z])-\s*\n\s*([a-z])/gi, '$1$2').split('\n');
+
+/**
  * The first dating formula on pages `from`..`upto` (1-based, inclusive) of the volume text,
- * with its page and text; `fromLine` starts the first page at that line, so a formula
- * printed above the act's opening -- the previous act's, ending at the top of the page
- * (AAS 16 (1924) 269: *Ex hac* opens below the 15 April formula of the letter before it)
- * -- is not read as the act's.
+ * with its page and text; `fromLine` starts the first page at that line of its joined
+ * lines (`joinedLines`, the space `findIncipit`'s `lineIndex` is in), so a formula printed
+ * above the act's opening -- the previous act's, ending at the top of the page (AAS 16
+ * (1924) 269: *Ex hac* opens below the 15 April formula of the letter before it) -- is not
+ * read as the act's.
  */
 export function formulaNear(pages: readonly string[], from: number, upto: number, fromLine = 0): { page: number; date: string; text: string } | null {
   for (let p = from; p <= Math.min(upto, pages.length); p++) {
-    const t = p === from && fromLine > 0 ? pages[p - 1]!.split('\n').slice(fromLine).join('\n') : pages[p - 1]!;
+    const t = p === from && fromLine > 0 ? joinedLines(pages[p - 1]!).slice(fromLine).join('\n') : pages[p - 1]!;
     const m = t.replace(/­/g, '').replace(/\s+/g, ' ').match(/Datum [REB]omae[^]{0,260}/);
     if (!m) continue;
     const date = latinDate(m[0]);
@@ -345,8 +356,9 @@ function dist(a: string, b: string): number {
  * 269) was given p. 270 by a formula read above its opening (`formulaNear`). Measured
  * 2026-09-21 over the seventeen volumes after the change: of 759 pages accepted, 646
  * follow the dash and 113 open a line under a heading, a numeral or a salutation; the
- * regeneration lost the five wrong pages and three consistories that open mid-sentence,
- * moved two to their true pages and gained 25 openings the false hits had made `several`.
+ * regeneration (740 rows to 759) lost six -- three of the five wrong pages (the other two,
+ * *Promulgandi* and *Ex hac*, moved to their true pages) and three consistories that open
+ * mid-sentence -- and gained 25 openings the false hits had made `several`.
  * Exact by default; `fuzzy` admits one differing character per
  * word of five letters or more (the OCR's `e`/`c`, `o`/`a`, `t`/`l`), nothing in a
  * shorter word. The hit's line index is returned for the dated rule, which reads the
@@ -358,8 +370,9 @@ export function findIncipit(page: string, incipit: string, fuzzy: boolean): { li
   const folded = fold(page);
   const lines = folded.split('\n');
   // Joined the same way as `fold` (soft hyphen, `letter-\n letter`), case and diacritics
-  // kept, so `rawLines` stays index-aligned with `lines`.
-  const rawLines = page.replace(/­\s*\n\s*/g, '').replace(/([a-z])-\s*\n\s*([a-z])/gi, '$1$2').split('\n');
+  // kept, so `rawLines` stays index-aligned with `lines` -- and with what `formulaNear`
+  // slices at `lineIndex`.
+  const rawLines = joinedLines(page);
   // Running text, which the next line continues: a line with a lower-case word that ends
   // in no mark (the sentence goes on), or ends in a full stop that is not a salutation's
   // or the memorial formula's (`1.° Quaenam sit huius Congregationis auctoritas statuitur

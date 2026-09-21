@@ -306,6 +306,25 @@ describe('recoverPages', () => {
     const { rows } = recoverPages([entry('1924-04-16', 'LITTERAE APOSTOLICAE', 'Ex hac'), entry('1924-12-05', 'LITTERAE APOSTOLICAE', 'Ex hac', 'Other')], body, g, { lastBodyPage: 3 });
     expect(rows.map((r) => [r.page, r.rule, r.date])).toEqual([[1, 'dated', '1924-04-16'], [3, 'dated', '1924-12-05']]);
   });
+  it('reads the tie\'s formula from the hit\'s line in the same joined-line space the incipit was found in: hyphen breaks above the hit do not shift the window over the previous act\'s formula', () => {
+    // Three words the line break split (`impertimus`, `Pontifi-` / `catus`, `Se­` / `cretis` with a soft hyphen)
+    // sit above the previous act's formula, which sits two lines above the hit: joined, the hit is line 4 and
+    // the formula line 2; in the raw lines the formula is line 5. A window started at raw line 4 would hold it.
+    const body = [
+      'Acta Pii PP. XI \nbenedictionem amantissime imper-\ntimus, Pontifi-\ncatus Nostri tertio, a Se­\ncretis Status. \nDatum Romae apud Sanctum Petrum, die xv mensis aprilis, anno MDCCCCXXIV. \nIV \nAd futuram rei memoriam. — Ex hac beati Petri cathedra',
+      'Acta Apostolicae Sedis - Commentarium Officiale \ntibus continetur. \nDatum Romae apud Sanctum Petrum, die xvi mensis aprilis, anno MDCCCCXXIV.',
+      'Acta Pii PP. XI \nV \nPIUS PP. XI \nAd futuram rei memoriam. — Ex hac divi Petri cathedra \nfiller with no formula',
+    ];
+    expect(findIncipit(body[0]!, 'Ex hac', false)).toMatchObject({ lineIndex: 4 });
+    expect(formulaNear(body, 1, 1, 4)).toBeNull();
+    expect(formulaNear(body, 1, 2, 4)).toMatchObject({ page: 2, date: '1924-04-16' });
+    const g = { page: null, runs: new Map<string, [number, number][]>([['Litterae Apostolicae', [[1, 3]]]]), unmapped: [] as string[] };
+    const { rows, unrecovered } = recoverPages([entry('1924-04-15', 'LITTERAE APOSTOLICAE', 'Ex hac', 'Earlier'), entry('1924-04-16', 'LITTERAE APOSTOLICAE', 'Ex hac')], body, g, { lastBodyPage: 3 });
+    // The 15 April entry finds no formula of its own inside either hit's span (the one above p. 1's hit is not the hit's), and the
+    // 16 April entry takes the formula after its hit, on p. 2.
+    expect(unrecovered).toEqual([expect.objectContaining({ date: '1924-04-15', reason: 'several', candidates: [1, 3] })]);
+    expect(rows.map((r) => [r.page, r.rule, r.date])).toEqual([[1, 'dated', '1924-04-16']]);
+  });
 });
 
 describe('applyPageRows', () => {
