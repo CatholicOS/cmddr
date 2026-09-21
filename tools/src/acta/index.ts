@@ -1282,9 +1282,12 @@ export function parseActaIndex(text: string, opts: ActaParseOptions = {}): ActaP
   let category: string | null = null;
   // The roman numeral of the last category heading of the open pope part (0 at a part
   // heading): a `SYNODUS EPISCOPORUM` heading numbered as the next category is one.
+  // Mirrors HEADING_RE's two numeral shapes: the dashed one (`XV - `, `VIII – `) and the
+  // dot-only one (`I. LITTERAE ENCYCLICAE`, AAS 91 (1999) 5; `I. LITTERAE APOSTOLICAE MOTU
+  // PROPRIO DATAE`, AAS 90 (1998) 457).
   let lastCategoryNumeral = 0;
   const numeralOf = (l: string): number | null => {
-    const m = l.match(/^\s*([IVXL]{1,5})\s*[.-]?\s*[–—-]/);
+    const m = l.match(/^\s*([IVXL]{1,5})\s*(?:[.-]?\s*[r•?]?\s*[–—-]|\.\s)/);
     return m ? romanToInt(m[1]!) : null;
   };
   let headingLines: string[] = [];     // the raw lines of the current category heading

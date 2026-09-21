@@ -1533,6 +1533,19 @@ Episcoporum ............... 988`, '(An. 2005 et Vol. XCVII)'), { year: 2005 });
     expect(asPart.skippedParts).toEqual(['II – SYNODUS EPISCOPORUM']);
     expect(asPart.entries.map((e) => e.category)).toEqual(['NUNTII']);
   });
+
+  it('reads the numeral of a dot-only heading too (AAS 90 (1998) 457, AAS 91 (1999) 5: `I. LITTERAE …` with no dash), so a SYNODUS EPISCOPORUM numbered next after one is a category', () => {
+    const r = parseActaIndex(index(`I. LITTERAE ENCYCLICAE
+2005 Sept. 14 Fides et ratio ........................ 5
+II – SYNODUS EPISCOPORUM
+2005 Oct. 22 Nuntius datus ab XI Coetu Generali Ordinario Synodi
+Episcoporum ............... 988`, '(An. 2005 et Vol. XCVII)'), { year: 2005 });
+    expect(r.skippedParts).toEqual([]);
+    expect(r.entries.map((e) => [e.category, e.date, e.page])).toEqual([
+      ['LITTERAE ENCYCLICAE', '2005-09-14', 5],
+      ['SYNODUS EPISCOPORUM', '2005-10-22', 988],
+    ]);
+  });
 });
 
 describe('splitEntryText', () => {
