@@ -1468,7 +1468,13 @@
       "circumscription-elevation"
     ],
     "actKind": "governance",
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 308
+    }
   },
   {
     "id": "mag:benedict-xvi/iashpuriensis-2006",
@@ -1708,6 +1714,28 @@
       "volume": 98,
       "year": 2006,
       "page": 657
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/deus-laudandus-2006",
+    "title": "« Deus laudandus ». Venerabili Servae Dei Mariae Teresiae a Sancto Ioseph caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-05-13",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Deus laudandus",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 786
     }
   },
   {
@@ -2106,6 +2134,28 @@
       "volume": 99,
       "year": 2007,
       "page": 324
+    }
+  },
+  {
+    "id": "mag:benedict-xvi/pascite-qui-est-in-vobis-2006",
+    "title": "« Pascite, qui est in vobis ». Venerabili Dei Servo Paulo Iosepho Nardini caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2006-10-22",
+    "source": {
+      "url": null,
+      "shelf": "aas/2007",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Pascite, qui est in vobis",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 99,
+      "year": 2007,
+      "page": 321
     }
   },
   {
@@ -3991,6 +4041,28 @@
     }
   },
   {
+    "id": "mag:benedict-xvi/humiliter-in-christo-2007",
+    "title": "« Humiliter in Christo ». Venerabili Dei Servae Lindalvae Justo de Oliveira caelitum Beatorum tribuitur dignitas",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:benedict-xvi",
+    "issuerType": "pope",
+    "date": "2007-12-02",
+    "source": {
+      "url": null,
+      "shelf": "aas/2008",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Humiliter in Christo",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 619
+    }
+  },
+  {
     "id": "mag:benedict-xvi/world-day-of-prayer-for-vocations-2008",
     "title": "XLV Giornata Mondiale di Preghiera per le Vocazioni, 2008",
     "idStatus": "minted",
@@ -5193,7 +5265,13 @@
       "id": "world-food-day",
       "year": 2008
     },
-    "sourceGenreLabel": "messages/food"
+    "sourceGenreLabel": "messages/food",
+    "acta": {
+      "series": "AAS",
+      "volume": 100,
+      "year": 2008,
+      "page": 808
+    }
   },
   {
     "id": "mag:benedict-xvi/coniuges-christiani-2008",

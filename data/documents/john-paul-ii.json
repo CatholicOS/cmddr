@@ -53914,7 +53914,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quocumque in opere («Bonifatia Rodríguez Castro»)",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 137
+    }
   },
   {
     "id": "mag:john-paul-ii/sicut-pastor-bonus-ioannes-nepomucenus-zegri-y-moreno-2003",
@@ -53933,7 +53939,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Sicut pastor bonus («Ioannes Nepomucenus Zegrí y Moreno»)",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 286
+    }
   },
   {
     "id": "mag:john-paul-ii/mindelensis-2003",
@@ -55404,6 +55416,94 @@
     "sourceGenreLabel": "messages/sick"
   },
   {
+    "id": "mag:john-paul-ii/cum-iam-missam-2004",
+    "title": "« Cum iam missam ». Venerabili Deo Servo Iosepho Mariae Cassant Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-paul-ii",
+    "issuerType": "pope",
+    "date": "2004-10-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Cum iam missam",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 614
+    }
+  },
+  {
+    "id": "mag:john-paul-ii/et-tuam-ipsius-2004",
+    "title": "« Et tuam ipsius ». Venerabili Dei Servae Annae Catharinae Emmerick Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-paul-ii",
+    "issuerType": "pope",
+    "date": "2004-10-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Et tuam ipsius",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 619
+    }
+  },
+  {
+    "id": "mag:john-paul-ii/illud-tantummodo-2004",
+    "title": "« Illud tantummodo ». Venerabili Deo Servo Carolo e Domo Austriae Beatorum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-paul-ii",
+    "issuerType": "pope",
+    "date": "2004-10-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Illud tantummodo",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 622
+    }
+  },
+  {
+    "id": "mag:john-paul-ii/sanctissimum-sacramentum-2004",
+    "title": "« Sanctissimum Sacramentum ». Venerabili Deo Servo Petro Vigne Beatorum caelitum honores decernuntur",
+    "idStatus": "minted",
+    "genre": "apostolic-letter",
+    "issuerId": "rp:john-paul-ii",
+    "issuerType": "pope",
+    "date": "2004-10-03",
+    "source": {
+      "url": null,
+      "shelf": "aas/2006",
+      "retrieved": "2026-09-21"
+    },
+    "incipit": "Sanctissimum Sacramentum",
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "AAS",
+      "volume": 98,
+      "year": 2006,
+      "page": 617
+    }
+  },
+  {
     "id": "mag:john-paul-ii/testimonium-vita-propria-maria-ludovica-de-angelis-2004",
     "title": "Testimonium vita propria («Maria Ludovica de Angelis»)",
     "idStatus": "minted",
@@ -55420,7 +55520,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Testimonium vita propria («Maria Ludovica de Angelis»)",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "AAS",
+      "volume": 97,
+      "year": 2005,
+      "page": 387
+    }
   },
   {
     "id": "mag:john-paul-ii/mane-nobiscum-domine-2004",

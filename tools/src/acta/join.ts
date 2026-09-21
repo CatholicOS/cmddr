@@ -107,7 +107,21 @@ export const ACTA_SOURCES: readonly ActaSource[] = [
   // John Paul II to 2005, Benedict XVI from 2005; the 2006 index prints both popes under
   // one part. `url` is null as for every index PDF: the fascicle holding a page is not
   // derivable from the index.
-  ...[2003, 2004, 2005, 2006, 2007, 2008, 2009].map((y) => index(y, '2026-09-21')),
+  // These seven are set in the narrow column of 2010-2011, not the wide one of 2012-2024,
+  // so they take the same `fullLine: 40`. Without it an entry whose page follows one space
+  // at the end of a *short* continuation line is never closed: the parser reports it as an
+  // entry without a page and drops it, and the line counts in neither term of the parse
+  // rate, so the loss is silent (`» Dec. 2 « Humiliter in Christo ». - Venerabili Dei Servae
+  // Lindalvae / Justo de Oliveira caelitum Beatorum tribuitur dignitas 619`, 2008). Measured
+  // over the seven fixtures, entry by entry (task 5 report §2 and its fix report): with the
+  // option, 20 of the 21 pageless entries come back -- 13 of them in categories the registry
+  // harvests, among them the constitutions *Maturescens Catholica* (2003, 381) and *In
+  // Kyrgyzstania* (2006, 308) and nine beatification letters of 2004-2008 -- and not one
+  // entry of any year changes or is lost (the entry sets are strict supersets). No other
+  // fixture can move: `fullLine` is a per-source option, carried by 2010, 2011 and these
+  // seven alone. The one entry still not closed is 2006's journey line, where the layout
+  // mode fused a page to the next journey's opener (ITINERA APOSTOLICA, not harvested).
+  ...[2003, 2004, 2005, 2006, 2007, 2008, 2009].map((y) => index(y, '2026-09-21', { fullLine: 40 })),
   // The 2010 and 2011 index PDFs are set in a narrower column than 2012-2024 (their full
   // lines run to 40-60 characters), so a page after one space closes a line of 40 (index.ts).
   index(2010, '2026-09-13', { fullLine: 40 }),

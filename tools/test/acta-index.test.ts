@@ -1555,18 +1555,27 @@ Episcoporum ............... 988`, '(An. 2005 et Vol. XCVII)'), { year: 2005 });
       expect(r.unmappedPopes, String(year)).toEqual([]);
       expect(r.popeHeadings.length, String(year)).toBe([2005, 2006].includes(year) ? 2 : 1);
       expect(r.stats.entries, String(year)).toBeGreaterThan(120);
-      // Measured after Tasks 2-4: every one of the seven parses every line of a harvested
-      // category (1.000 for all seven), so the 95 % floor of spec §4 holds with room. Over
-      // all the pope parts' page lines the rate is 0.985 (2003), 0.987 (2004), 0.986 (2005),
-      // 0.989 (2006) and 1.000 (2007-2009); what it misses is the journey ranges and
-      // sub-lists of ITINERA APOSTOLICA and the sub-list openers of the consistory, the
-      // synod and the Secretariat of State -- categories the registry does not harvest.
-      // The rate flatters the seven by a little: 13 entries of harvested categories end in a
-      // page set after one space on a continuation line too short to be a full line, so the
-      // parser closes no entry and the line counts in neither term (2003 *Maturescens
-      // Catholica* 381, 2006 *In Kyrgyzstania* 308, nine beatification letters of 2004-2008,
-      // two of the letters and messages). The task 5 report §2 lists all thirteen.
+      // Note this reads the fixture with the parser's defaults, where ACTA_SOURCES gives
+      // these seven `fullLine: 40` (join.ts): the rates below are the floor's worst case.
+      // Every one of the seven parses every line of a harvested category (1.000 for all
+      // seven), so the 95 % floor of spec §4 holds with room. Over all the pope parts' page
+      // lines the rate is 0.985 (2003), 0.987 (2004), 0.986 (2005), 0.989 (2006) and 1.000
+      // (2007-2009); what it misses is the journey ranges and sub-lists of ITINERA
+      // APOSTOLICA and the sub-list openers of the consistory, the synod and the Secretariat
+      // of State -- categories the registry does not harvest.
       expect(harvestedParseRate(r.stats)!, String(year)).toBeGreaterThanOrEqual(0.95);
+      // And with the `fullLine: 40` the sources carry, every entry closes: the harvested
+      // rate is measured over more lines (72, 69, 82, 77, 63, 67, 67 against 71, 68, 77, 74,
+      // 62, 65, 67) and is still 1.000, and every remaining defect of all seven is a line of
+      // a category the registry does not harvest. The 21 entries the defaults leave without
+      // a page (their page set after one space at the end of a short continuation line) come
+      // back but for one, 2006's journey line whose page the layout mode fused to the next
+      // journey's opener.
+      const wide = parseActaIndex(readFileSync(`tools/fixtures/acta/aas-indice-${year}.txt`, 'utf8'), { year, fullLine: 40 });
+      expect(harvestedParseRate(wide.stats)!, String(year)).toBe(1);
+      expect(wide.stats.harvestedPageLines, String(year)).toBeGreaterThanOrEqual(r.stats.harvestedPageLines);
+      expect(wide.stats.withoutPage, String(year)).toBe(year === 2006 ? 1 : 0);
+      expect(wide.defects.filter((d) => (categoryForHeading(d.category!)?.harvested ?? 'no') !== 'no'), String(year)).toEqual([]);
     }
   });
 });
