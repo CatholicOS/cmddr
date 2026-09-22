@@ -46,7 +46,7 @@ const md = (s: string) => s.replace(/\|/g, '\\|').replace(/\n/g, ' / ').replace(
  * bumped by hand when the report is regenerated, so that a re-run is reproducible and the
  * line does not claim the fixtures' scan date, which §1's header prints beside it.
  */
-const GENERATED_ON = '2026-09-22';
+const GENERATED_ON = '2026-09-23';
 const cite = (e: AssEntry) => citeRef(e);
 const candidateList = (cs: ActaCandidate[]) => cs.map((c) => `\`${c.id}\`${c.incipit ? ` (*${md(c.incipit)}*)` : ''}`).join(', ') || '—';
 const of = (k: string) => entries.filter((e) => `ass-${e.volume}` === k);
@@ -150,11 +150,18 @@ p(`   33 p. 396) and **one is an artefact**: *Rerum novarum* (ASS 23 p. 641) is 
 p(`   column of p. 753, where nothing can be read.`);
 p(`3. **${sum((k) => scans.get(k)!.defects.length)} defects remain, and the shape they take is one part of the *Acta* the scanner does not enter.** By reason:`);
 p(`   ${defectsBy('no-heading')} \`no-heading\`, ${defectsBy('no-date')} \`no-date\`, ${defectsBy('header-mismatch')} \`header-mismatch\`, ${defectsBy('no-opening')} \`no-opening\`, ${defectsBy('unknown-pope')} \`unknown-pope\` (§2.2). **${sum((k) => ringDefects(k).length)} of the ${defectsBy('no-heading')} \`no-heading\` defects quote the brief's ring**`);
-p(`   **formula** (\`sub Annulo Piscatoris\`), and ${sum((k) => ringDefects(k).length) - ringDefects('ass-1').length} of them — ASS 12 ×${ringDefects('ass-12').length}, ASS 33 ×${ringDefects('ass-33').length}, ASS 41 ×${ringDefects('ass-41').length} — are the brevia printed in the`);
-p(`   \`EX SECRETARIA BREVIUM\` part, whose heading is a descriptive caps title rather than a class word and whose summa`);
-p(`   rows sit under the dicastery: papal acts by author, invisible to a scanner that anchors on a class heading. They are`);
-p(`   left as defects, not curated: ${sum((k) => ringDefects(k).length) - ringDefects('ass-1').length} acts is a rule's worth, and the rule is a 2c-ii decision that moves every volume's`);
-p(`   numbers. The other ${ringDefects('ass-1').length} (ASS 1 pp. 581, 746) are the two apostolic letters read by hand. Where a defect was a`);
+p(`   **formula** (\`sub Annulo Piscatoris\`) — ASS 1 ×${ringDefects('ass-1').length}, ASS 12 ×${ringDefects('ass-12').length}, ASS 33 ×${ringDefects('ass-33').length}, ASS 41 ×${ringDefects('ass-41').length} — and they are what is left of the brevia of the`);
+p(`   \`EX SECRETARIA BREVIUM\` part, whose heading is a descriptive title rather than a class word and whose summa rows`);
+p(`   sit under the dicastery: papal acts by author, invisible to a scanner that anchors on a class heading. Phase 2c-ii-a`);
+p(`   gave the walk-back a second reading for them — the pope's own name standing alone under the ring, the title above it`);
+p(`   read as the act's description, the class \`BREVE\` — and the sample gained nine acts by it (ASS 33 p. 212; ASS 41`);
+p(`   pp. 37, 134, 580, 581, 623, 748, 757, 766), where it had 15 such defects before. What the second reading does not`);
+p(`   reach is quoted in §2.2 and none of it is the rule's to fix: three brevia it reads whole but whose running header`);
+p(`   the OCR misread, so \`headerAgrees\` refuses them (ASS 33 p. 213 \`215\`, ASS 41 pp. 300 \`3oo\` and 301 \`3oi\`); one`);
+p(`   it reads whole and cannot date, ASS 12 p. 636, whose dateline prints no \`die\` (\`sub Annulo piscatoris XIII /`);
+p(`   Augusti MDCCCLXXIX\`); the 1896 breve ASS 41 p. 169 quotes inside a later act and the 1900 brief reprinted inside`);
+p(`   Pennacchi's commentary at ASS 33 p. 303, neither of which has a title above the pope's name, only body text; and`);
+p(`   ASS 1's two apostolic letters, read by hand. Where a defect was a`);
 p(`   rule's, the rule went in and was unit-tested; where it was one act's, it became a reading. **The spec's §3 bound is`);
 p(`   wrong as written**: it says the walk back from a dateline to its heading is bounded at 40 lines, and \`readAct\``);
 p(`   (\`ass.ts\`) bounds it at **the previous anchor** — which is why a \`no-heading\` defect is keyed to the *anchor's*`);
@@ -264,10 +271,12 @@ p(`   from.`);
 p(`15. **What 2c-ii should expect.** (a) **The OCR is worst at the start.** ASS 1 (1865) yielded ${scannedOf('ass-1')} acts by rule and needed`);
 p(`   ${readOf('ass-1')} hand readings; the volumes of the 1860s and 1870s should be assumed unscannable until measured, and the plan`);
 p(`   should budget for reading them rather than for a rule. From 1879 the rate is usable and from 1900 it is good.`);
-p(`   (b) **The Secretaria Brevium is the next rule, and it is worth ${sum((k) => ringDefects(k).length) - ringDefects('ass-1').length} acts in five volumes.** The brevia print a`);
-p(`   descriptive caps title where a class word should stand and are listed by the summa under the dicastery; reading them`);
-p(`   means anchoring on the ring formula rather than on a heading, and it moves every volume's counts — a decision to take`);
-p(`   once, deliberately, with the owner. (c) **One summa page is unreadable and will be again.** ASS 23's p. 753 is`);
+p(`   (b) **The Secretaria Brevium was the next rule, and it was taken: it is worth 9 acts in these five volumes and 62`);
+p(`   across the series.** The brevia print a descriptive title where a class word should stand and are listed by the summa`);
+p(`   under the dicastery; reading them means anchoring on the ring formula rather than on a heading, and it moved every`);
+p(`   volume's counts. The owner ruled them in on 2026-09-22 and phase 2c-ii-a wrote the rule: the series-wide survey`);
+p(`   fell from 105 ring-bearing \`no-heading\` defects to 28 and rose from 380 acts to 442. What 2c-ii should still expect`);
+p(`   is that a breve is lost wherever the OCR damages the running header, which is finding (d). (c) **One summa page is unreadable and will be again.** ASS 23's p. 753 is`);
 p(`   interleaved word by word by the OCR (two columns with no gutter), so three of its papal rows are lost and three`);
 p(`   dicastery pages come out as papal rows; *Rerum novarum* (23 p. 641) therefore reads as "omitted by the summa" in §2.4`);
 p(`   although the summa lists it. A re-extraction of that one page, or a hand row, is the cheapest fix, and the shape will`);
