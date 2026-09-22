@@ -90,6 +90,41 @@ describe('parseSummaPapalPart (spec §4): the papal part, loosely', () => {
       raw: 'Epistola ad omnes qui hoc munus obeunt sis / gerendum suscipiant » 12',
     }]);
   });
+
+  it('reads the papal part under the headings the series prints beyond the sample (survey §4b)', () => {
+    const cases: [string, string, string][] = [
+      // [the heading as printed, the row that follows it, the heading parseSummaPapalPart should report]
+      ['ACTA SOLEMNIORA ROMANI PONTIFICIS.', 'Allocutio habita die 20 Decembris 1867 . . 289', 'ACTA SOLEMNIORA ROMANI PONTIFICIS'],
+      ['ACTA SOLEMNIORE ROM. PONTIFICIS', 'Litterae Apostolicae solemnissimae . . 118', 'ACTA SOLEMNIORE ROM. PONTIFICIS'],
+      ['ACTA SOLEMNIORA ROM. PONriFICIS', 'Allocutio habita a SS.mo Patre . . 522', 'ACTA SOLEMNIORA ROM. PONriFICIS'],
+      ['ACTA SOLEMNIORÂ', 'Sanctissimi Domini Nostri Pii . . 55', 'ACTA SOLEMNIORÂ'],
+      ['LITTERAE APOSTOLICAE', 'Litterae Apostolicae ad Ducem . . 581', 'LITTERAE APOSTOLICAE'],
+      ['LITTERAE ET RESPONSUM', 'Litterae Apostolicae; de Ordine s. Ba- . . 433', 'LITTERAE ET RESPONSUM'],
+      ['LITTERAE MOTU PROPRIO', 'de curis adhibitis ab Episcopis . . 17', 'LITTERAE MOTU PROPRIO'],
+      ['LITTERAE ROMANI PONTIFICIS', 'Litterae Sanctissimi D. N. Leonis . . 305', 'LITTERAE ROMANI PONTIFICIS'],
+      ['LITTERAE R. PONTIFICIS', 'Litterae SSmi D. N. Leonis XIII . . 4', 'LITTERAE R. PONTIFICIS'],
+      ['ACTA ROMAM PONTIFICIS', 'Epistola SSmi D. N. Leonis XIII ad . . 709', 'ACTA ROMAM PONTIFICIS'],
+    ];
+    for (const [heading, row, reported] of cases) {
+      const { rows, heading: read } = parseSummaPapalPart(`SUMMA ACTORUM\nQUAE IN HOC VOLUMINE CONTINENTUR\n${heading}\n${row}\nEX ACTIS CONSISTORIALIBUS\nDe Consistorio habito . . 99`);
+      expect(read, heading).toBe(reported);
+      expect(rows.map((r) => r.page), heading).toEqual([Number(row.match(/(\d+)\s*$/)![1])]);
+    }
+  });
+
+  it('reads the mixed-case papal heading of ASS 9 (1876), where the class itself heads the part', () => {
+    const { rows, heading } = parseSummaPapalPart('SUMMA ACTORUM\nQUAE IN HOC NONO VOLUMINE CONTINENTUR\nLitterae Apostolicae\nSS. D. Ii. P. Papae IX.\nLitterae Apostolicae ad Ducem Mutinae . . 581\nEX ACTIS CONSISTORIALIBUS\nDubia et responsa . . 557');
+    expect(heading).toBe('Litterae Apostolicae');
+    expect(rows.map((r) => r.page)).toEqual([581]);
+  });
+
+  it('does not read a dicastery heading as the papal part (ASS 2, 7, 26 open on one)', () => {
+    for (const opener of ['EX ACTIS CONSISTORIALIBUS', 'EX ACTIS AD INSTAR CONSISTORIALIUM.', 'EX S. CONGR. RITUUM']) {
+      const { rows, heading } = parseSummaPapalPart(`SUMMA ACTORUM\nQUAE IN HOC VOLUMINE CONTINENTUR\n${opener}\nDecretum quoddam . . 42`);
+      expect(heading, opener).toBeNull();
+      expect(rows, opener).toEqual([]);
+    }
+  });
 });
 
 describe('locateSumma: the summa pages, from the volume\'s midpoint', () => {

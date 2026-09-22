@@ -64,7 +64,51 @@ export function normalisePage(token: string): number | null {
   return n >= 1 ? n : null;
 }
 
-const PAPAL_HEAD_RE = /^\s*(?:\d+\s+)?(LITTERAE\s+ET\s+A(?:LLOCUTIONES|CTA)(?:\s+R(?:OM)?\.\s*PONTIFICIS|\s+APOSTOLICAE)?|ACTA\s+ROMANI\s+PONTIFICIS)/;
+/**
+ * The heading of the summa's papal part. The sample printed three forms; the survey of the
+ * whole series (docs/superpowers/reports/2026-09-22-ass-survey.md §4b) found eight more,
+ * each quoted here at the volume that prints it:
+ *   `LITTERAE ET ALLOCUTIONES [APOSTOLICAE]`      ASS 12 (1879) 647, 13
+ *   `LITTERAE ET ACTA [ROM.|R.] PONTIFICIS`       ASS 21 (1888) 744, 22-25, 27-34
+ *   `ACTA ROMANI PONTIFICIS`                      ASS 36 (1903) , 37-41; ASS 35's OCR `ROMAM`
+ *   `ACTA SOLEMNIORA ROMANI PONTIFICIS`           ASS 3 (1867) 665
+ *   `ACTA SOLEMNIORE ROM. PONTIFICIS`             ASS 4 (1868) 684 (the OCR's -E for -A)
+ *   `ACTA SOLEMNIORA ROM. PONriFICIS`             ASS 5 (1869) 691, 6 (the OCR's r for T),
+ *                                                 over `PUBLICI IURIS FACTA` on the next line
+ *   `ACTA SOLEMNIORÂ`                             ASS 8 (1874) 727, over `ROMANI PONTIFICIS`
+ *   `LITTERAE ET RESPONSUM`                       ASS 14 (1881) 569, over `ROMANI PONTIFICIS`
+ *   `LITTERAE MOTU PROPRIO`                       ASS 15 (1882) 603, over `ET CONSTITUTIO R. PONTIFICIS`
+ *   `LITTERAE [ROMANI|R.] PONTIFICIS`             ASS 16 (1883) 557, 17-19
+ *   `LITTERAE APOSTOLICAE`                        ASS 10 (1877) 616, 11
+ *   `Litterae Apostolicae` (mixed case)           ASS 9 (1876) 669, over `SS. D. Ii. P. Papae IX.`
+ * The mixed-case form is admitted for `Litterae Apostolicae` alone, and only as a whole
+ * line: the caps forms cannot be relaxed without reading a row's own first words as a
+ * heading, since every row opens `Litterae SSmi D. N. …`.
+ *
+ * A trailing stop (ASS 3's `ACTA SOLEMNIORA ROMANI PONTIFICIS.`) is consumed after the
+ * alternatives rather than inside the SOLEMNIOR one, so it is dropped from every
+ * alternative's reported heading and never left on the line to leak into the first row.
+ *
+ * ASS 3 also prints `ACTA SOLEMNIORA ROMANI` and `PONTIFICIS.` as two physical lines of a
+ * two-column page (665) -- `ROMANI` already on the first line, unlike ASS 8's bare
+ * `ACTA SOLEMNIORÂ` (727), where the whole of `ROMANI PONTIFICIS.` sits on the next line.
+ * A trailing `(?!\s*ROM)` on the SOLEMNIOR alternative refuses a bare match immediately
+ * followed by an orphaned `ROM…`, so the regex does not itself half-match and leak
+ * `ROMANI` into the first row; `parseSummaPapalPart`'s two-line join (below) then joins the
+ * line with the next and re-matches whole.
+ */
+const PAPAL_HEAD_RE = new RegExp(
+  '^\\s*(?:\\d+\\s+)?('
+  + 'LITTERAE\\s+ET\\s+A(?:LLOCUTIONES|CTA)(?:\\s+R(?:OM)?\\.\\s*PONTIFICIS|\\s+APOSTOLICAE)?'
+  + '|ACTA\\s+(?:ROMANI|ROMAM)\\s+PONTIFICIS'
+  + '|ACTA\\s+SOLEMNIOR[AEÂ](?:\\s+ROM(?:ANI|\\.)?\\s*PON[TRr]?[iI]?FICIS)?(?!\\s*ROM)'
+  + '|LITTERAE\\s+ET\\s+RESPONSUM'
+  + '|LITTERAE\\s+MOTU\\s+PROPRIO'
+  + '|L\\s?TT\\s?E\\s?RA\\s?[ER]?\\s+ROMANI\\s+PONTIFICIS'
+  + '|LITTERAE\\s+R(?:OMANI|\\.)\\s*PONTIFICIS'
+  + '|LITTERAE\\s+APOSTOLICAE'
+  + '|Litterae\\s+Apostolicae\\s*$'
+  + ')\\.?');
 /**
  * A dicastery heading. The abbreviated forms end in a stop (`EX S. C. CONCILII`, ASS 33
  * (1900) 762; `EX S.APOSTOLICA POENITENTIARIA`, ASS 1 (1865) 747), after which no word
@@ -131,9 +175,11 @@ export function parseSummaPapalPart(text: string): { rows: SummaRow[]; heading: 
   for (let i = 0; i < lines.length; i++) {
     const m = lines[i]!.match(PAPAL_HEAD_RE);
     if (m) { start = i; heading = m[1]!.replace(/\s+/g, ' ').trim(); break; }
-    // The heading set over two lines, the first a lone class word: `LITTERAE` / `ET ACTA
-    // ROM. PONTIFICIS` (ASS 23 (1890) 752) -- joined, and the second line consumed.
-    if (/^\s*LITTERAE\s*$/.test(lines[i]!) && i + 1 < lines.length) {
+    // The heading set over two lines, the first a lone class word (`LITTERAE` / `ET ACTA
+    // ROM. PONTIFICIS`, ASS 23 (1890) 752) or ending mid-word before the class noun
+    // (`ACTA SOLEMNIORA ROMANI` / `PONTIFICIS.`, ASS 3 (1867) 665) -- joined, and the
+    // second line consumed.
+    if (/^\s*(?:LITTERAE|ACTA\s+SOLEMNIOR[AEÂ]\s+ROM(?:ANI|\.)?)\s*$/.test(lines[i]!) && i + 1 < lines.length) {
       const two = `${lines[i]!.trim()} ${lines[i + 1]!.trim()}`.match(PAPAL_HEAD_RE);
       if (two) { lines[i] = two[0]; lines[i + 1] = ''; start = i; heading = two[1]!.replace(/\s+/g, ' ').trim(); break; }
     }

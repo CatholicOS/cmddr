@@ -16,24 +16,24 @@ scanned at all (`tools/scan-ass.ts` refuses to write a fixture for it), and show
 | Vol | Years | Pope | Pages | Summa | Papal heading | Part ends at | Acts | dateline | heading | Rows | Claimed | Unclaimed | Omitted | Defects | of them brevia | Sample |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | 1865–66 | Pius IX | 767 | 747–752 | — | — | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 1 | ✓ |
-| 2 | 1867 | Pius IX | 719 | 695–701 | — | — | 1 | 1 | 0 | 0 | 0 | 0 | 1 | 4 | 1 |  |
-| 3 | 1867 | Pius IX | 696 | 665–670 | — | — | 2 | 2 | 0 | 0 | 0 | 0 | 2 | 9 | 2 |  |
-| 4 | 1868 | Pius IX | 717 | 684–690 | — | — | 7 | 5 | 2 | 0 | 0 | 0 | 7 | 5 | 2 |  |
-| 5 | 1869–70 | Pius IX | 712 | 691–696 | — | — | 4 | 3 | 1 | 0 | 0 | 0 | 4 | 11 | 0 |  |
-| 6 | 1870–71 | Pius IX | 776 | 597–603 | — | — | 4 | 3 | 1 | 0 | 0 | 0 | 4 | 13 | 1 |  |
+| 2 | 1867 | Pius IX | 719 | 695–701 | LITTERAE APOSTOLICAE | EX S. GREG. S. R. D. INQU1S1T. | 1 | 1 | 0 | 3 | 1 | 2 | 0 | 4 | 1 |  |
+| 3 | 1867 | Pius IX | 696 | 665–670 | ACTA SOLEMNIORA ROMANI PONTIFICIS | EX S. CONGREGATIONE INDICIS. | 2 | 2 | 0 | 51 | 2 | 48 | 0 | 9 | 2 |  |
+| 4 | 1868 | Pius IX | 717 | 684–690 | ACTA SOLEMNIORE ROM. PONTIFICIS | EX SECRETARIA BREVIUM. | 7 | 5 | 2 | 38 | 6 | 32 | 1 | 5 | 2 |  |
+| 5 | 1869–70 | Pius IX | 712 | 691–696 | ACTA SOLEMNIORA ROM. PONriFICIS | EX SECRETARIA BREVIUM. | 4 | 3 | 1 | 15 | 4 | 11 | 0 | 11 | 0 |  |
+| 6 | 1870–71 | Pius IX | 776 | 597–603 | ACTA SOLEMNIORA ROM. PONTIFICIS | EX SECRETARIA BREVIUM. | 4 | 3 | 1 | 31 | 3 | 28 | 1 | 13 | 1 |  |
 | 7 | 1872–73 | Pius IX | 784 | 751–760 | — | — | 5 | 3 | 2 | 0 | 0 | 0 | 5 | 7 | 1 |  |
-| 8 | 1874–75 | Pius IX | 748 | 727–733 | — | — | 6 | 4 | 2 | 0 | 0 | 0 | 6 | 14 | 0 |  |
-| 9 | 1876 | Pius IX | 690 | 669–674 | — | — | 5 | 5 | 0 | 0 | 0 | 0 | 5 | 21 | 5 |  |
-| 10 | 1877 | Pius IX | 768 | 616–622 | — | — | 2 | 1 | 1 | 0 | 0 | 0 | 2 | 13 | 3 |  |
-| 11 | 1878 | Pius IX + Leo XIII | 646 | 621–626 | — | — | 6 | 5 | 1 | 0 | 0 | 0 | 6 | 6 | 0 |  |
+| 8 | 1874–75 | Pius IX | 748 | 727–733 | ACTA SOLEMNIORÂ | EX ACTIS CONSISTORIALIBUS. | 6 | 4 | 2 | 12 | 1 | 11 | 5 | 14 | 0 |  |
+| 9 | 1876 | Pius IX | 690 | 669–674 | Litterae Apostolicae | **runs on** | 5 | 5 | 0 | 107 | 5 | 102 | 0 | 21 | 5 |  |
+| 10 | 1877 | Pius IX | 768 | 616–622 | LITTERAE APOSTOLICAE | EX ACTIS CONCISTORIALIBUS | 2 | 1 | 1 | 9 | 1 | 8 | 1 | 13 | 3 |  |
+| 11 | 1878 | Pius IX + Leo XIII | 646 | 621–626 | LITTERAE APOSTOLICAE | EX ACTIS CONSISTORIALIBUS. | 6 | 5 | 1 | 12 | 6 | 6 | 0 | 6 | 0 |  |
 | 12 | 1879 | Leo XIII | 672 | 647–653 | LITTERAE ET ALLOCUTIONES | EX ACTIS CONSISTORIALIBUS | 10 | 8 | 2 | 12 | 9 | 3 | 1 | 1 | 0 | ✓ |
 | 13 | 1880 | Leo XIII | 592 | 569–579 | LITTERAE ET ALLOCUTIONES | EX ACTIS CONSISTORIALIBUS | 8 | 6 | 2 | 16 | 8 | 8 | 0 | 8 | 0 |  |
-| 14 | 1881 | Leo XIII | 591 | 569–575 | — | — | 2 | 1 | 1 | 0 | 0 | 0 | 2 | 7 | 0 |  |
-| 15 | 1882 | Leo XIII | 623 | 603–610 | — | — | 1 | 1 | 0 | 0 | 0 | 0 | 1 | 8 | 0 |  |
-| 16 | 1883–84 | Leo XIII | 656 | 557–564 | — | — | 3 | 2 | 1 | 0 | 0 | 0 | 3 | 6 | 2 |  |
-| 17 | 1884 | Leo XIII | 624 | 603–610 | — | — | 4 | 3 | 1 | 0 | 0 | 0 | 4 | 4 | 0 |  |
-| 18 | 1885 | Leo XIII | 768 | 603–610 | — | — | 9 | 7 | 2 | 0 | 0 | 0 | 9 | 3 | 0 |  |
-| 19 | 1886–87 | Leo XIII | 768 | 604–610 | — | — | 6 | 6 | 0 | 0 | 0 | 0 | 6 | 3 | 0 |  |
+| 14 | 1881 | Leo XIII | 591 | 569–575 | LITTERAE ET RESPONSUM | EX ACTIS CONSISTORIALIBUS | 2 | 1 | 1 | 9 | 1 | 8 | 1 | 7 | 0 |  |
+| 15 | 1882 | Leo XIII | 623 | 603–610 | LITTERAE MOTU PROPRIO | EX ACTIS CONSISTORIALIBUS | 1 | 1 | 0 | 10 | 1 | 9 | 0 | 8 | 0 |  |
+| 16 | 1883–84 | Leo XIII | 656 | 557–564 | L TT E RA R ROMANI PONTIFICIS | EX AEDIBUS VATIC ANÍS | 3 | 2 | 1 | 7 | 2 | 5 | 1 | 6 | 2 |  |
+| 17 | 1884 | Leo XIII | 624 | 603–610 | LITTERAE ROMANI PONTIFICIS | EX AEDIBUS VATICANIS | 4 | 3 | 1 | 10 | 3 | 7 | 1 | 4 | 0 |  |
+| 18 | 1885 | Leo XIII | 768 | 603–610 | LITTERAE ROMANI PONTIFICIS | EX S. CONGR. CONCILII | 9 | 7 | 2 | 12 | 6 | 6 | 3 | 3 | 0 |  |
+| 19 | 1886–87 | Leo XIII | 768 | 604–610 | LITTERAE R. PONTIFICIS | EX S. CONG. CONCILII | 6 | 6 | 0 | 13 | 6 | 7 | 0 | 3 | 0 |  |
 | 20 | 1887 | Leo XIII | 656 | 635–642 | — | — | 7 | 6 | 1 | 0 | 0 | 0 | 7 | 7 | 0 |  |
 | 21 | 1888 | Leo XIII | 768 | 744–750 | LITTERAE ET ACTA ROM. PONTIFICIS | EX ACTIS CONSISTORIALIBUS | 12 | 11 | 1 | 100 | 12 | 87 | 0 | 4 | 0 |  |
 | 22 | 1889–90 | Leo XIII | 767 | 750–756 | LITTERAE ET ACTA ROM. PONTIFICIS | EX ACTIS CONSISTORIALIBUS | 5 | 5 | 0 | 10 | 5 | 5 | 0 | 4 | 0 |  |
@@ -49,7 +49,7 @@ scanned at all (`tools/scan-ass.ts` refuses to write a fixture for it), and show
 | 32 | 1899–00 | Leo XIII | 768 | 761–768 | LITTERAE ET ACTA | EX S. G. CONCILII | 3 | 2 | 1 | 7 | 2 | 5 | 1 | 6 | 0 |  |
 | 33 | 1900–01 | Leo XIII | 768 | 761–768 | LITTERAE ET ACTA | EX S. C. CONCILII | 18 | 17 | 1 | 24 | 14 | 8 | 2 | 10 | 1 | ✓ |
 | 34 | 1901–02 | Leo XIII | 768 | 763–768 | LITTERAE ET ACTA | EX S. C. CONCILII | 8 | 7 | 1 | 9 | 5 | 4 | 2 | 7 | 3 |  |
-| 35 | 1902–03 | Leo XIII | 768 | 759–768 | — | — | 11 | 10 | 1 | 0 | 0 | 0 | 11 | 15 | 7 |  |
+| 35 | 1902–03 | Leo XIII | 768 | 759–768 | ACTA ROMAM PONTIFICIS | EX ACTIS CONSISTORIALIBUS | 11 | 10 | 1 | 11 | 7 | 4 | 4 | 15 | 7 |  |
 | 36 | 1903–04 | Leo XIII + Pius X | 768 | 758–768 | ACTA ROMANI PONTIFICIS | EX ACTIS CONSISTORIALIBUS | 22 | 18 | 4 | 36 | 21 | 15 | 1 | 36 | 16 |  |
 | 37 | 1904–05 | Pius X | 820 | 798–820 | ACTA ROMANI PONTIFICIS | EX SECRETARIA BREVIUM | 24 | 17 | 7 | 34 | 22 | 12 | 2 | 25 | 7 |  |
 | 38 | 1905–06 | Pius X | 702 | 417–702 | ACTA ROMANI PONTIFICIS | EX S. CONGR. EPISCOPORUM ET REGULARIUM | 10 | 10 | 0 | 23 | 9 | 14 | 1 | 9 | 3 |  |
@@ -64,17 +64,17 @@ only honest measure of what the scanner reads in a volume it has not been curate
 
 | Decade | Volumes | Pages | Acts | Summa rows | Claimed | Claimed % | Defects | Brevia | Volumes with no summa |
 |---|---|---|---|---|---|---|---|---|---|
-| 1860s | 5 | 3611 | 14 | 0 | 0 | — | 32 | 6 | 0 |
-| 1870s | 7 | 5084 | 38 | 12 | 9 | 75 % | 75 | 10 | 0 |
-| 1880s | 10 | 6813 | 57 | 126 | 25 | 20 % | 54 | 2 | 0 |
+| 1860s | 5 | 3611 | 14 | 107 | 13 | 12 % | 32 | 6 | 0 |
+| 1870s | 7 | 5084 | 38 | 183 | 25 | 14 % | 75 | 10 | 0 |
+| 1880s | 10 | 6813 | 57 | 187 | 44 | 24 % | 54 | 2 | 0 |
 | 1890s | 10 | 7678 | 74 | 134 | 50 | 37 % | 57 | 6 | 0 |
-| 1900s | 9 | 6835 | 197 | 277 | 173 | 62 % | 168 | 59 | 0 |
+| 1900s | 9 | 6835 | 197 | 288 | 180 | 63 % | 168 | 59 | 0 |
 
 | Pontificate | Volumes | Acts | Summa rows | Claimed % |
 |---|---|---|---|---|
-| Pius IX | 10 (1, 2, 3, 4, 5, 6, 7, 8, 9, 10) | 36 | 0 | — |
-| Pius IX + Leo XIII | 1 (11) | 6 | 0 | — |
-| Leo XIII | 24 (12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35) | 178 | 305 | 34 % |
+| Pius IX | 10 (1, 2, 3, 4, 5, 6, 7, 8, 9, 10) | 36 | 266 | 9 % |
+| Pius IX + Leo XIII | 1 (11) | 6 | 12 | 50 % |
+| Leo XIII | 24 (12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35) | 178 | 377 | 34 % |
 | Leo XIII + Pius X | 1 (36) | 22 | 36 | 58 % |
 | Pius X | 5 (37, 38, 39, 40, 41) | 138 | 208 | 64 % |
 
@@ -155,25 +155,9 @@ floor and not a measurement for them.
 | Vol | The summa's first lines, as printed |
 |---|---|
 | 1 | `SUMMA ACTORUM` / `QUAE HOC VOLUMINE PRIMO CONTINENTUR.` / `°-oOO^>^<~pO-o-o •. .` / `PROGRAMMA. pag. 3 Responsa super ieiunio et abstinen­` / `tia. . . 422` / `EX ACTIS CONSISTORIALIBUS. Dubia et responsa S57` |
-| 2 | `SUMMA ACTORUM` / `QUAE IN HOC SECUNDO VOLUMINE CONTINENTUR.` / `KK)(^lf^OCK«` / `EX ACTIS CONSISTORIALIBUS. BREVITER SCILICET` / `DESCRIBUNTUR ECCLESIAE: EX DITIONE` / `Indicantur, quae a Romano Pontifice PONTIFICIA, ET RELIQUA ITALTA.` |
-| 3 | `SUMMA ACTORUM` / `QUAE IN HOC TERTIO VOLUMINE CONTINENTUR.` / `ACTA SOLEMNIORA ROMANI Allocutio habita die 20 Decembris 1867` / `PONTIFICIS. de A ictoria relata io Nomentano et` / `Aretino certamine, deque fiorenti vita` / `Allocutio consistorialis diei 12 Iulii 1876 catholicae Ecclesiae. .... 289` |
-| 4 | `SUMMA ACTORUM` / `QUAE IN HOC QUARTO VOLUMINE CONTINENTUR.` / `ACTA SOLEMNIORE ROM. PONTIFICIS byterum pertinacem Cyrinum Rinaldi,` / `qui deleti iam tribunalis Monarchiae, sic` / `Litterae Apostolicae solemnissimae, in Sicilia dicti, iurisdictionem exercere` / `quibus indicitur oecumenicum concilium ausus est 118` |
-| 5 | `SUMMA ACTORUM` / `QUA-E IN HOC QUINTO VOLUMINE CONTINENTUR` / `ACTA SOLEMNIORA ROM. PONriFICIS domus et continens eeelesiola interdicto su­` / `PUBLICI IURIS FACTA. biicitur . 522, 526 et 529` / `Litterae Apostolicae in forma Brevis de` / `Allocutio habita a SS.mo Patre in con­ perseverantia seditionis in Patriarchatu Ci­` |
-| 6 | `SUMMA ACTORUM` / `QUAE IN HOC SEXTO VOLUMINE CONTINENTUR.` / `ACTA SOLEMNIORA ROM. PONTIFICIS cui adiecta fuit Expositio ad compro-` / `PUBLICI IURIS FACTA bandas Pontificis curas pro tuenda Ecr` / `clesiae causa in Subalpino Regno; in ea` / `Constitutio dogmatica prima de Ecclesia Allocutione admonitio facta est Sub­` |
 | 7 | `SUMMA ACTORUM` / `QUAE IN HOC SEPTIMO VOLUMINE CONTINENTUR` / `EX ACTIS AD INSTAR CONSISTORIALIUM.` / `Epistola Ssmi Patris ad Emum Cardinalem Iacobum Antonelli exte­` / `ris negotiis Pontificiae Ditionis gerendis praepositum, data die` / `16 iunii 1872, de suppressione Ordinum Religiosorum Romae` |
-| 8 | `SUMMA ACTORUM` / `QUAE IN HOC OCTAVO VOLUMINE CONTINENTUR` / `ACTA SOLEMNIORÂ Archiepiscopum Monajcejisem et Fri-` / `ROMANI PONTIFICIS. singensem, qua damnantur nonnulla` / `opera typis edita a Presbytero Jaco-` / `Sanctissimi Domini Nostri Pii Divina bo Frohschammer in Monacensi Aca­` |
-| 9 | `SUMMA ACTORUM` / `QUAE IN HOC NONO VOLUMINE CONTINENTUR` / `Litterae Apostolicae Litterae Apostolicae ad Praesi­` / `SS. D. Ii. P. Papae IX. dem Societatis iuventutis Ca­` / `tholicae, 581.` / `Litterae Apostolicae ad Ducem` |
-| 10 | `15,16` / `SUMMA ACTORUM` / `QUAE IN HOC DECIMO VOLUMINE CONTINENTUR` / `LITTERAE APOSTOLICAE Allocutio SSmi D. N. Pii divina Pro­` / `videntia Papae iX habita in Con­` / `Epistola Encyclica Sanctissimi D. N. sistorio secreto die 28 Decem­` |
-| 11 | `SUMMA ACTORUM` / `QUAE IN HOC VOLUMINE XI CONTINENTUR` / `LITTERAE APOSTOLICAE.` / `PAG..` / `Litterae Apostolicae SSmi D. N. Leonis XIII, quibus Hierarchia Epi­` / `scopalis in Scotia restituitur 5` |
-| 14 | `S69` / `SUMMA ACTORUM` / `QUAE IN HOC VOLUMINE XIV CONTINENTUR` / `LITTERAE ET RESPONSUM improbis hominibus qui Panor-` / `ROMANI PONTIFICIS mum convenerunt. ...» 433` / `Litterae Apostolicae; de Ordine s. Ba-` |
-| 15 | `SUMMA ACTORUM` / `QU .\E IN HOC VOLUMINE XV CONTINENTUR` / `~*-fB~` / `LITTERAE MOTU PROPRIO de curis adhibitis ab Episcopis` / `ET CONSTITUTIO R. PONTIFICIS favore catholicae iuventutis, eis­` / `demque commendat philoso­` |
-| 16 | `SUMMA ACTORUM` / `QUAE IN HOC VOLUMINE XVI CONTINENTUR` / `; -i-8»-` / `L TT E RA R ROMANI PONTIFICIS OMMENDATUR ROSARII QUOTIDIANA` / `RECITATIO ; QUIBUSQUE EDICITUR` / `Epistola SSMI D. N. LEONIS XIII AD ESSE IN R. PONTIFICIS OPTATIS, UT` |
-| 17 | `SUMMA ACTORUM` / `QUAE IN HOC VOLUMINE XVII CONTINENTUR` / `LITTERAE ROMANI PONTIFICIS Litterae Apostolicae quibus confir­` / `matur iudicium ab Archiepisco` / `Epistola Encyclica SSmi D. N. Compostellano latum super iden­` / `Leonis XIII, qua mandat ut men­ titate corporis s. Iacobi m. Apo­` |
-| 18 | `SUMMA ACTORUM` / `QUAE IN HOC VOLUMINE XVIII CONTINENTUR` / `—` / `LITTERAE ROMANI PONTIFICIS gratulatur de eorum zelo in ape­` / `riendis scholis christianis, p. 305` / `Litterae Sanctissimi D. N. Leonis Litterae SSmi D. N. Leonis XIII` |
-| 19 | `SUMMA ACTORUM` / `QUAE IN HOC VOLUMINE XIX CONTINENTUR` / `LITTERAE R. PONTIFICIS Litterae SSmi D. N. Leonis XIII` / `ad Emos Cardinales Ioannem Si­` / `Litterae SSmi D. N. Leonis XIII meoni et Thomam Zigliara quoad` / `ad Regem Lusitaniae, quoad Con­ Yol. III in lucem proditum ex` |
 | 20 | `SUMMA ACTORUM` / `QUAE IN HOC VOLUMINE XX. CONTINENTUR` / `Litterae SSmi D. N. Leonis PP. XIII Litterae Sanctissimi D. N. Papae` / `ad Emum Card. Marianum Ram­ Leonis XIII, quibus constituitur` / `polla, Status Secretarium.. p. 4 ultima Dominica Septembris hu­` / `Litterae SSmi D. N. Leonis XIII ad ius anni, ceu dies magnae ex­` |
 | 26 | `SUMMA ACTORUM 755` / `Francisci Clet, sacerdotis e Con­` / `EX S. CONGR. RITUUM gregatione missionis s. Vincentii` / `a Paulo » 128` / `Squillacen. Decretum confirmatio­ Murana seu Compsana, decretum` / `nis cultus, ab immemorabili tem­ canonizationis beati Gerardi Ma­` |
-| 35 | `SUMMA ACTORUM` / `QUAE IN HOC VOLUMINE XXXV CONTINENTUR` / `ACTA ROMAM PONTIFICIS Epistola SSmi D. N. Leonis XIII ad` / `Moderatorem Generalem Sale-` / `Litterae SSmi D. N. Leonis XIII sianorum, occasione eorumdem` / `ad Abbatem Monasterii ad Cry- conventus 709` |
 
 Volumes whose papal part was found but **runs on** into the dicasteries (§1) are the same defect from the other side:
 the part's end is a heading the parser does not know, so dicastery rows are counted as the pope's and show as
@@ -222,5 +206,5 @@ shelf column is thin can yield few references however well it scans — the join
 
 ## 7. Totals
 
-41 volumes, 30021 pages; **380 acts** read by rule; 549 summa rows of which 257 claimed
-(47 %); 386 defects, 83 of them brevia; 0 volumes with no summa located.
+41 volumes, 30021 pages; **380 acts** read by rule; 899 summa rows of which 312 claimed
+(35 %); 386 defects, 83 of them brevia; 0 volumes with no summa located.
