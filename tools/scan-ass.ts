@@ -40,8 +40,16 @@ for (const s of sources) {
   if (!existsSync(text)) { console.error(`${s.key}: no volume text at ${text} (run tools/fetch-acta.sh ass ${s.volume})`); continue; }
   const pages = readFileSync(text, 'utf8').split('\f');
   const summaPages = locateSumma(pages);
-  const lastBodyPage = summaPages ? summaPages.from - 1 : pages.length;
-  const summaText = summaPages ? pages.slice(summaPages.from - 1, summaPages.to).join('\f') + '\n' : '';
+  // No summa, no fixture: the volume's own list of the pope's acts is the completeness
+  // check (spec §4), and without it the body scan would run over the index pages too
+  // (`lastBodyPage` is the summa's first page less one) and be written unchecked. Report
+  // and leave the volume's fixtures as they are, as a missing volume text does above.
+  if (summaPages === null) {
+    console.error(`${s.key}: no Summa actorum or Index analyticus located in ${text} (${pages.length} pages); fixtures left unchanged`);
+    continue;
+  }
+  const lastBodyPage = summaPages.from - 1;
+  const summaText = pages.slice(summaPages.from - 1, summaPages.to).join('\f') + '\n';
   const { entries, defects } = scanVolume(pages, { volume: s.volume, year: s.year, yearTo: s.yearTo ?? s.year, lastBodyPage });
   const parsed = parseSummaPapalPart(summaText);
   const summa = checkSumma(entries, { pages: summaPages, rows: parsed.rows });
@@ -52,7 +60,7 @@ for (const s of sources) {
   writeFileSync(s.summaFile!, summaText);
   writeFileSync(s.file, JSON.stringify(scan, null, 2) + '\n');
   const byReason = (r: string) => defects.filter((d) => d.reason === r).length;
-  console.log(`${s.key}: ${pages.length} pages; summa ${summaPages ? `${summaPages.from}-${summaPages.to} (${parsed.heading ?? 'no papal heading'} … ${parsed.end ?? 'no dicastery heading'})` : 'NOT FOUND'}; `
+  console.log(`${s.key}: ${pages.length} pages; summa ${summaPages.from}-${summaPages.to} (${parsed.heading ?? 'no papal heading'} … ${parsed.end ?? 'no dicastery heading'}); `
     + `${entries.length} acts scanned (${entries.filter((e) => e.anchor === 'heading').length} from a heading), ${defects.length} defects `
     + `(no-heading ${byReason('no-heading')}, no-date ${byReason('no-date')}, no-opening ${byReason('no-opening')}, header-mismatch ${byReason('header-mismatch')}, unknown-pope ${byReason('unknown-pope')}); `
     + `summa rows ${parsed.rows.length}: claimed ${summa.claimed.length}, unclaimed ${summa.unclaimed.length}; acts the summa omits ${summa.omitted.length}`);

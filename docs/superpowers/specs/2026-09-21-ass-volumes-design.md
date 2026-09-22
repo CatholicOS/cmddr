@@ -253,8 +253,9 @@ out of scope.
 
 ## 7. Report, tests, documentation
 
-- **Report.** `tools/acta-volumes-report.ts ass-sample` writes
-  `docs/superpowers/reports/2026-09-2D-ass-volumes-sample.md` in the era-report shape with
+- **Report.** `tools/ass-volumes-report.ts` — a sibling of `tools/acta-volumes-report.ts`,
+  not an era of it, since that tool loads the AAS sources alone — writes
+  `docs/superpowers/reports/2026-09-22-ass-volumes-sample.md` in the era-report shape with
   the scanner and summa sections of §6; its headline numbers — references per source and
   pope, matches by rule, unmatched, defects, summa claimed / unclaimed — are pinned in
   `tools/test/harvest-data.test.ts` as every era's are, and the seven AAS era reports are
