@@ -111,6 +111,15 @@ interface VolumeSurvey {
   woven: { page: number; glued: number }[];
   /** Papal-part rows whose text is two columns glued: the rows §4c costs this volume. */
   wovenRows: number;
+  /**
+   * A supplement bound in after the summa's own end -- its own document, not an index the
+   * summa's own `to` boundary was ever meant to reach (§4d): found by a heading of the shape
+   * `Supplementum ad "Acta S. Sedis"` anywhere from the summa's end to the volume's own last
+   * non-blank page. `null` for every volume that prints none.
+   */
+  tail: { from: number; to: number; heading: string } | null;
+  /** The highest page any papal-part row cites (§4d), or 0 where there are no rows. */
+  maxRowPage: number;
 }
 
 function surveyVolume(v: { volume: number; year: number; yearTo: number }): VolumeSurvey | null {
@@ -140,6 +149,20 @@ function surveyVolume(v: { volume: number; year: number; yearTo: number }): Volu
     for (let p = summa.from; p <= summa.to; p++) {
       const glued = splitColumns(pages[p - 1] ?? '').filter((l) => GLUED_LINE_RE.test(l)).length;
       if (glued > 0) woven.push({ page: p, glued });
+    }
+  }
+
+  // A supplement bound in after the summa's own end (§4d): the volume's own last non-blank
+  // page, then a search from the summa's end (its excluded next-index page included, since
+  // a supplement can follow that too) for a page opening with the supplement's own heading.
+  let volumeEnd = pages.length;
+  while (volumeEnd > 0 && pages[volumeEnd - 1]!.trim() === '') volumeEnd--;
+  const TAIL_RE = /Supplementum\s+ad\s+["“]?\s*Acta\s+S\.?\s+Sedis/i;
+  let tail: VolumeSurvey['tail'] = null;
+  if (summa) {
+    for (let p = summa.to; p < volumeEnd; p++) {
+      const line = (pages[p] ?? '').split('\n').find((l) => l.trim() !== '')?.trim();
+      if (line !== undefined && TAIL_RE.test(line)) { tail = { from: p + 1, to: volumeEnd, heading: line.replace(/\s+/g, ' ') }; break; }
     }
   }
 
@@ -177,6 +200,8 @@ function surveyVolume(v: { volume: number; year: number; yearTo: number }): Volu
         .map((l) => l.trim()).filter((l) => l !== '' && !/^\d{1,4}$/.test(l)).slice(0, 6),
     woven,
     wovenRows: parsed.rows.filter((r) => GLUED_LINE_RE.test(r.raw)).length,
+    tail,
+    maxRowPage: parsed.rows.length > 0 ? Math.max(...parsed.rows.map((r) => r.page)) : 0,
   };
 }
 
@@ -363,6 +388,32 @@ p('Most of the woven pages cost the check nothing: they fall in the dicastery se
 p('not read. The last two columns of the table are the price actually paid -- the volumes whose papal part is set on a');
 p('woven page, and the rows of it that come out glued. Each glued row is two rows lost at once: the left column\'s, whose');
 p('description runs on, and the right column\'s, whose page the row carries instead.');
+p();
+p('## 4d. A volume with a supplement bound in after its own summa');
+p();
+p('A volume\'s summa runs to its own last non-blank page in every case but one. ASS 38 (1905-06) prints, after its own');
+p('Index Analyticus and Index Alphabeticus close on p. 432 with the volume\'s own `IMPRIMATUR`, a separately paginated');
+p('*Supplementum ad "Acta S. Sedis"* -- a dossier of French Church-State-separation correspondence, its own front');
+p('matter, and its own closing *Table des matières* -- bound in afterward and found here by its own opening heading:');
+p();
+p('| Vol | Summa | Supplement | Pages | Its own heading, as printed |');
+p('|---|---|---|---|---|');
+const tailed = surveyed.filter((s) => s.tail !== null);
+for (const s of tailed) {
+  const t = s.tail!;
+  p(`| ${s.volume} | ${s.summa ? `${s.summa.from}–${s.summa.to}` : '—'} | ${t.from}–${t.to} | ${t.to - t.from + 1} | \`${md(t.heading)}\` |`);
+}
+p();
+p('The volume\'s own index cites nothing past p. 415 (`Normae pro examinibus Concionatorum iuxta Notificationem diei io');
+p('Aug. 1905 415`, under `EX VICARIATU URBIS`, ASS 38 (1905) 423) -- above the papal part\'s own highest row, p.');
+for (const s of tailed) {
+  p(`${s.maxRowPage} (ASS ${s.volume}) -- so the body the scanner reads, 1-${s.summa!.from - 1}, is the volume's real body, not a`);
+  p(`measurement cut short: its ${s.acts} acts are its real yield. The supplement is indexed too, but as one row each`);
+}
+p('under `EX SECRETARIA STATUS` and `APPENDICES` (both citing its own `1-27S`/`1-273` pagination, ASS 38 (1905) 418');
+p('and 423) -- a single item, not further per-document acts -- so nothing in `CLASS_HEADINGS` or the scanner\'s anchors');
+p('would find acts in a dossier the volume\'s own index already treats as one citation, and no era should look here');
+p('for a rule.');
 p();
 p('## 5. `header-mismatch`: OCR noise, or a page offset?');
 p();

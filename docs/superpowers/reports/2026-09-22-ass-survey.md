@@ -223,6 +223,26 @@ not read. The last two columns of the table are the price actually paid -- the v
 woven page, and the rows of it that come out glued. Each glued row is two rows lost at once: the left column's, whose
 description runs on, and the right column's, whose page the row carries instead.
 
+## 4d. A volume with a supplement bound in after its own summa
+
+A volume's summa runs to its own last non-blank page in every case but one. ASS 38 (1905-06) prints, after its own
+Index Analyticus and Index Alphabeticus close on p. 432 with the volume's own `IMPRIMATUR`, a separately paginated
+*Supplementum ad "Acta S. Sedis"* -- a dossier of French Church-State-separation correspondence, its own front
+matter, and its own closing *Table des matières* -- bound in afterward and found here by its own opening heading:
+
+| Vol | Summa | Supplement | Pages | Its own heading, as printed |
+|---|---|---|---|---|
+| 38 | 417–423 | 433–702 | 270 | `Supplementum ad " Acta S. Sedis „` |
+
+The volume's own index cites nothing past p. 415 (`Normae pro examinibus Concionatorum iuxta Notificationem diei io
+Aug. 1905 415`, under `EX VICARIATU URBIS`, ASS 38 (1905) 423) -- above the papal part's own highest row, p.
+382 (ASS 38) -- so the body the scanner reads, 1-416, is the volume's real body, not a
+measurement cut short: its 10 acts are its real yield. The supplement is indexed too, but as one row each
+under `EX SECRETARIA STATUS` and `APPENDICES` (both citing its own `1-27S`/`1-273` pagination, ASS 38 (1905) 418
+and 423) -- a single item, not further per-document acts -- so nothing in `CLASS_HEADINGS` or the scanner's anchors
+would find acts in a dossier the volume's own index already treats as one citation, and no era should look here
+for a rule.
+
 ## 5. `header-mismatch`: OCR noise, or a page offset?
 
 **38** across the series. A volume whose pages are genuinely offset would show them in a run, at every
