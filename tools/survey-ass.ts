@@ -339,8 +339,12 @@ p('Corduben. decretum`). Widening the gutter search from runs of four spaces to 
 p('the gutter it finds on **none** of these pages: the run it would look for does not exist, because the extraction has');
 p('collapsed the space between the columns to a single character. Nor are the columns still aligned: on ASS 27 (1894)');
 p('753 the right column begins at character 35, 36, 37 and 39 on four consecutive lines, so a cut at a fixed column');
-p('would fall inside the left column\'s last word. These pages are a **loss for the eras to curate**, as phase 2c-i');
-p('curated ASS 23 (1890) 753, not a rule to write.');
+p('would fall inside the left column\'s last word. Nor would cutting at the seam\'s own page token do: the tokens are');
+p('too few. On ASS 27 (1894) 753, 26 of the 38 lines carry both columns, and 3 of them show a leader and a page token');
+p('at the seam; on ASS 27 (1894) 754, 3 of 33; on ASS 23 (1890) 753, 8 of 30; on ASS 26 (1893) 756, 11 of 25. A rule');
+p('reading the token would leave the other four in five glued, and would guess wrong wherever a description carries a');
+p('numeral of its own. These pages are a **loss for the eras to curate**, as phase 2c-i curated ASS 23 (1890) 753, not');
+p('a rule to write.');
 p();
 p('The opposite defect -- a single column the detector cut anyway -- does not occur. ASS 7 and ASS 11 set their summae');
 p('in one column and no page of either is cut; ASS 37-41\'s single-column *Index analyticus* has a handful of pages cut,');
