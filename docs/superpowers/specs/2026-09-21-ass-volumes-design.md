@@ -325,3 +325,62 @@ word by word by the OCR, so three papal rows are lost and three dicastery pages 
 papal rows; a re-extraction of that page, or a hand row, is the cheapest fix. (d)
 `header-mismatch` may be worth relaxing for this series: 6 of the sample's defects are it,
 every one the OCR's reading of the right number, and no volume showed an offset.
+
+## 10. Addendum (2026-09-22): how 2c-ii is split
+
+Phase 2c-i's report said the sample's scan rate would decide 2c-ii's eras. It could not:
+the rate is a property of the summa parser as much as of the scanner, and the parser had
+been taught only what five volumes print. So the split was decided from a survey of the
+whole series instead — every volume fetched, scanned and checked with the tooling exactly
+as 2c-i merged it, adding no source, writing no fixture and touching no document
+([the survey](../reports/2026-09-22-ass-survey.md), `tools/survey-ass.ts`).
+
+**What the survey measured.** 41 volumes, 30,021 pages: **380 acts read by rule** (against
+63 in the five sampled), 549 summa rows of which 257 claimed (47 %), 386 defects. The yield
+by decade — 1860s none claimable, 1870s 75 %, 1880s 20 %, 1890s 37 %, 1900s 62 % — is a
+**floor, not a measurement**, because of the finding that reshaped this phase:
+
+**The summa's papal part is headed in at least eight forms, and the parser knows three.**
+Nineteen volumes find no papal heading at all, so their summa reads as having no papal part
+and claims nothing however well the volume scans: `ACTA SOLEMNIORA ROM. PONTIFICIS PUBLICI
+IURIS FACTA` (ASS 5, 6), `ACTA SOLEMNIORA ROMANI PONTIFICIS` (3), `ACTA SOLEMNIORE ROM.
+PONTIFICIS` (4), `ACTA SOLEMNIORÂ ROMANI PONTIFICIS` (8), the bare class as the heading —
+`LITTERAE APOSTOLICAE` (10, 11) and the mixed-case `Litterae Apostolicae / SS. D. N. P.
+Papae IX` (9) — `LITTERAE ET RESPONSUM ROMANI PONTIFICIS` (14), `LITTERAE MOTU PROPRIO ET
+CONSTITUTIO R. PONTIFICIS` (15), `LITTERAE ROMANI PONTIFICIS` (16, 17, 18), `LITTERAE R.
+PONTIFICIS` (19), and the OCR's `ACTA ROMAM PONTIFICIS` (35). The same defect from the
+other side: where the part's **end** is a heading the parser does not know, the part runs on
+into the dicasteries and their rows are counted as the pope's (ASS 21: 100 rows, 87
+unclaimed; ASS 27: 47 and 43). ASS 20 prints no part heading at all and opens on its rows;
+ASS 26's summa opens on a dicastery, its papal part elsewhere; ASS 1, 2 and 7 may have no
+papal part at all, which reading will settle.
+
+**Decisions taken by the owner on 2026-09-22.**
+
+1. **2c-ii-a, the parser, first** — rules only, with all 41 volumes as evidence: the summa
+   headings and part-ends above, each quoted at the volume and page the survey printed;
+   then the survey re-run, so the yield the eras are planned against is a measurement. No
+   source is added, no fixture written, no document joined.
+2. **The brevia are read** (the survey counts **83** across the series, 59 of them in the
+   1900s, against the 15 the sample saw): anchored on the ring formula rather than on a
+   class heading, the descriptive caps title read as the description, the class `brief`.
+   Adopted as its own commit inside 2c-ii-a, so every later era measures against the
+   finished scanner and 2c-i's own numbers regenerate once, there, rather than era by era.
+3. **Then one era per pontificate**, largest yield first: **2c-ii-b** Pius X (ASS 36–41, the
+   two-pope volume 36 included — 62–64 % claimed, the densest shelf), **2c-ii-c** Leo XIII
+   (ASS 12–35, the three sampled excepted), **2c-ii-d** Pius IX (ASS 1–11, the least
+   scannable and the most hand reading). Each era repeats 2c-i's shape with the tooling
+   built: its `ACTA_SOURCES` rows, the scan to fixtures, a curation round that counts before
+   it writes a rule, the join, the harvest, the pins, an era report, the documentation, a PR
+   and a comment on [#25](https://github.com/CatholicOS/cmddr/issues/25).
+
+**Carried into 2c-ii-a from 2c-i's review.** `tools/src/acta/ass.ts` splits along the seams
+its three sections already have — `ass-dates.ts`, `ass-headings.ts`, and the scan — before
+the rule churn of the eras, since 2c-ii's work is almost entirely adding quoted spellings.
+`header-mismatch` is **38** across the series and every instance the survey printed is the
+OCR's reading of the right number, never a run of offset pages (ASS 3 `1*97` for 197, ASS 6
+`4SI` for 481, ASS 10 `4<¡` for 49): the guard is a curated-reading generator, not a
+correctness check, and 2c-ii-a decides whether to relax it on that evidence.
+
+**Out of scope for 2c-ii**, unchanged: the ASS-born documents and the reprints of earlier
+popes registered under their own issuers (2c-iii, decided from the eras' gap reports).
