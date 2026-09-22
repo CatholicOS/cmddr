@@ -1,6 +1,6 @@
 {
   "source": "ass-12",
-  "generated": "2026-09-22",
+  "generated": "2026-09-23",
   "text": "~/development/sources/ASS/txt/ass-12-1879.txt (672 pages)",
   "volume": 12,
   "year": 1879,
@@ -239,11 +239,11 @@
   ],
   "defects": [
     {
-      "page": 637,
-      "reason": "no-heading",
+      "page": 636,
+      "reason": "no-date",
       "lines": [
-        "Datum Romae apud s. Petrum sub Annulo piscatoris XIII",
-        "Augusti MDCCCLXXIX."
+        "Litterae in forma Brevis, quibus Vicariatus Apostolicus Hu-nam / dividitur in duas partes, septentionalem et meridionalem. Pars / autem septem, in Vicariatum distinctum erigitur et Fratribus / Augustinianis Provinciae Insularum Philippinarum concreditur.",
+        "Datum Romae apud s. Petrum sub Annulo piscatoris XIII Augusti MDCCCLXXIX."
       ]
     }
   ],

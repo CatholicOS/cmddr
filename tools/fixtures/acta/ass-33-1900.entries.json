@@ -1,6 +1,6 @@
 {
   "source": "ass-33",
-  "generated": "2026-09-22",
+  "generated": "2026-09-23",
   "text": "~/development/sources/ASS/txt/ass-33-1900.txt (768 pages)",
   "volume": 33,
   "year": 1900,
@@ -165,6 +165,29 @@
         "opening": "Qua mente quove animo prosequuti fuerimus coetum, quem",
         "dateline": "Datum Romae apud S. Petrum die 4 octobris 1900, Pontificatus Nostri anno vicesimo tertio. LEO PP. XIII.",
         "header": "LITTERAE 201"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 212,
+      "pope": "Leo XIII",
+      "category": "BREVE",
+      "date": "1893-05-01",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "CONFRATERNITAS quotidianae et universalis adorationis, rite Taurini erecta, in­ dulgentiis honestatur.",
+      "raw": "CONFRATERNITAS quotidianae et universalis adorationis, rite Taurini erecta, in­ / dulgentiis honestatur.",
+      "opening": "Cum, sicuti accepimus, pia Christifidelium Confraternitas sub titulo",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "CONFRATERNITAS quotidianae et universalis adorationis, rite Taurini erecta, in­ / dulgentiis honestatur.",
+        "salutation": "LEO PP. XIII.",
+        "opening": "Cum, sicuti accepimus, pia Christifidelium Confraternitas",
+        "dateline": "Datum Romae apud Sanctum Petrum sub Annulo Piscatoris, die I Maii MDCCCXCIII, Pontificatus Nostri anno sexto decimo^ S. CARD. VANNUTELLI, Praef.",
+        "header": "212"
       }
     },
     {
@@ -431,21 +454,11 @@
       ]
     },
     {
-      "page": 212,
-      "reason": "no-heading",
+      "page": 213,
+      "reason": "header-mismatch",
       "lines": [
-        "Datum Romae apud Sanctum Petrum sub Annulo Piscatoris,",
-        "die I Maii MDCCCXCIII, Pontificatus Nostri anno sexto decimo^",
-        "S. CARD. VANNUTELLI, Praef."
-      ]
-    },
-    {
-      "page": 214,
-      "reason": "no-heading",
-      "lines": [
-        "Datum Romae apud S. Petrum sub Annulo Piscatoris die",
-        "XXI Augusti MDCCCXCIV, Pontificatus Nostri anno decimo»",
-        "septimo."
+        "EX SECRETARIA BREVIUM                                                        215",
+        "CONFRATERNITAS eadem erigitur in primariam, aliisque dotatur indulgentiis"
       ]
     },
     {
@@ -692,6 +705,7 @@
       }
     ],
     "omitted": [
+      212,
       396,
       401
     ]
