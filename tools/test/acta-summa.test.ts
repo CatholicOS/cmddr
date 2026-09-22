@@ -104,12 +104,30 @@ describe('parseSummaPapalPart (spec §4): the papal part, loosely', () => {
       ['LITTERAE ROMANI PONTIFICIS', 'Litterae Sanctissimi D. N. Leonis . . 305', 'LITTERAE ROMANI PONTIFICIS'],
       ['LITTERAE R. PONTIFICIS', 'Litterae SSmi D. N. Leonis XIII . . 4', 'LITTERAE R. PONTIFICIS'],
       ['ACTA ROMAM PONTIFICIS', 'Epistola SSmi D. N. Leonis XIII ad . . 709', 'ACTA ROMAM PONTIFICIS'],
+      // ASS 16 (1883) 557's OCR garble of `LITTERAE ROMANI PONTIFICIS`, printed as one line: `L TT E RA R ROMANI PONTIFICIS`.
+      ['L TT E RA R ROMANI PONTIFICIS', 'Epistola SSMI D. N. LEONIS XIII AD EMOS CARDINALES . . 49', 'L TT E RA R ROMANI PONTIFICIS'],
     ];
     for (const [heading, row, reported] of cases) {
       const { rows, heading: read } = parseSummaPapalPart(`SUMMA ACTORUM\nQUAE IN HOC VOLUMINE CONTINENTUR\n${heading}\n${row}\nEX ACTIS CONSISTORIALIBUS\nDe Consistorio habito . . 99`);
       expect(read, heading).toBe(reported);
       expect(rows.map((r) => r.page), heading).toEqual([Number(row.match(/(\d+)\s*$/)![1])]);
     }
+  });
+
+  it('joins ASS 3 (1867) 665\'s papal heading across the two physical lines of its two-column page (`ACTA SOLEMNIORA ROMANI` / `PONTIFICIS.`) without leaking `ROMANI` into the first row -- the bug the brief\'s draft regex had, caught only against the real page', () => {
+    const text = [
+      '                                                             SUMMA ACTORUM',
+      '                                   QUAE IN HOC TERTIO VOLUMINE CONTINENTUR.',
+      '            ACTA SOLEMNIORA ROMANI                                                                 Allocutio habita die 20 Decembris 1867',
+      '                                PONTIFICIS.                                                             de A ictoria relata io Nomentano et',
+      '                                                                                                       Aretino certamine, deque fiorenti vita',
+      '  Allocutio consistorialis diei 12 Iulii 1876                                                          catholicae Ecclesiae. .... 289',
+    ].join('\n');
+    const { rows, heading } = parseSummaPapalPart(text);
+    expect(heading).toBe('ACTA SOLEMNIORA ROMANI PONTIFICIS');
+    // The left column's first row, as printed -- not `ROMANI PONTIFICIS. Allocutio consistorialis …`,
+    // which is what the unguarded draft regex left behind on the same line.
+    expect(rows[0]!.raw).toBe('Allocutio consistorialis diei 12 Iulii 1876');
   });
 
   it('reads the mixed-case papal heading of ASS 9 (1876), where the class itself heads the part', () => {
