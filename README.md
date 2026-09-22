@@ -262,7 +262,7 @@ entry, every act the shelves lack and every document two entries claim is listed
 [join report](docs/superpowers/reports/2026-09-12-acta-join-2015-2024.md) — whose headline is that vatican.va's Francis shelves
 for constitutions and apostolic letters are selections (49 and 59 against the index's 118 and 202), while the *Acta* are the
 record. The [sample report](docs/superpowers/reports/2026-09-13-acta-volumes-sample.md) of phase 2b-i measures the century's
-typography and OCR the same way, volume by volume, with a parse rate per volume: **131** references from the five volumes and
+typography and OCR the same way, volume by volume, with a parse rate per volume: **137** references from the five volumes and
 the 2012 index (Pius XII's 1958 alone carries 73), and the findings that decide the rest of 2b — the OCR text of AAS 1 and 9-I
 has lost the page column of most index pages, the columnar layout of 1909–1931 dates some acts to the month only, and a volume
 can print an act another volume already published. Phase 2b-ii-a ([era report](docs/superpowers/reports/2026-09-13-acta-volumes-1932-1957.md))
@@ -321,8 +321,8 @@ gap. Phase 2c-i ([era report](docs/superpowers/reports/2026-09-22-ass-volumes-sa
 [spec](docs/superpowers/specs/2026-09-21-ass-volumes-design.md)) reaches into the *Acta Sanctae Sedis*, which print **no
 chronological index**: for five sample volumes (ASS 1, 12, 23, 33, 41) the index is synthesised from the volume body — every
 papal act's class heading, salutation, opening words and dateline quoted beside the entry — and checked against the volume's
-own *Summa actorum*, whose 87 rows over the five leave the scan **one genuine miss**. 63 acts were read by rule and 23 by
-hand, 85 entries in all, and **58** references follow (Leo XIII 29, Pius X 29, Pius IX none: ASS 1's three acts are hand
+own *Summa actorum*, whose 87 rows over the five leave the scan **one genuine miss**. 62 entries stand as the scanner read
+them and 23 were read by hand, 85 in all, and **58** references follow (Leo XIII 29, Pius X 29, Pius IX none: ASS 1's three acts are hand
 readings, its allocution of a class the registry does not harvest and its two apostolic letters of 1866 without a shelf record
 on their date), 54 of them by the unique rule and 4 by the opening rule — the shelf's incipit as a word-boundary prefix of the
 act's first words, the rule the ASS needed and the AAS did not, an ASS entry carrying no incipit at all — with no ambiguous
