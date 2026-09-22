@@ -165,6 +165,53 @@ reopens at a later papal heading if one follows (ASS 8 (1874) 727-728 prints tha
 only a papal part whose end is still a dicastery heading the parser does not know — the same defect from the other
 side, a volume's dicastery rows counted as the pope's and shown as unclaimed; none remain as of this survey.
 
+## 4c. The summa pages whose two columns stay woven
+
+The summae of ASS 1-36 are set in two columns, which the layout mode prints side by side on one line, so the left
+column's page tokens sit mid-line and close no row. `splitColumns` unweaves them by finding the gutter -- the column
+the most lines' runs of four or more spaces cover, at column 25 or beyond and on four or more lines -- and cutting
+each line there. Where the columns touch, no run covers one column on enough lines, and the page comes back as
+printed: a row's description is the two columns' text glued and its page token may belong to the other column. That
+happens on **15** pages of **13** volumes, carrying 61 glued lines between them.
+
+| Vol | Summa | Woven pages (glued lines) | Papal rows | of them glued |
+|---|---|---|---|---|
+| 2 | 695–701 | 695 (2), 696 (1) | 3 | 0 |
+| 3 | 665–670 | 665 (3) | 15 | 2 |
+| 5 | 691–696 | 696 (1) | 15 | 0 |
+| 10 | 616–622 | 621 (7) | 9 | 0 |
+| 19 | 604–610 | 609 (6) | 13 | 0 |
+| 23 | 752–758 | 753 (8) | 14 | 2 |
+| 24 | 751–760 | 754 (9) | 12 | 0 |
+| 26 | 755–762 | 756 (11) | 0 | 0 |
+| 27 | 753–760 | 753 (3), 754 (3) | 47 | 6 |
+| 29 | 759–766 | 764 (3) | 9 | 0 |
+| 31 | 759–768 | 767 (1) | 13 | 0 |
+| 33 | 761–768 | 763 (2) | 24 | 0 |
+| 35 | 759–768 | 762 (1) | 11 | 0 |
+
+**No rule can unweave these pages, and none was written.** Read with `cat -A`, the two columns of ASS 27 (1894) 753
+are one space apart -- `Epistola SSmi D. N. Leonis XIII ad tes 583`, where the left column's `… ad` is butted
+straight against the right column's `tes 583` -- and so are those of ASS 23 (1890) 753 (`Motti-Proprio SSmi D. N.
+Leo- tita gtatia indui gel ur Episcopo`) and ASS 26 (1893) 756 (`nis ven. Servae Dei luliae Bil- Toletana seu
+Corduben. decretum`). Widening the gutter search from runs of four spaces to runs of three, or even of two, moves
+the gutter it finds on **none** of these pages: the run it would look for does not exist, because the extraction has
+collapsed the space between the columns to a single character. Nor are the columns still aligned: on ASS 27 (1894)
+753 the right column begins at character 35, 36, 37 and 39 on four consecutive lines, so a cut at a fixed column
+would fall inside the left column's last word. These pages are a **loss for the eras to curate**, as phase 2c-i
+curated ASS 23 (1890) 753, not a rule to write.
+
+The opposite defect -- a single column the detector cut anyway -- does not occur. ASS 7 and ASS 11 set their summae
+in one column and no page of either is cut; ASS 37-41's single-column *Index analyticus* has a handful of pages cut,
+but on every one of them the only lines cut are centred headings and running titles, whose leading indent is the run
+the search found (`EX SACRA POENITENTIARIA`, ASS 40 (1907) 781; `Index alphabeticus`, ASS 39 (1906) 635). No line of
+index text is bisected.
+
+Most of the woven pages cost the check nothing: they fall in the dicastery sections, which `parseSummaPapalPart` does
+not read. The last two columns of the table are the price actually paid -- the volumes whose papal part is set on a
+woven page, and the rows of it that come out glued. Each glued row is two rows lost at once: the left column's, whose
+description runs on, and the right column's, whose page the row carries instead.
+
 ## 5. `header-mismatch`: OCR noise, or a page offset?
 
 **38** across the series. A volume whose pages are genuinely offset would show them in a run, at every

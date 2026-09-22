@@ -24,7 +24,7 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { scanVolume, CLASS_HEADINGS, type AssDefect, type AssEntry } from './src/acta/ass.js';
-import { checkSumma, locateSumma, parseSummaPapalPart, PAPAL_HEAD_FORMS } from './src/acta/summa.js';
+import { checkSumma, locateSumma, parseSummaPapalPart, splitColumns, PAPAL_HEAD_FORMS } from './src/acta/summa.js';
 import { ACTA_SOURCES } from './src/acta/join.js';
 import type { DocumentRecord } from './src/types.js';
 import { readdirSync } from 'node:fs';
@@ -66,6 +66,21 @@ const CAPS_LINE = /^\s*(?:\d[\dOoiIla]{0,3}\s+)?([A-ZÀ-Þ]{3,}(?:[ .'’-]+[A-Z
 /** The ring of the Fisherman: the brevia of the Secretaria Brevium close with it. */
 const RING = /annulo\s+Piscatoris|annulo\s+piscatoris/;
 
+/**
+ * A line of an unwoven summa page on which the two columns are still glued: a page token
+ * that closes a row -- one of `ROW_END_RE`'s own leaders (`pag.`, `»`, `>`, `*`, `·`, a
+ * run of stops) and the number after it -- with fifteen or more further characters of text
+ * behind it, which on a two-column page can only be the other column (`Sacramenti. . . . . . » 94 Hubert Foiirnet, Sacerdotis fun-`,
+ * ASS 10 (1877) 621). The leader is required, and not merely a space, so that a numeral
+ * inside a description never reads as a glue -- a date (`editae die 9 februarii 1853
+ * declarantes`, ASS 7 (1872) 751) or a quantity (`Indulgentia 50 dierum recitantibus`,
+ * ASS 35 (1902) 759) carries none. It is a floor, not a count of the damage: a glue with no
+ * token at the seam (`Ordinarios Brasiliae , qua utilia Epistola SSmi D. N. ad Eminentis-`,
+ * ASS 27 (1894) 753) is invisible to it, so a page it names is woven for certain while a
+ * page it passes over may still be woven on a line or two.
+ */
+const GLUED_LINE_RE = /(?:pag\.|»|>|\*|·|\.\s*\.|\.{2,})\s*(?=[\dOoiIlSsgB]{0,3}\d)[\dOoiIlSsgB]{1,4}(?:\s\d{1,2})?\s+\S.{14,}/;
+
 interface VolumeSurvey {
   volume: number;
   year: number;
@@ -92,6 +107,10 @@ interface VolumeSurvey {
    * spellings an era would have to teach it, quoted from the page rather than guessed.
    */
   summaOpening: string[];
+  /** Summa pages `splitColumns` leaves woven, with the glued lines found on each (§4c). */
+  woven: { page: number; glued: number }[];
+  /** Papal-part rows whose text is two columns glued: the rows §4c costs this volume. */
+  wovenRows: number;
 }
 
 function surveyVolume(v: { volume: number; year: number; yearTo: number }): VolumeSurvey | null {
@@ -112,6 +131,17 @@ function surveyVolume(v: { volume: number; year: number; yearTo: number }): Volu
   // The brevia: a `no-heading` defect is the scanner reaching an act's close and finding no
   // class heading behind it; where that close is the ring of the Fisherman, the act is a breve.
   const brevia = defects.filter((d) => d.reason === 'no-heading' && d.lines.some((l) => RING.test(l))).length;
+
+  // The columns that stay woven (§4c): a summa page `splitColumns` hands back with the two
+  // columns' text still glued, counted over the unwoven output so that a page it cut at the
+  // wrong gutter is caught as well as one it could not cut at all.
+  const woven: { page: number; glued: number }[] = [];
+  if (summa) {
+    for (let p = summa.from; p <= summa.to; p++) {
+      const glued = splitColumns(pages[p - 1] ?? '').filter((l) => GLUED_LINE_RE.test(l)).length;
+      if (glued > 0) woven.push({ page: p, glued });
+    }
+  }
 
   // Candidate headings: a caps line with a pope formula within the four lines under it,
   // whose first word no class heading carries. A candidate, never a rule: the era that
@@ -145,6 +175,8 @@ function surveyVolume(v: { volume: number; year: number; yearTo: number }): Volu
     summaOpening: parsed.heading !== null || summa === null ? []
       : pages.slice(summa.from - 1, summa.from + 1).flatMap((pg) => pg.split('\n'))
         .map((l) => l.trim()).filter((l) => l !== '' && !/^\d{1,4}$/.test(l)).slice(0, 6),
+    woven,
+    wovenRows: parsed.rows.filter((r) => GLUED_LINE_RE.test(r.raw)).length,
   };
 }
 
@@ -281,6 +313,45 @@ p('The part now pauses at the first dicastery heading `DICASTERY_RE` knows, rath
 p('reopens at a later papal heading if one follows (ASS 8 (1874) 727-728 prints that shape). `**runs on**` in §1 marks');
 p('only a papal part whose end is still a dicastery heading the parser does not know — the same defect from the other');
 p('side, a volume\'s dicastery rows counted as the pope\'s and shown as unclaimed; none remain as of this survey.');
+p();
+p('## 4c. The summa pages whose two columns stay woven');
+p();
+p('The summae of ASS 1-36 are set in two columns, which the layout mode prints side by side on one line, so the left');
+p('column\'s page tokens sit mid-line and close no row. `splitColumns` unweaves them by finding the gutter -- the column');
+p('the most lines\' runs of four or more spaces cover, at column 25 or beyond and on four or more lines -- and cutting');
+p('each line there. Where the columns touch, no run covers one column on enough lines, and the page comes back as');
+p(`printed: a row's description is the two columns' text glued and its page token may belong to the other column. That`);
+const wovenVols = surveyed.filter((x) => x.woven.length > 0);
+const wovenPages = sum((x) => x.woven.length);
+p(`happens on **${wovenPages}** ${wovenPages === 1 ? 'page' : 'pages'} of **${wovenVols.length}** ${wovenVols.length === 1 ? 'volume' : 'volumes'}, carrying ${sum((x) => x.woven.reduce((n, w) => n + w.glued, 0))} glued lines between them.`);
+p();
+p('| Vol | Summa | Woven pages (glued lines) | Papal rows | of them glued |');
+p('|---|---|---|---|---|');
+for (const s of wovenVols) {
+  p(`| ${s.volume} | ${s.summa ? `${s.summa.from}–${s.summa.to}` : '—'} | ${s.woven.map((w) => `${w.page} (${w.glued})`).join(', ')} | ${s.rows} | ${s.wovenRows} |`);
+}
+p();
+p('**No rule can unweave these pages, and none was written.** Read with `cat -A`, the two columns of ASS 27 (1894) 753');
+p('are one space apart -- `Epistola SSmi D. N. Leonis XIII ad tes 583`, where the left column\'s `… ad` is butted');
+p('straight against the right column\'s `tes 583` -- and so are those of ASS 23 (1890) 753 (`Motti-Proprio SSmi D. N.');
+p('Leo- tita gtatia indui gel ur Episcopo`) and ASS 26 (1893) 756 (`nis ven. Servae Dei luliae Bil- Toletana seu');
+p('Corduben. decretum`). Widening the gutter search from runs of four spaces to runs of three, or even of two, moves');
+p('the gutter it finds on **none** of these pages: the run it would look for does not exist, because the extraction has');
+p('collapsed the space between the columns to a single character. Nor are the columns still aligned: on ASS 27 (1894)');
+p('753 the right column begins at character 35, 36, 37 and 39 on four consecutive lines, so a cut at a fixed column');
+p('would fall inside the left column\'s last word. These pages are a **loss for the eras to curate**, as phase 2c-i');
+p('curated ASS 23 (1890) 753, not a rule to write.');
+p();
+p('The opposite defect -- a single column the detector cut anyway -- does not occur. ASS 7 and ASS 11 set their summae');
+p('in one column and no page of either is cut; ASS 37-41\'s single-column *Index analyticus* has a handful of pages cut,');
+p('but on every one of them the only lines cut are centred headings and running titles, whose leading indent is the run');
+p('the search found (`EX SACRA POENITENTIARIA`, ASS 40 (1907) 781; `Index alphabeticus`, ASS 39 (1906) 635). No line of');
+p('index text is bisected.');
+p();
+p('Most of the woven pages cost the check nothing: they fall in the dicastery sections, which `parseSummaPapalPart` does');
+p('not read. The last two columns of the table are the price actually paid -- the volumes whose papal part is set on a');
+p('woven page, and the rows of it that come out glued. Each glued row is two rows lost at once: the left column\'s, whose');
+p('description runs on, and the right column\'s, whose page the row carries instead.');
 p();
 p('## 5. `header-mismatch`: OCR noise, or a page offset?');
 p();

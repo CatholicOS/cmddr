@@ -275,6 +275,22 @@ describe('the first curation round (phase 2c-i, Task 4): the summa shapes the fi
   it('leaves a single-column page as printed (ASS 41\'s Index analyticus)', () => {
     expect(splitColumns(SUMMA_41)).toEqual(SUMMA_41.split('\n'));
   });
+  it('leaves a page whose two columns touch exactly as printed, because there is no gutter to find (ASS 27 (1894) 753, the 2c-ii survey §4c)', () => {
+    // Quoted from the store, `awk -v p=753 'BEGIN{RS="\f"} NR==p' ass-27-1894.txt | cat -A`: the
+    // extraction has collapsed the space between the two columns to a single character, so the
+    // left column's `… ad` is butted straight against the right column's `tes 583`. Runs of
+    // three spaces, or of two, find no gutter here either, and the right column begins at
+    // character 35, 36, 37 and 39 on these four lines, so no fixed-column cut is possible. The
+    // survey names the fifteen pages of thirteen volumes that print this way; the eras curate
+    // the rows they cost, as phase 2c-i curated ASS 23 (1890) 753.
+    const page753 = [
+      'Epistola SSmi D. N. Leonis XIII ad tes 583',
+      '     Ordinarios Brasiliae , qua utilia Epistola SSmi D. N. ad Eminentis-',
+      '    commendanlur ad fidei pietatis- simum Card. Parocchi circa mo­',
+      '     que christianae profectum pag. 3 dum, quo Catholici in Italia sese',
+    ].join('\n');
+    expect(splitColumns(page753)).toEqual(page753.split('\n'));
+  });
   it('reads the papal heading set over two lines (`LITTERAE` / `ET ACTA ROM. PONTIFICIS`, ASS 23 (1890) 752)', () => {
     const text = ['                      LITTERAE', '      ET ACTA ROM. PONTIFICIS', '', ' Litterae SSmi D. N. Leonis XIII', '     ad Cardinalem Lavigerie, occa­', '     in Africani profectum est. pag. 3', '      EX ACTIS CONSISTORIALIBUS', 'De Consistorio habito » 705'].join('\n');
     const { rows, heading, end } = parseSummaPapalPart(text);
