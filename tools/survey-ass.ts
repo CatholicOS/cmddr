@@ -325,6 +325,13 @@ const wovenVols = surveyed.filter((x) => x.woven.length > 0);
 const wovenPages = sum((x) => x.woven.length);
 p(`happens on **${wovenPages}** ${wovenPages === 1 ? 'page' : 'pages'} of **${wovenVols.length}** ${wovenVols.length === 1 ? 'volume' : 'volumes'}, carrying ${sum((x) => x.woven.reduce((n, w) => n + w.glued, 0))} glued lines between them.`);
 p();
+p('These are counted by a leader-anchored measure over `splitColumns`\' own output — a page token introduced by one of');
+p('`ROW_END_RE`\'s leaders with fifteen or more further characters behind it (`GLUED_LINE_RE`) — and not by a heuristic');
+p('over the raw page\'s spacing. An earlier spacing heuristic was unreliable in both directions: it flagged pages of the');
+p('single-column *Index analyticus* of ASS 37 and 39-41, whose columns do not exist, and missed genuinely woven pages,');
+p('among them ASS 23 (1890) 753 — the page phase 2c-i curated — and ASS 35 (1902) 762. The count above is the one to');
+p('use.');
+p();
 p('| Vol | Summa | Woven pages (glued lines) | Papal rows | of them glued |');
 p('|---|---|---|---|---|');
 for (const s of wovenVols) {

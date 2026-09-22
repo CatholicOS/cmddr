@@ -174,6 +174,13 @@ each line there. Where the columns touch, no run covers one column on enough lin
 printed: a row's description is the two columns' text glued and its page token may belong to the other column. That
 happens on **15** pages of **13** volumes, carrying 61 glued lines between them.
 
+These are counted by a leader-anchored measure over `splitColumns`' own output — a page token introduced by one of
+`ROW_END_RE`'s leaders with fifteen or more further characters behind it (`GLUED_LINE_RE`) — and not by a heuristic
+over the raw page's spacing. An earlier spacing heuristic was unreliable in both directions: it flagged pages of the
+single-column *Index analyticus* of ASS 37 and 39-41, whose columns do not exist, and missed genuinely woven pages,
+among them ASS 23 (1890) 753 — the page phase 2c-i curated — and ASS 35 (1902) 762. The count above is the one to
+use.
+
 | Vol | Summa | Woven pages (glued lines) | Papal rows | of them glued |
 |---|---|---|---|---|
 | 2 | 695–701 | 695 (2), 696 (1) | 3 | 0 |
