@@ -218,7 +218,7 @@ const decade = (s: VolumeSurvey) => `${Math.floor(s.year / 10) * 10}s`;
  * and put a spurious date into a commit whose only real change was elsewhere -- and the
  * three remaining 2c-ii tasks all verify themselves by diffing this report.
  */
-const GENERATED_ON = '2026-09-22';
+const GENERATED_ON = '2026-09-23';
 
 p('# The *Acta Sanctae Sedis*, all 41 volumes: the 2c-ii survey');
 p();

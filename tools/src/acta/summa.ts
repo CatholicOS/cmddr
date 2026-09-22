@@ -30,7 +30,20 @@ export interface SummaCheck {
 }
 
 const SUMMA_HEAD_RE = /^[\s\S]{0,60}?(SUMMA\s+A[CGO]TO[RKT]?[UTJ]*M|INDEX\s+ANALYTICUS)/;
-const NEXT_INDEX_RE = /^[\s\S]{0,60}?(INDEX\s+GENERALIS|INDEX\s+ALPHABETICUS|INDEX\s+RERUM|INDEX\s+NOMINUM)/;
+/**
+ * `ALPHABETICUS` admits the OCR's `-O` for `-US` (`INDEX ALPHABETICO`, ASS 38 (1905) 424,
+ * the volume's own Index Alphabeticus heading, its own line, immediately after Index
+ * Analyticus's seven pages): without it the search for the next index runs past the whole
+ * Index Alphabeticus and finds none, so `to` fell through to the volume's end -- catching
+ * ASS 38's own *Supplementum ad "Acta S. Sedis"* (433-699, a separately paginated dossier of
+ * French Church-State-separation correspondence, its own front matter and its own closing
+ * *Table des matières*, bound in after the volume's IMPRIMATUR on 432) as if it were still
+ * the summa, 270 pages that are neither summa nor scanned body. `from` was already right:
+ * body content (`Ex Vicariatu Urbis`, citing pages up to 415) runs to 416, and Index
+ * Analyticus opens on 417 citing nothing past 415 -- so this volume's summa was never
+ * mislocated at its start, only left unbounded at its end.
+ */
+const NEXT_INDEX_RE = /^[\s\S]{0,60}?(INDEX\s+GENERALIS|INDEX\s+ALPHABETIC(?:US|O)|INDEX\s+RERUM|INDEX\s+NOMINUM)/;
 /**
  * A page's first three non-blank lines, trimmed and joined: what the two heading regexes
  * read. The layout mode pads the page-number line above the heading to the right margin

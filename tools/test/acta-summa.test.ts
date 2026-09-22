@@ -230,6 +230,22 @@ describe('locateSumma: the summa pages, from the volume\'s midpoint', () => {
   it('returns null when no summa is found', () => {
     expect(locateSumma(['b', 'b', 'b', 'b'])).toBeNull();
   });
+
+  // ASS 38 (1905) 417-424, quoted from the store (`awk -v p=417 'BEGIN{RS="\f"} NR==p'
+  // ass-38-1905.txt`, and p=424): 417 genuinely opens Index Analyticus -- ASS 38's body runs
+  // to 416 (`Ex Vicariatu Urbis`, citing pages up to 415) with no act's own text anywhere
+  // near it -- so `from` was always right. 424 opens Index Alphabeticus, its own line, in the
+  // OCR's `-O` for `-US`; before this fix `NEXT_INDEX_RE` never matched it, so `to` ran past
+  // it to the volume's end (702), catching 270 pages of a supplement bound in after the
+  // volume's own IMPRIMATUR on 432 as if they were still the summa.
+  it('starts the summa at ASS 38 (1905) 417\'s real Index Analyticus heading, not at any act\'s own words', () => {
+    const pages = ['body', 'body', 'body', '                         INDEX ANALYTICUS                 —*—', 'rows'];
+    expect(locateSumma(pages)).toEqual({ from: 4, to: 5 });
+  });
+  it('stops the summa before ASS 38 (1905) 424\'s Index Alphabeticus even OCR\'d ALPHABETICO for ALPHABETICUS, rather than running to the volume\'s end and catching its bound-in supplement', () => {
+    const pages = ['b', 'b', 'b', 'b', 'b', 'b', '                         INDEX ANALYTICUS                 —*—', 'rows', '                      INDEX ALPHABETICO', 'more rows', 'Supplementum ad "Acta S. Sedis"'];
+    expect(locateSumma(pages)).toEqual({ from: 7, to: 8 });
+  });
 });
 
 describe('checkSumma (spec §4): every summa page must be a scanned act\'s page, and every act should sit on a summa page', () => {
