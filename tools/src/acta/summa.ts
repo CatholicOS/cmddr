@@ -121,10 +121,16 @@ const PAPAL_HEAD_RE = new RegExp(
  * heading are dropped from the evidence anyway, since some volumes print them without `EX`:
  *   - ASS 21 (1888) heads every dicastery of its summa bare, never with `EX`
  *     (`S. CONGREGATIO CONCILII` 745, `S. CONGREGATIO RITUUM` / `S. CONGR. INDULGENTIARUM`
- *     749, `S. CONGR. INDICIS` / `S. POENITENTIARIA APOST.` 750) -- so the abbreviated
- *     forms are admitted bare only when followed by a spelt-out dicastery word (`CONGR.`,
- *     `CONGREGATIO`, `CONGREGATIONE`, `CONGREGATIONIS`, `POENITENTIARIA`), never by a bare
- *     `C.` alone, which stays `EX`-only (too close to a saint's initial, same as `S.` bare).
+ *     749, `S. CONGR. INDICIS` / `S. POENITENTIARIA APOST.` 750); ASS 24 (1891) 758 prints
+ *     `S. CONGR. IMMUNITATIS` bare the same way -- so the abbreviated forms are admitted
+ *     bare only when followed by a spelt-out dicastery word actually printed that way
+ *     (`CONGR.`, `CONGREGATIO`, `POENITENTIARIA`), never by a bare `C.` alone, which stays
+ *     `EX`-only (too close to a saint's initial, same as `S.` bare). `CONGREGATIONE` and
+ *     `CONGREGATIONIS` are not admitted bare: a corpus-wide search found neither printed
+ *     bare in any summa (`CONGREGATIONIS` appears bare once, ASS 6 (1870) 546, but as the
+ *     genitive of a document's own title -- `S. CONGREGATIONIS FIDEI PROPAGANDAE
+ *     PRAEPOSITAE...`, an *Instructio*'s heading in the volume's body -- not a summa
+ *     dicastery heading).
  *   - ASS 3 (1867) 666 and ASS 4 (1868) 684 head the consistorial acts `ACTA CONSISTORIALIA`
  *     -- `ACTA`, not `ACTIS`, and never with `EX` -- always in full capitals.
  * ASS 9 (1876) prints its own headings in title case with `Ex`, never in capitals
@@ -138,7 +144,7 @@ const PAPAL_HEAD_RE = new RegExp(
  * `EX S. DATARIA APOST.` (ASS 28 (1895) 761) and `EX S. DATARIA APOSTOLICA` (ASS 33 (1900)
  * 766), which the abbreviated `S{1,2}\.` branch already reads.
  */
-const DICASTERY_RE = /^\s*(EX\s+(?:S{1,2}\.|SACRA\b|SECRETARIA\b|ACTIS\b|AEDIBUS\b).*|S{1,2}\.\s*(?:CONGR\.|CONGREGATIONE\b|CONGREGATIONIS\b|CONGREGATIO\b|POENITENTIARIA\b).*|ACTA\s+CONSISTORIALIA\b.*|Ex\s+Actis\s+Consistorialibus\b.*|Ex\s+Secretaria\s+Brevium\b.*)$/;
+const DICASTERY_RE = /^\s*(EX\s+(?:S{1,2}\.|SACRA\b|SECRETARIA\b|ACTIS\b|AEDIBUS\b).*|S{1,2}\.\s*(?:CONGR\.|CONGREGATIO\b|POENITENTIARIA\b).*|ACTA\s+CONSISTORIALIA\b.*|Ex\s+Actis\s+Consistorialibus\b.*|Ex\s+Secretaria\s+Brevium\b.*)$/;
 
 /** A line that is only the summa's running header (`8oo Index analyticus`, `SUMMA ACTORUM.`, `762 SUMMA {60 spaces} ACTORUM`) or a bare page number (`761`, padded to the margin, ASS 33 (1900) 761), whitespace collapsed. */
 const HEADER_LINE_RE = /^\s*(?:(?:\d[\dOoiIl]{0,3}\s+)?(?:Index analyticus|SUMMA\.?\s+A[CGO]TO[RKT]?[UTJ]*M\.?)\s*(?:\d[\dOoiIl]{0,3})?\s*-?|\d[\dOoiIl]{0,3})\s*$/;
@@ -185,9 +191,14 @@ const ROW_END_RE = /^(.*?)(?:\s*(?:pag\.|»|>|\*|·|\.+|\s))\s*(?=[\dOoiIlSsgB]{
 
 /**
  * The rows of the papal part: from the papal heading (or the summa's first line, when the
- * heading is interleaved into a row, as ASS 12's `LITTERAE ET ALLOCUTIONES Motu Proprio …`)
- * to the first dicastery heading. A row accumulates lines until one ends in a page token;
- * `N et M` yields two rows of one description. Lines that are only a running header
+ * heading is interleaved into a row, as ASS 12's `LITTERAE ET ALLOCUTIONES Motu Proprio …`),
+ * pausing at the first dicastery heading and reopening at a later papal one -- ASS 8 (1874)
+ * 727-728 prints a second `LITTERAE APOSTOLICAE.` heading after its first part's `EX ACTIS
+ * CONSISTORIALIBUS.` closes it, with nine further papal rows before the next dicastery
+ * heading closes the part for good -- so a dicastery section between two papal ones is
+ * skipped rather than counted, and `end` reports the dicastery heading that closes the part,
+ * not one merely passed over while paused. A row accumulates lines until one ends in a page
+ * token; `N et M` yields two rows of one description. Lines that are only a running header
  * (`8oo Index analyticus`, `SUMMA ACTORUM.`) are skipped. A page token may start with an
  * OCR letter (`ig3`) but must contain a genuine digit, so a short Latin word (`iis`) never
  * closes a row.

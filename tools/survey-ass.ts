@@ -258,11 +258,12 @@ for (const [spelling, at] of ranked.slice(0, 40)) p(`| \`${md(spelling)}\` | ${a
 p();
 p('## 4b. The summa headings the parser does not know');
 p();
-p('`parseSummaPapalPart` knows the three forms the sample printed (`LITTERAE ET ALLOCUTIONES`, `LITTERAE ET ACTA');
-p('R. PONTIFICIS`, `ACTA ROMANI PONTIFICIS`). Where it finds none, the summa is read as having no papal part at all and');
-p('the volume claims nothing — which is why a volume can scan acts and still show 0 rows. These are the volumes\' own');
-p('opening lines, quoted from the page: the spellings an era would teach the parser, and the reason the yield of §2 is a');
-p('floor and not a measurement for them.');
+p('`parseSummaPapalPart` knows the eleven papal-heading forms quoted in its own doc comment — the sample\'s three');
+p('(`LITTERAE ET ALLOCUTIONES`, `LITTERAE ET ACTA R. PONTIFICIS`, `ACTA ROMANI PONTIFICIS`) and the eight the');
+p('whole-series survey found. Where it finds none, the summa is read as having no papal part at all and the volume');
+p('claims nothing — which is why a volume can scan acts and still show 0 rows. These are the volumes\' own opening');
+p('lines, quoted from the page: the spellings an era would teach the parser, and the reason the yield of §2 is a floor');
+p('and not a measurement for them.');
 p();
 p('| Vol | The summa\'s first lines, as printed |');
 p('|---|---|');
@@ -270,9 +271,10 @@ for (const s of surveyed.filter((x) => x.summaOpening.length > 0)) {
   p(`| ${s.volume} | ${s.summaOpening.map((l) => `\`${md(l)}\``).join(' / ')} |`);
 }
 p();
-p('Volumes whose papal part was found but **runs on** into the dicasteries (§1) are the same defect from the other side:');
-p('the part\'s end is a heading the parser does not know, so dicastery rows are counted as the pope\'s and show as');
-p('unclaimed.');
+p('The part now pauses at the first dicastery heading `DICASTERY_RE` knows, rather than stopping outright, and');
+p('reopens at a later papal heading if one follows (ASS 8 (1874) 727-728 prints that shape). `**runs on**` in §1 marks');
+p('only a papal part whose end is still a dicastery heading the parser does not know — the same defect from the other');
+p('side, a volume\'s dicastery rows counted as the pope\'s and shown as unclaimed; none remain as of this survey.');
 p();
 p('## 5. `header-mismatch`: OCR noise, or a page offset?');
 p();

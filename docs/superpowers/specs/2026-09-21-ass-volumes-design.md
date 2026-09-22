@@ -176,9 +176,11 @@ on the 36 others in 2c-ii — a rule that fires once gets a curated row, not a b
 
 The summa pages (heading `SUMMA ACTORUM` or `INDEX ANALYTICUS`) are located and extracted
 to the `.summa.txt` fixture; the **papal part** runs from its heading (`LITTERAE ET ACTA
-R. PONTIFICIS`, `LITTERAE ET ALLOCUTIONES APOSTOLICAE`, `ACTA ROMANI PONTIFICIS`) to the
-first dicastery heading (`EX S. CONGR. …`, `EX SECRETARIA BREVIUM`, `EX ACTIS
-CONSISTORIALIBUS`, `EX AEDIBUS …`).
+R. PONTIFICIS`, `LITTERAE ET ALLOCUTIONES APOSTOLICAE`, `ACTA ROMANI PONTIFICIS`), pausing
+at the first dicastery heading (`EX S. CONGR. …`, `EX SECRETARIA BREVIUM`, `EX ACTIS
+CONSISTORIALIBUS`, `EX AEDIBUS …`) and reopening at a later papal heading, if one follows —
+ASS 8 (1874) 727-728 prints this shape, a second `LITTERAE APOSTOLICAE.` heading nine
+further papal rows after its first part closes (§10).
 
 It is parsed **loosely**: a row is any run of lines ending in a page number (after `pag.`,
 `»`, `>`, `*`, or dot leaders; `ig3` → 193, `3oo` → 300, `6 19` → 619, `5 80` → 580

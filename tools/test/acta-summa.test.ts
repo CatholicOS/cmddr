@@ -144,7 +144,7 @@ describe('parseSummaPapalPart (spec §4): the papal part, loosely', () => {
     }
   });
 
-  it('ends the papal part at a dicastery heading printed without the `EX` prefix (ASS 21 (1888) 744: `S. CONGR. INDICIS`)', () => {
+  it('ends the papal part at a dicastery heading printed without the `EX` prefix (ASS 21 (1888) 750: `S. CONGR. INDICIS`)', () => {
     const { rows, end } = parseSummaPapalPart([
       'LITTERAE ET ACTA ROM. PONTIFICIS',
       'Litterae SSmi D. N. Leonis XIII ad Episcopos Hiberniae . . 3',

@@ -146,11 +146,12 @@ here, and the many that are addressees, running titles or body capitals are expe
 
 ## 4b. The summa headings the parser does not know
 
-`parseSummaPapalPart` knows the three forms the sample printed (`LITTERAE ET ALLOCUTIONES`, `LITTERAE ET ACTA
-R. PONTIFICIS`, `ACTA ROMANI PONTIFICIS`). Where it finds none, the summa is read as having no papal part at all and
-the volume claims nothing — which is why a volume can scan acts and still show 0 rows. These are the volumes' own
-opening lines, quoted from the page: the spellings an era would teach the parser, and the reason the yield of §2 is a
-floor and not a measurement for them.
+`parseSummaPapalPart` knows the eleven papal-heading forms quoted in its own doc comment — the sample's three
+(`LITTERAE ET ALLOCUTIONES`, `LITTERAE ET ACTA R. PONTIFICIS`, `ACTA ROMANI PONTIFICIS`) and the eight the
+whole-series survey found. Where it finds none, the summa is read as having no papal part at all and the volume
+claims nothing — which is why a volume can scan acts and still show 0 rows. These are the volumes' own opening
+lines, quoted from the page: the spellings an era would teach the parser, and the reason the yield of §2 is a floor
+and not a measurement for them.
 
 | Vol | The summa's first lines, as printed |
 |---|---|
@@ -159,9 +160,10 @@ floor and not a measurement for them.
 | 20 | `SUMMA ACTORUM` / `QUAE IN HOC VOLUMINE XX. CONTINENTUR` / `Litterae SSmi D. N. Leonis PP. XIII Litterae Sanctissimi D. N. Papae` / `ad Emum Card. Marianum Ram­ Leonis XIII, quibus constituitur` / `polla, Status Secretarium.. p. 4 ultima Dominica Septembris hu­` / `Litterae SSmi D. N. Leonis XIII ad ius anni, ceu dies magnae ex­` |
 | 26 | `SUMMA ACTORUM 755` / `Francisci Clet, sacerdotis e Con­` / `EX S. CONGR. RITUUM gregatione missionis s. Vincentii` / `a Paulo » 128` / `Squillacen. Decretum confirmatio­ Murana seu Compsana, decretum` / `nis cultus, ab immemorabili tem­ canonizationis beati Gerardi Ma­` |
 
-Volumes whose papal part was found but **runs on** into the dicasteries (§1) are the same defect from the other side:
-the part's end is a heading the parser does not know, so dicastery rows are counted as the pope's and show as
-unclaimed.
+The part now pauses at the first dicastery heading `DICASTERY_RE` knows, rather than stopping outright, and
+reopens at a later papal heading if one follows (ASS 8 (1874) 727-728 prints that shape). `**runs on**` in §1 marks
+only a papal part whose end is still a dicastery heading the parser does not know — the same defect from the other
+side, a volume's dicastery rows counted as the pope's and shown as unclaimed; none remain as of this survey.
 
 ## 5. `header-mismatch`: OCR noise, or a page offset?
 
