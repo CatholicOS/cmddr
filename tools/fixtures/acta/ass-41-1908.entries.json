@@ -19,12 +19,12 @@
       "toponym": null,
       "description": "Qua Pontifex grati animi sensus profitetur erga imperatorem Sinarum.",
       "raw": "EPISTOLA / Qua Pontifex grati animi sensus profitetur erga imperatorem / Sinarum.",
-      "opening": "Quibus Nos litteris septuagesimum aetatis annum faustum et",
+      "opening": "Augustissime et potentissime Imperator, salutem et prosperitatem.",
       "anchor": "dateline",
       "evidence": {
         "heading": "EPISTOLA / Qua Pontifex grati animi sensus profitetur erga imperatorem / Sinarum.",
         "salutation": "PIUS PP. x",
-        "opening": "Quibus Nos litteris septuagesimum aetatis annum faustum",
+        "opening": "Augustissime et potentissime Imperator,",
         "dateline": "Datum Romae apud S. Petrum, die VIII Iunii MDCCCCV, Pontificatus Nostri anno secundo.",
         "header": "12                                                      Epistola"
       }

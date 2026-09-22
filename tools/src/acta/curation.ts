@@ -1537,6 +1537,15 @@ export const ASS_READINGS: Readonly<Record<string, AssReading>> = {
     description: 'Pii X ob saecularia solemnia archidioecesis Neo-Eboracensis.',
     evidence: "ASS 41 (1908) 495-496, ass-41-1908.txt. p. 495 ll. 1-2 'Epistola … 5' / '49' (the running header, its number split over two lines by the OCR), l. 30 'EPISTOLA', l. 31 'Pii X ob saecularia solemnia archidioecesis Neo-Eboracensis.', ll. 32-34 'VENERABILI FRATRI / IOANNI M. FARLEY ARCHIEPISCOPO NEO—EBORACENSIUM / NEO—EBORACUM', l. 35 'PIUS PP. x', l. 36 'Venerabilis Frater, salutem et Apostolicam benedictionem.', l. 38 'Si vota semper, faustiore quavis ecclesiarum redeunte me- / moria , placet concipere'. Dated p. 496 ll. 18-19 'Datum Romae apud S. Petrum, die ix Aprilis MCMVIII, / Pontificatus Nostri anno quinto.'. Why the scan refused it: the header's first line prints `5` and headerAgrees (recover.ts) reads the first line only; the PDF page is the printed page. Answers the scan's header-mismatch defect at p. 495 and the summa's row p. 495.",
   },
+  // Phase 2c-i, after the final review: the greeting broken before its `salutem` was a
+  // scanner branch that fired once in the sample; the branch is gone and the act is read
+  // by hand instead (spec §6: a shape that occurs once is a curated row, not a rule).
+  'ASS:41:12': {
+    pope: 'Pius X', category: 'EPISTOLA', date: '1905-06-08',
+    opening: 'Quibus Nos litteris septuagesimum aetatis annum faustum et',
+    description: 'Qua Pontifex grati animi sensus profitetur erga imperatorem Sinarum.',
+    evidence: "ASS 41 (1908) 12-13, ass-41-1908.txt. p. 12 l. 27 'EPISTOLA', ll. 28-29 'Qua Pontifex grati animi sensus profitetur erga imperatorem / Sinarum.', l. 31 'AUGUSTISSIMO POTENTISSIMOQUE IMPERATORI SINARUM', l. 32 'PEKINUM', l. 33 'PIUS PP. x', ll. 34-35 'Augustissime et potentissime Imperator, / salutem et prosperitatem.', ll. 37-38 'Quibus Nos litteris septuagesimum aetatis annum faustum / et felicem Maiestati Suae Imperatrici Sinarum ominabamur,'. Dated p. 13 ll. 15-16 'Datum Romae apud S. Petrum, die VIII Iunii MDCCCCV, / Pontificatus Nostri anno secundo.'. Why the scan misread it: the greeting is broken before its `salutem`, and its first line ('Augustissime et potentissime Imperator,') carries none of the vocabulary the greeting rule knows, so the preamble skip stops there and the opening is read from the greeting itself. One act of the sample prints the shape (p. 18 l. 13 sets the same greeting on one line, which the rule reads whole), so it is read here rather than given a rule. Answers the scanned entry at p. 12, whose opening it replaces.",
+  },
   'ASS:41:555': {
     pope: 'Pius X', category: 'EXHORTATIO', date: '1908-08-04',
     opening: 'Haerent animo penitus, suntque plena formidinis, quae gentium',

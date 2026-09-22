@@ -349,7 +349,7 @@ describe('the first curation round: the heading shapes the five volumes print', 
       'Praeclarum studium, quo incensi estis, ut ex',
     ]]);
   });
-  it('reads the opening past a greeting broken before its `salutem`, whose first line the greeting vocabulary does not carry (ASS 41 (1908) 12: `Augustissime et potentissime Imperator, / salutem et prosperitatem.`)', () => {
+  it('reads a greeting broken before its `salutem` as the opening, which is why ASS 41 (1908) 12 is a curated reading and not a rule (`Augustissime et potentissime Imperator, / salutem et prosperitatem.`; p. 18 l. 13 sets the same greeting on one line, which GREETING_RE reads whole)', () => {
     const lines = [
       '12                                                      Epistola',
       '',
@@ -370,8 +370,10 @@ describe('the first curation round: the heading shapes the five volumes print', 
     ];
     const { entries, defects } = scanVolume(atPage(12, lines), { volume: 41, year: 1908, yearTo: 1908, lastBodyPage: 12 });
     expect(defects).toEqual([]);
+    // The scanner stops at the greeting's first line, so the opening it records is the
+    // greeting; ASS_READINGS `ASS:41:12` supplies the act's own first words (spec §6).
     expect(entries.map((e) => [e.category, e.date, e.opening])).toEqual([[
-      'EPISTOLA', '1905-06-08', 'Quibus Nos litteris septuagesimum aetatis annum faustum et',
+      'EPISTOLA', '1905-06-08', 'Augustissime et potentissime Imperator, salutem et prosperitatem.',
     ]]);
   });
   it('never opens an act on a running head with a trailing page number, whatever the body names (ASS 33 (1900) 201: `LITTERAE 201` over `Benedictus XIII Pontifex Maximus`; ASS 1 (1865) 195: `ALLOCUTIO SS. D. N. PII PAPAE IX. 195`)', () => {

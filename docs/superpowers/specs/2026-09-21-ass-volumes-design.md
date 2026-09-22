@@ -289,8 +289,8 @@ Phase 2c-i ran on the five sample volumes; the numbers are the totals of the era
 which `tools/ass-volumes-report.ts` computes.
 
 **The scan against the summa (§2).** 3 785 pages read; **63 acts scanned by rule** (ASS 1
-0, ASS 12 10, ASS 23 8, ASS 33 18, ASS 41 27) and **23 read by hand** (`ASS_READINGS`, each
-row quoting the volume's lines), **85 entries** over the five volumes, 62 of them as the
+0, ASS 12 10, ASS 23 8, ASS 33 18, ASS 41 27) and **24 read by hand** (`ASS_READINGS`, each
+row quoting the volume's lines), **85 entries** over the five volumes, 61 of them as the
 scanner read them, 7 anchored on a heading rather than a dateline. **37 defects** remain —
 21 `no-heading`, 10 `no-date`, 6 `header-mismatch`, 0 `no-opening`, 0 `unknown-pope` — 15 of
 them the brevia of the `EX SECRETARIA BREVIUM` part, left as defects rather than curated

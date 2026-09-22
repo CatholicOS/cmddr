@@ -548,7 +548,7 @@ finding when a volume's scan and summa are both empty; 3 readings. ASS 12: `LITT
 is interleaved word by word by the OCR and yields three garbage rows, and loses *Rerum
 novarum*'s own row); 5 readings. ASS 33: `LITTERAE ET ACTA` (`R. PONTIFICIS` on the next line)
 … `EX S. C. CONCILII`; 6 readings. ASS 41: `ACTA ROMANI PONTIFICIS` … `EX SECRETARIA BREVIUM`;
-8 readings. The defects are mostly the brevia of the Secretaria Brevium part (`sub annulo
+9 readings. The defects are mostly the brevia of the Secretaria Brevium part (`sub annulo
 Piscatoris … R. Card. MERRY DEL VAL, a Secretis Status`), which carry no class heading and
 which the summa lists under the dicastery. In every volume the PDF page is the printed page:
 each `header-mismatch` is the OCR's reading of the number (`585` for 385, `U9` for 449, `-318`,

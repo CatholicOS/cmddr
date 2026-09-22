@@ -3915,8 +3915,8 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
       }];
     }));
     // `acts` is the scan alone, before the loader applies ASS_READINGS: the era report's §2
-    // prints it beside the entries the join then sees (85 = 62 scanned + 23 read, one reading
-    // replacing the scanned entry at ASS 41 p. 361).
+    // prints it beside the entries the join then sees (85 = 61 scanned + 24 read, two readings
+    // replacing a scanned entry, at ASS 41 pp. 361 and 12).
     // ASS 1 (1865-66): the scan reads nothing -- the volume spells its headings `LITERAE
     // APOSTOLICAE` and `ALLOCVTIO`, neither of the class list -- and its summa has no papal
     // part at all (0 rows), so the check is vacuous and the three acts are curated readings.
@@ -3942,23 +3942,25 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
       'ass-33': { acts: 18, defects: 10, rows: 24, claimed: 14, unclaimed: 8, omitted: 2 },
       'ass-41': { acts: 27, defects: 18, rows: 37, claimed: 27, unclaimed: 10, omitted: 0 },
     });
-    // The 23 readings, each with its cause quoted in the report's §2.5 (`ASS_READINGS`'s own
+    // The 24 readings, each with its cause quoted in the report's §2.5 (`ASS_READINGS`'s own
     // evidence): 8 a Roman date the scanner does not read (the Kalends and the Ides -- ASS:23:206,
     // :427, :513, ASS:33:341, :349, ASS:41:3, :425, :619); 6 a running header the OCR misread, which
     // `headerAgrees` refuses (ASS:23:318 `-318`, ASS:33:355 `555`, :385 `585`, :449 `U9`,
-    // ASS:41:298 `2`/`98`, :495 `5`/`49`); and 9 single acts -- ASS 1's three (`LITERAE
+    // ASS:41:298 `2`/`98`, :495 `5`/`49`); and 10 single acts -- ASS 1's three (`LITERAE
     // APOSTOLICAE` and `ALLOCVTIO`, no heading of the list, and no summa papal part to claim
     // them: ASS:1:193, :578, :744), the Italian-and-Latin letter with neither dating formula nor
     // signature (ASS:12:3), `MOTU-PRQPRIO` (ASS:23:522), `rtomae` for `Romae` (ASS:41:195), the
     // French cardinals' list read as the opening (ASS:41:361), the by-line after a blank line
-    // (ASS:41:555) and `MDCCCCL` for `MDCCCCI` (ASS:33:643).
-    expect(Object.keys(ASS_READINGS)).toHaveLength(23);
+    // (ASS:41:555), `MDCCCCL` for `MDCCCCI` (ASS:33:643) and the greeting broken before its
+    // `salutem`, read as the opening (ASS:41:12 -- a scanner branch until the final review,
+    // then a reading, since one act of the sample prints the shape).
+    expect(Object.keys(ASS_READINGS)).toHaveLength(24);
     const byVolume = new Map<string, number>();
     for (const k of Object.keys(ASS_READINGS)) {
       const v = `ass-${k.split(':')[1]}`;
       byVolume.set(v, (byVolume.get(v) ?? 0) + 1);
     }
-    expect(Object.fromEntries([...byVolume].sort())).toEqual({ 'ass-1': 3, 'ass-12': 1, 'ass-23': 5, 'ass-33': 6, 'ass-41': 8 });
+    expect(Object.fromEntries([...byVolume].sort())).toEqual({ 'ass-1': 3, 'ass-12': 1, 'ass-23': 5, 'ass-33': 6, 'ass-41': 9 });
   });
 
   it('satisfies invariant 25 across both series', () => {

@@ -195,7 +195,12 @@ const PONTIFICATUS_RE = /Pontificatus\s+[NnÑ]ostri|(?:del|Del)\s+Nostro\s+Ponti
 export const CLASS_HEADINGS: readonly string[] = [
   'EPISTOLA ENCYCLICA', 'LITTERAE ENCYCLICAE', 'LITTERAE APOSTOLICAE',
   'CONSTITUTIO APOSTOLICA', 'MOTU PROPRIO', 'ALLOCUTIO', 'EXHORTATIO',
-  // The sample prints the chirograph's heading as `CHIROGRAPHUM` (ASS 33 (1900) 714), not the spec's `CHIROGRAPHUS`; both listed.
+  // The sample heads the chirograph `CHIROGRAPHUM` (ASS 33 (1900) 714, and the summa's row
+  // `Chirographum SS. D. N. Leonis XIII`); no ASS volume of the sample prints the singular
+  // `CHIROGRAPHUS`, which the AAS volumes of 1933-1955 do (categories.ts's Chirographa row;
+  // the fixtures aas-25-1933, aas-34-1942 and aas-35-1943 print it). Both forms are listed:
+  // the -US form is the sister series' own spelling, not a guess, and 2c-ii will say whether
+  // any ASS volume prints it.
   'CHIROGRAPHUM', 'CHIROGRAPHUS', 'BREVE',
   // The Italian acts' headings: `LETTERA Enciclica del Papa Leone XIII ai Vescovi, al Clero e al Popolo d'Italia` (ASS 23 (1890) 193), `LETTERA / DI / SUA SANTITÀ PAPA LEONE XIII` (ASS 12 (1879) 3).
   'LETTERA ENCICLICA', 'LETTERA',
@@ -297,13 +302,13 @@ const pastPreamble = (lines: readonly string[], from: number, limit: number): nu
       continue;
     }
     if (l.trim() === '' || GREETING_RE.test(l) || isCaps(l)) { k++; continue; }
-    // A greeting broken before its `salutem`, whose first line the vocabulary of
-    // GREETING_RE does not carry: `Augustissime et potentissime Imperator, / salutem et
-    // prosperitatem.` (ASS 41 (1908) 12, where p. 18 sets the same greeting on one line
-    // and GREETING_RE reads it whole). Both lines are preamble only when the continuation
-    // is a greeting line of its own and the two read together are one greeting, so a line
-    // of the act's own text is never swallowed by the line that follows it.
-    if (k + 1 < limit && GREETING_RE.test(lines[k + 1]!) && GREETING_RE.test(joinBreaks([l, lines[k + 1]!]))) { k += 2; continue; }
+    // A greeting broken before its `salutem` is not skipped: its first line carries none
+    // of GREETING_RE's vocabulary, so the act's opening is read from the greeting itself
+    // (`Augustissime et potentissime Imperator, / salutem et prosperitatem.`, ASS 41
+    // (1908) 12 ll. 34-35, where p. 18 l. 13 sets the same greeting on one line and
+    // GREETING_RE reads it whole). One act of the sample prints the shape, so it is a
+    // curated reading (ASS_READINGS `ASS:41:12`, spec §6) and not a rule here; 2c-ii
+    // counts how often the break recurs before one is written.
     break;
   }
   return k;
