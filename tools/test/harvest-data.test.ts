@@ -13,7 +13,7 @@ import { easterSunday } from '../src/dates.js';
 import { slugify } from '../src/slug.js';
 import { isActaShelf, createFromActa, CREATED_CATEGORIES, PONTIFICATE_BEGAN } from '../src/acta/create.js';
 import { matchActa } from '../src/acta/match.js';
-import { ACTA_INDEX_CORRECTIONS, ACTA_HOLDS, ACTA_MATCH_OVERRIDES } from '../src/acta/curation.js';
+import { ACTA_INDEX_CORRECTIONS, ACTA_HOLDS, ACTA_MATCH_OVERRIDES, ASS_READINGS } from '../src/acta/curation.js';
 import { loadActaIndexes, ACTA_SOURCES } from '../src/acta/join.js';
 import { ACTA_POPES } from '../src/acta/popes.js';
 import { bareProvisionalId } from '../src/harvest/ordinals.js';
@@ -3895,6 +3895,64 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // settled by ACTA_REPRINTS in the full harvest).
     expect(creation.held.filter((h) => h.entry.series === 'ASS' && h.reason === 'series-not-created')).toHaveLength(18);
     expect(creation.held).toHaveLength(18);
+  });
+
+  it('pins the scan and the summa check per volume as the era report §2 says', () => {
+    const perVolume = Object.fromEntries(sources.map((s) => {
+      const sc = JSON.parse(readFileSync(s.file, 'utf8')) as {
+        entries: unknown[]; defects: unknown[];
+        summa: { rows: unknown[]; claimed: unknown[]; unclaimed: unknown[]; omitted: unknown[] };
+      };
+      return [s.key, {
+        acts: sc.entries.length, defects: sc.defects.length, rows: sc.summa.rows.length,
+        claimed: sc.summa.claimed.length, unclaimed: sc.summa.unclaimed.length, omitted: sc.summa.omitted.length,
+      }];
+    }));
+    // `acts` is the scan alone, before the loader applies ASS_READINGS: the era report's §2
+    // prints it beside the entries the join then sees (85 = 62 scanned + 23 read, one reading
+    // replacing the scanned entry at ASS 41 p. 361).
+    // ASS 1 (1865-66): the scan reads nothing -- the volume spells its headings `LITERAE
+    // APOSTOLICAE` and `ALLOCVTIO`, neither of the class list -- and its summa has no papal
+    // part at all (0 rows), so the check is vacuous and the three acts are curated readings.
+    // ASS 12 (1879): 10 acts and 1 defect (a Secretaria Brevium brief at p. 637); the summa's
+    // 12 rows claim 9 pages and leave 3, of which one is answered by the reading ASS:12:3 and
+    // two are no papal act (an address *to* the pope, Gregory XVI's encyclical of 1844
+    // reprinted); the one act the summa omits is the brief at p. 588, listed under its dicastery.
+    // ASS 23 (1890-91): 8 acts, 5 defects, and the weakest summa of the sample -- 7 of 14 rows
+    // unclaimed, because p. 753's two columns are interleaved word by word by the OCR, so three
+    // papal rows are lost and three dicastery pages come out as papal rows; the act it "omits"
+    // is *Rerum novarum* (p. 641), which that same page lists.
+    // ASS 33 (1900-01): 18 acts, 10 defects (3 of them Secretaria Brevium brevia); 14 of 24 rows
+    // claimed, 6 of the 8 unclaimed answered by readings, p. 193 the sample's one genuine miss
+    // (the OCR lifted the month out of its dateline); the 2 omitted are a brief and an allocution.
+    // ASS 41 (1908): the best-read volume -- 27 acts, 27 of 37 rows claimed, nothing omitted --
+    // and the most defects (18), 11 of them the brevia of its `EX SECRETARIA BREVIUM` part; of
+    // the 10 unclaimed rows, 6 are answered by readings and 4 are the annexes of *Sapienti
+    // consilio* and the summa's own page for it (427, two after its heading at 425).
+    expect(perVolume).toEqual({
+      'ass-1': { acts: 0, defects: 3, rows: 0, claimed: 0, unclaimed: 0, omitted: 0 },
+      'ass-12': { acts: 10, defects: 1, rows: 12, claimed: 9, unclaimed: 3, omitted: 1 },
+      'ass-23': { acts: 8, defects: 5, rows: 14, claimed: 7, unclaimed: 7, omitted: 1 },
+      'ass-33': { acts: 18, defects: 10, rows: 24, claimed: 14, unclaimed: 8, omitted: 2 },
+      'ass-41': { acts: 27, defects: 18, rows: 37, claimed: 27, unclaimed: 10, omitted: 0 },
+    });
+    // The 23 readings, each with its cause quoted in the report's §2.5 (`ASS_READINGS`'s own
+    // evidence): 8 a Roman date the scanner does not read (the Kalends and the Ides -- ASS:23:206,
+    // :427, :513, ASS:33:341, :349, ASS:41:3, :425, :619); 6 a running header the OCR misread, which
+    // `headerAgrees` refuses (ASS:23:318 `-318`, ASS:33:355 `555`, :385 `585`, :449 `U9`,
+    // ASS:41:298 `2`/`98`, :495 `5`/`49`); and 9 single acts -- ASS 1's three (`LITERAE
+    // APOSTOLICAE` and `ALLOCVTIO`, no heading of the list, and no summa papal part to claim
+    // them: ASS:1:193, :578, :744), the Italian-and-Latin letter with neither dating formula nor
+    // signature (ASS:12:3), `MOTU-PRQPRIO` (ASS:23:522), `rtomae` for `Romae` (ASS:41:195), the
+    // French cardinals' list read as the opening (ASS:41:361), the by-line after a blank line
+    // (ASS:41:555) and `MDCCCCL` for `MDCCCCI` (ASS:33:643).
+    expect(Object.keys(ASS_READINGS)).toHaveLength(23);
+    const byVolume = new Map<string, number>();
+    for (const k of Object.keys(ASS_READINGS)) {
+      const v = `ass-${k.split(':')[1]}`;
+      byVolume.set(v, (byVolume.get(v) ?? 0) + 1);
+    }
+    expect(Object.fromEntries([...byVolume].sort())).toEqual({ 'ass-1': 3, 'ass-12': 1, 'ass-23': 5, 'ass-33': 6, 'ass-41': 8 });
   });
 
   it('satisfies invariant 25 across both series', () => {

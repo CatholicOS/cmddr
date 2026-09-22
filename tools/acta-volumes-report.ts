@@ -1563,7 +1563,9 @@ p();
   if (result.sharedPages.length === 0) {
     p('None: every page two matched documents of the era cite is curated in `ACTA_SHARED_PAGES` with the volume page quoted, and');
     // The key's volume may carry a part (`AAS:75-I:877`): the year is the volume's, part dropped.
-    const n = Object.keys(ACTA_SHARED_PAGES).filter((k) => { const y = Number(k.split(':')[1]!.replace(/-I+$/, '')) + 1908; return sampleKeys.some((sk) => Number(sk.slice(0, 4)) === y); }).length;
+    // An `ASS:` key names an ASS volume, whose number is no AAS year: those rows are the ASS
+    // report's (tools/ass-volumes-report.ts), and counting them here would put ASS 33 in 1941.
+    const n = Object.keys(ACTA_SHARED_PAGES).filter((k) => k.startsWith('AAS:')).filter((k) => { const y = Number(k.split(':')[1]!.replace(/-I+$/, '')) + 1908; return sampleKeys.some((sk) => Number(sk.slice(0, 4)) === y); }).length;
     p(`invariant 25 admits exactly those pairs (${n} page${n === 1 ? '' : 's'} of the era).`);
   } else {
     p('One page opens one act (invariant 25): where two matched documents would cite a page `ACTA_SHARED_PAGES` does not list, the');
@@ -1582,7 +1584,10 @@ p();
   p('### Acts the Acta print twice');
   p();
   // The table is phase 2b-ii-c's (spec §9): its report lists every row; the others list the rows that touch their sources.
-  const rows = Object.entries(ACTA_REPRINTS).filter(([k, row]) => eraKey === '1979-2014' || [k, row.citationOf].some((ref) => { const y = Number(ref.split(':')[1]) + 1908; return sampleKeys.some((sk) => Number(sk.slice(0, 4)) === y); }));
+  // A row is the era's when either printing falls in one of its years. Only an `AAS:` reference
+  // carries a year in its volume number: an `ASS:` citation of record (ASS 41 (1908), phase 2c-i)
+  // would otherwise be read as AAS 41 (1949) and put the row in the wrong era's table.
+  const rows = Object.entries(ACTA_REPRINTS).filter(([k, row]) => eraKey === '1979-2014' || [k, row.citationOf].filter((ref) => ref.startsWith('AAS:')).some((ref) => { const y = Number(ref.split(':')[1]) + 1908; return sampleKeys.some((sk) => Number(sk.slice(0, 4)) === y); }));
   if (rows.length === 0) p('None among the era\'s sources.');
   else {
     p('The citation of record is the first printing unless the volume marks the later as a correction (`ACTA_REPRINTS`, curation.ts, where');
