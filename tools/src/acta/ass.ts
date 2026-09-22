@@ -26,8 +26,8 @@ import type { SummaCheck } from './summa.js';
 import { assDate } from './ass-dates.js';
 import {
   HEADING_RE, SALUTATION_RE, ADDRESSEE_RE, GREETING_RE, INLINE_GREETING_RE, ABOVE_FORMULA_RE,
-  SIGNED_DATELINE_RE, SIGNATURE_RE,
-  isCaps, isOpening, popeOf, unaccent, joinBreaks, quotedLines, headingOf, capsAbove, blanksAfter,
+  SIGNED_DATELINE_RE, SIGNATURE_RE, RING_RE,
+  isCaps, isOpening, isBreveOpening, breveTitle, popeOf, unaccent, joinBreaks, quotedLines, headingOf, capsAbove, blanksAfter,
 } from './ass-headings.js';
 
 export interface AssEvidence {
@@ -83,9 +83,22 @@ export interface Anchor {
 // --- anchors -------------------------------------------------------------------------------
 
 /** The pope's own dateline: the anchor, then `Pontificatus Nostri` within the next three lines (a dicastery's `Datum Romae ex Secretaria …` has none). */
-const DATUM_RE = /Dat(?:um|\.)\s+[REB]om[ae]{1,2}|\bDat[oa]\s+(?:a|in)\s+Roma|\bDal\s+Vaticano|\bDal\s+Palazzo/;
+export const DATUM_RE = /Dat(?:um|\.)\s+[REB]om[ae]{1,2}|\bDat[oa]\s+(?:a|in)\s+Roma|\bDal\s+Vaticano|\bDal\s+Palazzo/;
+/**
+ * `Datum` at a line's end, its `Romae` on the next: the one break the anchor reads across,
+ * and only in a dateline that carries the ring of the Fisherman (RING_RE) and
+ * `Pontificatus Nostri` after it — `… ostensae. Datum / Romae apud S. Petrum, sub annulo
+ * Piscatoris, die x septem­ / bris MDCCCLXXVIII, Pontificatus Nostri anno primo.` (ASS 11
+ * (1878) 595; ASS 6 (1870) 327; ASS 22 (1889) 203; ASS 27 (1894) 79; ASS 32 (1899) 755;
+ * ASS 35 (1902) 570). DATUM_RE and PONTIFICATUS_RE are unchanged by it: a dicastery's
+ * `Datum Romae ex Secretaria …` carries neither the ring nor the pontificate's year, so it
+ * anchors no more here than it does on one line. The `Datum` at the line end is required so
+ * that the same dateline is never anchored twice — once on the line before it and once on
+ * its own line, where the first rule already reads it.
+ */
+const DATUM_BROKEN_RE = /\bDat(?:um|\.)\s*$/;
 /** `Pontificatus Nostri`, the ASS's `Pontificatus nostri` (ASS 23 (1890) 222; ASS 41 (1908) 297; ASS 1 (1865)). */
-const PONTIFICATUS_RE = /Pontificatus\s+[NnÑ]ostri|(?:del|Del)\s+Nostro\s+Pontificato/;
+export const PONTIFICATUS_RE = /Pontificatus\s+[NnÑ]ostri|(?:del|Del)\s+Nostro\s+Pontificato/;
 
 /** The addressee set in capitals right after the by-line, with no blank line between (`Qua Pontifex dilaudat … / ricam pro catholico prelo favendo. / VENERABILI FRATRI / OTTOCARO EPISCOPO …`, ASS 41 (1908) 198; `A NOS TRÈS CHERS FILS`, ASS 41 361): where the heading block ends. */
 const ADDRESSEE_CAPS_RE = /^\s*(?:VENERABILI(?:BUS)?\s+FRAT|DILECT(?:O|IS)\s+FILI|AL\s+SIGNOR|A\s+NOS\s|AUGUSTISSIMO|SERENISSIMO)/;
@@ -138,7 +151,11 @@ export const salutationAfter = (lines: readonly string[], from: number, limit: n
 /**
  * Every anchor of the body, in page order: the pope's datelines (`dateline`) and the
  * allocution headings (`heading`, since an allocution closes without a dateline). A
- * heading line is an anchor only when it opens an act (isOpening).
+ * heading line is an anchor only when it opens an act (isOpening). Three datelines are
+ * read: the pope's own (DATUM_RE with PONTIFICATUS_RE behind it), his private letters'
+ * signed one (SIGNED_DATELINE_RE with SIGNATURE_RE under it), and, since phase 2c-ii-a,
+ * the brevia's, which is the first with its `Datum` broken to the line end (DATUM_BROKEN_RE)
+ * and the ring of the Fisherman in it.
  */
 export function findAnchors(pages: readonly string[]): Anchor[] {
   const anchors: Anchor[] = [];
@@ -148,6 +165,8 @@ export function findAnchors(pages: readonly string[]): Anchor[] {
       // The window's line breaks are joined first: the ASS breaks `Pon­ / tificatus` at the
       // line end (ASS 33 (1900) 3, 449; ASS 12 (1879) 481; ASS 23; ASS 41).
       if ((DATUM_RE.test(line) && PONTIFICATUS_RE.test(joinBreaks(lines.slice(i, i + 4))))
+        || (DATUM_BROKEN_RE.test(line) && RING_RE.test(joinBreaks(lines.slice(i, i + 2)))
+          && DATUM_RE.test(joinBreaks(lines.slice(i, i + 2))) && PONTIFICATUS_RE.test(joinBreaks(lines.slice(i, i + 5))))
         || (SIGNED_DATELINE_RE.test(line) && /\d{4}/.test(joinBreaks(lines.slice(i, i + 2))) && lines.slice(i + 1, i + 5).some((l) => SIGNATURE_RE.test(l)))) {
         anchors.push({ page: p + 1, line: i, kind: 'dateline', text: quotedLines(lines, i).map((l) => l.trim()).join(' ').replace(/­/g, '') });
         return;
@@ -166,6 +185,22 @@ export function findAnchors(pages: readonly string[]): Anchor[] {
 interface Located { page: number; line: number }
 
 /**
+ * The nearest line at or before `anchor` that `opens` accepts, walking back line by line
+ * and page by page, no earlier than `floor` (the previous anchor): readAct's step 1, run
+ * once over the class headings and once, for a breve, over the pope's own name.
+ */
+function walkBack(pages: readonly string[], anchor: Anchor, floor: Located | null, opens: (lines: readonly string[], i: number) => boolean): Located | null {
+  for (let p = anchor.page; p >= 1; p--) {
+    const lines = pages[p - 1]!.split('\n');
+    const start = p === anchor.page ? anchor.line - 1 : lines.length - 1;
+    const stop = floor !== null && floor.page === p ? floor.line + 1 : 0;
+    for (let i = start; i >= stop; i--) if (opens(lines, i)) return { page: p, line: i };
+    if (floor !== null && floor.page === p) break;
+  }
+  return null;
+}
+
+/**
  * Read one act: from `anchor` back to its heading, no earlier than `floor` (the previous
  * anchor), then forward from the heading to the salutation and the opening. Returns the
  * entry, or the defect that stopped the reading.
@@ -176,14 +211,16 @@ function readAct(pages: readonly string[], anchor: Anchor, floor: Located | null
   let heading: Located | null = null;
   if (anchor.kind === 'heading') heading = { page: anchor.page, line: anchor.line };
   else {
-    outer: for (let p = anchor.page; p >= 1; p--) {
-      const lines = at(p);
-      const start = p === anchor.page ? anchor.line - 1 : lines.length - 1;
-      const stop = floor !== null && floor.page === p ? floor.line + 1 : 0;
-      for (let i = start; i >= stop; i--) {
-        if (isOpening(lines, i)) { heading = { page: p, line: i }; break outer; }
-      }
-      if (floor !== null && floor.page === p) break;
+    heading = walkBack(pages, anchor, floor, isOpening);
+    // The brevia of the *Secretaria Brevium* (spec §10, phase 2c-ii-a): an act that closes
+    // under the ring of the Fisherman and has no class heading behind it is read from the
+    // pope's own name (isBreveOpening), the descriptive title above it standing where the
+    // class word stands elsewhere. The second walk runs only where the first found nothing
+    // and only under the ring, so no act a class heading already opens is read differently
+    // and nothing but a breve is added.
+    if (heading === null && RING_RE.test(anchor.text)) {
+      const salutation = walkBack(pages, anchor, floor, isBreveOpening);
+      if (salutation !== null) heading = { page: salutation.page, line: breveTitle(at(salutation.page), salutation.line)! };
     }
   }
   const anchorLines = quotedLines(at(anchor.page), anchor.line).map((l) => l.trim());
@@ -200,8 +237,12 @@ function readAct(pages: readonly string[], anchor: Anchor, floor: Located | null
   let i = heading.line + 1 + blanksAfter(hl, heading.line);
   for (; i < hl.length && hl[i]!.trim() !== '' && !SALUTATION_RE.test(hl[i]!) && !ADDRESSEE_CAPS_RE.test(hl[i]!); i++) block.push(hl[i]!.trim());
   const headingText = above.concat(block).join(' / ');
-  const h = headingOf(hl[heading.line]!)!;
-  const category = normaliseHeading(h[2] ? `${h[1]} in forma Brevis` : h[1]!);
+  // The class, from the heading's own class word -- or `BREVE`, the class of the one act
+  // the walk-back opens on a line that carries none: a breve of the *Secretaria Brevium*,
+  // whose title is a description and whose class the ring it closes under declares
+  // (categories.ts's `Brevia` row, shelf class `brief`).
+  const h = headingOf(hl[heading.line]!);
+  const category = h === null ? 'BREVE' : normaliseHeading(h[2] ? `${h[1]} in forma Brevis` : h[1]!);
   // 3. The salutation, past the preamble after the block (salutationAfter); then the
   // preamble lines after it; then the opening line. The opening stops at the anchor line
   // on the same page.

@@ -437,6 +437,138 @@ describe('the first curation round: the heading shapes the five volumes print', 
   });
 });
 
+describe('the brevia of the Secretaria Brevium (phase 2c-ii-a): the ring of the Fisherman, the descriptive title, the pope\'s own name', () => {
+  /**
+   * ASS 41 (1908) 300-301 as printed, the page number dropped from p. 301's running head
+   * and p. 300's first seven lines elided (the previous letter's body). Two acts stand
+   * here: a letter to the Argentine bishops whose dateline carries no ring, and, under the
+   * dicastery heading `EX SECRETARIA BREVIUM`, a breve of Pius X -- a descriptive title
+   * where a class word should stand, the pope's name alone, the brief's own address
+   * formula, and the ring dateline with the Secretary of Briefs' countersignature under it.
+   */
+  const BREVE_41 = [
+    [
+      ' divinorum munerum, ac testem peculiaris benevolentiae No­',
+      ' strae, tibi, Venerabilis Frater, tuis in Episcopatu Collegis,',
+      ' atque omni clero et populo Reipublicae Argentinae Aposto­',
+      'licam benedictionem peramanter impertimus.',
+      '         Datum Romae apud S. Petrum, die xxiv Aprilis MCMVIII,',
+      ' Pontificatus Nostri anno quinto.',
+      '',
+      '                                                         PIUS PP. X',
+      '',
+      '                               EX SECRETARIA BREVIUM',
+      '',
+      '',
+      'Indulgentia toties quoties pro visitantibus ecclesias congre­',
+      '          gationis SS. Sacramenti in festo Corporis Christi.',
+      '',
+      '                                                        PIUS PP. X',
+      '                                        AD FUTURAM REI MEMORIAM',
+      '',
+      '         Neminem latet festum SSmi Corporis Christi Domini in­',
+      'ter alias Ecclesiae sollemnitates omni modo eminere, ideo­',
+      'que Nobis nihil est antiquius quam ut dies quo Mysterium',
+      'illud recolitur etiam caelesti indulgentiarum thesauro per uni­',
+      'versum terrarum orbem eniteat. Hoc consilio votis hodierni',
+    ].join('\n'),
+    [
+      '                                                Ex Secretaria Brevium',
+      '',
+      'gregationis SSmi Sacramenti ubique terrarum existentem de­',
+      'vote visitent, ibique pro christianorum Principum concordia,',
+      'dimus. Contrariis non obstantibus quibuscumque. Praesentibus',
+      'perpetuo valituris.',
+      '        Datum Romae apud S. Petrum sub annulo Piscatoris, die',
+      'xxx Iulii MCMVi, Pontificatus Nostri anno tertio.',
+      '',
+      '                                                                        Pro Dno Card. MACCHI',
+      '                                                                                        N. Marini.',
+    ].join('\n'),
+  ];
+
+  it('reads a breve of Pius X from the ring of the Fisherman back to the descriptive title above the pope\'s own name (ASS 41 (1908) 300-301)', () => {
+    const { entries, defects } = scanVolume(BREVE_41, { volume: 41, year: 1908, yearTo: 1908, lastBodyPage: 2 });
+    expect(entries).toHaveLength(1);
+    const e = entries[0]!;
+    expect(e.category).toBe('BREVE');
+    expect(e.pope).toBe('Pius X');
+    expect(e.date).toBe('1906-07-30');
+    expect(e.page).toBe(1);
+    expect(e.anchor).toBe('dateline');
+    expect(e.opening).toBe('Neminem latet festum SSmi Corporis Christi Domini inter');
+    expect(e.evidence.heading).toBe('Indulgentia toties quoties pro visitantibus ecclesias congre­ / gationis SS. Sacramenti in festo Corporis Christi.');
+    expect(e.evidence.salutation).toBe('PIUS PP. X');
+    expect(e.evidence.dateline).toBe('Datum Romae apud S. Petrum sub annulo Piscatoris, die xxx Iulii MCMVi, Pontificatus Nostri anno tertio.');
+    // The letter above it closes `Datum Romae apud S. Petrum, die xxiv Aprilis MCMVIII` --
+    // no ring -- and no class heading stands behind it on the page quoted here: it stays a
+    // `no-heading` defect, so the ring is what admits the breve and nothing else does.
+    expect(defects).toEqual([{ page: 1, reason: 'no-heading', lines: ['Datum Romae apud S. Petrum, die xxiv Aprilis MCMVIII,', 'Pontificatus Nostri anno quinto.'] }]);
+  });
+
+  /**
+   * ASS 9 (1876) 279-280 as printed: a breve of Pius IX under a Congregation's heading, and
+   * under the breve the Congregation's own attestation of it, which its Substitute signs in
+   * his own name (`Ex Secretaria eiusdem S. C. die 6 Maii 1876.` / `Dominicus Sarra,
+   * Substitutus.`). The breve is the pope's -- his name stands alone over it and it closes
+   * under his ring -- and the attestation is not: it prints no dateline the scanner anchors
+   * on and no name of a pope, and yields neither an anchor nor an entry. The Cardinal
+   * Prefect's countersignature under the ring (`F. Card. ASQUINIUS.`) is an attestation too,
+   * and stands after the dateline, never where the pope's name stands.
+   */
+  const BREVE_9 = [
+    [
+      '          EX S. CONGREGATIONE INDULGENTIARUM',
+      '',
+      '',
+      'Sanctissimi D. N. Pii Papae IX Breve, quo variae largiuntur in­',
+      '',
+      '         1.',
+      '        dulgentiae recitantibus officium Immaculatae Conceptionis',
+      '',
+      '                                             PIUS PP. IX.',
+      '                                AD PERPETUAM REI MEMORIAM.',
+      '        Quae in animis Christifidelium erga Deiparam Imma­',
+      'culatam amori excitando idonea et apta videntur, ea li­',
+      'benter, cum a nobis postulantur, concedere solemus ; spes',
+    ].join('\n'),
+    [
+      '280                                  Ex S. C. Indulgentiarum',
+      '',
+      'atque ut praesentes Litterae Apostolicae Secretariae In­',
+      'dulgentiis et Sacris Reliquiis praepositae exhibeantur.',
+      'Datum Romae apud S. Petrum sub annulo Piscatoris die',
+      'xxxi martii MDCCCLXXVI, Pontificatus Nostri anno Trige­',
+      'simo.',
+      '                                                                   F. Card. ASQUINIUS.',
+      '',
+      '       Praesentes Litterae Apostolicae in forma Brevis sub',
+      'datum Romae die 31 martii 1876 exhibitae fuerunt in Se­',
+      'cretaria Sac. Congregationis Indulgentiis Sacrisque Re­',
+      'liquiis praepositae iuxta praescripta in Decreto sub die',
+      '14 aprilis 1856 ipsius S. Congregationis. In quorum',
+      'fidem etc. Ex Secretaria eiusdem S. C. die 6 Maii 1876.',
+      '                                                  Dominicus Sarra, Substitutus.',
+    ].join('\n'),
+  ];
+
+  it('reads a breve of Pius IX the same way thirty-two years earlier, and reads nothing from the Congregation\'s own attestation under it (ASS 9 (1876) 279-280)', () => {
+    const { entries, defects } = scanVolume(BREVE_9, { volume: 9, year: 1876, yearTo: 1876, lastBodyPage: 2 });
+    expect(entries).toHaveLength(1);
+    const e = entries[0]!;
+    expect(e.category).toBe('BREVE');
+    expect(e.pope).toBe('Pius IX');
+    expect(e.date).toBe('1876-03-31');
+    expect(e.page).toBe(1);
+    expect(e.opening).toBe('Quae in animis Christifidelium erga Deiparam Immaculatam amori');
+    // The `1.` the OCR sets between the title's two lines carries a page number's shape, so
+    // the title is read from the line under it: what is above a page number is another page's.
+    expect(e.evidence.heading).toBe('dulgentiae recitantibus officium Immaculatae Conceptionis');
+    expect(e.evidence.salutation).toBe('PIUS PP. IX.');
+    expect(defects).toEqual([]);
+  });
+});
+
 describe('the entries fixtures are what the scanner writes from the store text (skipped when the store is absent)', () => {
   const store = `${process.env['ACTA_SOURCES'] ?? `${homedir()}/development/sources/ASS`}/txt`;
   for (const s of ACTA_SOURCES.filter((x) => x.kind === 'ass')) {

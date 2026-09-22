@@ -63,8 +63,8 @@ const KNOWN_FIRST_WORDS = new Set(CLASS_HEADINGS.map((h) => h.split(' ')[0]!));
 const POPE_NEAR = /\b(LEO|LEONIS|LEONE|PIUS|PII|PIO)\b|SANCTISSIMI|Sanctissimi|SS(?:MI|mi)?\.?\s*D\.\s*N\.|\bPontifex\b/;
 /** A caps line that could be a class heading: three or more capitals in its first word, no lower case in it. */
 const CAPS_LINE = /^\s*(?:\d[\dOoiIla]{0,3}\s+)?([A-ZÀ-Þ]{3,}(?:[ .'’-]+[A-ZÀ-Þ.]{2,})*)\s*$/;
-/** The ring of the Fisherman: the brevia of the Secretaria Brevium close with it. */
-const RING = /annulo\s+Piscatoris|annulo\s+piscatoris/;
+/** The ring of the Fisherman: the brevia of the Secretaria Brevium close with it. All four capitalisations the series prints (ass-headings.ts's RING_RE); the first survey of 2026-09-22 read only the lower-case `annulo`, and counted 83 brevia where this counts 105 on the same scanner. */
+const RING = /[Aa]nnulo\s+[Pp]iscatoris/;
 
 /**
  * A line of an unwoven summa page on which the two columns are still glued: a page token

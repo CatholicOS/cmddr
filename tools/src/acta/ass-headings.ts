@@ -2,10 +2,11 @@
  * What a heading, a salutation, an addressee and a greeting look like in the *Acta Sanctae
  * Sedis* (ass volumes spec §3): the vocabulary the scan walks back to and skips past, with
  * the volume and page that prints each spelling quoted beside it. Split from ass.ts in
- * phase 2c-ii-a, unchanged.
+ * phase 2c-ii-a, unchanged but for what that phase added there: the ring of the Fisherman
+ * (RING_RE) and the brevia's title and salutation (breveTitle, isBreveOpening).
  */
 import { ACTA_POPES } from './popes.js';
-import { salutationAfter } from './ass.js';
+import { DATUM_RE, PONTIFICATUS_RE, salutationAfter } from './ass.js';
 
 /**
  * The dateline of the pope's private letters, which print no `Pontificatus Nostri`: the
@@ -25,6 +26,19 @@ import { salutationAfter } from './ass.js';
 export const SIGNED_DATELINE_RE = /^\s*(?:Dal\s+Vaticano|Dalle\s+stanze|(?:Romae\s+)?[Ee]x\s+[Aa]edibus\s+Vaticanis|Donné\s+à\s+Rome)\b/;
 /** The signature: `PIUS PP. X` (ASS 41 (1908) 19), `LEO PP. XIII` (ASS 33 (1900) 3), the OCR's `LEO PP. XIIL` (ASS 33 198), the French letters' `LEON XIII PAPE.` (ASS 33 722). */
 export const SIGNATURE_RE = /^\s*(?:(?:LEO|PIUS)\s+PP\.?\s*(?:X-?[Il1L]{3,4}|IX|X)|LEON\s+XIII\s+PAPE)\.?\s*$/;
+
+/**
+ * The ring of the Fisherman, which closes a breve where `Pontificatus Nostri` closes an
+ * encyclical. The series prints all four capitalisations of the two words, and each is
+ * read: `sub annulo Piscatoris` 131 times (ASS 41 (1908) 301; ASS 39 (1906) 531; ASS 25
+ * (1892) 15), `sub Annulo Piscatoris` 54 (ASS 1 (1865) 581; ASS 12 (1879) 637; ASS 33
+ * (1900) 212, 214), `sub annulo piscatoris` 5 (ASS 9 (1876) 169; ASS 37 (1904) 684) and
+ * `sub Annulo piscatoris` once (counted over the 41 volume texts on 2026-09-23). The
+ * preposition is not matched, so the OCR's `sdb` for `sub` (ASS 37 (1904) 641) is read like
+ * the rest. It is evidence of a class, not of a date: the anchor is still the dateline the
+ * ring stands in.
+ */
+export const RING_RE = /\b[Aa]nnulo\s+[Pp]iscatoris/;
 
 /**
  * The class headings a papal act opens with in the ASS, longest first so that `EPISTOLA
@@ -88,11 +102,13 @@ export const SALUTATION_RE = /^\s*(LEO|PIUS|LEONE|PIO)\s+(PP\.?|PAPA|EPISCOPUS)\
  * Bartholomeo Froget Sodali Dominicano. / Pictavium.` (ASS 33 (1900) 641), `Al Signor
  * Cardinale Mariano Rampolla del Tindaro, / Nostro Segretario di Stato.` (ASS 33 714), `Al
  * diletto Figlio Costanzo Maria Becchi` (ASS 33 641), `AUGUSTISSIMO SERENISSIMOQUE
- * PRINCIPI` (ASS 41 (1908) 18), `A NOS TRÈS CHERS FILS` (ASS 41 361). The vocative of the greeting
+ * PRINCIPI` (ASS 41 (1908) 18), `A NOS TRÈS CHERS FILS` (ASS 41 361), `Dilecto in Christo
+ * Filio Nostro / Alphonso XIII Hispaniarum Regi Catholico.` (ASS 35 (1902) 562, where the
+ * two words stand apart). The vocative of the greeting
  * (`Venerabilis Frater`, `Dilecte Fili`) is not matched: an opening may begin with it
  * (`Venerabilis Frater Augustinus Episcopus Papiae una cum`, ASS 33 198).
  */
-export const ADDRESSEE_RE = /^\s*(?:Venerabili(?:bus)?\s+Frat|Dilect(?:o|is)\s+Fili|Al\s+(?:Signor|diletto)|Augustissimo|A\s+Nos\s+(?:très\s+)?chers)/i;
+export const ADDRESSEE_RE = /^\s*(?:Venerabili(?:bus)?\s+Frat|Dilect(?:o|is)\s+(?:in\s+Christo\s+)?Fili|Al\s+(?:Signor|diletto)|Augustissimo|A\s+Nos\s+(?:très\s+)?chers)/i;
 /**
  * The greeting, on a line of its own, over two (`Venerabilis Frater et dilecte Fili, /
  * salutem et Apostolicam benedictionem.`, ASS 41 (1908) 198; `Dilecti Filii Nostri ac
@@ -101,10 +117,12 @@ export const ADDRESSEE_RE = /^\s*(?:Venerabili(?:bus)?\s+Frat|Dilect(?:o|is)\s+F
  * Fili Noster, salutem …`, `Venerabiles Fratres,`, `Signor Cardinale`, a line ending in the greeting (`Augustissime ac
  * serenissima Rex, salutem.`, ASS 41 (1908) 18; `… Imperator, salutem et prosperitatem.`,
  * ASS 41 12), the constitutions' `Ad perpetuam rei memoriam.` (ASS 33 (1900) 341; ASS 41
- * 619) and `SERVUS SERVORUM DEI`; the French letters' `Nos très chers Fils,` (ASS 41 361),
+ * 619) with the brevia's `Ad futuram rei memoriam.` beside it (ASS 36 (1903) 17, 660; ASS
+ * 40 (1907) 397, 455; the caps `AD FUTURAM REI MEMORIAM`, ASS 41 (1908) 300), and `SERVUS
+ * SERVORUM DEI`; the French letters' `Nos très chers Fils,` (ASS 41 361),
  * `Chers Fils salut et Bénédiction Apostolique.` (ASS 33 716).
  */
-export const GREETING_RE = /^\s*(?:Venerabil\w+\s+Frat\w+|Dilect\w+\s+Fili\w*|Signor\s+Cardinale|Carissim\w*|Ad perpetuam rei memoriam|Servus Servorum Dei|Salutem|(?:Nos\s+)?(?:très\s+)?chers?\s+Fils|Vénérables?\s+Frères?)(?:\s+(?:Nostr\w+|et|ac|Dilect\w+|Fili\w*|Venerabil\w+|Frat\w+))*\s*[,.]?\s*$|[Bb]enedictionem\.?\s*$|salutem et Apostolicam|\bsalutem\s+et\s*$|\bsalutem\b[^.]*\.\s*$|\bsalut\s+et\s+[Bb]énédiction/i;
+export const GREETING_RE = /^\s*(?:Venerabil\w+\s+Frat\w+|Dilect\w+\s+Fili\w*|Signor\s+Cardinale|Carissim\w*|Ad (?:perpetuam|futuram) rei memoriam|Servus Servorum Dei|Salutem|(?:Nos\s+)?(?:très\s+)?chers?\s+Fils|Vénérables?\s+Frères?)(?:\s+(?:Nostr\w+|et|ac|Dilect\w+|Fili\w*|Venerabil\w+|Frat\w+))*\s*[,.]?\s*$|[Bb]enedictionem\.?\s*$|salutem et Apostolicam|\bsalutem\s+et\s*$|\bsalutem\b[^.]*\.\s*$|\bsalut\s+et\s+[Bb]énédiction/i;
 /**
  * The greeting set on the opening's own line, the opening after it: `Dilecti filii, salutem
  * et Apostolicam benedictionem. Saecu­` (ASS 33 (1900) 577), `Dilecte Fili, salutem et
@@ -186,6 +204,78 @@ export const isOpening = (lines: readonly string[], i: number): boolean => {
   if (ABOVE_FORMULA_RE.test(capsAbove(lines, i).join(' '))) return true;
   return salutationAfter(lines, k, lines.length) !== null;
 };
+
+/** How many lines a breve's title runs to: four in the volumes that print the longest of them (`Breve SS. D. N. Pii div. prov. PP. X quo sacerdotibus qui / operam suam impendent pio Operi Propagationis Fidei / facultas benedicendi Rosaria eisque adnectendi indulgen- / tias a Patribus Crucigeris appellatas conceditur.`, ASS 41 (1908) 301; `Litterae in forma Brevis quibus SSmus D. N. Antistites qui …`, four lines, ASS 3 (1867) 157). Five is the bound, and what runs longer is the body of the act above, not a title. */
+const BREVE_TITLE_LINES = 5;
+
+/**
+ * The descriptive title a breve prints where a class word should stand, as the index of
+ * its first line, or null when none stands above the pope's own name at `lines[s]`.
+ *
+ * It is the run of non-blank lines above the salutation, past at most four blank lines
+ * (`Indulgentia toties quoties pro visitantibus ecclesias congre­ / gationis SS. Sacramenti
+ * in festo Corporis Christi.`, blank, `PIUS PP. X`, ASS 41 (1908) 300; the volumes of Pius
+ * X set none between the two, ASS 37 (1904) 367, 684; ASS 38 (1905) 140 sets two above the
+ * title). Three things are not a title and end the reading, each of which stands exactly
+ * where a title would:
+ *   - a run longer than BREVE_TITLE_LINES, which is the previous act's last paragraph and
+ *     not a title (`… ut patet ex sequentibus Apostolicis Literis in earum favorem datis
+ *     (1).`, seven lines over `PIUS PP. IX.`, ASS 2 (1867) 181);
+ *   - a run carrying a dateline or a pontificate's year, which is the previous act's close
+ *     with the pope's signature under it and no act of its own between (`Datum Romae apud
+ *     S. Petrum, die xxiv Aprilis MCMVIII, / Pontificatus Nostri anno quinto.` over `PIUS
+ *     PP. X`, ASS 41 (1908) 300; `Pontificatus Nostri Anno XXIII.` alone, ASS 4 (1868) 553);
+ *   - a page number, which bounds the run from above rather than ending it, since what
+ *     stands over a page number is another page's (`1.` set between the two lines of the
+ *     title, ASS 9 (1876) 279, where the title is read from the line under it).
+ *
+ * An addressee (ADDRESSEE_RE) is passed over rather than read: the volumes that set
+ * one between the title and the pope's name set the title above it (`PROROGATIO privilegii
+ * Bullae Cruciatae pro Ditione Hispanica,` over `Dilecto in Christo Filio Nostro /
+ * Alphonso XIII Hispaniarum Regi Catholico.` over `LEO PP. XIII.`, ASS 35 (1902) 562).
+ * One is passed over, not two: what stands two blocks above an addressee is the previous
+ * act's.
+ */
+export const breveTitle = (lines: readonly string[], s: number): number | null => {
+  for (let below = s, hops = 0; hops < 2; hops++) {
+    const run = titleAbove(lines, below);
+    if (run === null || !ADDRESSEE_RE.test(lines[run]!)) return run;
+    below = run;
+  }
+  return null;
+};
+
+/** One block above `below`: the run of non-blank lines past at most four blank ones, or null when what stands there is none of a title's shapes (breveTitle). */
+const titleAbove = (lines: readonly string[], below: number): number | null => {
+  let end = below - 1;
+  for (let blanks = 0; end >= 0 && lines[end]!.trim() === ''; end--, blanks++) if (blanks >= 4) return null;
+  if (end < 0) return null;
+  let start = end;
+  while (start > 0 && lines[start - 1]!.trim() !== '' && !RUNNING_HEAD_RE.test(lines[start - 1]!)) {
+    if (end - start + 1 >= BREVE_TITLE_LINES) return null;
+    start--;
+  }
+  if (RUNNING_HEAD_RE.test(lines[start]!)) return null;
+  if (lines.slice(start, end + 1).some((l) => DATUM_RE.test(l) || PONTIFICATUS_RE.test(l))) return null;
+  return start;
+};
+
+/**
+ * Whether a breve opens at `lines[i]`, where the pope's own name stands alone as it does
+ * over every breve of the *Secretaria Brevium* (`PIUS PP. X`, ASS 41 (1908) 300; `LEO PAPA
+ * XIII.`, ASS 25 (1892) 15; `PIUS PP. IX.`, ASS 9 (1876) 279) with the descriptive title
+ * above it (breveTitle). It is the second reading of readAct's walk-back and is tried only
+ * where the act closes under the ring (RING_RE) and no class heading stands behind it.
+ *
+ * This is what tells the pope's breve from a dicastery's own act, which the summa files
+ * under the same heading `EX SECRETARIA BREVIUM`: a cardinal signs his act in his own name
+ * (`Ex Secretaria eiusdem S. C. die 6 Maii 1876.` / `Dominicus Sarra, Substitutus.`, ASS 9
+ * (1876) 280), which is no pope's name and no salutation, and his countersignature of a
+ * breve (`Pro Dno Card. MACCHI`, ASS 41 (1908) 301; `F. Card. ASQUINIUS.`, ASS 9 280)
+ * stands under the dateline, never over the act where the pope's name stands.
+ */
+export const isBreveOpening = (lines: readonly string[], i: number): boolean =>
+  SALUTATION_RE.test(lines[i]!) && breveTitle(lines, i) !== null;
 
 /**
  * The lines quoted from `start` on -- a dateline, or the lines above an anchor with no
