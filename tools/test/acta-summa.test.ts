@@ -143,6 +143,72 @@ describe('parseSummaPapalPart (spec §4): the papal part, loosely', () => {
       expect(rows, opener).toEqual([]);
     }
   });
+
+  it('ends the papal part at a dicastery heading printed without the `EX` prefix (ASS 21 (1888) 744: `S. CONGR. INDICIS`)', () => {
+    const { rows, end } = parseSummaPapalPart([
+      'LITTERAE ET ACTA ROM. PONTIFICIS',
+      'Litterae SSmi D. N. Leonis XIII ad Episcopos Hiberniae . . 3',
+      'S. CONGR. INDICIS',
+      'Decretum quo plures libri prohibentur . . 368',
+    ].join('\n'));
+    expect(end).toBe('S. CONGR. INDICIS');
+    expect(rows.map((r) => r.page)).toEqual([3]);
+  });
+
+  it('reads the further forms `EX` is dropped from beyond the sample: ASS 21 (1888) 745\'s `S. CONGREGATIO CONCILII` (unabbreviated), ASS 3 (1867) 666\'s and ASS 4 (1868) 684\'s `ACTA CONSISTORIALIA` (a different noun, not `ACTIS`), and ASS 9 (1876) 669\'s title-case `Ex Actis Consistorialibus.`', () => {
+    const cases: [string, string][] = [
+      ['S. CONGREGATIO CONCILII', 'Gallipolitana curae animarum . . 13'],
+      ['ACTA CONSISTORIALIA.', 'Acta authentica Consistorii secreti habiti die 12 Iulii 1867 . . 337'],
+      ['ACTA CONSISTORIALIA', 'De Consistorio secreto habito die 22 Iunii 1868 . . 112'],
+      ['Ex Actis Consistorialibus.', 'De Consistorio habito die 28 ianuarii 1876, pag. 73'],
+    ];
+    for (const [end, row] of cases) {
+      const { rows, end: read } = parseSummaPapalPart(`SUMMA ACTORUM\nQUAE IN HOC VOLUMINE CONTINENTUR\nACTA ROMANI PONTIFICIS\nLitterae Apostolicae ad aliquem . . 5\n${end}\n${row}`);
+      expect(read, end).toBe(end);
+      expect(rows.map((r) => r.page), end).toEqual([5]);
+    }
+  });
+
+  it('re-opens the papal part at a later papal heading (ASS 8 (1874) 727-728: `EX ACTIS CONSISTORIALIBUS.` closes the first part, `LITTERAE APOSTOLICAE.` on the next page reopens it, and the dicastery rows in between -- including a further dicastery heading, `EX AEDIBUS VATICANIS,`, that opens no papal heading of its own -- are skipped rather than counted)', () => {
+    const text = [
+      'ACTA ROMANI PONTIFICIS',
+      'Sanctissimi Domini Nostri Pii Epistola Encyclica . . 181',
+      'EX ACTIS CONSISTORIALIBUS.',
+      'Nominationes complurium Episcoporum . . 498',
+      'EX AEDIBUS VATICANIS,',
+      'Allocutio habita die XXI. Dec. MDCCCLXXIV . . 177',
+      'LITTERAE APOSTOLICAE.',
+      'Litterae Apostolicae ad Doctorem Alphonsum Travaglini . . 496',
+      'Litterae Apostolicae ad Baronem Nicolaum Taccone Gallucci . . 688',
+      'EX S. CONGR. S. R. U. INQUISIT.',
+      'Decretum quo duo prohibentur libri . . 269',
+    ].join('\n');
+    const { rows, heading, end } = parseSummaPapalPart(text);
+    expect(heading).toBe('ACTA ROMANI PONTIFICIS');
+    expect(end).toBe('EX S. CONGR. S. R. U. INQUISIT.');
+    expect(rows.map((r) => r.page)).toEqual([181, 496, 688]);
+  });
+
+  it('reports no end when the part reopens and then runs to the text\'s end without a further dicastery heading', () => {
+    const text = ['ACTA ROMANI PONTIFICIS', 'Epistola prima . . 5', 'EX ACTIS CONSISTORIALIBUS', 'Decretum . . 9', 'LITTERAE APOSTOLICAE', 'Epistola secunda . . 44'].join('\n');
+    const { rows, end } = parseSummaPapalPart(text);
+    expect(end).toBeNull();
+    expect(rows.map((r) => r.page)).toEqual([5, 44]);
+  });
+
+  it('does not end the papal part on a row of its own that mentions a congregation in running text, mid-sentence and in mixed case (a saint\'s initial, `S. Ioannis`, is the same shape)', () => {
+    const text = [
+      'ACTA ROMANI PONTIFICIS',
+      'Litterae SSmi D. N. Leonis XIII, quibus S. Congr. de Propaganda',
+      '    Fide mandatur ut curam gerat . . 12',
+      'S. Ioannis De Cuyo dioecesis erectio . . 439',
+      'EX ACTIS CONSISTORIALIBUS',
+      'De Consistorio habito . . 99',
+    ].join('\n');
+    const { rows, end } = parseSummaPapalPart(text);
+    expect(end).toBe('EX ACTIS CONSISTORIALIBUS');
+    expect(rows.map((r) => r.page)).toEqual([12, 439]);
+  });
 });
 
 describe('locateSumma: the summa pages, from the volume\'s midpoint', () => {

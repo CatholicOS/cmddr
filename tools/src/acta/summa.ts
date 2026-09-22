@@ -110,11 +110,35 @@ const PAPAL_HEAD_RE = new RegExp(
   + '|Litterae\\s+Apostolicae\\s*$'
   + ')\\.?');
 /**
- * A dicastery heading. The abbreviated forms end in a stop (`EX S. C. CONCILII`, ASS 33
- * (1900) 762; `EX S.APOSTOLICA POENITENTIARIA`, ASS 1 (1865) 747), after which no word
- * boundary follows, so the boundary is written per alternative on the spelt-out words only.
+ * A dicastery heading, which ends the pope's part. The abbreviated forms end in a stop
+ * (`EX S. C. CONCILII`, ASS 33 (1900) 762; `EX S.APOSTOLICA POENITENTIARIA`, ASS 1 (1865)
+ * 747), after which no word boundary follows, so the boundary is written per alternative
+ * on the spelt-out words only.
+ *
+ * `EX` is required before the abbreviated `S.`/`SS.` forms because a bare `S.` is also how
+ * the summa abbreviates a saint's name (`3. Ioannis De Cuyo` -- OCR for `S. Ioannis`, ASS 3
+ * (1867) 666): without `EX`, a row naming a saint would end the part. Two forms of dicastery
+ * heading are dropped from the evidence anyway, since some volumes print them without `EX`:
+ *   - ASS 21 (1888) heads every dicastery of its summa bare, never with `EX`
+ *     (`S. CONGREGATIO CONCILII` 745, `S. CONGREGATIO RITUUM` / `S. CONGR. INDULGENTIARUM`
+ *     749, `S. CONGR. INDICIS` / `S. POENITENTIARIA APOST.` 750) -- so the abbreviated
+ *     forms are admitted bare only when followed by a spelt-out dicastery word (`CONGR.`,
+ *     `CONGREGATIO`, `CONGREGATIONE`, `CONGREGATIONIS`, `POENITENTIARIA`), never by a bare
+ *     `C.` alone, which stays `EX`-only (too close to a saint's initial, same as `S.` bare).
+ *   - ASS 3 (1867) 666 and ASS 4 (1868) 684 head the consistorial acts `ACTA CONSISTORIALIA`
+ *     -- `ACTA`, not `ACTIS`, and never with `EX` -- always in full capitals.
+ * ASS 9 (1876) prints its own headings in title case with `Ex`, never in capitals
+ * (`Ex Actis Consistorialibus.` 669, over `Ex Secretaria Brevium.` on the same page) --
+ * admitted as the two literal phrases printed, not a general title-case pattern, since a
+ * row's own text can open a wrapped line with `Ex ...` in ordinary Latin prose.
+ *
+ * `SUPREMA` and `CANCELLARIA` bare after `EX` were in an earlier draft of this regex but
+ * print in no volume's summa (a corpus-wide search of all 41 volumes found neither, with or
+ * without `EX`), so they are dropped; `DATARIA` likewise never prints bare, only as
+ * `EX S. DATARIA APOST.` (ASS 28 (1895) 761) and `EX S. DATARIA APOSTOLICA` (ASS 33 (1900)
+ * 766), which the abbreviated `S{1,2}\.` branch already reads.
  */
-const DICASTERY_RE = /^\s*(EX\s+(?:S\.|SS\.|SACRA\b|SECRETARIA\b|ACTIS\b|AEDIBUS\b|SUPREMA\b|CANCELLARIA\b|DATARIA\b).*)$/;
+const DICASTERY_RE = /^\s*(EX\s+(?:S{1,2}\.|SACRA\b|SECRETARIA\b|ACTIS\b|AEDIBUS\b).*|S{1,2}\.\s*(?:CONGR\.|CONGREGATIONE\b|CONGREGATIONIS\b|CONGREGATIO\b|POENITENTIARIA\b).*|ACTA\s+CONSISTORIALIA\b.*|Ex\s+Actis\s+Consistorialibus\b.*|Ex\s+Secretaria\s+Brevium\b.*)$/;
 
 /** A line that is only the summa's running header (`8oo Index analyticus`, `SUMMA ACTORUM.`, `762 SUMMA {60 spaces} ACTORUM`) or a bare page number (`761`, padded to the margin, ASS 33 (1900) 761), whitespace collapsed. */
 const HEADER_LINE_RE = /^\s*(?:(?:\d[\dOoiIl]{0,3}\s+)?(?:Index analyticus|SUMMA\.?\s+A[CGO]TO[RKT]?[UTJ]*M\.?)\s*(?:\d[\dOoiIl]{0,3})?\s*-?|\d[\dOoiIl]{0,3})\s*$/;
@@ -188,12 +212,29 @@ export function parseSummaPapalPart(text: string): { rows: SummaRow[]; heading: 
   const rows: SummaRow[] = [];
   let acc: string[] = [];
   let end: string | null = null;
+  // Once a dicastery heading is read, the part is paused rather than abandoned: a later
+  // papal heading re-opens it (ASS 8 (1874) 728's `LITTERAE APOSTOLICAE`, after its first
+  // part closed at `EX ACTIS CONSISTORIALIBUS.` on 727) and its rows are appended, so a
+  // dicastery section between two papal ones is skipped rather than counted. While paused,
+  // only a papal heading is looked for; every other paused line, dicastery headings
+  // included, is ignored, so `end` keeps reporting the first dicastery heading of the
+  // *closing* part, not a dicastery heading passed over while still paused.
+  let paused = false;
   for (let i = start; i < lines.length; i++) {
     const line = lines[i]!;
-    const d = line.match(DICASTERY_RE);
-    if (d) { end = d[1]!.replace(/\s+/g, ' ').trim(); break; }
+    let stripHead = i === start;
+    if (paused) {
+      if (!PAPAL_HEAD_RE.test(line)) continue;
+      paused = false;
+      end = null;
+      acc = [];
+      stripHead = true;
+    } else {
+      const d = line.match(DICASTERY_RE);
+      if (d) { end = d[1]!.replace(/\s+/g, ' ').trim(); paused = true; acc = []; continue; }
+    }
     if (line.trim() === '' || HEADER_LINE_RE.test(line.replace(/\s+/g, ' '))) continue;
-    const content = i === start ? line.replace(PAPAL_HEAD_RE, '').trim() : line;
+    const content = stripHead ? line.replace(PAPAL_HEAD_RE, '').trim() : line;
     if (content.trim() === '') continue;
     acc.push(content.trim());
     const m = content.match(ROW_END_RE);

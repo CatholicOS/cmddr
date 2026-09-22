@@ -17,13 +17,13 @@ scanned at all (`tools/scan-ass.ts` refuses to write a fixture for it), and show
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | 1865–66 | Pius IX | 767 | 747–752 | — | — | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 1 | ✓ |
 | 2 | 1867 | Pius IX | 719 | 695–701 | LITTERAE APOSTOLICAE | EX S. GREG. S. R. D. INQU1S1T. | 1 | 1 | 0 | 3 | 1 | 2 | 0 | 4 | 1 |  |
-| 3 | 1867 | Pius IX | 696 | 665–670 | ACTA SOLEMNIORA ROMANI PONTIFICIS | EX S. CONGREGATIONE INDICIS. | 2 | 2 | 0 | 51 | 2 | 48 | 0 | 9 | 2 |  |
-| 4 | 1868 | Pius IX | 717 | 684–690 | ACTA SOLEMNIORE ROM. PONTIFICIS | EX SECRETARIA BREVIUM. | 7 | 5 | 2 | 38 | 6 | 32 | 1 | 5 | 2 |  |
+| 3 | 1867 | Pius IX | 696 | 665–670 | ACTA SOLEMNIORA ROMANI PONTIFICIS | ACTA CONSISTORIALIA. | 2 | 2 | 0 | 15 | 2 | 13 | 0 | 9 | 2 |  |
+| 4 | 1868 | Pius IX | 717 | 684–690 | ACTA SOLEMNIORE ROM. PONTIFICIS | ACTA CONSISTORIALIA | 7 | 5 | 2 | 9 | 6 | 3 | 1 | 5 | 2 |  |
 | 5 | 1869–70 | Pius IX | 712 | 691–696 | ACTA SOLEMNIORA ROM. PONriFICIS | EX SECRETARIA BREVIUM. | 4 | 3 | 1 | 15 | 4 | 11 | 0 | 11 | 0 |  |
 | 6 | 1870–71 | Pius IX | 776 | 597–603 | ACTA SOLEMNIORA ROM. PONTIFICIS | EX SECRETARIA BREVIUM. | 4 | 3 | 1 | 31 | 3 | 28 | 1 | 13 | 1 |  |
 | 7 | 1872–73 | Pius IX | 784 | 751–760 | — | — | 5 | 3 | 2 | 0 | 0 | 0 | 5 | 7 | 1 |  |
-| 8 | 1874–75 | Pius IX | 748 | 727–733 | ACTA SOLEMNIORÂ | EX ACTIS CONSISTORIALIBUS. | 6 | 4 | 2 | 12 | 1 | 11 | 5 | 14 | 0 |  |
-| 9 | 1876 | Pius IX | 690 | 669–674 | Litterae Apostolicae | **runs on** | 5 | 5 | 0 | 107 | 5 | 102 | 0 | 21 | 5 |  |
+| 8 | 1874–75 | Pius IX | 748 | 727–733 | ACTA SOLEMNIORÂ | EX S. CONGR. S. R. U. ÍNQUISIT. | 6 | 4 | 2 | 24 | 4 | 20 | 2 | 14 | 0 |  |
+| 9 | 1876 | Pius IX | 690 | 669–674 | Litterae Apostolicae | Ex Actis Consistorialibus. | 5 | 5 | 0 | 10 | 2 | 8 | 3 | 21 | 5 |  |
 | 10 | 1877 | Pius IX | 768 | 616–622 | LITTERAE APOSTOLICAE | EX ACTIS CONCISTORIALIBUS | 2 | 1 | 1 | 9 | 1 | 8 | 1 | 13 | 3 |  |
 | 11 | 1878 | Pius IX + Leo XIII | 646 | 621–626 | LITTERAE APOSTOLICAE | EX ACTIS CONSISTORIALIBUS. | 6 | 5 | 1 | 12 | 6 | 6 | 0 | 6 | 0 |  |
 | 12 | 1879 | Leo XIII | 672 | 647–653 | LITTERAE ET ALLOCUTIONES | EX ACTIS CONSISTORIALIBUS | 10 | 8 | 2 | 12 | 9 | 3 | 1 | 1 | 0 | ✓ |
@@ -35,7 +35,7 @@ scanned at all (`tools/scan-ass.ts` refuses to write a fixture for it), and show
 | 18 | 1885 | Leo XIII | 768 | 603–610 | LITTERAE ROMANI PONTIFICIS | EX S. CONGR. CONCILII | 9 | 7 | 2 | 12 | 6 | 6 | 3 | 3 | 0 |  |
 | 19 | 1886–87 | Leo XIII | 768 | 604–610 | LITTERAE R. PONTIFICIS | EX S. CONG. CONCILII | 6 | 6 | 0 | 13 | 6 | 7 | 0 | 3 | 0 |  |
 | 20 | 1887 | Leo XIII | 656 | 635–642 | — | — | 7 | 6 | 1 | 0 | 0 | 0 | 7 | 7 | 0 |  |
-| 21 | 1888 | Leo XIII | 768 | 744–750 | LITTERAE ET ACTA ROM. PONTIFICIS | EX ACTIS CONSISTORIALIBUS | 12 | 11 | 1 | 100 | 12 | 87 | 0 | 4 | 0 |  |
+| 21 | 1888 | Leo XIII | 768 | 744–750 | LITTERAE ET ACTA ROM. PONTIFICIS | S. CONGREGATIO CONCILII | 12 | 11 | 1 | 19 | 12 | 7 | 0 | 4 | 0 |  |
 | 22 | 1889–90 | Leo XIII | 767 | 750–756 | LITTERAE ET ACTA ROM. PONTIFICIS | EX ACTIS CONSISTORIALIBUS | 5 | 5 | 0 | 10 | 5 | 5 | 0 | 4 | 0 |  |
 | 23 | 1890–91 | Leo XIII | 768 | 752–758 | LITTERAE ET ACTA ROM. PONTIFICIS | EX ACTIS CONSISTORIALIBUS CQmpeUt ius praecei]end | 8 | 8 | 0 | 14 | 7 | 7 | 1 | 5 | 0 | ✓ |
 | 24 | 1891–92 | Leo XIII | 768 | 751–760 | LITTERAE ET ACTA ROM. PONTIFICIS | EX S. CONGREGATIONE CONCILII | 9 | 9 | 0 | 12 | 8 | 4 | 1 | 5 | 1 |  |
@@ -64,17 +64,17 @@ only honest measure of what the scanner reads in a volume it has not been curate
 
 | Decade | Volumes | Pages | Acts | Summa rows | Claimed | Claimed % | Defects | Brevia | Volumes with no summa |
 |---|---|---|---|---|---|---|---|---|---|
-| 1860s | 5 | 3611 | 14 | 107 | 13 | 12 % | 32 | 6 | 0 |
-| 1870s | 7 | 5084 | 38 | 183 | 25 | 14 % | 75 | 10 | 0 |
-| 1880s | 10 | 6813 | 57 | 187 | 44 | 24 % | 54 | 2 | 0 |
+| 1860s | 5 | 3611 | 14 | 42 | 13 | 31 % | 32 | 6 | 0 |
+| 1870s | 7 | 5084 | 38 | 98 | 25 | 26 % | 75 | 10 | 0 |
+| 1880s | 10 | 6813 | 57 | 106 | 44 | 42 % | 54 | 2 | 0 |
 | 1890s | 10 | 7678 | 74 | 134 | 50 | 37 % | 57 | 6 | 0 |
 | 1900s | 9 | 6835 | 197 | 288 | 180 | 63 % | 168 | 59 | 0 |
 
 | Pontificate | Volumes | Acts | Summa rows | Claimed % |
 |---|---|---|---|---|
-| Pius IX | 10 (1, 2, 3, 4, 5, 6, 7, 8, 9, 10) | 36 | 266 | 9 % |
+| Pius IX | 10 (1, 2, 3, 4, 5, 6, 7, 8, 9, 10) | 36 | 116 | 20 % |
 | Pius IX + Leo XIII | 1 (11) | 6 | 12 | 50 % |
-| Leo XIII | 24 (12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35) | 178 | 377 | 34 % |
+| Leo XIII | 24 (12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35) | 178 | 296 | 44 % |
 | Leo XIII + Pius X | 1 (36) | 22 | 36 | 58 % |
 | Pius X | 5 (37, 38, 39, 40, 41) | 138 | 208 | 64 % |
 
@@ -206,5 +206,5 @@ shelf column is thin can yield few references however well it scans — the join
 
 ## 7. Totals
 
-41 volumes, 30021 pages; **380 acts** read by rule; 899 summa rows of which 312 claimed
-(35 %); 386 defects, 83 of them brevia; 0 volumes with no summa located.
+41 volumes, 30021 pages; **380 acts** read by rule; 668 summa rows of which 312 claimed
+(47 %); 386 defects, 83 of them brevia; 0 volumes with no summa located.
