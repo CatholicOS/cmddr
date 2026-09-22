@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { checkSumma, locateSumma, normalisePage, parseSummaPapalPart, splitColumns } from '../src/acta/summa.js';
+import { checkSumma, locateSumma, normalisePage, PAPAL_HEAD_FORMS, parseSummaPapalPart, splitColumns } from '../src/acta/summa.js';
 
 describe('normalisePage (spec §4): the OCR of a page number in the summa', () => {
   it('reads the digits and the letters the OCR puts for them: ig3 → 193, 3oo → 300, 3oi → 301, i3o → 130, 6 19 → 619, 5 80 → 580', () => {
@@ -134,6 +134,13 @@ describe('parseSummaPapalPart (spec §4): the papal part, loosely', () => {
     const { rows, heading } = parseSummaPapalPart('SUMMA ACTORUM\nQUAE IN HOC NONO VOLUMINE CONTINENTUR\nLitterae Apostolicae\nSS. D. Ii. P. Papae IX.\nLitterae Apostolicae ad Ducem Mutinae . . 581\nEX ACTIS CONSISTORIALIBUS\nDubia et responsa . . 557');
     expect(heading).toBe('Litterae Apostolicae');
     expect(rows.map((r) => r.page)).toEqual([581]);
+  });
+
+  it('matches every papal-heading form `PAPAL_HEAD_FORMS` cites, so the table can never drift from what `PAPAL_HEAD_RE` actually reads (fix round 2 of Task 3)', () => {
+    for (const { pattern, prints, at } of PAPAL_HEAD_FORMS) {
+      const { heading } = parseSummaPapalPart(`${prints}\nQuaedam res . . 1`);
+      expect(heading, `${prints} (${at}) -- pattern ${pattern}`).not.toBeNull();
+    }
   });
 
   it('does not read a dicastery heading as the papal part (ASS 2, 7, 26 open on one)', () => {

@@ -24,7 +24,7 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { scanVolume, CLASS_HEADINGS, type AssDefect, type AssEntry } from './src/acta/ass.js';
-import { checkSumma, locateSumma, parseSummaPapalPart } from './src/acta/summa.js';
+import { checkSumma, locateSumma, parseSummaPapalPart, PAPAL_HEAD_FORMS } from './src/acta/summa.js';
 import { ACTA_SOURCES } from './src/acta/join.js';
 import type { DocumentRecord } from './src/types.js';
 import { readdirSync } from 'node:fs';
@@ -258,12 +258,12 @@ for (const [spelling, at] of ranked.slice(0, 40)) p(`| \`${md(spelling)}\` | ${a
 p();
 p('## 4b. The summa headings the parser does not know');
 p();
-p('`parseSummaPapalPart` knows the eleven papal-heading forms quoted in its own doc comment — the sample\'s three');
-p('(`LITTERAE ET ALLOCUTIONES`, `LITTERAE ET ACTA R. PONTIFICIS`, `ACTA ROMANI PONTIFICIS`) and the eight the');
-p('whole-series survey found. Where it finds none, the summa is read as having no papal part at all and the volume');
-p('claims nothing — which is why a volume can scan acts and still show 0 rows. These are the volumes\' own opening');
-p('lines, quoted from the page: the spellings an era would teach the parser, and the reason the yield of §2 is a floor');
-p('and not a measurement for them.');
+p(`\`parseSummaPapalPart\` knows ${PAPAL_HEAD_FORMS.length} papal-heading forms, each cited in its own doc comment at`);
+p(`the volume that prints it (\`PAPAL_HEAD_FORMS\`, \`tools/src/acta/summa.ts\`) — for example \`${PAPAL_HEAD_FORMS[0]!.prints}\``);
+p(`(${PAPAL_HEAD_FORMS[0]!.at}) and \`${PAPAL_HEAD_FORMS[PAPAL_HEAD_FORMS.length - 1]!.prints}\` (${PAPAL_HEAD_FORMS[PAPAL_HEAD_FORMS.length - 1]!.at}).`);
+p('Where it finds none, the summa is read as having no papal part at all and the volume claims nothing — which is why');
+p('a volume can scan acts and still show 0 rows. These are the volumes\' own opening lines, quoted from the page: the');
+p('spellings an era would teach the parser, and the reason the yield of §2 is a floor and not a measurement for them.');
 p();
 p('| Vol | The summa\'s first lines, as printed |');
 p('|---|---|');

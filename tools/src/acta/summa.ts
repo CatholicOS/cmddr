@@ -65,22 +65,19 @@ export function normalisePage(token: string): number | null {
 }
 
 /**
- * The heading of the summa's papal part. The sample printed three forms; the survey of the
- * whole series (docs/superpowers/reports/2026-09-22-ass-survey.md §4b) found eight more,
- * each quoted here at the volume that prints it:
- *   `LITTERAE ET ALLOCUTIONES [APOSTOLICAE]`      ASS 12 (1879) 647, 13
- *   `LITTERAE ET ACTA [ROM.|R.] PONTIFICIS`       ASS 21 (1888) 744, 22-25, 27-34
- *   `ACTA ROMANI PONTIFICIS`                      ASS 36 (1903) , 37-41; ASS 35's OCR `ROMAM`
- *   `ACTA SOLEMNIORA ROMANI PONTIFICIS`           ASS 3 (1867) 665
- *   `ACTA SOLEMNIORE ROM. PONTIFICIS`             ASS 4 (1868) 684 (the OCR's -E for -A)
- *   `ACTA SOLEMNIORA ROM. PONriFICIS`             ASS 5 (1869) 691, 6 (the OCR's r for T),
- *                                                 over `PUBLICI IURIS FACTA` on the next line
- *   `ACTA SOLEMNIORÂ`                             ASS 8 (1874) 727, over `ROMANI PONTIFICIS`
- *   `LITTERAE ET RESPONSUM`                       ASS 14 (1881) 569, over `ROMANI PONTIFICIS`
- *   `LITTERAE MOTU PROPRIO`                       ASS 15 (1882) 603, over `ET CONSTITUTIO R. PONTIFICIS`
- *   `LITTERAE [ROMANI|R.] PONTIFICIS`             ASS 16 (1883) 557, 17-19
- *   `LITTERAE APOSTOLICAE`                        ASS 10 (1877) 616, 11
- *   `Litterae Apostolicae` (mixed case)           ASS 9 (1876) 669, over `SS. D. Ii. P. Papae IX.`
+ * A papal-heading form the summa prints, cited at the volume (and page, where known) that
+ * prints it -- the citation-beside-the-alternative discipline `DICASTERY_RE` already keeps,
+ * carried into data here so a heading *count* typed into prose can never go stale again (fix
+ * round 2 of Task 3: the survey's prose said "the parser knows the three forms the sample
+ * printed" after the whole-series survey had already taught it eight more, and the first
+ * attempt to correct that number by hand still undercounted `PAPAL_HEAD_RE`'s own
+ * alternatives). `pattern` is one alternative's regex source; several entries share a
+ * `pattern` where one alternative reads more than one printed spelling (`LITTERAE ROMANI
+ * PONTIFICIS` and `LITTERAE R. PONTIFICIS`, both ASS 16 (1883) 557 and 17-19, read by the one
+ * `LITTERAE\s+R(?:OMANI|\.)\s*PONTIFICIS` branch). `PAPAL_HEAD_RE` is built below by joining
+ * the distinct patterns, in order of first appearance, so it cannot diverge from what this
+ * table cites, and its count of forms is `PAPAL_HEAD_FORMS.length` wherever one is needed.
+ *
  * The mixed-case form is admitted for `Litterae Apostolicae` alone, and only as a whole
  * line: the caps forms cannot be relaxed without reading a row's own first words as a
  * heading, since every row opens `Litterae SSmi D. N. …`.
@@ -97,18 +94,25 @@ export function normalisePage(token: string): number | null {
  * `ROMANI` into the first row; `parseSummaPapalPart`'s two-line join (below) then joins the
  * line with the next and re-matches whole.
  */
-const PAPAL_HEAD_RE = new RegExp(
-  '^\\s*(?:\\d+\\s+)?('
-  + 'LITTERAE\\s+ET\\s+A(?:LLOCUTIONES|CTA)(?:\\s+R(?:OM)?\\.\\s*PONTIFICIS|\\s+APOSTOLICAE)?'
-  + '|ACTA\\s+(?:ROMANI|ROMAM)\\s+PONTIFICIS'
-  + '|ACTA\\s+SOLEMNIOR[AEÂ](?:\\s+ROM(?:ANI|\\.)?\\s*PON[TRr]?[iI]?FICIS)?(?!\\s*ROM)'
-  + '|LITTERAE\\s+ET\\s+RESPONSUM'
-  + '|LITTERAE\\s+MOTU\\s+PROPRIO'
-  + '|L\\s?TT\\s?E\\s?RA\\s?[ER]?\\s+ROMANI\\s+PONTIFICIS'
-  + '|LITTERAE\\s+R(?:OMANI|\\.)\\s*PONTIFICIS'
-  + '|LITTERAE\\s+APOSTOLICAE'
-  + '|Litterae\\s+Apostolicae\\s*$'
-  + ')\\.?');
+export const PAPAL_HEAD_FORMS: readonly { pattern: string; prints: string; at: string }[] = [
+  { pattern: 'LITTERAE\\s+ET\\s+A(?:LLOCUTIONES|CTA)(?:\\s+R(?:OM)?\\.\\s*PONTIFICIS|\\s+APOSTOLICAE)?', prints: 'LITTERAE ET ALLOCUTIONES APOSTOLICAE', at: 'ASS 12 (1879) 647, and 13' },
+  { pattern: 'LITTERAE\\s+ET\\s+A(?:LLOCUTIONES|CTA)(?:\\s+R(?:OM)?\\.\\s*PONTIFICIS|\\s+APOSTOLICAE)?', prints: 'LITTERAE ET ACTA ROM. PONTIFICIS', at: 'ASS 21 (1888) 744, and 22-25, 27-34' },
+  { pattern: 'LITTERAE\\s+ET\\s+A(?:LLOCUTIONES|CTA)(?:\\s+R(?:OM)?\\.\\s*PONTIFICIS|\\s+APOSTOLICAE)?', prints: 'LITTERAE ET ACTA R. PONTIFICIS', at: 'ASS 33 (1900) 761, over R. PONTIFICIS on the next line' },
+  { pattern: 'ACTA\\s+(?:ROMANI|ROMAM)\\s+PONTIFICIS', prints: 'ACTA ROMANI PONTIFICIS', at: 'ASS 36 (1903), and 37-41' },
+  { pattern: 'ACTA\\s+(?:ROMANI|ROMAM)\\s+PONTIFICIS', prints: 'ACTA ROMAM PONTIFICIS', at: "ASS 35's OCR of ROMANI" },
+  { pattern: 'ACTA\\s+SOLEMNIOR[AEÂ](?:\\s+ROM(?:ANI|\\.)?\\s*PON[TRr]?[iI]?FICIS)?(?!\\s*ROM)', prints: 'ACTA SOLEMNIORA ROMANI PONTIFICIS', at: 'ASS 3 (1867) 665' },
+  { pattern: 'ACTA\\s+SOLEMNIOR[AEÂ](?:\\s+ROM(?:ANI|\\.)?\\s*PON[TRr]?[iI]?FICIS)?(?!\\s*ROM)', prints: 'ACTA SOLEMNIORE ROM. PONTIFICIS', at: "ASS 4 (1868) 684 (the OCR's -E for -A)" },
+  { pattern: 'ACTA\\s+SOLEMNIOR[AEÂ](?:\\s+ROM(?:ANI|\\.)?\\s*PON[TRr]?[iI]?FICIS)?(?!\\s*ROM)', prints: 'ACTA SOLEMNIORA ROM. PONriFICIS', at: "ASS 5 (1869) 691, and 6 (the OCR's r for T)" },
+  { pattern: 'ACTA\\s+SOLEMNIOR[AEÂ](?:\\s+ROM(?:ANI|\\.)?\\s*PON[TRr]?[iI]?FICIS)?(?!\\s*ROM)', prints: 'ACTA SOLEMNIORÂ', at: 'ASS 8 (1874) 727, over ROMANI PONTIFICIS' },
+  { pattern: 'LITTERAE\\s+ET\\s+RESPONSUM', prints: 'LITTERAE ET RESPONSUM', at: 'ASS 14 (1881) 569, over ROMANI PONTIFICIS' },
+  { pattern: 'LITTERAE\\s+MOTU\\s+PROPRIO', prints: 'LITTERAE MOTU PROPRIO', at: 'ASS 15 (1882) 603, over ET CONSTITUTIO R. PONTIFICIS' },
+  { pattern: 'L\\s?TT\\s?E\\s?RA\\s?[ER]?\\s+ROMANI\\s+PONTIFICIS', prints: 'L TT E RA R ROMANI PONTIFICIS', at: "ASS 16 (1883) 557, the OCR's garble of LITTERAE ROMANI PONTIFICIS" },
+  { pattern: 'LITTERAE\\s+R(?:OMANI|\\.)\\s*PONTIFICIS', prints: 'LITTERAE ROMANI PONTIFICIS', at: 'ASS 16 (1883) 557, and 17-19' },
+  { pattern: 'LITTERAE\\s+R(?:OMANI|\\.)\\s*PONTIFICIS', prints: 'LITTERAE R. PONTIFICIS', at: 'ASS 16 (1883) 557, and 17-19' },
+  { pattern: 'LITTERAE\\s+APOSTOLICAE', prints: 'LITTERAE APOSTOLICAE', at: 'ASS 10 (1877) 616, and 11' },
+  { pattern: 'Litterae\\s+Apostolicae\\s*$', prints: 'Litterae Apostolicae', at: 'ASS 9 (1876) 669, over SS. D. Ii. P. Papae IX.' },
+];
+const PAPAL_HEAD_RE = new RegExp(`^\\s*(?:\\d+\\s+)?(${[...new Set(PAPAL_HEAD_FORMS.map((f) => f.pattern))].join('|')})\\.?`);
 /**
  * A dicastery heading, which ends the pope's part. The abbreviated forms end in a stop
  * (`EX S. C. CONCILII`, ASS 33 (1900) 762; `EX S.APOSTOLICA POENITENTIARIA`, ASS 1 (1865)
