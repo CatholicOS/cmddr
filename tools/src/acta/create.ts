@@ -31,7 +31,7 @@ import { mintId, mintProvisionalId } from '../ids.js';
 import { POPES } from '../mappings/pontiffs.js';
 import { categoryForHeading, type ActaCategory, type GenreClass } from './categories.js';
 import { ACTA_HOLDS, ACTA_INDEX_CORRECTIONS, ACTA_REPRINTS, ACTA_SHARED_PAGES, curationKey, overrideKey } from './curation.js';
-import { ACTA_FIXTURES_RETRIEVED, sourceOfEntry } from './join.js';
+import { ACTA_FIXTURES_RETRIEVED, citeKey, sourceOfEntry } from './join.js';
 import {
   POPE_ISSUERS, incipitSlug, isMonthOnly, shiftDate, titleHasToponym, type ActaCandidate, type ActaMatchResult,
 } from './match.js';
@@ -395,7 +395,10 @@ export function createFromActa(
   for (const e of result.unknownPope) hold(e, 'pope-not-harvested', `no issuer for the pope heading '${e.pope}'`);
   for (const e of result.reprints) {
     const row = ACTA_REPRINTS[overrideKey(e)]!;
-    hold(e, 'reprint', `the ${row.kind === 'reissue' ? 'later printing' : 'first printing, superseded by the corrigendum'} of an act the Acta print twice; the citation of record is ${row.citationOf.replace(/^AAS:(\d+):(\d+)$/, (_, v, pg) => `AAS ${v} (${Number(v) + 1908}) ${pg}`)} (ACTA_REPRINTS)`);
+    // The citation of record is printed as a citation and not as its key, in either series
+    // (citeKey, join.ts): an ASS row -- `ASS:41:425` for *Sapienti consilio* -- reads `ASS 41
+    // (1908) 425` in the hold note the era reports print beside their AAS column.
+    hold(e, 'reprint', `the ${row.kind === 'reissue' ? 'later printing' : 'first printing, superseded by the corrigendum'} of an act the Acta print twice; the citation of record is ${citeKey(row.citationOf)} (ACTA_REPRINTS)`);
   }
 
   for (const u of result.unmatched) {

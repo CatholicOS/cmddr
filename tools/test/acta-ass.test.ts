@@ -24,7 +24,7 @@ describe('assDate (ass volumes spec §3): the three spellings of the ASS datelin
     expect(assDate('Datum Romae apud Sanctum Petrum, die xxin Martii MCMViii, Pontificatus Nostri anno quinto.', { from: 1908, to: 1908 })).toBe('1908-03-23');
     expect(assDate('Datum Romae apud S. Petrum, die xxxi Martii MCMVIÌI, Pontificatus Nostri anno quinto.', { from: 1908, to: 1908 })).toBe('1908-03-31');
   });
-  it('reads the year the constitutions spell in ordinal words before the day', () => {
+  it('does not read the Kalends formula the constitutions spell in ordinal words: null, so the act is a defect a curated reading answers (ASS 41 (1908) 425, 619)', () => {
     expect(assDate('Datum Romae apud Sanctum Petrum anno Incarnationis Dominicae millesimo nongentesimo octavo, tertio Kalendas Iulias, Pontificatus Nostri anno quinto.', { from: 1908, to: 1908 })).toBeNull();
     // The Kalends form is not read by rule (one act in the sample, *Sapienti consilio*): null, so the tool emits a defect and a curated reading supplies the date.
   });
@@ -300,6 +300,79 @@ describe('the first curation round: the heading shapes the five volumes print', 
       ['EPISTOLA', '1908-04-24', 'Studiosa erga Iesu Christi Vicarium voluntas Argentinorum, Nobis', 'PIUS PP. x'],
     ]);
     expect(entries[1]!.description).toBe('Qua Pontifex gratias agit ob comparatam domum pro Inter- nuntio Apostolico Reipublicae Argentinae.');
+  });
+  /** A volume of `page - 1` blank pages and this one, so that the running header the page prints is the PDF page (headerAgrees, as ASS 12 (1879) 97 above). */
+  const atPage = (page: number, lines: string[]): string[] => [...Array.from({ length: page - 1 }, () => ''), lines.join('\n')];
+  it('reads the class tail `in forma brevis` with a lower-case b as the same class the other volumes print with a capital one (ASS 23 (1890) 437 against ASS 33 (1900) 3, 129, 198, 577)', () => {
+    const lines = [
+      '                                                                                                                  437',
+      '  LITTERAE in forma brevis Sanctissimi D. N. Leonis XIII quibus indulgen\u00ad',
+      '          tiae conceduntur, occasione qua solemnia fiunt in honorem s. Aloisii',
+      '          Gonzagae Xl Kalendas iulias huius anni, elapso, ab eius morte, spatio',
+      '          trium saeculorum.',
+      '',
+      '',
+      '           Opportune quidem et auspicato contingit, ut XI kalendas',
+      ' iulias hoc anno sacra solemnia in honorem SANCTI ALOISII GON\u00ad',
+      '',
+      'exhibitae vel ostensae. Datum Romae apud S. Petrum sub annulo Piscatoris die I Ianuarii MDCCCXCI. Pontificatus Nostri anno XIII.',
+    ];
+    const { entries, defects } = scanVolume(atPage(437, lines), { volume: 23, year: 1890, yearTo: 1891, lastBodyPage: 437 });
+    expect(defects).toEqual([]);
+    expect(entries.map((e) => [e.category, e.page, e.date])).toEqual([['LITTERAE IN FORMA BREVIS', 437, '1891-01-01']]);
+    // The tail is the class's, so the description begins after it and not with `in forma brevis`.
+    expect(entries[0]!.description).toBe('Sanctissimi D. N. Leonis XIII quibus indulgen\u00ad tiae conceduntur, occasione qua solemnia fiunt in honorem s. Aloisii Gonzagae Xl Kalendas iulias huius anni, elapso, ab eius morte, spatio trium saeculorum.');
+    // The same heading with the capital B the other four print reads the same class.
+    const capital = lines.map((l) => l.replace('in forma brevis', 'in forma Brevis'));
+    expect(scanVolume(atPage(437, capital), { volume: 23, year: 1890, yearTo: 1891, lastBodyPage: 437 }).entries.map((e) => e.category)).toEqual(['LITTERAE IN FORMA BREVIS']);
+  });
+  it('reads the opening past a greeting whose last words share the opening\'s line and which GREETING_RE does not close on (ASS 23 (1890) 449: `Benedictionem. Praeclarum studium, quo incensi estis, ut ex`)', () => {
+    const lines = [
+      '                                                                                                                  449',
+      '',
+      ' LITTERAE SSmi D. N. Leonis XIII ad Eminentissimum Parocchi, Vicarium',
+      '          Urbis, et ad curatores saecularium solemnium s. Gregorii Magni, ob',
+      '          delatam ei ante annos 1300 summam Ecclesiae potestatem.',
+      '',
+      '',
+      '         Dilecte Fili Noster, et Dilecti Filii, Salutem et Apostolicam',
+      ' Benedictionem. Praeclarum studium, quo incensi estis, ut ex',
+      ' vestris litteris agnovimus, ad memoriam celebrandam S. Gre\u00ad',
+      ' gorii Primi, huius Romanae Ecclesiae Antistitis, saeculo tertiode\u00ad',
+      '',
+      '  Datum Romae apud Sanctum Petrum die x Februarii Anno MDCccxci Pontificatus Nostri Decimotertio.',
+    ];
+    const { entries, defects } = scanVolume(atPage(449, lines), { volume: 23, year: 1890, yearTo: 1891, lastBodyPage: 449 });
+    expect(defects).toEqual([]);
+    expect(entries.map((e) => [e.opening, e.evidence.opening])).toEqual([[
+      'Praeclarum studium, quo incensi estis, ut ex vestris',
+      'Praeclarum studium, quo incensi estis, ut ex',
+    ]]);
+  });
+  it('reads the opening past a greeting broken before its `salutem`, whose first line the greeting vocabulary does not carry (ASS 41 (1908) 12: `Augustissime et potentissime Imperator, / salutem et prosperitatem.`)', () => {
+    const lines = [
+      '12                                                      Epistola',
+      '',
+      '                                                EPISTOLA',
+      'Qua Pontifex grati animi sensus profitetur erga imperatorem',
+      '       Sinarum.',
+      '',
+      '          AUGUSTISSIMO POTENTISSIMOQUE IMPERATORI SINARUM',
+      '                                                                                              PEKINUM',
+      '                                                 PIUS PP. x',
+      '                     Augustissime et potentissime Imperator,',
+      '                                     salutem et prosperitatem.',
+      '',
+      '       Quibus Nos litteris septuagesimum aetatis annum faustum',
+      'et felicem Maiestati Suae Imperatrici Sinarum ominabamur,',
+      '',
+      '   Datum Romae apud S. Petrum, die VIII Iunii MDCCCCV, Pontificatus Nostri anno secundo.',
+    ];
+    const { entries, defects } = scanVolume(atPage(12, lines), { volume: 41, year: 1908, yearTo: 1908, lastBodyPage: 12 });
+    expect(defects).toEqual([]);
+    expect(entries.map((e) => [e.category, e.date, e.opening])).toEqual([[
+      'EPISTOLA', '1905-06-08', 'Quibus Nos litteris septuagesimum aetatis annum faustum et',
+    ]]);
   });
   it('never opens an act on a running head with a trailing page number, whatever the body names (ASS 33 (1900) 201: `LITTERAE 201` over `Benedictus XIII Pontifex Maximus`; ASS 1 (1865) 195: `ALLOCUTIO SS. D. N. PII PAPAE IX. 195`)', () => {
     const pages = [

@@ -121,9 +121,16 @@ export function assDate(text: string, span: { from: number; to: number }): strin
   // year 1900 additively (`MCM` → `MDCCCC`, ASS 33 (1900) 129, 348: latinDate reads a roman
   // year of four letters or more, and 1900 is the one year of the series three letters
   // spell); repair the day token after `die` (pass 1) and any numeral-shaped token of four
-  // letters or more that needs a repair (pass 2: a year -- `MDCGCC`, `MCMVHI` -- never a
-  // Latin word, which the length and the need for a repair exclude; two passes, since one
-  // global regex would consume `Novembris anno` and skip the year after it).
+  // letters or more that needs a repair (pass 2: a year -- `MDCGCC`, `MCMVHI`; two passes,
+  // since one global regex would consume `Novembris anno` and skip the year after it).
+  // Pass 2 is *not* guarded by "no Latin word is spelt in these letters": `nihil`, `mihi`
+  // and `hinc` are, and each would be rewritten. What bounds it is where it runs and what
+  // reads the result. It runs over a dateline alone, whose `Pontificatus Nostri …` tail is
+  // already stripped above, so the words it can meet are the dating formula's; and
+  // `latinDate` takes a repaired token only in the day and year positions of that formula,
+  // after which `inSpan` rejects any year outside the volume's span. A word rewritten
+  // anywhere else in the line is never read (`Datum Romae apud S. Petrum, nihil, die 3 Maii
+  // 1900.` still reads 1900-05-03).
   const needsRepair = /[ghnìíîïj]/i;
   // The trailing `\b` a plain ASCII word boundary would use breaks a token at an accented
   // letter (`Ì`, not a `\w` character to the engine), truncating `MCMVIÌI` to `MCMVI` before
@@ -179,11 +186,14 @@ const PONTIFICATUS_RE = /Pontificatus\s+[NnÑ]ostri|(?:del|Del)\s+Nostro\s+Ponti
 /**
  * The class headings a papal act opens with in the ASS, longest first so that `EPISTOLA
  * ENCYCLICA` is read before `EPISTOLA` (spec §3; extended only by what a sample volume
- * prints, each addition quoted). `LITTERAE in forma Brevis` is matched case-insensitively
- * on its tail.
+ * prints, each addition quoted). The tail `in forma Brevis` is not one of them but an
+ * optional group of HEADING_RE below, which reads its `B` in either case because the
+ * sample prints both: `LITTERAE in forma Brevis` (ASS 33 (1900) 3, 129, 198, 577) and
+ * `LITTERAE in forma brevis Sanctissimi D. N. Leonis XIII quibus indulgen-/tiae
+ * conceduntur` (ASS 23 (1890) 437, the one line of the five volumes that prints it so).
  */
 export const CLASS_HEADINGS: readonly string[] = [
-  'EPISTOLA ENCYCLICA', 'LITTERAE ENCYCLICAE', 'LITTERAE APOSTOLICAE', 'LITTERAE DECRETALES',
+  'EPISTOLA ENCYCLICA', 'LITTERAE ENCYCLICAE', 'LITTERAE APOSTOLICAE',
   'CONSTITUTIO APOSTOLICA', 'MOTU PROPRIO', 'ALLOCUTIO', 'EXHORTATIO',
   // The sample prints the chirograph's heading as `CHIROGRAPHUM` (ASS 33 (1900) 714), not the spec's `CHIROGRAPHUS`; both listed.
   'CHIROGRAPHUM', 'CHIROGRAPHUS', 'BREVE',
@@ -195,7 +205,7 @@ export const CLASS_HEADINGS: readonly string[] = [
 const headingPattern = (h: string): string => h.split(' ').map((w, i) => (i === 0 ? w : `(?:${w}|${w[0]}${w.slice(1).toLowerCase()}|${w.toLowerCase()})`)).join('\\s+');
 /** The OCR's spellings of a class word, each quoted: `IITTERAE` for `LITTERAE` (ASS 33 (1900) 3, 643; three lines in the sample). */
 const HEADING_OCR: readonly [RegExp, string][] = [[/^(\s*)IITTERAE\b/, '$1LITTERAE']];
-const HEADING_RE = new RegExp(`^\\s*(?:\\d[\\dOoiIla]{0,3}\\s+)?(?:ACTA ROMANI PONTIFICIS\\s+)?(${CLASS_HEADINGS.map(headingPattern).join('|')})(\\s+in forma Brevis)?\\b\\.?(.*)$`);
+const HEADING_RE = new RegExp(`^\\s*(?:\\d[\\dOoiIla]{0,3}\\s+)?(?:ACTA ROMANI PONTIFICIS\\s+)?(${CLASS_HEADINGS.map(headingPattern).join('|')})(\\s+in forma [Bb]revis)?\\b\\.?(.*)$`);
 /**
  * A page number on a class heading's line, leading (`274 EPISTOLA ENCYCLICA`, ASS 33
  * (1900); `194 ALLOCUTIO SS. D. N. PII PAPAE IX.`, ASS 1 (1865)) or trailing (`LITTERAE
@@ -253,7 +263,9 @@ const GREETING_RE = /^\s*(?:Venerabil\w+\s+Frat\w+|Dilect\w+\s+Fili\w*|Signor\s+
  * The greeting set on the opening's own line, the opening after it: `Dilecti filii, salutem
  * et Apostolicam benedictionem. Saecu­` (ASS 33 (1900) 577), `Dilecte Fili, salutem et
  * Apostolicam Benedictionem. — De` (ASS 33 641), `Benedictionem. Praeclarum studium` (ASS
- * 23 (1890) 449).
+ * 23 (1890) 449). The first two GREETING_RE matches as a greeting, so pastPreamble skips
+ * them and readAct finds them among the lines it skipped; the third it does not, so
+ * pastPreamble stops there and readAct tests that stop line too (readAct, step 3).
  */
 const INLINE_GREETING_RE = /^\s*(.*?\b(?:[Bb]enedictionem|[Bb]énédiction\s+Apostolique)\.)\s*(?:[—–-]\s*)?([A-Za-z«<(].*)$/;
 /** A line set in capitals and no lower-case letter (a footnote mark `(i)` aside): the addressee block of ASS 41 (`VENERABILI FRATRI / IOANNI M. FARLEY ARCHIEPISCOPO NEO-EBORACENSIUM / NEO-EBORACUM`, p. 495), the caps by-line of ASS 12 (`AD PATRIARCHAS PRIMATES …`, p. 97; `… SSMI REDEMPTORIS (i).`, p. 273). */
@@ -285,6 +297,13 @@ const pastPreamble = (lines: readonly string[], from: number, limit: number): nu
       continue;
     }
     if (l.trim() === '' || GREETING_RE.test(l) || isCaps(l)) { k++; continue; }
+    // A greeting broken before its `salutem`, whose first line the vocabulary of
+    // GREETING_RE does not carry: `Augustissime et potentissime Imperator, / salutem et
+    // prosperitatem.` (ASS 41 (1908) 12, where p. 18 sets the same greeting on one line
+    // and GREETING_RE reads it whole). Both lines are preamble only when the continuation
+    // is a greeting line of its own and the two read together are one greeting, so a line
+    // of the act's own text is never swallowed by the line that follows it.
+    if (k + 1 < limit && GREETING_RE.test(lines[k + 1]!) && GREETING_RE.test(joinBreaks([l, lines[k + 1]!]))) { k += 2; continue; }
     break;
   }
   return k;
@@ -487,10 +506,14 @@ function readAct(pages: readonly string[], anchor: Anchor, floor: Located | null
   const sal = salutationAfter(hl, i, bodyEnd);
   if (sal !== null) { salutation = hl[sal]!.trim(); j = sal + 1; }
   // The preamble after the salutation (pastPreamble), except that a greeting line with the
-  // opening after it (INLINE_GREETING_RE) is the opening's line.
+  // opening after it (INLINE_GREETING_RE) is the opening's line -- the line pastPreamble
+  // *stops* at included, since a greeting whose last words GREETING_RE does not close on
+  // is exactly the line it stops at (`Benedictionem. Praeclarum studium, quo incensi
+  // estis, ut ex`, ASS 23 (1890) 449; the opening would otherwise be read from the
+  // greeting's last word).
   let inline: string | null = null;
   const past = pastPreamble(hl, j, bodyEnd);
-  const withOpening = hl.slice(j, past).findIndex((l) => INLINE_GREETING_RE.test(l) && GREETING_RE.test(l.match(INLINE_GREETING_RE)![1]!));
+  const withOpening = hl.slice(j, Math.min(past + 1, bodyEnd)).findIndex((l) => INLINE_GREETING_RE.test(l) && GREETING_RE.test(l.match(INLINE_GREETING_RE)![1]!));
   if (withOpening >= 0) { j += withOpening; inline = hl[j]!.match(INLINE_GREETING_RE)![2]!; } else j = past;
   // The opening: the first eight words from the opening line onward (line breaks joined,
   // the guillemets of ASS 1 dropped), from the text after an inline greeting when the

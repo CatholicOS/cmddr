@@ -534,13 +534,14 @@ lines each rests on (spec §3). `{year}` is the first year of the volume's span.
 | ASS 33 (1900–01, Leo XIII) | `ass-33-1900.*` | **2026-09-21** | 768 | 761–768 | 18 | 10 | 14 / 8 |
 | ASS 41 (1908, Pius X) | `ass-41-1908.*` | **2026-09-21** | 810 | 799–810 | 27 | 18 | 27 / 10 |
 
-Scanned on 2026-09-21 (`npm run scan-ass -- sample`, after the first curation round of
+Scanned on 2026-09-22 (`npm run scan-ass -- sample`, re-run after the final review's fixes
+to the heading and greeting rules; first scanned 2026-09-21, after the curation round of
 phase 2c-i Task 4). The summa's papal part, from its heading to the first dicastery heading
 as the tool printed them, and the curated readings (`ASS_READINGS`, `tools/src/acta/curation.ts`)
 keyed to each volume: ASS 1: no papal heading — the 1865 summa lists the pope's acts under
 the dicasteries (`EX ACTIS CONSISTORIALIBUS`, `EX SECRETARIA BREVIUM`), so the check is
 vacuous, and the scanner reads no act (the allocution of 25 September 1865 at p. 193 is headed
-`ALLOCVTIO`, the two letters apostolic at pp. 578 and 745 `LITERAE APOSTOLICAE` after an
+`ALLOCVTIO`, the two letters apostolic at pp. 578 and 744 `LITERAE APOSTOLICAE` after an
 editorial preface), so its three acts are readings under the ruling that a reading answers a
 finding when a volume's scan and summa are both empty; 3 readings. ASS 12: `LITTERAE ET ALLOCUTIONES` … `EX ACTIS CONSISTORIALIBUS`;
 1 reading. ASS 23: `LITTERAE ET ACTA ROM. PONTIFICIS` … `EX ACTIS CONSISTORIALIBUS` (summa p. 753

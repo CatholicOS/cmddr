@@ -28,7 +28,7 @@ mode at the OCR quality of AAS 1909–1930.
 |---|---|---|---|---|
 | ASS 12 | 1879 | Leo XIII | *Summa actorum quae in hoc volumine XII continentur* (pp. 647–653), then an *Index generalis conclusionum* (pp. 654–671, a subject index) | `LITTERAE ET ALLOCUTIONES APOSTOLICAE`: ≈ 6 rows |
 | ASS 33 | 1900–01 | Leo XIII | *Summa actorum* (pp. 761–768) | `LITTERAE ET ACTA R. PONTIFICIS`: ≈ 11 rows |
-| ASS 41 | 1908 | Pius X | *Index analyticus* (pp. 799–809) | `ACTA ROMANI PONTIFICIS`: ≈ 33 rows |
+| ASS 41 | 1908 | Pius X | *Index analyticus* (pp. 799–810) | `ACTA ROMANI PONTIFICIS`: ≈ 33 rows |
 
 The phase-1 spec's note that the ASS "end in a subject index" (measured on ASS 23) saw the
 *Index generalis conclusionum* and not the *Summa actorum* before it; every volume measured
@@ -122,11 +122,23 @@ left `????-??-??` for a curated reading (§6) that quotes the summa's row, which
 allocution's date; marked `anchor: 'heading'`.
 
 **Opening.** From the anchor, walk back to the nearest preceding **class heading**: a caps
-line from a fixed list — `EPISTOLA ENCYCLICA`, `LITTERAE ENCYCLICAE`, `LITTERAE
-APOSTOLICAE`, `LITTERAE`, `LITTERAE in forma Brevis`, `EPISTOLA`, `CONSTITUTIO APOSTOLICA`,
-`MOTU PROPRIO`, `BREVE`, `EXHORTATIO`, `ALLOCUTIO`, `CHIROGRAPHUS` (extended only by what
-the sample prints, each addition quoted) — that is **not a running head**: a running head
-is the class alone beside a page number at the top of a page, an opening carries the pope's
+line from a fixed list — restated on 2026-09-22 from the measurement, so that it is
+`CLASS_HEADINGS` (`ass.ts`) word for word: `EPISTOLA ENCYCLICA`, `LITTERAE ENCYCLICAE`,
+`LITTERAE APOSTOLICAE`, `CONSTITUTIO APOSTOLICA`, `MOTU PROPRIO`, `ALLOCUTIO`, `EXHORTATIO`,
+`CHIROGRAPHUM`, `CHIROGRAPHUS`, `BREVE`, `LETTERA ENCICLICA`, `LETTERA`, `LITTERAE`,
+`EPISTOLA`, longest first so that `EPISTOLA ENCYCLICA` is read before `EPISTOLA`. The two
+Italian forms are the sample's own (`LETTERA Enciclica del Papa Leone XIII …`, ASS 23
+(1890) 193; `LETTERA / DI / SUA SANTITÀ PAPA LEONE XIII`, ASS 12 (1879) 3), and
+`CHIROGRAPHUM` is how the sample spells the chirograph (ASS 33 (1900) 714) where this spec
+first wrote `CHIROGRAPHUS`; both are listed, and neither `CHIROGRAPHUS` nor the `LITTERAE
+DECRETALES` this spec also named occurs in any of the five volumes — the decretals heading
+was struck from the code on 2026-09-22 for that reason (0 occurrences in the five store
+texts; the only `decretales` are in running prose, which cannot match a caps class word).
+`LITTERAE in forma Brevis` is not a member of the list but an optional tail on it, read with
+either case of its `B` because the sample prints both (`LITTERAE in forma Brevis`, ASS 33
+(1900) 3, 129, 198, 577; `LITTERAE in forma brevis`, ASS 23 (1890) 437). The list is
+extended only by what the sample prints, each addition quoted. The heading must **not be a
+running head**: a running head is the class alone beside a page number at the top of a page, an opening carries the pope's
 name or a description on the same or the following lines. The walk is bounded by **the
 previous anchor** — an act's heading stands after the act before it closes, so a walk never
 leaves its own act (`readAct`, `ass.ts`; corrected 2026-09-22 from the "40 lines" this spec
@@ -288,15 +300,17 @@ ASS 33 p. 193, whose dateline the OCR broke. 4 scanned acts the summa does not l
 of them dicastery-part acts. No volume shows a page offset: every `header-mismatch` is the
 OCR's reading of the right number (§4's second question, answered yes).
 
-**The join (§3).** Of the 85 entries, **76 fall in a harvested category** and **58 matched**
-(76.3 %) — 54 by the unique rule, **4 by the opening rule**, 0 by toponym, 0 curated — with
+**The join (§3).** Of the 85 entries, **76 fall in a harvested category** and **57 matched**
+(75.0 %) — 53 by the unique rule, **4 by the opening rule**, 0 by toponym, 0 curated — with
 **0 ambiguous entries** and 0 entries claimed twice. Per volume: ASS 1 0, ASS 12 5, ASS 23
-8, ASS 33 16, ASS 41 29. **18 unmatched**, every one held `series-not-created`, and **0
+7, ASS 33 16, ASS 41 29. **19 unmatched**, every one held `series-not-created`, and **0
 documents created**, as §5 intends; 9 entries are skipped as a category the registry does
-not harvest (8 allocutions, 1 chirograph). 1 `ACTA_SHARED_PAGES` row (ASS 33 p. 641, two
+not harvest (8 allocutions, 1 chirograph). Five of the 19 are the `LITTERAE in forma Brevis`
+the class rule holds against the letters shelf (the report's finding 9), ASS 23 p. 437 among
+them since the heading regex learnt that volume's lower-case `brevis` on 2026-09-22. 1 `ACTA_SHARED_PAGES` row (ASS 33 p. 641, two
 acts of 1901) and 2 `ACTA_REPRINTS` rows (AAS 1 (1909) 5 and 7, whose citation of record is
-ASS 41 (1908) 619 and 425). The reverse gap is **47** shelf documents of the volume years
-with no reference; the era holds 496 shelf documents dated 1865–1908, of which **58** now
+ASS 41 (1908) 619 and 425). The reverse gap is **48** shelf documents of the volume years
+with no reference; the era holds 496 shelf documents dated 1865–1908, of which **57** now
 carry a reference.
 
 **What 2c-ii should expect** (the report's finding 15). (a) The OCR is worst at the start:

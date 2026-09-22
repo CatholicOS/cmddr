@@ -13,7 +13,7 @@
  * Usage: npx tsx tools/ass-volumes-report.ts > docs/superpowers/reports/2026-09-22-ass-volumes-sample.md
  */
 import { readFileSync, readdirSync } from 'node:fs';
-import { ACTA_SOURCES, applyCuratedReferences, loadActaIndexes } from './src/acta/join.js';
+import { ACTA_SOURCES, applyCuratedReferences, citeRef, loadActaIndexes } from './src/acta/join.js';
 import { matchActa, POPE_ISSUERS, type ActaCandidate, type ActaUnmatched } from './src/acta/match.js';
 import { createFromActa, isActaShelf } from './src/acta/create.js';
 import { categoryForHeading } from './src/acta/categories.js';
@@ -47,7 +47,7 @@ const md = (s: string) => s.replace(/\|/g, '\\|').replace(/\n/g, ' / ').replace(
  * line does not claim the fixtures' scan date, which §1's header prints beside it.
  */
 const GENERATED_ON = '2026-09-22';
-const cite = (e: AssEntry) => `ASS ${e.volume} (${e.year}) ${e.page}`;
+const cite = (e: AssEntry) => citeRef(e);
 const candidateList = (cs: ActaCandidate[]) => cs.map((c) => `\`${c.id}\`${c.incipit ? ` (*${md(c.incipit)}*)` : ''}`).join(', ') || '—';
 const of = (k: string) => entries.filter((e) => `ass-${e.volume}` === k);
 const pct = (a: number, b: number) => (b === 0 ? '—' : `${((a / b) * 100).toFixed(1)} %`);
@@ -87,6 +87,9 @@ const umNoCandidate = um.filter((u) => u.sameDate.length === 0);
 const umWithCandidate = um.filter((u) => u.sameDate.length > 0);
 const umBrevis = umWithCandidate.filter((u) => u.entry.category === 'LITTERAE IN FORMA BREVIS');
 /** The entry whose only candidates the join already gave to another entry of the same act. */
+/** Finding 9's acts, as the report names them and as the shelf files their one candidate. */
+const brevisPages = umBrevis.map((u) => `ASS ${u.entry.volume} p. ${u.entry.page}`).join(', ');
+const brevisIds = umBrevis.map((u) => `\`${u.sameDate[0]!.id.replace(/^.*\//, '')}\``).join(', ');
 const umClaimedElsewhere = umWithCandidate.filter((u) => u.sameDate.every((c) => result.matches.some((m) => m.documentId === c.id)));
 const umClassHold = umWithCandidate.filter((u) => !umBrevis.includes(u) && !umClaimedElsewhere.includes(u));
 const standing = entries.filter((e) => e.anchor !== 'reading').length;
@@ -182,7 +185,7 @@ p(`6. **The ${um.length} unmatched divide three ways, and only ${umClassHold.len
 p(`   date** (§3.3's "Same date" column is empty for every one): ASS 1's two apostolic letters of 1866, four acts of ASS 12`);
 p(`   (pp. 273, 275, 481, 588), three of ASS 23 (pp. 427, 513, 522), the indulgence brief of ASS 33 p. 401 and the`);
 p(`   Lourdes letter of ASS 41 p. 65. These are the registry's gap, not the scanner's: the act is printed, read, dated and`);
-p(`   quoted here, and the shelf has never carried it. ${umBrevis.length} are the \`LITTERAE IN FORMA BREVIS\` of ASS 33 (finding 9),`);
+p(`   quoted here, and the shelf has never carried it. ${umBrevis.length} are the \`LITTERAE IN FORMA BREVIS\` of ASS 23 and 33 (finding 9),`);
 p(`   ${umClassHold.length} are held by the class rule against an encyclical (finding 7), and ${umClaimedElsewhere.length} is the Latin printing whose one candidate the`);
 p(`   Italian printing already claimed (finding 8). Every one of the ${um.length} is held \`series-not-created\` by the creator (§4):`);
 p(`   **${creation.created.length} documents were created**, as phase 2c-i intends — the ASS joins, it does not harvest.`);
@@ -205,12 +208,16 @@ p(`   unmatched with that same document as its only candidate (§3.3). In the AA
 p(`   *Ubi arcano Dei consilio* is cited at its Latin page — and if that policy governs the ASS too, the citation should`);
 p(`   move to p. 206 and be carried by a curated reference, not by the opening rule. **Owner's call**; nothing was`);
 p(`   changed, and the pages of both printings are quoted in §2.5 and §3.3.`);
-p(`9. **The ${umBrevis.length} \`LITTERAE in forma Brevis\` of ASS 33 are a class question, not a matching failure.** ASS 33 pp. ${umBrevis.map((u) => u.entry.page).join(', ')}`);
-p(`   are headed \`LITTERAE in forma Brevis\`, which \`categories.ts\` classes \`brief\`; all four have a shelf`);
-p(`   record of the same incipit on the same date, and all four are on Leo XIII's **letters** shelf as genre \`letter\``);
-p(`   (\`quas-tu-1900\`, \`ad-catholicorum-conventum-1900\`, \`venerabilis-frater-augustinus-1900\`, \`saecularis-eventus-1901\`);`);
-p(`   none is on a briefs shelf. The candidates are printed in §3.3. Either the class belongs with the letters or the four`);
+p(`9. **The ${umBrevis.length} \`LITTERAE in forma Brevis\` of the sample are a class question, not a matching failure.** ${brevisPages}`);
+p(`   are headed \`LITTERAE in forma Brevis\` — ASS 23 p. 437 with the lower-case b that volume prints — which \`categories.ts\` classes \`brief\`; every one has exactly one shelf`);
+p(`   record of the same incipit on the same date, and every one of those is on Leo XIII's **letters** shelf as genre \`letter\``);
+p(`   (${brevisIds});`);
+p(`   none is on a briefs shelf. The candidates are printed in §3.3. Either the class belongs with the letters or the ${umBrevis.length}`);
 p(`   shelf records are misfiled — **the owner rules, and the same four words head acts in every volume of the series**.`);
+p(`   **One page of the sample is live either way**: ASS 33 p. 3 opens two acts — the Italian letter *I luttuosi avvenimenti* of 16 July 1900,`);
+p(`   which is matched, and *Quas Tu* of 8 June 1900, which this finding holds (§2.1, §3.3). Rule the class into the letters and that page`);
+p(`   carries **two matched documents**, whereupon invariant 25 withholds *both* references until an \`ACTA_SHARED_PAGES\` row is curated for`);
+p(`   \`ASS:33:3\` naming the pair, as \`ASS:33:641\` already is. The ruling is therefore one row of curation wider than it looks.`);
 p(`10. **Two of the ${readings.length} readings rest on an emendation of the OCR, and the owner should check them before they are trusted.**`);
 p(`   \`${emended[0] ?? 'ASS:33:643'}\`: the dateline prints \`Anno MDCCCCL\`, which is 1950; read as \`MDCCCCI\`, 1901 — the volume's second year, the`);
 p(`   twenty-fourth of the pontificate the same line names, and the year of the 450th anniversary the heading names.`);
@@ -276,6 +283,12 @@ for (const s of sources) {
   const es = of(s.key);
   p(`| ${s.key} (${s.year}${s.yearTo ? `–${s.yearTo}` : ''}) | ${sc.pages} | ${sc.summa.pages ? `${sc.summa.pages.from}–${sc.summa.pages.to}` : '—'} | ${sc.entries.length} | ${es.length} | ${es.filter((e) => e.anchor === 'heading').length} | ${es.filter((e) => e.anchor === 'reading').length} | ${sc.defects.length} | ${sc.summa.rows.length} | ${sc.summa.claimed.length} | ${sc.summa.unclaimed.length} | ${sc.summa.omitted.length} |`);
 }
+p();
+p(`**Reading the columns.** “From a heading” and “Readings” do not sum to “Entries”, and are not meant to: they are two of the three`);
+p(`anchors an entry can carry, and the third — the dateline, which the scanner anchors on by rule — is the majority and is not broken`);
+p(`out (${entries.filter((e) => e.anchor === 'dateline').length} of the ${entries.length} entries are \`dateline\`, ${entries.filter((e) => e.anchor === 'heading').length} \`heading\`, ${entries.filter((e) => e.anchor === 'reading').length} \`reading\`). “Scanned by rule” is the fixture's own count, taken before the loader applies the`);
+p(`readings, so “Entries” is “Scanned by rule” plus “Readings” less the readings that *replace* a scanned entry rather than add one`);
+p(`(${sum((k) => scans.get(k)!.entries.length) + readings.length - entries.length} in the sample, at ASS 41 p. 361).`);
 p();
 p('### 2.1 Acts scanned, with the lines each rests on');
 p();

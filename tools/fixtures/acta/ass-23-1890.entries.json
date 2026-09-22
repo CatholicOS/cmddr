@@ -1,6 +1,6 @@
 {
   "source": "ass-23",
-  "generated": "2026-09-21",
+  "generated": "2026-09-22",
   "text": "~/development/sources/ASS/txt/ass-23-1890.txt (768 pages)",
   "volume": 23,
   "year": 1890,
@@ -104,12 +104,12 @@
       "year": 1890,
       "page": 437,
       "pope": "Leo XIII",
-      "category": "LITTERAE",
+      "category": "LITTERAE IN FORMA BREVIS",
       "date": "1891-01-01",
       "incipit": null,
       "quoted": false,
       "toponym": null,
-      "description": "in forma brevis Sanctissimi D. N. Leonis XIII quibus indulgen­ tiae conceduntur, occasione qua solemnia fiunt in honorem s. Aloisii Gonzagae Xl Kalendas iulias huius anni, elapso, ab eius morte, spatio trium saeculorum.",
+      "description": "Sanctissimi D. N. Leonis XIII quibus indulgen­ tiae conceduntur, occasione qua solemnia fiunt in honorem s. Aloisii Gonzagae Xl Kalendas iulias huius anni, elapso, ab eius morte, spatio trium saeculorum.",
       "raw": "LITTERAE in forma brevis Sanctissimi D. N. Leonis XIII quibus indulgen­ / tiae conceduntur, occasione qua solemnia fiunt in honorem s. Aloisii / Gonzagae Xl Kalendas iulias huius anni, elapso, ab eius morte, spatio / trium saeculorum.",
       "opening": "Opportune quidem et auspicato contingit, ut XI kalendas",
       "anchor": "dateline",
@@ -134,12 +134,12 @@
       "toponym": null,
       "description": "SSmi D. N. Leonis XIII ad Eminentissimum Parocchi, Vicarium Urbis, et ad curatores saecularium solemnium s. Gregorii Magni, ob delatam ei ante annos 1300 summam Ecclesiae potestatem.",
       "raw": "LITTERAE SSmi D. N. Leonis XIII ad Eminentissimum Parocchi, Vicarium / Urbis, et ad curatores saecularium solemnium s. Gregorii Magni, ob / delatam ei ante annos 1300 summam Ecclesiae potestatem.",
-      "opening": "Benedictionem. Praeclarum studium, quo incensi estis, ut ex",
+      "opening": "Praeclarum studium, quo incensi estis, ut ex vestris",
       "anchor": "dateline",
       "evidence": {
         "heading": "LITTERAE SSmi D. N. Leonis XIII ad Eminentissimum Parocchi, Vicarium / Urbis, et ad curatores saecularium solemnium s. Gregorii Magni, ob / delatam ei ante annos 1300 summam Ecclesiae potestatem.",
         "salutation": null,
-        "opening": "Benedictionem. Praeclarum studium, quo incensi estis, ut ex",
+        "opening": "Praeclarum studium, quo incensi estis, ut ex",
         "dateline": "Datum Romae apud Sanctum Petrum die x Februarii Anno MDCccxci Pontificatus Nostri Decimotertio.",
         "header": "449"
       }

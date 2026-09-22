@@ -567,8 +567,8 @@ each row quotes what the fascicles print); the later printing's entry is a *repr
 |---|---|---|---|
 | AAS 112 (2020) 479 | AAS 104 (2012) 482 | reissue | `2011 Iul. 3 « Ibi vacabimus». – Venerabili Dei Servo Ioanni Scheffler, Bea- / torum honores decernuntur . . . . . . . . . . . . 482` — ` 3 Iul. 2011 « Ibi vacabimus ». Venerabili Servo Dei Ioanni Scheffler Bea - / torum honores decernuntur . . . . . . . . . . . . 479` |
 | AAS 23 (1931) 41 | AAS 22 (1930) 483 | reissue | ` » » » Quo maiori rerum. - Dis tracto territorio e vicariatu apo­ / stolico de Mariannhill erigitur praefectura apostolica / de umtata 483` — `1930 Martii 30 Quo maiori rerum. - Distracto territorio e vicariatu apo­ / stolico de Mariannhill erigitur praefectura apostolica / de TTmtata 41` |
-| AAS 1 (1909) 7 | ASS:41:425 | reissue | `CONSTITUTIO APOSTOLICA / SS. D. N. Pii div. prov. Papae X, de Romana Curia.` — `1908 Ian. 29 Constitutio « Sapienti Consilio » / DE ROMANA CURIA.` |
-| AAS 1 (1909) 5 | ASS:41:619 | reissue | `ACTA ROMANI PONTIFICIS / CONSTITUTIO APOSTOLICA / De promulgatione legum et evulgatione actorum S. Sedis.` — ` Sept. Constitutio « Promulgandi », de promulgatione legum / et evulgatione actorum S. Sedis` |
+| AAS 1 (1909) 7 | ASS 41 (1908) 425 | reissue | `CONSTITUTIO APOSTOLICA / SS. D. N. Pii div. prov. Papae X, de Romana Curia.` — `1908 Ian. 29 Constitutio « Sapienti Consilio » / DE ROMANA CURIA.` |
+| AAS 1 (1909) 5 | ASS 41 (1908) 619 | reissue | `ACTA ROMANI PONTIFICIS / CONSTITUTIO APOSTOLICA / De promulgatione legum et evulgatione actorum S. Sedis.` — ` Sept. Constitutio « Promulgandi », de promulgatione legum / et evulgatione actorum S. Sedis` |
 
 Entries of the era so held: AAS 1 (1909) 7 (*Sapienti Consilio*); AAS 1 (1909) 5 (*Promulgandi*); AAS 23 (1931) 41 (*Quo maiori rerum*).
 
@@ -1523,8 +1523,8 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 
 | Reference | Pope | Date | Category | Entry | Candidates | Note |
 |---|---|---|---|---|---|---|
-| AAS 1 (1909) 7 | Pius X | 1908-06-29 | Constitutiones Apostolicae | *Sapienti Consilio* | — | the later printing of an act the Acta print twice; the citation of record is ASS:41:425 (ACTA_REPRINTS) |
-| AAS 1 (1909) 5 | Pius X | 1908-09 | Constitutiones Apostolicae | *Promulgandi* | — | the later printing of an act the Acta print twice; the citation of record is ASS:41:619 (ACTA_REPRINTS) |
+| AAS 1 (1909) 7 | Pius X | 1908-06-29 | Constitutiones Apostolicae | *Sapienti Consilio* | — | the later printing of an act the Acta print twice; the citation of record is ASS 41 (1908) 425 (ACTA_REPRINTS) |
+| AAS 1 (1909) 5 | Pius X | 1908-09 | Constitutiones Apostolicae | *Promulgandi* | — | the later printing of an act the Acta print twice; the citation of record is ASS 41 (1908) 619 (ACTA_REPRINTS) |
 | AAS 23 (1931) 41 | Pius XI | 1930-03-30 | Litterae Apostolicae | *Quo maiori rerum* | — | the later printing of an act the Acta print twice; the citation of record is AAS 22 (1930) 483 (ACTA_REPRINTS) |
 
 </details>

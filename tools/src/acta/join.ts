@@ -178,6 +178,31 @@ export const sourceKeyOf = (e: { series?: string; volume?: number; year: number;
 export const sourceOfEntry = (e: { series?: string; volume?: number; year: number; part?: 'I' | 'II' }): ActaSource | undefined => actaSource(sourceKeyOf(e));
 
 /**
+ * A reference as every report and the harvest log print it: `AAS 98 (2006) 308`, `AAS 9-I
+ * (1917) 5`, `ASS 41 (1908) 425`. The series is named because the registry now cites two of
+ * them, and the year because neither series' volume number carries it.
+ */
+export const citeRef = (a: { series?: string; volume?: number; part?: 'I' | 'II'; year: number; page: number | string }): string =>
+  `${a.series ?? 'AAS'} ${a.volume}${a.part ? `-${a.part}` : ''} (${a.year}) ${a.page}`;
+
+/**
+ * The same for a *keyed* reference -- `AAS:104:482`, `AAS:9-I:5`, `ASS:41:425`: the shape
+ * `overrideKey` and the shared-page table use, series first (the AAS's other, bare key is
+ * `year:page`, which carries its own year and is not read here). The year the series
+ * decides: an AAS volume's is its number plus 1908, an ASS volume's is its source row's,
+ * since the ASS numbers run from 1865 over 22 two-year volumes and no arithmetic gives it.
+ * A key of a volume no source names is returned as it stands -- nothing is guessed -- so a
+ * 2c-ii key printed before its source row exists reads as the key.
+ */
+export const citeKey = (key: string): string => {
+  const m = key.match(/^(AAS|ASS):(\d+)(?:-(I|II))?:(\d+)$/);
+  if (m === null) return key;
+  const [, series, volume, part, page] = m;
+  const year = series === 'ASS' ? actaSource(`ass-${Number(volume)}`)?.year : Number(volume) + 1908;
+  return year === undefined ? key : citeRef({ series: series!, volume: Number(volume), ...(part ? { part: part as 'I' | 'II' } : {}), year, page: page! });
+};
+
+/**
  * The date the ten phase-1 index fixtures were fetched (tools/fixtures/acta/README.md).
  * Kept for the tests that pin it; every source carries its own `retrieved` above.
  */
@@ -210,6 +235,14 @@ export function applyAssReadings(scan: Pick<AssScan, 'entries' | 'defects' | 'su
   for (const [key, row] of Object.entries(table)) {
     if (!key.startsWith(`ASS:${volume}:`)) continue;
     const page = Number(key.split(':')[2]);
+    // 2c-ii: the key `ASS:{volume}:{page}` cannot name *which* entry it replaces when the
+    // page opens two, and `findIndex` therefore takes the first in page order. The sample
+    // has one live instance -- ASS 33 p. 3, where the Italian letter *I luttuosi
+    // avvenimenti* (16 July 1900) and the brief *Quas Tu* (8 June 1900) both open -- and no
+    // reading is keyed there today, so nothing is wrong yet. A second key part (the
+    // category, or the entry's ordinal on the page) is owed before a reading is written for
+    // a shared page; the same page is the one finding 9 of the sample report would make
+    // doubly matched if the owner rules the brevia into the letters.
     const at = entries.findIndex((e) => e.page === page);
     const answers = nothingScanned || at >= 0 || scan.defects.some((d) => d.page === page)
       || scan.summa.unclaimed.some((r) => r.page === page) || withinNoHeading(page);

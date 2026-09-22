@@ -33,7 +33,7 @@
  *        npx tsx tools/acta-volumes-report.ts 2003-2009 > docs/superpowers/reports/2026-09-21-acta-volumes-2003-2009.md
  */
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
-import { ACTA_SOURCES, actaSource, applyCuratedReferences, loadActaIndexes, sourceKeyOf, type ActaSource } from './src/acta/join.js';
+import { ACTA_SOURCES, actaSource, applyCuratedReferences, citeKey, citeRef, loadActaIndexes, sourceKeyOf, type ActaSource } from './src/acta/join.js';
 import { matchActa, correctedEntry, POPE_ISSUERS, isMonthOnly, type ActaCandidate, type ActaMatch, type ActaUnmatched } from './src/acta/match.js';
 import { createFromActa, isActaShelf, CREATED_CATEGORIES, NOT_CREATED, type ActaHoldRow, type HoldReason } from './src/acta/create.js';
 import { ACTA_CATEGORIES, categoryForHeading, type ActaCategory } from './src/acta/categories.js';
@@ -49,7 +49,6 @@ import type { DocumentRecord } from './src/types.js';
 // The ASS have their own report (tools/ass-volumes-report.ts); this one reads the AAS.
 const AAS_SOURCES: readonly ActaSource[] = ACTA_SOURCES.filter((s) => s.kind !== 'ass');
 /** A document's reference as the reports cite it: `AAS 75-I (1983) 877`, `ASS 33 (1900) 273`. */
-const citeRef = (a: NonNullable<DocumentRecord['acta']>) => `${a.series} ${a.volume}${a.part ? `-${a.part}` : ''} (${a.year}) ${a.page}`;
 
 const allDocs = readdirSync('data/documents').filter((f) => f.endsWith('.json'))
   .flatMap((f) => JSON.parse(readFileSync(`data/documents/${f}`, 'utf8')) as DocumentRecord[])
@@ -1557,7 +1556,8 @@ if (result.conflicts.length) {
 p();
 // Pages two matched documents cite that ACTA_SHARED_PAGES does not list: both references withheld (invariant 25).
 {
-  const refOf = (page: string) => page.replace(/^AAS:(\d+)(?:-(I|II))?:(\d+)$/, (_, v, part, pg) => `AAS ${v}${part ? `-${part}` : ''} (${Number(v) + 1908}) ${pg}`);
+  /** A keyed reference printed as a citation, in either series (citeKey, join.ts): the `Citation of record` column carries ASS keys too, and must not print one raw beside a formatted AAS one. */
+  const refOf = citeKey;
   p('### Pages two matched acts cite, withheld');
   p();
   if (result.sharedPages.length === 0) {

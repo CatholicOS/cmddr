@@ -1,6 +1,6 @@
 {
   "source": "ass-41",
-  "generated": "2026-09-21",
+  "generated": "2026-09-22",
   "text": "~/development/sources/ASS/txt/ass-41-1908.txt (810 pages)",
   "volume": 41,
   "year": 1908,
@@ -19,12 +19,12 @@
       "toponym": null,
       "description": "Qua Pontifex grati animi sensus profitetur erga imperatorem Sinarum.",
       "raw": "EPISTOLA / Qua Pontifex grati animi sensus profitetur erga imperatorem / Sinarum.",
-      "opening": "Augustissime et potentissime Imperator, salutem et prosperitatem.",
+      "opening": "Quibus Nos litteris septuagesimum aetatis annum faustum et",
       "anchor": "dateline",
       "evidence": {
         "heading": "EPISTOLA / Qua Pontifex grati animi sensus profitetur erga imperatorem / Sinarum.",
         "salutation": "PIUS PP. x",
-        "opening": "Augustissime et potentissime Imperator,",
+        "opening": "Quibus Nos litteris septuagesimum aetatis annum faustum",
         "dateline": "Datum Romae apud S. Petrum, die VIII Iunii MDCCCCV, Pontificatus Nostri anno secundo.",
         "header": "12                                                      Epistola"
       }

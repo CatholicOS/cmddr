@@ -200,13 +200,16 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // pope whose letters shelf is harvested (create.ts). The volumes spell it *Epistolae*
   // (1909 `IV. - EPISTOLAE.`, 1917 `V. - EPISTOLAE.`, 1931 `VII. - EPISTOLAE`).
   // The OCR of AAS 30 (1938) reads `BPISTTJLAE`, that of AAS 34 (1942) `EPISTULAS`.
-  // The ASS head a letter `EPISTOLA` (ASS 23 (1890) 518; ASS 41 (1908) 12, 19, 129 …) or
-  // `LITTERAE` (ASS 12 (1879) 273; ASS 33 (1900) 65, 201) -- the singular and the bare form,
-  // each an act of the letters shelf (ass volumes spec §5).
+  // The ASS head a letter `EPISTOLA` (first at ASS 23 (1890) 518; ASS 41 (1908) 12, 19,
+  // 129 …) or `LITTERAE` (first at ASS 12 (1879) 225, then ASS 23 (1890) 3 and ASS 33
+  // (1900) 3) -- the singular and the bare form, each an act of the letters shelf (ass
+  // volumes spec §5, which asks each addition for the page of its first occurrence).
   { id: 'Epistulae', headings: ['EPISTULAE', 'EPISTULA', 'EPISTOLAE', 'BPISTTJLAE', 'EPISTULAS', 'EPISTOLA', 'LITTERAE'],
     classes: [{ genre: 'letter' }], harvested: 'partly' },
-  // The ASS print the briefs among the pope's acts: `LITTERAE in forma Brevis SSmi. D. N.
-  // Leonis XIII` (ASS 33 (1900) 3, 129, 198, 577) and `BREVE` (ASS 12 (1879) 588, `BREVE quo
+  // The ASS print the briefs among the pope's acts: `LITTERAE in forma brevis Sanctissimi
+  // D. N. Leonis XIII` first at ASS 23 (1890) 437 (the one line of the sample with a
+  // lower-case b), then `LITTERAE in forma Brevis SSmi. D. N. Leonis XIII` (ASS 33 (1900)
+  // 3, 129, 198, 577); and `BREVE` (ASS 12 (1879) 588, `BREVE quo
   // Sodalitates ab adoratione perpetua SSmi Sacramenti …`; ASS 33 (1900) 401, `BREVE, quo
   // indulgentia centum dierum conceditur …`, under the running head EX ACTIS
   // CONSISTORIALIBUS); the shelf class is `brief`. Harvested partly: the briefs shelf exists
