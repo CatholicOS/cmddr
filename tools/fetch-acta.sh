@@ -47,6 +47,8 @@
 #        tools/fetch-acta.sh 1909-1925       # a range of volumes (phase 2b-iii-b: AAS 1-17, the lost page column, spec §10)
 #        tools/fetch-acta.sh text 1921       # the whole text of a volume to <store>/txt/ (phase 2b-iii-b's recovery input)
 #        tools/fetch-acta.sh text 1909-1925  # the same for a range
+#        tools/fetch-acta.sh ass sample      # the five ASS volumes of phase 2c-i (1, 12, 23, 33, 41): PDF and whole text to the ASS store
+#        tools/fetch-acta.sh ass 33          # one ASS volume (1-41); ass 1-41 for a range. Then: npx tsx tools/scan-ass.ts ass-33
 set -euo pipefail
 cd "$(dirname "$0")/.."
 mkdir -p tools/fixtures/acta
@@ -243,6 +245,58 @@ print(f'    {len(pages)} pages -> {out}')
 EOF
 }
 
+# The *Acta Sanctae Sedis* (ass volumes spec §2, phase 2c): one whole-volume OCR PDF per
+# volume on https://www.vatican.va/archive/ass/index_it.htm (`documents/ASS-33-1900-1-ocr.pdf`;
+# two names carry `+supplemento`), read off the page as the AAS names are. The PDF goes to
+# the ASS store (~/development/sources/ASS/pdf) and the whole text, in pypdf's layout mode
+# -- the mode that keeps an act's heading, salutation and incipit on lines of their own
+# (measured on ASS 12, 33 and 41, 2026-09-21) -- to <store>/txt/ass-{vol}-{year}.txt, one
+# page per form feed; {year} is the first year the file name prints. The scanner
+# (tools/scan-ass.ts) reads that text and writes the two checked-in fixtures; nothing else
+# of the volume is checked in.
+ASS_BASE='https://www.vatican.va/archive/ass'
+ASS_STORE="${ACTA_SOURCES:-$HOME/development/sources/ASS}/pdf"
+
+extract_text_layout() { # extract_text_layout <pdf> <out>
+  if [ -s "$2" ]; then echo "    cached: $2"; return 0; fi
+  mkdir -p "$(dirname "$2")"
+  python3 - "$1" "$2" <<'EOF'
+import sys
+from pypdf import PdfReader
+pdf, out = sys.argv[1], sys.argv[2]
+reader = PdfReader(pdf)
+pages = [(p.extract_text(extraction_mode='layout') or '') for p in reader.pages]
+with open(out, 'w', encoding='utf-8') as f:
+    f.write('\f'.join(pages))
+print(f'    {len(pages)} pages -> {out} (layout mode)')
+EOF
+}
+
+get_ass() { # get_ass <volume number, 1-41>
+  local vol; vol="$(printf '%02d' "$1")"
+  mkdir -p "$ASS_STORE"
+  local html="$ASS_STORE/index_it.htm"
+  [ -s "$html" ] || curl -fsSL --retry 3 --max-time 60 "$ASS_BASE/index_it.htm" -o "$html"
+  local path
+  path="$(grep -oiE "documents/ASS-$vol-[^\"']*\.pdf" "$html" | sort -u | head -n1 || true)"
+  if [ -z "$path" ]; then
+    echo "    MISSING: no volume PDF for ASS $vol on $ASS_BASE/index_it.htm" >&2
+    return 0
+  fi
+  local file year pdf
+  file="$(basename "$path")"
+  year="$(echo "$file" | sed -nE 's/^ASS-[0-9]{2}-([0-9]{4}).*/\1/p')"
+  pdf="$ASS_STORE/$file"
+  echo "  ASS $vol ($year)  ($path)"
+  if [ -s "$pdf" ]; then echo "    cached: $pdf"; else
+    local part="$pdf.part"
+    if curl -fsSL --retry 3 --max-time 900 "$ASS_BASE/$path" -o "$part"; then mv -f "$part" "$pdf"; else
+      rm -f "$part"; echo "    MISSING: $ASS_BASE/$path" >&2; return 0
+    fi
+  fi
+  extract_text_layout "$pdf" "${ASS_STORE%/pdf}/txt/ass-$vol-$year.txt"
+}
+
 get_index() { # get_index <year>
   local year="$1"
   if [ "$year" -ge 2003 ] && [ "$year" -le 2009 ]; then
@@ -322,6 +376,18 @@ get() { # get <year>
 
 MODE=fixtures
 if [ "${1:-}" = "text" ]; then MODE=text; shift; fi
+if [ "${1:-}" = "ass" ]; then
+  shift
+  ARG="${1:-sample}"
+  if [ "$ARG" = "sample" ]; then
+    for v in 1 12 23 33 41; do get_ass "$v"; done
+  elif [[ "$ARG" =~ ^([0-9]{1,2})-([0-9]{1,2})$ ]]; then
+    for v in $(seq "${BASH_REMATCH[1]}" "${BASH_REMATCH[2]}"); do get_ass "$v"; done
+  else
+    get_ass "$ARG"
+  fi
+  exit 0
+fi
 ARG="${1:-}"
 if [ "$ARG" = "sample" ]; then
   for y in 1909 1917 1931 1958 1978 2012; do get "$y"; done

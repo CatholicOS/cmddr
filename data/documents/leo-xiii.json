@@ -119,7 +119,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ci siamo grandemente",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 12,
+      "year": 1879,
+      "page": 3
+    }
   },
   {
     "id": "mag:leo-xiii/aeterni-patris-1879",
@@ -142,7 +148,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Aeterni Patris",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 12,
+      "year": 1879,
+      "page": 97
+    }
   },
   {
     "id": "mag:leo-xiii/iampridem-considerando-1879",
@@ -161,7 +173,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Iampridem considerando",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 12,
+      "year": 1879,
+      "page": 225
+    }
   },
   {
     "id": "mag:leo-xiii/placere-nobis-1880",
@@ -184,7 +202,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "ASS",
+      "volume": 12,
+      "year": 1879,
+      "page": 337
+    }
   },
   {
     "id": "mag:leo-xiii/arcanum-divinae-1880",
@@ -208,7 +232,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Arcanum Divinae",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 12,
+      "year": 1879,
+      "page": 385
+    }
   },
   {
     "id": "mag:leo-xiii/cum-hoc-sit-1880",
@@ -1866,7 +1896,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Mirifice delectati sumus",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 23,
+      "year": 1890,
+      "page": 3
+    }
   },
   {
     "id": "mag:leo-xiii/graviter-admodum-1890",
@@ -1885,7 +1921,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Graviter admodum",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 23,
+      "year": 1890,
+      "page": 129
+    }
   },
   {
     "id": "mag:leo-xiii/dall-alto-dell-apostolico-seggio-1890",
@@ -1906,7 +1948,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Dall'alto dell'Apostolico Seggio",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 23,
+      "year": 1890,
+      "page": 193
+    }
   },
   {
     "id": "mag:leo-xiii/catholicae-ecclesiae-1890",
@@ -1946,7 +1994,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Novum argumentum",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 23,
+      "year": 1890,
+      "page": 318
+    }
   },
   {
     "id": "mag:leo-xiii/in-supremo-1890",
@@ -2003,7 +2057,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Praeclarum studium",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 23,
+      "year": 1890,
+      "page": 449
+    }
   },
   {
     "id": "mag:leo-xiii/in-ipso-1891",
@@ -2043,7 +2103,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod erat maxime",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 23,
+      "year": 1890,
+      "page": 518
+    }
   },
   {
     "id": "mag:leo-xiii/rerum-novarum-1891",
@@ -2068,7 +2134,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Rerum Novarum",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 23,
+      "year": 1890,
+      "page": 641
+    }
   },
   {
     "id": "mag:leo-xiii/non-maius-1891",
@@ -4424,7 +4496,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "I luttuosi avvenimenti",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 3
+    }
   },
   {
     "id": "mag:leo-xiii/omnibus-compertum-1900",
@@ -4484,7 +4562,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Già fin dagli esordii",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 194
+    }
   },
   {
     "id": "mag:leo-xiii/ad-catholicorum-conventum-1900",
@@ -4541,7 +4625,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Qua mente",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 201
+    }
   },
   {
     "id": "mag:leo-xiii/rei-catholicae-1900",
@@ -4560,7 +4650,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Rei catholicae",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 286
+    }
   },
   {
     "id": "mag:leo-xiii/tametsi-futura-prospicientibus-1900",
@@ -4580,7 +4676,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Tametsi Futura Prospicientibus",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 273
+    }
   },
   {
     "id": "mag:leo-xiii/conditae-a-christo-1900",
@@ -4602,7 +4704,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 341
+    }
   },
   {
     "id": "mag:leo-xiii/alias-iam-1900",
@@ -4621,7 +4729,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Alias iam",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 348
+    }
   },
   {
     "id": "mag:leo-xiii/au-milieu-des-consolations-1900",
@@ -4640,7 +4754,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Au milieu des consolations",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 355
+    }
   },
   {
     "id": "mag:leo-xiii/temporis-quidem-1900",
@@ -4659,7 +4779,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Temporis quidem",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 349
+    }
   },
   {
     "id": "mag:leo-xiii/graves-de-communi-re-1901",
@@ -4679,7 +4805,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Graves de Communi Re",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 385
+    }
   },
   {
     "id": "mag:leo-xiii/in-maximis-occupationibus-1901",
@@ -4698,7 +4830,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "In maximis occupationibus",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 449
+    }
   },
   {
     "id": "mag:leo-xiii/de-ingenii-1901",
@@ -4717,7 +4855,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "De ingenii",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 641
+    }
   },
   {
     "id": "mag:leo-xiii/le-nostre-ferme-speranze-1901",
@@ -4736,7 +4880,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Le nostre ferme speranze",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 641
+    }
   },
   {
     "id": "mag:leo-xiii/saecularis-eventus-1901",
@@ -4793,7 +4943,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Nos quidem",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 642
+    }
   },
   {
     "id": "mag:leo-xiii/iucundas-scito-1901",
@@ -4812,7 +4968,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Iucundas scito",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 643
+    }
   },
   {
     "id": "mag:leo-xiii/al-compimento-delle-riforme-1901",
@@ -4850,7 +5012,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "En tout temps",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 716
+    }
   },
   {
     "id": "mag:leo-xiii/slavorum-gentem-1901",

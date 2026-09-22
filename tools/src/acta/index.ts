@@ -130,7 +130,8 @@ import { categoryForHeading, normaliseHeading } from './categories.js';
 import { labelForBracket, popeForGenitive } from './popes.js';
 
 export interface ActaEntry {
-  series: 'AAS';
+  /** The gazette: the AAS (every parsed index) or the ASS (the entries the scanner synthesises from a volume body, ass.ts). */
+  series: 'AAS' | 'ASS';
   volume: number;
   year: number;
   /** The part of a double volume (`I`/`II`, 1917 and 1983); absent otherwise. */
@@ -189,6 +190,16 @@ export interface ActaEntry {
    * the report; `page` is the act's.
    */
   printedPage?: number;
+  /**
+   * An ASS entry's first eight words after the salutation line (ass volumes spec §3): the
+   * scanner cannot know how many words the shelf's incipit has, so `incipit` is null and
+   * the matcher reads a candidate's incipit slug as a word-boundary prefix of this (match.ts).
+   */
+  opening?: string;
+  /** How an ASS entry was found: from the act's dateline, from an allocution's heading, or from a curated reading (ASS_READINGS). */
+  anchor?: 'dateline' | 'heading' | 'reading';
+  /** The lines an ASS entry's fields were read from, as extracted (ass.ts, AssEvidence). */
+  evidence?: { heading: string; salutation: string | null; opening: string; dateline: string | null; header: string };
 }
 
 /** An entry the index opened whose page the OCR lost: everything the line prints but the page (spec §10.3). */

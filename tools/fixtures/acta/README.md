@@ -1,4 +1,4 @@
-# The AAS index fixtures: the *Index generalis* PDFs of 2003–2014 and 2015–2024, and the volumes of 1909–2002
+# The AAS index fixtures: the *Index generalis* PDFs of 2003–2014 and 2015–2024, and the volumes of 1909–2002; the ASS sample (1865–1908)
 
 The extracted text of the *Index documentorum chronologico ordine digestus* of the *Acta
 Apostolicae Sedis*, one file per source, one page per form feed (`\f`), from two kinds of
@@ -512,6 +512,47 @@ lists what could not be read):
   76 (1984) 946, AAS 82 (1990) 43), withheld by the join.
 - **Acts printed twice**: *Ibi vacabimus* (AAS 104 (2012) 482 and AAS 112 (2020) 479) and
   *Deus caritas* (AAS 106 (2014) 138 and 261), both read in the fascicles: `ACTA_REPRINTS`.
+
+### The *Acta Sanctae Sedis* volumes (phase 2c-i, the sample)
+
+The ASS (41 volumes, 1865–1908) print no chronological index (ass volumes spec,
+`docs/superpowers/specs/2026-09-21-ass-volumes-design.md` §1), so the fixtures are not
+index pages but two files per volume written by `tools/scan-ass.ts` from the whole-volume
+text in the local store (`tools/fetch-acta.sh ass <vol>`; `~/development/sources/ASS/txt/`,
+pypdf 6.14.2 layout mode, never checked in): `ass-{vol}-{year}.summa.txt`, the pages of the
+volume's *Summa actorum* (ASS 41: *Index analyticus*), and `ass-{vol}-{year}.entries.json`,
+the chronological index synthesised from the body — one row per papal act with its class
+heading, pope, description, the first eight words after the salutation (`opening`; no
+incipit is asserted), the date from the act's own dateline, the page, and the five quoted
+lines each rests on (spec §3). `{year}` is the first year of the volume's span.
+
+| Source | Files | RETRIEVED | Volume pages | Summa pages | Acts scanned | Defects | Summa rows: claimed / unclaimed |
+|---|---|---|---|---|---|---|---|
+| ASS 1 (1865–66, Pius IX) | `ass-01-1865.*` | **2026-09-21** | 767 | 747–752 | 0 | 3 | 0 / 0 |
+| ASS 12 (1879, Leo XIII) | `ass-12-1879.*` | **2026-09-21** | 672 | 647–653 | 10 | 1 | 9 / 3 |
+| ASS 23 (1890–91, Leo XIII) | `ass-23-1890.*` | **2026-09-21** | 768 | 752–758 | 8 | 5 | 7 / 7 |
+| ASS 33 (1900–01, Leo XIII) | `ass-33-1900.*` | **2026-09-21** | 768 | 761–768 | 18 | 10 | 14 / 8 |
+| ASS 41 (1908, Pius X) | `ass-41-1908.*` | **2026-09-21** | 810 | 799–810 | 27 | 18 | 27 / 10 |
+
+Scanned on 2026-09-22 (`npm run scan-ass -- sample`, re-run after the final review's fixes
+to the heading and greeting rules; first scanned 2026-09-21, after the curation round of
+phase 2c-i Task 4). The summa's papal part, from its heading to the first dicastery heading
+as the tool printed them, and the curated readings (`ASS_READINGS`, `tools/src/acta/curation.ts`)
+keyed to each volume: ASS 1: no papal heading — the 1865 summa lists the pope's acts under
+the dicasteries (`EX ACTIS CONSISTORIALIBUS`, `EX SECRETARIA BREVIUM`), so the check is
+vacuous, and the scanner reads no act (the allocution of 25 September 1865 at p. 193 is headed
+`ALLOCVTIO`, the two letters apostolic at pp. 578 and 744 `LITERAE APOSTOLICAE` after an
+editorial preface), so its three acts are readings under the ruling that a reading answers a
+finding when a volume's scan and summa are both empty; 3 readings. ASS 12: `LITTERAE ET ALLOCUTIONES` … `EX ACTIS CONSISTORIALIBUS`;
+1 reading. ASS 23: `LITTERAE ET ACTA ROM. PONTIFICIS` … `EX ACTIS CONSISTORIALIBUS` (summa p. 753
+is interleaved word by word by the OCR and yields three garbage rows, and loses *Rerum
+novarum*'s own row); 5 readings. ASS 33: `LITTERAE ET ACTA` (`R. PONTIFICIS` on the next line)
+… `EX S. C. CONCILII`; 6 readings. ASS 41: `ACTA ROMANI PONTIFICIS` … `EX SECRETARIA BREVIUM`;
+9 readings. The defects are mostly the brevia of the Secretaria Brevium part (`sub annulo
+Piscatoris … R. Card. MERRY DEL VAL, a Secretis Status`), which carry no class heading and
+which the summa lists under the dicastery. In every volume the PDF page is the printed page:
+each `header-mismatch` is the OCR's reading of the number (`585` for 385, `U9` for 449, `-318`,
+`2` / `98` split over two lines).
 
 The RETRIEVED dates above are also stamped as `source.retrieved` on every document created
 from these fixtures (`ACTA_SOURCES` in `tools/src/acta/join.ts`): update both together when

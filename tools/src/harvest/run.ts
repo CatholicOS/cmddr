@@ -13,7 +13,7 @@ import {
 } from '../mappings/index.js';
 import { issuerLocalPart, mintId } from '../ids.js';
 import { slugify } from '../slug.js';
-import { applyActa } from '../acta/join.js';
+import { applyActa, citeKey, citeRef } from '../acta/join.js';
 import { categoryForHeading } from '../acta/categories.js';
 import { createFromActa } from '../acta/create.js';
 import type { DocumentRecord, HarvestItem } from '../types.js';
@@ -378,18 +378,18 @@ for (const [year, parsed] of acta.parsed) {
   );
   for (const c of r.conflicts) {
     console.warn(
-      `AAS entries ${c.entries.map((e) => `${e.year}:${e.page}`).join(' and ')} both match ${c.documentId}; `
+      `Acta entries ${c.entries.map((e) => citeRef(e)).join(' and ')} both match ${c.documentId}; `
       + 'neither is written',
     );
   }
-  for (const e of r.unknownPope) console.warn(`AAS ${e.year}:${e.page}: no issuer for pope heading '${e.pope}'`);
+  for (const e of r.unknownPope) console.warn(`${citeRef(e)}: no issuer for pope heading '${e.pope}'`);
   for (const sp of r.sharedPages) {
     console.warn(
-      `AAS page ${sp.page} is cited by ${sp.matches.map((m) => m.documentId).join(' and ')} and is not curated in ACTA_SHARED_PAGES; `
+      `${citeKey(sp.page)} is cited by ${sp.matches.map((m) => m.documentId).join(' and ')} and is not curated in ACTA_SHARED_PAGES; `
       + 'neither reference is written (one page opens one act, invariant 25)',
     );
   }
-  for (const e of r.reprints) console.log(`AAS ${e.year}:${e.page} is the later printing of an act printed twice (ACTA_REPRINTS); not a claim`);
+  for (const e of r.reprints) console.log(`${citeRef(e)} is the later printing of an act printed twice (ACTA_REPRINTS); not a claim`);
 }
 
 // AAS-only documents (AAS-only documents spec §2-§6): the entries the join left

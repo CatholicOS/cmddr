@@ -1377,8 +1377,192 @@ export const ACTA_CURATED_REFERENCES: Readonly<Record<string, CuratedReference>>
   },
 };
 
-/** The curation key of an entry: the volume year and first page the index cites. */
-export const curationKey = (e: { year: number; page: number }): string => `${e.year}:${e.page}`;
+export interface AssReading {
+  /** The pope as popes.ts labels him ('Leo XIII'). */
+  pope: string;
+  /** The class heading as the volume prints it, normalised ('EPISTOLA ENCYCLICA'). */
+  category: string;
+  /** ISO date from the act's own dating formula, or `????-??-??` when the act prints none. */
+  date: string;
+  /** The first eight words after the salutation, as printed. */
+  opening: string;
+  description: string;
+  /** The heading, salutation, opening and dateline as the volume prints them, and where they were read (the store text, page and lines). */
+  evidence: string;
+}
+
+/**
+ * The papal acts of the ASS the scanner (ass.ts) missed or misread, read by hand in the
+ * store text (ass volumes spec §6): keyed `ASS:{volume}:{page}`, the page the act opens on.
+ * A row is applied by the loader (join.ts) as an entry with `anchor: 'reading'` -- added
+ * where the scan has no entry at the page, replacing the scanned entry where it has one --
+ * and is stale (a hard error) unless it answers a finding (the controller's ruling of the
+ * Task 4 fix round, which Task 5 implements): its page is a scanned entry's page, an
+ * unclaimed summa row's page, a defect's page, or -- for a `no-heading` defect, whose page
+ * is the anchor's -- any page from the previous anchor's page through the defect's page; or
+ * the volume's scan and summa are both empty (ASS 1). Every row names why the scan missed
+ * the act.
+ */
+export const ASS_READINGS: Readonly<Record<string, AssReading>> = {
+  // Phase 2c-i, Task 4 (the first curation round): read in the store text on 2026-09-21 at
+  // the page the act opens on. The page in the key is the PDF page, which equals the printed
+  // page in every sample volume; `evidence` quotes the lines and names the finding the row
+  // answers -- a defect of the scan, an unclaimed summa row, or a scanned entry misread.
+  // ASS 1 (1865-66): the scan reads no act and the summa has no papal part (its rows sit
+  // under the dicasteries), so the volume's three papal acts are read by hand under the
+  // ruling's last clause.
+  'ASS:1:193': {
+    pope: 'Pius IX', category: 'ALLOCUTIO', date: '1865-09-25',
+    opening: 'Multiplices inter machinationes artesque, quibus Christiani nominis hostes',
+    description: 'SS. D. N. PII PAPAE IX HABITA IN CONSISTORIO SECRETO DIE XXV SEPTEMBRIS MDCCCLXV.',
+    evidence: "ASS 1 (1865) 193-197, ass-01-1865.txt. p. 193 l. 2 'EX ACTIS COMTOBIALIBE' (the running head, the OCR's reading of CONSISTORIALIBUS), ll. 6-10 'SANCTISSIMI DOMINI NOSTRI / PII / DIVINA PROVIDENTIA / PAPAE IX.', l. 12 'ALLOCVTIO' (the OCR's V for U), l. 14 'HABITA IN CONSISTORIO SECRETO', l. 17 'DIE XXV SEPTEMBRIS MDCCCLXV.', l. 21 'VENERABILES FRATRES', l. 22 '« Multiplices inter machinationes artesque, quibus Christiani / nominis hostes adoriri Ecclesiam Dei'; no dateline (an allocution), dated from its heading, 25 September 1865; the running heads of the following pages read '194 ALLOCUTIO SS. D. N. PII PAPAE IX.'. Why the scan missed it: `ALLOCVTIO` is no class heading (one line in the sample), so no heading anchor; and ASS 1's summa (pp. 747-752) has no papal part -- its row ('Allocutio SSmi, qua iterum reprobantur et damnantur Massonicae sectae. 193') sits under EX ACTIS CONSISTORIALIBUS -- so the scan and the summa both leave the volume empty (the ruling's last clause).",
+  },
+  'ASS:1:578': {
+    pope: 'Pius IX', category: 'LITTERAE APOSTOLICAE', date: '1866-02-12',
+    opening: 'Gravissimum supremi Nostri Apostolici ministerii munus omnino postulat,',
+    description: 'Litterae Apostolicae in forma Brevis quibus Romanae ephemeridi cui titulus La Civiltà Cattolica perennitati et perpetuitati consulitur (the editor\'s preface, p. 577).',
+    evidence: "ASS 1 (1865) 577-581, ass-01-1865.txt. p. 577 l. 4 'LITERA E APOSTOLICAE,' (the volume's single-T spelling, OCR-split) then the editor's preface, l. 12 'Sequentes Apostolicas Literas in forma Brevi expeditas re- / ferimus, quibus Sanctissimus Dominus Noster … praeclarissima encomiis Romanae ephemeridi / cui titulus - LA CIVILTÀ CATTOLICA - merito tributis, eiusdem peren- / nitati, et perpetuitati consulere dignatus est.'; the act opens p. 578 (running head '578 LITERAE APOSTOLICAE.'): l. 2 'PIUS PP. IX.', l. 3 'AD PERPETUAM REI MEMORIAM.', l. 4 '« Gravissimum supremi Nostri Apostolici ministerii munus / omnino postulat, ut intentissimo studio'. Dated p. 581 ll. 26-28 'Datum Romae apud S. Petrum sub Annulo Piscatoris die XII. / Februarii Anno MDCCCLXVI. Pontificatus Nostri Anno Vicesimo. / Locus*Sigilli PIUS PP. IX.'. Why the scan missed it: `LITERAE APOSTOLICAE` is no class heading of the list (the volume's spelling; two acts in ASS 1, none elsewhere), so the anchor at p. 581 found no heading (the no-heading defect at 581, the anchor's page) and its summa row sits under EX SECRETARIA BREVIUM: the scan and the summa both leave the volume empty (the ruling's last clause). Keyed 578, where the act itself opens after the preface.",
+  },
+  'ASS:1:744': {
+    pope: 'Pius IX', category: 'LITTERAE APOSTOLICAE', date: '1866-04-13',
+    opening: 'Quamvis Urbs Roma Beatissimos Apostolorum Principes tamquam praecipuos',
+    description: 'Litterae Apostolicae in forma Brevis quibus S. Catharina Senensis inter secundarios Almae Urbis coelestes Patronos recensetur (the editor\'s preface, p. 744).',
+    evidence: "ASS 1 (1865) 744-746, ass-01-1865.txt. p. 744 l. 2 'Il SECRETARIA BREVIUM.' (the part's running head), l. 8 'LITERAE APOSTOLICAE,' (the volume's single-T spelling) then the editor's preface, l. 11 'Quamvis iam Decretum retulerimus pag. 630, quo SSmus / Dominus Noster electam Virginem S. Catharinam Senensem in- / ter secundarios Almae Urbis coelestes Patronos recensendam / declaravit; praetermittere tamen nolumus Apostolicas Literas in / forma Brevis', l. 28 'Literae autem Apostolicae sunt sequentis tenoris.', l. 31 'PIUS PP. IX.', l. 32 'AD PERPETUAM REI MEMORIAM.', l. 33 '« Quamvis Urbs Roma Beatissimos Apostolorum Principes tam* / quam praecipuos Patronos suos veneretur'. Dated p. 746 ll. 10-11 'Datum Romae apud S. Petrum sub annulo Piscatoris die XIII. / Aprilis Anno MDCCCLXV1. Pontificatus Nostri Anno Vigesimo.' (the OCR's `1` for `I`). Why the scan missed it: as ASS:1:578 -- `LITERAE APOSTOLICAE` is no class heading, the anchor at p. 746 found no heading (the no-heading defect at 746), the summa lists it under EX SECRETARIA BREVIUM; the scan and the summa both leave the volume empty (the ruling's last clause). Keyed 744, where the heading, the preface and the act's own first words all stand.",
+  },
+  'ASS:12:3': {
+    pope: 'Leo XIII', category: 'LITTERAE', date: '1879-06-01',
+    opening: 'Ingens Nobis attulit gaudium pastoralis sollicitudo vestra, Venerabiles',
+    description: 'SSMI D. N. LEONIS XIII AD ARCHIEPISCOPOS ET EPISCOPOS ECCLESIASTICARUM PROVINCIARUM TAURINI, VERCELLAE ET GENUAE.',
+    evidence: "ASS 12 (1879) 3-12, ass-12-1879.txt. Printed in Italian with the Latin version below it page by page: p. 3 ll. 3-11 'LETTERA / DI / SUA SANTITÀ PAPA LEONE XIII / AGLI ARCIVESCOVI E VESCOVI DELL' ECCLESIASTICHE PROVINCIE / DI TORINO. VERCELLI E GENOVA.', l. 14 'Venerabili Fratelli', l. 16 'Ci siamo grandemente compiaciuti della vostra pastorale solle-'; the Latin at l. 27 '(Versio latina) LITTERAE / SSMI D. N. LEONIS XIII / AD ARCHIEPISCOPOS ET EPISCOPOS ECCLESIASTICARUM PROVINCIARUM / TAURINI, VERCELL-AE ET GENUAE.', l. 35 'Venerabiles Fratres', l. 37 'Ingens Nobis attulit gaudium pastoralis sollicitudo vestra, Ve- / nerabiles Fratres'. Dated p. 12 l. 40 'Romae ex Aedibus Vaticanis, die Pentecostes, 1 Iunii 1879.' (the Italian at l. 19 'Roma dal Vaticano, il giorno di Pentecoste, 1 Giugno 1879.'). Why the scan missed it: the dateline prints neither `Pontificatus Nostri` nor the pope's signature within four lines, so nothing anchors it. Answers the summa's unclaimed row p. 3 ('Litterae SSmi D. N. Leonis XIII ad Archiepiscopos et Episcopos Ecclesiasticarum Provinciarum Taurini, Vercellarum et Genuae').",
+  },
+  'ASS:23:206': {
+    pope: 'Leo XIII', category: 'LITTERAE ENCYCLICAE', date: '1890-10-15',
+    opening: 'Ab apostolici Solii celsitudine, ubi Nos ad prospiciendum',
+    description: 'SS. D. N. Leonis XIII ad Episcopos, Clerum et Populum Italiae.',
+    evidence: "ASS 23 (1890) 206-222, ass-23-1890.txt. p. 206 l. 15 '(Versio latina)', ll. 17-18 'LITTERAE Encyclicae SS. D. N. Leonis XIII ad Episcopos, Clerum / et Populum Italiae.', l. 20 'Ab apostolici Solii celsitudine, ubi Nos ad prospiciendum'; no salutation line. Dated p. 222 'Datum Romae apud Sanet. Petrum Idibus Octobris anno / MDCCCLXXXX. Pontificatus nostri XIII.': the Ides of October, 15 October 1890 -- the date the Italian text prints at p. 206 l. 8 ('Dato a Roma presso S. Pietro, li 15 Ottobre 1890'). The Latin version of the Italian encyclical the scan reads at p. 193 (`LETTERA Enciclica … Dall' alto dell' Apostolico seggio`): one act, two printings. Why the scan missed the date: the Ides form is not read by rule. Answers the scan's no-date defect at p. 206 and the summa's row p. 206 ('Versio latina earumdem litterarum').",
+  },
+  'ASS:23:318': {
+    pope: 'Leo XIII', category: 'LITTERAE', date: '1890-11-20',
+    opening: 'Novum argumentum perspecti tui erga hanc Apostolicam Sedem',
+    description: 'Sanctissimi Patris N. Leonis XIII ad Emum Archiepiscopum florentinum quoad cultum sacrae Familiae praestandum. — Adiicitur formula consecrationis familiarum et oratio quotidie recitanda.',
+    evidence: "ASS 23 (1890) 318-319, ass-23-1890.txt. p. 318 l. 1 '-318' (the running header, the OCR's stray hyphen before the number), ll. 3-5 'LITTERAE Sanctissimi Patris N.Leonis XIII ad Emum Archiepiscopum floren- / tinum quoad cultum sacrae Familiae praestandum. — Adiicitur formula / consecrationis familiarum et oratio quotidie recitanda.', l. 10 'Novum argumentum perspecti tui erga hanc Apostolicam'; no salutation line. Dated p. 319 ll. 22-23 'Datum Romae apud S. Petrum die xx Novembris Anno / MDCCCXC, Pontificatus Nostri Decimotertio.', signed 'LEO PAPA XIII.'. Why the scan refused it: the header token `-318` carries an extra character and headerAgrees (recover.ts) refuses it; the PDF page is the printed page. Answers the scan's header-mismatch defect at p. 318 and the summa's row p. 318.",
+  },
+  'ASS:23:427': {
+    pope: 'Leo XIII', category: 'LITTERAE APOSTOLICAE', date: '1890-11-12',
+    opening: 'Religiosus Ordo Benedicti Patris de rationibus Ecclesiae reique',
+    description: 'Sanctissimi D. N. Leonis XIII de regimine et disciplina Congregationis Anglo-Benedictinae novanda.',
+    evidence: "ASS 23 (1890) 427, ass-23-1890.txt. p. 427 ll. 3-4 'LITTERAE APOSTOLICAE Sanctissimi D. N. Leonis XIII de regimine et / disciplina Congregationis Anglo-Benedictinae novanda.', l. 5 'LEO EPISCOPUS', l. 6 'SERVUS SERVORUM DEI', l. 7 'ad perpetuam rei memoriam', l. 9 'Religiosus Ordo Benedicti Patris de rationibus Ecclesiae rei- / que publicae'. Dated (the dateline the scan quoted in its defect) 'Datum Romae apud S. Petrum, Anno Incarnationis Dominicae Millesimo Octingentesimo Nonagésimo, Pridie Idus Novembris Pontificatus Nostri anno XIII.': the day before the Ides of November, 12 November 1890. Why the scan missed the date: the Ides form is not read by rule. Answers the scan's no-date defect at p. 427 and the summa's row p. 427.",
+  },
+  'ASS:23:513': {
+    pope: 'Leo XIII', category: 'LITTERAE APOSTOLICAE', date: '1890-11-08',
+    opening: 'Praeclara inter monumenta, quae maiorum pietas in Italia',
+    description: 'Sanctissimi D. N. Leonis XIII; de iuribus Archiepiscopi bariensis et privilegiis magni Prioris Basilicae s. Nicolai.',
+    evidence: "ASS 23 (1890) 513-518, ass-23-1890.txt. p. 513 ll. 3-4 'LITTERAE apostolicae Sanctissimi D. N. Leonis XIII ; de iuribus Archiepi- / scopi bariensis et privilegiis magni Prioris Basilicae s. Nicolai.', l. 12 'Praeclara inter monumenta, quae maiorum pietas iii Italia' (the OCR's `iii` for `in`); no salutation line. Dated p. 517 l. 41 - p. 518 l. 3 'Datum Romae apud S. Petrum, Anno Incarnationis Domi- / [p. 518] nicae Millesimo Octingentesimo Nonagésimo, Sexto Idus Novem- / bris, Pontificatus Nostri anno XIII.': the sixth day before the Ides of November, 8 November 1890. Why the scan missed it: the dateline crosses the page break, so `Pontificatus Nostri` is not within the anchor's window, and the Ides form is not read by rule. Answers the summa's unclaimed row p. 513.",
+  },
+  'ASS:23:522': {
+    pope: 'Leo XIII', category: 'MOTU PROPRIO', date: '1891-03-14',
+    opening: 'Ut mysticam Sponsam Christi, qui lux vera est,',
+    description: 'Sanctissimi D. N. Leonis XIII; de vaticana specula astronomica restituenda et amplificanda.',
+    evidence: "ASS 23 (1890) 522-526, ass-23-1890.txt. p. 522 ll. 37-38 'MOTU-PRQPRIO Sanctissimi D. N. Leonis XIII ; de vaticana specula astro- / nomica restituenda et amplificanda.' (the OCR's `PRQPRIO`, the hyphenated class the running heads print too: `MOTU-PROPRIO 525`), l. 40 'Ut mysticam Sponsam Christi, qui lux vera est, in contem- / ptum'; no salutation line. Dated p. 526 ll. 18-19 'Datum Romae apud S. Petrum die xiv Martii anno MDCCCXCI, / Pontificatus Nostri decimo quarto.', signed 'LEO PP. XIII.'. Why the scan missed it: `MOTU-PRQPRIO` is no class heading (one act in the sample: a reading, not a spelling), so the anchor at p. 526 walked back to the previous anchor and found no heading. Answers the scan's no-heading defect at p. 526 (the anchor's page; the act opens at 522) -- the summa's own row (`Motu-Proprio … 522`, summa p. 753) is lost in the OCR's word-by-word interleaving of that page's two columns.",
+  },
+  'ASS:33:341': {
+    pope: 'Leo XIII', category: 'CONSTITUTIO APOSTOLICA', date: '1900-12-08',
+    opening: 'Conditae a Christo Ecclesiae ea vis divinitus inest',
+    description: 'Sanctissimi Domini Nostri Leonis Divina Providentia Papae XIII de Religiosorum Institutis vota simplicia profitentium.',
+    evidence: "ASS 33 (1900) 341-347, ass-33-1900.txt. p. 341 ll. 3-4 'CONSTITUTIO APOSTOLICA Sanctissimi Domini Nostri Leonis Divina Providentia / Papae XIII de Religiosorum Institutis vota simplicia profitentium.', l. 7 'LEO EPISCOPUS', l. 9 'SERVUS SERVORUM DEI', l. 10 'Ad perpetuam rei memoriam.', l. 12 'Conditae a Christo Ecclesiae ea vis divinitus inest ac fe- / cunditas'. Dated p. 347 ll. 26-28 'Datum Romae apud Sanctum Petrum anno Incarnationis / Dominicae millesimo noningentésimo, sexto idus décembres, / Pontificatus Nostri vicesimo tertio.': the sixth day before the Ides of December, 8 December 1900. Why the scan missed the date: the Ides form is not read by rule. Answers the scan's no-date defect at p. 341 and the summa's row p. 341.",
+  },
+  'ASS:33:349': {
+    pope: 'Leo XIII', category: 'LITTERAE', date: '1900-12-25',
+    opening: 'Temporis quidem sacri, quod solemni caeremoniarum religione hesterno',
+    description: 'SS.mi D. N. Leonis, quibus universalis iubilaeus in urbe celebratus anno Domini millesimo nonigentesimo ad universum catholicum orbem extenditur.',
+    evidence: "ASS 33 (1900) 349-355, ass-33-1900.txt. p. 349 l. 1 '5' (the running header, the OCR's reading of 349), ll. 3-4 'LITTERAE SS.mi D. N. Leonis, quibus universalis iubilaeus in urbe celebratus anno / Domini millesimo nonigentesimo ad universum catholicum orbem extenditur.', l. 6 'LEO EPISCOPUS', l. 8 'SERVUS SERVORUM DEI', ll. 9-10 'Universis christifidelibus praesentes litteras inspeeturis / salutem et apostolicam benedictionem.', l. 12 'Temporis quidem sacri, quod solemni caeremoniarum re- / ligione hesterno die conclusimus'. Dated p. 355 ll. 2-4 'Datum Romae apud S. Petrum Anno Incarnationis Domi- / nicae Millesimo nongentesimo, Octavo Calendas Ianuarii, Pon- / tificatus Nostri anno vicesimo tertio.': the eighth day before the Kalends of January, 25 December 1900. Why the scan missed the date: the Kalends form is not read by rule. Answers the scan's no-date defect at p. 349 and the summa's row p. 349.",
+  },
+  'ASS:33:355': {
+    pope: 'Leo XIII', category: 'LITTERAE', date: '1900-12-23',
+    opening: "Au milieu des consolations que Nous procurait l'Année",
+    description: 'SS.mi D. N. Leonis XIII ad E.mum Archiepiscopum Parisiensem quoad religiosorum Congregationes in Gallia.',
+    evidence: "ASS 33 (1900) 355-363, ass-33-1900.txt. p. 355 l. 1 'LITTERAE 555' (the running header, the OCR's `5` for `3`), ll. 23-24 'LITTERAE SS.mi D. N. Leonis Xlil ad E.mum Archiepiscopum Parisiensem / quoad religiosorum Congregationes in Gallia.', l. 26 \"Au milieu des consolations que Nous procurait l'Année / Sainte par le pieux empressement des pèlerins\"; no salutation line. Dated p. 363 \"Donné à Rome, près de Saint-Pierre, le 23 Décembre de / l'an 1900, de Notre Pontificat le vingt-troisième.\", signed 'LEO PP. XIII.'. Why the scan refused it: the header's `555` is another number to headerAgrees (recover.ts); the PDF page is the printed page. Answers the scan's header-mismatch defect at p. 355 and the summa's row p. 355.",
+  },
+  'ASS:33:385': {
+    pope: 'Leo XIII', category: 'EPISTOLA ENCYCLICA', date: '1901-01-18',
+    opening: 'Graves de communi re oeconomica disceptationes, quae non',
+    description: 'Sanctissimi Domini Nostri Leonis divina providentia Papae XIII de democratia christiana.',
+    evidence: "ASS 33 (1900) 385-396, ass-33-1900.txt. p. 385 l. 1 '585' (the running header, the OCR's `5` for `3`), ll. 3-4 'EPISTOLA ENCYCLICA Sanctissimi Domini Nostri Leonis divina providentia Pa- / pae XIII de democratia christiana.', l. 8 'Graves de communi re oeconomica disceptationes, quae'; no salutation line. Dated p. 396 ll. 5-6 'Datum Romae apud Sanctum Petrum die 18 ianuarii an- / no 1901, Pontificatus Nostri vicesimo tertio.', signed 'LEO PP. XIII'. Why the scan refused it: the header's `585` is another number to headerAgrees (recover.ts); the PDF page is the printed page. Answers the scan's header-mismatch defect at p. 385 and the summa's row p. 385.",
+  },
+  'ASS:33:449': {
+    pope: 'Leo XIII', category: 'LITTERAE', date: '1901-02-11',
+    opening: 'In maximis occupationibus variisque acerbitatibus solatium Nobis non',
+    description: 'SS.mi Patris Leonis XIII ad E.mum Archiepiscopum Vestmonasteriensem et ad alios Provinciae Episcopos de catholicismo liberali et rationalismo.',
+    evidence: "ASS 33 (1900) 449-450, ass-33-1900.txt. p. 449 l. 1 'U9' (the running header, the OCR's reading of 449), ll. 3-4 'LITTERAE SS.mi Patris Leonis Xiil ad E.mum Archiepiscopum Vestmonasterien - / sem et ad alios Provinciae Episcopos de catholicismi) liberali et rationalismo.', ll. 7-8 'Venerabiles Fratres / Salutem et Apostolicam Benedictionem.', l. 10 'In maximis occupationibus variisque acerbitatibus solatium'; no salutation line. Dated p. 450 ll. 38-39 'Datum Romae apud Sanctum Petrum, die 11 februarii 1901, / anno Pontificatus Nostri vicesimo tertio.', signed 'LEO PP. XIII.'. Why the scan refused it: the header's `U9` is two characters from 449 and headerAgrees (recover.ts) admits one; the PDF page is the printed page. Answers the scan's header-mismatch defect at p. 449 and the summa's row p. 449.",
+  },
+  'ASS:33:643': {
+    pope: 'Leo XIII', category: 'LITTERAE', date: '1901-06-09',
+    opening: 'Iucundas scito Nobis communes litteras vestras fuisse. Memoriam',
+    description: 'SSmi D. N. Leonis XIII ad Herbertum Story Praefectum et Vice-Cancellarium, item Rectorem, Doctores atque auditores Universitatis Studiorum Glasgaensis (Glascow), recolentes his diebus annum 450 ab institutione istius universitatis.',
+    evidence: "ASS 33 (1900) 643-644, ass-33-1900.txt. p. 643 ll. 29-32 'IITTERAE SSmi D. N. Leonis XIII ad Herbertum Story Praefectum et Vice-Cancel- / larium, item Rectorem, Doctores atque auditores Universitatis Studiorum Glas- / gaensis (Glascow), recolentes his diebus annum 450 ab institutione istius / universitatis.', l. 34 'Iucundas scito Nobis communes litteras vestras fuisse. Me- / moriam beneficiorum colere'; no salutation line. Dated p. 644 'Datum Romae apud S. Petrum die IX Iunii Anno MDCCCCL / Pontificatus Nostri vicesimo quarto (1).', signed 'LFO PP. XIII.': the OCR's `MDCCCCL` (1950) is `MDCCCCI`, 1901 -- the volume's second year, the twenty-fourth of the pontificate the dateline names, and the year of the 450th anniversary the heading names. Why the scan missed the date: the year read is outside the volume's bound, and the `L` for `I` is not among the numeral repairs (one act). Answers the scan's no-date defect at p. 643 and the summa's row p. 643.",
+  },
+  'ASS:41:3': {
+    pope: 'Pius X', category: 'LITTERAE APOSTOLICAE', date: '1907-06-14',
+    opening: 'Ea semper fuit Apostolicae Sedis peculiaris quaedam ac',
+    description: 'SS. D. N. Pii div. prov. PP. X quibus ritus ruthenus constituitur in Statibus foederatis Americae Septentrionalis.',
+    evidence: "ASS 41 (1908) 3-12, ass-41-1908.txt. p. 3 l. 3 'LITTERAE APOSTOLICAE', ll. 4-5 'SS. D. N. Pii div. prov. PP. X quibus ritus ruthenus consti- / tuitur in Statibus foederatis Americae Septentrionalis.', l. 7 'PIUS EPISCOPUS', l. 8 'SERVUS SERVORUM DEI', l. 9 'Ad perpetuam rei memoriam.', l. 11 'Ea semper fuit Apostolicae Sedis peculiaris quaedam ac / propria sollicitudo'. Dated p. 12 'Datum Romae, apud Sanctum Petrum, anno Incarnationis Dominicae millesimo nongentesimo septimo, decimo octavo calendas Iulias, die festo S. Basilii Magni, Pontificatus Nostri …': the eighteenth day before the Kalends of July, 14 June 1907. Why the scan missed the date: the Kalends form is not read by rule. Answers the scan's no-date defect at p. 3 and the summa's row p. 3.",
+  },
+  'ASS:41:195': {
+    pope: 'Pius X', category: 'EPISTOLA', date: '1907-09-28',
+    opening: 'Tempus propediem aderit, vestrae maxime genti expectatum, memoriam',
+    description: 'Pii X ad Episcopos Hungariae pro solemniis septem saecularibus S. Elisabeth Hungaricae.',
+    evidence: "ASS 41 (1908) 195-198, ass-41-1908.txt. p. 195 l. 16 'EPISTOLA', ll. 17-18 'Pii X ad Episcopos Hungariae pro solemniis septem saecu- / laribus S. Elisabeth Hungaricae.', ll. 19-23 the addressee in capitals ('DILECTIS FILIIS NOSTRIS / CLAUDIO S. R. E. PRESB. CARD. VASZARY ARCHIEP. STRIGONIENSI / …'), l. 24 'PIUS PP. X', ll. 25-26 'Dilecti Filii Nostri et Venerabiles Fratres, / salutem et Apostolicam benedictionem.', l. 27 'Tempus propediem aderit, vestrae maxime genti expecta- / tum, memoriam Sanctae Elisabethae'. Dated p. 198 ll. 8-9 'Datum rtomae apud S. Petrum , die xxvni Septem- / bris MCMVii, Pontificatus Nostri anno quinto.', signed 'PIUS PP. X'. Why the scan missed it: the OCR's `rtomae` for `Romae` is no anchor (one act). Answers the summa's unclaimed row p. 195.",
+  },
+  'ASS:41:298': {
+    pope: 'Pius X', category: 'EPISTOLA', date: '1908-03-23',
+    opening: 'Nunciasti nobis inter ceteras qui istic strenue pro',
+    description: 'Qua Pius PP. X laudat edentes Commentaria a " Nova Gallia „ nuncupata.',
+    evidence: "ASS 41 (1908) 298, ass-41-1908.txt. p. 298 ll. 1-3 '2 … Epistola' / '98' (the running header, its number split over two lines by the OCR), l. 4 'EPISTOLA', ll. 5-6 'Qua Pius PP. X laudat edentes Commentaria a \" Nova Gal- / lia „ nuncupata.', ll. 8-11 'VENERABILI FRATRI / LUDOVICO NAZARIO / ARCHIEPISCOPO QUEBECENSIUM.', l. 13 'PIUS PP. X', l. 14 'Venerabilis Frater, salutem et Apostolicam benedictionem.', l. 16 'Nunciasti nobis inter ceteras qui istic strenue pro reli- / gione operantur'. Dated p. 298 ll. 36-37 'Datum Romae apud Sanctum Petrum, die xxin Mar- / tii MCMViii, Pontificatus Nostri anno quinto.' (the OCR's `xxin` for `xxiii`), signed 'PIUS PP. X'. Why the scan refused it: the header's first line prints `2` alone and headerAgrees (recover.ts) reads the first line only; the PDF page is the printed page. Answers the scan's header-mismatch defect at p. 298 and the summa's row p. 298.",
+  },
+  'ASS:41:361': {
+    pope: 'Pius X', category: 'EPISTOLA', date: '1908-05-17',
+    opening: 'Le moment Nous parait venu de vous faire',
+    description: 'Qua Pius PP. X reprobat Mutualitates ecclesiasticas sic dictas approbatas in Gallia.',
+    evidence: "ASS 41 (1908) 361-364, ass-41-1908.txt. p. 361 l. 3 'EPISTOLA', ll. 4-5 'Qua Pius PP. X reprobat Mutualitates ecclesiasticas sic di- / ctas approbatas in Gallia.', l. 7 'PIUS PP. X', ll. 9-10 'A NOS TRÈS CHERS FILS / LES CARDINAUX', ll. 12-15 the four cardinals' names ('VICTOR-LUCIEN Card. LECOT, Archevêque de Bordeaux.' …), l. 17 'Nos très chers Fils,', l. 19 'Le moment Nous parait venu de vous faire connaître les / décisions'. Dated p. 364 ll. 14-15 \"Donné à Rome, 17 Mai de l'année 1908, de Notre Pon- / tificat la cinquième.\", signed 'PIUS PP. X'. Why the scan misread it: the cardinals' names, set in mixed case after a blank line below the caps addressee, are read as the opening (one act: the French addressee list); the reading replaces the scanned entry at p. 361, whose date and heading it keeps.",
+  },
+  'ASS:41:425': {
+    pope: 'Pius X', category: 'CONSTITUTIO APOSTOLICA', date: '1908-06-29',
+    opening: 'Sapienti consilio sa. me. Pontifex Xystus V, Decessorum',
+    description: 'SS. D. N. Pii div. prov. Papae X, de Romana Curia.',
+    evidence: "ASS 41 (1908) 425-440, ass-41-1908.txt. p. 425 l. 1 'CONSTITUTIO APOSTOLICA', l. 3 'SS. D. N. Pii div. prov. Papae X, de Romana Curia.', l. 5 'PIUS EPISCOPUS', l. 7 'SERVUS SERVORUM DEI', l. 9 'A d perpetuam rei memoriam.', l. 11 'Sapienti consilio sa. me. Pontifex Xystus V, Decessorum / vestigiis inhaerens'. Dated p. 440 'Datum Romae apud Sanctum Petrum, anno Incarnationis Dominicae millesimo nongentesimo octavo, die festo Sanctorum Apostolorum Petri et Pauli, III Kal. Iulias, Pontificatus …': the third day before the Kalends of July, 29 June 1908. Why the scan missed the date: the Kalends form is not read by rule. Answers the scan's no-date defect at p. 425; the summa (Index analyticus, p. 799) cites the constitution at `pag. 427`, two pages after its heading, and that row stays unclaimed.",
+  },
+  'ASS:41:495': {
+    pope: 'Pius X', category: 'EPISTOLA', date: '1908-04-09',
+    opening: 'Si vota semper, faustiore quavis ecclesiarum redeunte memoria',
+    description: 'Pii X ob saecularia solemnia archidioecesis Neo-Eboracensis.',
+    evidence: "ASS 41 (1908) 495-496, ass-41-1908.txt. p. 495 ll. 1-2 'Epistola … 5' / '49' (the running header, its number split over two lines by the OCR), l. 30 'EPISTOLA', l. 31 'Pii X ob saecularia solemnia archidioecesis Neo-Eboracensis.', ll. 32-34 'VENERABILI FRATRI / IOANNI M. FARLEY ARCHIEPISCOPO NEO—EBORACENSIUM / NEO—EBORACUM', l. 35 'PIUS PP. x', l. 36 'Venerabilis Frater, salutem et Apostolicam benedictionem.', l. 38 'Si vota semper, faustiore quavis ecclesiarum redeunte me- / moria , placet concipere'. Dated p. 496 ll. 18-19 'Datum Romae apud S. Petrum, die ix Aprilis MCMVIII, / Pontificatus Nostri anno quinto.'. Why the scan refused it: the header's first line prints `5` and headerAgrees (recover.ts) reads the first line only; the PDF page is the printed page. Answers the scan's header-mismatch defect at p. 495 and the summa's row p. 495.",
+  },
+  // Phase 2c-i, after the final review: the greeting broken before its `salutem` was a
+  // scanner branch that fired once in the sample; the branch is gone and the act is read
+  // by hand instead (spec §6: a shape that occurs once is a curated row, not a rule).
+  'ASS:41:12': {
+    pope: 'Pius X', category: 'EPISTOLA', date: '1905-06-08',
+    opening: 'Quibus Nos litteris septuagesimum aetatis annum faustum et',
+    description: 'Qua Pontifex grati animi sensus profitetur erga imperatorem Sinarum.',
+    evidence: "ASS 41 (1908) 12-13, ass-41-1908.txt. p. 12 l. 27 'EPISTOLA', ll. 28-29 'Qua Pontifex grati animi sensus profitetur erga imperatorem / Sinarum.', l. 31 'AUGUSTISSIMO POTENTISSIMOQUE IMPERATORI SINARUM', l. 32 'PEKINUM', l. 33 'PIUS PP. x', ll. 34-35 'Augustissime et potentissime Imperator, / salutem et prosperitatem.', ll. 37-38 'Quibus Nos litteris septuagesimum aetatis annum faustum / et felicem Maiestati Suae Imperatrici Sinarum ominabamur,'. Dated p. 13 ll. 15-16 'Datum Romae apud S. Petrum, die VIII Iunii MDCCCCV, / Pontificatus Nostri anno secundo.'. Why the scan misread it: the greeting is broken before its `salutem`, and its first line ('Augustissime et potentissime Imperator,') carries none of the vocabulary the greeting rule knows, so the preamble skip stops there and the opening is read from the greeting itself. One act of the sample prints the shape (p. 18 l. 13 sets the same greeting on one line, which the rule reads whole), so it is read here rather than given a rule. Answers the scanned entry at p. 12, whose opening it replaces.",
+  },
+  'ASS:41:555': {
+    pope: 'Pius X', category: 'EXHORTATIO', date: '1908-08-04',
+    opening: 'Haerent animo penitus, suntque plena formidinis, quae gentium',
+    description: 'AD CLERUM CATHOLICUM SS. D. N. Pii div. prov. Papae X in quinquagesimo natali sacerdotii sui.',
+    evidence: "ASS 41 (1908) 555-577, ass-41-1908.txt. p. 555 l. 4 'EXHORTATIO AD CLERUM CATHOLICUM', ll. 6-7 'SS. D. N. Pii div. prov. Papae X in quinquagesimo natali / sacerdotii sui.' (after a blank line), l. 9 'PIUS PP. X', l. 10 'Dilecti Filii, salutem et Apostolicam benedictionem.', l. 12 'Haerent animo penitus, suntque plena formidinis, quae / gentium Apostolus'. Dated p. 577 ll. 26-27 'Datum Romae, apud Sanctum Petrum, die iv Augusti / anno MCMVIII, Pontificatus Nostri ineunte sexto.', signed 'PIUS PP. X.'. Why the scan missed it: the heading's block ends at the blank line before the by-line, and the by-line (mixed case) stands between the block and the salutation, so neither the block, the lines above it nor the salutation rule opens the act (one act in the sample); the anchor at p. 577 then found no heading. Answers the summa's unclaimed row p. 555 and the scan's no-heading defect at p. 577.",
+  },
+  'ASS:41:619': {
+    pope: 'Pius X', category: 'CONSTITUTIO APOSTOLICA', date: '1908-09-29',
+    opening: 'Promulgandi pontificias Constitutiones ac leges non idem semper',
+    description: 'De promulgatione legum et evulgatione actorum S. Sedis.',
+    evidence: "ASS 41 (1908) 619-620, ass-41-1908.txt. p. 619 l. 3 'CONSTITUTIO APOSTOLICA', l. 4 'De promulgatione legum et evulgatione actorum S. Sedis.', l. 6 'PIUS EPISCOPUS', l. 7 'SERVUS SERVORUM DEI', l. 8 'Ad perpetuam rei memoriam.', l. 10 'Promulgandi pontificias Constitutiones ac leges non idem / semper decursu temporis'. Dated p. 620 ll. 29-31 'Datum Romae apud S. Petrum, anno Incarnationis Do- / minicae millesimo nongentesimo octavo, in Kalendas Octo- / bres, Pontificatus Nostri sexto.': `in Kalendas` is the OCR's reading of `III Kalendas` (the volume reads `III` as `in` again at p. 298, `xxin` for `xxiii`), the third day before the Kalends of October, 29 September 1908 -- a literal `in Kalendas` is no Roman date. Why the scan missed the date: the Kalends form is not read by rule. Answers the scan's no-date defect at p. 619 and the summa's row p. 619.",
+  },
+};
+
+/** The key of ACTA_INDEX_CORRECTIONS and ACTA_HOLDS: `{year}:{page}` for the AAS (the volume year and first page the index cites); `ASS:{volume}:{page}` for the ASS, whose volumes 2 and 3 share a year. */
+export const curationKey = (e: { series?: string; volume?: number; year: number; page: number }): string =>
+  e.series === 'ASS' ? `ASS:${e.volume}:${e.page}` : `${e.year}:${e.page}`;
 
 export interface SharedPage {
   /** The documents the page opens, by id. */
@@ -1887,6 +2071,23 @@ export const ACTA_SHARED_PAGES: Readonly<Record<string, SharedPage>> = {
       + "E. Card. Ga- / sparri, a secretis Status: de dissidiis componendis / quae pacem populis affulgere nondum sinunt . . 353`); both letters "
       + "are on the letters shelf (the shelf's slug of the first reads `ceteriores-nos`, vatican.va's own spelling).",
   },
+  // Phase 2c-i (the ASS sample): the one page of the five sample volumes that two matched
+  // shelf letters cite. Read in the store text on 2026-09-21; the ASS sets Leo XIII's short
+  // letters one after the other under their own headings, as the AAS fascicles do.
+  'ASS:33:641': {
+    documentIds: ['mag:leo-xiii/de-ingenii-1901', 'mag:leo-xiii/le-nostre-ferme-speranze-1901'],
+    evidence: "ASS 33 (1900) p. 641 (page 641 of ass-33-1900.txt, read 2026-09-21) prints 'LITTERAE SS.mi Patris Leonis XIII ad "
+      + "auctorem libri in quo exposita est admira­ / bilis inhabitatio Sancti Spiritus in animis iustis. / Dilecto Filio Bartholomeo "
+      + "Froget Sodali Dominicano. / Pictavium. / Dilecte Fili, salutem et Apostolicam Benedictionem. — De ingenii doctrinaeque "
+      + "fructibus quos nobis frequentes catholicorum exhibet pietas …', dated on the same page 'Datum Romae apud Sanctum Petrum die 20 "
+      + "februarii 1901, Pontificatus Nostri vicesimo quarto. LEO PP. XIII.', and, lower on the same page, 'LITTERAE SS.mi D. N. Leonis "
+      + "XIII quoad consociationem Rosarii perpetui. / Al diletto Figlio Costanzo Maria Becchi, dei Predicatori, Direttore dell'Assoc. "
+      + "del Rosario Perpetuo in Italia. / Le nostre ferme speranze di quattro anni fa, quando scrivemmo l'Enciclica sul Rosario di "
+      + "Maria …', which runs onto p. 642 and is dated there 'Dato a Roma, presso S. Pietro, il giorno 28 marzo dell'anno 1901, "
+      + "vigesimoquarto del Nostro Pontificato. LEO PP. XIII.' (the shelf's URL slug dates it 19010228, its record 1901-03-28, the "
+      + "dateline's). The scanner enters both at 641 (ass-33-1900.entries.json, anchor `dateline`), and both letters are on the "
+      + "letters shelf.",
+  },
 };
 
 export interface Reprint {
@@ -1979,5 +2180,61 @@ export const ACTA_REPRINTS: Readonly<Record<string, Reprint>> = {
       + "signature (p. 42), with no note of why it is printed again and no heading of corrigenda (the one difference the OCR shows, "
       + "'consideret' against 'consuleret', is the OCR's). A re-issue by this table's rule: the citation of record is the first "
       + 'printing, AAS 22 (1930) 483.',
+  },
+  // Phase 2c-i (the ASS sample): the two constitutions of 1908 the first fascicle of the AAS
+  // (1 January 1909) prints again from ASS 41 -- *Sapienti consilio* (29 June 1908, the
+  // Roman Curia) and *Promulgandi* (29 September 1908, the AAS itself instituted). Until the
+  // ASS was joined, AAS 1 (1909) 7 and 5 were the registry's references (phase 2b-iii-b, a
+  // curated page reading and a recovered page); with ASS 41 read, each act is claimed twice
+  // and this table's rule decides: the first printing is the citation of record, the ASS
+  // being the Holy See's official organ since 1904 (*Ex actis*, 23 May 1904). The owner may
+  // prefer the AAS by canonical usage (the *Fontes* cite both at AAS 1); that needs a kind
+  // this table does not have (a later printing cited over a plain first one), so the rule
+  // stands and the era report names both printings. The first "index line" of each row is
+  // the ASS heading the reading quotes, the ASS having no chronological index.
+  'AAS:1:7': {
+    kind: 'reissue',
+    citationOf: 'ASS:41:425',
+    indexLines: [
+      'CONSTITUTIO APOSTOLICA / SS. D. N. Pii div. prov. Papae X, de Romana Curia.',
+      '1908    Ian.   29    Constitutio « Sapienti Consilio » / DE ROMANA CURIA.',
+    ],
+    evidence: "ASS 41 (1908) p. 425 (page 425 of ass-41-1908.txt, read 2026-09-21; the curated reading ASS:41:425) prints "
+      + "'CONSTITUTIO APOSTOLICA / SS. D. N. Pii div. prov. Papae X, de Romana Curia. / PIUS EPISCOPUS / SERVUS SERVORUM DEI / "
+      + "A d perpetuam rei memoriam. / Sapienti consilio sa. me. Pontifex Xystus V, Decessorum / vestigiis inhaerens eorumque coepta "
+      + "perficiens, sacros Car- / dinalium coetus, seu Romanas Congregationes …', dated p. 440 'Datum Romae apud Sanctum Petrum, anno "
+      + "Incarnationis Dominicae millesimo nongentesimo octavo, die festo Sanctorum Apostolorum Petri et Pauli, III Kal. Iulias' -- 29 "
+      + "June 1908 -- in the fascicle of the summer of 1908. AAS 1 (1909) p. 7 (page 7 of aas-01-1909.txt, read 2026-09-21), under the "
+      + "running head 'Constitutio Apostolica Sapienti consilio.. 7', prints 'CONSTITUTIO APOSTOLICA / DE ROMANA CURIA / PIUS EPISCOPUS "
+      + "/ SERVUS SERVORUM DEI / AD PERPETUAM REI MEMORIAM / Sapienti consilio sa. me. Pontifex Xystus V, Decessorum ve- / stigiis "
+      + "inhaerens eorumque coepta perficiens, sacros Cardi- / nalium coetus, seu Romanas Congregationes …', the same text (the ASS's "
+      + "'suis quaeque finibus' reads 'suis quamque finibus' in the AAS) and the same dating formula at p. 19 ('Datum Romae apud Sanctum "
+      + "Petrum, anno Incarnationis … III Kalendas Iulias'), in the first fascicle of the AAS (1 January 1909, 'Annus I. - Vol. I. Die 1 "
+      + "Ianuarii 1909. Num. 1.'), with no note of why it is printed again and no heading of corrigenda: a re-issue. The 1909 index "
+      + "enters it under `I. - CONSTITUTIONES APOSTOLICAE` as `1908 Ian. 29 Constitutio « Sapienti Consilio » / DE ROMANA CURIA.` (the "
+      + "`Ian.` corrected to June by ACTA_INDEX_CORRECTIONS '1909:7', the page read by ACTA_PAGE_READINGS). The citation of record is the "
+      + "first printing, ASS 41 (1908) 425.",
+  },
+  'AAS:1:5': {
+    kind: 'reissue',
+    citationOf: 'ASS:41:619',
+    indexLines: [
+      'ACTA ROMANI PONTIFICIS / CONSTITUTIO APOSTOLICA / De promulgatione legum et evulgatione actorum S. Sedis.',
+      '             Sept.                Constitutio « Promulgandi », de promulgatione legum / et evulgatione actorum S. Sedis',
+    ],
+    evidence: "ASS 41 (1908) p. 619 (page 619 of ass-41-1908.txt, read 2026-09-21; the curated reading ASS:41:619) prints 'ACTA ROMANI "
+      + "PONTIFICIS / CONSTITUTIO APOSTOLICA / De promulgatione legum et evulgatione actorum S. Sedis. / PIUS EPISCOPUS / SERVUS SERVORUM "
+      + "DEI / Ad perpetuam rei memoriam. / Promulgandi pontificias Constitutiones ac leges non idem / semper decursu temporis in Ecclesia "
+      + "catholica fuit modus …', dated p. 620 'Datum Romae apud S. Petrum, anno Incarnationis Do- / minicae millesimo nongentesimo "
+      + "octavo, in Kalendas Octo- / bres, Pontificatus Nostri sexto.' (the OCR's `in` for `III`: 29 September 1908), signed 'A. Card. "
+      + "Di PIETRO R. Card. MERRY DEL VAL / Datarius a Secretis Status'. AAS 1 (1909) p. 5 (page 5 of aas-01-1909.txt, read 2026-09-21), "
+      + "the first page of the first fascicle ('Annus I. - Vol. I. Die 1 Ianuarii 1909. Num. 1.'), prints 'CONSTITUTIO APOSTOLICA / DE "
+      + "PROMULGATIONE LEGUM ET EVULGATIONE ACTORUM S. SEDIS / PIUS EPISCOPUS / SERVUS SERVORUM DEI / AD PERPETUAM REI MEMORIAM / "
+      + "Promulgandi pontificias Constitutiones ac leges non idem / semper decursu temporis in Ecclesia catholica fuit modus …', the same "
+      + "text, the same formula at p. 6 ('… nicae millesimo nongentesimo octavo, III Kalendas Octobres, / Pontificatus Nostri sexto.') and "
+      + "the same signatures, with no note of why it is printed again and no heading of corrigenda: a re-issue -- the AAS opening with "
+      + "the constitution that instituted it. The 1909 index enters it as `Sept. Constitutio « Promulgandi », de promulgatione legum / et "
+      + "evulgatione actorum S. Sedis` (the page recovered from the body, aas-01-1909.pages.json). The citation of record is the first "
+      + "printing, ASS 41 (1908) 619.",
   },
 };

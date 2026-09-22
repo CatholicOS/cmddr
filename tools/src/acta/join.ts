@@ -7,8 +7,10 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { parseActaIndex, type ActaEntry, type ActaParseResult } from './index.js';
 import { matchActa, type ActaMatchResult } from './match.js';
-import { ACTA_CURATED_REFERENCES, ACTA_PAGE_CORRECTIONS, ACTA_PAGE_READINGS, overrideKey, type CuratedReference } from './curation.js';
+import { ACTA_CURATED_REFERENCES, ACTA_PAGE_CORRECTIONS, ACTA_PAGE_READINGS, ASS_READINGS, overrideKey, type AssReading, type CuratedReference } from './curation.js';
 import { applyPageCorrections, applyPageRows, sidecarPath, type PagesSidecar } from './recover.js';
+import { categoryForHeading } from './categories.js';
+import type { AssEntry, AssScan } from './ass.js';
 import type { DocumentRecord } from '../types.js';
 
 /**
@@ -23,16 +25,22 @@ import type { DocumentRecord } from '../types.js';
  * fixtures honour applies here too).
  */
 export interface ActaSource {
-  /** The key the reports and tests use: the volume year, with the part for a double volume (`1917-I`). */
+  /** The key the reports and tests use: the volume year, with the part for a double volume (`1917-I`); for the ASS, `ass-{volume}` (ASS 2 and 3 are both 1867). */
   key: string;
   year: number;
+  /** The last year of a two-year ASS volume (ASS 33: 1901); absent otherwise. `acta.year` stays the first (ass volumes spec, decision 3). */
+  yearTo?: number;
   volume: number;
   part?: 'I' | 'II';
-  kind: 'index' | 'volume';
+  /** An annual index PDF, the index pages of an AAS volume, or an ASS volume's synthesised entries (ass.ts). */
+  kind: 'index' | 'volume' | 'ass';
+  /** The fixture: the extracted index text, or for an `ass` source the entries JSON the scanner writes. */
   file: string;
+  /** For an `ass` source, the summa fixture beside the entries. */
+  summaFile?: string;
   url: string | null;
   retrieved: string;
-  /** The parser options the fixture needs (index.ts): the columnar layout, and whether bare incipits are printed. */
+  /** The parser options the fixture needs (index.ts): the columnar layout, and whether bare incipits are printed. Unused by an `ass` source. */
   parse: { columnar: boolean; bareIncipits: boolean; fullLine?: 40 | 55 };
 }
 
@@ -54,6 +62,15 @@ const index = (year: number, retrieved: string, extra: Partial<ActaSource['parse
   file: `tools/fixtures/acta/aas-indice-${year}.txt`, url: null, retrieved,
   parse: { columnar: false, bareIncipits: true, ...extra },
 });
+const ASS_URL = (file: string) => `https://www.vatican.va/archive/ass/documents/${file}`;
+/** An ASS volume (ass volumes spec §2): `file` is the PDF's name as the ASS index page links it. */
+const ass = (volume: number, year: number, file: string, retrieved: string, yearTo?: number): ActaSource => ({
+  key: `ass-${volume}`, year, ...(yearTo !== undefined ? { yearTo } : {}), volume, kind: 'ass',
+  file: `tools/fixtures/acta/ass-${String(volume).padStart(2, '0')}-${year}.entries.json`,
+  summaFile: `tools/fixtures/acta/ass-${String(volume).padStart(2, '0')}-${year}.summa.txt`,
+  url: ASS_URL(file), retrieved,
+  parse: { columnar: false, bareIncipits: false },
+});
 
 /**
  * Every source with a fixture, in volume order. The six sources of phase 2b-i (the
@@ -65,8 +82,17 @@ const index = (year: number, retrieved: string, extra: Partial<ActaSource['parse
  * AAS 9 (1917) part II is the *Codex Iuris Canonici* itself and carries no chronological
  * index (its one papal act, *Providentissima Mater Ecclesia*, is on the bulls shelf as
  * `mag:benedict-xv/providentissima-mater-1917`), so only part I has a fixture.
+ * The five ASS volumes of phase 2c-i (ass volumes spec §2) come first, keyed by volume.
  */
 export const ACTA_SOURCES: readonly ActaSource[] = [
+  // Phase 2c-i (ass volumes spec §2): the five sample volumes of the Acta Sanctae Sedis --
+  // one a decade, every pope of the series -- read from the entries the scanner writes
+  // (ass.ts, tools/scan-ass.ts), not from an index the volumes never print.
+  ass(1, 1865, 'ASS-01-1865-66-ocr.pdf', '2026-09-21', 1866),
+  ass(12, 1879, 'ASS-12-1879-ocr.pdf', '2026-09-21'),
+  ass(23, 1890, 'ASS-23-1890-91-ocr.pdf', '2026-09-21', 1891),
+  ass(33, 1900, 'ASS-33-1900-1-ocr.pdf', '2026-09-21', 1901),
+  ass(41, 1908, 'ASS-41-1908-ocr.pdf', '2026-09-21'),
   // Phase 2b-iii-b (spec §10): AAS 1-17, the volumes of 1909-1925, whose OCR lost the page
   // column on most index pages -- the pages come back from the volume body through the
   // sidecars (recover.ts). 1909 and 1917-I, the sample's, re-extracted on 2026-09-20 with
@@ -146,9 +172,35 @@ export const ACTA_SOURCES: readonly ActaSource[] = [
 export const ACTA_YEARS: readonly number[] = ACTA_SOURCES.filter((s) => s.kind === 'index' && s.year >= 2015).map((s) => s.year);
 
 export const actaSource = (key: string): ActaSource | undefined => ACTA_SOURCES.find((s) => s.key === key);
-export const sourceKeyOf = (e: { year: number; part?: 'I' | 'II' }): string => (e.part ? `${e.year}-${e.part}` : `${e.year}`);
-/** The source an entry was parsed from. */
-export const sourceOfEntry = (e: { year: number; part?: 'I' | 'II' }): ActaSource | undefined => actaSource(sourceKeyOf(e));
+export const sourceKeyOf = (e: { series?: string; volume?: number; year: number; part?: 'I' | 'II' }): string =>
+  e.series === 'ASS' ? `ass-${e.volume}` : e.part ? `${e.year}-${e.part}` : `${e.year}`;
+/** The source an entry was parsed from (or, for the ASS, scanned into). */
+export const sourceOfEntry = (e: { series?: string; volume?: number; year: number; part?: 'I' | 'II' }): ActaSource | undefined => actaSource(sourceKeyOf(e));
+
+/**
+ * A reference as every report and the harvest log print it: `AAS 98 (2006) 308`, `AAS 9-I
+ * (1917) 5`, `ASS 41 (1908) 425`. The series is named because the registry now cites two of
+ * them, and the year because neither series' volume number carries it.
+ */
+export const citeRef = (a: { series?: string; volume?: number; part?: 'I' | 'II'; year: number; page: number | string }): string =>
+  `${a.series ?? 'AAS'} ${a.volume}${a.part ? `-${a.part}` : ''} (${a.year}) ${a.page}`;
+
+/**
+ * The same for a *keyed* reference -- `AAS:104:482`, `AAS:9-I:5`, `ASS:41:425`: the shape
+ * `overrideKey` and the shared-page table use, series first (the AAS's other, bare key is
+ * `year:page`, which carries its own year and is not read here). The year the series
+ * decides: an AAS volume's is its number plus 1908, an ASS volume's is its source row's,
+ * since the ASS numbers run from 1865 over 22 two-year volumes and no arithmetic gives it.
+ * A key of a volume no source names is returned as it stands -- nothing is guessed -- so a
+ * 2c-ii key printed before its source row exists reads as the key.
+ */
+export const citeKey = (key: string): string => {
+  const m = key.match(/^(AAS|ASS):(\d+)(?:-(I|II))?:(\d+)$/);
+  if (m === null) return key;
+  const [, series, volume, part, page] = m;
+  const year = series === 'ASS' ? actaSource(`ass-${Number(volume)}`)?.year : Number(volume) + 1908;
+  return year === undefined ? key : citeRef({ series: series!, volume: Number(volume), ...(part ? { part: part as 'I' | 'II' } : {}), year, page: page! });
+};
 
 /**
  * The date the ten phase-1 index fixtures were fetched (tools/fixtures/acta/README.md).
@@ -156,17 +208,89 @@ export const sourceOfEntry = (e: { year: number; part?: 'I' | 'II' }): ActaSourc
  */
 export const ACTA_FIXTURES_RETRIEVED = '2026-09-12';
 
+/** An empty scan -- no entry, no defect, no summa row: the shape applyAssReadings reads, for the tests. */
+export const emptyScan = (): Omit<AssScan, 'source' | 'generated' | 'text' | 'volume' | 'year' | 'pages'> => ({ entries: [], defects: [], summa: { pages: null, rows: [], claimed: [], unclaimed: [], omitted: [] } });
+
+/**
+ * The curated readings of a volume (ASS_READINGS, ass volumes spec §6) applied to its scan:
+ * a row at a page the scan has no entry for is added; a row at a scanned entry's page
+ * replaces it. A row is stale (a hard error) unless it answers a finding of the scan
+ * (the controller's ruling of the Task 4 fix round): its page is a scanned entry's page,
+ * an unclaimed summa row's page, a defect's page, or -- for a `no-heading` defect, which
+ * the scanner keys to the dateline's page while the act's heading stands somewhere between
+ * the previous anchor and it -- any page from the previous anchor's page through the
+ * defect's page, the previous anchor being the scanned entry or defect that precedes the
+ * defect in page order (or page 1 for the first); or the volume's scan and summa are both
+ * empty (ASS 1 (1865-66): no class heading of the list, no papal part in the summa), where
+ * every act is a reading. Returns the entries sorted by page.
+ */
+export function applyAssReadings(scan: Pick<AssScan, 'entries' | 'defects' | 'summa'>, volume: number, year: number, table: Readonly<Record<string, AssReading>> = ASS_READINGS): AssEntry[] {
+  const entries = [...scan.entries];
+  const nothingScanned = scan.entries.length === 0 && scan.summa.rows.length === 0;
+  // The anchors in page order: every scanned entry's page and every defect's page.
+  const anchorPages = [...new Set([...scan.entries.map((e) => e.page), ...scan.defects.map((d) => d.page)])].sort((a, b) => a - b);
+  const previousAnchor = (page: number): number => anchorPages.filter((p) => p < page).at(-1) ?? 1;
+  const withinNoHeading = (page: number): boolean =>
+    scan.defects.some((d) => d.reason === 'no-heading' && page >= previousAnchor(d.page) && page <= d.page);
+  for (const [key, row] of Object.entries(table)) {
+    if (!key.startsWith(`ASS:${volume}:`)) continue;
+    const page = Number(key.split(':')[2]);
+    // 2c-ii: the key `ASS:{volume}:{page}` cannot name *which* entry it replaces when the
+    // page opens two, and `findIndex` therefore takes the first in page order. The sample
+    // has one live instance -- ASS 33 p. 3, where the Italian letter *I luttuosi
+    // avvenimenti* (16 July 1900) and the brief *Quas Tu* (8 June 1900) both open -- and no
+    // reading is keyed there today, so nothing is wrong yet. A second key part (the
+    // category, or the entry's ordinal on the page) is owed before a reading is written for
+    // a shared page; the same page is the one finding 9 of the sample report would make
+    // doubly matched if the owner rules the brevia into the letters.
+    const at = entries.findIndex((e) => e.page === page);
+    const answers = nothingScanned || at >= 0 || scan.defects.some((d) => d.page === page)
+      || scan.summa.unclaimed.some((r) => r.page === page) || withinNoHeading(page);
+    if (!answers) throw new Error(`stale reading ${key}: no scanned entry, defect, unclaimed summa row or no-heading span at that page`);
+    const entry: AssEntry = {
+      series: 'ASS', volume, year, page, pope: row.pope, category: row.category, date: row.date,
+      incipit: null, quoted: false, toponym: null, description: row.description, raw: row.evidence,
+      opening: row.opening, anchor: 'reading',
+      evidence: { heading: row.evidence, salutation: null, opening: row.opening, dateline: null, header: '' },
+    };
+    if (at >= 0) entries[at] = entry; else entries.push(entry);
+  }
+  return entries.sort((a, b) => a.page - b.page);
+}
+
+/** An ASS source's fixture as a parse result (index.ts): the entries with the readings applied, no pageless entry, the scan's defects, and stats that count the summa's rows as the lines. */
+function loadAssSource(s: ActaSource): ActaParseResult {
+  const scan = JSON.parse(readFileSync(s.file, 'utf8')) as AssScan;
+  const entries = applyAssReadings(scan, s.volume, s.year);
+  const harvested = (e: ActaEntry) => (categoryForHeading(e.category)?.harvested ?? 'no') !== 'no';
+  const rows = scan.summa.rows.length;
+  return {
+    volume: s.volume, year: s.year, entries, pageless: [],
+    unseenHeadings: [...new Set(entries.filter((e) => categoryForHeading(e.category) === null).map((e) => e.category))],
+    unmappedPopes: [], popeHeadings: [...new Set(entries.map((e) => e.pope))], skippedParts: [],
+    defects: scan.defects.map((d) => ({ category: '', message: `p. ${d.page} ${d.reason}: ${d.lines.join(' / ')}` })),
+    stats: {
+      lines: rows, pageLines: rows, harvestedPageLines: scan.summa.claimed.length, harvestedEntries: entries.filter(harvested).length,
+      dateLines: entries.filter((e) => !e.date.startsWith('????')).length, entries: entries.length, monthOnly: 0,
+      withoutPage: 0, subItems: 0, translations: 0, consumed: scan.defects.length, recovered: entries.filter((e) => e.anchor === 'reading').length,
+    },
+  };
+}
+
 /**
  * Parse every fixture present; a missing one is skipped and named, not fatal. Pageless
  * entries then get their pages from the curated readings first, then the sidecar (spec
  * §10.3.3, §10.3.5): a page read by hand outranks one recovered by rule, and a key both
- * name is applied once, from the reading.
+ * name is applied once, from the reading. An `ass` source's fixture is the entries JSON
+ * the scanner writes, read with its curated readings (loadAssSource) and never fed to the
+ * index parser.
  */
 export function loadActaIndexes(sources: readonly ActaSource[] = ACTA_SOURCES): { parsed: Map<string, ActaParseResult>; missing: string[] } {
   const parsed = new Map<string, ActaParseResult>();
   const missing: string[] = [];
   for (const s of sources) {
     if (!existsSync(s.file)) { missing.push(s.key); continue; }
+    if (s.kind === 'ass') { parsed.set(s.key, loadAssSource(s)); continue; }
     const r = parseActaIndex(readFileSync(s.file, 'utf8'), {
       year: s.year, volume: s.volume, ...(s.part ? { part: s.part } : {}), ...s.parse,
     });

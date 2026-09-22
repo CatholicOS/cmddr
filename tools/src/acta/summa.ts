@@ -1,0 +1,177 @@
+/**
+ * The *Summa actorum* (ASS 41: *Index analyticus*) that ends every ASS volume, read as the
+ * check on the scanner's completeness (ass volumes spec §4): its papal part lists the
+ * pope's acts by description and page -- no incipit, no date -- in two columns the OCR
+ * interleaves. It is parsed loosely: a row is any run of lines ending in a page number,
+ * and its description is kept as printed, interleaving and all, for the report; the pages
+ * are what the check reads. Every summa page must be the page of one scanned act
+ * (`claimed`); a summa page no act sits on is an act the scan missed or paged wrongly
+ * (`unclaimed`, resolved by a curated reading, ASS_READINGS); a scanned act on no summa
+ * page is listed (`omitted`) -- the summa lists selectively, so it is a finding, not a defect.
+ */
+export interface SummaRow {
+  /** The row's text, line breaks and leaders removed, page removed. */
+  description: string;
+  page: number;
+  /** The lines as extracted, joined by ` / `. */
+  raw: string;
+}
+
+export interface SummaCheck {
+  /** The summa's pages in the volume (1-based, inclusive), or null when none was located. */
+  pages: { from: number; to: number } | null;
+  rows: SummaRow[];
+  /** Summa pages a scanned act sits on. */
+  claimed: number[];
+  /** Summa rows no scanned act sits on. */
+  unclaimed: SummaRow[];
+  /** Pages of scanned acts the summa does not list. */
+  omitted: number[];
+}
+
+const SUMMA_HEAD_RE = /^[\s\S]{0,60}?(SUMMA\s+A[CGO]TO[RKT]?[UTJ]*M|INDEX\s+ANALYTICUS)/;
+const NEXT_INDEX_RE = /^[\s\S]{0,60}?(INDEX\s+GENERALIS|INDEX\s+ALPHABETICUS|INDEX\s+RERUM|INDEX\s+NOMINUM)/;
+/**
+ * A page's first three non-blank lines, trimmed and joined: what the two heading regexes
+ * read. The layout mode pads the page-number line above the heading to the right margin
+ * (`{150 spaces}761` then `SUMMA ACTORUM`, ASS 33 (1900) 761; ASS 12 (1879) 647), which
+ * alone exceeds the sixty characters the regexes allow before the heading.
+ */
+const headOf = (page: string): string => page.split('\n').filter((l) => l.trim() !== '').slice(0, 3).map((l) => l.trim()).join(' ');
+
+/**
+ * The summa's pages: the first page from the volume's midpoint headed SUMMA ACTORUM (the
+ * OCR's `ACTOKTJM`, `AGTORUM` admitted) or INDEX ANALYTICUS, to the page before the next
+ * index heading, or the volume's end with trailing blank pages dropped.
+ */
+export function locateSumma(pages: readonly string[]): { from: number; to: number } | null {
+  const n = pages.length;
+  let from = -1;
+  for (let i = Math.floor(n / 2); i < n; i++) if (SUMMA_HEAD_RE.test(headOf(pages[i]!))) { from = i; break; }
+  if (from < 0) return null;
+  let to = n;
+  for (let i = from + 1; i < n; i++) if (NEXT_INDEX_RE.test(headOf(pages[i]!))) { to = i; break; }
+  while (to - 1 > from && pages[to - 1]!.trim() === '') to--;
+  return { from: from + 1, to };
+}
+
+/** The OCR's letters for digits in a page number: `ig3` → 193, `3oo` → 300, `3oi` → 301, `i3o` → 130. Spaces inside a number are dropped (`6 19`). */
+const DIGIT_OCR: Readonly<Record<string, string>> = { o: '0', O: '0', i: '1', I: '1', l: '1', S: '5', s: '5', g: '9', B: '8' };
+export function normalisePage(token: string): number | null {
+  const digits = token.replace(/\s+/g, '').split('').map((c) => DIGIT_OCR[c] ?? c).join('');
+  if (!/^\d{1,4}$/.test(digits)) return null;
+  const n = Number(digits);
+  return n >= 1 ? n : null;
+}
+
+const PAPAL_HEAD_RE = /^\s*(?:\d+\s+)?(LITTERAE\s+ET\s+A(?:LLOCUTIONES|CTA)(?:\s+R(?:OM)?\.\s*PONTIFICIS|\s+APOSTOLICAE)?|ACTA\s+ROMANI\s+PONTIFICIS)/;
+/**
+ * A dicastery heading. The abbreviated forms end in a stop (`EX S. C. CONCILII`, ASS 33
+ * (1900) 762; `EX S.APOSTOLICA POENITENTIARIA`, ASS 1 (1865) 747), after which no word
+ * boundary follows, so the boundary is written per alternative on the spelt-out words only.
+ */
+const DICASTERY_RE = /^\s*(EX\s+(?:S\.|SS\.|SACRA\b|SECRETARIA\b|ACTIS\b|AEDIBUS\b|SUPREMA\b|CANCELLARIA\b|DATARIA\b).*)$/;
+
+/** A line that is only the summa's running header (`8oo Index analyticus`, `SUMMA ACTORUM.`, `762 SUMMA {60 spaces} ACTORUM`) or a bare page number (`761`, padded to the margin, ASS 33 (1900) 761), whitespace collapsed. */
+const HEADER_LINE_RE = /^\s*(?:(?:\d[\dOoiIl]{0,3}\s+)?(?:Index analyticus|SUMMA\.?\s+A[CGO]TO[RKT]?[UTJ]*M\.?)\s*(?:\d[\dOoiIl]{0,3})?\s*-?|\d[\dOoiIl]{0,3})\s*$/;
+
+/**
+ * A page's lines with its two columns unwoven: the summae of ASS 1-33 are set in two
+ * columns, which the layout mode prints side by side on one line (`     co-Melchitas 65
+ * {70 spaces} stitutis vota simplicia profiten­`, ASS 33 (1900) 761), so the left
+ * column's page tokens sit mid-line and close no row. The gutter is the rightmost column
+ * that the most lines' runs of four or more spaces cover (the right column's first lines
+ * start there; its continuation lines are indented five columns deeper, so a text start
+ * would cut only one kind), at column 25 or beyond and on four or more lines; each line is
+ * cut at the run covering the gutter (within two columns of it), the left parts first and
+ * the right parts after them, and the header line dropped. A page with no such gutter
+ * (ASS 41's single-column *Index analyticus*) is returned as printed.
+ */
+export function splitColumns(page: string): string[] {
+  const lines = page.split('\n').filter((l) => !HEADER_LINE_RE.test(l.replace(/\s+/g, ' ')));
+  // A line's runs of four or more spaces, the leading run included: a line the left column
+  // leaves empty (`{90 spaces}sis .198`, ASS 33 (1900) 761) is the right column's alone.
+  const gapsOf = (l: string): { from: number; to: number }[] => [...l.matchAll(/(^|\S)(\s{4,})(?=\S)/g)].map((m) => ({ from: m.index! + m[1]!.length, to: m.index! + m[1]!.length + m[2]!.length }));
+  const width = Math.max(0, ...lines.map((l) => l.length));
+  const coverage = new Array<number>(width + 1).fill(0);
+  for (const l of lines) for (const g of gapsOf(l)) for (let c = Math.max(25, g.from); c < g.to; c++) coverage[c]!++;
+  let gutter = -1;
+  let most = 0;
+  for (let c = 25; c <= width; c++) if (coverage[c]! >= most && coverage[c]! > 0) { most = coverage[c]!; gutter = c; }
+  if (gutter < 0 || most < 4) return lines;
+  const left: string[] = [];
+  const right: string[] = [];
+  for (const l of lines) {
+    const g = gapsOf(l).find((x) => x.from <= gutter + 2 && x.to >= gutter - 1);
+    if (g) { left.push(l.slice(0, g.from)); right.push(l.slice(g.to)); } else left.push(l);
+  }
+  return left.concat(right);
+}
+/**
+ * A row's end: a page token after a leader, a sign, a space or a single stop glued to the
+ * number (`sis .198`, ASS 33 (1900) 761), possibly `N et M`, possibly a trailing stop. The token may start with an OCR letter (`ig3`), but a lookahead requires
+ * a genuine digit within its first four characters, so a short Latin word made entirely of
+ * OCR-digit-letters (`iis`, `sis`) never reads as a page and closes a row.
+ */
+const ROW_END_RE = /^(.*?)(?:\s*(?:pag\.|»|>|\*|·|\.+|\s))\s*(?=[\dOoiIlSsgB]{0,3}\d)([\dOoiIlSsgB][\dOoiIlSsgB]{0,3}(?:\s\d{1,2})?)(?:\s+et\s+(\d[\dOoiIlSsgB]{0,3}))?\s*\.?\s*$/;
+
+/**
+ * The rows of the papal part: from the papal heading (or the summa's first line, when the
+ * heading is interleaved into a row, as ASS 12's `LITTERAE ET ALLOCUTIONES Motu Proprio …`)
+ * to the first dicastery heading. A row accumulates lines until one ends in a page token;
+ * `N et M` yields two rows of one description. Lines that are only a running header
+ * (`8oo Index analyticus`, `SUMMA ACTORUM.`) are skipped. A page token may start with an
+ * OCR letter (`ig3`) but must contain a genuine digit, so a short Latin word (`iis`) never
+ * closes a row.
+ */
+export function parseSummaPapalPart(text: string): { rows: SummaRow[]; heading: string | null; end: string | null } {
+  const lines = text.split('\f').flatMap(splitColumns);
+  let start = -1;
+  let heading: string | null = null;
+  for (let i = 0; i < lines.length; i++) {
+    const m = lines[i]!.match(PAPAL_HEAD_RE);
+    if (m) { start = i; heading = m[1]!.replace(/\s+/g, ' ').trim(); break; }
+    // The heading set over two lines, the first a lone class word: `LITTERAE` / `ET ACTA
+    // ROM. PONTIFICIS` (ASS 23 (1890) 752) -- joined, and the second line consumed.
+    if (/^\s*LITTERAE\s*$/.test(lines[i]!) && i + 1 < lines.length) {
+      const two = `${lines[i]!.trim()} ${lines[i + 1]!.trim()}`.match(PAPAL_HEAD_RE);
+      if (two) { lines[i] = two[0]; lines[i + 1] = ''; start = i; heading = two[1]!.replace(/\s+/g, ' ').trim(); break; }
+    }
+  }
+  if (start < 0) return { rows: [], heading: null, end: null };
+  const rows: SummaRow[] = [];
+  let acc: string[] = [];
+  let end: string | null = null;
+  for (let i = start; i < lines.length; i++) {
+    const line = lines[i]!;
+    const d = line.match(DICASTERY_RE);
+    if (d) { end = d[1]!.replace(/\s+/g, ' ').trim(); break; }
+    if (line.trim() === '' || HEADER_LINE_RE.test(line.replace(/\s+/g, ' '))) continue;
+    const content = i === start ? line.replace(PAPAL_HEAD_RE, '').trim() : line;
+    if (content.trim() === '') continue;
+    acc.push(content.trim());
+    const m = content.match(ROW_END_RE);
+    if (!m) continue;
+    const page = normalisePage(m[2]!);
+    const raw = acc.join(' / ');
+    const description = acc.slice(0, -1).concat(m[1]!.trim()).join(' ').replace(/­\s*/g, '').replace(/\s*[.»>*·]+\s*$/, '').replace(/\s+/g, ' ').trim();
+    acc = [];
+    if (page === null) continue;
+    rows.push({ description, page, raw });
+    const second = m[3] ? normalisePage(m[3]) : null;
+    if (second !== null) rows.push({ description, page: second, raw });
+  }
+  return { rows, heading, end };
+}
+
+export function checkSumma(entries: readonly { page: number }[], summa: { pages: { from: number; to: number } | null; rows: SummaRow[] }): SummaCheck {
+  const actPages = new Set(entries.map((e) => e.page));
+  const rowPages = new Set(summa.rows.map((r) => r.page));
+  return {
+    pages: summa.pages,
+    rows: summa.rows,
+    claimed: [...new Set(summa.rows.filter((r) => actPages.has(r.page)).map((r) => r.page))],
+    unclaimed: summa.rows.filter((r) => !actPages.has(r.page)),
+    omitted: [...new Set(entries.filter((e) => !rowPages.has(e.page)).map((e) => e.page))],
+  };
+}

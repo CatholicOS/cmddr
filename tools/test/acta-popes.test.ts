@@ -4,7 +4,7 @@ import { ACTA_POPES, popeForGenitive, popeForLabel, labelForBracket } from '../s
 import { POPES, KNOWN_PONTIFF_IDS } from '../src/mappings/pontiffs.js';
 import { POPE_ISSUERS } from '../src/acta/match.js';
 import { PONTIFICATE_BEGAN } from '../src/acta/create.js';
-import { loadActaIndexes } from '../src/acta/join.js';
+import { ACTA_SOURCES, loadActaIndexes } from '../src/acta/join.js';
 
 describe('the pope headings of the AAS index (acta volumes spec §2)', () => {
   it('maps every genitive heading of the sample to a CRPDR issuer the harvest knows', () => {
@@ -20,7 +20,10 @@ describe('the pope headings of the AAS index (acta volumes spec §2)', () => {
     expect(popeForGenitive('FRANCISCI')?.issuerId).toBe('rp:francis-i');
     // The OCR of AAS 51 (1959) reads John XXIII's name as `I0A1OTS`: listed beside the row.
     expect(popeForGenitive('I0A1OTS XXIII')?.issuerId).toBe('rp:john-xxiii');
-    expect(popeForGenitive('LEONIS XIII')).toBeNull();
+    // `LEONIS XIII` and `PII IX` are now listed too (the ASS's, ass volumes spec §2), so a
+    // genitive the table truly does not list is one from before either gazette: Gregory XVI
+    // (died 1846, before the ASS begins in 1865).
+    expect(popeForGenitive('GREGORII XVI')).toBeNull();
     expect(popeForGenitive('IN MORTE PII XII')).toBeNull();
     for (const p of ACTA_POPES) {
       expect(KNOWN_PONTIFF_IDS.has(p.issuerId), p.issuerId).toBe(true);
@@ -31,6 +34,13 @@ describe('the pope headings of the AAS index (acta volumes spec §2)', () => {
     expect(new Set(ACTA_POPES.map((p) => p.pope)).size).toBe(ACTA_POPES.length);
     expect(Object.keys(POPE_ISSUERS).sort()).toEqual(ACTA_POPES.map((p) => p.pope).sort());
     expect(Object.keys(PONTIFICATE_BEGAN).sort()).toEqual(ACTA_POPES.map((p) => p.issuerId).sort());
+  });
+
+  it('names the popes of the Acta Sanctae Sedis (ass volumes spec §2): Pius IX and Leo XIII, before Pius X', () => {
+    expect(ACTA_POPES.find((p) => p.genitive === 'PII IX')).toEqual({ genitive: 'PII IX', pope: 'Pius IX', issuerId: 'rp:pius-ix', began: '1846-06-16' });
+    expect(ACTA_POPES.find((p) => p.genitive === 'LEONIS XIII')).toEqual({ genitive: 'LEONIS XIII', pope: 'Leo XIII', issuerId: 'rp:leo-xiii', began: '1878-02-20' });
+    const i = ACTA_POPES.findIndex((p) => p.genitive === 'PII X');
+    expect(ACTA_POPES.slice(0, i).map((p) => p.pope)).toEqual(['Pius IX', 'Leo XIII']);
   });
 
   it('renders the bracketed pope of the 2018-2021 indexes to the same label as the part heading', () => {
@@ -48,7 +58,17 @@ describe('the pope headings of the AAS index (acta volumes spec §2)', () => {
       expect(r.unmappedPopes).toEqual([]);
       for (const e of r.entries) seen.add(e.pope);
     }
+    // Pius IX and Leo XIII are the ASS's (phase 2c-i): an `ass` source's popes are the `pope` of
+    // its entries -- the scanner's and the curated readings' (ASS_READINGS) -- as the loader
+    // reads them, matched against the label, not the genitive.
     for (const p of ACTA_POPES) expect(seen.has(p.pope), p.pope).toBe(true);
+    for (const src of ACTA_SOURCES.filter((s) => s.kind === 'ass')) {
+      const printed = new Set(parsed.get(src.key)!.entries.map((e) => e.pope));
+      for (const pope of printed) expect(ACTA_POPES.some((p) => p.pope === pope), `${src.key}: ${pope}`).toBe(true);
+      expect(printed.size, src.key).toBeGreaterThan(0);
+    }
+    expect(new Set(parsed.get('ass-1')!.entries.map((e) => e.pope))).toEqual(new Set(['Pius IX']));
+    expect(new Set(parsed.get('ass-41')!.entries.map((e) => e.pope))).toEqual(new Set(['Pius X']));
     // And the 1958 volume's two parts that are not a pope's are skipped by name.
     const r1958 = parsed.get('1958')!;
     expect(r1958.skippedParts).toContain('II - ACTA IN MORTE PII PP. XII');

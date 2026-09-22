@@ -31,7 +31,7 @@ import { mintId, mintProvisionalId } from '../ids.js';
 import { POPES } from '../mappings/pontiffs.js';
 import { categoryForHeading, type ActaCategory, type GenreClass } from './categories.js';
 import { ACTA_HOLDS, ACTA_INDEX_CORRECTIONS, ACTA_REPRINTS, ACTA_SHARED_PAGES, curationKey, overrideKey } from './curation.js';
-import { ACTA_FIXTURES_RETRIEVED, sourceOfEntry } from './join.js';
+import { ACTA_FIXTURES_RETRIEVED, citeKey, sourceOfEntry } from './join.js';
 import {
   POPE_ISSUERS, incipitSlug, isMonthOnly, shiftDate, titleHasToponym, type ActaCandidate, type ActaMatchResult,
 } from './match.js';
@@ -143,6 +143,10 @@ export const NOT_CREATED: Readonly<Record<string, string>> = {
   // One heading for one act (the 2010 index): Benedict XVI's pastoral letter to the
   // Catholics of Ireland, on the year-partitioned letters shelf, not harvested for him.
   'Litterae pastorales': 'one heading for one act, the pastoral letter to the Catholics of Ireland (19 March 2010), which vatican.va files on the year-partitioned letters shelf, not harvested for Benedict XVI (#4)',
+  // The briefs of the ASS (categories.ts, phase 2c-i): every ASS entry is held before this
+  // table is read (`series-not-created`, ass volumes spec decision 1), and no AAS index
+  // prints the heading; whether the class is created is decided in 2c-iii.
+  'Brevia': 'printed by the ASS only, whose entries phase 2c-i joins as references and never creates (ass volumes spec, decision 1); creation from the briefs shelf is decided in 2c-iii',
 };
 
 /**
@@ -186,7 +190,9 @@ export type HoldReason =
   /** The later printing of an act the *Acta* print twice (ACTA_REPRINTS), or an entry the index cites at two pages that no row settles: the citation of record is one reference. */
   | 'reprint'
   /** The OCR has damaged the incipit or toponym (a stray character, a digit, an unbalanced bracket): the line is not the line as printed. */
-  | 'ocr-damaged';
+  | 'ocr-damaged'
+  /** An ASS entry (ass volumes spec, decision 1): phase 2c-i joins references only; ASS-born documents are 2c-iii. */
+  | 'series-not-created';
 
 export interface ActaHoldRow {
   entry: ActaEntry;
@@ -389,11 +395,17 @@ export function createFromActa(
   for (const e of result.unknownPope) hold(e, 'pope-not-harvested', `no issuer for the pope heading '${e.pope}'`);
   for (const e of result.reprints) {
     const row = ACTA_REPRINTS[overrideKey(e)]!;
-    hold(e, 'reprint', `the ${row.kind === 'reissue' ? 'later printing' : 'first printing, superseded by the corrigendum'} of an act the Acta print twice; the citation of record is ${row.citationOf.replace(/^AAS:(\d+):(\d+)$/, (_, v, pg) => `AAS ${v} (${Number(v) + 1908}) ${pg}`)} (ACTA_REPRINTS)`);
+    // The citation of record is printed as a citation and not as its key, in either series
+    // (citeKey, join.ts): an ASS row -- `ASS:41:425` for *Sapienti consilio* -- reads `ASS 41
+    // (1908) 425` in the hold note the era reports print beside their AAS column.
+    hold(e, 'reprint', `the ${row.kind === 'reissue' ? 'later printing' : 'first printing, superseded by the corrigendum'} of an act the Acta print twice; the citation of record is ${citeKey(row.citationOf)} (ACTA_REPRINTS)`);
   }
 
   for (const u of result.unmatched) {
     const entry = u.entry;
+    // The ASS (ass volumes spec, decision 1): every unmatched entry is held, before any other
+    // rule reads it; the ambiguous and conflict loops above hold and never create.
+    if (entry.series === 'ASS') { hold(entry, 'series-not-created', 'an Acta Sanctae Sedis entry: phase 2c-i joins references only (ass volumes spec §5); creation is decided in 2c-iii from this phase\'s gap report', u.sameDate); continue; }
     const category = categoryForHeading(entry.category);
     if (category === null) continue;   // unseen heading: matchActa never reaches here, reported by the parser
     const key = curationKey(entry);

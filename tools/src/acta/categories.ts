@@ -11,6 +11,9 @@
  * (AAS 51-69, phase 2b-ii-b: John XXIII and Paul VI) and in the twenty-four volumes of
  * 1979-2002 with the index PDFs of 2010, 2011, 2013 and 2014 (AAS 71-94, 102, 103, 105,
  * 106, phase 2b-ii-c: John Paul II, Benedict XVI and Francis's first year) is listed under the row it belongs to,
+ * as is every class heading the scanner reads from the five ASS volumes of phase 2c-i (ASS
+ * 1, 12, 23, 33 and 41; ass volumes spec §5), where the heading is the act's own first
+ * line, not an index heading, and a curated reading's category counts as printed --
  * in the normalised form `normaliseHeading` produces (case-folded, the numeral and the
  * trailing punctuation dropped, the OCR's accents stripped), with the volume it was seen
  * in; an OCR spelling is listed as the fixture prints it. A heading not listed here is
@@ -90,8 +93,12 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // (1949) reads `II - EPISTULA ENCÌCLICA` (*Redemptoris nostri cruciatus*). The volumes of
   // 1919 and 1924 print the O spelling `EPISTOLAE ENCYCLICAE` (AAS 11, 1919: *In hac tanta*)
   // and `EPISTOLA ENCYCLICA` (AAS 16, 1924: *Maximam gravissimamque*).
+  // The ASS head one encyclical in Italian, `LETTERA Enciclica del Papa Leone XIII ai
+  // Vescovi, al Clero e al Popolo d'Italia` (ASS 23 (1890) 193, *Dall'alto dell'Apostolico
+  // seggio*, 15 October 1890; ass volumes spec §5): the scanner reads the class word and
+  // the one after it as the heading.
   { id: 'Litterae Encyclicae',
-    headings: ['LITTERAE ENCYCLICAE', 'EPISTULA ENCYCLICA', 'EPISTULAE ENCYCLICAE', 'EPISTULA ENCICLICA', 'EPISTOLA ENCYCLICA', 'EPISTOLAE ENCYCLICAE'],
+    headings: ['LITTERAE ENCYCLICAE', 'EPISTULA ENCYCLICA', 'EPISTULAE ENCYCLICAE', 'EPISTULA ENCICLICA', 'EPISTOLA ENCYCLICA', 'EPISTOLAE ENCYCLICAE', 'LETTERA ENCICLICA'],
     classes: [{ genre: 'encyclical' }], harvested: 'yes' },
   // The apost_exhortations shelf. The index prints the singular when the year has one and
   // qualifies the post-synodal ones (Amoris laetitia, Christus vivit, Querida Amazonia).
@@ -108,6 +115,10 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
       'ADHORTATIO AD POPULORUM BELLIGERANTIUM MODERATORES', 'ADHORTATIO AD POPULORUM BELLIOERANTIUM MODERATORES',
       // The 2003 index PDF hyphenates the word (*Ecclesia in Europa*, 28 June 2003, AAS 95 (2003) 649).
       'ADHORTATIO APOSTOLICA POST-SYNODALIS',
+      // `EXHORTATIO AD CLERUM CATHOLICUM` (ASS 41 (1908) 555, *Haerent animo*, 4 August 1908,
+      // on vatican.va's apost_exhortations shelf for Pius X): the scanner missed the act, and
+      // its curated reading (ASS_READINGS, `ASS:41:555`) enters it under the class word alone.
+      'EXHORTATIO',
     ],
     classes: [{ genre: 'apostolic-exhortation' }], harvested: 'yes' },
   // The apost_constitutions shelf: a papal-bull bearing `apostolic-constitution` (README,
@@ -189,8 +200,22 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // pope whose letters shelf is harvested (create.ts). The volumes spell it *Epistolae*
   // (1909 `IV. - EPISTOLAE.`, 1917 `V. - EPISTOLAE.`, 1931 `VII. - EPISTOLAE`).
   // The OCR of AAS 30 (1938) reads `BPISTTJLAE`, that of AAS 34 (1942) `EPISTULAS`.
-  { id: 'Epistulae', headings: ['EPISTULAE', 'EPISTULA', 'EPISTOLAE', 'BPISTTJLAE', 'EPISTULAS'],
+  // The ASS head a letter `EPISTOLA` (first at ASS 23 (1890) 518; ASS 41 (1908) 12, 19,
+  // 129 …) or `LITTERAE` (first at ASS 12 (1879) 225, then ASS 23 (1890) 3 and ASS 33
+  // (1900) 3) -- the singular and the bare form, each an act of the letters shelf (ass
+  // volumes spec §5, which asks each addition for the page of its first occurrence).
+  { id: 'Epistulae', headings: ['EPISTULAE', 'EPISTULA', 'EPISTOLAE', 'BPISTTJLAE', 'EPISTULAS', 'EPISTOLA', 'LITTERAE'],
     classes: [{ genre: 'letter' }], harvested: 'partly' },
+  // The ASS print the briefs among the pope's acts: `LITTERAE in forma brevis Sanctissimi
+  // D. N. Leonis XIII` first at ASS 23 (1890) 437 (the one line of the sample with a
+  // lower-case b), then `LITTERAE in forma Brevis SSmi. D. N. Leonis XIII` (ASS 33 (1900)
+  // 3, 129, 198, 577); and `BREVE` (ASS 12 (1879) 588, `BREVE quo
+  // Sodalitates ab adoratione perpetua SSmi Sacramenti …`; ASS 33 (1900) 401, `BREVE, quo
+  // indulgentia centum dierum conceditur …`, under the running head EX ACTIS
+  // CONSISTORIALIBUS); the shelf class is `brief`. Harvested partly: the briefs shelf exists
+  // for Leo XIII (8 records), Pius IX (5, from his flat page), Pius XI, Pius XII, Benedict XV
+  // and Benedict XIV, and not for Pius X (pontiffs.ts).
+  { id: 'Brevia', headings: ['LITTERAE IN FORMA BREVIS', 'BREVE'], classes: [{ genre: 'brief' }], harvested: 'partly' },
   // The 2010 index heads Benedict XVI's pastoral letter to the Catholics of Ireland (19
   // March 2010, AAS 102 (2010) 209) `VIII – LITTERAE PASTORALES`: one heading for one act,
   // which vatican.va files on the year-partitioned letters shelf (…/letters/2010/documents/
@@ -208,7 +233,9 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // 5 January 1927; *Ci commuovono profondamente*, 2 February 1930, p. 89).
   // AAS 14 (1922) 703 heads the same class `II. - LITTERAE AUTOGRAPHAE` (two Italian
   // letters of Benedict XV: *Con vivo piacere*, to the archbishop of Genoa; *Il vivissimo
-  // desiderio*, to card. Gasparri, both on the Genoa peace conference).
+  // desiderio*, to card. Gasparri, both on the Genoa peace conference). The ASS print the
+  // singular too (`CHIROGRAPHUM Sanctissimi D. N. Leonis XIII quoad officia vacabilia
+  // Cancellariae et Datariae Apostolicae`, ASS 33 (1900) 714, 11 June 1901).
   { id: 'Chirographa', headings: ['CHIROGRAPHA', 'CHIROGRAPHUM', 'CHIROGRAPHI', 'CHIROGRAPHE', 'CHIROGRAPHUS', 'CHTRO GRAPHIS', 'CHIEOGRAPHI', 'LITTERAE AUTOGRAPHAE'],
     classes: [], harvested: 'no' },
   // Papal decrees have no row; vatican.va files several of these on the motu_proprio

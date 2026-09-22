@@ -23,8 +23,8 @@ import type { ActaSource } from './join.js';
 export const pagelessKey = (e: { date: string; category: string; incipit: string | null; description: string }): string =>
   `${e.date}|${e.category}|${e.incipit ?? ''}|${e.description.slice(0, 60)}`;
 
-/** The sidecar beside a source's fixture: `tools/fixtures/acta/aas-13-1921.pages.json`. */
-export const sidecarPath = (source: Pick<ActaSource, 'file'>): string => source.file.replace(/\.txt$/, '.pages.json');
+/** The sidecar beside a source's fixture: `tools/fixtures/acta/aas-13-1921.pages.json` (an ASS source's entries JSON, `ass-33-1900.entries.json`, would name `ass-33-1900.pages.json`, which no ASS source has: the scanner reads its pages from the body). */
+export const sidecarPath = (source: Pick<ActaSource, 'file'>): string => source.file.replace(/\.(?:txt|entries\.json)$/, '.pages.json');
 
 /**
  * Where a recovered entry lands among `entries` that share its pope and category
@@ -455,7 +455,7 @@ export function findIncipit(page: string, incipit: string, fuzzy: boolean): { li
 }
 
 /** The page's first non-blank line: `574 Index documentorum`, `Acta Pii PP. XI 483`, `Annus XXII - Vol. XXII 1 Maii 1930 Num. 5`. */
-const headerOf = (page: string): string => (page.split('\n').find((l) => l.trim() !== '') ?? '').trim();
+export const headerOf = (page: string): string => (page.split('\n').find((l) => l.trim() !== '') ?? '').trim();
 /**
  * Whether the header contradicts the page's own number. It agrees when it prints the number
  * as a whole token, when it is a fascicle cover (`Num. 5`), when it prints no digit at all
@@ -469,7 +469,7 @@ const headerOf = (page: string): string => (page.split('\n').find((l) => l.trim(
  * character wrong; the 17 left carry an extra character (`488*`, `344;`) or a damaged
  * cover (`Num: 16`, `Nun. 13`, `Num. U`) and stay refused.
  */
-const headerAgrees = (header: string, n: number): boolean => {
+export const headerAgrees = (header: string, n: number): boolean => {
   if (/\bNum\.\s*\d/.test(header) || !/\d/.test(header)) return true;
   const digits = String(n);
   return header.split(/\s+/).some((t) => t === digits || (t.length === digits.length && /\d/.test(t) && !/^\d+$/.test(t) && dist(t, digits) <= 1));

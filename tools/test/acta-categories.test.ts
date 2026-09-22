@@ -114,6 +114,18 @@ describe('the AAS category table', () => {
     expect(categoryForHeading('IV.?- MOTU PROPRIO')?.id).toBe('Litterae Apostolicae Motu proprio datae');
   });
 
+  it('maps the headings of the ASS sample (ass volumes spec §5): the singular and bare letter forms, the briefs, the Italian encyclical, the exhortation', () => {
+    expect(categoryForHeading('EPISTOLA')?.id).toBe('Epistulae');
+    expect(categoryForHeading('LITTERAE')?.id).toBe('Epistulae');
+    expect(categoryForHeading('LITTERAE IN FORMA BREVIS')?.id).toBe('Brevia');
+    expect(categoryForHeading('BREVE')?.id).toBe('Brevia');
+    expect(categoryForHeading('BREVE')?.harvested).toBe('partly');
+    expect(categoryForHeading('LETTERA ENCICLICA')?.id).toBe('Litterae Encyclicae');
+    expect(categoryForHeading('EXHORTATIO')?.id).toBe('Adhortationes Apostolicae');
+    expect(categoryForHeading('CHIROGRAPHUM')?.id).toBe('Chirographa');
+    expect(categoryForHeading('ALLOCUTIO')?.harvested).toBe('no');
+  });
+
   it('covers every heading every fixture prints (none is unseen)', () => {
     const { parsed, missing } = loadActaIndexes();
     expect(missing).toEqual([]);
@@ -142,6 +154,12 @@ describe('the AAS category table', () => {
     // glued to its page number, never bare even there).
     const printedLines = new Set<string>();
     for (const src of ACTA_SOURCES) {
+      // An `ass` source prints no index: its headings are the categories of the entries the
+      // scanner wrote and of the curated readings the loader adds (ASS_READINGS), each a heading.
+      if (src.kind === 'ass') {
+        for (const e of loadActaIndexes([src]).parsed.get(src.key)!.entries) printedLines.add(normaliseHeading(e.category));
+        continue;
+      }
       const lines = readFileSync(src.file, 'utf8').split(/\f|\n/).map((l) => l.trim()).filter((l) => l !== '');
       lines.forEach((l, i) => {
         printedLines.add(normaliseHeading(l));

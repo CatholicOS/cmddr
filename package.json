@@ -9,6 +9,7 @@
     "validate": "tsx tools/src/validate/run.ts",
     "render": "tsx tools/src/render/run.ts",
     "recover": "tsx tools/recover-acta-pages.ts",
+    "scan-ass": "tsx tools/scan-ass.ts",
     "check": "vitest run && tsc --noEmit && tsx tools/src/validate/run.ts"
   },
   "devDependencies": {

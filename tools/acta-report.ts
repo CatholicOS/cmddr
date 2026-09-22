@@ -19,7 +19,7 @@
  */
 import { readFileSync, readdirSync } from 'node:fs';
 import { ACTA_YEARS, applyCuratedReferences, loadActaIndexes } from './src/acta/join.js';
-import { matchActa, type ActaUnmatched, type ActaCandidate } from './src/acta/match.js';
+import { matchActa, type ActaMatch, type ActaUnmatched, type ActaCandidate } from './src/acta/match.js';
 import { createFromActa, isActaShelf, NOT_CREATED, type ActaHoldRow, type HoldReason } from './src/acta/create.js';
 import { ACTA_CATEGORIES, categoryForHeading, type ActaCategory } from './src/acta/categories.js';
 import { assignProvisionalOrdinals, bareProvisionalId } from './src/harvest/ordinals.js';
@@ -243,7 +243,7 @@ p('*Matched*, to *In harvested categories* (a document claimed twice holds both 
 p('entry* counts the harvested shelf documents dated in the volume year that carry no `acta` (§11); the December ones belong to the next');
 p('volume, and 2024\'s December acts to the 2025 index, which does not exist yet.');
 p();
-const byHow = { unique: 0, incipit: 0, toponym: 0, curated: 0, 'incipit-month': 0 };
+const byHow: Record<ActaMatch['by'], number> = { unique: 0, incipit: 0, toponym: 0, curated: 0, 'incipit-month': 0, opening: 0 };
 for (const m of result.matches) byHow[m.by]++;
 const decretals = result.unmatched.filter((u) => catId(u.entry) === 'Litterae Decretales').length;
 const nuntiiTotal = entries.filter((e) => catId(e).startsWith('Nuntii')).length;
@@ -600,6 +600,7 @@ const HOLD_LABELS: Record<HoldReason, string> = {
   'ocr-damaged': 'OCR-damaged incipit or toponym',
   'page-shared': 'Page cited by another act (invariant 25)',
   'reprint': 'Printed more than once, or cited at more than one page: the citation of record is the other printing or awaits an ACTA_REPRINTS row',
+  'series-not-created': 'An Acta Sanctae Sedis entry: joined as a reference only, never created (ass volumes spec, decision 1)',
 };
 {
   const byReason = new Map<HoldReason, ActaHoldRow[]>();

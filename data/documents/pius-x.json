@@ -1834,7 +1834,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quibus Nos",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 12
+    }
   },
   {
     "id": "mag:pius-x/qui-eucharisticum-1905",
@@ -1853,7 +1859,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Qui eucharisticum",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 13
+    }
   },
   {
     "id": "mag:pius-x/il-fermo-proposito-1905",
@@ -1894,7 +1906,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Sancti doctoris",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 15
+    }
   },
   {
     "id": "mag:pius-x/letter-1905-06-14",
@@ -1931,7 +1949,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Vestras e Fuldensi",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 16
+    }
   },
   {
     "id": "mag:pius-x/quae-bona-1905",
@@ -1950,7 +1974,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quae bona",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 18
+    }
   },
   {
     "id": "mag:pius-x/tutte-le-istituzioni-1905",
@@ -1990,7 +2020,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 19
+    }
   },
   {
     "id": "mag:pius-x/quem-burgensem-1905",
@@ -2009,7 +2045,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quem Burgensem",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 20
+    }
   },
   {
     "id": "mag:pius-x/sacrosancta-tridentina-synodus-1905",
@@ -3041,7 +3083,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Qua tu prudentia",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 193
+    }
   },
   {
     "id": "mag:pius-x/communis-epistola-1907",
@@ -3079,7 +3127,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ea semper fuit",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 3
+    }
   },
   {
     "id": "mag:pius-x/summa-nos-1907",
@@ -3201,7 +3255,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 35
+    }
   },
   {
     "id": "mag:pius-x/singulari-curare-1907",
@@ -3223,7 +3283,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 34
+    }
   },
   {
     "id": "mag:pius-x/tempus-propediem-1907",
@@ -3242,7 +3308,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Tempus propediem",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 195
+    }
   },
   {
     "id": "mag:pius-x/habitus-1907",
@@ -3261,7 +3333,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Habitus",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 129
+    }
   },
   {
     "id": "mag:pius-x/praestantia-scripturae-1907",
@@ -3322,7 +3400,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Progredientem aetatis",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 198
+    }
   },
   {
     "id": "mag:pius-x/hagnae-virginis-1908",
@@ -3341,7 +3425,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Hagnae virginis",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 66
+    }
   },
   {
     "id": "mag:pius-x/laeti-libentesque-1908",
@@ -3360,7 +3450,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Laeti libentesque",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 297
+    }
   },
   {
     "id": "mag:pius-x/tuum-illud-1908",
@@ -3379,7 +3475,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Tuum illud",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 200
+    }
   },
   {
     "id": "mag:pius-x/nunciasti-nobis-1908",
@@ -3398,7 +3500,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Nunciasti nobis",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 298
+    }
   },
   {
     "id": "mag:pius-x/immortalia-promerita-1908",
@@ -3417,7 +3525,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Immortalia promerita",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 491
+    }
   },
   {
     "id": "mag:pius-x/iucunda-valde-1908",
@@ -3436,7 +3550,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Iucunda valde",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 578
+    }
   },
   {
     "id": "mag:pius-x/si-vota-semper-1908",
@@ -3455,7 +3575,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Si vota semper",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 495
+    }
   },
   {
     "id": "mag:pius-x/saecularis-ab-ortu-1908",
@@ -3474,7 +3600,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Saecularis ab ortu",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 579
+    }
   },
   {
     "id": "mag:pius-x/studiosa-erga-1908",
@@ -3493,7 +3625,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Studiosa erga",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 299
+    }
   },
   {
     "id": "mag:pius-x/le-moment-1908",
@@ -3512,7 +3650,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Le moment",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 361
+    }
   },
   {
     "id": "mag:pius-x/sapienti-consilio-1908",
@@ -3536,10 +3680,10 @@
     ],
     "sourceGenreLabel": "apost_constitutions",
     "acta": {
-      "series": "AAS",
-      "volume": 1,
-      "year": 1909,
-      "page": 7
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 425
     }
   },
   {
@@ -3559,7 +3703,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Me taedet",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 621
+    }
   },
   {
     "id": "mag:pius-x/haerent-animo-1908",
@@ -3579,7 +3729,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Haerent Animo",
-    "sourceGenreLabel": "apost_exhortations"
+    "sourceGenreLabel": "apost_exhortations",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 555
+    }
   },
   {
     "id": "mag:pius-x/pias-fidelium-1908",
@@ -3698,10 +3854,10 @@
     ],
     "sourceGenreLabel": "apost_constitutions",
     "acta": {
-      "series": "AAS",
-      "volume": 1,
-      "year": 1909,
-      "page": 5
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 619
     }
   },
   {
@@ -3721,7 +3877,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Solatium Nos",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 747
+    }
   },
   {
     "id": "mag:pius-x/satis-constat-1908",

@@ -100,13 +100,13 @@ is listed under §9, *Page not recovered*.
 
 | Source | Popes | Entries | In harvested categories | Matched | Ambiguous | Claimed twice | Unmatched | Created | Held | Non-harvested (counted) | Dated > 1 year before the volume | Documents of the popes without an entry |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1909 | Pius X | 5 | 5 | 3 | 0 | 0 | 2 | 2 | 0 | 0 | 0 | 13 |
+| 1909 | Pius X | 5 | 5 | 1 | 0 | 0 | 2 | 2 | 2 | 0 | 0 | 13 |
 | 1917-I | Benedictus XV | 93 | 91 | 6 | 0 | 0 | 85 | 28 | 57 | 2 | 16 | 2 |
 | 1931 | Pius XI | 76 | 73 | 4 | 0 | 0 | 68 | 59 | 10 | 3 | 6 | 2 |
 | 1958 | Pius XII, Ioannes XXIII | 179 | 132 | 73 | 7 | 0 | 52 | 36 | 23 | 47 | 1 | 7 |
 | 1978 | Paulus VI, Ioannes Paulus I, Ioannes Paulus II | 162 | 72 | 29 | 0 | 0 | 43 | 28 | 15 | 90 | 0 | 7 |
 | 2012 | Benedictus XVI | 151 | 61 | 24 | 2 | 0 | 35 | 13 | 24 | 90 | 17 | 15 |
-| **Total** | | **666** | **434** | **139** | **9** | **0** | **285** | **166** | **129** | **232** | **40** | **46** |
+| **Total** | | **666** | **434** | **137** | **9** | **0** | **285** | **166** | **131** | **232** | **40** | **46** |
 
 *Claimed twice* counts the documents two entries both match (§5), as the 2015–2024 report does; a document claimed from
 two sources counts in each. *Unmatched* counts the entries of a harvested or partly harvested category the join left without a document (each is
@@ -117,13 +117,13 @@ shelf documents of the source's popes dated in the volume year that carry no `ac
 
 ### The reading
 
-1. **139 references written, every one from a quoted index line (§12):** 1 curated, 19 incipit, 3 incipit-month, 22 toponym, 94 unique. The
+1. **137 references written, every one from a quoted index line (§12):** 1 curated, 19 incipit, 2 incipit-month, 22 toponym, 93 unique. The
    *incipit-month* matches are the month-only entries of §1.3; the *toponym* and *incipit* ones include the claims the
    evidence rule resolved (`match.ts`): where several constitutions of one day are entered against one shelf record of the
    day (10 November 1977: *Avkaënsis*, *Mohaleshoekensis*, *Ambikapurensis* against the shelf's *Avkaensis*), the entry the
    record names keeps the match and the others are released to the creator instead of all three being withheld.
-2. **166 documents created** (§8) -- `rp:benedict-xv` 28, `rp:benedict-xvi` 13, `rp:paul-vi` 28, `rp:pius-x` 2, `rp:pius-xi` 59, `rp:pius-xii` 36 -- and 129 entries held (§9), 9 of them by the
-   duplicate guard and 2 by the OCR rule, 1 by the reprint rule. 61 constitutions print toponym and incipit both (§1.5), so almost no provisional id is minted from the
+2. **166 documents created** (§8) -- `rp:benedict-xv` 28, `rp:benedict-xvi` 13, `rp:paul-vi` 28, `rp:pius-x` 2, `rp:pius-xi` 59, `rp:pius-xii` 36 -- and 131 entries held (§9), 9 of them by the
+   duplicate guard and 2 by the OCR rule, 3 by the reprint rule. 61 constitutions print toponym and incipit both (§1.5), so almost no provisional id is minted from the
    volumes; the *Epistulae* are created only where the pope's letters shelf is harvested (Pius XI, Pius XII, John Paul I in this
    sample) and held elsewhere (§9, *shelf not harvested*).
 3. **A volume can reprint an act another volume already published, and a page can open two acts.** The 2020 index lists
@@ -148,7 +148,7 @@ Parsed / matched / ambiguous / unmatched for every category the era prints, with
 |---|---|---|---|---|---|---|---|
 | Litterae Encyclicae | yes | 1 / 1 / 0 / 0 | 1 / 1 / 0 / 0 | 4 / 4 / 0 / 0 | 2 / 2 / 0 / 0 |  |  |
 | Adhortationes Apostolicae | yes |  | 1 / 1 / 0 / 0 |  |  |  | 2 / 2 / 0 / 0 |
-| Constitutiones Apostolicae | yes | 2 / 2 / 0 / 0 |  | 12 / 0 / 0 / 12 | 37 / 37 / 0 / 0 | 28 / 3 / 0 / 25 | 11 / 8 / 2 / 1 |
+| Constitutiones Apostolicae | yes | 2 / 0 / 0 / 0 |  | 12 / 0 / 0 / 12 | 37 / 37 / 0 / 0 | 28 / 3 / 0 / 25 | 11 / 8 / 2 / 1 |
 | Litterae Apostolicae Motu proprio datae | yes |  | 6 / 4 / 0 / 2 | 2 / 0 / 0 / 2 | 1 / 1 / 0 / 0 | 1 / 1 / 0 / 0 | 3 / 3 / 0 / 0 |
 | Litterae Apostolicae | yes | 2 / 0 / 0 / 2 | 43 / 0 / 0 / 43 | 38 / 0 / 0 / 37 | 58 / 19 / 2 / 37 | 25 / 17 / 0 / 8 | 12 / 0 / 0 / 12 |
 | Epistulae Apostolicae | yes |  |  | 1 / 0 / 0 / 1 |  |  |  |
@@ -567,8 +567,10 @@ each row quotes what the fascicles print); the later printing's entry is a *repr
 |---|---|---|---|
 | AAS 112 (2020) 479 | AAS 104 (2012) 482 | reissue | `2011 Iul. 3 « Ibi vacabimus». – Venerabili Dei Servo Ioanni Scheffler, Bea- / torum honores decernuntur . . . . . . . . . . . . 482` — ` 3 Iul. 2011 « Ibi vacabimus ». Venerabili Servo Dei Ioanni Scheffler Bea - / torum honores decernuntur . . . . . . . . . . . . 479` |
 | AAS 23 (1931) 41 | AAS 22 (1930) 483 | reissue | ` » » » Quo maiori rerum. - Dis tracto territorio e vicariatu apo­ / stolico de Mariannhill erigitur praefectura apostolica / de umtata 483` — `1930 Martii 30 Quo maiori rerum. - Distracto territorio e vicariatu apo­ / stolico de Mariannhill erigitur praefectura apostolica / de TTmtata 41` |
+| AAS 1 (1909) 7 | ASS 41 (1908) 425 | reissue | `CONSTITUTIO APOSTOLICA / SS. D. N. Pii div. prov. Papae X, de Romana Curia.` — `1908 Ian. 29 Constitutio « Sapienti Consilio » / DE ROMANA CURIA.` |
+| AAS 1 (1909) 5 | ASS 41 (1908) 619 | reissue | `ACTA ROMANI PONTIFICIS / CONSTITUTIO APOSTOLICA / De promulgatione legum et evulgatione actorum S. Sedis.` — ` Sept. Constitutio « Promulgandi », de promulgatione legum / et evulgatione actorum S. Sedis` |
 
-Entries of the era so held: AAS 23 (1931) 41 (*Quo maiori rerum*).
+Entries of the era so held: AAS 1 (1909) 7 (*Sapienti Consilio*); AAS 1 (1909) 5 (*Promulgandi*); AAS 23 (1931) 41 (*Quo maiori rerum*).
 
 ### Matches a curated reference displaces
 
@@ -1329,8 +1331,8 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 | Guard: possible identity | 1 | 1958 1 |
 | Guard: same incipit elsewhere | 6 | 1931 5; 1958 1 |
 | OCR-damaged incipit or toponym | 2 | 1978 2 |
-| Printed more than once, or cited at more than one page: the citation of record is the other printing or awaits an ACTA_REPRINTS row | 1 | 1931 1 |
-| **Total** | **129** | |
+| Printed more than once, or cited at more than one page: the citation of record is the other printing or awaits an ACTA_REPRINTS row | 3 | 1909 2; 1931 1 |
+| **Total** | **131** | |
 | Page not recovered (§1b; outside the total: never reached the join) | 113 | 1909 108; 1917-I 5 |
 
 <details><summary><b>Category not created from the Acta</b> — 34</summary>
@@ -1517,10 +1519,12 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 
 </details>
 
-<details><summary><b>Printed more than once, or cited at more than one page: the citation of record is the other printing or awaits an ACTA_REPRINTS row</b> — 1</summary>
+<details><summary><b>Printed more than once, or cited at more than one page: the citation of record is the other printing or awaits an ACTA_REPRINTS row</b> — 3</summary>
 
 | Reference | Pope | Date | Category | Entry | Candidates | Note |
 |---|---|---|---|---|---|---|
+| AAS 1 (1909) 7 | Pius X | 1908-06-29 | Constitutiones Apostolicae | *Sapienti Consilio* | — | the later printing of an act the Acta print twice; the citation of record is ASS 41 (1908) 425 (ACTA_REPRINTS) |
+| AAS 1 (1909) 5 | Pius X | 1908-09 | Constitutiones Apostolicae | *Promulgandi* | — | the later printing of an act the Acta print twice; the citation of record is ASS 41 (1908) 619 (ACTA_REPRINTS) |
 | AAS 23 (1931) 41 | Pius XI | 1930-03-30 | Litterae Apostolicae | *Quo maiori rerum* | — | the later printing of an act the Acta print twice; the citation of record is AAS 22 (1930) 483 (ACTA_REPRINTS) |
 
 </details>
@@ -1739,12 +1743,10 @@ not harvested, homilies, allocutions) is counted in §3.
 
 ## 12. Every match, with the index line it rests on
 
-<details><summary><b>1909</b> — 3 matched</summary>
+<details><summary><b>1909</b> — 1 matched</summary>
 
 | Reference | Category | Document | By | Index line |
 |---|---|---|---|---|
-| AAS 1 (1909) 7 (page read: ACTA_PAGE_READINGS) | Constitutiones Apostolicae | `mag:pius-x/sapienti-consilio-1908` | unique | `1908 Ian. 29 Constitutio « Sapienti Consilio » / DE ROMANA CURIA.` |
-| AAS 1 (1909) 5 (page recovered: fuzzy) | Constitutiones Apostolicae | `mag:pius-x/promulgandi-1908` | incipit-month | ` Sept. Constitutio « Promulgandi », de promulgatione legum / et evulgatione actorum S. Sedis` |
 | AAS 1 (1909) 333 (page recovered: unique) | Litterae Encyclicae | `mag:pius-x/communium-rerum-1909` | unique | ` Apr. 21 Litt. encycl. « Communium rerum », de saecularibus / solemniis in honorem S. Anselmi, Episcopi et Eccle­ / siae Doctoris` |
 
 </details>
