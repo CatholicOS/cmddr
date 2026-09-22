@@ -301,7 +301,7 @@ the volume bodies (`tools/src/acta/recover.ts`, the sidecars beside the fixtures
 **770** recovered (unique 732, dated 13, fuzzy 25; the era report §1b) and 366 not (205 described by the index without an incipit,
 108 of them AAS 1's; 58 incipits opening several pages with no formula to settle them; 61 found nowhere; 26 outside the category's
 runs; 14 under a damaged running header; 2 whose one page another entry of the same incipit claims), seventeen more read by hand,
-and **113** documents carrying a reference into the seventeen volumes — 111 matched from a quoted index line and two curated; sixteen
+and **111** documents carrying a reference into the seventeen volumes — 109 matched from a quoted index line and two curated; sixteen
 encyclicals of Pius X, Benedict XV and Pius XI cite their page, eleven of them recovered. No volume clears the 95 % floor after
 recovery (the era's rate is 71.8 %, 78.4 % without AAS 1, whose index describes its acts without incipits): the rate counts every
 line the recovery cannot reach, and the reasons are listed per volume rather than the floor lowered. Nineteen curated rows supply
@@ -316,8 +316,18 @@ Benedict XVI 96), the fixtures taken from pypdf's layout mode because the defaul
 narrow column's `fullLine: 40` — which the 2010 and 2011 indexes already carry — recovering thirteen acts of harvested
 categories that the parser had been dropping in silence, since the line whose page it missed counted in neither term of the
 parse rate. All seven parse at 100 % over the harvested categories and 98.6–100 % over all pope-part page lines, and every one
-of the hundred lines left unread falls in a category the registry does not harvest. The AAS join now covers 1909–2002 and
-2003–2024 without a gap, and the *Acta Sanctae Sedis* of 1865–1908 are phase 2c.
+of the hundred lines left unread falls in a category the registry does not harvest. The AAS join covers 1909–2024 without a
+gap. Phase 2c-i ([era report](docs/superpowers/reports/2026-09-22-ass-volumes-sample.md),
+[spec](docs/superpowers/specs/2026-09-21-ass-volumes-design.md)) reaches into the *Acta Sanctae Sedis*, which print **no
+chronological index**: for five sample volumes (ASS 1, 12, 23, 33, 41) the index is synthesised from the volume body — every
+papal act's class heading, salutation, opening words and dateline quoted beside the entry — and checked against the volume's
+own *Summa actorum*, whose 87 rows over the five leave the scan **one genuine miss**. 63 acts were read by rule and 23 by
+hand, 85 entries in all, and **58** references follow (Leo XIII 29, Pius X 29, Pius IX none: ASS 1's three acts are hand
+readings, its allocution of a class the registry does not harvest and its two apostolic letters of 1866 without a shelf record
+on their date), 54 of them by the unique rule and 4 by the opening rule — the shelf's incipit as a word-boundary prefix of the
+act's first words, the rule the ASS needed and the AAS did not, an ASS entry carrying no incipit at all — with no ambiguous
+entry in the whole sample. The body scan works from 1879 on and fails on 1865, where the OCR spells the headings `ALLOCVTIO` and
+`LITERAE` and the volume's summa has no papal part at all; the remaining 36 volumes are 2c-ii.
 
 The *Acta* are therefore also a **second source**. An index entry the join leaves unmatched becomes a document of its own
 (phase 2a, `tools/src/acta/create.ts`) when its category is one the registry creates from the *Acta* — encyclicals,
@@ -376,9 +386,12 @@ letters — and held **537**; the shelves of Pius X and Benedict XV being thin, 
 the index OCR misspells into a well-formed word the body contradicts (*Placet oculog* for *oculos*) are held by curated rows, as
 *Begnum Dei* is. The acts of weight the recovery left without a page were read by hand (`ACTA_PAGE_READINGS`, seventeen rows,
 each quoting the page the act opens on and its dating formula): the encyclicals *Ad beatissimi Apostolorum Principis*, *Quod iam
-diu*, *Principi Apostolorum Petro* and *Annus iam plenus* and the constitution *Sapienti Consilio* now cite their pages, and
-eleven constitutions and motu proprio are created at theirs; the 349 entries still without a page are neither created nor
-cited. Two references are curated (`ACTA_CURATED_REFERENCES`): *Providentissima Mater Ecclesia* (27 May 1917) opens AAS 9 part
+diu*, *Principi Apostolorum Petro* and *Annus iam plenus* now cite their pages, and eleven constitutions and motu proprio are
+created at theirs; the 349 entries still without a page are neither created nor cited. The constitution *Sapienti Consilio* was
+read by hand at AAS 1 (1909) 7 and its row still quotes that page, but phase 2c-i found the act printed first at ASS 41 (1908)
+425, so the document is cited there and AAS 1's entry is a reprint by an `ACTA_REPRINTS` row — as *Promulgandi* is, the
+constitution that instituted the AAS, printed at ASS 41 (1908) 619 before it opened AAS 1 (1909) at p. 5.
+Two references are curated (`ACTA_CURATED_REFERENCES`): *Providentissima Mater Ecclesia* (27 May 1917) opens AAS 9 part
 II — the Code of 1917, which has no chronological index — at p. 5; and *Ubi arcano Dei consilio* (23 December 1922) is cited at
 its Latin printing, AAS 14 (1922) 673, whose index line lost its date columns and opens no entry, the row displacing the match
 of the Italian printing (AAS 15 (1923) 5) it names and quotes. Phase 2b′
@@ -393,8 +406,13 @@ are circumscription constitutions of a single day, which the index names by inci
 genres, most dated to a canonisation or beatification day whose decretal the *next* volume prints; the one act of weight with
 an entry of its own and no reference is John Paul II's *Pastores gregis*, which the 2004 index dates 5 October 2003, the
 closing of the Synod, and vatican.va's shelf 16 October, the signing, so the guard holds the entry rather than mint a second
-record. The
-remaining phase is 2c, the *Acta Sanctae Sedis* of 1865–1908, whose indexes carry no date or incipit and are confirmed by hand.
+record. Phase 2c-i joined the ASS sample without creating from it: **0 documents created**, the 18 unmatched entries all held
+`series-not-created`, 11 of them with no shelf record of any class on their date. The ASS-born documents and the reprints of
+earlier popes are 2c-iii, to be decided from the sample's reverse gap — **47** shelf documents of the volume years carrying no
+reference (Pius IX 2, Leo XIII 30, Pius X 15; 20 letters, 12 apostolic letters, 10 encyclicals, 3 addresses and 2 briefs), of
+which almost none has an ASS entry on its date, so they are acts the five volumes do not print rather than acts the scanner
+missed. The registry holds 496 shelf documents dated 1865–1908 and 58 of them now carry a reference; the remaining 36 volumes
+are 2c-ii.
 
 ### The document registry
 

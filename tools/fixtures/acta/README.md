@@ -1,4 +1,4 @@
-# The AAS index fixtures: the *Index generalis* PDFs of 2003–2014 and 2015–2024, and the volumes of 1909–2002
+# The AAS index fixtures: the *Index generalis* PDFs of 2003–2014 and 2015–2024, and the volumes of 1909–2002; the ASS sample (1865–1908)
 
 The extracted text of the *Index documentorum chronologico ordine digestus* of the *Acta
 Apostolicae Sedis*, one file per source, one page per form feed (`\f`), from two kinds of

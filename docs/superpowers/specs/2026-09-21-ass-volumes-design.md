@@ -127,9 +127,15 @@ APOSTOLICAE`, `LITTERAE`, `LITTERAE in forma Brevis`, `EPISTOLA`, `CONSTITUTIO A
 `MOTU PROPRIO`, `BREVE`, `EXHORTATIO`, `ALLOCUTIO`, `CHIROGRAPHUS` (extended only by what
 the sample prints, each addition quoted) — that is **not a running head**: a running head
 is the class alone beside a page number at the top of a page, an opening carries the pope's
-name or a description on the same or the following lines. The walk is bounded (40 lines,
-measured on the sample); two acts on one page resolve because each has its own anchor and
-the walk stops at the nearer heading.
+name or a description on the same or the following lines. The walk is bounded by **the
+previous anchor** — an act's heading stands after the act before it closes, so a walk never
+leaves its own act (`readAct`, `ass.ts`; corrected 2026-09-22 from the "40 lines" this spec
+first wrote, which the implementation never used, and which the acts of the sample exceed).
+The span such a walk may cross is the act's own, and the longest the sample prints is the
+exhortation *Haerent animo* of ASS 41, which opens at p. 555 and is dated at p. 577: a
+reading's span, not a measured walk, since the entries fixtures record the page the act
+opens on and not the anchor's. Two acts on one page resolve because each has its own anchor
+and the walk stops at the nearer heading.
 
 **Fields.**
 
@@ -262,3 +268,45 @@ documents and the reprints of earlier popes registered under their issuers (`rp:
 `rp:pius-vii`, `rp:pius-viii`, `rp:gregory-xvi` exist), decided from 2c-i's reverse-gap
 table; the summa's descriptions as data; the dicasteries' acts, the *Rota* cases and the
 appendices; lifting *Allocutiones*' `harvested` flag; any re-mint of a provisional record.
+
+## 9. Measured (2026-09-22)
+
+Phase 2c-i ran on the five sample volumes; the numbers are the totals of the era report's
+§2 and §3 tables ([`docs/superpowers/reports/2026-09-22-ass-volumes-sample.md`](../reports/2026-09-22-ass-volumes-sample.md)),
+which `tools/ass-volumes-report.ts` computes.
+
+**The scan against the summa (§2).** 3 785 pages read; **63 acts scanned by rule** (ASS 1
+0, ASS 12 10, ASS 23 8, ASS 33 18, ASS 41 27) and **23 read by hand** (`ASS_READINGS`, each
+row quoting the volume's lines), **85 entries** over the five volumes, 62 of them as the
+scanner read them, 7 anchored on a heading rather than a dateline. **37 defects** remain —
+21 `no-heading`, 10 `no-date`, 6 `header-mismatch`, 0 `no-opening`, 0 `unknown-pope` — 15 of
+them the brevia of the `EX SECRETARIA BREVIUM` part, left as defects rather than curated
+because they are a rule's worth. The summae list **87 rows**, a scanned act opens at **57**
+of the pages they cite, **28** rows are unclaimed (17 of them answered by a reading, and of
+the 11 left 10 are not a papal act opening at that page); **one genuine miss** in 87 rows,
+ASS 33 p. 193, whose dateline the OCR broke. 4 scanned acts the summa does not list, three
+of them dicastery-part acts. No volume shows a page offset: every `header-mismatch` is the
+OCR's reading of the right number (§4's second question, answered yes).
+
+**The join (§3).** Of the 85 entries, **76 fall in a harvested category** and **58 matched**
+(76.3 %) — 54 by the unique rule, **4 by the opening rule**, 0 by toponym, 0 curated — with
+**0 ambiguous entries** and 0 entries claimed twice. Per volume: ASS 1 0, ASS 12 5, ASS 23
+8, ASS 33 16, ASS 41 29. **18 unmatched**, every one held `series-not-created`, and **0
+documents created**, as §5 intends; 9 entries are skipped as a category the registry does
+not harvest (8 allocutions, 1 chirograph). 1 `ACTA_SHARED_PAGES` row (ASS 33 p. 641, two
+acts of 1901) and 2 `ACTA_REPRINTS` rows (AAS 1 (1909) 5 and 7, whose citation of record is
+ASS 41 (1908) 619 and 425). The reverse gap is **47** shelf documents of the volume years
+with no reference; the era holds 496 shelf documents dated 1865–1908, of which **58** now
+carry a reference.
+
+**What 2c-ii should expect** (the report's finding 15). (a) The OCR is worst at the start:
+ASS 1 (1865) yielded 0 acts by rule and needed 3 hand readings, so the volumes of the 1860s
+and 1870s should be assumed unscannable until measured and budgeted as readings; from 1879
+the rate is usable and from 1900 good. (b) The `EX SECRETARIA BREVIUM` part is the next
+rule and is worth 15 acts in these five volumes — anchoring on the ring formula rather than
+on a class heading, a decision to take once, with the owner, since it moves every volume's
+counts. (c) One summa page is unreadable and will be again: ASS 23 p. 753 is interleaved
+word by word by the OCR, so three papal rows are lost and three dicastery pages read as
+papal rows; a re-extraction of that page, or a hand row, is the cheapest fix. (d)
+`header-mismatch` may be worth relaxing for this series: 6 of the sample's defects are it,
+every one the OCR's reading of the right number, and no volume showed an offset.
