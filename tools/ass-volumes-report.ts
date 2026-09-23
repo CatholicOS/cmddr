@@ -200,9 +200,10 @@ p(`   the OCR misread (\`-318\`, \`555\`, \`585\`, \`U9\`, \`2\`/\`98\`, \`5\`/\
 p(`   reading of the act: both are the scanner refusing to guess, and each row quotes the lines it was read from (§2.5).`);
 p(`   The remaining ${readings.length - romanDated - headerRead} are single acts — ASS 1's three, the Italian-and-Latin letter of ASS 12 p. 3 with neither formula`);
 p(`   nor signature, \`MOTU-PRQPRIO\` (23 p. 522), \`rtomae\` (41 p. 195), the French cardinals' list read as an opening`);
-p(`   (41 p. 361), the by-line after a blank line (41 p. 555), \`MDCCCCL\` (33 p. 643). **No ASS volume shows a page offset**:`);
+p(`   (41 p. 361), the by-line after a blank line (41 p. 555), \`MDCCCCL\` (33 p. 643). **No volume of the sample shows a page offset**:`);
 p(`   every header-mismatch of the sample is the OCR's reading of the right number, so the PDF page is the printed page in`);
-p(`   all five (spec §4's second question, answered yes).`);
+p(`   all five (spec §4's second question, answered yes *for the sample*; the series holds one genuine offset these five do`);
+p(`   not, ASS 7 (1872) pp. 496-547 — finding 15(d)).`);
 p(`5. **${result.matches.length} references written, ${byRule('unique')} by the unique rule and ${byRule('opening')} by the opening rule, with ${result.ambiguous.length} ambiguities and ${result.conflicts.length} conflicts.** Of the ${entries.length} entries,`);
 p(`   ${harvested} fall in a category the registry harvests, and **${result.matches.length} of those ${harvested} matched** (${pct(result.matches.length, harvested)}): ASS 1 ${result.matches.filter((m) => m.entry.volume === 1).length}, ASS 12 ${result.matches.filter((m) => m.entry.volume === 12).length}, ASS 23 ${result.matches.filter((m) => m.entry.volume === 23).length},`);
 p(`   ASS 33 ${result.matches.filter((m) => m.entry.volume === 33).length}, ASS 41 ${result.matches.filter((m) => m.entry.volume === 41).length} (§3). The rate climbs with the volume and with the shelf behind it, from nothing in 1865 to`);

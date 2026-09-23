@@ -322,12 +322,17 @@ gap. Phase 2c-i ([era report](docs/superpowers/reports/2026-09-22-ass-volumes-sa
 chronological index**: for five sample volumes (ASS 1, 12, 23, 33, 41) the index is synthesised from the volume body — every
 papal act's class heading, salutation, opening words and dateline quoted beside the entry — and checked against the volume's
 own *Summa actorum*, whose 87 rows over the five leave the scan **one genuine miss**. 61 entries stand as the scanner read
-them and 24 were read by hand, 85 in all, and **57** references follow (Leo XIII 28, Pius X 29, Pius IX none: ASS 1's three acts are hand
+them and 24 were read by hand, 97 in all, and **57** references follow (Leo XIII 28, Pius X 29, Pius IX none: ASS 1's three acts are hand
 readings, its allocution of a class the registry does not harvest and its two apostolic letters of 1866 without a shelf record
 on their date), 53 of them by the unique rule and 4 by the opening rule — the shelf's incipit as a word-boundary prefix of the
 act's first words, the rule the ASS needed and the AAS did not, an ASS entry carrying no incipit at all — with no ambiguous
 entry in the whole sample. The body scan works from 1879 on and fails on 1865, where the OCR spells the headings `ALLOCVTIO` and
-`LITERAE` and the volume's summa has no papal part at all; the remaining 36 volumes are 2c-ii.
+`LITERAE` and the volume's summa has no papal part at all. Phase 2c-ii-a then made the rest of the series measurable
+before its eras are planned ([the survey](docs/superpowers/reports/2026-09-22-ass-survey.md), spec §10): the summa parser was
+taught the papal headings the other 36 volumes print, so **37 of the 41 find their papal part** where 21 did, and the brevia of
+the *Secretaria Brevium* — papal acts headed by a descriptive title and closed under the ring of the Fisherman — are read from
+the ring. Across the series that is **482 acts by rule** where 380 stood, and 344 of 668 summa rows claimed (51 %) where 257 of
+549 were (47 %); no reference count moved, since nothing was joined. The remaining 36 volumes are 2c-ii.
 
 The *Acta* are therefore also a **second source**. An index entry the join leaves unmatched becomes a document of its own
 (phase 2a, `tools/src/acta/create.ts`) when its category is one the registry creates from the *Acta* — encyclicals,
@@ -406,8 +411,8 @@ are circumscription constitutions of a single day, which the index names by inci
 genres, most dated to a canonisation or beatification day whose decretal the *next* volume prints; the one act of weight with
 an entry of its own and no reference is John Paul II's *Pastores gregis*, which the 2004 index dates 5 October 2003, the
 closing of the Synod, and vatican.va's shelf 16 October, the signing, so the guard holds the entry rather than mint a second
-record. Phase 2c-i joined the ASS sample without creating from it: **0 documents created**, the 19 unmatched entries all held
-`series-not-created`, 11 of them with no shelf record of any class on their date. The ASS-born documents and the reprints of
+record. Phase 2c-i joined the ASS sample without creating from it: **0 documents created**, the 31 unmatched entries all held
+`series-not-created`, 23 of them with no shelf record of any class on their date. The ASS-born documents and the reprints of
 earlier popes are 2c-iii, to be decided from the sample's reverse gap — **48** shelf documents of the volume years carrying no
 reference (Pius IX 2, Leo XIII 31, Pius X 15; 21 letters, 12 apostolic letters, 10 encyclicals, 3 addresses and 2 briefs), of
 which almost none has an ASS entry on its date, so they are acts the five volumes do not print rather than acts the scanner

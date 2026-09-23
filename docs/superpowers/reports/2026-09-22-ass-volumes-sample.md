@@ -61,9 +61,10 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    reading of the act: both are the scanner refusing to guess, and each row quotes the lines it was read from (§2.5).
    The remaining 10 are single acts — ASS 1's three, the Italian-and-Latin letter of ASS 12 p. 3 with neither formula
    nor signature, `MOTU-PRQPRIO` (23 p. 522), `rtomae` (41 p. 195), the French cardinals' list read as an opening
-   (41 p. 361), the by-line after a blank line (41 p. 555), `MDCCCCL` (33 p. 643). **No ASS volume shows a page offset**:
+   (41 p. 361), the by-line after a blank line (41 p. 555), `MDCCCCL` (33 p. 643). **No volume of the sample shows a page offset**:
    every header-mismatch of the sample is the OCR's reading of the right number, so the PDF page is the printed page in
-   all five (spec §4's second question, answered yes).
+   all five (spec §4's second question, answered yes *for the sample*; the series holds one genuine offset these five do
+   not, ASS 7 (1872) pp. 496-547 — finding 15(d)).
 5. **57 references written, 53 by the unique rule and 4 by the opening rule, with 0 ambiguities and 0 conflicts.** Of the 97 entries,
    88 fall in a category the registry harvests, and **57 of those 88 matched** (64.8 %): ASS 1 0, ASS 12 5, ASS 23 7,
    ASS 33 16, ASS 41 29 (§3). The rate climbs with the volume and with the shelf behind it, from nothing in 1865 to

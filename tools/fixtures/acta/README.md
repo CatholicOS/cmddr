@@ -556,7 +556,7 @@ novarum*'s own row); 5 readings. ASS 33: `LITTERAE ET ACTA` (`R. PONTIFICIS` on 
 … `EX S. C. CONCILII`; 6 readings. ASS 41: `ACTA ROMANI PONTIFICIS` … `EX SECRETARIA BREVIUM`;
 9 readings. The defects are mostly the brevia of the Secretaria Brevium part (`sub annulo
 Piscatoris … R. Card. MERRY DEL VAL, a Secretis Status`), which carry no class heading and
-which the summa lists under the dicastery. In every volume the PDF page is the printed page:
+which the summa lists under the dicastery. In every volume of the sample the PDF page is the printed page:
 each `header-mismatch` still standing is the OCR's reading of the number (`U9` for 449, the
 split `2` / `98` for 298 and `5` / `49` for 495) -- `585` for 385 and `-318` are no longer
 defects, `headerAgreesASS` (2c-ii Task 6) now admitting them.

@@ -288,7 +288,9 @@ appendices; lifting *Allocutiones*' `harvested` flag; any re-mint of a provision
 
 Phase 2c-i ran on the five sample volumes; the numbers are the totals of the era report's
 §2 and §3 tables ([`docs/superpowers/reports/2026-09-22-ass-volumes-sample.md`](../reports/2026-09-22-ass-volumes-sample.md)),
-which `tools/ass-volumes-report.ts` computes.
+which `tools/ass-volumes-report.ts` computes. The numbers below are phase 2c-i's own, as
+it merged; phase 2c-ii-a re-read the sample with the brevia rule and the relaxed
+`header-mismatch` and regenerated the report, and what it prints now is in §10's *Measured*.
 
 **The scan against the summa (§2).** 3 785 pages read; **63 acts scanned by rule** (ASS 1
 0, ASS 12 10, ASS 23 8, ASS 33 18, ASS 41 27) and **24 read by hand** (`ASS_READINGS`, each
@@ -300,8 +302,11 @@ because they are a rule's worth. The summae list **87 rows**, a scanned act open
 of the pages they cite, **28** rows are unclaimed (17 of them answered by a reading, and of
 the 11 left 10 are not a papal act opening at that page); **one genuine miss** in 87 rows,
 ASS 33 p. 193, whose dateline the OCR broke. 4 scanned acts the summa does not list, three
-of them dicastery-part acts. No volume shows a page offset: every `header-mismatch` is the
-OCR's reading of the right number (§4's second question, answered yes).
+of them dicastery-part acts. **No volume of the sample shows a page offset**: every
+`header-mismatch` of the five is the OCR's reading of the right number (§4's second
+question, answered yes *for the sample*). It is not answered for the series: 2c-ii-a found
+ASS 7 (1872) PDF pp. 496-547 genuinely offset by +2, which no mismatch had ever counted
+because no act opens inside that stretch (§10's *Measured*).
 
 **The join (§3).** Of the 85 entries, **76 fall in a harvested category** and **57 matched**
 (75.0 %) — 53 by the unique rule, **4 by the opening rule**, 0 by toponym, 0 curated — with
@@ -326,7 +331,10 @@ counts. (c) One summa page is unreadable and will be again: ASS 23 p. 753 is int
 word by word by the OCR, so three papal rows are lost and three dicastery pages read as
 papal rows; a re-extraction of that page, or a hand row, is the cheapest fix. (d)
 `header-mismatch` may be worth relaxing for this series: 6 of the sample's defects are it,
-every one the OCR's reading of the right number, and no volume showed an offset.
+every one the OCR's reading of the right number, and no volume *of the sample* showed an
+offset. Taken in 2c-ii-a on the series' own 48 mismatches — and the one genuine offset they
+never reached, ASS 7's, guarded by curation rather than folded into the rule (§10's
+*Measured*).
 
 ## 10. Addendum (2026-09-22): how 2c-ii is split
 
@@ -342,9 +350,10 @@ as 2c-i merged it, adding no source, writing no fixture and touching no document
 by decade — 1860s none claimable, 1870s 75 %, 1880s 20 %, 1890s 37 %, 1900s 62 % — is a
 **floor, not a measurement**, because of the finding that reshaped this phase:
 
-**The summa's papal part is headed in at least eight forms, and the parser knows three.**
-Nineteen volumes find no papal heading at all, so their summa reads as having no papal part
-and claims nothing however well the volume scans: `ACTA SOLEMNIORA ROM. PONTIFICIS PUBLICI
+**The summa's papal part was headed in at least eight forms the parser did not know, and it
+knew three** (all of it answered by 2c-ii-a: the parser now knows 16, and the *Measured*
+below says which volumes are left). Twenty volumes found no papal heading at all, so their
+summa read as having no papal part and claimed nothing however well the volume scanned: `ACTA SOLEMNIORA ROM. PONTIFICIS PUBLICI
 IURIS FACTA` (ASS 5, 6), `ACTA SOLEMNIORA ROMANI PONTIFICIS` (3), `ACTA SOLEMNIORE ROM.
 PONTIFICIS` (4), `ACTA SOLEMNIORÂ ROMANI PONTIFICIS` (8), the bare class as the heading —
 `LITTERAE APOSTOLICAE` (10, 11) and the mixed-case `Litterae Apostolicae / SS. D. N. P.
@@ -363,8 +372,10 @@ papal part at all, which reading will settle.
    headings and part-ends above, each quoted at the volume and page the survey printed;
    then the survey re-run, so the yield the eras are planned against is a measurement. No
    source is added, no fixture written, no document joined.
-2. **The brevia are read** (the survey counts **83** across the series, 59 of them in the
-   1900s, against the 15 the sample saw): anchored on the ring formula rather than on a
+2. **The brevia are read** (the survey counted **83** across the series when the ruling was
+   taken, 59 of them in the 1900s, against the 15 the sample saw — a miscount: its regex
+   read only the lower-case `annulo` and the series prints `Annulo` 54 times as well, so the
+   figure the ruling should be read against is **105**): anchored on the ring formula rather than on a
    class heading, the descriptive caps title read as the description, the class `brief`.
    Adopted as its own commit inside 2c-ii-a, so every later era measures against the
    finished scanner and 2c-i's own numbers regenerate once, there, rather than era by era.
@@ -379,10 +390,115 @@ papal part at all, which reading will settle.
 **Carried into 2c-ii-a from 2c-i's review.** `tools/src/acta/ass.ts` splits along the seams
 its three sections already have — `ass-dates.ts`, `ass-headings.ts`, and the scan — before
 the rule churn of the eras, since 2c-ii's work is almost entirely adding quoted spellings.
-`header-mismatch` is **38** across the series and every instance the survey printed is the
-OCR's reading of the right number, never a run of offset pages (ASS 3 `1*97` for 197, ASS 6
-`4SI` for 481, ASS 10 `4<¡` for 49): the guard is a curated-reading generator, not a
+`header-mismatch` was **38** across the series when this was written (48 once the parser
+tasks had re-run the survey) and every instance the survey printed is the OCR's reading of
+the right number, none of them in a run of offset pages (ASS 3 `1*97` for 197, ASS 6 `4SI`
+for 481, ASS 10 `4<¡` for 49). **That is true of the mismatches and not of the series**: a
+mismatch is only ever raised where an act opens and the header is checked, so a stretch no
+act opens in is never counted — ASS 7 (1872) PDF pp. 496-547 is exactly that, a genuine +2
+offset (see the *Measured* below). The guard is a curated-reading generator, not a
 correctness check, and 2c-ii-a decides whether to relax it on that evidence.
+
+**Measured (2026-09-23, phase 2c-ii-a).** The phase wrote rules and re-ran the survey after
+each ([the survey](../reports/2026-09-22-ass-survey.md), regenerated 2026-09-23, and the
+sample's era report with it). Decision 1 held: no source was added, no fixture written, no
+document joined — save the five sample volumes, whose fixtures, report and join the brevia
+rule regenerated once, as decision 2 intends.
+
+*What the parser now reads.* **21 of the 41 volumes found a papal part before, 37 after.**
+`parseSummaPapalPart` knows **16** papal-heading forms, each cited in a doc comment at the
+volume that prints it (`PAPAL_HEAD_FORMS`, `tools/src/acta/summa.ts`), and the part now
+**pauses** at the first dicastery heading and **reopens** at a later papal one — the shape
+ASS 8 (1874) 727-728 prints. No volume's papal part still runs on into the dicasteries
+(survey §1, §4b); ASS 21's part was 100 rows with 87 unclaimed and is 19 rows with 6.
+
+*The yield, before → after* (survey §2 against this section's *What the survey measured*):
+
+| Decade | Summa rows | Claimed | Claimed % |
+|---|---|---|---|
+| 1860s | 0 → 42 | 0 → 18 | — → 43 % |
+| 1870s | 12 → 98 | 9 → 30 | 75 % → 31 % |
+| 1880s | 126 → 106 | 25 → 47 | 20 % → 44 % |
+| 1890s | 134 → 134 | 50 → 51 | 37 % → 38 % |
+| 1900s | 277 → 288 | 173 → 198 | 62 % → 69 % |
+| **series** | **549 → 668** | **257 → 344** | **47 % → 51 %** |
+
+Two of those movements are the parser telling the truth rather than a yield falling: the
+1870s' 75 % was 9 rows of 12, one volume's, where the decade now shows 98 rows of seven
+volumes; and the 1880s' 126 rows were mostly ASS 21's part running into the dicasteries.
+**Acts: 380 → 482**, in the two steps below, and **defects 386 → 288**. By pontificate,
+which is how the eras are cut: Pius X (ASS 37-41) 180 acts, 208 rows, **70 %** claimed;
+ASS 36 38 acts, 36 rows, **61 %**; Leo XIII (ASS 12-35) 203 acts, 296 rows, **46 %**;
+ASS 11 7 acts, 12 rows, 50 %; Pius IX (ASS 1-10) 54 acts, 116 rows, **28 %**.
+
+*The brevia, read on the ruling of 2026-09-22* (survey §3). Where an act closes under the
+ring of the Fisherman and no class heading stands behind it, the walk-back reads it from the
+pope's own name standing alone, takes the descriptive title above that name as the
+description, and gives it the class `BREVE`. **61 of the 107 such defects became acts**:
+380 → 442 acts, 386 → 328 defects, and **28 brevia are left** — a breve whose running header
+the OCR damaged, one whose dateline prints no `die`, and the shape the eras must watch: the
+ASS reprint older briefs inside later acts, guillemets and all (ASS 28 (1895) 112 prints one
+of Pius IX of 1851 inside a Congregation's `COMPENDIUM FACTI`), and only `assDate`'s
+ten-year span bound refused that one. **An in-span quotation with a pope's name above it
+would read as a spurious act**, and nothing in the rule would catch it.
+
+*`header-mismatch`, relaxed for the ASS alone* (survey §5). All **48** of the series'
+mismatches were the OCR's reading of the right number, each confirmed against its volume's
+neighbouring pages, so `headerAgreesASS` (`ass.ts`) lets a `DIGIT_OCR` letter stand for any
+digit rather than the one it is keyed to, and admits an all-digit token one edit from the
+page. `headerAgrees` (`recover.ts`) is untouched and the AAS page recovery reads exactly as
+before. **48 → 8 mismatches, 442 → 482 acts.** The latitude is measured, not assumed: over
+every page of every volume the relaxation admits **2 070 of 30 021 pages (6.9 %)** that
+`headerAgrees` refuses, so the next rule that reads more of the body inherits it knowingly.
+And it is guarded where it must be: ASS 7 (1872) PDF pp. 496-547 print a genuine +2 offset,
+unbroken from p. 496 (printing `498`) to p. 547 (`549`) and closing at p. 548, curated in
+`ASS_PAGE_OFFSETS` (`curation.ts`), inside which `headerAgreesASS` refuses as
+`headerAgrees` does. It cost nothing downstream because no act opens in that stretch today —
+which is also why the 48 never counted it.
+
+*Two losses measured, and no rule written for either.* (a) **The woven summa columns**
+(survey §4c): on **15 pages of 13 volumes** the two columns come back glued, because the
+extraction has collapsed the gutter to a single character. Widening the gutter search from
+runs of four spaces to three, or to two, moves the gutter on **none** of them; the columns
+are not aligned, so a fixed cut would fall inside a word; and the seam's own page token is
+too rare to cut on (3 of 38 lines on ASS 27 (1894) 753). The price is **10 papal rows in 3
+volumes** (ASS 3, 23, 27), each glued row losing two at once. These are the eras' to curate
+by hand, as 2c-i curated ASS 23 (1890) 753. (b) **Five `header-mismatch` pages** stay out of
+reach (ASS 8 pp. 373, 686; ASS 10 p. 49; ASS 13 p. 3; ASS 16 p. 241): two edits or worse, or
+a page number the OCR split across two lines. The other three are answered by curated
+readings already.
+
+*One volume's body was being read wrong* (survey §4d). `locateSumma` ran ASS 38's summa from
+p. 417 to p. 702, swallowing a separately paginated 270-page French *Supplementum ad "Acta
+S. Sedis"* bound in after the volume's own `IMPRIMATUR` on p. 432. The summa is pp. 417-423
+and the body 1-416; the volume's own index cites nothing past p. 415 and indexes the
+supplement as one row each, so ASS 38's **13 acts are its real yield** and no era should
+look in that dossier for a rule.
+
+*What 2c-i's own numbers became*, the sample re-read with both rules (the era report,
+regenerated 2026-09-23, against §9): **78 acts by rule** (63), **97 entries** (85), **73 of
+them as the scanner read them** (61), 24 by hand (24), **22 defects** (37), **60 of the 87
+summa rows claimed** (57) with the same **one genuine miss** (ASS 33 p. 193), 16 scanned
+acts the summa omits (4), 14 of them `BREVE` under the `EX SECRETARIA BREVIUM` heading the
+papal part ends at. **References: 57, unchanged**, and **0 documents created**: every entry
+the two rules added is a `BREVE`, not one of which the briefs shelves hold, and all are held
+`series-not-created`. The reverse gap is still 48.
+
+**What the eras can plan against, and what is still a floor.** The **1900s are a
+measurement**: all nine volumes find their papal part, and 198 of 288 rows are claimed.
+Each of the other four decades carries **exactly one volume that still finds no papal
+heading** and so claims nothing however well it scans — **ASS 1 (1865-66), ASS 7 (1872-73),
+ASS 20 (1887), ASS 26 (1893-94)**, whose summa first lines survey §4b prints: ASS 1 and
+ASS 7 list the pope's acts under the dicastery that issued them, ASS 20 prints no part
+heading and opens on its rows, ASS 26's summa opens on a dicastery. Their 23 scanned acts
+(0, 5, 9, 9) sit outside the check altogether, and their decades' percentages are
+measurements of the other volumes only. Three further stretches are floors by a known
+amount: the 10 glued papal rows of ASS 3, 23 and 27; the 5 `header-mismatch` pages above;
+and the 28 brevia the rule does not reach (by decade in survey §3). Everything else in §2 is
+now a measurement, so the eras of decision 3 are planned against **70 % and 61 %** claimed
+(2c-ii-b, Pius X, ASS 36-41) rather than the 62-64 % written there, **46 %** (2c-ii-c,
+Leo XIII, ASS 12-35, whose floors are ASS 20, ASS 26 and most of the woven pages) and
+**28 %** (2c-ii-d, Pius IX, ASS 1-11, whose floors are ASS 1 and ASS 7).
 
 **Out of scope for 2c-ii**, unchanged: the ASS-born documents and the reprints of earlier
 popes registered under their own issuers (2c-iii, decided from the eras' gap reports).
