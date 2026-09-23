@@ -1560,6 +1560,38 @@ export const ASS_READINGS: Readonly<Record<string, AssReading>> = {
   },
 };
 
+export interface AssPageOffset {
+  /** The PDF page range the offset holds over (inclusive), the store text's own page numbers. */
+  from: number;
+  to: number;
+  /** The printed page minus the PDF page, over the range. */
+  delta: number;
+  /** The pages read to establish the range's bounds, quoted, and where. */
+  evidence: string;
+}
+
+/**
+ * The one genuine page offset the whole-series survey found (2c-ii Task 6, fix round 1):
+ * ASS 7 (1872) skips printed pp. 496-497 in the scan, so PDF pp. 496-547 print two more
+ * than the PDF page reads and `headerAgreesASS`'s relaxation, which reads a clean
+ * digit-for-digit misread as OCR noise, would otherwise admit every one of them -- exactly
+ * the guard `header-mismatch` exists to keep. Consulted by the ASS header check
+ * (`pageOffsetOf`, ass.ts): inside a listed range the relaxation does not apply, and the
+ * page is refused as `headerAgrees` alone refuses it. Keyed by volume; a volume may have
+ * more than one range if a later survey finds one, so the value is an array.
+ */
+export const ASS_PAGE_OFFSETS: Readonly<Record<number, readonly AssPageOffset[]>> = {
+  7: [{
+    from: 496, to: 547, delta: 2,
+    evidence: "ASS 7 (1872), ass-07-1872.txt (read 2026-09-23). PDF p. 495 prints '495' (correct, the last page "
+      + "before the offset), PDF p. 496 prints '498 Litterae Apostolicae' (the offset begins: printed pp. 496-497 "
+      + "are absent from the scan), and the +2 delta holds unbroken to PDF p. 547, which prints '549'; PDF p. 548 "
+      + "prints '548' again (correct, the offset ends). The range sits inside the scanned body -- the volume's "
+      + "summa begins at PDF p. 751 -- but no act opens in it today (its defects there are all `no-heading`), so "
+      + "nothing downstream has yet recorded a page from inside it.",
+  }],
+};
+
 /** The key of ACTA_INDEX_CORRECTIONS and ACTA_HOLDS: `{year}:{page}` for the AAS (the volume year and first page the index cites); `ASS:{volume}:{page}` for the ASS, whose volumes 2 and 3 share a year. */
 export const curationKey = (e: { series?: string; volume?: number; year: number; page: number }): string =>
   e.series === 'ASS' ? `ASS:${e.volume}:${e.page}` : `${e.year}:${e.page}`;

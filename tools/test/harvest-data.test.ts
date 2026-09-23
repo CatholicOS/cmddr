@@ -3840,21 +3840,25 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // p. 437 (`LITTERAE in forma brevis Sanctissimi D. N. Leonis XIII quibus indulgen-/tiae
     // conceduntur`): the act's class is `brief`, not `letter`, so *Opportune quidem* joins the
     // four of ASS 33 below as a class mismatch the owner rules on, and its reference is withheld.
-    // ASS 33 (1900): 16 of 25 entries, all unique -- *Tametsi futura*, *Graves de communi
+    // ASS 33 (1900): 16 of 26 entries, all unique -- *Tametsi futura*, *Graves de communi
     // re*, the constitution *Conditae a Christo* and 12 letters, two of them on the one
     // page the sample's two matched letters share (ASS 33 p. 641, ACTA_SHARED_PAGES); the
-    // 7 held include the four `LITTERAE in forma Brevis` whose same-date letters stand on the
+    // 8 held include the four `LITTERAE in forma Brevis` whose same-date letters stand on the
     // shelf as `letter` while the heading's class is `brief` (controller ruling: reported,
     // not overridden) -- five acts of that shape in the sample since ASS 23 p. 437 joined them --
-    // and, since 2c-ii-a, the breve at p. 212 (p. 213, its neighbour, joins it since 2c-ii
-    // Task 6 relaxed `header-mismatch`, but is also held: both are briefs).
-    // ASS 41 (1908): 29 of 42 entries (27 unique, 2 by the opening rule: Pius X's motu
+    // and two ring brevia, at pp. 212 and, since 2c-ii Task 6 relaxed `header-mismatch`, 213
+    // (its neighbour: both are briefs, and neither is on a shelf). The other two of the 26 are
+    // skipped, not held: the allocution at p. 396 and the chirograph at p. 714, neither a
+    // class the registry harvests.
+    // ASS 41 (1908): 29 of 44 entries (27 unique, 2 by the opening rule: Pius X's motu
     // proprio *Singulari curare* and *In domibus* of 17 September 1907), the shelf of Pius
     // X's letters being the era's fullest; 23 letters, 3 apostolic letters, the exhortation
     // *Haerent animo* (a curated reading) and the two constitutions *Sapienti consilio*
     // (p. 425) and *Promulgandi* (p. 619), which AAS 1 (1909) 7 and 5 reprinted and the
     // registry cited there until this phase: the ASS is their first printing and so their
-    // citation of record (ACTA_REPRINTS 'AAS:1:7' and 'AAS:1:5', quoting both printings).
+    // citation of record (ACTA_REPRINTS 'AAS:1:7' and 'AAS:1:5', quoting both printings). Of
+    // its 11 held, 2 are new since 2c-ii Task 6 relaxed `header-mismatch`: the ring brevia at
+    // pp. 300 and 301, neither on the briefs shelf.
     const perVolume = Object.fromEntries(sources.map((s) => [s.key, cited.filter((d) => d.acta!.volume === s.volume).length]));
     expect(perVolume).toEqual({ 'ass-1': 0, 'ass-12': 5, 'ass-23': 7, 'ass-33': 16, 'ass-41': 29 });
     expect(cited).toHaveLength(57);

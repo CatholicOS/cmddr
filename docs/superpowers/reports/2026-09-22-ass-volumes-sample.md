@@ -9,8 +9,8 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    scanner, and the yield divides at the first of them. ASS 1 (1865–66, 767 pages) gave **0 acts** — its three
    papal acts were read by hand and stand in `ASS_READINGS` (§2.5) — while ASS 12 (1879) gave 10, ASS 23 (1890–91) 9,
    ASS 33 (1900–01) 22 and ASS 41 (1908) 37 — 78 acts from the five bodies by rule. After the curation the sample
-   carries **97 entries, 73 of them as the scanner read them** (75.3 %) and 24 read by hand (one reading replacing a
-   scanned entry, at ASS 41 p. 361, and the rest added where the scan had nothing). The 1865 volume is not a harder instance of the same problem but a different volume: its
+   carries **97 entries, 73 of them as the scanner read them** (75.3 %) and 24 read by hand (5 readings replacing
+   a scanned entry each (ASS 23 p. 318, ASS 33 p. 355, ASS 33 p. 385, ASS 41 p. 12, ASS 41 p. 361) and the rest added where the scan had nothing). The 1865 volume is not a harder instance of the same problem but a different volume: its
    class headings are spelt `LITERAE APOSTOLICAE` with one T and `ALLOCVTIO` with the OCR's V, neither a heading of the
    list; its two apostolic letters are printed under `SECRETARIA BREVIUM` behind an editor's preface, so the act does not
    open where the heading stands; and **its summa has no papal part at all** (0 rows, §2) — the pope's acts are listed
@@ -193,7 +193,7 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
 anchors an entry can carry, and the third — the dateline, which the scanner anchors on by rule — is the majority and is not broken
 out (66 of the 97 entries are `dateline`, 7 `heading`, 24 `reading`). “Scanned by rule” is the fixture's own count, taken before the loader applies the
 readings, so “Entries” is “Scanned by rule” plus “Readings” less the readings that *replace* a scanned entry rather than add one
-(5 in the sample, at ASS 41 p. 361).
+(5 in the sample, at ASS 23 p. 318, ASS 33 p. 355, ASS 33 p. 385, ASS 41 p. 12, ASS 41 p. 361).
 
 ### 2.1 Acts scanned, with the lines each rests on
 

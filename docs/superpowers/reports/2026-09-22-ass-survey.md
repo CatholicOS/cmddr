@@ -259,14 +259,28 @@ for a rule.
 ## 5. `header-mismatch`: OCR noise, or a page offset?
 
 **8** across the series, down from 48 (2c-ii Task 6, on this survey's evidence): every one of the 48 was the OCR's
-reading of the right number, confirmed against its volume's neighbouring pages, and none was a run -- a volume whose pages are genuinely
-offset would show them in a run, at every page, and none does (the sample's own 9 fell to 3, finding 15d). `headerAgreesASS` (ass.ts) is the
-ASS-only relaxation the ruling took: a `DIGIT_OCR` letter (summa.ts) stands for any digit rather than the one it is keyed to, and, unlike
-`headerAgrees` itself (recover.ts, kept as it was for the AAS page recovery), an all-digit token one edit from the page agrees too. 40 of the
-48 agree by that rule; the other 8 below are two edits or worse, or a page number the OCR splits across two lines `headerOf`'s single line
-cannot reach -- three of them (ASS 33 p. 449, ASS 41 pp. 298, 495) already answered by a curated reading regardless (`ASS_READINGS`,
-curation.ts), five not (ASS 8 pp. 373, 686; ASS 10 p. 49; ASS 13 p. 3; ASS 16 p. 241), each confirmed OCR noise the same way but too far from
-the page to admit without also risking a page whose header truly disagrees.
+reading of the right number, confirmed against its volume's neighbouring pages, and none of the 48 sits in a run -- a volume whose pages are
+genuinely offset would show them in a run, at every page (the sample's own 9 fell to 3, finding 15d). That is what the 48 measures, and no
+more: the series *does* hold one genuine offset the 48 never counted, because no act ever opened inside it to be checked (fix round 1 below).
+`headerAgreesASS` (ass.ts) is the ASS-only relaxation the ruling took: a `DIGIT_OCR` letter (summa.ts) stands for any digit rather than the
+one it is keyed to, and, unlike `headerAgrees` itself (recover.ts, kept as it was for the AAS page recovery), an all-digit token one edit from
+the page agrees too. 40 of the 48 agree by that rule; the other 8 below are two edits or worse, or a page number the OCR splits across two
+lines `headerOf`'s single line cannot reach -- three of them (ASS 33 p. 449, ASS 41 pp. 298, 495) already answered by a curated reading
+regardless (`ASS_READINGS`, curation.ts), five not (ASS 8 pp. 373, 686; ASS 10 p. 49; ASS 13 p. 3; ASS 16 p. 241), each confirmed OCR noise
+the same way but too far from the page to admit without also risking a page whose header truly disagrees.
+
+**One volume is a genuine offset, and the relaxation is now guarded against it.** ASS 7 (1872) skips printed pp. 496-497 in the scan: PDF
+p. 495 prints `495` (correct), PDF p. 496 prints `498 Litterae Apostolicae` (the offset begins), and the +2 delta holds unbroken to PDF
+p. 547 (`549`), closing at PDF p. 548, which prints `548` again. The range sits inside the scanned body (the volume's summa begins at PDF
+p. 751), but no act opens there today -- its defects in that stretch are all `no-heading`, so no page in it ever reached the header check --
+which is why the 48 above never counted it and why nothing downstream moved when it was found. It is curated, not folded into the rule:
+`ASS_PAGE_OFFSETS` (curation.ts) keys volume 7 to PDF pp. 496-547, and `headerAgreesASS` refuses inside a listed range exactly as
+`headerAgrees` alone does, so an era that later reads an act at PDF p. 500 is not handed page 502.
+
+**The relaxation's corpus-wide latitude**, now that ASS 7's range is guarded: `headerAgreesASS` admits **2,070**
+of the series' **30,021** pages (6.9 %) that `headerAgrees` refuses, counted over every page of every
+volume, not only the 48 above where an act happened to open -- so the next rule that reads more acts from the body inherits the latitude
+knowingly rather than rediscovering it.
 
 | Vol | Count | Pages, with the header as read |
 |---|---|---|

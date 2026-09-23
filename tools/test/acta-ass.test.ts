@@ -217,38 +217,49 @@ describe('scanVolume (spec §3): an act read from its dateline back to its headi
 
 describe('headerAgreesASS (2c-ii Task 6): the ASS-only relaxation of headerAgrees, one quoted spelling per rule', () => {
   it('agrees with headerAgrees on a header with no digit at all, unchanged', () => {
-    expect(headerAgreesASS('Acta Pii PP. X.', 481)).toBe(true);
+    expect(headerAgreesASS('Acta Pii PP. X.', 481, 6)).toBe(true);
   });
   it('reads a stray extra character dropped rather than substituted (ASS 3 (1867) 197: `1*97`)', () => {
-    expect(headerAgreesASS('LITTERAE APOSTOLICAE. 1*97', 197)).toBe(true);
+    expect(headerAgreesASS('LITTERAE APOSTOLICAE. 1*97', 197, 3)).toBe(true);
   });
   it('reads a clean digit-for-digit misread headerAgrees refuses everywhere (ASS 4 (1868) 502: `302`)', () => {
-    expect(headerAgreesASS('302', 502)).toBe(true);
+    expect(headerAgreesASS('302', 502, 4)).toBe(true);
     expect(headerAgrees('302', 502)).toBe(false);
   });
   it('reads two digit-lookalike letters as wildcards, not the one digit each is keyed to (ASS 6 (1870) 481, 14 (1881) 481: `4SI`)', () => {
-    expect(headerAgreesASS('4SI', 481)).toBe(true);
+    expect(headerAgreesASS('4SI', 481, 6)).toBe(true);
   });
   it('reads a digit lookalike beside a genuinely wrong character within the one-edit bound (ASS 6 (1870) 324: `S£4`)', () => {
-    expect(headerAgreesASS('S£4 LITTERAE APOSTOLICAE.', 324)).toBe(true);
+    expect(headerAgreesASS('S£4 LITTERAE APOSTOLICAE.', 324, 6)).toBe(true);
   });
   it('joins two tokens a stray space splits the number across (ASS 28 (1895) 312: `ol 2`; ASS 39 (1906) 531: `Ex Secretaria Brevium 5.3 i`)', () => {
-    expect(headerAgreesASS('ol 2', 312)).toBe(true);
-    expect(headerAgreesASS('Ex Secretaria Brevium 5.3 i', 531)).toBe(true);
+    expect(headerAgreesASS('ol 2', 312, 28)).toBe(true);
+    expect(headerAgreesASS('Ex Secretaria Brevium 5.3 i', 531, 39)).toBe(true);
   });
   it('reads the DIGIT_OCR table\'s accented `Í` for `1` (ASS 10 (1877) 161: `Í6Í`)', () => {
-    expect(headerAgreesASS('Í6Í', 161)).toBe(true);
+    expect(headerAgreesASS('Í6Í', 161, 10)).toBe(true);
   });
   it('still refuses a token two edits from the page, whether both are letter-for-digit or both digit-for-digit (ASS 33 (1900) 449: `U9`; ASS 8 (1874) 373: `575`)', () => {
-    expect(headerAgreesASS('U9', 449)).toBe(false);
-    expect(headerAgreesASS('LITTERAE, APOSTOLICAE 575', 373)).toBe(false);
+    expect(headerAgreesASS('U9', 449, 33)).toBe(false);
+    expect(headerAgreesASS('LITTERAE, APOSTOLICAE 575', 373, 8)).toBe(false);
   });
   it('still refuses a page number the OCR split across two lines, since headerOf reads only the first (ASS 41 (1908) 298: `2` alone; 495: `5` alone)', () => {
-    expect(headerAgreesASS('2                                                                      Epistola', 298)).toBe(false);
-    expect(headerAgreesASS('Epistola                                                       5', 495)).toBe(false);
+    expect(headerAgreesASS('2                                                                      Epistola', 298, 41)).toBe(false);
+    expect(headerAgreesASS('Epistola                                                       5', 495, 41)).toBe(false);
   });
   it('still refuses a header that genuinely prints another number, exactly as headerAgrees does (ASS test fixture, p. 2 read `291`)', () => {
-    expect(headerAgreesASS('291', 2)).toBe(false);
+    expect(headerAgreesASS('291', 2, 33)).toBe(false);
+  });
+  it('refuses a clean digit-for-digit misread inside ASS 7\'s genuine offset (pp. 496-547, printed = PDF + 2), naming the offset, even though the same spelling elsewhere is OCR noise it would admit', () => {
+    // PDF p. 496 prints '498 Litterae Apostolicae' -- one edit from 498, which the relaxation
+    // would otherwise read as a clean digit-for-digit misread of 496 (as it does at ASS 4
+    // (1868) 502 `302`), but ASS_PAGE_OFFSETS keys volume 7 to this exact range: the guard
+    // stays up inside it.
+    expect(headerAgreesASS('498 Litterae Apostolicae', 496, 7)).toBe(false);
+    expect(headerAgrees('498 Litterae Apostolicae', 496)).toBe(false);
+    // One page outside the range (497 was PDF p. 495, correctly numbered) and the same
+    // spelling in a volume with no offset both agree as before.
+    expect(headerAgreesASS('498', 498, 6)).toBe(true);
   });
 });
 

@@ -80,6 +80,13 @@ const answered = (k: string) => summaOf(k).unclaimed.filter((r) => of(k).some((e
 const readings = Object.entries(ASS_READINGS);
 const romanDated = readings.filter(([, r]) => /Kalends|Ides/.test(r.evidence)).length;
 const headerRead = readings.filter(([, r]) => /headerAgrees/.test(r.evidence)).length;
+/** A reading that lands on a page the scan already has an entry for -- it *replaces* that entry (join.ts, applyAssReadings) rather than adding one. */
+const replacingReadings = readings.filter(([key]) => {
+  const [, volStr, pageStr] = key.split(':');
+  const s = sources.find((x) => x.volume === Number(volStr));
+  return s !== undefined && scans.get(s.key)!.entries.some((e) => e.page === Number(pageStr));
+}).map(([key]) => key).sort((a, b) => Number(a.split(':')[1]) - Number(b.split(':')[1]) || Number(a.split(':')[2]) - Number(b.split(':')[2]));
+const citeReplacing = (key: string) => `ASS ${key.split(':')[1]} p. ${key.split(':')[2]}`;
 const harvested = sum((k) => of(k).filter((e) => (categoryForHeading(e.category)?.harvested ?? 'no') !== 'no').length);
 const byRule = (b: string) => result.matches.filter((m) => m.by === b).length;
 const um = result.unmatched as (ActaUnmatched & { entry: AssEntry })[];
@@ -139,8 +146,8 @@ p(`1. **The body scan works from 1879 on and fails on 1865: the era's headline i
 p(`   scanner, and the yield divides at the first of them. ASS 1 (1865–66, ${scans.get('ass-1')!.pages} pages) gave **${scannedOf('ass-1')} acts** — its three`);
 p(`   papal acts were read by hand and stand in \`ASS_READINGS\` (§2.5) — while ASS 12 (1879) gave ${scannedOf('ass-12')}, ASS 23 (1890–91) ${scannedOf('ass-23')},`);
 p(`   ASS 33 (1900–01) ${scannedOf('ass-33')} and ASS 41 (1908) ${scannedOf('ass-41')} — ${sum(scannedOf)} acts from the five bodies by rule. After the curation the sample`);
-p(`   carries **${entries.length} entries, ${standing} of them as the scanner read them** (${pct(standing, entries.length)}) and ${readings.length} read by hand (one reading replacing a`);
-p(`   scanned entry, at ASS 41 p. 361, and the rest added where the scan had nothing). The 1865 volume is not a harder instance of the same problem but a different volume: its`);
+p(`   carries **${entries.length} entries, ${standing} of them as the scanner read them** (${pct(standing, entries.length)}) and ${readings.length} read by hand (${replacingReadings.length} readings replacing`);
+p(`   a scanned entry each (${replacingReadings.map(citeReplacing).join(', ')}) and the rest added where the scan had nothing). The 1865 volume is not a harder instance of the same problem but a different volume: its`);
 p(`   class headings are spelt \`LITERAE APOSTOLICAE\` with one T and \`ALLOCVTIO\` with the OCR's V, neither a heading of the`);
 p(`   list; its two apostolic letters are printed under \`SECRETARIA BREVIUM\` behind an editor's preface, so the act does not`);
 p(`   open where the heading stands; and **its summa has no papal part at all** (${summaOf('ass-1').rows.length} rows, §2) — the pope's acts are listed`);
@@ -323,7 +330,7 @@ p(`**Reading the columns.** “From a heading” and “Readings” do not sum t
 p(`anchors an entry can carry, and the third — the dateline, which the scanner anchors on by rule — is the majority and is not broken`);
 p(`out (${entries.filter((e) => e.anchor === 'dateline').length} of the ${entries.length} entries are \`dateline\`, ${entries.filter((e) => e.anchor === 'heading').length} \`heading\`, ${entries.filter((e) => e.anchor === 'reading').length} \`reading\`). “Scanned by rule” is the fixture's own count, taken before the loader applies the`);
 p(`readings, so “Entries” is “Scanned by rule” plus “Readings” less the readings that *replace* a scanned entry rather than add one`);
-p(`(${sum((k) => scans.get(k)!.entries.length) + readings.length - entries.length} in the sample, at ASS 41 p. 361).`);
+p(`(${replacingReadings.length} in the sample, at ${replacingReadings.map(citeReplacing).join(', ')}).`);
 p();
 p('### 2.1 Acts scanned, with the lines each rests on');
 p();

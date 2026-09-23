@@ -24,6 +24,7 @@ import { normaliseHeading } from './categories.js';
 import type { ActaEntry } from './index.js';
 import { DIGIT_OCR } from './summa.js';
 import type { SummaCheck } from './summa.js';
+import { ASS_PAGE_OFFSETS, type AssPageOffset } from './curation.js';
 import { assDate } from './ass-dates.js';
 import {
   HEADING_RE, SALUTATION_RE, ADDRESSEE_RE, GREETING_RE, INLINE_GREETING_RE, ABOVE_FORMULA_RE,
@@ -152,21 +153,37 @@ function digitDist(token: string, digits: string): number {
 }
 
 /**
+ * The offset range `volume` and `page` (a PDF page) fall inside, if any (`ASS_PAGE_OFFSETS`,
+ * curation.ts) -- the one genuine page offset the whole-series survey found (ASS 7 (1872),
+ * PDF pp. 496-547, printed two more than the PDF page), where `headerAgreesASS`'s relaxation
+ * must not apply: inside it, a clean digit-for-digit misread is not OCR noise, it is the
+ * offset itself, and the page must be refused as `headerAgrees` alone refuses it.
+ */
+const assPageOffset = (volume: number, page: number): AssPageOffset | null =>
+  (ASS_PAGE_OFFSETS[volume] ?? []).find((r) => page >= r.from && page <= r.to) ?? null;
+
+/**
  * The ASS-only relaxation of `headerAgrees` (2c-ii Task 6, on the evidence of the
  * whole-series survey, `docs/superpowers/reports/2026-09-22-ass-survey.md` §5):
  * `headerAgrees` itself is untouched, so the AAS page recovery (recover.ts, phase 2b-iii-b)
  * keeps its stricter rule, but the ASS scanner tries this first when `headerAgrees`
- * refuses. Two differences from it: a `DIGIT_OCR` letter stands for any digit rather than
- * the one it is keyed to (`4SI` agrees with 481 -- `S` and `I` are known digit lookalikes,
- * not literally 5 and 1, so only the token's `4` is checked against the page's), and,
- * unlike `headerAgrees`, an all-digit token one edit from the page agrees too (`302` for
- * 502) -- a clean digit-for-digit misread `headerAgrees` refuses everywhere, but which the
- * ASS's OCR prints repeatedly (3/5 confused at ASS 4 (1868) 502, 675; ASS 6 (1870) 337; ASS
- * 20 (1887) 593; ASS 30 (1897) 563; ASS 33 (1900) 355, 385; ASS 34 (1901) 623, 634; ASS 35
- * (1902) 234, 578; 5/8 at ASS 10 (1877) 577, 35 (1902) 578), each confirmed against its
- * volume's neighbouring pages, never a run (survey §5, finding 15d). Two adjacent header
- * tokens are also tried joined, for a number a stray space or stop splits in two (`ol 2`
- * for 312, `5.3 i` for 531).
+ * refuses -- unless `volume` and `n` fall inside a known page offset (`ASS_PAGE_OFFSETS`,
+ * curation.ts: ASS 7 (1872) pp. 496-547), where the relaxation is exactly what would hide
+ * the offset and the page is refused as before (fix round 1 of 2c-ii Task 6). Two
+ * differences from `headerAgrees` outside such a range: a `DIGIT_OCR` letter stands for any
+ * digit rather than the one it is keyed to (`4SI` agrees with 481 -- `S` and `I` are known
+ * digit lookalikes, not literally 5 and 1, so only the token's `4` is checked against the
+ * page's), and, unlike `headerAgrees`, an all-digit token one edit from the page agrees too
+ * (`302` for 502) -- a clean digit-for-digit misread `headerAgrees` refuses everywhere, but
+ * which the ASS's OCR prints repeatedly (3/5 confused at ASS 4 (1868) 502, 675; ASS 6
+ * (1870) 337; ASS 20 (1887) 593; ASS 30 (1897) 563; ASS 33 (1900) 355, 385; ASS 34 (1901)
+ * 623, 634; ASS 35 (1902) 234, 578; 5/8 at ASS 10 (1877) 577, 35 (1902) 578), each confirmed
+ * against its volume's neighbouring pages, never a run over the 48 mismatches the survey
+ * measured (§5, finding 15d) -- ASS 7's offset is a different thing, a stretch of pages the
+ * scan skips outright, not a mismatch the survey's 48 counted (its defects there are all
+ * `no-heading`, so no page in the range ever reached this check before). Two adjacent
+ * header tokens are also tried joined, for a number a stray space or stop splits in two
+ * (`ol 2` for 312, `5.3 i` for 531).
  *
  * Measured over the 48 header-mismatch pages of the whole series (2026-09-23 survey): 40
  * agree by this rule. The other 8 stay refused -- three already answered by a curated
@@ -179,8 +196,9 @@ function digitDist(token: string, digits: string): number {
  * (a reprint's front matter, no header printed at all, with a stray digit in the running
  * text the check reads as one), and ASS 16 (1883) 241 `144` (two digits wrong).
  */
-export const headerAgreesASS = (header: string, n: number): boolean => {
+export const headerAgreesASS = (header: string, n: number, volume: number): boolean => {
   if (headerAgrees(header, n)) return true;
+  if (assPageOffset(volume, n) !== null) return false;
   const digits = String(n);
   const toks = header.split(/\s+/).filter((t) => t !== '');
   const pairs = toks.slice(0, -1).map((t, i) => t + toks[i + 1]);
@@ -371,7 +389,7 @@ function readAct(pages: readonly string[], anchor: Anchor, floor: Located | null
   // 6. The page: the PDF page, which the running header must not contradict
   // (headerAgreesASS, the ASS-only relaxation of headerAgrees; 2c-ii Task 6).
   const header = headerOf(pages[heading.page - 1]!);
-  if (!headerAgreesASS(header, heading.page)) return { defect: { page: heading.page, reason: 'header-mismatch', lines: [header, headingText] } };
+  if (!headerAgreesASS(header, heading.page, opts.volume)) return { defect: { page: heading.page, reason: 'header-mismatch', lines: [header, headingText] } };
   const description = block.slice(0, 1).map((l) => unaccent(l).replace(HEADING_RE, '$3').trim()).concat(block.slice(1)).join(' ').replace(/\s+/g, ' ').trim();
   return {
     entry: {
