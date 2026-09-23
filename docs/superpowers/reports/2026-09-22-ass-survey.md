@@ -84,10 +84,28 @@ only honest measure of what the scanner reads in a volume it has not been curate
 The owner ruled the brevia in on 2026-09-22 (spec §10) and phase 2c-ii-a wrote the rule: where an act closes under the
 ring of the Fisherman and no class heading stands behind it, the walk-back reads it from the pope's own name standing
 alone, takes the descriptive title above that name as the act's description, and gives it the class `BREVE`. Across the
-series that turned **61** of the 107 such defects into acts and left the counts in §1 and §2 as they now stand (380
-acts before the rule, 442 after; 386 defects before, 328 after). The survey of 2026-09-22 measured 83 brevia here
-because its own regex read only the lower-case `annulo`; the series prints `Annulo` 54 times as well, and both are read
-now, which is why the figure the ruling was taken on should be read as 105, not 83.
+series that turned **61** of the 107 such defects into acts. The counts of §1 and §2 moved by more than that one
+number, so here is the ledger, measured per anchor over all 41 volumes under both checkouts rather than per defect row:
+
+| | before | after | |
+|---|---|---|---|
+| acts | 380 | **442** | +62: the 61 above, and ASS 11 (1878) 594, which was no defect before at all — the rule's third dateline anchor, `DATUM_BROKEN_RE`, found it |
+| defects | 386 | **328** | −58: 79 removed (the 107 less the 28 left below) and 21 added |
+| anchors | 766 | 770 | +4, all `DATUM_BROKEN_RE` |
+
+The 21 added defect rows are **10 `header-mismatch`, 9 `no-date`, 1 `unknown-pope`, 1 `no-heading`**, and they are two
+populations: **18 are ring-bearing defects that landed on an honester reason** than `no-heading` (9 `header-mismatch`,
+8 `no-date`, 1 `unknown-pope`) — the rule read the breve and the page or the date then refused it — and **3 are the
+other sites the third anchor found** (ASS 6 (1870) 324 `header-mismatch`, ASS 27 (1894) 79 `no-heading`, and, from the
+anchor at ASS 28 (1895) 112, the `no-date` at p. 111 — the quoted brief of the next paragraph). So the 107 divide:
+**61** became an entry, 9 `header-mismatch`, 8 `no-date`, 1 `unknown-pope`, and 28 are left.
+
+**Two counts of the same population, and both are printed here.** The **107** is counted on the anchor text the rule
+gates on. The **105** is the same population counted on the defect's quoted lines — the measure the `of them brevia`
+columns of §1 and §2 use, and the one that now shows 28 — which misses two datelines that break `Annulo­ /
+Piscatoris` across the line end (ASS 9 (1876) 238, ASS 10 (1877) 93). Both end at the same 28. The survey of
+2026-09-22 measured 83 here because its own regex read only the lower-case `annulo`; the series prints `Annulo` 54
+times as well, and both are read now, which is why the figure the ruling was taken on should be read as 105, not 83.
 
 **28** are left, and they are what the rule does not reach: a breve whose running header the OCR damaged, one
 whose dateline prints no `die`, and — the shape 2c-ii should watch — **a brief quoted inside a later act**. The ASS

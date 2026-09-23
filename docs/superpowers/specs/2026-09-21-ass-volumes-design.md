@@ -434,8 +434,17 @@ ASS 11 7 acts, 12 rows, 50 %; Pius IX (ASS 1-10) 54 acts, 116 rows, **28 %**.
 *The brevia, read on the ruling of 2026-09-22* (survey §3). Where an act closes under the
 ring of the Fisherman and no class heading stands behind it, the walk-back reads it from the
 pope's own name standing alone, takes the descriptive title above that name as the
-description, and gives it the class `BREVE`. **61 of the 107 such defects became acts**:
-380 → 442 acts, 386 → 328 defects, and **28 brevia are left** — a breve whose running header
+description, and gives it the class `BREVE`. **61 of the 107 such defects became acts**, and
+survey §3 now prints the ledger that reconciles that one number with the totals, since
+neither difference is 61: **acts 380 → 442** (+62 — the 61, and ASS 11 (1878) 594, which was
+no defect before at all and which the rule's third dateline anchor `DATUM_BROKEN_RE` found)
+and **defects 386 → 328** (−58: 79 removed, the 107 less the 28 left, and 21 added — 18 of
+the 107 landing on an honester reason than `no-heading` once the rule had read the breve and
+the page or the date was refused, and 3 the other sites of the third anchor). The two counts
+of the one population are both printed: **107** on the anchor text the rule gates on,
+**105** on the defect's quoted lines, the measure the survey's `of them brevia` columns use,
+which misses two datelines breaking `Annulo­ / Piscatoris` across the line end (ASS 9 (1876)
+238, ASS 10 (1877) 93); both end at the same 28. **28 brevia are left** — a breve whose running header
 the OCR damaged, one whose dateline prints no `die`, and the shape the eras must watch: the
 ASS reprint older briefs inside later acts, guillemets and all (ASS 28 (1895) 112 prints one
 of Pius IX of 1851 inside a Congregation's `COMPENDIUM FACTI`), and only `assDate`'s
@@ -495,10 +504,15 @@ heading and opens on its rows, ASS 26's summa opens on a dicastery. Their 23 sca
 measurements of the other volumes only. Three further stretches are floors by a known
 amount: the 10 glued papal rows of ASS 3, 23 and 27; the 5 `header-mismatch` pages above;
 and the 28 brevia the rule does not reach (by decade in survey §3). Everything else in §2 is
-now a measurement, so the eras of decision 3 are planned against **70 % and 61 %** claimed
-(2c-ii-b, Pius X, ASS 36-41) rather than the 62-64 % written there, **46 %** (2c-ii-c,
-Leo XIII, ASS 12-35, whose floors are ASS 20, ASS 26 and most of the woven pages) and
-**28 %** (2c-ii-d, Pius IX, ASS 1-11, whose floors are ASS 1 and ASS 7).
+now a measurement, so the eras of decision 3 are planned against, each over the span decision
+3 gives it and summed from survey §1: **2c-ii-b** (Pius X, ASS 36-41) **69 %**, 168 of 244
+rows — 70 % over Pius X's own five volumes and 61 % over ASS 36 — rather than the 62-64 %
+written there; **2c-ii-c** (Leo XIII, ASS 12-35) **46 %**, 137 of 296, whose floors are
+ASS 20, ASS 26 and most of the woven pages; and **2c-ii-d** (Pius IX, ASS 1-11) **30 %**,
+39 of 128 — 28 % over ASS 1-10 and 50 % over the 12 rows of the two-pope ASS 11 — whose
+floors are ASS 1 and ASS 7. (The pontificate rows of survey §2 cut ASS 11 and ASS 36 out
+into their own lines; decision 3 puts each inside an era, so the span figures above are the
+ones to budget against.)
 
 **Out of scope for 2c-ii**, unchanged: the ASS-born documents and the reprints of earlier
 popes registered under their own issuers (2c-iii, decided from the eras' gap reports).

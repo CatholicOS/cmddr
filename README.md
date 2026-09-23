@@ -321,7 +321,7 @@ gap. Phase 2c-i ([era report](docs/superpowers/reports/2026-09-22-ass-volumes-sa
 [spec](docs/superpowers/specs/2026-09-21-ass-volumes-design.md)) reaches into the *Acta Sanctae Sedis*, which print **no
 chronological index**: for five sample volumes (ASS 1, 12, 23, 33, 41) the index is synthesised from the volume body — every
 papal act's class heading, salutation, opening words and dateline quoted beside the entry — and checked against the volume's
-own *Summa actorum*, whose 87 rows over the five leave the scan **one genuine miss**. 61 entries stand as the scanner read
+own *Summa actorum*, whose 87 rows over the five leave the scan **one genuine miss**. 73 entries stand as the scanner read
 them and 24 were read by hand, 97 in all, and **57** references follow (Leo XIII 28, Pius X 29, Pius IX none: ASS 1's three acts are hand
 readings, its allocution of a class the registry does not harvest and its two apostolic letters of 1866 without a shelf record
 on their date), 53 of them by the unique rule and 4 by the opening rule — the shelf's incipit as a word-boundary prefix of the
