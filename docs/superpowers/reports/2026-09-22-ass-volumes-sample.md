@@ -28,9 +28,13 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    the OCR's interleaving of summa p. 753 turned into papal rows — **and one genuine miss**, ASS 33 p. 193, whose
    dateline the OCR broke (the month lifted onto the line above). One miss in 87 rows is the measure of the scan's
    completeness where the summa can speak. The other direction is thinner: 13 scanned acts the summa does not list
-   (§2.4), of which three are dicastery-part acts (the brevia at ASS 12 p. 588 and ASS 33 p. 401, the allocution at
-   33 p. 396) and **one is an artefact**: *Rerum novarum* (ASS 23 p. 641) is listed by the summa, in the interleaved
-   column of p. 753, where nothing can be read.
+   (§2.4, which prints every one: ASS 12 p. 588; ASS 23 p. 641; ASS 33 pp. 212, 396, 401; ASS 41 pp. 37, 134, 580, 581, 623, 748, 757, 766). **11 of the 13 are of class `BREVE`**
+   — the nine phase 2c-ii-a read from the ring of the Fisherman (ASS 33 p. 212 and eight of ASS 41) and two headed
+   with the class word and read before it (ASS 12 p. 588, ASS 33 p. 401) — and that is the summa working, not failing:
+   its papal part *ends* at the dicastery heading `EX SECRETARIA BREVIUM`, so a breve printed under that heading is a
+   papal act the volume's own list was never going to claim, and "omitted" is the check saying so. The other two are
+   the allocution at ASS 33 p. 396, likewise printed in the dicastery part, and **one artefact**: *Rerum novarum*
+   (ASS 23 p. 641) is listed by the summa, in the interleaved column of p. 753, where nothing can be read.
 3. **28 defects remain, and the shape they take is one part of the *Acta* the scanner does not enter.** By reason:
    7 `no-heading`, 12 `no-date`, 9 `header-mismatch`, 0 `no-opening`, 0 `unknown-pope` (§2.2). **3 of the 7 `no-heading` defects quote the brief's ring**
    **formula** (`sub Annulo Piscatoris`) — ASS 1 ×1, ASS 12 ×0, ASS 33 ×1, ASS 41 ×1 — and they are what is left of the brevia of the
@@ -72,9 +76,11 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    page two acts share (ASS 33 p. 641: *De ingenii* of 20 February and *Le nostre ferme speranze* of 28 March 1901) is
    curated in `ACTA_SHARED_PAGES` (1 ASS row), so both are written rather than both withheld by invariant 25.
 6. **The 28 unmatched divide three ways, and only 7 of them are the join's doing.** 20 have **no shelf record at all on their
-   date** (§3.3's "Same date" column is empty for every one): ASS 1's two apostolic letters of 1866, four acts of ASS 12
-   (pp. 273, 275, 481, 588), three of ASS 23 (pp. 427, 513, 522), the indulgence brief of ASS 33 p. 401 and the
-   Lourdes letter of ASS 41 p. 65. These are the registry's gap, not the scanner's: the act is printed, read, dated and
+   date** (§3.3's "Same date" column is empty for every one), and they are ASS 1 pp. 578, 744; ASS 12 pp. 273, 275, 481, 588; ASS 23 pp. 427, 513, 522; ASS 33 pp. 212, 401; ASS 41 pp. 37, 65, 134, 580, 581, 623, 748, 757, 766
+   — ASS 1's two apostolic letters of 1866, three acts of ASS 12 and three of ASS 23 the letters shelf does not hold,
+   the Lourdes letter of ASS 41 p. 65, and 11 of class `BREVE`: the two the volumes head with the class word
+   (ASS 12 p. 588, ASS 33 p. 401) and the 9 phase 2c-ii-a read from the ring, not one of which the briefs shelves
+   hold. These are the registry's gap, not the scanner's: the act is printed, read, dated and
    quoted here, and the shelf has never carried it. 5 are the `LITTERAE IN FORMA BREVIS` of ASS 23 and 33 (finding 9),
    2 are held by the class rule against an encyclical (finding 7), and 1 is the Latin printing whose one candidate the
    Italian printing already claimed (finding 8). Every one of the 28 is held `series-not-created` by the creator (§4):

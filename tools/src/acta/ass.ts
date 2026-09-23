@@ -89,12 +89,28 @@ export const DATUM_RE = /Dat(?:um|\.)\s+[REB]om[ae]{1,2}|\bDat[oa]\s+(?:a|in)\s+
  * and only in a dateline that carries the ring of the Fisherman (RING_RE) and
  * `Pontificatus Nostri` after it — `… ostensae. Datum / Romae apud S. Petrum, sub annulo
  * Piscatoris, die x septem­ / bris MDCCCLXXVIII, Pontificatus Nostri anno primo.` (ASS 11
- * (1878) 595; ASS 6 (1870) 327; ASS 22 (1889) 203; ASS 27 (1894) 79; ASS 32 (1899) 755;
- * ASS 35 (1902) 570). DATUM_RE and PONTIFICATUS_RE are unchanged by it: a dicastery's
+ * (1878) 595). DATUM_RE and PONTIFICATUS_RE are unchanged by it: a dicastery's
  * `Datum Romae ex Secretaria …` carries neither the ring nor the pontificate's year, so it
  * anchors no more here than it does on one line. The `Datum` at the line end is required so
  * that the same dateline is never anchored twice — once on the line before it and once on
  * its own line, where the first rule already reads it.
+ *
+ * It yields exactly four anchors over the 41 volumes, counted on 2026-09-23, and they are
+ * the whole of its effect: ASS 11 (1878) 595, which becomes the act at p. 594; ASS 6 (1870)
+ * 327, whose act at p. 324 `headerAgrees` then refuses (`S£4` for 324); ASS 27 (1894) 79,
+ * which finds no heading; and ASS 28 (1895) 112, which is **a brief of Pius IX of `16 Maii
+ * 1851` quoted inside the `COMPENDIUM FACTI` of a Congregation case**, guillemet and all.
+ * Nothing in the anchor can tell a quoted brief from a printed one; that one is refused
+ * only by `assDate`'s span bound (a year more than ten before the volume's first), so it is
+ * a `no-date` defect rather than a spurious act. An in-span quotation with a pope's name
+ * above it would be read as an act, and an era whose volumes quote recent briefs should
+ * measure that before trusting the count (the survey's §3 says so where 2c-ii will read it).
+ *
+ * Three further ring datelines look like this shape and are *not* anchored, each for a
+ * reason of its own rather than this rule's: ASS 22 (1889) 203 prints `pontificatus Nostri`
+ * with a lower-case p, ASS 32 (1899) 755 the OCR's `Ponti- / catus Nostri`, and ASS 35
+ * (1902) 570 the abbreviated `Pont. Nostri` — all three refused by PONTIFICATUS_RE, which
+ * this does not loosen.
  */
 const DATUM_BROKEN_RE = /\bDat(?:um|\.)\s*$/;
 /** `Pontificatus Nostri`, the ASS's `Pontificatus nostri` (ASS 23 (1890) 222; ASS 41 (1908) 297; ASS 1 (1865)). */

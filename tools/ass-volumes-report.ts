@@ -92,6 +92,19 @@ const brevisPages = umBrevis.map((u) => `ASS ${u.entry.volume} p. ${u.entry.page
 const brevisIds = umBrevis.map((u) => `\`${u.sameDate[0]!.id.replace(/^.*\//, '')}\``).join(', ');
 const umClaimedElsewhere = umWithCandidate.filter((u) => u.sameDate.every((c) => result.matches.some((m) => m.documentId === c.id)));
 const umClassHold = umWithCandidate.filter((u) => !umBrevis.includes(u) && !umClaimedElsewhere.includes(u));
+/** Of the unmatched with no shelf record at all, how many are of class `BREVE` (finding 6). */
+const umNoBrevia = umNoCandidate.filter((u) => u.entry.category === 'BREVE').length;
+/**
+ * `ASS 12 pp. 273, 275; ASS 33 p. 401` — a set of entries listed by volume and page, in
+ * volume then page order. The findings that must name *every* member of a computed set
+ * enumerate it through this rather than in prose, so that the list cannot fall out of step
+ * with the count beside it when a rule moves the numbers under both (phase 2c-ii-a).
+ */
+const byVolumeAndPage = (es: readonly { volume: number; page: number }[]): string =>
+  [...new Set(es.map((e) => e.volume))].sort((x, y) => x - y).map((v) => {
+    const ps = es.filter((e) => e.volume === v).map((e) => e.page).sort((x, y) => x - y);
+    return `ASS ${v} ${ps.length === 1 ? `p. ${ps[0]}` : `pp. ${ps.join(', ')}`}`;
+  }).join('; ');
 const standing = entries.filter((e) => e.anchor !== 'reading').length;
 const skipped = result.skipped as AssEntry[];
 const allocutions = skipped.filter((e) => e.category === 'ALLOCUTIO');
@@ -145,9 +158,13 @@ p(`   *consilio* itself (41 p. 427, two pages after its heading at 425), and thr
 p(`   the OCR's interleaving of summa p. 753 turned into papal rows — **and one genuine miss**, ASS 33 p. 193, whose`);
 p(`   dateline the OCR broke (the month lifted onto the line above). One miss in ${sum((k) => summaOf(k).rows.length)} rows is the measure of the scan's`);
 p(`   completeness where the summa can speak. The other direction is thinner: ${sum((k) => summaOf(k).omitted.length)} scanned acts the summa does not list`);
-p(`   (§2.4), of which three are dicastery-part acts (the brevia at ASS 12 p. 588 and ASS 33 p. 401, the allocution at`);
-p(`   33 p. 396) and **one is an artefact**: *Rerum novarum* (ASS 23 p. 641) is listed by the summa, in the interleaved`);
-p(`   column of p. 753, where nothing can be read.`);
+p(`   (§2.4, which prints every one: ${byVolumeAndPage(sources.flatMap((s) => summaOf(s.key).omitted.map((page) => ({ volume: s.volume, page }))))}). **${sum((k) => summaOf(k).omitted.filter((pg) => of(k).some((e) => e.page === pg && e.category === 'BREVE')).length)} of the ${sum((k) => summaOf(k).omitted.length)} are of class \`BREVE\`**`);
+p(`   — the nine phase 2c-ii-a read from the ring of the Fisherman (ASS 33 p. 212 and eight of ASS 41) and two headed`);
+p(`   with the class word and read before it (ASS 12 p. 588, ASS 33 p. 401) — and that is the summa working, not failing:`);
+p(`   its papal part *ends* at the dicastery heading \`EX SECRETARIA BREVIUM\`, so a breve printed under that heading is a`);
+p(`   papal act the volume's own list was never going to claim, and "omitted" is the check saying so. The other two are`);
+p(`   the allocution at ASS 33 p. 396, likewise printed in the dicastery part, and **one artefact**: *Rerum novarum*`);
+p(`   (ASS 23 p. 641) is listed by the summa, in the interleaved column of p. 753, where nothing can be read.`);
 p(`3. **${sum((k) => scans.get(k)!.defects.length)} defects remain, and the shape they take is one part of the *Acta* the scanner does not enter.** By reason:`);
 p(`   ${defectsBy('no-heading')} \`no-heading\`, ${defectsBy('no-date')} \`no-date\`, ${defectsBy('header-mismatch')} \`header-mismatch\`, ${defectsBy('no-opening')} \`no-opening\`, ${defectsBy('unknown-pope')} \`unknown-pope\` (§2.2). **${sum((k) => ringDefects(k).length)} of the ${defectsBy('no-heading')} \`no-heading\` defects quote the brief's ring**`);
 p(`   **formula** (\`sub Annulo Piscatoris\`) — ASS 1 ×${ringDefects('ass-1').length}, ASS 12 ×${ringDefects('ass-12').length}, ASS 33 ×${ringDefects('ass-33').length}, ASS 41 ×${ringDefects('ass-41').length} — and they are what is left of the brevia of the`);
@@ -189,9 +206,11 @@ p(`   pope, a class and a date name one act, where the 2003–2009 indexes produ
 p(`   page two acts share (ASS 33 p. 641: *De ingenii* of 20 February and *Le nostre ferme speranze* of 28 March 1901) is`);
 p(`   curated in \`ACTA_SHARED_PAGES\` (${assShared.length} ASS row), so both are written rather than both withheld by invariant 25.`);
 p(`6. **The ${um.length} unmatched divide three ways, and only ${umClassHold.length + umBrevis.length} of them are the join's doing.** ${umNoCandidate.length} have **no shelf record at all on their`);
-p(`   date** (§3.3's "Same date" column is empty for every one): ASS 1's two apostolic letters of 1866, four acts of ASS 12`);
-p(`   (pp. 273, 275, 481, 588), three of ASS 23 (pp. 427, 513, 522), the indulgence brief of ASS 33 p. 401 and the`);
-p(`   Lourdes letter of ASS 41 p. 65. These are the registry's gap, not the scanner's: the act is printed, read, dated and`);
+p(`   date** (§3.3's "Same date" column is empty for every one), and they are ${byVolumeAndPage(umNoCandidate.map((u) => u.entry))}`);
+p(`   — ASS 1's two apostolic letters of 1866, three acts of ASS 12 and three of ASS 23 the letters shelf does not hold,`);
+p(`   the Lourdes letter of ASS 41 p. 65, and ${umNoBrevia} of class \`BREVE\`: the two the volumes head with the class word`);
+p(`   (ASS 12 p. 588, ASS 33 p. 401) and the ${umNoBrevia - 2} phase 2c-ii-a read from the ring, not one of which the briefs shelves`);
+p(`   hold. These are the registry's gap, not the scanner's: the act is printed, read, dated and`);
 p(`   quoted here, and the shelf has never carried it. ${umBrevis.length} are the \`LITTERAE IN FORMA BREVIS\` of ASS 23 and 33 (finding 9),`);
 p(`   ${umClassHold.length} are held by the class rule against an encyclical (finding 7), and ${umClaimedElsewhere.length} is the Latin printing whose one candidate the`);
 p(`   Italian printing already claimed (finding 8). Every one of the ${um.length} is held \`series-not-created\` by the creator (§4):`);

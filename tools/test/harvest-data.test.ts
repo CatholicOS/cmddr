@@ -3950,8 +3950,11 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // of *Sapienti consilio* and the summa's own page for it (427, two after its heading at
     // 425). It was 27 acts, 18 defects and nothing omitted until 2c-ii-a read 8 of its 11
     // brevia; the 8 are `omitted` because the summa's papal part *ends* at the dicastery
-    // heading `EX SECRETARIA BREVIUM`, so the volume's own list never claims them. The three
-    // left are all refused by the running header (pp. 169, 300, 301).
+    // heading `EX SECRETARIA BREVIUM`, so the volume's own list never claims them. Of the
+    // three left, two are read whole and refused by the running header (pp. 300 `3oo` and
+    // 301 `3oi`, both `header-mismatch`) and the third is `no-heading` at p. 169, where the
+    // volume quotes a breve of 1896 inside a later act and only body text stands over the
+    // pope's name.
     expect(perVolume).toEqual({
       'ass-1': { acts: 0, defects: 3, rows: 0, claimed: 0, unclaimed: 0, omitted: 0 },
       'ass-12': { acts: 10, defects: 1, rows: 12, claimed: 9, unclaimed: 3, omitted: 1 },
