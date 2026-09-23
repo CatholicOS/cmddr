@@ -14,6 +14,13 @@ fixtures carry, so a difference here would be a defect.
 `acts` is what the scanner reads by rule, before any curated reading. A volume whose summa was not located is not
 scanned at all (`tools/scan-ass.ts` refuses to write a fixture for it), and shows as — throughout.
 
+**“Part ends at” has three readings, and they are not the same finding.** A dicastery heading is the ordinary case:
+the papal part closed where the volume closed it. `**runs on**` is a **defect** — the parser met no dicastery heading
+it knows before the summa ended, so the dicasteries' own rows are counted as the pope's and show as unclaimed (§4b).
+`**reopened, to the end**` is **not** a defect: the part paused at a dicastery heading, reopened at a later papal one
+(the shape ASS 8 (1874) 727-728 prints), and the papal rows after the reopening are the last thing the summa prints,
+so there is no closing heading to report. Both print no heading, and before this wave both printed `**runs on**`.
+
 | Vol | Years | Pope | Pages | Summa | Papal heading | Part ends at | Acts | dateline | heading | Rows | Claimed | Unclaimed | Omitted | Defects | of them brevia | Sample |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | 1865–66 | Pius IX | 767 | 747–752 | — | — | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 1 | ✓ |
@@ -52,10 +59,10 @@ scanned at all (`tools/scan-ass.ts` refuses to write a fixture for it), and show
 | 34 | 1901–02 | Leo XIII | 768 | 763–768 | LITTERAE ET ACTA | EX S. C. CONCILII | 10 | 9 | 1 | 9 | 6 | 3 | 3 | 5 | 1 |  |
 | 35 | 1902–03 | Leo XIII | 768 | 759–768 | ACTA ROMAM PONTIFICIS | EX ACTIS CONSISTORIALIBUS | 20 | 19 | 1 | 11 | 8 | 3 | 12 | 6 | 2 |  |
 | 36 | 1903–04 | Leo XIII + Pius X | 768 | 758–768 | ACTA ROMANI PONTIFICIS | EX ACTIS CONSISTORIALIBUS | 38 | 34 | 4 | 36 | 22 | 14 | 16 | 20 | 1 |  |
-| 37 | 1904–05 | Pius X | 820 | 798–820 | ACTA ROMANI PONTIFICIS | EX SECRETARIA BREVIUM | 33 | 25 | 8 | 34 | 25 | 9 | 8 | 16 | 0 |  |
-| 38 | 1905–06 | Pius X | 702 | 417–423 | ACTA ROMANI PONTIFICIS | EX S. CONGR. EPISCOPORUM ET REGULARIUM | 13 | 13 | 0 | 23 | 11 | 12 | 2 | 6 | 0 |  |
+| 37 | 1904–05 | Pius X | 820 | 798–820 | ACTA ROMANI PONTIFICIS | EX SACRO CONSISTORIO | 33 | 25 | 8 | 32 | 25 | 7 | 8 | 16 | 0 |  |
+| 38 | 1905–06 | Pius X | 702 | 417–423 | ACTA ROMANI PONTIFICIS | EX SACRO CONSISTORIO | 13 | 13 | 0 | 16 | 9 | 7 | 4 | 6 | 0 |  |
 | 39 | 1906 | Pius X | 640 | 623–640 | ACTA ROMANI PONTIFICIS | EX SECRETARIA BREVIUM | 60 | 56 | 4 | 75 | 52 | 23 | 8 | 18 | 0 |  |
-| 40 | 1907 | Pius X | 791 | 769–781 | ACTA ROMANI PONTIFICIS | EX SECRETARIA BREVIUM | 37 | 33 | 4 | 39 | 31 | 8 | 6 | 10 | 0 |  |
+| 40 | 1907 | Pius X | 791 | 769–781 | ACTA ROMANI PONTIFICIS | EX SACRO CONSISTORIO | 37 | 33 | 4 | 38 | 31 | 7 | 6 | 10 | 0 |  |
 | 41 | 1908 | Pius X | 810 | 799–810 | ACTA ROMANI PONTIFICIS | EX SECRETARIA BREVIUM | 37 | 33 | 4 | 37 | 27 | 10 | 10 | 8 | 1 | ✓ |
 
 ## 2. The yield, by decade — what decides the era split
@@ -69,7 +76,7 @@ only honest measure of what the scanner reads in a volume it has not been curate
 | 1870s | 7 | 5084 | 50 | 98 | 30 | 31 % | 65 | 6 | 0 |
 | 1880s | 10 | 6813 | 62 | 106 | 47 | 44 % | 49 | 5 | 0 |
 | 1890s | 10 | 7678 | 79 | 134 | 51 | 38 % | 54 | 7 | 0 |
-| 1900s | 9 | 6835 | 270 | 288 | 198 | 69 % | 95 | 6 | 0 |
+| 1900s | 9 | 6835 | 270 | 278 | 196 | 71 % | 95 | 6 | 0 |
 
 | Pontificate | Volumes | Acts | Summa rows | Claimed % |
 |---|---|---|---|---|
@@ -77,7 +84,7 @@ only honest measure of what the scanner reads in a volume it has not been curate
 | Pius IX + Leo XIII | 1 (11) | 7 | 12 | 50 % |
 | Leo XIII | 24 (12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35) | 203 | 296 | 46 % |
 | Leo XIII + Pius X | 1 (36) | 38 | 36 | 61 % |
-| Pius X | 5 (37, 38, 39, 40, 41) | 180 | 208 | 70 % |
+| Pius X | 5 (37, 38, 39, 40, 41) | 180 | 198 | 73 % |
 
 ## 3. The brevia of the Secretaria Brevium (the owner's decision)
 
@@ -115,6 +122,21 @@ the quotation. That one was stopped by `assDate`'s span bound alone (a year more
 refused, so it is a `no-date` defect and not an act). **An in-span quotation with a pope's name above it would read as
 a spurious act**, and nothing in the rule would catch it: an era that meets a volume quoting recent briefs should
 measure that before trusting its brevia count.
+
+**The second hazard of the same rule, recorded here and deliberately not fixed: one act is filed under the wrong
+class.** Where the walk-back finds no class word on the heading line, `readAct` (`ass.ts`) falls back to the class
+`BREVE`, which is right for the *Secretaria Brevium* — a breve's heading is a descriptive title and the ring it
+closes under declares its class — but it is a fallback, not a reading. **ASS 21 (1888) p. 513** prints
+`CONSTITUTIO SSmi D. N. Leonis XIII de Licaeo magno Quebecensi.` (l. 3) over `LEO PP. XIII.` (l. 5) and closes under
+the ring, so the scanner reads it, takes that line as its description, finds in it no class word `CLASS_HEADINGS`
+knows, and files it `BREVE` — shelf class `brief` — where the volume itself says *Constitutio*. All **89** `BREVE`
+entries the series yields were checked, and this is the only one whose own description names a different class.
+
+**The rule for it is an era's to decide, not this phase's.** Adding a bare `CONSTITUTIO` to `CLASS_HEADINGS` would
+fire wherever that word opens a caps line anywhere in the 30,021 pages, the bodies of acts that quote a constitution
+included, and that blast radius has not been measured. The era that takes ASS 21 measures it before writing the rule,
+or answers this one page with a curated reading; until then the entry stands as it is, recorded here with the volume,
+the page and the printed heading so it cannot be lost.
 
 | Decade | Brevia | as a share of that decade's defects |
 |---|---|---|
@@ -178,8 +200,8 @@ here, and the many that are addressees, running titles or body capitals are expe
 ## 4b. The summa headings the parser does not know
 
 `parseSummaPapalPart` knows 16 papal-heading forms, each cited in its own doc comment at
-the volume that prints it (`PAPAL_HEAD_FORMS`, `tools/src/acta/summa.ts`) — for example `LITTERAE ET ALLOCUTIONES APOSTOLICAE`
-(ASS 12 (1879) 647, and 13) and `Litterae Apostolicae` (ASS 9 (1876) 669, over SS. D. Ii. P. Papae IX.).
+the volume that prints it (`PAPAL_HEAD_FORMS`, `tools/src/acta/summa.ts`) — for example `LITTERAE ET ALLOCUTIONES / APOSTOLICAE`
+(ASS 12 (1879) 647 lines 12-13, and ASS 13 (1880) 569 lines 11-12, both on two lines; the parser matches the first alone and reports LITTERAE ET ALLOCUTIONES) and `Litterae Apostolicae` (ASS 9 (1876) 669, over SS. D. Ii. P. Papae IX.).
 Where it finds none, the summa is read as having no papal part at all and the volume claims nothing — which is why
 a volume can scan acts and still show 0 rows. These are the volumes' own opening lines, quoted from the page: the
 spellings an era would teach the parser, and the reason the yield of §2 is a floor and not a measurement for them.
@@ -192,9 +214,38 @@ spellings an era would teach the parser, and the reason the yield of §2 is a fl
 | 26 | `SUMMA ACTORUM 755` / `Francisci Clet, sacerdotis e Con­` / `EX S. CONGR. RITUUM gregatione missionis s. Vincentii` / `a Paulo » 128` / `Squillacen. Decretum confirmatio­ Murana seu Compsana, decretum` / `nis cultus, ab immemorabili tem­ canonizationis beati Gerardi Ma­` |
 
 The part now pauses at the first dicastery heading `DICASTERY_RE` knows, rather than stopping outright, and
-reopens at a later papal heading if one follows (ASS 8 (1874) 727-728 prints that shape). `**runs on**` in §1 marks
-only a papal part whose end is still a dicastery heading the parser does not know — the same defect from the other
-side, a volume's dicastery rows counted as the pope's and shown as unclaimed; none remain as of this survey.
+reopens at a later papal heading if one follows (ASS 8 (1874) 727-728 prints that shape).
+
+**What `**runs on**` in §1 does and does not say.** It marks the narrow case where the parser reached the summa's
+end without meeting any dicastery heading at all, and no volume shows it. **That is not the same as saying no papal
+part still carries dicastery rows.** A part that runs past a heading the parser does not know and stops at a later
+one it does know reports that later heading and shows no marker, while the rows in between — the dicastery's — have
+already been counted as the pope's. Until the final fix wave of 2c-ii-a three volumes were in exactly that state,
+printing `EX SACRO CONSISTORIO` (ASS 37 (1904) 799, ASS 38 (1905) 417, ASS 40 (1907) 770), which `SACRA\b` does not
+match, and `ACTA ROMANARUM CONGREGATIONUM` (ASS 35 760, 36 760, 37 800, 38 418, 39 626, 40 771, 41 801); both forms
+are now read, and the rows they were costing are gone from the papal parts of ASS 37, 38 and 40 (§7 fell from 668
+rows to 658 and 344 claimed to 342 — the claimed share **rises**, because what left was never the pope's).
+
+**One volume is still in that state, and no rule can reach it: ASS 27 (1894).** Its papal part carries 47 rows, of
+which 4 are claimed and 43 unclaimed, and only the first five rows are the pope's: rows 7-47, forty-one of the
+forty-seven, are the Congregation of the Council's own case rows (`Firmana postulatum circa resignationem
+beneficiorum`, `Varsavien, dispensationis matrimonii`, `Nolana annuae praestationis`, …). **The cause is not a
+spelling the parser lacks.** The volume's first dicastery heading falls on summa p. 753, one of the woven pages of
+§4c, and the extraction has destroyed it: all that survives of it in the text is the bare word `EX`, glued to the end
+of the left column's line 33 — `Propagarne Fidei » fovetur et EX` — with the rest of the heading absent from the
+page altogether. No `^\s*EX` can match that, and there is no heading left to teach the parser. The part therefore
+runs on to the first heading a later page does not damage, `EX S. CONGR. RITUUM` (p. 756), and the rows between are
+counted as the pope's. **This is §4c seen from the other side**: a loss for an era to curate by hand, not a rule to
+write. ASS 27's **43 unclaimed rows are a known floor**, and every claimed percentage that includes the volume —
+the 1890s row of §2, the Leo XIII row, and 2c-ii-c's own span — is a floor by that much.
+
+**And it is the only one left that can be looked for.** Every caps line inside every volume's papal part — between the
+papal heading and the heading the part ends at — was read: across all 41 summae not one of them is a dicastery
+heading. They are second lines of the papal heading itself (`ET ACTA ROM. PONTIFICIS`, `R. PONTIFICIS`, `PUBLICI
+IURIS FACTA`), the summa's own subtitle (`QUAE IN HOC VOLUMINE XXI. CONTINENTUR`), or, in ASS 16, body capitals from
+the column the extraction interleaved. **The search has one blind spot and ASS 27 is in it**: a heading the
+extraction has destroyed leaves no caps line to find, which is why that volume was caught by its unclaimed count and
+not by this search. A volume whose unclaimed rows run far ahead of its claimed ones is the signal to read next.
 
 ## 4c. The summa pages whose two columns stay woven
 
@@ -267,7 +318,7 @@ matter, and its own closing *Table des matières* -- bound in afterward and foun
 
 The volume's own index cites nothing past p. 415 (`Normae pro examinibus Concionatorum iuxta Notificationem diei io
 Aug. 1905 415`, under `EX VICARIATU URBIS`, ASS 38 (1905) 423) -- above the papal part's own highest row, p.
-382 (ASS 38) -- so the body the scanner reads, 1-416, is the volume's real body, not a
+382 -- so the body the scanner reads, 1-416, is the volume's real body, not a
 measurement cut short: its 13 acts are its real yield. The supplement is indexed too, but as one row each
 under `EX SECRETARIA STATUS` and `APPENDICES` (both citing its own `1-27S`/`1-273` pagination, ASS 38 (1905) 418
 and 423) -- a single item, not further per-document acts -- so nothing in `CLASS_HEADINGS` or the scanner's anchors
@@ -279,7 +330,8 @@ for a rule.
 **8** across the series, down from 48 (2c-ii Task 6, on this survey's evidence): every one of the 48 was the OCR's
 reading of the right number, confirmed against its volume's neighbouring pages, and none of the 48 sits in a run -- a volume whose pages are
 genuinely offset would show them in a run, at every page (the sample's own 9 fell to 3, finding 15d). That is what the 48 measures, and no
-more: the series *does* hold one genuine offset the 48 never counted, because no act ever opened inside it to be checked (fix round 1 below).
+more: the series *does* hold a genuine offset the 48 never counted, because no act ever opened inside it to be checked, and the scan below
+is what settles how many such stretches there are.
 `headerAgreesASS` (ass.ts) is the ASS-only relaxation the ruling took: a `DIGIT_OCR` letter (summa.ts) stands for any digit rather than the
 one it is keyed to, and, unlike `headerAgrees` itself (recover.ts, kept as it was for the AAS page recovery), an all-digit token one edit from
 the page agrees too. 40 of the 48 agree by that rule; the other 8 below are two edits or worse, or a page number the OCR splits across two
@@ -287,13 +339,63 @@ lines `headerOf`'s single line cannot reach -- three of them (ASS 33 p. 449, ASS
 regardless (`ASS_READINGS`, curation.ts), five not (ASS 8 pp. 373, 686; ASS 10 p. 49; ASS 13 p. 3; ASS 16 p. 241), each confirmed OCR noise
 the same way but too far from the page to admit without also risking a page whose header truly disagrees.
 
-**One volume is a genuine offset, and the relaxation is now guarded against it.** ASS 7 (1872) skips printed pp. 496-497 in the scan: PDF
+**The offset scan, run over every page of the series.** The argument above — that a genuine offset would show as a *run* and that the 48
+show none — was made from the 48 pages where an act happens to open, which is the one place an offset is guaranteed not to be looked for.
+So it was run properly: over all 30,021 pages, a page **supports** a delta when `headerAgrees` refuses its header, `headerAgreesASS`
+admits it, and one of its header tokens normalises to the page plus that delta; a page whose header carries no number at all is bridged;
+and a **run** is a stretch of at least 4 supporting pages sharing one delta. `headerAgreesASS` is asked with volume 0, which `ASS_PAGE_OFFSETS`
+holds nothing for, so ASS 7's own curated range still shows. **14 runs, in 7 volumes**, and they fall into three kinds:
+
+| Vol | PDF pages | Delta | Pages printing it | Bridged | What it is |
+|---|---|---|---|---|---|
+| 7 | 500–507 | +2 | 8 | 0 | the ASS 7 offset (below), in fragments because the pages where +2 changes two digits are refused |
+| 7 | 510–517 | +2 | 7 | 1 | the ASS 7 offset (below), in fragments because the pages where +2 changes two digits are refused |
+| 7 | 520–523 | +2 | 4 | 0 | the ASS 7 offset (below), in fragments because the pages where +2 changes two digits are refused |
+| 7 | 530–537 | +2 | 8 | 0 | the ASS 7 offset (below), in fragments because the pages where +2 changes two digits are refused |
+| 7 | 540–547 | +2 | 8 | 0 | the ASS 7 offset (below), in fragments because the pages where +2 changes two digits are refused |
+| 8 | 374–378 | +200 | 4 | 1 | a repeated **digit misread** (below) |
+| 13 | 518–521 | +300 | 4 | 0 | a repeated **digit misread** (below) |
+| 16 | 620–629 | -560 | 7 | 3 | the volume's separately paginated **supplement** (the PDF is named `…+supplemento-17-96`; its pages are headed `APPENDIX XXXII.`, p. 587) -- not the volume's own pagination |
+| 29 | 385–391 | +200 | 6 | 1 | a repeated **digit misread** (below) |
+| 29 | 530–533 | +20 | 4 | 0 | a repeated **digit misread** (below) |
+| 33 | 387–390 | +200 | 4 | 0 | a repeated **digit misread** (below) |
+| 33 | 436–439 | +20 | 4 | 0 | a repeated **digit misread** (below) |
+| 38 | 470–479 | -430 | 5 | 5 | the separately paginated French ***Supplementum*** of §4d, numbered from 1 -- not the volume's own pagination |
+| 38 | 533–539 | -430 | 5 | 2 | the separately paginated French ***Supplementum*** of §4d, numbered from 1 -- not the volume's own pagination |
+
+**One is a genuine offset, and the relaxation is guarded against it.** ASS 7 (1872) skips printed pp. 496-497 in the scan: PDF
 p. 495 prints `495` (correct), PDF p. 496 prints `498 Litterae Apostolicae` (the offset begins), and the +2 delta holds unbroken to PDF
 p. 547 (`549`), closing at PDF p. 548, which prints `548` again. The range sits inside the scanned body (the volume's summa begins at PDF
 p. 751), but no act opens there today -- its defects in that stretch are all `no-heading`, so no page in it ever reached the header check --
 which is why the 48 above never counted it and why nothing downstream moved when it was found. It is curated, not folded into the rule:
 `ASS_PAGE_OFFSETS` (curation.ts) keys volume 7 to PDF pp. 496-547, and `headerAgreesASS` refuses inside a listed range exactly as
-`headerAgrees` alone does, so an era that later reads an act at PDF p. 500 is not handed page 502.
+`headerAgrees` alone does, so an era that later reads an act at PDF p. 500 is not handed page 502. The scan reports it in fragments
+rather than as one range because the relaxation refuses the pages where +2 changes two digits (`510` for 508), which is the scan working
+as defined: it can only see what the relaxation can let through.
+
+**Three of the runs are separately paginated matter bound into the volume, not an offset of anything.** ASS 16's supplement
+(the PDF is named `ASS-16-1883-84-1-576+supplemento-17-96`, and its pages carry `APPENDIX XXXII.` from PDF p. 587) and ASS 38's
+*Supplementum ad "Acta S. Sedis"* (§4d, paginated 1-273) each carry their own numbering and print two-digit numbers; the relaxation
+admits them against a three-digit PDF page only because a two-digit token is one edit from a three-digit one. They are real latitude
+and no offset: an era reading in them would be reading the supplement's own pages, which the volume's index already treats as one
+citation.
+
+**Every other run is one digit misread, repeating across a signature -- and none of them is an offset.** They are the 3/5 confusion the
+paragraph above already documents, and once the 5/8 (ASS 13): +200 is a `3` read as `5` in the hundreds (ASS 8 374-378, ASS 29 385-391,
+ASS 33 387-390), +300 a `5` read as `8` (ASS 13 518-521), and **+20 a `3` read as `5` in the tens** — the two runs that look most like an
+offset, **ASS 29 (1896) PDF pp. 530-533** (headers print `550`-`553`) and **ASS 33 (1900) PDF pp. 436-439** (headers print `456`-`459`),
+the latter in a volume the sample uses as a fixture. `headerAgreesASS` admits all eight of those pages, so the question is not academic.
+
+**They are misreads, and the volumes prove it themselves.** A page offset means the printed numbers in the range exist nowhere else in the
+volume; here they do. ASS 29 PDF p. 550 prints `550 CASTRIMARIS` and PDF p. 552 prints `552`, under a different running title from the
+`VARSAVIEN. SEU PARISIEN.` of PDF pp. 530-533 — the same printed numbers in two physical places, which only a misread can produce.
+ASS 33 is the same: PDF p. 456 prints `456 EX S. G. CONCILII` and PDF p. 458 `458 EX S. G. CONCILII` (`CAESENATEN. SEU RAVENNATE`),
+while PDF pp. 436-439 print `456`-`459` under `EX S. C. RITUUM`. Both runs are bounded by pages printing the correct number — ASS 29
+p. 529 `529` and p. 534 `534`, ASS 33 p. 435 `435` and p. 440 `440` — and a pagination cannot skip twenty pages and then un-skip them
+four pages later. The same test disposes of the +200 runs (ASS 29 and ASS 33 both print `586`-`591` at PDF pp. 586-591, under other
+running titles; ASS 8 prints `576` and `578` at PDF pp. 576 and 578) and of ASS 13, whose volume has only 592 pages and so has no p. 818
+at all. **Nothing is added to `ASS_PAGE_OFFSETS`**: an entry there would refuse pages whose headers are merely misread, which is the
+opposite of what the table is for.
 
 **The relaxation's corpus-wide latitude**, now that ASS 7's range is guarded: `headerAgreesASS` admits **2,070**
 of the series' **30,021** pages (6.9 %) that `headerAgrees` refuses, counted over every page of every
@@ -324,5 +426,5 @@ shelf column is thin can yield few references however well it scans — the join
 
 ## 7. Totals
 
-41 volumes, 30021 pages; **482 acts** read by rule; 668 summa rows of which 344 claimed
-(51 %); 288 defects, 28 of them brevia; 0 volumes with no summa located.
+41 volumes, 30021 pages; **482 acts** read by rule; 658 summa rows of which 342 claimed
+(52 %); 288 defects, 28 of them brevia; 0 volumes with no summa located.

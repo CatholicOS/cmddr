@@ -6,6 +6,9 @@
  * (RING_RE) and the brevia's title and salutation (breveTitle, isBreveOpening).
  */
 import { ACTA_POPES } from './popes.js';
+// A cycle with ass.ts, which imports this module in turn: deliberate, and safe because every
+// use of these three is inside a function body, evaluated after both modules have finished
+// loading. Nothing here is read at module scope, and nothing added here may be.
 import { DATUM_RE, PONTIFICATUS_RE, salutationAfter } from './ass.js';
 
 /**

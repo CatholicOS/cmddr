@@ -44,9 +44,10 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    gave the walk-back a second reading for them — the pope's own name standing alone under the ring, the title above it
    read as the act's description, the class `BREVE` — and the sample gained nine acts by it (ASS 33 p. 212; ASS 41
    pp. 37, 134, 580, 581, 623, 748, 757, 766), where it had 15 such defects before. What the second reading does not
-   reach is quoted in §2.2 and none of it is the rule's to fix: three brevia it reads whole but whose running header
-   the OCR misread, so `headerAgrees` refuses them (ASS 33 p. 213 `215`, ASS 41 pp. 300 `3oo` and 301 `3oi`); one
-   it reads whole and cannot date, ASS 12 p. 636, whose dateline prints no `die` (`sub Annulo piscatoris XIII /
+   reach is quoted in §2.2 and none of it is the rule's to fix. Three brevia it read whole were refused on their running
+   header alone, which the OCR had misread (ASS 33 p. 213 `215`, ASS 41 pp. 300 `3oo` and 301 `3oi`); **2c-ii Task 6's
+   relaxation admitted all three and they are entries now**, so §2.2 no longer quotes them — see findings 2 and 15(d).
+   What is left there is one it reads whole and cannot date, ASS 12 p. 636, whose dateline prints no `die` (`sub Annulo piscatoris XIII /
    Augusti MDCCCLXXIX`); the 1896 breve ASS 41 p. 169 quotes inside a later act and the 1900 brief reprinted inside
    Pennacchi's commentary at ASS 33 p. 303, neither of which has a title above the pope's name, only body text; and
    ASS 1's two apostolic letters, read by hand. Where a defect was a
@@ -197,6 +198,13 @@ anchors an entry can carry, and the third — the dateline, which the scanner an
 out (66 of the 97 entries are `dateline`, 7 `heading`, 24 `reading`). “Scanned by rule” is the fixture's own count, taken before the loader applies the
 readings, so “Entries” is “Scanned by rule” plus “Readings” less the readings that *replace* a scanned entry rather than add one
 (5 in the sample, at ASS 23 p. 318, ASS 33 p. 355, ASS 33 p. 385, ASS 41 p. 12, ASS 41 p. 361).
+
+**3 of those 5 are readings a rule has since caught up with, and a later era can retire them.** ASS 23 p. 318, ASS 33 p. 355, ASS 33 p. 385
+were written because `headerAgrees` refused the page's running header; 2c-ii Task 6's relaxation now reads each of them by rule, and the
+scanned entry agrees with the reading on class, pope, date and opening. **They are listed, not deleted, and nothing in this phase
+removes them**: what each reading still supplies is a *description* free of the OCR's damage (`N.Leonis` for `N. Leonis`,
+`Xlil` for `XIII`, `Pa­ pae` for `Papae`), so retiring one means either accepting the garbled description or replacing the
+reading with a narrower correction. That is a curation decision for the era that owns the volume, taken with the page in front of it.
 
 ### 2.1 Acts scanned, with the lines each rests on
 

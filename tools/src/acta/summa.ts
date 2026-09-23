@@ -94,7 +94,7 @@ export function normalisePage(token: string): number | null {
  * attempt to correct that number by hand still undercounted `PAPAL_HEAD_RE`'s own
  * alternatives). `pattern` is one alternative's regex source; several entries share a
  * `pattern` where one alternative reads more than one printed spelling (`LITTERAE ROMANI
- * PONTIFICIS` and `LITTERAE R. PONTIFICIS`, both ASS 16 (1883) 557 and 17-19, read by the one
+ * PONTIFICIS`, ASS 17-18, and `LITTERAE R. PONTIFICIS`, ASS 19, read by the one
  * `LITTERAE\s+R(?:OMANI|\.)\s*PONTIFICIS` branch). `PAPAL_HEAD_RE` is built below by joining
  * the distinct patterns, in order of first appearance, so it cannot diverge from what this
  * table cites, and its count of forms is `PAPAL_HEAD_FORMS.length` wherever one is needed.
@@ -116,20 +116,20 @@ export function normalisePage(token: string): number | null {
  * line with the next and re-matches whole.
  */
 export const PAPAL_HEAD_FORMS: readonly { pattern: string; prints: string; at: string }[] = [
-  { pattern: 'LITTERAE\\s+ET\\s+A(?:LLOCUTIONES|CTA)(?:\\s+R(?:OM)?\\.\\s*PONTIFICIS|\\s+APOSTOLICAE)?', prints: 'LITTERAE ET ALLOCUTIONES APOSTOLICAE', at: 'ASS 12 (1879) 647, and 13' },
+  { pattern: 'LITTERAE\\s+ET\\s+A(?:LLOCUTIONES|CTA)(?:\\s+R(?:OM)?\\.\\s*PONTIFICIS|\\s+APOSTOLICAE)?', prints: 'LITTERAE ET ALLOCUTIONES / APOSTOLICAE', at: 'ASS 12 (1879) 647 lines 12-13, and ASS 13 (1880) 569 lines 11-12, both on two lines; the parser matches the first alone and reports LITTERAE ET ALLOCUTIONES' },
   { pattern: 'LITTERAE\\s+ET\\s+A(?:LLOCUTIONES|CTA)(?:\\s+R(?:OM)?\\.\\s*PONTIFICIS|\\s+APOSTOLICAE)?', prints: 'LITTERAE ET ACTA ROM. PONTIFICIS', at: 'ASS 21 (1888) 744, and 22-25, 27-34' },
   { pattern: 'LITTERAE\\s+ET\\s+A(?:LLOCUTIONES|CTA)(?:\\s+R(?:OM)?\\.\\s*PONTIFICIS|\\s+APOSTOLICAE)?', prints: 'LITTERAE ET ACTA R. PONTIFICIS', at: 'ASS 33 (1900) 761, over R. PONTIFICIS on the next line' },
-  { pattern: 'ACTA\\s+(?:ROMANI|ROMAM)\\s+PONTIFICIS', prints: 'ACTA ROMANI PONTIFICIS', at: 'ASS 36 (1903), and 37-41' },
-  { pattern: 'ACTA\\s+(?:ROMANI|ROMAM)\\s+PONTIFICIS', prints: 'ACTA ROMAM PONTIFICIS', at: "ASS 35's OCR of ROMANI" },
+  { pattern: 'ACTA\\s+(?:ROMANI|ROMAM)\\s+PONTIFICIS', prints: 'ACTA ROMANI PONTIFICIS', at: 'ASS 36 (1903) 758 line 13, woven into the right column; and 37 (798), 38 (417), 39 (623), 40 (769), 41 (799)' },
+  { pattern: 'ACTA\\s+(?:ROMANI|ROMAM)\\s+PONTIFICIS', prints: 'ACTA ROMAM PONTIFICIS', at: "ASS 35 (1902) 759 line 9, the OCR's ROMAM for ROMANI" },
   { pattern: 'ACTA\\s+SOLEMNIOR[AEÂ](?:\\s+ROM(?:ANI|\\.)?\\s*PON[TRr]?[iI]?FICIS)?(?!\\s*ROM)', prints: 'ACTA SOLEMNIORA ROMANI PONTIFICIS', at: 'ASS 3 (1867) 665' },
   { pattern: 'ACTA\\s+SOLEMNIOR[AEÂ](?:\\s+ROM(?:ANI|\\.)?\\s*PON[TRr]?[iI]?FICIS)?(?!\\s*ROM)', prints: 'ACTA SOLEMNIORE ROM. PONTIFICIS', at: "ASS 4 (1868) 684 (the OCR's -E for -A)" },
   { pattern: 'ACTA\\s+SOLEMNIOR[AEÂ](?:\\s+ROM(?:ANI|\\.)?\\s*PON[TRr]?[iI]?FICIS)?(?!\\s*ROM)', prints: 'ACTA SOLEMNIORA ROM. PONriFICIS', at: "ASS 5 (1869) 691, and 6 (the OCR's r for T)" },
   { pattern: 'ACTA\\s+SOLEMNIOR[AEÂ](?:\\s+ROM(?:ANI|\\.)?\\s*PON[TRr]?[iI]?FICIS)?(?!\\s*ROM)', prints: 'ACTA SOLEMNIORÂ', at: 'ASS 8 (1874) 727, over ROMANI PONTIFICIS' },
   { pattern: 'LITTERAE\\s+ET\\s+RESPONSUM', prints: 'LITTERAE ET RESPONSUM', at: 'ASS 14 (1881) 569, over ROMANI PONTIFICIS' },
   { pattern: 'LITTERAE\\s+MOTU\\s+PROPRIO', prints: 'LITTERAE MOTU PROPRIO', at: 'ASS 15 (1882) 603, over ET CONSTITUTIO R. PONTIFICIS' },
-  { pattern: 'L\\s?TT\\s?E\\s?RA\\s?[ER]?\\s+ROMANI\\s+PONTIFICIS', prints: 'L TT E RA R ROMANI PONTIFICIS', at: "ASS 16 (1883) 557, the OCR's garble of LITTERAE ROMANI PONTIFICIS" },
-  { pattern: 'LITTERAE\\s+R(?:OMANI|\\.)\\s*PONTIFICIS', prints: 'LITTERAE ROMANI PONTIFICIS', at: 'ASS 16 (1883) 557, and 17-19' },
-  { pattern: 'LITTERAE\\s+R(?:OMANI|\\.)\\s*PONTIFICIS', prints: 'LITTERAE R. PONTIFICIS', at: 'ASS 16 (1883) 557, and 17-19' },
+  { pattern: 'L\\s?TT\\s?E\\s?RA\\s?[ER]?\\s+ROMANI\\s+PONTIFICIS', prints: 'L TT E RA R ROMANI PONTIFICIS', at: "ASS 16 (1883) 557 line 21, the OCR's garble of LITTERAE ROMANI PONTIFICIS -- the only spelling that page prints" },
+  { pattern: 'LITTERAE\\s+R(?:OMANI|\\.)\\s*PONTIFICIS', prints: 'LITTERAE ROMANI PONTIFICIS', at: 'ASS 17 (1884) 603 line 9, and ASS 18 (1885) 603 line 10' },
+  { pattern: 'LITTERAE\\s+R(?:OMANI|\\.)\\s*PONTIFICIS', prints: 'LITTERAE R. PONTIFICIS', at: 'ASS 19 (1886) 604 line 13' },
   { pattern: 'LITTERAE\\s+APOSTOLICAE', prints: 'LITTERAE APOSTOLICAE', at: 'ASS 10 (1877) 616, and 11' },
   { pattern: 'Litterae\\s+Apostolicae\\s*$', prints: 'Litterae Apostolicae', at: 'ASS 9 (1876) 669, over SS. D. Ii. P. Papae IX.' },
 ];
@@ -168,8 +168,27 @@ const PAPAL_HEAD_RE = new RegExp(`^\\s*(?:\\d+\\s+)?(${[...new Set(PAPAL_HEAD_FO
  * without `EX`), so they are dropped; `DATARIA` likewise never prints bare, only as
  * `EX S. DATARIA APOST.` (ASS 28 (1895) 761) and `EX S. DATARIA APOSTOLICA` (ASS 33 (1900)
  * 766), which the abbreviated `S{1,2}\.` branch already reads.
+ *
+ * Two further forms, added in phase 2c-ii-a's final fix wave on the whole-branch review's
+ * evidence, each read from the page before it was written:
+ *   - `SACRO` beside `SACRA`, for `EX SACRO CONSISTORIO` -- the Pius X volumes' heading for
+ *     the consistorial acts, ASS 37 (1904) 799 line 35, ASS 38 (1905) 417 line 45 and
+ *     ASS 40 (1907) 770 line 41, each a centred line of its own with the `Relatio actorum
+ *     in Consistoriis ...` rows under it (`Relatio actorum in Consistoriis diei 14
+ *     Novembris 1904, necnon / 27 Martii 1905 » 3oi et 559`, ASS 37 799). `SACRA\b` alone
+ *     does not match `SACRO`, so the part ran past it into the consistorial rows and counted
+ *     them as the pope's, two rows per volume (`N et M` yields two).
+ *   - `ACTA ROMANARUM CONGREGATIONUM`, the heading the same volumes give the whole
+ *     congregations part, printed as its own centred line: ASS 35 (1902) 760 (woven into the
+ *     left column's `disciplina ecclesiastica post im­`), ASS 36 (1903) 760 (likewise, after
+ *     `Largiuntur indulgentiae recitanti­`), ASS 37 (1904) 800 line 35, ASS 38 (1905) 418
+ *     line 22, ASS 39 (1906) 626 line 33, ASS 40 (1907) 771 line 36 and ASS 41 (1908) 801
+ *     line 38. It is `ACTA`, never `EX`, so no existing branch reached it.
+ * Both were checked against all 41 summae before they were kept (a scan of every summa page
+ * through `splitColumns`): the two forms match exactly the ten heading lines quoted above and
+ * nothing else anywhere in the series -- no row, no running header, no body line.
  */
-const DICASTERY_RE = /^\s*(EX\s+(?:S{1,2}\.|SACRA\b|SECRETARIA\b|ACTIS\b|AEDIBUS\b).*|S{1,2}\.\s*(?:CONGR\.|CONGREGATIO\b|POENITENTIARIA\b).*|ACTA\s+CONSISTORIALIA\b.*|Ex\s+Actis\s+Consistorialibus\b.*|Ex\s+Secretaria\s+Brevium\b.*)$/;
+const DICASTERY_RE = /^\s*(EX\s+(?:S{1,2}\.|SACRA\b|SACRO\b|SECRETARIA\b|ACTIS\b|AEDIBUS\b).*|S{1,2}\.\s*(?:CONGR\.|CONGREGATIO\b|POENITENTIARIA\b).*|ACTA\s+CONSISTORIALIA\b.*|ACTA\s+ROMANARUM\s+CONGREGATIONUM\b.*|Ex\s+Actis\s+Consistorialibus\b.*|Ex\s+Secretaria\s+Brevium\b.*)$/;
 
 /** A line that is only the summa's running header (`8oo Index analyticus`, `SUMMA ACTORUM.`, `762 SUMMA {60 spaces} ACTORUM`) or a bare page number (`761`, padded to the margin, ASS 33 (1900) 761), whitespace collapsed. */
 const HEADER_LINE_RE = /^\s*(?:(?:\d[\dOoiIl]{0,3}\s+)?(?:Index analyticus|SUMMA\.?\s+A[CGO]TO[RKT]?[UTJ]*M\.?)\s*(?:\d[\dOoiIl]{0,3})?\s*-?|\d[\dOoiIl]{0,3})\s*$/;
@@ -227,8 +246,16 @@ const ROW_END_RE = /^(.*?)(?:\s*(?:pag\.|»|>|\*|·|\.+|\s))\s*(?=[\dOoiIlSsgB]{
  * (`8oo Index analyticus`, `SUMMA ACTORUM.`) are skipped. A page token may start with an
  * OCR letter (`ig3`) but must contain a genuine digit, so a short Latin word (`iis`) never
  * closes a row.
+ *
+ * `end` is `null` in two unlike cases, which `reopened` tells apart, because the survey
+ * prints a marker for each and they are not the same finding (final fix wave, deferred
+ * minor): a part that met no dicastery heading the parser knows and ran into the dicasteries
+ * counting their rows as the pope's (`reopened: false` -- a defect, and the marker survey §1
+ * prints as `**runs on**`), and a part that paused, *reopened* at a later papal heading and
+ * then reached the summa's end with no further dicastery heading (`reopened: true` -- not a
+ * defect at all: the papal rows after the reopening are the last thing the summa prints).
  */
-export function parseSummaPapalPart(text: string): { rows: SummaRow[]; heading: string | null; end: string | null } {
+export function parseSummaPapalPart(text: string): { rows: SummaRow[]; heading: string | null; end: string | null; reopened: boolean } {
   const lines = text.split('\f').flatMap(splitColumns);
   let start = -1;
   let heading: string | null = null;
@@ -244,7 +271,7 @@ export function parseSummaPapalPart(text: string): { rows: SummaRow[]; heading: 
       if (two) { lines[i] = two[0]; lines[i + 1] = ''; start = i; heading = two[1]!.replace(/\s+/g, ' ').trim(); break; }
     }
   }
-  if (start < 0) return { rows: [], heading: null, end: null };
+  if (start < 0) return { rows: [], heading: null, end: null, reopened: false };
   const rows: SummaRow[] = [];
   let acc: string[] = [];
   let end: string | null = null;
@@ -255,13 +282,25 @@ export function parseSummaPapalPart(text: string): { rows: SummaRow[]; heading: 
   // only a papal heading is looked for; every other paused line, dicastery headings
   // included, is ignored, so `end` keeps reporting the first dicastery heading of the
   // *closing* part, not a dicastery heading passed over while still paused.
+  //
+  // The reopening is measured, not assumed, and the measurement is what keeps it safe: over
+  // all 41 summae it fires **exactly once**, at ASS 8's `LITTERAE APOSTOLICAE.` (2c-ii-a
+  // Task 3, re-measured in the final fix wave with `PAPAL_HEAD_RE` at its present 16 forms
+  // and `DICASTERY_RE` at its present eleven alternatives -- still one). That single firing
+  // is a property of how narrow `PAPAL_HEAD_RE` is, not of the control flow: every
+  // alternative added to it is another line that can reopen a paused part, and one added
+  // loosely could reopen the part inside a dicastery section and pull its rows into the
+  // pope's. **Re-measure this probe whenever `PAPAL_HEAD_RE` grows**, and say in the fix's
+  // own report what the count became.
   let paused = false;
+  let reopened = false;
   for (let i = start; i < lines.length; i++) {
     const line = lines[i]!;
     let stripHead = i === start;
     if (paused) {
       if (!PAPAL_HEAD_RE.test(line)) continue;
       paused = false;
+      reopened = true;
       end = null;
       acc = [];
       stripHead = true;
@@ -284,7 +323,7 @@ export function parseSummaPapalPart(text: string): { rows: SummaRow[]; heading: 
     const second = m[3] ? normalisePage(m[3]) : null;
     if (second !== null) rows.push({ description, page: second, raw });
   }
-  return { rows, heading, end };
+  return { rows, heading, end, reopened };
 }
 
 export function checkSumma(entries: readonly { page: number }[], summa: { pages: { from: number; to: number } | null; rows: SummaRow[] }): SummaCheck {

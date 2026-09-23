@@ -1576,7 +1576,7 @@ export interface AssPageOffset {
  * than the PDF page reads and `headerAgreesASS`'s relaxation, which reads a clean
  * digit-for-digit misread as OCR noise, would otherwise admit every one of them -- exactly
  * the guard `header-mismatch` exists to keep. Consulted by the ASS header check
- * (`pageOffsetOf`, ass.ts): inside a listed range the relaxation does not apply, and the
+ * (`assPageOffset`, ass.ts): inside a listed range the relaxation does not apply, and the
  * page is refused as `headerAgrees` alone refuses it. Keyed by volume; a volume may have
  * more than one range if a later survey finds one, so the value is an array.
  */

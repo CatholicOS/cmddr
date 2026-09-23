@@ -409,8 +409,39 @@ rule regenerated once, as decision 2 intends.
 `parseSummaPapalPart` knows **16** papal-heading forms, each cited in a doc comment at the
 volume that prints it (`PAPAL_HEAD_FORMS`, `tools/src/acta/summa.ts`), and the part now
 **pauses** at the first dicastery heading and **reopens** at a later papal one — the shape
-ASS 8 (1874) 727-728 prints. No volume's papal part still runs on into the dicasteries
-(survey §1, §4b); ASS 21's part was 100 rows with 87 unclaimed and is 19 rows with 6.
+ASS 8 (1874) 727-728 prints, and the only one in the series: the reopening fires **exactly
+once** over all 41 summae, a measurement to be repeated whenever `PAPAL_HEAD_RE` grows, since
+every alternative added to it is another line that could reopen a paused part. ASS 21's part
+was 100 rows with 87 unclaimed and is 19 rows with 6.
+
+*Where the part still ran on, and what is left.* The claim first written here — that no
+volume's papal part still runs on into the dicasteries — was **true only of the narrow
+marker**. `end === null` catches a part that met no dicastery heading at all, and no volume
+shows it; a part that runs *past* a heading the parser does not know and stops at a later one
+it does reports that later heading and shows no marker, while the rows in between have already
+been counted as the pope's. Four volumes were in that state, and the final fix wave of 2c-ii-a
+read each of them:
+
+- **ASS 37 (1904) 799, ASS 38 (1905) 417 and ASS 40 (1907) 770** print `EX SACRO CONSISTORIO`
+  over the consistorial `Relatio actorum` rows, which `SACRA\b` does not match; **ASS 35 760,
+  36 760, 37 800, 38 418, 39 626, 40 771 and 41 801** print `ACTA ROMANARUM CONGREGATIONUM`,
+  which carries no `EX` at all. Both forms are now in `DICASTERY_RE`, quoted at those pages,
+  and both were checked against all 41 summae first: over the whole series they match exactly
+  those ten heading lines and nothing else — no row, no running header, no body line. The
+  three volumes' parts now end where the volumes end them.
+- **ASS 27 (1894) cannot be fixed by any rule**, and is recorded instead (survey §4b). Its
+  papal part carries 47 rows of which only the first five are the pope's: rows 7-47 are the
+  Congregation of the Council's own case rows. The cause is not a missing spelling — the
+  volume's first dicastery heading falls on summa p. 753, one of the woven pages of §4c, and
+  the extraction has destroyed it, leaving the bare word `EX` glued to the end of the left
+  column's line 33 (`Propagarne Fidei » fovetur et EX`) with the rest of the heading absent
+  from the page. There is nothing left to teach the parser. **ASS 27's 43 unclaimed rows are a
+  known floor**, and the 1890s decade, the Leo XIII pontificate and 2c-ii-c's own span are each
+  a floor by that much.
+
+Survey §1's `**runs on**` marker now says what it means and what it does not, and a reopened
+part that reaches the summa's end is printed as `**reopened, to the end**` rather than sharing
+the defect's marker — two unlike findings that both report `end: null`.
 
 *The yield, before → after* (survey §2 against this section's *What the survey measured*):
 
@@ -420,16 +451,19 @@ ASS 8 (1874) 727-728 prints. No volume's papal part still runs on into the dicas
 | 1870s | 12 → 98 | 9 → 30 | 75 % → 31 % |
 | 1880s | 126 → 106 | 25 → 47 | 20 % → 44 % |
 | 1890s | 134 → 134 | 50 → 51 | 37 % → 38 % |
-| 1900s | 277 → 288 | 173 → 198 | 62 % → 69 % |
-| **series** | **549 → 668** | **257 → 344** | **47 % → 51 %** |
+| 1900s | 277 → 278 | 173 → 196 | 62 % → 71 % |
+| **series** | **549 → 658** | **257 → 342** | **47 % → 52 %** |
 
 Two of those movements are the parser telling the truth rather than a yield falling: the
 1870s' 75 % was 9 rows of 12, one volume's, where the decade now shows 98 rows of seven
 volumes; and the 1880s' 126 rows were mostly ASS 21's part running into the dicasteries.
-**Acts: 380 → 482**, in the two steps below, and **defects 386 → 288**. By pontificate,
-which is how the eras are cut: Pius X (ASS 37-41) 180 acts, 208 rows, **70 %** claimed;
-ASS 36 38 acts, 36 rows, **61 %**; Leo XIII (ASS 12-35) 203 acts, 296 rows, **46 %**;
-ASS 11 7 acts, 12 rows, 50 %; Pius IX (ASS 1-10) 54 acts, 116 rows, **28 %**.
+**Acts: 380 → 482**, in the two steps below, and **defects 386 → 288**. The 1900s row and the
+series row fell in *rows* and rose in *share* because the two dicastery headings above took
+away rows that were never the pope's: ten rows left the papal parts of ASS 37, 38 and 40, and
+two of them had been claimed. By pontificate, which is how the eras are cut: Pius X (ASS 37-41)
+180 acts, 198 rows, **73 %** claimed; ASS 36 38 acts, 36 rows, **61 %**; Leo XIII (ASS 12-35)
+203 acts, 296 rows, **46 %**; ASS 11 7 acts, 12 rows, 50 %; Pius IX (ASS 1-10) 54 acts, 116
+rows, **28 %**.
 
 *The brevia, read on the ruling of 2026-09-22* (survey §3). Where an act closes under the
 ring of the Fisherman and no class heading stands behind it, the walk-back reads it from the
@@ -465,6 +499,34 @@ unbroken from p. 496 (printing `498`) to p. 547 (`549`) and closing at p. 548, c
 `headerAgrees` does. It cost nothing downstream because no act opens in that stretch today —
 which is also why the 48 never counted it.
 
+*The offset scan, now run corpus-wide* (survey §5). The argument that a genuine offset shows
+as a run, and that the 48 show none, was made **only over the 48 pages where an act opens**,
+which is the one place an offset is guaranteed not to be looked for; ASS 7 was found by hand.
+The final fix wave ran the test properly, over all 30,021 pages: a page supports a delta when
+`headerAgrees` refuses its header, `headerAgreesASS` admits it and one of its header tokens
+normalises to the page plus that delta; a page whose header prints no number is bridged; a run
+is four or more supporting pages sharing a delta. **14 runs, in 7 volumes**, of three kinds.
+(a) ASS 7's own offset, in five fragments — the scan rediscovers what is already curated, which
+is the test the detector had to pass. (b) Three runs of **separately paginated matter** bound
+into a volume: ASS 16's own supplement (the PDF is named `…+supplemento-17-96`) and ASS 38's
+French *Supplementum* (§4d of the survey, paginated 1-273); real latitude, no offset. (c) **Six runs that are one digit
+misread, repeating across a signature** — the 3/5 confusion this section already documents,
+once 5/8: +200 at ASS 8 374-378, ASS 29 385-391 and ASS 33 387-390; +300 at ASS 13 518-521;
+and **+20 at ASS 29 530-533 and ASS 33 436-439**, the two that look most like an offset, in
+eight pages the relaxation admits, one of the two volumes being a sample fixture.
+
+**The two +20 runs are misreads, and the volumes prove it.** An offset means the printed
+numbers in the range exist nowhere else in the volume; here they do. ASS 29 PDF p. 550 prints
+`550 CASTRIMARIS` and p. 552 prints `552`, under a different running title from the
+`VARSAVIEN. SEU PARISIEN.` of PDF pp. 530-533, which print `550`-`553`; ASS 33 PDF p. 456
+prints `456 EX S. G. CONCILII` and p. 458 `458`, while PDF pp. 436-439 print `456`-`459` under
+`EX S. C. RITUUM`. Both runs are bounded by pages printing the correct number (ASS 29 p. 529
+`529`, p. 534 `534`; ASS 33 p. 435 `435`, p. 440 `440`), and a pagination cannot skip twenty
+pages and un-skip them four pages later. The same test disposes of the +200 runs and of ASS 13,
+whose volume has only 592 pages and so no p. 818 at all. **Nothing was added to
+`ASS_PAGE_OFFSETS`**: an entry there refuses pages whose headers are merely misread, which is
+the opposite of what the table is for. ASS 7 remains its only row.
+
 *Two losses measured, and no rule written for either.* (a) **The woven summa columns**
 (survey §4c): on **15 pages of 13 volumes** the two columns come back glued, because the
 extraction has collapsed the gutter to a single character. Widening the gutter search from
@@ -494,25 +556,36 @@ the two rules added is a `BREVE`, not one of which the briefs shelves hold, and 
 `series-not-created`. The reverse gap is still 48.
 
 **What the eras can plan against, and what is still a floor.** The **1900s are a
-measurement**: all nine volumes find their papal part, and 198 of 288 rows are claimed.
+measurement**: all nine volumes find their papal part, and 196 of 278 rows are claimed.
 Each of the other four decades carries **exactly one volume that still finds no papal
 heading** and so claims nothing however well it scans — **ASS 1 (1865-66), ASS 7 (1872-73),
 ASS 20 (1887), ASS 26 (1893-94)**, whose summa first lines survey §4b prints: ASS 1 and
 ASS 7 list the pope's acts under the dicastery that issued them, ASS 20 prints no part
 heading and opens on its rows, ASS 26's summa opens on a dicastery. Their 23 scanned acts
 (0, 5, 9, 9) sit outside the check altogether, and their decades' percentages are
-measurements of the other volumes only. Three further stretches are floors by a known
-amount: the 10 glued papal rows of ASS 3, 23 and 27; the 5 `header-mismatch` pages above;
-and the 28 brevia the rule does not reach (by decade in survey §3). Everything else in §2 is
-now a measurement, so the eras of decision 3 are planned against, each over the span decision
-3 gives it and summed from survey §1: **2c-ii-b** (Pius X, ASS 36-41) **69 %**, 168 of 244
-rows — 70 % over Pius X's own five volumes and 61 % over ASS 36 — rather than the 62-64 %
-written there; **2c-ii-c** (Leo XIII, ASS 12-35) **46 %**, 137 of 296, whose floors are
-ASS 20, ASS 26 and most of the woven pages; and **2c-ii-d** (Pius IX, ASS 1-11) **30 %**,
-39 of 128 — 28 % over ASS 1-10 and 50 % over the 12 rows of the two-pope ASS 11 — whose
-floors are ASS 1 and ASS 7. (The pontificate rows of survey §2 cut ASS 11 and ASS 36 out
-into their own lines; decision 3 puts each inside an era, so the span figures above are the
-ones to budget against.)
+measurements of the other volumes only. Four further stretches are floors by a known
+amount: **ASS 27's 43 unclaimed rows**, whose dicastery heading the woven columns destroyed
+outright (above, and survey §4b); the 10 glued papal rows of ASS 3, 23 and 27; the 5
+`header-mismatch` pages above; and the 28 brevia the rule does not reach (by decade in survey
+§3). Everything else in §2 is now a measurement, so the eras of decision 3 are planned
+against, each over the span decision 3 gives it and summed from survey §1: **2c-ii-b**
+(Pius X, ASS 36-41) **71 %**, 166 of 234 rows — 73 % over Pius X's own five volumes and 61 %
+over ASS 36 — rather than the 62-64 % written there; **2c-ii-c** (Leo XIII, ASS 12-35)
+**46 %**, 137 of 296, whose floors are ASS 20, ASS 26, ASS 27 and most of the woven pages;
+and **2c-ii-d** (Pius IX, ASS 1-11) **30 %**, 39 of 128 — 28 % over ASS 1-10 and 50 % over
+the 12 rows of the two-pope ASS 11 — whose floors are ASS 1 and ASS 7. (The pontificate rows
+of survey §2 cut ASS 11 and ASS 36 out into their own lines; decision 3 puts each inside an
+era, so the span figures above are the ones to budget against.)
+
+**One act is filed under the wrong class, and it is recorded rather than rule-fixed** (survey
+§3). Where the brevia walk-back finds no class word on the heading line, `readAct` falls back
+to the class `BREVE` — right for the *Secretaria Brevium*, whose headings are descriptive
+titles. **ASS 21 (1888) p. 513** prints `CONSTITUTIO SSmi D. N. Leonis XIII de Licaeo magno
+Quebecensi.` over `LEO PP. XIII.` and closes under the ring, so it is filed `BREVE`, shelf
+class `brief`, where the volume says *Constitutio*. All 89 `BREVE` entries the series yields
+were checked, and this is the only one whose own description names a different class. Adding a bare
+`CONSTITUTIO` to `CLASS_HEADINGS` has corpus-wide blast radius and belongs to the era that can
+measure it; until then the entry stands as recorded.
 
 **Out of scope for 2c-ii**, unchanged: the ASS-born documents and the reprints of earlier
 popes registered under their own issuers (2c-iii, decided from the eras' gap reports).

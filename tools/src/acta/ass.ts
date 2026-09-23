@@ -341,6 +341,20 @@ function readAct(pages: readonly string[], anchor: Anchor, floor: Located | null
   // the walk-back opens on a line that carries none: a breve of the *Secretaria Brevium*,
   // whose title is a description and whose class the ring it closes under declares
   // (categories.ts's `Brevia` row, shelf class `brief`).
+  //
+  // `headingOf` returning null is reachable **only** from the ring path above: the first
+  // walk-back (`isHeading`) accepts a line precisely because `headingOf` reads a class word
+  // in it, so an act it opens can never fall through here. Everything this branch classes
+  // is therefore an act read from the pope's own name under the ring.
+  //
+  // It is a fallback, not a reading, and it mis-files an act whose descriptive title names
+  // its class in a word `CLASS_HEADINGS` does not carry: ASS 21 (1888) p. 513 prints
+  // `CONSTITUTIO SSmi D. N. Leonis XIII de Licaeo magno Quebecensi.` over `LEO PP. XIII.`
+  // and closes under the ring, so it is filed `BREVE` where the volume says *Constitutio*
+  // (the only one of the 89 `BREVE` entries the series yields whose own description names a
+  // different class, recorded in the survey's §3). Adding a bare `CONSTITUTIO` to `CLASS_HEADINGS` would fire wherever
+  // that word opens a caps line in 30,021 pages; the blast radius is an era's to measure,
+  // and until it has been this stays recorded rather than rule-fixed.
   const h = headingOf(hl[heading.line]!);
   const category = h === null ? 'BREVE' : normaliseHeading(h[2] ? `${h[1]} in forma Brevis` : h[1]!);
   // 3. The salutation, past the preamble after the block (salutationAfter); then the

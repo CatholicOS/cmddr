@@ -87,6 +87,21 @@ const replacingReadings = readings.filter(([key]) => {
   return s !== undefined && scans.get(s.key)!.entries.some((e) => e.page === Number(pageStr));
 }).map(([key]) => key).sort((a, b) => Number(a.split(':')[1]) - Number(b.split(':')[1]) || Number(a.split(':')[2]) - Number(b.split(':')[2]));
 const citeReplacing = (key: string) => `ASS ${key.split(':')[1]} p. ${key.split(':')[2]}`;
+/**
+ * A replacing reading the scan now agrees with on everything but the description's OCR:
+ * same class, same pope, same date, same opening. These are the readings a rule has caught
+ * up with -- each was written because `headerAgrees` refused the page, and 2c-ii Task 6's
+ * relaxation now reads the page by rule -- so they are **retirement candidates for a later
+ * era**, listed rather than deleted, since the description each still corrects is the OCR's
+ * and deleting the reading would put the garble back into the entry.
+ */
+const answeredByScan = replacingReadings.filter((key) => {
+  const [, volStr, pageStr] = key.split(':');
+  const sc = scans.get(sources.find((x) => x.volume === Number(volStr))!.key)!;
+  const e = sc.entries.find((x) => x.page === Number(pageStr));
+  const r = ASS_READINGS[key]!;
+  return e !== undefined && e.category === r.category && e.pope === r.pope && e.date === r.date && e.opening === r.opening;
+});
 /** Every genuine page offset the survey found (`ASS_PAGE_OFFSETS`, curation.ts), cited by volume and range: read from the table, not typed, so a second entry cannot leave a report sentence stale. */
 const offsetRanges = Object.entries(ASS_PAGE_OFFSETS).flatMap(([vol, ranges]) => ranges.map((r) => `ASS ${vol} pp. ${r.from}-${r.to}`)).join(', ');
 const harvested = sum((k) => of(k).filter((e) => (categoryForHeading(e.category)?.harvested ?? 'no') !== 'no').length);
@@ -183,9 +198,10 @@ p(`   sit under the dicastery: papal acts by author, invisible to a scanner that
 p(`   gave the walk-back a second reading for them — the pope's own name standing alone under the ring, the title above it`);
 p(`   read as the act's description, the class \`BREVE\` — and the sample gained nine acts by it (ASS 33 p. 212; ASS 41`);
 p(`   pp. 37, 134, 580, 581, 623, 748, 757, 766), where it had 15 such defects before. What the second reading does not`);
-p(`   reach is quoted in §2.2 and none of it is the rule's to fix: three brevia it reads whole but whose running header`);
-p(`   the OCR misread, so \`headerAgrees\` refuses them (ASS 33 p. 213 \`215\`, ASS 41 pp. 300 \`3oo\` and 301 \`3oi\`); one`);
-p(`   it reads whole and cannot date, ASS 12 p. 636, whose dateline prints no \`die\` (\`sub Annulo piscatoris XIII /`);
+p(`   reach is quoted in §2.2 and none of it is the rule's to fix. Three brevia it read whole were refused on their running`);
+p(`   header alone, which the OCR had misread (ASS 33 p. 213 \`215\`, ASS 41 pp. 300 \`3oo\` and 301 \`3oi\`); **2c-ii Task 6's`);
+p(`   relaxation admitted all three and they are entries now**, so §2.2 no longer quotes them — see findings 2 and 15(d).`);
+p(`   What is left there is one it reads whole and cannot date, ASS 12 p. 636, whose dateline prints no \`die\` (\`sub Annulo piscatoris XIII /`);
 p(`   Augusti MDCCCLXXIX\`); the 1896 breve ASS 41 p. 169 quotes inside a later act and the 1900 brief reprinted inside`);
 p(`   Pennacchi's commentary at ASS 33 p. 303, neither of which has a title above the pope's name, only body text; and`);
 p(`   ASS 1's two apostolic letters, read by hand. Where a defect was a`);
@@ -336,6 +352,13 @@ p(`anchors an entry can carry, and the third — the dateline, which the scanner
 p(`out (${entries.filter((e) => e.anchor === 'dateline').length} of the ${entries.length} entries are \`dateline\`, ${entries.filter((e) => e.anchor === 'heading').length} \`heading\`, ${entries.filter((e) => e.anchor === 'reading').length} \`reading\`). “Scanned by rule” is the fixture's own count, taken before the loader applies the`);
 p(`readings, so “Entries” is “Scanned by rule” plus “Readings” less the readings that *replace* a scanned entry rather than add one`);
 p(`(${replacingReadings.length} in the sample, at ${replacingReadings.map(citeReplacing).join(', ')}).`);
+p();
+p(`**${answeredByScan.length} of those ${replacingReadings.length} are readings a rule has since caught up with, and a later era can retire them.** ${answeredByScan.map(citeReplacing).join(', ')}`);
+p(`${answeredByScan.length === 1 ? 'was' : 'were'} written because \`headerAgrees\` refused the page's running header; 2c-ii Task 6's relaxation now reads ${answeredByScan.length === 1 ? 'it' : 'each of them'} by rule, and the`);
+p('scanned entry agrees with the reading on class, pope, date and opening. **They are listed, not deleted, and nothing in this phase');
+p("removes them**: what each reading still supplies is a *description* free of the OCR's damage (`N.Leonis` for `N. Leonis`,");
+p('`Xlil` for `XIII`, `Pa­ pae` for `Papae`), so retiring one means either accepting the garbled description or replacing the');
+p('reading with a narrower correction. That is a curation decision for the era that owns the volume, taken with the page in front of it.');
 p();
 p('### 2.1 Acts scanned, with the lines each rests on');
 p();

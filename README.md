@@ -331,8 +331,10 @@ entry in the whole sample. The body scan works from 1879 on and fails on 1865, w
 before its eras are planned ([the survey](docs/superpowers/reports/2026-09-22-ass-survey.md), spec §10): the summa parser was
 taught the papal headings the other 36 volumes print, so **37 of the 41 find their papal part** where 21 did, and the brevia of
 the *Secretaria Brevium* — papal acts headed by a descriptive title and closed under the ring of the Fisherman — are read from
-the ring. Across the series that is **482 acts by rule** where 380 stood, and 344 of 668 summa rows claimed (51 %) where 257 of
-549 were (47 %); no reference count moved, since nothing was joined. The remaining 36 volumes are 2c-ii.
+the ring, and the parser was taught the two dicastery headings that had kept three Pius X volumes' papal parts running on into
+the congregations (`EX SACRO CONSISTORIO`, `ACTA ROMANARUM CONGREGATIONUM`). Across the series that is **482 acts by rule**
+where 380 stood, and 342 of 658 summa rows claimed (52 %) where 257 of 549 were (47 %); no reference count moved, since nothing
+was joined. The remaining 36 volumes are 2c-ii.
 
 The *Acta* are therefore also a **second source**. An index entry the join leaves unmatched becomes a document of its own
 (phase 2a, `tools/src/acta/create.ts`) when its category is one the registry creates from the *Acta* — encyclicals,

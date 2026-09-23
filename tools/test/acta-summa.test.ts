@@ -60,7 +60,7 @@ describe('parseSummaPapalPart (spec §4): the papal part, loosely', () => {
     expect(rows.map((r) => r.page)).toEqual([337, 13]);
   });
   it('returns no rows and a null heading when the text has no papal part', () => {
-    expect(parseSummaPapalPart('INDEX GENERALIS CONCLUSIONUM\nAbbas . . 12')).toEqual({ rows: [], heading: null, end: null });
+    expect(parseSummaPapalPart('INDEX GENERALIS CONCLUSIONUM\nAbbas . . 12')).toEqual({ rows: [], heading: null, end: null, reopened: false });
   });
   it('does not close a row on a Latin word that reduces to a well-formed page number (`iis` → 115): the row closes only at the next genuine page token', () => {
     const text = [
@@ -196,11 +196,34 @@ describe('parseSummaPapalPart (spec §4): the papal part, loosely', () => {
     expect(rows.map((r) => r.page)).toEqual([181, 496, 688]);
   });
 
-  it('reports no end when the part reopens and then runs to the text\'s end without a further dicastery heading', () => {
+  it('reports no end when the part reopens and then runs to the text\'s end without a further dicastery heading, and marks it `reopened` so the survey does not print it as the `runs on` defect', () => {
     const text = ['ACTA ROMANI PONTIFICIS', 'Epistola prima . . 5', 'EX ACTIS CONSISTORIALIBUS', 'Decretum . . 9', 'LITTERAE APOSTOLICAE', 'Epistola secunda . . 44'].join('\n');
-    const { rows, end } = parseSummaPapalPart(text);
+    const { rows, end, reopened } = parseSummaPapalPart(text);
     expect(end).toBeNull();
+    expect(reopened).toBe(true);
     expect(rows.map((r) => r.page)).toEqual([5, 44]);
+  });
+
+  it('reports no end and `reopened: false` when the part never met a dicastery heading at all: the `runs on` defect, a different finding from the reopened part above', () => {
+    const text = ['ACTA ROMANI PONTIFICIS', 'Epistola prima . . 5', 'EX CURIA IGNOTA', 'Decretum . . 9'].join('\n');
+    const { rows, end, reopened } = parseSummaPapalPart(text);
+    expect(end).toBeNull();
+    expect(reopened).toBe(false);
+    expect(rows.map((r) => r.page)).toEqual([5, 9]);
+  });
+
+  it('ends the papal part at `EX SACRO CONSISTORIO`, the consistorial heading of the Pius X volumes, which `SACRA\\b` did not match (ASS 37 (1904) 799, ASS 38 (1905) 417, ASS 40 (1907) 770)', () => {
+    const text = ['ACTA ROMANI PONTIFICIS', 'Epistola prima . . 5', 'EX SACRO CONSISTORIO', 'Relatio actorum in Consistoriis diei 14 Novembris 1904 . . 301 et 559'].join('\n');
+    const { rows, end } = parseSummaPapalPart(text);
+    expect(end).toBe('EX SACRO CONSISTORIO');
+    expect(rows.map((r) => r.page)).toEqual([5]);
+  });
+
+  it('ends the papal part at `ACTA ROMANARUM CONGREGATIONUM`, which carries no `EX` (ASS 35 (1902) 760, 36 760, 37 800, 38 418, 39 626, 40 771, 41 801)', () => {
+    const text = ['ACTA ROMANI PONTIFICIS', 'Epistola prima . . 5', 'ACTA ROMANARUM CONGREGATIONUM', 'EX S. CONGR. S. R. ET U. INQUISITIONIS', 'Decretum . . 9'].join('\n');
+    const { rows, end } = parseSummaPapalPart(text);
+    expect(end).toBe('ACTA ROMANARUM CONGREGATIONUM');
+    expect(rows.map((r) => r.page)).toEqual([5]);
   });
 
   it('does not end the papal part on a row of its own that mentions a congregation in running text, mid-sentence and in mixed case (a saint\'s initial, `S. Ioannis`, is the same shape)', () => {
