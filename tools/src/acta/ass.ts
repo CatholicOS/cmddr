@@ -22,6 +22,7 @@ export { CLASS_HEADINGS } from './ass-headings.js';
 import { headerOf, headerAgrees } from './recover.js';
 import { normaliseHeading } from './categories.js';
 import type { ActaEntry } from './index.js';
+import { DIGIT_OCR } from './summa.js';
 import type { SummaCheck } from './summa.js';
 import { assDate } from './ass-dates.js';
 import {
@@ -97,7 +98,9 @@ export const DATUM_RE = /Dat(?:um|\.)\s+[REB]om[ae]{1,2}|\bDat[oa]\s+(?:a|in)\s+
  *
  * It yields exactly four anchors over the 41 volumes, counted on 2026-09-23, and they are
  * the whole of its effect: ASS 11 (1878) 595, which becomes the act at p. 594; ASS 6 (1870)
- * 327, whose act at p. 324 `headerAgrees` then refuses (`S£4` for 324); ASS 27 (1894) 79,
+ * 327, whose act at p. 324 `headerAgrees` refuses (`S£4` for 324) and `headerAgreesASS`
+ * (2c-ii Task 6) admits: `S` is a known digit lookalike, standing for any digit, so the
+ * token's one true wrong character (`£`) is within the one-edit bound; ASS 27 (1894) 79,
  * which finds no heading; and ASS 28 (1895) 112, which is **a brief of Pius IX of `16 Maii
  * 1851` quoted inside the `COMPENDIUM FACTI` of a Congregation case**, guillemet and all.
  * Nothing in the anchor can tell a quoted brief from a printed one; that one is refused
@@ -120,6 +123,69 @@ export const PONTIFICATUS_RE = /Pontificatus\s+[NnÑ]ostri|(?:del|Del)\s+Nostro\
 const ADDRESSEE_CAPS_RE = /^\s*(?:VENERABILI(?:BUS)?\s+FRAT|DILECT(?:O|IS)\s+FILI|AL\s+SIGNOR|A\s+NOS\s|AUGUSTISSIMO|SERENISSIMO)/;
 /** An allocution's own dating: `in Consistorio secreto diei 16 Decembris 1907`, `die 18 Dec. 1907 habita`. */
 const HEADING_DATE_RE = /\bdie[i]?\s+(\d{1,2}|[ivxl]+)\s+([A-Za-z]+)\.?\s+(\d{4})/i;
+
+/**
+ * A token's distance from the page number, a `DIGIT_OCR` letter (summa.ts) standing for
+ * *any* digit rather than the one it is keyed to -- so `S` costs nothing against `8` as it
+ * does against `5`, since the check only asks whether the position could be a digit, not
+ * which one. Capped like `dist` (recover.ts): a length difference over one is never worth
+ * counting further.
+ */
+function digitDist(token: string, digits: string): number {
+  const m = token.length;
+  const n = digits.length;
+  if (Math.abs(m - n) > 1) return 2;
+  const row = Array.from({ length: n + 1 }, (_, j) => j);
+  for (let i = 1; i <= m; i++) {
+    let diag = row[0]!;
+    row[0] = i;
+    for (let j = 1; j <= n; j++) {
+      const a = token[i - 1]!;
+      const b = digits[j - 1]!;
+      const sub = a === b || (Object.prototype.hasOwnProperty.call(DIGIT_OCR, a) && /\d/.test(b)) ? 0 : 1;
+      const cur = Math.min(row[j]! + 1, row[j - 1]! + 1, diag + sub);
+      diag = row[j]!;
+      row[j] = cur;
+    }
+  }
+  return row[n]!;
+}
+
+/**
+ * The ASS-only relaxation of `headerAgrees` (2c-ii Task 6, on the evidence of the
+ * whole-series survey, `docs/superpowers/reports/2026-09-22-ass-survey.md` §5):
+ * `headerAgrees` itself is untouched, so the AAS page recovery (recover.ts, phase 2b-iii-b)
+ * keeps its stricter rule, but the ASS scanner tries this first when `headerAgrees`
+ * refuses. Two differences from it: a `DIGIT_OCR` letter stands for any digit rather than
+ * the one it is keyed to (`4SI` agrees with 481 -- `S` and `I` are known digit lookalikes,
+ * not literally 5 and 1, so only the token's `4` is checked against the page's), and,
+ * unlike `headerAgrees`, an all-digit token one edit from the page agrees too (`302` for
+ * 502) -- a clean digit-for-digit misread `headerAgrees` refuses everywhere, but which the
+ * ASS's OCR prints repeatedly (3/5 confused at ASS 4 (1868) 502, 675; ASS 6 (1870) 337; ASS
+ * 20 (1887) 593; ASS 30 (1897) 563; ASS 33 (1900) 355, 385; ASS 34 (1901) 623, 634; ASS 35
+ * (1902) 234, 578; 5/8 at ASS 10 (1877) 577, 35 (1902) 578), each confirmed against its
+ * volume's neighbouring pages, never a run (survey §5, finding 15d). Two adjacent header
+ * tokens are also tried joined, for a number a stray space or stop splits in two (`ol 2`
+ * for 312, `5.3 i` for 531).
+ *
+ * Measured over the 48 header-mismatch pages of the whole series (2026-09-23 survey): 40
+ * agree by this rule. The other 8 stay refused -- three already answered by a curated
+ * reading regardless (ASS_READINGS, curation.ts: ASS 33 (1900) 449 `U9`, ASS 41 (1908) 298
+ * and 495, whose page numbers split across two OCR lines the way `headerOf`'s single line
+ * cannot reach) and five not, each confirmed OCR noise by its neighbours but too far from
+ * the page to admit safely, without also risking accepting a page whose header truly
+ * disagrees: ASS 8 (1874) 373 `575` and 686 `G8fí` (a second digit misread in the same
+ * token), ASS 10 (1877) 49 `4<¡` (a stray symbol, not a digit lookalike), ASS 13 (1880) 3
+ * (a reprint's front matter, no header printed at all, with a stray digit in the running
+ * text the check reads as one), and ASS 16 (1883) 241 `144` (two digits wrong).
+ */
+export const headerAgreesASS = (header: string, n: number): boolean => {
+  if (headerAgrees(header, n)) return true;
+  const digits = String(n);
+  const toks = header.split(/\s+/).filter((t) => t !== '');
+  const pairs = toks.slice(0, -1).map((t, i) => t + toks[i + 1]);
+  return [...toks, ...pairs].some((t) => /\d/.test(t) && digitDist(t, digits) <= 1);
+};
 
 /**
  * The index of the first line from `from` that is neither blank, a greeting, a caps line
@@ -302,9 +368,10 @@ function readAct(pages: readonly string[], anchor: Anchor, floor: Located | null
     const iso = hd ? assDate(`Datum Romae die ${hd[1]} ${hd[2]} anno ${hd[3]}`, span) : null;
     date = iso ?? '????-??-??';
   }
-  // 6. The page: the PDF page, which the running header must not contradict.
+  // 6. The page: the PDF page, which the running header must not contradict
+  // (headerAgreesASS, the ASS-only relaxation of headerAgrees; 2c-ii Task 6).
   const header = headerOf(pages[heading.page - 1]!);
-  if (!headerAgrees(header, heading.page)) return { defect: { page: heading.page, reason: 'header-mismatch', lines: [header, headingText] } };
+  if (!headerAgreesASS(header, heading.page)) return { defect: { page: heading.page, reason: 'header-mismatch', lines: [header, headingText] } };
   const description = block.slice(0, 1).map((l) => unaccent(l).replace(HEADING_RE, '$3').trim()).concat(block.slice(1)).join(' ').replace(/\s+/g, ' ').trim();
   return {
     entry: {

@@ -516,6 +516,52 @@
       "series": "ASS",
       "volume": 41,
       "year": 1908,
+      "page": 300,
+      "pope": "Pius X",
+      "category": "BREVE",
+      "date": "1906-07-30",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Indulgentia toties quoties pro visitantibus ecclesias congre­ gationis SS. Sacramenti in festo Corporis Christi.",
+      "raw": "Indulgentia toties quoties pro visitantibus ecclesias congre­ / gationis SS. Sacramenti in festo Corporis Christi.",
+      "opening": "Neminem latet festum SSmi Corporis Christi Domini inter",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "Indulgentia toties quoties pro visitantibus ecclesias congre­ / gationis SS. Sacramenti in festo Corporis Christi.",
+        "salutation": "PIUS PP. X",
+        "opening": "Neminem latet festum SSmi Corporis Christi Domini in­",
+        "dateline": "Datum Romae apud S. Petrum sub annulo Piscatoris, die xxx Iulii MCMVi, Pontificatus Nostri anno tertio.",
+        "header": "3oo                                               Ex Secretaria Brevium"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 301,
+      "pope": "Pius X",
+      "category": "BREVE",
+      "date": "1908-02-01",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Breve SS. D. N. Pii div. prov. PP. X quo sacerdotibus qui operam suam impendent pio Operi Propagationis Fidei facultas benedicendi Rosaria eisque adnectendi indulgen- tias a Patribus Crucigeris appellatas conceditur.",
+      "raw": "Breve SS. D. N. Pii div. prov. PP. X quo sacerdotibus qui / operam suam impendent pio Operi Propagationis Fidei / facultas benedicendi Rosaria eisque adnectendi indulgen- / tias a Patribus Crucigeris appellatas conceditur.",
+      "opening": "Cum Nobis Apostolorum Principis Cathedram obtinentibus antiquius nihil",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "Breve SS. D. N. Pii div. prov. PP. X quo sacerdotibus qui / operam suam impendent pio Operi Propagationis Fidei / facultas benedicendi Rosaria eisque adnectendi indulgen- / tias a Patribus Crucigeris appellatas conceditur.",
+        "salutation": "PIUS PP. X",
+        "opening": "Cum Nobis Apostolorum Principis Cathedram obtinenti-",
+        "dateline": "Datum Romae apud S. Petrum sub annulo Piscatoris, die i Februarii MDCCCCVIII, Pontificatus Nostri anno quinto.",
+        "header": "Ex Secretaria Brevium                                                             3oi"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
       "page": 361,
       "pope": "Pius X",
       "category": "EPISTOLA",
@@ -839,22 +885,6 @@
       ]
     },
     {
-      "page": 300,
-      "reason": "header-mismatch",
-      "lines": [
-        "3oo                                               Ex Secretaria Brevium",
-        "Indulgentia toties quoties pro visitantibus ecclesias congre­ / gationis SS. Sacramenti in festo Corporis Christi."
-      ]
-    },
-    {
-      "page": 301,
-      "reason": "header-mismatch",
-      "lines": [
-        "Ex Secretaria Brevium                                                             3oi",
-        "Breve SS. D. N. Pii div. prov. PP. X quo sacerdotibus qui / operam suam impendent pio Operi Propagationis Fidei / facultas benedicendi Rosaria eisque adnectendi indulgen- / tias a Patribus Crucigeris appellatas conceditur."
-      ]
-    },
-    {
       "page": 425,
       "reason": "no-date",
       "lines": [
@@ -1171,6 +1201,8 @@
     "omitted": [
       37,
       134,
+      300,
+      301,
       580,
       581,
       623,

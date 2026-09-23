@@ -18,45 +18,45 @@ scanned at all (`tools/scan-ass.ts` refuses to write a fixture for it), and show
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | 1865–66 | Pius IX | 767 | 747–752 | — | — | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 1 | ✓ |
 | 2 | 1867 | Pius IX | 719 | 695–701 | LITTERAE APOSTOLICAE | EX S. GREG. S. R. D. INQU1S1T. | 1 | 1 | 0 | 3 | 1 | 2 | 0 | 4 | 2 |  |
-| 3 | 1867 | Pius IX | 696 | 665–670 | ACTA SOLEMNIORA ROMANI PONTIFICIS | ACTA CONSISTORIALIA. | 4 | 4 | 0 | 15 | 4 | 11 | 0 | 7 | 0 |  |
-| 4 | 1868 | Pius IX | 717 | 684–690 | ACTA SOLEMNIORE ROM. PONTIFICIS | ACTA CONSISTORIALIA | 7 | 5 | 2 | 9 | 6 | 3 | 1 | 5 | 1 |  |
+| 3 | 1867 | Pius IX | 696 | 665–670 | ACTA SOLEMNIORA ROMANI PONTIFICIS | ACTA CONSISTORIALIA. | 5 | 5 | 0 | 15 | 4 | 11 | 1 | 6 | 0 |  |
+| 4 | 1868 | Pius IX | 717 | 684–690 | ACTA SOLEMNIORE ROM. PONTIFICIS | ACTA CONSISTORIALIA | 9 | 7 | 2 | 9 | 7 | 2 | 2 | 3 | 1 |  |
 | 5 | 1869–70 | Pius IX | 712 | 691–696 | ACTA SOLEMNIORA ROM. PONriFICIS | EX SECRETARIA BREVIUM. | 6 | 5 | 1 | 15 | 6 | 9 | 0 | 9 | 0 |  |
-| 6 | 1870–71 | Pius IX | 776 | 597–603 | ACTA SOLEMNIORA ROM. PONTIFICIS | EX SECRETARIA BREVIUM. | 4 | 3 | 1 | 31 | 3 | 28 | 1 | 14 | 1 |  |
+| 6 | 1870–71 | Pius IX | 776 | 597–603 | ACTA SOLEMNIORA ROM. PONTIFICIS | EX SECRETARIA BREVIUM. | 7 | 6 | 1 | 31 | 6 | 25 | 1 | 11 | 1 |  |
 | 7 | 1872–73 | Pius IX | 784 | 751–760 | — | — | 5 | 3 | 2 | 0 | 0 | 0 | 5 | 7 | 1 |  |
 | 8 | 1874–75 | Pius IX | 748 | 727–733 | ACTA SOLEMNIORÂ | EX S. CONGR. S. R. U. ÍNQUISIT. | 6 | 4 | 2 | 24 | 4 | 20 | 2 | 14 | 0 |  |
 | 9 | 1876 | Pius IX | 690 | 669–674 | Litterae Apostolicae | Ex Actis Consistorialibus. | 10 | 10 | 0 | 10 | 2 | 8 | 8 | 16 | 2 |  |
-| 10 | 1877 | Pius IX | 768 | 616–622 | LITTERAE APOSTOLICAE | EX ACTIS CONCISTORIALIBUS | 3 | 2 | 1 | 9 | 1 | 8 | 2 | 12 | 2 |  |
+| 10 | 1877 | Pius IX | 768 | 616–622 | LITTERAE APOSTOLICAE | EX ACTIS CONCISTORIALIBUS | 5 | 2 | 3 | 9 | 3 | 6 | 2 | 10 | 2 |  |
 | 11 | 1878 | Pius IX + Leo XIII | 646 | 621–626 | LITTERAE APOSTOLICAE | EX ACTIS CONSISTORIALIBUS. | 7 | 6 | 1 | 12 | 6 | 6 | 1 | 6 | 0 |  |
 | 12 | 1879 | Leo XIII | 672 | 647–653 | LITTERAE ET ALLOCUTIONES | EX ACTIS CONSISTORIALIBUS | 10 | 8 | 2 | 12 | 9 | 3 | 1 | 1 | 0 | ✓ |
 | 13 | 1880 | Leo XIII | 592 | 569–579 | LITTERAE ET ALLOCUTIONES | EX ACTIS CONSISTORIALIBUS | 9 | 7 | 2 | 16 | 9 | 7 | 0 | 7 | 0 |  |
-| 14 | 1881 | Leo XIII | 591 | 569–575 | LITTERAE ET RESPONSUM | EX ACTIS CONSISTORIALIBUS | 2 | 1 | 1 | 9 | 1 | 8 | 1 | 7 | 0 |  |
+| 14 | 1881 | Leo XIII | 591 | 569–575 | LITTERAE ET RESPONSUM | EX ACTIS CONSISTORIALIBUS | 3 | 2 | 1 | 9 | 2 | 7 | 1 | 6 | 0 |  |
 | 15 | 1882 | Leo XIII | 623 | 603–610 | LITTERAE MOTU PROPRIO | EX ACTIS CONSISTORIALIBUS | 1 | 1 | 0 | 10 | 1 | 9 | 0 | 8 | 0 |  |
 | 16 | 1883–84 | Leo XIII | 656 | 557–564 | L TT E RA R ROMANI PONTIFICIS | EX AEDIBUS VATIC ANÍS | 3 | 2 | 1 | 7 | 2 | 5 | 1 | 6 | 2 |  |
 | 17 | 1884 | Leo XIII | 624 | 603–610 | LITTERAE ROMANI PONTIFICIS | EX AEDIBUS VATICANIS | 4 | 3 | 1 | 10 | 3 | 7 | 1 | 4 | 0 |  |
 | 18 | 1885 | Leo XIII | 768 | 603–610 | LITTERAE ROMANI PONTIFICIS | EX S. CONGR. CONCILII | 9 | 7 | 2 | 12 | 6 | 6 | 3 | 3 | 1 |  |
 | 19 | 1886–87 | Leo XIII | 768 | 604–610 | LITTERAE R. PONTIFICIS | EX S. CONG. CONCILII | 6 | 6 | 0 | 13 | 6 | 7 | 0 | 3 | 0 |  |
-| 20 | 1887 | Leo XIII | 656 | 635–642 | — | — | 7 | 6 | 1 | 0 | 0 | 0 | 7 | 7 | 0 |  |
+| 20 | 1887 | Leo XIII | 656 | 635–642 | — | — | 9 | 8 | 1 | 0 | 0 | 0 | 9 | 5 | 0 |  |
 | 21 | 1888 | Leo XIII | 768 | 744–750 | LITTERAE ET ACTA ROM. PONTIFICIS | S. CONGREGATIO CONCILII | 13 | 12 | 1 | 19 | 13 | 6 | 0 | 3 | 0 |  |
 | 22 | 1889–90 | Leo XIII | 767 | 750–756 | LITTERAE ET ACTA ROM. PONTIFICIS | EX ACTIS CONSISTORIALIBUS | 5 | 5 | 0 | 10 | 5 | 5 | 0 | 4 | 2 |  |
-| 23 | 1890–91 | Leo XIII | 768 | 752–758 | LITTERAE ET ACTA ROM. PONTIFICIS | EX ACTIS CONSISTORIALIBUS CQmpeUt ius praecei]end | 8 | 8 | 0 | 14 | 7 | 7 | 1 | 5 | 0 | ✓ |
+| 23 | 1890–91 | Leo XIII | 768 | 752–758 | LITTERAE ET ACTA ROM. PONTIFICIS | EX ACTIS CONSISTORIALIBUS CQmpeUt ius praecei]end | 9 | 9 | 0 | 14 | 8 | 6 | 1 | 4 | 0 | ✓ |
 | 24 | 1891–92 | Leo XIII | 768 | 751–760 | LITTERAE ET ACTA ROM. PONTIFICIS | EX S. CONGREGATIONE CONCILII | 9 | 9 | 0 | 12 | 8 | 4 | 1 | 5 | 2 |  |
 | 25 | 1892–93 | Leo XIII | 767 | 751–760 | LITTERAE ET ACTA | EX SECRETARIA BREVIUM | 9 | 9 | 0 | 12 | 7 | 5 | 2 | 4 | 1 |  |
 | 26 | 1893–94 | Leo XIII | 768 | 755–762 | — | — | 9 | 9 | 0 | 0 | 0 | 0 | 9 | 3 | 1 |  |
 | 27 | 1894–95 | Leo XIII | 768 | 753–760 | LITTERAE ET ACTA | EX S. CONGR. RITUUM | 9 | 9 | 0 | 47 | 4 | 43 | 5 | 8 | 1 |  |
-| 28 | 1895–96 | Leo XIII | 768 | 753–761 | LITTERAE ET ACTA | EX S. C. CONCILII | 9 | 9 | 0 | 9 | 6 | 3 | 3 | 7 | 2 |  |
+| 28 | 1895–96 | Leo XIII | 768 | 753–761 | LITTERAE ET ACTA | EX S. C. CONCILII | 10 | 10 | 0 | 9 | 6 | 3 | 4 | 6 | 2 |  |
 | 29 | 1896–97 | Leo XIII | 768 | 759–766 | LITTERAE ET ACTA | EX S. C. CONCILII | 4 | 4 | 0 | 9 | 3 | 6 | 1 | 6 | 0 |  |
-| 30 | 1897–98 | Leo XIII | 767 | 753–761 | LITTERAE ET ACTA | EX S. C. CONCILII | 5 | 5 | 0 | 11 | 4 | 7 | 1 | 8 | 0 |  |
+| 30 | 1897–98 | Leo XIII | 767 | 753–761 | LITTERAE ET ACTA | EX S. C. CONCILII | 6 | 6 | 0 | 11 | 4 | 7 | 2 | 7 | 0 |  |
 | 31 | 1898–99 | Leo XIII | 768 | 759–768 | LITTERAE ET ACTA | EX S. C. CONCILII | 10 | 9 | 1 | 13 | 9 | 4 | 1 | 6 | 0 |  |
 | 32 | 1899–00 | Leo XIII | 768 | 761–768 | LITTERAE ET ACTA | EX S. G. CONCILII | 4 | 3 | 1 | 7 | 2 | 5 | 2 | 5 | 0 |  |
-| 33 | 1900–01 | Leo XIII | 768 | 761–768 | LITTERAE ET ACTA | EX S. C. CONCILII | 19 | 18 | 1 | 24 | 14 | 8 | 3 | 9 | 1 | ✓ |
-| 34 | 1901–02 | Leo XIII | 768 | 763–768 | LITTERAE ET ACTA | EX S. C. CONCILII | 8 | 7 | 1 | 9 | 5 | 4 | 2 | 7 | 1 |  |
-| 35 | 1902–03 | Leo XIII | 768 | 759–768 | ACTA ROMAM PONTIFICIS | EX ACTIS CONSISTORIALIBUS | 18 | 17 | 1 | 11 | 7 | 4 | 11 | 8 | 2 |  |
-| 36 | 1903–04 | Leo XIII + Pius X | 768 | 758–768 | ACTA ROMANI PONTIFICIS | EX ACTIS CONSISTORIALIBUS | 37 | 33 | 4 | 36 | 21 | 15 | 16 | 21 | 1 |  |
-| 37 | 1904–05 | Pius X | 820 | 798–820 | ACTA ROMANI PONTIFICIS | EX SECRETARIA BREVIUM | 30 | 23 | 7 | 34 | 22 | 12 | 8 | 19 | 0 |  |
-| 38 | 1905–06 | Pius X | 702 | 417–423 | ACTA ROMANI PONTIFICIS | EX S. CONGR. EPISCOPORUM ET REGULARIUM | 12 | 12 | 0 | 23 | 11 | 12 | 1 | 7 | 0 |  |
-| 39 | 1906 | Pius X | 640 | 623–640 | ACTA ROMANI PONTIFICIS | EX SECRETARIA BREVIUM | 52 | 48 | 4 | 75 | 47 | 28 | 5 | 26 | 0 |  |
-| 40 | 1907 | Pius X | 791 | 769–781 | ACTA ROMANI PONTIFICIS | EX SECRETARIA BREVIUM | 33 | 29 | 4 | 39 | 28 | 11 | 5 | 14 | 0 |  |
-| 41 | 1908 | Pius X | 810 | 799–810 | ACTA ROMANI PONTIFICIS | EX SECRETARIA BREVIUM | 35 | 31 | 4 | 37 | 27 | 10 | 8 | 10 | 1 | ✓ |
+| 33 | 1900–01 | Leo XIII | 768 | 761–768 | LITTERAE ET ACTA | EX S. C. CONCILII | 22 | 21 | 1 | 24 | 16 | 6 | 4 | 6 | 1 | ✓ |
+| 34 | 1901–02 | Leo XIII | 768 | 763–768 | LITTERAE ET ACTA | EX S. C. CONCILII | 10 | 9 | 1 | 9 | 6 | 3 | 3 | 5 | 1 |  |
+| 35 | 1902–03 | Leo XIII | 768 | 759–768 | ACTA ROMAM PONTIFICIS | EX ACTIS CONSISTORIALIBUS | 20 | 19 | 1 | 11 | 8 | 3 | 12 | 6 | 2 |  |
+| 36 | 1903–04 | Leo XIII + Pius X | 768 | 758–768 | ACTA ROMANI PONTIFICIS | EX ACTIS CONSISTORIALIBUS | 38 | 34 | 4 | 36 | 22 | 14 | 16 | 20 | 1 |  |
+| 37 | 1904–05 | Pius X | 820 | 798–820 | ACTA ROMANI PONTIFICIS | EX SECRETARIA BREVIUM | 33 | 25 | 8 | 34 | 25 | 9 | 8 | 16 | 0 |  |
+| 38 | 1905–06 | Pius X | 702 | 417–423 | ACTA ROMANI PONTIFICIS | EX S. CONGR. EPISCOPORUM ET REGULARIUM | 13 | 13 | 0 | 23 | 11 | 12 | 2 | 6 | 0 |  |
+| 39 | 1906 | Pius X | 640 | 623–640 | ACTA ROMANI PONTIFICIS | EX SECRETARIA BREVIUM | 60 | 56 | 4 | 75 | 52 | 23 | 8 | 18 | 0 |  |
+| 40 | 1907 | Pius X | 791 | 769–781 | ACTA ROMANI PONTIFICIS | EX SECRETARIA BREVIUM | 37 | 33 | 4 | 39 | 31 | 8 | 6 | 10 | 0 |  |
+| 41 | 1908 | Pius X | 810 | 799–810 | ACTA ROMANI PONTIFICIS | EX SECRETARIA BREVIUM | 37 | 33 | 4 | 37 | 27 | 10 | 10 | 8 | 1 | ✓ |
 
 ## 2. The yield, by decade — what decides the era split
 
@@ -65,19 +65,19 @@ only honest measure of what the scanner reads in a volume it has not been curate
 
 | Decade | Volumes | Pages | Acts | Summa rows | Claimed | Claimed % | Defects | Brevia | Volumes with no summa |
 |---|---|---|---|---|---|---|---|---|---|
-| 1860s | 5 | 3611 | 18 | 42 | 17 | 40 % | 28 | 4 | 0 |
-| 1870s | 7 | 5084 | 45 | 98 | 25 | 26 % | 70 | 6 | 0 |
-| 1880s | 10 | 6813 | 59 | 106 | 46 | 43 % | 52 | 5 | 0 |
-| 1890s | 10 | 7678 | 76 | 134 | 50 | 37 % | 57 | 7 | 0 |
-| 1900s | 9 | 6835 | 244 | 288 | 182 | 63 % | 121 | 6 | 0 |
+| 1860s | 5 | 3611 | 21 | 42 | 18 | 43 % | 25 | 4 | 0 |
+| 1870s | 7 | 5084 | 50 | 98 | 30 | 31 % | 65 | 6 | 0 |
+| 1880s | 10 | 6813 | 62 | 106 | 47 | 44 % | 49 | 5 | 0 |
+| 1890s | 10 | 7678 | 79 | 134 | 51 | 38 % | 54 | 7 | 0 |
+| 1900s | 9 | 6835 | 270 | 288 | 198 | 69 % | 95 | 6 | 0 |
 
 | Pontificate | Volumes | Acts | Summa rows | Claimed % |
 |---|---|---|---|---|
-| Pius IX | 10 (1, 2, 3, 4, 5, 6, 7, 8, 9, 10) | 46 | 116 | 23 % |
+| Pius IX | 10 (1, 2, 3, 4, 5, 6, 7, 8, 9, 10) | 54 | 116 | 28 % |
 | Pius IX + Leo XIII | 1 (11) | 7 | 12 | 50 % |
-| Leo XIII | 24 (12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35) | 190 | 296 | 44 % |
-| Leo XIII + Pius X | 1 (36) | 37 | 36 | 58 % |
-| Pius X | 5 (37, 38, 39, 40, 41) | 162 | 208 | 65 % |
+| Leo XIII | 24 (12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35) | 203 | 296 | 46 % |
+| Leo XIII + Pius X | 1 (36) | 38 | 36 | 61 % |
+| Pius X | 5 (37, 38, 39, 40, 41) | 180 | 208 | 70 % |
 
 ## 3. The brevia of the Secretaria Brevium (the owner's decision)
 
@@ -100,11 +100,11 @@ measure that before trusting its brevia count.
 
 | Decade | Brevia | as a share of that decade's defects |
 |---|---|---|
-| 1860s | 4 | 14 % |
+| 1860s | 4 | 16 % |
 | 1870s | 6 | 9 % |
 | 1880s | 5 | 10 % |
-| 1890s | 7 | 12 % |
-| 1900s | 6 | 5 % |
+| 1890s | 7 | 13 % |
+| 1900s | 6 | 6 % |
 
 ## 4. Candidate class headings the scanner does not know
 
@@ -250,7 +250,7 @@ matter, and its own closing *Table des matières* -- bound in afterward and foun
 The volume's own index cites nothing past p. 415 (`Normae pro examinibus Concionatorum iuxta Notificationem diei io
 Aug. 1905 415`, under `EX VICARIATU URBIS`, ASS 38 (1905) 423) -- above the papal part's own highest row, p.
 382 (ASS 38) -- so the body the scanner reads, 1-416, is the volume's real body, not a
-measurement cut short: its 12 acts are its real yield. The supplement is indexed too, but as one row each
+measurement cut short: its 13 acts are its real yield. The supplement is indexed too, but as one row each
 under `EX SECRETARIA STATUS` and `APPENDICES` (both citing its own `1-27S`/`1-273` pagination, ASS 38 (1905) 418
 and 423) -- a single item, not further per-document acts -- so nothing in `CLASS_HEADINGS` or the scanner's anchors
 would find acts in a dossier the volume's own index already treats as one citation, and no era should look here
@@ -258,32 +258,24 @@ for a rule.
 
 ## 5. `header-mismatch`: OCR noise, or a page offset?
 
-**48** across the series. A volume whose pages are genuinely offset would show them in a run, at every
-page; the sample showed six, scattered, every one the OCR's reading of the right number (finding 15d).
+**8** across the series, down from 48 (2c-ii Task 6, on this survey's evidence): every one of the 48 was the OCR's
+reading of the right number, confirmed against its volume's neighbouring pages, and none was a run -- a volume whose pages are genuinely
+offset would show them in a run, at every page, and none does (the sample's own 9 fell to 3, finding 15d). `headerAgreesASS` (ass.ts) is the
+ASS-only relaxation the ruling took: a `DIGIT_OCR` letter (summa.ts) stands for any digit rather than the one it is keyed to, and, unlike
+`headerAgrees` itself (recover.ts, kept as it was for the AAS page recovery), an all-digit token one edit from the page agrees too. 40 of the
+48 agree by that rule; the other 8 below are two edits or worse, or a page number the OCR splits across two lines `headerOf`'s single line
+cannot reach -- three of them (ASS 33 p. 449, ASS 41 pp. 298, 495) already answered by a curated reading regardless (`ASS_READINGS`,
+curation.ts), five not (ASS 8 pp. 373, 686; ASS 10 p. 49; ASS 13 p. 3; ASS 16 p. 241), each confirmed OCR noise the same way but too far from
+the page to admit without also risking a page whose header truly disagrees.
 
 | Vol | Count | Pages, with the header as read |
 |---|---|---|
-| 3 | 1 | 197 `LITTERAE APOSTOLICAE. 1*97` |
-| 4 | 2 | 502 `302`; 675 `DE IEIUNIO. 673` |
-| 6 | 3 | 324 `S£4 LITTERAE APOSTOLICAE.`; 337 `387`; 481 `4SI` |
 | 8 | 2 | 373 `LITTERAE, APOSTOLICAE 575`; 686 `G8fí` |
-| 10 | 3 | 49 `4<¡`; 161 `Í6Í`; 577 `877` |
+| 10 | 1 | 49 `4<¡` |
 | 13 | 1 | 3 `LITTERAE SSmi. D. 3ST. Leonis XIII ad pr` |
-| 14 | 1 | 481 `4SI` |
 | 16 | 1 | 241 `144` |
-| 20 | 2 | 559 `LITTERAE 5o$`; 593 `893` |
-| 23 | 1 | 318 `-318` |
-| 28 | 1 | 312 `ol 2` |
-| 30 | 1 | 563 `565` |
-| 33 | 4 | 213 `EX SECRETARIA BREVIUM `; 355 `LITTERAE 555`; 385 `585`; 449 `U9` |
-| 34 | 2 | 623 `625`; 634 `654` |
-| 35 | 2 | 234 `254`; 578 `878 EX SECRETARIA BREVIUM` |
-| 36 | 1 | 580 `o 80` |
-| 37 | 3 | 295 `Litterae `; 433 `Allocutio `; 557 `Litterae ` |
-| 38 | 1 | 259 `Ex Secretaria Brevium 25 g` |
-| 39 | 8 | 23 `Epistola `; 24 `2 `; 25 `Epistola `; 136 `j 36 Epistola`; 405 `Epistola `; 410 `4IO `; 531 `Ex Secretaria Brevium 5.3 i`; 584 `58 ` |
-| 40 | 4 | 387 `Epistola `; 390 `3go `; 394 `3 94 Èx Secretaria Brevium`; 452 `4-52 ` |
-| 41 | 4 | 298 `2 `; 300 `3oo `; 301 `Ex Secretaria Brevium `; 495 `Epistola ` |
+| 33 | 1 | 449 `U9` |
+| 41 | 2 | 298 `2 `; 495 `Epistola ` |
 
 ## 6. The join target: what the shelves hold for these years
 
@@ -300,5 +292,5 @@ shelf column is thin can yield few references however well it scans — the join
 
 ## 7. Totals
 
-41 volumes, 30021 pages; **442 acts** read by rule; 668 summa rows of which 320 claimed
-(48 %); 328 defects, 28 of them brevia; 0 volumes with no summa located.
+41 volumes, 30021 pages; **482 acts** read by rule; 668 summa rows of which 344 claimed
+(51 %); 288 defects, 28 of them brevia; 0 volumes with no summa located.

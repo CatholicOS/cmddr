@@ -69,8 +69,15 @@ export function locateSumma(pages: readonly string[]): { from: number; to: numbe
   return { from: from + 1, to };
 }
 
-/** The OCR's letters for digits in a page number: `ig3` → 193, `3oo` → 300, `3oi` → 301, `i3o` → 130. Spaces inside a number are dropped (`6 19`). */
-const DIGIT_OCR: Readonly<Record<string, string>> = { o: '0', O: '0', i: '1', I: '1', l: '1', S: '5', s: '5', g: '9', B: '8' };
+/**
+ * The OCR's letters for digits in a page number: `ig3` → 193, `3oo` → 300, `3oi` → 301,
+ * `i3o` → 130, an accented capital `Í` for `1` (ASS 10 (1877) 161: `Í6Í` for 161, the same
+ * letter `I` already stands for, with a stray accent the OCR adds). Spaces inside a number
+ * are dropped (`6 19`). Exported so the ASS scanner's header check (ass.ts,
+ * `headerAgreesASS`) reads the OCR's digit letters from the one table rather than a second
+ * one (2c-ii Task 6).
+ */
+export const DIGIT_OCR: Readonly<Record<string, string>> = { o: '0', O: '0', i: '1', I: '1', l: '1', Í: '1', S: '5', s: '5', g: '9', B: '8' };
 export function normalisePage(token: string): number | null {
   const digits = token.replace(/\s+/g, '').split('').map((c) => DIGIT_OCR[c] ?? c).join('');
   if (!/^\d{1,4}$/.test(digits)) return null;

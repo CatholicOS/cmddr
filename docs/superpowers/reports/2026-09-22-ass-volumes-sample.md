@@ -7,9 +7,9 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
 
 1. **The body scan works from 1879 on and fails on 1865: the era's headline is a date, not a rule.** Five volumes, one
    scanner, and the yield divides at the first of them. ASS 1 (1865–66, 767 pages) gave **0 acts** — its three
-   papal acts were read by hand and stand in `ASS_READINGS` (§2.5) — while ASS 12 (1879) gave 10, ASS 23 (1890–91) 8,
-   ASS 33 (1900–01) 19 and ASS 41 (1908) 35 — 72 acts from the five bodies by rule. After the curation the sample
-   carries **94 entries, 70 of them as the scanner read them** (74.5 %) and 24 read by hand (one reading replacing a
+   papal acts were read by hand and stand in `ASS_READINGS` (§2.5) — while ASS 12 (1879) gave 10, ASS 23 (1890–91) 9,
+   ASS 33 (1900–01) 22 and ASS 41 (1908) 37 — 78 acts from the five bodies by rule. After the curation the sample
+   carries **97 entries, 73 of them as the scanner read them** (75.3 %) and 24 read by hand (one reading replacing a
    scanned entry, at ASS 41 p. 361, and the rest added where the scan had nothing). The 1865 volume is not a harder instance of the same problem but a different volume: its
    class headings are spelt `LITERAE APOSTOLICAE` with one T and `ALLOCVTIO` with the OCR's V, neither a heading of the
    list; its two apostolic letters are printed under `SECRETARIA BREVIUM` behind an editor's preface, so the act does not
@@ -18,25 +18,26 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    were admitted under the ruling's last clause and why §2's ASS 1 row is the only one whose every act is curated.
    From 1879 the volumes print a class heading, a salutation and a `Datum Romae` dateline in the shape the scanner
    reads, and the yield rises with the century.
-2. **The summa is the check, and it checked: the sample's summae list 87 rows, a scanned act opens at 57 of the pages**
-   **they cite, 28 rows are left unclaimed, and 17 of those are answered by a curated reading.** Per volume (§2): ASS 12 claims 9 pages of 12 rows and
-   leaves 3 unclaimed; ASS 23, 7 of 14, 7; ASS 33, 14 of 24, 8; ASS 41, 27 of 37, 10. The 11 rows that remain unclaimed after the curation (§2.3) are, read one by one, **10 rows the papal part
+2. **The summa is the check, and it checked: the sample's summae list 87 rows, a scanned act opens at 60 of the pages**
+   **they cite, 25 rows are left unclaimed, and 14 of those are answered by a curated reading.** Per volume (§2): ASS 12 claims 9 pages of 12 rows and
+   leaves 3 unclaimed; ASS 23, 8 of 14, 6; ASS 33, 16 of 24, 6; ASS 41, 27 of 37, 10. The 11 rows that remain unclaimed after the curation (§2.3) are, read one by one, **10 rows the papal part
    lists that are not a papal act opening at that page** — an address *to* the pope (ASS 12 p. 483), Gregory XVI's
    *Inter praecipuas* of 1844 reprinted (12 p. 545), the Secretary of State's own letter (33 p. 715), the *Lex propria*
    and the *Ordo servandus* annexed to *Sapienti consilio* (41 pp. 440, 462, 683), the summa's page for *Sapienti*
    *consilio* itself (41 p. 427, two pages after its heading at 425), and three dicastery pages (23 pp. 109, 116, 119)
    the OCR's interleaving of summa p. 753 turned into papal rows — **and one genuine miss**, ASS 33 p. 193, whose
    dateline the OCR broke (the month lifted onto the line above). One miss in 87 rows is the measure of the scan's
-   completeness where the summa can speak. The other direction is thinner: 13 scanned acts the summa does not list
-   (§2.4, which prints every one: ASS 12 p. 588; ASS 23 p. 641; ASS 33 pp. 212, 396, 401; ASS 41 pp. 37, 134, 580, 581, 623, 748, 757, 766). **11 of the 13 are of class `BREVE`**
-   — the nine phase 2c-ii-a read from the ring of the Fisherman (ASS 33 p. 212 and eight of ASS 41) and two headed
+   completeness where the summa can speak. The other direction is thinner: 16 scanned acts the summa does not list
+   (§2.4, which prints every one: ASS 12 p. 588; ASS 23 p. 641; ASS 33 pp. 212, 213, 396, 401; ASS 41 pp. 37, 134, 300, 301, 580, 581, 623, 748, 757, 766). **14 of the 16 are of class `BREVE`**
+   — the twelve phase 2c-ii-a read from the ring of the Fisherman (ASS 33 pp. 212, 213 and ten of ASS 41, of which
+   300 and 301 answered a `header-mismatch` defect until 2c-ii Task 6's relaxation) and two headed
    with the class word and read before it (ASS 12 p. 588, ASS 33 p. 401) — and that is the summa working, not failing:
    its papal part *ends* at the dicastery heading `EX SECRETARIA BREVIUM`, so a breve printed under that heading is a
    papal act the volume's own list was never going to claim, and "omitted" is the check saying so. The other two are
    the allocution at ASS 33 p. 396, likewise printed in the dicastery part, and **one artefact**: *Rerum novarum*
    (ASS 23 p. 641) is listed by the summa, in the interleaved column of p. 753, where nothing can be read.
-3. **28 defects remain, and the shape they take is one part of the *Acta* the scanner does not enter.** By reason:
-   7 `no-heading`, 12 `no-date`, 9 `header-mismatch`, 0 `no-opening`, 0 `unknown-pope` (§2.2). **3 of the 7 `no-heading` defects quote the brief's ring**
+3. **22 defects remain, and the shape they take is one part of the *Acta* the scanner does not enter.** By reason:
+   7 `no-heading`, 12 `no-date`, 3 `header-mismatch`, 0 `no-opening`, 0 `unknown-pope` (§2.2). **3 of the 7 `no-heading` defects quote the brief's ring**
    **formula** (`sub Annulo Piscatoris`) — ASS 1 ×1, ASS 12 ×0, ASS 33 ×1, ASS 41 ×1 — and they are what is left of the brevia of the
    `EX SECRETARIA BREVIUM` part, whose heading is a descriptive title rather than a class word and whose summa rows
    sit under the dicastery: papal acts by author, invisible to a scanner that anchors on a class heading. Phase 2c-ii-a
@@ -63,10 +64,10 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    (41 p. 361), the by-line after a blank line (41 p. 555), `MDCCCCL` (33 p. 643). **No ASS volume shows a page offset**:
    every header-mismatch of the sample is the OCR's reading of the right number, so the PDF page is the printed page in
    all five (spec §4's second question, answered yes).
-5. **57 references written, 53 by the unique rule and 4 by the opening rule, with 0 ambiguities and 0 conflicts.** Of the 94 entries,
-   85 fall in a category the registry harvests, and **57 of those 85 matched** (67.1 %): ASS 1 0, ASS 12 5, ASS 23 7,
+5. **57 references written, 53 by the unique rule and 4 by the opening rule, with 0 ambiguities and 0 conflicts.** Of the 97 entries,
+   88 fall in a category the registry harvests, and **57 of those 88 matched** (64.8 %): ASS 1 0, ASS 12 5, ASS 23 7,
    ASS 33 16, ASS 41 29 (§3). The rate climbs with the volume and with the shelf behind it, from nothing in 1865 to
-   76.3 % in 1908. **The opening rule is what the ASS needed and the AAS did not.** An ASS entry carries no incipit —
+   72.5 % in 1908. **The opening rule is what the ASS needed and the AAS did not.** An ASS entry carries no incipit —
    the volumes print no index, so the scanner reads the act's first eight words after the salutation (`incipit: null`,
    `opening`), and the join matches an opening against the shelf's incipit as a prefix. 4 of the 57 matches rest on it
    (§3.1): *Dall'alto dell'Apostolico Seggio* (23 p. 193), *Novum argumentum* (23 p. 318), *Singulari curare* and
@@ -75,15 +76,15 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    pope, a class and a date name one act, where the 2003–2009 indexes produced 60 ambiguities in 1 118 entries (that era's report, §2). The one
    page two acts share (ASS 33 p. 641: *De ingenii* of 20 February and *Le nostre ferme speranze* of 28 March 1901) is
    curated in `ACTA_SHARED_PAGES` (1 ASS row), so both are written rather than both withheld by invariant 25.
-6. **The 28 unmatched divide three ways, and only 7 of them are the join's doing.** 20 have **no shelf record at all on their
-   date** (§3.3's "Same date" column is empty for every one), and they are ASS 1 pp. 578, 744; ASS 12 pp. 273, 275, 481, 588; ASS 23 pp. 427, 513, 522; ASS 33 pp. 212, 401; ASS 41 pp. 37, 65, 134, 580, 581, 623, 748, 757, 766
+6. **The 31 unmatched divide three ways, and only 7 of them are the join's doing.** 23 have **no shelf record at all on their
+   date** (§3.3's "Same date" column is empty for every one), and they are ASS 1 pp. 578, 744; ASS 12 pp. 273, 275, 481, 588; ASS 23 pp. 427, 513, 522; ASS 33 pp. 212, 213, 401; ASS 41 pp. 37, 65, 134, 300, 301, 580, 581, 623, 748, 757, 766
    — ASS 1's two apostolic letters of 1866, three acts of ASS 12 and three of ASS 23 the letters shelf does not hold,
-   the Lourdes letter of ASS 41 p. 65, and 11 of class `BREVE`: the two the volumes head with the class word
-   (ASS 12 p. 588, ASS 33 p. 401) and the 9 phase 2c-ii-a read from the ring, not one of which the briefs shelves
+   the Lourdes letter of ASS 41 p. 65, and 14 of class `BREVE`: the two the volumes head with the class word
+   (ASS 12 p. 588, ASS 33 p. 401) and the 12 phase 2c-ii-a read from the ring, not one of which the briefs shelves
    hold. These are the registry's gap, not the scanner's: the act is printed, read, dated and
    quoted here, and the shelf has never carried it. 5 are the `LITTERAE IN FORMA BREVIS` of ASS 23 and 33 (finding 9),
    2 are held by the class rule against an encyclical (finding 7), and 1 is the Latin printing whose one candidate the
-   Italian printing already claimed (finding 8). Every one of the 28 is held `series-not-created` by the creator (§4):
+   Italian printing already claimed (finding 8). Every one of the 31 is held `series-not-created` by the creator (§4):
    **0 documents were created**, as phase 2c-i intends — the ASS joins, it does not harvest.
 7. **Two acts of weight are held by the class rule, and both look like override candidates: the owner's call.**
    *Catholicae Ecclesiae* of 20 November 1890, on slavery in Africa, is headed `LITTERAE circulares` at ASS 23 p. 257
@@ -93,7 +94,7 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    join refuses it only because *letter* and *encyclical* are different classes. What the sources show: the ASS heads an
    act by what the chancery called the instrument, the shelf files it by what the act is. What I judge, separately:
    both are `ACTA_MATCH_OVERRIDES` rows waiting to be written, each quoting its heading line — two references gained,
-   two of the 28 unmatched cleared. **No row was written here.** The decision is editorial, and it decides more than these
+   two of the 31 unmatched cleared. **No row was written here.** The decision is editorial, and it decides more than these
    two: the ASS calls an encyclical `EPISTOLA ENCYCLICA`, `LITTERAE ENCYCLICAE`, `LETTERA ENCICLICA` and, twice,
    plain `LITTERAE`, so a ruling here is a ruling for the 36 volumes 2c-ii will scan.
 8. **One act, two printings, one shelf record: the Latin of *Dall'alto dell'Apostolico Seggio* is held while the Italian**
@@ -138,7 +139,7 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    reference at all (§5): Pius IX 2 (1865–66), Leo XIII 31 (1 in 1879, 18 in 1890–91, 12 in 1900–01), Pius X 15 (1908). Almost
    none of them has an ASS entry on its date — §5's last column is empty in all but a handful — so these are acts the
    five volumes do not print, not acts the scanner missed: the ASS published the Holy See's acts selectively, and a
-   volume of 672–810 pages yields between 3 entries here (ASS 1, all three read by hand) and 42 (ASS 41). For the era as a whole the registry holds
+   volume of 672–810 pages yields between 3 entries here (ASS 1, all three read by hand) and 44 (ASS 41). For the era as a whole the registry holds
    496 shelf documents dated 1865–1908 and **57 of them now carry a reference** (§7) — the five sample volumes' whole
    yield. That is the number 2c-ii moves, with 36 volumes left.
 13. **The allocutions are the one category the sample cannot decide, and the count that would decide it is 1.** 9 entries
@@ -165,12 +166,18 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    under the dicastery; reading them means anchoring on the ring formula rather than on a heading, and it moved every
    volume's counts. The owner ruled them in on 2026-09-22 and phase 2c-ii-a wrote the rule: the series-wide survey
    fell from 105 ring-bearing `no-heading` defects to 28 and rose from 380 acts to 442. What 2c-ii should still expect
-   is that a breve is lost wherever the OCR damages the running header, which is finding (d). (c) **One summa page is unreadable and will be again.** ASS 23's p. 753 is
+   is that a breve is lost wherever the OCR damages the running header, which finding (d) answers for most of them. (c) **One summa page is unreadable and will be again.** ASS 23's p. 753 is
    interleaved word by word by the OCR (two columns with no gutter), so three of its papal rows are lost and three
    dicastery pages come out as papal rows; *Rerum novarum* (23 p. 641) therefore reads as "omitted by the summa" in §2.4
    although the summa lists it. A re-extraction of that one page, or a hand row, is the cheapest fix, and the shape will
-   recur wherever the columns touch. (d) **`header-mismatch` may be worth relaxing for this series.** 9 of the
-   sample's defects are it, every one the OCR's reading of the right number, and no volume showed a page offset at all.
+   recur wherever the columns touch. (d) **`header-mismatch` was relaxed for this series (2c-ii Task 6).** 3 of the
+   sample's defects are it now, down from 9: `headerAgreesASS` (ass.ts) treats a `DIGIT_OCR` letter (summa.ts) as standing for any digit
+   rather than the one it is keyed to, and, unlike `headerAgrees` itself (kept for the AAS page recovery), admits an all-digit token one
+   edit from the page -- recovering ASS 23 p. 318, ASS 33 pp. 213, 355, 385 and ASS 41 pp. 300, 301 in the sample (three of the six already
+   answered by a curated reading regardless, so only 213, 300 and 301 are new entries, every one a `BREVE` the briefs shelves hold none
+   of, held `series-not-created` like the rule of (b)). Series-wide it fell from 48 to 8 and acts rose by the same 40, to 482; the 8 left
+   are two edits or worse, or a page number the OCR splits across two lines `headerOf`'s single line cannot reach -- none is a run, so
+   none is a page offset (survey §5).
 
 ## 2. The scan, per volume (spec §3)
 
@@ -178,15 +185,15 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | ass-1 (1865–1866) | 767 | 747–752 | 0 | 3 | 0 | 3 | 3 | 0 | 0 | 0 | 0 |
 | ass-12 (1879) | 672 | 647–653 | 10 | 11 | 2 | 1 | 1 | 12 | 9 | 3 | 1 |
-| ass-23 (1890–1891) | 768 | 752–758 | 8 | 13 | 0 | 5 | 5 | 14 | 7 | 7 | 1 |
-| ass-33 (1900–1901) | 768 | 761–768 | 19 | 25 | 1 | 6 | 9 | 24 | 14 | 8 | 3 |
-| ass-41 (1908) | 810 | 799–810 | 35 | 42 | 4 | 9 | 10 | 37 | 27 | 10 | 8 |
+| ass-23 (1890–1891) | 768 | 752–758 | 9 | 13 | 0 | 5 | 4 | 14 | 8 | 6 | 1 |
+| ass-33 (1900–1901) | 768 | 761–768 | 22 | 26 | 1 | 6 | 6 | 24 | 16 | 6 | 4 |
+| ass-41 (1908) | 810 | 799–810 | 37 | 44 | 4 | 9 | 8 | 37 | 27 | 10 | 10 |
 
 **Reading the columns.** “From a heading” and “Readings” do not sum to “Entries”, and are not meant to: they are two of the three
 anchors an entry can carry, and the third — the dateline, which the scanner anchors on by rule — is the majority and is not broken
-out (63 of the 94 entries are `dateline`, 7 `heading`, 24 `reading`). “Scanned by rule” is the fixture's own count, taken before the loader applies the
+out (66 of the 97 entries are `dateline`, 7 `heading`, 24 `reading`). “Scanned by rule” is the fixture's own count, taken before the loader applies the
 readings, so “Entries” is “Scanned by rule” plus “Readings” less the readings that *replace* a scanned entry rather than add one
-(2 in the sample, at ASS 41 p. 361).
+(5 in the sample, at ASS 41 p. 361).
 
 ### 2.1 Acts scanned, with the lines each rests on
 
@@ -238,7 +245,7 @@ readings, so “Entries” is “Scanned by rule” plus “Readings” less the
 
 </details>
 
-<details><summary><b>ass-33</b> — 25 acts</summary>
+<details><summary><b>ass-33</b> — 26 acts</summary>
 
 | Page | Category | Pope | Date | Opening | Description | Anchor | Heading (as printed) | Salutation | Dateline (as printed) | Header |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -250,6 +257,7 @@ readings, so “Entries” is “Scanned by rule” plus “Readings” less the
 | 198 | LITTERAE IN FORMA BREVIS | Leo XIII | 1900-09-14 | *Venerabilis Frater Augustinus Episcopus Papiae una cum dilectis* | SSmi. D. N. Leonis XIII; quarum obiectum est trans­ latio Corporis S. Augustini ad Basilicam S. Petri in caelo aureo Civitatis Papiensis. | dateline | LITTERAE in forma Brevis SSmi. D. N. Leonis XIII; quarum obiectum est trans­ / latio Corporis S. Augustini ad Basilicam S. Petri in caelo aureo Civitatis / Papiensis. | LEO PAPA XIII. | Datum Romae apud S. Petrum sub annulo Piscatoris die XIV Septembris MCM. Pontificatus Nostri Anno Vigesimo tertio. De speciali mandato SSmi. | 198 LITTERAE |
 | 201 | LITTERAE | Leo XIII | 1900-10-04 | *Qua mente quove animo prosequuti fuerimus coetum, quem* | SSmi. D. N. Leonis XIII. ad emum Praesidem, occasione qua finis im­ ponebatur coetui Tertianorum Franciscanum. | dateline | LITTERAE SSmi. D. N. Leonis XIII. ad emum Praesidem, occasione qua finis im­ / ponebatur coetui Tertianorum Franciscanum. | LEO PP. XIII | Datum Romae apud S. Petrum die 4 octobris 1900, Pontificatus Nostri anno vicesimo tertio. LEO PP. XIII. | LITTERAE 201 |
 | 212 | BREVE | Leo XIII | 1893-05-01 | *Cum, sicuti accepimus, pia Christifidelium Confraternitas sub titulo* | CONFRATERNITAS quotidianae et universalis adorationis, rite Taurini erecta, in­ dulgentiis honestatur. | dateline | CONFRATERNITAS quotidianae et universalis adorationis, rite Taurini erecta, in­ / dulgentiis honestatur. | LEO PP. XIII. | Datum Romae apud Sanctum Petrum sub Annulo Piscatoris, die I Maii MDCCCXCIII, Pontificatus Nostri anno sexto decimo^ S. CARD. VANNUTELLI, Praef. | 212 |
+| 213 | BREVE | Leo XIII | 1894-08-21 | *Romanorum Pontificum praedecessorum Nostrorum vestigiis inhaerentes, pias fidelium* | CONFRATERNITAS eadem erigitur in primariam, aliisque dotatur indulgentiis | dateline | CONFRATERNITAS eadem erigitur in primariam, aliisque dotatur indulgentiis | LEO PP. XIII. | Datum Romae apud S. Petrum sub Annulo Piscatoris die XXI Augusti MDCCCXCIV, Pontificatus Nostri anno decimo» septimo. | EX SECRETARIA BREVIUM 215 |
 | 273 | EPISTOLA ENCYCLICA | Leo XIII | 1900-11-01 | *Tametsi futura prospicientibus, vacuo a sollicitudine animo esse* | Sanctissimi Domini Nostri LEONIS PAPAE XIII. DE IESU CHRISTO REDEMPTORE. | dateline | EPISTOLA ENCYCLICA Sanctissimi Domini Nostri LEONIS PAPAE XIII. / DE IESU CHRISTO REDEMPTORE. | LEO PP. XIII | Datum Romae apud S. Petrum die i Novembris An. MDCGCC, Pontificatus Nostri vicesimo tertio. | EPISTOLA ENCYCLICA Sanctissimi Domini Nostri LEONIS PAPAE XIII. |
 | 286 | LITTERAE APOSTOLICAE | Leo XIII | 1900-10-20 | *Rei catholicae apud Lusitanos iuvandae ducimur studio, nec* | Sanctissimi Domini Nostri Leonis Papae XIII de Collegio Clericorum Lusitanorum in Urbe condendo. | dateline | LITTERAE APOSTOLICAE Sanctissimi Domini Nostri Leonis Papae XIII de Collegio / Clericorum Lusitanorum in Urbe condendo. | LEO PP. XIII. | Datum Romae apud Sanctum Petrum, sub anulo Piscatoris, die 20 octobris anno 1900, Pontificatus Nostri vicesimo tertio. | 286 LITTERAE APOSTOLICAE |
 | 341 | CONSTITUTIO APOSTOLICA | Leo XIII | 1900-12-08 | *Conditae a Christo Ecclesiae ea vis divinitus inest* | Sanctissimi Domini Nostri Leonis Divina Providentia Papae XIII de Religiosorum Institutis vota simplicia profitentium. | reading | ASS 33 (1900) 341-347, ass-33-1900.txt. p. 341 ll. 3-4 'CONSTITUTIO APOSTOLICA Sanctissimi Domini Nostri Leonis Divina Providentia / Papae XIII de Religiosorum Institutis vota simplicia profitentium.', l. 7 'LEO EPISCOPUS', l. 9 'SERVUS SERVORUM DEI', l. 10 'Ad perpetuam rei memoriam.', l. 12 'Conditae a Christo Ecclesiae ea vis divinitus inest ac fe- / cunditas'. Dated p. 347 ll. 26-28 'Datum Romae apud Sanctum Petrum anno Incarnationis / Dominicae millesimo noningentésimo, sexto idus décembres, / Pontificatus Nostri vicesimo tertio.': the sixth day before the Ides of December, 8 December 1900. Why the scan missed the date: the Ides form is not read by rule. Answers the scan's no-date defect at p. 341 and the summa's row p. 341. | — | — |  |
@@ -270,7 +278,7 @@ readings, so “Entries” is “Scanned by rule” plus “Readings” less the
 
 </details>
 
-<details><summary><b>ass-41</b> — 42 acts</summary>
+<details><summary><b>ass-41</b> — 44 acts</summary>
 
 | Page | Category | Pope | Date | Opening | Description | Anchor | Heading (as printed) | Salutation | Dateline (as printed) | Header |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -299,6 +307,8 @@ readings, so “Entries” is “Scanned by rule” plus “Readings” less the
 | 297 | EPISTOLA | Pius X | 1908-02-19 | *Laeti libentesque, redeunte prope diem memoria anni quinquagesimi* | <Qua Pius X gratulatur Card. Archiepiscopo Toletano ob quin­ quagesimum annum sacerdotii. | dateline | EPISTOLA / <Qua Pius X gratulatur Card. Archiepiscopo Toletano ob quin­ / quagesimum annum sacerdotii. | PIUS PP. x | Datum Romae apud S. Petrum, die xix Februarii MCMVHI, Pontificatus nostri anno quinto. | ACTA ROMANI PONTIFICIS |
 | 298 | EPISTOLA | Pius X | 1908-03-23 | *Nunciasti nobis inter ceteras qui istic strenue pro* | Qua Pius PP. X laudat edentes Commentaria a " Nova Gallia „ nuncupata. | reading | ASS 41 (1908) 298, ass-41-1908.txt. p. 298 ll. 1-3 '2 … Epistola' / '98' (the running header, its number split over two lines by the OCR), l. 4 'EPISTOLA', ll. 5-6 'Qua Pius PP. X laudat edentes Commentaria a " Nova Gal- / lia „ nuncupata.', ll. 8-11 'VENERABILI FRATRI / LUDOVICO NAZARIO / ARCHIEPISCOPO QUEBECENSIUM.', l. 13 'PIUS PP. X', l. 14 'Venerabilis Frater, salutem et Apostolicam benedictionem.', l. 16 'Nunciasti nobis inter ceteras qui istic strenue pro reli- / gione operantur'. Dated p. 298 ll. 36-37 'Datum Romae apud Sanctum Petrum, die xxin Mar- / tii MCMViii, Pontificatus Nostri anno quinto.' (the OCR's `xxin` for `xxiii`), signed 'PIUS PP. X'. Why the scan refused it: the header's first line prints `2` alone and headerAgrees (recover.ts) reads the first line only; the PDF page is the printed page. Answers the scan's header-mismatch defect at p. 298 and the summa's row p. 298. | — | — |  |
 | 299 | EPISTOLA | Pius X | 1908-04-24 | *Studiosa erga Iesu Christi Vicarium voluntas Argentinorum, Nobis* | Qua Pontifex gratias agit ob comparatam domum pro Inter- nuntio Apostolico Reipublicae Argentinae. | dateline | EPÍSTOLA / Qua Pontifex gratias agit ob comparatam domum pro Inter- / nuntio Apostolico Reipublicae Argentinae. | PIUS PP. x | Datum Romae apud S. Petrum, die xxiv Aprilis MCMVIII, Pontificatus Nostri anno quinto. | Epistola 299 |
+| 300 | BREVE | Pius X | 1906-07-30 | *Neminem latet festum SSmi Corporis Christi Domini inter* | Indulgentia toties quoties pro visitantibus ecclesias congre­ gationis SS. Sacramenti in festo Corporis Christi. | dateline | Indulgentia toties quoties pro visitantibus ecclesias congre­ / gationis SS. Sacramenti in festo Corporis Christi. | PIUS PP. X | Datum Romae apud S. Petrum sub annulo Piscatoris, die xxx Iulii MCMVi, Pontificatus Nostri anno tertio. | 3oo Ex Secretaria Brevium |
+| 301 | BREVE | Pius X | 1908-02-01 | *Cum Nobis Apostolorum Principis Cathedram obtinentibus antiquius nihil* | Breve SS. D. N. Pii div. prov. PP. X quo sacerdotibus qui operam suam impendent pio Operi Propagationis Fidei facultas benedicendi Rosaria eisque adnectendi indulgen- tias a Patribus Crucigeris appellatas conceditur. | dateline | Breve SS. D. N. Pii div. prov. PP. X quo sacerdotibus qui / operam suam impendent pio Operi Propagationis Fidei / facultas benedicendi Rosaria eisque adnectendi indulgen- / tias a Patribus Crucigeris appellatas conceditur. | PIUS PP. X | Datum Romae apud S. Petrum sub annulo Piscatoris, die i Februarii MDCCCCVIII, Pontificatus Nostri anno quinto. | Ex Secretaria Brevium 3oi |
 | 361 | EPISTOLA | Pius X | 1908-05-17 | *Le moment Nous parait venu de vous faire* | Qua Pius PP. X reprobat Mutualitates ecclesiasticas sic dictas approbatas in Gallia. | reading | ASS 41 (1908) 361-364, ass-41-1908.txt. p. 361 l. 3 'EPISTOLA', ll. 4-5 'Qua Pius PP. X reprobat Mutualitates ecclesiasticas sic di- / ctas approbatas in Gallia.', l. 7 'PIUS PP. X', ll. 9-10 'A NOS TRÈS CHERS FILS / LES CARDINAUX', ll. 12-15 the four cardinals' names ('VICTOR-LUCIEN Card. LECOT, Archevêque de Bordeaux.' …), l. 17 'Nos très chers Fils,', l. 19 'Le moment Nous parait venu de vous faire connaître les / décisions'. Dated p. 364 ll. 14-15 "Donné à Rome, 17 Mai de l'année 1908, de Notre Pon- / tificat la cinquième.", signed 'PIUS PP. X'. Why the scan misread it: the cardinals' names, set in mixed case after a blank line below the caps addressee, are read as the opening (one act: the French addressee list); the reading replaces the scanned entry at p. 361, whose date and heading it keeps. | — | — |  |
 | 425 | CONSTITUTIO APOSTOLICA | Pius X | 1908-06-29 | *Sapienti consilio sa. me. Pontifex Xystus V, Decessorum* | SS. D. N. Pii div. prov. Papae X, de Romana Curia. | reading | ASS 41 (1908) 425-440, ass-41-1908.txt. p. 425 l. 1 'CONSTITUTIO APOSTOLICA', l. 3 'SS. D. N. Pii div. prov. Papae X, de Romana Curia.', l. 5 'PIUS EPISCOPUS', l. 7 'SERVUS SERVORUM DEI', l. 9 'A d perpetuam rei memoriam.', l. 11 'Sapienti consilio sa. me. Pontifex Xystus V, Decessorum / vestigiis inhaerens'. Dated p. 440 'Datum Romae apud Sanctum Petrum, anno Incarnationis Dominicae millesimo nongentesimo octavo, die festo Sanctorum Apostolorum Petri et Pauli, III Kal. Iulias, Pontificatus …': the third day before the Kalends of July, 29 June 1908. Why the scan missed the date: the Kalends form is not read by rule. Answers the scan's no-date defect at p. 425; the summa (Index analyticus, p. 799) cites the constitution at `pag. 427`, two pages after its heading, and that row stays unclaimed. | — | — |  |
 | 491 | EPISTOLA | Pius X | 1908-03-31 | *Immortalia promerita aut praeclare facta maiorum certis destinatisque* | Qua Pius PP. X bene ominatur de saecularibus solemniis re­ ligiosis et civilibus a natione Canadensi celebrandis. | dateline | EPISTOLA / Qua Pius PP. X bene ominatur de saecularibus solemniis re­ / ligiosis et civilibus a natione Canadensi celebrandis. | PIUS PP. X | Datum Romae apud S. Petrum, die xxxi Martii MCMVIÌI, Pontificatus Nostri anno quinto. | ACTA ROMANI PONTIFICIS |
@@ -328,24 +338,18 @@ readings, so “Entries” is “Scanned by rule” plus “Readings” less the
 | ass-1 | 744 | no-date | Literae autem Apostolicae sunt sequentis tenoris. / Datum Romae apud S. Petrum sub annulo Piscatoris die XIII. Aprilis Anno MDCCCLXV1. Pontificatus Nostri Anno Vigesimo. |
 | ass-12 | 636 | no-date | Litterae in forma Brevis, quibus Vicariatus Apostolicus Hu-nam / dividitur in duas partes, septentionalem et meridionalem. Pars / autem septem, in Vicariatum distinctum erigitur et Fratribus / Augustinianis Provinciae Insularum Philippinarum concreditur. / Datum Romae apud s. Petrum sub Annulo piscatoris XIII Augusti MDCCCLXXIX. |
 | ass-23 | 206 | no-date | LITTERAE Encyclicae SS. D. N. Leonis XIII ad Episcopos, Clerum / et Populum Italiae. / Datum Romae apud Sanet. Petrum Idibus Octobris anno MDCCCLXXXX. Pontificatus nostri XIII. |
-| ass-23 | 318 | header-mismatch | -318 / LITTERAE Sanctissimi Patris N.Leonis XIII ad Emum Archiepiscopum floren­ / tinum quoad cultum sacrae Familiae praestandum. — Adiicitur formula / consecrationis familiarum et oratio quotidie recitanda. |
 | ass-23 | 427 | no-date | LITTERAE APOSTOLICAE Sanctissimi D. N. Leonis XIII de regimine et / disciplina Congregationis Anglo-Benedictinae novanda. / Datum Romae apud S. Petrum, Anno Incarnationis Dominicae Millesimo Octingentesimo Nonagésimo, Pridie Idus Novembris Pontificatus Nostri anno XIII. |
 | ass-23 | 526 | no-heading | Datum Romae apud S. Petrum die xiv Martii anno MDCCCXCI, / Pontificatus Nostri decimo quarto. |
 | ass-23 | 526 | no-date | EPISTOLA Sanctissimi D. N. Leonis Xlii ad comitem de Ballestrem, Libe­ / rum Baronem Heermann comitem de Preysing ; occasione obitus illustris / L. Windsthorst, cuius vestigia sequi exoratur in patriae et fidei studio. / Datum Romae apud S. Petrum die xix Marti anno MDCCCXCI, Pontificatus Nostri decimo quarto. |
 | ass-33 | 193 | no-date | LITTERAE SSmi. Patris Leonis XIII ad Episcopum Assisiensem, occasione quinqua­ / gesimi anniversarii ab inventione corporis s. Clarae. / Datum Romae apud S. Petrum die IIi anno MDCCCC, Pontificatus Nostri vigesimo tertio. LEO PP. XIII. |
-| ass-33 | 213 | header-mismatch | EX SECRETARIA BREVIUM 215 / CONFRATERNITAS eadem erigitur in primariam, aliisque dotatur indulgentiis |
 | ass-33 | 303 | no-heading | Datum Romae apud S. Petrum sub annulo Piscatoris die / XVII Septembris MCM. Pontificatus Nostri Anno Vigesimo / tertio. |
 | ass-33 | 341 | no-date | CONSTITUTIO APOSTOLICA Sanctissimi Domini Nostri Leonis Divina Providentia / Papae XIII de Religiosorum Institutis vota simplicia profitentium. / Datum Romae apud Sanctum Petrum anno Incarnationis Dominicae millesimo noningentésimo, sexto idus décembres, Pontificatus Nostri vicesimo tertio. |
 | ass-33 | 349 | no-date | LITTERAE SS.mi D. N. Leonis, quibus universalis iubilaeus in urbe celebratus anno / Domini millesimo nonigentesimo ad universum catholicum orbem extenditur. / Datum Romae apud S. Petrum Anno Incarnationis Dominicae Millesimo nongentesimo, Octavo Calendas Ianuarii, Pontificatus Nostri anno vicesimo tertio. |
-| ass-33 | 355 | header-mismatch | LITTERAE 555 / LITTERAE SS.mi D. N. Leonis Xlil ad E.mum Archiepiscopum Parisiensem / quoad religiosorum Congregationes in Gallia. |
-| ass-33 | 385 | header-mismatch | 585 / EPISTOLA ENCYCLICA Sanctissimi Domini Nostri Leonis divina providentia Pa­ / pae XIII de democratia christiana. |
 | ass-33 | 449 | header-mismatch | U9 / LITTERAE SS.mi Patris Leonis Xiil ad E.mum Archiepiscopum Vestmonasterien - / sem et ad alios Provinciae Episcopos de catholicismi) liberali et rationalismo. |
 | ass-33 | 643 | no-date | IITTERAE SSmi D. N. Leonis XIII ad Herbertum Story Praefectum et Vice-Cancel- / larium, item Rectorem, Doctores atque auditores Universitatis Studiorum Glas- / gaensis (Glascow), recolentes his diebus annum 450 ab institutione istius / universitatis. / Datum Romae apud S. Petrum die IX Iunii Anno MDCCCCL Pontificatus Nostri vicesimo quarto (1). LFO PP. XIII. |
 | ass-41 | 3 | no-date | LITTERAE APOSTOLICAE / SS. D. N. Pii div. prov. PP. X quibus ritus ruthenus consti­ / tuitur in Statibus foederatis Americae Septentrionalis. / Datum Romae, apud Sanctum Petrum, anno Incarnationis Dominicae millesimo nongentesimo septimo, decimo octavo calendas Iulias, die festo S. Basilii Magni, Pontificatus Nostri |
 | ass-41 | 169 | no-heading | Datum Romae apud S. Petrum sub annulo Piscatoris, / die XXV Februarii MDCCCXCVI, Pontificatus Nostri anno de­ / cimo octavo. |
 | ass-41 | 298 | header-mismatch | 2 Epistola / EPISTOLA / Qua Pius PP. X laudat edentes Commentaria a " Nova Gal­ / lia „ nuncupata. |
-| ass-41 | 300 | header-mismatch | 3oo Ex Secretaria Brevium / Indulgentia toties quoties pro visitantibus ecclesias congre­ / gationis SS. Sacramenti in festo Corporis Christi. |
-| ass-41 | 301 | header-mismatch | Ex Secretaria Brevium 3oi / Breve SS. D. N. Pii div. prov. PP. X quo sacerdotibus qui / operam suam impendent pio Operi Propagationis Fidei / facultas benedicendi Rosaria eisque adnectendi indulgen- / tias a Patribus Crucigeris appellatas conceditur. |
 | ass-41 | 425 | no-date | CONSTITUTIO APOSTOLICA / SS. D. N. Pii div. prov. Papae X, de Romana Curia. / Datum Romae apud Sanctum Petrum, anno Incarnationis Dominicae millesimo nongentesimo octavo, die festo Sanctorum Apostolorum Petri et Pauli, III Kal. Iulias, Pontificatus |
 | ass-41 | 495 | header-mismatch | Epistola 5 / EPISTOLA / Pii X ob saecularia solemnia archidioecesis Neo-Eboracensis. |
 | ass-41 | 577 | no-heading | Datum Romae, apud Sanctum Petrum, die iv Augusti / anno MCMVIII, Pontificatus Nostri ineunte sexto. |
@@ -360,7 +364,6 @@ readings, so “Entries” is “Scanned by rule” plus “Readings” less the
 | ass-12 | 483 | Allocutio R. P. D. Tripepi habita / coram SSmo, nomine scientiarum / cultorum die 7 Martii 1880. 483 |
 | ass-12 | 545 | Epistola Encyclica Pontificis Gre­ / gorii XVI, continens novam so­ / cietatum biblicarum reprobatio­ / nem etc. , » 545 |
 | ass-23 | 206 | — Versio latina earumdem litte­ / rarum » 206 |
-| ass-23 | 318 | Litterae eiusdem Pontificis ad Emi­ / nentissimum Archiepiscopum flo­ / rentinum quoad cultum sacrae / Familiae praestandum. Adiici tur / formula consecrationis familia­ / rum et oratio quotidie recitan­ / da . . » 318 |
 | ass-23 | 427 | -S53=^ ; / Litterae Apostolicae SSmi D. N. / Leonis XIII de regimine et disci­ / plina Congregationis Anglo be­ / nedictinae novanda . » 427 |
 | ass-23 | 513 | Litterae Apostolicae SSmi D. N. / Leonis XIII; de iuribus Archie­ / piscopi bariensis et privilegiis / magni Prioris Basilicae sancti / Nicolai » 513 |
 | ass-23 | 109 | Motti-Proprio SSmi D. N. Leo- tita gtatia indui gel ur Episcopo / nts Xiii; de vaticana specula quoad sanationem, reductionem / astronomica restituenda et am- et translationem onerum » 109 |
@@ -369,8 +372,6 @@ readings, so “Entries” is “Scanned by rule” plus “Readings” less the
 | ass-33 | 193 | Litterae SSmi D. N. Leonis XIII ad / Episcopum Assisiensem, occa­ / sione quinquagesimi anniversarii / ab inventione corporis sanctae / Clarae 193 |
 | ass-33 | 341 | Constitutio Apostolica SSmi D. N. / Leonis XIII de Religiosorum in­ / stitutis vota simplicia profiten­ / tium 341 |
 | ass-33 | 349 | Litterae SSmi D. N. Leonis XIII / quibus lubilaeus extenditur ad / universum orbem .... 349 |
-| ass-33 | 355 | Litterae SSmi D. N. Leonis XIII ad / Archiepiscopum Parisien, quoad / Religiosorum Congregationes in / Gallia 355 |
-| ass-33 | 385 | Epistola Encyclica SSmi D. N. Leo­ / nis XIII quoad democratiam chri­ / stianam 385 |
 | ass-33 | 449 | Litterae SSmi D. N. Leonis XIII / ad Emum Archiepiscopum "Wesl- / monasleriensem de catholicismi) / liberali et rationalismo . . 449 |
 | ass-33 | 643 | Litterae SSmi D. N. Leonis XIII / ad Rectorem et Professores etc. / universitatis Studiorum Glas- / guensis 643 |
 | ass-33 | 715 | Litterae Emi Secretarii Status ad / Emos Cardinales Paroccbi Vice- / Cancellarium S. R. E. et Caie­ / tanum Aloisi-Masella Pro-Data- / rium Sanctitatis Suae . . . 715 |
@@ -392,10 +393,13 @@ readings, so “Entries” is “Scanned by rule” plus “Readings” less the
 | ass-12 | 588 | BREVE | *Ad perpetuam rei memoriam, Benedicente Domino, variis iam* |
 | ass-23 | 641 | LITTERAE ENCYCLICAE | *Rerum novarum semel excitata cupidine, quae diu quidem* |
 | ass-33 | 212 | BREVE | *Cum, sicuti accepimus, pia Christifidelium Confraternitas sub titulo* |
+| ass-33 | 213 | BREVE | *Romanorum Pontificum praedecessorum Nostrorum vestigiis inhaerentes, pias fidelium* |
 | ass-33 | 396 | ALLOCUTIO | *Prope iam exegimus piacularis anni urbana solemnia spatiumque* |
 | ass-33 | 401 | BREVE | *Quum, sicuti Nobis relatum est, a quodam Sacerdote* |
 | ass-41 | 37 | BREVE | *In hac Beati Petri Principis Apostolorum Cathedra, nullis* |
 | ass-41 | 134 | BREVE | *Universis Xtifidelibus praesentes Litteras inspecturis, salutem et Apostolicam* |
+| ass-41 | 300 | BREVE | *Neminem latet festum SSmi Corporis Christi Domini inter* |
+| ass-41 | 301 | BREVE | *Cum Nobis Apostolorum Principis Cathedram obtinentibus antiquius nihil* |
 | ass-41 | 580 | BREVE | *Universis christifidelibus praesentes litteras inspecturis, salutem et Apostolicam* |
 | ass-41 | 581 | BREVE | *Cum sicuti ad Nos retulit hodiernus rector Diaconiae* |
 | ass-41 | 623 | BREVE | *Romani Pontifices qui universa in Ecclesiam sibi divinitus* |
@@ -439,8 +443,8 @@ readings, so “Entries” is “Scanned by rule” plus “Readings” less the
 | ass-1 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 1 | 0 | 0 |
 | ass-12 | 11 | 9 | 5 | 5 | 0 | 0 | 0 | 0 | 4 | 2 | 0 | 0 |
 | ass-23 | 13 | 13 | 7 | 5 | 2 | 0 | 0 | 0 | 6 | 0 | 0 | 0 |
-| ass-33 | 25 | 23 | 16 | 16 | 0 | 0 | 0 | 0 | 7 | 2 | 0 | 0 |
-| ass-41 | 42 | 38 | 29 | 27 | 2 | 0 | 0 | 0 | 9 | 4 | 0 | 0 |
+| ass-33 | 26 | 24 | 16 | 16 | 0 | 0 | 0 | 0 | 8 | 2 | 0 | 0 |
+| ass-41 | 44 | 40 | 29 | 27 | 2 | 0 | 0 | 0 | 11 | 4 | 0 | 0 |
 
 ### 3.1 Matches
 
@@ -528,11 +532,14 @@ readings, so “Entries” is “Scanned by rule” plus “Readings” less the
 | ASS 33 (1900) 129 | LITTERAE IN FORMA BREVIS | 1900-08-31 | *Ad Catholicorum conventum vobis proxime in Urbe celebrandum* | SSmi. O. N. Leonis XIII, quae mittebantur ad XVII Con­ ventum catholicorum, Romae habitum. | `mag:leo-xiii/ad-catholicorum-conventum-1900` (*Ad Catholicorum conventum*) | — |
 | ASS 33 (1900) 198 | LITTERAE IN FORMA BREVIS | 1900-09-14 | *Venerabilis Frater Augustinus Episcopus Papiae una cum dilectis* | SSmi. D. N. Leonis XIII; quarum obiectum est trans­ latio Corporis S. Augustini ad Basilicam S. Petri in caelo aureo Civitatis Papiensis. | `mag:leo-xiii/venerabilis-frater-augustinus-1900` (*Venerabilis Frater Augustinus*) | — |
 | ASS 33 (1900) 212 | BREVE | 1893-05-01 | *Cum, sicuti accepimus, pia Christifidelium Confraternitas sub titulo* | CONFRATERNITAS quotidianae et universalis adorationis, rite Taurini erecta, in­ dulgentiis honestatur. | — | — |
+| ASS 33 (1900) 213 | BREVE | 1894-08-21 | *Romanorum Pontificum praedecessorum Nostrorum vestigiis inhaerentes, pias fidelium* | CONFRATERNITAS eadem erigitur in primariam, aliisque dotatur indulgentiis | — | — |
 | ASS 33 (1900) 401 | BREVE | 1899-12-18 | *Quum, sicuti Nobis relatum est, a quodam Sacerdote* | , quo indulgentia centum dierum conceditur, quolibet die lucranda, recitan­ tibus submissam orationem pro conversione hebraeorum et turcarum. | — | — |
 | ASS 33 (1900) 577 | LITTERAE IN FORMA BREVIS | 1901-05-11 | *Saecularis eventus faustitas, quae nobilem cohortem vestram hisce* | SSmi O. N. Leonis XIII, occasione anni centesimi ab in­ stitutione nobilis cohortis Sacratissimum Principem protuentis. | `mag:leo-xiii/saecularis-eventus-1901` (*Saecularis eventus*) | — |
 | ASS 41 (1908) 37 | BREVE | 1907-07-19 | *In hac Beati Petri Principis Apostolorum Cathedra, nullis* | Pontifex laudat Collegium Americanum Lovanii in Belgio oc­ casione quinquagesimi anni ab erectione. | — | — |
 | ASS 41 (1908) 65 | EPISTOLA | 1907-12-24 | *Solemnia sacra, quae in mensem Februarium proximum apparantur* | «Qua Pontifex mittit Legatum Apostolicum ad quinquagesima solemnia in honorem B. M. V. de Lourdes. | — | — |
 | ASS 41 (1908) 134 | BREVE | 1907-11-27 | *Universis Xtifidelibus praesentes Litteras inspecturis, salutem et Apostolicam* | Indulgentia plenaria in forma iubilaei conceditur visitantibus cryptam de " Massabielle „ civitatis Lapurdensis. | — | — |
+| ASS 41 (1908) 300 | BREVE | 1906-07-30 | *Neminem latet festum SSmi Corporis Christi Domini inter* | Indulgentia toties quoties pro visitantibus ecclesias congre­ gationis SS. Sacramenti in festo Corporis Christi. | — | — |
+| ASS 41 (1908) 301 | BREVE | 1908-02-01 | *Cum Nobis Apostolorum Principis Cathedram obtinentibus antiquius nihil* | Breve SS. D. N. Pii div. prov. PP. X quo sacerdotibus qui operam suam impendent pio Operi Propagationis Fidei facultas benedicendi Rosaria eisque adnectendi indulgen- tias a Patribus Crucigeris appellatas conceditur. | — | — |
 | ASS 41 (1908) 580 | BREVE | 1908-03-09 | *Universis christifidelibus praesentes litteras inspecturis, salutem et Apostolicam* | Indulgentia plenaria favore archidioecesis Quebecensis. | — | — |
 | ASS 41 (1908) 581 | BREVE | 1908-05-25 | *Cum sicuti ad Nos retulit hodiernus rector Diaconiae* | Indulgentia plenaria adnectitur piae exercitationi Septem Sab- batorum in honorem B. M. V. a Mercede. | — | — |
 | ASS 41 (1908) 623 | BREVE | 1908-04-14 | *Romani Pontifices qui universa in Ecclesiam sibi divinitus* | Praefectura Marochiensis erigitur in Vicariatum Apostolicum. | — | — |
@@ -563,7 +570,7 @@ readings, so “Entries” is “Scanned by rule” plus “Readings” less the
 
 | Reason | Entries |
 |---|---|
-| series-not-created | 28 |
+| series-not-created | 31 |
 
 Created: 0 (expected 0: phase 2c-i joins only).
 
