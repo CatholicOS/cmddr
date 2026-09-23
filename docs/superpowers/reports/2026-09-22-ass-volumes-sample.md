@@ -176,8 +176,10 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    edit from the page -- recovering ASS 23 p. 318, ASS 33 pp. 213, 355, 385 and ASS 41 pp. 300, 301 in the sample (three of the six already
    answered by a curated reading regardless, so only 213, 300 and 301 are new entries, every one a `BREVE` the briefs shelves hold none
    of, held `series-not-created` like the rule of (b)). Series-wide it fell from 48 to 8 and acts rose by the same 40, to 482; the 8 left
-   are two edits or worse, or a page number the OCR splits across two lines `headerOf`'s single line cannot reach -- none is a run, so
-   none is a page offset (survey §5).
+   are two edits or worse, or a page number the OCR splits across two lines `headerOf`'s single line cannot reach -- none of the 48 sits
+   in a run, so none of them is a page offset (survey §5). That is all the 48 measures: the series holds one genuine offset it never
+   counted, because no act ever opened inside it to be checked -- ASS 7 pp. 496-547, curated in `ASS_PAGE_OFFSETS` (curation.ts) so the
+   relaxation does not apply there; an era reaching an act inside that range reads its page by hand.
 
 ## 2. The scan, per volume (spec §3)
 

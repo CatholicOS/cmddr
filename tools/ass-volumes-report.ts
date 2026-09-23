@@ -17,7 +17,7 @@ import { ACTA_SOURCES, applyCuratedReferences, citeRef, loadActaIndexes } from '
 import { matchActa, POPE_ISSUERS, type ActaCandidate, type ActaUnmatched } from './src/acta/match.js';
 import { createFromActa, isActaShelf } from './src/acta/create.js';
 import { categoryForHeading } from './src/acta/categories.js';
-import { ACTA_REPRINTS, ACTA_SHARED_PAGES, ASS_READINGS } from './src/acta/curation.js';
+import { ACTA_REPRINTS, ACTA_SHARED_PAGES, ASS_READINGS, ASS_PAGE_OFFSETS } from './src/acta/curation.js';
 import type { AssScan, AssEntry } from './src/acta/ass.js';
 import type { DocumentRecord } from './src/types.js';
 
@@ -87,6 +87,8 @@ const replacingReadings = readings.filter(([key]) => {
   return s !== undefined && scans.get(s.key)!.entries.some((e) => e.page === Number(pageStr));
 }).map(([key]) => key).sort((a, b) => Number(a.split(':')[1]) - Number(b.split(':')[1]) || Number(a.split(':')[2]) - Number(b.split(':')[2]));
 const citeReplacing = (key: string) => `ASS ${key.split(':')[1]} p. ${key.split(':')[2]}`;
+/** Every genuine page offset the survey found (`ASS_PAGE_OFFSETS`, curation.ts), cited by volume and range: read from the table, not typed, so a second entry cannot leave a report sentence stale. */
+const offsetRanges = Object.entries(ASS_PAGE_OFFSETS).flatMap(([vol, ranges]) => ranges.map((r) => `ASS ${vol} pp. ${r.from}-${r.to}`)).join(', ');
 const harvested = sum((k) => of(k).filter((e) => (categoryForHeading(e.category)?.harvested ?? 'no') !== 'no').length);
 const byRule = (b: string) => result.matches.filter((m) => m.by === b).length;
 const um = result.unmatched as (ActaUnmatched & { entry: AssEntry })[];
@@ -313,8 +315,10 @@ p(`   rather than the one it is keyed to, and, unlike \`headerAgrees\` itself (k
 p(`   edit from the page -- recovering ASS 23 p. 318, ASS 33 pp. 213, 355, 385 and ASS 41 pp. 300, 301 in the sample (three of the six already`);
 p(`   answered by a curated reading regardless, so only 213, 300 and 301 are new entries, every one a \`BREVE\` the briefs shelves hold none`);
 p(`   of, held \`series-not-created\` like the rule of (b)). Series-wide it fell from 48 to 8 and acts rose by the same 40, to 482; the 8 left`);
-p(`   are two edits or worse, or a page number the OCR splits across two lines \`headerOf\`'s single line cannot reach -- none is a run, so`);
-p(`   none is a page offset (survey §5).`);
+p(`   are two edits or worse, or a page number the OCR splits across two lines \`headerOf\`'s single line cannot reach -- none of the 48 sits`);
+p(`   in a run, so none of them is a page offset (survey §5). That is all the 48 measures: the series holds one genuine offset it never`);
+p(`   counted, because no act ever opened inside it to be checked -- ${offsetRanges}, curated in \`ASS_PAGE_OFFSETS\` (curation.ts) so the`);
+p(`   relaxation does not apply there; an era reaching an act inside that range reads its page by hand.`);
 p();
 p('## 2. The scan, per volume (spec §3)');
 p();
