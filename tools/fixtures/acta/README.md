@@ -530,13 +530,19 @@ lines each rests on (spec §3). `{year}` is the first year of the volume's span.
 |---|---|---|---|---|---|---|---|
 | ASS 1 (1865–66, Pius IX) | `ass-01-1865.*` | **2026-09-21** | 767 | 747–752 | 0 | 3 | 0 / 0 |
 | ASS 12 (1879, Leo XIII) | `ass-12-1879.*` | **2026-09-21** | 672 | 647–653 | 10 | 1 | 9 / 3 |
-| ASS 23 (1890–91, Leo XIII) | `ass-23-1890.*` | **2026-09-21** | 768 | 752–758 | 8 | 5 | 7 / 7 |
-| ASS 33 (1900–01, Leo XIII) | `ass-33-1900.*` | **2026-09-21** | 768 | 761–768 | 18 | 10 | 14 / 8 |
-| ASS 41 (1908, Pius X) | `ass-41-1908.*` | **2026-09-21** | 810 | 799–810 | 27 | 18 | 27 / 10 |
+| ASS 23 (1890–91, Leo XIII) | `ass-23-1890.*` | **2026-09-21** | 768 | 752–758 | 9 | 4 | 8 / 6 |
+| ASS 33 (1900–01, Leo XIII) | `ass-33-1900.*` | **2026-09-21** | 768 | 761–768 | 22 | 6 | 16 / 6 |
+| ASS 41 (1908, Pius X) | `ass-41-1908.*` | **2026-09-21** | 810 | 799–810 | 37 | 8 | 27 / 10 |
 
-Scanned on 2026-09-22 (`npm run scan-ass -- sample`, re-run after the final review's fixes
-to the heading and greeting rules; first scanned 2026-09-21, after the curation round of
-phase 2c-i Task 4). The summa's papal part, from its heading to the first dicastery heading
+Scanned on 2026-09-23 (`npm run scan-ass -- sample`, re-run after 2c-ii Task 6 relaxed
+`header-mismatch` for the ASS -- `headerAgreesASS`, `tools/src/acta/ass.ts` -- which read
+ASS 23 p. 318 and ASS 33 pp. 213, 355, 385 whole (318, 355 and 385 already answered by a
+curated reading, now redundant) and ASS 41 pp. 300, 301, adding one net act to ASS 23, three
+to ASS 33 and two to ASS 41; scanned 2026-09-23 after phase 2c-ii-a taught the
+walk-back to read the brevia of the *Secretaria Brevium* from the ring of the Fisherman,
+which added one act to ASS 33 and eight to ASS 41; scanned 2026-09-22 after the final
+review's fixes to the heading and greeting rules, and first on 2026-09-21, after the
+curation round of phase 2c-i Task 4). The summa's papal part, from its heading to the first dicastery heading
 as the tool printed them, and the curated readings (`ASS_READINGS`, `tools/src/acta/curation.ts`)
 keyed to each volume: ASS 1: no papal heading — the 1865 summa lists the pope's acts under
 the dicasteries (`EX ACTIS CONSISTORIALIBUS`, `EX SECRETARIA BREVIUM`), so the check is
@@ -550,9 +556,10 @@ novarum*'s own row); 5 readings. ASS 33: `LITTERAE ET ACTA` (`R. PONTIFICIS` on 
 … `EX S. C. CONCILII`; 6 readings. ASS 41: `ACTA ROMANI PONTIFICIS` … `EX SECRETARIA BREVIUM`;
 9 readings. The defects are mostly the brevia of the Secretaria Brevium part (`sub annulo
 Piscatoris … R. Card. MERRY DEL VAL, a Secretis Status`), which carry no class heading and
-which the summa lists under the dicastery. In every volume the PDF page is the printed page:
-each `header-mismatch` is the OCR's reading of the number (`585` for 385, `U9` for 449, `-318`,
-`2` / `98` split over two lines).
+which the summa lists under the dicastery. In every volume of the sample the PDF page is the printed page:
+each `header-mismatch` still standing is the OCR's reading of the number (`U9` for 449, the
+split `2` / `98` for 298 and `5` / `49` for 495) -- `585` for 385 and `-318` are no longer
+defects, `headerAgreesASS` (2c-ii Task 6) now admitting them.
 
 The RETRIEVED dates above are also stamped as `source.retrieved` on every document created
 from these fixtures (`ACTA_SOURCES` in `tools/src/acta/join.ts`): update both together when

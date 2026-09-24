@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { checkSumma, locateSumma, normalisePage, parseSummaPapalPart, splitColumns } from '../src/acta/summa.js';
+import { checkSumma, locateSumma, normalisePage, PAPAL_HEAD_FORMS, parseSummaPapalPart, splitColumns } from '../src/acta/summa.js';
 
 describe('normalisePage (spec §4): the OCR of a page number in the summa', () => {
   it('reads the digits and the letters the OCR puts for them: ig3 → 193, 3oo → 300, 3oi → 301, i3o → 130, 6 19 → 619, 5 80 → 580', () => {
@@ -60,7 +60,7 @@ describe('parseSummaPapalPart (spec §4): the papal part, loosely', () => {
     expect(rows.map((r) => r.page)).toEqual([337, 13]);
   });
   it('returns no rows and a null heading when the text has no papal part', () => {
-    expect(parseSummaPapalPart('INDEX GENERALIS CONCLUSIONUM\nAbbas . . 12')).toEqual({ rows: [], heading: null, end: null });
+    expect(parseSummaPapalPart('INDEX GENERALIS CONCLUSIONUM\nAbbas . . 12')).toEqual({ rows: [], heading: null, end: null, reopened: false });
   });
   it('does not close a row on a Latin word that reduces to a well-formed page number (`iis` → 115): the row closes only at the next genuine page token', () => {
     const text = [
@@ -90,6 +90,155 @@ describe('parseSummaPapalPart (spec §4): the papal part, loosely', () => {
       raw: 'Epistola ad omnes qui hoc munus obeunt sis / gerendum suscipiant » 12',
     }]);
   });
+
+  it('reads the papal part under the headings the series prints beyond the sample (survey §4b)', () => {
+    const cases: [string, string, string][] = [
+      // [the heading as printed, the row that follows it, the heading parseSummaPapalPart should report]
+      ['ACTA SOLEMNIORA ROMANI PONTIFICIS.', 'Allocutio habita die 20 Decembris 1867 . . 289', 'ACTA SOLEMNIORA ROMANI PONTIFICIS'],
+      ['ACTA SOLEMNIORE ROM. PONTIFICIS', 'Litterae Apostolicae solemnissimae . . 118', 'ACTA SOLEMNIORE ROM. PONTIFICIS'],
+      ['ACTA SOLEMNIORA ROM. PONriFICIS', 'Allocutio habita a SS.mo Patre . . 522', 'ACTA SOLEMNIORA ROM. PONriFICIS'],
+      ['ACTA SOLEMNIORÂ', 'Sanctissimi Domini Nostri Pii . . 55', 'ACTA SOLEMNIORÂ'],
+      ['LITTERAE APOSTOLICAE', 'Litterae Apostolicae ad Ducem . . 581', 'LITTERAE APOSTOLICAE'],
+      ['LITTERAE ET RESPONSUM', 'Litterae Apostolicae; de Ordine s. Ba- . . 433', 'LITTERAE ET RESPONSUM'],
+      ['LITTERAE MOTU PROPRIO', 'de curis adhibitis ab Episcopis . . 17', 'LITTERAE MOTU PROPRIO'],
+      ['LITTERAE ROMANI PONTIFICIS', 'Litterae Sanctissimi D. N. Leonis . . 305', 'LITTERAE ROMANI PONTIFICIS'],
+      ['LITTERAE R. PONTIFICIS', 'Litterae SSmi D. N. Leonis XIII . . 4', 'LITTERAE R. PONTIFICIS'],
+      ['ACTA ROMAM PONTIFICIS', 'Epistola SSmi D. N. Leonis XIII ad . . 709', 'ACTA ROMAM PONTIFICIS'],
+      // ASS 16 (1883) 557's OCR garble of `LITTERAE ROMANI PONTIFICIS`, printed as one line: `L TT E RA R ROMANI PONTIFICIS`.
+      ['L TT E RA R ROMANI PONTIFICIS', 'Epistola SSMI D. N. LEONIS XIII AD EMOS CARDINALES . . 49', 'L TT E RA R ROMANI PONTIFICIS'],
+    ];
+    for (const [heading, row, reported] of cases) {
+      const { rows, heading: read } = parseSummaPapalPart(`SUMMA ACTORUM\nQUAE IN HOC VOLUMINE CONTINENTUR\n${heading}\n${row}\nEX ACTIS CONSISTORIALIBUS\nDe Consistorio habito . . 99`);
+      expect(read, heading).toBe(reported);
+      expect(rows.map((r) => r.page), heading).toEqual([Number(row.match(/(\d+)\s*$/)![1])]);
+    }
+  });
+
+  it('joins ASS 3 (1867) 665\'s papal heading across the two physical lines of its two-column page (`ACTA SOLEMNIORA ROMANI` / `PONTIFICIS.`) without leaking `ROMANI` into the first row -- the bug the brief\'s draft regex had, caught only against the real page', () => {
+    const text = [
+      '                                                             SUMMA ACTORUM',
+      '                                   QUAE IN HOC TERTIO VOLUMINE CONTINENTUR.',
+      '            ACTA SOLEMNIORA ROMANI                                                                 Allocutio habita die 20 Decembris 1867',
+      '                                PONTIFICIS.                                                             de A ictoria relata io Nomentano et',
+      '                                                                                                       Aretino certamine, deque fiorenti vita',
+      '  Allocutio consistorialis diei 12 Iulii 1876                                                          catholicae Ecclesiae. .... 289',
+    ].join('\n');
+    const { rows, heading } = parseSummaPapalPart(text);
+    expect(heading).toBe('ACTA SOLEMNIORA ROMANI PONTIFICIS');
+    // The left column's first row, as printed -- not `ROMANI PONTIFICIS. Allocutio consistorialis …`,
+    // which is what the unguarded draft regex left behind on the same line.
+    expect(rows[0]!.raw).toBe('Allocutio consistorialis diei 12 Iulii 1876');
+  });
+
+  it('reads the mixed-case papal heading of ASS 9 (1876), where the class itself heads the part', () => {
+    const { rows, heading } = parseSummaPapalPart('SUMMA ACTORUM\nQUAE IN HOC NONO VOLUMINE CONTINENTUR\nLitterae Apostolicae\nSS. D. Ii. P. Papae IX.\nLitterae Apostolicae ad Ducem Mutinae . . 581\nEX ACTIS CONSISTORIALIBUS\nDubia et responsa . . 557');
+    expect(heading).toBe('Litterae Apostolicae');
+    expect(rows.map((r) => r.page)).toEqual([581]);
+  });
+
+  it('matches every papal-heading form `PAPAL_HEAD_FORMS` cites, so the table can never drift from what `PAPAL_HEAD_RE` actually reads (fix round 2 of Task 3)', () => {
+    for (const { pattern, prints, at } of PAPAL_HEAD_FORMS) {
+      const { heading } = parseSummaPapalPart(`${prints}\nQuaedam res . . 1`);
+      expect(heading, `${prints} (${at}) -- pattern ${pattern}`).not.toBeNull();
+    }
+  });
+
+  it('does not read a dicastery heading as the papal part (ASS 2, 7, 26 open on one)', () => {
+    for (const opener of ['EX ACTIS CONSISTORIALIBUS', 'EX ACTIS AD INSTAR CONSISTORIALIUM.', 'EX S. CONGR. RITUUM']) {
+      const { rows, heading } = parseSummaPapalPart(`SUMMA ACTORUM\nQUAE IN HOC VOLUMINE CONTINENTUR\n${opener}\nDecretum quoddam . . 42`);
+      expect(heading, opener).toBeNull();
+      expect(rows, opener).toEqual([]);
+    }
+  });
+
+  it('ends the papal part at a dicastery heading printed without the `EX` prefix (ASS 21 (1888) 750: `S. CONGR. INDICIS`)', () => {
+    const { rows, end } = parseSummaPapalPart([
+      'LITTERAE ET ACTA ROM. PONTIFICIS',
+      'Litterae SSmi D. N. Leonis XIII ad Episcopos Hiberniae . . 3',
+      'S. CONGR. INDICIS',
+      'Decretum quo plures libri prohibentur . . 368',
+    ].join('\n'));
+    expect(end).toBe('S. CONGR. INDICIS');
+    expect(rows.map((r) => r.page)).toEqual([3]);
+  });
+
+  it('reads the further forms `EX` is dropped from beyond the sample: ASS 21 (1888) 745\'s `S. CONGREGATIO CONCILII` (unabbreviated), ASS 3 (1867) 666\'s and ASS 4 (1868) 684\'s `ACTA CONSISTORIALIA` (a different noun, not `ACTIS`), and ASS 9 (1876) 669\'s title-case `Ex Actis Consistorialibus.`', () => {
+    const cases: [string, string][] = [
+      ['S. CONGREGATIO CONCILII', 'Gallipolitana curae animarum . . 13'],
+      ['ACTA CONSISTORIALIA.', 'Acta authentica Consistorii secreti habiti die 12 Iulii 1867 . . 337'],
+      ['ACTA CONSISTORIALIA', 'De Consistorio secreto habito die 22 Iunii 1868 . . 112'],
+      ['Ex Actis Consistorialibus.', 'De Consistorio habito die 28 ianuarii 1876, pag. 73'],
+    ];
+    for (const [end, row] of cases) {
+      const { rows, end: read } = parseSummaPapalPart(`SUMMA ACTORUM\nQUAE IN HOC VOLUMINE CONTINENTUR\nACTA ROMANI PONTIFICIS\nLitterae Apostolicae ad aliquem . . 5\n${end}\n${row}`);
+      expect(read, end).toBe(end);
+      expect(rows.map((r) => r.page), end).toEqual([5]);
+    }
+  });
+
+  it('re-opens the papal part at a later papal heading (ASS 8 (1874) 727-728: `EX ACTIS CONSISTORIALIBUS.` closes the first part, `LITTERAE APOSTOLICAE.` on the next page reopens it, and the dicastery rows in between -- including a further dicastery heading, `EX AEDIBUS VATICANIS,`, that opens no papal heading of its own -- are skipped rather than counted)', () => {
+    const text = [
+      'ACTA ROMANI PONTIFICIS',
+      'Sanctissimi Domini Nostri Pii Epistola Encyclica . . 181',
+      'EX ACTIS CONSISTORIALIBUS.',
+      'Nominationes complurium Episcoporum . . 498',
+      'EX AEDIBUS VATICANIS,',
+      'Allocutio habita die XXI. Dec. MDCCCLXXIV . . 177',
+      'LITTERAE APOSTOLICAE.',
+      'Litterae Apostolicae ad Doctorem Alphonsum Travaglini . . 496',
+      'Litterae Apostolicae ad Baronem Nicolaum Taccone Gallucci . . 688',
+      'EX S. CONGR. S. R. U. INQUISIT.',
+      'Decretum quo duo prohibentur libri . . 269',
+    ].join('\n');
+    const { rows, heading, end } = parseSummaPapalPart(text);
+    expect(heading).toBe('ACTA ROMANI PONTIFICIS');
+    expect(end).toBe('EX S. CONGR. S. R. U. INQUISIT.');
+    expect(rows.map((r) => r.page)).toEqual([181, 496, 688]);
+  });
+
+  it('reports no end when the part reopens and then runs to the text\'s end without a further dicastery heading, and marks it `reopened` so the survey does not print it as the `runs on` defect', () => {
+    const text = ['ACTA ROMANI PONTIFICIS', 'Epistola prima . . 5', 'EX ACTIS CONSISTORIALIBUS', 'Decretum . . 9', 'LITTERAE APOSTOLICAE', 'Epistola secunda . . 44'].join('\n');
+    const { rows, end, reopened } = parseSummaPapalPart(text);
+    expect(end).toBeNull();
+    expect(reopened).toBe(true);
+    expect(rows.map((r) => r.page)).toEqual([5, 44]);
+  });
+
+  it('reports no end and `reopened: false` when the part never met a dicastery heading at all: the `runs on` defect, a different finding from the reopened part above', () => {
+    const text = ['ACTA ROMANI PONTIFICIS', 'Epistola prima . . 5', 'EX CURIA IGNOTA', 'Decretum . . 9'].join('\n');
+    const { rows, end, reopened } = parseSummaPapalPart(text);
+    expect(end).toBeNull();
+    expect(reopened).toBe(false);
+    expect(rows.map((r) => r.page)).toEqual([5, 9]);
+  });
+
+  it('ends the papal part at `EX SACRO CONSISTORIO`, the consistorial heading of the Pius X volumes, which `SACRA\\b` did not match (ASS 37 (1904) 799, ASS 38 (1905) 417, ASS 40 (1907) 770)', () => {
+    const text = ['ACTA ROMANI PONTIFICIS', 'Epistola prima . . 5', 'EX SACRO CONSISTORIO', 'Relatio actorum in Consistoriis diei 14 Novembris 1904 . . 301 et 559'].join('\n');
+    const { rows, end } = parseSummaPapalPart(text);
+    expect(end).toBe('EX SACRO CONSISTORIO');
+    expect(rows.map((r) => r.page)).toEqual([5]);
+  });
+
+  it('ends the papal part at `ACTA ROMANARUM CONGREGATIONUM`, which carries no `EX` (ASS 35 (1902) 760, 36 760, 37 800, 38 418, 39 626, 40 771, 41 801)', () => {
+    const text = ['ACTA ROMANI PONTIFICIS', 'Epistola prima . . 5', 'ACTA ROMANARUM CONGREGATIONUM', 'EX S. CONGR. S. R. ET U. INQUISITIONIS', 'Decretum . . 9'].join('\n');
+    const { rows, end } = parseSummaPapalPart(text);
+    expect(end).toBe('ACTA ROMANARUM CONGREGATIONUM');
+    expect(rows.map((r) => r.page)).toEqual([5]);
+  });
+
+  it('does not end the papal part on a row of its own that mentions a congregation in running text, mid-sentence and in mixed case (a saint\'s initial, `S. Ioannis`, is the same shape)', () => {
+    const text = [
+      'ACTA ROMANI PONTIFICIS',
+      'Litterae SSmi D. N. Leonis XIII, quibus S. Congr. de Propaganda',
+      '    Fide mandatur ut curam gerat . . 12',
+      'S. Ioannis De Cuyo dioecesis erectio . . 439',
+      'EX ACTIS CONSISTORIALIBUS',
+      'De Consistorio habito . . 99',
+    ].join('\n');
+    const { rows, end } = parseSummaPapalPart(text);
+    expect(end).toBe('EX ACTIS CONSISTORIALIBUS');
+    expect(rows.map((r) => r.page)).toEqual([12, 439]);
+  });
 });
 
 describe('locateSumma: the summa pages, from the volume\'s midpoint', () => {
@@ -103,6 +252,22 @@ describe('locateSumma: the summa pages, from the volume\'s midpoint', () => {
   });
   it('returns null when no summa is found', () => {
     expect(locateSumma(['b', 'b', 'b', 'b'])).toBeNull();
+  });
+
+  // ASS 38 (1905) 417-424, quoted from the store (`awk -v p=417 'BEGIN{RS="\f"} NR==p'
+  // ass-38-1905.txt`, and p=424): 417 genuinely opens Index Analyticus -- ASS 38's body runs
+  // to 416 (`Ex Vicariatu Urbis`, citing pages up to 415) with no act's own text anywhere
+  // near it -- so `from` was always right. 424 opens Index Alphabeticus, its own line, in the
+  // OCR's `-O` for `-US`; before this fix `NEXT_INDEX_RE` never matched it, so `to` ran past
+  // it to the volume's end (702), catching 270 pages of a supplement bound in after the
+  // volume's own IMPRIMATUR on 432 as if they were still the summa.
+  it('starts the summa at ASS 38 (1905) 417\'s real Index Analyticus heading, not at any act\'s own words', () => {
+    const pages = ['body', 'body', 'body', '                         INDEX ANALYTICUS                 —*—', 'rows'];
+    expect(locateSumma(pages)).toEqual({ from: 4, to: 5 });
+  });
+  it('stops the summa before ASS 38 (1905) 424\'s Index Alphabeticus even OCR\'d ALPHABETICO for ALPHABETICUS, rather than running to the volume\'s end and catching its bound-in supplement', () => {
+    const pages = ['b', 'b', 'b', 'b', 'b', 'b', '                         INDEX ANALYTICUS                 —*—', 'rows', '                      INDEX ALPHABETICO', 'more rows', 'Supplementum ad "Acta S. Sedis"'];
+    expect(locateSumma(pages)).toEqual({ from: 7, to: 8 });
   });
 });
 
@@ -148,6 +313,22 @@ describe('the first curation round (phase 2c-i, Task 4): the summa shapes the fi
   });
   it('leaves a single-column page as printed (ASS 41\'s Index analyticus)', () => {
     expect(splitColumns(SUMMA_41)).toEqual(SUMMA_41.split('\n'));
+  });
+  it('leaves a page whose two columns touch exactly as printed, because there is no gutter to find (ASS 27 (1894) 753, the 2c-ii survey §4c)', () => {
+    // Quoted from the store, `awk -v p=753 'BEGIN{RS="\f"} NR==p' ass-27-1894.txt | cat -A`: the
+    // extraction has collapsed the space between the two columns to a single character, so the
+    // left column's `… ad` is butted straight against the right column's `tes 583`. Runs of
+    // three spaces, or of two, find no gutter here either, and the right column begins at
+    // character 35, 36, 37 and 39 on these four lines, so no fixed-column cut is possible. The
+    // survey names the fifteen pages of thirteen volumes that print this way; the eras curate
+    // the rows they cost, as phase 2c-i curated ASS 23 (1890) 753.
+    const page753 = [
+      'Epistola SSmi D. N. Leonis XIII ad tes 583',
+      '     Ordinarios Brasiliae , qua utilia Epistola SSmi D. N. ad Eminentis-',
+      '    commendanlur ad fidei pietatis- simum Card. Parocchi circa mo­',
+      '     que christianae profectum pag. 3 dum, quo Catholici in Italia sese',
+    ].join('\n');
+    expect(splitColumns(page753)).toEqual(page753.split('\n'));
   });
   it('reads the papal heading set over two lines (`LITTERAE` / `ET ACTA ROM. PONTIFICIS`, ASS 23 (1890) 752)', () => {
     const text = ['                      LITTERAE', '      ET ACTA ROM. PONTIFICIS', '', ' Litterae SSmi D. N. Leonis XIII', '     ad Cardinalem Lavigerie, occa­', '     in Africani profectum est. pag. 3', '      EX ACTIS CONSISTORIALIBUS', 'De Consistorio habito » 705'].join('\n');

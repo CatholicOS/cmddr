@@ -1,6 +1,6 @@
 {
   "source": "ass-33",
-  "generated": "2026-09-22",
+  "generated": "2026-09-23",
   "text": "~/development/sources/ASS/txt/ass-33-1900.txt (768 pages)",
   "volume": 33,
   "year": 1900,
@@ -171,6 +171,52 @@
       "series": "ASS",
       "volume": 33,
       "year": 1900,
+      "page": 212,
+      "pope": "Leo XIII",
+      "category": "BREVE",
+      "date": "1893-05-01",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "CONFRATERNITAS quotidianae et universalis adorationis, rite Taurini erecta, in­ dulgentiis honestatur.",
+      "raw": "CONFRATERNITAS quotidianae et universalis adorationis, rite Taurini erecta, in­ / dulgentiis honestatur.",
+      "opening": "Cum, sicuti accepimus, pia Christifidelium Confraternitas sub titulo",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "CONFRATERNITAS quotidianae et universalis adorationis, rite Taurini erecta, in­ / dulgentiis honestatur.",
+        "salutation": "LEO PP. XIII.",
+        "opening": "Cum, sicuti accepimus, pia Christifidelium Confraternitas",
+        "dateline": "Datum Romae apud Sanctum Petrum sub Annulo Piscatoris, die I Maii MDCCCXCIII, Pontificatus Nostri anno sexto decimo^ S. CARD. VANNUTELLI, Praef.",
+        "header": "212"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 213,
+      "pope": "Leo XIII",
+      "category": "BREVE",
+      "date": "1894-08-21",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "CONFRATERNITAS eadem erigitur in primariam, aliisque dotatur indulgentiis",
+      "raw": "CONFRATERNITAS eadem erigitur in primariam, aliisque dotatur indulgentiis",
+      "opening": "Romanorum Pontificum praedecessorum Nostrorum vestigiis inhaerentes, pias fidelium",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "CONFRATERNITAS eadem erigitur in primariam, aliisque dotatur indulgentiis",
+        "salutation": "LEO PP. XIII.",
+        "opening": "Romanorum Pontificum praedecessorum Nostrorum vesti­",
+        "dateline": "Datum Romae apud S. Petrum sub Annulo Piscatoris die XXI Augusti MDCCCXCIV, Pontificatus Nostri anno decimo» septimo.",
+        "header": "EX SECRETARIA BREVIUM                                                        215"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
       "page": 273,
       "pope": "Leo XIII",
       "category": "EPISTOLA ENCYCLICA",
@@ -234,6 +280,52 @@
         "opening": "Alias iam, et voce et scriptis, speciatim vero in Litteris « Ex",
         "dateline": "Datum Romae apud S. Petrum, die xix Decembris MCM, Pontificatus Nostri anno vicesimo tertio.",
         "header": "348"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 355,
+      "pope": "Leo XIII",
+      "category": "LITTERAE",
+      "date": "1900-12-23",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SS.mi D. N. Leonis Xlil ad E.mum Archiepiscopum Parisiensem quoad religiosorum Congregationes in Gallia.",
+      "raw": "LITTERAE SS.mi D. N. Leonis Xlil ad E.mum Archiepiscopum Parisiensem / quoad religiosorum Congregationes in Gallia.",
+      "opening": "Au milieu des consolations que Nous procurait l'Année",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE SS.mi D. N. Leonis Xlil ad E.mum Archiepiscopum Parisiensem / quoad religiosorum Congregationes in Gallia.",
+        "salutation": null,
+        "opening": "Au milieu des consolations que Nous procurait l'Année",
+        "dateline": "Donné à Rome, près de Saint-Pierre, le 23 Décembre de l'an 1900, de Notre Pontificat le vingt-troisième.",
+        "header": "LITTERAE 555"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 385,
+      "pope": "Leo XIII",
+      "category": "EPISTOLA ENCYCLICA",
+      "date": "1901-01-18",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Sanctissimi Domini Nostri Leonis divina providentia Pa­ pae XIII de democratia christiana.",
+      "raw": "EPISTOLA ENCYCLICA Sanctissimi Domini Nostri Leonis divina providentia Pa­ / pae XIII de democratia christiana.",
+      "opening": "Graves de communi re oeconomica disceptationes, quae non",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "EPISTOLA ENCYCLICA Sanctissimi Domini Nostri Leonis divina providentia Pa­ / pae XIII de democratia christiana.",
+        "salutation": null,
+        "opening": "Graves de communi re oeconomica disceptationes, quae",
+        "dateline": "Datum Romae apud Sanctum Petrum die 18 ianuarii anno 1901, Pontificatus Nostri vicesimo tertio.",
+        "header": "585"
       }
     },
     {
@@ -431,24 +523,6 @@
       ]
     },
     {
-      "page": 212,
-      "reason": "no-heading",
-      "lines": [
-        "Datum Romae apud Sanctum Petrum sub Annulo Piscatoris,",
-        "die I Maii MDCCCXCIII, Pontificatus Nostri anno sexto decimo^",
-        "S. CARD. VANNUTELLI, Praef."
-      ]
-    },
-    {
-      "page": 214,
-      "reason": "no-heading",
-      "lines": [
-        "Datum Romae apud S. Petrum sub Annulo Piscatoris die",
-        "XXI Augusti MDCCCXCIV, Pontificatus Nostri anno decimo»",
-        "septimo."
-      ]
-    },
-    {
       "page": 303,
       "reason": "no-heading",
       "lines": [
@@ -471,22 +545,6 @@
       "lines": [
         "LITTERAE SS.mi D. N. Leonis, quibus universalis iubilaeus in urbe celebratus anno / Domini millesimo nonigentesimo ad universum catholicum orbem extenditur.",
         "Datum Romae apud S. Petrum Anno Incarnationis Dominicae Millesimo nongentesimo, Octavo Calendas Ianuarii, Pontificatus Nostri anno vicesimo tertio."
-      ]
-    },
-    {
-      "page": 355,
-      "reason": "header-mismatch",
-      "lines": [
-        "LITTERAE 555",
-        "LITTERAE SS.mi D. N. Leonis Xlil ad E.mum Archiepiscopum Parisiensem / quoad religiosorum Congregationes in Gallia."
-      ]
-    },
-    {
-      "page": 385,
-      "reason": "header-mismatch",
-      "lines": [
-        "585",
-        "EPISTOLA ENCYCLICA Sanctissimi Domini Nostri Leonis divina providentia Pa­ / pae XIII de democratia christiana."
       ]
     },
     {
@@ -643,6 +701,8 @@
       273,
       286,
       348,
+      355,
+      385,
       577,
       641,
       642,
@@ -666,16 +726,6 @@
         "raw": "Litterae SSmi D. N. Leonis XIII / quibus lubilaeus extenditur ad / universum orbem .... 349"
       },
       {
-        "description": "Litterae SSmi D. N. Leonis XIII ad Archiepiscopum Parisien, quoad Religiosorum Congregationes in Gallia",
-        "page": 355,
-        "raw": "Litterae SSmi D. N. Leonis XIII ad / Archiepiscopum Parisien, quoad / Religiosorum Congregationes in / Gallia 355"
-      },
-      {
-        "description": "Epistola Encyclica SSmi D. N. Leonis XIII quoad democratiam christianam",
-        "page": 385,
-        "raw": "Epistola Encyclica SSmi D. N. Leo­ / nis XIII quoad democratiam chri­ / stianam 385"
-      },
-      {
         "description": "Litterae SSmi D. N. Leonis XIII ad Emum Archiepiscopum \"Wesl- monasleriensem de catholicismi) liberali et rationalismo",
         "page": 449,
         "raw": "Litterae SSmi D. N. Leonis XIII / ad Emum Archiepiscopum \"Wesl- / monasleriensem de catholicismi) / liberali et rationalismo . . 449"
@@ -692,6 +742,8 @@
       }
     ],
     "omitted": [
+      212,
+      213,
       396,
       401
     ]

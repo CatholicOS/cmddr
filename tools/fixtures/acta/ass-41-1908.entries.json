@@ -1,6 +1,6 @@
 {
   "source": "ass-41",
-  "generated": "2026-09-22",
+  "generated": "2026-09-23",
   "text": "~/development/sources/ASS/txt/ass-41-1908.txt (810 pages)",
   "volume": 41,
   "year": 1908,
@@ -263,6 +263,29 @@
       "series": "ASS",
       "volume": 41,
       "year": 1908,
+      "page": 37,
+      "pope": "Pius X",
+      "category": "BREVE",
+      "date": "1907-07-19",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Pontifex laudat Collegium Americanum Lovanii in Belgio oc­ casione quinquagesimi anni ab erectione.",
+      "raw": "Pontifex laudat Collegium Americanum Lovanii in Belgio oc­ / casione quinquagesimi anni ab erectione.",
+      "opening": "In hac Beati Petri Principis Apostolorum Cathedra, nullis",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "Pontifex laudat Collegium Americanum Lovanii in Belgio oc­ / casione quinquagesimi anni ab erectione.",
+        "salutation": "PIUS PP. X",
+        "opening": "In hac Beati Petri Principis Apostolorum Cathedra, nullis",
+        "dateline": "Datum Romae apud S. Petrum sub annulo Piscatoris, -die XIX Iulii MCMVii, Pontificatus Nostri anno quarto.",
+        "header": "Ex Secretaria Brevium                                                                    37"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
       "page": 65,
       "pope": "Pius X",
       "category": "EPISTOLA",
@@ -349,6 +372,29 @@
         "opening": "Ringraziamo vivamente Lei, Signor Cardinale e con Lei",
         "dateline": null,
         "header": "Allocutio"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 134,
+      "pope": "Pius X",
+      "category": "BREVE",
+      "date": "1907-11-27",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Indulgentia plenaria in forma iubilaei conceditur visitantibus cryptam de \" Massabielle „ civitatis Lapurdensis.",
+      "raw": "Indulgentia plenaria in forma iubilaei conceditur visitantibus / cryptam de \" Massabielle „ civitatis Lapurdensis.",
+      "opening": "Universis Xtifidelibus praesentes Litteras inspecturis, salutem et Apostolicam",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "Indulgentia plenaria in forma iubilaei conceditur visitantibus / cryptam de \" Massabielle „ civitatis Lapurdensis.",
+        "salutation": "PIUS PP. X",
+        "opening": "Universis Xtifidelibus praesentes Litteras inspecturis,",
+        "dateline": "Datum Romae apud S. Petrum sub annulo Piscatoris, die XXVII Novembris MCMVII, Pontificatus Nostri anno quinto. R. Card. MERRY DEL VAL, a Secretis Status.",
+        "header": "Ex Secretaria Brevium"
       }
     },
     {
@@ -470,6 +516,52 @@
       "series": "ASS",
       "volume": 41,
       "year": 1908,
+      "page": 300,
+      "pope": "Pius X",
+      "category": "BREVE",
+      "date": "1906-07-30",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Indulgentia toties quoties pro visitantibus ecclesias congre­ gationis SS. Sacramenti in festo Corporis Christi.",
+      "raw": "Indulgentia toties quoties pro visitantibus ecclesias congre­ / gationis SS. Sacramenti in festo Corporis Christi.",
+      "opening": "Neminem latet festum SSmi Corporis Christi Domini inter",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "Indulgentia toties quoties pro visitantibus ecclesias congre­ / gationis SS. Sacramenti in festo Corporis Christi.",
+        "salutation": "PIUS PP. X",
+        "opening": "Neminem latet festum SSmi Corporis Christi Domini in­",
+        "dateline": "Datum Romae apud S. Petrum sub annulo Piscatoris, die xxx Iulii MCMVi, Pontificatus Nostri anno tertio.",
+        "header": "3oo                                               Ex Secretaria Brevium"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 301,
+      "pope": "Pius X",
+      "category": "BREVE",
+      "date": "1908-02-01",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Breve SS. D. N. Pii div. prov. PP. X quo sacerdotibus qui operam suam impendent pio Operi Propagationis Fidei facultas benedicendi Rosaria eisque adnectendi indulgen- tias a Patribus Crucigeris appellatas conceditur.",
+      "raw": "Breve SS. D. N. Pii div. prov. PP. X quo sacerdotibus qui / operam suam impendent pio Operi Propagationis Fidei / facultas benedicendi Rosaria eisque adnectendi indulgen- / tias a Patribus Crucigeris appellatas conceditur.",
+      "opening": "Cum Nobis Apostolorum Principis Cathedram obtinentibus antiquius nihil",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "Breve SS. D. N. Pii div. prov. PP. X quo sacerdotibus qui / operam suam impendent pio Operi Propagationis Fidei / facultas benedicendi Rosaria eisque adnectendi indulgen- / tias a Patribus Crucigeris appellatas conceditur.",
+        "salutation": "PIUS PP. X",
+        "opening": "Cum Nobis Apostolorum Principis Cathedram obtinenti-",
+        "dateline": "Datum Romae apud S. Petrum sub annulo Piscatoris, die i Februarii MDCCCCVIII, Pontificatus Nostri anno quinto.",
+        "header": "Ex Secretaria Brevium                                                             3oi"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
       "page": 361,
       "pope": "Pius X",
       "category": "EPISTOLA",
@@ -562,6 +654,52 @@
       "series": "ASS",
       "volume": 41,
       "year": 1908,
+      "page": 580,
+      "pope": "Pius X",
+      "category": "BREVE",
+      "date": "1908-03-09",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Indulgentia plenaria favore archidioecesis Quebecensis.",
+      "raw": "Indulgentia plenaria favore archidioecesis Quebecensis.",
+      "opening": "Universis christifidelibus praesentes litteras inspecturis, salutem et Apostolicam",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "Indulgentia plenaria favore archidioecesis Quebecensis.",
+        "salutation": "PIUS PP. X",
+        "opening": "Universis christifidelibus praesentes litteras inspecturis,",
+        "dateline": "Datum Romae apud S. Petrum sub annulo Piscatoris die ix Martii MCMVIII, Pontificatus Nostri anno quinto. R. Card. MERRY DEL VAL, a Secretis Status.",
+        "header": "58o                                                Ex Secretaria Brevium"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 581,
+      "pope": "Pius X",
+      "category": "BREVE",
+      "date": "1908-05-25",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Indulgentia plenaria adnectitur piae exercitationi Septem Sab- batorum in honorem B. M. V. a Mercede.",
+      "raw": "Indulgentia plenaria adnectitur piae exercitationi Septem Sab- / batorum in honorem B. M. V. a Mercede.",
+      "opening": "Cum sicuti ad Nos retulit hodiernus rector Diaconiae",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "Indulgentia plenaria adnectitur piae exercitationi Septem Sab- / batorum in honorem B. M. V. a Mercede.",
+        "salutation": "PIUS PP. X",
+        "opening": "Cum sicuti ad Nos retulit hodiernus rector Diaconiae ad",
+        "dateline": "Datum Romae apud S. Petrum sub annulo Piscatoris, die XXV Maii MDCCCCVIII, Pontificatus Nostri anno quinto. R. Card. MERRY DEL VAL, a Secretis Status.",
+        "header": "Ex Secretaria Brevium                                                                  58i"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
       "page": 621,
       "pope": "Pius X",
       "category": "EPISTOLA",
@@ -608,6 +746,29 @@
       "series": "ASS",
       "volume": 41,
       "year": 1908,
+      "page": 623,
+      "pope": "Pius X",
+      "category": "BREVE",
+      "date": "1908-04-14",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Praefectura Marochiensis erigitur in Vicariatum Apostolicum.",
+      "raw": "Praefectura Marochiensis erigitur in Vicariatum Apostolicum.",
+      "opening": "Romani Pontifices qui universa in Ecclesiam sibi divinitus",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "Praefectura Marochiensis erigitur in Vicariatum Apostolicum.",
+        "salutation": "PIUS PP. X",
+        "opening": "Romani Pontifices qui universa in Ecclesiam sibi divini­",
+        "dateline": "Datum Romae apud S. Petrum sub annulo Piscatoris, die xiv Aprilis MCMViii, Pontificatus Nostri anno quinto.",
+        "header": "Ex Secretaria Brevium                                                                        623"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
       "page": 747,
       "pope": "Pius X",
       "category": "EPISTOLA",
@@ -626,6 +787,75 @@
         "dateline": "Datum Romae die xv Octobris MCMVIII, Pontificatus Nostri anno sexto. PIUS PP. X",
         "header": "ACTA ROMANI PONTIFICIS"
       }
+    },
+    {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 748,
+      "pope": "Pius X",
+      "category": "BREVE",
+      "date": "1908-01-22",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Breve beatificationis Ven. Servae Dei Mariae Magdalenae Postel, institutricis Sororum scholarum christianarum a Misericordia.",
+      "raw": "Breve beatificationis Ven. Servae Dei Mariae Magdalenae / Postel, institutricis Sororum scholarum christianarum a / Misericordia.",
+      "opening": "Christiani nominis dum nullo quidem tempore acerrimi desunt",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "Breve beatificationis Ven. Servae Dei Mariae Magdalenae / Postel, institutricis Sororum scholarum christianarum a / Misericordia.",
+        "salutation": "PIUS PP. X",
+        "opening": "Christiani nominis dum nullo quidem tempore acerrimi",
+        "dateline": "Datum Romae apud S. Petrum sub annulo Piscatoris die XXII Ianuarii MDCCCCVIII, Pontificatus Nostri anno quinto. R. Card. MERRY DEL VAL.",
+        "header": "74«                                          Ex Secretaria Brevium"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 757,
+      "pope": "Pius X",
+      "category": "BREVE",
+      "date": "1908-01-11",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Breve beatificationis Ven. Servae Dei Magdalenae Sophiae Barat, institutricis Societatis sororum a S. Corde Iesu.",
+      "raw": "Breve beatificationis Ven. Servae Dei Magdalenae Sophiae / Barat, institutricis Societatis sororum a S. Corde Iesu.",
+      "opening": "Inexhausta Deus charitate non desinit in Ecclesia sua",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "Breve beatificationis Ven. Servae Dei Magdalenae Sophiae / Barat, institutricis Societatis sororum a S. Corde Iesu.",
+        "salutation": "PIUS PP. X",
+        "opening": "Inexhausta Deus charitate non desinit in Ecclesia sua sub­",
+        "dateline": "Datum Romae apud S. Petrum sub annulo Piscatoris die xi Ianuarii MDCCCCVIII, Pontificatus Nostri anno quinto.",
+        "header": "Ex Secretaria Brevium                                                                      757"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 41,
+      "year": 1908,
+      "page": 766,
+      "pope": "Pius X",
+      "category": "BREVE",
+      "date": "1908-05-03",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Breve beatificationis Ven. Servi Dei Gabrielis a dolorosa Vir­ gine, clerici professi congregationis Clericorum regula­ rium excalceatorum SS. Crucis et Passionis D. N. I. C.",
+      "raw": "Breve beatificationis Ven. Servi Dei Gabrielis a dolorosa Vir­ / gine, clerici professi congregationis Clericorum regula­ / rium excalceatorum SS. Crucis et Passionis D. N. I. C.",
+      "opening": "Mirabilis in Sanctis suis Deus, omni tempore Ecclesiae",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "Breve beatificationis Ven. Servi Dei Gabrielis a dolorosa Vir­ / gine, clerici professi congregationis Clericorum regula­ / rium excalceatorum SS. Crucis et Passionis D. N. I. C.",
+        "salutation": "PIUS PP. X",
+        "opening": "Mirabilis in Sanctis suis Deus, omni tempore Ecclesiae",
+        "dateline": "Datum Romae apud S. Petrum sub annulo Piscatoris die III Maii MDCCCCVIII, Pontificatus Nostri anno quinto. R. Card. MERRY DEL VAL.",
+        "header": "766                                             Ex Secretaria Brevium"
+      }
     }
   ],
   "defects": [
@@ -635,23 +865,6 @@
       "lines": [
         "LITTERAE APOSTOLICAE / SS. D. N. Pii div. prov. PP. X quibus ritus ruthenus consti­ / tuitur in Statibus foederatis Americae Septentrionalis.",
         "Datum Romae, apud Sanctum Petrum, anno Incarnationis Dominicae millesimo nongentesimo septimo, decimo octavo calendas Iulias, die festo S. Basilii Magni, Pontificatus Nostri"
-      ]
-    },
-    {
-      "page": 39,
-      "reason": "no-heading",
-      "lines": [
-        "Datum Romae apud S. Petrum sub annulo Piscatoris,",
-        "-die XIX Iulii MCMVii, Pontificatus Nostri anno quarto."
-      ]
-    },
-    {
-      "page": 136,
-      "reason": "no-heading",
-      "lines": [
-        "Datum Romae apud S. Petrum sub annulo Piscatoris, die",
-        "XXVII Novembris MCMVII, Pontificatus Nostri anno quinto.",
-        "R. Card. MERRY DEL VAL, a Secretis Status."
       ]
     },
     {
@@ -669,22 +882,6 @@
       "lines": [
         "2                                                                      Epistola",
         "EPISTOLA / Qua Pius PP. X laudat edentes Commentaria a \" Nova Gal­ / lia „ nuncupata."
-      ]
-    },
-    {
-      "page": 301,
-      "reason": "no-heading",
-      "lines": [
-        "Datum Romae apud S. Petrum sub annulo Piscatoris, die",
-        "xxx Iulii MCMVi, Pontificatus Nostri anno tertio."
-      ]
-    },
-    {
-      "page": 303,
-      "reason": "no-heading",
-      "lines": [
-        "Datum Romae apud S. Petrum sub annulo Piscatoris, die",
-        "i Februarii MDCCCCVIII, Pontificatus Nostri anno quinto."
       ]
     },
     {
@@ -712,24 +909,6 @@
       ]
     },
     {
-      "page": 581,
-      "reason": "no-heading",
-      "lines": [
-        "Datum Romae apud S. Petrum sub annulo Piscatoris die",
-        "ix Martii MCMVIII, Pontificatus Nostri anno quinto.",
-        "R. Card. MERRY DEL VAL, a Secretis Status."
-      ]
-    },
-    {
-      "page": 582,
-      "reason": "no-heading",
-      "lines": [
-        "Datum Romae apud S. Petrum sub annulo Piscatoris, die",
-        "XXV Maii MDCCCCVIII, Pontificatus Nostri anno quinto.",
-        "R. Card. MERRY DEL VAL, a Secretis Status."
-      ]
-    },
-    {
       "page": 615,
       "reason": "no-heading",
       "lines": [
@@ -743,40 +922,6 @@
       "lines": [
         "CONSTITUTIO APOSTOLICA / De promulgatione legum et evulgatione actorum S. Sedis.",
         "Datum Romae apud S. Petrum, anno Incarnationis Dominicae millesimo nongentesimo octavo, in Kalendas Octobres, Pontificatus Nostri sexto."
-      ]
-    },
-    {
-      "page": 624,
-      "reason": "no-heading",
-      "lines": [
-        "Datum Romae apud S. Petrum sub annulo Piscatoris, die",
-        "xiv Aprilis MCMViii, Pontificatus Nostri anno quinto."
-      ]
-    },
-    {
-      "page": 756,
-      "reason": "no-heading",
-      "lines": [
-        "Datum Romae apud S. Petrum sub annulo Piscatoris die",
-        "XXII Ianuarii MDCCCCVIII, Pontificatus Nostri anno quinto.",
-        "R. Card. MERRY DEL VAL."
-      ]
-    },
-    {
-      "page": 765,
-      "reason": "no-heading",
-      "lines": [
-        "Datum Romae apud S. Petrum sub annulo Piscatoris die",
-        "xi Ianuarii MDCCCCVIII, Pontificatus Nostri anno quinto."
-      ]
-    },
-    {
-      "page": 772,
-      "reason": "no-heading",
-      "lines": [
-        "Datum Romae apud S. Petrum sub annulo Piscatoris die",
-        "III Maii MDCCCCVIII, Pontificatus Nostri anno quinto.",
-        "R. Card. MERRY DEL VAL."
       ]
     }
   ],
@@ -1053,6 +1198,17 @@
         "raw": "Epistola Pii PP. X ob saecularia solemnia archidioecesis Neo-Ebo­ / racensis »495"
       }
     ],
-    "omitted": []
+    "omitted": [
+      37,
+      134,
+      300,
+      301,
+      580,
+      581,
+      623,
+      748,
+      757,
+      766
+    ]
   }
 }

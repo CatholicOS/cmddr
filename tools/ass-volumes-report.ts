@@ -17,7 +17,7 @@ import { ACTA_SOURCES, applyCuratedReferences, citeRef, loadActaIndexes } from '
 import { matchActa, POPE_ISSUERS, type ActaCandidate, type ActaUnmatched } from './src/acta/match.js';
 import { createFromActa, isActaShelf } from './src/acta/create.js';
 import { categoryForHeading } from './src/acta/categories.js';
-import { ACTA_REPRINTS, ACTA_SHARED_PAGES, ASS_READINGS } from './src/acta/curation.js';
+import { ACTA_REPRINTS, ACTA_SHARED_PAGES, ASS_READINGS, ASS_PAGE_OFFSETS } from './src/acta/curation.js';
 import type { AssScan, AssEntry } from './src/acta/ass.js';
 import type { DocumentRecord } from './src/types.js';
 
@@ -46,7 +46,7 @@ const md = (s: string) => s.replace(/\|/g, '\\|').replace(/\n/g, ' / ').replace(
  * bumped by hand when the report is regenerated, so that a re-run is reproducible and the
  * line does not claim the fixtures' scan date, which §1's header prints beside it.
  */
-const GENERATED_ON = '2026-09-22';
+const GENERATED_ON = '2026-09-23';
 const cite = (e: AssEntry) => citeRef(e);
 const candidateList = (cs: ActaCandidate[]) => cs.map((c) => `\`${c.id}\`${c.incipit ? ` (*${md(c.incipit)}*)` : ''}`).join(', ') || '—';
 const of = (k: string) => entries.filter((e) => `ass-${e.volume}` === k);
@@ -80,6 +80,30 @@ const answered = (k: string) => summaOf(k).unclaimed.filter((r) => of(k).some((e
 const readings = Object.entries(ASS_READINGS);
 const romanDated = readings.filter(([, r]) => /Kalends|Ides/.test(r.evidence)).length;
 const headerRead = readings.filter(([, r]) => /headerAgrees/.test(r.evidence)).length;
+/** A reading that lands on a page the scan already has an entry for -- it *replaces* that entry (join.ts, applyAssReadings) rather than adding one. */
+const replacingReadings = readings.filter(([key]) => {
+  const [, volStr, pageStr] = key.split(':');
+  const s = sources.find((x) => x.volume === Number(volStr));
+  return s !== undefined && scans.get(s.key)!.entries.some((e) => e.page === Number(pageStr));
+}).map(([key]) => key).sort((a, b) => Number(a.split(':')[1]) - Number(b.split(':')[1]) || Number(a.split(':')[2]) - Number(b.split(':')[2]));
+const citeReplacing = (key: string) => `ASS ${key.split(':')[1]} p. ${key.split(':')[2]}`;
+/**
+ * A replacing reading the scan now agrees with on everything but the description's OCR:
+ * same class, same pope, same date, same opening. These are the readings a rule has caught
+ * up with -- each was written because `headerAgrees` refused the page, and 2c-ii Task 6's
+ * relaxation now reads the page by rule -- so they are **retirement candidates for a later
+ * era**, listed rather than deleted, since the description each still corrects is the OCR's
+ * and deleting the reading would put the garble back into the entry.
+ */
+const answeredByScan = replacingReadings.filter((key) => {
+  const [, volStr, pageStr] = key.split(':');
+  const sc = scans.get(sources.find((x) => x.volume === Number(volStr))!.key)!;
+  const e = sc.entries.find((x) => x.page === Number(pageStr));
+  const r = ASS_READINGS[key]!;
+  return e !== undefined && e.category === r.category && e.pope === r.pope && e.date === r.date && e.opening === r.opening;
+});
+/** Every genuine page offset the survey found (`ASS_PAGE_OFFSETS`, curation.ts), cited by volume and range: read from the table, not typed, so a second entry cannot leave a report sentence stale. */
+const offsetRanges = Object.entries(ASS_PAGE_OFFSETS).flatMap(([vol, ranges]) => ranges.map((r) => `ASS ${vol} pp. ${r.from}-${r.to}`)).join(', ');
 const harvested = sum((k) => of(k).filter((e) => (categoryForHeading(e.category)?.harvested ?? 'no') !== 'no').length);
 const byRule = (b: string) => result.matches.filter((m) => m.by === b).length;
 const um = result.unmatched as (ActaUnmatched & { entry: AssEntry })[];
@@ -92,6 +116,19 @@ const brevisPages = umBrevis.map((u) => `ASS ${u.entry.volume} p. ${u.entry.page
 const brevisIds = umBrevis.map((u) => `\`${u.sameDate[0]!.id.replace(/^.*\//, '')}\``).join(', ');
 const umClaimedElsewhere = umWithCandidate.filter((u) => u.sameDate.every((c) => result.matches.some((m) => m.documentId === c.id)));
 const umClassHold = umWithCandidate.filter((u) => !umBrevis.includes(u) && !umClaimedElsewhere.includes(u));
+/** Of the unmatched with no shelf record at all, how many are of class `BREVE` (finding 6). */
+const umNoBrevia = umNoCandidate.filter((u) => u.entry.category === 'BREVE').length;
+/**
+ * `ASS 12 pp. 273, 275; ASS 33 p. 401` — a set of entries listed by volume and page, in
+ * volume then page order. The findings that must name *every* member of a computed set
+ * enumerate it through this rather than in prose, so that the list cannot fall out of step
+ * with the count beside it when a rule moves the numbers under both (phase 2c-ii-a).
+ */
+const byVolumeAndPage = (es: readonly { volume: number; page: number }[]): string =>
+  [...new Set(es.map((e) => e.volume))].sort((x, y) => x - y).map((v) => {
+    const ps = es.filter((e) => e.volume === v).map((e) => e.page).sort((x, y) => x - y);
+    return `ASS ${v} ${ps.length === 1 ? `p. ${ps[0]}` : `pp. ${ps.join(', ')}`}`;
+  }).join('; ');
 const standing = entries.filter((e) => e.anchor !== 'reading').length;
 const skipped = result.skipped as AssEntry[];
 const allocutions = skipped.filter((e) => e.category === 'ALLOCUTIO');
@@ -126,8 +163,8 @@ p(`1. **The body scan works from 1879 on and fails on 1865: the era's headline i
 p(`   scanner, and the yield divides at the first of them. ASS 1 (1865–66, ${scans.get('ass-1')!.pages} pages) gave **${scannedOf('ass-1')} acts** — its three`);
 p(`   papal acts were read by hand and stand in \`ASS_READINGS\` (§2.5) — while ASS 12 (1879) gave ${scannedOf('ass-12')}, ASS 23 (1890–91) ${scannedOf('ass-23')},`);
 p(`   ASS 33 (1900–01) ${scannedOf('ass-33')} and ASS 41 (1908) ${scannedOf('ass-41')} — ${sum(scannedOf)} acts from the five bodies by rule. After the curation the sample`);
-p(`   carries **${entries.length} entries, ${standing} of them as the scanner read them** (${pct(standing, entries.length)}) and ${readings.length} read by hand (one reading replacing a`);
-p(`   scanned entry, at ASS 41 p. 361, and the rest added where the scan had nothing). The 1865 volume is not a harder instance of the same problem but a different volume: its`);
+p(`   carries **${entries.length} entries, ${standing} of them as the scanner read them** (${pct(standing, entries.length)}) and ${readings.length} read by hand (${replacingReadings.length} readings replacing`);
+p(`   a scanned entry each (${replacingReadings.map(citeReplacing).join(', ')}) and the rest added where the scan had nothing). The 1865 volume is not a harder instance of the same problem but a different volume: its`);
 p(`   class headings are spelt \`LITERAE APOSTOLICAE\` with one T and \`ALLOCVTIO\` with the OCR's V, neither a heading of the`);
 p(`   list; its two apostolic letters are printed under \`SECRETARIA BREVIUM\` behind an editor's preface, so the act does not`);
 p(`   open where the heading stands; and **its summa has no papal part at all** (${summaOf('ass-1').rows.length} rows, §2) — the pope's acts are listed`);
@@ -145,16 +182,29 @@ p(`   *consilio* itself (41 p. 427, two pages after its heading at 425), and thr
 p(`   the OCR's interleaving of summa p. 753 turned into papal rows — **and one genuine miss**, ASS 33 p. 193, whose`);
 p(`   dateline the OCR broke (the month lifted onto the line above). One miss in ${sum((k) => summaOf(k).rows.length)} rows is the measure of the scan's`);
 p(`   completeness where the summa can speak. The other direction is thinner: ${sum((k) => summaOf(k).omitted.length)} scanned acts the summa does not list`);
-p(`   (§2.4), of which three are dicastery-part acts (the brevia at ASS 12 p. 588 and ASS 33 p. 401, the allocution at`);
-p(`   33 p. 396) and **one is an artefact**: *Rerum novarum* (ASS 23 p. 641) is listed by the summa, in the interleaved`);
-p(`   column of p. 753, where nothing can be read.`);
+p(`   (§2.4, which prints every one: ${byVolumeAndPage(sources.flatMap((s) => summaOf(s.key).omitted.map((page) => ({ volume: s.volume, page }))))}). **${sum((k) => summaOf(k).omitted.filter((pg) => of(k).some((e) => e.page === pg && e.category === 'BREVE')).length)} of the ${sum((k) => summaOf(k).omitted.length)} are of class \`BREVE\`**`);
+p(`   — the twelve phase 2c-ii-a read from the ring of the Fisherman (ASS 33 pp. 212, 213 and ten of ASS 41, of which`);
+p(`   300 and 301 answered a \`header-mismatch\` defect until 2c-ii Task 6's relaxation) and two headed`);
+p(`   with the class word and read before it (ASS 12 p. 588, ASS 33 p. 401) — and that is the summa working, not failing:`);
+p(`   its papal part *ends* at the dicastery heading \`EX SECRETARIA BREVIUM\`, so a breve printed under that heading is a`);
+p(`   papal act the volume's own list was never going to claim, and "omitted" is the check saying so. The other two are`);
+p(`   the allocution at ASS 33 p. 396, likewise printed in the dicastery part, and **one artefact**: *Rerum novarum*`);
+p(`   (ASS 23 p. 641) is listed by the summa, in the interleaved column of p. 753, where nothing can be read.`);
 p(`3. **${sum((k) => scans.get(k)!.defects.length)} defects remain, and the shape they take is one part of the *Acta* the scanner does not enter.** By reason:`);
 p(`   ${defectsBy('no-heading')} \`no-heading\`, ${defectsBy('no-date')} \`no-date\`, ${defectsBy('header-mismatch')} \`header-mismatch\`, ${defectsBy('no-opening')} \`no-opening\`, ${defectsBy('unknown-pope')} \`unknown-pope\` (§2.2). **${sum((k) => ringDefects(k).length)} of the ${defectsBy('no-heading')} \`no-heading\` defects quote the brief's ring**`);
-p(`   **formula** (\`sub Annulo Piscatoris\`), and ${sum((k) => ringDefects(k).length) - ringDefects('ass-1').length} of them — ASS 12 ×${ringDefects('ass-12').length}, ASS 33 ×${ringDefects('ass-33').length}, ASS 41 ×${ringDefects('ass-41').length} — are the brevia printed in the`);
-p(`   \`EX SECRETARIA BREVIUM\` part, whose heading is a descriptive caps title rather than a class word and whose summa`);
-p(`   rows sit under the dicastery: papal acts by author, invisible to a scanner that anchors on a class heading. They are`);
-p(`   left as defects, not curated: ${sum((k) => ringDefects(k).length) - ringDefects('ass-1').length} acts is a rule's worth, and the rule is a 2c-ii decision that moves every volume's`);
-p(`   numbers. The other ${ringDefects('ass-1').length} (ASS 1 pp. 581, 746) are the two apostolic letters read by hand. Where a defect was a`);
+p(`   **formula** (\`sub Annulo Piscatoris\`) — ASS 1 ×${ringDefects('ass-1').length}, ASS 12 ×${ringDefects('ass-12').length}, ASS 33 ×${ringDefects('ass-33').length}, ASS 41 ×${ringDefects('ass-41').length} — and they are what is left of the brevia of the`);
+p(`   \`EX SECRETARIA BREVIUM\` part, whose heading is a descriptive title rather than a class word and whose summa rows`);
+p(`   sit under the dicastery: papal acts by author, invisible to a scanner that anchors on a class heading. Phase 2c-ii-a`);
+p(`   gave the walk-back a second reading for them — the pope's own name standing alone under the ring, the title above it`);
+p(`   read as the act's description, the class \`BREVE\` — and the sample gained nine acts by it (ASS 33 p. 212; ASS 41`);
+p(`   pp. 37, 134, 580, 581, 623, 748, 757, 766), where it had 15 such defects before. What the second reading does not`);
+p(`   reach is quoted in §2.2 and none of it is the rule's to fix. Three brevia it read whole were refused on their running`);
+p(`   header alone, which the OCR had misread (ASS 33 p. 213 \`215\`, ASS 41 pp. 300 \`3oo\` and 301 \`3oi\`); **2c-ii Task 6's`);
+p(`   relaxation admitted all three and they are entries now**, so §2.2 no longer quotes them — see findings 2 and 15(d).`);
+p(`   What is left there is one it reads whole and cannot date, ASS 12 p. 636, whose dateline prints no \`die\` (\`sub Annulo piscatoris XIII /`);
+p(`   Augusti MDCCCLXXIX\`); the 1896 breve ASS 41 p. 169 quotes inside a later act and the 1900 brief reprinted inside`);
+p(`   Pennacchi's commentary at ASS 33 p. 303, neither of which has a title above the pope's name, only body text; and`);
+p(`   ASS 1's two apostolic letters, read by hand. Where a defect was a`);
 p(`   rule's, the rule went in and was unit-tested; where it was one act's, it became a reading. **The spec's §3 bound is`);
 p(`   wrong as written**: it says the walk back from a dateline to its heading is bounded at 40 lines, and \`readAct\``);
 p(`   (\`ass.ts\`) bounds it at **the previous anchor** — which is why a \`no-heading\` defect is keyed to the *anchor's*`);
@@ -166,9 +216,10 @@ p(`   the OCR misread (\`-318\`, \`555\`, \`585\`, \`U9\`, \`2\`/\`98\`, \`5\`/\
 p(`   reading of the act: both are the scanner refusing to guess, and each row quotes the lines it was read from (§2.5).`);
 p(`   The remaining ${readings.length - romanDated - headerRead} are single acts — ASS 1's three, the Italian-and-Latin letter of ASS 12 p. 3 with neither formula`);
 p(`   nor signature, \`MOTU-PRQPRIO\` (23 p. 522), \`rtomae\` (41 p. 195), the French cardinals' list read as an opening`);
-p(`   (41 p. 361), the by-line after a blank line (41 p. 555), \`MDCCCCL\` (33 p. 643). **No ASS volume shows a page offset**:`);
+p(`   (41 p. 361), the by-line after a blank line (41 p. 555), \`MDCCCCL\` (33 p. 643). **No volume of the sample shows a page offset**:`);
 p(`   every header-mismatch of the sample is the OCR's reading of the right number, so the PDF page is the printed page in`);
-p(`   all five (spec §4's second question, answered yes).`);
+p(`   all five (spec §4's second question, answered yes *for the sample*; the series holds one genuine offset these five do`);
+p(`   not, ASS 7 (1872) pp. 496-547 — finding 15(d)).`);
 p(`5. **${result.matches.length} references written, ${byRule('unique')} by the unique rule and ${byRule('opening')} by the opening rule, with ${result.ambiguous.length} ambiguities and ${result.conflicts.length} conflicts.** Of the ${entries.length} entries,`);
 p(`   ${harvested} fall in a category the registry harvests, and **${result.matches.length} of those ${harvested} matched** (${pct(result.matches.length, harvested)}): ASS 1 ${result.matches.filter((m) => m.entry.volume === 1).length}, ASS 12 ${result.matches.filter((m) => m.entry.volume === 12).length}, ASS 23 ${result.matches.filter((m) => m.entry.volume === 23).length},`);
 p(`   ASS 33 ${result.matches.filter((m) => m.entry.volume === 33).length}, ASS 41 ${result.matches.filter((m) => m.entry.volume === 41).length} (§3). The rate climbs with the volume and with the shelf behind it, from nothing in 1865 to`);
@@ -182,9 +233,11 @@ p(`   pope, a class and a date name one act, where the 2003–2009 indexes produ
 p(`   page two acts share (ASS 33 p. 641: *De ingenii* of 20 February and *Le nostre ferme speranze* of 28 March 1901) is`);
 p(`   curated in \`ACTA_SHARED_PAGES\` (${assShared.length} ASS row), so both are written rather than both withheld by invariant 25.`);
 p(`6. **The ${um.length} unmatched divide three ways, and only ${umClassHold.length + umBrevis.length} of them are the join's doing.** ${umNoCandidate.length} have **no shelf record at all on their`);
-p(`   date** (§3.3's "Same date" column is empty for every one): ASS 1's two apostolic letters of 1866, four acts of ASS 12`);
-p(`   (pp. 273, 275, 481, 588), three of ASS 23 (pp. 427, 513, 522), the indulgence brief of ASS 33 p. 401 and the`);
-p(`   Lourdes letter of ASS 41 p. 65. These are the registry's gap, not the scanner's: the act is printed, read, dated and`);
+p(`   date** (§3.3's "Same date" column is empty for every one), and they are ${byVolumeAndPage(umNoCandidate.map((u) => u.entry))}`);
+p(`   — ASS 1's two apostolic letters of 1866, three acts of ASS 12 and three of ASS 23 the letters shelf does not hold,`);
+p(`   the Lourdes letter of ASS 41 p. 65, and ${umNoBrevia} of class \`BREVE\`: the two the volumes head with the class word`);
+p(`   (ASS 12 p. 588, ASS 33 p. 401) and the ${umNoBrevia - 2} phase 2c-ii-a read from the ring, not one of which the briefs shelves`);
+p(`   hold. These are the registry's gap, not the scanner's: the act is printed, read, dated and`);
 p(`   quoted here, and the shelf has never carried it. ${umBrevis.length} are the \`LITTERAE IN FORMA BREVIS\` of ASS 23 and 33 (finding 9),`);
 p(`   ${umClassHold.length} are held by the class rule against an encyclical (finding 7), and ${umClaimedElsewhere.length} is the Latin printing whose one candidate the`);
 p(`   Italian printing already claimed (finding 8). Every one of the ${um.length} is held \`series-not-created\` by the creator (§4):`);
@@ -264,15 +317,25 @@ p(`   from.`);
 p(`15. **What 2c-ii should expect.** (a) **The OCR is worst at the start.** ASS 1 (1865) yielded ${scannedOf('ass-1')} acts by rule and needed`);
 p(`   ${readOf('ass-1')} hand readings; the volumes of the 1860s and 1870s should be assumed unscannable until measured, and the plan`);
 p(`   should budget for reading them rather than for a rule. From 1879 the rate is usable and from 1900 it is good.`);
-p(`   (b) **The Secretaria Brevium is the next rule, and it is worth ${sum((k) => ringDefects(k).length) - ringDefects('ass-1').length} acts in five volumes.** The brevia print a`);
-p(`   descriptive caps title where a class word should stand and are listed by the summa under the dicastery; reading them`);
-p(`   means anchoring on the ring formula rather than on a heading, and it moves every volume's counts — a decision to take`);
-p(`   once, deliberately, with the owner. (c) **One summa page is unreadable and will be again.** ASS 23's p. 753 is`);
+p(`   (b) **The Secretaria Brevium was the next rule, and it was taken: it is worth 9 acts in these five volumes and 62`);
+p(`   across the series.** The brevia print a descriptive title where a class word should stand and are listed by the summa`);
+p(`   under the dicastery; reading them means anchoring on the ring formula rather than on a heading, and it moved every`);
+p(`   volume's counts. The owner ruled them in on 2026-09-22 and phase 2c-ii-a wrote the rule: the series-wide survey`);
+p(`   fell from 105 ring-bearing \`no-heading\` defects to 28 and rose from 380 acts to 442. What 2c-ii should still expect`);
+p(`   is that a breve is lost wherever the OCR damages the running header, which finding (d) answers for most of them. (c) **One summa page is unreadable and will be again.** ASS 23's p. 753 is`);
 p(`   interleaved word by word by the OCR (two columns with no gutter), so three of its papal rows are lost and three`);
 p(`   dicastery pages come out as papal rows; *Rerum novarum* (23 p. 641) therefore reads as "omitted by the summa" in §2.4`);
 p(`   although the summa lists it. A re-extraction of that one page, or a hand row, is the cheapest fix, and the shape will`);
-p(`   recur wherever the columns touch. (d) **\`header-mismatch\` may be worth relaxing for this series.** ${defectsBy('header-mismatch')} of the`);
-p(`   sample's defects are it, every one the OCR's reading of the right number, and no volume showed a page offset at all.`);
+p(`   recur wherever the columns touch. (d) **\`header-mismatch\` was relaxed for this series (2c-ii Task 6).** ${defectsBy('header-mismatch')} of the`);
+p(`   sample's defects are it now, down from 9: \`headerAgreesASS\` (ass.ts) treats a \`DIGIT_OCR\` letter (summa.ts) as standing for any digit`);
+p(`   rather than the one it is keyed to, and, unlike \`headerAgrees\` itself (kept for the AAS page recovery), admits an all-digit token one`);
+p(`   edit from the page -- recovering ASS 23 p. 318, ASS 33 pp. 213, 355, 385 and ASS 41 pp. 300, 301 in the sample (three of the six already`);
+p(`   answered by a curated reading regardless, so only 213, 300 and 301 are new entries, every one a \`BREVE\` the briefs shelves hold none`);
+p(`   of, held \`series-not-created\` like the rule of (b)). Series-wide it fell from 48 to 8 and acts rose by the same 40, to 482; the 8 left`);
+p(`   are two edits or worse, or a page number the OCR splits across two lines \`headerOf\`'s single line cannot reach -- none of the 48 sits`);
+p(`   in a run, so none of them is a page offset (survey §5). That is all the 48 measures: the series holds one genuine offset it never`);
+p(`   counted, because no act ever opened inside it to be checked -- ${offsetRanges}, curated in \`ASS_PAGE_OFFSETS\` (curation.ts) so the`);
+p(`   relaxation does not apply there; an era reaching an act inside that range reads its page by hand.`);
 p();
 p('## 2. The scan, per volume (spec §3)');
 p();
@@ -288,7 +351,14 @@ p(`**Reading the columns.** “From a heading” and “Readings” do not sum t
 p(`anchors an entry can carry, and the third — the dateline, which the scanner anchors on by rule — is the majority and is not broken`);
 p(`out (${entries.filter((e) => e.anchor === 'dateline').length} of the ${entries.length} entries are \`dateline\`, ${entries.filter((e) => e.anchor === 'heading').length} \`heading\`, ${entries.filter((e) => e.anchor === 'reading').length} \`reading\`). “Scanned by rule” is the fixture's own count, taken before the loader applies the`);
 p(`readings, so “Entries” is “Scanned by rule” plus “Readings” less the readings that *replace* a scanned entry rather than add one`);
-p(`(${sum((k) => scans.get(k)!.entries.length) + readings.length - entries.length} in the sample, at ASS 41 p. 361).`);
+p(`(${replacingReadings.length} in the sample, at ${replacingReadings.map(citeReplacing).join(', ')}).`);
+p();
+p(`**${answeredByScan.length} of those ${replacingReadings.length} are readings a rule has since caught up with, and a later era can retire them.** ${answeredByScan.map(citeReplacing).join(', ')}`);
+p(`${answeredByScan.length === 1 ? 'was' : 'were'} written because \`headerAgrees\` refused the page's running header; 2c-ii Task 6's relaxation now reads ${answeredByScan.length === 1 ? 'it' : 'each of them'} by rule, and the`);
+p('scanned entry agrees with the reading on class, pope, date and opening. **They are listed, not deleted, and nothing in this phase');
+p("removes them**: what each reading still supplies is a *description* free of the OCR's damage (`N.Leonis` for `N. Leonis`,");
+p('`Xlil` for `XIII`, `Pa­ pae` for `Papae`), so retiring one means either accepting the garbled description or replacing the');
+p('reading with a narrower correction. That is a curation decision for the era that owns the volume, taken with the page in front of it.');
 p();
 p('### 2.1 Acts scanned, with the lines each rests on');
 p();

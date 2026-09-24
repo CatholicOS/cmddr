@@ -3814,11 +3814,17 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
   });
 
   it('pins the matched count per volume, so a silent drop fails loudly', () => {
-    // The five sample volumes' 85 entries (the scanner's, with the curated readings) join
-    // the shelves on 2026-09-22: 57 matched, 0 ambiguous, 19 unmatched (held), 9 skipped
-    // (allocutions and the categories not harvested); all 57 written. What is thin is the
-    // shelf, not the scan: 439 of the era's 496 shelf documents remain without a reference,
-    // the sample being one volume a decade.
+    // The five sample volumes' 97 entries (the scanner's, with the curated readings) join
+    // the shelves on 2026-09-23: 57 matched, 0 ambiguous, 31 unmatched (held), 9 skipped
+    // (allocutions and the categories not harvested); all 57 written. It was 85 entries and
+    // 19 held until phase 2c-ii-a read the brevia of the *Secretaria Brevium* (ASS 33 p. 212
+    // and eight of ASS 41), and 94 entries and 28 held until 2c-ii Task 6 relaxed
+    // `header-mismatch` (`headerAgreesASS`, ass.ts) and so read three more ring brevia it had
+    // been refusing (ASS 33 p. 213; ASS 41 pp. 300, 301): every one of the twelve ring brevia
+    // is a `brief`, and the briefs shelf holds none of them, so all twelve are held and the
+    // 57 references do not move. What is thin is
+    // the shelf, not the scan: 439 of the era's 496 shelf documents remain without a
+    // reference, the sample being one volume a decade.
     // ASS 1 (1865): 0 -- the volume's three acts (all curated readings) are two apostolic
     // letters *sub annulo Piscatoris* of 1866 and one allocution, and Pius IX's shelf holds
     // 31 documents of the era, none of them dated 12 February or 13 April 1866.
@@ -3834,19 +3840,25 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // p. 437 (`LITTERAE in forma brevis Sanctissimi D. N. Leonis XIII quibus indulgen-/tiae
     // conceduntur`): the act's class is `brief`, not `letter`, so *Opportune quidem* joins the
     // four of ASS 33 below as a class mismatch the owner rules on, and its reference is withheld.
-    // ASS 33 (1900): 16 of 24 entries, all unique -- *Tametsi futura*, *Graves de communi
+    // ASS 33 (1900): 16 of 26 entries, all unique -- *Tametsi futura*, *Graves de communi
     // re*, the constitution *Conditae a Christo* and 12 letters, two of them on the one
     // page the sample's two matched letters share (ASS 33 p. 641, ACTA_SHARED_PAGES); the
-    // 6 held include the four `LITTERAE in forma Brevis` whose same-date letters stand on the
+    // 8 held include the four `LITTERAE in forma Brevis` whose same-date letters stand on the
     // shelf as `letter` while the heading's class is `brief` (controller ruling: reported,
-    // not overridden) -- five acts of that shape in the sample since ASS 23 p. 437 joined them.
-    // ASS 41 (1908): 29 of 34 entries (27 unique, 2 by the opening rule: Pius X's motu
+    // not overridden) -- five acts of that shape in the sample since ASS 23 p. 437 joined them --
+    // and two ring brevia, at pp. 212 and, since 2c-ii Task 6 relaxed `header-mismatch`, 213
+    // (its neighbour: both are briefs, and neither is on a shelf). The other two of the 26 are
+    // skipped, not held: the allocution at p. 396 and the chirograph at p. 714, neither a
+    // class the registry harvests.
+    // ASS 41 (1908): 29 of 44 entries (27 unique, 2 by the opening rule: Pius X's motu
     // proprio *Singulari curare* and *In domibus* of 17 September 1907), the shelf of Pius
     // X's letters being the era's fullest; 23 letters, 3 apostolic letters, the exhortation
     // *Haerent animo* (a curated reading) and the two constitutions *Sapienti consilio*
     // (p. 425) and *Promulgandi* (p. 619), which AAS 1 (1909) 7 and 5 reprinted and the
     // registry cited there until this phase: the ASS is their first printing and so their
-    // citation of record (ACTA_REPRINTS 'AAS:1:7' and 'AAS:1:5', quoting both printings).
+    // citation of record (ACTA_REPRINTS 'AAS:1:7' and 'AAS:1:5', quoting both printings). Of
+    // its 11 held, 2 are new since 2c-ii Task 6 relaxed `header-mismatch`: the ring brevia at
+    // pp. 300 and 301, neither on the briefs shelf.
     const perVolume = Object.fromEntries(sources.map((s) => [s.key, cited.filter((d) => d.acta!.volume === s.volume).length]));
     expect(perVolume).toEqual({ 'ass-1': 0, 'ass-12': 5, 'ass-23': 7, 'ass-33': 16, 'ass-41': 29 });
     expect(cited).toHaveLength(57);
@@ -3893,14 +3905,20 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     const shelf = everything.filter((d) => !isActaShelf(d.source?.shelf));
     const creation = createFromActa(matchActa(entries, shelf), shelf);
     expect(creation.created).toEqual([]);
-    // 19: the harvest's `series-not-created 19` on 2026-09-22 -- every unmatched entry of the
-    // five volumes (2 of ASS 1, 4 of ASS 12, 6 of ASS 23, 6 of ASS 33, 1 of ASS 41), and
+    // 31: the harvest's `series-not-created 31` on 2026-09-23 -- every unmatched entry of the
+    // five volumes (2 of ASS 1, 4 of ASS 12, 6 of ASS 23, 8 of ASS 33, 11 of ASS 41), and
     // nothing else is held: the ASS alone raises no ambiguity, conflict or shared page (the
     // conflict with AAS 1 over the two constitutions of 1908 needs the AAS sources, and is
     // settled by ACTA_REPRINTS in the full harvest). It was 18 until ASS 23 p. 437 was read
-    // as `LITTERAE IN FORMA BREVIS` and held with the four of ASS 33.
-    expect(creation.held.filter((h) => h.entry.series === 'ASS' && h.reason === 'series-not-created')).toHaveLength(19);
-    expect(creation.held).toHaveLength(19);
+    // as `LITTERAE IN FORMA BREVIS` and held with the four of ASS 33, 19 until phase
+    // 2c-ii-a read the brevia of the *Secretaria Brevium* (the nine it adds:
+    // ASS 33 p. 212; ASS 41 pp. 37, 134, 580, 581, 623, 748, 757, 766), and 28 until 2c-ii
+    // Task 6 relaxed `header-mismatch` (`headerAgreesASS`, ass.ts) and read three more ring
+    // brevia it had been refusing (ASS 33 p. 213; ASS 41 pp. 300, 301): all twelve ring
+    // brevia are class `brief`, none of them on a shelf, so each is held here and none is
+    // created.
+    expect(creation.held.filter((h) => h.entry.series === 'ASS' && h.reason === 'series-not-created')).toHaveLength(31);
+    expect(creation.held).toHaveLength(31);
   });
 
   it('pins the scan and the summa check per volume as the era report §2 says', () => {
@@ -3915,32 +3933,55 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
       }];
     }));
     // `acts` is the scan alone, before the loader applies ASS_READINGS: the era report's §2
-    // prints it beside the entries the join then sees (85 = 61 scanned + 24 read, two readings
-    // replacing a scanned entry, at ASS 41 pp. 361 and 12).
+    // prints it beside the entries the join then sees (97 = 78 scanned + 24 read, less the five
+    // readings that replace a scanned entry rather than add one, at ASS 23 p. 318, ASS 33
+    // pp. 355 and 385 and ASS 41 pp. 12 and 361). It was 85 before phase 2c-ii-a, and 94 after
+    // it read the brevia of the *Secretaria Brevium* under the ring of the Fisherman but before
+    // its Task 6 relaxed `header-mismatch` for this series, which read six more acts whole and
+    // made three more readings redundant.
     // ASS 1 (1865-66): the scan reads nothing -- the volume spells its headings `LITERAE
     // APOSTOLICAE` and `ALLOCVTIO`, neither of the class list -- and its summa has no papal
     // part at all (0 rows), so the check is vacuous and the three acts are curated readings.
-    // ASS 12 (1879): 10 acts and 1 defect (a Secretaria Brevium brief at p. 637); the summa's
+    // ASS 12 (1879): 10 acts and 1 defect (a Secretaria Brevium brief at p. 636, whose title
+    // 2c-ii-a now reads and whose date -- `sub Annulo piscatoris XIII / Augusti MDCCCLXXIX`,
+    // with no `die` -- it does not, so the defect is `no-date` where it was `no-heading`); the summa's
     // 12 rows claim 9 pages and leave 3, of which one is answered by the reading ASS:12:3 and
     // two are no papal act (an address *to* the pope, Gregory XVI's encyclical of 1844
     // reprinted); the one act the summa omits is the brief at p. 588, listed under its dicastery.
-    // ASS 23 (1890-91): 8 acts, 5 defects, and the weakest summa of the sample -- 7 of 14 rows
+    // ASS 23 (1890-91): 9 acts, 4 defects, and the weakest summa of the sample -- 6 of 14 rows
     // unclaimed, because p. 753's two columns are interleaved word by word by the OCR, so three
     // papal rows are lost and three dicastery pages come out as papal rows; the act it "omits"
-    // is *Rerum novarum* (p. 641), which that same page lists.
-    // ASS 33 (1900-01): 18 acts, 10 defects (3 of them Secretaria Brevium brevia); 14 of 24 rows
-    // claimed, 6 of the 8 unclaimed answered by readings, p. 193 the sample's one genuine miss
-    // (the OCR lifted the month out of its dateline); the 2 omitted are a brief and an allocution.
-    // ASS 41 (1908): the best-read volume -- 27 acts, 27 of 37 rows claimed, nothing omitted --
-    // and the most defects (18), 11 of them the brevia of its `EX SECRETARIA BREVIUM` part; of
-    // the 10 unclaimed rows, 6 are answered by readings and 4 are the annexes of *Sapienti
-    // consilio* and the summa's own page for it (427, two after its heading at 425).
+    // is *Rerum novarum* (p. 641), which that same page lists. It was 8 acts and 5 defects
+    // until 2c-ii Task 6 relaxed `header-mismatch` and read p. 318 (`-318`) whole, the reading
+    // ASS:23:318 answering it as before but now redundantly (the reading replaces the scan's
+    // own entry at that page, join.ts).
+    // ASS 33 (1900-01): 22 acts, 6 defects; 16 of 24 rows
+    // claimed, 6 unclaimed (4 answered by readings), p. 193 the sample's one genuine miss
+    // (the OCR lifted the month out of its dateline); the 4 omitted are three briefs and an
+    // allocution. It was 18 acts and 10 defects until 2c-ii-a: of its three Secretaria Brevium
+    // brevia one is read (p. 212), one is refused by its running header (p. 213 prints `215`)
+    // and one is the brief reprinted inside Pennacchi's commentary at p. 303, whose lead-in
+    // line is body text and not a title; and 19 acts and 9 defects until 2c-ii Task 6 read
+    // p. 213 whole too (`headerAgreesASS` admits `EX SECRETARIA BREVIUM 215` one edit from
+    // 213), the readings ASS:33:355 and :385 (`555`, `585`) likewise now redundant.
+    // ASS 41 (1908): the best-read volume -- 37 acts, 27 of 37 rows claimed, 10 omitted -- and
+    // 8 defects; of the 10 unclaimed rows, 6 are answered by readings and 4 are the annexes
+    // of *Sapienti consilio* and the summa's own page for it (427, two after its heading at
+    // 425). It was 27 acts, 18 defects and nothing omitted until 2c-ii-a read 8 of its 11
+    // brevia; the 8 are `omitted` because the summa's papal part *ends* at the dicastery
+    // heading `EX SECRETARIA BREVIUM`, so the volume's own list never claims them. Of the
+    // three left, two were read whole and refused by the running header (pp. 300 `3oo` and
+    // 301 `3oi`, both `header-mismatch`) until 2c-ii Task 6's `headerAgreesASS` admitted both
+    // (`o` and `i` are `DIGIT_OCR` letters standing for any digit) -- two more omitted acts,
+    // 35 -> 37 acts and 10 -> 8 defects -- and the third is `no-heading` at p. 169, where the
+    // volume quotes a breve of 1896 inside a later act and only body text stands over the
+    // pope's name.
     expect(perVolume).toEqual({
       'ass-1': { acts: 0, defects: 3, rows: 0, claimed: 0, unclaimed: 0, omitted: 0 },
       'ass-12': { acts: 10, defects: 1, rows: 12, claimed: 9, unclaimed: 3, omitted: 1 },
-      'ass-23': { acts: 8, defects: 5, rows: 14, claimed: 7, unclaimed: 7, omitted: 1 },
-      'ass-33': { acts: 18, defects: 10, rows: 24, claimed: 14, unclaimed: 8, omitted: 2 },
-      'ass-41': { acts: 27, defects: 18, rows: 37, claimed: 27, unclaimed: 10, omitted: 0 },
+      'ass-23': { acts: 9, defects: 4, rows: 14, claimed: 8, unclaimed: 6, omitted: 1 },
+      'ass-33': { acts: 22, defects: 6, rows: 24, claimed: 16, unclaimed: 6, omitted: 4 },
+      'ass-41': { acts: 37, defects: 8, rows: 37, claimed: 27, unclaimed: 10, omitted: 10 },
     });
     // The 24 readings, each with its cause quoted in the report's §2.5 (`ASS_READINGS`'s own
     // evidence): 8 a Roman date the scanner does not read (the Kalends and the Ides -- ASS:23:206,

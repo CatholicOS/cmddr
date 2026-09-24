@@ -1,6 +1,6 @@
 {
   "source": "ass-23",
-  "generated": "2026-09-22",
+  "generated": "2026-09-23",
   "text": "~/development/sources/ASS/txt/ass-23-1890.txt (768 pages)",
   "volume": 23,
   "year": 1890,
@@ -96,6 +96,29 @@
         "opening": "Catholicae Ecclesiae, quae omnes homines materna caritate",
         "dateline": "Datum Romae apud S. Petrum, die xx Novembris anno MDCCCXC, Pontificatus Nostri decimo tertio.",
         "header": "257"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 23,
+      "year": 1890,
+      "page": 318,
+      "pope": "Leo XIII",
+      "category": "LITTERAE",
+      "date": "1890-11-20",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Sanctissimi Patris N.Leonis XIII ad Emum Archiepiscopum floren­ tinum quoad cultum sacrae Familiae praestandum. — Adiicitur formula consecrationis familiarum et oratio quotidie recitanda.",
+      "raw": "LITTERAE Sanctissimi Patris N.Leonis XIII ad Emum Archiepiscopum floren­ / tinum quoad cultum sacrae Familiae praestandum. — Adiicitur formula / consecrationis familiarum et oratio quotidie recitanda.",
+      "opening": "Novum argumentum perspecti tui erga hanc Apostolicam Sedem",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE Sanctissimi Patris N.Leonis XIII ad Emum Archiepiscopum floren­ / tinum quoad cultum sacrae Familiae praestandum. — Adiicitur formula / consecrationis familiarum et oratio quotidie recitanda.",
+        "salutation": null,
+        "opening": "Novum argumentum perspecti tui erga hanc Apostolicam",
+        "dateline": "Datum Romae apud S. Petrum die xx Novembris Anno MDCCCXC, Pontificatus Nostri Decimotertio.",
+        "header": "-318"
       }
     },
     {
@@ -198,14 +221,6 @@
       "lines": [
         "LITTERAE Encyclicae SS. D. N. Leonis XIII ad Episcopos, Clerum / et Populum Italiae.",
         "Datum Romae apud Sanet. Petrum Idibus Octobris anno MDCCCLXXXX. Pontificatus nostri XIII."
-      ]
-    },
-    {
-      "page": 318,
-      "reason": "header-mismatch",
-      "lines": [
-        "-318",
-        "LITTERAE Sanctissimi Patris N.Leonis XIII ad Emum Archiepiscopum floren­ / tinum quoad cultum sacrae Familiae praestandum. — Adiicitur formula / consecrationis familiarum et oratio quotidie recitanda."
       ]
     },
     {
@@ -315,6 +330,7 @@
       129,
       193,
       257,
+      318,
       437,
       449,
       518
@@ -324,11 +340,6 @@
         "description": "— Versio latina earumdem litterarum",
         "page": 206,
         "raw": "— Versio latina earumdem litte­ / rarum » 206"
-      },
-      {
-        "description": "Litterae eiusdem Pontificis ad Eminentissimum Archiepiscopum florentinum quoad cultum sacrae Familiae praestandum. Adiici tur formula consecrationis familiarum et oratio quotidie recitanda .",
-        "page": 318,
-        "raw": "Litterae eiusdem Pontificis ad Emi­ / nentissimum Archiepiscopum flo­ / rentinum quoad cultum sacrae / Familiae praestandum. Adiici tur / formula consecrationis familia­ / rum et oratio quotidie recitan­ / da . . » 318"
       },
       {
         "description": "-S53=^ ; Litterae Apostolicae SSmi D. N. Leonis XIII de regimine et disciplina Congregationis Anglo benedictinae novanda",
