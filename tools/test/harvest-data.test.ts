@@ -3933,9 +3933,12 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
       }];
     }));
     // `acts` is the scan alone, before the loader applies ASS_READINGS: the era report's §2
-    // prints it beside the entries the join then sees (94 = 72 scanned + 24 read, two readings
-    // replacing a scanned entry, at ASS 41 pp. 361 and 12). It was 85 = 61 scanned until phase
-    // 2c-ii-a read the brevia of the *Secretaria Brevium* under the ring of the Fisherman.
+    // prints it beside the entries the join then sees (97 = 78 scanned + 24 read, less the five
+    // readings that replace a scanned entry rather than add one, at ASS 23 p. 318, ASS 33
+    // pp. 355 and 385 and ASS 41 pp. 12 and 361). It was 85 before phase 2c-ii-a, and 94 after
+    // it read the brevia of the *Secretaria Brevium* under the ring of the Fisherman but before
+    // its Task 6 relaxed `header-mismatch` for this series, which read six more acts whole and
+    // made three more readings redundant.
     // ASS 1 (1865-66): the scan reads nothing -- the volume spells its headings `LITERAE
     // APOSTOLICAE` and `ALLOCVTIO`, neither of the class list -- and its summa has no papal
     // part at all (0 rows), so the check is vacuous and the three acts are curated readings.
