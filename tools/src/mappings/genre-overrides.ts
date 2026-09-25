@@ -33,7 +33,9 @@ export const GENRE_OVERRIDES: Record<string, { genre: string; note: string }> = 
       'What the source shows: the letters shelf carries it at '
       + '/content/leo-xiii/it/letters/documents/hf_l-xiii_let_18950710_permoti-nos.html, headed '
       + "'LITTERAE SSMI. DOMINI N. LEONIS XIII AD ORDINARIOS BELGI DE CAUSA SOCIALI' -- Litterae, to the "
-      + 'bishops of Belgium on the social question, not to the universal Church. '
+      + 'bishops of Belgium on the social question, not to the universal Church. The ASS heads it the '
+      + "same way at ASS 28 (1895) 4: 'LITTERAE SSmi. Domini N. Leonis XIII ad Ordinarios Belgi de "
+      + "causa sociali.' "
       + 'One of six acts of Leo XIII that vatican.va files on the letters shelf in Latin or '
       + 'Italian and under encyclicals in English alone: the harvester takes the encyclicals '
       + 'page (`languages: [\'EN\']`) and merge.ts folds the letters shelf into `alsoShelvedAs`, '
@@ -46,7 +48,9 @@ export const GENRE_OVERRIDES: Record<string, { genre: string; note: string }> = 
       'What the source shows: the Latin letters shelf carries it at '
       + '/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18981225_cum-diuturnum.html, headed '
       + "'Litterae S. D. N. Leonis XIII ad Ordinarios Americae Latinae qui Romam deligunt pro consiliis "
-      + "inter eosdem habendis' -- Litterae, convoking the bishops of Latin America to Rome. "
+      + "inter eosdem habendis' -- Litterae, convoking the bishops of Latin America to Rome. The ASS "
+      + "heads it the same way at ASS 31 (1898) 321: 'LITTERAE S. D. N. Leonis Xiii ad Ordinarios "
+      + "Americae Latinae qui Romam deli- / gunt pro consiliis inter eosdem habendis.' "
       + 'One of six acts of Leo XIII that vatican.va files on the letters shelf in Latin or '
       + 'Italian and under encyclicals in English alone: the harvester takes the encyclicals '
       + 'page (`languages: [\'EN\']`) and merge.ts folds the letters shelf into `alsoShelvedAs`, '
@@ -59,7 +63,9 @@ export const GENRE_OVERRIDES: Record<string, { genre: string; note: string }> = 
       'What the source shows: the Latin letters shelf carries it at '
       + '/content/leo-xiii/la/letters/documents/hf_l-xiii_let_19010820_reputantibus-saepe.html, headed '
       + "'Litterae ad Ordinarios Bohemiae et Moraviae quoad Linguarum Quaestionem' -- Litterae, to the "
-      + 'bishops of Bohemia and Moravia on the language question. The letters shelf titles the act '
+      + "bishops of Bohemia and Moravia on the language question. The ASS heads it the same way at ASS "
+      + "34 (1901) 321: 'LITTERAE SSmi. D. N Leonis XIII ad Ordinarios Bohemiae et Moraviae quoad lin- "
+      + "/ guarum quaestionem.' The letters shelf titles the act "
       + '*Reputantibus saepe*, where the encyclicals page this record was harvested from titles it '
       + '*Reputantibus*. '
       + 'One of six acts of Leo XIII that vatican.va files on the letters shelf in Latin or '
@@ -74,7 +80,9 @@ export const GENRE_OVERRIDES: Record<string, { genre: string; note: string }> = 
       'What the source shows: the letters shelf carries it at '
       + '/content/leo-xiii/it/letters/documents/hf_l-xiii_let_19011120_urbanitatis-veteris.html, headed '
       + "'SANCTISSIMI DOMINI NOSTRI LEONIS DIVINA PROVIDENTIA PAPAE XIII LITTERAE DE SEMINARIO CLERICORUM "
-      + "ATHENIS INSTITUENDO' -- Litterae, erecting a seminary at Athens. "
+      + "ATHENIS INSTITUENDO' -- Litterae, erecting a seminary at Athens. The ASS heads it the same way "
+      + "at ASS 34 (1901) 257: 'LITTERAE SSmi D. N. Papae Leonis XIII. - De Seminario Clericorum "
+      + "Athenis instituendo.' (the OCR reads the De as `Oe`). "
       + 'One of six acts of Leo XIII that vatican.va files on the letters shelf in Latin or '
       + 'Italian and under encyclicals in English alone: the harvester takes the encyclicals '
       + 'page (`languages: [\'EN\']`) and merge.ts folds the letters shelf into `alsoShelvedAs`, '
@@ -87,7 +95,10 @@ export const GENRE_OVERRIDES: Record<string, { genre: string; note: string }> = 
       'What the source shows: the letters shelf carries it at '
       + '/content/leo-xiii/it/letters/documents/hf_l-xiii_let_19020415_in-amplissimo.html, headed '
       + "'SANCTISSIMI DOMINI NOSTRI LEONIS DIVINA PROVIDENTIA PAPAE XIII LITTERAE' -- Litterae, to Cardinal "
-      + 'Gibbons and the bishops of the United States on their congratulations for his twenty-fifth year. '
+      + 'Gibbons and the bishops of the United States on their congratulations for his twenty-fifth '
+      + "year. The ASS heads it the same way at ASS 34 (1901) 623 -- the volume running into 1902 -- "
+      + "'LITTERAE SSmi. D. N. Leonis Xlii ad Emum. Gibbons Archiepiscopum Baltimorae aliosque "
+      + "Ordinarios foederatarum Americae Civitatum'. "
       + 'One of six acts of Leo XIII that vatican.va files on the letters shelf in Latin or '
       + 'Italian and under encyclicals in English alone: the harvester takes the encyclicals '
       + 'page (`languages: [\'EN\']`) and merge.ts folds the letters shelf into `alsoShelvedAs`, '
