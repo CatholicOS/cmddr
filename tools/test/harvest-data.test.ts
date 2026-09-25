@@ -3897,8 +3897,15 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // its 11 held, 2 are new since 2c-ii Task 6 relaxed `header-mismatch`: the ring brevia at
     // pp. 300 and 301, neither on the briefs shelf.
     const perVolume = Object.fromEntries(sources.map((s) => [s.key, cited.filter((d) => d.acta!.volume === s.volume).length]));
-    expect(perVolume).toEqual({ 'ass-1': 0, 'ass-12': 5, 'ass-23': 9, 'ass-33': 21, 'ass-41': 29 });
-    expect(cited).toHaveLength(64);
+    expect(perVolume).toEqual({
+      'ass-1': 0, 'ass-12': 5, 'ass-23': 9, 'ass-33': 21, 'ass-41': 29,
+      // Phase 2c-ii-b: the five volumes that complete Pius X. 111 references from 181 acts
+      // scanned; ASS 39 alone carries 49. Four more than the join first wrote, from the
+      // curation round: the greeting rule reading `Noster` (ass-headings.ts) and three
+      // curated rows, ASS:39:139 and the two match overrides of ASS:37:145 and ASS:40:130.
+      'ass-36': 7, 'ass-37': 19, 'ass-38': 9, 'ass-39': 49, 'ass-40': 27,
+    });
+    expect(cited).toHaveLength(175);
     // By pope and genre, from the harvest's own output on 2026-09-25: Leo XIII 35 (5 + 9 + 21),
     // Pius X 29; no reference into ASS 1, so none of Pius IX. The three bulls are the
     // constitutions *Conditae a Christo* (1900), *Sapienti consilio* and *Promulgandi*. The
@@ -3906,11 +3913,11 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // (ASS 33 p. 65) joins them as a letter once its shelf filing is corrected.
     const byIssuer = new Map<string, number>();
     for (const d of cited) byIssuer.set(d.issuerId, (byIssuer.get(d.issuerId) ?? 0) + 1);
-    expect(Object.fromEntries([...byIssuer].sort())).toEqual({ 'rp:leo-xiii': 35, 'rp:pius-x': 29 });
+    expect(Object.fromEntries([...byIssuer].sort())).toEqual({ 'rp:leo-xiii': 35, 'rp:pius-x': 140 });
     const byGenre = new Map<string, number>();
     for (const d of cited) byGenre.set(d.genre ?? 'none', (byGenre.get(d.genre ?? 'none') ?? 0) + 1);
     expect(Object.fromEntries([...byGenre].sort())).toEqual({
-      'apostolic-exhortation': 1, 'apostolic-letter': 10, encyclical: 7, letter: 43, 'papal-bull': 3,
+      'apostolic-exhortation': 1, 'apostolic-letter': 23, encyclical: 16, letter: 132, 'papal-bull': 3,
     });
   });
 
@@ -3955,8 +3962,18 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // brevia it had been refusing (ASS 33 p. 213; ASS 41 pp. 300, 301): all twelve ring
     // brevia are class `brief`, none of them on a shelf, so each is held here and none is
     // created.
-    expect(creation.held.filter((h) => h.entry.series === 'ASS' && h.reason === 'series-not-created')).toHaveLength(24);
-    expect(creation.held).toHaveLength(24);
+    expect(creation.held.filter((h) => h.entry.series === 'ASS' && h.reason === 'series-not-created')).toHaveLength(74);
+    // Phase 2c-ii-b raised the series' first holds of another kind -- six `ambiguous` and two
+    // `claimed-twice` -- and the curation round answered every one, so the reason map is again
+    // a single entry. Four of the six were the greeting rule: `Nostr\w+` did not read the
+    // nominative `Noster`, so `Dilecte Fili Noster et Venerabiles Fratres,` stood as the act's
+    // opening and told it apart from nothing. The other four are curated rows, each quoting
+    // its page (ASS:39:139, ASS:37:145, ASS:40:130; ASS 40 p. 193 stays unmatched, the shelf
+    // having no record of it at all).
+    const reasons = new Map<string, number>();
+    for (const h of creation.held) reasons.set(h.reason, (reasons.get(h.reason) ?? 0) + 1);
+    expect(Object.fromEntries([...reasons].sort())).toEqual({ 'series-not-created': 74 });
+    expect(creation.held).toHaveLength(74);
   });
 
   it('pins the scan and the summa check per volume as the era report §2 says', () => {
@@ -4020,6 +4037,16 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
       'ass-23': { acts: 9, defects: 4, rows: 14, claimed: 8, unclaimed: 6, omitted: 1 },
       'ass-33': { acts: 22, defects: 6, rows: 24, claimed: 16, unclaimed: 6, omitted: 4 },
       'ass-41': { acts: 37, defects: 8, rows: 37, claimed: 27, unclaimed: 10, omitted: 10 },
+      // Phase 2c-ii-b, the five volumes that complete Pius X (spec §10 decision 3). Every
+      // count here equals what tools/survey-ass.ts read from the store for these volumes, so
+      // the fixture path and the survey pass see the same volume. ASS 38's 13 acts are the
+      // volume's own: its summa lists 16 papal rows, and the Supplementum at pp. 433-702 -- in
+      // which no page carries `Pontificatus Nostri` -- hides none.
+      'ass-36': { acts: 38, defects: 20, rows: 36, claimed: 22, unclaimed: 14, omitted: 16 },
+      'ass-37': { acts: 33, defects: 16, rows: 32, claimed: 25, unclaimed: 7, omitted: 8 },
+      'ass-38': { acts: 13, defects: 6, rows: 16, claimed: 9, unclaimed: 7, omitted: 4 },
+      'ass-39': { acts: 60, defects: 18, rows: 75, claimed: 52, unclaimed: 23, omitted: 8 },
+      'ass-40': { acts: 37, defects: 10, rows: 38, claimed: 31, unclaimed: 7, omitted: 6 },
     });
     // The 24 readings, each with its cause quoted in the report's §2.5 (`ASS_READINGS`'s own
     // evidence): 8 a Roman date the scanner does not read (the Kalends and the Ides -- ASS:23:206,
@@ -4033,13 +4060,18 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // (ASS:41:555), `MDCCCCL` for `MDCCCCI` (ASS:33:643) and the greeting broken before its
     // `salutem`, read as the opening (ASS:41:12 -- a scanner branch until the final review,
     // then a reading, since one act of the sample prints the shape).
-    expect(Object.keys(ASS_READINGS)).toHaveLength(24);
+    // The 25th is phase 2c-ii-b's only reading: ASS:39:139, whose `opening` was the
+    // addressee's style (`Augustissima et potentissima Imperatrix, salutem et
+    // prosperitatem.`) rather than the act's first words. One volume of the 41 prints
+    // that shape, so it is a row and not a rule -- and the true opening is the shelf's
+    // own incipit, *Nunciatum est*.
+    expect(Object.keys(ASS_READINGS)).toHaveLength(25);
     const byVolume = new Map<string, number>();
     for (const k of Object.keys(ASS_READINGS)) {
       const v = `ass-${k.split(':')[1]}`;
       byVolume.set(v, (byVolume.get(v) ?? 0) + 1);
     }
-    expect(Object.fromEntries([...byVolume].sort())).toEqual({ 'ass-1': 3, 'ass-12': 1, 'ass-23': 5, 'ass-33': 6, 'ass-41': 9 });
+    expect(Object.fromEntries([...byVolume].sort())).toEqual({ 'ass-1': 3, 'ass-12': 1, 'ass-23': 5, 'ass-33': 6, 'ass-39': 1, 'ass-41': 9 });
   });
 
   it('satisfies invariant 25 across both series', () => {

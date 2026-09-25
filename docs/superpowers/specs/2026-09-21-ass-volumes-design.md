@@ -587,5 +587,45 @@ were checked, and this is the only one whose own description names a different c
 `CONSTITUTIO` to `CLASS_HEADINGS` has corpus-wide blast radius and belongs to the era that can
 measure it; until then the entry stands as recorded.
 
+**Measured (2026-09-26, phase 2c-ii-b).** The first era, Pius X (ASS 36–40; ASS 41 was 2c-i's),
+against what the survey predicted for it ([era report](../reports/2026-09-26-ass-volumes-pius-x.md)).
+
+*The prediction held exactly.* Acts, defects, summa rows, claimed, unclaimed and omitted match
+the survey's figures for these five volumes in every column, so the fixture path and the survey
+pass read the same volume: **181 acts** over 3,721 pages, **139 of 197** summa rows claimed
+(70.6 %), 70 defects. **111 references** written — ASS 36 7, ASS 37 19, ASS 38 9, ASS 39 49,
+ASS 40 27 — 91 by the unique rule, 18 by the opening rule, 2 by a curated override.
+
+*What the era cost in curation: three rows.* One `ASS_READINGS` (ASS:39:139, whose opening was
+the addressee's style, `Augustissima et potentissima Imperatrix,` — one volume of the 41 prints
+that shape) and two `ACTA_MATCH_OVERRIDES` (ASS:37:145, ASS:40:130, both against provisional
+date-keyed shelf records carrying no incipit). Three rows for 181 entries is the thinnest any
+ASS phase has needed, and it is the parser of 2c-ii-a that made it so.
+
+*One rule, and the sample could not have shown it.* `GREETING_RE`'s repeat group read `Nostri`,
+`Nostra` and `Nostrum` but not the nominative `Noster`, which is `Nost-e-r`: so `Dilecte Fili
+Noster et Venerabiles Fratres,` was never stripped and stood as four acts' `opening`, telling
+them apart from nothing. Measured over all 41 volumes, the fix (`Noste?r\w*`) leaves the
+survey's per-volume table byte-identical — it moves no act into or out of the scan, only the
+opening the join matches on. The series prints the shape 13 times in that position.
+
+*The holds are a shelf that does not exist.* **50 entries held, every one `series-not-created`,
+and 36 of them briefs**: Pius X has neither a briefs nor a bulls shelf (`pontiffs.ts`), so every
+act of the *Secretaria Brevium* these volumes print is the registry's gap rather than the
+scanner's. **No ambiguity survives**: the corpus totals for ambiguity and double claiming are the
+ones they were before the era joined.
+
+*ASS 38's supplement hides nothing.* The bound-in `Supplementum ad " Acta S. Sedis „ (VOL.
+XXXVIII)` at pp. 433–702 contains no page carrying `Pontificatus Nostri`, and no scanned entry
+falls in it; the volume's own summa at pp. 417–423 lists 16 papal rows and that is its whole
+papal account.
+
+*What 2c-ii-c and 2c-ii-d inherit.* 31 volumes: Leo XIII's (ASS 12–35, the three sampled
+excepted) and Pius IX's (ASS 1–11). Two things here will not repeat — Pius X's letters shelf is
+the era's fullest, and the brevia that had nowhere to go under him **do** have a shelf under Leo
+XIII (8 records) and Pius IX (5), so the same acts will behave differently. What should repeat is
+the shape of the round: a parser needing almost no rows, and a handful of provisional date-keyed
+records only a curated override can tell apart.
+
 **Out of scope for 2c-ii**, unchanged: the ASS-born documents and the reprints of earlier
 popes registered under their own issuers (2c-iii, decided from the eras' gap reports).

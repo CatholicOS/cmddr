@@ -784,6 +784,19 @@ export interface MatchOverride {
  * -- and quotes the index line and both headings.
  */
 export const ACTA_MATCH_OVERRIDES: Readonly<Record<string, MatchOverride>> = {
+  // Phase 2c-ii-b: two entries of Pius X's volumes whose only shelf record is a provisional
+  // one, keyed by date and carrying no incipit, so the join cannot tell which act it is.
+  // Each row names the act the record's own title describes.
+  'ASS:37:145': {
+    documentId: 'mag:pius-x/letter-1904-09-21',
+    indexLine: 'LITTERAE / Pii PP. X ad E.mum Urbis Vicarium de iniuria Deo atque / Pontifici irrogata a Congressu internationali « liberae cogi- / tationis » Romae habito (i).',
+    evidence: "ASS 37 (1904) 145 heads the act 'LITTERAE / Pii PP. X ad E.mum Urbis Vicarium de iniuria Deo atque / Pontifici irrogata a Congressu internationali « liberae cogi- / tationis » Romae habito', opening 'Nuova cagione di amarezze si e aggiunta in questi giorni' and dated 'Dal Vaticano il 21 Settembre 1904'. The shelf holds two letters of Pius X on that date: mag:pius-x/letter-1904-09-21, a provisional id with no incipit, titled 'La protesta del Papa contro il Congresso del libero pensiero' -- the same act, named by its subject where the ASS names it by its addressee -- and mag:pius-x/novies-saecularia-1904, incipit 'Novies saecularia', a different act. The provisional record carries no incipit, so the opening rule cannot choose between them and the entry is held `ambiguous`; this row names the one the title describes.",
+  },
+  'ASS:40:130': {
+    documentId: 'mag:pius-x/letter-1907-01-20',
+    indexLine: 'EPISTOLA / Pii PP. X ad Directionem Unionis oeconomicae socialis pro / catholicis Italiae.',
+    evidence: "ASS 40 (1907) 130 heads the act 'EPISTOLA / Pii PP. X ad Directionem Unionis oeconomicae socialis pro / catholicis Italiae.', opening 'Diletti figli, salute e Apostolica benedizione. Per la'. The volume prints a second act of the same date at p. 193, 'EPISTOLA / Pii PP. X ad Legatum Apostolicum Vallis Pompeianae.', opening 'Ut te deligeremus, qui Nobis a largitionibus esses,'. The shelf holds one record for 20 January 1907, the provisional mag:pius-x/letter-1907-01-20, titled 'Ai componenti la direzione provvisoria dell' Unione economico sociale per i cattolici italiani' -- the act of p. 130, not of p. 193. Both entries claimed it and neither reference was written; this row gives it to p. 130. The act of p. 193 has no shelf record at all and stays unmatched, a gap of the shelf rather than of the scan.",
+  },
   'AAS:116:189': {
     documentId: 'mag:francis-i/apostolic-letter-2024-01-16-2',
     indexLine: ' 16 Ian. 2024 « Finis et modus ». De limitibus et de rationibus administratio- / '
@@ -1500,6 +1513,19 @@ export const ASS_READINGS: Readonly<Record<string, AssReading>> = {
     opening: 'Iucundas scito Nobis communes litteras vestras fuisse. Memoriam',
     description: 'SSmi D. N. Leonis XIII ad Herbertum Story Praefectum et Vice-Cancellarium, item Rectorem, Doctores atque auditores Universitatis Studiorum Glasgaensis (Glascow), recolentes his diebus annum 450 ab institutione istius universitatis.',
     evidence: "ASS 33 (1900) 643-644, ass-33-1900.txt. p. 643 ll. 29-32 'IITTERAE SSmi D. N. Leonis XIII ad Herbertum Story Praefectum et Vice-Cancel- / larium, item Rectorem, Doctores atque auditores Universitatis Studiorum Glas- / gaensis (Glascow), recolentes his diebus annum 450 ab institutione istius / universitatis.', l. 34 'Iucundas scito Nobis communes litteras vestras fuisse. Me- / moriam beneficiorum colere'; no salutation line. Dated p. 644 'Datum Romae apud S. Petrum die IX Iunii Anno MDCCCCL / Pontificatus Nostri vicesimo quarto (1).', signed 'LFO PP. XIII.': the OCR's `MDCCCCL` (1950) is `MDCCCCI`, 1901 -- the volume's second year, the twenty-fourth of the pontificate the dateline names, and the year of the 450th anniversary the heading names. Why the scan missed the date: the year read is outside the volume's bound, and the `L` for `I` is not among the numeral repairs (one act). Answers the scan's no-date defect at p. 643 and the summa's row p. 643.",
+  },
+  // Phase 2c-ii-b, the curation round. ASS 39 (1906) 139: the act's `opening` was its
+  // salutation, because the addressee's style stands where the greeting does and no rule
+  // reads it -- `AUGUSTISSIMAE POTENTISSIMAEQUE PRINCIPI / IMPERATRICI SINARUM / PEKINUM`,
+  // then `Augustissima et potentissima Imperatrix, / salutem et prosperitatem.`. The shape
+  // occurs in this one volume of the 41 (`Augustissima et potentissima`, ass-39-1906.txt
+  // alone), so it is a row and not a rule. With the true opening the act matches the shelf
+  // uniquely: it is *Nunciatum est*, which the shelf already holds.
+  'ASS:39:139': {
+    pope: 'Pius X', category: 'EPISTOLA', date: '1904-07-06',
+    opening: 'Nunciatum est Nobis Maiestatem Tuam proximo Octobri mense',
+    description: 'Qua Pius PP. X gratulatur cum Imperatrice Sinarum septuagesimum aetatis annum proxime initura.',
+    evidence: "ASS 39 (1906) 139-140, ass-39-1906.txt. p. 139 'EPISTOLA', 'Qua Pius PP. X gratulatur cum Imperatrice Sinarum septua- / gesimum aetatis annum proxime initura.', then the addressee block 'AUGUSTISSIMAE POTENTISSIMAEQUE PRINCIPI / IMPERATRICI SINARUM / PEKINUM', 'PIUS PP. x', and the salutation 'Augustissima et potentissima Imperatrix, / salutem et prosperitatem.'; the act itself opens on the same page 'Nunciatum est Nobis Maiestatem Tuam proximo Octobri / mense inituram septuagesimum aetatis annum, felicemque / hanc rem ingenti gaudio futuram universo Sinarum populo.' Dated p. 140 'Datum Romae apud S. Petrum, die vi Iulii MDCCCCIV, / Pontificatus Nostri anno primo.' -- 6 July 1904, the same day as the act that ends on p. 139. Why the scan misread it: GREETING_RE does not know the addressee's style as a salutation, so the scan took 'Augustissima et potentissima Imperatrix, salutem et prosperitatem.' for the opening, which told the act apart from nothing and left it `ambiguous` against the pope's two letters of that date. Answers that ambiguity: the true opening is the shelf's incipit, mag:pius-x/nunciatum-est-1904.",
   },
   'ASS:41:3': {
     pope: 'Pius X', category: 'LITTERAE APOSTOLICAE', date: '1907-06-14',

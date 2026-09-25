@@ -449,8 +449,21 @@ record. Phase 2c-i joined the ASS sample without creating from it: **0 documents
 earlier popes are 2c-iii, to be decided from the sample's reverse gap — **41** shelf documents of the volume years carrying no
 reference (Pius IX 2, Leo XIII 24, Pius X 15; 18 letters, 14 apostolic letters, 6 encyclicals and 3 addresses), of
 which almost none has an ASS entry on its date, so they are acts the five volumes do not print rather than acts the scanner
-missed. The registry holds 496 shelf documents dated 1865–1908 and 64 of them now carry a reference; the remaining 36 volumes
-are 2c-ii.
+missed. The registry holds 496 shelf documents dated 1865–1908 and 64 of them carry a reference from the sample.
+
+Phase 2c-ii-b ([#25](https://github.com/CatholicOS/cmddr/issues/25), [spec §10 decision 3](docs/superpowers/specs/2026-09-21-ass-volumes-design.md),
+[era report](docs/superpowers/reports/2026-09-26-ass-volumes-pius-x.md)) then joined the rest of Pius X's pontificate, ASS 36–40,
+the era the survey put first: **181 acts** read by rule across 3,721 pages, **139 of 197** summa rows claimed (70.6 %, the best rate in
+the series) and **111 references** written — ASS 36 7, ASS 37 19, ASS 38 9, ASS 39 49, ASS 40 27, the ASS **175** in all. ASS 36 prints
+two popes, Leo XIII to his death on 20 July 1903 and Pius X from his election on 4 August, so its Leo XIII half belongs to 2c-ii-c.
+The curation round was three rows for 181 entries — the thinnest any ASS phase has needed, the parser of 2c-ii-a having already been
+taught what the series prints — and it left **no ambiguity at all**: the corpus totals for ambiguity and double claiming are the ones
+they were before the era joined. Its one rule was a blind spot the sample could not have shown: `GREETING_RE` read `Nostri` and
+`Nostra` but not the nominative `Noster`, so `Dilecte Fili Noster et Venerabiles Fratres,` stood unstripped as four acts' opening and
+told them apart from nothing. **50 entries are held**, every one `series-not-created`, and 36 of them are briefs with nowhere to go:
+Pius X has neither a briefs nor a bulls shelf, so the *Secretaria Brevium* acts these volumes print are the registry's gap and not the
+scanner's. ASS 38's bound-in `Supplementum` at pp. 433–702 hides no papal act — no page of it carries `Pontificatus Nostri`. The
+remaining **31** volumes are 2c-ii-c (Leo XIII) and 2c-ii-d (Pius IX).
 
 ### The document registry
 

@@ -25,7 +25,14 @@ const allDocs = readdirSync('data/documents').filter((f) => f.endsWith('.json'))
   .flatMap((f) => JSON.parse(readFileSync(`data/documents/${f}`, 'utf8')) as DocumentRecord[])
   .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
 const docs = allDocs.filter((d) => !isActaShelf(d.source?.shelf));
-const sources = ACTA_SOURCES.filter((s) => s.kind === 'ass');
+/**
+ * The five volumes of phase 2c-i. Pinned by number rather than by `kind`, which phase
+ * 2c-ii-b made ten: this report's §1 is the sample's reading and does not generalise to
+ * an era, so its sources are the sample's and the eras have their own generator
+ * (tools/ass-era-report.ts).
+ */
+const SAMPLE_VOLUMES = [1, 12, 23, 33, 41];
+const sources = ACTA_SOURCES.filter((s) => s.kind === 'ass' && SAMPLE_VOLUMES.includes(s.volume));
 const { parsed } = loadActaIndexes(sources);
 const scans = new Map(sources.map((s) => [s.key, JSON.parse(readFileSync(s.file, 'utf8')) as AssScan]));
 const entries = [...parsed.values()].flatMap((p) => p.entries) as AssEntry[];
@@ -82,7 +89,9 @@ const defectsBy = (reason: string) => sum((k) => scans.get(k)!.defects.filter((d
 const ringDefects = (k: string) => scans.get(k)!.defects.filter((d) => d.reason === 'no-heading' && /nnulo [Pp]iscatoris/.test(d.lines.join(' ')));
 /** An unclaimed summa row a curated reading now answers (its page carries a reading). */
 const answered = (k: string) => summaOf(k).unclaimed.filter((r) => of(k).some((e) => e.page === r.page && e.anchor === 'reading'));
-const readings = Object.entries(ASS_READINGS);
+/** The sample's readings alone: phase 2c-ii-b added one for ASS 39, which is not this report's. */
+const readings = Object.entries(ASS_READINGS)
+  .filter(([k]) => SAMPLE_VOLUMES.includes(Number(k.split(':')[1])));
 const romanDated = readings.filter(([, r]) => /Kalends|Ides/.test(r.evidence)).length;
 const headerRead = readings.filter(([, r]) => /headerAgrees/.test(r.evidence)).length;
 /** A reading that lands on a page the scan already has an entry for -- it *replaces* that entry (join.ts, applyAssReadings) rather than adding one. */
@@ -157,7 +166,9 @@ const allocutionsUndated = allocutions.filter((e) => e.date.includes('?'));
 const skippedDated = skipped.filter((e) => !e.date.includes('?'));
 const skippedAddressed = skippedDated.filter((e) => docs.some((d) => d.issuerId === POPE_ISSUERS[e.pope] && d.date === e.date && d.genre === 'discourse-address'));
 const provisional = docs.filter((d) => d.idStatus === 'provisional' && d.date >= '1865-01-01' && d.date <= '1908-12-31');
-const provisionalCited = provisional.filter((d) => d.acta !== undefined);
+/** Cited by one of this report's five volumes; 2c-ii-b's cite more (the era report has those). */
+const provisionalCited = provisional.filter((d) => d.acta !== undefined
+  && d.acta.series === 'ASS' && SAMPLE_VOLUMES.includes(d.acta.volume));
 const provisionalWithEntry = provisional.filter((d) => entries.some((e) => e.date === d.date && POPE_ISSUERS[e.pope] === d.issuerId));
 const assReprints = Object.entries(ACTA_REPRINTS).filter(([, r]) => r.citationOf.startsWith('ASS:'));
 const assShared = Object.keys(ACTA_SHARED_PAGES).filter((k) => k.startsWith('ASS:'));
@@ -172,10 +183,16 @@ const sharedNamed = assShared
  */
 const ASS_VOLUMES = 41;
 /** The volumes 2c-ii has left: the series, less the five this phase sampled. */
-const volumesLeft = ASS_VOLUMES - sources.length;
+/** Volumes of the series still unjoined: every ASS source, not this report's five. */
+const volumesLeft = ASS_VOLUMES - ACTA_SOURCES.filter((s) => s.kind === 'ass').length;
 const gap = (k: string) => noRef(sources.find((s) => s.key === k)!).length;
 const eraDocs = docs.filter((d) => d.date >= '1865-01-01' && d.date <= '1908-12-31');
-const assCited = allDocs.filter((d) => d.acta?.series === 'ASS');
+/**
+ * Documents citing one of *these five* volumes. Scoped like the sources and the readings:
+ * phase 2c-ii-b's five volumes of Pius X carry references of their own, and counting them
+ * here would make the sample's yield read as the series' (the era report has that figure).
+ */
+const assCited = allDocs.filter((d) => d.acta?.series === 'ASS' && SAMPLE_VOLUMES.includes(d.acta.volume));
 // Finding 10 names the two readings whose date rests on an emendation of the OCR: matched on
 // the phrase each row's evidence states the emendation in, and asserted so the prose cannot
 // go stale against the table.
@@ -330,8 +347,8 @@ p(`   reference at all (§5): Pius IX ${gap('ass-1')} (1865–66), Leo XIII ${ga
 p(`   none of them has an ASS entry on its date — §5's last column is empty in all but a handful — so these are acts the`);
 p(`   five volumes do not print, not acts the scanner missed: the ASS published the Holy See's acts selectively, and a`);
 p(`   volume of ${Math.min(...sources.map((s) => scans.get(s.key)!.pages))}–${Math.max(...sources.map((s) => scans.get(s.key)!.pages))} pages yields between ${Math.min(...sources.map((s) => of(s.key).length))} entries here (ASS 1, all three read by hand) and ${Math.max(...sources.map((s) => of(s.key).length))} (ASS 41). For the era as a whole the registry holds`);
-p(`   ${eraDocs.length} shelf documents dated 1865–1908 and **${eraDocs.filter((d) => d.acta).length} of them now carry a reference** (§7) — the five sample volumes' whole`);
-p(`   yield. That is the number 2c-ii moves, with ${volumesLeft} volumes left.`);
+p(`   ${eraDocs.length} shelf documents dated 1865–1908 and **${eraDocs.filter((d) => d.acta).length} of them now carry a reference** (§7), of which **${assCited.length}** are these five`);
+p(`   volumes' yield, phase 2c-ii-b's five of Pius X carrying the rest. That is the number 2c-ii moves, with ${volumesLeft} volumes left.`);
 p(`13. **The allocutions are the one category the sample cannot decide, and the count that would decide it is ${skippedAddressed.length}.** ${skipped.length} entries`);
 p(`   are skipped as a category the registry does not harvest (§3.4): ${allocutions.length} allocutions and the chirograph of ASS 33 p. 714.`);
 p(`   ${allocutionsUndated.length} of the ${allocutions.length} allocutions carry no date the scanner could read (\`????-??-??\`): the ASS prints an allocution under its`);
@@ -428,7 +445,7 @@ p('### 2.5 Curated readings (ASS_READINGS)');
 p();
 p('| Key | Pope | Category | Date | Opening | Evidence |');
 p('|---|---|---|---|---|---|');
-for (const [k, r] of Object.entries(ASS_READINGS)) p(`| ${k} | ${r.pope} | ${md(r.category)} | ${r.date} | *${md(r.opening)}* | ${md(r.evidence)} |`);
+for (const [k, r] of readings) p(`| ${k} | ${r.pope} | ${md(r.category)} | ${r.date} | *${md(r.opening)}* | ${md(r.evidence)} |`);
 p();
 p('## 3. The join (spec §5)');
 p();

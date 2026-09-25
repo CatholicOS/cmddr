@@ -125,7 +125,7 @@ export const ADDRESSEE_RE = /^\s*(?:Venerabili(?:bus)?\s+Frat|Dilect(?:o|is)\s+(
  * SERVORUM DEI`; the French letters' `Nos très chers Fils,` (ASS 41 361),
  * `Chers Fils salut et Bénédiction Apostolique.` (ASS 33 716).
  */
-export const GREETING_RE = /^\s*(?:Venerabil\w+\s+Frat\w+|Dilect\w+\s+Fili\w*|Signor\s+Cardinale|Carissim\w*|Ad (?:perpetuam|futuram) rei memoriam|Servus Servorum Dei|Salutem|(?:Nos\s+)?(?:très\s+)?chers?\s+Fils|Vénérables?\s+Frères?)(?:\s+(?:Nostr\w+|et|ac|Dilect\w+|Fili\w*|Venerabil\w+|Frat\w+))*\s*[,.]?\s*$|[Bb]enedictionem\.?\s*$|salutem et Apostolicam|\bsalutem\s+et\s*$|\bsalutem\b[^.]*\.\s*$|\bsalut\s+et\s+[Bb]énédiction/i;
+export const GREETING_RE = /^\s*(?:Venerabil\w+\s+Frat\w+|Dilect\w+\s+Fili\w*|Signor\s+Cardinale|Carissim\w*|Ad (?:perpetuam|futuram) rei memoriam|Servus Servorum Dei|Salutem|(?:Nos\s+)?(?:très\s+)?chers?\s+Fils|Vénérables?\s+Frères?)(?:\s+(?:Noste?r\w*|et|ac|Dilect\w+|Fili\w*|Venerabil\w+|Frat\w+))*\s*[,.]?\s*$|[Bb]enedictionem\.?\s*$|salutem et Apostolicam|\bsalutem\s+et\s*$|\bsalutem\b[^.]*\.\s*$|\bsalut\s+et\s+[Bb]énédiction/i;
 /**
  * The greeting set on the opening's own line, the opening after it: `Dilecti filii, salutem
  * et Apostolicam benedictionem. Saecu­` (ASS 33 (1900) 577), `Dilecte Fili, salutem et
