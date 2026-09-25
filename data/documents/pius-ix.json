@@ -557,7 +557,7 @@
     "id": "mag:pius-ix/cum-catholica-ecclesia-1860",
     "title": "Cum Catholica Ecclesia",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-ix",
     "issuerType": "pope",
     "date": "1860-03-26",
@@ -570,6 +570,9 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Cum Catholica Ecclesia",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "Breve"
   },
   {
@@ -767,7 +770,7 @@
     "id": "mag:pius-ix/multis-gravissimis-1864",
     "title": "Multis gravissimis",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-ix",
     "issuerType": "pope",
     "date": "1864-01-28",
@@ -780,6 +783,9 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Multis gravissimis",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "Breve"
   },
   {
@@ -922,7 +928,7 @@
     "id": "mag:pius-ix/ex-quo-infensissimi-1867",
     "title": "Ex quo infensissimi",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-ix",
     "issuerType": "pope",
     "date": "1867-11-14",
@@ -935,6 +941,9 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ex quo infensissimi",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "Breve"
   },
   {
@@ -1060,7 +1069,7 @@
     "id": "mag:pius-ix/apostolici-ministerii-1870",
     "title": "Apostolici ministerii",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-ix",
     "issuerType": "pope",
     "date": "1870-04-05",
@@ -1074,6 +1083,9 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Apostolici ministerii",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "Breve"
   },
   {
@@ -1434,7 +1446,7 @@
     "id": "mag:pius-ix/dives-in-misericordia-1877",
     "title": "Dives in misericordia",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-ix",
     "issuerType": "pope",
     "date": "1877-11-16",
@@ -1447,6 +1459,9 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Dives in misericordia",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "Breve"
   }
 ]

@@ -66,8 +66,8 @@
     "characteristics": {
       "type": "array",
       "uniqueItems": true,
-      "items": { "enum": ["apostolic-constitution", "dogmatic-definition", "motu-proprio"] },
-      "description": "Non-exclusive document-level metadata; each entry must be among the genre's allowedCharacteristics in data/genres.json. 'dogmatic-definition' asserts the document contains an ex cathedra definition and must be backed by a Table 2 assessment with register=extraordinary and intent=definitive. 'motu-proprio' records a mode of issuance (on the pope's own initiative), not a genre, and makes no authority claim."
+      "items": { "enum": ["apostolic-constitution", "dogmatic-definition", "in-forma-brevis", "motu-proprio"] },
+      "description": "Non-exclusive document-level metadata; each entry must be among the genre's allowedCharacteristics in data/genres.json. 'dogmatic-definition' asserts the document contains an ex cathedra definition and must be backed by a Table 2 assessment with register=extraordinary and intent=definitive. 'motu-proprio' records a mode of issuance (on the pope's own initiative), not a genre, and makes no authority claim. 'in-forma-brevis' records the diplomatic form of a brief (Litterae Apostolicae in forma Brevis, sealed sub anulo Piscatoris), not a genre, and makes no authority claim."
     },
     "keywords": {
       "type": "array",

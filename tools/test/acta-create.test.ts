@@ -209,6 +209,19 @@ describe('createFromActa: what is held (spec §2, §3, §5)', () => {
     expect(other.created).toHaveLength(1);
   });
 
+  it('counts a brief as another genre for the guards, as it was before in-forma-brevis replaced the brief genre', () => {
+    // Romanorum Pontificum (Benedict XV): the 1916 brief of the briefs shelf holds neither the
+    // 1914 nor the 1921 apostolic letter the AAS index prints under the same common incipit.
+    const brief = doc({ id: 'mag:benedict-xv/romanorum-pontificum-1916', incipit: 'Romanorum Pontificum', characteristics: ['in-forma-brevis'], date: '1916-02-25', issuerId: 'rp:benedict-xv' });
+    const r = run([entry({ series: 'AAS', volume: 7, year: 1915, pope: 'Benedictus XV', incipit: 'Romanorum Pontificum', date: '1914-12-31' })], [brief]);
+    expect(r.held).toEqual([]);
+    expect(r.created.map((c) => c.record.id)).toEqual(['mag:benedict-xv/romanorum-pontificum-1914']);
+    // Without the characteristic it is a record of the genre, and the guard holds.
+    const letter = run([entry({ series: 'AAS', volume: 7, year: 1915, pope: 'Benedictus XV', incipit: 'Romanorum Pontificum', date: '1914-12-31' })],
+      [{ ...brief, characteristics: undefined }]);
+    expect(reasons(letter)).toEqual([['same-incipit-elsewhere', ['mag:benedict-xv/romanorum-pontificum-1916']]]);
+  });
+
   it('holds both of two entries of one date with one incipit: the id scheme cannot tell them apart', () => {
     const r = run([
       entry({ category: 'LITTERAE DECRETALES', incipit: 'Vos autem', quoted: true, date: '2019-10-13', page: 1671 }),

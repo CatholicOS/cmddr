@@ -140,7 +140,7 @@ export interface ActaMatchResult {
 const inClass = (d: DocumentRecord, c: GenreClass): boolean =>
   d.genre === c.genre
   && (c.requires === undefined || (d.characteristics ?? []).includes(c.requires))
-  && (c.excludes === undefined || !(d.characteristics ?? []).includes(c.excludes));
+  && !(c.excludes ?? []).some((x) => (d.characteristics ?? []).includes(x));
 
 const candidate = (d: DocumentRecord): ActaCandidate => ({
   id: d.id, date: d.date, genre: d.genre, characteristics: d.characteristics ?? [], title: d.title,

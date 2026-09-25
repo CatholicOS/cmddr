@@ -35,8 +35,8 @@ export interface GenreClass {
   genre: string;
   /** The document must carry this characteristic (e.g. `motu-proprio`). */
   requires?: string;
-  /** The document must not carry this characteristic. */
-  excludes?: string;
+  /** The document must carry none of these characteristics. */
+  excludes?: readonly string[];
 }
 
 export interface ActaCategory {
@@ -158,11 +158,15 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
       'EPISTULA APOSTOLICA MOTU PROPRIO DATA'],
     classes: [{ genre: 'apostolic-letter', requires: 'motu-proprio' }], harvested: 'yes' },
   // The apost_letters shelf proper: beatification letters and the Latin-incipit tail. A
-  // document bearing `motu-proprio` belongs to the category above, so it is excluded here.
+  // document bearing `motu-proprio` belongs to the category above, so it is excluded here;
+  // one bearing `in-forma-brevis` is a brief of the briefs shelf, which the *Brevia* row
+  // matches, and is excluded too -- it was of another genre until the brief became a
+  // characteristic, and joining it here pairs acts that only share a date or an incipit
+  // (Venerabilis Decessor with Superiore iam aetate, both 8 September 1950).
   // The OCR spellings of the volumes: `LITTEEAE APOSTOLICAE` (AAS 28, 1936), `LITTEBAE
   // APOSTOLICAE` (AAS 41, 1949).
   { id: 'Litterae Apostolicae', headings: ['LITTERAE APOSTOLICAE', 'LITTEEAE APOSTOLICAE', 'LITTEBAE APOSTOLICAE'],
-    classes: [{ genre: 'apostolic-letter', excludes: 'motu-proprio' }], harvested: 'yes' },
+    classes: [{ genre: 'apostolic-letter', excludes: ['motu-proprio', 'in-forma-brevis'] }], harvested: 'yes' },
   // A category the index uses for a few apostolic letters that are not beatifications --
   // Patris corde (2021), Admirabile signum (2019), letters to a named addressee that
   // vatican.va files on apost_letters. Singular when the year has one.
@@ -171,7 +175,7 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // AAS 18 (1926) 533 prints the plural with the O of the era (`II. - EPISTOLAE APOSTOLICAE`:
   // *Paterna sane* to the Mexican bishops, 2 February 1926, p. 175, and one more).
   { id: 'Epistulae Apostolicae', headings: ['EPISTULAE APOSTOLICAE', 'EPISTULA APOSTOLICA', 'EPISTOLA APOSTOLICA', 'EPISTOLAE APOSTOLICAE'],
-    classes: [{ genre: 'apostolic-letter', excludes: 'motu-proprio' }], harvested: 'yes' },
+    classes: [{ genre: 'apostolic-letter', excludes: ['motu-proprio', 'in-forma-brevis'] }], harvested: 'yes' },
   // Bulls of indiction (Misericordiae Vultus 2015, Spes non confundit 2024) are on the bulls
   // shelf; the four cardinalatial-title erections of 28 November 2020 that the 2020 index
   // files here are the kind vatican.va files on apost_letters ("sub plumbo", README), so
@@ -181,7 +185,7 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // Benedict XV, which is harvested).
   { id: 'Litterae Apostolicae sub plumbo datae',
     headings: ['LITTERAE APOSTOLICAE SUB PLUMBO DATAE', 'APOSTOLICAE SUB PLUMBO LITTERAE'],
-    classes: [{ genre: 'papal-bull', excludes: 'apostolic-constitution' }], harvested: 'partly' },
+    classes: [{ genre: 'papal-bull', excludes: ['apostolic-constitution'] }], harvested: 'partly' },
   // Canonisation decretals. The registry's papal-bull row covers them (README, Table 1:
   // "a bull of canonization bears neither" characteristic), but vatican.va's bulls shelf
   // for Francis carries only the two bulls of indiction, so every decretal is expected to
@@ -190,10 +194,10 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // under the same heading, in the OCR spellings `LITTEBAE DECRETALES` (AAS 40, 1948) and
   // `LITTERAE DECKETALES` (AAS 47, 1955) too; neither pope's bulls shelf carries them.
   { id: 'Litterae Decretales', headings: ['LITTERAE DECRETALES', 'LITTEBAE DECRETALES', 'LITTERAE DECKETALES'],
-    classes: [{ genre: 'papal-bull', excludes: 'apostolic-constitution' }], harvested: 'partly' },
+    classes: [{ genre: 'papal-bull', excludes: ['apostolic-constitution'] }], harvested: 'partly' },
   // Anticipated by the spec (§2.2) for other years; not printed in any index 2015-2024.
   { id: 'Bullae', headings: ['BULLAE'],
-    classes: [{ genre: 'papal-bull', excludes: 'apostolic-constitution' }], harvested: 'partly' },
+    classes: [{ genre: 'papal-bull', excludes: ['apostolic-constitution'] }], harvested: 'partly' },
   // Ordinary papal correspondence: the letters shelf, harvested for Leo XIII, Pius X,
   // Pius XI, Pius XII and John Paul I (pontiffs.ts) and out of scope for the others (#4),
   // hence `partly`: the matcher attempts every entry, and the creator creates only for a
@@ -212,10 +216,13 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // 3, 129, 198, 577); and `BREVE` (ASS 12 (1879) 588, `BREVE quo
   // Sodalitates ab adoratione perpetua SSmi Sacramenti …`; ASS 33 (1900) 401, `BREVE, quo
   // indulgentia centum dierum conceditur …`, under the running head EX ACTIS
-  // CONSISTORIALIBUS); the shelf class is `brief`. Harvested partly: the briefs shelf exists
+  // CONSISTORIALIBUS); the class is an apostolic letter bearing `in-forma-brevis` (README,
+  // *The brief and the encyclical*), which the briefs shelf's records carry, so a brief
+  // matches only a document filed as one, as it did while `brief` was a genre. Harvested
+  // partly: the briefs shelf exists
   // for Leo XIII (8 records), Pius IX (5, from his flat page), Pius XI, Pius XII, Benedict XV
   // and Benedict XIV, and not for Pius X (pontiffs.ts).
-  { id: 'Brevia', headings: ['LITTERAE IN FORMA BREVIS', 'BREVE'], classes: [{ genre: 'brief' }], harvested: 'partly' },
+  { id: 'Brevia', headings: ['LITTERAE IN FORMA BREVIS', 'BREVE'], classes: [{ genre: 'apostolic-letter', requires: 'in-forma-brevis' }], harvested: 'partly' },
   // The 2010 index heads Benedict XVI's pastoral letter to the Catholics of Ireland (19
   // March 2010, AAS 102 (2010) 209) `VIII – LITTERAE PASTORALES`: one heading for one act,
   // which vatican.va files on the year-partitioned letters shelf (…/letters/2010/documents/

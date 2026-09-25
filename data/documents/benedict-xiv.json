@@ -22,7 +22,7 @@
     "id": "mag:benedict-xiv/non-ambigimus-1741",
     "title": "Non Ambigimus",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xiv",
     "issuerType": "pope",
     "date": "1741-05-30",
@@ -35,6 +35,9 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Non Ambigimus",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "Breve"
   },
   {
@@ -60,7 +63,7 @@
     "id": "mag:benedict-xiv/quanta-cura-1741",
     "title": "Quanta Cura",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xiv",
     "issuerType": "pope",
     "date": "1741-06-30",
@@ -73,13 +76,16 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quanta Cura",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "Breve"
   },
   {
     "id": "mag:benedict-xiv/in-suprema-universalis-1741",
     "title": "In Suprema Universalis",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xiv",
     "issuerType": "pope",
     "date": "1741-08-22",
@@ -92,6 +98,9 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "In Suprema Universalis",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "Breve"
   },
   {
@@ -212,7 +221,7 @@
     "id": "mag:benedict-xiv/nimiam-licentiam-1743",
     "title": "Nimiam Licentiam",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xiv",
     "issuerType": "pope",
     "date": "1743-05-18",
@@ -225,6 +234,9 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Nimiam Licentiam",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "Breve"
   },
   {
@@ -269,7 +281,7 @@
     "id": "mag:benedict-xiv/in-suprema-catholicae-1744",
     "title": "In Suprema Catholicae",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xiv",
     "issuerType": "pope",
     "date": "1744-11-20",
@@ -282,13 +294,16 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "In Suprema Catholicae",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "Breve"
   },
   {
     "id": "mag:benedict-xiv/cum-multorum-charitate-1745",
     "title": "Cum Multorum Charitate",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xiv",
     "issuerType": "pope",
     "date": "1745-02-18",
@@ -301,6 +316,9 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Cum Multorum Charitate",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "Breve"
   },
   {
@@ -383,7 +401,7 @@
     "id": "mag:benedict-xiv/quemadmodum-nihil-1746",
     "title": "Quemadmodum Nihil",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xiv",
     "issuerType": "pope",
     "date": "1746-12-16",
@@ -396,6 +414,9 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quemadmodum Nihil",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "Breve"
   },
   {
@@ -744,7 +765,7 @@
     "id": "mag:benedict-xiv/quam-ex-sublimi-1755",
     "title": "Quam Ex Sublimi",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xiv",
     "issuerType": "pope",
     "date": "1755-08-08",
@@ -757,6 +778,9 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quam Ex Sublimi",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "Breve"
   },
   {
