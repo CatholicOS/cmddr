@@ -18,7 +18,7 @@ describe('the AAS category table', () => {
   it('maps every heading variant to its row, and an unseen one to null', () => {
     expect(categoryForHeading('II – ADHORTATIO APOSTOLICA POSTSYNODALIS')?.id).toBe('Adhortationes Apostolicae');
     expect(categoryForHeading('CHIROGRAPHI')?.id).toBe('Chirographa');
-    expect(categoryForHeading('EPISTULA APOSTOLICA')?.classes).toEqual([{ genre: 'apostolic-letter', excludes: 'motu-proprio' }]);
+    expect(categoryForHeading('EPISTULA APOSTOLICA')?.classes).toEqual([{ genre: 'apostolic-letter', excludes: ['motu-proprio', 'in-forma-brevis'] }]);
     expect(categoryForHeading('NUNTII')?.classes.map((c) => c.genre)).toEqual(['message', 'urbi-et-orbi']);
     // A bare *Adhortatio* maps to the exhortation class as `partly` since AAS 46 (1954)
     // printed *I rapidi progressi* under it: matched where the shelf has one, never created.
@@ -49,7 +49,7 @@ describe('the AAS category table', () => {
     for (const c of ACTA_CATEGORIES) {
       for (const k of c.classes) {
         expect(byId.has(k.genre), c.id).toBe(true);
-        for (const ch of [k.requires, k.excludes]) {
+        for (const ch of [k.requires, ...(k.excludes ?? [])]) {
           if (ch !== undefined) expect(byId.get(k.genre), `${c.id}: ${ch}`).toContain(ch);
         }
       }

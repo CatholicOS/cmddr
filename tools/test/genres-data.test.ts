@@ -16,13 +16,14 @@ describe('data/genres.json', () => {
     }
   });
 
-  it('transcribes all seventeen rows of README Table 1', () => {
+  it('transcribes all sixteen rows of README Table 1', () => {
     // #10: motu proprio is a characteristic of apostolic-letter, not a row; #15 adds
     // urbi-et-orbi; #4 adds message, placed after audience-catechesis and before urbi-et-orbi.
-    expect(genres).toHaveLength(17);
+    // The brief, likewise, is a characteristic of apostolic-letter (in-forma-brevis), not a row.
+    expect(genres).toHaveLength(16);
     expect(genres.map((g) => g.id)).toEqual([
       'constitution', 'decree', 'declaration', 'papal-bull', 'encyclical',
-      'apostolic-exhortation', 'apostolic-letter', 'brief', 'letter',
+      'apostolic-exhortation', 'apostolic-letter', 'letter',
       'discourse-address', 'homily', 'prayer', 'audience-catechesis', 'message', 'urbi-et-orbi',
       'episcopal-pastoral-letter', 'episcopal-homily',
     ]);
@@ -43,7 +44,7 @@ describe('data/genres.json', () => {
     const by = Object.fromEntries(genres.map((g) => [g.id as string, g]));
     expect(by['papal-bull']!.allowedCharacteristics)
       .toEqual(['apostolic-constitution', 'dogmatic-definition']);
-    expect(by['apostolic-letter']!.allowedCharacteristics).toEqual(['motu-proprio']);
+    expect(by['apostolic-letter']!.allowedCharacteristics).toEqual(['in-forma-brevis', 'motu-proprio']);
     for (const g of genres) {
       if (g.id === 'papal-bull' || g.id === 'apostolic-letter') continue;
       expect(g.allowedCharacteristics, g.id as string).toBeUndefined();

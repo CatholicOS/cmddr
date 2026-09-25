@@ -141,7 +141,6 @@ describe('genre mapping', () => {
   it('maps the common source labels', () => {
     expect(SOURCE_GENRE_TO_GENRE['enciclica']!.genre).toBe('encyclical');
     expect(SOURCE_GENRE_TO_GENRE['bolla']!.genre).toBe('papal-bull');
-    expect(SOURCE_GENRE_TO_GENRE['breve']!.genre).toBe('brief');
     expect(SOURCE_GENRE_TO_GENRE['allocuzione']!.genre).toBe('discourse-address');
     expect(SOURCE_GENRE_TO_GENRE['allocutio']!.genre).toBe('discourse-address');
   });
@@ -159,6 +158,17 @@ describe('genre mapping', () => {
       expect(m.characteristics, label).toEqual(['motu-proprio']);
     }
     expect(Object.values(SOURCE_GENRE_TO_GENRE).some((m) => m.genre === 'motu-proprio')).toBe(false);
+  });
+
+  it('treats the brief as an apostolic-letter characteristic, not a genre', () => {
+    // Litterae Apostolicae in forma Brevis: the form the letter was sealed in, sub anulo
+    // Piscatoris, not a genre standing beside the apostolic letter.
+    for (const label of ['breve', 'briefs']) {
+      const m = SOURCE_GENRE_TO_GENRE[label]!;
+      expect(m.genre, label).toBe('apostolic-letter');
+      expect(m.characteristics, label).toEqual(['in-forma-brevis']);
+    }
+    expect(Object.values(SOURCE_GENRE_TO_GENRE).some((m) => m.genre === 'brief')).toBe(false);
   });
 
   it('maps a dogmatic constitution to the conciliar genre with its descriptive title', () => {

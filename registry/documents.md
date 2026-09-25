@@ -37,8 +37,7 @@ Every document appears in both views below; neither is a subset of the other.
 | Genre | Documents | Dates |
 | --- | --- | --- |
 | [`apostolic-exhortation`](documents/by-genre/apostolic-exhortation.md) | 57 | 1908-08-04 – 2025-10-04 |
-| [`apostolic-letter`](documents/by-genre/apostolic-letter.md) | 3725 | 1857-06-15 – 2026-08-29 |
-| [`brief`](documents/by-genre/brief.md) | 30 | 1741-05-30 – 1950-09-08 |
+| [`apostolic-letter`](documents/by-genre/apostolic-letter.md) | 3755 | 1741-05-30 – 2026-08-29 |
 | [`constitution`](documents/by-genre/constitution.md) | 6 | 1870-04-24 – 1965-12-07 |
 | [`declaration`](documents/by-genre/declaration.md) | 3 | 1965-10-28 – 1965-12-07 |
 | [`decree`](documents/by-genre/decree.md) | 9 | 1963-12-04 – 1965-12-07 |

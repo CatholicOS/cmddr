@@ -35,7 +35,7 @@
     "allowedCharacteristics": {
       "type": "array",
       "uniqueItems": true,
-      "items": { "enum": ["apostolic-constitution", "dogmatic-definition", "motu-proprio"] },
+      "items": { "enum": ["apostolic-constitution", "dogmatic-definition", "in-forma-brevis", "motu-proprio"] },
       "description": "Characteristics a document of this genre may bear (document.characteristics). A genre without this field allows none. Mirrors how issuerTypes constrains document.issuerType."
     },
     "description": { "type": "string" }

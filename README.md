@@ -55,7 +55,7 @@ We therefore split the model into **two tables**:
 
 **Why a ceiling can sit below its issuer’s capacity.** A pope can define, yet most papal genres are capped at Authentic
 Ordinary, and two genres of the same diplomatic family split — Apostolic Letter reaches Ordinary Universal while Letter
-and Brief do not. The gap is a claim about the *instrument*, not about the issuer. A papal document does not itself
+does not. The gap is a claim about the *instrument*, not about the issuer. A papal document does not itself
 exercise the ordinary and universal magisterium, which belongs to the bishops dispersed throughout the world in union with
 the pope; what it does is **attest** that such teaching exists and is to be held definitively (*Evangelium Vitae* 62:
 taught “by the ordinary and universal Magisterium”). An attestation of definitive teaching is a solemn act, and the Holy
@@ -84,10 +84,9 @@ addressee, and a possible `regional` value are all deferred to [#4](https://gith
 | Decree | Ecumenical Council | universal | Authentic Ordinary | Extraordinary | May carry canons/anathemas that *are* definitions (e.g. Trent); assess per canon. |
 | Declaration | Ecumenical Council | universal | Authentic Ordinary | Extraordinary | Lowest conciliar genre by presumptive weight. |
 | Papal Bull | Pope | universal | Authentic Ordinary | Extraordinary | The most solemn **sealed form** of papal document (lead/wax seal — Latin *bulla*). May bear one or more of the non-exclusive *characteristics* listed below the table. |
-| Encyclical | Pope | universal | Authentic Ordinary | Ordinary Universal | Can invoke the ordinary and universal magisterium (e.g. *Evangelium Vitae*). |
+| Encyclical | Pope | universal | Authentic Ordinary | Ordinary Universal | Can invoke the ordinary and universal magisterium (e.g. *Evangelium Vitae*). Formally a letter (*Litterae Encyclicae*, *Epistula Encyclica*), yet a genre of its own rather than a kind of Apostolic Letter (see *The brief and the encyclical* below). |
 | Apostolic Exhortation | Pope | universal | Authentic Ordinary | Authentic Ordinary | Typically post-synodal, hortatory. |
-| Apostolic Letter | Pope | universal | Authentic Ordinary | Ordinary Universal | Formal papal act in the pope’s own name (*Litterae Apostolicae*; vatican.va’s *Lettere Apostoliche* shelf): Latin incipit, entered in the acts, juridical effect. Spans universal teaching (*Ordinatio Sacerdotalis*, *Tertio Millennio Adveniente*) and local governance — erecting dioceses, proclaiming patrons (*Regionis Capitanatae*) — so `document.scope` is expected per document. *Ordinatio Sacerdotalis* is the exception within the genre, not the type. May bear the `motu-proprio` *characteristic* listed below the table. |
-| Brief | Pope | universal | Authentic Ordinary | Authentic Ordinary | Less formal papal letter. |
+| Apostolic Letter | Pope | universal | Authentic Ordinary | Ordinary Universal | Formal papal act in the pope’s own name (*Litterae Apostolicae*; vatican.va’s *Lettere Apostoliche* shelf): Latin incipit, entered in the acts, juridical effect. Spans universal teaching (*Ordinatio Sacerdotalis*, *Tertio Millennio Adveniente*) and local governance — erecting dioceses, proclaiming patrons (*Regionis Capitanatae*) — so `document.scope` is expected per document. *Ordinatio Sacerdotalis* is the exception within the genre, not the type. May bear the `in-forma-brevis` and `motu-proprio` *characteristics* listed below the table: the brief is an apostolic letter, not a genre of its own (see *The brief and the encyclical* below). |
 | Letter | Pope | local | Authentic Ordinary | Authentic Ordinary | Ordinary papal correspondence (*Epistula*; vatican.va’s *Lettere* shelf): someone is written to, on an occasion, usually in a vernacular, with no formal instrument behind it; titled by addressee and occasion, never by incipit. What separates it from the Apostolic Letter is form, not audience or weight — the *Letter to Artists* (1999) addresses the whole world and is still a letter. Weight is per statement, not per addressee. |
 | Discourse / Address | Pope | universal | Authentic Ordinary | Authentic Ordinary | Pastoral vehicle; cannot host a definition. |
 | Homily | Pope | universal | Authentic Ordinary | Authentic Ordinary | |
@@ -120,17 +119,49 @@ sub-genres, these are non-exclusive, document-level **characteristics** that a g
 one, or several of the characteristics its genre allows, and none that it does not (invariant 22 in [SCHEMA.md](SCHEMA.md)).
 Modeling them as document-level metadata (not separate genres) keeps the base genre stable, so it can be baked into a document’s
 canonical id without forcing a mutually-exclusive choice. Two genres currently allow characteristics: **Papal Bull** allows
-`apostolic-constitution` and `dogmatic-definition`; **Apostolic Letter** allows `motu-proprio`.
+`apostolic-constitution` and `dogmatic-definition`; **Apostolic Letter** allows `in-forma-brevis` and `motu-proprio`.
 
 | Characteristic | Allowed by | Meaning | Bearing on authority |
 |---|---|---|---|
 | `apostolic-constitution` | Papal Bull | The most solemn form of papal *legislation* — governance, laws, promulgations (e.g. *Pastor Bonus*, *Fidei Depositum*). | Formal solemnity; the register of any teaching is still assessed per statement. |
 | `dogmatic-definition` | Papal Bull | Contains an *ex cathedra* dogmatic definition (e.g. *Ineffabilis Deus*, 1854; *Munificentissimus Deus*, 1950). | Its defining statement is **Extraordinary / infallible** — recorded as a Table 2 assessment. |
+| `in-forma-brevis` | Apostolic Letter | Issued as a brief — *Litterae Apostolicae in forma Brevis*, sealed with the Fisherman’s ring (*sub anulo Piscatoris*) rather than a lead bulla, and until 1967 expedited by the *Secretaria Brevium* — a form of the instrument, not a genre (e.g. *Superiore iam aetate*, 1950; *Quod Ioannes*, 1917). | None; the register of any statement is assessed per statement in Table 2. |
 | `motu-proprio` | Apostolic Letter | Issued on the pope’s own initiative — a mode of issuance, not a genre; *Litterae Apostolicae motu proprio datae* (e.g. *Summorum Pontificum*, *Traditionis Custodes*, *Ad Tuendam Fidem*). | None; the register of any statement is assessed per statement in Table 2. |
 
 *Munificentissimus Deus* bears **both** bull characteristics: it is an apostolic constitution that also defines a dogma. A bull
 of canonization bears **neither**. *Socialium Scientiarum* (1994) is an apostolic letter that bears `motu-proprio`; *Ordinatio
 Sacerdotalis* is one that does not.
+
+#### The brief and the encyclical
+
+Both the brief and the encyclical are called *litterae* or *epistulae*, and both could be read as kinds of apostolic
+letter. The registry treats them differently, and the reason is not that one of them is called a letter. In papal
+diplomatics *litterae* covers nearly every papal instrument: the bull itself is *litterae apostolicae sub plumbo*
+(H. Bresslau, *Handbuch der Urkundenlehre*; Th. Frenz, *Papsturkunden des Mittelalters und der Neuzeit*, 1986). If being
+called a letter were the test, the Papal Bull would fold into the Apostolic Letter as well. The test is what the Holy
+See's own record calls the act.
+
+- **The brief is an apostolic letter**, and its form is recorded as the `in-forma-brevis` characteristic. The *Acta*
+  head these acts `LITTERAE in forma Brevis` (ASS 23 (1890) 437; ASS 33 (1900) 3). The brief is *litterae apostolicae*
+  sealed with the Fisherman's ring instead of the lead bulla, and until Paul VI's *Regimini Ecclesiae Universae* (1967)
+  abolished the office, it was issued through the *Secretaria Brevium*. That is a mode of issuance, in the same way that
+  *motu proprio* is. Keeping the brief as a genre split identical acts across two rows:
+  - beatification: *Quod Ioannes* (1917) against the beatification letters of later popes;
+  - a patronage proclaimed: *Superiore iam aetate* (1950) against *Regionis Capitanatae*;
+  - indulgences granted: *Romanorum Pontificum* (1916) against *Beati Petri Apostolorum Principis* (1917).
+
+  Nor did the brief's lower ceiling hold. The brief was a sealed, registered act that carried doctrinal censure
+  (Innocent XII's *Cum alias*, 1699, against 23 propositions of Fénelon) and grave governance (Clement XIV's *Dominus ac
+  Redemptor*, 1773). It therefore takes the Apostolic Letter's ceiling. The shelf a brief came from is still recorded in
+  `source.shelf` and `sourceGenreLabel`.
+- **The encyclical stays a genre of its own.** The record never heads an encyclical *Litterae Apostolicae*: it heads it
+  *Litterae Encyclicae* or *Epistula Encyclica*, a separate kind of papal letter. Since Benedict XIV's *Ubi primum* (1740)
+  it has had its own form, a circular to the episcopate with neither bull formulas nor the ring. The Magisterium names it
+  as a class whose teaching calls for assent (Pius XII, *Humani generis* 20), within the criterion of "the character of
+  the documents" (*Lumen gentium* 25; *Donum veritatis* 24). The commentators rank it as a category of its own (F. A.
+  Sullivan, *Creative Fidelity*, 1996; F. G. Morrissey, *Papal and Curial Pronouncements*, 1992). Morrissey's distinction
+  between the *litterae encyclicae*, addressed to the whole Church, and the *epistula encyclica*, addressed to part of it,
+  is a candidate characteristic of this genre. It is deferred until it can be read from the headings.
 
 #### On sources: chancery shelves are not a magisterial taxonomy
 
@@ -155,7 +186,7 @@ messages is `missions` on every page from Paul VI to Francis and `mission` on Le
 above), and `motu-proprio` is one: a document filed on the *Motu Proprio* shelf, or on that shelf as well as another, is an
 `apostolic-letter` bearing the `motu-proprio` characteristic, and the shelf it came from is still recorded on the document.
 
-Our own genre rows accordingly mix two axes: diplomatic **form** (Papal Bull, Apostolic Letter, Brief, Letter) and **content type**
+Our own genre rows accordingly mix two axes: diplomatic **form** (Papal Bull, Apostolic Letter, Letter) and **content type**
 (Encyclical, Apostolic Exhortation) — an Encyclical being, formally, itself a species of letter (*Litterae Encyclicae*). That
 mixture is deliberate and follows ordinary usage, but it means the existence of a vatican.va shelf is never by itself an argument
 for a genre row, a default, or a ceiling. Each of those has to be argued from the act.

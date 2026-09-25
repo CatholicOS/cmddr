@@ -340,7 +340,7 @@ function readAct(pages: readonly string[], anchor: Anchor, floor: Located | null
   // The class, from the heading's own class word -- or `BREVE`, the class of the one act
   // the walk-back opens on a line that carries none: a breve of the *Secretaria Brevium*,
   // whose title is a description and whose class the ring it closes under declares
-  // (categories.ts's `Brevia` row, shelf class `brief`).
+  // (categories.ts's `Brevia` row, class apostolic-letter + `in-forma-brevis`).
   //
   // `headingOf` returning null is reachable **only** from the ring path above: the first
   // walk-back (`isHeading`) accepts a line precisely because `headingOf` reads a class word
