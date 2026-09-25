@@ -19,9 +19,16 @@ export const SOURCE_GENRE_TO_GENRE: Record<string, GenreMapping> = {
   'bolla': { genre: 'papal-bull' },
   'bulls': { genre: 'papal-bull' },
   // A brief is an apostolic letter in forma Brevis -- sealed sub anulo Piscatoris and issued
-  // through the Secretaria Brevium -- not a genre standing beside it: the ASS head these
-  // acts `LITTERAE in forma Brevis` (ASS 23 (1890) 437; ASS 33 (1900) 3), and vatican.va files
-  // Mirabilis Deus (Pius XI) and Quod nobis (Benedict XV) on both apost_letters and briefs.
+  // through the Secretaria Brevium -- not a genre standing beside it. What the source shows,
+  // these keys being vatican.va's own shelf labels: it titles Leo XIII's In supremo (15
+  // December 1890) 'Litterae in forma Brevis: In supremo', naming the act an apostolic letter
+  // in that form; every source page read for this change -- 23 of the 30 records, across
+  // Benedict XIV, Pius IX, Leo XIII and Pius XII -- closes 'sub anulo Piscatoris' / 'sotto
+  // l'anello del Pescatore' and none 'sub plumbo', the sealing that distinguishes the form;
+  // and it files Mirabilis Deus (Pius XI, 1929), Quod nobis and In Africam (Benedict XV, 1920)
+  // on both apost_letters and briefs, as it files Socialium Scientiarum on both apost_letters
+  // and motu_proprio. The ASS head the same acts `LITTERAE in forma Brevis` (ASS 23 (1890)
+  // 437; ASS 33 (1900) 3), which corroborates the shelf rather than carrying it.
   // Modelled as motu_proprio is below -- the base genre plus a characteristic.
   'breve': { genre: 'apostolic-letter', characteristics: ['in-forma-brevis'] },
   'briefs': { genre: 'apostolic-letter', characteristics: ['in-forma-brevis'] },
