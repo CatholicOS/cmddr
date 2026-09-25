@@ -53,7 +53,7 @@ export const RING_RE = /\b[Aa]nnulo\s+[Pp]iscatoris/;
  * conceduntur` (ASS 23 (1890) 437, the one line of the five volumes that prints it so).
  */
 export const CLASS_HEADINGS: readonly string[] = [
-  'EPISTOLA ENCYCLICA', 'LITTERAE ENCYCLICAE', 'LITTERAE APOSTOLICAE',
+  'EPISTOLA ENCYCLICA', 'LITTERAE ENCYCLICAE', 'LITTERAE CIRCULARES', 'LITTERAE APOSTOLICAE',
   'CONSTITUTIO APOSTOLICA', 'MOTU PROPRIO', 'ALLOCUTIO', 'EXHORTATIO',
   // The sample heads the chirograph `CHIROGRAPHUM` (ASS 33 (1900) 714, and the summa's row
   // `Chirographum SS. D. N. Leonis XIII`); no ASS volume of the sample prints the singular

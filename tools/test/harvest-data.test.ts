@@ -1822,11 +1822,15 @@ describe('the whole corpus', () => {
       expect(d.genre, d.id).toBe('apostolic-letter');
       expect(d.characteristics, d.id).toEqual(['in-forma-brevis']);
     }
-    // Nothing else bears it yet. The three apostolic letters the merge kept from
+    // The other five are the sample's `LITTERAE in forma Brevis`, which the ASS heads as briefs
+    // and vatican.va files on the letters shelf: five GENRE_OVERRIDES rows correct the form
+    // (era report finding 9), and they are the only documents bearing the characteristic that
+    // no briefs shelf holds.
+    // Nothing else bears it. The three apostolic letters the merge kept from
     // apost_letters over briefs (Mirabilis Deus, Quod nobis, In Africam) record the briefs
     // filing only in alsoShelvedAs: carrying the characteristic onto them would move them
     // out of the AAS matches they hold as Litterae Apostolicae, which is decided on its own.
-    expect(everything.filter((d) => d.characteristics?.includes('in-forma-brevis'))).toHaveLength(30);
+    expect(everything.filter((d) => d.characteristics?.includes('in-forma-brevis'))).toHaveLength(35);
   });
 
   it('carries the motu-proprio characteristic on every document also shelved as motu_proprio (#10)', () => {
@@ -3835,15 +3839,15 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
 
   it('pins the matched count per volume, so a silent drop fails loudly', () => {
     // The five sample volumes' 97 entries (the scanner's, with the curated readings) join
-    // the shelves on 2026-09-23: 57 matched, 0 ambiguous, 31 unmatched (held), 9 skipped
-    // (allocutions and the categories not harvested); all 57 written. It was 85 entries and
+    // the shelves on 2026-09-25: 64 matched, 0 ambiguous, 24 unmatched (held), 9 skipped
+    // (allocutions and the categories not harvested); all 64 written. It was 85 entries and
     // 19 held until phase 2c-ii-a read the brevia of the *Secretaria Brevium* (ASS 33 p. 212
     // and eight of ASS 41), and 94 entries and 28 held until 2c-ii Task 6 relaxed
     // `header-mismatch` (`headerAgreesASS`, ass.ts) and so read three more ring brevia it had
     // been refusing (ASS 33 p. 213; ASS 41 pp. 300, 301): every one of the twelve ring brevia
     // is a `brief`, and the briefs shelf holds none of them, so all twelve are held and the
     // 57 references do not move. What is thin is
-    // the shelf, not the scan: 439 of the era's 496 shelf documents remain without a
+    // the shelf, not the scan: 432 of the era's 496 shelf documents remain without a
     // reference, the sample being one volume a decade.
     // ASS 1 (1865): 0 -- the volume's three acts (all curated readings) are two apostolic
     // letters *sub annulo Piscatoris* of 1866 and one allocution, and Pius IX's shelf holds
@@ -3851,22 +3855,35 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // ASS 12 (1879): 5 of 11 entries, all unique -- the encyclicals *Aeterni Patris* and
     // *Arcanum divinae*, the motu proprio *Placere Nobis* and two letters; the 4 unmatched are
     // three letters and a brief to addressees the letters shelf does not hold.
-    // ASS 23 (1890): 7 of 13 entries, 5 unique and 2 by the opening rule (the Italian
-    // encyclical *Dall'alto dell'Apostolico Seggio* at p. 193 and the letter *Novum
-    // argumentum* at p. 318); *Rerum novarum* at p. 641. The Latin text of *Dall'alto* at
+    // ASS 23 (1890): 8 of 13 entries, 7 unique and 1 by the opening rule (the Italian
+    // encyclical *Dall'alto dell'Apostolico Seggio* at p. 193); *Rerum novarum* at p. 641,
+    // and *Catholicae Ecclesiae* at p. 257 since `LITTERAE CIRCULARES` became a class
+    // heading of its own: the volume heads it `LITTERAE circulares Sanctissimi D. N. Leonis
+    // Papae XIII`, and an encyclical is a circular letter. That reading also settled the
+    // other act of 20 November 1890: *Novum argumentum* at p. 318 matched by the opening
+    // rule while both shelf records stood in one class, and matches `unique` now that the
+    // encyclical has moved out of it -- so the volume gains a reference and improves one. The Latin text of *Dall'alto* at
     // p. 206 (`Ab apostolici Solii celsitudine`, a curated reading) is held: its opening
     // is not the shelf's Italian incipit. It was 8 until 2026-09-22, when the heading regex
     // learnt to read the tail `in forma brevis` with the lower-case b this volume prints at
     // p. 437 (`LITTERAE in forma brevis Sanctissimi D. N. Leonis XIII quibus indulgen-/tiae
-    // conceduntur`): the act's class is `brief`, not `letter`, so *Opportune quidem* joins the
-    // four of ASS 33 below as a class mismatch the owner rules on, and its reference is withheld.
-    // ASS 33 (1900): 16 of 26 entries, all unique -- *Tametsi futura*, *Graves de communi
-    // re*, the constitution *Conditae a Christo* and 12 letters, two of them on the one
-    // page the sample's two matched letters share (ASS 33 p. 641, ACTA_SHARED_PAGES); the
-    // 8 held include the four `LITTERAE in forma Brevis` whose same-date letters stand on the
-    // shelf as `letter` while the heading's class is `brief` (controller ruling: reported,
-    // not overridden) -- five acts of that shape in the sample since ASS 23 p. 437 joined them --
-    // and two ring brevia, at pp. 212 and, since 2c-ii Task 6 relaxed `header-mismatch`, 213
+    // conceduntur`): the act's class is `brief`, not `letter`. *Opportune quidem* was held with
+    // the four of ASS 33 below until the owner ruled the shelf wrong -- a brief is an apostolic
+    // letter in forma Brevis -- and five GENRE_OVERRIDES rows gave each record the characteristic,
+    // whereupon all five match (finding 9). ASS 23 is 9 with it.
+    // ASS 33 (1900): 21 of 26 entries, all unique -- *Tametsi futura*, *Graves de communi
+    // re*, the constitution *Conditae a Christo* and 13 letters, two of them on the one
+    // page the sample's two matched letters share (ASS 33 p. 641, ACTA_SHARED_PAGES). The
+    // thirteenth letter is *Omnibus compertum* at p. 65, held until GENRE_OVERRIDES corrected
+    // its filing: vatican.va shelves the Latin and the Italian under letters, headed `LEONE
+    // XIII EPISTOLA OMNIBUS COMPERTUM`, and only the English translation under encyclicals,
+    // which is the page the record was harvested from -- the ASS agrees, heading it `LITTERAE`.
+    // The four `LITTERAE in forma Brevis` of this volume (pp. 3, 129, 198, 577) are matched too,
+    // their records now apostolic letters bearing `in-forma-brevis` (finding 9); p. 3 carries two
+    // matched acts once the brevis joins the letter *I luttuosi avvenimenti*, so ACTA_SHARED_PAGES
+    // names the pair at `ASS:33:3` as it does at `ASS:33:641`, without which invariant 25 would
+    // withhold both. The
+    // 3 held are two ring brevia, at pp. 212 and, since 2c-ii Task 6 relaxed `header-mismatch`, 213
     // (its neighbour: both are briefs, and neither is on a shelf). The other two of the 26 are
     // skipped, not held: the allocution at p. 396 and the chirograph at p. 714, neither a
     // class the registry harvests.
@@ -3880,19 +3897,20 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // its 11 held, 2 are new since 2c-ii Task 6 relaxed `header-mismatch`: the ring brevia at
     // pp. 300 and 301, neither on the briefs shelf.
     const perVolume = Object.fromEntries(sources.map((s) => [s.key, cited.filter((d) => d.acta!.volume === s.volume).length]));
-    expect(perVolume).toEqual({ 'ass-1': 0, 'ass-12': 5, 'ass-23': 7, 'ass-33': 16, 'ass-41': 29 });
-    expect(cited).toHaveLength(57);
-    // By pope and genre, from the harvest's own output on 2026-09-22: Leo XIII 28 (5 + 7 + 16),
+    expect(perVolume).toEqual({ 'ass-1': 0, 'ass-12': 5, 'ass-23': 9, 'ass-33': 21, 'ass-41': 29 });
+    expect(cited).toHaveLength(64);
+    // By pope and genre, from the harvest's own output on 2026-09-25: Leo XIII 35 (5 + 9 + 21),
     // Pius X 29; no reference into ASS 1, so none of Pius IX. The three bulls are the
     // constitutions *Conditae a Christo* (1900), *Sapienti consilio* and *Promulgandi*. The
-    // letters are 42, one fewer than on 2026-09-21: *Opportune quidem* (ASS 23 p. 437) is held.
+    // letters are 43: *Opportune quidem* (ASS 23 p. 437) is still held, and *Omnibus compertum*
+    // (ASS 33 p. 65) joins them as a letter once its shelf filing is corrected.
     const byIssuer = new Map<string, number>();
     for (const d of cited) byIssuer.set(d.issuerId, (byIssuer.get(d.issuerId) ?? 0) + 1);
-    expect(Object.fromEntries([...byIssuer].sort())).toEqual({ 'rp:leo-xiii': 28, 'rp:pius-x': 29 });
+    expect(Object.fromEntries([...byIssuer].sort())).toEqual({ 'rp:leo-xiii': 35, 'rp:pius-x': 29 });
     const byGenre = new Map<string, number>();
     for (const d of cited) byGenre.set(d.genre ?? 'none', (byGenre.get(d.genre ?? 'none') ?? 0) + 1);
     expect(Object.fromEntries([...byGenre].sort())).toEqual({
-      'apostolic-exhortation': 1, 'apostolic-letter': 5, encyclical: 6, letter: 42, 'papal-bull': 3,
+      'apostolic-exhortation': 1, 'apostolic-letter': 10, encyclical: 7, letter: 43, 'papal-bull': 3,
     });
   });
 
@@ -3925,8 +3943,8 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     const shelf = everything.filter((d) => !isActaShelf(d.source?.shelf));
     const creation = createFromActa(matchActa(entries, shelf), shelf);
     expect(creation.created).toEqual([]);
-    // 31: the harvest's `series-not-created 31` on 2026-09-23 -- every unmatched entry of the
-    // five volumes (2 of ASS 1, 4 of ASS 12, 6 of ASS 23, 8 of ASS 33, 11 of ASS 41), and
+    // 24: the harvest's `series-not-created 24` on 2026-09-25 -- every unmatched entry of the
+    // five volumes (2 of ASS 1, 4 of ASS 12, 4 of ASS 23, 3 of ASS 33, 11 of ASS 41), and
     // nothing else is held: the ASS alone raises no ambiguity, conflict or shared page (the
     // conflict with AAS 1 over the two constitutions of 1908 needs the AAS sources, and is
     // settled by ACTA_REPRINTS in the full harvest). It was 18 until ASS 23 p. 437 was read
@@ -3937,8 +3955,8 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // brevia it had been refusing (ASS 33 p. 213; ASS 41 pp. 300, 301): all twelve ring
     // brevia are class `brief`, none of them on a shelf, so each is held here and none is
     // created.
-    expect(creation.held.filter((h) => h.entry.series === 'ASS' && h.reason === 'series-not-created')).toHaveLength(31);
-    expect(creation.held).toHaveLength(31);
+    expect(creation.held.filter((h) => h.entry.series === 'ASS' && h.reason === 'series-not-created')).toHaveLength(24);
+    expect(creation.held).toHaveLength(24);
   });
 
   it('pins the scan and the summa check per volume as the era report §2 says', () => {

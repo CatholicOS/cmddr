@@ -1987,7 +1987,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Catholicae Ecclesiae",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 23,
+      "year": 1890,
+      "page": 257
+    }
   },
   {
     "id": "mag:leo-xiii/novum-argumentum-1890",
@@ -2040,7 +2046,7 @@
     "id": "mag:leo-xiii/opportune-quidem-1891",
     "title": "Opportune quidem",
     "idStatus": "minted",
-    "genre": "letter",
+    "genre": "apostolic-letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1891-01-01",
@@ -2053,7 +2059,16 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Opportune quidem",
-    "sourceGenreLabel": "letters"
+    "characteristics": [
+      "in-forma-brevis"
+    ],
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 23,
+      "year": 1890,
+      "page": 437
+    }
   },
   {
     "id": "mag:leo-xiii/praeclarum-studium-1891",
@@ -3409,7 +3424,7 @@
     "id": "mag:leo-xiii/permoti-nos-1895",
     "title": "Permoti Nos",
     "idStatus": "minted",
-    "genre": "encyclical",
+    "genre": "letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1895-07-10",
@@ -4265,7 +4280,7 @@
     "id": "mag:leo-xiii/quum-diuturnum-1898",
     "title": "Quum Diuturnum",
     "idStatus": "minted",
-    "genre": "encyclical",
+    "genre": "letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1898-12-25",
@@ -4488,7 +4503,7 @@
     "id": "mag:leo-xiii/quas-tu-1900",
     "title": "Quas Tu",
     "idStatus": "minted",
-    "genre": "letter",
+    "genre": "apostolic-letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1900-06-08",
@@ -4501,7 +4516,16 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quas Tu",
-    "sourceGenreLabel": "letters"
+    "characteristics": [
+      "in-forma-brevis"
+    ],
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 3
+    }
   },
   {
     "id": "mag:leo-xiii/i-luttuosi-avvenimenti-1900",
@@ -4532,7 +4556,7 @@
     "id": "mag:leo-xiii/omnibus-compertum-1900",
     "title": "Omnibus Compertum",
     "idStatus": "minted",
-    "genre": "encyclical",
+    "genre": "letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1900-07-21",
@@ -4548,7 +4572,13 @@
       ]
     },
     "incipit": "Omnibus Compertum",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 65
+    }
   },
   {
     "id": "mag:leo-xiii/praestantiam-assisiensis-1900",
@@ -4598,7 +4628,7 @@
     "id": "mag:leo-xiii/ad-catholicorum-conventum-1900",
     "title": "Ad Catholicorum conventum",
     "idStatus": "minted",
-    "genre": "letter",
+    "genre": "apostolic-letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1900-08-31",
@@ -4611,13 +4641,22 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ad Catholicorum conventum",
-    "sourceGenreLabel": "letters"
+    "characteristics": [
+      "in-forma-brevis"
+    ],
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 129
+    }
   },
   {
     "id": "mag:leo-xiii/venerabilis-frater-augustinus-1900",
     "title": "Venerabilis Frater Augustinus",
     "idStatus": "minted",
-    "genre": "letter",
+    "genre": "apostolic-letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1900-09-14",
@@ -4630,7 +4669,16 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Venerabilis Frater Augustinus",
-    "sourceGenreLabel": "letters"
+    "characteristics": [
+      "in-forma-brevis"
+    ],
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 198
+    }
   },
   {
     "id": "mag:leo-xiii/qua-mente-1900",
@@ -4916,7 +4964,7 @@
     "id": "mag:leo-xiii/saecularis-eventus-1901",
     "title": "Saecularis eventus",
     "idStatus": "minted",
-    "genre": "letter",
+    "genre": "apostolic-letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1901-05-11",
@@ -4929,7 +4977,16 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Saecularis eventus",
-    "sourceGenreLabel": "letters"
+    "characteristics": [
+      "in-forma-brevis"
+    ],
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 577
+    }
   },
   {
     "id": "mag:leo-xiii/gravissimas-1901",
@@ -5067,7 +5124,7 @@
     "id": "mag:leo-xiii/reputantibus-1901",
     "title": "Reputantibus",
     "idStatus": "minted",
-    "genre": "encyclical",
+    "genre": "letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1901-08-20",
@@ -5111,7 +5168,7 @@
     "id": "mag:leo-xiii/urbanitatis-veteris-1901",
     "title": "Urbanitatis Veteris",
     "idStatus": "minted",
-    "genre": "encyclical",
+    "genre": "letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1901-11-20",
@@ -5174,7 +5231,7 @@
     "id": "mag:leo-xiii/in-amplissimo-1902",
     "title": "In Amplissimo",
     "idStatus": "minted",
-    "genre": "encyclical",
+    "genre": "letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1902-04-15",

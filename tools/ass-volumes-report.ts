@@ -46,7 +46,12 @@ const md = (s: string) => s.replace(/\|/g, '\\|').replace(/\n/g, ' / ').replace(
  * bumped by hand when the report is regenerated, so that a re-run is reproducible and the
  * line does not claim the fixtures' scan date, which §1's header prints beside it.
  */
-const GENERATED_ON = '2026-09-23';
+/**
+ * The day this report was generated. Read from the newest fixture the run reads rather than
+ * set by hand: a stale constant dated the report before the scan it describes (CodeRabbit on
+ * PR #51), and the fixtures are the only thing whose age the report can vouch for.
+ */
+const GENERATED_ON = [...scans.values()].map((s) => s.generated).sort().at(-1)!;
 const cite = (e: AssEntry) => citeRef(e);
 const candidateList = (cs: ActaCandidate[]) => cs.map((c) => `\`${c.id}\`${c.incipit ? ` (*${md(c.incipit)}*)` : ''}`).join(', ') || '—';
 const of = (k: string) => entries.filter((e) => `ass-${e.volume}` === k);
@@ -106,6 +111,14 @@ const answeredByScan = replacingReadings.filter((key) => {
 const offsetRanges = Object.entries(ASS_PAGE_OFFSETS).flatMap(([vol, ranges]) => ranges.map((r) => `ASS ${vol} pp. ${r.from}-${r.to}`)).join(', ');
 const harvested = sum((k) => of(k).filter((e) => (categoryForHeading(e.category)?.harvested ?? 'no') !== 'no').length);
 const byRule = (b: string) => result.matches.filter((m) => m.by === b).length;
+/**
+ * The acts the opening rule carries, named from the matches themselves. Listed by hand until
+ * PR #51, where a class change moved *Novum argumentum* to `unique` and left the prose naming
+ * an act the table no longer counted (CodeRabbit): the list has to follow the rule column.
+ */
+const openingActs = result.matches.filter((m) => m.by === 'opening')
+  .map((m) => { const e = m.entry as AssEntry; const d = docs.find((x) => x.id === m.documentId); return `*${md(d?.incipit ?? d?.title ?? m.documentId)}* (${e.volume} p. ${e.page})`; })
+  .join(', ');
 const um = result.unmatched as (ActaUnmatched & { entry: AssEntry })[];
 const umNoCandidate = um.filter((u) => u.sameDate.length === 0);
 const umWithCandidate = um.filter((u) => u.sameDate.length > 0);
@@ -113,7 +126,15 @@ const umBrevis = umWithCandidate.filter((u) => u.entry.category === 'LITTERAE IN
 /** The entry whose only candidates the join already gave to another entry of the same act. */
 /** Finding 9's acts, as the report names them and as the shelf files their one candidate. */
 const brevisPages = umBrevis.map((u) => `ASS ${u.entry.volume} p. ${u.entry.page}`).join(', ');
-const brevisIds = umBrevis.map((u) => `\`${u.sameDate[0]!.id.replace(/^.*\//, '')}\``).join(', ');
+/**
+ * Finding 9's acts once the owner's ruling matched them: the entries the sample heads
+ * `LITTERAE in forma Brevis`, named by the document each now cites. Read from the matches
+ * rather than from the unmatched, which the ruling emptied -- the finding states what the
+ * five records are, so the list has to follow them wherever they stand.
+ */
+const brevisMatched = result.matches.filter((m) => m.entry.category === 'LITTERAE IN FORMA BREVIS');
+const brevisIds = (brevisMatched.length ? brevisMatched.map((m) => m.documentId) : umBrevis.map((u) => u.sameDate[0]!.id))
+  .map((id) => `\`${id.replace(/^.*\//, '')}\``).join(', ');
 const umClaimedElsewhere = umWithCandidate.filter((u) => u.sameDate.every((c) => result.matches.some((m) => m.documentId === c.id)));
 const umClassHold = umWithCandidate.filter((u) => !umBrevis.includes(u) && !umClaimedElsewhere.includes(u));
 /** Of the unmatched with no shelf record at all, how many are of class `BREVE` (finding 6). */
@@ -140,6 +161,10 @@ const provisionalCited = provisional.filter((d) => d.acta !== undefined);
 const provisionalWithEntry = provisional.filter((d) => entries.some((e) => e.date === d.date && POPE_ISSUERS[e.pope] === d.issuerId));
 const assReprints = Object.entries(ACTA_REPRINTS).filter(([, r]) => r.citationOf.startsWith('ASS:'));
 const assShared = Object.keys(ACTA_SHARED_PAGES).filter((k) => k.startsWith('ASS:'));
+/** Each curated ASS shared page, named with the pair it settles -- two rows since PR #51. */
+const sharedNamed = assShared
+  .map((k) => `${k.replace(/^ASS:(\d+):(\d+)$/, 'ASS $1 p. $2')} (${ACTA_SHARED_PAGES[k]!.documentIds.map((id) => { const d = docs.find((x) => x.id === id); return `*${md(d?.incipit ?? d?.title ?? id)}*`; }).join(' and ')})`)
+  .join('; ');
 /**
  * The volumes of the series: vatican.va links one whole-volume PDF per volume, 41 in all
  * (ass volumes spec §1). The years 1865-1908 number 44 because 22 of the 41 labels span
@@ -226,33 +251,39 @@ p(`   ASS 33 ${result.matches.filter((m) => m.entry.volume === 33).length}, ASS 
 p(`   ${pct(result.matches.filter((m) => m.entry.volume === 41).length, of('ass-41').filter((e) => (categoryForHeading(e.category)?.harvested ?? 'no') !== 'no').length)} in 1908. **The opening rule is what the ASS needed and the AAS did not.** An ASS entry carries no incipit —`);
 p(`   the volumes print no index, so the scanner reads the act's first eight words after the salutation (\`incipit: null\`,`);
 p(`   \`opening\`), and the join matches an opening against the shelf's incipit as a prefix. ${byRule('opening')} of the ${result.matches.length} matches rest on it`);
-p(`   (§3.1): *Dall'alto dell'Apostolico Seggio* (23 p. 193), *Novum argumentum* (23 p. 318), *Singulari curare* and`);
-p(`   *In domibus* (41 pp. 34, 35). The other ${byRule('unique')} are \`unique\` — one shelf record of the pope, the class and the day. No`);
+p(`   (§3.1): ${openingActs}. The other ${byRule('unique')} are \`unique\` — one shelf record of the pope, the class and the day. No`);
 p(`   toponym match, no curated override, and **no ambiguity in the whole sample**: the era's shelf is thin enough that a`);
-p(`   pope, a class and a date name one act, where the 2003–2009 indexes produced 60 ambiguities in 1 118 entries (that era's report, §2). The one`);
-p(`   page two acts share (ASS 33 p. 641: *De ingenii* of 20 February and *Le nostre ferme speranze* of 28 March 1901) is`);
-p(`   curated in \`ACTA_SHARED_PAGES\` (${assShared.length} ASS row), so both are written rather than both withheld by invariant 25.`);
-p(`6. **The ${um.length} unmatched divide three ways, and only ${umClassHold.length + umBrevis.length} of them are the join's doing.** ${umNoCandidate.length} have **no shelf record at all on their`);
+p(`   pope, a class and a date name one act, where the 2003–2009 indexes produced 60 ambiguities in 1 118 entries (that era's report, §2).`);
+p(`   ${assShared.length === 1 ? 'The one page two acts share is' : `The ${assShared.length} pages that two acts each share are`} curated in \`ACTA_SHARED_PAGES\` — ${sharedNamed} —`);
+p(`   so both of each pair are written rather than both withheld by invariant 25.`);
+p(`6. **The ${um.length} unmatched divide three ways, and ${umClassHold.length + umBrevis.length === 0 ? 'none of them is' : `only ${umClassHold.length + umBrevis.length} of them are`} the join's doing.** ${umNoCandidate.length} have **no shelf record at all on their`);
 p(`   date** (§3.3's "Same date" column is empty for every one), and they are ${byVolumeAndPage(umNoCandidate.map((u) => u.entry))}`);
 p(`   — ASS 1's two apostolic letters of 1866, three acts of ASS 12 and three of ASS 23 the letters shelf does not hold,`);
 p(`   the Lourdes letter of ASS 41 p. 65, and ${umNoBrevia} of class \`BREVE\`: the two the volumes head with the class word`);
 p(`   (ASS 12 p. 588, ASS 33 p. 401) and the ${umNoBrevia - 2} phase 2c-ii-a read from the ring, not one of which the briefs shelves`);
 p(`   hold. These are the registry's gap, not the scanner's: the act is printed, read, dated and`);
-p(`   quoted here, and the shelf has never carried it. ${umBrevis.length} are the \`LITTERAE IN FORMA BREVIS\` of ASS 23 and 33 (finding 9),`);
-p(`   ${umClassHold.length} are held by the class rule against an encyclical (finding 7), and ${umClaimedElsewhere.length} is the Latin printing whose one candidate the`);
+p(`   quoted here, and the shelf has never carried it. ${umBrevis.length === 0 ? 'None is' : `${umBrevis.length} are`} the \`LITTERAE IN FORMA BREVIS\` of ASS 23 and 33 (finding 9),`);
+p(`   ${umClassHold.length === 0 ? 'none is' : `${umClassHold.length} ${umClassHold.length === 1 ? 'is' : 'are'}`} held by the class rule against an encyclical (finding 7), and ${umClaimedElsewhere.length} is the Latin printing whose one candidate the`);
 p(`   Italian printing already claimed (finding 8). Every one of the ${um.length} is held \`series-not-created\` by the creator (§4):`);
 p(`   **${creation.created.length} documents were created**, as phase 2c-i intends — the ASS joins, it does not harvest.`);
-p(`7. **Two acts of weight are held by the class rule, and both look like override candidates: the owner's call.**`);
-p(`   *Catholicae Ecclesiae* of 20 November 1890, on slavery in Africa, is headed \`LITTERAE circulares\` at ASS 23 p. 257`);
-p(`   and shelved as an encyclical (\`mag:leo-xiii/catholicae-ecclesiae-1890\`); *Omnibus compertum* of 21 July 1900, to the`);
-p(`   Melkites, is headed \`LITTERAE\` at ASS 33 p. 65 and shelved as an encyclical (\`mag:leo-xiii/omnibus-compertum-1900\`).`);
-p(`   Each has **exactly one shelf record of its own incipit on its own date**, printed in §3.3's candidate column, and the`);
-p(`   join refuses it only because *letter* and *encyclical* are different classes. What the sources show: the ASS heads an`);
-p(`   act by what the chancery called the instrument, the shelf files it by what the act is. What I judge, separately:`);
-p(`   both are \`ACTA_MATCH_OVERRIDES\` rows waiting to be written, each quoting its heading line — two references gained,`);
-p(`   two of the ${um.length} unmatched cleared. **No row was written here.** The decision is editorial, and it decides more than these`);
-p(`   two: the ASS calls an encyclical \`EPISTOLA ENCYCLICA\`, \`LITTERAE ENCYCLICAE\`, \`LETTERA ENCICLICA\` and, twice,`);
-p(`   plain \`LITTERAE\`, so a ruling here is a ruling for the ${volumesLeft} volumes 2c-ii will scan.`);
+p(`7. **The two acts the class rule held are both resolved, and neither needed a match override.**`);
+p(`   *Catholicae Ecclesiae* of 20 November 1890, on the slave trade in Africa, is headed \`LITTERAE circulares\` at ASS 23`);
+p(`   p. 257 and shelved as an encyclical (\`mag:leo-xiii/catholicae-ecclesiae-1890\`). The join refused it while *letter* and`);
+p(`   *encyclical* were different classes and \`LITTERAE circulares\` read as a bare \`LITTERAE\`. But an encyclical **is** a`);
+p(`   circular letter, and the volume says so where it heads the act \`LITTERAE circulares Sanctissimi D. N. Leonis Papae`);
+p(`   XIII\`: the two words are now a class heading of their own, on the encyclical row, and the act matches. The phrase is`);
+p(`   not by itself a papal marker — across the 41 volumes it opens 8 acts, and the other 7 are circulars of the`);
+p(`   congregations (\`Emi Cardinalis Praefecti\`, ASS 17; \`Emi. Secretarii\` under the running head EX S. C. INDULGENTIARUM,`);
+p(`   ASS 33; one citing S. Congr. Rituum, ASS 22; three more opening \`Illme ac Revme Domine\`) — but what excludes them is`);
+p(`   the scanner's own gate, not this row: an act is read only where \`Datum …\` is followed by \`Pontificatus Nostri\` within`);
+p(`   three lines, which a dicastery's \`Datum Romae ex Secretaria …\` never is. Measured over all 41 volumes, the addition`);
+p(`   moves this one act and nothing else.`);
+p(`   *Omnibus compertum* of 21 July 1900, to the Melkites, was a filing error rather than a class question. It is headed`);
+p(`   \`LITTERAE\` at ASS 33 p. 65, and its shelf record carried \`encyclical\` only because vatican.va files the act under`);
+p(`   encyclicals in **English alone**, while the Latin and the Italian sit on the letters shelf, headed`);
+p(`   \`LEONE XIII EPISTOLA OMNIBUS COMPERTUM\` — the shelf of a translation deciding the genre. A \`GENRE_OVERRIDES\``);
+p(`   row corrects the filing, the existing class rule then matches the entry, and it is one of six acts of Leo XIII`);
+p(`   corrected the same way.`);
 p(`8. **One act, two printings, one shelf record: the Latin of *Dall'alto dell'Apostolico Seggio* is held while the Italian**`);
 p(`   **is cited — the reverse of the AAS policy.** ASS 23 prints the Italian encyclical at p. 193 (\`LETTERA Enciclica\`)`);
 p(`   and its \`(Versio latina)\` at p. 206 (\`LITTERAE Encyclicae\`, *Ab apostolici Solii celsitudine*, the reading`);
@@ -261,16 +292,19 @@ p(`   unmatched with that same document as its only candidate (§3.3). In the AA
 p(`   *Ubi arcano Dei consilio* is cited at its Latin page — and if that policy governs the ASS too, the citation should`);
 p(`   move to p. 206 and be carried by a curated reference, not by the opening rule. **Owner's call**; nothing was`);
 p(`   changed, and the pages of both printings are quoted in §2.5 and §3.3.`);
-p(`9. **The ${umBrevis.length} \`LITTERAE in forma Brevis\` of the sample are a class question, not a matching failure.** ${brevisPages}`);
-p(`   are headed \`LITTERAE in forma Brevis\` — ASS 23 p. 437 with the lower-case b that volume prints — which \`categories.ts\` classes \`brief\`; every one has exactly one shelf`);
-p(`   record of the same incipit on the same date, and every one of those is on Leo XIII's **letters** shelf as genre \`letter\``);
-p(`   (${brevisIds});`);
-p(`   none is on a briefs shelf. The candidates are printed in §3.3. Either the class belongs with the letters or the ${umBrevis.length}`);
-p(`   shelf records are misfiled — **the owner rules, and the same four words head acts in every volume of the series**.`);
-p(`   **One page of the sample is live either way**: ASS 33 p. 3 opens two acts — the Italian letter *I luttuosi avvenimenti* of 16 July 1900,`);
-p(`   which is matched, and *Quas Tu* of 8 June 1900, which this finding holds (§2.1, §3.3). Rule the class into the letters and that page`);
-p(`   carries **two matched documents**, whereupon invariant 25 withholds *both* references until an \`ACTA_SHARED_PAGES\` row is curated for`);
-p(`   \`ASS:33:3\` naming the pair, as \`ASS:33:641\` already is. The ruling is therefore one row of curation wider than it looks.`);
+p(`9. **The \`LITTERAE in forma Brevis\` of the sample were a class question, and the owner ruled the shelf wrong.**`);
+p(`   Five acts of the sample are headed \`LITTERAE in forma Brevis\` — ASS 23 p. 437 with the lower-case b that volume`);
+p(`   prints, then ASS 33 pp. 3, 129, 198 and 577. Each had exactly one shelf record of the same incipit on the same date,`);
+p(`   and every one of those stood on Leo XIII's **letters** shelf as genre \`letter\` (${brevisIds}), none on a briefs`);
+p(`   shelf, so the join refused all five on the class. The ruling: the shelf misses the form, not the genre. A brief is`);
+p(`   *litterae apostolicae in forma Brevis* (README, *The brief and the encyclical*), so each record is an`);
+p(`   \`apostolic-letter\` bearing \`in-forma-brevis\`, written as five \`GENRE_OVERRIDES\` rows that quote the ASS heading`);
+p(`   the act opens with. The \`Brevia\` class then matches all five.`);
+p(`   **The ruling was one row of curation wider than it looked**, as this finding warned. ASS 33 p. 3 opens two acts —`);
+p(`   the Italian letter *I luttuosi avvenimenti* of 16 July 1900 and the brevis *Quas Tu* of 8 June 1900. With the brevis`);
+p(`   matched the page carried two matched documents, and invariant 25 withheld *both* references — *I luttuosi*`);
+p(`   losing the one it already had — until \`ACTA_SHARED_PAGES\` named the pair at \`ASS:33:3\`, as \`ASS:33:641\` already`);
+p(`   was. With that row both are cited, and the sample gains five references, not four.`);
 p(`10. **Two of the ${readings.length} readings rest on an emendation of the OCR, and the owner should check them before they are trusted.**`);
 p(`   \`${emended[0] ?? 'ASS:33:643'}\`: the dateline prints \`Anno MDCCCCL\`, which is 1950; read as \`MDCCCCI\`, 1901 — the volume's second year, the`);
 p(`   twenty-fourth of the pontificate the same line names, and the year of the 450th anniversary the heading names.`);
