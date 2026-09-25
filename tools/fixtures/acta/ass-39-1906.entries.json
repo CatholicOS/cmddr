@@ -1,6 +1,6 @@
 {
   "source": "ass-39",
-  "generated": "2026-09-25",
+  "generated": "2026-09-26",
   "text": "~/development/sources/ASS/txt/ass-39-1906.txt (640 pages)",
   "volume": 39,
   "year": 1906,
@@ -709,12 +709,12 @@
       "toponym": null,
       "description": "Pii X ad Episcopos qui ad dedicationem templi Cathedralis Fulginium convenerunt.",
       "raw": "EPISTOLA / Pii X ad Episcopos qui ad dedicationem templi Cathedralis / Fulginium convenerunt.",
-      "opening": "Dilecte Fili Noster et Venerabiles Fratres, salutem et",
+      "opening": "E peractis Fulginii solemnibus convolasse vos animo ad",
       "anchor": "dateline",
       "evidence": {
         "heading": "EPISTOLA / Pii X ad Episcopos qui ad dedicationem templi Cathedralis / Fulginium convenerunt.",
         "salutation": "PIUS PP. x",
-        "opening": "Dilecte Fili Noster et Venerabiles Fratres,",
+        "opening": "E peractis Fulginii solemnibus convolasse vos animo ad",
         "dateline": "Datum Romae apud S. Petrum, die xvn Octobris MDCCCCIV, , Pontificatus Nostri anno secundo.",
         "header": "f"
       }
@@ -985,12 +985,12 @@
       "toponym": null,
       "description": "Pii PP. X ad Episcopos Provinciae Mediolanensis Concilium provinciale mox habituros.",
       "raw": "EPISTOLA / Pii PP. X ad Episcopos Provinciae Mediolanensis Concilium / provinciale mox habituros.",
-      "opening": "Dilecte Fili Noster et Venerabiles Fratres, salute7n et",
+      "opening": "Pergratus Nobis, ut intelligitis, nuntius fuit, communi vestra",
       "anchor": "dateline",
       "evidence": {
         "heading": "EPISTOLA / Pii PP. X ad Episcopos Provinciae Mediolanensis Concilium / provinciale mox habituros.",
         "salutation": "PIUS PP. X",
-        "opening": "Dilecte Fili Noster et Venerabiles Fratres,",
+        "opening": "Pergratus Nobis, ut intelligitis, nuntius fuit, communi",
         "dateline": "Datum Romae apud S. Petrum, die VIII Iunii anno MCMVI, Pontificatus Nostri tertio. PIUS PP. X",
         "header": "Epistola"
       }
@@ -1123,12 +1123,12 @@
       "toponym": null,
       "description": "Pii PP. X laudibus prosequentis Episcopos Oceaniae ob cele­ bratum ab eisdem conventum.",
       "raw": "EPISTOLA / Pii PP. X laudibus prosequentis Episcopos Oceaniae ob cele­ / bratum ab eisdem conventum.",
-      "opening": "Dilecte Fili Noster et Venerabiles Fratres, salutem et",
+      "opening": "Habitum a vobis haud ita pridem conventum et",
       "anchor": "dateline",
       "evidence": {
         "heading": "EPISTOLA / Pii PP. X laudibus prosequentis Episcopos Oceaniae ob cele­ / bratum ab eisdem conventum.",
         "salutation": "PIUS PP. x",
-        "opening": "Dilecte Fili Noster et Venerabiles Fratres,",
+        "opening": "Habitum a vobis haud ita pridem conventum et consulta",
         "dateline": "Datum Romae apud S. Petrum, die xx Decembris MDCCCCIV, Pontificatus Nostri anno secundo.",
         "header": "4o6                                                       Epistola"
       }
@@ -1284,12 +1284,12 @@
       "toponym": null,
       "description": "Qua Pius X laetatur cum Episcopis provinciae Mediolanensis de celebrato Concilio provinciali.",
       "raw": "EPISTOLA / Qua Pius X laetatur cum Episcopis provinciae Mediolanensis / de celebrato Concilio provinciali.",
-      "opening": "Dilecte Fili Noster et Venerabiles Fratres, salutem et",
+      "opening": "Provinciale Antistitum Mediolanense Concilium nuper fuisse persolutum ex",
       "anchor": "dateline",
       "evidence": {
         "heading": "EPISTOLA / Qua Pius X laetatur cum Episcopis provinciae Mediolanensis / de celebrato Concilio provinciali.",
         "salutation": "PIUS PP. X",
-        "opening": "Dilecte Fili Noster et Venerabiles Fratres,",
+        "opening": "Provinciale Antistitum Mediolanense Concilium nuper",
         "dateline": "Datum Romae, apud S. Petrum, die xvii Septembris MCMVI. Pontificatus Nostri anno quarto.",
         "header": "Epistola"
       }

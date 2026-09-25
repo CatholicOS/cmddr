@@ -163,7 +163,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quas e",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 38,
+      "year": 1905,
+      "page": 379
+    }
   },
   {
     "id": "mag:pius-x/peculiaria-quaedam-1903",
@@ -1008,7 +1014,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Nunciatum est",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 139
+    }
   },
   {
     "id": "mag:pius-x/sacrarum-scripturarum-1904",
@@ -1195,7 +1207,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 37,
+      "year": 1904,
+      "page": 145
+    }
   },
   {
     "id": "mag:pius-x/novies-saecularia-1904",
@@ -1239,7 +1257,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "E peractis",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 199
+    }
   },
   {
     "id": "mag:pius-x/libenti-omnino-1904",
@@ -1478,7 +1502,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Habitum a vobis",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 406
+    }
   },
   {
     "id": "mag:pius-x/si-progressione-1904",
@@ -3118,7 +3148,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Pergratus Nobis",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 340
+    }
   },
   {
     "id": "mag:pius-x/exacto-societatis-1906",
@@ -3522,7 +3558,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 130
+    }
   },
   {
     "id": "mag:pius-x/qui-piam-1907",

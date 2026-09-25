@@ -1,6 +1,6 @@
 {
   "source": "ass-38",
-  "generated": "2026-09-25",
+  "generated": "2026-09-26",
   "text": "~/development/sources/ASS/txt/ass-38-1905.txt (702 pages)",
   "volume": 38,
   "year": 1905,
@@ -272,12 +272,12 @@
       "toponym": null,
       "description": "Qua Pontifex Episcopos Austriae incitat ad obsistendum atque ad omnia in Christo instauranda.",
       "raw": "EPISTOLA / Qua Pontifex Episcopos Austriae incitat ad obsistendum atque / ad omnia in Christo instauranda.",
-      "opening": "Dilecte Fili Noster et Venerabiles Fratres, salutem et",
+      "opening": "Quas e Vindobonensi conventu vestro litteras, communi sententia",
       "anchor": "dateline",
       "evidence": {
         "heading": "EPISTOLA / Qua Pontifex Episcopos Austriae incitat ad obsistendum atque / ad omnia in Christo instauranda.",
         "salutation": "PIUS PP. x",
-        "opening": "Dilecte Fili Noster et Venerabiles Fratres,",
+        "opening": "Quas e Vindobonensi conventu vestro litteras, communi",
         "dateline": "Datum Romae, apud S. Petrum die VIII Decembris MDCCCCIII, Pontificatus Nostri anno primo. PIUS PP. X",
         "header": "Epistola"
       }

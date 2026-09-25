@@ -1,6 +1,6 @@
 {
   "source": "ass-37",
-  "generated": "2026-09-25",
+  "generated": "2026-09-26",
   "text": "~/development/sources/ASS/txt/ass-37-1904.txt (820 pages)",
   "volume": 37,
   "year": 1904,
@@ -295,12 +295,12 @@
       "toponym": null,
       "description": "SS. D. N. Pii PP. X ad Marianum Conventum in Urbs auspicandum pro Iubilaeo Immaculatae, de pietate in B. M. Virginem prohevenda.",
       "raw": "LITTERAE / SS. D. N. Pii PP. X ad Marianum Conventum in Urbs / auspicandum pro Iubilaeo Immaculatae, de pietate / in B. M. Virginem prohevenda.",
-      "opening": "Venerabilis Frater Noster et Dilecti Filii Nostri, salutem",
+      "opening": "Ad omnium instaurationem in Christo multa equidem sunt",
       "anchor": "dateline",
       "evidence": {
         "heading": "LITTERAE / SS. D. N. Pii PP. X ad Marianum Conventum in Urbs / auspicandum pro Iubilaeo Immaculatae, de pietate / in B. M. Virginem prohevenda.",
         "salutation": "PIUS PP. X",
-        "opening": "Venerabilis Frater Noster et Dilecti Filii Nostri,",
+        "opening": "Ad omnium instaurationem in Christo multa equidem sunt",
         "dateline": "Datum Romae apud S. Petrum die xxi Novembris anno MDCCCCiv, Pontificatus Nostri secundo. PIUS PP. X",
         "header": "Litterae                                                2g3"
       }
@@ -640,12 +640,12 @@
       "toponym": null,
       "description": "Quibus Pius PP. X, occasione defectionis a fide complurium adolescentium, ad eam animosius tuendam hortatur Epi­ scopos Austriae.",
       "raw": "LITTERAE / Quibus Pius PP. X, occasione defectionis a fide complurium / adolescentium, ad eam animosius tuendam hortatur Epi­ / scopos Austriae.",
-      "opening": "Dilecte Fili Noster et Venerabiles Fratres, salutem et",
+      "opening": "Austriam catholico caram nomini caussamque sane pernobilem, unde",
       "anchor": "dateline",
       "evidence": {
         "heading": "LITTERAE / Quibus Pius PP. X, occasione defectionis a fide complurium / adolescentium, ad eam animosius tuendam hortatur Epi­ / scopos Austriae.",
         "salutation": "PIUS PP. X",
-        "opening": "Dilecte Fili Noster et Venerabiles Fratres,",
+        "opening": "Austriam catholico caram nomini caussamque sane per­",
         "dateline": "Datum Romae apud S. Petrum die vi Martii anno MCMV, Pontificatus Nostri secundo. PIUS PP. X",
         "header": "626                                                          Litterae"
       }
