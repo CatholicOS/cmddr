@@ -97,8 +97,20 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // Vescovi, al Clero e al Popolo d'Italia` (ASS 23 (1890) 193, *Dall'alto dell'Apostolico
   // seggio*, 15 October 1890; ass volumes spec §5): the scanner reads the class word and
   // the one after it as the heading.
+  // `LITTERAE CIRCULARES` belongs here and not with the letters: an encyclical is a circular
+  // letter, and the ASS says so in the one place it heads a papal act that way -- `LITTERAE
+  // circulares Sanctissimi D. N. Leonis Papae XIII` (ASS 23 (1890) 257, *Catholicae
+  // Ecclesiae*, on the slave trade in Africa). The phrase is not by itself a papal marker:
+  // across the 41 volumes it opens 8 acts, and the other 7 are circulars of the
+  // congregations (`Emi Cardinalis Praefecti`, ASS 17 (1884); `Emi. Secretarii` under the
+  // running head EX S. C. INDULGENTIARUM, ASS 33 (1900); one citing S. Congr. Rituum,
+  // ASS 22 (1889); three more opening `Illme ac Revme Domine`). What keeps them out is not
+  // this row but the scanner's own gate: an act is read only where `Datum …` is followed by
+  // `Pontificatus Nostri` within three lines (ass.ts), which a dicastery's `Datum Romae ex
+  // Secretaria …` never is. Measured over all 41 volumes, adding the heading moves that one
+  // act and nothing else.
   { id: 'Litterae Encyclicae',
-    headings: ['LITTERAE ENCYCLICAE', 'EPISTULA ENCYCLICA', 'EPISTULAE ENCYCLICAE', 'EPISTULA ENCICLICA', 'EPISTOLA ENCYCLICA', 'EPISTOLAE ENCYCLICAE', 'LETTERA ENCICLICA'],
+    headings: ['LITTERAE ENCYCLICAE', 'LITTERAE CIRCULARES', 'EPISTULA ENCYCLICA', 'EPISTULAE ENCYCLICAE', 'EPISTULA ENCICLICA', 'EPISTOLA ENCYCLICA', 'EPISTOLAE ENCYCLICAE', 'LETTERA ENCICLICA'],
     classes: [{ genre: 'encyclical' }], harvested: 'yes' },
   // The apost_exhortations shelf. The index prints the singular when the year has one and
   // qualifies the post-synodal ones (Amoris laetitia, Christus vivit, Querida Amazonia).
