@@ -604,10 +604,10 @@
     }
   },
   {
-    "id": "mag:pius-xii/brief-1939-06-18",
+    "id": "mag:pius-xii/apostolic-letter-1939-06-18",
     "title": "Breve Pontificio con il quale San Francesco d'Assisi e Santa Caterina da Siena vengono proclamati Patroni Primari d'Italia",
     "idStatus": "provisional",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xii",
     "issuerType": "pope",
     "date": "1939-06-18",
@@ -619,6 +619,9 @@
       ],
       "retrieved": "2026-09-12"
     },
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "briefs"
   },
   {
@@ -15464,7 +15467,7 @@
     "id": "mag:pius-xii/superiore-iam-aetate-1950",
     "title": "Superiore iam aetate - Breve Apostolico con il quale Santa Francesca Saverio Cabrini viene proclamata \"Patrona degli Emigranti\"",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:pius-xii",
     "issuerType": "pope",
     "date": "1950-09-08",
@@ -15477,6 +15480,9 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Superiore iam aetate",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "briefs"
   },
   {

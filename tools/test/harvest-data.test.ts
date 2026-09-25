@@ -1809,6 +1809,26 @@ describe('the whole corpus', () => {
     }
   });
 
+  it('files no document under a brief genre', () => {
+    // The brief is an apostolic letter in forma Brevis, not a genre. Before the change 30
+    // documents carried genre 'brief' (17 from the briefs shelves, 13 from Pius IX's flat
+    // page labelled 'Breve'); every one now sits on apostolic-letter with the
+    // characteristic, and the shelf is still visible in sourceGenreLabel.
+    expect(everything.some((d) => d.genre === 'brief')).toBe(false);
+    const fromShelf = everything.filter((d) =>
+      ['breve', 'briefs'].includes(d.sourceGenreLabel?.toLowerCase() ?? ''));
+    expect(fromShelf).toHaveLength(30);
+    for (const d of fromShelf) {
+      expect(d.genre, d.id).toBe('apostolic-letter');
+      expect(d.characteristics, d.id).toEqual(['in-forma-brevis']);
+    }
+    // Nothing else bears it yet. The three apostolic letters the merge kept from
+    // apost_letters over briefs (Mirabilis Deus, Quod nobis, In Africam) record the briefs
+    // filing only in alsoShelvedAs: carrying the characteristic onto them would move them
+    // out of the AAS matches they hold as Litterae Apostolicae, which is decided on its own.
+    expect(everything.filter((d) => d.characteristics?.includes('in-forma-brevis'))).toHaveLength(30);
+  });
+
   it('carries the motu-proprio characteristic on every document also shelved as motu_proprio (#10)', () => {
     // The 66 apostolic letters kept from apost_letters over motu_proprio by the merge
     // (55 Francis, 6 Leo XIV, 4 Paul VI, 1 John Paul II -- Socialium Scientiarum) would

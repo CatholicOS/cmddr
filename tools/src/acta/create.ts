@@ -307,6 +307,17 @@ export const titleContainsIncipit = (title: string, incipit: string): boolean =>
   return needle !== '' && `-${slugify(title)}-`.includes(`-${needle}-`);
 };
 
+/**
+ * A record "of the genre" for the guards below. `in-forma-brevis` divides the apostolic-letter
+ * genre here as `brief` did while it was a genre of its own: a brief of the briefs shelf
+ * sharing a common incipit (*Romanorum Pontificum*, Benedict XV, 1916) holds no apostolic
+ * letter of another year (1914, 1921), and a brief entry of the ASS none of the shelf's
+ * letters. No other characteristic divides a genre for the guards.
+ */
+const ofGenre = (d: DocumentRecord, cls: GenreClass): boolean =>
+  d.genre === cls.genre
+  && (d.characteristics ?? []).includes('in-forma-brevis') === (cls.requires === 'in-forma-brevis');
+
 /** The one genre class a created category maps to (CREATED_CATEGORIES admits no other). */
 const classOf = (category: ActaCategory): GenreClass | null =>
   category.classes.length === 1 ? category.classes[0]! : null;
@@ -509,7 +520,7 @@ export function createFromActa(
     // apost_letters without the motu-proprio characteristic): an entry that prints neither
     // incipit nor toponym, beside a same-date record of the genre, cannot be told from it.
     const possibleIdentity = sameDate.filter((d) => d.incipit === undefined
-      || (entry.incipit === null && entry.toponym === null && d.genre === cls.genre));
+      || (entry.incipit === null && entry.toponym === null && ofGenre(d, cls)));
     if (possibleIdentity.length) {
       hold(entry, 'possible-identity', entry.incipit === null && entry.toponym === null && possibleIdentity.some((d) => d.incipit !== undefined)
         ? `the entry prints no incipit and a same-date record of the genre stands (${possibleIdentity.map((d) => d.id).join(', ')}); only the documents' own text can say whether it is this act (#31)`
@@ -518,13 +529,13 @@ export function createFromActa(
     }
     if (slug !== null) {
       const nearMisses = [-1, 1].flatMap((delta) =>
-        on(issuerId, shiftDate(entry.date, delta)).filter((d) => d.genre === cls.genre && d.incipit !== undefined && incipitSlug(d.incipit) === slug));
+        on(issuerId, shiftDate(entry.date, delta)).filter((d) => ofGenre(d, cls) && d.incipit !== undefined && incipitSlug(d.incipit) === slug));
       if (nearMisses.length) {
         hold(entry, 'near-miss', 'a record of the genre a day off carries the same incipit; needs the act\'s own dating formula and a DATE_CORRECTIONS row, never a guess', nearMisses);
         continue;
       }
       const elsewhere = (byIssuerSlug.get(`${issuerId}|${slug}`) ?? [])
-        .filter((d) => d.genre === cls.genre || d.date.slice(0, 4) === entry.date.slice(0, 4));
+        .filter((d) => ofGenre(d, cls) || d.date.slice(0, 4) === entry.date.slice(0, 4));
       if (elsewhere.length) {
         hold(entry, 'same-incipit-elsewhere', `a record of the genre, or of the year, carries the same incipit on ${elsewhere.map((d) => d.date).join(', ')}; two acts can share an incipit, but the index and the shelf are known to disagree on a date, and a human decides`, elsewhere);
         continue;
@@ -536,7 +547,7 @@ export function createFromActa(
     // Reported, never a hold: an incipit-less shelf record of the genre a day off is the
     // ordinary run of a beatification weekend as often as a date discrepancy.
     const provisionalNearby = [-1, 1].flatMap((delta) =>
-      on(issuerId, shiftDate(entry.date, delta)).filter((d) => d.genre === cls.genre && d.incipit === undefined));
+      on(issuerId, shiftDate(entry.date, delta)).filter((d) => ofGenre(d, cls) && d.incipit === undefined));
     if (provisionalNearby.length) {
       notes.push(`a provisional shelf record of the genre stands a day off: ${provisionalNearby.map((d) => `${d.id} (${d.date})`).join(', ')}`);
     }

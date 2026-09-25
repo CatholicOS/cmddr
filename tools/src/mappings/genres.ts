@@ -18,8 +18,13 @@ export const SOURCE_GENRE_TO_GENRE: Record<string, GenreMapping> = {
   'breve enciclica': { genre: 'encyclical' },
   'bolla': { genre: 'papal-bull' },
   'bulls': { genre: 'papal-bull' },
-  'breve': { genre: 'brief' },
-  'briefs': { genre: 'brief' },
+  // A brief is an apostolic letter in forma Brevis -- sealed sub anulo Piscatoris and issued
+  // through the Secretaria Brevium -- not a genre standing beside it: the ASS head these
+  // acts `LITTERAE in forma Brevis` (ASS 23 (1890) 437; ASS 33 (1900) 3), and vatican.va files
+  // Mirabilis Deus (Pius XI) and Quod nobis (Benedict XV) on both apost_letters and briefs.
+  // Modelled as motu_proprio is below -- the base genre plus a characteristic.
+  'breve': { genre: 'apostolic-letter', characteristics: ['in-forma-brevis'] },
+  'briefs': { genre: 'apostolic-letter', characteristics: ['in-forma-brevis'] },
   'lettera': { genre: 'letter' },
   'epistola': { genre: 'letter' },
   'letters': { genre: 'letter' },

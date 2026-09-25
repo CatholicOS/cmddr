@@ -476,7 +476,7 @@
     "id": "mag:benedict-xv/divinum-praeceptum-1915",
     "title": "Divinum Praeceptum con il quale si concede al Seminario Arcivescovile di Buenos Aires il potere di conferire titoli accademici in Filosofia e Sacra Teologia",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xv",
     "issuerType": "pope",
     "date": "1915-12-23",
@@ -489,6 +489,9 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Divinum Praeceptum",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "briefs"
   },
   {
@@ -564,7 +567,7 @@
     "id": "mag:benedict-xv/romanorum-pontificum-1916",
     "title": "Romanorum Pontificum con il quale vengono concesse particolari indulgenze ai fedeli che, nell’ambito di specifiche pratiche di pietà, invocheranno da Dio la concordia dei Governanti Cristiani, l’estirpazione delle eresie e la conversione dei peccatori",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xv",
     "issuerType": "pope",
     "date": "1916-02-25",
@@ -577,6 +580,9 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Romanorum Pontificum",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "briefs"
   },
   {
@@ -605,7 +611,7 @@
     "id": "mag:benedict-xv/cum-catholicae-ecclesiae-1916",
     "title": "Cum Catholicae Ecclesiae con il quale si intende agevolare l’unione dei Cristiani d’Oriente alla Chiesa di Roma",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xv",
     "issuerType": "pope",
     "date": "1916-04-15",
@@ -618,6 +624,9 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Cum Catholicae Ecclesiae",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "briefs"
   },
   {
@@ -759,7 +768,7 @@
     "id": "mag:benedict-xv/cum-biblia-sacra-1916",
     "title": "Cum Biblia Sacra con il quale vengono promulgate le norme che debbono regolare il funzionamento dei tre Istituti di studi biblici operanti in Roma, e i rapporti fra loro intercorrenti",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xv",
     "issuerType": "pope",
     "date": "1916-08-15",
@@ -772,6 +781,9 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Cum Biblia Sacra",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "briefs"
   },
   {
@@ -825,7 +837,7 @@
     "id": "mag:benedict-xv/centesimo-hodie-1916",
     "title": "Centesimo Hodie in occasione del primo centenario della fondazione della Milizia Pontificia con il quale il Pontefice onora il vessillo del Corpo decorandolo di due medaglie d’oro",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xv",
     "issuerType": "pope",
     "date": "1916-10-22",
@@ -838,13 +850,16 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Centesimo Hodie",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "briefs"
   },
   {
     "id": "mag:benedict-xv/cum-centesimus-1916",
     "title": "Cum Centesimus in occasione del primo centenario della fondazione della Milizia Pontificia",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xv",
     "issuerType": "pope",
     "date": "1916-10-22",
@@ -857,6 +872,9 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Cum Centesimus",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "briefs"
   },
   {
@@ -1033,7 +1051,7 @@
     "id": "mag:benedict-xv/quod-ioannes-1917",
     "title": "Quod Ioannes con il quale viene dichiarata Beata la venerabile serva di Dio Anna di San Bartolomeo",
     "idStatus": "minted",
-    "genre": "brief",
+    "genre": "apostolic-letter",
     "issuerId": "rp:benedict-xv",
     "issuerType": "pope",
     "date": "1917-04-10",
@@ -1046,6 +1064,9 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod Ioannes",
+    "characteristics": [
+      "in-forma-brevis"
+    ],
     "sourceGenreLabel": "briefs"
   },
   {
