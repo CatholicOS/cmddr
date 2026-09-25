@@ -606,7 +606,7 @@ Created: 0 (expected 0: phase 2c-i joins only).
 
 | Document | Date | Class | Incipit | ASS entries on this date |
 |---|---|---|---|---|
-| `mag:leo-xiii/pontifices-maximi-1879` | 1879-02-15 | brief | *Pontifices maximi* | — |
+| `mag:leo-xiii/pontifices-maximi-1879` | 1879-02-15 | apostolic-letter | *Pontifices maximi* | — |
 
 </details>
 
@@ -619,7 +619,7 @@ Created: 0 (expected 0: phase 2c-i joins only).
 | `mag:leo-xiii/grande-est-1891` | 1891-09-20 | discourse-address | *Grande est* | — |
 | `mag:leo-xiii/graviter-molesteque-1890` | 1890-06-13 | letter | *Graviter molesteque* | — |
 | `mag:leo-xiii/in-ipso-1891` | 1891-03-03 | encyclical | *In Ipso* | ASS 23 (1890) 518 EPISTOLA *In ipso supremi Pontificatus, quo providens Deus Nos* |
-| `mag:leo-xiii/in-supremo-1890` | 1890-12-15 | brief | *In supremo* | — |
+| `mag:leo-xiii/in-supremo-1890` | 1890-12-15 | apostolic-letter | *In supremo* | — |
 | `mag:leo-xiii/noi-rendiamo-grazie-1890` | 1890-03-14 | letter | *Noi rendiamo grazie* | — |
 | `mag:leo-xiii/non-est-opus-1891` | 1891-12-14 | discourse-address | *Non est opus* | — |
 | `mag:leo-xiii/non-maius-1891` | 1891-06-15 | apostolic-letter | *Non maius* | — |
