@@ -3897,8 +3897,13 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // its 11 held, 2 are new since 2c-ii Task 6 relaxed `header-mismatch`: the ring brevia at
     // pp. 300 and 301, neither on the briefs shelf.
     const perVolume = Object.fromEntries(sources.map((s) => [s.key, cited.filter((d) => d.acta!.volume === s.volume).length]));
-    expect(perVolume).toEqual({ 'ass-1': 0, 'ass-12': 5, 'ass-23': 9, 'ass-33': 21, 'ass-41': 29 });
-    expect(cited).toHaveLength(64);
+    expect(perVolume).toEqual({
+      'ass-1': 0, 'ass-12': 5, 'ass-23': 9, 'ass-33': 21, 'ass-41': 29,
+      // Phase 2c-ii-b: the five volumes that complete Pius X, joined before any curation
+      // round. 104 references from 181 acts scanned; ASS 39 alone carries 45.
+      'ass-36': 7, 'ass-37': 18, 'ass-38': 8, 'ass-39': 45, 'ass-40': 26,
+    });
+    expect(cited).toHaveLength(168);
     // By pope and genre, from the harvest's own output on 2026-09-25: Leo XIII 35 (5 + 9 + 21),
     // Pius X 29; no reference into ASS 1, so none of Pius IX. The three bulls are the
     // constitutions *Conditae a Christo* (1900), *Sapienti consilio* and *Promulgandi*. The
@@ -3906,11 +3911,11 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // (ASS 33 p. 65) joins them as a letter once its shelf filing is corrected.
     const byIssuer = new Map<string, number>();
     for (const d of cited) byIssuer.set(d.issuerId, (byIssuer.get(d.issuerId) ?? 0) + 1);
-    expect(Object.fromEntries([...byIssuer].sort())).toEqual({ 'rp:leo-xiii': 35, 'rp:pius-x': 29 });
+    expect(Object.fromEntries([...byIssuer].sort())).toEqual({ 'rp:leo-xiii': 35, 'rp:pius-x': 133 });
     const byGenre = new Map<string, number>();
     for (const d of cited) byGenre.set(d.genre ?? 'none', (byGenre.get(d.genre ?? 'none') ?? 0) + 1);
     expect(Object.fromEntries([...byGenre].sort())).toEqual({
-      'apostolic-exhortation': 1, 'apostolic-letter': 10, encyclical: 7, letter: 43, 'papal-bull': 3,
+      'apostolic-exhortation': 1, 'apostolic-letter': 23, encyclical: 16, letter: 125, 'papal-bull': 3,
     });
   });
 
@@ -3936,7 +3941,7 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // ASS 1 (1865) matched nothing: no act of weight to name (see the per-volume pin).
   });
 
-  it('creates nothing from the ASS: no document carries an ass/ shelf, and every unmatched ASS entry is held series-not-created', () => {
+  it('creates nothing from the ASS: no document carries an ass/ shelf, and every unmatched ASS entry is held, all but eight of them series-not-created', () => {
     expect(everything.filter((d) => (d.source?.shelf ?? '').startsWith('ass/'))).toEqual([]);
     const { parsed } = loadActaIndexes(sources);
     const entries = [...parsed.values()].flatMap((p) => p.entries);
@@ -3955,8 +3960,20 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // brevia it had been refusing (ASS 33 p. 213; ASS 41 pp. 300, 301): all twelve ring
     // brevia are class `brief`, none of them on a shelf, so each is held here and none is
     // created.
-    expect(creation.held.filter((h) => h.entry.series === 'ASS' && h.reason === 'series-not-created')).toHaveLength(24);
-    expect(creation.held).toHaveLength(24);
+    expect(creation.held.filter((h) => h.entry.series === 'ASS' && h.reason === 'series-not-created')).toHaveLength(73);
+    // Phase 2c-ii-b: eight entries of Pius X's five volumes are held for a reason of their
+    // own, the first the series has raised. Six are `ambiguous` and two `claimed-twice`, and
+    // the six are the curation round's first question, not a count to absorb: four of them --
+    // ASS 38 p. 379 and ASS 39 pp. 199, 340, 406 -- carry `Dilecte Fili Noster et Venerabiles
+    // Fratres, salutem et …` as their `opening`, which is the salutation and not the act's
+    // first words, so they match every letter the pope has on their date. ASS 39 p. 139 is the
+    // same shape addressed to an empress (`Augustissima et potentissima Imperatrix, salutem
+    // …`). Whether that is a salutation form the scanner should strip (`SALUTATION_RE`,
+    // ass-headings.ts) is a rule, to be measured over all 41 volumes before it is written.
+    const reasons = new Map<string, number>();
+    for (const h of creation.held) reasons.set(h.reason, (reasons.get(h.reason) ?? 0) + 1);
+    expect(Object.fromEntries([...reasons].sort())).toEqual({ ambiguous: 6, 'claimed-twice': 2, 'series-not-created': 73 });
+    expect(creation.held).toHaveLength(81);
   });
 
   it('pins the scan and the summa check per volume as the era report §2 says', () => {
@@ -4020,6 +4037,16 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
       'ass-23': { acts: 9, defects: 4, rows: 14, claimed: 8, unclaimed: 6, omitted: 1 },
       'ass-33': { acts: 22, defects: 6, rows: 24, claimed: 16, unclaimed: 6, omitted: 4 },
       'ass-41': { acts: 37, defects: 8, rows: 37, claimed: 27, unclaimed: 10, omitted: 10 },
+      // Phase 2c-ii-b, the five volumes that complete Pius X (spec §10 decision 3). Every
+      // count here equals what tools/survey-ass.ts read from the store for these volumes, so
+      // the fixture path and the survey pass see the same volume. ASS 38's 13 acts are the
+      // volume's own: its summa lists 16 papal rows, and the Supplementum at pp. 433-702 -- in
+      // which no page carries `Pontificatus Nostri` -- hides none.
+      'ass-36': { acts: 38, defects: 20, rows: 36, claimed: 22, unclaimed: 14, omitted: 16 },
+      'ass-37': { acts: 33, defects: 16, rows: 32, claimed: 25, unclaimed: 7, omitted: 8 },
+      'ass-38': { acts: 13, defects: 6, rows: 16, claimed: 9, unclaimed: 7, omitted: 4 },
+      'ass-39': { acts: 60, defects: 18, rows: 75, claimed: 52, unclaimed: 23, omitted: 8 },
+      'ass-40': { acts: 37, defects: 10, rows: 38, claimed: 31, unclaimed: 7, omitted: 6 },
     });
     // The 24 readings, each with its cause quoted in the report's §2.5 (`ASS_READINGS`'s own
     // evidence): 8 a Roman date the scanner does not read (the Kalends and the Ides -- ASS:23:206,

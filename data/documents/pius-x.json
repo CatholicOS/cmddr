@@ -38,7 +38,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "E Supremi",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 36,
+      "year": 1903,
+      "page": 129
+    }
   },
   {
     "id": "mag:pius-x/sanctorum-parentis-1903",
@@ -57,7 +63,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Sanctorum parentis",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 38,
+      "year": 1905,
+      "page": 376
+    }
   },
   {
     "id": "mag:pius-x/tra-le-sollecitudini-1903",
@@ -101,7 +113,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quas nuper",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 38,
+      "year": 1905,
+      "page": 377
+    }
   },
   {
     "id": "mag:pius-x/opus-a-catechismis-1903",
@@ -120,7 +138,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Opus a catechismis",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 38,
+      "year": 1905,
+      "page": 378
+    }
   },
   {
     "id": "mag:pius-x/quas-e-1903",
@@ -223,7 +247,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "ASS",
+      "volume": 36,
+      "year": 1903,
+      "page": 339
+    }
   },
   {
     "id": "mag:pius-x/la-premiere-fois-1904",
@@ -264,7 +294,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "ASS",
+      "volume": 36,
+      "year": 1903,
+      "page": 466
+    }
   },
   {
     "id": "mag:pius-x/ad-diem-illum-laetissimum-1904",
@@ -286,7 +322,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ad diem illum laetissimum",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 36,
+      "year": 1903,
+      "page": 449
+    }
   },
   {
     "id": "mag:pius-x/quum-arcano-1904",
@@ -344,7 +386,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Scripturae Sanctae",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 36,
+      "year": 1903,
+      "page": 530
+    }
   },
   {
     "id": "mag:pius-x/haud-ita-1904",
@@ -363,7 +411,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Haud ita",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 21
+    }
   },
   {
     "id": "mag:pius-x/quae-nostra-1904",
@@ -445,7 +499,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "In Apostolicum",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 36,
+      "year": 1903,
+      "page": 580
+    }
   },
   {
     "id": "mag:pius-x/cuius-moderator-1904",
@@ -483,7 +543,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Exemplar libentissime",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 23
+    }
   },
   {
     "id": "mag:pius-x/quod-tibi-vehementer-1904",
@@ -502,7 +568,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod tibi vehementer",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 24
+    }
   },
   {
     "id": "mag:pius-x/apostolic-letter-1904-04-25",
@@ -523,7 +595,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "ASS",
+      "volume": 36,
+      "year": 1903,
+      "page": 586
+    }
   },
   {
     "id": "mag:pius-x/navitas-egregia-1904",
@@ -542,7 +620,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Navitas egregia",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 25
+    }
   },
   {
     "id": "mag:pius-x/non-ignota-1904",
@@ -561,7 +645,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Non ignota",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 65
+    }
   },
   {
     "id": "mag:pius-x/vehementer-nos-1904",
@@ -580,7 +670,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Vehementer Nos",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 67
+    }
   },
   {
     "id": "mag:pius-x/missale-a-te-1904",
@@ -599,7 +695,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Missale a te",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 68
+    }
   },
   {
     "id": "mag:pius-x/quum-optimo-1904",
@@ -618,7 +720,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quum optimo",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 37,
+      "year": 1904,
+      "page": 81
+    }
   },
   {
     "id": "mag:pius-x/edita-typis-1904",
@@ -637,7 +745,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Edita typis",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 69
+    }
   },
   {
     "id": "mag:pius-x/ex-opere-1904",
@@ -656,7 +770,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ex opere",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 72
+    }
   },
   {
     "id": "mag:pius-x/magnam-equidem-1904",
@@ -675,7 +795,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Magnam equidem",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 73
+    }
   },
   {
     "id": "mag:pius-x/primum-operis-1904",
@@ -694,7 +820,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Primum operis",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 71
+    }
   },
   {
     "id": "mag:pius-x/primum-1904",
@@ -713,7 +845,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Primum",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 135
+    }
   },
   {
     "id": "mag:pius-x/seminarium-vaticanum-1904",
@@ -735,7 +873,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "ASS",
+      "volume": 37,
+      "year": 1904,
+      "page": 628
+    }
   },
   {
     "id": "mag:pius-x/ex-quo-tempore-1904",
@@ -754,7 +898,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ex quo tempore",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 37,
+      "year": 1904,
+      "page": 293
+    }
   },
   {
     "id": "mag:pius-x/sodalitatem-sacerdotum-1904",
@@ -773,7 +923,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Sodalitatem sacerdotum",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 136
+    }
   },
   {
     "id": "mag:pius-x/americae-regionem-1904",
@@ -890,7 +1046,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Conventui apparando",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 193
+    }
   },
   {
     "id": "mag:pius-x/oblatum-dono-1904",
@@ -909,7 +1071,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Oblatum dono",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 194
+    }
   },
   {
     "id": "mag:pius-x/quod-publicus-1904",
@@ -928,7 +1096,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod publicus",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 195
+    }
   },
   {
     "id": "mag:pius-x/exposuisti-nobis-1904",
@@ -947,7 +1121,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Exposuisti Nobis",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 196
+    }
   },
   {
     "id": "mag:pius-x/si-consentanea-1904",
@@ -966,7 +1146,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Si consentanea",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 37,
+      "year": 1904,
+      "page": 229
+    }
   },
   {
     "id": "mag:pius-x/nuncium-sane-1904",
@@ -985,7 +1171,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Nuncium sane",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 197
+    }
   },
   {
     "id": "mag:pius-x/letter-1904-09-21",
@@ -1022,7 +1214,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Novies saecularia",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 37,
+      "year": 1904,
+      "page": 148
+    }
   },
   {
     "id": "mag:pius-x/e-peractis-1904",
@@ -1098,7 +1296,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ad omnium instaurationem",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 37,
+      "year": 1904,
+      "page": 295
+    }
   },
   {
     "id": "mag:pius-x/quae-de-istius-1904",
@@ -1117,7 +1321,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quae de istius",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 258
+    }
   },
   {
     "id": "mag:pius-x/nobile-profecto-1904",
@@ -1155,7 +1365,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Exercitiorum Spiritualium",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 334
+    }
   },
   {
     "id": "mag:pius-x/gratiam-tibi-1904",
@@ -1174,7 +1390,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Gratiam tibi",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 332
+    }
   },
   {
     "id": "mag:pius-x/haud-tenui-1904",
@@ -1212,7 +1434,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ad suppetias",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 405
+    }
   },
   {
     "id": "mag:pius-x/descriptum-ornatumque-1904",
@@ -1269,7 +1497,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Si progressione",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 37,
+      "year": 1904,
+      "page": 358
+    }
   },
   {
     "id": "mag:pius-x/experiendo-plus-1904",
@@ -1307,7 +1541,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod nuper",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 385
+    }
   },
   {
     "id": "mag:pius-x/quinquagesimo-redeunte-anno-1905",
@@ -1326,7 +1566,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quinquagesimo redeunte anno",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 386
+    }
   },
   {
     "id": "mag:pius-x/fra-i-molti-e-gravi-uffici-1905",
@@ -1346,7 +1592,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Fra i molti e gravi uffici",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 37,
+      "year": 1904,
+      "page": 425
+    }
   },
   {
     "id": "mag:pius-x/quum-nos-1905",
@@ -1365,7 +1617,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quum Nos",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 387
+    }
   },
   {
     "id": "mag:pius-x/quemadmodum-servari-1905",
@@ -1384,7 +1642,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quemadmodum servari",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 37,
+      "year": 1904,
+      "page": 485
+    }
   },
   {
     "id": "mag:pius-x/epistolam-a-te-1905",
@@ -1403,7 +1667,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Epistolam a te",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 389
+    }
   },
   {
     "id": "mag:pius-x/quae-afferuntur-1905",
@@ -1422,7 +1692,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quae afferuntur",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 37,
+      "year": 1904,
+      "page": 486
+    }
   },
   {
     "id": "mag:pius-x/a-vincenzo-sardi-1905",
@@ -1460,7 +1736,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Consilium illud",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 37,
+      "year": 1904,
+      "page": 487
+    }
   },
   {
     "id": "mag:pius-x/qua-pontifex-1905",
@@ -1479,7 +1761,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Qua Pontifex",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 450
+    }
   },
   {
     "id": "mag:pius-x/sane-nuper-volumina-1905",
@@ -1498,7 +1786,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Sane nuper volumina",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 451
+    }
   },
   {
     "id": "mag:pius-x/inter-multiplices-curas-1905",
@@ -1520,7 +1814,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "ASS",
+      "volume": 37,
+      "year": 1904,
+      "page": 491
+    }
   },
   {
     "id": "mag:pius-x/solemne-illud-1905",
@@ -1539,7 +1839,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Solemne illud",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 37,
+      "year": 1904,
+      "page": 555
+    }
   },
   {
     "id": "mag:pius-x/proximi-ut-accepimus-1905",
@@ -1558,7 +1864,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Proximi, ut accepimus",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 37,
+      "year": 1904,
+      "page": 557
+    }
   },
   {
     "id": "mag:pius-x/quum-haud-1905",
@@ -1577,7 +1889,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quum, haud",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 452
+    }
   },
   {
     "id": "mag:pius-x/contro-i-democratici-cristiani-autonomi-1905",
@@ -1615,7 +1933,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Austriam catholico",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 37,
+      "year": 1904,
+      "page": 626
+    }
   },
   {
     "id": "mag:pius-x/sedis-apostolicae-1905",
@@ -1656,7 +1980,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Acerbo Nimis",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 37,
+      "year": 1904,
+      "page": 613
+    }
   },
   {
     "id": "mag:pius-x/peculiari-in-nos-1905",
@@ -1675,7 +2005,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Peculiari in Nos",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 657
+    }
   },
   {
     "id": "mag:pius-x/quum-propediem-1905",
@@ -1694,7 +2030,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quum propediem",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 658
+    }
   },
   {
     "id": "mag:pius-x/sollicito-vehementer-1905",
@@ -1713,7 +2055,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Sollicito vehementer",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 660
+    }
   },
   {
     "id": "mag:pius-x/apostolicae-sedi-1905",
@@ -1735,7 +2083,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "ASS",
+      "volume": 37,
+      "year": 1904,
+      "page": 679
+    }
   },
   {
     "id": "mag:pius-x/aere-nefariumque-1905",
@@ -1754,7 +2108,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Aere nefariumque",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 662
+    }
   },
   {
     "id": "mag:pius-x/crux-pectoralis-1905",
@@ -1777,7 +2137,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "ASS",
+      "volume": 37,
+      "year": 1904,
+      "page": 681
+    }
   },
   {
     "id": "mag:pius-x/inter-plura-1905",
@@ -1796,7 +2162,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Inter plura",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 665
+    }
   },
   {
     "id": "mag:pius-x/almae-urbis-nostrae-1905",
@@ -1930,7 +2302,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 38,
+      "year": 1905,
+      "page": 129
+    }
   },
   {
     "id": "mag:pius-x/vestras-e-fuldensi-1905",
@@ -2110,7 +2488,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 38,
+      "year": 1905,
+      "page": 67
+    }
   },
   {
     "id": "mag:pius-x/habiti-quotannis-1905",
@@ -2148,7 +2532,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Qui apparando",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 38,
+      "year": 1905,
+      "page": 257
+    }
   },
   {
     "id": "mag:pius-x/magnopere-nos-1905",
@@ -2167,7 +2557,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Magnopere Nos",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 336
+    }
   },
   {
     "id": "mag:pius-x/les-graves-evenements-1905",
@@ -2227,7 +2623,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Poloniae populum",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 38,
+      "year": 1905,
+      "page": 321
+    }
   },
   {
     "id": "mag:pius-x/dilectus-filius-1905",
@@ -2246,7 +2648,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Dilectus Filius",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 38,
+      "year": 1905,
+      "page": 382
+    }
   },
   {
     "id": "mag:pius-x/romanas-aequabilius-1906",
@@ -2284,7 +2692,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Opportunum valde",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 201
+    }
   },
   {
     "id": "mag:pius-x/provida-sapientique-cura-1906",
@@ -2325,7 +2739,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Novum",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 74
+    }
   },
   {
     "id": "mag:pius-x/vehementer-nos-1906",
@@ -2347,7 +2767,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Vehementer Nos",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 3
+    }
   },
   {
     "id": "mag:pius-x/inter-catholicos-1906",
@@ -2366,7 +2792,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Inter catholicos",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 75
+    }
   },
   {
     "id": "mag:pius-x/letter-1906-02-27",
@@ -2403,7 +2835,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quum centum",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 261
+    }
   },
   {
     "id": "mag:pius-x/religiosorum-ordinum-1906",
@@ -2444,7 +2882,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quoniam in re",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 77
+    }
   },
   {
     "id": "mag:pius-x/tribus-circiter-1906",
@@ -2464,7 +2908,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Tribus Circiter",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 129
+    }
   },
   {
     "id": "mag:pius-x/vigere-1906",
@@ -2483,7 +2933,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Vigere",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 140
+    }
   },
   {
     "id": "mag:pius-x/exeunte-1906",
@@ -2521,7 +2977,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Praestito Nobis",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 143
+    }
   },
   {
     "id": "mag:pius-x/tuos-de-morali-1906",
@@ -2540,7 +3002,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Tuos de morali",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 338
+    }
   },
   {
     "id": "mag:pius-x/quotquot-ex-universis-1906",
@@ -2600,7 +3068,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quum tu",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 339
+    }
   },
   {
     "id": "mag:pius-x/illustria-atque-explorata-1906",
@@ -2619,7 +3093,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Illustria atque explorata",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 341
+    }
   },
   {
     "id": "mag:pius-x/pergratus-nobis-1906",
@@ -2657,7 +3137,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Exacto societatis",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 342
+    }
   },
   {
     "id": "mag:pius-x/dei-providentis-benignitatem-1906",
@@ -2679,7 +3165,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 344
+    }
   },
   {
     "id": "mag:pius-x/pieni-l-animo-1906",
@@ -2699,7 +3191,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Pieni L'Animo",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 321
+    }
   },
   {
     "id": "mag:pius-x/legimus-laeto-1906",
@@ -2718,7 +3216,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Legimus laeto",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 527
+    }
   },
   {
     "id": "mag:pius-x/propositum-urgentes-1906",
@@ -2740,7 +3244,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 410
+    }
   },
   {
     "id": "mag:pius-x/gravissimo-officii-munere-1906",
@@ -2761,7 +3271,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Gravissimo Officii Munere",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 385
+    }
   },
   {
     "id": "mag:pius-x/quod-te-1906",
@@ -2780,7 +3296,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod te",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 577
+    }
   },
   {
     "id": "mag:pius-x/provinciale-antistitum-1906",
@@ -2799,7 +3321,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Provinciale Antistitum",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 578
+    }
   },
   {
     "id": "mag:pius-x/susceptum-deo-1906",
@@ -2837,7 +3365,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod felices",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 579
+    }
   },
   {
     "id": "mag:pius-x/absolutis-ut-accepimus-1906",
@@ -2894,7 +3428,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "De vita",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 581
+    }
   },
   {
     "id": "mag:pius-x/afflictum-propioribus-1906",
@@ -2932,7 +3472,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Litteras, quas",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 68
+    }
   },
   {
     "id": "mag:pius-x/une-fois-encore-1907",
@@ -2952,7 +3498,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Une Fois Encore",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 3
+    }
   },
   {
     "id": "mag:pius-x/letter-1907-01-20",
@@ -2989,7 +3541,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Qui piam",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 134
+    }
   },
   {
     "id": "mag:pius-x/letter-1907-02-22",
@@ -3007,7 +3565,13 @@
       ],
       "retrieved": "2026-09-12"
     },
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 257
+    }
   },
   {
     "id": "mag:pius-x/editum-nuper-1907",
@@ -3026,7 +3590,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Editum nuper",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 321
+    }
   },
   {
     "id": "mag:pius-x/quam-multa-1907",
@@ -3045,7 +3615,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quam multa",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 323
+    }
   },
   {
     "id": "mag:pius-x/sub-exitum-1907",
@@ -3064,7 +3640,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Sub exitum",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 390
+    }
   },
   {
     "id": "mag:pius-x/qua-tu-prudentia-1907",
@@ -3108,7 +3690,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Communis epistola",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 516
+    }
   },
   {
     "id": "mag:pius-x/ea-semper-fuit-1907",
@@ -3152,7 +3740,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Summa Nos",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 392
+    }
   },
   {
     "id": "mag:pius-x/solemnis-catholicorum-1907",
@@ -3171,7 +3765,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Solemnis catholicorum",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 651
+    }
   },
   {
     "id": "mag:pius-x/prope-est-1907",
@@ -3190,7 +3790,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Prope est",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 453
+    }
   },
   {
     "id": "mag:pius-x/quum-ante-annos-1907",
@@ -3209,7 +3815,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quum ante annos",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 518
+    }
   },
   {
     "id": "mag:pius-x/pascendi-dominici-gregis-1907",
@@ -3233,7 +3845,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Pascendi Dominici Gregis",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 593
+    }
   },
   {
     "id": "mag:pius-x/in-domibus-1907",
@@ -3362,7 +3980,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "ASS",
+      "volume": 40,
+      "year": 1907,
+      "page": 723
+    }
   },
   {
     "id": "mag:pius-x/delatum-sodalibus-1907",

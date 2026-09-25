@@ -533,7 +533,22 @@ lines each rests on (spec §3). `{year}` is the first year of the volume's span.
 | ASS 23 (1890–91, Leo XIII) | `ass-23-1890.*` | **2026-09-21** | 768 | 752–758 | 9 | 4 | 8 / 6 |
 | ASS 33 (1900–01, Leo XIII) | `ass-33-1900.*` | **2026-09-21** | 768 | 761–768 | 22 | 6 | 16 / 6 |
 | ASS 41 (1908, Pius X) | `ass-41-1908.*` | **2026-09-21** | 810 | 799–810 | 37 | 8 | 27 / 10 |
+| ASS 36 (1903–04, Leo XIII + Pius X) | `ass-36-1903.*` | **2026-09-22** | 768 | 758–768 | 38 | 20 | 22 / 14 |
+| ASS 37 (1904–05, Pius X) | `ass-37-1904.*` | **2026-09-22** | 820 | 798–820 | 33 | 16 | 25 / 7 |
+| ASS 38 (1905–06, Pius X) | `ass-38-1905.*` | **2026-09-22** | 702 | 417–423 | 13 | 6 | 9 / 7 |
+| ASS 39 (1906, Pius X) | `ass-39-1906.*` | **2026-09-22** | 640 | 623–640 | 60 | 18 | 52 / 23 |
+| ASS 40 (1907, Pius X) | `ass-40-1907.*` | **2026-09-22** | 791 | 769–781 | 37 | 10 | 31 / 7 |
 
+
+ASS 36–40 scanned on 2026-09-25 (`npx tsx tools/scan-ass.ts 36-40`, phase 2c-ii-b): every
+count above equals what `tools/survey-ass.ts` read from the store for these volumes, so the
+fixture path and the survey pass see the same volume. **ASS 38's page count is the bound
+volume's, not its papal part's**: its own *Summa actorum* sits at pp. 417–423 and a
+`Supplementum ad " Acta S. Sedis „ (VOL. XXXVIII)` occupies pp. 433–702, with a separately
+paginated French section inside it numbered from 1. No scanned entry falls in that range
+(the 13 run pp. 67–382), and pages 424–702 contain no `Pontificatus Nostri` at all, so the
+supplement hides no papal act: the volume's own summa lists 16 papal rows and that is what
+there is.
 Scanned on 2026-09-23 (`npm run scan-ass -- sample`, re-run after 2c-ii Task 6 relaxed
 `header-mismatch` for the ASS -- `headerAgreesASS`, `tools/src/acta/ass.ts` -- which read
 ASS 23 p. 318 and ASS 33 pp. 213, 355, 385 whole (318, 355 and 385 already answered by a

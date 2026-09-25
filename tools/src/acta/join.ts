@@ -93,6 +93,19 @@ export const ACTA_SOURCES: readonly ActaSource[] = [
   ass(23, 1890, 'ASS-23-1890-91-ocr.pdf', '2026-09-21', 1891),
   ass(33, 1900, 'ASS-33-1900-1-ocr.pdf', '2026-09-21', 1901),
   ass(41, 1908, 'ASS-41-1908-ocr.pdf', '2026-09-21'),
+  // Phase 2c-ii-b (spec §10 decision 3): the rest of Pius X's pontificate, the era the
+  // survey put first -- 139 of 197 summa rows claimed across these five, 70.6 %, the best
+  // rate in the series. ASS 41 stands above, joined by 2c-i, so these five complete it.
+  // ASS 36 prints two popes: Leo XIII to his death on 20 July 1903 and Pius X from his
+  // election on 4 August, so its Leo XIII acts belong to 2c-ii-c's count, not this era's.
+  // ASS 38 carries a bound-in `Supplementum ad " Acta S. Sedis „` at pp. 433-702, with a
+  // separately paginated French supplement inside it, and its own summa at pp. 417-423.
+  // Retrieved 2026-09-22, when the whole series was fetched for the survey.
+  ass(36, 1903, 'ASS-36-1903-4-ocr.pdf', '2026-09-22', 1904),
+  ass(37, 1904, 'ASS-37-1904-5-ocr.pdf', '2026-09-22', 1905),
+  ass(38, 1905, 'ASS-38-1905-6-ocr.pdf', '2026-09-22', 1906),
+  ass(39, 1906, 'ASS-39-1906-ocr.pdf', '2026-09-22'),
+  ass(40, 1907, 'ASS-40-1907-ocr.pdf', '2026-09-22'),
   // Phase 2b-iii-b (spec §10): AAS 1-17, the volumes of 1909-1925, whose OCR lost the page
   // column on most index pages -- the pages come back from the volume body through the
   // sidecars (recover.ts). 1909 and 1917-I, the sample's, re-extracted on 2026-09-20 with
