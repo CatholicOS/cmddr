@@ -160,8 +160,8 @@ export function toDocument(item: HarvestItem, retrieved: string): DocumentRecord
   // apost_letters, beside the letter they accompany. The override replaces the genre only;
   // `sourceGenreLabel` below still records the shelf verbatim, so what the source said is
   // never hidden, and the provisional id follows the corrected genre as it does everywhere.
-  const genre = GENRE_OVERRIDES[`${item.pageSlug}|${slugify(item.title)}|${item.date}`]?.genre
-    ?? mapping.genre;
+  const override = GENRE_OVERRIDES[`${item.pageSlug}|${slugify(item.title)}|${item.date}`];
+  const genre = override?.genre ?? mapping.genre;
 
   // An incipit the source itself printed always wins. The curated table is consulted only
   // where the heading printed none -- the provisional shelf -- so a recovered row can never
@@ -224,7 +224,9 @@ export function toDocument(item: HarvestItem, retrieved: string): DocumentRecord
   // A series item carries no characteristics (messages spec §5.2): the generic mapping of
   // its `messages/…` label is `genre: null` and contributes none, and no message is filed
   // on motu_proprio.
-  const characteristics = new Set(series ? [] : mapping.characteristics ?? []);
+  // An override that names characteristics replaces the shelf mapping's: it corrects what the
+  // act is, not just which shelf it sat on. The second shelf's motu proprio still applies.
+  const characteristics = new Set(series ? [] : override?.characteristics ?? mapping.characteristics ?? []);
   if (item.alsoShelvedAs?.includes('motu_proprio')) characteristics.add('motu-proprio');
   if (characteristics.size) record.characteristics = [...characteristics].sort();
   if (mapping.descriptiveTitle) record.descriptiveTitle = mapping.descriptiveTitle;

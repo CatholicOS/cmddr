@@ -37,14 +37,14 @@ Every document appears in both views below; neither is a subset of the other.
 | Genre | Documents | Dates |
 | --- | --- | --- |
 | [`apostolic-exhortation`](documents/by-genre/apostolic-exhortation.md) | 57 | 1908-08-04 – 2025-10-04 |
-| [`apostolic-letter`](documents/by-genre/apostolic-letter.md) | 3755 | 1741-05-30 – 2026-08-29 |
+| [`apostolic-letter`](documents/by-genre/apostolic-letter.md) | 3760 | 1741-05-30 – 2026-08-29 |
 | [`constitution`](documents/by-genre/constitution.md) | 6 | 1870-04-24 – 1965-12-07 |
 | [`declaration`](documents/by-genre/declaration.md) | 3 | 1965-10-28 – 1965-12-07 |
 | [`decree`](documents/by-genre/decree.md) | 9 | 1963-12-04 – 1965-12-07 |
 | [`discourse-address`](documents/by-genre/discourse-address.md) | 30 | 1848-04-29 – 1903-06-22 |
 | [`encyclical`](documents/by-genre/encyclical.md) | 287 | 1740-12-03 – 2026-05-15 |
 | [`homily`](documents/by-genre/homily.md) | 11 | 2014-02-02 – 2025-02-01 |
-| [`letter`](documents/by-genre/letter.md) | 1170 | 1863-12-21 – 1978-09-28 |
+| [`letter`](documents/by-genre/letter.md) | 1165 | 1863-12-21 – 1978-09-28 |
 | [`message`](documents/by-genre/message.md) | 534 | 1960-12-22 – 2026-08-15 |
 | [`papal-bull`](documents/by-genre/papal-bull.md) | 2556 | 1749-03-15 – 2026-01-08 |
 | [`prayer`](documents/by-genre/prayer.md) | 1 | 1961-09-29 – 1961-09-29 |

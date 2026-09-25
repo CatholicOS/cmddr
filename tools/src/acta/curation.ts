@@ -2106,6 +2106,19 @@ export const ACTA_SHARED_PAGES: Readonly<Record<string, SharedPage>> = {
   // Phase 2c-i (the ASS sample): the one page of the five sample volumes that two matched
   // shelf letters cite. Read in the store text on 2026-09-21; the ASS sets Leo XIII's short
   // letters one after the other under their own headings, as the AAS fascicles do.
+  // Phase 2c-i finding 9, settled in this change: p. 3 opens two acts of different classes,
+  // and both are matched only once the brevis carries `in-forma-brevis` (GENRE_OVERRIDES).
+  // Until that row was written the page held one matched act and invariant 25 never fired.
+  'ASS:33:3': {
+    documentIds: ['mag:leo-xiii/i-luttuosi-avvenimenti-1900', 'mag:leo-xiii/quas-tu-1900'],
+    evidence: "ASS 33 (1900) p. 3 (page 3 of ass-33-1900.txt) prints 'IITTERAE Sanctissimi D. N. Leonis XIII ad Emum. Cardinalem "
+      + "Vicarium ut exci- / tet Religiosorum Communitates ad effundendas Deo preces pro luctuosis fidelium in Sinis casibus' (the OCR "
+      + "reads the L as I), opening 'I luttuosi avvenimenti, che si succedono in Gina,' and dated 16 July 1900, and, lower on the same "
+      + "page, 'IITTERAE in forma Brevis SSmi. D. N. Leonis XIII ad Emum. Archiepiscopum Me- / diolanensem quoad interessentiam comitiis "
+      + "ad oratores populi eligendos', opening 'Quas Tu caeterique provinciae Antistites ad nos communiter' and dated 8 June 1900. The "
+      + "scanner enters both at 3 (ass-33-1900.entries.json, anchor `dateline`). They are of different classes -- the first a letter of "
+      + "the letters shelf, the second an apostolic letter in forma Brevis -- and vatican.va files both on Leo XIII's letters shelf.",
+  },
   'ASS:33:641': {
     documentIds: ['mag:leo-xiii/de-ingenii-1901', 'mag:leo-xiii/le-nostre-ferme-speranze-1901'],
     evidence: "ASS 33 (1900) p. 641 (page 641 of ass-33-1900.txt, read 2026-09-21) prints 'LITTERAE SS.mi Patris Leonis XIII ad "

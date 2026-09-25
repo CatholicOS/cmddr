@@ -66,27 +66,27 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    every header-mismatch of the sample is the OCR's reading of the right number, so the PDF page is the printed page in
    all five (spec §4's second question, answered yes *for the sample*; the series holds one genuine offset these five do
    not, ASS 7 (1872) pp. 496-547 — finding 15(d)).
-5. **59 references written, 56 by the unique rule and 3 by the opening rule, with 0 ambiguities and 0 conflicts.** Of the 97 entries,
-   88 fall in a category the registry harvests, and **59 of those 88 matched** (67.0 %): ASS 1 0, ASS 12 5, ASS 23 8,
-   ASS 33 17, ASS 41 29 (§3). The rate climbs with the volume and with the shelf behind it, from nothing in 1865 to
+5. **64 references written, 61 by the unique rule and 3 by the opening rule, with 0 ambiguities and 0 conflicts.** Of the 97 entries,
+   88 fall in a category the registry harvests, and **64 of those 88 matched** (72.7 %): ASS 1 0, ASS 12 5, ASS 23 9,
+   ASS 33 21, ASS 41 29 (§3). The rate climbs with the volume and with the shelf behind it, from nothing in 1865 to
    72.5 % in 1908. **The opening rule is what the ASS needed and the AAS did not.** An ASS entry carries no incipit —
    the volumes print no index, so the scanner reads the act's first eight words after the salutation (`incipit: null`,
-   `opening`), and the join matches an opening against the shelf's incipit as a prefix. 3 of the 59 matches rest on it
+   `opening`), and the join matches an opening against the shelf's incipit as a prefix. 3 of the 64 matches rest on it
    (§3.1): *Dall'alto dell'Apostolico Seggio* (23 p. 193), *Novum argumentum* (23 p. 318), *Singulari curare* and
-   *In domibus* (41 pp. 34, 35). The other 56 are `unique` — one shelf record of the pope, the class and the day. No
+   *In domibus* (41 pp. 34, 35). The other 61 are `unique` — one shelf record of the pope, the class and the day. No
    toponym match, no curated override, and **no ambiguity in the whole sample**: the era's shelf is thin enough that a
    pope, a class and a date name one act, where the 2003–2009 indexes produced 60 ambiguities in 1 118 entries (that era's report, §2). The one
    page two acts share (ASS 33 p. 641: *De ingenii* of 20 February and *Le nostre ferme speranze* of 28 March 1901) is
-   curated in `ACTA_SHARED_PAGES` (1 ASS row), so both are written rather than both withheld by invariant 25.
-6. **The 29 unmatched divide three ways, and only 5 of them are the join's doing.** 23 have **no shelf record at all on their
+   curated in `ACTA_SHARED_PAGES` (2 ASS row), so both are written rather than both withheld by invariant 25.
+6. **The 24 unmatched divide three ways, and none of them is the join's doing.** 23 have **no shelf record at all on their
    date** (§3.3's "Same date" column is empty for every one), and they are ASS 1 pp. 578, 744; ASS 12 pp. 273, 275, 481, 588; ASS 23 pp. 427, 513, 522; ASS 33 pp. 212, 213, 401; ASS 41 pp. 37, 65, 134, 300, 301, 580, 581, 623, 748, 757, 766
    — ASS 1's two apostolic letters of 1866, three acts of ASS 12 and three of ASS 23 the letters shelf does not hold,
    the Lourdes letter of ASS 41 p. 65, and 14 of class `BREVE`: the two the volumes head with the class word
    (ASS 12 p. 588, ASS 33 p. 401) and the 12 phase 2c-ii-a read from the ring, not one of which the briefs shelves
    hold. These are the registry's gap, not the scanner's: the act is printed, read, dated and
-   quoted here, and the shelf has never carried it. 5 are the `LITTERAE IN FORMA BREVIS` of ASS 23 and 33 (finding 9),
+   quoted here, and the shelf has never carried it. None is the `LITTERAE IN FORMA BREVIS` of ASS 23 and 33 (finding 9),
    none is held by the class rule against an encyclical (finding 7), and 1 is the Latin printing whose one candidate the
-   Italian printing already claimed (finding 8). Every one of the 29 is held `series-not-created` by the creator (§4):
+   Italian printing already claimed (finding 8). Every one of the 24 is held `series-not-created` by the creator (§4):
    **0 documents were created**, as phase 2c-i intends — the ASS joins, it does not harvest.
 7. **The two acts the class rule held are both resolved, and neither needed a match override.**
    *Catholicae Ecclesiae* of 20 November 1890, on the slave trade in Africa, is headed `LITTERAE circulares` at ASS 23
@@ -114,16 +114,19 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    *Ubi arcano Dei consilio* is cited at its Latin page — and if that policy governs the ASS too, the citation should
    move to p. 206 and be carried by a curated reference, not by the opening rule. **Owner's call**; nothing was
    changed, and the pages of both printings are quoted in §2.5 and §3.3.
-9. **The 5 `LITTERAE in forma Brevis` of the sample are a class question, not a matching failure.** ASS 23 p. 437, ASS 33 p. 3, ASS 33 p. 129, ASS 33 p. 198, ASS 33 p. 577
-   are headed `LITTERAE in forma Brevis` — ASS 23 p. 437 with the lower-case b that volume prints — which `categories.ts` classes `brief`; every one has exactly one shelf
-   record of the same incipit on the same date, and every one of those is on Leo XIII's **letters** shelf as genre `letter`
-   (`opportune-quidem-1891`, `quas-tu-1900`, `ad-catholicorum-conventum-1900`, `venerabilis-frater-augustinus-1900`, `saecularis-eventus-1901`);
-   none is on a briefs shelf. The candidates are printed in §3.3. Either the class belongs with the letters or the 5
-   shelf records are misfiled — **the owner rules, and the same four words head acts in every volume of the series**.
-   **One page of the sample is live either way**: ASS 33 p. 3 opens two acts — the Italian letter *I luttuosi avvenimenti* of 16 July 1900,
-   which is matched, and *Quas Tu* of 8 June 1900, which this finding holds (§2.1, §3.3). Rule the class into the letters and that page
-   carries **two matched documents**, whereupon invariant 25 withholds *both* references until an `ACTA_SHARED_PAGES` row is curated for
-   `ASS:33:3` naming the pair, as `ASS:33:641` already is. The ruling is therefore one row of curation wider than it looks.
+9. **The `LITTERAE in forma Brevis` of the sample were a class question, and the owner ruled the shelf wrong.**
+   Five acts of the sample are headed `LITTERAE in forma Brevis` — ASS 23 p. 437 with the lower-case b that volume
+   prints, then ASS 33 pp. 3, 129, 198 and 577. Each had exactly one shelf record of the same incipit on the same date,
+   and every one of those stood on Leo XIII's **letters** shelf as genre `letter` (`opportune-quidem-1891`, `quas-tu-1900`, `ad-catholicorum-conventum-1900`, `venerabilis-frater-augustinus-1900`, `saecularis-eventus-1901`), none on a briefs
+   shelf, so the join refused all five on the class. The ruling: the shelf misses the form, not the genre. A brief is
+   *litterae apostolicae in forma Brevis* (README, *The brief and the encyclical*), so each record is an
+   `apostolic-letter` bearing `in-forma-brevis`, written as five `GENRE_OVERRIDES` rows that quote the ASS heading
+   the act opens with. The `Brevia` class then matches all five.
+   **The ruling was one row of curation wider than it looked**, as this finding warned. ASS 33 p. 3 opens two acts —
+   the Italian letter *I luttuosi avvenimenti* of 16 July 1900 and the brevis *Quas Tu* of 8 June 1900. With the brevis
+   matched the page carried two matched documents, and invariant 25 withheld *both* references — *I luttuosi*
+   losing the one it already had — until `ACTA_SHARED_PAGES` named the pair at `ASS:33:3`, as `ASS:33:641` already
+   was. With that row both are cited, and the sample gains five references, not four.
 10. **Two of the 24 readings rest on an emendation of the OCR, and the owner should check them before they are trusted.**
    `ASS:33:643`: the dateline prints `Anno MDCCCCL`, which is 1950; read as `MDCCCCI`, 1901 — the volume's second year, the
    twenty-fourth of the pontificate the same line names, and the year of the 450th anniversary the heading names.
@@ -144,12 +147,12 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    and if the owner prefers that, `Reprint` needs a third `kind` (a first printing in the superseded series, cited at
    its re-issue) and the two rows re-keyed; README's phase 2b-iii-b paragraph and the 1909–1925 era report would then
    need the same correction they need today. Nothing here is load-bearing beyond those two rows.
-12. **The reverse gap is 46 documents, and it is Leo XIII's.** The shelf documents of the sample's years carrying no
-   reference at all (§5): Pius IX 2 (1865–66), Leo XIII 29 (1 in 1879, 17 in 1890–91, 11 in 1900–01), Pius X 15 (1908). Almost
+12. **The reverse gap is 41 documents, and it is Leo XIII's.** The shelf documents of the sample's years carrying no
+   reference at all (§5): Pius IX 2 (1865–66), Leo XIII 24 (1 in 1879, 16 in 1890–91, 7 in 1900–01), Pius X 15 (1908). Almost
    none of them has an ASS entry on its date — §5's last column is empty in all but a handful — so these are acts the
    five volumes do not print, not acts the scanner missed: the ASS published the Holy See's acts selectively, and a
    volume of 672–810 pages yields between 3 entries here (ASS 1, all three read by hand) and 44 (ASS 41). For the era as a whole the registry holds
-   496 shelf documents dated 1865–1908 and **59 of them now carry a reference** (§7) — the five sample volumes' whole
+   496 shelf documents dated 1865–1908 and **64 of them now carry a reference** (§7) — the five sample volumes' whole
    yield. That is the number 2c-ii moves, with 36 volumes left.
 13. **The allocutions are the one category the sample cannot decide, and the count that would decide it is 1.** 9 entries
    are skipped as a category the registry does not harvest (§3.4): 8 allocutions and the chirograph of ASS 33 p. 714.
@@ -460,8 +463,8 @@ reading with a narrower correction. That is a curation decision for the era that
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | ass-1 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 1 | 0 | 0 |
 | ass-12 | 11 | 9 | 5 | 5 | 0 | 0 | 0 | 0 | 4 | 2 | 0 | 0 |
-| ass-23 | 13 | 13 | 8 | 7 | 1 | 0 | 0 | 0 | 5 | 0 | 0 | 0 |
-| ass-33 | 26 | 24 | 17 | 17 | 0 | 0 | 0 | 0 | 7 | 2 | 0 | 0 |
+| ass-23 | 13 | 13 | 9 | 8 | 1 | 0 | 0 | 0 | 4 | 0 | 0 | 0 |
+| ass-33 | 26 | 24 | 21 | 21 | 0 | 0 | 0 | 0 | 3 | 2 | 0 | 0 |
 | ass-41 | 44 | 40 | 29 | 27 | 2 | 0 | 0 | 0 | 11 | 4 | 0 | 0 |
 
 ### 3.1 Matches
@@ -478,12 +481,16 @@ reading with a narrower correction. That is a curation decision for the era that
 | ASS 23 (1890) 193 | LETTERA ENCICLICA | 1890-10-15 | *Dall' alto dell' Apostolico seggio, dove la Provvidenza* | `mag:leo-xiii/dall-alto-dell-apostolico-seggio-1890` | opening |
 | ASS 23 (1890) 257 | LITTERAE CIRCULARES | 1890-11-20 | *Catholicae Ecclesiae, quae omnes homines materna caritate complectitur,* | `mag:leo-xiii/catholicae-ecclesiae-1890` | unique |
 | ASS 23 (1890) 318 | LITTERAE | 1890-11-20 | *Novum argumentum perspecti tui erga hanc Apostolicam Sedem* | `mag:leo-xiii/novum-argumentum-1890` | unique |
+| ASS 23 (1890) 437 | LITTERAE IN FORMA BREVIS | 1891-01-01 | *Opportune quidem et auspicato contingit, ut XI kalendas* | `mag:leo-xiii/opportune-quidem-1891` | unique |
 | ASS 23 (1890) 449 | LITTERAE | 1891-02-10 | *Praeclarum studium, quo incensi estis, ut ex vestris* | `mag:leo-xiii/praeclarum-studium-1891` | unique |
 | ASS 23 (1890) 518 | EPISTOLA | 1891-03-03 | *In ipso supremi Pontificatus, quo providens Deus Nos* | `mag:leo-xiii/quod-erat-maxime-1891` | unique |
 | ASS 23 (1890) 641 | LITTERAE ENCYCLICAE | 1891-05-15 | *Rerum novarum semel excitata cupidine, quae diu quidem* | `mag:leo-xiii/rerum-novarum-1891` | unique |
 | ASS 33 (1900) 3 | LITTERAE | 1900-07-16 | *I luttuosi avvenimenti, che si succedono in Gina,* | `mag:leo-xiii/i-luttuosi-avvenimenti-1900` | unique |
+| ASS 33 (1900) 3 | LITTERAE IN FORMA BREVIS | 1900-06-08 | *Quas Tu caeterique provinciae Antistites ad nos communiter* | `mag:leo-xiii/quas-tu-1900` | unique |
 | ASS 33 (1900) 65 | LITTERAE | 1900-07-21 | *Omnibus compertum exploratumque est, Venerabiles Fratres, Nos, sub* | `mag:leo-xiii/omnibus-compertum-1900` | unique |
+| ASS 33 (1900) 129 | LITTERAE IN FORMA BREVIS | 1900-08-31 | *Ad Catholicorum conventum vobis proxime in Urbe celebrandum* | `mag:leo-xiii/ad-catholicorum-conventum-1900` | unique |
 | ASS 33 (1900) 194 | LITTERAE | 1900-08-19 | *Già fin dagli esordii del Nostro Pontificato Noi* | `mag:leo-xiii/gia-fin-dagli-esordii-1900` | unique |
+| ASS 33 (1900) 198 | LITTERAE IN FORMA BREVIS | 1900-09-14 | *Venerabilis Frater Augustinus Episcopus Papiae una cum dilectis* | `mag:leo-xiii/venerabilis-frater-augustinus-1900` | unique |
 | ASS 33 (1900) 201 | LITTERAE | 1900-10-04 | *Qua mente quove animo prosequuti fuerimus coetum, quem* | `mag:leo-xiii/qua-mente-1900` | unique |
 | ASS 33 (1900) 273 | EPISTOLA ENCYCLICA | 1900-11-01 | *Tametsi futura prospicientibus, vacuo a sollicitudine animo esse* | `mag:leo-xiii/tametsi-futura-prospicientibus-1900` | unique |
 | ASS 33 (1900) 286 | LITTERAE APOSTOLICAE | 1900-10-20 | *Rei catholicae apud Lusitanos iuvandae ducimur studio, nec* | `mag:leo-xiii/rei-catholicae-1900` | unique |
@@ -493,6 +500,7 @@ reading with a narrower correction. That is a curation decision for the era that
 | ASS 33 (1900) 355 | LITTERAE | 1900-12-23 | *Au milieu des consolations que Nous procurait l'Année* | `mag:leo-xiii/au-milieu-des-consolations-1900` | unique |
 | ASS 33 (1900) 385 | EPISTOLA ENCYCLICA | 1901-01-18 | *Graves de communi re oeconomica disceptationes, quae non* | `mag:leo-xiii/graves-de-communi-re-1901` | unique |
 | ASS 33 (1900) 449 | LITTERAE | 1901-02-11 | *In maximis occupationibus variisque acerbitatibus solatium Nobis non* | `mag:leo-xiii/in-maximis-occupationibus-1901` | unique |
+| ASS 33 (1900) 577 | LITTERAE IN FORMA BREVIS | 1901-05-11 | *Saecularis eventus faustitas, quae nobilem cohortem vestram hisce* | `mag:leo-xiii/saecularis-eventus-1901` | unique |
 | ASS 33 (1900) 641 | LITTERAE | 1901-02-20 | *De ingenii doctrinaeque fructibus quos nobis frequentes catholicorum* | `mag:leo-xiii/de-ingenii-1901` | unique |
 | ASS 33 (1900) 641 | LITTERAE | 1901-03-28 | *Le nostre ferme speranze di quattro anni fa,* | `mag:leo-xiii/le-nostre-ferme-speranze-1901` | unique |
 | ASS 33 (1900) 642 | LITTERAE | 1901-05-17 | *Nos quidem et novimus et alias laudavimus positam* | `mag:leo-xiii/nos-quidem-1901` | unique |
@@ -544,16 +552,11 @@ reading with a narrower correction. That is a curation decision for the era that
 | ASS 12 (1879) 481 | LITTERAE | 1880-02-24 | *Libenti prorsus animo perlegimus commentarium a Te nuper* | SSmi. D. N. Leonis XIII ad Archiepiscopum Coloniensem; quibus declarat se passurum, concordiae tnaturandae gratia, ut nomina animarum pastorum Borussico Gubernio exhibeantur, ante cano­ nicam institutionem. | — | — |
 | ASS 12 (1879) 588 | BREVE | 1880-03-23 | *Ad perpetuam rei memoriam, Benedicente Domino, variis iam* | quo Sodalitates ab adoratione perpetua SSmi Sacramenti eto. nuncupatae, plenaria ditantur Indulgentia, v?riis anni diebus lu- erandâ. | — | — |
 | ASS 23 (1890) 427 | LITTERAE APOSTOLICAE | 1890-11-12 | *Religiosus Ordo Benedicti Patris de rationibus Ecclesiae reique* | Sanctissimi D. N. Leonis XIII de regimine et disciplina Congregationis Anglo-Benedictinae novanda. | — | — |
-| ASS 23 (1890) 437 | LITTERAE IN FORMA BREVIS | 1891-01-01 | *Opportune quidem et auspicato contingit, ut XI kalendas* | Sanctissimi D. N. Leonis XIII quibus indulgen­ tiae conceduntur, occasione qua solemnia fiunt in honorem s. Aloisii Gonzagae Xl Kalendas iulias huius anni, elapso, ab eius morte, spatio trium saeculorum. | `mag:leo-xiii/opportune-quidem-1891` (*Opportune quidem*) | — |
 | ASS 23 (1890) 513 | LITTERAE APOSTOLICAE | 1890-11-08 | *Praeclara inter monumenta, quae maiorum pietas in Italia* | Sanctissimi D. N. Leonis XIII; de iuribus Archiepiscopi bariensis et privilegiis magni Prioris Basilicae s. Nicolai. | — | — |
 | ASS 23 (1890) 522 | MOTU PROPRIO | 1891-03-14 | *Ut mysticam Sponsam Christi, qui lux vera est,* | Sanctissimi D. N. Leonis XIII; de vaticana specula astronomica restituenda et amplificanda. | — | — |
-| ASS 33 (1900) 3 | LITTERAE IN FORMA BREVIS | 1900-06-08 | *Quas Tu caeterique provinciae Antistites ad nos communiter* | IITTERAE in forma Brevis SSmi. D. N. Leonis XIII ad Emum. Archiepiscopum Me­ diolanensem quoad interessentiam comitiis ad oratores populi eligendos (1). | `mag:leo-xiii/quas-tu-1900` (*Quas Tu*) | — |
-| ASS 33 (1900) 129 | LITTERAE IN FORMA BREVIS | 1900-08-31 | *Ad Catholicorum conventum vobis proxime in Urbe celebrandum* | SSmi. O. N. Leonis XIII, quae mittebantur ad XVII Con­ ventum catholicorum, Romae habitum. | `mag:leo-xiii/ad-catholicorum-conventum-1900` (*Ad Catholicorum conventum*) | — |
-| ASS 33 (1900) 198 | LITTERAE IN FORMA BREVIS | 1900-09-14 | *Venerabilis Frater Augustinus Episcopus Papiae una cum dilectis* | SSmi. D. N. Leonis XIII; quarum obiectum est trans­ latio Corporis S. Augustini ad Basilicam S. Petri in caelo aureo Civitatis Papiensis. | `mag:leo-xiii/venerabilis-frater-augustinus-1900` (*Venerabilis Frater Augustinus*) | — |
 | ASS 33 (1900) 212 | BREVE | 1893-05-01 | *Cum, sicuti accepimus, pia Christifidelium Confraternitas sub titulo* | CONFRATERNITAS quotidianae et universalis adorationis, rite Taurini erecta, in­ dulgentiis honestatur. | — | — |
 | ASS 33 (1900) 213 | BREVE | 1894-08-21 | *Romanorum Pontificum praedecessorum Nostrorum vestigiis inhaerentes, pias fidelium* | CONFRATERNITAS eadem erigitur in primariam, aliisque dotatur indulgentiis | — | — |
 | ASS 33 (1900) 401 | BREVE | 1899-12-18 | *Quum, sicuti Nobis relatum est, a quodam Sacerdote* | , quo indulgentia centum dierum conceditur, quolibet die lucranda, recitan­ tibus submissam orationem pro conversione hebraeorum et turcarum. | — | — |
-| ASS 33 (1900) 577 | LITTERAE IN FORMA BREVIS | 1901-05-11 | *Saecularis eventus faustitas, quae nobilem cohortem vestram hisce* | SSmi O. N. Leonis XIII, occasione anni centesimi ab in­ stitutione nobilis cohortis Sacratissimum Principem protuentis. | `mag:leo-xiii/saecularis-eventus-1901` (*Saecularis eventus*) | — |
 | ASS 41 (1908) 37 | BREVE | 1907-07-19 | *In hac Beati Petri Principis Apostolorum Cathedra, nullis* | Pontifex laudat Collegium Americanum Lovanii in Belgio oc­ casione quinquagesimi anni ab erectione. | — | — |
 | ASS 41 (1908) 65 | EPISTOLA | 1907-12-24 | *Solemnia sacra, quae in mensem Februarium proximum apparantur* | «Qua Pontifex mittit Legatum Apostolicum ad quinquagesima solemnia in honorem B. M. V. de Lourdes. | — | — |
 | ASS 41 (1908) 134 | BREVE | 1907-11-27 | *Universis Xtifidelibus praesentes Litteras inspecturis, salutem et Apostolicam* | Indulgentia plenaria in forma iubilaei conceditur visitantibus cryptam de " Massabielle „ civitatis Lapurdensis. | — | — |
@@ -588,7 +591,7 @@ reading with a narrower correction. That is a curation decision for the era that
 
 | Reason | Entries |
 |---|---|
-| series-not-created | 29 |
+| series-not-created | 24 |
 
 Created: 0 (expected 0: phase 2c-i joins only).
 
@@ -611,7 +614,7 @@ Created: 0 (expected 0: phase 2c-i joins only).
 
 </details>
 
-<details><summary><b>ass-23</b> — 17 documents dated 1890–1891 with no reference</summary>
+<details><summary><b>ass-23</b> — 16 documents dated 1890–1891 with no reference</summary>
 
 | Document | Date | Class | Incipit | ASS entries on this date |
 |---|---|---|---|---|
@@ -624,7 +627,6 @@ Created: 0 (expected 0: phase 2c-i joins only).
 | `mag:leo-xiii/non-est-opus-1891` | 1891-12-14 | discourse-address | *Non est opus* | — |
 | `mag:leo-xiii/non-maius-1891` | 1891-06-15 | apostolic-letter | *Non maius* | — |
 | `mag:leo-xiii/octobri-mense-1891` | 1891-09-22 | encyclical | *Octobri mense* | — |
-| `mag:leo-xiii/opportune-quidem-1891` | 1891-01-01 | letter | *Opportune quidem* | ASS 23 (1890) 437 LITTERAE IN FORMA BREVIS *Opportune quidem et auspicato contingit, ut XI kalendas* |
 | `mag:leo-xiii/optimae-quidem-1891` | 1891-07-21 | apostolic-letter | *Optimae quidem* | — |
 | `mag:leo-xiii/pastoralis-officii-1891` | 1891-09-12 | encyclical | *Pastoralis officii* | — |
 | `mag:leo-xiii/pastoralis-vigilantiae-1891` | 1891-06-25 | encyclical | *Pastoralis vigilantiae* | — |
@@ -635,21 +637,17 @@ Created: 0 (expected 0: phase 2c-i joins only).
 
 </details>
 
-<details><summary><b>ass-33</b> — 11 documents dated 1900–1901 with no reference</summary>
+<details><summary><b>ass-33</b> — 7 documents dated 1900–1901 with no reference</summary>
 
 | Document | Date | Class | Incipit | ASS entries on this date |
 |---|---|---|---|---|
-| `mag:leo-xiii/ad-catholicorum-conventum-1900` | 1900-08-31 | letter | *Ad Catholicorum conventum* | ASS 33 (1900) 129 LITTERAE IN FORMA BREVIS *Ad Catholicorum conventum vobis proxime in Urbe celebrandum* |
 | `mag:leo-xiii/al-compimento-delle-riforme-1901` | 1901-06-11 | letter | *Al compimento delle riforme* | ASS 33 (1900) 714 CHIROGRAPHUM *Al compimento delle riforme richieste dalle presenti circostanze,* |
 | `mag:leo-xiii/gravissimas-1901` | 1901-05-16 | encyclical | *Gravissimas* | — |
 | `mag:leo-xiii/parta-humano-generi-1901` | 1901-09-08 | apostolic-letter | *Parta humano generi* | — |
 | `mag:leo-xiii/praestantiam-assisiensis-1900` | 1900-08-02 | letter | *Praestantiam Assisiensis* | — |
-| `mag:leo-xiii/quas-tu-1900` | 1900-06-08 | letter | *Quas Tu* | ASS 33 (1900) 3 LITTERAE IN FORMA BREVIS *Quas Tu caeterique provinciae Antistites ad nos communiter* |
 | `mag:leo-xiii/reputantibus-1901` | 1901-08-20 | letter | *Reputantibus* | — |
-| `mag:leo-xiii/saecularis-eventus-1901` | 1901-05-11 | letter | *Saecularis eventus* | ASS 33 (1900) 577 LITTERAE IN FORMA BREVIS *Saecularis eventus faustitas, quae nobilem cohortem vestram hisce* |
 | `mag:leo-xiii/slavorum-gentem-1901` | 1901-08-01 | apostolic-letter | *Slavorum gentem* | — |
 | `mag:leo-xiii/urbanitatis-veteris-1901` | 1901-11-20 | letter | *Urbanitatis Veteris* | — |
-| `mag:leo-xiii/venerabilis-frater-augustinus-1900` | 1900-09-14 | letter | *Venerabilis Frater Augustinus* | ASS 33 (1900) 198 LITTERAE IN FORMA BREVIS *Venerabilis Frater Augustinus Episcopus Papiae una cum dilectis* |
 
 </details>
 
@@ -691,4 +689,4 @@ Created: 0 (expected 0: phase 2c-i joins only).
 
 ## 7. Corpus
 
-Documents: 8569; with an ASS reference: 59; shelf documents dated 1865–1908: 496, of which with a reference of either series: 59.
+Documents: 8569; with an ASS reference: 64; shelf documents dated 1865–1908: 496, of which with a reference of either series: 64.
