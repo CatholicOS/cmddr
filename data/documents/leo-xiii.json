@@ -3388,7 +3388,7 @@
     "id": "mag:leo-xiii/permoti-nos-1895",
     "title": "Permoti Nos",
     "idStatus": "minted",
-    "genre": "encyclical",
+    "genre": "letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1895-07-10",
@@ -4241,7 +4241,7 @@
     "id": "mag:leo-xiii/quum-diuturnum-1898",
     "title": "Quum Diuturnum",
     "idStatus": "minted",
-    "genre": "encyclical",
+    "genre": "letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1898-12-25",
@@ -4508,7 +4508,7 @@
     "id": "mag:leo-xiii/omnibus-compertum-1900",
     "title": "Omnibus Compertum",
     "idStatus": "minted",
-    "genre": "encyclical",
+    "genre": "letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1900-07-21",
@@ -4524,7 +4524,13 @@
       ]
     },
     "incipit": "Omnibus Compertum",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 33,
+      "year": 1900,
+      "page": 65
+    }
   },
   {
     "id": "mag:leo-xiii/praestantiam-assisiensis-1900",
@@ -5043,7 +5049,7 @@
     "id": "mag:leo-xiii/reputantibus-1901",
     "title": "Reputantibus",
     "idStatus": "minted",
-    "genre": "encyclical",
+    "genre": "letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1901-08-20",
@@ -5087,7 +5093,7 @@
     "id": "mag:leo-xiii/urbanitatis-veteris-1901",
     "title": "Urbanitatis Veteris",
     "idStatus": "minted",
-    "genre": "encyclical",
+    "genre": "letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1901-11-20",
@@ -5150,7 +5156,7 @@
     "id": "mag:leo-xiii/in-amplissimo-1902",
     "title": "In Amplissimo",
     "idStatus": "minted",
-    "genre": "encyclical",
+    "genre": "letter",
     "issuerId": "rp:leo-xiii",
     "issuerType": "pope",
     "date": "1902-04-15",
