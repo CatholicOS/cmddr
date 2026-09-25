@@ -46,7 +46,12 @@ const md = (s: string) => s.replace(/\|/g, '\\|').replace(/\n/g, ' / ').replace(
  * bumped by hand when the report is regenerated, so that a re-run is reproducible and the
  * line does not claim the fixtures' scan date, which §1's header prints beside it.
  */
-const GENERATED_ON = '2026-09-23';
+/**
+ * The day this report was generated. Read from the newest fixture the run reads rather than
+ * set by hand: a stale constant dated the report before the scan it describes (CodeRabbit on
+ * PR #51), and the fixtures are the only thing whose age the report can vouch for.
+ */
+const GENERATED_ON = [...scans.values()].map((s) => s.generated).sort().at(-1)!;
 const cite = (e: AssEntry) => citeRef(e);
 const candidateList = (cs: ActaCandidate[]) => cs.map((c) => `\`${c.id}\`${c.incipit ? ` (*${md(c.incipit)}*)` : ''}`).join(', ') || '—';
 const of = (k: string) => entries.filter((e) => `ass-${e.volume}` === k);
@@ -106,6 +111,14 @@ const answeredByScan = replacingReadings.filter((key) => {
 const offsetRanges = Object.entries(ASS_PAGE_OFFSETS).flatMap(([vol, ranges]) => ranges.map((r) => `ASS ${vol} pp. ${r.from}-${r.to}`)).join(', ');
 const harvested = sum((k) => of(k).filter((e) => (categoryForHeading(e.category)?.harvested ?? 'no') !== 'no').length);
 const byRule = (b: string) => result.matches.filter((m) => m.by === b).length;
+/**
+ * The acts the opening rule carries, named from the matches themselves. Listed by hand until
+ * PR #51, where a class change moved *Novum argumentum* to `unique` and left the prose naming
+ * an act the table no longer counted (CodeRabbit): the list has to follow the rule column.
+ */
+const openingActs = result.matches.filter((m) => m.by === 'opening')
+  .map((m) => { const e = m.entry as AssEntry; const d = docs.find((x) => x.id === m.documentId); return `*${md(d?.incipit ?? d?.title ?? m.documentId)}* (${e.volume} p. ${e.page})`; })
+  .join(', ');
 const um = result.unmatched as (ActaUnmatched & { entry: AssEntry })[];
 const umNoCandidate = um.filter((u) => u.sameDate.length === 0);
 const umWithCandidate = um.filter((u) => u.sameDate.length > 0);
@@ -148,6 +161,10 @@ const provisionalCited = provisional.filter((d) => d.acta !== undefined);
 const provisionalWithEntry = provisional.filter((d) => entries.some((e) => e.date === d.date && POPE_ISSUERS[e.pope] === d.issuerId));
 const assReprints = Object.entries(ACTA_REPRINTS).filter(([, r]) => r.citationOf.startsWith('ASS:'));
 const assShared = Object.keys(ACTA_SHARED_PAGES).filter((k) => k.startsWith('ASS:'));
+/** Each curated ASS shared page, named with the pair it settles -- two rows since PR #51. */
+const sharedNamed = assShared
+  .map((k) => `${k.replace(/^ASS:(\d+):(\d+)$/, 'ASS $1 p. $2')} (${ACTA_SHARED_PAGES[k]!.documentIds.map((id) => { const d = docs.find((x) => x.id === id); return `*${md(d?.incipit ?? d?.title ?? id)}*`; }).join(' and ')})`)
+  .join('; ');
 /**
  * The volumes of the series: vatican.va links one whole-volume PDF per volume, 41 in all
  * (ass volumes spec §1). The years 1865-1908 number 44 because 22 of the 41 labels span
@@ -234,12 +251,11 @@ p(`   ASS 33 ${result.matches.filter((m) => m.entry.volume === 33).length}, ASS 
 p(`   ${pct(result.matches.filter((m) => m.entry.volume === 41).length, of('ass-41').filter((e) => (categoryForHeading(e.category)?.harvested ?? 'no') !== 'no').length)} in 1908. **The opening rule is what the ASS needed and the AAS did not.** An ASS entry carries no incipit —`);
 p(`   the volumes print no index, so the scanner reads the act's first eight words after the salutation (\`incipit: null\`,`);
 p(`   \`opening\`), and the join matches an opening against the shelf's incipit as a prefix. ${byRule('opening')} of the ${result.matches.length} matches rest on it`);
-p(`   (§3.1): *Dall'alto dell'Apostolico Seggio* (23 p. 193), *Novum argumentum* (23 p. 318), *Singulari curare* and`);
-p(`   *In domibus* (41 pp. 34, 35). The other ${byRule('unique')} are \`unique\` — one shelf record of the pope, the class and the day. No`);
+p(`   (§3.1): ${openingActs}. The other ${byRule('unique')} are \`unique\` — one shelf record of the pope, the class and the day. No`);
 p(`   toponym match, no curated override, and **no ambiguity in the whole sample**: the era's shelf is thin enough that a`);
-p(`   pope, a class and a date name one act, where the 2003–2009 indexes produced 60 ambiguities in 1 118 entries (that era's report, §2). The one`);
-p(`   page two acts share (ASS 33 p. 641: *De ingenii* of 20 February and *Le nostre ferme speranze* of 28 March 1901) is`);
-p(`   curated in \`ACTA_SHARED_PAGES\` (${assShared.length} ASS row), so both are written rather than both withheld by invariant 25.`);
+p(`   pope, a class and a date name one act, where the 2003–2009 indexes produced 60 ambiguities in 1 118 entries (that era's report, §2).`);
+p(`   ${assShared.length === 1 ? 'The one page two acts share is' : `The ${assShared.length} pages that two acts each share are`} curated in \`ACTA_SHARED_PAGES\` — ${sharedNamed} —`);
+p(`   so both of each pair are written rather than both withheld by invariant 25.`);
 p(`6. **The ${um.length} unmatched divide three ways, and ${umClassHold.length + umBrevis.length === 0 ? 'none of them is' : `only ${umClassHold.length + umBrevis.length} of them are`} the join's doing.** ${umNoCandidate.length} have **no shelf record at all on their`);
 p(`   date** (§3.3's "Same date" column is empty for every one), and they are ${byVolumeAndPage(umNoCandidate.map((u) => u.entry))}`);
 p(`   — ASS 1's two apostolic letters of 1866, three acts of ASS 12 and three of ASS 23 the letters shelf does not hold,`);
