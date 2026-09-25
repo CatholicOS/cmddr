@@ -1,0 +1,756 @@
+{
+  "source": "ass-27",
+  "generated": "2026-09-26",
+  "text": "~/development/sources/ASS/txt/ass-27-1894.txt (768 pages)",
+  "volume": 27,
+  "year": 1894,
+  "pages": 768,
+  "entries": [
+    {
+      "series": "ASS",
+      "volume": 27,
+      "year": 1894,
+      "page": 3,
+      "pope": "Leo XIII",
+      "category": "EPISTOLA",
+      "date": "1894-07-02",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Sanctissimi D. N. Leonis XIII ad Archiepiscopos et Episcopos Brasiliae; qua utilia commendantur ad fidei pietatisque christianae profectum.",
+      "raw": "EPISTOLA Sanctissimi D. N. Leonis XIII ad Archiepiscopos et Episcopos Brasiliae; / qua utilia commendantur ad fidei pietatisque christianae profectum.",
+      "opening": "Litteras a vobis superiore anno accepimus, communis laetitiae",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "EPISTOLA Sanctissimi D. N. Leonis XIII ad Archiepiscopos et Episcopos Brasiliae; / qua utilia commendantur ad fidei pietatisque christianae profectum.",
+        "salutation": null,
+        "opening": "Litteras a vobis superiore anno accepimus, communis lae­",
+        "dateline": "Datum Romae apud S. Petrum die II Iulii an. MDCCCXCIIII, Pontificatus Nostri decimo septimo.",
+        "header": "a"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 27,
+      "year": 1894,
+      "page": 7,
+      "pope": "Leo XIII",
+      "category": "LITTERAE",
+      "date": "1894-07-12",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Sanctissimi D. N. Leonis XIII ad Thomam Coconnier ex Ord. Praedica­ torum doctorem theologum in Universitate Friburgensi de ephemeride Revue Thomiste.",
+      "raw": "LITTERAE Sanctissimi D. N. Leonis XIII ad Thomam Coconnier ex Ord. Praedica­ / torum doctorem theologum in Universitate Friburgensi de ephemeride Revue / Thomiste.",
+      "opening": "Plane congruit cum consiliis Nostris genus tractationis Revue",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE Sanctissimi D. N. Leonis XIII ad Thomam Coconnier ex Ord. Praedica­ / torum doctorem theologum in Universitate Friburgensi de ephemeride Revue / Thomiste.",
+        "salutation": null,
+        "opening": "Plane",
+        "dateline": "Datum Romae apud S. Petrum die 12 Iulii anno 1894, Pontificatus Nostri decimo septimo.",
+        "header": "LITTERAE 7"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 27,
+      "year": 1894,
+      "page": 74,
+      "pope": "Leo XIII",
+      "category": "LITTERAE",
+      "date": "1894-07-25",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SSmi D. N. Leonis XIII ad Ioannem Baptistam Ayroles e Soc. Iesu; quibus laus et hortatus eidem impertiuntur ob opus aggressum ad illustrandam memoriam Ioannae De Arc.",
+      "raw": "LITTERAE SSmi D. N. Leonis XIII ad Ioannem Baptistam Ayroles e Soc. Iesu; / quibus laus et hortatus eidem impertiuntur ob opus aggressum ad illustrandam / memoriam Ioannae De Arc.",
+      "opening": "Rem tu amplam et operosam dudum aggressus, ut",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE SSmi D. N. Leonis XIII ad Ioannem Baptistam Ayroles e Soc. Iesu; / quibus laus et hortatus eidem impertiuntur ob opus aggressum ad illustrandam / memoriam Ioannae De Arc.",
+        "salutation": null,
+        "opening": "Rem",
+        "dateline": "Datum Romae apud S. Petrum die xxv iulii anno MDCCCXCIV, Pontificatus Nostri decimo septimo.",
+        "header": "74"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 27,
+      "year": 1894,
+      "page": 385,
+      "pope": "Leo XIII",
+      "category": "EPISTOLA ENCYCLICA",
+      "date": "1894-12-24",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Sanctissimi Domini Nostri Leonis PP. XIII, qua Institutum « a Propagatione Fidei » fovetur et commendatur.",
+      "raw": "EPISTOLA ENCYCLICA Sanctissimi Domini Nostri Leonis PP. XIII, qua Institutum / « a Propagatione Fidei » fovetur et commendatur.",
+      "opening": "Christi nomen et regnum in gentibus quotidie latius",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "EPISTOLA ENCYCLICA Sanctissimi Domini Nostri Leonis PP. XIII, qua Institutum / « a Propagatione Fidei » fovetur et commendatur.",
+        "salutation": null,
+        "opening": "Christi nomen et regnum in gentibus quotidie latius proferre,",
+        "dateline": "Datum Romae apud S. Petrum die 24 decembris anno 1894, Pontificatus Nostri decimo septimo. LEO PP. XIII",
+        "header": "385"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 27,
+      "year": 1894,
+      "page": 387,
+      "pope": "Leo XIII",
+      "category": "EPISTOLA",
+      "date": "1895-01-06",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SSmi D. N. Leonis PP. XIII ad Archiepiscopos et Episcopos foederatarum Americae Septentrionalis civitatum.",
+      "raw": "EPISTOLA SSmi D. N. Leonis PP. XIII ad Archiepiscopos et Episcopos foederatarum / Americae Septentrionalis civitatum.",
+      "opening": "Longinqua oceani spatia animo et cogitatione traiicimus: et",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "EPISTOLA SSmi D. N. Leonis PP. XIII ad Archiepiscopos et Episcopos foederatarum / Americae Septentrionalis civitatum.",
+        "salutation": null,
+        "opening": "Longinqua oceani spatia animo et cogitatione traiicimus: et",
+        "dateline": "Datum Romae apud S. Petrum die vi Ianuarii; Epiphania Domini, an. MDCCCXCV, Pontificatus Nostri decimo septimo.",
+        "header": "EPISTOLA ENCYCLICA 387"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 27,
+      "year": 1894,
+      "page": 583,
+      "pope": "Leo XIII",
+      "category": "EPISTOLA",
+      "date": "1895-04-14",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "APOSTOLICA SSmi D. N. Leonis PP. XIII ad Anglos Regnum Christi in Fidei unitate quaerentes Salutem et pacem in Domino.",
+      "raw": "EPISTOLA APOSTOLICA SSmi D. N. Leonis PP. XIII ad Anglos / Regnum Christi in Fidei unitate quaerentes / Salutem et pacem in Domino.",
+      "opening": "Amantissimae voluntatis significationem sibi quoque a Nobis habeat",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "EPISTOLA APOSTOLICA SSmi D. N. Leonis PP. XIII ad Anglos / Regnum Christi in Fidei unitate quaerentes / Salutem et pacem in Domino.",
+        "salutation": null,
+        "opening": "Amantissimae voluntatis significationem sibi quoque a Nobis",
+        "dateline": "Datum Romae apud Sanctum Petrum, die xiv aprilis anno MDCCCLXXXXV, Pontificatus Nostri decimo octavo.",
+        "header": "583"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 27,
+      "year": 1894,
+      "page": 643,
+      "pope": "Leo XIII",
+      "category": "EPISTOLA",
+      "date": "1895-05-25",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SSmi D. N. Leonis XIII ad Praepositum sodalium Philippinorum, in testimonium pietatis Suae erga S. Philippum Nerium.",
+      "raw": "EPISTOLA SSmi D. N. Leonis XIII ad Praepositum sodalium Philippinorum, / in testimonium pietatis Suae erga S. Philippum Nerium.",
+      "opening": "Quod plurimorum pietas romanorum agere saecularia solemnia Ob",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "EPISTOLA SSmi D. N. Leonis XIII ad Praepositum sodalium Philippinorum, / in testimonium pietatis Suae erga S. Philippum Nerium.",
+        "salutation": null,
+        "opening": "Quod plurimorum pietas romanorum agere saecularia so­",
+        "dateline": "Datum Romae apud S. Petrum die xxv Maii, a. MDCCCLXXXXV. Pontificatus Nostri decimo octavo.",
+        "header": "EPISTOLA SSmi D. N. Leonis XIII ad Praepositum sodalium Philippinorum,"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 27,
+      "year": 1894,
+      "page": 645,
+      "pope": "Leo XIII",
+      "category": "BREVE",
+      "date": "1895-05-05",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SSmi D, N. Leonis XIII, quo catholicis commendantur peculiares preces per sollemnia Sacrae Pentecostes.",
+      "raw": "BREVE SSmi D, N. Leonis XIII, quo catholicis commendantur peculiares preces / per sollemnia Sacrae Pentecostes.",
+      "opening": "Provida matris caritate dignum maxime est votum, quod",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "BREVE SSmi D, N. Leonis XIII, quo catholicis commendantur peculiares preces / per sollemnia Sacrae Pentecostes.",
+        "salutation": null,
+        "opening": "Provida matris caritate dignum maxime est votum, quod",
+        "dateline": "Datum Romae apud Sanctum Petrum sub anulo Piscatoris die v Maii anno MDCCCXCV, Pontificatus Nostri decimo octavo.",
+        "header": "64S"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 27,
+      "year": 1894,
+      "page": 752,
+      "pope": "Leo XIII",
+      "category": "LITTERAE",
+      "date": "1895-06-29",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SSmi D. N. Leonis Xlii ad Emum Gibbons Arch. Baltimorensem, quibus commendatur propositum augendi nova studiorum curricula in catholica Uni­ versitate, in urbe Washington constituta.",
+      "raw": "LITTERAE SSmi D. N. Leonis Xlii ad Emum Gibbons Arch. Baltimorensem, quibus / commendatur propositum augendi nova studiorum curricula in catholica Uni­ / versitate, in urbe Washington constituta.",
+      "opening": "Benevolentiae testandae curaeque Nostrae erga Universitatem istam studiorum",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE SSmi D. N. Leonis Xlii ad Emum Gibbons Arch. Baltimorensem, quibus / commendatur propositum augendi nova studiorum curricula in catholica Uni­ / versitate, in urbe Washington constituta.",
+        "salutation": null,
+        "opening": "Benevolentiae testandae curaeque Nostrae erga Universitatem",
+        "dateline": "Datum Romae apud S. Petrum die 29 iunii anno 1895, Pontificatus Nostri decimo octavo. LEO PP. XIII.",
+        "header": "752"
+      }
+    }
+  ],
+  "defects": [
+    {
+      "page": 60,
+      "reason": "no-heading",
+      "lines": [
+        "Datum Romae apud Sanctum Petrum sub Annulo Pisca­",
+        "toris, die 9 decembris 1892, Pontificatus Nostri anno decimo",
+        "quinto."
+      ]
+    },
+    {
+      "page": 79,
+      "reason": "no-heading",
+      "lines": [
+        "voluntatis significationi hisce litteris ostensis haberetur. Datum",
+        "Romae apud S. Petrum sub annulo Piscatoris die VI Aprilis",
+        "MDCCCXCIV. Pontificatus Nostri Anno Decimoséptimo."
+      ]
+    },
+    {
+      "page": 177,
+      "reason": "no-date",
+      "lines": [
+        "EPISTOLA ENCYCLICA SSmi D. N. Leonis XIII ad Patriarchas Primates Archiepisco­ / pos Episcopos aliosque locorum ordinarios pacem et communionem cum Apostolica / Sede habentes Be Rosario Mariali.",
+        "Datum Romae apud S. Petrum die VIII Sept. an. MDCCCXCIV, Pontificatus Nostri decimo septimo."
+      ]
+    },
+    {
+      "page": 257,
+      "reason": "unknown-pope",
+      "lines": [
+        "LITTERAE APOSTOLICAE Sanctissimi Domini nostri divina Providentia Papae XIII / de disciplina orientalium conservanda et tuenda."
+      ]
+    },
+    {
+      "page": 265,
+      "reason": "no-date",
+      "lines": [
+        "LITTERAE SSmi D. N. Leonis XIII ad Emum Cardinalem Oreglia patronum Coetus / pontifìcii Urbani Antiquitatum studiis promovendis.",
+        "Datum Romae apud S. Petrum die iv Dec. MDCCCXCIV, Pontificatus nostri anno decimoséptimo."
+      ]
+    },
+    {
+      "page": 399,
+      "reason": "no-date",
+      "lines": [
+        "EPISTOLA in forma Brevis, SSmi D. N. Leonis XIII ad Archiepiscopos et Episcopos / Pedemontis post Congressum Eucharisticum.",
+        "Datum Romae apud S. Petrum xxvi Ianuarii MDCCCXCV, Pontificatus Nostri anno decimo septimo."
+      ]
+    },
+    {
+      "page": 513,
+      "reason": "no-opening",
+      "lines": [
+        "ALLOCUTIO Sanctissimi Domini Nostri Leonis Divina Providentia Papae XIII habita / in Consistorio die 18 martii 1895 ad S. R. E. Cardinales in aedibus Vaticanis. / Venerabiles Fratres / In litteris Nostris ad Venerabiles Fratres Hungariae Episcopos / semel atque iterum missis, cum prospiceret animus quid illic / temporum cursus afferre catholico nomini videretur, non obscure / significavimus futurorum incommodorum sollicitam expectatio­ / nem. Revera coepere, quae metuebamus, opinione citius erum­ / pere. — Facile coniicitis quorsum Nostra pertineat oratio : ad ea / nimirum, quae haud ita pridem placuit de coniugiis in Hungaria / decernere. Ratum lege matrimonium, quod civile vocant: per­ / missa divortiorum facultas: iussum, nuptias inire more catho­ / lico licere, sed civili ritu antea perfunctis. / Omnia profecto, ut debuerant, experti ac periclitati Episcopi / sunt ut ab Ecclesia, a civitate tantum mali defenderent: elaboravit / eodem proposito cum Episcopis Clerus : sedulam dedere operam / quotquot ex utroque legumlatorum ordine salvam volunt acce­ / ptam ab avis et maioribus fidem. Quibus tamen omnibus frustra / insumptus est pro caussa iustissima sanctissimaque labor : plus / ii valuere, qui cívicos profanare mores, remque Hungaricam in / anfractus compellere rerum novarum iamdiu connituntur. At­ / qui vereri religionem oportebat, cui maxime firmitudinem imperii / gloriamque nominis Hungaria debet: pro qua toties adversus / immanes hostium impetus memorabili virtute dimicavit: quam / ipsam, per summa saepe discrimina inviolate servatam, hodie­ / que multo maxima pars studiose et constanter, ut praestantis­ / simum bonorum, tuetur. / Haudquaquam in animo est, nec ceteroqui necessarium, / plura eloqui quo appareat cuiusmodi eae leges sint, quas modo / memoravimus, quasque variis temporibus easdem romani Pon­ / tifices decessores Nostri, ut veritas postulabat, praeiudicavere, / Acta, Tom. XXVII. fate. GOG XXI. 33"
+      ]
+    },
+    {
+      "page": 705,
+      "reason": "no-date",
+      "lines": [
+        "EPISTOLA APOSTOLICA Sanctissimi D. N. Leonis XIII ad Coptos / quoad unitatem christianam instaurandam.",
+        "Dat. Romae apud Sanctum Petrum die xi Iun. an. MDCCCXCV, Pontificatus Nostri decimo octavo."
+      ]
+    }
+  ],
+  "summa": {
+    "pages": {
+      "from": 753,
+      "to": 760
+    },
+    "rows": [
+      {
+        "description": "Epistola apostolica SSmi D. N. Leo- li. PONTIFICIS nis XIII ad Anglos, regnum Christi in Fidei unitate quaeren- Epistola SSmi D. N. Leonis XIII ad tes",
+        "page": 583,
+        "raw": "Epistola apostolica SSmi D. N. Leo- / li. PONTIFICIS nis XIII ad Anglos, regnum Chri­ / sti in Fidei unitate quaeren- / Epistola SSmi D. N. Leonis XIII ad tes 583"
+      },
+      {
+        "description": "Ordinarios Brasiliae , qua utilia Epistola SSmi D. N. ad Eminentis- commendanlur ad fidei pietatis- simum Card. Parocchi circa moque christianae profectum pag. 3 dum, quo Catholici in Italia sese Litterae SSmi D. N. Leonis XIII ad gerere debent quoad concursum Thomam Coconnier de epheme- ad politicas electiones .",
+        "page": 641,
+        "raw": "Ordinarios Brasiliae , qua utilia Epistola SSmi D. N. ad Eminentis- / commendanlur ad fidei pietatis- simum Card. Parocchi circa mo­ / que christianae profectum pag. 3 dum, quo Catholici in Italia sese / Litterae SSmi D. N. Leonis XIII ad gerere debent quoad concursum / Thomam Coconnier de epheme- ad politicas electiones . . .641"
+      },
+      {
+        "description": "ride Revue Thomiste .... 7 Epistola SSmi D. N. Leonis XIII ad Litterae SSmi D. N. Leonis XIII ad Praepositum Sodalium Philippi- loannem Baptistam Ayroles quoad notum, in testimonium pietatis istius opus aggressum favore Io- suae erga S. Philippum Ne- annae de Arc ....... 74 rium",
+        "page": 643,
+        "raw": "ride Revue Thomiste .... 7 Epistola SSmi D. N. Leonis XIII ad / Litterae SSmi D. N. Leonis XIII ad Praepositum Sodalium Philippi- / loannem Baptistam Ayroles quoad notum, in testimonium pietatis / istius opus aggressum favore Io- suae erga S. Philippum Ne- / annae de Arc ....... 74 rium 643"
+      },
+      {
+        "description": "Epistola Encyclica SSmi D. N. Leo- Epistola Apostolica Sanctissimi D. N. nis XIII, De Rosario Mariali. 177 Leonis PP. XIII ad Coptos quoad Litterae apostolicae SSmi D. N. unitatem christianam instauran- Leonis XIII de disciplina Orien- dam",
+        "page": 705,
+        "raw": "Epistola Encyclica SSmi D. N. Leo- Epistola Apostolica Sanctissimi D. N. / nis XIII, De Rosario Mariali. 177 Leonis PP. XIII ad Coptos quoad / Litterae apostolicae SSmi D. N. unitatem christianam instauran- / Leonis XIII de disciplina Orien- dam 705"
+      },
+      {
+        "description": "talium conservanda .... 257 Litterae SSmi D. N. Leonis XIII ad Litterae SSmi D. N. Leonis XIII ad Emum Gibbons Arch. Baltimo- Emum Oreglia, patronum coetus rensem , quibus commendatur pontificii urbani antiquitatum stu- propositum augendi nova studiis promovendis 265 diorum curricula in catholica Epistola encyclica SSmi D. N. Leo- Universitate, in urbe Washington ni* PP. XIII, qua institutum «a constituta",
+        "page": 752,
+        "raw": "talium conservanda .... 257 Litterae SSmi D. N. Leonis XIII ad / Litterae SSmi D. N. Leonis XIII ad Emum Gibbons Arch. Baltimo- / Emum Oreglia, patronum coetus rensem , quibus commendatur / pontificii urbani antiquitatum stu- propositum augendi nova stu­ / diis promovendis 265 diorum curricula in catholica / Epistola encyclica SSmi D. N. Leo- Universitate, in urbe Washington / ni* PP. XIII, qua institutum «a constituta 752"
+      },
+      {
+        "description": "Propagarne Fidei » fovetur et EX commendatur",
+        "page": 385,
+        "raw": "Propagarne Fidei » fovetur et EX / commendatur 385"
+      },
+      {
+        "description": "Epistola SSmi D. N. Leonis XIII ad Firmana postulatum circa resigna- Archiepiscopos et Episcopos Foe- tionem beneficiorum ; reiicitur deratarum Americae Septentrio- praxis inolita quoad publicatio- nalis civitatum 387 nem resignationis beneficiorum",
+        "page": 8,
+        "raw": "Epistola SSmi D. N. Leonis XIII ad Firmana postulatum circa resigna- / Archiepiscopos et Episcopos Foe- tionem beneficiorum ; reiicitur / deratarum Americae Septentrio- praxis inolita quoad publicatio- / nalis civitatum 387 nem resignationis beneficiorum. 8"
+      },
+      {
+        "description": "Epistola SSmi D. N. Leonis XIII ad Utinen. decimarum et unionis; quae- Archiepiscopós et Episcopos Pe- stio agitatur inter Capitulum et demontis, post congressum Eu- parochos quoad decimas perci- charisticum . 399 piendas",
+        "page": 14,
+        "raw": "Epistola SSmi D. N. Leonis XIII ad Utinen. decimarum et unionis; quae- / Archiepiscopós et Episcopos Pe- stio agitatur inter Capitulum et / demontis, post congressum Eu- parochos quoad decimas perci- / charisticum . 399 piendas 14"
+      },
+      {
+        "description": "Aeta. Tom. XXVII. fase. OCOXXIV",
+        "page": 48,
+        "raw": "Aeta. Tom. XXVII. fase. OCOXXIV. 48"
+      },
+      {
+        "description": "Varsavien, dispensationis matrimo- Romana spolii; dubitatur, an pt£ nii; dispensatio elargitur super traditionem suppellectilium sa- matrimonio rato et non consum- crarum, collata fuerit in capitulo mato, quia vir votum castitatis absoluta possessio horum uten- emiserat ante nuptias ... 18 silium",
+        "page": 129,
+        "raw": "Varsavien, dispensationis matrimo- Romana spolii; dubitatur, an pt£ / nii; dispensatio elargitur super traditionem suppellectilium sa- / matrimonio rato et non consum- crarum, collata fuerit in capitulo / mato, quia vir votum castitatis absoluta possessio horum uten- / emiserat ante nuptias ... 18 silium 129"
+      },
+      {
+        "description": "Castrimaris postulatum quoad ba- Melevilana privationis paroeciae ; ptismi administrationem ; reiici- confirmatur sententia curiae e- tur praxis qua fit, ut apud quam- piscopalis , qua parochus a suo plures fideles domi administretur officio suspensus fuerat ad tem- baptisma 32 pus",
+        "page": 132,
+        "raw": "Castrimaris postulatum quoad ba- Melevilana privationis paroeciae ; / ptismi administrationem ; reiici- confirmatur sententia curiae e- / tur praxis qua fit, ut apud quam- piscopalis , qua parochus a suo / plures fideles domi administretur officio suspensus fuerat ad tem- / baptisma 32 pus 132"
+      },
+      {
+        "description": "Meievitana dubii quoad Missarum Varsavien, dubii quoad causas ma- reductionem; dubium quoad mis- trimoniales ; varia disceptantur saram reductionem pro legatis dubia quoad instructionem pro- taxative conceptis 35 cessuum matrimonialium",
+        "page": 141,
+        "raw": "Meievitana dubii quoad Missarum Varsavien, dubii quoad causas ma- / reductionem; dubium quoad mis- trimoniales ; varia disceptantur / saram reductionem pro legatis dubia quoad instructionem pro- / taxative conceptis 35 cessuum matrimonialium . 141"
+      },
+      {
+        "description": "Sancti Galli (in Helvetia) matri- Pinnen, onerum; disceptatur an monii et an exposcenda sit istius praestationis obligatio, a duobus dispensatio 79 parochis quotannis facienda, per- Sancti Iacobi de Chile dispensatio- empta sit, mutatis adiunctis",
+        "page": 154,
+        "raw": "Sancti Galli (in Helvetia) matri- Pinnen, onerum; disceptatur an / monii et an exposcenda sit istius praestationis obligatio, a duobus / dispensatio 79 parochis quotannis facienda, per- / Sancti Iacobi de Chile dispensatio- empta sit, mutatis adiunctis. 154"
+      },
+      {
+        "description": "nis matrimonii; impertitur dis- Parentina et Polen, dubii quoad pensatio super matrimonio rato litteras testimoniales ad ss. Ordi- et non consummato .... 95 nes; quaeritur, an loco testimo- Cusentina funerum; quaestio aeris nialium Episcoporum, satis sint et involuta inter Religiosos et attestationes moderatorum Semi- Parochos saeculares quoad iura nariorum",
+        "page": 159,
+        "raw": "nis matrimonii; impertitur dis- Parentina et Polen, dubii quoad / pensatio super matrimonio rato litteras testimoniales ad ss. Ordi- / et non consummato .... 95 nes; quaeritur, an loco testimo- / Cusentina funerum; quaestio aeris nialium Episcoporum, satis sint / et involuta inter Religiosos et attestationes moderatorum Semi- / Parochos saeculares quoad iura nariorum . 159"
+      },
+      {
+        "description": "parochialia 105 Parisien, dispensationis matrimo- Mediolanen. matrimonii; exposcitur nii; indulgetur dispensatio super dispensatio a matrimonio rato et matrimonio rato et non consum- non consummato 116 mato",
+        "page": 203,
+        "raw": "parochialia 105 Parisien, dispensationis matrimo- / Mediolanen. matrimonii; exposcitur nii; indulgetur dispensatio super / dispensatio a matrimonio rato et matrimonio rato et non consum- / non consummato 116 mato 203"
+      },
+      {
+        "description": "Romana dubii iurium Praeposi iurae Bolivar en. taxae pro seminario ; capitularis; dubitatur an, Sede va- dubitant Patres Redemptoristae cante, Praepositus valeat explere utrum teneantur solvere taxam functiones , quas, dum viveret, favore Seminarii",
+        "page": 214,
+        "raw": "Romana dubii iurium Praeposi iurae Bolivar en. taxae pro seminario ; / capitularis; dubitatur an, Sede va- dubitant Patres Redemptoristae / cante, Praepositus valeat explere utrum teneantur solvere taxam / functiones , quas, dum viveret, favore Seminarii ..... 214"
+      },
+      {
+        "description": "faciebat Episcopus .... 118 Urbevetana funerum; disceptatur Abulen. postulatum circa coadiuto- utrum competat parocho vel Ec- res Parochorum ; exposcit Epi- clesiae Cathedrali funera perage- scopus, üt sibi concedantur ex- re super cadaver mulieris, quae traordinariae facultates amovendi per aliquod tempus Urbeveten ad tempus Parochos, qui in pro- morata fuerat, in paroecia in qua pria Ecclesia ministerium minus decessit",
+        "page": 220,
+        "raw": "faciebat Episcopus .... 118 Urbevetana funerum; disceptatur / Abulen. postulatum circa coadiuto- utrum competat parocho vel Ec- / res Parochorum ; exposcit Epi- clesiae Cathedrali funera perage- / scopus, üt sibi concedantur ex- re super cadaver mulieris, quae / traordinariae facultates amovendi per aliquod tempus Urbeveten / ad tempus Parochos, qui in pro- morata fuerat, in paroecia in qua / pria Ecclesia ministerium minus decessit 220"
+      },
+      {
+        "description": "utile exercent . ... . .122 Beien. dubii quoad Episcopum pro- prium s. Ordinationis ; dubitatur an promoveri valeant ad sacros ordines iuvenes, qui thesaurarias parochiales a gubernio consequuntur",
+        "page": 230,
+        "raw": "utile exercent . ... . .122 Beien. dubii quoad Episcopum pro- / prium s. Ordinationis ; dubitatur / an promoveri valeant ad sacros / ordines iuvenes, qui thesaurarias / parochiales a gubernio conse­ / quuntur 230"
+      },
+      {
+        "description": "Nelen. electionis; dubitatur de legitimitate electionis ob nonnullas praesumptas irregularitates",
+        "page": 236,
+        "raw": "Nelen. electionis; dubitatur de le­ / gitimitate electionis ob nonnullas / praesumptas irregularitates. 236"
+      },
+      {
+        "description": "Malacitana, de valore cuiusdam dispensationis ab impedimento matrimoniali ; dubitatur an parochus bene se gesserit dispensando in articulo mortis a primo gradu affinitatis lineae rectae",
+        "page": 242,
+        "raw": "Malacitana, de valore cuiusdam / dispensationis ab impedimento / matrimoniali ; dubitatur an pa­ / rochus bene se gesserit dispen­ / sando in articulo mortis a primo / gradu affinitatis lineae rectae. 242"
+      },
+      {
+        "description": "Mediolanen, iurium parochialium ; lis est inter canonicos coadiutores et Praepositum s. Ioannis Baptistae utrum aeque apud omnes sit titulus et ius paroeciae",
+        "page": 266,
+        "raw": "Mediolanen, iurium parochialium ; / lis est inter canonicos coadiuto­ / res et Praepositum s. Ioannis Ba­ / ptistae utrum aeque apud omnes / sit titulus et ius paroeciae. 266"
+      },
+      {
+        "description": "Neapolitana matrimonii, dubitatur de libertate mulieris in nuptiis ineundis , sed respondetur non constare de nullitate matrimonii",
+        "page": 279,
+        "raw": "Neapolitana matrimonii, dubitatur / de libertate mulieris in nuptiis / ineundis , sed respondetur non / constare de nullitate matrimo­ / nii. . 279"
+      },
+      {
+        "description": "Urgellen, circa missarum reductionem ; quaeritur an imminui possint missae, quum redditus im- minuerinl",
+        "page": 329,
+        "raw": "Urgellen, circa missarum reductio­ / nem ; quaeritur an imminui pos­ / sint missae, quum redditus im- / minuerinl . 329"
+      },
+      {
+        "description": "Parisien, dispensationis matrimonii; post perdifficilem disceptationem resolvitur, indulgendam esse dispensationem super matrimonio rato . ...",
+        "page": 331,
+        "raw": "Parisien, dispensationis matrimo­ / nii; post perdifficilem discepta­ / tionem resolvitur, indulgendam / esse dispensationem super ma­ / trimonio rato . ... . . 331"
+      },
+      {
+        "description": "Inleramnen. privationis paroeciae ; confirmatur Decretum Ordinarii, quo declaratum fuerat, parochum excidisse de iure et de facto ab administratione spirituali et temporali paroeciae",
+        "page": 360,
+        "raw": "Inleramnen. privationis paroeciae ; / confirmatur Decretum Ordinarii, / quo declaratum fuerat, parochum / excidisse de iure et de facto ab / administratione spirituali et tem­ / porali paroeciae 360"
+      },
+      {
+        "description": "Ceriniolen. onerum; disputatur an mensa episcopalis vel capitulum taxam solvere debeat .",
+        "page": 368,
+        "raw": "Ceriniolen. onerum; disputatur an / mensa episcopalis vel capitulum / taxam solvere debeat . . . 368"
+      },
+      {
+        "description": "Decretum quoad clericos et sacerdotes alienae Dioecesis",
+        "page": 373,
+        "raw": "Decretum quoad clericos et sacer­ / dotes alienae Dioecesis . . 373"
+      },
+      {
+        "description": "Varsavien, dispensationis matrimonii; indulgetur dispensatio super matrimonio rato et non consummato",
+        "page": 401,
+        "raw": "Varsavien, dispensationis matrimo­ / nii; indulgetur dispensatio super / matrimonio rato et non consum­ / mato 401"
+      },
+      {
+        "description": "Derthusien. servitii chori; resolvitur , etiam Dignitates Capituli, non secus ac ceteri canonici, teneri ad celebrationem Missarum conventualium, et ad servitium chori et altaris",
+        "page": 413,
+        "raw": "Derthusien. servitii chori; resolvi­ / tur , etiam Dignitates Capituli, / non secus ac ceteri canonici, te­ / neri ad celebrationem Missarum / conventualium, et ad servitium / chori et altaris 413"
+      },
+      {
+        "description": "Asculana de servitio chorali ; exposcunt Canonici quatuor vacationis menses, loco trium, a Tridentino concessorum, ut facilius facere satis queant etiam aliis officiis, quibus onerantur pauci- tatis cleri causa , . .",
+        "page": 427,
+        "raw": "Asculana de servitio chorali ; ex­ / poscunt Canonici quatuor vaca­ / tionis menses, loco trium, a Tri­ / dentino concessorum, ut facilius / facere satis queant etiam aliis / officiis, quibus onerantur pauci- / tatis cleri causa , . . . . 427"
+      },
+      {
+        "description": "Panormitana nullitatis matrimonii; confirmatur sententia curiae archiepiscopalis, quae steterat pro validitate nuptiarum .",
+        "page": 457,
+        "raw": "Panormitana nullitatis matrimonii; / confirmatur sententia curiae ar­ / chiepiscopalis, quae steterat pro / validitate nuptiarum . . . 457"
+      },
+      {
+        "description": "Nolana annuae praestationis; quaestio est an clerus universus teneatur die festo s. Marci praebere Episcopo proprio obedientiae quamdam significationem",
+        "page": 476,
+        "raw": "Nolana annuae praestationis; quae­ / stio est an clerus universus te­ / neatur die festo s. Marci praebe­ / re Episcopo proprio obedientiae / quamdam significationem . 476"
+      },
+      {
+        "description": "S. Galli postulatum circa acceptationem onerum missarum ; indulgetur facultas, ad decennium, nova legata excipiendi",
+        "page": 480,
+        "raw": "S. Galli postulatum circa accepta­ / tionem onerum missarum ; in­ / dulgetur facultas, ad decennium, / nova legata excipiendi . . 480"
+      },
+      {
+        "description": "Gallipolitana iubilationis ; indulgetur gratia iubilationis , quamvis capitulum haud plene annue- ret",
+        "page": 484,
+        "raw": "Gallipolitana iubilationis ; indulge­ / tur gratia iubilationis , quamvis / capitulum haud plene annue- / ret. 484"
+      },
+      {
+        "description": "Gnesnen, et Posnanien. matrimonii; resolvitur constare de nullitate matrimonii, in quo defuisse liberum consensum ex parte mulieris evictum creditur",
+        "page": 522,
+        "raw": "Gnesnen, et Posnanien. matrimonii; / resolvitur constare de nullitate / matrimonii, in quo defuisse li­ / berum consensum ex parte mu­ / lieris evictum creditur . . 522"
+      },
+      {
+        "description": "Compostellana postulatum quoad administrationem oblationum; decernitur nihil tribuendum esse parocho pro administratione e- leemosynarum",
+        "page": 553,
+        "raw": "Compostellana postulatum quoad / administrationem oblationum; de­ / cernitur nihil tribuendum esse / parocho pro administratione e- / leemosynarum 553"
+      },
+      {
+        "description": "Aretina circa ius nominandi quosdam cappellanos; quaestio est an electio cappellanorum devoluta sit Episcopo vel coaluerit in solo archipresbytero, deficientibus aliis Capituli membris",
+        "page": 557,
+        "raw": "Aretina circa ius nominandi quos­ / dam cappellanos; quaestio est / an electio cappellanorum devo­ / luta sit Episcopo vel coaluerit in / solo archipresbytero, deficienti­ / bus aliis Capituli membris. 557"
+      },
+      {
+        "description": "Nanceyen. translationis et suspensionis; confirmatur Ordinarii sententia quoad Parochi translationem et suspensionem .",
+        "page": 594,
+        "raw": "Nanceyen. translationis et suspen­ / sionis; confirmatur Ordinarii sen­ / tentia quoad Parochi translatio­ / nem et suspensionem . . . 594"
+      },
+      {
+        "description": "Rapollen. sponsalium; removeri decernitur oppositum nihil transeat, praevia solutione summae, favore mulieris, ab Ordinario determinandae",
+        "page": 606,
+        "raw": "Rapollen. sponsalium; removeri de­ / cernitur oppositum nihil trans­ / eat, praevia solutione summae, / favore mulieris, ab Ordinario de­ / terminandae 606"
+      },
+      {
+        "description": "Suessana privationis paroeciae; decernitur esse locum remotioni parochi",
+        "page": 612,
+        "raw": "Suessana privationis paroeciae; de­ / cernitur esse locum remotioni / parochi 612"
+      },
+      {
+        "description": "Romana circa quoddam onus inhaerens cuidam canonicali praebendae s. Mariae Tianstiberim ; indulgetur quidquid expètitum fuit",
+        "page": 621,
+        "raw": "Romana circa quoddam onus in­ / haerens cuidam canonicali prae­ / bendae s. Mariae Tianstiberim ; / indulgetur quidquid expètitum / fuit 621"
+      },
+      {
+        "description": "Cusentina funerum; quaestio agitur an ius peragendi funebria Regularibus, vel Parochis competat",
+        "page": 624,
+        "raw": "Cusentina funerum; quaestio agi­ / tur an ius peragendi funebria / Regularibus, vel Parochis com­ / petat ... 624"
+      },
+      {
+        "description": "Romana reductionis oneris; denegatur expetita reductio pro rata diminutionis passae ob imminutum valoren! pecuniae hispanicae etc",
+        "page": 647,
+        "raw": "Romana reductionis oneris; dene­ / gatur expetita reductio pro rata / diminutionis passae ob imminu­ / tum valoren! pecuniae hispani­ / cae etc 647"
+      },
+      {
+        "description": "Parisien, dispensationis matrimonii; indulgetur dispensatio a matrimonio rato et non consummato",
+        "page": 659,
+        "raw": "Parisien, dispensationis matrimo­ / nii; indulgetur dispensatio a ma­ / trimonio rato et non consum­ / mato 659"
+      },
+      {
+        "description": "Montisvidei; postulatum Episcopi circa propositum obligandi Sacerdotes ad suscipiendam regulam Instituti ven. Holzhauser",
+        "page": 671,
+        "raw": "Montisvidei; postulatum Episcopi / circa propositum obligandi Sacer­ / dotes ad suscipiendam regulam / Instituti ven. Holzhauser . . 671"
+      },
+      {
+        "description": "S. Severini iubilationis; denegatur iubilatio, obstantibus decretis. 7-10 Pinnen, iurium confraternitatum ; disputatur inter parochum et Confraternitatem de iure peragendi functiones sacras",
+        "page": 712,
+        "raw": "S. Severini iubilationis; denegatur / iubilatio, obstantibus decretis. 7-10 / Pinnen, iurium confraternitatum ; / disputatur inter parochum et / Confraternitatem de iure pera­ / gendi functiones sacras . . 712"
+      },
+      {
+        "description": "Monopolitana interdicti in processionibus; resolvitur ius esse Tertio ordini s. Dominici praecedendi alios in processionibus",
+        "page": 722,
+        "raw": "Monopolitana interdicti in proces­ / sionibus; resolvitur ius esse Ter­ / tio ordini s. Dominici praece­ / dendi alios in processionibus. 722"
+      }
+    ],
+    "claimed": [
+      583,
+      643,
+      752,
+      385
+    ],
+    "unclaimed": [
+      {
+        "description": "Ordinarios Brasiliae , qua utilia Epistola SSmi D. N. ad Eminentis- commendanlur ad fidei pietatis- simum Card. Parocchi circa moque christianae profectum pag. 3 dum, quo Catholici in Italia sese Litterae SSmi D. N. Leonis XIII ad gerere debent quoad concursum Thomam Coconnier de epheme- ad politicas electiones .",
+        "page": 641,
+        "raw": "Ordinarios Brasiliae , qua utilia Epistola SSmi D. N. ad Eminentis- / commendanlur ad fidei pietatis- simum Card. Parocchi circa mo­ / que christianae profectum pag. 3 dum, quo Catholici in Italia sese / Litterae SSmi D. N. Leonis XIII ad gerere debent quoad concursum / Thomam Coconnier de epheme- ad politicas electiones . . .641"
+      },
+      {
+        "description": "Epistola Encyclica SSmi D. N. Leo- Epistola Apostolica Sanctissimi D. N. nis XIII, De Rosario Mariali. 177 Leonis PP. XIII ad Coptos quoad Litterae apostolicae SSmi D. N. unitatem christianam instauran- Leonis XIII de disciplina Orien- dam",
+        "page": 705,
+        "raw": "Epistola Encyclica SSmi D. N. Leo- Epistola Apostolica Sanctissimi D. N. / nis XIII, De Rosario Mariali. 177 Leonis PP. XIII ad Coptos quoad / Litterae apostolicae SSmi D. N. unitatem christianam instauran- / Leonis XIII de disciplina Orien- dam 705"
+      },
+      {
+        "description": "Epistola SSmi D. N. Leonis XIII ad Firmana postulatum circa resigna- Archiepiscopos et Episcopos Foe- tionem beneficiorum ; reiicitur deratarum Americae Septentrio- praxis inolita quoad publicatio- nalis civitatum 387 nem resignationis beneficiorum",
+        "page": 8,
+        "raw": "Epistola SSmi D. N. Leonis XIII ad Firmana postulatum circa resigna- / Archiepiscopos et Episcopos Foe- tionem beneficiorum ; reiicitur / deratarum Americae Septentrio- praxis inolita quoad publicatio- / nalis civitatum 387 nem resignationis beneficiorum. 8"
+      },
+      {
+        "description": "Epistola SSmi D. N. Leonis XIII ad Utinen. decimarum et unionis; quae- Archiepiscopós et Episcopos Pe- stio agitatur inter Capitulum et demontis, post congressum Eu- parochos quoad decimas perci- charisticum . 399 piendas",
+        "page": 14,
+        "raw": "Epistola SSmi D. N. Leonis XIII ad Utinen. decimarum et unionis; quae- / Archiepiscopós et Episcopos Pe- stio agitatur inter Capitulum et / demontis, post congressum Eu- parochos quoad decimas perci- / charisticum . 399 piendas 14"
+      },
+      {
+        "description": "Aeta. Tom. XXVII. fase. OCOXXIV",
+        "page": 48,
+        "raw": "Aeta. Tom. XXVII. fase. OCOXXIV. 48"
+      },
+      {
+        "description": "Varsavien, dispensationis matrimo- Romana spolii; dubitatur, an pt£ nii; dispensatio elargitur super traditionem suppellectilium sa- matrimonio rato et non consum- crarum, collata fuerit in capitulo mato, quia vir votum castitatis absoluta possessio horum uten- emiserat ante nuptias ... 18 silium",
+        "page": 129,
+        "raw": "Varsavien, dispensationis matrimo- Romana spolii; dubitatur, an pt£ / nii; dispensatio elargitur super traditionem suppellectilium sa- / matrimonio rato et non consum- crarum, collata fuerit in capitulo / mato, quia vir votum castitatis absoluta possessio horum uten- / emiserat ante nuptias ... 18 silium 129"
+      },
+      {
+        "description": "Castrimaris postulatum quoad ba- Melevilana privationis paroeciae ; ptismi administrationem ; reiici- confirmatur sententia curiae e- tur praxis qua fit, ut apud quam- piscopalis , qua parochus a suo plures fideles domi administretur officio suspensus fuerat ad tem- baptisma 32 pus",
+        "page": 132,
+        "raw": "Castrimaris postulatum quoad ba- Melevilana privationis paroeciae ; / ptismi administrationem ; reiici- confirmatur sententia curiae e- / tur praxis qua fit, ut apud quam- piscopalis , qua parochus a suo / plures fideles domi administretur officio suspensus fuerat ad tem- / baptisma 32 pus 132"
+      },
+      {
+        "description": "Meievitana dubii quoad Missarum Varsavien, dubii quoad causas ma- reductionem; dubium quoad mis- trimoniales ; varia disceptantur saram reductionem pro legatis dubia quoad instructionem pro- taxative conceptis 35 cessuum matrimonialium",
+        "page": 141,
+        "raw": "Meievitana dubii quoad Missarum Varsavien, dubii quoad causas ma- / reductionem; dubium quoad mis- trimoniales ; varia disceptantur / saram reductionem pro legatis dubia quoad instructionem pro- / taxative conceptis 35 cessuum matrimonialium . 141"
+      },
+      {
+        "description": "Sancti Galli (in Helvetia) matri- Pinnen, onerum; disceptatur an monii et an exposcenda sit istius praestationis obligatio, a duobus dispensatio 79 parochis quotannis facienda, per- Sancti Iacobi de Chile dispensatio- empta sit, mutatis adiunctis",
+        "page": 154,
+        "raw": "Sancti Galli (in Helvetia) matri- Pinnen, onerum; disceptatur an / monii et an exposcenda sit istius praestationis obligatio, a duobus / dispensatio 79 parochis quotannis facienda, per- / Sancti Iacobi de Chile dispensatio- empta sit, mutatis adiunctis. 154"
+      },
+      {
+        "description": "nis matrimonii; impertitur dis- Parentina et Polen, dubii quoad pensatio super matrimonio rato litteras testimoniales ad ss. Ordi- et non consummato .... 95 nes; quaeritur, an loco testimo- Cusentina funerum; quaestio aeris nialium Episcoporum, satis sint et involuta inter Religiosos et attestationes moderatorum Semi- Parochos saeculares quoad iura nariorum",
+        "page": 159,
+        "raw": "nis matrimonii; impertitur dis- Parentina et Polen, dubii quoad / pensatio super matrimonio rato litteras testimoniales ad ss. Ordi- / et non consummato .... 95 nes; quaeritur, an loco testimo- / Cusentina funerum; quaestio aeris nialium Episcoporum, satis sint / et involuta inter Religiosos et attestationes moderatorum Semi- / Parochos saeculares quoad iura nariorum . 159"
+      },
+      {
+        "description": "parochialia 105 Parisien, dispensationis matrimo- Mediolanen. matrimonii; exposcitur nii; indulgetur dispensatio super dispensatio a matrimonio rato et matrimonio rato et non consum- non consummato 116 mato",
+        "page": 203,
+        "raw": "parochialia 105 Parisien, dispensationis matrimo- / Mediolanen. matrimonii; exposcitur nii; indulgetur dispensatio super / dispensatio a matrimonio rato et matrimonio rato et non consum- / non consummato 116 mato 203"
+      },
+      {
+        "description": "Romana dubii iurium Praeposi iurae Bolivar en. taxae pro seminario ; capitularis; dubitatur an, Sede va- dubitant Patres Redemptoristae cante, Praepositus valeat explere utrum teneantur solvere taxam functiones , quas, dum viveret, favore Seminarii",
+        "page": 214,
+        "raw": "Romana dubii iurium Praeposi iurae Bolivar en. taxae pro seminario ; / capitularis; dubitatur an, Sede va- dubitant Patres Redemptoristae / cante, Praepositus valeat explere utrum teneantur solvere taxam / functiones , quas, dum viveret, favore Seminarii ..... 214"
+      },
+      {
+        "description": "faciebat Episcopus .... 118 Urbevetana funerum; disceptatur Abulen. postulatum circa coadiuto- utrum competat parocho vel Ec- res Parochorum ; exposcit Epi- clesiae Cathedrali funera perage- scopus, üt sibi concedantur ex- re super cadaver mulieris, quae traordinariae facultates amovendi per aliquod tempus Urbeveten ad tempus Parochos, qui in pro- morata fuerat, in paroecia in qua pria Ecclesia ministerium minus decessit",
+        "page": 220,
+        "raw": "faciebat Episcopus .... 118 Urbevetana funerum; disceptatur / Abulen. postulatum circa coadiuto- utrum competat parocho vel Ec- / res Parochorum ; exposcit Epi- clesiae Cathedrali funera perage- / scopus, üt sibi concedantur ex- re super cadaver mulieris, quae / traordinariae facultates amovendi per aliquod tempus Urbeveten / ad tempus Parochos, qui in pro- morata fuerat, in paroecia in qua / pria Ecclesia ministerium minus decessit 220"
+      },
+      {
+        "description": "utile exercent . ... . .122 Beien. dubii quoad Episcopum pro- prium s. Ordinationis ; dubitatur an promoveri valeant ad sacros ordines iuvenes, qui thesaurarias parochiales a gubernio consequuntur",
+        "page": 230,
+        "raw": "utile exercent . ... . .122 Beien. dubii quoad Episcopum pro- / prium s. Ordinationis ; dubitatur / an promoveri valeant ad sacros / ordines iuvenes, qui thesaurarias / parochiales a gubernio conse­ / quuntur 230"
+      },
+      {
+        "description": "Nelen. electionis; dubitatur de legitimitate electionis ob nonnullas praesumptas irregularitates",
+        "page": 236,
+        "raw": "Nelen. electionis; dubitatur de le­ / gitimitate electionis ob nonnullas / praesumptas irregularitates. 236"
+      },
+      {
+        "description": "Malacitana, de valore cuiusdam dispensationis ab impedimento matrimoniali ; dubitatur an parochus bene se gesserit dispensando in articulo mortis a primo gradu affinitatis lineae rectae",
+        "page": 242,
+        "raw": "Malacitana, de valore cuiusdam / dispensationis ab impedimento / matrimoniali ; dubitatur an pa­ / rochus bene se gesserit dispen­ / sando in articulo mortis a primo / gradu affinitatis lineae rectae. 242"
+      },
+      {
+        "description": "Mediolanen, iurium parochialium ; lis est inter canonicos coadiutores et Praepositum s. Ioannis Baptistae utrum aeque apud omnes sit titulus et ius paroeciae",
+        "page": 266,
+        "raw": "Mediolanen, iurium parochialium ; / lis est inter canonicos coadiuto­ / res et Praepositum s. Ioannis Ba­ / ptistae utrum aeque apud omnes / sit titulus et ius paroeciae. 266"
+      },
+      {
+        "description": "Neapolitana matrimonii, dubitatur de libertate mulieris in nuptiis ineundis , sed respondetur non constare de nullitate matrimonii",
+        "page": 279,
+        "raw": "Neapolitana matrimonii, dubitatur / de libertate mulieris in nuptiis / ineundis , sed respondetur non / constare de nullitate matrimo­ / nii. . 279"
+      },
+      {
+        "description": "Urgellen, circa missarum reductionem ; quaeritur an imminui possint missae, quum redditus im- minuerinl",
+        "page": 329,
+        "raw": "Urgellen, circa missarum reductio­ / nem ; quaeritur an imminui pos­ / sint missae, quum redditus im- / minuerinl . 329"
+      },
+      {
+        "description": "Parisien, dispensationis matrimonii; post perdifficilem disceptationem resolvitur, indulgendam esse dispensationem super matrimonio rato . ...",
+        "page": 331,
+        "raw": "Parisien, dispensationis matrimo­ / nii; post perdifficilem discepta­ / tionem resolvitur, indulgendam / esse dispensationem super ma­ / trimonio rato . ... . . 331"
+      },
+      {
+        "description": "Inleramnen. privationis paroeciae ; confirmatur Decretum Ordinarii, quo declaratum fuerat, parochum excidisse de iure et de facto ab administratione spirituali et temporali paroeciae",
+        "page": 360,
+        "raw": "Inleramnen. privationis paroeciae ; / confirmatur Decretum Ordinarii, / quo declaratum fuerat, parochum / excidisse de iure et de facto ab / administratione spirituali et tem­ / porali paroeciae 360"
+      },
+      {
+        "description": "Ceriniolen. onerum; disputatur an mensa episcopalis vel capitulum taxam solvere debeat .",
+        "page": 368,
+        "raw": "Ceriniolen. onerum; disputatur an / mensa episcopalis vel capitulum / taxam solvere debeat . . . 368"
+      },
+      {
+        "description": "Decretum quoad clericos et sacerdotes alienae Dioecesis",
+        "page": 373,
+        "raw": "Decretum quoad clericos et sacer­ / dotes alienae Dioecesis . . 373"
+      },
+      {
+        "description": "Varsavien, dispensationis matrimonii; indulgetur dispensatio super matrimonio rato et non consummato",
+        "page": 401,
+        "raw": "Varsavien, dispensationis matrimo­ / nii; indulgetur dispensatio super / matrimonio rato et non consum­ / mato 401"
+      },
+      {
+        "description": "Derthusien. servitii chori; resolvitur , etiam Dignitates Capituli, non secus ac ceteri canonici, teneri ad celebrationem Missarum conventualium, et ad servitium chori et altaris",
+        "page": 413,
+        "raw": "Derthusien. servitii chori; resolvi­ / tur , etiam Dignitates Capituli, / non secus ac ceteri canonici, te­ / neri ad celebrationem Missarum / conventualium, et ad servitium / chori et altaris 413"
+      },
+      {
+        "description": "Asculana de servitio chorali ; exposcunt Canonici quatuor vacationis menses, loco trium, a Tridentino concessorum, ut facilius facere satis queant etiam aliis officiis, quibus onerantur pauci- tatis cleri causa , . .",
+        "page": 427,
+        "raw": "Asculana de servitio chorali ; ex­ / poscunt Canonici quatuor vaca­ / tionis menses, loco trium, a Tri­ / dentino concessorum, ut facilius / facere satis queant etiam aliis / officiis, quibus onerantur pauci- / tatis cleri causa , . . . . 427"
+      },
+      {
+        "description": "Panormitana nullitatis matrimonii; confirmatur sententia curiae archiepiscopalis, quae steterat pro validitate nuptiarum .",
+        "page": 457,
+        "raw": "Panormitana nullitatis matrimonii; / confirmatur sententia curiae ar­ / chiepiscopalis, quae steterat pro / validitate nuptiarum . . . 457"
+      },
+      {
+        "description": "Nolana annuae praestationis; quaestio est an clerus universus teneatur die festo s. Marci praebere Episcopo proprio obedientiae quamdam significationem",
+        "page": 476,
+        "raw": "Nolana annuae praestationis; quae­ / stio est an clerus universus te­ / neatur die festo s. Marci praebe­ / re Episcopo proprio obedientiae / quamdam significationem . 476"
+      },
+      {
+        "description": "S. Galli postulatum circa acceptationem onerum missarum ; indulgetur facultas, ad decennium, nova legata excipiendi",
+        "page": 480,
+        "raw": "S. Galli postulatum circa accepta­ / tionem onerum missarum ; in­ / dulgetur facultas, ad decennium, / nova legata excipiendi . . 480"
+      },
+      {
+        "description": "Gallipolitana iubilationis ; indulgetur gratia iubilationis , quamvis capitulum haud plene annue- ret",
+        "page": 484,
+        "raw": "Gallipolitana iubilationis ; indulge­ / tur gratia iubilationis , quamvis / capitulum haud plene annue- / ret. 484"
+      },
+      {
+        "description": "Gnesnen, et Posnanien. matrimonii; resolvitur constare de nullitate matrimonii, in quo defuisse liberum consensum ex parte mulieris evictum creditur",
+        "page": 522,
+        "raw": "Gnesnen, et Posnanien. matrimonii; / resolvitur constare de nullitate / matrimonii, in quo defuisse li­ / berum consensum ex parte mu­ / lieris evictum creditur . . 522"
+      },
+      {
+        "description": "Compostellana postulatum quoad administrationem oblationum; decernitur nihil tribuendum esse parocho pro administratione e- leemosynarum",
+        "page": 553,
+        "raw": "Compostellana postulatum quoad / administrationem oblationum; de­ / cernitur nihil tribuendum esse / parocho pro administratione e- / leemosynarum 553"
+      },
+      {
+        "description": "Aretina circa ius nominandi quosdam cappellanos; quaestio est an electio cappellanorum devoluta sit Episcopo vel coaluerit in solo archipresbytero, deficientibus aliis Capituli membris",
+        "page": 557,
+        "raw": "Aretina circa ius nominandi quos­ / dam cappellanos; quaestio est / an electio cappellanorum devo­ / luta sit Episcopo vel coaluerit in / solo archipresbytero, deficienti­ / bus aliis Capituli membris. 557"
+      },
+      {
+        "description": "Nanceyen. translationis et suspensionis; confirmatur Ordinarii sententia quoad Parochi translationem et suspensionem .",
+        "page": 594,
+        "raw": "Nanceyen. translationis et suspen­ / sionis; confirmatur Ordinarii sen­ / tentia quoad Parochi translatio­ / nem et suspensionem . . . 594"
+      },
+      {
+        "description": "Rapollen. sponsalium; removeri decernitur oppositum nihil transeat, praevia solutione summae, favore mulieris, ab Ordinario determinandae",
+        "page": 606,
+        "raw": "Rapollen. sponsalium; removeri de­ / cernitur oppositum nihil trans­ / eat, praevia solutione summae, / favore mulieris, ab Ordinario de­ / terminandae 606"
+      },
+      {
+        "description": "Suessana privationis paroeciae; decernitur esse locum remotioni parochi",
+        "page": 612,
+        "raw": "Suessana privationis paroeciae; de­ / cernitur esse locum remotioni / parochi 612"
+      },
+      {
+        "description": "Romana circa quoddam onus inhaerens cuidam canonicali praebendae s. Mariae Tianstiberim ; indulgetur quidquid expètitum fuit",
+        "page": 621,
+        "raw": "Romana circa quoddam onus in­ / haerens cuidam canonicali prae­ / bendae s. Mariae Tianstiberim ; / indulgetur quidquid expètitum / fuit 621"
+      },
+      {
+        "description": "Cusentina funerum; quaestio agitur an ius peragendi funebria Regularibus, vel Parochis competat",
+        "page": 624,
+        "raw": "Cusentina funerum; quaestio agi­ / tur an ius peragendi funebria / Regularibus, vel Parochis com­ / petat ... 624"
+      },
+      {
+        "description": "Romana reductionis oneris; denegatur expetita reductio pro rata diminutionis passae ob imminutum valoren! pecuniae hispanicae etc",
+        "page": 647,
+        "raw": "Romana reductionis oneris; dene­ / gatur expetita reductio pro rata / diminutionis passae ob imminu­ / tum valoren! pecuniae hispani­ / cae etc 647"
+      },
+      {
+        "description": "Parisien, dispensationis matrimonii; indulgetur dispensatio a matrimonio rato et non consummato",
+        "page": 659,
+        "raw": "Parisien, dispensationis matrimo­ / nii; indulgetur dispensatio a ma­ / trimonio rato et non consum­ / mato 659"
+      },
+      {
+        "description": "Montisvidei; postulatum Episcopi circa propositum obligandi Sacerdotes ad suscipiendam regulam Instituti ven. Holzhauser",
+        "page": 671,
+        "raw": "Montisvidei; postulatum Episcopi / circa propositum obligandi Sacer­ / dotes ad suscipiendam regulam / Instituti ven. Holzhauser . . 671"
+      },
+      {
+        "description": "S. Severini iubilationis; denegatur iubilatio, obstantibus decretis. 7-10 Pinnen, iurium confraternitatum ; disputatur inter parochum et Confraternitatem de iure peragendi functiones sacras",
+        "page": 712,
+        "raw": "S. Severini iubilationis; denegatur / iubilatio, obstantibus decretis. 7-10 / Pinnen, iurium confraternitatum ; / disputatur inter parochum et / Confraternitatem de iure pera­ / gendi functiones sacras . . 712"
+      },
+      {
+        "description": "Monopolitana interdicti in processionibus; resolvitur ius esse Tertio ordini s. Dominici praecedendi alios in processionibus",
+        "page": 722,
+        "raw": "Monopolitana interdicti in proces­ / sionibus; resolvitur ius esse Ter­ / tio ordini s. Dominici praece­ / dendi alios in processionibus. 722"
+      }
+    ],
+    "omitted": [
+      3,
+      7,
+      74,
+      387,
+      645
+    ]
+  }
+}

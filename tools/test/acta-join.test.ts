@@ -135,9 +135,15 @@ describe('loadActaIndexes with an ASS source (ass volumes spec §5)', () => {
   it('reads the entries fixture of every ass source into a parse result whose entries are the fixture\'s plus the curated readings, with no pageless entry and the scan\'s defects', () => {
     const sources = ACTA_SOURCES.filter((s) => s.kind === 'ass');
     // 2c-i's five sample volumes, then 2c-ii-b's five of Pius X (spec §10 decision 3).
+    // 2c-i's five sample volumes, 2c-ii-b's five of Pius X, then 2c-ii-c's twenty-one of
+    // Leo XIII (spec §10 decision 3). ACTA_SOURCES order, not numeric order.
     expect(sources.map((s) => s.key)).toEqual([
-      'ass-1', 'ass-12', 'ass-23', 'ass-33', 'ass-41',
-      'ass-36', 'ass-37', 'ass-38', 'ass-39', 'ass-40',
+      'ass-1', 'ass-12', 'ass-23', 'ass-33', 'ass-41', 'ass-36',
+      'ass-37', 'ass-38', 'ass-39', 'ass-40', 'ass-13', 'ass-14',
+      'ass-15', 'ass-16', 'ass-17', 'ass-18', 'ass-19', 'ass-20',
+      'ass-21', 'ass-22', 'ass-24', 'ass-25', 'ass-26', 'ass-27',
+      'ass-28', 'ass-29', 'ass-30', 'ass-31', 'ass-32', 'ass-34',
+      'ass-35',
     ]);
     const { parsed, missing } = loadActaIndexes(sources);
     expect(missing).toEqual([]);

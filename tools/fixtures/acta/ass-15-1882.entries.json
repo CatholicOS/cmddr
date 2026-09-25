@@ -1,0 +1,207 @@
+{
+  "source": "ass-15",
+  "generated": "2026-09-26",
+  "text": "~/development/sources/ASS/txt/ass-15-1882.txt (623 pages)",
+  "volume": 15,
+  "year": 1882,
+  "pages": 623,
+  "entries": [
+    {
+      "series": "ASS",
+      "volume": 15,
+      "year": 1882,
+      "page": 97,
+      "pope": "Leo XIII",
+      "category": "LITTERAE",
+      "date": "1882-08-01",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "quibus R. Pontifex innuit Episcoporum esse incitatos Hi- bernorum animos temperare, nt ea quae iure petunt, abstinen­ tes ab omni vi et a clandestinis Societatibus, iuste consequi valeant.",
+      "raw": "LITTERAE quibus R. Pontifex innuit Episcoporum esse incitatos Hi- / bernorum animos temperare, nt ea quae iure petunt, abstinen­ / tes ab omni vi et a clandestinis Societatibus, iuste consequi / valeant.",
+      "opening": "Benevolentiae caritas, qua Hibernos complectimur, et cuius augere",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE quibus R. Pontifex innuit Episcoporum esse incitatos Hi- / bernorum animos temperare, nt ea quae iure petunt, abstinen­ / tes ab omni vi et a clandestinis Societatibus, iuste consequi / valeant.",
+        "salutation": "LEO PP. XIII.",
+        "opening": "Benevolentiae caritas, qua Hibernos complectimur, et cuius au­",
+        "dateline": "Datum Romae apud S. Petrum die 1 Augusti An. MDCCCLXXXII. Pontificatus Nostri anno quinto.",
+        "header": "97"
+      }
+    }
+  ],
+  "defects": [
+    {
+      "page": 49,
+      "reason": "no-date",
+      "lines": [
+        "BREVE quo una eademque constituitur formula absolutionis tum gene­ / ralis tum in articulo mortis, et benedictionis papalis, adhibenda / penes Tertiarios Franciscales, alias eiusdem Ordinis familias, nec / non penes alios Regulares Ordines ac Tertiarios ad ipsos pertinentes.",
+        "Datum Romae apud S. Petrum sub Annulo Piscatoris die VII. Iulii MDCCCXXXXII. Pontificatus Nostri Anno Quinto."
+      ]
+    },
+    {
+      "page": 153,
+      "reason": "no-heading",
+      "lines": [
+        "Datum Romae apud S.Petrum die xvii septembris An. MDCCCLXXXII,",
+        "Pontificatus Nostri anno Quinto."
+      ]
+    },
+    {
+      "page": 193,
+      "reason": "no-date",
+      "lines": [
+        "MOTU PROPRIO / SS. D. N. LEONIS XIII ; quo in Aedibus Vaticanis instituitur Tribunal / ad dirimendas controversias, quae enasci possent, contractuum / causa, cum administratione Aedium earumdem.",
+        "Datum Romae aquds.Petrum die VIII decem. A. MDCCCLXXXII. Pontificatus Nostri Anno Quinto."
+      ]
+    },
+    {
+      "page": 291,
+      "reason": "no-heading",
+      "lines": [
+        "Datum Romae apud S. Patrum die 1 Ianuarii, anno 1883."
+      ]
+    },
+    {
+      "page": 340,
+      "reason": "no-heading",
+      "lines": [
+        "Datum Romae apud S. Petrum sub anulo Piscatoris, die",
+        "1 Martii anno MDCCCLXXXIII, Pontificatus Nostri anno Quinto."
+      ]
+    },
+    {
+      "page": 449,
+      "reason": "no-date",
+      "lines": [
+        "BREVE, quo Sodalitio ab ADORATIONE REPARATRICE nuncupato / variae conceduntur Indulgentiae.",
+        "Datum Romae apud s. Petrum sub Annulo Piscatoris , die VT jnensis Martii arari MDCCCLXXXIII Pontificatus Nostri Anno Sexto-"
+      ]
+    },
+    {
+      "page": 451,
+      "reason": "no-date",
+      "lines": [
+        "LITTERAE ad Praesidem catholicae Societatis Hungariae.",
+        "Datum Romae apud S. Petrum, anno Incarnationis Dominicae Mi% lesimo octingentesimo octogesimo tertio, III Kalendas Iunias, Pontificatus Nostri Anno Sexto."
+      ]
+    },
+    {
+      "page": 561,
+      "reason": "no-heading",
+      "lines": [
+        "Datum Romae, apud s. Petrum die XVII aprilis 1883.",
+        "Pontificatus Nostri Anno Sexto."
+      ]
+    }
+  ],
+  "summa": {
+    "pages": {
+      "from": 603,
+      "to": 610
+    },
+    "rows": [
+      {
+        "description": "ET CONSTITUTIO R. PONTIFICIS Litterae quibus R. Pontifex innuit Episcoporum esse incitatos Hi- bernorum animos temperare, ut ea quae iure petunt, abstinentes ab omni vi et a clandestinis societatibus, iuste consequi valeant p",
+        "page": 97,
+        "raw": "ET CONSTITUTIO R. PONTIFICIS / Litterae quibus R. Pontifex innuit / Episcoporum esse incitatos Hi- / bernorum animos temperare, ut / ea quae iure petunt, abstinen­ / tes ab omni vi et a clandestinis / societatibus, iuste consequi va­ / leant p. 97"
+      },
+      {
+        "description": "Epistola Encyclica SSmi D. N. Leonis XIII de s. Francisco Assi- siensi et de tertio Franciscalium ordine propagando .",
+        "page": 145,
+        "raw": "Epistola Encyclica SSmi D. N. Leo­ / nis XIII de s. Francisco Assi- / siensi et de tertio Franciscalium / ordine propagando . . » 145"
+      },
+      {
+        "description": "Motu proprio SSmi D. N. Leonis XIII, quo in Aedibus Vaticanis instituitur Tribunal ad dirimendas controversias, quae e- nasci possent, contractuum causa, cum administratione Aedium earumdem •",
+        "page": 193,
+        "raw": "Motu proprio SSmi D. N. Leo­ / nis XIII, quo in Aedibus Vati­ / canis instituitur Tribunal ad di­ / rimendas controversias, quae e- / nasci possent, contractuum causa, / cum administratione Aedium ea­ / rumdem •.. » 193"
+      },
+      {
+        "description": "Epistola Encyclica SSmi D. N. Leonis Papae XIII ad venerabiles fratres Archiepiscopos et Episcopos universos in regione Hispana",
+        "page": 241,
+        "raw": "Epistola Encyclica SSmi D. N. Leo­ / nis Papae XIII ad venerabiles / fratres Archiepiscopos et Epi­ / scopos universos in regione Hi­ / spana » 241"
+      },
+      {
+        "description": "Litterae SSmi D. N. Leonis XIII ad Emum Archiepiscopum Dubli- nen. quibus exorat ut Clerus Hyberniae totus animos civium moderari curet in iis, quibus nunc iaclantur fluctibus: gaudet ~*-fB~ de curis adhibitis ab Episcopis favore catholicae iuventutis, eisdemque commendat philosophiam Aquinatis pro Seminariorum adolescentibus .",
+        "page": 289,
+        "raw": "Litterae SSmi D. N. Leonis XIII ad / Emum Archiepiscopum Dubli- / nen. quibus exorat ut Clerus / Hyberniae totus animos civium / moderari curet in iis, quibus / nunc iaclantur fluctibus: gaudet / ~*-fB~ / de curis adhibitis ab Episcopis / favore catholicae iuventutis, eis­ / demque commendat philoso­ / phiam Aquinatis pro Seminario­ / rum adolescentibus . . » 289"
+      },
+      {
+        "description": "Litterae in forma brevis, quibus fundatur et constituitur Romae Collegium pro clericis Armeniis",
+        "page": 337,
+        "raw": "Litterae in forma brevis, quibus / fundatur et constituitur Romae / Collegium pro clericis Arme­ / niis » 337"
+      },
+      {
+        "description": "Litterae responsionis Antistitum Hispanorum ad Epistolam Encyclicam Leonis XIII .",
+        "page": 398,
+        "raw": "Litterae responsionis Antistitum Hi­ / spanorum ad Epistolam Ency­ / clicam Leonis XIII . . » 398"
+      },
+      {
+        "description": "Litterae SSmi D. N. Leonis XIII ad Praesidem catholicae Societatis Hungariae",
+        "page": 451,
+        "raw": "Litterae SSmi D. N. Leonis XIII ad / Praesidem catholicae Societatis / Hungariae » 451"
+      },
+      {
+        "description": "Constitutio SSmi D. N. Leonis Papae XIII de lege Franciscalium tertii Ordinis saecularis",
+        "page": 513,
+        "raw": "Constitutio SSmi D. N. Leonis Pa­ / pae XIII de lege Franciscalium / tertii Ordinis saecularis. » 513"
+      },
+      {
+        "description": "Litterae Leonis XIII ad Equitem F. Pustet ob novam susceptam editionem operum Cosmae Alamanni S. Iesu - Summa totius philosophiae",
+        "page": 561,
+        "raw": "Litterae Leonis XIII ad Equitem / F. Pustet ob novam susceptam / editionem operum Cosmae Ala­ / manni S. Iesu - Summa totius / philosophiae » 561"
+      }
+    ],
+    "claimed": [
+      97
+    ],
+    "unclaimed": [
+      {
+        "description": "Epistola Encyclica SSmi D. N. Leonis XIII de s. Francisco Assi- siensi et de tertio Franciscalium ordine propagando .",
+        "page": 145,
+        "raw": "Epistola Encyclica SSmi D. N. Leo­ / nis XIII de s. Francisco Assi- / siensi et de tertio Franciscalium / ordine propagando . . » 145"
+      },
+      {
+        "description": "Motu proprio SSmi D. N. Leonis XIII, quo in Aedibus Vaticanis instituitur Tribunal ad dirimendas controversias, quae e- nasci possent, contractuum causa, cum administratione Aedium earumdem •",
+        "page": 193,
+        "raw": "Motu proprio SSmi D. N. Leo­ / nis XIII, quo in Aedibus Vati­ / canis instituitur Tribunal ad di­ / rimendas controversias, quae e- / nasci possent, contractuum causa, / cum administratione Aedium ea­ / rumdem •.. » 193"
+      },
+      {
+        "description": "Epistola Encyclica SSmi D. N. Leonis Papae XIII ad venerabiles fratres Archiepiscopos et Episcopos universos in regione Hispana",
+        "page": 241,
+        "raw": "Epistola Encyclica SSmi D. N. Leo­ / nis Papae XIII ad venerabiles / fratres Archiepiscopos et Epi­ / scopos universos in regione Hi­ / spana » 241"
+      },
+      {
+        "description": "Litterae SSmi D. N. Leonis XIII ad Emum Archiepiscopum Dubli- nen. quibus exorat ut Clerus Hyberniae totus animos civium moderari curet in iis, quibus nunc iaclantur fluctibus: gaudet ~*-fB~ de curis adhibitis ab Episcopis favore catholicae iuventutis, eisdemque commendat philosophiam Aquinatis pro Seminariorum adolescentibus .",
+        "page": 289,
+        "raw": "Litterae SSmi D. N. Leonis XIII ad / Emum Archiepiscopum Dubli- / nen. quibus exorat ut Clerus / Hyberniae totus animos civium / moderari curet in iis, quibus / nunc iaclantur fluctibus: gaudet / ~*-fB~ / de curis adhibitis ab Episcopis / favore catholicae iuventutis, eis­ / demque commendat philoso­ / phiam Aquinatis pro Seminario­ / rum adolescentibus . . » 289"
+      },
+      {
+        "description": "Litterae in forma brevis, quibus fundatur et constituitur Romae Collegium pro clericis Armeniis",
+        "page": 337,
+        "raw": "Litterae in forma brevis, quibus / fundatur et constituitur Romae / Collegium pro clericis Arme­ / niis » 337"
+      },
+      {
+        "description": "Litterae responsionis Antistitum Hispanorum ad Epistolam Encyclicam Leonis XIII .",
+        "page": 398,
+        "raw": "Litterae responsionis Antistitum Hi­ / spanorum ad Epistolam Ency­ / clicam Leonis XIII . . » 398"
+      },
+      {
+        "description": "Litterae SSmi D. N. Leonis XIII ad Praesidem catholicae Societatis Hungariae",
+        "page": 451,
+        "raw": "Litterae SSmi D. N. Leonis XIII ad / Praesidem catholicae Societatis / Hungariae » 451"
+      },
+      {
+        "description": "Constitutio SSmi D. N. Leonis Papae XIII de lege Franciscalium tertii Ordinis saecularis",
+        "page": 513,
+        "raw": "Constitutio SSmi D. N. Leonis Pa­ / pae XIII de lege Franciscalium / tertii Ordinis saecularis. » 513"
+      },
+      {
+        "description": "Litterae Leonis XIII ad Equitem F. Pustet ob novam susceptam editionem operum Cosmae Alamanni S. Iesu - Summa totius philosophiae",
+        "page": 561,
+        "raw": "Litterae Leonis XIII ad Equitem / F. Pustet ob novam susceptam / editionem operum Cosmae Ala­ / manni S. Iesu - Summa totius / philosophiae » 561"
+      }
+    ],
+    "omitted": []
+  }
+}

@@ -177,7 +177,7 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // (Venerabilis Decessor with Superiore iam aetate, both 8 September 1950).
   // The OCR spellings of the volumes: `LITTEEAE APOSTOLICAE` (AAS 28, 1936), `LITTEBAE
   // APOSTOLICAE` (AAS 41, 1949).
-  { id: 'Litterae Apostolicae', headings: ['LITTERAE APOSTOLICAE', 'LITTEEAE APOSTOLICAE', 'LITTEBAE APOSTOLICAE'],
+  { id: 'Litterae Apostolicae', headings: ['LITTERAE APOSTOLICAE', 'LITTEEAE APOSTOLICAE', 'LITTEBAE APOSTOLICAE', 'LETTERA APOSTOLICA'],
     classes: [{ genre: 'apostolic-letter', excludes: ['motu-proprio', 'in-forma-brevis'] }], harvested: 'yes' },
   // A category the index uses for a few apostolic letters that are not beatifications --
   // Patris corde (2021), Admirabile signum (2019), letters to a named addressee that
@@ -220,7 +220,11 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // 129 …) or `LITTERAE` (first at ASS 12 (1879) 225, then ASS 23 (1890) 3 and ASS 33
   // (1900) 3) -- the singular and the bare form, each an act of the letters shelf (ass
   // volumes spec §5, which asks each addition for the page of its first occurrence).
-  { id: 'Epistulae', headings: ['EPISTULAE', 'EPISTULA', 'EPISTOLAE', 'BPISTTJLAE', 'EPISTULAS', 'EPISTOLA', 'LITTERAE'],
+  // The ASS head an Italian letter `LETTERA`: ASS 20 (1887) 4, `LETTERA di Sua Santità Papa
+  // Leone XIII al Cardinale Mariano Ram- / polla suo Segretario di Stato`, and ASS 12 (1879)
+  // 3, whose act a curated reading already carries. The Italian word for the class this row
+  // is, beside the Latin forms above it.
+  { id: 'Epistulae', headings: ['EPISTULAE', 'EPISTULA', 'EPISTOLAE', 'BPISTTJLAE', 'EPISTULAS', 'EPISTOLA', 'LITTERAE', 'LETTERA'],
     classes: [{ genre: 'letter' }], harvested: 'partly' },
   // The ASS print the briefs among the pope's acts: `LITTERAE in forma brevis Sanctissimi
   // D. N. Leonis XIII` first at ASS 23 (1890) 437 (the one line of the sample with a
@@ -234,7 +238,12 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // partly: the briefs shelf exists
   // for Leo XIII (8 records), Pius IX (5, from his flat page), Pius XI, Pius XII, Benedict XV
   // and Benedict XIV, and not for Pius X (pontiffs.ts).
-  { id: 'Brevia', headings: ['LITTERAE IN FORMA BREVIS', 'BREVE'], classes: [{ genre: 'apostolic-letter', requires: 'in-forma-brevis' }], harvested: 'partly' },
+  // ASS 22 (1889) 257 prints the instrument's whole name -- `LITTERAE APOSTOLICAE in forma
+  // Brevis, quibus permittitur ut Petrus / Aloisius Maria Chanel nuncupetur …` -- which is
+  // what a brief is (README, *The brief and the encyclical*, and #48): litterae apostolicae
+  // in forma Brevis. The series says so once in 31 joined volumes; the shorter `LITTERAE in
+  // forma Brevis` is the usual heading, and the class is the same either way.
+  { id: 'Brevia', headings: ['LITTERAE IN FORMA BREVIS', 'LITTERAE APOSTOLICAE IN FORMA BREVIS', 'BREVE'], classes: [{ genre: 'apostolic-letter', requires: 'in-forma-brevis' }], harvested: 'partly' },
   // The 2010 index heads Benedict XVI's pastoral letter to the Catholics of Ireland (19
   // March 2010, AAS 102 (2010) 209) `VIII – LITTERAE PASTORALES`: one heading for one act,
   // which vatican.va files on the year-partitioned letters shelf (…/letters/2010/documents/

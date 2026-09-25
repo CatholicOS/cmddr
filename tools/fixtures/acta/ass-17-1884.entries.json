@@ -1,0 +1,239 @@
+{
+  "source": "ass-17",
+  "generated": "2026-09-26",
+  "text": "~/development/sources/ASS/txt/ass-17-1884.txt (624 pages)",
+  "volume": 17,
+  "year": 1884,
+  "pages": 624,
+  "entries": [
+    {
+      "series": "ASS",
+      "volume": 17,
+      "year": 1884,
+      "page": 216,
+      "pope": "Leo XIII",
+      "category": "ALLOCUTIO",
+      "date": "????-??-??",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SSmi D. N. LEONIS Papae XIII.",
+      "raw": "ALLOCUTIO SSmi D. N. LEONIS Papae XIII.",
+      "opening": "Quam aspera in Ecclesiam saevire procella pergat, quam",
+      "anchor": "heading",
+      "evidence": {
+        "heading": "ALLOCUTIO SSmi D. N. LEONIS Papae XIII.",
+        "salutation": null,
+        "opening": "Quam aspera in Ecclesiam saevire procella pergat, quam crebrae",
+        "dateline": null,
+        "header": "216"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 17,
+      "year": 1884,
+      "page": 260,
+      "pope": "Leo XIII",
+      "category": "LITTERAE",
+      "date": "1884-12-18",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SS. D. N. LEONIS XIII, quibus R. P. D. Lachat instituitur administrator apostolicus Pagi Ticinensis.",
+      "raw": "LITTERAE SS. D. N. LEONIS XIII, quibus R. P. D. Lachat instituitur / administrator apostolicus Pagi Ticinensis.",
+      "opening": "Litteras legentes a Te datas nobilissimis tui obsequii",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE SS. D. N. LEONIS XIII, quibus R. P. D. Lachat instituitur / administrator apostolicus Pagi Ticinensis.",
+        "salutation": "LEO PP. XIII.",
+        "opening": "Litteras legentes a Te datas nobilissimis tui obsequii et devotae",
+        "dateline": "Datum Romae, apud s. Petrum die 18 Decembris 1884. Pontificatus Nostri Anno Septimo.",
+        "header": "260                                                     LITTERAE"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 17,
+      "year": 1884,
+      "page": 417,
+      "pope": "Leo XIII",
+      "category": "LITTERAE",
+      "date": "1885-02-01",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SS. D. N. LEONIS XIII ad Sinarum Imperatorem; quibus idem exoratur ne catholicos Missionarios aliqua consequatur per­ nicies ex bellicis dimicationibus cum Gallica Natione.",
+      "raw": "LITTERAE SS. D. N. LEONIS XIII ad Sinarum Imperatorem; quibus / idem exoratur ne catholicos Missionarios aliqua consequatur per­ / nicies ex bellicis dimicationibus cum Gallica Natione.",
+      "opening": "Commotum nuper bellum in quibusdam Imperii Tui regionibus",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE SS. D. N. LEONIS XIII ad Sinarum Imperatorem; quibus / idem exoratur ne catholicos Missionarios aliqua consequatur per­ / nicies ex bellicis dimicationibus cum Gallica Natione.",
+        "salutation": null,
+        "opening": "Commotum nuper bellum in quibusdam Imperii Tui regionibus",
+        "dateline": "Datum Romae apud S. Petrum die 1 februarii 1885. Pontificatus Nostri anno VII.",
+        "header": "417"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 17,
+      "year": 1884,
+      "page": 513,
+      "pope": "Leo XIII",
+      "category": "LITTERAE",
+      "date": "1885-05-20",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SSmi D. N. LEONIS Papae XIII. ad Eminentissimum Parocchi, in urbe Vicarium, de studiis litterarum in sacro Seminario Romano provehendis.",
+      "raw": "LITTERAE SSmi D. N. LEONIS Papae XIII. ad Eminentissimum Parocchi, / in urbe Vicarium, de studiis litterarum in sacro Seminario Romano / provehendis.",
+      "opening": "Plane quidem intelligis, quod saepe Nos et non",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE SSmi D. N. LEONIS Papae XIII. ad Eminentissimum Parocchi, / in urbe Vicarium, de studiis litterarum in sacro Seminario Romano / provehendis.",
+        "salutation": "LEO EPISCOPUS",
+        "opening": "Plane quidem intelligis, quod saepe Nos et non sine caussa di­",
+        "dateline": "Datum Romae apud S. Petrum die xx Maii Anno MDCCCLXXXV. Pontificatus Nostri Octavo.",
+        "header": "S13"
+      }
+    }
+  ],
+  "defects": [
+    {
+      "page": 49,
+      "reason": "no-date",
+      "lines": [
+        "EPISTOLA ENCYCLICA SSmi D. N. LEONIS XIII, qua mandat ut mense / octobris Mus anni ss. Rosarium recitetur in omnibus curialibus / templis",
+        "Datum Romae apud S. Petrum die xxx Augusti MDCCCCLXXXIV, Pontificatus Nostri Anno Septimo."
+      ]
+    },
+    {
+      "page": 175,
+      "reason": "no-date",
+      "lines": [
+        "LITTERAE APOSTOLICAE SSmi D. N. Leonis XIII. de erectione Urbani / Collegii statuum foederatorum Americae Septentrionalis.",
+        "Datum Romae sub annulo Piscatoris anno millesimo octingentesimo octuagesimo quarto die xxv Octobris, Pontificatus Nostri anno septimo."
+      ]
+    },
+    {
+      "page": 209,
+      "reason": "no-date",
+      "lines": [
+        "LITTERAE APOSTOLICAE SSmi D. N. Leonis XIII. de Sede Archiepi­ / scopali Carthaginensi restituenda.",
+        "Datum Romae apud Sanctum Petrum anno Incarnationis Dominicae Millesimo octingentesimo octogesimo quarto, Quarto Idus Novembris, Pontificatus Nostri anno septimo."
+      ]
+    },
+    {
+      "page": 262,
+      "reason": "no-date",
+      "lines": [
+        "LITTERAE APOSTOLICAE quibus confirmatur iudicium ab Archiepiscopo / Compostellano latum super identitate corporis s. Iacobi M. Apo­ / stoli, et ss. Athanasii et Theodori discipulorum eius.",
+        "Datum Romae apud Sanctum Petrum anno Incarnationis Dominicae millesimo octingentesimo octuagesimo quarto, Kal. Novembris, Pontificatus Nostri anno septimo."
+      ]
+    }
+  ],
+  "summa": {
+    "pages": {
+      "from": 603,
+      "to": 610
+    },
+    "rows": [
+      {
+        "description": "Epistola Encyclica SSmi D. N. Leonis XIII, qua mandat ut mense octobris huius anni ss. Rosarium recitetur in omnibus Ecclesiis curialibus",
+        "page": 49,
+        "raw": "Epistola Encyclica SSmi D. N. / Leonis XIII, qua mandat ut men­ / se octobris huius anni ss. Rosa­ / rium recitetur in omnibus Ec­ / clesiis curialibus. pag. 49"
+      },
+      {
+        "description": "litterae SSmi D. N. Leonis XIII, ad Archiepiscopum florentinum, quibus iterum improbantur opiniones praeposterae duorum libellorum, qui inscribuntur - La nuova Italia - Il Vaticano regio",
+        "page": 97,
+        "raw": "litterae SSmi D. N. Leonis XIII, / ad Archiepiscopum florentinum, / quibus iterum improbantur opi­ / niones praeposterae duorum li­ / bellorum, qui inscribuntur - La / nuova Italia - Il Vaticano re­ / gio » 97"
+      },
+      {
+        "description": "Letterae SSmi D. N. Leonis XIII, ad Emum Status Secretarium de erigendo Valetudinario pro laborantibus morbo cholenco, p",
+        "page": 161,
+        "raw": "Letterae SSmi D. N. Leonis XIII, / ad Emum Status Secretarium de / erigendo Valetudinario pro labo­ / rantibus morbo cholenco, p. 161."
+      },
+      {
+        "description": "Litterae Apostolicae SSmi D. N. Leonis XIII de erectione Collegii Urbani Statuum foederatorum Americae septentrionalis",
+        "page": 175,
+        "raw": "Litterae Apostolicae SSmi D. N. / Leonis XIII de erectione Collegii / Urbani Statuum foederatorum / Americae septentrionalis. » 175"
+      },
+      {
+        "description": "Litterae Apostolicae SSmi D. N. Leonis XIII de Sede Archiepiscopali Carthaginensi restituenda",
+        "page": 209,
+        "raw": "Litterae Apostolicae SSmi D. N. / Leonis XIII de Sede Archiepi­ / scopali Carthaginensi restituen­ / da » 209"
+      },
+      {
+        "description": "iÀtterae SSmi D. N. Leonis XIII ad Nuntium Parisiorum de sopien- dis dissidiis, praesertim inter catholicos ephemeridum scriptores",
+        "page": 257,
+        "raw": "iÀtterae SSmi D. N. Leonis XIII ad / Nuntium Parisiorum de sopien- / dis dissidiis, praesertim inter ca­ / tholicos ephemeridum scripto­ / res... » 257"
+      },
+      {
+        "description": "Litterae SSmi D. N. Leonis XIII; quibus R. P. D. Lachat instituitur administrator apostolicus Pagi Ticinensis",
+        "page": 260,
+        "raw": "Litterae SSmi D. N. Leonis XIII; / quibus R. P. D. Lachat institui­ / tur administrator apostolicus Pagi / Ticinensis » 260"
+      },
+      {
+        "description": "Litterae Apostolicae quibus confirmatur iudicium ab Archiepisco Compostellano latum super identitate corporis s. Iacobi m. Apostoli et ss. Athanasii et Theodori discipulorum eius",
+        "page": 262,
+        "raw": "Litterae Apostolicae quibus confir­ / matur iudicium ab Archiepisco / Compostellano latum super iden­ / titate corporis s. Iacobi m. Apo­ / stoli et ss. Athanasii et Theodori / discipulorum eius .... pag. 262"
+      },
+      {
+        "description": "Litterae SSmi D. N. Leonis XIII ad Sinarum Imperatorem ; quibus idem exoratur ne catholicos et Missionarios aliqua Consequatur pernicies ex bellicis dimicationi- bus cum Gallica Natione.",
+        "page": 417,
+        "raw": "Litterae SSmi D. N. Leonis XIII ad / Sinarum Imperatorem ; quibus / idem exoratur ne catholicos et / Missionarios aliqua Consequatur / pernicies ex bellicis dimicationi- / bus cum Gallica Natione. . » 417"
+      },
+      {
+        "description": "Litterae SSmi D. N. Leonis XIII ad Emum Parocchi, in Urbe Vicarium, de studiis litterarum in sacro Seminario Romano provehendis",
+        "page": 513,
+        "raw": "Litterae SSmi D. N. Leonis XIII / ad Emum Parocchi, in Urbe Vi­ / carium, de studiis litterarum in / sacro Seminario Romano prove­ / hendis » 513"
+      }
+    ],
+    "claimed": [
+      260,
+      417,
+      513
+    ],
+    "unclaimed": [
+      {
+        "description": "Epistola Encyclica SSmi D. N. Leonis XIII, qua mandat ut mense octobris huius anni ss. Rosarium recitetur in omnibus Ecclesiis curialibus",
+        "page": 49,
+        "raw": "Epistola Encyclica SSmi D. N. / Leonis XIII, qua mandat ut men­ / se octobris huius anni ss. Rosa­ / rium recitetur in omnibus Ec­ / clesiis curialibus. pag. 49"
+      },
+      {
+        "description": "litterae SSmi D. N. Leonis XIII, ad Archiepiscopum florentinum, quibus iterum improbantur opiniones praeposterae duorum libellorum, qui inscribuntur - La nuova Italia - Il Vaticano regio",
+        "page": 97,
+        "raw": "litterae SSmi D. N. Leonis XIII, / ad Archiepiscopum florentinum, / quibus iterum improbantur opi­ / niones praeposterae duorum li­ / bellorum, qui inscribuntur - La / nuova Italia - Il Vaticano re­ / gio » 97"
+      },
+      {
+        "description": "Letterae SSmi D. N. Leonis XIII, ad Emum Status Secretarium de erigendo Valetudinario pro laborantibus morbo cholenco, p",
+        "page": 161,
+        "raw": "Letterae SSmi D. N. Leonis XIII, / ad Emum Status Secretarium de / erigendo Valetudinario pro labo­ / rantibus morbo cholenco, p. 161."
+      },
+      {
+        "description": "Litterae Apostolicae SSmi D. N. Leonis XIII de erectione Collegii Urbani Statuum foederatorum Americae septentrionalis",
+        "page": 175,
+        "raw": "Litterae Apostolicae SSmi D. N. / Leonis XIII de erectione Collegii / Urbani Statuum foederatorum / Americae septentrionalis. » 175"
+      },
+      {
+        "description": "Litterae Apostolicae SSmi D. N. Leonis XIII de Sede Archiepiscopali Carthaginensi restituenda",
+        "page": 209,
+        "raw": "Litterae Apostolicae SSmi D. N. / Leonis XIII de Sede Archiepi­ / scopali Carthaginensi restituen­ / da » 209"
+      },
+      {
+        "description": "iÀtterae SSmi D. N. Leonis XIII ad Nuntium Parisiorum de sopien- dis dissidiis, praesertim inter catholicos ephemeridum scriptores",
+        "page": 257,
+        "raw": "iÀtterae SSmi D. N. Leonis XIII ad / Nuntium Parisiorum de sopien- / dis dissidiis, praesertim inter ca­ / tholicos ephemeridum scripto­ / res... » 257"
+      },
+      {
+        "description": "Litterae Apostolicae quibus confirmatur iudicium ab Archiepisco Compostellano latum super identitate corporis s. Iacobi m. Apostoli et ss. Athanasii et Theodori discipulorum eius",
+        "page": 262,
+        "raw": "Litterae Apostolicae quibus confir­ / matur iudicium ab Archiepisco / Compostellano latum super iden­ / titate corporis s. Iacobi m. Apo­ / stoli et ss. Athanasii et Theodori / discipulorum eius .... pag. 262"
+      }
+    ],
+    "omitted": [
+      216
+    ]
+  }
+}
