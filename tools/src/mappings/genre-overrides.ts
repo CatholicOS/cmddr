@@ -177,6 +177,27 @@ export const GENRE_OVERRIDES: Record<string, { genre: string; characteristics?: 
       + 'so the genre came from the shelf of a translation. `sourceGenreLabel` still records '
       + '`encyclicals` verbatim.',
   },
+  // Where this stops, and why the ASS heading cannot be the test.
+  //
+  // Six more acts of Leo XIII sit on both the encyclicals and the letters shelves: Vi e ben
+  // noto (1887), Quod anniversarius and In plurimis (1888), Quam aerumnosa (1888), Magni
+  // Nobis (1889), Non mediocri (1893). They are NOT corrected here, and the difference from
+  // the six above is vatican.va's own: there the Latin and the Italian stand on the letters
+  // shelf and the English alone under encyclicals, so the genre came from a translation's
+  // shelf; here the Italian is itself filed as an encyclical.
+  //
+  // The ASS was read for all six and does not settle it. Four are printed and every one is
+  // headed plain `EPISTOLA` -- In plurimis at ASS 20 (1887) 545 ('EPISTOLA Sanctissimi D. N.
+  // Leonis XIII ad Episcopos Brasiliae de libertate donata non paucis, qui in illo imperio
+  // sub iugo servitutis detenti erant.'), Quam aerumnosa at ASS 21 (1888) 258, Magni Nobis at
+  // ASS 21 (1888) 517, Non mediocri at ASS 26 (1893) 199; the other two the series does not
+  // print. But In plurimis is Leo XIII's encyclical on the abolition of slavery, on the
+  // encyclicals shelf in Italian and English and in every published list of his encyclicals,
+  // and those volumes use `EPISTOLA ENCYCLICA` elsewhere (twice in ASS 20, three times in
+  // ASS 21, forty-seven times in ASS 26). So a bare `EPISTOLA` or `LITTERAE` heading is
+  // compatible with an act the Church calls an encyclical, and the heading corroborates a
+  // correction without being able to carry one: what carries the six above is the language
+  // split, not the Acta. The owner ruled these six stay encyclicals (2026-09-25).
   'john-xxiii|piccolo-saggio-di-devoti-pensieri-distribuiti-per-ogni-decina-del-rosario-come-a-complemento-della-lettera-apostolica-il-religioso-convegno|1961-09-29': {
     genre: 'prayer',
     note:
