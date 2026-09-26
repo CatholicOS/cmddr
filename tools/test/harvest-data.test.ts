@@ -3824,9 +3824,18 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
   // to the volumes already joined until Task 4 re-runs the join and updates them.
   const joinedSources = sources.filter((s) => s.volume < 2 || s.volume > 11);
 
-  it('writes an ASS reference only on a shelf document of Pius IX, Leo XIII or Pius X, citing a sample volume by its number and first year, at a page within the volume, dated no later than the year after the volume\'s first', () => {
+  it('writes an ASS reference only on a shelf document of Pius IX, Leo XIII or Pius X -- or of the council whose act one of them promulgated -- citing a sample volume by its number and first year, at a page within the volume, dated no later than the year after the volume\'s first', () => {
     for (const d of cited) {
-      expect(['rp:pius-ix', 'rp:leo-xiii', 'rp:pius-x'], d.id).toContain(d.issuerId);
+      // `oec:vatican-i` on the owner's ruling of 2026-09-26 (Task 3b, ass volumes spec §5):
+      // the ASS prints the council's two dogmatic constitutions under Pius IX with the
+      // council's approval, and they are the same documents, so the reference is recorded
+      // on the conciliar record. A conciliar issuer is admitted only where the record names
+      // the pope of the volume as its promulgator -- the identity the join itself reads.
+      if (d.issuerId.startsWith('oec:')) {
+        expect(d.promulgatedBy, d.id).toBe('rp:pius-ix');
+      } else {
+        expect(['rp:pius-ix', 'rp:leo-xiii', 'rp:pius-x'], d.id).toContain(d.issuerId);
+      }
       expect(isActaShelf(d.source?.shelf), d.id).toBe(false);
       const s = sources.find((x) => x.volume === d.acta!.volume);
       expect(s, d.id).toBeDefined();
@@ -3948,6 +3957,45 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // Pontificatus Nostri ineunte sexto.`
     expect(by['mag:pius-x/haerent-animo-1908']).toEqual({ series: 'ASS', volume: 41, year: 1908, page: 555 });
     // ASS 1 (1865) matched nothing: no act of weight to name (see the per-volume pin).
+  });
+
+  it('joins the two dogmatic constitutions of Vatican I to their conciliar records, by the pope their promulgatedBy names', () => {
+    // Task 3b (ass volumes spec §5, the owner's ruling of 2026-09-26). The pin reads the
+    // join's own output and not `data/`, because Task 4 is what writes these two references
+    // into the records; what it fixes here is the id, the date and the page.
+    const shelf = everything.filter((d) => !isActaShelf(d.source?.shelf));
+    const { parsed } = loadActaIndexes(sources.filter((s) => s.volume === 5 || s.volume === 6));
+    const result = matchActa([...parsed.values()].flatMap((p) => p.entries), shelf);
+    const byDoc = new Map(result.matches.map((m) => [m.documentId, m]));
+    // *Dei Filius* -- ASS 5 (1869) 481, the curated reading ASS:5:481: `PIUS EPISCOPUS /
+    // SERVUS SERVORUM DEI / SACRO APPROBANTE CONCILIO / Ad perpetuam rei memoriam` (ll.
+    // 31-34) over `« Dei Filius et generis humani Redemptor Dominus Noster` (l. 37); no
+    // dateline, the date being the third public session's, `« Die vigesimaquarta Aprilis
+    // anni 1870 Dominica in Albis` (p. 478 l. 32).
+    expect(byDoc.get('mag:vatican-i/dei-filius-1870')?.entry)
+      .toMatchObject({ series: 'ASS', volume: 5, year: 1869, page: 481, date: '1870-04-24', category: 'CONSTITUTIO DOGMATICA', pope: 'Pius IX' });
+    // *Pastor aeternus* -- ASS 6 (1870) 40, the curated reading ASS:6:40: the same formula
+    // (ll. 9-14) over `«r Pastor aeternus et episcopus animarum nostrarum, ut sa- /
+    // lutiferum` (ll. 17-18); no dateline, the date being the fourth session's, `« Die
+    // decima octava Iulii anni 1870 Feria II hora nona an-` (p. 37 l. 29).
+    expect(byDoc.get('mag:vatican-i/pastor-aeternus-1870')?.entry)
+      .toMatchObject({ series: 'ASS', volume: 6, year: 1870, page: 40, date: '1870-07-18', category: 'CONSTITUTIO DOGMATICA', pope: 'Pius IX' });
+    // Matched by the ordinary unique rule, on no curated override: the widening of the
+    // candidate set by `promulgatedBy` (match.ts) is what put the record in reach, and the
+    // records' own fields are what it read.
+    expect([byDoc.get('mag:vatican-i/dei-filius-1870')?.by, byDoc.get('mag:vatican-i/pastor-aeternus-1870')?.by]).toEqual(['unique', 'unique']);
+    for (const id of ['mag:vatican-i/dei-filius-1870', 'mag:vatican-i/pastor-aeternus-1870']) {
+      const d = shelf.find((x) => x.id === id)!;
+      expect(d.issuerId, id).toBe('oec:vatican-i');
+      expect(d.promulgatedBy, id).toBe('rp:pius-ix');
+      expect(d.genre, id).toBe('constitution');
+    }
+    // And the widening claims nothing else in these two volumes: no conciliar record but
+    // these two is matched, and nothing is left ambiguous or double-claimed.
+    expect(result.matches.filter((m) => m.documentId.startsWith('mag:vatican-i/')).map((m) => m.documentId).sort())
+      .toEqual(['mag:vatican-i/dei-filius-1870', 'mag:vatican-i/pastor-aeternus-1870']);
+    expect(result.ambiguous, 'ambiguous').toEqual([]);
+    expect(result.conflicts, 'conflicts').toEqual([]);
   });
 
   it('creates nothing from the ASS: no document carries an ass/ shelf, and every unmatched ASS entry is held series-not-created', () => {
@@ -4124,13 +4172,18 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // prints under a one-T spelling or none at all -- ASS 4 owes nothing, its four `LITERAE`
     // lines being running heads over an act the scan already reads at p. 675), and two of the
     // five ASS 8 letters the era report had called genuine and unread (ASS:8:251, :375).
-    expect(Object.keys(ASS_READINGS)).toHaveLength(51);
+    // Task 3b adds the last two, the dogmatic constitutions of the First Vatican Council
+    // (ASS:5:481 *Dei Filius*, ASS:6:40 *Pastor aeternus*), which the ASS prints under the
+    // pope with the council's approval and which no rule of the scanner reaches: neither
+    // page carries a class heading, and neither act carries a dateline of its own, so
+    // `findAnchors` raises nothing at all.
+    expect(Object.keys(ASS_READINGS)).toHaveLength(53);
     const byVolume = new Map<string, number>();
     for (const k of Object.keys(ASS_READINGS)) {
       const v = `ass-${k.split(':')[1]}`;
       byVolume.set(v, (byVolume.get(v) ?? 0) + 1);
     }
-    expect(Object.fromEntries([...byVolume].sort())).toEqual({ 'ass-1': 3, 'ass-2': 4, 'ass-3': 2, 'ass-5': 2, 'ass-6': 1, 'ass-8': 2, 'ass-12': 1, 'ass-14': 2, 'ass-15': 1, 'ass-17': 3, 'ass-19': 1, 'ass-23': 5, 'ass-28': 1, 'ass-29': 3, 'ass-30': 2, 'ass-31': 1, 'ass-32': 1, 'ass-33': 6, 'ass-39': 1, 'ass-41': 9 });
+    expect(Object.fromEntries([...byVolume].sort())).toEqual({ 'ass-1': 3, 'ass-2': 4, 'ass-3': 2, 'ass-5': 3, 'ass-6': 2, 'ass-8': 2, 'ass-12': 1, 'ass-14': 2, 'ass-15': 1, 'ass-17': 3, 'ass-19': 1, 'ass-23': 5, 'ass-28': 1, 'ass-29': 3, 'ass-30': 2, 'ass-31': 1, 'ass-32': 1, 'ass-33': 6, 'ass-39': 1, 'ass-41': 9 });
   });
 
   it('satisfies invariant 25 across both series', () => {

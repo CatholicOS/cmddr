@@ -228,7 +228,24 @@ numbers of the era include the claimed and unclaimed counts.
   shelf date a day off is a finding about the shelf.
 - **Popes.** Vatican I's two constitutions (`oec:vatican-i`, `promulgatedBy: rp:pius-ix`)
   fall in ASS 5–6, outside the sample; how the matcher treats a conciliar act the ASS
-  prints under the pope is decided when 2c-ii reaches those volumes.
+  prints under the pope is decided when 2c-ii reaches those volumes. **Decided by the owner
+  on 2026-09-26** (phase 2c-ii-d, Task 3b): "whether they are printed under the council or
+  under the Pope that issued them on behalf of the council, they are the same documents and
+  an ASS reference should be recorded". The mechanism is a widening of the candidate set,
+  not a curated row: a document whose issuer is an ecumenical council and whose
+  `promulgatedBy` names a pope is a candidate of *that pope* on its own date as well as of
+  the council, and the ordinary rules then decide. The class rule still runs, so the
+  widening matches only where a category's class admits the document's genre. Measured over
+  the whole corpus (157 sources, 18,113 entries, 4,975 shelf documents): 18 records carry
+  `promulgatedBy` — Vatican I's 2 and Vatican II's 16 — and the widening adds exactly the
+  two matches and changes nothing else, ambiguous 447, conflicts 40 and shared pages 0 both
+  before and after. The two acts reach the matcher through curated readings (§6,
+  `ASS:5:481`, `ASS:6:40`), since neither page carries a class heading and neither act a
+  dateline of its own; their category is the volumes' own `CONSTITUTIO DOGMATICA`, whose
+  class is the `constitution` genre. Vatican II's sixteen stay unreferenced: no category's
+  class admits genre `decree` or `declaration`, and the AAS indexes never print
+  `CONSTITUTIO DOGMATICA`. Whether they should is [#56](https://github.com/CatholicOS/cmddr/issues/56)'s
+  to measure.
 
 ## 6. Curation and the hand confirmation
 

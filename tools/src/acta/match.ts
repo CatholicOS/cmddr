@@ -27,6 +27,24 @@
  * An ASS entry (ass.ts) carries an eight-word opening and no incipit; its rule is the
  * candidate's incipit slug as a word-boundary prefix of the opening's (incipitAgrees),
  * recorded as 'opening'; nothing else differs (ass volumes spec §5).
+ *
+ * One widening of the candidate set is the council's (ass volumes spec §5, the question
+ * 2c-ii-d closes on the owner's ruling of 2026-09-26): a document whose issuer is an
+ * ecumenical council and whose `promulgatedBy` names a pope is a candidate of *that pope*
+ * on its own date, as well as of the council. The gazettes print the act under the pope who
+ * issued it with the council's approval -- ASS 5 (1869) 481 and ASS 6 (1870) 40 head both
+ * Vatican I constitutions `PIUS EPISCOPUS / SERVUS SERVORUM DEI / SACRO APPROBANTE
+ * CONCILIO` -- and `promulgatedBy` is the registry's own statement of that identity, so the
+ * ordinary rules decide the match and no curated row is needed. Nothing else loosens: the
+ * class rule still runs, so a widened candidate matches only where a category's class
+ * admits its genre. Measured over the whole corpus on 2026-09-26 (157 sources, 18,113
+ * entries, 4,975 shelf documents): 18 records carry `promulgatedBy` (Vatican I's 2 and
+ * Vatican II's 16, all with `acta: null`), and the widening adds exactly 2 matches --
+ * 3,370 to 3,372 -- and changes nothing else at all: ambiguous 447, conflicts 40, shared
+ * pages 0, before and after, with no match displaced. Vatican II's 16 gain no reference,
+ * because no category's class admits genre `decree` or `declaration` and the one that
+ * admits `constitution` (`Constitutiones dogmaticae`) reads a heading the AAS indexes never
+ * print; whether they should is issue #56's to measure, not this rule's to decide.
  */
 import { slugify } from '../slug.js';
 import { categoryForHeading, type GenreClass } from './categories.js';
@@ -257,10 +275,16 @@ export function matchActa(rawEntries: ActaEntry[], docs: DocumentRecord[]): Acta
   const byIssuerDate = new Map<string, DocumentRecord[]>();
   const byIssuerMonth = new Map<string, DocumentRecord[]>();
   for (const d of docs) {
-    const k = `${d.issuerId}|${d.date}`;
-    byIssuerDate.set(k, [...(byIssuerDate.get(k) ?? []), d]);
-    const m = `${d.issuerId}|${d.date.slice(0, 7)}`;
-    byIssuerMonth.set(m, [...(byIssuerMonth.get(m) ?? []), d]);
+    // A conciliar act is a candidate of the pope its `promulgatedBy` names as well as of
+    // the council, since the gazette prints it under him (the doc comment's measurement).
+    const issuers = d.promulgatedBy !== undefined && d.issuerId.startsWith('oec:')
+      ? [d.issuerId, d.promulgatedBy] : [d.issuerId];
+    for (const issuer of issuers) {
+      const k = `${issuer}|${d.date}`;
+      byIssuerDate.set(k, [...(byIssuerDate.get(k) ?? []), d]);
+      const m = `${issuer}|${d.date.slice(0, 7)}`;
+      byIssuerMonth.set(m, [...(byIssuerMonth.get(m) ?? []), d]);
+    }
   }
   const on = (issuer: string, date: string) => byIssuerDate.get(`${issuer}|${date}`) ?? [];
   const inMonth = (issuer: string, month: string) => byIssuerMonth.get(`${issuer}|${month}`) ?? [];
