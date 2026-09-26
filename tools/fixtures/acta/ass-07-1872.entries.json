@@ -188,15 +188,128 @@
       "from": 751,
       "to": 760
     },
-    "rows": [],
-    "claimed": [],
-    "unclaimed": [],
-    "omitted": [
-      25,
+    "rows": [
+      {
+        "description": "Epistola Ssmi Patris ad Emum Cardinalem Iacobum Antonelli exteris negotiis Pontificiae Ditionis gerendis praepositum, data die 16 iunii 1872, de suppressione Ordinum Religiosorum Romae intentata ab usurpatore Subalpino Gubernio",
+        "page": 5,
+        "raw": "Epistola Ssmi Patris ad Emum Cardinalem Iacobum Antonelli exte­ / ris negotiis Pontificiae Ditionis gerendis praepositum, data die / 16 iunii 1872, de suppressione Ordinum Religiosorum Romae / intentata ab usurpatore Subalpino Gubernio 5"
+      },
+      {
+        "description": "Ssmi D. N. Constitutio super Privilegiis Protonotarium Apostolicorum ad Instar nuncupatorum, qua eorum Privilegia declarantur et limitantur . . . . •",
+        "page": 91,
+        "raw": "Ssmi D. N. Constitutio super Privilegiis Protonotarium Apostolico­ / rum ad Instar nuncupatorum, qua eorum Privilegia declarantur / et limitantur . . . . • 91"
+      },
+      {
+        "description": "Litterae Apostolicae in forma Brevis de Protonotariis Apostolicis Participantibus, editae die 9 februarii 1853 declarantes et limitantes eorum vetera Privilegia",
+        "page": 100,
+        "raw": "Litterae Apostolicae in forma Brevis de Protonotariis Apostolicis / Participantibus, editae die 9 februarii 1853 declarantes et limi­ / tantes eorum vetera Privilegia 100"
+      },
+      {
+        "description": "Allocutio Ssmi D. N. habita die 23 decembris 1872 ad S. R. E. Cardinales in qua acerrimam Ecclesiae persecutionem a Guberniis illatam in Italia, Germania, Helvetia, Hispania et Constantinopoli denunciai, atque unitatem catholici Episcopatus exaltat",
+        "page": 165,
+        "raw": "Allocutio Ssmi D. N. habita die 23 decembris 1872 ad S. R. E. Cardi­ / nales in qua acerrimam Ecclesiae persecutionem a Guberniis / illatam in Italia, Germania, Helvetia, Hispania et Constantinopoli / denunciai, atque unitatem catholici Episcopatus exaltat .... 165"
+      },
+      {
+        "description": "Epistola Encyclica Ssmi Patris ad Patriarcham, Archiepiscopos, Episcopos, Clerum ac Populum Ritus Armeni, Gratiam et Commu nionem Apostolicae Sedis habentes in qua narratis rebus Armenii schismatis, deteguntur subdolae schismaticorum fallaciae, ne simplices fideles depiciantur",
+        "page": 244,
+        "raw": "Epistola Encyclica Ssmi Patris ad Patriarcham, Archiepiscopos, Epi­ / scopos, Clerum ac Populum Ritus Armeni, Gratiam et Commu / nionem Apostolicae Sedis habentes in qua narratis rebus Armenii / schismatis, deteguntur subdolae schismaticorum fallaciae, ne sim­ / plices fideles depiciantur 244"
+      },
+      {
+        "description": "Allocutio Ssmi D. N. Pii Papae IX habita die 25 iulii 1873 ad S. R. E. Cardinales in aedibus Vaticanis, qua denunciai Excommunicatione obstrictos qui partem habuerunt in condenda iniqua lege suppressionis et qui partem habeant in eiusdem exsecutione, comprehensis etiam bonorum emptoribus",
+        "page": 363,
+        "raw": "Allocutio Ssmi D. N. Pii Papae IX habita die 25 iulii 1873 ad S. R. E. / Cardinales in aedibus Vaticanis, qua denunciai Excommunica­ / tione obstrictos qui partem habuerunt in condenda iniqua lege / suppressionis et qui partem habeant in eiusdem exsecutione, / comprehensis etiam bonorum emptoribus 363"
+      },
+      {
+        "description": "Litterae Apostolicae seu Constitutio Ssmi D. N. super Vicariis Capitularibus nec non electis et nominatis ad sedes Episcopales vacantes",
+        "page": 430,
+        "raw": "Litterae Apostolicae seu Constitutio Ssmi D. N. super Vicariis Capi­ / tularibus nec non electis et nominatis ad sedes Episcopales / vacantes 430"
+      },
+      {
+        "description": "Epistola Encyclica, qua Ssmus Pater, omnibus praesidiis exutus vehementer conqueritur de gravissimis aerumnis, quibus Ecclesia non modo in Italia, sed in Helvetia et Germania per Gubernia violenter afficitur: repellit publicas Regnantium calumnias: docet duas a Deo constitutas esse potestates: memorat haereticos, qui veteres catholicos se appellant, quorum pseudo-episcopum Huber- tum Reinkens nominatim anathematizat cum sociis et adhaeren- tibus: memorat vigentes sectas, quibus vexatur Ecclesia in Ame- 752 Summa actorum PAG. rica, et mala quae ex sectis in societatem derivaverint : Episcopos, Clerum et fideles populos ad constantiam in bello excitat",
+        "page": 496,
+        "raw": "Epistola Encyclica, qua Ssmus Pater, omnibus praesidiis exutus / vehementer conqueritur de gravissimis aerumnis, quibus Eccle­ / sia non modo in Italia, sed in Helvetia et Germania per Gubernia / violenter afficitur: repellit publicas Regnantium calumnias: docet / duas a Deo constitutas esse potestates: memorat haereticos, qui / veteres catholicos se appellant, quorum pseudo-episcopum Huber- / tum Reinkens nominatim anathematizat cum sociis et adhaeren- / tibus: memorat vigentes sectas, quibus vexatur Ecclesia in Ame- / 752                                       Summa actorum / PAG. / rica, et mala quae ex sectis in societatem derivaverint : Episcopos, / Clerum et fideles populos ad constantiam in bello excitat ... 496"
+      },
+      {
+        "description": "Litterae Apostolicae, quibus peculiaris ecclesiastica iurisdictio in territoriis ad quatuor militares ordines S. Iacobi, Alcantarae, Calatravae et Montesiae in Hispanus pertinentibus aboletur; eademque territoria proximis dioecesibus aggregantur",
+        "page": 512,
+        "raw": "Litterae Apostolicae, quibus peculiaris ecclesiastica iurisdictio in / territoriis ad quatuor militares ordines S. Iacobi, Alcantarae, / Calatravae et Montesiae in Hispanus pertinentibus aboletur; / eademque territoria proximis dioecesibus aggregantur .... 512"
+      },
+      {
+        "description": "Litterae Apostolicae, quibus abolentur privilegiatae omnes iurisdictiones ecclesiasticae in Hispanus ; iisque hactenus subiecta territoria, loca, monasteria proximis dioecesibus iunguntur",
+        "page": 518,
+        "raw": "Litterae Apostolicae, quibus abolentur privilegiatae omnes iurisdi­ / ctiones ecclesiasticae in Hispanus ; iisque hactenus subiecta terri­ / toria, loca, monasteria proximis dioecesibus iunguntur .... 518"
+      },
+      {
+        "description": "Ssmi D. N. Epistola Encyclica ad S. R. E. Cardinales, Archiepiscopos et Episcopos Imperii Austriaci",
+        "page": 565,
+        "raw": "Ssmi D. N. Epistola Encyclica ad S. R. E. Cardinales, Archiepiscopos / et Episcopos Imperii Austriaci 565"
+      },
+      {
+        "description": "Ssmi D. N. Epistola ad Archiepiscopum Leopolien. Halicien. et Came- necen. Ruthenorum aliosque Episcopos eiusdem Ritus gratiam et communionem cum Apostolica Sede habentes",
+        "page": 629,
+        "raw": "Ssmi D. N. Epistola ad Archiepiscopum Leopolien. Halicien. et Came- / necen. Ruthenorum aliosque Episcopos eiusdem Ritus gratiam / et communionem cum Apostolica Sede habentes 629"
+      },
+      {
+        "description": "Ssmi D. N. Litterae- Apostolicae quibus iudicium super identitate Corporis S. Ambrosii Episcopi et Ecclesiae Doctoris ac Martyrum Gervasii et Protasii ab Archiepiscopo Mediolanensi prolatum confirmatur",
+        "page": 635,
+        "raw": "Ssmi D. N. Litterae- Apostolicae quibus iudicium super identitate Cor­ / poris S. Ambrosii Episcopi et Ecclesiae Doctoris ac Martyrum / Gervasii et Protasii ab Archiepiscopo Mediolanensi prolatum / confirmatur 635"
+      }
+    ],
+    "claimed": [
       165,
       363,
       565,
       629
+    ],
+    "unclaimed": [
+      {
+        "description": "Epistola Ssmi Patris ad Emum Cardinalem Iacobum Antonelli exteris negotiis Pontificiae Ditionis gerendis praepositum, data die 16 iunii 1872, de suppressione Ordinum Religiosorum Romae intentata ab usurpatore Subalpino Gubernio",
+        "page": 5,
+        "raw": "Epistola Ssmi Patris ad Emum Cardinalem Iacobum Antonelli exte­ / ris negotiis Pontificiae Ditionis gerendis praepositum, data die / 16 iunii 1872, de suppressione Ordinum Religiosorum Romae / intentata ab usurpatore Subalpino Gubernio 5"
+      },
+      {
+        "description": "Ssmi D. N. Constitutio super Privilegiis Protonotarium Apostolicorum ad Instar nuncupatorum, qua eorum Privilegia declarantur et limitantur . . . . •",
+        "page": 91,
+        "raw": "Ssmi D. N. Constitutio super Privilegiis Protonotarium Apostolico­ / rum ad Instar nuncupatorum, qua eorum Privilegia declarantur / et limitantur . . . . • 91"
+      },
+      {
+        "description": "Litterae Apostolicae in forma Brevis de Protonotariis Apostolicis Participantibus, editae die 9 februarii 1853 declarantes et limitantes eorum vetera Privilegia",
+        "page": 100,
+        "raw": "Litterae Apostolicae in forma Brevis de Protonotariis Apostolicis / Participantibus, editae die 9 februarii 1853 declarantes et limi­ / tantes eorum vetera Privilegia 100"
+      },
+      {
+        "description": "Epistola Encyclica Ssmi Patris ad Patriarcham, Archiepiscopos, Episcopos, Clerum ac Populum Ritus Armeni, Gratiam et Commu nionem Apostolicae Sedis habentes in qua narratis rebus Armenii schismatis, deteguntur subdolae schismaticorum fallaciae, ne simplices fideles depiciantur",
+        "page": 244,
+        "raw": "Epistola Encyclica Ssmi Patris ad Patriarcham, Archiepiscopos, Epi­ / scopos, Clerum ac Populum Ritus Armeni, Gratiam et Commu / nionem Apostolicae Sedis habentes in qua narratis rebus Armenii / schismatis, deteguntur subdolae schismaticorum fallaciae, ne sim­ / plices fideles depiciantur 244"
+      },
+      {
+        "description": "Litterae Apostolicae seu Constitutio Ssmi D. N. super Vicariis Capitularibus nec non electis et nominatis ad sedes Episcopales vacantes",
+        "page": 430,
+        "raw": "Litterae Apostolicae seu Constitutio Ssmi D. N. super Vicariis Capi­ / tularibus nec non electis et nominatis ad sedes Episcopales / vacantes 430"
+      },
+      {
+        "description": "Epistola Encyclica, qua Ssmus Pater, omnibus praesidiis exutus vehementer conqueritur de gravissimis aerumnis, quibus Ecclesia non modo in Italia, sed in Helvetia et Germania per Gubernia violenter afficitur: repellit publicas Regnantium calumnias: docet duas a Deo constitutas esse potestates: memorat haereticos, qui veteres catholicos se appellant, quorum pseudo-episcopum Huber- tum Reinkens nominatim anathematizat cum sociis et adhaeren- tibus: memorat vigentes sectas, quibus vexatur Ecclesia in Ame- 752 Summa actorum PAG. rica, et mala quae ex sectis in societatem derivaverint : Episcopos, Clerum et fideles populos ad constantiam in bello excitat",
+        "page": 496,
+        "raw": "Epistola Encyclica, qua Ssmus Pater, omnibus praesidiis exutus / vehementer conqueritur de gravissimis aerumnis, quibus Eccle­ / sia non modo in Italia, sed in Helvetia et Germania per Gubernia / violenter afficitur: repellit publicas Regnantium calumnias: docet / duas a Deo constitutas esse potestates: memorat haereticos, qui / veteres catholicos se appellant, quorum pseudo-episcopum Huber- / tum Reinkens nominatim anathematizat cum sociis et adhaeren- / tibus: memorat vigentes sectas, quibus vexatur Ecclesia in Ame- / 752                                       Summa actorum / PAG. / rica, et mala quae ex sectis in societatem derivaverint : Episcopos, / Clerum et fideles populos ad constantiam in bello excitat ... 496"
+      },
+      {
+        "description": "Litterae Apostolicae, quibus peculiaris ecclesiastica iurisdictio in territoriis ad quatuor militares ordines S. Iacobi, Alcantarae, Calatravae et Montesiae in Hispanus pertinentibus aboletur; eademque territoria proximis dioecesibus aggregantur",
+        "page": 512,
+        "raw": "Litterae Apostolicae, quibus peculiaris ecclesiastica iurisdictio in / territoriis ad quatuor militares ordines S. Iacobi, Alcantarae, / Calatravae et Montesiae in Hispanus pertinentibus aboletur; / eademque territoria proximis dioecesibus aggregantur .... 512"
+      },
+      {
+        "description": "Litterae Apostolicae, quibus abolentur privilegiatae omnes iurisdictiones ecclesiasticae in Hispanus ; iisque hactenus subiecta territoria, loca, monasteria proximis dioecesibus iunguntur",
+        "page": 518,
+        "raw": "Litterae Apostolicae, quibus abolentur privilegiatae omnes iurisdi­ / ctiones ecclesiasticae in Hispanus ; iisque hactenus subiecta terri­ / toria, loca, monasteria proximis dioecesibus iunguntur .... 518"
+      },
+      {
+        "description": "Ssmi D. N. Litterae- Apostolicae quibus iudicium super identitate Corporis S. Ambrosii Episcopi et Ecclesiae Doctoris ac Martyrum Gervasii et Protasii ab Archiepiscopo Mediolanensi prolatum confirmatur",
+        "page": 635,
+        "raw": "Ssmi D. N. Litterae- Apostolicae quibus iudicium super identitate Cor­ / poris S. Ambrosii Episcopi et Ecclesiae Doctoris ac Martyrum / Gervasii et Protasii ab Archiepiscopo Mediolanensi prolatum / confirmatur 635"
+      }
+    ],
+    "omitted": [
+      25
     ]
   }
 }

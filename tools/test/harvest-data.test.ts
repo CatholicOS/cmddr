@@ -4089,7 +4089,7 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
       'ass-4': { acts: 9, defects: 3, rows: 9, claimed: 7, unclaimed: 2, omitted: 2 },
       'ass-5': { acts: 6, defects: 9, rows: 15, claimed: 6, unclaimed: 9, omitted: 0 },
       'ass-6': { acts: 7, defects: 11, rows: 31, claimed: 6, unclaimed: 25, omitted: 1 },
-      'ass-7': { acts: 5, defects: 7, rows: 0, claimed: 0, unclaimed: 0, omitted: 5 },
+      'ass-7': { acts: 5, defects: 7, rows: 13, claimed: 4, unclaimed: 9, omitted: 1 },
       'ass-8': { acts: 6, defects: 14, rows: 24, claimed: 4, unclaimed: 20, omitted: 2 },
       'ass-9': { acts: 10, defects: 16, rows: 10, claimed: 2, unclaimed: 8, omitted: 8 },
       'ass-10': { acts: 5, defects: 10, rows: 9, claimed: 3, unclaimed: 6, omitted: 2 },

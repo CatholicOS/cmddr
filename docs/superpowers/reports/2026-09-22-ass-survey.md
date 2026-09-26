@@ -29,7 +29,7 @@ so there is no closing heading to report. Both print no heading, and before this
 | 4 | 1868 | Pius IX | 717 | 684–690 | ACTA SOLEMNIORE ROM. PONTIFICIS | ACTA CONSISTORIALIA | 9 | 7 | 2 | 9 | 7 | 2 | 2 | 3 | 1 | ✓ |
 | 5 | 1869–70 | Pius IX | 712 | 691–696 | ACTA SOLEMNIORA ROM. PONriFICIS | EX SECRETARIA BREVIUM. | 6 | 5 | 1 | 15 | 6 | 9 | 0 | 9 | 0 | ✓ |
 | 6 | 1870–71 | Pius IX | 776 | 597–603 | ACTA SOLEMNIORA ROM. PONTIFICIS | EX SECRETARIA BREVIUM. | 7 | 6 | 1 | 31 | 6 | 25 | 1 | 11 | 1 | ✓ |
-| 7 | 1872–73 | Pius IX | 784 | 751–760 | — | — | 5 | 3 | 2 | 0 | 0 | 0 | 5 | 7 | 1 | ✓ |
+| 7 | 1872–73 | Pius IX | 784 | 751–760 | EX ACTIS AD INSTAR CONSISTORIALIUM | EX SECRETARIA BREVIUM. | 5 | 3 | 2 | 13 | 4 | 9 | 1 | 7 | 1 | ✓ |
 | 8 | 1874–75 | Pius IX | 748 | 727–733 | ACTA SOLEMNIORÂ | EX S. CONGR. S. R. U. ÍNQUISIT. | 6 | 4 | 2 | 24 | 4 | 20 | 2 | 14 | 0 | ✓ |
 | 9 | 1876 | Pius IX | 690 | 669–674 | Litterae Apostolicae | Ex Actis Consistorialibus. | 10 | 10 | 0 | 10 | 2 | 8 | 8 | 16 | 2 | ✓ |
 | 10 | 1877 | Pius IX | 768 | 616–622 | LITTERAE APOSTOLICAE | EX ACTIS CONCISTORIALIBUS | 5 | 2 | 3 | 9 | 3 | 6 | 2 | 10 | 2 | ✓ |
@@ -73,14 +73,14 @@ only honest measure of what the scanner reads in a volume it has not been curate
 | Decade | Volumes | Pages | Acts | Summa rows | Claimed | Claimed % | Defects | Brevia | Volumes with no summa |
 |---|---|---|---|---|---|---|---|---|---|
 | 1860s | 5 | 3611 | 23 | 42 | 18 | 43 % | 26 | 4 | 0 |
-| 1870s | 7 | 5084 | 50 | 98 | 30 | 31 % | 65 | 6 | 0 |
+| 1870s | 7 | 5084 | 50 | 111 | 34 | 31 % | 65 | 6 | 0 |
 | 1880s | 10 | 6813 | 69 | 106 | 52 | 49 % | 42 | 5 | 0 |
 | 1890s | 10 | 7678 | 86 | 134 | 55 | 41 % | 47 | 7 | 0 |
 | 1900s | 9 | 6835 | 272 | 278 | 198 | 71 % | 93 | 6 | 0 |
 
 | Pontificate | Volumes | Acts | Summa rows | Claimed % |
 |---|---|---|---|---|
-| Pius IX | 10 (1, 2, 3, 4, 5, 6, 7, 8, 9, 10) | 56 | 116 | 28 % |
+| Pius IX | 10 (1, 2, 3, 4, 5, 6, 7, 8, 9, 10) | 56 | 129 | 29 % |
 | Pius IX + Leo XIII | 1 (11) | 7 | 12 | 50 % |
 | Leo XIII | 24 (12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35) | 218 | 296 | 50 % |
 | Leo XIII + Pius X | 1 (36) | 38 | 36 | 61 % |
@@ -199,9 +199,9 @@ here, and the many that are addressees, running titles or body capitals are expe
 
 ## 4b. The summa headings the parser does not know
 
-`parseSummaPapalPart` knows 16 papal-heading forms, each cited in its own doc comment at
+`parseSummaPapalPart` knows 17 papal-heading forms, each cited in its own doc comment at
 the volume that prints it (`PAPAL_HEAD_FORMS`, `tools/src/acta/summa.ts`) — for example `LITTERAE ET ALLOCUTIONES / APOSTOLICAE`
-(ASS 12 (1879) 647 lines 12-13, and ASS 13 (1880) 569 lines 11-12, both on two lines; the parser matches the first alone and reports LITTERAE ET ALLOCUTIONES) and `Litterae Apostolicae` (ASS 9 (1876) 669, over SS. D. Ii. P. Papae IX.).
+(ASS 12 (1879) 647 lines 12-13, and ASS 13 (1880) 569 lines 11-12, both on two lines; the parser matches the first alone and reports LITTERAE ET ALLOCUTIONES) and `EX ACTIS AD INSTAR CONSISTORIALIUM.` (ASS 7 (1872) 751 line 9).
 Where it finds none, the summa is read as having no papal part at all and the volume claims nothing — which is why
 a volume can scan acts and still show 0 rows. These are the volumes' own opening lines, quoted from the page: the
 spellings an era would teach the parser, and the reason the yield of §2 is a floor and not a measurement for them.
@@ -209,7 +209,6 @@ spellings an era would teach the parser, and the reason the yield of §2 is a fl
 | Vol | The summa's first lines, as printed |
 |---|---|
 | 1 | `SUMMA ACTORUM` / `QUAE HOC VOLUMINE PRIMO CONTINENTUR.` / `°-oOO^>^<~pO-o-o •. .` / `PROGRAMMA. pag. 3 Responsa super ieiunio et abstinen­` / `tia. . . 422` / `EX ACTIS CONSISTORIALIBUS. Dubia et responsa S57` |
-| 7 | `SUMMA ACTORUM` / `QUAE IN HOC SEPTIMO VOLUMINE CONTINENTUR` / `EX ACTIS AD INSTAR CONSISTORIALIUM.` / `Epistola Ssmi Patris ad Emum Cardinalem Iacobum Antonelli exte­` / `ris negotiis Pontificiae Ditionis gerendis praepositum, data die` / `16 iunii 1872, de suppressione Ordinum Religiosorum Romae` |
 | 20 | `SUMMA ACTORUM` / `QUAE IN HOC VOLUMINE XX. CONTINENTUR` / `Litterae SSmi D. N. Leonis PP. XIII Litterae Sanctissimi D. N. Papae` / `ad Emum Card. Marianum Ram­ Leonis XIII, quibus constituitur` / `polla, Status Secretarium.. p. 4 ultima Dominica Septembris hu­` / `Litterae SSmi D. N. Leonis XIII ad ius anni, ceu dies magnae ex­` |
 | 26 | `SUMMA ACTORUM 755` / `Francisci Clet, sacerdotis e Con­` / `EX S. CONGR. RITUUM gregatione missionis s. Vincentii` / `a Paulo » 128` / `Squillacen. Decretum confirmatio­ Murana seu Compsana, decretum` / `nis cultus, ab immemorabili tem­ canonizationis beati Gerardi Ma­` |
 
@@ -427,5 +426,5 @@ shelf column is thin can yield few references however well it scans — the join
 
 ## 7. Totals
 
-41 volumes, 30021 pages; **500 acts** read by rule; 658 summa rows of which 353 claimed
-(54 %); 273 defects, 28 of them brevia; 0 volumes with no summa located.
+41 volumes, 30021 pages; **500 acts** read by rule; 671 summa rows of which 357 claimed
+(53 %); 273 defects, 28 of them brevia; 0 volumes with no summa located.

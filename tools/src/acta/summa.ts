@@ -132,6 +132,19 @@ export const PAPAL_HEAD_FORMS: readonly { pattern: string; prints: string; at: s
   { pattern: 'LITTERAE\\s+R(?:OMANI|\\.)\\s*PONTIFICIS', prints: 'LITTERAE R. PONTIFICIS', at: 'ASS 19 (1886) 604 line 13' },
   { pattern: 'LITTERAE\\s+APOSTOLICAE', prints: 'LITTERAE APOSTOLICAE', at: 'ASS 10 (1877) 616, and 11' },
   { pattern: 'Litterae\\s+Apostolicae\\s*$', prints: 'Litterae Apostolicae', at: 'ASS 9 (1876) 669, over SS. D. Ii. P. Papae IX.' },
+  // The one volume of the 41 whose summa heads the pope's own part by the *manner* of his
+  // acts instead of by his name or their class. Every one of the fifteen rows under it is
+  // his -- `Epistola Ssmi Patris ad Emum Cardinalem Iacobum Antonelli ... 5`, `Ssmi D. N.
+  // Constitutio super Privilegiis Protonotariorum ... 91`, `Allocutio Ssmi D. N. habita die
+  // 23 decembris 1872 ... 165`, `Epistola Encyclica Ssmi Patris ... 244`, down to `Ssmi D. N.
+  // Litterae- Apostolicae quibus iudicium super identitate Corporis S. Ambrosii ... 635` --
+  // and the part closes at `EX SECRETARIA BREVIUM.` like any other. `DICASTERY_RE` matches
+  // the line too (`EX\s+ACTIS\b`), and PAPAL_HEAD_RE is tested first, which is why this row
+  // is what turns ASS 7's check from vacuous into a real one. The caps spelling is required:
+  // ASS 9 (1876) prints the same words in title case as a *body* running head over its
+  // consistorial process material (pp. 172-190, `Ex Actis ad instar Consistorialium`), which
+  // is a dicastery's and not the pope's, and no summa but ASS 7's prints the phrase at all.
+  { pattern: 'EX\\s+ACTIS\\s+AD\\s+INSTAR\\s+CONSISTORIALIUM', prints: 'EX ACTIS AD INSTAR CONSISTORIALIUM.', at: 'ASS 7 (1872) 751 line 9' },
 ];
 const PAPAL_HEAD_RE = new RegExp(`^\\s*(?:\\d+\\s+)?(${[...new Set(PAPAL_HEAD_FORMS.map((f) => f.pattern))].join('|')})\\.?`);
 /**
@@ -304,7 +317,12 @@ export function parseSummaPapalPart(text: string): { rows: SummaRow[]; heading: 
       end = null;
       acc = [];
       stripHead = true;
-    } else {
+    } else if (!stripHead) {
+      // Never on the part's own opening line: the heading that opens the pope's part cannot
+      // also be the heading that ends it. It matters for one form only -- ASS 7 (1872)'s
+      // `EX ACTIS AD INSTAR CONSISTORIALIUM.`, which `DICASTERY_RE`'s `EX\s+ACTIS\b`
+      // matches as well, so before this guard the part opened and closed on the same line
+      // and the volume reported no papal rows at all.
       const d = line.match(DICASTERY_RE);
       if (d) { end = d[1]!.replace(/\s+/g, ' ').trim(); paused = true; acc = []; continue; }
     }
