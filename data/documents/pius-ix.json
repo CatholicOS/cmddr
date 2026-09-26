@@ -786,7 +786,13 @@
     "characteristics": [
       "in-forma-brevis"
     ],
-    "sourceGenreLabel": "Breve"
+    "sourceGenreLabel": "Breve",
+    "acta": {
+      "series": "ASS",
+      "volume": 3,
+      "year": 1867,
+      "page": 186
+    }
   },
   {
     "id": "mag:pius-ix/ubi-urbaniano-1864",
@@ -922,7 +928,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Levate",
-    "sourceGenreLabel": "Enciclica"
+    "sourceGenreLabel": "Enciclica",
+    "acta": {
+      "series": "ASS",
+      "volume": 3,
+      "year": 1867,
+      "page": 197
+    }
   },
   {
     "id": "mag:pius-ix/ex-quo-infensissimi-1867",
@@ -1086,7 +1098,13 @@
     "characteristics": [
       "in-forma-brevis"
     ],
-    "sourceGenreLabel": "Breve"
+    "sourceGenreLabel": "Breve",
+    "acta": {
+      "series": "ASS",
+      "volume": 5,
+      "year": 1869,
+      "page": 526
+    }
   },
   {
     "id": "mag:pius-ix/quo-impensiore-1870",
@@ -1146,7 +1164,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ecclesia Dei",
-    "sourceGenreLabel": "Epistola"
+    "sourceGenreLabel": "Epistola",
+    "acta": {
+      "series": "ASS",
+      "volume": 6,
+      "year": 1870,
+      "page": 264
+    }
   },
   {
     "id": "mag:pius-ix/ubi-prima-1871",
@@ -1226,7 +1250,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Saepe, venerabiles",
-    "sourceGenreLabel": "Enciclica"
+    "sourceGenreLabel": "Enciclica",
+    "acta": {
+      "series": "ASS",
+      "volume": 6,
+      "year": 1870,
+      "page": 337
+    }
   },
   {
     "id": "mag:pius-ix/ordinem-vestrum-1871",
@@ -1343,7 +1373,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Vix dum a Nobis",
-    "sourceGenreLabel": "Enciclica"
+    "sourceGenreLabel": "Enciclica",
+    "acta": {
+      "series": "ASS",
+      "volume": 7,
+      "year": 1872,
+      "page": 565
+    }
   },
   {
     "id": "mag:pius-ix/omnem-sollicitudinem-1874",
@@ -1401,7 +1437,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod nunquam",
-    "sourceGenreLabel": "Enciclica"
+    "sourceGenreLabel": "Enciclica",
+    "acta": {
+      "series": "ASS",
+      "volume": 8,
+      "year": 1874,
+      "page": 251
+    }
   },
   {
     "id": "mag:pius-ix/graves-ac-diuturnae-1875",

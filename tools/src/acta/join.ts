@@ -274,6 +274,20 @@ export const ACTA_FIXTURES_RETRIEVED = '2026-09-12';
 export const emptyScan = (): Omit<AssScan, 'source' | 'generated' | 'text' | 'volume' | 'year' | 'pages'> => ({ entries: [], defects: [], summa: { pages: null, rows: [], claimed: [], unclaimed: [], omitted: [] } });
 
 /**
+ * Whether a page falls inside a `no-heading` span: the scanner keys such a defect to the
+ * dateline's page while the act's heading stands somewhere between the previous anchor and
+ * it, so every page from the previous anchor's page through the defect's page is inside the
+ * span. Exported because the era report groups the summa's unclaimed rows by the same rule
+ * (tools/ass-era-report.ts §2.2) and a second copy of it would drift from this one.
+ */
+export function withinNoHeadingSpan(scan: Pick<AssScan, 'entries' | 'defects'>, page: number): boolean {
+  // The anchors in page order: every scanned entry's page and every defect's page.
+  const anchorPages = [...new Set([...scan.entries.map((e) => e.page), ...scan.defects.map((d) => d.page)])].sort((a, b) => a - b);
+  const previousAnchor = (p: number): number => anchorPages.filter((x) => x < p).at(-1) ?? 1;
+  return scan.defects.some((d) => d.reason === 'no-heading' && page >= previousAnchor(d.page) && page <= d.page);
+}
+
+/**
  * The curated readings of a volume (ASS_READINGS, ass volumes spec §6) applied to its scan:
  * a row at a page the scan has no entry for is added; a row at a scanned entry's page
  * replaces it. A row is stale (a hard error) unless it answers a finding of the scan
@@ -289,11 +303,7 @@ export const emptyScan = (): Omit<AssScan, 'source' | 'generated' | 'text' | 'vo
 export function applyAssReadings(scan: Pick<AssScan, 'entries' | 'defects' | 'summa'>, volume: number, year: number, table: Readonly<Record<string, AssReading>> = ASS_READINGS): AssEntry[] {
   const entries = [...scan.entries];
   const nothingScanned = scan.entries.length === 0 && scan.summa.rows.length === 0;
-  // The anchors in page order: every scanned entry's page and every defect's page.
-  const anchorPages = [...new Set([...scan.entries.map((e) => e.page), ...scan.defects.map((d) => d.page)])].sort((a, b) => a - b);
-  const previousAnchor = (page: number): number => anchorPages.filter((p) => p < page).at(-1) ?? 1;
-  const withinNoHeading = (page: number): boolean =>
-    scan.defects.some((d) => d.reason === 'no-heading' && page >= previousAnchor(d.page) && page <= d.page);
+  const withinNoHeading = (page: number): boolean => withinNoHeadingSpan(scan, page);
   for (const [key, row] of Object.entries(table)) {
     if (!key.startsWith(`ASS:${volume}:`)) continue;
     const page = Number(key.split(':')[2]);

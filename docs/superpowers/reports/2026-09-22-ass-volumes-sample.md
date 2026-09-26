@@ -154,7 +154,7 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    none of them has an ASS entry on its date — §5's last column is empty in all but a handful — so these are acts the
    five volumes do not print, not acts the scanner missed: the ASS published the Holy See's acts selectively, and a
    volume of 672–810 pages yields between 3 entries here (ASS 1, all three read by hand) and 44 (ASS 41). For the era as a whole the registry holds
-   496 shelf documents dated 1865–1908 and **274 of them now carry a reference** (§7), of which **64** are these five
+   496 shelf documents dated 1865–1908 and **284 of them now carry a reference** (§7), of which **64** are these five
    volumes' yield, phase 2c-ii-b's five of Pius X carrying the rest. That is the number 2c-ii moves, with 0 volumes left.
 13. **The allocutions are the one category the sample cannot decide, and the count that would decide it is 1.** 9 entries
    are skipped as a category the registry does not harvest (§3.4): 8 allocutions and the chirograph of ASS 33 p. 714.
@@ -684,4 +684,4 @@ Created: 0 (expected 0: phase 2c-i joins only).
 
 ## 7. Corpus
 
-Documents: 8569; with an ASS reference: 64; shelf documents dated 1865–1908: 496, of which with a reference of either series: 274.
+Documents: 8569; with an ASS reference: 64; shelf documents dated 1865–1908: 496, of which with a reference of either series: 284.
