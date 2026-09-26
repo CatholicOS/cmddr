@@ -468,15 +468,15 @@ remaining volumes were 2c-ii-c (Leo XIII) and 2c-ii-d (Pius IX).
 Phase 2c-ii-c ([#25](https://github.com/CatholicOS/cmddr/issues/25), [spec §10 decision 3](docs/superpowers/specs/2026-09-21-ass-volumes-design.md),
 [era report](docs/superpowers/reports/2026-09-26-ass-volumes-leo-xiii.md)) joined Leo XIII's remaining twenty-one volumes — ASS 13–22, 24–32, 34
 and 35 — the largest era of the series and the thinnest. **177 acts** read by rule across 15,259 pages against Pius X's 182 across 3,721, **114 of
-246** summa rows claimed (46.3 % where his claimed 71.1 %) and **98 references** written; ASS 15 yields one reference in 623 pages and ASS 14 and 17
-none at all. The ASS now carries **274** references in all, Leo XIII 133 and Pius X 141. Three rules and sixteen curated rows did the era's curation,
+246** summa rows claimed (46.3 % where his claimed 71.1 %) and **98 references** written; ASS 14 and ASS 15 yield no reference at all — ASS 15
+scanning two acts in 623 pages — and ASS 17 one. The ASS now carries **274** references in all, Leo XIII 133 and Pius X 141. Three rules and sixteen curated rows did the era's curation,
 each rule measured over all 41 volumes before it was accepted: `LETTERA`, `LETTERA APOSTOLICA` and `LITTERAE APOSTOLICAE IN FORMA BREVIS` as class
 headings — the last being a brief's whole name, which the series prints once; the bare capital `A.` the *anno* normaliser did not know; and the months
 the volumes abbreviate after the day (`Nov.`, `Ian.`, `Dec.`, `Oct.`, `Sept.`, `Iun.`, `decem.`), which `latinDate` holds only in full. **The era
 raised no ambiguity and no double claim at all.** Its sixteen rows are fifteen solemn datelines — the year of the Incarnation spelled out in words and
 the day by the Roman calendar, which the owner ruled are curated rows rather than a Roman-calendar reader, since the date is what the join matches on —
 and one `ACTA_REPRINTS` row for the single act the ASS prints twice, *Officiorum ac munerum* at ASS 29 (1896) 388 and again at ASS 30 (1897) 39. What
-holds the era back is the shelf, not the scan: **35 of its 88 holds are briefs** against a briefs shelf of 13 records, thin rather than absent, and
+holds the era back is the shelf, not the scan: **36 of its 88 holds are briefs** against a briefs shelf of 13 records, thin rather than absent, and
 ASS 20 and ASS 26 find no papal part in their summa at all — 20's opens on its rows with no class heading, 26's on a dicastery — while still yielding
 5 and 3 references, because the summa is the completeness check and not the source. The remaining **10** volumes are Pius IX's, 2c-ii-d.
 

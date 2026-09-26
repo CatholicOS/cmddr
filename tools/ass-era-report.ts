@@ -20,6 +20,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { ACTA_SOURCES, loadActaIndexes } from './src/acta/join.js';
 import { matchActa, POPE_ISSUERS } from './src/acta/match.js';
 import { createFromActa, isActaShelf } from './src/acta/create.js';
+import { ACTA_CATEGORIES } from './src/acta/categories.js';
 import { ASS_READINGS, ACTA_MATCH_OVERRIDES } from './src/acta/curation.js';
 import type { AssScan, AssEntry } from './src/acta/ass.js';
 import type { DocumentRecord } from './src/types.js';
@@ -67,7 +68,13 @@ const byRule = (b: string) => result.matches.filter((m) => m.by === b).length;
 const summaPages = (sc: AssScan) => (sc.summa.pages ? `${sc.summa.pages.from}–${sc.summa.pages.to}` : '—');
 const popeOf = (sc: AssScan) => [...new Set(sc.entries.map((e) => e.pope))].sort().join(' + ') || '—';
 /** Volumes whose held entries include a brief: read from the holds, not named by hand. */
-const BREVIS = ['LITTERAE IN FORMA BREVIS', 'BREVE'];
+/**
+ * What counts as a brief: the *Brevia* row's own headings, read from the category table
+ * rather than listed again here. A second list fell behind it as soon as ASS 22 (1889) 257
+ * added `LITTERAE APOSTOLICAE IN FORMA BREVIS`, and the summary then counted 35 briefs where
+ * the volume list showed 36 (CodeRabbit on PR #55).
+ */
+const BREVIS = ACTA_CATEGORIES.find((c) => c.id === 'Brevia')!.headings;
 const breviaVolumes = [...new Set(creation.held
   .filter((h) => BREVIS.includes((h.entry as AssEntry).category))
   .map((h) => (h.entry as AssEntry).volume))].sort((a, b) => a - b);
@@ -104,6 +111,8 @@ const briefsShelf = docs.filter((d) => d.issuerId === eraIssuer && d.characteris
 const heldReasons = [...creation.held.reduce((m, h) => m.set(h.reason, (m.get(h.reason) ?? 0) + 1), new Map<string, number>())].sort();
 const heldNotCreated = heldReasons.find(([r]) => r === 'series-not-created')?.[1] ?? 0;
 const heldOther = heldReasons.filter(([r]) => r !== 'series-not-created');
+/** Each pope's briefs-shelf size, for the eras still to come (finding 7). Counted, never typed. */
+const briefsOf = (issuer: string) => docs.filter((d) => d.issuerId === issuer && d.characteristics?.includes('in-forma-brevis')).length;
 const topVolume = [...sources].sort((a, b) => cited.filter((d) => d.acta!.volume === b.volume).length - cited.filter((d) => d.acta!.volume === a.volume).length)[0]!.volume;
 const alsoPopes = popes.slice(1);
 /** Volumes of the era that print more than one pope, with the minority pope named. */
@@ -129,7 +138,7 @@ p(`4. **${creation.held.length} entries held, ${heldNotCreated} of them \`series
   + `Either way the gap is the registry's and not the scanner's -- the act is printed, read, dated and quoted here, and no shelf has carried it.`}`);
 p(`5. **${readings.length} curated reading${readings.length === 1 ? '' : 's'} and ${overrides.length} match override${overrides.length === 1 ? '' : 's'} -- the curation round.** ${readings.length + overrides.length} rows for ${entries.length} entries, the parser of 2c-ii-a having already been taught what the series prints. §5 quotes each, with the finding it answers and the lines it rests on. Where a shape recurred across volumes the round wrote a rule and measured it over all 41 volumes before accepting it; the phase's own commits say which.`);
 p(`6. **The reverse gap is ${docs.filter((d) => d.date >= `${firstYear}-01-01` && d.date <= `${lastYear}-12-31` && d.acta === undefined).length} documents of ${firstYear}–${lastYear}.** The shelf records of the era's years that still carry no reference of either series (§6). Most have no entry on their date in these volumes at all: the ASS published the Holy See's acts selectively, and what the shelf holds and what the gazette printed are two different collections.`);
-p(`7. **What the eras left inherit.** ${leftIn(1, 41).length} volumes of the 41 are still unjoined, and spec §10 splits them by pontificate: **${leftIn(12, 35).length}** of Leo XIII (ASS 12–35, the sampled excepted) for 2c-ii-c and **${leftIn(1, 11).length}** of Pius IX (ASS 1–11, ASS 1 excepted) for 2c-ii-d. Two things here will not repeat: ${eraPope}'s letters shelf is the fullest of the series, and the briefs that had nowhere to go in this era **do** have a shelf under Leo XIII (8 records) and Pius IX (5), so the same acts will behave differently. What should repeat is the shape of the round — a parser needing almost no rows, and a handful of provisional date-keyed shelf records that only a curated override can tell apart.`);
+p(`7. **What the eras left inherit.** ${leftIn(1, 41).length} volumes of the 41 are still unjoined, and spec §10 splits them by pontificate: **${leftIn(12, 35).length}** of Leo XIII (ASS 12–35, the sampled excepted) for 2c-ii-c and **${leftIn(1, 11).length}** of Pius IX (ASS 1–11, ASS 1 excepted) for 2c-ii-d. Two things here will not repeat: ${eraPope}'s letters shelf is the fullest of the series, and the briefs that had nowhere to go in this era **do** have a shelf under Leo XIII (${briefsOf('rp:leo-xiii')} records) and Pius IX (${briefsOf('rp:pius-ix')}), so the same acts will behave differently. What should repeat is the shape of the round — a parser needing almost no rows, and a handful of provisional date-keyed shelf records that only a curated override can tell apart.`);
 p();
 
 p('## 2. The scan and the summa, per volume (spec §3, §4)');

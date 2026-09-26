@@ -633,8 +633,8 @@ which covers ASS 13–35 and says which of its volumes 2c-i had already joined).
 
 *The prediction held, and the shape did not.* The scan agrees with the survey in every column
 of all twenty-one volumes. But 177 acts over 15,259 pages against Pius X's 182 over 3,721, and
-**114 of 246** summa rows claimed — 46.3 % where 2c-ii-b claimed 71.1 %. ASS 15 gives one
-reference in 623 pages; ASS 14 and ASS 17 give none. **98 references** written, the ASS 274 in
+**114 of 246** summa rows claimed — 46.3 % where 2c-ii-b claimed 71.1 %. ASS 14 and ASS 15 give
+no reference at all, ASS 15 scanning two acts in 623 pages, and ASS 17 gives one. **98 references** written, the ASS 274 in
 all, Leo XIII 133 and Pius X 141.
 
 *Three rules, each measured over all 41 volumes before it was accepted.* `LETTERA` and `LETTERA
@@ -660,7 +660,7 @@ settled it. The sixteenth row is `ACTA_REPRINTS` for the one act the ASS prints 
 *Officiorum ac munerum* at ASS 29 388 and again at ASS 30 39 — the series' first `reprint` hold.
 
 *No ambiguity, and none of the era's holds is the join's doing.* Ambiguity and double claiming
-stand where they did before the era joined. **35 of its 88 holds are briefs** against a briefs
+stand where they did before the era joined. **36 of its 88 holds are briefs** against a briefs
 shelf of 13 records: thin, not absent, which is where this era differs from Pius X's, who had
 none at all — and the difference did not help, because 13 records cannot answer 35 printed
 brevia.
