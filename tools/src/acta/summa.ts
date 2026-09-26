@@ -148,9 +148,15 @@ export const PAPAL_HEAD_FORMS: readonly { pattern: string; prints: string; at: s
   // at l. 30747) and 11 in ASS 9 (1876), whose body prints it over the consistorial process
   // material of pp. 172-190 -- once in capitals as the section heading (l. 6297) and ten
   // times in title case as its running heads. That material is a dicastery's, not the pope's,
-  // so a caps/title distinction would not have told the two apart. What does is that
-  // `parseSummaPapalPart` only ever sees the pages `locateSumma` returns: measured over all
-  // 41 located summae, this alternative matches **exactly one line**, ASS 7 p. 751 l. 9.
+  // so a caps/title distinction would not have told the two apart. What does is the **scope
+  // this function is called in**, and that is a property of its callers, not of the function:
+  // `scan-ass.ts`, `survey-ass.ts` and the tests all hand it only the pages `locateSumma`
+  // returns, and every one of ASS 9's occurrences is in the body. Nothing here enforces that.
+  // Handed ASS 9's whole text instead of its summa, `parseSummaPapalPart` opens the part at
+  // the first papal-head form anywhere in the volume and returns **111 rows where the summa
+  // has 10** (measured 2026-09-26) -- so a caller that widens the text it passes must
+  // re-measure this table. Measured over the 41 located summae as the callers pass them, this
+  // alternative matches **exactly one line**, ASS 7 p. 751 l. 9.
   { pattern: 'EX\\s+ACTIS\\s+AD\\s+INSTAR\\s+CONSISTORIALIUM', prints: 'EX ACTIS AD INSTAR CONSISTORIALIUM.', at: 'ASS 7 (1872) 751 line 9' },
 ];
 const PAPAL_HEAD_RE = new RegExp(`^\\s*(?:\\d+\\s+)?(${[...new Set(PAPAL_HEAD_FORMS.map((f) => f.pattern))].join('|')})\\.?`);
