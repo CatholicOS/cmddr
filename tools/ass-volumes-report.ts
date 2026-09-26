@@ -368,7 +368,7 @@ p(`   matched ASS 41 p. 19 (*La benevolenza, che nutriamo verso il Pontificio Se
 p(`   years late, as the ASS often prints) and now carries its reference while keeping its provisional id. A re-mint is`);
 p(`   the owner's decision and out of scope; what this report adds is that one of the nine now has a source to be re-minted`);
 p(`   from.`);
-p(`15. **What 2c-ii should expect.** (a) **The OCR is worst at the start.** ASS 1 (1865) yielded ${scannedOf('ass-1')} acts by rule and needed`);
+p(`15. **What 2c-ii should expect.** (a) **The OCR is worst at the start.** ASS 1 (1865) yielded ${scannedOf('ass-1')} act${scannedOf('ass-1') === 1 ? '' : 's'} by rule and needed`);
 p(`   ${readOf('ass-1')} hand readings; the volumes of the 1860s and 1870s should be assumed unscannable until measured, and the plan`);
 p(`   should budget for reading them rather than for a rule. From 1879 the rate is usable and from 1900 it is good.`);
 p(`   (b) **The Secretaria Brevium was the next rule, and it was taken: it is worth 9 acts in these five volumes and 62`);

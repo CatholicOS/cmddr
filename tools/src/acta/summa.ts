@@ -133,17 +133,24 @@ export const PAPAL_HEAD_FORMS: readonly { pattern: string; prints: string; at: s
   { pattern: 'LITTERAE\\s+APOSTOLICAE', prints: 'LITTERAE APOSTOLICAE', at: 'ASS 10 (1877) 616, and 11' },
   { pattern: 'Litterae\\s+Apostolicae\\s*$', prints: 'Litterae Apostolicae', at: 'ASS 9 (1876) 669, over SS. D. Ii. P. Papae IX.' },
   // The one volume of the 41 whose summa heads the pope's own part by the *manner* of his
-  // acts instead of by his name or their class. Every one of the fifteen rows under it is
+  // acts instead of by his name or their class. Every one of the thirteen rows under it is
   // his -- `Epistola Ssmi Patris ad Emum Cardinalem Iacobum Antonelli ... 5`, `Ssmi D. N.
   // Constitutio super Privilegiis Protonotariorum ... 91`, `Allocutio Ssmi D. N. habita die
   // 23 decembris 1872 ... 165`, `Epistola Encyclica Ssmi Patris ... 244`, down to `Ssmi D. N.
-  // Litterae- Apostolicae quibus iudicium super identitate Corporis S. Ambrosii ... 635` --
-  // and the part closes at `EX SECRETARIA BREVIUM.` like any other. `DICASTERY_RE` matches
-  // the line too (`EX\s+ACTIS\b`), and PAPAL_HEAD_RE is tested first, which is why this row
-  // is what turns ASS 7's check from vacuous into a real one. The caps spelling is required:
-  // ASS 9 (1876) prints the same words in title case as a *body* running head over its
-  // consistorial process material (pp. 172-190, `Ex Actis ad instar Consistorialium`), which
-  // is a dicastery's and not the pope's, and no summa but ASS 7's prints the phrase at all.
+  // Litterae- Apostolicae quibus iudicium super identitate Corporis S. Ambrosii ... 635`
+  // (pages 5, 91, 100, 165, 244, 363, 430, 496, 512, 518, 565, 629, 635) -- and the part
+  // closes at `EX SECRETARIA BREVIUM.` like any other. `DICASTERY_RE` matches the line too
+  // (`EX\s+ACTIS\b`), and PAPAL_HEAD_RE is tested first, which is why this row is what turns
+  // ASS 7's check from vacuous into a real one.
+  //
+  // **What makes it safe is the summa-only scope, not the capitals.** The phrase occurs 14
+  // times in the 41 volume texts: 3 in ASS 7 (ll. 23686 and 26194 in the body, and the summa
+  // at l. 30747) and 11 in ASS 9 (1876), whose body prints it over the consistorial process
+  // material of pp. 172-190 -- once in capitals as the section heading (l. 6297) and ten
+  // times in title case as its running heads. That material is a dicastery's, not the pope's,
+  // so a caps/title distinction would not have told the two apart. What does is that
+  // `parseSummaPapalPart` only ever sees the pages `locateSumma` returns: measured over all
+  // 41 located summae, this alternative matches **exactly one line**, ASS 7 p. 751 l. 9.
   { pattern: 'EX\\s+ACTIS\\s+AD\\s+INSTAR\\s+CONSISTORIALIUM', prints: 'EX ACTIS AD INSTAR CONSISTORIALIUM.', at: 'ASS 7 (1872) 751 line 9' },
 ];
 const PAPAL_HEAD_RE = new RegExp(`^\\s*(?:\\d+\\s+)?(${[...new Set(PAPAL_HEAD_FORMS.map((f) => f.pattern))].join('|')})\\.?`);
@@ -298,7 +305,8 @@ export function parseSummaPapalPart(text: string): { rows: SummaRow[]; heading: 
   //
   // The reopening is measured, not assumed, and the measurement is what keeps it safe: over
   // all 41 summae it fires **exactly once**, at ASS 8's `LITTERAE APOSTOLICAE.` (2c-ii-a
-  // Task 3, re-measured in the final fix wave with `PAPAL_HEAD_RE` at its present 16 forms
+  // Task 3, re-measured in the final fix wave, and again by phase 2c-ii-d when it added the
+  // seventeenth form, with `PAPAL_HEAD_RE` at its present 17 forms
   // and `DICASTERY_RE` at its present eleven alternatives -- still one). That single firing
   // is a property of how narrow `PAPAL_HEAD_RE` is, not of the control flow: every
   // alternative added to it is another line that can reopen a paused part, and one added

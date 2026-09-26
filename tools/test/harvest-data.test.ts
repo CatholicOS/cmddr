@@ -4081,9 +4081,11 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
       'ass-40': { acts: 37, defects: 10, rows: 38, claimed: 31, unclaimed: 7, omitted: 6 },
       'ass-41': { acts: 37, defects: 8, rows: 37, claimed: 27, unclaimed: 10, omitted: 10 },
       // Phase 2c-ii-d: Pius IX's ten volumes, ASS 2-11. Every count equals what
-      // tools/survey-ass.ts read from the store for these volumes too. ASS 7 shows 0 rows
-      // and all five of its acts omitted: its summa's papal columns are blank, so the check
-      // is vacuous (era report, phase 2c-ii-d).
+      // tools/survey-ass.ts read from the store for these volumes too. ASS 7 showed 0 rows
+      // and all five of its acts omitted until phase 2c-ii-d read the fifth heading form of
+      // PAPAL_HEAD_FORMS' one-volume rows -- `EX ACTIS AD INSTAR CONSISTORIALIUM.`, which
+      // names the manner of the pope's acts and not the pope -- and the volume's check is
+      // now a real one: 13 rows, 4 claimed, 9 unclaimed, 1 omitted (era report, 2c-ii-d).
       'ass-2': { acts: 2, defects: 5, rows: 3, claimed: 1, unclaimed: 2, omitted: 1 },
       'ass-3': { acts: 5, defects: 6, rows: 15, claimed: 4, unclaimed: 11, omitted: 1 },
       'ass-4': { acts: 9, defects: 3, rows: 9, claimed: 7, unclaimed: 2, omitted: 2 },
