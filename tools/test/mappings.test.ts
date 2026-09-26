@@ -9,6 +9,7 @@ import {
   SERIES_EXCLUSIONS,
 } from '../src/mappings/index.js';
 import { fixtureName } from '../src/harvest/fixtures.js';
+import { ACTA_CURATED_REFERENCES } from '../src/acta/curation.js';
 
 describe('vendored registries', () => {
   it('loads every pontiff and council id', () => {
@@ -262,6 +263,14 @@ describe('every curated table entry carries a non-empty note', () => {
   it('CIRCUMSCRIPTION_ERECTIONS', () => {
     for (const [key, entry] of Object.entries(CIRCUMSCRIPTION_ERECTIONS)) {
       expect(entry.note, key).toBeTruthy();
+    }
+  });
+
+  // Phase 2d (spec §12.5): this table carried sixteen new rows into a rule that had never
+  // listed it, its evidence field being the `note` of every other curated table.
+  it('ACTA_CURATED_REFERENCES', () => {
+    for (const [key, entry] of Object.entries(ACTA_CURATED_REFERENCES)) {
+      expect(entry.evidence, key).toBeTruthy();
     }
   });
 

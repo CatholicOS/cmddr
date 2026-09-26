@@ -1461,12 +1461,28 @@ export interface CuratedReference {
 }
 
 /**
- * References no index entry can give: the constitution that promulgates a Code opens the
- * Code's own volume, which has no chronological index (AAS 9-II, 1917; AAS 75-II, 1983);
- * and the Latin printing of an encyclical whose index line lost its date columns and opens
- * no entry, while the vernacular printing's entry matched the shelf record (AAS 14 (1922)
- * 673, *Ubi arcano Dei consilio*). Applied after the join (applyActa); a document the join
- * has also matched is an error unless the row names that match in `supersedes`.
+ * References the **chronological index of the popes' acts** cannot give, in two cases.
+ *
+ * *No entry exists.* The constitution that promulgates a Code opens the Code's own volume,
+ * which has no chronological index (AAS 9-II, 1917; AAS 75-II, 1983); and the Latin printing
+ * of an encyclical whose index line lost its date columns opens no entry at all, while the
+ * vernacular printing's entry matched the shelf record (AAS 14 (1922) 673, *Ubi arcano Dei
+ * consilio*).
+ *
+ * *The entry stands in a part the parser does not read.* The AAS enters the sixteen documents
+ * of the Second Vatican Council in `ACTA SS. OECUMENICI CONCILII VATICANI II` (`ACTA PATRUM S.
+ * CONCILII OECUMENICI VATICANI II` in AAS 54), which index.ts reads as a part and then skips as
+ * it skips the dicasteries'. That part was refused a reader of its own on its measured reach
+ * (acta volumes spec §12.1, §12.2, phase 2d): **four such parts across every non-ASS source and
+ * 107 distinct skipped part headings in all**, holding 18 entries of which 16 are the
+ * registry's, filed by title and never by incipit, one of them undated and one pair fused onto
+ * a single OCR line. A rule for eighteen entries that cannot grow, the council having closed in
+ * 1965, is the trade this project has twice refused on measurement; the accounting a reader
+ * would have bought is taken instead by the phase's report generator, which reads the part's
+ * lines (tools/src/acta/conciliar.ts).
+ *
+ * Applied after the join (applyActa); a document the join has also matched is an error unless
+ * the row names that match in `supersedes`.
  */
 export const ACTA_CURATED_REFERENCES: Readonly<Record<string, CuratedReference>> = {
   'mag:benedict-xv/providentissima-mater-1917': {
@@ -1505,6 +1521,209 @@ export const ACTA_CURATED_REFERENCES: Readonly<Record<string, CuratedReference>>
       + "Vescovi ed altri Ordinari / aventi pace e comunione con la Sede Apostolica: / su la restaurazione del regno di Cristo per la "
       + "pacifi­ / cazione in Cristo .` -- one act, two printings: the Latin page is the citation, as for the vernaculars of 1929, "
       + "1933 and 1937 (ACTA_HOLDS).",
+  },
+  // Phase 2d (acta volumes spec §12): the sixteen documents of the Second Vatican Council. The
+  // AAS enters each in `ACTA SS. OECUMENICI CONCILII VATICANI II`, a part index.ts reads as a
+  // part (PART_HEADING_RE matches any heading opening `ACTA`) and then skips, POPE_PART_RE
+  // failing on `SS.`; its heading is in the parse result's `skippedParts`. A reader for that part
+  // was refused on its measured reach -- four such parts across every source, 18 entries, filed
+  // by title and not by incipit (spec §12.1, §12.2) -- so the references are curated, on the
+  // owner's ruling that a conciliar act printed under the pope who promulgated it is the same
+  // document (ass volumes spec §5, the ruling that cites Vatican I's two).
+  // Every one of the sixteen is subscribed `Romae, apud S. Petrum, die ... anno ...` by the pope
+  // as `Ego PAULUS Catholicae Ecclesiae Episcopus` and then by the Council Fathers -- the
+  // conciliar formula, which carries no `Datum` -- and every subscription's date is its record's.
+  // Each quotation is the page as the OCR prints it; fixture line numbers are lines of the file
+  // as `sed -n Np` counts them (a form feed does not open a line).
+  'mag:vatican-ii/sacrosanctum-concilium-1963': {
+    acta: { series: 'AAS', volume: 56, year: 1964, page: 97 },
+    evidence: "AAS 56 (1964) p. 97 (PDF page 97 of AAS-56-1964-ocr.pdf, read 2026-09-27), the first page of the fascicle of 15 "
+      + "February 1964 ('An. et vol. LVI 15 Februarii 1964 (Ser. HI, v. VI) - N. 2'), prints 'SACROSANCTUM / CONCILIUM "
+      + "OECUMENICUM VATICANUM II / CONSTITUTIO DE SACRA LITURGIA / PAULUS EPISCOPUS / SERVUS SERVORUM DEI / UNA CUM "
+      + "SACROSANCTI CONCILII PATRIBUS / AD PERPETUAM REI MEMORIAM / 1. SACROSANCTUM CONCILIUM, cum sibi proponat vitam "
+      + "christianam inter fideles in dies augere'; subscribed at p. 134 'Romae, apud S. Petrum, die iv Decembris anno "
+      + "MCMLXIII. / Ego PAULUS Catholicae Ecclesiae Episcopus' and by the Council Fathers -- 4 December 1963, the "
+      + "record's date. The index enters it in the council's part, `aas-56-1964.txt` l. 820, '1963 Dec. 4 Constitutio de "
+      + "Sacra Liturgia 97', which the parser skips with the part (spec §12.1).",
+  },
+  'mag:vatican-ii/inter-mirifica-1963': {
+    acta: { series: 'AAS', volume: 56, year: 1964, page: 145 },
+    evidence: "AAS 56 (1964) p. 145 (PDF page 145 of AAS-56-1964-ocr.pdf, read 2026-09-27), the first page of the fascicle of "
+      + "21 March 1964 ('An. et vol. LVI 21 Martii 1964 (Ser. HI, v. VI) - N. 3'), prints 'SACROSANCTUM / CONCILIUM "
+      + "OECUMENICUM VATICANUM II / DECRETUM / De instrumentis communicationis socialis / PAULUS EPISCOPUS / SERVUS "
+      + "SERVORUM DEI / UNA CUM SACROSANCTI CONCILII PATRIBUS / AD PERPETUAM REI MEMORIAM / 1. INTER MIRIFICA technicae "
+      + "artis inventa'; subscribed at p. 153 'Romae, apud S. Petrum, die iv Decembris anno MCMLXIII. / Ego PAULUS "
+      + "Catholicae Ecclesiae Episcopus' and by the Council Fathers -- 4 December 1963, the record's date. The index "
+      + "enters it in the council's part, `aas-56-1964.txt` l. 821, '» » » Decretum de instrumentis communicationis "
+      + "socialis 145', which the parser skips with the part (spec §12.1).",
+  },
+  'mag:vatican-ii/lumen-gentium-1964': {
+    acta: { series: 'AAS', volume: 57, year: 1965, page: 5 },
+    evidence: "AAS 57 (1965) p. 5 (PDF page 5 of AAS-57-1965-ocr.pdf, read 2026-09-27), the first page of the fascicle of 30 "
+      + "January 1965 (the OCR's 'An. et VQL LVII 30 Ianuarii 1965 N.l'), prints 'SACROSANCTUM / CONCILIUM OECUMENICUM "
+      + "VATICANUM II / CONSTITUTIO DOGMATICA DE ECCLESIA / PAULUS EPISCOPUS / SERVUS SERVORUM DEI / UNA CUM SACROSANCTI "
+      + "CONCILII PATRIBUS / AD PERPETUAM REI MEMORIAM / CAPUT I / De Ecclesiae mysterio'; subscribed at p. 67 'Romae, "
+      + "apud S. Petrum, die xxi mensis Novembris anno MCMLXIV. / Ego PAULUS Catholicae Ecclesiae Episcopus' and by the "
+      + "Council Fathers -- 21 November 1964, the record's date. The index enters it in the council's part, "
+      + "`aas-57-1965.txt` l. 867, '1964 Nov. 21 Constitutio Dogmatica de Ecclesia . 5', which the parser skips with the "
+      + "part (spec §12.1).",
+  },
+  'mag:vatican-ii/orientalium-ecclesiarum-1964': {
+    acta: { series: 'AAS', volume: 57, year: 1965, page: 76 },
+    evidence: "AAS 57 (1965) p. 76 (PDF page 76 of AAS-57-1965-ocr.pdf, read 2026-09-27), under the running header '76 Acta "
+      + "Apostolicae Sedis - Commentarium Officiale', prints 'DECRETUM / DE ECCLESIIS ORIENTALIBUS CATHOLICIS / PAULUS "
+      + "EPISCOPUS / SERVUS SERVORUM DEI / UNA CUM SACROSANCTI CONCILII PATRIBUS / AD PERPETUAM REI MEMORIAM / PROOEMIUM "
+      + "/ 1. ORIENTALIUM ECCLESIARUM instituta, ritus liturgicos, traditiones ecclesiasticas atque vitae christianae "
+      + "disciplinam Ecclesia catholica magni facit'; subscribed at p. 85 'Romae, apud S. Petrum, die xxi mensis "
+      + "Novembris anno MCMLXIV. / Ego PAULUS Catholicae Ecclesiae Episcopus' and by the Council Fathers -- 21 November "
+      + "1964, the record's date. The index enters it in the council's part, `aas-57-1965.txt` l. 868, '» » » Decretum de "
+      + "Ecclesiis Orientalibus Catholicis 76', which the parser skips with the part (spec §12.1).",
+  },
+  'mag:vatican-ii/unitatis-redintegratio-1964': {
+    acta: { series: 'AAS', volume: 57, year: 1965, page: 90 },
+    evidence: "AAS 57 (1965) p. 90 (PDF page 90 of AAS-57-1965-ocr.pdf, read 2026-09-27), under the running header '90 Acta "
+      + "Apostolicae Sedis - Commentarium Officiale', prints 'DECRETUM DE OECUMENISMO / PAULUS EPISCOPUS / SERVUS "
+      + "SERVORUM DEI / UNA CUM SACROSANCTI CONCILII PATRIBUS / AD PERPETUAM REI MEMORIAM / PROOEMIUM / 1. UNITATIS "
+      + "REDINTEGRATIO inter universos Christianos promovenda unum est ex praecipuis Sacrae Oecumenicae Synodi Vaticanae "
+      + "Secundae propositis'; subscribed at p. 107 'Romae, apud S. Petrum, die xxi mensis Novembris anno MCMLXIV. / Ego "
+      + "PAULUS Catholicae Ecclesiae Episcopus' and by the Council Fathers -- 21 November 1964, the record's date. The "
+      + "index enters it in the council's part, `aas-57-1965.txt` l. 869, '» » » Decretum de Oecumenismo 90', which the "
+      + "parser skips with the part (spec §12.1).",
+  },
+  'mag:vatican-ii/christus-dominus-1965': {
+    acta: { series: 'AAS', volume: 58, year: 1966, page: 673 },
+    evidence: "AAS 58 (1966) p. 673 (PDF page 673 of AAS-58-1966-ocr.pdf, read 2026-09-27), the first page of the fascicle of 8 "
+      + "October 1966 ('An. et vol. LVÎII 8 Octobris 1966 N. 10'), prints 'SACROSANCTUM / CONCILIUM OECUMENICUM VATICANUM "
+      + "II / DECRETUM / DE PASTORALI EPISCOPORUM / MUNERE IN ECCLESIA / PAULUS EPISCOPUS / SERVUS SERVORUM DEI'; "
+      + "subscribed at p. 696 'Romae, apud S. Petrum, die xxvin mensis octobris anno MCMLXV. / Ego PAULUS Catholicae "
+      + "Ecclesiae Episcopus' and by the Council Fathers -- 28 October 1965, the record's date. The index enters it in "
+      + "the council's part, `aas-58-1966.txt` l. 790, '1965 Oct. 28 Decretum de pastorali Episcoporum munere in Ecclesia "
+      + ".... 673', which the parser skips with the part (spec §12.1). The subscription is quoted as the page prints it, "
+      + "the OCR's 'xxvin' for xxviii.",
+  },
+  'mag:vatican-ii/perfectae-caritatis-1965': {
+    acta: { series: 'AAS', volume: 58, year: 1966, page: 702 },
+    evidence: "AAS 58 (1966) p. 702 (PDF page 702 of AAS-58-1966-ocr.pdf, read 2026-09-27), under the running header '702 Acta "
+      + "Apostolicae Sedis - Commentarium Officiale', prints 'DECRETUM / DE ACCOMMODATA RENOVATIONE / VITAE RELIGIOSAE / "
+      + "PAULUS EPISCOPUS / SERVUS SERVORUM DEI ; / UNA CUM SACROSANCTI CONCILII PATRIBUS / AD PERPETUAM REI MEMORIAM / "
+      + "1. PERFECTAE CARITATIS per consilia evangelica prosecutionem Sacrosancta Synodus praevie ostendit'; subscribed "
+      + "at p. 712 'Romae, apud S. Petrum, die xxvin mensis octobris anno MCMLXV. / Ego PAULUS Catholicae Ecclesiae "
+      + "Episcopus' and by the Council Fathers -- 28 October 1965, the record's date. The index enters it in the "
+      + "council's part, `aas-58-1966.txt` l. 791, '» » » Decretum de accommodata renovatione vitae religiosae .... 702', "
+      + "which the parser skips with the part (spec §12.1). The subscription is quoted as the page prints it, the OCR's "
+      + "'xxvin' for xxviii.",
+  },
+  'mag:vatican-ii/optatam-totius-1965': {
+    acta: { series: 'AAS', volume: 58, year: 1966, page: 713 },
+    evidence: "AAS 58 (1966) p. 713 (PDF page 713 of AAS-58-1966-ocr.pdf, read 2026-09-27), under the running header 'Concilium "
+      + "Oecumenicum Vaticanum II 713', prints 'DECRETUM / DE INSTITUTIONE SACERDOTALI / PAULUS EPISCOPUS / SERVUS "
+      + "SERVORUM DEI / UNA CUM SACROSANCTI CONCILII PATRIBUS / AD PERPETUAM REI MEMORIAM / PROOEMIUM / OPTATAM TOTIUS "
+      + "Ecclesiae renovationem probe noscens Sancta Synodus a sacerdotum ministerio, Christi spiritu animato, magna ex "
+      + "parte pendere'; subscribed at p. 727 'Eomae, apud S, Petrum, die xxvin mensis octobris anno MCMLXV. / Ego PAULUS "
+      + "Catholicae Ecclesiae Episcopus' and by the Council Fathers -- 28 October 1965, the record's date. The index "
+      + "enters it in the council's part, `aas-58-1966.txt` l. 792, '» » » Decretum de institutione sacerdotali 713', "
+      + "which the parser skips with the part (spec §12.1). The subscription is quoted as the page prints it: 'Eomae' for "
+      + "Romae, 'S,' for S., 'xxvin' for xxviii.",
+  },
+  'mag:vatican-ii/gravissimum-educationis-1965': {
+    acta: { series: 'AAS', volume: 58, year: 1966, page: 728 },
+    evidence: "AAS 58 (1966) p. 728 (PDF page 728 of AAS-58-1966-ocr.pdf, read 2026-09-27), under the running header '728 Acta "
+      + "Apostolicae Sedis - Commentarium Officiale', prints 'DECLARATIO / DE EDUCATIONE CHRISTIANA / PAULUS EPISCOPUS / "
+      + "SERVUS SERVORUM DEI / UNA CUM SACROSANCTI CONCILII PATRIBUS / AD PERPETUAM REI MEMORIAM / GRAVISSIMUM "
+      + "EDUCATIONIS momentum in vita hominis eiusque influxum semper maiorem in socialem huius aetatis progressum Sancta "
+      + "Oecumenica Synodus attente perpendit'; subscribed at p. 739 'Romae, apud S. Petrum, die xxvin mensis octobris "
+      + "anno MCMLXV. / Ego PAULUS Catholicae Ecclesiae Episcopus' and by the Council Fathers -- 28 October 1965, the "
+      + "record's date. The index enters it in the council's part, `aas-58-1966.txt` l. 793, '» » » Declaratio de "
+      + "educatione christiana 728', which the parser skips with the part (spec §12.1). The subscription is quoted as the "
+      + "page prints it, the OCR's 'xxvin' for xxviii.",
+  },
+  'mag:vatican-ii/nostra-aetate-1965': {
+    acta: { series: 'AAS', volume: 58, year: 1966, page: 740 },
+    evidence: "AAS 58 (1966) p. 740 (PDF page 740 of AAS-58-1966-ocr.pdf, read 2026-09-27), under the running header '740 Acta "
+      + "Apostolicae Sedis - Commentarium Officiale', prints 'DECLARATIO / DE ECCLESIAE HABITUDINE / AD RELIGIONES "
+      + "NON-CHRISTIANAS / PAULUS EPISCOPUS / SERVUS SERVORUM DEI / UNA CUM SACROSANCTI CONCILII PATRIBUS / AD PERPETUAM "
+      + "REI MEMORIAM / 1. NOSTRA AETATE, in qua genus humanum in dies arctius unitur et necessitudines inter varios "
+      + "populos augentur'; subscribed at p. 744 'Eomae, apud S. Petrum, die xxvin mensis octobris anno MCMLXV. / Ego "
+      + "PAULUS Catholicae Ecclesiae Episcopus' and by the Council Fathers -- 28 October 1965, the record's date. The "
+      + "index enters it in the council's part, `aas-58-1966.txt` l. 794, '» » » Declaratio de Ecclesiae habitudine ad "
+      + "religiones non-christianas . 740', which the parser skips with the part (spec §12.1). The subscription is quoted "
+      + "as the page prints it: 'Eomae' for Romae, 'xxvin' for xxviii.",
+  },
+  'mag:vatican-ii/dei-verbum-1965': {
+    acta: { series: 'AAS', volume: 58, year: 1966, page: 817 },
+    evidence: "AAS 58 (1966) p. 817 (PDF page 817 of AAS-58-1966-ocr.pdf, read 2026-09-27), the first page of the fascicle of 5 "
+      + "November 1966 ('An. et vol. LVHI 5 Novembris 1966 N. 12'), prints 'SACROSANCTUM / CONCILIUM OECUMENICUM "
+      + "VATICANUM II / CONSTITUTIO DOGMATICA / DE DIVINA REVELATIONE / PAULUS EPISCOPUS / SERVUS SERVORUM DEI / UNA CUM "
+      + "SACROSANCTI CONCILII PATRIBUS'; subscribed at p. 830 'Romae, apud S. Petrum, die xvui mensis novembris anno "
+      + "MCMLXV. / Ego PAULUS Catholicae Ecclesiae Episcopus' and by the Council Fathers -- 18 November 1965, the "
+      + "record's date. The index enters it in the council's part, `aas-58-1966.txt` l. 795, '» Nov. 18 Constitutio "
+      + "dogmatica de divina Revelatione 817 » » Decretum de apostolatu laicorum 837', which the parser skips with the "
+      + "part (spec §12.1). That index line is fused, the OCR setting two entries on it: this act is its first half, to "
+      + "817. The subscription is quoted as the page prints it, the OCR's 'xvui' for xviii.",
+  },
+  'mag:vatican-ii/apostolicam-actuositatem-1965': {
+    acta: { series: 'AAS', volume: 58, year: 1966, page: 837 },
+    evidence: "AAS 58 (1966) p. 837 (PDF page 837 of AAS-58-1966-ocr.pdf, read 2026-09-27), under the running header 'Concilium "
+      + "Oecumenicum Vaticanum II 837', prints 'DECRETUM / DE APOSTOLATU LAICORUM / PAULUS EPISCOPUS / SERVUS SERVORUM "
+      + "DEI / UNA CUM SACROSANCTI CONCILII PATRIBUS / AD PERPETUAM REI MEMORIAM / PROOEMIUM / 1. Apostolicam "
+      + "actuositatem populi Dei impensiorem reddere volens, Sacrosancta Synodus sollicite se vertit ad christifideles "
+      + "laicos'; subscribed at p. 864 'Romae, apud S. Petrum, die xvm mensis novembris anno MCMLXV. / Ego PAULUS "
+      + "Catholicae Ecclesiae Episcopus' and by the Council Fathers -- 18 November 1965, the record's date. The index "
+      + "enters it in the council's part, `aas-58-1966.txt` l. 795, '» Nov. 18 Constitutio dogmatica de divina "
+      + "Revelatione 817 » » Decretum de apostolatu laicorum 837', which the parser skips with the part (spec §12.1). "
+      + "That index line is fused, the OCR setting two entries on it: this act is its second half, to 837. The "
+      + "subscription is quoted as the page prints it, the OCR's 'xvm' for xviii.",
+  },
+  'mag:vatican-ii/dignitatis-humanae-1965': {
+    acta: { series: 'AAS', volume: 58, year: 1966, page: 929 },
+    evidence: "AAS 58 (1966) p. 929 (PDF page 929 of AAS-58-1966-ocr.pdf, read 2026-09-27), the first page of the fascicle of "
+      + "30 November 1966 ('An. et vol. LvUI 30 Novembris 1966 N. 14'), prints 'SACROSANCTUM / CONCILIUM OECUMENICUM "
+      + "VATICANUM II / DECLARATIO / DE LIBERTATE RELIGIOSA / PAULUS EPISCOPUS / SERVUS SERVORUM DEI / UNA CUM "
+      + "SACROSANCTI CONCILII PATRIBUS'; subscribed at p. 941 'Romae, apud S. Petrum, die VII mensis decembris anno "
+      + "MCMLXV. / Ego PAULUS Catholicae Ecclesiae Episcopus' and by the Council Fathers -- 7 December 1965, the record's "
+      + "date. The index enters it in the council's part, `aas-58-1966.txt` l. 797, '» Dec. 7 Declaratio de libertate "
+      + "religiosa 929', which the parser skips with the part (spec §12.1).",
+  },
+  'mag:vatican-ii/ad-gentes-1965': {
+    acta: { series: 'AAS', volume: 58, year: 1966, page: 947 },
+    evidence: "AAS 58 (1966) p. 947 (PDF page 947 of AAS-58-1966-ocr.pdf, read 2026-09-27), under the running header 'Concilium "
+      + "Oecumenicum Vaticanum II 947', prints 'DECRETUM / DE ACTIVITATE MISSIONALI ECCLESIAE / PAULUS EPISCOPUS / SERVUS "
+      + "SERVORUM DEI / UNA CUM SACROSANCTI CONCILII PATRIBUS / AD PERPETUAM REI MEMORIAM / 1. AD GENTES DIVINITUS missa "
+      + "ut sit «universale salutis sacramentum» Ecclesia ex intimis propriae catholicitatis exigentiis'; subscribed at "
+      + "p. 990 'Romae, apud S. Petrum, die VII mensis decembris anno MCMLXV. / Ego PAULUS Catholicae Ecclesiae "
+      + "Episcopus' and by the Council Fathers -- 7 December 1965, the record's date. The index enters it in the "
+      + "council's part, `aas-58-1966.txt` l. 798, '» » , » Decretum de activitate missionali Ecclesiae . . . . . . . "
+      + "948', which the parser skips with the part (spec §12.1). The index's page is wrong and the printing is cited: "
+      + "that line enters the decree at 948, but p. 948 prints article 2 under 'CAPUT I / DE PRINCIPIIS DOCTRINALIBUS' "
+      + "('2. Ecclesia peregrinans natura sua missionaria est'), and the volume's own Index analyticus at p. 1250 cites "
+      + "the decree at 947 and that article at 948 -- 'Missionalis Ecclesiae activitas. Concilium Oecumenicum principia "
+      + "huius activitatis delineat, 947 ss. ; Ecclesia peregrinans natura sua missionaria est, 948 ss.' "
+      + "ACTA_PAGE_CORRECTIONS cannot carry the correction, keying as it does off a parsed entry, and this entry stands "
+      + "in the part the parser skips.",
+  },
+  'mag:vatican-ii/presbyterorum-ordinis-1965': {
+    acta: { series: 'AAS', volume: 58, year: 1966, page: 991 },
+    evidence: "AAS 58 (1966) p. 991 (PDF page 991 of AAS-58-1966-ocr.pdf, read 2026-09-27), under the running header 'Concilium "
+      + "Oecumenicum Vaticanum II 991', prints 'DECRETUM / DE PRESBYTERORUM MINISTERIO ET VITA / PAULUS EPISCOPUS / "
+      + "SERVUS SERVORUM DEI / UNA CUM SACROSANCTI CONCILII PATRIBUS / AD PERPETUAM REI MEMORIAM / PROOEMIUM / 1. "
+      + "PRESBYTERORUM ORDINIS in Ecclesia excellentiam iam pluries haec Sacrosancta Synodus in memoriam omnium "
+      + "revocavit'; subscribed at p. 1024 'Eomae, apud S. Petrum, die VII mensis decembris anno MCMLXV. / Ego PAULUS "
+      + "Catholicae Ecclesiae Episcopus' and by the Council Fathers -- 7 December 1965, the record's date. The index "
+      + "enters it in the council's part, `aas-58-1966.txt` l. 799, '» » » Decretum de presbyterorum ministerio et vita , "
+      + "991', which the parser skips with the part (spec §12.1). The subscription is quoted as the page prints it, the "
+      + "OCR's 'Eomae' for Romae.",
+  },
+  'mag:vatican-ii/gaudium-et-spes-1965': {
+    acta: { series: 'AAS', volume: 58, year: 1966, page: 1025 },
+    evidence: "AAS 58 (1966) p. 1025 (PDF page 1025 of AAS-58-1966-ocr.pdf, read 2026-09-27), the first page of the fascicle of "
+      + "7 December 1966 ('An. et vol. L vHI 7 Decembris 1966 N. 15'), prints 'SACROSANCTUM / CONCILIUM OECUMENICUM "
+      + "VATICANUM II / CONSTITUTIO PASTORALIS DE ECCLESIA / IN MUNDO HUIUS TEMPORIS* / PAULUS EPISCOPUS / SERVUS "
+      + "SERVORUM DEI / UNA CUM SACROSANCTI CONCILII PATRIBUS'; subscribed at p. 1115 'Romae, apud S. Petrum, die VII "
+      + "mensis decembris^anno MCMLXV. / Ego PAULUS Catholicae Ecclesiae Episcopus' and by the Council Fathers -- 7 "
+      + "December 1965, the record's date. The index enters it in the council's part, `aas-58-1966.txt` l. 800, '-» » » "
+      + "Constitutio pastoralis de Ecclesia in mundo huius temporis . . 1025', which the parser skips with the part (spec "
+      + "§12.1). The title carries the asterisk of the volume's own footnote. The subscription is quoted as the page "
+      + "prints it, the OCR's 'decembris^anno' for decembris anno.",
   },
 };
 

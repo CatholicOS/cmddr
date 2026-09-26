@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { loadActaIndexes, actaSource, applyCuratedReferences, applyAssReadings, emptyScan, ACTA_SOURCES } from '../src/acta/join.js';
 import { ACTA_CURATED_REFERENCES, ACTA_PAGE_CORRECTIONS, ACTA_PAGE_READINGS, ASS_READINGS } from '../src/acta/curation.js';
+import { conciliarPartLines } from '../src/acta/conciliar.js';
 import { categoryForHeading } from '../src/acta/categories.js';
 import { pagelessKey, sidecarPath, type PagesSidecar } from '../src/acta/recover.js';
 import type { ActaEntry } from '../src/acta/index.js';
@@ -70,15 +71,82 @@ describe('loadActaIndexes with the sidecars (spec §10.3)', () => {
     }
   });
 
-  it('writes the curated references of the Code\'s constitution and of Ubi arcano Dei, and no other', () => {
+  it('writes the curated references of the two the index cannot enter and the sixteen it enters in the council\'s part, and no other', () => {
     const docs = readdirSync('data/documents').filter((f) => f.endsWith('.json')).flatMap((f) => JSON.parse(readFileSync(`data/documents/${f}`, 'utf8')) as DocumentRecord[]);
     const by = Object.fromEntries(docs.map((d) => [d.id, d]));
-    expect(Object.keys(ACTA_CURATED_REFERENCES).sort()).toEqual(['mag:benedict-xv/providentissima-mater-1917', 'mag:pius-xi/ubi-arcano-dei-consilio-1922']);
+    // Phase 2d (acta volumes spec §12): the sixteen conciliar documents, whose entries stand in
+    // `ACTA SS. OECUMENICI CONCILII VATICANI II`, a part index.ts reads as a part and skips.
+    expect(Object.keys(ACTA_CURATED_REFERENCES).sort()).toEqual([
+      'mag:benedict-xv/providentissima-mater-1917',
+      'mag:pius-xi/ubi-arcano-dei-consilio-1922',
+      'mag:vatican-ii/ad-gentes-1965',
+      'mag:vatican-ii/apostolicam-actuositatem-1965',
+      'mag:vatican-ii/christus-dominus-1965',
+      'mag:vatican-ii/dei-verbum-1965',
+      'mag:vatican-ii/dignitatis-humanae-1965',
+      'mag:vatican-ii/gaudium-et-spes-1965',
+      'mag:vatican-ii/gravissimum-educationis-1965',
+      'mag:vatican-ii/inter-mirifica-1963',
+      'mag:vatican-ii/lumen-gentium-1964',
+      'mag:vatican-ii/nostra-aetate-1965',
+      'mag:vatican-ii/optatam-totius-1965',
+      'mag:vatican-ii/orientalium-ecclesiarum-1964',
+      'mag:vatican-ii/perfectae-caritatis-1965',
+      'mag:vatican-ii/presbyterorum-ordinis-1965',
+      'mag:vatican-ii/sacrosanctum-concilium-1963',
+      'mag:vatican-ii/unitatis-redintegratio-1964',
+    ]);
     expect(by['mag:benedict-xv/providentissima-mater-1917']!.acta).toEqual({ series: 'AAS', volume: 9, year: 1917, part: 'II', page: 5 });
     expect(by['mag:john-paul-ii/sacrae-disciplinae-leges-1983']!.acta).toBeUndefined();
     // Controller ruling 15: the Latin printing, not the Italian one the 1923 index's entry matched (AAS 15 (1923) 5).
     expect(by['mag:pius-xi/ubi-arcano-dei-consilio-1922']!.acta).toEqual({ series: 'AAS', volume: 14, year: 1922, page: 673 });
     expect(docs.filter((d) => d.acta?.volume === 15 && d.acta.page === 5)).toEqual([]);
+  });
+
+  it('states, in every curated reference, the volume and page the row itself cites', () => {
+    // A transposed digit between the page read and the page cited would put a reference on a page
+    // nothing was read on, and no pipeline check compares the two (phase 2d review focus 1).
+    for (const [id, row] of Object.entries(ACTA_CURATED_REFERENCES)) {
+      expect(row.evidence, id).toMatch(new RegExp(`AAS ${row.acta.volume} \\(${row.acta.year}\\)`));
+      expect(row.evidence, id).toMatch(new RegExp(`\\bp\\. ${row.acta.page}\\b`));
+      expect(row.evidence.length, id).toBeGreaterThan(200);
+    }
+  });
+
+  it('keeps every conciliar row live: the index line it quotes is still printed in its fixture', () => {
+    // The rows are keyed by document id, so nothing else notices if a fixture's conciliar part
+    // changes under them (phase 2d review focus 2).
+    const conciliar = Object.entries(ACTA_CURATED_REFERENCES).filter(([id]) => id.startsWith('mag:vatican-ii/'));
+    expect(conciliar).toHaveLength(16);
+    for (const [id, row] of conciliar) {
+      const file = `tools/fixtures/acta/aas-${row.acta.volume}-${row.acta.year}.txt`;
+      const quoted = row.evidence.match(/`aas-\d\d-\d{4}\.txt` l\. \d+, '([^']+)'/);
+      expect(quoted, id).not.toBeNull();
+      const line = quoted![1]!.replace(/\s+/g, ' ').trim();
+      expect(readFileSync(file, 'utf8').replace(/[ \t]+/g, ' '), `${id} -> ${file}`).toContain(line);
+    }
+  });
+
+  it('pins the four conciliar parts and the eighteen entries they hold, sixteen of them the registry\'s', () => {
+    // Measured 2026-09-27 (spec §12.1): AAS 54 one entry, 56 two, 57 three, 58 twelve. The two no
+    // row names are the Fathers' *Nuntius* of 20 October 1962 (AAS 54 (1962) 822) and the *Nuntii a
+    // Patribus* of 8 December 1965 (AAS 58 (1966) 10), whose place in the registry is undecided; a
+    // nineteenth line means a fixture moved and a row may rest on nothing (review focus 3).
+    const parts = [['54', 1962, 1], ['56', 1964, 2], ['57', 1965, 3], ['58', 1966, 12]] as const;
+    let total = 0;
+    for (const [vol, year, expected] of parts) {
+      const lines = conciliarPartLines(readFileSync(`tools/fixtures/acta/aas-${vol}-${year}.txt`, 'utf8'));
+      expect(lines.length, `AAS ${vol}`).toBe(expected);
+      total += lines.length;
+    }
+    expect(total).toBe(18);
+  });
+
+  it('refuses a fixture that prints no conciliar part, rather than reporting an empty one', () => {
+    // A heading whose OCR differs, or a re-extracted fixture, must be an error and not a zero
+    // (review focus 5).
+    expect(() => conciliarPartLines(readFileSync('tools/fixtures/acta/aas-59-1967.txt', 'utf8')))
+      .toThrow(/no conciliar part/i);
   });
 });
 
@@ -91,23 +159,28 @@ describe('applyCuratedReferences (controller ruling 15: a curated reference may 
   const empty = (): ActaMatchResult => ({ matches: [], ambiguous: [], unmatched: [], skipped: [], unknownPope: [], conflicts: [], reprints: [], sharedPages: [], superseded: [] });
   const both = () => [doc('mag:benedict-xv/providentissima-mater-1917', '1917-05-27'), doc('mag:pius-xi/ubi-arcano-dei-consilio-1922', '1922-12-23')];
   const italian = (): ActaMatch => ({ entry: entry({}), documentId: 'mag:pius-xi/ubi-arcano-dei-consilio-1922', by: 'unique' });
+  // The two rows these unit tests exercise, taken from the real table. Phase 2d added sixteen
+  // conciliar rows (spec §12), and the guard that refuses `an id no document carries` fires on
+  // the first of them against a two-document corpus -- so each test names the rows it means
+  // rather than relying on the table holding only these two, or on the order it iterates them.
+  const twoRows = () => Object.fromEntries(Object.entries(ACTA_CURATED_REFERENCES).filter(([id]) => !id.startsWith('mag:vatican-ii/')));
 
   it('moves the match the row supersedes out of the matches and writes the row\'s page', () => {
     const docs = both();
     const result = empty();
     const other: ActaMatch = { entry: entry({ volume: 17, year: 1925, page: 593, incipit: 'Quas primas', date: '1925-12-11' }), documentId: 'mag:pius-xi/quas-primas-1925', by: 'unique' };
     result.matches.push(italian(), other);
-    applyCuratedReferences(result, docs);
+    applyCuratedReferences(result, docs, twoRows());
     expect(result.matches).toEqual([other]);
     expect(result.superseded.map((m) => [m.documentId, m.entry.page])).toEqual([['mag:pius-xi/ubi-arcano-dei-consilio-1922', 5]]);
     expect(docs[1]!.acta).toEqual({ series: 'AAS', volume: 14, year: 1922, page: 673 });
     expect(docs[0]!.acta).toEqual({ series: 'AAS', volume: 9, year: 1917, part: 'II', page: 5 });
   });
   it('is a stale row when the supersedes key names no match of the document', () => {
-    expect(() => applyCuratedReferences(empty(), both())).toThrow(/supersedes AAS:15:5, which the join did not match to it/);
+    expect(() => applyCuratedReferences(empty(), both(), twoRows())).toThrow(/supersedes AAS:15:5, which the join did not match to it/);
     const result = empty();
     result.matches.push({ ...italian(), documentId: 'mag:pius-xi/quas-primas-1925' });   // the page matched to another document
-    expect(() => applyCuratedReferences(result, both())).toThrow(/stale row/);
+    expect(() => applyCuratedReferences(result, both(), twoRows())).toThrow(/stale row/);
   });
   it('refuses a `supersedes` on a row that cites a part or names a two-part volume: overrideKey carries no part, so the displaced match cannot be named (Task 9 review)', () => {
     const sacrae = doc('mag:john-paul-ii/sacrae-disciplinae-leges-1983', '1983-01-25');
@@ -123,11 +196,11 @@ describe('applyCuratedReferences (controller ruling 15: a curated reference may 
   it('still refuses a row on a document the join matched elsewhere, and an id no document carries', () => {
     const result = empty();
     result.matches.push(italian(), { entry: entry({ volume: 14, year: 1922, page: 673, incipit: 'Ubi arcano Dei consilio' }), documentId: 'mag:pius-xi/ubi-arcano-dei-consilio-1922', by: 'incipit' });
-    expect(() => applyCuratedReferences(result, both())).toThrow(/which the join also matched/);
+    expect(() => applyCuratedReferences(result, both(), twoRows())).toThrow(/which the join also matched/);
     const r2 = empty();
     r2.matches.push(italian(), { entry: entry({ volume: 9, year: 1917, part: 'I', page: 5, date: '1917-05-27' }), documentId: 'mag:benedict-xv/providentissima-mater-1917', by: 'unique' });
-    expect(() => applyCuratedReferences(r2, both())).toThrow(/providentissima-mater-1917, which the join also matched/);
-    expect(() => applyCuratedReferences(empty(), [doc('mag:pius-xi/ubi-arcano-dei-consilio-1922', '1922-12-23')])).toThrow(/no document carries/);
+    expect(() => applyCuratedReferences(r2, both(), twoRows())).toThrow(/providentissima-mater-1917, which the join also matched/);
+    expect(() => applyCuratedReferences(empty(), [doc('mag:pius-xi/ubi-arcano-dei-consilio-1922', '1922-12-23')], twoRows())).toThrow(/no document carries/);
   });
 });
 

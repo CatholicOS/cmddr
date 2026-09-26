@@ -29,7 +29,13 @@
     },
     "incipit": "Inter Mirifica",
     "promulgatedBy": "rp:paul-vi",
-    "sourceGenreLabel": "Decreto"
+    "sourceGenreLabel": "Decreto",
+    "acta": {
+      "series": "AAS",
+      "volume": 56,
+      "year": 1964,
+      "page": 145
+    }
   },
   {
     "id": "mag:vatican-ii/sacrosanctum-concilium-1963",
@@ -62,7 +68,13 @@
     },
     "incipit": "Sacrosanctum Concilium",
     "promulgatedBy": "rp:paul-vi",
-    "sourceGenreLabel": "Costituzione"
+    "sourceGenreLabel": "Costituzione",
+    "acta": {
+      "series": "AAS",
+      "volume": 56,
+      "year": 1964,
+      "page": 97
+    }
   },
   {
     "id": "mag:vatican-ii/lumen-gentium-1964",
@@ -96,7 +108,13 @@
     "incipit": "Lumen Gentium",
     "promulgatedBy": "rp:paul-vi",
     "descriptiveTitle": "dogmatic",
-    "sourceGenreLabel": "Costituzione dogmatica"
+    "sourceGenreLabel": "Costituzione dogmatica",
+    "acta": {
+      "series": "AAS",
+      "volume": 57,
+      "year": 1965,
+      "page": 5
+    }
   },
   {
     "id": "mag:vatican-ii/orientalium-ecclesiarum-1964",
@@ -128,7 +146,13 @@
     },
     "incipit": "Orientalium Ecclesiarum",
     "promulgatedBy": "rp:paul-vi",
-    "sourceGenreLabel": "Decreto"
+    "sourceGenreLabel": "Decreto",
+    "acta": {
+      "series": "AAS",
+      "volume": 57,
+      "year": 1965,
+      "page": 76
+    }
   },
   {
     "id": "mag:vatican-ii/unitatis-redintegratio-1964",
@@ -160,7 +184,13 @@
     },
     "incipit": "Unitatis Redintegratio",
     "promulgatedBy": "rp:paul-vi",
-    "sourceGenreLabel": "Decreto"
+    "sourceGenreLabel": "Decreto",
+    "acta": {
+      "series": "AAS",
+      "volume": 57,
+      "year": 1965,
+      "page": 90
+    }
   },
   {
     "id": "mag:vatican-ii/christus-dominus-1965",
@@ -192,7 +222,13 @@
     },
     "incipit": "Christus Dominus",
     "promulgatedBy": "rp:paul-vi",
-    "sourceGenreLabel": "Decreto"
+    "sourceGenreLabel": "Decreto",
+    "acta": {
+      "series": "AAS",
+      "volume": 58,
+      "year": 1966,
+      "page": 673
+    }
   },
   {
     "id": "mag:vatican-ii/gravissimum-educationis-1965",
@@ -225,7 +261,13 @@
     },
     "incipit": "Gravissimum Educationis",
     "promulgatedBy": "rp:paul-vi",
-    "sourceGenreLabel": "Dichiarazione"
+    "sourceGenreLabel": "Dichiarazione",
+    "acta": {
+      "series": "AAS",
+      "volume": 58,
+      "year": 1966,
+      "page": 728
+    }
   },
   {
     "id": "mag:vatican-ii/nostra-aetate-1965",
@@ -260,7 +302,13 @@
     },
     "incipit": "Nostra Aetate",
     "promulgatedBy": "rp:paul-vi",
-    "sourceGenreLabel": "Dichiarazione"
+    "sourceGenreLabel": "Dichiarazione",
+    "acta": {
+      "series": "AAS",
+      "volume": 58,
+      "year": 1966,
+      "page": 740
+    }
   },
   {
     "id": "mag:vatican-ii/optatam-totius-1965",
@@ -292,7 +340,13 @@
     },
     "incipit": "Optatam Totius",
     "promulgatedBy": "rp:paul-vi",
-    "sourceGenreLabel": "Decreto"
+    "sourceGenreLabel": "Decreto",
+    "acta": {
+      "series": "AAS",
+      "volume": 58,
+      "year": 1966,
+      "page": 713
+    }
   },
   {
     "id": "mag:vatican-ii/perfectae-caritatis-1965",
@@ -324,7 +378,13 @@
     },
     "incipit": "Perfectae Caritatis",
     "promulgatedBy": "rp:paul-vi",
-    "sourceGenreLabel": "Decreto"
+    "sourceGenreLabel": "Decreto",
+    "acta": {
+      "series": "AAS",
+      "volume": 58,
+      "year": 1966,
+      "page": 702
+    }
   },
   {
     "id": "mag:vatican-ii/apostolicam-actuositatem-1965",
@@ -357,7 +417,13 @@
     },
     "incipit": "Apostolicam Actuositatem",
     "promulgatedBy": "rp:paul-vi",
-    "sourceGenreLabel": "Decreto"
+    "sourceGenreLabel": "Decreto",
+    "acta": {
+      "series": "AAS",
+      "volume": 58,
+      "year": 1966,
+      "page": 837
+    }
   },
   {
     "id": "mag:vatican-ii/dei-verbum-1965",
@@ -392,7 +458,13 @@
     "incipit": "Dei Verbum",
     "promulgatedBy": "rp:paul-vi",
     "descriptiveTitle": "dogmatic",
-    "sourceGenreLabel": "Costituzione dogmatica"
+    "sourceGenreLabel": "Costituzione dogmatica",
+    "acta": {
+      "series": "AAS",
+      "volume": 58,
+      "year": 1966,
+      "page": 817
+    }
   },
   {
     "id": "mag:vatican-ii/ad-gentes-1965",
@@ -424,7 +496,13 @@
     },
     "incipit": "Ad Gentes",
     "promulgatedBy": "rp:paul-vi",
-    "sourceGenreLabel": "Decreto"
+    "sourceGenreLabel": "Decreto",
+    "acta": {
+      "series": "AAS",
+      "volume": 58,
+      "year": 1966,
+      "page": 947
+    }
   },
   {
     "id": "mag:vatican-ii/dignitatis-humanae-1965",
@@ -457,7 +535,13 @@
     },
     "incipit": "Dignitatis Humanae",
     "promulgatedBy": "rp:paul-vi",
-    "sourceGenreLabel": "Dichiarazione"
+    "sourceGenreLabel": "Dichiarazione",
+    "acta": {
+      "series": "AAS",
+      "volume": 58,
+      "year": 1966,
+      "page": 929
+    }
   },
   {
     "id": "mag:vatican-ii/gaudium-et-spes-1965",
@@ -491,7 +575,13 @@
     "incipit": "Gaudium et Spes",
     "promulgatedBy": "rp:paul-vi",
     "descriptiveTitle": "pastoral",
-    "sourceGenreLabel": "Costituzione pastorale"
+    "sourceGenreLabel": "Costituzione pastorale",
+    "acta": {
+      "series": "AAS",
+      "volume": 58,
+      "year": 1966,
+      "page": 1025
+    }
   },
   {
     "id": "mag:vatican-ii/presbyterorum-ordinis-1965",
@@ -523,6 +613,12 @@
     },
     "incipit": "Presbyterorum Ordinis",
     "promulgatedBy": "rp:paul-vi",
-    "sourceGenreLabel": "Decreto"
+    "sourceGenreLabel": "Decreto",
+    "acta": {
+      "series": "AAS",
+      "volume": 58,
+      "year": 1966,
+      "page": 991
+    }
   }
 ]
