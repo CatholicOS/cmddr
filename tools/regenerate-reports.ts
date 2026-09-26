@@ -53,6 +53,8 @@ const REPORTS: readonly Report[] = [
   { out: '2026-09-26-ass-volumes-pius-x.md', generator: 'tools/ass-era-report.ts', args: ['36-40'] },
   { out: '2026-09-26-ass-volumes-leo-xiii.md', generator: 'tools/ass-era-report.ts', args: ['13-35'] },
   { out: '2026-09-26-ass-volumes-pius-ix.md', generator: 'tools/ass-era-report.ts', args: ['1-11'] },
+  // Phase 2d (acta volumes spec §12): reads the fixtures, the curated table and data/ only.
+  { out: '2026-09-27-acta-vatican-ii.md', generator: 'tools/acta-conciliar-report.ts', args: [] },
   // `tools/survey-ass.ts` reads all 41 ASS volumes from the store, so it is skipped in CI.
   { out: '2026-09-22-ass-survey.md', generator: 'tools/survey-ass.ts', args: [], store: true },
 ];
