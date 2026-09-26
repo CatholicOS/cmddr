@@ -3824,7 +3824,7 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
   // to the volumes already joined until Task 4 re-runs the join and updates them.
   const joinedSources = sources.filter((s) => s.volume < 2 || s.volume > 11);
 
-  it('writes an ASS reference only on a shelf document of Pius IX, Leo XIII or Pius X -- or of the council whose act one of them promulgated -- citing a sample volume by its number and first year, at a page within the volume, dated no later than the year after the volume\'s first', () => {
+  it('writes an ASS reference only on a shelf document of Pius IX, Leo XIII or Pius X -- or of a council whose act Pius IX promulgated -- citing a sample volume by its number and first year, at a page within the volume, dated no later than the year after the volume\'s first', () => {
     for (const d of cited) {
       // `oec:vatican-i` on the owner's ruling of 2026-09-26 (Task 3b, ass volumes spec §5):
       // the ASS prints the council's two dogmatic constitutions under Pius IX with the
@@ -3959,7 +3959,7 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // ASS 1 (1865) matched nothing: no act of weight to name (see the per-volume pin).
   });
 
-  it('joins the two dogmatic constitutions of Vatican I to their conciliar records, by the pope their promulgatedBy names', () => {
+  it('joins the two dogmatic constitutions of Vatican I to their conciliar records, by the two curated overrides', () => {
     // Task 3b (ass volumes spec §5, the owner's ruling of 2026-09-26). The pin reads the
     // join's own output and not `data/`, because Task 4 is what writes these two references
     // into the records; what it fixes here is the id, the date and the page.
@@ -3980,22 +3980,35 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // decima octava Iulii anni 1870 Feria II hora nona an-` (p. 37 l. 29).
     expect(byDoc.get('mag:vatican-i/pastor-aeternus-1870')?.entry)
       .toMatchObject({ series: 'ASS', volume: 6, year: 1870, page: 40, date: '1870-07-18', category: 'CONSTITUTIO DOGMATICA', pope: 'Pius IX' });
-    // Matched by the ordinary unique rule, on no curated override: the widening of the
-    // candidate set by `promulgatedBy` (match.ts) is what put the record in reach, and the
-    // records' own fields are what it read.
-    expect([byDoc.get('mag:vatican-i/dei-filius-1870')?.by, byDoc.get('mag:vatican-i/pastor-aeternus-1870')?.by]).toEqual(['unique', 'unique']);
+    // Matched by the curated overrides and by nothing else: no rule of the matcher can reach
+    // either record, since candidates are keyed `${issuerId}|${date}` and the records are the
+    // council's, so `rp:pius-ix` has nothing at all on either date. `curated` is therefore the
+    // only rule these two can carry, and a drift to `unique` would mean the matcher had grown
+    // a general bridge between a pope and a council -- which this phase decided against and
+    // left to #56.
+    expect([byDoc.get('mag:vatican-i/dei-filius-1870')?.by, byDoc.get('mag:vatican-i/pastor-aeternus-1870')?.by]).toEqual(['curated', 'curated']);
     for (const id of ['mag:vatican-i/dei-filius-1870', 'mag:vatican-i/pastor-aeternus-1870']) {
       const d = shelf.find((x) => x.id === id)!;
       expect(d.issuerId, id).toBe('oec:vatican-i');
       expect(d.promulgatedBy, id).toBe('rp:pius-ix');
       expect(d.genre, id).toBe('constitution');
     }
-    // And the widening claims nothing else in these two volumes: no conciliar record but
-    // these two is matched, and nothing is left ambiguous or double-claimed.
+    // And nothing else conciliar is claimed in these two volumes, with no ambiguity and no
+    // double claim left behind.
     expect(result.matches.filter((m) => m.documentId.startsWith('mag:vatican-i/')).map((m) => m.documentId).sort())
       .toEqual(['mag:vatican-i/dei-filius-1870', 'mag:vatican-i/pastor-aeternus-1870']);
     expect(result.ambiguous, 'ambiguous').toEqual([]);
     expect(result.conflicts, 'conflicts').toEqual([]);
+    // The #56 boundary as an assertion and not a paragraph (the reviewer's Important-2, which
+    // the choice of the curated row dissolves but which is worth pinning either way): over the
+    // WHOLE corpus's join output, the matcher claims no Vatican II document. If a later phase
+    // gives `Decreta` or `Declaratio` a class, or teaches an AAS index heading to reach a
+    // conciliar genre, this fails at match time rather than after a harvest has written the
+    // references.
+    const whole = matchActa([...loadActaIndexes().parsed.values()].flatMap((p) => p.entries), shelf);
+    expect(whole.matches.filter((m) => m.documentId.startsWith('mag:vatican-ii/')), 'no Vatican II document is claimed').toEqual([]);
+    expect(whole.matches.filter((m) => m.documentId.startsWith('mag:vatican-i/')).map((m) => [m.documentId, m.by]).sort())
+      .toEqual([['mag:vatican-i/dei-filius-1870', 'curated'], ['mag:vatican-i/pastor-aeternus-1870', 'curated']]);
   });
 
   it('creates nothing from the ASS: no document carries an ass/ shelf, and every unmatched ASS entry is held series-not-created', () => {

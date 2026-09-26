@@ -769,9 +769,9 @@ export const ACTA_INDEX_CORRECTIONS: Readonly<Record<string, IndexCorrection>> =
 export interface MatchOverride {
   /** The document the entry is the citation of. */
   documentId: string;
-  /** The index line, quoted as extracted. */
+  /** The index line, quoted as extracted -- or, for an ASS entry, whose volume prints no index, the lines of the page the entry was read from. */
   indexLine: string;
-  /** The headings of the document chosen and of the one the class rule chose, and why the rule picked wrong. */
+  /** The headings of the document chosen and of the one the class rule chose, and why the rule picked wrong -- or, where the class rule reaches no candidate at all, why it cannot. */
   evidence: string;
 }
 
@@ -779,11 +779,43 @@ export interface MatchOverride {
  * Entries the matcher's class rule sends to the wrong document, keyed by the reference
  * the index gives the act (`AAS:{volume}:{page}`) and consulted before the class rule
  * (match.ts): the override names the document outright and does not require it to
- * satisfy the class rule, since the class rule is what was wrong. Each row is a measured
+ * satisfy the class rule, since the class rule is what was wrong. Most rows are a measured
  * harm of the discussion #30 question -- the shelf and the *Acta* disagree about the class
- * -- and quotes the index line and both headings.
+ * -- and quote the index line and both headings; two of Pius X's are a provisional shelf
+ * record with no incipit to tell two acts of a day apart.
+ *
+ * Two rows are a third case, added in phase 2c-ii-d (Task 3b): the class rule reaches no
+ * candidate **at all**, because the document's issuer is not the entry's pope. The
+ * candidates of an entry are keyed `${issuerId}|${date}` (match.ts), and a conciliar act
+ * the ASS prints under the pope who promulgated it is keyed to the council, so the pope has
+ * nothing on the date and the entry would stand unmatched with an empty same-date list. The
+ * owner's ruling of 2026-09-26 -- "whether they are printed under the council or under the
+ * Pope that issued them on behalf of the council, they are the same documents and an ASS
+ * reference should be recorded" -- is recorded where the principle belongs, in ass volumes
+ * spec §5, and its two instances are carried here. A general rule reading the records' own
+ * `promulgatedBy` was built and measured against the whole corpus first: it produces the
+ * identical match set and nothing else changes, so on equal numbers this project's
+ * tie-breaker takes the curated row (Task 3b, the owner's ruling on the reviewer's
+ * recommendation), and the general rule is left to the phase that can measure its whole
+ * reach (issue #56, Vatican II's sixteen).
  */
 export const ACTA_MATCH_OVERRIDES: Readonly<Record<string, MatchOverride>> = {
+  // Phase 2c-ii-d, Task 3b: the two dogmatic constitutions of the First Vatican Council,
+  // the third case the table carries (see the doc comment) -- an act whose candidate key
+  // the entry's pope cannot reach, because the record is the council's. Each row names the
+  // document and quotes the page that prints it under the pope; the pages themselves are
+  // read in full in ASS_READINGS (`ASS:5:481`, `ASS:6:40`), which is what puts an entry at
+  // these pages at all, neither act being reachable by any rule of the scanner.
+  'ASS:5:481': {
+    documentId: 'mag:vatican-i/dei-filius-1870',
+    indexLine: 'PIUS EPISCOPUS / SERVUS SERVORUM DEI / SACRO APPROBANTE CONCILIO / Ad perpetuam rei memoriam / « Dei Filius et generis humani Redemptor Dominus Noster',
+    evidence: "ASS 5 (1869) 481 opens the first dogmatic constitution of the First Vatican Council, which the volume prints inside its conciliar narrative with no class heading over it: ll. 31-34 'PIUS EPISCOPUS / SERVUS SERVORUM DEI / SACRO APPROBANTE CONCILIO / Ad perpetuam rei memoriam', ll. 37-38 '« Dei Filius et generis humani Redemptor Dominus Noster / Iesus Christus, ad Patrem caelestem rediturus, cum Ecclesia sua'. The pope confirms it in his own words on the same page, ll. 6-10 'Tum surgens Pontifex haec verba coram Synodo protulit : « De- / « creta et Canones, qui in Constitutione modo lecta continentur, / « placuerunt omnibus Patribus, nemine dissentiente; Nosque, sa- / « ero approbante Concilio, illa et illos ita ut lecta sunt defi- / « nimus et Apostolica Auctoritate confirmamus ».' (the OCR's 'sa- / ero' for 'sacro'). The whole page reading is quoted in ASS_READINGS `ASS:5:481`, which is the entry this row keys. Why the class rule chose nothing to override: it reached no candidate at all. The act is `mag:vatican-i/dei-filius-1870`, dated 1870-04-24, genre `constitution`, issuer `oec:vatican-i` with `promulgatedBy: rp:pius-ix`; the matcher keys candidates `${issuerId}|${date}` and the entry's pope is Pius IX, whose shelf carries **nothing whatever on 1870-04-24** (his nearest record of the era is the brief *Apostolici ministerii* of 1870-04-05), so the entry would stand unmatched with an empty same-date list and no near-miss. Nor could the class rule have fired if it had: the `Constitutiones dogmaticae` category's class is the `constitution` genre, which this record carries, but no candidate of the pope exists to be filtered. The identity is the registry's own statement, `promulgatedBy: rp:pius-ix` on the record, and the volume's, which prints the act under the pope with the council's approval. Measured before this row was written: a general rule making a conciliar document a candidate of the pope its `promulgatedBy` names produces exactly this match and no other change anywhere in the corpus (157 sources, 18,113 entries, 4,975 shelf documents; matched 3,370 to 3,372, ambiguous 447, conflicts 40, shared pages 0, before and after), so the row and the rule are equal in outcome and the row is what the project's tie-breaker takes.",
+  },
+  'ASS:6:40': {
+    documentId: 'mag:vatican-i/pastor-aeternus-1870',
+    indexLine: 'PIUS EPISCOPUS / SERVUS SERVORUM DEI / SACRO APPROBANTE CONCILIO / Ad perpetuam rei memoriam. / «r Pastor aeternus et episcopus animarum nostrarum, ut sa- / lutiferum',
+    evidence: "ASS 6 (1870) 40 opens the second dogmatic constitution of the First Vatican Council, again inside the conciliar narrative and again with no class heading: ll. 9-14 'PIUS EPISCOPUS / SERVUS SERVORUM DEI / SACRO APPROBANTE CONCILIO / Ad perpetuam rei memoriam.', ll. 17-18 '«r Pastor aeternus et episcopus animarum nostrarum, ut sa- / lutiferum redemptionis opus perenne redderet, sanctam aedificare' (the OCR's '«r' for the opening guillemet), the reading before it naming who read it aloud, ll. 4-6 'Episcopus itaque Fabrianensis ambonem conscendens elata voce / Constitutionem legit, quam Patres prae manibus eliam habebant, / quaeque tenoris est qui sequitur.'. The whole page reading is quoted in ASS_READINGS `ASS:6:40`, which is the entry this row keys. Why the class rule chose nothing to override: as `ASS:5:481`, it reached no candidate at all. The act is `mag:vatican-i/pastor-aeternus-1870`, dated 1870-07-18, genre `constitution`, issuer `oec:vatican-i` with `promulgatedBy: rp:pius-ix`, and Pius IX's shelf carries nothing whatever on 1870-07-18. The identity is the registry's own field and the volume's own printing; the volume's summa states it too, calling the act 'Constitutio dogmatica prima de Ecclesia / Christi, Pastor aeternus, in Concilio / Vaticano confirmata' under its papal part's heading ACTA SOLEMNIORA ROM. PONTIFICIS (summa p. 597 ll. 12-17). Measured as the other row was, with the same result.",
+  },
   // Phase 2c-ii-b: two entries of Pius X's volumes whose only shelf record is a provisional
   // one, keyed by date and carrying no incipit, so the join cannot tell which act it is.
   // Each row names the act the record's own title describes.
@@ -1889,7 +1921,10 @@ export const ASS_READINGS: Readonly<Record<string, AssReading>> = {
   // open on the formula `PIUS EPISCOPUS / SERVUS SERVORUM DEI / SACRO APPROBANTE CONCILIO`,
   // neither carries a class heading or a dateline of its own, and no rule of the scanner
   // reaches either. Each row supplies the page the act opens on, the category (the volume's
-  // own summa's word for it, `CONSTITUTIO DOGMATICA`) and the session's date.
+  // own summa's word for it, `CONSTITUTIO DOGMATICA`) and the session's date. The reading is
+  // what puts an entry at the page; what matches it to the council's record is the
+  // `ACTA_MATCH_OVERRIDES` row of the same key, since candidates are keyed by issuer and the
+  // entry's pope has nothing on either date.
   'ASS:5:481': {
     pope: 'Pius IX', category: 'CONSTITUTIO DOGMATICA', date: '1870-04-24',
     opening: 'Dei Filius et generis humani Redemptor Dominus Noster',

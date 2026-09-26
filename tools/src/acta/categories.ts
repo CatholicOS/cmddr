@@ -157,9 +157,13 @@ export const ACTA_CATEGORIES: readonly ActaCategory[] = [
   // own *Summa actorum* calls the act, and it is the category of the two curated readings
   // that enter them (ASS_READINGS `ASS:5:481`, `ASS:6:40`, curation.ts); the class is the
   // registry's `constitution` genre, which is the genre of every conciliar constitution and
-  // of nothing else in the corpus (6 records, all conciliar, measured 2026-09-26). The
-  // heading itself is printed nowhere in the whole corpus of 18,111 parsed entries but by
-  // those two readings, so this row claims nothing else.
+  // of nothing else in the registry (6 records, all conciliar, measured 2026-09-26). No
+  // source of the corpus prints the heading: of the 18,111 entries the scanners and the index
+  // parser read before these two readings were written, 0 carry it, and the corpus carries it
+  // twice today -- these two readings and nothing else. So this row claims nothing beyond
+  // them. What matches them is not this class but the two curated `ACTA_MATCH_OVERRIDES` rows,
+  // consulted before the class rule; the class is still required, since an entry whose
+  // category carries none is skipped before the override is reached (match.ts).
   { id: 'Constitutiones dogmaticae', headings: ['CONSTITUTIO DOGMATICA'],
     classes: [{ genre: 'constitution' }], harvested: 'yes' },
   // The motu_proprio shelf, merged into apost_letters where a document is filed on both:

@@ -231,21 +231,29 @@ numbers of the era include the claimed and unclaimed counts.
   prints under the pope is decided when 2c-ii reaches those volumes. **Decided by the owner
   on 2026-09-26** (phase 2c-ii-d, Task 3b): "whether they are printed under the council or
   under the Pope that issued them on behalf of the council, they are the same documents and
-  an ASS reference should be recorded". The mechanism is a widening of the candidate set,
-  not a curated row: a document whose issuer is an ecumenical council and whose
-  `promulgatedBy` names a pope is a candidate of *that pope* on its own date as well as of
-  the council, and the ordinary rules then decide. The class rule still runs, so the
-  widening matches only where a category's class admits the document's genre. Measured over
-  the whole corpus (157 sources, 18,113 entries, 4,975 shelf documents): 18 records carry
-  `promulgatedBy` — Vatican I's 2 and Vatican II's 16 — and the widening adds exactly the
-  two matches and changes nothing else, ambiguous 447, conflicts 40 and shared pages 0 both
-  before and after. The two acts reach the matcher through curated readings (§6,
-  `ASS:5:481`, `ASS:6:40`), since neither page carries a class heading and neither act a
-  dateline of its own; their category is the volumes' own `CONSTITUTIO DOGMATICA`, whose
-  class is the `constitution` genre. Vatican II's sixteen stay unreferenced: no category's
-  class admits genre `decree` or `declaration`, and the AAS indexes never print
-  `CONSTITUTIO DOGMATICA`. Whether they should is [#56](https://github.com/CatholicOS/cmddr/issues/56)'s
-  to measure.
+  an ASS reference should be recorded". **This bullet is the home of that principle; the
+  matcher is not.** The two acts reach the join by curated rows and not by a rule: a reading
+  each (§6, `ASS:5:481`, `ASS:6:40`), since neither page carries a class heading and neither
+  act a dateline of its own, so nothing anchors them — their category is the volumes' own
+  `CONSTITUTIO DOGMATICA`, whose class is the `constitution` genre — and a
+  `ACTA_MATCH_OVERRIDES` row each naming the document, because the matcher keys candidates
+  `${issuerId}|${date}` and the record is the council's, so the entry's pope reaches no
+  candidate at all on the date.
+
+  **The general rule was built and measured before it was rejected.** Making a conciliar
+  document a candidate of the pope its `promulgatedBy` names was implemented and run over the
+  whole corpus (157 sources, 18,113 entries, 4,975 shelf documents): it produces the
+  *identical* match set — matched 3,370 → 3,372, ambiguous 447, conflicts 40, shared pages 0
+  before and after, no match displaced — differing only in recording the two `unique` where
+  the curated rows record them `curated`. On equal outcomes this spec's own discipline takes
+  the narrow thing: the rule fires exactly twice, delivers nothing beyond those two, and
+  takes standing power over every future conciliar record with nothing pinning the class
+  table that bounds it. Only 18 records carry `promulgatedBy` at all (Vatican I's 2 and
+  Vatican II's 16), and under the rule Vatican II's sixteen — the acts the principle most
+  obviously covers — gain nothing, because no category's class admits genre `decree` or
+  `declaration` and the AAS indexes never print `CONSTITUTIO DOGMATICA`. Whether they should
+  is [#56](https://github.com/CatholicOS/cmddr/issues/56)'s to measure, in a phase that will
+  have to touch the class table anyway.
 
 ## 6. Curation and the hand confirmation
 
