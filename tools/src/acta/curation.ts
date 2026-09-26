@@ -481,6 +481,20 @@ export const ACTA_INDEX_CORRECTIONS: Readonly<Record<string, IndexCorrection>> =
       + "ENCYCLICAE / LUMEN FIDEI', read 2026-09-13) -- 29 June 2013, the solemnity of Peter and Paul. The index prints `Iun. 28`; the "
       + 'shelf record is `mag:francis-i/lumen-fidei-2013`, dated 2013-06-29.',
   },
+  // Phase 2b′ (the annual index PDFs of 2003-2009): the 2004 index dates *Pastores gregis* to
+  // a canonisation day, and the creation guard held it `same-incipit-elsewhere` (#44).
+  '2004:825': {
+    printed: '2003-10-05',
+    date: '2003-10-16',
+    indexLine: '2003 Oct. 5 Pastores gregis. – De Episcopo ministro Evangelii Iesu / Christipromundispe 825',
+    evidence: "The exhortation's own dating formula reads 'Datum Romae, apud S. Petrum, die xvi mensis Octobris, anno MMIII, vicesimo quinto "
+      + "anniversario die electionis Nostri ad Pontificatum' (AAS 96 (2004) 924, PDF page 924 of AAS-96-2004-ocr.pdf, read 2026-09-26; the act "
+      + "opens at p. 825, the first page of the fascicle of 3 December 2004, under 'ACTA IOANNIS PAULI PP. II / ADHORTATIO APOSTOLICA "
+      + "POST-SYNODALIS / DE EPISCOPO MINISTRO EVANGELII IESU CHRISTI PRO MUNDI SPE') -- 16 October 2003, the twenty-fifth anniversary of the "
+      + 'election. The index prints `Oct. 5` as the volume\'s own index does too (AAS 96 (2004), PDF page 980, read in the page image), the day of '
+      + 'the two canonisation decretals it enters on the same page (*De cetero, fratres*, 617; *Caritas Christi urget*, 713); the shelf record is '
+      + '`mag:john-paul-ii/pastores-gregis-2003`, dated 2003-10-16.',
+  },
   '1962:66': {
     printed: '1962-01-05',
     date: '1962-01-06',

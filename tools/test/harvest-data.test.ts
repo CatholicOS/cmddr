@@ -2826,6 +2826,8 @@ describe('the AAS reference (acta reference spec)', () => {
     // Consilio* (p. 7) are AAS 1's reprints of ASS 41 (1908) 619 and 425, their first
     // printing and citation of record (ACTA_REPRINTS 'AAS:1:5', 'AAS:1:7'); *Communium rerum*
     // (p. 333) remains.
+    // #44 moves 2004 from 32 to 33: *Pastores gregis* (AAS 96 (2004) 825) by the curated index
+    // correction of its date, the index's `Oct. 5` against the act's own 16 October 2003.
     // A change to a fixture, the parser, the matcher or a shelf harvest moves these.
     const bySource = new Map<string, number>();
     for (const d of cited) bySource.set(sourceOf(d), (bySource.get(sourceOf(d)) ?? 0) + 1);
@@ -2842,7 +2844,7 @@ describe('the AAS reference (acta reference spec)', () => {
       '1979': 59, '1980': 58, '1981': 49, '1982': 73, '1983-I': 35, '1984': 62, '1985': 50, '1986': 47, '1987': 61, '1988': 60, '1989': 61,
       '1990': 56, '1991': 56, '1992': 65, '1993': 54, '1994': 75, '1995': 52, '1996': 62, '1997': 59, '1998': 65, '1999': 43, '2000': 50,
       '2001': 37, '2002': 44,
-      '2003': 36, '2004': 32, '2005': 34, '2006': 18, '2007': 23, '2008': 23, '2009': 20,
+      '2003': 36, '2004': 33, '2005': 34, '2006': 18, '2007': 23, '2008': 23, '2009': 20,
       '2010': 19, '2011': 25, '2012': 24, '2013': 20, '2014': 28,
       '2015': 38, '2016': 26, '2017': 14, '2018': 15, '2019': 17, '2020': 18, '2021': 24, '2022': 18, '2023': 29, '2024': 26,
     });
@@ -2850,7 +2852,8 @@ describe('the AAS reference (acta reference spec)', () => {
     // the era's 105 are 112 with Task 9's seven readings; the two curated references are *Providentissima Mater* (no index
     // entry) and *Ubi arcano Dei consilio* (whose Italian match it displaces: one reference either way, counted in the 112).
     // Phase 2c-i (the ASS sample): the era's 112 are 110, *Sapienti Consilio* and *Promulgandi* cited at ASS 41 (ACTA_REPRINTS).
-    expect(cited).toHaveLength(225 + 130 + 144 + 800 + 1421 + 66 + 110 + 1 + 5 + 186);
+    // #44: 2003-2009's 186 are 187, *Pastores gregis* matched by a curated index correction.
+    expect(cited).toHaveLength(225 + 130 + 144 + 800 + 1421 + 66 + 110 + 1 + 5 + 187);
     // By class: the index's *Nuntii* carry the Christmas and Easter Urbi et Orbi, and the
     // volumes' *Nuntii radiophonici* / *radiotelevisifici* three more (1958, 1978).
     const byClass = new Map<string, number>();
@@ -2885,7 +2888,8 @@ describe('the AAS reference (acta reference spec)', () => {
       // the `fullLine: 40` the seven sources carry (join.ts): +3 apostolic letters of 2005,
       // +1 constitution of 2006 (*In Kyrgyzstania*) and +1 message of 2008, each an entry
       // whose page the narrow column sets after one space on a short continuation line.
-      'apostolic-exhortation': 46, 'apostolic-letter': 1394, 'apostolic-letter+motu-proprio': 176, encyclical: 120,
+      // #44: +1 exhortation, *Pastores gregis* (AAS 96 (2004) 825) by a curated index correction.
+      'apostolic-exhortation': 47, 'apostolic-letter': 1394, 'apostolic-letter+motu-proprio': 176, encyclical: 120,
       letter: 101, message: 265, 'papal-bull': 4, 'papal-bull+apostolic-constitution': 899, 'urbi-et-orbi': 83,
     });
     const francisOnly = cited.filter((d) => d.acta!.year >= 2015);
@@ -2915,8 +2919,9 @@ describe('the AAS reference (acta reference spec)', () => {
     // Phase 2c-i (the ASS sample): Pius X's 58 -> 56, *Sapienti Consilio* and *Promulgandi* now
     // cited at ASS 41 (1908), AAS 1's printing being their reprint (ACTA_REPRINTS); his ASS
     // references are pinned in the ASS block below.
+    // #44: John Paul II's 1,422 -> 1,423, *Pastores gregis* by a curated index correction.
     expect(Object.fromEntries([...byIssuer].sort())).toEqual({
-      'rp:benedict-xv': 35, 'rp:benedict-xvi': 179, 'rp:francis-i': 33, 'rp:john-paul-i': 6, 'rp:john-paul-ii': 1422, 'rp:john-xxiii': 170,
+      'rp:benedict-xv': 35, 'rp:benedict-xvi': 179, 'rp:francis-i': 33, 'rp:john-paul-i': 6, 'rp:john-paul-ii': 1423, 'rp:john-xxiii': 170,
       'rp:paul-vi': 655, 'rp:pius-x': 56, 'rp:pius-xi': 104, 'rp:pius-xii': 203,
     });
     // Every reference into AAS 9 (1917) and AAS 75 (1983) names part I -- part II is the Code
@@ -3655,10 +3660,10 @@ describe('the AAS-only documents (AAS-only documents spec, phase 2a)', () => {
     expect(era.filter((d) => d.genre === 'letter')).toEqual([]);
     expect(era.filter((d) => d.genre === 'encyclical')).toEqual([]);
     const refs = everything.filter((d) => d.acta && d.acta.year >= 2003 && d.acta.year <= 2009);
-    // 265 = 186 matched + 79 created. The `fullLine: 40` the seven sources carry adds 12 of
+    // 266 = 187 matched + 79 created (186 until #44's curated correction matched *Pastores gregis*). The `fullLine: 40` the seven sources carry adds 12 of
     // them (5 matched, 7 created), the narrow column setting their page after one space on a
     // continuation line the whole-line reading would not close (join.ts).
-    expect(refs).toHaveLength(265);
+    expect(refs).toHaveLength(266);
     // Spot checks read in the fixtures: the encyclicals cite their pages, each verified against
     // the line the index prints -- `2003 Apr. 17 « Ecclesia de Eucharistia » … 433` (2003 fixture
     // l. 128-131), `2005 Dec. 25Deus Caritas est … 217` (2006, l. 132-134), `2007 Nov. 30 « Spe
@@ -3669,11 +3674,12 @@ describe('the AAS-only documents (AAS-only documents spec, phase 2a)', () => {
     expect(by['mag:benedict-xvi/deus-caritas-est-2005']?.acta).toEqual({ series: 'AAS', volume: 98, year: 2006, page: 217 });
     expect(by['mag:benedict-xvi/spe-salvi-2007']?.acta).toEqual({ series: 'AAS', volume: 99, year: 2007, page: 985 });
     expect(by['mag:benedict-xvi/caritas-in-veritate-2009']?.acta).toEqual({ series: 'AAS', volume: 101, year: 2009, page: 641 });
-    // The one act of weight the era leaves unreferenced is John Paul II's post-synodal
-    // exhortation *Pastores gregis*: the 2004 index dates it `2003 Oct. 5` (AAS 96 (2004) 825)
-    // and vatican.va's shelf 16 October 2003, so the join does not match it and the duplicate
-    // guard holds the entry as `same-incipit-elsewhere` rather than mint a second record. A
-    // curated correction, not a pin, is what releases it (spec §11.3); it is not asserted here.
+    // John Paul II's post-synodal exhortation *Pastores gregis*: the 2004 index dates it
+    // `2003 Oct. 5` (AAS 96 (2004) 825), a misprint -- the act's own dating formula at AAS 96
+    // (2004) 924 reads 16 October 2003, the date of the shelf record. Without a row the join
+    // missed it and the duplicate guard held the entry `same-incipit-elsewhere`; the curated
+    // index correction `2004:825` (curation.ts, #44) matches it to the shelf record instead.
+    expect(by['mag:john-paul-ii/pastores-gregis-2003']?.acta).toEqual({ series: 'AAS', volume: 96, year: 2004, page: 825 });
   });
 
   it('joins and creates from the volumes of 1909-1925 with their recovered pages as the era report says (acta volumes spec §10, phase 2b-iii-b)', () => {
