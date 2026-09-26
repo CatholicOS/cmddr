@@ -540,8 +540,15 @@ three on 2026-09-26, carrying 1909–1931, 1958, 1984, 1990 and the 2003–2009 
 and the sixteen opening pages are read. Each row quotes its page's Latin title, the
 promulgation formula, Paul VI's subscription and the dateline, beside the index line with
 its fixture line number, and states whether the page the index gives is the page the act
-opens on. `ACTA_SOURCES` and the fixtures README gain the three retrieval dates; the three
-index fixtures are **not** re-extracted, phase 2b-ii-b having written them.
+opens on -- the printed page, located by its running header, never assumed to be the PDF's
+page of the same number.
+
+**Nothing about the fixtures changes.** The volumes are fetched in the script's text mode
+(`fetch-acta.sh text 1964-1966`), which writes each volume's whole text to the store's
+`txt/` and touches no fixture; the three index fixtures are **not** re-extracted, phase
+2b-ii-b having written them, and `ACTA_SOURCES`'s `retrieved` dates stay as it left them,
+since they record when a fixture was extracted and no fixture is. The date a page was read
+is recorded where every other row records it, in the row's own `evidence`.
 
 AAS 58 p. 10 is read in the same pass, the volume being in hand, so the *Nuntii* of 8
 December 1965 is recorded from the printing. **AAS 54 is not fetched**, so the Fathers'
