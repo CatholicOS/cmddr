@@ -267,8 +267,8 @@ reference — plus the scanner's defect rows (§3) and the summa's unclaimed row
 Three curated tables carry the hand's decisions, each row quoting its evidence:
 
 - `ACTA_INDEX_CORRECTIONS` (a date the OCR broke, keyed by the entry) and
-  `ACTA_MATCH_OVERRIDES` (the class rule sends an entry to the wrong act) apply to ASS
-  entries unchanged;
+  `ACTA_MATCH_OVERRIDES` (the matcher's rules send an entry to the wrong act, or refuse it
+  the right one — see the class disagreements below) apply to ASS entries unchanged;
 - **`ASS_READINGS`**, new: an act the scanner missed or misread — heading, page, date,
   opening, pope, category — quoted from the volume, applied before the join as 2b-iii-b's
   readings are (`applyPageRows`), keyed by volume and page; a reading no defect or
@@ -277,6 +277,35 @@ Three curated tables carry the hand's decisions, each row quoting its evidence:
 No regex is added for a defect that occurs once. The nine provisional records of the era
 are listed with what the ASS prints at their date; a re-mint is the owner's decision and
 out of scope.
+
+**A class disagreement is bridged by a row, never by a rule.** Where the volume's class
+heading and the registry's genre disagree, the class rule reaches the right candidate — the
+pope's record, on the act's own day — and filters it out, so the entry stands unmatched with
+that record beside it as its `sameDate`: discussion
+[#30](https://github.com/CatholicOS/cmddr/discussions/30)'s question in its second symptom,
+where the first is a wrong match and this is no match at all. **Decided by the owner on
+2026-09-26** (phase 2c-ii-d, Task 4b): each such entry is bridged by an
+`ACTA_MATCH_OVERRIDES` row quoting the page and stating what agrees — the pope, the day and,
+where the entry has an `opening`, the incipit — and what disagrees, naming the category row
+and the class term that does the refusing. **This paragraph is the home of that principle;
+the matcher is not.** Three reasons no rule is written for it:
+
+- a rule matching on pope and day while ignoring class would make every same-day coincidence
+  a match and empty the class rule of the purpose it exists for, which is to keep such
+  disagreements visible as findings rather than resolve them silently;
+- the exclusions the category table carries are load-bearing in their own right.
+  `excludes: ['in-forma-brevis']` on the `Litterae Apostolicae` row (categories.ts) is
+  **deliberate**: it is what keeps *Venerabilis Decessor* off *Superiore iam aetate*, both of
+  8 September 1950. So the ASS's habit of heading a brief `LITTERAE APOSTOLICAE`, where the
+  AAS volumes head it `LITTERAE IN FORMA BREVIS` or `BREVE` (the *Brevia* row, which
+  *requires* the characteristic), is carried by a row too — never by relaxing the exclusion;
+- the disagreement is a finding about the registry and vatican.va, not about the scanner. On
+  three of phase 2c-ii-d's five rows the shelf disagrees with itself inside one record: the
+  url reads `litterae-apostolicae-…` as the volume heads the act, while the
+  `sourceGenreLabel` the genre is read from reads `Enciclica`.
+
+Phase 2c-ii-d wrote five such rows — ASS 4 pp. 129 and 131, ASS 5 p. 594, ASS 7 p. 629,
+ASS 11 p. 420 — and changed no rule, no category row and no regex to write them.
 
 ## 7. Report, tests, documentation
 
@@ -709,6 +738,68 @@ D. N. Iesu`), two datelines the OCR truncated, one act quoting a document of 185
 least scannable of the series, and ASS 7 carries the one genuine page offset the survey found.
 ASS 1 and ASS 7 are two of the four volumes whose summa finds no papal part, so the blindness ASS
 20 and ASS 26 show here recurs there.
+
+**Measured (2026-09-26, phase 2c-ii-d).** Pius IX's ten volumes, ASS 2–11, and with them the
+series ([era report](../reports/2026-09-26-ass-volumes-pius-ix.md), which covers ASS 1–11 and
+says which of them 2c-i had already joined). **All 41 volumes are joined and 2c-ii is complete.**
+
+*The least scannable era, as 2c-ii-c predicted.* 63 acts over the eleven volumes' 8,023 pages,
+90 defects, **43 of 141** summa rows claimed — 30.5 %, where 2c-ii-c claimed 46.3 % and 2c-ii-b
+71.1 %. **16 references** written, 9 by the unique rule, none by the opening rule and 7 by a
+curated override; the ASS 290 in all. Per volume: ASS 3 2, ASS 4 2, ASS 5 3, ASS 6 3, ASS 7 2,
+ASS 8 1, ASS 11 3, and none from ASS 1, ASS 2, ASS 9 or ASS 10. By issuer the 16 are Pius IX 11
+— **the first ASS references he has ever carried** — Leo XIII 3 and Vatican I 2, the first of
+either series on a council-issued record.
+
+*The shelf is the ceiling, and the era report counts it (§6.1).* 37 shelf records are dated
+1865–1878 against the 77 entries the scanner read — Pius IX 31 of his 75 records, Leo XIII 4,
+Vatican I 2 — and 14 of the 37 now carry a reference. 1866, 1869 and 1878 hold no record of Pius
+IX at all, so no volume of those years can match one of his however well it is read: he is a
+flat-era pope (`pontiffs.ts`) publishing as one reverse-chronological list with no shelves, so
+every record of his carries `source.shelf: null` and the class the join matches on is the genre
+alone. **44 entries held, every one `series-not-created`, 10 of them briefs** against a briefs
+shelf of 5 records — thin rather than absent, as under Leo XIII, and 5 records cannot answer 10
+printed brevia.
+
+*Two rules, each measured over all 41 volumes before it was accepted.* `ALLOCVTIO`, the V the
+earliest volumes set for U, repaired in `HEADING_OCR` (ass-headings.ts): its movement is confined
+to ASS 1 and ASS 2, no running header opens an act, and **not one reference came of it** — all 17
+allocutions the era's volumes print are skipped before the class rule is asked, *Allocutiones*
+being `harvested: 'no'` (categories.ts) — so what it bought was a complete reading and not a
+citation. And ASS 7's papal heading `EX ACTIS AD INSTAR CONSISTORIALIUM`, which `PAPAL_HEAD_FORMS`
+now knows: it names the *manner* of the acts rather than the pope, `DICASTERY_RE` matched it too,
+and the volume had been reported as finding no papal part. **It has one**: 13 rows, 4 claimed,
+9 unclaimed. The new check paid at once by naming what the store cannot hold — printed
+pp. 496–497 are absent from the store's PDF altogether, which is what ASS 7's curated +2 offset
+(`ASS_PAGE_OFFSETS`) actually is, so the act the summa lists at printed p. 496 opens on a page no
+scan of this file contains and no rule can reach it.
+
+*And a third rule rejected with its numbers.* The one-T half of the same ruled V-for-U pair,
+`LITERAE` and `LITERAE APOSTOLICAE` as class headings, reads **0 acts over all 41 volumes**, so
+the owner's fallback branch was executed instead: the acts ASS 2 prints under a one-T spelling or
+under none are curated readings, for acts the rule would not have reached anyway. A rule that
+fires for no gain is not accepted here, however symmetrical it looks beside one that does.
+
+*The round: 16 curated readings and 7 match overrides, 23 rows for 77 entries.* **No ambiguity
+and no double claim**: the corpus totals stand where they did before the era joined. Two of the
+overrides are the conciliar constitutions of §5 — *Dei Filius* at ASS 5 (1869) 481 and *Pastor
+Aeternus* at ASS 6 (1870) 40, the owner's ruling implemented by curated row after the general
+`promulgatedBy` rule was measured and rejected — and five are the class disagreements of §6.
+
+*Three acts stay unread, and one of them is a finding about the reader.* ASS 8 pp. 443 and 445
+are reprints of 1860 and 1857 whose first printing is nowhere in the series, and the *Mella*
+letter the summa lists at ASS 8 p. 623 opens at p. 625, which no admissible key reaches: a
+reading keyed 623 would cite a page the act is not on, and one keyed 625 would be stale by the
+loader's own rule. All three were read in the store by hand and deliberately left uncurated, and
+they are [#56](https://github.com/CatholicOS/cmddr/issues/56)'s along with the reprint question.
+`DATUM_RE` (ass.ts) matches only a dateline given **at Rome**, so a papal act given anywhere else
+— `Datum Bononiae` — is invisible to the scanner whatever its heading.
+
+*What 2c-iii inherits.* Not a scanning residue but the reverse gap over the whole series: **207
+of the 496** shelf records dated 1865–1908 carry no reference of either series — Leo XIII 127 of
+263, Pius X 59 of 200, Pius IX 21 of 31, Vatican I 0 of 2 — which is the difference between what
+vatican.va shelves and what the gazette printed. Closing any of it means reading the volumes for
+acts the summa never listed.
 
 **Out of scope for 2c-ii**, unchanged: the ASS-born documents and the reprints of earlier
 popes registered under their own issuers (2c-iii, decided from the eras' gap reports).
