@@ -529,9 +529,19 @@ without an ordering change.
 | `mag:vatican-ii/dei-verbum-1965` | `» Nov. 18 Constitutio dogmatica de divina Revelatione 817` (l. 795, fused) | 58 (1966) 817 |
 | `mag:vatican-ii/apostolicam-actuositatem-1965` | `» » Decretum de apostolatu laicorum 837` (l. 795, fused) | 58 (1966) 837 |
 | `mag:vatican-ii/dignitatis-humanae-1965` | `» Dec. 7 Declaratio de libertate religiosa 929` | 58 (1966) 929 |
-| `mag:vatican-ii/ad-gentes-1965` | `» » , » Decretum de activitate missionali Ecclesiae . . . . . . . 948` | 58 (1966) 948 |
+| `mag:vatican-ii/ad-gentes-1965` | `» » , » Decretum de activitate missionali Ecclesiae . . . . . . . 948` | 58 (1966) **947** |
 | `mag:vatican-ii/presbyterorum-ordinis-1965` | `» » » Decretum de presbyterorum ministerio et vita , 991` | 58 (1966) 991 |
 | `mag:vatican-ii/gaudium-et-spes-1965` | `-» » » Constitutio pastoralis de Ecclesia in mundo huius temporis . . 1025` | 58 (1966) 1025 |
+
+*One page of the sixteen is the index's own slip, found by the reading this phase requires.*
+The chronological index enters *Ad gentes* at **948**; the decree opens at **947**, where the
+volume's own *Index analyticus* also cites it (`Missionalis Ecclesiae activitas … delineat,
+947 ss. ; Ecclesia peregrinans natura sua missionaria est, 948 ss.`, printed p. 1250 — and
+`Ecclesia peregrinans natura sua missionaria est` is exactly what p. 948 opens with, under
+`CAPUT I / DE PRINCIPIIS DOCTRINALIBUS`). The row cites **947**, the page the act opens on,
+and quotes both. No `ACTA_PAGE_CORRECTIONS` row can carry this: that table keys off a parsed
+entry, and the entry stands in the part the parser skips — which is one more reason the
+reference is curated.
 
 **The evidence is the printed page, not the index line.** Every existing row of this table
 quotes what a page prints and the act's own dating formula, read in the volume; a row

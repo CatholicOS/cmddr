@@ -144,7 +144,7 @@ Replace them with:
       'mag:vatican-ii/dei-verbum-1965': { series: 'AAS', volume: 58, year: 1966, page: 817 },
       'mag:vatican-ii/apostolicam-actuositatem-1965': { series: 'AAS', volume: 58, year: 1966, page: 837 },
       'mag:vatican-ii/dignitatis-humanae-1965': { series: 'AAS', volume: 58, year: 1966, page: 929 },
-      'mag:vatican-ii/ad-gentes-1965': { series: 'AAS', volume: 58, year: 1966, page: 948 },
+      'mag:vatican-ii/ad-gentes-1965': { series: 'AAS', volume: 58, year: 1966, page: 947 },
       'mag:vatican-ii/presbyterorum-ordinis-1965': { series: 'AAS', volume: 58, year: 1966, page: 991 },
       'mag:vatican-ii/gaudium-et-spes-1965': { series: 'AAS', volume: 58, year: 1966, page: 1025 },
     });
@@ -236,7 +236,7 @@ evidence must quote, so that nothing has to be looked up twice — the fixture i
 | `mag:vatican-ii/dei-verbum-1965` | 58, 1966, 817 | 795 (fused) |
 | `mag:vatican-ii/apostolicam-actuositatem-1965` | 58, 1966, 837 | 795 (fused) |
 | `mag:vatican-ii/dignitatis-humanae-1965` | 58, 1966, 929 | 797 |
-| `mag:vatican-ii/ad-gentes-1965` | 58, 1966, 948 | 798 |
+| `mag:vatican-ii/ad-gentes-1965` | 58, 1966, **947** (the index's 948 is its own slip — spec §12.3) | 798 |
 | `mag:vatican-ii/presbyterorum-ordinis-1965` | 58, 1966, 991 | 799 |
 | `mag:vatican-ii/gaudium-et-spes-1965` | 58, 1966, 1025 | 800 |
 
