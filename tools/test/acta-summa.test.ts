@@ -143,12 +143,36 @@ describe('parseSummaPapalPart (spec §4): the papal part, loosely', () => {
     }
   });
 
-  it('does not read a dicastery heading as the papal part (ASS 2, 7, 26 open on one)', () => {
-    for (const opener of ['EX ACTIS CONSISTORIALIBUS', 'EX ACTIS AD INSTAR CONSISTORIALIUM.', 'EX S. CONGR. RITUUM']) {
+  // ASS 7 (1872) 751's `EX ACTIS AD INSTAR CONSISTORIALIUM.` was pinned here as a dicastery
+  // heading by phase 2c-ii-a, on the face of the words. Phase 2c-ii-d read the thirteen rows
+  // under it (pp. 5, 91, 100, 165, 244, 363, 430, 496, 512, 518, 565, 629, 635 -- summa.ts
+  // enumerates the same thirteen) and they are the pope's own, every one -- so it moved to
+  // the test below, and the volume's completeness check stopped being vacuous.
+  it('does not read a dicastery heading as the papal part (ASS 2 and 26 open on one)', () => {
+    for (const opener of ['EX ACTIS CONSISTORIALIBUS', 'EX S. CONGR. RITUUM']) {
       const { rows, heading } = parseSummaPapalPart(`SUMMA ACTORUM\nQUAE IN HOC VOLUMINE CONTINENTUR\n${opener}\nDecretum quoddam . . 42`);
       expect(heading, opener).toBeNull();
       expect(rows, opener).toEqual([]);
     }
+  });
+
+  // ASS 7 (1872) 751 heads the pope's own part by the manner of his acts, not by his name or
+  // their class, and `DICASTERY_RE` matches the same line (`EX\s+ACTIS\b`). The part must
+  // therefore open on it and *not* close on it: the guard is `parseSummaPapalPart`'s
+  // `!stripHead`, which never tests the part's own opening line for a dicastery heading.
+  it("reads ASS 7 (1872) 751's `EX ACTIS AD INSTAR CONSISTORIALIUM.` as the papal part it heads, and closes it at the Secretaria Brevium", () => {
+    const { rows, heading, end } = parseSummaPapalPart([
+      'SUMMA ACTORUM',
+      'QUAE IN HOC SEPTIMO VOLUMINE CONTINENTUR',
+      'EX ACTIS AD INSTAR CONSISTORIALIUM.',
+      'Epistola Ssmi Patris ad Emum Cardinalem Iacobum Antonelli . . 5',
+      'Allocutio Ssmi D. N. habita die 23 decembris 1872 . . 165',
+      'EX SECRETARIA BREVIUM.',
+      'Litterae Apostolicae de Vicariatu Apostolico pro sacris Missionibus Africae centralis 25',
+    ].join('\n'));
+    expect(heading).toBe('EX ACTIS AD INSTAR CONSISTORIALIUM');
+    expect(end).toBe('EX SECRETARIA BREVIUM.');
+    expect(rows.map((r) => r.page)).toEqual([5, 165]);
   });
 
   it('ends the papal part at a dicastery heading printed without the `EX` prefix (ASS 21 (1888) 750: `S. CONGR. INDICIS`)', () => {

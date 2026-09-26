@@ -147,6 +147,12 @@ export const NOT_CREATED: Readonly<Record<string, string>> = {
   // table is read (`series-not-created`, ass volumes spec decision 1), and no AAS index
   // prints the heading; whether the class is created is decided in 2c-iii.
   'Brevia': 'printed by the ASS only, whose entries phase 2c-i joins as references and never creates (ass volumes spec, decision 1); creation from the briefs shelf is decided in 2c-iii',
+  // The two dogmatic constitutions of Vatican I (categories.ts, Task 3b): both are ASS
+  // entries, held before this table is read (`series-not-created`), and no AAS index prints
+  // the heading. A conciliar act is never minted from a gazette in any case -- it is the
+  // council's record, which the registry already holds, and the *Acta* reference is joined
+  // to it and never creates it (the owner's ruling of 2026-09-26; spec §5).
+  'Constitutiones dogmaticae': 'the two conciliar constitutions the ASS prints under Pius IX, joined to the records Vatican I already has and never created: an ASS entry is held `series-not-created` before this table is read, and no AAS index prints the heading',
 };
 
 /**

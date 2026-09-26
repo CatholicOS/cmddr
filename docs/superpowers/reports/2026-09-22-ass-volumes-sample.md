@@ -5,17 +5,20 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
 
 ## 1. Reading
 
-1. **The body scan works from 1879 on and fails on 1865: the era's headline is a date, not a rule.** Five volumes, one
-   scanner, and the yield divides at the first of them. ASS 1 (1865–66, 767 pages) gave **0 acts** — its three
-   papal acts were read by hand and stand in `ASS_READINGS` (§2.5) — while ASS 12 (1879) gave 10, ASS 23 (1890–91) 9,
-   ASS 33 (1900–01) 22 and ASS 41 (1908) 37 — 78 acts from the five bodies by rule. After the curation the sample
-   carries **97 entries, 73 of them as the scanner read them** (75.3 %) and 24 read by hand (5 readings replacing
-   a scanned entry each (ASS 23 p. 318, ASS 33 p. 355, ASS 33 p. 385, ASS 41 p. 12, ASS 41 p. 361) and the rest added where the scan had nothing). The 1865 volume is not a harder instance of the same problem but a different volume: its
-   class headings are spelt `LITERAE APOSTOLICAE` with one T and `ALLOCVTIO` with the OCR's V, neither a heading of the
-   list; its two apostolic letters are printed under `SECRETARIA BREVIUM` behind an editor's preface, so the act does not
+1. **The body scan works from 1879 on and barely reads 1865: the era's headline is a date, not a rule.** Five volumes, one
+   scanner, and the yield divides at the first of them. ASS 1 (1865–66, 767 pages) gave **1 act** — the allocution of
+   p. 193, which phase 2c-ii-d's `ALLOCVTIO` repair reached; all three of its papal acts stand in
+   `ASS_READINGS` (§2.5) — while ASS 12 (1879) gave 10, ASS 23 (1890–91) 9,
+   ASS 33 (1900–01) 22 and ASS 41 (1908) 37 — 79 acts from the five bodies by rule. After the curation the sample
+   carries **97 entries, 73 of them as the scanner read them** (75.3 %) and 24 read by hand (6 readings replacing
+   a scanned entry each (ASS 1 p. 193, ASS 23 p. 318, ASS 33 p. 355, ASS 33 p. 385, ASS 41 p. 12, ASS 41 p. 361) and the rest added where the scan had nothing). The 1865 volume is not a harder instance of the same problem but a different volume: its
+   class headings are spelt `LITERAE APOSTOLICAE` with one T and `ALLOCVTIO` with the OCR's V — the V is repaired
+   (`HEADING_OCR`, phase 2c-ii-d, which measured the one-T spelling at 0 acts over all 41 volumes and left it out);
+   its two apostolic letters are printed under `SECRETARIA BREVIUM` behind an editor's preface, so the act does not
    open where the heading stands; and **its summa has no papal part at all** (0 rows, §2) — the pope's acts are listed
-   under the dicastery that issued them. Scan and check therefore fail together there, which is why the three readings
-   were admitted under the ruling's last clause and why §2's ASS 1 row is the only one whose every act is curated.
+   under the dicastery that issued them. Scan and check therefore all but fail together there: the readings of pp. 578
+   and 744 answer a `no-heading` span and a `no-date` defect, that of p. 193 replaces the one act the scan reads,
+   and §2's ASS 1 row is the only one whose every act is curated.
    From 1879 the volumes print a class heading, a salutation and a `Datum Romae` dateline in the shape the scanner
    reads, and the yield rises with the century.
 2. **The summa is the check, and it checked: the sample's summae list 87 rows, a scanned act opens at 60 of the pages**
@@ -27,8 +30,8 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    *consilio* itself (41 p. 427, two pages after its heading at 425), and three dicastery pages (23 pp. 109, 116, 119)
    the OCR's interleaving of summa p. 753 turned into papal rows — **and one genuine miss**, ASS 33 p. 193, whose
    dateline the OCR broke (the month lifted onto the line above). One miss in 87 rows is the measure of the scan's
-   completeness where the summa can speak. The other direction is thinner: 16 scanned acts the summa does not list
-   (§2.4, which prints every one: ASS 12 p. 588; ASS 23 p. 641; ASS 33 pp. 212, 213, 396, 401; ASS 41 pp. 37, 134, 300, 301, 580, 581, 623, 748, 757, 766). **14 of the 16 are of class `BREVE`**
+   completeness where the summa can speak. The other direction is thinner: 17 scanned acts the summa does not list
+   (§2.4, which prints every one: ASS 1 p. 193; ASS 12 p. 588; ASS 23 p. 641; ASS 33 pp. 212, 213, 396, 401; ASS 41 pp. 37, 134, 300, 301, 580, 581, 623, 748, 757, 766). **14 of the 17 are of class `BREVE`**
    — the twelve phase 2c-ii-a read from the ring of the Fisherman (ASS 33 pp. 212, 213 and ten of ASS 41, of which
    300 and 301 answered a `header-mismatch` defect until 2c-ii Task 6's relaxation) and two headed
    with the class word and read before it (ASS 12 p. 588, ASS 33 p. 401) — and that is the summa working, not failing:
@@ -139,20 +142,20 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    AAS 1 (1909) 5) were promulgated in the last months of the ASS and reprinted in the first number of the AAS —
    *Promulgandi* being the constitution that instituted the AAS, printed on the new gazette's opening page. Both shelf
    records already carried an AAS reference (one a curated page of phase 2b-iii-b, one a recovered page), and the join
-   claimed each twice. `ACTA_REPRINTS` has one rule — *the citation of record is the first printing* — so 2 rows were
-   written, keyed by the later printing (`AAS:1:7`, `AAS:1:5`) and pointing at the ASS, and the two documents now cite ASS 41. The
+   claimed each twice. `ACTA_REPRINTS` has one rule — *the citation of record is the first printing* — so 3 rows were
+   written, keyed by the later printing (`ASS:30:39`, `AAS:1:7`, `AAS:1:5`) and pointing at the ASS, and the two documents now cite ASS 41. The
    two entries of AAS 1 (1909) are now listed as reprints rather than matches in the AAS sample and 1909–1925 era
    reports, regenerated with this one, and the corpus counts they print moved with them. **Canonical usage runs the other way** — the *Fontes* and the 1917 Code's apparatus cite both at AAS 1 —
    and if the owner prefers that, `Reprint` needs a third `kind` (a first printing in the superseded series, cited at
    its re-issue) and the two rows re-keyed; README's phase 2b-iii-b paragraph and the 1909–1925 era report would then
    need the same correction they need today. Nothing here is load-bearing beyond those two rows.
-12. **The reverse gap is 41 documents, and it is Leo XIII's.** The shelf documents of the sample's years carrying no
-   reference at all (§5): Pius IX 2 (1865–66), Leo XIII 24 (1 in 1879, 16 in 1890–91, 7 in 1900–01), Pius X 15 (1908). Almost
+12. **The reverse gap is 32 documents, and it is Leo XIII's.** The shelf documents of the sample's years carrying no
+   reference at all (§5): Pius IX 2 (1865–66), Leo XIII 15 (0 in 1879, 12 in 1890–91, 3 in 1900–01), Pius X 15 (1908). Almost
    none of them has an ASS entry on its date — §5's last column is empty in all but a handful — so these are acts the
    five volumes do not print, not acts the scanner missed: the ASS published the Holy See's acts selectively, and a
    volume of 672–810 pages yields between 3 entries here (ASS 1, all three read by hand) and 44 (ASS 41). For the era as a whole the registry holds
-   496 shelf documents dated 1865–1908 and **175 of them now carry a reference** (§7), of which **64** are these five
-   volumes' yield, phase 2c-ii-b's five of Pius X carrying the rest. That is the number 2c-ii moves, with 31 volumes left.
+   496 shelf documents dated 1865–1908 and **289 of them now carry a reference** (§7), of which **64** are these five
+   volumes' yield, phase 2c-ii-b's five of Pius X carrying the rest. That is the number 2c-ii moves, with 0 volumes left.
 13. **The allocutions are the one category the sample cannot decide, and the count that would decide it is 1.** 9 entries
    are skipped as a category the registry does not harvest (§3.4): 8 allocutions and the chirograph of ASS 33 p. 714.
    6 of the 8 allocutions carry no date the scanner could read (`????-??-??`): the ASS prints an allocution under its
@@ -169,7 +172,7 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    years late, as the ASS often prints) and now carries its reference while keeping its provisional id. A re-mint is
    the owner's decision and out of scope; what this report adds is that one of the nine now has a source to be re-minted
    from.
-15. **What 2c-ii should expect.** (a) **The OCR is worst at the start.** ASS 1 (1865) yielded 0 acts by rule and needed
+15. **What 2c-ii should expect.** (a) **The OCR is worst at the start.** ASS 1 (1865) yielded 1 act by rule and needed
    3 hand readings; the volumes of the 1860s and 1870s should be assumed unscannable until measured, and the plan
    should budget for reading them rather than for a rule. From 1879 the rate is usable and from 1900 it is good.
    (b) **The Secretaria Brevium was the next rule, and it was taken: it is worth 9 acts in these five volumes and 62
@@ -196,7 +199,7 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
 
 | Source | Pages | Summa pages | Scanned by rule | Entries | From a heading | Readings | Defects | Summa rows | Pages claimed | Rows unclaimed | Acts the summa omits |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| ass-1 (1865–1866) | 767 | 747–752 | 0 | 3 | 0 | 3 | 3 | 0 | 0 | 0 | 0 |
+| ass-1 (1865–1866) | 767 | 747–752 | 1 | 3 | 0 | 3 | 3 | 0 | 0 | 0 | 1 |
 | ass-12 (1879) | 672 | 647–653 | 10 | 11 | 2 | 1 | 1 | 12 | 9 | 3 | 1 |
 | ass-23 (1890–1891) | 768 | 752–758 | 9 | 13 | 0 | 5 | 4 | 14 | 8 | 6 | 1 |
 | ass-33 (1900–1901) | 768 | 761–768 | 22 | 26 | 1 | 6 | 6 | 24 | 16 | 6 | 4 |
@@ -206,9 +209,9 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
 anchors an entry can carry, and the third — the dateline, which the scanner anchors on by rule — is the majority and is not broken
 out (66 of the 97 entries are `dateline`, 7 `heading`, 24 `reading`). “Scanned by rule” is the fixture's own count, taken before the loader applies the
 readings, so “Entries” is “Scanned by rule” plus “Readings” less the readings that *replace* a scanned entry rather than add one
-(5 in the sample, at ASS 23 p. 318, ASS 33 p. 355, ASS 33 p. 385, ASS 41 p. 12, ASS 41 p. 361).
+(6 in the sample, at ASS 1 p. 193, ASS 23 p. 318, ASS 33 p. 355, ASS 33 p. 385, ASS 41 p. 12, ASS 41 p. 361).
 
-**3 of those 5 are readings a rule has since caught up with, and a later era can retire them.** ASS 23 p. 318, ASS 33 p. 355, ASS 33 p. 385
+**3 of those 6 are readings a rule has since caught up with, and a later era can retire them.** ASS 23 p. 318, ASS 33 p. 355, ASS 33 p. 385
 were written because `headerAgrees` refused the page's running header; 2c-ii Task 6's relaxation now reads each of them by rule, and the
 scanned entry agrees with the reading on class, pope, date and opening. **They are listed, not deleted, and nothing in this phase
 removes them**: what each reading still supplies is a *description* free of the OCR's damage (`N.Leonis` for `N. Leonis`,
@@ -221,9 +224,9 @@ reading with a narrower correction. That is a curation decision for the era that
 
 | Page | Category | Pope | Date | Opening | Description | Anchor | Heading (as printed) | Salutation | Dateline (as printed) | Header |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 193 | ALLOCUTIO | Pius IX | 1865-09-25 | *Multiplices inter machinationes artesque, quibus Christiani nominis hostes* | SS. D. N. PII PAPAE IX HABITA IN CONSISTORIO SECRETO DIE XXV SEPTEMBRIS MDCCCLXV. | reading | ASS 1 (1865) 193-197, ass-01-1865.txt. p. 193 l. 2 'EX ACTIS COMTOBIALIBE' (the running head, the OCR's reading of CONSISTORIALIBUS), ll. 6-10 'SANCTISSIMI DOMINI NOSTRI / PII / DIVINA PROVIDENTIA / PAPAE IX.', l. 12 'ALLOCVTIO' (the OCR's V for U), l. 14 'HABITA IN CONSISTORIO SECRETO', l. 17 'DIE XXV SEPTEMBRIS MDCCCLXV.', l. 21 'VENERABILES FRATRES', l. 22 '« Multiplices inter machinationes artesque, quibus Christiani / nominis hostes adoriri Ecclesiam Dei'; no dateline (an allocution), dated from its heading, 25 September 1865; the running heads of the following pages read '194 ALLOCUTIO SS. D. N. PII PAPAE IX.'. Why the scan missed it: `ALLOCVTIO` is no class heading (one line in the sample), so no heading anchor; and ASS 1's summa (pp. 747-752) has no papal part -- its row ('Allocutio SSmi, qua iterum reprobantur et damnantur Massonicae sectae. 193') sits under EX ACTIS CONSISTORIALIBUS -- so the scan and the summa both leave the volume empty (the ruling's last clause). | — | — |  |
-| 578 | LITTERAE APOSTOLICAE | Pius IX | 1866-02-12 | *Gravissimum supremi Nostri Apostolici ministerii munus omnino postulat,* | Litterae Apostolicae in forma Brevis quibus Romanae ephemeridi cui titulus La Civiltà Cattolica perennitati et perpetuitati consulitur (the editor's preface, p. 577). | reading | ASS 1 (1865) 577-581, ass-01-1865.txt. p. 577 l. 4 'LITERA E APOSTOLICAE,' (the volume's single-T spelling, OCR-split) then the editor's preface, l. 12 'Sequentes Apostolicas Literas in forma Brevi expeditas re- / ferimus, quibus Sanctissimus Dominus Noster … praeclarissima encomiis Romanae ephemeridi / cui titulus - LA CIVILTÀ CATTOLICA - merito tributis, eiusdem peren- / nitati, et perpetuitati consulere dignatus est.'; the act opens p. 578 (running head '578 LITERAE APOSTOLICAE.'): l. 2 'PIUS PP. IX.', l. 3 'AD PERPETUAM REI MEMORIAM.', l. 4 '« Gravissimum supremi Nostri Apostolici ministerii munus / omnino postulat, ut intentissimo studio'. Dated p. 581 ll. 26-28 'Datum Romae apud S. Petrum sub Annulo Piscatoris die XII. / Februarii Anno MDCCCLXVI. Pontificatus Nostri Anno Vicesimo. / Locus*Sigilli PIUS PP. IX.'. Why the scan missed it: `LITERAE APOSTOLICAE` is no class heading of the list (the volume's spelling; two acts in ASS 1, none elsewhere), so the anchor at p. 581 found no heading (the no-heading defect at 581, the anchor's page) and its summa row sits under EX SECRETARIA BREVIUM: the scan and the summa both leave the volume empty (the ruling's last clause). Keyed 578, where the act itself opens after the preface. | — | — |  |
-| 744 | LITTERAE APOSTOLICAE | Pius IX | 1866-04-13 | *Quamvis Urbs Roma Beatissimos Apostolorum Principes tamquam praecipuos* | Litterae Apostolicae in forma Brevis quibus S. Catharina Senensis inter secundarios Almae Urbis coelestes Patronos recensetur (the editor's preface, p. 744). | reading | ASS 1 (1865) 744-746, ass-01-1865.txt. p. 744 l. 2 'Il SECRETARIA BREVIUM.' (the part's running head), l. 8 'LITERAE APOSTOLICAE,' (the volume's single-T spelling) then the editor's preface, l. 11 'Quamvis iam Decretum retulerimus pag. 630, quo SSmus / Dominus Noster electam Virginem S. Catharinam Senensem in- / ter secundarios Almae Urbis coelestes Patronos recensendam / declaravit; praetermittere tamen nolumus Apostolicas Literas in / forma Brevis', l. 28 'Literae autem Apostolicae sunt sequentis tenoris.', l. 31 'PIUS PP. IX.', l. 32 'AD PERPETUAM REI MEMORIAM.', l. 33 '« Quamvis Urbs Roma Beatissimos Apostolorum Principes tam* / quam praecipuos Patronos suos veneretur'. Dated p. 746 ll. 10-11 'Datum Romae apud S. Petrum sub annulo Piscatoris die XIII. / Aprilis Anno MDCCCLXV1. Pontificatus Nostri Anno Vigesimo.' (the OCR's `1` for `I`). Why the scan missed it: as ASS:1:578 -- `LITERAE APOSTOLICAE` is no class heading, the anchor at p. 746 found no heading (the no-heading defect at 746), the summa lists it under EX SECRETARIA BREVIUM; the scan and the summa both leave the volume empty (the ruling's last clause). Keyed 744, where the heading, the preface and the act's own first words all stand. | — | — |  |
+| 193 | ALLOCUTIO | Pius IX | 1865-09-25 | *Multiplices inter machinationes artesque, quibus Christiani nominis hostes* | SS. D. N. PII PAPAE IX HABITA IN CONSISTORIO SECRETO DIE XXV SEPTEMBRIS MDCCCLXV. | reading | ASS 1 (1865) 193-197, ass-01-1865.txt. p. 193 l. 2 'EX ACTIS COMTOBIALIBE' (the running head, the OCR's reading of CONSISTORIALIBUS), ll. 6-10 'SANCTISSIMI DOMINI NOSTRI / PII / DIVINA PROVIDENTIA / PAPAE IX.', l. 12 'ALLOCVTIO' (the OCR's V for U), l. 14 'HABITA IN CONSISTORIO SECRETO', l. 17 'DIE XXV SEPTEMBRIS MDCCCLXV.', l. 21 'VENERABILES FRATRES', l. 22 '« Multiplices inter machinationes artesque, quibus Christiani / nominis hostes adoriri Ecclesiam Dei'; no dateline (an allocution), dated from its heading, 25 September 1865; the running heads of the following pages read '194 ALLOCUTIO SS. D. N. PII PAPAE IX.'. Why the row stands: until phase 2c-ii-d `ALLOCVTIO` was no class heading and nothing anchored, so the volume's scan was empty and this act was read wholly by hand. That phase repaired the OCR's V for U (HEADING_OCR, ass-headings.ts) and the scan now reads the act at this page, `anchor: 'heading'`, `category: 'ALLOCUTIO'` -- so the row is a **replacement**, and what it still supplies is the date: the heading sets it as `DIE XXV SEPTEMBRIS MDCCCLXV.`, a capital-Roman day and a Roman year, where HEADING_DATE_RE reads `die N Month YYYY`, so the scanned entry carries `????-??-??`. ASS 1's summa (pp. 747-752) still has no papal part -- its row ('Allocutio SSmi, qua iterum reprobantur et damnantur Massonicae sectae. 193') sits under EX ACTIS CONSISTORIALIBUS -- so the summa claims nothing here either way. | — | — |  |
+| 578 | LITTERAE APOSTOLICAE | Pius IX | 1866-02-12 | *Gravissimum supremi Nostri Apostolici ministerii munus omnino postulat,* | Litterae Apostolicae in forma Brevis quibus Romanae ephemeridi cui titulus La Civiltà Cattolica perennitati et perpetuitati consulitur (the editor's preface, p. 577). | reading | ASS 1 (1865) 577-581, ass-01-1865.txt. p. 577 l. 4 'LITERA E APOSTOLICAE,' (the volume's single-T spelling, OCR-split) then the editor's preface, l. 12 'Sequentes Apostolicas Literas in forma Brevi expeditas re- / ferimus, quibus Sanctissimus Dominus Noster … praeclarissima encomiis Romanae ephemeridi / cui titulus - LA CIVILTÀ CATTOLICA - merito tributis, eiusdem peren- / nitati, et perpetuitati consulere dignatus est.'; the act opens p. 578 (running head '578 LITERAE APOSTOLICAE.'): l. 2 'PIUS PP. IX.', l. 3 'AD PERPETUAM REI MEMORIAM.', l. 4 '« Gravissimum supremi Nostri Apostolici ministerii munus / omnino postulat, ut intentissimo studio'. Dated p. 581 ll. 26-28 'Datum Romae apud S. Petrum sub Annulo Piscatoris die XII. / Februarii Anno MDCCCLXVI. Pontificatus Nostri Anno Vicesimo. / Locus*Sigilli PIUS PP. IX.'. Why the scan misses it: `LITERAE APOSTOLICAE` is no class heading of the list -- and phase 2c-ii-d measured adding the one-T spelling at **0 acts over all 41 volumes** and rejected it, so it will not become one; here the page prints it OCR-split as `LITERA E APOSTOLICAE,` besides, which no spelling in the list could match. The anchor at p. 581 therefore finds no heading (the `no-heading` defect at 581, the anchor's page, whose span from the previous anchor at 325 is what admits this row), and the summa's own row sits under EX SECRETARIA BREVIUM, so the check claims nothing. Keyed 578, where the act itself opens after the preface. | — | — |  |
+| 744 | LITTERAE APOSTOLICAE | Pius IX | 1866-04-13 | *Quamvis Urbs Roma Beatissimos Apostolorum Principes tamquam praecipuos* | Litterae Apostolicae in forma Brevis quibus S. Catharina Senensis inter secundarios Almae Urbis coelestes Patronos recensetur (the editor's preface, p. 744). | reading | ASS 1 (1865) 744-746, ass-01-1865.txt. p. 744 l. 2 'Il SECRETARIA BREVIUM.' (the part's running head), l. 8 'LITERAE APOSTOLICAE,' (the volume's single-T spelling) then the editor's preface, l. 11 'Quamvis iam Decretum retulerimus pag. 630, quo SSmus / Dominus Noster electam Virginem S. Catharinam Senensem in- / ter secundarios Almae Urbis coelestes Patronos recensendam / declaravit; praetermittere tamen nolumus Apostolicas Literas in / forma Brevis', l. 28 'Literae autem Apostolicae sunt sequentis tenoris.', l. 31 'PIUS PP. IX.', l. 32 'AD PERPETUAM REI MEMORIAM.', l. 33 '« Quamvis Urbs Roma Beatissimos Apostolorum Principes tam* / quam praecipuos Patronos suos veneretur'. Dated p. 746 ll. 10-11 'Datum Romae apud S. Petrum sub annulo Piscatoris die XIII. / Aprilis Anno MDCCCLXV1. Pontificatus Nostri Anno Vigesimo.' (the OCR's `1` for `I`). Why the scan misses it: as ASS:1:578 -- `LITERAE APOSTOLICAE` is no class heading and phase 2c-ii-d rejected the one-T spelling on 0 acts over 41 volumes. Since phase 2c-ii-a's brevia rule the walk-back does reach this page from the ring of the Fisherman, but the act is then refused on its date (`MDCCCLXV1`, the OCR's 1 for I), so the finding this row answers is the **`no-date` defect at p. 744**, its own page. The summa lists the act under EX SECRETARIA BREVIUM, so the check claims nothing. Keyed 744, where the heading, the preface and the act's own first words all stand. | — | — |  |
 
 </details>
 
@@ -410,6 +413,7 @@ reading with a narrower correction. That is a curation decision for the era that
 
 | Source | Page | Category | Opening |
 |---|---|---|---|
+| ass-1 | 193 | ALLOCUTIO | *Multiplices inter machinationes artesque, quibus Christiani nominis hostes* |
 | ass-12 | 588 | BREVE | *Ad perpetuam rei memoriam, Benedicente Domino, variis iam* |
 | ass-23 | 641 | LITTERAE ENCYCLICAE | *Rerum novarum semel excitata cupidine, quae diu quidem* |
 | ass-33 | 212 | BREVE | *Cum, sicuti accepimus, pia Christifidelium Confraternitas sub titulo* |
@@ -431,9 +435,9 @@ reading with a narrower correction. That is a curation decision for the era that
 
 | Key | Pope | Category | Date | Opening | Evidence |
 |---|---|---|---|---|---|
-| ASS:1:193 | Pius IX | ALLOCUTIO | 1865-09-25 | *Multiplices inter machinationes artesque, quibus Christiani nominis hostes* | ASS 1 (1865) 193-197, ass-01-1865.txt. p. 193 l. 2 'EX ACTIS COMTOBIALIBE' (the running head, the OCR's reading of CONSISTORIALIBUS), ll. 6-10 'SANCTISSIMI DOMINI NOSTRI / PII / DIVINA PROVIDENTIA / PAPAE IX.', l. 12 'ALLOCVTIO' (the OCR's V for U), l. 14 'HABITA IN CONSISTORIO SECRETO', l. 17 'DIE XXV SEPTEMBRIS MDCCCLXV.', l. 21 'VENERABILES FRATRES', l. 22 '« Multiplices inter machinationes artesque, quibus Christiani / nominis hostes adoriri Ecclesiam Dei'; no dateline (an allocution), dated from its heading, 25 September 1865; the running heads of the following pages read '194 ALLOCUTIO SS. D. N. PII PAPAE IX.'. Why the scan missed it: `ALLOCVTIO` is no class heading (one line in the sample), so no heading anchor; and ASS 1's summa (pp. 747-752) has no papal part -- its row ('Allocutio SSmi, qua iterum reprobantur et damnantur Massonicae sectae. 193') sits under EX ACTIS CONSISTORIALIBUS -- so the scan and the summa both leave the volume empty (the ruling's last clause). |
-| ASS:1:578 | Pius IX | LITTERAE APOSTOLICAE | 1866-02-12 | *Gravissimum supremi Nostri Apostolici ministerii munus omnino postulat,* | ASS 1 (1865) 577-581, ass-01-1865.txt. p. 577 l. 4 'LITERA E APOSTOLICAE,' (the volume's single-T spelling, OCR-split) then the editor's preface, l. 12 'Sequentes Apostolicas Literas in forma Brevi expeditas re- / ferimus, quibus Sanctissimus Dominus Noster … praeclarissima encomiis Romanae ephemeridi / cui titulus - LA CIVILTÀ CATTOLICA - merito tributis, eiusdem peren- / nitati, et perpetuitati consulere dignatus est.'; the act opens p. 578 (running head '578 LITERAE APOSTOLICAE.'): l. 2 'PIUS PP. IX.', l. 3 'AD PERPETUAM REI MEMORIAM.', l. 4 '« Gravissimum supremi Nostri Apostolici ministerii munus / omnino postulat, ut intentissimo studio'. Dated p. 581 ll. 26-28 'Datum Romae apud S. Petrum sub Annulo Piscatoris die XII. / Februarii Anno MDCCCLXVI. Pontificatus Nostri Anno Vicesimo. / Locus*Sigilli PIUS PP. IX.'. Why the scan missed it: `LITERAE APOSTOLICAE` is no class heading of the list (the volume's spelling; two acts in ASS 1, none elsewhere), so the anchor at p. 581 found no heading (the no-heading defect at 581, the anchor's page) and its summa row sits under EX SECRETARIA BREVIUM: the scan and the summa both leave the volume empty (the ruling's last clause). Keyed 578, where the act itself opens after the preface. |
-| ASS:1:744 | Pius IX | LITTERAE APOSTOLICAE | 1866-04-13 | *Quamvis Urbs Roma Beatissimos Apostolorum Principes tamquam praecipuos* | ASS 1 (1865) 744-746, ass-01-1865.txt. p. 744 l. 2 'Il SECRETARIA BREVIUM.' (the part's running head), l. 8 'LITERAE APOSTOLICAE,' (the volume's single-T spelling) then the editor's preface, l. 11 'Quamvis iam Decretum retulerimus pag. 630, quo SSmus / Dominus Noster electam Virginem S. Catharinam Senensem in- / ter secundarios Almae Urbis coelestes Patronos recensendam / declaravit; praetermittere tamen nolumus Apostolicas Literas in / forma Brevis', l. 28 'Literae autem Apostolicae sunt sequentis tenoris.', l. 31 'PIUS PP. IX.', l. 32 'AD PERPETUAM REI MEMORIAM.', l. 33 '« Quamvis Urbs Roma Beatissimos Apostolorum Principes tam* / quam praecipuos Patronos suos veneretur'. Dated p. 746 ll. 10-11 'Datum Romae apud S. Petrum sub annulo Piscatoris die XIII. / Aprilis Anno MDCCCLXV1. Pontificatus Nostri Anno Vigesimo.' (the OCR's `1` for `I`). Why the scan missed it: as ASS:1:578 -- `LITERAE APOSTOLICAE` is no class heading, the anchor at p. 746 found no heading (the no-heading defect at 746), the summa lists it under EX SECRETARIA BREVIUM; the scan and the summa both leave the volume empty (the ruling's last clause). Keyed 744, where the heading, the preface and the act's own first words all stand. |
+| ASS:1:193 | Pius IX | ALLOCUTIO | 1865-09-25 | *Multiplices inter machinationes artesque, quibus Christiani nominis hostes* | ASS 1 (1865) 193-197, ass-01-1865.txt. p. 193 l. 2 'EX ACTIS COMTOBIALIBE' (the running head, the OCR's reading of CONSISTORIALIBUS), ll. 6-10 'SANCTISSIMI DOMINI NOSTRI / PII / DIVINA PROVIDENTIA / PAPAE IX.', l. 12 'ALLOCVTIO' (the OCR's V for U), l. 14 'HABITA IN CONSISTORIO SECRETO', l. 17 'DIE XXV SEPTEMBRIS MDCCCLXV.', l. 21 'VENERABILES FRATRES', l. 22 '« Multiplices inter machinationes artesque, quibus Christiani / nominis hostes adoriri Ecclesiam Dei'; no dateline (an allocution), dated from its heading, 25 September 1865; the running heads of the following pages read '194 ALLOCUTIO SS. D. N. PII PAPAE IX.'. Why the row stands: until phase 2c-ii-d `ALLOCVTIO` was no class heading and nothing anchored, so the volume's scan was empty and this act was read wholly by hand. That phase repaired the OCR's V for U (HEADING_OCR, ass-headings.ts) and the scan now reads the act at this page, `anchor: 'heading'`, `category: 'ALLOCUTIO'` -- so the row is a **replacement**, and what it still supplies is the date: the heading sets it as `DIE XXV SEPTEMBRIS MDCCCLXV.`, a capital-Roman day and a Roman year, where HEADING_DATE_RE reads `die N Month YYYY`, so the scanned entry carries `????-??-??`. ASS 1's summa (pp. 747-752) still has no papal part -- its row ('Allocutio SSmi, qua iterum reprobantur et damnantur Massonicae sectae. 193') sits under EX ACTIS CONSISTORIALIBUS -- so the summa claims nothing here either way. |
+| ASS:1:578 | Pius IX | LITTERAE APOSTOLICAE | 1866-02-12 | *Gravissimum supremi Nostri Apostolici ministerii munus omnino postulat,* | ASS 1 (1865) 577-581, ass-01-1865.txt. p. 577 l. 4 'LITERA E APOSTOLICAE,' (the volume's single-T spelling, OCR-split) then the editor's preface, l. 12 'Sequentes Apostolicas Literas in forma Brevi expeditas re- / ferimus, quibus Sanctissimus Dominus Noster … praeclarissima encomiis Romanae ephemeridi / cui titulus - LA CIVILTÀ CATTOLICA - merito tributis, eiusdem peren- / nitati, et perpetuitati consulere dignatus est.'; the act opens p. 578 (running head '578 LITERAE APOSTOLICAE.'): l. 2 'PIUS PP. IX.', l. 3 'AD PERPETUAM REI MEMORIAM.', l. 4 '« Gravissimum supremi Nostri Apostolici ministerii munus / omnino postulat, ut intentissimo studio'. Dated p. 581 ll. 26-28 'Datum Romae apud S. Petrum sub Annulo Piscatoris die XII. / Februarii Anno MDCCCLXVI. Pontificatus Nostri Anno Vicesimo. / Locus*Sigilli PIUS PP. IX.'. Why the scan misses it: `LITERAE APOSTOLICAE` is no class heading of the list -- and phase 2c-ii-d measured adding the one-T spelling at **0 acts over all 41 volumes** and rejected it, so it will not become one; here the page prints it OCR-split as `LITERA E APOSTOLICAE,` besides, which no spelling in the list could match. The anchor at p. 581 therefore finds no heading (the `no-heading` defect at 581, the anchor's page, whose span from the previous anchor at 325 is what admits this row), and the summa's own row sits under EX SECRETARIA BREVIUM, so the check claims nothing. Keyed 578, where the act itself opens after the preface. |
+| ASS:1:744 | Pius IX | LITTERAE APOSTOLICAE | 1866-04-13 | *Quamvis Urbs Roma Beatissimos Apostolorum Principes tamquam praecipuos* | ASS 1 (1865) 744-746, ass-01-1865.txt. p. 744 l. 2 'Il SECRETARIA BREVIUM.' (the part's running head), l. 8 'LITERAE APOSTOLICAE,' (the volume's single-T spelling) then the editor's preface, l. 11 'Quamvis iam Decretum retulerimus pag. 630, quo SSmus / Dominus Noster electam Virginem S. Catharinam Senensem in- / ter secundarios Almae Urbis coelestes Patronos recensendam / declaravit; praetermittere tamen nolumus Apostolicas Literas in / forma Brevis', l. 28 'Literae autem Apostolicae sunt sequentis tenoris.', l. 31 'PIUS PP. IX.', l. 32 'AD PERPETUAM REI MEMORIAM.', l. 33 '« Quamvis Urbs Roma Beatissimos Apostolorum Principes tam* / quam praecipuos Patronos suos veneretur'. Dated p. 746 ll. 10-11 'Datum Romae apud S. Petrum sub annulo Piscatoris die XIII. / Aprilis Anno MDCCCLXV1. Pontificatus Nostri Anno Vigesimo.' (the OCR's `1` for `I`). Why the scan misses it: as ASS:1:578 -- `LITERAE APOSTOLICAE` is no class heading and phase 2c-ii-d rejected the one-T spelling on 0 acts over 41 volumes. Since phase 2c-ii-a's brevia rule the walk-back does reach this page from the ring of the Fisherman, but the act is then refused on its date (`MDCCCLXV1`, the OCR's 1 for I), so the finding this row answers is the **`no-date` defect at p. 744**, its own page. The summa lists the act under EX SECRETARIA BREVIUM, so the check claims nothing. Keyed 744, where the heading, the preface and the act's own first words all stand. |
 | ASS:12:3 | Leo XIII | LITTERAE | 1879-06-01 | *Ingens Nobis attulit gaudium pastoralis sollicitudo vestra, Venerabiles* | ASS 12 (1879) 3-12, ass-12-1879.txt. Printed in Italian with the Latin version below it page by page: p. 3 ll. 3-11 'LETTERA / DI / SUA SANTITÀ PAPA LEONE XIII / AGLI ARCIVESCOVI E VESCOVI DELL' ECCLESIASTICHE PROVINCIE / DI TORINO. VERCELLI E GENOVA.', l. 14 'Venerabili Fratelli', l. 16 'Ci siamo grandemente compiaciuti della vostra pastorale solle-'; the Latin at l. 27 '(Versio latina) LITTERAE / SSMI D. N. LEONIS XIII / AD ARCHIEPISCOPOS ET EPISCOPOS ECCLESIASTICARUM PROVINCIARUM / TAURINI, VERCELL-AE ET GENUAE.', l. 35 'Venerabiles Fratres', l. 37 'Ingens Nobis attulit gaudium pastoralis sollicitudo vestra, Ve- / nerabiles Fratres'. Dated p. 12 l. 40 'Romae ex Aedibus Vaticanis, die Pentecostes, 1 Iunii 1879.' (the Italian at l. 19 'Roma dal Vaticano, il giorno di Pentecoste, 1 Giugno 1879.'). Why the scan missed it: the dateline prints neither `Pontificatus Nostri` nor the pope's signature within four lines, so nothing anchors it. Answers the summa's unclaimed row p. 3 ('Litterae SSmi D. N. Leonis XIII ad Archiepiscopos et Episcopos Ecclesiasticarum Provinciarum Taurini, Vercellarum et Genuae'). |
 | ASS:23:206 | Leo XIII | LITTERAE ENCYCLICAE | 1890-10-15 | *Ab apostolici Solii celsitudine, ubi Nos ad prospiciendum* | ASS 23 (1890) 206-222, ass-23-1890.txt. p. 206 l. 15 '(Versio latina)', ll. 17-18 'LITTERAE Encyclicae SS. D. N. Leonis XIII ad Episcopos, Clerum / et Populum Italiae.', l. 20 'Ab apostolici Solii celsitudine, ubi Nos ad prospiciendum'; no salutation line. Dated p. 222 'Datum Romae apud Sanet. Petrum Idibus Octobris anno / MDCCCLXXXX. Pontificatus nostri XIII.': the Ides of October, 15 October 1890 -- the date the Italian text prints at p. 206 l. 8 ('Dato a Roma presso S. Pietro, li 15 Ottobre 1890'). The Latin version of the Italian encyclical the scan reads at p. 193 (`LETTERA Enciclica … Dall' alto dell' Apostolico seggio`): one act, two printings. Why the scan missed the date: the Ides form is not read by rule. Answers the scan's no-date defect at p. 206 and the summa's row p. 206 ('Versio latina earumdem litterarum'). |
 | ASS:23:318 | Leo XIII | LITTERAE | 1890-11-20 | *Novum argumentum perspecti tui erga hanc Apostolicam Sedem* | ASS 23 (1890) 318-319, ass-23-1890.txt. p. 318 l. 1 '-318' (the running header, the OCR's stray hyphen before the number), ll. 3-5 'LITTERAE Sanctissimi Patris N.Leonis XIII ad Emum Archiepiscopum floren- / tinum quoad cultum sacrae Familiae praestandum. — Adiicitur formula / consecrationis familiarum et oratio quotidie recitanda.', l. 10 'Novum argumentum perspecti tui erga hanc Apostolicam'; no salutation line. Dated p. 319 ll. 22-23 'Datum Romae apud S. Petrum die xx Novembris Anno / MDCCCXC, Pontificatus Nostri Decimotertio.', signed 'LEO PAPA XIII.'. Why the scan refused it: the header token `-318` carries an extra character and headerAgrees (recover.ts) refuses it; the PDF page is the printed page. Answers the scan's header-mismatch defect at p. 318 and the summa's row p. 318. |
@@ -605,48 +609,39 @@ Created: 0 (expected 0: phase 2c-i joins only).
 
 </details>
 
-<details><summary><b>ass-12</b> — 1 documents dated 1879 with no reference</summary>
+<details><summary><b>ass-12</b> — 0 documents dated 1879 with no reference</summary>
 
 | Document | Date | Class | Incipit | ASS entries on this date |
 |---|---|---|---|---|
-| `mag:leo-xiii/pontifices-maximi-1879` | 1879-02-15 | apostolic-letter | *Pontifices maximi* | — |
 
 </details>
 
-<details><summary><b>ass-23</b> — 16 documents dated 1890–1891 with no reference</summary>
+<details><summary><b>ass-23</b> — 12 documents dated 1890–1891 with no reference</summary>
 
 | Document | Date | Class | Incipit | ASS entries on this date |
 |---|---|---|---|---|
 | `mag:leo-xiii/cum-apostolica-sedes-1890` | 1890-02-05 | letter | *Cum Apostolica Sedes* | — |
 | `mag:leo-xiii/grande-est-1891` | 1891-09-20 | discourse-address | *Grande est* | — |
-| `mag:leo-xiii/graviter-molesteque-1890` | 1890-06-13 | letter | *Graviter molesteque* | — |
 | `mag:leo-xiii/in-ipso-1891` | 1891-03-03 | encyclical | *In Ipso* | ASS 23 (1890) 518 EPISTOLA *In ipso supremi Pontificatus, quo providens Deus Nos* |
 | `mag:leo-xiii/in-supremo-1890` | 1890-12-15 | apostolic-letter | *In supremo* | — |
 | `mag:leo-xiii/noi-rendiamo-grazie-1890` | 1890-03-14 | letter | *Noi rendiamo grazie* | — |
 | `mag:leo-xiii/non-est-opus-1891` | 1891-12-14 | discourse-address | *Non est opus* | — |
 | `mag:leo-xiii/non-maius-1891` | 1891-06-15 | apostolic-letter | *Non maius* | — |
-| `mag:leo-xiii/octobri-mense-1891` | 1891-09-22 | encyclical | *Octobri mense* | — |
 | `mag:leo-xiii/optimae-quidem-1891` | 1891-07-21 | apostolic-letter | *Optimae quidem* | — |
 | `mag:leo-xiii/pastoralis-officii-1891` | 1891-09-12 | encyclical | *Pastoralis officii* | — |
 | `mag:leo-xiii/pastoralis-vigilantiae-1891` | 1891-06-25 | encyclical | *Pastoralis vigilantiae* | — |
 | `mag:leo-xiii/quod-paucis-1890` | 1890-01-28 | letter | *Quod paucis* | — |
 | `mag:leo-xiii/rem-magni-1890` | 1890-04-20 | letter | *Rem Magni* | — |
-| `mag:leo-xiii/sapienter-olim-1891` | 1891-11-30 | apostolic-letter | *Sapienter olim* | — |
-| `mag:leo-xiii/sapientiae-christianae-1890` | 1890-01-10 | encyclical | *Sapientiae Christianae* | — |
 
 </details>
 
-<details><summary><b>ass-33</b> — 7 documents dated 1900–1901 with no reference</summary>
+<details><summary><b>ass-33</b> — 3 documents dated 1900–1901 with no reference</summary>
 
 | Document | Date | Class | Incipit | ASS entries on this date |
 |---|---|---|---|---|
 | `mag:leo-xiii/al-compimento-delle-riforme-1901` | 1901-06-11 | letter | *Al compimento delle riforme* | ASS 33 (1900) 714 CHIROGRAPHUM *Al compimento delle riforme richieste dalle presenti circostanze,* |
 | `mag:leo-xiii/gravissimas-1901` | 1901-05-16 | encyclical | *Gravissimas* | — |
-| `mag:leo-xiii/parta-humano-generi-1901` | 1901-09-08 | apostolic-letter | *Parta humano generi* | — |
 | `mag:leo-xiii/praestantiam-assisiensis-1900` | 1900-08-02 | letter | *Praestantiam Assisiensis* | — |
-| `mag:leo-xiii/reputantibus-1901` | 1901-08-20 | letter | *Reputantibus* | — |
-| `mag:leo-xiii/slavorum-gentem-1901` | 1901-08-01 | apostolic-letter | *Slavorum gentem* | — |
-| `mag:leo-xiii/urbanitatis-veteris-1901` | 1901-11-20 | letter | *Urbanitatis Veteris* | — |
 
 </details>
 
@@ -688,4 +683,4 @@ Created: 0 (expected 0: phase 2c-i joins only).
 
 ## 7. Corpus
 
-Documents: 8569; with an ASS reference: 64; shelf documents dated 1865–1908: 496, of which with a reference of either series: 175.
+Documents: 8569; with an ASS reference: 64; shelf documents dated 1865–1908: 496, of which with a reference of either series: 289.

@@ -58,7 +58,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Da grave sventura",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 11,
+      "year": 1878,
+      "page": 274
+    }
   },
   {
     "id": "mag:leo-xiii/quod-apostolici-muneris-1878",
@@ -80,7 +86,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod Apostolici Muneris",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 11,
+      "year": 1878,
+      "page": 372
+    }
   },
   {
     "id": "mag:leo-xiii/pontifices-maximi-1879",
@@ -103,7 +115,13 @@
     "characteristics": [
       "in-forma-brevis"
     ],
-    "sourceGenreLabel": "briefs"
+    "sourceGenreLabel": "briefs",
+    "acta": {
+      "series": "ASS",
+      "volume": 11,
+      "year": 1878,
+      "page": 420
+    }
   },
   {
     "id": "mag:leo-xiii/ci-siamo-grandemente-1879",

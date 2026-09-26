@@ -528,7 +528,7 @@ lines each rests on (spec §3). `{year}` is the first year of the volume's span.
 
 | Source | Files | RETRIEVED | Volume pages | Summa pages | Acts scanned | Defects | Summa rows: claimed / unclaimed |
 |---|---|---|---|---|---|---|---|
-| ASS 1 (1865–66, Pius IX) | `ass-01-1865.*` | **2026-09-21** | 767 | 747–752 | 0 | 3 | 0 / 0 |
+| ASS 1 (1865–66, Pius IX) | `ass-01-1865.*` | **2026-09-21** | 767 | 747–752 | 1 | 3 | 0 / 0 |
 | ASS 12 (1879, Leo XIII) | `ass-12-1879.*` | **2026-09-21** | 672 | 647–653 | 10 | 1 | 9 / 3 |
 | ASS 23 (1890–91, Leo XIII) | `ass-23-1890.*` | **2026-09-21** | 768 | 752–758 | 9 | 4 | 8 / 6 |
 | ASS 33 (1900–01, Leo XIII) | `ass-33-1900.*` | **2026-09-21** | 768 | 761–768 | 22 | 6 | 16 / 6 |
@@ -538,6 +538,16 @@ lines each rests on (spec §3). `{year}` is the first year of the volume's span.
 | ASS 38 (1905–06, Pius X) | `ass-38-1905.*` | **2026-09-22** | 702 | 417–423 | 13 | 6 | 9 / 7 |
 | ASS 39 (1906, Pius X) | `ass-39-1906.*` | **2026-09-22** | 640 | 623–640 | 60 | 18 | 52 / 23 |
 | ASS 40 (1907, Pius X) | `ass-40-1907.*` | **2026-09-22** | 791 | 769–781 | 37 | 10 | 31 / 7 |
+| ASS 2 (1867, Pius IX) | `ass-02-1867.*` | **2026-09-22** | 719 | 695–701 | 2 | 5 | 1 / 2 |
+| ASS 3 (1867, Pius IX) | `ass-03-1867.*` | **2026-09-22** | 696 | 665–670 | 5 | 6 | 4 / 11 |
+| ASS 4 (1868, Pius IX) | `ass-04-1868.*` | **2026-09-22** | 717 | 684–690 | 9 | 3 | 7 / 2 |
+| ASS 5 (1869–70, Pius IX) | `ass-05-1869.*` | **2026-09-22** | 712 | 691–696 | 6 | 9 | 6 / 9 |
+| ASS 6 (1870–71, Pius IX) | `ass-06-1870.*` | **2026-09-22** | 776 | 597–603 | 7 | 11 | 6 / 25 |
+| ASS 7 (1872–73, Pius IX) | `ass-07-1872.*` | **2026-09-22** | 784 | 751–760 | 5 | 7 | 4 / 9 |
+| ASS 8 (1874–75, Pius IX) | `ass-08-1874.*` | **2026-09-22** | 748 | 727–733 | 6 | 14 | 4 / 20 |
+| ASS 9 (1876, Pius IX) | `ass-09-1876.*` | **2026-09-22** | 690 | 669–674 | 10 | 16 | 2 / 8 |
+| ASS 10 (1877, Pius IX) | `ass-10-1877.*` | **2026-09-22** | 768 | 616–622 | 5 | 10 | 3 / 6 |
+| ASS 11 (1878, Pius IX + Leo XIII) | `ass-11-1878.*` | **2026-09-22** | 646 | 621–626 | 7 | 6 | 6 / 6 |
 
 
 ASS 36–40 scanned on 2026-09-25 (`npx tsx tools/scan-ass.ts 36-40`, phase 2c-ii-b): every
@@ -549,6 +559,31 @@ paginated French section inside it numbered from 1. No scanned entry falls in th
 (the 13 run pp. 67–382), and pages 424–702 contain no `Pontificatus Nostri` at all, so the
 supplement hides no papal act: the volume's own summa lists 16 papal rows and that is what
 there is.
+
+ASS 2–11 scanned on 2026-09-26 (`npx tsx tools/scan-ass.ts 2-11`, phase 2c-ii-d): every
+count above again equals what `tools/survey-ass.ts` read from the store for these ten
+volumes, so the fixture path and the survey pass agree here too -- the era the survey found
+the series' thinnest, where it predicted 39 of 128 summa rows claimed and the era measured
+43 of 141, 30.5 % either way. **ASS 7 does have a papal part, and the check that reported
+none was reading the heading wrongly**: its summa opens the pope's section
+`EX ACTIS AD INSTAR CONSISTORIALIUM.` (summa p. 751), which names the *manner* of the acts
+rather than the pope and which `DICASTERY_RE` matches as well, so the part was read as
+absent and the check as vacuous until phase 2c-ii-d taught `PAPAL_HEAD_FORMS` the one-volume
+form (commit `0f6ad15`). The part closes at `EX SECRETARIA BREVIUM.` and the check now reads
+13 rows, 4 claimed and 9 unclaimed: four of its five scanned acts (pp. 165, 363, 565, 629)
+answer a row, and only the act at p. 25 is omitted for want of one. ASS 7 also carries the
+series' one page offset (`ASS_PAGE_OFFSETS`,
+`tools/src/acta/curation.ts`): PDF pp. 496–547 print two more than the PDF page, and no
+scanned entry or defect opens inside it beyond the three `no-heading` defects already there
+(pp. 510, 516, 521). **ASS 10's page count is the bound volume's, not the supplement's**:
+its own *Summa actorum* sits at pp. 616–622 and a `supplemento` paginated 321–448 occupies
+PDF pp. 640–768, as the PDF's own name records
+(`ASS-10-1877-1-639+supplemento-321-448-ocr.pdf`). No scanned entry or defect falls in that
+range (the five entries run pp. 69–577), and no page of it, 640–768, carries `Pontificatus
+Nostri` at all, so the supplement hides no papal act: the volume's own summa lists 9 papal
+rows and that is what there is. ASS 11 prints two popes, Pius IX to his death on 7 February
+1878 and Leo XIII from his election on 20 February; ASS 2 and ASS 3 are both 1867.
+
 Scanned on 2026-09-23 (`npm run scan-ass -- sample`, re-run after 2c-ii Task 6 relaxed
 `header-mismatch` for the ASS -- `headerAgreesASS`, `tools/src/acta/ass.ts` -- which read
 ASS 23 p. 318 and ASS 33 pp. 213, 355, 385 whole (318, 355 and 385 already answered by a
@@ -561,10 +596,13 @@ curation round of phase 2c-i Task 4). The summa's papal part, from its heading t
 as the tool printed them, and the curated readings (`ASS_READINGS`, `tools/src/acta/curation.ts`)
 keyed to each volume: ASS 1: no papal heading — the 1865 summa lists the pope's acts under
 the dicasteries (`EX ACTIS CONSISTORIALIBUS`, `EX SECRETARIA BREVIUM`), so the check is
-vacuous, and the scanner reads no act (the allocution of 25 September 1865 at p. 193 is headed
-`ALLOCVTIO`, the two letters apostolic at pp. 578 and 744 `LITERAE APOSTOLICAE` after an
-editorial preface), so its three acts are readings under the ruling that a reading answers a
-finding when a volume's scan and summa are both empty; 3 readings. ASS 12: `LITTERAE ET ALLOCUTIONES` … `EX ACTIS CONSISTORIALIBUS`;
+vacuous, and the scanner reads one act and no more: the allocution of 25 September 1865 at
+p. 193, which it read as nothing until phase 2c-ii-d repaired `ALLOCVTIO` in `HEADING_OCR`
+(commit `48bc42a`), and which the summa reports as omitted for want of a row to claim it; the
+two letters apostolic at pp. 578 and 744 are headed `LITERAE APOSTOLICAE` after an editorial
+preface and the one-T spelling reads nothing anywhere in the series. So its three acts are
+readings under the ruling that a reading answers a finding when a volume's scan and summa are
+both empty, and one of the three replaces the act the scanner now reads; 3 readings. ASS 12: `LITTERAE ET ALLOCUTIONES` … `EX ACTIS CONSISTORIALIBUS`;
 1 reading. ASS 23: `LITTERAE ET ACTA ROM. PONTIFICIS` … `EX ACTIS CONSISTORIALIBUS` (summa p. 753
 is interleaved word by word by the OCR and yields three garbage rows, and loses *Rerum
 novarum*'s own row); 5 readings. ASS 33: `LITTERAE ET ACTA` (`R. PONTIFICIS` on the next line)

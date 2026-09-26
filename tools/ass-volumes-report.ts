@@ -201,17 +201,20 @@ if (emended.length !== 2) throw new Error(`the reading's finding 10 names two em
 
 p('## 1. Reading');
 p();
-p(`1. **The body scan works from 1879 on and fails on 1865: the era's headline is a date, not a rule.** Five volumes, one`);
-p(`   scanner, and the yield divides at the first of them. ASS 1 (1865–66, ${scans.get('ass-1')!.pages} pages) gave **${scannedOf('ass-1')} acts** — its three`);
-p(`   papal acts were read by hand and stand in \`ASS_READINGS\` (§2.5) — while ASS 12 (1879) gave ${scannedOf('ass-12')}, ASS 23 (1890–91) ${scannedOf('ass-23')},`);
+p(`1. **The body scan works from 1879 on and barely reads 1865: the era's headline is a date, not a rule.** Five volumes, one`);
+p(`   scanner, and the yield divides at the first of them. ASS 1 (1865–66, ${scans.get('ass-1')!.pages} pages) gave **${scannedOf('ass-1')} act${scannedOf('ass-1') === 1 ? '' : 's'}** — the allocution of`);
+p(`   p. 193, which phase 2c-ii-d's \`ALLOCVTIO\` repair reached; all three of its papal acts stand in`);
+p(`   \`ASS_READINGS\` (§2.5) — while ASS 12 (1879) gave ${scannedOf('ass-12')}, ASS 23 (1890–91) ${scannedOf('ass-23')},`);
 p(`   ASS 33 (1900–01) ${scannedOf('ass-33')} and ASS 41 (1908) ${scannedOf('ass-41')} — ${sum(scannedOf)} acts from the five bodies by rule. After the curation the sample`);
 p(`   carries **${entries.length} entries, ${standing} of them as the scanner read them** (${pct(standing, entries.length)}) and ${readings.length} read by hand (${replacingReadings.length} readings replacing`);
 p(`   a scanned entry each (${replacingReadings.map(citeReplacing).join(', ')}) and the rest added where the scan had nothing). The 1865 volume is not a harder instance of the same problem but a different volume: its`);
-p(`   class headings are spelt \`LITERAE APOSTOLICAE\` with one T and \`ALLOCVTIO\` with the OCR's V, neither a heading of the`);
-p(`   list; its two apostolic letters are printed under \`SECRETARIA BREVIUM\` behind an editor's preface, so the act does not`);
+p(`   class headings are spelt \`LITERAE APOSTOLICAE\` with one T and \`ALLOCVTIO\` with the OCR's V — the V is repaired`);
+p(`   (\`HEADING_OCR\`, phase 2c-ii-d, which measured the one-T spelling at 0 acts over all 41 volumes and left it out);`);
+p(`   its two apostolic letters are printed under \`SECRETARIA BREVIUM\` behind an editor's preface, so the act does not`);
 p(`   open where the heading stands; and **its summa has no papal part at all** (${summaOf('ass-1').rows.length} rows, §2) — the pope's acts are listed`);
-p(`   under the dicastery that issued them. Scan and check therefore fail together there, which is why the three readings`);
-p(`   were admitted under the ruling's last clause and why §2's ASS 1 row is the only one whose every act is curated.`);
+p(`   under the dicastery that issued them. Scan and check therefore all but fail together there: the readings of pp. 578`);
+p(`   and 744 answer a \`no-heading\` span and a \`no-date\` defect, that of p. 193 replaces the one act the scan reads,`);
+p(`   and §2's ASS 1 row is the only one whose every act is curated.`);
 p(`   From 1879 the volumes print a class heading, a salutation and a \`Datum Romae\` dateline in the shape the scanner`);
 p(`   reads, and the yield rises with the century.`);
 p(`2. **The summa is the check, and it checked: the sample's summae list ${sum((k) => summaOf(k).rows.length)} rows, a scanned act opens at ${sum((k) => summaOf(k).claimed.length)} of the pages**`);
@@ -365,7 +368,7 @@ p(`   matched ASS 41 p. 19 (*La benevolenza, che nutriamo verso il Pontificio Se
 p(`   years late, as the ASS often prints) and now carries its reference while keeping its provisional id. A re-mint is`);
 p(`   the owner's decision and out of scope; what this report adds is that one of the nine now has a source to be re-minted`);
 p(`   from.`);
-p(`15. **What 2c-ii should expect.** (a) **The OCR is worst at the start.** ASS 1 (1865) yielded ${scannedOf('ass-1')} acts by rule and needed`);
+p(`15. **What 2c-ii should expect.** (a) **The OCR is worst at the start.** ASS 1 (1865) yielded ${scannedOf('ass-1')} act${scannedOf('ass-1') === 1 ? '' : 's'} by rule and needed`);
 p(`   ${readOf('ass-1')} hand readings; the volumes of the 1860s and 1870s should be assumed unscannable until measured, and the plan`);
 p(`   should budget for reading them rather than for a rule. From 1879 the rate is usable and from 1900 it is good.`);
 p(`   (b) **The Secretaria Brevium was the next rule, and it was taken: it is worth 9 acts in these five volumes and 62`);

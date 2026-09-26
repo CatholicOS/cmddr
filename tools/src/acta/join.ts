@@ -136,6 +136,31 @@ export const ACTA_SOURCES: readonly ActaSource[] = [
   ass(32, 1899, 'ASS-32-1899-900-ocr.pdf', '2026-09-22', 1900),
   ass(34, 1901, 'ASS-34-1901-2-ocr.pdf', '2026-09-22', 1902),
   ass(35, 1902, 'ASS-35-1902-3-ocr.pdf', '2026-09-22', 1903),
+  // Phase 2c-ii-d (spec §10 decision 3): Pius IX's ten unjoined volumes, ASS 2-11. ASS 1
+  // is the sample's, so these complete the pontificate. The era the survey said would be the
+  // series' thinnest: it predicted 39 of 128 summa rows claimed, 30.5 %, and the era measured
+  // 43 of 141, 30.5 % (era report §1). ASS 7's summa was read as finding no papal part at all
+  // until commit `0f6ad15` taught `PAPAL_HEAD_FORMS` the one-volume form its papal part opens
+  // on, `EX ACTIS AD INSTAR CONSISTORIALIUM.`, which `DICASTERY_RE` also matches; its check is
+  // not vacuous but reads 13 rows, 4 claimed and 9 unclaimed. It also carries
+  // the series' one genuine page offset (PDF pp. 496-547, +2 delta; `ASS_PAGE_OFFSETS`,
+  // `tools/src/acta/curation.ts`). ASS 10 carries a bound-in `supplemento` paginated
+  // 321-448, as its PDF's name records. ASS 11 prints two popes, Pius IX to his death on
+  // 7 February 1878 and Leo XIII from his election on 20 February -- though the scanner reads
+  // only Leo XIII there, both of the volume's acts of Pius IX (the brief *Quod iure
+  // haereditario* of 17 August 1877 at p. 50 and the letter to Archbishop Darboy of
+  // 26 October 1865 at p. 210) being `no-date` defects. ASS 2 and ASS 3 are
+  // both 1867. Retrieved 2026-09-22 with the whole series, for the survey.
+  ass(2, 1867, 'ASS-02-1867-ocr.pdf', '2026-09-22'),
+  ass(3, 1867, 'ASS-03-1867-ocr.pdf', '2026-09-22'),
+  ass(4, 1868, 'ASS-04-1868-ocr.pdf', '2026-09-22'),
+  ass(5, 1869, 'ASS-05-1869-70-ocr.pdf', '2026-09-22', 1870),
+  ass(6, 1870, 'ASS-06-1870-71-ocr.pdf', '2026-09-22', 1871),
+  ass(7, 1872, 'ASS-07-1872-73-ocr.pdf', '2026-09-22', 1873),
+  ass(8, 1874, 'ASS-08-1874-75-ocr.pdf', '2026-09-22', 1875),
+  ass(9, 1876, 'ASS-09-1876-ocr.pdf', '2026-09-22'),
+  ass(10, 1877, 'ASS-10-1877-1-639+supplemento-321-448-ocr.pdf', '2026-09-22'),
+  ass(11, 1878, 'ASS-11-1878-ocr.pdf', '2026-09-22'),
   // Phase 2b-iii-b (spec §10): AAS 1-17, the volumes of 1909-1925, whose OCR lost the page
   // column on most index pages -- the pages come back from the volume body through the
   // sidecars (recover.ts). 1909 and 1917-I, the sample's, re-extracted on 2026-09-20 with
@@ -255,6 +280,20 @@ export const ACTA_FIXTURES_RETRIEVED = '2026-09-12';
 export const emptyScan = (): Omit<AssScan, 'source' | 'generated' | 'text' | 'volume' | 'year' | 'pages'> => ({ entries: [], defects: [], summa: { pages: null, rows: [], claimed: [], unclaimed: [], omitted: [] } });
 
 /**
+ * Whether a page falls inside a `no-heading` span: the scanner keys such a defect to the
+ * dateline's page while the act's heading stands somewhere between the previous anchor and
+ * it, so every page from the previous anchor's page through the defect's page is inside the
+ * span. Exported because the era report groups the summa's unclaimed rows by the same rule
+ * (tools/ass-era-report.ts §2.2) and a second copy of it would drift from this one.
+ */
+export function withinNoHeadingSpan(scan: Pick<AssScan, 'entries' | 'defects'>, page: number): boolean {
+  // The anchors in page order: every scanned entry's page and every defect's page.
+  const anchorPages = [...new Set([...scan.entries.map((e) => e.page), ...scan.defects.map((d) => d.page)])].sort((a, b) => a - b);
+  const previousAnchor = (p: number): number => anchorPages.filter((x) => x < p).at(-1) ?? 1;
+  return scan.defects.some((d) => d.reason === 'no-heading' && page >= previousAnchor(d.page) && page <= d.page);
+}
+
+/**
  * The curated readings of a volume (ASS_READINGS, ass volumes spec §6) applied to its scan:
  * a row at a page the scan has no entry for is added; a row at a scanned entry's page
  * replaces it. A row is stale (a hard error) unless it answers a finding of the scan
@@ -270,11 +309,7 @@ export const emptyScan = (): Omit<AssScan, 'source' | 'generated' | 'text' | 'vo
 export function applyAssReadings(scan: Pick<AssScan, 'entries' | 'defects' | 'summa'>, volume: number, year: number, table: Readonly<Record<string, AssReading>> = ASS_READINGS): AssEntry[] {
   const entries = [...scan.entries];
   const nothingScanned = scan.entries.length === 0 && scan.summa.rows.length === 0;
-  // The anchors in page order: every scanned entry's page and every defect's page.
-  const anchorPages = [...new Set([...scan.entries.map((e) => e.page), ...scan.defects.map((d) => d.page)])].sort((a, b) => a - b);
-  const previousAnchor = (page: number): number => anchorPages.filter((p) => p < page).at(-1) ?? 1;
-  const withinNoHeading = (page: number): boolean =>
-    scan.defects.some((d) => d.reason === 'no-heading' && page >= previousAnchor(d.page) && page <= d.page);
+  const withinNoHeading = (page: number): boolean => withinNoHeadingSpan(scan, page);
   for (const [key, row] of Object.entries(table)) {
     if (!key.startsWith(`ASS:${volume}:`)) continue;
     const page = Number(key.split(':')[2]);

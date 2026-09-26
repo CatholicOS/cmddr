@@ -19,7 +19,13 @@
     "incipit": "Dei Filius",
     "promulgatedBy": "rp:pius-ix",
     "descriptiveTitle": "dogmatic",
-    "sourceGenreLabel": "Costituzione dogmatica"
+    "sourceGenreLabel": "Costituzione dogmatica",
+    "acta": {
+      "series": "ASS",
+      "volume": 5,
+      "year": 1869,
+      "page": 481
+    }
   },
   {
     "id": "mag:vatican-i/pastor-aeternus-1870",
@@ -41,6 +47,12 @@
     "incipit": "Pastor Aeternus",
     "promulgatedBy": "rp:pius-ix",
     "descriptiveTitle": "dogmatic",
-    "sourceGenreLabel": "Costituzione dogmatica"
+    "sourceGenreLabel": "Costituzione dogmatica",
+    "acta": {
+      "series": "ASS",
+      "volume": 6,
+      "year": 1870,
+      "page": 40
+    }
   }
 ]

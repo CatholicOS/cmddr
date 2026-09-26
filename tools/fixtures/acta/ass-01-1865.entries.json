@@ -5,7 +5,31 @@
   "volume": 1,
   "year": 1865,
   "pages": 767,
-  "entries": [],
+  "entries": [
+    {
+      "series": "ASS",
+      "volume": 1,
+      "year": 1865,
+      "page": 193,
+      "pope": "Pius IX",
+      "category": "ALLOCUTIO",
+      "date": "????-??-??",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "ALLOCVTIO HABITA IN CONSISTORIO SECRETO",
+      "raw": "SANCTISSIMI DOMINI NOSTRI / PII / DIVINA PROVIDENTIA / PAPAE IX. / ALLOCVTIO / HABITA IN CONSISTORIO SECRETO",
+      "opening": "Multiplices inter machinationes artesque, quibus Christiani nominis hostes",
+      "anchor": "heading",
+      "evidence": {
+        "heading": "SANCTISSIMI DOMINI NOSTRI / PII / DIVINA PROVIDENTIA / PAPAE IX. / ALLOCVTIO / HABITA IN CONSISTORIO SECRETO",
+        "salutation": null,
+        "opening": "« Multiplices inter machinationes artesque, quibus Christiani",
+        "dateline": null,
+        "header": "193"
+      }
+    }
+  ],
   "defects": [
     {
       "page": 325,
@@ -42,6 +66,8 @@
     "rows": [],
     "claimed": [],
     "unclaimed": [],
-    "omitted": []
+    "omitted": [
+      193
+    ]
   }
 }
