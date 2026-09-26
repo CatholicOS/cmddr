@@ -3993,8 +3993,9 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // `constitution`); 3 of the 16 are Leo XIII's, from ASS 11, which prints his first months
     // and no act of Pius IX at all. Four of Task 4b's five overrides are on records the
     // registry files as `encyclical`, which is why that genre moves by 4 and
-    // `apostolic-letter` by only 1 (the brief of ASS 11 p. 420). The three bulls of the sample are the constitutions
-    // *Conditae a Christo* (1900), *Sapienti consilio* and *Promulgandi*.
+    // `apostolic-letter` by only 1 (the brief of ASS 11 p. 420). The three bulls of the
+    // sample are the constitutions *Conditae a Christo* (1900), *Sapienti consilio* and
+    // *Promulgandi*.
     const byIssuer = new Map<string, number>();
     for (const d of cited) byIssuer.set(d.issuerId, (byIssuer.get(d.issuerId) ?? 0) + 1);
     expect(Object.fromEntries([...byIssuer].sort())).toEqual({
@@ -4391,7 +4392,9 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
         && x.acta.volume === d.acta!.volume && x.acta.page === d.acta!.page);
       expect(sharers.map((x) => x.id), `${id}'s page`).toEqual([]);
     }
-    expect(checkDocuments(everything, genres, keywords, series).filter((v) => v.rule === 25)).toEqual([]);
+    // The global invariant-25 check is not repeated here: 'satisfies invariant 25 across both
+    // series' below makes it, as does the conciliar test above. What this test owns is the
+    // per-page `sharers` loop, which no global check can state.
   });
 
   it('satisfies invariant 25 across both series', () => {
