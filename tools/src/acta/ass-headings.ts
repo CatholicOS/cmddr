@@ -71,8 +71,17 @@ export const CLASS_HEADINGS: readonly string[] = [
 ];
 /** A two-word heading's second word as the volumes set it: in capitals, or in lower case after the caps class word (`LITTERAE Encyclicae`, ASS 23 (1890) 206; `LITTERAE apostolicae`, ASS 23 513; `LETTERA Enciclica`, ASS 23 193). */
 const headingPattern = (h: string): string => h.split(' ').map((w, i) => (i === 0 ? w : `(?:${w}|${w[0]}${w.slice(1).toLowerCase()}|${w.toLowerCase()})`)).join('\\s+');
-/** The OCR's spellings of a class word, each quoted: `IITTERAE` for `LITTERAE` (ASS 33 (1900) 3, 643; three lines in the sample). */
-const HEADING_OCR: readonly [RegExp, string][] = [[/^(\s*)IITTERAE\b/, '$1LITTERAE']];
+/**
+ * The OCR's spellings of a class word, each quoted: `IITTERAE` for `LITTERAE` (ASS 33 (1900)
+ * 3, 643; three lines in the sample), and the V for the U of the earliest volumes' display
+ * capitals, `ALLOCVTIO` (ASS 1 (1865) 193 line 12, ASS 2 (1867) 261 line 7 and 268 line 7 --
+ * the only three lines of the 41 volumes that open with it; its five other occurrences in
+ * ASS 2 are running heads glued to the end of a body line, `264 ALLOCVTIO.`, which the
+ * anchored `^` never reaches). Repaired here rather than listed in CLASS_HEADINGS so that
+ * the act's `category` is the `ALLOCUTIO` categories.ts heads and the allocution anchor of
+ * findAnchors reads it, both of which key on the normalised word.
+ */
+const HEADING_OCR: readonly [RegExp, string][] = [[/^(\s*)IITTERAE\b/, '$1LITTERAE'], [/^(\s*)ALLOCVTIO\b/, '$1ALLOCUTIO']];
 export const HEADING_RE = new RegExp(`^\\s*(?:\\d[\\dOoiIla]{0,3}\\s+)?(?:ACTA ROMANI PONTIFICIS\\s+)?(${CLASS_HEADINGS.map(headingPattern).join('|')})(\\s+in forma [Bb]revis)?\\b\\.?(.*)$`);
 /**
  * A page number on a class heading's line, leading (`274 EPISTOLA ENCYCLICA`, ASS 33

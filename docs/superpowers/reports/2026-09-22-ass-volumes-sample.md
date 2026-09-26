@@ -5,17 +5,20 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
 
 ## 1. Reading
 
-1. **The body scan works from 1879 on and fails on 1865: the era's headline is a date, not a rule.** Five volumes, one
-   scanner, and the yield divides at the first of them. ASS 1 (1865–66, 767 pages) gave **0 acts** — its three
-   papal acts were read by hand and stand in `ASS_READINGS` (§2.5) — while ASS 12 (1879) gave 10, ASS 23 (1890–91) 9,
-   ASS 33 (1900–01) 22 and ASS 41 (1908) 37 — 78 acts from the five bodies by rule. After the curation the sample
-   carries **97 entries, 73 of them as the scanner read them** (75.3 %) and 24 read by hand (5 readings replacing
-   a scanned entry each (ASS 23 p. 318, ASS 33 p. 355, ASS 33 p. 385, ASS 41 p. 12, ASS 41 p. 361) and the rest added where the scan had nothing). The 1865 volume is not a harder instance of the same problem but a different volume: its
-   class headings are spelt `LITERAE APOSTOLICAE` with one T and `ALLOCVTIO` with the OCR's V, neither a heading of the
-   list; its two apostolic letters are printed under `SECRETARIA BREVIUM` behind an editor's preface, so the act does not
+1. **The body scan works from 1879 on and barely reads 1865: the era's headline is a date, not a rule.** Five volumes, one
+   scanner, and the yield divides at the first of them. ASS 1 (1865–66, 767 pages) gave **1 act** — the allocution of
+   p. 193, which phase 2c-ii-d's `ALLOCVTIO` repair reached; all three of its papal acts stand in
+   `ASS_READINGS` (§2.5) — while ASS 12 (1879) gave 10, ASS 23 (1890–91) 9,
+   ASS 33 (1900–01) 22 and ASS 41 (1908) 37 — 79 acts from the five bodies by rule. After the curation the sample
+   carries **97 entries, 73 of them as the scanner read them** (75.3 %) and 24 read by hand (6 readings replacing
+   a scanned entry each (ASS 1 p. 193, ASS 23 p. 318, ASS 33 p. 355, ASS 33 p. 385, ASS 41 p. 12, ASS 41 p. 361) and the rest added where the scan had nothing). The 1865 volume is not a harder instance of the same problem but a different volume: its
+   class headings are spelt `LITERAE APOSTOLICAE` with one T and `ALLOCVTIO` with the OCR's V — the V is repaired
+   (`HEADING_OCR`, phase 2c-ii-d, which measured the one-T spelling at 0 acts over all 41 volumes and left it out);
+   its two apostolic letters are printed under `SECRETARIA BREVIUM` behind an editor's preface, so the act does not
    open where the heading stands; and **its summa has no papal part at all** (0 rows, §2) — the pope's acts are listed
-   under the dicastery that issued them. Scan and check therefore fail together there, which is why the three readings
-   were admitted under the ruling's last clause and why §2's ASS 1 row is the only one whose every act is curated.
+   under the dicastery that issued them. Scan and check therefore all but fail together there: the readings of pp. 578
+   and 744 answer a `no-heading` span and a `no-date` defect, that of p. 193 replaces the one act the scan reads,
+   and §2's ASS 1 row is the only one whose every act is curated.
    From 1879 the volumes print a class heading, a salutation and a `Datum Romae` dateline in the shape the scanner
    reads, and the yield rises with the century.
 2. **The summa is the check, and it checked: the sample's summae list 87 rows, a scanned act opens at 60 of the pages**
@@ -27,8 +30,8 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    *consilio* itself (41 p. 427, two pages after its heading at 425), and three dicastery pages (23 pp. 109, 116, 119)
    the OCR's interleaving of summa p. 753 turned into papal rows — **and one genuine miss**, ASS 33 p. 193, whose
    dateline the OCR broke (the month lifted onto the line above). One miss in 87 rows is the measure of the scan's
-   completeness where the summa can speak. The other direction is thinner: 16 scanned acts the summa does not list
-   (§2.4, which prints every one: ASS 12 p. 588; ASS 23 p. 641; ASS 33 pp. 212, 213, 396, 401; ASS 41 pp. 37, 134, 300, 301, 580, 581, 623, 748, 757, 766). **14 of the 16 are of class `BREVE`**
+   completeness where the summa can speak. The other direction is thinner: 17 scanned acts the summa does not list
+   (§2.4, which prints every one: ASS 1 p. 193; ASS 12 p. 588; ASS 23 p. 641; ASS 33 pp. 212, 213, 396, 401; ASS 41 pp. 37, 134, 300, 301, 580, 581, 623, 748, 757, 766). **14 of the 17 are of class `BREVE`**
    — the twelve phase 2c-ii-a read from the ring of the Fisherman (ASS 33 pp. 212, 213 and ten of ASS 41, of which
    300 and 301 answered a `header-mismatch` defect until 2c-ii Task 6's relaxation) and two headed
    with the class word and read before it (ASS 12 p. 588, ASS 33 p. 401) — and that is the summa working, not failing:
@@ -139,20 +142,20 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    AAS 1 (1909) 5) were promulgated in the last months of the ASS and reprinted in the first number of the AAS —
    *Promulgandi* being the constitution that instituted the AAS, printed on the new gazette's opening page. Both shelf
    records already carried an AAS reference (one a curated page of phase 2b-iii-b, one a recovered page), and the join
-   claimed each twice. `ACTA_REPRINTS` has one rule — *the citation of record is the first printing* — so 2 rows were
-   written, keyed by the later printing (`AAS:1:7`, `AAS:1:5`) and pointing at the ASS, and the two documents now cite ASS 41. The
+   claimed each twice. `ACTA_REPRINTS` has one rule — *the citation of record is the first printing* — so 3 rows were
+   written, keyed by the later printing (`ASS:30:39`, `AAS:1:7`, `AAS:1:5`) and pointing at the ASS, and the two documents now cite ASS 41. The
    two entries of AAS 1 (1909) are now listed as reprints rather than matches in the AAS sample and 1909–1925 era
    reports, regenerated with this one, and the corpus counts they print moved with them. **Canonical usage runs the other way** — the *Fontes* and the 1917 Code's apparatus cite both at AAS 1 —
    and if the owner prefers that, `Reprint` needs a third `kind` (a first printing in the superseded series, cited at
    its re-issue) and the two rows re-keyed; README's phase 2b-iii-b paragraph and the 1909–1925 era report would then
    need the same correction they need today. Nothing here is load-bearing beyond those two rows.
-12. **The reverse gap is 41 documents, and it is Leo XIII's.** The shelf documents of the sample's years carrying no
-   reference at all (§5): Pius IX 2 (1865–66), Leo XIII 24 (1 in 1879, 16 in 1890–91, 7 in 1900–01), Pius X 15 (1908). Almost
+12. **The reverse gap is 33 documents, and it is Leo XIII's.** The shelf documents of the sample's years carrying no
+   reference at all (§5): Pius IX 2 (1865–66), Leo XIII 16 (1 in 1879, 12 in 1890–91, 3 in 1900–01), Pius X 15 (1908). Almost
    none of them has an ASS entry on its date — §5's last column is empty in all but a handful — so these are acts the
    five volumes do not print, not acts the scanner missed: the ASS published the Holy See's acts selectively, and a
    volume of 672–810 pages yields between 3 entries here (ASS 1, all three read by hand) and 44 (ASS 41). For the era as a whole the registry holds
-   496 shelf documents dated 1865–1908 and **175 of them now carry a reference** (§7), of which **64** are these five
-   volumes' yield, phase 2c-ii-b's five of Pius X carrying the rest. That is the number 2c-ii moves, with 31 volumes left.
+   496 shelf documents dated 1865–1908 and **274 of them now carry a reference** (§7), of which **64** are these five
+   volumes' yield, phase 2c-ii-b's five of Pius X carrying the rest. That is the number 2c-ii moves, with 0 volumes left.
 13. **The allocutions are the one category the sample cannot decide, and the count that would decide it is 1.** 9 entries
    are skipped as a category the registry does not harvest (§3.4): 8 allocutions and the chirograph of ASS 33 p. 714.
    6 of the 8 allocutions carry no date the scanner could read (`????-??-??`): the ASS prints an allocution under its
@@ -169,7 +172,7 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    years late, as the ASS often prints) and now carries its reference while keeping its provisional id. A re-mint is
    the owner's decision and out of scope; what this report adds is that one of the nine now has a source to be re-minted
    from.
-15. **What 2c-ii should expect.** (a) **The OCR is worst at the start.** ASS 1 (1865) yielded 0 acts by rule and needed
+15. **What 2c-ii should expect.** (a) **The OCR is worst at the start.** ASS 1 (1865) yielded 1 acts by rule and needed
    3 hand readings; the volumes of the 1860s and 1870s should be assumed unscannable until measured, and the plan
    should budget for reading them rather than for a rule. From 1879 the rate is usable and from 1900 it is good.
    (b) **The Secretaria Brevium was the next rule, and it was taken: it is worth 9 acts in these five volumes and 62
@@ -196,7 +199,7 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
 
 | Source | Pages | Summa pages | Scanned by rule | Entries | From a heading | Readings | Defects | Summa rows | Pages claimed | Rows unclaimed | Acts the summa omits |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| ass-1 (1865–1866) | 767 | 747–752 | 0 | 3 | 0 | 3 | 3 | 0 | 0 | 0 | 0 |
+| ass-1 (1865–1866) | 767 | 747–752 | 1 | 3 | 0 | 3 | 3 | 0 | 0 | 0 | 1 |
 | ass-12 (1879) | 672 | 647–653 | 10 | 11 | 2 | 1 | 1 | 12 | 9 | 3 | 1 |
 | ass-23 (1890–1891) | 768 | 752–758 | 9 | 13 | 0 | 5 | 4 | 14 | 8 | 6 | 1 |
 | ass-33 (1900–1901) | 768 | 761–768 | 22 | 26 | 1 | 6 | 6 | 24 | 16 | 6 | 4 |
@@ -206,9 +209,9 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
 anchors an entry can carry, and the third — the dateline, which the scanner anchors on by rule — is the majority and is not broken
 out (66 of the 97 entries are `dateline`, 7 `heading`, 24 `reading`). “Scanned by rule” is the fixture's own count, taken before the loader applies the
 readings, so “Entries” is “Scanned by rule” plus “Readings” less the readings that *replace* a scanned entry rather than add one
-(5 in the sample, at ASS 23 p. 318, ASS 33 p. 355, ASS 33 p. 385, ASS 41 p. 12, ASS 41 p. 361).
+(6 in the sample, at ASS 1 p. 193, ASS 23 p. 318, ASS 33 p. 355, ASS 33 p. 385, ASS 41 p. 12, ASS 41 p. 361).
 
-**3 of those 5 are readings a rule has since caught up with, and a later era can retire them.** ASS 23 p. 318, ASS 33 p. 355, ASS 33 p. 385
+**3 of those 6 are readings a rule has since caught up with, and a later era can retire them.** ASS 23 p. 318, ASS 33 p. 355, ASS 33 p. 385
 were written because `headerAgrees` refused the page's running header; 2c-ii Task 6's relaxation now reads each of them by rule, and the
 scanned entry agrees with the reading on class, pope, date and opening. **They are listed, not deleted, and nothing in this phase
 removes them**: what each reading still supplies is a *description* free of the OCR's damage (`N.Leonis` for `N. Leonis`,
@@ -410,6 +413,7 @@ reading with a narrower correction. That is a curation decision for the era that
 
 | Source | Page | Category | Opening |
 |---|---|---|---|
+| ass-1 | 193 | ALLOCUTIO | *Multiplices inter machinationes artesque, quibus Christiani nominis hostes* |
 | ass-12 | 588 | BREVE | *Ad perpetuam rei memoriam, Benedicente Domino, variis iam* |
 | ass-23 | 641 | LITTERAE ENCYCLICAE | *Rerum novarum semel excitata cupidine, quae diu quidem* |
 | ass-33 | 212 | BREVE | *Cum, sicuti accepimus, pia Christifidelium Confraternitas sub titulo* |
@@ -613,40 +617,32 @@ Created: 0 (expected 0: phase 2c-i joins only).
 
 </details>
 
-<details><summary><b>ass-23</b> — 16 documents dated 1890–1891 with no reference</summary>
+<details><summary><b>ass-23</b> — 12 documents dated 1890–1891 with no reference</summary>
 
 | Document | Date | Class | Incipit | ASS entries on this date |
 |---|---|---|---|---|
 | `mag:leo-xiii/cum-apostolica-sedes-1890` | 1890-02-05 | letter | *Cum Apostolica Sedes* | — |
 | `mag:leo-xiii/grande-est-1891` | 1891-09-20 | discourse-address | *Grande est* | — |
-| `mag:leo-xiii/graviter-molesteque-1890` | 1890-06-13 | letter | *Graviter molesteque* | — |
 | `mag:leo-xiii/in-ipso-1891` | 1891-03-03 | encyclical | *In Ipso* | ASS 23 (1890) 518 EPISTOLA *In ipso supremi Pontificatus, quo providens Deus Nos* |
 | `mag:leo-xiii/in-supremo-1890` | 1890-12-15 | apostolic-letter | *In supremo* | — |
 | `mag:leo-xiii/noi-rendiamo-grazie-1890` | 1890-03-14 | letter | *Noi rendiamo grazie* | — |
 | `mag:leo-xiii/non-est-opus-1891` | 1891-12-14 | discourse-address | *Non est opus* | — |
 | `mag:leo-xiii/non-maius-1891` | 1891-06-15 | apostolic-letter | *Non maius* | — |
-| `mag:leo-xiii/octobri-mense-1891` | 1891-09-22 | encyclical | *Octobri mense* | — |
 | `mag:leo-xiii/optimae-quidem-1891` | 1891-07-21 | apostolic-letter | *Optimae quidem* | — |
 | `mag:leo-xiii/pastoralis-officii-1891` | 1891-09-12 | encyclical | *Pastoralis officii* | — |
 | `mag:leo-xiii/pastoralis-vigilantiae-1891` | 1891-06-25 | encyclical | *Pastoralis vigilantiae* | — |
 | `mag:leo-xiii/quod-paucis-1890` | 1890-01-28 | letter | *Quod paucis* | — |
 | `mag:leo-xiii/rem-magni-1890` | 1890-04-20 | letter | *Rem Magni* | — |
-| `mag:leo-xiii/sapienter-olim-1891` | 1891-11-30 | apostolic-letter | *Sapienter olim* | — |
-| `mag:leo-xiii/sapientiae-christianae-1890` | 1890-01-10 | encyclical | *Sapientiae Christianae* | — |
 
 </details>
 
-<details><summary><b>ass-33</b> — 7 documents dated 1900–1901 with no reference</summary>
+<details><summary><b>ass-33</b> — 3 documents dated 1900–1901 with no reference</summary>
 
 | Document | Date | Class | Incipit | ASS entries on this date |
 |---|---|---|---|---|
 | `mag:leo-xiii/al-compimento-delle-riforme-1901` | 1901-06-11 | letter | *Al compimento delle riforme* | ASS 33 (1900) 714 CHIROGRAPHUM *Al compimento delle riforme richieste dalle presenti circostanze,* |
 | `mag:leo-xiii/gravissimas-1901` | 1901-05-16 | encyclical | *Gravissimas* | — |
-| `mag:leo-xiii/parta-humano-generi-1901` | 1901-09-08 | apostolic-letter | *Parta humano generi* | — |
 | `mag:leo-xiii/praestantiam-assisiensis-1900` | 1900-08-02 | letter | *Praestantiam Assisiensis* | — |
-| `mag:leo-xiii/reputantibus-1901` | 1901-08-20 | letter | *Reputantibus* | — |
-| `mag:leo-xiii/slavorum-gentem-1901` | 1901-08-01 | apostolic-letter | *Slavorum gentem* | — |
-| `mag:leo-xiii/urbanitatis-veteris-1901` | 1901-11-20 | letter | *Urbanitatis Veteris* | — |
 
 </details>
 
@@ -688,4 +684,4 @@ Created: 0 (expected 0: phase 2c-i joins only).
 
 ## 7. Corpus
 
-Documents: 8569; with an ASS reference: 64; shelf documents dated 1865–1908: 496, of which with a reference of either series: 175.
+Documents: 8569; with an ASS reference: 64; shelf documents dated 1865–1908: 496, of which with a reference of either series: 274.

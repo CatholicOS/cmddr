@@ -4049,7 +4049,7 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
       // on a dicastery -- and ASS 27's 47 rows are its papal part running on past its end
       // into the dicasteries. All three still scan and join: the summa is the check, not the
       // source (era report, phase 2c-ii-c).
-      'ass-1': { acts: 0, defects: 3, rows: 0, claimed: 0, unclaimed: 0, omitted: 0 },
+      'ass-1': { acts: 1, defects: 3, rows: 0, claimed: 0, unclaimed: 0, omitted: 1 },
       'ass-12': { acts: 10, defects: 1, rows: 12, claimed: 9, unclaimed: 3, omitted: 1 },
       'ass-13': { acts: 11, defects: 5, rows: 16, claimed: 11, unclaimed: 5, omitted: 0 },
       'ass-14': { acts: 3, defects: 6, rows: 9, claimed: 2, unclaimed: 7, omitted: 1 },
@@ -4084,7 +4084,7 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
       // tools/survey-ass.ts read from the store for these volumes too. ASS 7 shows 0 rows
       // and all five of its acts omitted: its summa's papal columns are blank, so the check
       // is vacuous (era report, phase 2c-ii-d).
-      'ass-2': { acts: 1, defects: 4, rows: 3, claimed: 1, unclaimed: 2, omitted: 0 },
+      'ass-2': { acts: 2, defects: 5, rows: 3, claimed: 1, unclaimed: 2, omitted: 1 },
       'ass-3': { acts: 5, defects: 6, rows: 15, claimed: 4, unclaimed: 11, omitted: 1 },
       'ass-4': { acts: 9, defects: 3, rows: 9, claimed: 7, unclaimed: 2, omitted: 2 },
       'ass-5': { acts: 6, defects: 9, rows: 15, claimed: 6, unclaimed: 9, omitted: 0 },

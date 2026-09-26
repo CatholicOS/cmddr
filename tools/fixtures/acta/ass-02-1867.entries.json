@@ -10,6 +10,29 @@
       "series": "ASS",
       "volume": 2,
       "year": 1867,
+      "page": 261,
+      "pope": "Pius IX",
+      "category": "ALLOCUTIO",
+      "date": "????-??-??",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "ALLOCVTIO HABITA IN CONSISTORIO SECRETO",
+      "raw": "SANCTISSIMI DOMINI NOSTRI / PII / DIVINA PROVIDENTIA / PAPAE IX. / ALLOCVTIO / HABITA IN CONSISTORIO SECRETO",
+      "opening": "Non semel, Venerabiles Fratres, afflictas iamdiu in Italia",
+      "anchor": "heading",
+      "evidence": {
+        "heading": "SANCTISSIMI DOMINI NOSTRI / PII / DIVINA PROVIDENTIA / PAPAE IX. / ALLOCVTIO / HABITA IN CONSISTORIO SECRETO",
+        "salutation": null,
+        "opening": "«Non semel, Venerabiles Fratres, afflictas iamdiu in Italia",
+        "dateline": null,
+        "header": "2G1"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 2,
+      "year": 1867,
       "page": 365,
       "pope": "Pius IX",
       "category": "LITTERAE APOSTOLICAE",
@@ -37,6 +60,14 @@
       "lines": [
         "Datum Romae apud S. Petrum sub annulo Piscatoris die IX.",
         "ianuarii MDCCCLXVI. Pontificatus Nostri Anno Vicesimo."
+      ]
+    },
+    {
+      "page": 268,
+      "reason": "header-mismatch",
+      "lines": [
+        "215",
+        "SANCTISSIMI DOMINI NOSTRI / PII / DIVINA PROVIDENTIA / PAPAE IX, / ALLOCVTIO / HABITA IN CONSISTORIO SECRETO"
       ]
     },
     {
@@ -103,6 +134,8 @@
         "raw": "Literae regnantis Romani Pontificis, qui­ / bus Canonico P. Gaduel Vic. gen. Au­ / relianensi gratulatur, quod semen ab / eo iactum per commentarium de vita / et gestis Ven. Bartholomaei Holtzhau- / ser in bonam terram inciderit, atque / ampla incrementa ominatur . . 273"
       }
     ],
-    "omitted": []
+    "omitted": [
+      261
+    ]
   }
 }
