@@ -1785,6 +1785,66 @@ export const ASS_READINGS: Readonly<Record<string, AssReading>> = {
     description: 'De promulgatione legum et evulgatione actorum S. Sedis.',
     evidence: "ASS 41 (1908) 619-620, ass-41-1908.txt. p. 619 l. 3 'CONSTITUTIO APOSTOLICA', l. 4 'De promulgatione legum et evulgatione actorum S. Sedis.', l. 6 'PIUS EPISCOPUS', l. 7 'SERVUS SERVORUM DEI', l. 8 'Ad perpetuam rei memoriam.', l. 10 'Promulgandi pontificias Constitutiones ac leges non idem / semper decursu temporis'. Dated p. 620 ll. 29-31 'Datum Romae apud S. Petrum, anno Incarnationis Do- / minicae millesimo nongentesimo octavo, in Kalendas Octo- / bres, Pontificatus Nostri sexto.': `in Kalendas` is the OCR's reading of `III Kalendas` (the volume reads `III` as `in` again at p. 298, `xxin` for `xxiii`), the third day before the Kalends of October, 29 September 1908 -- a literal `in Kalendas` is no Roman date. Why the scan missed the date: the Kalends form is not read by rule. Answers the scan's no-date defect at p. 619 and the summa's row p. 619.",
   },
+  // Phase 2c-ii-d, the curation round (Pius IX, ASS 2-11). Seven rows, and each one is a
+  // shape this era's volumes print in ONE volume, so a row and not a rule -- the era's two
+  // rules are elsewhere (the `ALLOCVTIO` repair of HEADING_OCR, and ASS 7's papal heading in
+  // PAPAL_HEAD_FORMS). Three populations:
+  //
+  //   1. The three allocutions of the earliest volumes that print their date in the display
+  //      heading, in Roman numerals and with no `die N Month YYYY` for HEADING_DATE_RE to
+  //      read (`DIE XXIX. OCTOBRIS MDCCCLXVI.`). The scan reads the act and dates it
+  //      `????-??-??`; the row supplies the date, as `ASS:1:193` already does for ASS 1.
+  //   2. The two ASS 3 allocutions whose caps block the OCR destroyed at the pope's own
+  //      name (`MI` and `PI 1` for `PII`), leaving `PAPAE IX.` with no name for POPE_RE to
+  //      attach a numeral to, so the scan raised `unknown-pope`. Inferring the pope from
+  //      `Papae IX` alone was measured over all 41 volumes and rejected: it reads these two
+  //      acts and relabels one defect in ASS 27, which is two volumes, below the threshold.
+  //   3. The three letters headed `EPISTOLA SANCTISSIMI PATRIS`, which names the pope by
+  //      style and never by name. The shared heading is a red herring -- the scan fails at a
+  //      different place in each, and `PIUS PP. IX` stands two to twelve lines below the
+  //      heading on two of the three pages, outside every window that looks for it.
+  'ASS:2:261': {
+    pope: 'Pius IX', category: 'ALLOCUTIO', date: '1866-10-29',
+    opening: 'Non semel, Venerabiles Fratres, afflictas iamdiu in Italia',
+    description: 'SANCTISSIMI DOMINI NOSTRI PII DIVINA PROVIDENTIA PAPAE IX. HABITA IN CONSISTORIO SECRETO DIE XXIX. OCTOBRIS MDCCCLXVI.',
+    evidence: "ASS 2 (1867) 261-267, ass-02-1867.txt. p. 261 l. 1 '2G1' (the running header, the OCR's G for 6), ll. 2-6 'SANCTISSIMI DOMINI NOSTRI / PII / DIVINA PROVIDENTIA / PAPAE IX.', l. 7 'ALLOCVTIO' (the OCR's V for U, which phase 2c-ii-d repairs in HEADING_OCR and which is why the scan reads this act at all), l. 9 'HABITA IN CONSISTORIO SECRETO', l. 11 'DIE XXIX. OCTOBRIS MDCCCLXVI.', l. 15 'Venerabiles Fratres', l. 16 '«Non semel, Venerabiles Fratres, afflictas iamdiu in Italia / sanctissimae nostrae religionis res'; no dateline (an allocution), and no salutation line. Dated from the heading's own formula, 29 October 1866. Why the scan missed the date: HEADING_DATE_RE reads `die N Month YYYY` with an arabic or lower-case Roman day and a four-digit year, and this heading sets the day in capital Roman numerals and the year as MDCCCLXVI, so the entry carries `????-??-??`. Answers the scanned entry at p. 261, whose date it supplies.",
+  },
+  'ASS:2:268': {
+    pope: 'Pius IX', category: 'ALLOCUTIO', date: '1866-10-29',
+    opening: 'Luctuosum et nunquam satis deplorandum catholicae Ecclesiae in',
+    description: 'SANCTISSIMI DOMINI NOSTRI PII DIVINA PROVIDENTIA PAPAE IX, HABITA IN CONSISTORIO SECRETO DIE XXIX. OCTOBRIS MDCCCLXVI.',
+    evidence: "ASS 2 (1867) 268-273, ass-02-1867.txt. p. 268 l. 1 '215' (the running header, which is neither 268 nor one edit from it), ll. 2-6 'SANCTISSIMI DOMINI NOSTRI / PII / DIVINA PROVIDENTIA / PAPAE IX,', l. 7 'ALLOCVTIO', l. 9 'HABITA IN CONSISTORIO SECRETO', l. 12 'DIE XXIX. OCTOBRIS MDCCCLXVi.' (the OCR's final lower-case i), l. 15 'Venerabiles Fratres', l. 17 '«Luctuosum et nunquam satis deplorandum catholicae Ec- / clesiae in Poloniae Regno, ac Russiarum Imperio statum'; no dateline (an allocution), and no salutation line. Dated from the heading's own formula, 29 October 1866 -- the same day as the allocution of p. 261, which the volume prints six pages earlier on the affairs of Italy where this one is on Poland and Russia. Why the scan refused it: the running header reads '215', which headerAgreesASS cannot admit against 268, so the act was read and then refused as a header-mismatch. Answers the scan's header-mismatch defect at p. 268; the PDF page is the printed page (p. 267 prints '267' and p. 269 prints '269').",
+  },
+  'ASS:3:113': {
+    pope: 'Pius IX', category: 'ALLOCUTIO', date: '1867-09-20',
+    opening: 'Universus catholicus orbis noscit, Venerabiles Fratres, maxima damna',
+    description: 'SANCTISSIMI DOMINI NOSTRI PII DIVINA PROVIDENTIA PAPAE IX. HABITA IN CONSISTORIO SECRETO DIE XX. SEPTEMBRIS MDCCCLXVII.',
+    evidence: "ASS 3 (1867) 113-117, ass-03-1867.txt. p. 113 l. 1 '113' (the running header), ll. 2-5 'SANCTISSIMI DOMINI NOSTRI / MI / DIVINA PROVIDENTIA / PAPAE IX.' (l. 3's 'MI' is the OCR's reading of 'PII'), l. 7 'ALLOCUTIO', l. 8 'HABITA IN CONSISTORIO SECRETO', l. 10 'DIE XX. SEPTEMBRIS MDCCCXXVII.', l. 14 'Venerabiles Fratres.', l. 16 '« Universus catholicus orbis noscit, Venerabiles Fratres, ma- / xima damna, gravissimasque iniurias Catholicae Ecclesiae'; no dateline (an allocution), and no salutation line. The heading's printed year MDCCCXXVII is 1827, twenty years before the pontificate began, so it is the OCR's damage of MDCCCLXVII; the date is fixed from the volume's own summa, which lists this act as 'Allocutio Eiusdem diei 20 Septem. 1867, qua reprobavit et damnavit legem a Gubernio Subalpino ...' (summa p. 665, the row the parser reads at p. 394 of the woven column), and the act's own text is that condemnation ('idem vero Gubernium ... eo iniustitiae devenit, ut minime exhorruerit legem pro-', ll. 23-26). Why the scan missed it: the caps block gives 'PAPAE IX.' with no name word beside the numeral, so POPE_RE matches nothing and popeOf cannot name him. Answers the scan's unknown-pope defect at p. 113.",
+  },
+  'ASS:3:289': {
+    pope: 'Pius IX', category: 'ALLOCUTIO', date: '1867-12-20',
+    opening: 'Dives in misericordia Deus, qui consolatur nos in',
+    description: 'SANCTISSIMI DOMINI NOSTRI PII DIVINA PROVIDENTIA PAPAE IX. HABITA IN CONSISTORIO SECRETO DIE XX. DECEMBRIS MDCCCLXVII.',
+    evidence: "ASS 3 (1867) 289-295, ass-03-1867.txt. p. 289 l. 1 '289' (the running header), l. 2 'U ACTIS CONSISTORIALIBUS.' (the part's running head, the OCR's reading of 'EX ACTIS CONSISTORIALIBUS'), l. 7 'SANCTISSIMI DOMINI NOSTRI', l. 9 'PI 1' (the OCR's reading of 'PII'), l. 11 'DIVINA PROVIDENTIA', l. 12 'PAPAE IX.', l. 14 'ALLOCUTIO', l. 17 'HABITA IN CONSISTORIO SECRETO', l. 19 'DIE XX. DECEMBRIS MDCCCLXVIi.' (the OCR's final lower-case i), l. 24 'Venerabiles Fratres', l. 26 '« Dives in misericordia Deus, qui consolatur nos in omni'; no dateline (an allocution), and no salutation line. Dated 20 December 1867 from the heading, which the volume's own summa states in words: 'Allocutio habita die 20 Decembris 1867' (the row whose page token the OCR took from the wrapped year, so the parser reads it as page 1867). Why the scan missed it: 'PI 1' is not a name word to POPE_RE, and it carries a trailing digit, so capsAbove reads it as a running head and stops there -- the block passed to popeOf is 'DIVINA PROVIDENTIA / PAPAE IX.' with no name at all. Answers the scan's unknown-pope defect at p. 289 and the summa's unclaimed row p. 289.",
+  },
+  'ASS:5:220': {
+    pope: 'Pius IX', category: 'EPISTOLA', date: '1869-10-30',
+    opening: 'Quum in litteris ad te, Venerabilis Frater, datis',
+    description: 'AD ARCHIEPISCOPUM WESTMONASTERIENSEM HENRICUM EDUARDUM MANNING DATA DIE XXX OCTOBRIS MDCCCLXIX DE INVITATIONE DISSIDENTIUM AD CATHOLICAM FIDEM.',
+    evidence: "ASS 5 (1869) 220-221, ass-05-1869.txt. p. 220 l. 1 'EPISTOLA SANCTISSIMI PATRIS', l. 3 'Al) AECH[EPISCOPUM WESTMONASTERIENSIS!' (the OCR's reading of 'AD ARCHIEPISCOPUM WESTMONASTERIENSEM'), l. 5 'HENRICUM EDUARDUM MANNING', l. 8 'DATA DIE XXX OCTOBRIS MDCCCLXIX DE INVITATIONE DISSIDENTIUM', l. 11 'AD CATHOLICAM FIDEM.', l. 17 'PIUS PP. IX', ll. 19-21 '« Venerabili Fratri; Henrico Eduardo, Archiepiscopo West- / monasteriensi. / « Venerabilis Frater - Salutem et Apostolicam Benedictionem.', l. 22 'Quum in litteris ad te, Venerabilis Frater, datis die 4 praeteriti'. Dated p. 221 ll. 22-24 '« Datum Romae apud S. Petrum die 30 Octobris 1869, Pon- / tificatus Nostri Anno XXIV. / « Pius PP. IX ».' -- 30 October 1869, the day the heading itself names. Why the scan missed it: the heading names the pope by style only ('SANCTISSIMI PATRIS'), and his own signature two lines below is out of reach, because l. 3's OCR set a lower-case l in 'Al)' so isCaps refuses the addressee line and pastPreamble stops there, fourteen lines short of 'PIUS PP. IX'. Answers the scan's unknown-pope defect at p. 220 and the summa's unclaimed row p. 220 ('Altera ad eundem epistola de invitatione dissidentium ad catholicam fidem').",
+  },
+  'ASS:5:532': {
+    pope: 'Pius IX', category: 'EPISTOLA', date: '1870-03-12',
+    opening: 'Dolendum profecto est, dilecte fili, nonnullos esse inter',
+    description: 'Ad R.mum Abbatem Solesmensem, qui SS.mo Patri librum polemicum obtulit, cui titulus: De la monarchie Pontificale a propos du livre de Mons. l’Eveque de Sura.',
+    evidence: "ASS 5 (1869) 532-533, ass-05-1869.txt. p. 532 l. 1 'EPISTOLA SANCTISSIMI PATRIS', ll. 3-5 'Ad R.mum Abbatem Solesmensem, qui SS.mo Patri librum pole- / micum obtulit, cui titulus: De la monarchie Pontificale a / propos du livre de Mons. VEveque de Sura.' (the OCR's 'VEveque' for 'l'Eveque'), ll. 9-10 'Dilecto Filio Prospero Gueranger, / e Congregatione Benedictina Galliarum, Abbati Solesmensi', l. 13 'PIUS PP. IX', l. 15 '« Dilecte fili, salutem et Apostolicam Benedictionem. Do- / lendum profecto est, dilecte fili, nonnullos esse inter catholicos'. Dated p. 533 ll. 30-33 '« Datum Romae apud S. Petrum, die 12 Martii 1870, Ponti- / ficatus Nostri Anno XXIV ».' signed 'PIUS PP. IX.' -- 12 March 1870. Why the scan missed it: the heading names the pope by style only ('SANCTISSIMI PATRIS'), and the descriptive lines under it are set in lower case, which is neither a caps line nor a dative addressee, so pastPreamble stops at l. 3 and never reaches 'PIUS PP. IX' at l. 13. Answers the scan's unknown-pope defect at p. 532.",
+  },
+  'ASS:6:264': {
+    pope: 'Pius IX', category: 'EPISTOLA', date: '1871-03-02',
+    opening: 'Ecclesia Dei, tamquam Regina gemmatis vestibus ornata, quemadmodum',
+    description: 'AD EMINENTISSIMUM CARDINALEM URBIS VICARIUM DATA DIE 2 MARTII 1871, QUAE COMMEMORATUR IN LITTERIS ENCYCLICIS MODO RELATIS.',
+    evidence: "ASS 6 (1870) 264-268, ass-06-1870.txt. Printed in Italian with the Latin version below it page by page. p. 264 l. 1 'EPISTOLA SANCTISSIMI PATRIS', ll. 4-6 'AD EMINENTISSIMUM CARDINALEM URBIS VICARIUM / DATA DIE 2 MARTII 1871, QUAE COMMEMORATUR / IN LITTERIS ENCYCLICIS MODO RELATIS.', l. 9 'Venerabile Fratello Nostro, Salute ed Apostolica Benedizione.', l. 13 'DOCUMENTUM. «La Chiesa di Dio, quale Regina abbigliata di / gemmate vesti'; the Latin on the same page at l. 27 'Venerabilis Frater, Salutem et Apostolicam Benedictionem.' and ll. 30-31 'VERSIO. Ecclesia Dei, tamquam Regina gemmatis vestibus or- / nata, quemadmodum conspicuo nonnullorum Ordinum Regularium'. Dated p. 268, the Italian at ll. 11-13 '» Dato a Roma, presso S. Pietro, il di 2 Marzo dell'anno 1871, / vigesimo quinto del Nostro Pontificato.» / PIO PP. IX.' and the Latin at ll. 24-26 'Batum Romae apud S. Petrum die secunda Martii MDCCCLXXL / Pontificatus Nostri anno XXV. / PIUS PP. IX.' (the OCR's 'Batum' for 'Datum' and 'MDCCCLXXL' for 'MDCCCLXXI'): 2 March 1871, which the heading itself names and both versions agree on. The opening is the Latin version's, as for the other bilingual acts of the series (ASS:12:3, ASS:23:206). Why the scan missed it: the heading names the pope by style only ('SANCTISSIMI PATRIS'), no salutation line follows -- the Italian greeting 'Venerabile Fratello Nostro, Salute ed Apostolica Benedizione.' is neither GREETING_RE's nor SALUTATION_RE's -- and the page carries the pope's name nowhere near the heading, so popeOf had nothing to read. Answers the scan's unknown-pope defect at p. 264 and the summa's unclaimed row p. 264.",
+  },
 };
 
 export interface AssPageOffset {
