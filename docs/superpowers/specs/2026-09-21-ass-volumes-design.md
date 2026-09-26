@@ -627,5 +627,63 @@ XIII (8 records) and Pius IX (5), so the same acts will behave differently. What
 the shape of the round: a parser needing almost no rows, and a handful of provisional date-keyed
 records only a curated override can tell apart.
 
+**Measured (2026-09-26, phase 2c-ii-c).** Leo XIII's twenty-one remaining volumes — ASS 13–22,
+24–32, 34, 35 — the largest era and the thinnest ([era report](../reports/2026-09-26-ass-volumes-leo-xiii.md),
+which covers ASS 13–35 and says which of its volumes 2c-i had already joined).
+
+*The prediction held, and the shape did not.* The scan agrees with the survey in every column
+of all twenty-one volumes. But 177 acts over 15,259 pages against Pius X's 182 over 3,721, and
+**114 of 246** summa rows claimed — 46.3 % where 2c-ii-b claimed 71.1 %. ASS 15 gives one
+reference in 623 pages; ASS 14 and ASS 17 give none. **98 references** written, the ASS 274 in
+all, Leo XIII 133 and Pius X 141.
+
+*Three rules, each measured over all 41 volumes before it was accepted.* `LETTERA` and `LETTERA
+APOSTOLICA` as class headings (ASS 20 (1887) 4, ASS 34 (1901) 513 — the second was being read as
+the first and given the letters class), and `LITTERAE APOSTOLICAE IN FORMA BREVIS`, the whole
+name of the instrument #48 folded into the apostolic letter, which the series prints once at ASS
+22 (1889) 257. The bare capital `A.` before the year, which the *anno* normaliser had every form
+but. And the months the volumes abbreviate after the day — `Nov.`, `Ian.`, `Dec.`, `Oct.`,
+`Sept.`, `Iun.`, `decem.` — expanded in `assDate` rather than in `latinDate`, which the AAS
+shares; that one reaches nine volumes including ASS 39, which is Pius X's, so 2c-ii-b's report
+and pins moved with it.
+
+*Sixteen curated rows.* Fifteen are the solemn datelines: the year of the Incarnation spelled out
+in words and the day by the Roman calendar, in Roman numerals or spelled-out ordinals, in the
+accusative with a count or in the bare ablative. **The owner ruled (2026-09-26) that these are
+rows and not a Roman-calendar reader** — the date is what the join matches on, so a conversion
+that went wrong would fail quietly or match the wrong act — continuing what 2c-i did with its
+eight, for 23 across the series. Every date was checked against the pontificate year its own
+dateline states, and three are acts whose dates are independently known: *Apostolicae curae*,
+*Officiorum ac munerum* and *Quod Romani Pontifices*. One dateline contradicts itself (ASS 29
+(1896) 513: year words 1896, `Pontificatus Nostri decimo nono` requiring 1897) and the shelf
+settled it. The sixteenth row is `ACTA_REPRINTS` for the one act the ASS prints twice,
+*Officiorum ac munerum* at ASS 29 388 and again at ASS 30 39 — the series' first `reprint` hold.
+
+*No ambiguity, and none of the era's holds is the join's doing.* Ambiguity and double claiming
+stand where they did before the era joined. **35 of its 88 holds are briefs** against a briefs
+shelf of 13 records: thin, not absent, which is where this era differs from Pius X's, who had
+none at all — and the difference did not help, because 13 records cannot answer 35 printed
+brevia.
+
+*What the summa cannot check, and what that does not cost.* ASS 20 and ASS 26 find no papal part
+— 20's summa opens on its rows with no class heading, 26's on a dicastery — and ASS 27's runs on
+past its end into the dicasteries, so 47 rows are counted as papal where five are. All three
+still scan and join, yielding 5, 3 and 8 references: the summa is the completeness check, not the
+source, and their `unclaimed` is a false floor rather than a shelf failing.
+
+*A floor this phase corrected rather than inflated.* 18 of the 49 `no-heading` defects carry the
+ring of the Fisherman, and they are not unread briefs: ASS 15 (1882) 340 is the closing dateline
+of an act whose heading stands pages earlier, and the ring belongs to the dating formula of
+ordinary apostolic letters too (#48 measured 629 across the AAS). They are datelines the scan
+anchored on where no act opens. The residue after the phase is 95 defects: `no-heading` 49,
+`no-date` 37 — the numeral itself garbled, a day named rather than numbered (`ipso die natali
+D. N. Iesu`), two datelines the OCR truncated, one act quoting a document of 1851 — `no-opening`
+5, `header-mismatch` 2, `unknown-pope` 2.
+
+*What 2c-ii-d inherits.* Pius IX's eleven volumes, ASS 1–11 less the sampled ASS 1: ten. The
+least scannable of the series, and ASS 7 carries the one genuine page offset the survey found.
+ASS 1 and ASS 7 are two of the four volumes whose summa finds no papal part, so the blindness ASS
+20 and ASS 26 show here recurs there.
+
 **Out of scope for 2c-ii**, unchanged: the ASS-born documents and the reprints of earlier
 popes registered under their own issuers (2c-iii, decided from the eras' gap reports).
