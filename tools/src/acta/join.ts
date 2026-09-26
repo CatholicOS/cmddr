@@ -137,13 +137,19 @@ export const ACTA_SOURCES: readonly ActaSource[] = [
   ass(34, 1901, 'ASS-34-1901-2-ocr.pdf', '2026-09-22', 1902),
   ass(35, 1902, 'ASS-35-1902-3-ocr.pdf', '2026-09-22', 1903),
   // Phase 2c-ii-d (spec §10 decision 3): Pius IX's ten unjoined volumes, ASS 2-11. ASS 1
-  // is the sample's, so these complete the pontificate. The era the survey says will be
-  // the series' thinnest: 39 of 128 summa rows claimed, 30.5 %. ASS 7 finds no papal part
-  // at all -- its summa's papal columns are blank, so its check is vacuous -- and carries
+  // is the sample's, so these complete the pontificate. The era the survey said would be the
+  // series' thinnest: it predicted 39 of 128 summa rows claimed, 30.5 %, and the era measured
+  // 43 of 141, 30.5 % (era report §1). ASS 7's summa was read as finding no papal part at all
+  // until commit `0f6ad15` taught `PAPAL_HEAD_FORMS` the one-volume form its papal part opens
+  // on, `EX ACTIS AD INSTAR CONSISTORIALIUM.`, which `DICASTERY_RE` also matches; its check is
+  // not vacuous but reads 13 rows, 4 claimed and 9 unclaimed. It also carries
   // the series' one genuine page offset (PDF pp. 496-547, +2 delta; `ASS_PAGE_OFFSETS`,
   // `tools/src/acta/curation.ts`). ASS 10 carries a bound-in `supplemento` paginated
   // 321-448, as its PDF's name records. ASS 11 prints two popes, Pius IX to his death on
-  // 7 February 1878 and Leo XIII from his election on 20 February. ASS 2 and ASS 3 are
+  // 7 February 1878 and Leo XIII from his election on 20 February -- though the scanner reads
+  // only Leo XIII there, both of the volume's acts of Pius IX (the brief *Quod iure
+  // haereditario* of 17 August 1877 at p. 50 and the letter to Archbishop Darboy of
+  // 26 October 1865 at p. 210) being `no-date` defects. ASS 2 and ASS 3 are
   // both 1867. Retrieved 2026-09-22 with the whole series, for the survey.
   ass(2, 1867, 'ASS-02-1867-ocr.pdf', '2026-09-22'),
   ass(3, 1867, 'ASS-03-1867-ocr.pdf', '2026-09-22'),

@@ -787,9 +787,13 @@ export interface MatchOverride {
  * gives the act (`AAS:{volume}:{page}`, or `ASS:{volume}:{page}` for a volume that prints no
  * index) and consulted before the class rule (match.ts): the override names the document
  * outright and does not require it to satisfy the class rule, since the class rule is what
- * was wrong. Most rows are a measured harm of the discussion #30 question -- the shelf and
- * the *Acta* disagree about the class -- and quote the index line and both headings; two of
- * Pius X's are a provisional shelf record with no incipit to tell two acts of a day apart.
+ * was wrong. Of the table's fourteen rows, five (the AAS keys) are a measured harm of the
+ * discussion #30 question -- the shelf and the *Acta* disagree about the class -- and quote
+ * the index line and both headings; two of Pius X's are a provisional shelf record with no
+ * incipit to tell two acts of a day apart. The count was "most rows" while the table held
+ * seven; phase 2c-ii-d doubled it, so the partition is stated as the numbers it is
+ * (final review, M2). Shape (ii) below is the same #30 disagreement in its other symptom,
+ * so ten of the fourteen answer to #30 on the wider reading.
  *
  * Seven rows are a **third case**, in two shapes, and neither shape overrides a wrong act:
  * in both there was no wrong act to override, so the row supplies an identity the rules

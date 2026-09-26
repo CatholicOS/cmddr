@@ -28,6 +28,7 @@ import { scanVolume, headerAgreesASS, CLASS_HEADINGS, type AssDefect, type AssEn
 import { checkSumma, locateSumma, parseSummaPapalPart, splitColumns, DIGIT_OCR, PAPAL_HEAD_FORMS } from './src/acta/summa.js';
 import { headerAgrees, headerOf } from './src/acta/recover.js';
 import { ACTA_SOURCES } from './src/acta/join.js';
+import { ASS_READINGS } from './src/acta/curation.js';
 import type { DocumentRecord } from './src/types.js';
 import { readdirSync } from 'node:fs';
 
@@ -608,9 +609,24 @@ p('more: the series *does* hold a genuine offset the 48 never counted, because n
 p('is what settles how many such stretches there are.');
 p('`headerAgreesASS` (ass.ts) is the ASS-only relaxation the ruling took: a `DIGIT_OCR` letter (summa.ts) stands for any digit rather than the');
 p('one it is keyed to, and, unlike `headerAgrees` itself (recover.ts, kept as it was for the AAS page recovery), an all-digit token one edit from');
-p('the page agrees too. 40 of the 48 agree by that rule; the other 8 below are two edits or worse, or a page number the OCR splits across two');
-p('lines `headerOf`\'s single line cannot reach -- three of them (ASS 33 p. 449, ASS 41 pp. 298, 495) already answered by a curated reading');
-p('regardless (`ASS_READINGS`, curation.ts), five not (ASS 8 pp. 373, 686; ASS 10 p. 49; ASS 13 p. 3; ASS 16 p. 241), each confirmed OCR noise');
+/**
+ * The `header-mismatch` pages that survive `headerAgreesASS`, split by whether a curated
+ * reading already answers the page. Counted and listed from `mismatches` and `ASS_READINGS`
+ * rather than typed: the hand-typed split read "three ... five not", 8 beside a computed total
+ * that had grown to 9, the ninth being ASS 2 p. 268, which phase 2c-ii-d answered with
+ * `ASS:2:268` (final review, M7; and PR #51's lesson).
+ */
+const mismatchPages = surveyed.flatMap((s) => s.mismatches.map((m) => ({ volume: s.volume, page: m.page })));
+const answeredByReading = (x: { volume: number; page: number }) => `ASS:${x.volume}:${x.page}` in ASS_READINGS;
+const listPages = (rows: { volume: number; page: number }[]) => [...new Set(rows.map((r) => r.volume))]
+  .map((v) => { const ps = rows.filter((r) => r.volume === v).map((r) => r.page); return `ASS ${v} p${ps.length === 1 ? '.' : 'p.'} ${ps.join(', ')}`; })
+  .join('; ');
+const answeredMismatches = mismatchPages.filter(answeredByReading);
+const openMismatches = mismatchPages.filter((x) => !answeredByReading(x));
+const spell = (n: number) => ['none', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'][n] ?? String(n);
+p(`the page agrees too. ${48 - mismatchPages.length} of the 48 agree by that rule; the other ${mismatchPages.length} below are two edits or worse, or a page number the OCR splits across two`);
+p(`lines \`headerOf\`'s single line cannot reach -- ${spell(answeredMismatches.length)} of them (${listPages(answeredMismatches)}) already answered by a curated reading`);
+p(`regardless (\`ASS_READINGS\`, curation.ts), ${spell(openMismatches.length)} not (${listPages(openMismatches)}), each confirmed OCR noise`);
 p('the same way but too far from the page to admit without also risking a page whose header truly disagrees.');
 p();
 const runs = surveyed.flatMap((s) => s.offsets.map((r) => ({ volume: s.volume, ...r })));

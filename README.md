@@ -492,8 +492,9 @@ pope inside the conciliar narrative. The owner ruled on 2026-09-26 that a concil
 takes an ASS reference; the two acts reach the join by curated rows and not by a rule, the general `promulgatedBy` rule having been built and measured over
 the whole corpus to an identical match set before it was rejected (spec §5 carries the ruling). What holds this era back is the shelf and not the scan, and
 the era report's §6.1 counts the ceiling: the registry holds **37** records dated 1865–1878 against the 77 entries the scanner read — Pius IX 31 of his 75,
-Leo XIII 4, Vatican I 2 — and 14 of them now carry a reference, while 1866, 1869 and 1878 hold no record of Pius IX at all, so no volume of those years can
-match one of his however well it is read. He is a flat-era pope (`pontiffs.ts`) publishing as one reverse-chronological list with no shelves, so every
+Leo XIII 4, Vatican I 2 — and 14 of them now carry a reference, while 1866, 1869 and 1878 hold no record of Pius IX at all, so no reference of his can
+ever be written on a date in one of them — which is not to say a volume of those years can match nothing of his, since the volumes reprint older acts:
+ASS 11 (1878) prints two acts of Pius IX, of 17 August 1877 and 26 October 1865, both of them `no-date` defects and neither day on his shelf. He is a flat-era pope (`pontiffs.ts`) publishing as one reverse-chronological list with no shelves, so every
 record of his carries `source.shelf: null` and the class the join matches on is the genre alone; **44 entries are held**, every one `series-not-created`,
 10 of them briefs against a briefs shelf of 5 records — thin rather than absent, as under Leo XIII. Two rules did the era's work, each measured over all 41
 volumes before it was accepted. `ALLOCVTIO`, the V the earliest volumes set for U, is repaired in `HEADING_OCR`, and its movement is confined to ASS 1 and
@@ -505,7 +506,8 @@ what the store cannot hold, printed pp. 496–497 being absent from the store's 
 third rule was rejected with its numbers**: the one-T `LITERAE` half of the same ruled V-for-U pair reads **0 acts over all 41 volumes**, so the owner's
 fallback branch was executed instead and the acts ASS 2 prints under a one-T spelling or under none are curated readings — curated readings for acts the
 rule would not have reached anyway, which is what the discipline prefers to a rule that fires for no gain. The round is **16 curated readings and 7 match
-overrides**, 23 rows for 77 entries, and it raised **no ambiguity and no double claim at all**: five of the overrides are class disagreements, where the
+overrides keyed inside ASS 1–11**, 23 rows for 77 entries — 3 of the 23 being phase 2c-i's, its readings of the sampled ASS 1 (`ASS:1:193`, `ASS:1:578`
+and `ASS:1:744`), so this era wrote 20 — and it raised **no ambiguity and no double claim at all**: five of the overrides are class disagreements, where the
 volume's heading and the registry's genre disagree and the class rule reaches the right record only to refuse it, and **the owner ruled that such a
 disagreement is bridged by a curated row quoting the page and never by a rule** (spec §6). Three acts stay unread and recorded,
 [#56](https://github.com/CatholicOS/cmddr/issues/56)'s: ASS 8 pp. 443 and 445, reprints of 1860 and 1857 with no first printing inside the series, and the

@@ -737,7 +737,10 @@ D. N. Iesu`), two datelines the OCR truncated, one act quoting a document of 185
 *What 2c-ii-d inherits.* Pius IX's eleven volumes, ASS 1–11 less the sampled ASS 1: ten. The
 least scannable of the series, and ASS 7 carries the one genuine page offset the survey found.
 ASS 1 and ASS 7 are two of the four volumes whose summa finds no papal part, so the blindness ASS
-20 and ASS 26 show here recurs there.
+20 and ASS 26 show here recurs there. (2c-ii-d falsified half of that: ASS 7 *has* a papal part,
+headed `EX ACTIS AD INSTAR CONSISTORIALIUM.` for the manner of the acts rather than for the pope,
+and its check reads 13 rows, 4 claimed and 9 unclaimed — see *Measured* below. ASS 1's summa still
+finds none.)
 
 **Measured (2026-09-26, phase 2c-ii-d).** Pius IX's ten volumes, ASS 2–11, and with them the
 series ([era report](../reports/2026-09-26-ass-volumes-pius-ix.md), which covers ASS 1–11 and
@@ -754,8 +757,11 @@ either series on a council-issued record.
 *The shelf is the ceiling, and the era report counts it (§6.1).* 37 shelf records are dated
 1865–1878 against the 77 entries the scanner read — Pius IX 31 of his 75 records, Leo XIII 4,
 Vatican I 2 — and 14 of the 37 now carry a reference. 1866, 1869 and 1878 hold no record of Pius
-IX at all, so no volume of those years can match one of his however well it is read: he is a
-flat-era pope (`pontiffs.ts`) publishing as one reverse-chronological list with no shelves, so
+IX at all, so no reference of his can ever be written on a date in one of them — which is not the
+same as saying a volume of those years can match nothing of his, since the volumes reprint older
+acts: ASS 11 (1878) prints two acts of Pius IX, of 17 August 1877 and 26 October 1865, both of
+them `no-date` defects, and neither day is on his shelf. He is a flat-era pope
+(`pontiffs.ts`) publishing as one reverse-chronological list with no shelves, so
 every record of his carries `source.shelf: null` and the class the join matches on is the genre
 alone. **44 entries held, every one `series-not-created`, 10 of them briefs** against a briefs
 shelf of 5 records — thin rather than absent, as under Leo XIII, and 5 records cannot answer 10
@@ -780,7 +786,9 @@ the owner's fallback branch was executed instead: the acts ASS 2 prints under a 
 under none are curated readings, for acts the rule would not have reached anyway. A rule that
 fires for no gain is not accepted here, however symmetrical it looks beside one that does.
 
-*The round: 16 curated readings and 7 match overrides, 23 rows for 77 entries.* **No ambiguity
+*The round: 16 curated readings and 7 match overrides keyed inside ASS 1–11, 23 rows for 77
+entries — of which 3 are phase 2c-i's, the `ASS:1:193`, `ASS:1:578` and `ASS:1:744` readings of
+the sampled ASS 1, so this era wrote 20.* **No ambiguity
 and no double claim**: the corpus totals stand where they did before the era joined. Two of the
 overrides are the conciliar constitutions of §5 — *Dei Filius* at ASS 5 (1869) 481 and *Pastor
 Aeternus* at ASS 6 (1870) 40, the owner's ruling implemented by curated row after the general

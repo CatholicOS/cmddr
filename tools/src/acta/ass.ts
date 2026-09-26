@@ -84,7 +84,18 @@ export interface Anchor {
 
 // --- anchors -------------------------------------------------------------------------------
 
-/** The pope's own dateline: the anchor, then `Pontificatus Nostri` within the next three lines (a dicastery's `Datum Romae ex Secretaria …` has none). */
+/**
+ * The pope's own dateline: the anchor, then `Pontificatus Nostri` within the next three lines
+ * (a dicastery's `Datum Romae ex Secretaria …` has none).
+ *
+ * **Every branch names a place, and every place is Rome or the papal palaces.** A papal act
+ * given anywhere else — `Datum Bononiae` — is therefore invisible to this anchor whatever its
+ * heading, and is read only if `HEADING_RE` reaches it from above (phase 2c-ii-d, spec §10;
+ * the era report's §2 note and the fixtures' README carry the same finding). Whoever extends
+ * the anchor to another toponym must measure the new branch over all 41 volumes first, as the
+ * ruled rules of 2c-ii-d were: a place name is a weaker guard than `Romae`, and
+ * `Pontificatus Nostri` is what has been carrying the precision.
+ */
 export const DATUM_RE = /Dat(?:um|\.)\s+[REB]om[ae]{1,2}|\bDat[oa]\s+(?:a|in)\s+Roma|\bDal\s+Vaticano|\bDal\s+Palazzo/;
 /**
  * `Datum` at a line's end, its `Romae` on the next: the one break the anchor reads across,

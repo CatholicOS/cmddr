@@ -3960,8 +3960,13 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // volume 2c-i sampled, still carries none -- and the shelf is why, not the scan: he is a
     // flat-era pope (`pontiffs.ts`), all 75 of his records carry `source.shelf: null`, and
     // only 29 of them are dated 1867-1878, with 1869 and 1878 holding none at all, so ASS 5
-    // (1869-70) and ASS 11 (1878) can match nothing of his however well they are read. 10 of
-    // those 29 now carry a reference, and an 11th is on an act of 1864 that ASS 3 reprints at
+    // (1869-70) can match nothing of his dated in its own years however well it is read. The
+    // year argument does NOT reach ASS 11 (1878), and the earlier form of this comment, which
+    // said it did, was unsound (final review, I1): the two acts of his that ASS 11 prints are
+    // dated 1877-08-17 and 1865-10-26, not 1878, so a better reading of the volume could in
+    // principle match them. In the event nothing is lost -- his shelf holds no record on
+    // either day -- but that is a fact to be checked and not one the year argument supplies.
+    // 10 of those 29 now carry a reference, and an 11th is on an act of 1864 that ASS 3 reprints at
     // p. 186 (the reprint class, #56). Leo XIII takes 3, all from ASS 11: 2 of his 4 records
     // of 1878, and the brief of 15 February 1879 at p. 420.
     // It was 11 until Task 4b. Four encyclicals the shelf held on the day stood unmatched
@@ -3991,8 +3996,16 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // ASS 2-11 and with them the first references Pius IX has ever carried (11) and the first
     // any council has (2, the dogmatic constitutions of Vatican I, whose genre is
     // `constitution`); 3 of the 16 are Leo XIII's, from ASS 11, which prints his first months
-    // and no act of Pius IX at all. Four of Task 4b's five overrides are on records the
-    // registry files as `encyclical`, which is why that genre moves by 4 and
+    // and out of which the scanner read no act of Pius IX at all -- a fact about the scan and
+    // not about the volume, which prints two of his: the brief *Quod iure haereditario* of
+    // 17 August 1877, opening at p. 50 under `LITTERAE APOSTOLICAE` / `PIUS PP. IX.` and
+    // closing at p. 52 (`die xvii Augusti MPCCCLXXVII` for `MDCCCLXXVII`, `F. Card.
+    // ASQUINIUS`), and `LITTERAE / SSmi D. N. Pii Papae IX ad R. P. D. Darboy` of
+    // `Die 26 octobris 1865.` at p. 210, a display date where the scanner wants a closing
+    // dateline. Both are the volume's `no-date` defects at pp. 50 and 210, so a 2c-iii reader
+    // closing his reverse gap must read ASS 11 and not skip it (final review, I1).
+    // Four of Task 4b's five overrides are on records the registry files as `encyclical`,
+    // which is why that genre moves by 4 and
     // `apostolic-letter` by only 1 (the brief of ASS 11 p. 420). The three bulls of the
     // sample are the constitutions *Conditae a Christo* (1900), *Sapienti consilio* and
     // *Promulgandi*.
@@ -4349,8 +4362,9 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
   it('opens one act per page over the two conciliar references, invariant 25 with them written', () => {
     // Task 3b wrote the series' first `acta` references on records whose issuer is a council,
     // and could only check invariant 25 vacuously: `data/` was unjoined. They are written now,
-    // so the check is real. Rule 25 keys on `series|volume[-part]|page` and is issuer-blind, so
-    // a conciliar reference collides with a papal one exactly as two papal ones would.
+    // so the check below is real. Rule 25 keys on `series|volume[-part]|page` and is
+    // issuer-blind, so a conciliar reference collides with a papal one exactly as two papal
+    // ones would.
     const conciliar = cited.filter((d) => d.issuerId.startsWith('oec:'));
     expect(conciliar.map((d) => `${d.id} ASS ${d.acta!.volume} (${d.acta!.year}) ${d.acta!.page}`).sort()).toEqual([
       'mag:vatican-i/dei-filius-1870 ASS 5 (1869) 481',
@@ -4364,7 +4378,11 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
         && x.acta.volume === d.acta!.volume && x.acta.page === d.acta!.page);
       expect(sharers.map((x) => x.id), `${d.id}'s page`).toEqual([]);
     }
-    expect(checkDocuments(everything, genres, keywords, series).filter((v) => v.rule === 25)).toEqual([]);
+    // The global `checkDocuments` rule-25 filter is not repeated here either: 'satisfies
+    // invariant 25 across both series' below is the one place this block makes it. `bd236dd`
+    // removed the same duplicate from the overrides test and left this copy behind, so two
+    // identical global assertions stood where one states the invariant (final review, M3).
+    // What this test owns is the two references' own pages, which no global check can name.
   });
 
   it('opens one act per page over Task 4b\'s five curated overrides, ASS 4 p. 131 included', () => {
@@ -4393,7 +4411,7 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
       expect(sharers.map((x) => x.id), `${id}'s page`).toEqual([]);
     }
     // The global invariant-25 check is not repeated here: 'satisfies invariant 25 across both
-    // series' below makes it, as does the conciliar test above. What this test owns is the
+    // series' below is the single place this block makes it. What this test owns is the
     // per-page `sharers` loop, which no global check can state.
   });
 

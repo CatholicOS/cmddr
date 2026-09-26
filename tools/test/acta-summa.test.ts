@@ -144,9 +144,10 @@ describe('parseSummaPapalPart (spec §4): the papal part, loosely', () => {
   });
 
   // ASS 7 (1872) 751's `EX ACTIS AD INSTAR CONSISTORIALIUM.` was pinned here as a dicastery
-  // heading by phase 2c-ii-a, on the face of the words. Phase 2c-ii-d read the fifteen rows
-  // under it and they are the pope's own, every one -- so it moved to the test below, and
-  // the volume's completeness check stopped being vacuous.
+  // heading by phase 2c-ii-a, on the face of the words. Phase 2c-ii-d read the thirteen rows
+  // under it (pp. 5, 91, 100, 165, 244, 363, 430, 496, 512, 518, 565, 629, 635 -- summa.ts
+  // enumerates the same thirteen) and they are the pope's own, every one -- so it moved to
+  // the test below, and the volume's completeness check stopped being vacuous.
   it('does not read a dicastery heading as the papal part (ASS 2 and 26 open on one)', () => {
     for (const opener of ['EX ACTIS CONSISTORIALIBUS', 'EX S. CONGR. RITUUM']) {
       const { rows, heading } = parseSummaPapalPart(`SUMMA ACTORUM\nQUAE IN HOC VOLUMINE CONTINENTUR\n${opener}\nDecretum quoddam . . 42`);

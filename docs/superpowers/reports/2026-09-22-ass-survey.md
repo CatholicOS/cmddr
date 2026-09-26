@@ -333,8 +333,8 @@ more: the series *does* hold a genuine offset the 48 never counted, because no a
 is what settles how many such stretches there are.
 `headerAgreesASS` (ass.ts) is the ASS-only relaxation the ruling took: a `DIGIT_OCR` letter (summa.ts) stands for any digit rather than the
 one it is keyed to, and, unlike `headerAgrees` itself (recover.ts, kept as it was for the AAS page recovery), an all-digit token one edit from
-the page agrees too. 40 of the 48 agree by that rule; the other 8 below are two edits or worse, or a page number the OCR splits across two
-lines `headerOf`'s single line cannot reach -- three of them (ASS 33 p. 449, ASS 41 pp. 298, 495) already answered by a curated reading
+the page agrees too. 39 of the 48 agree by that rule; the other 9 below are two edits or worse, or a page number the OCR splits across two
+lines `headerOf`'s single line cannot reach -- four of them (ASS 2 p. 268; ASS 33 p. 449; ASS 41 pp. 298, 495) already answered by a curated reading
 regardless (`ASS_READINGS`, curation.ts), five not (ASS 8 pp. 373, 686; ASS 10 p. 49; ASS 13 p. 3; ASS 16 p. 241), each confirmed OCR noise
 the same way but too far from the page to admit without also risking a page whose header truly disagrees.
 
@@ -418,8 +418,8 @@ shelf column is thin can yield few references however well it scans — the join
 
 | Decade | Shelf documents | With a reference | Without |
 |---|---|---|---|
-| 1860s (1865–1870) | 16 | 0 | 16 |
-| 1870s (1870–1879) | 33 | 3 | 30 |
+| 1860s (1865–1870) | 16 | 7 | 9 |
+| 1870s (1870–1879) | 33 | 15 | 18 |
 | 1880s (1880–1890) | 88 | 36 | 52 |
 | 1890s (1890–1900) | 146 | 78 | 68 |
 | 1900s (1900–1908) | 247 | 177 | 70 |
