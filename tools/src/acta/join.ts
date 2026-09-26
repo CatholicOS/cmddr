@@ -109,7 +109,7 @@ export const ACTA_SOURCES: readonly ActaSource[] = [
   // Phase 2c-ii-c (spec §10 decision 3): Leo XIII's twenty-one unjoined volumes. ASS 12, 23
   // and 33 are the sample's and ASS 36 carries his last months, so these complete the
   // pontificate. The era the survey says will not behave like Pius X's: 162 acts over
-  // 15,259 pages and 104 of 246 summa rows claimed (42.3 %), ASS 15 yielding one act in
+  // 15,259 pages and 114 of 246 summa rows claimed (46.3 %), ASS 15 yielding one act in
   // 623 pages. ASS 20 and ASS 26 find no papal part in their summa -- 20's opens on its
   // rows with no class heading, 26's on a dicastery -- and ASS 27's runs on past its end
   // into the dicasteries, so their completeness check is blind or inflated while their
