@@ -670,7 +670,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Materna Ecclesiae caritas",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 17,
+      "year": 1884,
+      "page": 209
+    }
   },
   {
     "id": "mag:leo-xiii/la-vostra-lettera-1885",
@@ -3844,7 +3850,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Christi Domini",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 28,
+      "year": 1895,
+      "page": 257
+    }
   },
   {
     "id": "mag:leo-xiii/egregium-sane-1895",
@@ -3910,7 +3922,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod Romani Pontifices",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 29,
+      "year": 1896,
+      "page": 513
+    }
   },
   {
     "id": "mag:leo-xiii/con-vivissima-1896",
@@ -4064,7 +4082,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Apostolicae curae",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 29,
+      "year": 1896,
+      "page": 193
+    }
   },
   {
     "id": "mag:leo-xiii/fidentem-piumque-animum-1896",
@@ -4153,7 +4177,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "ASS",
+      "volume": 29,
+      "year": 1896,
+      "page": 388
+    }
   },
   {
     "id": "mag:leo-xiii/trans-oceanum-1897",
@@ -4351,7 +4381,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "ASS",
+      "volume": 30,
+      "year": 1897,
+      "page": 225
+    }
   },
   {
     "id": "mag:leo-xiii/affari-vos-1897",
@@ -4639,7 +4675,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "ASS",
+      "volume": 31,
+      "year": 1898,
+      "page": 257
+    }
   },
   {
     "id": "mag:leo-xiii/nostra-erga-1898",
@@ -4864,7 +4906,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quoniam divinae",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 32,
+      "year": 1899,
+      "page": 265
+    }
   },
   {
     "id": "mag:leo-xiii/aeterni-pastoris-1899",
