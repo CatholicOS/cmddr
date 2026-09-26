@@ -453,10 +453,12 @@ no more —
 | `II - ACTA SS. OECUMENICI CONCILII` | 1965, 1966 |
 
 The heading wraps in all four volumes (`… OECUMENICI CONCILII` / `VATICANI II`) and the
-parser keeps only its first line, which is why `VATICANI II` is absent from the tally. Three
-further headings of the same shape belong to the **synod of bishops**, not the council, and
-are not this phase's: `II - SYNODUS EPISCOPORUM` (1977), `XIV - ACTA SYNODALIA` (1980) and
-`ACTA SYNODI EPISCOPORUM` (2014, 2015, 2018 — `II. –` there — 2019, 2023, 2024).
+parser keeps only its first line, which is why `VATICANI II` is absent from the tally. **Four**
+further headings belong to the **synod of bishops**, not the council, and are not this
+phase's: `II - SYNODUS EPISCOPORUM` (1977), `XIV - ACTA SYNODALIA` (1980), `II – ACTA SYNODI
+EPISCOPORUM` (2014, 2015, 2019, 2023, 2024) and `II. – ACTA SYNODI EPISCOPORUM` (2018) —
+four distinct strings in the tally, of which the last two are one heading differing only in
+the full stop after the part numeral, over **eight sources** in all.
 
 The four conciliar parts hold **18 entries**: AAS 54 one, AAS 56 two (fixture
 `aas-56-1964.txt` ll. 820–821), AAS 57 three (`aas-57-1965.txt` ll. 867–869) and AAS 58
@@ -607,7 +609,7 @@ what issuer, neither being one of the sixteen.
 ### 12.6 Out of scope
 
 A reader for the conciliar part (§12.2, refused on the measurement); the synod of bishops' parts --
-three headings over eight sources (§12.1) -- a different body whose acts wait on [#4](https://github.com/CatholicOS/cmddr/issues/4);
+four headings over eight sources (§12.1) -- a different body whose acts wait on [#4](https://github.com/CatholicOS/cmddr/issues/4);
 AAS 54, hence the Fathers' *Nuntius* as a printing; creating a record for either message
 (the new issue decides whether the registry wants one); and the 1,578 records that still
 carry no reference after this phase, whose largest holds are John Paul II's 682, the ASS
