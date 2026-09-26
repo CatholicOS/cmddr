@@ -53713,7 +53713,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Pastores gregis",
-    "sourceGenreLabel": "apost_exhortations"
+    "sourceGenreLabel": "apost_exhortations",
+    "acta": {
+      "series": "AAS",
+      "volume": 96,
+      "year": 2004,
+      "page": 825
+    }
   },
   {
     "id": "mag:john-paul-ii/world-food-day-2003",

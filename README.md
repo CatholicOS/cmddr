@@ -440,11 +440,11 @@ decretals and 2 motu proprio — and held **232**: 79 in categories that wait fo
 ambiguous, 36 on shelves not harvested for these popes, 34 by the guard, 14 claimed twice, 7 id collisions and 2 incipits the
 text layer damaged. It re-minted no shelf id and needed no curated row of any kind. Forty-five of the sixty ambiguous entries
 are circumscription constitutions of a single day, which the index names by incipit and vatican.va by see. The era report's
-§11 lists **163** shelf documents of the two popes dated in the volume years that carry no reference, 119 of them of the formal
-genres, most dated to a canonisation or beatification day whose decretal the *next* volume prints; the one act of weight with
-an entry of its own and no reference is John Paul II's *Pastores gregis*, which the 2004 index dates 5 October 2003, the
-closing of the Synod, and vatican.va's shelf 16 October, the signing, so the guard holds the entry rather than mint a second
-record. Phase 2c-i joined the ASS sample without creating from it: **0 documents created**, the 24 unmatched entries all held
+§11 lists **162** shelf documents of the two popes dated in the volume years that carry no reference, 118 of them of the formal
+genres, most dated to a canonisation or beatification day whose decretal the *next* volume prints. The one act of weight the
+phase left held was John Paul II's *Pastores gregis*, which the 2004 index dates 5 October 2003, a canonisation day, and
+vatican.va's shelf 16 October, the signing, so the guard held the entry rather than mint a second record; the act's own dating
+formula (AAS 96 (2004) 924) reads 16 October, and a curated index correction (#44) now matches it at AAS 96 (2004) 825. Phase 2c-i joined the ASS sample without creating from it: **0 documents created**, the 24 unmatched entries all held
 `series-not-created`, 23 of them with no shelf record of any class on their date. The ASS-born documents and the reprints of
 earlier popes are 2c-iii, to be decided from the sample's reverse gap — **41** shelf documents of the volume years carrying no
 reference (Pius IX 2, Leo XIII 24, Pius X 15; 18 letters, 14 apostolic letters, 6 encyclicals and 3 addresses), of
