@@ -63,7 +63,10 @@ export const CLASS_HEADINGS: readonly string[] = [
   // any ASS volume prints it.
   'CHIROGRAPHUM', 'CHIROGRAPHUS', 'BREVE',
   // The Italian acts' headings: `LETTERA Enciclica del Papa Leone XIII ai Vescovi, al Clero e al Popolo d'Italia` (ASS 23 (1890) 193), `LETTERA / DI / SUA SANTITÀ PAPA LEONE XIII` (ASS 12 (1879) 3).
-  'LETTERA ENCICLICA', 'LETTERA',
+  // ASS 34 (1901) 513 heads an Italian apostolic letter `LETTERA APOSTOLICA del Santissi mo
+  // Signor Nostro Leone, per divina Provvi- / denza Papa XIII`; before the two words were
+  // listed the scan read the bare `LETTERA` and gave the act the letters class.
+  'LETTERA ENCICLICA', 'LETTERA APOSTOLICA', 'LETTERA',
   'LITTERAE', 'EPISTOLA',
 ];
 /** A two-word heading's second word as the volumes set it: in capitals, or in lower case after the caps class word (`LITTERAE Encyclicae`, ASS 23 (1890) 206; `LITTERAE apostolicae`, ASS 23 513; `LETTERA Enciclica`, ASS 23 193). */

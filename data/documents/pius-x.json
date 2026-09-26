@@ -1301,7 +1301,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Barcinonem conventuris",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
+      "page": 257
+    }
   },
   {
     "id": "mag:pius-x/ad-omnium-instaurationem-1904",

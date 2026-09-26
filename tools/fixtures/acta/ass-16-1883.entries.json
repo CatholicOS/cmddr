@@ -1,0 +1,222 @@
+{
+  "source": "ass-16",
+  "generated": "2026-09-26",
+  "text": "~/development/sources/ASS/txt/ass-16-1883.txt (656 pages)",
+  "volume": 16,
+  "year": 1883,
+  "pages": 656,
+  "entries": [
+    {
+      "series": "ASS",
+      "volume": 16,
+      "year": 1883,
+      "page": 113,
+      "pope": "Leo XIII",
+      "category": "EPISTOLA ENCYCLICA",
+      "date": "1883-09-01",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SSmi D. N. Leonis XIII qua mandat atque de­ cernit ut hoc anno peculiari religione solemnia celebrentur Dei­ parae Mariae Virgini a Rosario.",
+      "raw": "EPÌSTOLA ENCYCLICA SSmi D. N. Leonis XIII qua mandat atque de­ / cernit ut hoc anno peculiari religione solemnia celebrentur Dei­ / parae Mariae Virgini a Rosario.",
+      "opening": "Supremi Apostolatus officio quo fungimur et longe difficili",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "EPÌSTOLA ENCYCLICA SSmi D. N. Leonis XIII qua mandat atque de­ / cernit ut hoc anno peculiari religione solemnia celebrentur Dei­ / parae Mariae Virgini a Rosario.",
+        "salutation": "LEO PP. XIII",
+        "opening": "Supremi Apostolatus officio quo fungimur et longe difficili horum",
+        "dateline": "Datum Romae apud s. Petrum die i Septembris A. MDCCCLXXXIII. Pontificatus Nostri Anno Sexto.",
+        "header": "iti"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 16,
+      "year": 1883,
+      "page": 353,
+      "pope": "Leo XIII",
+      "category": "ALLOCUTIO",
+      "date": "????-??-??",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SSmi D. N. Leonis Papae XTIt; qua iterum damnatur et improbatur quidquid Romae actum est et agitur cum iniuria Apo­ stolicae Sedis.",
+      "raw": "ALLOCUTIO SSmi D. N. Leonis Papae XTIt; qua iterum damnatur et / improbatur quidquid Romae actum est et agitur cum iniuria Apo­ / stolicae Sedis.",
+      "opening": "Post excitatus seditionum fluctus, quorum immanes impetus in",
+      "anchor": "heading",
+      "evidence": {
+        "heading": "ALLOCUTIO SSmi D. N. Leonis Papae XTIt; qua iterum damnatur et / improbatur quidquid Romae actum est et agitur cum iniuria Apo­ / stolicae Sedis.",
+        "salutation": null,
+        "opening": "Post excitatus seditionum fluctus, quorum immanes impetus in",
+        "dateline": null,
+        "header": "EX ACTIS CONSISTORIALIBUS"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 16,
+      "year": 1883,
+      "page": 417,
+      "pope": "Leo XIII",
+      "category": "EPISTOLA ENCYCLICA",
+      "date": "1884-04-20",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SSmi D. N. LEONIS XIII quoad sectam Massonum.",
+      "raw": "EPÌSTOLA ENCYCLICA SSmi D. N. LEONIS XIII quoad sectam / Massonum.",
+      "opening": "Humanum genus, postea quam a creatore, munerumque caelestium",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "EPÌSTOLA ENCYCLICA SSmi D. N. LEONIS XIII quoad sectam / Massonum.",
+        "salutation": "LEO PP. XIII.",
+        "opening": "Humanum genus, postea quam a creatore, munerumque caele­",
+        "dateline": "Datum Romae apud S. Petrum die xx Aprilis an. MDCCCLXXXIV, Pontificatus Nostri Anno Septimo.",
+        "header": "417"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 16,
+      "year": 1883,
+      "page": 465,
+      "pope": "Leo XIII",
+      "category": "LITTERAE IN FORMA BREVIS",
+      "date": "1884-03-08",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SSmi D. N. LEONIS XIII ad R. P. Iosephum Pothier, Monachum Congregationis Benedictinae Solesmensis quoad librum Gradualem cantus Gregoriani ab eodem exaratum. (1)",
+      "raw": "LITTERAE in forma Brevis SSmi D. N. LEONIS XIII ad R. P. Iosephum / Pothier, Monachum Congregationis Benedictinae Solesmensis quoad / librum Gradualem cantus Gregoriani ab eodem exaratum. (1)",
+      "opening": "Dilecte Fili Religiose Vir, Salutem et Apostolicam Benedictionem.",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE in forma Brevis SSmi D. N. LEONIS XIII ad R. P. Iosephum / Pothier, Monachum Congregationis Benedictinae Solesmensis quoad / librum Gradualem cantus Gregoriani ab eodem exaratum. (1)",
+        "salutation": "LEO PP. XIII.",
+        "opening": "Dilecte Fili Religiose Vir,",
+        "dateline": "Datum Romae apud S. Petrum die 8 Martii an. 1884, Pontificatus Nostri Anno Septimo.",
+        "header": "LITTERAE in forma Brevis SSmi D. N. LEONIS XIII ad R. P. Iosephum"
+      }
+    }
+  ],
+  "defects": [
+    {
+      "page": 49,
+      "reason": "no-date",
+      "lines": [
+        "EPISTOLA SSMI. D. N. LÉOÑÍS XIÎÏ ad Amos Cardinales Antonmum / De Luca, Vice cancellarium S. R. E., Ioarnnm Baptistam Pitra, Bi­ / bliothecarium S. R. B., Iosephum Hergenroether, tabulariis Vaticanis / praefectum; qua, patefactis malis artibus, quibus hostes christiani / nominis historiam et res gestas RR. Pontificum, cum rebus italicis / colligatas, conscribunt, innuit ut viri probi, versati iu hoc genere / disciplinarum, animum adiiciant ad historiam scribendam, quibus / patebit suppellex Bibliothecae Vaticanae.",
+        "Datum Romae apud S. Petrum die XVIII Augusti , Anno \"AiDCCCLXXXIII Pontificatus Nostri Anno Sexto."
+      ]
+    },
+    {
+      "page": 63,
+      "reason": "no-heading",
+      "lines": [
+        "Datum Romae, apud s. Mariam Maiorem, sub annulo Piscatoris,",
+        "die XI Augusti MDCLXXXIII, Pontificatus Nostri anno VII."
+      ]
+    },
+    {
+      "page": 121,
+      "reason": "no-heading",
+      "lines": [
+        "Datum Romae apud s Petrum die xxx Augusti \\. MDCCCLXXXIH.",
+        "Pontificatus Nostri Anno Sexto."
+      ]
+    },
+    {
+      "page": 211,
+      "reason": "no-heading",
+      "lines": [
+        "Datum Romae apud S. Petrum sub annulo Piscatoris die XXIV",
+        "Decembris An. MDCCCLXXXIII, Pontificatus Nostri Anno Sexto."
+      ]
+    },
+    {
+      "page": 241,
+      "reason": "header-mismatch",
+      "lines": [
+        "144",
+        "EPISTOLA ENCYCLICA SSmi D. N. Leonis XUI ad Episcopos Galliae: / qua innuitur, iuvenes, dum artes docentur, quibus ad humanita­ / tem informari solent, apprime notitia officiorum erga Deum im- / buendos esse: consulendum ne desint scholae catholicae, an­ / norumque concordiae prospiciendum ad protuenda nominis catho / i liei iura."
+      ]
+    }
+  ],
+  "summa": {
+    "pages": {
+      "from": 557,
+      "to": 564
+    },
+    "rows": [
+      {
+        "description": "Epistola SSMI D. N. LEONIS XIII AD EMOS CARDINALES ANTONINUM DE LUCA, VICE CANCELLARIUM S. R. E. , IOANNEM BAPTISTAM PITRA , BIBLIOTHECARIUM S. R. E., IOSEPHUM HERGENROETHER, TABULARIIS VATICANIS PRAEFECTUM; QUA, PA- TEFACTIS MALIS ARTIBUS, QUIBUS HOSTES CHRISTIANI NOMINIS HISTORIAM ET RES GESTAS RR. PONTIFICUM , CUM REBUS ITALICIS COLLI- GATAS, CONSCRIBUNT, INNUIT UT VIRI PROBI, VERSATI IN HOC GENERE DISCIPLINARUM , ANIMUM ADIICIANT AD HISTORIAM SCRIBEN- DAM , QUIBUS PATEBIT SUPELLEX BIBLIOTHECAE VATICANAE",
+        "page": 49,
+        "raw": "Epistola SSMI D. N. LEONIS XIII AD / EMOS CARDINALES ANTONINUM DE / LUCA, VICE CANCELLARIUM S. R. / E. , IOANNEM BAPTISTAM PITRA , / BIBLIOTHECARIUM S. R. E., IOSE­ / PHUM HERGENROETHER, TABULARIIS / VATICANIS PRAEFECTUM; QUA, PA- / TEFACTIS MALIS ARTIBUS, QUIBUS / HOSTES CHRISTIANI NOMINIS HISTO­ / RIAM ET RES GESTAS RR. PONTIFI­ / CUM , CUM REBUS ITALICIS COLLI- / GATAS, CONSCRIBUNT, INNUIT UT / VIRI PROBI, VERSATI IN HOC GE­ / NERE DISCIPLINARUM , ANIMUM / ADIICIANT AD HISTORIAM SCRIBEN- / DAM , QUIBUS PATEBIT SUPELLEX / BIBLIOTHECAE VATICANAE pag. 49"
+      },
+      {
+        "description": "Litterae Apostolicae PAPAE INNOCENTII XI, QUIBUS INDICITUR IUBILAEUM UNIVERSALE AD IMPLORAN- DAM DIVINAM OPEM CONTRA TURCAS. ,",
+        "page": 58,
+        "raw": "Litterae Apostolicae PAPAE INNO­ / CENTII XI, QUIBUS INDICITUR IU­ / BILAEUM UNIVERSALE AD IMPLORAN- / DAM DIVINAM OPEM CONTRA TUR­ / CAS. , » 58"
+      },
+      {
+        "description": "Epistola encyclica SSMI D. N. LEONIS XIII; QUA MANDAT ATQUE DECERNIT UT HOC ANNO PECULIARI RELIGIONE SOLEMNIA CELEBRENTUR DEIPARAE MARIAE VIRGINI A ROSARIO. .... » lia Litterae IN FORMA BREVIS, QUIBUS ; -i-8»- OMMENDATUR ROSARII QUOTIDIANA RECITATIO ; QUIBUSQUE EDICITUR ESSE IN R. PONTIFICIS OPTATIS, UT IN DIOECESIUM SINGULARUM TEMPLO PRINCIPE QUOTIDIE, IN TEMPLIS CURIALIBUS FESTIS SINGULIS, RECITETUR ROSARÍAS; ET DECERNITUR UT IN LITANIIS LAURETANIS ADDATUR Regina Sacratissimi Rosarii ora pro nobis",
+        "page": 209,
+        "raw": "Epistola encyclica SSMI D. N. LEO­ / NIS XIII; QUA MANDAT ATQUE DE­ / CERNIT UT HOC ANNO PECULIARI / RELIGIONE SOLEMNIA CELEBRENTUR / DEIPARAE MARIAE VIRGINI A RO­ / SARIO. .... » lia / Litterae IN FORMA BREVIS, QUIBUS / ; -i-8»- / OMMENDATUR ROSARII QUOTIDIANA / RECITATIO ; QUIBUSQUE EDICITUR / ESSE IN R. PONTIFICIS OPTATIS, UT / IN DIOECESIUM SINGULARUM TEM­ / PLO PRINCIPE QUOTIDIE, IN TEM­ / PLIS CURIALIBUS FESTIS SINGULIS, / RECITETUR ROSARÍAS; ET DECERNI­ / TUR UT IN LITANIIS LAURETANIS / ADDATUR Regina Sacratissimi / Rosarii ora pro nobis . » 209"
+      },
+      {
+        "description": "Epistola encyclica SSMI D. N. LEONIS XIII AD EPISCOPOS GALLIAE : QUA INNUITUR, IUVENES, DUM ARTES DOCENTUR, QUIBUS AD HUMANITATEM INFORMARI SOLENT, APPRIME NOTITIA OFFICIORUM ERGA DEUM IMLTUENDOS ESSE ; CONSULENDUM NE DESINT SCHOLAE CATHOLICAE, ANIMORUMQUE CONCORDIAE PROSPICIENDUM AD PROTUEN- DA NOMINIS CATHOLICI IURA",
+        "page": 241,
+        "raw": "Epistola encyclica SSMI D. N. LEO­ / NIS XIII AD EPISCOPOS GALLIAE : / QUA INNUITUR, IUVENES, DUM AR­ / TES DOCENTUR, QUIBUS AD HUMA­ / NITATEM INFORMARI SOLENT, AP­ / PRIME NOTITIA OFFICIORUM ERGA / DEUM IMLTUENDOS ESSE ; CONSU­ / LENDUM NE DESINT SCHOLAE CA­ / THOLICAE, ANIMORUMQUE CONCOR­ / DIAE PROSPICIENDUM AD PROTUEN- / DA NOMINIS CATHOLICI IURA » 241"
+      },
+      {
+        "description": "Epistola encyclica SSMI D. N. LEONIS XIII QUOAD SECTAM MASSO- NUM .",
+        "page": 417,
+        "raw": "Epistola encyclica SSMI D. N. LEO­ / NIS XIII QUOAD SECTAM MASSO- / NUM . ...» 417"
+      },
+      {
+        "description": "Litterae IN FORMA BREVIS SSMI D. N. LEONIS XIII AD R. P. IOSEPHUM POTHIER, MONACHUM CONGREGATIONIS BENEDICTINAE SOLES- MENSIS QUOAD LIBRUM GRADUALEM CANTUS GREGORIANI ;IB EODEM EXARATUM",
+        "page": 465,
+        "raw": "Litterae IN FORMA BREVIS SSMI D. / N. LEONIS XIII AD R. P. IOSE­ / PHUM POTHIER, MONACHUM CON­ / GREGATIONIS BENEDICTINAE SOLES- / MENSIS QUOAD LIBRUM GRADUALEM / CANTUS GREGORIANI ;IB EODEM EXA­ / RATUM » 465"
+      },
+      {
+        "description": "Litterae SSMI PATRIS LEONIS XLI! AD RMUM D. CARDINALEM IOSEPHUM HERGENIOETHER PONTIFICII ARCHIVII VATICANI CUSTODEM",
+        "page": 529,
+        "raw": "Litterae SSMI PATRIS LEONIS XLI! AD / RMUM D. CARDINALEM IOSEPHUM / HERGENIOETHER PONTIFICII ARCHI­ / VII VATICANI CUSTODEM . » 529"
+      }
+    ],
+    "claimed": [
+      417,
+      465
+    ],
+    "unclaimed": [
+      {
+        "description": "Epistola SSMI D. N. LEONIS XIII AD EMOS CARDINALES ANTONINUM DE LUCA, VICE CANCELLARIUM S. R. E. , IOANNEM BAPTISTAM PITRA , BIBLIOTHECARIUM S. R. E., IOSEPHUM HERGENROETHER, TABULARIIS VATICANIS PRAEFECTUM; QUA, PA- TEFACTIS MALIS ARTIBUS, QUIBUS HOSTES CHRISTIANI NOMINIS HISTORIAM ET RES GESTAS RR. PONTIFICUM , CUM REBUS ITALICIS COLLI- GATAS, CONSCRIBUNT, INNUIT UT VIRI PROBI, VERSATI IN HOC GENERE DISCIPLINARUM , ANIMUM ADIICIANT AD HISTORIAM SCRIBEN- DAM , QUIBUS PATEBIT SUPELLEX BIBLIOTHECAE VATICANAE",
+        "page": 49,
+        "raw": "Epistola SSMI D. N. LEONIS XIII AD / EMOS CARDINALES ANTONINUM DE / LUCA, VICE CANCELLARIUM S. R. / E. , IOANNEM BAPTISTAM PITRA , / BIBLIOTHECARIUM S. R. E., IOSE­ / PHUM HERGENROETHER, TABULARIIS / VATICANIS PRAEFECTUM; QUA, PA- / TEFACTIS MALIS ARTIBUS, QUIBUS / HOSTES CHRISTIANI NOMINIS HISTO­ / RIAM ET RES GESTAS RR. PONTIFI­ / CUM , CUM REBUS ITALICIS COLLI- / GATAS, CONSCRIBUNT, INNUIT UT / VIRI PROBI, VERSATI IN HOC GE­ / NERE DISCIPLINARUM , ANIMUM / ADIICIANT AD HISTORIAM SCRIBEN- / DAM , QUIBUS PATEBIT SUPELLEX / BIBLIOTHECAE VATICANAE pag. 49"
+      },
+      {
+        "description": "Litterae Apostolicae PAPAE INNOCENTII XI, QUIBUS INDICITUR IUBILAEUM UNIVERSALE AD IMPLORAN- DAM DIVINAM OPEM CONTRA TURCAS. ,",
+        "page": 58,
+        "raw": "Litterae Apostolicae PAPAE INNO­ / CENTII XI, QUIBUS INDICITUR IU­ / BILAEUM UNIVERSALE AD IMPLORAN- / DAM DIVINAM OPEM CONTRA TUR­ / CAS. , » 58"
+      },
+      {
+        "description": "Epistola encyclica SSMI D. N. LEONIS XIII; QUA MANDAT ATQUE DECERNIT UT HOC ANNO PECULIARI RELIGIONE SOLEMNIA CELEBRENTUR DEIPARAE MARIAE VIRGINI A ROSARIO. .... » lia Litterae IN FORMA BREVIS, QUIBUS ; -i-8»- OMMENDATUR ROSARII QUOTIDIANA RECITATIO ; QUIBUSQUE EDICITUR ESSE IN R. PONTIFICIS OPTATIS, UT IN DIOECESIUM SINGULARUM TEMPLO PRINCIPE QUOTIDIE, IN TEMPLIS CURIALIBUS FESTIS SINGULIS, RECITETUR ROSARÍAS; ET DECERNITUR UT IN LITANIIS LAURETANIS ADDATUR Regina Sacratissimi Rosarii ora pro nobis",
+        "page": 209,
+        "raw": "Epistola encyclica SSMI D. N. LEO­ / NIS XIII; QUA MANDAT ATQUE DE­ / CERNIT UT HOC ANNO PECULIARI / RELIGIONE SOLEMNIA CELEBRENTUR / DEIPARAE MARIAE VIRGINI A RO­ / SARIO. .... » lia / Litterae IN FORMA BREVIS, QUIBUS / ; -i-8»- / OMMENDATUR ROSARII QUOTIDIANA / RECITATIO ; QUIBUSQUE EDICITUR / ESSE IN R. PONTIFICIS OPTATIS, UT / IN DIOECESIUM SINGULARUM TEM­ / PLO PRINCIPE QUOTIDIE, IN TEM­ / PLIS CURIALIBUS FESTIS SINGULIS, / RECITETUR ROSARÍAS; ET DECERNI­ / TUR UT IN LITANIIS LAURETANIS / ADDATUR Regina Sacratissimi / Rosarii ora pro nobis . » 209"
+      },
+      {
+        "description": "Epistola encyclica SSMI D. N. LEONIS XIII AD EPISCOPOS GALLIAE : QUA INNUITUR, IUVENES, DUM ARTES DOCENTUR, QUIBUS AD HUMANITATEM INFORMARI SOLENT, APPRIME NOTITIA OFFICIORUM ERGA DEUM IMLTUENDOS ESSE ; CONSULENDUM NE DESINT SCHOLAE CATHOLICAE, ANIMORUMQUE CONCORDIAE PROSPICIENDUM AD PROTUEN- DA NOMINIS CATHOLICI IURA",
+        "page": 241,
+        "raw": "Epistola encyclica SSMI D. N. LEO­ / NIS XIII AD EPISCOPOS GALLIAE : / QUA INNUITUR, IUVENES, DUM AR­ / TES DOCENTUR, QUIBUS AD HUMA­ / NITATEM INFORMARI SOLENT, AP­ / PRIME NOTITIA OFFICIORUM ERGA / DEUM IMLTUENDOS ESSE ; CONSU­ / LENDUM NE DESINT SCHOLAE CA­ / THOLICAE, ANIMORUMQUE CONCOR­ / DIAE PROSPICIENDUM AD PROTUEN- / DA NOMINIS CATHOLICI IURA » 241"
+      },
+      {
+        "description": "Litterae SSMI PATRIS LEONIS XLI! AD RMUM D. CARDINALEM IOSEPHUM HERGENIOETHER PONTIFICII ARCHIVII VATICANI CUSTODEM",
+        "page": 529,
+        "raw": "Litterae SSMI PATRIS LEONIS XLI! AD / RMUM D. CARDINALEM IOSEPHUM / HERGENIOETHER PONTIFICII ARCHI­ / VII VATICANI CUSTODEM . » 529"
+      }
+    ],
+    "omitted": [
+      113,
+      353
+    ]
+  }
+}

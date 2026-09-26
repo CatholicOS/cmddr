@@ -1,0 +1,226 @@
+{
+  "source": "ass-14",
+  "generated": "2026-09-26",
+  "text": "~/development/sources/ASS/txt/ass-14-1881.txt (591 pages)",
+  "volume": 14,
+  "year": 1881,
+  "pages": 591,
+  "entries": [
+    {
+      "series": "ASS",
+      "volume": 14,
+      "year": 1881,
+      "page": 49,
+      "pope": "Leo XIII",
+      "category": "ALLOCUTIO",
+      "date": "????-??-??",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "HABITA DIE IV AUGUSTI MDCCCLXXXI AD S. R. E. CARDINALES IN AEDIBUS VATICANIS",
+      "raw": "SANCTISSIMI DOMINI NOSTRI / LEONIS / DIVINA PROVIDENTIA / IP ~P _A. IS XIII / ALLOCUTIO / HABITA DIE IV AUGUSTI MDCCCLXXXI AD S. R. E. CARDINALES / IN AEDIBUS VATICANIS",
+      "opening": "Convocare ad Nos maturavimus amplissimum Collegium Vestrum, ut",
+      "anchor": "heading",
+      "evidence": {
+        "heading": "SANCTISSIMI DOMINI NOSTRI / LEONIS / DIVINA PROVIDENTIA / IP ~P _A. IS XIII / ALLOCUTIO / HABITA DIE IV AUGUSTI MDCCCLXXXI AD S. R. E. CARDINALES / IN AEDIBUS VATICANIS",
+        "salutation": null,
+        "opening": "Convocare ad Nos maturavimus amplissimum Collegium Vestrum,",
+        "dateline": null,
+        "header": "49"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 14,
+      "year": 1881,
+      "page": 145,
+      "pope": "Leo XIII",
+      "category": "LITTERAE",
+      "date": "1881-08-03",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SSMI D. N. LEONIS XIII DATAE ARCHIEPISCOPO MECHLINIENSI",
+      "raw": "LITTERAE / SSMI D. N. LEONIS XIII DATAE ARCHIEPISCOPO MECHLINIENSI",
+      "opening": "Dilecte Fili Noster et Venerabiles Fratres salutem et",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE / SSMI D. N. LEONIS XIII DATAE ARCHIEPISCOPO MECHLINIENSI",
+        "salutation": "LEO PP. XIII.",
+        "opening": "Dilecte Fili Noster et Venerabiles Fratres salutem et Aposto­",
+        "dateline": "Datum Romae apud S. Petrum die 3 Augusti 1881. Pontificatus Nostri Anno Quarto.",
+        "header": "!"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 14,
+      "year": 1881,
+      "page": 481,
+      "pope": "Leo XIII",
+      "category": "LITTERAE APOSTOLICAE",
+      "date": "1882-05-12",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "De Ordine s- Basilii M. Ruthenae Nationis in Gallicia reformando.",
+      "raw": "LITTERAE APOSTOLICAE / De Ordine s- Basilii M. Ruthenae Nationis in Gallicia / reformando.",
+      "opening": "Singulare praesidium et decus semper Ecclesia catholica sibi",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE APOSTOLICAE / De Ordine s- Basilii M. Ruthenae Nationis in Gallicia / reformando.",
+        "salutation": "LEO PP. XIII",
+        "opening": "Singulare praesidium et decus semper Ecclesia catholica sibi sensit",
+        "dateline": "Datum Romae apud s. Petrum sub annulo Piscatoris die 12 Maii 1882 Pontificatus Nostri anno Quinto.",
+        "header": "4SI"
+      }
+    }
+  ],
+  "defects": [
+    {
+      "page": 14,
+      "reason": "no-heading",
+      "lines": [
+        "Datum Romae apud s. Petrum die xxix Iunii A. MDCCOLXXXI,",
+        "Pontificatus Nostri anno quarto."
+      ]
+    },
+    {
+      "page": 97,
+      "reason": "no-date",
+      "lines": [
+        "SANCTISSIMI DOMINI NOSTRI / LEONIS / DIVINA PROVIDENTIA / PAPAE XIII / LITTERAE APOSTOLICAE / QUIBUS HIERARCHIA EPISCOPALIS / IN BOSNIA ET HERZEGOVINA INSTITUITUR",
+        "Datum Romae apud S. Petrum Anno Incarnationis Dominicae millesimo octingentesimo octogesimo primo III Nonas Iulii, Pontificatus Nostri Anno IV."
+      ]
+    },
+    {
+      "page": 291,
+      "reason": "no-heading",
+      "lines": [
+        "Datum Romae apud s. Petrum die XXV Ianuarii MDCCCLXXXII,",
+        "Pontificatus Nostri Anno Quarto."
+      ]
+    },
+    {
+      "page": 345,
+      "reason": "no-heading",
+      "lines": [
+        "Datum Romae apud s. Petrum die xv Februarii an. MDCCCLXXXII,",
+        "Pontificatus Nostri anno quarto."
+      ]
+    },
+    {
+      "page": 433,
+      "reason": "no-date",
+      "lines": [
+        "EPISTOLA ad Archiepiscopos et Episcopos, aliosque locorum / ordinarios in regione Sicnla.",
+        "Datum Romae apud s. Petrum die XXII Aprilis HDCCCLXXXII Pontificatus Nostri Anno Quinto."
+      ]
+    },
+    {
+      "page": 529,
+      "reason": "no-date",
+      "lines": [
+        "LITTERAE APOSTOLICAE / De Missae Sacrificio in singulos dies festos pro populo ab omnibus / Catholici Orbis Episcopis celebrando",
+        "Datum Romae apud Sanctum Petrum, anno incarnationis Dominicae millesimo octingentesimo octuagesimo secundo, IV Id. Iunii, Pontificatus Nostri Anno V."
+      ]
+    }
+  ],
+  "summa": {
+    "pages": {
+      "from": 569,
+      "to": 575
+    },
+    "rows": [
+      {
+        "description": "ROMANI PONTIFICIS Epistola Encyclica SSmi D. N. Leonis XIII de politico Principatu, p",
+        "page": 3,
+        "raw": "ROMANI PONTIFICIS / Epistola Encyclica SSmi D. N. / Leonis XIII de politico Princi­ / patu, p. 3"
+      },
+      {
+        "description": "Litterae Apostolicae SSmi D. N. Leonis XIII, quibus Hierarchia episcopalis in Bosnia et Erzegovina constituitur",
+        "page": 97,
+        "raw": "Litterae Apostolicae SSmi D. N. Leo­ / nis XIII, quibus Hierarchia epi­ / scopalis in Bosnia et Erzegovina / constituitur » 97"
+      },
+      {
+        "description": "Litterae SSmi D. N. Leonis XIII, ad omnes Episcopos Belgii.",
+        "page": 145,
+        "raw": "Litterae SSmi D. N. Leonis XIII, ad / omnes Episcopos Belgii. . » 145"
+      },
+      {
+        "description": "Responsum Leonis XIII allocutione quam coram Eodem habuerunt Praesules quiRomam convenerant, solemnis canonizationis causa",
+        "page": 241,
+        "raw": "Responsum Leonis XIII allocutione / quam coram Eodem habuerunt / Praesules quiRomam convenerant, / solemnis canonizationis causa. 241"
+      },
+      {
+        "description": "Litterae SSmi D. N. Leonis XIII ad Archiep. et'Episcopos provinc, ecclesiasticarum Mediolanensis, Taurinensis et Vercellensis",
+        "page": 289,
+        "raw": "Litterae SSmi D. N. Leonis XIII ad / Archiep. et'Episcopos provinc, / ecclesiasticarum Mediolanensis, / Taurinensis et Vercellensis. » 289"
+      },
+      {
+        "description": "Littera Encyclica; qua R. Pontifex exhortatur Episcopos Italiae,ut satagant ne fides catholica diripia- tur; praecipue fovendo societates catholicas, instituendo ministros Dei, idoneos virtute et scientia, maximeque prospiciendo Seminariis clericorum.",
+        "page": 337,
+        "raw": "Littera Encyclica; qua R. Pontifex / exhortatur Episcopos Italiae,ut sa­ / tagant ne fides catholica diripia- / tur; praecipue fovendo societates / catholicas, instituendo ministros / Dei, idoneos virtute et scientia, / maximeque prospiciendo Semi­ / nariis clericorum. .... » 337"
+      },
+      {
+        "description": "Epistola SSmi D. N. Leonis XIII ad Archiepiscopos et Episcopos si- culos; qua dolet de iniuriis Ecclesiae et R. Pontificatui illatis ab S69 improbis hominibus qui Panor- mum convenerunt.",
+        "page": 433,
+        "raw": "Epistola SSmi D. N. Leonis XIII ad / Archiepiscopos et Episcopos si- / culos; qua dolet de iniuriis Ec­ / clesiae et R. Pontificatui illatis ab / S69 / improbis hominibus qui Panor- / mum convenerunt. ...» 433"
+      },
+      {
+        "description": "Litterae Apostolicae; de Ordine s. Ba- silii m. Rulhenae Nationis iii Gallicia reformando",
+        "page": 481,
+        "raw": "Litterae Apostolicae; de Ordine s. Ba- / silii m. Rulhenae Nationis iii Gal­ / licia reformando » 481"
+      },
+      {
+        "description": "Litterae Apostolicae de missae sacrificio pro populo celebrando ab Episcopis",
+        "page": 529,
+        "raw": "Litterae Apostolicae de missae sa­ / crificio pro populo celebrando ab / Episcopis pag. 529"
+      }
+    ],
+    "claimed": [
+      145,
+      481
+    ],
+    "unclaimed": [
+      {
+        "description": "ROMANI PONTIFICIS Epistola Encyclica SSmi D. N. Leonis XIII de politico Principatu, p",
+        "page": 3,
+        "raw": "ROMANI PONTIFICIS / Epistola Encyclica SSmi D. N. / Leonis XIII de politico Princi­ / patu, p. 3"
+      },
+      {
+        "description": "Litterae Apostolicae SSmi D. N. Leonis XIII, quibus Hierarchia episcopalis in Bosnia et Erzegovina constituitur",
+        "page": 97,
+        "raw": "Litterae Apostolicae SSmi D. N. Leo­ / nis XIII, quibus Hierarchia epi­ / scopalis in Bosnia et Erzegovina / constituitur » 97"
+      },
+      {
+        "description": "Responsum Leonis XIII allocutione quam coram Eodem habuerunt Praesules quiRomam convenerant, solemnis canonizationis causa",
+        "page": 241,
+        "raw": "Responsum Leonis XIII allocutione / quam coram Eodem habuerunt / Praesules quiRomam convenerant, / solemnis canonizationis causa. 241"
+      },
+      {
+        "description": "Litterae SSmi D. N. Leonis XIII ad Archiep. et'Episcopos provinc, ecclesiasticarum Mediolanensis, Taurinensis et Vercellensis",
+        "page": 289,
+        "raw": "Litterae SSmi D. N. Leonis XIII ad / Archiep. et'Episcopos provinc, / ecclesiasticarum Mediolanensis, / Taurinensis et Vercellensis. » 289"
+      },
+      {
+        "description": "Littera Encyclica; qua R. Pontifex exhortatur Episcopos Italiae,ut satagant ne fides catholica diripia- tur; praecipue fovendo societates catholicas, instituendo ministros Dei, idoneos virtute et scientia, maximeque prospiciendo Seminariis clericorum.",
+        "page": 337,
+        "raw": "Littera Encyclica; qua R. Pontifex / exhortatur Episcopos Italiae,ut sa­ / tagant ne fides catholica diripia- / tur; praecipue fovendo societates / catholicas, instituendo ministros / Dei, idoneos virtute et scientia, / maximeque prospiciendo Semi­ / nariis clericorum. .... » 337"
+      },
+      {
+        "description": "Epistola SSmi D. N. Leonis XIII ad Archiepiscopos et Episcopos si- culos; qua dolet de iniuriis Ecclesiae et R. Pontificatui illatis ab S69 improbis hominibus qui Panor- mum convenerunt.",
+        "page": 433,
+        "raw": "Epistola SSmi D. N. Leonis XIII ad / Archiepiscopos et Episcopos si- / culos; qua dolet de iniuriis Ec­ / clesiae et R. Pontificatui illatis ab / S69 / improbis hominibus qui Panor- / mum convenerunt. ...» 433"
+      },
+      {
+        "description": "Litterae Apostolicae de missae sacrificio pro populo celebrando ab Episcopis",
+        "page": 529,
+        "raw": "Litterae Apostolicae de missae sa­ / crificio pro populo celebrando ab / Episcopis pag. 529"
+      }
+    ],
+    "omitted": [
+      49
+    ]
+  }
+}

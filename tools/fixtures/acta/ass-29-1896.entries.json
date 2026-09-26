@@ -1,0 +1,245 @@
+{
+  "source": "ass-29",
+  "generated": "2026-09-26",
+  "text": "~/development/sources/ASS/txt/ass-29-1896.txt (768 pages)",
+  "volume": 29,
+  "year": 1896,
+  "pages": 768,
+  "entries": [
+    {
+      "series": "ASS",
+      "volume": 29,
+      "year": 1896,
+      "page": 204,
+      "pope": "Leo XIII",
+      "category": "EPISTOLA ENCYCLICA",
+      "date": "1896-09-20",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SSmi D. N. Leonis Papae XIII. De mariali rosario.",
+      "raw": "EPISTOLA ENCYCLICA SSmi D. N. Leonis Papae XIII. / De mariali rosario.",
+      "opening": "Fidentem piumque animum erga Virginem beatissimam, quem inde",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "EPISTOLA ENCYCLICA SSmi D. N. Leonis Papae XIII. / De mariali rosario.",
+        "salutation": null,
+        "opening": "Fidentem piumque animum erga Virginem beatissimam,",
+        "dateline": "Datum Romae apud Sanctum Petrum die xx Septembris anno MDCCCXCVI, Pontificatus Nostri decimo nono.",
+        "header": "204"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 29,
+      "year": 1896,
+      "page": 268,
+      "pope": "Leo XIII",
+      "category": "LITTERAE",
+      "date": "1896-05-20",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Sanctissimi D. N. Papae Leonis XIII ad Aethiopiae Imperatorem, quibus eum exorat ut captivos milites reddat Italiae.",
+      "raw": "LITTERAE Sanctissimi D. N. Papae Leonis XIII ad Aethiopiae Imperatorem, / quibus eum exorat ut captivos milites reddat Italiae.",
+      "opening": "Très Puissant Negus Negesti, Potentissime Negus Negesti, salut",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE Sanctissimi D. N. Papae Leonis XIII ad Aethiopiae Imperatorem, / quibus eum exorat ut captivos milites reddat Italiae.",
+        "salutation": null,
+        "opening": "Très Puissant Negus Negesti, Potentissime Negus Negesti,",
+        "dateline": "Pierre, le 11 Mai de l'année Dat. Romae apud S. Petrum, 1896, de Notre Pontificat la dix- die XX Maii, anno MDCCCXCVI. neuvième. Pontificatus nostri anno xix.",
+        "header": "268"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 29,
+      "year": 1896,
+      "page": 636,
+      "pope": "Leo XIII",
+      "category": "BREVE",
+      "date": "1897-02-23",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "quo conceditur indulgentia plenaria occasione exeuntis anni quinti et vige­ sima quo R. Pontifex Leo XIU adscitus est in tertio ordine s. Francisci.",
+      "raw": "BREVE quo conceditur indulgentia plenaria occasione exeuntis anni quinti et vige­ / sima quo R. Pontifex Leo XIU adscitus est in tertio ordine s. Francisci.",
+      "opening": "Ad futurum rei memoriam. Die trigesimo proximi mensis",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "BREVE quo conceditur indulgentia plenaria occasione exeuntis anni quinti et vige­ / sima quo R. Pontifex Leo XIU adscitus est in tertio ordine s. Francisci.",
+        "salutation": "LEO PP. XIII",
+        "opening": "Ad futurum rei memoriam.",
+        "dateline": "Datum Romae apud S. Petrum sub Annulo Piscatoris die XXIII Februarii MDCCGXGVII Pontificatus Nostri Anno Decimonono.",
+        "header": "636"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 29,
+      "year": 1896,
+      "page": 664,
+      "pope": "Leo XIII",
+      "category": "BREVE",
+      "date": "1896-11-05",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Sanctissimi D. N. Leonis XIII. ad Emum. Card. Richard Arch. Parisien, quoad scriptores Ephemeridis Revue anglo-romaine.",
+      "raw": "BREVE Sanctissimi D. N. Leonis XIII. ad Emum. Card. Richard Arch. Parisien, quoad / scriptores Ephemeridis Revue anglo-romaine.",
+      "opening": "Religioni apud Anglos aeternaeque animarum saluti pro munere",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "BREVE Sanctissimi D. N. Leonis XIII. ad Emum. Card. Richard Arch. Parisien, quoad / scriptores Ephemeridis Revue anglo-romaine.",
+        "salutation": null,
+        "opening": "— Religioni apud Anglos aeternaeque animarum saluti pro mu­",
+        "dateline": "Datum Romae apud Sanctum Petrum, die v Novembris anno MDCCCXCVI, Pontificatus Nostri decimo nono.",
+        "header": "664"
+      }
+    }
+  ],
+  "defects": [
+    {
+      "page": 193,
+      "reason": "no-date",
+      "lines": [
+        "LITTERAE APOSTOLICAE SSmi D. N. Leonis Papae XIII. / De ordinationibus anglicanis.",
+        "Datum Romae apud Sanctum Petrum anno Incarnationis Dominicae millesimo octingentesimo nonagésimo sexto, idibus septembribus, Pontificatus Nostri anno decimo nono."
+      ]
+    },
+    {
+      "page": 388,
+      "reason": "no-date",
+      "lines": [
+        "CONSTITUTIO APOSTOLICA Sanctissimi Domini Nostri Leonis divina providentia / Papae XIII. De prohibitione et censura librorum.",
+        "Datum Romae, apud Sanctum Petrum, anno Incarnationis Dominicae millesimo octingentesimo nonagésimo septimo, VIII Kal. Februarias, Pontificatus Nostri decimo nono."
+      ]
+    },
+    {
+      "page": 513,
+      "reason": "no-date",
+      "lines": [
+        "LITTERAE APOSTOLICAE Sanctissimi Domini Nostri Leonis Divina Providentia Pa­ / pae XIII, quibus Seminarium vaticanum cum scholis canonice constituitur.",
+        "Datum Romae apud Sanctum Petrum anno Incarnationis Dominicae millesimo octingentesimo nonagésimo sexto, xv Kalendas Februarias, Pontificatus Nostri decimo nono."
+      ]
+    },
+    {
+      "page": 644,
+      "reason": "no-date",
+      "lines": [
+        "EPISTOLA ENCYCLICA Sanctissimi D. N. Leonis PP. XIII a> praesentia et virtute / mirifica Spiritus Sancti.",
+        "Datum Romae apud Sanctum Petrum die ix Maii anno"
+      ]
+    },
+    {
+      "page": 659,
+      "reason": "no-date",
+      "lines": [
+        "LITTERAE APOSTOLICAE in forma Brevis Sanctissimi D. N. Leonis PP. XIII / de privilegiis Americae Latinae.",
+        "Datum Romae apud Sanctum Petrum sub annulo Piscatoris die solemni Paschae xviii Aprilis MDCCCLXXXXVII, Pontificatus Nostri anno vigesimo."
+      ]
+    },
+    {
+      "page": 753,
+      "reason": "no-date",
+      "lines": [
+        "BREVE Sanctissimi D. N. Leonis XIII quo ad dignitatem Archisodalitatis evehitur / Sodalitas erecta in Aede ss. Andreae et Claudii Romae, eo fine ut honor et / cultus SSmi Sacramenti longe lateque proferatur per solemnem atque perpe­ / tuam Eius expositionem et adorationem.",
+        "Datum Romae apud S. Petrum sub annulo Piscatoris die"
+      ]
+    }
+  ],
+  "summa": {
+    "pages": {
+      "from": 759,
+      "to": 766
+    },
+    "rows": [
+      {
+        "description": "R. PONTIFICIS Epistola SSmi D. N. Leonis XIII ad Gulielmum Alliala praesidem consilio associationi antimassonicae dirigendae primoque in eam rem conventui disponendo",
+        "page": 137,
+        "raw": "R. PONTIFICIS / Epistola SSmi D. N. Leonis XIII ad / Gulielmum Alliala praesidem con­ / silio associationi antimassonicae / dirigendae primoque in eam rem / conventui disponendo pag. 137"
+      },
+      {
+        "description": "Epistola Apostolica SSmi D. N. Leonis XIII de ordinationibus anglicanis",
+        "page": 193,
+        "raw": "Epistola Apostolica SSmi D. N. Leo­ / nis XIII de ordinationibus angli­ / canis 193"
+      },
+      {
+        "description": "Epistola encyclica SSmi D. N. Leonis PP. XIII, de mariali rosario",
+        "page": 204,
+        "raw": "Epistola encyclica SSmi D. N. Leo­ / nis PP. XIII, de mariali rosa­ / rio 204"
+      },
+      {
+        "description": "Litterae SSmi D. N. Leonis XIII ad Aethiopiae Imperator ero., quibus eum exorat ut captivos milites reddat Italiae, et istius responsum",
+        "page": 268,
+        "raw": "Litterae SSmi D. N. Leonis XIII ad / Aethiopiae Imperator ero., quibus / eum exorat ut captivos milites / reddat Italiae, et istius respon­ / sum 268"
+      },
+      {
+        "description": "Constitutio Apostolica SSmi D. N. Leonis XIH de prohibitione et censura librorum",
+        "page": 388,
+        "raw": "Constitutio Apostolica SSmi D. N. / Leonis XIH de prohibitione et / censura librorum 388"
+      },
+      {
+        "description": "Litterae Apostolicae SSmi D. N. Leonis XIII, quibus Seminarium Vaticanum cum scholis canonice constituitur",
+        "page": 513,
+        "raw": "Litterae Apostolicae SSmi D. N. Leo­ / nis XIII, quibus Seminarium Va­ / ticanum cum scholis canonice / constituitur 513"
+      },
+      {
+        "description": "Epistola encyclica SSmi D. N. Leonis XIII, de praesentia et virtute mirifica Spiritus Sancti",
+        "page": 644,
+        "raw": "Epistola encyclica SSmi D. N. Leo­ / nis XIII, de praesentia et virtute / mirifica Spiritus Sancti . .644"
+      },
+      {
+        "description": "Epistola Apostolica in forma Brevis SSmi D.N.Leonis XIÍI de privilegiis Americae Latinae.",
+        "page": 659,
+        "raw": "Epistola Apostolica in forma Brevis / SSmi D.N.Leonis XIÍI de privile­ / giis Americae Latinae. . . 659"
+      },
+      {
+        "description": "Litterae SSmi D. N. Leonis XIII ad Emum Card. Richard Archiepiscopum Parisien, quoad scriptores Ephemeridis Revue anglo- romaine",
+        "page": 664,
+        "raw": "Litterae SSmi D. N. Leonis XIII ad / Emum Card. Richard Archiepi­ / scopum Parisien, quoad scripto­ / res Ephemeridis Revue anglo- / romaine 664"
+      }
+    ],
+    "claimed": [
+      204,
+      268,
+      664
+    ],
+    "unclaimed": [
+      {
+        "description": "R. PONTIFICIS Epistola SSmi D. N. Leonis XIII ad Gulielmum Alliala praesidem consilio associationi antimassonicae dirigendae primoque in eam rem conventui disponendo",
+        "page": 137,
+        "raw": "R. PONTIFICIS / Epistola SSmi D. N. Leonis XIII ad / Gulielmum Alliala praesidem con­ / silio associationi antimassonicae / dirigendae primoque in eam rem / conventui disponendo pag. 137"
+      },
+      {
+        "description": "Epistola Apostolica SSmi D. N. Leonis XIII de ordinationibus anglicanis",
+        "page": 193,
+        "raw": "Epistola Apostolica SSmi D. N. Leo­ / nis XIII de ordinationibus angli­ / canis 193"
+      },
+      {
+        "description": "Constitutio Apostolica SSmi D. N. Leonis XIH de prohibitione et censura librorum",
+        "page": 388,
+        "raw": "Constitutio Apostolica SSmi D. N. / Leonis XIH de prohibitione et / censura librorum 388"
+      },
+      {
+        "description": "Litterae Apostolicae SSmi D. N. Leonis XIII, quibus Seminarium Vaticanum cum scholis canonice constituitur",
+        "page": 513,
+        "raw": "Litterae Apostolicae SSmi D. N. Leo­ / nis XIII, quibus Seminarium Va­ / ticanum cum scholis canonice / constituitur 513"
+      },
+      {
+        "description": "Epistola encyclica SSmi D. N. Leonis XIII, de praesentia et virtute mirifica Spiritus Sancti",
+        "page": 644,
+        "raw": "Epistola encyclica SSmi D. N. Leo­ / nis XIII, de praesentia et virtute / mirifica Spiritus Sancti . .644"
+      },
+      {
+        "description": "Epistola Apostolica in forma Brevis SSmi D.N.Leonis XIÍI de privilegiis Americae Latinae.",
+        "page": 659,
+        "raw": "Epistola Apostolica in forma Brevis / SSmi D.N.Leonis XIÍI de privile­ / giis Americae Latinae. . . 659"
+      }
+    ],
+    "omitted": [
+      636
+    ]
+  }
+}

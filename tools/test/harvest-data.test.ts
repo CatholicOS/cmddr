@@ -3898,14 +3898,16 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // pp. 300 and 301, neither on the briefs shelf.
     const perVolume = Object.fromEntries(sources.map((s) => [s.key, cited.filter((d) => d.acta!.volume === s.volume).length]));
     expect(perVolume).toEqual({
-      'ass-1': 0, 'ass-12': 5, 'ass-23': 9, 'ass-33': 21, 'ass-41': 29,
-      // Phase 2c-ii-b: the five volumes that complete Pius X. 111 references from 181 acts
-      // scanned; ASS 39 alone carries 49. Four more than the join first wrote, from the
-      // curation round: the greeting rule reading `Noster` (ass-headings.ts) and three
-      // curated rows, ASS:39:139 and the two match overrides of ASS:37:145 and ASS:40:130.
-      'ass-36': 7, 'ass-37': 19, 'ass-38': 9, 'ass-39': 49, 'ass-40': 27,
+      // 2c-i's five sampled volumes, 2c-ii-b's five of Pius X, and 2c-ii-c's twenty-one of
+      // Leo XIII. ASS 1, 14, 15 and 17 carry none: ASS 1 scans nothing by rule, and the
+      // other three scan 3, 1 and 4 acts whose shelf records do not exist (the reverse gap).
+      'ass-1': 0, 'ass-12': 5, 'ass-13': 2, 'ass-14': 0, 'ass-15': 0, 'ass-16': 2, 'ass-17': 1,
+      'ass-18': 5, 'ass-19': 4, 'ass-20': 5, 'ass-21': 7, 'ass-22': 3, 'ass-23': 9, 'ass-24': 5,
+      'ass-25': 8, 'ass-26': 3, 'ass-27': 8, 'ass-28': 8, 'ass-29': 5, 'ass-30': 5, 'ass-31': 10,
+      'ass-32': 2, 'ass-33': 21, 'ass-34': 7, 'ass-35': 8, 'ass-36': 7, 'ass-37': 19, 'ass-38': 9,
+      'ass-39': 50, 'ass-40': 27, 'ass-41': 29,
     });
-    expect(cited).toHaveLength(175);
+    expect(cited).toHaveLength(274);
     // By pope and genre, from the harvest's own output on 2026-09-25: Leo XIII 35 (5 + 9 + 21),
     // Pius X 29; no reference into ASS 1, so none of Pius IX. The three bulls are the
     // constitutions *Conditae a Christo* (1900), *Sapienti consilio* and *Promulgandi*. The
@@ -3913,11 +3915,11 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // (ASS 33 p. 65) joins them as a letter once its shelf filing is corrected.
     const byIssuer = new Map<string, number>();
     for (const d of cited) byIssuer.set(d.issuerId, (byIssuer.get(d.issuerId) ?? 0) + 1);
-    expect(Object.fromEntries([...byIssuer].sort())).toEqual({ 'rp:leo-xiii': 35, 'rp:pius-x': 140 });
+    expect(Object.fromEntries([...byIssuer].sort())).toEqual({ 'rp:leo-xiii': 133, 'rp:pius-x': 141 });
     const byGenre = new Map<string, number>();
     for (const d of cited) byGenre.set(d.genre ?? 'none', (byGenre.get(d.genre ?? 'none') ?? 0) + 1);
     expect(Object.fromEntries([...byGenre].sort())).toEqual({
-      'apostolic-exhortation': 1, 'apostolic-letter': 23, encyclical: 16, letter: 132, 'papal-bull': 3,
+      'apostolic-exhortation': 1, 'apostolic-letter': 44, encyclical: 43, letter: 180, 'papal-bull': 6,
     });
   });
 
@@ -3962,7 +3964,7 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // brevia it had been refusing (ASS 33 p. 213; ASS 41 pp. 300, 301): all twelve ring
     // brevia are class `brief`, none of them on a shelf, so each is held here and none is
     // created.
-    expect(creation.held.filter((h) => h.entry.series === 'ASS' && h.reason === 'series-not-created')).toHaveLength(74);
+    expect(creation.held.filter((h) => h.entry.series === 'ASS' && h.reason === 'series-not-created')).toHaveLength(154);
     // Phase 2c-ii-b raised the series' first holds of another kind -- six `ambiguous` and two
     // `claimed-twice` -- and the curation round answered every one, so the reason map is again
     // a single entry. Four of the six were the greeting rule: `Nostr\w+` did not read the
@@ -3972,8 +3974,12 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // having no record of it at all).
     const reasons = new Map<string, number>();
     for (const h of creation.held) reasons.set(h.reason, (reasons.get(h.reason) ?? 0) + 1);
-    expect(Object.fromEntries([...reasons].sort())).toEqual({ 'series-not-created': 74 });
-    expect(creation.held).toHaveLength(74);
+    // Phase 2c-ii-c adds the series' first `reprint` hold: ASS 30 (1897) 39, the second
+    // printing of *Officiorum ac munerum*, which ASS 29 (1896) 388 prints first. Both are
+    // curated readings of that phase, so before ACTA_REPRINTS keyed the later one the join
+    // claimed the document twice and wrote neither reference.
+    expect(Object.fromEntries([...reasons].sort())).toEqual({ reprint: 1, 'series-not-created': 154 });
+    expect(creation.held).toHaveLength(155);
   });
 
   it('pins the scan and the summa check per volume as the era report §2 says', () => {
@@ -4032,21 +4038,43 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // volume quotes a breve of 1896 inside a later act and only body text stands over the
     // pope's name.
     expect(perVolume).toEqual({
+      // Every count equals what tools/survey-ass.ts read from the store for these volumes.
+      // ASS 20 and ASS 26 show 0 rows and all their acts omitted because their summa has no
+      // papal part the parser can find -- 20's opens on its rows with no class heading, 26's
+      // on a dicastery -- and ASS 27's 47 rows are its papal part running on past its end
+      // into the dicasteries. All three still scan and join: the summa is the check, not the
+      // source (era report, phase 2c-ii-c).
       'ass-1': { acts: 0, defects: 3, rows: 0, claimed: 0, unclaimed: 0, omitted: 0 },
       'ass-12': { acts: 10, defects: 1, rows: 12, claimed: 9, unclaimed: 3, omitted: 1 },
+      'ass-13': { acts: 11, defects: 5, rows: 16, claimed: 11, unclaimed: 5, omitted: 0 },
+      'ass-14': { acts: 3, defects: 6, rows: 9, claimed: 2, unclaimed: 7, omitted: 1 },
+      'ass-15': { acts: 2, defects: 7, rows: 10, claimed: 2, unclaimed: 8, omitted: 0 },
+      'ass-16': { acts: 4, defects: 5, rows: 7, claimed: 2, unclaimed: 5, omitted: 2 },
+      'ass-17': { acts: 4, defects: 4, rows: 10, claimed: 3, unclaimed: 7, omitted: 1 },
+      'ass-18': { acts: 11, defects: 1, rows: 12, claimed: 8, unclaimed: 4, omitted: 3 },
+      'ass-19': { acts: 6, defects: 3, rows: 13, claimed: 6, unclaimed: 7, omitted: 0 },
+      'ass-20': { acts: 10, defects: 4, rows: 0, claimed: 0, unclaimed: 0, omitted: 10 },
+      'ass-21': { acts: 13, defects: 3, rows: 19, claimed: 13, unclaimed: 6, omitted: 0 },
+      'ass-22': { acts: 5, defects: 4, rows: 10, claimed: 5, unclaimed: 5, omitted: 0 },
       'ass-23': { acts: 9, defects: 4, rows: 14, claimed: 8, unclaimed: 6, omitted: 1 },
+      'ass-24': { acts: 9, defects: 5, rows: 12, claimed: 8, unclaimed: 4, omitted: 1 },
+      'ass-25': { acts: 11, defects: 2, rows: 12, claimed: 9, unclaimed: 3, omitted: 2 },
+      'ass-26': { acts: 10, defects: 2, rows: 0, claimed: 0, unclaimed: 0, omitted: 10 },
+      'ass-27': { acts: 12, defects: 5, rows: 47, claimed: 5, unclaimed: 42, omitted: 7 },
+      'ass-28': { acts: 10, defects: 6, rows: 9, claimed: 6, unclaimed: 3, omitted: 4 },
+      'ass-29': { acts: 4, defects: 6, rows: 9, claimed: 3, unclaimed: 6, omitted: 1 },
+      'ass-30': { acts: 6, defects: 7, rows: 11, claimed: 4, unclaimed: 7, omitted: 2 },
+      'ass-31': { acts: 11, defects: 5, rows: 13, claimed: 10, unclaimed: 3, omitted: 1 },
+      'ass-32': { acts: 4, defects: 5, rows: 7, claimed: 2, unclaimed: 5, omitted: 2 },
       'ass-33': { acts: 22, defects: 6, rows: 24, claimed: 16, unclaimed: 6, omitted: 4 },
-      'ass-41': { acts: 37, defects: 8, rows: 37, claimed: 27, unclaimed: 10, omitted: 10 },
-      // Phase 2c-ii-b, the five volumes that complete Pius X (spec §10 decision 3). Every
-      // count here equals what tools/survey-ass.ts read from the store for these volumes, so
-      // the fixture path and the survey pass see the same volume. ASS 38's 13 acts are the
-      // volume's own: its summa lists 16 papal rows, and the Supplementum at pp. 433-702 -- in
-      // which no page carries `Pontificatus Nostri` -- hides none.
+      'ass-34': { acts: 11, defects: 4, rows: 9, claimed: 7, unclaimed: 2, omitted: 3 },
+      'ass-35': { acts: 20, defects: 6, rows: 11, claimed: 8, unclaimed: 3, omitted: 12 },
       'ass-36': { acts: 38, defects: 20, rows: 36, claimed: 22, unclaimed: 14, omitted: 16 },
       'ass-37': { acts: 33, defects: 16, rows: 32, claimed: 25, unclaimed: 7, omitted: 8 },
       'ass-38': { acts: 13, defects: 6, rows: 16, claimed: 9, unclaimed: 7, omitted: 4 },
-      'ass-39': { acts: 60, defects: 18, rows: 75, claimed: 52, unclaimed: 23, omitted: 8 },
+      'ass-39': { acts: 61, defects: 17, rows: 75, claimed: 53, unclaimed: 22, omitted: 8 },
       'ass-40': { acts: 37, defects: 10, rows: 38, claimed: 31, unclaimed: 7, omitted: 6 },
+      'ass-41': { acts: 37, defects: 8, rows: 37, claimed: 27, unclaimed: 10, omitted: 10 },
     });
     // The 24 readings, each with its cause quoted in the report's §2.5 (`ASS_READINGS`'s own
     // evidence): 8 a Roman date the scanner does not read (the Kalends and the Ides -- ASS:23:206,
@@ -4065,13 +4093,13 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // prosperitatem.`) rather than the act's first words. One volume of the 41 prints
     // that shape, so it is a row and not a rule -- and the true opening is the shelf's
     // own incipit, *Nunciatum est*.
-    expect(Object.keys(ASS_READINGS)).toHaveLength(25);
+    expect(Object.keys(ASS_READINGS)).toHaveLength(40);
     const byVolume = new Map<string, number>();
     for (const k of Object.keys(ASS_READINGS)) {
       const v = `ass-${k.split(':')[1]}`;
       byVolume.set(v, (byVolume.get(v) ?? 0) + 1);
     }
-    expect(Object.fromEntries([...byVolume].sort())).toEqual({ 'ass-1': 3, 'ass-12': 1, 'ass-23': 5, 'ass-33': 6, 'ass-39': 1, 'ass-41': 9 });
+    expect(Object.fromEntries([...byVolume].sort())).toEqual({ 'ass-1': 3, 'ass-12': 1, 'ass-14': 2, 'ass-15': 1, 'ass-17': 3, 'ass-19': 1, 'ass-23': 5, 'ass-28': 1, 'ass-29': 3, 'ass-30': 2, 'ass-31': 1, 'ass-32': 1, 'ass-33': 6, 'ass-39': 1, 'ass-41': 9 });
   });
 
   it('satisfies invariant 25 across both series', () => {

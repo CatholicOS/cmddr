@@ -106,6 +106,36 @@ export const ACTA_SOURCES: readonly ActaSource[] = [
   ass(38, 1905, 'ASS-38-1905-6-ocr.pdf', '2026-09-22', 1906),
   ass(39, 1906, 'ASS-39-1906-ocr.pdf', '2026-09-22'),
   ass(40, 1907, 'ASS-40-1907-ocr.pdf', '2026-09-22'),
+  // Phase 2c-ii-c (spec §10 decision 3): Leo XIII's twenty-one unjoined volumes. ASS 12, 23
+  // and 33 are the sample's and ASS 36 carries his last months, so these complete the
+  // pontificate. The era the survey says will not behave like Pius X's: 162 acts over
+  // 15,259 pages and 114 of 246 summa rows claimed (46.3 %), ASS 15 yielding one act in
+  // 623 pages. ASS 20 and ASS 26 find no papal part in their summa -- 20's opens on its
+  // rows with no class heading, 26's on a dicastery -- and ASS 27's runs on past its end
+  // into the dicasteries, so their completeness check is blind or inflated while their
+  // acts scan and join as any other volume's. ASS 16 carries a bound-in supplement, as
+  // its PDF's name records. Retrieved 2026-09-22 with the whole series, for the survey.
+  ass(13, 1880, 'ASS-13-1880-ocr.pdf', '2026-09-22'),
+  ass(14, 1881, 'ASS-14-1881-ocr.pdf', '2026-09-22'),
+  ass(15, 1882, 'ASS-15-1882-ocr.pdf', '2026-09-22'),
+  ass(16, 1883, 'ASS-16-1883-84-1-576+supplemento-17-96-ocr.pdf', '2026-09-22', 1884),
+  ass(17, 1884, 'ASS-17-1884-ocr.pdf', '2026-09-22'),
+  ass(18, 1885, 'ASS-18-1885-ocr.pdf', '2026-09-22'),
+  ass(19, 1886, 'ASS-19-1886-87-ocr.pdf', '2026-09-22', 1887),
+  ass(20, 1887, 'ASS-20-1887-ocr.pdf', '2026-09-22'),
+  ass(21, 1888, 'ASS-21-1888-ocr.pdf', '2026-09-22'),
+  ass(22, 1889, 'ASS-22-1889-90-ocr.pdf', '2026-09-22', 1890),
+  ass(24, 1891, 'ASS-24-1891-92-ocr.pdf', '2026-09-22', 1892),
+  ass(25, 1892, 'ASS-25-1892-93-ocr.pdf', '2026-09-22', 1893),
+  ass(26, 1893, 'ASS-26-1893-94-ocr.pdf', '2026-09-22', 1894),
+  ass(27, 1894, 'ASS-27-1894-95-ocr.pdf', '2026-09-22', 1895),
+  ass(28, 1895, 'ASS-28-1895-96-ocr.pdf', '2026-09-22', 1896),
+  ass(29, 1896, 'ASS-29-1896-97-ocr.pdf', '2026-09-22', 1897),
+  ass(30, 1897, 'ASS-30-1897-98-ocr.pdf', '2026-09-22', 1898),
+  ass(31, 1898, 'ASS-31-1898-99-ocr.pdf', '2026-09-22', 1899),
+  ass(32, 1899, 'ASS-32-1899-900-ocr.pdf', '2026-09-22', 1900),
+  ass(34, 1901, 'ASS-34-1901-2-ocr.pdf', '2026-09-22', 1902),
+  ass(35, 1902, 'ASS-35-1902-3-ocr.pdf', '2026-09-22', 1903),
   // Phase 2b-iii-b (spec §10): AAS 1-17, the volumes of 1909-1925, whose OCR lost the page
   // column on most index pages -- the pages come back from the volume body through the
   // sidecars (recover.ts). 1909 and 1917-I, the sample's, re-extracted on 2026-09-20 with

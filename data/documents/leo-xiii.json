@@ -264,7 +264,13 @@
     "characteristics": [
       "in-forma-brevis"
     ],
-    "sourceGenreLabel": "briefs"
+    "sourceGenreLabel": "briefs",
+    "acta": {
+      "series": "ASS",
+      "volume": 13,
+      "year": 1880,
+      "page": 56
+    }
   },
   {
     "id": "mag:leo-xiii/grande-munus-1880",
@@ -306,7 +312,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Sancta Dei Civitas",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 13,
+      "year": 1880,
+      "page": 241
+    }
   },
   {
     "id": "mag:leo-xiii/pro-religione-et-pro-ecclesia-1881",
@@ -560,7 +572,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Supremi Apostolatus Officio",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 16,
+      "year": 1883,
+      "page": 113
+    }
   },
   {
     "id": "mag:leo-xiii/nobilissima-gallorum-gens-1884",
@@ -603,7 +621,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Humanum Genus",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 16,
+      "year": 1883,
+      "page": 417
+    }
   },
   {
     "id": "mag:leo-xiii/superiore-anno-1884",
@@ -646,7 +670,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Materna Ecclesiae caritas",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 17,
+      "year": 1884,
+      "page": 209
+    }
   },
   {
     "id": "mag:leo-xiii/la-vostra-lettera-1885",
@@ -666,7 +696,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "La vostra lettera",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 18,
+      "year": 1885,
+      "page": 3
+    }
   },
   {
     "id": "mag:leo-xiii/immortale-dei-1885",
@@ -690,7 +726,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Immortale Dei",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 18,
+      "year": 1885,
+      "page": 161
+    }
   },
   {
     "id": "mag:leo-xiii/spectata-fides-1885",
@@ -732,7 +774,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod Auctoritate",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 18,
+      "year": 1885,
+      "page": 257
+    }
   },
   {
     "id": "mag:leo-xiii/cum-de-carolinis-1885",
@@ -751,7 +799,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Cum de Carolinis",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 18,
+      "year": 1885,
+      "page": 417
+    }
   },
   {
     "id": "mag:leo-xiii/iampridem-1886",
@@ -792,7 +846,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Non senza",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 18,
+      "year": 1885,
+      "page": 387
+    }
   },
   {
     "id": "mag:leo-xiii/dolemus-inter-1886",
@@ -815,7 +875,13 @@
     "characteristics": [
       "in-forma-brevis"
     ],
-    "sourceGenreLabel": "briefs"
+    "sourceGenreLabel": "briefs",
+    "acta": {
+      "series": "ASS",
+      "volume": 19,
+      "year": 1886,
+      "page": 49
+    }
   },
   {
     "id": "mag:leo-xiii/quod-multum-1886",
@@ -836,7 +902,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod Multum",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 19,
+      "year": 1886,
+      "page": 97
+    }
   },
   {
     "id": "mag:leo-xiii/pergrata-nobis-1886",
@@ -857,7 +929,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Pergrata Nobis",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 19,
+      "year": 1886,
+      "page": 209
+    }
   },
   {
     "id": "mag:leo-xiii/volumen-tertium-1886",
@@ -933,7 +1011,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ex litteris tuis",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 19,
+      "year": 1886,
+      "page": 465
+    }
   },
   {
     "id": "mag:leo-xiii/quod-iampridem-1887",
@@ -992,7 +1076,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quantunque le siano",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 20,
+      "year": 1887,
+      "page": 4
+    }
   },
   {
     "id": "mag:leo-xiii/egregii-tui-1887",
@@ -1057,7 +1147,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod primo",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 20,
+      "year": 1887,
+      "page": 209
+    }
   },
   {
     "id": "mag:leo-xiii/merito-existimasti-1887",
@@ -1095,7 +1191,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Tanto Nobis",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 20,
+      "year": 1887,
+      "page": 161
+    }
   },
   {
     "id": "mag:leo-xiii/libenter-agnovimus-1887",
@@ -1155,7 +1257,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Vicario sulla terra",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 20,
+      "year": 1887,
+      "page": 419
+    }
   },
   {
     "id": "mag:leo-xiii/praeclaro-divinae-1888",
@@ -1246,7 +1354,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Libertas",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 20,
+      "year": 1887,
+      "page": 593
+    }
   },
   {
     "id": "mag:leo-xiii/saepe-nos-1888",
@@ -1288,7 +1402,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Paterna Caritas",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 21,
+      "year": 1888,
+      "page": 67
+    }
   },
   {
     "id": "mag:leo-xiii/summi-pontificatus-1888",
@@ -1349,7 +1469,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "ASS",
+      "volume": 21,
+      "year": 1888,
+      "page": 193
+    }
   },
   {
     "id": "mag:leo-xiii/opus-tibi-1888",
@@ -1368,7 +1494,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Opus tibi",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 21,
+      "year": 1888,
+      "page": 195
+    }
   },
   {
     "id": "mag:leo-xiii/etsi-nec-dubia-1888",
@@ -1387,7 +1519,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Etsi nec dubia",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 21,
+      "year": 1888,
+      "page": 257
+    }
   },
   {
     "id": "mag:leo-xiii/quam-aerumnosa-1888",
@@ -1430,7 +1568,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Est sane molestum",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 21,
+      "year": 1888,
+      "page": 321
+    }
   },
   {
     "id": "mag:leo-xiii/etsi-cunctas-1888",
@@ -1490,7 +1634,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Eximia pietas",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 21,
+      "year": 1888,
+      "page": 449
+    }
   },
   {
     "id": "mag:leo-xiii/iamdudum-pars-1889",
@@ -1613,7 +1763,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Libentes intelleximus",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 21,
+      "year": 1888,
+      "page": 577
+    }
   },
   {
     "id": "mag:leo-xiii/amplissimum-collegium-1889",
@@ -1714,7 +1870,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quamquam Pluries",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 22,
+      "year": 1889,
+      "page": 65
+    }
   },
   {
     "id": "mag:leo-xiii/fra-le-molteplici-1889",
@@ -1794,7 +1956,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Sapientiae Christianae",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 22,
+      "year": 1889,
+      "page": 385
+    }
   },
   {
     "id": "mag:leo-xiii/quod-paucis-1890",
@@ -1889,7 +2057,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Graviter molesteque",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 22,
+      "year": 1889,
+      "page": 705
+    }
   },
   {
     "id": "mag:leo-xiii/mirifice-delectati-sumus-1890",
@@ -2291,7 +2465,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Octobri mense",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 24,
+      "year": 1891,
+      "page": 193
+    }
   },
   {
     "id": "mag:leo-xiii/sapienter-olim-1891",
@@ -2310,7 +2490,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Sapienter olim",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 24,
+      "year": 1891,
+      "page": 264
+    }
   },
   {
     "id": "mag:leo-xiii/non-est-opus-1891",
@@ -2351,7 +2537,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Au milieu des sollicitudes",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 24,
+      "year": 1891,
+      "page": 519
+    }
   },
   {
     "id": "mag:leo-xiii/notre-consolation-1892",
@@ -2371,7 +2563,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Notre consolation",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 24,
+      "year": 1891,
+      "page": 641
+    }
   },
   {
     "id": "mag:leo-xiii/quo-magis-1892",
@@ -2409,7 +2607,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quae coniunctim",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 24,
+      "year": 1891,
+      "page": 654
+    }
   },
   {
     "id": "mag:leo-xiii/quam-gratae-1892",
@@ -2430,7 +2634,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quam gratae",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 25,
+      "year": 1892,
+      "page": 66
+    }
   },
   {
     "id": "mag:leo-xiii/quarto-abeunte-saeculo-1892",
@@ -2473,7 +2683,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "ASS",
+      "volume": 25,
+      "year": 1892,
+      "page": 65
+    }
   },
   {
     "id": "mag:leo-xiii/magnae-dei-matris-1892",
@@ -2495,7 +2711,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Magnae Dei Matris",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 25,
+      "year": 1892,
+      "page": 139
+    }
   },
   {
     "id": "mag:leo-xiii/suffragatione-patrum-1892",
@@ -2514,7 +2736,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Suffragatione patrum",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 25,
+      "year": 1892,
+      "page": 193
+    }
   },
   {
     "id": "mag:leo-xiii/literae-tuae-1892",
@@ -2534,7 +2762,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Literae tuae",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 25,
+      "year": 1892,
+      "page": 267
+    }
   },
   {
     "id": "mag:leo-xiii/agnovimus-libenter-1892",
@@ -2553,7 +2787,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Agnovimus libenter",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 25,
+      "year": 1892,
+      "page": 273
+    }
   },
   {
     "id": "mag:leo-xiii/custodi-di-quella-fede-1892",
@@ -2651,7 +2891,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod scribis",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 25,
+      "year": 1892,
+      "page": 385
+    }
   },
   {
     "id": "mag:leo-xiii/il-divisamento-1893",
@@ -2691,7 +2937,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Clara saepenumero",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 25,
+      "year": 1892,
+      "page": 713
+    }
   },
   {
     "id": "mag:leo-xiii/ad-extremas-1893",
@@ -2731,7 +2983,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Gratae vehementer",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 26,
+      "year": 1893,
+      "page": 76
+    }
   },
   {
     "id": "mag:leo-xiii/nihil-nobis-1893",
@@ -2750,7 +3008,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Nihil Nobis",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 26,
+      "year": 1893,
+      "page": 74
+    }
   },
   {
     "id": "mag:leo-xiii/constanti-hungarorum-1893",
@@ -2962,7 +3226,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Caritatis providentiaeque",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 26,
+      "year": 1893,
+      "page": 523
+    }
   },
   {
     "id": "mag:leo-xiii/grande-e-1894",
@@ -3081,7 +3351,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Plane congruit",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 27,
+      "year": 1894,
+      "page": 7
+    }
   },
   {
     "id": "mag:leo-xiii/rem-tu-amplam-1894",
@@ -3100,7 +3376,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Rem tu amplam",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 27,
+      "year": 1894,
+      "page": 74
+    }
   },
   {
     "id": "mag:leo-xiii/perlibenti-quidem-1894",
@@ -3141,7 +3423,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Iucunda semper expectatione",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 27,
+      "year": 1894,
+      "page": 177
+    }
   },
   {
     "id": "mag:leo-xiii/fra-le-principali-1894",
@@ -3199,7 +3487,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Moerore sapientium",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 27,
+      "year": 1894,
+      "page": 265
+    }
   },
   {
     "id": "mag:leo-xiii/postquam-catholici-1894",
@@ -3239,7 +3533,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Christi nomen",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 27,
+      "year": 1894,
+      "page": 385
+    }
   },
   {
     "id": "mag:leo-xiii/longinqua-oceani-1895",
@@ -3322,7 +3622,13 @@
     "characteristics": [
       "in-forma-brevis"
     ],
-    "sourceGenreLabel": "briefs"
+    "sourceGenreLabel": "briefs",
+    "acta": {
+      "series": "ASS",
+      "volume": 27,
+      "year": 1894,
+      "page": 645
+    }
   },
   {
     "id": "mag:leo-xiii/quale-debba-1895",
@@ -3361,7 +3667,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod plurimorum",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 27,
+      "year": 1894,
+      "page": 643
+    }
   },
   {
     "id": "mag:leo-xiii/unitatis-christianae-1895",
@@ -3399,7 +3711,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Benevolentiae testandae",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 27,
+      "year": 1894,
+      "page": 752
+    }
   },
   {
     "id": "mag:leo-xiii/adnitentibus-nobis-1895",
@@ -3418,7 +3736,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Adnitentibus Nobis",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 28,
+      "year": 1895,
+      "page": 3
+    }
   },
   {
     "id": "mag:leo-xiii/permoti-nos-1895",
@@ -3440,7 +3764,13 @@
       ]
     },
     "incipit": "Permoti Nos",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 28,
+      "year": 1895,
+      "page": 4
+    }
   },
   {
     "id": "mag:leo-xiii/consiliorum-quae-1895",
@@ -3459,7 +3789,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Consiliorum quae",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 28,
+      "year": 1895,
+      "page": 8
+    }
   },
   {
     "id": "mag:leo-xiii/adiutricem-populi-1895",
@@ -3480,7 +3816,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Adiutricem populi",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 28,
+      "year": 1895,
+      "page": 129
+    }
   },
   {
     "id": "mag:leo-xiii/universis-christi-1895",
@@ -3499,7 +3841,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Universis Christi",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 28,
+      "year": 1895,
+      "page": 196
+    }
   },
   {
     "id": "mag:leo-xiii/le-insolite-1895",
@@ -3538,7 +3886,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Christi Domini",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 28,
+      "year": 1895,
+      "page": 257
+    }
   },
   {
     "id": "mag:leo-xiii/egregium-sane-1895",
@@ -3557,7 +3911,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Egregium sane",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 28,
+      "year": 1895,
+      "page": 385
+    }
   },
   {
     "id": "mag:leo-xiii/magni-commemoratio-1896",
@@ -3598,7 +3958,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod Romani Pontifices",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 29,
+      "year": 1896,
+      "page": 513
+    }
   },
   {
     "id": "mag:leo-xiii/con-vivissima-1896",
@@ -3639,7 +4005,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "ASS",
+      "volume": 28,
+      "year": 1895,
+      "page": 585
+    }
   },
   {
     "id": "mag:leo-xiii/insignes-deo-1896",
@@ -3681,7 +4053,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Placuit tibi",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 29,
+      "year": 1896,
+      "page": 268
+    }
   },
   {
     "id": "mag:leo-xiii/satis-cognitum-1896",
@@ -3740,7 +4118,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Apostolicae curae",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 29,
+      "year": 1896,
+      "page": 193
+    }
   },
   {
     "id": "mag:leo-xiii/fidentem-piumque-animum-1896",
@@ -3762,7 +4146,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Fidentem piumque animum",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 29,
+      "year": 1896,
+      "page": 204
+    }
   },
   {
     "id": "mag:leo-xiii/religioni-apud-anglos-1896",
@@ -3823,7 +4213,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "ASS",
+      "volume": 29,
+      "year": 1896,
+      "page": 388
+    }
   },
   {
     "id": "mag:leo-xiii/trans-oceanum-1897",
@@ -3921,7 +4317,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Libet quidem",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 30,
+      "year": 1897,
+      "page": 10
+    }
   },
   {
     "id": "mag:leo-xiii/militantis-ecclesiae-1897",
@@ -3941,7 +4343,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Militantis Ecclesiae",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 30,
+      "year": 1897,
+      "page": 3
+    }
   },
   {
     "id": "mag:leo-xiii/etsi-paternam-1897",
@@ -3981,7 +4389,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Augustissimae Virginis Mariae",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 30,
+      "year": 1897,
+      "page": 129
+    }
   },
   {
     "id": "mag:leo-xiii/felicitate-quadam-1897",
@@ -4003,7 +4417,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "ASS",
+      "volume": 30,
+      "year": 1897,
+      "page": 225
+    }
   },
   {
     "id": "mag:leo-xiii/affari-vos-1897",
@@ -4046,7 +4466,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "ASS",
+      "volume": 30,
+      "year": 1897,
+      "page": 362
+    }
   },
   {
     "id": "mag:leo-xiii/quum-adeo-1898",
@@ -4089,7 +4515,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "ASS",
+      "volume": 31,
+      "year": 1898,
+      "page": 3
+    }
   },
   {
     "id": "mag:leo-xiii/cum-plura-nobis-1898",
@@ -4133,7 +4565,13 @@
     "characteristics": [
       "motu-proprio"
     ],
-    "sourceGenreLabel": "motu_proprio"
+    "sourceGenreLabel": "motu_proprio",
+    "acta": {
+      "series": "ASS",
+      "volume": 31,
+      "year": 1898,
+      "page": 4
+    }
   },
   {
     "id": "mag:leo-xiii/caritatis-studium-1898",
@@ -4153,7 +4591,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Caritatis Studium",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 31,
+      "year": 1898,
+      "page": 6
+    }
   },
   {
     "id": "mag:leo-xiii/spesse-volte-1898",
@@ -4173,7 +4617,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Spesse Volte",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 31,
+      "year": 1898,
+      "page": 129
+    }
   },
   {
     "id": "mag:leo-xiii/quam-religiosa-1898",
@@ -4212,7 +4662,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Maximo cum animi",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 31,
+      "year": 1898,
+      "page": 193
+    }
   },
   {
     "id": "mag:leo-xiii/diuturni-temporis-1898",
@@ -4255,7 +4711,13 @@
     "characteristics": [
       "apostolic-constitution"
     ],
-    "sourceGenreLabel": "apost_constitutions"
+    "sourceGenreLabel": "apost_constitutions",
+    "acta": {
+      "series": "ASS",
+      "volume": 31,
+      "year": 1898,
+      "page": 257
+    }
   },
   {
     "id": "mag:leo-xiii/nostra-erga-1898",
@@ -4274,7 +4736,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Nostra erga",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 31,
+      "year": 1898,
+      "page": 264
+    }
   },
   {
     "id": "mag:leo-xiii/quum-diuturnum-1898",
@@ -4318,7 +4786,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Testem benevolentiae",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 31,
+      "year": 1898,
+      "page": 470
+    }
   },
   {
     "id": "mag:leo-xiii/ex-epistola-1899",
@@ -4337,7 +4811,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ex epistola",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 31,
+      "year": 1898,
+      "page": 513
+    }
   },
   {
     "id": "mag:leo-xiii/properante-ad-exitum-1899",
@@ -4377,7 +4857,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Annum Sacrum",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 31,
+      "year": 1898,
+      "page": 646
+    }
   },
   {
     "id": "mag:leo-xiii/nous-ne-pouvons-1899",
@@ -4417,7 +4903,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Depuis le Jour",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 32,
+      "year": 1899,
+      "page": 193
+    }
   },
   {
     "id": "mag:leo-xiii/paternae-1899",
@@ -4456,7 +4948,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quoniam divinae",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 32,
+      "year": 1899,
+      "page": 265
+    }
   },
   {
     "id": "mag:leo-xiii/aeterni-pastoris-1899",
@@ -5118,7 +5616,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Slavorum gentem",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 34,
+      "year": 1901,
+      "page": 196
+    }
   },
   {
     "id": "mag:leo-xiii/reputantibus-1901",
@@ -5143,7 +5647,13 @@
     "aliases": [
       "Reputantibus saepe"
     ],
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 34,
+      "year": 1901,
+      "page": 321
+    }
   },
   {
     "id": "mag:leo-xiii/parta-humano-generi-1901",
@@ -5162,7 +5672,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Parta humano generi",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 34,
+      "year": 1901,
+      "page": 193
+    }
   },
   {
     "id": "mag:leo-xiii/urbanitatis-veteris-1901",
@@ -5184,7 +5700,13 @@
       ]
     },
     "incipit": "Urbanitatis Veteris",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 34,
+      "year": 1901,
+      "page": 257
+    }
   },
   {
     "id": "mag:leo-xiii/vigesimo-quinto-anno-1902",
@@ -5203,7 +5725,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Vigesimo quinto anno",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 34,
+      "year": 1901,
+      "page": 513
+    }
   },
   {
     "id": "mag:leo-xiii/ad-pastoralem-1902",
@@ -5247,7 +5775,13 @@
       ]
     },
     "incipit": "In Amplissimo",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 34,
+      "year": 1901,
+      "page": 623
+    }
   },
   {
     "id": "mag:leo-xiii/quod-votis-1902",
@@ -5287,7 +5821,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Mirae caritatis",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 34,
+      "year": 1901,
+      "page": 641
+    }
   },
   {
     "id": "mag:leo-xiii/non-mediocri-1902",
@@ -5306,7 +5846,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Non mediocri",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 35,
+      "year": 1902,
+      "page": 385
+    }
   },
   {
     "id": "mag:leo-xiii/ex-tuis-litteris-1902",
@@ -5325,7 +5871,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Ex tuis litteris",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 35,
+      "year": 1902,
+      "page": 129
+    }
   },
   {
     "id": "mag:leo-xiii/vigilantiae-studiique-1902",
@@ -5345,7 +5897,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Vigilantiae studiique",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 35,
+      "year": 1902,
+      "page": 234
+    }
   },
   {
     "id": "mag:leo-xiii/quae-ad-nos-1902",
@@ -5406,7 +5964,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Fin dal principio",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 35,
+      "year": 1902,
+      "page": 257
+    }
   },
   {
     "id": "mag:leo-xiii/dum-multa-1902",
@@ -5444,7 +6008,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quos nuper",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 35,
+      "year": 1902,
+      "page": 707
+    }
   },
   {
     "id": "mag:leo-xiii/cogendum-proxime-1903",
@@ -5463,7 +6033,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Cogendum proxime",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 35,
+      "year": 1902,
+      "page": 709
+    }
   },
   {
     "id": "mag:leo-xiii/quod-iubilaei-1903",
@@ -5482,7 +6058,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quod Iubilaei",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 35,
+      "year": 1902,
+      "page": 641
+    }
   },
   {
     "id": "mag:leo-xiii/da-molte-parti-1903",
@@ -5520,7 +6102,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Communes litteras",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 35,
+      "year": 1902,
+      "page": 642
+    }
   },
   {
     "id": "mag:leo-xiii/praestans-fidei-1903",

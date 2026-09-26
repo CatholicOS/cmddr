@@ -1,0 +1,224 @@
+{
+  "source": "ass-32",
+  "generated": "2026-09-26",
+  "text": "~/development/sources/ASS/txt/ass-32-1899.txt (768 pages)",
+  "volume": 32,
+  "year": 1899,
+  "pages": 768,
+  "entries": [
+    {
+      "series": "ASS",
+      "volume": 32,
+      "year": 1899,
+      "page": 193,
+      "pope": "Leo XIII",
+      "category": "EPISTOLA ENCYCLICA",
+      "date": "1899-09-08",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SS. D. N. Leonis PP. XIII ad Archiepiscopos, Episcopos et Clerum Galliae.",
+      "raw": "EPISTOLA ENCYCLICA SS. D. N. Leonis PP. XIII ad Archiepiscopos, / Episcopos et Clerum Galliae.",
+      "opening": "Vénérables Frères, très chers Fils. Depuis le jour",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "EPISTOLA ENCYCLICA SS. D. N. Leonis PP. XIII ad Archiepiscopos, / Episcopos et Clerum Galliae.",
+        "salutation": null,
+        "opening": "Vénérables Frères, très chers Fils.",
+        "dateline": "Donné à Rome, près Saint Pierre, le 8 Septembre de l'année 1899, de Notre Pontificat la vingt-deuxième.",
+        "header": "193"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 32,
+      "year": 1899,
+      "page": 321,
+      "pope": "Leo XIII",
+      "category": "ALLOCUTIO",
+      "date": "1899-12-14",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Sanctissimi Domini Nostri Leonis Papae XIII habita in Consistorio diei 14 Decembris 1899.",
+      "raw": "ALLOCUTIO Sanctissimi Domini Nostri Leonis Papae XIII habita in Consistorio / diei 14 Decembris 1899.",
+      "opening": "Auspicandae celebritatis sacrae, quam mense Maio per apostolicas",
+      "anchor": "heading",
+      "evidence": {
+        "heading": "ALLOCUTIO Sanctissimi Domini Nostri Leonis Papae XIII habita in Consistorio / diei 14 Decembris 1899.",
+        "salutation": null,
+        "opening": "Auspicandae celebritatis sacrae, quam mense Maio per apo­",
+        "dateline": null,
+        "header": "EX ACTIS CONSISTORIALIBUS"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 32,
+      "year": 1899,
+      "page": 700,
+      "pope": "Leo XIII",
+      "category": "BREVE",
+      "date": "1900-04-03",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Cum vero eadem Sacra Rituum Congregatio, die 23 Mar­ tii 1900, rescripserit: « Quoad Sanctos nihil obstat ; quoad Bea­ tos vero, attentis peculiaribus rei adiunctis, de speciali gratia concedi potest»; Sanctitas Sua benigne annuit per sequens Breve:",
+      "raw": "Cum vero eadem Sacra Rituum Congregatio, die 23 Mar­ / tii 1900, rescripserit: « Quoad Sanctos nihil obstat ; quoad Bea­ / tos vero, attentis peculiaribus rei adiunctis, de speciali gratia / concedi potest»; Sanctitas Sua benigne annuit per sequens / Breve:",
+      "opening": "Ad perpetuam rei memoriam. Inter subsidia religionis, quae",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "Cum vero eadem Sacra Rituum Congregatio, die 23 Mar­ / tii 1900, rescripserit: « Quoad Sanctos nihil obstat ; quoad Bea­ / tos vero, attentis peculiaribus rei adiunctis, de speciali gratia / concedi potest»; Sanctitas Sua benigne annuit per sequens / Breve:",
+        "salutation": "LEO PP. XIII.",
+        "opening": "Ad perpetuam rei memoriam. Inter subsidia religionis,",
+        "dateline": "pensione indulgentiarum hoc anno Iubilaei. Datum Romae apud S. Petrum sub Annulo Piscatoris die III Aprilis MDCCCC , Pontificatus Nostri Anno Vigesimo tertio.",
+        "header": "700 EX S. G. NEG. ECCL. EXTRA ORD. PRAEPOSITA"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 32,
+      "year": 1899,
+      "page": 757,
+      "pope": "Leo XIII",
+      "category": "BREVE",
+      "date": "1900-03-10",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "quo conceditur indulgentia tercentum dierum recitantibus Orationem in calce relatam in honorem Mariae SSmae Auxiliatricis.",
+      "raw": "BREVE quo conceditur indulgentia tercentum dierum recitantibus Orationem in / calce relatam in honorem Mariae SSmae Auxiliatricis.",
+      "opening": "Oblatis Nobis precibus a dilecto filio Caesare Cagherò",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "BREVE quo conceditur indulgentia tercentum dierum recitantibus Orationem in / calce relatam in honorem Mariae SSmae Auxiliatricis.",
+        "salutation": "LEO PP. XIII.",
+        "opening": "Oblatis Nobis precibus a dilecto filio Caesare Cagherò pro­",
+        "dateline": "laei. Datum Romae apud S. Petrum sub Annulo Piscatoris die X Martii MCM, Pontificatus Nostri Anno Vigesimotertio.",
+        "header": "EX S. C. RITUUM 757"
+      }
+    }
+  ],
+  "defects": [
+    {
+      "page": 214,
+      "reason": "no-opening",
+      "lines": [
+        "EPISTOLA SS. D. N. Leonis PP. XIII ad Archiepiscopos et Episcopos Brasiliae. / Venerabiles fratres Salutem et Apostolicam Benedictionem / Paternae providaeque Nostrae in gentem vestram sollicitu­ / dinis magnopere laetamur haud mediocrem fructum, vestra / potissimum industria, Venerabiles Fratres, fuisse perceptum. / Apostolicis enim Litteris inhaerentes, quas dedimus die II men­ / sis Iulii anno MDCCCXCIV, studio ac labore vestro effecistis ut et / excitaretur in populo pietas, et in sacri, ordinis viris vetus di­ / 1 opera / sciplina revivisceret. Neque vero Nos latet quantume con- / tuleritis ad incolumitatem et iura tuenda religiosorum Sodalium, / qui ex antiquis Familiis istius regionis superfuerunt ad eosque / in pristinum instituti florem re vocandos ; quibus utilissime con­ / sociantur alii ex Europa Fratres, quorum nobilem impetum / non longitudo itineris, non inclementia caeli, non dissimulimi mo­ / res retardarunt. Accedunt recentius institutae Congregationes, / eaeque complures, concordi studio vestro accitae, sive con­ / dendis aut moderandis ephebeis, sive sacris missionibus ob­ / eundis, sive aliis praestandis in sacerdotali munere, ad quae / impar numero clerus iste minime sufficeret. Non ultimam de­ / nique afferant solatii causam Seminaria apud vos vel aucta / numero vel in melius restituta. / Fausta haec initia et habiti huc usque progressus spem / iniiciunt brevi fore, ut amplificatae per Nos istic sacrae Hierar­ / chiae maiora in dies incrementa respondeant. Quod quidem / quum probata industria ac perspecta diligentia vestra, Venera­ / biles Fratres, tum etiam prona ad pietatem et indole et con­ / suetudine Brasilianorum gens satis polliceri videntur. / Sunt quaedam tamen ad rei catholicae profectum ita ne­ / cessaria, ut ea semel attigisse non satis sit ; commemorari sae­ / pius et commendari velint. Huc potissimum pertinet cura in / Seminariis collocanda, quorum cum statu fortuna Ecclesiae / coniungitur maxime. In eorum igitur disciplina instauranda / illud in primis cordi est, quod nonnulli sacrorum antistites iam / feliciter praestiterunt, ut separatis aedibus, suisque seorsim / institutis ac legibus, degant alumni, qui spem afferant sese Deo / mancipandi per sacros ordines, eorumque domus retineant Se­ / minarii nomen ; aliae, instituendis ad civilia munia adolescen­ / tibus, Convictus vel Collegia episcopalia nuncupentur. Quoti­ / diano enim usu constat, mixta Seminaria Ecclesiae consilio ac / providentiae minus respondere ; ea contubernia cum laicis cau-"
+      ]
+    },
+    {
+      "page": 264,
+      "reason": "no-heading",
+      "lines": [
+        "Datum Romae apud Sanctum Petrum anno Incarnationis",
+        "Dominicae millesimo octingentesimo nonagésimo nono Calend.",
+        "Novembris, Pontificatus Nostri anno vicesimo secundo."
+      ]
+    },
+    {
+      "page": 265,
+      "reason": "no-date",
+      "lines": [
+        "LITTERAE APOSTOLICAE quibus Poenitentiae is in Basilicis et Ecclesiis Urbis per / Cardinalem Maiorem Poenitentiarium deputatis et confessariis a Cardinali / Urbis Vicario designandis facultates pro anno Iubilaei conceduntur.",
+        "Datum Romae apud S. Petrum, anno Incarnationis Dominicae millesimo octingentesimo' nonagésimo nono, duodecimo Kal. Novembris, Pontificatus Nostri anno vicesimo secundo."
+      ]
+    },
+    {
+      "page": 427,
+      "reason": "no-heading",
+      "lines": [
+        "stolorum eius se noverit incursurum. Datum Romae apud",
+        "Sanctam Mariam Maiorem, anno Incarnationis Dominicae",
+        "millesimo sexcentésimo vigesimo primo, septimo Kalendas"
+      ]
+    },
+    {
+      "page": 694,
+      "reason": "no-heading",
+      "lines": [
+        "sis haberetur. Datum Romae apud S. Petrum sub annulo Pi­",
+        "scatoris die XV Maii MCM Pontificatus Nostri Anno xxin.",
+        "L. * S.                                                  ALOIS. CARD. MACCHI."
+      ]
+    }
+  ],
+  "summa": {
+    "pages": {
+      "from": 761,
+      "to": 768
+    },
+    "rows": [
+      {
+        "description": "R. PONTIFICIS Epistola, quam Leo Papa XIII ad Wilhelminam Hollandiae Reginam rescribens misit",
+        "page": 65,
+        "raw": "R. PONTIFICIS / Epistola, quam Leo Papa XIII ad / Wilhelminam Hollandiae Regi­ / nam rescribens misit . pag. 65"
+      },
+      {
+        "description": "Epistola Encyclica SSmi D. N. Leonis XIII ad Archiepiscopos, Episcopos, et clerum Galliae",
+        "page": 193,
+        "raw": "Epistola Encyclica SSmi D. N. Leo­ / nis XIII ad Archiepiscopos, Epi­ / scopos, et clerum Galliae . 193"
+      },
+      {
+        "description": "Epistola SSmi D. N. Leonis XIII ad Archiepiscopos et Episcopos Brasiliae",
+        "page": 214,
+        "raw": "Epistola SSmi D. N. Leonis XIII / ad Archiepiscopos et Episcopos / Brasiliae 214"
+      },
+      {
+        "description": "Suspensio indulgentiarum et facultatum vertente anno universalis Iubilaei millesimo noningentésimo",
+        "page": 257,
+        "raw": "Suspensio indulgentiarum et fa­ / cultatum vertente anno univer­ / salis Iubilaei millesimo nonin­ / gentésimo 257"
+      },
+      {
+        "description": "Constitutio SSmi D. N. Leonis XIII qua indulgentiae Iubilaei anno 1900 conceduntur monialibus, oblatis, tertiariis etc",
+        "page": 260,
+        "raw": "Constitutio SSmi D. N. Leonis XIII / qua indulgentiae Iubilaei an­ / no 1900 conceduntur moniali­ / bus, oblatis, tertiariis etc. . 260"
+      },
+      {
+        "description": "Litterae Apostolicae, quibus conceduntur facultates pro anno Iubilaei poenitentiariis",
+        "page": 265,
+        "raw": "Litterae Apostolicae, quibus conce­ / duntur facultates pro anno Iubi­ / laei poenitentiariis .... 265"
+      },
+      {
+        "description": "Allocutio SSmi D.N.LeonisXIII",
+        "page": 321,
+        "raw": "Allocutio SSmi D.N.LeonisXIII. 321"
+      }
+    ],
+    "claimed": [
+      193,
+      321
+    ],
+    "unclaimed": [
+      {
+        "description": "R. PONTIFICIS Epistola, quam Leo Papa XIII ad Wilhelminam Hollandiae Reginam rescribens misit",
+        "page": 65,
+        "raw": "R. PONTIFICIS / Epistola, quam Leo Papa XIII ad / Wilhelminam Hollandiae Regi­ / nam rescribens misit . pag. 65"
+      },
+      {
+        "description": "Epistola SSmi D. N. Leonis XIII ad Archiepiscopos et Episcopos Brasiliae",
+        "page": 214,
+        "raw": "Epistola SSmi D. N. Leonis XIII / ad Archiepiscopos et Episcopos / Brasiliae 214"
+      },
+      {
+        "description": "Suspensio indulgentiarum et facultatum vertente anno universalis Iubilaei millesimo noningentésimo",
+        "page": 257,
+        "raw": "Suspensio indulgentiarum et fa­ / cultatum vertente anno univer­ / salis Iubilaei millesimo nonin­ / gentésimo 257"
+      },
+      {
+        "description": "Constitutio SSmi D. N. Leonis XIII qua indulgentiae Iubilaei anno 1900 conceduntur monialibus, oblatis, tertiariis etc",
+        "page": 260,
+        "raw": "Constitutio SSmi D. N. Leonis XIII / qua indulgentiae Iubilaei an­ / no 1900 conceduntur moniali­ / bus, oblatis, tertiariis etc. . 260"
+      },
+      {
+        "description": "Litterae Apostolicae, quibus conceduntur facultates pro anno Iubilaei poenitentiariis",
+        "page": 265,
+        "raw": "Litterae Apostolicae, quibus conce­ / duntur facultates pro anno Iubi­ / laei poenitentiariis .... 265"
+      }
+    ],
+    "omitted": [
+      700,
+      757
+    ]
+  }
+}

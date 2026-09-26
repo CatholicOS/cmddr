@@ -1527,6 +1527,207 @@ export const ASS_READINGS: Readonly<Record<string, AssReading>> = {
     description: 'Qua Pius PP. X gratulatur cum Imperatrice Sinarum septuagesimum aetatis annum proxime initura.',
     evidence: "ASS 39 (1906) 139-140, ass-39-1906.txt. p. 139 'EPISTOLA', 'Qua Pius PP. X gratulatur cum Imperatrice Sinarum septua- / gesimum aetatis annum proxime initura.', then the addressee block 'AUGUSTISSIMAE POTENTISSIMAEQUE PRINCIPI / IMPERATRICI SINARUM / PEKINUM', 'PIUS PP. x', and the salutation 'Augustissima et potentissima Imperatrix, / salutem et prosperitatem.'; the act itself opens on the same page 'Nunciatum est Nobis Maiestatem Tuam proximo Octobri / mense inituram septuagesimum aetatis annum, felicemque / hanc rem ingenti gaudio futuram universo Sinarum populo.' Dated p. 140 'Datum Romae apud S. Petrum, die vi Iulii MDCCCCIV, / Pontificatus Nostri anno primo.' -- 6 July 1904, the same day as the act that ends on p. 139. Why the scan misread it: GREETING_RE does not know the addressee's style as a salutation, so the scan took 'Augustissima et potentissima Imperatrix, salutem et prosperitatem.' for the opening, which told the act apart from nothing and left it `ambiguous` against the pope's two letters of that date. Answers that ambiguity: the true opening is the shelf's incipit, mag:pius-x/nunciatum-est-1904.",
   },
+  // Phase 2c-ii-c, the curation round: the fifteen acts of Leo XIII's volumes dated in the
+  // solemn form -- the year of the Incarnation spelled out in words and the day by the Roman
+  // calendar (Kalends, Nones, Ides), in Roman numerals or spelled-out ordinals, in the
+  // accusative with a count or in the bare ablative. `assDate` reads none of it, and the
+  // owner ruled (2026-09-26) that the series' 23 instances are curated rows as phase 2c-i's
+  // eight were, not a Roman-calendar reader: the date is what the join matches on, so a
+  // conversion that went wrong would fail quietly or match the wrong act. Every date below
+  // was checked against the pontificate year its own dateline states -- Leo XIII was elected
+  // 20 February 1878 -- and three of them are named acts whose dates are independently
+  // known: *Apostolicae curae* (ASS 29 (1896) 193), *Officiorum ac munerum* (ASS 29 388 and
+  // ASS 30 39) and *Quod Romani Pontifices* (ASS 29 513).
+  'ASS:14:97': {
+    pope: 'Leo XIII', category: 'LITTERAE APOSTOLICAE', date: '1881-07-05',
+    opening: 'Ex hac augusta Principis Apostolorum Cathedra, in qua Deo',
+    description: 'LEONIS / DIVINA PROVIDENTIA / PAPAE XIII / LITTERAE APOSTOLICAE',
+    evidence:
+      'ASS 14 (1881) 97, ass-14-1881.txt. The page heads the act \'SANCTISSIMI DOMINI NOSTRI / LEONIS / DIVINA '
+      + 'PROVIDENTIA / PAPAE XIII / LITTERAE APOSTOLICAE\', and the act opens \'Ex hac augusta Principis '
+      + 'Apostolorum Cathedra, in qua Deo\'. Dated \'Anno Incarnationis Dominicae millesimo octingentesimo '
+      + 'octogesimo primo III Nonas Iulii, Pontificatus Nostri Anno IV.\'. Why the scan missed the date: the '
+      + 'Nones of July fall on the 7th, so III Nonas is 5 July 1881. Answers the scan\'s no-date defect at p. '
+      + '97.'
+  },
+  'ASS:14:529': {
+    pope: 'Leo XIII', category: 'LITTERAE APOSTOLICAE', date: '1882-06-10',
+    opening: 'In suprema rei christianae procuratione,',
+    description: 'De Missae Sacrificio in singulos dies festos pro populo ab omnibus / Catholici Orbis Episcopis celebrando',
+    evidence:
+      'ASS 14 (1881) 529, ass-14-1881.txt. The page heads the act \'LITTERAE APOSTOLICAE / De Missae '
+      + 'Sacrificio in singulos dies festos pro populo ab omnibus / Catholici Orbis Episcopis celebrando\', and '
+      + 'the act opens \'In suprema rei christianae procuratione,\'. Dated \'anno incarnationis Dominicae '
+      + 'millesimo octingentesimo octuagesimo secundo, IV Id. Iunii, Pontificatus Nostri Anno V.\'. Why the scan '
+      + 'missed the date: the Ides of June fall on the 13th, so IV Idus is 10 June 1882. Answers the scan\'s '
+      + 'no-date defect at p. 529.'
+  },
+  'ASS:15:451': {
+    pope: 'Leo XIII', category: 'LITTERAE', date: '1883-05-30',
+    opening: 'Incorruptae fidei et egregiae in Nos voluntatis vestrae',
+    description: 'LITTERAE ad Praesidem catholicae Societatis Hungariae.',
+    evidence:
+      'ASS 15 (1882) 451, ass-15-1882.txt. The page heads the act \'LITTERAE ad Praesidem catholicae '
+      + 'Societatis Hungariae.\', and the act opens \'Incorruptae fidei et egregiae in Nos voluntatis vestrae\'. '
+      + 'Dated \'anno Incarnationis Dominicae Mi% lesimo octingentesimo octogesimo tertio, III Kalendas Iunias, '
+      + 'Pontificatus Nostri Anno Sexto\'. Why the scan missed the date: the Kalends of June being 1 June, III '
+      + 'Kalendas is 30 May 1883; the OCR breaks millesimo as `Mi% lesimo`. Answers the scan\'s no-date defect '
+      + 'at p. 451.'
+  },
+  'ASS:17:175': {
+    pope: 'Leo XIII', category: 'LITTERAE APOSTOLICAE', date: '1884-10-25',
+    opening: 'Ubi primum latissimae Americae Septentrionalis plagae deductis ex Europa',
+    description: 'Collegii statuum foederatorum Americae Septentrionalis',
+    evidence:
+      'ASS 17 (1884) 175, ass-17-1884.txt. The page heads the act \'LITTERAE APOSTOLICAE SSmi D. N. Leonis '
+      + 'XIII. de erectione Urbani / Collegii statuum foederatorum Americae Septentrionalis\', and the act opens '
+      + '\'Ubi primum latissimae Americae Septentrionalis plagae deductis ex Europa\'. Dated \'anno millesimo '
+      + 'octingentesimo octuagesimo quarto die xxv Octobris, Pontificatus Nostri anno septimo.\'. Why the scan '
+      + 'missed the date: the day is given plainly, 25 October 1884; only the year in words defeated the '
+      + 'reader. Answers the scan\'s no-date defect at p. 175.'
+  },
+  'ASS:17:209': {
+    pope: 'Leo XIII', category: 'LITTERAE APOSTOLICAE', date: '1884-11-10',
+    opening: 'Materna Ecclesiae caritas, quamquam est in omne nominum genus',
+    description: 'scopali Carthaginensi restituenda',
+    evidence:
+      'ASS 17 (1884) 209, ass-17-1884.txt. The page heads the act \'LITTERAE APOSTOLICAE SSmi D. N. Leonis '
+      + 'XIII. de Sede Archiepi- / scopali Carthaginensi restituenda\', and the act opens \'Materna Ecclesiae '
+      + 'caritas, quamquam est in omne nominum genus\'. Dated \'anno Incarnationis Dominicae Millesimo '
+      + 'octingentesimo octogesimo quarto, Quarto Idus Novembris, Pontificatus Nostri anno septimo\'. Why the '
+      + 'scan missed the date: the Ides of November fall on the 13th, so Quarto Idus is 10 November 1884; the '
+      + 'count is spelled out. Answers the scan\'s no-date defect at p. 209.'
+  },
+  'ASS:17:262': {
+    pope: 'Leo XIII', category: 'LITTERAE APOSTOLICAE', date: '1884-11-01',
+    opening: 'Deus Omnipotens, qui mirabilis est in Sanctis suis, providentissime',
+    description: 'Compostellano latum super identitate corporis s. Iacobi M. Apo- / stoli, et ss. Athanasii et Theodori discipulorum eius.',
+    evidence:
+      'ASS 17 (1884) 262, ass-17-1884.txt. The page heads the act \'LITTERAE APOSTOLICAE quibus confirmatur '
+      + 'iudicium ab Archiepiscopo / Compostellano latum super identitate corporis s. Iacobi M. Apo- / stoli, '
+      + 'et ss. Athanasii et Theodori discipulorum eius.\', and the act opens \'Deus Omnipotens, qui mirabilis '
+      + 'est in Sanctis suis, providentissime\'. Dated \'anno Incarnationis Dominicae millesimo octingentesimo '
+      + 'octuagesimo quarto, Kal. Novembris, Pontificatus Nostri anno septimo\'. Why the scan missed the date: '
+      + 'the Kalends themselves, with no count before them: 1 November 1884. The page also carries the end of '
+      + 'the preceding act, dated 18 December 1884. Answers the scan\'s no-date defect at p. 262.'
+  },
+  'ASS:19:176': {
+    pope: 'Leo XIII', category: 'LITTERAE APOSTOLICAE', date: '1886-09-01',
+    opening: 'Humanae salutis auctor Iesus Christus, cum nos sanguine suo',
+    description: 'pali in Indiis orientalibus constituenda',
+    evidence:
+      'ASS 19 (1886) 176, ass-19-1886.txt. The page heads the act \'LITTERAE APOSTOLICAE SS. D. N. Leonis XIII '
+      + 'de Hierarchia episco- / pali in Indiis orientalibus constituenda\', and the act opens \'Humanae salutis '
+      + 'auctor Iesus Christus, cum nos sanguine suo\'. Dated \'Anno Incarnationis Dominicae millesimo '
+      + 'octingentesimo octogesimo sexto, Calendis Septembribus, Pontificatus Nostri Nono.\'. Why the scan '
+      + 'missed the date: the ablative Calendis Septembribus is the Kalends themselves, 1 September 1886. '
+      + 'Answers the scan\'s no-date defect at p. 176.'
+  },
+  'ASS:28:257': {
+    pope: 'Leo XIII', category: 'LITTERAE APOSTOLICAE', date: '1895-11-26',
+    opening: 'Christi Domini, Redemptoris humani generis, auctoris conservatorisque Ecclesiae,',
+    description: 'De Patriarchatu Alexandrino Coptorum',
+    evidence:
+      'ASS 28 (1895) 257, ass-28-1895.txt. The page heads the act \'LITTERAE APOSTOLICAE Sanctissimi D. N. PP. '
+      + 'Leonis XIII / De Patriarchatu Alexandrino Coptorum\', and the act opens \'Christi Domini, Redemptoris '
+      + 'humani generis, auctoris conservatorisque Ecclesiae,\'. Dated \'anno Incarnationis Dominicae millesimo '
+      + 'octingentesimo nonagesimo quinto, sexto Calendas Decembres, Pontificatus Nostri decimo octavo\'. Why '
+      + 'the scan missed the date: November has 30 days, so sexto Calendas Decembres is 26 November 1895; the '
+      + 'count is spelled out and the OCR accents Decembres. Answers the scan\'s no-date defect at p. 257.'
+  },
+  'ASS:29:193': {
+    pope: 'Leo XIII', category: 'LITTERAE APOSTOLICAE', date: '1896-09-13',
+    opening: 'Apostolicae curae et caritatis, qua Pastorem magnum ovium Dominum',
+    description: 'De ordinationibus anglicanis.',
+    evidence:
+      'ASS 29 (1896) 193, ass-29-1896.txt. The page heads the act \'LITTERAE APOSTOLICAE SSmi D. N. Leonis '
+      + 'Papae XIII. / De ordinationibus anglicanis.\', and the act opens \'Apostolicae curae et caritatis, qua '
+      + 'Pastorem magnum ovium Dominum\'. Dated \'anno Incarnationis Dominicae millesimo octingentesimo '
+      + 'nonagesimo sexto, idibus septembribus, Pontificatus Nostri decimo nono\'. Why the scan missed the date: '
+      + 'the ablative idibus septembribus is the Ides themselves, 13 September 1896: the act is *Apostolicae '
+      + 'curae*. Answers the scan\'s no-date defect at p. 193.'
+  },
+  'ASS:29:388': {
+    pope: 'Leo XIII', category: 'CONSTITUTIO APOSTOLICA', date: '1897-01-25',
+    opening: 'Officiorum ac munerum, quae diligentissime sanctissimeque servari in hoc',
+    description: 'Papae XIII. De prohibitione et censura librorum',
+    evidence:
+      'ASS 29 (1896) 388, ass-29-1896.txt. The page heads the act \'CONSTITUTIO APOSTOLICA Sanctissimi Domini '
+      + 'Nostri Leonis divina providentia / Papae XIII. De prohibitione et censura librorum\', and the act opens '
+      + '\'Officiorum ac munerum, quae diligentissime sanctissimeque servari in hoc\'. Dated \'anno Incarnationis '
+      + 'Dominicae millesimo octingentesimo nonagesimo septimo, VIII Kal. Februarias, Pontificatus Nostri '
+      + 'decimo nono\'. Why the scan missed the date: January has 31 days, so VIII Kalendas Februarias is 25 '
+      + 'January 1897: the act is *Officiorum ac munerum*, which ASS 30 (1897) 39 prints again. Answers the '
+      + 'scan\'s no-date defect at p. 388.'
+  },
+  'ASS:29:513': {
+    pope: 'Leo XIII', category: 'LITTERAE APOSTOLICAE', date: '1896-01-18',
+    opening: 'Quod Romani Pontifices sui maxime muneris esse duxerunt,',
+    description: 'pae XIII',
+    evidence:
+      'ASS 29 (1896) 513, ass-29-1896.txt. The page heads the act \'LITTERAE APOSTOLICAE Sanctissimi Domini '
+      + 'Nostri Leonis Divina Providentia Pa- / pae XIII\', and the act opens \'Quod Romani Pontifices sui maxime '
+      + 'muneris esse duxerunt,\'. Dated \'anno Incarnationis Dominicae millesimo octingentesimo nonagesimo '
+      + 'sexto, xv Kalendas Februarias, Pontificatus Nostri decimo nono\'. Why the scan missed the date: January '
+      + 'has 31 days, so xv Kalendas Februarias is 18 January. The two figures of this dateline disagree: the '
+      + 'year words give 1896 while `Pontificatus Nostri decimo nono` spans 20 February 1896 to 19 February '
+      + '1897 and would require 1897. The shelf settles it -- mag:leo-xiii/quod-romani-pontifices-1896 is dated '
+      + '1896-01-18 and nothing stands on 1897-01-18 -- and the act\'s own opening is that record\'s incipit. The '
+      + 'pontificate figure is the slip, and the owner may wish to see the printed page. Answers the scan\'s '
+      + 'no-date defect at p. 513.'
+  },
+  'ASS:30:39': {
+    pope: 'Leo XIII', category: 'CONSTITUTIO APOSTOLICA', date: '1897-01-25',
+    opening: 'Officiorum ac munerum, quae diligentissime sanctissimeque servari in hoc',
+    description: 'LEONIS / DIVINA PROVIDENTIA / PAPAE XIII / CONSTITUTIO APOSTOLICA',
+    evidence:
+      'ASS 30 (1897) 39, ass-30-1897.txt. The page heads the act \'SANCTISSIMI DOMINI NOSTRI / LEONIS / DIVINA '
+      + 'PROVIDENTIA / PAPAE XIII / CONSTITUTIO APOSTOLICA\', and the act opens \'Officiorum ac munerum, quae '
+      + 'diligentissime sanctissimeque servari in hoc\'. Dated \'anno Incarnationis Dominicae millesimo '
+      + 'octingentesimo nonagesimo septimo, VIII. Kalendas Februarias, Pontificatus Nostri decimo nono\'. Why '
+      + 'the scan missed the date: the same act and the same date as ASS 29 (1896) 388, printed again under the '
+      + 'solemn display heading: 25 January 1897. ACTA_REPRINTS keys this later printing to the first. Answers '
+      + 'the scan\'s no-date defect at p. 39.'
+  },
+  'ASS:30:225': {
+    pope: 'Leo XIII', category: 'CONSTITUTIO APOSTOLICA', date: '1897-10-04',
+    opening: 'Felicitate quadam nec sane fortuito factum putamus, ut Nobis',
+    description: 'Papae XIII de Collegio Bohemorum in Urbe condendo',
+    evidence:
+      'ASS 30 (1897) 225, ass-30-1897.txt. The page heads the act \'CONSTITUTIO APOSTOLICA Sanctissimi Domini '
+      + 'Nostri Leonis Divina Providentia / Papae XIII de Collegio Bohemorum in Urbe condendo\', and the act '
+      + 'opens \'Felicitate quadam nec sane fortuito factum putamus, ut Nobis\'. Dated \'quarto nonas Octobris, '
+      + 'anno Incarnationis Dominicae millesimo octingentesimo nonagesimo septimo, Pontificatus Nostri anno '
+      + 'vicesimo.\'. Why the scan missed the date: the Nones of October fall on the 7th, so quarto nonas is 4 '
+      + 'October 1897; the day stands before the year, not after it. Answers the scan\'s no-date defect at p. '
+      + '225.'
+  },
+  'ASS:31:257': {
+    pope: 'Leo XIII', category: 'CONSTITUTIO APOSTOLICA', date: '1898-10-02',
+    opening: 'Ubi primum, arcano divinae providentiae consilio, ad supremam',
+    description: 'ac privilegiis Sodalitatis Presbyterorum a Missione',
+    evidence:
+      'ASS 31 (1898) 257, ass-31-1898.txt. The page heads the act \'CONSTITUTIO APOSTOLICA SSmi D. N. Leonis '
+      + 'XIII de legibus, iuribus / ac privilegiis Sodalitatis Presbyterorum a Missione\', and the act opens '
+      + '\'Ubi primum, arcano divinae providentiae consilio, ad supremam\'. Dated \'anno Incarnationis Dominicae '
+      + 'millesimo octingentesimo nonagesimo octavo, sexto nonas Octobris, Pontificatus Nostri anno vicesimo '
+      + 'primo.\'. Why the scan missed the date: the Nones of October fall on the 7th, so sexto nonas is 2 '
+      + 'October 1898. Answers the scan\'s no-date defect at p. 257.'
+  },
+  'ASS:32:265': {
+    pope: 'Leo XIII', category: 'LITTERAE APOSTOLICAE', date: '1899-10-21',
+    opening: 'Quoniam divinae bonitatis munere contigit Nobis Iubilaeum magnum',
+    description: 'Cardinalem Maiorem Poenitentiarium deputatis et confessariis a Cardinali / Urbis Vicario designandis facultates pro anno Iubilaei conceduntur.',
+    evidence:
+      'ASS 32 (1899) 265, ass-32-1899.txt. The page heads the act \'LITTERAE APOSTOLICAE quibus '
+      + 'Poenitentiariis in Basilicis et Ecclesiis Urbis per / Cardinalem Maiorem Poenitentiarium deputatis et '
+      + 'confessariis a Cardinali / Urbis Vicario designandis facultates pro anno Iubilaei conceduntur.\', and '
+      + 'the act opens \'Quoniam divinae bonitatis munere contigit Nobis Iubilaeum magnum\'. Dated \'anno '
+      + 'Incarnationis Dominicae millesimo octingentesimo\' nonagesimo nono, duodecimo Kal. Novembris, '
+      + 'Pontificatus Nostri anno vicesimo secundo.\'. Why the scan missed the date: October has 31 days, so '
+      + 'duodecimo Kalendas Novembris is 21 October 1899; the count is spelled out. Answers the scan\'s no-date '
+      + 'defect at p. 265.'
+  },
   'ASS:41:3': {
     pope: 'Pius X', category: 'LITTERAE APOSTOLICAE', date: '1907-06-14',
     opening: 'Ea semper fuit Apostolicae Sedis peculiaris quaedam ac',
@@ -2129,12 +2330,6 @@ export const ACTA_SHARED_PAGES: Readonly<Record<string, SharedPage>> = {
       + "E. Card. Ga- / sparri, a secretis Status: de dissidiis componendis / quae pacem populis affulgere nondum sinunt . . 353`); both letters "
       + "are on the letters shelf (the shelf's slug of the first reads `ceteriores-nos`, vatican.va's own spelling).",
   },
-  // Phase 2c-i (the ASS sample): the one page of the five sample volumes that two matched
-  // shelf letters cite. Read in the store text on 2026-09-21; the ASS sets Leo XIII's short
-  // letters one after the other under their own headings, as the AAS fascicles do.
-  // Phase 2c-i finding 9, settled in this change: p. 3 opens two acts of different classes,
-  // and both are matched only once the brevis carries `in-forma-brevis` (GENRE_OVERRIDES).
-  // Until that row was written the page held one matched act and invariant 25 never fired.
   'ASS:33:3': {
     documentIds: ['mag:leo-xiii/i-luttuosi-avvenimenti-1900', 'mag:leo-xiii/quas-tu-1900'],
     evidence: "ASS 33 (1900) p. 3 (page 3 of ass-33-1900.txt) prints 'IITTERAE Sanctissimi D. N. Leonis XIII ad Emum. Cardinalem "
@@ -2191,6 +2386,35 @@ export interface Reprint {
  * fascicles or volumes on 2026-09-13.
  */
 export const ACTA_REPRINTS: Readonly<Record<string, Reprint>> = {
+  // Phase 2c-i (the ASS sample): the one page of the five sample volumes that two matched
+  // shelf letters cite. Read in the store text on 2026-09-21; the ASS sets Leo XIII's short
+  // letters one after the other under their own headings, as the AAS fascicles do.
+  // Phase 2c-i finding 9, settled in this change: p. 3 opens two acts of different classes,
+  // and both are matched only once the brevis carries `in-forma-brevis` (GENRE_OVERRIDES).
+  // Until that row was written the page held one matched act and invariant 25 never fired.
+  // Phase 2c-ii-c: the one act the ASS itself prints twice. *Officiorum ac munerum*, Leo XIII's
+  // constitution on the prohibition and censorship of books, stands at ASS 29 (1896) 388 and
+  // again at ASS 30 (1897) 39 -- the second time under the solemn display heading -- both dated
+  // VIII Kalendas Februarias of the year of the Incarnation 1897, 25 January 1897. Both entries
+  // are curated readings of this phase, so before this row the join claimed the document twice
+  // and wrote neither reference. This table's rule decides: the citation of record is the first
+  // printing, which is the earlier volume's.
+  'ASS:30:39': {
+    kind: 'reissue',
+    citationOf: 'ASS:29:388',
+    indexLines: [
+      'CONSTITUTIO APOSTOLICA Sanctissimi Domini Nostri Leonis divina providentia / Papae XIII. De prohibitione et censura librorum',
+      'SANCTISSIMI DOMINI NOSTRI / LEONIS / DIVINA PROVIDENTIA / PAPAE XIII / CONSTITUTIO APOSTOLICA',
+    ],
+    evidence: "ASS 29 (1896) 388 (ass-29-1896.txt) heads the act 'CONSTITUTIO APOSTOLICA Sanctissimi Domini Nostri Leonis divina "
+      + "providentia / Papae XIII. De prohibitione et censura librorum' and opens 'Officiorum ac munerum, quae diligentissime "
+      + "sanctissimeque servari in hoc'; ASS 30 (1897) 39 (ass-30-1897.txt) heads the same act under the display form "
+      + "'SANCTISSIMI DOMINI NOSTRI / LEONIS / DIVINA PROVIDENTIA / PAPAE XIII / CONSTITUTIO APOSTOLICA' and opens with the same "
+      + "words. Each dateline reads 'anno Incarnationis Dominicae millesimo octingentesimo nonagesimo septimo, VIII Kalendas "
+      + "Februarias, Pontificatus Nostri decimo nono' -- 25 January 1897, January having 31 days -- and neither prints a "
+      + "corrigendum heading or a note of why the act is set again: a re-issue. The citation of record is the first printing, "
+      + "ASS 29 (1896) 388.",
+  },
   // Benedict XVI's *Ibi vacabimus* (3 July 2011, the beatification of János Scheffler),
   // printed in AAS 104 (2012) 482-485 and again in AAS 112 (2020) 479-482. Both entries
   // were held by the id-collision rule from phase 2b-i to 2b-ii-b.

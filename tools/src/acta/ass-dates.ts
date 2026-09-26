@@ -73,7 +73,24 @@ export function assDate(text: string, span: { from: number; to: number }): strin
   // the same letter set the token itself admits, so it does not end early on one of them.
   const NOT_ROMAN_LETTER = 'A-Za-zìíîïÌÍÎÏ';
   const latin = t
-    .replace(/\b(?:An|an|ann|a)\.\s+(?=[MDCLXVIGHNmdclxvighn])/g, 'anno ')
+    .replace(/\b(?:[AaÂâ]n{0,2})\.\s+(?=[MDCLXVIGHNmdclxvighn])/g, 'anno ')
+    // The volumes abbreviate the month after the day, with a full stop: `die 1 Nov. an.
+    // MDCCCLXXXV` (ASS 18 (1885) 161), `die VI Ian. a. MDCCCLXXXVI` (ASS 18 387), `die XXII.
+    // Dec. an.` (ASS 20 (1887) 257), `die xxv Oct. an.` (ASS 26 (1893) 199), `die VIII Sept.
+    // an.` (ASS 27 (1894) 177), `die xi Iun. an.` (ASS 27 705), `die VIII decem. A.` (ASS 15
+    // (1882) 193). `latinDate`'s month table holds the full forms only and its `[a-z]+` stops
+    // at the stop, so the month read as `nov` and the date was lost; expanded here rather than
+    // in `latinDate`, which the AAS shares. Only an abbreviation standing after `die` and its
+    // day is expanded, so a `Dec.` anywhere else in the span is left alone.
+    .replace(/(\bdie\s+[\dIVXLivxl]+\.?\s+)(ian|febr?|mart?|apr|mai|iun|iul|aug|sept?|oct|nov|decem|dec)\.(?=\s)/gi,
+      (_m, lead: string, mon: string) => lead + ({
+        ian: 'Ianuarii', feb: 'Februarii', febr: 'Februarii', mar: 'Martii', mart: 'Martii', apr: 'Aprilis',
+        mai: 'Maii', iun: 'Iunii', iul: 'Iulii', aug: 'Augusti', sep: 'Septembris', sept: 'Septembris',
+        oct: 'Octobris', nov: 'Novembris', dec: 'Decembris', decem: 'Decembris',
+      }[mon.toLowerCase()] ?? mon))
+    // `Anno Dñi MDCCCXCII` (ASS 25 (1892) 66, 267): the abbreviation of Domini between the
+    // year word and the numeral, which leaves `anno` no numeral to read.
+    .replace(/\b(anno)\s+D(?:ñ|n)i\.?\s+(?=[MDCLXVI])/gi, '$1 ')
     .replace(/\b(die\s+[A-Za-zìíîï0-9]{1,6})\.\s+(?=[A-Za-z])/g, '$1 ')
     .replace(/\bMCM\b/g, 'MDCCCC')
     .replace(/\b(die)\s+([A-Za-zìíîï]{1,6})\b/g, (m, lead: string, tok: string) => (ROMAN_TOKEN.test(tok) && needsRepair.test(tok) ? `${lead} ${repairRoman(tok)}` : m))
