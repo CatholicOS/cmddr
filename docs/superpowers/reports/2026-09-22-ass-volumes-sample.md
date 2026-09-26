@@ -149,12 +149,12 @@ the report of phase 2c-i of [#25](https://github.com/CatholicOS/cmddr/issues/25)
    and if the owner prefers that, `Reprint` needs a third `kind` (a first printing in the superseded series, cited at
    its re-issue) and the two rows re-keyed; README's phase 2b-iii-b paragraph and the 1909–1925 era report would then
    need the same correction they need today. Nothing here is load-bearing beyond those two rows.
-12. **The reverse gap is 33 documents, and it is Leo XIII's.** The shelf documents of the sample's years carrying no
-   reference at all (§5): Pius IX 2 (1865–66), Leo XIII 16 (1 in 1879, 12 in 1890–91, 3 in 1900–01), Pius X 15 (1908). Almost
+12. **The reverse gap is 32 documents, and it is Leo XIII's.** The shelf documents of the sample's years carrying no
+   reference at all (§5): Pius IX 2 (1865–66), Leo XIII 15 (0 in 1879, 12 in 1890–91, 3 in 1900–01), Pius X 15 (1908). Almost
    none of them has an ASS entry on its date — §5's last column is empty in all but a handful — so these are acts the
    five volumes do not print, not acts the scanner missed: the ASS published the Holy See's acts selectively, and a
    volume of 672–810 pages yields between 3 entries here (ASS 1, all three read by hand) and 44 (ASS 41). For the era as a whole the registry holds
-   496 shelf documents dated 1865–1908 and **284 of them now carry a reference** (§7), of which **64** are these five
+   496 shelf documents dated 1865–1908 and **289 of them now carry a reference** (§7), of which **64** are these five
    volumes' yield, phase 2c-ii-b's five of Pius X carrying the rest. That is the number 2c-ii moves, with 0 volumes left.
 13. **The allocutions are the one category the sample cannot decide, and the count that would decide it is 1.** 9 entries
    are skipped as a category the registry does not harvest (§3.4): 8 allocutions and the chirograph of ASS 33 p. 714.
@@ -609,11 +609,10 @@ Created: 0 (expected 0: phase 2c-i joins only).
 
 </details>
 
-<details><summary><b>ass-12</b> — 1 documents dated 1879 with no reference</summary>
+<details><summary><b>ass-12</b> — 0 documents dated 1879 with no reference</summary>
 
 | Document | Date | Class | Incipit | ASS entries on this date |
 |---|---|---|---|---|
-| `mag:leo-xiii/pontifices-maximi-1879` | 1879-02-15 | apostolic-letter | *Pontifices maximi* | — |
 
 </details>
 
@@ -684,4 +683,4 @@ Created: 0 (expected 0: phase 2c-i joins only).
 
 ## 7. Corpus
 
-Documents: 8569; with an ASS reference: 64; shelf documents dated 1865–1908: 496, of which with a reference of either series: 284.
+Documents: 8569; with an ASS reference: 64; shelf documents dated 1865–1908: 496, of which with a reference of either series: 289.

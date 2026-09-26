@@ -13,7 +13,7 @@ import { easterSunday } from '../src/dates.js';
 import { slugify } from '../src/slug.js';
 import { isActaShelf, createFromActa, CREATED_CATEGORIES, PONTIFICATE_BEGAN } from '../src/acta/create.js';
 import { matchActa } from '../src/acta/match.js';
-import { ACTA_INDEX_CORRECTIONS, ACTA_HOLDS, ACTA_MATCH_OVERRIDES, ASS_READINGS, ASS_PAGE_OFFSETS } from '../src/acta/curation.js';
+import { ACTA_INDEX_CORRECTIONS, ACTA_HOLDS, ACTA_MATCH_OVERRIDES, ASS_READINGS, ASS_PAGE_OFFSETS, overrideKey } from '../src/acta/curation.js';
 import { loadActaIndexes, ACTA_SOURCES } from '../src/acta/join.js';
 import { ACTA_POPES } from '../src/acta/popes.js';
 import { bareProvisionalId } from '../src/harvest/ordinals.js';
@@ -3038,6 +3038,16 @@ describe('the AAS reference (acta reference spec)', () => {
   it('keeps every curated match override live: each row names a parsed entry and an existing shelf document', () => {
     const entries = [...loadActaIndexes().parsed.values()].flatMap((p) => p.entries);
     const ids = new Set(everything.filter((d) => !isActaShelf(d.source?.shelf)).map((d) => d.id));
+    // The table's size, so a row added or lost is a deliberate act and not a diff nobody read.
+    // 14 rows: 5 of the AAS (the Finis et modus letter, the two vernacular reprints of 1933 and
+    // 1937, the Santaremensis constitution, the Credo of the People of God) and 9 of the ASS --
+    // Pius X's two provisional records with no incipit (2c-ii-b), the two dogmatic constitutions
+    // of Vatican I whose candidate key the entry's pope cannot reach (2c-ii-d Task 3b), and the
+    // five entries of Pius IX's volumes whose one same-day candidate the class rule refused
+    // (2c-ii-d Task 4b, the owner's ruling of 2026-09-26).
+    expect(Object.keys(ACTA_MATCH_OVERRIDES)).toHaveLength(14);
+    expect(Object.keys(ACTA_MATCH_OVERRIDES).filter((k) => k.startsWith('ASS:')).sort())
+      .toEqual(['ASS:11:420', 'ASS:37:145', 'ASS:40:130', 'ASS:4:129', 'ASS:4:131', 'ASS:5:481', 'ASS:5:594', 'ASS:6:40', 'ASS:7:629']);
     for (const [key, row] of Object.entries(ACTA_MATCH_OVERRIDES)) {
       const [series, volume, page] = key.split(':');
       expect(entries.some((e) => e.series === series && e.volume === Number(volume) && e.page === Number(page)), key).toBe(true);
@@ -3867,14 +3877,21 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // `unique` match takes the document whose date IS the entry's, and no entry of the 41
     // volumes carries a date outside the span. What the bound can still catch is a curated
     // override or reading pointing at a record of the wrong year -- so the exception itself is
-    // pinned. Over every ASS reference exactly one is dated later than its volume's FIRST year
-    // + 1: ASS 7 (1872) 565, the encyclical *Vix dum a Nobis* of 7 March 1874 printed in the
-    // volume titled 1872-73. Three entries of the 41 volumes exceed that bound (ASS 6 p. 481,
-    // 23 February 1872; ASS 7 pp. 565 and 629) and none exceeds the volume's last year + 1, so
-    // the widening is the series' shape and not a carve-out for one volume.
+    // pinned. Over every ASS reference exactly TWO are dated later than their volume's FIRST
+    // year + 1, and both are in ASS 7, titled 1872-73, whose appendix prints two acts of 1874:
+    // the encyclical *Vix dum a Nobis* of 7 March 1874 at p. 565, matched by rule in Task 4,
+    // and the letter *Omnem sollicitudinem* of 13 May 1874 at p. 629, which Task 4b brought in
+    // by curated override (`ACTA_MATCH_OVERRIDES` 'ASS:7:629', the class disagreement below) --
+    // the second such reference, where fix round 1 of Task 4 could pin only the first, since
+    // p. 629's entry then stood unmatched. Three entries of the 41 volumes exceed that bound
+    // (ASS 6 p. 481, 23 February 1872; ASS 7 pp. 565 and 629) and none exceeds the volume's
+    // last year + 1, so the widening is the series' shape and not a carve-out for one volume.
     expect(cited.filter((d) => Number(d.date.slice(0, 4)) > sources.find((x) => x.volume === d.acta!.volume)!.year + 1)
       .map((d) => `${d.id} ASS ${d.acta!.volume} (${d.acta!.year}) ${d.acta!.page} ${d.date}`))
-      .toEqual(['mag:pius-ix/vix-dum-a-nobis-1874 ASS 7 (1872) 565 1874-03-07']);
+      .toEqual([
+        'mag:pius-ix/vix-dum-a-nobis-1874 ASS 7 (1872) 565 1874-03-07',
+        'mag:pius-ix/omnem-sollicitudinem-1874 ASS 7 (1872) 629 1874-05-13',
+      ]);
   });
 
   it('pins the matched count per volume, so a silent drop fails loudly', () => {
@@ -3936,49 +3953,57 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // citation of record (ACTA_REPRINTS 'AAS:1:7' and 'AAS:1:5', quoting both printings). Of
     // its 11 held, 2 are new since 2c-ii Task 6 relaxed `header-mismatch`: the ring brevia at
     // pp. 300 and 301, neither on the briefs shelf.
-    // Phase 2c-ii-d joins Pius IX's ten volumes (ASS 2-11) and with them the series: 11
-    // references on the 77 entries of ASS 1-11, 9 by the unique rule and 2 by the curated
-    // overrides of Task 3b. **Before it no entry of Pius IX had ever matched** -- ASS 1, the
+    // Phase 2c-ii-d joins Pius IX's ten volumes (ASS 2-11) and with them the series: 16
+    // references on the 77 entries of ASS 1-11, 9 by the unique rule and 7 by curated
+    // overrides -- Task 3b's two conciliar constitutions and Task 4b's five class
+    // disagreements. **Before it no entry of Pius IX had ever matched** -- ASS 1, the
     // volume 2c-i sampled, still carries none -- and the shelf is why, not the scan: he is a
     // flat-era pope (`pontiffs.ts`), all 75 of his records carry `source.shelf: null`, and
     // only 29 of them are dated 1867-1878, with 1869 and 1878 holding none at all, so ASS 5
-    // (1869-70) and ASS 11 (1878) can match nothing of his however well they are read. 6 of
-    // those 29 now carry a reference, and a 7th is on an act of 1864 that ASS 3 reprints at
-    // p. 186 (the reprint class, #56). Leo XIII's 4 records of 1878 take 2, both from ASS 11.
-    // Four encyclicals the shelf does hold on the day stay unmatched because the volume heads
-    // them as letters -- the class disagreement pinned below -- which is the era's largest
-    // single unclaimed group of matchable acts and the reason its yield is 11 and not 15.
+    // (1869-70) and ASS 11 (1878) can match nothing of his however well they are read. 10 of
+    // those 29 now carry a reference, and an 11th is on an act of 1864 that ASS 3 reprints at
+    // p. 186 (the reprint class, #56). Leo XIII takes 3, all from ASS 11: 2 of his 4 records
+    // of 1878, and the brief of 15 February 1879 at p. 420.
+    // It was 11 until Task 4b. Four encyclicals the shelf held on the day stood unmatched
+    // because the volumes head them as letters, and one brief because its record carries
+    // `in-forma-brevis` where `Litterae Apostolicae` excludes it -- the era's largest single
+    // group of matchable acts left unclaimed, and the reason its yield was 11 and not 16. The
+    // owner ruled on 2026-09-26 that all five be bridged by curated override, each quoting its
+    // page, and none by a rule; the five rows are in `ACTA_MATCH_OVERRIDES` and the set is
+    // pinned both ways below.
     const perVolume = Object.fromEntries(sources.map((s) => [s.key, cited.filter((d) => d.acta!.volume === s.volume).length]));
     expect(perVolume).toEqual({
       // 2c-i's five sampled volumes, 2c-ii-b's five of Pius X, 2c-ii-c's twenty-one of
       // Leo XIII and 2c-ii-d's ten of Pius IX -- the whole series. ASS 1, 14, 15 and 17 carry
       // none: ASS 1 scans nothing by rule, and the other three scan 3, 1 and 4 acts whose
-      // shelf records do not exist (the reverse gap). Of Pius IX's ten, ASS 2, 4, 9 and 10
-      // carry none for the same reason.
-      'ass-1': 0, 'ass-2': 0, 'ass-3': 2, 'ass-4': 0, 'ass-5': 2, 'ass-6': 3, 'ass-7': 1,
-      'ass-8': 1, 'ass-9': 0, 'ass-10': 0, 'ass-11': 2,
+      // shelf records do not exist (the reverse gap). Of Pius IX's ten, ASS 2, 9 and 10
+      // carry none for the same reason (ASS 4 carried none until Task 4b's two overrides).
+      'ass-1': 0, 'ass-2': 0, 'ass-3': 2, 'ass-4': 2, 'ass-5': 3, 'ass-6': 3, 'ass-7': 2,
+      'ass-8': 1, 'ass-9': 0, 'ass-10': 0, 'ass-11': 3,
       'ass-12': 5, 'ass-13': 2, 'ass-14': 0, 'ass-15': 0, 'ass-16': 2, 'ass-17': 1,
       'ass-18': 5, 'ass-19': 4, 'ass-20': 5, 'ass-21': 7, 'ass-22': 3, 'ass-23': 9, 'ass-24': 5,
       'ass-25': 8, 'ass-26': 3, 'ass-27': 8, 'ass-28': 8, 'ass-29': 5, 'ass-30': 5, 'ass-31': 10,
       'ass-32': 2, 'ass-33': 21, 'ass-34': 7, 'ass-35': 8, 'ass-36': 7, 'ass-37': 19, 'ass-38': 9,
       'ass-39': 50, 'ass-40': 27, 'ass-41': 29,
     });
-    expect(cited).toHaveLength(285);
-    // By issuer and genre, from the harvest's own output. Phase 2c-ii-d adds the 11 of
-    // ASS 2-11 and with them the first references Pius IX has ever carried (7) and the first
+    expect(cited).toHaveLength(290);
+    // By issuer and genre, from the harvest's own output. Phase 2c-ii-d adds the 16 of
+    // ASS 2-11 and with them the first references Pius IX has ever carried (11) and the first
     // any council has (2, the dogmatic constitutions of Vatican I, whose genre is
-    // `constitution`); 2 of the 11 are Leo XIII's, from ASS 11, which prints his first months
-    // and no act of Pius IX at all. The three bulls of the sample are the constitutions
+    // `constitution`); 3 of the 16 are Leo XIII's, from ASS 11, which prints his first months
+    // and no act of Pius IX at all. Four of Task 4b's five overrides are on records the
+    // registry files as `encyclical`, which is why that genre moves by 4 and
+    // `apostolic-letter` by only 1 (the brief of ASS 11 p. 420). The three bulls of the sample are the constitutions
     // *Conditae a Christo* (1900), *Sapienti consilio* and *Promulgandi*.
     const byIssuer = new Map<string, number>();
     for (const d of cited) byIssuer.set(d.issuerId, (byIssuer.get(d.issuerId) ?? 0) + 1);
     expect(Object.fromEntries([...byIssuer].sort())).toEqual({
-      'oec:vatican-i': 2, 'rp:leo-xiii': 135, 'rp:pius-ix': 7, 'rp:pius-x': 141,
+      'oec:vatican-i': 2, 'rp:leo-xiii': 136, 'rp:pius-ix': 11, 'rp:pius-x': 141,
     });
     const byGenre = new Map<string, number>();
     for (const d of cited) byGenre.set(d.genre ?? 'none', (byGenre.get(d.genre ?? 'none') ?? 0) + 1);
     expect(Object.fromEntries([...byGenre].sort())).toEqual({
-      'apostolic-exhortation': 1, 'apostolic-letter': 46, constitution: 2, encyclical: 48,
+      'apostolic-exhortation': 1, 'apostolic-letter': 47, constitution: 2, encyclical: 52,
       letter: 182, 'papal-bull': 6,
     });
   });
@@ -4077,8 +4102,10 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // brevia are class `brief`, none of them on a shelf, so each is held here and none is
     // created.
     // 201 since phase 2c-ii-d joined ASS 2-11: 47 more than the 154 the series stood at, the
-    // ten volumes holding 49 entries of which ASS 1's 2 were already counted here.
-    expect(creation.held.filter((h) => h.entry.series === 'ASS' && h.reason === 'series-not-created')).toHaveLength(201);
+    // ten volumes holding 49 entries of which ASS 1's 2 were already counted here. 196 since
+    // Task 4b of the same phase bridged five of those holds by curated override, leaving the
+    // era 44 held entries.
+    expect(creation.held.filter((h) => h.entry.series === 'ASS' && h.reason === 'series-not-created')).toHaveLength(196);
     // Phase 2c-ii-b raised the series' first holds of another kind -- six `ambiguous` and two
     // `claimed-twice` -- and the curation round answered every one, so the reason map is again
     // a single entry. Four of the six were the greeting rule: `Nostr\w+` did not read the
@@ -4092,8 +4119,8 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // printing of *Officiorum ac munerum*, which ASS 29 (1896) 388 prints first. Both are
     // curated readings of that phase, so before ACTA_REPRINTS keyed the later one the join
     // claimed the document twice and wrote neither reference.
-    expect(Object.fromEntries([...reasons].sort())).toEqual({ reprint: 1, 'series-not-created': 201 });
-    expect(creation.held).toHaveLength(202);
+    expect(Object.fromEntries([...reasons].sort())).toEqual({ reprint: 1, 'series-not-created': 196 });
+    expect(creation.held).toHaveLength(197);
   });
 
   it('pins the scan and the summa check per volume as the era report §2 says', () => {
@@ -4267,7 +4294,7 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     //    The conciliar records count as his here: their `promulgatedBy` is what admits the
     //    reference at all (Task 3b).
     const pius = cited.filter((d) => d.issuerId === 'rp:pius-ix' || d.promulgatedBy === 'rp:pius-ix');
-    expect(pius.length).toBe(9);
+    expect(pius.length).toBe(13);
     for (const d of pius) {
       expect(d.date <= '1878-02-07', `${d.id} is dated after Pius IX's death`).toBe(true);
       expect(d.date.slice(0, 4), d.id).not.toBe('1869');
@@ -4281,25 +4308,41 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
       expect(d.issuerId, d.id).toBe('rp:leo-xiii');
       expect(d.date >= '1878-02-20', `${d.id} is dated before Leo XIII's election`).toBe(true);
     }
-    // 4. The four encyclicals of these volumes that the shelf holds on the day and the join
-    //    refuses, because the volume heads the act as a letter and the registry files the
-    //    record as an encyclical, plus the brief of ASS 11 p. 420 whose record carries
-    //    `in-forma-brevis` whereas `Litterae Apostolicae` excludes it. They are held, not
-    //    dropped: each is an entry with a same-date candidate the class rule rejects, and
-    //    whether a class disagreement of this kind should be bridged is #56's (era report
-    //    finding 6). If one of them ever matches, this pin fails and the report's finding
-    //    must be rewritten with it.
+    // 4. The five entries of these volumes whose shelf record the class rule refused -- four
+    //    encyclicals the volumes head as letters, and the brief of ASS 11 p. 420 whose record
+    //    carries `in-forma-brevis` where `Litterae Apostolicae` excludes it. Task 4 pinned them
+    //    as unmatched-with-their-candidate; Task 4b bridged all five by curated override on the
+    //    owner's ruling, so the pin is restated to the truth rather than dropped, and it keeps
+    //    the same coverage from the other side. It now asserts BOTH halves:
+    //    (a) each of the five is matched, `curated`, to exactly the record that stood beside it
+    //        -- so a row silently repointed, or a general rule reaching one of them by another
+    //        route (`unique`, `opening`), fails here; and
+    //    (b) no entry of ASS 1-11 stands unmatched with a same-date candidate any more, and
+    //        none with a near-miss either -- so a NEW class disagreement appearing in these
+    //        volumes (a re-scan, a re-filed record, a relaxed exclusion) fails here as loudly
+    //        as the original five would have, and the near-miss machinery's reach over this era
+    //        does not shrink because the era resolved its cases.
+    //    Relaxing `excludes: ['in-forma-brevis']` on the `Litterae Apostolicae` category row is
+    //    what (b) is here to catch: it would pair *Venerabilis Decessor* with *Superiore iam
+    //    aetate*, both of 8 September 1950 (categories.ts), and would reach ASS 11 p. 420 by
+    //    rule, failing (a) as well.
     const { parsed } = loadActaIndexes(sources.filter((s) => s.volume <= 11));
     const era = matchActa([...parsed.values()].flatMap((x) => x.entries), everything.filter((d) => !isActaShelf(d.source?.shelf)));
+    expect(era.matches.filter((m) => ['ASS:4:129', 'ASS:4:131', 'ASS:5:594', 'ASS:7:629', 'ASS:11:420'].includes(overrideKey(m.entry)))
+      .map((m) => `ASS ${m.entry.volume}:${m.entry.page} ${m.entry.category} -> ${m.documentId} ${m.by}`).sort())
+      .toEqual([
+        'ASS 11:420 LITTERAE APOSTOLICAE -> mag:leo-xiii/pontifices-maximi-1879 curated',
+        'ASS 4:129 LITTERAE APOSTOLICAE -> mag:pius-ix/arcano-divinae-1868 curated',
+        'ASS 4:131 LITTERAE APOSTOLICAE -> mag:pius-ix/iam-vos-omnes-1868 curated',
+        'ASS 5:594 LITTERAE APOSTOLICAE -> mag:pius-ix/quo-impensiore-1870 curated',
+        'ASS 7:629 EPISTOLA -> mag:pius-ix/omnem-sollicitudinem-1874 curated',
+      ]);
     expect(era.unmatched.filter((u) => u.sameDate.length > 0)
       .map((u) => `ASS ${u.entry.volume}:${u.entry.page} ${u.entry.category} -> ${u.sameDate.map((c) => c.id).sort().join(' ')}`).sort())
-      .toEqual([
-        'ASS 11:420 LITTERAE APOSTOLICAE -> mag:leo-xiii/pontifices-maximi-1879',
-        'ASS 4:129 LITTERAE APOSTOLICAE -> mag:pius-ix/arcano-divinae-1868',
-        'ASS 4:131 LITTERAE APOSTOLICAE -> mag:pius-ix/iam-vos-omnes-1868',
-        'ASS 5:594 LITTERAE APOSTOLICAE -> mag:pius-ix/quo-impensiore-1870',
-        'ASS 7:629 EPISTOLA -> mag:pius-ix/omnem-sollicitudinem-1874',
-      ]);
+      .toEqual([]);
+    expect(era.unmatched.filter((u) => u.nearMisses.length > 0)
+      .map((u) => `ASS ${u.entry.volume}:${u.entry.page} ${u.entry.category} -> ${u.nearMisses.map((c) => c.id).sort().join(' ')}`).sort())
+      .toEqual([]);
   });
 
   it('opens one act per page over the two conciliar references, invariant 25 with them written', () => {
@@ -4319,6 +4362,34 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
       const sharers = everything.filter((x) => x.id !== d.id && x.acta?.series === 'ASS'
         && x.acta.volume === d.acta!.volume && x.acta.page === d.acta!.page);
       expect(sharers.map((x) => x.id), `${d.id}'s page`).toEqual([]);
+    }
+    expect(checkDocuments(everything, genres, keywords, series).filter((v) => v.rule === 25)).toEqual([]);
+  });
+
+  it('opens one act per page over Task 4b\'s five curated overrides, ASS 4 p. 131 included', () => {
+    // The five references the owner's ruling of 2026-09-26 added (ACTA_MATCH_OVERRIDES). Each
+    // is written where the row says, and no other document of either series cites the page, so
+    // no reference is withheld and no `ACTA_SHARED_PAGES` row is owed.
+    // ASS 4 p. 131 is the one that has to be looked at rather than assumed: the page carries
+    // the CLOSE of *Arcano Divinae* at ll. 19-20 (its dateline) as well as the OPENING of
+    // *Iam vos omnes* at l. 31, and invariant 25 reads `one page opens one act`. *Arcano
+    // Divinae* is cited at p. 129, where it opens, so the page opens exactly one act and the
+    // pair is not a shared page.
+    const byId = Object.fromEntries(cited.map((d) => [d.id, `ASS ${d.acta!.volume} (${d.acta!.year}) ${d.acta!.page}`]));
+    expect([
+      byId['mag:pius-ix/arcano-divinae-1868'], byId['mag:pius-ix/iam-vos-omnes-1868'],
+      byId['mag:pius-ix/quo-impensiore-1870'], byId['mag:pius-ix/omnem-sollicitudinem-1874'],
+      byId['mag:leo-xiii/pontifices-maximi-1879'],
+    ]).toEqual([
+      'ASS 4 (1868) 129', 'ASS 4 (1868) 131', 'ASS 5 (1869) 594', 'ASS 7 (1872) 629', 'ASS 11 (1878) 420',
+    ]);
+    for (const id of ['mag:pius-ix/arcano-divinae-1868', 'mag:pius-ix/iam-vos-omnes-1868',
+      'mag:pius-ix/quo-impensiore-1870', 'mag:pius-ix/omnem-sollicitudinem-1874',
+      'mag:leo-xiii/pontifices-maximi-1879']) {
+      const d = cited.find((x) => x.id === id)!;
+      const sharers = everything.filter((x) => x.id !== id && x.acta?.series === 'ASS'
+        && x.acta.volume === d.acta!.volume && x.acta.page === d.acta!.page);
+      expect(sharers.map((x) => x.id), `${id}'s page`).toEqual([]);
     }
     expect(checkDocuments(everything, genres, keywords, series).filter((v) => v.rule === 25)).toEqual([]);
   });

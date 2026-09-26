@@ -771,21 +771,32 @@ export interface MatchOverride {
   documentId: string;
   /** The index line, quoted as extracted -- or, for an ASS entry, whose volume prints no index, the lines of the page the entry was read from. */
   indexLine: string;
-  /** The headings of the document chosen and of the one the class rule chose, and why the rule picked wrong -- or, where the class rule reaches no candidate at all, why it cannot. */
+  /**
+   * The headings of the document chosen and of the one the class rule chose, and why the rule
+   * picked wrong -- or, where the class rule reaches no candidate at all, why it cannot -- or,
+   * where it reaches the right candidate and refuses it, what agrees (pope, day and, where the
+   * entry has an `opening`, the incipit) and what disagrees, naming the category row and the
+   * class term that does the refusing.
+   */
   evidence: string;
 }
 
 /**
- * Entries the matcher's class rule sends to the wrong document, keyed by the reference
- * the index gives the act (`AAS:{volume}:{page}`) and consulted before the class rule
- * (match.ts): the override names the document outright and does not require it to
- * satisfy the class rule, since the class rule is what was wrong. Most rows are a measured
- * harm of the discussion #30 question -- the shelf and the *Acta* disagree about the class
- * -- and quote the index line and both headings; two of Pius X's are a provisional shelf
- * record with no incipit to tell two acts of a day apart.
+ * Entries the matcher's class rule resolves wrongly -- to the wrong document, to no document
+ * at all, or to none where the day offers the right one -- keyed by the reference the index
+ * gives the act (`AAS:{volume}:{page}`, or `ASS:{volume}:{page}` for a volume that prints no
+ * index) and consulted before the class rule (match.ts): the override names the document
+ * outright and does not require it to satisfy the class rule, since the class rule is what
+ * was wrong. Most rows are a measured harm of the discussion #30 question -- the shelf and
+ * the *Acta* disagree about the class -- and quote the index line and both headings; two of
+ * Pius X's are a provisional shelf record with no incipit to tell two acts of a day apart.
  *
- * Two rows are a third case, added in phase 2c-ii-d (Task 3b): the class rule reaches no
- * candidate **at all**, because the document's issuer is not the entry's pope. The
+ * Seven rows are a **third case**, in two shapes, and neither shape overrides a wrong act:
+ * in both there was no wrong act to override, so the row supplies an identity the rules
+ * cannot express rather than suppressing a rule's mistake.
+ *
+ * **(i) No candidate at all**, two rows added in phase 2c-ii-d (Task 3b), because the
+ * document's issuer is not the entry's pope. The
  * candidates of an entry are keyed `${issuerId}|${date}` (match.ts), and a conciliar act
  * the ASS prints under the pope who promulgated it is keyed to the council, so the pope has
  * nothing on the date and the entry would stand unmatched with an empty same-date list. The
@@ -798,6 +809,20 @@ export interface MatchOverride {
  * tie-breaker takes the curated row (Task 3b, the owner's ruling on the reviewer's
  * recommendation), and the general rule is left to the phase that can measure its whole
  * reach (issue #56, Vatican II's sixteen).
+ *
+ * **(ii) The right candidate, refused**, five rows added in phase 2c-ii-d (Task 4b) on the
+ * owner's ruling of 2026-09-26: the class rule reaches exactly one candidate on the date --
+ * the act itself -- and filters it out. Five entries of Pius IX's volumes stood unmatched
+ * beside a shelf record of the same pope and the same day (Task 4's join), four of them with
+ * the same incipit too, and the class was the only thing refusing them: the #30 disagreement
+ * in its second symptom, where the first is a wrong match and this is no match at all. The
+ * remedy is a row and never a rule. A general rule matching on pope and day while ignoring
+ * class would make every same-day coincidence a match and empty the class rule of the purpose
+ * it exists for, which is to keep such disagreements visible as findings; and relaxing the one
+ * exclusion that refuses the fifth of them -- `excludes: ['in-forma-brevis']` on the
+ * `Litterae Apostolicae` row (categories.ts) -- would pair *Venerabilis Decessor* with
+ * *Superiore iam aetate*, both of 8 September 1950. Each of the five rows records what agrees
+ * and what disagrees, and quotes the page it rests on.
  */
 export const ACTA_MATCH_OVERRIDES: Readonly<Record<string, MatchOverride>> = {
   // Phase 2c-ii-d, Task 3b: the two dogmatic constitutions of the First Vatican Council,
@@ -815,6 +840,49 @@ export const ACTA_MATCH_OVERRIDES: Readonly<Record<string, MatchOverride>> = {
     documentId: 'mag:vatican-i/pastor-aeternus-1870',
     indexLine: 'PIUS EPISCOPUS / SERVUS SERVORUM DEI / SACRO APPROBANTE CONCILIO / Ad perpetuam rei memoriam. / «r Pastor aeternus et episcopus animarum nostrarum, ut sa- / lutiferum',
     evidence: "ASS 6 (1870) 40 opens the second dogmatic constitution of the First Vatican Council, again inside the conciliar narrative and again with no class heading: ll. 9-14 'PIUS EPISCOPUS / SERVUS SERVORUM DEI / SACRO APPROBANTE CONCILIO / Ad perpetuam rei memoriam.', ll. 17-18 '«r Pastor aeternus et episcopus animarum nostrarum, ut sa- / lutiferum redemptionis opus perenne redderet, sanctam aedificare' (the OCR's '«r' for the opening guillemet), the reading before it naming who read it aloud, ll. 4-6 'Episcopus itaque Fabrianensis ambonem conscendens elata voce / Constitutionem legit, quam Patres prae manibus eliam habebant, / quaeque tenoris est qui sequitur.'. The whole page reading is quoted in ASS_READINGS `ASS:6:40`, which is the entry this row keys. Why the class rule chose nothing to override: as `ASS:5:481`, it reached no candidate at all. The act is `mag:vatican-i/pastor-aeternus-1870`, dated 1870-07-18, genre `constitution`, issuer `oec:vatican-i` with `promulgatedBy: rp:pius-ix`, and Pius IX's shelf carries nothing whatever on 1870-07-18. The identity is the registry's own field and the volume's own printing; the volume's summa states it too, calling the act 'Constitutio dogmatica prima de Ecclesia / Christi, Pastor aeternus, in Concilio / Vaticano confirmata' under its papal part's heading ACTA SOLEMNIORA ROM. PONTIFICIS (summa p. 597 ll. 12-17). Measured as the other row was, with the same result.",
+  },
+  // Phase 2c-ii-d, Task 4b: the five entries of Pius IX's volumes whose shelf record the class
+  // rule refuses -- shape (ii) of the table's third case (see the doc comment) -- on the
+  // owner's ruling of 2026-09-26, after Task 4's join found them standing unmatched beside a
+  // record of the same pope and the same day. Four are encyclicals the volumes head as
+  // letters, and for each of the four the record's incipit slug is a word-boundary prefix of
+  // the entry's own `opening` slug (`incipitAgrees`, match.ts), so pope, day AND incipit agree
+  // and the opening rule would have taken the record had the class filter left one to choose;
+  // the class is the only thing refusing them. The fifth, ASS 11 p. 420, is the opposite case:
+  // its `opening` is OCR debris (the heading's footnote marker, read as the act's first words),
+  // so no incipit rule could ever have reached it, and what refuses it is the
+  // `excludes: ['in-forma-brevis']` of the `Litterae Apostolicae` category row -- which stays,
+  // being what keeps *Venerabilis Decessor* off *Superiore iam aetate*, both of 8 September
+  // 1950 (categories.ts) -- while the page itself prints the brief's own dating formula, *sub
+  // annulo piscatoris*, and so evidences the very characteristic the record carries. Four of
+  // the five references are Pius IX's; ASS 11 p. 420's act is of 15 February 1879, after his
+  // death on 7 February 1878, so it is Leo XIII's. Every line below was read in the store
+  // (`~/development/sources/ASS/txt/`) on 2026-09-26, with the store's soft hyphen (U+00AD)
+  // rendered `-` as the other ASS rows of this table and of `ASS_READINGS` render it.
+  'ASS:4:129': {
+    documentId: 'mag:pius-ix/arcano-divinae-1868',
+    indexLine: 'SANCTISSIMI DOMINI NOSTRI / PII / DIVINA PROVIDENTIA / PAP JL E IX. / LITTERAE APOSTOLICAE. / Ad omnes Episcopos Ecclesiarum Ritus Orientalis communionem / cum Apostolica Sede non habentes. / PIUS PP. IX. / « Arcano Divinae Providentiae consilio, licet sine ullis meri- / tis Nostris, in hac sublimi Cathedra haeredes Beatissimi Apo-',
+    evidence: "ASS 4 (1868) 129, ass-04-1868.txt: l. 1 the running head '129', ll. 2-8 the by-line 'SANCTISSIMI DOMINI NOSTRI / PII / DIVINA PROVIDENTIA / PAP JL E IX.' (the OCR's 'PAP JL E IX.' for 'PAPAE IX.'), l. 10 the class heading 'LITTERAE APOSTOLICAE.', ll. 12-13 the addressee 'Ad omnes Episcopos Ecclesiarum Ritus Orientalis communionem / cum Apostolica Sede non habentes.', l. 18 the salutation 'PIUS PP. IX.', ll. 20-21 the act's first words '« Arcano Divinae Providentiae consilio, licet sine ullis meri- / tis Nostris, in hac sublimi Cathedra haeredes Beatissimi Apo-'. Dated at p. 131 ll. 19-20, '» Datum Romae apud S. Petrum die 8 Septembris anno 1868. / Pontificatus Nostri Anno Yieesimotertio. »' (the OCR's 'Yieesimotertio' for 'Vicesimotertio') -- 8 September 1868. WHAT AGREES: the pope (Pius IX), the day, and the incipit -- the record `mag:pius-ix/arcano-divinae-1868` is dated 1868-09-08 with incipit 'Arcano divinae', whose slug is a word-boundary prefix of the entry's `opening` slug, so `incipitAgrees` is true of the pair. WHAT DISAGREES: the class, and nothing else. The volume heads the act `LITTERAE APOSTOLICAE`, whose category class is `{ genre: 'apostolic-letter', excludes: ['motu-proprio', 'in-forma-brevis'] }` (categories.ts), and the registry files the record's genre as `encyclical`, so the one candidate the date offers is filtered out and the entry stands unmatched with that record beside it as its `sameDate` -- the discussion #30 disagreement refusing a match rather than making a wrong one. And vatican.va disagrees with itself about this very act: the record's url reads `litterae-apostolicae-arcano-divinae-8-septembris-1868.html`, as the volume heads it, while its `sourceGenreLabel` -- the listing label the genre is read from -- reads `Enciclica` (`source.shelf` is null, Pius IX being a flat-era pope).",
+  },
+  'ASS:4:131': {
+    documentId: 'mag:pius-ix/iam-vos-omnes-1868',
+    indexLine: 'SANCTISSIMI DOMINI NOSTRI / PII / DIVINA PROVIDENTIA / PAPAE IX, / LITTERAE APOSTOLICAE / Ad omnes Protestantes, aliosque acatholicos. / « Iam vos omnes noveritis, Nos licet immerentes ad hanc Petri / Cathedram evecto», et iccirco supremo universae catholicae Ec-',
+    evidence: "ASS 4 (1868) 131, ass-04-1868.txt: l. 1 the running head 'LITTERAE APOSTOLICAE. 131', ll. 26-30 the by-line 'SANCTISSIMI DOMINI NOSTRI / PII / DIVINA PROVIDENTIA / PAPAE IX,', l. 31 the class heading 'LITTERAE APOSTOLICAE', l. 33 the addressee 'Ad omnes Protestantes, aliosque acatholicos.' (no salutation line: the entry's `evidence.salutation` is null), ll. 37-38 the act's first words '« Iam vos omnes noveritis, Nos licet immerentes ad hanc Petri / Cathedram evecto», et iccirco supremo universae catholicae Ec-' (the OCR's 'evecto»' for 'evectos'). Dated at p. 135 ll. 5-6, '»Datum Romae aqud S. Petrum die 13 Septembris 1868. / Pontificatus Nostri Anno Vicesimotertio.»' (the OCR's 'aqud' for 'apud') -- 13 September 1868. The page carries the close of the previous act as well, ll. 19-20 being the dateline of *Arcano Divinae* (`ASS:4:129` above), but it OPENS only this one, so invariant 25 is untouched and no `ACTA_SHARED_PAGES` row is owed. WHAT AGREES: the pope, the day, and the incipit -- `mag:pius-ix/iam-vos-omnes-1868` is dated 1868-09-13 with incipit 'Iam vos omnes', a word-boundary prefix of the entry's `opening` slug (`incipitAgrees` true). WHAT DISAGREES: the class alone -- `LITTERAE APOSTOLICAE` asks genre `apostolic-letter`, the record's genre is `encyclical`, read from a `sourceGenreLabel` of `Enciclica` while the same record's url reads `litterae-apostolicae-iam-vos-omnes-13-septembris-1868.html` -- vatican.va against itself, as at `ASS:4:129`.",
+  },
+  'ASS:5:594': {
+    documentId: 'mag:pius-ix/quo-impensiore-1870',
+    indexLine: 'LITTERAE APOSTOLICAE / DE SEDITIONE IN PATRIARCHAT U CILICIAE ARMENORUM / Dilectis Filiis Armenis Catholicis Patriarchatus Ciliciae / PIUS PP. IX. / Dilecti Filii, Salutem et Apostolicam Benedictionem. / « Quo impensiore studio afflictas Armenorum Ecclesiae res / erigere nisi sumus, et ad eum adducere ordinem eamque con-',
+    evidence: "ASS 5 (1869) 594, ass-05-1869.txt: l. 1 'LITTERAE APOSTOLICAE', which the scan reads both as the page's running header and as the act's class heading -- the same words head every page of the section (p. 595 l. 1 'LITTERAE APOSTOLICAE', p. 596 l. 1 '596 LITTERAE APOSTOLICAE') -- l. 5 the subject 'DE SEDITIONE IN PATRIARCHAT U CILICIAE ARMENORUM' (the OCR's 'PATRIARCHAT U' for 'PATRIARCHATU'), l. 8 the addressee 'Dilectis Filiis Armenis Catholicis Patriarchatus Ciliciae', l. 10 the salutation 'PIUS PP. IX.', l. 12 the greeting 'Dilecti Filii, Salutem et Apostolicam Benedictionem.', ll. 14-15 the act's first words '« Quo impensiore studio afflictas Armenorum Ecclesiae res / erigere nisi sumus, et ad eum adducere ordinem eamque con-'. Dated at p. 598 ll. 20-21, '« Datum Romae apud S. Petrum die vigesima Maii MDCCCLXX / Pontificatus Nostri anno XXIV ».', signed l. 23 'PIUS PP. IX.' -- 20 May 1870, within ASS 5's span (the volume is titled 1869 with `yearTo: 1870`). WHAT AGREES: the pope, the day, and the incipit -- `mag:pius-ix/quo-impensiore-1870` is dated 1870-05-20 with incipit 'Quo impensiore', a word-boundary prefix of the entry's `opening` slug (`incipitAgrees` true). WHAT DISAGREES: the class alone -- `LITTERAE APOSTOLICAE` asks genre `apostolic-letter`, the record's genre is `encyclical`, read from a `sourceGenreLabel` of `Enciclica` while the same record's url reads `litterae-apostolicae-quo-impensiore-20-maii-1870.html` -- vatican.va against itself, as at `ASS:4:129` and `ASS:4:131`. The act itself names the earlier letter of 24 February of the same year, ll. 21-23 'excitata et iugiter invalescentia enumeravimus litteris Nostris / Apostolicis « Non sine gravissimo » quas dedimus die vigesima / quarta Februarii huius anni, dum ad ea compescenda et dirimenda'; the shelf does hold that one, `mag:pius-ix/non-sine-gravissimo-1870`, an apostolic letter of 1870-02-24 carrying no reference of either series, and it is a different act from this.",
+  },
+  'ASS:7:629': {
+    documentId: 'mag:pius-ix/omnem-sollicitudinem-1874',
+    indexLine: 'EX ACTIS AD INSTAR CONSISTORIALIUM / SS.MI DOMINI NOSTRI PII DIVINA PROVIDENTIA PAPAE IX / EPISTOLA / AD ARCHIEPISCOPUM LEOPOLIEN. HALICIEN. ET CAMENECIEN. RU- / THENORUM ALIOSQUE EPISCOPOS EIUSDEM RITUS GRATIAM ET / COMMUNIONEM CUM APOSTOLICA SEDE HABENTES / PIUS PAPA IX. / VENERABILES FRATRES SALUTEM ET APOSTOLICAM BENEDICTIONEM / Omnem sollicitudinem vel a primis diuturni Pontificatus / Nostri annis adhibuimus atque operam dedimus ad spirituale',
+    evidence: "ASS 7 (1872) 629, ass-07-1872.txt: l. 1 the running head of the volume's appendix, 'EX ACTIS AD INSTAR CONSISTORIALIUM', l. 5 the by-line 'SS.MI DOMINI NOSTRI PII DIVINA PROVIDENTIA PAPAE IX', l. 8 the class heading 'EPISTOLA', ll. 10-14 the addressee 'AD ARCHIEPISCOPUM LEOPOLIEN. HALICIEN. ET CAMENECIEN. RU- / THENORUM ALIOSQUE EPISCOPOS EIUSDEM RITUS GRATIAM ET / COMMUNIONEM CUM APOSTOLICA SEDE HABENTES', l. 17 the salutation 'PIUS PAPA IX.', l. 19 the greeting 'VENERABILES FRATRES SALUTEM ET APOSTOLICAM BENEDICTIONEM', ll. 21-22 the act's first words 'Omnem sollicitudinem vel a primis diuturni Pontificatus / Nostri annis adhibuimus atque operam dedimus ad spirituale'. Dated at p. 634 ll. 21-22, 'Datum Romae apud S. Petrum die decimatertia maii / MDCCCLXXIV Pontificatus Nostri anno vicesimoctavo.', signed l. 26 'PIUS PP. IX.' -- 13 May 1874. WHAT AGREES: the pope, the day, and the incipit -- `mag:pius-ix/omnem-sollicitudinem-1874` is dated 1874-05-13 with incipit 'Omnem sollicitudinem', a word-boundary prefix of the entry's `opening` slug (`incipitAgrees` true). WHAT DISAGREES: the class alone -- the volume heads the act `EPISTOLA`, whose category class is `{ genre: 'letter' }` (the *Epistulae* row, categories.ts), and the registry files the record's genre as `encyclical` (url `enciclica-omnem-sollicitudinem-13-maggio-1874.html`, `sourceGenreLabel` `Enciclica`): unlike the three above, here vatican.va is consistent with itself and it is the volume alone that calls the act a letter. Two notes on the page itself, both pinned in the data tests. The reference is dated later than its volume's FIRST year + 1, ASS 7 being titled 1872-73 and printing two acts of 1874 in this appendix (the other is *Vix dum a Nobis* of 7 March at p. 565, matched by rule in Task 4): it is admitted by the scanner's own bound, `(yearTo ?? year) + 1`. And p. 629 lies OUTSIDE `ASS_PAGE_OFFSETS`' one range for this volume (PDF pp. 496-547), so the printed page and the PDF page are the same page here.",
+  },
+  'ASS:11:420': {
+    documentId: 'mag:leo-xiii/pontifices-maximi-1879',
+    indexLine: 'SS.MI DOMINI NOSTRI / LEONIS DIVINA PROVIDENTIA PAPAE XIII / LITTERAE APOSTOLICAE / quibus indicitur iubilaeum universale ad implorandum divi- / 1 / num auxilium. / LEO PP. XIII / UNIVERSIS CHRISTIFIDELIBUS PRAESENTES LITTERAS INSPECTURIS / SALUTEM ET APOSTOLICAM BENEDICTIONEM. / Pontifices Maximi Praedecessores Nostri ex veteri Roma- / nae Ecclesiae instituto, ab ipso susceptae Apostolicae servi-',
+    evidence: "ASS 11 (1878) 420, ass-11-1878.txt: ll. 1-3 the by-line 'SS.MI DOMINI NOSTRI / LEONIS DIVINA PROVIDENTIA PAPAE XIII', l. 5 the class heading 'LITTERAE APOSTOLICAE', then the subject broken by a footnote marker the OCR sets on its own line, ll. 6-9 'quibus indicitur iubilaeum universale ad implorandum divi- / 1 / num auxilium.', l. 13 the salutation 'LEO PP. XIII', ll. 15-17 the addressee and greeting 'UNIVERSIS CHRISTIFIDELIBUS PRAESENTES LITTERAS INSPECTURIS / SALUTEM ET APOSTOLICAM BENEDICTIONEM.', ll. 19-20 the act's first words 'Pontifices Maximi Praedecessores Nostri ex veteri Roma- / nae Ecclesiae instituto, ab ipso susceptae Apostolicae servi-'. THE DATELINE IS THE ARGUMENT, at p. 426 ll. 12-14: 'Datum Romae, apud S. Petrum sub annulo piscatoris / die xv mensis februarii anno MDCCCLXXIX, Pontificatus Nostri / anno primo.', countersigned l. 15 'L. Card. NINA.' -- 15 February 1879, and *sub annulo piscatoris* is the brief's own formula, so the ASS itself evidences the `in-forma-brevis` characteristic the shelf record carries. WHAT AGREES: the pope (Leo XIII -- the act is of 15 February 1879, after Pius IX's death on 7 February 1878, so `mag:leo-xiii/pontifices-maximi-1879` on his `briefs` shelf is the right record), the day (1879-02-15), and the genre (`apostolic-letter`, which the category asks for). WHAT DISAGREES: the characteristic. The record carries `characteristics: ['in-forma-brevis']` and the `Litterae Apostolicae` category row is `{ genre: 'apostolic-letter', excludes: ['motu-proprio', 'in-forma-brevis'] }` (categories.ts), so the one candidate of the day is excluded -- which is barely a class disagreement at all, the page agreeing with the record about what the act is; what is wrong is that the ASS heads a brief `LITTERAE APOSTOLICAE` where the AAS volumes head it `LITTERAE IN FORMA BREVIS` or `BREVE` (the *Brevia* row, which requires the characteristic). THE EXCLUSION IS NOT RELAXED: it is what keeps *Venerabilis Decessor* off *Superiore iam aetate*, both of 8 September 1950, and the exception is carried by this row instead. Nor could any incipit rule have helped: the entry's `opening` is the broken heading read as first words, '1 num auxilium.', so `incipitAgrees` is FALSE against the record's 'Pontifices maximi' even though the page prints exactly that at ll. 19-20.",
   },
   // Phase 2c-ii-b: two entries of Pius X's volumes whose only shelf record is a provisional
   // one, keyed by date and carrying no incipit, so the join cannot tell which act it is.

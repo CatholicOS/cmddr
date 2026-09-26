@@ -115,7 +115,13 @@
     "characteristics": [
       "in-forma-brevis"
     ],
-    "sourceGenreLabel": "briefs"
+    "sourceGenreLabel": "briefs",
+    "acta": {
+      "series": "ASS",
+      "volume": 11,
+      "year": 1878,
+      "page": 420
+    }
   },
   {
     "id": "mag:leo-xiii/ci-siamo-grandemente-1879",

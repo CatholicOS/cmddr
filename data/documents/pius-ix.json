@@ -996,7 +996,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Arcano divinae",
-    "sourceGenreLabel": "Enciclica"
+    "sourceGenreLabel": "Enciclica",
+    "acta": {
+      "series": "ASS",
+      "volume": 4,
+      "year": 1868,
+      "page": 129
+    }
   },
   {
     "id": "mag:pius-ix/iam-vos-omnes-1868",
@@ -1016,7 +1022,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Iam vos omnes",
-    "sourceGenreLabel": "Enciclica"
+    "sourceGenreLabel": "Enciclica",
+    "acta": {
+      "series": "ASS",
+      "volume": 4,
+      "year": 1868,
+      "page": 131
+    }
   },
   {
     "id": "mag:pius-ix/religiosas-regularium-1870",
@@ -1124,7 +1136,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quo impensiore",
-    "sourceGenreLabel": "Enciclica"
+    "sourceGenreLabel": "Enciclica",
+    "acta": {
+      "series": "ASS",
+      "volume": 5,
+      "year": 1869,
+      "page": 594
+    }
   },
   {
     "id": "mag:pius-ix/respicientes-ea-1870",
@@ -1398,7 +1416,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Omnem sollicitudinem",
-    "sourceGenreLabel": "Enciclica"
+    "sourceGenreLabel": "Enciclica",
+    "acta": {
+      "series": "ASS",
+      "volume": 7,
+      "year": 1872,
+      "page": 629
+    }
   },
   {
     "id": "mag:pius-ix/gravibus-ecclesiae-1874",
