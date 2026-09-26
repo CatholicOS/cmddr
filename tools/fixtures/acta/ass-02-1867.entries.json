@@ -1,0 +1,108 @@
+{
+  "source": "ass-2",
+  "generated": "2026-09-26",
+  "text": "~/development/sources/ASS/txt/ass-02-1867.txt (719 pages)",
+  "volume": 2,
+  "year": 1867,
+  "pages": 719,
+  "entries": [
+    {
+      "series": "ASS",
+      "volume": 2,
+      "year": 1867,
+      "page": 365,
+      "pope": "Pius IX",
+      "category": "LITTERAE APOSTOLICAE",
+      "date": "1866-04-13",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Die 13 Aprilis 18G6.",
+      "raw": "LITTERAE APOSTOLICAE. / Die 13 Aprilis 18G6.",
+      "opening": "AD PERPETUAM REI MEMORIAM. Ad augendam fidelium religionem,",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE APOSTOLICAE. / Die 13 Aprilis 18G6.",
+        "salutation": "PIUS PP. IX.",
+        "opening": "AD PERPETUAM REI MEMORIAM. — « Ad augendam fidelium religio­",
+        "dateline": "» Datum Romae apud S. Petrum sub annulo Piscatoris die XIII. Aprilis MDCCCLXVI. Pontificatus Nostri an. Vicesimo.)) Loco >J3 Signi",
+        "header": "365"
+      }
+    }
+  ],
+  "defects": [
+    {
+      "page": 183,
+      "reason": "no-heading",
+      "lines": [
+        "Datum Romae apud S. Petrum sub annulo Piscatoris die IX.",
+        "ianuarii MDCCCLXVI. Pontificatus Nostri Anno Vicesimo."
+      ]
+    },
+    {
+      "page": 275,
+      "reason": "no-heading",
+      "lines": [
+        "» Datum Romae apud S. Petrum die 17 Martii 1866. Pontifi­",
+        "catus Nostri anno XX. »",
+        "PIUS. PP. IX."
+      ]
+    },
+    {
+      "page": 495,
+      "reason": "no-heading",
+      "lines": [
+        "» Datum Romae apud S. Petrum anno Incarnationis Dominicae millesimp",
+        "• quingentesimo nonagesimo Kal. Martii, Pontificatus nostri anno primo. »"
+      ]
+    },
+    {
+      "page": 536,
+      "reason": "no-heading",
+      "lines": [
+        "sensu tamen Ordinariorum, existentes ,                                             » Datum Romae apud s. Petrum sub",
+        "sibi aggregandi, eisque omnes et singu­                                      Annulo Piscatoris die iv. Novembris anno",
+        "las Indulgentias , poenarumque relaxa­                                       MOCCCLX. Pontificatus Nostri anno XV.»"
+      ]
+    }
+  ],
+  "summa": {
+    "pages": {
+      "from": 695,
+      "to": 701
+    },
+    "rows": [
+      {
+        "description": "Literae apostolicae, quibus novis favoribus aucta est pia Archisodalitas ad animas purgatorio igne detentas precibus iuvandas instituta. .",
+        "page": 481,
+        "raw": "Literae apostolicae, quibus novis favo­ / ribus aucta est pia Archisodalitas ad / animas purgatorio igne detentas pre­ / cibus iuvandas instituta. . . . 481"
+      },
+      {
+        "description": "Literae regnantis Romani Pontificis, quibus Canonico P. Gaduel Vic. gen. Aurelianensi gratulatur, quod semen ab eo iactum per commentarium de vita et gestis Ven. Bartholomaei Holtzhau- ser in bonam terram inciderit, atque ampla incrementa ominatur",
+        "page": 273,
+        "raw": "Literae regnantis Romani Pontificis, qui­ / bus Canonico P. Gaduel Vic. gen. Au­ / relianensi gratulatur, quod semen ab / eo iactum per commentarium de vita / et gestis Ven. Bartholomaei Holtzhau- / ser in bonam terram inciderit, atque / ampla incrementa ominatur . . 273"
+      },
+      {
+        "description": "Literae Apostolicae, quibus die festo B. Mariae a perpetuo succursu nuncupatae eius Imaginem visitantibus indulgentiae conceduntur",
+        "page": 365,
+        "raw": "Literae Apostolicae, quibus die festo B. / Mariae a perpetuo succursu nuncupa­ / tae eius Imaginem visitantibus indul­ / gentiae conceduntur. 365"
+      }
+    ],
+    "claimed": [
+      365
+    ],
+    "unclaimed": [
+      {
+        "description": "Literae apostolicae, quibus novis favoribus aucta est pia Archisodalitas ad animas purgatorio igne detentas precibus iuvandas instituta. .",
+        "page": 481,
+        "raw": "Literae apostolicae, quibus novis favo­ / ribus aucta est pia Archisodalitas ad / animas purgatorio igne detentas pre­ / cibus iuvandas instituta. . . . 481"
+      },
+      {
+        "description": "Literae regnantis Romani Pontificis, quibus Canonico P. Gaduel Vic. gen. Aurelianensi gratulatur, quod semen ab eo iactum per commentarium de vita et gestis Ven. Bartholomaei Holtzhau- ser in bonam terram inciderit, atque ampla incrementa ominatur",
+        "page": 273,
+        "raw": "Literae regnantis Romani Pontificis, qui­ / bus Canonico P. Gaduel Vic. gen. Au­ / relianensi gratulatur, quod semen ab / eo iactum per commentarium de vita / et gestis Ven. Bartholomaei Holtzhau- / ser in bonam terram inciderit, atque / ampla incrementa ominatur . . 273"
+      }
+    ],
+    "omitted": []
+  }
+}

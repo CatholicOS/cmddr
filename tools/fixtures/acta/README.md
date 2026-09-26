@@ -538,6 +538,16 @@ lines each rests on (spec §3). `{year}` is the first year of the volume's span.
 | ASS 38 (1905–06, Pius X) | `ass-38-1905.*` | **2026-09-22** | 702 | 417–423 | 13 | 6 | 9 / 7 |
 | ASS 39 (1906, Pius X) | `ass-39-1906.*` | **2026-09-22** | 640 | 623–640 | 60 | 18 | 52 / 23 |
 | ASS 40 (1907, Pius X) | `ass-40-1907.*` | **2026-09-22** | 791 | 769–781 | 37 | 10 | 31 / 7 |
+| ASS 2 (1867, Pius IX) | `ass-02-1867.*` | **2026-09-22** | 719 | 695–701 | 1 | 4 | 1 / 2 |
+| ASS 3 (1867, Pius IX) | `ass-03-1867.*` | **2026-09-22** | 696 | 665–670 | 5 | 6 | 4 / 11 |
+| ASS 4 (1868, Pius IX) | `ass-04-1868.*` | **2026-09-22** | 717 | 684–690 | 9 | 3 | 7 / 2 |
+| ASS 5 (1869–70, Pius IX) | `ass-05-1869.*` | **2026-09-22** | 712 | 691–696 | 6 | 9 | 6 / 9 |
+| ASS 6 (1870–71, Pius IX) | `ass-06-1870.*` | **2026-09-22** | 776 | 597–603 | 7 | 11 | 6 / 25 |
+| ASS 7 (1872–73, Pius IX) | `ass-07-1872.*` | **2026-09-22** | 784 | 751–760 | 5 | 7 | 0 / 0 |
+| ASS 8 (1874–75, Pius IX) | `ass-08-1874.*` | **2026-09-22** | 748 | 727–733 | 6 | 14 | 4 / 20 |
+| ASS 9 (1876, Pius IX) | `ass-09-1876.*` | **2026-09-22** | 690 | 669–674 | 10 | 16 | 2 / 8 |
+| ASS 10 (1877, Pius IX) | `ass-10-1877.*` | **2026-09-22** | 768 | 616–622 | 5 | 10 | 3 / 6 |
+| ASS 11 (1878, Pius IX + Leo XIII) | `ass-11-1878.*` | **2026-09-22** | 646 | 621–626 | 7 | 6 | 6 / 6 |
 
 
 ASS 36–40 scanned on 2026-09-25 (`npx tsx tools/scan-ass.ts 36-40`, phase 2c-ii-b): every
@@ -549,6 +559,25 @@ paginated French section inside it numbered from 1. No scanned entry falls in th
 (the 13 run pp. 67–382), and pages 424–702 contain no `Pontificatus Nostri` at all, so the
 supplement hides no papal act: the volume's own summa lists 16 papal rows and that is what
 there is.
+
+ASS 2–11 scanned on 2026-09-26 (`npx tsx tools/scan-ass.ts 2-11`, phase 2c-ii-d): every
+count above again equals what `tools/survey-ass.ts` read from the store for these ten
+volumes, so the fixture path and the survey pass agree here too -- the era the survey found
+the series' thinnest, 39 of 128 summa rows claimed (30.5 %). **ASS 7 finds no papal part
+at all**: its summa prints neither a papal heading nor a dicastery heading to close it, so
+its check is vacuous, not a defect, and its five scanned acts (pp. 25, 165, 363, 565, 629)
+answer no row. ASS 7 also carries the series' one page offset (`ASS_PAGE_OFFSETS`,
+`tools/src/acta/curation.ts`): PDF pp. 496–547 print two more than the PDF page, and no
+scanned entry or defect opens inside it beyond the three `no-heading` defects already there
+(pp. 510, 516, 521). **ASS 10's page count is the bound volume's, not the supplement's**:
+its own *Summa actorum* sits at pp. 616–622 and a `supplemento` paginated 321–448 occupies
+PDF pp. 640–768, as the PDF's own name records
+(`ASS-10-1877-1-639+supplemento-321-448-ocr.pdf`). No scanned entry or defect falls in that
+range (the five entries run pp. 69–577), and no page of it, 640–768, carries `Pontificatus
+Nostri` at all, so the supplement hides no papal act: the volume's own summa lists 9 papal
+rows and that is what there is. ASS 11 prints two popes, Pius IX to his death on 7 February
+1878 and Leo XIII from his election on 20 February; ASS 2 and ASS 3 are both 1867.
+
 Scanned on 2026-09-23 (`npm run scan-ass -- sample`, re-run after 2c-ii Task 6 relaxed
 `header-mismatch` for the ASS -- `headerAgreesASS`, `tools/src/acta/ass.ts` -- which read
 ASS 23 p. 318 and ASS 33 pp. 213, 355, 385 whole (318, 355 and 385 already answered by a

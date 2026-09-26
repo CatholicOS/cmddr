@@ -3818,6 +3818,11 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     .flatMap((f) => loadAll(f.replace(/\.json$/, '')));
   const cited = everything.filter((d) => d.acta?.series === 'ASS');
   const sources = ACTA_SOURCES.filter((s) => s.kind === 'ass');
+  // The volumes Task 4's join has actually run over. Phase 2c-ii-d (Task 12) adds ASS 2-11's
+  // sources and fixtures but does not join them (that is Task 4's), so the matched- and
+  // held-count pins below -- which read the join's own output, not a fixture -- stay scoped
+  // to the volumes already joined until Task 4 re-runs the join and updates them.
+  const joinedSources = sources.filter((s) => s.volume < 2 || s.volume > 11);
 
   it('writes an ASS reference only on a shelf document of Pius IX, Leo XIII or Pius X, citing a sample volume by its number and first year, at a page within the volume, dated no later than the year after the volume\'s first', () => {
     for (const d of cited) {
@@ -3896,7 +3901,7 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // citation of record (ACTA_REPRINTS 'AAS:1:7' and 'AAS:1:5', quoting both printings). Of
     // its 11 held, 2 are new since 2c-ii Task 6 relaxed `header-mismatch`: the ring brevia at
     // pp. 300 and 301, neither on the briefs shelf.
-    const perVolume = Object.fromEntries(sources.map((s) => [s.key, cited.filter((d) => d.acta!.volume === s.volume).length]));
+    const perVolume = Object.fromEntries(joinedSources.map((s) => [s.key, cited.filter((d) => d.acta!.volume === s.volume).length]));
     expect(perVolume).toEqual({
       // 2c-i's five sampled volumes, 2c-ii-b's five of Pius X, and 2c-ii-c's twenty-one of
       // Leo XIII. ASS 1, 14, 15 and 17 carry none: ASS 1 scans nothing by rule, and the
@@ -3947,7 +3952,7 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
 
   it('creates nothing from the ASS: no document carries an ass/ shelf, and every unmatched ASS entry is held series-not-created', () => {
     expect(everything.filter((d) => (d.source?.shelf ?? '').startsWith('ass/'))).toEqual([]);
-    const { parsed } = loadActaIndexes(sources);
+    const { parsed } = loadActaIndexes(joinedSources);
     const entries = [...parsed.values()].flatMap((p) => p.entries);
     const shelf = everything.filter((d) => !isActaShelf(d.source?.shelf));
     const creation = createFromActa(matchActa(entries, shelf), shelf);
@@ -4075,6 +4080,20 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
       'ass-39': { acts: 61, defects: 17, rows: 75, claimed: 53, unclaimed: 22, omitted: 8 },
       'ass-40': { acts: 37, defects: 10, rows: 38, claimed: 31, unclaimed: 7, omitted: 6 },
       'ass-41': { acts: 37, defects: 8, rows: 37, claimed: 27, unclaimed: 10, omitted: 10 },
+      // Phase 2c-ii-d: Pius IX's ten volumes, ASS 2-11. Every count equals what
+      // tools/survey-ass.ts read from the store for these volumes too. ASS 7 shows 0 rows
+      // and all five of its acts omitted: its summa's papal columns are blank, so the check
+      // is vacuous (era report, phase 2c-ii-d).
+      'ass-2': { acts: 1, defects: 4, rows: 3, claimed: 1, unclaimed: 2, omitted: 0 },
+      'ass-3': { acts: 5, defects: 6, rows: 15, claimed: 4, unclaimed: 11, omitted: 1 },
+      'ass-4': { acts: 9, defects: 3, rows: 9, claimed: 7, unclaimed: 2, omitted: 2 },
+      'ass-5': { acts: 6, defects: 9, rows: 15, claimed: 6, unclaimed: 9, omitted: 0 },
+      'ass-6': { acts: 7, defects: 11, rows: 31, claimed: 6, unclaimed: 25, omitted: 1 },
+      'ass-7': { acts: 5, defects: 7, rows: 0, claimed: 0, unclaimed: 0, omitted: 5 },
+      'ass-8': { acts: 6, defects: 14, rows: 24, claimed: 4, unclaimed: 20, omitted: 2 },
+      'ass-9': { acts: 10, defects: 16, rows: 10, claimed: 2, unclaimed: 8, omitted: 8 },
+      'ass-10': { acts: 5, defects: 10, rows: 9, claimed: 3, unclaimed: 6, omitted: 2 },
+      'ass-11': { acts: 7, defects: 6, rows: 12, claimed: 6, unclaimed: 6, omitted: 1 },
     });
     // The 24 readings, each with its cause quoted in the report's §2.5 (`ASS_READINGS`'s own
     // evidence): 8 a Roman date the scanner does not read (the Kalends and the Ides -- ASS:23:206,

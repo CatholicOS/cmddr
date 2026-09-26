@@ -136,6 +136,25 @@ export const ACTA_SOURCES: readonly ActaSource[] = [
   ass(32, 1899, 'ASS-32-1899-900-ocr.pdf', '2026-09-22', 1900),
   ass(34, 1901, 'ASS-34-1901-2-ocr.pdf', '2026-09-22', 1902),
   ass(35, 1902, 'ASS-35-1902-3-ocr.pdf', '2026-09-22', 1903),
+  // Phase 2c-ii-d (spec §10 decision 3): Pius IX's ten unjoined volumes, ASS 2-11. ASS 1
+  // is the sample's, so these complete the pontificate. The era the survey says will be
+  // the series' thinnest: 39 of 128 summa rows claimed, 30.5 %. ASS 7 finds no papal part
+  // at all -- its summa's papal columns are blank, so its check is vacuous -- and carries
+  // the series' one genuine page offset (PDF pp. 496-547, +2 delta; `ASS_PAGE_OFFSETS`,
+  // `tools/src/acta/curation.ts`). ASS 10 carries a bound-in `supplemento` paginated
+  // 321-448, as its PDF's name records. ASS 11 prints two popes, Pius IX to his death on
+  // 7 February 1878 and Leo XIII from his election on 20 February. ASS 2 and ASS 3 are
+  // both 1867. Retrieved 2026-09-22 with the whole series, for the survey.
+  ass(2, 1867, 'ASS-02-1867-ocr.pdf', '2026-09-22'),
+  ass(3, 1867, 'ASS-03-1867-ocr.pdf', '2026-09-22'),
+  ass(4, 1868, 'ASS-04-1868-ocr.pdf', '2026-09-22'),
+  ass(5, 1869, 'ASS-05-1869-70-ocr.pdf', '2026-09-22', 1870),
+  ass(6, 1870, 'ASS-06-1870-71-ocr.pdf', '2026-09-22', 1871),
+  ass(7, 1872, 'ASS-07-1872-73-ocr.pdf', '2026-09-22', 1873),
+  ass(8, 1874, 'ASS-08-1874-75-ocr.pdf', '2026-09-22', 1875),
+  ass(9, 1876, 'ASS-09-1876-ocr.pdf', '2026-09-22'),
+  ass(10, 1877, 'ASS-10-1877-1-639+supplemento-321-448-ocr.pdf', '2026-09-22'),
+  ass(11, 1878, 'ASS-11-1878-ocr.pdf', '2026-09-22'),
   // Phase 2b-iii-b (spec §10): AAS 1-17, the volumes of 1909-1925, whose OCR lost the page
   // column on most index pages -- the pages come back from the volume body through the
   // sidecars (recover.ts). 1909 and 1917-I, the sample's, re-extracted on 2026-09-20 with
