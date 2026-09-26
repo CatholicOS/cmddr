@@ -3990,14 +3990,14 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
       // shelf records do not exist (the reverse gap). Of Pius IX's ten, ASS 2, 9 and 10
       // carry none for the same reason (ASS 4 carried none until Task 4b's two overrides).
       'ass-1': 0, 'ass-2': 0, 'ass-3': 2, 'ass-4': 2, 'ass-5': 3, 'ass-6': 3, 'ass-7': 2,
-      'ass-8': 1, 'ass-9': 0, 'ass-10': 0, 'ass-11': 3,
+      'ass-8': 3, 'ass-9': 0, 'ass-10': 0, 'ass-11': 3,
       'ass-12': 5, 'ass-13': 2, 'ass-14': 0, 'ass-15': 0, 'ass-16': 2, 'ass-17': 1,
       'ass-18': 5, 'ass-19': 4, 'ass-20': 5, 'ass-21': 7, 'ass-22': 3, 'ass-23': 9, 'ass-24': 5,
       'ass-25': 8, 'ass-26': 3, 'ass-27': 8, 'ass-28': 8, 'ass-29': 5, 'ass-30': 5, 'ass-31': 10,
       'ass-32': 2, 'ass-33': 21, 'ass-34': 7, 'ass-35': 8, 'ass-36': 7, 'ass-37': 19, 'ass-38': 9,
       'ass-39': 50, 'ass-40': 27, 'ass-41': 29,
     });
-    expect(cited).toHaveLength(290);
+    expect(cited).toHaveLength(292);
     // By issuer and genre, from the harvest's own output. Phase 2c-ii-d adds the 16 of
     // ASS 2-11 and with them the first references Pius IX has ever carried (11) and the first
     // any council has (2, the dogmatic constitutions of Vatican I, whose genre is
@@ -4018,12 +4018,12 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     const byIssuer = new Map<string, number>();
     for (const d of cited) byIssuer.set(d.issuerId, (byIssuer.get(d.issuerId) ?? 0) + 1);
     expect(Object.fromEntries([...byIssuer].sort())).toEqual({
-      'oec:vatican-i': 2, 'rp:leo-xiii': 136, 'rp:pius-ix': 11, 'rp:pius-x': 141,
+      'oec:vatican-i': 2, 'rp:leo-xiii': 136, 'rp:pius-ix': 13, 'rp:pius-x': 141,
     });
     const byGenre = new Map<string, number>();
     for (const d of cited) byGenre.set(d.genre ?? 'none', (byGenre.get(d.genre ?? 'none') ?? 0) + 1);
     expect(Object.fromEntries([...byGenre].sort())).toEqual({
-      'apostolic-exhortation': 1, 'apostolic-letter': 47, constitution: 2, encyclical: 52,
+      'apostolic-exhortation': 1, 'apostolic-letter': 49, constitution: 2, encyclical: 52,
       letter: 182, 'papal-bull': 6,
     });
   });
@@ -4285,13 +4285,13 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // pope with the council's approval and which no rule of the scanner reaches: neither
     // page carries a class heading, and neither act carries a dateline of its own, so
     // `findAnchors` raises nothing at all.
-    expect(Object.keys(ASS_READINGS)).toHaveLength(53);
+    expect(Object.keys(ASS_READINGS)).toHaveLength(55);
     const byVolume = new Map<string, number>();
     for (const k of Object.keys(ASS_READINGS)) {
       const v = `ass-${k.split(':')[1]}`;
       byVolume.set(v, (byVolume.get(v) ?? 0) + 1);
     }
-    expect(Object.fromEntries([...byVolume].sort())).toEqual({ 'ass-1': 3, 'ass-2': 4, 'ass-3': 2, 'ass-5': 3, 'ass-6': 2, 'ass-8': 2, 'ass-12': 1, 'ass-14': 2, 'ass-15': 1, 'ass-17': 3, 'ass-19': 1, 'ass-23': 5, 'ass-28': 1, 'ass-29': 3, 'ass-30': 2, 'ass-31': 1, 'ass-32': 1, 'ass-33': 6, 'ass-39': 1, 'ass-41': 9 });
+    expect(Object.fromEntries([...byVolume].sort())).toEqual({ 'ass-1': 3, 'ass-2': 4, 'ass-3': 2, 'ass-5': 3, 'ass-6': 2, 'ass-8': 4, 'ass-12': 1, 'ass-14': 2, 'ass-15': 1, 'ass-17': 3, 'ass-19': 1, 'ass-23': 5, 'ass-28': 1, 'ass-29': 3, 'ass-30': 2, 'ass-31': 1, 'ass-32': 1, 'ass-33': 6, 'ass-39': 1, 'ass-41': 9 });
   });
 
   it('writes no reference the era\'s own hazards would falsify: not into a page-offset range, not on Pius IX after his death or in a year his shelf is empty, not on Leo XIII before his election', () => {
@@ -4312,9 +4312,11 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // 2. Pius IX died on 7 February 1878 and his shelf holds no record of 1869 or of 1878, so
     //    a reference of his dated in either year would be a misread date or a wrong issuer.
     //    The conciliar records count as his here: their `promulgatedBy` is what admits the
-    //    reference at all (Task 3b).
+    //    reference at all (Task 3b). 13 until the Guntherian dossier of ASS 8 was read
+    //    (issue #58/#56): *Dolore haud mediocri* (1860) and *Eximiam tuam* (1857) are his,
+    //    reprinted in a volume of 1874-75, and neither falls in an empty year.
     const pius = cited.filter((d) => d.issuerId === 'rp:pius-ix' || d.promulgatedBy === 'rp:pius-ix');
-    expect(pius.length).toBe(13);
+    expect(pius.length).toBe(15);
     for (const d of pius) {
       expect(d.date <= '1878-02-07', `${d.id} is dated after Pius IX's death`).toBe(true);
       expect(d.date.slice(0, 4), d.id).not.toBe('1869');
