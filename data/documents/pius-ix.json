@@ -418,7 +418,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Eximiam tuam",
-    "sourceGenreLabel": "Litterae Apostolicae"
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "ASS",
+      "volume": 8,
+      "year": 1874,
+      "page": 445
+    }
   },
   {
     "id": "mag:pius-ix/cum-nuper-1858",
@@ -592,7 +598,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Dolore haud mediocri",
-    "sourceGenreLabel": "Litterae Apostolicae"
+    "sourceGenreLabel": "Litterae Apostolicae",
+    "acta": {
+      "series": "ASS",
+      "volume": 8,
+      "year": 1874,
+      "page": 443
+    }
   },
   {
     "id": "mag:pius-ix/novos-et-ante-1860",

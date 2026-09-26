@@ -28,3 +28,14 @@ jobs:
           npm run harvest
           npm run render
           git diff --exit-code data/ registry/
+
+      # The committed reports of docs/superpowers/reports/ state counts their generators
+      # compute, so a generator change falsifies every report it has already written and
+      # nothing notices (issue #58: six reports left behind by 565a76f, and PR #59 then
+      # changed a generator and brought forward one of the seven reports it writes).
+      # `--skip-store` omits the ASS survey alone, which reads the local volume store that
+      # is never checked in; `npm run reports` regenerates that one wherever the store is.
+      - name: Report drift
+        run: |
+          npm run reports -- --skip-store
+          git diff --exit-code docs/superpowers/reports/

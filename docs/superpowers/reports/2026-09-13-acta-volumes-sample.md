@@ -477,14 +477,14 @@ the fixture prints it. No heading was left `unknown` (§1).
 | CONSTITUTIONES APOSTOLICAE | 1909, 1931, 1958, 1978, 2012 | Constitutiones Apostolicae | `papal-bull`+apostolic-constitution | yes | yes (apost_constitutions/apost-constitutions shelf, per pope) |
 | CONVENTIO | 1958, 1978 | Conventiones | — | no | no (not harvested) |
 | CONVENTIONES | 2012 | Conventiones | — | no | no (not harvested) |
-| EPISTOLA APOSTOLICA | 1931 | Epistulae Apostolicae | `apostolic-letter` (not motu-proprio) | yes | no: the twelve unmatched of 2015-2024 are on the year-partitioned letters shelf, not harvested for Francis (#4); the two of Pius XII wait with them |
+| EPISTOLA APOSTOLICA | 1931 | Epistulae Apostolicae | `apostolic-letter` (not motu-proprio,in-forma-brevis) | yes | no: the twelve unmatched of 2015-2024 are on the year-partitioned letters shelf, not harvested for Francis (#4); the two of Pius XII wait with them |
 | EPISTOLAE | 1917-I, 1931 | Epistulae | `letter` | partly | yes (letters shelf, per pope) |
 | EPISTULA ENCYCLICA | 1958 | Litterae Encyclicae | `encyclical` | yes | yes (encyclicals shelf, per pope) |
 | EPISTULAE | 1958, 1978 | Epistulae | `letter` | partly | yes (letters shelf, per pope) |
 | HOMILIAE | 1978, 2012 | Homiliae | `homily` | no | no (not harvested) |
 | LITTERAE APOSTOLICAE MOTU PROPRIO DATAE | 1978 | Litterae Apostolicae Motu proprio datae | `apostolic-letter`+motu-proprio | yes | yes (motu_proprio shelf, per pope) |
 | LITTERAE APOSTOLICAE «MOTU PROPRIO» DATAE | 2012 | Litterae Apostolicae Motu proprio datae | `apostolic-letter`+motu-proprio | yes | yes (motu_proprio shelf, per pope) |
-| LITTERAE APOSTOLICAE | 1909, 1917-I, 1931, 1958, 1978, 2012 | Litterae Apostolicae | `apostolic-letter` (not motu-proprio) | yes | yes (apost_letters shelf, per pope) |
+| LITTERAE APOSTOLICAE | 1909, 1917-I, 1931, 1958, 1978, 2012 | Litterae Apostolicae | `apostolic-letter` (not motu-proprio,in-forma-brevis) | yes | yes (apost_letters shelf, per pope) |
 | LITTERAE DECRETALES | 1978, 2012 | Litterae Decretales | `papal-bull` (not apostolic-constitution) | partly | yes (bulls shelf, per pope) |
 | LITTERAE ENCYCLICAE | 1909, 1917-I, 1931, 1958 | Litterae Encyclicae | `encyclical` | yes | yes (encyclicals shelf, per pope) |
 | MOTU PROPRIO | 1917-I, 1931, 1958 | Litterae Apostolicae Motu proprio datae | `apostolic-letter`+motu-proprio | yes | yes (motu_proprio shelf, per pope) |
@@ -606,7 +606,7 @@ None among the era's sources.
 | AAS 9-I (1917) 57 | Benedictus XV | 1916-01-13 | *Eximia fidelium* — Templum B. M. V. vulgo « del Pino » in Urbe « Las Palmas », Canariensis dioeceseos, ad Bas | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 58 | Benedictus XV | 1916-01-18 | *Romani Pontifices* — «Parvum sanctuarium Mariae Virginis perdolentis vulgo " Al Fiumícello „ », quod Neapoli ex | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 59 | Benedictus XV | 1916-02-16 | *Nihil est profecto* — Confraternitas sub titulo « Ligue de l'Evangile », in oppido « Montmagny », dioeceseos Ver | **shelf gap**: nothing of this date is harvested |
-| AAS 9-I (1917) 61 | Benedictus XV | 1916-02-25 | *Romanorum Pontificum* — Preces quaedam ad Ecclesiae unitatem a Domino impetrandam indulgentiis ditantur.... . . .  | **another act of the date**: the shelf has `mag:benedict-xv/romanorum-pontificum-1916` (*Romanorum Pontificum*) on 1916-02-25, under another incipit or class |
+| AAS 9-I (1917) 61 | Benedictus XV | 1916-02-25 | *Romanorum Pontificum* — Preces quaedam ad Ecclesiae unitatem a Domino impetrandam indulgentiis ditantur.... . . .  | **class mismatch**: the shelf files `mag:benedict-xv/romanorum-pontificum-1916` as apostolic-letter+in-forma-brevis; not matched by rule, a filing difference to adjudicate |
 | AAS 9-I (1917) 63 | Benedictus XV | 1916-04-27 | *Rhedonensi in Urbe* — Curiale templum Rhedonense, sub titulo SSmi Salvatoris et B. M. V. de miraculis et virtuti | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 64 | Benedictus XV | 1916-04-27 | *Conspicua Dei templa* — Titulus Basilicae minoris pro parochiali ecclesia Rhedonensi S. Albino Ep. et | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 66 | Benedictus XV | 1916-05-02 | *Dilectus filius Noster* — Sodalitio a catholica veritate, vulgo « Catholic truth society »,'in Anglia instituto, par | **shelf gap**: nothing of this date is harvested |
@@ -629,7 +629,7 @@ None among the era's sources.
 | AAS 9-I (1917) 320 | Benedictus XV | 1917-04 | *Dilectus filius* — Pio operi vulgo « Messbund » nuncupato indulgentiae in perpetuum conceduntur | **month-only date**: nothing of the class in 1917-04 is harvested |
 | AAS 9-I (1917) 321 | Benedictus XV | 1917-04 | *Supplices, sunt Nobis* — Sodalitati mulierum Bergomensi titulo B. M. V. a pietate et S. Vincentii a Paulo concedunt | **month-only date**: nothing of the class in 1917-04 is harvested |
 | AAS 9-I (1917) 214 | Benedictus XV | 1917-04 | *Si unquam alias* — Venerabili Servo Dei Iosepho Benedicto Cottolengo beatorum caelitum honores decernuntur | **month-only date**: nothing of the class in 1917-04 is harvested |
-| AAS 9-I (1917) 257 | Benedictus XV | 1917-04-10 | *Quod Ioannes* — Venerabili servae Dei Annae a S. Bartholomaeo, carmelitae excalceatae, beatorum caelitum h | **another act of the date**: the shelf has `mag:benedict-xv/quod-ioannes-1917` (*Quod Ioannes*) on 1917-04-10, under another incipit or class |
+| AAS 9-I (1917) 257 | Benedictus XV | 1917-04-10 | *Quod Ioannes* — Venerabili servae Dei Annae a S. Bartholomaeo, carmelitae excalceatae, beatorum caelitum h | **class mismatch**: the shelf files `mag:benedict-xv/quod-ioannes-1917` as apostolic-letter+in-forma-brevis; not matched by rule, a filing difference to adjudicate |
 | AAS 9-I (1917) 317 | Benedictus XV | 1917-04-12 | *Beati Petri Apostolorum Principis* — Sodalitati veritatis catholicae in Hibernia constitutae indulgentiae et privilegia in perp | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 323 | Benedictus XV | 1917-06-11 | *Supplices ad Nos* — Conceditur ut Ordinis Praedicatorum fratres, sorores et tertiarii in communi viventes acci | **shelf gap**: nothing of this date is harvested |
 | AAS 9-I (1917) 369 | Benedictus XV | 1917-06-12 | *Extat Granatae* — Indulgentia plenaria quotidiana Basilicae Granatensi S. Ioannis de Deo in perpetuum conced | **shelf gap**: nothing of this date is harvested |
@@ -1484,8 +1484,8 @@ the shelf's ordinals are what a pass over the shelf records alone assigns; no mi
 
 | Reference | Pope | Date | Category | Entry | Candidates | Note |
 |---|---|---|---|---|---|---|
-| AAS 9-I (1917) 61 | Benedictus XV | 1916-02-25 | Litterae Apostolicae | *Romanorum Pontificum* | `mag:benedict-xv/romanorum-pontificum-1916` (*Romanorum Pontificum*) | a same-date record carries the entry's incipit as brief; the shelf and the Acta disagree about the class (discussion #30) |
-| AAS 9-I (1917) 257 | Benedictus XV | 1917-04-10 | Litterae Apostolicae | *Quod Ioannes* | `mag:benedict-xv/quod-ioannes-1917` (*Quod Ioannes*) | a same-date record carries the entry's incipit as brief; the shelf and the Acta disagree about the class (discussion #30) |
+| AAS 9-I (1917) 61 | Benedictus XV | 1916-02-25 | Litterae Apostolicae | *Romanorum Pontificum* | `mag:benedict-xv/romanorum-pontificum-1916` (*Romanorum Pontificum*) | a same-date record carries the entry's incipit as apostolic-letter+in-forma-brevis; the shelf and the Acta disagree about the class (discussion #30) |
+| AAS 9-I (1917) 257 | Benedictus XV | 1917-04-10 | Litterae Apostolicae | *Quod Ioannes* | `mag:benedict-xv/quod-ioannes-1917` (*Quod Ioannes*) | a same-date record carries the entry's incipit as apostolic-letter+in-forma-brevis; the shelf and the Acta disagree about the class (discussion #30) |
 
 </details>
 
@@ -1687,11 +1687,12 @@ not harvested, homilies, allocutions) is counted in §3.
 
 </details>
 
-<details><summary><b>1917-I</b> — 2 without an entry (apostolic-letter+motu-proprio 1; brief 1); 1 of the formal genres listed</summary>
+<details><summary><b>1917-I</b> — 2 without an entry (apostolic-letter+motu-proprio 1; apostolic-letter+in-forma-brevis 1); 2 of the formal genres listed</summary>
 
 | Document | Date | Class | Index entries on this date | Reading |
 |---|---|---|---|---|
 | `mag:benedict-xv/nobilissimam-sacrarum-1917` | 1917-04-08 | apostolic-letter+motu-proprio | — | a month-only entry of 1917-04 may be it (AAS 9-I (1917) 262: *Quae omnia*; AAS 9-I (1917) 320: *Dilectus filius*; AAS 9-I (1917) 321: *Supplices, sunt Nobis*; AAS 9-I (1917) 214: *Si unquam alias*; AAS 9-I (1917) 209: *Nobilissimam sacrarum aedium*) |
+| `mag:benedict-xv/quod-ioannes-1917` | 1917-04-10 | apostolic-letter+in-forma-brevis | Litterae Apostolicae (AAS 9-I (1917) 257: *Quod Ioannes*) | class mismatch or another act of the date (§6) |
 
 </details>
 
