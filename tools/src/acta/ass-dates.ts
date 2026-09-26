@@ -73,7 +73,7 @@ export function assDate(text: string, span: { from: number; to: number }): strin
   // the same letter set the token itself admits, so it does not end early on one of them.
   const NOT_ROMAN_LETTER = 'A-Za-zìíîïÌÍÎÏ';
   const latin = t
-    .replace(/\b(?:An|an|ann|a)\.\s+(?=[MDCLXVIGHNmdclxvighn])/g, 'anno ')
+    .replace(/\b(?:[AaÂâ]n{0,2})\.\s+(?=[MDCLXVIGHNmdclxvighn])/g, 'anno ')
     .replace(/\b(die\s+[A-Za-zìíîï0-9]{1,6})\.\s+(?=[A-Za-z])/g, '$1 ')
     .replace(/\bMCM\b/g, 'MDCCCC')
     .replace(/\b(die)\s+([A-Za-zìíîï]{1,6})\b/g, (m, lead: string, tok: string) => (ROMAN_TOKEN.test(tok) && needsRepair.test(tok) ? `${lead} ${repairRoman(tok)}` : m))

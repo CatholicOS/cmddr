@@ -102,6 +102,29 @@
       "series": "ASS",
       "volume": 13,
       "year": 1880,
+      "page": 241,
+      "pope": "Leo XIII",
+      "category": "EPISTOLA ENCYCLICA",
+      "date": "1880-12-03",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "AD PATRIARCHAS PRIMATES ARCHIEPISCOPOS ET EPISCOPOS VNIVERSOS CATHOLICI ORBIS GRATIAM ET COMMUNIONEM CVM APOSTOLICA SEDE HABENTES.",
+      "raw": "SANCTISSIMI DOMINI NOSTRI / LEONIS / DIVINA PROVIDENTIA / PAPAE XIII. / EPISTOLA ENCYCLICA / AD PATRIARCHAS PRIMATES / ARCHIEPISCOPOS ET EPISCOPOS VNIVERSOS CATHOLICI ORBIS / GRATIAM ET COMMUNIONEM CVM APOSTOLICA SEDE HABENTES.",
+      "opening": "(Jancta Dei civitas quae est Ecclesia,cum nullis regionum",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "SANCTISSIMI DOMINI NOSTRI / LEONIS / DIVINA PROVIDENTIA / PAPAE XIII. / EPISTOLA ENCYCLICA / AD PATRIARCHAS PRIMATES / ARCHIEPISCOPOS ET EPISCOPOS VNIVERSOS CATHOLICI ORBIS / GRATIAM ET COMMUNIONEM CVM APOSTOLICA SEDE HABENTES.",
+        "salutation": null,
+        "opening": "(Jancta Dei civitas quae est Ecclesia,cum nullis regionum fi­",
+        "dateline": "Datum Romae apud s. Petrum die III Decembris A. MDCCCLXXX, Pontificatus NostriAnno Tertio.",
+        "header": "241"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 13,
+      "year": 1880,
       "page": 248,
       "pope": "Leo XIII",
       "category": "LITTERAE",
@@ -165,6 +188,29 @@
         "opening": "Non sine",
         "dateline": "Datum Romae apud s. Petrum die 31 Maii 1880, Pontificatus Nostri Anno Tertio. LEO PP. XIII.",
         "header": "338 LITTERAE"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 13,
+      "year": 1880,
+      "page": 385,
+      "pope": "Leo XIII",
+      "category": "LITTERAE APOSTOLICAE",
+      "date": "1881-03-12",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "QUIBUS EXTRAORDINARIUM IUBILAEUM INDICITUR",
+      "raw": "SANCTISSIMI DOMINI NOSTRI / LEONIS / DIVINA PROVIDENTIA / PAPAE XIII / LITTERAE APOSTOLICAE / QUIBUS EXTRAORDINARIUM IUBILAEUM INDICITUR",
+      "opening": "Venerabiles Fratres, et dilecti Filii Militans Iesu Christi",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "SANCTISSIMI DOMINI NOSTRI / LEONIS / DIVINA PROVIDENTIA / PAPAE XIII / LITTERAE APOSTOLICAE / QUIBUS EXTRAORDINARIUM IUBILAEUM INDICITUR",
+        "salutation": "LEO PP. XIII.",
+        "opening": "Venerabiles Fratres, et dilecti Filii",
+        "dateline": "Datum Romae apud s. Petrum sub annulo Piscatoris die XII Martii A. MDCCCLXXXI, Pontificatus Nostri anno Quarto.",
+        "header": "385"
       }
     },
     {
@@ -237,22 +283,6 @@
       "lines": [
         "SANCTISSIMI DOMINI NOSTRI / LEONIS / DIVINA PROVIDENTIA / PAPAE XIII. / EPISTOLA / AD HIPPOLYTUM S. R. E. PRESBYTERUM CARDINALEM GUIBERT / ARCHIEPISCOPUM PARISIENSEM.",
         "Datum Romae apud S. Petrum die XXII Octobris Â. MDCCCLXXX, Pontificatus Nostri Anno tertio. LEO PP. XIII."
-      ]
-    },
-    {
-      "page": 241,
-      "reason": "no-date",
-      "lines": [
-        "SANCTISSIMI DOMINI NOSTRI / LEONIS / DIVINA PROVIDENTIA / PAPAE XIII. / EPISTOLA ENCYCLICA / AD PATRIARCHAS PRIMATES / ARCHIEPISCOPOS ET EPISCOPOS VNIVERSOS CATHOLICI ORBIS / GRATIAM ET COMMUNIONEM CVM APOSTOLICA SEDE HABENTES.",
-        "Datum Romae apud s. Petrum die III Decembris A. MDCCCLXXX, Pontificatus NostriAnno Tertio."
-      ]
-    },
-    {
-      "page": 385,
-      "reason": "no-date",
-      "lines": [
-        "SANCTISSIMI DOMINI NOSTRI / LEONIS / DIVINA PROVIDENTIA / PAPAE XIII / LITTERAE APOSTOLICAE / QUIBUS EXTRAORDINARIUM IUBILAEUM INDICITUR",
-        "Datum Romae apud s. Petrum sub annulo Piscatoris die XII Martii A. MDCCCLXXXI, Pontificatus Nostri anno Quarto."
       ]
     },
     {
@@ -365,9 +395,11 @@
       56,
       154,
       198,
+      241,
       248,
       337,
       338,
+      385,
       433,
       529
     ],
@@ -388,19 +420,9 @@
         "raw": "Epistola SSmi D. N. Leonis Pa­ / pae XIII ad Hyppolitum S. R. E. / Presbyterum Cardinalem Gui­ / bert, Archiepiscopum Parisien­ / sem. ; » 193"
       },
       {
-        "description": "Epistola Encyclica SSmi D. N. Leonis Papae XIII, ad Patriarcha?,Primates, Archiepiscopos et Episcopos universos Catholici Orbis,gratiam et communionem cum Apostolica Sede habentes.",
-        "page": 241,
-        "raw": "Epistola Encyclica SSmi D. N. Leo­ / nis Papae XIII, ad Patriarcha?,Pri­ / mates, Archiepiscopos et Episco­ / pos universos Catholici Orbis,gra­ / tiam et communionem cum Apo­ / stolica Sede habentes. . » 241"
-      },
-      {
         "description": "Litterae SSmi D. N. Leonis Papae XIII, quibus iurisdictio spiritualis et titulus Episcopi Tornacensis absolute adimuntur Praesuli Edmundo Dumont",
         "page": 289,
         "raw": "Litterae SSmi D. N. Leonis Pa­ / pae XIII, quibus iurisdictio spi­ / ritualis et titulus Episcopi Tor­ / nacensis absolute adimuntur Prae­ / suli Edmundo Dumont . » 289"
-      },
-      {
-        "description": "Litterae Apostolicae SSmi D. N. Leonis Papae XIII, quibus extraordinarium Iubilaeum indicitur",
-        "page": 385,
-        "raw": "Litterae Apostolicae SSmi D. N. Leo­ / nis Papae XIII, quibus extraordi­ / narium Iubilaeum indicitur.» 385"
       },
       {
         "description": "Constitutio SSmi D. N. Leonis Papae XIII, qua nonnulla controversiarum capita inter Episcopos et Missionarios Regulares Angliae et Scotiae definiuntur.",

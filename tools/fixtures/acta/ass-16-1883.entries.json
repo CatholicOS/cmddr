@@ -10,6 +10,29 @@
       "series": "ASS",
       "volume": 16,
       "year": 1883,
+      "page": 113,
+      "pope": "Leo XIII",
+      "category": "EPISTOLA ENCYCLICA",
+      "date": "1883-09-01",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SSmi D. N. Leonis XIII qua mandat atque de­ cernit ut hoc anno peculiari religione solemnia celebrentur Dei­ parae Mariae Virgini a Rosario.",
+      "raw": "EPÌSTOLA ENCYCLICA SSmi D. N. Leonis XIII qua mandat atque de­ / cernit ut hoc anno peculiari religione solemnia celebrentur Dei­ / parae Mariae Virgini a Rosario.",
+      "opening": "Supremi Apostolatus officio quo fungimur et longe difficili",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "EPÌSTOLA ENCYCLICA SSmi D. N. Leonis XIII qua mandat atque de­ / cernit ut hoc anno peculiari religione solemnia celebrentur Dei­ / parae Mariae Virgini a Rosario.",
+        "salutation": "LEO PP. XIII",
+        "opening": "Supremi Apostolatus officio quo fungimur et longe difficili horum",
+        "dateline": "Datum Romae apud s. Petrum die i Septembris A. MDCCCLXXXIII. Pontificatus Nostri Anno Sexto.",
+        "header": "iti"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 16,
+      "year": 1883,
       "page": 353,
       "pope": "Leo XIII",
       "category": "ALLOCUTIO",
@@ -91,14 +114,6 @@
       "lines": [
         "Datum Romae, apud s. Mariam Maiorem, sub annulo Piscatoris,",
         "die XI Augusti MDCLXXXIII, Pontificatus Nostri anno VII."
-      ]
-    },
-    {
-      "page": 113,
-      "reason": "no-date",
-      "lines": [
-        "EPÌSTOLA ENCYCLICA SSmi D. N. Leonis XIII qua mandat atque de­ / cernit ut hoc anno peculiari religione solemnia celebrentur Dei­ / parae Mariae Virgini a Rosario.",
-        "Datum Romae apud s. Petrum die i Septembris A. MDCCCLXXXIII. Pontificatus Nostri Anno Sexto."
       ]
     },
     {
@@ -200,6 +215,7 @@
       }
     ],
     "omitted": [
+      113,
       353
     ]
   }

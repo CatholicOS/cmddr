@@ -312,7 +312,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Sancta Dei Civitas",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 13,
+      "year": 1880,
+      "page": 241
+    }
   },
   {
     "id": "mag:leo-xiii/pro-religione-et-pro-ecclesia-1881",
@@ -566,7 +572,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Supremi Apostolatus Officio",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 16,
+      "year": 1883,
+      "page": 113
+    }
   },
   {
     "id": "mag:leo-xiii/nobilissima-gallorum-gens-1884",
