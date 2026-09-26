@@ -22,7 +22,14 @@ const allDocs = readdirSync('data/documents').filter((f) => f.endsWith('.json'))
   .flatMap((f) => JSON.parse(readFileSync(`data/documents/${f}`, 'utf8')) as DocumentRecord[])
   .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
 
-const { parsed } = loadActaIndexes(ACTA_SOURCES.filter((s) => s.kind !== 'ass'));
+const { parsed, missing } = loadActaIndexes(ACTA_SOURCES.filter((s) => s.kind !== 'ass'));
+// §2's headline counts every non-ASS source, so a missing fixture would silently shrink them --
+// 107 headings over 116 sources becomes a smaller pair with nothing to say it was measured over
+// less. The report is not written at all in that case (CodeRabbit on PR #61).
+if (missing.length > 0) {
+  console.error(`acta-conciliar-report: no fixture for ${missing.join(', ')}. Every non-ASS source must be present, since §2 counts them; fetch them (tools/fetch-acta.sh) before regenerating.`);
+  process.exit(1);
+}
 
 const out: string[] = [];
 const p = (s = '') => out.push(s);
@@ -114,12 +121,16 @@ p();
 // ---------------------------------------------------------------- §3
 p('## 3. Every entry of the four parts, and the document it names');
 p();
-p('| Source | Entry, as the fixture prints it | Page | Document |');
+// The page column is **the index's own**, read off the entry beside it, not the page the row cites:
+// the two differ for *Ad gentes* alone, and a cell reading 947 next to a line ending in 948 read as a
+// contradiction within one row. §5 gives what each row cites, and names that divergence
+// (CodeRabbit on PR #61).
+p('| Source | Entry, as the fixture prints it | The index\'s page | Document |');
 p('|---|---|---|---|');
 for (const e of entries) {
   for (const line of e.lines) {
     const row = rowFor(line);
-    p(`| AAS ${e.vol} (${e.year}) | \`${md(line)}\` | ${row ? row[1].acta.page : pageOf(line)} | ${row ? `\`${row[0]}\`` : '**no record** — §6' } |`);
+    p(`| AAS ${e.vol} (${e.year}) | \`${md(line)}\` | ${pageOf(line)} | ${row ? `\`${row[0]}\`` : '**no record** — §6' } |`);
   }
 }
 p();

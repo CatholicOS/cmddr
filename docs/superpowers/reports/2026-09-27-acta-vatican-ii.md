@@ -24,7 +24,7 @@ Those four parts hold **18 entries** — AAS 54 1, AAS 56 2, AAS 57 3, AAS 58 12
 
 ## 3. Every entry of the four parts, and the document it names
 
-| Source | Entry, as the fixture prints it | Page | Document |
+| Source | Entry, as the fixture prints it | The index's page | Document |
 |---|---|---|---|
 | AAS 54 (1962) | `Nuntius ad universos homines, Summo Pontifice assentiente, missus, Concilio Oecu­ menico ineunte 822` | 822 | **no record** — §6 |
 | AAS 56 (1964) | `1963 Dec. 4 Constitutio de Sacra Liturgia 97` | 97 | `mag:vatican-ii/sacrosanctum-concilium-1963` |
@@ -40,7 +40,7 @@ Those four parts hold **18 entries** — AAS 54 1, AAS 56 2, AAS 57 3, AAS 58 12
 | AAS 58 (1966) | `» Nov. 18 Constitutio dogmatica de divina Revelatione 817` | 817 | `mag:vatican-ii/dei-verbum-1965` |
 | AAS 58 (1966) | `» » Decretum de apostolatu laicorum 837` | 837 | `mag:vatican-ii/apostolicam-actuositatem-1965` |
 | AAS 58 (1966) | `» Dec. 7 Declaratio de libertate religiosa 929` | 929 | `mag:vatican-ii/dignitatis-humanae-1965` |
-| AAS 58 (1966) | `» » , » Decretum de activitate missionali Ecclesiae . . . . . . . 948` | 947 | `mag:vatican-ii/ad-gentes-1965` |
+| AAS 58 (1966) | `» » , » Decretum de activitate missionali Ecclesiae . . . . . . . 948` | 948 | `mag:vatican-ii/ad-gentes-1965` |
 | AAS 58 (1966) | `» » » Decretum de presbyterorum ministerio et vita , 991` | 991 | `mag:vatican-ii/presbyterorum-ordinis-1965` |
 | AAS 58 (1966) | `-» » » Constitutio pastoralis de Ecclesia in mundo huius temporis . . 1025` | 1025 | `mag:vatican-ii/gaudium-et-spes-1965` |
 | AAS 58 (1966) | `•» » 8 Nuntii a Patribus Oecumenicae Synodi hominibus missi e variis socialibus humanae consortionis ordinibus 10` | 10 | **no record** — §6 |
