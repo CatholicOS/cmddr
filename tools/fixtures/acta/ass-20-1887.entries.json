@@ -102,6 +102,29 @@
       "series": "ASS",
       "volume": 20,
       "year": 1887,
+      "page": 257,
+      "pope": "Leo XIII",
+      "category": "LITTERAE",
+      "date": "1887-12-22",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Sanctissimi D. N. Leonis XIII ad Archiepiscopos et Episcopos Bavariae.",
+      "raw": "LITTERAE Sanctissimi D. N. Leonis XIII ad Archiepiscopos / et Episcopos Bavariae.",
+      "opening": "Officio sanctissimo adducti muneris Apostolici, multum diuque, ipsi",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE Sanctissimi D. N. Leonis XIII ad Archiepiscopos / et Episcopos Bavariae.",
+        "salutation": null,
+        "opening": "Officio sanctissimo adducti muneris Apostolici, multum diuque,",
+        "dateline": "Datum Romae apud S. Petrum, die XXII. Dec. an. MDCCCLXXXVII. Pontificatus Nostri Decimo.",
+        "header": "257"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 20,
+      "year": 1887,
       "page": 369,
       "pope": "Leo XIII",
       "category": "LITTERAE IN FORMA BREVIS",
@@ -216,14 +239,6 @@
   ],
   "defects": [
     {
-      "page": 257,
-      "reason": "no-date",
-      "lines": [
-        "LITTERAE Sanctissimi D. N. Leonis XIII ad Archiepiscopos / et Episcopos Bavariae.",
-        "Datum Romae apud S. Petrum, die XXII. Dec. an. MDCCCLXXXVII. Pontificatus Nostri Decimo."
-      ]
-    },
-    {
       "page": 305,
       "reason": "no-date",
       "lines": [
@@ -269,6 +284,7 @@
       161,
       209,
       217,
+      257,
       369,
       419,
       559,

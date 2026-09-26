@@ -28,6 +28,29 @@
         "dateline": "Datum Romae apud S. Petrum die 1 Augusti An. MDCCCLXXXII. Pontificatus Nostri anno quinto.",
         "header": "97"
       }
+    },
+    {
+      "series": "ASS",
+      "volume": 15,
+      "year": 1882,
+      "page": 193,
+      "pope": "Leo XIII",
+      "category": "MOTU PROPRIO",
+      "date": "1882-12-08",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SS. D. N. LEONIS XIII ; quo in Aedibus Vaticanis instituitur Tribunal ad dirimendas controversias, quae enasci possent, contractuum causa, cum administratione Aedium earumdem.",
+      "raw": "MOTU PROPRIO / SS. D. N. LEONIS XIII ; quo in Aedibus Vaticanis instituitur Tribunal / ad dirimendas controversias, quae enasci possent, contractuum / causa, cum administratione Aedium earumdem.",
+      "opening": "u Nella penosa e diffìcile si­ In per",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "MOTU PROPRIO / SS. D. N. LEONIS XIII ; quo in Aedibus Vaticanis instituitur Tribunal / ad dirimendas controversias, quae enasci possent, contractuum / causa, cum administratione Aedium earumdem.",
+        "salutation": null,
+        "opening": "u Nella penosa e diffìcile si­ In per difficili aerumnisque",
+        "dateline": "Datum Romae aquds.Petrum die VIII decem. A. MDCCCLXXXII. Pontificatus Nostri Anno Quinto.",
+        "header": "MOTU PROPRIO"
+      }
     }
   ],
   "defects": [
@@ -45,14 +68,6 @@
       "lines": [
         "Datum Romae apud S.Petrum die xvii septembris An. MDCCCLXXXII,",
         "Pontificatus Nostri anno Quinto."
-      ]
-    },
-    {
-      "page": 193,
-      "reason": "no-date",
-      "lines": [
-        "MOTU PROPRIO / SS. D. N. LEONIS XIII ; quo in Aedibus Vaticanis instituitur Tribunal / ad dirimendas controversias, quae enasci possent, contractuum / causa, cum administratione Aedium earumdem.",
-        "Datum Romae aquds.Petrum die VIII decem. A. MDCCCLXXXII. Pontificatus Nostri Anno Quinto."
       ]
     },
     {
@@ -153,18 +168,14 @@
       }
     ],
     "claimed": [
-      97
+      97,
+      193
     ],
     "unclaimed": [
       {
         "description": "Epistola Encyclica SSmi D. N. Leonis XIII de s. Francisco Assi- siensi et de tertio Franciscalium ordine propagando .",
         "page": 145,
         "raw": "Epistola Encyclica SSmi D. N. Leo­ / nis XIII de s. Francisco Assi- / siensi et de tertio Franciscalium / ordine propagando . . » 145"
-      },
-      {
-        "description": "Motu proprio SSmi D. N. Leonis XIII, quo in Aedibus Vaticanis instituitur Tribunal ad dirimendas controversias, quae e- nasci possent, contractuum causa, cum administratione Aedium earumdem •",
-        "page": 193,
-        "raw": "Motu proprio SSmi D. N. Leo­ / nis XIII, quo in Aedibus Vati­ / canis instituitur Tribunal ad di­ / rimendas controversias, quae e- / nasci possent, contractuum causa, / cum administratione Aedium ea­ / rumdem •.. » 193"
       },
       {
         "description": "Epistola Encyclica SSmi D. N. Leonis Papae XIII ad venerabiles fratres Archiepiscopos et Episcopos universos in regione Hispana",

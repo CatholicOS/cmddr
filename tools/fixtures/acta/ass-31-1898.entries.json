@@ -148,6 +148,29 @@
       "series": "ASS",
       "volume": 31,
       "year": 1898,
+      "page": 264,
+      "pope": "Leo XIII",
+      "category": "LITTERAE",
+      "date": "1898-11-25",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SSmi D. N. Leonis Papae XIII ad Ministrum generalem Ordinis Fratrum Minorum de doctrina divi Thomae aquinatis sequenda.",
+      "raw": "LITTERAE SSmi D. N. Leonis Papae XIII ad Ministrum generalem Ordinis Fratrum / Minorum de doctrina divi Thomae aquinatis sequenda.",
+      "opening": "Nostra erga Fratres Minores pridem sane suscepta ac",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE SSmi D. N. Leonis Papae XIII ad Ministrum generalem Ordinis Fratrum / Minorum de doctrina divi Thomae aquinatis sequenda.",
+        "salutation": null,
+        "opening": "Nostra erga Fratres Minores pridem sane suscepta ac mul­",
+        "dateline": "' Datum Romae apud S. Petrum die xxv Nov. an. MDCCCXCVIII, Pontificatus Nostri vicesimo primo.",
+        "header": "264"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 31,
+      "year": 1898,
       "page": 267,
       "pope": "Leo XIII",
       "category": "ALLOCUTIO",
@@ -264,14 +287,6 @@
       ]
     },
     {
-      "page": 264,
-      "reason": "no-date",
-      "lines": [
-        "LITTERAE SSmi D. N. Leonis Papae XIII ad Ministrum generalem Ordinis Fratrum / Minorum de doctrina divi Thomae aquinatis sequenda.",
-        "' Datum Romae apud S. Petrum die xxv Nov. an. MDCCCXCVIII, Pontificatus Nostri vicesimo primo."
-      ]
-    },
-    {
       "page": 321,
       "reason": "no-date",
       "lines": [
@@ -368,6 +383,7 @@
       129,
       146,
       193,
+      264,
       470,
       513,
       646
@@ -377,11 +393,6 @@
         "description": "Constitutio Apostolica SSmi D. N. Leonis XIII de legibus, iuribus ac privilegiis Sodalitatis a Sanctissimo Rosario",
         "page": 257,
         "raw": "Constitutio Apostolica SSmi D. N. / Leonis XIII de legibus, iuribus / ac privilegiis Sodalitatis a San­ / ctissimo Rosario ..... 257"
-      },
-      {
-        "description": "Litterae SSmi D. N. Leonis XIII ad Ministrum generalem Ordinis Fratrum Minorum de doctrina divi Thomae Aquinatis sequenda",
-        "page": 264,
-        "raw": "Litterae SSmi D. N. Leonis XIII ad / Ministrum generalem Ordinis Fra­ / trum Minorum de doctrina divi / Thomae Aquinatis sequenda. 264"
       },
       {
         "description": "Litterae SSmi D. N. Leonis XIII ad Ordinarios Americae Latinae, qui Romam deligunt pro consiliis inter eosdem habendis",

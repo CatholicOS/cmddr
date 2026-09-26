@@ -125,6 +125,29 @@
       "series": "ASS",
       "volume": 26,
       "year": 1893,
+      "page": 199,
+      "pope": "Leo XIII",
+      "category": "EPISTOLA",
+      "date": "1893-10-25",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SSmi D. N. Leonis Papae XIII ad Episcopos Hispaniae; de Urbano clericorum hispaniensem collegio erigendo.",
+      "raw": "EPISTOLA SSmi D. N. Leonis Papae XIII ad Episcopos Hispaniae; de Urbano / clericorum hispaniensem collegio erigendo.",
+      "opening": "Non mediocri cura vigilantiaque, ut nostis, vixdum ad",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "EPISTOLA SSmi D. N. Leonis Papae XIII ad Episcopos Hispaniae; de Urbano / clericorum hispaniensem collegio erigendo.",
+        "salutation": null,
+        "opening": "Non mediocri cura vigilantiaque, ut nostis, vixdum ad Ec­",
+        "dateline": "Datum Romae apud S. Petrum, die xxv Oct. an. MDCCCXCIII, Pontificatus Nostri decimo sexto.",
+        "header": "EPISTOLA ENCYCLICA 199"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 26,
+      "year": 1893,
       "page": 439,
       "pope": "Leo XIII",
       "category": "LITTERAE",
@@ -216,14 +239,6 @@
   ],
   "defects": [
     {
-      "page": 199,
-      "reason": "no-date",
-      "lines": [
-        "EPISTOLA SSmi D. N. Leonis Papae XIII ad Episcopos Hispaniae; de Urbano / clericorum hispaniensem collegio erigendo.",
-        "Datum Romae apud S. Petrum, die xxv Oct. an. MDCCCXCIII, Pontificatus Nostri decimo sexto."
-      ]
-    },
-    {
       "page": 269,
       "reason": "no-date",
       "lines": [
@@ -254,6 +269,7 @@
       79,
       129,
       168,
+      199,
       439,
       449,
       523,

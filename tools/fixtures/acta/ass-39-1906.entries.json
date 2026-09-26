@@ -746,6 +746,29 @@
       "series": "ASS",
       "volume": 39,
       "year": 1906,
+      "page": 257,
+      "pope": "Pius X",
+      "category": "EPISTOLA",
+      "date": "1904-11-11",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Pii PP. X ad Praesidem conventus Sodalitatum Marialium ex Hispania et America.",
+      "raw": "EPISTOLA / Pii PP. X ad Praesidem conventus Sodalitatum Marialium / ex Hispania et America.",
+      "opening": "Barcinonem conventuris propemodum ex Hispania et America filiis",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "EPISTOLA / Pii PP. X ad Praesidem conventus Sodalitatum Marialium / ex Hispania et America.",
+        "salutation": "PIUS PP. x",
+        "opening": "Barcinonem conventuris propemodum ex Hispania et Ame­",
+        "dateline": "Datum Romae apud S. Petrum, die xi Nov. MDCCCCIV, Pontificatus Nostri anno secundo.",
+        "header": "ACTA ROMANI PONTIFICIS"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 39,
+      "year": 1906,
       "page": 258,
       "pope": "Pius X",
       "category": "EPISTOLA",
@@ -1478,14 +1501,6 @@
       ]
     },
     {
-      "page": 257,
-      "reason": "no-date",
-      "lines": [
-        "EPISTOLA / Pii PP. X ad Praesidem conventus Sodalitatum Marialium / ex Hispania et America.",
-        "Datum Romae apud S. Petrum, die xi Nov. MDCCCCIV, Pontificatus Nostri anno secundo."
-      ]
-    },
-    {
       "page": 259,
       "reason": "no-date",
       "lines": [
@@ -1950,6 +1965,7 @@
       197,
       199,
       201,
+      257,
       258,
       261,
       332,
@@ -2028,11 +2044,6 @@
         "description": "Epistola Pii X gratias agentis Eugenio archiduci Austriae pro legatis Equitibus ex Teutonico Ordine",
         "page": 200,
         "raw": "Epistola Pii X gratias agentis Eugenio archiduci Austriae pro le­ / gatis Equitibus ex Teutonico Ordine » 200"
-      },
-      {
-        "description": "Epistola Pii X ad Praesidem conventus Sodalitatum Marialium ex Hispania et America",
-        "page": 257,
-        "raw": "Epistola Pii X ad Praesidem conventus Sodalitatum Marialium ex / Hispania et America > 257"
       },
       {
         "description": "Epistola qua Pius X laudibus ornat editorem Bullarii Gregorii XVI",

@@ -79,6 +79,29 @@
       "series": "ASS",
       "volume": 25,
       "year": 1892,
+      "page": 66,
+      "pope": "Leo XIII",
+      "category": "LITTERAE",
+      "date": "1892-06-22",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "SSmi. D. N. Leonis XIII ad Episcopum gratianopolitanum: quibus gaudium depromit de comitiis iuventutis catholicae habitis sub Ordinarii eiusdem prae­ sidentia.",
+      "raw": "LITTERAE SSmi. D. N. Leonis XIII ad Episcopum gratianopolitanum: quibus gaudium / depromit de comitiis iuventutis catholicae habitis sub Ordinarii eiusdem prae­ / sidentia.",
+      "opening": "Nous ne voulons pas tarder vous exprimer, Vénérable",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE SSmi. D. N. Leonis XIII ad Episcopum gratianopolitanum: quibus gaudium / depromit de comitiis iuventutis catholicae habitis sub Ordinarii eiusdem prae­ / sidentia.",
+        "salutation": null,
+        "opening": "Nous ne voulons pas tarder à vous exprimer, Vénérable",
+        "dateline": "i Dat. Romae, die XXII Iunii Anno Dñi MDCCCXCII, Pontificatus nostri XV. LEO PP. XIII.",
+        "header": "66 LITTERAE"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 25,
+      "year": 1892,
       "page": 139,
       "pope": "Leo XIII",
       "category": "EPISTOLA ENCYCLICA",
@@ -119,6 +142,29 @@
         "opening": "Suffra­",
         "dateline": "Datum Romae apud S. Petrum die 12 Octobris anno 1892, Pontificatus Nostri quintodecimo.",
         "header": "193"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 25,
+      "year": 1892,
+      "page": 267,
+      "pope": "Leo XIII",
+      "category": "LITTERAE",
+      "date": "1892-10-31",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Sanctissimi D. N. Leonis XIII ad Episcopum aurelianensem, quibus fovetur ad currendam incoeptam viam, posthabitis obstaculis.",
+      "raw": "LITTERAE Sanctissimi D. N. Leonis XIII ad Episcopum aurelianensem, quibus fovetur / ad currendam incoeptam viam, posthabitis obstaculis.",
+      "opening": "Vos lettres en date du 25 octobre ont",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE Sanctissimi D. N. Leonis XIII ad Episcopum aurelianensem, quibus fovetur / ad currendam incoeptam viam, posthabitis obstaculis.",
+        "salutation": null,
+        "opening": "Vos lettres en date du 25 octobre ont admirablement ré­",
+        "dateline": "Dat. Romae ad S. Petri die xxxi Octobris anno Dñi MDCCCXCII. Pontificatus nostri xv. LEO PAPA XIII.",
+        "header": "267"
       }
     },
     {
@@ -224,22 +270,6 @@
       ]
     },
     {
-      "page": 66,
-      "reason": "no-date",
-      "lines": [
-        "LITTERAE SSmi. D. N. Leonis XIII ad Episcopum gratianopolitanum: quibus gaudium / depromit de comitiis iuventutis catholicae habitis sub Ordinarii eiusdem prae­ / sidentia.",
-        "i Dat. Romae, die XXII Iunii Anno Dñi MDCCCXCII, Pontificatus nostri XV. LEO PP. XIII."
-      ]
-    },
-    {
-      "page": 267,
-      "reason": "no-date",
-      "lines": [
-        "LITTERAE Sanctissimi D. N. Leonis XIII ad Episcopum aurelianensem, quibus fovetur / ad currendam incoeptam viam, posthabitis obstaculis.",
-        "Dat. Romae ad S. Petri die xxxi Octobris anno Dñi MDCCCXCII. Pontificatus nostri xv. LEO PAPA XIII."
-      ]
-    },
-    {
       "page": 274,
       "reason": "no-date",
       "lines": [
@@ -317,24 +347,16 @@
     ],
     "claimed": [
       3,
+      66,
       139,
       193,
+      267,
       273,
       385,
       713,
       716
     ],
     "unclaimed": [
-      {
-        "description": "Motu proprio D. N. Leonis XIII de theologica disciplina in Semi- rio Vaticano constituenda » (55 Litterae SSmi D. N. Leonis XIII ad Episcopum gratianopolitanum, quibus gaudium depromit de comitiis iuventutis catholicae, habitis sub Ordinarii eiusdem praesidentia",
-        "page": 66,
-        "raw": "Motu proprio D. N. Leonis XIII de / theologica disciplina in Semi- / rio Vaticano constituenda » (55 / Litterae SSmi D. N. Leonis XIII ad / Episcopum gratianopolitanum, / quibus gaudium depromit de / comitiis iuventutis catholicae, / habitis sub Ordinarii eiusdem / praesidentia » 66"
-      },
-      {
-        "description": "Litterae SSmi D. N. Leonis XIII ad Episcopum aurelianensem, quibus fovetur ad currendam incoeptam viam, posthabitis obstaculis",
-        "page": 267,
-        "raw": "Litterae SSmi D. N. Leonis XIII / ad Episcopum aurelianensem, / quibus fovetur ad currendam / incoeptam viam, posthabitis ob­ / staculis » 267"
-      },
       {
         "description": "Epistolae SSmi D. N. Leonis XIII ad Episcopos Italiae quoad sectam massonicam",
         "page": 274,

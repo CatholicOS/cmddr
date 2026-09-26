@@ -726,7 +726,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Immortale Dei",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 18,
+      "year": 1885,
+      "page": 161
+    }
   },
   {
     "id": "mag:leo-xiii/spectata-fides-1885",
@@ -840,7 +846,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Non senza",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 18,
+      "year": 1885,
+      "page": 387
+    }
   },
   {
     "id": "mag:leo-xiii/dolemus-inter-1886",
@@ -2622,7 +2634,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Quam gratae",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 25,
+      "year": 1892,
+      "page": 66
+    }
   },
   {
     "id": "mag:leo-xiii/quarto-abeunte-saeculo-1892",
@@ -2744,7 +2762,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Literae tuae",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 25,
+      "year": 1892,
+      "page": 267
+    }
   },
   {
     "id": "mag:leo-xiii/agnovimus-libenter-1892",
@@ -3399,7 +3423,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Iucunda semper expectatione",
-    "sourceGenreLabel": "encyclicals"
+    "sourceGenreLabel": "encyclicals",
+    "acta": {
+      "series": "ASS",
+      "volume": 27,
+      "year": 1894,
+      "page": 177
+    }
   },
   {
     "id": "mag:leo-xiii/fra-le-principali-1894",
@@ -3457,7 +3487,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Moerore sapientium",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 27,
+      "year": 1894,
+      "page": 265
+    }
   },
   {
     "id": "mag:leo-xiii/postquam-catholici-1894",
@@ -4700,7 +4736,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Nostra erga",
-    "sourceGenreLabel": "letters"
+    "sourceGenreLabel": "letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 31,
+      "year": 1898,
+      "page": 264
+    }
   },
   {
     "id": "mag:leo-xiii/quum-diuturnum-1898",
@@ -5630,7 +5672,13 @@
       "retrieved": "2026-09-12"
     },
     "incipit": "Parta humano generi",
-    "sourceGenreLabel": "apost_letters"
+    "sourceGenreLabel": "apost_letters",
+    "acta": {
+      "series": "ASS",
+      "volume": 34,
+      "year": 1901,
+      "page": 193
+    }
   },
   {
     "id": "mag:leo-xiii/urbanitatis-veteris-1901",

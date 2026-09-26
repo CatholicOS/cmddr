@@ -10,6 +10,29 @@
       "series": "ASS",
       "volume": 34,
       "year": 1901,
+      "page": 193,
+      "pope": "Leo XIII",
+      "category": "LITTERAE APOSTOLICAE",
+      "date": "1901-09-08",
+      "incipit": null,
+      "quoted": false,
+      "toponym": null,
+      "description": "Sanctissimi D. N. Leonis PP. XIII de consecratione novi templi Beatae Mariae Virginis a Sacratissimo Rosario ad oppidum Lourdes in Gallus mense Octobri 1901.",
+      "raw": "LITTERAE APOSTOLICAE Sanctissimi D. N. Leonis PP. XIII de consecratione novi / templi Beatae Mariae Virginis a Sacratissimo Rosario ad oppidum Lourdes in / Gallus mense Octobri 1901.",
+      "opening": "Parta humano generi per Iesum Christum Redemptorem immortalia",
+      "anchor": "dateline",
+      "evidence": {
+        "heading": "LITTERAE APOSTOLICAE Sanctissimi D. N. Leonis PP. XIII de consecratione novi / templi Beatae Mariae Virginis a Sacratissimo Rosario ad oppidum Lourdes in / Gallus mense Octobri 1901.",
+        "salutation": null,
+        "opening": "Parta humano generi per Iesum Christum Redemptorem",
+        "dateline": "Datum Romae apud Sanctum Petrum sub annulo Piscatoris, die 8 Sept. 1901, Pontificatus Nostri anno vicesimo quarto. A. CARD. MACCHI.",
+        "header": "193"
+      }
+    },
+    {
+      "series": "ASS",
+      "volume": 34,
+      "year": 1901,
       "page": 196,
       "pope": "Leo XIII",
       "category": "LITTERAE APOSTOLICAE",
@@ -247,14 +270,6 @@
       ]
     },
     {
-      "page": 193,
-      "reason": "no-date",
-      "lines": [
-        "LITTERAE APOSTOLICAE Sanctissimi D. N. Leonis PP. XIII de consecratione novi / templi Beatae Mariae Virginis a Sacratissimo Rosario ad oppidum Lourdes in / Gallus mense Octobri 1901.",
-        "Datum Romae apud Sanctum Petrum sub annulo Piscatoris, die 8 Sept. 1901, Pontificatus Nostri anno vicesimo quarto. A. CARD. MACCHI."
-      ]
-    },
-    {
       "page": 425,
       "reason": "no-date",
       "lines": [
@@ -331,6 +346,7 @@
       }
     ],
     "claimed": [
+      193,
       196,
       257,
       321,
@@ -339,11 +355,6 @@
       641
     ],
     "unclaimed": [
-      {
-        "description": "R. PONTIFICIS Litterae Apostolicae SSmi D. N. Leonis XIII de consecratione novi Templi R. Mariae Virginis a Sanctissimo Rosario ad Oppidum Lourdes in Gallus mense Octobri 1901",
-        "page": 193,
-        "raw": "R. PONTIFICIS / Litterae Apostolicae SSmi D. N. / Leonis XIII de consecratione novi / Templi R. Mariae Virginis a San­ / ctissimo Rosario ad Oppidum / Lourdes in Gallus mense Octo­ / bri 1901 pag. 193"
-      },
       {
         "description": "Motu proprio SSmi D. N. Leonis XIII ; quo ab officiis Notariorum Vicarii Urbis revocatur omnis facultas et potestas exarandi acta quaelibet, ad Vicariatum Urbis spectantia",
         "page": 533,
