@@ -3862,6 +3862,19 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
       if (s!.yearTo !== undefined) expect(s!.yearTo, s!.key).toBe(s!.year + 1);
       expect(Number(d.date.slice(0, 4)), d.id).toBeLessThanOrEqual((s!.yearTo ?? s!.year) + 1);
     }
+    // And the sharper statement, because the bound above is now exactly the scanner's own
+    // (`assDate`'s `span.to + 1`) and so can no longer fail for a reference a rule wrote: a
+    // `unique` match takes the document whose date IS the entry's, and no entry of the 41
+    // volumes carries a date outside the span. What the bound can still catch is a curated
+    // override or reading pointing at a record of the wrong year -- so the exception itself is
+    // pinned. Over every ASS reference exactly one is dated later than its volume's FIRST year
+    // + 1: ASS 7 (1872) 565, the encyclical *Vix dum a Nobis* of 7 March 1874 printed in the
+    // volume titled 1872-73. Three entries of the 41 volumes exceed that bound (ASS 6 p. 481,
+    // 23 February 1872; ASS 7 pp. 565 and 629) and none exceeds the volume's last year + 1, so
+    // the widening is the series' shape and not a carve-out for one volume.
+    expect(cited.filter((d) => Number(d.date.slice(0, 4)) > sources.find((x) => x.volume === d.acta!.volume)!.year + 1)
+      .map((d) => `${d.id} ASS ${d.acta!.volume} (${d.acta!.year}) ${d.acta!.page} ${d.date}`))
+      .toEqual(['mag:pius-ix/vix-dum-a-nobis-1874 ASS 7 (1872) 565 1874-03-07']);
   });
 
   it('pins the matched count per volume, so a silent drop fails loudly', () => {
