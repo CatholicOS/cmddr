@@ -4119,13 +4119,18 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // :268, of which :268 also answers a header-mismatch, and -- with the pope's name lost
     // too -- ASS:3:113, :289), and three letters headed `EPISTOLA SANCTISSIMI PATRIS`, which
     // names the pope by style and never by name (ASS:5:220, :532, ASS:6:264).
-    expect(Object.keys(ASS_READINGS)).toHaveLength(47);
+    // Fix round 1 adds four more, all of them acts the first pass left unread: the owner's
+    // fallback branch on the V-for-U ruling (ASS:2:181 and ASS:2:273, the two acts ASS 2
+    // prints under a one-T spelling or none at all -- ASS 4 owes nothing, its four `LITERAE`
+    // lines being running heads over an act the scan already reads at p. 675), and two of the
+    // five ASS 8 letters the era report had called genuine and unread (ASS:8:251, :375).
+    expect(Object.keys(ASS_READINGS)).toHaveLength(51);
     const byVolume = new Map<string, number>();
     for (const k of Object.keys(ASS_READINGS)) {
       const v = `ass-${k.split(':')[1]}`;
       byVolume.set(v, (byVolume.get(v) ?? 0) + 1);
     }
-    expect(Object.fromEntries([...byVolume].sort())).toEqual({ 'ass-1': 3, 'ass-2': 2, 'ass-3': 2, 'ass-5': 2, 'ass-6': 1, 'ass-12': 1, 'ass-14': 2, 'ass-15': 1, 'ass-17': 3, 'ass-19': 1, 'ass-23': 5, 'ass-28': 1, 'ass-29': 3, 'ass-30': 2, 'ass-31': 1, 'ass-32': 1, 'ass-33': 6, 'ass-39': 1, 'ass-41': 9 });
+    expect(Object.fromEntries([...byVolume].sort())).toEqual({ 'ass-1': 3, 'ass-2': 4, 'ass-3': 2, 'ass-5': 2, 'ass-6': 1, 'ass-8': 2, 'ass-12': 1, 'ass-14': 2, 'ass-15': 1, 'ass-17': 3, 'ass-19': 1, 'ass-23': 5, 'ass-28': 1, 'ass-29': 3, 'ass-30': 2, 'ass-31': 1, 'ass-32': 1, 'ass-33': 6, 'ass-39': 1, 'ass-41': 9 });
   });
 
   it('satisfies invariant 25 across both series', () => {
