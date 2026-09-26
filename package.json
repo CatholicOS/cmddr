@@ -2,7 +2,9 @@
   "name": "@catholicos/cmddr-tools",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=20.10.0" },
+  "engines": {
+    "node": ">=20.10.0"
+  },
   "scripts": {
     "test": "vitest run",
     "harvest": "tsx tools/src/harvest/run.ts",
@@ -10,7 +12,8 @@
     "render": "tsx tools/src/render/run.ts",
     "recover": "tsx tools/recover-acta-pages.ts",
     "scan-ass": "tsx tools/scan-ass.ts",
-    "check": "vitest run && tsc --noEmit && tsx tools/src/validate/run.ts"
+    "check": "vitest run && tsc --noEmit && tsx tools/src/validate/run.ts",
+    "reports": "tsx tools/regenerate-reports.ts"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
