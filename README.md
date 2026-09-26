@@ -528,8 +528,9 @@ failing on `SS.`. They are cited on the owner's ruling of 2026-09-26, the one th
 a conciliar act printed under the pope who promulgated it is the same document, and every one of the sixteen carries
 `promulgatedBy: rp:paul-vi`, the registry asserting as much itself. **The references are sixteen curated rows and the
 pipeline is unchanged**, because a reader for that part was refused on its measured reach: over the 116 non-ASS sources the
-parser records **107 distinct skipped part headings**, of which three are the council's, and those parts — with AAS 54's
-`ACTA PATRUM S. CONCILII OECUMENICI VATICANI II`, the Fathers' own, four in all — hold **18 entries** that cannot grow, the
+parser records **107 distinct skipped part headings**, of which **three are the council's over four sources** — `II - ACTA
+SS. OECUMENICI CONCILII` serving both 1965 and 1966, beside AAS 54's `ACTA PATRUM S. CONCILII OECUMENICI VATICANI II`, the
+Fathers' own — and those four parts hold **18 entries** that cannot grow, the
 council having closed in 1965, filed by title and never by incipit, one of them printing no date at all and one pair fused
 onto a single OCR line. That is the trade this project has twice refused on measurement, the general `promulgatedBy` rule
 and `LITERAE` both. What a reader would have bought, the completeness accounting, the phase's report generator takes

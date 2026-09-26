@@ -103,14 +103,42 @@ describe('loadActaIndexes with the sidecars (spec §10.3)', () => {
     expect(docs.filter((d) => d.acta?.volume === 15 && d.acta.page === 5)).toEqual([]);
   });
 
-  it('states, in every curated reference, the volume and page the row itself cites', () => {
+  /**
+   * Whether a row's evidence opens by naming the very reference the row cites: its head -- the text
+   * before the first quotation -- must begin with the row's volume and year and must name the row's
+   * page there.
+   *
+   * Bounded to the head on purpose. Every row also names the page its act is *subscribed* on, and
+   * some name a third page besides, all of them after the head; an unanchored `p. N` is satisfied by
+   * any of those, so a row mistyped to its subscription page passed (review round: this test's own
+   * first form did, demonstrated on *Christus Dominus* at 696). The head is not required to read
+   * `p. N` immediately, since a two-part volume names the part first (`AAS 9 (1917) part II ...
+   * opens at p. 5`).
+   */
+  const citesItsOwnPage = (row: { acta: { volume: number; year: number; page: number }; evidence: string }) => {
+    const head = row.evidence.split("'")[0]!;
+    // No `\\b` after the closing paren: a paren and the space after it are both non-word, so there is
+    // no boundary between them and `\\)\\b` can never match.
+    return new RegExp(`^AAS ${row.acta.volume} \\(${row.acta.year}\\)`).test(head)
+      && new RegExp(`\\bp\\. ${row.acta.page}\\b`).test(head);
+  };
+
+  it('opens every curated reference\'s evidence with the very reference the row cites', () => {
     // A transposed digit between the page read and the page cited would put a reference on a page
     // nothing was read on, and no pipeline check compares the two (phase 2d review focus 1).
     for (const [id, row] of Object.entries(ACTA_CURATED_REFERENCES)) {
-      expect(row.evidence, id).toMatch(new RegExp(`AAS ${row.acta.volume} \\(${row.acta.year}\\)`));
-      expect(row.evidence, id).toMatch(new RegExp(`\\bp\\. ${row.acta.page}\\b`));
+      expect(citesItsOwnPage(row), `${id}: ${row.evidence.slice(0, 60)}`).toBe(true);
       expect(row.evidence.length, id).toBeGreaterThan(200);
     }
+  });
+
+  it('refuses a row whose cited page is only the page its act was subscribed on', () => {
+    // *Christus Dominus* is cited at AAS 58 (1966) 673 and subscribed at p. 696, both quoted in its
+    // evidence. Mistyping `page` to the subscription page must not pass.
+    const real = ACTA_CURATED_REFERENCES['mag:vatican-ii/christus-dominus-1965']!;
+    expect(real.evidence).toContain('subscribed at p. 696');
+    expect(citesItsOwnPage(real)).toBe(true);
+    expect(citesItsOwnPage({ ...real, acta: { ...real.acta, page: 696 } })).toBe(false);
   });
 
   it('keeps every conciliar row live: the index line it quotes is still printed in its fixture', () => {
@@ -140,6 +168,13 @@ describe('loadActaIndexes with the sidecars (spec §10.3)', () => {
       total += lines.length;
     }
     expect(total).toBe(18);
+  });
+
+  it('refuses a conciliar part that holds no entry, rather than reporting a zero', () => {
+    // The heading is there and the part is empty: a re-extraction that dropped its lines would
+    // otherwise be reported as a part with nothing in it (review round).
+    const emptyPart = 'II - ACTA SS. OECUMENICI CONCILII\nVATICANI II\n\nIII - ACTA SS. CONGREGATIONUM\n';
+    expect(() => conciliarPartLines(emptyPart)).toThrow(/no conciliar entr/i);
   });
 
   it('refuses a fixture that prints no conciliar part, rather than reporting an empty one', () => {

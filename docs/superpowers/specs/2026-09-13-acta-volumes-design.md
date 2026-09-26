@@ -443,8 +443,8 @@ the parse result's `skippedParts`, which is where this phase's blast radius was 
 rather than guessed.
 
 *Measured on 2026-09-26* over every non-ASS source of `ACTA_SOURCES`, tallying
-`skippedParts`: **107 distinct skipped part headings, of which four are the council's** and
-no more —
+`skippedParts`: **107 distinct skipped part headings, of which three are the council's, over
+four sources** — `II - ACTA SS. OECUMENICI CONCILII` serving both 1965 and 1966 — and no more —
 
 | Heading, as `skippedParts` records it | Sources |
 |---|---|
@@ -452,8 +452,10 @@ no more —
 | `III - ACTA Ss. OECUMENICI CONCILII` | 1964 |
 | `II - ACTA SS. OECUMENICI CONCILII` | 1965, 1966 |
 
-The heading wraps in all four volumes (`… OECUMENICI CONCILII` / `VATICANI II`) and the
-parser keeps only its first line, which is why `VATICANI II` is absent from the tally. **Four**
+The heading wraps in three of the four (AAS 56, 57, 58: `… OECUMENICI CONCILII` / `VATICANI
+II`) and there the parser keeps only its first line, which is why `VATICANI II` is absent from
+those rows of the tally; AAS 54 sets its heading on one line, and that row carries it whole.
+The report computes the distinction rather than asserting it. **Four**
 further headings belong to the **synod of bishops**, not the council, and are not this
 phase's: `II - SYNODUS EPISCOPORUM` (1977), `XIV - ACTA SYNODALIA` (1980), `II – ACTA SYNODI
 EPISCOPORUM` (2014, 2015, 2019, 2023, 2024) and `II. – ACTA SYNODI EPISCOPORUM` (2018) —

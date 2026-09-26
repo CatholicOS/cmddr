@@ -42,6 +42,10 @@ for (const [key, r] of parsed) {
   }
 }
 const council = [...skipped].filter(([h]) => /CONCILI/i.test(h) && /OECUMENICI|PATRUM/i.test(h)).sort();
+// Where the printed heading runs onto a second line the parser keeps only the first, so the tally's
+// string ends at `… OECUMENICI CONCILII`; AAS 54 sets its heading on one line and the tally has it whole.
+const wrapped = council.filter(([h]) => !/VATICANI/i.test(h)).flatMap(([, keys]) => keys).sort();
+const unwrapped = council.filter(([h]) => /VATICANI/i.test(h)).flatMap(([, keys]) => keys).sort();
 const synod = [...skipped].filter(([h]) => /SYNOD/i.test(h)).sort();
 
 // -- §3's entries, and the document each names.
@@ -87,7 +91,7 @@ for (const d of allDocs) {
   byIssuer.set(d.issuerId, e);
 }
 const zero = [...byIssuer].filter(([, e]) => e.cited === 0).sort((a, b) => b[1].all - a[1].all);
-p(`The corpus carries a reference on **${withActa.length} of its ${allDocs.length}** records (${pct(withActa.length, allDocs.length)}). Before this phase the sixteen \`oec:vatican-ii\` records carried none, and they were the only issuer at zero that the corpus could reach: ${zero.length === 0 ? 'no issuer now stands at zero except those no gazette can reach' : zero.map(([i, e]) => `\`${i}\` (${e.all})`).join(', ')} — Benedict XIV's records predate the *Acta Sanctae Sedis*, which begins in 1865, and Leo XIV's postdate the printed AAS.`);
+p(`The corpus carries a reference on **${withActa.length} of its ${allDocs.length}** records (${pct(withActa.length, allDocs.length)}). Before this phase the sixteen \`oec:vatican-ii\` records carried none, and they were the only issuer at zero a gazette could reach. The issuers that remain at zero are ${zero.length === 0 ? 'none' : zero.map(([i, e]) => `\`${i}\` (${e.all} records)`).join(' and ')} — Benedict XIV's records predate the *Acta Sanctae Sedis*, which begins in 1865, and Leo XIV's postdate the printed AAS.`);
 p();
 p('The AAS files the council\'s documents in **a part of its own**, which `index.ts` reads as a part (`PART_HEADING_RE` matches any heading opening `ACTA`) and then skips, `POPE_PART_RE` failing on `SS.` — as it skips the dicasteries\'. Phase 2c-ii-d had already ruled on why they should carry a reference all the same: a conciliar act printed under the pope who promulgated it *is the same document*, which is why *Dei Filius* and *Pastor Aeternus* are cited on their `oec:vatican-i` records (ass volumes spec §5). Every one of these sixteen carries `promulgatedBy: rp:paul-vi`, the registry itself asserting what that ruling asserts.');
 p();
@@ -101,7 +105,7 @@ p('| Heading, as `skippedParts` records it | Sources |');
 p('|---|---|');
 for (const [h, keys] of council) p(`| \`${md(h)}\` | ${keys.join(', ')} |`);
 p();
-p(`The heading wraps in all four volumes (\`… OECUMENICI CONCILII\` / \`VATICANI II\`) and the parser keeps only its first line, which is why \`VATICANI II\` is absent from the tally. **${synod.length} further headings** belong to the synod of bishops, a different body, over ${new Set(synod.flatMap(([, k]) => k)).size} sources: ${synod.map(([h, keys]) => `\`${md(h)}\` (${keys.join(', ')})`).join(', ')}.`);
+p(`The heading wraps in ${wrapped.length} of the four (${wrapped.join(', ')}): there the parser keeps only its first line, which is why \`VATICANI II\` is absent from those rows of the tally, while ${unwrapped.join(', ')} sets it on one line and the tally carries it whole. **${synod.length} further headings** belong to the synod of bishops, a different body, over ${new Set(synod.flatMap(([, k]) => k)).size} sources: ${synod.map(([h, keys]) => `\`${md(h)}\` (${keys.join(', ')})`).join(', ')}.`);
 p();
 const total = entries.reduce((a, e) => a + e.lines.length, 0);
 p(`Those four parts hold **${total} entries** — ${entries.map((e) => `AAS ${e.vol} ${e.lines.length}`).join(', ')} — of which **${conciliarRows.length} are the registry's**. A rule for ${total} entries in ${PARTS.length} volumes cannot grow, the council having closed in 1965, and it would need a title axis the matcher has nowhere else (the part files by title, never by incipit), a line that prints no date at all, and a line the OCR fuses. That trade has been refused twice before on measurement — the general \`promulgatedBy\` rule, built and measured over all 41 ASS volumes to an identical match set, and \`LITERAE\`, which read 0 acts over the same 41 — so the references are curated and the accounting is taken here, where the lines are read.`);
@@ -190,7 +194,9 @@ p();
 p('| Document | Reference | The page, as the row read it |');
 p('|---|---|---|');
 for (const [id, row] of conciliarRows.sort((a, b) => (a[1].acta.volume - b[1].acta.volume) || (a[1].acta.page - b[1].acta.page))) {
-  const first = row.evidence.split(/;\s/)[0]!;
+  // Cut at the clause that follows the quotation, never at the first `; `: *Perfectae caritatis*'s
+  // page prints `SERVUS SERVORUM DEI ; / UNA CUM …`, and splitting on that left the cell's quotation open.
+  const first = row.evidence.split('; subscribed at')[0]!;
   p(`| \`${id}\` | AAS ${row.acta.volume} (${row.acta.year}) ${row.acta.page} | ${md(first)} |`);
 }
 p();

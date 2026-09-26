@@ -17,7 +17,8 @@ const ENTRY_START_RE = /^(?:\d{4}\b|[-•,.'’\s]{0,3}»)/;
  * One string per entry of the fixture's conciliar part, spaces collapsed: continuation lines
  * folded into the entry above, the heading's wrapped second line (`VATICANI II`) dropped, and
  * AAS 58's one fused line (two entries on one OCR line) split in two. Throws where the fixture
- * prints no conciliar part, so that a heading whose OCR differs is an error and never a silent
+ * prints no conciliar part **and where the part it prints holds no entry**, so that a heading whose
+ * OCR differs, or a re-extraction that dropped the part's lines, is an error and never a silent
  * zero.
  *
  * An entry is recognised by how it **begins** -- a year or a ditto -- and never by ending in a
@@ -45,5 +46,6 @@ export const conciliarPartLines = (fixture: string): string[] => {
       out.push(fused[1]!);
     }
   }
+  if (out.length === 0) throw new Error('no conciliar entry under the part heading of this fixture');
   return out;
 };
