@@ -13,7 +13,7 @@ ${GENERATED}
 
 ${rows.length} documents.
 
-| ID | Title | Incipit | Genre | Date | Promulgated by | AAS |
+| ID | Title | Incipit | Genre | Date | Promulgated by | Acta |
 | --- | --- | --- | --- | --- | --- | --- |`;
 
   const body = rows.map((d) =>

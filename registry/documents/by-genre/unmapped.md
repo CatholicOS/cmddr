@@ -6,7 +6,7 @@ The source genre has no Genre Registry row yet; the raw label is preserved in th
 
 5 documents.
 
-| ID | Title | Incipit | Issuer | Date | Promulgated by | AAS | Source label |
+| ID | Title | Incipit | Issuer | Date | Promulgated by | Acta | Source label |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `mag:pius-ix/nei-giorni-1846` | Nei giorni | Nei giorni | `rp:pius-ix` | 1846-07-16 |  |  | Editto |
 | `mag:pius-ix/nelle-istituzioni-1848` | Nelle istituzioni | Nelle istituzioni | `rp:pius-ix` | 1848-03-14 |  |  | Decreto |

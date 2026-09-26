@@ -32,7 +32,7 @@ describe('renderIssuerMd', () => {
   const md = renderIssuerMd('leo-xiii', docs);
 
   it('omits the issuer column, which is constant in this view', () => {
-    expect(md).toContain('| ID | Title | Incipit | Genre | Date | Promulgated by | AAS |');
+    expect(md).toContain('| ID | Title | Incipit | Genre | Date | Promulgated by | Acta |');
     expect(md).not.toContain('| Issuer |');
   });
 
@@ -67,7 +67,7 @@ describe('renderGenreMd', () => {
   const md = renderGenreMd('encyclical', docs);
 
   it('omits the genre column, which is constant in this view', () => {
-    expect(md).toContain('| ID | Title | Incipit | Issuer | Date | Promulgated by | AAS |');
+    expect(md).toContain('| ID | Title | Incipit | Issuer | Date | Promulgated by | Acta |');
     expect(md).not.toContain('| Genre |');
   });
 
