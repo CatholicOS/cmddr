@@ -74,7 +74,7 @@ not used silently.
 6. **AAS 9 part II carries no chronological index.** The second part of 1917 is the *Codex Iuris Canonici* itself, with the
    constitution *Providentissima Mater Ecclesia* (27 May 1917, p. 5) before it and the Code's own index after; no fixture
    exists for it, and `acta.part` is `"I"` on every 1917 reference the index gives. The one act is on the bulls shelf
-   (`mag:benedict-xv/providentissima-mater-1917`) and carries the one curated reference (`ACTA_CURATED_REFERENCES`, phase
+   (`mag:benedict-xv/providentissima-mater-1917`) and carries a curated reference (`ACTA_CURATED_REFERENCES`, phase
    2b-iii-b): AAS 9-II (1917) 5, read in the PDF on 2026-09-21 (`Providentissima Mater Ecclesia, ita a Conditore Christo
    constituta`, dated at p. 8 `die festo Pentecostes anno millesimo nongentesimo decimo septimo`), written after the join
    and never over a match; it is not an index match, so §11 no longer lists the act and §12 does not.
