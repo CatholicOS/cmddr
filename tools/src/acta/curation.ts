@@ -1745,10 +1745,20 @@ export interface AssReading {
  * The papal acts of the ASS the scanner (ass.ts) missed or misread, read by hand in the
  * store text (ass volumes spec §6): keyed `ASS:{volume}:{page}`, the page the act opens on.
  *
- * The page is the one the **volume prints**, which is the PDF page in every volume but ASS 8,
- * whose file exchanges the leaves printed 623 and 625 (#56 §2: the only scan vatican.va serves,
- * byte-identical on a re-fetch of 2026-09-27). The two rows keyed there say in their evidence
- * which PDF page each act was read at, and no other row needs to.
+ * The page is the one the **volume prints**, never the PDF page it was read at, since a scan can
+ * set the leaves out of order: ASS 8's file exchanges the leaves printed 623 and 625 (#56 §2, the
+ * only scan vatican.va serves -- byte-identical on a re-fetch of 2026-09-27). A row whose key is
+ * not the PDF page says which PDF page the act was read at, in the words `the act was read at PDF
+ * p. N`; today exactly one row does (`ASS:8:623`), and a test pins that.
+ *
+ * **The printed page must be verified, because the printed number can itself be an OCR artifact.**
+ * All 57 keys were checked against the store on 2026-09-27: 56 are confirmed by the running head
+ * of the key page or of a neighbour -- a page that opens an act prints a display heading and no
+ * number at all, and the digits slip freely (`2G1` for 261, `588` for 388, `574`/`576` bracketing
+ * 375) -- and the 57th, ASS 8's 623, is confirmed by **reading order** instead, its own header
+ * being the artifact: PDF 623 prints `623` where the leaf is the volume's 625. Where a file's
+ * leaves are out of order the header cannot settle the page and continuity must; where they are in
+ * order, the header or its neighbours' can.
  * A row is applied by the loader (join.ts) as an entry with `anchor: 'reading'` -- added
  * where the scan has no entry at the page, replacing the scanned entry where it has one --
  * and is stale (a hard error) unless it answers a finding (the controller's ruling of the
@@ -2290,7 +2300,10 @@ export const ASS_READINGS: Readonly<Record<string, AssReading>> = {
     description: 'Dilecto filio Eduardo Arborio Mella Comiti Verceliae',
     evidence: "ASS 8 (1874) 623-624, ass-08-1874.txt. ANSWERS the summa's unclaimed row at printed p. 623. **The key is "
       + "the printed page; the act was read at PDF p. 625**, the leaf this file sets out of order and whose own running "
-      + "head, l. 1, prints 'LITTERAE APOSTOLICAE 623'. WHAT THE PAGES PRINT: PDF p. 625 l. 13 the addressee 'Dilecto "
+      + "head, l. 1, prints 'LITTERAE APOSTOLICAE 623'. The header of PDF p. 623 is no help and is itself the "
+      + "artifact: it prints '623' where that leaf is the volume's 625, a 5 read as a 3 as this volume reads 444 "
+      + "as '44i' and 446 as 'Ufi'. Reading order settles it -- the leaves run 622, [623], 624, [625], 626, so the "
+      + "two unnumbered-by-OCR positions take 623 and 625 in that order. WHAT THE PAGES PRINT: PDF p. 625 l. 13 the addressee 'Dilecto "
       + "filio Eduardo Ar borio Mella Corniti Verceliae.' (the OCR's spacing, and 'Corniti' for Comiti), l. 14 the "
       + "salutation 'Pius PP. IX.', l. 15 the greeting 'Dilecte fili, salutem et apostolicam benedictionem.' and then "
       + "the act's first words 'Qui / animi causa bonas excolunt artes, easdemque in rei sacrae / bonum singulari "

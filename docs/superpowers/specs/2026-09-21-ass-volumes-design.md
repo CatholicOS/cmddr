@@ -794,12 +794,22 @@ overrides are the conciliar constitutions of §5 — *Dei Filius* at ASS 5 (1869
 Aeternus* at ASS 6 (1870) 40, the owner's ruling implemented by curated row after the general
 `promulgatedBy` rule was measured and rejected — and five are the class disagreements of §6.
 
-*Three acts stay unread, and one of them is a finding about the reader.* ASS 8 pp. 443 and 445
-are reprints of 1860 and 1857 whose first printing is nowhere in the series, and the *Mella*
-letter the summa lists at ASS 8 p. 623 opens at p. 625, which no admissible key reaches: a
-reading keyed 623 would cite a page the act is not on, and one keyed 625 would be stale by the
-loader's own rule. All three were read in the store by hand and deliberately left uncurated, and
-they are [#56](https://github.com/CatholicOS/cmddr/issues/56)'s along with the reprint question.
+*Three acts stayed unread, and one of them was a finding about the reader.* ASS 8 pp. 443 and 445
+are reprints of 1860 and 1857 whose first printing is nowhere in the series, and they are
+[#56](https://github.com/CatholicOS/cmddr/issues/56)'s along with the reprint question. The
+*Mella* letter was recorded here as listed by the summa at ASS 8 p. 623 but opening at p. 625,
+reachable by no admissible key: **that was wrong, and the volume's summa was right.** The store's
+PDF exchanges the leaves printed 623 and 625 — proved by a word broken across them (PDF 625 ends
+`nun-`, PDF 624 opens `cupati`) and by PDF 622 ending `sinat ab ipso,` where PDF 625 opens `nec
+commoveri ab adversis` — so the act opens on the leaf the volume prints as 623, and a reading
+keyed 623 is admissible and cites the page the act is on. #56 §2 curates it, with the letter to
+the directors of *il Credente cattolico* at p. 622, whose date the exchange had made this act's.
+The re-fetch that question left open is answered: the file is byte-identical on a re-fetch of
+2026-09-27 and vatican.va links one file for the volume, so the disorder is the only scan there
+is. **A reading's key is therefore the page the volume prints, never the PDF page it was read
+at**, and the printed number is verified against the running heads — or, where the leaves are out
+of order, against reading order, the header then being the artifact (PDF 623 prints `623` where
+that leaf is the volume's 625).
 `DATUM_RE` (ass.ts) matches only a dateline given **at Rome**, so a papal act given anywhere else
 — `Datum Bononiae` — is invisible to the scanner whatever its heading.
 
