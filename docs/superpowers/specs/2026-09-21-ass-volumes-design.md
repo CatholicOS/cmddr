@@ -819,5 +819,17 @@ of the 496** shelf records dated 1865–1908 carry no reference of either series
 vatican.va shelves and what the gazette printed. Closing any of it means reading the volumes for
 acts the summa never listed.
 
+*And two rulings 2c-iii inherits with it,* made on 2026-09-27 over the two acts of ASS 8 that
+#56 §2 curates and recorded in their rows' evidence: **an act sent *nomine* the Pope is the
+Pope's act and belongs among his `in-forma-brevis` letters**, and **evidence that an act's form
+is a brief carries `in-forma-brevis`** whatever class heading the volume prints over it. Neither
+can be applied before 2c-iii, `characteristics` being a field on a document and no ASS entry
+creating one. Their reach, measured over the series on the same day: of **548** ASS entries 290
+match a shelf record and **256** do not, of which **92** already carry a brief class heading
+(`BREVE` 84, `LITTERAE IN FORMA BREVIS` 8) against the 35 `in-forma-brevis` documents the whole
+registry holds. The second ruling is measurable from the scan; the first is not, the scanner
+reading no subscription, so the acts it reaches would have to be found by re-reading. Both are
+[#66](https://github.com/CatholicOS/cmddr/issues/66)'s.
+
 **Out of scope for 2c-ii**, unchanged: the ASS-born documents and the reprints of earlier
 popes registered under their own issuers (2c-iii, decided from the eras' gap reports).

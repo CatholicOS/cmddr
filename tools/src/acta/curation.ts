@@ -2289,10 +2289,13 @@ export const ASS_READINGS: Readonly<Record<string, AssReading>> = {
       + "MER- / CURIALI SS. D. N. a Brev. ad Pr. - Perillustribus et adm. / Rendis Dominis Scriptoribus ephemeridis, "
       + "cui titulus II Cre- / dente Cattolico.' -- 28 June 1875, which is this row's date. The dateline on PDF p. 622 "
       + "l. 11 ('Datum Romae apud S. Petrum die 5 Iulii anno 1875.', signed l. 13 'Pius PP. IX.') belongs to the act "
-      + "ABOVE this heading and to neither of these two. Note for the class, not acted on here: the volume's own "
-      + "heading says the letter was sent *nomine* Pii Papae IX and it is subscribed by Mercurelli, Secretary a "
-      + "Brevibus ad Principes, not by the Pope. The page in this key, 622, is both the printed page and the PDF "
-      + "page -- the exchange is of 623 and 625 only.",
+      + "ABOVE this heading and to neither of these two. THE CLASS, ruled and recorded: the volume's heading says the "
+      + "letter was sent *nomine* Pii Papae IX and it is subscribed not by the Pope but by 'FRANCISCUS MERCURIALI "
+      + "SS. D. N. a Brev. ad Pr.', the Secretary a Brevibus ad Principes. The owner ruled on 2026-09-27 that an act "
+      + "sent in the Pope's name is the Pope's act and belongs among his `in-forma-brevis` letters. It cannot be "
+      + "applied here: `characteristics` is a field on a document, this act has none, and no ASS entry creates one "
+      + "(the spec's decision 1 defers creation to 2c-iii). The ruling is #66's, to apply over the series. The page "
+      + "in this key, 622, is both the printed page and the PDF page -- the exchange is of 623 and 625 only.",
   },
   'ASS:8:623': {
     pope: 'Pius IX', category: 'LITTERAE APOSTOLICAE', date: '1875-06-22',
@@ -2312,9 +2315,12 @@ export const ASS_READINGS: Readonly<Record<string, AssReading>> = {
       + "Nostri anno trigesimo.' and subscribed l. 19 'F. CARD. ASQUINIUS.' -- 22 June 1875, the thirtieth year of "
       + "Pius IX (16 June 1875 - 15 June 1876), which agrees. WHY THE SCAN MISSED IT: no class heading stands over the "
       + "act, its class being the running head's, and the one dateline it carries sits on the leaf the file places "
-      + "BEFORE it, so the walk-back reached the previous act's heading instead (see ASS:8:622). Note, not acted on "
-      + "here: 'sub anulo Piscatoris' with the Cardinal Secretary's subscription is the form of a brief, which bears "
-      + "on #53, while the volume heads the act LITTERAE APOSTOLICAE and this row records that.",
+      + "BEFORE it, so the walk-back reached the previous act's heading instead (see ASS:8:622). THE FORM, ruled and "
+      + "recorded: 'sub anulo Piscatoris' with the Cardinal Secretary's subscription is the form of a brief, and the "
+      + "owner ruled on 2026-09-27 that evidence of brief form carries the `in-forma-brevis` characteristic whatever "
+      + "class heading the volume prints -- here LITTERAE APOSTOLICAE, which is what `category` records. It cannot be "
+      + "applied here, the characteristic being a field on a document this act does not have and no ASS entry "
+      + "creating one (2c-iii): the ruling is #66's, with #53 the parallel question on the shelf side.",
   },
   // Phase 2c-ii-d, Task 3b: the two dogmatic constitutions of the First Vatican Council,
   // on the owner's ruling of 2026-09-26 -- whether they are printed under the council or
