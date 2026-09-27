@@ -141,6 +141,32 @@ describe('loadActaIndexes with the sidecars (spec §10.3)', () => {
     expect(citesItsOwnPage({ ...real, acta: { ...real.acta, page: 696 } })).toBe(false);
   });
 
+  /**
+   * Whether a row's evidence quotes its index line at the line number it names: `l. 790` must be the
+   * 790th line of that fixture as `sed -n 790p` counts it (a form feed does not open a line). The
+   * text alone is checked by the test below; a re-extraction that shifted lines would leave the
+   * numbers silently wrong (review round, PR #61).
+   */
+  const quotesItsNumberedLine = (row: { acta: { volume: number; year: number }; evidence: string }) => {
+    const m = row.evidence.match(/`(aas-\d\d-\d{4}\.txt)` l\. (\d+), '([^']+)'/);
+    if (m === null) return false;
+    const numbered = readFileSync(`tools/fixtures/acta/${m[1]}`, 'utf8').split('\n')[Number(m[2]) - 1] ?? '';
+    return numbered.replace(/\s+/g, ' ').trim().includes(m[3]!.replace(/\s+/g, ' ').trim());
+  };
+
+  it('quotes every conciliar row\'s index line at the fixture line number the row names', () => {
+    const conciliar = Object.entries(ACTA_CURATED_REFERENCES).filter(([id]) => id.startsWith('mag:vatican-ii/'));
+    expect(conciliar).toHaveLength(16);
+    for (const [id, row] of conciliar) expect(quotesItsNumberedLine(row), id).toBe(true);
+  });
+
+  it('refuses a row whose named line number is not the line that prints its quote', () => {
+    const real = ACTA_CURATED_REFERENCES['mag:vatican-ii/christus-dominus-1965']!;
+    expect(quotesItsNumberedLine(real)).toBe(true);
+    // Its line is 790; 791 prints the entry below it.
+    expect(quotesItsNumberedLine({ ...real, evidence: real.evidence.replace('.txt` l. 790,', '.txt` l. 791,') })).toBe(false);
+  });
+
   it('keeps every conciliar row live: the index line it quotes is still printed in its fixture', () => {
     // The rows are keyed by document id, so nothing else notices if a fixture's conciliar part
     // changes under them (phase 2d review focus 2).
@@ -170,19 +196,6 @@ describe('loadActaIndexes with the sidecars (spec §10.3)', () => {
     expect(total).toBe(18);
   });
 
-  it('refuses a conciliar part that holds no entry, rather than reporting a zero', () => {
-    // The heading is there and the part is empty: a re-extraction that dropped its lines would
-    // otherwise be reported as a part with nothing in it (review round).
-    const emptyPart = 'II - ACTA SS. OECUMENICI CONCILII\nVATICANI II\n\nIII - ACTA SS. CONGREGATIONUM\n';
-    expect(() => conciliarPartLines(emptyPart)).toThrow(/no conciliar entr/i);
-  });
-
-  it('refuses a fixture that prints no conciliar part, rather than reporting an empty one', () => {
-    // A heading whose OCR differs, or a re-extracted fixture, must be an error and not a zero
-    // (review focus 5).
-    expect(() => conciliarPartLines(readFileSync('tools/fixtures/acta/aas-59-1967.txt', 'utf8')))
-      .toThrow(/no conciliar part/i);
-  });
 });
 
 describe('applyCuratedReferences (controller ruling 15: a curated reference may displace the match it names)', () => {

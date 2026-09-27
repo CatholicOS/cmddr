@@ -15,7 +15,7 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { ACTA_SOURCES, loadActaIndexes } from './src/acta/join.js';
 import { ACTA_CURATED_REFERENCES } from './src/acta/curation.js';
-import { conciliarPartLines } from './src/acta/conciliar.js';
+import { conciliarPartLines, conciliarSources, isConciliarPartHeading, pageOfEntry, rowForConciliarEntry } from './src/acta/conciliar.js';
 import type { DocumentRecord } from './src/types.js';
 
 const allDocs = readdirSync('data/documents').filter((f) => f.endsWith('.json'))
@@ -35,6 +35,8 @@ const out: string[] = [];
 const p = (s = '') => out.push(s);
 const md = (s: string) => s.replace(/\|/g, '\\|').replace(/\n/g, ' / ').replace(/\s+/g, ' ');
 const pct = (n: number, d: number) => (d === 0 ? '—' : `${((n / d) * 100).toFixed(1)} %`);
+/** Thousands separated, as the sibling generators and the README set them. */
+const n = (x: number) => x.toLocaleString('en-US');
 
 /** The four volumes whose index prints a conciliar part, and the fixture of each. */
 const PARTS = [['54', 1962], ['56', 1964], ['57', 1965], ['58', 1966]] as const;
@@ -48,7 +50,16 @@ for (const [key, r] of parsed) {
     skipped.set(n, [...(skipped.get(n) ?? []), key]);
   }
 }
-const council = [...skipped].filter(([h]) => /CONCILI/i.test(h) && /OECUMENICI|PATRUM/i.test(h)).sort();
+const council = [...skipped].filter(([h]) => isConciliarPartHeading(h)).sort();
+// §2 tallies the sources that print a conciliar part; §3 reads the parts of PARTS. A fifth source
+// showing a conciliar heading would be counted in the one and unread in the other, so the two are
+// held to each other before a line is written (review round, PR #61).
+const counted = conciliarSources(parsed).sort();
+const read = PARTS.map(([, year]) => String(year)).sort();
+if (counted.join(',') !== read.join(',')) {
+  console.error(`acta-conciliar-report: the parser records a conciliar part in ${counted.join(', ')}, while §3 reads ${read.join(', ')}. Reconcile PARTS with the tally before regenerating.`);
+  process.exit(1);
+}
 // Where the printed heading runs onto a second line the parser keeps only the first, so the tally's
 // string ends at `… OECUMENICI CONCILII`; AAS 54 sets its heading on one line and the tally has it whole.
 const wrapped = council.filter(([h]) => !/VATICANI/i.test(h)).flatMap(([, keys]) => keys).sort();
@@ -58,25 +69,8 @@ const synod = [...skipped].filter(([h]) => /SYNOD/i.test(h)).sort();
 // -- §3's entries, and the document each names.
 const entries = PARTS.map(([vol, year]) => ({ vol, year, lines: conciliarPartLines(fixture(vol, year)) }));
 const conciliarRows = Object.entries(ACTA_CURATED_REFERENCES).filter(([id]) => id.startsWith('mag:vatican-ii/'));
-const pageOf = (line: string) => Number(line.match(/(\d+)\s*$/)?.[1] ?? 0);
-/** The index line a row's evidence quotes, spaces collapsed. */
-const quotedLine = (evidence: string) =>
-  evidence.match(/`aas-\d\d-\d{4}\.txt` l\. \d+, '([^']+)'/)?.[1]?.replace(/\s+/g, ' ').trim() ?? null;
-/**
- * The row whose evidence quotes this index line, if any: how an entry is tied to a document.
- *
- * An entry is *contained in* the line its row quotes rather than equal to it, because AAS 58's
- * fused line is quoted whole by both of the rows it carries while `conciliarPartLines` returns its
- * two halves; the page each half ends in then tells those two apart. Where the row cites a page the
- * index does not -- *Ad gentes* alone, its 947 against the index's 948 -- the entry is the whole
- * line the row quotes, so the fallback is admitted only then, and never to a half.
- */
-const rowFor = (line: string) => conciliarRows.find(([, row]) => {
-  const q = quotedLine(row.evidence);
-  const l = line.replace(/\s+/g, ' ').trim();
-  if (q === null || !q.includes(l)) return false;
-  return pageOf(l) === row.acta.page || (q === l && pageOf(l) === pageOf(q));
-});
+const pageOf = pageOfEntry;
+const rowFor = (line: string) => rowForConciliarEntry(line, conciliarRows);
 
 const byId = new Map(allDocs.map((d) => [d.id, d]));
 const conciliarDocs = allDocs.filter((d) => d.issuerId === 'oec:vatican-ii');
@@ -98,7 +92,7 @@ for (const d of allDocs) {
   byIssuer.set(d.issuerId, e);
 }
 const zero = [...byIssuer].filter(([, e]) => e.cited === 0).sort((a, b) => b[1].all - a[1].all);
-p(`The corpus carries a reference on **${withActa.length} of its ${allDocs.length}** records (${pct(withActa.length, allDocs.length)}). Before this phase the sixteen \`oec:vatican-ii\` records carried none, and they were the only issuer at zero a gazette could reach. The issuers that remain at zero are ${zero.length === 0 ? 'none' : zero.map(([i, e]) => `\`${i}\` (${e.all} records)`).join(' and ')} — Benedict XIV's records predate the *Acta Sanctae Sedis*, which begins in 1865, and Leo XIV's postdate the printed AAS.`);
+p(`The corpus carries a reference on **${n(withActa.length)} of its ${n(allDocs.length)}** records (${pct(withActa.length, allDocs.length)}). Before this phase the sixteen \`oec:vatican-ii\` records carried none, and they were the only issuer at zero a gazette could reach. The issuers that remain at zero are ${zero.length === 0 ? 'none' : zero.map(([i, e]) => `\`${i}\` (${n(e.all)} records)`).join(' and ')} — Benedict XIV's records predate the *Acta Sanctae Sedis*, which begins in 1865, and Leo XIV's postdate the printed AAS.`);
 p();
 p('The AAS files the council\'s documents in **a part of its own**, which `index.ts` reads as a part (`PART_HEADING_RE` matches any heading opening `ACTA`) and then skips, `POPE_PART_RE` failing on `SS.` — as it skips the dicasteries\'. Phase 2c-ii-d had already ruled on why they should carry a reference all the same: a conciliar act printed under the pope who promulgated it *is the same document*, which is why *Dei Filius* and *Pastor Aeternus* are cited on their `oec:vatican-i` records (ass volumes spec §5). Every one of these sixteen carries `promulgatedBy: rp:paul-vi`, the registry itself asserting what that ruling asserts.');
 p();
@@ -235,11 +229,11 @@ p();
 const gap = allDocs.filter((d) => d.acta === undefined);
 const gapByIssuer = new Map<string, number>();
 for (const d of gap) gapByIssuer.set(d.issuerId, (gapByIssuer.get(d.issuerId) ?? 0) + 1);
-p(`**${gap.length} records still carry no reference** (${pct(gap.length, allDocs.length)} of the corpus), by issuer:`);
+p(`**${n(gap.length)} records still carry no reference** (${pct(gap.length, allDocs.length)} of the corpus), by issuer:`);
 p();
 p('| Issuer | No reference | Of |');
 p('|---|---|---|');
-for (const [i, n] of [...gapByIssuer].sort((a, b) => b[1] - a[1])) p(`| \`${i}\` | ${n} | ${byIssuer.get(i)!.all} |`);
+for (const [i, count] of [...gapByIssuer].sort((a, b) => b[1] - a[1])) p(`| \`${i}\` | ${n(count)} | ${n(byIssuer.get(i)!.all)} |`);
 p();
 
 console.log(out.join('\n'));
