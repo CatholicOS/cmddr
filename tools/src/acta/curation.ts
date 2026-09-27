@@ -1744,6 +1744,11 @@ export interface AssReading {
 /**
  * The papal acts of the ASS the scanner (ass.ts) missed or misread, read by hand in the
  * store text (ass volumes spec §6): keyed `ASS:{volume}:{page}`, the page the act opens on.
+ *
+ * The page is the one the **volume prints**, which is the PDF page in every volume but ASS 8,
+ * whose file exchanges the leaves printed 623 and 625 (#56 §2: the only scan vatican.va serves,
+ * byte-identical on a re-fetch of 2026-09-27). The two rows keyed there say in their evidence
+ * which PDF page each act was read at, and no other row needs to.
  * A row is applied by the loader (join.ts) as an entry with `anchor: 'reading'` -- added
  * where the scan has no entry at the page, replacing the scanned entry where it has one --
  * and is stale (a hard error) unless it answers a finding (the controller's ruling of the
@@ -2241,6 +2246,62 @@ export const ASS_READINGS: Readonly<Record<string, AssReading>> = {
     opening: 'Eximiam tuam Nobisque plane cognitam pastoralem in catholica',
     description: "Altera Epistola ad Emum Card. de Geissel Archiepiscopum Coloniensem in qua loquitur de variis sententiis et opinionibus censura dignis quae reperiuntur in operibus Presbyteri Antonii Gunther (the volume's own summa row, p. 727).",
     evidence: "ASS 8 (1874) 445-448, ass-08-1874.txt. p. 445 l. 1 'LITTERAE APOSTOLICAE                UH' (the dossier's running head, the OCR reading the page number 445 as UH; the page carries no class heading of its own), ll. 4-5 'DILECTO FILIO NOSTRO IOANNI / TITULI S. LAURENTII IX VIMINALI PRESBYTERO' (the OCR's IX for IN), l. 7 'S. R. E. CARDINALI DE GEISSEL ARCHIEPISCOPO COLONIENSI', l. 9 'PIUS PAPA IX.', ll. 11-12 'Eximiam tuam Nobisque plane cognitam pastoralem in / catholica doctrina tuenda curam et sollicitudinem non mediocri'. Dated p. 448 ll. 16-18 'ster, et gregi tuae vigilantiae commisso peramanter impertimur. / Datum Bononiae die XV Iunii anno MDCCCLVII pon- / tificatus nostri anno undecimo.' -- 15 June 1857, given at Bologna (the eleventh pontifical year runs 16 June 1856 to 15 June 1857, whose last day it is, which agrees). Why the scan misses it: the act is dated away from Rome, and `DATUM_RE` (ass.ts) matches only a dateline given at Rome, so `Datum Bononiae` raises no anchor at all -- the first act of the series found to be invisible for that reason, now recorded at the regex itself. The four pages are one continuous letter: the running head stands on every one and 'dilecte fili Noster' recurs at pp. 445 l. 14, 447 l. 17 and 448 ll. 10 and 15. Answers the summa's unclaimed row p. 445.",
+  },
+  // #56 §2, read 2026-09-27: the store's PDF of ASS 8 has the leaves printed 623 and 625
+  // **exchanged**. Reading order runs PDF 622 -> 625 -> 624 -> 623 -> 626, proved twice over --
+  // PDF 622 ends 'quae nec vos abduci sinat ab ipso,' where PDF 625 opens 'nec commoveri ab
+  // adversis', and PDF 625 ends 'nun-' where PDF 624 opens 'cupati' -- and confirmed by the
+  // running heads: PDF 625 prints 'LITTERAE APOSTOLICAE 623' while PDF 624 prints '624'. The
+  // volume's own summa is right on both acts; the file is wrong. Re-fetched on 2026-09-27 and
+  // byte-identical to the store's copy (sha256 5bc48307...aafaada, 2,980,766 bytes), and
+  // vatican.va's ASS index links exactly one file for the volume, so this is the only scan there
+  // is: the disorder cannot be re-fetched away, and is curated here.
+  //
+  // `ASS_PAGE_OFFSETS` is not the instrument: it expresses a constant delta over a range, and this
+  // is two leaves exchanged. These are the first rows in the series whose key is the page the
+  // volume **prints** rather than the PDF page the act was read at; each says so in its evidence.
+  // Neither writes a reference -- Pius IX's shelf holds two records dated 1875, neither in June --
+  // so what they buy is the volume's accounting and a date in committed data that was wrong.
+  'ASS:8:622': {
+    pope: 'Pius IX', category: 'LITTERAE', date: '1875-06-28',
+    opening: 'In Ecclesiae vexatione tam acri tantaque veritatis oppugnatione',
+    description: 'Litterae nomine Pii Papae IX missae ad Directores ephemeridis cui titulus il Credente cattolico',
+    evidence: "ASS 8 (1874) 622-623, ass-08-1874.txt. REPLACES the scanned entry, whose date was wrong: the scanner "
+      + "anchors on a dateline and walks back to a heading, and across the exchanged leaves the nearest dateline "
+      + "preceding this act's heading in FILE order is the *Mella* brief's on PDF p. 624 ll. 16-18 ('Datum Romae apud "
+      + "Sanctum Petrum sub an- / nulo Piscatoris die XXII iunii MDCCCLXXV, Pontificatus / Nostri anno trigesimo'), so "
+      + "the entry carried 22 June 1875 -- the brief's date, not this letter's. WHAT THE PAGES PRINT: PDF p. 622 l. 1 "
+      + "the running head '622 LITTERAE AI'OSiOLlCAE' (the OCR of LITTERAE APOSTOLICAE), ll. 14-15 the heading "
+      + "'LITTERAE NOMINE PII PAPAE IX MISSAE AD DIRECTORES EPHE- / MERIDIS CUI TITULUS il Credente cattolico.', l. 16 "
+      + "the salutation 'Perillustres et adm. Rendi Domini.', ll. 17-18 the act's first words 'In Ecclesiae vexatione "
+      + "tam acri tantaque veritatis oppu- / gnatione'. It closes on the leaf the volume prints as 623 (PDF p. 625) "
+      + "ll. 8-12, 'Vestri, perillustres et adm. RR. Domini - Ro- / mae 28 Iunii 1875 - Addictis. Famulus FRANCISCUS "
+      + "MER- / CURIALI SS. D. N. a Brev. ad Pr. - Perillustribus et adm. / Rendis Dominis Scriptoribus ephemeridis, "
+      + "cui titulus II Cre- / dente Cattolico.' -- 28 June 1875, which is this row's date. The dateline on PDF p. 622 "
+      + "l. 11 ('Datum Romae apud S. Petrum die 5 Iulii anno 1875.', signed l. 13 'Pius PP. IX.') belongs to the act "
+      + "ABOVE this heading and to neither of these two. Note for the class, not acted on here: the volume's own "
+      + "heading says the letter was sent *nomine* Pii Papae IX and it is subscribed by Mercurelli, Secretary a "
+      + "Brevibus ad Principes, not by the Pope. The page in this key, 622, is both the printed page and the PDF "
+      + "page -- the exchange is of 623 and 625 only.",
+  },
+  'ASS:8:623': {
+    pope: 'Pius IX', category: 'LITTERAE APOSTOLICAE', date: '1875-06-22',
+    opening: 'Qui animi causa bonas excolunt artes, easdemque in',
+    description: 'Dilecto filio Eduardo Arborio Mella Comiti Verceliae',
+    evidence: "ASS 8 (1874) 623-624, ass-08-1874.txt. ANSWERS the summa's unclaimed row at printed p. 623. **The key is "
+      + "the printed page; the act was read at PDF p. 625**, the leaf this file sets out of order and whose own running "
+      + "head, l. 1, prints 'LITTERAE APOSTOLICAE 623'. WHAT THE PAGES PRINT: PDF p. 625 l. 13 the addressee 'Dilecto "
+      + "filio Eduardo Ar borio Mella Corniti Verceliae.' (the OCR's spacing, and 'Corniti' for Comiti), l. 14 the "
+      + "salutation 'Pius PP. IX.', l. 15 the greeting 'Dilecte fili, salutem et apostolicam benedictionem.' and then "
+      + "the act's first words 'Qui / animi causa bonas excolunt artes, easdemque in rei sacrae / bonum singulari "
+      + "studio et assiduitate exercent'; the act runs on to the leaf printed 624 (PDF p. 624), where it is dated "
+      + "ll. 16-18 'Datum Romae apud Sanctum Petrum sub an- / nulo Piscatoris die XXII iunii MDCCCLXXV, Pontificatus / "
+      + "Nostri anno trigesimo.' and subscribed l. 19 'F. CARD. ASQUINIUS.' -- 22 June 1875, the thirtieth year of "
+      + "Pius IX (16 June 1875 - 15 June 1876), which agrees. WHY THE SCAN MISSED IT: no class heading stands over the "
+      + "act, its class being the running head's, and the one dateline it carries sits on the leaf the file places "
+      + "BEFORE it, so the walk-back reached the previous act's heading instead (see ASS:8:622). Note, not acted on "
+      + "here: 'sub anulo Piscatoris' with the Cardinal Secretary's subscription is the form of a brief, which bears "
+      + "on #53, while the volume heads the act LITTERAE APOSTOLICAE and this row records that.",
   },
   // Phase 2c-ii-d, Task 3b: the two dogmatic constitutions of the First Vatican Council,
   // on the owner's ruling of 2026-09-26 -- whether they are printed under the council or
