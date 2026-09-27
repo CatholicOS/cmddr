@@ -482,7 +482,13 @@ const COLUMN_HEADER_RE = /^[\s.,'"•»-]*(?:(?:ANNO|MENSE|MUNSE|DIE|DXE|D1E|PA[
 // `EX ACTIBUS PAULI PP. VI` and a `LITTERAE APOSTOLICAE` heading of its own (*Quae per
 // caritatem*, 7 May 1978, p. 1617): a pope heading in the genitive as `ACTA PAULI PP. VI`
 // is, read as one (normalisePopeHeading), so the entry is Paul VI's.
-const PART_HEADING_RE = /^\s*(?:[A-Za-z0-9]{1,4}\.?\s*r?[–—-]\s*|[IVX]{1,4}\.\s+)?((?:ACTA\.?|EX ACTIBUS)\s+[A-Za-z].*|DIARIUM\s+[A-Z].*|CARDINALIUM COMMISSIO.*|SYNODUS EPISCOPORUM\s*|SEDIS VACANTIS ACTA\s*|CONCLAVE\s*)$/;
+/**
+ * Exported for the conciliar reader (src/acta/conciliar.ts), which needs the same answer to
+ * "does this line open a part?" when it decides where the council's part ends. A list of its own
+ * there drifted from this one (review of PR #61): it knew `ACTA` and `SACRA` and not `EX ACTIBUS`,
+ * `SYNODUS EPISCOPORUM`, `CONCLAVE` or `SEDIS VACANTIS ACTA`.
+ */
+export const PART_HEADING_RE = /^\s*(?:[A-Za-z0-9]{1,4}\.?\s*r?[–—-]\s*|[IVX]{1,4}\.\s+)?((?:ACTA\.?|EX ACTIBUS)\s+[A-Za-z].*|DIARIUM\s+[A-Z].*|CARDINALIUM COMMISSIO.*|SYNODUS EPISCOPORUM\s*|SEDIS VACANTIS ACTA\s*|CONCLAVE\s*)$/;
 /** `ACTA PII PP. X.`, `ACTA IOANNIS PAULI PP. II`, `ACTA BENEDICTI XVI`, `ACTA FRANCISCI PP.`: name words, optional `PP.`, optional numeral. */
 const POPE_PART_RE = /^ACTA\s+([A-Z][A-Z0-9]*(?:\s+[A-Z][A-Z0-9]*)*?)(?:\s+PP\.?)?(?:\s+([IVXL]+))?\.?\s*$/;
 /** The heading repeated after itself, with or without a part numeral between: `X. I. — ACTA PII PP. X.` */
