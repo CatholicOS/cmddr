@@ -288,6 +288,49 @@ describe('loadActaIndexes with an ASS source (ass volumes spec §5)', () => {
       expect(r.entries.map((e) => e.page)).toEqual([...r.entries.map((e) => e.page)].sort((a, b) => a - b));
     }
   });
+
+  it('reads ASS 8\'s two transposed leaves at the pages the volume prints, not the pages the file sets them at (#56 §2)', () => {
+    // The store's PDF of ASS 8 has the leaves printed 623 and 625 exchanged: reading order runs
+    // PDF 622 -> 625 -> 624 -> 623 -> 626, proved by a word broken across the leaves (PDF 625 ends
+    // `... nun-`, PDF 624 opens `cupati`) and by PDF 622 ending `... sinat ab ipso,` where PDF 625
+    // opens `nec commoveri ab adversis`. Re-fetched 2026-09-27: byte-identical to the store's copy
+    // (sha256 5bc48307...), and vatican.va's ASS index links one file for the volume, so the
+    // disorder is the only scan there is.
+    //
+    // Two consequences, both curated (ASS_READINGS): the scan dated the *Credente Cattolico*
+    // letter at printed 622 from the *Mella* brief's dateline on PDF 624, the walk-back having
+    // crossed the exchanged leaves, and the brief itself went unread.
+    const { parsed } = loadActaIndexes(ACTA_SOURCES.filter((s) => s.key === 'ass-8'));
+    const byPage = new Map(parsed.get('ass-8')!.entries.map((e) => [e.page, e]));
+
+    // The letter to the directors of *il Credente cattolico*: its own close is dated 28 June 1875
+    // (PDF 625 l. 9, printed 623), not the 22 June the brief carries.
+    expect(byPage.get(622)?.date).toBe('1875-06-28');
+    expect(byPage.get(622)?.anchor).toBe('reading');
+
+    // The brief to Count Eduardo Arborio Mella, at the page the volume prints it on.
+    expect(byPage.get(623)?.date).toBe('1875-06-22');
+    expect(byPage.get(623)?.category).toBe('LITTERAE APOSTOLICAE');
+    expect(byPage.get(623)?.opening).toMatch(/^Qui animi causa bonas excolunt artes/);
+    expect(byPage.get(623)?.anchor).toBe('reading');
+
+    // Neither writes a reference: Pius IX's shelf holds two records dated 1875, neither in June.
+    // What they fix is the volume's accounting and a wrong date in committed data.
+  });
+
+  it('keys every ASS reading to the page the volume prints, and makes a row say so where that is not the PDF page it was read at', () => {
+    // A reading's key is the printed page, never the PDF page (ass volumes spec §10): a scan can set
+    // the leaves out of order, as ASS 8's does. A row keyed at a page it was not read at must say
+    // which page it was read at, in these words, so the divergence is never silent.
+    const disclosing = Object.entries(ASS_READINGS).filter(([, r]) => /the act was read at PDF p\. \d+/.test(r.evidence));
+    expect(disclosing.map(([k]) => k)).toEqual(['ASS:8:623']);
+    expect(disclosing[0]![1].evidence).toContain('the act was read at PDF p. 625');
+    // And that row alone may not be checked against its own running head, which is the artifact:
+    // PDF 623 prints `623` where the leaf is the volume's 625, so its evidence argues from reading
+    // order instead. All 57 keys were verified against the store on 2026-09-27 (see the table's
+    // doc comment); a new row of this shape must be added here deliberately.
+    expect(disclosing[0]![1].evidence).toMatch(/reading order/i);
+  });
   const reading = { pope: 'Leo XIII', category: 'LITTERAE', date: '1900-01-01', opening: 'a b c', description: 'd', evidence: 'e' };
   const row = { description: 'Litterae', page: 3, raw: 'Litterae 3' };
   it('rejects a reading that answers no finding', () => {

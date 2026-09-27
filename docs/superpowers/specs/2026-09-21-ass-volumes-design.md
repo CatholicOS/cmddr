@@ -794,12 +794,22 @@ overrides are the conciliar constitutions of §5 — *Dei Filius* at ASS 5 (1869
 Aeternus* at ASS 6 (1870) 40, the owner's ruling implemented by curated row after the general
 `promulgatedBy` rule was measured and rejected — and five are the class disagreements of §6.
 
-*Three acts stay unread, and one of them is a finding about the reader.* ASS 8 pp. 443 and 445
-are reprints of 1860 and 1857 whose first printing is nowhere in the series, and the *Mella*
-letter the summa lists at ASS 8 p. 623 opens at p. 625, which no admissible key reaches: a
-reading keyed 623 would cite a page the act is not on, and one keyed 625 would be stale by the
-loader's own rule. All three were read in the store by hand and deliberately left uncurated, and
-they are [#56](https://github.com/CatholicOS/cmddr/issues/56)'s along with the reprint question.
+*Three acts stayed unread, and one of them was a finding about the reader.* ASS 8 pp. 443 and 445
+are reprints of 1860 and 1857 whose first printing is nowhere in the series, and they are
+[#56](https://github.com/CatholicOS/cmddr/issues/56)'s along with the reprint question. The
+*Mella* letter was recorded here as listed by the summa at ASS 8 p. 623 but opening at p. 625,
+reachable by no admissible key: **that was wrong, and the volume's summa was right.** The store's
+PDF exchanges the leaves printed 623 and 625 — proved by a word broken across them (PDF 625 ends
+`nun-`, PDF 624 opens `cupati`) and by PDF 622 ending `sinat ab ipso,` where PDF 625 opens `nec
+commoveri ab adversis` — so the act opens on the leaf the volume prints as 623, and a reading
+keyed 623 is admissible and cites the page the act is on. #56 §2 curates it, with the letter to
+the directors of *il Credente cattolico* at p. 622, whose date the exchange had made this act's.
+The re-fetch that question left open is answered: the file is byte-identical on a re-fetch of
+2026-09-27 and vatican.va links one file for the volume, so the disorder is the only scan there
+is. **A reading's key is therefore the page the volume prints, never the PDF page it was read
+at**, and the printed number is verified against the running heads — or, where the leaves are out
+of order, against reading order, the header then being the artifact (PDF 623 prints `623` where
+that leaf is the volume's 625).
 `DATUM_RE` (ass.ts) matches only a dateline given **at Rome**, so a papal act given anywhere else
 — `Datum Bononiae` — is invisible to the scanner whatever its heading.
 
@@ -808,6 +818,18 @@ of the 496** shelf records dated 1865–1908 carry no reference of either series
 263, Pius X 59 of 200, Pius IX 21 of 31, Vatican I 0 of 2 — which is the difference between what
 vatican.va shelves and what the gazette printed. Closing any of it means reading the volumes for
 acts the summa never listed.
+
+*And two rulings 2c-iii inherits with it,* made on 2026-09-27 over the two acts of ASS 8 that
+#56 §2 curates and recorded in their rows' evidence: **an act sent *nomine* the Pope is the
+Pope's act and belongs among his `in-forma-brevis` letters**, and **evidence that an act's form
+is a brief carries `in-forma-brevis`** whatever class heading the volume prints over it. Neither
+can be applied before 2c-iii, `characteristics` being a field on a document and no ASS entry
+creating one. Their reach, measured over the series on the same day: of **548** ASS entries 290
+match a shelf record and **256** do not, of which **92** already carry a brief class heading
+(`BREVE` 84, `LITTERAE IN FORMA BREVIS` 8) against the 35 `in-forma-brevis` documents the whole
+registry holds. The second ruling is measurable from the scan; the first is not, the scanner
+reading no subscription, so the acts it reaches would have to be found by re-reading. Both are
+[#66](https://github.com/CatholicOS/cmddr/issues/66)'s.
 
 **Out of scope for 2c-ii**, unchanged: the ASS-born documents and the reprints of earlier
 popes registered under their own issuers (2c-iii, decided from the eras' gap reports).

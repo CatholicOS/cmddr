@@ -4160,7 +4160,10 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // ten volumes holding 49 entries of which ASS 1's 2 were already counted here. 196 since
     // Task 4b of the same phase bridged five of those holds by curated override, leaving the
     // era 44 held entries.
-    expect(creation.held.filter((h) => h.entry.series === 'ASS' && h.reason === 'series-not-created')).toHaveLength(196);
+    // #56 §2 adds one: the *Mella* brief of ASS 8, read at printed p. 623 across the file's two
+    // exchanged leaves, which no shelf record of Pius IX can match (his shelf holds two records
+    // dated 1875, neither in June), so it is held like every other ASS entry the shelves lack.
+    expect(creation.held.filter((h) => h.entry.series === 'ASS' && h.reason === 'series-not-created')).toHaveLength(197);
     // Phase 2c-ii-b raised the series' first holds of another kind -- six `ambiguous` and two
     // `claimed-twice` -- and the curation round answered every one, so the reason map is again
     // a single entry. Four of the six were the greeting rule: `Nostr\w+` did not read the
@@ -4174,8 +4177,9 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // printing of *Officiorum ac munerum*, which ASS 29 (1896) 388 prints first. Both are
     // curated readings of that phase, so before ACTA_REPRINTS keyed the later one the join
     // claimed the document twice and wrote neither reference.
-    expect(Object.fromEntries([...reasons].sort())).toEqual({ reprint: 1, 'series-not-created': 196 });
-    expect(creation.held).toHaveLength(197);
+    // #56 §2: +1 `series-not-created`, the *Mella* brief of ASS 8 read at printed p. 623.
+    expect(Object.fromEntries([...reasons].sort())).toEqual({ reprint: 1, 'series-not-created': 197 });
+    expect(creation.held).toHaveLength(198);
   });
 
   it('pins the scan and the summa check per volume as the era report §2 says', () => {
@@ -4320,13 +4324,16 @@ describe('the ASS reference (ass volumes spec, phase 2c-i: the sample)', () => {
     // pope with the council's approval and which no rule of the scanner reaches: neither
     // page carries a class heading, and neither act carries a dateline of its own, so
     // `findAnchors` raises nothing at all.
-    expect(Object.keys(ASS_READINGS)).toHaveLength(55);
+    // #56 §2 adds two to ASS 8: the *Credente Cattolico* letter at printed 622, replacing the
+    // scanned entry whose date the exchanged leaves had made the *Mella* brief's, and the brief
+    // itself at printed 623, which the scan could not reach.
+    expect(Object.keys(ASS_READINGS)).toHaveLength(57);
     const byVolume = new Map<string, number>();
     for (const k of Object.keys(ASS_READINGS)) {
       const v = `ass-${k.split(':')[1]}`;
       byVolume.set(v, (byVolume.get(v) ?? 0) + 1);
     }
-    expect(Object.fromEntries([...byVolume].sort())).toEqual({ 'ass-1': 3, 'ass-2': 4, 'ass-3': 2, 'ass-5': 3, 'ass-6': 2, 'ass-8': 4, 'ass-12': 1, 'ass-14': 2, 'ass-15': 1, 'ass-17': 3, 'ass-19': 1, 'ass-23': 5, 'ass-28': 1, 'ass-29': 3, 'ass-30': 2, 'ass-31': 1, 'ass-32': 1, 'ass-33': 6, 'ass-39': 1, 'ass-41': 9 });
+    expect(Object.fromEntries([...byVolume].sort())).toEqual({ 'ass-1': 3, 'ass-2': 4, 'ass-3': 2, 'ass-5': 3, 'ass-6': 2, 'ass-8': 6, 'ass-12': 1, 'ass-14': 2, 'ass-15': 1, 'ass-17': 3, 'ass-19': 1, 'ass-23': 5, 'ass-28': 1, 'ass-29': 3, 'ass-30': 2, 'ass-31': 1, 'ass-32': 1, 'ass-33': 6, 'ass-39': 1, 'ass-41': 9 });
   });
 
   it('writes no reference the era\'s own hazards would falsify: not into a page-offset range, not on Pius IX after his death or in a year his shelf is empty, not on Leo XIII before his election', () => {
