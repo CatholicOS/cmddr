@@ -309,7 +309,8 @@ every volume above the floor once eight of them were extracted in pypdf's defaul
 lines and the default mode keeps the dates, the opposite of 1909–1957), the join's toponym rule reading the mother see and
 the new see the index prints in parentheses against shelves that title an erection by either. The sixteen documents of the
 Second Vatican Council are in those volumes under a part of their own, `Acta Ss. Oecumenici Concilii Vaticani II`, which the
-parser skips: they stay under `oec:vatican-ii` with no reference, their pages listed in the report for a curated one. Phase
+parser skips; this era read their pages and listed them in its report as the evidence for a curated reference, which phase 2d
+below has since written. Phase
 2b-ii-c ([era report](docs/superpowers/reports/2026-09-13-acta-volumes-1979-2014.md)) joined the twenty-four volumes of
 1979–2002 and the index PDFs of 2010, 2011, 2013 and 2014: **1,421** references, the era being a join rather than a harvest
 because John Paul II's shelves are the registry's largest, the matcher reading the shelf's incipit without the addressee
@@ -516,6 +517,33 @@ disagreement is bridged by a curated row quoting the page and never by a rule** 
 the reverse gap over the whole series: **207 of the 496** shelf records dated 1865–1908 carry no reference of either series (Leo XIII 127 of 263, Pius X 59
 of 200, Pius IX 21 of 31, Vatican I 0 of 2), which is the difference between what vatican.va shelves and what the gazette printed, and closing any of it
 means reading the volumes for acts the summa never listed.
+
+Phase 2d ([#36](https://github.com/CatholicOS/cmddr/issues/36), [spec §12](docs/superpowers/specs/2026-09-13-acta-volumes-design.md),
+[report](docs/superpowers/reports/2026-09-27-acta-vatican-ii.md)) cited the **sixteen documents of the Second Vatican
+Council**, which had carried no reference at all: with Benedict XIV's 43 records, which predate the ASS, and Leo XIV's 40,
+which postdate the printed AAS, they were the corpus's three issuers at zero, and the only one a gazette could reach. The
+AAS prints them in AAS 56–58 (1964–1966) under `ACTA SS. OECUMENICI CONCILII VATICANI II`, a part `index.ts` reads as a
+part — `PART_HEADING_RE` matches any heading opening `ACTA` — and then skips as it skips the dicasteries', `POPE_PART_RE`
+failing on `SS.`. They are cited on the owner's ruling of 2026-09-26, the one that gave Vatican I its two ASS references:
+a conciliar act printed under the pope who promulgated it is the same document, and every one of the sixteen carries
+`promulgatedBy: rp:paul-vi`, the registry asserting as much itself. **The references are sixteen curated rows and the
+pipeline is unchanged**, because a reader for that part was refused on its measured reach: over the 116 non-ASS sources the
+parser records **107 distinct skipped part headings**, of which **three are the council's over four sources** — `II - ACTA
+SS. OECUMENICI CONCILII` serving both 1965 and 1966, beside AAS 54's `ACTA PATRUM S. CONCILII OECUMENICI VATICANI II`, the
+Fathers' own — and those four parts hold **18 entries** that cannot grow, the
+council having closed in 1965, filed by title and never by incipit, one of them printing no date at all and one pair fused
+onto a single OCR line. That is the trade this project has twice refused on measurement, the general `promulgatedBy` rule
+and `LITERAE` both. What a reader would have bought, the completeness accounting, the phase's report generator takes
+instead by reading the part's lines (`tools/src/acta/conciliar.ts`), and it finds every date the part prints agreeing with
+its record's and every genre word agreeing with its category — *Constitutio* 4, *Decretum* 9, *Declaratio* 3. **The reading
+paid at once**: the chronological index enters *Ad gentes* at p. 948, where the volume prints article 2 under `CAPUT I`,
+while the decree opens at **947**, which is where the volume's own *Index analyticus* cites it — so the row cites the
+printing and quotes both, a correction `ACTA_PAGE_CORRECTIONS` could not carry, keying as it does off an entry the parser
+never reads. **Two entries of the council's parts hold no record of the registry** and wait on a call of their own: the
+Fathers' *Nuntius ad universos homines* of 20 October 1962 (AAS 54 (1962) 822, recorded from its index line alone, the
+volume unfetched) and the *Nuntii a Patribus Oecumenicae Synodi hominibus missi* of 8 December 1965 (AAS 58 (1966) 10,
+read). The corpus now carries a reference on **6,991 of its 8,569** records, and of the 1,578 that carry none the largest
+holds are John Paul II's 682, the ASS reverse gap of 2c-iii, and the two issuers no gazette can reach.
 
 ### The document registry
 

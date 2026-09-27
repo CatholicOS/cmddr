@@ -415,3 +415,214 @@ and 2002 that now carry a reference from AAS 95–101, which leave its §11 list
 
 The monthly fascicles of 2003–2009 (nothing reads them); the ASS (2c, its own spec — its
 volumes carry no chronological index, measured on ASS 12, 23, 33 and 41).
+
+## 12. Addendum (2026-09-27): phase 2d, the sixteen Vatican II references
+
+The corpus carries a reference on **6,975 of its 8,569** records, and three issuers stand at
+zero. Two of them cannot be reached: Benedict XIV's 43 records predate the *Acta Sanctae
+Sedis*, which begins in 1865, and Leo XIV's 40 postdate the printed *Acta Apostolicae
+Sedis*. The third is **`oec:vatican-ii`, all sixteen of whose records carry no `acta` at
+all** — and the ASS phase has already ruled on why they should.
+
+Phase 2c-ii-d implemented the owner's ruling of 2026-09-26 (ass volumes spec §5): a
+conciliar act printed under the pope who promulgated it *is the same document* and takes a
+reference, which is why *Dei Filius* (ASS 5 (1869) 481) and *Pastor Aeternus* (ASS 6 (1870)
+40) are cited on their `oec:vatican-i` records. Every Vatican II record carries
+`promulgatedBy: rp:paul-vi`, the registry itself asserting what that ruling asserts, so the
+same reasoning gives all sixteen an AAS reference. The AAS prints them in AAS 56–58
+(1964–1966). Phase 2d writes those sixteen references, and closes
+[#36](https://github.com/CatholicOS/cmddr/issues/36) and
+[#56](https://github.com/CatholicOS/cmddr/issues/56) §3.
+
+### 12.1 The part the parser skips, and what it holds
+
+`PART_HEADING_RE` (`index.ts`) matches any part heading opening `ACTA`, so the council's
+part **is** read as a part — and then `POPE_PART_RE` fails on it, `SS.` being no name word,
+and it falls through to the skip the dicasteries take. Its heading is therefore recorded in
+the parse result's `skippedParts`, which is where this phase's blast radius was measured
+rather than guessed.
+
+*Measured on 2026-09-26* over every non-ASS source of `ACTA_SOURCES`, tallying
+`skippedParts`: **107 distinct skipped part headings, of which three are the council's, over
+four sources** — `II - ACTA SS. OECUMENICI CONCILII` serving both 1965 and 1966 — and no more —
+
+| Heading, as `skippedParts` records it | Sources |
+|---|---|
+| `ACTA PATRUM S. CONCILII OECUMENICI VATICANI II` | 1962 |
+| `III - ACTA Ss. OECUMENICI CONCILII` | 1964 |
+| `II - ACTA SS. OECUMENICI CONCILII` | 1965, 1966 |
+
+The heading wraps in three of the four (AAS 56, 57, 58: `… OECUMENICI CONCILII` / `VATICANI
+II`) and there the parser keeps only its first line, which is why `VATICANI II` is absent from
+those rows of the tally; AAS 54 sets its heading on one line, and that row carries it whole.
+The report computes the distinction rather than asserting it. **Four**
+further headings belong to the **synod of bishops**, not the council, and are not this
+phase's: `II - SYNODUS EPISCOPORUM` (1977), `XIV - ACTA SYNODALIA` (1980), `II – ACTA SYNODI
+EPISCOPORUM` (2014, 2015, 2019, 2023, 2024) and `II. – ACTA SYNODI EPISCOPORUM` (2018) —
+four distinct strings in the tally, of which the last two are one heading differing only in
+the full stop after the part numeral, over **eight sources** in all.
+
+The four conciliar parts hold **18 entries**: AAS 54 one, AAS 56 two (fixture
+`aas-56-1964.txt` ll. 820–821), AAS 57 three (`aas-57-1965.txt` ll. 867–869) and AAS 58
+twelve (`aas-58-1966.txt` ll. 790–802). Sixteen are the registry's sixteen documents. **Two
+are not**, and stay out of the registry until it is decided whether they belong: the
+Fathers' *Nuntius ad universos homines, Summo Pontifice assentiente, missus, Concilio
+Oecumenico ineunte* of 20 October 1962 at AAS 54 (1962) 822, and the *Nuntii a Patribus
+Oecumenicae Synodi hominibus missi e variis socialibus humanae consortionis ordinibus* of
+8 December 1965 at AAS 58 (1966) 10.
+
+Two agreements are worth recording, because they are the checks a title-matching reader
+would have had to make and the curated rows make once: **every date the part prints agrees
+with its record's** — 4 December 1963 (2), 21 November 1964 (3), 28 October 1965 (5), 18
+November 1965 (2), 7 December 1965 (4) — and **every genre word agrees with its category**,
+the part printing *Constitutio* 4 times, *Decretum* 9 and *Declaratio* 3 against the
+registry's 4 constitutions, 9 decrees and 3 declarations.
+
+### 12.2 Sixteen curated rows, and why not a reader
+
+The references are written by **sixteen `ACTA_CURATED_REFERENCES` rows** and the pipeline is
+not changed: nothing is added to `index.ts`, `match.ts` or `create.ts`.
+
+A reader for the conciliar part was considered and rejected on the measurement above, by the
+test this project applies to every rule. Its whole reach is 18 entries in 4 volumes, and
+that reach **cannot grow**, the council having closed in 1965. Two rules have already been
+refused here on exactly this ground: the general `promulgatedBy` rule, built and measured
+over all 41 ASS volumes to a match set identical to two curated rows (ass volumes spec §5),
+and `LITERAE`, which read 0 acts over the same 41 volumes. A reader would also need
+machinery the corpus needs nowhere else:
+
+- **a title axis.** The part files its acts by title and never by incipit — `Constitutio
+  Dogmatica de Ecclesia`, not *Lumen Gentium* — while the matcher keys candidates by
+  issuer, date and incipit throughout.
+- **an undated line.** AAS 54's entry prints no date columns at all (`Nuntius ad universos
+  homines, … Concilio Oecu­ / menico ineunte 822`), so no reader can date it; a curated row
+  or a report line can state the date from the act.
+- **a fused line.** `aas-58-1966.txt` l. 795 runs two entries onto one OCR line
+  (`Constitutio dogmatica de divina Revelatione 817 » » Decretum de apostolatu laicorum
+  837`), which a reader would have to split and a row quotes as printed.
+
+What a reader would have bought — the completeness accounting the ASS summa gives — is
+bought instead by the **report generator** reading the part's lines (§12.5). The accounting
+lives where it is read; the matcher stays as it is.
+
+### 12.3 The rows and their evidence
+
+Each row is keyed by document id, carries `acta: { series: 'AAS', volume, year, page }` and
+an `evidence` string, and **no row carries `supersedes`**: the join matches none of the
+sixteen, so `applyCuratedReferences`'s guards — a row the join also matched, a stale
+`supersedes`, a `supersedes` in a two-part volume — stay quiet, and the existing type needs
+no change (`series` is already `'AAS'`-only; Vatican I's two ASS references are
+`ACTA_MATCH_OVERRIDES`). `applyActa` runs on every document after each id is final
+(`harvest/run.ts`), which is the same pass that writes Vatican I's two, so the sixteen land
+without an ordering change.
+
+| Document | Index line, as printed | AAS |
+|---|---|---|
+| `mag:vatican-ii/sacrosanctum-concilium-1963` | `1963 Dec. 4 Constitutio de Sacra Liturgia 97` | 56 (1964) 97 |
+| `mag:vatican-ii/inter-mirifica-1963` | `» » » Decretum de instrumentis communicationis socialis 145` | 56 (1964) 145 |
+| `mag:vatican-ii/lumen-gentium-1964` | `1964 Nov. 21 Constitutio Dogmatica de Ecclesia . 5` | 57 (1965) 5 |
+| `mag:vatican-ii/orientalium-ecclesiarum-1964` | `» » » Decretum de Ecclesiis Orientalibus Catholicis 76` | 57 (1965) 76 |
+| `mag:vatican-ii/unitatis-redintegratio-1964` | `» » » Decretum de Oecumenismo 90` | 57 (1965) 90 |
+| `mag:vatican-ii/christus-dominus-1965` | `1965 Oct. 28 Decretum de pastorali Episcoporum munere in Ecclesia .... 673` | 58 (1966) 673 |
+| `mag:vatican-ii/perfectae-caritatis-1965` | `» » » Decretum de accommodata renovatione vitae religiosae .... 702` | 58 (1966) 702 |
+| `mag:vatican-ii/optatam-totius-1965` | `» » » Decretum de institutione sacerdotali 713` | 58 (1966) 713 |
+| `mag:vatican-ii/gravissimum-educationis-1965` | `» » » Declaratio de educatione christiana 728` | 58 (1966) 728 |
+| `mag:vatican-ii/nostra-aetate-1965` | `» » » Declaratio de Ecclesiae habitudine ad religiones non-christianas . 740` | 58 (1966) 740 |
+| `mag:vatican-ii/dei-verbum-1965` | `» Nov. 18 Constitutio dogmatica de divina Revelatione 817` (l. 795, fused) | 58 (1966) 817 |
+| `mag:vatican-ii/apostolicam-actuositatem-1965` | `» » Decretum de apostolatu laicorum 837` (l. 795, fused) | 58 (1966) 837 |
+| `mag:vatican-ii/dignitatis-humanae-1965` | `» Dec. 7 Declaratio de libertate religiosa 929` | 58 (1966) 929 |
+| `mag:vatican-ii/ad-gentes-1965` | `» » , » Decretum de activitate missionali Ecclesiae . . . . . . . 948` | 58 (1966) **947** |
+| `mag:vatican-ii/presbyterorum-ordinis-1965` | `» » » Decretum de presbyterorum ministerio et vita , 991` | 58 (1966) 991 |
+| `mag:vatican-ii/gaudium-et-spes-1965` | `-» » » Constitutio pastoralis de Ecclesia in mundo huius temporis . . 1025` | 58 (1966) 1025 |
+
+*One page of the sixteen is the index's own slip, found by the reading this phase requires.*
+The chronological index enters *Ad gentes* at **948**; the decree opens at **947**, where the
+volume's own *Index analyticus* also cites it (`Missionalis Ecclesiae activitas … delineat,
+947 ss. ; Ecclesia peregrinans natura sua missionaria est, 948 ss.`, printed p. 1250 — and
+`Ecclesia peregrinans natura sua missionaria est` is exactly what p. 948 opens with, under
+`CAPUT I / DE PRINCIPIIS DOCTRINALIBUS`). The row cites **947**, the page the act opens on,
+and quotes both. No `ACTA_PAGE_CORRECTIONS` row can carry this: that table keys off a parsed
+entry, and the entry stands in the part the parser skips — which is one more reason the
+reference is curated.
+
+**The evidence is the printed page, not the index line.** Every existing row of this table
+quotes what a page prints and the act's own dating formula, read in the volume; a row
+resting on an index line alone would be the weakest in the table, and phase 2c-ii-d has just
+measured why that matters, finding a summa page misread by a digit and two leaves printed
+out of order. So `fetch-acta.sh` fetches **AAS 56, 57 and 58** — the store held none of the
+three on 2026-09-26, carrying 1909–1931, 1958, 1984, 1990 and the 2003–2009 index PDFs —
+and the sixteen opening pages are read. Each row quotes its page's Latin title, the
+promulgation formula, Paul VI's subscription and the dateline, beside the index line with
+its fixture line number, and states whether the page the index gives is the page the act
+opens on -- the printed page, located by its running header, never assumed to be the PDF's
+page of the same number.
+
+**Nothing about the fixtures changes.** The volumes are fetched in the script's text mode
+(`fetch-acta.sh text 1964-1966`), which writes each volume's whole text to the store's
+`txt/` and touches no fixture; the three index fixtures are **not** re-extracted, phase
+2b-ii-b having written them, and `ACTA_SOURCES`'s `retrieved` dates stay as it left them,
+since they record when a fixture was extracted and no fixture is. The date a page was read
+is recorded where every other row records it, in the row's own `evidence`.
+
+AAS 58 p. 10 is read in the same pass, the volume being in hand, so the *Nuntii* of 8
+December 1965 is recorded from the printing. **AAS 54 is not fetched**, so the Fathers'
+*Nuntius* of 20 October 1962 is recorded from its index line alone and stays unread — the
+one thing in the conciliar dossier this phase leaves unverified, and it rests on no
+reference.
+
+### 12.4 What `ACTA_CURATED_REFERENCES` now means
+
+The table's doc comment reads *"References no index entry can give"*, which after this phase
+is no longer the whole truth. It becomes: a reference the **chronological index of the
+popes' acts** cannot give — either because no entry exists (the Code volumes, which carry no
+chronological index; *Ubi arcano Dei consilio*, whose line lost its date columns and opens
+no entry) **or because the entry stands in a part the parser does not read**, `ACTA SS.
+OECUMENICI CONCILII VATICANI II`. The second case names the part and carries the
+measurement that refused it a reader — four parts across every source, 18 entries, filed by
+title, one line undated and one pair fused — so that a later reader finds the reasoning and
+not merely the decision.
+
+### 12.5 Tests, report, documentation
+
+`tools/test/harvest-data.test.ts` currently **asserts the hole**
+(`expect(everything.filter((d) => d.issuerId === 'oec:vatican-ii' && d.acta !== undefined)).toEqual([])`,
+with the comment that the parser skips the part): it inverts into an assertion of all
+sixteen with their volumes and pages, and the per-year pinned counts move — 1964 by 2, 1965
+by 3, 1966 by 11. `mappings.test.ts`'s standing rule, that every curated row carries a
+non-empty note, already covers the sixteen; `applyCuratedReferences`'s three errors are
+already tested and gain no case, no row needing `supersedes`.
+
+The report is **generated, not written**: the standing rule is that a count stated in prose
+is computed by a generator or asserted by a pin (`tools/regenerate-reports.ts`). A new
+generator writes `docs/superpowers/reports/2026-09-27-acta-vatican-ii.md` and is added to
+`REPORTS`; it must **not** read the volume store, so that CI's `--skip-store` run
+regenerates it. It computes what it states: the `skippedParts` tally of §12.1 over every
+non-ASS source; the four conciliar parts' lines, located by their heading and closed by the
+next part heading, listed entry by entry with the document each names or the note that the
+registry holds none; the date and genre-word agreements; the sixteen rows with their
+evidence; and the corpus totals before and after. Reading those lines in the generator is
+what replaces a reader in the pipeline (§12.2).
+
+Three documents move. The README's phase 2b-ii-b paragraph states the hole as standing
+("they stay under `oec:vatican-ii` with no reference, their pages listed in the report for a
+curated one") and is rewritten, with a paragraph of its own for 2d as every phase has.
+SCHEMA.md's `acta` paragraph enumerates how a reference is written and names **no** curated
+reference at all: it gains one clause, that a reference the chronological index cannot give
+is written from a curated table quoting the page, the conciliar part being its largest case.
+§8 needs no correction: it never listed the conciliar part, which was recorded as a hole in
+the README and in the 2b-ii-b report §1.4 and nowhere else. The generated reports are
+regenerated with this one. Two
+issues close, [#36](https://github.com/CatholicOS/cmddr/issues/36) and
+[#56](https://github.com/CatholicOS/cmddr/issues/56) §3, leaving #56 its §2 alone; **a new
+issue** carries the registry question the two messages raise — whether the Fathers' *Nuntius*
+of 20 October 1962 and the *Nuntii* of 8 December 1965 belong in the registry, and under
+what issuer, neither being one of the sixteen.
+
+### 12.6 Out of scope
+
+A reader for the conciliar part (§12.2, refused on the measurement); the synod of bishops' parts --
+four headings over eight sources (§12.1) -- a different body whose acts wait on [#4](https://github.com/CatholicOS/cmddr/issues/4);
+AAS 54, hence the Fathers' *Nuntius* as a printing; creating a record for either message
+(the new issue decides whether the registry wants one); and the 1,578 records that still
+carry no reference after this phase, whose largest holds are John Paul II's 682, the ASS
+reverse gap of 2c-iii, and the two issuers no gazette can reach.

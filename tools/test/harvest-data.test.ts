@@ -2828,6 +2828,9 @@ describe('the AAS reference (acta reference spec)', () => {
     // (p. 333) remains.
     // #44 moves 2004 from 32 to 33: *Pastores gregis* (AAS 96 (2004) 825) by the curated index
     // correction of its date, the index's `Oct. 5` against the act's own 16 October 2003.
+    // Phase 2d (spec §12) adds the sixteen conciliar documents by curated reference: 1964 +2
+    // (the two of 4 December 1963), 1965 +3 (21 November 1964) and 1966 +11 (the eleven of
+    // 1965's last three sessions).
     // A change to a fixture, the parser, the matcher or a shelf harvest moves these.
     const bySource = new Map<string, number>();
     for (const d of cited) bySource.set(sourceOf(d), (bySource.get(sourceOf(d)) ?? 0) + 1);
@@ -2838,7 +2841,7 @@ describe('the AAS reference (acta reference spec)', () => {
       '1932': 2, '1933': 2, '1936': 4, '1937': 4, '1938': 1, '1939': 3, '1940': 4, '1941': 2, '1942': 5, '1943': 6, '1944': 8, '1945': 3,
       '1946': 11, '1947': 11, '1948': 10, '1949': 9, '1950': 11, '1951': 5, '1952': 6, '1953': 11, '1954': 11, '1955': 1, '1956': 8, '1957': 6,
       '1958': 73,
-      '1959': 67, '1960': 48, '1961': 32, '1962': 16, '1963': 7, '1964': 80, '1965': 58, '1966': 106, '1967': 76, '1968': 63, '1969': 63,
+      '1959': 67, '1960': 48, '1961': 32, '1962': 16, '1963': 7, '1964': 82, '1965': 61, '1966': 117, '1967': 76, '1968': 63, '1969': 63,
       '1970': 45, '1971': 43, '1972': 59, '1973': 10, '1974': 7, '1975': 8, '1976': 7, '1977': 5,
       '1978': 29,
       '1979': 59, '1980': 58, '1981': 49, '1982': 73, '1983-I': 35, '1984': 62, '1985': 50, '1986': 47, '1987': 61, '1988': 60, '1989': 61,
@@ -2853,7 +2856,8 @@ describe('the AAS reference (acta reference spec)', () => {
     // entry) and *Ubi arcano Dei consilio* (whose Italian match it displaces: one reference either way, counted in the 112).
     // Phase 2c-i (the ASS sample): the era's 112 are 110, *Sapienti Consilio* and *Promulgandi* cited at ASS 41 (ACTA_REPRINTS).
     // #44: 2003-2009's 186 are 187, *Pastores gregis* matched by a curated index correction.
-    expect(cited).toHaveLength(225 + 130 + 144 + 800 + 1421 + 66 + 110 + 1 + 5 + 187);
+    // Phase 2d: + the sixteen conciliar documents (curated references, spec §12).
+    expect(cited).toHaveLength(225 + 130 + 144 + 800 + 1421 + 66 + 110 + 1 + 5 + 187 + 16);
     // By class: the index's *Nuntii* carry the Christmas and Easter Urbi et Orbi, and the
     // volumes' *Nuntii radiophonici* / *radiotelevisifici* three more (1958, 1978).
     const byClass = new Map<string, number>();
@@ -2891,6 +2895,8 @@ describe('the AAS reference (acta reference spec)', () => {
       // #44: +1 exhortation, *Pastores gregis* (AAS 96 (2004) 825) by a curated index correction.
       'apostolic-exhortation': 47, 'apostolic-letter': 1394, 'apostolic-letter+motu-proprio': 176, encyclical: 120,
       letter: 101, message: 265, 'papal-bull': 4, 'papal-bull+apostolic-constitution': 899, 'urbi-et-orbi': 83,
+      // Phase 2d: the council's own genres, which no other cited document carries (spec §12).
+      constitution: 4, declaration: 3, decree: 9,
     });
     const francisOnly = cited.filter((d) => d.acta!.year >= 2015);
     expect(francisOnly).toHaveLength(225);
@@ -2921,6 +2927,8 @@ describe('the AAS reference (acta reference spec)', () => {
     // references are pinned in the ASS block below.
     // #44: John Paul II's 1,422 -> 1,423, *Pastores gregis* by a curated index correction.
     expect(Object.fromEntries([...byIssuer].sort())).toEqual({
+      // Phase 2d (spec §12): the sixteen conciliar documents, all with `acta.year` before 2015.
+      'oec:vatican-ii': 16,
       'rp:benedict-xv': 35, 'rp:benedict-xvi': 179, 'rp:francis-i': 33, 'rp:john-paul-i': 6, 'rp:john-paul-ii': 1423, 'rp:john-xxiii': 170,
       'rp:paul-vi': 655, 'rp:pius-x': 56, 'rp:pius-xi': 104, 'rp:pius-xii': 203,
     });
@@ -3019,9 +3027,31 @@ describe('the AAS reference (acta reference spec)', () => {
     // *Ingravescentem aetatem*: the index and the act say 21 November 1970, the shelf record 20 November;
     // a near-miss the guard holds, since the shelf's date is what needs correcting (report §6).
     expect(by['mag:paul-vi/ingravescentem-aetatem-1970']).toBeUndefined();
-    // The sixteen conciliar documents are in the volumes' *Acta Ss. Oecumenici Concilii* part, which the parser
-    // skips: no `oec:vatican-ii` record carries a reference (report §1, the Vatican II finding).
-    expect(everything.filter((d) => d.issuerId === 'oec:vatican-ii' && d.acta !== undefined)).toEqual([]);
+    // Phase 2d (spec §12): the sixteen conciliar documents are in the volumes' *Acta Ss.
+    // Oecumenici Concilii Vaticani II* part, which the parser reads as a part and skips, so each
+    // carries a curated reference (ACTA_CURATED_REFERENCES) and none a match.
+    const conciliar = everything.filter((d) => d.issuerId === 'oec:vatican-ii');
+    expect(conciliar).toHaveLength(16);
+    expect(Object.fromEntries(conciliar.map((d) => [d.id, d.acta]))).toEqual({
+      'mag:vatican-ii/sacrosanctum-concilium-1963': { series: 'AAS', volume: 56, year: 1964, page: 97 },
+      'mag:vatican-ii/inter-mirifica-1963': { series: 'AAS', volume: 56, year: 1964, page: 145 },
+      'mag:vatican-ii/lumen-gentium-1964': { series: 'AAS', volume: 57, year: 1965, page: 5 },
+      'mag:vatican-ii/orientalium-ecclesiarum-1964': { series: 'AAS', volume: 57, year: 1965, page: 76 },
+      'mag:vatican-ii/unitatis-redintegratio-1964': { series: 'AAS', volume: 57, year: 1965, page: 90 },
+      'mag:vatican-ii/christus-dominus-1965': { series: 'AAS', volume: 58, year: 1966, page: 673 },
+      'mag:vatican-ii/perfectae-caritatis-1965': { series: 'AAS', volume: 58, year: 1966, page: 702 },
+      'mag:vatican-ii/optatam-totius-1965': { series: 'AAS', volume: 58, year: 1966, page: 713 },
+      'mag:vatican-ii/gravissimum-educationis-1965': { series: 'AAS', volume: 58, year: 1966, page: 728 },
+      'mag:vatican-ii/nostra-aetate-1965': { series: 'AAS', volume: 58, year: 1966, page: 740 },
+      'mag:vatican-ii/dei-verbum-1965': { series: 'AAS', volume: 58, year: 1966, page: 817 },
+      'mag:vatican-ii/apostolicam-actuositatem-1965': { series: 'AAS', volume: 58, year: 1966, page: 837 },
+      'mag:vatican-ii/dignitatis-humanae-1965': { series: 'AAS', volume: 58, year: 1966, page: 929 },
+      // The chronological index prints 948; the decree opens at 947, where the volume's own
+      // Index analyticus also cites it (`delineat, 947 ss.`). The printing governs (Task 1 ruling).
+      'mag:vatican-ii/ad-gentes-1965': { series: 'AAS', volume: 58, year: 1966, page: 947 },
+      'mag:vatican-ii/presbyterorum-ordinis-1965': { series: 'AAS', volume: 58, year: 1966, page: 991 },
+      'mag:vatican-ii/gaudium-et-spes-1965': { series: 'AAS', volume: 58, year: 1966, page: 1025 },
+    });
   });
 
   it('matches the three phase-1 misreadings by their corrected dates', () => {
@@ -3082,7 +3112,12 @@ describe('the AAS reference (acta reference spec)', () => {
     const issuers = new Set(ACTA_POPES.map((p) => p.issuerId));
     const years = new Set(ACTA_SOURCES.map((s) => s.year));
     for (const d of cited) {
-      expect(issuers.has(d.issuerId), d.id).toBe(true);
+      // Phase 2d (spec §12): a conciliar record carries a reference too, on the owner's ruling
+      // that a conciliar act printed under the pope who promulgated it is the same document. Its
+      // issuer is the council, and the pope the popes table names is the one the registry itself
+      // asserts in `promulgatedBy` -- which is the assertion the ruling rests on.
+      const issuer = d.issuerType === 'ecumenical-council' ? d.promulgatedBy : d.issuerId;
+      expect(issuers.has(issuer!), d.id).toBe(true);
       expect(d.acta!.series, d.id).toBe('AAS');
       expect(d.acta!.volume, d.id).toBe(d.acta!.year - 1908);
       expect(years.has(d.acta!.year), d.id).toBe(true);
