@@ -594,4 +594,6 @@ Francis A. Sullivan, *Creative Fidelity* (1996); see also CDF, *Donum Veritatis*
 
 ## License
 
-The data and documentation in this repository are licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/) (CC BY-NC-ND 4.0). See [`LICENSE`](LICENSE) for the full legal code.
+The data, schemas and documentation in this repository are licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/) (CC BY-NC-ND 4.0). See [`LICENSE`](LICENSE) for the full legal code.
+
+The source code in [`tools/`](tools/) and the build configuration at the repository root (`package.json`, `package-lock.json`, `tsconfig.json`, `vitest.config.ts`) are licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). See [`tools/LICENSE`](tools/LICENSE).
